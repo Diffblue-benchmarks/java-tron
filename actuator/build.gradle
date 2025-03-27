@@ -39,7 +39,11 @@ jacocoTestReport {
         xml.enabled = true
         html.enabled = true
     }
-    getExecutionData().setFrom(fileTree('../framework/build/jacoco').include("**.exec"))
+    // Include coverage from both this & framework modules
+    getExecutionData()
+        .setFrom(
+            fileTree('./build/jacoco').include("**.exec"), 
+            fileTree('../framework/build/jacoco').include("**.exec"))
     afterEvaluate {
         classDirectories.from = classDirectories.files.collect {
             fileTree(dir: it,)
