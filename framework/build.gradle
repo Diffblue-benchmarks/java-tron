@@ -145,7 +145,6 @@ jacocoTestReport {
         csv.enabled false
         html.destination file("${buildDir}/jacocoHtml")
     }
-    getExecutionData().setFrom(fileTree('../framework/build/jacoco').include("**.exec"))
 }
 
 def binaryRelease(taskName, jarName, mainClass) {

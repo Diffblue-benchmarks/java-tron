@@ -86,11 +86,14 @@ jacocoTestReport {
         csv.enabled false
         html.destination file("${buildDir}/jacocoHtml")
     }
-    // Include coverage from both this & framework modules
-    getExecutionData()
-        .setFrom(
-            fileTree('./build/jacoco').include("**.exec"), 
-            fileTree('../framework/build/jacoco').include("**.exec"))
+    def diffblueOnly = providers.gradleProperty("diffblueOnly")
+    if (!diffblueOnly.present) {
+        // Include coverage from both this & framework modules
+        getExecutionData()
+            .setFrom(
+                fileTree('./build/jacoco').include("**.exec"), 
+                fileTree('../framework/build/jacoco').include("**.exec"))
+    }
 }
 
 def binaryRelease(taskName, jarName, mainClass) {
