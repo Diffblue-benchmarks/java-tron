@@ -1,0 +1,24 @@
+package org.tron.core.store;
+
+import static org.junit.Assert.assertNull;
+import com.diffblue.cover.annotations.MaintainedByDiffblue;
+import com.diffblue.cover.annotations.MethodsUnderTest;
+import org.junit.Test;
+import org.junit.experimental.categories.Category;
+
+public class StoreFactoryDiffblueTest {
+  /**
+   * Test getters and setters.
+   * <p>
+   * Method under test: {@link StoreFactory#getInstance()}
+   */
+  @Test
+  @Category(MaintainedByDiffblue.class)
+  @MethodsUnderTest({"org.tron.core.ChainBaseManager StoreFactory.getChainBaseManager()",
+      "StoreFactory StoreFactory.getInstance()",
+      "StoreFactory StoreFactory.setChainBaseManager(org.tron.core.ChainBaseManager)"})
+  public void testGettersAndSetters() {
+    // Arrange, Act and Assert
+    assertNull(StoreFactory.getInstance().getInstance());
+  }
+}

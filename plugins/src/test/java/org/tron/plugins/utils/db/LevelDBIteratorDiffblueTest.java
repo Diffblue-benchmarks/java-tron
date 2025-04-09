@@ -1,0 +1,298 @@
+package org.tron.plugins.utils.db;
+
+import static org.junit.Assert.assertArrayEquals;
+import static org.junit.Assert.assertFalse;
+import static org.junit.Assert.assertSame;
+import static org.junit.Assert.assertTrue;
+import static org.mockito.ArgumentMatchers.isA;
+import static org.mockito.Mockito.doNothing;
+import static org.mockito.Mockito.mock;
+import static org.mockito.Mockito.verify;
+import static org.mockito.Mockito.when;
+import com.diffblue.cover.annotations.MaintainedByDiffblue;
+import com.diffblue.cover.annotations.MethodsUnderTest;
+import java.io.IOException;
+import java.io.UnsupportedEncodingException;
+import java.util.Map;
+import java.util.Map.Entry;
+import org.iq80.leveldb.impl.SeekingIteratorAdapter;
+import org.iq80.leveldb.impl.SeekingIteratorAdapter.DbEntry;
+import org.iq80.leveldb.util.Slice;
+import org.iq80.leveldb.util.Slices;
+import org.junit.Test;
+import org.junit.experimental.categories.Category;
+import org.mockito.Mockito;
+
+public class LevelDBIteratorDiffblueTest {
+  /**
+   * Test {@link LevelDBIterator#valid()}.
+   * <ul>
+   *   <li>Given {@link SeekingIteratorAdapter} {@link SeekingIteratorAdapter#hasNext()} return {@code false}.</li>
+   *   <li>Then return {@code false}.</li>
+   * </ul>
+   * <p>
+   * Method under test: {@link LevelDBIterator#valid()}
+   */
+  @Test
+  @Category(MaintainedByDiffblue.class)
+  @MethodsUnderTest({"boolean LevelDBIterator.valid()"})
+  public void testValid_givenSeekingIteratorAdapterHasNextReturnFalse_thenReturnFalse() {
+    // Arrange
+    SeekingIteratorAdapter iterator = mock(SeekingIteratorAdapter.class);
+    when(iterator.hasNext()).thenReturn(false);
+
+    // Act
+    boolean actualValidResult = (new LevelDBIterator(iterator)).valid();
+
+    // Assert
+    verify(iterator).hasNext();
+    assertFalse(actualValidResult);
+  }
+
+  /**
+   * Test {@link LevelDBIterator#valid()}.
+   * <ul>
+   *   <li>Given {@link SeekingIteratorAdapter} {@link SeekingIteratorAdapter#hasNext()} return {@code true}.</li>
+   *   <li>Then return {@code true}.</li>
+   * </ul>
+   * <p>
+   * Method under test: {@link LevelDBIterator#valid()}
+   */
+  @Test
+  @Category(MaintainedByDiffblue.class)
+  @MethodsUnderTest({"boolean LevelDBIterator.valid()"})
+  public void testValid_givenSeekingIteratorAdapterHasNextReturnTrue_thenReturnTrue() {
+    // Arrange
+    SeekingIteratorAdapter iterator = mock(SeekingIteratorAdapter.class);
+    when(iterator.hasNext()).thenReturn(true);
+
+    // Act
+    boolean actualValidResult = (new LevelDBIterator(iterator)).valid();
+
+    // Assert
+    verify(iterator).hasNext();
+    assertTrue(actualValidResult);
+  }
+
+  /**
+   * Test {@link LevelDBIterator#seek(byte[])}.
+   * <ul>
+   *   <li>Given {@link SeekingIteratorAdapter} {@link SeekingIteratorAdapter#seek(byte[])} does nothing.</li>
+   *   <li>Then calls {@link SeekingIteratorAdapter#seek(byte[])}.</li>
+   * </ul>
+   * <p>
+   * Method under test: {@link LevelDBIterator#seek(byte[])}
+   */
+  @Test
+  @Category(MaintainedByDiffblue.class)
+  @MethodsUnderTest({"void LevelDBIterator.seek(byte[])"})
+  public void testSeek_givenSeekingIteratorAdapterSeekDoesNothing_thenCallsSeek() throws UnsupportedEncodingException {
+    // Arrange
+    SeekingIteratorAdapter iterator = mock(SeekingIteratorAdapter.class);
+    doNothing().when(iterator).seek(Mockito.<byte[]>any());
+    LevelDBIterator levelDBIterator = new LevelDBIterator(iterator);
+
+    // Act
+    levelDBIterator.seek("AXAXAXAX".getBytes("UTF-8"));
+
+    // Assert
+    verify(iterator).seek(isA(byte[].class));
+  }
+
+  /**
+   * Test {@link LevelDBIterator#seekToFirst()}.
+   * <ul>
+   *   <li>Then calls {@link SeekingIteratorAdapter#seekToFirst()}.</li>
+   * </ul>
+   * <p>
+   * Method under test: {@link LevelDBIterator#seekToFirst()}
+   */
+  @Test
+  @Category(MaintainedByDiffblue.class)
+  @MethodsUnderTest({"void LevelDBIterator.seekToFirst()"})
+  public void testSeekToFirst_thenCallsSeekToFirst() {
+    // Arrange
+    SeekingIteratorAdapter iterator = mock(SeekingIteratorAdapter.class);
+    doNothing().when(iterator).seekToFirst();
+
+    // Act
+    (new LevelDBIterator(iterator)).seekToFirst();
+
+    // Assert
+    verify(iterator).seekToFirst();
+  }
+
+  /**
+   * Test {@link LevelDBIterator#seekToLast()}.
+   * <ul>
+   *   <li>Then calls {@link SeekingIteratorAdapter#seekToLast()}.</li>
+   * </ul>
+   * <p>
+   * Method under test: {@link LevelDBIterator#seekToLast()}
+   */
+  @Test
+  @Category(MaintainedByDiffblue.class)
+  @MethodsUnderTest({"void LevelDBIterator.seekToLast()"})
+  public void testSeekToLast_thenCallsSeekToLast() {
+    // Arrange
+    SeekingIteratorAdapter iterator = mock(SeekingIteratorAdapter.class);
+    doNothing().when(iterator).seekToLast();
+
+    // Act
+    (new LevelDBIterator(iterator)).seekToLast();
+
+    // Assert
+    verify(iterator).seekToLast();
+  }
+
+  /**
+   * Test {@link LevelDBIterator#hasNext()}.
+   * <ul>
+   *   <li>Given {@link SeekingIteratorAdapter} {@link SeekingIteratorAdapter#hasNext()} return {@code false}.</li>
+   *   <li>Then return {@code false}.</li>
+   * </ul>
+   * <p>
+   * Method under test: {@link LevelDBIterator#hasNext()}
+   */
+  @Test
+  @Category(MaintainedByDiffblue.class)
+  @MethodsUnderTest({"boolean LevelDBIterator.hasNext()"})
+  public void testHasNext_givenSeekingIteratorAdapterHasNextReturnFalse_thenReturnFalse() {
+    // Arrange
+    SeekingIteratorAdapter iterator = mock(SeekingIteratorAdapter.class);
+    when(iterator.hasNext()).thenReturn(false);
+
+    // Act
+    boolean actualHasNextResult = (new LevelDBIterator(iterator)).hasNext();
+
+    // Assert
+    verify(iterator).hasNext();
+    assertFalse(actualHasNextResult);
+  }
+
+  /**
+   * Test {@link LevelDBIterator#hasNext()}.
+   * <ul>
+   *   <li>Given {@link SeekingIteratorAdapter} {@link SeekingIteratorAdapter#hasNext()} return {@code true}.</li>
+   *   <li>Then return {@code true}.</li>
+   * </ul>
+   * <p>
+   * Method under test: {@link LevelDBIterator#hasNext()}
+   */
+  @Test
+  @Category(MaintainedByDiffblue.class)
+  @MethodsUnderTest({"boolean LevelDBIterator.hasNext()"})
+  public void testHasNext_givenSeekingIteratorAdapterHasNextReturnTrue_thenReturnTrue() {
+    // Arrange
+    SeekingIteratorAdapter iterator = mock(SeekingIteratorAdapter.class);
+    when(iterator.hasNext()).thenReturn(true);
+
+    // Act
+    boolean actualHasNextResult = (new LevelDBIterator(iterator)).hasNext();
+
+    // Assert
+    verify(iterator).hasNext();
+    assertTrue(actualHasNextResult);
+  }
+
+  /**
+   * Test {@link LevelDBIterator#getKey()}.
+   * <ul>
+   *   <li>Then return array of {@code byte} with zero and zero.</li>
+   * </ul>
+   * <p>
+   * Method under test: {@link LevelDBIterator#getKey()}
+   */
+  @Test
+  @Category(MaintainedByDiffblue.class)
+  @MethodsUnderTest({"byte[] LevelDBIterator.getKey()"})
+  public void testGetKey_thenReturnArrayOfByteWithZeroAndZero() {
+    // Arrange
+    SeekingIteratorAdapter iterator = mock(SeekingIteratorAdapter.class);
+    Slice key = Slices.allocate(3);
+    when(iterator.peekNext()).thenReturn(new DbEntry(key, Slices.allocate(3)));
+
+    // Act
+    byte[] actualKey = (new LevelDBIterator(iterator)).getKey();
+
+    // Assert
+    verify(iterator).peekNext();
+    assertArrayEquals(new byte[]{0, 0, 0}, actualKey);
+  }
+
+  /**
+   * Test {@link LevelDBIterator#getValue()}.
+   * <ul>
+   *   <li>Then return array of {@code byte} with zero and zero.</li>
+   * </ul>
+   * <p>
+   * Method under test: {@link LevelDBIterator#getValue()}
+   */
+  @Test
+  @Category(MaintainedByDiffblue.class)
+  @MethodsUnderTest({"byte[] LevelDBIterator.getValue()"})
+  public void testGetValue_thenReturnArrayOfByteWithZeroAndZero() {
+    // Arrange
+    SeekingIteratorAdapter iterator = mock(SeekingIteratorAdapter.class);
+    Slice key = Slices.allocate(3);
+    when(iterator.peekNext()).thenReturn(new DbEntry(key, Slices.allocate(3)));
+
+    // Act
+    byte[] actualValue = (new LevelDBIterator(iterator)).getValue();
+
+    // Assert
+    verify(iterator).peekNext();
+    assertArrayEquals(new byte[]{0, 0, 0}, actualValue);
+  }
+
+  /**
+   * Test {@link LevelDBIterator#next()}.
+   * <ul>
+   *   <li>Then return {@link DbEntry#DbEntry(Slice, Slice)} with key is allocate three and value is allocate three.</li>
+   * </ul>
+   * <p>
+   * Method under test: {@link LevelDBIterator#next()}
+   */
+  @Test
+  @Category(MaintainedByDiffblue.class)
+  @MethodsUnderTest({"Entry LevelDBIterator.next()"})
+  public void testNext_thenReturnDbEntryWithKeyIsAllocateThreeAndValueIsAllocateThree() {
+    // Arrange
+    SeekingIteratorAdapter iterator = mock(SeekingIteratorAdapter.class);
+    Slice key = Slices.allocate(3);
+    DbEntry dbEntry = new DbEntry(key, Slices.allocate(3));
+
+    when(iterator.next()).thenReturn(dbEntry);
+
+    // Act
+    Entry<byte[], byte[]> actualNextResult = (new LevelDBIterator(iterator)).next();
+
+    // Assert
+    verify(iterator).next();
+    assertSame(dbEntry, actualNextResult);
+  }
+
+  /**
+   * Test {@link LevelDBIterator#close()}.
+   * <ul>
+   *   <li>Given {@link SeekingIteratorAdapter} {@link SeekingIteratorAdapter#close()} does nothing.</li>
+   *   <li>Then calls {@link SeekingIteratorAdapter#close()}.</li>
+   * </ul>
+   * <p>
+   * Method under test: {@link LevelDBIterator#close()}
+   */
+  @Test
+  @Category(MaintainedByDiffblue.class)
+  @MethodsUnderTest({"void LevelDBIterator.close()"})
+  public void testClose_givenSeekingIteratorAdapterCloseDoesNothing_thenCallsClose() throws IOException {
+    // Arrange
+    SeekingIteratorAdapter iterator = mock(SeekingIteratorAdapter.class);
+    doNothing().when(iterator).close();
+
+    // Act
+    (new LevelDBIterator(iterator)).close();
+
+    // Assert
+    verify(iterator).close();
+  }
+}

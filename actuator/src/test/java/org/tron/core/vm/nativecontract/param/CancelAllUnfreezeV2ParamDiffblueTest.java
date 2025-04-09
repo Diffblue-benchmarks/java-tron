@@ -1,0 +1,37 @@
+package org.tron.core.vm.nativecontract.param;
+
+import static org.junit.Assert.assertArrayEquals;
+import static org.junit.Assert.assertSame;
+import com.diffblue.cover.annotations.MaintainedByDiffblue;
+import com.diffblue.cover.annotations.MethodsUnderTest;
+import java.io.UnsupportedEncodingException;
+import org.junit.Test;
+import org.junit.experimental.categories.Category;
+
+public class CancelAllUnfreezeV2ParamDiffblueTest {
+  /**
+   * Test getters and setters.
+   * <p>
+   * Methods under test:
+   * <ul>
+   *   <li>default or parameterless constructor of {@link CancelAllUnfreezeV2Param}
+   *   <li>{@link CancelAllUnfreezeV2Param#setOwnerAddress(byte[])}
+   *   <li>{@link CancelAllUnfreezeV2Param#getOwnerAddress()}
+   * </ul>
+   */
+  @Test
+  @Category(MaintainedByDiffblue.class)
+  @MethodsUnderTest({"void CancelAllUnfreezeV2Param.<init>()", "byte[] CancelAllUnfreezeV2Param.getOwnerAddress()",
+      "void CancelAllUnfreezeV2Param.setOwnerAddress(byte[])"})
+  public void testGettersAndSetters() throws UnsupportedEncodingException {
+    // Arrange and Act
+    CancelAllUnfreezeV2Param actualCancelAllUnfreezeV2Param = new CancelAllUnfreezeV2Param();
+    byte[] ownerAddress = "AXAXAXAX".getBytes("UTF-8");
+    actualCancelAllUnfreezeV2Param.setOwnerAddress(ownerAddress);
+    byte[] actualOwnerAddress = actualCancelAllUnfreezeV2Param.getOwnerAddress();
+
+    // Assert
+    assertSame(ownerAddress, actualOwnerAddress);
+    assertArrayEquals("AXAXAXAX".getBytes("UTF-8"), actualOwnerAddress);
+  }
+}
