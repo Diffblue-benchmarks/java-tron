@@ -1,0 +1,123 @@
+{
+  "meta" : {
+    "reportVersion" : "2.7"
+  },
+  "run" : {
+    "version" : "2025.03.02-9a94c7b-licensed",
+    "creationTimestamp" : "2025-04-28T10:53:26.261Z",
+    "command" : "dcover coverage-reports --exclude-modules=protocol",
+    "totalTime" : 94.999,
+    "environmentDetectionTime" : 46.706,
+    "indexingTime" : 0.0,
+    "entryPointsTime" : 0.0,
+    "generationTime" : 0.0,
+    "timeToFirstTest" : 94.999,
+    "timeToLastTest" : 94.999,
+    "indexQueryTime" : 0.0,
+    "verificationTime" : 0.0,
+    "validationTime" : 0.0
+  },
+  "codes" : {
+    "T000" : "Method eligible for test creation",
+    "T001" : "Trivial getter",
+    "T012" : "Synthetic method"
+  },
+  "summary" : {
+    "classesCount" : 1,
+    "methodsCount" : 6,
+    "cumulativeDiffblueTestCount" : 0,
+    "cumulativeManualTestCount" : 0,
+    "completeTestCount" : 0,
+    "incompleteTestCount" : 0,
+    "skeletonTestCount" : 0,
+    "totalPhysicalLineCount" : 31,
+    "perMethodTestability" : {
+      "T000" : 4,
+      "T001" : 1,
+      "T012" : 1
+    },
+    "perMethodOutcome" : {
+      "T000" : 4,
+      "T001" : 1,
+      "T012" : 1
+    }
+  },
+  "classes" : {
+    "org.tron.core.actuator.ExampleActuator" : {
+      "methodsCount" : 6,
+      "completeTestCount" : 0,
+      "incompleteTestCount" : 0,
+      "perMethodTestability" : {
+        "T000" : 4,
+        "T001" : 1,
+        "T012" : 1
+      },
+      "perMethodOutcome" : {
+        "T000" : 4,
+        "T001" : 1,
+        "T012" : 1
+      }
+    }
+  },
+  "methods" : {
+    "org.tron.core.actuator.ExampleActuator.<clinit>:()V" : {
+      "completeTestCount" : 0,
+      "incompleteTestCount" : 0,
+      "perMethodTestability" : "T012",
+      "perMethodOutcome" : "T012",
+      "lineNumbers" : [
+        9
+      ]
+    },
+    "org.tron.core.actuator.ExampleActuator.<init>:()V" : {
+      "completeTestCount" : 0,
+      "incompleteTestCount" : 0,
+      "perMethodTestability" : "T000",
+      "perMethodOutcome" : "T000",
+      "lineNumbers" : [
+        13,
+        14,
+        15
+      ]
+    },
+    "org.tron.core.actuator.ExampleActuator.calcFee:()J" : {
+      "completeTestCount" : 0,
+      "incompleteTestCount" : 0,
+      "perMethodTestability" : "T000",
+      "perMethodOutcome" : "T000",
+      "lineNumbers" : [
+        36
+      ]
+    },
+    "org.tron.core.actuator.ExampleActuator.execute:(Ljava/lang/Object;)Z" : {
+      "completeTestCount" : 0,
+      "incompleteTestCount" : 0,
+      "perMethodTestability" : "T000",
+      "perMethodOutcome" : "T000",
+      "lineNumbers" : [
+        19,
+        20
+      ]
+    },
+    "org.tron.core.actuator.ExampleActuator.getOwnerAddress:()Lcom/google/protobuf/ByteString;" : {
+      "completeTestCount" : 0,
+      "incompleteTestCount" : 0,
+      "perMethodTestability" : "T001",
+      "perMethodOutcome" : "T001",
+      "lineNumbers" : [
+        31
+      ]
+    },
+    "org.tron.core.actuator.ExampleActuator.validate:()Z" : {
+      "completeTestCount" : 0,
+      "incompleteTestCount" : 0,
+      "perMethodTestability" : "T000",
+      "perMethodOutcome" : "T000",
+      "lineNumbers" : [
+        25,
+        26
+      ]
+    }
+  },
+  "validationMetrics" : { }
+}
