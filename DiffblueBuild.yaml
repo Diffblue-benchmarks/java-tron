@@ -231,11 +231,13 @@ phase:
       # To execute only the Diffblue created tests, then pass this regular expression to match the file names
       onlyDiffblue:
         - -PincludeTests=${DIFFBLUE_TEST_CLASS_REGEX}
+        - -PdiffblueOnly
       # To execute only the Diffblue created tests that have a specific tag in non-Diffblue tests, then pass these
       # options to the test runner
       onlyDiffblueTag:
         - -PexcludeTests=${DIFFBLUE_TEST_CLASS_REGEX}
         - -PincludeGroup=MaintainedByDiffblue
+        - -PdiffblueOnly
       # To run a single test, apply this option
       named:
         - --tests=${DIFFBLUE_TEST_CLASS}

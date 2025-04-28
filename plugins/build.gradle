@@ -74,25 +74,14 @@ test {
         exceptionFormat = 'full'
     }
     maxParallelForks = Runtime.runtime.availableProcessors().intdiv(2) ?: 1
-    jacoco {
-        destinationFile = file("../framework/build/jacoco/jacocoTest1.exec")
-        classDumpDir = file("$buildDir/jacoco/classpathdumps")
-    }
+    finalizedBy jacocoTestReport
 }
 
 jacocoTestReport {
+    dependsOn test
     reports {
         xml.enabled true
-        csv.enabled false
-        html.destination file("${buildDir}/jacocoHtml")
-    }
-    def diffblueOnly = providers.gradleProperty("diffblueOnly")
-    if (!diffblueOnly.present) {
-        // Include coverage from both this & framework modules
-        getExecutionData()
-            .setFrom(
-                fileTree('./build/jacoco').include("**.exec"), 
-                fileTree('../framework/build/jacoco').include("**.exec"))
+        csv.enabled true
     }
 }
 
