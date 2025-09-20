@@ -21,454 +21,454 @@ import org.tron.protos.contract.ShieldContract.PedersenHash;
 public class IncrementalMerkleTreeCapsuleDiffblueTest {
   /**
    * Test {@link IncrementalMerkleTreeCapsule#IncrementalMerkleTreeCapsule()}.
-   * <p>
-   * Method under test: {@link IncrementalMerkleTreeCapsule#IncrementalMerkleTreeCapsule()}
+   *
+   * <p>Method under test: {@link IncrementalMerkleTreeCapsule#IncrementalMerkleTreeCapsule()}
    */
   @Test
   @Category(MaintainedByDiffblue.class)
   @MethodsUnderTest({"void IncrementalMerkleTreeCapsule.<init>()"})
   public void testNewIncrementalMerkleTreeCapsule() {
     // Arrange and Act
-    IncrementalMerkleTreeCapsule actualIncrementalMerkleTreeCapsule = new IncrementalMerkleTreeCapsule();
+    IncrementalMerkleTreeCapsule actualIncrementalMerkleTreeCapsule =
+        new IncrementalMerkleTreeCapsule();
 
     // Assert
     assertTrue(actualIncrementalMerkleTreeCapsule.getParents().isEmpty());
-    assertArrayEquals(new byte[]{}, actualIncrementalMerkleTreeCapsule.getData());
+    assertArrayEquals(new byte[] {}, actualIncrementalMerkleTreeCapsule.getData());
   }
 
   /**
    * Test {@link IncrementalMerkleTreeCapsule#IncrementalMerkleTreeCapsule(byte[])}.
+   *
    * <ul>
-   *   <li>When array of {@code byte} with eighteen and {@code X}.</li>
+   *   <li>When array of {@code byte} with {@code A} and two.
    * </ul>
-   * <p>
-   * Method under test: {@link IncrementalMerkleTreeCapsule#IncrementalMerkleTreeCapsule(byte[])}
+   *
+   * <p>Method under test: {@link IncrementalMerkleTreeCapsule#IncrementalMerkleTreeCapsule(byte[])}
+   */
+  @Test
+  @Category(MaintainedByDiffblue.class)
+  @MethodsUnderTest({"void IncrementalMerkleTreeCapsule.<init>(byte[])"})
+  public void testNewIncrementalMerkleTreeCapsule_whenArrayOfByteWithAAndTwo() {
+    // Arrange and Act
+    IncrementalMerkleTreeCapsule actualIncrementalMerkleTreeCapsule =
+        new IncrementalMerkleTreeCapsule(
+            new byte[] {'A', 2, 'A', 2, 'A', 2, 'A', 2, 'A', 2, 'A', 2, 'A', 2, 'A', 2});
+
+    // Assert
+    assertNull(actualIncrementalMerkleTreeCapsule.getInstance());
+    assertSame(
+        actualIncrementalMerkleTreeCapsule,
+        actualIncrementalMerkleTreeCapsule.toMerkleTreeContainer().getTreeCapsule());
+  }
+
+  /**
+   * Test {@link IncrementalMerkleTreeCapsule#IncrementalMerkleTreeCapsule(byte[])}.
+   *
+   * <ul>
+   *   <li>When array of {@code byte} with eighteen and {@code X}.
+   * </ul>
+   *
+   * <p>Method under test: {@link IncrementalMerkleTreeCapsule#IncrementalMerkleTreeCapsule(byte[])}
    */
   @Test
   @Category(MaintainedByDiffblue.class)
   @MethodsUnderTest({"void IncrementalMerkleTreeCapsule.<init>(byte[])"})
   public void testNewIncrementalMerkleTreeCapsule_whenArrayOfByteWithEighteenAndX() {
     // Arrange and Act
-    IncrementalMerkleTreeCapsule actualIncrementalMerkleTreeCapsule = new IncrementalMerkleTreeCapsule(
-        new byte[]{18, 'X', 'A', 'X', 'A', 'X', 'A', 'X'});
+    IncrementalMerkleTreeCapsule actualIncrementalMerkleTreeCapsule =
+        new IncrementalMerkleTreeCapsule(new byte[] {18, 'X', 'A', 'X', 'A', 'X', 'A', 'X'});
 
     // Assert
     assertNull(actualIncrementalMerkleTreeCapsule.getInstance());
-    assertSame(actualIncrementalMerkleTreeCapsule,
+    assertSame(
+        actualIncrementalMerkleTreeCapsule,
         actualIncrementalMerkleTreeCapsule.toMerkleTreeContainer().getTreeCapsule());
   }
 
   /**
    * Test {@link IncrementalMerkleTreeCapsule#IncrementalMerkleTreeCapsule(byte[])}.
+   *
    * <ul>
-   *   <li>When array of {@code byte} with eighteen and zero.</li>
+   *   <li>When array of {@code byte} with eighteen and zero.
    * </ul>
-   * <p>
-   * Method under test: {@link IncrementalMerkleTreeCapsule#IncrementalMerkleTreeCapsule(byte[])}
+   *
+   * <p>Method under test: {@link IncrementalMerkleTreeCapsule#IncrementalMerkleTreeCapsule(byte[])}
    */
   @Test
   @Category(MaintainedByDiffblue.class)
   @MethodsUnderTest({"void IncrementalMerkleTreeCapsule.<init>(byte[])"})
   public void testNewIncrementalMerkleTreeCapsule_whenArrayOfByteWithEighteenAndZero() {
     // Arrange and Act
-    IncrementalMerkleTreeCapsule actualIncrementalMerkleTreeCapsule = new IncrementalMerkleTreeCapsule(
-        new byte[]{18, 0, 'A', 'X', 'A', 'X', 'A', 'X'});
+    IncrementalMerkleTreeCapsule actualIncrementalMerkleTreeCapsule =
+        new IncrementalMerkleTreeCapsule(new byte[] {18, 0, 'A', 'X', 'A', 'X', 'A', 'X'});
 
     // Assert
     assertNull(actualIncrementalMerkleTreeCapsule.getInstance());
-    assertSame(actualIncrementalMerkleTreeCapsule,
+    assertSame(
+        actualIncrementalMerkleTreeCapsule,
         actualIncrementalMerkleTreeCapsule.toMerkleTreeContainer().getTreeCapsule());
   }
 
   /**
    * Test {@link IncrementalMerkleTreeCapsule#IncrementalMerkleTreeCapsule(byte[])}.
+   *
    * <ul>
-   *   <li>When array of {@code byte} with eighteen and zero.</li>
+   *   <li>When array of {@code byte} with lf and lf.
    * </ul>
-   * <p>
-   * Method under test: {@link IncrementalMerkleTreeCapsule#IncrementalMerkleTreeCapsule(byte[])}
+   *
+   * <p>Method under test: {@link IncrementalMerkleTreeCapsule#IncrementalMerkleTreeCapsule(byte[])}
    */
   @Test
   @Category(MaintainedByDiffblue.class)
   @MethodsUnderTest({"void IncrementalMerkleTreeCapsule.<init>(byte[])"})
-  public void testNewIncrementalMerkleTreeCapsule_whenArrayOfByteWithEighteenAndZero2() {
+  public void testNewIncrementalMerkleTreeCapsule_whenArrayOfByteWithLfAndLf() {
     // Arrange and Act
-    IncrementalMerkleTreeCapsule actualIncrementalMerkleTreeCapsule = new IncrementalMerkleTreeCapsule(
-        new byte[]{18, 0, 18, 'X', 'A', 'X', 'A', 'X'});
+    IncrementalMerkleTreeCapsule actualIncrementalMerkleTreeCapsule =
+        new IncrementalMerkleTreeCapsule(
+            new byte[] {'\n', '\n', 'A', 2, 'A', 2, 'A', 2, 'A', 2, 'A', 2, 'A', 2, 'A', 2});
 
     // Assert
     assertNull(actualIncrementalMerkleTreeCapsule.getInstance());
-    assertSame(actualIncrementalMerkleTreeCapsule,
+    assertSame(
+        actualIncrementalMerkleTreeCapsule,
         actualIncrementalMerkleTreeCapsule.toMerkleTreeContainer().getTreeCapsule());
   }
 
   /**
    * Test {@link IncrementalMerkleTreeCapsule#IncrementalMerkleTreeCapsule(byte[])}.
+   *
    * <ul>
-   *   <li>When array of {@code byte} with lf and two.</li>
+   *   <li>When array of {@code byte} with lf and two.
    * </ul>
-   * <p>
-   * Method under test: {@link IncrementalMerkleTreeCapsule#IncrementalMerkleTreeCapsule(byte[])}
+   *
+   * <p>Method under test: {@link IncrementalMerkleTreeCapsule#IncrementalMerkleTreeCapsule(byte[])}
    */
   @Test
   @Category(MaintainedByDiffblue.class)
   @MethodsUnderTest({"void IncrementalMerkleTreeCapsule.<init>(byte[])"})
   public void testNewIncrementalMerkleTreeCapsule_whenArrayOfByteWithLfAndTwo() {
     // Arrange and Act
-    IncrementalMerkleTreeCapsule actualIncrementalMerkleTreeCapsule = new IncrementalMerkleTreeCapsule(
-        new byte[]{'\n', 2, 'A', 'X', 'A', 'X', 'A', 'X'});
+    IncrementalMerkleTreeCapsule actualIncrementalMerkleTreeCapsule =
+        new IncrementalMerkleTreeCapsule(
+            new byte[] {'\n', 2, 'A', 2, 'A', 2, 'A', 2, 'A', 2, 'A', 2, 'A', 2, 'A', 2});
 
     // Assert
     assertNull(actualIncrementalMerkleTreeCapsule.getInstance());
-    assertSame(actualIncrementalMerkleTreeCapsule,
+    assertSame(
+        actualIncrementalMerkleTreeCapsule,
         actualIncrementalMerkleTreeCapsule.toMerkleTreeContainer().getTreeCapsule());
   }
 
   /**
    * Test {@link IncrementalMerkleTreeCapsule#IncrementalMerkleTreeCapsule(byte[])}.
+   *
    * <ul>
-   *   <li>When array of {@code byte} with lf and two.</li>
+   *   <li>When array of {@code byte} with lf and zero.
    * </ul>
-   * <p>
-   * Method under test: {@link IncrementalMerkleTreeCapsule#IncrementalMerkleTreeCapsule(byte[])}
-   */
-  @Test
-  @Category(MaintainedByDiffblue.class)
-  @MethodsUnderTest({"void IncrementalMerkleTreeCapsule.<init>(byte[])"})
-  public void testNewIncrementalMerkleTreeCapsule_whenArrayOfByteWithLfAndTwo2() {
-    // Arrange and Act
-    IncrementalMerkleTreeCapsule actualIncrementalMerkleTreeCapsule = new IncrementalMerkleTreeCapsule(
-        new byte[]{'\n', 2, 2, 'X', 'A', 'X', 'A', 'X'});
-
-    // Assert
-    assertNull(actualIncrementalMerkleTreeCapsule.getInstance());
-    assertSame(actualIncrementalMerkleTreeCapsule,
-        actualIncrementalMerkleTreeCapsule.toMerkleTreeContainer().getTreeCapsule());
-  }
-
-  /**
-   * Test {@link IncrementalMerkleTreeCapsule#IncrementalMerkleTreeCapsule(byte[])}.
-   * <ul>
-   *   <li>When array of {@code byte} with lf and two.</li>
-   * </ul>
-   * <p>
-   * Method under test: {@link IncrementalMerkleTreeCapsule#IncrementalMerkleTreeCapsule(byte[])}
-   */
-  @Test
-  @Category(MaintainedByDiffblue.class)
-  @MethodsUnderTest({"void IncrementalMerkleTreeCapsule.<init>(byte[])"})
-  public void testNewIncrementalMerkleTreeCapsule_whenArrayOfByteWithLfAndTwo3() {
-    // Arrange and Act
-    IncrementalMerkleTreeCapsule actualIncrementalMerkleTreeCapsule = new IncrementalMerkleTreeCapsule(
-        new byte[]{'\n', 2, 'X', 'X', 'A', 'X', 'A', 'X'});
-
-    // Assert
-    assertNull(actualIncrementalMerkleTreeCapsule.getInstance());
-    assertSame(actualIncrementalMerkleTreeCapsule,
-        actualIncrementalMerkleTreeCapsule.toMerkleTreeContainer().getTreeCapsule());
-  }
-
-  /**
-   * Test {@link IncrementalMerkleTreeCapsule#IncrementalMerkleTreeCapsule(byte[])}.
-   * <ul>
-   *   <li>When array of {@code byte} with lf and zero.</li>
-   * </ul>
-   * <p>
-   * Method under test: {@link IncrementalMerkleTreeCapsule#IncrementalMerkleTreeCapsule(byte[])}
+   *
+   * <p>Method under test: {@link IncrementalMerkleTreeCapsule#IncrementalMerkleTreeCapsule(byte[])}
    */
   @Test
   @Category(MaintainedByDiffblue.class)
   @MethodsUnderTest({"void IncrementalMerkleTreeCapsule.<init>(byte[])"})
   public void testNewIncrementalMerkleTreeCapsule_whenArrayOfByteWithLfAndZero() {
     // Arrange and Act
-    IncrementalMerkleTreeCapsule actualIncrementalMerkleTreeCapsule = new IncrementalMerkleTreeCapsule(
-        new byte[]{'\n', 0, 'A', 'X', 'A', 'X', 'A', 'X'});
+    IncrementalMerkleTreeCapsule actualIncrementalMerkleTreeCapsule =
+        new IncrementalMerkleTreeCapsule(new byte[] {'\n', 0, 'A', 'X', 'A', 'X', 'A', 'X'});
 
     // Assert
     assertNull(actualIncrementalMerkleTreeCapsule.getInstance());
-    assertSame(actualIncrementalMerkleTreeCapsule,
+    assertSame(
+        actualIncrementalMerkleTreeCapsule,
         actualIncrementalMerkleTreeCapsule.toMerkleTreeContainer().getTreeCapsule());
   }
 
   /**
    * Test {@link IncrementalMerkleTreeCapsule#IncrementalMerkleTreeCapsule(byte[])}.
+   *
    * <ul>
-   *   <li>When array of {@code byte} with lf and zero.</li>
+   *   <li>When array of {@code byte} with lf and zero.
    * </ul>
-   * <p>
-   * Method under test: {@link IncrementalMerkleTreeCapsule#IncrementalMerkleTreeCapsule(byte[])}
+   *
+   * <p>Method under test: {@link IncrementalMerkleTreeCapsule#IncrementalMerkleTreeCapsule(byte[])}
    */
   @Test
   @Category(MaintainedByDiffblue.class)
   @MethodsUnderTest({"void IncrementalMerkleTreeCapsule.<init>(byte[])"})
   public void testNewIncrementalMerkleTreeCapsule_whenArrayOfByteWithLfAndZero2() {
     // Arrange and Act
-    IncrementalMerkleTreeCapsule actualIncrementalMerkleTreeCapsule = new IncrementalMerkleTreeCapsule(
-        new byte[]{'\n', 0, 18, 'X', 'A', 'X', 'A', 'X'});
+    IncrementalMerkleTreeCapsule actualIncrementalMerkleTreeCapsule =
+        new IncrementalMerkleTreeCapsule(new byte[] {'\n', 0, 18, 'X', 'A', 'X', 'A', 'X'});
 
     // Assert
     assertNull(actualIncrementalMerkleTreeCapsule.getInstance());
-    assertSame(actualIncrementalMerkleTreeCapsule,
+    assertSame(
+        actualIncrementalMerkleTreeCapsule,
         actualIncrementalMerkleTreeCapsule.toMerkleTreeContainer().getTreeCapsule());
   }
 
   /**
    * Test {@link IncrementalMerkleTreeCapsule#IncrementalMerkleTreeCapsule(byte[])}.
+   *
    * <ul>
-   *   <li>When array of {@code byte} with minus one and {@code X}.</li>
+   *   <li>When array of {@code byte} with minus one and {@code X}.
    * </ul>
-   * <p>
-   * Method under test: {@link IncrementalMerkleTreeCapsule#IncrementalMerkleTreeCapsule(byte[])}
+   *
+   * <p>Method under test: {@link IncrementalMerkleTreeCapsule#IncrementalMerkleTreeCapsule(byte[])}
    */
   @Test
   @Category(MaintainedByDiffblue.class)
   @MethodsUnderTest({"void IncrementalMerkleTreeCapsule.<init>(byte[])"})
   public void testNewIncrementalMerkleTreeCapsule_whenArrayOfByteWithMinusOneAndX() {
     // Arrange and Act
-    IncrementalMerkleTreeCapsule actualIncrementalMerkleTreeCapsule = new IncrementalMerkleTreeCapsule(
-        new byte[]{-1, 'X', 'A', 'X', 'A', 'X', 'A', 'X'});
+    IncrementalMerkleTreeCapsule actualIncrementalMerkleTreeCapsule =
+        new IncrementalMerkleTreeCapsule(new byte[] {-1, 'X', 'A', 'X', 'A', 'X', 'A', 'X'});
 
     // Assert
     assertNull(actualIncrementalMerkleTreeCapsule.getInstance());
-    assertSame(actualIncrementalMerkleTreeCapsule,
+    assertSame(
+        actualIncrementalMerkleTreeCapsule,
         actualIncrementalMerkleTreeCapsule.toMerkleTreeContainer().getTreeCapsule());
   }
 
   /**
    * Test {@link IncrementalMerkleTreeCapsule#IncrementalMerkleTreeCapsule(byte[])}.
+   *
    * <ul>
-   *   <li>When array of {@code byte} with twenty-six and two.</li>
+   *   <li>When array of {@code byte} with twenty-six and two.
    * </ul>
-   * <p>
-   * Method under test: {@link IncrementalMerkleTreeCapsule#IncrementalMerkleTreeCapsule(byte[])}
+   *
+   * <p>Method under test: {@link IncrementalMerkleTreeCapsule#IncrementalMerkleTreeCapsule(byte[])}
    */
   @Test
   @Category(MaintainedByDiffblue.class)
   @MethodsUnderTest({"void IncrementalMerkleTreeCapsule.<init>(byte[])"})
   public void testNewIncrementalMerkleTreeCapsule_whenArrayOfByteWithTwentySixAndTwo() {
     // Arrange and Act
-    IncrementalMerkleTreeCapsule actualIncrementalMerkleTreeCapsule = new IncrementalMerkleTreeCapsule(
-        new byte[]{26, 2, 'A', 'X', 'A', 'X', 'A', 'X'});
+    IncrementalMerkleTreeCapsule actualIncrementalMerkleTreeCapsule =
+        new IncrementalMerkleTreeCapsule(
+            new byte[] {26, 2, 'A', 2, 'A', 2, 'A', 2, 'A', 2, 'A', 2, 'A', 2, 'A', 2});
 
     // Assert
     assertNull(actualIncrementalMerkleTreeCapsule.getInstance());
-    assertSame(actualIncrementalMerkleTreeCapsule,
+    assertSame(
+        actualIncrementalMerkleTreeCapsule,
         actualIncrementalMerkleTreeCapsule.toMerkleTreeContainer().getTreeCapsule());
   }
 
   /**
    * Test {@link IncrementalMerkleTreeCapsule#IncrementalMerkleTreeCapsule(byte[])}.
+   *
    * <ul>
-   *   <li>When array of {@code byte} with twenty-six and {@code X}.</li>
+   *   <li>When array of {@code byte} with twenty-six and {@code X}.
    * </ul>
-   * <p>
-   * Method under test: {@link IncrementalMerkleTreeCapsule#IncrementalMerkleTreeCapsule(byte[])}
+   *
+   * <p>Method under test: {@link IncrementalMerkleTreeCapsule#IncrementalMerkleTreeCapsule(byte[])}
    */
   @Test
   @Category(MaintainedByDiffblue.class)
   @MethodsUnderTest({"void IncrementalMerkleTreeCapsule.<init>(byte[])"})
   public void testNewIncrementalMerkleTreeCapsule_whenArrayOfByteWithTwentySixAndX() {
     // Arrange and Act
-    IncrementalMerkleTreeCapsule actualIncrementalMerkleTreeCapsule = new IncrementalMerkleTreeCapsule(
-        new byte[]{26, 'X', 'A', 'X', 'A', 'X', 'A', 'X'});
+    IncrementalMerkleTreeCapsule actualIncrementalMerkleTreeCapsule =
+        new IncrementalMerkleTreeCapsule(new byte[] {26, 'X', 'A', 'X', 'A', 'X', 'A', 'X'});
 
     // Assert
     assertNull(actualIncrementalMerkleTreeCapsule.getInstance());
-    assertSame(actualIncrementalMerkleTreeCapsule,
+    assertSame(
+        actualIncrementalMerkleTreeCapsule,
         actualIncrementalMerkleTreeCapsule.toMerkleTreeContainer().getTreeCapsule());
   }
 
   /**
    * Test {@link IncrementalMerkleTreeCapsule#IncrementalMerkleTreeCapsule(byte[])}.
+   *
    * <ul>
-   *   <li>When array of {@code byte} with twenty-six and zero.</li>
+   *   <li>When array of {@code byte} with twenty-six and zero.
    * </ul>
-   * <p>
-   * Method under test: {@link IncrementalMerkleTreeCapsule#IncrementalMerkleTreeCapsule(byte[])}
+   *
+   * <p>Method under test: {@link IncrementalMerkleTreeCapsule#IncrementalMerkleTreeCapsule(byte[])}
    */
   @Test
   @Category(MaintainedByDiffblue.class)
   @MethodsUnderTest({"void IncrementalMerkleTreeCapsule.<init>(byte[])"})
   public void testNewIncrementalMerkleTreeCapsule_whenArrayOfByteWithTwentySixAndZero() {
     // Arrange and Act
-    IncrementalMerkleTreeCapsule actualIncrementalMerkleTreeCapsule = new IncrementalMerkleTreeCapsule(
-        new byte[]{26, 0, 'A', 'X', 'A', 'X', 'A', 'X'});
+    IncrementalMerkleTreeCapsule actualIncrementalMerkleTreeCapsule =
+        new IncrementalMerkleTreeCapsule(new byte[] {26, 0, 'A', 'X', 'A', 'X', 'A', 'X'});
 
     // Assert
     assertNull(actualIncrementalMerkleTreeCapsule.getInstance());
-    assertSame(actualIncrementalMerkleTreeCapsule,
+    assertSame(
+        actualIncrementalMerkleTreeCapsule,
         actualIncrementalMerkleTreeCapsule.toMerkleTreeContainer().getTreeCapsule());
   }
 
   /**
    * Test {@link IncrementalMerkleTreeCapsule#IncrementalMerkleTreeCapsule(byte[])}.
+   *
    * <ul>
-   *   <li>When array of {@code byte} with two and {@code X}.</li>
+   *   <li>When {@code AXAXAXAX} Bytes is {@code UTF-8}.
    * </ul>
-   * <p>
-   * Method under test: {@link IncrementalMerkleTreeCapsule#IncrementalMerkleTreeCapsule(byte[])}
+   *
+   * <p>Method under test: {@link IncrementalMerkleTreeCapsule#IncrementalMerkleTreeCapsule(byte[])}
    */
   @Test
   @Category(MaintainedByDiffblue.class)
   @MethodsUnderTest({"void IncrementalMerkleTreeCapsule.<init>(byte[])"})
-  public void testNewIncrementalMerkleTreeCapsule_whenArrayOfByteWithTwoAndX() {
+  public void testNewIncrementalMerkleTreeCapsule_whenAxaxaxaxBytesIsUtf8()
+      throws UnsupportedEncodingException {
     // Arrange and Act
-    IncrementalMerkleTreeCapsule actualIncrementalMerkleTreeCapsule = new IncrementalMerkleTreeCapsule(
-        new byte[]{2, 'X', 'A', 'X', 'A', 'X', 'A', 'X'});
+    IncrementalMerkleTreeCapsule actualIncrementalMerkleTreeCapsule =
+        new IncrementalMerkleTreeCapsule("AXAXAXAX".getBytes("UTF-8"));
 
     // Assert
     assertNull(actualIncrementalMerkleTreeCapsule.getInstance());
-    assertSame(actualIncrementalMerkleTreeCapsule,
+    assertSame(
+        actualIncrementalMerkleTreeCapsule,
         actualIncrementalMerkleTreeCapsule.toMerkleTreeContainer().getTreeCapsule());
   }
 
   /**
    * Test {@link IncrementalMerkleTreeCapsule#IncrementalMerkleTreeCapsule(byte[])}.
+   *
    * <ul>
-   *   <li>When {@code AXAXAXAX} Bytes is {@code UTF-8}.</li>
+   *   <li>When empty array of {@code byte}.
+   *   <li>Then return Parents Empty.
    * </ul>
-   * <p>
-   * Method under test: {@link IncrementalMerkleTreeCapsule#IncrementalMerkleTreeCapsule(byte[])}
-   */
-  @Test
-  @Category(MaintainedByDiffblue.class)
-  @MethodsUnderTest({"void IncrementalMerkleTreeCapsule.<init>(byte[])"})
-  public void testNewIncrementalMerkleTreeCapsule_whenAxaxaxaxBytesIsUtf8() throws UnsupportedEncodingException {
-    // Arrange and Act
-    IncrementalMerkleTreeCapsule actualIncrementalMerkleTreeCapsule = new IncrementalMerkleTreeCapsule(
-        "AXAXAXAX".getBytes("UTF-8"));
-
-    // Assert
-    assertNull(actualIncrementalMerkleTreeCapsule.getInstance());
-    assertSame(actualIncrementalMerkleTreeCapsule,
-        actualIncrementalMerkleTreeCapsule.toMerkleTreeContainer().getTreeCapsule());
-  }
-
-  /**
-   * Test {@link IncrementalMerkleTreeCapsule#IncrementalMerkleTreeCapsule(byte[])}.
-   * <ul>
-   *   <li>When empty array of {@code byte}.</li>
-   *   <li>Then return Parents Empty.</li>
-   * </ul>
-   * <p>
-   * Method under test: {@link IncrementalMerkleTreeCapsule#IncrementalMerkleTreeCapsule(byte[])}
+   *
+   * <p>Method under test: {@link IncrementalMerkleTreeCapsule#IncrementalMerkleTreeCapsule(byte[])}
    */
   @Test
   @Category(MaintainedByDiffblue.class)
   @MethodsUnderTest({"void IncrementalMerkleTreeCapsule.<init>(byte[])"})
   public void testNewIncrementalMerkleTreeCapsule_whenEmptyArrayOfByte_thenReturnParentsEmpty() {
     // Arrange and Act
-    IncrementalMerkleTreeCapsule actualIncrementalMerkleTreeCapsule = new IncrementalMerkleTreeCapsule(new byte[]{});
+    IncrementalMerkleTreeCapsule actualIncrementalMerkleTreeCapsule =
+        new IncrementalMerkleTreeCapsule(new byte[] {});
 
     // Assert
     assertTrue(actualIncrementalMerkleTreeCapsule.getParents().isEmpty());
-    assertArrayEquals(new byte[]{}, actualIncrementalMerkleTreeCapsule.getData());
+    assertArrayEquals(new byte[] {}, actualIncrementalMerkleTreeCapsule.getData());
   }
 
   /**
    * Test {@link IncrementalMerkleTreeCapsule#IncrementalMerkleTreeCapsule(byte[])}.
+   *
    * <ul>
-   *   <li>When lf.</li>
-   *   <li>Then return Instance is {@code null}.</li>
+   *   <li>When lf.
+   *   <li>Then return Instance is {@code null}.
    * </ul>
-   * <p>
-   * Method under test: {@link IncrementalMerkleTreeCapsule#IncrementalMerkleTreeCapsule(byte[])}
+   *
+   * <p>Method under test: {@link IncrementalMerkleTreeCapsule#IncrementalMerkleTreeCapsule(byte[])}
    */
   @Test
   @Category(MaintainedByDiffblue.class)
   @MethodsUnderTest({"void IncrementalMerkleTreeCapsule.<init>(byte[])"})
   public void testNewIncrementalMerkleTreeCapsule_whenLf_thenReturnInstanceIsNull() {
     // Arrange and Act
-    IncrementalMerkleTreeCapsule actualIncrementalMerkleTreeCapsule = new IncrementalMerkleTreeCapsule(
-        new byte[]{'\n', 2, '\n', 'X', 'A', 'X', 'A', 'X'});
+    IncrementalMerkleTreeCapsule actualIncrementalMerkleTreeCapsule =
+        new IncrementalMerkleTreeCapsule(
+            new byte[] {'\n', 2, '\n', 2, 'A', 2, 'A', 2, 'A', 2, 'A', 2, 'A', 2, 'A', 2});
 
     // Assert
     assertNull(actualIncrementalMerkleTreeCapsule.getInstance());
-    assertSame(actualIncrementalMerkleTreeCapsule,
+    assertSame(
+        actualIncrementalMerkleTreeCapsule,
         actualIncrementalMerkleTreeCapsule.toMerkleTreeContainer().getTreeCapsule());
   }
 
   /**
    * Test {@link IncrementalMerkleTreeCapsule#IncrementalMerkleTreeCapsule(byte[])}.
+   *
    * <ul>
-   *   <li>When lf.</li>
-   *   <li>Then return Instance is {@code null}.</li>
+   *   <li>When lf.
+   *   <li>Then return Instance is {@code null}.
    * </ul>
-   * <p>
-   * Method under test: {@link IncrementalMerkleTreeCapsule#IncrementalMerkleTreeCapsule(byte[])}
+   *
+   * <p>Method under test: {@link IncrementalMerkleTreeCapsule#IncrementalMerkleTreeCapsule(byte[])}
    */
   @Test
   @Category(MaintainedByDiffblue.class)
   @MethodsUnderTest({"void IncrementalMerkleTreeCapsule.<init>(byte[])"})
   public void testNewIncrementalMerkleTreeCapsule_whenLf_thenReturnInstanceIsNull2() {
     // Arrange and Act
-    IncrementalMerkleTreeCapsule actualIncrementalMerkleTreeCapsule = new IncrementalMerkleTreeCapsule(
-        new byte[]{'\n', 0, '\n', 'X', 'A', 'X', 'A', 'X'});
+    IncrementalMerkleTreeCapsule actualIncrementalMerkleTreeCapsule =
+        new IncrementalMerkleTreeCapsule(new byte[] {'\n', 0, '\n', 'X', 'A', 'X', 'A', 'X'});
 
     // Assert
     assertNull(actualIncrementalMerkleTreeCapsule.getInstance());
-    assertSame(actualIncrementalMerkleTreeCapsule,
+    assertSame(
+        actualIncrementalMerkleTreeCapsule,
         actualIncrementalMerkleTreeCapsule.toMerkleTreeContainer().getTreeCapsule());
   }
 
   /**
    * Test {@link IncrementalMerkleTreeCapsule#IncrementalMerkleTreeCapsule(byte[])}.
+   *
    * <ul>
-   *   <li>When {@code XAXAXAX} Bytes is {@code UTF-8}.</li>
+   *   <li>When {@code XAXAXAX} Bytes is {@code UTF-8}.
    * </ul>
-   * <p>
-   * Method under test: {@link IncrementalMerkleTreeCapsule#IncrementalMerkleTreeCapsule(byte[])}
+   *
+   * <p>Method under test: {@link IncrementalMerkleTreeCapsule#IncrementalMerkleTreeCapsule(byte[])}
    */
   @Test
   @Category(MaintainedByDiffblue.class)
   @MethodsUnderTest({"void IncrementalMerkleTreeCapsule.<init>(byte[])"})
-  public void testNewIncrementalMerkleTreeCapsule_whenXaxaxaxBytesIsUtf8() throws UnsupportedEncodingException {
+  public void testNewIncrementalMerkleTreeCapsule_whenXaxaxaxBytesIsUtf8()
+      throws UnsupportedEncodingException {
     // Arrange and Act
-    IncrementalMerkleTreeCapsule actualIncrementalMerkleTreeCapsule = new IncrementalMerkleTreeCapsule(
-        "\nXAXAXAX".getBytes("UTF-8"));
+    IncrementalMerkleTreeCapsule actualIncrementalMerkleTreeCapsule =
+        new IncrementalMerkleTreeCapsule("\nXAXAXAX".getBytes("UTF-8"));
 
     // Assert
     assertNull(actualIncrementalMerkleTreeCapsule.getInstance());
-    assertSame(actualIncrementalMerkleTreeCapsule,
+    assertSame(
+        actualIncrementalMerkleTreeCapsule,
         actualIncrementalMerkleTreeCapsule.toMerkleTreeContainer().getTreeCapsule());
   }
 
   /**
    * Test {@link IncrementalMerkleTreeCapsule#IncrementalMerkleTreeCapsule(byte[])}.
+   *
    * <ul>
-   *   <li>When {@code XXAXAXAX} Bytes is {@code UTF-8}.</li>
+   *   <li>When {@code XXAXAXAX} Bytes is {@code UTF-8}.
    * </ul>
-   * <p>
-   * Method under test: {@link IncrementalMerkleTreeCapsule#IncrementalMerkleTreeCapsule(byte[])}
+   *
+   * <p>Method under test: {@link IncrementalMerkleTreeCapsule#IncrementalMerkleTreeCapsule(byte[])}
    */
   @Test
   @Category(MaintainedByDiffblue.class)
   @MethodsUnderTest({"void IncrementalMerkleTreeCapsule.<init>(byte[])"})
-  public void testNewIncrementalMerkleTreeCapsule_whenXxaxaxaxBytesIsUtf8() throws UnsupportedEncodingException {
+  public void testNewIncrementalMerkleTreeCapsule_whenXxaxaxaxBytesIsUtf8()
+      throws UnsupportedEncodingException {
     // Arrange and Act
-    IncrementalMerkleTreeCapsule actualIncrementalMerkleTreeCapsule = new IncrementalMerkleTreeCapsule(
-        "XXAXAXAX".getBytes("UTF-8"));
+    IncrementalMerkleTreeCapsule actualIncrementalMerkleTreeCapsule =
+        new IncrementalMerkleTreeCapsule("XXAXAXAX".getBytes("UTF-8"));
 
     // Assert
     assertNull(actualIncrementalMerkleTreeCapsule.getInstance());
-    assertSame(actualIncrementalMerkleTreeCapsule,
+    assertSame(
+        actualIncrementalMerkleTreeCapsule,
         actualIncrementalMerkleTreeCapsule.toMerkleTreeContainer().getTreeCapsule());
   }
 
   /**
    * Test {@link IncrementalMerkleTreeCapsule#getLeft()}.
+   *
    * <ul>
-   *   <li>Then return InitializationErrorString is empty string.</li>
+   *   <li>Then return InitializationErrorString is empty string.
    * </ul>
-   * <p>
-   * Method under test: {@link IncrementalMerkleTreeCapsule#getLeft()}
+   *
+   * <p>Method under test: {@link IncrementalMerkleTreeCapsule#getLeft()}
    */
   @Test
   @Category(MaintainedByDiffblue.class)
   @MethodsUnderTest({"PedersenHash IncrementalMerkleTreeCapsule.getLeft()"})
   public void testGetLeft_thenReturnInitializationErrorStringIsEmptyString() {
     // Arrange and Act
-    PedersenHash actualLeft = (new IncrementalMerkleTreeCapsule()).getLeft();
+    PedersenHash actualLeft = new IncrementalMerkleTreeCapsule().getLeft();
 
     // Assert
     assertEquals("", actualLeft.getInitializationErrorString());
@@ -476,30 +476,32 @@ public class IncrementalMerkleTreeCapsuleDiffblueTest {
     assertTrue(actualLeft.findInitializationErrors().isEmpty());
     assertTrue(actualLeft.getAllFields().isEmpty());
     assertTrue(actualLeft.isInitialized());
-    assertSame(actualLeft, actualLeft.getDefaultInstanceForType());
+    PedersenHash actualDefaultInstanceForType = actualLeft.getDefaultInstanceForType();
+    assertSame(actualLeft, actualDefaultInstanceForType);
   }
 
   /**
    * Test {@link IncrementalMerkleTreeCapsule#leftIsEmpty()}.
+   *
    * <ul>
-   *   <li>Given {@link IncrementalMerkleTreeCapsule#IncrementalMerkleTreeCapsule()}.</li>
-   *   <li>Then return {@code true}.</li>
+   *   <li>Given {@link IncrementalMerkleTreeCapsule#IncrementalMerkleTreeCapsule()}.
+   *   <li>Then return {@code true}.
    * </ul>
-   * <p>
-   * Method under test: {@link IncrementalMerkleTreeCapsule#leftIsEmpty()}
+   *
+   * <p>Method under test: {@link IncrementalMerkleTreeCapsule#leftIsEmpty()}
    */
   @Test
   @Category(MaintainedByDiffblue.class)
   @MethodsUnderTest({"java.lang.Boolean IncrementalMerkleTreeCapsule.leftIsEmpty()"})
   public void testLeftIsEmpty_givenIncrementalMerkleTreeCapsule_thenReturnTrue() {
     // Arrange, Act and Assert
-    assertTrue((new IncrementalMerkleTreeCapsule()).leftIsEmpty());
+    assertTrue(new IncrementalMerkleTreeCapsule().leftIsEmpty());
   }
 
   /**
    * Test {@link IncrementalMerkleTreeCapsule#clearLeft()}.
-   * <p>
-   * Method under test: {@link IncrementalMerkleTreeCapsule#clearLeft()}
+   *
+   * <p>Method under test: {@link IncrementalMerkleTreeCapsule#clearLeft()}
    */
   @Test
   @Category(MaintainedByDiffblue.class)
@@ -513,13 +515,14 @@ public class IncrementalMerkleTreeCapsuleDiffblueTest {
 
     // Assert
     IncrementalMerkleTree instance = incrementalMerkleTreeCapsule.getInstance();
-    assertEquals(instance, instance.getDefaultInstanceForType());
+    IncrementalMerkleTree actualDefaultInstanceForType = instance.getDefaultInstanceForType();
+    assertEquals(instance, actualDefaultInstanceForType);
   }
 
   /**
    * Test {@link IncrementalMerkleTreeCapsule#clearLeft()}.
-   * <p>
-   * Method under test: {@link IncrementalMerkleTreeCapsule#clearLeft()}
+   *
+   * <p>Method under test: {@link IncrementalMerkleTreeCapsule#clearLeft()}
    */
   @Test
   @Category(MaintainedByDiffblue.class)
@@ -534,8 +537,8 @@ public class IncrementalMerkleTreeCapsuleDiffblueTest {
     incrementalMerkleTreeCapsule.clearLeft();
 
     // Assert that nothing has changed
-    IncrementalMerkleTree defaultInstanceForType = incrementalMerkleTreeCapsule.getInstance()
-        .getDefaultInstanceForType();
+    IncrementalMerkleTree defaultInstanceForType =
+        incrementalMerkleTreeCapsule.getInstance().getDefaultInstanceForType();
     assertEquals("", defaultInstanceForType.getInitializationErrorString());
     assertEquals(0, defaultInstanceForType.getParentsCount());
     assertEquals(0, defaultInstanceForType.getSerializedSize());
@@ -555,67 +558,41 @@ public class IncrementalMerkleTreeCapsuleDiffblueTest {
 
   /**
    * Test {@link IncrementalMerkleTreeCapsule#clearLeft()}.
-   * <p>
-   * Method under test: {@link IncrementalMerkleTreeCapsule#clearLeft()}
+   *
+   * <p>Method under test: {@link IncrementalMerkleTreeCapsule#clearLeft()}
    */
   @Test
   @Category(MaintainedByDiffblue.class)
   @MethodsUnderTest({"void IncrementalMerkleTreeCapsule.clearLeft()"})
   public void testClearLeft3() {
     // Arrange
-    IncrementalMerkleTreeCapsule incrementalMerkleTreeCapsule = new IncrementalMerkleTreeCapsule(new byte[]{});
+    IncrementalMerkleTreeCapsule incrementalMerkleTreeCapsule =
+        new IncrementalMerkleTreeCapsule(new byte[] {});
 
     // Act
     incrementalMerkleTreeCapsule.clearLeft();
 
     // Assert that nothing has changed
     IncrementalMerkleTree instance = incrementalMerkleTreeCapsule.getInstance();
-    assertEquals(instance, instance.getDefaultInstanceForType());
-  }
-
-  /**
-   * Test {@link IncrementalMerkleTreeCapsule#clearLeft()}.
-   * <p>
-   * Method under test: {@link IncrementalMerkleTreeCapsule#clearLeft()}
-   */
-  @Test
-  @Category(MaintainedByDiffblue.class)
-  @MethodsUnderTest({"void IncrementalMerkleTreeCapsule.clearLeft()"})
-  public void testClearLeft4() {
-    // Arrange
-    IncrementalMerkleTreeCapsule incrementalMerkleTreeCapsule = new IncrementalMerkleTreeCapsule(
-        new byte[]{'A', 'X', 'A', 'X', 'A', 'X', 'A', 'X', 'A', 'X', 'A', 'X', 'A', Byte.MIN_VALUE, 'A', 'X'});
-
-    // Act
-    incrementalMerkleTreeCapsule.clearLeft();
-
-    // Assert that nothing has changed
-    IncrementalMerkleTree defaultInstanceForType = incrementalMerkleTreeCapsule.getInstance()
-        .getDefaultInstanceForType();
-    assertEquals("", defaultInstanceForType.getInitializationErrorString());
-    assertEquals(0, defaultInstanceForType.getParentsCount());
-    assertEquals(0, defaultInstanceForType.getSerializedSize());
-    assertFalse(defaultInstanceForType.hasLeft());
-    assertFalse(defaultInstanceForType.hasRight());
-    assertTrue(defaultInstanceForType.findInitializationErrors().isEmpty());
-    assertTrue(defaultInstanceForType.getAllFields().isEmpty());
-    assertTrue(defaultInstanceForType.isInitialized());
+    IncrementalMerkleTree actualDefaultInstanceForType = instance.getDefaultInstanceForType();
+    assertEquals(instance, actualDefaultInstanceForType);
   }
 
   /**
    * Test {@link IncrementalMerkleTreeCapsule#getRight()}.
+   *
    * <ul>
-   *   <li>Then return InitializationErrorString is empty string.</li>
+   *   <li>Then return InitializationErrorString is empty string.
    * </ul>
-   * <p>
-   * Method under test: {@link IncrementalMerkleTreeCapsule#getRight()}
+   *
+   * <p>Method under test: {@link IncrementalMerkleTreeCapsule#getRight()}
    */
   @Test
   @Category(MaintainedByDiffblue.class)
   @MethodsUnderTest({"PedersenHash IncrementalMerkleTreeCapsule.getRight()"})
   public void testGetRight_thenReturnInitializationErrorStringIsEmptyString() {
     // Arrange and Act
-    PedersenHash actualRight = (new IncrementalMerkleTreeCapsule()).getRight();
+    PedersenHash actualRight = new IncrementalMerkleTreeCapsule().getRight();
 
     // Assert
     assertEquals("", actualRight.getInitializationErrorString());
@@ -623,30 +600,32 @@ public class IncrementalMerkleTreeCapsuleDiffblueTest {
     assertTrue(actualRight.findInitializationErrors().isEmpty());
     assertTrue(actualRight.getAllFields().isEmpty());
     assertTrue(actualRight.isInitialized());
-    assertSame(actualRight, actualRight.getDefaultInstanceForType());
+    PedersenHash actualDefaultInstanceForType = actualRight.getDefaultInstanceForType();
+    assertSame(actualRight, actualDefaultInstanceForType);
   }
 
   /**
    * Test {@link IncrementalMerkleTreeCapsule#rightIsEmpty()}.
+   *
    * <ul>
-   *   <li>Given {@link IncrementalMerkleTreeCapsule#IncrementalMerkleTreeCapsule()}.</li>
-   *   <li>Then return {@code true}.</li>
+   *   <li>Given {@link IncrementalMerkleTreeCapsule#IncrementalMerkleTreeCapsule()}.
+   *   <li>Then return {@code true}.
    * </ul>
-   * <p>
-   * Method under test: {@link IncrementalMerkleTreeCapsule#rightIsEmpty()}
+   *
+   * <p>Method under test: {@link IncrementalMerkleTreeCapsule#rightIsEmpty()}
    */
   @Test
   @Category(MaintainedByDiffblue.class)
   @MethodsUnderTest({"java.lang.Boolean IncrementalMerkleTreeCapsule.rightIsEmpty()"})
   public void testRightIsEmpty_givenIncrementalMerkleTreeCapsule_thenReturnTrue() {
     // Arrange, Act and Assert
-    assertTrue((new IncrementalMerkleTreeCapsule()).rightIsEmpty());
+    assertTrue(new IncrementalMerkleTreeCapsule().rightIsEmpty());
   }
 
   /**
    * Test {@link IncrementalMerkleTreeCapsule#clearRight()}.
-   * <p>
-   * Method under test: {@link IncrementalMerkleTreeCapsule#clearRight()}
+   *
+   * <p>Method under test: {@link IncrementalMerkleTreeCapsule#clearRight()}
    */
   @Test
   @Category(MaintainedByDiffblue.class)
@@ -660,13 +639,14 @@ public class IncrementalMerkleTreeCapsuleDiffblueTest {
 
     // Assert
     IncrementalMerkleTree instance = incrementalMerkleTreeCapsule.getInstance();
-    assertEquals(instance, instance.getDefaultInstanceForType());
+    IncrementalMerkleTree actualDefaultInstanceForType = instance.getDefaultInstanceForType();
+    assertEquals(instance, actualDefaultInstanceForType);
   }
 
   /**
    * Test {@link IncrementalMerkleTreeCapsule#clearRight()}.
-   * <p>
-   * Method under test: {@link IncrementalMerkleTreeCapsule#clearRight()}
+   *
+   * <p>Method under test: {@link IncrementalMerkleTreeCapsule#clearRight()}
    */
   @Test
   @Category(MaintainedByDiffblue.class)
@@ -681,8 +661,8 @@ public class IncrementalMerkleTreeCapsuleDiffblueTest {
     incrementalMerkleTreeCapsule.clearRight();
 
     // Assert that nothing has changed
-    IncrementalMerkleTree defaultInstanceForType = incrementalMerkleTreeCapsule.getInstance()
-        .getDefaultInstanceForType();
+    IncrementalMerkleTree defaultInstanceForType =
+        incrementalMerkleTreeCapsule.getInstance().getDefaultInstanceForType();
     assertEquals("", defaultInstanceForType.getInitializationErrorString());
     assertEquals(0, defaultInstanceForType.getParentsCount());
     assertEquals(0, defaultInstanceForType.getSerializedSize());
@@ -702,94 +682,70 @@ public class IncrementalMerkleTreeCapsuleDiffblueTest {
 
   /**
    * Test {@link IncrementalMerkleTreeCapsule#clearRight()}.
-   * <p>
-   * Method under test: {@link IncrementalMerkleTreeCapsule#clearRight()}
+   *
+   * <p>Method under test: {@link IncrementalMerkleTreeCapsule#clearRight()}
    */
   @Test
   @Category(MaintainedByDiffblue.class)
   @MethodsUnderTest({"void IncrementalMerkleTreeCapsule.clearRight()"})
   public void testClearRight3() {
     // Arrange
-    IncrementalMerkleTreeCapsule incrementalMerkleTreeCapsule = new IncrementalMerkleTreeCapsule(new byte[]{});
+    IncrementalMerkleTreeCapsule incrementalMerkleTreeCapsule =
+        new IncrementalMerkleTreeCapsule(new byte[] {});
 
     // Act
     incrementalMerkleTreeCapsule.clearRight();
 
     // Assert that nothing has changed
     IncrementalMerkleTree instance = incrementalMerkleTreeCapsule.getInstance();
-    assertEquals(instance, instance.getDefaultInstanceForType());
-  }
-
-  /**
-   * Test {@link IncrementalMerkleTreeCapsule#clearRight()}.
-   * <p>
-   * Method under test: {@link IncrementalMerkleTreeCapsule#clearRight()}
-   */
-  @Test
-  @Category(MaintainedByDiffblue.class)
-  @MethodsUnderTest({"void IncrementalMerkleTreeCapsule.clearRight()"})
-  public void testClearRight4() {
-    // Arrange
-    IncrementalMerkleTreeCapsule incrementalMerkleTreeCapsule = new IncrementalMerkleTreeCapsule(
-        new byte[]{'A', 'X', 'A', 'X', 'A', 'X', 'A', 'X', 'A', 'X', 'A', 'X', 'A', Byte.MIN_VALUE, 'A', 'X'});
-
-    // Act
-    incrementalMerkleTreeCapsule.clearRight();
-
-    // Assert that nothing has changed
-    IncrementalMerkleTree defaultInstanceForType = incrementalMerkleTreeCapsule.getInstance()
-        .getDefaultInstanceForType();
-    assertEquals("", defaultInstanceForType.getInitializationErrorString());
-    assertEquals(0, defaultInstanceForType.getParentsCount());
-    assertEquals(0, defaultInstanceForType.getSerializedSize());
-    assertFalse(defaultInstanceForType.hasLeft());
-    assertFalse(defaultInstanceForType.hasRight());
-    assertTrue(defaultInstanceForType.findInitializationErrors().isEmpty());
-    assertTrue(defaultInstanceForType.getAllFields().isEmpty());
-    assertTrue(defaultInstanceForType.isInitialized());
+    IncrementalMerkleTree actualDefaultInstanceForType = instance.getDefaultInstanceForType();
+    assertEquals(instance, actualDefaultInstanceForType);
   }
 
   /**
    * Test {@link IncrementalMerkleTreeCapsule#getParents()}.
+   *
    * <ul>
-   *   <li>Given {@link IncrementalMerkleTreeCapsule#IncrementalMerkleTreeCapsule()}.</li>
-   *   <li>Then return Empty.</li>
+   *   <li>Given {@link IncrementalMerkleTreeCapsule#IncrementalMerkleTreeCapsule()}.
+   *   <li>Then return Empty.
    * </ul>
-   * <p>
-   * Method under test: {@link IncrementalMerkleTreeCapsule#getParents()}
+   *
+   * <p>Method under test: {@link IncrementalMerkleTreeCapsule#getParents()}
    */
   @Test
   @Category(MaintainedByDiffblue.class)
   @MethodsUnderTest({"List IncrementalMerkleTreeCapsule.getParents()"})
   public void testGetParents_givenIncrementalMerkleTreeCapsule_thenReturnEmpty() {
     // Arrange, Act and Assert
-    assertTrue((new IncrementalMerkleTreeCapsule()).getParents().isEmpty());
+    assertTrue(new IncrementalMerkleTreeCapsule().getParents().isEmpty());
   }
 
   /**
    * Test {@link IncrementalMerkleTreeCapsule#parentsIsEmpty()}.
+   *
    * <ul>
-   *   <li>Given {@link IncrementalMerkleTreeCapsule#IncrementalMerkleTreeCapsule()}.</li>
-   *   <li>Then return {@code true}.</li>
+   *   <li>Given {@link IncrementalMerkleTreeCapsule#IncrementalMerkleTreeCapsule()}.
+   *   <li>Then return {@code true}.
    * </ul>
-   * <p>
-   * Method under test: {@link IncrementalMerkleTreeCapsule#parentsIsEmpty()}
+   *
+   * <p>Method under test: {@link IncrementalMerkleTreeCapsule#parentsIsEmpty()}
    */
   @Test
   @Category(MaintainedByDiffblue.class)
   @MethodsUnderTest({"java.lang.Boolean IncrementalMerkleTreeCapsule.parentsIsEmpty()"})
   public void testParentsIsEmpty_givenIncrementalMerkleTreeCapsule_thenReturnTrue() {
     // Arrange, Act and Assert
-    assertTrue((new IncrementalMerkleTreeCapsule()).parentsIsEmpty());
+    assertTrue(new IncrementalMerkleTreeCapsule().parentsIsEmpty());
   }
 
   /**
    * Test {@link IncrementalMerkleTreeCapsule#parentsIsEmpty()}.
+   *
    * <ul>
-   *   <li>Then return {@code false}.</li>
+   *   <li>Then return {@code false}.
    * </ul>
-   * <p>
-   * Method under test: {@link IncrementalMerkleTreeCapsule#parentsIsEmpty()}
+   *
+   * <p>Method under test: {@link IncrementalMerkleTreeCapsule#parentsIsEmpty()}
    */
   @Test
   @Category(MaintainedByDiffblue.class)
@@ -805,11 +761,13 @@ public class IncrementalMerkleTreeCapsuleDiffblueTest {
 
   /**
    * Test {@link IncrementalMerkleTreeCapsule#clearParents(int)}.
+   *
    * <ul>
-   *   <li>Then {@link IncrementalMerkleTreeCapsule#IncrementalMerkleTreeCapsule()} Parents size is two.</li>
+   *   <li>Then {@link IncrementalMerkleTreeCapsule#IncrementalMerkleTreeCapsule()} Parents size is
+   *       two.
    * </ul>
-   * <p>
-   * Method under test: {@link IncrementalMerkleTreeCapsule#clearParents(int)}
+   *
+   * <p>Method under test: {@link IncrementalMerkleTreeCapsule#clearParents(int)}
    */
   @Test
   @Category(MaintainedByDiffblue.class)
@@ -832,28 +790,30 @@ public class IncrementalMerkleTreeCapsuleDiffblueTest {
 
   /**
    * Test {@link IncrementalMerkleTreeCapsule#isEmptyTree()}.
+   *
    * <ul>
-   *   <li>Given {@link IncrementalMerkleTreeCapsule#IncrementalMerkleTreeCapsule()}.</li>
-   *   <li>Then return {@code true}.</li>
+   *   <li>Given {@link IncrementalMerkleTreeCapsule#IncrementalMerkleTreeCapsule()}.
+   *   <li>Then return {@code true}.
    * </ul>
-   * <p>
-   * Method under test: {@link IncrementalMerkleTreeCapsule#isEmptyTree()}
+   *
+   * <p>Method under test: {@link IncrementalMerkleTreeCapsule#isEmptyTree()}
    */
   @Test
   @Category(MaintainedByDiffblue.class)
   @MethodsUnderTest({"boolean IncrementalMerkleTreeCapsule.isEmptyTree()"})
   public void testIsEmptyTree_givenIncrementalMerkleTreeCapsule_thenReturnTrue() {
     // Arrange, Act and Assert
-    assertTrue((new IncrementalMerkleTreeCapsule()).isEmptyTree());
+    assertTrue(new IncrementalMerkleTreeCapsule().isEmptyTree());
   }
 
   /**
    * Test {@link IncrementalMerkleTreeCapsule#isEmptyTree()}.
+   *
    * <ul>
-   *   <li>Then return {@code false}.</li>
+   *   <li>Then return {@code false}.
    * </ul>
-   * <p>
-   * Method under test: {@link IncrementalMerkleTreeCapsule#isEmptyTree()}
+   *
+   * <p>Method under test: {@link IncrementalMerkleTreeCapsule#isEmptyTree()}
    */
   @Test
   @Category(MaintainedByDiffblue.class)
@@ -869,28 +829,30 @@ public class IncrementalMerkleTreeCapsuleDiffblueTest {
 
   /**
    * Test {@link IncrementalMerkleTreeCapsule#notEmptyTree()}.
+   *
    * <ul>
-   *   <li>Given {@link IncrementalMerkleTreeCapsule#IncrementalMerkleTreeCapsule()}.</li>
-   *   <li>Then return {@code false}.</li>
+   *   <li>Given {@link IncrementalMerkleTreeCapsule#IncrementalMerkleTreeCapsule()}.
+   *   <li>Then return {@code false}.
    * </ul>
-   * <p>
-   * Method under test: {@link IncrementalMerkleTreeCapsule#notEmptyTree()}
+   *
+   * <p>Method under test: {@link IncrementalMerkleTreeCapsule#notEmptyTree()}
    */
   @Test
   @Category(MaintainedByDiffblue.class)
   @MethodsUnderTest({"boolean IncrementalMerkleTreeCapsule.notEmptyTree()"})
   public void testNotEmptyTree_givenIncrementalMerkleTreeCapsule_thenReturnFalse() {
     // Arrange, Act and Assert
-    assertFalse((new IncrementalMerkleTreeCapsule()).notEmptyTree());
+    assertFalse(new IncrementalMerkleTreeCapsule().notEmptyTree());
   }
 
   /**
    * Test {@link IncrementalMerkleTreeCapsule#notEmptyTree()}.
+   *
    * <ul>
-   *   <li>Then return {@code true}.</li>
+   *   <li>Then return {@code true}.
    * </ul>
-   * <p>
-   * Method under test: {@link IncrementalMerkleTreeCapsule#notEmptyTree()}
+   *
+   * <p>Method under test: {@link IncrementalMerkleTreeCapsule#notEmptyTree()}
    */
   @Test
   @Category(MaintainedByDiffblue.class)
@@ -906,68 +868,30 @@ public class IncrementalMerkleTreeCapsuleDiffblueTest {
 
   /**
    * Test {@link IncrementalMerkleTreeCapsule#getData()}.
+   *
    * <ul>
-   *   <li>Given {@link IncrementalMerkleTreeCapsule#IncrementalMerkleTreeCapsule()}.</li>
-   *   <li>Then return empty array of {@code byte}.</li>
+   *   <li>Given {@link IncrementalMerkleTreeCapsule#IncrementalMerkleTreeCapsule()}.
+   *   <li>Then return empty array of {@code byte}.
    * </ul>
-   * <p>
-   * Method under test: {@link IncrementalMerkleTreeCapsule#getData()}
+   *
+   * <p>Method under test: {@link IncrementalMerkleTreeCapsule#getData()}
    */
   @Test
   @Category(MaintainedByDiffblue.class)
   @MethodsUnderTest({"byte[] IncrementalMerkleTreeCapsule.getData()"})
   public void testGetData_givenIncrementalMerkleTreeCapsule_thenReturnEmptyArrayOfByte() {
     // Arrange, Act and Assert
-    assertArrayEquals(new byte[]{}, (new IncrementalMerkleTreeCapsule()).getData());
+    assertArrayEquals(new byte[] {}, new IncrementalMerkleTreeCapsule().getData());
   }
 
   /**
    * Test {@link IncrementalMerkleTreeCapsule#getData()}.
+   *
    * <ul>
-   *   <li>Given {@code X}.</li>
-   *   <li>Then return array of {@code byte} with {@code A} and {@code X}.</li>
+   *   <li>Then return array of {@code byte} with twenty-six and zero.
    * </ul>
-   * <p>
-   * Method under test: {@link IncrementalMerkleTreeCapsule#getData()}
-   */
-  @Test
-  @Category(MaintainedByDiffblue.class)
-  @MethodsUnderTest({"byte[] IncrementalMerkleTreeCapsule.getData()"})
-  public void testGetData_givenX_thenReturnArrayOfByteWithAAndX() {
-    // Arrange, Act and Assert
-    assertArrayEquals(
-        new byte[]{'A', 'X', 'A', 'X', 'A', 'X', 'A', 'X', 'A', 'X', 'A', 'X', 'A', Byte.MIN_VALUE, 'A', 'X'},
-        (new IncrementalMerkleTreeCapsule(
-            new byte[]{'A', 'X', 'A', 'X', 'A', 'X', 'A', 'X', 'A', 'X', 'A', 'X', 'A', Byte.MIN_VALUE, 'A', 'X'}))
-                .getData());
-  }
-
-  /**
-   * Test {@link IncrementalMerkleTreeCapsule#getData()}.
-   * <ul>
-   *   <li>Given {@code X}.</li>
-   *   <li>Then return array of {@code byte} with {@code A} and {@code X}.</li>
-   * </ul>
-   * <p>
-   * Method under test: {@link IncrementalMerkleTreeCapsule#getData()}
-   */
-  @Test
-  @Category(MaintainedByDiffblue.class)
-  @MethodsUnderTest({"byte[] IncrementalMerkleTreeCapsule.getData()"})
-  public void testGetData_givenX_thenReturnArrayOfByteWithAAndX2() {
-    // Arrange, Act and Assert
-    assertArrayEquals(new byte[]{'A', 'X', 'A', 'X', 'A', 'X', 'A', 'X', 'A', 'X', 'A', 'X', 'A', 'X', -1, 'X'},
-        (new IncrementalMerkleTreeCapsule(
-            new byte[]{'A', 'X', 'A', 'X', 'A', 'X', 'A', 'X', 'A', 'X', 'A', 'X', 'A', 'X', -1, 'X'})).getData());
-  }
-
-  /**
-   * Test {@link IncrementalMerkleTreeCapsule#getData()}.
-   * <ul>
-   *   <li>Then return array of {@code byte} with twenty-six and zero.</li>
-   * </ul>
-   * <p>
-   * Method under test: {@link IncrementalMerkleTreeCapsule#getData()}
+   *
+   * <p>Method under test: {@link IncrementalMerkleTreeCapsule#getData()}
    */
   @Test
   @Category(MaintainedByDiffblue.class)
@@ -978,39 +902,20 @@ public class IncrementalMerkleTreeCapsuleDiffblueTest {
     incrementalMerkleTreeCapsule.addParents(PedersenHash.getDefaultInstance());
 
     // Act and Assert
-    assertArrayEquals(new byte[]{26, 0}, incrementalMerkleTreeCapsule.getData());
-  }
-
-  /**
-   * Test {@link IncrementalMerkleTreeCapsule#getData()}.
-   * <ul>
-   *   <li>Then return {@code AXAXAXAXAAAXAXAXAXXAXAXA} Bytes is {@code UTF-8}.</li>
-   * </ul>
-   * <p>
-   * Method under test: {@link IncrementalMerkleTreeCapsule#getData()}
-   */
-  @Test
-  @Category(MaintainedByDiffblue.class)
-  @MethodsUnderTest({"byte[] IncrementalMerkleTreeCapsule.getData()"})
-  public void testGetData_thenReturnAxaxaxaxaaaxaxaxaxxaxaxaBytesIsUtf8() throws UnsupportedEncodingException {
-    // Arrange and Act
-    byte[] actualData = (new IncrementalMerkleTreeCapsule("AXAXAXAXAXAXAXAAAXAXAXAX".getBytes("UTF-8"))).getData();
-
-    // Assert
-    assertArrayEquals("AXAXAXAXAAAXAXAXAXXAXAXA".getBytes("UTF-8"), actualData);
+    assertArrayEquals(new byte[] {26, 0}, incrementalMerkleTreeCapsule.getData());
   }
 
   /**
    * Test {@link IncrementalMerkleTreeCapsule#getInstance()}.
-   * <p>
-   * Method under test: {@link IncrementalMerkleTreeCapsule#getInstance()}
+   *
+   * <p>Method under test: {@link IncrementalMerkleTreeCapsule#getInstance()}
    */
   @Test
   @Category(MaintainedByDiffblue.class)
   @MethodsUnderTest({"IncrementalMerkleTree IncrementalMerkleTreeCapsule.getInstance()"})
   public void testGetInstance() {
     // Arrange and Act
-    IncrementalMerkleTree actualInstance = (new IncrementalMerkleTreeCapsule()).getInstance();
+    IncrementalMerkleTree actualInstance = new IncrementalMerkleTreeCapsule().getInstance();
 
     // Assert
     assertEquals("", actualInstance.getInitializationErrorString());
@@ -1023,52 +928,63 @@ public class IncrementalMerkleTreeCapsuleDiffblueTest {
     assertTrue(parentsList.isEmpty());
     assertTrue(actualInstance.getAllFields().isEmpty());
     assertTrue(actualInstance.isInitialized());
-    assertSame(actualInstance, actualInstance.getDefaultInstanceForType());
+    IncrementalMerkleTree actualDefaultInstanceForType = actualInstance.getDefaultInstanceForType();
+    assertSame(actualInstance, actualDefaultInstanceForType);
     assertSame(parentsList, actualInstance.getParentsOrBuilderList());
   }
 
   /**
    * Test {@link IncrementalMerkleTreeCapsule#toMerkleTreeContainer()}.
-   * <p>
-   * Method under test: {@link IncrementalMerkleTreeCapsule#toMerkleTreeContainer()}
+   *
+   * <p>Method under test: {@link IncrementalMerkleTreeCapsule#toMerkleTreeContainer()}
    */
   @Test
   @Category(MaintainedByDiffblue.class)
-  @MethodsUnderTest({"IncrementalMerkleTreeContainer IncrementalMerkleTreeCapsule.toMerkleTreeContainer()"})
+  @MethodsUnderTest({
+    "IncrementalMerkleTreeContainer IncrementalMerkleTreeCapsule.toMerkleTreeContainer()"
+  })
   public void testToMerkleTreeContainer() throws ZksnarkException {
     // Arrange
     IncrementalMerkleTreeCapsule incrementalMerkleTreeCapsule = new IncrementalMerkleTreeCapsule();
 
     // Act
-    IncrementalMerkleTreeContainer actualToMerkleTreeContainerResult = incrementalMerkleTreeCapsule
-        .toMerkleTreeContainer();
+    IncrementalMerkleTreeContainer actualToMerkleTreeContainerResult =
+        incrementalMerkleTreeCapsule.toMerkleTreeContainer();
 
     // Assert
     assertEquals(0, actualToMerkleTreeContainerResult.size());
     assertEquals(0, actualToMerkleTreeContainerResult.toVoucher().size());
     assertSame(incrementalMerkleTreeCapsule, actualToMerkleTreeContainerResult.getTreeCapsule());
     assertArrayEquals(
-        new byte[]{0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0},
+        new byte[] {
+          0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0,
+          0, 0
+        },
         actualToMerkleTreeContainerResult.getMerkleTreeKey());
     assertArrayEquals(
-        new byte[]{0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0},
+        new byte[] {
+          0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0,
+          0, 0
+        },
         actualToMerkleTreeContainerResult.getRootArray());
   }
 
   /**
    * Test {@link IncrementalMerkleTreeCapsule#deepCopy()}.
+   *
    * <ul>
-   *   <li>Then return Instance ParentsCount is zero.</li>
+   *   <li>Then return Instance ParentsCount is zero.
    * </ul>
-   * <p>
-   * Method under test: {@link IncrementalMerkleTreeCapsule#deepCopy()}
+   *
+   * <p>Method under test: {@link IncrementalMerkleTreeCapsule#deepCopy()}
    */
   @Test
   @Category(MaintainedByDiffblue.class)
   @MethodsUnderTest({"IncrementalMerkleTreeCapsule IncrementalMerkleTreeCapsule.deepCopy()"})
   public void testDeepCopy_thenReturnInstanceParentsCountIsZero() throws ZksnarkException {
     // Arrange and Act
-    IncrementalMerkleTreeCapsule actualDeepCopyResult = (new IncrementalMerkleTreeCapsule()).deepCopy();
+    IncrementalMerkleTreeCapsule actualDeepCopyResult =
+        new IncrementalMerkleTreeCapsule().deepCopy();
 
     // Assert
     IncrementalMerkleTree instance = actualDeepCopyResult.getInstance();
@@ -1077,24 +993,33 @@ public class IncrementalMerkleTreeCapsuleDiffblueTest {
     assertEquals(3, instance.getDescriptorForType().getFields().size());
     assertTrue(actualDeepCopyResult.getParents().isEmpty());
     assertTrue(instance.getAllFields().isEmpty());
-    assertEquals(instance, instance.getDefaultInstanceForType());
-    assertArrayEquals(new byte[]{}, actualDeepCopyResult.getData());
-    IncrementalMerkleTreeContainer toMerkleTreeContainerResult = actualDeepCopyResult.toMerkleTreeContainer();
+    IncrementalMerkleTree actualDefaultInstanceForType = instance.getDefaultInstanceForType();
+    assertEquals(instance, actualDefaultInstanceForType);
+    assertArrayEquals(new byte[] {}, actualDeepCopyResult.getData());
+    IncrementalMerkleTreeContainer toMerkleTreeContainerResult =
+        actualDeepCopyResult.toMerkleTreeContainer();
     assertArrayEquals(
-        new byte[]{0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0},
+        new byte[] {
+          0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0,
+          0, 0
+        },
         toMerkleTreeContainerResult.getMerkleTreeKey());
     assertArrayEquals(
-        new byte[]{0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0},
+        new byte[] {
+          0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0,
+          0, 0
+        },
         toMerkleTreeContainerResult.getRootArray());
   }
 
   /**
    * Test {@link IncrementalMerkleTreeCapsule#deepCopy()}.
+   *
    * <ul>
-   *   <li>Then return Parents size is one.</li>
+   *   <li>Then return Parents size is one.
    * </ul>
-   * <p>
-   * Method under test: {@link IncrementalMerkleTreeCapsule#deepCopy()}
+   *
+   * <p>Method under test: {@link IncrementalMerkleTreeCapsule#deepCopy()}
    */
   @Test
   @Category(MaintainedByDiffblue.class)
@@ -1112,18 +1037,26 @@ public class IncrementalMerkleTreeCapsuleDiffblueTest {
     IncrementalMerkleTree instance = actualDeepCopyResult.getInstance();
     assertEquals(1, instance.getParentsCount());
     assertEquals(2, instance.getSerializedSize());
-    IncrementalMerkleTreeContainer toMerkleTreeContainerResult = actualDeepCopyResult.toMerkleTreeContainer();
-    IncrementalMerkleVoucherCapsule voucherCapsule = toMerkleTreeContainerResult.toVoucher().getVoucherCapsule();
+    IncrementalMerkleTreeContainer toMerkleTreeContainerResult =
+        actualDeepCopyResult.toMerkleTreeContainer();
+    IncrementalMerkleVoucherCapsule voucherCapsule =
+        toMerkleTreeContainerResult.toVoucher().getVoucherCapsule();
     assertEquals(4, voucherCapsule.getInstance().getSerializedSize());
-    assertArrayEquals(new byte[]{}, voucherCapsule.getCursor().getData());
-    assertArrayEquals(new byte[]{26, 0}, actualDeepCopyResult.getData());
-    assertArrayEquals(new byte[]{26, 0}, voucherCapsule.getTree().getData());
-    assertArrayEquals(new byte[]{'\n', 2, 26, 0}, voucherCapsule.getData());
+    assertArrayEquals(new byte[] {}, voucherCapsule.getCursor().getData());
+    assertArrayEquals(new byte[] {26, 0}, actualDeepCopyResult.getData());
+    assertArrayEquals(new byte[] {26, 0}, voucherCapsule.getTree().getData());
+    assertArrayEquals(new byte[] {'\n', 2, 26, 0}, voucherCapsule.getData());
     assertArrayEquals(
-        new byte[]{0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0},
+        new byte[] {
+          0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0,
+          0, 0
+        },
         toMerkleTreeContainerResult.getMerkleTreeKey());
     assertArrayEquals(
-        new byte[]{0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0},
+        new byte[] {
+          0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0,
+          0, 0
+        },
         toMerkleTreeContainerResult.getRootArray());
   }
 }

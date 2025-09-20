@@ -15,13 +15,19 @@ import org.tron.protos.contract.Common.ResourceCode;
 public class FreezeBalanceProcessorDiffblueTest {
   /**
    * Test {@link FreezeBalanceProcessor#validate(FreezeBalanceParam, Repository)}.
-   * <p>
-   * Method under test: {@link FreezeBalanceProcessor#validate(FreezeBalanceParam, Repository)}
+   *
+   * <ul>
+   *   <li>Given zero.
+   *   <li>Then throw {@link ContractValidateException}.
+   * </ul>
+   *
+   * <p>Method under test: {@link FreezeBalanceProcessor#validate(FreezeBalanceParam, Repository)}
    */
   @Test
   @Category(MaintainedByDiffblue.class)
   @MethodsUnderTest({"void FreezeBalanceProcessor.validate(FreezeBalanceParam, Repository)"})
-  public void testValidate() throws UnsupportedEncodingException, ContractValidateException {
+  public void testValidate_givenZero_thenThrowContractValidateException()
+      throws UnsupportedEncodingException, ContractValidateException {
     // Arrange
     FreezeBalanceProcessor freezeBalanceProcessor = new FreezeBalanceProcessor();
 
@@ -34,6 +40,7 @@ public class FreezeBalanceProcessorDiffblueTest {
     param.setResourceType(ResourceCode.BANDWIDTH);
 
     // Act and Assert
-    assertThrows(ContractValidateException.class, () -> freezeBalanceProcessor.validate(param, null));
+    assertThrows(
+        ContractValidateException.class, () -> freezeBalanceProcessor.validate(param, null));
   }
 }

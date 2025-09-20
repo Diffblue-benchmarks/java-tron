@@ -5,7 +5,6 @@ import static org.junit.Assert.assertFalse;
 import static org.junit.Assert.assertNull;
 import static org.junit.Assert.assertThrows;
 import static org.junit.Assert.assertTrue;
-import static org.mockito.ArgumentMatchers.eq;
 import static org.mockito.Mockito.mock;
 import static org.mockito.Mockito.verify;
 import static org.mockito.Mockito.when;
@@ -24,12 +23,13 @@ import org.tron.core.utils.ProposalUtil.ProposalType;
 public class ProposalUtilDiffblueTest {
   /**
    * Test ProposalType {@link ProposalType#contain(long)}.
+   *
    * <ul>
-   *   <li>When minus one.</li>
-   *   <li>Then return {@code false}.</li>
+   *   <li>When minus one.
+   *   <li>Then return {@code false}.
    * </ul>
-   * <p>
-   * Method under test: {@link ProposalType#contain(long)}
+   *
+   * <p>Method under test: {@link ProposalType#contain(long)}
    */
   @Test
   @Category(MaintainedByDiffblue.class)
@@ -41,12 +41,13 @@ public class ProposalUtilDiffblueTest {
 
   /**
    * Test ProposalType {@link ProposalType#contain(long)}.
+   *
    * <ul>
-   *   <li>When one.</li>
-   *   <li>Then return {@code true}.</li>
+   *   <li>When one.
+   *   <li>Then return {@code true}.
    * </ul>
-   * <p>
-   * Method under test: {@link ProposalType#contain(long)}
+   *
+   * <p>Method under test: {@link ProposalType#contain(long)}
    */
   @Test
   @Category(MaintainedByDiffblue.class)
@@ -58,8 +59,8 @@ public class ProposalUtilDiffblueTest {
 
   /**
    * Test ProposalType {@link ProposalType#getCode()}.
-   * <p>
-   * Method under test: {@link ProposalType#getCode()}
+   *
+   * <p>Method under test: {@link ProposalType#getCode()}
    */
   @Test
   @Category(MaintainedByDiffblue.class)
@@ -71,12 +72,13 @@ public class ProposalUtilDiffblueTest {
 
   /**
    * Test ProposalType {@link ProposalType#getEnumOrNull(long)}.
+   *
    * <ul>
-   *   <li>When minus one.</li>
-   *   <li>Then return {@code null}.</li>
+   *   <li>When minus one.
+   *   <li>Then return {@code null}.
    * </ul>
-   * <p>
-   * Method under test: {@link ProposalType#getEnumOrNull(long)}
+   *
+   * <p>Method under test: {@link ProposalType#getEnumOrNull(long)}
    */
   @Test
   @Category(MaintainedByDiffblue.class)
@@ -88,12 +90,13 @@ public class ProposalUtilDiffblueTest {
 
   /**
    * Test ProposalType {@link ProposalType#getEnumOrNull(long)}.
+   *
    * <ul>
-   *   <li>When one.</li>
-   *   <li>Then return {@code ACCOUNT_UPGRADE_COST}.</li>
+   *   <li>When one.
+   *   <li>Then return {@code ACCOUNT_UPGRADE_COST}.
    * </ul>
-   * <p>
-   * Method under test: {@link ProposalType#getEnumOrNull(long)}
+   *
+   * <p>Method under test: {@link ProposalType#getEnumOrNull(long)}
    */
   @Test
   @Category(MaintainedByDiffblue.class)
@@ -105,12 +108,13 @@ public class ProposalUtilDiffblueTest {
 
   /**
    * Test ProposalType {@link ProposalType#getEnum(long)}.
+   *
    * <ul>
-   *   <li>When minus one.</li>
-   *   <li>Then throw {@link ContractValidateException}.</li>
+   *   <li>When minus one.
+   *   <li>Then throw {@link ContractValidateException}.
    * </ul>
-   * <p>
-   * Method under test: {@link ProposalType#getEnum(long)}
+   *
+   * <p>Method under test: {@link ProposalType#getEnum(long)}
    */
   @Test
   @Category(MaintainedByDiffblue.class)
@@ -123,34 +127,41 @@ public class ProposalUtilDiffblueTest {
 
   /**
    * Test ProposalType {@link ProposalType#getEnum(long)}.
+   *
    * <ul>
-   *   <li>When one.</li>
-   *   <li>Then return {@code ACCOUNT_UPGRADE_COST}.</li>
+   *   <li>When one.
+   *   <li>Then return {@code ACCOUNT_UPGRADE_COST}.
    * </ul>
-   * <p>
-   * Method under test: {@link ProposalType#getEnum(long)}
+   *
+   * <p>Method under test: {@link ProposalType#getEnum(long)}
    */
   @Test
   @Category(MaintainedByDiffblue.class)
   @MethodsUnderTest({"ProposalType ProposalType.getEnum(long)"})
-  public void testProposalTypeGetEnum_whenOne_thenReturnAccountUpgradeCost() throws ContractValidateException {
+  public void testProposalTypeGetEnum_whenOne_thenReturnAccountUpgradeCost()
+      throws ContractValidateException {
     // Arrange, Act and Assert
     assertEquals(ProposalType.ACCOUNT_UPGRADE_COST, ProposalType.getEnum(1L));
   }
 
   /**
    * Test {@link ProposalUtil#validator(DynamicPropertiesStore, ForkController, long, long)}.
+   *
    * <ul>
-   *   <li>Given {@code false}.</li>
-   *   <li>When {@link ForkController} {@link ForkController#pass(ForkBlockVersionEnum)} return {@code false}.</li>
-   *   <li>Then calls {@link ForkController#pass(ForkBlockVersionEnum)}.</li>
+   *   <li>Given {@code false}.
+   *   <li>When {@link ForkController} {@link ForkController#pass(ForkBlockVersionEnum)} return
+   *       {@code false}.
+   *   <li>Then calls {@link ForkController#pass(ForkBlockVersionEnum)}.
    * </ul>
-   * <p>
-   * Method under test: {@link ProposalUtil#validator(DynamicPropertiesStore, ForkController, long, long)}
+   *
+   * <p>Method under test: {@link ProposalUtil#validator(DynamicPropertiesStore, ForkController,
+   * long, long)}
    */
   @Test
   @Category(MaintainedByDiffblue.class)
-  @MethodsUnderTest({"void ProposalUtil.validator(DynamicPropertiesStore, ForkController, long, long)"})
+  @MethodsUnderTest({
+    "void ProposalUtil.validator(DynamicPropertiesStore, ForkController, long, long)"
+  })
   public void testValidator_givenFalse_whenForkControllerPassReturnFalse_thenCallsPass()
       throws ContractValidateException {
     // Arrange
@@ -158,90 +169,30 @@ public class ProposalUtilDiffblueTest {
     when(forkController.pass(Mockito.<ForkBlockVersionEnum>any())).thenReturn(false);
 
     // Act and Assert
-    assertThrows(ContractValidateException.class, () -> ProposalUtil.validator(null, forkController, 69L, 81000L));
-    verify(forkController).pass(eq(ForkBlockVersionEnum.VERSION_4_6));
+    assertThrows(
+        ContractValidateException.class,
+        () -> ProposalUtil.validator(null, forkController, 69L, 81000L));
+    verify(forkController).pass(ForkBlockVersionEnum.VERSION_4_6);
   }
 
   /**
    * Test {@link ProposalUtil#validator(DynamicPropertiesStore, ForkController, long, long)}.
+   *
    * <ul>
-   *   <li>Given minus one.</li>
+   *   <li>Given {@code true}.
+   *   <li>When {@link ForkController} {@link ForkController#pass(ForkBlockVersionEnum)} return
+   *       {@code true}.
+   *   <li>Then calls {@link ForkController#pass(ForkBlockVersionEnum)}.
    * </ul>
-   * <p>
-   * Method under test: {@link ProposalUtil#validator(DynamicPropertiesStore, ForkController, long, long)}
+   *
+   * <p>Method under test: {@link ProposalUtil#validator(DynamicPropertiesStore, ForkController,
+   * long, long)}
    */
   @Test
   @Category(MaintainedByDiffblue.class)
-  @MethodsUnderTest({"void ProposalUtil.validator(DynamicPropertiesStore, ForkController, long, long)"})
-  public void testValidator_givenMinusOne() throws ContractValidateException {
-    // Arrange
-    DynamicPropertiesStore dynamicPropertiesStore = mock(DynamicPropertiesStore.class);
-    when(dynamicPropertiesStore.getRemoveThePowerOfTheGr()).thenReturn(-1L);
-
-    // Act and Assert
-    assertThrows(ContractValidateException.class,
-        () -> ProposalUtil.validator(dynamicPropertiesStore, mock(ForkController.class), 10L, 81000L));
-    verify(dynamicPropertiesStore).getRemoveThePowerOfTheGr();
-  }
-
-  /**
-   * Test {@link ProposalUtil#validator(DynamicPropertiesStore, ForkController, long, long)}.
-   * <ul>
-   *   <li>Given one.</li>
-   * </ul>
-   * <p>
-   * Method under test: {@link ProposalUtil#validator(DynamicPropertiesStore, ForkController, long, long)}
-   */
-  @Test
-  @Category(MaintainedByDiffblue.class)
-  @MethodsUnderTest({"void ProposalUtil.validator(DynamicPropertiesStore, ForkController, long, long)"})
-  public void testValidator_givenOne() throws ContractValidateException {
-    // Arrange
-    DynamicPropertiesStore dynamicPropertiesStore = mock(DynamicPropertiesStore.class);
-    when(dynamicPropertiesStore.getRemoveThePowerOfTheGr()).thenReturn(1L);
-
-    // Act and Assert
-    assertThrows(ContractValidateException.class,
-        () -> ProposalUtil.validator(dynamicPropertiesStore, mock(ForkController.class), 10L, 81000L));
-    verify(dynamicPropertiesStore).getRemoveThePowerOfTheGr();
-  }
-
-  /**
-   * Test {@link ProposalUtil#validator(DynamicPropertiesStore, ForkController, long, long)}.
-   * <ul>
-   *   <li>Given one.</li>
-   * </ul>
-   * <p>
-   * Method under test: {@link ProposalUtil#validator(DynamicPropertiesStore, ForkController, long, long)}
-   */
-  @Test
-  @Category(MaintainedByDiffblue.class)
-  @MethodsUnderTest({"void ProposalUtil.validator(DynamicPropertiesStore, ForkController, long, long)"})
-  public void testValidator_givenOne2() throws ContractValidateException {
-    // Arrange
-    DynamicPropertiesStore dynamicPropertiesStore = mock(DynamicPropertiesStore.class);
-    when(dynamicPropertiesStore.getRemoveThePowerOfTheGr()).thenReturn(1L);
-
-    // Act
-    ProposalUtil.validator(dynamicPropertiesStore, mock(ForkController.class), 10L, 1L);
-
-    // Assert
-    verify(dynamicPropertiesStore).getRemoveThePowerOfTheGr();
-  }
-
-  /**
-   * Test {@link ProposalUtil#validator(DynamicPropertiesStore, ForkController, long, long)}.
-   * <ul>
-   *   <li>Given {@code true}.</li>
-   *   <li>When {@link ForkController} {@link ForkController#pass(ForkBlockVersionEnum)} return {@code true}.</li>
-   *   <li>Then calls {@link ForkController#pass(ForkBlockVersionEnum)}.</li>
-   * </ul>
-   * <p>
-   * Method under test: {@link ProposalUtil#validator(DynamicPropertiesStore, ForkController, long, long)}
-   */
-  @Test
-  @Category(MaintainedByDiffblue.class)
-  @MethodsUnderTest({"void ProposalUtil.validator(DynamicPropertiesStore, ForkController, long, long)"})
+  @MethodsUnderTest({
+    "void ProposalUtil.validator(DynamicPropertiesStore, ForkController, long, long)"
+  })
   public void testValidator_givenTrue_whenForkControllerPassReturnTrue_thenCallsPass()
       throws ContractValidateException {
     // Arrange
@@ -249,23 +200,30 @@ public class ProposalUtilDiffblueTest {
     when(forkController.pass(Mockito.<ForkBlockVersionEnum>any())).thenReturn(true);
 
     // Act and Assert
-    assertThrows(ContractValidateException.class, () -> ProposalUtil.validator(null, forkController, 69L, 81000L));
-    verify(forkController).pass(eq(ForkBlockVersionEnum.VERSION_4_6));
+    assertThrows(
+        ContractValidateException.class,
+        () -> ProposalUtil.validator(null, forkController, 69L, 81000L));
+    verify(forkController).pass(ForkBlockVersionEnum.VERSION_4_6);
   }
 
   /**
    * Test {@link ProposalUtil#validator(DynamicPropertiesStore, ForkController, long, long)}.
+   *
    * <ul>
-   *   <li>Given {@code true}.</li>
-   *   <li>When {@link ForkController} {@link ForkController#pass(ForkBlockVersionEnum)} return {@code true}.</li>
-   *   <li>Then calls {@link ForkController#pass(ForkBlockVersionEnum)}.</li>
+   *   <li>Given {@code true}.
+   *   <li>When {@link ForkController} {@link ForkController#pass(ForkBlockVersionEnum)} return
+   *       {@code true}.
+   *   <li>Then calls {@link ForkController#pass(ForkBlockVersionEnum)}.
    * </ul>
-   * <p>
-   * Method under test: {@link ProposalUtil#validator(DynamicPropertiesStore, ForkController, long, long)}
+   *
+   * <p>Method under test: {@link ProposalUtil#validator(DynamicPropertiesStore, ForkController,
+   * long, long)}
    */
   @Test
   @Category(MaintainedByDiffblue.class)
-  @MethodsUnderTest({"void ProposalUtil.validator(DynamicPropertiesStore, ForkController, long, long)"})
+  @MethodsUnderTest({
+    "void ProposalUtil.validator(DynamicPropertiesStore, ForkController, long, long)"
+  })
   public void testValidator_givenTrue_whenForkControllerPassReturnTrue_thenCallsPass2()
       throws ContractValidateException {
     // Arrange
@@ -276,79 +234,102 @@ public class ProposalUtilDiffblueTest {
     ProposalUtil.validator(null, forkController, 69L, 1L);
 
     // Assert
-    verify(forkController).pass(eq(ForkBlockVersionEnum.VERSION_4_6));
+    verify(forkController).pass(ForkBlockVersionEnum.VERSION_4_6);
   }
 
   /**
    * Test {@link ProposalUtil#validator(DynamicPropertiesStore, ForkController, long, long)}.
+   *
    * <ul>
-   *   <li>When {@code 86400001}.</li>
-   *   <li>Then throw {@link ContractValidateException}.</li>
+   *   <li>When {@code 86400001}.
+   *   <li>Then throw {@link ContractValidateException}.
    * </ul>
-   * <p>
-   * Method under test: {@link ProposalUtil#validator(DynamicPropertiesStore, ForkController, long, long)}
+   *
+   * <p>Method under test: {@link ProposalUtil#validator(DynamicPropertiesStore, ForkController,
+   * long, long)}
    */
   @Test
   @Category(MaintainedByDiffblue.class)
-  @MethodsUnderTest({"void ProposalUtil.validator(DynamicPropertiesStore, ForkController, long, long)"})
-  public void testValidator_when86400001_thenThrowContractValidateException() throws ContractValidateException {
+  @MethodsUnderTest({
+    "void ProposalUtil.validator(DynamicPropertiesStore, ForkController, long, long)"
+  })
+  public void testValidator_when86400001_thenThrowContractValidateException()
+      throws ContractValidateException {
     // Arrange, Act and Assert
-    assertThrows(ContractValidateException.class,
+    assertThrows(
+        ContractValidateException.class,
         () -> ProposalUtil.validator(null, ForkController.instance(), 0L, 86400001L));
   }
 
   /**
    * Test {@link ProposalUtil#validator(DynamicPropertiesStore, ForkController, long, long)}.
+   *
    * <ul>
-   *   <li>When {@code 100000000000000001}.</li>
-   *   <li>Then throw {@link ContractValidateException}.</li>
+   *   <li>When {@code 100000000000000001}.
+   *   <li>Then throw {@link ContractValidateException}.
    * </ul>
-   * <p>
-   * Method under test: {@link ProposalUtil#validator(DynamicPropertiesStore, ForkController, long, long)}
+   *
+   * <p>Method under test: {@link ProposalUtil#validator(DynamicPropertiesStore, ForkController,
+   * long, long)}
    */
   @Test
   @Category(MaintainedByDiffblue.class)
-  @MethodsUnderTest({"void ProposalUtil.validator(DynamicPropertiesStore, ForkController, long, long)"})
+  @MethodsUnderTest({
+    "void ProposalUtil.validator(DynamicPropertiesStore, ForkController, long, long)"
+  })
   public void testValidator_when100000000000000001_thenThrowContractValidateException()
       throws ContractValidateException {
     // Arrange, Act and Assert
-    assertThrows(ContractValidateException.class,
+    assertThrows(
+        ContractValidateException.class,
         () -> ProposalUtil.validator(null, ForkController.instance(), 1L, 100000000000000001L));
   }
 
   /**
    * Test {@link ProposalUtil#validator(DynamicPropertiesStore, ForkController, long, long)}.
+   *
    * <ul>
-   *   <li>When minus one.</li>
-   *   <li>Then throw {@link ContractValidateException}.</li>
+   *   <li>When minus one.
+   *   <li>Then throw {@link ContractValidateException}.
    * </ul>
-   * <p>
-   * Method under test: {@link ProposalUtil#validator(DynamicPropertiesStore, ForkController, long, long)}
+   *
+   * <p>Method under test: {@link ProposalUtil#validator(DynamicPropertiesStore, ForkController,
+   * long, long)}
    */
   @Test
   @Category(MaintainedByDiffblue.class)
-  @MethodsUnderTest({"void ProposalUtil.validator(DynamicPropertiesStore, ForkController, long, long)"})
-  public void testValidator_whenMinusOne_thenThrowContractValidateException() throws ContractValidateException {
+  @MethodsUnderTest({
+    "void ProposalUtil.validator(DynamicPropertiesStore, ForkController, long, long)"
+  })
+  public void testValidator_whenMinusOne_thenThrowContractValidateException()
+      throws ContractValidateException {
     // Arrange, Act and Assert
-    assertThrows(ContractValidateException.class,
+    assertThrows(
+        ContractValidateException.class,
         () -> ProposalUtil.validator(null, ForkController.instance(), 1L, -1L));
   }
 
   /**
    * Test {@link ProposalUtil#validator(DynamicPropertiesStore, ForkController, long, long)}.
+   *
    * <ul>
-   *   <li>When zero.</li>
-   *   <li>Then throw {@link ContractValidateException}.</li>
+   *   <li>When zero.
+   *   <li>Then throw {@link ContractValidateException}.
    * </ul>
-   * <p>
-   * Method under test: {@link ProposalUtil#validator(DynamicPropertiesStore, ForkController, long, long)}
+   *
+   * <p>Method under test: {@link ProposalUtil#validator(DynamicPropertiesStore, ForkController,
+   * long, long)}
    */
   @Test
   @Category(MaintainedByDiffblue.class)
-  @MethodsUnderTest({"void ProposalUtil.validator(DynamicPropertiesStore, ForkController, long, long)"})
-  public void testValidator_whenZero_thenThrowContractValidateException() throws ContractValidateException {
+  @MethodsUnderTest({
+    "void ProposalUtil.validator(DynamicPropertiesStore, ForkController, long, long)"
+  })
+  public void testValidator_whenZero_thenThrowContractValidateException()
+      throws ContractValidateException {
     // Arrange, Act and Assert
-    assertThrows(ContractValidateException.class,
+    assertThrows(
+        ContractValidateException.class,
         () -> ProposalUtil.validator(null, ForkController.instance(), 0L, 42L));
   }
 }

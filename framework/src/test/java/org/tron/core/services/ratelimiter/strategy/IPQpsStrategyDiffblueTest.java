@@ -12,18 +12,19 @@ import org.tron.core.services.ratelimiter.strategy.Strategy.ParamItem;
 public class IPQpsStrategyDiffblueTest {
   /**
    * Test {@link IPQpsStrategy#IPQpsStrategy(String)}.
+   *
    * <ul>
-   *   <li>When empty string.</li>
+   *   <li>When empty string.
    * </ul>
-   * <p>
-   * Method under test: {@link IPQpsStrategy#IPQpsStrategy(String)}
+   *
+   * <p>Method under test: {@link IPQpsStrategy#IPQpsStrategy(String)}
    */
   @Test
   @Category(MaintainedByDiffblue.class)
   @MethodsUnderTest({"void IPQpsStrategy.<init>(String)"})
   public void testNewIPQpsStrategy_whenEmptyString() {
     // Arrange, Act and Assert
-    Map<String, ParamItem> mapParams = (new IPQpsStrategy("")).getMapParams();
+    Map<String, ParamItem> mapParams = new IPQpsStrategy("").getMapParams();
     assertEquals(1, mapParams.size());
     ParamItem getResult = mapParams.get(IPQpsStrategy.STRATEGY_PARAM_IPQPS);
     assertEquals(2.0d, ((Double) getResult.value).doubleValue(), 0.0);
@@ -33,39 +34,19 @@ public class IPQpsStrategyDiffblueTest {
 
   /**
    * Test {@link IPQpsStrategy#IPQpsStrategy(String)}.
+   *
    * <ul>
-   *   <li>When {@code null}.</li>
+   *   <li>When {@code Param String}.
    * </ul>
-   * <p>
-   * Method under test: {@link IPQpsStrategy#IPQpsStrategy(String)}
-   */
-  @Test
-  @Category(MaintainedByDiffblue.class)
-  @MethodsUnderTest({"void IPQpsStrategy.<init>(String)"})
-  public void testNewIPQpsStrategy_whenNull() {
-    // Arrange, Act and Assert
-    Map<String, ParamItem> mapParams = (new IPQpsStrategy(null)).getMapParams();
-    assertEquals(1, mapParams.size());
-    ParamItem getResult = mapParams.get(IPQpsStrategy.STRATEGY_PARAM_IPQPS);
-    assertEquals(2.0d, ((Double) getResult.value).doubleValue(), 0.0);
-    Class<Double> expectedResultClass = Double.class;
-    assertEquals(expectedResultClass, getResult.type);
-  }
-
-  /**
-   * Test {@link IPQpsStrategy#IPQpsStrategy(String)}.
-   * <ul>
-   *   <li>When {@code Param String}.</li>
-   * </ul>
-   * <p>
-   * Method under test: {@link IPQpsStrategy#IPQpsStrategy(String)}
+   *
+   * <p>Method under test: {@link IPQpsStrategy#IPQpsStrategy(String)}
    */
   @Test
   @Category(MaintainedByDiffblue.class)
   @MethodsUnderTest({"void IPQpsStrategy.<init>(String)"})
   public void testNewIPQpsStrategy_whenParamString() {
     // Arrange, Act and Assert
-    Map<String, ParamItem> mapParams = (new IPQpsStrategy("Param String")).getMapParams();
+    Map<String, ParamItem> mapParams = new IPQpsStrategy("Param String").getMapParams();
     assertEquals(1, mapParams.size());
     ParamItem getResult = mapParams.get(IPQpsStrategy.STRATEGY_PARAM_IPQPS);
     assertEquals(2.0d, ((Double) getResult.value).doubleValue(), 0.0);
@@ -75,18 +56,19 @@ public class IPQpsStrategyDiffblueTest {
 
   /**
    * Test {@link IPQpsStrategy#IPQpsStrategy(String)}.
+   *
    * <ul>
-   *   <li>When {@code UUU=UUU}.</li>
+   *   <li>When {@code UUU=UUU}.
    * </ul>
-   * <p>
-   * Method under test: {@link IPQpsStrategy#IPQpsStrategy(String)}
+   *
+   * <p>Method under test: {@link IPQpsStrategy#IPQpsStrategy(String)}
    */
   @Test
   @Category(MaintainedByDiffblue.class)
   @MethodsUnderTest({"void IPQpsStrategy.<init>(String)"})
   public void testNewIPQpsStrategy_whenUuuUuu() {
     // Arrange, Act and Assert
-    Map<String, ParamItem> mapParams = (new IPQpsStrategy("UUU=UUU")).getMapParams();
+    Map<String, ParamItem> mapParams = new IPQpsStrategy("UUU=UUU").getMapParams();
     assertEquals(1, mapParams.size());
     ParamItem getResult = mapParams.get(IPQpsStrategy.STRATEGY_PARAM_IPQPS);
     assertEquals(2.0d, ((Double) getResult.value).doubleValue(), 0.0);
@@ -96,32 +78,34 @@ public class IPQpsStrategyDiffblueTest {
 
   /**
    * Test {@link IPQpsStrategy#acquire(String)}.
+   *
    * <ul>
-   *   <li>When {@code 127.0.0.1}.</li>
-   *   <li>Then return {@code true}.</li>
+   *   <li>When {@code 127.0.0.1}.
+   *   <li>Then return {@code true}.
    * </ul>
-   * <p>
-   * Method under test: {@link IPQpsStrategy#acquire(String)}
+   *
+   * <p>Method under test: {@link IPQpsStrategy#acquire(String)}
    */
   @Test
   @Category(MaintainedByDiffblue.class)
   @MethodsUnderTest({"boolean IPQpsStrategy.acquire(String)"})
   public void testAcquire_when127001_thenReturnTrue() {
     // Arrange, Act and Assert
-    assertTrue((new IPQpsStrategy("Param String")).acquire("127.0.0.1"));
+    assertTrue(new IPQpsStrategy("Param String").acquire("127.0.0.1"));
   }
 
   /**
    * Test {@link IPQpsStrategy#defaultParam()}.
-   * <p>
-   * Method under test: {@link IPQpsStrategy#defaultParam()}
+   *
+   * <p>Method under test: {@link IPQpsStrategy#defaultParam()}
    */
   @Test
   @Category(MaintainedByDiffblue.class)
   @MethodsUnderTest({"Map IPQpsStrategy.defaultParam()"})
   public void testDefaultParam() {
     // Arrange and Act
-    Map<String, ParamItem> actualDefaultParamResult = (new IPQpsStrategy("Param String")).defaultParam();
+    Map<String, ParamItem> actualDefaultParamResult =
+        new IPQpsStrategy("Param String").defaultParam();
 
     // Assert
     assertEquals(1, actualDefaultParamResult.size());

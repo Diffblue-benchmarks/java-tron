@@ -13,32 +13,32 @@ import org.junit.experimental.categories.Category;
 public class ByteArrayWrapperDiffblueTest {
   /**
    * Test {@link ByteArrayWrapper#ByteArrayWrapper(byte[])}.
+   *
    * <ul>
-   *   <li>Then return Data is {@code AXAXAXAX} Bytes is {@code UTF-8}.</li>
+   *   <li>Then return Data is {@code AXAXAXAX} Bytes is {@code UTF-8}.
    * </ul>
-   * <p>
-   * Method under test: {@link ByteArrayWrapper#ByteArrayWrapper(byte[])}
+   *
+   * <p>Method under test: {@link ByteArrayWrapper#ByteArrayWrapper(byte[])}
    */
   @Test
   @Category(MaintainedByDiffblue.class)
   @MethodsUnderTest({"void ByteArrayWrapper.<init>(byte[])"})
-  public void testNewByteArrayWrapper_thenReturnDataIsAxaxaxaxBytesIsUtf8() throws UnsupportedEncodingException {
-    // Arrange and Act
-    ByteArrayWrapper actualByteArrayWrapper = new ByteArrayWrapper("AXAXAXAX".getBytes("UTF-8"));
-
-    // Assert
-    byte[] expectedData = "AXAXAXAX".getBytes("UTF-8");
-    assertArrayEquals(expectedData, actualByteArrayWrapper.getData());
+  public void testNewByteArrayWrapper_thenReturnDataIsAxaxaxaxBytesIsUtf8()
+      throws UnsupportedEncodingException {
+    // Arrange, Act and Assert
+    assertArrayEquals(
+        "AXAXAXAX".getBytes("UTF-8"), new ByteArrayWrapper("AXAXAXAX".getBytes("UTF-8")).getData());
   }
 
   /**
    * Test {@link ByteArrayWrapper#ByteArrayWrapper(byte[])}.
+   *
    * <ul>
-   *   <li>When {@code null}.</li>
-   *   <li>Then throw {@link IllegalArgumentException}.</li>
+   *   <li>When {@code null}.
+   *   <li>Then throw {@link IllegalArgumentException}.
    * </ul>
-   * <p>
-   * Method under test: {@link ByteArrayWrapper#ByteArrayWrapper(byte[])}
+   *
+   * <p>Method under test: {@link ByteArrayWrapper#ByteArrayWrapper(byte[])}
    */
   @Test
   @Category(MaintainedByDiffblue.class)
@@ -50,12 +50,14 @@ public class ByteArrayWrapperDiffblueTest {
 
   /**
    * Test {@link ByteArrayWrapper#equals(Object)}, and {@link ByteArrayWrapper#hashCode()}.
+   *
    * <ul>
-   *   <li>When other is equal.</li>
-   *   <li>Then return equal.</li>
+   *   <li>When other is equal.
+   *   <li>Then return equal.
    * </ul>
-   * <p>
-   * Methods under test:
+   *
+   * <p>Methods under test:
+   *
    * <ul>
    *   <li>{@link ByteArrayWrapper#equals(Object)}
    *   <li>{@link ByteArrayWrapper#hashCode()}
@@ -64,25 +66,27 @@ public class ByteArrayWrapperDiffblueTest {
   @Test
   @Category(MaintainedByDiffblue.class)
   @MethodsUnderTest({"boolean ByteArrayWrapper.equals(Object)", "int ByteArrayWrapper.hashCode()"})
-  public void testEqualsAndHashCode_whenOtherIsEqual_thenReturnEqual() throws UnsupportedEncodingException {
+  public void testEqualsAndHashCode_whenOtherIsEqual_thenReturnEqual()
+      throws UnsupportedEncodingException {
     // Arrange
     ByteArrayWrapper byteArrayWrapper = new ByteArrayWrapper("AXAXAXAX".getBytes("UTF-8"));
     ByteArrayWrapper byteArrayWrapper2 = new ByteArrayWrapper("AXAXAXAX".getBytes("UTF-8"));
 
     // Act and Assert
     assertEquals(byteArrayWrapper, byteArrayWrapper2);
-    int expectedHashCodeResult = byteArrayWrapper.hashCode();
-    assertEquals(expectedHashCodeResult, byteArrayWrapper2.hashCode());
+    assertEquals(byteArrayWrapper.hashCode(), byteArrayWrapper2.hashCode());
   }
 
   /**
    * Test {@link ByteArrayWrapper#equals(Object)}, and {@link ByteArrayWrapper#hashCode()}.
+   *
    * <ul>
-   *   <li>When other is same.</li>
-   *   <li>Then return equal.</li>
+   *   <li>When other is same.
+   *   <li>Then return equal.
    * </ul>
-   * <p>
-   * Methods under test:
+   *
+   * <p>Methods under test:
+   *
    * <ul>
    *   <li>{@link ByteArrayWrapper#equals(Object)}
    *   <li>{@link ByteArrayWrapper#hashCode()}
@@ -91,7 +95,8 @@ public class ByteArrayWrapperDiffblueTest {
   @Test
   @Category(MaintainedByDiffblue.class)
   @MethodsUnderTest({"boolean ByteArrayWrapper.equals(Object)", "int ByteArrayWrapper.hashCode()"})
-  public void testEqualsAndHashCode_whenOtherIsSame_thenReturnEqual() throws UnsupportedEncodingException {
+  public void testEqualsAndHashCode_whenOtherIsSame_thenReturnEqual()
+      throws UnsupportedEncodingException {
     // Arrange
     ByteArrayWrapper byteArrayWrapper = new ByteArrayWrapper("AXAXAXAX".getBytes("UTF-8"));
 
@@ -103,19 +108,21 @@ public class ByteArrayWrapperDiffblueTest {
 
   /**
    * Test {@link ByteArrayWrapper#equals(Object)}.
+   *
    * <ul>
-   *   <li>When other is different.</li>
-   *   <li>Then return not equal.</li>
+   *   <li>When other is different.
+   *   <li>Then return not equal.
    * </ul>
-   * <p>
-   * Method under test: {@link ByteArrayWrapper#equals(Object)}
+   *
+   * <p>Method under test: {@link ByteArrayWrapper#equals(Object)}
    */
   @Test
   @Category(MaintainedByDiffblue.class)
   @MethodsUnderTest({"boolean ByteArrayWrapper.equals(Object)", "int ByteArrayWrapper.hashCode()"})
-  public void testEquals_whenOtherIsDifferent_thenReturnNotEqual() throws UnsupportedEncodingException {
+  public void testEquals_whenOtherIsDifferent_thenReturnNotEqual()
+      throws UnsupportedEncodingException {
     // Arrange
-    ByteArrayWrapper byteArrayWrapper = new ByteArrayWrapper("\bXAXAXAX".getBytes("UTF-8"));
+    ByteArrayWrapper byteArrayWrapper = new ByteArrayWrapper(new byte[] {});
 
     // Act and Assert
     assertNotEquals(byteArrayWrapper, new ByteArrayWrapper("AXAXAXAX".getBytes("UTF-8")));
@@ -123,12 +130,13 @@ public class ByteArrayWrapperDiffblueTest {
 
   /**
    * Test {@link ByteArrayWrapper#equals(Object)}.
+   *
    * <ul>
-   *   <li>When other is {@code null}.</li>
-   *   <li>Then return not equal.</li>
+   *   <li>When other is {@code null}.
+   *   <li>Then return not equal.
    * </ul>
-   * <p>
-   * Method under test: {@link ByteArrayWrapper#equals(Object)}
+   *
+   * <p>Method under test: {@link ByteArrayWrapper#equals(Object)}
    */
   @Test
   @Category(MaintainedByDiffblue.class)
@@ -140,44 +148,54 @@ public class ByteArrayWrapperDiffblueTest {
 
   /**
    * Test {@link ByteArrayWrapper#equals(Object)}.
+   *
    * <ul>
-   *   <li>When other is wrong type.</li>
-   *   <li>Then return not equal.</li>
+   *   <li>When other is wrong type.
+   *   <li>Then return not equal.
    * </ul>
-   * <p>
-   * Method under test: {@link ByteArrayWrapper#equals(Object)}
+   *
+   * <p>Method under test: {@link ByteArrayWrapper#equals(Object)}
    */
   @Test
   @Category(MaintainedByDiffblue.class)
   @MethodsUnderTest({"boolean ByteArrayWrapper.equals(Object)", "int ByteArrayWrapper.hashCode()"})
-  public void testEquals_whenOtherIsWrongType_thenReturnNotEqual() throws UnsupportedEncodingException {
+  public void testEquals_whenOtherIsWrongType_thenReturnNotEqual()
+      throws UnsupportedEncodingException {
     // Arrange, Act and Assert
-    assertNotEquals(new ByteArrayWrapper("AXAXAXAX".getBytes("UTF-8")), "Different type to ByteArrayWrapper");
+    assertNotEquals(
+        new ByteArrayWrapper("AXAXAXAX".getBytes("UTF-8")), "Different type to ByteArrayWrapper");
   }
 
   /**
    * Test {@link ByteArrayWrapper#compareTo(ByteArrayWrapper)} with {@code ByteArrayWrapper}.
+   *
    * <ul>
-   *   <li>Then return zero.</li>
+   *   <li>Then return zero.
    * </ul>
-   * <p>
-   * Method under test: {@link ByteArrayWrapper#compareTo(ByteArrayWrapper)}
+   *
+   * <p>Method under test: {@link ByteArrayWrapper#compareTo(ByteArrayWrapper)}
    */
   @Test
   @Category(MaintainedByDiffblue.class)
   @MethodsUnderTest({"int ByteArrayWrapper.compareTo(ByteArrayWrapper)"})
-  public void testCompareToWithByteArrayWrapper_thenReturnZero() throws UnsupportedEncodingException {
+  public void testCompareToWithByteArrayWrapper_thenReturnZero()
+      throws UnsupportedEncodingException {
     // Arrange
     ByteArrayWrapper byteArrayWrapper = new ByteArrayWrapper("AXAXAXAX".getBytes("UTF-8"));
 
-    // Act and Assert
-    assertEquals(0, byteArrayWrapper.compareTo(new ByteArrayWrapper("AXAXAXAX".getBytes("UTF-8"))));
+    // Act
+    int actualCompareToResult =
+        byteArrayWrapper.compareTo(new ByteArrayWrapper("AXAXAXAX".getBytes("UTF-8")));
+
+    // Assert
+    assertEquals(0, actualCompareToResult);
   }
 
   /**
    * Test getters and setters.
-   * <p>
-   * Methods under test:
+   *
+   * <p>Methods under test:
+   *
    * <ul>
    *   <li>{@link ByteArrayWrapper#toString()}
    *   <li>{@link ByteArrayWrapper#getData()}
@@ -192,10 +210,9 @@ public class ByteArrayWrapperDiffblueTest {
 
     // Act
     String actualToStringResult = byteArrayWrapper.toString();
-    byte[] actualData = byteArrayWrapper.getData();
 
     // Assert
     assertEquals("4158415841584158", actualToStringResult);
-    assertArrayEquals("AXAXAXAX".getBytes("UTF-8"), actualData);
+    assertArrayEquals("AXAXAXAX".getBytes("UTF-8"), byteArrayWrapper.getData());
   }
 }

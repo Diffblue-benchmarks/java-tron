@@ -10,8 +10,8 @@ import org.junit.experimental.categories.Category;
 public class DupTransactionExceptionDiffblueTest {
   /**
    * Test {@link DupTransactionException#DupTransactionException()}.
-   * <p>
-   * Method under test: {@link DupTransactionException#DupTransactionException()}
+   *
+   * <p>Method under test: {@link DupTransactionException#DupTransactionException()}
    */
   @Test
   @Category(MaintainedByDiffblue.class)
@@ -29,15 +29,16 @@ public class DupTransactionExceptionDiffblueTest {
 
   /**
    * Test {@link DupTransactionException#DupTransactionException(String)}.
-   * <p>
-   * Method under test: {@link DupTransactionException#DupTransactionException(String)}
+   *
+   * <p>Method under test: {@link DupTransactionException#DupTransactionException(String)}
    */
   @Test
   @Category(MaintainedByDiffblue.class)
   @MethodsUnderTest({"void DupTransactionException.<init>(String)"})
   public void testNewDupTransactionException2() {
     // Arrange and Act
-    DupTransactionException actualDupTransactionException = new DupTransactionException("An error occurred");
+    DupTransactionException actualDupTransactionException =
+        new DupTransactionException("An error occurred");
 
     // Assert
     assertEquals("An error occurred", actualDupTransactionException.getLocalizedMessage());

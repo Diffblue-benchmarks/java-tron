@@ -11,8 +11,9 @@ import org.tron.plugins.DbLite.BlockNumInfo;
 public class DbLiteDiffblueTest {
   /**
    * Test BlockNumInfo getters and setters.
-   * <p>
-   * Methods under test:
+   *
+   * <p>Methods under test:
+   *
    * <ul>
    *   <li>{@link BlockNumInfo#getHistoryMaxNum()}
    *   <li>{@link BlockNumInfo#getSnapshotMaxNum()}
@@ -21,8 +22,11 @@ public class DbLiteDiffblueTest {
    */
   @Test
   @Category(MaintainedByDiffblue.class)
-  @MethodsUnderTest({"long BlockNumInfo.getHistoryMaxNum()", "long BlockNumInfo.getSnapshotMaxNum()",
-      "long BlockNumInfo.getSnapshotMinNum()"})
+  @MethodsUnderTest({
+    "long BlockNumInfo.getHistoryMaxNum()",
+    "long BlockNumInfo.getSnapshotMaxNum()",
+    "long BlockNumInfo.getSnapshotMinNum()"
+  })
   public void testBlockNumInfoGettersAndSetters() {
     // Arrange
     BlockNumInfo blockNumInfo = new BlockNumInfo(1L, 1L, 1L);
@@ -39,8 +43,8 @@ public class DbLiteDiffblueTest {
 
   /**
    * Test BlockNumInfo {@link BlockNumInfo#BlockNumInfo(long, long, long)}.
-   * <p>
-   * Method under test: {@link BlockNumInfo#BlockNumInfo(long, long, long)}
+   *
+   * <p>Method under test: {@link BlockNumInfo#BlockNumInfo(long, long, long)}
    */
   @Test
   @Category(MaintainedByDiffblue.class)
@@ -57,8 +61,9 @@ public class DbLiteDiffblueTest {
 
   /**
    * Test getters and setters.
-   * <p>
-   * Methods under test:
+   *
+   * <p>Methods under test:
+   *
    * <ul>
    *   <li>default or parameterless constructor of {@link DbLite}
    *   <li>{@link DbLite#reSetRecentBlks()}
@@ -67,7 +72,11 @@ public class DbLiteDiffblueTest {
    */
   @Test
   @Category(MaintainedByDiffblue.class)
-  @MethodsUnderTest({"void DbLite.<init>()", "void DbLite.reSetRecentBlks()", "void DbLite.setRecentBlks(long)"})
+  @MethodsUnderTest({
+    "void DbLite.<init>()",
+    "void DbLite.reSetRecentBlks()",
+    "void DbLite.setRecentBlks(long)"
+  })
   public void testGettersAndSetters() {
     // Arrange and Act
     DbLite actualDbLite = new DbLite();

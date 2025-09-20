@@ -11,28 +11,26 @@ import org.junit.experimental.categories.Category;
 public class UtilsDiffblueTest {
   /**
    * Test {@link Utils#getBytes(char[])}.
-   * <p>
-   * Method under test: {@link Utils#getBytes(char[])}
+   *
+   * <p>Method under test: {@link Utils#getBytes(char[])}
    */
   @Test
   @Category(MaintainedByDiffblue.class)
   @MethodsUnderTest({"byte[] Utils.getBytes(char[])"})
   public void testGetBytes() throws UnsupportedEncodingException {
-    // Arrange and Act
-    byte[] actualBytes = Utils.getBytes("AZAZ".toCharArray());
-
-    // Assert
-    assertArrayEquals("AZAZ".getBytes("UTF-8"), actualBytes);
+    // Arrange, Act and Assert
+    assertArrayEquals("AZAZ".getBytes("UTF-8"), Utils.getBytes("AZAZ".toCharArray()));
   }
 
   /**
    * Test {@link Utils#getIdShort(String)}.
+   *
    * <ul>
-   *   <li>When {@code 42<null>}.</li>
-   *   <li>Then return {@code 42<null>}.</li>
+   *   <li>When {@code 42<null>}.
+   *   <li>Then return {@code 42<null>}.
    * </ul>
-   * <p>
-   * Method under test: {@link Utils#getIdShort(String)}
+   *
+   * <p>Method under test: {@link Utils#getIdShort(String)}
    */
   @Test
   @Category(MaintainedByDiffblue.class)
@@ -44,12 +42,13 @@ public class UtilsDiffblueTest {
 
   /**
    * Test {@link Utils#getIdShort(String)}.
+   *
    * <ul>
-   *   <li>When {@code null}.</li>
-   *   <li>Then return {@code <null>}.</li>
+   *   <li>When {@code null}.
+   *   <li>Then return {@code <null>}.
    * </ul>
-   * <p>
-   * Method under test: {@link Utils#getIdShort(String)}
+   *
+   * <p>Method under test: {@link Utils#getIdShort(String)}
    */
   @Test
   @Category(MaintainedByDiffblue.class)
@@ -61,75 +60,84 @@ public class UtilsDiffblueTest {
 
   /**
    * Test {@link Utils#clone(byte[])}.
-   * <p>
-   * Method under test: {@link Utils#clone(byte[])}
+   *
+   * <p>Method under test: {@link Utils#clone(byte[])}
    */
   @Test
   @Category(MaintainedByDiffblue.class)
   @MethodsUnderTest({"byte[] Utils.clone(byte[])"})
   public void testClone() throws UnsupportedEncodingException {
-    // Arrange and Act
-    byte[] actualCloneResult = Utils.clone("AXAXAXAX".getBytes("UTF-8"));
-
-    // Assert
-    assertArrayEquals("AXAXAXAX".getBytes("UTF-8"), actualCloneResult);
+    // Arrange, Act and Assert
+    assertArrayEquals("AXAXAXAX".getBytes("UTF-8"), Utils.clone("AXAXAXAX".getBytes("UTF-8")));
   }
 
   /**
    * Test {@link Utils#align(String, char, int, boolean)}.
+   *
    * <ul>
-   *   <li>When {@code 42}.</li>
-   *   <li>Then return {@code A42}.</li>
+   *   <li>When {@code 42}.
+   *   <li>Then return {@code A42}.
    * </ul>
-   * <p>
-   * Method under test: {@link Utils#align(String, char, int, boolean)}
+   *
+   * <p>Method under test: {@link Utils#align(String, char, int, boolean)}
    */
   @Test
   @Category(MaintainedByDiffblue.class)
   @MethodsUnderTest({"String Utils.align(String, char, int, boolean)"})
   public void testAlign_when42_thenReturnA42() {
-    // Arrange, Act and Assert
-    assertEquals("A42", Utils.align("42", 'A', 3, true));
+    // Arrange and Act
+    String actualAlignResult = Utils.align("42", 'A', 3, true);
+
+    // Assert
+    assertEquals("A42", actualAlignResult);
   }
 
   /**
    * Test {@link Utils#align(String, char, int, boolean)}.
+   *
    * <ul>
-   *   <li>When {@code false}.</li>
-   *   <li>Then return {@code 42A}.</li>
+   *   <li>When {@code false}.
+   *   <li>Then return {@code 42A}.
    * </ul>
-   * <p>
-   * Method under test: {@link Utils#align(String, char, int, boolean)}
+   *
+   * <p>Method under test: {@link Utils#align(String, char, int, boolean)}
    */
   @Test
   @Category(MaintainedByDiffblue.class)
   @MethodsUnderTest({"String Utils.align(String, char, int, boolean)"})
   public void testAlign_whenFalse_thenReturn42a() {
-    // Arrange, Act and Assert
-    assertEquals("42A", Utils.align("42", 'A', 3, false));
+    // Arrange and Act
+    String actualAlignResult = Utils.align("42", 'A', 3, false);
+
+    // Assert
+    assertEquals("42A", actualAlignResult);
   }
 
   /**
    * Test {@link Utils#align(String, char, int, boolean)}.
+   *
    * <ul>
-   *   <li>When {@code foo}.</li>
-   *   <li>Then return {@code foo}.</li>
+   *   <li>When {@code foo}.
+   *   <li>Then return {@code foo}.
    * </ul>
-   * <p>
-   * Method under test: {@link Utils#align(String, char, int, boolean)}
+   *
+   * <p>Method under test: {@link Utils#align(String, char, int, boolean)}
    */
   @Test
   @Category(MaintainedByDiffblue.class)
   @MethodsUnderTest({"String Utils.align(String, char, int, boolean)"})
   public void testAlign_whenFoo_thenReturnFoo() {
-    // Arrange, Act and Assert
-    assertEquals("foo", Utils.align("foo", 'A', 3, true));
+    // Arrange and Act
+    String actualAlignResult = Utils.align("foo", 'A', 3, true);
+
+    // Assert
+    assertEquals("foo", actualAlignResult);
   }
 
   /**
    * Test {@link Utils#repeat(String, int)}.
-   * <p>
-   * Method under test: {@link Utils#repeat(String, int)}
+   *
+   * <p>Method under test: {@link Utils#repeat(String, int)}
    */
   @Test
   @Category(MaintainedByDiffblue.class)

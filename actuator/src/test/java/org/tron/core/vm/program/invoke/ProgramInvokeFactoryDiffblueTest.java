@@ -27,16 +27,24 @@ import org.tron.protos.Protocol.Transaction;
 
 public class ProgramInvokeFactoryDiffblueTest {
   /**
-   * Test {@link ProgramInvokeFactory#createProgramInvoke(Program, DataWord, DataWord, DataWord, DataWord, DataWord, long, byte[], Repository, boolean, boolean, long, long, long)} with {@code program}, {@code toAddress}, {@code callerAddress}, {@code inValue}, {@code tokenValue}, {@code tokenId}, {@code balanceInt}, {@code dataIn}, {@code deposit}, {@code isStaticCall}, {@code byTestingSuite}, {@code vmStartInUs}, {@code vmShouldEndInUs}, {@code energyLimit}.
-   * <p>
-   * Method under test: {@link ProgramInvokeFactory#createProgramInvoke(Program, DataWord, DataWord, DataWord, DataWord, DataWord, long, byte[], Repository, boolean, boolean, long, long, long)}
+   * Test {@link ProgramInvokeFactory#createProgramInvoke(Program, DataWord, DataWord, DataWord,
+   * DataWord, DataWord, long, byte[], Repository, boolean, boolean, long, long, long)} with {@code
+   * program}, {@code toAddress}, {@code callerAddress}, {@code inValue}, {@code tokenValue}, {@code
+   * tokenId}, {@code balanceInt}, {@code dataIn}, {@code deposit}, {@code isStaticCall}, {@code
+   * byTestingSuite}, {@code vmStartInUs}, {@code vmShouldEndInUs}, {@code energyLimit}.
+   *
+   * <p>Method under test: {@link ProgramInvokeFactory#createProgramInvoke(Program, DataWord,
+   * DataWord, DataWord, DataWord, DataWord, long, byte[], Repository, boolean, boolean, long, long,
+   * long)}
    */
   @Test
   @Category(MaintainedByDiffblue.class)
   @MethodsUnderTest({
-      "ProgramInvoke ProgramInvokeFactory.createProgramInvoke(Program, DataWord, DataWord, DataWord, DataWord, DataWord, long, byte[], Repository, boolean, boolean, long, long, long)"})
-  public void testCreateProgramInvokeWithProgramToAddressCallerAddressInValueTokenValueTokenIdBalanceIntDataInDepositIsStaticCallByTestingSuiteVmStartInUsVmShouldEndInUsEnergyLimit()
-      throws UnsupportedEncodingException {
+    "ProgramInvoke ProgramInvokeFactory.createProgramInvoke(Program, DataWord, DataWord, DataWord, DataWord, DataWord, long, byte[], Repository, boolean, boolean, long, long, long)"
+  })
+  public void
+      testCreateProgramInvokeWithProgramToAddressCallerAddressInValueTokenValueTokenIdBalanceIntDataInDepositIsStaticCallByTestingSuiteVmStartInUsVmShouldEndInUsEnergyLimit()
+          throws UnsupportedEncodingException {
     // Arrange
     byte[] ops = "AXAXAXAX".getBytes("UTF-8");
     byte[] codeAddress = "AXAXAXAX".getBytes("UTF-8");
@@ -45,20 +53,49 @@ public class ProgramInvokeFactoryDiffblueTest {
     byte[] sendAddress = "AXAXAXAX".getBytes("UTF-8");
     byte[] transferToAddress = "AXAXAXAX".getBytes("UTF-8");
     byte[] data = "AXAXAXAX".getBytes("UTF-8");
-    Program program = new Program(ops, codeAddress, programInvoke, new InternalTransaction(parentHash, 1, 1,
-        sendAddress, transferToAddress, 42L, data, "Note", 1L, new HashMap<>()));
 
+    Program program =
+        new Program(
+            ops,
+            codeAddress,
+            programInvoke,
+            new InternalTransaction(
+                parentHash,
+                1,
+                1,
+                sendAddress,
+                transferToAddress,
+                42L,
+                data,
+                "Note",
+                1L,
+                new HashMap<>()));
     DataWord toAddress = DataWord.ZERO();
     DataWord callerAddress = DataWord.ZERO();
     DataWord inValue = DataWord.ZERO();
     DataWord tokenValue = DataWord.ZERO();
     DataWord tokenId = DataWord.ZERO();
     byte[] dataIn = "AXAXAXAX".getBytes("UTF-8");
-    RepositoryImpl deposit = new RepositoryImpl(StoreFactory.getInstance(), mock(RepositoryImpl.class));
+    RepositoryImpl deposit =
+        new RepositoryImpl(StoreFactory.getInstance(), mock(RepositoryImpl.class));
 
     // Act
-    ProgramInvoke actualCreateProgramInvokeResult = ProgramInvokeFactory.createProgramInvoke(program, toAddress,
-        callerAddress, inValue, tokenValue, tokenId, 42L, dataIn, deposit, true, true, 1L, 1L, 1L);
+    ProgramInvoke actualCreateProgramInvokeResult =
+        ProgramInvokeFactory.createProgramInvoke(
+            program,
+            toAddress,
+            callerAddress,
+            inValue,
+            tokenValue,
+            tokenId,
+            42L,
+            dataIn,
+            deposit,
+            true,
+            true,
+            1L,
+            1L,
+            1L);
 
     // Assert
     assertTrue(actualCreateProgramInvokeResult instanceof ProgramInvokeImpl);
@@ -80,23 +117,43 @@ public class ProgramInvokeFactoryDiffblueTest {
   }
 
   /**
-   * Test {@link ProgramInvokeFactory#createProgramInvoke(TrxType, ExecutorType, Transaction, long, long, Block, Repository, long, long, long)} with {@code trxType}, {@code executorType}, {@code tx}, {@code tokenValue}, {@code tokenId}, {@code block}, {@code deposit}, {@code vmStartInUs}, {@code vmShouldEndInUs}, {@code energyLimit}.
-   * <p>
-   * Method under test: {@link ProgramInvokeFactory#createProgramInvoke(TrxType, InternalTransaction.ExecutorType, Transaction, long, long, Block, Repository, long, long, long)}
+   * Test {@link ProgramInvokeFactory#createProgramInvoke(TrxType, ExecutorType, Transaction, long,
+   * long, Block, Repository, long, long, long)} with {@code trxType}, {@code executorType}, {@code
+   * tx}, {@code tokenValue}, {@code tokenId}, {@code block}, {@code deposit}, {@code vmStartInUs},
+   * {@code vmShouldEndInUs}, {@code energyLimit}.
+   *
+   * <p>Method under test: {@link ProgramInvokeFactory#createProgramInvoke(TrxType,
+   * InternalTransaction.ExecutorType, Transaction, long, long, Block, Repository, long, long,
+   * long)}
    */
   @Test
   @Category(MaintainedByDiffblue.class)
   @MethodsUnderTest({
-      "ProgramInvoke ProgramInvokeFactory.createProgramInvoke(TrxType, InternalTransaction.ExecutorType, Transaction, long, long, Block, Repository, long, long, long)"})
-  public void testCreateProgramInvokeWithTrxTypeExecutorTypeTxTokenValueTokenIdBlockDepositVmStartInUsVmShouldEndInUsEnergyLimit()
-      throws ContractValidateException {
+    "ProgramInvoke ProgramInvokeFactory.createProgramInvoke(TrxType, InternalTransaction.ExecutorType, Transaction, long, long, Block, Repository, long, long, long)"
+  })
+  public void
+      testCreateProgramInvokeWithTrxTypeExecutorTypeTxTokenValueTokenIdBlockDepositVmStartInUsVmShouldEndInUsEnergyLimit()
+          throws ContractValidateException {
     // Arrange
     Transaction tx = Transaction.getDefaultInstance();
     Block block = Block.getDefaultInstance();
+    RepositoryImpl deposit =
+        new RepositoryImpl(StoreFactory.getInstance(), mock(RepositoryImpl.class));
 
     // Act and Assert
-    assertThrows(ContractValidateException.class,
-        () -> ProgramInvokeFactory.createProgramInvoke(TrxType.TRX_PRECOMPILED_TYPE, ExecutorType.ET_PRE_TYPE, tx, 42L,
-            1L, block, new RepositoryImpl(StoreFactory.getInstance(), mock(RepositoryImpl.class)), 1L, 1L, 1L));
+    assertThrows(
+        ContractValidateException.class,
+        () ->
+            ProgramInvokeFactory.createProgramInvoke(
+                TrxType.TRX_PRECOMPILED_TYPE,
+                ExecutorType.ET_PRE_TYPE,
+                tx,
+                42L,
+                1L,
+                block,
+                deposit,
+                1L,
+                1L,
+                1L));
   }
 }

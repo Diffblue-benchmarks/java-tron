@@ -11,8 +11,8 @@ import org.junit.experimental.categories.Category;
 public class EventBloomExceptionDiffblueTest {
   /**
    * Test {@link EventBloomException#EventBloomException()}.
-   * <p>
-   * Method under test: {@link EventBloomException#EventBloomException()}
+   *
+   * <p>Method under test: {@link EventBloomException#EventBloomException()}
    */
   @Test
   @Category(MaintainedByDiffblue.class)
@@ -30,8 +30,8 @@ public class EventBloomExceptionDiffblueTest {
 
   /**
    * Test {@link EventBloomException#EventBloomException(String)}.
-   * <p>
-   * Method under test: {@link EventBloomException#EventBloomException(String)}
+   *
+   * <p>Method under test: {@link EventBloomException#EventBloomException(String)}
    */
   @Test
   @Category(MaintainedByDiffblue.class)
@@ -49,8 +49,8 @@ public class EventBloomExceptionDiffblueTest {
 
   /**
    * Test {@link EventBloomException#EventBloomException(String, Throwable)}.
-   * <p>
-   * Method under test: {@link EventBloomException#EventBloomException(String, Throwable)}
+   *
+   * <p>Method under test: {@link EventBloomException#EventBloomException(String, Throwable)}
    */
   @Test
   @Category(MaintainedByDiffblue.class)
@@ -60,7 +60,8 @@ public class EventBloomExceptionDiffblueTest {
     Throwable cause = new Throwable();
 
     // Act
-    EventBloomException actualEventBloomException = new EventBloomException("An error occurred", cause);
+    EventBloomException actualEventBloomException =
+        new EventBloomException("An error occurred", cause);
 
     // Assert
     assertEquals("An error occurred", actualEventBloomException.getLocalizedMessage());

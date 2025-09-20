@@ -18,6 +18,7 @@ import javax.servlet.FilterConfig;
 import javax.servlet.ServletException;
 import javax.servlet.ServletRequest;
 import javax.servlet.ServletResponse;
+import javax.servlet.http.HttpServletResponseWrapper;
 import org.junit.Test;
 import org.junit.experimental.categories.Category;
 import org.junit.runner.RunWith;
@@ -28,36 +29,44 @@ import org.mockito.junit.MockitoJUnitRunner;
 import org.springframework.mock.web.MockFilterConfig;
 import org.springframework.mock.web.MockHttpServletRequest;
 import org.springframework.mock.web.MockHttpServletResponse;
+import org.tron.common.utils.client.utils.HttpMethed;
 import org.tron.core.ChainBaseManager;
 
 @RunWith(MockitoJUnitRunner.class)
 public class LiteFnQueryHttpFilterDiffblueTest {
-  @Mock
-  private ChainBaseManager chainBaseManager;
+  @Mock private ChainBaseManager chainBaseManager;
 
-  @InjectMocks
-  private LiteFnQueryHttpFilter liteFnQueryHttpFilter;
+  @InjectMocks private LiteFnQueryHttpFilter liteFnQueryHttpFilter;
 
   /**
    * Test {@link LiteFnQueryHttpFilter#doFilter(ServletRequest, ServletResponse, FilterChain)}.
+   *
    * <ul>
-   *   <li>Given {@link ChainBaseManager} {@link ChainBaseManager#isLiteNode()} return {@code false}.</li>
-   *   <li>Then calls {@link FilterChain#doFilter(ServletRequest, ServletResponse)}.</li>
+   *   <li>Given {@link ChainBaseManager} {@link ChainBaseManager#isLiteNode()} return {@code
+   *       false}.
+   *   <li>Then calls {@link FilterChain#doFilter(ServletRequest, ServletResponse)}.
    * </ul>
-   * <p>
-   * Method under test: {@link LiteFnQueryHttpFilter#doFilter(ServletRequest, ServletResponse, FilterChain)}
+   *
+   * <p>Method under test: {@link LiteFnQueryHttpFilter#doFilter(ServletRequest, ServletResponse,
+   * FilterChain)}
    */
   @Test
   @Category(MaintainedByDiffblue.class)
-  @MethodsUnderTest({"void LiteFnQueryHttpFilter.doFilter(ServletRequest, ServletResponse, FilterChain)"})
+  @MethodsUnderTest({
+    "void LiteFnQueryHttpFilter.doFilter(ServletRequest, ServletResponse, FilterChain)"
+  })
   public void testDoFilter_givenChainBaseManagerIsLiteNodeReturnFalse_thenCallsDoFilter()
       throws IOException, ServletException {
     // Arrange
     when(chainBaseManager.isLiteNode()).thenReturn(false);
-    MockHttpServletRequest servletRequest = new MockHttpServletRequest();
-    CharResponseWrapper servletResponse = new CharResponseWrapper(new MockHttpServletResponse());
+    MockHttpServletRequest servletRequest = HttpMethed.createRequest("https://example.org/example");
+    HttpServletResponseWrapper servletResponse =
+        new HttpServletResponseWrapper(new CharResponseWrapper(new MockHttpServletResponse()));
+
     FilterChain filterChain = mock(FilterChain.class);
-    doNothing().when(filterChain).doFilter(Mockito.<ServletRequest>any(), Mockito.<ServletResponse>any());
+    doNothing()
+        .when(filterChain)
+        .doFilter(Mockito.<ServletRequest>any(), Mockito.<ServletResponse>any());
 
     // Act
     liteFnQueryHttpFilter.doFilter(servletRequest, servletResponse, filterChain);
@@ -69,24 +78,32 @@ public class LiteFnQueryHttpFilterDiffblueTest {
 
   /**
    * Test {@link LiteFnQueryHttpFilter#doFilter(ServletRequest, ServletResponse, FilterChain)}.
+   *
    * <ul>
-   *   <li>Given {@link ChainBaseManager} {@link ChainBaseManager#isLiteNode()} return {@code true}.</li>
-   *   <li>Then calls {@link FilterChain#doFilter(ServletRequest, ServletResponse)}.</li>
+   *   <li>Given {@link ChainBaseManager} {@link ChainBaseManager#isLiteNode()} return {@code true}.
+   *   <li>Then calls {@link FilterChain#doFilter(ServletRequest, ServletResponse)}.
    * </ul>
-   * <p>
-   * Method under test: {@link LiteFnQueryHttpFilter#doFilter(ServletRequest, ServletResponse, FilterChain)}
+   *
+   * <p>Method under test: {@link LiteFnQueryHttpFilter#doFilter(ServletRequest, ServletResponse,
+   * FilterChain)}
    */
   @Test
   @Category(MaintainedByDiffblue.class)
-  @MethodsUnderTest({"void LiteFnQueryHttpFilter.doFilter(ServletRequest, ServletResponse, FilterChain)"})
+  @MethodsUnderTest({
+    "void LiteFnQueryHttpFilter.doFilter(ServletRequest, ServletResponse, FilterChain)"
+  })
   public void testDoFilter_givenChainBaseManagerIsLiteNodeReturnTrue_thenCallsDoFilter()
       throws IOException, ServletException {
     // Arrange
     when(chainBaseManager.isLiteNode()).thenReturn(true);
-    MockHttpServletRequest servletRequest = new MockHttpServletRequest();
-    CharResponseWrapper servletResponse = new CharResponseWrapper(new MockHttpServletResponse());
+    MockHttpServletRequest servletRequest = HttpMethed.createRequest("https://example.org/example");
+    HttpServletResponseWrapper servletResponse =
+        new HttpServletResponseWrapper(new CharResponseWrapper(new MockHttpServletResponse()));
+
     FilterChain filterChain = mock(FilterChain.class);
-    doNothing().when(filterChain).doFilter(Mockito.<ServletRequest>any(), Mockito.<ServletResponse>any());
+    doNothing()
+        .when(filterChain)
+        .doFilter(Mockito.<ServletRequest>any(), Mockito.<ServletResponse>any());
 
     // Act
     liteFnQueryHttpFilter.doFilter(servletRequest, servletResponse, filterChain);
@@ -98,26 +115,34 @@ public class LiteFnQueryHttpFilterDiffblueTest {
 
   /**
    * Test {@link LiteFnQueryHttpFilter#doFilter(ServletRequest, ServletResponse, FilterChain)}.
+   *
    * <ul>
-   *   <li>Then throw {@link ServletException}.</li>
+   *   <li>Then throw {@link ServletException}.
    * </ul>
-   * <p>
-   * Method under test: {@link LiteFnQueryHttpFilter#doFilter(ServletRequest, ServletResponse, FilterChain)}
+   *
+   * <p>Method under test: {@link LiteFnQueryHttpFilter#doFilter(ServletRequest, ServletResponse,
+   * FilterChain)}
    */
   @Test
   @Category(MaintainedByDiffblue.class)
-  @MethodsUnderTest({"void LiteFnQueryHttpFilter.doFilter(ServletRequest, ServletResponse, FilterChain)"})
+  @MethodsUnderTest({
+    "void LiteFnQueryHttpFilter.doFilter(ServletRequest, ServletResponse, FilterChain)"
+  })
   public void testDoFilter_thenThrowServletException() throws IOException, ServletException {
     // Arrange
     when(chainBaseManager.isLiteNode()).thenReturn(true);
-    MockHttpServletRequest servletRequest = new MockHttpServletRequest();
-    CharResponseWrapper servletResponse = new CharResponseWrapper(new MockHttpServletResponse());
+    MockHttpServletRequest servletRequest = HttpMethed.createRequest("https://example.org/example");
+    HttpServletResponseWrapper servletResponse =
+        new HttpServletResponseWrapper(new CharResponseWrapper(new MockHttpServletResponse()));
+
     FilterChain filterChain = mock(FilterChain.class);
-    doThrow(new ServletException("An error occurred")).when(filterChain)
+    doThrow(new ServletException("An error occurred"))
+        .when(filterChain)
         .doFilter(Mockito.<ServletRequest>any(), Mockito.<ServletResponse>any());
 
     // Act and Assert
-    assertThrows(ServletException.class,
+    assertThrows(
+        ServletException.class,
         () -> liteFnQueryHttpFilter.doFilter(servletRequest, servletResponse, filterChain));
     verify(filterChain).doFilter(isA(ServletRequest.class), isA(ServletResponse.class));
     verify(chainBaseManager).isLiteNode();
@@ -125,8 +150,9 @@ public class LiteFnQueryHttpFilterDiffblueTest {
 
   /**
    * Test getters and setters.
-   * <p>
-   * Methods under test:
+   *
+   * <p>Methods under test:
+   *
    * <ul>
    *   <li>{@link LiteFnQueryHttpFilter#destroy()}
    *   <li>{@link LiteFnQueryHttpFilter#init(FilterConfig)}
@@ -135,8 +161,11 @@ public class LiteFnQueryHttpFilterDiffblueTest {
    */
   @Test
   @Category(MaintainedByDiffblue.class)
-  @MethodsUnderTest({"void LiteFnQueryHttpFilter.destroy()", "Set LiteFnQueryHttpFilter.getFilterPaths()",
-      "void LiteFnQueryHttpFilter.init(FilterConfig)"})
+  @MethodsUnderTest({
+    "void LiteFnQueryHttpFilter.destroy()",
+    "Set LiteFnQueryHttpFilter.getFilterPaths()",
+    "void LiteFnQueryHttpFilter.init(FilterConfig)"
+  })
   public void testGettersAndSetters() throws ServletException {
     // Arrange
     LiteFnQueryHttpFilter liteFnQueryHttpFilter = new LiteFnQueryHttpFilter();

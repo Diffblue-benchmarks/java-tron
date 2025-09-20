@@ -9,12 +9,13 @@ import org.junit.experimental.categories.Category;
 public class ChainParameterEnumDiffblueTest {
   /**
    * Test {@link ChainParameterEnum#fromCode(long)}.
+   *
    * <ul>
-   *   <li>When one.</li>
-   *   <li>Then return {@code TOTAL_NET_LIMIT}.</li>
+   *   <li>When one.
+   *   <li>Then return {@code TOTAL_NET_LIMIT}.
    * </ul>
-   * <p>
-   * Method under test: {@link ChainParameterEnum#fromCode(long)}
+   *
+   * <p>Method under test: {@link ChainParameterEnum#fromCode(long)}
    */
   @Test
   @Category(MaintainedByDiffblue.class)
@@ -26,12 +27,13 @@ public class ChainParameterEnumDiffblueTest {
 
   /**
    * Test {@link ChainParameterEnum#fromCode(long)}.
+   *
    * <ul>
-   *   <li>When six.</li>
-   *   <li>Then return {@code INVALID_PARAMETER_KEY}.</li>
+   *   <li>When six.
+   *   <li>Then return {@code INVALID_PARAMETER_KEY}.
    * </ul>
-   * <p>
-   * Method under test: {@link ChainParameterEnum#fromCode(long)}
+   *
+   * <p>Method under test: {@link ChainParameterEnum#fromCode(long)}
    */
   @Test
   @Category(MaintainedByDiffblue.class)
@@ -43,8 +45,9 @@ public class ChainParameterEnumDiffblueTest {
 
   /**
    * Test getters and setters.
-   * <p>
-   * Methods under test:
+   *
+   * <p>Methods under test:
+   *
    * <ul>
    *   <li>{@link ChainParameterEnum#getAction()}
    *   <li>{@link ChainParameterEnum#getCode()}
@@ -52,7 +55,10 @@ public class ChainParameterEnumDiffblueTest {
    */
   @Test
   @Category(MaintainedByDiffblue.class)
-  @MethodsUnderTest({"java.util.function.Function ChainParameterEnum.getAction()", "long ChainParameterEnum.getCode()"})
+  @MethodsUnderTest({
+    "java.util.function.Function ChainParameterEnum.getAction()",
+    "long ChainParameterEnum.getCode()"
+  })
   public void testGettersAndSetters() {
     // Arrange
     ChainParameterEnum valueOfResult = ChainParameterEnum.valueOf("INVALID_PARAMETER_KEY");

@@ -16,60 +16,74 @@ import org.tron.core.exception.ZksnarkException;
 
 public class JLibsodiumParamDiffblueTest {
   /**
-   * Test Black2bSaltPersonalParams {@link Black2bSaltPersonalParams#Black2bSaltPersonalParams(byte[], int, byte[], long, byte[], int, byte[], byte[])}.
-   * <p>
-   * Method under test: {@link Black2bSaltPersonalParams#Black2bSaltPersonalParams(byte[], int, byte[], long, byte[], int, byte[], byte[])}
+   * Test Black2bSaltPersonalParams {@link
+   * Black2bSaltPersonalParams#Black2bSaltPersonalParams(byte[], int, byte[], long, byte[], int,
+   * byte[], byte[])}.
+   *
+   * <p>Method under test: {@link Black2bSaltPersonalParams#Black2bSaltPersonalParams(byte[], int,
+   * byte[], long, byte[], int, byte[], byte[])}
    */
   @Test
   @Category(MaintainedByDiffblue.class)
-  @MethodsUnderTest({"void Black2bSaltPersonalParams.<init>(byte[], int, byte[], long, byte[], int, byte[], byte[])"})
+  @MethodsUnderTest({
+    "void Black2bSaltPersonalParams.<init>(byte[], int, byte[], long, byte[], int, byte[], byte[])"
+  })
   public void testBlack2bSaltPersonalParamsNewBlack2bSaltPersonalParams()
       throws UnsupportedEncodingException, ZksnarkException {
-    // Arrange
-    byte[] out = "AXAXAXAX".getBytes("UTF-8");
-    byte[] in = "AXAXAXAX".getBytes("UTF-8");
-    byte[] key = "AXAXAXAX".getBytes("UTF-8");
-    byte[] salt = "AXAXAXAX".getBytes("UTF-8");
-
-    // Act and Assert
-    assertThrows(ZksnarkException.class,
-        () -> new Black2bSaltPersonalParams(out, 3, in, 3L, key, 3, salt, "AXAXAXAX".getBytes("UTF-8")));
-
+    // Arrange, Act and Assert
+    assertThrows(
+        ZksnarkException.class,
+        () ->
+            new Black2bSaltPersonalParams(
+                "AXAXAXAX".getBytes("UTF-8"),
+                3,
+                "AXAXAXAX".getBytes("UTF-8"),
+                3L,
+                "AXAXAXAX".getBytes("UTF-8"),
+                3,
+                "AXAXAXAX".getBytes("UTF-8"),
+                "AXAXAXAX".getBytes("UTF-8")));
   }
 
   /**
-   * Test Black2bSaltPersonalParams {@link Black2bSaltPersonalParams#Black2bSaltPersonalParams(byte[], int, byte[], long, byte[], int, byte[], byte[])}.
-   * <ul>
-   *   <li>When eight.</li>
-   * </ul>
-   * <p>
-   * Method under test: {@link Black2bSaltPersonalParams#Black2bSaltPersonalParams(byte[], int, byte[], long, byte[], int, byte[], byte[])}
+   * Test Black2bSaltPersonalParams {@link
+   * Black2bSaltPersonalParams#Black2bSaltPersonalParams(byte[], int, byte[], long, byte[], int,
+   * byte[], byte[])}.
+   *
+   * <p>Method under test: {@link Black2bSaltPersonalParams#Black2bSaltPersonalParams(byte[], int,
+   * byte[], long, byte[], int, byte[], byte[])}
    */
   @Test
   @Category(MaintainedByDiffblue.class)
-  @MethodsUnderTest({"void Black2bSaltPersonalParams.<init>(byte[], int, byte[], long, byte[], int, byte[], byte[])"})
-  public void testBlack2bSaltPersonalParamsNewBlack2bSaltPersonalParams_whenEight()
+  @MethodsUnderTest({
+    "void Black2bSaltPersonalParams.<init>(byte[], int, byte[], long, byte[], int, byte[], byte[])"
+  })
+  public void testBlack2bSaltPersonalParamsNewBlack2bSaltPersonalParams2()
       throws UnsupportedEncodingException, ZksnarkException {
-    // Arrange
-    byte[] out = "AXAXAXAX".getBytes("UTF-8");
-    byte[] in = "AXAXAXAX".getBytes("UTF-8");
-    byte[] key = "AXAXAXAX".getBytes("UTF-8");
-    byte[] salt = "AXAXAXAX".getBytes("UTF-8");
-
-    // Act and Assert
-    assertThrows(ZksnarkException.class,
-        () -> new Black2bSaltPersonalParams(out, 8, in, 3L, key, 3, salt, "AXAXAXAX".getBytes("UTF-8")));
-
+    // Arrange, Act and Assert
+    assertThrows(
+        ZksnarkException.class,
+        () ->
+            new Black2bSaltPersonalParams(
+                "AXAXAXAX".getBytes("UTF-8"),
+                8,
+                "AXAXAXAX".getBytes("UTF-8"),
+                3L,
+                "AXAXAXAX".getBytes("UTF-8"),
+                3,
+                "AXAXAXAX".getBytes("UTF-8"),
+                "AXAXAXAX".getBytes("UTF-8")));
   }
 
   /**
    * Test Blake2bFinalParams {@link Blake2bFinalParams#Blake2bFinalParams(long, byte[], int)}.
+   *
    * <ul>
-   *   <li>When eight.</li>
-   *   <li>Then throw {@link ZksnarkException}.</li>
+   *   <li>When eight.
+   *   <li>Then throw {@link ZksnarkException}.
    * </ul>
-   * <p>
-   * Method under test: {@link Blake2bFinalParams#Blake2bFinalParams(long, byte[], int)}
+   *
+   * <p>Method under test: {@link Blake2bFinalParams#Blake2bFinalParams(long, byte[], int)}
    */
   @Test
   @Category(MaintainedByDiffblue.class)
@@ -77,18 +91,19 @@ public class JLibsodiumParamDiffblueTest {
   public void testBlake2bFinalParamsNewBlake2bFinalParams_whenEight_thenThrowZksnarkException()
       throws UnsupportedEncodingException, ZksnarkException {
     // Arrange, Act and Assert
-    assertThrows(ZksnarkException.class, () -> new Blake2bFinalParams(1L, "AXAXAXAX".getBytes("UTF-8"), 8));
-
+    assertThrows(
+        ZksnarkException.class, () -> new Blake2bFinalParams(1L, "AXAXAXAX".getBytes("UTF-8"), 8));
   }
 
   /**
    * Test Blake2bFinalParams {@link Blake2bFinalParams#Blake2bFinalParams(long, byte[], int)}.
+   *
    * <ul>
-   *   <li>When one.</li>
-   *   <li>Then throw {@link ZksnarkException}.</li>
+   *   <li>When one.
+   *   <li>Then throw {@link ZksnarkException}.
    * </ul>
-   * <p>
-   * Method under test: {@link Blake2bFinalParams#Blake2bFinalParams(long, byte[], int)}
+   *
+   * <p>Method under test: {@link Blake2bFinalParams#Blake2bFinalParams(long, byte[], int)}
    */
   @Test
   @Category(MaintainedByDiffblue.class)
@@ -96,46 +111,54 @@ public class JLibsodiumParamDiffblueTest {
   public void testBlake2bFinalParamsNewBlake2bFinalParams_whenOne_thenThrowZksnarkException()
       throws UnsupportedEncodingException, ZksnarkException {
     // Arrange, Act and Assert
-    assertThrows(ZksnarkException.class, () -> new Blake2bFinalParams(1L, "AXAXAXAX".getBytes("UTF-8"), 3));
-
+    assertThrows(
+        ZksnarkException.class, () -> new Blake2bFinalParams(1L, "AXAXAXAX".getBytes("UTF-8"), 3));
   }
 
   /**
-   * Test Blake2bInitSaltPersonalParams {@link Blake2bInitSaltPersonalParams#Blake2bInitSaltPersonalParams(long, byte[], int, int, byte[], byte[])}.
-   * <p>
-   * Method under test: {@link Blake2bInitSaltPersonalParams#Blake2bInitSaltPersonalParams(long, byte[], int, int, byte[], byte[])}
+   * Test Blake2bInitSaltPersonalParams {@link
+   * Blake2bInitSaltPersonalParams#Blake2bInitSaltPersonalParams(long, byte[], int, int, byte[],
+   * byte[])}.
+   *
+   * <p>Method under test: {@link Blake2bInitSaltPersonalParams#Blake2bInitSaltPersonalParams(long,
+   * byte[], int, int, byte[], byte[])}
    */
   @Test
   @Category(MaintainedByDiffblue.class)
-  @MethodsUnderTest({"void Blake2bInitSaltPersonalParams.<init>(long, byte[], int, int, byte[], byte[])"})
+  @MethodsUnderTest({
+    "void Blake2bInitSaltPersonalParams.<init>(long, byte[], int, int, byte[], byte[])"
+  })
   public void testBlake2bInitSaltPersonalParamsNewBlake2bInitSaltPersonalParams()
       throws UnsupportedEncodingException, ZksnarkException {
-    // Arrange
-    byte[] key = "AXAXAXAX".getBytes("UTF-8");
-
-    // Act
-    Blake2bInitSaltPersonalParams actualBlake2bInitSaltPersonalParams = new Blake2bInitSaltPersonalParams(1L, key, 3, 3,
-        "AXAXAXAX".getBytes("UTF-8"), new byte[]{'A', 1, 'A', 1, 'A', 1, 'A', 1, 'A', 1, 'A', 1, 'A', 1, 'A', 1});
+    // Arrange and Act
+    Blake2bInitSaltPersonalParams actualBlake2bInitSaltPersonalParams =
+        new Blake2bInitSaltPersonalParams(
+            1L,
+            "AXAXAXAX".getBytes("UTF-8"),
+            3,
+            3,
+            "AXAXAXAX".getBytes("UTF-8"),
+            new byte[] {'A', 1, 'A', 1, 'A', 1, 'A', 1, 'A', 1, 'A', 1, 'A', 1, 'A', 1});
 
     // Assert
     assertEquals(1L, actualBlake2bInitSaltPersonalParams.getState());
     assertEquals(3, actualBlake2bInitSaltPersonalParams.getKeyLen());
     assertEquals(3, actualBlake2bInitSaltPersonalParams.getOutLen());
-    byte[] expectedKey = "AXAXAXAX".getBytes("UTF-8");
-    assertArrayEquals(expectedKey, actualBlake2bInitSaltPersonalParams.getKey());
-    byte[] expectedSalt = "AXAXAXAX".getBytes("UTF-8");
-    assertArrayEquals(expectedSalt, actualBlake2bInitSaltPersonalParams.getSalt());
-    assertArrayEquals(new byte[]{'A', 1, 'A', 1, 'A', 1, 'A', 1, 'A', 1, 'A', 1, 'A', 1, 'A', 1},
+    assertArrayEquals("AXAXAXAX".getBytes("UTF-8"), actualBlake2bInitSaltPersonalParams.getKey());
+    assertArrayEquals("AXAXAXAX".getBytes("UTF-8"), actualBlake2bInitSaltPersonalParams.getSalt());
+    assertArrayEquals(
+        new byte[] {'A', 1, 'A', 1, 'A', 1, 'A', 1, 'A', 1, 'A', 1, 'A', 1, 'A', 1},
         actualBlake2bInitSaltPersonalParams.getPersonal());
   }
 
   /**
    * Test Blake2bUpdateParams {@link Blake2bUpdateParams#Blake2bUpdateParams(long, byte[], long)}.
+   *
    * <ul>
-   *   <li>When eight.</li>
+   *   <li>When eight.
    * </ul>
-   * <p>
-   * Method under test: {@link Blake2bUpdateParams#Blake2bUpdateParams(long, byte[], long)}
+   *
+   * <p>Method under test: {@link Blake2bUpdateParams#Blake2bUpdateParams(long, byte[], long)}
    */
   @Test
   @Category(MaintainedByDiffblue.class)
@@ -143,18 +166,20 @@ public class JLibsodiumParamDiffblueTest {
   public void testBlake2bUpdateParamsNewBlake2bUpdateParams_whenEight()
       throws UnsupportedEncodingException, ZksnarkException {
     // Arrange, Act and Assert
-    assertThrows(ZksnarkException.class, () -> new Blake2bUpdateParams(1L, "AXAXAXAX".getBytes("UTF-8"), 8L));
-
+    assertThrows(
+        ZksnarkException.class,
+        () -> new Blake2bUpdateParams(1L, "AXAXAXAX".getBytes("UTF-8"), 8L));
   }
 
   /**
    * Test Blake2bUpdateParams {@link Blake2bUpdateParams#Blake2bUpdateParams(long, byte[], long)}.
+   *
    * <ul>
-   *   <li>When one.</li>
-   *   <li>Then throw {@link ZksnarkException}.</li>
+   *   <li>When one.
+   *   <li>Then throw {@link ZksnarkException}.
    * </ul>
-   * <p>
-   * Method under test: {@link Blake2bUpdateParams#Blake2bUpdateParams(long, byte[], long)}
+   *
+   * <p>Method under test: {@link Blake2bUpdateParams#Blake2bUpdateParams(long, byte[], long)}
    */
   @Test
   @Category(MaintainedByDiffblue.class)
@@ -162,35 +187,39 @@ public class JLibsodiumParamDiffblueTest {
   public void testBlake2bUpdateParamsNewBlake2bUpdateParams_whenOne_thenThrowZksnarkException()
       throws UnsupportedEncodingException, ZksnarkException {
     // Arrange, Act and Assert
-    assertThrows(ZksnarkException.class, () -> new Blake2bUpdateParams(1L, "AXAXAXAX".getBytes("UTF-8"), 3L));
-
+    assertThrows(
+        ZksnarkException.class,
+        () -> new Blake2bUpdateParams(1L, "AXAXAXAX".getBytes("UTF-8"), 3L));
   }
 
   /**
    * Test {@link JLibsodiumParam#validNull(byte[])}.
+   *
    * <ul>
-   *   <li>When empty array of {@code byte}.</li>
-   *   <li>Then throw {@link ZksnarkException}.</li>
+   *   <li>When empty array of {@code byte}.
+   *   <li>Then throw {@link ZksnarkException}.
    * </ul>
-   * <p>
-   * Method under test: {@link JLibsodiumParam#validNull(byte[])}
+   *
+   * <p>Method under test: {@link JLibsodiumParam#validNull(byte[])}
    */
   @Test
   @Category(MaintainedByDiffblue.class)
   @MethodsUnderTest({"void JLibsodiumParam.validNull(byte[])"})
-  public void testValidNull_whenEmptyArrayOfByte_thenThrowZksnarkException() throws ZksnarkException {
+  public void testValidNull_whenEmptyArrayOfByte_thenThrowZksnarkException()
+      throws ZksnarkException {
     // Arrange, Act and Assert
-    assertThrows(ZksnarkException.class, () -> JLibsodiumParam.validNull(new byte[]{}));
+    assertThrows(ZksnarkException.class, () -> JLibsodiumParam.validNull(new byte[] {}));
   }
 
   /**
    * Test {@link JLibsodiumParam#validNull(byte[])}.
+   *
    * <ul>
-   *   <li>When {@code null}.</li>
-   *   <li>Then throw {@link ZksnarkException}.</li>
+   *   <li>When {@code null}.
+   *   <li>Then throw {@link ZksnarkException}.
    * </ul>
-   * <p>
-   * Method under test: {@link JLibsodiumParam#validNull(byte[])}
+   *
+   * <p>Method under test: {@link JLibsodiumParam#validNull(byte[])}
    */
   @Test
   @Category(MaintainedByDiffblue.class)
@@ -202,29 +231,32 @@ public class JLibsodiumParamDiffblueTest {
 
   /**
    * Test {@link JLibsodiumParam#validValueParams(long)}.
+   *
    * <ul>
-   *   <li>When minus one.</li>
-   *   <li>Then throw {@link ZksnarkException}.</li>
+   *   <li>When minus one.
+   *   <li>Then throw {@link ZksnarkException}.
    * </ul>
-   * <p>
-   * Method under test: {@link JLibsodiumParam#validValueParams(long)}
+   *
+   * <p>Method under test: {@link JLibsodiumParam#validValueParams(long)}
    */
   @Test
   @Category(MaintainedByDiffblue.class)
   @MethodsUnderTest({"void JLibsodiumParam.validValueParams(long)"})
-  public void testValidValueParams_whenMinusOne_thenThrowZksnarkException() throws ZksnarkException {
+  public void testValidValueParams_whenMinusOne_thenThrowZksnarkException()
+      throws ZksnarkException {
     // Arrange, Act and Assert
     assertThrows(ZksnarkException.class, () -> JLibsodiumParam.validValueParams(-1L));
   }
 
   /**
    * Test {@link JLibsodiumParam#validParamLength(byte[], int)}.
+   *
    * <ul>
-   *   <li>When {@code AXAXAXAX} Bytes is {@code UTF-8}.</li>
-   *   <li>Then throw {@link ZksnarkException}.</li>
+   *   <li>When {@code AXAXAXAX} Bytes is {@code UTF-8}.
+   *   <li>Then throw {@link ZksnarkException}.
    * </ul>
-   * <p>
-   * Method under test: {@link JLibsodiumParam#validParamLength(byte[], int)}
+   *
+   * <p>Method under test: {@link JLibsodiumParam#validParamLength(byte[], int)}
    */
   @Test
   @Category(MaintainedByDiffblue.class)
@@ -232,34 +264,39 @@ public class JLibsodiumParamDiffblueTest {
   public void testValidParamLength_whenAxaxaxaxBytesIsUtf8_thenThrowZksnarkException()
       throws UnsupportedEncodingException, ZksnarkException {
     // Arrange, Act and Assert
-    assertThrows(ZksnarkException.class, () -> JLibsodiumParam.validParamLength("AXAXAXAX".getBytes("UTF-8"), 3));
+    assertThrows(
+        ZksnarkException.class,
+        () -> JLibsodiumParam.validParamLength("AXAXAXAX".getBytes("UTF-8"), 3));
   }
 
   /**
    * Test {@link JLibsodiumParam#validParamLength(byte[], int)}.
+   *
    * <ul>
-   *   <li>When empty array of {@code byte}.</li>
-   *   <li>Then throw {@link ZksnarkException}.</li>
+   *   <li>When empty array of {@code byte}.
+   *   <li>Then throw {@link ZksnarkException}.
    * </ul>
-   * <p>
-   * Method under test: {@link JLibsodiumParam#validParamLength(byte[], int)}
+   *
+   * <p>Method under test: {@link JLibsodiumParam#validParamLength(byte[], int)}
    */
   @Test
   @Category(MaintainedByDiffblue.class)
   @MethodsUnderTest({"void JLibsodiumParam.validParamLength(byte[], int)"})
-  public void testValidParamLength_whenEmptyArrayOfByte_thenThrowZksnarkException() throws ZksnarkException {
+  public void testValidParamLength_whenEmptyArrayOfByte_thenThrowZksnarkException()
+      throws ZksnarkException {
     // Arrange, Act and Assert
-    assertThrows(ZksnarkException.class, () -> JLibsodiumParam.validParamLength(new byte[]{}, 3));
+    assertThrows(ZksnarkException.class, () -> JLibsodiumParam.validParamLength(new byte[] {}, 3));
   }
 
   /**
    * Test {@link JLibsodiumParam#validParamLength(byte[], int)}.
+   *
    * <ul>
-   *   <li>When {@code null}.</li>
-   *   <li>Then throw {@link ZksnarkException}.</li>
+   *   <li>When {@code null}.
+   *   <li>Then throw {@link ZksnarkException}.
    * </ul>
-   * <p>
-   * Method under test: {@link JLibsodiumParam#validParamLength(byte[], int)}
+   *
+   * <p>Method under test: {@link JLibsodiumParam#validParamLength(byte[], int)}
    */
   @Test
   @Category(MaintainedByDiffblue.class)

@@ -11,12 +11,13 @@ import org.junit.experimental.categories.Category;
 public class JsonUtilDiffblueTest {
   /**
    * Test {@link JsonUtil#json2Obj(String, Class)}.
+   *
    * <ul>
-   *   <li>When {@code 42}.</li>
-   *   <li>Then return intValue is {@link DecodeUtil#ADDRESS_SIZE}.</li>
+   *   <li>When {@code 42}.
+   *   <li>Then return intValue is {@link DecodeUtil#ADDRESS_SIZE}.
    * </ul>
-   * <p>
-   * Method under test: {@link JsonUtil#json2Obj(String, Class)}
+   *
+   * <p>Method under test: {@link JsonUtil#json2Obj(String, Class)}
    */
   @Test
   @Category(MaintainedByDiffblue.class)
@@ -31,12 +32,13 @@ public class JsonUtilDiffblueTest {
 
   /**
    * Test {@link JsonUtil#json2Obj(String, Class)}.
+   *
    * <ul>
-   *   <li>When empty string.</li>
-   *   <li>Then return {@code null}.</li>
+   *   <li>When empty string.
+   *   <li>Then return {@code null}.
    * </ul>
-   * <p>
-   * Method under test: {@link JsonUtil#json2Obj(String, Class)}
+   *
+   * <p>Method under test: {@link JsonUtil#json2Obj(String, Class)}
    */
   @Test
   @Category(MaintainedByDiffblue.class)
@@ -51,12 +53,13 @@ public class JsonUtilDiffblueTest {
 
   /**
    * Test {@link JsonUtil#json2Obj(String, Class)}.
+   *
    * <ul>
-   *   <li>When {@code Json String}.</li>
-   *   <li>Then throw {@link RuntimeException}.</li>
+   *   <li>When {@code Json String}.
+   *   <li>Then throw {@link RuntimeException}.
    * </ul>
-   * <p>
-   * Method under test: {@link JsonUtil#json2Obj(String, Class)}
+   *
+   * <p>Method under test: {@link JsonUtil#json2Obj(String, Class)}
    */
   @Test
   @Category(MaintainedByDiffblue.class)
@@ -71,12 +74,13 @@ public class JsonUtilDiffblueTest {
 
   /**
    * Test {@link JsonUtil#json2Obj(String, Class)}.
+   *
    * <ul>
-   *   <li>When {@code null}.</li>
-   *   <li>Then return {@code null}.</li>
+   *   <li>When {@code null}.
+   *   <li>Then return {@code null}.
    * </ul>
-   * <p>
-   * Method under test: {@link JsonUtil#json2Obj(String, Class)}
+   *
+   * <p>Method under test: {@link JsonUtil#json2Obj(String, Class)}
    */
   @Test
   @Category(MaintainedByDiffblue.class)
@@ -88,12 +92,13 @@ public class JsonUtilDiffblueTest {
 
   /**
    * Test {@link JsonUtil#obj2Json(Object)}.
+   *
    * <ul>
-   *   <li>When {@link DecodeUtil#ADDRESS_SIZE}.</li>
-   *   <li>Then return {@code 42}.</li>
+   *   <li>When {@link DecodeUtil#ADDRESS_SIZE}.
+   *   <li>Then return {@code 42}.
    * </ul>
-   * <p>
-   * Method under test: {@link JsonUtil#obj2Json(Object)}
+   *
+   * <p>Method under test: {@link JsonUtil#obj2Json(Object)}
    */
   @Test
   @Category(MaintainedByDiffblue.class)
@@ -105,12 +110,13 @@ public class JsonUtilDiffblueTest {
 
   /**
    * Test {@link JsonUtil#obj2Json(Object)}.
+   *
    * <ul>
-   *   <li>When {@code null}.</li>
-   *   <li>Then return {@code null}.</li>
+   *   <li>When {@code null}.
+   *   <li>Then return {@code null}.
    * </ul>
-   * <p>
-   * Method under test: {@link JsonUtil#obj2Json(Object)}
+   *
+   * <p>Method under test: {@link JsonUtil#obj2Json(Object)}
    */
   @Test
   @Category(MaintainedByDiffblue.class)
@@ -122,12 +128,13 @@ public class JsonUtilDiffblueTest {
 
   /**
    * Test {@link JsonUtil#obj2Json(Object)}.
+   *
    * <ul>
-   *   <li>When {@code Obj}.</li>
-   *   <li>Then return {@code "Obj"}.</li>
+   *   <li>When {@code Obj}.
+   *   <li>Then return {@code "Obj"}.
    * </ul>
-   * <p>
-   * Method under test: {@link JsonUtil#obj2Json(Object)}
+   *
+   * <p>Method under test: {@link JsonUtil#obj2Json(Object)}
    */
   @Test
   @Category(MaintainedByDiffblue.class)

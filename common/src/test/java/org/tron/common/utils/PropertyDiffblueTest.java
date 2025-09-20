@@ -11,8 +11,9 @@ import org.junit.experimental.categories.Category;
 public class PropertyDiffblueTest {
   /**
    * Test getters and setters.
-   * <p>
-   * Methods under test:
+   *
+   * <p>Methods under test:
+   *
    * <ul>
    *   <li>default or parameterless constructor of {@link Property}
    *   <li>{@link Property#setDbOptions(Options)}
@@ -25,9 +26,15 @@ public class PropertyDiffblueTest {
    */
   @Test
   @Category(MaintainedByDiffblue.class)
-  @MethodsUnderTest({"void Property.<init>()", "Options Property.getDbOptions()", "String Property.getName()",
-      "String Property.getPath()", "void Property.setDbOptions(Options)", "void Property.setName(String)",
-      "void Property.setPath(String)"})
+  @MethodsUnderTest({
+    "void Property.<init>()",
+    "Options Property.getDbOptions()",
+    "String Property.getName()",
+    "String Property.getPath()",
+    "void Property.setDbOptions(Options)",
+    "void Property.setName(String)",
+    "void Property.setPath(String)"
+  })
   public void testGettersAndSetters() {
     // Arrange and Act
     Property actualProperty = new Property();

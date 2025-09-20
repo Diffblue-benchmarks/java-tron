@@ -12,25 +12,28 @@ import org.tron.core.config.Parameter.ForkBlockVersionEnum;
 public class ForkControllerDiffblueTest {
   /**
    * Test {@link ForkController#pass(ForkBlockVersionEnum)} with {@code forkBlockVersionEnum}.
+   *
    * <ul>
-   *   <li>When {@code ENERGY_LIMIT}.</li>
-   *   <li>Then throw {@link IllegalStateException}.</li>
+   *   <li>When {@code ENERGY_LIMIT}.
+   *   <li>Then throw {@link IllegalStateException}.
    * </ul>
-   * <p>
-   * Method under test: {@link ForkController#pass(ForkBlockVersionEnum)}
+   *
+   * <p>Method under test: {@link ForkController#pass(ForkBlockVersionEnum)}
    */
   @Test
   @Category(MaintainedByDiffblue.class)
   @MethodsUnderTest({"boolean ForkController.pass(ForkBlockVersionEnum)"})
   public void testPassWithForkBlockVersionEnum_whenEnergyLimit_thenThrowIllegalStateException() {
     // Arrange, Act and Assert
-    assertThrows(IllegalStateException.class, () -> ForkController.instance().pass(ForkBlockVersionEnum.ENERGY_LIMIT));
+    assertThrows(
+        IllegalStateException.class,
+        () -> ForkController.instance().pass(ForkBlockVersionEnum.ENERGY_LIMIT));
   }
 
   /**
    * Test {@link ForkController#pass(int)} with {@code version}.
-   * <p>
-   * Method under test: {@link ForkController#pass(int)}
+   *
+   * <p>Method under test: {@link ForkController#pass(int)}
    */
   @Test
   @Category(MaintainedByDiffblue.class)
@@ -42,8 +45,8 @@ public class ForkControllerDiffblueTest {
 
   /**
    * Test {@link ForkController#instance()}.
-   * <p>
-   * Method under test: {@link ForkController#instance()}
+   *
+   * <p>Method under test: {@link ForkController#instance()}
    */
   @Test
   @Category(MaintainedByDiffblue.class)
@@ -55,8 +58,9 @@ public class ForkControllerDiffblueTest {
 
   /**
    * Test getters and setters.
-   * <p>
-   * Methods under test:
+   *
+   * <p>Methods under test:
+   *
    * <ul>
    *   <li>default or parameterless constructor of {@link ForkController}
    *   <li>{@link ForkController#getManager()}
@@ -64,9 +68,12 @@ public class ForkControllerDiffblueTest {
    */
   @Test
   @Category(MaintainedByDiffblue.class)
-  @MethodsUnderTest({"void ForkController.<init>()", "org.tron.core.ChainBaseManager ForkController.getManager()"})
+  @MethodsUnderTest({
+    "void ForkController.<init>()",
+    "org.tron.core.ChainBaseManager ForkController.getManager()"
+  })
   public void testGettersAndSetters() {
     // Arrange, Act and Assert
-    assertNull((new ForkController()).getManager());
+    assertNull(new ForkController().getManager());
   }
 }

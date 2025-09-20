@@ -9,44 +9,48 @@ import org.junit.experimental.categories.Category;
 public class SlotBaseCounterDiffblueTest {
   /**
    * Test {@link SlotBaseCounter#SlotBaseCounter(int)}.
+   *
    * <ul>
-   *   <li>When three.</li>
+   *   <li>When three.
    * </ul>
-   * <p>
-   * Method under test: {@link SlotBaseCounter#SlotBaseCounter(int)}
+   *
+   * <p>Method under test: {@link SlotBaseCounter#SlotBaseCounter(int)}
    */
   @Test
   @Category(MaintainedByDiffblue.class)
   @MethodsUnderTest({"void SlotBaseCounter.<init>(int)"})
   public void testNewSlotBaseCounter_whenThree() {
     // Arrange, Act and Assert
-    assertEquals(0, (new SlotBaseCounter(3)).totalCount());
+    assertEquals(0, new SlotBaseCounter(3).totalCount());
   }
 
   /**
    * Test {@link SlotBaseCounter#SlotBaseCounter(int)}.
+   *
    * <ul>
-   *   <li>When zero.</li>
+   *   <li>When zero.
    * </ul>
-   * <p>
-   * Method under test: {@link SlotBaseCounter#SlotBaseCounter(int)}
+   *
+   * <p>Method under test: {@link SlotBaseCounter#SlotBaseCounter(int)}
    */
   @Test
   @Category(MaintainedByDiffblue.class)
   @MethodsUnderTest({"void SlotBaseCounter.<init>(int)"})
   public void testNewSlotBaseCounter_whenZero() {
     // Arrange, Act and Assert
-    assertEquals(0, (new SlotBaseCounter(0)).totalCount());
+    assertEquals(0, new SlotBaseCounter(0).totalCount());
   }
 
   /**
    * Test {@link SlotBaseCounter#increaseSlot(int)}.
+   *
    * <ul>
-   *   <li>When one.</li>
-   *   <li>Then {@link SlotBaseCounter#SlotBaseCounter(int)} with slotSize is three totalCount is one.</li>
+   *   <li>When one.
+   *   <li>Then {@link SlotBaseCounter#SlotBaseCounter(int)} with slotSize is three totalCount is
+   *       one.
    * </ul>
-   * <p>
-   * Method under test: {@link SlotBaseCounter#increaseSlot(int)}
+   *
+   * <p>Method under test: {@link SlotBaseCounter#increaseSlot(int)}
    */
   @Test
   @Category(MaintainedByDiffblue.class)
@@ -64,27 +68,27 @@ public class SlotBaseCounterDiffblueTest {
 
   /**
    * Test {@link SlotBaseCounter#totalCount()}.
-   * <p>
-   * Method under test: {@link SlotBaseCounter#totalCount()}
+   *
+   * <p>Method under test: {@link SlotBaseCounter#totalCount()}
    */
   @Test
   @Category(MaintainedByDiffblue.class)
   @MethodsUnderTest({"int SlotBaseCounter.totalCount()"})
   public void testTotalCount() {
     // Arrange, Act and Assert
-    assertEquals(0, (new SlotBaseCounter(3)).totalCount());
+    assertEquals(0, new SlotBaseCounter(3).totalCount());
   }
 
   /**
    * Test {@link SlotBaseCounter#toString()}.
-   * <p>
-   * Method under test: {@link SlotBaseCounter#toString()}
+   *
+   * <p>Method under test: {@link SlotBaseCounter#toString()}
    */
   @Test
   @Category(MaintainedByDiffblue.class)
   @MethodsUnderTest({"java.lang.String SlotBaseCounter.toString()"})
   public void testToString() {
     // Arrange, Act and Assert
-    assertEquals("[0, 0, 0]", (new SlotBaseCounter(3)).toString());
+    assertEquals("[0, 0, 0]", new SlotBaseCounter(3).toString());
   }
 }

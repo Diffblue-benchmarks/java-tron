@@ -10,12 +10,14 @@ import org.junit.experimental.categories.Category;
 public class NodeInfoDiffblueTest {
   /**
    * Test {@link NodeInfo#equals(Object)}, and {@link NodeInfo#hashCode()}.
+   *
    * <ul>
-   *   <li>When other is equal.</li>
-   *   <li>Then return equal.</li>
+   *   <li>When other is equal.
+   *   <li>Then return equal.
    * </ul>
-   * <p>
-   * Methods under test:
+   *
+   * <p>Methods under test:
+   *
    * <ul>
    *   <li>{@link NodeInfo#equals(Object)}
    *   <li>{@link NodeInfo#hashCode()}
@@ -40,18 +42,19 @@ public class NodeInfoDiffblueTest {
 
     // Act and Assert
     assertEquals(nodeInfo, nodeInfo2);
-    int expectedHashCodeResult = nodeInfo.hashCode();
-    assertEquals(expectedHashCodeResult, nodeInfo2.hashCode());
+    assertEquals(nodeInfo.hashCode(), nodeInfo2.hashCode());
   }
 
   /**
    * Test {@link NodeInfo#equals(Object)}, and {@link NodeInfo#hashCode()}.
+   *
    * <ul>
-   *   <li>When other is equal.</li>
-   *   <li>Then return equal.</li>
+   *   <li>When other is equal.
+   *   <li>Then return equal.
    * </ul>
-   * <p>
-   * Methods under test:
+   *
+   * <p>Methods under test:
+   *
    * <ul>
    *   <li>{@link NodeInfo#equals(Object)}
    *   <li>{@link NodeInfo#hashCode()}
@@ -76,18 +79,19 @@ public class NodeInfoDiffblueTest {
 
     // Act and Assert
     assertEquals(nodeInfo, nodeInfo2);
-    int expectedHashCodeResult = nodeInfo.hashCode();
-    assertEquals(expectedHashCodeResult, nodeInfo2.hashCode());
+    assertEquals(nodeInfo.hashCode(), nodeInfo2.hashCode());
   }
 
   /**
    * Test {@link NodeInfo#equals(Object)}, and {@link NodeInfo#hashCode()}.
+   *
    * <ul>
-   *   <li>When other is equal.</li>
-   *   <li>Then return equal.</li>
+   *   <li>When other is equal.
+   *   <li>Then return equal.
    * </ul>
-   * <p>
-   * Methods under test:
+   *
+   * <p>Methods under test:
+   *
    * <ul>
    *   <li>{@link NodeInfo#equals(Object)}
    *   <li>{@link NodeInfo#hashCode()}
@@ -112,18 +116,19 @@ public class NodeInfoDiffblueTest {
 
     // Act and Assert
     assertEquals(nodeInfo, nodeInfo2);
-    int expectedHashCodeResult = nodeInfo.hashCode();
-    assertEquals(expectedHashCodeResult, nodeInfo2.hashCode());
+    assertEquals(nodeInfo.hashCode(), nodeInfo2.hashCode());
   }
 
   /**
    * Test {@link NodeInfo#equals(Object)}, and {@link NodeInfo#hashCode()}.
+   *
    * <ul>
-   *   <li>When other is same.</li>
-   *   <li>Then return equal.</li>
+   *   <li>When other is same.
+   *   <li>Then return equal.
    * </ul>
-   * <p>
-   * Methods under test:
+   *
+   * <p>Methods under test:
+   *
    * <ul>
    *   <li>{@link NodeInfo#equals(Object)}
    *   <li>{@link NodeInfo#hashCode()}
@@ -148,12 +153,13 @@ public class NodeInfoDiffblueTest {
 
   /**
    * Test {@link NodeInfo#equals(Object)}.
+   *
    * <ul>
-   *   <li>When other is different.</li>
-   *   <li>Then return not equal.</li>
+   *   <li>When other is different.
+   *   <li>Then return not equal.
    * </ul>
-   * <p>
-   * Method under test: {@link NodeInfo#equals(Object)}
+   *
+   * <p>Method under test: {@link NodeInfo#equals(Object)}
    */
   @Test
   @Category(MaintainedByDiffblue.class)
@@ -178,12 +184,13 @@ public class NodeInfoDiffblueTest {
 
   /**
    * Test {@link NodeInfo#equals(Object)}.
+   *
    * <ul>
-   *   <li>When other is different.</li>
-   *   <li>Then return not equal.</li>
+   *   <li>When other is different.
+   *   <li>Then return not equal.
    * </ul>
-   * <p>
-   * Method under test: {@link NodeInfo#equals(Object)}
+   *
+   * <p>Method under test: {@link NodeInfo#equals(Object)}
    */
   @Test
   @Category(MaintainedByDiffblue.class)
@@ -208,12 +215,13 @@ public class NodeInfoDiffblueTest {
 
   /**
    * Test {@link NodeInfo#equals(Object)}.
+   *
    * <ul>
-   *   <li>When other is different.</li>
-   *   <li>Then return not equal.</li>
+   *   <li>When other is different.
+   *   <li>Then return not equal.
    * </ul>
-   * <p>
-   * Method under test: {@link NodeInfo#equals(Object)}
+   *
+   * <p>Method under test: {@link NodeInfo#equals(Object)}
    */
   @Test
   @Category(MaintainedByDiffblue.class)
@@ -238,12 +246,13 @@ public class NodeInfoDiffblueTest {
 
   /**
    * Test {@link NodeInfo#equals(Object)}.
+   *
    * <ul>
-   *   <li>When other is different.</li>
-   *   <li>Then return not equal.</li>
+   *   <li>When other is different.
+   *   <li>Then return not equal.
    * </ul>
-   * <p>
-   * Method under test: {@link NodeInfo#equals(Object)}
+   *
+   * <p>Method under test: {@link NodeInfo#equals(Object)}
    */
   @Test
   @Category(MaintainedByDiffblue.class)
@@ -268,12 +277,13 @@ public class NodeInfoDiffblueTest {
 
   /**
    * Test {@link NodeInfo#equals(Object)}.
+   *
    * <ul>
-   *   <li>When other is different.</li>
-   *   <li>Then return not equal.</li>
+   *   <li>When other is different.
+   *   <li>Then return not equal.
    * </ul>
-   * <p>
-   * Method under test: {@link NodeInfo#equals(Object)}
+   *
+   * <p>Method under test: {@link NodeInfo#equals(Object)}
    */
   @Test
   @Category(MaintainedByDiffblue.class)
@@ -298,12 +308,13 @@ public class NodeInfoDiffblueTest {
 
   /**
    * Test {@link NodeInfo#equals(Object)}.
+   *
    * <ul>
-   *   <li>When other is different.</li>
-   *   <li>Then return not equal.</li>
+   *   <li>When other is different.
+   *   <li>Then return not equal.
    * </ul>
-   * <p>
-   * Method under test: {@link NodeInfo#equals(Object)}
+   *
+   * <p>Method under test: {@link NodeInfo#equals(Object)}
    */
   @Test
   @Category(MaintainedByDiffblue.class)
@@ -328,12 +339,13 @@ public class NodeInfoDiffblueTest {
 
   /**
    * Test {@link NodeInfo#equals(Object)}.
+   *
    * <ul>
-   *   <li>When other is {@code null}.</li>
-   *   <li>Then return not equal.</li>
+   *   <li>When other is {@code null}.
+   *   <li>Then return not equal.
    * </ul>
-   * <p>
-   * Method under test: {@link NodeInfo#equals(Object)}
+   *
+   * <p>Method under test: {@link NodeInfo#equals(Object)}
    */
   @Test
   @Category(MaintainedByDiffblue.class)
@@ -352,12 +364,13 @@ public class NodeInfoDiffblueTest {
 
   /**
    * Test {@link NodeInfo#equals(Object)}.
+   *
    * <ul>
-   *   <li>When other is wrong type.</li>
-   *   <li>Then return not equal.</li>
+   *   <li>When other is wrong type.
+   *   <li>Then return not equal.
    * </ul>
-   * <p>
-   * Method under test: {@link NodeInfo#equals(Object)}
+   *
+   * <p>Method under test: {@link NodeInfo#equals(Object)}
    */
   @Test
   @Category(MaintainedByDiffblue.class)
@@ -376,8 +389,9 @@ public class NodeInfoDiffblueTest {
 
   /**
    * Test getters and setters.
-   * <p>
-   * Methods under test:
+   *
+   * <p>Methods under test:
+   *
    * <ul>
    *   <li>default or parameterless constructor of {@link NodeInfo}
    *   <li>{@link NodeInfo#setBackupStatus(int)}
@@ -393,10 +407,18 @@ public class NodeInfoDiffblueTest {
    */
   @Test
   @Category(MaintainedByDiffblue.class)
-  @MethodsUnderTest({"void NodeInfo.<init>()", "int NodeInfo.getBackupStatus()", "String NodeInfo.getIp()",
-      "int NodeInfo.getNodeType()", "String NodeInfo.getVersion()", "void NodeInfo.setBackupStatus(int)",
-      "void NodeInfo.setIp(String)", "void NodeInfo.setNodeType(int)", "void NodeInfo.setVersion(String)",
-      "String NodeInfo.toString()"})
+  @MethodsUnderTest({
+    "void NodeInfo.<init>()",
+    "int NodeInfo.getBackupStatus()",
+    "String NodeInfo.getIp()",
+    "int NodeInfo.getNodeType()",
+    "String NodeInfo.getVersion()",
+    "void NodeInfo.setBackupStatus(int)",
+    "void NodeInfo.setIp(String)",
+    "void NodeInfo.setNodeType(int)",
+    "void NodeInfo.setVersion(String)",
+    "String NodeInfo.toString()"
+  })
   public void testGettersAndSetters() {
     // Arrange and Act
     NodeInfo actualNodeInfo = new NodeInfo();

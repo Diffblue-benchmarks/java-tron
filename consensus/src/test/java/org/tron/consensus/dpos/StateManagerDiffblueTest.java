@@ -13,27 +13,28 @@ import org.junit.runner.RunWith;
 import org.mockito.InjectMocks;
 import org.mockito.Mock;
 import org.mockito.junit.MockitoJUnitRunner;
-import org.tron.common.utils.Sha256Hash;
+import org.springframework.test.annotation.DirtiesContext;
+import org.springframework.test.annotation.DirtiesContext.ClassMode;
 import org.tron.consensus.ConsensusDelegate;
 import org.tron.consensus.base.State;
 import org.tron.core.capsule.BlockCapsule;
 import org.tron.core.capsule.BlockCapsule.BlockId;
 
+@DirtiesContext(classMode = ClassMode.AFTER_EACH_TEST_METHOD)
 @RunWith(MockitoJUnitRunner.class)
 public class StateManagerDiffblueTest {
-  @Mock
-  private ConsensusDelegate consensusDelegate;
+  @Mock private ConsensusDelegate consensusDelegate;
 
-  @InjectMocks
-  private StateManager stateManager;
+  @InjectMocks private StateManager stateManager;
 
   /**
    * Test {@link StateManager#getState()}.
+   *
    * <ul>
-   *   <li>Then return {@code CLOCK_ERROR}.</li>
+   *   <li>Then return {@code CLOCK_ERROR}.
    * </ul>
-   * <p>
-   * Method under test: {@link StateManager#getState()}
+   *
+   * <p>Method under test: {@link StateManager#getState()}
    */
   @Test
   @Category(MaintainedByDiffblue.class)
@@ -52,12 +53,14 @@ public class StateManagerDiffblueTest {
 
   /**
    * Test {@link StateManager#receiveBlock(BlockCapsule)}.
+   *
    * <ul>
-   *   <li>Given {@link BlockId} {@link Sha256Hash#getBytes()} return {@code AXAXAXAX} Bytes is {@code UTF-8}.</li>
-   *   <li>Then calls {@link Sha256Hash#getBytes()}.</li>
+   *   <li>Given {@link BlockId} {@link BlockId#getBytes()} return {@code AXAXAXAX} Bytes is {@code
+   *       UTF-8}.
+   *   <li>Then calls {@link BlockId#getBytes()}.
    * </ul>
-   * <p>
-   * Method under test: {@link StateManager#receiveBlock(BlockCapsule)}
+   *
+   * <p>Method under test: {@link StateManager#receiveBlock(BlockCapsule)}
    */
   @Test
   @Category(MaintainedByDiffblue.class)
@@ -67,12 +70,14 @@ public class StateManagerDiffblueTest {
     // Arrange
     DposService dposService = mock(DposService.class);
     when(dposService.isNeedSyncCheck()).thenReturn(true);
+
     BlockId currentBlockId = mock(BlockId.class);
     when(currentBlockId.getBytes()).thenReturn("AXAXAXAX".getBytes("UTF-8"));
 
     StateManager stateManager = new StateManager();
     stateManager.setCurrentBlockId(currentBlockId);
     stateManager.setDposService(dposService);
+
     BlockCapsule blockCapsule = mock(BlockCapsule.class);
     when(blockCapsule.getBlockId()).thenReturn(new BlockId());
 
@@ -87,12 +92,13 @@ public class StateManagerDiffblueTest {
 
   /**
    * Test {@link StateManager#receiveBlock(BlockCapsule)}.
+   *
    * <ul>
-   *   <li>Given {@link BlockId}.</li>
-   *   <li>When {@link BlockCapsule} {@link BlockCapsule#getBlockId()} return {@link BlockId}.</li>
+   *   <li>Given {@link BlockId}.
+   *   <li>When {@link BlockCapsule} {@link BlockCapsule#getBlockId()} return {@link BlockId}.
    * </ul>
-   * <p>
-   * Method under test: {@link StateManager#receiveBlock(BlockCapsule)}
+   *
+   * <p>Method under test: {@link StateManager#receiveBlock(BlockCapsule)}
    */
   @Test
   @Category(MaintainedByDiffblue.class)
@@ -104,6 +110,7 @@ public class StateManagerDiffblueTest {
 
     StateManager stateManager = new StateManager();
     stateManager.setDposService(dposService);
+
     BlockCapsule blockCapsule = mock(BlockCapsule.class);
     when(blockCapsule.getBlockId()).thenReturn(mock(BlockId.class));
 
@@ -117,12 +124,14 @@ public class StateManagerDiffblueTest {
 
   /**
    * Test {@link StateManager#receiveBlock(BlockCapsule)}.
+   *
    * <ul>
-   *   <li>Given {@link StateManager} (default constructor) CurrentBlockId is {@link BlockId#BlockId()}.</li>
-   *   <li>Then calls {@link BlockCapsule#getBlockId()}.</li>
+   *   <li>Given {@link StateManager} (default constructor) CurrentBlockId is {@link
+   *       BlockId#BlockId()}.
+   *   <li>Then calls {@link BlockCapsule#getBlockId()}.
    * </ul>
-   * <p>
-   * Method under test: {@link StateManager#receiveBlock(BlockCapsule)}
+   *
+   * <p>Method under test: {@link StateManager#receiveBlock(BlockCapsule)}
    */
   @Test
   @Category(MaintainedByDiffblue.class)
@@ -131,6 +140,7 @@ public class StateManagerDiffblueTest {
     // Arrange
     StateManager stateManager = new StateManager();
     stateManager.setCurrentBlockId(new BlockId());
+
     BlockCapsule blockCapsule = mock(BlockCapsule.class);
     when(blockCapsule.getBlockId()).thenReturn(new BlockId());
 
@@ -143,12 +153,14 @@ public class StateManagerDiffblueTest {
 
   /**
    * Test {@link StateManager#receiveBlock(BlockCapsule)}.
+   *
    * <ul>
-   *   <li>Given {@link StateManager} (default constructor) DposService is {@link DposService} (default constructor).</li>
-   *   <li>Then calls {@link BlockCapsule#getTimeStamp()}.</li>
+   *   <li>Given {@link StateManager} (default constructor) DposService is {@link DposService}
+   *       (default constructor).
+   *   <li>Then calls {@link BlockCapsule#getTimeStamp()}.
    * </ul>
-   * <p>
-   * Method under test: {@link StateManager#receiveBlock(BlockCapsule)}
+   *
+   * <p>Method under test: {@link StateManager#receiveBlock(BlockCapsule)}
    */
   @Test
   @Category(MaintainedByDiffblue.class)
@@ -157,6 +169,7 @@ public class StateManagerDiffblueTest {
     // Arrange
     StateManager stateManager = new StateManager();
     stateManager.setDposService(new DposService());
+
     BlockCapsule blockCapsule = mock(BlockCapsule.class);
     when(blockCapsule.getTimeStamp()).thenReturn(10L);
     when(blockCapsule.getBlockId()).thenReturn(new BlockId());
@@ -171,11 +184,12 @@ public class StateManagerDiffblueTest {
 
   /**
    * Test {@link StateManager#receiveBlock(BlockCapsule)}.
+   *
    * <ul>
-   *   <li>Then calls {@link DposService#isNeedSyncCheck()}.</li>
+   *   <li>Then calls {@link DposService#isNeedSyncCheck()}.
    * </ul>
-   * <p>
-   * Method under test: {@link StateManager#receiveBlock(BlockCapsule)}
+   *
+   * <p>Method under test: {@link StateManager#receiveBlock(BlockCapsule)}
    */
   @Test
   @Category(MaintainedByDiffblue.class)
@@ -187,6 +201,7 @@ public class StateManagerDiffblueTest {
 
     StateManager stateManager = new StateManager();
     stateManager.setDposService(dposService);
+
     BlockCapsule blockCapsule = mock(BlockCapsule.class);
     when(blockCapsule.getBlockId()).thenReturn(new BlockId());
 

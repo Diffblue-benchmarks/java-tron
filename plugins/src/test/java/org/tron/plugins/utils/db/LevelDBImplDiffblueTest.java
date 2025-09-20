@@ -13,10 +13,13 @@ import com.diffblue.cover.annotations.MethodsUnderTest;
 import java.io.IOException;
 import java.io.UnsupportedEncodingException;
 import java.nio.file.Paths;
-import java.util.Iterator;
 import java.util.Map;
 import java.util.Map.Entry;
 import java.util.function.Consumer;
+import org.fusesource.leveldbjni.internal.JniDB;
+import org.fusesource.leveldbjni.internal.NativeComparator;
+import org.fusesource.leveldbjni.internal.NativeDB;
+import org.fusesource.leveldbjni.internal.NativeLogger;
 import org.iq80.leveldb.DBException;
 import org.iq80.leveldb.ReadOptions;
 import org.iq80.leveldb.impl.DbImpl;
@@ -28,12 +31,14 @@ import org.mockito.Mockito;
 public class LevelDBImplDiffblueTest {
   /**
    * Test {@link LevelDBImpl#get(byte[])}.
+   *
    * <ul>
-   *   <li>Given {@link DbImpl} {@link DbImpl#get(byte[])} return {@code AXAXAXAX} Bytes is {@code UTF-8}.</li>
-   *   <li>Then return {@code AXAXAXAX} Bytes is {@code UTF-8}.</li>
+   *   <li>Given {@link DbImpl} {@link DbImpl#get(byte[])} return {@code AXAXAXAX} Bytes is {@code
+   *       UTF-8}.
+   *   <li>Then return {@code AXAXAXAX} Bytes is {@code UTF-8}.
    * </ul>
-   * <p>
-   * Method under test: {@link LevelDBImpl#get(byte[])}
+   *
+   * <p>Method under test: {@link LevelDBImpl#get(byte[])}
    */
   @Test
   @Category(MaintainedByDiffblue.class)
@@ -42,12 +47,12 @@ public class LevelDBImplDiffblueTest {
       throws UnsupportedEncodingException, DBException {
     // Arrange
     Paths.get(System.getProperty("java.io.tmpdir"), "test.txt").toFile();
+
     DbImpl leveldb = mock(DbImpl.class);
     when(leveldb.get(Mockito.<byte[]>any())).thenReturn("AXAXAXAX".getBytes("UTF-8"));
-    LevelDBImpl levelDBImpl = new LevelDBImpl(leveldb, "Name");
 
     // Act
-    byte[] actualGetResult = levelDBImpl.get("AXAXAXAX".getBytes("UTF-8"));
+    byte[] actualGetResult = new LevelDBImpl(leveldb, "Name").get("AXAXAXAX".getBytes("UTF-8"));
 
     // Assert
     verify(leveldb).get(isA(byte[].class));
@@ -56,26 +61,28 @@ public class LevelDBImplDiffblueTest {
 
   /**
    * Test {@link LevelDBImpl#put(byte[], byte[])}.
+   *
    * <ul>
-   *   <li>Given {@link DbImpl} {@link DbImpl#put(byte[], byte[])} does nothing.</li>
-   *   <li>Then calls {@link DbImpl#put(byte[], byte[])}.</li>
+   *   <li>Given {@link DbImpl} {@link DbImpl#put(byte[], byte[])} does nothing.
+   *   <li>Then calls {@link DbImpl#put(byte[], byte[])}.
    * </ul>
-   * <p>
-   * Method under test: {@link LevelDBImpl#put(byte[], byte[])}
+   *
+   * <p>Method under test: {@link LevelDBImpl#put(byte[], byte[])}
    */
   @Test
   @Category(MaintainedByDiffblue.class)
   @MethodsUnderTest({"void LevelDBImpl.put(byte[], byte[])"})
-  public void testPut_givenDbImplPutDoesNothing_thenCallsPut() throws UnsupportedEncodingException, DBException {
+  public void testPut_givenDbImplPutDoesNothing_thenCallsPut()
+      throws UnsupportedEncodingException, DBException {
     // Arrange
     Paths.get(System.getProperty("java.io.tmpdir"), "test.txt").toFile();
+
     DbImpl leveldb = mock(DbImpl.class);
     doNothing().when(leveldb).put(Mockito.<byte[]>any(), Mockito.<byte[]>any());
-    LevelDBImpl levelDBImpl = new LevelDBImpl(leveldb, "Name");
-    byte[] key = "AXAXAXAX".getBytes("UTF-8");
 
     // Act
-    levelDBImpl.put(key, "AXAXAXAX".getBytes("UTF-8"));
+    new LevelDBImpl(leveldb, "Name")
+        .put("AXAXAXAX".getBytes("UTF-8"), "AXAXAXAX".getBytes("UTF-8"));
 
     // Assert
     verify(leveldb).put(isA(byte[].class), isA(byte[].class));
@@ -83,12 +90,13 @@ public class LevelDBImplDiffblueTest {
 
   /**
    * Test {@link LevelDBImpl#delete(byte[])}.
+   *
    * <ul>
-   *   <li>Given {@link DbImpl} {@link DbImpl#delete(byte[])} does nothing.</li>
-   *   <li>Then calls {@link DbImpl#delete(byte[])}.</li>
+   *   <li>Given {@link DbImpl} {@link DbImpl#delete(byte[])} does nothing.
+   *   <li>Then calls {@link DbImpl#delete(byte[])}.
    * </ul>
-   * <p>
-   * Method under test: {@link LevelDBImpl#delete(byte[])}
+   *
+   * <p>Method under test: {@link LevelDBImpl#delete(byte[])}
    */
   @Test
   @Category(MaintainedByDiffblue.class)
@@ -97,12 +105,12 @@ public class LevelDBImplDiffblueTest {
       throws UnsupportedEncodingException, DBException {
     // Arrange
     Paths.get(System.getProperty("java.io.tmpdir"), "test.txt").toFile();
+
     DbImpl leveldb = mock(DbImpl.class);
     doNothing().when(leveldb).delete(Mockito.<byte[]>any());
-    LevelDBImpl levelDBImpl = new LevelDBImpl(leveldb, "Name");
 
     // Act
-    levelDBImpl.delete("AXAXAXAX".getBytes("UTF-8"));
+    new LevelDBImpl(leveldb, "Name").delete("AXAXAXAX".getBytes("UTF-8"));
 
     // Assert
     verify(leveldb).delete(isA(byte[].class));
@@ -110,11 +118,12 @@ public class LevelDBImplDiffblueTest {
 
   /**
    * Test {@link LevelDBImpl#iterator()}.
+   *
    * <ul>
-   *   <li>Then return {@link LevelDBIterator}.</li>
+   *   <li>Then return {@link LevelDBIterator}.
    * </ul>
-   * <p>
-   * Method under test: {@link LevelDBImpl#iterator()}
+   *
+   * <p>Method under test: {@link LevelDBImpl#iterator()}
    */
   @Test
   @Category(MaintainedByDiffblue.class)
@@ -122,11 +131,12 @@ public class LevelDBImplDiffblueTest {
   public void testIterator_thenReturnLevelDBIterator() {
     // Arrange
     Paths.get(System.getProperty("java.io.tmpdir"), "test.txt").toFile();
+
     DbImpl leveldb = mock(DbImpl.class);
     when(leveldb.iterator(Mockito.<ReadOptions>any())).thenReturn(new SeekingIteratorAdapter(null));
 
     // Act
-    DBIterator actualIteratorResult = (new LevelDBImpl(leveldb, "Name")).iterator();
+    DBIterator actualIteratorResult = new LevelDBImpl(leveldb, "Name").iterator();
 
     // Assert
     verify(leveldb).iterator(isA(ReadOptions.class));
@@ -135,12 +145,14 @@ public class LevelDBImplDiffblueTest {
 
   /**
    * Test {@link LevelDBImpl#size()}.
+   *
    * <ul>
-   *   <li>Given {@link SeekingIteratorAdapter} {@link Iterator#forEachRemaining(Consumer)} does nothing.</li>
-   *   <li>Then return zero.</li>
+   *   <li>Given {@link SeekingIteratorAdapter} {@link
+   *       SeekingIteratorAdapter#forEachRemaining(Consumer)} does nothing.
+   *   <li>Then return zero.
    * </ul>
-   * <p>
-   * Method under test: {@link LevelDBImpl#size()}
+   *
+   * <p>Method under test: {@link LevelDBImpl#size()}
    */
   @Test
   @Category(MaintainedByDiffblue.class)
@@ -148,13 +160,17 @@ public class LevelDBImplDiffblueTest {
   public void testSize_givenSeekingIteratorAdapterForEachRemainingDoesNothing_thenReturnZero() {
     // Arrange
     Paths.get(System.getProperty("java.io.tmpdir"), "test.txt").toFile();
+
     SeekingIteratorAdapter seekingIteratorAdapter = mock(SeekingIteratorAdapter.class);
-    doNothing().when(seekingIteratorAdapter).forEachRemaining(Mockito.<Consumer<Entry<byte[], byte[]>>>any());
+    doNothing()
+        .when(seekingIteratorAdapter)
+        .forEachRemaining(Mockito.<Consumer<Entry<byte[], byte[]>>>any());
+
     DbImpl leveldb = mock(DbImpl.class);
     when(leveldb.iterator()).thenReturn(seekingIteratorAdapter);
 
     // Act
-    long actualSizeResult = (new LevelDBImpl(leveldb, "Name")).size();
+    long actualSizeResult = new LevelDBImpl(leveldb, "Name").size();
 
     // Assert
     verify(seekingIteratorAdapter).forEachRemaining(isA(Consumer.class));
@@ -164,26 +180,36 @@ public class LevelDBImplDiffblueTest {
 
   /**
    * Test {@link LevelDBImpl#close()}.
+   *
    * <ul>
-   *   <li>Given {@link DbImpl} {@link DbImpl#close()} does nothing.</li>
-   *   <li>Then calls {@link DbImpl#close()}.</li>
+   *   <li>Given {@link NativeDB} {@link NativeDB#delete()} does nothing.
+   *   <li>Then calls {@link NativeComparator#delete()}.
    * </ul>
-   * <p>
-   * Method under test: {@link LevelDBImpl#close()}
+   *
+   * <p>Method under test: {@link LevelDBImpl#close()}
    */
   @Test
   @Category(MaintainedByDiffblue.class)
   @MethodsUnderTest({"void LevelDBImpl.close()"})
-  public void testClose_givenDbImplCloseDoesNothing_thenCallsClose() throws IOException {
+  public void testClose_givenNativeDBDeleteDoesNothing_thenCallsDelete() throws IOException {
     // Arrange
     Paths.get(System.getProperty("java.io.tmpdir"), "test.txt").toFile();
-    DbImpl leveldb = mock(DbImpl.class);
-    doNothing().when(leveldb).close();
 
-    // Act
-    (new LevelDBImpl(leveldb, "Name")).close();
+    NativeDB db = mock(NativeDB.class);
+    doNothing().when(db).delete();
 
-    // Assert
-    verify(leveldb).close();
+    NativeComparator comparator = mock(NativeComparator.class);
+    doNothing().when(comparator).delete();
+
+    NativeLogger logger = mock(NativeLogger.class);
+    doNothing().when(logger).delete();
+
+    JniDB leveldb = new JniDB(db, null, comparator, logger);
+    try (LevelDBImpl levelDBImpl = new LevelDBImpl(leveldb, "Name")) {}
+
+    // Act and Assert
+    verify(comparator).delete();
+    verify(db).delete();
+    verify(logger).delete();
   }
 }

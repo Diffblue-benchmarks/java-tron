@@ -12,8 +12,9 @@ import org.junit.experimental.categories.Category;
 public class BytesCapsuleDiffblueTest {
   /**
    * Test getters and setters.
-   * <p>
-   * Methods under test:
+   *
+   * <p>Methods under test:
+   *
    * <ul>
    *   <li>{@link BytesCapsule#BytesCapsule(byte[])}
    *   <li>{@link BytesCapsule#getData()}
@@ -22,8 +23,11 @@ public class BytesCapsuleDiffblueTest {
    */
   @Test
   @Category(MaintainedByDiffblue.class)
-  @MethodsUnderTest({"void BytesCapsule.<init>(byte[])", "byte[] BytesCapsule.getData()",
-      "java.lang.Object BytesCapsule.getInstance()"})
+  @MethodsUnderTest({
+    "void BytesCapsule.<init>(byte[])",
+    "byte[] BytesCapsule.getData()",
+    "java.lang.Object BytesCapsule.getInstance()"
+  })
   public void testGettersAndSetters() throws UnsupportedEncodingException {
     // Arrange
     byte[] bytes = "AXAXAXAX".getBytes("UTF-8");

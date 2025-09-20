@@ -1,6 +1,5 @@
 package org.tron.core.zen;
 
-import static org.junit.Assert.assertArrayEquals;
 import static org.junit.Assert.assertEquals;
 import static org.junit.Assert.assertFalse;
 import static org.junit.Assert.assertNull;
@@ -45,16 +44,7 @@ import java.io.UnsupportedEncodingException;
 import java.util.List;
 import org.junit.Test;
 import org.junit.experimental.categories.Category;
-import org.tron.common.zksnark.IncrementalMerkleTreeContainer;
-import org.tron.common.zksnark.IncrementalMerkleVoucherContainer;
 import org.tron.core.Wallet;
-import org.tron.core.capsule.IncrementalMerkleTreeCapsule;
-import org.tron.core.exception.ZksnarkException;
-import org.tron.core.zen.ZenTransactionBuilder.ReceiveDescriptionInfo;
-import org.tron.core.zen.ZenTransactionBuilder.SpendDescriptionInfo;
-import org.tron.core.zen.address.DiversifierT;
-import org.tron.core.zen.address.ExpandedSpendingKey;
-import org.tron.core.zen.note.Note;
 import org.tron.protos.contract.ShieldContract;
 import org.tron.protos.contract.ShieldContract.ShieldedTransferContract;
 import org.tron.protos.contract.ShieldContract.ShieldedTransferContract.Builder;
@@ -62,8 +52,8 @@ import org.tron.protos.contract.ShieldContract.ShieldedTransferContract.Builder;
 public class ZenTransactionBuilderDiffblueTest {
   /**
    * Test {@link ZenTransactionBuilder#ZenTransactionBuilder()}.
-   * <p>
-   * Method under test: {@link ZenTransactionBuilder#ZenTransactionBuilder()}
+   *
+   * <p>Method under test: {@link ZenTransactionBuilder#ZenTransactionBuilder()}
    */
   @Test
   @Category(MaintainedByDiffblue.class)
@@ -82,8 +72,8 @@ public class ZenTransactionBuilderDiffblueTest {
 
   /**
    * Test {@link ZenTransactionBuilder#ZenTransactionBuilder(Wallet)}.
-   * <p>
-   * Method under test: {@link ZenTransactionBuilder#ZenTransactionBuilder(Wallet)}
+   *
+   * <p>Method under test: {@link ZenTransactionBuilder#ZenTransactionBuilder(Wallet)}
    */
   @Test
   @Category(MaintainedByDiffblue.class)
@@ -101,126 +91,9 @@ public class ZenTransactionBuilderDiffblueTest {
   }
 
   /**
-   * Test {@link ZenTransactionBuilder#addOutput(byte[], DiversifierT, byte[], long, byte[], byte[])} with {@code ovk}, {@code d}, {@code pkD}, {@code value}, {@code r}, {@code memo}.
-   * <ul>
-   *   <li>When {@code A}.</li>
-   *   <li>Then first element is zero.</li>
-   * </ul>
-   * <p>
-   * Method under test: {@link ZenTransactionBuilder#addOutput(byte[], DiversifierT, byte[], long, byte[], byte[])}
-   */
-  @Test
-  @Category(MaintainedByDiffblue.class)
-  @MethodsUnderTest({"void ZenTransactionBuilder.addOutput(byte[], DiversifierT, byte[], long, byte[], byte[])"})
-  public void testAddOutputWithOvkDPkDValueRMemo_whenA_thenFirstElementIsZero()
-      throws UnsupportedEncodingException, ZksnarkException {
-    // Arrange
-    ZenTransactionBuilder zenTransactionBuilder = new ZenTransactionBuilder();
-
-    // Act
-    zenTransactionBuilder.addOutput(new byte[]{'A', 'X', 'A', 'X', 'A', 'X', 'A', 'X'}, DiversifierT.random(),
-        new byte[]{'A', 'X', 'A', 'X', 'A', 'X', 'A', 'X'}, 42L, new byte[]{'A', 'X', 'A', 'X', 'A', 'X', 'A', 'X'},
-        null);
-
-    // Assert
-    List<ReceiveDescriptionInfo> receives = zenTransactionBuilder.getReceives();
-    assertEquals(1, receives.size());
-    Note note = receives.get(0).getNote();
-    byte[] memo = note.getMemo();
-    assertEquals((byte) 0, memo[0]);
-    assertEquals((byte) 0, memo[1]);
-    assertEquals((byte) 0, memo[2]);
-    assertEquals((byte) 0, memo[3]);
-    assertEquals((byte) 0, memo[4]);
-    assertEquals((byte) 0, memo[5]);
-    assertEquals((byte) 0, memo[6]);
-    assertEquals((byte) 0, memo[7]);
-    assertEquals(512, memo.length);
-    byte[] expectedPkD = "AXAXAXAX".getBytes("UTF-8");
-    assertArrayEquals(expectedPkD, note.getPkD());
-    byte[] expectedRcm = "AXAXAXAX".getBytes("UTF-8");
-    assertArrayEquals(expectedRcm, note.getRcm());
-  }
-
-  /**
-   * Test {@link ZenTransactionBuilder#addOutput(byte[], DiversifierT, byte[], long, byte[], byte[])} with {@code ovk}, {@code d}, {@code pkD}, {@code value}, {@code r}, {@code memo}.
-   * <ul>
-   *   <li>When {@code AXAXAXAX} Bytes is {@code UTF-8}.</li>
-   *   <li>Then first element is {@code A}.</li>
-   * </ul>
-   * <p>
-   * Method under test: {@link ZenTransactionBuilder#addOutput(byte[], DiversifierT, byte[], long, byte[], byte[])}
-   */
-  @Test
-  @Category(MaintainedByDiffblue.class)
-  @MethodsUnderTest({"void ZenTransactionBuilder.addOutput(byte[], DiversifierT, byte[], long, byte[], byte[])"})
-  public void testAddOutputWithOvkDPkDValueRMemo_whenAxaxaxaxBytesIsUtf8_thenFirstElementIsA()
-      throws UnsupportedEncodingException, ZksnarkException {
-    // Arrange
-    ZenTransactionBuilder zenTransactionBuilder = new ZenTransactionBuilder();
-    byte[] ovk = "AXAXAXAX".getBytes("UTF-8");
-    DiversifierT d = DiversifierT.random();
-    byte[] pkD = "AXAXAXAX".getBytes("UTF-8");
-    byte[] r = "AXAXAXAX".getBytes("UTF-8");
-
-    // Act
-    zenTransactionBuilder.addOutput(ovk, d, pkD, 42L, r, "AXAXAXAX".getBytes("UTF-8"));
-
-    // Assert
-    List<ReceiveDescriptionInfo> receives = zenTransactionBuilder.getReceives();
-    assertEquals(1, receives.size());
-    Note note = receives.get(0).getNote();
-    byte[] memo = note.getMemo();
-    assertEquals(512, memo.length);
-    assertEquals('A', memo[0]);
-    assertEquals('A', memo[2]);
-    assertEquals('A', memo[4]);
-    assertEquals('A', memo[6]);
-    assertEquals('X', memo[1]);
-    assertEquals('X', memo[3]);
-    assertEquals('X', memo[5]);
-    assertEquals('X', memo[7]);
-    byte[] expectedPkD = "AXAXAXAX".getBytes("UTF-8");
-    assertArrayEquals(expectedPkD, note.getPkD());
-    byte[] expectedRcm = "AXAXAXAX".getBytes("UTF-8");
-    assertArrayEquals(expectedRcm, note.getRcm());
-  }
-
-  /**
-   * Test ReceiveDescriptionInfo getters and setters.
-   * <p>
-   * Methods under test:
-   * <ul>
-   *   <li>{@link ReceiveDescriptionInfo#ReceiveDescriptionInfo(ZenTransactionBuilder, byte[], Note)}
-   *   <li>{@link ReceiveDescriptionInfo#getNote()}
-   *   <li>{@link ReceiveDescriptionInfo#getOvk()}
-   * </ul>
-   */
-  @Test
-  @Category(MaintainedByDiffblue.class)
-  @MethodsUnderTest({"void ReceiveDescriptionInfo.<init>(ZenTransactionBuilder, byte[], Note)",
-      "Note ReceiveDescriptionInfo.getNote()", "byte[] ReceiveDescriptionInfo.getOvk()"})
-  public void testReceiveDescriptionInfoGettersAndSetters() throws UnsupportedEncodingException {
-    // Arrange
-    ZenTransactionBuilder zenTransactionBuilder = new ZenTransactionBuilder();
-    byte[] ovk = "AXAXAXAX".getBytes("UTF-8");
-    Note note = new Note();
-
-    // Act
-    ReceiveDescriptionInfo actualReceiveDescriptionInfo = zenTransactionBuilder.new ReceiveDescriptionInfo(ovk, note);
-    Note actualNote = actualReceiveDescriptionInfo.getNote();
-    byte[] actualOvk = actualReceiveDescriptionInfo.getOvk();
-
-    // Assert
-    assertSame(note, actualNote);
-    assertSame(ovk, actualOvk);
-    assertArrayEquals("AXAXAXAX".getBytes("UTF-8"), actualOvk);
-  }
-
-  /**
    * Test {@link ZenTransactionBuilder#setTransparentInput(byte[], long)}.
-   * <p>
-   * Method under test: {@link ZenTransactionBuilder#setTransparentInput(byte[], long)}
+   *
+   * <p>Method under test: {@link ZenTransactionBuilder#setTransparentInput(byte[], long)}
    */
   @Test
   @Category(MaintainedByDiffblue.class)
@@ -248,8 +121,8 @@ public class ZenTransactionBuilderDiffblueTest {
 
   /**
    * Test {@link ZenTransactionBuilder#setTransparentOutput(byte[], long)}.
-   * <p>
-   * Method under test: {@link ZenTransactionBuilder#setTransparentOutput(byte[], long)}
+   *
+   * <p>Method under test: {@link ZenTransactionBuilder#setTransparentOutput(byte[], long)}
    */
   @Test
   @Category(MaintainedByDiffblue.class)
@@ -277,8 +150,9 @@ public class ZenTransactionBuilderDiffblueTest {
 
   /**
    * Test {@link ZenTransactionBuilder#ZenTransactionBuilder()}.
-   * <p>
-   * Methods under test:
+   *
+   * <p>Methods under test:
+   *
    * <ul>
    *   <li>{@link ZenTransactionBuilder#ZenTransactionBuilder()}
    *   <li>{@link ZenTransactionBuilder#getContractBuilder()}
@@ -291,13 +165,20 @@ public class ZenTransactionBuilderDiffblueTest {
    */
   @Test
   @Category(MaintainedByDiffblue.class)
-  @MethodsUnderTest({"org.tron.core.capsule.TransactionCapsule ZenTransactionBuilder.build()",
-      "org.tron.core.capsule.TransactionCapsule ZenTransactionBuilder.build(boolean)",
-      "Builder ZenTransactionBuilder.getContractBuilder()", "java.lang.String ZenTransactionBuilder.getFrom()",
-      "List ZenTransactionBuilder.getReceives()", "List ZenTransactionBuilder.getSpends()",
-      "long ZenTransactionBuilder.getTimeout()", "long ZenTransactionBuilder.getValueBalance()",
-      "void ZenTransactionBuilder.setFrom(java.lang.String)", "void ZenTransactionBuilder.setReceives(List)",
-      "void ZenTransactionBuilder.setSpends(List)", "void ZenTransactionBuilder.setTimeout(long)"})
+  @MethodsUnderTest({
+    "org.tron.core.capsule.TransactionCapsule ZenTransactionBuilder.build()",
+    "org.tron.core.capsule.TransactionCapsule ZenTransactionBuilder.build(boolean)",
+    "Builder ZenTransactionBuilder.getContractBuilder()",
+    "java.lang.String ZenTransactionBuilder.getFrom()",
+    "List ZenTransactionBuilder.getReceives()",
+    "List ZenTransactionBuilder.getSpends()",
+    "long ZenTransactionBuilder.getTimeout()",
+    "long ZenTransactionBuilder.getValueBalance()",
+    "void ZenTransactionBuilder.setFrom(java.lang.String)",
+    "void ZenTransactionBuilder.setReceives(List)",
+    "void ZenTransactionBuilder.setSpends(List)",
+    "void ZenTransactionBuilder.setTimeout(long)"
+  })
   public void testNewZenTransactionBuilder() {
     // Arrange and Act
     ZenTransactionBuilder actualZenTransactionBuilder = new ZenTransactionBuilder();
@@ -446,8 +327,10 @@ public class ZenTransactionBuilderDiffblueTest {
     assertEquals("protocol.ShieldedTransferContract", descriptorForType.getFullName());
     assertEquals("protocol.ShieldedTransferContract.from_amount", getResult2.getFullName());
     assertEquals("protocol.ShieldedTransferContract.to_amount", getResult4.getFullName());
-    assertEquals("protocol.ShieldedTransferContract.transparent_from_address", getResult.getFullName());
-    assertEquals("protocol.ShieldedTransferContract.transparent_to_address", getResult3.getFullName());
+    assertEquals(
+        "protocol.ShieldedTransferContract.transparent_from_address", getResult.getFullName());
+    assertEquals(
+        "protocol.ShieldedTransferContract.transparent_to_address", getResult3.getFullName());
     assertEquals("toAmount", getResult4.getJsonName());
     assertEquals("to_amount", toProtoResult7.getName());
     assertEquals("to_amount", getResult4.getName());
@@ -588,7 +471,8 @@ public class ZenTransactionBuilderDiffblueTest {
     assertEquals(FieldPresence.FIELD_PRESENCE_UNKNOWN, features.getFieldPresence());
     assertEquals(JsonFormat.JSON_FORMAT_UNKNOWN, features.getJsonFormat());
     assertEquals(MessageEncoding.MESSAGE_ENCODING_UNKNOWN, features.getMessageEncoding());
-    assertEquals(RepeatedFieldEncoding.REPEATED_FIELD_ENCODING_UNKNOWN, features.getRepeatedFieldEncoding());
+    assertEquals(
+        RepeatedFieldEncoding.REPEATED_FIELD_ENCODING_UNKNOWN, features.getRepeatedFieldEncoding());
     assertEquals(Utf8Validation.UTF8_VALIDATION_UNKNOWN, features.getUtf8Validation());
     assertEquals(Label.LABEL_OPTIONAL, toProtoResult4.getLabel());
     assertEquals(Label.LABEL_OPTIONAL, toProtoResult5.getLabel());
@@ -918,188 +802,5 @@ public class ZenTransactionBuilderDiffblueTest {
     assertSame(toProtoResult.getReservedNameList(), toProtoResult3.getReservedNameList());
     assertSame(toProtoResult.getReservedNameList(), defaultInstanceForType2.getDependencyList());
     assertSame(toProtoResult.getReservedNameList(), toProtoResult2.getDependencyList());
-  }
-
-  /**
-   * Test SpendDescriptionInfo getters and setters.
-   * <p>
-   * Methods under test:
-   * <ul>
-   *   <li>{@link SpendDescriptionInfo#SpendDescriptionInfo(byte[], byte[], byte[], Note, byte[], byte[], IncrementalMerkleVoucherContainer)}
-   *   <li>{@link SpendDescriptionInfo#setAk(byte[])}
-   *   <li>{@link SpendDescriptionInfo#setAlpha(byte[])}
-   *   <li>{@link SpendDescriptionInfo#setAnchor(byte[])}
-   *   <li>{@link SpendDescriptionInfo#setExpsk(ExpandedSpendingKey)}
-   *   <li>{@link SpendDescriptionInfo#setNote(Note)}
-   *   <li>{@link SpendDescriptionInfo#setNsk(byte[])}
-   *   <li>{@link SpendDescriptionInfo#setOvk(byte[])}
-   *   <li>{@link SpendDescriptionInfo#setVoucher(IncrementalMerkleVoucherContainer)}
-   *   <li>{@link SpendDescriptionInfo#getAk()}
-   *   <li>{@link SpendDescriptionInfo#getAlpha()}
-   *   <li>{@link SpendDescriptionInfo#getAnchor()}
-   *   <li>{@link SpendDescriptionInfo#getExpsk()}
-   *   <li>{@link SpendDescriptionInfo#getNote()}
-   *   <li>{@link SpendDescriptionInfo#getNsk()}
-   *   <li>{@link SpendDescriptionInfo#getOvk()}
-   *   <li>{@link SpendDescriptionInfo#getVoucher()}
-   * </ul>
-   */
-  @Test
-  @Category(MaintainedByDiffblue.class)
-  @MethodsUnderTest({
-      "void SpendDescriptionInfo.<init>(ExpandedSpendingKey, Note, byte[], byte[], IncrementalMerkleVoucherContainer)",
-      "void SpendDescriptionInfo.<init>(byte[], byte[], byte[], Note, byte[], byte[], IncrementalMerkleVoucherContainer)",
-      "byte[] SpendDescriptionInfo.getAk()", "byte[] SpendDescriptionInfo.getAlpha()",
-      "byte[] SpendDescriptionInfo.getAnchor()", "ExpandedSpendingKey SpendDescriptionInfo.getExpsk()",
-      "Note SpendDescriptionInfo.getNote()", "byte[] SpendDescriptionInfo.getNsk()",
-      "byte[] SpendDescriptionInfo.getOvk()", "IncrementalMerkleVoucherContainer SpendDescriptionInfo.getVoucher()",
-      "void SpendDescriptionInfo.setAk(byte[])", "void SpendDescriptionInfo.setAlpha(byte[])",
-      "void SpendDescriptionInfo.setAnchor(byte[])", "void SpendDescriptionInfo.setExpsk(ExpandedSpendingKey)",
-      "void SpendDescriptionInfo.setNote(Note)", "void SpendDescriptionInfo.setNsk(byte[])",
-      "void SpendDescriptionInfo.setOvk(byte[])",
-      "void SpendDescriptionInfo.setVoucher(IncrementalMerkleVoucherContainer)"})
-  public void testSpendDescriptionInfoGettersAndSetters() throws UnsupportedEncodingException {
-    // Arrange
-    byte[] ak = "AXAXAXAX".getBytes("UTF-8");
-    byte[] nsk = "AXAXAXAX".getBytes("UTF-8");
-    byte[] ovk = "AXAXAXAX".getBytes("UTF-8");
-    Note note = new Note();
-    byte[] alpha = "AXAXAXAX".getBytes("UTF-8");
-    byte[] anchor = "AXAXAXAX".getBytes("UTF-8");
-
-    // Act
-    SpendDescriptionInfo actualSpendDescriptionInfo = new SpendDescriptionInfo(ak, nsk, ovk, note, alpha, anchor,
-        new IncrementalMerkleVoucherContainer(new IncrementalMerkleTreeContainer(new IncrementalMerkleTreeCapsule())));
-    byte[] ak2 = "AXAXAXAX".getBytes("UTF-8");
-    actualSpendDescriptionInfo.setAk(ak2);
-    byte[] alpha2 = "AXAXAXAX".getBytes("UTF-8");
-    actualSpendDescriptionInfo.setAlpha(alpha2);
-    byte[] anchor2 = "AXAXAXAX".getBytes("UTF-8");
-    actualSpendDescriptionInfo.setAnchor(anchor2);
-    ExpandedSpendingKey expsk = new ExpandedSpendingKey();
-    actualSpendDescriptionInfo.setExpsk(expsk);
-    Note note2 = new Note();
-    actualSpendDescriptionInfo.setNote(note2);
-    byte[] nsk2 = "AXAXAXAX".getBytes("UTF-8");
-    actualSpendDescriptionInfo.setNsk(nsk2);
-    byte[] ovk2 = "AXAXAXAX".getBytes("UTF-8");
-    actualSpendDescriptionInfo.setOvk(ovk2);
-    IncrementalMerkleVoucherContainer voucher = new IncrementalMerkleVoucherContainer(
-        new IncrementalMerkleTreeContainer(new IncrementalMerkleTreeCapsule()));
-    actualSpendDescriptionInfo.setVoucher(voucher);
-    byte[] actualAk = actualSpendDescriptionInfo.getAk();
-    byte[] actualAlpha = actualSpendDescriptionInfo.getAlpha();
-    byte[] actualAnchor = actualSpendDescriptionInfo.getAnchor();
-    ExpandedSpendingKey actualExpsk = actualSpendDescriptionInfo.getExpsk();
-    Note actualNote = actualSpendDescriptionInfo.getNote();
-    byte[] actualNsk = actualSpendDescriptionInfo.getNsk();
-    byte[] actualOvk = actualSpendDescriptionInfo.getOvk();
-
-    // Assert
-    assertSame(voucher, actualSpendDescriptionInfo.getVoucher());
-    assertSame(expsk, actualExpsk);
-    assertSame(note2, actualNote);
-    assertSame(ak2, actualAk);
-    assertSame(alpha2, actualAlpha);
-    assertSame(anchor2, actualAnchor);
-    assertSame(nsk2, actualNsk);
-    assertSame(ovk2, actualOvk);
-    assertArrayEquals("AXAXAXAX".getBytes("UTF-8"), actualAk);
-    assertArrayEquals("AXAXAXAX".getBytes("UTF-8"), actualAlpha);
-    assertArrayEquals("AXAXAXAX".getBytes("UTF-8"), actualAnchor);
-    assertArrayEquals("AXAXAXAX".getBytes("UTF-8"), actualNsk);
-    assertArrayEquals("AXAXAXAX".getBytes("UTF-8"), actualOvk);
-  }
-
-  /**
-   * Test SpendDescriptionInfo getters and setters.
-   * <ul>
-   *   <li>When {@link ExpandedSpendingKey#ExpandedSpendingKey()}.</li>
-   * </ul>
-   * <p>
-   * Methods under test:
-   * <ul>
-   *   <li>{@link SpendDescriptionInfo#SpendDescriptionInfo(ExpandedSpendingKey, Note, byte[], byte[], IncrementalMerkleVoucherContainer)}
-   *   <li>{@link SpendDescriptionInfo#setAk(byte[])}
-   *   <li>{@link SpendDescriptionInfo#setAlpha(byte[])}
-   *   <li>{@link SpendDescriptionInfo#setAnchor(byte[])}
-   *   <li>{@link SpendDescriptionInfo#setExpsk(ExpandedSpendingKey)}
-   *   <li>{@link SpendDescriptionInfo#setNote(Note)}
-   *   <li>{@link SpendDescriptionInfo#setNsk(byte[])}
-   *   <li>{@link SpendDescriptionInfo#setOvk(byte[])}
-   *   <li>{@link SpendDescriptionInfo#setVoucher(IncrementalMerkleVoucherContainer)}
-   *   <li>{@link SpendDescriptionInfo#getAk()}
-   *   <li>{@link SpendDescriptionInfo#getAlpha()}
-   *   <li>{@link SpendDescriptionInfo#getAnchor()}
-   *   <li>{@link SpendDescriptionInfo#getExpsk()}
-   *   <li>{@link SpendDescriptionInfo#getNote()}
-   *   <li>{@link SpendDescriptionInfo#getNsk()}
-   *   <li>{@link SpendDescriptionInfo#getOvk()}
-   *   <li>{@link SpendDescriptionInfo#getVoucher()}
-   * </ul>
-   */
-  @Test
-  @Category(MaintainedByDiffblue.class)
-  @MethodsUnderTest({
-      "void SpendDescriptionInfo.<init>(ExpandedSpendingKey, Note, byte[], byte[], IncrementalMerkleVoucherContainer)",
-      "void SpendDescriptionInfo.<init>(byte[], byte[], byte[], Note, byte[], byte[], IncrementalMerkleVoucherContainer)",
-      "byte[] SpendDescriptionInfo.getAk()", "byte[] SpendDescriptionInfo.getAlpha()",
-      "byte[] SpendDescriptionInfo.getAnchor()", "ExpandedSpendingKey SpendDescriptionInfo.getExpsk()",
-      "Note SpendDescriptionInfo.getNote()", "byte[] SpendDescriptionInfo.getNsk()",
-      "byte[] SpendDescriptionInfo.getOvk()", "IncrementalMerkleVoucherContainer SpendDescriptionInfo.getVoucher()",
-      "void SpendDescriptionInfo.setAk(byte[])", "void SpendDescriptionInfo.setAlpha(byte[])",
-      "void SpendDescriptionInfo.setAnchor(byte[])", "void SpendDescriptionInfo.setExpsk(ExpandedSpendingKey)",
-      "void SpendDescriptionInfo.setNote(Note)", "void SpendDescriptionInfo.setNsk(byte[])",
-      "void SpendDescriptionInfo.setOvk(byte[])",
-      "void SpendDescriptionInfo.setVoucher(IncrementalMerkleVoucherContainer)"})
-  public void testSpendDescriptionInfoGettersAndSetters_whenExpandedSpendingKey() throws UnsupportedEncodingException {
-    // Arrange
-    ExpandedSpendingKey expsk = new ExpandedSpendingKey();
-    Note note = new Note();
-    byte[] alpha = "AXAXAXAX".getBytes("UTF-8");
-    byte[] anchor = "AXAXAXAX".getBytes("UTF-8");
-
-    // Act
-    SpendDescriptionInfo actualSpendDescriptionInfo = new SpendDescriptionInfo(expsk, note, alpha, anchor,
-        new IncrementalMerkleVoucherContainer(new IncrementalMerkleTreeContainer(new IncrementalMerkleTreeCapsule())));
-    byte[] ak = "AXAXAXAX".getBytes("UTF-8");
-    actualSpendDescriptionInfo.setAk(ak);
-    byte[] alpha2 = "AXAXAXAX".getBytes("UTF-8");
-    actualSpendDescriptionInfo.setAlpha(alpha2);
-    byte[] anchor2 = "AXAXAXAX".getBytes("UTF-8");
-    actualSpendDescriptionInfo.setAnchor(anchor2);
-    ExpandedSpendingKey expsk2 = new ExpandedSpendingKey();
-    actualSpendDescriptionInfo.setExpsk(expsk2);
-    Note note2 = new Note();
-    actualSpendDescriptionInfo.setNote(note2);
-    byte[] nsk = "AXAXAXAX".getBytes("UTF-8");
-    actualSpendDescriptionInfo.setNsk(nsk);
-    byte[] ovk = "AXAXAXAX".getBytes("UTF-8");
-    actualSpendDescriptionInfo.setOvk(ovk);
-    IncrementalMerkleVoucherContainer voucher = new IncrementalMerkleVoucherContainer(
-        new IncrementalMerkleTreeContainer(new IncrementalMerkleTreeCapsule()));
-    actualSpendDescriptionInfo.setVoucher(voucher);
-    byte[] actualAk = actualSpendDescriptionInfo.getAk();
-    byte[] actualAlpha = actualSpendDescriptionInfo.getAlpha();
-    byte[] actualAnchor = actualSpendDescriptionInfo.getAnchor();
-    ExpandedSpendingKey actualExpsk = actualSpendDescriptionInfo.getExpsk();
-    Note actualNote = actualSpendDescriptionInfo.getNote();
-    byte[] actualNsk = actualSpendDescriptionInfo.getNsk();
-    byte[] actualOvk = actualSpendDescriptionInfo.getOvk();
-
-    // Assert
-    assertSame(voucher, actualSpendDescriptionInfo.getVoucher());
-    assertSame(expsk2, actualExpsk);
-    assertSame(note2, actualNote);
-    assertSame(ak, actualAk);
-    assertSame(alpha2, actualAlpha);
-    assertSame(anchor2, actualAnchor);
-    assertSame(nsk, actualNsk);
-    assertSame(ovk, actualOvk);
-    assertArrayEquals("AXAXAXAX".getBytes("UTF-8"), actualAk);
-    assertArrayEquals("AXAXAXAX".getBytes("UTF-8"), actualAlpha);
-    assertArrayEquals("AXAXAXAX".getBytes("UTF-8"), actualAnchor);
-    assertArrayEquals("AXAXAXAX".getBytes("UTF-8"), actualNsk);
-    assertArrayEquals("AXAXAXAX".getBytes("UTF-8"), actualOvk);
   }
 }

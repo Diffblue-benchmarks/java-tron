@@ -1,22 +1,27 @@
 package org.tron.plugins.utils;
 
+import static org.junit.Assert.assertArrayEquals;
 import static org.junit.Assert.assertEquals;
 import static org.junit.Assert.assertFalse;
 import static org.junit.Assert.assertNull;
 import static org.junit.Assert.assertTrue;
 import com.diffblue.cover.annotations.MaintainedByDiffblue;
 import com.diffblue.cover.annotations.MethodsUnderTest;
+import com.google.protobuf.ByteString;
+import com.google.protobuf.ByteString.ByteIterator;
 import org.iq80.leveldb.CompressionType;
 import org.iq80.leveldb.Options;
 import org.junit.Test;
 import org.junit.experimental.categories.Category;
 import org.tron.plugins.utils.DBUtils.Operator;
+import org.tron.protos.Protocol;
+import org.tron.protos.Protocol.Transaction;
 
 public class DBUtilsDiffblueTest {
   /**
    * Test {@link DBUtils#newDefaultLevelDbOptions()}.
-   * <p>
-   * Method under test: {@link DBUtils#newDefaultLevelDbOptions()}
+   *
+   * <p>Method under test: {@link DBUtils#newDefaultLevelDbOptions()}
    */
   @Test
   @Category(MaintainedByDiffblue.class)
@@ -43,9 +48,43 @@ public class DBUtilsDiffblueTest {
   }
 
   /**
+   * Test {@link DBUtils#getTransactionId(Transaction)}.
+   *
+   * <ul>
+   *   <li>When DefaultInstance.
+   *   <li>Then return not ByteString Empty.
+   * </ul>
+   *
+   * <p>Method under test: {@link DBUtils#getTransactionId(Transaction)}
+   */
+  @Test
+  @Category(MaintainedByDiffblue.class)
+  @MethodsUnderTest({"Sha256Hash DBUtils.getTransactionId(Transaction)"})
+  public void testGetTransactionId_whenDefaultInstance_thenReturnNotByteStringEmpty() {
+    // Arrange and Act
+    Sha256Hash actualTransactionId = DBUtils.getTransactionId(Transaction.getDefaultInstance());
+
+    // Assert
+    ByteString byteString = actualTransactionId.getByteString();
+    assertFalse(byteString.isEmpty());
+    ByteIterator iteratorResult = byteString.iterator();
+    assertTrue(iteratorResult.hasNext());
+    assertEquals((byte) -29, iteratorResult.next().byteValue());
+    assertEquals((byte) -80, iteratorResult.next().byteValue());
+    assertEquals((byte) -60, iteratorResult.next().byteValue());
+    assertEquals("��B��\u001c\u0014���șo�$'�A�d��L���\u001bxR�U", byteString.toStringUtf8());
+    assertArrayEquals(
+        new byte[] {
+          -29, -80, -60, 'B', -104, -4, 28, 20, -102, -5, -12, -56, -103, 'o', -71, '$', '\'', -82,
+          'A', -28, 'd', -101, -109, 'L', -92, -107, -103, 27, 'x', 'R', -72, 'U'
+        },
+        actualTransactionId.getBytes());
+  }
+
+  /**
    * Test Operator {@link Operator#getValue()}.
-   * <p>
-   * Method under test: {@link Operator#getValue()}
+   *
+   * <p>Method under test: {@link Operator#getValue()}
    */
   @Test
   @Category(MaintainedByDiffblue.class)
@@ -57,12 +96,13 @@ public class DBUtilsDiffblueTest {
 
   /**
    * Test Operator {@link Operator#valueOf(byte)} with {@code b}.
+   *
    * <ul>
-   *   <li>When {@code A}.</li>
-   *   <li>Then return {@code null}.</li>
+   *   <li>When {@code A}.
+   *   <li>Then return {@code null}.
    * </ul>
-   * <p>
-   * Method under test: {@link Operator#valueOf(byte)}
+   *
+   * <p>Method under test: {@link Operator#valueOf(byte)}
    */
   @Test
   @Category(MaintainedByDiffblue.class)
@@ -74,12 +114,13 @@ public class DBUtilsDiffblueTest {
 
   /**
    * Test Operator {@link Operator#valueOf(byte)} with {@code b}.
+   *
    * <ul>
-   *   <li>When one.</li>
-   *   <li>Then return {@code MODIFY}.</li>
+   *   <li>When one.
+   *   <li>Then return {@code MODIFY}.
    * </ul>
-   * <p>
-   * Method under test: {@link Operator#valueOf(byte)}
+   *
+   * <p>Method under test: {@link Operator#valueOf(byte)}
    */
   @Test
   @Category(MaintainedByDiffblue.class)
@@ -91,12 +132,13 @@ public class DBUtilsDiffblueTest {
 
   /**
    * Test Operator {@link Operator#valueOf(byte)} with {@code b}.
+   *
    * <ul>
-   *   <li>When three.</li>
-   *   <li>Then return {@code PUT}.</li>
+   *   <li>When three.
+   *   <li>Then return {@code PUT}.
    * </ul>
-   * <p>
-   * Method under test: {@link Operator#valueOf(byte)}
+   *
+   * <p>Method under test: {@link Operator#valueOf(byte)}
    */
   @Test
   @Category(MaintainedByDiffblue.class)
@@ -108,12 +150,13 @@ public class DBUtilsDiffblueTest {
 
   /**
    * Test Operator {@link Operator#valueOf(byte)} with {@code b}.
+   *
    * <ul>
-   *   <li>When two.</li>
-   *   <li>Then return {@code DELETE}.</li>
+   *   <li>When two.
+   *   <li>Then return {@code DELETE}.
    * </ul>
-   * <p>
-   * Method under test: {@link Operator#valueOf(byte)}
+   *
+   * <p>Method under test: {@link Operator#valueOf(byte)}
    */
   @Test
   @Category(MaintainedByDiffblue.class)
@@ -125,12 +168,13 @@ public class DBUtilsDiffblueTest {
 
   /**
    * Test Operator {@link Operator#valueOf(byte)} with {@code b}.
+   *
    * <ul>
-   *   <li>When zero.</li>
-   *   <li>Then return {@code CREATE}.</li>
+   *   <li>When zero.
+   *   <li>Then return {@code CREATE}.
    * </ul>
-   * <p>
-   * Method under test: {@link Operator#valueOf(byte)}
+   *
+   * <p>Method under test: {@link Operator#valueOf(byte)}
    */
   @Test
   @Category(MaintainedByDiffblue.class)

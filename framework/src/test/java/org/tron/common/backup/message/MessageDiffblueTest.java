@@ -23,12 +23,13 @@ import org.tron.protos.Discover.Endpoint;
 public class MessageDiffblueTest {
   /**
    * Test {@link Message#getNode(Endpoint)}.
+   *
    * <ul>
-   *   <li>When DefaultInstance.</li>
-   *   <li>Then return HexId is empty string.</li>
+   *   <li>When DefaultInstance.
+   *   <li>Then return HexId is empty string.
    * </ul>
-   * <p>
-   * Method under test: {@link Message#getNode(Discover.Endpoint)}
+   *
+   * <p>Method under test: {@link Message#getNode(Discover.Endpoint)}
    */
   @Test
   @Category(MaintainedByDiffblue.class)
@@ -47,51 +48,40 @@ public class MessageDiffblueTest {
     assertNull(actualNode.getInetSocketAddressV6());
     assertNull(actualNode.getPreferInetSocketAddress());
     assertEquals(0, actualNode.getPort());
-    assertArrayEquals(new byte[]{}, actualNode.getId());
+    assertArrayEquals(new byte[] {}, actualNode.getId());
   }
 
   /**
    * Test {@link Message#parse(byte[])}.
+   *
    * <ul>
-   *   <li>When array of {@code byte} with minus one and {@code X}.</li>
-   *   <li>Then throw {@link P2pException}.</li>
+   *   <li>When array of {@code byte} with {@code A} and one.
+   *   <li>Then throw {@link P2pException}.
    * </ul>
-   * <p>
-   * Method under test: {@link Message#parse(byte[])}
+   *
+   * <p>Method under test: {@link Message#parse(byte[])}
    */
   @Test
   @Category(MaintainedByDiffblue.class)
   @MethodsUnderTest({"Message Message.parse(byte[])"})
-  public void testParse_whenArrayOfByteWithMinusOneAndX_thenThrowP2pException() throws Exception {
+  public void testParse_whenArrayOfByteWithAAndOne_thenThrowP2pException() throws Exception {
     // Arrange, Act and Assert
-    assertThrows(P2pException.class, () -> Message.parse(new byte[]{-1, 'X', 'A', 'X', 'A', 'X', 'A', 'X'}));
+    assertThrows(
+        P2pException.class,
+        () ->
+            Message.parse(
+                new byte[] {'A', 1, 'A', 1, 'A', 1, 'A', 1, 'A', 1, 'A', 1, 'A', 1, 'A', 1}));
   }
 
   /**
    * Test {@link Message#parse(byte[])}.
+   *
    * <ul>
-   *   <li>When array of {@code byte} with one and {@code X}.</li>
-   *   <li>Then throw {@link P2pException}.</li>
+   *   <li>When {@code AXAXAXAX} Bytes is {@code UTF-8}.
+   *   <li>Then throw {@link P2pException}.
    * </ul>
-   * <p>
-   * Method under test: {@link Message#parse(byte[])}
-   */
-  @Test
-  @Category(MaintainedByDiffblue.class)
-  @MethodsUnderTest({"Message Message.parse(byte[])"})
-  public void testParse_whenArrayOfByteWithOneAndX_thenThrowP2pException() throws Exception {
-    // Arrange, Act and Assert
-    assertThrows(P2pException.class, () -> Message.parse(new byte[]{1, 'X', 'A', 'X', 'A', 'X', 'A', 'X'}));
-  }
-
-  /**
-   * Test {@link Message#parse(byte[])}.
-   * <ul>
-   *   <li>When {@code AXAXAXAX} Bytes is {@code UTF-8}.</li>
-   *   <li>Then throw {@link P2pException}.</li>
-   * </ul>
-   * <p>
-   * Method under test: {@link Message#parse(byte[])}
+   *
+   * <p>Method under test: {@link Message#parse(byte[])}
    */
   @Test
   @Category(MaintainedByDiffblue.class)
@@ -102,81 +92,105 @@ public class MessageDiffblueTest {
   }
 
   /**
+   * Test {@link Message#parse(byte[])}.
+   *
+   * <ul>
+   *   <li>When {@code X}.
+   *   <li>Then throw {@link P2pException}.
+   * </ul>
+   *
+   * <p>Method under test: {@link Message#parse(byte[])}
+   */
+  @Test
+  @Category(MaintainedByDiffblue.class)
+  @MethodsUnderTest({"Message Message.parse(byte[])"})
+  public void testParse_whenX_thenThrowP2pException() throws Exception {
+    // Arrange, Act and Assert
+    assertThrows(
+        P2pException.class,
+        () -> Message.parse(new byte[] {-1, 'X', 'A', 'X', 'A', 'X', 'A', 'X'}));
+  }
+
+  /**
    * Test {@link Message#getType()}.
-   * <p>
-   * Method under test: {@link Message#getType()}
+   *
+   * <p>Method under test: {@link Message#getType()}
    */
   @Test
   @Category(MaintainedByDiffblue.class)
   @MethodsUnderTest({"UdpMessageTypeEnum Message.getType()"})
   public void testGetType() {
     // Arrange, Act and Assert
-    assertEquals(UdpMessageTypeEnum.BACKUP_KEEP_ALIVE, (new KeepAliveMessage(true, 1)).getType());
+    assertEquals(UdpMessageTypeEnum.BACKUP_KEEP_ALIVE, new KeepAliveMessage(true, 1).getType());
   }
 
   /**
    * Test {@link Message#getData()}.
-   * <p>
-   * Method under test: {@link Message#getData()}
+   *
+   * <p>Method under test: {@link Message#getData()}
    */
   @Test
   @Category(MaintainedByDiffblue.class)
   @MethodsUnderTest({"byte[] Message.getData()"})
   public void testGetData() {
     // Arrange, Act and Assert
-    assertArrayEquals(new byte[]{'\b', 1, 16, 1}, (new KeepAliveMessage(true, 1)).getData());
+    assertArrayEquals(new byte[] {'\b', 1, 16, 1}, new KeepAliveMessage(true, 1).getData());
   }
 
   /**
    * Test {@link Message#getSendData()}.
+   *
    * <ul>
-   *   <li>Then return array of {@code byte} with five.</li>
+   *   <li>Then return array of {@code byte} with five.
    * </ul>
-   * <p>
-   * Method under test: {@link Message#getSendData()}
+   *
+   * <p>Method under test: {@link Message#getSendData()}
    */
   @Test
   @Category(MaintainedByDiffblue.class)
   @MethodsUnderTest({"byte[] Message.getSendData()"})
   public void testGetSendData_thenReturnArrayOfByteWithFive() {
     // Arrange, Act and Assert
-    assertArrayEquals(new byte[]{5}, (new KeepAliveMessage(false, 0)).getSendData());
+    assertArrayEquals(new byte[] {5}, new KeepAliveMessage(false, 0).getSendData());
   }
 
   /**
    * Test {@link Message#getSendData()}.
+   *
    * <ul>
-   *   <li>Then return array of {@code byte} with five and backspace.</li>
+   *   <li>Then return array of {@code byte} with five and backspace.
    * </ul>
-   * <p>
-   * Method under test: {@link Message#getSendData()}
+   *
+   * <p>Method under test: {@link Message#getSendData()}
    */
   @Test
   @Category(MaintainedByDiffblue.class)
   @MethodsUnderTest({"byte[] Message.getSendData()"})
   public void testGetSendData_thenReturnArrayOfByteWithFiveAndBackspace() {
     // Arrange, Act and Assert
-    assertArrayEquals(new byte[]{5, '\b', 1, 16, 1}, (new KeepAliveMessage(true, 1)).getSendData());
+    assertArrayEquals(new byte[] {5, '\b', 1, 16, 1}, new KeepAliveMessage(true, 1).getSendData());
   }
 
   /**
    * Test {@link Message#getMessageId()}.
-   * <p>
-   * Method under test: {@link Message#getMessageId()}
+   *
+   * <p>Method under test: {@link Message#getMessageId()}
    */
   @Test
   @Category(MaintainedByDiffblue.class)
   @MethodsUnderTest({"Sha256Hash Message.getMessageId()"})
   public void testGetMessageId() {
     // Arrange and Act
-    Sha256Hash actualMessageId = (new KeepAliveMessage(true, 1)).getMessageId();
+    Sha256Hash actualMessageId = new KeepAliveMessage(true, 1).getMessageId();
 
     // Assert
     BigInteger toBigIntegerResult = actualMessageId.toBigInteger();
-    assertEquals("65085834912529076615808765632958408533825304582800044733745558973486862168400",
+    assertEquals(
+        "65085834912529076615808765632958408533825304582800044733745558973486862168400",
         toBigIntegerResult.toString());
     ByteString byteString = actualMessageId.getByteString();
-    assertEquals("��F��B\u0014�\u001fa�|EV�\u001f�\u0002h3A\u0000���wyk�P", byteString.toStringUtf8());
+    assertEquals(
+        "��F��B\u0014�\u001fa�|EV�\u001f�\u0002h3A\u0000���wyk�P", byteString.toStringUtf8());
     ByteIterator iteratorResult = byteString.iterator();
     assertEquals((byte) -113, iteratorResult.next().byteValue());
     assertEquals((byte) -27, iteratorResult.next().byteValue());
@@ -185,33 +199,44 @@ public class MessageDiffblueTest {
     assertFalse(byteString.isEmpty());
     assertTrue(iteratorResult.hasNext());
     assertEquals('F', iteratorResult.next().byteValue());
-    assertArrayEquals(new byte[]{-113, -27, 'F', -17, -51, 'B', 20, -14, -117, 31, 'a', -25, -81, '|', 'E', 'V', -57,
-        31, -77, 2, 'h', '3', 'A', 0, -83, -1, -24, 'w', 'y', 'k', -15, 'P'}, actualMessageId.getBytes());
-    assertArrayEquals(new byte[]{0, -113, -27, 'F', -17, -51, 'B', 20, -14, -117, 31, 'a', -25, -81, '|', 'E', 'V', -57,
-        31, -77, 2, 'h', '3', 'A', 0, -83, -1, -24, 'w', 'y', 'k', -15, 'P'}, toBigIntegerResult.toByteArray());
+    assertArrayEquals(
+        new byte[] {
+          -113, -27, 'F', -17, -51, 'B', 20, -14, -117, 31, 'a', -25, -81, '|', 'E', 'V', -57, 31,
+          -77, 2, 'h', '3', 'A', 0, -83, -1, -24, 'w', 'y', 'k', -15, 'P'
+        },
+        actualMessageId.getBytes());
+    assertArrayEquals(
+        new byte[] {
+          0, -113, -27, 'F', -17, -51, 'B', 20, -14, -117, 31, 'a', -25, -81, '|', 'E', 'V', -57,
+          31, -77, 2, 'h', '3', 'A', 0, -83, -1, -24, 'w', 'y', 'k', -15, 'P'
+        },
+        toBigIntegerResult.toByteArray());
   }
 
   /**
    * Test {@link Message#toString()}.
-   * <p>
-   * Method under test: {@link Message#toString()}
+   *
+   * <p>Method under test: {@link Message#toString()}
    */
   @Test
   @Category(MaintainedByDiffblue.class)
   @MethodsUnderTest({"java.lang.String Message.toString()"})
   public void testToString() {
     // Arrange, Act and Assert
-    assertEquals("[Message Type: BACKUP_KEEP_ALIVE, len: 4]", (new KeepAliveMessage(true, 1)).toString());
+    assertEquals(
+        "[Message Type: BACKUP_KEEP_ALIVE, len: 4]", new KeepAliveMessage(true, 1).toString());
   }
 
   /**
    * Test {@link Message#equals(Object)}, and {@link Message#hashCode()}.
+   *
    * <ul>
-   *   <li>When other is same.</li>
-   *   <li>Then return equal.</li>
+   *   <li>When other is same.
+   *   <li>Then return equal.
    * </ul>
-   * <p>
-   * Methods under test:
+   *
+   * <p>Methods under test:
+   *
    * <ul>
    *   <li>{@link Message#equals(Object)}
    *   <li>{@link Message#hashCode()}
@@ -232,12 +257,13 @@ public class MessageDiffblueTest {
 
   /**
    * Test {@link Message#equals(Object)}.
+   *
    * <ul>
-   *   <li>When other is different.</li>
-   *   <li>Then return not equal.</li>
+   *   <li>When other is different.
+   *   <li>Then return not equal.
    * </ul>
-   * <p>
-   * Method under test: {@link Message#equals(Object)}
+   *
+   * <p>Method under test: {@link Message#equals(Object)}
    */
   @Test
   @Category(MaintainedByDiffblue.class)
@@ -252,12 +278,13 @@ public class MessageDiffblueTest {
 
   /**
    * Test {@link Message#equals(Object)}.
+   *
    * <ul>
-   *   <li>When other is {@code null}.</li>
-   *   <li>Then return not equal.</li>
+   *   <li>When other is {@code null}.
+   *   <li>Then return not equal.
    * </ul>
-   * <p>
-   * Method under test: {@link Message#equals(Object)}
+   *
+   * <p>Method under test: {@link Message#equals(Object)}
    */
   @Test
   @Category(MaintainedByDiffblue.class)
@@ -269,12 +296,13 @@ public class MessageDiffblueTest {
 
   /**
    * Test {@link Message#equals(Object)}.
+   *
    * <ul>
-   *   <li>When other is wrong type.</li>
-   *   <li>Then return not equal.</li>
+   *   <li>When other is wrong type.
+   *   <li>Then return not equal.
    * </ul>
-   * <p>
-   * Method under test: {@link Message#equals(Object)}
+   *
+   * <p>Method under test: {@link Message#equals(Object)}
    */
   @Test
   @Category(MaintainedByDiffblue.class)

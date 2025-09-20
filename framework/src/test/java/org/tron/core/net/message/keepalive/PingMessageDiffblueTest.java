@@ -14,8 +14,9 @@ import org.tron.core.net.message.MessageTypes;
 public class PingMessageDiffblueTest {
   /**
    * Test getters and setters.
-   * <p>
-   * Methods under test:
+   *
+   * <p>Methods under test:
+   *
    * <ul>
    *   <li>{@link PingMessage#PingMessage(byte, byte[])}
    *   <li>{@link PingMessage#toString()}
@@ -25,8 +26,12 @@ public class PingMessageDiffblueTest {
    */
   @Test
   @Category(MaintainedByDiffblue.class)
-  @MethodsUnderTest({"void PingMessage.<init>(byte, byte[])", "Class PingMessage.getAnswerMessage()",
-      "byte[] PingMessage.getData()", "String PingMessage.toString()"})
+  @MethodsUnderTest({
+    "void PingMessage.<init>(byte, byte[])",
+    "Class PingMessage.getAnswerMessage()",
+    "byte[] PingMessage.getData()",
+    "String PingMessage.toString()"
+  })
   public void testGettersAndSetters() throws UnsupportedEncodingException {
     // Arrange and Act
     PingMessage actualPingMessage = new PingMessage((byte) 'A', "AXAXAXAX".getBytes("UTF-8"));
@@ -38,13 +43,13 @@ public class PingMessageDiffblueTest {
     assertEquals("type: null\n", actualToStringResult);
     Class<PongMessage> expectedAnswerMessage = PongMessage.class;
     assertEquals(expectedAnswerMessage, actualAnswerMessage);
-    assertArrayEquals(new byte[]{-64}, actualData);
+    assertArrayEquals(new byte[] {-64}, actualData);
   }
 
   /**
    * Test {@link PingMessage#PingMessage()}.
-   * <p>
-   * Method under test: {@link PingMessage#PingMessage()}
+   *
+   * <p>Method under test: {@link PingMessage#PingMessage()}
    */
   @Test
   @Category(MaintainedByDiffblue.class)
@@ -58,14 +63,14 @@ public class PingMessageDiffblueTest {
     assertEquals(MessageTypes.P2P_PING, actualPingMessage.getType());
     Class<PongMessage> expectedAnswerMessage = PongMessage.class;
     assertEquals(expectedAnswerMessage, actualPingMessage.getAnswerMessage());
-    assertArrayEquals(new byte[]{-64}, actualPingMessage.getData());
-    assertArrayEquals(new byte[]{'"', -64}, actualPingMessage.getSendBytes());
+    assertArrayEquals(new byte[] {-64}, actualPingMessage.getData());
+    assertArrayEquals(new byte[] {'"', -64}, actualPingMessage.getSendBytes());
   }
 
   /**
    * Test {@link PingMessage#PingMessage(byte[])}.
-   * <p>
-   * Method under test: {@link PingMessage#PingMessage(byte[])}
+   *
+   * <p>Method under test: {@link PingMessage#PingMessage(byte[])}
    */
   @Test
   @Category(MaintainedByDiffblue.class)
@@ -79,20 +84,20 @@ public class PingMessageDiffblueTest {
     assertEquals(MessageTypes.P2P_PING, actualPingMessage.getType());
     Class<PongMessage> expectedAnswerMessage = PongMessage.class;
     assertEquals(expectedAnswerMessage, actualPingMessage.getAnswerMessage());
-    assertArrayEquals(new byte[]{-64}, actualPingMessage.getData());
-    assertArrayEquals(new byte[]{'"', -64}, actualPingMessage.getSendBytes());
+    assertArrayEquals(new byte[] {-64}, actualPingMessage.getData());
+    assertArrayEquals(new byte[] {'"', -64}, actualPingMessage.getSendBytes());
   }
 
   /**
    * Test {@link PingMessage#getType()}.
-   * <p>
-   * Method under test: {@link PingMessage#getType()}
+   *
+   * <p>Method under test: {@link PingMessage#getType()}
    */
   @Test
   @Category(MaintainedByDiffblue.class)
   @MethodsUnderTest({"MessageTypes PingMessage.getType()"})
   public void testGetType() {
     // Arrange, Act and Assert
-    assertEquals(MessageTypes.P2P_PING, (new PingMessage()).getType());
+    assertEquals(MessageTypes.P2P_PING, new PingMessage().getType());
   }
 }

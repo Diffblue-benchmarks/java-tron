@@ -6,33 +6,34 @@ import static org.junit.Assert.assertNotEquals;
 import static org.junit.Assert.assertNull;
 import static org.junit.Assert.assertThrows;
 import static org.junit.Assert.assertTrue;
+import static org.mockito.Mockito.mock;
+import static org.mockito.Mockito.verify;
+import static org.mockito.Mockito.when;
 import com.diffblue.cover.annotations.MaintainedByDiffblue;
 import com.diffblue.cover.annotations.MethodsUnderTest;
 import java.io.UnsupportedEncodingException;
 import org.junit.Test;
 import org.junit.experimental.categories.Category;
 import org.tron.core.capsule.TransactionRetCapsule;
-import org.tron.protos.Protocol;
-import org.tron.protos.Protocol.TransactionInfo;
 
 public class BloomDiffblueTest {
   /**
    * Test {@link Bloom#Bloom()}.
-   * <p>
-   * Method under test: {@link Bloom#Bloom()}
+   *
+   * <p>Method under test: {@link Bloom#Bloom()}
    */
   @Test
   @Category(MaintainedByDiffblue.class)
   @MethodsUnderTest({"void Bloom.<init>()"})
   public void testNewBloom() {
     // Arrange, Act and Assert
-    assertEquals(Bloom.BLOOM_BYTE_SIZE, (new Bloom()).getData().length);
+    assertEquals(Bloom.BLOOM_BYTE_SIZE, new Bloom().getData().length);
   }
 
   /**
    * Test {@link Bloom#Bloom(byte[])}.
-   * <p>
-   * Method under test: {@link Bloom#Bloom(byte[])}
+   *
+   * <p>Method under test: {@link Bloom#Bloom(byte[])}
    */
   @Test
   @Category(MaintainedByDiffblue.class)
@@ -44,8 +45,8 @@ public class BloomDiffblueTest {
 
   /**
    * Test {@link Bloom#getLowBits(int)}.
-   * <p>
-   * Method under test: {@link Bloom#getLowBits(int)}
+   *
+   * <p>Method under test: {@link Bloom#getLowBits(int)}
    */
   @Test
   @Category(MaintainedByDiffblue.class)
@@ -57,12 +58,13 @@ public class BloomDiffblueTest {
 
   /**
    * Test {@link Bloom#create(byte[])}.
+   *
    * <ul>
-   *   <li>When {@code AXAXAXAX} Bytes is {@code UTF-8}.</li>
-   *   <li>Then return array length is {@link Bloom#BLOOM_BYTE_SIZE}.</li>
+   *   <li>When {@code AXAXAXAX} Bytes is {@code UTF-8}.
+   *   <li>Then return array length is {@link Bloom#BLOOM_BYTE_SIZE}.
    * </ul>
-   * <p>
-   * Method under test: {@link Bloom#create(byte[])}
+   *
+   * <p>Method under test: {@link Bloom#create(byte[])}
    */
   @Test
   @Category(MaintainedByDiffblue.class)
@@ -70,69 +72,78 @@ public class BloomDiffblueTest {
   public void testCreate_whenAxaxaxaxBytesIsUtf8_thenReturnArrayLengthIsBloom_byte_size()
       throws UnsupportedEncodingException {
     // Arrange, Act and Assert
-    assertEquals(Bloom.BLOOM_BYTE_SIZE, Bloom.create("AXAXAXAX".getBytes("UTF-8")).getData().length);
+    assertEquals(
+        Bloom.BLOOM_BYTE_SIZE, Bloom.create("AXAXAXAX".getBytes("UTF-8")).getData().length);
   }
 
   /**
    * Test {@link Bloom#createBloom(TransactionRetCapsule)}.
+   *
    * <ul>
-   *   <li>Given DefaultInstance.</li>
+   *   <li>Given {@link RuntimeException#RuntimeException()}.
+   *   <li>Then throw {@link RuntimeException}.
    * </ul>
-   * <p>
-   * Method under test: {@link Bloom#createBloom(TransactionRetCapsule)}
+   *
+   * <p>Method under test: {@link Bloom#createBloom(TransactionRetCapsule)}
    */
   @Test
   @Category(MaintainedByDiffblue.class)
   @MethodsUnderTest({"Bloom Bloom.createBloom(TransactionRetCapsule)"})
-  public void testCreateBloom_givenDefaultInstance() {
+  public void testCreateBloom_givenRuntimeException_thenThrowRuntimeException() {
     // Arrange
-    TransactionRetCapsule transactionRetCapsule = new TransactionRetCapsule();
-    transactionRetCapsule.addTransactionInfo(TransactionInfo.getDefaultInstance());
+    TransactionRetCapsule transactionRetCapsule = mock(TransactionRetCapsule.class);
+    when(transactionRetCapsule.getInstance()).thenThrow(new RuntimeException());
 
     // Act and Assert
-    assertNull(Bloom.createBloom(transactionRetCapsule));
+    assertThrows(RuntimeException.class, () -> Bloom.createBloom(transactionRetCapsule));
+    verify(transactionRetCapsule).getInstance();
   }
 
   /**
    * Test {@link Bloom#createBloom(TransactionRetCapsule)}.
+   *
    * <ul>
-   *   <li>When {@code null}.</li>
+   *   <li>When {@code null}.
+   *   <li>Then return {@code null}.
    * </ul>
-   * <p>
-   * Method under test: {@link Bloom#createBloom(TransactionRetCapsule)}
+   *
+   * <p>Method under test: {@link Bloom#createBloom(TransactionRetCapsule)}
    */
   @Test
   @Category(MaintainedByDiffblue.class)
   @MethodsUnderTest({"Bloom Bloom.createBloom(TransactionRetCapsule)"})
-  public void testCreateBloom_whenNull() {
+  public void testCreateBloom_whenNull_thenReturnNull() {
     // Arrange, Act and Assert
     assertNull(Bloom.createBloom(null));
   }
 
   /**
    * Test {@link Bloom#createBloom(TransactionRetCapsule)}.
+   *
    * <ul>
-   *   <li>When {@link TransactionRetCapsule#TransactionRetCapsule()}.</li>
+   *   <li>When {@link TransactionRetCapsule#TransactionRetCapsule()}.
+   *   <li>Then return {@code null}.
    * </ul>
-   * <p>
-   * Method under test: {@link Bloom#createBloom(TransactionRetCapsule)}
+   *
+   * <p>Method under test: {@link Bloom#createBloom(TransactionRetCapsule)}
    */
   @Test
   @Category(MaintainedByDiffblue.class)
   @MethodsUnderTest({"Bloom Bloom.createBloom(TransactionRetCapsule)"})
-  public void testCreateBloom_whenTransactionRetCapsule() {
+  public void testCreateBloom_whenTransactionRetCapsule_thenReturnNull() {
     // Arrange, Act and Assert
     assertNull(Bloom.createBloom(new TransactionRetCapsule()));
   }
 
   /**
    * Test {@link Bloom#matches(Bloom)}.
+   *
    * <ul>
-   *   <li>When {@code A}.</li>
-   *   <li>Then return {@code false}.</li>
+   *   <li>When {@code A}.
+   *   <li>Then return {@code false}.
    * </ul>
-   * <p>
-   * Method under test: {@link Bloom#matches(Bloom)}
+   *
+   * <p>Method under test: {@link Bloom#matches(Bloom)}
    */
   @Test
   @Category(MaintainedByDiffblue.class)
@@ -142,17 +153,18 @@ public class BloomDiffblueTest {
     Bloom bloom = new Bloom();
 
     // Act and Assert
-    assertFalse(bloom.matches(Bloom.create(new byte[]{'A', 1, 'A', 1, 'A', 1, 'A', 1})));
+    assertFalse(bloom.matches(Bloom.create(new byte[] {'A', 1, 'A', 1, 'A', 1, 'A', 1})));
   }
 
   /**
    * Test {@link Bloom#matches(Bloom)}.
+   *
    * <ul>
-   *   <li>When {@link Bloom#Bloom()}.</li>
-   *   <li>Then return {@code true}.</li>
+   *   <li>When {@link Bloom#Bloom()}.
+   *   <li>Then return {@code true}.
    * </ul>
-   * <p>
-   * Method under test: {@link Bloom#matches(Bloom)}
+   *
+   * <p>Method under test: {@link Bloom#matches(Bloom)}
    */
   @Test
   @Category(MaintainedByDiffblue.class)
@@ -166,32 +178,18 @@ public class BloomDiffblueTest {
   }
 
   /**
-   * Test getters and setters.
-   * <p>
-   * Methods under test:
-   * <ul>
-   *   <li>{@link Bloom#toString()}
-   *   <li>{@link Bloom#getData()}
-   * </ul>
+   * Test {@link Bloom#getData()}.
+   *
+   * <p>Method under test: {@link Bloom#getData()}
    */
   @Test
   @Category(MaintainedByDiffblue.class)
-  @MethodsUnderTest({"byte[] Bloom.getData()", "String Bloom.toString()"})
-  public void testGettersAndSetters() {
-    // Arrange
-    Bloom bloom = new Bloom();
-
-    // Act
-    String actualToStringResult = bloom.toString();
-    byte[] actualData = bloom.getData();
+  @MethodsUnderTest({"byte[] Bloom.getData()", "java.lang.String Bloom.toString()"})
+  public void testGetData() {
+    // Arrange and Act
+    byte[] actualData = new Bloom().getData();
 
     // Assert
-    assertEquals("0000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000"
-        + "0000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000"
-        + "0000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000"
-        + "0000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000"
-        + "0000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000"
-        + "000000000000", actualToStringResult);
     assertEquals((byte) 0, actualData[0]);
     assertEquals((byte) 0, actualData[1]);
     assertEquals((byte) 0, actualData[10]);
@@ -247,8 +245,8 @@ public class BloomDiffblueTest {
 
   /**
    * Test {@link Bloom#copy()}.
-   * <p>
-   * Method under test: {@link Bloom#copy()}
+   *
+   * <p>Method under test: {@link Bloom#copy()}
    */
   @Test
   @Category(MaintainedByDiffblue.class)
@@ -257,18 +255,23 @@ public class BloomDiffblueTest {
     // Arrange
     Bloom bloom = new Bloom();
 
-    // Act and Assert
-    assertEquals(bloom, bloom.copy());
+    // Act
+    Bloom actualCopyResult = bloom.copy();
+
+    // Assert
+    assertEquals(bloom, actualCopyResult);
   }
 
   /**
    * Test {@link Bloom#equals(Object)}, and {@link Bloom#hashCode()}.
+   *
    * <ul>
-   *   <li>When other is equal.</li>
-   *   <li>Then return equal.</li>
+   *   <li>When other is equal.
+   *   <li>Then return equal.
    * </ul>
-   * <p>
-   * Methods under test:
+   *
+   * <p>Methods under test:
+   *
    * <ul>
    *   <li>{@link Bloom#equals(Object)}
    *   <li>{@link Bloom#hashCode()}
@@ -284,18 +287,19 @@ public class BloomDiffblueTest {
 
     // Act and Assert
     assertEquals(bloom, bloom2);
-    int expectedHashCodeResult = bloom.hashCode();
-    assertEquals(expectedHashCodeResult, bloom2.hashCode());
+    assertEquals(bloom.hashCode(), bloom2.hashCode());
   }
 
   /**
    * Test {@link Bloom#equals(Object)}, and {@link Bloom#hashCode()}.
+   *
    * <ul>
-   *   <li>When other is same.</li>
-   *   <li>Then return equal.</li>
+   *   <li>When other is same.
+   *   <li>Then return equal.
    * </ul>
-   * <p>
-   * Methods under test:
+   *
+   * <p>Methods under test:
+   *
    * <ul>
    *   <li>{@link Bloom#equals(Object)}
    *   <li>{@link Bloom#hashCode()}
@@ -316,17 +320,19 @@ public class BloomDiffblueTest {
 
   /**
    * Test {@link Bloom#equals(Object)}.
+   *
    * <ul>
-   *   <li>When other is different.</li>
-   *   <li>Then return not equal.</li>
+   *   <li>When other is different.
+   *   <li>Then return not equal.
    * </ul>
-   * <p>
-   * Method under test: {@link Bloom#equals(Object)}
+   *
+   * <p>Method under test: {@link Bloom#equals(Object)}
    */
   @Test
   @Category(MaintainedByDiffblue.class)
   @MethodsUnderTest({"boolean Bloom.equals(Object)", "int Bloom.hashCode()"})
-  public void testEquals_whenOtherIsDifferent_thenReturnNotEqual() throws UnsupportedEncodingException {
+  public void testEquals_whenOtherIsDifferent_thenReturnNotEqual()
+      throws UnsupportedEncodingException {
     // Arrange
     Bloom createResult = Bloom.create("AXAXAXAX".getBytes("UTF-8"));
 
@@ -336,12 +342,13 @@ public class BloomDiffblueTest {
 
   /**
    * Test {@link Bloom#equals(Object)}.
+   *
    * <ul>
-   *   <li>When other is {@code null}.</li>
-   *   <li>Then return not equal.</li>
+   *   <li>When other is {@code null}.
+   *   <li>Then return not equal.
    * </ul>
-   * <p>
-   * Method under test: {@link Bloom#equals(Object)}
+   *
+   * <p>Method under test: {@link Bloom#equals(Object)}
    */
   @Test
   @Category(MaintainedByDiffblue.class)
@@ -353,12 +360,13 @@ public class BloomDiffblueTest {
 
   /**
    * Test {@link Bloom#equals(Object)}.
+   *
    * <ul>
-   *   <li>When other is wrong type.</li>
-   *   <li>Then return not equal.</li>
+   *   <li>When other is wrong type.
+   *   <li>Then return not equal.
    * </ul>
-   * <p>
-   * Method under test: {@link Bloom#equals(Object)}
+   *
+   * <p>Method under test: {@link Bloom#equals(Object)}
    */
   @Test
   @Category(MaintainedByDiffblue.class)

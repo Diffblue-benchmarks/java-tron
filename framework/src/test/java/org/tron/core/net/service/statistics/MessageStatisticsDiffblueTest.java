@@ -16,11 +16,13 @@ import org.tron.protos.Protocol.ReasonCode;
 public class MessageStatisticsDiffblueTest {
   /**
    * Test {@link MessageStatistics#addTcpInMessage(Message)}.
+   *
    * <ul>
-   *   <li>Then {@link MessageStatistics} (default constructor) {@link MessageStatistics#p2pInDisconnect} TotalCount is one.</li>
+   *   <li>Then {@link MessageStatistics} (default constructor) {@link
+   *       MessageStatistics#p2pInDisconnect} TotalCount is one.
    * </ul>
-   * <p>
-   * Method under test: {@link MessageStatistics#addTcpInMessage(Message)}
+   *
+   * <p>Method under test: {@link MessageStatistics#addTcpInMessage(Message)}
    */
   @Test
   @Category(MaintainedByDiffblue.class)
@@ -43,11 +45,13 @@ public class MessageStatisticsDiffblueTest {
 
   /**
    * Test {@link MessageStatistics#addTcpInMessage(Message)}.
+   *
    * <ul>
-   *   <li>Then {@link MessageStatistics} (default constructor) {@link MessageStatistics#p2pInPong} TotalCount is one.</li>
+   *   <li>Then {@link MessageStatistics} (default constructor) {@link MessageStatistics#p2pInPong}
+   *       TotalCount is one.
    * </ul>
-   * <p>
-   * Method under test: {@link MessageStatistics#addTcpInMessage(Message)}
+   *
+   * <p>Method under test: {@link MessageStatistics#addTcpInMessage(Message)}
    */
   @Test
   @Category(MaintainedByDiffblue.class)
@@ -69,11 +73,13 @@ public class MessageStatisticsDiffblueTest {
 
   /**
    * Test {@link MessageStatistics#addTcpInMessage(Message)}.
+   *
    * <ul>
-   *   <li>Then {@link MessageStatistics} (default constructor) {@link MessageStatistics#tronInTrx} TotalCount is one.</li>
+   *   <li>Then {@link MessageStatistics} (default constructor) {@link MessageStatistics#tronInTrx}
+   *       TotalCount is one.
    * </ul>
-   * <p>
-   * Method under test: {@link MessageStatistics#addTcpInMessage(Message)}
+   *
+   * <p>Method under test: {@link MessageStatistics#addTcpInMessage(Message)}
    */
   @Test
   @Category(MaintainedByDiffblue.class)
@@ -81,9 +87,10 @@ public class MessageStatisticsDiffblueTest {
   public void testAddTcpInMessage_thenMessageStatisticsTronInTrxTotalCountIsOne() {
     // Arrange
     MessageStatistics messageStatistics = new MessageStatistics();
+    PingMessage msg = new PingMessage((byte) 1, new byte[] {'A', 1, 'A', 1, 'A', 1, 'A', 1});
 
     // Act
-    messageStatistics.addTcpInMessage(new PingMessage((byte) 1, new byte[]{'A', 1, 'A', 1, 'A', 1, 'A', 1}));
+    messageStatistics.addTcpInMessage(msg);
 
     // Assert
     assertEquals(0L, messageStatistics.p2pInDisconnect.getTotalCount());
@@ -95,11 +102,12 @@ public class MessageStatisticsDiffblueTest {
 
   /**
    * Test {@link MessageStatistics#addTcpInMessage(Message)}.
+   *
    * <ul>
-   *   <li>When {@link PbftMessage#PbftMessage()}.</li>
+   *   <li>When {@link PbftMessage#PbftMessage()}.
    * </ul>
-   * <p>
-   * Method under test: {@link MessageStatistics#addTcpInMessage(Message)}
+   *
+   * <p>Method under test: {@link MessageStatistics#addTcpInMessage(Message)}
    */
   @Test
   @Category(MaintainedByDiffblue.class)
@@ -121,11 +129,12 @@ public class MessageStatisticsDiffblueTest {
 
   /**
    * Test {@link MessageStatistics#addTcpInMessage(Message)}.
+   *
    * <ul>
-   *   <li>When {@link PingMessage#PingMessage()}.</li>
+   *   <li>When {@link PingMessage#PingMessage()}.
    * </ul>
-   * <p>
-   * Method under test: {@link MessageStatistics#addTcpInMessage(Message)}
+   *
+   * <p>Method under test: {@link MessageStatistics#addTcpInMessage(Message)}
    */
   @Test
   @Category(MaintainedByDiffblue.class)
@@ -147,11 +156,13 @@ public class MessageStatisticsDiffblueTest {
 
   /**
    * Test {@link MessageStatistics#addTcpOutMessage(Message)}.
+   *
    * <ul>
-   *   <li>Then {@link MessageStatistics} (default constructor) {@link MessageStatistics#p2pOutDisconnect} TotalCount is one.</li>
+   *   <li>Then {@link MessageStatistics} (default constructor) {@link
+   *       MessageStatistics#p2pOutDisconnect} TotalCount is one.
    * </ul>
-   * <p>
-   * Method under test: {@link MessageStatistics#addTcpOutMessage(Message)}
+   *
+   * <p>Method under test: {@link MessageStatistics#addTcpOutMessage(Message)}
    */
   @Test
   @Category(MaintainedByDiffblue.class)
@@ -174,11 +185,13 @@ public class MessageStatisticsDiffblueTest {
 
   /**
    * Test {@link MessageStatistics#addTcpOutMessage(Message)}.
+   *
    * <ul>
-   *   <li>Then {@link MessageStatistics} (default constructor) {@link MessageStatistics#p2pOutPing} TotalCount is one.</li>
+   *   <li>Then {@link MessageStatistics} (default constructor) {@link MessageStatistics#p2pOutPing}
+   *       TotalCount is one.
    * </ul>
-   * <p>
-   * Method under test: {@link MessageStatistics#addTcpOutMessage(Message)}
+   *
+   * <p>Method under test: {@link MessageStatistics#addTcpOutMessage(Message)}
    */
   @Test
   @Category(MaintainedByDiffblue.class)
@@ -200,11 +213,13 @@ public class MessageStatisticsDiffblueTest {
 
   /**
    * Test {@link MessageStatistics#addTcpOutMessage(Message)}.
+   *
    * <ul>
-   *   <li>Then {@link MessageStatistics} (default constructor) {@link MessageStatistics#p2pOutPong} TotalCount is one.</li>
+   *   <li>Then {@link MessageStatistics} (default constructor) {@link MessageStatistics#p2pOutPong}
+   *       TotalCount is one.
    * </ul>
-   * <p>
-   * Method under test: {@link MessageStatistics#addTcpOutMessage(Message)}
+   *
+   * <p>Method under test: {@link MessageStatistics#addTcpOutMessage(Message)}
    */
   @Test
   @Category(MaintainedByDiffblue.class)
@@ -226,11 +241,13 @@ public class MessageStatisticsDiffblueTest {
 
   /**
    * Test {@link MessageStatistics#addTcpOutMessage(Message)}.
+   *
    * <ul>
-   *   <li>Then {@link MessageStatistics} (default constructor) {@link MessageStatistics#tronOutTrx} TotalCount is one.</li>
+   *   <li>Then {@link MessageStatistics} (default constructor) {@link MessageStatistics#tronOutTrx}
+   *       TotalCount is one.
    * </ul>
-   * <p>
-   * Method under test: {@link MessageStatistics#addTcpOutMessage(Message)}
+   *
+   * <p>Method under test: {@link MessageStatistics#addTcpOutMessage(Message)}
    */
   @Test
   @Category(MaintainedByDiffblue.class)
@@ -238,9 +255,11 @@ public class MessageStatisticsDiffblueTest {
   public void testAddTcpOutMessage_thenMessageStatisticsTronOutTrxTotalCountIsOne() {
     // Arrange
     MessageStatistics messageStatistics = new MessageStatistics();
+    PingMessage msg =
+        new PingMessage((byte) 1, new byte[] {'A', -24, 'A', -24, 'A', -24, 'A', -24});
 
     // Act
-    messageStatistics.addTcpOutMessage(new PingMessage((byte) 1, new byte[]{'A', -24, 'A', -24, 'A', -24, 'A', -24}));
+    messageStatistics.addTcpOutMessage(msg);
 
     // Assert
     assertEquals(0L, messageStatistics.p2pOutDisconnect.getTotalCount());
@@ -252,11 +271,12 @@ public class MessageStatisticsDiffblueTest {
 
   /**
    * Test {@link MessageStatistics#addTcpOutMessage(Message)}.
+   *
    * <ul>
-   *   <li>When {@link PbftMessage#PbftMessage()}.</li>
+   *   <li>When {@link PbftMessage#PbftMessage()}.
    * </ul>
-   * <p>
-   * Method under test: {@link MessageStatistics#addTcpOutMessage(Message)}
+   *
+   * <p>Method under test: {@link MessageStatistics#addTcpOutMessage(Message)}
    */
   @Test
   @Category(MaintainedByDiffblue.class)
@@ -278,8 +298,8 @@ public class MessageStatisticsDiffblueTest {
 
   /**
    * Test new {@link MessageStatistics} (default constructor).
-   * <p>
-   * Method under test: default or parameterless constructor of {@link MessageStatistics}
+   *
+   * <p>Method under test: default or parameterless constructor of {@link MessageStatistics}
    */
   @Test
   @Category(MaintainedByDiffblue.class)

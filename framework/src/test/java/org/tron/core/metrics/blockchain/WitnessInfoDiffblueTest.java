@@ -10,12 +10,14 @@ import org.junit.experimental.categories.Category;
 public class WitnessInfoDiffblueTest {
   /**
    * Test {@link WitnessInfo#equals(Object)}, and {@link WitnessInfo#hashCode()}.
+   *
    * <ul>
-   *   <li>When other is equal.</li>
-   *   <li>Then return equal.</li>
+   *   <li>When other is equal.
+   *   <li>Then return equal.
    * </ul>
-   * <p>
-   * Methods under test:
+   *
+   * <p>Methods under test:
+   *
    * <ul>
    *   <li>{@link WitnessInfo#equals(Object)}
    *   <li>{@link WitnessInfo#hashCode()}
@@ -31,18 +33,19 @@ public class WitnessInfoDiffblueTest {
 
     // Act and Assert
     assertEquals(witnessInfo, witnessInfo2);
-    int expectedHashCodeResult = witnessInfo.hashCode();
-    assertEquals(expectedHashCodeResult, witnessInfo2.hashCode());
+    assertEquals(witnessInfo.hashCode(), witnessInfo2.hashCode());
   }
 
   /**
    * Test {@link WitnessInfo#equals(Object)}, and {@link WitnessInfo#hashCode()}.
+   *
    * <ul>
-   *   <li>When other is equal.</li>
-   *   <li>Then return equal.</li>
+   *   <li>When other is equal.
+   *   <li>Then return equal.
    * </ul>
-   * <p>
-   * Methods under test:
+   *
+   * <p>Methods under test:
+   *
    * <ul>
    *   <li>{@link WitnessInfo#equals(Object)}
    *   <li>{@link WitnessInfo#hashCode()}
@@ -58,18 +61,19 @@ public class WitnessInfoDiffblueTest {
 
     // Act and Assert
     assertEquals(witnessInfo, witnessInfo2);
-    int expectedHashCodeResult = witnessInfo.hashCode();
-    assertEquals(expectedHashCodeResult, witnessInfo2.hashCode());
+    assertEquals(witnessInfo.hashCode(), witnessInfo2.hashCode());
   }
 
   /**
    * Test {@link WitnessInfo#equals(Object)}, and {@link WitnessInfo#hashCode()}.
+   *
    * <ul>
-   *   <li>When other is same.</li>
-   *   <li>Then return equal.</li>
+   *   <li>When other is same.
+   *   <li>Then return equal.
    * </ul>
-   * <p>
-   * Methods under test:
+   *
+   * <p>Methods under test:
+   *
    * <ul>
    *   <li>{@link WitnessInfo#equals(Object)}
    *   <li>{@link WitnessInfo#hashCode()}
@@ -90,12 +94,13 @@ public class WitnessInfoDiffblueTest {
 
   /**
    * Test {@link WitnessInfo#equals(Object)}.
+   *
    * <ul>
-   *   <li>When other is different.</li>
-   *   <li>Then return not equal.</li>
+   *   <li>When other is different.
+   *   <li>Then return not equal.
    * </ul>
-   * <p>
-   * Method under test: {@link WitnessInfo#equals(Object)}
+   *
+   * <p>Method under test: {@link WitnessInfo#equals(Object)}
    */
   @Test
   @Category(MaintainedByDiffblue.class)
@@ -110,12 +115,13 @@ public class WitnessInfoDiffblueTest {
 
   /**
    * Test {@link WitnessInfo#equals(Object)}.
+   *
    * <ul>
-   *   <li>When other is different.</li>
-   *   <li>Then return not equal.</li>
+   *   <li>When other is different.
+   *   <li>Then return not equal.
    * </ul>
-   * <p>
-   * Method under test: {@link WitnessInfo#equals(Object)}
+   *
+   * <p>Method under test: {@link WitnessInfo#equals(Object)}
    */
   @Test
   @Category(MaintainedByDiffblue.class)
@@ -130,12 +136,13 @@ public class WitnessInfoDiffblueTest {
 
   /**
    * Test {@link WitnessInfo#equals(Object)}.
+   *
    * <ul>
-   *   <li>When other is different.</li>
-   *   <li>Then return not equal.</li>
+   *   <li>When other is different.
+   *   <li>Then return not equal.
    * </ul>
-   * <p>
-   * Method under test: {@link WitnessInfo#equals(Object)}
+   *
+   * <p>Method under test: {@link WitnessInfo#equals(Object)}
    */
   @Test
   @Category(MaintainedByDiffblue.class)
@@ -150,12 +157,13 @@ public class WitnessInfoDiffblueTest {
 
   /**
    * Test {@link WitnessInfo#equals(Object)}.
+   *
    * <ul>
-   *   <li>When other is {@code null}.</li>
-   *   <li>Then return not equal.</li>
+   *   <li>When other is {@code null}.
+   *   <li>Then return not equal.
    * </ul>
-   * <p>
-   * Method under test: {@link WitnessInfo#equals(Object)}
+   *
+   * <p>Method under test: {@link WitnessInfo#equals(Object)}
    */
   @Test
   @Category(MaintainedByDiffblue.class)
@@ -167,12 +175,13 @@ public class WitnessInfoDiffblueTest {
 
   /**
    * Test {@link WitnessInfo#equals(Object)}.
+   *
    * <ul>
-   *   <li>When other is wrong type.</li>
-   *   <li>Then return not equal.</li>
+   *   <li>When other is wrong type.
+   *   <li>Then return not equal.
    * </ul>
-   * <p>
-   * Method under test: {@link WitnessInfo#equals(Object)}
+   *
+   * <p>Method under test: {@link WitnessInfo#equals(Object)}
    */
   @Test
   @Category(MaintainedByDiffblue.class)
@@ -184,8 +193,9 @@ public class WitnessInfoDiffblueTest {
 
   /**
    * Test getters and setters.
-   * <p>
-   * Methods under test:
+   *
+   * <p>Methods under test:
+   *
    * <ul>
    *   <li>{@link WitnessInfo#WitnessInfo(String, int)}
    *   <li>{@link WitnessInfo#setAddress(String)}
@@ -197,9 +207,14 @@ public class WitnessInfoDiffblueTest {
    */
   @Test
   @Category(MaintainedByDiffblue.class)
-  @MethodsUnderTest({"void WitnessInfo.<init>(String, int)", "String WitnessInfo.getAddress()",
-      "int WitnessInfo.getVersion()", "void WitnessInfo.setAddress(String)", "void WitnessInfo.setVersion(int)",
-      "String WitnessInfo.toString()"})
+  @MethodsUnderTest({
+    "void WitnessInfo.<init>(String, int)",
+    "String WitnessInfo.getAddress()",
+    "int WitnessInfo.getVersion()",
+    "void WitnessInfo.setAddress(String)",
+    "void WitnessInfo.setVersion(int)",
+    "String WitnessInfo.toString()"
+  })
   public void testGettersAndSetters() {
     // Arrange and Act
     WitnessInfo actualWitnessInfo = new WitnessInfo("42 Main St", 1);

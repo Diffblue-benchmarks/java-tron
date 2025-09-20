@@ -13,8 +13,9 @@ import org.junit.experimental.categories.Category;
 public class LogPojoDiffblueTest {
   /**
    * Test getters and setters.
-   * <p>
-   * Methods under test:
+   *
+   * <p>Methods under test:
+   *
    * <ul>
    *   <li>default or parameterless constructor of {@link LogPojo}
    *   <li>{@link LogPojo#setAddress(String)}
@@ -37,12 +38,25 @@ public class LogPojoDiffblueTest {
    */
   @Test
   @Category(MaintainedByDiffblue.class)
-  @MethodsUnderTest({"void LogPojo.<init>()", "String LogPojo.getAddress()", "String LogPojo.getBlockHash()",
-      "long LogPojo.getBlockNumber()", "String LogPojo.getData()", "long LogPojo.getLogIndex()",
-      "List LogPojo.getTopicList()", "String LogPojo.getTransactionHash()", "long LogPojo.getTransactionIndex()",
-      "void LogPojo.setAddress(String)", "void LogPojo.setBlockHash(String)", "void LogPojo.setBlockNumber(long)",
-      "void LogPojo.setData(String)", "void LogPojo.setLogIndex(long)", "void LogPojo.setTopicList(List)",
-      "void LogPojo.setTransactionHash(String)", "void LogPojo.setTransactionIndex(long)"})
+  @MethodsUnderTest({
+    "void LogPojo.<init>()",
+    "String LogPojo.getAddress()",
+    "String LogPojo.getBlockHash()",
+    "long LogPojo.getBlockNumber()",
+    "String LogPojo.getData()",
+    "long LogPojo.getLogIndex()",
+    "List LogPojo.getTopicList()",
+    "String LogPojo.getTransactionHash()",
+    "long LogPojo.getTransactionIndex()",
+    "void LogPojo.setAddress(String)",
+    "void LogPojo.setBlockHash(String)",
+    "void LogPojo.setBlockNumber(long)",
+    "void LogPojo.setData(String)",
+    "void LogPojo.setLogIndex(long)",
+    "void LogPojo.setTopicList(List)",
+    "void LogPojo.setTransactionHash(String)",
+    "void LogPojo.setTransactionIndex(long)"
+  })
   public void testGettersAndSetters() {
     // Arrange and Act
     LogPojo actualLogPojo = new LogPojo();

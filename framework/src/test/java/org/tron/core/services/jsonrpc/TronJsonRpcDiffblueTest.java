@@ -23,8 +23,9 @@ import org.tron.core.services.jsonrpc.TronJsonRpc.TransactionJson;
 public class TronJsonRpcDiffblueTest {
   /**
    * Test CompilationInfo getters and setters.
-   * <p>
-   * Methods under test:
+   *
+   * <p>Methods under test:
+   *
    * <ul>
    *   <li>default or parameterless constructor of {@link CompilationInfo}
    *   <li>{@link CompilationInfo#toString()}
@@ -38,10 +39,16 @@ public class TronJsonRpcDiffblueTest {
    */
   @Test
   @Category(MaintainedByDiffblue.class)
-  @MethodsUnderTest({"void CompilationInfo.<init>()", "String CompilationInfo.getCompilerVersion()",
-      "String CompilationInfo.getDeveloperDoc()", "String CompilationInfo.getLanguage()",
-      "String CompilationInfo.getLanguageVersion()", "String CompilationInfo.getSource()",
-      "String CompilationInfo.getUserDoc()", "String CompilationInfo.toString()"})
+  @MethodsUnderTest({
+    "void CompilationInfo.<init>()",
+    "String CompilationInfo.getCompilerVersion()",
+    "String CompilationInfo.getDeveloperDoc()",
+    "String CompilationInfo.getLanguage()",
+    "String CompilationInfo.getLanguageVersion()",
+    "String CompilationInfo.getSource()",
+    "String CompilationInfo.getUserDoc()",
+    "String CompilationInfo.toString()"
+  })
   public void testCompilationInfoGettersAndSetters() {
     // Arrange and Act
     CompilationInfo actualCompilationInfo = new CompilationInfo();
@@ -53,8 +60,10 @@ public class TronJsonRpcDiffblueTest {
     String actualSource = actualCompilationInfo.getSource();
 
     // Assert
-    assertEquals("TronJsonRpc.CompilationInfo(source=null, language=null, languageVersion=null, compilerVersion=null,"
-        + " userDoc=null, developerDoc=null)", actualToStringResult);
+    assertEquals(
+        "TronJsonRpc.CompilationInfo(source=null, language=null, languageVersion=null, compilerVersion=null,"
+            + " userDoc=null, developerDoc=null)",
+        actualToStringResult);
     assertNull(actualCompilerVersion);
     assertNull(actualDeveloperDoc);
     assertNull(actualLanguage);
@@ -65,8 +74,9 @@ public class TronJsonRpcDiffblueTest {
 
   /**
    * Test CompilationResult getters and setters.
-   * <p>
-   * Methods under test:
+   *
+   * <p>Methods under test:
+   *
    * <ul>
    *   <li>default or parameterless constructor of {@link CompilationResult}
    *   <li>{@link CompilationResult#toString()}
@@ -76,8 +86,12 @@ public class TronJsonRpcDiffblueTest {
    */
   @Test
   @Category(MaintainedByDiffblue.class)
-  @MethodsUnderTest({"void CompilationResult.<init>()", "String CompilationResult.getCode()",
-      "CompilationInfo CompilationResult.getInfo()", "String CompilationResult.toString()"})
+  @MethodsUnderTest({
+    "void CompilationResult.<init>()",
+    "String CompilationResult.getCode()",
+    "CompilationInfo CompilationResult.getInfo()",
+    "String CompilationResult.toString()"
+  })
   public void testCompilationResultGettersAndSetters() {
     // Arrange and Act
     CompilationResult actualCompilationResult = new CompilationResult();
@@ -92,8 +106,9 @@ public class TronJsonRpcDiffblueTest {
 
   /**
    * Test FilterRequest getters and setters.
-   * <p>
-   * Methods under test:
+   *
+   * <p>Methods under test:
+   *
    * <ul>
    *   <li>{@link FilterRequest#FilterRequest()}
    *   <li>{@link FilterRequest#setAddress(Object)}
@@ -110,12 +125,20 @@ public class TronJsonRpcDiffblueTest {
    */
   @Test
   @Category(MaintainedByDiffblue.class)
-  @MethodsUnderTest({"void FilterRequest.<init>()",
-      "void FilterRequest.<init>(String, String, Object, Object[], String)", "Object FilterRequest.getAddress()",
-      "String FilterRequest.getBlockHash()", "String FilterRequest.getFromBlock()", "String FilterRequest.getToBlock()",
-      "Object[] FilterRequest.getTopics()", "void FilterRequest.setAddress(Object)",
-      "void FilterRequest.setBlockHash(String)", "void FilterRequest.setFromBlock(String)",
-      "void FilterRequest.setToBlock(String)", "void FilterRequest.setTopics(Object[])"})
+  @MethodsUnderTest({
+    "void FilterRequest.<init>()",
+    "void FilterRequest.<init>(String, String, Object, Object[], String)",
+    "Object FilterRequest.getAddress()",
+    "String FilterRequest.getBlockHash()",
+    "String FilterRequest.getFromBlock()",
+    "String FilterRequest.getToBlock()",
+    "Object[] FilterRequest.getTopics()",
+    "void FilterRequest.setAddress(Object)",
+    "void FilterRequest.setBlockHash(String)",
+    "void FilterRequest.setFromBlock(String)",
+    "void FilterRequest.setToBlock(String)",
+    "void FilterRequest.setTopics(Object[])"
+  })
   public void testFilterRequestGettersAndSetters() {
     // Arrange and Act
     FilterRequest actualFilterRequest = new FilterRequest();
@@ -123,7 +146,7 @@ public class TronJsonRpcDiffblueTest {
     actualFilterRequest.setBlockHash("Block Hash");
     actualFilterRequest.setFromBlock("jane.doe@example.org");
     actualFilterRequest.setToBlock("To Block");
-    Object[] topics = new Object[]{"Topics"};
+    Object[] topics = new Object[] {"Topics"};
     actualFilterRequest.setTopics(topics);
     Object actualAddress = actualFilterRequest.getAddress();
     String actualBlockHash = actualFilterRequest.getBlockHash();
@@ -143,11 +166,13 @@ public class TronJsonRpcDiffblueTest {
 
   /**
    * Test FilterRequest getters and setters.
+   *
    * <ul>
-   *   <li>When {@code jane.doe@example.org}.</li>
+   *   <li>When {@code jane.doe@example.org}.
    * </ul>
-   * <p>
-   * Methods under test:
+   *
+   * <p>Methods under test:
+   *
    * <ul>
    *   <li>{@link FilterRequest#FilterRequest(String, String, Object, Object[], String)}
    *   <li>{@link FilterRequest#setAddress(Object)}
@@ -164,22 +189,33 @@ public class TronJsonRpcDiffblueTest {
    */
   @Test
   @Category(MaintainedByDiffblue.class)
-  @MethodsUnderTest({"void FilterRequest.<init>()",
-      "void FilterRequest.<init>(String, String, Object, Object[], String)", "Object FilterRequest.getAddress()",
-      "String FilterRequest.getBlockHash()", "String FilterRequest.getFromBlock()", "String FilterRequest.getToBlock()",
-      "Object[] FilterRequest.getTopics()", "void FilterRequest.setAddress(Object)",
-      "void FilterRequest.setBlockHash(String)", "void FilterRequest.setFromBlock(String)",
-      "void FilterRequest.setToBlock(String)", "void FilterRequest.setTopics(Object[])"})
+  @MethodsUnderTest({
+    "void FilterRequest.<init>()",
+    "void FilterRequest.<init>(String, String, Object, Object[], String)",
+    "Object FilterRequest.getAddress()",
+    "String FilterRequest.getBlockHash()",
+    "String FilterRequest.getFromBlock()",
+    "String FilterRequest.getToBlock()",
+    "Object[] FilterRequest.getTopics()",
+    "void FilterRequest.setAddress(Object)",
+    "void FilterRequest.setBlockHash(String)",
+    "void FilterRequest.setFromBlock(String)",
+    "void FilterRequest.setToBlock(String)",
+    "void FilterRequest.setTopics(Object[])"
+  })
   public void testFilterRequestGettersAndSetters_whenJaneDoeExampleOrg() {
-    // Arrange and Act
-    FilterRequest actualFilterRequest = new FilterRequest("jane.doe@example.org", "To Block", "Address",
-        new Object[]{"Topics"}, "Block Hash");
+    // Arrange
+    Object[] topics = new Object[] {"Topics"};
+
+    // Act
+    FilterRequest actualFilterRequest =
+        new FilterRequest("jane.doe@example.org", "To Block", "Address", topics, "Block Hash");
     actualFilterRequest.setAddress("Address");
     actualFilterRequest.setBlockHash("Block Hash");
     actualFilterRequest.setFromBlock("jane.doe@example.org");
     actualFilterRequest.setToBlock("To Block");
-    Object[] topics = new Object[]{"Topics"};
-    actualFilterRequest.setTopics(topics);
+    Object[] topics2 = new Object[] {"Topics"};
+    actualFilterRequest.setTopics(topics2);
     Object actualAddress = actualFilterRequest.getAddress();
     String actualBlockHash = actualFilterRequest.getBlockHash();
     String actualFromBlock = actualFilterRequest.getFromBlock();
@@ -193,13 +229,14 @@ public class TronJsonRpcDiffblueTest {
     assertEquals("Topics", actualTopics[0]);
     assertEquals("jane.doe@example.org", actualFromBlock);
     assertEquals(1, actualTopics.length);
-    assertSame(topics, actualTopics);
+    assertSame(topics2, actualTopics);
   }
 
   /**
    * Test LogFilterElement getters and setters.
-   * <p>
-   * Methods under test:
+   *
+   * <p>Methods under test:
+   *
    * <ul>
    *   <li>{@link LogFilterElement#getAddress()}
    *   <li>{@link LogFilterElement#getBlockHash()}
@@ -214,15 +251,22 @@ public class TronJsonRpcDiffblueTest {
    */
   @Test
   @Category(MaintainedByDiffblue.class)
-  @MethodsUnderTest({"String LogFilterElement.getAddress()", "String LogFilterElement.getBlockHash()",
-      "String LogFilterElement.getBlockNumber()", "String LogFilterElement.getData()",
-      "String LogFilterElement.getLogIndex()", "String[] LogFilterElement.getTopics()",
-      "String LogFilterElement.getTransactionHash()", "String LogFilterElement.getTransactionIndex()",
-      "boolean LogFilterElement.isRemoved()"})
+  @MethodsUnderTest({
+    "String LogFilterElement.getAddress()",
+    "String LogFilterElement.getBlockHash()",
+    "String LogFilterElement.getBlockNumber()",
+    "String LogFilterElement.getData()",
+    "String LogFilterElement.getLogIndex()",
+    "String[] LogFilterElement.getTopics()",
+    "String LogFilterElement.getTransactionHash()",
+    "String LogFilterElement.getTransactionIndex()",
+    "boolean LogFilterElement.isRemoved()"
+  })
   public void testLogFilterElementGettersAndSetters() {
     // Arrange
-    LogFilterElement logFilterElement = new LogFilterElement("Block Hash", 1L, "42", 1, "42 Main St", new ArrayList<>(),
-        "Log Data", 1, true);
+    LogFilterElement logFilterElement =
+        new LogFilterElement(
+            "Block Hash", 1L, "42", 1, "42 Main St", new ArrayList<>(), "Log Data", 1, true);
 
     // Act
     String actualAddress = logFilterElement.getAddress();
@@ -247,39 +291,49 @@ public class TronJsonRpcDiffblueTest {
   }
 
   /**
-   * Test LogFilterElement {@link LogFilterElement#LogFilterElement(String, Long, String, Integer, String, List, String, int, boolean)}.
-   * <p>
-   * Method under test: {@link LogFilterElement#LogFilterElement(String, Long, String, Integer, String, List, String, int, boolean)}
+   * Test LogFilterElement {@link LogFilterElement#LogFilterElement(String, Long, String, Integer,
+   * String, List, String, int, boolean)}.
+   *
+   * <p>Method under test: {@link LogFilterElement#LogFilterElement(String, Long, String, Integer,
+   * String, List, String, int, boolean)}
    */
   @Test
   @Category(MaintainedByDiffblue.class)
-  @MethodsUnderTest({"void LogFilterElement.<init>(String, Long, String, Integer, String, List, String, int, boolean)"})
+  @MethodsUnderTest({
+    "void LogFilterElement.<init>(String, Long, String, Integer, String, List, String, int, boolean)"
+  })
   public void testLogFilterElementNewLogFilterElement() {
     // Arrange
     ArrayList<DataWord> topicList = new ArrayList<>();
     topicList.add(DataWord.ZERO());
 
     // Act
-    LogFilterElement actualLogFilterElement = new LogFilterElement("Block Hash", 1L, "42", 1, "42 Main St", topicList,
-        "Log Data", 1, true);
+    LogFilterElement actualLogFilterElement =
+        new LogFilterElement(
+            "Block Hash", 1L, "42", 1, "42 Main St", topicList, "Log Data", 1, true);
 
     // Assert
     assertEquals("0x1", actualLogFilterElement.getBlockNumber());
     assertEquals("0x1", actualLogFilterElement.getTransactionIndex());
     assertEquals("0xBlock Hash", actualLogFilterElement.getBlockHash());
     assertEquals("0xLog Data", actualLogFilterElement.getData());
-    assertArrayEquals(new String[]{"0x0000000000000000000000000000000000000000000000000000000000000000"},
+    assertArrayEquals(
+        new String[] {"0x0000000000000000000000000000000000000000000000000000000000000000"},
         actualLogFilterElement.getTopics());
   }
 
   /**
-   * Test LogFilterElement {@link LogFilterElement#LogFilterElement(String, Long, String, Integer, String, List, String, int, boolean)}.
-   * <p>
-   * Method under test: {@link LogFilterElement#LogFilterElement(String, Long, String, Integer, String, List, String, int, boolean)}
+   * Test LogFilterElement {@link LogFilterElement#LogFilterElement(String, Long, String, Integer,
+   * String, List, String, int, boolean)}.
+   *
+   * <p>Method under test: {@link LogFilterElement#LogFilterElement(String, Long, String, Integer,
+   * String, List, String, int, boolean)}
    */
   @Test
   @Category(MaintainedByDiffblue.class)
-  @MethodsUnderTest({"void LogFilterElement.<init>(String, Long, String, Integer, String, List, String, int, boolean)"})
+  @MethodsUnderTest({
+    "void LogFilterElement.<init>(String, Long, String, Integer, String, List, String, int, boolean)"
+  })
   public void testLogFilterElementNewLogFilterElement2() {
     // Arrange
     ArrayList<DataWord> topicList = new ArrayList<>();
@@ -287,33 +341,44 @@ public class TronJsonRpcDiffblueTest {
     topicList.add(DataWord.ZERO());
 
     // Act
-    LogFilterElement actualLogFilterElement = new LogFilterElement("Block Hash", 1L, "42", 1, "42 Main St", topicList,
-        "Log Data", 1, true);
+    LogFilterElement actualLogFilterElement =
+        new LogFilterElement(
+            "Block Hash", 1L, "42", 1, "42 Main St", topicList, "Log Data", 1, true);
 
     // Assert
     assertEquals("0x1", actualLogFilterElement.getBlockNumber());
     assertEquals("0x1", actualLogFilterElement.getTransactionIndex());
     assertEquals("0xBlock Hash", actualLogFilterElement.getBlockHash());
     assertEquals("0xLog Data", actualLogFilterElement.getData());
-    assertArrayEquals(new String[]{"0x0000000000000000000000000000000000000000000000000000000000000000",
-        "0x0000000000000000000000000000000000000000000000000000000000000000"}, actualLogFilterElement.getTopics());
+    assertArrayEquals(
+        new String[] {
+          "0x0000000000000000000000000000000000000000000000000000000000000000",
+          "0x0000000000000000000000000000000000000000000000000000000000000000"
+        },
+        actualLogFilterElement.getTopics());
   }
 
   /**
-   * Test LogFilterElement {@link LogFilterElement#LogFilterElement(String, Long, String, Integer, String, List, String, int, boolean)}.
+   * Test LogFilterElement {@link LogFilterElement#LogFilterElement(String, Long, String, Integer,
+   * String, List, String, int, boolean)}.
+   *
    * <ul>
-   *   <li>Then return array length is zero.</li>
+   *   <li>Then return array length is zero.
    * </ul>
-   * <p>
-   * Method under test: {@link LogFilterElement#LogFilterElement(String, Long, String, Integer, String, List, String, int, boolean)}
+   *
+   * <p>Method under test: {@link LogFilterElement#LogFilterElement(String, Long, String, Integer,
+   * String, List, String, int, boolean)}
    */
   @Test
   @Category(MaintainedByDiffblue.class)
-  @MethodsUnderTest({"void LogFilterElement.<init>(String, Long, String, Integer, String, List, String, int, boolean)"})
+  @MethodsUnderTest({
+    "void LogFilterElement.<init>(String, Long, String, Integer, String, List, String, int, boolean)"
+  })
   public void testLogFilterElementNewLogFilterElement_thenReturnArrayLengthIsZero() {
     // Arrange and Act
-    LogFilterElement actualLogFilterElement = new LogFilterElement("Block Hash", 1L, "42", 1, "42 Main St",
-        new ArrayList<>(), "Log Data", 1, true);
+    LogFilterElement actualLogFilterElement =
+        new LogFilterElement(
+            "Block Hash", 1L, "42", 1, "42 Main St", new ArrayList<>(), "Log Data", 1, true);
 
     // Assert
     assertEquals("0x1", actualLogFilterElement.getBlockNumber());
@@ -324,20 +389,26 @@ public class TronJsonRpcDiffblueTest {
   }
 
   /**
-   * Test LogFilterElement {@link LogFilterElement#LogFilterElement(String, Long, String, Integer, String, List, String, int, boolean)}.
+   * Test LogFilterElement {@link LogFilterElement#LogFilterElement(String, Long, String, Integer,
+   * String, List, String, int, boolean)}.
+   *
    * <ul>
-   *   <li>Then return TransactionIndex is {@code null}.</li>
+   *   <li>Then return TransactionIndex is {@code null}.
    * </ul>
-   * <p>
-   * Method under test: {@link LogFilterElement#LogFilterElement(String, Long, String, Integer, String, List, String, int, boolean)}
+   *
+   * <p>Method under test: {@link LogFilterElement#LogFilterElement(String, Long, String, Integer,
+   * String, List, String, int, boolean)}
    */
   @Test
   @Category(MaintainedByDiffblue.class)
-  @MethodsUnderTest({"void LogFilterElement.<init>(String, Long, String, Integer, String, List, String, int, boolean)"})
+  @MethodsUnderTest({
+    "void LogFilterElement.<init>(String, Long, String, Integer, String, List, String, int, boolean)"
+  })
   public void testLogFilterElementNewLogFilterElement_thenReturnTransactionIndexIsNull() {
     // Arrange and Act
-    LogFilterElement actualLogFilterElement = new LogFilterElement("Block Hash", 1L, "42", null, "42 Main St",
-        new ArrayList<>(), "Log Data", 1, true);
+    LogFilterElement actualLogFilterElement =
+        new LogFilterElement(
+            "Block Hash", 1L, "42", null, "42 Main St", new ArrayList<>(), "Log Data", 1, true);
 
     // Assert
     assertEquals("0x1", actualLogFilterElement.getBlockNumber());
@@ -348,21 +419,27 @@ public class TronJsonRpcDiffblueTest {
   }
 
   /**
-   * Test LogFilterElement {@link LogFilterElement#LogFilterElement(String, Long, String, Integer, String, List, String, int, boolean)}.
+   * Test LogFilterElement {@link LogFilterElement#LogFilterElement(String, Long, String, Integer,
+   * String, List, String, int, boolean)}.
+   *
    * <ul>
-   *   <li>When {@code null}.</li>
-   *   <li>Then return BlockHash is {@code null}.</li>
+   *   <li>When {@code null}.
+   *   <li>Then return BlockHash is {@code null}.
    * </ul>
-   * <p>
-   * Method under test: {@link LogFilterElement#LogFilterElement(String, Long, String, Integer, String, List, String, int, boolean)}
+   *
+   * <p>Method under test: {@link LogFilterElement#LogFilterElement(String, Long, String, Integer,
+   * String, List, String, int, boolean)}
    */
   @Test
   @Category(MaintainedByDiffblue.class)
-  @MethodsUnderTest({"void LogFilterElement.<init>(String, Long, String, Integer, String, List, String, int, boolean)"})
+  @MethodsUnderTest({
+    "void LogFilterElement.<init>(String, Long, String, Integer, String, List, String, int, boolean)"
+  })
   public void testLogFilterElementNewLogFilterElement_whenNull_thenReturnBlockHashIsNull() {
     // Arrange and Act
-    LogFilterElement actualLogFilterElement = new LogFilterElement(null, 1L, "42", 1, "42 Main St", new ArrayList<>(),
-        "Log Data", 1, true);
+    LogFilterElement actualLogFilterElement =
+        new LogFilterElement(
+            null, 1L, "42", 1, "42 Main St", new ArrayList<>(), "Log Data", 1, true);
 
     // Assert
     assertEquals("0x1", actualLogFilterElement.getBlockNumber());
@@ -373,21 +450,27 @@ public class TronJsonRpcDiffblueTest {
   }
 
   /**
-   * Test LogFilterElement {@link LogFilterElement#LogFilterElement(String, Long, String, Integer, String, List, String, int, boolean)}.
+   * Test LogFilterElement {@link LogFilterElement#LogFilterElement(String, Long, String, Integer,
+   * String, List, String, int, boolean)}.
+   *
    * <ul>
-   *   <li>When {@code null}.</li>
-   *   <li>Then return BlockNumber is {@code null}.</li>
+   *   <li>When {@code null}.
+   *   <li>Then return BlockNumber is {@code null}.
    * </ul>
-   * <p>
-   * Method under test: {@link LogFilterElement#LogFilterElement(String, Long, String, Integer, String, List, String, int, boolean)}
+   *
+   * <p>Method under test: {@link LogFilterElement#LogFilterElement(String, Long, String, Integer,
+   * String, List, String, int, boolean)}
    */
   @Test
   @Category(MaintainedByDiffblue.class)
-  @MethodsUnderTest({"void LogFilterElement.<init>(String, Long, String, Integer, String, List, String, int, boolean)"})
+  @MethodsUnderTest({
+    "void LogFilterElement.<init>(String, Long, String, Integer, String, List, String, int, boolean)"
+  })
   public void testLogFilterElementNewLogFilterElement_whenNull_thenReturnBlockNumberIsNull() {
     // Arrange and Act
-    LogFilterElement actualLogFilterElement = new LogFilterElement("Block Hash", null, "42", 1, "42 Main St",
-        new ArrayList<>(), "Log Data", 1, true);
+    LogFilterElement actualLogFilterElement =
+        new LogFilterElement(
+            "Block Hash", null, "42", 1, "42 Main St", new ArrayList<>(), "Log Data", 1, true);
 
     // Assert
     assertEquals("0x1", actualLogFilterElement.getTransactionIndex());
@@ -398,21 +481,27 @@ public class TronJsonRpcDiffblueTest {
   }
 
   /**
-   * Test LogFilterElement {@link LogFilterElement#LogFilterElement(String, Long, String, Integer, String, List, String, int, boolean)}.
+   * Test LogFilterElement {@link LogFilterElement#LogFilterElement(String, Long, String, Integer,
+   * String, List, String, int, boolean)}.
+   *
    * <ul>
-   *   <li>When {@code null}.</li>
-   *   <li>Then return Data is {@code 0x}.</li>
+   *   <li>When {@code null}.
+   *   <li>Then return Data is {@code 0x}.
    * </ul>
-   * <p>
-   * Method under test: {@link LogFilterElement#LogFilterElement(String, Long, String, Integer, String, List, String, int, boolean)}
+   *
+   * <p>Method under test: {@link LogFilterElement#LogFilterElement(String, Long, String, Integer,
+   * String, List, String, int, boolean)}
    */
   @Test
   @Category(MaintainedByDiffblue.class)
-  @MethodsUnderTest({"void LogFilterElement.<init>(String, Long, String, Integer, String, List, String, int, boolean)"})
+  @MethodsUnderTest({
+    "void LogFilterElement.<init>(String, Long, String, Integer, String, List, String, int, boolean)"
+  })
   public void testLogFilterElementNewLogFilterElement_whenNull_thenReturnDataIs0x() {
     // Arrange and Act
-    LogFilterElement actualLogFilterElement = new LogFilterElement("Block Hash", 1L, "42", 1, "42 Main St",
-        new ArrayList<>(), null, 1, true);
+    LogFilterElement actualLogFilterElement =
+        new LogFilterElement(
+            "Block Hash", 1L, "42", 1, "42 Main St", new ArrayList<>(), null, 1, true);
 
     // Assert
     assertEquals("0x", actualLogFilterElement.getData());
@@ -424,8 +513,9 @@ public class TronJsonRpcDiffblueTest {
 
   /**
    * Test SyncingResult getters and setters.
-   * <p>
-   * Methods under test:
+   *
+   * <p>Methods under test:
+   *
    * <ul>
    *   <li>{@link SyncingResult#SyncingResult(String, String, String)}
    *   <li>{@link SyncingResult#toString()}
@@ -436,12 +526,17 @@ public class TronJsonRpcDiffblueTest {
    */
   @Test
   @Category(MaintainedByDiffblue.class)
-  @MethodsUnderTest({"void SyncingResult.<init>(String, String, String)", "String SyncingResult.getCurrentBlock()",
-      "String SyncingResult.getHighestBlock()", "String SyncingResult.getStartingBlock()",
-      "String SyncingResult.toString()"})
+  @MethodsUnderTest({
+    "void SyncingResult.<init>(String, String, String)",
+    "String SyncingResult.getCurrentBlock()",
+    "String SyncingResult.getHighestBlock()",
+    "String SyncingResult.getStartingBlock()",
+    "String SyncingResult.toString()"
+  })
   public void testSyncingResultGettersAndSetters() {
     // Arrange and Act
-    SyncingResult actualSyncingResult = new SyncingResult("Starting Block", "Current Block", "Highest Block");
+    SyncingResult actualSyncingResult =
+        new SyncingResult("Starting Block", "Current Block", "Highest Block");
     String actualToStringResult = actualSyncingResult.toString();
     String actualCurrentBlock = actualSyncingResult.getCurrentBlock();
     String actualHighestBlock = actualSyncingResult.getHighestBlock();
@@ -458,8 +553,9 @@ public class TronJsonRpcDiffblueTest {
 
   /**
    * Test TransactionJson getters and setters.
-   * <p>
-   * Methods under test:
+   *
+   * <p>Methods under test:
+   *
    * <ul>
    *   <li>default or parameterless constructor of {@link TransactionJson}
    *   <li>{@link TransactionJson#setTransaction(JSONObject)}
@@ -468,8 +564,11 @@ public class TronJsonRpcDiffblueTest {
    */
   @Test
   @Category(MaintainedByDiffblue.class)
-  @MethodsUnderTest({"void TransactionJson.<init>()", "JSONObject TransactionJson.getTransaction()",
-      "void TransactionJson.setTransaction(JSONObject)"})
+  @MethodsUnderTest({
+    "void TransactionJson.<init>()",
+    "JSONObject TransactionJson.getTransaction()",
+    "void TransactionJson.setTransaction(JSONObject)"
+  })
   public void testTransactionJsonGettersAndSetters() {
     // Arrange and Act
     TransactionJson actualTransactionJson = new TransactionJson();

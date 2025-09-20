@@ -16,8 +16,8 @@ import org.junit.experimental.categories.Category;
 public class BN128DiffblueTest {
   /**
    * Test {@link BN128#toAffine()}.
-   * <p>
-   * Method under test: {@link BN128#toAffine()}
+   *
+   * <p>Method under test: {@link BN128#toAffine()}
    */
   @Test
   @Category(MaintainedByDiffblue.class)
@@ -53,12 +53,13 @@ public class BN128DiffblueTest {
 
   /**
    * Test {@link BN128#toAffine()}.
+   *
    * <ul>
-   *   <li>Given {@link BN128G1#BN128G1(BN128)} with p is {@link BN128Fp#ZERO}.</li>
-   *   <li>Then return {@link BN128G1}.</li>
+   *   <li>Given {@link BN128G1#BN128G1(BN128)} with p is {@link BN128Fp#ZERO}.
+   *   <li>Then return {@link BN128G1}.
    * </ul>
-   * <p>
-   * Method under test: {@link BN128#toAffine()}
+   *
+   * <p>Method under test: {@link BN128#toAffine()}
    */
   @Test
   @Category(MaintainedByDiffblue.class)
@@ -89,12 +90,13 @@ public class BN128DiffblueTest {
 
   /**
    * Test {@link BN128#toAffine()}.
+   *
    * <ul>
-   *   <li>Given {@link BN128Fp#ZERO}.</li>
-   *   <li>Then {@link BN128Fp#ZERO} {@link BN128Fp}.</li>
+   *   <li>Given {@link BN128Fp#ZERO}.
+   *   <li>Then {@link BN128Fp#ZERO} {@link BN128Fp}.
    * </ul>
-   * <p>
-   * Method under test: {@link BN128#toAffine()}
+   *
+   * <p>Method under test: {@link BN128#toAffine()}
    */
   @Test
   @Category(MaintainedByDiffblue.class)
@@ -126,12 +128,13 @@ public class BN128DiffblueTest {
 
   /**
    * Test {@link BN128#toEthNotation()}.
+   *
    * <ul>
-   *   <li>Given {@link BN128G1#BN128G1(BN128)} with p is {@link BN128Fp#ZERO}.</li>
-   *   <li>Then {@link BN128G1#BN128G1(BN128)} with p is {@link BN128Fp#ZERO} x is {@link BN128#z}.</li>
+   *   <li>Given {@link BN128G1#BN128G1(BN128)} with p is {@link BN128Fp#ZERO}.
+   *   <li>Then {@link BN128G1#BN128G1(BN128)} with p is {@link BN128Fp#ZERO} x is {@link BN128#z}.
    * </ul>
-   * <p>
-   * Method under test: {@link BN128#toEthNotation()}
+   *
+   * <p>Method under test: {@link BN128#toEthNotation()}
    */
   @Test
   @Category(MaintainedByDiffblue.class)
@@ -154,18 +157,20 @@ public class BN128DiffblueTest {
 
   /**
    * Test {@link BN128#toEthNotation()}.
+   *
    * <ul>
-   *   <li>Then zero return {@link BN128Fp}.</li>
+   *   <li>Then zero return {@link BN128Fp}.
    * </ul>
-   * <p>
-   * Method under test: {@link BN128#toEthNotation()}
+   *
+   * <p>Method under test: {@link BN128#toEthNotation()}
    */
   @Test
   @Category(MaintainedByDiffblue.class)
   @MethodsUnderTest({"BN128 BN128.toEthNotation()"})
   public void testToEthNotation_thenZeroReturnBN128Fp() {
     // Arrange
-    BN128G1 bn128g1 = new BN128G1(new BN128Fp(Fp.NON_RESIDUE, Fp.NON_RESIDUE, Fp.NON_RESIDUE));
+    BN128Fp p = new BN128Fp(Fp.NON_RESIDUE, Fp.NON_RESIDUE, Fp.NON_RESIDUE);
+    BN128G1 bn128g1 = new BN128G1(p);
 
     // Act
     BN128<Fp> actualToEthNotationResult = bn128g1.toEthNotation();
@@ -193,48 +198,54 @@ public class BN128DiffblueTest {
 
   /**
    * Test {@link BN128#isOnCurve()}.
+   *
    * <ul>
-   *   <li>Given {@link BN128G1#BN128G1(BN128)} with p is {@link BN128Fp#ZERO}.</li>
-   *   <li>Then return {@code true}.</li>
+   *   <li>Given {@link BN128G1#BN128G1(BN128)} with p is {@link BN128Fp#ZERO}.
+   *   <li>Then return {@code true}.
    * </ul>
-   * <p>
-   * Method under test: {@link BN128#isOnCurve()}
+   *
+   * <p>Method under test: {@link BN128#isOnCurve()}
    */
   @Test
   @Category(MaintainedByDiffblue.class)
   @MethodsUnderTest({"boolean BN128.isOnCurve()"})
   public void testIsOnCurve_givenBn128g1WithPIsZero_thenReturnTrue() {
     // Arrange, Act and Assert
-    assertTrue((new BN128G1(BN128Fp.ZERO)).isOnCurve());
+    assertTrue(new BN128G1(BN128Fp.ZERO).isOnCurve());
   }
 
   /**
    * Test {@link BN128#isOnCurve()}.
+   *
    * <ul>
-   *   <li>Then return {@code false}.</li>
+   *   <li>Then return {@code false}.
    * </ul>
-   * <p>
-   * Method under test: {@link BN128#isOnCurve()}
+   *
+   * <p>Method under test: {@link BN128#isOnCurve()}
    */
   @Test
   @Category(MaintainedByDiffblue.class)
   @MethodsUnderTest({"boolean BN128.isOnCurve()"})
   public void testIsOnCurve_thenReturnFalse() {
-    // Arrange, Act and Assert
-    assertFalse((new BN128G1(new BN128Fp(Fp.NON_RESIDUE, Fp.NON_RESIDUE, Fp.NON_RESIDUE))).isOnCurve());
+    // Arrange
+    BN128Fp p = new BN128Fp(Fp.NON_RESIDUE, Fp.NON_RESIDUE, Fp.NON_RESIDUE);
+
+    // Act and Assert
+    assertFalse(new BN128G1(p).isOnCurve());
   }
 
   /**
    * Test {@link BN128#add(BN128)}.
-   * <p>
-   * Method under test: {@link BN128#add(BN128)}
+   *
+   * <p>Method under test: {@link BN128#add(BN128)}
    */
   @Test
   @Category(MaintainedByDiffblue.class)
   @MethodsUnderTest({"BN128 BN128.add(BN128)"})
   public void testAdd() {
     // Arrange
-    BN128G1 bn128g1 = new BN128G1(new BN128Fp(Fp.NON_RESIDUE, Fp.ZERO, Fp.NON_RESIDUE));
+    BN128Fp p = new BN128Fp(Fp.NON_RESIDUE, Fp.ZERO, Fp.NON_RESIDUE);
+    BN128G1 bn128g1 = new BN128G1(p);
     BN128Fp o = new BN128Fp(Fp.NON_RESIDUE, Fp.NON_RESIDUE, Fp.NON_RESIDUE);
 
     // Act
@@ -258,41 +269,48 @@ public class BN128DiffblueTest {
 
   /**
    * Test {@link BN128#add(BN128)}.
+   *
    * <ul>
-   *   <li>Given {@link BN128Fp#BN128Fp(Fp, Fp, Fp)} with x is {@link Fp#ZERO} and y is {@link Fp#NON_RESIDUE} and z is {@link Fp#NON_RESIDUE}.</li>
+   *   <li>Given {@link BN128Fp#BN128Fp(Fp, Fp, Fp)} with x is {@link Fp#ZERO} and y is {@link
+   *       Fp#NON_RESIDUE} and z is {@link Fp#NON_RESIDUE}.
    * </ul>
-   * <p>
-   * Method under test: {@link BN128#add(BN128)}
+   *
+   * <p>Method under test: {@link BN128#add(BN128)}
    */
   @Test
   @Category(MaintainedByDiffblue.class)
   @MethodsUnderTest({"BN128 BN128.add(BN128)"})
   public void testAdd_givenBN128FpWithXIsZeroAndYIsNon_residueAndZIsNon_residue() {
     // Arrange
-    BN128G1 bn128g1 = new BN128G1(new BN128Fp(Fp.ZERO, Fp.NON_RESIDUE, Fp.NON_RESIDUE));
+    BN128Fp p = new BN128Fp(Fp.ZERO, Fp.NON_RESIDUE, Fp.NON_RESIDUE);
+    BN128G1 bn128g1 = new BN128G1(p);
+    BN128Fp o = new BN128Fp(Fp.NON_RESIDUE, Fp.NON_RESIDUE, Fp.NON_RESIDUE);
 
     // Act
-    BN128<Fp> actualAddResult = bn128g1.add(new BN128Fp(Fp.NON_RESIDUE, Fp.NON_RESIDUE, Fp.NON_RESIDUE));
+    BN128<Fp> actualAddResult = bn128g1.add(o);
 
     // Assert
     assertTrue(actualAddResult instanceof BN128Fp);
+    assertTrue(actualAddResult.toEthNotation() instanceof BN128Fp);
+    BN128<Fp> zeroResult = actualAddResult.zero();
+    assertTrue(zeroResult instanceof BN128Fp);
     Fp expectedXResult = actualAddResult.x;
     assertSame(expectedXResult, actualAddResult.x());
     Fp expectedYResult = actualAddResult.y;
     assertSame(expectedYResult, actualAddResult.y());
-    BN128<Fp> expectedZeroResult = ((BN128Fp) actualAddResult).ZERO;
-    assertSame(expectedZeroResult, actualAddResult.zero());
+    assertSame(((BN128Fp) actualAddResult).ZERO, zeroResult);
   }
 
   /**
    * Test {@link BN128#add(BN128)}.
+   *
    * <ul>
-   *   <li>Given {@link BN128G1#BN128G1(BN128)} with p is {@link BN128Fp#ZERO}.</li>
-   *   <li>When {@link BN128Fp#ZERO}.</li>
-   *   <li>Then {@link BN128Fp#ZERO} {@link BN128Fp}.</li>
+   *   <li>Given {@link BN128G1#BN128G1(BN128)} with p is {@link BN128Fp#ZERO}.
+   *   <li>When {@link BN128Fp#ZERO}.
+   *   <li>Then {@link BN128Fp#ZERO} {@link BN128Fp}.
    * </ul>
-   * <p>
-   * Method under test: {@link BN128#add(BN128)}
+   *
+   * <p>Method under test: {@link BN128#add(BN128)}
    */
   @Test
   @Category(MaintainedByDiffblue.class)
@@ -322,21 +340,24 @@ public class BN128DiffblueTest {
 
   /**
    * Test {@link BN128#add(BN128)}.
+   *
    * <ul>
-   *   <li>Then toEthNotation return {@link BN128Fp}.</li>
+   *   <li>Then toEthNotation return {@link BN128Fp}.
    * </ul>
-   * <p>
-   * Method under test: {@link BN128#add(BN128)}
+   *
+   * <p>Method under test: {@link BN128#add(BN128)}
    */
   @Test
   @Category(MaintainedByDiffblue.class)
   @MethodsUnderTest({"BN128 BN128.add(BN128)"})
   public void testAdd_thenToEthNotationReturnBN128Fp() {
     // Arrange
-    BN128G1 bn128g1 = new BN128G1(new BN128Fp(Fp.NON_RESIDUE, Fp.NON_RESIDUE, Fp.NON_RESIDUE));
+    BN128Fp p = new BN128Fp(Fp.NON_RESIDUE, Fp.NON_RESIDUE, Fp.NON_RESIDUE);
+    BN128G1 bn128g1 = new BN128G1(p);
+    BN128Fp o = new BN128Fp(Fp.NON_RESIDUE, Fp.NON_RESIDUE, Fp.NON_RESIDUE);
 
     // Act
-    BN128<Fp> actualAddResult = bn128g1.add(new BN128Fp(Fp.NON_RESIDUE, Fp.NON_RESIDUE, Fp.NON_RESIDUE));
+    BN128<Fp> actualAddResult = bn128g1.add(o);
 
     // Assert
     assertTrue(actualAddResult instanceof BN128Fp);
@@ -352,38 +373,43 @@ public class BN128DiffblueTest {
 
   /**
    * Test {@link BN128#add(BN128)}.
+   *
    * <ul>
-   *   <li>When {@link BN128Fp#ZERO}.</li>
-   *   <li>Then return {@link BN128G1#BN128G1(BN128)} with p is {@link BN128Fp#BN128Fp(Fp, Fp, Fp)}.</li>
+   *   <li>When {@link BN128Fp#ZERO}.
+   *   <li>Then return {@link BN128G1#BN128G1(BN128)} with p is {@link BN128Fp#BN128Fp(Fp, Fp, Fp)}.
    * </ul>
-   * <p>
-   * Method under test: {@link BN128#add(BN128)}
+   *
+   * <p>Method under test: {@link BN128#add(BN128)}
    */
   @Test
   @Category(MaintainedByDiffblue.class)
   @MethodsUnderTest({"BN128 BN128.add(BN128)"})
   public void testAdd_whenZero_thenReturnBn128g1WithPIsBN128Fp() {
     // Arrange
-    BN128G1 bn128g1 = new BN128G1(new BN128Fp(Fp.NON_RESIDUE, Fp.NON_RESIDUE, Fp.NON_RESIDUE));
+    BN128Fp p = new BN128Fp(Fp.NON_RESIDUE, Fp.NON_RESIDUE, Fp.NON_RESIDUE);
+    BN128G1 bn128g1 = new BN128G1(p);
 
-    // Act and Assert
-    assertSame(bn128g1, bn128g1.add(BN128Fp.ZERO));
+    // Act
+    BN128<Fp> actualAddResult = bn128g1.add(BN128Fp.ZERO);
+
+    // Assert
+    assertSame(bn128g1, actualAddResult);
   }
 
   /**
    * Test {@link BN128#mul(BigInteger)}.
+   *
    * <ul>
-   *   <li>Given {@link BN128G1#BN128G1(BN128)} with p is {@link BN128Fp#ZERO}.</li>
-   *   <li>When {@link BN128G2#FR_NEG_ONE}.</li>
-   *   <li>Then return {@link BN128G1#BN128G1(BN128)} with p is {@link BN128Fp#ZERO}.</li>
+   *   <li>Given {@link BN128G1#BN128G1(BN128)} with p is {@link BN128Fp#ZERO}.
+   *   <li>Then return {@link BN128G1#BN128G1(BN128)} with p is {@link BN128Fp#ZERO}.
    * </ul>
-   * <p>
-   * Method under test: {@link BN128#mul(BigInteger)}
+   *
+   * <p>Method under test: {@link BN128#mul(BigInteger)}
    */
   @Test
   @Category(MaintainedByDiffblue.class)
   @MethodsUnderTest({"BN128 BN128.mul(BigInteger)"})
-  public void testMul_givenBn128g1WithPIsZero_whenFr_neg_one_thenReturnBn128g1WithPIsZero() {
+  public void testMul_givenBn128g1WithPIsZero_thenReturnBn128g1WithPIsZero() {
     // Arrange
     BN128G1 bn128g1 = new BN128G1(BN128Fp.ZERO);
 
@@ -402,18 +428,20 @@ public class BN128DiffblueTest {
 
   /**
    * Test {@link BN128#mul(BigInteger)}.
+   *
    * <ul>
-   *   <li>Then return {@link BN128Fp}.</li>
+   *   <li>Then return {@link BN128Fp}.
    * </ul>
-   * <p>
-   * Method under test: {@link BN128#mul(BigInteger)}
+   *
+   * <p>Method under test: {@link BN128#mul(BigInteger)}
    */
   @Test
   @Category(MaintainedByDiffblue.class)
   @MethodsUnderTest({"BN128 BN128.mul(BigInteger)"})
   public void testMul_thenReturnBN128Fp() {
     // Arrange
-    BN128G1 bn128g1 = new BN128G1(new BN128Fp(Fp.NON_RESIDUE, Fp.ZERO, Fp.NON_RESIDUE));
+    BN128Fp p = new BN128Fp(Fp.NON_RESIDUE, Fp.ZERO, Fp.NON_RESIDUE);
+    BN128G1 bn128g1 = new BN128G1(p);
 
     // Act
     BN128<Fp> actualMulResult = bn128g1.mul(BN128G2.FR_NEG_ONE);
@@ -438,8 +466,8 @@ public class BN128DiffblueTest {
 
   /**
    * Test {@link BN128#x()}.
-   * <p>
-   * Method under test: {@link BN128#x()}
+   *
+   * <p>Method under test: {@link BN128#x()}
    */
   @Test
   @Category(MaintainedByDiffblue.class)
@@ -452,18 +480,17 @@ public class BN128DiffblueTest {
     Fp actualXResult = bn128g1.x();
 
     // Assert
-    Fp fp = actualXResult.ZERO;
+    Fp fp = Fp.ZERO;
     assertSame(fp, actualXResult);
     assertSame(fp, bn128g1.y());
-    Fp expectedOneResult = actualXResult._1;
-    assertSame(expectedOneResult, bn128g1.one());
-    assertArrayEquals(new byte[]{0}, actualXResult.bytes());
+    assertSame(Fp._1, bn128g1.one());
+    assertArrayEquals(new byte[] {0}, actualXResult.bytes());
   }
 
   /**
    * Test {@link BN128#y()}.
-   * <p>
-   * Method under test: {@link BN128#y()}
+   *
+   * <p>Method under test: {@link BN128#y()}
    */
   @Test
   @Category(MaintainedByDiffblue.class)
@@ -476,137 +503,180 @@ public class BN128DiffblueTest {
     Fp actualYResult = bn128g1.y();
 
     // Assert
-    Fp fp = actualYResult.ZERO;
+    Fp fp = Fp.ZERO;
     assertSame(fp, bn128g1.x());
     assertSame(fp, actualYResult);
-    Fp expectedOneResult = actualYResult._1;
-    assertSame(expectedOneResult, bn128g1.one());
-    assertArrayEquals(new byte[]{0}, actualYResult.bytes());
+    assertSame(Fp._1, bn128g1.one());
+    assertArrayEquals(new byte[] {0}, actualYResult.bytes());
   }
 
   /**
    * Test {@link BN128#isZero()}.
+   *
    * <ul>
-   *   <li>Given {@link BN128G1#BN128G1(BN128)} with p is {@link BN128Fp#ZERO}.</li>
-   *   <li>Then return {@code true}.</li>
+   *   <li>Given {@link BN128G1#BN128G1(BN128)} with p is {@link BN128Fp#ZERO}.
+   *   <li>Then return {@code true}.
    * </ul>
-   * <p>
-   * Method under test: {@link BN128#isZero()}
+   *
+   * <p>Method under test: {@link BN128#isZero()}
    */
   @Test
   @Category(MaintainedByDiffblue.class)
   @MethodsUnderTest({"boolean BN128.isZero()"})
   public void testIsZero_givenBn128g1WithPIsZero_thenReturnTrue() {
     // Arrange, Act and Assert
-    assertTrue((new BN128G1(BN128Fp.ZERO)).isZero());
+    assertTrue(new BN128G1(BN128Fp.ZERO).isZero());
   }
 
   /**
    * Test {@link BN128#isZero()}.
+   *
    * <ul>
-   *   <li>Then return {@code false}.</li>
+   *   <li>Then return {@code false}.
    * </ul>
-   * <p>
-   * Method under test: {@link BN128#isZero()}
+   *
+   * <p>Method under test: {@link BN128#isZero()}
    */
   @Test
   @Category(MaintainedByDiffblue.class)
   @MethodsUnderTest({"boolean BN128.isZero()"})
   public void testIsZero_thenReturnFalse() {
-    // Arrange, Act and Assert
-    assertFalse((new BN128G1(new BN128Fp(Fp.NON_RESIDUE, Fp.NON_RESIDUE, Fp.NON_RESIDUE))).isZero());
+    // Arrange
+    BN128Fp p = new BN128Fp(Fp.NON_RESIDUE, Fp.NON_RESIDUE, Fp.NON_RESIDUE);
+
+    // Act and Assert
+    assertFalse(new BN128G1(p).isZero());
   }
 
   /**
    * Test {@link BN128#isValid()}.
+   *
    * <ul>
-   *   <li>Given {@link BN128Fp#BN128Fp(Fp, Fp, Fp)} with x is create {@link Params#P} and y is {@link Fp#NON_RESIDUE} and z is {@link Fp#NON_RESIDUE}.</li>
+   *   <li>Given {@link BN128Fp#BN128Fp(Fp, Fp, Fp)} with x is {@link Fp#Fp(BigInteger)} and y is
+   *       {@link Fp#NON_RESIDUE} and z is {@link Fp#NON_RESIDUE}.
    * </ul>
-   * <p>
-   * Method under test: {@link BN128#isValid()}
+   *
+   * <p>Method under test: {@link BN128#isValid()}
    */
   @Test
   @Category(MaintainedByDiffblue.class)
   @MethodsUnderTest({"boolean BN128.isValid()"})
-  public void testIsValid_givenBN128FpWithXIsCreatePAndYIsNon_residueAndZIsNon_residue() {
-    // Arrange, Act and Assert
-    assertFalse((new BN128G1(new BN128Fp(Fp.create(Params.P), Fp.NON_RESIDUE, Fp.NON_RESIDUE))).isValid());
+  public void testIsValid_givenBN128FpWithXIsFpAndYIsNon_residueAndZIsNon_residue() {
+    // Arrange
+    BN128Fp p = new BN128Fp(new Fp(Params.P), Fp.NON_RESIDUE, Fp.NON_RESIDUE);
+
+    // Act and Assert
+    assertFalse(new BN128G1(p).isValid());
   }
 
   /**
    * Test {@link BN128#isValid()}.
+   *
    * <ul>
-   *   <li>Given {@link BN128Fp#BN128Fp(Fp, Fp, Fp)} with x is {@link Fp#NON_RESIDUE} and y is create {@link Params#P} and z is {@link Fp#NON_RESIDUE}.</li>
+   *   <li>Given {@link BN128Fp#BN128Fp(Fp, Fp, Fp)} with x is {@link Fp#NON_RESIDUE} and y is
+   *       {@link Fp#Fp(BigInteger)} and z is {@link Fp#NON_RESIDUE}.
    * </ul>
-   * <p>
-   * Method under test: {@link BN128#isValid()}
+   *
+   * <p>Method under test: {@link BN128#isValid()}
    */
   @Test
   @Category(MaintainedByDiffblue.class)
   @MethodsUnderTest({"boolean BN128.isValid()"})
-  public void testIsValid_givenBN128FpWithXIsNon_residueAndYIsCreatePAndZIsNon_residue() {
-    // Arrange, Act and Assert
-    assertFalse((new BN128G1(new BN128Fp(Fp.NON_RESIDUE, Fp.create(Params.P), Fp.NON_RESIDUE))).isValid());
+  public void testIsValid_givenBN128FpWithXIsNon_residueAndYIsFpAndZIsNon_residue() {
+    // Arrange
+    BN128Fp p = new BN128Fp(Fp.NON_RESIDUE, new Fp(Params.P), Fp.NON_RESIDUE);
+
+    // Act and Assert
+    assertFalse(new BN128G1(p).isValid());
   }
 
   /**
    * Test {@link BN128#isValid()}.
+   *
    * <ul>
-   *   <li>Given {@link BN128Fp#BN128Fp(Fp, Fp, Fp)} with x is {@link Fp#NON_RESIDUE} and y is {@link Fp#NON_RESIDUE} and z is {@link Fp#NON_RESIDUE}.</li>
+   *   <li>Given {@link BN128Fp#BN128Fp(Fp, Fp, Fp)} with x is {@link Fp#NON_RESIDUE} and y is
+   *       {@link Fp#NON_RESIDUE} and z is {@link Fp#Fp(BigInteger)}.
    * </ul>
-   * <p>
-   * Method under test: {@link BN128#isValid()}
+   *
+   * <p>Method under test: {@link BN128#isValid()}
+   */
+  @Test
+  @Category(MaintainedByDiffblue.class)
+  @MethodsUnderTest({"boolean BN128.isValid()"})
+  public void testIsValid_givenBN128FpWithXIsNon_residueAndYIsNon_residueAndZIsFp() {
+    // Arrange
+    BN128Fp p = new BN128Fp(Fp.NON_RESIDUE, Fp.NON_RESIDUE, new Fp(Params.P));
+
+    // Act and Assert
+    assertFalse(new BN128G1(p).isValid());
+  }
+
+  /**
+   * Test {@link BN128#isValid()}.
+   *
+   * <ul>
+   *   <li>Given {@link BN128Fp#BN128Fp(Fp, Fp, Fp)} with x is {@link Fp#NON_RESIDUE} and y is
+   *       {@link Fp#NON_RESIDUE} and z is {@link Fp#NON_RESIDUE}.
+   * </ul>
+   *
+   * <p>Method under test: {@link BN128#isValid()}
    */
   @Test
   @Category(MaintainedByDiffblue.class)
   @MethodsUnderTest({"boolean BN128.isValid()"})
   public void testIsValid_givenBN128FpWithXIsNon_residueAndYIsNon_residueAndZIsNon_residue() {
-    // Arrange, Act and Assert
-    assertFalse((new BN128G1(new BN128Fp(Fp.NON_RESIDUE, Fp.NON_RESIDUE, Fp.NON_RESIDUE))).isValid());
+    // Arrange
+    BN128Fp p = new BN128Fp(Fp.NON_RESIDUE, Fp.NON_RESIDUE, Fp.NON_RESIDUE);
+
+    // Act and Assert
+    assertFalse(new BN128G1(p).isValid());
   }
 
   /**
    * Test {@link BN128#isValid()}.
+   *
    * <ul>
-   *   <li>Given {@link BN128G1#BN128G1(BN128)} with p is {@link BN128Fp#ZERO}.</li>
-   *   <li>Then return {@code true}.</li>
+   *   <li>Given {@link BN128G1#BN128G1(BN128)} with p is {@link BN128Fp#ZERO}.
+   *   <li>Then return {@code true}.
    * </ul>
-   * <p>
-   * Method under test: {@link BN128#isValid()}
+   *
+   * <p>Method under test: {@link BN128#isValid()}
    */
   @Test
   @Category(MaintainedByDiffblue.class)
   @MethodsUnderTest({"boolean BN128.isValid()"})
   public void testIsValid_givenBn128g1WithPIsZero_thenReturnTrue() {
     // Arrange, Act and Assert
-    assertTrue((new BN128G1(BN128Fp.ZERO)).isValid());
+    assertTrue(new BN128G1(BN128Fp.ZERO).isValid());
   }
 
   /**
    * Test {@link BN128#toString()}.
+   *
    * <ul>
-   *   <li>Given {@link BN128G1#BN128G1(BN128)} with p is {@link BN128Fp#ZERO}.</li>
-   *   <li>Then return {@code (0; 0; 0)}.</li>
+   *   <li>Given {@link BN128G1#BN128G1(BN128)} with p is {@link BN128Fp#ZERO}.
+   *   <li>Then return {@code (0; 0; 0)}.
    * </ul>
-   * <p>
-   * Method under test: {@link BN128#toString()}
+   *
+   * <p>Method under test: {@link BN128#toString()}
    */
   @Test
   @Category(MaintainedByDiffblue.class)
   @MethodsUnderTest({"java.lang.String BN128.toString()"})
   public void testToString_givenBn128g1WithPIsZero_thenReturn000() {
     // Arrange, Act and Assert
-    assertEquals("(0; 0; 0)", (new BN128G1(BN128Fp.ZERO)).toString());
+    assertEquals("(0; 0; 0)", new BN128G1(BN128Fp.ZERO).toString());
   }
 
   /**
-   * Test {@link BN128#equals(Object)}, and {@link Object#hashCode()}.
+   * Test {@link BN128#equals(Object)}, and {@link BN128#hashCode()}.
+   *
    * <ul>
-   *   <li>When other is equal.</li>
-   *   <li>Then return equal.</li>
+   *   <li>When other is equal.
+   *   <li>Then return equal.
    * </ul>
-   * <p>
-   * Method under test: {@link BN128#equals(Object)}
+   *
+   * <p>Method under test: {@link BN128#equals(Object)}
    */
   @Test
   @Category(MaintainedByDiffblue.class)
@@ -618,18 +688,18 @@ public class BN128DiffblueTest {
 
     // Act and Assert
     assertEquals(bn128, bn1282);
-    int expectedHashCodeResult = bn128.hashCode();
-    assertEquals(expectedHashCodeResult, bn1282.hashCode());
+    assertEquals(bn128.hashCode(), bn1282.hashCode());
   }
 
   /**
-   * Test {@link BN128#equals(Object)}, and {@link Object#hashCode()}.
+   * Test {@link BN128#equals(Object)}, and {@link BN128#hashCode()}.
+   *
    * <ul>
-   *   <li>When other is equal.</li>
-   *   <li>Then return equal.</li>
+   *   <li>When other is equal.
+   *   <li>Then return equal.
    * </ul>
-   * <p>
-   * Method under test: {@link BN128#equals(Object)}
+   *
+   * <p>Method under test: {@link BN128#equals(Object)}
    */
   @Test
   @Category(MaintainedByDiffblue.class)
@@ -641,18 +711,18 @@ public class BN128DiffblueTest {
 
     // Act and Assert
     assertEquals(bn128g1, bn128);
-    int notExpectedHashCodeResult = bn128g1.hashCode();
-    assertNotEquals(notExpectedHashCodeResult, bn128.hashCode());
+    assertNotEquals(bn128g1.hashCode(), bn128.hashCode());
   }
 
   /**
-   * Test {@link BN128#equals(Object)}, and {@link Object#hashCode()}.
+   * Test {@link BN128#equals(Object)}, and {@link BN128#hashCode()}.
+   *
    * <ul>
-   *   <li>When other is equal.</li>
-   *   <li>Then return equal.</li>
+   *   <li>When other is equal.
+   *   <li>Then return equal.
    * </ul>
-   * <p>
-   * Method under test: {@link BN128#equals(Object)}
+   *
+   * <p>Method under test: {@link BN128#equals(Object)}
    */
   @Test
   @Category(MaintainedByDiffblue.class)
@@ -664,18 +734,18 @@ public class BN128DiffblueTest {
 
     // Act and Assert
     assertEquals(bn128Fp, bn128Fp2);
-    int notExpectedHashCodeResult = bn128Fp.hashCode();
-    assertNotEquals(notExpectedHashCodeResult, bn128Fp2.hashCode());
+    assertNotEquals(bn128Fp.hashCode(), bn128Fp2.hashCode());
   }
 
   /**
-   * Test {@link BN128#equals(Object)}, and {@link Object#hashCode()}.
+   * Test {@link BN128#equals(Object)}, and {@link BN128#hashCode()}.
+   *
    * <ul>
-   *   <li>When other is same.</li>
-   *   <li>Then return equal.</li>
+   *   <li>When other is same.
+   *   <li>Then return equal.
    * </ul>
-   * <p>
-   * Method under test: {@link BN128#equals(Object)}
+   *
+   * <p>Method under test: {@link BN128#equals(Object)}
    */
   @Test
   @Category(MaintainedByDiffblue.class)
@@ -692,12 +762,13 @@ public class BN128DiffblueTest {
 
   /**
    * Test {@link BN128#equals(Object)}.
+   *
    * <ul>
-   *   <li>When other is different.</li>
-   *   <li>Then return not equal.</li>
+   *   <li>When other is different.
+   *   <li>Then return not equal.
    * </ul>
-   * <p>
-   * Method under test: {@link BN128#equals(Object)}
+   *
+   * <p>Method under test: {@link BN128#equals(Object)}
    */
   @Test
   @Category(MaintainedByDiffblue.class)
@@ -709,12 +780,13 @@ public class BN128DiffblueTest {
 
   /**
    * Test {@link BN128#equals(Object)}.
+   *
    * <ul>
-   *   <li>When other is different.</li>
-   *   <li>Then return not equal.</li>
+   *   <li>When other is different.
+   *   <li>Then return not equal.
    * </ul>
-   * <p>
-   * Method under test: {@link BN128#equals(Object)}
+   *
+   * <p>Method under test: {@link BN128#equals(Object)}
    */
   @Test
   @Category(MaintainedByDiffblue.class)
@@ -726,12 +798,13 @@ public class BN128DiffblueTest {
 
   /**
    * Test {@link BN128#equals(Object)}.
+   *
    * <ul>
-   *   <li>When other is different.</li>
-   *   <li>Then return not equal.</li>
+   *   <li>When other is different.
+   *   <li>Then return not equal.
    * </ul>
-   * <p>
-   * Method under test: {@link BN128#equals(Object)}
+   *
+   * <p>Method under test: {@link BN128#equals(Object)}
    */
   @Test
   @Category(MaintainedByDiffblue.class)
@@ -743,12 +816,13 @@ public class BN128DiffblueTest {
 
   /**
    * Test {@link BN128#equals(Object)}.
+   *
    * <ul>
-   *   <li>When other is different.</li>
-   *   <li>Then return not equal.</li>
+   *   <li>When other is different.
+   *   <li>Then return not equal.
    * </ul>
-   * <p>
-   * Method under test: {@link BN128#equals(Object)}
+   *
+   * <p>Method under test: {@link BN128#equals(Object)}
    */
   @Test
   @Category(MaintainedByDiffblue.class)
@@ -760,12 +834,13 @@ public class BN128DiffblueTest {
 
   /**
    * Test {@link BN128#equals(Object)}.
+   *
    * <ul>
-   *   <li>When other is different.</li>
-   *   <li>Then return not equal.</li>
+   *   <li>When other is different.
+   *   <li>Then return not equal.
    * </ul>
-   * <p>
-   * Method under test: {@link BN128#equals(Object)}
+   *
+   * <p>Method under test: {@link BN128#equals(Object)}
    */
   @Test
   @Category(MaintainedByDiffblue.class)
@@ -777,12 +852,13 @@ public class BN128DiffblueTest {
 
   /**
    * Test {@link BN128#equals(Object)}.
+   *
    * <ul>
-   *   <li>When other is different.</li>
-   *   <li>Then return not equal.</li>
+   *   <li>When other is different.
+   *   <li>Then return not equal.
    * </ul>
-   * <p>
-   * Method under test: {@link BN128#equals(Object)}
+   *
+   * <p>Method under test: {@link BN128#equals(Object)}
    */
   @Test
   @Category(MaintainedByDiffblue.class)
@@ -794,12 +870,13 @@ public class BN128DiffblueTest {
 
   /**
    * Test {@link BN128#equals(Object)}.
+   *
    * <ul>
-   *   <li>When other is different.</li>
-   *   <li>Then return not equal.</li>
+   *   <li>When other is different.
+   *   <li>Then return not equal.
    * </ul>
-   * <p>
-   * Method under test: {@link BN128#equals(Object)}
+   *
+   * <p>Method under test: {@link BN128#equals(Object)}
    */
   @Test
   @Category(MaintainedByDiffblue.class)
@@ -811,12 +888,13 @@ public class BN128DiffblueTest {
 
   /**
    * Test {@link BN128#equals(Object)}.
+   *
    * <ul>
-   *   <li>When other is different.</li>
-   *   <li>Then return not equal.</li>
+   *   <li>When other is different.
+   *   <li>Then return not equal.
    * </ul>
-   * <p>
-   * Method under test: {@link BN128#equals(Object)}
+   *
+   * <p>Method under test: {@link BN128#equals(Object)}
    */
   @Test
   @Category(MaintainedByDiffblue.class)
@@ -828,12 +906,13 @@ public class BN128DiffblueTest {
 
   /**
    * Test {@link BN128#equals(Object)}.
+   *
    * <ul>
-   *   <li>When other is {@code null}.</li>
-   *   <li>Then return not equal.</li>
+   *   <li>When other is {@code null}.
+   *   <li>Then return not equal.
    * </ul>
-   * <p>
-   * Method under test: {@link BN128#equals(Object)}
+   *
+   * <p>Method under test: {@link BN128#equals(Object)}
    */
   @Test
   @Category(MaintainedByDiffblue.class)
@@ -845,12 +924,13 @@ public class BN128DiffblueTest {
 
   /**
    * Test {@link BN128#equals(Object)}.
+   *
    * <ul>
-   *   <li>When other is wrong type.</li>
-   *   <li>Then return not equal.</li>
+   *   <li>When other is wrong type.
+   *   <li>Then return not equal.
    * </ul>
-   * <p>
-   * Method under test: {@link BN128#equals(Object)}
+   *
+   * <p>Method under test: {@link BN128#equals(Object)}
    */
   @Test
   @Category(MaintainedByDiffblue.class)

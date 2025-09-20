@@ -6,7 +6,6 @@ import static org.junit.Assert.assertNull;
 import static org.junit.Assert.assertSame;
 import static org.junit.Assert.assertThrows;
 import static org.junit.Assert.assertTrue;
-import static org.mockito.ArgumentMatchers.eq;
 import static org.mockito.ArgumentMatchers.isA;
 import static org.mockito.Mockito.anyLong;
 import static org.mockito.Mockito.atLeast;
@@ -15,7 +14,6 @@ import static org.mockito.Mockito.verify;
 import static org.mockito.Mockito.when;
 import com.diffblue.cover.annotations.MaintainedByDiffblue;
 import com.diffblue.cover.annotations.MethodsUnderTest;
-import java.io.UnsupportedEncodingException;
 import java.util.LinkedList;
 import java.util.List;
 import org.junit.Test;
@@ -30,30 +28,28 @@ import org.tron.core.ChainBaseManager;
 import org.tron.core.capsule.BlockCapsule;
 import org.tron.core.capsule.BlockCapsule.BlockId;
 import org.tron.core.db.Manager;
-import org.tron.core.db.TransactionStore;
-import org.tron.core.db.TronStoreWithRevoking;
 import org.tron.core.exception.BadItemException;
 import org.tron.core.exception.ItemNotFoundException;
 import org.tron.core.exception.NonCommonBlockException;
 import org.tron.core.exception.P2pException;
 import org.tron.core.net.message.MessageTypes;
 import org.tron.core.store.DynamicPropertiesStore;
+import org.tron.protos.Protocol;
+import org.tron.protos.Protocol.Inventory;
+import org.tron.protos.Protocol.Inventory.InventoryType;
 
 @RunWith(MockitoJUnitRunner.class)
 public class TronNetDelegateDiffblueTest {
-  @Mock
-  private ChainBaseManager chainBaseManager;
+  @Mock private ChainBaseManager chainBaseManager;
 
-  @InjectMocks
-  private TronNetDelegate tronNetDelegate;
+  @Mock private Manager manager;
 
-  @Mock
-  private Manager manager;
+  @InjectMocks private TronNetDelegate tronNetDelegate;
 
   /**
    * Test {@link TronNetDelegate#getSyncBeginNumber()}.
-   * <p>
-   * Method under test: {@link TronNetDelegate#getSyncBeginNumber()}
+   *
+   * <p>Method under test: {@link TronNetDelegate#getSyncBeginNumber()}
    */
   @Test
   @Category(MaintainedByDiffblue.class)
@@ -72,12 +68,13 @@ public class TronNetDelegateDiffblueTest {
 
   /**
    * Test {@link TronNetDelegate#getBlockTime(BlockId)}.
+   *
    * <ul>
-   *   <li>Given {@link BlockCapsule} {@link BlockCapsule#getTimeStamp()} return ten.</li>
-   *   <li>Then return ten.</li>
+   *   <li>Given {@link BlockCapsule} {@link BlockCapsule#getTimeStamp()} return ten.
+   *   <li>Then return ten.
    * </ul>
-   * <p>
-   * Method under test: {@link TronNetDelegate#getBlockTime(BlockId)}
+   *
+   * <p>Method under test: {@link TronNetDelegate#getBlockTime(BlockId)}
    */
   @Test
   @Category(MaintainedByDiffblue.class)
@@ -100,18 +97,50 @@ public class TronNetDelegateDiffblueTest {
 
   /**
    * Test {@link TronNetDelegate#getBlockTime(BlockId)}.
+   *
    * <ul>
-   *   <li>Then throw {@link P2pException}.</li>
+   *   <li>Given {@code String}.
+   *   <li>When {@link BlockId} {@link BlockId#getString()} return {@code String}.
+   *   <li>Then calls {@link BlockId#getString()}.
    * </ul>
-   * <p>
-   * Method under test: {@link TronNetDelegate#getBlockTime(BlockId)}
+   *
+   * <p>Method under test: {@link TronNetDelegate#getBlockTime(BlockId)}
    */
   @Test
   @Category(MaintainedByDiffblue.class)
   @MethodsUnderTest({"long TronNetDelegate.getBlockTime(BlockId)"})
-  public void testGetBlockTime_thenThrowP2pException() throws BadItemException, ItemNotFoundException, P2pException {
+  public void testGetBlockTime_givenString_whenBlockIdGetStringReturnString_thenCallsGetString()
+      throws BadItemException, ItemNotFoundException, P2pException {
     // Arrange
-    when(chainBaseManager.getBlockById(Mockito.<Sha256Hash>any())).thenThrow(new BadItemException("An error occurred"));
+    when(chainBaseManager.getBlockById(Mockito.<Sha256Hash>any()))
+        .thenThrow(new BadItemException("An error occurred"));
+
+    BlockId id = mock(BlockId.class);
+    when(id.getString()).thenReturn("String");
+
+    // Act and Assert
+    assertThrows(P2pException.class, () -> tronNetDelegate.getBlockTime(id));
+    verify(chainBaseManager).getBlockById(isA(Sha256Hash.class));
+    verify(id).getString();
+  }
+
+  /**
+   * Test {@link TronNetDelegate#getBlockTime(BlockId)}.
+   *
+   * <ul>
+   *   <li>Then throw {@link P2pException}.
+   * </ul>
+   *
+   * <p>Method under test: {@link TronNetDelegate#getBlockTime(BlockId)}
+   */
+  @Test
+  @Category(MaintainedByDiffblue.class)
+  @MethodsUnderTest({"long TronNetDelegate.getBlockTime(BlockId)"})
+  public void testGetBlockTime_thenThrowP2pException()
+      throws BadItemException, ItemNotFoundException, P2pException {
+    // Arrange
+    when(chainBaseManager.getBlockById(Mockito.<Sha256Hash>any()))
+        .thenThrow(new BadItemException("An error occurred"));
 
     // Act and Assert
     assertThrows(P2pException.class, () -> tronNetDelegate.getBlockTime(new BlockId()));
@@ -120,8 +149,8 @@ public class TronNetDelegateDiffblueTest {
 
   /**
    * Test {@link TronNetDelegate#getHeadBlockId()}.
-   * <p>
-   * Method under test: {@link TronNetDelegate#getHeadBlockId()}
+   *
+   * <p>Method under test: {@link TronNetDelegate#getHeadBlockId()}
    */
   @Test
   @Category(MaintainedByDiffblue.class)
@@ -141,11 +170,12 @@ public class TronNetDelegateDiffblueTest {
 
   /**
    * Test {@link TronNetDelegate#getKhaosDbHeadBlockId()}.
+   *
    * <ul>
-   *   <li>Then return {@link BlockId#BlockId()}.</li>
+   *   <li>Then return {@link BlockId#BlockId()}.
    * </ul>
-   * <p>
-   * Method under test: {@link TronNetDelegate#getKhaosDbHeadBlockId()}
+   *
+   * <p>Method under test: {@link TronNetDelegate#getKhaosDbHeadBlockId()}
    */
   @Test
   @Category(MaintainedByDiffblue.class)
@@ -168,8 +198,8 @@ public class TronNetDelegateDiffblueTest {
 
   /**
    * Test {@link TronNetDelegate#getSolidBlockId()}.
-   * <p>
-   * Method under test: {@link TronNetDelegate#getSolidBlockId()}
+   *
+   * <p>Method under test: {@link TronNetDelegate#getSolidBlockId()}
    */
   @Test
   @Category(MaintainedByDiffblue.class)
@@ -189,8 +219,8 @@ public class TronNetDelegateDiffblueTest {
 
   /**
    * Test {@link TronNetDelegate#getGenesisBlockId()}.
-   * <p>
-   * Method under test: {@link TronNetDelegate#getGenesisBlockId()}
+   *
+   * <p>Method under test: {@link TronNetDelegate#getGenesisBlockId()}
    */
   @Test
   @Category(MaintainedByDiffblue.class)
@@ -210,11 +240,12 @@ public class TronNetDelegateDiffblueTest {
 
   /**
    * Test {@link TronNetDelegate#getBlockIdByNum(long)}.
+   *
    * <ul>
-   *   <li>Then return {@link BlockId#BlockId()}.</li>
+   *   <li>Then return {@link BlockId#BlockId()}.
    * </ul>
-   * <p>
-   * Method under test: {@link TronNetDelegate#getBlockIdByNum(long)}
+   *
+   * <p>Method under test: {@link TronNetDelegate#getBlockIdByNum(long)}
    */
   @Test
   @Category(MaintainedByDiffblue.class)
@@ -228,34 +259,37 @@ public class TronNetDelegateDiffblueTest {
     BlockId actualBlockIdByNum = tronNetDelegate.getBlockIdByNum(1L);
 
     // Assert
-    verify(chainBaseManager).getBlockIdByNum(eq(1L));
+    verify(chainBaseManager).getBlockIdByNum(1L);
     assertSame(blockId, actualBlockIdByNum);
   }
 
   /**
    * Test {@link TronNetDelegate#getBlockIdByNum(long)}.
+   *
    * <ul>
-   *   <li>Then throw {@link P2pException}.</li>
+   *   <li>Then throw {@link P2pException}.
    * </ul>
-   * <p>
-   * Method under test: {@link TronNetDelegate#getBlockIdByNum(long)}
+   *
+   * <p>Method under test: {@link TronNetDelegate#getBlockIdByNum(long)}
    */
   @Test
   @Category(MaintainedByDiffblue.class)
   @MethodsUnderTest({"BlockId TronNetDelegate.getBlockIdByNum(long)"})
-  public void testGetBlockIdByNum_thenThrowP2pException() throws ItemNotFoundException, P2pException {
+  public void testGetBlockIdByNum_thenThrowP2pException()
+      throws ItemNotFoundException, P2pException {
     // Arrange
-    when(chainBaseManager.getBlockIdByNum(anyLong())).thenThrow(new ItemNotFoundException("An error occurred"));
+    when(chainBaseManager.getBlockIdByNum(anyLong()))
+        .thenThrow(new ItemNotFoundException("An error occurred"));
 
     // Act and Assert
     assertThrows(P2pException.class, () -> tronNetDelegate.getBlockIdByNum(1L));
-    verify(chainBaseManager).getBlockIdByNum(eq(1L));
+    verify(chainBaseManager).getBlockIdByNum(1L);
   }
 
   /**
    * Test {@link TronNetDelegate#getGenesisBlock()}.
-   * <p>
-   * Method under test: {@link TronNetDelegate#getGenesisBlock()}
+   *
+   * <p>Method under test: {@link TronNetDelegate#getGenesisBlock()}
    */
   @Test
   @Category(MaintainedByDiffblue.class)
@@ -274,8 +308,8 @@ public class TronNetDelegateDiffblueTest {
 
   /**
    * Test {@link TronNetDelegate#getHeadBlockTimeStamp()}.
-   * <p>
-   * Method under test: {@link TronNetDelegate#getHeadBlockTimeStamp()}
+   *
+   * <p>Method under test: {@link TronNetDelegate#getHeadBlockTimeStamp()}
    */
   @Test
   @Category(MaintainedByDiffblue.class)
@@ -294,12 +328,14 @@ public class TronNetDelegateDiffblueTest {
 
   /**
    * Test {@link TronNetDelegate#containBlock(BlockId)}.
+   *
    * <ul>
-   *   <li>Given {@link ChainBaseManager} {@link ChainBaseManager#containBlock(Sha256Hash)} return {@code false}.</li>
-   *   <li>Then return {@code false}.</li>
+   *   <li>Given {@link ChainBaseManager} {@link ChainBaseManager#containBlock(Sha256Hash)} return
+   *       {@code false}.
+   *   <li>Then return {@code false}.
    * </ul>
-   * <p>
-   * Method under test: {@link TronNetDelegate#containBlock(BlockId)}
+   *
+   * <p>Method under test: {@link TronNetDelegate#containBlock(BlockId)}
    */
   @Test
   @Category(MaintainedByDiffblue.class)
@@ -318,12 +354,14 @@ public class TronNetDelegateDiffblueTest {
 
   /**
    * Test {@link TronNetDelegate#containBlock(BlockId)}.
+   *
    * <ul>
-   *   <li>Given {@link ChainBaseManager} {@link ChainBaseManager#containBlock(Sha256Hash)} return {@code true}.</li>
-   *   <li>Then return {@code true}.</li>
+   *   <li>Given {@link ChainBaseManager} {@link ChainBaseManager#containBlock(Sha256Hash)} return
+   *       {@code true}.
+   *   <li>Then return {@code true}.
    * </ul>
-   * <p>
-   * Method under test: {@link TronNetDelegate#containBlock(BlockId)}
+   *
+   * <p>Method under test: {@link TronNetDelegate#containBlock(BlockId)}
    */
   @Test
   @Category(MaintainedByDiffblue.class)
@@ -342,11 +380,12 @@ public class TronNetDelegateDiffblueTest {
 
   /**
    * Test {@link TronNetDelegate#containBlockInMainChain(BlockId)}.
+   *
    * <ul>
-   *   <li>Then return {@code false}.</li>
+   *   <li>Then return {@code false}.
    * </ul>
-   * <p>
-   * Method under test: {@link TronNetDelegate#containBlockInMainChain(BlockId)}
+   *
+   * <p>Method under test: {@link TronNetDelegate#containBlockInMainChain(BlockId)}
    */
   @Test
   @Category(MaintainedByDiffblue.class)
@@ -356,7 +395,8 @@ public class TronNetDelegateDiffblueTest {
     when(chainBaseManager.containBlockInMainChain(Mockito.<BlockId>any())).thenReturn(false);
 
     // Act
-    boolean actualContainBlockInMainChainResult = tronNetDelegate.containBlockInMainChain(new BlockId());
+    boolean actualContainBlockInMainChainResult =
+        tronNetDelegate.containBlockInMainChain(new BlockId());
 
     // Assert
     verify(chainBaseManager).containBlockInMainChain(isA(BlockId.class));
@@ -365,11 +405,12 @@ public class TronNetDelegateDiffblueTest {
 
   /**
    * Test {@link TronNetDelegate#containBlockInMainChain(BlockId)}.
+   *
    * <ul>
-   *   <li>Then return {@code true}.</li>
+   *   <li>Then return {@code true}.
    * </ul>
-   * <p>
-   * Method under test: {@link TronNetDelegate#containBlockInMainChain(BlockId)}
+   *
+   * <p>Method under test: {@link TronNetDelegate#containBlockInMainChain(BlockId)}
    */
   @Test
   @Category(MaintainedByDiffblue.class)
@@ -379,7 +420,8 @@ public class TronNetDelegateDiffblueTest {
     when(chainBaseManager.containBlockInMainChain(Mockito.<BlockId>any())).thenReturn(true);
 
     // Act
-    boolean actualContainBlockInMainChainResult = tronNetDelegate.containBlockInMainChain(new BlockId());
+    boolean actualContainBlockInMainChainResult =
+        tronNetDelegate.containBlockInMainChain(new BlockId());
 
     // Assert
     verify(chainBaseManager).containBlockInMainChain(isA(BlockId.class));
@@ -388,21 +430,53 @@ public class TronNetDelegateDiffblueTest {
 
   /**
    * Test {@link TronNetDelegate#getBlockChainHashesOnFork(BlockId)}.
+   *
    * <ul>
-   *   <li>Then return Empty.</li>
+   *   <li>Given {@code String}.
+   *   <li>Then calls {@link BlockId#getString()}.
    * </ul>
-   * <p>
-   * Method under test: {@link TronNetDelegate#getBlockChainHashesOnFork(BlockId)}
+   *
+   * <p>Method under test: {@link TronNetDelegate#getBlockChainHashesOnFork(BlockId)}
    */
   @Test
   @Category(MaintainedByDiffblue.class)
   @MethodsUnderTest({"List TronNetDelegate.getBlockChainHashesOnFork(BlockId)"})
-  public void testGetBlockChainHashesOnFork_thenReturnEmpty() throws NonCommonBlockException, P2pException {
+  public void testGetBlockChainHashesOnFork_givenString_thenCallsGetString()
+      throws NonCommonBlockException, P2pException {
+    // Arrange
+    when(manager.getBlockChainHashesOnFork(Mockito.<BlockId>any()))
+        .thenThrow(new NonCommonBlockException());
+
+    BlockId forkBlockHash = mock(BlockId.class);
+    when(forkBlockHash.getString()).thenReturn("String");
+
+    // Act and Assert
+    assertThrows(
+        P2pException.class, () -> tronNetDelegate.getBlockChainHashesOnFork(forkBlockHash));
+    verify(forkBlockHash).getString();
+    verify(manager).getBlockChainHashesOnFork(isA(BlockId.class));
+  }
+
+  /**
+   * Test {@link TronNetDelegate#getBlockChainHashesOnFork(BlockId)}.
+   *
+   * <ul>
+   *   <li>Then return Empty.
+   * </ul>
+   *
+   * <p>Method under test: {@link TronNetDelegate#getBlockChainHashesOnFork(BlockId)}
+   */
+  @Test
+  @Category(MaintainedByDiffblue.class)
+  @MethodsUnderTest({"List TronNetDelegate.getBlockChainHashesOnFork(BlockId)"})
+  public void testGetBlockChainHashesOnFork_thenReturnEmpty()
+      throws NonCommonBlockException, P2pException {
     // Arrange
     when(manager.getBlockChainHashesOnFork(Mockito.<BlockId>any())).thenReturn(new LinkedList<>());
 
     // Act
-    List<BlockId> actualBlockChainHashesOnFork = tronNetDelegate.getBlockChainHashesOnFork(new BlockId());
+    List<BlockId> actualBlockChainHashesOnFork =
+        tronNetDelegate.getBlockChainHashesOnFork(new BlockId());
 
     // Assert
     verify(manager).getBlockChainHashesOnFork(isA(BlockId.class));
@@ -411,32 +485,38 @@ public class TronNetDelegateDiffblueTest {
 
   /**
    * Test {@link TronNetDelegate#getBlockChainHashesOnFork(BlockId)}.
+   *
    * <ul>
-   *   <li>Then throw {@link P2pException}.</li>
+   *   <li>When {@link BlockId#BlockId()}.
+   *   <li>Then throw {@link P2pException}.
    * </ul>
-   * <p>
-   * Method under test: {@link TronNetDelegate#getBlockChainHashesOnFork(BlockId)}
+   *
+   * <p>Method under test: {@link TronNetDelegate#getBlockChainHashesOnFork(BlockId)}
    */
   @Test
   @Category(MaintainedByDiffblue.class)
   @MethodsUnderTest({"List TronNetDelegate.getBlockChainHashesOnFork(BlockId)"})
-  public void testGetBlockChainHashesOnFork_thenThrowP2pException() throws NonCommonBlockException, P2pException {
+  public void testGetBlockChainHashesOnFork_whenBlockId_thenThrowP2pException()
+      throws NonCommonBlockException, P2pException {
     // Arrange
-    when(manager.getBlockChainHashesOnFork(Mockito.<BlockId>any())).thenThrow(new NonCommonBlockException());
+    when(manager.getBlockChainHashesOnFork(Mockito.<BlockId>any()))
+        .thenThrow(new NonCommonBlockException());
 
     // Act and Assert
-    assertThrows(P2pException.class, () -> tronNetDelegate.getBlockChainHashesOnFork(new BlockId()));
+    assertThrows(
+        P2pException.class, () -> tronNetDelegate.getBlockChainHashesOnFork(new BlockId()));
     verify(manager).getBlockChainHashesOnFork(isA(BlockId.class));
   }
 
   /**
    * Test {@link TronNetDelegate#canChainRevoke(long)}.
+   *
    * <ul>
-   *   <li>Given {@link Manager} {@link Manager#getSyncBeginNumber()} return {@link Long#MAX_VALUE}.</li>
-   *   <li>Then return {@code false}.</li>
+   *   <li>Given {@link Manager} {@link Manager#getSyncBeginNumber()} return {@link Long#MAX_VALUE}.
+   *   <li>Then return {@code false}.
    * </ul>
-   * <p>
-   * Method under test: {@link TronNetDelegate#canChainRevoke(long)}
+   *
+   * <p>Method under test: {@link TronNetDelegate#canChainRevoke(long)}
    */
   @Test
   @Category(MaintainedByDiffblue.class)
@@ -455,12 +535,13 @@ public class TronNetDelegateDiffblueTest {
 
   /**
    * Test {@link TronNetDelegate#canChainRevoke(long)}.
+   *
    * <ul>
-   *   <li>Given {@link Manager} {@link Manager#getSyncBeginNumber()} return one.</li>
-   *   <li>Then return {@code true}.</li>
+   *   <li>Given {@link Manager} {@link Manager#getSyncBeginNumber()} return one.
+   *   <li>Then return {@code true}.
    * </ul>
-   * <p>
-   * Method under test: {@link TronNetDelegate#canChainRevoke(long)}
+   *
+   * <p>Method under test: {@link TronNetDelegate#canChainRevoke(long)}
    */
   @Test
   @Category(MaintainedByDiffblue.class)
@@ -479,22 +560,25 @@ public class TronNetDelegateDiffblueTest {
 
   /**
    * Test {@link TronNetDelegate#contain(Sha256Hash, MessageTypes)}.
+   *
    * <ul>
-   *   <li>Given {@link ChainBaseManager} {@link ChainBaseManager#containBlock(Sha256Hash)} return {@code true}.</li>
-   *   <li>Then calls {@link ChainBaseManager#containBlock(Sha256Hash)}.</li>
+   *   <li>Given {@link ChainBaseManager} {@link ChainBaseManager#containBlock(Sha256Hash)} return
+   *       {@code true}.
+   *   <li>Then return {@code true}.
    * </ul>
-   * <p>
-   * Method under test: {@link TronNetDelegate#contain(Sha256Hash, MessageTypes)}
+   *
+   * <p>Method under test: {@link TronNetDelegate#contain(Sha256Hash, MessageTypes)}
    */
   @Test
   @Category(MaintainedByDiffblue.class)
   @MethodsUnderTest({"boolean TronNetDelegate.contain(Sha256Hash, MessageTypes)"})
-  public void testContain_givenChainBaseManagerContainBlockReturnTrue_thenCallsContainBlock() {
+  public void testContain_givenChainBaseManagerContainBlockReturnTrue_thenReturnTrue() {
     // Arrange
     when(chainBaseManager.containBlock(Mockito.<Sha256Hash>any())).thenReturn(true);
 
     // Act
-    boolean actualContainResult = tronNetDelegate.contain(mock(Sha256Hash.class), MessageTypes.BLOCK);
+    boolean actualContainResult =
+        tronNetDelegate.contain(mock(Sha256Hash.class), MessageTypes.BLOCK);
 
     // Assert
     verify(chainBaseManager).containBlock(isA(Sha256Hash.class));
@@ -503,42 +587,13 @@ public class TronNetDelegateDiffblueTest {
 
   /**
    * Test {@link TronNetDelegate#contain(Sha256Hash, MessageTypes)}.
+   *
    * <ul>
-   *   <li>Given {@link TransactionStore} {@link TronStoreWithRevoking#has(byte[])} return {@code true}.</li>
-   *   <li>Then calls {@link Sha256Hash#getBytes()}.</li>
+   *   <li>When {@code null}.
+   *   <li>Then return {@code false}.
    * </ul>
-   * <p>
-   * Method under test: {@link TronNetDelegate#contain(Sha256Hash, MessageTypes)}
-   */
-  @Test
-  @Category(MaintainedByDiffblue.class)
-  @MethodsUnderTest({"boolean TronNetDelegate.contain(Sha256Hash, MessageTypes)"})
-  public void testContain_givenTransactionStoreHasReturnTrue_thenCallsGetBytes() throws UnsupportedEncodingException {
-    // Arrange
-    TransactionStore transactionStore = mock(TransactionStore.class);
-    when(transactionStore.has(Mockito.<byte[]>any())).thenReturn(true);
-    when(manager.getTransactionStore()).thenReturn(transactionStore);
-    Sha256Hash hash = mock(Sha256Hash.class);
-    when(hash.getBytes()).thenReturn("AXAXAXAX".getBytes("UTF-8"));
-
-    // Act
-    boolean actualContainResult = tronNetDelegate.contain(hash, MessageTypes.TRX);
-
-    // Assert
-    verify(hash).getBytes();
-    verify(manager).getTransactionStore();
-    verify(transactionStore).has(isA(byte[].class));
-    assertTrue(actualContainResult);
-  }
-
-  /**
-   * Test {@link TronNetDelegate#contain(Sha256Hash, MessageTypes)}.
-   * <ul>
-   *   <li>When {@code null}.</li>
-   *   <li>Then return {@code false}.</li>
-   * </ul>
-   * <p>
-   * Method under test: {@link TronNetDelegate#contain(Sha256Hash, MessageTypes)}
+   *
+   * <p>Method under test: {@link TronNetDelegate#contain(Sha256Hash, MessageTypes)}
    */
   @Test
   @Category(MaintainedByDiffblue.class)
@@ -549,13 +604,73 @@ public class TronNetDelegateDiffblueTest {
   }
 
   /**
-   * Test {@link TronNetDelegate#allowPBFT()}.
+   * Test {@link TronNetDelegate#getData(Sha256Hash, InventoryType)}.
+   *
    * <ul>
-   *   <li>Given {@link DynamicPropertiesStore} {@link DynamicPropertiesStore#allowPBFT()} return {@code false}.</li>
-   *   <li>Then return {@code false}.</li>
+   *   <li>Given {@code null}.
+   *   <li>When {@code UNRECOGNIZED}.
+   *   <li>Then throw {@link P2pException}.
    * </ul>
-   * <p>
-   * Method under test: {@link TronNetDelegate#allowPBFT()}
+   *
+   * <p>Method under test: {@link TronNetDelegate#getData(Sha256Hash,
+   * Protocol.Inventory.InventoryType)}
+   */
+  @Test
+  @Category(MaintainedByDiffblue.class)
+  @MethodsUnderTest({
+    "org.tron.common.overlay.message.Message TronNetDelegate.getData(Sha256Hash, Protocol.Inventory.InventoryType)"
+  })
+  public void testGetData_givenNull_whenUnrecognized_thenThrowP2pException() throws P2pException {
+    // Arrange
+    Sha256Hash hash = mock(Sha256Hash.class);
+    when(hash.getByteString()).thenReturn(null);
+
+    // Act and Assert
+    assertThrows(
+        P2pException.class, () -> tronNetDelegate.getData(hash, InventoryType.UNRECOGNIZED));
+    verify(hash).getByteString();
+  }
+
+  /**
+   * Test {@link TronNetDelegate#getData(Sha256Hash, InventoryType)}.
+   *
+   * <ul>
+   *   <li>Then calls {@link ChainBaseManager#getBlockById(Sha256Hash)}.
+   * </ul>
+   *
+   * <p>Method under test: {@link TronNetDelegate#getData(Sha256Hash,
+   * Protocol.Inventory.InventoryType)}
+   */
+  @Test
+  @Category(MaintainedByDiffblue.class)
+  @MethodsUnderTest({
+    "org.tron.common.overlay.message.Message TronNetDelegate.getData(Sha256Hash, Protocol.Inventory.InventoryType)"
+  })
+  public void testGetData_thenCallsGetBlockById()
+      throws BadItemException, ItemNotFoundException, P2pException {
+    // Arrange
+    when(chainBaseManager.getBlockById(Mockito.<Sha256Hash>any()))
+        .thenThrow(new BadItemException("An error occurred"));
+
+    Sha256Hash hash = mock(Sha256Hash.class);
+    when(hash.getByteString()).thenReturn(null);
+
+    // Act and Assert
+    assertThrows(P2pException.class, () -> tronNetDelegate.getData(hash, InventoryType.BLOCK));
+    verify(hash).getByteString();
+    verify(chainBaseManager).getBlockById(isA(Sha256Hash.class));
+  }
+
+  /**
+   * Test {@link TronNetDelegate#allowPBFT()}.
+   *
+   * <ul>
+   *   <li>Given {@link DynamicPropertiesStore} {@link DynamicPropertiesStore#allowPBFT()} return
+   *       {@code false}.
+   *   <li>Then return {@code false}.
+   * </ul>
+   *
+   * <p>Method under test: {@link TronNetDelegate#allowPBFT()}
    */
   @Test
   @Category(MaintainedByDiffblue.class)
@@ -577,12 +692,14 @@ public class TronNetDelegateDiffblueTest {
 
   /**
    * Test {@link TronNetDelegate#allowPBFT()}.
+   *
    * <ul>
-   *   <li>Given {@link DynamicPropertiesStore} {@link DynamicPropertiesStore#allowPBFT()} return {@code true}.</li>
-   *   <li>Then return {@code true}.</li>
+   *   <li>Given {@link DynamicPropertiesStore} {@link DynamicPropertiesStore#allowPBFT()} return
+   *       {@code true}.
+   *   <li>Then return {@code true}.
    * </ul>
-   * <p>
-   * Method under test: {@link TronNetDelegate#allowPBFT()}
+   *
+   * <p>Method under test: {@link TronNetDelegate#allowPBFT()}
    */
   @Test
   @Category(MaintainedByDiffblue.class)
@@ -604,8 +721,8 @@ public class TronNetDelegateDiffblueTest {
 
   /**
    * Test {@link TronNetDelegate#getForkLock()}.
-   * <p>
-   * Method under test: {@link TronNetDelegate#getForkLock()}
+   *
+   * <p>Method under test: {@link TronNetDelegate#getForkLock()}
    */
   @Test
   @Category(MaintainedByDiffblue.class)
@@ -624,11 +741,12 @@ public class TronNetDelegateDiffblueTest {
 
   /**
    * Test {@link TronNetDelegate#getNextMaintenanceTime()}.
+   *
    * <ul>
-   *   <li>Then return one.</li>
+   *   <li>Then return one.
    * </ul>
-   * <p>
-   * Method under test: {@link TronNetDelegate#getNextMaintenanceTime()}
+   *
+   * <p>Method under test: {@link TronNetDelegate#getNextMaintenanceTime()}
    */
   @Test
   @Category(MaintainedByDiffblue.class)
@@ -650,11 +768,12 @@ public class TronNetDelegateDiffblueTest {
 
   /**
    * Test {@link TronNetDelegate#getMaintenanceTimeInterval()}.
+   *
    * <ul>
-   *   <li>Then return forty-two.</li>
+   *   <li>Then return forty-two.
    * </ul>
-   * <p>
-   * Method under test: {@link TronNetDelegate#getMaintenanceTimeInterval()}
+   *
+   * <p>Method under test: {@link TronNetDelegate#getMaintenanceTimeInterval()}
    */
   @Test
   @Category(MaintainedByDiffblue.class)
@@ -676,8 +795,8 @@ public class TronNetDelegateDiffblueTest {
 
   /**
    * Test {@link TronNetDelegate#isBlockUnsolidified()}.
-   * <p>
-   * Method under test: {@link TronNetDelegate#isBlockUnsolidified()}
+   *
+   * <p>Method under test: {@link TronNetDelegate#isBlockUnsolidified()}
    */
   @Test
   @Category(MaintainedByDiffblue.class)
@@ -689,11 +808,12 @@ public class TronNetDelegateDiffblueTest {
 
   /**
    * Test {@link TronNetDelegate#getNextBlockSlotTime()}.
+   *
    * <ul>
-   *   <li>Then return {@code 3001}.</li>
+   *   <li>Then return {@code 3001}.
    * </ul>
-   * <p>
-   * Method under test: {@link TronNetDelegate#getNextBlockSlotTime()}
+   *
+   * <p>Method under test: {@link TronNetDelegate#getNextBlockSlotTime()}
    */
   @Test
   @Category(MaintainedByDiffblue.class)
@@ -717,11 +837,12 @@ public class TronNetDelegateDiffblueTest {
 
   /**
    * Test {@link TronNetDelegate#getNextBlockSlotTime()}.
+   *
    * <ul>
-   *   <li>Then return {@code 6001}.</li>
+   *   <li>Then return {@code 6001}.
    * </ul>
-   * <p>
-   * Method under test: {@link TronNetDelegate#getNextBlockSlotTime()}
+   *
+   * <p>Method under test: {@link TronNetDelegate#getNextBlockSlotTime()}
    */
   @Test
   @Category(MaintainedByDiffblue.class)
@@ -747,8 +868,9 @@ public class TronNetDelegateDiffblueTest {
 
   /**
    * Test getters and setters.
-   * <p>
-   * Methods under test:
+   *
+   * <p>Methods under test:
+   *
    * <ul>
    *   <li>{@link TronNetDelegate#setExit(boolean)}
    *   <li>{@link TronNetDelegate#getBlockLock()}
@@ -757,8 +879,11 @@ public class TronNetDelegateDiffblueTest {
    */
   @Test
   @Category(MaintainedByDiffblue.class)
-  @MethodsUnderTest({"Object TronNetDelegate.getBlockLock()", "boolean TronNetDelegate.isHitDown()",
-      "void TronNetDelegate.setExit(boolean)"})
+  @MethodsUnderTest({
+    "Object TronNetDelegate.getBlockLock()",
+    "boolean TronNetDelegate.isHitDown()",
+    "void TronNetDelegate.setExit(boolean)"
+  })
   public void testGettersAndSetters() {
     // Arrange
     TronNetDelegate tronNetDelegate = new TronNetDelegate();

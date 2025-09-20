@@ -8,6 +8,7 @@ import com.diffblue.cover.annotations.MethodsUnderTest;
 import java.io.IOException;
 import javax.servlet.http.HttpServletRequest;
 import javax.servlet.http.HttpServletResponse;
+import javax.servlet.http.HttpServletResponseWrapper;
 import org.junit.Test;
 import org.junit.experimental.categories.Category;
 import org.junit.runner.RunWith;
@@ -17,32 +18,36 @@ import org.mockito.Mockito;
 import org.mockito.junit.MockitoJUnitRunner;
 import org.springframework.mock.web.MockHttpServletRequest;
 import org.springframework.mock.web.MockHttpServletResponse;
+import org.tron.common.utils.client.utils.HttpMethed;
 import org.tron.core.services.filter.CharResponseWrapper;
 import org.tron.core.services.interfaceOnPBFT.WalletOnPBFT;
 
 @RunWith(MockitoJUnitRunner.class)
 public class GetBrokerageOnPBFTServletDiffblueTest {
-  @InjectMocks
-  private GetBrokerageOnPBFTServlet getBrokerageOnPBFTServlet;
+  @InjectMocks private GetBrokerageOnPBFTServlet getBrokerageOnPBFTServlet;
 
-  @Mock
-  private WalletOnPBFT walletOnPBFT;
+  @Mock private WalletOnPBFT walletOnPBFT;
 
   /**
    * Test {@link GetBrokerageOnPBFTServlet#doGet(HttpServletRequest, HttpServletResponse)}.
-   * <p>
-   * Method under test: {@link GetBrokerageOnPBFTServlet#doGet(HttpServletRequest, HttpServletResponse)}
+   *
+   * <p>Method under test: {@link GetBrokerageOnPBFTServlet#doGet(HttpServletRequest,
+   * HttpServletResponse)}
    */
   @Test
   @Category(MaintainedByDiffblue.class)
-  @MethodsUnderTest({"void GetBrokerageOnPBFTServlet.doGet(HttpServletRequest, HttpServletResponse)"})
+  @MethodsUnderTest({
+    "void GetBrokerageOnPBFTServlet.doGet(HttpServletRequest, HttpServletResponse)"
+  })
   public void testDoGet() throws IOException {
     // Arrange
     doNothing().when(walletOnPBFT).futureGet(Mockito.<Runnable>any());
-    MockHttpServletRequest request = new MockHttpServletRequest();
+    MockHttpServletRequest request = HttpMethed.createRequest("https://example.org/example");
 
     // Act
-    getBrokerageOnPBFTServlet.doGet(request, new CharResponseWrapper(new MockHttpServletResponse()));
+    getBrokerageOnPBFTServlet.doGet(
+        request,
+        new HttpServletResponseWrapper(new CharResponseWrapper(new MockHttpServletResponse())));
 
     // Assert
     verify(walletOnPBFT).futureGet(isA(Runnable.class));
@@ -50,19 +55,24 @@ public class GetBrokerageOnPBFTServletDiffblueTest {
 
   /**
    * Test {@link GetBrokerageOnPBFTServlet#doPost(HttpServletRequest, HttpServletResponse)}.
-   * <p>
-   * Method under test: {@link GetBrokerageOnPBFTServlet#doPost(HttpServletRequest, HttpServletResponse)}
+   *
+   * <p>Method under test: {@link GetBrokerageOnPBFTServlet#doPost(HttpServletRequest,
+   * HttpServletResponse)}
    */
   @Test
   @Category(MaintainedByDiffblue.class)
-  @MethodsUnderTest({"void GetBrokerageOnPBFTServlet.doPost(HttpServletRequest, HttpServletResponse)"})
+  @MethodsUnderTest({
+    "void GetBrokerageOnPBFTServlet.doPost(HttpServletRequest, HttpServletResponse)"
+  })
   public void testDoPost() throws IOException {
     // Arrange
     doNothing().when(walletOnPBFT).futureGet(Mockito.<Runnable>any());
-    MockHttpServletRequest request = new MockHttpServletRequest();
+    MockHttpServletRequest request = HttpMethed.createRequest("https://example.org/example");
 
     // Act
-    getBrokerageOnPBFTServlet.doPost(request, new CharResponseWrapper(new MockHttpServletResponse()));
+    getBrokerageOnPBFTServlet.doPost(
+        request,
+        new HttpServletResponseWrapper(new CharResponseWrapper(new MockHttpServletResponse())));
 
     // Assert
     verify(walletOnPBFT).futureGet(isA(Runnable.class));

@@ -14,8 +14,9 @@ import org.tron.protos.contract.Common.ResourceCode;
 public class FreezeBalanceV2ParamDiffblueTest {
   /**
    * Test getters and setters.
-   * <p>
-   * Methods under test:
+   *
+   * <p>Methods under test:
+   *
    * <ul>
    *   <li>default or parameterless constructor of {@link FreezeBalanceV2Param}
    *   <li>{@link FreezeBalanceV2Param#setFrozenBalance(long)}
@@ -28,10 +29,15 @@ public class FreezeBalanceV2ParamDiffblueTest {
    */
   @Test
   @Category(MaintainedByDiffblue.class)
-  @MethodsUnderTest({"void FreezeBalanceV2Param.<init>()", "long FreezeBalanceV2Param.getFrozenBalance()",
-      "byte[] FreezeBalanceV2Param.getOwnerAddress()", "ResourceCode FreezeBalanceV2Param.getResourceType()",
-      "void FreezeBalanceV2Param.setFrozenBalance(long)", "void FreezeBalanceV2Param.setOwnerAddress(byte[])",
-      "void FreezeBalanceV2Param.setResourceType(ResourceCode)"})
+  @MethodsUnderTest({
+    "void FreezeBalanceV2Param.<init>()",
+    "long FreezeBalanceV2Param.getFrozenBalance()",
+    "byte[] FreezeBalanceV2Param.getOwnerAddress()",
+    "ResourceCode FreezeBalanceV2Param.getResourceType()",
+    "void FreezeBalanceV2Param.setFrozenBalance(long)",
+    "void FreezeBalanceV2Param.setOwnerAddress(byte[])",
+    "void FreezeBalanceV2Param.setResourceType(ResourceCode)"
+  })
   public void testGettersAndSetters() throws UnsupportedEncodingException {
     // Arrange and Act
     FreezeBalanceV2Param actualFreezeBalanceV2Param = new FreezeBalanceV2Param();

@@ -8,7 +8,6 @@ import static org.junit.Assert.assertTrue;
 import com.diffblue.cover.annotations.MaintainedByDiffblue;
 import com.diffblue.cover.annotations.MethodsUnderTest;
 import com.google.protobuf.ByteString;
-import com.google.protobuf.UnknownFieldSet;
 import java.io.UnsupportedEncodingException;
 import java.util.ArrayList;
 import java.util.List;
@@ -21,13 +20,14 @@ import org.tron.protos.Protocol.TransactionInfo.Log;
 public class LogInfoDiffblueTest {
   /**
    * Test {@link LogInfo#LogInfo(byte[], List, byte[])}.
+   *
    * <ul>
-   *   <li>Given {@link DataWord#ZERO}.</li>
-   *   <li>When {@link ArrayList#ArrayList()} add {@link DataWord#ZERO}.</li>
-   *   <li>Then return ClonedTopics size is one.</li>
+   *   <li>Given {@link DataWord#ZERO}.
+   *   <li>When {@link ArrayList#ArrayList()} add {@link DataWord#ZERO}.
+   *   <li>Then return ClonedTopics size is one.
    * </ul>
-   * <p>
-   * Method under test: {@link LogInfo#LogInfo(byte[], List, byte[])}
+   *
+   * <p>Method under test: {@link LogInfo#LogInfo(byte[], List, byte[])}
    */
   @Test
   @Category(MaintainedByDiffblue.class)
@@ -49,34 +49,40 @@ public class LogInfoDiffblueTest {
     assertEquals(1, actualLogInfo.getHexTopics().size());
     List<DataWord> topics2 = actualLogInfo.getTopics();
     assertEquals(1, topics2.size());
-    byte[] expectedAddress = "AXAXAXAX".getBytes("UTF-8");
-    assertArrayEquals(expectedAddress, actualLogInfo.getAddress());
-    byte[] expectedClonedData = "AXAXAXAX".getBytes("UTF-8");
-    assertArrayEquals(expectedClonedData, actualLogInfo.getClonedData());
-    byte[] expectedData = "AXAXAXAX".getBytes("UTF-8");
-    assertArrayEquals(expectedData, actualLogInfo.getData());
+    assertArrayEquals("AXAXAXAX".getBytes("UTF-8"), actualLogInfo.getAddress());
+    assertArrayEquals("AXAXAXAX".getBytes("UTF-8"), actualLogInfo.getClonedData());
+    assertArrayEquals("AXAXAXAX".getBytes("UTF-8"), actualLogInfo.getData());
     DataWord getResult = topics2.get(0);
-    assertArrayEquals(new byte[]{0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0},
+    assertArrayEquals(
+        new byte[] {0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0},
         getResult.getLast20Bytes());
-    assertArrayEquals(new byte[]{'A', 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0},
+    assertArrayEquals(
+        new byte[] {'A', 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0},
         getResult.toTronAddress());
     assertArrayEquals(
-        new byte[]{0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0},
+        new byte[] {
+          0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0,
+          0, 0
+        },
         clonedTopics.get(0));
     assertArrayEquals(
-        new byte[]{0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0},
+        new byte[] {
+          0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0,
+          0, 0
+        },
         getResult.getClonedData());
   }
 
   /**
    * Test {@link LogInfo#LogInfo(byte[], List, byte[])}.
+   *
    * <ul>
-   *   <li>Given {@link DataWord#ZERO}.</li>
-   *   <li>When {@link ArrayList#ArrayList()} add {@link DataWord#ZERO}.</li>
-   *   <li>Then return HexTopics size is two.</li>
+   *   <li>Given {@link DataWord#ZERO}.
+   *   <li>When {@link ArrayList#ArrayList()} add {@link DataWord#ZERO}.
+   *   <li>Then return HexTopics size is two.
    * </ul>
-   * <p>
-   * Method under test: {@link LogInfo#LogInfo(byte[], List, byte[])}
+   *
+   * <p>Method under test: {@link LogInfo#LogInfo(byte[], List, byte[])}
    */
   @Test
   @Category(MaintainedByDiffblue.class)
@@ -96,74 +102,82 @@ public class LogInfoDiffblueTest {
     // Assert
     List<String> hexTopics = actualLogInfo.getHexTopics();
     assertEquals(2, hexTopics.size());
-    assertEquals("0000000000000000000000000000000000000000000000000000000000000000", hexTopics.get(1));
+    assertEquals(
+        "0000000000000000000000000000000000000000000000000000000000000000", hexTopics.get(1));
     List<byte[]> clonedTopics = actualLogInfo.getClonedTopics();
     assertEquals(2, clonedTopics.size());
     List<DataWord> topics2 = actualLogInfo.getTopics();
     assertEquals(2, topics2.size());
     DataWord getResult = topics2.get(0);
     assertSame(getResult, topics2.get(1));
-    byte[] expectedAddress = "AXAXAXAX".getBytes("UTF-8");
-    assertArrayEquals(expectedAddress, actualLogInfo.getAddress());
-    byte[] expectedClonedData = "AXAXAXAX".getBytes("UTF-8");
-    assertArrayEquals(expectedClonedData, actualLogInfo.getClonedData());
-    byte[] expectedData = "AXAXAXAX".getBytes("UTF-8");
-    assertArrayEquals(expectedData, actualLogInfo.getData());
-    assertArrayEquals(new byte[]{0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0},
+    assertArrayEquals("AXAXAXAX".getBytes("UTF-8"), actualLogInfo.getAddress());
+    assertArrayEquals("AXAXAXAX".getBytes("UTF-8"), actualLogInfo.getClonedData());
+    assertArrayEquals("AXAXAXAX".getBytes("UTF-8"), actualLogInfo.getData());
+    assertArrayEquals(
+        new byte[] {0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0},
         getResult.getLast20Bytes());
-    assertArrayEquals(new byte[]{'A', 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0},
+    assertArrayEquals(
+        new byte[] {'A', 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0},
         getResult.toTronAddress());
     assertArrayEquals(
-        new byte[]{0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0},
+        new byte[] {
+          0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0,
+          0, 0
+        },
         clonedTopics.get(0));
     assertArrayEquals(
-        new byte[]{0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0},
+        new byte[] {
+          0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0,
+          0, 0
+        },
         clonedTopics.get(1));
     assertArrayEquals(
-        new byte[]{0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0},
+        new byte[] {
+          0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0,
+          0, 0
+        },
         getResult.getClonedData());
   }
 
   /**
    * Test {@link LogInfo#LogInfo(byte[], List, byte[])}.
+   *
    * <ul>
-   *   <li>When {@link ArrayList#ArrayList()}.</li>
-   *   <li>Then return ClonedTopics Empty.</li>
+   *   <li>When {@link ArrayList#ArrayList()}.
+   *   <li>Then return ClonedTopics Empty.
    * </ul>
-   * <p>
-   * Method under test: {@link LogInfo#LogInfo(byte[], List, byte[])}
+   *
+   * <p>Method under test: {@link LogInfo#LogInfo(byte[], List, byte[])}
    */
   @Test
   @Category(MaintainedByDiffblue.class)
   @MethodsUnderTest({"void LogInfo.<init>(byte[], List, byte[])"})
-  public void testNewLogInfo_whenArrayList_thenReturnClonedTopicsEmpty() throws UnsupportedEncodingException {
+  public void testNewLogInfo_whenArrayList_thenReturnClonedTopicsEmpty()
+      throws UnsupportedEncodingException {
     // Arrange
     byte[] address = "AXAXAXAX".getBytes("UTF-8");
-    ArrayList<DataWord> topics = new ArrayList<>();
 
     // Act
-    LogInfo actualLogInfo = new LogInfo(address, topics, "AXAXAXAX".getBytes("UTF-8"));
+    LogInfo actualLogInfo = new LogInfo(address, new ArrayList<>(), "AXAXAXAX".getBytes("UTF-8"));
 
     // Assert
     assertTrue(actualLogInfo.getClonedTopics().isEmpty());
     assertTrue(actualLogInfo.getHexTopics().isEmpty());
     assertTrue(actualLogInfo.getTopics().isEmpty());
-    byte[] expectedAddress = "AXAXAXAX".getBytes("UTF-8");
-    assertArrayEquals(expectedAddress, actualLogInfo.getAddress());
-    byte[] expectedClonedData = "AXAXAXAX".getBytes("UTF-8");
-    assertArrayEquals(expectedClonedData, actualLogInfo.getClonedData());
-    byte[] expectedData = "AXAXAXAX".getBytes("UTF-8");
-    assertArrayEquals(expectedData, actualLogInfo.getData());
+    assertArrayEquals("AXAXAXAX".getBytes("UTF-8"), actualLogInfo.getAddress());
+    assertArrayEquals("AXAXAXAX".getBytes("UTF-8"), actualLogInfo.getClonedData());
+    assertArrayEquals("AXAXAXAX".getBytes("UTF-8"), actualLogInfo.getData());
   }
 
   /**
    * Test {@link LogInfo#LogInfo(byte[], List, byte[])}.
+   *
    * <ul>
-   *   <li>When {@code null}.</li>
-   *   <li>Then return HexData is empty string.</li>
+   *   <li>When {@code null}.
+   *   <li>Then return HexData is empty string.
    * </ul>
-   * <p>
-   * Method under test: {@link LogInfo#LogInfo(byte[], List, byte[])}
+   *
+   * <p>Method under test: {@link LogInfo#LogInfo(byte[], List, byte[])}
    */
   @Test
   @Category(MaintainedByDiffblue.class)
@@ -174,20 +188,21 @@ public class LogInfoDiffblueTest {
 
     // Assert
     assertEquals("", actualLogInfo.getHexData());
-    assertArrayEquals(new byte[]{}, actualLogInfo.getAddress());
-    assertArrayEquals(new byte[]{}, actualLogInfo.getClonedData());
-    assertArrayEquals(new byte[]{}, actualLogInfo.getData());
+    assertArrayEquals(new byte[] {}, actualLogInfo.getAddress());
+    assertArrayEquals(new byte[] {}, actualLogInfo.getClonedData());
+    assertArrayEquals(new byte[] {}, actualLogInfo.getData());
   }
 
   /**
    * Test {@link LogInfo#buildLog(LogInfo)}.
+   *
    * <ul>
-   *   <li>Given {@link DataWord#ZERO}.</li>
-   *   <li>When {@link ArrayList#ArrayList()} add {@link DataWord#ZERO}.</li>
-   *   <li>Then return TopicsList size is one.</li>
+   *   <li>Given {@link DataWord#ZERO}.
+   *   <li>When {@link ArrayList#ArrayList()} add {@link DataWord#ZERO}.
+   *   <li>Then return TopicsList size is one.
    * </ul>
-   * <p>
-   * Method under test: {@link LogInfo#buildLog(LogInfo)}
+   *
+   * <p>Method under test: {@link LogInfo#buildLog(LogInfo)}
    */
   @Test
   @Category(MaintainedByDiffblue.class)
@@ -197,10 +212,11 @@ public class LogInfoDiffblueTest {
     // Arrange
     ArrayList<DataWord> topics = new ArrayList<>();
     topics.add(DataWord.ZERO);
-    byte[] address = "AXAXAXAX".getBytes("UTF-8");
+    LogInfo logInfo =
+        new LogInfo("AXAXAXAX".getBytes("UTF-8"), topics, "AXAXAXAX".getBytes("UTF-8"));
 
     // Act
-    Log actualBuildLogResult = LogInfo.buildLog(new LogInfo(address, topics, "AXAXAXAX".getBytes("UTF-8")));
+    Log actualBuildLogResult = LogInfo.buildLog(logInfo);
 
     // Assert
     List<ByteString> topicsList = actualBuildLogResult.getTopicsList();
@@ -218,13 +234,14 @@ public class LogInfoDiffblueTest {
 
   /**
    * Test {@link LogInfo#buildLog(LogInfo)}.
+   *
    * <ul>
-   *   <li>Given {@link DataWord#ZERO}.</li>
-   *   <li>When {@link ArrayList#ArrayList()} add {@link DataWord#ZERO}.</li>
-   *   <li>Then return TopicsList size is two.</li>
+   *   <li>Given {@link DataWord#ZERO}.
+   *   <li>When {@link ArrayList#ArrayList()} add {@link DataWord#ZERO}.
+   *   <li>Then return TopicsList size is two.
    * </ul>
-   * <p>
-   * Method under test: {@link LogInfo#buildLog(LogInfo)}
+   *
+   * <p>Method under test: {@link LogInfo#buildLog(LogInfo)}
    */
   @Test
   @Category(MaintainedByDiffblue.class)
@@ -235,26 +252,29 @@ public class LogInfoDiffblueTest {
     ArrayList<DataWord> topics = new ArrayList<>();
     topics.add(DataWord.ZERO);
     topics.add(DataWord.ZERO);
-    byte[] address = "AXAXAXAX".getBytes("UTF-8");
+    LogInfo logInfo =
+        new LogInfo("AXAXAXAX".getBytes("UTF-8"), topics, "AXAXAXAX".getBytes("UTF-8"));
 
     // Act
-    Log actualBuildLogResult = LogInfo.buildLog(new LogInfo(address, topics, "AXAXAXAX".getBytes("UTF-8")));
+    Log actualBuildLogResult = LogInfo.buildLog(logInfo);
 
     // Assert
     List<ByteString> topicsList = actualBuildLogResult.getTopicsList();
     assertEquals(2, topicsList.size());
     assertEquals(2, actualBuildLogResult.getTopicsCount());
     assertEquals(88, actualBuildLogResult.getSerializedSize());
-    assertEquals(topicsList.get(0), topicsList.get(1));
+    ByteString expectedGetResult = topicsList.get(0);
+    assertEquals(expectedGetResult, topicsList.get(1));
   }
 
   /**
    * Test {@link LogInfo#buildLog(LogInfo)}.
+   *
    * <ul>
-   *   <li>Then return TopicsCount is zero.</li>
+   *   <li>Then return TopicsCount is zero.
    * </ul>
-   * <p>
-   * Method under test: {@link LogInfo#buildLog(LogInfo)}
+   *
+   * <p>Method under test: {@link LogInfo#buildLog(LogInfo)}
    */
   @Test
   @Category(MaintainedByDiffblue.class)
@@ -264,56 +284,25 @@ public class LogInfoDiffblueTest {
     byte[] address = "AXAXAXAX".getBytes("UTF-8");
     ArrayList<DataWord> topics = new ArrayList<>();
 
+    LogInfo logInfo = new LogInfo(address, topics, "AXAXAXAX".getBytes("UTF-8"));
+
     // Act
-    Log actualBuildLogResult = LogInfo.buildLog(new LogInfo(address, topics, "AXAXAXAX".getBytes("UTF-8")));
+    Log actualBuildLogResult = LogInfo.buildLog(logInfo);
 
     // Assert
     assertEquals(0, actualBuildLogResult.getTopicsCount());
     assertEquals(2, actualBuildLogResult.getAllFields().size());
     assertEquals(20, actualBuildLogResult.getSerializedSize());
     assertTrue(actualBuildLogResult.getTopicsList().isEmpty());
-    assertEquals(topics, actualBuildLogResult.getDescriptorForType().toProto().getReservedNameList());
-  }
-
-  /**
-   * Test {@link LogInfo#buildLog(LogInfo)}.
-   * <ul>
-   *   <li>When {@code A}.</li>
-   *   <li>Then return Data toStringUtf8 is {@code AXAXAXAX}.</li>
-   * </ul>
-   * <p>
-   * Method under test: {@link LogInfo#buildLog(LogInfo)}
-   */
-  @Test
-  @Category(MaintainedByDiffblue.class)
-  @MethodsUnderTest({"Log LogInfo.buildLog(LogInfo)"})
-  public void testBuildLog_whenA_thenReturnDataToStringUtf8IsAxaxaxax() throws UnsupportedEncodingException {
-    // Arrange
-    ArrayList<DataWord> topics = new ArrayList<>();
-
-    // Act
-    Log actualBuildLogResult = LogInfo
-        .buildLog(new LogInfo(new byte[]{-1, 'X', 'A', 'X', 'A', 'X', 'A', 'X'}, topics, "AXAXAXAX".getBytes("UTF-8")));
-
-    // Assert
-    ByteString data = actualBuildLogResult.getData();
-    assertEquals("AXAXAXAX", data.toStringUtf8());
-    ByteString address = actualBuildLogResult.getAddress();
-    assertEquals("�XAXAXAX", address.toStringUtf8());
-    assertFalse(data.isEmpty());
-    assertTrue(address.iterator().hasNext());
-    assertTrue(data.iterator().hasNext());
-    UnknownFieldSet unknownFields = actualBuildLogResult.getUnknownFields();
-    Log defaultInstanceForType = actualBuildLogResult.getDefaultInstanceForType();
-    assertSame(unknownFields, defaultInstanceForType.getUnknownFields());
-    assertSame(unknownFields, unknownFields.getDefaultInstanceForType());
-    assertSame(defaultInstanceForType.getDefaultInstanceForType(), defaultInstanceForType.getDefaultInstanceForType());
+    assertEquals(
+        topics, actualBuildLogResult.getDescriptorForType().toProto().getReservedNameList());
   }
 
   /**
    * Test getters and setters.
-   * <p>
-   * Methods under test:
+   *
+   * <p>Methods under test:
+   *
    * <ul>
    *   <li>{@link LogInfo#getAddress()}
    *   <li>{@link LogInfo#getData()}
@@ -322,11 +311,16 @@ public class LogInfoDiffblueTest {
    */
   @Test
   @Category(MaintainedByDiffblue.class)
-  @MethodsUnderTest({"byte[] LogInfo.getAddress()", "byte[] LogInfo.getData()", "List LogInfo.getTopics()"})
+  @MethodsUnderTest({
+    "byte[] LogInfo.getAddress()",
+    "byte[] LogInfo.getData()",
+    "List LogInfo.getTopics()"
+  })
   public void testGettersAndSetters() throws UnsupportedEncodingException {
     // Arrange
     byte[] address = "AXAXAXAX".getBytes("UTF-8");
     ArrayList<DataWord> topics = new ArrayList<>();
+
     LogInfo logInfo = new LogInfo(address, topics, "AXAXAXAX".getBytes("UTF-8"));
 
     // Act
@@ -343,37 +337,42 @@ public class LogInfoDiffblueTest {
 
   /**
    * Test {@link LogInfo#getHexTopics()}.
+   *
    * <ul>
-   *   <li>Given {@link ArrayList#ArrayList()} add {@link DataWord#ZERO}.</li>
-   *   <li>Then return size is one.</li>
+   *   <li>Given {@link ArrayList#ArrayList()} add {@link DataWord#ZERO}.
+   *   <li>Then return size is one.
    * </ul>
-   * <p>
-   * Method under test: {@link LogInfo#getHexTopics()}
+   *
+   * <p>Method under test: {@link LogInfo#getHexTopics()}
    */
   @Test
   @Category(MaintainedByDiffblue.class)
   @MethodsUnderTest({"List LogInfo.getHexTopics()"})
-  public void testGetHexTopics_givenArrayListAddZero_thenReturnSizeIsOne() throws UnsupportedEncodingException {
+  public void testGetHexTopics_givenArrayListAddZero_thenReturnSizeIsOne()
+      throws UnsupportedEncodingException {
     // Arrange
     ArrayList<DataWord> topics = new ArrayList<>();
     topics.add(DataWord.ZERO);
-    byte[] address = "AXAXAXAX".getBytes("UTF-8");
+    LogInfo logInfo =
+        new LogInfo("AXAXAXAX".getBytes("UTF-8"), topics, "AXAXAXAX".getBytes("UTF-8"));
 
     // Act
-    List<String> actualHexTopics = (new LogInfo(address, topics, "AXAXAXAX".getBytes("UTF-8"))).getHexTopics();
+    List<String> actualHexTopics = logInfo.getHexTopics();
 
     // Assert
     assertEquals(1, actualHexTopics.size());
-    assertEquals("0000000000000000000000000000000000000000000000000000000000000000", actualHexTopics.get(0));
+    assertEquals(
+        "0000000000000000000000000000000000000000000000000000000000000000", actualHexTopics.get(0));
   }
 
   /**
    * Test {@link LogInfo#getHexTopics()}.
+   *
    * <ul>
-   *   <li>Then return Empty.</li>
+   *   <li>Then return Empty.
    * </ul>
-   * <p>
-   * Method under test: {@link LogInfo#getHexTopics()}
+   *
+   * <p>Method under test: {@link LogInfo#getHexTopics()}
    */
   @Test
   @Category(MaintainedByDiffblue.class)
@@ -381,47 +380,54 @@ public class LogInfoDiffblueTest {
   public void testGetHexTopics_thenReturnEmpty() throws UnsupportedEncodingException {
     // Arrange
     byte[] address = "AXAXAXAX".getBytes("UTF-8");
-    ArrayList<DataWord> topics = new ArrayList<>();
+    LogInfo logInfo = new LogInfo(address, new ArrayList<>(), "AXAXAXAX".getBytes("UTF-8"));
 
     // Act and Assert
-    assertTrue((new LogInfo(address, topics, "AXAXAXAX".getBytes("UTF-8"))).getHexTopics().isEmpty());
+    assertTrue(logInfo.getHexTopics().isEmpty());
   }
 
   /**
    * Test {@link LogInfo#getClonedTopics()}.
+   *
    * <ul>
-   *   <li>Given {@link ArrayList#ArrayList()} add {@link DataWord#ZERO}.</li>
-   *   <li>Then return size is one.</li>
+   *   <li>Given {@link ArrayList#ArrayList()} add {@link DataWord#ZERO}.
+   *   <li>Then return size is one.
    * </ul>
-   * <p>
-   * Method under test: {@link LogInfo#getClonedTopics()}
+   *
+   * <p>Method under test: {@link LogInfo#getClonedTopics()}
    */
   @Test
   @Category(MaintainedByDiffblue.class)
   @MethodsUnderTest({"List LogInfo.getClonedTopics()"})
-  public void testGetClonedTopics_givenArrayListAddZero_thenReturnSizeIsOne() throws UnsupportedEncodingException {
+  public void testGetClonedTopics_givenArrayListAddZero_thenReturnSizeIsOne()
+      throws UnsupportedEncodingException {
     // Arrange
     ArrayList<DataWord> topics = new ArrayList<>();
     topics.add(DataWord.ZERO);
-    byte[] address = "AXAXAXAX".getBytes("UTF-8");
+    LogInfo logInfo =
+        new LogInfo("AXAXAXAX".getBytes("UTF-8"), topics, "AXAXAXAX".getBytes("UTF-8"));
 
     // Act
-    List<byte[]> actualClonedTopics = (new LogInfo(address, topics, "AXAXAXAX".getBytes("UTF-8"))).getClonedTopics();
+    List<byte[]> actualClonedTopics = logInfo.getClonedTopics();
 
     // Assert
     assertEquals(1, actualClonedTopics.size());
     assertArrayEquals(
-        new byte[]{0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0},
+        new byte[] {
+          0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0,
+          0, 0
+        },
         actualClonedTopics.get(0));
   }
 
   /**
    * Test {@link LogInfo#getClonedTopics()}.
+   *
    * <ul>
-   *   <li>Then return Empty.</li>
+   *   <li>Then return Empty.
    * </ul>
-   * <p>
-   * Method under test: {@link LogInfo#getClonedTopics()}
+   *
+   * <p>Method under test: {@link LogInfo#getClonedTopics()}
    */
   @Test
   @Category(MaintainedByDiffblue.class)
@@ -429,16 +435,16 @@ public class LogInfoDiffblueTest {
   public void testGetClonedTopics_thenReturnEmpty() throws UnsupportedEncodingException {
     // Arrange
     byte[] address = "AXAXAXAX".getBytes("UTF-8");
-    ArrayList<DataWord> topics = new ArrayList<>();
+    LogInfo logInfo = new LogInfo(address, new ArrayList<>(), "AXAXAXAX".getBytes("UTF-8"));
 
     // Act and Assert
-    assertTrue((new LogInfo(address, topics, "AXAXAXAX".getBytes("UTF-8"))).getClonedTopics().isEmpty());
+    assertTrue(logInfo.getClonedTopics().isEmpty());
   }
 
   /**
    * Test {@link LogInfo#getHexData()}.
-   * <p>
-   * Method under test: {@link LogInfo#getHexData()}
+   *
+   * <p>Method under test: {@link LogInfo#getHexData()}
    */
   @Test
   @Category(MaintainedByDiffblue.class)
@@ -446,42 +452,42 @@ public class LogInfoDiffblueTest {
   public void testGetHexData() throws UnsupportedEncodingException {
     // Arrange
     byte[] address = "AXAXAXAX".getBytes("UTF-8");
-    ArrayList<DataWord> topics = new ArrayList<>();
+    LogInfo logInfo = new LogInfo(address, new ArrayList<>(), "AXAXAXAX".getBytes("UTF-8"));
 
     // Act and Assert
-    assertEquals("4158415841584158", (new LogInfo(address, topics, "AXAXAXAX".getBytes("UTF-8"))).getHexData());
+    assertEquals("4158415841584158", logInfo.getHexData());
   }
 
   /**
    * Test {@link LogInfo#getClonedData()}.
+   *
    * <ul>
-   *   <li>Then return {@code AXAXAXAX} Bytes is {@code UTF-8}.</li>
+   *   <li>Then return {@code AXAXAXAX} Bytes is {@code UTF-8}.
    * </ul>
-   * <p>
-   * Method under test: {@link LogInfo#getClonedData()}
+   *
+   * <p>Method under test: {@link LogInfo#getClonedData()}
    */
   @Test
   @Category(MaintainedByDiffblue.class)
   @MethodsUnderTest({"byte[] LogInfo.getClonedData()"})
-  public void testGetClonedData_thenReturnAxaxaxaxBytesIsUtf8() throws UnsupportedEncodingException {
+  public void testGetClonedData_thenReturnAxaxaxaxBytesIsUtf8()
+      throws UnsupportedEncodingException {
     // Arrange
     byte[] address = "AXAXAXAX".getBytes("UTF-8");
-    ArrayList<DataWord> topics = new ArrayList<>();
+    LogInfo logInfo = new LogInfo(address, new ArrayList<>(), "AXAXAXAX".getBytes("UTF-8"));
 
-    // Act
-    byte[] actualClonedData = (new LogInfo(address, topics, "AXAXAXAX".getBytes("UTF-8"))).getClonedData();
-
-    // Assert
-    assertArrayEquals("AXAXAXAX".getBytes("UTF-8"), actualClonedData);
+    // Act and Assert
+    assertArrayEquals("AXAXAXAX".getBytes("UTF-8"), logInfo.getClonedData());
   }
 
   /**
    * Test {@link LogInfo#getClonedData()}.
+   *
    * <ul>
-   *   <li>Then return empty array of {@code byte}.</li>
+   *   <li>Then return empty array of {@code byte}.
    * </ul>
-   * <p>
-   * Method under test: {@link LogInfo#getClonedData()}
+   *
+   * <p>Method under test: {@link LogInfo#getClonedData()}
    */
   @Test
   @Category(MaintainedByDiffblue.class)
@@ -489,43 +495,48 @@ public class LogInfoDiffblueTest {
   public void testGetClonedData_thenReturnEmptyArrayOfByte() throws UnsupportedEncodingException {
     // Arrange
     byte[] address = "AXAXAXAX".getBytes("UTF-8");
+    LogInfo logInfo = new LogInfo(address, new ArrayList<>(), new byte[] {});
 
     // Act and Assert
-    assertArrayEquals(new byte[]{}, (new LogInfo(address, new ArrayList<>(), new byte[]{})).getClonedData());
+    assertArrayEquals(new byte[] {}, logInfo.getClonedData());
   }
 
   /**
    * Test {@link LogInfo#toString()}.
+   *
    * <ul>
-   *   <li>Given {@link ArrayList#ArrayList()} add {@link DataWord#ZERO}.</li>
-   *   <li>Then return a string.</li>
+   *   <li>Given {@link ArrayList#ArrayList()} add {@link DataWord#ZERO}.
+   *   <li>Then return a string.
    * </ul>
-   * <p>
-   * Method under test: {@link LogInfo#toString()}
+   *
+   * <p>Method under test: {@link LogInfo#toString()}
    */
   @Test
   @Category(MaintainedByDiffblue.class)
   @MethodsUnderTest({"String LogInfo.toString()"})
-  public void testToString_givenArrayListAddZero_thenReturnAString() throws UnsupportedEncodingException {
+  public void testToString_givenArrayListAddZero_thenReturnAString()
+      throws UnsupportedEncodingException {
     // Arrange
     ArrayList<DataWord> topics = new ArrayList<>();
     topics.add(DataWord.ZERO);
-    byte[] address = "AXAXAXAX".getBytes("UTF-8");
+    LogInfo logInfo =
+        new LogInfo("AXAXAXAX".getBytes("UTF-8"), topics, "AXAXAXAX".getBytes("UTF-8"));
 
     // Act and Assert
     assertEquals(
         "LogInfo{address=4158415841584158, topics=[0000000000000000000000000000000000000000000000000000000000000000"
             + " ], data=4158415841584158}",
-        (new LogInfo(address, topics, "AXAXAXAX".getBytes("UTF-8"))).toString());
+        logInfo.toString());
   }
 
   /**
    * Test {@link LogInfo#toString()}.
+   *
    * <ul>
-   *   <li>Then return {@code LogInfo{address=4158415841584158, topics=[], data=4158415841584158}}.</li>
+   *   <li>Then return {@code LogInfo{address=4158415841584158, topics=[], data=4158415841584158}}.
    * </ul>
-   * <p>
-   * Method under test: {@link LogInfo#toString()}
+   *
+   * <p>Method under test: {@link LogInfo#toString()}
    */
   @Test
   @Category(MaintainedByDiffblue.class)
@@ -534,10 +545,10 @@ public class LogInfoDiffblueTest {
       throws UnsupportedEncodingException {
     // Arrange
     byte[] address = "AXAXAXAX".getBytes("UTF-8");
-    ArrayList<DataWord> topics = new ArrayList<>();
+    LogInfo logInfo = new LogInfo(address, new ArrayList<>(), "AXAXAXAX".getBytes("UTF-8"));
 
     // Act and Assert
-    assertEquals("LogInfo{address=4158415841584158, topics=[], data=4158415841584158}",
-        (new LogInfo(address, topics, "AXAXAXAX".getBytes("UTF-8"))).toString());
+    assertEquals(
+        "LogInfo{address=4158415841584158, topics=[], data=4158415841584158}", logInfo.toString());
   }
 }

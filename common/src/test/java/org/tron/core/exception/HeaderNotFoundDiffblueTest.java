@@ -10,11 +10,12 @@ import org.junit.experimental.categories.Category;
 public class HeaderNotFoundDiffblueTest {
   /**
    * Test {@link HeaderNotFound#HeaderNotFound(String)}.
+   *
    * <ul>
-   *   <li>Then return Message is {@code Not all who wander are lost}.</li>
+   *   <li>Then return Message is {@code Not all who wander are lost}.
    * </ul>
-   * <p>
-   * Method under test: {@link HeaderNotFound#HeaderNotFound(String)}
+   *
+   * <p>Method under test: {@link HeaderNotFound#HeaderNotFound(String)}
    */
   @Test
   @Category(MaintainedByDiffblue.class)
@@ -31,11 +32,12 @@ public class HeaderNotFoundDiffblueTest {
 
   /**
    * Test {@link HeaderNotFound#HeaderNotFound()}.
+   *
    * <ul>
-   *   <li>Then return Message is {@code null}.</li>
+   *   <li>Then return Message is {@code null}.
    * </ul>
-   * <p>
-   * Method under test: {@link HeaderNotFound#HeaderNotFound()}
+   *
+   * <p>Method under test: {@link HeaderNotFound#HeaderNotFound()}
    */
   @Test
   @Category(MaintainedByDiffblue.class)

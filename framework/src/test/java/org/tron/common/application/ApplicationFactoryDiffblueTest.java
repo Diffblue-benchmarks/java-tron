@@ -13,24 +13,19 @@ import org.junit.experimental.categories.Category;
 import org.mockito.Mockito;
 import org.springframework.beans.BeansException;
 import org.springframework.context.ApplicationContext;
-import org.springframework.context.annotation.AnnotationConfigApplicationContext;
 
 public class ApplicationFactoryDiffblueTest {
   /**
    * Test {@link ApplicationFactory#create(ApplicationContext)}.
-   * <ul>
-   *   <li>Given {@link ApplicationImpl} (default constructor).</li>
-   *   <li>Then return {@link ApplicationImpl}.</li>
-   * </ul>
-   * <p>
-   * Method under test: {@link ApplicationFactory#create(ApplicationContext)}
+   *
+   * <p>Method under test: {@link ApplicationFactory#create(ApplicationContext)}
    */
   @Test
   @Category(MaintainedByDiffblue.class)
   @MethodsUnderTest({"Application ApplicationFactory.create(ApplicationContext)"})
-  public void testCreate_givenApplicationImpl_thenReturnApplicationImpl() throws BeansException {
+  public void testCreate() throws BeansException {
     // Arrange
-    AnnotationConfigApplicationContext ctx = mock(AnnotationConfigApplicationContext.class);
+    ApplicationContext ctx = mock(ApplicationContext.class);
     when(ctx.getBean(Mockito.<Class<ApplicationImpl>>any())).thenReturn(new ApplicationImpl());
 
     // Act
@@ -45,15 +40,15 @@ public class ApplicationFactoryDiffblueTest {
 
   /**
    * Test {@link ApplicationFactory#createApplication()}.
-   * <p>
-   * Method under test: {@link ApplicationFactory#createApplication()}
+   *
+   * <p>Method under test: {@link ApplicationFactory#createApplication()}
    */
   @Test
   @Category(MaintainedByDiffblue.class)
   @MethodsUnderTest({"Application ApplicationFactory.createApplication()"})
   public void testCreateApplication() {
     // Arrange and Act
-    Application actualCreateApplicationResult = (new ApplicationFactory()).createApplication();
+    Application actualCreateApplicationResult = new ApplicationFactory().createApplication();
 
     // Assert
     assertTrue(actualCreateApplicationResult instanceof ApplicationImpl);

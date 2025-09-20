@@ -27,11 +27,13 @@ import org.tron.common.log.layout.MultiLayoutPattern.Rule;
 public class MultiLayoutPatternDiffblueTest {
   /**
    * Test {@link MultiLayoutPattern#addRule(Rule)}.
+   *
    * <ul>
-   *   <li>Then {@link Rule} (default constructor) PatternLayoutEncoder Context {@link LoggerContext}.</li>
+   *   <li>Then {@link Rule} (default constructor) PatternLayoutEncoder Context {@link
+   *       LoggerContext}.
    * </ul>
-   * <p>
-   * Method under test: {@link MultiLayoutPattern#addRule(Rule)}
+   *
+   * <p>Method under test: {@link MultiLayoutPattern#addRule(Rule)}
    */
   @Test
   @Category(MaintainedByDiffblue.class)
@@ -62,12 +64,14 @@ public class MultiLayoutPatternDiffblueTest {
 
   /**
    * Test {@link MultiLayoutPattern#addRule(Rule)}.
+   *
    * <ul>
-   *   <li>When {@link Rule} (default constructor).</li>
-   *   <li>Then {@link Rule} (default constructor) PatternLayoutEncoder Layout {@link PatternLayout}.</li>
+   *   <li>When {@link Rule} (default constructor).
+   *   <li>Then {@link Rule} (default constructor) PatternLayoutEncoder Layout {@link
+   *       PatternLayout}.
    * </ul>
-   * <p>
-   * Method under test: {@link MultiLayoutPattern#addRule(Rule)}
+   *
+   * <p>Method under test: {@link MultiLayoutPattern#addRule(Rule)}
    */
   @Test
   @Category(MaintainedByDiffblue.class)
@@ -97,12 +101,13 @@ public class MultiLayoutPatternDiffblueTest {
 
   /**
    * Test {@link MultiLayoutPattern#encode(ILoggingEvent)} with {@code ILoggingEvent}.
+   *
    * <ul>
-   *   <li>When {@link LoggingEvent#LoggingEvent()}.</li>
-   *   <li>Then throw {@link IllegalArgumentException}.</li>
+   *   <li>When {@link LoggingEvent#LoggingEvent()}.
+   *   <li>Then throw {@link IllegalArgumentException}.
    * </ul>
-   * <p>
-   * Method under test: {@link MultiLayoutPattern#encode(ILoggingEvent)}
+   *
+   * <p>Method under test: {@link MultiLayoutPattern#encode(ILoggingEvent)}
    */
   @Test
   @Category(MaintainedByDiffblue.class)
@@ -112,13 +117,15 @@ public class MultiLayoutPatternDiffblueTest {
     MultiLayoutPattern multiLayoutPattern = new MultiLayoutPattern();
 
     // Act and Assert
-    assertThrows(IllegalArgumentException.class, () -> multiLayoutPattern.encode(new LoggingEvent()));
+    assertThrows(
+        IllegalArgumentException.class, () -> multiLayoutPattern.encode(new LoggingEvent()));
   }
 
   /**
    * Test Rule getters and setters.
-   * <p>
-   * Methods under test:
+   *
+   * <p>Methods under test:
+   *
    * <ul>
    *   <li>default or parameterless constructor of {@link Rule}
    *   <li>{@link Rule#setLogger(String)}
@@ -132,9 +139,16 @@ public class MultiLayoutPatternDiffblueTest {
    */
   @Test
   @Category(MaintainedByDiffblue.class)
-  @MethodsUnderTest({"void Rule.<init>()", "String Rule.getLogger()", "String Rule.getPattern()",
-      "PatternLayoutEncoder Rule.getPatternLayoutEncoder()", "boolean Rule.isOutputPatternAsHeader()",
-      "void Rule.setLogger(String)", "void Rule.setOutputPatternAsHeader(boolean)", "void Rule.setPattern(String)"})
+  @MethodsUnderTest({
+    "void Rule.<init>()",
+    "String Rule.getLogger()",
+    "String Rule.getPattern()",
+    "PatternLayoutEncoder Rule.getPatternLayoutEncoder()",
+    "boolean Rule.isOutputPatternAsHeader()",
+    "void Rule.setLogger(String)",
+    "void Rule.setOutputPatternAsHeader(boolean)",
+    "void Rule.setPattern(String)"
+  })
   public void testRuleGettersAndSetters() {
     // Arrange and Act
     Rule actualRule = new Rule();
@@ -154,12 +168,14 @@ public class MultiLayoutPatternDiffblueTest {
 
   /**
    * Test Rule {@link Rule#start(Context)}.
+   *
    * <ul>
-   *   <li>Given {@link Rule} (default constructor).</li>
-   *   <li>Then {@link LoggerContext} (default constructor) StatusManager CopyOfStatusList size is one.</li>
+   *   <li>Given {@link Rule} (default constructor).
+   *   <li>Then {@link LoggerContext} (default constructor) StatusManager CopyOfStatusList size is
+   *       one.
    * </ul>
-   * <p>
-   * Method under test: {@link Rule#start(Context)}
+   *
+   * <p>Method under test: {@link Rule#start(Context)}
    */
   @Test
   @Category(MaintainedByDiffblue.class)
@@ -196,11 +212,13 @@ public class MultiLayoutPatternDiffblueTest {
 
   /**
    * Test Rule {@link Rule#start(Context)}.
+   *
    * <ul>
-   *   <li>Then {@link Rule} (default constructor) PatternLayoutEncoder Layout {@link PatternLayout}.</li>
+   *   <li>Then {@link Rule} (default constructor) PatternLayoutEncoder Layout {@link
+   *       PatternLayout}.
    * </ul>
-   * <p>
-   * Method under test: {@link Rule#start(Context)}
+   *
+   * <p>Method under test: {@link Rule#start(Context)}
    */
   @Test
   @Category(MaintainedByDiffblue.class)
@@ -227,12 +245,13 @@ public class MultiLayoutPatternDiffblueTest {
 
   /**
    * Test {@link MultiLayoutPattern#start()}.
+   *
    * <ul>
-   *   <li>Given {@link MultiLayoutPattern} (default constructor).</li>
-   *   <li>Then {@link MultiLayoutPattern} (default constructor) Layout Context is {@code null}.</li>
+   *   <li>Given {@link MultiLayoutPattern} (default constructor).
+   *   <li>Then {@link MultiLayoutPattern} (default constructor) Layout Context is {@code null}.
    * </ul>
-   * <p>
-   * Method under test: {@link MultiLayoutPattern#start()}
+   *
+   * <p>Method under test: {@link MultiLayoutPattern#start()}
    */
   @Test
   @Category(MaintainedByDiffblue.class)
@@ -255,11 +274,12 @@ public class MultiLayoutPatternDiffblueTest {
 
   /**
    * Test {@link MultiLayoutPattern#start()}.
+   *
    * <ul>
-   *   <li>Then {@link MultiLayoutPattern} (default constructor) Layout Pattern is {@code Pattern}.</li>
+   *   <li>Then {@link MultiLayoutPattern} (default constructor) Layout Pattern is {@code Pattern}.
    * </ul>
-   * <p>
-   * Method under test: {@link MultiLayoutPattern#start()}
+   *
+   * <p>Method under test: {@link MultiLayoutPattern#start()}
    */
   @Test
   @Category(MaintainedByDiffblue.class)
@@ -284,8 +304,8 @@ public class MultiLayoutPatternDiffblueTest {
 
   /**
    * Test new {@link MultiLayoutPattern} (default constructor).
-   * <p>
-   * Method under test: default or parameterless constructor of {@link MultiLayoutPattern}
+   *
+   * <p>Method under test: default or parameterless constructor of {@link MultiLayoutPattern}
    */
   @Test
   @Category(MaintainedByDiffblue.class)

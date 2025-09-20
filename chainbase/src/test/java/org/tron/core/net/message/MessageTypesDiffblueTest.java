@@ -12,8 +12,8 @@ import org.junit.experimental.categories.Category;
 public class MessageTypesDiffblueTest {
   /**
    * Test {@link MessageTypes#fromByte(byte)}.
-   * <p>
-   * Method under test: {@link MessageTypes#fromByte(byte)}
+   *
+   * <p>Method under test: {@link MessageTypes#fromByte(byte)}
    */
   @Test
   @Category(MaintainedByDiffblue.class)
@@ -25,12 +25,13 @@ public class MessageTypesDiffblueTest {
 
   /**
    * Test {@link MessageTypes#inRange(byte)}.
+   *
    * <ul>
-   *   <li>When {@code A}.</li>
-   *   <li>Then return {@code false}.</li>
+   *   <li>When {@code A}.
+   *   <li>Then return {@code false}.
    * </ul>
-   * <p>
-   * Method under test: {@link MessageTypes#inRange(byte)}
+   *
+   * <p>Method under test: {@link MessageTypes#inRange(byte)}
    */
   @Test
   @Category(MaintainedByDiffblue.class)
@@ -42,12 +43,13 @@ public class MessageTypesDiffblueTest {
 
   /**
    * Test {@link MessageTypes#inRange(byte)}.
+   *
    * <ul>
-   *   <li>When {@link Byte#MIN_VALUE}.</li>
-   *   <li>Then return {@code true}.</li>
+   *   <li>When {@link Byte#MIN_VALUE}.
+   *   <li>Then return {@code true}.
    * </ul>
-   * <p>
-   * Method under test: {@link MessageTypes#inRange(byte)}
+   *
+   * <p>Method under test: {@link MessageTypes#inRange(byte)}
    */
   @Test
   @Category(MaintainedByDiffblue.class)
@@ -59,12 +61,13 @@ public class MessageTypesDiffblueTest {
 
   /**
    * Test {@link MessageTypes#inP2pRange(byte)}.
+   *
    * <ul>
-   *   <li>When {@code A}.</li>
-   *   <li>Then return {@code false}.</li>
+   *   <li>When {@code A}.
+   *   <li>Then return {@code false}.
    * </ul>
-   * <p>
-   * Method under test: {@link MessageTypes#inP2pRange(byte)}
+   *
+   * <p>Method under test: {@link MessageTypes#inP2pRange(byte)}
    */
   @Test
   @Category(MaintainedByDiffblue.class)
@@ -76,12 +79,13 @@ public class MessageTypesDiffblueTest {
 
   /**
    * Test {@link MessageTypes#inP2pRange(byte)}.
+   *
    * <ul>
-   *   <li>When {@code #}.</li>
-   *   <li>Then return {@code true}.</li>
+   *   <li>When {@code #}.
+   *   <li>Then return {@code true}.
    * </ul>
-   * <p>
-   * Method under test: {@link MessageTypes#inP2pRange(byte)}
+   *
+   * <p>Method under test: {@link MessageTypes#inP2pRange(byte)}
    */
   @Test
   @Category(MaintainedByDiffblue.class)
@@ -93,12 +97,13 @@ public class MessageTypesDiffblueTest {
 
   /**
    * Test {@link MessageTypes#inP2pRange(byte)}.
+   *
    * <ul>
-   *   <li>When zero.</li>
-   *   <li>Then return {@code false}.</li>
+   *   <li>When zero.
+   *   <li>Then return {@code false}.
    * </ul>
-   * <p>
-   * Method under test: {@link MessageTypes#inP2pRange(byte)}
+   *
+   * <p>Method under test: {@link MessageTypes#inP2pRange(byte)}
    */
   @Test
   @Category(MaintainedByDiffblue.class)
@@ -110,12 +115,13 @@ public class MessageTypesDiffblueTest {
 
   /**
    * Test {@link MessageTypes#inTronRange(byte)}.
+   *
    * <ul>
-   *   <li>When {@code A}.</li>
-   *   <li>Then return {@code false}.</li>
+   *   <li>When {@code A}.
+   *   <li>Then return {@code false}.
    * </ul>
-   * <p>
-   * Method under test: {@link MessageTypes#inTronRange(byte)}
+   *
+   * <p>Method under test: {@link MessageTypes#inTronRange(byte)}
    */
   @Test
   @Category(MaintainedByDiffblue.class)
@@ -127,12 +133,13 @@ public class MessageTypesDiffblueTest {
 
   /**
    * Test {@link MessageTypes#inTronRange(byte)}.
+   *
    * <ul>
-   *   <li>When minus one.</li>
-   *   <li>Then return {@code false}.</li>
+   *   <li>When minus one.
+   *   <li>Then return {@code false}.
    * </ul>
-   * <p>
-   * Method under test: {@link MessageTypes#inTronRange(byte)}
+   *
+   * <p>Method under test: {@link MessageTypes#inTronRange(byte)}
    */
   @Test
   @Category(MaintainedByDiffblue.class)
@@ -144,12 +151,13 @@ public class MessageTypesDiffblueTest {
 
   /**
    * Test {@link MessageTypes#inTronRange(byte)}.
+   *
    * <ul>
-   *   <li>When twenty.</li>
-   *   <li>Then return {@code true}.</li>
+   *   <li>When twenty.
+   *   <li>Then return {@code true}.
    * </ul>
-   * <p>
-   * Method under test: {@link MessageTypes#inTronRange(byte)}
+   *
+   * <p>Method under test: {@link MessageTypes#inTronRange(byte)}
    */
   @Test
   @Category(MaintainedByDiffblue.class)
@@ -161,8 +169,8 @@ public class MessageTypesDiffblueTest {
 
   /**
    * Test {@link MessageTypes#asByte()}.
-   * <p>
-   * Method under test: {@link MessageTypes#asByte()}
+   *
+   * <p>Method under test: {@link MessageTypes#asByte()}
    */
   @Test
   @Category(MaintainedByDiffblue.class)
@@ -174,12 +182,13 @@ public class MessageTypesDiffblueTest {
 
   /**
    * Test {@link MessageTypes#inPbftRange(byte)}.
+   *
    * <ul>
-   *   <li>When {@code 4}.</li>
-   *   <li>Then return {@code true}.</li>
+   *   <li>When {@code 4}.
+   *   <li>Then return {@code true}.
    * </ul>
-   * <p>
-   * Method under test: {@link MessageTypes#inPbftRange(byte)}
+   *
+   * <p>Method under test: {@link MessageTypes#inPbftRange(byte)}
    */
   @Test
   @Category(MaintainedByDiffblue.class)
@@ -191,12 +200,13 @@ public class MessageTypesDiffblueTest {
 
   /**
    * Test {@link MessageTypes#inPbftRange(byte)}.
+   *
    * <ul>
-   *   <li>When {@code A}.</li>
-   *   <li>Then return {@code false}.</li>
+   *   <li>When {@code A}.
+   *   <li>Then return {@code false}.
    * </ul>
-   * <p>
-   * Method under test: {@link MessageTypes#inPbftRange(byte)}
+   *
+   * <p>Method under test: {@link MessageTypes#inPbftRange(byte)}
    */
   @Test
   @Category(MaintainedByDiffblue.class)
@@ -208,12 +218,13 @@ public class MessageTypesDiffblueTest {
 
   /**
    * Test {@link MessageTypes#toString()}.
+   *
    * <ul>
-   *   <li>Given {@code BLOCK}.</li>
-   *   <li>Then return {@code BLOCK}.</li>
+   *   <li>Given {@code BLOCK}.
+   *   <li>Then return {@code BLOCK}.
    * </ul>
-   * <p>
-   * Method under test: {@link MessageTypes#toString()}
+   *
+   * <p>Method under test: {@link MessageTypes#toString()}
    */
   @Test
   @Category(MaintainedByDiffblue.class)
@@ -225,12 +236,13 @@ public class MessageTypesDiffblueTest {
 
   /**
    * Test {@link MessageTypes#toString()}.
+   *
    * <ul>
-   *   <li>Given {@code FETCH_INV_DATA}.</li>
-   *   <li>Then return {@code FETCH_INV_DATA}.</li>
+   *   <li>Given {@code FETCH_INV_DATA}.
+   *   <li>Then return {@code FETCH_INV_DATA}.
    * </ul>
-   * <p>
-   * Method under test: {@link MessageTypes#toString()}
+   *
+   * <p>Method under test: {@link MessageTypes#toString()}
    */
   @Test
   @Category(MaintainedByDiffblue.class)
@@ -242,12 +254,13 @@ public class MessageTypesDiffblueTest {
 
   /**
    * Test {@link MessageTypes#toString()}.
+   *
    * <ul>
-   *   <li>Given {@code FIRST}.</li>
-   *   <li>Then return {@code FIRST}.</li>
+   *   <li>Given {@code FIRST}.
+   *   <li>Then return {@code FIRST}.
    * </ul>
-   * <p>
-   * Method under test: {@link MessageTypes#toString()}
+   *
+   * <p>Method under test: {@link MessageTypes#toString()}
    */
   @Test
   @Category(MaintainedByDiffblue.class)
@@ -259,12 +272,13 @@ public class MessageTypesDiffblueTest {
 
   /**
    * Test {@link MessageTypes#toString()}.
+   *
    * <ul>
-   *   <li>Given {@code INVENTORY}.</li>
-   *   <li>Then return {@code INVENTORY}.</li>
+   *   <li>Given {@code INVENTORY}.
+   *   <li>Then return {@code INVENTORY}.
    * </ul>
-   * <p>
-   * Method under test: {@link MessageTypes#toString()}
+   *
+   * <p>Method under test: {@link MessageTypes#toString()}
    */
   @Test
   @Category(MaintainedByDiffblue.class)
@@ -276,12 +290,13 @@ public class MessageTypesDiffblueTest {
 
   /**
    * Test {@link MessageTypes#toString()}.
+   *
    * <ul>
-   *   <li>Given {@code SYNC_BLOCK_CHAIN}.</li>
-   *   <li>Then return {@code SYNC_BLOCK_CHAIN}.</li>
+   *   <li>Given {@code SYNC_BLOCK_CHAIN}.
+   *   <li>Then return {@code SYNC_BLOCK_CHAIN}.
    * </ul>
-   * <p>
-   * Method under test: {@link MessageTypes#toString()}
+   *
+   * <p>Method under test: {@link MessageTypes#toString()}
    */
   @Test
   @Category(MaintainedByDiffblue.class)
@@ -293,12 +308,13 @@ public class MessageTypesDiffblueTest {
 
   /**
    * Test {@link MessageTypes#toString()}.
+   *
    * <ul>
-   *   <li>Given {@code TRX}.</li>
-   *   <li>Then return {@code TRX}.</li>
+   *   <li>Given {@code TRX}.
+   *   <li>Then return {@code TRX}.
    * </ul>
-   * <p>
-   * Method under test: {@link MessageTypes#toString()}
+   *
+   * <p>Method under test: {@link MessageTypes#toString()}
    */
   @Test
   @Category(MaintainedByDiffblue.class)

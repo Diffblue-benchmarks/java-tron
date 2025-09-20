@@ -15,56 +15,67 @@ import org.tron.core.capsule.BytesCapsule;
 public class ConcurrentHashDBDiffblueTest {
   /**
    * Test {@link ConcurrentHashDB#get(byte[])} with {@code byte[]}.
+   *
    * <ul>
-   *   <li>Given {@link ConcurrentHashDB} (default constructor).</li>
-   *   <li>Then return {@code null}.</li>
+   *   <li>Given {@link ConcurrentHashDB} (default constructor).
+   *   <li>Then return {@code null}.
    * </ul>
-   * <p>
-   * Method under test: {@link ConcurrentHashDB#get(byte[])}
+   *
+   * <p>Method under test: {@link ConcurrentHashDB#get(byte[])}
    */
   @Test
   @Category(MaintainedByDiffblue.class)
   @MethodsUnderTest({"BytesCapsule ConcurrentHashDB.get(byte[])"})
-  public void testGetWithByte_givenConcurrentHashDB_thenReturnNull() throws UnsupportedEncodingException {
-    // Arrange
-    ConcurrentHashDB concurrentHashDB = new ConcurrentHashDB();
+  public void testGetWithByte_givenConcurrentHashDB_thenReturnNull()
+      throws UnsupportedEncodingException {
+    // Arrange and Act
+    BytesCapsule actualGetResult = new ConcurrentHashDB().get("AXAXAXAX".getBytes("UTF-8"));
 
-    // Act and Assert
-    assertNull(concurrentHashDB.get("AXAXAXAX".getBytes("UTF-8")));
+    // Assert
+    assertNull(actualGetResult);
   }
 
   /**
    * Test {@link ConcurrentHashDB#get(byte[])} with {@code byte[]}.
+   *
    * <ul>
-   *   <li>Then return {@link BytesCapsule#BytesCapsule(byte[])} with bytes is {@code A;A;A;A;} Bytes is {@code UTF-8}.</li>
+   *   <li>Then return {@link BytesCapsule#BytesCapsule(byte[])} with bytes is {@code A;A;A;A;}
+   *       Bytes is {@code UTF-8}.
    * </ul>
-   * <p>
-   * Method under test: {@link ConcurrentHashDB#get(byte[])}
+   *
+   * <p>Method under test: {@link ConcurrentHashDB#get(byte[])}
    */
   @Test
   @Category(MaintainedByDiffblue.class)
   @MethodsUnderTest({"BytesCapsule ConcurrentHashDB.get(byte[])"})
-  public void testGetWithByte_thenReturnBytesCapsuleWithBytesIsAAAABytesIsUtf8() throws UnsupportedEncodingException {
+  public void testGetWithByte_thenReturnBytesCapsuleWithBytesIsAAAABytesIsUtf8()
+      throws UnsupportedEncodingException {
     // Arrange
     ConcurrentHashDB concurrentHashDB = new ConcurrentHashDB();
     byte[] bytes = "AXAXAXAX".getBytes("UTF-8");
     BytesCapsule bytes2 = new BytesCapsule("A;A;A;A;".getBytes("UTF-8"));
+
     concurrentHashDB.put(bytes, bytes2);
     byte[] bytes3 = "A;A;A;A;".getBytes("UTF-8");
     concurrentHashDB.put(bytes3, new BytesCapsule("A;A;A;A;".getBytes("UTF-8")));
 
-    // Act and Assert
-    assertSame(bytes2, concurrentHashDB.get("AXAXAXAX".getBytes("UTF-8")));
+    // Act
+    BytesCapsule actualGetResult = concurrentHashDB.get("AXAXAXAX".getBytes("UTF-8"));
+
+    // Assert
+    assertSame(bytes2, actualGetResult);
   }
 
   /**
-   * Test {@link ConcurrentHashDB#put(byte[], BytesCapsule)} with {@code byte[]}, {@code BytesCapsule}.
+   * Test {@link ConcurrentHashDB#put(byte[], BytesCapsule)} with {@code byte[]}, {@code
+   * BytesCapsule}.
+   *
    * <ul>
-   *   <li>Given {@link ConcurrentHashDB} (default constructor).</li>
-   *   <li>Then {@link ConcurrentHashDB} (default constructor) size is one.</li>
+   *   <li>Given {@link ConcurrentHashDB} (default constructor).
+   *   <li>Then {@link ConcurrentHashDB} (default constructor) size is one.
    * </ul>
-   * <p>
-   * Method under test: {@link ConcurrentHashDB#put(byte[], BytesCapsule)}
+   *
+   * <p>Method under test: {@link ConcurrentHashDB#put(byte[], BytesCapsule)}
    */
   @Test
   @Category(MaintainedByDiffblue.class)
@@ -84,23 +95,26 @@ public class ConcurrentHashDBDiffblueTest {
   }
 
   /**
-   * Test {@link ConcurrentHashDB#put(byte[], BytesCapsule)} with {@code byte[]}, {@code BytesCapsule}.
+   * Test {@link ConcurrentHashDB#put(byte[], BytesCapsule)} with {@code byte[]}, {@code
+   * BytesCapsule}.
+   *
    * <ul>
-   *   <li>Then {@link ConcurrentHashDB} (default constructor) size is two.</li>
+   *   <li>Then {@link ConcurrentHashDB} (default constructor) size is two.
    * </ul>
-   * <p>
-   * Method under test: {@link ConcurrentHashDB#put(byte[], BytesCapsule)}
+   *
+   * <p>Method under test: {@link ConcurrentHashDB#put(byte[], BytesCapsule)}
    */
   @Test
   @Category(MaintainedByDiffblue.class)
   @MethodsUnderTest({"void ConcurrentHashDB.put(byte[], BytesCapsule)"})
-  public void testPutWithByteBytesCapsule_thenConcurrentHashDBSizeIsTwo() throws UnsupportedEncodingException {
+  public void testPutWithByteBytesCapsule_thenConcurrentHashDBSizeIsTwo()
+      throws UnsupportedEncodingException {
     // Arrange
     ConcurrentHashDB concurrentHashDB = new ConcurrentHashDB();
     byte[] bytes = "AXAXAXAX".getBytes("UTF-8");
-    concurrentHashDB.put(bytes, new BytesCapsule("A;A;A;A;".getBytes("UTF-8")));
+    concurrentHashDB.put(bytes, new BytesCapsule("AXAXAXAX".getBytes("UTF-8")));
     byte[] bytes2 = "A;A;A;A;".getBytes("UTF-8");
-    concurrentHashDB.put(bytes2, new BytesCapsule("A;A;A;A;".getBytes("UTF-8")));
+    concurrentHashDB.put(bytes2, new BytesCapsule("AXAXAXAX".getBytes("UTF-8")));
     byte[] bytes3 = "AXAXAXAX".getBytes("UTF-8");
 
     // Act
@@ -113,25 +127,26 @@ public class ConcurrentHashDBDiffblueTest {
 
   /**
    * Test {@link ConcurrentHashDB#size()}.
-   * <p>
-   * Method under test: {@link ConcurrentHashDB#size()}
+   *
+   * <p>Method under test: {@link ConcurrentHashDB#size()}
    */
   @Test
   @Category(MaintainedByDiffblue.class)
   @MethodsUnderTest({"long ConcurrentHashDB.size()"})
   public void testSize() {
     // Arrange, Act and Assert
-    assertEquals(0L, (new ConcurrentHashDB()).size());
+    assertEquals(0L, new ConcurrentHashDB().size());
   }
 
   /**
    * Test {@link ConcurrentHashDB#isEmpty()}.
+   *
    * <ul>
-   *   <li>Given {@code A}.</li>
-   *   <li>Then return {@code false}.</li>
+   *   <li>Given {@code A}.
+   *   <li>Then return {@code false}.
    * </ul>
-   * <p>
-   * Method under test: {@link ConcurrentHashDB#isEmpty()}
+   *
+   * <p>Method under test: {@link ConcurrentHashDB#isEmpty()}
    */
   @Test
   @Category(MaintainedByDiffblue.class)
@@ -139,8 +154,8 @@ public class ConcurrentHashDBDiffblueTest {
   public void testIsEmpty_givenA_thenReturnFalse() {
     // Arrange
     ConcurrentHashDB concurrentHashDB = new ConcurrentHashDB();
-    concurrentHashDB.put(new byte[]{'A', 4, 'A', 4, 'A', 4, 'A', 4},
-        new BytesCapsule(new byte[]{'A', 4, 'A', 4, 'A', 4, 'A', 4}));
+    BytesCapsule bytes2 = new BytesCapsule(new byte[] {'A', 4, 'A', 4, 'A', 4, 'A', 4});
+    concurrentHashDB.put(new byte[] {'A', 4, 'A', 4, 'A', 4, 'A', 4}, bytes2);
 
     // Act and Assert
     assertFalse(concurrentHashDB.isEmpty());
@@ -148,29 +163,31 @@ public class ConcurrentHashDBDiffblueTest {
 
   /**
    * Test {@link ConcurrentHashDB#isEmpty()}.
+   *
    * <ul>
-   *   <li>Given {@link ConcurrentHashDB} (default constructor).</li>
-   *   <li>Then return {@code true}.</li>
+   *   <li>Given {@link ConcurrentHashDB} (default constructor).
+   *   <li>Then return {@code true}.
    * </ul>
-   * <p>
-   * Method under test: {@link ConcurrentHashDB#isEmpty()}
+   *
+   * <p>Method under test: {@link ConcurrentHashDB#isEmpty()}
    */
   @Test
   @Category(MaintainedByDiffblue.class)
   @MethodsUnderTest({"boolean ConcurrentHashDB.isEmpty()"})
   public void testIsEmpty_givenConcurrentHashDB_thenReturnTrue() {
     // Arrange, Act and Assert
-    assertTrue((new ConcurrentHashDB()).isEmpty());
+    assertTrue(new ConcurrentHashDB().isEmpty());
   }
 
   /**
    * Test {@link ConcurrentHashDB#remove(byte[])} with {@code byte[]}.
+   *
    * <ul>
-   *   <li>Given {@link ConcurrentHashDB} (default constructor).</li>
-   *   <li>Then {@link ConcurrentHashDB} (default constructor) size is zero.</li>
+   *   <li>Given {@link ConcurrentHashDB} (default constructor).
+   *   <li>Then {@link ConcurrentHashDB} (default constructor) size is zero.
    * </ul>
-   * <p>
-   * Method under test: {@link ConcurrentHashDB#remove(byte[])}
+   *
+   * <p>Method under test: {@link ConcurrentHashDB#remove(byte[])}
    */
   @Test
   @Category(MaintainedByDiffblue.class)
@@ -189,16 +206,18 @@ public class ConcurrentHashDBDiffblueTest {
 
   /**
    * Test {@link ConcurrentHashDB#remove(byte[])} with {@code byte[]}.
+   *
    * <ul>
-   *   <li>Then {@link ConcurrentHashDB} (default constructor) size is one.</li>
+   *   <li>Then {@link ConcurrentHashDB} (default constructor) size is one.
    * </ul>
-   * <p>
-   * Method under test: {@link ConcurrentHashDB#remove(byte[])}
+   *
+   * <p>Method under test: {@link ConcurrentHashDB#remove(byte[])}
    */
   @Test
   @Category(MaintainedByDiffblue.class)
   @MethodsUnderTest({"void ConcurrentHashDB.remove(byte[])"})
-  public void testRemoveWithByte_thenConcurrentHashDBSizeIsOne() throws UnsupportedEncodingException {
+  public void testRemoveWithByte_thenConcurrentHashDBSizeIsOne()
+      throws UnsupportedEncodingException {
     // Arrange
     ConcurrentHashDB concurrentHashDB = new ConcurrentHashDB();
     byte[] bytes = "AXAXAXAX".getBytes("UTF-8");
@@ -215,34 +234,35 @@ public class ConcurrentHashDBDiffblueTest {
 
   /**
    * Test {@link ConcurrentHashDB#iterator()}.
-   * <p>
-   * Method under test: {@link ConcurrentHashDB#iterator()}
+   *
+   * <p>Method under test: {@link ConcurrentHashDB#iterator()}
    */
   @Test
   @Category(MaintainedByDiffblue.class)
   @MethodsUnderTest({"java.util.Iterator ConcurrentHashDB.iterator()"})
   public void testIterator() {
     // Arrange, Act and Assert
-    assertNull((new ConcurrentHashDB()).iterator());
+    assertNull(new ConcurrentHashDB().iterator());
   }
 
   /**
    * Test {@link ConcurrentHashDB#newInstance()}.
-   * <p>
-   * Method under test: {@link ConcurrentHashDB#newInstance()}
+   *
+   * <p>Method under test: {@link ConcurrentHashDB#newInstance()}
    */
   @Test
   @Category(MaintainedByDiffblue.class)
   @MethodsUnderTest({"org.tron.core.db2.common.DB ConcurrentHashDB.newInstance()"})
   public void testNewInstance() {
     // Arrange, Act and Assert
-    assertNull((new ConcurrentHashDB()).newInstance());
+    assertNull(new ConcurrentHashDB().newInstance());
   }
 
   /**
    * Test getters and setters.
-   * <p>
-   * Methods under test:
+   *
+   * <p>Methods under test:
+   *
    * <ul>
    *   <li>default or parameterless constructor of {@link ConcurrentHashDB}
    *   <li>{@link ConcurrentHashDB#stat()}
@@ -251,8 +271,11 @@ public class ConcurrentHashDBDiffblueTest {
    */
   @Test
   @Category(MaintainedByDiffblue.class)
-  @MethodsUnderTest({"void ConcurrentHashDB.<init>()", "java.lang.String ConcurrentHashDB.getDbName()",
-      "void ConcurrentHashDB.stat()"})
+  @MethodsUnderTest({
+    "void ConcurrentHashDB.<init>()",
+    "java.lang.String ConcurrentHashDB.getDbName()",
+    "void ConcurrentHashDB.stat()"
+  })
   public void testGettersAndSetters() {
     // Arrange and Act
     ConcurrentHashDB actualConcurrentHashDB = new ConcurrentHashDB();

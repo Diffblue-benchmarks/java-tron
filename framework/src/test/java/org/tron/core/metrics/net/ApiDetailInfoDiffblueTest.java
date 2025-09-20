@@ -12,12 +12,14 @@ import org.junit.experimental.categories.Category;
 public class ApiDetailInfoDiffblueTest {
   /**
    * Test {@link ApiDetailInfo#equals(Object)}, and {@link ApiDetailInfo#hashCode()}.
+   *
    * <ul>
-   *   <li>When other is equal.</li>
-   *   <li>Then return equal.</li>
+   *   <li>When other is equal.
+   *   <li>Then return equal.
    * </ul>
-   * <p>
-   * Methods under test:
+   *
+   * <p>Methods under test:
+   *
    * <ul>
    *   <li>{@link ApiDetailInfo#equals(Object)}
    *   <li>{@link ApiDetailInfo#hashCode()}
@@ -42,18 +44,19 @@ public class ApiDetailInfoDiffblueTest {
 
     // Act and Assert
     assertEquals(apiDetailInfo, apiDetailInfo2);
-    int expectedHashCodeResult = apiDetailInfo.hashCode();
-    assertEquals(expectedHashCodeResult, apiDetailInfo2.hashCode());
+    assertEquals(apiDetailInfo.hashCode(), apiDetailInfo2.hashCode());
   }
 
   /**
    * Test {@link ApiDetailInfo#equals(Object)}, and {@link ApiDetailInfo#hashCode()}.
+   *
    * <ul>
-   *   <li>When other is equal.</li>
-   *   <li>Then return equal.</li>
+   *   <li>When other is equal.
+   *   <li>Then return equal.
    * </ul>
-   * <p>
-   * Methods under test:
+   *
+   * <p>Methods under test:
+   *
    * <ul>
    *   <li>{@link ApiDetailInfo#equals(Object)}
    *   <li>{@link ApiDetailInfo#hashCode()}
@@ -78,18 +81,19 @@ public class ApiDetailInfoDiffblueTest {
 
     // Act and Assert
     assertEquals(apiDetailInfo, apiDetailInfo2);
-    int expectedHashCodeResult = apiDetailInfo.hashCode();
-    assertEquals(expectedHashCodeResult, apiDetailInfo2.hashCode());
+    assertEquals(apiDetailInfo.hashCode(), apiDetailInfo2.hashCode());
   }
 
   /**
    * Test {@link ApiDetailInfo#equals(Object)}, and {@link ApiDetailInfo#hashCode()}.
+   *
    * <ul>
-   *   <li>When other is equal.</li>
-   *   <li>Then return equal.</li>
+   *   <li>When other is equal.
+   *   <li>Then return equal.
    * </ul>
-   * <p>
-   * Methods under test:
+   *
+   * <p>Methods under test:
+   *
    * <ul>
    *   <li>{@link ApiDetailInfo#equals(Object)}
    *   <li>{@link ApiDetailInfo#hashCode()}
@@ -114,18 +118,19 @@ public class ApiDetailInfoDiffblueTest {
 
     // Act and Assert
     assertEquals(apiDetailInfo, apiDetailInfo2);
-    int expectedHashCodeResult = apiDetailInfo.hashCode();
-    assertEquals(expectedHashCodeResult, apiDetailInfo2.hashCode());
+    assertEquals(apiDetailInfo.hashCode(), apiDetailInfo2.hashCode());
   }
 
   /**
    * Test {@link ApiDetailInfo#equals(Object)}, and {@link ApiDetailInfo#hashCode()}.
+   *
    * <ul>
-   *   <li>When other is equal.</li>
-   *   <li>Then return equal.</li>
+   *   <li>When other is equal.
+   *   <li>Then return equal.
    * </ul>
-   * <p>
-   * Methods under test:
+   *
+   * <p>Methods under test:
+   *
    * <ul>
    *   <li>{@link ApiDetailInfo#equals(Object)}
    *   <li>{@link ApiDetailInfo#hashCode()}
@@ -150,18 +155,19 @@ public class ApiDetailInfoDiffblueTest {
 
     // Act and Assert
     assertEquals(apiDetailInfo, apiDetailInfo2);
-    int expectedHashCodeResult = apiDetailInfo.hashCode();
-    assertEquals(expectedHashCodeResult, apiDetailInfo2.hashCode());
+    assertEquals(apiDetailInfo.hashCode(), apiDetailInfo2.hashCode());
   }
 
   /**
    * Test {@link ApiDetailInfo#equals(Object)}, and {@link ApiDetailInfo#hashCode()}.
+   *
    * <ul>
-   *   <li>When other is equal.</li>
-   *   <li>Then return equal.</li>
+   *   <li>When other is equal.
+   *   <li>Then return equal.
    * </ul>
-   * <p>
-   * Methods under test:
+   *
+   * <p>Methods under test:
+   *
    * <ul>
    *   <li>{@link ApiDetailInfo#equals(Object)}
    *   <li>{@link ApiDetailInfo#hashCode()}
@@ -186,18 +192,19 @@ public class ApiDetailInfoDiffblueTest {
 
     // Act and Assert
     assertEquals(apiDetailInfo, apiDetailInfo2);
-    int expectedHashCodeResult = apiDetailInfo.hashCode();
-    assertEquals(expectedHashCodeResult, apiDetailInfo2.hashCode());
+    assertEquals(apiDetailInfo.hashCode(), apiDetailInfo2.hashCode());
   }
 
   /**
    * Test {@link ApiDetailInfo#equals(Object)}, and {@link ApiDetailInfo#hashCode()}.
+   *
    * <ul>
-   *   <li>When other is same.</li>
-   *   <li>Then return equal.</li>
+   *   <li>When other is same.
+   *   <li>Then return equal.
    * </ul>
-   * <p>
-   * Methods under test:
+   *
+   * <p>Methods under test:
+   *
    * <ul>
    *   <li>{@link ApiDetailInfo#equals(Object)}
    *   <li>{@link ApiDetailInfo#hashCode()}
@@ -222,12 +229,13 @@ public class ApiDetailInfoDiffblueTest {
 
   /**
    * Test {@link ApiDetailInfo#equals(Object)}.
+   *
    * <ul>
-   *   <li>When other is different.</li>
-   *   <li>Then return not equal.</li>
+   *   <li>When other is different.
+   *   <li>Then return not equal.
    * </ul>
-   * <p>
-   * Method under test: {@link ApiDetailInfo#equals(Object)}
+   *
+   * <p>Method under test: {@link ApiDetailInfo#equals(Object)}
    */
   @Test
   @Category(MaintainedByDiffblue.class)
@@ -252,12 +260,13 @@ public class ApiDetailInfoDiffblueTest {
 
   /**
    * Test {@link ApiDetailInfo#equals(Object)}.
+   *
    * <ul>
-   *   <li>When other is different.</li>
-   *   <li>Then return not equal.</li>
+   *   <li>When other is different.
+   *   <li>Then return not equal.
    * </ul>
-   * <p>
-   * Method under test: {@link ApiDetailInfo#equals(Object)}
+   *
+   * <p>Method under test: {@link ApiDetailInfo#equals(Object)}
    */
   @Test
   @Category(MaintainedByDiffblue.class)
@@ -282,12 +291,13 @@ public class ApiDetailInfoDiffblueTest {
 
   /**
    * Test {@link ApiDetailInfo#equals(Object)}.
+   *
    * <ul>
-   *   <li>When other is different.</li>
-   *   <li>Then return not equal.</li>
+   *   <li>When other is different.
+   *   <li>Then return not equal.
    * </ul>
-   * <p>
-   * Method under test: {@link ApiDetailInfo#equals(Object)}
+   *
+   * <p>Method under test: {@link ApiDetailInfo#equals(Object)}
    */
   @Test
   @Category(MaintainedByDiffblue.class)
@@ -312,12 +322,13 @@ public class ApiDetailInfoDiffblueTest {
 
   /**
    * Test {@link ApiDetailInfo#equals(Object)}.
+   *
    * <ul>
-   *   <li>When other is different.</li>
-   *   <li>Then return not equal.</li>
+   *   <li>When other is different.
+   *   <li>Then return not equal.
    * </ul>
-   * <p>
-   * Method under test: {@link ApiDetailInfo#equals(Object)}
+   *
+   * <p>Method under test: {@link ApiDetailInfo#equals(Object)}
    */
   @Test
   @Category(MaintainedByDiffblue.class)
@@ -342,12 +353,13 @@ public class ApiDetailInfoDiffblueTest {
 
   /**
    * Test {@link ApiDetailInfo#equals(Object)}.
+   *
    * <ul>
-   *   <li>When other is different.</li>
-   *   <li>Then return not equal.</li>
+   *   <li>When other is different.
+   *   <li>Then return not equal.
    * </ul>
-   * <p>
-   * Method under test: {@link ApiDetailInfo#equals(Object)}
+   *
+   * <p>Method under test: {@link ApiDetailInfo#equals(Object)}
    */
   @Test
   @Category(MaintainedByDiffblue.class)
@@ -372,12 +384,13 @@ public class ApiDetailInfoDiffblueTest {
 
   /**
    * Test {@link ApiDetailInfo#equals(Object)}.
+   *
    * <ul>
-   *   <li>When other is different.</li>
-   *   <li>Then return not equal.</li>
+   *   <li>When other is different.
+   *   <li>Then return not equal.
    * </ul>
-   * <p>
-   * Method under test: {@link ApiDetailInfo#equals(Object)}
+   *
+   * <p>Method under test: {@link ApiDetailInfo#equals(Object)}
    */
   @Test
   @Category(MaintainedByDiffblue.class)
@@ -402,12 +415,13 @@ public class ApiDetailInfoDiffblueTest {
 
   /**
    * Test {@link ApiDetailInfo#equals(Object)}.
+   *
    * <ul>
-   *   <li>When other is different.</li>
-   *   <li>Then return not equal.</li>
+   *   <li>When other is different.
+   *   <li>Then return not equal.
    * </ul>
-   * <p>
-   * Method under test: {@link ApiDetailInfo#equals(Object)}
+   *
+   * <p>Method under test: {@link ApiDetailInfo#equals(Object)}
    */
   @Test
   @Category(MaintainedByDiffblue.class)
@@ -432,12 +446,13 @@ public class ApiDetailInfoDiffblueTest {
 
   /**
    * Test {@link ApiDetailInfo#equals(Object)}.
+   *
    * <ul>
-   *   <li>When other is different.</li>
-   *   <li>Then return not equal.</li>
+   *   <li>When other is different.
+   *   <li>Then return not equal.
    * </ul>
-   * <p>
-   * Method under test: {@link ApiDetailInfo#equals(Object)}
+   *
+   * <p>Method under test: {@link ApiDetailInfo#equals(Object)}
    */
   @Test
   @Category(MaintainedByDiffblue.class)
@@ -462,12 +477,13 @@ public class ApiDetailInfoDiffblueTest {
 
   /**
    * Test {@link ApiDetailInfo#equals(Object)}.
+   *
    * <ul>
-   *   <li>When other is {@code null}.</li>
-   *   <li>Then return not equal.</li>
+   *   <li>When other is {@code null}.
+   *   <li>Then return not equal.
    * </ul>
-   * <p>
-   * Method under test: {@link ApiDetailInfo#equals(Object)}
+   *
+   * <p>Method under test: {@link ApiDetailInfo#equals(Object)}
    */
   @Test
   @Category(MaintainedByDiffblue.class)
@@ -486,12 +502,13 @@ public class ApiDetailInfoDiffblueTest {
 
   /**
    * Test {@link ApiDetailInfo#equals(Object)}.
+   *
    * <ul>
-   *   <li>When other is wrong type.</li>
-   *   <li>Then return not equal.</li>
+   *   <li>When other is wrong type.
+   *   <li>Then return not equal.
    * </ul>
-   * <p>
-   * Method under test: {@link ApiDetailInfo#equals(Object)}
+   *
+   * <p>Method under test: {@link ApiDetailInfo#equals(Object)}
    */
   @Test
   @Category(MaintainedByDiffblue.class)
@@ -510,8 +527,9 @@ public class ApiDetailInfoDiffblueTest {
 
   /**
    * Test getters and setters.
-   * <p>
-   * Methods under test:
+   *
+   * <p>Methods under test:
+   *
    * <ul>
    *   <li>default or parameterless constructor of {@link ApiDetailInfo}
    *   <li>{@link ApiDetailInfo#setFailQps(RateInfo)}
@@ -527,11 +545,18 @@ public class ApiDetailInfoDiffblueTest {
    */
   @Test
   @Category(MaintainedByDiffblue.class)
-  @MethodsUnderTest({"void ApiDetailInfo.<init>()", "RateInfo ApiDetailInfo.getFailQps()",
-      "String ApiDetailInfo.getName()", "RateInfo ApiDetailInfo.getOutTraffic()", "RateInfo ApiDetailInfo.getQps()",
-      "void ApiDetailInfo.setFailQps(RateInfo)", "void ApiDetailInfo.setName(String)",
-      "void ApiDetailInfo.setOutTraffic(RateInfo)", "void ApiDetailInfo.setQps(RateInfo)",
-      "String ApiDetailInfo.toString()"})
+  @MethodsUnderTest({
+    "void ApiDetailInfo.<init>()",
+    "RateInfo ApiDetailInfo.getFailQps()",
+    "String ApiDetailInfo.getName()",
+    "RateInfo ApiDetailInfo.getOutTraffic()",
+    "RateInfo ApiDetailInfo.getQps()",
+    "void ApiDetailInfo.setFailQps(RateInfo)",
+    "void ApiDetailInfo.setName(String)",
+    "void ApiDetailInfo.setOutTraffic(RateInfo)",
+    "void ApiDetailInfo.setQps(RateInfo)",
+    "String ApiDetailInfo.toString()"
+  })
   public void testGettersAndSetters() {
     // Arrange and Act
     ApiDetailInfo actualApiDetailInfo = new ApiDetailInfo();

@@ -11,28 +11,30 @@ import org.tron.core.exception.P2pException;
 public class MessageDiffblueTest {
   /**
    * Test {@link Message#compareBytes(byte[], byte[])}.
-   * <p>
-   * Method under test: {@link Message#compareBytes(byte[], byte[])}
+   *
+   * <p>Method under test: {@link Message#compareBytes(byte[], byte[])}
    */
   @Test
   @Category(MaintainedByDiffblue.class)
   @MethodsUnderTest({"void Message.compareBytes(byte[], byte[])"})
   public void testCompareBytes() throws UnsupportedEncodingException, P2pException {
-    // Arrange
-    byte[] src = "A\bA\bA\bA\bA\bA\bA\bA\b".getBytes("UTF-8");
-
-    // Act and Assert
-    assertThrows(P2pException.class, () -> Message.compareBytes(src, "AXAXAXAX".getBytes("UTF-8")));
+    // Arrange, Act and Assert
+    assertThrows(
+        P2pException.class,
+        () ->
+            Message.compareBytes(
+                "A\bA\bA\bA\bA\bA\bA\bA\b".getBytes("UTF-8"), "AXAXAXAX".getBytes("UTF-8")));
   }
 
   /**
    * Test {@link Message#compareBytes(byte[], byte[])}.
+   *
    * <ul>
-   *   <li>When empty array of {@code byte}.</li>
-   *   <li>Then throw {@link P2pException}.</li>
+   *   <li>When empty array of {@code byte}.
+   *   <li>Then throw {@link P2pException}.
    * </ul>
-   * <p>
-   * Method under test: {@link Message#compareBytes(byte[], byte[])}
+   *
+   * <p>Method under test: {@link Message#compareBytes(byte[], byte[])}
    */
   @Test
   @Category(MaintainedByDiffblue.class)
@@ -40,6 +42,8 @@ public class MessageDiffblueTest {
   public void testCompareBytes_whenEmptyArrayOfByte_thenThrowP2pException()
       throws UnsupportedEncodingException, P2pException {
     // Arrange, Act and Assert
-    assertThrows(P2pException.class, () -> Message.compareBytes(new byte[]{}, "AXAXAXAX".getBytes("UTF-8")));
+    assertThrows(
+        P2pException.class,
+        () -> Message.compareBytes(new byte[] {}, "AXAXAXAX".getBytes("UTF-8")));
   }
 }

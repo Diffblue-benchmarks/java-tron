@@ -12,8 +12,9 @@ import org.tron.core.services.RpcApiService;
 public class CliApplicationDiffblueTest {
   /**
    * Test getters and setters.
-   * <p>
-   * Methods under test:
+   *
+   * <p>Methods under test:
+   *
    * <ul>
    *   <li>default or parameterless constructor of {@link CliApplication}
    *   <li>{@link CliApplication#addService(Service)}
@@ -28,12 +29,19 @@ public class CliApplicationDiffblueTest {
    */
   @Test
   @Category(MaintainedByDiffblue.class)
-  @MethodsUnderTest({"void CliApplication.<init>()", "void CliApplication.addService(Service)",
-      "ChainBaseManager CliApplication.getChainBaseManager()", "org.tron.core.db.Manager CliApplication.getDbManager()",
-      "void CliApplication.init(org.tron.common.parameter.CommonParameter)",
-      "void CliApplication.initServices(org.tron.common.parameter.CommonParameter)",
-      "void CliApplication.setOptions(Args)", "void CliApplication.shutdown()",
-      "void CliApplication.shutdownServices()", "void CliApplication.startServices()", "void CliApplication.startup()"})
+  @MethodsUnderTest({
+    "void CliApplication.<init>()",
+    "void CliApplication.addService(Service)",
+    "ChainBaseManager CliApplication.getChainBaseManager()",
+    "org.tron.core.db.Manager CliApplication.getDbManager()",
+    "void CliApplication.init(org.tron.common.parameter.CommonParameter)",
+    "void CliApplication.initServices(org.tron.common.parameter.CommonParameter)",
+    "void CliApplication.setOptions(Args)",
+    "void CliApplication.shutdown()",
+    "void CliApplication.shutdownServices()",
+    "void CliApplication.startServices()",
+    "void CliApplication.startup()"
+  })
   public void testGettersAndSetters() {
     // Arrange and Act
     CliApplication actualCliApplication = new CliApplication();

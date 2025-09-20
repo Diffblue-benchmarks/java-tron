@@ -20,8 +20,8 @@ import org.tron.core.vm.program.invoke.ProgramInvokeMockImpl;
 public class ProgramTraceDiffblueTest {
   /**
    * Test {@link ProgramTrace#ProgramTrace()}.
-   * <p>
-   * Method under test: {@link ProgramTrace#ProgramTrace()}
+   *
+   * <p>Method under test: {@link ProgramTrace#ProgramTrace()}
    */
   @Test
   @Category(MaintainedByDiffblue.class)
@@ -39,11 +39,12 @@ public class ProgramTraceDiffblueTest {
 
   /**
    * Test {@link ProgramTrace#ProgramTrace(ProgramInvoke)}.
+   *
    * <ul>
-   *   <li>When {@code null}.</li>
+   *   <li>When {@code null}.
    * </ul>
-   * <p>
-   * Method under test: {@link ProgramTrace#ProgramTrace(ProgramInvoke)}
+   *
+   * <p>Method under test: {@link ProgramTrace#ProgramTrace(ProgramInvoke)}
    */
   @Test
   @Category(MaintainedByDiffblue.class)
@@ -61,11 +62,12 @@ public class ProgramTraceDiffblueTest {
 
   /**
    * Test {@link ProgramTrace#ProgramTrace(ProgramInvoke)}.
+   *
    * <ul>
-   *   <li>When {@link ProgramInvokeMockImpl#ProgramInvokeMockImpl()}.</li>
+   *   <li>When {@link ProgramInvokeMockImpl#ProgramInvokeMockImpl()}.
    * </ul>
-   * <p>
-   * Method under test: {@link ProgramTrace#ProgramTrace(ProgramInvoke)}
+   *
+   * <p>Method under test: {@link ProgramTrace#ProgramTrace(ProgramInvoke)}
    */
   @Test
   @Category(MaintainedByDiffblue.class)
@@ -83,8 +85,9 @@ public class ProgramTraceDiffblueTest {
 
   /**
    * Test getters and setters.
-   * <p>
-   * Methods under test:
+   *
+   * <p>Methods under test:
+   *
    * <ul>
    *   <li>{@link ProgramTrace#setContractAddress(String)}
    *   <li>{@link ProgramTrace#setError(String)}
@@ -99,10 +102,17 @@ public class ProgramTraceDiffblueTest {
    */
   @Test
   @Category(MaintainedByDiffblue.class)
-  @MethodsUnderTest({"String ProgramTrace.getContractAddress()", "String ProgramTrace.getError()",
-      "List ProgramTrace.getOps()", "String ProgramTrace.getResult()", "void ProgramTrace.setContractAddress(String)",
-      "void ProgramTrace.setError(String)", "void ProgramTrace.setOps(List)", "void ProgramTrace.setResult(String)",
-      "String ProgramTrace.toString()"})
+  @MethodsUnderTest({
+    "String ProgramTrace.getContractAddress()",
+    "String ProgramTrace.getError()",
+    "List ProgramTrace.getOps()",
+    "String ProgramTrace.getResult()",
+    "void ProgramTrace.setContractAddress(String)",
+    "void ProgramTrace.setError(String)",
+    "void ProgramTrace.setOps(List)",
+    "void ProgramTrace.setResult(String)",
+    "String ProgramTrace.toString()"
+  })
   public void testGettersAndSetters() {
     // Arrange
     ProgramTrace programTrace = new ProgramTrace();
@@ -122,8 +132,13 @@ public class ProgramTraceDiffblueTest {
     assertEquals("42 Main St", actualContractAddress);
     assertEquals("An error occurred", actualError);
     assertEquals("Result", programTrace.getResult());
-    assertEquals("{\n" + "  \"ops\" : [ ],\n" + "  \"result\" : \"Result\",\n"
-        + "  \"error\" : \"An error occurred\",\n" + "  \"contractAddress\" : \"42 Main St\"\n" + "}",
+    assertEquals(
+        "{\n"
+            + "  \"ops\" : [ ],\n"
+            + "  \"result\" : \"Result\",\n"
+            + "  \"error\" : \"An error occurred\",\n"
+            + "  \"contractAddress\" : \"42 Main St\"\n"
+            + "}",
         actualToStringResult);
     assertTrue(actualOps.isEmpty());
     assertSame(ops, actualOps);
@@ -131,12 +146,13 @@ public class ProgramTraceDiffblueTest {
 
   /**
    * Test {@link ProgramTrace#result(byte[])}.
+   *
    * <ul>
-   *   <li>When {@code AXAXAXAX} Bytes is {@code UTF-8}.</li>
-   *   <li>Then {@link ProgramTrace#ProgramTrace()} Result is {@code 4158415841584158}.</li>
+   *   <li>When {@code AXAXAXAX} Bytes is {@code UTF-8}.
+   *   <li>Then {@link ProgramTrace#ProgramTrace()} Result is {@code 4158415841584158}.
    * </ul>
-   * <p>
-   * Method under test: {@link ProgramTrace#result(byte[])}
+   *
+   * <p>Method under test: {@link ProgramTrace#result(byte[])}
    */
   @Test
   @Category(MaintainedByDiffblue.class)
@@ -156,12 +172,13 @@ public class ProgramTraceDiffblueTest {
 
   /**
    * Test {@link ProgramTrace#result(byte[])}.
+   *
    * <ul>
-   *   <li>When {@code null}.</li>
-   *   <li>Then {@link ProgramTrace#ProgramTrace()} Result is empty string.</li>
+   *   <li>When {@code null}.
+   *   <li>Then {@link ProgramTrace#ProgramTrace()} Result is empty string.
    * </ul>
-   * <p>
-   * Method under test: {@link ProgramTrace#result(byte[])}
+   *
+   * <p>Method under test: {@link ProgramTrace#result(byte[])}
    */
   @Test
   @Category(MaintainedByDiffblue.class)
@@ -180,36 +197,38 @@ public class ProgramTraceDiffblueTest {
 
   /**
    * Test {@link ProgramTrace#error(Exception)}.
+   *
    * <ul>
-   *   <li>When {@link Exception#Exception(String)} with {@code foo}.</li>
-   *   <li>Then {@link ProgramTrace#ProgramTrace()} Error is {@code class Exception: foo}.</li>
+   *   <li>When {@link Exception#Exception()}.
+   *   <li>Then {@link ProgramTrace#ProgramTrace()} Error is {@code class Exception: null}.
    * </ul>
-   * <p>
-   * Method under test: {@link ProgramTrace#error(Exception)}
+   *
+   * <p>Method under test: {@link ProgramTrace#error(Exception)}
    */
   @Test
   @Category(MaintainedByDiffblue.class)
   @MethodsUnderTest({"ProgramTrace ProgramTrace.error(Exception)"})
-  public void testError_whenExceptionWithFoo_thenProgramTraceErrorIsClassJavaLangExceptionFoo() {
+  public void testError_whenException_thenProgramTraceErrorIsClassJavaLangExceptionNull() {
     // Arrange
     ProgramTrace programTrace = new ProgramTrace();
 
     // Act
-    ProgramTrace actualErrorResult = programTrace.error(new Exception("foo"));
+    ProgramTrace actualErrorResult = programTrace.error(new Exception());
 
     // Assert
-    assertEquals("class java.lang.Exception: foo", programTrace.getError());
+    assertEquals("class java.lang.Exception: null", programTrace.getError());
     assertSame(programTrace, actualErrorResult);
   }
 
   /**
    * Test {@link ProgramTrace#error(Exception)}.
+   *
    * <ul>
-   *   <li>When {@code null}.</li>
-   *   <li>Then {@link ProgramTrace#ProgramTrace()} Error is empty string.</li>
+   *   <li>When {@code null}.
+   *   <li>Then {@link ProgramTrace#ProgramTrace()} Error is empty string.
    * </ul>
-   * <p>
-   * Method under test: {@link ProgramTrace#error(Exception)}
+   *
+   * <p>Method under test: {@link ProgramTrace#error(Exception)}
    */
   @Test
   @Category(MaintainedByDiffblue.class)
@@ -228,12 +247,13 @@ public class ProgramTraceDiffblueTest {
 
   /**
    * Test {@link ProgramTrace#addOp(byte, int, int, DataWord, OpActions)}.
+   *
    * <ul>
-   *   <li>When ZERO.</li>
-   *   <li>Then return Energy toString is {@code 0}.</li>
+   *   <li>When ZERO.
+   *   <li>Then return Energy toString is {@code 0}.
    * </ul>
-   * <p>
-   * Method under test: {@link ProgramTrace#addOp(byte, int, int, DataWord, OpActions)}
+   *
+   * <p>Method under test: {@link ProgramTrace#addOp(byte, int, int, DataWord, OpActions)}
    */
   @Test
   @Category(MaintainedByDiffblue.class)
@@ -257,42 +277,47 @@ public class ProgramTraceDiffblueTest {
     assertEquals(2, actualAddOpResult.getPc());
     assertEquals(65, actualAddOpResult.getCode());
     assertSame(actions, actualAddOpResult.getActions());
-    assertArrayEquals(new byte[]{0}, energy2.toByteArray());
+    assertArrayEquals(new byte[] {0}, energy2.toByteArray());
   }
 
   /**
    * Test {@link ProgramTrace#asJsonString(boolean)}.
+   *
    * <ul>
-   *   <li>When {@code false}.</li>
-   *   <li>Then return {@code {"ops":[],"result":null,"error":null,"contractAddress":null}}.</li>
+   *   <li>When {@code false}.
+   *   <li>Then return {@code {"ops":[],"result":null,"error":null,"contractAddress":null}}.
    * </ul>
-   * <p>
-   * Method under test: {@link ProgramTrace#asJsonString(boolean)}
+   *
+   * <p>Method under test: {@link ProgramTrace#asJsonString(boolean)}
    */
   @Test
   @Category(MaintainedByDiffblue.class)
   @MethodsUnderTest({"String ProgramTrace.asJsonString(boolean)"})
   public void testAsJsonString_whenFalse_thenReturnOpsResultNullErrorNullContractAddressNull() {
     // Arrange, Act and Assert
-    assertEquals("{\"ops\":[],\"result\":null,\"error\":null,\"contractAddress\":null}",
-        (new ProgramTrace()).asJsonString(false));
+    assertEquals(
+        "{\"ops\":[],\"result\":null,\"error\":null,\"contractAddress\":null}",
+        new ProgramTrace().asJsonString(false));
   }
 
   /**
    * Test {@link ProgramTrace#asJsonString(boolean)}.
+   *
    * <ul>
-   *   <li>When {@code true}.</li>
-   *   <li>Then return {@code { "ops" : [ ], "result" : null, "error" : null, "contractAddress" : null }}.</li>
+   *   <li>When {@code true}.
+   *   <li>Then return {@code { "ops" : [ ], "result" : null, "error" : null, "contractAddress" :
+   *       null }}.
    * </ul>
-   * <p>
-   * Method under test: {@link ProgramTrace#asJsonString(boolean)}
+   *
+   * <p>Method under test: {@link ProgramTrace#asJsonString(boolean)}
    */
   @Test
   @Category(MaintainedByDiffblue.class)
   @MethodsUnderTest({"String ProgramTrace.asJsonString(boolean)"})
   public void testAsJsonString_whenTrue_thenReturnOpsResultNullErrorNullContractAddressNull() {
     // Arrange, Act and Assert
-    assertEquals("{\n  \"ops\" : [ ],\n  \"result\" : null,\n  \"error\" : null,\n  \"contractAddress\" : null\n}",
-        (new ProgramTrace()).asJsonString(true));
+    assertEquals(
+        "{\n  \"ops\" : [ ],\n  \"result\" : null,\n  \"error\" : null,\n  \"contractAddress\" : null\n}",
+        new ProgramTrace().asJsonString(true));
   }
 }

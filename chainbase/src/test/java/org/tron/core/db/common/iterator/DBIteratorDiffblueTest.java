@@ -9,29 +9,51 @@ import com.diffblue.cover.annotations.MethodsUnderTest;
 import java.util.NoSuchElementException;
 import org.junit.Test;
 import org.junit.experimental.categories.Category;
-import org.rocksdb.AbstractRocksIterator;
 import org.rocksdb.RocksIterator;
 
 public class DBIteratorDiffblueTest {
   /**
    * Test {@link DBIterator#checkValid()}.
+   *
    * <ul>
-   *   <li>Given {@link RocksIterator} {@link AbstractRocksIterator#isValid()} return {@code true}.</li>
-   *   <li>Then calls {@link AbstractRocksIterator#isValid()}.</li>
+   *   <li>Given {@link RocksIterator} {@link RocksIterator#isValid()} return {@code false}.
    * </ul>
-   * <p>
-   * Method under test: {@link DBIterator#checkValid()}
+   *
+   * <p>Method under test: {@link DBIterator#checkValid()}
    */
   @Test
   @Category(MaintainedByDiffblue.class)
   @MethodsUnderTest({"void DBIterator.checkValid()"})
-  public void testCheckValid_givenRocksIteratorIsValidReturnTrue_thenCallsIsValid() {
+  public void testCheckValid_givenRocksIteratorIsValidReturnFalse() {
+    // Arrange
+    RocksIterator dbIterator = mock(RocksIterator.class);
+    when(dbIterator.isValid()).thenReturn(false);
+
+    // Act and Assert
+    assertThrows(
+        NoSuchElementException.class, () -> new RockStoreIterator(dbIterator).checkValid());
+    verify(dbIterator).isValid();
+  }
+
+  /**
+   * Test {@link DBIterator#checkValid()}.
+   *
+   * <ul>
+   *   <li>Given {@link RocksIterator} {@link RocksIterator#isValid()} return {@code true}.
+   * </ul>
+   *
+   * <p>Method under test: {@link DBIterator#checkValid()}
+   */
+  @Test
+  @Category(MaintainedByDiffblue.class)
+  @MethodsUnderTest({"void DBIterator.checkValid()"})
+  public void testCheckValid_givenRocksIteratorIsValidReturnTrue() {
     // Arrange
     RocksIterator dbIterator = mock(RocksIterator.class);
     when(dbIterator.isValid()).thenReturn(true);
 
     // Act
-    (new RockStoreIterator(dbIterator)).checkValid();
+    new RockStoreIterator(dbIterator).checkValid();
 
     // Assert
     verify(dbIterator).isValid();
@@ -39,22 +61,25 @@ public class DBIteratorDiffblueTest {
 
   /**
    * Test {@link DBIterator#checkValid()}.
+   *
    * <ul>
-   *   <li>Then throw {@link NoSuchElementException}.</li>
+   *   <li>Given {@link RocksIterator} {@link RocksIterator#isValid()} throw {@link
+   *       NoSuchElementException#NoSuchElementException()}.
    * </ul>
-   * <p>
-   * Method under test: {@link DBIterator#checkValid()}
+   *
+   * <p>Method under test: {@link DBIterator#checkValid()}
    */
   @Test
   @Category(MaintainedByDiffblue.class)
   @MethodsUnderTest({"void DBIterator.checkValid()"})
-  public void testCheckValid_thenThrowNoSuchElementException() {
+  public void testCheckValid_givenRocksIteratorIsValidThrowNoSuchElementException() {
     // Arrange
     RocksIterator dbIterator = mock(RocksIterator.class);
-    when(dbIterator.isValid()).thenReturn(false);
+    when(dbIterator.isValid()).thenThrow(new NoSuchElementException());
 
     // Act and Assert
-    assertThrows(NoSuchElementException.class, () -> (new RockStoreIterator(dbIterator)).checkValid());
+    assertThrows(
+        NoSuchElementException.class, () -> new RockStoreIterator(dbIterator).checkValid());
     verify(dbIterator).isValid();
   }
 }

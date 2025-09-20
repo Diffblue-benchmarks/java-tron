@@ -14,8 +14,8 @@ import org.junit.experimental.categories.Category;
 public class BlockLogTriggerDiffblueTest {
   /**
    * Test new {@link BlockLogTrigger} (default constructor).
-   * <p>
-   * Method under test: default or parameterless constructor of {@link BlockLogTrigger}
+   *
+   * <p>Method under test: default or parameterless constructor of {@link BlockLogTrigger}
    */
   @Test
   @Category(MaintainedByDiffblue.class)
@@ -36,8 +36,9 @@ public class BlockLogTriggerDiffblueTest {
 
   /**
    * Test getters and setters.
-   * <p>
-   * Methods under test:
+   *
+   * <p>Methods under test:
+   *
    * <ul>
    *   <li>{@link BlockLogTrigger#setBlockHash(String)}
    *   <li>{@link BlockLogTrigger#setBlockNumber(long)}
@@ -54,12 +55,19 @@ public class BlockLogTriggerDiffblueTest {
    */
   @Test
   @Category(MaintainedByDiffblue.class)
-  @MethodsUnderTest({"String BlockLogTrigger.getBlockHash()", "long BlockLogTrigger.getBlockNumber()",
-      "long BlockLogTrigger.getLatestSolidifiedBlockNumber()", "List BlockLogTrigger.getTransactionList()",
-      "long BlockLogTrigger.getTransactionSize()", "void BlockLogTrigger.setBlockHash(String)",
-      "void BlockLogTrigger.setBlockNumber(long)", "void BlockLogTrigger.setLatestSolidifiedBlockNumber(long)",
-      "void BlockLogTrigger.setTransactionList(List)", "void BlockLogTrigger.setTransactionSize(long)",
-      "String BlockLogTrigger.toString()"})
+  @MethodsUnderTest({
+    "String BlockLogTrigger.getBlockHash()",
+    "long BlockLogTrigger.getBlockNumber()",
+    "long BlockLogTrigger.getLatestSolidifiedBlockNumber()",
+    "List BlockLogTrigger.getTransactionList()",
+    "long BlockLogTrigger.getTransactionSize()",
+    "void BlockLogTrigger.setBlockHash(String)",
+    "void BlockLogTrigger.setBlockNumber(long)",
+    "void BlockLogTrigger.setLatestSolidifiedBlockNumber(long)",
+    "void BlockLogTrigger.setTransactionList(List)",
+    "void BlockLogTrigger.setTransactionSize(long)",
+    "String BlockLogTrigger.toString()"
+  })
   public void testGettersAndSetters() {
     // Arrange
     BlockLogTrigger blockLogTrigger = new BlockLogTrigger();
@@ -79,8 +87,10 @@ public class BlockLogTriggerDiffblueTest {
 
     // Assert
     assertEquals("Block Hash", actualBlockHash);
-    assertEquals("triggerName: blockTriggertimestamp: 0, blockNumber: 1, blockhash: Block Hash, transactionSize: 3,"
-        + " latestSolidifiedBlockNumber: 1, transactionList: []", actualToStringResult);
+    assertEquals(
+        "triggerName: blockTriggertimestamp: 0, blockNumber: 1, blockhash: Block Hash, transactionSize: 3,"
+            + " latestSolidifiedBlockNumber: 1, transactionList: []",
+        actualToStringResult);
     assertEquals(1L, actualBlockNumber);
     assertEquals(1L, actualLatestSolidifiedBlockNumber);
     assertEquals(3L, blockLogTrigger.getTransactionSize());

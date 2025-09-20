@@ -17,59 +17,62 @@ import org.junit.experimental.categories.Category;
 public class ByteArraySetDiffblueTest {
   /**
    * Test {@link ByteArraySet#ByteArraySet()}.
-   * <p>
-   * Method under test: {@link ByteArraySet#ByteArraySet()}
+   *
+   * <p>Method under test: {@link ByteArraySet#ByteArraySet()}
    */
   @Test
   @Category(MaintainedByDiffblue.class)
   @MethodsUnderTest({"void ByteArraySet.<init>()", "void ByteArraySet.<init>(Set)"})
   public void testNewByteArraySet() {
     // Arrange, Act and Assert
-    assertTrue((new ByteArraySet()).isEmpty());
+    assertTrue(new ByteArraySet().isEmpty());
   }
 
   /**
    * Test {@link ByteArraySet#ByteArraySet(Set)}.
+   *
    * <ul>
-   *   <li>When {@link HashSet#HashSet()}.</li>
+   *   <li>When {@link HashSet#HashSet()}.
    * </ul>
-   * <p>
-   * Method under test: {@link ByteArraySet#ByteArraySet(Set)}
+   *
+   * <p>Method under test: {@link ByteArraySet#ByteArraySet(Set)}
    */
   @Test
   @Category(MaintainedByDiffblue.class)
   @MethodsUnderTest({"void ByteArraySet.<init>()", "void ByteArraySet.<init>(Set)"})
   public void testNewByteArraySet_whenHashSet() {
     // Arrange, Act and Assert
-    assertTrue((new ByteArraySet(new HashSet<>())).isEmpty());
+    assertTrue(new ByteArraySet(new HashSet<>()).isEmpty());
   }
 
   /**
    * Test {@link ByteArraySet#size()}.
-   * <p>
-   * Method under test: {@link ByteArraySet#size()}
+   *
+   * <p>Method under test: {@link ByteArraySet#size()}
    */
   @Test
   @Category(MaintainedByDiffblue.class)
   @MethodsUnderTest({"int ByteArraySet.size()"})
   public void testSize() {
     // Arrange, Act and Assert
-    assertEquals(0, (new ByteArraySet()).size());
+    assertEquals(0, new ByteArraySet().size());
   }
 
   /**
    * Test {@link ByteArraySet#isEmpty()}.
+   *
    * <ul>
-   *   <li>Given {@link ArrayList#ArrayList()} add {@code AXAXAXAX} Bytes is {@code UTF-8}.</li>
-   *   <li>Then return {@code false}.</li>
+   *   <li>Given {@link ArrayList#ArrayList()} add {@code AXAXAXAX} Bytes is {@code UTF-8}.
+   *   <li>Then return {@code false}.
    * </ul>
-   * <p>
-   * Method under test: {@link ByteArraySet#isEmpty()}
+   *
+   * <p>Method under test: {@link ByteArraySet#isEmpty()}
    */
   @Test
   @Category(MaintainedByDiffblue.class)
   @MethodsUnderTest({"boolean ByteArraySet.isEmpty()"})
-  public void testIsEmpty_givenArrayListAddAxaxaxaxBytesIsUtf8_thenReturnFalse() throws UnsupportedEncodingException {
+  public void testIsEmpty_givenArrayListAddAxaxaxaxBytesIsUtf8_thenReturnFalse()
+      throws UnsupportedEncodingException {
     // Arrange
     ArrayList<byte[]> c = new ArrayList<>();
     c.add("AXAXAXAX".getBytes("UTF-8"));
@@ -83,49 +86,51 @@ public class ByteArraySetDiffblueTest {
 
   /**
    * Test {@link ByteArraySet#isEmpty()}.
+   *
    * <ul>
-   *   <li>Given {@link ByteArraySet#ByteArraySet()}.</li>
-   *   <li>Then return {@code true}.</li>
+   *   <li>Given {@link ByteArraySet#ByteArraySet()}.
+   *   <li>Then return {@code true}.
    * </ul>
-   * <p>
-   * Method under test: {@link ByteArraySet#isEmpty()}
+   *
+   * <p>Method under test: {@link ByteArraySet#isEmpty()}
    */
   @Test
   @Category(MaintainedByDiffblue.class)
   @MethodsUnderTest({"boolean ByteArraySet.isEmpty()"})
   public void testIsEmpty_givenByteArraySet_thenReturnTrue() {
     // Arrange, Act and Assert
-    assertTrue((new ByteArraySet()).isEmpty());
+    assertTrue(new ByteArraySet().isEmpty());
   }
 
   /**
    * Test {@link ByteArraySet#iterator()}.
-   * <p>
-   * Method under test: {@link ByteArraySet#iterator()}
+   *
+   * <p>Method under test: {@link ByteArraySet#iterator()}
    */
   @Test
   @Category(MaintainedByDiffblue.class)
   @MethodsUnderTest({"java.util.Iterator ByteArraySet.iterator()"})
   public void testIterator() {
     // Arrange, Act and Assert
-    assertFalse((new ByteArraySet()).iterator().hasNext());
+    assertFalse(new ByteArraySet().iterator().hasNext());
   }
 
   /**
    * Test {@link ByteArraySet#toArray(Object[])} with {@code Object[]}.
+   *
    * <ul>
-   *   <li>Given {@link ByteArraySet#ByteArraySet()}.</li>
-   *   <li>Then return array length is zero.</li>
+   *   <li>Given {@link ByteArraySet#ByteArraySet()}.
+   *   <li>Then return array length is zero.
    * </ul>
-   * <p>
-   * Method under test: {@link ByteArraySet#toArray(Object[])}
+   *
+   * <p>Method under test: {@link ByteArraySet#toArray(Object[])}
    */
   @Test
   @Category(MaintainedByDiffblue.class)
   @MethodsUnderTest({"Object[] ByteArraySet.toArray(Object[])"})
   public void testToArrayWithObject_givenByteArraySet_thenReturnArrayLengthIsZero() {
     // Arrange and Act
-    Object[] actualToArrayResult = (new ByteArraySet()).toArray(new Object[]{"42"});
+    Object[] actualToArrayResult = new ByteArraySet().toArray(new Object[] {"42"});
 
     // Assert
     assertTrue(actualToArrayResult instanceof byte[][]);
@@ -134,19 +139,20 @@ public class ByteArraySetDiffblueTest {
 
   /**
    * Test {@link ByteArraySet#toArray()}.
+   *
    * <ul>
-   *   <li>Given {@link ByteArraySet#ByteArraySet()}.</li>
-   *   <li>Then return array length is zero.</li>
+   *   <li>Given {@link ByteArraySet#ByteArraySet()}.
+   *   <li>Then return array length is zero.
    * </ul>
-   * <p>
-   * Method under test: {@link ByteArraySet#toArray()}
+   *
+   * <p>Method under test: {@link ByteArraySet#toArray()}
    */
   @Test
   @Category(MaintainedByDiffblue.class)
   @MethodsUnderTest({"Object[] ByteArraySet.toArray()"})
   public void testToArray_givenByteArraySet_thenReturnArrayLengthIsZero() {
     // Arrange and Act
-    Object[] actualToArrayResult = (new ByteArraySet()).toArray();
+    Object[] actualToArrayResult = new ByteArraySet().toArray();
 
     // Assert
     assertTrue(actualToArrayResult instanceof byte[][]);
@@ -155,17 +161,19 @@ public class ByteArraySetDiffblueTest {
 
   /**
    * Test {@link ByteArraySet#add(byte[])} with {@code byte[]}.
+   *
    * <ul>
-   *   <li>When {@code AXAXAXAX} Bytes is {@code UTF-8}.</li>
-   *   <li>Then {@link ByteArraySet#ByteArraySet()} size is one.</li>
+   *   <li>When {@code AXAXAXAX} Bytes is {@code UTF-8}.
+   *   <li>Then {@link ByteArraySet#ByteArraySet()} size is one.
    * </ul>
-   * <p>
-   * Method under test: {@link ByteArraySet#add(byte[])}
+   *
+   * <p>Method under test: {@link ByteArraySet#add(byte[])}
    */
   @Test
   @Category(MaintainedByDiffblue.class)
   @MethodsUnderTest({"boolean ByteArraySet.add(byte[])"})
-  public void testAddWithByte_whenAxaxaxaxBytesIsUtf8_thenByteArraySetSizeIsOne() throws UnsupportedEncodingException {
+  public void testAddWithByte_whenAxaxaxaxBytesIsUtf8_thenByteArraySetSizeIsOne()
+      throws UnsupportedEncodingException {
     // Arrange
     ByteArraySet byteArraySet = new ByteArraySet();
 
@@ -179,12 +187,13 @@ public class ByteArraySetDiffblueTest {
 
   /**
    * Test {@link ByteArraySet#containsAll(Collection)}.
+   *
    * <ul>
-   *   <li>Given {@code 42}.</li>
-   *   <li>When {@link ArrayList#ArrayList()} add {@code 42}.</li>
+   *   <li>Given {@code 42}.
+   *   <li>When {@link ArrayList#ArrayList()} add {@code 42}.
    * </ul>
-   * <p>
-   * Method under test: {@link ByteArraySet#containsAll(Collection)}
+   *
+   * <p>Method under test: {@link ByteArraySet#containsAll(Collection)}
    */
   @Test
   @Category(MaintainedByDiffblue.class)
@@ -202,12 +211,13 @@ public class ByteArraySetDiffblueTest {
 
   /**
    * Test {@link ByteArraySet#containsAll(Collection)}.
+   *
    * <ul>
-   *   <li>Given {@code 42}.</li>
-   *   <li>When {@link ArrayList#ArrayList()} add {@code 42}.</li>
+   *   <li>Given {@code 42}.
+   *   <li>When {@link ArrayList#ArrayList()} add {@code 42}.
    * </ul>
-   * <p>
-   * Method under test: {@link ByteArraySet#containsAll(Collection)}
+   *
+   * <p>Method under test: {@link ByteArraySet#containsAll(Collection)}
    */
   @Test
   @Category(MaintainedByDiffblue.class)
@@ -226,11 +236,12 @@ public class ByteArraySetDiffblueTest {
 
   /**
    * Test {@link ByteArraySet#containsAll(Collection)}.
+   *
    * <ul>
-   *   <li>When {@link ArrayList#ArrayList()}.</li>
+   *   <li>When {@link ArrayList#ArrayList()}.
    * </ul>
-   * <p>
-   * Method under test: {@link ByteArraySet#containsAll(Collection)}
+   *
+   * <p>Method under test: {@link ByteArraySet#containsAll(Collection)}
    */
   @Test
   @Category(MaintainedByDiffblue.class)
@@ -245,12 +256,13 @@ public class ByteArraySetDiffblueTest {
 
   /**
    * Test {@link ByteArraySet#addAll(Collection)}.
+   *
    * <ul>
-   *   <li>When {@link ArrayList#ArrayList()} add {@code AXAXAXAX} Bytes is {@code UTF-8}.</li>
-   *   <li>Then {@link ByteArraySet#ByteArraySet()} size is one.</li>
+   *   <li>When {@link ArrayList#ArrayList()} add {@code AXAXAXAX} Bytes is {@code UTF-8}.
+   *   <li>Then {@link ByteArraySet#ByteArraySet()} size is one.
    * </ul>
-   * <p>
-   * Method under test: {@link ByteArraySet#addAll(Collection)}
+   *
+   * <p>Method under test: {@link ByteArraySet#addAll(Collection)}
    */
   @Test
   @Category(MaintainedByDiffblue.class)
@@ -274,12 +286,13 @@ public class ByteArraySetDiffblueTest {
 
   /**
    * Test {@link ByteArraySet#addAll(Collection)}.
+   *
    * <ul>
-   *   <li>When {@link ArrayList#ArrayList()}.</li>
-   *   <li>Then return {@code false}.</li>
+   *   <li>When {@link ArrayList#ArrayList()}.
+   *   <li>Then return {@code false}.
    * </ul>
-   * <p>
-   * Method under test: {@link ByteArraySet#addAll(Collection)}
+   *
+   * <p>Method under test: {@link ByteArraySet#addAll(Collection)}
    */
   @Test
   @Category(MaintainedByDiffblue.class)
@@ -295,12 +308,13 @@ public class ByteArraySetDiffblueTest {
 
   /**
    * Test {@link ByteArraySet#retainAll(Collection)}.
+   *
    * <ul>
-   *   <li>Given {@code 42}.</li>
-   *   <li>When {@link ArrayList#ArrayList()} add {@code 42}.</li>
+   *   <li>Given {@code 42}.
+   *   <li>When {@link ArrayList#ArrayList()} add {@code 42}.
    * </ul>
-   * <p>
-   * Method under test: {@link ByteArraySet#retainAll(Collection)}
+   *
+   * <p>Method under test: {@link ByteArraySet#retainAll(Collection)}
    */
   @Test
   @Category(MaintainedByDiffblue.class)
@@ -318,12 +332,13 @@ public class ByteArraySetDiffblueTest {
 
   /**
    * Test {@link ByteArraySet#retainAll(Collection)}.
+   *
    * <ul>
-   *   <li>Given {@code 42}.</li>
-   *   <li>When {@link ArrayList#ArrayList()} add {@code 42}.</li>
+   *   <li>Given {@code 42}.
+   *   <li>When {@link ArrayList#ArrayList()} add {@code 42}.
    * </ul>
-   * <p>
-   * Method under test: {@link ByteArraySet#retainAll(Collection)}
+   *
+   * <p>Method under test: {@link ByteArraySet#retainAll(Collection)}
    */
   @Test
   @Category(MaintainedByDiffblue.class)
@@ -342,11 +357,12 @@ public class ByteArraySetDiffblueTest {
 
   /**
    * Test {@link ByteArraySet#retainAll(Collection)}.
+   *
    * <ul>
-   *   <li>When {@link ArrayList#ArrayList()}.</li>
+   *   <li>When {@link ArrayList#ArrayList()}.
    * </ul>
-   * <p>
-   * Method under test: {@link ByteArraySet#retainAll(Collection)}
+   *
+   * <p>Method under test: {@link ByteArraySet#retainAll(Collection)}
    */
   @Test
   @Category(MaintainedByDiffblue.class)
@@ -361,12 +377,13 @@ public class ByteArraySetDiffblueTest {
 
   /**
    * Test {@link ByteArraySet#removeAll(Collection)}.
+   *
    * <ul>
-   *   <li>Given {@code 42}.</li>
-   *   <li>When {@link ArrayList#ArrayList()} add {@code 42}.</li>
+   *   <li>Given {@code 42}.
+   *   <li>When {@link ArrayList#ArrayList()} add {@code 42}.
    * </ul>
-   * <p>
-   * Method under test: {@link ByteArraySet#removeAll(Collection)}
+   *
+   * <p>Method under test: {@link ByteArraySet#removeAll(Collection)}
    */
   @Test
   @Category(MaintainedByDiffblue.class)
@@ -384,12 +401,13 @@ public class ByteArraySetDiffblueTest {
 
   /**
    * Test {@link ByteArraySet#removeAll(Collection)}.
+   *
    * <ul>
-   *   <li>Given {@code 42}.</li>
-   *   <li>When {@link ArrayList#ArrayList()} add {@code 42}.</li>
+   *   <li>Given {@code 42}.
+   *   <li>When {@link ArrayList#ArrayList()} add {@code 42}.
    * </ul>
-   * <p>
-   * Method under test: {@link ByteArraySet#removeAll(Collection)}
+   *
+   * <p>Method under test: {@link ByteArraySet#removeAll(Collection)}
    */
   @Test
   @Category(MaintainedByDiffblue.class)
@@ -408,11 +426,12 @@ public class ByteArraySetDiffblueTest {
 
   /**
    * Test {@link ByteArraySet#removeAll(Collection)}.
+   *
    * <ul>
-   *   <li>When {@link ArrayList#ArrayList()}.</li>
+   *   <li>When {@link ArrayList#ArrayList()}.
    * </ul>
-   * <p>
-   * Method under test: {@link ByteArraySet#removeAll(Collection)}
+   *
+   * <p>Method under test: {@link ByteArraySet#removeAll(Collection)}
    */
   @Test
   @Category(MaintainedByDiffblue.class)
@@ -427,52 +446,56 @@ public class ByteArraySetDiffblueTest {
 
   /**
    * Test {@link ByteArraySet#equals(Object)}.
+   *
    * <ul>
-   *   <li>When other is {@code null}.</li>
-   *   <li>Then throw exception.</li>
+   *   <li>When other is {@code null}.
+   *   <li>Then throw exception.
    * </ul>
-   * <p>
-   * Method under test: {@link ByteArraySet#equals(Object)}
+   *
+   * <p>Method under test: {@link ByteArraySet#equals(Object)}
    */
   @Test
   @Category(MaintainedByDiffblue.class)
   @MethodsUnderTest({"boolean ByteArraySet.equals(Object)", "int ByteArraySet.hashCode()"})
   public void testEquals_whenOtherIsNull_thenThrowException() {
     // Arrange, Act and Assert
-    assertThrows(RuntimeException.class, () -> (new ByteArraySet()).equals(null));
+    assertThrows(RuntimeException.class, () -> new ByteArraySet().equals(null));
   }
 
   /**
    * Test {@link ByteArraySet#equals(Object)}.
+   *
    * <ul>
-   *   <li>When other is same.</li>
-   *   <li>Then throw exception.</li>
+   *   <li>When other is same.
+   *   <li>Then throw exception.
    * </ul>
-   * <p>
-   * Method under test: {@link ByteArraySet#equals(Object)}
+   *
+   * <p>Method under test: {@link ByteArraySet#equals(Object)}
    */
   @Test
   @Category(MaintainedByDiffblue.class)
   @MethodsUnderTest({"boolean ByteArraySet.equals(Object)", "int ByteArraySet.hashCode()"})
   public void testEquals_whenOtherIsSame_thenThrowException() {
     // Arrange, Act and Assert
-    assertThrows(RuntimeException.class, () -> (new ByteArraySet()).equals(new ByteArraySet()));
+    assertThrows(RuntimeException.class, () -> new ByteArraySet().equals(new ByteArraySet()));
   }
 
   /**
    * Test {@link ByteArraySet#equals(Object)}.
+   *
    * <ul>
-   *   <li>When other is wrong type.</li>
-   *   <li>Then throw exception.</li>
+   *   <li>When other is wrong type.
+   *   <li>Then throw exception.
    * </ul>
-   * <p>
-   * Method under test: {@link ByteArraySet#equals(Object)}
+   *
+   * <p>Method under test: {@link ByteArraySet#equals(Object)}
    */
   @Test
   @Category(MaintainedByDiffblue.class)
   @MethodsUnderTest({"boolean ByteArraySet.equals(Object)", "int ByteArraySet.hashCode()"})
   public void testEquals_whenOtherIsWrongType_thenThrowException() {
     // Arrange, Act and Assert
-    assertThrows(RuntimeException.class, () -> (new ByteArraySet()).equals("Different type to ByteArraySet"));
+    assertThrows(
+        RuntimeException.class, () -> new ByteArraySet().equals("Different type to ByteArraySet"));
   }
 }

@@ -4,7 +4,6 @@ import static org.junit.Assert.assertEquals;
 import static org.junit.Assert.assertNotEquals;
 import static org.junit.Assert.assertSame;
 import static org.junit.Assert.assertTrue;
-import static org.mockito.Mockito.doNothing;
 import static org.mockito.Mockito.mock;
 import com.diffblue.cover.annotations.MaintainedByDiffblue;
 import com.diffblue.cover.annotations.MethodsUnderTest;
@@ -12,17 +11,18 @@ import java.util.ArrayList;
 import java.util.List;
 import org.junit.Test;
 import org.junit.experimental.categories.Category;
-import org.mockito.Mockito;
 
 public class NetInfoDiffblueTest {
   /**
    * Test {@link NetInfo#equals(Object)}, and {@link NetInfo#hashCode()}.
+   *
    * <ul>
-   *   <li>When other is equal.</li>
-   *   <li>Then return equal.</li>
+   *   <li>When other is equal.
+   *   <li>Then return equal.
    * </ul>
-   * <p>
-   * Methods under test:
+   *
+   * <p>Methods under test:
+   *
    * <ul>
    *   <li>{@link NetInfo#equals(Object)}
    *   <li>{@link NetInfo#hashCode()}
@@ -91,18 +91,19 @@ public class NetInfoDiffblueTest {
 
     // Act and Assert
     assertEquals(netInfo, netInfo2);
-    int expectedHashCodeResult = netInfo.hashCode();
-    assertEquals(expectedHashCodeResult, netInfo2.hashCode());
+    assertEquals(netInfo.hashCode(), netInfo2.hashCode());
   }
 
   /**
    * Test {@link NetInfo#equals(Object)}, and {@link NetInfo#hashCode()}.
+   *
    * <ul>
-   *   <li>When other is same.</li>
-   *   <li>Then return equal.</li>
+   *   <li>When other is same.
+   *   <li>Then return equal.
    * </ul>
-   * <p>
-   * Methods under test:
+   *
+   * <p>Methods under test:
+   *
    * <ul>
    *   <li>{@link NetInfo#equals(Object)}
    *   <li>{@link NetInfo#hashCode()}
@@ -149,24 +150,30 @@ public class NetInfoDiffblueTest {
 
   /**
    * Test {@link NetInfo#equals(Object)}.
+   *
    * <ul>
-   *   <li>When other is different.</li>
-   *   <li>Then return not equal.</li>
+   *   <li>When other is different.
+   *   <li>Then return not equal.
    * </ul>
-   * <p>
-   * Method under test: {@link NetInfo#equals(Object)}
+   *
+   * <p>Method under test: {@link NetInfo#equals(Object)}
    */
   @Test
   @Category(MaintainedByDiffblue.class)
   @MethodsUnderTest({"boolean NetInfo.equals(Object)", "int NetInfo.hashCode()"})
   public void testEquals_whenOtherIsDifferent_thenReturnNotEqual() {
     // Arrange
-    ApiInfo api = mock(ApiInfo.class);
-    doNothing().when(api).setDetail(Mockito.<List<ApiDetailInfo>>any());
-    doNothing().when(api).setFailQps(Mockito.<RateInfo>any());
-    doNothing().when(api).setOutTraffic(Mockito.<RateInfo>any());
-    doNothing().when(api).setQps(Mockito.<RateInfo>any());
-    api.setDetail(new ArrayList<>());
+    ApiDetailInfo apiDetailInfo = new ApiDetailInfo();
+    apiDetailInfo.setFailQps(new RateInfo());
+    apiDetailInfo.setName("Name");
+    apiDetailInfo.setOutTraffic(new RateInfo());
+    apiDetailInfo.setQps(new RateInfo());
+
+    ArrayList<ApiDetailInfo> detail = new ArrayList<>();
+    detail.add(apiDetailInfo);
+
+    ApiInfo api = new ApiInfo();
+    api.setDetail(detail);
     api.setFailQps(new RateInfo());
     api.setOutTraffic(new RateInfo());
     api.setQps(new RateInfo());
@@ -227,12 +234,995 @@ public class NetInfoDiffblueTest {
 
   /**
    * Test {@link NetInfo#equals(Object)}.
+   *
    * <ul>
-   *   <li>When other is {@code null}.</li>
-   *   <li>Then return not equal.</li>
+   *   <li>When other is different.
+   *   <li>Then return not equal.
    * </ul>
-   * <p>
-   * Method under test: {@link NetInfo#equals(Object)}
+   *
+   * <p>Method under test: {@link NetInfo#equals(Object)}
+   */
+  @Test
+  @Category(MaintainedByDiffblue.class)
+  @MethodsUnderTest({"boolean NetInfo.equals(Object)", "int NetInfo.hashCode()"})
+  public void testEquals_whenOtherIsDifferent_thenReturnNotEqual2() {
+    // Arrange
+    ApiInfo api = new ApiInfo();
+    api.setDetail(new ArrayList<>());
+    api.setFailQps(new RateInfo());
+    api.setOutTraffic(new RateInfo());
+    api.setQps(new RateInfo());
+
+    LatencyInfo latency = new LatencyInfo();
+    latency.setDelay1S(1);
+    latency.setDelay2S(1);
+    latency.setDelay3S(1);
+    latency.setDetail(new ArrayList<>());
+    latency.setTop75(1);
+    latency.setTop95(1);
+    latency.setTop99(1);
+    latency.setTotalCount(3);
+
+    NetInfo netInfo = new NetInfo();
+    netInfo.setApi(api);
+    netInfo.setConnectionCount(1);
+    netInfo.setDisconnectionCount(3);
+    netInfo.setDisconnectionDetail(new ArrayList<>());
+    netInfo.setLatency(latency);
+    netInfo.setTcpInTraffic(new RateInfo());
+    netInfo.setTcpOutTraffic(new RateInfo());
+    netInfo.setUdpInTraffic(new RateInfo());
+    netInfo.setUdpOutTraffic(new RateInfo());
+    netInfo.setValidConnectionCount(1);
+
+    ApiInfo api2 = new ApiInfo();
+    api2.setDetail(new ArrayList<>());
+    api2.setFailQps(new RateInfo());
+    api2.setOutTraffic(new RateInfo());
+    api2.setQps(new RateInfo());
+
+    LatencyInfo latency2 = new LatencyInfo();
+    latency2.setDelay1S(1);
+    latency2.setDelay2S(1);
+    latency2.setDelay3S(1);
+    latency2.setDetail(new ArrayList<>());
+    latency2.setTop75(1);
+    latency2.setTop95(1);
+    latency2.setTop99(1);
+    latency2.setTotalCount(3);
+
+    NetInfo netInfo2 = new NetInfo();
+    netInfo2.setApi(api2);
+    netInfo2.setConnectionCount(3);
+    netInfo2.setDisconnectionCount(3);
+    netInfo2.setDisconnectionDetail(new ArrayList<>());
+    netInfo2.setLatency(latency2);
+    netInfo2.setTcpInTraffic(new RateInfo());
+    netInfo2.setTcpOutTraffic(new RateInfo());
+    netInfo2.setUdpInTraffic(new RateInfo());
+    netInfo2.setUdpOutTraffic(new RateInfo());
+    netInfo2.setValidConnectionCount(1);
+
+    // Act and Assert
+    assertNotEquals(netInfo, netInfo2);
+  }
+
+  /**
+   * Test {@link NetInfo#equals(Object)}.
+   *
+   * <ul>
+   *   <li>When other is different.
+   *   <li>Then return not equal.
+   * </ul>
+   *
+   * <p>Method under test: {@link NetInfo#equals(Object)}
+   */
+  @Test
+  @Category(MaintainedByDiffblue.class)
+  @MethodsUnderTest({"boolean NetInfo.equals(Object)", "int NetInfo.hashCode()"})
+  public void testEquals_whenOtherIsDifferent_thenReturnNotEqual3() {
+    // Arrange
+    ApiInfo api = new ApiInfo();
+    api.setDetail(new ArrayList<>());
+    api.setFailQps(new RateInfo());
+    api.setOutTraffic(new RateInfo());
+    api.setQps(new RateInfo());
+
+    LatencyInfo latency = new LatencyInfo();
+    latency.setDelay1S(1);
+    latency.setDelay2S(1);
+    latency.setDelay3S(1);
+    latency.setDetail(new ArrayList<>());
+    latency.setTop75(1);
+    latency.setTop95(1);
+    latency.setTop99(1);
+    latency.setTotalCount(3);
+
+    NetInfo netInfo = new NetInfo();
+    netInfo.setApi(api);
+    netInfo.setConnectionCount(3);
+    netInfo.setDisconnectionCount(1);
+    netInfo.setDisconnectionDetail(new ArrayList<>());
+    netInfo.setLatency(latency);
+    netInfo.setTcpInTraffic(new RateInfo());
+    netInfo.setTcpOutTraffic(new RateInfo());
+    netInfo.setUdpInTraffic(new RateInfo());
+    netInfo.setUdpOutTraffic(new RateInfo());
+    netInfo.setValidConnectionCount(1);
+
+    ApiInfo api2 = new ApiInfo();
+    api2.setDetail(new ArrayList<>());
+    api2.setFailQps(new RateInfo());
+    api2.setOutTraffic(new RateInfo());
+    api2.setQps(new RateInfo());
+
+    LatencyInfo latency2 = new LatencyInfo();
+    latency2.setDelay1S(1);
+    latency2.setDelay2S(1);
+    latency2.setDelay3S(1);
+    latency2.setDetail(new ArrayList<>());
+    latency2.setTop75(1);
+    latency2.setTop95(1);
+    latency2.setTop99(1);
+    latency2.setTotalCount(3);
+
+    NetInfo netInfo2 = new NetInfo();
+    netInfo2.setApi(api2);
+    netInfo2.setConnectionCount(3);
+    netInfo2.setDisconnectionCount(3);
+    netInfo2.setDisconnectionDetail(new ArrayList<>());
+    netInfo2.setLatency(latency2);
+    netInfo2.setTcpInTraffic(new RateInfo());
+    netInfo2.setTcpOutTraffic(new RateInfo());
+    netInfo2.setUdpInTraffic(new RateInfo());
+    netInfo2.setUdpOutTraffic(new RateInfo());
+    netInfo2.setValidConnectionCount(1);
+
+    // Act and Assert
+    assertNotEquals(netInfo, netInfo2);
+  }
+
+  /**
+   * Test {@link NetInfo#equals(Object)}.
+   *
+   * <ul>
+   *   <li>When other is different.
+   *   <li>Then return not equal.
+   * </ul>
+   *
+   * <p>Method under test: {@link NetInfo#equals(Object)}
+   */
+  @Test
+  @Category(MaintainedByDiffblue.class)
+  @MethodsUnderTest({"boolean NetInfo.equals(Object)", "int NetInfo.hashCode()"})
+  public void testEquals_whenOtherIsDifferent_thenReturnNotEqual4() {
+    // Arrange
+    ApiInfo api = new ApiInfo();
+    api.setDetail(new ArrayList<>());
+    api.setFailQps(new RateInfo());
+    api.setOutTraffic(new RateInfo());
+    api.setQps(new RateInfo());
+
+    DisconnectionDetailInfo disconnectionDetailInfo = new DisconnectionDetailInfo();
+    disconnectionDetailInfo.setCount(3);
+    disconnectionDetailInfo.setReason("Just cause");
+
+    ArrayList<DisconnectionDetailInfo> disconnectionDetail = new ArrayList<>();
+    disconnectionDetail.add(disconnectionDetailInfo);
+
+    LatencyInfo latency = new LatencyInfo();
+    latency.setDelay1S(1);
+    latency.setDelay2S(1);
+    latency.setDelay3S(1);
+    latency.setDetail(new ArrayList<>());
+    latency.setTop75(1);
+    latency.setTop95(1);
+    latency.setTop99(1);
+    latency.setTotalCount(3);
+
+    NetInfo netInfo = new NetInfo();
+    netInfo.setApi(api);
+    netInfo.setConnectionCount(3);
+    netInfo.setDisconnectionCount(3);
+    netInfo.setDisconnectionDetail(disconnectionDetail);
+    netInfo.setLatency(latency);
+    netInfo.setTcpInTraffic(new RateInfo());
+    netInfo.setTcpOutTraffic(new RateInfo());
+    netInfo.setUdpInTraffic(new RateInfo());
+    netInfo.setUdpOutTraffic(new RateInfo());
+    netInfo.setValidConnectionCount(1);
+
+    ApiInfo api2 = new ApiInfo();
+    api2.setDetail(new ArrayList<>());
+    api2.setFailQps(new RateInfo());
+    api2.setOutTraffic(new RateInfo());
+    api2.setQps(new RateInfo());
+
+    LatencyInfo latency2 = new LatencyInfo();
+    latency2.setDelay1S(1);
+    latency2.setDelay2S(1);
+    latency2.setDelay3S(1);
+    latency2.setDetail(new ArrayList<>());
+    latency2.setTop75(1);
+    latency2.setTop95(1);
+    latency2.setTop99(1);
+    latency2.setTotalCount(3);
+
+    NetInfo netInfo2 = new NetInfo();
+    netInfo2.setApi(api2);
+    netInfo2.setConnectionCount(3);
+    netInfo2.setDisconnectionCount(3);
+    netInfo2.setDisconnectionDetail(new ArrayList<>());
+    netInfo2.setLatency(latency2);
+    netInfo2.setTcpInTraffic(new RateInfo());
+    netInfo2.setTcpOutTraffic(new RateInfo());
+    netInfo2.setUdpInTraffic(new RateInfo());
+    netInfo2.setUdpOutTraffic(new RateInfo());
+    netInfo2.setValidConnectionCount(1);
+
+    // Act and Assert
+    assertNotEquals(netInfo, netInfo2);
+  }
+
+  /**
+   * Test {@link NetInfo#equals(Object)}.
+   *
+   * <ul>
+   *   <li>When other is different.
+   *   <li>Then return not equal.
+   * </ul>
+   *
+   * <p>Method under test: {@link NetInfo#equals(Object)}
+   */
+  @Test
+  @Category(MaintainedByDiffblue.class)
+  @MethodsUnderTest({"boolean NetInfo.equals(Object)", "int NetInfo.hashCode()"})
+  public void testEquals_whenOtherIsDifferent_thenReturnNotEqual5() {
+    // Arrange
+    ApiInfo api = new ApiInfo();
+    api.setDetail(new ArrayList<>());
+    api.setFailQps(new RateInfo());
+    api.setOutTraffic(new RateInfo());
+    api.setQps(new RateInfo());
+
+    LatencyInfo latency = new LatencyInfo();
+    latency.setDelay1S(3);
+    latency.setDelay2S(1);
+    latency.setDelay3S(1);
+    latency.setDetail(new ArrayList<>());
+    latency.setTop75(1);
+    latency.setTop95(1);
+    latency.setTop99(1);
+    latency.setTotalCount(3);
+
+    NetInfo netInfo = new NetInfo();
+    netInfo.setApi(api);
+    netInfo.setConnectionCount(3);
+    netInfo.setDisconnectionCount(3);
+    netInfo.setDisconnectionDetail(new ArrayList<>());
+    netInfo.setLatency(latency);
+    netInfo.setTcpInTraffic(new RateInfo());
+    netInfo.setTcpOutTraffic(new RateInfo());
+    netInfo.setUdpInTraffic(new RateInfo());
+    netInfo.setUdpOutTraffic(new RateInfo());
+    netInfo.setValidConnectionCount(1);
+
+    ApiInfo api2 = new ApiInfo();
+    api2.setDetail(new ArrayList<>());
+    api2.setFailQps(new RateInfo());
+    api2.setOutTraffic(new RateInfo());
+    api2.setQps(new RateInfo());
+
+    LatencyInfo latency2 = new LatencyInfo();
+    latency2.setDelay1S(1);
+    latency2.setDelay2S(1);
+    latency2.setDelay3S(1);
+    latency2.setDetail(new ArrayList<>());
+    latency2.setTop75(1);
+    latency2.setTop95(1);
+    latency2.setTop99(1);
+    latency2.setTotalCount(3);
+
+    NetInfo netInfo2 = new NetInfo();
+    netInfo2.setApi(api2);
+    netInfo2.setConnectionCount(3);
+    netInfo2.setDisconnectionCount(3);
+    netInfo2.setDisconnectionDetail(new ArrayList<>());
+    netInfo2.setLatency(latency2);
+    netInfo2.setTcpInTraffic(new RateInfo());
+    netInfo2.setTcpOutTraffic(new RateInfo());
+    netInfo2.setUdpInTraffic(new RateInfo());
+    netInfo2.setUdpOutTraffic(new RateInfo());
+    netInfo2.setValidConnectionCount(1);
+
+    // Act and Assert
+    assertNotEquals(netInfo, netInfo2);
+  }
+
+  /**
+   * Test {@link NetInfo#equals(Object)}.
+   *
+   * <ul>
+   *   <li>When other is different.
+   *   <li>Then return not equal.
+   * </ul>
+   *
+   * <p>Method under test: {@link NetInfo#equals(Object)}
+   */
+  @Test
+  @Category(MaintainedByDiffblue.class)
+  @MethodsUnderTest({"boolean NetInfo.equals(Object)", "int NetInfo.hashCode()"})
+  public void testEquals_whenOtherIsDifferent_thenReturnNotEqual6() {
+    // Arrange
+    ApiInfo api = new ApiInfo();
+    api.setDetail(new ArrayList<>());
+    api.setFailQps(new RateInfo());
+    api.setOutTraffic(new RateInfo());
+    api.setQps(new RateInfo());
+
+    LatencyInfo latency = new LatencyInfo();
+    latency.setDelay1S(1);
+    latency.setDelay2S(1);
+    latency.setDelay3S(1);
+    latency.setDetail(new ArrayList<>());
+    latency.setTop75(1);
+    latency.setTop95(1);
+    latency.setTop99(1);
+    latency.setTotalCount(3);
+
+    NetInfo netInfo = new NetInfo();
+    netInfo.setApi(api);
+    netInfo.setConnectionCount(3);
+    netInfo.setDisconnectionCount(3);
+    netInfo.setDisconnectionDetail(new ArrayList<>());
+    netInfo.setLatency(latency);
+    netInfo.setTcpInTraffic(null);
+    netInfo.setTcpOutTraffic(new RateInfo());
+    netInfo.setUdpInTraffic(new RateInfo());
+    netInfo.setUdpOutTraffic(new RateInfo());
+    netInfo.setValidConnectionCount(1);
+
+    ApiInfo api2 = new ApiInfo();
+    api2.setDetail(new ArrayList<>());
+    api2.setFailQps(new RateInfo());
+    api2.setOutTraffic(new RateInfo());
+    api2.setQps(new RateInfo());
+
+    LatencyInfo latency2 = new LatencyInfo();
+    latency2.setDelay1S(1);
+    latency2.setDelay2S(1);
+    latency2.setDelay3S(1);
+    latency2.setDetail(new ArrayList<>());
+    latency2.setTop75(1);
+    latency2.setTop95(1);
+    latency2.setTop99(1);
+    latency2.setTotalCount(3);
+
+    NetInfo netInfo2 = new NetInfo();
+    netInfo2.setApi(api2);
+    netInfo2.setConnectionCount(3);
+    netInfo2.setDisconnectionCount(3);
+    netInfo2.setDisconnectionDetail(new ArrayList<>());
+    netInfo2.setLatency(latency2);
+    netInfo2.setTcpInTraffic(new RateInfo());
+    netInfo2.setTcpOutTraffic(new RateInfo());
+    netInfo2.setUdpInTraffic(new RateInfo());
+    netInfo2.setUdpOutTraffic(new RateInfo());
+    netInfo2.setValidConnectionCount(1);
+
+    // Act and Assert
+    assertNotEquals(netInfo, netInfo2);
+  }
+
+  /**
+   * Test {@link NetInfo#equals(Object)}.
+   *
+   * <ul>
+   *   <li>When other is different.
+   *   <li>Then return not equal.
+   * </ul>
+   *
+   * <p>Method under test: {@link NetInfo#equals(Object)}
+   */
+  @Test
+  @Category(MaintainedByDiffblue.class)
+  @MethodsUnderTest({"boolean NetInfo.equals(Object)", "int NetInfo.hashCode()"})
+  public void testEquals_whenOtherIsDifferent_thenReturnNotEqual7() {
+    // Arrange
+    ApiInfo api = new ApiInfo();
+    api.setDetail(new ArrayList<>());
+    api.setFailQps(new RateInfo());
+    api.setOutTraffic(new RateInfo());
+    api.setQps(new RateInfo());
+
+    LatencyInfo latency = new LatencyInfo();
+    latency.setDelay1S(1);
+    latency.setDelay2S(1);
+    latency.setDelay3S(1);
+    latency.setDetail(new ArrayList<>());
+    latency.setTop75(1);
+    latency.setTop95(1);
+    latency.setTop99(1);
+    latency.setTotalCount(3);
+
+    NetInfo netInfo = new NetInfo();
+    netInfo.setApi(api);
+    netInfo.setConnectionCount(3);
+    netInfo.setDisconnectionCount(3);
+    netInfo.setDisconnectionDetail(new ArrayList<>());
+    netInfo.setLatency(latency);
+    netInfo.setTcpInTraffic(mock(RateInfo.class));
+    netInfo.setTcpOutTraffic(new RateInfo());
+    netInfo.setUdpInTraffic(new RateInfo());
+    netInfo.setUdpOutTraffic(new RateInfo());
+    netInfo.setValidConnectionCount(1);
+
+    ApiInfo api2 = new ApiInfo();
+    api2.setDetail(new ArrayList<>());
+    api2.setFailQps(new RateInfo());
+    api2.setOutTraffic(new RateInfo());
+    api2.setQps(new RateInfo());
+
+    LatencyInfo latency2 = new LatencyInfo();
+    latency2.setDelay1S(1);
+    latency2.setDelay2S(1);
+    latency2.setDelay3S(1);
+    latency2.setDetail(new ArrayList<>());
+    latency2.setTop75(1);
+    latency2.setTop95(1);
+    latency2.setTop99(1);
+    latency2.setTotalCount(3);
+
+    NetInfo netInfo2 = new NetInfo();
+    netInfo2.setApi(api2);
+    netInfo2.setConnectionCount(3);
+    netInfo2.setDisconnectionCount(3);
+    netInfo2.setDisconnectionDetail(new ArrayList<>());
+    netInfo2.setLatency(latency2);
+    netInfo2.setTcpInTraffic(new RateInfo());
+    netInfo2.setTcpOutTraffic(new RateInfo());
+    netInfo2.setUdpInTraffic(new RateInfo());
+    netInfo2.setUdpOutTraffic(new RateInfo());
+    netInfo2.setValidConnectionCount(1);
+
+    // Act and Assert
+    assertNotEquals(netInfo, netInfo2);
+  }
+
+  /**
+   * Test {@link NetInfo#equals(Object)}.
+   *
+   * <ul>
+   *   <li>When other is different.
+   *   <li>Then return not equal.
+   * </ul>
+   *
+   * <p>Method under test: {@link NetInfo#equals(Object)}
+   */
+  @Test
+  @Category(MaintainedByDiffblue.class)
+  @MethodsUnderTest({"boolean NetInfo.equals(Object)", "int NetInfo.hashCode()"})
+  public void testEquals_whenOtherIsDifferent_thenReturnNotEqual8() {
+    // Arrange
+    ApiInfo api = new ApiInfo();
+    api.setDetail(new ArrayList<>());
+    api.setFailQps(new RateInfo());
+    api.setOutTraffic(new RateInfo());
+    api.setQps(new RateInfo());
+
+    LatencyInfo latency = new LatencyInfo();
+    latency.setDelay1S(1);
+    latency.setDelay2S(1);
+    latency.setDelay3S(1);
+    latency.setDetail(new ArrayList<>());
+    latency.setTop75(1);
+    latency.setTop95(1);
+    latency.setTop99(1);
+    latency.setTotalCount(3);
+
+    NetInfo netInfo = new NetInfo();
+    netInfo.setApi(api);
+    netInfo.setConnectionCount(3);
+    netInfo.setDisconnectionCount(3);
+    netInfo.setDisconnectionDetail(new ArrayList<>());
+    netInfo.setLatency(latency);
+    netInfo.setTcpInTraffic(new RateInfo());
+    netInfo.setTcpOutTraffic(null);
+    netInfo.setUdpInTraffic(new RateInfo());
+    netInfo.setUdpOutTraffic(new RateInfo());
+    netInfo.setValidConnectionCount(1);
+
+    ApiInfo api2 = new ApiInfo();
+    api2.setDetail(new ArrayList<>());
+    api2.setFailQps(new RateInfo());
+    api2.setOutTraffic(new RateInfo());
+    api2.setQps(new RateInfo());
+
+    LatencyInfo latency2 = new LatencyInfo();
+    latency2.setDelay1S(1);
+    latency2.setDelay2S(1);
+    latency2.setDelay3S(1);
+    latency2.setDetail(new ArrayList<>());
+    latency2.setTop75(1);
+    latency2.setTop95(1);
+    latency2.setTop99(1);
+    latency2.setTotalCount(3);
+
+    NetInfo netInfo2 = new NetInfo();
+    netInfo2.setApi(api2);
+    netInfo2.setConnectionCount(3);
+    netInfo2.setDisconnectionCount(3);
+    netInfo2.setDisconnectionDetail(new ArrayList<>());
+    netInfo2.setLatency(latency2);
+    netInfo2.setTcpInTraffic(new RateInfo());
+    netInfo2.setTcpOutTraffic(new RateInfo());
+    netInfo2.setUdpInTraffic(new RateInfo());
+    netInfo2.setUdpOutTraffic(new RateInfo());
+    netInfo2.setValidConnectionCount(1);
+
+    // Act and Assert
+    assertNotEquals(netInfo, netInfo2);
+  }
+
+  /**
+   * Test {@link NetInfo#equals(Object)}.
+   *
+   * <ul>
+   *   <li>When other is different.
+   *   <li>Then return not equal.
+   * </ul>
+   *
+   * <p>Method under test: {@link NetInfo#equals(Object)}
+   */
+  @Test
+  @Category(MaintainedByDiffblue.class)
+  @MethodsUnderTest({"boolean NetInfo.equals(Object)", "int NetInfo.hashCode()"})
+  public void testEquals_whenOtherIsDifferent_thenReturnNotEqual9() {
+    // Arrange
+    ApiInfo api = new ApiInfo();
+    api.setDetail(new ArrayList<>());
+    api.setFailQps(new RateInfo());
+    api.setOutTraffic(new RateInfo());
+    api.setQps(new RateInfo());
+
+    LatencyInfo latency = new LatencyInfo();
+    latency.setDelay1S(1);
+    latency.setDelay2S(1);
+    latency.setDelay3S(1);
+    latency.setDetail(new ArrayList<>());
+    latency.setTop75(1);
+    latency.setTop95(1);
+    latency.setTop99(1);
+    latency.setTotalCount(3);
+
+    NetInfo netInfo = new NetInfo();
+    netInfo.setApi(api);
+    netInfo.setConnectionCount(3);
+    netInfo.setDisconnectionCount(3);
+    netInfo.setDisconnectionDetail(new ArrayList<>());
+    netInfo.setLatency(latency);
+    netInfo.setTcpInTraffic(new RateInfo());
+    netInfo.setTcpOutTraffic(mock(RateInfo.class));
+    netInfo.setUdpInTraffic(new RateInfo());
+    netInfo.setUdpOutTraffic(new RateInfo());
+    netInfo.setValidConnectionCount(1);
+
+    ApiInfo api2 = new ApiInfo();
+    api2.setDetail(new ArrayList<>());
+    api2.setFailQps(new RateInfo());
+    api2.setOutTraffic(new RateInfo());
+    api2.setQps(new RateInfo());
+
+    LatencyInfo latency2 = new LatencyInfo();
+    latency2.setDelay1S(1);
+    latency2.setDelay2S(1);
+    latency2.setDelay3S(1);
+    latency2.setDetail(new ArrayList<>());
+    latency2.setTop75(1);
+    latency2.setTop95(1);
+    latency2.setTop99(1);
+    latency2.setTotalCount(3);
+
+    NetInfo netInfo2 = new NetInfo();
+    netInfo2.setApi(api2);
+    netInfo2.setConnectionCount(3);
+    netInfo2.setDisconnectionCount(3);
+    netInfo2.setDisconnectionDetail(new ArrayList<>());
+    netInfo2.setLatency(latency2);
+    netInfo2.setTcpInTraffic(new RateInfo());
+    netInfo2.setTcpOutTraffic(new RateInfo());
+    netInfo2.setUdpInTraffic(new RateInfo());
+    netInfo2.setUdpOutTraffic(new RateInfo());
+    netInfo2.setValidConnectionCount(1);
+
+    // Act and Assert
+    assertNotEquals(netInfo, netInfo2);
+  }
+
+  /**
+   * Test {@link NetInfo#equals(Object)}.
+   *
+   * <ul>
+   *   <li>When other is different.
+   *   <li>Then return not equal.
+   * </ul>
+   *
+   * <p>Method under test: {@link NetInfo#equals(Object)}
+   */
+  @Test
+  @Category(MaintainedByDiffblue.class)
+  @MethodsUnderTest({"boolean NetInfo.equals(Object)", "int NetInfo.hashCode()"})
+  public void testEquals_whenOtherIsDifferent_thenReturnNotEqual10() {
+    // Arrange
+    ApiInfo api = new ApiInfo();
+    api.setDetail(new ArrayList<>());
+    api.setFailQps(new RateInfo());
+    api.setOutTraffic(new RateInfo());
+    api.setQps(new RateInfo());
+
+    LatencyInfo latency = new LatencyInfo();
+    latency.setDelay1S(1);
+    latency.setDelay2S(1);
+    latency.setDelay3S(1);
+    latency.setDetail(new ArrayList<>());
+    latency.setTop75(1);
+    latency.setTop95(1);
+    latency.setTop99(1);
+    latency.setTotalCount(3);
+
+    NetInfo netInfo = new NetInfo();
+    netInfo.setApi(api);
+    netInfo.setConnectionCount(3);
+    netInfo.setDisconnectionCount(3);
+    netInfo.setDisconnectionDetail(new ArrayList<>());
+    netInfo.setLatency(latency);
+    netInfo.setTcpInTraffic(new RateInfo());
+    netInfo.setTcpOutTraffic(new RateInfo());
+    netInfo.setUdpInTraffic(null);
+    netInfo.setUdpOutTraffic(new RateInfo());
+    netInfo.setValidConnectionCount(1);
+
+    ApiInfo api2 = new ApiInfo();
+    api2.setDetail(new ArrayList<>());
+    api2.setFailQps(new RateInfo());
+    api2.setOutTraffic(new RateInfo());
+    api2.setQps(new RateInfo());
+
+    LatencyInfo latency2 = new LatencyInfo();
+    latency2.setDelay1S(1);
+    latency2.setDelay2S(1);
+    latency2.setDelay3S(1);
+    latency2.setDetail(new ArrayList<>());
+    latency2.setTop75(1);
+    latency2.setTop95(1);
+    latency2.setTop99(1);
+    latency2.setTotalCount(3);
+
+    NetInfo netInfo2 = new NetInfo();
+    netInfo2.setApi(api2);
+    netInfo2.setConnectionCount(3);
+    netInfo2.setDisconnectionCount(3);
+    netInfo2.setDisconnectionDetail(new ArrayList<>());
+    netInfo2.setLatency(latency2);
+    netInfo2.setTcpInTraffic(new RateInfo());
+    netInfo2.setTcpOutTraffic(new RateInfo());
+    netInfo2.setUdpInTraffic(new RateInfo());
+    netInfo2.setUdpOutTraffic(new RateInfo());
+    netInfo2.setValidConnectionCount(1);
+
+    // Act and Assert
+    assertNotEquals(netInfo, netInfo2);
+  }
+
+  /**
+   * Test {@link NetInfo#equals(Object)}.
+   *
+   * <ul>
+   *   <li>When other is different.
+   *   <li>Then return not equal.
+   * </ul>
+   *
+   * <p>Method under test: {@link NetInfo#equals(Object)}
+   */
+  @Test
+  @Category(MaintainedByDiffblue.class)
+  @MethodsUnderTest({"boolean NetInfo.equals(Object)", "int NetInfo.hashCode()"})
+  public void testEquals_whenOtherIsDifferent_thenReturnNotEqual11() {
+    // Arrange
+    ApiInfo api = new ApiInfo();
+    api.setDetail(new ArrayList<>());
+    api.setFailQps(new RateInfo());
+    api.setOutTraffic(new RateInfo());
+    api.setQps(new RateInfo());
+
+    LatencyInfo latency = new LatencyInfo();
+    latency.setDelay1S(1);
+    latency.setDelay2S(1);
+    latency.setDelay3S(1);
+    latency.setDetail(new ArrayList<>());
+    latency.setTop75(1);
+    latency.setTop95(1);
+    latency.setTop99(1);
+    latency.setTotalCount(3);
+
+    NetInfo netInfo = new NetInfo();
+    netInfo.setApi(api);
+    netInfo.setConnectionCount(3);
+    netInfo.setDisconnectionCount(3);
+    netInfo.setDisconnectionDetail(new ArrayList<>());
+    netInfo.setLatency(latency);
+    netInfo.setTcpInTraffic(new RateInfo());
+    netInfo.setTcpOutTraffic(new RateInfo());
+    netInfo.setUdpInTraffic(mock(RateInfo.class));
+    netInfo.setUdpOutTraffic(new RateInfo());
+    netInfo.setValidConnectionCount(1);
+
+    ApiInfo api2 = new ApiInfo();
+    api2.setDetail(new ArrayList<>());
+    api2.setFailQps(new RateInfo());
+    api2.setOutTraffic(new RateInfo());
+    api2.setQps(new RateInfo());
+
+    LatencyInfo latency2 = new LatencyInfo();
+    latency2.setDelay1S(1);
+    latency2.setDelay2S(1);
+    latency2.setDelay3S(1);
+    latency2.setDetail(new ArrayList<>());
+    latency2.setTop75(1);
+    latency2.setTop95(1);
+    latency2.setTop99(1);
+    latency2.setTotalCount(3);
+
+    NetInfo netInfo2 = new NetInfo();
+    netInfo2.setApi(api2);
+    netInfo2.setConnectionCount(3);
+    netInfo2.setDisconnectionCount(3);
+    netInfo2.setDisconnectionDetail(new ArrayList<>());
+    netInfo2.setLatency(latency2);
+    netInfo2.setTcpInTraffic(new RateInfo());
+    netInfo2.setTcpOutTraffic(new RateInfo());
+    netInfo2.setUdpInTraffic(new RateInfo());
+    netInfo2.setUdpOutTraffic(new RateInfo());
+    netInfo2.setValidConnectionCount(1);
+
+    // Act and Assert
+    assertNotEquals(netInfo, netInfo2);
+  }
+
+  /**
+   * Test {@link NetInfo#equals(Object)}.
+   *
+   * <ul>
+   *   <li>When other is different.
+   *   <li>Then return not equal.
+   * </ul>
+   *
+   * <p>Method under test: {@link NetInfo#equals(Object)}
+   */
+  @Test
+  @Category(MaintainedByDiffblue.class)
+  @MethodsUnderTest({"boolean NetInfo.equals(Object)", "int NetInfo.hashCode()"})
+  public void testEquals_whenOtherIsDifferent_thenReturnNotEqual12() {
+    // Arrange
+    ApiInfo api = new ApiInfo();
+    api.setDetail(new ArrayList<>());
+    api.setFailQps(new RateInfo());
+    api.setOutTraffic(new RateInfo());
+    api.setQps(new RateInfo());
+
+    LatencyInfo latency = new LatencyInfo();
+    latency.setDelay1S(1);
+    latency.setDelay2S(1);
+    latency.setDelay3S(1);
+    latency.setDetail(new ArrayList<>());
+    latency.setTop75(1);
+    latency.setTop95(1);
+    latency.setTop99(1);
+    latency.setTotalCount(3);
+
+    NetInfo netInfo = new NetInfo();
+    netInfo.setApi(api);
+    netInfo.setConnectionCount(3);
+    netInfo.setDisconnectionCount(3);
+    netInfo.setDisconnectionDetail(new ArrayList<>());
+    netInfo.setLatency(latency);
+    netInfo.setTcpInTraffic(new RateInfo());
+    netInfo.setTcpOutTraffic(new RateInfo());
+    netInfo.setUdpInTraffic(new RateInfo());
+    netInfo.setUdpOutTraffic(null);
+    netInfo.setValidConnectionCount(1);
+
+    ApiInfo api2 = new ApiInfo();
+    api2.setDetail(new ArrayList<>());
+    api2.setFailQps(new RateInfo());
+    api2.setOutTraffic(new RateInfo());
+    api2.setQps(new RateInfo());
+
+    LatencyInfo latency2 = new LatencyInfo();
+    latency2.setDelay1S(1);
+    latency2.setDelay2S(1);
+    latency2.setDelay3S(1);
+    latency2.setDetail(new ArrayList<>());
+    latency2.setTop75(1);
+    latency2.setTop95(1);
+    latency2.setTop99(1);
+    latency2.setTotalCount(3);
+
+    NetInfo netInfo2 = new NetInfo();
+    netInfo2.setApi(api2);
+    netInfo2.setConnectionCount(3);
+    netInfo2.setDisconnectionCount(3);
+    netInfo2.setDisconnectionDetail(new ArrayList<>());
+    netInfo2.setLatency(latency2);
+    netInfo2.setTcpInTraffic(new RateInfo());
+    netInfo2.setTcpOutTraffic(new RateInfo());
+    netInfo2.setUdpInTraffic(new RateInfo());
+    netInfo2.setUdpOutTraffic(new RateInfo());
+    netInfo2.setValidConnectionCount(1);
+
+    // Act and Assert
+    assertNotEquals(netInfo, netInfo2);
+  }
+
+  /**
+   * Test {@link NetInfo#equals(Object)}.
+   *
+   * <ul>
+   *   <li>When other is different.
+   *   <li>Then return not equal.
+   * </ul>
+   *
+   * <p>Method under test: {@link NetInfo#equals(Object)}
+   */
+  @Test
+  @Category(MaintainedByDiffblue.class)
+  @MethodsUnderTest({"boolean NetInfo.equals(Object)", "int NetInfo.hashCode()"})
+  public void testEquals_whenOtherIsDifferent_thenReturnNotEqual13() {
+    // Arrange
+    ApiInfo api = new ApiInfo();
+    api.setDetail(new ArrayList<>());
+    api.setFailQps(new RateInfo());
+    api.setOutTraffic(new RateInfo());
+    api.setQps(new RateInfo());
+
+    LatencyInfo latency = new LatencyInfo();
+    latency.setDelay1S(1);
+    latency.setDelay2S(1);
+    latency.setDelay3S(1);
+    latency.setDetail(new ArrayList<>());
+    latency.setTop75(1);
+    latency.setTop95(1);
+    latency.setTop99(1);
+    latency.setTotalCount(3);
+
+    NetInfo netInfo = new NetInfo();
+    netInfo.setApi(api);
+    netInfo.setConnectionCount(3);
+    netInfo.setDisconnectionCount(3);
+    netInfo.setDisconnectionDetail(new ArrayList<>());
+    netInfo.setLatency(latency);
+    netInfo.setTcpInTraffic(new RateInfo());
+    netInfo.setTcpOutTraffic(new RateInfo());
+    netInfo.setUdpInTraffic(new RateInfo());
+    netInfo.setUdpOutTraffic(mock(RateInfo.class));
+    netInfo.setValidConnectionCount(1);
+
+    ApiInfo api2 = new ApiInfo();
+    api2.setDetail(new ArrayList<>());
+    api2.setFailQps(new RateInfo());
+    api2.setOutTraffic(new RateInfo());
+    api2.setQps(new RateInfo());
+
+    LatencyInfo latency2 = new LatencyInfo();
+    latency2.setDelay1S(1);
+    latency2.setDelay2S(1);
+    latency2.setDelay3S(1);
+    latency2.setDetail(new ArrayList<>());
+    latency2.setTop75(1);
+    latency2.setTop95(1);
+    latency2.setTop99(1);
+    latency2.setTotalCount(3);
+
+    NetInfo netInfo2 = new NetInfo();
+    netInfo2.setApi(api2);
+    netInfo2.setConnectionCount(3);
+    netInfo2.setDisconnectionCount(3);
+    netInfo2.setDisconnectionDetail(new ArrayList<>());
+    netInfo2.setLatency(latency2);
+    netInfo2.setTcpInTraffic(new RateInfo());
+    netInfo2.setTcpOutTraffic(new RateInfo());
+    netInfo2.setUdpInTraffic(new RateInfo());
+    netInfo2.setUdpOutTraffic(new RateInfo());
+    netInfo2.setValidConnectionCount(1);
+
+    // Act and Assert
+    assertNotEquals(netInfo, netInfo2);
+  }
+
+  /**
+   * Test {@link NetInfo#equals(Object)}.
+   *
+   * <ul>
+   *   <li>When other is different.
+   *   <li>Then return not equal.
+   * </ul>
+   *
+   * <p>Method under test: {@link NetInfo#equals(Object)}
+   */
+  @Test
+  @Category(MaintainedByDiffblue.class)
+  @MethodsUnderTest({"boolean NetInfo.equals(Object)", "int NetInfo.hashCode()"})
+  public void testEquals_whenOtherIsDifferent_thenReturnNotEqual14() {
+    // Arrange
+    ApiInfo api = new ApiInfo();
+    api.setDetail(new ArrayList<>());
+    api.setFailQps(new RateInfo());
+    api.setOutTraffic(new RateInfo());
+    api.setQps(new RateInfo());
+
+    LatencyInfo latency = new LatencyInfo();
+    latency.setDelay1S(1);
+    latency.setDelay2S(1);
+    latency.setDelay3S(1);
+    latency.setDetail(new ArrayList<>());
+    latency.setTop75(1);
+    latency.setTop95(1);
+    latency.setTop99(1);
+    latency.setTotalCount(3);
+
+    NetInfo netInfo = new NetInfo();
+    netInfo.setApi(api);
+    netInfo.setConnectionCount(3);
+    netInfo.setDisconnectionCount(3);
+    netInfo.setDisconnectionDetail(new ArrayList<>());
+    netInfo.setLatency(latency);
+    netInfo.setTcpInTraffic(new RateInfo());
+    netInfo.setTcpOutTraffic(new RateInfo());
+    netInfo.setUdpInTraffic(new RateInfo());
+    netInfo.setUdpOutTraffic(new RateInfo());
+    netInfo.setValidConnectionCount(2);
+
+    ApiInfo api2 = new ApiInfo();
+    api2.setDetail(new ArrayList<>());
+    api2.setFailQps(new RateInfo());
+    api2.setOutTraffic(new RateInfo());
+    api2.setQps(new RateInfo());
+
+    LatencyInfo latency2 = new LatencyInfo();
+    latency2.setDelay1S(1);
+    latency2.setDelay2S(1);
+    latency2.setDelay3S(1);
+    latency2.setDetail(new ArrayList<>());
+    latency2.setTop75(1);
+    latency2.setTop95(1);
+    latency2.setTop99(1);
+    latency2.setTotalCount(3);
+
+    NetInfo netInfo2 = new NetInfo();
+    netInfo2.setApi(api2);
+    netInfo2.setConnectionCount(3);
+    netInfo2.setDisconnectionCount(3);
+    netInfo2.setDisconnectionDetail(new ArrayList<>());
+    netInfo2.setLatency(latency2);
+    netInfo2.setTcpInTraffic(new RateInfo());
+    netInfo2.setTcpOutTraffic(new RateInfo());
+    netInfo2.setUdpInTraffic(new RateInfo());
+    netInfo2.setUdpOutTraffic(new RateInfo());
+    netInfo2.setValidConnectionCount(1);
+
+    // Act and Assert
+    assertNotEquals(netInfo, netInfo2);
+  }
+
+  /**
+   * Test {@link NetInfo#equals(Object)}.
+   *
+   * <ul>
+   *   <li>When other is {@code null}.
+   *   <li>Then return not equal.
+   * </ul>
+   *
+   * <p>Method under test: {@link NetInfo#equals(Object)}
    */
   @Test
   @Category(MaintainedByDiffblue.class)
@@ -273,12 +1263,13 @@ public class NetInfoDiffblueTest {
 
   /**
    * Test {@link NetInfo#equals(Object)}.
+   *
    * <ul>
-   *   <li>When other is wrong type.</li>
-   *   <li>Then return not equal.</li>
+   *   <li>When other is wrong type.
+   *   <li>Then return not equal.
    * </ul>
-   * <p>
-   * Method under test: {@link NetInfo#equals(Object)}
+   *
+   * <p>Method under test: {@link NetInfo#equals(Object)}
    */
   @Test
   @Category(MaintainedByDiffblue.class)
@@ -319,8 +1310,9 @@ public class NetInfoDiffblueTest {
 
   /**
    * Test getters and setters.
-   * <p>
-   * Methods under test:
+   *
+   * <p>Methods under test:
+   *
    * <ul>
    *   <li>default or parameterless constructor of {@link NetInfo}
    *   <li>{@link NetInfo#setApi(ApiInfo)}
@@ -350,17 +1342,32 @@ public class NetInfoDiffblueTest {
    */
   @Test
   @Category(MaintainedByDiffblue.class)
-  @MethodsUnderTest({"void NetInfo.<init>()", "ApiInfo NetInfo.getApi()", "int NetInfo.getConnectionCount()",
-      "int NetInfo.getDisconnectionCount()", "List NetInfo.getDisconnectionDetail()",
-      "int NetInfo.getErrorProtoCount()", "LatencyInfo NetInfo.getLatency()", "RateInfo NetInfo.getTcpInTraffic()",
-      "RateInfo NetInfo.getTcpOutTraffic()", "RateInfo NetInfo.getUdpInTraffic()",
-      "RateInfo NetInfo.getUdpOutTraffic()", "int NetInfo.getValidConnectionCount()", "void NetInfo.setApi(ApiInfo)",
-      "void NetInfo.setConnectionCount(int)", "void NetInfo.setDisconnectionCount(int)",
-      "void NetInfo.setDisconnectionDetail(List)", "void NetInfo.setErrorProtoCount(int)",
-      "void NetInfo.setLatency(LatencyInfo)", "void NetInfo.setTcpInTraffic(RateInfo)",
-      "void NetInfo.setTcpOutTraffic(RateInfo)", "void NetInfo.setUdpInTraffic(RateInfo)",
-      "void NetInfo.setUdpOutTraffic(RateInfo)", "void NetInfo.setValidConnectionCount(int)",
-      "String NetInfo.toString()"})
+  @MethodsUnderTest({
+    "void NetInfo.<init>()",
+    "ApiInfo NetInfo.getApi()",
+    "int NetInfo.getConnectionCount()",
+    "int NetInfo.getDisconnectionCount()",
+    "List NetInfo.getDisconnectionDetail()",
+    "int NetInfo.getErrorProtoCount()",
+    "LatencyInfo NetInfo.getLatency()",
+    "RateInfo NetInfo.getTcpInTraffic()",
+    "RateInfo NetInfo.getTcpOutTraffic()",
+    "RateInfo NetInfo.getUdpInTraffic()",
+    "RateInfo NetInfo.getUdpOutTraffic()",
+    "int NetInfo.getValidConnectionCount()",
+    "void NetInfo.setApi(ApiInfo)",
+    "void NetInfo.setConnectionCount(int)",
+    "void NetInfo.setDisconnectionCount(int)",
+    "void NetInfo.setDisconnectionDetail(List)",
+    "void NetInfo.setErrorProtoCount(int)",
+    "void NetInfo.setLatency(LatencyInfo)",
+    "void NetInfo.setTcpInTraffic(RateInfo)",
+    "void NetInfo.setTcpOutTraffic(RateInfo)",
+    "void NetInfo.setUdpInTraffic(RateInfo)",
+    "void NetInfo.setUdpOutTraffic(RateInfo)",
+    "void NetInfo.setValidConnectionCount(int)",
+    "String NetInfo.toString()"
+  })
   public void testGettersAndSetters() {
     // Arrange and Act
     NetInfo actualNetInfo = new NetInfo();
@@ -398,7 +1405,8 @@ public class NetInfoDiffblueTest {
     ApiInfo actualApi = actualNetInfo.getApi();
     int actualConnectionCount = actualNetInfo.getConnectionCount();
     int actualDisconnectionCount = actualNetInfo.getDisconnectionCount();
-    List<DisconnectionDetailInfo> actualDisconnectionDetail = actualNetInfo.getDisconnectionDetail();
+    List<DisconnectionDetailInfo> actualDisconnectionDetail =
+        actualNetInfo.getDisconnectionDetail();
     int actualErrorProtoCount = actualNetInfo.getErrorProtoCount();
     LatencyInfo actualLatency = actualNetInfo.getLatency();
     RateInfo actualTcpInTraffic = actualNetInfo.getTcpInTraffic();

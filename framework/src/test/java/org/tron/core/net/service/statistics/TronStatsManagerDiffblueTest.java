@@ -14,19 +14,21 @@ import org.tron.protos.Protocol.ReasonCode;
 public class TronStatsManagerDiffblueTest {
   /**
    * Test {@link TronStatsManager#getNodeStatistics(InetAddress)}.
+   *
    * <ul>
-   *   <li>When {@link InetAddress}.</li>
-   *   <li>Then return LocalDisconnectReason is {@code null}.</li>
+   *   <li>When {@link InetAddress}.
+   *   <li>Then return LocalDisconnectReason is {@code null}.
    * </ul>
-   * <p>
-   * Method under test: {@link TronStatsManager#getNodeStatistics(InetAddress)}
+   *
+   * <p>Method under test: {@link TronStatsManager#getNodeStatistics(InetAddress)}
    */
   @Test
   @Category(MaintainedByDiffblue.class)
   @MethodsUnderTest({"NodeStatistics TronStatsManager.getNodeStatistics(InetAddress)"})
   public void testGetNodeStatistics_whenInetAddress_thenReturnLocalDisconnectReasonIsNull() {
     // Arrange and Act
-    NodeStatistics actualNodeStatistics = TronStatsManager.getNodeStatistics(mock(InetAddress.class));
+    NodeStatistics actualNodeStatistics =
+        TronStatsManager.getNodeStatistics(mock(InetAddress.class));
 
     // Assert
     assertNull(actualNodeStatistics.getLocalDisconnectReason());

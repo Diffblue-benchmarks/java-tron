@@ -10,11 +10,12 @@ import org.junit.experimental.categories.Category;
 public class DecodeUtilDiffblueTest {
   /**
    * Test {@link DecodeUtil#addressValid(byte[])}.
+   *
    * <ul>
-   *   <li>When {@code AXAXAXAX} Bytes is {@code UTF-8}.</li>
+   *   <li>When {@code AXAXAXAX} Bytes is {@code UTF-8}.
    * </ul>
-   * <p>
-   * Method under test: {@link DecodeUtil#addressValid(byte[])}
+   *
+   * <p>Method under test: {@link DecodeUtil#addressValid(byte[])}
    */
   @Test
   @Category(MaintainedByDiffblue.class)
@@ -26,27 +27,29 @@ public class DecodeUtilDiffblueTest {
 
   /**
    * Test {@link DecodeUtil#addressValid(byte[])}.
+   *
    * <ul>
-   *   <li>When empty array of {@code byte}.</li>
+   *   <li>When empty array of {@code byte}.
    * </ul>
-   * <p>
-   * Method under test: {@link DecodeUtil#addressValid(byte[])}
+   *
+   * <p>Method under test: {@link DecodeUtil#addressValid(byte[])}
    */
   @Test
   @Category(MaintainedByDiffblue.class)
   @MethodsUnderTest({"boolean DecodeUtil.addressValid(byte[])"})
   public void testAddressValid_whenEmptyArrayOfByte() {
     // Arrange, Act and Assert
-    assertFalse(DecodeUtil.addressValid(new byte[]{}));
+    assertFalse(DecodeUtil.addressValid(new byte[] {}));
   }
 
   /**
    * Test {@link DecodeUtil#addressValid(byte[])}.
+   *
    * <ul>
-   *   <li>When {@code null}.</li>
+   *   <li>When {@code null}.
    * </ul>
-   * <p>
-   * Method under test: {@link DecodeUtil#addressValid(byte[])}
+   *
+   * <p>Method under test: {@link DecodeUtil#addressValid(byte[])}
    */
   @Test
   @Category(MaintainedByDiffblue.class)

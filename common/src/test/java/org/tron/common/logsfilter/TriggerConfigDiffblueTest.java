@@ -10,8 +10,9 @@ import org.junit.experimental.categories.Category;
 public class TriggerConfigDiffblueTest {
   /**
    * Test getters and setters.
-   * <p>
-   * Methods under test:
+   *
+   * <p>Methods under test:
+   *
    * <ul>
    *   <li>default or parameterless constructor of {@link TriggerConfig}
    *   <li>{@link TriggerConfig#setEnabled(boolean)}
@@ -30,13 +31,21 @@ public class TriggerConfigDiffblueTest {
    */
   @Test
   @Category(MaintainedByDiffblue.class)
-  @MethodsUnderTest({"void TriggerConfig.<init>()", "String TriggerConfig.getTopic()",
-      "String TriggerConfig.getTriggerName()", "boolean TriggerConfig.isEnabled()",
-      "boolean TriggerConfig.isEthCompatible()", "boolean TriggerConfig.isRedundancy()",
-      "boolean TriggerConfig.isSolidified()", "void TriggerConfig.setEnabled(boolean)",
-      "void TriggerConfig.setEthCompatible(boolean)", "void TriggerConfig.setRedundancy(boolean)",
-      "void TriggerConfig.setSolidified(boolean)", "void TriggerConfig.setTopic(String)",
-      "void TriggerConfig.setTriggerName(String)"})
+  @MethodsUnderTest({
+    "void TriggerConfig.<init>()",
+    "String TriggerConfig.getTopic()",
+    "String TriggerConfig.getTriggerName()",
+    "boolean TriggerConfig.isEnabled()",
+    "boolean TriggerConfig.isEthCompatible()",
+    "boolean TriggerConfig.isRedundancy()",
+    "boolean TriggerConfig.isSolidified()",
+    "void TriggerConfig.setEnabled(boolean)",
+    "void TriggerConfig.setEthCompatible(boolean)",
+    "void TriggerConfig.setRedundancy(boolean)",
+    "void TriggerConfig.setSolidified(boolean)",
+    "void TriggerConfig.setTopic(String)",
+    "void TriggerConfig.setTriggerName(String)"
+  })
   public void testGettersAndSetters() {
     // Arrange and Act
     TriggerConfig actualTriggerConfig = new TriggerConfig();

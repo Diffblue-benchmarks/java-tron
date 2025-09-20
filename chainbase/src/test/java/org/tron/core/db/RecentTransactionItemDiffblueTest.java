@@ -13,8 +13,9 @@ import org.junit.experimental.categories.Category;
 public class RecentTransactionItemDiffblueTest {
   /**
    * Test getters and setters.
-   * <p>
-   * Methods under test:
+   *
+   * <p>Methods under test:
+   *
    * <ul>
    *   <li>{@link RecentTransactionItem#RecentTransactionItem()}
    *   <li>{@link RecentTransactionItem#setNum(long)}
@@ -25,9 +26,13 @@ public class RecentTransactionItemDiffblueTest {
    */
   @Test
   @Category(MaintainedByDiffblue.class)
-  @MethodsUnderTest({"void RecentTransactionItem.<init>()", "long RecentTransactionItem.getNum()",
-      "List RecentTransactionItem.getTransactionIds()", "void RecentTransactionItem.setNum(long)",
-      "void RecentTransactionItem.setTransactionIds(List)"})
+  @MethodsUnderTest({
+    "void RecentTransactionItem.<init>()",
+    "long RecentTransactionItem.getNum()",
+    "List RecentTransactionItem.getTransactionIds()",
+    "void RecentTransactionItem.setNum(long)",
+    "void RecentTransactionItem.setTransactionIds(List)"
+  })
   public void testGettersAndSetters() {
     // Arrange and Act
     RecentTransactionItem actualRecentTransactionItem = new RecentTransactionItem();
@@ -45,12 +50,13 @@ public class RecentTransactionItemDiffblueTest {
 
   /**
    * Test {@link RecentTransactionItem#RecentTransactionItem(long, List)}.
+   *
    * <ul>
-   *   <li>Given {@code 42}.</li>
-   *   <li>When {@link ArrayList#ArrayList()} add {@code 42}.</li>
+   *   <li>Given {@code 42}.
+   *   <li>When {@link ArrayList#ArrayList()} add {@code 42}.
    * </ul>
-   * <p>
-   * Method under test: {@link RecentTransactionItem#RecentTransactionItem(long, List)}
+   *
+   * <p>Method under test: {@link RecentTransactionItem#RecentTransactionItem(long, List)}
    */
   @Test
   @Category(MaintainedByDiffblue.class)
@@ -62,7 +68,8 @@ public class RecentTransactionItemDiffblueTest {
     transactionIds.add("foo");
 
     // Act
-    RecentTransactionItem actualRecentTransactionItem = new RecentTransactionItem(1L, transactionIds);
+    RecentTransactionItem actualRecentTransactionItem =
+        new RecentTransactionItem(1L, transactionIds);
 
     // Assert
     assertEquals(1L, actualRecentTransactionItem.getNum());
@@ -71,12 +78,13 @@ public class RecentTransactionItemDiffblueTest {
 
   /**
    * Test {@link RecentTransactionItem#RecentTransactionItem(long, List)}.
+   *
    * <ul>
-   *   <li>Given {@code foo}.</li>
-   *   <li>Then return TransactionIds is {@link ArrayList#ArrayList()}.</li>
+   *   <li>Given {@code foo}.
+   *   <li>Then return TransactionIds is {@link ArrayList#ArrayList()}.
    * </ul>
-   * <p>
-   * Method under test: {@link RecentTransactionItem#RecentTransactionItem(long, List)}
+   *
+   * <p>Method under test: {@link RecentTransactionItem#RecentTransactionItem(long, List)}
    */
   @Test
   @Category(MaintainedByDiffblue.class)
@@ -87,7 +95,8 @@ public class RecentTransactionItemDiffblueTest {
     transactionIds.add("foo");
 
     // Act
-    RecentTransactionItem actualRecentTransactionItem = new RecentTransactionItem(1L, transactionIds);
+    RecentTransactionItem actualRecentTransactionItem =
+        new RecentTransactionItem(1L, transactionIds);
 
     // Assert
     assertEquals(1L, actualRecentTransactionItem.getNum());
@@ -96,19 +105,21 @@ public class RecentTransactionItemDiffblueTest {
 
   /**
    * Test {@link RecentTransactionItem#RecentTransactionItem(long, List)}.
+   *
    * <ul>
-   *   <li>When {@link ArrayList#ArrayList()}.</li>
-   *   <li>Then return TransactionIds Empty.</li>
+   *   <li>When {@link ArrayList#ArrayList()}.
+   *   <li>Then return TransactionIds Empty.
    * </ul>
-   * <p>
-   * Method under test: {@link RecentTransactionItem#RecentTransactionItem(long, List)}
+   *
+   * <p>Method under test: {@link RecentTransactionItem#RecentTransactionItem(long, List)}
    */
   @Test
   @Category(MaintainedByDiffblue.class)
   @MethodsUnderTest({"void RecentTransactionItem.<init>(long, List)"})
   public void testNewRecentTransactionItem_whenArrayList_thenReturnTransactionIdsEmpty() {
     // Arrange and Act
-    RecentTransactionItem actualRecentTransactionItem = new RecentTransactionItem(1L, new ArrayList<>());
+    RecentTransactionItem actualRecentTransactionItem =
+        new RecentTransactionItem(1L, new ArrayList<>());
 
     // Assert
     assertEquals(1L, actualRecentTransactionItem.getNum());

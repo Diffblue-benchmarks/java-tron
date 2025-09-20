@@ -12,8 +12,8 @@ import org.tron.core.exception.P2pException.TypeEnum;
 public class P2pExceptionDiffblueTest {
   /**
    * Test {@link P2pException#P2pException(TypeEnum, String)}.
-   * <p>
-   * Method under test: {@link P2pException#P2pException(TypeEnum, String)}
+   *
+   * <p>Method under test: {@link P2pException#P2pException(TypeEnum, String)}
    */
   @Test
   @Category(MaintainedByDiffblue.class)
@@ -32,8 +32,8 @@ public class P2pExceptionDiffblueTest {
 
   /**
    * Test {@link P2pException#P2pException(TypeEnum, String, Throwable)}.
-   * <p>
-   * Method under test: {@link P2pException#P2pException(TypeEnum, String, Throwable)}
+   *
+   * <p>Method under test: {@link P2pException#P2pException(TypeEnum, String, Throwable)}
    */
   @Test
   @Category(MaintainedByDiffblue.class)
@@ -43,7 +43,8 @@ public class P2pExceptionDiffblueTest {
     Throwable throwable = new Throwable();
 
     // Act
-    P2pException actualP2pException = new P2pException(TypeEnum.NO_SUCH_MESSAGE, "Err Msg", throwable);
+    P2pException actualP2pException =
+        new P2pException(TypeEnum.NO_SUCH_MESSAGE, "Err Msg", throwable);
 
     // Assert
     assertEquals("Err Msg", actualP2pException.getLocalizedMessage());
@@ -55,8 +56,8 @@ public class P2pExceptionDiffblueTest {
 
   /**
    * Test {@link P2pException#P2pException(TypeEnum, Throwable)}.
-   * <p>
-   * Method under test: {@link P2pException#P2pException(TypeEnum, Throwable)}
+   *
+   * <p>Method under test: {@link P2pException#P2pException(TypeEnum, Throwable)}
    */
   @Test
   @Category(MaintainedByDiffblue.class)
@@ -78,21 +79,23 @@ public class P2pExceptionDiffblueTest {
 
   /**
    * Test {@link P2pException#getType()}.
-   * <p>
-   * Method under test: {@link P2pException#getType()}
+   *
+   * <p>Method under test: {@link P2pException#getType()}
    */
   @Test
   @Category(MaintainedByDiffblue.class)
   @MethodsUnderTest({"TypeEnum P2pException.getType()"})
   public void testGetType() {
     // Arrange, Act and Assert
-    assertEquals(TypeEnum.NO_SUCH_MESSAGE, (new P2pException(TypeEnum.NO_SUCH_MESSAGE, "Err Msg")).getType());
+    assertEquals(
+        TypeEnum.NO_SUCH_MESSAGE, new P2pException(TypeEnum.NO_SUCH_MESSAGE, "Err Msg").getType());
   }
 
   /**
    * Test TypeEnum getters and setters.
-   * <p>
-   * Methods under test:
+   *
+   * <p>Methods under test:
+   *
    * <ul>
    *   <li>{@link TypeEnum#toString()}
    *   <li>{@link TypeEnum#getDesc()}
@@ -101,8 +104,11 @@ public class P2pExceptionDiffblueTest {
    */
   @Test
   @Category(MaintainedByDiffblue.class)
-  @MethodsUnderTest({"String TypeEnum.getDesc()", "java.lang.Integer TypeEnum.getValue()",
-      "String TypeEnum.toString()"})
+  @MethodsUnderTest({
+    "String TypeEnum.getDesc()",
+    "java.lang.Integer TypeEnum.getValue()",
+    "String TypeEnum.toString()"
+  })
   public void testTypeEnumGettersAndSetters() {
     // Arrange
     TypeEnum valueOfResult = TypeEnum.valueOf("NO_SUCH_MESSAGE");

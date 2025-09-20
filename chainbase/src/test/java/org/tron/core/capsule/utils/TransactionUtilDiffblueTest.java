@@ -26,11 +26,12 @@ import org.tron.protos.Protocol.InternalTransaction.CallValueInfo;
 public class TransactionUtilDiffblueTest {
   /**
    * Test {@link TransactionUtil#newGenesisTransaction(byte[], long)}.
+   *
    * <ul>
-   *   <li>When {@code AXAXAXAX} Bytes is {@code UTF-8}.</li>
+   *   <li>When {@code AXAXAXAX} Bytes is {@code UTF-8}.
    * </ul>
-   * <p>
-   * Method under test: {@link TransactionUtil#newGenesisTransaction(byte[], long)}
+   *
+   * <p>Method under test: {@link TransactionUtil#newGenesisTransaction(byte[], long)}
    */
   @Test
   @Category(MaintainedByDiffblue.class)
@@ -38,71 +39,88 @@ public class TransactionUtilDiffblueTest {
   public void testNewGenesisTransaction_whenAxaxaxaxBytesIsUtf8()
       throws UnsupportedEncodingException, IllegalArgumentException {
     // Arrange, Act and Assert
-    assertThrows(IllegalArgumentException.class,
+    assertThrows(
+        IllegalArgumentException.class,
         () -> TransactionUtil.newGenesisTransaction("AXAXAXAX".getBytes("UTF-8"), 42L));
   }
 
   /**
    * Test {@link TransactionUtil#newGenesisTransaction(byte[], long)}.
+   *
    * <ul>
-   *   <li>When empty array of {@code byte}.</li>
+   *   <li>When empty array of {@code byte}.
    * </ul>
-   * <p>
-   * Method under test: {@link TransactionUtil#newGenesisTransaction(byte[], long)}
+   *
+   * <p>Method under test: {@link TransactionUtil#newGenesisTransaction(byte[], long)}
    */
   @Test
   @Category(MaintainedByDiffblue.class)
   @MethodsUnderTest({"Protocol.Transaction TransactionUtil.newGenesisTransaction(byte[], long)"})
   public void testNewGenesisTransaction_whenEmptyArrayOfByte() throws IllegalArgumentException {
     // Arrange, Act and Assert
-    assertThrows(IllegalArgumentException.class, () -> TransactionUtil.newGenesisTransaction(new byte[]{}, 42L));
+    assertThrows(
+        IllegalArgumentException.class,
+        () -> TransactionUtil.newGenesisTransaction(new byte[] {}, 42L));
   }
 
   /**
    * Test {@link TransactionUtil#newGenesisTransaction(byte[], long)}.
+   *
    * <ul>
-   *   <li>When {@code null}.</li>
+   *   <li>When {@code null}.
    * </ul>
-   * <p>
-   * Method under test: {@link TransactionUtil#newGenesisTransaction(byte[], long)}
+   *
+   * <p>Method under test: {@link TransactionUtil#newGenesisTransaction(byte[], long)}
    */
   @Test
   @Category(MaintainedByDiffblue.class)
   @MethodsUnderTest({"Protocol.Transaction TransactionUtil.newGenesisTransaction(byte[], long)"})
   public void testNewGenesisTransaction_whenNull() throws IllegalArgumentException {
     // Arrange, Act and Assert
-    assertThrows(IllegalArgumentException.class, () -> TransactionUtil.newGenesisTransaction(null, 42L));
+    assertThrows(
+        IllegalArgumentException.class, () -> TransactionUtil.newGenesisTransaction(null, 42L));
   }
 
   /**
    * Test {@link TransactionUtil#buildInternalTransaction(InternalTransaction)}.
+   *
    * <ul>
-   *   <li>Given {@code foo}.</li>
-   *   <li>Then return CallValueInfoList size is two.</li>
+   *   <li>Given {@code foo}.
+   *   <li>Then return CallValueInfoList size is two.
    * </ul>
-   * <p>
-   * Method under test: {@link TransactionUtil#buildInternalTransaction(org.tron.common.runtime.InternalTransaction)}
+   *
+   * <p>Method under test: {@link
+   * TransactionUtil#buildInternalTransaction(org.tron.common.runtime.InternalTransaction)}
    */
   @Test
   @Category(MaintainedByDiffblue.class)
   @MethodsUnderTest({
-      "InternalTransaction TransactionUtil.buildInternalTransaction(org.tron.common.runtime.InternalTransaction)"})
+    "InternalTransaction TransactionUtil.buildInternalTransaction(org.tron.common.runtime.InternalTransaction)"
+  })
   public void testBuildInternalTransaction_givenFoo_thenReturnCallValueInfoListSizeIsTwo()
       throws UnsupportedEncodingException {
     // Arrange
     HashMap<String, Long> tokenInfo = new HashMap<>();
     tokenInfo.put("foo", 1L);
-    byte[] parentHash = "AXAXAXAX".getBytes("UTF-8");
-    byte[] sendAddress = "AXAXAXAX".getBytes("UTF-8");
-    byte[] transferToAddress = "AXAXAXAX".getBytes("UTF-8");
 
     // Act
-    InternalTransaction actualBuildInternalTransactionResult = TransactionUtil
-        .buildInternalTransaction(new org.tron.common.runtime.InternalTransaction(parentHash, 1, 1, sendAddress,
-            transferToAddress, 42L, "AXAXAXAX".getBytes("UTF-8"), "Note", 1L, tokenInfo));
+    InternalTransaction actualBuildInternalTransactionResult =
+        TransactionUtil.buildInternalTransaction(
+            new org.tron.common.runtime.InternalTransaction(
+                "AXAXAXAX".getBytes("UTF-8"),
+                1,
+                1,
+                "AXAXAXAX".getBytes("UTF-8"),
+                "AXAXAXAX".getBytes("UTF-8"),
+                42L,
+                "AXAXAXAX".getBytes("UTF-8"),
+                "Note",
+                1L,
+                tokenInfo));
 
     // Assert
-    List<CallValueInfo> callValueInfoList = actualBuildInternalTransactionResult.getCallValueInfoList();
+    List<CallValueInfo> callValueInfoList =
+        actualBuildInternalTransactionResult.getCallValueInfoList();
     assertEquals(2, callValueInfoList.size());
     CallValueInfo getResult = callValueInfoList.get(1);
     ByteString tokenIdBytes = getResult.getTokenIdBytes();
@@ -122,17 +140,21 @@ public class TransactionUtilDiffblueTest {
 
   /**
    * Test {@link TransactionUtil#buildInternalTransaction(InternalTransaction)}.
+   *
    * <ul>
-   *   <li>Then return CallValueInfoCount is one.</li>
+   *   <li>Then return CallValueInfoCount is one.
    * </ul>
-   * <p>
-   * Method under test: {@link TransactionUtil#buildInternalTransaction(org.tron.common.runtime.InternalTransaction)}
+   *
+   * <p>Method under test: {@link
+   * TransactionUtil#buildInternalTransaction(org.tron.common.runtime.InternalTransaction)}
    */
   @Test
   @Category(MaintainedByDiffblue.class)
   @MethodsUnderTest({
-      "InternalTransaction TransactionUtil.buildInternalTransaction(org.tron.common.runtime.InternalTransaction)"})
-  public void testBuildInternalTransaction_thenReturnCallValueInfoCountIsOne() throws UnsupportedEncodingException {
+    "InternalTransaction TransactionUtil.buildInternalTransaction(org.tron.common.runtime.InternalTransaction)"
+  })
+  public void testBuildInternalTransaction_thenReturnCallValueInfoCountIsOne()
+      throws UnsupportedEncodingException {
     // Arrange
     byte[] parentHash = "AXAXAXAX".getBytes("UTF-8");
     byte[] sendAddress = "AXAXAXAX".getBytes("UTF-8");
@@ -141,9 +163,19 @@ public class TransactionUtilDiffblueTest {
     HashMap<String, Long> tokenInfo = new HashMap<>();
 
     // Act
-    InternalTransaction actualBuildInternalTransactionResult = TransactionUtil
-        .buildInternalTransaction(new org.tron.common.runtime.InternalTransaction(parentHash, 1, 1, sendAddress,
-            transferToAddress, 42L, data, "Note", 1L, tokenInfo));
+    InternalTransaction actualBuildInternalTransactionResult =
+        TransactionUtil.buildInternalTransaction(
+            new org.tron.common.runtime.InternalTransaction(
+                parentHash,
+                1,
+                1,
+                sendAddress,
+                transferToAddress,
+                42L,
+                data,
+                "Note",
+                1L,
+                tokenInfo));
 
     // Assert
     assertEquals(1, actualBuildInternalTransactionResult.getCallValueInfoCount());
@@ -157,33 +189,44 @@ public class TransactionUtilDiffblueTest {
 
   /**
    * Test {@link TransactionUtil#buildInternalTransaction(InternalTransaction)}.
+   *
    * <ul>
-   *   <li>Then return CallValueInfoList size is three.</li>
+   *   <li>Then return CallValueInfoList size is three.
    * </ul>
-   * <p>
-   * Method under test: {@link TransactionUtil#buildInternalTransaction(org.tron.common.runtime.InternalTransaction)}
+   *
+   * <p>Method under test: {@link
+   * TransactionUtil#buildInternalTransaction(org.tron.common.runtime.InternalTransaction)}
    */
   @Test
   @Category(MaintainedByDiffblue.class)
   @MethodsUnderTest({
-      "InternalTransaction TransactionUtil.buildInternalTransaction(org.tron.common.runtime.InternalTransaction)"})
+    "InternalTransaction TransactionUtil.buildInternalTransaction(org.tron.common.runtime.InternalTransaction)"
+  })
   public void testBuildInternalTransaction_thenReturnCallValueInfoListSizeIsThree()
       throws UnsupportedEncodingException {
     // Arrange
     HashMap<String, Long> tokenInfo = new HashMap<>();
     tokenInfo.put("", 2L);
     tokenInfo.put("foo", 1L);
-    byte[] parentHash = "AXAXAXAX".getBytes("UTF-8");
-    byte[] sendAddress = "AXAXAXAX".getBytes("UTF-8");
-    byte[] transferToAddress = "AXAXAXAX".getBytes("UTF-8");
 
     // Act
-    InternalTransaction actualBuildInternalTransactionResult = TransactionUtil
-        .buildInternalTransaction(new org.tron.common.runtime.InternalTransaction(parentHash, 1, 1, sendAddress,
-            transferToAddress, 42L, "AXAXAXAX".getBytes("UTF-8"), "Note", 1L, tokenInfo));
+    InternalTransaction actualBuildInternalTransactionResult =
+        TransactionUtil.buildInternalTransaction(
+            new org.tron.common.runtime.InternalTransaction(
+                "AXAXAXAX".getBytes("UTF-8"),
+                1,
+                1,
+                "AXAXAXAX".getBytes("UTF-8"),
+                "AXAXAXAX".getBytes("UTF-8"),
+                42L,
+                "AXAXAXAX".getBytes("UTF-8"),
+                "Note",
+                1L,
+                tokenInfo));
 
     // Assert
-    List<CallValueInfo> callValueInfoList = actualBuildInternalTransactionResult.getCallValueInfoList();
+    List<CallValueInfo> callValueInfoList =
+        actualBuildInternalTransactionResult.getCallValueInfoList();
     assertEquals(3, callValueInfoList.size());
     CallValueInfo getResult = callValueInfoList.get(2);
     assertEquals("", getResult.getInitializationErrorString());
@@ -204,54 +247,72 @@ public class TransactionUtilDiffblueTest {
 
   /**
    * Test {@link TransactionUtil#buildInternalTransaction(InternalTransaction)}.
+   *
    * <ul>
-   *   <li>When {@code A}.</li>
-   *   <li>Then return Hash toStringUtf8 is a string.</li>
+   *   <li>Then return Hash toStringUtf8 is a string.
    * </ul>
-   * <p>
-   * Method under test: {@link TransactionUtil#buildInternalTransaction(org.tron.common.runtime.InternalTransaction)}
+   *
+   * <p>Method under test: {@link
+   * TransactionUtil#buildInternalTransaction(org.tron.common.runtime.InternalTransaction)}
    */
   @Test
   @Category(MaintainedByDiffblue.class)
   @MethodsUnderTest({
-      "InternalTransaction TransactionUtil.buildInternalTransaction(org.tron.common.runtime.InternalTransaction)"})
-  public void testBuildInternalTransaction_whenA_thenReturnHashToStringUtf8IsAString()
+    "InternalTransaction TransactionUtil.buildInternalTransaction(org.tron.common.runtime.InternalTransaction)"
+  })
+  public void testBuildInternalTransaction_thenReturnHashToStringUtf8IsAString()
       throws UnsupportedEncodingException {
     // Arrange
+    byte[] parentHash = "AXAXAXAX".getBytes("UTF-8");
     byte[] sendAddress = "AXAXAXAX".getBytes("UTF-8");
     byte[] transferToAddress = "AXAXAXAX".getBytes("UTF-8");
     byte[] data = "AXAXAXAX".getBytes("UTF-8");
 
     // Act
-    InternalTransaction actualBuildInternalTransactionResult = TransactionUtil.buildInternalTransaction(
-        new org.tron.common.runtime.InternalTransaction(new byte[]{1, 'X', 'A', 'X', 'A', 'X', 'A', 'X'}, 1, 1,
-            sendAddress, transferToAddress, 42L, data, "Note", 1L, new HashMap<>()));
+    InternalTransaction actualBuildInternalTransactionResult =
+        TransactionUtil.buildInternalTransaction(
+            new org.tron.common.runtime.InternalTransaction(
+                parentHash,
+                1,
+                1,
+                sendAddress,
+                transferToAddress,
+                1L,
+                data,
+                "Note",
+                1L,
+                new HashMap<>()));
 
     // Assert
     ByteString hash = actualBuildInternalTransactionResult.getHash();
-    assertEquals("�Ka�[��h��(e�\r���-\n\u0013R\b��N9v�?��-", hash.toStringUtf8());
+    assertEquals("�|3`�|�I\u0012���EK�5\u001fG��[�P���\u0005��", hash.toStringUtf8());
     Descriptor descriptorForType = actualBuildInternalTransactionResult.getDescriptorForType();
     assertEquals(1, descriptorForType.getNestedTypes().size());
     assertTrue(hash.iterator().hasNext());
-    InternalTransaction defaultInstanceForType = actualBuildInternalTransactionResult.getDefaultInstanceForType();
+    InternalTransaction defaultInstanceForType =
+        actualBuildInternalTransactionResult.getDefaultInstanceForType();
     assertSame(descriptorForType, defaultInstanceForType.getDescriptorForType());
     UnknownFieldSet unknownFields = actualBuildInternalTransactionResult.getUnknownFields();
     assertSame(unknownFields, defaultInstanceForType.getUnknownFields());
-    assertSame(unknownFields, unknownFields.getDefaultInstanceForType());
+    UnknownFieldSet actualDefaultInstanceForType = unknownFields.getDefaultInstanceForType();
+    assertSame(unknownFields, actualDefaultInstanceForType);
     ByteString callerAddress = defaultInstanceForType.getCallerAddress();
     assertSame(callerAddress, defaultInstanceForType.getHash());
     assertSame(callerAddress, defaultInstanceForType.getNote());
     assertSame(callerAddress, defaultInstanceForType.getTransferToAddress());
-    assertSame(defaultInstanceForType.getDefaultInstanceForType(), defaultInstanceForType.getDefaultInstanceForType());
+    assertSame(
+        defaultInstanceForType.getDefaultInstanceForType(),
+        defaultInstanceForType.getDefaultInstanceForType());
   }
 
   /**
    * Test {@link TransactionUtil#isNumber(byte[])}.
+   *
    * <ul>
-   *   <li>When {@code 0XAXAXAX} Bytes is {@code UTF-8}.</li>
+   *   <li>When {@code 0XAXAXAX} Bytes is {@code UTF-8}.
    * </ul>
-   * <p>
-   * Method under test: {@link TransactionUtil#isNumber(byte[])}
+   *
+   * <p>Method under test: {@link TransactionUtil#isNumber(byte[])}
    */
   @Test
   @Category(MaintainedByDiffblue.class)
@@ -263,11 +324,12 @@ public class TransactionUtilDiffblueTest {
 
   /**
    * Test {@link TransactionUtil#isNumber(byte[])}.
+   *
    * <ul>
-   *   <li>When {@code AXAXAXAX} Bytes is {@code UTF-8}.</li>
+   *   <li>When {@code AXAXAXAX} Bytes is {@code UTF-8}.
    * </ul>
-   * <p>
-   * Method under test: {@link TransactionUtil#isNumber(byte[])}
+   *
+   * <p>Method under test: {@link TransactionUtil#isNumber(byte[])}
    */
   @Test
   @Category(MaintainedByDiffblue.class)
@@ -279,27 +341,29 @@ public class TransactionUtilDiffblueTest {
 
   /**
    * Test {@link TransactionUtil#isNumber(byte[])}.
+   *
    * <ul>
-   *   <li>When empty array of {@code byte}.</li>
+   *   <li>When empty array of {@code byte}.
    * </ul>
-   * <p>
-   * Method under test: {@link TransactionUtil#isNumber(byte[])}
+   *
+   * <p>Method under test: {@link TransactionUtil#isNumber(byte[])}
    */
   @Test
   @Category(MaintainedByDiffblue.class)
   @MethodsUnderTest({"boolean TransactionUtil.isNumber(byte[])"})
   public void testIsNumber_whenEmptyArrayOfByte() {
     // Arrange, Act and Assert
-    assertFalse(TransactionUtil.isNumber(new byte[]{}));
+    assertFalse(TransactionUtil.isNumber(new byte[] {}));
   }
 
   /**
    * Test {@link TransactionUtil#isNumber(byte[])}.
+   *
    * <ul>
-   *   <li>When {@code XAXAXAX} Bytes is {@code UTF-8}.</li>
+   *   <li>When {@code XAXAXAX} Bytes is {@code UTF-8}.
    * </ul>
-   * <p>
-   * Method under test: {@link TransactionUtil#isNumber(byte[])}
+   *
+   * <p>Method under test: {@link TransactionUtil#isNumber(byte[])}
    */
   @Test
   @Category(MaintainedByDiffblue.class)

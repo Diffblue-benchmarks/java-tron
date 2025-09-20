@@ -8,19 +8,19 @@ import com.diffblue.cover.annotations.MaintainedByDiffblue;
 import com.diffblue.cover.annotations.MethodsUnderTest;
 import org.junit.Test;
 import org.junit.experimental.categories.Category;
+import org.springframework.test.annotation.DirtiesContext;
+import org.springframework.test.annotation.DirtiesContext.ClassMode;
 import org.tron.core.Wallet;
 import org.tron.core.exception.JsonRpcInvalidParamsException;
 import org.tron.core.exception.JsonRpcInvalidRequestException;
-import org.tron.protos.Protocol;
-import org.tron.protos.Protocol.Transaction;
-import org.tron.protos.Protocol.Transaction.Contract;
-import org.tron.protos.Protocol.Transaction.Contract.ContractType;
 
+@DirtiesContext(classMode = ClassMode.AFTER_EACH_TEST_METHOD)
 public class BuildArgumentsDiffblueTest {
   /**
    * Test getters and setters.
-   * <p>
-   * Methods under test:
+   *
+   * <p>Methods under test:
+   *
    * <ul>
    *   <li>{@link BuildArguments#BuildArguments()}
    *   <li>{@link BuildArguments#setAbi(String)}
@@ -60,23 +60,43 @@ public class BuildArgumentsDiffblueTest {
    */
   @Test
   @Category(MaintainedByDiffblue.class)
-  @MethodsUnderTest({"void BuildArguments.<init>()",
-      "void BuildArguments.<init>(String, String, String, String, String, String, String, Long, Long, String, Long, Long, String, Integer, String, boolean)",
-      "String BuildArguments.getAbi()", "Long BuildArguments.getConsumeUserResourcePercent()",
-      "String BuildArguments.getData()", "String BuildArguments.getExtraData()", "String BuildArguments.getFrom()",
-      "String BuildArguments.getGas()", "String BuildArguments.getGasPrice()", "String BuildArguments.getName()",
-      "String BuildArguments.getNonce()", "Long BuildArguments.getOriginEnergyLimit()",
-      "Integer BuildArguments.getPermissionId()", "String BuildArguments.getTo()", "Long BuildArguments.getTokenId()",
-      "Long BuildArguments.getTokenValue()", "String BuildArguments.getValue()", "boolean BuildArguments.isVisible()",
-      "void BuildArguments.setAbi(String)", "void BuildArguments.setConsumeUserResourcePercent(Long)",
-      "void BuildArguments.setData(String)", "void BuildArguments.setExtraData(String)",
-      "void BuildArguments.setFrom(String)", "void BuildArguments.setGas(String)",
-      "void BuildArguments.setGasPrice(String)", "void BuildArguments.setName(String)",
-      "void BuildArguments.setNonce(String)", "void BuildArguments.setOriginEnergyLimit(Long)",
-      "void BuildArguments.setPermissionId(Integer)", "void BuildArguments.setTo(String)",
-      "void BuildArguments.setTokenId(Long)", "void BuildArguments.setTokenValue(Long)",
-      "void BuildArguments.setValue(String)", "void BuildArguments.setVisible(boolean)",
-      "String BuildArguments.toString()"})
+  @MethodsUnderTest({
+    "void BuildArguments.<init>()",
+    "void BuildArguments.<init>(String, String, String, String, String, String, String, Long, Long, String, Long, Long, String, Integer, String, boolean)",
+    "String BuildArguments.getAbi()",
+    "Long BuildArguments.getConsumeUserResourcePercent()",
+    "String BuildArguments.getData()",
+    "String BuildArguments.getExtraData()",
+    "String BuildArguments.getFrom()",
+    "String BuildArguments.getGas()",
+    "String BuildArguments.getGasPrice()",
+    "String BuildArguments.getName()",
+    "String BuildArguments.getNonce()",
+    "Long BuildArguments.getOriginEnergyLimit()",
+    "Integer BuildArguments.getPermissionId()",
+    "String BuildArguments.getTo()",
+    "Long BuildArguments.getTokenId()",
+    "Long BuildArguments.getTokenValue()",
+    "String BuildArguments.getValue()",
+    "boolean BuildArguments.isVisible()",
+    "void BuildArguments.setAbi(String)",
+    "void BuildArguments.setConsumeUserResourcePercent(Long)",
+    "void BuildArguments.setData(String)",
+    "void BuildArguments.setExtraData(String)",
+    "void BuildArguments.setFrom(String)",
+    "void BuildArguments.setGas(String)",
+    "void BuildArguments.setGasPrice(String)",
+    "void BuildArguments.setName(String)",
+    "void BuildArguments.setNonce(String)",
+    "void BuildArguments.setOriginEnergyLimit(Long)",
+    "void BuildArguments.setPermissionId(Integer)",
+    "void BuildArguments.setTo(String)",
+    "void BuildArguments.setTokenId(Long)",
+    "void BuildArguments.setTokenValue(Long)",
+    "void BuildArguments.setValue(String)",
+    "void BuildArguments.setVisible(boolean)",
+    "String BuildArguments.toString()"
+  })
   public void testGettersAndSetters() {
     // Arrange and Act
     BuildArguments actualBuildArguments = new BuildArguments();
@@ -140,13 +160,16 @@ public class BuildArgumentsDiffblueTest {
 
   /**
    * Test getters and setters.
+   *
    * <ul>
-   *   <li>When {@code jane.doe@example.org}.</li>
+   *   <li>When {@code jane.doe@example.org}.
    * </ul>
-   * <p>
-   * Methods under test:
+   *
+   * <p>Methods under test:
+   *
    * <ul>
-   *   <li>{@link BuildArguments#BuildArguments(String, String, String, String, String, String, String, Long, Long, String, Long, Long, String, Integer, String, boolean)}
+   *   <li>{@link BuildArguments#BuildArguments(String, String, String, String, String, String,
+   *       String, Long, Long, String, Long, Long, String, Integer, String, boolean)}
    *   <li>{@link BuildArguments#setAbi(String)}
    *   <li>{@link BuildArguments#setConsumeUserResourcePercent(Long)}
    *   <li>{@link BuildArguments#setData(String)}
@@ -184,27 +207,63 @@ public class BuildArgumentsDiffblueTest {
    */
   @Test
   @Category(MaintainedByDiffblue.class)
-  @MethodsUnderTest({"void BuildArguments.<init>()",
-      "void BuildArguments.<init>(String, String, String, String, String, String, String, Long, Long, String, Long, Long, String, Integer, String, boolean)",
-      "String BuildArguments.getAbi()", "Long BuildArguments.getConsumeUserResourcePercent()",
-      "String BuildArguments.getData()", "String BuildArguments.getExtraData()", "String BuildArguments.getFrom()",
-      "String BuildArguments.getGas()", "String BuildArguments.getGasPrice()", "String BuildArguments.getName()",
-      "String BuildArguments.getNonce()", "Long BuildArguments.getOriginEnergyLimit()",
-      "Integer BuildArguments.getPermissionId()", "String BuildArguments.getTo()", "Long BuildArguments.getTokenId()",
-      "Long BuildArguments.getTokenValue()", "String BuildArguments.getValue()", "boolean BuildArguments.isVisible()",
-      "void BuildArguments.setAbi(String)", "void BuildArguments.setConsumeUserResourcePercent(Long)",
-      "void BuildArguments.setData(String)", "void BuildArguments.setExtraData(String)",
-      "void BuildArguments.setFrom(String)", "void BuildArguments.setGas(String)",
-      "void BuildArguments.setGasPrice(String)", "void BuildArguments.setName(String)",
-      "void BuildArguments.setNonce(String)", "void BuildArguments.setOriginEnergyLimit(Long)",
-      "void BuildArguments.setPermissionId(Integer)", "void BuildArguments.setTo(String)",
-      "void BuildArguments.setTokenId(Long)", "void BuildArguments.setTokenValue(Long)",
-      "void BuildArguments.setValue(String)", "void BuildArguments.setVisible(boolean)",
-      "String BuildArguments.toString()"})
+  @MethodsUnderTest({
+    "void BuildArguments.<init>()",
+    "void BuildArguments.<init>(String, String, String, String, String, String, String, Long, Long, String, Long, Long, String, Integer, String, boolean)",
+    "String BuildArguments.getAbi()",
+    "Long BuildArguments.getConsumeUserResourcePercent()",
+    "String BuildArguments.getData()",
+    "String BuildArguments.getExtraData()",
+    "String BuildArguments.getFrom()",
+    "String BuildArguments.getGas()",
+    "String BuildArguments.getGasPrice()",
+    "String BuildArguments.getName()",
+    "String BuildArguments.getNonce()",
+    "Long BuildArguments.getOriginEnergyLimit()",
+    "Integer BuildArguments.getPermissionId()",
+    "String BuildArguments.getTo()",
+    "Long BuildArguments.getTokenId()",
+    "Long BuildArguments.getTokenValue()",
+    "String BuildArguments.getValue()",
+    "boolean BuildArguments.isVisible()",
+    "void BuildArguments.setAbi(String)",
+    "void BuildArguments.setConsumeUserResourcePercent(Long)",
+    "void BuildArguments.setData(String)",
+    "void BuildArguments.setExtraData(String)",
+    "void BuildArguments.setFrom(String)",
+    "void BuildArguments.setGas(String)",
+    "void BuildArguments.setGasPrice(String)",
+    "void BuildArguments.setName(String)",
+    "void BuildArguments.setNonce(String)",
+    "void BuildArguments.setOriginEnergyLimit(Long)",
+    "void BuildArguments.setPermissionId(Integer)",
+    "void BuildArguments.setTo(String)",
+    "void BuildArguments.setTokenId(Long)",
+    "void BuildArguments.setTokenValue(Long)",
+    "void BuildArguments.setValue(String)",
+    "void BuildArguments.setVisible(boolean)",
+    "String BuildArguments.toString()"
+  })
   public void testGettersAndSetters_whenJaneDoeExampleOrg() {
     // Arrange and Act
-    BuildArguments actualBuildArguments = new BuildArguments("jane.doe@example.org", "alice.liddell@example.org", "Gas",
-        "Gas Price", "42", "Data", "Nonce", 1L, 42L, "Abi", 1L, 1L, "Name", 1, "Extra Data", true);
+    BuildArguments actualBuildArguments =
+        new BuildArguments(
+            "jane.doe@example.org",
+            "alice.liddell@example.org",
+            "Gas",
+            "Gas Price",
+            "42",
+            "Data",
+            "Nonce",
+            1L,
+            42L,
+            "Abi",
+            1L,
+            1L,
+            "Name",
+            1,
+            "Extra Data",
+            true);
     actualBuildArguments.setAbi("Abi");
     actualBuildArguments.setConsumeUserResourcePercent(1L);
     actualBuildArguments.setData("Data");
@@ -265,19 +324,30 @@ public class BuildArgumentsDiffblueTest {
 
   /**
    * Test {@link BuildArguments#BuildArguments(CallArguments)}.
+   *
    * <ul>
-   *   <li>Then return Abi is empty string.</li>
+   *   <li>Then return Abi is empty string.
    * </ul>
-   * <p>
-   * Method under test: {@link BuildArguments#BuildArguments(CallArguments)}
+   *
+   * <p>Method under test: {@link BuildArguments#BuildArguments(CallArguments)}
    */
   @Test
   @Category(MaintainedByDiffblue.class)
   @MethodsUnderTest({"void BuildArguments.<init>(CallArguments)"})
   public void testNewBuildArguments_thenReturnAbiIsEmptyString() {
-    // Arrange and Act
-    BuildArguments actualBuildArguments = new BuildArguments(new CallArguments("jane.doe@example.org",
-        "alice.liddell@example.org", "Gas", "Gas Price", "42", "Data", "Nonce"));
+    // Arrange
+    CallArguments args =
+        new CallArguments(
+            "jane.doe@example.org",
+            "alice.liddell@example.org",
+            "Gas",
+            "Gas Price",
+            "42",
+            "Data",
+            "Nonce");
+
+    // Act
+    BuildArguments actualBuildArguments = new BuildArguments(args);
 
     // Assert
     assertEquals("", actualBuildArguments.getAbi());
@@ -300,116 +370,137 @@ public class BuildArgumentsDiffblueTest {
 
   /**
    * Test {@link BuildArguments#getContractType(Wallet)}.
+   *
    * <ul>
-   *   <li>Given {@link BuildArguments#BuildArguments()} Data is {@code 0x}.</li>
+   *   <li>Given {@link BuildArguments#BuildArguments(CallArguments)} with args is {@link
+   *       CallArguments#CallArguments(String, String, String, String, String, String, String)} Data
+   *       is {@code 0x}.
    * </ul>
-   * <p>
-   * Method under test: {@link BuildArguments#getContractType(Wallet)}
+   *
+   * <p>Method under test: {@link BuildArguments#getContractType(Wallet)}
    */
   @Test
   @Category(MaintainedByDiffblue.class)
-  @MethodsUnderTest({"Transaction.Contract.ContractType BuildArguments.getContractType(Wallet)"})
-  public void testGetContractType_givenBuildArgumentsDataIs0x()
+  @MethodsUnderTest({
+    "org.tron.protos.Protocol.Transaction.Contract.ContractType BuildArguments.getContractType(Wallet)"
+  })
+  public void testGetContractType_givenBuildArgumentsWithArgsIsCallArgumentsDataIs0x()
       throws JsonRpcInvalidParamsException, JsonRpcInvalidRequestException {
     // Arrange
-    BuildArguments buildArguments = new BuildArguments();
+    CallArguments args =
+        new CallArguments(
+            "jane.doe@example.org",
+            "alice.liddell@example.org",
+            "Gas",
+            "Gas Price",
+            "42",
+            "Data",
+            "Nonce");
+
+    BuildArguments buildArguments = new BuildArguments(args);
     buildArguments.setValue("not empty");
-    buildArguments.setTo(null);
+    buildArguments.setTo("");
     buildArguments.setData("0x");
     buildArguments.setTokenId(0L);
     buildArguments.setTokenValue(0L);
 
     // Act and Assert
-    assertThrows(JsonRpcInvalidRequestException.class, () -> buildArguments.getContractType(new Wallet()));
+    assertThrows(
+        JsonRpcInvalidRequestException.class, () -> buildArguments.getContractType(new Wallet()));
   }
 
   /**
    * Test {@link BuildArguments#getContractType(Wallet)}.
+   *
    * <ul>
-   *   <li>Given {@link BuildArguments#BuildArguments()} Data is {@code foo}.</li>
-   *   <li>Then return {@code CreateSmartContract}.</li>
+   *   <li>Given {@link BuildArguments#BuildArguments()}.
+   *   <li>Then throw {@link JsonRpcInvalidRequestException}.
    * </ul>
-   * <p>
-   * Method under test: {@link BuildArguments#getContractType(Wallet)}
+   *
+   * <p>Method under test: {@link BuildArguments#getContractType(Wallet)}
    */
   @Test
   @Category(MaintainedByDiffblue.class)
-  @MethodsUnderTest({"Transaction.Contract.ContractType BuildArguments.getContractType(Wallet)"})
-  public void testGetContractType_givenBuildArgumentsDataIsFoo_thenReturnCreateSmartContract()
-      throws JsonRpcInvalidParamsException, JsonRpcInvalidRequestException {
-    // Arrange
-    BuildArguments buildArguments = new BuildArguments();
-    buildArguments.setValue("not empty");
-    buildArguments.setTo(null);
-    buildArguments.setData("foo");
-    buildArguments.setTokenId(0L);
-    buildArguments.setTokenValue(0L);
-
-    // Act and Assert
-    assertEquals(ContractType.CreateSmartContract, buildArguments.getContractType(new Wallet()));
-  }
-
-  /**
-   * Test {@link BuildArguments#getContractType(Wallet)}.
-   * <ul>
-   *   <li>Given {@link BuildArguments#BuildArguments()}.</li>
-   *   <li>Then throw {@link JsonRpcInvalidRequestException}.</li>
-   * </ul>
-   * <p>
-   * Method under test: {@link BuildArguments#getContractType(Wallet)}
-   */
-  @Test
-  @Category(MaintainedByDiffblue.class)
-  @MethodsUnderTest({"Transaction.Contract.ContractType BuildArguments.getContractType(Wallet)"})
+  @MethodsUnderTest({
+    "org.tron.protos.Protocol.Transaction.Contract.ContractType BuildArguments.getContractType(Wallet)"
+  })
   public void testGetContractType_givenBuildArguments_thenThrowJsonRpcInvalidRequestException()
       throws JsonRpcInvalidParamsException, JsonRpcInvalidRequestException {
     // Arrange
     BuildArguments buildArguments = new BuildArguments();
 
     // Act and Assert
-    assertThrows(JsonRpcInvalidRequestException.class, () -> buildArguments.getContractType(new Wallet()));
+    assertThrows(
+        JsonRpcInvalidRequestException.class, () -> buildArguments.getContractType(new Wallet()));
   }
 
   /**
    * Test {@link BuildArguments#getContractType(Wallet)}.
+   *
    * <ul>
-   *   <li>Then throw {@link JsonRpcInvalidRequestException}.</li>
+   *   <li>Then throw {@link JsonRpcInvalidRequestException}.
    * </ul>
-   * <p>
-   * Method under test: {@link BuildArguments#getContractType(Wallet)}
+   *
+   * <p>Method under test: {@link BuildArguments#getContractType(Wallet)}
    */
   @Test
   @Category(MaintainedByDiffblue.class)
-  @MethodsUnderTest({"Transaction.Contract.ContractType BuildArguments.getContractType(Wallet)"})
+  @MethodsUnderTest({
+    "org.tron.protos.Protocol.Transaction.Contract.ContractType BuildArguments.getContractType(Wallet)"
+  })
   public void testGetContractType_thenThrowJsonRpcInvalidRequestException()
       throws JsonRpcInvalidParamsException, JsonRpcInvalidRequestException {
     // Arrange
-    BuildArguments buildArguments = new BuildArguments();
+    CallArguments args =
+        new CallArguments(
+            "jane.doe@example.org",
+            "alice.liddell@example.org",
+            "Gas",
+            "Gas Price",
+            "42",
+            "Data",
+            "Nonce");
+
+    BuildArguments buildArguments = new BuildArguments(args);
     buildArguments.setValue("not empty");
-    buildArguments.setTo(null);
+    buildArguments.setTo("");
     buildArguments.setData("");
     buildArguments.setTokenId(0L);
     buildArguments.setTokenValue(0L);
 
     // Act and Assert
-    assertThrows(JsonRpcInvalidRequestException.class, () -> buildArguments.getContractType(new Wallet()));
+    assertThrows(
+        JsonRpcInvalidRequestException.class, () -> buildArguments.getContractType(new Wallet()));
   }
 
   /**
    * Test {@link BuildArguments#parseValue()}.
+   *
    * <ul>
-   *   <li>Given {@link BuildArguments#BuildArguments()} Value is {@code 0x0}.</li>
-   *   <li>Then return zero.</li>
+   *   <li>Given {@link BuildArguments#BuildArguments(CallArguments)} with args is {@link
+   *       CallArguments#CallArguments(String, String, String, String, String, String, String)}
+   *       Value is {@code 0x0}.
    * </ul>
-   * <p>
-   * Method under test: {@link BuildArguments#parseValue()}
+   *
+   * <p>Method under test: {@link BuildArguments#parseValue()}
    */
   @Test
   @Category(MaintainedByDiffblue.class)
   @MethodsUnderTest({"long BuildArguments.parseValue()"})
-  public void testParseValue_givenBuildArgumentsValueIs0x0_thenReturnZero() throws JsonRpcInvalidParamsException {
+  public void testParseValue_givenBuildArgumentsWithArgsIsCallArgumentsValueIs0x0()
+      throws JsonRpcInvalidParamsException {
     // Arrange
-    BuildArguments buildArguments = new BuildArguments();
+    CallArguments args =
+        new CallArguments(
+            "jane.doe@example.org",
+            "alice.liddell@example.org",
+            "Gas",
+            "Gas Price",
+            "42",
+            "Data",
+            "Nonce");
+
+    BuildArguments buildArguments = new BuildArguments(args);
     buildArguments.setValue("0x0");
 
     // Act and Assert
@@ -418,20 +509,32 @@ public class BuildArgumentsDiffblueTest {
 
   /**
    * Test {@link BuildArguments#parseValue()}.
+   *
    * <ul>
-   *   <li>Given {@link BuildArguments#BuildArguments()} Value is empty string.</li>
-   *   <li>Then return zero.</li>
+   *   <li>Given {@link BuildArguments#BuildArguments(CallArguments)} with args is {@link
+   *       CallArguments#CallArguments(String, String, String, String, String, String, String)}
+   *       Value is empty string.
    * </ul>
-   * <p>
-   * Method under test: {@link BuildArguments#parseValue()}
+   *
+   * <p>Method under test: {@link BuildArguments#parseValue()}
    */
   @Test
   @Category(MaintainedByDiffblue.class)
   @MethodsUnderTest({"long BuildArguments.parseValue()"})
-  public void testParseValue_givenBuildArgumentsValueIsEmptyString_thenReturnZero()
+  public void testParseValue_givenBuildArgumentsWithArgsIsCallArgumentsValueIsEmptyString()
       throws JsonRpcInvalidParamsException {
     // Arrange
-    BuildArguments buildArguments = new BuildArguments();
+    CallArguments args =
+        new CallArguments(
+            "jane.doe@example.org",
+            "alice.liddell@example.org",
+            "Gas",
+            "Gas Price",
+            "42",
+            "Data",
+            "Nonce");
+
+    BuildArguments buildArguments = new BuildArguments(args);
     buildArguments.setValue("");
 
     // Act and Assert
@@ -440,36 +543,51 @@ public class BuildArgumentsDiffblueTest {
 
   /**
    * Test {@link BuildArguments#parseValue()}.
+   *
    * <ul>
-   *   <li>Given {@link BuildArguments#BuildArguments()}.</li>
-   *   <li>Then return zero.</li>
+   *   <li>Given {@link BuildArguments#BuildArguments()}.
+   *   <li>Then return zero.
    * </ul>
-   * <p>
-   * Method under test: {@link BuildArguments#parseValue()}
+   *
+   * <p>Method under test: {@link BuildArguments#parseValue()}
    */
   @Test
   @Category(MaintainedByDiffblue.class)
   @MethodsUnderTest({"long BuildArguments.parseValue()"})
-  public void testParseValue_givenBuildArguments_thenReturnZero() throws JsonRpcInvalidParamsException {
+  public void testParseValue_givenBuildArguments_thenReturnZero()
+      throws JsonRpcInvalidParamsException {
     // Arrange, Act and Assert
-    assertEquals(0L, (new BuildArguments()).parseValue());
+    assertEquals(0L, new BuildArguments().parseValue());
   }
 
   /**
    * Test {@link BuildArguments#parseGas()}.
+   *
    * <ul>
-   *   <li>Given {@link BuildArguments#BuildArguments()} Gas is empty string.</li>
-   *   <li>Then return zero.</li>
+   *   <li>Given {@link BuildArguments#BuildArguments(CallArguments)} with args is {@link
+   *       CallArguments#CallArguments(String, String, String, String, String, String, String)} Gas
+   *       is empty string.
    * </ul>
-   * <p>
-   * Method under test: {@link BuildArguments#parseGas()}
+   *
+   * <p>Method under test: {@link BuildArguments#parseGas()}
    */
   @Test
   @Category(MaintainedByDiffblue.class)
   @MethodsUnderTest({"long BuildArguments.parseGas()"})
-  public void testParseGas_givenBuildArgumentsGasIsEmptyString_thenReturnZero() throws JsonRpcInvalidParamsException {
+  public void testParseGas_givenBuildArgumentsWithArgsIsCallArgumentsGasIsEmptyString()
+      throws JsonRpcInvalidParamsException {
     // Arrange
-    BuildArguments buildArguments = new BuildArguments();
+    CallArguments args =
+        new CallArguments(
+            "jane.doe@example.org",
+            "alice.liddell@example.org",
+            "Gas",
+            "Gas Price",
+            "42",
+            "Data",
+            "Nonce");
+
+    BuildArguments buildArguments = new BuildArguments(args);
     buildArguments.setGas("");
 
     // Act and Assert
@@ -478,19 +596,33 @@ public class BuildArgumentsDiffblueTest {
 
   /**
    * Test {@link BuildArguments#parseGas()}.
+   *
    * <ul>
-   *   <li>Given {@link BuildArguments#BuildArguments()} Gas is {@code null}.</li>
-   *   <li>Then return zero.</li>
+   *   <li>Given {@link BuildArguments#BuildArguments(CallArguments)} with args is {@link
+   *       CallArguments#CallArguments(String, String, String, String, String, String, String)} Gas
+   *       is {@code null}.
+   *   <li>Then return zero.
    * </ul>
-   * <p>
-   * Method under test: {@link BuildArguments#parseGas()}
+   *
+   * <p>Method under test: {@link BuildArguments#parseGas()}
    */
   @Test
   @Category(MaintainedByDiffblue.class)
   @MethodsUnderTest({"long BuildArguments.parseGas()"})
-  public void testParseGas_givenBuildArgumentsGasIsNull_thenReturnZero() throws JsonRpcInvalidParamsException {
+  public void testParseGas_givenBuildArgumentsWithArgsIsCallArgumentsGasIsNull_thenReturnZero()
+      throws JsonRpcInvalidParamsException {
     // Arrange
-    BuildArguments buildArguments = new BuildArguments();
+    CallArguments args =
+        new CallArguments(
+            "jane.doe@example.org",
+            "alice.liddell@example.org",
+            "Gas",
+            "Gas Price",
+            "42",
+            "Data",
+            "Nonce");
+
+    BuildArguments buildArguments = new BuildArguments(args);
     buildArguments.setGas(null);
 
     // Act and Assert
@@ -499,18 +631,20 @@ public class BuildArgumentsDiffblueTest {
 
   /**
    * Test {@link BuildArguments#parseGas()}.
+   *
    * <ul>
-   *   <li>Given {@link BuildArguments#BuildArguments()}.</li>
-   *   <li>Then return zero.</li>
+   *   <li>Given {@link BuildArguments#BuildArguments()}.
+   *   <li>Then return zero.
    * </ul>
-   * <p>
-   * Method under test: {@link BuildArguments#parseGas()}
+   *
+   * <p>Method under test: {@link BuildArguments#parseGas()}
    */
   @Test
   @Category(MaintainedByDiffblue.class)
   @MethodsUnderTest({"long BuildArguments.parseGas()"})
-  public void testParseGas_givenBuildArguments_thenReturnZero() throws JsonRpcInvalidParamsException {
+  public void testParseGas_givenBuildArguments_thenReturnZero()
+      throws JsonRpcInvalidParamsException {
     // Arrange, Act and Assert
-    assertEquals(0L, (new BuildArguments()).parseGas());
+    assertEquals(0L, new BuildArguments().parseGas());
   }
 }

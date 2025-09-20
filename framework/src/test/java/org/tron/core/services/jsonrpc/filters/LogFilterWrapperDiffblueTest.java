@@ -4,6 +4,10 @@ import static org.junit.Assert.assertEquals;
 import static org.junit.Assert.assertNull;
 import static org.junit.Assert.assertThrows;
 import static org.junit.Assert.assertTrue;
+import static org.mockito.Mockito.atLeast;
+import static org.mockito.Mockito.mock;
+import static org.mockito.Mockito.verify;
+import static org.mockito.Mockito.when;
 import com.diffblue.cover.annotations.MaintainedByDiffblue;
 import com.diffblue.cover.annotations.MethodsUnderTest;
 import java.util.ArrayList;
@@ -18,234 +22,262 @@ import org.tron.core.services.jsonrpc.TronJsonRpc.FilterRequest;
 public class LogFilterWrapperDiffblueTest {
   /**
    * Test {@link LogFilterWrapper#LogFilterWrapper(FilterRequest, long, Wallet)}.
-   * <ul>
-   *   <li>Given array of {@link Object} with {@link ArrayList#ArrayList()}.</li>
-   * </ul>
-   * <p>
-   * Method under test: {@link LogFilterWrapper#LogFilterWrapper(TronJsonRpc.FilterRequest, long, Wallet)}
+   *
+   * <p>Method under test: {@link LogFilterWrapper#LogFilterWrapper(TronJsonRpc.FilterRequest, long,
+   * Wallet)}
    */
   @Test
   @Category(MaintainedByDiffblue.class)
   @MethodsUnderTest({"void LogFilterWrapper.<init>(TronJsonRpc.FilterRequest, long, Wallet)"})
-  public void testNewLogFilterWrapper_givenArrayOfObjectWithArrayList() throws JsonRpcInvalidParamsException {
+  public void testNewLogFilterWrapper() throws JsonRpcInvalidParamsException {
     // Arrange
-    FilterRequest fr = new FilterRequest();
-    fr.setBlockHash(null);
-    fr.setFromBlock(null);
-    fr.setToBlock(null);
-    fr.setAddress(null);
-    fr.setTopics(new Object[]{new ArrayList<>()});
+    Object[] topics = new Object[] {new ArrayList<>()};
+    FilterRequest fr = new FilterRequest(null, null, null, topics, null);
 
     // Act
     LogFilterWrapper actualLogFilterWrapper = new LogFilterWrapper(fr, -1L, null);
 
     // Assert
     assertEquals(-1L, actualLogFilterWrapper.getFromBlock());
-    List<byte[][]> topics = actualLogFilterWrapper.getLogFilter().getTopics();
-    assertEquals(1, topics.size());
-    assertEquals(0, topics.get(0).length);
+    LogFilter logFilter = actualLogFilterWrapper.getLogFilter();
+    List<byte[][]> topics2 = logFilter.getTopics();
+    assertEquals(1, topics2.size());
+    assertEquals(0, topics2.get(0).length);
+    assertEquals(0, logFilter.getContractAddresses().length);
     assertEquals(Long.MAX_VALUE, actualLogFilterWrapper.getToBlock());
   }
 
   /**
    * Test {@link LogFilterWrapper#LogFilterWrapper(FilterRequest, long, Wallet)}.
-   * <ul>
-   *   <li>Given {@code Block Hash}.</li>
-   *   <li>Then throw {@link JsonRpcInvalidParamsException}.</li>
-   * </ul>
-   * <p>
-   * Method under test: {@link LogFilterWrapper#LogFilterWrapper(TronJsonRpc.FilterRequest, long, Wallet)}
+   *
+   * <p>Method under test: {@link LogFilterWrapper#LogFilterWrapper(TronJsonRpc.FilterRequest, long,
+   * Wallet)}
    */
   @Test
   @Category(MaintainedByDiffblue.class)
   @MethodsUnderTest({"void LogFilterWrapper.<init>(TronJsonRpc.FilterRequest, long, Wallet)"})
-  public void testNewLogFilterWrapper_givenBlockHash_thenThrowJsonRpcInvalidParamsException()
-      throws JsonRpcInvalidParamsException {
+  public void testNewLogFilterWrapper2() throws JsonRpcInvalidParamsException {
     // Arrange
-    FilterRequest fr = new FilterRequest();
-    fr.setBlockHash("Block Hash");
-
-    // Act and Assert
-    assertThrows(JsonRpcInvalidParamsException.class, () -> new LogFilterWrapper(fr, 1L, null));
-
-  }
-
-  /**
-   * Test {@link LogFilterWrapper#LogFilterWrapper(FilterRequest, long, Wallet)}.
-   * <ul>
-   *   <li>Given empty string.</li>
-   *   <li>When {@link TronJsonRpc.FilterRequest#FilterRequest()} FromBlock is empty string.</li>
-   * </ul>
-   * <p>
-   * Method under test: {@link LogFilterWrapper#LogFilterWrapper(TronJsonRpc.FilterRequest, long, Wallet)}
-   */
-  @Test
-  @Category(MaintainedByDiffblue.class)
-  @MethodsUnderTest({"void LogFilterWrapper.<init>(TronJsonRpc.FilterRequest, long, Wallet)"})
-  public void testNewLogFilterWrapper_givenEmptyString_whenFilterRequestFromBlockIsEmptyString()
-      throws JsonRpcInvalidParamsException {
-    // Arrange
-    FilterRequest fr = new FilterRequest();
-    fr.setFromBlock("");
+    Object[] topics = new Object[] {new ArrayList<>()};
+    FilterRequest fr = new FilterRequest("", null, null, topics, null);
 
     // Act
-    LogFilterWrapper actualLogFilterWrapper = new LogFilterWrapper(fr, 1L, new Wallet());
+    LogFilterWrapper actualLogFilterWrapper = new LogFilterWrapper(fr, -1L, null);
 
     // Assert
-    assertEquals(1L, actualLogFilterWrapper.getFromBlock());
-    assertTrue(actualLogFilterWrapper.getLogFilter().getTopics().isEmpty());
+    assertEquals(-1L, actualLogFilterWrapper.getFromBlock());
+    LogFilter logFilter = actualLogFilterWrapper.getLogFilter();
+    List<byte[][]> topics2 = logFilter.getTopics();
+    assertEquals(1, topics2.size());
+    assertEquals(0, topics2.get(0).length);
+    assertEquals(0, logFilter.getContractAddresses().length);
     assertEquals(Long.MAX_VALUE, actualLogFilterWrapper.getToBlock());
   }
 
   /**
    * Test {@link LogFilterWrapper#LogFilterWrapper(FilterRequest, long, Wallet)}.
+   *
    * <ul>
-   *   <li>Given {@code latest}.</li>
-   *   <li>When {@link TronJsonRpc.FilterRequest#FilterRequest()} FromBlock is {@code latest}.</li>
+   *   <li>Given {@link ArrayList#ArrayList()}.
    * </ul>
-   * <p>
-   * Method under test: {@link LogFilterWrapper#LogFilterWrapper(TronJsonRpc.FilterRequest, long, Wallet)}
+   *
+   * <p>Method under test: {@link LogFilterWrapper#LogFilterWrapper(TronJsonRpc.FilterRequest, long,
+   * Wallet)}
    */
   @Test
   @Category(MaintainedByDiffblue.class)
   @MethodsUnderTest({"void LogFilterWrapper.<init>(TronJsonRpc.FilterRequest, long, Wallet)"})
-  public void testNewLogFilterWrapper_givenLatest_whenFilterRequestFromBlockIsLatest()
+  public void testNewLogFilterWrapper_givenArrayList() throws JsonRpcInvalidParamsException {
+    // Arrange
+    FilterRequest fr = mock(FilterRequest.class);
+    when(fr.getAddress()).thenReturn(new ArrayList<>());
+    when(fr.getTopics()).thenReturn(null);
+    when(fr.getBlockHash()).thenReturn("0x");
+    when(fr.getFromBlock()).thenReturn("not empty");
+
+    // Act and Assert
+    assertThrows(
+        JsonRpcInvalidParamsException.class, () -> new LogFilterWrapper(fr, 1L, new Wallet()));
+    verify(fr, atLeast(1)).getAddress();
+    verify(fr, atLeast(1)).getBlockHash();
+    verify(fr).getFromBlock();
+    verify(fr).getTopics();
+  }
+
+  /**
+   * Test {@link LogFilterWrapper#LogFilterWrapper(FilterRequest, long, Wallet)}.
+   *
+   * <ul>
+   *   <li>Given empty array of {@link Object}.
+   * </ul>
+   *
+   * <p>Method under test: {@link LogFilterWrapper#LogFilterWrapper(TronJsonRpc.FilterRequest, long,
+   * Wallet)}
+   */
+  @Test
+  @Category(MaintainedByDiffblue.class)
+  @MethodsUnderTest({"void LogFilterWrapper.<init>(TronJsonRpc.FilterRequest, long, Wallet)"})
+  public void testNewLogFilterWrapper_givenEmptyArrayOfObject()
       throws JsonRpcInvalidParamsException {
     // Arrange
-    FilterRequest fr = new FilterRequest();
-    fr.setFromBlock("latest");
+    FilterRequest fr = mock(FilterRequest.class);
+    when(fr.getAddress()).thenReturn(null);
+    when(fr.getTopics()).thenReturn(new Object[] {});
+    when(fr.getBlockHash()).thenReturn("0x");
+    when(fr.getFromBlock()).thenReturn("not empty");
+
+    // Act and Assert
+    assertThrows(
+        JsonRpcInvalidParamsException.class, () -> new LogFilterWrapper(fr, 1L, new Wallet()));
+    verify(fr, atLeast(1)).getAddress();
+    verify(fr, atLeast(1)).getBlockHash();
+    verify(fr).getFromBlock();
+    verify(fr, atLeast(1)).getTopics();
+  }
+
+  /**
+   * Test {@link LogFilterWrapper#LogFilterWrapper(FilterRequest, long, Wallet)}.
+   *
+   * <ul>
+   *   <li>Given {@code foo}.
+   *   <li>When {@link TronJsonRpc.FilterRequest} {@link TronJsonRpc.FilterRequest#getBlockHash()}
+   *       return {@code foo}.
+   * </ul>
+   *
+   * <p>Method under test: {@link LogFilterWrapper#LogFilterWrapper(TronJsonRpc.FilterRequest, long,
+   * Wallet)}
+   */
+  @Test
+  @Category(MaintainedByDiffblue.class)
+  @MethodsUnderTest({"void LogFilterWrapper.<init>(TronJsonRpc.FilterRequest, long, Wallet)"})
+  public void testNewLogFilterWrapper_givenFoo_whenFilterRequestGetBlockHashReturnFoo()
+      throws JsonRpcInvalidParamsException {
+    // Arrange
+    FilterRequest fr = mock(FilterRequest.class);
+    when(fr.getAddress()).thenReturn(null);
+    when(fr.getTopics()).thenReturn(null);
+    when(fr.getBlockHash()).thenReturn("foo");
+    when(fr.getFromBlock()).thenReturn("not empty");
+
+    // Act and Assert
+    assertThrows(
+        JsonRpcInvalidParamsException.class, () -> new LogFilterWrapper(fr, 1L, new Wallet()));
+    verify(fr, atLeast(1)).getAddress();
+    verify(fr, atLeast(1)).getBlockHash();
+    verify(fr).getFromBlock();
+    verify(fr).getTopics();
+  }
+
+  /**
+   * Test {@link LogFilterWrapper#LogFilterWrapper(FilterRequest, long, Wallet)}.
+   *
+   * <ul>
+   *   <li>Then calls {@link TronJsonRpc.FilterRequest#getToBlock()}.
+   * </ul>
+   *
+   * <p>Method under test: {@link LogFilterWrapper#LogFilterWrapper(TronJsonRpc.FilterRequest, long,
+   * Wallet)}
+   */
+  @Test
+  @Category(MaintainedByDiffblue.class)
+  @MethodsUnderTest({"void LogFilterWrapper.<init>(TronJsonRpc.FilterRequest, long, Wallet)"})
+  public void testNewLogFilterWrapper_thenCallsGetToBlock() throws JsonRpcInvalidParamsException {
+    // Arrange
+    FilterRequest fr = mock(FilterRequest.class);
+    when(fr.getAddress()).thenReturn(null);
+    when(fr.getTopics()).thenReturn(null);
+    when(fr.getBlockHash()).thenReturn("0x");
+    when(fr.getFromBlock()).thenReturn(null);
+    when(fr.getToBlock()).thenReturn("");
+
+    // Act and Assert
+    assertThrows(
+        JsonRpcInvalidParamsException.class, () -> new LogFilterWrapper(fr, 1L, new Wallet()));
+    verify(fr, atLeast(1)).getAddress();
+    verify(fr, atLeast(1)).getBlockHash();
+    verify(fr).getFromBlock();
+    verify(fr).getToBlock();
+    verify(fr).getTopics();
+  }
+
+  /**
+   * Test {@link LogFilterWrapper#LogFilterWrapper(FilterRequest, long, Wallet)}.
+   *
+   * <ul>
+   *   <li>Then return LogFilter Topics first is {@code null}.
+   * </ul>
+   *
+   * <p>Method under test: {@link LogFilterWrapper#LogFilterWrapper(TronJsonRpc.FilterRequest, long,
+   * Wallet)}
+   */
+  @Test
+  @Category(MaintainedByDiffblue.class)
+  @MethodsUnderTest({"void LogFilterWrapper.<init>(TronJsonRpc.FilterRequest, long, Wallet)"})
+  public void testNewLogFilterWrapper_thenReturnLogFilterTopicsFirstIsNull()
+      throws JsonRpcInvalidParamsException {
+    // Arrange
+    Object[] topics = new Object[] {null};
+    FilterRequest fr = new FilterRequest(null, null, null, topics, null);
 
     // Act
-    LogFilterWrapper actualLogFilterWrapper = new LogFilterWrapper(fr, 1L, new Wallet());
+    LogFilterWrapper actualLogFilterWrapper = new LogFilterWrapper(fr, -1L, null);
 
     // Assert
     LogFilter logFilter = actualLogFilterWrapper.getLogFilter();
+    List<byte[][]> topics2 = logFilter.getTopics();
+    assertEquals(1, topics2.size());
+    assertNull(topics2.get(0));
+    assertEquals(-1L, actualLogFilterWrapper.getFromBlock());
     assertEquals(0, logFilter.getContractAddresses().length);
-    assertEquals(1L, actualLogFilterWrapper.getFromBlock());
-    assertTrue(logFilter.getTopics().isEmpty());
     assertEquals(Long.MAX_VALUE, actualLogFilterWrapper.getToBlock());
   }
 
   /**
    * Test {@link LogFilterWrapper#LogFilterWrapper(FilterRequest, long, Wallet)}.
+   *
    * <ul>
-   *   <li>Given {@code latest}.</li>
-   *   <li>When {@link TronJsonRpc.FilterRequest#FilterRequest()} ToBlock is {@code latest}.</li>
+   *   <li>Then throw {@link JsonRpcInvalidParamsException}.
    * </ul>
-   * <p>
-   * Method under test: {@link LogFilterWrapper#LogFilterWrapper(TronJsonRpc.FilterRequest, long, Wallet)}
+   *
+   * <p>Method under test: {@link LogFilterWrapper#LogFilterWrapper(TronJsonRpc.FilterRequest, long,
+   * Wallet)}
    */
   @Test
   @Category(MaintainedByDiffblue.class)
   @MethodsUnderTest({"void LogFilterWrapper.<init>(TronJsonRpc.FilterRequest, long, Wallet)"})
-  public void testNewLogFilterWrapper_givenLatest_whenFilterRequestToBlockIsLatest()
+  public void testNewLogFilterWrapper_thenThrowJsonRpcInvalidParamsException()
       throws JsonRpcInvalidParamsException {
     // Arrange
-    FilterRequest fr = new FilterRequest();
-    fr.setToBlock("latest");
+    FilterRequest fr = mock(FilterRequest.class);
+    when(fr.getAddress()).thenReturn(null);
+    when(fr.getTopics()).thenReturn(null);
+    when(fr.getBlockHash()).thenReturn("0x");
+    when(fr.getFromBlock()).thenReturn("not empty");
 
-    // Act
-    LogFilterWrapper actualLogFilterWrapper = new LogFilterWrapper(fr, 1L, new Wallet());
-
-    // Assert
-    assertEquals(1L, actualLogFilterWrapper.getFromBlock());
-    assertTrue(actualLogFilterWrapper.getLogFilter().getTopics().isEmpty());
-    assertEquals(Long.MAX_VALUE, actualLogFilterWrapper.getToBlock());
+    // Act and Assert
+    assertThrows(
+        JsonRpcInvalidParamsException.class, () -> new LogFilterWrapper(fr, 1L, new Wallet()));
+    verify(fr, atLeast(1)).getAddress();
+    verify(fr, atLeast(1)).getBlockHash();
+    verify(fr).getFromBlock();
+    verify(fr).getTopics();
   }
 
   /**
    * Test {@link LogFilterWrapper#LogFilterWrapper(FilterRequest, long, Wallet)}.
+   *
    * <ul>
-   *   <li>Then return LogFilter Topics first is {@code null}.</li>
+   *   <li>When {@link TronJsonRpc.FilterRequest#FilterRequest()}.
+   *   <li>Then return FromBlock is one.
    * </ul>
-   * <p>
-   * Method under test: {@link LogFilterWrapper#LogFilterWrapper(TronJsonRpc.FilterRequest, long, Wallet)}
+   *
+   * <p>Method under test: {@link LogFilterWrapper#LogFilterWrapper(TronJsonRpc.FilterRequest, long,
+   * Wallet)}
    */
   @Test
   @Category(MaintainedByDiffblue.class)
   @MethodsUnderTest({"void LogFilterWrapper.<init>(TronJsonRpc.FilterRequest, long, Wallet)"})
-  public void testNewLogFilterWrapper_thenReturnLogFilterTopicsFirstIsNull() throws JsonRpcInvalidParamsException {
-    // Arrange
-    FilterRequest fr = new FilterRequest();
-    fr.setBlockHash(null);
-    fr.setFromBlock(null);
-    fr.setToBlock(null);
-    fr.setAddress(null);
-    fr.setTopics(new Object[]{null});
-
-    // Act
-    LogFilterWrapper actualLogFilterWrapper = new LogFilterWrapper(fr, -1L, null);
-
-    // Assert
-    List<byte[][]> topics = actualLogFilterWrapper.getLogFilter().getTopics();
-    assertEquals(1, topics.size());
-    assertNull(topics.get(0));
-    assertEquals(-1L, actualLogFilterWrapper.getFromBlock());
-    assertEquals(Long.MAX_VALUE, actualLogFilterWrapper.getToBlock());
-  }
-
-  /**
-   * Test {@link LogFilterWrapper#LogFilterWrapper(FilterRequest, long, Wallet)}.
-   * <ul>
-   *   <li>Then return ToBlock is zero.</li>
-   * </ul>
-   * <p>
-   * Method under test: {@link LogFilterWrapper#LogFilterWrapper(TronJsonRpc.FilterRequest, long, Wallet)}
-   */
-  @Test
-  @Category(MaintainedByDiffblue.class)
-  @MethodsUnderTest({"void LogFilterWrapper.<init>(TronJsonRpc.FilterRequest, long, Wallet)"})
-  public void testNewLogFilterWrapper_thenReturnToBlockIsZero() throws JsonRpcInvalidParamsException {
-    // Arrange
-    FilterRequest fr = new FilterRequest();
-    fr.setToBlock("earliest");
-
-    // Act
-    LogFilterWrapper actualLogFilterWrapper = new LogFilterWrapper(fr, 1L, new Wallet());
-
-    // Assert
-    assertEquals(0L, actualLogFilterWrapper.getFromBlock());
-    assertEquals(0L, actualLogFilterWrapper.getToBlock());
-  }
-
-  /**
-   * Test {@link LogFilterWrapper#LogFilterWrapper(FilterRequest, long, Wallet)}.
-   * <ul>
-   *   <li>When {@link TronJsonRpc.FilterRequest#FilterRequest()} FromBlock is {@code earliest}.</li>
-   * </ul>
-   * <p>
-   * Method under test: {@link LogFilterWrapper#LogFilterWrapper(TronJsonRpc.FilterRequest, long, Wallet)}
-   */
-  @Test
-  @Category(MaintainedByDiffblue.class)
-  @MethodsUnderTest({"void LogFilterWrapper.<init>(TronJsonRpc.FilterRequest, long, Wallet)"})
-  public void testNewLogFilterWrapper_whenFilterRequestFromBlockIsEarliest() throws JsonRpcInvalidParamsException {
-    // Arrange
-    FilterRequest fr = new FilterRequest();
-    fr.setFromBlock("earliest");
-
-    // Act
-    LogFilterWrapper actualLogFilterWrapper = new LogFilterWrapper(fr, 1L, new Wallet());
-
-    // Assert
-    assertEquals(0L, actualLogFilterWrapper.getFromBlock());
-    assertTrue(actualLogFilterWrapper.getLogFilter().getTopics().isEmpty());
-    assertEquals(Long.MAX_VALUE, actualLogFilterWrapper.getToBlock());
-  }
-
-  /**
-   * Test {@link LogFilterWrapper#LogFilterWrapper(FilterRequest, long, Wallet)}.
-   * <ul>
-   *   <li>When {@link TronJsonRpc.FilterRequest#FilterRequest()}.</li>
-   *   <li>Then return array length is zero.</li>
-   * </ul>
-   * <p>
-   * Method under test: {@link LogFilterWrapper#LogFilterWrapper(TronJsonRpc.FilterRequest, long, Wallet)}
-   */
-  @Test
-  @Category(MaintainedByDiffblue.class)
-  @MethodsUnderTest({"void LogFilterWrapper.<init>(TronJsonRpc.FilterRequest, long, Wallet)"})
-  public void testNewLogFilterWrapper_whenFilterRequest_thenReturnArrayLengthIsZero()
+  public void testNewLogFilterWrapper_whenFilterRequest_thenReturnFromBlockIsOne()
       throws JsonRpcInvalidParamsException {
     // Arrange
     FilterRequest fr = new FilterRequest();
@@ -263,8 +295,9 @@ public class LogFilterWrapperDiffblueTest {
 
   /**
    * Test getters and setters.
-   * <p>
-   * Methods under test:
+   *
+   * <p>Methods under test:
+   *
    * <ul>
    *   <li>{@link LogFilterWrapper#getFromBlock()}
    *   <li>{@link LogFilterWrapper#getLogFilter()}
@@ -273,8 +306,11 @@ public class LogFilterWrapperDiffblueTest {
    */
   @Test
   @Category(MaintainedByDiffblue.class)
-  @MethodsUnderTest({"long LogFilterWrapper.getFromBlock()", "LogFilter LogFilterWrapper.getLogFilter()",
-      "long LogFilterWrapper.getToBlock()"})
+  @MethodsUnderTest({
+    "long LogFilterWrapper.getFromBlock()",
+    "LogFilter LogFilterWrapper.getLogFilter()",
+    "long LogFilterWrapper.getToBlock()"
+  })
   public void testGettersAndSetters() throws JsonRpcInvalidParamsException {
     // Arrange
     FilterRequest fr = new FilterRequest();

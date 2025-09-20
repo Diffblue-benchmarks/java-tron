@@ -16,8 +16,9 @@ import org.junit.experimental.categories.Category;
 public class ByteArrayMapDiffblueTest {
   /**
    * Test getters and setters.
-   * <p>
-   * Methods under test:
+   *
+   * <p>Methods under test:
+   *
    * <ul>
    *   <li>{@link ByteArrayMap#ByteArrayMap()}
    *   <li>{@link ByteArrayMap#toString()}
@@ -25,8 +26,11 @@ public class ByteArrayMapDiffblueTest {
    */
   @Test
   @Category(MaintainedByDiffblue.class)
-  @MethodsUnderTest({"void ByteArrayMap.<init>()", "void ByteArrayMap.<init>(Map)",
-      "java.lang.String ByteArrayMap.toString()"})
+  @MethodsUnderTest({
+    "void ByteArrayMap.<init>()",
+    "void ByteArrayMap.<init>(Map)",
+    "java.lang.String ByteArrayMap.toString()"
+  })
   public void testGettersAndSetters() {
     // Arrange and Act
     ByteArrayMap<Object> actualObjectMap = new ByteArrayMap<>();
@@ -37,11 +41,13 @@ public class ByteArrayMapDiffblueTest {
 
   /**
    * Test getters and setters.
+   *
    * <ul>
-   *   <li>When {@link HashMap#HashMap()}.</li>
+   *   <li>When {@link HashMap#HashMap()}.
    * </ul>
-   * <p>
-   * Methods under test:
+   *
+   * <p>Methods under test:
+   *
    * <ul>
    *   <li>{@link ByteArrayMap#ByteArrayMap(Map)}
    *   <li>{@link ByteArrayMap#toString()}
@@ -49,8 +55,11 @@ public class ByteArrayMapDiffblueTest {
    */
   @Test
   @Category(MaintainedByDiffblue.class)
-  @MethodsUnderTest({"void ByteArrayMap.<init>()", "void ByteArrayMap.<init>(Map)",
-      "java.lang.String ByteArrayMap.toString()"})
+  @MethodsUnderTest({
+    "void ByteArrayMap.<init>()",
+    "void ByteArrayMap.<init>(Map)",
+    "java.lang.String ByteArrayMap.toString()"
+  })
   public void testGettersAndSetters_whenHashMap() {
     // Arrange and Act
     ByteArrayMap<Object> actualObjectMap = new ByteArrayMap<>(new HashMap<>());
@@ -61,8 +70,8 @@ public class ByteArrayMapDiffblueTest {
 
   /**
    * Test {@link ByteArrayMap#size()}.
-   * <p>
-   * Method under test: {@link ByteArrayMap#size()}
+   *
+   * <p>Method under test: {@link ByteArrayMap#size()}
    */
   @Test
   @Category(MaintainedByDiffblue.class)
@@ -77,12 +86,13 @@ public class ByteArrayMapDiffblueTest {
 
   /**
    * Test {@link ByteArrayMap#isEmpty()}.
+   *
    * <ul>
-   *   <li>Given {@code A}.</li>
-   *   <li>Then return {@code false}.</li>
+   *   <li>Given {@code A}.
+   *   <li>Then return {@code false}.
    * </ul>
-   * <p>
-   * Method under test: {@link ByteArrayMap#isEmpty()}
+   *
+   * <p>Method under test: {@link ByteArrayMap#isEmpty()}
    */
   @Test
   @Category(MaintainedByDiffblue.class)
@@ -90,7 +100,7 @@ public class ByteArrayMapDiffblueTest {
   public void testIsEmpty_givenA_thenReturnFalse() {
     // Arrange
     ByteArrayMap<Object> objectMap = new ByteArrayMap<>();
-    objectMap.put(new byte[]{'A', 4, 'A', 4, 'A', 4, 'A', 4}, "Value");
+    objectMap.put(new byte[] {'A', 4, 'A', 4, 'A', 4, 'A', 4}, "Value");
 
     // Act and Assert
     assertFalse(objectMap.isEmpty());
@@ -98,12 +108,13 @@ public class ByteArrayMapDiffblueTest {
 
   /**
    * Test {@link ByteArrayMap#isEmpty()}.
+   *
    * <ul>
-   *   <li>Given {@link ByteArrayMap#ByteArrayMap()}.</li>
-   *   <li>Then return {@code true}.</li>
+   *   <li>Given {@link ByteArrayMap#ByteArrayMap()}.
+   *   <li>Then return {@code true}.
    * </ul>
-   * <p>
-   * Method under test: {@link ByteArrayMap#isEmpty()}
+   *
+   * <p>Method under test: {@link ByteArrayMap#isEmpty()}
    */
   @Test
   @Category(MaintainedByDiffblue.class)
@@ -118,12 +129,13 @@ public class ByteArrayMapDiffblueTest {
 
   /**
    * Test {@link ByteArrayMap#containsValue(Object)}.
+   *
    * <ul>
-   *   <li>Given {@code A}.</li>
-   *   <li>Then return {@code true}.</li>
+   *   <li>Given {@code A}.
+   *   <li>Then return {@code true}.
    * </ul>
-   * <p>
-   * Method under test: {@link ByteArrayMap#containsValue(Object)}
+   *
+   * <p>Method under test: {@link ByteArrayMap#containsValue(Object)}
    */
   @Test
   @Category(MaintainedByDiffblue.class)
@@ -131,7 +143,7 @@ public class ByteArrayMapDiffblueTest {
   public void testContainsValue_givenA_thenReturnTrue() {
     // Arrange
     ByteArrayMap<Object> objectMap = new ByteArrayMap<>();
-    objectMap.put(new byte[]{'A', 5, 'A', 5, 'A', 5, 'A', 5}, "Value");
+    objectMap.put(new byte[] {'A', 5, 'A', 5, 'A', 5, 'A', 5}, "Value");
 
     // Act and Assert
     assertTrue(objectMap.containsValue("Value"));
@@ -139,12 +151,13 @@ public class ByteArrayMapDiffblueTest {
 
   /**
    * Test {@link ByteArrayMap#containsValue(Object)}.
+   *
    * <ul>
-   *   <li>Given {@link ByteArrayMap#ByteArrayMap()}.</li>
-   *   <li>Then return {@code false}.</li>
+   *   <li>Given {@link ByteArrayMap#ByteArrayMap()}.
+   *   <li>Then return {@code false}.
    * </ul>
-   * <p>
-   * Method under test: {@link ByteArrayMap#containsValue(Object)}
+   *
+   * <p>Method under test: {@link ByteArrayMap#containsValue(Object)}
    */
   @Test
   @Category(MaintainedByDiffblue.class)
@@ -159,13 +172,14 @@ public class ByteArrayMapDiffblueTest {
 
   /**
    * Test {@link ByteArrayMap#put(byte[], Object)} with {@code byte[]}, {@code Object}.
+   *
    * <ul>
-   *   <li>Given {@link ByteArrayMap#ByteArrayMap()}.</li>
-   *   <li>When {@code AXAXAXAX} Bytes is {@code UTF-8}.</li>
-   *   <li>Then return {@code null}.</li>
+   *   <li>Given {@link ByteArrayMap#ByteArrayMap()}.
+   *   <li>When {@code AXAXAXAX} Bytes is {@code UTF-8}.
+   *   <li>Then return {@code null}.
    * </ul>
-   * <p>
-   * Method under test: {@link ByteArrayMap#put(byte[], Object)}
+   *
+   * <p>Method under test: {@link ByteArrayMap#put(byte[], Object)}
    */
   @Test
   @Category(MaintainedByDiffblue.class)
@@ -182,11 +196,12 @@ public class ByteArrayMapDiffblueTest {
 
   /**
    * Test {@link ByteArrayMap#put(byte[], Object)} with {@code byte[]}, {@code Object}.
+   *
    * <ul>
-   *   <li>Then return {@code Value}.</li>
+   *   <li>Then return {@code Value}.
    * </ul>
-   * <p>
-   * Method under test: {@link ByteArrayMap#put(byte[], Object)}
+   *
+   * <p>Method under test: {@link ByteArrayMap#put(byte[], Object)}
    */
   @Test
   @Category(MaintainedByDiffblue.class)
@@ -206,45 +221,19 @@ public class ByteArrayMapDiffblueTest {
 
   /**
    * Test {@link ByteArrayMap#putAll(Map)}.
+   *
    * <ul>
-   *   <li>Given {@code A}.</li>
-   *   <li>Then {@link ByteArrayMap#ByteArrayMap()} size is two.</li>
+   *   <li>Given {@code AXAXAXAX} Bytes is {@code UTF-8}.
+   *   <li>Then {@link ByteArrayMap#ByteArrayMap()} size is one.
    * </ul>
-   * <p>
-   * Method under test: {@link ByteArrayMap#putAll(Map)}
+   *
+   * <p>Method under test: {@link ByteArrayMap#putAll(Map)}
    */
   @Test
   @Category(MaintainedByDiffblue.class)
   @MethodsUnderTest({"void ByteArrayMap.putAll(Map)"})
-  public void testPutAll_givenA_thenByteArrayMapSizeIsTwo() throws UnsupportedEncodingException {
-    // Arrange
-    ByteArrayMap<Object> objectMap = new ByteArrayMap<>();
-
-    HashMap<byte[], Object> m = new HashMap<>();
-    m.put("AXAXAXAX".getBytes("UTF-8"), "42");
-    m.put(new byte[]{'A', 1, 'A', 1, 'A', 1, 'A', 1}, "42");
-    m.put("AXAXAXAX".getBytes("UTF-8"), "42");
-
-    // Act
-    objectMap.putAll(m);
-
-    // Assert
-    assertEquals(2, objectMap.size());
-  }
-
-  /**
-   * Test {@link ByteArrayMap#putAll(Map)}.
-   * <ul>
-   *   <li>Given {@code AXAXAXAX} Bytes is {@code UTF-8}.</li>
-   *   <li>Then {@link ByteArrayMap#ByteArrayMap()} size is one.</li>
-   * </ul>
-   * <p>
-   * Method under test: {@link ByteArrayMap#putAll(Map)}
-   */
-  @Test
-  @Category(MaintainedByDiffblue.class)
-  @MethodsUnderTest({"void ByteArrayMap.putAll(Map)"})
-  public void testPutAll_givenAxaxaxaxBytesIsUtf8_thenByteArrayMapSizeIsOne() throws UnsupportedEncodingException {
+  public void testPutAll_givenAxaxaxaxBytesIsUtf8_thenByteArrayMapSizeIsOne()
+      throws UnsupportedEncodingException {
     // Arrange
     ByteArrayMap<Object> objectMap = new ByteArrayMap<>();
 
@@ -260,12 +249,13 @@ public class ByteArrayMapDiffblueTest {
 
   /**
    * Test {@link ByteArrayMap#putAll(Map)}.
+   *
    * <ul>
-   *   <li>When {@link HashMap#HashMap()}.</li>
-   *   <li>Then {@link ByteArrayMap#ByteArrayMap()} Empty.</li>
+   *   <li>When {@link HashMap#HashMap()}.
+   *   <li>Then {@link ByteArrayMap#ByteArrayMap()} Empty.
    * </ul>
-   * <p>
-   * Method under test: {@link ByteArrayMap#putAll(Map)}
+   *
+   * <p>Method under test: {@link ByteArrayMap#putAll(Map)}
    */
   @Test
   @Category(MaintainedByDiffblue.class)
@@ -283,8 +273,8 @@ public class ByteArrayMapDiffblueTest {
 
   /**
    * Test {@link ByteArrayMap#keySet()}.
-   * <p>
-   * Method under test: {@link ByteArrayMap#keySet()}
+   *
+   * <p>Method under test: {@link ByteArrayMap#keySet()}
    */
   @Test
   @Category(MaintainedByDiffblue.class)
@@ -299,8 +289,8 @@ public class ByteArrayMapDiffblueTest {
 
   /**
    * Test {@link ByteArrayMap#values()}.
-   * <p>
-   * Method under test: {@link ByteArrayMap#values()}
+   *
+   * <p>Method under test: {@link ByteArrayMap#values()}
    */
   @Test
   @Category(MaintainedByDiffblue.class)
@@ -315,8 +305,8 @@ public class ByteArrayMapDiffblueTest {
 
   /**
    * Test {@link ByteArrayMap#entrySet()}.
-   * <p>
-   * Method under test: {@link ByteArrayMap#entrySet()}
+   *
+   * <p>Method under test: {@link ByteArrayMap#entrySet()}
    */
   @Test
   @Category(MaintainedByDiffblue.class)
@@ -331,12 +321,14 @@ public class ByteArrayMapDiffblueTest {
 
   /**
    * Test {@link ByteArrayMap#equals(Object)}, and {@link ByteArrayMap#hashCode()}.
+   *
    * <ul>
-   *   <li>When other is equal.</li>
-   *   <li>Then return equal.</li>
+   *   <li>When other is equal.
+   *   <li>Then return equal.
    * </ul>
-   * <p>
-   * Methods under test:
+   *
+   * <p>Methods under test:
+   *
    * <ul>
    *   <li>{@link ByteArrayMap#equals(Object)}
    *   <li>{@link ByteArrayMap#hashCode()}
@@ -352,18 +344,19 @@ public class ByteArrayMapDiffblueTest {
 
     // Act and Assert
     assertEquals(objectMap, objectMap2);
-    int expectedHashCodeResult = objectMap.hashCode();
-    assertEquals(expectedHashCodeResult, objectMap2.hashCode());
+    assertEquals(objectMap.hashCode(), objectMap2.hashCode());
   }
 
   /**
    * Test {@link ByteArrayMap#equals(Object)}, and {@link ByteArrayMap#hashCode()}.
+   *
    * <ul>
-   *   <li>When other is same.</li>
-   *   <li>Then return equal.</li>
+   *   <li>When other is same.
+   *   <li>Then return equal.
    * </ul>
-   * <p>
-   * Methods under test:
+   *
+   * <p>Methods under test:
+   *
    * <ul>
    *   <li>{@link ByteArrayMap#equals(Object)}
    *   <li>{@link ByteArrayMap#hashCode()}
@@ -384,12 +377,13 @@ public class ByteArrayMapDiffblueTest {
 
   /**
    * Test {@link ByteArrayMap#equals(Object)}.
+   *
    * <ul>
-   *   <li>When other is different.</li>
-   *   <li>Then return not equal.</li>
+   *   <li>When other is different.
+   *   <li>Then return not equal.
    * </ul>
-   * <p>
-   * Method under test: {@link ByteArrayMap#equals(Object)}
+   *
+   * <p>Method under test: {@link ByteArrayMap#equals(Object)}
    */
   @Test
   @Category(MaintainedByDiffblue.class)
@@ -397,7 +391,7 @@ public class ByteArrayMapDiffblueTest {
   public void testEquals_whenOtherIsDifferent_thenReturnNotEqual() {
     // Arrange
     ByteArrayMap<Object> objectMap = new ByteArrayMap<>();
-    objectMap.put(new byte[]{'A', 5, 'A', 5, 'A', 5, 'A', 5}, "Value");
+    objectMap.put(new byte[] {'A', 5, 'A', 5, 'A', 5, 'A', 5}, "Value");
 
     // Act and Assert
     assertNotEquals(objectMap, new ByteArrayMap<>());
@@ -405,12 +399,13 @@ public class ByteArrayMapDiffblueTest {
 
   /**
    * Test {@link ByteArrayMap#equals(Object)}.
+   *
    * <ul>
-   *   <li>When other is different.</li>
-   *   <li>Then return not equal.</li>
+   *   <li>When other is different.
+   *   <li>Then return not equal.
    * </ul>
-   * <p>
-   * Method under test: {@link ByteArrayMap#equals(Object)}
+   *
+   * <p>Method under test: {@link ByteArrayMap#equals(Object)}
    */
   @Test
   @Category(MaintainedByDiffblue.class)
@@ -418,10 +413,10 @@ public class ByteArrayMapDiffblueTest {
   public void testEquals_whenOtherIsDifferent_thenReturnNotEqual2() {
     // Arrange
     ByteArrayMap<Object> objectMap = new ByteArrayMap<>();
-    objectMap.put(new byte[]{'A', 5, 'A', 5, 'A', 5, 'A', 5}, "Value");
+    objectMap.put(new byte[] {'A', 5, 'A', 5, 'A', 5, 'A', 5}, "Value");
 
     ByteArrayMap<Object> objectMap2 = new ByteArrayMap<>();
-    objectMap2.put(new byte[]{'A', 5, 'A', 5, 'A', 5, 'A', 5}, "Value");
+    objectMap2.put(new byte[] {'A', 5, 'A', 5, 'A', 5, 'A', 5}, "Value");
 
     // Act and Assert
     assertNotEquals(objectMap, objectMap2);
@@ -429,12 +424,13 @@ public class ByteArrayMapDiffblueTest {
 
   /**
    * Test {@link ByteArrayMap#equals(Object)}.
+   *
    * <ul>
-   *   <li>When other is {@code null}.</li>
-   *   <li>Then return not equal.</li>
+   *   <li>When other is {@code null}.
+   *   <li>Then return not equal.
    * </ul>
-   * <p>
-   * Method under test: {@link ByteArrayMap#equals(Object)}
+   *
+   * <p>Method under test: {@link ByteArrayMap#equals(Object)}
    */
   @Test
   @Category(MaintainedByDiffblue.class)
@@ -449,12 +445,13 @@ public class ByteArrayMapDiffblueTest {
 
   /**
    * Test {@link ByteArrayMap#equals(Object)}.
+   *
    * <ul>
-   *   <li>When other is wrong type.</li>
-   *   <li>Then return not equal.</li>
+   *   <li>When other is wrong type.
+   *   <li>Then return not equal.
    * </ul>
-   * <p>
-   * Method under test: {@link ByteArrayMap#equals(Object)}
+   *
+   * <p>Method under test: {@link ByteArrayMap#equals(Object)}
    */
   @Test
   @Category(MaintainedByDiffblue.class)

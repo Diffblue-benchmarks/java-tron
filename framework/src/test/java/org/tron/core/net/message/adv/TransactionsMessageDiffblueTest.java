@@ -55,11 +55,12 @@ import org.tron.protos.Protocol.Transactions;
 public class TransactionsMessageDiffblueTest {
   /**
    * Test {@link TransactionsMessage#TransactionsMessage(List)}.
+   *
    * <ul>
-   *   <li>Then return Transactions SerializedSize is zero.</li>
+   *   <li>Then return Transactions SerializedSize is zero.
    * </ul>
-   * <p>
-   * Method under test: {@link TransactionsMessage#TransactionsMessage(List)}
+   *
+   * <p>Method under test: {@link TransactionsMessage#TransactionsMessage(List)}
    */
   @Test
   @Category(MaintainedByDiffblue.class)
@@ -79,22 +80,26 @@ public class TransactionsMessageDiffblueTest {
     assertEquals(1, sendData.writerIndex());
     assertTrue(transactions.getTransactionsList().isEmpty());
     assertTrue(transactions.getAllFields().isEmpty());
-    assertEquals(transactions, transactions.getDefaultInstanceForType());
-    assertArrayEquals(new byte[]{}, actualTransactionsMessage.getData());
-    assertArrayEquals(new byte[]{3}, actualTransactionsMessage.getSendBytes());
+    Transactions actualDefaultInstanceForType = transactions.getDefaultInstanceForType();
+    assertEquals(transactions, actualDefaultInstanceForType);
+    assertArrayEquals(new byte[] {}, actualTransactionsMessage.getData());
+    assertArrayEquals(new byte[] {3}, actualTransactionsMessage.getSendBytes());
     assertArrayEquals(
-        new byte[]{-29, -80, -60, 'B', -104, -4, 28, 20, -102, -5, -12, -56, -103, 'o', -71, '$', '\'', -82, 'A', -28,
-            'd', -101, -109, 'L', -92, -107, -103, 27, 'x', 'R', -72, 'U'},
+        new byte[] {
+          -29, -80, -60, 'B', -104, -4, 28, 20, -102, -5, -12, -56, -103, 'o', -71, '$', '\'', -82,
+          'A', -28, 'd', -101, -109, 'L', -92, -107, -103, 27, 'x', 'R', -72, 'U'
+        },
         actualTransactionsMessage.getMessageId().getBytes());
   }
 
   /**
    * Test {@link TransactionsMessage#TransactionsMessage(List)}.
+   *
    * <ul>
-   *   <li>Then return Transactions TransactionsList size is one.</li>
+   *   <li>Then return Transactions TransactionsList size is one.
    * </ul>
-   * <p>
-   * Method under test: {@link TransactionsMessage#TransactionsMessage(List)}
+   *
+   * <p>Method under test: {@link TransactionsMessage#TransactionsMessage(List)}
    */
   @Test
   @Category(MaintainedByDiffblue.class)
@@ -117,20 +122,24 @@ public class TransactionsMessageDiffblueTest {
     assertEquals(3, sendData.capacity());
     assertEquals(3, sendData.maxCapacity());
     assertEquals(3, sendData.writerIndex());
-    assertArrayEquals(new byte[]{'\n', 0}, actualTransactionsMessage.getData());
-    assertArrayEquals(new byte[]{3, '\n', 0}, actualTransactionsMessage.getSendBytes());
-    assertArrayEquals(new byte[]{16, '+', 'Q', -71, 'v', 'Z', 'V', -93, -24, -103, -9, -49, 14, -29, -114, 'R', 'Q', -7,
-        -59, 3, -77, 'W', -77, '0', -92, -111, -125, -21, '{', 21, 'V', 4},
+    assertArrayEquals(new byte[] {'\n', 0}, actualTransactionsMessage.getData());
+    assertArrayEquals(new byte[] {3, '\n', 0}, actualTransactionsMessage.getSendBytes());
+    assertArrayEquals(
+        new byte[] {
+          16, '+', 'Q', -71, 'v', 'Z', 'V', -93, -24, -103, -9, -49, 14, -29, -114, 'R', 'Q', -7,
+          -59, 3, -77, 'W', -77, '0', -92, -111, -125, -21, '{', 21, 'V', 4
+        },
         actualTransactionsMessage.getMessageId().getBytes());
   }
 
   /**
    * Test {@link TransactionsMessage#TransactionsMessage(List)}.
+   *
    * <ul>
-   *   <li>Then return Transactions TransactionsList size is two.</li>
+   *   <li>Then return Transactions TransactionsList size is two.
    * </ul>
-   * <p>
-   * Method under test: {@link TransactionsMessage#TransactionsMessage(List)}
+   *
+   * <p>Method under test: {@link TransactionsMessage#TransactionsMessage(List)}
    */
   @Test
   @Category(MaintainedByDiffblue.class)
@@ -154,18 +163,21 @@ public class TransactionsMessageDiffblueTest {
     assertEquals(5, sendData.capacity());
     assertEquals(5, sendData.maxCapacity());
     assertEquals(5, sendData.writerIndex());
-    assertArrayEquals(new byte[]{'\n', 0, '\n', 0}, actualTransactionsMessage.getData());
-    assertArrayEquals(new byte[]{3, '\n', 0, '\n', 0}, actualTransactionsMessage.getSendBytes());
+    assertArrayEquals(new byte[] {'\n', 0, '\n', 0}, actualTransactionsMessage.getData());
+    assertArrayEquals(new byte[] {3, '\n', 0, '\n', 0}, actualTransactionsMessage.getSendBytes());
     assertArrayEquals(
-        new byte[]{'\r', -103, 21, -82, 21, 2, -112, -79, 0, -32, 'C', -26, '%', -116, -46, -124, '1', -92, -108, '\r',
-            -14, -79, 'U', 'y', -110, 0, -94, 'E', '\t', 'Y', -40, -19},
+        new byte[] {
+          '\r', -103, 21, -82, 21, 2, -112, -79, 0, -32, 'C', -26, '%', -116, -46, -124, '1', -92,
+          -108, '\r', -14, -79, 'U', 'y', -110, 0, -94, 'E', '\t', 'Y', -40, -19
+        },
         actualTransactionsMessage.getMessageId().getBytes());
   }
 
   /**
    * Test getters and setters.
-   * <p>
-   * Methods under test:
+   *
+   * <p>Methods under test:
+   *
    * <ul>
    *   <li>{@link TransactionsMessage#toString()}
    *   <li>{@link TransactionsMessage#getAnswerMessage()}
@@ -174,8 +186,11 @@ public class TransactionsMessageDiffblueTest {
    */
   @Test
   @Category(MaintainedByDiffblue.class)
-  @MethodsUnderTest({"Class TransactionsMessage.getAnswerMessage()",
-      "Protocol.Transactions TransactionsMessage.getTransactions()", "String TransactionsMessage.toString()"})
+  @MethodsUnderTest({
+    "Class TransactionsMessage.getAnswerMessage()",
+    "Protocol.Transactions TransactionsMessage.getTransactions()",
+    "String TransactionsMessage.toString()"
+  })
   public void testGettersAndSetters() {
     // Arrange
     TransactionsMessage transactionsMessage = new TransactionsMessage(new ArrayList<>());
@@ -496,7 +511,8 @@ public class TransactionsMessageDiffblueTest {
     assertEquals(FieldPresence.FIELD_PRESENCE_UNKNOWN, features.getFieldPresence());
     assertEquals(JsonFormat.JSON_FORMAT_UNKNOWN, features.getJsonFormat());
     assertEquals(MessageEncoding.MESSAGE_ENCODING_UNKNOWN, features.getMessageEncoding());
-    assertEquals(RepeatedFieldEncoding.REPEATED_FIELD_ENCODING_UNKNOWN, features.getRepeatedFieldEncoding());
+    assertEquals(
+        RepeatedFieldEncoding.REPEATED_FIELD_ENCODING_UNKNOWN, features.getRepeatedFieldEncoding());
     assertEquals(Utf8Validation.UTF8_VALIDATION_UNKNOWN, features.getUtf8Validation());
     assertEquals(Label.LABEL_OPTIONAL, defaultInstanceForType2.getLabel());
     assertEquals(Label.LABEL_REPEATED, toProtoResult2.getLabel());

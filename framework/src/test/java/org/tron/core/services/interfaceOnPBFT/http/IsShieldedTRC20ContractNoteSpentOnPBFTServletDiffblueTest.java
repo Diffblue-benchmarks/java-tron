@@ -8,6 +8,7 @@ import com.diffblue.cover.annotations.MethodsUnderTest;
 import java.io.IOException;
 import javax.servlet.http.HttpServletRequest;
 import javax.servlet.http.HttpServletResponse;
+import javax.servlet.http.HttpServletResponseWrapper;
 import org.junit.Test;
 import org.junit.experimental.categories.Category;
 import org.junit.runner.RunWith;
@@ -17,56 +18,65 @@ import org.mockito.Mockito;
 import org.mockito.junit.MockitoJUnitRunner;
 import org.springframework.mock.web.MockHttpServletRequest;
 import org.springframework.mock.web.MockHttpServletResponse;
+import org.tron.common.utils.client.utils.HttpMethed;
 import org.tron.core.services.filter.CharResponseWrapper;
 import org.tron.core.services.interfaceOnPBFT.WalletOnPBFT;
 
 @RunWith(MockitoJUnitRunner.class)
 public class IsShieldedTRC20ContractNoteSpentOnPBFTServletDiffblueTest {
   @InjectMocks
-  private IsShieldedTRC20ContractNoteSpentOnPBFTServlet isShieldedTRC20ContractNoteSpentOnPBFTServlet;
+  private IsShieldedTRC20ContractNoteSpentOnPBFTServlet
+      isShieldedTRC20ContractNoteSpentOnPBFTServlet;
 
-  @Mock
-  private WalletOnPBFT walletOnPBFT;
+  @Mock private WalletOnPBFT walletOnPBFT;
 
   /**
-   * Test {@link IsShieldedTRC20ContractNoteSpentOnPBFTServlet#doGet(HttpServletRequest, HttpServletResponse)}.
-   * <p>
-   * Method under test: {@link IsShieldedTRC20ContractNoteSpentOnPBFTServlet#doGet(HttpServletRequest, HttpServletResponse)}
+   * Test {@link IsShieldedTRC20ContractNoteSpentOnPBFTServlet#doGet(HttpServletRequest,
+   * HttpServletResponse)}.
+   *
+   * <p>Method under test: {@link
+   * IsShieldedTRC20ContractNoteSpentOnPBFTServlet#doGet(HttpServletRequest, HttpServletResponse)}
    */
   @Test
   @Category(MaintainedByDiffblue.class)
   @MethodsUnderTest({
-      "void IsShieldedTRC20ContractNoteSpentOnPBFTServlet.doGet(HttpServletRequest, HttpServletResponse)"})
+    "void IsShieldedTRC20ContractNoteSpentOnPBFTServlet.doGet(HttpServletRequest, HttpServletResponse)"
+  })
   public void testDoGet() throws IOException {
     // Arrange
     doNothing().when(walletOnPBFT).futureGet(Mockito.<Runnable>any());
-    MockHttpServletRequest request = new MockHttpServletRequest();
+    MockHttpServletRequest request = HttpMethed.createRequest("https://example.org/example");
 
     // Act
-    isShieldedTRC20ContractNoteSpentOnPBFTServlet.doGet(request,
-        new CharResponseWrapper(new MockHttpServletResponse()));
+    isShieldedTRC20ContractNoteSpentOnPBFTServlet.doGet(
+        request,
+        new HttpServletResponseWrapper(new CharResponseWrapper(new MockHttpServletResponse())));
 
     // Assert
     verify(walletOnPBFT).futureGet(isA(Runnable.class));
   }
 
   /**
-   * Test {@link IsShieldedTRC20ContractNoteSpentOnPBFTServlet#doPost(HttpServletRequest, HttpServletResponse)}.
-   * <p>
-   * Method under test: {@link IsShieldedTRC20ContractNoteSpentOnPBFTServlet#doPost(HttpServletRequest, HttpServletResponse)}
+   * Test {@link IsShieldedTRC20ContractNoteSpentOnPBFTServlet#doPost(HttpServletRequest,
+   * HttpServletResponse)}.
+   *
+   * <p>Method under test: {@link
+   * IsShieldedTRC20ContractNoteSpentOnPBFTServlet#doPost(HttpServletRequest, HttpServletResponse)}
    */
   @Test
   @Category(MaintainedByDiffblue.class)
   @MethodsUnderTest({
-      "void IsShieldedTRC20ContractNoteSpentOnPBFTServlet.doPost(HttpServletRequest, HttpServletResponse)"})
+    "void IsShieldedTRC20ContractNoteSpentOnPBFTServlet.doPost(HttpServletRequest, HttpServletResponse)"
+  })
   public void testDoPost() throws IOException {
     // Arrange
     doNothing().when(walletOnPBFT).futureGet(Mockito.<Runnable>any());
-    MockHttpServletRequest request = new MockHttpServletRequest();
+    MockHttpServletRequest request = HttpMethed.createRequest("https://example.org/example");
 
     // Act
-    isShieldedTRC20ContractNoteSpentOnPBFTServlet.doPost(request,
-        new CharResponseWrapper(new MockHttpServletResponse()));
+    isShieldedTRC20ContractNoteSpentOnPBFTServlet.doPost(
+        request,
+        new HttpServletResponseWrapper(new CharResponseWrapper(new MockHttpServletResponse())));
 
     // Assert
     verify(walletOnPBFT).futureGet(isA(Runnable.class));

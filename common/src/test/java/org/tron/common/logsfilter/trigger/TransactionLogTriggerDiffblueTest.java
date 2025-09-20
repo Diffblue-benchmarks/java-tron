@@ -16,8 +16,8 @@ import org.junit.experimental.categories.Category;
 public class TransactionLogTriggerDiffblueTest {
   /**
    * Test new {@link TransactionLogTrigger} (default constructor).
-   * <p>
-   * Method under test: default or parameterless constructor of {@link TransactionLogTrigger}
+   *
+   * <p>Method under test: default or parameterless constructor of {@link TransactionLogTrigger}
    */
   @Test
   @Category(MaintainedByDiffblue.class)
@@ -61,8 +61,9 @@ public class TransactionLogTriggerDiffblueTest {
 
   /**
    * Test getters and setters.
-   * <p>
-   * Methods under test:
+   *
+   * <p>Methods under test:
+   *
    * <ul>
    *   <li>{@link TransactionLogTrigger#setAssetAmount(long)}
    *   <li>{@link TransactionLogTrigger#setAssetName(String)}
@@ -125,36 +126,65 @@ public class TransactionLogTriggerDiffblueTest {
    */
   @Test
   @Category(MaintainedByDiffblue.class)
-  @MethodsUnderTest({"long TransactionLogTrigger.getAssetAmount()", "String TransactionLogTrigger.getAssetName()",
-      "String TransactionLogTrigger.getBlockHash()", "long TransactionLogTrigger.getBlockNumber()",
-      "String TransactionLogTrigger.getContractAddress()", "long TransactionLogTrigger.getContractCallValue()",
-      "String TransactionLogTrigger.getContractResult()", "String TransactionLogTrigger.getContractType()",
-      "long TransactionLogTrigger.getCumulativeEnergyUsed()", "String TransactionLogTrigger.getData()",
-      "long TransactionLogTrigger.getEnergyFee()", "long TransactionLogTrigger.getEnergyUnitPrice()",
-      "long TransactionLogTrigger.getEnergyUsage()", "long TransactionLogTrigger.getEnergyUsageTotal()",
-      "Map TransactionLogTrigger.getExtMap()", "long TransactionLogTrigger.getFeeLimit()",
-      "String TransactionLogTrigger.getFromAddress()", "List TransactionLogTrigger.getInternalTransactionList()",
-      "long TransactionLogTrigger.getLatestSolidifiedBlockNumber()", "List TransactionLogTrigger.getLogList()",
-      "long TransactionLogTrigger.getNetFee()", "long TransactionLogTrigger.getNetUsage()",
-      "long TransactionLogTrigger.getOriginEnergyUsage()", "long TransactionLogTrigger.getPreCumulativeLogCount()",
-      "String TransactionLogTrigger.getResult()", "String TransactionLogTrigger.getToAddress()",
-      "String TransactionLogTrigger.getTransactionId()", "int TransactionLogTrigger.getTransactionIndex()",
-      "void TransactionLogTrigger.setAssetAmount(long)", "void TransactionLogTrigger.setAssetName(String)",
-      "void TransactionLogTrigger.setBlockHash(String)", "void TransactionLogTrigger.setBlockNumber(long)",
-      "void TransactionLogTrigger.setContractAddress(String)", "void TransactionLogTrigger.setContractCallValue(long)",
-      "void TransactionLogTrigger.setContractResult(String)", "void TransactionLogTrigger.setContractType(String)",
-      "void TransactionLogTrigger.setCumulativeEnergyUsed(long)", "void TransactionLogTrigger.setData(String)",
-      "void TransactionLogTrigger.setEnergyFee(long)", "void TransactionLogTrigger.setEnergyUnitPrice(long)",
-      "void TransactionLogTrigger.setEnergyUsage(long)", "void TransactionLogTrigger.setEnergyUsageTotal(long)",
-      "void TransactionLogTrigger.setExtMap(Map)", "void TransactionLogTrigger.setFeeLimit(long)",
-      "void TransactionLogTrigger.setFromAddress(String)",
-      "void TransactionLogTrigger.setInternalTransactionList(List)",
-      "void TransactionLogTrigger.setLatestSolidifiedBlockNumber(long)", "void TransactionLogTrigger.setLogList(List)",
-      "void TransactionLogTrigger.setNetFee(long)", "void TransactionLogTrigger.setNetUsage(long)",
-      "void TransactionLogTrigger.setOriginEnergyUsage(long)",
-      "void TransactionLogTrigger.setPreCumulativeLogCount(long)", "void TransactionLogTrigger.setResult(String)",
-      "void TransactionLogTrigger.setTimeStamp(long)", "void TransactionLogTrigger.setToAddress(String)",
-      "void TransactionLogTrigger.setTransactionId(String)", "void TransactionLogTrigger.setTransactionIndex(int)"})
+  @MethodsUnderTest({
+    "long TransactionLogTrigger.getAssetAmount()",
+    "String TransactionLogTrigger.getAssetName()",
+    "String TransactionLogTrigger.getBlockHash()",
+    "long TransactionLogTrigger.getBlockNumber()",
+    "String TransactionLogTrigger.getContractAddress()",
+    "long TransactionLogTrigger.getContractCallValue()",
+    "String TransactionLogTrigger.getContractResult()",
+    "String TransactionLogTrigger.getContractType()",
+    "long TransactionLogTrigger.getCumulativeEnergyUsed()",
+    "String TransactionLogTrigger.getData()",
+    "long TransactionLogTrigger.getEnergyFee()",
+    "long TransactionLogTrigger.getEnergyUnitPrice()",
+    "long TransactionLogTrigger.getEnergyUsage()",
+    "long TransactionLogTrigger.getEnergyUsageTotal()",
+    "Map TransactionLogTrigger.getExtMap()",
+    "long TransactionLogTrigger.getFeeLimit()",
+    "String TransactionLogTrigger.getFromAddress()",
+    "List TransactionLogTrigger.getInternalTransactionList()",
+    "long TransactionLogTrigger.getLatestSolidifiedBlockNumber()",
+    "List TransactionLogTrigger.getLogList()",
+    "long TransactionLogTrigger.getNetFee()",
+    "long TransactionLogTrigger.getNetUsage()",
+    "long TransactionLogTrigger.getOriginEnergyUsage()",
+    "long TransactionLogTrigger.getPreCumulativeLogCount()",
+    "String TransactionLogTrigger.getResult()",
+    "String TransactionLogTrigger.getToAddress()",
+    "String TransactionLogTrigger.getTransactionId()",
+    "int TransactionLogTrigger.getTransactionIndex()",
+    "void TransactionLogTrigger.setAssetAmount(long)",
+    "void TransactionLogTrigger.setAssetName(String)",
+    "void TransactionLogTrigger.setBlockHash(String)",
+    "void TransactionLogTrigger.setBlockNumber(long)",
+    "void TransactionLogTrigger.setContractAddress(String)",
+    "void TransactionLogTrigger.setContractCallValue(long)",
+    "void TransactionLogTrigger.setContractResult(String)",
+    "void TransactionLogTrigger.setContractType(String)",
+    "void TransactionLogTrigger.setCumulativeEnergyUsed(long)",
+    "void TransactionLogTrigger.setData(String)",
+    "void TransactionLogTrigger.setEnergyFee(long)",
+    "void TransactionLogTrigger.setEnergyUnitPrice(long)",
+    "void TransactionLogTrigger.setEnergyUsage(long)",
+    "void TransactionLogTrigger.setEnergyUsageTotal(long)",
+    "void TransactionLogTrigger.setExtMap(Map)",
+    "void TransactionLogTrigger.setFeeLimit(long)",
+    "void TransactionLogTrigger.setFromAddress(String)",
+    "void TransactionLogTrigger.setInternalTransactionList(List)",
+    "void TransactionLogTrigger.setLatestSolidifiedBlockNumber(long)",
+    "void TransactionLogTrigger.setLogList(List)",
+    "void TransactionLogTrigger.setNetFee(long)",
+    "void TransactionLogTrigger.setNetUsage(long)",
+    "void TransactionLogTrigger.setOriginEnergyUsage(long)",
+    "void TransactionLogTrigger.setPreCumulativeLogCount(long)",
+    "void TransactionLogTrigger.setResult(String)",
+    "void TransactionLogTrigger.setTimeStamp(long)",
+    "void TransactionLogTrigger.setToAddress(String)",
+    "void TransactionLogTrigger.setTransactionId(String)",
+    "void TransactionLogTrigger.setTransactionIndex(int)"
+  })
   public void testGettersAndSetters() {
     // Arrange
     TransactionLogTrigger transactionLogTrigger = new TransactionLogTrigger();
@@ -209,7 +239,8 @@ public class TransactionLogTriggerDiffblueTest {
     Map<String, Long> actualExtMap = transactionLogTrigger.getExtMap();
     long actualFeeLimit = transactionLogTrigger.getFeeLimit();
     String actualFromAddress = transactionLogTrigger.getFromAddress();
-    List<InternalTransactionPojo> actualInternalTransactionList = transactionLogTrigger.getInternalTransactionList();
+    List<InternalTransactionPojo> actualInternalTransactionList =
+        transactionLogTrigger.getInternalTransactionList();
     long actualLatestSolidifiedBlockNumber = transactionLogTrigger.getLatestSolidifiedBlockNumber();
     List<LogPojo> actualLogList = transactionLogTrigger.getLogList();
     long actualNetFee = transactionLogTrigger.getNetFee();

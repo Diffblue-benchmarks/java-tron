@@ -9,11 +9,12 @@ import org.junit.experimental.categories.Category;
 public class ConfigurationDiffblueTest {
   /**
    * Test {@link Configuration#getByFileName(String, String)}.
+   *
    * <ul>
-   *   <li>When empty string.</li>
+   *   <li>When empty string.
    * </ul>
-   * <p>
-   * Method under test: {@link Configuration#getByFileName(String, String)}
+   *
+   * <p>Method under test: {@link Configuration#getByFileName(String, String)}
    */
   @Test
   @Category(MaintainedByDiffblue.class)
@@ -25,43 +26,48 @@ public class ConfigurationDiffblueTest {
 
   /**
    * Test {@link Configuration#getByFileName(String, String)}.
+   *
    * <ul>
-   *   <li>When {@code foo.txt}.</li>
+   *   <li>When {@code foo.txt}.
    * </ul>
-   * <p>
-   * Method under test: {@link Configuration#getByFileName(String, String)}
+   *
+   * <p>Method under test: {@link Configuration#getByFileName(String, String)}
    */
   @Test
   @Category(MaintainedByDiffblue.class)
   @MethodsUnderTest({"com.typesafe.config.Config Configuration.getByFileName(String, String)"})
   public void testGetByFileName_whenFooTxt() {
     // Arrange, Act and Assert
-    assertThrows(IllegalArgumentException.class, () -> Configuration.getByFileName("foo.txt", "foo.txt"));
+    assertThrows(
+        IllegalArgumentException.class, () -> Configuration.getByFileName("foo.txt", "foo.txt"));
   }
 
   /**
    * Test {@link Configuration#getByFileName(String, String)}.
+   *
    * <ul>
-   *   <li>When {@code null}.</li>
+   *   <li>When {@code null}.
    * </ul>
-   * <p>
-   * Method under test: {@link Configuration#getByFileName(String, String)}
+   *
+   * <p>Method under test: {@link Configuration#getByFileName(String, String)}
    */
   @Test
   @Category(MaintainedByDiffblue.class)
   @MethodsUnderTest({"com.typesafe.config.Config Configuration.getByFileName(String, String)"})
   public void testGetByFileName_whenNull() {
     // Arrange, Act and Assert
-    assertThrows(IllegalArgumentException.class, () -> Configuration.getByFileName(null, "foo.txt"));
+    assertThrows(
+        IllegalArgumentException.class, () -> Configuration.getByFileName(null, "foo.txt"));
   }
 
   /**
    * Test {@link Configuration#getByFileName(String, String)}.
+   *
    * <ul>
-   *   <li>When {@code null}.</li>
+   *   <li>When {@code null}.
    * </ul>
-   * <p>
-   * Method under test: {@link Configuration#getByFileName(String, String)}
+   *
+   * <p>Method under test: {@link Configuration#getByFileName(String, String)}
    */
   @Test
   @Category(MaintainedByDiffblue.class)
@@ -73,11 +79,12 @@ public class ConfigurationDiffblueTest {
 
   /**
    * Test {@link Configuration#getByFileName(String, String)}.
+   *
    * <ul>
-   *   <li>When space.</li>
+   *   <li>When space.
    * </ul>
-   * <p>
-   * Method under test: {@link Configuration#getByFileName(String, String)}
+   *
+   * <p>Method under test: {@link Configuration#getByFileName(String, String)}
    */
   @Test
   @Category(MaintainedByDiffblue.class)

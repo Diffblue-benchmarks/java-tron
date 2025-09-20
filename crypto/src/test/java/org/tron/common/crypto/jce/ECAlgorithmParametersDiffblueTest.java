@@ -16,8 +16,8 @@ import org.junit.experimental.categories.Category;
 public class ECAlgorithmParametersDiffblueTest {
   /**
    * Test {@link ECAlgorithmParameters#getParameterSpec()}.
-   * <p>
-   * Method under test: {@link ECAlgorithmParameters#getParameterSpec()}
+   *
+   * <p>Method under test: {@link ECAlgorithmParameters#getParameterSpec()}
    */
   @Test
   @Category(MaintainedByDiffblue.class)
@@ -30,25 +30,32 @@ public class ECAlgorithmParametersDiffblueTest {
     EllipticCurve curve = actualParameterSpec.getCurve();
     assertTrue(curve.getField() instanceof ECFieldFp);
     BigInteger order = actualParameterSpec.getOrder();
-    assertEquals("115792089237316195423570985008687907852837564279074904382605163141518161494337", order.toString());
+    assertEquals(
+        "115792089237316195423570985008687907852837564279074904382605163141518161494337",
+        order.toString());
     assertNull(curve.getSeed());
     assertEquals(0, order.getLowestSetBit());
     assertEquals(1, order.signum());
     assertEquals(1, actualParameterSpec.getCofactor());
-    assertArrayEquals(new byte[]{0, -1, -1, -1, -1, -1, -1, -1, -1, -1, -1, -1, -1, -1, -1, -1, -2, -70, -82, -36, -26,
-        -81, 'H', -96, ';', -65, -46, '^', -116, -48, '6', 'A', 'A'}, order.toByteArray());
+    assertArrayEquals(
+        new byte[] {
+          0, -1, -1, -1, -1, -1, -1, -1, -1, -1, -1, -1, -1, -1, -1, -1, -2, -70, -82, -36, -26,
+          -81, 'H', -96, ';', -65, -46, '^', -116, -48, '6', 'A', 'A'
+        },
+        order.toByteArray());
   }
 
   /**
    * Test {@link ECAlgorithmParameters#getASN1Encoding()}.
-   * <p>
-   * Method under test: {@link ECAlgorithmParameters#getASN1Encoding()}
+   *
+   * <p>Method under test: {@link ECAlgorithmParameters#getASN1Encoding()}
    */
   @Test
   @Category(MaintainedByDiffblue.class)
   @MethodsUnderTest({"byte[] ECAlgorithmParameters.getASN1Encoding()"})
   public void testGetASN1Encoding() {
     // Arrange, Act and Assert
-    assertArrayEquals(new byte[]{6, 5, '+', -127, 4, 0, '\n'}, ECAlgorithmParameters.getASN1Encoding());
+    assertArrayEquals(
+        new byte[] {6, 5, '+', -127, 4, 0, '\n'}, ECAlgorithmParameters.getASN1Encoding());
   }
 }

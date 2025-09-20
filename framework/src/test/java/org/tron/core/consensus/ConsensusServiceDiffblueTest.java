@@ -14,16 +14,14 @@ import org.tron.consensus.Consensus;
 
 @RunWith(MockitoJUnitRunner.class)
 public class ConsensusServiceDiffblueTest {
-  @Mock
-  private Consensus consensus;
+  @Mock private Consensus consensus;
 
-  @InjectMocks
-  private ConsensusService consensusService;
+  @InjectMocks private ConsensusService consensusService;
 
   /**
    * Test {@link ConsensusService#stop()}.
-   * <p>
-   * Method under test: {@link ConsensusService#stop()}
+   *
+   * <p>Method under test: {@link ConsensusService#stop()}
    */
   @Test
   @Category(MaintainedByDiffblue.class)

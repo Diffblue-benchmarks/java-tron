@@ -26,22 +26,18 @@ import org.tron.core.store.DynamicPropertiesStore;
 
 @RunWith(MockitoJUnitRunner.class)
 public class PbftManagerDiffblueTest {
-  @Mock
-  private ChainBaseManager chainBaseManager;
+  @Mock private ChainBaseManager chainBaseManager;
 
-  @InjectMocks
-  private PbftManager pbftManager;
+  @Mock private MaintenanceManager maintenanceManager;
 
-  @Mock
-  private PbftMessageHandle pbftMessageHandle;
+  @InjectMocks private PbftManager pbftManager;
 
-  @Mock
-  private MaintenanceManager maintenanceManager;
+  @Mock private PbftMessageHandle pbftMessageHandle;
 
   /**
    * Test {@link PbftManager#init()}.
-   * <p>
-   * Method under test: {@link PbftManager#init()}
+   *
+   * <p>Method under test: {@link PbftManager#init()}
    */
   @Test
   @Category(MaintainedByDiffblue.class)
@@ -61,16 +57,19 @@ public class PbftManagerDiffblueTest {
 
   /**
    * Test {@link PbftManager#blockPrePrepare(BlockCapsule, long)}.
+   *
    * <ul>
-   *   <li>Given {@link DynamicPropertiesStore} {@link DynamicPropertiesStore#allowPBFT()} return {@code false}.</li>
+   *   <li>Given {@link DynamicPropertiesStore} {@link DynamicPropertiesStore#allowPBFT()} return
+   *       {@code false}.
+   *   <li>When {@code null}.
    * </ul>
-   * <p>
-   * Method under test: {@link PbftManager#blockPrePrepare(BlockCapsule, long)}
+   *
+   * <p>Method under test: {@link PbftManager#blockPrePrepare(BlockCapsule, long)}
    */
   @Test
   @Category(MaintainedByDiffblue.class)
   @MethodsUnderTest({"void PbftManager.blockPrePrepare(BlockCapsule, long)"})
-  public void testBlockPrePrepare_givenDynamicPropertiesStoreAllowPBFTReturnFalse() {
+  public void testBlockPrePrepare_givenDynamicPropertiesStoreAllowPBFTReturnFalse_whenNull() {
     // Arrange
     DynamicPropertiesStore dynamicPropertiesStore = mock(DynamicPropertiesStore.class);
     when(dynamicPropertiesStore.allowPBFT()).thenReturn(false);
@@ -86,17 +85,19 @@ public class PbftManagerDiffblueTest {
 
   /**
    * Test {@link PbftManager#blockPrePrepare(BlockCapsule, long)}.
+   *
    * <ul>
-   *   <li>Given {@link PbftMessageHandle} {@link PbftMessageHandle#isSyncing()} return {@code true}.</li>
-   *   <li>Then calls {@link PbftMessageHandle#isSyncing()}.</li>
+   *   <li>Given {@link PbftMessageHandle} {@link PbftMessageHandle#isSyncing()} return {@code
+   *       true}.
+   *   <li>When {@code null}.
    * </ul>
-   * <p>
-   * Method under test: {@link PbftManager#blockPrePrepare(BlockCapsule, long)}
+   *
+   * <p>Method under test: {@link PbftManager#blockPrePrepare(BlockCapsule, long)}
    */
   @Test
   @Category(MaintainedByDiffblue.class)
   @MethodsUnderTest({"void PbftManager.blockPrePrepare(BlockCapsule, long)"})
-  public void testBlockPrePrepare_givenPbftMessageHandleIsSyncingReturnTrue_thenCallsIsSyncing() {
+  public void testBlockPrePrepare_givenPbftMessageHandleIsSyncingReturnTrue_whenNull() {
     // Arrange
     DynamicPropertiesStore dynamicPropertiesStore = mock(DynamicPropertiesStore.class);
     when(dynamicPropertiesStore.allowPBFT()).thenReturn(true);
@@ -114,11 +115,13 @@ public class PbftManagerDiffblueTest {
 
   /**
    * Test {@link PbftManager#srPrePrepare(BlockCapsule, List, long)}.
+   *
    * <ul>
-   *   <li>Given {@link DynamicPropertiesStore} {@link DynamicPropertiesStore#allowPBFT()} return {@code false}.</li>
+   *   <li>Given {@link DynamicPropertiesStore} {@link DynamicPropertiesStore#allowPBFT()} return
+   *       {@code false}.
    * </ul>
-   * <p>
-   * Method under test: {@link PbftManager#srPrePrepare(BlockCapsule, List, long)}
+   *
+   * <p>Method under test: {@link PbftManager#srPrePrepare(BlockCapsule, List, long)}
    */
   @Test
   @Category(MaintainedByDiffblue.class)
@@ -139,12 +142,14 @@ public class PbftManagerDiffblueTest {
 
   /**
    * Test {@link PbftManager#srPrePrepare(BlockCapsule, List, long)}.
+   *
    * <ul>
-   *   <li>Given {@link PbftMessageHandle} {@link PbftMessageHandle#isSyncing()} return {@code true}.</li>
-   *   <li>Then calls {@link PbftMessageHandle#isSyncing()}.</li>
+   *   <li>Given {@link PbftMessageHandle} {@link PbftMessageHandle#isSyncing()} return {@code
+   *       true}.
+   *   <li>Then calls {@link PbftMessageHandle#isSyncing()}.
    * </ul>
-   * <p>
-   * Method under test: {@link PbftManager#srPrePrepare(BlockCapsule, List, long)}
+   *
+   * <p>Method under test: {@link PbftManager#srPrePrepare(BlockCapsule, List, long)}
    */
   @Test
   @Category(MaintainedByDiffblue.class)
@@ -167,8 +172,8 @@ public class PbftManagerDiffblueTest {
 
   /**
    * Test {@link PbftManager#forwardMessage(PbftBaseMessage)}.
-   * <p>
-   * Method under test: {@link PbftManager#forwardMessage(PbftBaseMessage)}
+   *
+   * <p>Method under test: {@link PbftManager#forwardMessage(PbftBaseMessage)}
    */
   @Test
   @Category(MaintainedByDiffblue.class)
@@ -186,14 +191,17 @@ public class PbftManagerDiffblueTest {
 
   /**
    * Test {@link PbftManager#doAction(PbftMessage)}.
-   * <p>
-   * Method under test: {@link PbftManager#doAction(PbftMessage)}
+   *
+   * <p>Method under test: {@link PbftManager#doAction(PbftMessage)}
    */
   @Test
   @Category(MaintainedByDiffblue.class)
   @MethodsUnderTest({"boolean PbftManager.doAction(PbftMessage)"})
   public void testDoAction() {
-    // Arrange, Act and Assert
+    // Arrange
+    PbftManager pbftManager = new PbftManager();
+
+    // Act and Assert
     assertTrue(pbftManager.doAction(new PbftMessage()));
   }
 }

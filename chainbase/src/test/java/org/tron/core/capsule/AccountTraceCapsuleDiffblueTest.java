@@ -15,14 +15,39 @@ import org.tron.protos.contract.BalanceContract.AccountTrace;
 
 public class AccountTraceCapsuleDiffblueTest {
   /**
+   * Test {@link AccountTraceCapsule#AccountTraceCapsule()}.
+   *
+   * <p>Method under test: {@link AccountTraceCapsule#AccountTraceCapsule()}
+   */
+  @Test
+  @Category(MaintainedByDiffblue.class)
+  @MethodsUnderTest({"void AccountTraceCapsule.<init>()"})
+  public void testNewAccountTraceCapsule() {
+    // Arrange and Act
+    AccountTraceCapsule actualAccountTraceCapsule = new AccountTraceCapsule();
+
+    // Assert
+    assertEquals(0L, actualAccountTraceCapsule.getBalance().longValue());
+    assertArrayEquals(new byte[] {-104, 6, 1}, actualAccountTraceCapsule.getData());
+    AccountTrace instance = actualAccountTraceCapsule.getInstance();
+    assertTrue(instance.findInitializationErrors().isEmpty());
+    assertEquals(1, instance.getAllFields().size());
+    assertEquals(0L, instance.getBalance());
+    assertEquals("", instance.getInitializationErrorString());
+    assertEquals(1L, instance.getPlaceholder());
+    assertEquals(3, instance.getSerializedSize());
+    assertTrue(instance.isInitialized());
+  }
+
+  /**
    * Test {@link AccountTraceCapsule#AccountTraceCapsule(long)}.
-   * <p>
-   * Method under test: {@link AccountTraceCapsule#AccountTraceCapsule(long)}
+   *
+   * <p>Method under test: {@link AccountTraceCapsule#AccountTraceCapsule(long)}
    */
   @Test
   @Category(MaintainedByDiffblue.class)
   @MethodsUnderTest({"void AccountTraceCapsule.<init>(long)"})
-  public void testNewAccountTraceCapsule() {
+  public void testNewAccountTraceCapsule2() {
     // Arrange and Act
     AccountTraceCapsule actualAccountTraceCapsule = new AccountTraceCapsule(42L);
 
@@ -36,64 +61,72 @@ public class AccountTraceCapsuleDiffblueTest {
     assertEquals(42L, instance.getBalance());
     assertTrue(instance.findInitializationErrors().isEmpty());
     assertTrue(instance.isInitialized());
-    assertArrayEquals(new byte[]{'\b', '*'}, actualAccountTraceCapsule.getData());
+    assertArrayEquals(new byte[] {'\b', '*'}, actualAccountTraceCapsule.getData());
   }
 
   /**
    * Test {@link AccountTraceCapsule#AccountTraceCapsule(byte[])}.
-   * <p>
-   * Method under test: {@link AccountTraceCapsule#AccountTraceCapsule(byte[])}
+   *
+   * <p>Method under test: {@link AccountTraceCapsule#AccountTraceCapsule(byte[])}
    */
   @Test
   @Category(MaintainedByDiffblue.class)
   @MethodsUnderTest({"void AccountTraceCapsule.<init>(byte[])"})
-  public void testNewAccountTraceCapsule2() throws UnsupportedEncodingException, BadItemException {
+  public void testNewAccountTraceCapsule3() throws UnsupportedEncodingException, BadItemException {
     // Arrange, Act and Assert
-    assertThrows(BadItemException.class, () -> new AccountTraceCapsule("A\bA\bA\bA\bA\bA\bA\bA\b".getBytes("UTF-8")));
+    assertThrows(
+        BadItemException.class,
+        () -> new AccountTraceCapsule("A\bA\bA\bA\bA\bA\bA\bA\b".getBytes("UTF-8")));
   }
 
   /**
    * Test {@link AccountTraceCapsule#AccountTraceCapsule(byte[])}.
+   *
    * <ul>
-   *   <li>When array of {@code byte} with minus one and {@code X}.</li>
+   *   <li>When array of {@code byte} with minus one and {@code X}.
    * </ul>
-   * <p>
-   * Method under test: {@link AccountTraceCapsule#AccountTraceCapsule(byte[])}
+   *
+   * <p>Method under test: {@link AccountTraceCapsule#AccountTraceCapsule(byte[])}
    */
   @Test
   @Category(MaintainedByDiffblue.class)
   @MethodsUnderTest({"void AccountTraceCapsule.<init>(byte[])"})
   public void testNewAccountTraceCapsule_whenArrayOfByteWithMinusOneAndX() throws BadItemException {
     // Arrange, Act and Assert
-    assertThrows(BadItemException.class,
-        () -> new AccountTraceCapsule(new byte[]{-1, 'X', 'A', 'X', 'A', 'X', 'A', 'X'}));
+    assertThrows(
+        BadItemException.class,
+        () -> new AccountTraceCapsule(new byte[] {-1, 'X', 'A', 'X', 'A', 'X', 'A', 'X'}));
   }
 
   /**
    * Test {@link AccountTraceCapsule#AccountTraceCapsule(byte[])}.
+   *
    * <ul>
-   *   <li>When array of {@code byte} with twenty-four and {@code X}.</li>
+   *   <li>When array of {@code byte} with twenty-four and {@code X}.
    * </ul>
-   * <p>
-   * Method under test: {@link AccountTraceCapsule#AccountTraceCapsule(byte[])}
+   *
+   * <p>Method under test: {@link AccountTraceCapsule#AccountTraceCapsule(byte[])}
    */
   @Test
   @Category(MaintainedByDiffblue.class)
   @MethodsUnderTest({"void AccountTraceCapsule.<init>(byte[])"})
-  public void testNewAccountTraceCapsule_whenArrayOfByteWithTwentyFourAndX() throws BadItemException {
+  public void testNewAccountTraceCapsule_whenArrayOfByteWithTwentyFourAndX()
+      throws BadItemException {
     // Arrange, Act and Assert
-    assertThrows(BadItemException.class,
-        () -> new AccountTraceCapsule(new byte[]{24, 'X', 'A', 'X', 'A', 'X', 'A', 'X'}));
+    assertThrows(
+        BadItemException.class,
+        () -> new AccountTraceCapsule(new byte[] {24, 'X', 'A', 'X', 'A', 'X', 'A', 'X'}));
   }
 
   /**
    * Test {@link AccountTraceCapsule#AccountTraceCapsule(byte[])}.
+   *
    * <ul>
-   *   <li>When array of {@code byte} with zero and {@code X}.</li>
-   *   <li>Then throw {@link BadItemException}.</li>
+   *   <li>When array of {@code byte} with zero and {@code X}.
+   *   <li>Then throw {@link BadItemException}.
    * </ul>
-   * <p>
-   * Method under test: {@link AccountTraceCapsule#AccountTraceCapsule(byte[])}
+   *
+   * <p>Method under test: {@link AccountTraceCapsule#AccountTraceCapsule(byte[])}
    */
   @Test
   @Category(MaintainedByDiffblue.class)
@@ -101,18 +134,20 @@ public class AccountTraceCapsuleDiffblueTest {
   public void testNewAccountTraceCapsule_whenArrayOfByteWithZeroAndX_thenThrowBadItemException()
       throws BadItemException {
     // Arrange, Act and Assert
-    assertThrows(BadItemException.class,
-        () -> new AccountTraceCapsule(new byte[]{0, 'X', 'A', 'X', 'A', 'X', 'A', 'X'}));
+    assertThrows(
+        BadItemException.class,
+        () -> new AccountTraceCapsule(new byte[] {0, 'X', 'A', 'X', 'A', 'X', 'A', 'X'}));
   }
 
   /**
    * Test {@link AccountTraceCapsule#AccountTraceCapsule(byte[])}.
+   *
    * <ul>
-   *   <li>When {@code AXAXAXAX} Bytes is {@code UTF-8}.</li>
-   *   <li>Then throw {@link BadItemException}.</li>
+   *   <li>When {@code AXAXAXAX} Bytes is {@code UTF-8}.
+   *   <li>Then throw {@link BadItemException}.
    * </ul>
-   * <p>
-   * Method under test: {@link AccountTraceCapsule#AccountTraceCapsule(byte[])}
+   *
+   * <p>Method under test: {@link AccountTraceCapsule#AccountTraceCapsule(byte[])}
    */
   @Test
   @Category(MaintainedByDiffblue.class)
@@ -120,135 +155,125 @@ public class AccountTraceCapsuleDiffblueTest {
   public void testNewAccountTraceCapsule_whenAxaxaxaxBytesIsUtf8_thenThrowBadItemException()
       throws UnsupportedEncodingException, BadItemException {
     // Arrange, Act and Assert
-    assertThrows(BadItemException.class, () -> new AccountTraceCapsule("AXAXAXAX".getBytes("UTF-8")));
+    assertThrows(
+        BadItemException.class, () -> new AccountTraceCapsule("AXAXAXAX".getBytes("UTF-8")));
   }
 
   /**
    * Test {@link AccountTraceCapsule#AccountTraceCapsule(byte[])}.
+   *
    * <ul>
-   *   <li>When backspace.</li>
-   *   <li>Then throw {@link BadItemException}.</li>
+   *   <li>When backspace.
+   *   <li>Then throw {@link BadItemException}.
    * </ul>
-   * <p>
-   * Method under test: {@link AccountTraceCapsule#AccountTraceCapsule(byte[])}
+   *
+   * <p>Method under test: {@link AccountTraceCapsule#AccountTraceCapsule(byte[])}
    */
   @Test
   @Category(MaintainedByDiffblue.class)
   @MethodsUnderTest({"void AccountTraceCapsule.<init>(byte[])"})
-  public void testNewAccountTraceCapsule_whenBackspace_thenThrowBadItemException() throws BadItemException {
+  public void testNewAccountTraceCapsule_whenBackspace_thenThrowBadItemException()
+      throws BadItemException {
     // Arrange, Act and Assert
-    assertThrows(BadItemException.class, () -> new AccountTraceCapsule(
-        new byte[]{'A', '\b', 'A', '\b', 'A', '\b', 'A', '\b', 'A', '\b', 'A', '\b', 'A', '\b', 'A', -1}));
+    assertThrows(
+        BadItemException.class,
+        () ->
+            new AccountTraceCapsule(
+                new byte[] {
+                  'A', '\b', 'A', '\b', 'A', '\b', 'A', '\b', 'A', '\b', 'A', '\b', 'A', '\b', 'A',
+                  -1
+                }));
   }
 
   /**
    * Test {@link AccountTraceCapsule#AccountTraceCapsule(byte[])}.
+   *
    * <ul>
-   *   <li>When {@code XAXAXAX} Bytes is {@code UTF-8}.</li>
-   *   <li>Then throw {@link BadItemException}.</li>
+   *   <li>When empty array of {@code byte}.
+   *   <li>Then return Balance longValue is zero.
    * </ul>
-   * <p>
-   * Method under test: {@link AccountTraceCapsule#AccountTraceCapsule(byte[])}
+   *
+   * <p>Method under test: {@link AccountTraceCapsule#AccountTraceCapsule(byte[])}
    */
   @Test
   @Category(MaintainedByDiffblue.class)
   @MethodsUnderTest({"void AccountTraceCapsule.<init>(byte[])"})
-  public void testNewAccountTraceCapsule_whenXaxaxaxBytesIsUtf8_thenThrowBadItemException()
-      throws UnsupportedEncodingException, BadItemException {
-    // Arrange, Act and Assert
-    assertThrows(BadItemException.class, () -> new AccountTraceCapsule("\bXAXAXAX".getBytes("UTF-8")));
+  public void testNewAccountTraceCapsule_whenEmptyArrayOfByte_thenReturnBalanceLongValueIsZero()
+      throws BadItemException {
+    // Arrange and Act
+    AccountTraceCapsule actualAccountTraceCapsule = new AccountTraceCapsule(new byte[] {});
+
+    // Assert
+    assertEquals(0L, actualAccountTraceCapsule.getBalance().longValue());
+    assertArrayEquals(new byte[] {-104, 6, 1}, actualAccountTraceCapsule.getData());
+    AccountTrace instance = actualAccountTraceCapsule.getInstance();
+    assertTrue(instance.findInitializationErrors().isEmpty());
+    assertEquals(1, instance.getAllFields().size());
+    assertEquals(0L, instance.getBalance());
+    assertEquals("", instance.getInitializationErrorString());
+    assertEquals(1L, instance.getPlaceholder());
+    assertEquals(3, instance.getSerializedSize());
+    assertTrue(instance.isInitialized());
   }
 
   /**
    * Test {@link AccountTraceCapsule#getBalance()}.
-   * <p>
-   * Method under test: {@link AccountTraceCapsule#getBalance()}
+   *
+   * <p>Method under test: {@link AccountTraceCapsule#getBalance()}
    */
   @Test
   @Category(MaintainedByDiffblue.class)
-  @MethodsUnderTest({"Long AccountTraceCapsule.getBalance()"})
+  @MethodsUnderTest({"java.lang.Long AccountTraceCapsule.getBalance()"})
   public void testGetBalance() {
     // Arrange, Act and Assert
-    assertEquals(0L, (new AccountTraceCapsule()).getBalance().longValue());
+    assertEquals(0L, new AccountTraceCapsule().getBalance().longValue());
   }
 
   /**
    * Test {@link AccountTraceCapsule#getData()}.
+   *
    * <ul>
-   *   <li>Given {@link AccountTraceCapsule#AccountTraceCapsule(long)} with balance is {@link Long#MAX_VALUE}.</li>
+   *   <li>Then return array of {@code byte} with backspace and {@code *}.
    * </ul>
-   * <p>
-   * Method under test: {@link AccountTraceCapsule#getData()}
-   */
-  @Test
-  @Category(MaintainedByDiffblue.class)
-  @MethodsUnderTest({"byte[] AccountTraceCapsule.getData()"})
-  public void testGetData_givenAccountTraceCapsuleWithBalanceIsMax_value() {
-    // Arrange, Act and Assert
-    assertArrayEquals(new byte[]{'\b', -1, -1, -1, -1, -1, -1, -1, -1, Byte.MAX_VALUE},
-        (new AccountTraceCapsule(Long.MAX_VALUE)).getData());
-  }
-
-  /**
-   * Test {@link AccountTraceCapsule#getData()}.
-   * <ul>
-   *   <li>Given {@link AccountTraceCapsule#AccountTraceCapsule(long)} with balance is minus one.</li>
-   * </ul>
-   * <p>
-   * Method under test: {@link AccountTraceCapsule#getData()}
-   */
-  @Test
-  @Category(MaintainedByDiffblue.class)
-  @MethodsUnderTest({"byte[] AccountTraceCapsule.getData()"})
-  public void testGetData_givenAccountTraceCapsuleWithBalanceIsMinusOne() {
-    // Arrange, Act and Assert
-    assertArrayEquals(new byte[]{'\b', -1, -1, -1, -1, -1, -1, -1, -1, -1, 1},
-        (new AccountTraceCapsule(-1L)).getData());
-  }
-
-  /**
-   * Test {@link AccountTraceCapsule#getData()}.
-   * <ul>
-   *   <li>Then return array of {@code byte} with backspace and {@code *}.</li>
-   * </ul>
-   * <p>
-   * Method under test: {@link AccountTraceCapsule#getData()}
+   *
+   * <p>Method under test: {@link AccountTraceCapsule#getData()}
    */
   @Test
   @Category(MaintainedByDiffblue.class)
   @MethodsUnderTest({"byte[] AccountTraceCapsule.getData()"})
   public void testGetData_thenReturnArrayOfByteWithBackspaceAndAsterisk() {
     // Arrange, Act and Assert
-    assertArrayEquals(new byte[]{'\b', '*'}, (new AccountTraceCapsule(42L)).getData());
+    assertArrayEquals(new byte[] {'\b', '*'}, new AccountTraceCapsule(42L).getData());
   }
 
   /**
    * Test {@link AccountTraceCapsule#getData()}.
+   *
    * <ul>
-   *   <li>Then return array of {@code byte} with minus one hundred four and six.</li>
+   *   <li>Then return array of {@code byte} with minus one hundred four and six.
    * </ul>
-   * <p>
-   * Method under test: {@link AccountTraceCapsule#getData()}
+   *
+   * <p>Method under test: {@link AccountTraceCapsule#getData()}
    */
   @Test
   @Category(MaintainedByDiffblue.class)
   @MethodsUnderTest({"byte[] AccountTraceCapsule.getData()"})
   public void testGetData_thenReturnArrayOfByteWithMinusOneHundredFourAndSix() {
     // Arrange, Act and Assert
-    assertArrayEquals(new byte[]{-104, 6, 1}, (new AccountTraceCapsule()).getData());
+    assertArrayEquals(new byte[] {-104, 6, 1}, new AccountTraceCapsule().getData());
   }
 
   /**
    * Test {@link AccountTraceCapsule#getInstance()}.
-   * <p>
-   * Method under test: {@link AccountTraceCapsule#getInstance()}
+   *
+   * <p>Method under test: {@link AccountTraceCapsule#getInstance()}
    */
   @Test
   @Category(MaintainedByDiffblue.class)
   @MethodsUnderTest({"AccountTrace AccountTraceCapsule.getInstance()"})
   public void testGetInstance() {
     // Arrange and Act
-    AccountTrace actualInstance = (new AccountTraceCapsule()).getInstance();
+    AccountTrace actualInstance = new AccountTraceCapsule().getInstance();
 
     // Assert
     assertEquals("", actualInstance.getInitializationErrorString());
@@ -258,6 +283,7 @@ public class AccountTraceCapsuleDiffblueTest {
     assertTrue(actualInstance.findInitializationErrors().isEmpty());
     assertTrue(actualInstance.getAllFields().isEmpty());
     assertTrue(actualInstance.isInitialized());
-    assertEquals(actualInstance, actualInstance.getDefaultInstanceForType());
+    AccountTrace actualDefaultInstanceForType = actualInstance.getDefaultInstanceForType();
+    assertEquals(actualInstance, actualDefaultInstanceForType);
   }
 }

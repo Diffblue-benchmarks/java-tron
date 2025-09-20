@@ -11,8 +11,8 @@ import org.tron.core.db.backup.BackupDbUtil.State;
 public class BackupDbUtilDiffblueTest {
   /**
    * Test {@link BackupDbUtil#getDB_BACKUP_STATE_DEFAULT()}.
-   * <p>
-   * Method under test: {@link BackupDbUtil#getDB_BACKUP_STATE_DEFAULT()}
+   *
+   * <p>Method under test: {@link BackupDbUtil#getDB_BACKUP_STATE_DEFAULT()}
    */
   @Test
   @Category(MaintainedByDiffblue.class)
@@ -24,8 +24,9 @@ public class BackupDbUtilDiffblueTest {
 
   /**
    * Test getters and setters.
-   * <p>
-   * Methods under test:
+   *
+   * <p>Methods under test:
+   *
    * <ul>
    *   <li>{@link BackupDbUtil#getDB_BACKUP_STATE()}
    *   <li>{@link BackupDbUtil#getDb()}
@@ -33,8 +34,10 @@ public class BackupDbUtilDiffblueTest {
    */
   @Test
   @Category(MaintainedByDiffblue.class)
-  @MethodsUnderTest({"String BackupDbUtil.getDB_BACKUP_STATE()",
-      "org.tron.core.db.RevokingDatabase BackupDbUtil.getDb()"})
+  @MethodsUnderTest({
+    "String BackupDbUtil.getDB_BACKUP_STATE()",
+    "org.tron.core.db.RevokingDatabase BackupDbUtil.getDb()"
+  })
   public void testGettersAndSetters() {
     // Arrange
     BackupDbUtil backupDbUtil = new BackupDbUtil();
@@ -49,8 +52,8 @@ public class BackupDbUtilDiffblueTest {
 
   /**
    * Test State {@link State#getStatus()}.
-   * <p>
-   * Method under test: {@link State#getStatus()}
+   *
+   * <p>Method under test: {@link State#getStatus()}
    */
   @Test
   @Category(MaintainedByDiffblue.class)
@@ -62,12 +65,13 @@ public class BackupDbUtilDiffblueTest {
 
   /**
    * Test State {@link State#valueOf(int)} with {@code value}.
+   *
    * <ul>
-   *   <li>When eleven.</li>
-   *   <li>Then return {@code BAKEDONE}.</li>
+   *   <li>When eleven.
+   *   <li>Then return {@code BAKEDONE}.
    * </ul>
-   * <p>
-   * Method under test: {@link State#valueOf(int)}
+   *
+   * <p>Method under test: {@link State#valueOf(int)}
    */
   @Test
   @Category(MaintainedByDiffblue.class)
@@ -79,12 +83,13 @@ public class BackupDbUtilDiffblueTest {
 
   /**
    * Test State {@link State#valueOf(int)} with {@code value}.
+   *
    * <ul>
-   *   <li>When forty-two.</li>
-   *   <li>Then return {@code BAKEDONE}.</li>
+   *   <li>When forty-two.
+   *   <li>Then return {@code BAKEDONE}.
    * </ul>
-   * <p>
-   * Method under test: {@link State#valueOf(int)}
+   *
+   * <p>Method under test: {@link State#valueOf(int)}
    */
   @Test
   @Category(MaintainedByDiffblue.class)
@@ -96,12 +101,13 @@ public class BackupDbUtilDiffblueTest {
 
   /**
    * Test State {@link State#valueOf(int)} with {@code value}.
+   *
    * <ul>
-   *   <li>When one.</li>
-   *   <li>Then return {@code BAKINGONE}.</li>
+   *   <li>When one.
+   *   <li>Then return {@code BAKINGONE}.
    * </ul>
-   * <p>
-   * Method under test: {@link State#valueOf(int)}
+   *
+   * <p>Method under test: {@link State#valueOf(int)}
    */
   @Test
   @Category(MaintainedByDiffblue.class)
@@ -113,12 +119,13 @@ public class BackupDbUtilDiffblueTest {
 
   /**
    * Test State {@link State#valueOf(int)} with {@code value}.
+   *
    * <ul>
-   *   <li>When twenty-two.</li>
-   *   <li>Then return {@code BAKEDTWO}.</li>
+   *   <li>When twenty-two.
+   *   <li>Then return {@code BAKEDTWO}.
    * </ul>
-   * <p>
-   * Method under test: {@link State#valueOf(int)}
+   *
+   * <p>Method under test: {@link State#valueOf(int)}
    */
   @Test
   @Category(MaintainedByDiffblue.class)
@@ -130,12 +137,13 @@ public class BackupDbUtilDiffblueTest {
 
   /**
    * Test State {@link State#valueOf(int)} with {@code value}.
+   *
    * <ul>
-   *   <li>When two.</li>
-   *   <li>Then return {@code BAKINGTWO}.</li>
+   *   <li>When two.
+   *   <li>Then return {@code BAKINGTWO}.
    * </ul>
-   * <p>
-   * Method under test: {@link State#valueOf(int)}
+   *
+   * <p>Method under test: {@link State#valueOf(int)}
    */
   @Test
   @Category(MaintainedByDiffblue.class)

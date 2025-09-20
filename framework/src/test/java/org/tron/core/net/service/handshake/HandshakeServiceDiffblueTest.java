@@ -1,6 +1,6 @@
 package org.tron.core.net.service.handshake;
 
-import static org.mockito.ArgumentMatchers.eq;
+import static org.mockito.ArgumentMatchers.isNull;
 import static org.mockito.Mockito.doNothing;
 import static org.mockito.Mockito.mock;
 import static org.mockito.Mockito.verify;
@@ -16,38 +16,47 @@ import org.mockito.Mockito;
 import org.mockito.junit.MockitoJUnitRunner;
 import org.tron.core.net.message.handshake.HelloMessage;
 import org.tron.core.net.peer.PeerConnection;
+import org.tron.p2p.discover.Node;
 import org.tron.protos.Protocol;
 import org.tron.protos.Protocol.ReasonCode;
 
 @RunWith(MockitoJUnitRunner.class)
 public class HandshakeServiceDiffblueTest {
-  @InjectMocks
-  private HandshakeService handshakeService;
+  @InjectMocks private HandshakeService handshakeService;
 
   /**
    * Test {@link HandshakeService#processHelloMessage(PeerConnection, HelloMessage)}.
+   *
    * <ul>
-   *   <li>Then calls {@link PeerConnection#disconnect(ReasonCode)}.</li>
+   *   <li>Given createUnresolved {@code foo} and one.
+   *   <li>Then calls {@link PeerConnection#disconnect(ReasonCode)}.
    * </ul>
-   * <p>
-   * Method under test: {@link HandshakeService#processHelloMessage(PeerConnection, HelloMessage)}
+   *
+   * <p>Method under test: {@link HandshakeService#processHelloMessage(PeerConnection,
+   * HelloMessage)}
    */
   @Test
   @Category(MaintainedByDiffblue.class)
   @MethodsUnderTest({"void HandshakeService.processHelloMessage(PeerConnection, HelloMessage)"})
-  public void testProcessHelloMessage_thenCallsDisconnect() throws Exception {
+  public void testProcessHelloMessage_givenCreateUnresolvedFooAndOne_thenCallsDisconnect() {
     // Arrange
     PeerConnection peer = mock(PeerConnection.class);
     when(peer.getInetSocketAddress()).thenReturn(InetSocketAddress.createUnresolved("foo", 1));
     doNothing().when(peer).disconnect(Mockito.<ReasonCode>any());
-    when(peer.getHelloMessageReceive()).thenReturn(new HelloMessage(new byte[]{}));
+    when(peer.getHelloMessageReceive()).thenReturn(mock(HelloMessage.class));
+    HelloMessage msg = mock(HelloMessage.class);
+
+    Node node = mock(Node.class);
+    doNothing().when(node).setId(Mockito.<byte[]>any());
+    node.setId(null);
 
     // Act
-    handshakeService.processHelloMessage(peer, mock(HelloMessage.class));
+    handshakeService.processHelloMessage(peer, msg);
 
     // Assert
-    verify(peer).disconnect(eq(ReasonCode.BAD_PROTOCOL));
+    verify(peer).disconnect(ReasonCode.BAD_PROTOCOL);
     verify(peer).getHelloMessageReceive();
     verify(peer).getInetSocketAddress();
+    verify(node).setId(isNull());
   }
 }

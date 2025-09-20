@@ -9,8 +9,8 @@ import org.junit.experimental.categories.Category;
 public class UnfreezeBalanceV2ActuatorDiffblueTest {
   /**
    * Test {@link UnfreezeBalanceV2Actuator#getUNFREEZE_MAX_TIMES()}.
-   * <p>
-   * Method under test: {@link UnfreezeBalanceV2Actuator#getUNFREEZE_MAX_TIMES()}
+   *
+   * <p>Method under test: {@link UnfreezeBalanceV2Actuator#getUNFREEZE_MAX_TIMES()}
    */
   @Test
   @Category(MaintainedByDiffblue.class)

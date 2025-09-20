@@ -14,15 +14,16 @@ import org.junit.experimental.categories.Category;
 public class ServletOutputStreamCopyDiffblueTest {
   /**
    * Test {@link ServletOutputStreamCopy#ServletOutputStreamCopy(OutputStream)}.
-   * <p>
-   * Method under test: {@link ServletOutputStreamCopy#ServletOutputStreamCopy(OutputStream)}
+   *
+   * <p>Method under test: {@link ServletOutputStreamCopy#ServletOutputStreamCopy(OutputStream)}
    */
   @Test
   @Category(MaintainedByDiffblue.class)
   @MethodsUnderTest({"void ServletOutputStreamCopy.<init>(OutputStream)"})
   public void testNewServletOutputStreamCopy() {
     // Arrange and Act
-    ServletOutputStreamCopy actualServletOutputStreamCopy = new ServletOutputStreamCopy(new ByteArrayOutputStream(1));
+    ServletOutputStreamCopy actualServletOutputStreamCopy =
+        new ServletOutputStreamCopy(new ByteArrayOutputStream());
 
     // Assert
     assertEquals(0, actualServletOutputStreamCopy.getStreamByteSize());
@@ -31,15 +32,16 @@ public class ServletOutputStreamCopyDiffblueTest {
 
   /**
    * Test {@link ServletOutputStreamCopy#write(int)} with {@code int}.
-   * <p>
-   * Method under test: {@link ServletOutputStreamCopy#write(int)}
+   *
+   * <p>Method under test: {@link ServletOutputStreamCopy#write(int)}
    */
   @Test
   @Category(MaintainedByDiffblue.class)
   @MethodsUnderTest({"void ServletOutputStreamCopy.write(int)"})
   public void testWriteWithInt() throws IOException {
     // Arrange
-    ServletOutputStreamCopy servletOutputStreamCopy = new ServletOutputStreamCopy(new ByteArrayOutputStream(1));
+    ServletOutputStreamCopy servletOutputStreamCopy =
+        new ServletOutputStreamCopy(new ByteArrayOutputStream());
 
     // Act
     servletOutputStreamCopy.write(19088743);
@@ -50,16 +52,16 @@ public class ServletOutputStreamCopyDiffblueTest {
 
   /**
    * Test {@link ServletOutputStreamCopy#write(int)} with {@code int}.
-   * <p>
-   * Method under test: {@link ServletOutputStreamCopy#write(int)}
+   *
+   * <p>Method under test: {@link ServletOutputStreamCopy#write(int)}
    */
   @Test
   @Category(MaintainedByDiffblue.class)
   @MethodsUnderTest({"void ServletOutputStreamCopy.write(int)"})
   public void testWriteWithInt2() throws IOException {
     // Arrange
-    ServletOutputStreamCopy servletOutputStreamCopy = new ServletOutputStreamCopy(
-        new ServletOutputStreamCopy(new ByteArrayOutputStream(1)));
+    ServletOutputStreamCopy servletOutputStreamCopy =
+        new ServletOutputStreamCopy(new ServletOutputStreamCopy(new ByteArrayOutputStream()));
 
     // Act
     servletOutputStreamCopy.write(19088743);
@@ -70,21 +72,22 @@ public class ServletOutputStreamCopyDiffblueTest {
 
   /**
    * Test {@link ServletOutputStreamCopy#getStreamByteSize()}.
-   * <p>
-   * Method under test: {@link ServletOutputStreamCopy#getStreamByteSize()}
+   *
+   * <p>Method under test: {@link ServletOutputStreamCopy#getStreamByteSize()}
    */
   @Test
   @Category(MaintainedByDiffblue.class)
   @MethodsUnderTest({"int ServletOutputStreamCopy.getStreamByteSize()"})
   public void testGetStreamByteSize() {
     // Arrange, Act and Assert
-    assertEquals(0, (new ServletOutputStreamCopy(new ByteArrayOutputStream(1))).getStreamByteSize());
+    assertEquals(0, new ServletOutputStreamCopy(new ByteArrayOutputStream()).getStreamByteSize());
   }
 
   /**
    * Test getters and setters.
-   * <p>
-   * Methods under test:
+   *
+   * <p>Methods under test:
+   *
    * <ul>
    *   <li>{@link ServletOutputStreamCopy#setWriteListener(WriteListener)}
    *   <li>{@link ServletOutputStreamCopy#isReady()}
@@ -92,11 +95,14 @@ public class ServletOutputStreamCopyDiffblueTest {
    */
   @Test
   @Category(MaintainedByDiffblue.class)
-  @MethodsUnderTest({"boolean ServletOutputStreamCopy.isReady()",
-      "void ServletOutputStreamCopy.setWriteListener(WriteListener)"})
+  @MethodsUnderTest({
+    "boolean ServletOutputStreamCopy.isReady()",
+    "void ServletOutputStreamCopy.setWriteListener(WriteListener)"
+  })
   public void testGettersAndSetters() {
     // Arrange
-    ServletOutputStreamCopy servletOutputStreamCopy = new ServletOutputStreamCopy(new ByteArrayOutputStream(1));
+    ServletOutputStreamCopy servletOutputStreamCopy =
+        new ServletOutputStreamCopy(new ByteArrayOutputStream());
 
     // Act
     servletOutputStreamCopy.setWriteListener(null);

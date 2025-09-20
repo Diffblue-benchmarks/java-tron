@@ -10,65 +10,72 @@ import org.tron.core.services.ratelimiter.RuntimeData;
 public class GlobalPreemptibleAdapterDiffblueTest {
   /**
    * Test {@link GlobalPreemptibleAdapter#GlobalPreemptibleAdapter(String)}.
+   *
    * <ul>
-   *   <li>When {@code null}.</li>
+   *   <li>When empty string.
    * </ul>
-   * <p>
-   * Method under test: {@link GlobalPreemptibleAdapter#GlobalPreemptibleAdapter(String)}
+   *
+   * <p>Method under test: {@link GlobalPreemptibleAdapter#GlobalPreemptibleAdapter(String)}
    */
   @Test
   @Category(MaintainedByDiffblue.class)
   @MethodsUnderTest({"void GlobalPreemptibleAdapter.<init>(String)"})
-  public void testNewGlobalPreemptibleAdapter_whenNull() {
+  public void testNewGlobalPreemptibleAdapter_whenEmptyString() {
     // Arrange, Act and Assert
-    assertTrue((new GlobalPreemptibleAdapter(null)).acquire(null));
+    assertTrue(new GlobalPreemptibleAdapter("").acquire(null));
   }
 
   /**
    * Test {@link GlobalPreemptibleAdapter#GlobalPreemptibleAdapter(String)}.
+   *
    * <ul>
-   *   <li>When {@code Param String}.</li>
+   *   <li>When {@code Param String}.
    * </ul>
-   * <p>
-   * Method under test: {@link GlobalPreemptibleAdapter#GlobalPreemptibleAdapter(String)}
+   *
+   * <p>Method under test: {@link GlobalPreemptibleAdapter#GlobalPreemptibleAdapter(String)}
    */
   @Test
   @Category(MaintainedByDiffblue.class)
   @MethodsUnderTest({"void GlobalPreemptibleAdapter.<init>(String)"})
   public void testNewGlobalPreemptibleAdapter_whenParamString() {
     // Arrange, Act and Assert
-    assertTrue((new GlobalPreemptibleAdapter("Param String")).acquire(null));
+    assertTrue(new GlobalPreemptibleAdapter("Param String").acquire(null));
   }
 
   /**
    * Test {@link GlobalPreemptibleAdapter#GlobalPreemptibleAdapter(String)}.
+   *
    * <ul>
-   *   <li>When {@code UUU=UUU}.</li>
+   *   <li>When {@code UUU=UUU}.
    * </ul>
-   * <p>
-   * Method under test: {@link GlobalPreemptibleAdapter#GlobalPreemptibleAdapter(String)}
+   *
+   * <p>Method under test: {@link GlobalPreemptibleAdapter#GlobalPreemptibleAdapter(String)}
    */
   @Test
   @Category(MaintainedByDiffblue.class)
   @MethodsUnderTest({"void GlobalPreemptibleAdapter.<init>(String)"})
   public void testNewGlobalPreemptibleAdapter_whenUuuUuu() {
     // Arrange, Act and Assert
-    assertTrue((new GlobalPreemptibleAdapter("UUU=UUU")).acquire(null));
+    assertTrue(new GlobalPreemptibleAdapter("UUU=UUU").acquire(null));
   }
 
   /**
    * Test {@link GlobalPreemptibleAdapter#acquire(RuntimeData)}.
-   * <p>
-   * Method under test: {@link GlobalPreemptibleAdapter#acquire(RuntimeData)}
+   *
+   * <p>Method under test: {@link GlobalPreemptibleAdapter#acquire(RuntimeData)}
    */
   @Test
   @Category(MaintainedByDiffblue.class)
   @MethodsUnderTest({"boolean GlobalPreemptibleAdapter.acquire(RuntimeData)"})
   public void testAcquire() {
     // Arrange
-    GlobalPreemptibleAdapter globalPreemptibleAdapter = new GlobalPreemptibleAdapter("Param String");
+    GlobalPreemptibleAdapter globalPreemptibleAdapter =
+        new GlobalPreemptibleAdapter("Param String");
 
-    // Act and Assert
-    assertTrue(globalPreemptibleAdapter.acquire(new RuntimeData("42")));
+    // Act
+    boolean actualAcquireResult = globalPreemptibleAdapter.acquire(new RuntimeData("42"));
+
+    // Assert
+    assertTrue(actualAcquireResult);
   }
 }

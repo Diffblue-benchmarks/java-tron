@@ -12,8 +12,9 @@ import org.tron.core.services.ratelimiter.strategy.Strategy.ParamItem;
 public class StrategyDiffblueTest {
   /**
    * Test ParamItem getters and setters.
-   * <p>
-   * Methods under test:
+   *
+   * <p>Methods under test:
+   *
    * <ul>
    *   <li>{@link ParamItem#ParamItem(Strategy, Class, Object)}
    *   <li>{@link ParamItem#setValue(Object)}
@@ -21,14 +22,18 @@ public class StrategyDiffblueTest {
    */
   @Test
   @Category(MaintainedByDiffblue.class)
-  @MethodsUnderTest({"void ParamItem.<init>(Strategy, Class, Object)", "void ParamItem.setValue(Object)"})
+  @MethodsUnderTest({
+    "void ParamItem.<init>(Strategy, Class, Object)",
+    "void ParamItem.setValue(Object)"
+  })
   public void testParamItemGettersAndSetters() {
     // Arrange
-    GlobalPreemptibleStrategy globalPreemptibleStrategy = new GlobalPreemptibleStrategy("Param String");
+    GlobalPreemptibleStrategy globalPreemptibleStrategy =
+        new GlobalPreemptibleStrategy("Param String");
     Class<Object> type = Object.class;
 
     // Act
-    ParamItem<Object> actualParamItem = globalPreemptibleStrategy.new ParamItem<>(type, "Value");
+    ParamItem<Object> actualParamItem = globalPreemptibleStrategy.new ParamItem(type, "Value");
     actualParamItem.setValue("Value");
 
     // Assert
@@ -39,23 +44,25 @@ public class StrategyDiffblueTest {
 
   /**
    * Test {@link Strategy#parseStrategyParams(String)}.
+   *
    * <ul>
-   *   <li>When {@code Arg String}.</li>
+   *   <li>When {@code Arg String}.
    * </ul>
-   * <p>
-   * Method under test: {@link Strategy#parseStrategyParams(String)}
+   *
+   * <p>Method under test: {@link Strategy#parseStrategyParams(String)}
    */
   @Test
   @Category(MaintainedByDiffblue.class)
   @MethodsUnderTest({"Map Strategy.parseStrategyParams(String)"})
   public void testParseStrategyParams_whenArgString() {
     // Arrange and Act
-    Map<String, ParamItem> actualParseStrategyParamsResult = (new GlobalPreemptibleStrategy("Param String"))
-        .parseStrategyParams("Arg String");
+    Map<String, ParamItem> actualParseStrategyParamsResult =
+        new GlobalPreemptibleStrategy("Param String").parseStrategyParams("Arg String");
 
     // Assert
     assertEquals(1, actualParseStrategyParamsResult.size());
-    ParamItem getResult = actualParseStrategyParamsResult.get(GlobalPreemptibleStrategy.STRATEGY_PARAM_PERMIT);
+    ParamItem getResult =
+        actualParseStrategyParamsResult.get(GlobalPreemptibleStrategy.STRATEGY_PARAM_PERMIT);
     assertEquals(1, ((Integer) getResult.value).intValue());
     Class<Integer> expectedResultClass = Integer.class;
     assertEquals(expectedResultClass, getResult.type);
@@ -63,23 +70,25 @@ public class StrategyDiffblueTest {
 
   /**
    * Test {@link Strategy#parseStrategyParams(String)}.
+   *
    * <ul>
-   *   <li>When empty string.</li>
+   *   <li>When empty string.
    * </ul>
-   * <p>
-   * Method under test: {@link Strategy#parseStrategyParams(String)}
+   *
+   * <p>Method under test: {@link Strategy#parseStrategyParams(String)}
    */
   @Test
   @Category(MaintainedByDiffblue.class)
   @MethodsUnderTest({"Map Strategy.parseStrategyParams(String)"})
   public void testParseStrategyParams_whenEmptyString() {
     // Arrange and Act
-    Map<String, ParamItem> actualParseStrategyParamsResult = (new GlobalPreemptibleStrategy("Param String"))
-        .parseStrategyParams("");
+    Map<String, ParamItem> actualParseStrategyParamsResult =
+        new GlobalPreemptibleStrategy("Param String").parseStrategyParams("");
 
     // Assert
     assertEquals(1, actualParseStrategyParamsResult.size());
-    ParamItem getResult = actualParseStrategyParamsResult.get(GlobalPreemptibleStrategy.STRATEGY_PARAM_PERMIT);
+    ParamItem getResult =
+        actualParseStrategyParamsResult.get(GlobalPreemptibleStrategy.STRATEGY_PARAM_PERMIT);
     assertEquals(1, ((Integer) getResult.value).intValue());
     Class<Integer> expectedResultClass = Integer.class;
     assertEquals(expectedResultClass, getResult.type);
@@ -87,23 +96,25 @@ public class StrategyDiffblueTest {
 
   /**
    * Test {@link Strategy#parseStrategyParams(String)}.
+   *
    * <ul>
-   *   <li>When {@code null}.</li>
+   *   <li>When {@code null}.
    * </ul>
-   * <p>
-   * Method under test: {@link Strategy#parseStrategyParams(String)}
+   *
+   * <p>Method under test: {@link Strategy#parseStrategyParams(String)}
    */
   @Test
   @Category(MaintainedByDiffblue.class)
   @MethodsUnderTest({"Map Strategy.parseStrategyParams(String)"})
   public void testParseStrategyParams_whenNull() {
     // Arrange and Act
-    Map<String, ParamItem> actualParseStrategyParamsResult = (new GlobalPreemptibleStrategy("Param String"))
-        .parseStrategyParams(null);
+    Map<String, ParamItem> actualParseStrategyParamsResult =
+        new GlobalPreemptibleStrategy("Param String").parseStrategyParams(null);
 
     // Assert
     assertEquals(1, actualParseStrategyParamsResult.size());
-    ParamItem getResult = actualParseStrategyParamsResult.get(GlobalPreemptibleStrategy.STRATEGY_PARAM_PERMIT);
+    ParamItem getResult =
+        actualParseStrategyParamsResult.get(GlobalPreemptibleStrategy.STRATEGY_PARAM_PERMIT);
     assertEquals(1, ((Integer) getResult.value).intValue());
     Class<Integer> expectedResultClass = Integer.class;
     assertEquals(expectedResultClass, getResult.type);
@@ -111,23 +122,25 @@ public class StrategyDiffblueTest {
 
   /**
    * Test {@link Strategy#parseStrategyParams(String)}.
+   *
    * <ul>
-   *   <li>When {@code UUU=UUU}.</li>
+   *   <li>When {@code UUU=UUU}.
    * </ul>
-   * <p>
-   * Method under test: {@link Strategy#parseStrategyParams(String)}
+   *
+   * <p>Method under test: {@link Strategy#parseStrategyParams(String)}
    */
   @Test
   @Category(MaintainedByDiffblue.class)
   @MethodsUnderTest({"Map Strategy.parseStrategyParams(String)"})
   public void testParseStrategyParams_whenUuuUuu() {
     // Arrange and Act
-    Map<String, ParamItem> actualParseStrategyParamsResult = (new GlobalPreemptibleStrategy("Param String"))
-        .parseStrategyParams("UUU=UUU");
+    Map<String, ParamItem> actualParseStrategyParamsResult =
+        new GlobalPreemptibleStrategy("Param String").parseStrategyParams("UUU=UUU");
 
     // Assert
     assertEquals(1, actualParseStrategyParamsResult.size());
-    ParamItem getResult = actualParseStrategyParamsResult.get(GlobalPreemptibleStrategy.STRATEGY_PARAM_PERMIT);
+    ParamItem getResult =
+        actualParseStrategyParamsResult.get(GlobalPreemptibleStrategy.STRATEGY_PARAM_PERMIT);
     assertEquals(1, ((Integer) getResult.value).intValue());
     Class<Integer> expectedResultClass = Integer.class;
     assertEquals(expectedResultClass, getResult.type);
@@ -135,17 +148,21 @@ public class StrategyDiffblueTest {
 
   /**
    * Test {@link Strategy#getMapParams()}.
-   * <p>
-   * Method under test: {@link Strategy#getMapParams()}
+   *
+   * <p>Method under test: {@link Strategy#getMapParams()}
    */
   @Test
   @Category(MaintainedByDiffblue.class)
   @MethodsUnderTest({"Map Strategy.getMapParams()"})
   public void testGetMapParams() {
     // Arrange
-    GlobalPreemptibleStrategy globalPreemptibleStrategy = new GlobalPreemptibleStrategy("Param String");
+    GlobalPreemptibleStrategy globalPreemptibleStrategy =
+        new GlobalPreemptibleStrategy("Param String");
 
-    // Act and Assert
-    assertSame(globalPreemptibleStrategy.mapParams, globalPreemptibleStrategy.getMapParams());
+    // Act
+    Map<String, ParamItem> actualMapParams = globalPreemptibleStrategy.getMapParams();
+
+    // Assert
+    assertSame(globalPreemptibleStrategy.mapParams, actualMapParams);
   }
 }

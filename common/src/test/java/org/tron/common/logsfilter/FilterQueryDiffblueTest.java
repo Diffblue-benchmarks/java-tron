@@ -13,12 +13,13 @@ import org.junit.experimental.categories.Category;
 public class FilterQueryDiffblueTest {
   /**
    * Test {@link FilterQuery#parseFromBlockNumber(String)}.
+   *
    * <ul>
-   *   <li>When {@code 42}.</li>
-   *   <li>Then return forty-two.</li>
+   *   <li>When {@code 42}.
+   *   <li>Then return forty-two.
    * </ul>
-   * <p>
-   * Method under test: {@link FilterQuery#parseFromBlockNumber(String)}
+   *
+   * <p>Method under test: {@link FilterQuery#parseFromBlockNumber(String)}
    */
   @Test
   @Category(MaintainedByDiffblue.class)
@@ -30,12 +31,13 @@ public class FilterQueryDiffblueTest {
 
   /**
    * Test {@link FilterQuery#parseFromBlockNumber(String)}.
+   *
    * <ul>
-   *   <li>When {@link FilterQuery#EARLIEST}.</li>
-   *   <li>Then return zero.</li>
+   *   <li>When {@link FilterQuery#EARLIEST}.
+   *   <li>Then return zero.
    * </ul>
-   * <p>
-   * Method under test: {@link FilterQuery#parseFromBlockNumber(String)}
+   *
+   * <p>Method under test: {@link FilterQuery#parseFromBlockNumber(String)}
    */
   @Test
   @Category(MaintainedByDiffblue.class)
@@ -47,12 +49,13 @@ public class FilterQueryDiffblueTest {
 
   /**
    * Test {@link FilterQuery#parseFromBlockNumber(String)}.
+   *
    * <ul>
-   *   <li>When empty string.</li>
-   *   <li>Then return zero.</li>
+   *   <li>When empty string.
+   *   <li>Then return zero.
    * </ul>
-   * <p>
-   * Method under test: {@link FilterQuery#parseFromBlockNumber(String)}
+   *
+   * <p>Method under test: {@link FilterQuery#parseFromBlockNumber(String)}
    */
   @Test
   @Category(MaintainedByDiffblue.class)
@@ -64,12 +67,13 @@ public class FilterQueryDiffblueTest {
 
   /**
    * Test {@link FilterQuery#parseFromBlockNumber(String)}.
+   *
    * <ul>
-   *   <li>When {@code null}.</li>
-   *   <li>Then return zero.</li>
+   *   <li>When {@code null}.
+   *   <li>Then return zero.
    * </ul>
-   * <p>
-   * Method under test: {@link FilterQuery#parseFromBlockNumber(String)}
+   *
+   * <p>Method under test: {@link FilterQuery#parseFromBlockNumber(String)}
    */
   @Test
   @Category(MaintainedByDiffblue.class)
@@ -81,12 +85,13 @@ public class FilterQueryDiffblueTest {
 
   /**
    * Test {@link FilterQuery#parseToBlockNumber(String)}.
+   *
    * <ul>
-   *   <li>When {@code 42}.</li>
-   *   <li>Then return forty-two.</li>
+   *   <li>When {@code 42}.
+   *   <li>Then return forty-two.
    * </ul>
-   * <p>
-   * Method under test: {@link FilterQuery#parseToBlockNumber(String)}
+   *
+   * <p>Method under test: {@link FilterQuery#parseToBlockNumber(String)}
    */
   @Test
   @Category(MaintainedByDiffblue.class)
@@ -98,12 +103,13 @@ public class FilterQueryDiffblueTest {
 
   /**
    * Test {@link FilterQuery#parseToBlockNumber(String)}.
+   *
    * <ul>
-   *   <li>When empty string.</li>
-   *   <li>Then return minus one.</li>
+   *   <li>When empty string.
+   *   <li>Then return minus one.
    * </ul>
-   * <p>
-   * Method under test: {@link FilterQuery#parseToBlockNumber(String)}
+   *
+   * <p>Method under test: {@link FilterQuery#parseToBlockNumber(String)}
    */
   @Test
   @Category(MaintainedByDiffblue.class)
@@ -115,12 +121,13 @@ public class FilterQueryDiffblueTest {
 
   /**
    * Test {@link FilterQuery#parseToBlockNumber(String)}.
+   *
    * <ul>
-   *   <li>When {@link FilterQuery#LATEST}.</li>
-   *   <li>Then return minus one.</li>
+   *   <li>When {@link FilterQuery#LATEST}.
+   *   <li>Then return minus one.
    * </ul>
-   * <p>
-   * Method under test: {@link FilterQuery#parseToBlockNumber(String)}
+   *
+   * <p>Method under test: {@link FilterQuery#parseToBlockNumber(String)}
    */
   @Test
   @Category(MaintainedByDiffblue.class)
@@ -132,12 +139,13 @@ public class FilterQueryDiffblueTest {
 
   /**
    * Test {@link FilterQuery#parseToBlockNumber(String)}.
+   *
    * <ul>
-   *   <li>When {@code null}.</li>
-   *   <li>Then return minus one.</li>
+   *   <li>When {@code null}.
+   *   <li>Then return minus one.
    * </ul>
-   * <p>
-   * Method under test: {@link FilterQuery#parseToBlockNumber(String)}
+   *
+   * <p>Method under test: {@link FilterQuery#parseToBlockNumber(String)}
    */
   @Test
   @Category(MaintainedByDiffblue.class)
@@ -149,8 +157,9 @@ public class FilterQueryDiffblueTest {
 
   /**
    * Test getters and setters.
-   * <p>
-   * Methods under test:
+   *
+   * <p>Methods under test:
+   *
    * <ul>
    *   <li>default or parameterless constructor of {@link FilterQuery}
    *   <li>{@link FilterQuery#setContractAddressList(List)}
@@ -166,10 +175,18 @@ public class FilterQueryDiffblueTest {
    */
   @Test
   @Category(MaintainedByDiffblue.class)
-  @MethodsUnderTest({"void FilterQuery.<init>()", "List FilterQuery.getContractAddressList()",
-      "List FilterQuery.getContractTopicList()", "long FilterQuery.getFromBlock()", "long FilterQuery.getToBlock()",
-      "void FilterQuery.setContractAddressList(List)", "void FilterQuery.setContractTopicList(List)",
-      "void FilterQuery.setFromBlock(long)", "void FilterQuery.setToBlock(long)", "String FilterQuery.toString()"})
+  @MethodsUnderTest({
+    "void FilterQuery.<init>()",
+    "List FilterQuery.getContractAddressList()",
+    "List FilterQuery.getContractTopicList()",
+    "long FilterQuery.getFromBlock()",
+    "long FilterQuery.getToBlock()",
+    "void FilterQuery.setContractAddressList(List)",
+    "void FilterQuery.setContractTopicList(List)",
+    "void FilterQuery.setFromBlock(long)",
+    "void FilterQuery.setToBlock(long)",
+    "String FilterQuery.toString()"
+  })
   public void testGettersAndSetters() {
     // Arrange and Act
     FilterQuery actualFilterQuery = new FilterQuery();
@@ -185,7 +202,8 @@ public class FilterQueryDiffblueTest {
     long actualFromBlock = actualFilterQuery.getFromBlock();
 
     // Assert
-    assertEquals("fromBlock: 1, toBlock: 1, contractAddress: [], contractTopics: []", actualToStringResult);
+    assertEquals(
+        "fromBlock: 1, toBlock: 1, contractAddress: [], contractTopics: []", actualToStringResult);
     assertEquals(1L, actualFromBlock);
     assertEquals(1L, actualFilterQuery.getToBlock());
     assertTrue(actualContractAddressList.isEmpty());

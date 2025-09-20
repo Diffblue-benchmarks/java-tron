@@ -13,12 +13,14 @@ import org.junit.experimental.categories.Category;
 public class WitnessDiffblueTest {
   /**
    * Test {@link Witness#equals(Object)}, and {@link Witness#hashCode()}.
+   *
    * <ul>
-   *   <li>When other is equal.</li>
-   *   <li>Then return equal.</li>
+   *   <li>When other is equal.
+   *   <li>Then return equal.
    * </ul>
-   * <p>
-   * Methods under test:
+   *
+   * <p>Methods under test:
+   *
    * <ul>
    *   <li>{@link Witness#equals(Object)}
    *   <li>{@link Witness#hashCode()}
@@ -34,18 +36,19 @@ public class WitnessDiffblueTest {
 
     // Act and Assert
     assertEquals(ofResult, ofResult2);
-    int expectedHashCodeResult = ofResult.hashCode();
-    assertEquals(expectedHashCodeResult, ofResult2.hashCode());
+    assertEquals(ofResult.hashCode(), ofResult2.hashCode());
   }
 
   /**
    * Test {@link Witness#equals(Object)}, and {@link Witness#hashCode()}.
+   *
    * <ul>
-   *   <li>When other is equal.</li>
-   *   <li>Then return equal.</li>
+   *   <li>When other is equal.
+   *   <li>Then return equal.
    * </ul>
-   * <p>
-   * Methods under test:
+   *
+   * <p>Methods under test:
+   *
    * <ul>
    *   <li>{@link Witness#equals(Object)}
    *   <li>{@link Witness#hashCode()}
@@ -58,23 +61,25 @@ public class WitnessDiffblueTest {
     // Arrange
     Witness ofResult = Witness.of();
     ofResult.setAddress("42 Main St");
+
     Witness ofResult2 = Witness.of();
     ofResult2.setAddress("42 Main St");
 
     // Act and Assert
     assertEquals(ofResult, ofResult2);
-    int expectedHashCodeResult = ofResult.hashCode();
-    assertEquals(expectedHashCodeResult, ofResult2.hashCode());
+    assertEquals(ofResult.hashCode(), ofResult2.hashCode());
   }
 
   /**
    * Test {@link Witness#equals(Object)}, and {@link Witness#hashCode()}.
+   *
    * <ul>
-   *   <li>When other is equal.</li>
-   *   <li>Then return equal.</li>
+   *   <li>When other is equal.
+   *   <li>Then return equal.
    * </ul>
-   * <p>
-   * Methods under test:
+   *
+   * <p>Methods under test:
+   *
    * <ul>
    *   <li>{@link Witness#equals(Object)}
    *   <li>{@link Witness#hashCode()}
@@ -87,23 +92,25 @@ public class WitnessDiffblueTest {
     // Arrange
     Witness ofResult = Witness.of();
     ofResult.setPublicKey("Public Key");
+
     Witness ofResult2 = Witness.of();
     ofResult2.setPublicKey("Public Key");
 
     // Act and Assert
     assertEquals(ofResult, ofResult2);
-    int expectedHashCodeResult = ofResult.hashCode();
-    assertEquals(expectedHashCodeResult, ofResult2.hashCode());
+    assertEquals(ofResult.hashCode(), ofResult2.hashCode());
   }
 
   /**
    * Test {@link Witness#equals(Object)}, and {@link Witness#hashCode()}.
+   *
    * <ul>
-   *   <li>When other is equal.</li>
-   *   <li>Then return equal.</li>
+   *   <li>When other is equal.
+   *   <li>Then return equal.
    * </ul>
-   * <p>
-   * Methods under test:
+   *
+   * <p>Methods under test:
+   *
    * <ul>
    *   <li>{@link Witness#equals(Object)}
    *   <li>{@link Witness#hashCode()}
@@ -116,23 +123,25 @@ public class WitnessDiffblueTest {
     // Arrange
     Witness ofResult = Witness.of();
     ofResult.setUrl("https://example.org/example");
+
     Witness ofResult2 = Witness.of();
     ofResult2.setUrl("https://example.org/example");
 
     // Act and Assert
     assertEquals(ofResult, ofResult2);
-    int expectedHashCodeResult = ofResult.hashCode();
-    assertEquals(expectedHashCodeResult, ofResult2.hashCode());
+    assertEquals(ofResult.hashCode(), ofResult2.hashCode());
   }
 
   /**
    * Test {@link Witness#equals(Object)}, and {@link Witness#hashCode()}.
+   *
    * <ul>
-   *   <li>When other is same.</li>
-   *   <li>Then return equal.</li>
+   *   <li>When other is same.
+   *   <li>Then return equal.
    * </ul>
-   * <p>
-   * Methods under test:
+   *
+   * <p>Methods under test:
+   *
    * <ul>
    *   <li>{@link Witness#equals(Object)}
    *   <li>{@link Witness#hashCode()}
@@ -153,12 +162,13 @@ public class WitnessDiffblueTest {
 
   /**
    * Test {@link Witness#equals(Object)}.
+   *
    * <ul>
-   *   <li>When other is different.</li>
-   *   <li>Then return not equal.</li>
+   *   <li>When other is different.
+   *   <li>Then return not equal.
    * </ul>
-   * <p>
-   * Method under test: {@link Witness#equals(Object)}
+   *
+   * <p>Method under test: {@link Witness#equals(Object)}
    */
   @Test
   @Category(MaintainedByDiffblue.class)
@@ -170,12 +180,13 @@ public class WitnessDiffblueTest {
 
   /**
    * Test {@link Witness#equals(Object)}.
+   *
    * <ul>
-   *   <li>When other is different.</li>
-   *   <li>Then return not equal.</li>
+   *   <li>When other is different.
+   *   <li>Then return not equal.
    * </ul>
-   * <p>
-   * Method under test: {@link Witness#equals(Object)}
+   *
+   * <p>Method under test: {@link Witness#equals(Object)}
    */
   @Test
   @Category(MaintainedByDiffblue.class)
@@ -191,12 +202,13 @@ public class WitnessDiffblueTest {
 
   /**
    * Test {@link Witness#equals(Object)}.
+   *
    * <ul>
-   *   <li>When other is different.</li>
-   *   <li>Then return not equal.</li>
+   *   <li>When other is different.
+   *   <li>Then return not equal.
    * </ul>
-   * <p>
-   * Method under test: {@link Witness#equals(Object)}
+   *
+   * <p>Method under test: {@link Witness#equals(Object)}
    */
   @Test
   @Category(MaintainedByDiffblue.class)
@@ -212,12 +224,13 @@ public class WitnessDiffblueTest {
 
   /**
    * Test {@link Witness#equals(Object)}.
+   *
    * <ul>
-   *   <li>When other is different.</li>
-   *   <li>Then return not equal.</li>
+   *   <li>When other is different.
+   *   <li>Then return not equal.
    * </ul>
-   * <p>
-   * Method under test: {@link Witness#equals(Object)}
+   *
+   * <p>Method under test: {@link Witness#equals(Object)}
    */
   @Test
   @Category(MaintainedByDiffblue.class)
@@ -233,12 +246,13 @@ public class WitnessDiffblueTest {
 
   /**
    * Test {@link Witness#equals(Object)}.
+   *
    * <ul>
-   *   <li>When other is different.</li>
-   *   <li>Then return not equal.</li>
+   *   <li>When other is different.
+   *   <li>Then return not equal.
    * </ul>
-   * <p>
-   * Method under test: {@link Witness#equals(Object)}
+   *
+   * <p>Method under test: {@link Witness#equals(Object)}
    */
   @Test
   @Category(MaintainedByDiffblue.class)
@@ -254,12 +268,13 @@ public class WitnessDiffblueTest {
 
   /**
    * Test {@link Witness#equals(Object)}.
+   *
    * <ul>
-   *   <li>When other is different.</li>
-   *   <li>Then return not equal.</li>
+   *   <li>When other is different.
+   *   <li>Then return not equal.
    * </ul>
-   * <p>
-   * Method under test: {@link Witness#equals(Object)}
+   *
+   * <p>Method under test: {@link Witness#equals(Object)}
    */
   @Test
   @Category(MaintainedByDiffblue.class)
@@ -267,6 +282,7 @@ public class WitnessDiffblueTest {
   public void testEquals_whenOtherIsDifferent_thenReturnNotEqual6() {
     // Arrange
     Witness ofResult = Witness.of();
+
     Witness ofResult2 = Witness.of();
     ofResult2.setAddress("42 Main St");
 
@@ -276,12 +292,13 @@ public class WitnessDiffblueTest {
 
   /**
    * Test {@link Witness#equals(Object)}.
+   *
    * <ul>
-   *   <li>When other is different.</li>
-   *   <li>Then return not equal.</li>
+   *   <li>When other is different.
+   *   <li>Then return not equal.
    * </ul>
-   * <p>
-   * Method under test: {@link Witness#equals(Object)}
+   *
+   * <p>Method under test: {@link Witness#equals(Object)}
    */
   @Test
   @Category(MaintainedByDiffblue.class)
@@ -289,6 +306,7 @@ public class WitnessDiffblueTest {
   public void testEquals_whenOtherIsDifferent_thenReturnNotEqual7() {
     // Arrange
     Witness ofResult = Witness.of();
+
     Witness ofResult2 = Witness.of();
     ofResult2.setPublicKey("Public Key");
 
@@ -298,12 +316,13 @@ public class WitnessDiffblueTest {
 
   /**
    * Test {@link Witness#equals(Object)}.
+   *
    * <ul>
-   *   <li>When other is different.</li>
-   *   <li>Then return not equal.</li>
+   *   <li>When other is different.
+   *   <li>Then return not equal.
    * </ul>
-   * <p>
-   * Method under test: {@link Witness#equals(Object)}
+   *
+   * <p>Method under test: {@link Witness#equals(Object)}
    */
   @Test
   @Category(MaintainedByDiffblue.class)
@@ -311,6 +330,7 @@ public class WitnessDiffblueTest {
   public void testEquals_whenOtherIsDifferent_thenReturnNotEqual8() {
     // Arrange
     Witness ofResult = Witness.of();
+
     Witness ofResult2 = Witness.of();
     ofResult2.setUrl("https://example.org/example");
 
@@ -320,12 +340,13 @@ public class WitnessDiffblueTest {
 
   /**
    * Test {@link Witness#equals(Object)}.
+   *
    * <ul>
-   *   <li>When other is {@code null}.</li>
-   *   <li>Then return not equal.</li>
+   *   <li>When other is {@code null}.
+   *   <li>Then return not equal.
    * </ul>
-   * <p>
-   * Method under test: {@link Witness#equals(Object)}
+   *
+   * <p>Method under test: {@link Witness#equals(Object)}
    */
   @Test
   @Category(MaintainedByDiffblue.class)
@@ -337,12 +358,13 @@ public class WitnessDiffblueTest {
 
   /**
    * Test {@link Witness#equals(Object)}.
+   *
    * <ul>
-   *   <li>When other is wrong type.</li>
-   *   <li>Then return not equal.</li>
+   *   <li>When other is wrong type.
+   *   <li>Then return not equal.
    * </ul>
-   * <p>
-   * Method under test: {@link Witness#equals(Object)}
+   *
+   * <p>Method under test: {@link Witness#equals(Object)}
    */
   @Test
   @Category(MaintainedByDiffblue.class)
@@ -354,8 +376,9 @@ public class WitnessDiffblueTest {
 
   /**
    * Test getters and setters.
-   * <p>
-   * Methods under test:
+   *
+   * <p>Methods under test:
+   *
    * <ul>
    *   <li>{@link Witness#setAddress(String)}
    *   <li>{@link Witness#setJobs(boolean)}
@@ -370,9 +393,17 @@ public class WitnessDiffblueTest {
    */
   @Test
   @Category(MaintainedByDiffblue.class)
-  @MethodsUnderTest({"String Witness.getAddress()", "String Witness.getPublicKey()", "String Witness.getUrl()",
-      "boolean Witness.isJobs()", "void Witness.setAddress(String)", "void Witness.setJobs(boolean)",
-      "void Witness.setPublicKey(String)", "void Witness.setUrl(String)", "String Witness.toString()"})
+  @MethodsUnderTest({
+    "String Witness.getAddress()",
+    "String Witness.getPublicKey()",
+    "String Witness.getUrl()",
+    "boolean Witness.isJobs()",
+    "void Witness.setAddress(String)",
+    "void Witness.setJobs(boolean)",
+    "void Witness.setPublicKey(String)",
+    "void Witness.setUrl(String)",
+    "String Witness.toString()"
+  })
   public void testGettersAndSetters() {
     // Arrange
     Witness ofResult = Witness.of();
@@ -390,7 +421,8 @@ public class WitnessDiffblueTest {
     // Assert
     assertEquals("42 Main St", actualAddress);
     assertEquals("Public Key", actualPublicKey);
-    assertEquals("Witness(address=42 Main St, publicKey=Public Key, url=https://example.org/example, jobs=true)",
+    assertEquals(
+        "Witness(address=42 Main St, publicKey=Public Key, url=https://example.org/example, jobs=true)",
         actualToStringResult);
     assertEquals("https://example.org/example", actualUrl);
     assertTrue(ofResult.isJobs());
@@ -398,8 +430,8 @@ public class WitnessDiffblueTest {
 
   /**
    * Test {@link Witness#of()}.
-   * <p>
-   * Method under test: {@link Witness#of()}
+   *
+   * <p>Method under test: {@link Witness#of()}
    */
   @Test
   @Category(MaintainedByDiffblue.class)

@@ -1,13 +1,14 @@
 package org.tron.common.entity;
 
 import static org.junit.Assert.assertEquals;
+import static org.junit.Assert.assertFalse;
 import static org.junit.Assert.assertSame;
 import static org.junit.Assert.assertTrue;
 import com.diffblue.cover.annotations.MaintainedByDiffblue;
 import com.diffblue.cover.annotations.MethodsUnderTest;
 import com.google.protobuf.DescriptorProtos;
 import com.google.protobuf.DescriptorProtos.FeatureSet;
-import com.google.protobuf.DescriptorProtos.FieldOptions;
+import com.google.protobuf.DescriptorProtos.FieldDescriptorProto;
 import com.google.protobuf.Descriptors;
 import com.google.protobuf.Descriptors.Descriptor;
 import com.google.protobuf.Descriptors.FieldDescriptor;
@@ -26,8 +27,9 @@ import org.tron.protos.Protocol;
 public class NodeInfoDiffblueTest {
   /**
    * Test ConfigNodeInfo getters and setters.
-   * <p>
-   * Methods under test:
+   *
+   * <p>Methods under test:
+   *
    * <ul>
    *   <li>default or parameterless constructor of {@link ConfigNodeInfo}
    *   <li>{@link ConfigNodeInfo#setActiveNodeSize(int)}
@@ -74,36 +76,57 @@ public class NodeInfoDiffblueTest {
    */
   @Test
   @Category(MaintainedByDiffblue.class)
-  @MethodsUnderTest({"void ConfigNodeInfo.<init>()", "int ConfigNodeInfo.getActiveNodeSize()",
-      "long ConfigNodeInfo.getAllowAdaptiveEnergy()", "long ConfigNodeInfo.getAllowCreationOfContracts()",
-      "int ConfigNodeInfo.getBackupListenPort()", "int ConfigNodeInfo.getBackupMemberSize()",
-      "int ConfigNodeInfo.getBackupPriority()", "String ConfigNodeInfo.getCodeVersion()",
-      "int ConfigNodeInfo.getDbVersion()", "int ConfigNodeInfo.getListenPort()",
-      "int ConfigNodeInfo.getMaxConnectCount()", "double ConfigNodeInfo.getMaxTimeRatio()",
-      "int ConfigNodeInfo.getMinParticipationRate()", "double ConfigNodeInfo.getMinTimeRatio()",
-      "String ConfigNodeInfo.getP2pVersion()", "int ConfigNodeInfo.getPassiveNodeSize()",
-      "int ConfigNodeInfo.getSameIpMaxConnectCount()", "int ConfigNodeInfo.getSendNodeSize()",
-      "String ConfigNodeInfo.getVersionNum()", "boolean ConfigNodeInfo.isDiscoverEnable()",
-      "boolean ConfigNodeInfo.isSupportConstant()", "ConfigNodeInfo ConfigNodeInfo.setActiveNodeSize(int)",
-      "ConfigNodeInfo ConfigNodeInfo.setAllowAdaptiveEnergy(long)",
-      "ConfigNodeInfo ConfigNodeInfo.setAllowCreationOfContracts(long)",
-      "ConfigNodeInfo ConfigNodeInfo.setBackupListenPort(int)",
-      "ConfigNodeInfo ConfigNodeInfo.setBackupMemberSize(int)", "ConfigNodeInfo ConfigNodeInfo.setBackupPriority(int)",
-      "ConfigNodeInfo ConfigNodeInfo.setCodeVersion(String)", "ConfigNodeInfo ConfigNodeInfo.setDbVersion(int)",
-      "ConfigNodeInfo ConfigNodeInfo.setDiscoverEnable(boolean)", "ConfigNodeInfo ConfigNodeInfo.setListenPort(int)",
-      "ConfigNodeInfo ConfigNodeInfo.setMaxConnectCount(int)", "ConfigNodeInfo ConfigNodeInfo.setMaxTimeRatio(double)",
-      "ConfigNodeInfo ConfigNodeInfo.setMinParticipationRate(int)",
-      "ConfigNodeInfo ConfigNodeInfo.setMinTimeRatio(double)", "ConfigNodeInfo ConfigNodeInfo.setP2pVersion(String)",
-      "ConfigNodeInfo ConfigNodeInfo.setPassiveNodeSize(int)",
-      "ConfigNodeInfo ConfigNodeInfo.setSameIpMaxConnectCount(int)",
-      "ConfigNodeInfo ConfigNodeInfo.setSendNodeSize(int)", "ConfigNodeInfo ConfigNodeInfo.setSupportConstant(boolean)",
-      "void ConfigNodeInfo.setVersionNum(String)"})
+  @MethodsUnderTest({
+    "void ConfigNodeInfo.<init>()",
+    "int ConfigNodeInfo.getActiveNodeSize()",
+    "long ConfigNodeInfo.getAllowAdaptiveEnergy()",
+    "long ConfigNodeInfo.getAllowCreationOfContracts()",
+    "int ConfigNodeInfo.getBackupListenPort()",
+    "int ConfigNodeInfo.getBackupMemberSize()",
+    "int ConfigNodeInfo.getBackupPriority()",
+    "String ConfigNodeInfo.getCodeVersion()",
+    "int ConfigNodeInfo.getDbVersion()",
+    "int ConfigNodeInfo.getListenPort()",
+    "int ConfigNodeInfo.getMaxConnectCount()",
+    "double ConfigNodeInfo.getMaxTimeRatio()",
+    "int ConfigNodeInfo.getMinParticipationRate()",
+    "double ConfigNodeInfo.getMinTimeRatio()",
+    "String ConfigNodeInfo.getP2pVersion()",
+    "int ConfigNodeInfo.getPassiveNodeSize()",
+    "int ConfigNodeInfo.getSameIpMaxConnectCount()",
+    "int ConfigNodeInfo.getSendNodeSize()",
+    "String ConfigNodeInfo.getVersionNum()",
+    "boolean ConfigNodeInfo.isDiscoverEnable()",
+    "boolean ConfigNodeInfo.isSupportConstant()",
+    "ConfigNodeInfo ConfigNodeInfo.setActiveNodeSize(int)",
+    "ConfigNodeInfo ConfigNodeInfo.setAllowAdaptiveEnergy(long)",
+    "ConfigNodeInfo ConfigNodeInfo.setAllowCreationOfContracts(long)",
+    "ConfigNodeInfo ConfigNodeInfo.setBackupListenPort(int)",
+    "ConfigNodeInfo ConfigNodeInfo.setBackupMemberSize(int)",
+    "ConfigNodeInfo ConfigNodeInfo.setBackupPriority(int)",
+    "ConfigNodeInfo ConfigNodeInfo.setCodeVersion(String)",
+    "ConfigNodeInfo ConfigNodeInfo.setDbVersion(int)",
+    "ConfigNodeInfo ConfigNodeInfo.setDiscoverEnable(boolean)",
+    "ConfigNodeInfo ConfigNodeInfo.setListenPort(int)",
+    "ConfigNodeInfo ConfigNodeInfo.setMaxConnectCount(int)",
+    "ConfigNodeInfo ConfigNodeInfo.setMaxTimeRatio(double)",
+    "ConfigNodeInfo ConfigNodeInfo.setMinParticipationRate(int)",
+    "ConfigNodeInfo ConfigNodeInfo.setMinTimeRatio(double)",
+    "ConfigNodeInfo ConfigNodeInfo.setP2pVersion(String)",
+    "ConfigNodeInfo ConfigNodeInfo.setPassiveNodeSize(int)",
+    "ConfigNodeInfo ConfigNodeInfo.setSameIpMaxConnectCount(int)",
+    "ConfigNodeInfo ConfigNodeInfo.setSendNodeSize(int)",
+    "ConfigNodeInfo ConfigNodeInfo.setSupportConstant(boolean)",
+    "void ConfigNodeInfo.setVersionNum(String)"
+  })
   public void testConfigNodeInfoGettersAndSetters() {
     // Arrange and Act
     ConfigNodeInfo actualConfigNodeInfo = new ConfigNodeInfo();
     ConfigNodeInfo actualSetActiveNodeSizeResult = actualConfigNodeInfo.setActiveNodeSize(3);
-    ConfigNodeInfo actualSetAllowAdaptiveEnergyResult = actualConfigNodeInfo.setAllowAdaptiveEnergy(1L);
-    ConfigNodeInfo actualSetAllowCreationOfContractsResult = actualConfigNodeInfo.setAllowCreationOfContracts(1L);
+    ConfigNodeInfo actualSetAllowAdaptiveEnergyResult =
+        actualConfigNodeInfo.setAllowAdaptiveEnergy(1L);
+    ConfigNodeInfo actualSetAllowCreationOfContractsResult =
+        actualConfigNodeInfo.setAllowCreationOfContracts(1L);
     ConfigNodeInfo actualSetBackupListenPortResult = actualConfigNodeInfo.setBackupListenPort(8080);
     ConfigNodeInfo actualSetBackupMemberSizeResult = actualConfigNodeInfo.setBackupMemberSize(3);
     ConfigNodeInfo actualSetBackupPriorityResult = actualConfigNodeInfo.setBackupPriority(1);
@@ -113,11 +136,13 @@ public class NodeInfoDiffblueTest {
     ConfigNodeInfo actualSetListenPortResult = actualConfigNodeInfo.setListenPort(8080);
     ConfigNodeInfo actualSetMaxConnectCountResult = actualConfigNodeInfo.setMaxConnectCount(3);
     ConfigNodeInfo actualSetMaxTimeRatioResult = actualConfigNodeInfo.setMaxTimeRatio(10.0d);
-    ConfigNodeInfo actualSetMinParticipationRateResult = actualConfigNodeInfo.setMinParticipationRate(1);
+    ConfigNodeInfo actualSetMinParticipationRateResult =
+        actualConfigNodeInfo.setMinParticipationRate(1);
     ConfigNodeInfo actualSetMinTimeRatioResult = actualConfigNodeInfo.setMinTimeRatio(10.0d);
     ConfigNodeInfo actualSetP2pVersionResult = actualConfigNodeInfo.setP2pVersion("1.0.2");
     ConfigNodeInfo actualSetPassiveNodeSizeResult = actualConfigNodeInfo.setPassiveNodeSize(3);
-    ConfigNodeInfo actualSetSameIpMaxConnectCountResult = actualConfigNodeInfo.setSameIpMaxConnectCount(3);
+    ConfigNodeInfo actualSetSameIpMaxConnectCountResult =
+        actualConfigNodeInfo.setSameIpMaxConnectCount(3);
     ConfigNodeInfo actualSetSendNodeSizeResult = actualConfigNodeInfo.setSendNodeSize(3);
     ConfigNodeInfo actualSetSupportConstantResult = actualConfigNodeInfo.setSupportConstant(true);
     actualConfigNodeInfo.setVersionNum("1.0.2");
@@ -185,47 +210,48 @@ public class NodeInfoDiffblueTest {
 
   /**
    * Test {@link NodeInfo#getPeerList()}.
-   * <p>
-   * Method under test: {@link NodeInfo#getPeerList()}
+   *
+   * <p>Method under test: {@link NodeInfo#getPeerList()}
    */
   @Test
   @Category(MaintainedByDiffblue.class)
   @MethodsUnderTest({"List NodeInfo.getPeerList()"})
   public void testGetPeerList() {
     // Arrange, Act and Assert
-    assertTrue((new NodeInfo()).getPeerList().isEmpty());
+    assertTrue(new NodeInfo().getPeerList().isEmpty());
   }
 
   /**
    * Test MachineInfo {@link MachineInfo#getDeadLockThreadInfoList()}.
-   * <p>
-   * Method under test: {@link MachineInfo#getDeadLockThreadInfoList()}
+   *
+   * <p>Method under test: {@link MachineInfo#getDeadLockThreadInfoList()}
    */
   @Test
   @Category(MaintainedByDiffblue.class)
   @MethodsUnderTest({"List MachineInfo.getDeadLockThreadInfoList()"})
   public void testMachineInfoGetDeadLockThreadInfoList() {
     // Arrange, Act and Assert
-    assertTrue((new MachineInfo()).getDeadLockThreadInfoList().isEmpty());
+    assertTrue(new MachineInfo().getDeadLockThreadInfoList().isEmpty());
   }
 
   /**
    * Test MachineInfo {@link MachineInfo#getMemoryDescInfoList()}.
-   * <p>
-   * Method under test: {@link MachineInfo#getMemoryDescInfoList()}
+   *
+   * <p>Method under test: {@link MachineInfo#getMemoryDescInfoList()}
    */
   @Test
   @Category(MaintainedByDiffblue.class)
   @MethodsUnderTest({"List MachineInfo.getMemoryDescInfoList()"})
   public void testMachineInfoGetMemoryDescInfoList() {
     // Arrange, Act and Assert
-    assertTrue((new MachineInfo()).getMemoryDescInfoList().isEmpty());
+    assertTrue(new MachineInfo().getMemoryDescInfoList().isEmpty());
   }
 
   /**
    * Test MachineInfo getters and setters.
-   * <p>
-   * Methods under test:
+   *
+   * <p>Methods under test:
+   *
    * <ul>
    *   <li>default or parameterless constructor of {@link MachineInfo}
    *   <li>{@link MachineInfo#setCpuCount(int)}
@@ -254,17 +280,31 @@ public class NodeInfoDiffblueTest {
    */
   @Test
   @Category(MaintainedByDiffblue.class)
-  @MethodsUnderTest({"void MachineInfo.<init>()", "int MachineInfo.getCpuCount()", "double MachineInfo.getCpuRate()",
-      "int MachineInfo.getDeadLockThreadCount()", "long MachineInfo.getFreeMemory()",
-      "String MachineInfo.getJavaVersion()", "long MachineInfo.getJvmFreeMemory()",
-      "long MachineInfo.getJvmTotalMemory()", "String MachineInfo.getOsName()",
-      "double MachineInfo.getProcessCpuRate()", "int MachineInfo.getThreadCount()", "long MachineInfo.getTotalMemory()",
-      "MachineInfo MachineInfo.setCpuCount(int)", "MachineInfo MachineInfo.setCpuRate(double)",
-      "MachineInfo MachineInfo.setDeadLockThreadCount(int)", "MachineInfo MachineInfo.setFreeMemory(long)",
-      "MachineInfo MachineInfo.setJavaVersion(String)", "MachineInfo MachineInfo.setJvmFreeMemory(long)",
-      "MachineInfo MachineInfo.setJvmTotalMemory(long)", "MachineInfo MachineInfo.setOsName(String)",
-      "MachineInfo MachineInfo.setProcessCpuRate(double)", "MachineInfo MachineInfo.setThreadCount(int)",
-      "MachineInfo MachineInfo.setTotalMemory(long)"})
+  @MethodsUnderTest({
+    "void MachineInfo.<init>()",
+    "int MachineInfo.getCpuCount()",
+    "double MachineInfo.getCpuRate()",
+    "int MachineInfo.getDeadLockThreadCount()",
+    "long MachineInfo.getFreeMemory()",
+    "String MachineInfo.getJavaVersion()",
+    "long MachineInfo.getJvmFreeMemory()",
+    "long MachineInfo.getJvmTotalMemory()",
+    "String MachineInfo.getOsName()",
+    "double MachineInfo.getProcessCpuRate()",
+    "int MachineInfo.getThreadCount()",
+    "long MachineInfo.getTotalMemory()",
+    "MachineInfo MachineInfo.setCpuCount(int)",
+    "MachineInfo MachineInfo.setCpuRate(double)",
+    "MachineInfo MachineInfo.setDeadLockThreadCount(int)",
+    "MachineInfo MachineInfo.setFreeMemory(long)",
+    "MachineInfo MachineInfo.setJavaVersion(String)",
+    "MachineInfo MachineInfo.setJvmFreeMemory(long)",
+    "MachineInfo MachineInfo.setJvmTotalMemory(long)",
+    "MachineInfo MachineInfo.setOsName(String)",
+    "MachineInfo MachineInfo.setProcessCpuRate(double)",
+    "MachineInfo MachineInfo.setThreadCount(int)",
+    "MachineInfo MachineInfo.setTotalMemory(long)"
+  })
   public void testMachineInfoGettersAndSetters() {
     // Arrange and Act
     MachineInfo actualMachineInfo = new MachineInfo();
@@ -317,8 +357,8 @@ public class NodeInfoDiffblueTest {
 
   /**
    * Test MachineInfo {@link MachineInfo#setDeadLockThreadInfoList(List)}.
-   * <p>
-   * Method under test: {@link MachineInfo#setDeadLockThreadInfoList(List)}
+   *
+   * <p>Method under test: {@link MachineInfo#setDeadLockThreadInfoList(List)}
    */
   @Test
   @Category(MaintainedByDiffblue.class)
@@ -340,8 +380,8 @@ public class NodeInfoDiffblueTest {
     deadLockThreadInfoList.add(deadLockThreadInfo);
 
     // Act and Assert
-    List<DeadLockThreadInfo> deadLockThreadInfoList2 = machineInfo.setDeadLockThreadInfoList(deadLockThreadInfoList)
-        .getDeadLockThreadInfoList();
+    List<DeadLockThreadInfo> deadLockThreadInfoList2 =
+        machineInfo.setDeadLockThreadInfoList(deadLockThreadInfoList).getDeadLockThreadInfoList();
     assertEquals(1, deadLockThreadInfoList2.size());
     DeadLockThreadInfo getResult = deadLockThreadInfoList2.get(0);
     assertEquals("Lock Name", getResult.getLockName());
@@ -355,8 +395,8 @@ public class NodeInfoDiffblueTest {
 
   /**
    * Test MachineInfo {@link MachineInfo#setDeadLockThreadInfoList(List)}.
-   * <p>
-   * Method under test: {@link MachineInfo#setDeadLockThreadInfoList(List)}
+   *
+   * <p>Method under test: {@link MachineInfo#setDeadLockThreadInfoList(List)}
    */
   @Test
   @Category(MaintainedByDiffblue.class)
@@ -388,8 +428,8 @@ public class NodeInfoDiffblueTest {
     deadLockThreadInfoList.add(deadLockThreadInfo);
 
     // Act and Assert
-    List<DeadLockThreadInfo> deadLockThreadInfoList2 = machineInfo.setDeadLockThreadInfoList(deadLockThreadInfoList)
-        .getDeadLockThreadInfoList();
+    List<DeadLockThreadInfo> deadLockThreadInfoList2 =
+        machineInfo.setDeadLockThreadInfoList(deadLockThreadInfoList).getDeadLockThreadInfoList();
     assertEquals(2, deadLockThreadInfoList2.size());
     DeadLockThreadInfo getResult = deadLockThreadInfoList2.get(0);
     assertEquals("42", getResult.getLockName());
@@ -404,12 +444,13 @@ public class NodeInfoDiffblueTest {
 
   /**
    * Test MachineInfo {@link MachineInfo#setDeadLockThreadInfoList(List)}.
+   *
    * <ul>
-   *   <li>When {@link ArrayList#ArrayList()}.</li>
-   *   <li>Then return {@link MachineInfo} (default constructor).</li>
+   *   <li>When {@link ArrayList#ArrayList()}.
+   *   <li>Then return {@link MachineInfo} (default constructor).
    * </ul>
-   * <p>
-   * Method under test: {@link MachineInfo#setDeadLockThreadInfoList(List)}
+   *
+   * <p>Method under test: {@link MachineInfo#setDeadLockThreadInfoList(List)}
    */
   @Test
   @Category(MaintainedByDiffblue.class)
@@ -418,17 +459,22 @@ public class NodeInfoDiffblueTest {
     // Arrange
     MachineInfo machineInfo = new MachineInfo();
 
-    // Act and Assert
-    assertSame(machineInfo, machineInfo.setDeadLockThreadInfoList(new ArrayList<>()));
+    // Act
+    MachineInfo actualSetDeadLockThreadInfoListResult =
+        machineInfo.setDeadLockThreadInfoList(new ArrayList<>());
+
+    // Assert
+    assertSame(machineInfo, actualSetDeadLockThreadInfoListResult);
   }
 
   /**
    * Test MachineInfo {@link MachineInfo#setMemoryDescInfoList(List)}.
+   *
    * <ul>
-   *   <li>Then return MemoryDescInfoList size is one.</li>
+   *   <li>Then return MemoryDescInfoList size is one.
    * </ul>
-   * <p>
-   * Method under test: {@link MachineInfo#setMemoryDescInfoList(List)}
+   *
+   * <p>Method under test: {@link MachineInfo#setMemoryDescInfoList(List)}
    */
   @Test
   @Category(MaintainedByDiffblue.class)
@@ -448,8 +494,8 @@ public class NodeInfoDiffblueTest {
     memoryDescInfoList.add(memoryDescInfo);
 
     // Act and Assert
-    List<MemoryDescInfo> memoryDescInfoList2 = machineInfo.setMemoryDescInfoList(memoryDescInfoList)
-        .getMemoryDescInfoList();
+    List<MemoryDescInfo> memoryDescInfoList2 =
+        machineInfo.setMemoryDescInfoList(memoryDescInfoList).getMemoryDescInfoList();
     assertEquals(1, memoryDescInfoList2.size());
     MemoryDescInfo getResult = memoryDescInfoList2.get(0);
     assertEquals("Name", getResult.getName());
@@ -461,11 +507,12 @@ public class NodeInfoDiffblueTest {
 
   /**
    * Test MachineInfo {@link MachineInfo#setMemoryDescInfoList(List)}.
+   *
    * <ul>
-   *   <li>Then return MemoryDescInfoList size is two.</li>
+   *   <li>Then return MemoryDescInfoList size is two.
    * </ul>
-   * <p>
-   * Method under test: {@link MachineInfo#setMemoryDescInfoList(List)}
+   *
+   * <p>Method under test: {@link MachineInfo#setMemoryDescInfoList(List)}
    */
   @Test
   @Category(MaintainedByDiffblue.class)
@@ -493,8 +540,8 @@ public class NodeInfoDiffblueTest {
     memoryDescInfoList.add(memoryDescInfo);
 
     // Act and Assert
-    List<MemoryDescInfo> memoryDescInfoList2 = machineInfo.setMemoryDescInfoList(memoryDescInfoList)
-        .getMemoryDescInfoList();
+    List<MemoryDescInfo> memoryDescInfoList2 =
+        machineInfo.setMemoryDescInfoList(memoryDescInfoList).getMemoryDescInfoList();
     assertEquals(2, memoryDescInfoList2.size());
     MemoryDescInfo getResult = memoryDescInfoList2.get(0);
     assertEquals("42", getResult.getName());
@@ -507,12 +554,13 @@ public class NodeInfoDiffblueTest {
 
   /**
    * Test MachineInfo {@link MachineInfo#setMemoryDescInfoList(List)}.
+   *
    * <ul>
-   *   <li>When {@link ArrayList#ArrayList()}.</li>
-   *   <li>Then return {@link MachineInfo} (default constructor).</li>
+   *   <li>When {@link ArrayList#ArrayList()}.
+   *   <li>Then return {@link MachineInfo} (default constructor).
    * </ul>
-   * <p>
-   * Method under test: {@link MachineInfo#setMemoryDescInfoList(List)}
+   *
+   * <p>Method under test: {@link MachineInfo#setMemoryDescInfoList(List)}
    */
   @Test
   @Category(MaintainedByDiffblue.class)
@@ -521,14 +569,19 @@ public class NodeInfoDiffblueTest {
     // Arrange
     MachineInfo machineInfo = new MachineInfo();
 
-    // Act and Assert
-    assertSame(machineInfo, machineInfo.setMemoryDescInfoList(new ArrayList<>()));
+    // Act
+    MachineInfo actualSetMemoryDescInfoListResult =
+        machineInfo.setMemoryDescInfoList(new ArrayList<>());
+
+    // Assert
+    assertSame(machineInfo, actualSetMemoryDescInfoListResult);
   }
 
   /**
    * Test MachineInfo_DeadLockThreadInfo getters and setters.
-   * <p>
-   * Methods under test:
+   *
+   * <p>Methods under test:
+   *
    * <ul>
    *   <li>default or parameterless constructor of {@link MachineInfo.DeadLockThreadInfo}
    *   <li>{@link MachineInfo.DeadLockThreadInfo#setBlockTime(long)}
@@ -549,26 +602,33 @@ public class NodeInfoDiffblueTest {
    */
   @Test
   @Category(MaintainedByDiffblue.class)
-  @MethodsUnderTest({"void MachineInfo.DeadLockThreadInfo.<init>()",
-      "long MachineInfo.DeadLockThreadInfo.getBlockTime()", "String MachineInfo.DeadLockThreadInfo.getLockName()",
-      "String MachineInfo.DeadLockThreadInfo.getLockOwner()", "String MachineInfo.DeadLockThreadInfo.getName()",
-      "String MachineInfo.DeadLockThreadInfo.getStackTrace()", "String MachineInfo.DeadLockThreadInfo.getState()",
-      "long MachineInfo.DeadLockThreadInfo.getWaitTime()",
-      "MachineInfo.DeadLockThreadInfo MachineInfo.DeadLockThreadInfo.setBlockTime(long)",
-      "MachineInfo.DeadLockThreadInfo MachineInfo.DeadLockThreadInfo.setLockName(String)",
-      "MachineInfo.DeadLockThreadInfo MachineInfo.DeadLockThreadInfo.setLockOwner(String)",
-      "MachineInfo.DeadLockThreadInfo MachineInfo.DeadLockThreadInfo.setName(String)",
-      "MachineInfo.DeadLockThreadInfo MachineInfo.DeadLockThreadInfo.setStackTrace(String)",
-      "MachineInfo.DeadLockThreadInfo MachineInfo.DeadLockThreadInfo.setState(String)",
-      "MachineInfo.DeadLockThreadInfo MachineInfo.DeadLockThreadInfo.setWaitTime(long)"})
+  @MethodsUnderTest({
+    "void MachineInfo.DeadLockThreadInfo.<init>()",
+    "long MachineInfo.DeadLockThreadInfo.getBlockTime()",
+    "String MachineInfo.DeadLockThreadInfo.getLockName()",
+    "String MachineInfo.DeadLockThreadInfo.getLockOwner()",
+    "String MachineInfo.DeadLockThreadInfo.getName()",
+    "String MachineInfo.DeadLockThreadInfo.getStackTrace()",
+    "String MachineInfo.DeadLockThreadInfo.getState()",
+    "long MachineInfo.DeadLockThreadInfo.getWaitTime()",
+    "MachineInfo.DeadLockThreadInfo MachineInfo.DeadLockThreadInfo.setBlockTime(long)",
+    "MachineInfo.DeadLockThreadInfo MachineInfo.DeadLockThreadInfo.setLockName(String)",
+    "MachineInfo.DeadLockThreadInfo MachineInfo.DeadLockThreadInfo.setLockOwner(String)",
+    "MachineInfo.DeadLockThreadInfo MachineInfo.DeadLockThreadInfo.setName(String)",
+    "MachineInfo.DeadLockThreadInfo MachineInfo.DeadLockThreadInfo.setStackTrace(String)",
+    "MachineInfo.DeadLockThreadInfo MachineInfo.DeadLockThreadInfo.setState(String)",
+    "MachineInfo.DeadLockThreadInfo MachineInfo.DeadLockThreadInfo.setWaitTime(long)"
+  })
   public void testMachineInfo_DeadLockThreadInfoGettersAndSetters() {
     // Arrange and Act
     DeadLockThreadInfo actualDeadLockThreadInfo = new DeadLockThreadInfo();
     DeadLockThreadInfo actualSetBlockTimeResult = actualDeadLockThreadInfo.setBlockTime(1L);
     DeadLockThreadInfo actualSetLockNameResult = actualDeadLockThreadInfo.setLockName("Lock Name");
-    DeadLockThreadInfo actualSetLockOwnerResult = actualDeadLockThreadInfo.setLockOwner("Lock Owner");
+    DeadLockThreadInfo actualSetLockOwnerResult =
+        actualDeadLockThreadInfo.setLockOwner("Lock Owner");
     DeadLockThreadInfo actualSetNameResult = actualDeadLockThreadInfo.setName("Name");
-    DeadLockThreadInfo actualSetStackTraceResult = actualDeadLockThreadInfo.setStackTrace("Stack Trace");
+    DeadLockThreadInfo actualSetStackTraceResult =
+        actualDeadLockThreadInfo.setStackTrace("Stack Trace");
     DeadLockThreadInfo actualSetStateResult = actualDeadLockThreadInfo.setState("MD");
     DeadLockThreadInfo actualSetWaitTimeResult = actualDeadLockThreadInfo.setWaitTime(1L);
     long actualBlockTime = actualDeadLockThreadInfo.getBlockTime();
@@ -597,8 +657,9 @@ public class NodeInfoDiffblueTest {
 
   /**
    * Test MachineInfo_MemoryDescInfo getters and setters.
-   * <p>
-   * Methods under test:
+   *
+   * <p>Methods under test:
+   *
    * <ul>
    *   <li>default or parameterless constructor of {@link MachineInfo.MemoryDescInfo}
    *   <li>{@link MachineInfo.MemoryDescInfo#setInitSize(long)}
@@ -615,14 +676,19 @@ public class NodeInfoDiffblueTest {
    */
   @Test
   @Category(MaintainedByDiffblue.class)
-  @MethodsUnderTest({"void MachineInfo.MemoryDescInfo.<init>()", "long MachineInfo.MemoryDescInfo.getInitSize()",
-      "long MachineInfo.MemoryDescInfo.getMaxSize()", "String MachineInfo.MemoryDescInfo.getName()",
-      "double MachineInfo.MemoryDescInfo.getUseRate()", "long MachineInfo.MemoryDescInfo.getUseSize()",
-      "MachineInfo.MemoryDescInfo MachineInfo.MemoryDescInfo.setInitSize(long)",
-      "MachineInfo.MemoryDescInfo MachineInfo.MemoryDescInfo.setMaxSize(long)",
-      "MachineInfo.MemoryDescInfo MachineInfo.MemoryDescInfo.setName(String)",
-      "MachineInfo.MemoryDescInfo MachineInfo.MemoryDescInfo.setUseRate(double)",
-      "MachineInfo.MemoryDescInfo MachineInfo.MemoryDescInfo.setUseSize(long)"})
+  @MethodsUnderTest({
+    "void MachineInfo.MemoryDescInfo.<init>()",
+    "long MachineInfo.MemoryDescInfo.getInitSize()",
+    "long MachineInfo.MemoryDescInfo.getMaxSize()",
+    "String MachineInfo.MemoryDescInfo.getName()",
+    "double MachineInfo.MemoryDescInfo.getUseRate()",
+    "long MachineInfo.MemoryDescInfo.getUseSize()",
+    "MachineInfo.MemoryDescInfo MachineInfo.MemoryDescInfo.setInitSize(long)",
+    "MachineInfo.MemoryDescInfo MachineInfo.MemoryDescInfo.setMaxSize(long)",
+    "MachineInfo.MemoryDescInfo MachineInfo.MemoryDescInfo.setName(String)",
+    "MachineInfo.MemoryDescInfo MachineInfo.MemoryDescInfo.setUseRate(double)",
+    "MachineInfo.MemoryDescInfo MachineInfo.MemoryDescInfo.setUseSize(long)"
+  })
   public void testMachineInfo_MemoryDescInfoGettersAndSetters() {
     // Arrange and Act
     MemoryDescInfo actualMemoryDescInfo = new MemoryDescInfo();
@@ -651,12 +717,13 @@ public class NodeInfoDiffblueTest {
 
   /**
    * Test {@link NodeInfo#setPeerList(List)}.
+   *
    * <ul>
-   *   <li>Given {@link PeerInfo} (default constructor) Active is {@code false}.</li>
-   *   <li>Then return PeerList size is two.</li>
+   *   <li>Given {@link PeerInfo} (default constructor) Active is {@code false}.
+   *   <li>Then return PeerList size is two.
    * </ul>
-   * <p>
-   * Method under test: {@link NodeInfo#setPeerList(List)}
+   *
+   * <p>Method under test: {@link NodeInfo#setPeerList(List)}
    */
   @Test
   @Category(MaintainedByDiffblue.class)
@@ -731,12 +798,13 @@ public class NodeInfoDiffblueTest {
 
   /**
    * Test {@link NodeInfo#setPeerList(List)}.
+   *
    * <ul>
-   *   <li>Given {@link PeerInfo} (default constructor) Active is {@code true}.</li>
-   *   <li>Then return PeerList size is one.</li>
+   *   <li>Given {@link PeerInfo} (default constructor) Active is {@code true}.
+   *   <li>Then return PeerList size is one.
    * </ul>
-   * <p>
-   * Method under test: {@link NodeInfo#setPeerList(List)}
+   *
+   * <p>Method under test: {@link NodeInfo#setPeerList(List)}
    */
   @Test
   @Category(MaintainedByDiffblue.class)
@@ -781,12 +849,13 @@ public class NodeInfoDiffblueTest {
 
   /**
    * Test {@link NodeInfo#setPeerList(List)}.
+   *
    * <ul>
-   *   <li>When {@link ArrayList#ArrayList()}.</li>
-   *   <li>Then return {@link NodeInfo} (default constructor).</li>
+   *   <li>When {@link ArrayList#ArrayList()}.
+   *   <li>Then return {@link NodeInfo} (default constructor).
    * </ul>
-   * <p>
-   * Method under test: {@link NodeInfo#setPeerList(List)}
+   *
+   * <p>Method under test: {@link NodeInfo#setPeerList(List)}
    */
   @Test
   @Category(MaintainedByDiffblue.class)
@@ -795,14 +864,17 @@ public class NodeInfoDiffblueTest {
     // Arrange
     NodeInfo nodeInfo = new NodeInfo();
 
-    // Act and Assert
-    assertSame(nodeInfo, nodeInfo.setPeerList(new ArrayList<>()));
+    // Act
+    NodeInfo actualSetPeerListResult = nodeInfo.setPeerList(new ArrayList<>());
+
+    // Assert
+    assertSame(nodeInfo, actualSetPeerListResult);
   }
 
   /**
    * Test {@link NodeInfo#transferToProtoEntity()}.
-   * <p>
-   * Method under test: {@link NodeInfo#transferToProtoEntity()}
+   *
+   * <p>Method under test: {@link NodeInfo#transferToProtoEntity()}
    */
   @Test
   @Category(MaintainedByDiffblue.class)
@@ -846,8 +918,8 @@ public class NodeInfoDiffblueTest {
 
     // Assert
     Protocol.NodeInfo.MachineInfo machineInfo2 = actualTransferToProtoEntityResult.getMachineInfo();
-    List<Protocol.NodeInfo.MachineInfo.DeadLockThreadInfo> deadLockThreadInfoListList = machineInfo2
-        .getDeadLockThreadInfoListList();
+    List<Protocol.NodeInfo.MachineInfo.DeadLockThreadInfo> deadLockThreadInfoListList =
+        machineInfo2.getDeadLockThreadInfoListList();
     assertEquals(1, deadLockThreadInfoListList.size());
     Protocol.NodeInfo.MachineInfo.DeadLockThreadInfo getResult = deadLockThreadInfoListList.get(0);
     assertEquals("Lock Name", getResult.getLockName());
@@ -865,8 +937,8 @@ public class NodeInfoDiffblueTest {
 
   /**
    * Test {@link NodeInfo#transferToProtoEntity()}.
-   * <p>
-   * Method under test: {@link NodeInfo#transferToProtoEntity()}
+   *
+   * <p>Method under test: {@link NodeInfo#transferToProtoEntity()}
    */
   @Test
   @Category(MaintainedByDiffblue.class)
@@ -928,11 +1000,12 @@ public class NodeInfoDiffblueTest {
 
   /**
    * Test {@link NodeInfo#transferToProtoEntity()}.
+   *
    * <ul>
-   *   <li>Given {@link ConfigNodeInfo} (default constructor) ActiveNodeSize is two.</li>
+   *   <li>Given {@link ConfigNodeInfo} (default constructor) ActiveNodeSize is two.
    * </ul>
-   * <p>
-   * Method under test: {@link NodeInfo#transferToProtoEntity()}
+   *
+   * <p>Method under test: {@link NodeInfo#transferToProtoEntity()}
    */
   @Test
   @Category(MaintainedByDiffblue.class)
@@ -976,23 +1049,23 @@ public class NodeInfoDiffblueTest {
 
   /**
    * Test {@link NodeInfo#transferToProtoEntity()}.
+   *
    * <ul>
-   *   <li>Then return DescriptorForType NestedTypes size is four.</li>
+   *   <li>Then return DescriptorForType Fields size is eleven.
    * </ul>
-   * <p>
-   * Method under test: {@link NodeInfo#transferToProtoEntity()}
+   *
+   * <p>Method under test: {@link NodeInfo#transferToProtoEntity()}
    */
   @Test
   @Category(MaintainedByDiffblue.class)
   @MethodsUnderTest({"Protocol.NodeInfo NodeInfo.transferToProtoEntity()"})
-  public void testTransferToProtoEntity_thenReturnDescriptorForTypeNestedTypesSizeIsFour() {
+  public void testTransferToProtoEntity_thenReturnDescriptorForTypeFieldsSizeIsEleven() {
     // Arrange
     MachineInfo machineInfo = new MachineInfo();
     machineInfo.setCpuCount(3);
     machineInfo.setCpuRate(10.0d);
     machineInfo.setDeadLockThreadCount(3);
-    ArrayList<DeadLockThreadInfo> deadLockThreadInfoList = new ArrayList<>();
-    machineInfo.setDeadLockThreadInfoList(deadLockThreadInfoList);
+    machineInfo.setDeadLockThreadInfoList(new ArrayList<>());
     machineInfo.setFreeMemory(2L);
     machineInfo.setJavaVersion("1.0.2");
     machineInfo.setJvmFreeMemory(2L);
@@ -1012,22 +1085,26 @@ public class NodeInfoDiffblueTest {
     Protocol.NodeInfo actualTransferToProtoEntityResult = nodeInfo.transferToProtoEntity();
 
     // Assert
+    List<FieldDescriptor> fields =
+        actualTransferToProtoEntityResult.getDescriptorForType().getFields();
+    assertEquals(11, fields.size());
     Protocol.NodeInfo.MachineInfo machineInfo2 = actualTransferToProtoEntityResult.getMachineInfo();
     assertEquals(11, machineInfo2.getAllFields().size());
-    Descriptor descriptorForType = actualTransferToProtoEntityResult.getDescriptorForType();
-    assertEquals(4, descriptorForType.getNestedTypes().size());
     assertEquals(48, machineInfo2.getSerializedSize());
     assertEquals(50, actualTransferToProtoEntityResult.getSerializedSize());
-    assertEquals(deadLockThreadInfoList, descriptorForType.toProto().getReservedNameList());
+    FieldDescriptorProto toProtoResult = fields.get(1).toProto();
+    assertFalse(toProtoResult.hasOneofIndex());
+    assertFalse(toProtoResult.hasOptions());
   }
 
   /**
    * Test {@link NodeInfo#transferToProtoEntity()}.
+   *
    * <ul>
-   *   <li>Then return MachineInfo CpuCount is two.</li>
+   *   <li>Then return MachineInfo CpuCount is two.
    * </ul>
-   * <p>
-   * Method under test: {@link NodeInfo#transferToProtoEntity()}
+   *
+   * <p>Method under test: {@link NodeInfo#transferToProtoEntity()}
    */
   @Test
   @Category(MaintainedByDiffblue.class)
@@ -1067,11 +1144,12 @@ public class NodeInfoDiffblueTest {
 
   /**
    * Test {@link NodeInfo#transferToProtoEntity()}.
+   *
    * <ul>
-   *   <li>Then return MachineInfo MemoryDescInfoListList size is one.</li>
+   *   <li>Then return MachineInfo MemoryDescInfoListList size is one.
    * </ul>
-   * <p>
-   * Method under test: {@link NodeInfo#transferToProtoEntity()}
+   *
+   * <p>Method under test: {@link NodeInfo#transferToProtoEntity()}
    */
   @Test
   @Category(MaintainedByDiffblue.class)
@@ -1113,8 +1191,8 @@ public class NodeInfoDiffblueTest {
 
     // Assert
     Protocol.NodeInfo.MachineInfo machineInfo2 = actualTransferToProtoEntityResult.getMachineInfo();
-    List<Protocol.NodeInfo.MachineInfo.MemoryDescInfo> memoryDescInfoListList = machineInfo2
-        .getMemoryDescInfoListList();
+    List<Protocol.NodeInfo.MachineInfo.MemoryDescInfo> memoryDescInfoListList =
+        machineInfo2.getMemoryDescInfoListList();
     assertEquals(1, memoryDescInfoListList.size());
     Protocol.NodeInfo.MachineInfo.MemoryDescInfo getResult = memoryDescInfoListList.get(0);
     assertEquals("Name", getResult.getName());
@@ -1130,11 +1208,12 @@ public class NodeInfoDiffblueTest {
 
   /**
    * Test {@link NodeInfo#transferToProtoEntity()}.
+   *
    * <ul>
-   *   <li>Then return MachineInfo MemoryDescInfoListList size is two.</li>
+   *   <li>Then return MachineInfo MemoryDescInfoListList size is two.
    * </ul>
-   * <p>
-   * Method under test: {@link NodeInfo#transferToProtoEntity()}
+   *
+   * <p>Method under test: {@link NodeInfo#transferToProtoEntity()}
    */
   @Test
   @Category(MaintainedByDiffblue.class)
@@ -1192,11 +1271,12 @@ public class NodeInfoDiffblueTest {
 
   /**
    * Test {@link NodeInfo#transferToProtoEntity()}.
+   *
    * <ul>
-   *   <li>Then return SerializedSize is seventy.</li>
+   *   <li>Then return SerializedSize is seventy.
    * </ul>
-   * <p>
-   * Method under test: {@link NodeInfo#transferToProtoEntity()}
+   *
+   * <p>Method under test: {@link NodeInfo#transferToProtoEntity()}
    */
   @Test
   @Category(MaintainedByDiffblue.class)
@@ -1240,11 +1320,12 @@ public class NodeInfoDiffblueTest {
 
   /**
    * Test {@link NodeInfo#transferToProtoEntity()}.
+   *
    * <ul>
-   *   <li>Then return SerializedSize is zero.</li>
+   *   <li>Then return SerializedSize is zero.
    * </ul>
-   * <p>
-   * Method under test: {@link NodeInfo#transferToProtoEntity()}
+   *
+   * <p>Method under test: {@link NodeInfo#transferToProtoEntity()}
    */
   @Test
   @Category(MaintainedByDiffblue.class)
@@ -1260,25 +1341,23 @@ public class NodeInfoDiffblueTest {
 
     // Assert
     assertEquals(0, actualTransferToProtoEntityResult.getSerializedSize());
-    Descriptor descriptorForType = actualTransferToProtoEntityResult.getDescriptorForType();
-    List<FieldDescriptor> fields = descriptorForType.getFields();
-    assertEquals(11, fields.size());
     Map<FieldDescriptor, Object> allFields = actualTransferToProtoEntityResult.getAllFields();
     assertTrue(allFields.isEmpty());
+    Descriptor descriptorForType = actualTransferToProtoEntityResult.getDescriptorForType();
     assertEquals(allFields, descriptorForType.toProto().getDefaultInstanceForType().getAllFields());
     FeatureSet features = descriptorForType.getOptions().getFeatures();
     assertEquals(allFields, features.getAllFields());
-    FieldOptions options = fields.get(0).getOptions();
-    assertEquals(allFields, options.getAllFields());
     assertEquals(allFields, features.getAllFieldsRaw());
-    assertEquals(allFields, options.getAllFieldsRaw());
-    assertEquals(actualTransferToProtoEntityResult, actualTransferToProtoEntityResult.getDefaultInstanceForType());
+    Protocol.NodeInfo actualDefaultInstanceForType =
+        actualTransferToProtoEntityResult.getDefaultInstanceForType();
+    assertEquals(actualTransferToProtoEntityResult, actualDefaultInstanceForType);
   }
 
   /**
    * Test getters and setters.
-   * <p>
-   * Methods under test:
+   *
+   * <p>Methods under test:
+   *
    * <ul>
    *   <li>default or parameterless constructor of {@link NodeInfo}
    *   <li>{@link NodeInfo#setActiveConnectCount(int)}
@@ -1305,16 +1384,29 @@ public class NodeInfoDiffblueTest {
    */
   @Test
   @Category(MaintainedByDiffblue.class)
-  @MethodsUnderTest({"void NodeInfo.<init>()", "int NodeInfo.getActiveConnectCount()",
-      "long NodeInfo.getBeginSyncNum()", "String NodeInfo.getBlock()", "Map NodeInfo.getCheatWitnessInfoMap()",
-      "ConfigNodeInfo NodeInfo.getConfigNodeInfo()", "int NodeInfo.getCurrentConnectCount()",
-      "MachineInfo NodeInfo.getMachineInfo()", "int NodeInfo.getPassiveConnectCount()",
-      "String NodeInfo.getSolidityBlock()", "long NodeInfo.getTotalFlow()",
-      "NodeInfo NodeInfo.setActiveConnectCount(int)", "NodeInfo NodeInfo.setBeginSyncNum(long)",
-      "NodeInfo NodeInfo.setBlock(String)", "NodeInfo NodeInfo.setCheatWitnessInfoMap(Map)",
-      "NodeInfo NodeInfo.setConfigNodeInfo(ConfigNodeInfo)", "NodeInfo NodeInfo.setCurrentConnectCount(int)",
-      "NodeInfo NodeInfo.setMachineInfo(MachineInfo)", "NodeInfo NodeInfo.setPassiveConnectCount(int)",
-      "NodeInfo NodeInfo.setSolidityBlock(String)", "NodeInfo NodeInfo.setTotalFlow(long)"})
+  @MethodsUnderTest({
+    "void NodeInfo.<init>()",
+    "int NodeInfo.getActiveConnectCount()",
+    "long NodeInfo.getBeginSyncNum()",
+    "String NodeInfo.getBlock()",
+    "Map NodeInfo.getCheatWitnessInfoMap()",
+    "ConfigNodeInfo NodeInfo.getConfigNodeInfo()",
+    "int NodeInfo.getCurrentConnectCount()",
+    "MachineInfo NodeInfo.getMachineInfo()",
+    "int NodeInfo.getPassiveConnectCount()",
+    "String NodeInfo.getSolidityBlock()",
+    "long NodeInfo.getTotalFlow()",
+    "NodeInfo NodeInfo.setActiveConnectCount(int)",
+    "NodeInfo NodeInfo.setBeginSyncNum(long)",
+    "NodeInfo NodeInfo.setBlock(String)",
+    "NodeInfo NodeInfo.setCheatWitnessInfoMap(Map)",
+    "NodeInfo NodeInfo.setConfigNodeInfo(ConfigNodeInfo)",
+    "NodeInfo NodeInfo.setCurrentConnectCount(int)",
+    "NodeInfo NodeInfo.setMachineInfo(MachineInfo)",
+    "NodeInfo NodeInfo.setPassiveConnectCount(int)",
+    "NodeInfo NodeInfo.setSolidityBlock(String)",
+    "NodeInfo NodeInfo.setTotalFlow(long)"
+  })
   public void testGettersAndSetters() {
     // Arrange and Act
     NodeInfo actualNodeInfo = new NodeInfo();
@@ -1322,7 +1414,8 @@ public class NodeInfoDiffblueTest {
     NodeInfo actualSetBeginSyncNumResult = actualNodeInfo.setBeginSyncNum(1L);
     NodeInfo actualSetBlockResult = actualNodeInfo.setBlock("Block");
     HashMap<String, String> cheatWitnessInfoMap = new HashMap<>();
-    NodeInfo actualSetCheatWitnessInfoMapResult = actualNodeInfo.setCheatWitnessInfoMap(cheatWitnessInfoMap);
+    NodeInfo actualSetCheatWitnessInfoMapResult =
+        actualNodeInfo.setCheatWitnessInfoMap(cheatWitnessInfoMap);
     ConfigNodeInfo configNodeInfo = new ConfigNodeInfo();
     configNodeInfo.setActiveNodeSize(3);
     configNodeInfo.setAllowAdaptiveEnergy(1L);

@@ -10,8 +10,9 @@ import org.junit.experimental.categories.Category;
 public class WriteOptionsWrapperDiffblueTest {
   /**
    * Test getters and setters.
-   * <p>
-   * Methods under test:
+   *
+   * <p>Methods under test:
+   *
    * <ul>
    *   <li>default or parameterless constructor of {@link WriteOptionsWrapper}
    *   <li>{@link WriteOptionsWrapper#getLevel()}
@@ -20,8 +21,11 @@ public class WriteOptionsWrapperDiffblueTest {
    */
   @Test
   @Category(MaintainedByDiffblue.class)
-  @MethodsUnderTest({"void WriteOptionsWrapper.<init>()", "WriteOptions WriteOptionsWrapper.getLevel()",
-      "org.rocksdb.WriteOptions WriteOptionsWrapper.getRocks()"})
+  @MethodsUnderTest({
+    "void WriteOptionsWrapper.<init>()",
+    "WriteOptions WriteOptionsWrapper.getLevel()",
+    "org.rocksdb.WriteOptions WriteOptionsWrapper.getRocks()"
+  })
   public void testGettersAndSetters() {
     // Arrange and Act
     WriteOptionsWrapper actualWriteOptionsWrapper = new WriteOptionsWrapper();

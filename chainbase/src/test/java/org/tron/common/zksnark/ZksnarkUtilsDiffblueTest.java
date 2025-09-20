@@ -10,8 +10,8 @@ import org.junit.experimental.categories.Category;
 public class ZksnarkUtilsDiffblueTest {
   /**
    * Test {@link ZksnarkUtils#sort(byte[])}.
-   * <p>
-   * Method under test: {@link ZksnarkUtils#sort(byte[])}
+   *
+   * <p>Method under test: {@link ZksnarkUtils#sort(byte[])}
    */
   @Test
   @Category(MaintainedByDiffblue.class)

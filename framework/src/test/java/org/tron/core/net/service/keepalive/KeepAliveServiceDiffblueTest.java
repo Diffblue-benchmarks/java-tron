@@ -19,22 +19,24 @@ import org.tron.core.net.peer.PeerConnection;
 public class KeepAliveServiceDiffblueTest {
   /**
    * Test {@link KeepAliveService#processMessage(PeerConnection, TronMessage)}.
+   *
    * <ul>
-   *   <li>Given {@code FIRST}.</li>
-   *   <li>When {@link PeerConnection}.</li>
-   *   <li>Then calls {@link Message#getType()}.</li>
+   *   <li>Given {@code FIRST}.
+   *   <li>When {@link PingMessage} {@link PingMessage#getType()} return {@code FIRST}.
+   *   <li>Then calls {@link PingMessage#getType()}.
    * </ul>
-   * <p>
-   * Method under test: {@link KeepAliveService#processMessage(PeerConnection, TronMessage)}
+   *
+   * <p>Method under test: {@link KeepAliveService#processMessage(PeerConnection, TronMessage)}
    */
   @Test
   @Category(MaintainedByDiffblue.class)
   @MethodsUnderTest({"void KeepAliveService.processMessage(PeerConnection, TronMessage)"})
-  public void testProcessMessage_givenFirst_whenPeerConnection_thenCallsGetType() {
+  public void testProcessMessage_givenFirst_whenPingMessageGetTypeReturnFirst_thenCallsGetType() {
     // Arrange
     KeepAliveService keepAliveService = new KeepAliveService();
-    PeerConnection peer = mock(PeerConnection.class);
-    TronMessage message = mock(TronMessage.class);
+    PeerConnection peer = new PeerConnection();
+
+    PingMessage message = mock(PingMessage.class);
     when(message.getType()).thenReturn(MessageTypes.FIRST);
 
     // Act
@@ -46,26 +48,32 @@ public class KeepAliveServiceDiffblueTest {
 
   /**
    * Test {@link KeepAliveService#processMessage(PeerConnection, TronMessage)}.
+   *
    * <ul>
-   *   <li>When {@link PingMessage#PingMessage()}.</li>
-   *   <li>Then calls {@link PeerConnection#sendMessage(Message)}.</li>
+   *   <li>Given {@code P2P_PING}.
+   *   <li>Then calls {@link PeerConnection#sendMessage(Message)}.
    * </ul>
-   * <p>
-   * Method under test: {@link KeepAliveService#processMessage(PeerConnection, TronMessage)}
+   *
+   * <p>Method under test: {@link KeepAliveService#processMessage(PeerConnection, TronMessage)}
    */
   @Test
   @Category(MaintainedByDiffblue.class)
   @MethodsUnderTest({"void KeepAliveService.processMessage(PeerConnection, TronMessage)"})
-  public void testProcessMessage_whenPingMessage_thenCallsSendMessage() {
+  public void testProcessMessage_givenP2pPing_thenCallsSendMessage() {
     // Arrange
     KeepAliveService keepAliveService = new KeepAliveService();
+
     PeerConnection peer = mock(PeerConnection.class);
     doNothing().when(peer).sendMessage(Mockito.<Message>any());
 
+    PingMessage message = mock(PingMessage.class);
+    when(message.getType()).thenReturn(MessageTypes.P2P_PING);
+
     // Act
-    keepAliveService.processMessage(peer, new PingMessage());
+    keepAliveService.processMessage(peer, message);
 
     // Assert
+    verify(message).getType();
     verify(peer).sendMessage(isA(Message.class));
   }
 }

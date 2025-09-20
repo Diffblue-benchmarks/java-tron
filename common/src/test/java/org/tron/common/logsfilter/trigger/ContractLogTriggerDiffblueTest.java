@@ -14,7 +14,6 @@ import java.util.List;
 import org.junit.Test;
 import org.junit.experimental.categories.Category;
 import org.tron.common.logsfilter.capsule.RawData;
-import org.tron.common.runtime.vm.DataWord;
 import org.tron.common.runtime.vm.LogInfo;
 import org.tron.protos.contract.SmartContractOuterClass;
 import org.tron.protos.contract.SmartContractOuterClass.SmartContract;
@@ -23,8 +22,8 @@ import org.tron.protos.contract.SmartContractOuterClass.SmartContract.ABI;
 public class ContractLogTriggerDiffblueTest {
   /**
    * Test {@link ContractLogTrigger#ContractLogTrigger()}.
-   * <p>
-   * Method under test: {@link ContractLogTrigger#ContractLogTrigger()}
+   *
+   * <p>Method under test: {@link ContractLogTrigger#ContractLogTrigger()}
    */
   @Test
   @Category(MaintainedByDiffblue.class)
@@ -55,8 +54,8 @@ public class ContractLogTriggerDiffblueTest {
 
   /**
    * Test {@link ContractLogTrigger#ContractLogTrigger(ContractEventTrigger)}.
-   * <p>
-   * Method under test: {@link ContractLogTrigger#ContractLogTrigger(ContractEventTrigger)}
+   *
+   * <p>Method under test: {@link ContractLogTrigger#ContractLogTrigger(ContractEventTrigger)}
    */
   @Test
   @Category(MaintainedByDiffblue.class)
@@ -76,13 +75,11 @@ public class ContractLogTriggerDiffblueTest {
     eventTrigger.setEventSignatureFull("Event Signature Full");
     eventTrigger.setLatestSolidifiedBlockNumber(1L);
     byte[] address = "AXAXAXAX".getBytes("UTF-8");
-    ArrayList<DataWord> topics = new ArrayList<>();
-    eventTrigger.setLogInfo(new LogInfo(address, topics, "AXAXAXAX".getBytes("UTF-8")));
+    LogInfo logInfo = new LogInfo(address, new ArrayList<>(), "AXAXAXAX".getBytes("UTF-8"));
+    eventTrigger.setLogInfo(logInfo);
     eventTrigger.setOriginAddress("42 Main St");
     byte[] address2 = "AXAXAXAX".getBytes("UTF-8");
-    ArrayList<DataWord> topics2 = new ArrayList<>();
-    RawData rawData = new RawData(address2, topics2, "AXAXAXAX".getBytes("UTF-8"));
-
+    RawData rawData = new RawData(address2, new ArrayList<>(), "AXAXAXAX".getBytes("UTF-8"));
     eventTrigger.setRawData(rawData);
     eventTrigger.setRemoved(true);
     eventTrigger.setTimeStamp(10L);
@@ -116,8 +113,9 @@ public class ContractLogTriggerDiffblueTest {
 
   /**
    * Test getters and setters.
-   * <p>
-   * Methods under test:
+   *
+   * <p>Methods under test:
+   *
    * <ul>
    *   <li>{@link ContractLogTrigger#setData(String)}
    *   <li>{@link ContractLogTrigger#setTopicList(List)}
@@ -127,8 +125,12 @@ public class ContractLogTriggerDiffblueTest {
    */
   @Test
   @Category(MaintainedByDiffblue.class)
-  @MethodsUnderTest({"String ContractLogTrigger.getData()", "List ContractLogTrigger.getTopicList()",
-      "void ContractLogTrigger.setData(String)", "void ContractLogTrigger.setTopicList(List)"})
+  @MethodsUnderTest({
+    "String ContractLogTrigger.getData()",
+    "List ContractLogTrigger.getTopicList()",
+    "void ContractLogTrigger.setData(String)",
+    "void ContractLogTrigger.setTopicList(List)"
+  })
   public void testGettersAndSetters() {
     // Arrange
     ContractLogTrigger contractLogTrigger = new ContractLogTrigger();

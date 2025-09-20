@@ -4,7 +4,6 @@ import static org.junit.Assert.assertEquals;
 import static org.junit.Assert.assertFalse;
 import static org.junit.Assert.assertTrue;
 import static org.mockito.ArgumentMatchers.isA;
-import static org.mockito.Mockito.doNothing;
 import static org.mockito.Mockito.mock;
 import static org.mockito.Mockito.verify;
 import static org.mockito.Mockito.when;
@@ -25,8 +24,9 @@ import org.tron.core.vm.program.invoke.ProgramInvokeMockImpl;
 public class OperationDiffblueTest {
   /**
    * Test getters and setters.
-   * <p>
-   * Methods under test:
+   *
+   * <p>Methods under test:
+   *
    * <ul>
    *   <li>{@link Operation#Operation(int, int, int, Function, Consumer, BooleanSupplier)}
    *   <li>{@link Operation#getOpcode()}
@@ -36,12 +36,17 @@ public class OperationDiffblueTest {
    */
   @Test
   @Category(MaintainedByDiffblue.class)
-  @MethodsUnderTest({"void Operation.<init>(int, int, int, Function, Consumer, BooleanSupplier)",
-      "int Operation.getOpcode()", "int Operation.getRequire()", "int Operation.getRet()"})
+  @MethodsUnderTest({
+    "void Operation.<init>(int, int, int, Function, Consumer, BooleanSupplier)",
+    "int Operation.getOpcode()",
+    "int Operation.getRequire()",
+    "int Operation.getRet()"
+  })
   public void testGettersAndSetters() {
     // Arrange and Act
-    Operation actualOperation = new Operation(1, 1, 1, mock(Function.class), mock(Consumer.class),
-        mock(BooleanSupplier.class));
+    Operation actualOperation =
+        new Operation(
+            1, 1, 1, mock(Function.class), mock(Consumer.class), mock(BooleanSupplier.class));
     int actualOpcode = actualOperation.getOpcode();
     int actualRequire = actualOperation.getRequire();
 
@@ -53,8 +58,8 @@ public class OperationDiffblueTest {
 
   /**
    * Test {@link Operation#Operation(int, int, int, Function, Consumer)}.
-   * <p>
-   * Method under test: {@link Operation#Operation(int, int, int, Function, Consumer)}
+   *
+   * <p>Method under test: {@link Operation#Operation(int, int, int, Function, Consumer)}
    */
   @Test
   @Category(MaintainedByDiffblue.class)
@@ -72,17 +77,19 @@ public class OperationDiffblueTest {
 
   /**
    * Test {@link Operation#getEnergyCost(Program)}.
+   *
    * <ul>
-   *   <li>Given {@link Function} {@link Function#apply(Object)} return one.</li>
-   *   <li>Then return one.</li>
+   *   <li>Given {@link Function} {@link Function#apply(Object)} return one.
+   *   <li>Then return one.
    * </ul>
-   * <p>
-   * Method under test: {@link Operation#getEnergyCost(Program)}
+   *
+   * <p>Method under test: {@link Operation#getEnergyCost(Program)}
    */
   @Test
   @Category(MaintainedByDiffblue.class)
   @MethodsUnderTest({"long Operation.getEnergyCost(Program)"})
-  public void testGetEnergyCost_givenFunctionApplyReturnOne_thenReturnOne() throws UnsupportedEncodingException {
+  public void testGetEnergyCost_givenFunctionApplyReturnOne_thenReturnOne()
+      throws UnsupportedEncodingException {
     // Arrange
     Function<Program, Long> cost = mock(Function.class);
     when(cost.apply(Mockito.<Program>any())).thenReturn(1L);
@@ -95,10 +102,25 @@ public class OperationDiffblueTest {
     byte[] transferToAddress = "AXAXAXAX".getBytes("UTF-8");
     byte[] data = "AXAXAXAX".getBytes("UTF-8");
 
+    Program program =
+        new Program(
+            ops,
+            codeAddress,
+            programInvoke,
+            new InternalTransaction(
+                parentHash,
+                1,
+                1,
+                sendAddress,
+                transferToAddress,
+                42L,
+                data,
+                "Note",
+                1L,
+                new HashMap<>()));
+
     // Act
-    long actualEnergyCost = operation
-        .getEnergyCost(new Program(ops, codeAddress, programInvoke, new InternalTransaction(parentHash, 1, 1,
-            sendAddress, transferToAddress, 42L, data, "Note", 1L, new HashMap<>())));
+    long actualEnergyCost = operation.getEnergyCost(program);
 
     // Assert
     verify(cost).apply(isA(Program.class));
@@ -106,59 +128,28 @@ public class OperationDiffblueTest {
   }
 
   /**
-   * Test {@link Operation#execute(Program)}.
-   * <ul>
-   *   <li>Given {@link Consumer} {@link Consumer#accept(Object)} does nothing.</li>
-   *   <li>Then calls {@link Consumer#accept(Object)}.</li>
-   * </ul>
-   * <p>
-   * Method under test: {@link Operation#execute(Program)}
-   */
-  @Test
-  @Category(MaintainedByDiffblue.class)
-  @MethodsUnderTest({"void Operation.execute(Program)"})
-  public void testExecute_givenConsumerAcceptDoesNothing_thenCallsAccept() throws UnsupportedEncodingException {
-    // Arrange
-    Consumer<Program> action = mock(Consumer.class);
-    doNothing().when(action).accept(Mockito.<Program>any());
-    Operation operation = new Operation(1, 1, 1, mock(Function.class), action);
-    byte[] ops = "AXAXAXAX".getBytes("UTF-8");
-    byte[] codeAddress = "AXAXAXAX".getBytes("UTF-8");
-    ProgramInvokeMockImpl programInvoke = new ProgramInvokeMockImpl();
-    byte[] parentHash = "AXAXAXAX".getBytes("UTF-8");
-    byte[] sendAddress = "AXAXAXAX".getBytes("UTF-8");
-    byte[] transferToAddress = "AXAXAXAX".getBytes("UTF-8");
-    byte[] data = "AXAXAXAX".getBytes("UTF-8");
-
-    // Act
-    operation.execute(new Program(ops, codeAddress, programInvoke, new InternalTransaction(parentHash, 1, 1,
-        sendAddress, transferToAddress, 42L, data, "Note", 1L, new HashMap<>())));
-
-    // Assert
-    verify(action).accept(isA(Program.class));
-  }
-
-  /**
    * Test {@link Operation#isEnabled()}.
-   * <p>
-   * Method under test: {@link Operation#isEnabled()}
+   *
+   * <p>Method under test: {@link Operation#isEnabled()}
    */
   @Test
   @Category(MaintainedByDiffblue.class)
   @MethodsUnderTest({"boolean Operation.isEnabled()"})
   public void testIsEnabled() {
     // Arrange, Act and Assert
-    assertTrue((new Operation(1, 1, 1, mock(Function.class), mock(Consumer.class))).isEnabled());
+    assertTrue(new Operation(1, 1, 1, mock(Function.class), mock(Consumer.class)).isEnabled());
   }
 
   /**
    * Test {@link Operation#isEnabled()}.
+   *
    * <ul>
-   *   <li>Given {@link BooleanSupplier} {@link BooleanSupplier#getAsBoolean()} return {@code false}.</li>
-   *   <li>Then return {@code false}.</li>
+   *   <li>Given {@link BooleanSupplier} {@link BooleanSupplier#getAsBoolean()} return {@code
+   *       false}.
+   *   <li>Then return {@code false}.
    * </ul>
-   * <p>
-   * Method under test: {@link Operation#isEnabled()}
+   *
+   * <p>Method under test: {@link Operation#isEnabled()}
    */
   @Test
   @Category(MaintainedByDiffblue.class)
@@ -169,8 +160,8 @@ public class OperationDiffblueTest {
     when(enabled.getAsBoolean()).thenReturn(false);
 
     // Act
-    boolean actualIsEnabledResult = (new Operation(1, 1, 1, mock(Function.class), mock(Consumer.class), enabled))
-        .isEnabled();
+    boolean actualIsEnabledResult =
+        new Operation(1, 1, 1, mock(Function.class), mock(Consumer.class), enabled).isEnabled();
 
     // Assert
     verify(enabled).getAsBoolean();
@@ -179,12 +170,13 @@ public class OperationDiffblueTest {
 
   /**
    * Test {@link Operation#isEnabled()}.
+   *
    * <ul>
-   *   <li>Given {@link BooleanSupplier} {@link BooleanSupplier#getAsBoolean()} return {@code true}.</li>
-   *   <li>Then return {@code true}.</li>
+   *   <li>Given {@link BooleanSupplier} {@link BooleanSupplier#getAsBoolean()} return {@code true}.
+   *   <li>Then return {@code true}.
    * </ul>
-   * <p>
-   * Method under test: {@link Operation#isEnabled()}
+   *
+   * <p>Method under test: {@link Operation#isEnabled()}
    */
   @Test
   @Category(MaintainedByDiffblue.class)
@@ -195,8 +187,8 @@ public class OperationDiffblueTest {
     when(enabled.getAsBoolean()).thenReturn(true);
 
     // Act
-    boolean actualIsEnabledResult = (new Operation(1, 1, 1, mock(Function.class), mock(Consumer.class), enabled))
-        .isEnabled();
+    boolean actualIsEnabledResult =
+        new Operation(1, 1, 1, mock(Function.class), mock(Consumer.class), enabled).isEnabled();
 
     // Assert
     verify(enabled).getAsBoolean();

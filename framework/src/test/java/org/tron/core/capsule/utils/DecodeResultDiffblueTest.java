@@ -9,8 +9,9 @@ import org.junit.experimental.categories.Category;
 public class DecodeResultDiffblueTest {
   /**
    * Test getters and setters.
-   * <p>
-   * Methods under test:
+   *
+   * <p>Methods under test:
+   *
    * <ul>
    *   <li>{@link DecodeResult#DecodeResult(int, Object)}
    *   <li>{@link DecodeResult#toString()}
@@ -20,8 +21,12 @@ public class DecodeResultDiffblueTest {
    */
   @Test
   @Category(MaintainedByDiffblue.class)
-  @MethodsUnderTest({"void DecodeResult.<init>(int, Object)", "Object DecodeResult.getDecoded()",
-      "int DecodeResult.getPos()", "String DecodeResult.toString()"})
+  @MethodsUnderTest({
+    "void DecodeResult.<init>(int, Object)",
+    "Object DecodeResult.getDecoded()",
+    "int DecodeResult.getPos()",
+    "String DecodeResult.toString()"
+  })
   public void testGettersAndSetters() {
     // Arrange and Act
     DecodeResult actualDecodeResult = new DecodeResult(1, "Decoded");

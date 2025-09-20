@@ -10,8 +10,8 @@ import org.junit.experimental.categories.Category;
 public class PermissionExceptionDiffblueTest {
   /**
    * Test {@link PermissionException#PermissionException()}.
-   * <p>
-   * Method under test: {@link PermissionException#PermissionException()}
+   *
+   * <p>Method under test: {@link PermissionException#PermissionException()}
    */
   @Test
   @Category(MaintainedByDiffblue.class)
@@ -29,8 +29,8 @@ public class PermissionExceptionDiffblueTest {
 
   /**
    * Test {@link PermissionException#PermissionException(String)}.
-   * <p>
-   * Method under test: {@link PermissionException#PermissionException(String)}
+   *
+   * <p>Method under test: {@link PermissionException#PermissionException(String)}
    */
   @Test
   @Category(MaintainedByDiffblue.class)

@@ -10,8 +10,8 @@ import org.junit.experimental.categories.Category;
 public class ValidateScheduleExceptionDiffblueTest {
   /**
    * Test {@link ValidateScheduleException#ValidateScheduleException()}.
-   * <p>
-   * Method under test: {@link ValidateScheduleException#ValidateScheduleException()}
+   *
+   * <p>Method under test: {@link ValidateScheduleException#ValidateScheduleException()}
    */
   @Test
   @Category(MaintainedByDiffblue.class)
@@ -29,15 +29,16 @@ public class ValidateScheduleExceptionDiffblueTest {
 
   /**
    * Test {@link ValidateScheduleException#ValidateScheduleException(String)}.
-   * <p>
-   * Method under test: {@link ValidateScheduleException#ValidateScheduleException(String)}
+   *
+   * <p>Method under test: {@link ValidateScheduleException#ValidateScheduleException(String)}
    */
   @Test
   @Category(MaintainedByDiffblue.class)
   @MethodsUnderTest({"void ValidateScheduleException.<init>(String)"})
   public void testNewValidateScheduleException2() {
     // Arrange and Act
-    ValidateScheduleException actualValidateScheduleException = new ValidateScheduleException("An error occurred");
+    ValidateScheduleException actualValidateScheduleException =
+        new ValidateScheduleException("An error occurred");
 
     // Assert
     assertEquals("An error occurred", actualValidateScheduleException.getLocalizedMessage());

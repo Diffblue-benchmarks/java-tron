@@ -10,8 +10,8 @@ import org.junit.experimental.categories.Category;
 public class ValidateSignatureExceptionDiffblueTest {
   /**
    * Test {@link ValidateSignatureException#ValidateSignatureException()}.
-   * <p>
-   * Method under test: {@link ValidateSignatureException#ValidateSignatureException()}
+   *
+   * <p>Method under test: {@link ValidateSignatureException#ValidateSignatureException()}
    */
   @Test
   @Category(MaintainedByDiffblue.class)
@@ -29,15 +29,16 @@ public class ValidateSignatureExceptionDiffblueTest {
 
   /**
    * Test {@link ValidateSignatureException#ValidateSignatureException(String)}.
-   * <p>
-   * Method under test: {@link ValidateSignatureException#ValidateSignatureException(String)}
+   *
+   * <p>Method under test: {@link ValidateSignatureException#ValidateSignatureException(String)}
    */
   @Test
   @Category(MaintainedByDiffblue.class)
   @MethodsUnderTest({"void ValidateSignatureException.<init>(String)"})
   public void testNewValidateSignatureException2() {
     // Arrange and Act
-    ValidateSignatureException actualValidateSignatureException = new ValidateSignatureException("An error occurred");
+    ValidateSignatureException actualValidateSignatureException =
+        new ValidateSignatureException("An error occurred");
 
     // Assert
     assertEquals("An error occurred", actualValidateSignatureException.getLocalizedMessage());

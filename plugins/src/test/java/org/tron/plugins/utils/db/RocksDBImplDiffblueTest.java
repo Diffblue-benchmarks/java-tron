@@ -10,8 +10,9 @@ import org.rocksdb.RocksDB;
 public class RocksDBImplDiffblueTest {
   /**
    * Test getters and setters.
-   * <p>
-   * Methods under test:
+   *
+   * <p>Methods under test:
+   *
    * <ul>
    *   <li>{@link RocksDBImpl#RocksDBImpl(RocksDB, String)}
    *   <li>{@link RocksDBImpl#getName()}
@@ -22,6 +23,6 @@ public class RocksDBImplDiffblueTest {
   @MethodsUnderTest({"void RocksDBImpl.<init>(RocksDB, String)", "String RocksDBImpl.getName()"})
   public void testGettersAndSetters() {
     // Arrange, Act and Assert
-    assertEquals("Name", (new RocksDBImpl(null, "Name")).getName());
+    assertEquals("Name", new RocksDBImpl(null, "Name").getName());
   }
 }

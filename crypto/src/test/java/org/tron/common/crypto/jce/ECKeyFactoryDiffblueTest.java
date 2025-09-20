@@ -13,8 +13,8 @@ import org.junit.experimental.categories.Category;
 public class ECKeyFactoryDiffblueTest {
   /**
    * Test {@link ECKeyFactory#getInstance()}.
-   * <p>
-   * Method under test: {@link ECKeyFactory#getInstance()}
+   *
+   * <p>Method under test: {@link ECKeyFactory#getInstance()}
    */
   @Test
   @Category(MaintainedByDiffblue.class)
@@ -29,9 +29,11 @@ public class ECKeyFactoryDiffblueTest {
     assertEquals("Software", provider.get("Signature.SHA224withECDSA ImplementedIn"));
     assertEquals("Software", provider.get("Signature.SHA256withECDSA ImplementedIn"));
     assertEquals("SunEC", provider.get("Provider.id name"));
-    assertEquals("java.security.interfaces.ECPublicKey|java.security.interfaces.ECPrivateKey",
+    assertEquals(
+        "java.security.interfaces.ECPublicKey|java.security.interfaces.ECPrivateKey",
         provider.get("KeyAgreement.ECDH SupportedKeyClasses"));
-    assertEquals("java.security.interfaces.ECPublicKey|java.security.interfaces.ECPrivateKey",
+    assertEquals(
+        "java.security.interfaces.ECPublicKey|java.security.interfaces.ECPrivateKey",
         provider.get("Signature.NONEwithECDSA SupportedKeyClasses"));
     assertEquals("sun.security.util.ECParameters", provider.get("AlgorithmParameters.EC"));
     assertEquals(ECKeyFactory.ALGORITHM, actualInstance.getAlgorithm());
@@ -39,8 +41,8 @@ public class ECKeyFactoryDiffblueTest {
 
   /**
    * Test {@link ECKeyFactory#getInstance(Provider)} with {@code Provider}.
-   * <p>
-   * Method under test: {@link ECKeyFactory#getInstance(Provider)}
+   *
+   * <p>Method under test: {@link ECKeyFactory#getInstance(Provider)}
    */
   @Test
   @Category(MaintainedByDiffblue.class)

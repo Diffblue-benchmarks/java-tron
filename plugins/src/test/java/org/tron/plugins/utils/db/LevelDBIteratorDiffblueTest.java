@@ -26,12 +26,14 @@ import org.mockito.Mockito;
 public class LevelDBIteratorDiffblueTest {
   /**
    * Test {@link LevelDBIterator#valid()}.
+   *
    * <ul>
-   *   <li>Given {@link SeekingIteratorAdapter} {@link SeekingIteratorAdapter#hasNext()} return {@code false}.</li>
-   *   <li>Then return {@code false}.</li>
+   *   <li>Given {@link SeekingIteratorAdapter} {@link SeekingIteratorAdapter#hasNext()} return
+   *       {@code false}.
+   *   <li>Then return {@code false}.
    * </ul>
-   * <p>
-   * Method under test: {@link LevelDBIterator#valid()}
+   *
+   * <p>Method under test: {@link LevelDBIterator#valid()}
    */
   @Test
   @Category(MaintainedByDiffblue.class)
@@ -42,7 +44,7 @@ public class LevelDBIteratorDiffblueTest {
     when(iterator.hasNext()).thenReturn(false);
 
     // Act
-    boolean actualValidResult = (new LevelDBIterator(iterator)).valid();
+    boolean actualValidResult = new LevelDBIterator(iterator).valid();
 
     // Assert
     verify(iterator).hasNext();
@@ -51,12 +53,14 @@ public class LevelDBIteratorDiffblueTest {
 
   /**
    * Test {@link LevelDBIterator#valid()}.
+   *
    * <ul>
-   *   <li>Given {@link SeekingIteratorAdapter} {@link SeekingIteratorAdapter#hasNext()} return {@code true}.</li>
-   *   <li>Then return {@code true}.</li>
+   *   <li>Given {@link SeekingIteratorAdapter} {@link SeekingIteratorAdapter#hasNext()} return
+   *       {@code true}.
+   *   <li>Then return {@code true}.
    * </ul>
-   * <p>
-   * Method under test: {@link LevelDBIterator#valid()}
+   *
+   * <p>Method under test: {@link LevelDBIterator#valid()}
    */
   @Test
   @Category(MaintainedByDiffblue.class)
@@ -67,7 +71,7 @@ public class LevelDBIteratorDiffblueTest {
     when(iterator.hasNext()).thenReturn(true);
 
     // Act
-    boolean actualValidResult = (new LevelDBIterator(iterator)).valid();
+    boolean actualValidResult = new LevelDBIterator(iterator).valid();
 
     // Assert
     verify(iterator).hasNext();
@@ -76,24 +80,26 @@ public class LevelDBIteratorDiffblueTest {
 
   /**
    * Test {@link LevelDBIterator#seek(byte[])}.
+   *
    * <ul>
-   *   <li>Given {@link SeekingIteratorAdapter} {@link SeekingIteratorAdapter#seek(byte[])} does nothing.</li>
-   *   <li>Then calls {@link SeekingIteratorAdapter#seek(byte[])}.</li>
+   *   <li>Given {@link SeekingIteratorAdapter} {@link SeekingIteratorAdapter#seek(byte[])} does
+   *       nothing.
+   *   <li>Then calls {@link SeekingIteratorAdapter#seek(byte[])}.
    * </ul>
-   * <p>
-   * Method under test: {@link LevelDBIterator#seek(byte[])}
+   *
+   * <p>Method under test: {@link LevelDBIterator#seek(byte[])}
    */
   @Test
   @Category(MaintainedByDiffblue.class)
   @MethodsUnderTest({"void LevelDBIterator.seek(byte[])"})
-  public void testSeek_givenSeekingIteratorAdapterSeekDoesNothing_thenCallsSeek() throws UnsupportedEncodingException {
+  public void testSeek_givenSeekingIteratorAdapterSeekDoesNothing_thenCallsSeek()
+      throws UnsupportedEncodingException {
     // Arrange
     SeekingIteratorAdapter iterator = mock(SeekingIteratorAdapter.class);
     doNothing().when(iterator).seek(Mockito.<byte[]>any());
-    LevelDBIterator levelDBIterator = new LevelDBIterator(iterator);
 
     // Act
-    levelDBIterator.seek("AXAXAXAX".getBytes("UTF-8"));
+    new LevelDBIterator(iterator).seek("AXAXAXAX".getBytes("UTF-8"));
 
     // Assert
     verify(iterator).seek(isA(byte[].class));
@@ -101,11 +107,12 @@ public class LevelDBIteratorDiffblueTest {
 
   /**
    * Test {@link LevelDBIterator#seekToFirst()}.
+   *
    * <ul>
-   *   <li>Then calls {@link SeekingIteratorAdapter#seekToFirst()}.</li>
+   *   <li>Then calls {@link SeekingIteratorAdapter#seekToFirst()}.
    * </ul>
-   * <p>
-   * Method under test: {@link LevelDBIterator#seekToFirst()}
+   *
+   * <p>Method under test: {@link LevelDBIterator#seekToFirst()}
    */
   @Test
   @Category(MaintainedByDiffblue.class)
@@ -116,7 +123,7 @@ public class LevelDBIteratorDiffblueTest {
     doNothing().when(iterator).seekToFirst();
 
     // Act
-    (new LevelDBIterator(iterator)).seekToFirst();
+    new LevelDBIterator(iterator).seekToFirst();
 
     // Assert
     verify(iterator).seekToFirst();
@@ -124,11 +131,12 @@ public class LevelDBIteratorDiffblueTest {
 
   /**
    * Test {@link LevelDBIterator#seekToLast()}.
+   *
    * <ul>
-   *   <li>Then calls {@link SeekingIteratorAdapter#seekToLast()}.</li>
+   *   <li>Then calls {@link SeekingIteratorAdapter#seekToLast()}.
    * </ul>
-   * <p>
-   * Method under test: {@link LevelDBIterator#seekToLast()}
+   *
+   * <p>Method under test: {@link LevelDBIterator#seekToLast()}
    */
   @Test
   @Category(MaintainedByDiffblue.class)
@@ -139,7 +147,7 @@ public class LevelDBIteratorDiffblueTest {
     doNothing().when(iterator).seekToLast();
 
     // Act
-    (new LevelDBIterator(iterator)).seekToLast();
+    new LevelDBIterator(iterator).seekToLast();
 
     // Assert
     verify(iterator).seekToLast();
@@ -147,12 +155,14 @@ public class LevelDBIteratorDiffblueTest {
 
   /**
    * Test {@link LevelDBIterator#hasNext()}.
+   *
    * <ul>
-   *   <li>Given {@link SeekingIteratorAdapter} {@link SeekingIteratorAdapter#hasNext()} return {@code false}.</li>
-   *   <li>Then return {@code false}.</li>
+   *   <li>Given {@link SeekingIteratorAdapter} {@link SeekingIteratorAdapter#hasNext()} return
+   *       {@code false}.
+   *   <li>Then return {@code false}.
    * </ul>
-   * <p>
-   * Method under test: {@link LevelDBIterator#hasNext()}
+   *
+   * <p>Method under test: {@link LevelDBIterator#hasNext()}
    */
   @Test
   @Category(MaintainedByDiffblue.class)
@@ -163,7 +173,7 @@ public class LevelDBIteratorDiffblueTest {
     when(iterator.hasNext()).thenReturn(false);
 
     // Act
-    boolean actualHasNextResult = (new LevelDBIterator(iterator)).hasNext();
+    boolean actualHasNextResult = new LevelDBIterator(iterator).hasNext();
 
     // Assert
     verify(iterator).hasNext();
@@ -172,12 +182,14 @@ public class LevelDBIteratorDiffblueTest {
 
   /**
    * Test {@link LevelDBIterator#hasNext()}.
+   *
    * <ul>
-   *   <li>Given {@link SeekingIteratorAdapter} {@link SeekingIteratorAdapter#hasNext()} return {@code true}.</li>
-   *   <li>Then return {@code true}.</li>
+   *   <li>Given {@link SeekingIteratorAdapter} {@link SeekingIteratorAdapter#hasNext()} return
+   *       {@code true}.
+   *   <li>Then return {@code true}.
    * </ul>
-   * <p>
-   * Method under test: {@link LevelDBIterator#hasNext()}
+   *
+   * <p>Method under test: {@link LevelDBIterator#hasNext()}
    */
   @Test
   @Category(MaintainedByDiffblue.class)
@@ -188,7 +200,7 @@ public class LevelDBIteratorDiffblueTest {
     when(iterator.hasNext()).thenReturn(true);
 
     // Act
-    boolean actualHasNextResult = (new LevelDBIterator(iterator)).hasNext();
+    boolean actualHasNextResult = new LevelDBIterator(iterator).hasNext();
 
     // Assert
     verify(iterator).hasNext();
@@ -197,11 +209,12 @@ public class LevelDBIteratorDiffblueTest {
 
   /**
    * Test {@link LevelDBIterator#getKey()}.
+   *
    * <ul>
-   *   <li>Then return array of {@code byte} with zero and zero.</li>
+   *   <li>Then return array of {@code byte} with zero and zero.
    * </ul>
-   * <p>
-   * Method under test: {@link LevelDBIterator#getKey()}
+   *
+   * <p>Method under test: {@link LevelDBIterator#getKey()}
    */
   @Test
   @Category(MaintainedByDiffblue.class)
@@ -210,23 +223,25 @@ public class LevelDBIteratorDiffblueTest {
     // Arrange
     SeekingIteratorAdapter iterator = mock(SeekingIteratorAdapter.class);
     Slice key = Slices.allocate(3);
-    when(iterator.peekNext()).thenReturn(new DbEntry(key, Slices.allocate(3)));
+    DbEntry dbEntry = new DbEntry(key, Slices.allocate(3));
+    when(iterator.peekNext()).thenReturn(dbEntry);
 
     // Act
-    byte[] actualKey = (new LevelDBIterator(iterator)).getKey();
+    byte[] actualKey = new LevelDBIterator(iterator).getKey();
 
     // Assert
     verify(iterator).peekNext();
-    assertArrayEquals(new byte[]{0, 0, 0}, actualKey);
+    assertArrayEquals(new byte[] {0, 0, 0}, actualKey);
   }
 
   /**
    * Test {@link LevelDBIterator#getValue()}.
+   *
    * <ul>
-   *   <li>Then return array of {@code byte} with zero and zero.</li>
+   *   <li>Then return array of {@code byte} with zero and zero.
    * </ul>
-   * <p>
-   * Method under test: {@link LevelDBIterator#getValue()}
+   *
+   * <p>Method under test: {@link LevelDBIterator#getValue()}
    */
   @Test
   @Category(MaintainedByDiffblue.class)
@@ -235,23 +250,26 @@ public class LevelDBIteratorDiffblueTest {
     // Arrange
     SeekingIteratorAdapter iterator = mock(SeekingIteratorAdapter.class);
     Slice key = Slices.allocate(3);
-    when(iterator.peekNext()).thenReturn(new DbEntry(key, Slices.allocate(3)));
+    DbEntry dbEntry = new DbEntry(key, Slices.allocate(3));
+    when(iterator.peekNext()).thenReturn(dbEntry);
 
     // Act
-    byte[] actualValue = (new LevelDBIterator(iterator)).getValue();
+    byte[] actualValue = new LevelDBIterator(iterator).getValue();
 
     // Assert
     verify(iterator).peekNext();
-    assertArrayEquals(new byte[]{0, 0, 0}, actualValue);
+    assertArrayEquals(new byte[] {0, 0, 0}, actualValue);
   }
 
   /**
    * Test {@link LevelDBIterator#next()}.
+   *
    * <ul>
-   *   <li>Then return {@link DbEntry#DbEntry(Slice, Slice)} with key is allocate three and value is allocate three.</li>
+   *   <li>Then return {@link DbEntry#DbEntry(Slice, Slice)} with key is allocate three and value is
+   *       allocate three.
    * </ul>
-   * <p>
-   * Method under test: {@link LevelDBIterator#next()}
+   *
+   * <p>Method under test: {@link LevelDBIterator#next()}
    */
   @Test
   @Category(MaintainedByDiffblue.class)
@@ -261,11 +279,10 @@ public class LevelDBIteratorDiffblueTest {
     SeekingIteratorAdapter iterator = mock(SeekingIteratorAdapter.class);
     Slice key = Slices.allocate(3);
     DbEntry dbEntry = new DbEntry(key, Slices.allocate(3));
-
     when(iterator.next()).thenReturn(dbEntry);
 
     // Act
-    Entry<byte[], byte[]> actualNextResult = (new LevelDBIterator(iterator)).next();
+    Entry<byte[], byte[]> actualNextResult = new LevelDBIterator(iterator).next();
 
     // Assert
     verify(iterator).next();
@@ -274,25 +291,25 @@ public class LevelDBIteratorDiffblueTest {
 
   /**
    * Test {@link LevelDBIterator#close()}.
+   *
    * <ul>
-   *   <li>Given {@link SeekingIteratorAdapter} {@link SeekingIteratorAdapter#close()} does nothing.</li>
-   *   <li>Then calls {@link SeekingIteratorAdapter#close()}.</li>
+   *   <li>Given {@link SeekingIteratorAdapter} {@link SeekingIteratorAdapter#close()} does nothing.
+   *   <li>Then calls {@link SeekingIteratorAdapter#close()}.
    * </ul>
-   * <p>
-   * Method under test: {@link LevelDBIterator#close()}
+   *
+   * <p>Method under test: {@link LevelDBIterator#close()}
    */
   @Test
   @Category(MaintainedByDiffblue.class)
   @MethodsUnderTest({"void LevelDBIterator.close()"})
-  public void testClose_givenSeekingIteratorAdapterCloseDoesNothing_thenCallsClose() throws IOException {
+  public void testClose_givenSeekingIteratorAdapterCloseDoesNothing_thenCallsClose()
+      throws IOException {
     // Arrange
     SeekingIteratorAdapter iterator = mock(SeekingIteratorAdapter.class);
     doNothing().when(iterator).close();
+    try (LevelDBIterator levelDBIterator = new LevelDBIterator(iterator)) {}
 
-    // Act
-    (new LevelDBIterator(iterator)).close();
-
-    // Assert
+    // Act and Assert
     verify(iterator).close();
   }
 }

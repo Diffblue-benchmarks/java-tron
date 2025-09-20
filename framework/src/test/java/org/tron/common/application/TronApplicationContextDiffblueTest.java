@@ -4,6 +4,7 @@ import static org.junit.Assert.assertEquals;
 import static org.junit.Assert.assertFalse;
 import static org.junit.Assert.assertNull;
 import static org.junit.Assert.assertSame;
+import static org.junit.Assert.assertThrows;
 import static org.junit.Assert.assertTrue;
 import com.diffblue.cover.annotations.MaintainedByDiffblue;
 import com.diffblue.cover.annotations.MethodsUnderTest;
@@ -21,8 +22,8 @@ import org.springframework.core.io.ProtocolResolver;
 public class TronApplicationContextDiffblueTest {
   /**
    * Test {@link TronApplicationContext#TronApplicationContext()}.
-   * <p>
-   * Method under test: {@link TronApplicationContext#TronApplicationContext()}
+   *
+   * <p>Method under test: {@link TronApplicationContext#TronApplicationContext()}
    */
   @Test
   @Category(MaintainedByDiffblue.class)
@@ -32,9 +33,11 @@ public class TronApplicationContextDiffblueTest {
     TronApplicationContext actualTronApplicationContext = new TronApplicationContext();
 
     // Assert
-    Collection<ApplicationListener<?>> applicationListeners = actualTronApplicationContext.getApplicationListeners();
+    Collection<ApplicationListener<?>> applicationListeners =
+        actualTronApplicationContext.getApplicationListeners();
     assertTrue(applicationListeners instanceof Set);
-    Collection<ProtocolResolver> protocolResolvers = actualTronApplicationContext.getProtocolResolvers();
+    Collection<ProtocolResolver> protocolResolvers =
+        actualTronApplicationContext.getProtocolResolvers();
     assertTrue(protocolResolvers instanceof Set);
     ConfigurableListableBeanFactory beanFactory = actualTronApplicationContext.getBeanFactory();
     assertTrue(beanFactory instanceof DefaultListableBeanFactory);
@@ -55,8 +58,8 @@ public class TronApplicationContextDiffblueTest {
 
   /**
    * Test {@link TronApplicationContext#TronApplicationContext(Class[])}.
-   * <p>
-   * Method under test: {@link TronApplicationContext#TronApplicationContext(Class[])}
+   *
+   * <p>Method under test: {@link TronApplicationContext#TronApplicationContext(Class[])}
    */
   @Test
   @Category(MaintainedByDiffblue.class)
@@ -69,12 +72,14 @@ public class TronApplicationContextDiffblueTest {
     TronApplicationContext actualTronApplicationContext = new TronApplicationContext(forNameResult);
 
     // Assert
-    Collection<ApplicationListener<?>> applicationListeners = actualTronApplicationContext.getApplicationListeners();
+    Collection<ApplicationListener<?>> applicationListeners =
+        actualTronApplicationContext.getApplicationListeners();
     assertTrue(applicationListeners instanceof Set);
-    Collection<ProtocolResolver> protocolResolvers = actualTronApplicationContext.getProtocolResolvers();
+    Collection<ProtocolResolver> protocolResolvers =
+        actualTronApplicationContext.getProtocolResolvers();
     assertTrue(protocolResolvers instanceof Set);
-    AutowireCapableBeanFactory autowireCapableBeanFactory = actualTronApplicationContext
-        .getAutowireCapableBeanFactory();
+    AutowireCapableBeanFactory autowireCapableBeanFactory =
+        actualTronApplicationContext.getAutowireCapableBeanFactory();
     assertTrue(autowireCapableBeanFactory instanceof DefaultListableBeanFactory);
     assertTrue(actualTronApplicationContext.getEnvironment() instanceof StandardEnvironment);
     assertEquals("", actualTronApplicationContext.getApplicationName());
@@ -88,13 +93,14 @@ public class TronApplicationContextDiffblueTest {
     assertTrue(actualTronApplicationContext.isActive());
     assertTrue(actualTronApplicationContext.isRunning());
     assertSame(autowireCapableBeanFactory, actualTronApplicationContext.getBeanFactory());
-    assertSame(autowireCapableBeanFactory, actualTronApplicationContext.getDefaultListableBeanFactory());
+    assertSame(
+        autowireCapableBeanFactory, actualTronApplicationContext.getDefaultListableBeanFactory());
   }
 
   /**
    * Test {@link TronApplicationContext#TronApplicationContext(String[])}.
-   * <p>
-   * Method under test: {@link TronApplicationContext#TronApplicationContext(String[])}
+   *
+   * <p>Method under test: {@link TronApplicationContext#TronApplicationContext(String[])}
    */
   @Test
   @Category(MaintainedByDiffblue.class)
@@ -104,12 +110,14 @@ public class TronApplicationContextDiffblueTest {
     TronApplicationContext actualTronApplicationContext = new TronApplicationContext("java.text");
 
     // Assert
-    Collection<ApplicationListener<?>> applicationListeners = actualTronApplicationContext.getApplicationListeners();
+    Collection<ApplicationListener<?>> applicationListeners =
+        actualTronApplicationContext.getApplicationListeners();
     assertTrue(applicationListeners instanceof Set);
-    Collection<ProtocolResolver> protocolResolvers = actualTronApplicationContext.getProtocolResolvers();
+    Collection<ProtocolResolver> protocolResolvers =
+        actualTronApplicationContext.getProtocolResolvers();
     assertTrue(protocolResolvers instanceof Set);
-    AutowireCapableBeanFactory autowireCapableBeanFactory = actualTronApplicationContext
-        .getAutowireCapableBeanFactory();
+    AutowireCapableBeanFactory autowireCapableBeanFactory =
+        actualTronApplicationContext.getAutowireCapableBeanFactory();
     assertTrue(autowireCapableBeanFactory instanceof DefaultListableBeanFactory);
     assertTrue(actualTronApplicationContext.getEnvironment() instanceof StandardEnvironment);
     assertEquals("", actualTronApplicationContext.getApplicationName());
@@ -123,6 +131,20 @@ public class TronApplicationContextDiffblueTest {
     assertTrue(actualTronApplicationContext.isActive());
     assertTrue(actualTronApplicationContext.isRunning());
     assertSame(autowireCapableBeanFactory, actualTronApplicationContext.getBeanFactory());
-    assertSame(autowireCapableBeanFactory, actualTronApplicationContext.getDefaultListableBeanFactory());
+    assertSame(
+        autowireCapableBeanFactory, actualTronApplicationContext.getDefaultListableBeanFactory());
+  }
+
+  /**
+   * Test {@link TronApplicationContext#doClose()}.
+   *
+   * <p>Method under test: {@link TronApplicationContext#doClose()}
+   */
+  @Test
+  @Category(MaintainedByDiffblue.class)
+  @MethodsUnderTest({"void TronApplicationContext.doClose()"})
+  public void testDoClose() {
+    // Arrange, Act and Assert
+    assertThrows(IllegalStateException.class, () -> new TronApplicationContext().doClose());
   }
 }

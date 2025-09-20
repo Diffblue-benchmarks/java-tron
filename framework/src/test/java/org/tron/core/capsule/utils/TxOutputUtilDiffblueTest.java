@@ -12,11 +12,12 @@ import org.tron.protos.Protocol.TXOutput;
 public class TxOutputUtilDiffblueTest {
   /**
    * Test {@link TxOutputUtil#newTxOutput(long, String)}.
+   *
    * <ul>
-   *   <li>When {@code 0x}.</li>
+   *   <li>When {@code 0x}.
    * </ul>
-   * <p>
-   * Method under test: {@link TxOutputUtil#newTxOutput(long, String)}
+   *
+   * <p>Method under test: {@link TxOutputUtil#newTxOutput(long, String)}
    */
   @Test
   @Category(MaintainedByDiffblue.class)
@@ -29,17 +30,21 @@ public class TxOutputUtilDiffblueTest {
     UnknownFieldSet unknownFields = actualNewTxOutputResult.getUnknownFields();
     TXOutput defaultInstanceForType = actualNewTxOutputResult.getDefaultInstanceForType();
     assertSame(unknownFields, defaultInstanceForType.getUnknownFields());
-    assertSame(unknownFields, unknownFields.getDefaultInstanceForType());
-    assertSame(defaultInstanceForType.getDefaultInstanceForType(), defaultInstanceForType.getDefaultInstanceForType());
+    UnknownFieldSet actualDefaultInstanceForType = unknownFields.getDefaultInstanceForType();
+    assertSame(unknownFields, actualDefaultInstanceForType);
+    assertSame(
+        defaultInstanceForType.getDefaultInstanceForType(),
+        defaultInstanceForType.getDefaultInstanceForType());
   }
 
   /**
    * Test {@link TxOutputUtil#newTxOutput(long, String)}.
+   *
    * <ul>
-   *   <li>When {@code null}.</li>
+   *   <li>When {@code null}.
    * </ul>
-   * <p>
-   * Method under test: {@link TxOutputUtil#newTxOutput(long, String)}
+   *
+   * <p>Method under test: {@link TxOutputUtil#newTxOutput(long, String)}
    */
   @Test
   @Category(MaintainedByDiffblue.class)
@@ -52,7 +57,10 @@ public class TxOutputUtilDiffblueTest {
     UnknownFieldSet unknownFields = actualNewTxOutputResult.getUnknownFields();
     TXOutput defaultInstanceForType = actualNewTxOutputResult.getDefaultInstanceForType();
     assertSame(unknownFields, defaultInstanceForType.getUnknownFields());
-    assertSame(unknownFields, unknownFields.getDefaultInstanceForType());
-    assertSame(defaultInstanceForType.getDefaultInstanceForType(), defaultInstanceForType.getDefaultInstanceForType());
+    UnknownFieldSet actualDefaultInstanceForType = unknownFields.getDefaultInstanceForType();
+    assertSame(unknownFields, actualDefaultInstanceForType);
+    assertSame(
+        defaultInstanceForType.getDefaultInstanceForType(),
+        defaultInstanceForType.getDefaultInstanceForType());
   }
 }

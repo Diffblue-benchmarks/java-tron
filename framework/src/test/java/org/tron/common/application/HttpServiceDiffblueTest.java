@@ -11,12 +11,14 @@ import org.tron.core.services.http.FullNodeHttpApiService;
 public class HttpServiceDiffblueTest {
   /**
    * Test {@link HttpService#equals(Object)}, and {@link HttpService#hashCode()}.
+   *
    * <ul>
-   *   <li>When other is equal.</li>
-   *   <li>Then return equal.</li>
+   *   <li>When other is equal.
+   *   <li>Then return equal.
    * </ul>
-   * <p>
-   * Methods under test:
+   *
+   * <p>Methods under test:
+   *
    * <ul>
    *   <li>{@link HttpService#equals(Object)}
    *   <li>{@link HttpService#hashCode()}
@@ -32,18 +34,19 @@ public class HttpServiceDiffblueTest {
 
     // Act and Assert
     assertEquals(fullNodeHttpApiService, fullNodeHttpApiService2);
-    int expectedHashCodeResult = fullNodeHttpApiService.hashCode();
-    assertEquals(expectedHashCodeResult, fullNodeHttpApiService2.hashCode());
+    assertEquals(fullNodeHttpApiService.hashCode(), fullNodeHttpApiService2.hashCode());
   }
 
   /**
    * Test {@link HttpService#equals(Object)}, and {@link HttpService#hashCode()}.
+   *
    * <ul>
-   *   <li>When other is same.</li>
-   *   <li>Then return equal.</li>
+   *   <li>When other is same.
+   *   <li>Then return equal.
    * </ul>
-   * <p>
-   * Methods under test:
+   *
+   * <p>Methods under test:
+   *
    * <ul>
    *   <li>{@link HttpService#equals(Object)}
    *   <li>{@link HttpService#hashCode()}
@@ -64,12 +67,13 @@ public class HttpServiceDiffblueTest {
 
   /**
    * Test {@link HttpService#equals(Object)}.
+   *
    * <ul>
-   *   <li>When other is different.</li>
-   *   <li>Then return not equal.</li>
+   *   <li>When other is different.
+   *   <li>Then return not equal.
    * </ul>
-   * <p>
-   * Method under test: {@link HttpService#equals(Object)}
+   *
+   * <p>Method under test: {@link HttpService#equals(Object)}
    */
   @Test
   @Category(MaintainedByDiffblue.class)
@@ -81,12 +85,13 @@ public class HttpServiceDiffblueTest {
 
   /**
    * Test {@link HttpService#equals(Object)}.
+   *
    * <ul>
-   *   <li>When other is {@code null}.</li>
-   *   <li>Then return not equal.</li>
+   *   <li>When other is {@code null}.
+   *   <li>Then return not equal.
    * </ul>
-   * <p>
-   * Method under test: {@link HttpService#equals(Object)}
+   *
+   * <p>Method under test: {@link HttpService#equals(Object)}
    */
   @Test
   @Category(MaintainedByDiffblue.class)
@@ -98,12 +103,13 @@ public class HttpServiceDiffblueTest {
 
   /**
    * Test {@link HttpService#equals(Object)}.
+   *
    * <ul>
-   *   <li>When other is wrong type.</li>
-   *   <li>Then return not equal.</li>
+   *   <li>When other is wrong type.
+   *   <li>Then return not equal.
    * </ul>
-   * <p>
-   * Method under test: {@link HttpService#equals(Object)}
+   *
+   * <p>Method under test: {@link HttpService#equals(Object)}
    */
   @Test
   @Category(MaintainedByDiffblue.class)

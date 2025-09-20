@@ -14,34 +14,35 @@ import org.tron.core.db.accountstate.AccountStateCallBackUtils.TrieEntry;
 public class AccountStateCallBackUtilsDiffblueTest {
   /**
    * Test {@link AccountStateCallBackUtils#exe()}.
-   * <p>
-   * Method under test: {@link AccountStateCallBackUtils#exe()}
+   *
+   * <p>Method under test: {@link AccountStateCallBackUtils#exe()}
    */
   @Test
   @Category(MaintainedByDiffblue.class)
   @MethodsUnderTest({"boolean AccountStateCallBackUtils.exe()"})
   public void testExe() {
     // Arrange, Act and Assert
-    assertFalse((new AccountStateCallBackUtils()).exe());
+    assertFalse(new AccountStateCallBackUtils().exe());
   }
 
   /**
    * Test new {@link AccountStateCallBackUtils} (default constructor).
-   * <p>
-   * Method under test: default or parameterless constructor of {@link AccountStateCallBackUtils}
+   *
+   * <p>Method under test: default or parameterless constructor of {@link AccountStateCallBackUtils}
    */
   @Test
   @Category(MaintainedByDiffblue.class)
   @MethodsUnderTest({"void AccountStateCallBackUtils.<init>()"})
   public void testNewAccountStateCallBackUtils() {
     // Arrange, Act and Assert
-    assertTrue((new AccountStateCallBackUtils()).trieEntryList.isEmpty());
+    assertTrue(new AccountStateCallBackUtils().trieEntryList.isEmpty());
   }
 
   /**
    * Test TrieEntry {@link TrieEntry#build(byte[], byte[])}.
-   * <p>
-   * Methods under test:
+   *
+   * <p>Methods under test:
+   *
    * <ul>
    *   <li>{@link TrieEntry#build(byte[], byte[])}
    *   <li>default or parameterless constructor of {@link TrieEntry}
@@ -53,26 +54,41 @@ public class AccountStateCallBackUtilsDiffblueTest {
    */
   @Test
   @Category(MaintainedByDiffblue.class)
-  @MethodsUnderTest({"void TrieEntry.<init>()", "TrieEntry TrieEntry.build(byte[], byte[])",
-      "byte[] TrieEntry.getData()", "byte[] TrieEntry.getKey()", "TrieEntry TrieEntry.setData(byte[])",
-      "TrieEntry TrieEntry.setKey(byte[])"})
+  @MethodsUnderTest({
+    "void TrieEntry.<init>()",
+    "TrieEntry TrieEntry.build(byte[], byte[])",
+    "byte[] TrieEntry.getData()",
+    "byte[] TrieEntry.getKey()",
+    "TrieEntry TrieEntry.setData(byte[])",
+    "TrieEntry TrieEntry.setKey(byte[])"
+  })
   public void testTrieEntryBuild() throws UnsupportedEncodingException {
-    // Arrange
-    TrieEntry trieEntry = new TrieEntry();
-    TrieEntry setDataResult = trieEntry.setData("AXAXAXAX".getBytes("UTF-8"));
-    TrieEntry setKeyResult = setDataResult.setKey("AXAXAXAX".getBytes("UTF-8"));
-    byte[] key = "AXAXAXAX".getBytes("UTF-8");
+    // Arrange and Act
+    TrieEntry actualTrieEntry = new TrieEntry();
     byte[] data = "AXAXAXAX".getBytes("UTF-8");
-
-    // Act
-    TrieEntry actualBuildResult = setKeyResult.build(key, data);
+    TrieEntry actualSetDataResult = actualTrieEntry.setData(data);
+    byte[] key = "AXAXAXAX".getBytes("UTF-8");
+    TrieEntry actualSetKeyResult = actualSetDataResult.setKey(key);
+    byte[] key2 = "AXAXAXAX".getBytes("UTF-8");
+    byte[] data2 = "AXAXAXAX".getBytes("UTF-8");
+    TrieEntry actualTrieEntry2 = actualSetKeyResult.build(key2, data2);
 
     // Assert
-    byte[] data2 = actualBuildResult.getData();
-    assertSame(data, data2);
-    byte[] key2 = actualBuildResult.getKey();
-    assertSame(key, key2);
-    assertArrayEquals("AXAXAXAX".getBytes("UTF-8"), data2);
-    assertArrayEquals("AXAXAXAX".getBytes("UTF-8"), key2);
+    byte[] data3 = actualTrieEntry.getData();
+    assertSame(data, data3);
+    byte[] data4 = actualTrieEntry2.getData();
+    assertSame(data2, data4);
+    assertSame(data, actualSetDataResult.getData());
+    assertSame(data, actualSetKeyResult.getData());
+    byte[] key3 = actualTrieEntry.getKey();
+    assertSame(key, key3);
+    byte[] key4 = actualTrieEntry2.getKey();
+    assertSame(key2, key4);
+    assertSame(key, actualSetDataResult.getKey());
+    assertSame(key, actualSetKeyResult.getKey());
+    assertArrayEquals("AXAXAXAX".getBytes("UTF-8"), data3);
+    assertArrayEquals("AXAXAXAX".getBytes("UTF-8"), data4);
+    assertArrayEquals("AXAXAXAX".getBytes("UTF-8"), key3);
+    assertArrayEquals("AXAXAXAX".getBytes("UTF-8"), key4);
   }
 }

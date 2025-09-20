@@ -11,15 +11,16 @@ import org.junit.experimental.categories.Category;
 public class JsonRpcInvalidParamsExceptionDiffblueTest {
   /**
    * Test {@link JsonRpcInvalidParamsException#JsonRpcInvalidParamsException()}.
-   * <p>
-   * Method under test: {@link JsonRpcInvalidParamsException#JsonRpcInvalidParamsException()}
+   *
+   * <p>Method under test: {@link JsonRpcInvalidParamsException#JsonRpcInvalidParamsException()}
    */
   @Test
   @Category(MaintainedByDiffblue.class)
   @MethodsUnderTest({"void JsonRpcInvalidParamsException.<init>()"})
   public void testNewJsonRpcInvalidParamsException() {
     // Arrange and Act
-    JsonRpcInvalidParamsException actualJsonRpcInvalidParamsException = new JsonRpcInvalidParamsException();
+    JsonRpcInvalidParamsException actualJsonRpcInvalidParamsException =
+        new JsonRpcInvalidParamsException();
 
     // Assert
     assertNull(actualJsonRpcInvalidParamsException.getLocalizedMessage());
@@ -30,15 +31,17 @@ public class JsonRpcInvalidParamsExceptionDiffblueTest {
 
   /**
    * Test {@link JsonRpcInvalidParamsException#JsonRpcInvalidParamsException(String)}.
-   * <p>
-   * Method under test: {@link JsonRpcInvalidParamsException#JsonRpcInvalidParamsException(String)}
+   *
+   * <p>Method under test: {@link
+   * JsonRpcInvalidParamsException#JsonRpcInvalidParamsException(String)}
    */
   @Test
   @Category(MaintainedByDiffblue.class)
   @MethodsUnderTest({"void JsonRpcInvalidParamsException.<init>(String)"})
   public void testNewJsonRpcInvalidParamsException2() {
     // Arrange and Act
-    JsonRpcInvalidParamsException actualJsonRpcInvalidParamsException = new JsonRpcInvalidParamsException("Msg");
+    JsonRpcInvalidParamsException actualJsonRpcInvalidParamsException =
+        new JsonRpcInvalidParamsException("Msg");
 
     // Assert
     assertEquals("Msg", actualJsonRpcInvalidParamsException.getLocalizedMessage());
@@ -49,8 +52,9 @@ public class JsonRpcInvalidParamsExceptionDiffblueTest {
 
   /**
    * Test {@link JsonRpcInvalidParamsException#JsonRpcInvalidParamsException(String, Throwable)}.
-   * <p>
-   * Method under test: {@link JsonRpcInvalidParamsException#JsonRpcInvalidParamsException(String, Throwable)}
+   *
+   * <p>Method under test: {@link
+   * JsonRpcInvalidParamsException#JsonRpcInvalidParamsException(String, Throwable)}
    */
   @Test
   @Category(MaintainedByDiffblue.class)
@@ -60,8 +64,8 @@ public class JsonRpcInvalidParamsExceptionDiffblueTest {
     Throwable cause = new Throwable();
 
     // Act
-    JsonRpcInvalidParamsException actualJsonRpcInvalidParamsException = new JsonRpcInvalidParamsException(
-        "An error occurred", cause);
+    JsonRpcInvalidParamsException actualJsonRpcInvalidParamsException =
+        new JsonRpcInvalidParamsException("An error occurred", cause);
 
     // Assert
     assertEquals("An error occurred", actualJsonRpcInvalidParamsException.getLocalizedMessage());

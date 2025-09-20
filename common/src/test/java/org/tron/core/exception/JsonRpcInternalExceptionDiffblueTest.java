@@ -11,8 +11,8 @@ import org.junit.experimental.categories.Category;
 public class JsonRpcInternalExceptionDiffblueTest {
   /**
    * Test {@link JsonRpcInternalException#JsonRpcInternalException()}.
-   * <p>
-   * Method under test: {@link JsonRpcInternalException#JsonRpcInternalException()}
+   *
+   * <p>Method under test: {@link JsonRpcInternalException#JsonRpcInternalException()}
    */
   @Test
   @Category(MaintainedByDiffblue.class)
@@ -30,15 +30,16 @@ public class JsonRpcInternalExceptionDiffblueTest {
 
   /**
    * Test {@link JsonRpcInternalException#JsonRpcInternalException(String)}.
-   * <p>
-   * Method under test: {@link JsonRpcInternalException#JsonRpcInternalException(String)}
+   *
+   * <p>Method under test: {@link JsonRpcInternalException#JsonRpcInternalException(String)}
    */
   @Test
   @Category(MaintainedByDiffblue.class)
   @MethodsUnderTest({"void JsonRpcInternalException.<init>(String)"})
   public void testNewJsonRpcInternalException2() {
     // Arrange and Act
-    JsonRpcInternalException actualJsonRpcInternalException = new JsonRpcInternalException("An error occurred");
+    JsonRpcInternalException actualJsonRpcInternalException =
+        new JsonRpcInternalException("An error occurred");
 
     // Assert
     assertEquals("An error occurred", actualJsonRpcInternalException.getLocalizedMessage());
@@ -49,8 +50,9 @@ public class JsonRpcInternalExceptionDiffblueTest {
 
   /**
    * Test {@link JsonRpcInternalException#JsonRpcInternalException(String, Throwable)}.
-   * <p>
-   * Method under test: {@link JsonRpcInternalException#JsonRpcInternalException(String, Throwable)}
+   *
+   * <p>Method under test: {@link JsonRpcInternalException#JsonRpcInternalException(String,
+   * Throwable)}
    */
   @Test
   @Category(MaintainedByDiffblue.class)
@@ -60,7 +62,8 @@ public class JsonRpcInternalExceptionDiffblueTest {
     Throwable cause = new Throwable();
 
     // Act
-    JsonRpcInternalException actualJsonRpcInternalException = new JsonRpcInternalException("An error occurred", cause);
+    JsonRpcInternalException actualJsonRpcInternalException =
+        new JsonRpcInternalException("An error occurred", cause);
 
     // Assert
     assertEquals("An error occurred", actualJsonRpcInternalException.getLocalizedMessage());

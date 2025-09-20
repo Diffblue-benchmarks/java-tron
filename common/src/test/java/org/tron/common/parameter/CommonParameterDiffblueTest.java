@@ -30,113 +30,47 @@ import org.tron.p2p.dns.update.PublishConfig;
 
 public class CommonParameterDiffblueTest {
   /**
-   * Test {@link CommonParameter#isECKeyCryptoEngine()}.
-   * <ul>
-   *   <li>Given {@link CommonParameter} (default constructor).</li>
-   *   <li>Then return {@code true}.</li>
-   * </ul>
-   * <p>
-   * Method under test: {@link CommonParameter#isECKeyCryptoEngine()}
-   */
-  @Test
-  @Category(MaintainedByDiffblue.class)
-  @MethodsUnderTest({"boolean CommonParameter.isECKeyCryptoEngine()"})
-  public void testIsECKeyCryptoEngine_givenCommonParameter_thenReturnTrue() {
-    // Arrange, Act and Assert
-    assertTrue((new CommonParameter()).isECKeyCryptoEngine());
-  }
-
-  /**
-   * Test {@link CommonParameter#isECKeyCryptoEngine()}.
-   * <ul>
-   *   <li>Given Instance.</li>
-   *   <li>Then return {@code false}.</li>
-   * </ul>
-   * <p>
-   * Method under test: {@link CommonParameter#isECKeyCryptoEngine()}
-   */
-  @Test
-  @Category(MaintainedByDiffblue.class)
-  @MethodsUnderTest({"boolean CommonParameter.isECKeyCryptoEngine()"})
-  public void testIsECKeyCryptoEngine_givenInstance_thenReturnFalse() {
-    // Arrange, Act and Assert
-    assertFalse(CommonParameter.getInstance().isECKeyCryptoEngine());
-  }
-
-  /**
-   * Test {@link CommonParameter#isJsonRpcFilterEnabled()}.
-   * <p>
-   * Method under test: {@link CommonParameter#isJsonRpcFilterEnabled()}
-   */
-  @Test
-  @Category(MaintainedByDiffblue.class)
-  @MethodsUnderTest({"boolean CommonParameter.isJsonRpcFilterEnabled()"})
-  public void testIsJsonRpcFilterEnabled() {
-    // Arrange
-    CommonParameter commonParameter = new CommonParameter();
-    commonParameter.setJsonRpcHttpSolidityNodeEnable(true);
-
-    // Act and Assert
-    assertTrue(commonParameter.isJsonRpcFilterEnabled());
-  }
-
-  /**
-   * Test {@link CommonParameter#isJsonRpcFilterEnabled()}.
-   * <ul>
-   *   <li>Given {@link CommonParameter} (default constructor).</li>
-   *   <li>Then return {@code false}.</li>
-   * </ul>
-   * <p>
-   * Method under test: {@link CommonParameter#isJsonRpcFilterEnabled()}
-   */
-  @Test
-  @Category(MaintainedByDiffblue.class)
-  @MethodsUnderTest({"boolean CommonParameter.isJsonRpcFilterEnabled()"})
-  public void testIsJsonRpcFilterEnabled_givenCommonParameter_thenReturnFalse() {
-    // Arrange, Act and Assert
-    assertFalse((new CommonParameter()).isJsonRpcFilterEnabled());
-  }
-
-  /**
-   * Test {@link CommonParameter#isJsonRpcFilterEnabled()}.
-   * <ul>
-   *   <li>Given Instance.</li>
-   *   <li>Then return {@code true}.</li>
-   * </ul>
-   * <p>
-   * Method under test: {@link CommonParameter#isJsonRpcFilterEnabled()}
-   */
-  @Test
-  @Category(MaintainedByDiffblue.class)
-  @MethodsUnderTest({"boolean CommonParameter.isJsonRpcFilterEnabled()"})
-  public void testIsJsonRpcFilterEnabled_givenInstance_thenReturnTrue() {
-    // Arrange, Act and Assert
-    assertTrue(CommonParameter.getInstance().isJsonRpcFilterEnabled());
-  }
-
-  /**
    * Test {@link CommonParameter#getSafeLruCacheSize()}.
+   *
    * <ul>
-   *   <li>Given {@link CommonParameter} (default constructor).</li>
+   *   <li>Given {@link CommonParameter} (default constructor).
    * </ul>
-   * <p>
-   * Method under test: {@link CommonParameter#getSafeLruCacheSize()}
+   *
+   * <p>Method under test: {@link CommonParameter#getSafeLruCacheSize()}
    */
   @Test
   @Category(MaintainedByDiffblue.class)
   @MethodsUnderTest({"int CommonParameter.getSafeLruCacheSize()"})
   public void testGetSafeLruCacheSize_givenCommonParameter() {
     // Arrange, Act and Assert
-    assertEquals(500, (new CommonParameter()).getSafeLruCacheSize());
+    assertEquals(500, new CommonParameter().getSafeLruCacheSize());
   }
 
   /**
    * Test {@link CommonParameter#getSafeLruCacheSize()}.
+   *
    * <ul>
-   *   <li>Given {@link CommonParameter} (default constructor) LruCacheSize is zero.</li>
+   *   <li>Given {@link CommonParameter} (default constructor).
    * </ul>
-   * <p>
-   * Method under test: {@link CommonParameter#getSafeLruCacheSize()}
+   *
+   * <p>Method under test: {@link CommonParameter#getSafeLruCacheSize()}
+   */
+  @Test
+  @Category(MaintainedByDiffblue.class)
+  @MethodsUnderTest({"int CommonParameter.getSafeLruCacheSize()"})
+  public void testGetSafeLruCacheSize_givenCommonParameter2() {
+    // Arrange, Act and Assert
+    assertEquals(500, new CommonParameter().getSafeLruCacheSize());
+  }
+
+  /**
+   * Test {@link CommonParameter#getSafeLruCacheSize()}.
+   *
+   * <ul>
+   *   <li>Given {@link CommonParameter} (default constructor) LruCacheSize is zero.
+   * </ul>
+   *
+   * <p>Method under test: {@link CommonParameter#getSafeLruCacheSize()}
    */
   @Test
   @Category(MaintainedByDiffblue.class)
@@ -151,9 +85,31 @@ public class CommonParameterDiffblueTest {
   }
 
   /**
+   * Test {@link CommonParameter#getSafeLruCacheSize()}.
+   *
+   * <ul>
+   *   <li>Given {@link CommonParameter} (default constructor) LruCacheSize is zero.
+   * </ul>
+   *
+   * <p>Method under test: {@link CommonParameter#getSafeLruCacheSize()}
+   */
+  @Test
+  @Category(MaintainedByDiffblue.class)
+  @MethodsUnderTest({"int CommonParameter.getSafeLruCacheSize()"})
+  public void testGetSafeLruCacheSize_givenCommonParameterLruCacheSizeIsZero2() {
+    // Arrange
+    CommonParameter commonParameter = new CommonParameter();
+    commonParameter.setLruCacheSize(0);
+
+    // Act and Assert
+    assertEquals(500, commonParameter.getSafeLruCacheSize());
+  }
+
+  /**
    * Test getters and setters.
-   * <p>
-   * Methods under test:
+   *
+   * <p>Methods under test:
+   *
    * <ul>
    *   <li>{@link CommonParameter#getInstance()}
    *   <li>{@link CommonParameter#setActiveNodes(List)}
@@ -510,194 +466,360 @@ public class CommonParameterDiffblueTest {
    */
   @Test
   @Category(MaintainedByDiffblue.class)
-  @MethodsUnderTest({"List CommonParameter.getActiveNodes()", "Set CommonParameter.getActuatorSet()",
-      "int CommonParameter.getAgreeNodeCount()", "long CommonParameter.getAllowAccountAssetOptimization()",
-      "long CommonParameter.getAllowAccountStateRoot()", "long CommonParameter.getAllowAdaptiveEnergy()",
-      "long CommonParameter.getAllowAssetOptimization()", "long CommonParameter.getAllowBlackHoleOptimization()",
-      "long CommonParameter.getAllowCancelAllUnfreezeV2()", "long CommonParameter.getAllowCreationOfContracts()",
-      "long CommonParameter.getAllowDelegateOptimization()", "long CommonParameter.getAllowDelegateResource()",
-      "long CommonParameter.getAllowDynamicEnergy()", "long CommonParameter.getAllowEnergyAdjustment()",
-      "long CommonParameter.getAllowHigherLimitForMaxCpuTimeOfOneTx()",
-      "long CommonParameter.getAllowMarketTransaction()", "int CommonParameter.getAllowMultiSign()",
-      "long CommonParameter.getAllowNewResourceModel()", "long CommonParameter.getAllowNewReward()",
-      "long CommonParameter.getAllowNewRewardAlgorithm()", "long CommonParameter.getAllowOldRewardOpt()",
-      "long CommonParameter.getAllowOptimizedReturnValueOfChainId()", "long CommonParameter.getAllowPBFT()",
-      "long CommonParameter.getAllowProtoFilterNum()", "long CommonParameter.getAllowSameTokenName()",
-      "long CommonParameter.getAllowShieldedTRC20Transaction()", "long CommonParameter.getAllowStrictMath()",
-      "long CommonParameter.getAllowTransactionFeePool()", "long CommonParameter.getAllowTvmCompatibleEvm()",
-      "long CommonParameter.getAllowTvmConstantinople()", "long CommonParameter.getAllowTvmFreeze()",
-      "long CommonParameter.getAllowTvmIstanbul()", "long CommonParameter.getAllowTvmLondon()",
-      "long CommonParameter.getAllowTvmShangHai()", "long CommonParameter.getAllowTvmSolidity059()",
-      "long CommonParameter.getAllowTvmTransferTrc10()", "long CommonParameter.getAllowTvmVote()",
-      "List CommonParameter.getBackupMembers()", "int CommonParameter.getBackupPort()",
-      "int CommonParameter.getBackupPriority()", "long CommonParameter.getBlockCacheTimeout()",
-      "long CommonParameter.getBlockNumForEnergyLimit()", "int CommonParameter.getBlockProducedTimeOut()",
-      "String CommonParameter.getChainId()", "long CommonParameter.getChangedDelegation()",
-      "int CommonParameter.getCheckFrozenTime()", "long CommonParameter.getConsensusLogicOptimization()",
-      "String CommonParameter.getCryptoEngine()", "DbBackupConfig CommonParameter.getDbBackupConfig()",
-      "List CommonParameter.getDisabledApiList()", "PublishConfig CommonParameter.getDnsPublishConfig()",
-      "List CommonParameter.getDnsTreeUrls()", "long CommonParameter.getDynamicConfigCheckInterval()",
-      "long CommonParameter.getDynamicEnergyIncreaseFactor()", "long CommonParameter.getDynamicEnergyMaxFactor()",
-      "long CommonParameter.getDynamicEnergyThreshold()", "int CommonParameter.getEstimateEnergyMaxRetry()",
-      "FilterQuery CommonParameter.getEventFilter()", "EventPluginConfig CommonParameter.getEventPluginConfig()",
-      "List CommonParameter.getFastForwardNodes()", "int CommonParameter.getFetchBlockTimeout()",
-      "int CommonParameter.getFlowControlWindow()", "long CommonParameter.getForbidTransferToContract()",
-      "int CommonParameter.getFullNodeHttpPort()", "GenesisBlock CommonParameter.getGenesisBlock()",
-      "int CommonParameter.getInactiveThreshold()", "String CommonParameter.getInfluxDbDatabase()",
-      "String CommonParameter.getInfluxDbIp()", "int CommonParameter.getInfluxDbPort()",
-      "CommonParameter CommonParameter.getInstance()", "int CommonParameter.getJsonRpcHttpFullNodePort()",
-      "int CommonParameter.getJsonRpcHttpPBFTPort()", "int CommonParameter.getJsonRpcHttpSolidityPort()",
-      "int CommonParameter.getKeepAliveInterval()", "String CommonParameter.getLogbackPath()",
-      "int CommonParameter.getLongRunningTime()", "int CommonParameter.getLruCacheSize()",
-      "long CommonParameter.getMaintenanceTimeInterval()", "int CommonParameter.getMaxConcurrentCallsPerConnection()",
-      "long CommonParameter.getMaxConnectionAgeInMillis()", "long CommonParameter.getMaxConnectionIdleInMillis()",
-      "int CommonParameter.getMaxConnections()", "int CommonParameter.getMaxConnectionsWithSameIp()",
-      "long CommonParameter.getMaxCreateAccountTxSize()", "long CommonParameter.getMaxEnergyLimitForConstant()",
-      "int CommonParameter.getMaxFastForwardNum()", "int CommonParameter.getMaxHeaderListSize()",
-      "int CommonParameter.getMaxHttpConnectNumber()", "int CommonParameter.getMaxMessageSize()",
-      "double CommonParameter.getMaxTimeRatio()", "int CommonParameter.getMaxTps()",
-      "int CommonParameter.getMaxTransactionPendingSize()", "int CommonParameter.getMaxUnsolidifiedBlocks()",
-      "long CommonParameter.getMemoFee()", "int CommonParameter.getMetricsPrometheusPort()",
-      "int CommonParameter.getMetricsReportInterval()", "int CommonParameter.getMinActiveConnections()",
-      "int CommonParameter.getMinConnections()", "int CommonParameter.getMinEffectiveConnection()",
-      "int CommonParameter.getMinParticipationRate()", "double CommonParameter.getMinTimeRatio()",
-      "long CommonParameter.getNetMaxTrxPerSecond()", "int CommonParameter.getNodeChannelReadTimeout()",
-      "int CommonParameter.getNodeConnectionTimeout()", "String CommonParameter.getNodeExternalIp()",
-      "String CommonParameter.getNodeLanIp()", "int CommonParameter.getNodeListenPort()",
-      "int CommonParameter.getNodeP2pVersion()", "long CommonParameter.getOldSolidityBlockNum()",
-      "String CommonParameter.getOutputDirectory()", "Overlay CommonParameter.getOverlay()",
-      "P2pConfig CommonParameter.getP2pConfig()", "long CommonParameter.getPBFTExpireNum()",
-      "int CommonParameter.getPBFTHttpPort()", "List CommonParameter.getPassiveNodes()",
-      "long CommonParameter.getPendingTransactionTimeout()", "long CommonParameter.getProposalExpireTime()",
-      "int CommonParameter.getRateLimiterGlobalApiQps()", "int CommonParameter.getRateLimiterGlobalIpQps()",
-      "int CommonParameter.getRateLimiterGlobalQps()",
-      "RateLimiterInitialization CommonParameter.getRateLimiterInitialization()",
-      "long CommonParameter.getReceiveTcpMinDataLength()", "RocksDbSettings CommonParameter.getRocksDBCustomSettings()",
-      "int CommonParameter.getRpcOnPBFTPort()", "int CommonParameter.getRpcOnSolidityPort()",
-      "int CommonParameter.getRpcPort()", "int CommonParameter.getRpcThreadNum()",
-      "SeedNode CommonParameter.getSeedNode()", "List CommonParameter.getSeedNodes()",
-      "String CommonParameter.getShellConfFileName()", "int CommonParameter.getShieldedTransInPendingMaxCounts()",
-      "long CommonParameter.getShutdownBlockCount()", "long CommonParameter.getShutdownBlockHeight()",
-      "CronExpression CommonParameter.getShutdownBlockTime()", "int CommonParameter.getSolidityHttpPort()",
-      "int CommonParameter.getSolidityThreads()", "Storage CommonParameter.getStorage()",
-      "long CommonParameter.getSyncFetchBatchNum()", "int CommonParameter.getTcpNettyWorkThreadNum()",
-      "String CommonParameter.getTrustNodeAddr()", "long CommonParameter.getTrxExpirationTimeInMilliseconds()",
-      "String CommonParameter.getTrxReferenceBlock()", "int CommonParameter.getUdpNettyWorkThreadNum()",
-      "long CommonParameter.getUnfreezeDelayDays()", "int CommonParameter.getValidContractProtoThreadNum()",
-      "int CommonParameter.getValidateSignThreadNum()", "String CommonParameter.getZenTokenId()",
-      "boolean CommonParameter.isDebug()", "boolean CommonParameter.isDynamicConfigEnable()",
-      "boolean CommonParameter.isEstimateEnergy()", "boolean CommonParameter.isEventSubscribe()",
-      "boolean CommonParameter.isFastForward()", "boolean CommonParameter.isFullNodeAllowShieldedTransactionArgs()",
-      "boolean CommonParameter.isFullNodeHttpEnable()", "boolean CommonParameter.isHelp()",
-      "boolean CommonParameter.isHistoryBalanceLookup()", "boolean CommonParameter.isJsonRpcHttpFullNodeEnable()",
-      "boolean CommonParameter.isJsonRpcHttpPBFTNodeEnable()",
-      "boolean CommonParameter.isJsonRpcHttpSolidityNodeEnable()",
-      "boolean CommonParameter.isMetricsPrometheusEnable()", "boolean CommonParameter.isMetricsStorageEnable()",
-      "boolean CommonParameter.isNeedSyncCheck()", "boolean CommonParameter.isNeedToUpdateAsset()",
-      "boolean CommonParameter.isNodeDetectEnable()", "boolean CommonParameter.isNodeDiscoveryEnable()",
-      "boolean CommonParameter.isNodeDiscoveryPersist()", "boolean CommonParameter.isNodeEffectiveCheckEnable()",
-      "boolean CommonParameter.isNodeEnableIpv6()", "boolean CommonParameter.isNodeMetricsEnable()",
-      "boolean CommonParameter.isOpenFullTcpDisconnect()", "boolean CommonParameter.isOpenHistoryQueryWhenLiteFN()",
-      "boolean CommonParameter.isOpenPrintLog()", "boolean CommonParameter.isOpenTransactionSort()",
-      "boolean CommonParameter.isP2pDisable()", "boolean CommonParameter.isRpcReflectionServiceEnable()",
-      "boolean CommonParameter.isSaveFeaturedInternalTx()", "boolean CommonParameter.isSaveInternalTx()",
-      "boolean CommonParameter.isSolidityNode()", "boolean CommonParameter.isSolidityNodeHttpEnable()",
-      "boolean CommonParameter.isSupportConstant()", "boolean CommonParameter.isTrxCacheEnable()",
-      "boolean CommonParameter.isUnsolidifiedBlockCheck()", "boolean CommonParameter.isVmTrace()",
-      "boolean CommonParameter.isWalletExtensionApi()", "boolean CommonParameter.isWitness()",
-      "void CommonParameter.setActiveNodes(List)", "void CommonParameter.setActuatorSet(Set)",
-      "void CommonParameter.setAgreeNodeCount(int)", "void CommonParameter.setAllowAccountAssetOptimization(long)",
-      "void CommonParameter.setAllowAccountStateRoot(long)", "void CommonParameter.setAllowAdaptiveEnergy(long)",
-      "void CommonParameter.setAllowAssetOptimization(long)",
-      "void CommonParameter.setAllowBlackHoleOptimization(long)",
-      "void CommonParameter.setAllowCancelAllUnfreezeV2(long)",
-      "void CommonParameter.setAllowCreationOfContracts(long)",
-      "void CommonParameter.setAllowDelegateOptimization(long)", "void CommonParameter.setAllowDelegateResource(long)",
-      "void CommonParameter.setAllowDynamicEnergy(long)", "void CommonParameter.setAllowEnergyAdjustment(long)",
-      "void CommonParameter.setAllowHigherLimitForMaxCpuTimeOfOneTx(long)",
-      "void CommonParameter.setAllowMarketTransaction(long)", "void CommonParameter.setAllowMultiSign(int)",
-      "void CommonParameter.setAllowNewResourceModel(long)", "void CommonParameter.setAllowNewReward(long)",
-      "void CommonParameter.setAllowNewRewardAlgorithm(long)", "void CommonParameter.setAllowOldRewardOpt(long)",
-      "void CommonParameter.setAllowOptimizedReturnValueOfChainId(long)", "void CommonParameter.setAllowPBFT(long)",
-      "void CommonParameter.setAllowProtoFilterNum(long)", "void CommonParameter.setAllowSameTokenName(long)",
-      "void CommonParameter.setAllowShieldedTRC20Transaction(long)", "void CommonParameter.setAllowStrictMath(long)",
-      "void CommonParameter.setAllowTransactionFeePool(long)", "void CommonParameter.setAllowTvmCompatibleEvm(long)",
-      "void CommonParameter.setAllowTvmConstantinople(long)", "void CommonParameter.setAllowTvmFreeze(long)",
-      "void CommonParameter.setAllowTvmIstanbul(long)", "void CommonParameter.setAllowTvmLondon(long)",
-      "void CommonParameter.setAllowTvmShangHai(long)", "void CommonParameter.setAllowTvmSolidity059(long)",
-      "void CommonParameter.setAllowTvmTransferTrc10(long)", "void CommonParameter.setAllowTvmVote(long)",
-      "void CommonParameter.setBackupMembers(List)", "void CommonParameter.setBackupPort(int)",
-      "void CommonParameter.setBackupPriority(int)", "void CommonParameter.setBlockCacheTimeout(long)",
-      "void CommonParameter.setBlockNumForEnergyLimit(long)", "void CommonParameter.setBlockProducedTimeOut(int)",
-      "void CommonParameter.setChainId(String)", "void CommonParameter.setChangedDelegation(long)",
-      "void CommonParameter.setCheckFrozenTime(int)", "void CommonParameter.setConsensusLogicOptimization(long)",
-      "void CommonParameter.setCryptoEngine(String)", "void CommonParameter.setDebug(boolean)",
-      "void CommonParameter.setDisabledApiList(List)", "void CommonParameter.setDnsPublishConfig(PublishConfig)",
-      "void CommonParameter.setDnsTreeUrls(List)", "void CommonParameter.setDynamicConfigCheckInterval(long)",
-      "void CommonParameter.setDynamicConfigEnable(boolean)",
-      "void CommonParameter.setDynamicEnergyIncreaseFactor(long)",
-      "void CommonParameter.setDynamicEnergyMaxFactor(long)", "void CommonParameter.setDynamicEnergyThreshold(long)",
-      "void CommonParameter.setENERGY_LIMIT_HARD_FORK(boolean)", "void CommonParameter.setEstimateEnergy(boolean)",
-      "void CommonParameter.setEstimateEnergyMaxRetry(int)", "void CommonParameter.setEventSubscribe(boolean)",
-      "void CommonParameter.setFetchBlockTimeout(int)", "void CommonParameter.setFlowControlWindow(int)",
-      "void CommonParameter.setForbidTransferToContract(long)",
-      "void CommonParameter.setFullNodeAllowShieldedTransactionArgs(boolean)",
-      "void CommonParameter.setFullNodeHttpEnable(boolean)", "void CommonParameter.setFullNodeHttpPort(int)",
-      "void CommonParameter.setHistoryBalanceLookup(boolean)", "void CommonParameter.setInactiveThreshold(int)",
-      "void CommonParameter.setInfluxDbDatabase(String)", "void CommonParameter.setInfluxDbIp(String)",
-      "void CommonParameter.setInfluxDbPort(int)", "void CommonParameter.setJsonRpcHttpFullNodeEnable(boolean)",
-      "void CommonParameter.setJsonRpcHttpFullNodePort(int)",
-      "void CommonParameter.setJsonRpcHttpPBFTNodeEnable(boolean)", "void CommonParameter.setJsonRpcHttpPBFTPort(int)",
-      "void CommonParameter.setJsonRpcHttpSolidityNodeEnable(boolean)",
-      "void CommonParameter.setJsonRpcHttpSolidityPort(int)", "void CommonParameter.setKeepAliveInterval(int)",
-      "void CommonParameter.setLongRunningTime(int)", "void CommonParameter.setLruCacheSize(int)",
-      "void CommonParameter.setMaintenanceTimeInterval(long)",
-      "void CommonParameter.setMaxConcurrentCallsPerConnection(int)",
-      "void CommonParameter.setMaxConnectionAgeInMillis(long)",
-      "void CommonParameter.setMaxConnectionIdleInMillis(long)", "void CommonParameter.setMaxConnections(int)",
-      "void CommonParameter.setMaxConnectionsWithSameIp(int)", "void CommonParameter.setMaxCreateAccountTxSize(long)",
-      "void CommonParameter.setMaxEnergyLimitForConstant(long)", "void CommonParameter.setMaxHeaderListSize(int)",
-      "void CommonParameter.setMaxHttpConnectNumber(int)", "void CommonParameter.setMaxMessageSize(int)",
-      "void CommonParameter.setMaxTimeRatio(double)", "void CommonParameter.setMaxTps(int)",
-      "void CommonParameter.setMaxTransactionPendingSize(int)", "void CommonParameter.setMaxUnsolidifiedBlocks(int)",
-      "void CommonParameter.setMemoFee(long)", "void CommonParameter.setMetricsPrometheusEnable(boolean)",
-      "void CommonParameter.setMetricsPrometheusPort(int)", "void CommonParameter.setMetricsReportInterval(int)",
-      "void CommonParameter.setMetricsStorageEnable(boolean)", "void CommonParameter.setMinActiveConnections(int)",
-      "void CommonParameter.setMinConnections(int)", "void CommonParameter.setMinEffectiveConnection(int)",
-      "void CommonParameter.setMinParticipationRate(int)", "void CommonParameter.setMinTimeRatio(double)",
-      "void CommonParameter.setNeedSyncCheck(boolean)", "void CommonParameter.setNeedToUpdateAsset(boolean)",
-      "void CommonParameter.setNetMaxTrxPerSecond(long)", "void CommonParameter.setNodeChannelReadTimeout(int)",
-      "void CommonParameter.setNodeConnectionTimeout(int)", "void CommonParameter.setNodeDetectEnable(boolean)",
-      "void CommonParameter.setNodeDiscoveryEnable(boolean)", "void CommonParameter.setNodeDiscoveryPersist(boolean)",
-      "void CommonParameter.setNodeEffectiveCheckEnable(boolean)", "void CommonParameter.setNodeEnableIpv6(boolean)",
-      "void CommonParameter.setNodeExternalIp(String)", "void CommonParameter.setNodeLanIp(String)",
-      "void CommonParameter.setNodeListenPort(int)", "void CommonParameter.setNodeMetricsEnable(boolean)",
-      "void CommonParameter.setNodeP2pVersion(int)", "void CommonParameter.setOldSolidityBlockNum(long)",
-      "void CommonParameter.setOpenFullTcpDisconnect(boolean)",
-      "void CommonParameter.setOpenHistoryQueryWhenLiteFN(boolean)", "void CommonParameter.setOpenPrintLog(boolean)",
-      "void CommonParameter.setOpenTransactionSort(boolean)", "void CommonParameter.setP2pDisable(boolean)",
-      "void CommonParameter.setPBFTExpireNum(long)", "void CommonParameter.setPBFTHttpPort(int)",
-      "void CommonParameter.setPassiveNodes(List)", "void CommonParameter.setPendingTransactionTimeout(long)",
-      "void CommonParameter.setProposalExpireTime(long)", "void CommonParameter.setRateLimiterGlobalIpQps(int)",
-      "void CommonParameter.setRateLimiterGlobalQps(int)",
-      "void CommonParameter.setRateLimiterInitialization(RateLimiterInitialization)",
-      "void CommonParameter.setReceiveTcpMinDataLength(long)", "void CommonParameter.setRpcOnPBFTPort(int)",
-      "void CommonParameter.setRpcOnSolidityPort(int)", "void CommonParameter.setRpcPort(int)",
-      "void CommonParameter.setRpcReflectionServiceEnable(boolean)", "void CommonParameter.setRpcThreadNum(int)",
-      "void CommonParameter.setSaveFeaturedInternalTx(boolean)", "void CommonParameter.setSaveInternalTx(boolean)",
-      "void CommonParameter.setShieldedTransInPendingMaxCounts(int)",
-      "void CommonParameter.setShutdownBlockCount(long)", "void CommonParameter.setShutdownBlockHeight(long)",
-      "void CommonParameter.setShutdownBlockTime(CronExpression)", "void CommonParameter.setSolidityHttpPort(int)",
-      "void CommonParameter.setSolidityNode(boolean)", "void CommonParameter.setSolidityNodeHttpEnable(boolean)",
-      "void CommonParameter.setSolidityThreads(int)", "void CommonParameter.setSupportConstant(boolean)",
-      "void CommonParameter.setSyncFetchBatchNum(long)", "void CommonParameter.setTcpNettyWorkThreadNum(int)",
-      "void CommonParameter.setTrustNodeAddr(String)", "void CommonParameter.setTrxCacheEnable(boolean)",
-      "void CommonParameter.setTrxExpirationTimeInMilliseconds(long)",
-      "void CommonParameter.setTrxReferenceBlock(String)", "void CommonParameter.setUdpNettyWorkThreadNum(int)",
-      "void CommonParameter.setUnfreezeDelayDays(long)", "void CommonParameter.setUnsolidifiedBlockCheck(boolean)",
-      "void CommonParameter.setValidContractProtoThreadNum(int)", "void CommonParameter.setValidateSignThreadNum(int)",
-      "void CommonParameter.setVmTrace(boolean)", "void CommonParameter.setWalletExtensionApi(boolean)",
-      "void CommonParameter.setWitness(boolean)", "void CommonParameter.setZenTokenId(String)"})
+  @MethodsUnderTest({
+    "List CommonParameter.getActiveNodes()",
+    "Set CommonParameter.getActuatorSet()",
+    "int CommonParameter.getAgreeNodeCount()",
+    "long CommonParameter.getAllowAccountAssetOptimization()",
+    "long CommonParameter.getAllowAccountStateRoot()",
+    "long CommonParameter.getAllowAdaptiveEnergy()",
+    "long CommonParameter.getAllowAssetOptimization()",
+    "long CommonParameter.getAllowBlackHoleOptimization()",
+    "long CommonParameter.getAllowCancelAllUnfreezeV2()",
+    "long CommonParameter.getAllowCreationOfContracts()",
+    "long CommonParameter.getAllowDelegateOptimization()",
+    "long CommonParameter.getAllowDelegateResource()",
+    "long CommonParameter.getAllowDynamicEnergy()",
+    "long CommonParameter.getAllowEnergyAdjustment()",
+    "long CommonParameter.getAllowHigherLimitForMaxCpuTimeOfOneTx()",
+    "long CommonParameter.getAllowMarketTransaction()",
+    "int CommonParameter.getAllowMultiSign()",
+    "long CommonParameter.getAllowNewResourceModel()",
+    "long CommonParameter.getAllowNewReward()",
+    "long CommonParameter.getAllowNewRewardAlgorithm()",
+    "long CommonParameter.getAllowOldRewardOpt()",
+    "long CommonParameter.getAllowOptimizedReturnValueOfChainId()",
+    "long CommonParameter.getAllowPBFT()",
+    "long CommonParameter.getAllowProtoFilterNum()",
+    "long CommonParameter.getAllowSameTokenName()",
+    "long CommonParameter.getAllowShieldedTRC20Transaction()",
+    "long CommonParameter.getAllowStrictMath()",
+    "long CommonParameter.getAllowTransactionFeePool()",
+    "long CommonParameter.getAllowTvmCompatibleEvm()",
+    "long CommonParameter.getAllowTvmConstantinople()",
+    "long CommonParameter.getAllowTvmFreeze()",
+    "long CommonParameter.getAllowTvmIstanbul()",
+    "long CommonParameter.getAllowTvmLondon()",
+    "long CommonParameter.getAllowTvmShangHai()",
+    "long CommonParameter.getAllowTvmSolidity059()",
+    "long CommonParameter.getAllowTvmTransferTrc10()",
+    "long CommonParameter.getAllowTvmVote()",
+    "List CommonParameter.getBackupMembers()",
+    "int CommonParameter.getBackupPort()",
+    "int CommonParameter.getBackupPriority()",
+    "long CommonParameter.getBlockCacheTimeout()",
+    "long CommonParameter.getBlockNumForEnergyLimit()",
+    "int CommonParameter.getBlockProducedTimeOut()",
+    "String CommonParameter.getChainId()",
+    "long CommonParameter.getChangedDelegation()",
+    "int CommonParameter.getCheckFrozenTime()",
+    "long CommonParameter.getConsensusLogicOptimization()",
+    "String CommonParameter.getCryptoEngine()",
+    "DbBackupConfig CommonParameter.getDbBackupConfig()",
+    "List CommonParameter.getDisabledApiList()",
+    "PublishConfig CommonParameter.getDnsPublishConfig()",
+    "List CommonParameter.getDnsTreeUrls()",
+    "long CommonParameter.getDynamicConfigCheckInterval()",
+    "long CommonParameter.getDynamicEnergyIncreaseFactor()",
+    "long CommonParameter.getDynamicEnergyMaxFactor()",
+    "long CommonParameter.getDynamicEnergyThreshold()",
+    "int CommonParameter.getEstimateEnergyMaxRetry()",
+    "FilterQuery CommonParameter.getEventFilter()",
+    "EventPluginConfig CommonParameter.getEventPluginConfig()",
+    "List CommonParameter.getFastForwardNodes()",
+    "int CommonParameter.getFetchBlockTimeout()",
+    "int CommonParameter.getFlowControlWindow()",
+    "long CommonParameter.getForbidTransferToContract()",
+    "int CommonParameter.getFullNodeHttpPort()",
+    "GenesisBlock CommonParameter.getGenesisBlock()",
+    "int CommonParameter.getInactiveThreshold()",
+    "String CommonParameter.getInfluxDbDatabase()",
+    "String CommonParameter.getInfluxDbIp()",
+    "int CommonParameter.getInfluxDbPort()",
+    "CommonParameter CommonParameter.getInstance()",
+    "int CommonParameter.getJsonRpcHttpFullNodePort()",
+    "int CommonParameter.getJsonRpcHttpPBFTPort()",
+    "int CommonParameter.getJsonRpcHttpSolidityPort()",
+    "int CommonParameter.getKeepAliveInterval()",
+    "String CommonParameter.getLogbackPath()",
+    "int CommonParameter.getLongRunningTime()",
+    "int CommonParameter.getLruCacheSize()",
+    "long CommonParameter.getMaintenanceTimeInterval()",
+    "int CommonParameter.getMaxConcurrentCallsPerConnection()",
+    "long CommonParameter.getMaxConnectionAgeInMillis()",
+    "long CommonParameter.getMaxConnectionIdleInMillis()",
+    "int CommonParameter.getMaxConnections()",
+    "int CommonParameter.getMaxConnectionsWithSameIp()",
+    "long CommonParameter.getMaxCreateAccountTxSize()",
+    "long CommonParameter.getMaxEnergyLimitForConstant()",
+    "int CommonParameter.getMaxFastForwardNum()",
+    "int CommonParameter.getMaxHeaderListSize()",
+    "int CommonParameter.getMaxHttpConnectNumber()",
+    "int CommonParameter.getMaxMessageSize()",
+    "double CommonParameter.getMaxTimeRatio()",
+    "int CommonParameter.getMaxTps()",
+    "int CommonParameter.getMaxTransactionPendingSize()",
+    "int CommonParameter.getMaxUnsolidifiedBlocks()",
+    "long CommonParameter.getMemoFee()",
+    "int CommonParameter.getMetricsPrometheusPort()",
+    "int CommonParameter.getMetricsReportInterval()",
+    "int CommonParameter.getMinActiveConnections()",
+    "int CommonParameter.getMinConnections()",
+    "int CommonParameter.getMinEffectiveConnection()",
+    "int CommonParameter.getMinParticipationRate()",
+    "double CommonParameter.getMinTimeRatio()",
+    "long CommonParameter.getNetMaxTrxPerSecond()",
+    "int CommonParameter.getNodeChannelReadTimeout()",
+    "int CommonParameter.getNodeConnectionTimeout()",
+    "String CommonParameter.getNodeExternalIp()",
+    "String CommonParameter.getNodeLanIp()",
+    "int CommonParameter.getNodeListenPort()",
+    "int CommonParameter.getNodeP2pVersion()",
+    "long CommonParameter.getOldSolidityBlockNum()",
+    "String CommonParameter.getOutputDirectory()",
+    "Overlay CommonParameter.getOverlay()",
+    "P2pConfig CommonParameter.getP2pConfig()",
+    "long CommonParameter.getPBFTExpireNum()",
+    "int CommonParameter.getPBFTHttpPort()",
+    "List CommonParameter.getPassiveNodes()",
+    "long CommonParameter.getPendingTransactionTimeout()",
+    "long CommonParameter.getProposalExpireTime()",
+    "int CommonParameter.getRateLimiterGlobalApiQps()",
+    "int CommonParameter.getRateLimiterGlobalIpQps()",
+    "int CommonParameter.getRateLimiterGlobalQps()",
+    "RateLimiterInitialization CommonParameter.getRateLimiterInitialization()",
+    "long CommonParameter.getReceiveTcpMinDataLength()",
+    "RocksDbSettings CommonParameter.getRocksDBCustomSettings()",
+    "int CommonParameter.getRpcOnPBFTPort()",
+    "int CommonParameter.getRpcOnSolidityPort()",
+    "int CommonParameter.getRpcPort()",
+    "int CommonParameter.getRpcThreadNum()",
+    "SeedNode CommonParameter.getSeedNode()",
+    "List CommonParameter.getSeedNodes()",
+    "String CommonParameter.getShellConfFileName()",
+    "int CommonParameter.getShieldedTransInPendingMaxCounts()",
+    "long CommonParameter.getShutdownBlockCount()",
+    "long CommonParameter.getShutdownBlockHeight()",
+    "CronExpression CommonParameter.getShutdownBlockTime()",
+    "int CommonParameter.getSolidityHttpPort()",
+    "int CommonParameter.getSolidityThreads()",
+    "Storage CommonParameter.getStorage()",
+    "long CommonParameter.getSyncFetchBatchNum()",
+    "int CommonParameter.getTcpNettyWorkThreadNum()",
+    "String CommonParameter.getTrustNodeAddr()",
+    "long CommonParameter.getTrxExpirationTimeInMilliseconds()",
+    "String CommonParameter.getTrxReferenceBlock()",
+    "int CommonParameter.getUdpNettyWorkThreadNum()",
+    "long CommonParameter.getUnfreezeDelayDays()",
+    "int CommonParameter.getValidContractProtoThreadNum()",
+    "int CommonParameter.getValidateSignThreadNum()",
+    "String CommonParameter.getZenTokenId()",
+    "boolean CommonParameter.isDebug()",
+    "boolean CommonParameter.isDynamicConfigEnable()",
+    "boolean CommonParameter.isEstimateEnergy()",
+    "boolean CommonParameter.isEventSubscribe()",
+    "boolean CommonParameter.isFastForward()",
+    "boolean CommonParameter.isFullNodeAllowShieldedTransactionArgs()",
+    "boolean CommonParameter.isFullNodeHttpEnable()",
+    "boolean CommonParameter.isHelp()",
+    "boolean CommonParameter.isHistoryBalanceLookup()",
+    "boolean CommonParameter.isJsonRpcHttpFullNodeEnable()",
+    "boolean CommonParameter.isJsonRpcHttpPBFTNodeEnable()",
+    "boolean CommonParameter.isJsonRpcHttpSolidityNodeEnable()",
+    "boolean CommonParameter.isMetricsPrometheusEnable()",
+    "boolean CommonParameter.isMetricsStorageEnable()",
+    "boolean CommonParameter.isNeedSyncCheck()",
+    "boolean CommonParameter.isNeedToUpdateAsset()",
+    "boolean CommonParameter.isNodeDetectEnable()",
+    "boolean CommonParameter.isNodeDiscoveryEnable()",
+    "boolean CommonParameter.isNodeDiscoveryPersist()",
+    "boolean CommonParameter.isNodeEffectiveCheckEnable()",
+    "boolean CommonParameter.isNodeEnableIpv6()",
+    "boolean CommonParameter.isNodeMetricsEnable()",
+    "boolean CommonParameter.isOpenFullTcpDisconnect()",
+    "boolean CommonParameter.isOpenHistoryQueryWhenLiteFN()",
+    "boolean CommonParameter.isOpenPrintLog()",
+    "boolean CommonParameter.isOpenTransactionSort()",
+    "boolean CommonParameter.isP2pDisable()",
+    "boolean CommonParameter.isRpcReflectionServiceEnable()",
+    "boolean CommonParameter.isSaveFeaturedInternalTx()",
+    "boolean CommonParameter.isSaveInternalTx()",
+    "boolean CommonParameter.isSolidityNode()",
+    "boolean CommonParameter.isSolidityNodeHttpEnable()",
+    "boolean CommonParameter.isSupportConstant()",
+    "boolean CommonParameter.isTrxCacheEnable()",
+    "boolean CommonParameter.isUnsolidifiedBlockCheck()",
+    "boolean CommonParameter.isVmTrace()",
+    "boolean CommonParameter.isWalletExtensionApi()",
+    "boolean CommonParameter.isWitness()",
+    "void CommonParameter.setActiveNodes(List)",
+    "void CommonParameter.setActuatorSet(Set)",
+    "void CommonParameter.setAgreeNodeCount(int)",
+    "void CommonParameter.setAllowAccountAssetOptimization(long)",
+    "void CommonParameter.setAllowAccountStateRoot(long)",
+    "void CommonParameter.setAllowAdaptiveEnergy(long)",
+    "void CommonParameter.setAllowAssetOptimization(long)",
+    "void CommonParameter.setAllowBlackHoleOptimization(long)",
+    "void CommonParameter.setAllowCancelAllUnfreezeV2(long)",
+    "void CommonParameter.setAllowCreationOfContracts(long)",
+    "void CommonParameter.setAllowDelegateOptimization(long)",
+    "void CommonParameter.setAllowDelegateResource(long)",
+    "void CommonParameter.setAllowDynamicEnergy(long)",
+    "void CommonParameter.setAllowEnergyAdjustment(long)",
+    "void CommonParameter.setAllowHigherLimitForMaxCpuTimeOfOneTx(long)",
+    "void CommonParameter.setAllowMarketTransaction(long)",
+    "void CommonParameter.setAllowMultiSign(int)",
+    "void CommonParameter.setAllowNewResourceModel(long)",
+    "void CommonParameter.setAllowNewReward(long)",
+    "void CommonParameter.setAllowNewRewardAlgorithm(long)",
+    "void CommonParameter.setAllowOldRewardOpt(long)",
+    "void CommonParameter.setAllowOptimizedReturnValueOfChainId(long)",
+    "void CommonParameter.setAllowPBFT(long)",
+    "void CommonParameter.setAllowProtoFilterNum(long)",
+    "void CommonParameter.setAllowSameTokenName(long)",
+    "void CommonParameter.setAllowShieldedTRC20Transaction(long)",
+    "void CommonParameter.setAllowStrictMath(long)",
+    "void CommonParameter.setAllowTransactionFeePool(long)",
+    "void CommonParameter.setAllowTvmCompatibleEvm(long)",
+    "void CommonParameter.setAllowTvmConstantinople(long)",
+    "void CommonParameter.setAllowTvmFreeze(long)",
+    "void CommonParameter.setAllowTvmIstanbul(long)",
+    "void CommonParameter.setAllowTvmLondon(long)",
+    "void CommonParameter.setAllowTvmShangHai(long)",
+    "void CommonParameter.setAllowTvmSolidity059(long)",
+    "void CommonParameter.setAllowTvmTransferTrc10(long)",
+    "void CommonParameter.setAllowTvmVote(long)",
+    "void CommonParameter.setBackupMembers(List)",
+    "void CommonParameter.setBackupPort(int)",
+    "void CommonParameter.setBackupPriority(int)",
+    "void CommonParameter.setBlockCacheTimeout(long)",
+    "void CommonParameter.setBlockNumForEnergyLimit(long)",
+    "void CommonParameter.setBlockProducedTimeOut(int)",
+    "void CommonParameter.setChainId(String)",
+    "void CommonParameter.setChangedDelegation(long)",
+    "void CommonParameter.setCheckFrozenTime(int)",
+    "void CommonParameter.setConsensusLogicOptimization(long)",
+    "void CommonParameter.setCryptoEngine(String)",
+    "void CommonParameter.setDebug(boolean)",
+    "void CommonParameter.setDisabledApiList(List)",
+    "void CommonParameter.setDnsPublishConfig(PublishConfig)",
+    "void CommonParameter.setDnsTreeUrls(List)",
+    "void CommonParameter.setDynamicConfigCheckInterval(long)",
+    "void CommonParameter.setDynamicConfigEnable(boolean)",
+    "void CommonParameter.setDynamicEnergyIncreaseFactor(long)",
+    "void CommonParameter.setDynamicEnergyMaxFactor(long)",
+    "void CommonParameter.setDynamicEnergyThreshold(long)",
+    "void CommonParameter.setENERGY_LIMIT_HARD_FORK(boolean)",
+    "void CommonParameter.setEstimateEnergy(boolean)",
+    "void CommonParameter.setEstimateEnergyMaxRetry(int)",
+    "void CommonParameter.setEventSubscribe(boolean)",
+    "void CommonParameter.setFetchBlockTimeout(int)",
+    "void CommonParameter.setFlowControlWindow(int)",
+    "void CommonParameter.setForbidTransferToContract(long)",
+    "void CommonParameter.setFullNodeAllowShieldedTransactionArgs(boolean)",
+    "void CommonParameter.setFullNodeHttpEnable(boolean)",
+    "void CommonParameter.setFullNodeHttpPort(int)",
+    "void CommonParameter.setHistoryBalanceLookup(boolean)",
+    "void CommonParameter.setInactiveThreshold(int)",
+    "void CommonParameter.setInfluxDbDatabase(String)",
+    "void CommonParameter.setInfluxDbIp(String)",
+    "void CommonParameter.setInfluxDbPort(int)",
+    "void CommonParameter.setJsonRpcHttpFullNodeEnable(boolean)",
+    "void CommonParameter.setJsonRpcHttpFullNodePort(int)",
+    "void CommonParameter.setJsonRpcHttpPBFTNodeEnable(boolean)",
+    "void CommonParameter.setJsonRpcHttpPBFTPort(int)",
+    "void CommonParameter.setJsonRpcHttpSolidityNodeEnable(boolean)",
+    "void CommonParameter.setJsonRpcHttpSolidityPort(int)",
+    "void CommonParameter.setKeepAliveInterval(int)",
+    "void CommonParameter.setLongRunningTime(int)",
+    "void CommonParameter.setLruCacheSize(int)",
+    "void CommonParameter.setMaintenanceTimeInterval(long)",
+    "void CommonParameter.setMaxConcurrentCallsPerConnection(int)",
+    "void CommonParameter.setMaxConnectionAgeInMillis(long)",
+    "void CommonParameter.setMaxConnectionIdleInMillis(long)",
+    "void CommonParameter.setMaxConnections(int)",
+    "void CommonParameter.setMaxConnectionsWithSameIp(int)",
+    "void CommonParameter.setMaxCreateAccountTxSize(long)",
+    "void CommonParameter.setMaxEnergyLimitForConstant(long)",
+    "void CommonParameter.setMaxHeaderListSize(int)",
+    "void CommonParameter.setMaxHttpConnectNumber(int)",
+    "void CommonParameter.setMaxMessageSize(int)",
+    "void CommonParameter.setMaxTimeRatio(double)",
+    "void CommonParameter.setMaxTps(int)",
+    "void CommonParameter.setMaxTransactionPendingSize(int)",
+    "void CommonParameter.setMaxUnsolidifiedBlocks(int)",
+    "void CommonParameter.setMemoFee(long)",
+    "void CommonParameter.setMetricsPrometheusEnable(boolean)",
+    "void CommonParameter.setMetricsPrometheusPort(int)",
+    "void CommonParameter.setMetricsReportInterval(int)",
+    "void CommonParameter.setMetricsStorageEnable(boolean)",
+    "void CommonParameter.setMinActiveConnections(int)",
+    "void CommonParameter.setMinConnections(int)",
+    "void CommonParameter.setMinEffectiveConnection(int)",
+    "void CommonParameter.setMinParticipationRate(int)",
+    "void CommonParameter.setMinTimeRatio(double)",
+    "void CommonParameter.setNeedSyncCheck(boolean)",
+    "void CommonParameter.setNeedToUpdateAsset(boolean)",
+    "void CommonParameter.setNetMaxTrxPerSecond(long)",
+    "void CommonParameter.setNodeChannelReadTimeout(int)",
+    "void CommonParameter.setNodeConnectionTimeout(int)",
+    "void CommonParameter.setNodeDetectEnable(boolean)",
+    "void CommonParameter.setNodeDiscoveryEnable(boolean)",
+    "void CommonParameter.setNodeDiscoveryPersist(boolean)",
+    "void CommonParameter.setNodeEffectiveCheckEnable(boolean)",
+    "void CommonParameter.setNodeEnableIpv6(boolean)",
+    "void CommonParameter.setNodeExternalIp(String)",
+    "void CommonParameter.setNodeLanIp(String)",
+    "void CommonParameter.setNodeListenPort(int)",
+    "void CommonParameter.setNodeMetricsEnable(boolean)",
+    "void CommonParameter.setNodeP2pVersion(int)",
+    "void CommonParameter.setOldSolidityBlockNum(long)",
+    "void CommonParameter.setOpenFullTcpDisconnect(boolean)",
+    "void CommonParameter.setOpenHistoryQueryWhenLiteFN(boolean)",
+    "void CommonParameter.setOpenPrintLog(boolean)",
+    "void CommonParameter.setOpenTransactionSort(boolean)",
+    "void CommonParameter.setP2pDisable(boolean)",
+    "void CommonParameter.setPBFTExpireNum(long)",
+    "void CommonParameter.setPBFTHttpPort(int)",
+    "void CommonParameter.setPassiveNodes(List)",
+    "void CommonParameter.setPendingTransactionTimeout(long)",
+    "void CommonParameter.setProposalExpireTime(long)",
+    "void CommonParameter.setRateLimiterGlobalIpQps(int)",
+    "void CommonParameter.setRateLimiterGlobalQps(int)",
+    "void CommonParameter.setRateLimiterInitialization(RateLimiterInitialization)",
+    "void CommonParameter.setReceiveTcpMinDataLength(long)",
+    "void CommonParameter.setRpcOnPBFTPort(int)",
+    "void CommonParameter.setRpcOnSolidityPort(int)",
+    "void CommonParameter.setRpcPort(int)",
+    "void CommonParameter.setRpcReflectionServiceEnable(boolean)",
+    "void CommonParameter.setRpcThreadNum(int)",
+    "void CommonParameter.setSaveFeaturedInternalTx(boolean)",
+    "void CommonParameter.setSaveInternalTx(boolean)",
+    "void CommonParameter.setShieldedTransInPendingMaxCounts(int)",
+    "void CommonParameter.setShutdownBlockCount(long)",
+    "void CommonParameter.setShutdownBlockHeight(long)",
+    "void CommonParameter.setShutdownBlockTime(CronExpression)",
+    "void CommonParameter.setSolidityHttpPort(int)",
+    "void CommonParameter.setSolidityNode(boolean)",
+    "void CommonParameter.setSolidityNodeHttpEnable(boolean)",
+    "void CommonParameter.setSolidityThreads(int)",
+    "void CommonParameter.setSupportConstant(boolean)",
+    "void CommonParameter.setSyncFetchBatchNum(long)",
+    "void CommonParameter.setTcpNettyWorkThreadNum(int)",
+    "void CommonParameter.setTrustNodeAddr(String)",
+    "void CommonParameter.setTrxCacheEnable(boolean)",
+    "void CommonParameter.setTrxExpirationTimeInMilliseconds(long)",
+    "void CommonParameter.setTrxReferenceBlock(String)",
+    "void CommonParameter.setUdpNettyWorkThreadNum(int)",
+    "void CommonParameter.setUnfreezeDelayDays(long)",
+    "void CommonParameter.setUnsolidifiedBlockCheck(boolean)",
+    "void CommonParameter.setValidContractProtoThreadNum(int)",
+    "void CommonParameter.setValidateSignThreadNum(int)",
+    "void CommonParameter.setVmTrace(boolean)",
+    "void CommonParameter.setWalletExtensionApi(boolean)",
+    "void CommonParameter.setWitness(boolean)",
+    "void CommonParameter.setZenTokenId(String)"
+  })
   public void testGettersAndSetters() {
     // Arrange and Act
     CommonParameter actualInstance = CommonParameter.getInstance();
@@ -905,14 +1027,16 @@ public class CommonParameterDiffblueTest {
     long actualAllowDelegateResource = actualInstance.getAllowDelegateResource();
     long actualAllowDynamicEnergy = actualInstance.getAllowDynamicEnergy();
     long actualAllowEnergyAdjustment = actualInstance.getAllowEnergyAdjustment();
-    long actualAllowHigherLimitForMaxCpuTimeOfOneTx = actualInstance.getAllowHigherLimitForMaxCpuTimeOfOneTx();
+    long actualAllowHigherLimitForMaxCpuTimeOfOneTx =
+        actualInstance.getAllowHigherLimitForMaxCpuTimeOfOneTx();
     long actualAllowMarketTransaction = actualInstance.getAllowMarketTransaction();
     int actualAllowMultiSign = actualInstance.getAllowMultiSign();
     long actualAllowNewResourceModel = actualInstance.getAllowNewResourceModel();
     long actualAllowNewReward = actualInstance.getAllowNewReward();
     long actualAllowNewRewardAlgorithm = actualInstance.getAllowNewRewardAlgorithm();
     long actualAllowOldRewardOpt = actualInstance.getAllowOldRewardOpt();
-    long actualAllowOptimizedReturnValueOfChainId = actualInstance.getAllowOptimizedReturnValueOfChainId();
+    long actualAllowOptimizedReturnValueOfChainId =
+        actualInstance.getAllowOptimizedReturnValueOfChainId();
     long actualAllowPBFT = actualInstance.getAllowPBFT();
     long actualAllowProtoFilterNum = actualInstance.getAllowProtoFilterNum();
     long actualAllowSameTokenName = actualInstance.getAllowSameTokenName();
@@ -1010,7 +1134,8 @@ public class CommonParameterDiffblueTest {
     int actualRateLimiterGlobalApiQps = actualInstance.getRateLimiterGlobalApiQps();
     int actualRateLimiterGlobalIpQps = actualInstance.getRateLimiterGlobalIpQps();
     int actualRateLimiterGlobalQps = actualInstance.getRateLimiterGlobalQps();
-    RateLimiterInitialization actualRateLimiterInitialization = actualInstance.getRateLimiterInitialization();
+    RateLimiterInitialization actualRateLimiterInitialization =
+        actualInstance.getRateLimiterInitialization();
     long actualReceiveTcpMinDataLength = actualInstance.getReceiveTcpMinDataLength();
     RocksDbSettings actualRocksDBCustomSettings = actualInstance.getRocksDBCustomSettings();
     int actualRpcOnPBFTPort = actualInstance.getRpcOnPBFTPort();
@@ -1030,7 +1155,8 @@ public class CommonParameterDiffblueTest {
     long actualSyncFetchBatchNum = actualInstance.getSyncFetchBatchNum();
     int actualTcpNettyWorkThreadNum = actualInstance.getTcpNettyWorkThreadNum();
     String actualTrustNodeAddr = actualInstance.getTrustNodeAddr();
-    long actualTrxExpirationTimeInMilliseconds = actualInstance.getTrxExpirationTimeInMilliseconds();
+    long actualTrxExpirationTimeInMilliseconds =
+        actualInstance.getTrxExpirationTimeInMilliseconds();
     String actualTrxReferenceBlock = actualInstance.getTrxReferenceBlock();
     int actualUdpNettyWorkThreadNum = actualInstance.getUdpNettyWorkThreadNum();
     long actualUnfreezeDelayDays = actualInstance.getUnfreezeDelayDays();
@@ -1042,14 +1168,15 @@ public class CommonParameterDiffblueTest {
     boolean actualIsEstimateEnergyResult = actualInstance.isEstimateEnergy();
     boolean actualIsEventSubscribeResult = actualInstance.isEventSubscribe();
     boolean actualIsFastForwardResult = actualInstance.isFastForward();
-    boolean actualIsFullNodeAllowShieldedTransactionArgsResult = actualInstance
-        .isFullNodeAllowShieldedTransactionArgs();
+    boolean actualIsFullNodeAllowShieldedTransactionArgsResult =
+        actualInstance.isFullNodeAllowShieldedTransactionArgs();
     boolean actualIsFullNodeHttpEnableResult = actualInstance.isFullNodeHttpEnable();
     boolean actualIsHelpResult = actualInstance.isHelp();
     boolean actualIsHistoryBalanceLookupResult = actualInstance.isHistoryBalanceLookup();
     boolean actualIsJsonRpcHttpFullNodeEnableResult = actualInstance.isJsonRpcHttpFullNodeEnable();
     boolean actualIsJsonRpcHttpPBFTNodeEnableResult = actualInstance.isJsonRpcHttpPBFTNodeEnable();
-    boolean actualIsJsonRpcHttpSolidityNodeEnableResult = actualInstance.isJsonRpcHttpSolidityNodeEnable();
+    boolean actualIsJsonRpcHttpSolidityNodeEnableResult =
+        actualInstance.isJsonRpcHttpSolidityNodeEnable();
     boolean actualIsMetricsPrometheusEnableResult = actualInstance.isMetricsPrometheusEnable();
     boolean actualIsMetricsStorageEnableResult = actualInstance.isMetricsStorageEnable();
     boolean actualIsNeedSyncCheckResult = actualInstance.isNeedSyncCheck();
@@ -1061,11 +1188,13 @@ public class CommonParameterDiffblueTest {
     boolean actualIsNodeEnableIpv6Result = actualInstance.isNodeEnableIpv6();
     boolean actualIsNodeMetricsEnableResult = actualInstance.isNodeMetricsEnable();
     boolean actualIsOpenFullTcpDisconnectResult = actualInstance.isOpenFullTcpDisconnect();
-    boolean actualIsOpenHistoryQueryWhenLiteFNResult = actualInstance.isOpenHistoryQueryWhenLiteFN();
+    boolean actualIsOpenHistoryQueryWhenLiteFNResult =
+        actualInstance.isOpenHistoryQueryWhenLiteFN();
     boolean actualIsOpenPrintLogResult = actualInstance.isOpenPrintLog();
     boolean actualIsOpenTransactionSortResult = actualInstance.isOpenTransactionSort();
     boolean actualIsP2pDisableResult = actualInstance.isP2pDisable();
-    boolean actualIsRpcReflectionServiceEnableResult = actualInstance.isRpcReflectionServiceEnable();
+    boolean actualIsRpcReflectionServiceEnableResult =
+        actualInstance.isRpcReflectionServiceEnable();
     boolean actualIsSaveFeaturedInternalTxResult = actualInstance.isSaveFeaturedInternalTx();
     boolean actualIsSaveInternalTxResult = actualInstance.isSaveInternalTx();
     boolean actualIsSolidityNodeResult = actualInstance.isSolidityNode();
@@ -1268,18 +1397,230 @@ public class CommonParameterDiffblueTest {
     assertSame(actuatorSet, actualActuatorSet);
     assertSame(rateLimiterInitialization, actualRateLimiterInitialization);
     assertSame(dnsPublishConfig, actualDnsPublishConfig);
-    assertSame(actualInstance2.PARAMETER, actualInstance2);
+    assertSame(CommonParameter.PARAMETER, actualInstance2);
   }
 
   /**
    * Test new {@link CommonParameter} (default constructor).
-   * <p>
-   * Method under test: default or parameterless constructor of {@link CommonParameter}
+   *
+   * <p>Method under test: default or parameterless constructor of {@link CommonParameter}
    */
   @Test
   @Category(MaintainedByDiffblue.class)
   @MethodsUnderTest({"void CommonParameter.<init>()"})
   public void testNewCommonParameter() {
+    // Arrange and Act
+    CommonParameter actualCommonParameter = new CommonParameter();
+
+    // Assert
+    assertEquals("", actualCommonParameter.getLogbackPath());
+    assertEquals("", actualCommonParameter.getShellConfFileName());
+    assertEquals("", actualCommonParameter.contractParseEnable);
+    assertEquals("", actualCommonParameter.privateKey);
+    assertEquals("", actualCommonParameter.storageDbDirectory);
+    assertEquals("", actualCommonParameter.storageDbEngine);
+    assertEquals("", actualCommonParameter.storageDbSynchronous);
+    assertEquals("", actualCommonParameter.storageIndexDirectory);
+    assertEquals("", actualCommonParameter.storageIndexSwitch);
+    assertEquals("", actualCommonParameter.storageTransactionHistorySwitch);
+    assertEquals("", actualCommonParameter.witnessAddress);
+    assertEquals("ECKey", actualCommonParameter.getCryptoEngine());
+    assertEquals("output-directory", actualCommonParameter.getOutputDirectory());
+    assertNull(actualCommonParameter.getChainId());
+    assertNull(actualCommonParameter.getInfluxDbDatabase());
+    assertNull(actualCommonParameter.getInfluxDbIp());
+    assertNull(actualCommonParameter.getNodeExternalIp());
+    assertNull(actualCommonParameter.getNodeLanIp());
+    assertNull(actualCommonParameter.getTrustNodeAddr());
+    assertNull(actualCommonParameter.getTrxReferenceBlock());
+    assertNull(actualCommonParameter.getZenTokenId());
+    assertNull(actualCommonParameter.password);
+    assertNull(actualCommonParameter.getBackupMembers());
+    assertNull(actualCommonParameter.getDisabledApiList());
+    assertNull(actualCommonParameter.getDnsTreeUrls());
+    assertNull(actualCommonParameter.getPassiveNodes());
+    assertNull(actualCommonParameter.getActiveNodes());
+    assertNull(actualCommonParameter.getFastForwardNodes());
+    assertNull(actualCommonParameter.getActuatorSet());
+    assertNull(actualCommonParameter.getShutdownBlockTime());
+    assertNull(actualCommonParameter.getGenesisBlock());
+    assertNull(actualCommonParameter.getDbBackupConfig());
+    assertNull(actualCommonParameter.getEventPluginConfig());
+    assertNull(actualCommonParameter.getEventFilter());
+    assertNull(actualCommonParameter.getRateLimiterInitialization());
+    assertNull(actualCommonParameter.getRocksDBCustomSettings());
+    assertNull(actualCommonParameter.getOverlay());
+    assertNull(actualCommonParameter.getSeedNode());
+    assertNull(actualCommonParameter.getStorage());
+    assertNull(actualCommonParameter.getP2pConfig());
+    assertNull(actualCommonParameter.getDnsPublishConfig());
+    assertEquals(-1L, actualCommonParameter.getOldSolidityBlockNum());
+    assertEquals(-1L, actualCommonParameter.getShutdownBlockCount());
+    assertEquals(-1L, actualCommonParameter.getShutdownBlockHeight());
+    assertEquals(0, actualCommonParameter.getAgreeNodeCount());
+    assertEquals(0, actualCommonParameter.getAllowMultiSign());
+    assertEquals(0, actualCommonParameter.getBackupPort());
+    assertEquals(0, actualCommonParameter.getBackupPriority());
+    assertEquals(0, actualCommonParameter.getBlockProducedTimeOut());
+    assertEquals(0, actualCommonParameter.getCheckFrozenTime());
+    assertEquals(0, actualCommonParameter.getEstimateEnergyMaxRetry());
+    assertEquals(0, actualCommonParameter.getFetchBlockTimeout());
+    assertEquals(0, actualCommonParameter.getFlowControlWindow());
+    assertEquals(0, actualCommonParameter.getFullNodeHttpPort());
+    assertEquals(0, actualCommonParameter.getInactiveThreshold());
+    assertEquals(0, actualCommonParameter.getInfluxDbPort());
+    assertEquals(0, actualCommonParameter.getJsonRpcHttpFullNodePort());
+    assertEquals(0, actualCommonParameter.getJsonRpcHttpPBFTPort());
+    assertEquals(0, actualCommonParameter.getJsonRpcHttpSolidityPort());
+    assertEquals(0, actualCommonParameter.getKeepAliveInterval());
+    assertEquals(0, actualCommonParameter.getMaxConcurrentCallsPerConnection());
+    assertEquals(0, actualCommonParameter.getMaxConnections());
+    assertEquals(0, actualCommonParameter.getMaxConnectionsWithSameIp());
+    assertEquals(0, actualCommonParameter.getMaxFastForwardNum());
+    assertEquals(0, actualCommonParameter.getMaxHeaderListSize());
+    assertEquals(0, actualCommonParameter.getMaxMessageSize());
+    assertEquals(0, actualCommonParameter.getMaxTps());
+    assertEquals(0, actualCommonParameter.getMaxTransactionPendingSize());
+    assertEquals(0, actualCommonParameter.getMaxUnsolidifiedBlocks());
+    assertEquals(0, actualCommonParameter.getMetricsPrometheusPort());
+    assertEquals(0, actualCommonParameter.getMinActiveConnections());
+    assertEquals(0, actualCommonParameter.getMinConnections());
+    assertEquals(0, actualCommonParameter.getMinEffectiveConnection());
+    assertEquals(0, actualCommonParameter.getMinParticipationRate());
+    assertEquals(0, actualCommonParameter.getNodeChannelReadTimeout());
+    assertEquals(0, actualCommonParameter.getNodeConnectionTimeout());
+    assertEquals(0, actualCommonParameter.getNodeListenPort());
+    assertEquals(0, actualCommonParameter.getNodeP2pVersion());
+    assertEquals(0, actualCommonParameter.getPBFTHttpPort());
+    assertEquals(0, actualCommonParameter.getRateLimiterGlobalApiQps());
+    assertEquals(0, actualCommonParameter.getRateLimiterGlobalIpQps());
+    assertEquals(0, actualCommonParameter.getRateLimiterGlobalQps());
+    assertEquals(0, actualCommonParameter.getRpcOnPBFTPort());
+    assertEquals(0, actualCommonParameter.getRpcOnSolidityPort());
+    assertEquals(0, actualCommonParameter.getRpcPort());
+    assertEquals(0, actualCommonParameter.getRpcThreadNum());
+    assertEquals(0, actualCommonParameter.getShieldedTransInPendingMaxCounts());
+    assertEquals(0, actualCommonParameter.getSolidityHttpPort());
+    assertEquals(0, actualCommonParameter.getSolidityThreads());
+    assertEquals(0, actualCommonParameter.getTcpNettyWorkThreadNum());
+    assertEquals(0, actualCommonParameter.getUdpNettyWorkThreadNum());
+    assertEquals(0, actualCommonParameter.getValidateSignThreadNum());
+    assertEquals(0.0d, actualCommonParameter.getMinTimeRatio(), 0.0);
+    assertEquals(0L, actualCommonParameter.getAllowAccountAssetOptimization());
+    assertEquals(0L, actualCommonParameter.getAllowAccountStateRoot());
+    assertEquals(0L, actualCommonParameter.getAllowAdaptiveEnergy());
+    assertEquals(0L, actualCommonParameter.getAllowAssetOptimization());
+    assertEquals(0L, actualCommonParameter.getAllowBlackHoleOptimization());
+    assertEquals(0L, actualCommonParameter.getAllowCancelAllUnfreezeV2());
+    assertEquals(0L, actualCommonParameter.getAllowCreationOfContracts());
+    assertEquals(0L, actualCommonParameter.getAllowDelegateOptimization());
+    assertEquals(0L, actualCommonParameter.getAllowDelegateResource());
+    assertEquals(0L, actualCommonParameter.getAllowDynamicEnergy());
+    assertEquals(0L, actualCommonParameter.getAllowEnergyAdjustment());
+    assertEquals(0L, actualCommonParameter.getAllowHigherLimitForMaxCpuTimeOfOneTx());
+    assertEquals(0L, actualCommonParameter.getAllowMarketTransaction());
+    assertEquals(0L, actualCommonParameter.getAllowNewResourceModel());
+    assertEquals(0L, actualCommonParameter.getAllowNewReward());
+    assertEquals(0L, actualCommonParameter.getAllowNewRewardAlgorithm());
+    assertEquals(0L, actualCommonParameter.getAllowOldRewardOpt());
+    assertEquals(0L, actualCommonParameter.getAllowOptimizedReturnValueOfChainId());
+    assertEquals(0L, actualCommonParameter.getAllowPBFT());
+    assertEquals(0L, actualCommonParameter.getAllowProtoFilterNum());
+    assertEquals(0L, actualCommonParameter.getAllowSameTokenName());
+    assertEquals(0L, actualCommonParameter.getAllowShieldedTRC20Transaction());
+    assertEquals(0L, actualCommonParameter.getAllowStrictMath());
+    assertEquals(0L, actualCommonParameter.getAllowTransactionFeePool());
+    assertEquals(0L, actualCommonParameter.getAllowTvmCompatibleEvm());
+    assertEquals(0L, actualCommonParameter.getAllowTvmConstantinople());
+    assertEquals(0L, actualCommonParameter.getAllowTvmFreeze());
+    assertEquals(0L, actualCommonParameter.getAllowTvmIstanbul());
+    assertEquals(0L, actualCommonParameter.getAllowTvmLondon());
+    assertEquals(0L, actualCommonParameter.getAllowTvmShangHai());
+    assertEquals(0L, actualCommonParameter.getAllowTvmSolidity059());
+    assertEquals(0L, actualCommonParameter.getAllowTvmTransferTrc10());
+    assertEquals(0L, actualCommonParameter.getAllowTvmVote());
+    assertEquals(0L, actualCommonParameter.getBlockNumForEnergyLimit());
+    assertEquals(0L, actualCommonParameter.getChangedDelegation());
+    assertEquals(0L, actualCommonParameter.getConsensusLogicOptimization());
+    assertEquals(0L, actualCommonParameter.getDynamicConfigCheckInterval());
+    assertEquals(0L, actualCommonParameter.getDynamicEnergyIncreaseFactor());
+    assertEquals(0L, actualCommonParameter.getDynamicEnergyMaxFactor());
+    assertEquals(0L, actualCommonParameter.getDynamicEnergyThreshold());
+    assertEquals(0L, actualCommonParameter.getForbidTransferToContract());
+    assertEquals(0L, actualCommonParameter.getMaintenanceTimeInterval());
+    assertEquals(0L, actualCommonParameter.getMaxConnectionAgeInMillis());
+    assertEquals(0L, actualCommonParameter.getMaxConnectionIdleInMillis());
+    assertEquals(0L, actualCommonParameter.getMemoFee());
+    assertEquals(0L, actualCommonParameter.getNetMaxTrxPerSecond());
+    assertEquals(0L, actualCommonParameter.getPBFTExpireNum());
+    assertEquals(0L, actualCommonParameter.getPendingTransactionTimeout());
+    assertEquals(0L, actualCommonParameter.getProposalExpireTime());
+    assertEquals(0L, actualCommonParameter.getReceiveTcpMinDataLength());
+    assertEquals(0L, actualCommonParameter.getSyncFetchBatchNum());
+    assertEquals(0L, actualCommonParameter.getTrxExpirationTimeInMilliseconds());
+    assertEquals(0L, actualCommonParameter.getUnfreezeDelayDays());
+    assertEquals(1, actualCommonParameter.getValidContractProtoThreadNum());
+    assertEquals(10, actualCommonParameter.getLongRunningTime());
+    assertEquals(10, actualCommonParameter.getMetricsReportInterval());
+    assertEquals(100000000L, actualCommonParameter.getMaxEnergyLimitForConstant());
+    assertEquals(1000L, actualCommonParameter.getMaxCreateAccountTxSize());
+    assertEquals(5.0d, actualCommonParameter.getMaxTimeRatio(), 0.0);
+    assertEquals(50, actualCommonParameter.getMaxHttpConnectNumber());
+    assertEquals(500, actualCommonParameter.getLruCacheSize());
+    assertEquals(500, actualCommonParameter.getSafeLruCacheSize());
+    assertEquals(60L, actualCommonParameter.getBlockCacheTimeout());
+    assertFalse(actualCommonParameter.isDebug());
+    assertFalse(actualCommonParameter.isDynamicConfigEnable());
+    assertFalse(actualCommonParameter.isEstimateEnergy());
+    assertFalse(actualCommonParameter.isEventSubscribe());
+    assertFalse(actualCommonParameter.isFastForward());
+    assertFalse(actualCommonParameter.isFullNodeAllowShieldedTransactionArgs());
+    assertFalse(actualCommonParameter.isHelp());
+    assertFalse(actualCommonParameter.isHistoryBalanceLookup());
+    assertFalse(actualCommonParameter.isJsonRpcFilterEnabled());
+    assertFalse(actualCommonParameter.isJsonRpcHttpFullNodeEnable());
+    assertFalse(actualCommonParameter.isJsonRpcHttpPBFTNodeEnable());
+    assertFalse(actualCommonParameter.isJsonRpcHttpSolidityNodeEnable());
+    assertFalse(actualCommonParameter.isMetricsPrometheusEnable());
+    assertFalse(actualCommonParameter.isMetricsStorageEnable());
+    assertFalse(actualCommonParameter.isNeedSyncCheck());
+    assertFalse(actualCommonParameter.isNeedToUpdateAsset());
+    assertFalse(actualCommonParameter.isNodeDetectEnable());
+    assertFalse(actualCommonParameter.isNodeDiscoveryEnable());
+    assertFalse(actualCommonParameter.isNodeDiscoveryPersist());
+    assertFalse(actualCommonParameter.isNodeEffectiveCheckEnable());
+    assertFalse(actualCommonParameter.isNodeEnableIpv6());
+    assertFalse(actualCommonParameter.isNodeMetricsEnable());
+    assertFalse(actualCommonParameter.isOpenFullTcpDisconnect());
+    assertFalse(actualCommonParameter.isOpenHistoryQueryWhenLiteFN());
+    assertFalse(actualCommonParameter.isOpenTransactionSort());
+    assertFalse(actualCommonParameter.isP2pDisable());
+    assertFalse(actualCommonParameter.isRpcReflectionServiceEnable());
+    assertFalse(actualCommonParameter.isSaveFeaturedInternalTx());
+    assertFalse(actualCommonParameter.isSaveInternalTx());
+    assertFalse(actualCommonParameter.isSolidityNode());
+    assertFalse(actualCommonParameter.isSupportConstant());
+    assertFalse(actualCommonParameter.isTrxCacheEnable());
+    assertFalse(actualCommonParameter.isUnsolidifiedBlockCheck());
+    assertFalse(actualCommonParameter.isVmTrace());
+    assertFalse(actualCommonParameter.isWalletExtensionApi());
+    assertFalse(actualCommonParameter.isWitness());
+    assertFalse(actualCommonParameter.version);
+    assertTrue(actualCommonParameter.getSeedNodes().isEmpty());
+    assertTrue(actualCommonParameter.isFullNodeHttpEnable());
+    assertTrue(actualCommonParameter.isOpenPrintLog());
+    assertTrue(actualCommonParameter.isSolidityNodeHttpEnable());
+  }
+
+  /**
+   * Test new {@link CommonParameter} (default constructor).
+   *
+   * <p>Method under test: default or parameterless constructor of {@link CommonParameter}
+   */
+  @Test
+  @Category(MaintainedByDiffblue.class)
+  @MethodsUnderTest({"void CommonParameter.<init>()"})
+  public void testNewCommonParameter2() {
     // Arrange and Act
     CommonParameter actualCommonParameter = new CommonParameter();
 

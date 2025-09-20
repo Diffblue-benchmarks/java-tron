@@ -14,8 +14,8 @@ import org.junit.experimental.categories.Category;
 public class BN128G1DiffblueTest {
   /**
    * Test {@link BN128G1#BN128G1(BN128)}.
-   * <p>
-   * Method under test: {@link BN128G1#BN128G1(BN128)}
+   *
+   * <p>Method under test: {@link BN128G1#BN128G1(BN128)}
    */
   @Test
   @Category(MaintainedByDiffblue.class)
@@ -38,65 +38,71 @@ public class BN128G1DiffblueTest {
     assertSame(fp, p.x());
     assertSame(fp, actualBn128g1.y());
     assertSame(fp, p.y());
-    BN128<Fp> bn128 = actualBn128g1.ZERO;
+    BN128<Fp> bn128 = BN128Fp.ZERO;
     assertSame(bn128, toEthNotationResult);
-    assertSame(bn128, p.toEthNotation());
-    assertSame(bn128, p.zero());
     assertSame(bn128, actualBn128g1.zero());
   }
 
   /**
    * Test {@link BN128G1#create(byte[], byte[])}.
+   *
    * <ul>
-   *   <li>When {@code AXAXAXAX} Bytes is {@code UTF-8}.</li>
-   *   <li>Then return {@code null}.</li>
+   *   <li>When {@code AXAXAXAX} Bytes is {@code UTF-8}.
+   *   <li>Then return {@code null}.
    * </ul>
-   * <p>
-   * Method under test: {@link BN128G1#create(byte[], byte[])}
+   *
+   * <p>Method under test: {@link BN128G1#create(byte[], byte[])}
    */
   @Test
   @Category(MaintainedByDiffblue.class)
   @MethodsUnderTest({"BN128G1 BN128G1.create(byte[], byte[])"})
-  public void testCreate_whenAxaxaxaxBytesIsUtf8_thenReturnNull() throws UnsupportedEncodingException {
-    // Arrange
-    byte[] x = "AXAXAXAX".getBytes("UTF-8");
+  public void testCreate_whenAxaxaxaxBytesIsUtf8_thenReturnNull()
+      throws UnsupportedEncodingException {
+    // Arrange and Act
+    BN128G1 actualCreateResult =
+        BN128G1.create("AXAXAXAX".getBytes("UTF-8"), "AXAXAXAX".getBytes("UTF-8"));
 
-    // Act and Assert
-    assertNull(BN128G1.create(x, "AXAXAXAX".getBytes("UTF-8")));
+    // Assert
+    assertNull(actualCreateResult);
   }
 
   /**
    * Test {@link BN128G1#create(byte[], byte[])}.
+   *
    * <ul>
-   *   <li>When empty array of {@code byte}.</li>
-   *   <li>Then return {@code null}.</li>
+   *   <li>When empty array of {@code byte}.
+   *   <li>Then return {@code null}.
    * </ul>
-   * <p>
-   * Method under test: {@link BN128G1#create(byte[], byte[])}
+   *
+   * <p>Method under test: {@link BN128G1#create(byte[], byte[])}
    */
   @Test
   @Category(MaintainedByDiffblue.class)
   @MethodsUnderTest({"BN128G1 BN128G1.create(byte[], byte[])"})
   public void testCreate_whenEmptyArrayOfByte_thenReturnNull() throws UnsupportedEncodingException {
-    // Arrange, Act and Assert
-    assertNull(BN128G1.create(new byte[]{}, "AXAXAXAX".getBytes("UTF-8")));
+    // Arrange and Act
+    BN128G1 actualCreateResult = BN128G1.create(new byte[] {}, "AXAXAXAX".getBytes("UTF-8"));
+
+    // Assert
+    assertNull(actualCreateResult);
   }
 
   /**
    * Test {@link BN128G1#create(byte[], byte[])}.
+   *
    * <ul>
-   *   <li>When empty array of {@code byte}.</li>
-   *   <li>Then toEthNotation return {@link BN128Fp}.</li>
+   *   <li>When empty array of {@code byte}.
+   *   <li>Then toEthNotation return {@link BN128Fp}.
    * </ul>
-   * <p>
-   * Method under test: {@link BN128G1#create(byte[], byte[])}
+   *
+   * <p>Method under test: {@link BN128G1#create(byte[], byte[])}
    */
   @Test
   @Category(MaintainedByDiffblue.class)
   @MethodsUnderTest({"BN128G1 BN128G1.create(byte[], byte[])"})
   public void testCreate_whenEmptyArrayOfByte_thenToEthNotationReturnBN128Fp() {
     // Arrange and Act
-    BN128G1 actualCreateResult = BN128G1.create(new byte[]{}, new byte[]{});
+    BN128G1 actualCreateResult = BN128G1.create(new byte[] {}, new byte[] {});
 
     // Assert
     BN128<Fp> toEthNotationResult = actualCreateResult.toEthNotation();
@@ -106,19 +112,20 @@ public class BN128G1DiffblueTest {
     Fp fp = actualCreateResult.z;
     assertSame(fp, actualCreateResult.x());
     assertSame(fp, actualCreateResult.y());
-    BN128<Fp> bn128 = actualCreateResult.ZERO;
+    BN128<Fp> bn128 = BN128Fp.ZERO;
     assertSame(bn128, toEthNotationResult);
     assertSame(bn128, actualCreateResult.zero());
   }
 
   /**
    * Test {@link BN128G1#toAffine()}.
+   *
    * <ul>
-   *   <li>Given {@link BN128G1#BN128G1(BN128)} with p is {@link BN128Fp#ZERO}.</li>
-   *   <li>Then toEthNotation return {@link BN128Fp}.</li>
+   *   <li>Given {@link BN128G1#BN128G1(BN128)} with p is {@link BN128Fp#ZERO}.
+   *   <li>Then toEthNotation return {@link BN128Fp}.
    * </ul>
-   * <p>
-   * Method under test: {@link BN128G1#toAffine()}
+   *
+   * <p>Method under test: {@link BN128G1#toAffine()}
    */
   @Test
   @Category(MaintainedByDiffblue.class)
@@ -135,6 +142,7 @@ public class BN128G1DiffblueTest {
     assertTrue(toEthNotationResult instanceof BN128Fp);
     assertTrue(actualToAffineResult.isValid());
     assertTrue(actualToAffineResult.isZero());
+    assertSame(toEthNotationResult, actualToAffineResult.zero());
     Fp fp = actualToAffineResult.y;
     assertSame(fp, actualToAffineResult.y());
     assertSame(fp, bn128g1.one());
@@ -143,35 +151,31 @@ public class BN128G1DiffblueTest {
     assertSame(fp2, bn128g1.x());
     assertSame(fp2, actualToAffineResult.x());
     assertSame(fp2, bn128g1.y());
-    BN128<Fp> bn128 = actualToAffineResult.ZERO;
-    assertSame(bn128, bn128g1.toEthNotation());
-    assertSame(bn128, toEthNotationResult);
-    assertSame(bn128, bn128g1.zero());
-    assertSame(bn128, actualToAffineResult.zero());
+    assertSame(BN128Fp.ZERO, toEthNotationResult);
   }
 
   /**
    * Test {@link BN128G1#toAffine()}.
+   *
    * <ul>
-   *   <li>Then zero return {@link BN128Fp}.</li>
+   *   <li>Then zero return {@link BN128Fp}.
    * </ul>
-   * <p>
-   * Method under test: {@link BN128G1#toAffine()}
+   *
+   * <p>Method under test: {@link BN128G1#toAffine()}
    */
   @Test
   @Category(MaintainedByDiffblue.class)
   @MethodsUnderTest({"BN128G1 BN128G1.toAffine()"})
   public void testToAffine_thenZeroReturnBN128Fp() {
     // Arrange
-    BN128G1 bn128g1 = new BN128G1(new BN128Fp(Fp.NON_RESIDUE, Fp.NON_RESIDUE, Fp.NON_RESIDUE));
+    BN128Fp p = new BN128Fp(Fp.NON_RESIDUE, Fp.NON_RESIDUE, Fp.NON_RESIDUE);
+    BN128G1 bn128g1 = new BN128G1(p);
 
     // Act
     BN128G1 actualToAffineResult = bn128g1.toAffine();
 
     // Assert
-    BN128<Fp> zeroResult = actualToAffineResult.zero();
-    assertTrue(zeroResult instanceof BN128Fp);
-    assertTrue(bn128g1.toEthNotation() instanceof BN128G1);
+    assertTrue(actualToAffineResult.zero() instanceof BN128Fp);
     assertTrue(actualToAffineResult.toEthNotation() instanceof BN128G1);
     assertFalse(actualToAffineResult.isValid());
     assertFalse(actualToAffineResult.isZero());
@@ -186,8 +190,5 @@ public class BN128G1DiffblueTest {
     Fp fp2 = actualToAffineResult.z;
     assertSame(fp2, bn128g1.one());
     assertSame(fp2, actualToAffineResult.one());
-    BN128<Fp> bn128 = actualToAffineResult.ZERO;
-    assertSame(bn128, bn128g1.zero());
-    assertSame(bn128, zeroResult);
   }
 }

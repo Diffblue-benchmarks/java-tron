@@ -9,11 +9,12 @@ import org.junit.experimental.categories.Category;
 public class MathsDiffblueTest {
   /**
    * Test {@link Maths#pow(double, double, boolean)}.
+   *
    * <ul>
-   *   <li>When {@code false}.</li>
+   *   <li>When {@code false}.
    * </ul>
-   * <p>
-   * Method under test: {@link Maths#pow(double, double, boolean)}
+   *
+   * <p>Method under test: {@link Maths#pow(double, double, boolean)}
    */
   @Test
   @Category(MaintainedByDiffblue.class)
@@ -25,11 +26,12 @@ public class MathsDiffblueTest {
 
   /**
    * Test {@link Maths#pow(double, double, boolean)}.
+   *
    * <ul>
-   *   <li>When {@code true}.</li>
+   *   <li>When {@code true}.
    * </ul>
-   * <p>
-   * Method under test: {@link Maths#pow(double, double, boolean)}
+   *
+   * <p>Method under test: {@link Maths#pow(double, double, boolean)}
    */
   @Test
   @Category(MaintainedByDiffblue.class)

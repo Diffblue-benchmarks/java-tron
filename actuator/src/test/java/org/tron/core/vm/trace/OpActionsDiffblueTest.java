@@ -20,13 +20,14 @@ import org.tron.core.vm.trace.OpActions.Action.Name;
 public class OpActionsDiffblueTest {
   /**
    * Test Action {@link Action#addParam(String, Object)}.
+   *
    * <ul>
-   *   <li>Given {@link Action} (default constructor) Params is {@link HashMap#HashMap()}.</li>
-   *   <li>When {@code Value}.</li>
-   *   <li>Then return Name is {@code pop}.</li>
+   *   <li>Given {@link Action} (default constructor) Params is {@link HashMap#HashMap()}.
+   *   <li>When {@code Value}.
+   *   <li>Then return Name is {@code pop}.
    * </ul>
-   * <p>
-   * Method under test: {@link Action#addParam(String, Object)}
+   *
+   * <p>Method under test: {@link Action#addParam(String, Object)}
    */
   @Test
   @Category(MaintainedByDiffblue.class)
@@ -51,13 +52,14 @@ public class OpActionsDiffblueTest {
 
   /**
    * Test Action {@link Action#addParam(String, Object)}.
+   *
    * <ul>
-   *   <li>Given {@link Action} (default constructor) Params is {@code null}.</li>
-   *   <li>When {@code null}.</li>
-   *   <li>Then return {@link Action} (default constructor).</li>
+   *   <li>Given {@link Action} (default constructor) Params is {@code null}.
+   *   <li>When {@code null}.
+   *   <li>Then return {@link Action} (default constructor).
    * </ul>
-   * <p>
-   * Method under test: {@link Action#addParam(String, Object)}
+   *
+   * <p>Method under test: {@link Action#addParam(String, Object)}
    */
   @Test
   @Category(MaintainedByDiffblue.class)
@@ -68,26 +70,30 @@ public class OpActionsDiffblueTest {
     action.setName(Name.pop);
     action.setParams(null);
 
-    // Act and Assert
-    assertSame(action, action.addParam("Name", null));
+    // Act
+    Action actualAddParamResult = action.addParam("Name", null);
+
+    // Assert
+    assertSame(action, actualAddParamResult);
   }
 
   /**
    * Test Action {@link Action#addParam(String, Object)}.
+   *
    * <ul>
-   *   <li>Given {@link Action} (default constructor).</li>
-   *   <li>When {@code Value}.</li>
-   *   <li>Then return Name is {@code null}.</li>
+   *   <li>Given {@link Action} (default constructor).
+   *   <li>When {@code Value}.
+   *   <li>Then return Name is {@code null}.
    * </ul>
-   * <p>
-   * Method under test: {@link Action#addParam(String, Object)}
+   *
+   * <p>Method under test: {@link Action#addParam(String, Object)}
    */
   @Test
   @Category(MaintainedByDiffblue.class)
   @MethodsUnderTest({"Action Action.addParam(String, Object)"})
   public void testActionAddParam_givenAction_whenValue_thenReturnNameIsNull() {
     // Arrange and Act
-    Action actualAddParamResult = (new Action()).addParam("Name", "Value");
+    Action actualAddParamResult = new Action().addParam("Name", "Value");
 
     // Assert
     Map<String, Object> params = actualAddParamResult.getParams();
@@ -98,8 +104,9 @@ public class OpActionsDiffblueTest {
 
   /**
    * Test Action getters and setters.
-   * <p>
-   * Methods under test:
+   *
+   * <p>Methods under test:
+   *
    * <ul>
    *   <li>default or parameterless constructor of {@link Action}
    *   <li>{@link Action#setName(Action.Name)}
@@ -110,8 +117,13 @@ public class OpActionsDiffblueTest {
    */
   @Test
   @Category(MaintainedByDiffblue.class)
-  @MethodsUnderTest({"void Action.<init>()", "Action.Name Action.getName()", "Map Action.getParams()",
-      "void Action.setName(Action.Name)", "void Action.setParams(Map)"})
+  @MethodsUnderTest({
+    "void Action.<init>()",
+    "Action.Name Action.getName()",
+    "Map Action.getParams()",
+    "void Action.setName(Action.Name)",
+    "void Action.setParams(Map)"
+  })
   public void testActionGettersAndSetters() {
     // Arrange and Act
     Action actualAction = new Action();
@@ -129,8 +141,8 @@ public class OpActionsDiffblueTest {
 
   /**
    * Test {@link OpActions#addStackPop()}.
-   * <p>
-   * Method under test: {@link OpActions#addStackPop()}
+   *
+   * <p>Method under test: {@link OpActions#addStackPop()}
    */
   @Test
   @Category(MaintainedByDiffblue.class)
@@ -150,12 +162,13 @@ public class OpActionsDiffblueTest {
 
   /**
    * Test {@link OpActions#addStackPush(DataWord)}.
+   *
    * <ul>
-   *   <li>When {@code null}.</li>
-   *   <li>Then return Params is {@code null}.</li>
+   *   <li>When {@code null}.
+   *   <li>Then return Params is {@code null}.
    * </ul>
-   * <p>
-   * Method under test: {@link OpActions#addStackPush(DataWord)}
+   *
+   * <p>Method under test: {@link OpActions#addStackPush(DataWord)}
    */
   @Test
   @Category(MaintainedByDiffblue.class)
@@ -175,12 +188,13 @@ public class OpActionsDiffblueTest {
 
   /**
    * Test {@link OpActions#addStackPush(DataWord)}.
+   *
    * <ul>
-   *   <li>When ZERO.</li>
-   *   <li>Then return Params size is one.</li>
+   *   <li>When ZERO.
+   *   <li>Then return Params size is one.
    * </ul>
-   * <p>
-   * Method under test: {@link OpActions#addStackPush(DataWord)}
+   *
+   * <p>Method under test: {@link OpActions#addStackPush(DataWord)}
    */
   @Test
   @Category(MaintainedByDiffblue.class)
@@ -195,15 +209,16 @@ public class OpActionsDiffblueTest {
     // Assert
     Map<String, Object> params = actualAddStackPushResult.getParams();
     assertEquals(1, params.size());
-    assertEquals("0000000000000000000000000000000000000000000000000000000000000000", params.get("value"));
+    assertEquals(
+        "0000000000000000000000000000000000000000000000000000000000000000", params.get("value"));
     assertEquals(1, opActions.getStack().size());
     assertEquals(Name.push, actualAddStackPushResult.getName());
   }
 
   /**
    * Test {@link OpActions#addStackSwap(int, int)}.
-   * <p>
-   * Method under test: {@link OpActions#addStackSwap(int, int)}
+   *
+   * <p>Method under test: {@link OpActions#addStackSwap(int, int)}
    */
   @Test
   @Category(MaintainedByDiffblue.class)
@@ -226,8 +241,8 @@ public class OpActionsDiffblueTest {
 
   /**
    * Test {@link OpActions#addMemoryExtend(long)}.
-   * <p>
-   * Method under test: {@link OpActions#addMemoryExtend(long)}
+   *
+   * <p>Method under test: {@link OpActions#addMemoryExtend(long)}
    */
   @Test
   @Category(MaintainedByDiffblue.class)
@@ -249,23 +264,25 @@ public class OpActionsDiffblueTest {
 
   /**
    * Test {@link OpActions#addMemoryWrite(int, byte[], int)}.
+   *
    * <ul>
-   *   <li>When {@code AXAXAXAX} Bytes is {@code UTF-8}.</li>
-   *   <li>Then return Params size is two.</li>
+   *   <li>When {@code AXAXAXAX} Bytes is {@code UTF-8}.
+   *   <li>Then return Params {@code data} is {@code 415}.
    * </ul>
-   * <p>
-   * Method under test: {@link OpActions#addMemoryWrite(int, byte[], int)}
+   *
+   * <p>Method under test: {@link OpActions#addMemoryWrite(int, byte[], int)}
    */
   @Test
   @Category(MaintainedByDiffblue.class)
   @MethodsUnderTest({"Action OpActions.addMemoryWrite(int, byte[], int)"})
-  public void testAddMemoryWrite_whenAxaxaxaxBytesIsUtf8_thenReturnParamsSizeIsTwo()
+  public void testAddMemoryWrite_whenAxaxaxaxBytesIsUtf8_thenReturnParamsDataIs415()
       throws UnsupportedEncodingException {
     // Arrange
     OpActions opActions = new OpActions();
 
     // Act
-    Action actualAddMemoryWriteResult = opActions.addMemoryWrite(19088743, "AXAXAXAX".getBytes("UTF-8"), 3);
+    Action actualAddMemoryWriteResult =
+        opActions.addMemoryWrite(19088743, "AXAXAXAX".getBytes("UTF-8"), 3);
 
     // Assert
     Map<String, Object> params = actualAddMemoryWriteResult.getParams();
@@ -277,13 +294,43 @@ public class OpActionsDiffblueTest {
   }
 
   /**
-   * Test {@link OpActions#addStoragePut(DataWord, DataWord)}.
+   * Test {@link OpActions#addMemoryWrite(int, byte[], int)}.
+   *
    * <ul>
-   *   <li>When {@code null}.</li>
-   *   <li>Then return Params is {@code null}.</li>
+   *   <li>When zero.
+   *   <li>Then return Params {@code data} is empty string.
    * </ul>
-   * <p>
-   * Method under test: {@link OpActions#addStoragePut(DataWord, DataWord)}
+   *
+   * <p>Method under test: {@link OpActions#addMemoryWrite(int, byte[], int)}
+   */
+  @Test
+  @Category(MaintainedByDiffblue.class)
+  @MethodsUnderTest({"Action OpActions.addMemoryWrite(int, byte[], int)"})
+  public void testAddMemoryWrite_whenZero_thenReturnParamsDataIsEmptyString() {
+    // Arrange
+    OpActions opActions = new OpActions();
+
+    // Act
+    Action actualAddMemoryWriteResult = opActions.addMemoryWrite(19088743, null, 0);
+
+    // Assert
+    Map<String, Object> params = actualAddMemoryWriteResult.getParams();
+    assertEquals(2, params.size());
+    assertEquals("", params.get("data"));
+    assertEquals("19088743", params.get("address"));
+    assertEquals(1, opActions.getMemory().size());
+    assertEquals(Name.write, actualAddMemoryWriteResult.getName());
+  }
+
+  /**
+   * Test {@link OpActions#addStoragePut(DataWord, DataWord)}.
+   *
+   * <ul>
+   *   <li>When {@code null}.
+   *   <li>Then return Params is {@code null}.
+   * </ul>
+   *
+   * <p>Method under test: {@link OpActions#addStoragePut(DataWord, DataWord)}
    */
   @Test
   @Category(MaintainedByDiffblue.class)
@@ -303,12 +350,13 @@ public class OpActionsDiffblueTest {
 
   /**
    * Test {@link OpActions#addStoragePut(DataWord, DataWord)}.
+   *
    * <ul>
-   *   <li>When ZERO.</li>
-   *   <li>Then return Params size is two.</li>
+   *   <li>When ZERO.
+   *   <li>Then return Params size is two.
    * </ul>
-   * <p>
-   * Method under test: {@link OpActions#addStoragePut(DataWord, DataWord)}
+   *
+   * <p>Method under test: {@link OpActions#addStoragePut(DataWord, DataWord)}
    */
   @Test
   @Category(MaintainedByDiffblue.class)
@@ -321,18 +369,21 @@ public class OpActionsDiffblueTest {
     // Act and Assert
     Map<String, Object> params = opActions.addStoragePut(key, DataWord.ZERO()).getParams();
     assertEquals(2, params.size());
-    assertEquals("0000000000000000000000000000000000000000000000000000000000000000", params.get("key"));
-    assertEquals("0000000000000000000000000000000000000000000000000000000000000000", params.get("value"));
+    assertEquals(
+        "0000000000000000000000000000000000000000000000000000000000000000", params.get("key"));
+    assertEquals(
+        "0000000000000000000000000000000000000000000000000000000000000000", params.get("value"));
   }
 
   /**
    * Test {@link OpActions#addStorageRemove(DataWord)}.
+   *
    * <ul>
-   *   <li>When {@code null}.</li>
-   *   <li>Then return Params is {@code null}.</li>
+   *   <li>When {@code null}.
+   *   <li>Then return Params is {@code null}.
    * </ul>
-   * <p>
-   * Method under test: {@link OpActions#addStorageRemove(DataWord)}
+   *
+   * <p>Method under test: {@link OpActions#addStorageRemove(DataWord)}
    */
   @Test
   @Category(MaintainedByDiffblue.class)
@@ -352,12 +403,13 @@ public class OpActionsDiffblueTest {
 
   /**
    * Test {@link OpActions#addStorageRemove(DataWord)}.
+   *
    * <ul>
-   *   <li>When ZERO.</li>
-   *   <li>Then return Params size is one.</li>
+   *   <li>When ZERO.
+   *   <li>Then return Params size is one.
    * </ul>
-   * <p>
-   * Method under test: {@link OpActions#addStorageRemove(DataWord)}
+   *
+   * <p>Method under test: {@link OpActions#addStorageRemove(DataWord)}
    */
   @Test
   @Category(MaintainedByDiffblue.class)
@@ -372,15 +424,16 @@ public class OpActionsDiffblueTest {
     // Assert
     Map<String, Object> params = actualAddStorageRemoveResult.getParams();
     assertEquals(1, params.size());
-    assertEquals("0000000000000000000000000000000000000000000000000000000000000000", params.get("key"));
+    assertEquals(
+        "0000000000000000000000000000000000000000000000000000000000000000", params.get("key"));
     assertEquals(1, opActions.getStorage().size());
     assertEquals(Name.remove, actualAddStorageRemoveResult.getName());
   }
 
   /**
    * Test {@link OpActions#addStorageClear()}.
-   * <p>
-   * Method under test: {@link OpActions#addStorageClear()}
+   *
+   * <p>Method under test: {@link OpActions#addStorageClear()}
    */
   @Test
   @Category(MaintainedByDiffblue.class)
@@ -400,8 +453,9 @@ public class OpActionsDiffblueTest {
 
   /**
    * Test getters and setters.
-   * <p>
-   * Methods under test:
+   *
+   * <p>Methods under test:
+   *
    * <ul>
    *   <li>default or parameterless constructor of {@link OpActions}
    *   <li>{@link OpActions#setMemory(List)}
@@ -414,9 +468,15 @@ public class OpActionsDiffblueTest {
    */
   @Test
   @Category(MaintainedByDiffblue.class)
-  @MethodsUnderTest({"void OpActions.<init>()", "List OpActions.getMemory()", "List OpActions.getStack()",
-      "List OpActions.getStorage()", "void OpActions.setMemory(List)", "void OpActions.setStack(List)",
-      "void OpActions.setStorage(List)"})
+  @MethodsUnderTest({
+    "void OpActions.<init>()",
+    "List OpActions.getMemory()",
+    "List OpActions.getStack()",
+    "List OpActions.getStorage()",
+    "void OpActions.setMemory(List)",
+    "void OpActions.setStack(List)",
+    "void OpActions.setStorage(List)"
+  })
   public void testGettersAndSetters() {
     // Arrange and Act
     OpActions actualOpActions = new OpActions();

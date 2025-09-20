@@ -23,17 +23,18 @@ import org.tron.core.db.KhaosDatabase.KhaosStore;
 
 @RunWith(MockitoJUnitRunner.class)
 public class KhaosDatabaseDiffblueTest {
-  @Mock
-  private KhaosDatabase khaosDatabase;
+  @Mock private KhaosDatabase khaosDatabase;
 
   /**
    * Test KhaosBlock {@link KhaosBlock#equals(Object)}, and {@link KhaosBlock#hashCode()}.
+   *
    * <ul>
-   *   <li>When other is equal.</li>
-   *   <li>Then return equal.</li>
+   *   <li>When other is equal.
+   *   <li>Then return equal.
    * </ul>
-   * <p>
-   * Methods under test:
+   *
+   * <p>Methods under test:
+   *
    * <ul>
    *   <li>{@link KhaosBlock#equals(Object)}
    *   <li>{@link KhaosBlock#hashCode()}
@@ -48,6 +49,7 @@ public class KhaosDatabaseDiffblueTest {
     when(blk.getNum()).thenReturn(1L);
     when(blk.getBlockId()).thenReturn(new BlockId());
     KhaosBlock khaosBlock = new KhaosBlock(blk);
+
     BlockCapsule blk2 = mock(BlockCapsule.class);
     when(blk2.getNum()).thenReturn(1L);
     when(blk2.getBlockId()).thenReturn(new BlockId());
@@ -55,18 +57,18 @@ public class KhaosDatabaseDiffblueTest {
 
     // Act and Assert
     assertEquals(khaosBlock, khaosBlock2);
-    int expectedHashCodeResult = khaosBlock.hashCode();
-    assertEquals(expectedHashCodeResult, khaosBlock2.hashCode());
+    assertEquals(khaosBlock.hashCode(), khaosBlock2.hashCode());
   }
 
   /**
    * Test KhaosBlock {@link KhaosBlock#equals(Object)}.
+   *
    * <ul>
-   *   <li>When other is different.</li>
-   *   <li>Then return not equal.</li>
+   *   <li>When other is different.
+   *   <li>Then return not equal.
    * </ul>
-   * <p>
-   * Method under test: {@link KhaosBlock#equals(Object)}
+   *
+   * <p>Method under test: {@link KhaosBlock#equals(Object)}
    */
   @Test
   @Category(MaintainedByDiffblue.class)
@@ -77,6 +79,7 @@ public class KhaosDatabaseDiffblueTest {
     when(blk.getNum()).thenReturn(1L);
     when(blk.getBlockId()).thenReturn(null);
     KhaosBlock khaosBlock = new KhaosBlock(blk);
+
     BlockCapsule blk2 = mock(BlockCapsule.class);
     when(blk2.getNum()).thenReturn(1L);
     when(blk2.getBlockId()).thenReturn(new BlockId());
@@ -87,12 +90,13 @@ public class KhaosDatabaseDiffblueTest {
 
   /**
    * Test KhaosBlock {@link KhaosBlock#equals(Object)}.
+   *
    * <ul>
-   *   <li>When other is different.</li>
-   *   <li>Then return not equal.</li>
+   *   <li>When other is different.
+   *   <li>Then return not equal.
    * </ul>
-   * <p>
-   * Method under test: {@link KhaosBlock#equals(Object)}
+   *
+   * <p>Method under test: {@link KhaosBlock#equals(Object)}
    */
   @Test
   @Category(MaintainedByDiffblue.class)
@@ -104,17 +108,18 @@ public class KhaosDatabaseDiffblueTest {
     when(blk.getBlockId()).thenReturn(new BlockId());
 
     // Act and Assert
-    assertNotEquals(new KhaosBlock(blk), null);
+    assertNotEquals(new KhaosBlock(blk), Sha256Hash.ZERO_HASH);
   }
 
   /**
    * Test KhaosBlock {@link KhaosBlock#equals(Object)}.
+   *
    * <ul>
-   *   <li>When other is different.</li>
-   *   <li>Then return not equal.</li>
+   *   <li>When other is different.
+   *   <li>Then return not equal.
    * </ul>
-   * <p>
-   * Method under test: {@link KhaosBlock#equals(Object)}
+   *
+   * <p>Method under test: {@link KhaosBlock#equals(Object)}
    */
   @Test
   @Category(MaintainedByDiffblue.class)
@@ -124,49 +129,50 @@ public class KhaosDatabaseDiffblueTest {
     BlockCapsule blk = mock(BlockCapsule.class);
     when(blk.getNum()).thenReturn(1L);
     when(blk.getBlockId()).thenReturn(new BlockId());
-    KhaosBlock khaosBlock = new KhaosBlock(blk);
 
     // Act and Assert
-    assertNotEquals(khaosBlock, new BlockId());
+    assertNotEquals(new KhaosBlock(blk), null);
   }
 
   /**
    * Test KhaosBlock {@link KhaosBlock#getParentHash()}.
+   *
    * <ul>
-   *   <li>Given {@link BlockCapsule} {@link BlockCapsule#getNum()} return one.</li>
-   *   <li>Then return {@code null}.</li>
+   *   <li>Given {@link BlockCapsule} {@link BlockCapsule#getNum()} return one.
+   *   <li>Then return {@link Sha256Hash#ZERO_HASH}.
    * </ul>
-   * <p>
-   * Method under test: {@link KhaosBlock#getParentHash()}
+   *
+   * <p>Method under test: {@link KhaosBlock#getParentHash()}
    */
   @Test
   @Category(MaintainedByDiffblue.class)
   @MethodsUnderTest({"Sha256Hash KhaosBlock.getParentHash()"})
-  public void testKhaosBlockGetParentHash_givenBlockCapsuleGetNumReturnOne_thenReturnNull() {
+  public void testKhaosBlockGetParentHash_givenBlockCapsuleGetNumReturnOne_thenReturnZero_hash() {
     // Arrange
     BlockCapsule blk = mock(BlockCapsule.class);
     when(blk.getNum()).thenReturn(1L);
-    when(blk.getParentHash()).thenReturn(null);
+    when(blk.getParentHash()).thenReturn(Sha256Hash.ZERO_HASH);
     when(blk.getBlockId()).thenReturn(new BlockId());
 
     // Act
-    Sha256Hash actualParentHash = (new KhaosBlock(blk)).getParentHash();
+    Sha256Hash actualParentHash = new KhaosBlock(blk).getParentHash();
 
     // Assert
     verify(blk).getBlockId();
     verify(blk).getNum();
     verify(blk).getParentHash();
-    assertNull(actualParentHash);
+    assertSame(Sha256Hash.ZERO_HASH, actualParentHash);
   }
 
   /**
    * Test KhaosBlock {@link KhaosBlock#getParent()}.
+   *
    * <ul>
-   *   <li>Given {@link BlockCapsule} {@link BlockCapsule#getNum()} return one.</li>
-   *   <li>Then return {@code null}.</li>
+   *   <li>Given {@link BlockCapsule} {@link BlockCapsule#getNum()} return one.
+   *   <li>Then return {@code null}.
    * </ul>
-   * <p>
-   * Method under test: {@link KhaosBlock#getParent()}
+   *
+   * <p>Method under test: {@link KhaosBlock#getParent()}
    */
   @Test
   @Category(MaintainedByDiffblue.class)
@@ -178,7 +184,7 @@ public class KhaosDatabaseDiffblueTest {
     when(blk.getBlockId()).thenReturn(new BlockId());
 
     // Act
-    KhaosBlock actualParent = (new KhaosBlock(blk)).getParent();
+    KhaosBlock actualParent = new KhaosBlock(blk).getParent();
 
     // Assert
     verify(blk).getBlockId();
@@ -188,12 +194,13 @@ public class KhaosDatabaseDiffblueTest {
 
   /**
    * Test KhaosBlock {@link KhaosBlock#KhaosBlock(BlockCapsule)}.
+   *
    * <ul>
-   *   <li>Given one.</li>
-   *   <li>Then return ParentHash is {@code null}.</li>
+   *   <li>Given one.
+   *   <li>Then return ParentHash is {@code null}.
    * </ul>
-   * <p>
-   * Method under test: {@link KhaosBlock#KhaosBlock(BlockCapsule)}
+   *
+   * <p>Method under test: {@link KhaosBlock#KhaosBlock(BlockCapsule)}
    */
   @Test
   @Category(MaintainedByDiffblue.class)
@@ -217,12 +224,13 @@ public class KhaosDatabaseDiffblueTest {
 
   /**
    * Test KhaosBlock {@link KhaosBlock#setParent(KhaosBlock)}.
+   *
    * <ul>
-   *   <li>Given {@link BlockCapsule} {@link BlockCapsule#getNum()} return one.</li>
-   *   <li>Then calls {@link BlockCapsule#getBlockId()}.</li>
+   *   <li>Given {@link BlockCapsule} {@link BlockCapsule#getNum()} return one.
+   *   <li>Then calls {@link BlockCapsule#getBlockId()}.
    * </ul>
-   * <p>
-   * Method under test: {@link KhaosBlock#setParent(KhaosBlock)}
+   *
+   * <p>Method under test: {@link KhaosBlock#setParent(KhaosBlock)}
    */
   @Test
   @Category(MaintainedByDiffblue.class)
@@ -233,6 +241,7 @@ public class KhaosDatabaseDiffblueTest {
     when(blk.getNum()).thenReturn(1L);
     when(blk.getBlockId()).thenReturn(new BlockId());
     KhaosBlock khaosBlock = new KhaosBlock(blk);
+
     BlockCapsule blk2 = mock(BlockCapsule.class);
     when(blk2.getNum()).thenReturn(1L);
     when(blk2.getBlockId()).thenReturn(new BlockId());
@@ -249,8 +258,8 @@ public class KhaosDatabaseDiffblueTest {
 
   /**
    * Test KhaosBlock {@link KhaosBlock#toString()}.
-   * <p>
-   * Method under test: {@link KhaosBlock#toString()}
+   *
+   * <p>Method under test: {@link KhaosBlock#toString()}
    */
   @Test
   @Category(MaintainedByDiffblue.class)
@@ -260,6 +269,7 @@ public class KhaosDatabaseDiffblueTest {
     BlockCapsule blk = mock(BlockCapsule.class);
     when(blk.getNum()).thenReturn(1L);
     when(blk.getBlockId()).thenReturn(new BlockId());
+
     BlockCapsule blk2 = mock(BlockCapsule.class);
     when(blk2.getNum()).thenReturn(1L);
     when(blk2.getBlockId()).thenReturn(new BlockId());
@@ -280,12 +290,13 @@ public class KhaosDatabaseDiffblueTest {
 
   /**
    * Test KhaosBlock {@link KhaosBlock#toString()}.
+   *
    * <ul>
-   *   <li>Given {@link KhaosBlock#KhaosBlock(BlockCapsule)} with blk is {@link BlockCapsule}.</li>
-   *   <li>Then calls {@link BlockCapsule#getBlockId()}.</li>
+   *   <li>Given {@link KhaosBlock#KhaosBlock(BlockCapsule)} with blk is {@link BlockCapsule}.
+   *   <li>Then calls {@link BlockCapsule#getBlockId()}.
    * </ul>
-   * <p>
-   * Method under test: {@link KhaosBlock#toString()}
+   *
+   * <p>Method under test: {@link KhaosBlock#toString()}
    */
   @Test
   @Category(MaintainedByDiffblue.class)
@@ -297,7 +308,7 @@ public class KhaosDatabaseDiffblueTest {
     when(blk.getBlockId()).thenReturn(new BlockId());
 
     // Act
-    (new KhaosBlock(blk)).toString();
+    new KhaosBlock(blk).toString();
 
     // Assert
     verify(blk).getBlockId();
@@ -306,8 +317,8 @@ public class KhaosDatabaseDiffblueTest {
 
   /**
    * Test KhaosStore {@link KhaosStore#KhaosStore(KhaosDatabase)}.
-   * <p>
-   * Method under test: {@link KhaosStore#KhaosStore(KhaosDatabase)}
+   *
+   * <p>Method under test: {@link KhaosStore#KhaosStore(KhaosDatabase)}
    */
   @Test
   @Category(MaintainedByDiffblue.class)

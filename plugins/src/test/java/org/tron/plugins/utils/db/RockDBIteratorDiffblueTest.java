@@ -15,18 +15,18 @@ import java.io.UnsupportedEncodingException;
 import org.junit.Test;
 import org.junit.experimental.categories.Category;
 import org.mockito.Mockito;
-import org.rocksdb.AbstractRocksIterator;
 import org.rocksdb.RocksIterator;
 
 public class RockDBIteratorDiffblueTest {
   /**
    * Test {@link RockDBIterator#valid()}.
+   *
    * <ul>
-   *   <li>Given {@link RocksIterator} {@link AbstractRocksIterator#isValid()} return {@code false}.</li>
-   *   <li>Then return {@code false}.</li>
+   *   <li>Given {@link RocksIterator} {@link RocksIterator#isValid()} return {@code false}.
+   *   <li>Then return {@code false}.
    * </ul>
-   * <p>
-   * Method under test: {@link RockDBIterator#valid()}
+   *
+   * <p>Method under test: {@link RockDBIterator#valid()}
    */
   @Test
   @Category(MaintainedByDiffblue.class)
@@ -37,7 +37,7 @@ public class RockDBIteratorDiffblueTest {
     when(iterator.isValid()).thenReturn(false);
 
     // Act
-    boolean actualValidResult = (new RockDBIterator(iterator)).valid();
+    boolean actualValidResult = new RockDBIterator(iterator).valid();
 
     // Assert
     verify(iterator).isValid();
@@ -46,12 +46,13 @@ public class RockDBIteratorDiffblueTest {
 
   /**
    * Test {@link RockDBIterator#valid()}.
+   *
    * <ul>
-   *   <li>Given {@link RocksIterator} {@link AbstractRocksIterator#isValid()} return {@code true}.</li>
-   *   <li>Then return {@code true}.</li>
+   *   <li>Given {@link RocksIterator} {@link RocksIterator#isValid()} return {@code true}.
+   *   <li>Then return {@code true}.
    * </ul>
-   * <p>
-   * Method under test: {@link RockDBIterator#valid()}
+   *
+   * <p>Method under test: {@link RockDBIterator#valid()}
    */
   @Test
   @Category(MaintainedByDiffblue.class)
@@ -62,7 +63,7 @@ public class RockDBIteratorDiffblueTest {
     when(iterator.isValid()).thenReturn(true);
 
     // Act
-    boolean actualValidResult = (new RockDBIterator(iterator)).valid();
+    boolean actualValidResult = new RockDBIterator(iterator).valid();
 
     // Assert
     verify(iterator).isValid();
@@ -71,8 +72,8 @@ public class RockDBIteratorDiffblueTest {
 
   /**
    * Test {@link RockDBIterator#seek(byte[])}.
-   * <p>
-   * Method under test: {@link RockDBIterator#seek(byte[])}
+   *
+   * <p>Method under test: {@link RockDBIterator#seek(byte[])}
    */
   @Test
   @Category(MaintainedByDiffblue.class)
@@ -81,10 +82,9 @@ public class RockDBIteratorDiffblueTest {
     // Arrange
     RocksIterator iterator = mock(RocksIterator.class);
     doNothing().when(iterator).seek(Mockito.<byte[]>any());
-    RockDBIterator rockDBIterator = new RockDBIterator(iterator);
 
     // Act
-    rockDBIterator.seek("AXAXAXAX".getBytes("UTF-8"));
+    new RockDBIterator(iterator).seek("AXAXAXAX".getBytes("UTF-8"));
 
     // Assert
     verify(iterator).seek(isA(byte[].class));
@@ -92,8 +92,8 @@ public class RockDBIteratorDiffblueTest {
 
   /**
    * Test {@link RockDBIterator#seekToFirst()}.
-   * <p>
-   * Method under test: {@link RockDBIterator#seekToFirst()}
+   *
+   * <p>Method under test: {@link RockDBIterator#seekToFirst()}
    */
   @Test
   @Category(MaintainedByDiffblue.class)
@@ -104,7 +104,7 @@ public class RockDBIteratorDiffblueTest {
     doNothing().when(iterator).seekToFirst();
 
     // Act
-    (new RockDBIterator(iterator)).seekToFirst();
+    new RockDBIterator(iterator).seekToFirst();
 
     // Assert
     verify(iterator).seekToFirst();
@@ -112,8 +112,8 @@ public class RockDBIteratorDiffblueTest {
 
   /**
    * Test {@link RockDBIterator#seekToLast()}.
-   * <p>
-   * Method under test: {@link RockDBIterator#seekToLast()}
+   *
+   * <p>Method under test: {@link RockDBIterator#seekToLast()}
    */
   @Test
   @Category(MaintainedByDiffblue.class)
@@ -124,7 +124,7 @@ public class RockDBIteratorDiffblueTest {
     doNothing().when(iterator).seekToLast();
 
     // Act
-    (new RockDBIterator(iterator)).seekToLast();
+    new RockDBIterator(iterator).seekToLast();
 
     // Assert
     verify(iterator).seekToLast();
@@ -132,12 +132,13 @@ public class RockDBIteratorDiffblueTest {
 
   /**
    * Test {@link RockDBIterator#hasNext()}.
+   *
    * <ul>
-   *   <li>Given {@link RocksIterator} {@link AbstractRocksIterator#isValid()} return {@code false}.</li>
-   *   <li>Then return {@code false}.</li>
+   *   <li>Given {@link RocksIterator} {@link RocksIterator#isValid()} return {@code false}.
+   *   <li>Then return {@code false}.
    * </ul>
-   * <p>
-   * Method under test: {@link RockDBIterator#hasNext()}
+   *
+   * <p>Method under test: {@link RockDBIterator#hasNext()}
    */
   @Test
   @Category(MaintainedByDiffblue.class)
@@ -148,7 +149,7 @@ public class RockDBIteratorDiffblueTest {
     when(iterator.isValid()).thenReturn(false);
 
     // Act
-    boolean actualHasNextResult = (new RockDBIterator(iterator)).hasNext();
+    boolean actualHasNextResult = new RockDBIterator(iterator).hasNext();
 
     // Assert
     verify(iterator).isValid();
@@ -157,12 +158,13 @@ public class RockDBIteratorDiffblueTest {
 
   /**
    * Test {@link RockDBIterator#hasNext()}.
+   *
    * <ul>
-   *   <li>Given {@link RocksIterator} {@link AbstractRocksIterator#isValid()} return {@code true}.</li>
-   *   <li>Then return {@code true}.</li>
+   *   <li>Given {@link RocksIterator} {@link RocksIterator#isValid()} return {@code true}.
+   *   <li>Then return {@code true}.
    * </ul>
-   * <p>
-   * Method under test: {@link RockDBIterator#hasNext()}
+   *
+   * <p>Method under test: {@link RockDBIterator#hasNext()}
    */
   @Test
   @Category(MaintainedByDiffblue.class)
@@ -173,7 +175,7 @@ public class RockDBIteratorDiffblueTest {
     when(iterator.isValid()).thenReturn(true);
 
     // Act
-    boolean actualHasNextResult = (new RockDBIterator(iterator)).hasNext();
+    boolean actualHasNextResult = new RockDBIterator(iterator).hasNext();
 
     // Assert
     verify(iterator).isValid();
@@ -182,8 +184,8 @@ public class RockDBIteratorDiffblueTest {
 
   /**
    * Test {@link RockDBIterator#getKey()}.
-   * <p>
-   * Method under test: {@link RockDBIterator#getKey()}
+   *
+   * <p>Method under test: {@link RockDBIterator#getKey()}
    */
   @Test
   @Category(MaintainedByDiffblue.class)
@@ -194,7 +196,7 @@ public class RockDBIteratorDiffblueTest {
     when(iterator.key()).thenReturn("AXAXAXAX".getBytes("UTF-8"));
 
     // Act
-    byte[] actualKey = (new RockDBIterator(iterator)).getKey();
+    byte[] actualKey = new RockDBIterator(iterator).getKey();
 
     // Assert
     verify(iterator).key();
@@ -203,8 +205,8 @@ public class RockDBIteratorDiffblueTest {
 
   /**
    * Test {@link RockDBIterator#getValue()}.
-   * <p>
-   * Method under test: {@link RockDBIterator#getValue()}
+   *
+   * <p>Method under test: {@link RockDBIterator#getValue()}
    */
   @Test
   @Category(MaintainedByDiffblue.class)
@@ -215,7 +217,7 @@ public class RockDBIteratorDiffblueTest {
     when(iterator.value()).thenReturn("AXAXAXAX".getBytes("UTF-8"));
 
     // Act
-    byte[] actualValue = (new RockDBIterator(iterator)).getValue();
+    byte[] actualValue = new RockDBIterator(iterator).getValue();
 
     // Assert
     verify(iterator).value();
@@ -224,8 +226,8 @@ public class RockDBIteratorDiffblueTest {
 
   /**
    * Test {@link RockDBIterator#next()}.
-   * <p>
-   * Method under test: {@link RockDBIterator#next()}
+   *
+   * <p>Method under test: {@link RockDBIterator#next()}
    */
   @Test
   @Category(MaintainedByDiffblue.class)
@@ -238,7 +240,7 @@ public class RockDBIteratorDiffblueTest {
     doNothing().when(iterator).next();
 
     // Act
-    (new RockDBIterator(iterator)).next();
+    new RockDBIterator(iterator).next();
 
     // Assert
     verify(iterator).next();
@@ -248,8 +250,8 @@ public class RockDBIteratorDiffblueTest {
 
   /**
    * Test {@link RockDBIterator#close()}.
-   * <p>
-   * Method under test: {@link RockDBIterator#close()}
+   *
+   * <p>Method under test: {@link RockDBIterator#close()}
    */
   @Test
   @Category(MaintainedByDiffblue.class)
@@ -258,11 +260,9 @@ public class RockDBIteratorDiffblueTest {
     // Arrange
     RocksIterator iterator = mock(RocksIterator.class);
     doNothing().when(iterator).close();
+    try (RockDBIterator rockDBIterator = new RockDBIterator(iterator)) {}
 
-    // Act
-    (new RockDBIterator(iterator)).close();
-
-    // Assert
+    // Act and Assert
     verify(iterator).close();
   }
 }

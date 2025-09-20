@@ -12,8 +12,9 @@ import org.junit.experimental.categories.Category;
 public class DBNodesDiffblueTest {
   /**
    * Test getters and setters.
-   * <p>
-   * Methods under test:
+   *
+   * <p>Methods under test:
+   *
    * <ul>
    *   <li>default or parameterless constructor of {@link DBNodes}
    *   <li>{@link DBNodes#setNodes(List)}
@@ -22,7 +23,11 @@ public class DBNodesDiffblueTest {
    */
   @Test
   @Category(MaintainedByDiffblue.class)
-  @MethodsUnderTest({"void DBNodes.<init>()", "List DBNodes.getNodes()", "void DBNodes.setNodes(List)"})
+  @MethodsUnderTest({
+    "void DBNodes.<init>()",
+    "List DBNodes.getNodes()",
+    "void DBNodes.setNodes(List)"
+  })
   public void testGettersAndSetters() {
     // Arrange and Act
     DBNodes actualDbNodes = new DBNodes();

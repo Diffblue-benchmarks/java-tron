@@ -21,8 +21,8 @@ import org.junit.experimental.categories.Category;
 public class TronLogShutdownHookDiffblueTest {
   /**
    * Test new {@link TronLogShutdownHook} (default constructor).
-   * <p>
-   * Method under test: default or parameterless constructor of {@link TronLogShutdownHook}
+   *
+   * <p>Method under test: default or parameterless constructor of {@link TronLogShutdownHook}
    */
   @Test
   @Category(MaintainedByDiffblue.class)
@@ -38,11 +38,13 @@ public class TronLogShutdownHookDiffblueTest {
 
   /**
    * Test {@link TronLogShutdownHook#run()}.
+   *
    * <ul>
-   *   <li>Given {@link TronLogShutdownHook} (default constructor) Context is {@link ContextBase} (default constructor).</li>
+   *   <li>Given {@link TronLogShutdownHook} (default constructor) Context is {@link ContextBase}
+   *       (default constructor).
    * </ul>
-   * <p>
-   * Method under test: {@link TronLogShutdownHook#run()}
+   *
+   * <p>Method under test: {@link TronLogShutdownHook#run()}
    */
   @Test
   @Category(MaintainedByDiffblue.class)
@@ -75,11 +77,13 @@ public class TronLogShutdownHookDiffblueTest {
 
   /**
    * Test {@link TronLogShutdownHook#run()}.
+   *
    * <ul>
-   *   <li>Then {@link TronLogShutdownHook} (default constructor) StatusManager {@link BasicStatusManager}.</li>
+   *   <li>Then {@link TronLogShutdownHook} (default constructor) StatusManager {@link
+   *       BasicStatusManager}.
    * </ul>
-   * <p>
-   * Method under test: {@link TronLogShutdownHook#run()}
+   *
+   * <p>Method under test: {@link TronLogShutdownHook#run()}
    */
   @Test
   @Category(MaintainedByDiffblue.class)

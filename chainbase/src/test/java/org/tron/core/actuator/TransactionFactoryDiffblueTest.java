@@ -14,15 +14,16 @@ import org.tron.protos.Protocol.Transaction.Contract.ContractType;
 public class TransactionFactoryDiffblueTest {
   /**
    * Test {@link TransactionFactory#getActuator(ContractType)}.
-   * <p>
-   * Method under test: {@link TransactionFactory#getActuator(Transaction.Contract.ContractType)}
+   *
+   * <p>Method under test: {@link TransactionFactory#getActuator(Transaction.Contract.ContractType)}
    */
   @Test
   @Category(MaintainedByDiffblue.class)
   @MethodsUnderTest({"Class TransactionFactory.getActuator(Transaction.Contract.ContractType)"})
   public void testGetActuator() {
     // Arrange and Act
-    Class<? extends Actuator> actualActuator = TransactionFactory.getActuator(ContractType.AccountCreateContract);
+    Class<? extends Actuator> actualActuator =
+        TransactionFactory.getActuator(ContractType.AccountCreateContract);
 
     // Assert
     assertNull(actualActuator);
@@ -30,16 +31,16 @@ public class TransactionFactoryDiffblueTest {
 
   /**
    * Test {@link TransactionFactory#getContract(ContractType)}.
-   * <p>
-   * Method under test: {@link TransactionFactory#getContract(Transaction.Contract.ContractType)}
+   *
+   * <p>Method under test: {@link TransactionFactory#getContract(Transaction.Contract.ContractType)}
    */
   @Test
   @Category(MaintainedByDiffblue.class)
   @MethodsUnderTest({"Class TransactionFactory.getContract(Transaction.Contract.ContractType)"})
   public void testGetContract() {
     // Arrange and Act
-    Class<? extends GeneratedMessageV3> actualContract = TransactionFactory
-        .getContract(ContractType.AccountCreateContract);
+    Class<? extends GeneratedMessageV3> actualContract =
+        TransactionFactory.getContract(ContractType.AccountCreateContract);
 
     // Assert
     assertNull(actualContract);

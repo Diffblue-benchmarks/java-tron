@@ -10,31 +10,56 @@ import org.tron.core.services.ratelimiter.RuntimeData;
 public class IPQPSRateLimiterAdapterDiffblueTest {
   /**
    * Test {@link IPQPSRateLimiterAdapter#IPQPSRateLimiterAdapter(String)}.
+   *
    * <ul>
-   *   <li>Then return acquire {@link RuntimeData#RuntimeData(Object)} with o is {@code 42}.</li>
+   *   <li>Then return acquire {@link RuntimeData#RuntimeData(Object)} with o is {@code 42}.
    * </ul>
-   * <p>
-   * Method under test: {@link IPQPSRateLimiterAdapter#IPQPSRateLimiterAdapter(String)}
+   *
+   * <p>Method under test: {@link IPQPSRateLimiterAdapter#IPQPSRateLimiterAdapter(String)}
    */
   @Test
   @Category(MaintainedByDiffblue.class)
   @MethodsUnderTest({"void IPQPSRateLimiterAdapter.<init>(String)"})
   public void testNewIPQPSRateLimiterAdapter_thenReturnAcquireRuntimeDataWithOIs42() {
     // Arrange and Act
-    IPQPSRateLimiterAdapter actualIpqpsRateLimiterAdapter = new IPQPSRateLimiterAdapter("Param String");
+    IPQPSRateLimiterAdapter actualIpqpsRateLimiterAdapter =
+        new IPQPSRateLimiterAdapter("Param String");
+    boolean actualAcquireResult = actualIpqpsRateLimiterAdapter.acquire(new RuntimeData("42"));
 
     // Assert
-    assertTrue(actualIpqpsRateLimiterAdapter.acquire(new RuntimeData("42")));
+    assertTrue(actualAcquireResult);
+  }
+
+  /**
+   * Test {@link IPQPSRateLimiterAdapter#IPQPSRateLimiterAdapter(String)}.
+   *
+   * <ul>
+   *   <li>When empty string.
+   * </ul>
+   *
+   * <p>Method under test: {@link IPQPSRateLimiterAdapter#IPQPSRateLimiterAdapter(String)}
+   */
+  @Test
+  @Category(MaintainedByDiffblue.class)
+  @MethodsUnderTest({"void IPQPSRateLimiterAdapter.<init>(String)"})
+  public void testNewIPQPSRateLimiterAdapter_whenEmptyString() {
+    // Arrange and Act
+    IPQPSRateLimiterAdapter actualIpqpsRateLimiterAdapter = new IPQPSRateLimiterAdapter("");
+    boolean actualAcquireResult = actualIpqpsRateLimiterAdapter.acquire(new RuntimeData("42"));
+
+    // Assert
+    assertTrue(actualAcquireResult);
   }
 
   /**
    * Test {@link IPQPSRateLimiterAdapter#acquire(RuntimeData)}.
+   *
    * <ul>
-   *   <li>When {@link RuntimeData#RuntimeData(Object)} with o is {@code 42}.</li>
-   *   <li>Then return {@code true}.</li>
+   *   <li>When {@link RuntimeData#RuntimeData(Object)} with o is {@code 42}.
+   *   <li>Then return {@code true}.
    * </ul>
-   * <p>
-   * Method under test: {@link IPQPSRateLimiterAdapter#acquire(RuntimeData)}
+   *
+   * <p>Method under test: {@link IPQPSRateLimiterAdapter#acquire(RuntimeData)}
    */
   @Test
   @Category(MaintainedByDiffblue.class)
@@ -43,7 +68,10 @@ public class IPQPSRateLimiterAdapterDiffblueTest {
     // Arrange
     IPQPSRateLimiterAdapter ipqpsRateLimiterAdapter = new IPQPSRateLimiterAdapter("Param String");
 
-    // Act and Assert
-    assertTrue(ipqpsRateLimiterAdapter.acquire(new RuntimeData("42")));
+    // Act
+    boolean actualAcquireResult = ipqpsRateLimiterAdapter.acquire(new RuntimeData("42"));
+
+    // Assert
+    assertTrue(actualAcquireResult);
   }
 }

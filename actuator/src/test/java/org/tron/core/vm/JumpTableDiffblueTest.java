@@ -14,15 +14,15 @@ import org.junit.experimental.categories.Category;
 public class JumpTableDiffblueTest {
   /**
    * Test new {@link JumpTable} (default constructor).
-   * <p>
-   * Method under test: default or parameterless constructor of {@link JumpTable}
+   *
+   * <p>Method under test: default or parameterless constructor of {@link JumpTable}
    */
   @Test
   @Category(MaintainedByDiffblue.class)
   @MethodsUnderTest({"void JumpTable.<init>()"})
   public void testNewJumpTable() {
     // Arrange, Act and Assert
-    Operation getResult = (new JumpTable()).get(1);
+    Operation getResult = new JumpTable().get(1);
     assertEquals(-1, getResult.getOpcode());
     assertEquals(0, getResult.getRequire());
     assertEquals(0, getResult.getRet());
@@ -31,19 +31,20 @@ public class JumpTableDiffblueTest {
 
   /**
    * Test {@link JumpTable#get(int)}.
+   *
    * <ul>
-   *   <li>When one.</li>
-   *   <li>Then return Opcode is minus one.</li>
+   *   <li>When one.
+   *   <li>Then return Opcode is minus one.
    * </ul>
-   * <p>
-   * Method under test: {@link JumpTable#get(int)}
+   *
+   * <p>Method under test: {@link JumpTable#get(int)}
    */
   @Test
   @Category(MaintainedByDiffblue.class)
   @MethodsUnderTest({"Operation JumpTable.get(int)"})
   public void testGet_whenOne_thenReturnOpcodeIsMinusOne() {
     // Arrange and Act
-    Operation actualGetResult = (new JumpTable()).get(1);
+    Operation actualGetResult = new JumpTable().get(1);
 
     // Assert
     assertEquals(-1, actualGetResult.getOpcode());
@@ -54,8 +55,8 @@ public class JumpTableDiffblueTest {
 
   /**
    * Test {@link JumpTable#set(Operation)}.
-   * <p>
-   * Method under test: {@link JumpTable#set(Operation)}
+   *
+   * <p>Method under test: {@link JumpTable#set(Operation)}
    */
   @Test
   @Category(MaintainedByDiffblue.class)

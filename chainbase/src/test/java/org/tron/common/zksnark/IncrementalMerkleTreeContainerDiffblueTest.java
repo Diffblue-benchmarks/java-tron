@@ -25,18 +25,20 @@ import org.tron.protos.contract.ShieldContract.PedersenHash;
 public class IncrementalMerkleTreeContainerDiffblueTest {
   /**
    * Test EmptyMerkleRoots {@link EmptyMerkleRoots#emptyRoot(int)}.
+   *
    * <ul>
-   *   <li>Then return InitializationErrorString is empty string.</li>
+   *   <li>Then return InitializationErrorString is empty string.
    * </ul>
-   * <p>
-   * Method under test: {@link EmptyMerkleRoots#emptyRoot(int)}
+   *
+   * <p>Method under test: {@link EmptyMerkleRoots#emptyRoot(int)}
    */
   @Test
   @Category(MaintainedByDiffblue.class)
   @MethodsUnderTest({"PedersenHash EmptyMerkleRoots.emptyRoot(int)"})
   public void testEmptyMerkleRootsEmptyRoot_thenReturnInitializationErrorStringIsEmptyString() {
     // Arrange and Act
-    PedersenHash actualEmptyRootResult = EmptyMerkleRoots.getEmptyMerkleRootsInstance().emptyRoot(1);
+    PedersenHash actualEmptyRootResult =
+        EmptyMerkleRoots.getEmptyMerkleRootsInstance().emptyRoot(1);
 
     // Assert
     assertEquals("", actualEmptyRootResult.getInitializationErrorString());
@@ -48,8 +50,9 @@ public class IncrementalMerkleTreeContainerDiffblueTest {
 
   /**
    * Test EmptyMerkleRoots getters and setters.
-   * <p>
-   * Methods under test:
+   *
+   * <p>Methods under test:
+   *
    * <ul>
    *   <li>{@link EmptyMerkleRoots#getEmptyMerkleRootsInstance()}
    *   <li>{@link EmptyMerkleRoots#setEmptyMerkleRootsInstance(EmptyMerkleRoots)}
@@ -57,12 +60,16 @@ public class IncrementalMerkleTreeContainerDiffblueTest {
    */
   @Test
   @Category(MaintainedByDiffblue.class)
-  @MethodsUnderTest({"EmptyMerkleRoots EmptyMerkleRoots.getEmptyMerkleRootsInstance()",
-      "void EmptyMerkleRoots.setEmptyMerkleRootsInstance(EmptyMerkleRoots)"})
+  @MethodsUnderTest({
+    "EmptyMerkleRoots EmptyMerkleRoots.getEmptyMerkleRootsInstance()",
+    "void EmptyMerkleRoots.setEmptyMerkleRootsInstance(EmptyMerkleRoots)"
+  })
   public void testEmptyMerkleRootsGettersAndSetters() {
     // Arrange and Act
-    EmptyMerkleRoots actualEmptyMerkleRootsInstance = EmptyMerkleRoots.getEmptyMerkleRootsInstance();
-    EmptyMerkleRoots actualEmptyMerkleRootsInstance2 = actualEmptyMerkleRootsInstance.getEmptyMerkleRootsInstance();
+    EmptyMerkleRoots actualEmptyMerkleRootsInstance =
+        EmptyMerkleRoots.getEmptyMerkleRootsInstance();
+    EmptyMerkleRoots actualEmptyMerkleRootsInstance2 =
+        actualEmptyMerkleRootsInstance.getEmptyMerkleRootsInstance();
     EmptyMerkleRoots emptyMerkleRootsInstance = EmptyMerkleRoots.getEmptyMerkleRootsInstance();
     actualEmptyMerkleRootsInstance.setEmptyMerkleRootsInstance(emptyMerkleRootsInstance);
 
@@ -72,8 +79,8 @@ public class IncrementalMerkleTreeContainerDiffblueTest {
 
   /**
    * Test {@link IncrementalMerkleTreeContainer#emptyRoot()}.
-   * <p>
-   * Method under test: {@link IncrementalMerkleTreeContainer#emptyRoot()}
+   *
+   * <p>Method under test: {@link IncrementalMerkleTreeContainer#emptyRoot()}
    */
   @Test
   @Category(MaintainedByDiffblue.class)
@@ -92,15 +99,15 @@ public class IncrementalMerkleTreeContainerDiffblueTest {
 
   /**
    * Test PathFiller {@link PathFiller#next(int)}.
-   * <p>
-   * Method under test: {@link PathFiller#next(int)}
+   *
+   * <p>Method under test: {@link PathFiller#next(int)}
    */
   @Test
   @Category(MaintainedByDiffblue.class)
   @MethodsUnderTest({"PedersenHash PathFiller.next(int)"})
   public void testPathFillerNext() {
     // Arrange and Act
-    PedersenHash actualNextResult = (new PathFiller(new LinkedList<>())).next(1);
+    PedersenHash actualNextResult = new PathFiller(new LinkedList<>()).next(1);
 
     // Assert
     PedersenHash defaultInstanceForType = actualNextResult.getDefaultInstanceForType();
@@ -119,18 +126,22 @@ public class IncrementalMerkleTreeContainerDiffblueTest {
     assertTrue(defaultInstanceForType.isInitialized());
     UnknownFieldSet unknownFields = actualNextResult.getUnknownFields();
     assertSame(unknownFields, defaultInstanceForType.getUnknownFields());
-    assertSame(unknownFields, unknownFields.getDefaultInstanceForType());
-    assertSame(defaultInstanceForType.getDefaultInstanceForType(), defaultInstanceForType.getDefaultInstanceForType());
+    UnknownFieldSet actualDefaultInstanceForType = unknownFields.getDefaultInstanceForType();
+    assertSame(unknownFields, actualDefaultInstanceForType);
+    assertSame(
+        defaultInstanceForType.getDefaultInstanceForType(),
+        defaultInstanceForType.getDefaultInstanceForType());
   }
 
   /**
    * Test PathFiller {@link PathFiller#next(int)}.
+   *
    * <ul>
-   *   <li>Given {@link LinkedList#LinkedList()} add DefaultInstance.</li>
-   *   <li>Then return DefaultInstance.</li>
+   *   <li>Given {@link LinkedList#LinkedList()} add DefaultInstance.
+   *   <li>Then return DefaultInstance.
    * </ul>
-   * <p>
-   * Method under test: {@link PathFiller#next(int)}
+   *
+   * <p>Method under test: {@link PathFiller#next(int)}
    */
   @Test
   @Category(MaintainedByDiffblue.class)
@@ -142,16 +153,17 @@ public class IncrementalMerkleTreeContainerDiffblueTest {
     queue.add(defaultInstance);
 
     // Act and Assert
-    assertSame(defaultInstance, (new PathFiller(queue)).next(2));
+    assertSame(defaultInstance, new PathFiller(queue).next(2));
   }
 
   /**
    * Test {@link IncrementalMerkleTreeContainer#wfcheck()}.
+   *
    * <ul>
-   *   <li>Then throw {@link ZksnarkException}.</li>
+   *   <li>Then throw {@link ZksnarkException}.
    * </ul>
-   * <p>
-   * Method under test: {@link IncrementalMerkleTreeContainer#wfcheck()}
+   *
+   * <p>Method under test: {@link IncrementalMerkleTreeContainer#wfcheck()}
    */
   @Test
   @Category(MaintainedByDiffblue.class)
@@ -162,35 +174,37 @@ public class IncrementalMerkleTreeContainerDiffblueTest {
     treeCapsule.addParents(PedersenHash.getDefaultInstance());
 
     // Act and Assert
-    assertThrows(ZksnarkException.class, () -> (new IncrementalMerkleTreeContainer(treeCapsule)).wfcheck());
+    assertThrows(
+        ZksnarkException.class, () -> new IncrementalMerkleTreeContainer(treeCapsule).wfcheck());
   }
 
   /**
    * Test {@link IncrementalMerkleTreeContainer#last()}.
-   * <p>
-   * Method under test: {@link IncrementalMerkleTreeContainer#last()}
+   *
+   * <p>Method under test: {@link IncrementalMerkleTreeContainer#last()}
    */
   @Test
   @Category(MaintainedByDiffblue.class)
   @MethodsUnderTest({"PedersenHash IncrementalMerkleTreeContainer.last()"})
   public void testLast() throws ZksnarkException {
     // Arrange, Act and Assert
-    assertThrows(ZksnarkException.class,
-        () -> (new IncrementalMerkleTreeContainer(new IncrementalMerkleTreeCapsule())).last());
+    assertThrows(
+        ZksnarkException.class,
+        () -> new IncrementalMerkleTreeContainer(new IncrementalMerkleTreeCapsule()).last());
   }
 
   /**
    * Test {@link IncrementalMerkleTreeContainer#last()}.
-   * <p>
-   * Method under test: {@link IncrementalMerkleTreeContainer#last()}
+   *
+   * <p>Method under test: {@link IncrementalMerkleTreeContainer#last()}
    */
   @Test
   @Category(MaintainedByDiffblue.class)
   @MethodsUnderTest({"PedersenHash IncrementalMerkleTreeContainer.last()"})
   public void testLast2() throws ZksnarkException {
     // Arrange
-    IncrementalMerkleTreeContainer incrementalMerkleTreeContainer = new IncrementalMerkleTreeContainer(
-        new IncrementalMerkleTreeCapsule());
+    IncrementalMerkleTreeContainer incrementalMerkleTreeContainer =
+        new IncrementalMerkleTreeContainer(new IncrementalMerkleTreeCapsule());
     incrementalMerkleTreeContainer.append(PedersenHash.getDefaultInstance());
 
     // Act and Assert
@@ -199,29 +213,29 @@ public class IncrementalMerkleTreeContainerDiffblueTest {
 
   /**
    * Test {@link IncrementalMerkleTreeContainer#size()}.
-   * <p>
-   * Method under test: {@link IncrementalMerkleTreeContainer#size()}
+   *
+   * <p>Method under test: {@link IncrementalMerkleTreeContainer#size()}
    */
   @Test
   @Category(MaintainedByDiffblue.class)
   @MethodsUnderTest({"int IncrementalMerkleTreeContainer.size()"})
   public void testSize() {
     // Arrange, Act and Assert
-    assertEquals(0, (new IncrementalMerkleTreeContainer(new IncrementalMerkleTreeCapsule())).size());
+    assertEquals(0, new IncrementalMerkleTreeContainer(new IncrementalMerkleTreeCapsule()).size());
   }
 
   /**
    * Test {@link IncrementalMerkleTreeContainer#size()}.
-   * <p>
-   * Method under test: {@link IncrementalMerkleTreeContainer#size()}
+   *
+   * <p>Method under test: {@link IncrementalMerkleTreeContainer#size()}
    */
   @Test
   @Category(MaintainedByDiffblue.class)
   @MethodsUnderTest({"int IncrementalMerkleTreeContainer.size()"})
   public void testSize2() throws ZksnarkException {
     // Arrange
-    IncrementalMerkleTreeContainer incrementalMerkleTreeContainer = new IncrementalMerkleTreeContainer(
-        new IncrementalMerkleTreeCapsule());
+    IncrementalMerkleTreeContainer incrementalMerkleTreeContainer =
+        new IncrementalMerkleTreeContainer(new IncrementalMerkleTreeCapsule());
     incrementalMerkleTreeContainer.append(PedersenHash.getDefaultInstance());
 
     // Act and Assert
@@ -230,11 +244,13 @@ public class IncrementalMerkleTreeContainerDiffblueTest {
 
   /**
    * Test {@link IncrementalMerkleTreeContainer#size()}.
+   *
    * <ul>
-   *   <li>Given {@link IncrementalMerkleTreeCapsule#IncrementalMerkleTreeCapsule()} addParents DefaultInstance.</li>
+   *   <li>Given {@link IncrementalMerkleTreeCapsule#IncrementalMerkleTreeCapsule()} addParents
+   *       DefaultInstance.
    * </ul>
-   * <p>
-   * Method under test: {@link IncrementalMerkleTreeContainer#size()}
+   *
+   * <p>Method under test: {@link IncrementalMerkleTreeContainer#size()}
    */
   @Test
   @Category(MaintainedByDiffblue.class)
@@ -245,34 +261,35 @@ public class IncrementalMerkleTreeContainerDiffblueTest {
     treeCapsule.addParents(PedersenHash.getDefaultInstance());
 
     // Act and Assert
-    assertEquals(0, (new IncrementalMerkleTreeContainer(treeCapsule)).size());
+    assertEquals(0, new IncrementalMerkleTreeContainer(treeCapsule).size());
   }
 
   /**
    * Test {@link IncrementalMerkleTreeContainer#isComplete()}.
-   * <p>
-   * Method under test: {@link IncrementalMerkleTreeContainer#isComplete()}
+   *
+   * <p>Method under test: {@link IncrementalMerkleTreeContainer#isComplete()}
    */
   @Test
   @Category(MaintainedByDiffblue.class)
   @MethodsUnderTest({"boolean IncrementalMerkleTreeContainer.isComplete()"})
   public void testIsComplete() {
     // Arrange, Act and Assert
-    assertFalse((new IncrementalMerkleTreeContainer(new IncrementalMerkleTreeCapsule())).isComplete());
+    assertFalse(
+        new IncrementalMerkleTreeContainer(new IncrementalMerkleTreeCapsule()).isComplete());
   }
 
   /**
    * Test {@link IncrementalMerkleTreeContainer#isComplete()}.
-   * <p>
-   * Method under test: {@link IncrementalMerkleTreeContainer#isComplete()}
+   *
+   * <p>Method under test: {@link IncrementalMerkleTreeContainer#isComplete()}
    */
   @Test
   @Category(MaintainedByDiffblue.class)
   @MethodsUnderTest({"boolean IncrementalMerkleTreeContainer.isComplete()"})
   public void testIsComplete2() throws ZksnarkException {
     // Arrange
-    IncrementalMerkleTreeContainer incrementalMerkleTreeContainer = new IncrementalMerkleTreeContainer(
-        new IncrementalMerkleTreeCapsule());
+    IncrementalMerkleTreeContainer incrementalMerkleTreeContainer =
+        new IncrementalMerkleTreeContainer(new IncrementalMerkleTreeCapsule());
     incrementalMerkleTreeContainer.append(PedersenHash.getDefaultInstance());
 
     // Act and Assert
@@ -281,29 +298,30 @@ public class IncrementalMerkleTreeContainerDiffblueTest {
 
   /**
    * Test {@link IncrementalMerkleTreeContainer#isComplete(long)} with {@code long}.
-   * <p>
-   * Method under test: {@link IncrementalMerkleTreeContainer#isComplete(long)}
+   *
+   * <p>Method under test: {@link IncrementalMerkleTreeContainer#isComplete(long)}
    */
   @Test
   @Category(MaintainedByDiffblue.class)
   @MethodsUnderTest({"boolean IncrementalMerkleTreeContainer.isComplete(long)"})
   public void testIsCompleteWithLong() {
     // Arrange, Act and Assert
-    assertFalse((new IncrementalMerkleTreeContainer(new IncrementalMerkleTreeCapsule())).isComplete(1L));
+    assertFalse(
+        new IncrementalMerkleTreeContainer(new IncrementalMerkleTreeCapsule()).isComplete(1L));
   }
 
   /**
    * Test {@link IncrementalMerkleTreeContainer#isComplete(long)} with {@code long}.
-   * <p>
-   * Method under test: {@link IncrementalMerkleTreeContainer#isComplete(long)}
+   *
+   * <p>Method under test: {@link IncrementalMerkleTreeContainer#isComplete(long)}
    */
   @Test
   @Category(MaintainedByDiffblue.class)
   @MethodsUnderTest({"boolean IncrementalMerkleTreeContainer.isComplete(long)"})
   public void testIsCompleteWithLong2() throws ZksnarkException {
     // Arrange
-    IncrementalMerkleTreeContainer incrementalMerkleTreeContainer = new IncrementalMerkleTreeContainer(
-        new IncrementalMerkleTreeCapsule());
+    IncrementalMerkleTreeContainer incrementalMerkleTreeContainer =
+        new IncrementalMerkleTreeContainer(new IncrementalMerkleTreeCapsule());
     incrementalMerkleTreeContainer.append(PedersenHash.getDefaultInstance());
 
     // Act and Assert
@@ -312,16 +330,16 @@ public class IncrementalMerkleTreeContainerDiffblueTest {
 
   /**
    * Test {@link IncrementalMerkleTreeContainer#nextDepth(int)}.
-   * <p>
-   * Method under test: {@link IncrementalMerkleTreeContainer#nextDepth(int)}
+   *
+   * <p>Method under test: {@link IncrementalMerkleTreeContainer#nextDepth(int)}
    */
   @Test
   @Category(MaintainedByDiffblue.class)
   @MethodsUnderTest({"int IncrementalMerkleTreeContainer.nextDepth(int)"})
   public void testNextDepth() throws ZksnarkException {
     // Arrange
-    IncrementalMerkleTreeContainer incrementalMerkleTreeContainer = new IncrementalMerkleTreeContainer(
-        new IncrementalMerkleTreeCapsule());
+    IncrementalMerkleTreeContainer incrementalMerkleTreeContainer =
+        new IncrementalMerkleTreeContainer(new IncrementalMerkleTreeCapsule());
     incrementalMerkleTreeContainer.append(PedersenHash.getDefaultInstance());
 
     // Act and Assert
@@ -330,11 +348,13 @@ public class IncrementalMerkleTreeContainerDiffblueTest {
 
   /**
    * Test {@link IncrementalMerkleTreeContainer#nextDepth(int)}.
+   *
    * <ul>
-   *   <li>Given {@link IncrementalMerkleTreeCapsule#IncrementalMerkleTreeCapsule()} addParents DefaultInstance.</li>
+   *   <li>Given {@link IncrementalMerkleTreeCapsule#IncrementalMerkleTreeCapsule()} addParents
+   *       DefaultInstance.
    * </ul>
-   * <p>
-   * Method under test: {@link IncrementalMerkleTreeContainer#nextDepth(int)}
+   *
+   * <p>Method under test: {@link IncrementalMerkleTreeContainer#nextDepth(int)}
    */
   @Test
   @Category(MaintainedByDiffblue.class)
@@ -345,72 +365,78 @@ public class IncrementalMerkleTreeContainerDiffblueTest {
     treeCapsule.addParents(PedersenHash.getDefaultInstance());
 
     // Act and Assert
-    assertEquals(-2, (new IncrementalMerkleTreeContainer(treeCapsule)).nextDepth(-1));
+    assertEquals(-2, new IncrementalMerkleTreeContainer(treeCapsule).nextDepth(-1));
   }
 
   /**
    * Test {@link IncrementalMerkleTreeContainer#nextDepth(int)}.
+   *
    * <ul>
-   *   <li>When minus one.</li>
-   *   <li>Then return minus two.</li>
+   *   <li>When minus one.
+   *   <li>Then return minus two.
    * </ul>
-   * <p>
-   * Method under test: {@link IncrementalMerkleTreeContainer#nextDepth(int)}
+   *
+   * <p>Method under test: {@link IncrementalMerkleTreeContainer#nextDepth(int)}
    */
   @Test
   @Category(MaintainedByDiffblue.class)
   @MethodsUnderTest({"int IncrementalMerkleTreeContainer.nextDepth(int)"})
   public void testNextDepth_whenMinusOne_thenReturnMinusTwo() {
     // Arrange, Act and Assert
-    assertEquals(-2, (new IncrementalMerkleTreeContainer(new IncrementalMerkleTreeCapsule())).nextDepth(-1));
+    assertEquals(
+        -2, new IncrementalMerkleTreeContainer(new IncrementalMerkleTreeCapsule()).nextDepth(-1));
   }
 
   /**
    * Test {@link IncrementalMerkleTreeContainer#nextDepth(int)}.
+   *
    * <ul>
-   *   <li>When one.</li>
-   *   <li>Then return zero.</li>
+   *   <li>When one.
+   *   <li>Then return zero.
    * </ul>
-   * <p>
-   * Method under test: {@link IncrementalMerkleTreeContainer#nextDepth(int)}
+   *
+   * <p>Method under test: {@link IncrementalMerkleTreeContainer#nextDepth(int)}
    */
   @Test
   @Category(MaintainedByDiffblue.class)
   @MethodsUnderTest({"int IncrementalMerkleTreeContainer.nextDepth(int)"})
   public void testNextDepth_whenOne_thenReturnZero() {
     // Arrange, Act and Assert
-    assertEquals(0, (new IncrementalMerkleTreeContainer(new IncrementalMerkleTreeCapsule())).nextDepth(1));
+    assertEquals(
+        0, new IncrementalMerkleTreeContainer(new IncrementalMerkleTreeCapsule()).nextDepth(1));
   }
 
   /**
    * Test {@link IncrementalMerkleTreeContainer#nextDepth(int)}.
+   *
    * <ul>
-   *   <li>When zero.</li>
-   *   <li>Then return zero.</li>
+   *   <li>When zero.
+   *   <li>Then return zero.
    * </ul>
-   * <p>
-   * Method under test: {@link IncrementalMerkleTreeContainer#nextDepth(int)}
+   *
+   * <p>Method under test: {@link IncrementalMerkleTreeContainer#nextDepth(int)}
    */
   @Test
   @Category(MaintainedByDiffblue.class)
   @MethodsUnderTest({"int IncrementalMerkleTreeContainer.nextDepth(int)"})
   public void testNextDepth_whenZero_thenReturnZero() {
     // Arrange, Act and Assert
-    assertEquals(0, (new IncrementalMerkleTreeContainer(new IncrementalMerkleTreeCapsule())).nextDepth(0));
+    assertEquals(
+        0, new IncrementalMerkleTreeContainer(new IncrementalMerkleTreeCapsule()).nextDepth(0));
   }
 
   /**
    * Test {@link IncrementalMerkleTreeContainer#root()}.
-   * <p>
-   * Method under test: {@link IncrementalMerkleTreeContainer#root()}
+   *
+   * <p>Method under test: {@link IncrementalMerkleTreeContainer#root()}
    */
   @Test
   @Category(MaintainedByDiffblue.class)
   @MethodsUnderTest({"PedersenHash IncrementalMerkleTreeContainer.root()"})
   public void testRoot() throws ZksnarkException {
     // Arrange
-    IncrementalMerkleTreeContainer incrementalMerkleTreeContainer = new IncrementalMerkleTreeContainer(
-        new IncrementalMerkleTreeCapsule());
+    IncrementalMerkleTreeContainer incrementalMerkleTreeContainer =
+        new IncrementalMerkleTreeContainer(new IncrementalMerkleTreeCapsule());
     PedersenHash obj = PedersenHash.getDefaultInstance();
     incrementalMerkleTreeContainer.append(obj);
 
@@ -428,16 +454,16 @@ public class IncrementalMerkleTreeContainerDiffblueTest {
 
   /**
    * Test {@link IncrementalMerkleTreeContainer#root(long)} with {@code depth}.
-   * <p>
-   * Method under test: {@link IncrementalMerkleTreeContainer#root(long)}
+   *
+   * <p>Method under test: {@link IncrementalMerkleTreeContainer#root(long)}
    */
   @Test
   @Category(MaintainedByDiffblue.class)
   @MethodsUnderTest({"PedersenHash IncrementalMerkleTreeContainer.root(long)"})
   public void testRootWithDepth() throws ZksnarkException {
     // Arrange
-    IncrementalMerkleTreeContainer incrementalMerkleTreeContainer = new IncrementalMerkleTreeContainer(
-        new IncrementalMerkleTreeCapsule());
+    IncrementalMerkleTreeContainer incrementalMerkleTreeContainer =
+        new IncrementalMerkleTreeContainer(new IncrementalMerkleTreeCapsule());
     PedersenHash obj = PedersenHash.getDefaultInstance();
     incrementalMerkleTreeContainer.append(obj);
 
@@ -446,22 +472,24 @@ public class IncrementalMerkleTreeContainerDiffblueTest {
 
     // Assert
     UnknownFieldSet unknownFields = actualRootResult.getUnknownFields();
-    assertSame(unknownFields, unknownFields.getDefaultInstanceForType());
+    UnknownFieldSet actualDefaultInstanceForType = unknownFields.getDefaultInstanceForType();
+    assertSame(unknownFields, actualDefaultInstanceForType);
     assertSame(obj, actualRootResult.getDefaultInstanceForType());
   }
 
   /**
-   * Test {@link IncrementalMerkleTreeContainer#root(long, Deque)} with {@code depth}, {@code fillerHashes}.
-   * <p>
-   * Method under test: {@link IncrementalMerkleTreeContainer#root(long, Deque)}
+   * Test {@link IncrementalMerkleTreeContainer#root(long, Deque)} with {@code depth}, {@code
+   * fillerHashes}.
+   *
+   * <p>Method under test: {@link IncrementalMerkleTreeContainer#root(long, Deque)}
    */
   @Test
   @Category(MaintainedByDiffblue.class)
   @MethodsUnderTest({"PedersenHash IncrementalMerkleTreeContainer.root(long, Deque)"})
   public void testRootWithDepthFillerHashes() throws ZksnarkException {
     // Arrange
-    IncrementalMerkleTreeContainer incrementalMerkleTreeContainer = new IncrementalMerkleTreeContainer(
-        new IncrementalMerkleTreeCapsule());
+    IncrementalMerkleTreeContainer incrementalMerkleTreeContainer =
+        new IncrementalMerkleTreeContainer(new IncrementalMerkleTreeCapsule());
 
     // Act
     PedersenHash actualRootResult = incrementalMerkleTreeContainer.root(1L, new LinkedList<>());
@@ -470,22 +498,26 @@ public class IncrementalMerkleTreeContainerDiffblueTest {
     UnknownFieldSet unknownFields = actualRootResult.getUnknownFields();
     PedersenHash defaultInstanceForType = actualRootResult.getDefaultInstanceForType();
     assertSame(unknownFields, defaultInstanceForType.getUnknownFields());
-    assertSame(unknownFields, unknownFields.getDefaultInstanceForType());
-    assertSame(defaultInstanceForType.getDefaultInstanceForType(), defaultInstanceForType.getDefaultInstanceForType());
+    UnknownFieldSet actualDefaultInstanceForType = unknownFields.getDefaultInstanceForType();
+    assertSame(unknownFields, actualDefaultInstanceForType);
+    assertSame(
+        defaultInstanceForType.getDefaultInstanceForType(),
+        defaultInstanceForType.getDefaultInstanceForType());
   }
 
   /**
-   * Test {@link IncrementalMerkleTreeContainer#root(long, Deque)} with {@code depth}, {@code fillerHashes}.
-   * <p>
-   * Method under test: {@link IncrementalMerkleTreeContainer#root(long, Deque)}
+   * Test {@link IncrementalMerkleTreeContainer#root(long, Deque)} with {@code depth}, {@code
+   * fillerHashes}.
+   *
+   * <p>Method under test: {@link IncrementalMerkleTreeContainer#root(long, Deque)}
    */
   @Test
   @Category(MaintainedByDiffblue.class)
   @MethodsUnderTest({"PedersenHash IncrementalMerkleTreeContainer.root(long, Deque)"})
   public void testRootWithDepthFillerHashes2() throws ZksnarkException {
     // Arrange
-    IncrementalMerkleTreeContainer incrementalMerkleTreeContainer = new IncrementalMerkleTreeContainer(
-        new IncrementalMerkleTreeCapsule());
+    IncrementalMerkleTreeContainer incrementalMerkleTreeContainer =
+        new IncrementalMerkleTreeContainer(new IncrementalMerkleTreeCapsule());
     PedersenHash obj = PedersenHash.getDefaultInstance();
     incrementalMerkleTreeContainer.append(obj);
 
@@ -494,17 +526,20 @@ public class IncrementalMerkleTreeContainerDiffblueTest {
 
     // Assert
     UnknownFieldSet unknownFields = actualRootResult.getUnknownFields();
-    assertSame(unknownFields, unknownFields.getDefaultInstanceForType());
+    UnknownFieldSet actualDefaultInstanceForType = unknownFields.getDefaultInstanceForType();
+    assertSame(unknownFields, actualDefaultInstanceForType);
     assertSame(obj, actualRootResult.getDefaultInstanceForType());
   }
 
   /**
-   * Test {@link IncrementalMerkleTreeContainer#root(long, Deque)} with {@code depth}, {@code fillerHashes}.
+   * Test {@link IncrementalMerkleTreeContainer#root(long, Deque)} with {@code depth}, {@code
+   * fillerHashes}.
+   *
    * <ul>
-   *   <li>Then return DefaultInstanceForType is DefaultInstance.</li>
+   *   <li>Then return DefaultInstanceForType is DefaultInstance.
    * </ul>
-   * <p>
-   * Method under test: {@link IncrementalMerkleTreeContainer#root(long, Deque)}
+   *
+   * <p>Method under test: {@link IncrementalMerkleTreeContainer#root(long, Deque)}
    */
   @Test
   @Category(MaintainedByDiffblue.class)
@@ -515,32 +550,36 @@ public class IncrementalMerkleTreeContainerDiffblueTest {
     IncrementalMerkleTreeCapsule treeCapsule = new IncrementalMerkleTreeCapsule();
     PedersenHash parents = PedersenHash.getDefaultInstance();
     treeCapsule.addParents(parents);
-    IncrementalMerkleTreeContainer incrementalMerkleTreeContainer = new IncrementalMerkleTreeContainer(treeCapsule);
+    IncrementalMerkleTreeContainer incrementalMerkleTreeContainer =
+        new IncrementalMerkleTreeContainer(treeCapsule);
 
     // Act
     PedersenHash actualRootResult = incrementalMerkleTreeContainer.root(1L, new LinkedList<>());
 
     // Assert
     UnknownFieldSet unknownFields = actualRootResult.getUnknownFields();
-    assertSame(unknownFields, unknownFields.getDefaultInstanceForType());
+    UnknownFieldSet actualDefaultInstanceForType = unknownFields.getDefaultInstanceForType();
+    assertSame(unknownFields, actualDefaultInstanceForType);
     assertSame(parents, actualRootResult.getDefaultInstanceForType());
   }
 
   /**
-   * Test {@link IncrementalMerkleTreeContainer#root(long, Deque)} with {@code depth}, {@code fillerHashes}.
+   * Test {@link IncrementalMerkleTreeContainer#root(long, Deque)} with {@code depth}, {@code
+   * fillerHashes}.
+   *
    * <ul>
-   *   <li>When two.</li>
+   *   <li>When two.
    * </ul>
-   * <p>
-   * Method under test: {@link IncrementalMerkleTreeContainer#root(long, Deque)}
+   *
+   * <p>Method under test: {@link IncrementalMerkleTreeContainer#root(long, Deque)}
    */
   @Test
   @Category(MaintainedByDiffblue.class)
   @MethodsUnderTest({"PedersenHash IncrementalMerkleTreeContainer.root(long, Deque)"})
   public void testRootWithDepthFillerHashes_whenTwo() throws ZksnarkException {
     // Arrange
-    IncrementalMerkleTreeContainer incrementalMerkleTreeContainer = new IncrementalMerkleTreeContainer(
-        new IncrementalMerkleTreeCapsule());
+    IncrementalMerkleTreeContainer incrementalMerkleTreeContainer =
+        new IncrementalMerkleTreeContainer(new IncrementalMerkleTreeCapsule());
 
     // Act
     PedersenHash actualRootResult = incrementalMerkleTreeContainer.root(2L, new LinkedList<>());
@@ -549,89 +588,107 @@ public class IncrementalMerkleTreeContainerDiffblueTest {
     UnknownFieldSet unknownFields = actualRootResult.getUnknownFields();
     PedersenHash defaultInstanceForType = actualRootResult.getDefaultInstanceForType();
     assertSame(unknownFields, defaultInstanceForType.getUnknownFields());
-    assertSame(unknownFields, unknownFields.getDefaultInstanceForType());
-    assertSame(defaultInstanceForType.getDefaultInstanceForType(), defaultInstanceForType.getDefaultInstanceForType());
+    UnknownFieldSet actualDefaultInstanceForType = unknownFields.getDefaultInstanceForType();
+    assertSame(unknownFields, actualDefaultInstanceForType);
+    assertSame(
+        defaultInstanceForType.getDefaultInstanceForType(),
+        defaultInstanceForType.getDefaultInstanceForType());
   }
 
   /**
    * Test {@link IncrementalMerkleTreeContainer#root(long)} with {@code depth}.
+   *
    * <ul>
-   *   <li>Then return DefaultInstanceForType is DefaultInstance.</li>
+   *   <li>Then return DefaultInstanceForType is DefaultInstance.
    * </ul>
-   * <p>
-   * Method under test: {@link IncrementalMerkleTreeContainer#root(long)}
+   *
+   * <p>Method under test: {@link IncrementalMerkleTreeContainer#root(long)}
    */
   @Test
   @Category(MaintainedByDiffblue.class)
   @MethodsUnderTest({"PedersenHash IncrementalMerkleTreeContainer.root(long)"})
-  public void testRootWithDepth_thenReturnDefaultInstanceForTypeIsDefaultInstance() throws ZksnarkException {
+  public void testRootWithDepth_thenReturnDefaultInstanceForTypeIsDefaultInstance()
+      throws ZksnarkException {
     // Arrange
     IncrementalMerkleTreeCapsule treeCapsule = new IncrementalMerkleTreeCapsule();
     PedersenHash parents = PedersenHash.getDefaultInstance();
     treeCapsule.addParents(parents);
 
     // Act
-    PedersenHash actualRootResult = (new IncrementalMerkleTreeContainer(treeCapsule)).root(1L);
+    PedersenHash actualRootResult = new IncrementalMerkleTreeContainer(treeCapsule).root(1L);
 
     // Assert
     UnknownFieldSet unknownFields = actualRootResult.getUnknownFields();
-    assertSame(unknownFields, unknownFields.getDefaultInstanceForType());
+    UnknownFieldSet actualDefaultInstanceForType = unknownFields.getDefaultInstanceForType();
+    assertSame(unknownFields, actualDefaultInstanceForType);
     assertSame(parents, actualRootResult.getDefaultInstanceForType());
   }
 
   /**
    * Test {@link IncrementalMerkleTreeContainer#root(long)} with {@code depth}.
+   *
    * <ul>
-   *   <li>Then return DefaultInstanceForType UnknownFields is UnknownFields.</li>
+   *   <li>Then return DefaultInstanceForType UnknownFields is UnknownFields.
    * </ul>
-   * <p>
-   * Method under test: {@link IncrementalMerkleTreeContainer#root(long)}
+   *
+   * <p>Method under test: {@link IncrementalMerkleTreeContainer#root(long)}
    */
   @Test
   @Category(MaintainedByDiffblue.class)
   @MethodsUnderTest({"PedersenHash IncrementalMerkleTreeContainer.root(long)"})
-  public void testRootWithDepth_thenReturnDefaultInstanceForTypeUnknownFieldsIsUnknownFields() throws ZksnarkException {
+  public void testRootWithDepth_thenReturnDefaultInstanceForTypeUnknownFieldsIsUnknownFields()
+      throws ZksnarkException {
     // Arrange and Act
-    PedersenHash actualRootResult = (new IncrementalMerkleTreeContainer(new IncrementalMerkleTreeCapsule())).root(1L);
+    PedersenHash actualRootResult =
+        new IncrementalMerkleTreeContainer(new IncrementalMerkleTreeCapsule()).root(1L);
 
     // Assert
     UnknownFieldSet unknownFields = actualRootResult.getUnknownFields();
     PedersenHash defaultInstanceForType = actualRootResult.getDefaultInstanceForType();
     assertSame(unknownFields, defaultInstanceForType.getUnknownFields());
-    assertSame(unknownFields, unknownFields.getDefaultInstanceForType());
-    assertSame(defaultInstanceForType.getDefaultInstanceForType(), defaultInstanceForType.getDefaultInstanceForType());
+    UnknownFieldSet actualDefaultInstanceForType = unknownFields.getDefaultInstanceForType();
+    assertSame(unknownFields, actualDefaultInstanceForType);
+    assertSame(
+        defaultInstanceForType.getDefaultInstanceForType(),
+        defaultInstanceForType.getDefaultInstanceForType());
   }
 
   /**
    * Test {@link IncrementalMerkleTreeContainer#root(long)} with {@code depth}.
+   *
    * <ul>
-   *   <li>When two.</li>
+   *   <li>When two.
    * </ul>
-   * <p>
-   * Method under test: {@link IncrementalMerkleTreeContainer#root(long)}
+   *
+   * <p>Method under test: {@link IncrementalMerkleTreeContainer#root(long)}
    */
   @Test
   @Category(MaintainedByDiffblue.class)
   @MethodsUnderTest({"PedersenHash IncrementalMerkleTreeContainer.root(long)"})
   public void testRootWithDepth_whenTwo() throws ZksnarkException {
     // Arrange and Act
-    PedersenHash actualRootResult = (new IncrementalMerkleTreeContainer(new IncrementalMerkleTreeCapsule())).root(2L);
+    PedersenHash actualRootResult =
+        new IncrementalMerkleTreeContainer(new IncrementalMerkleTreeCapsule()).root(2L);
 
     // Assert
     UnknownFieldSet unknownFields = actualRootResult.getUnknownFields();
     PedersenHash defaultInstanceForType = actualRootResult.getDefaultInstanceForType();
     assertSame(unknownFields, defaultInstanceForType.getUnknownFields());
-    assertSame(unknownFields, unknownFields.getDefaultInstanceForType());
-    assertSame(defaultInstanceForType.getDefaultInstanceForType(), defaultInstanceForType.getDefaultInstanceForType());
+    UnknownFieldSet actualDefaultInstanceForType = unknownFields.getDefaultInstanceForType();
+    assertSame(unknownFields, actualDefaultInstanceForType);
+    assertSame(
+        defaultInstanceForType.getDefaultInstanceForType(),
+        defaultInstanceForType.getDefaultInstanceForType());
   }
 
   /**
    * Test {@link IncrementalMerkleTreeContainer#root()}.
+   *
    * <ul>
-   *   <li>Then return DefaultInstanceForType is DefaultInstance.</li>
+   *   <li>Then return DefaultInstanceForType is DefaultInstance.
    * </ul>
-   * <p>
-   * Method under test: {@link IncrementalMerkleTreeContainer#root()}
+   *
+   * <p>Method under test: {@link IncrementalMerkleTreeContainer#root()}
    */
   @Test
   @Category(MaintainedByDiffblue.class)
@@ -643,7 +700,7 @@ public class IncrementalMerkleTreeContainerDiffblueTest {
     treeCapsule.addParents(parents);
 
     // Act
-    PedersenHash actualRootResult = (new IncrementalMerkleTreeContainer(treeCapsule)).root();
+    PedersenHash actualRootResult = new IncrementalMerkleTreeContainer(treeCapsule).root();
 
     // Assert
     assertEquals("", actualRootResult.getInitializationErrorString());
@@ -656,18 +713,20 @@ public class IncrementalMerkleTreeContainerDiffblueTest {
 
   /**
    * Test {@link IncrementalMerkleTreeContainer#root()}.
+   *
    * <ul>
-   *   <li>Then return InitializationErrorString is empty string.</li>
+   *   <li>Then return InitializationErrorString is empty string.
    * </ul>
-   * <p>
-   * Method under test: {@link IncrementalMerkleTreeContainer#root()}
+   *
+   * <p>Method under test: {@link IncrementalMerkleTreeContainer#root()}
    */
   @Test
   @Category(MaintainedByDiffblue.class)
   @MethodsUnderTest({"PedersenHash IncrementalMerkleTreeContainer.root()"})
   public void testRoot_thenReturnInitializationErrorStringIsEmptyString() throws ZksnarkException {
     // Arrange and Act
-    PedersenHash actualRootResult = (new IncrementalMerkleTreeContainer(new IncrementalMerkleTreeCapsule())).root();
+    PedersenHash actualRootResult =
+        new IncrementalMerkleTreeContainer(new IncrementalMerkleTreeCapsule()).root();
 
     // Assert
     assertEquals("", actualRootResult.getInitializationErrorString());
@@ -679,30 +738,31 @@ public class IncrementalMerkleTreeContainerDiffblueTest {
 
   /**
    * Test {@link IncrementalMerkleTreeContainer#path()}.
-   * <p>
-   * Method under test: {@link IncrementalMerkleTreeContainer#path()}
+   *
+   * <p>Method under test: {@link IncrementalMerkleTreeContainer#path()}
    */
   @Test
   @Category(MaintainedByDiffblue.class)
   @MethodsUnderTest({"org.tron.common.zksnark.MerklePath IncrementalMerkleTreeContainer.path()"})
   public void testPath() throws ZksnarkException {
     // Arrange, Act and Assert
-    assertThrows(ZksnarkException.class,
-        () -> (new IncrementalMerkleTreeContainer(new IncrementalMerkleTreeCapsule())).path());
+    assertThrows(
+        ZksnarkException.class,
+        () -> new IncrementalMerkleTreeContainer(new IncrementalMerkleTreeCapsule()).path());
   }
 
   /**
    * Test {@link IncrementalMerkleTreeContainer#path()}.
-   * <p>
-   * Method under test: {@link IncrementalMerkleTreeContainer#path()}
+   *
+   * <p>Method under test: {@link IncrementalMerkleTreeContainer#path()}
    */
   @Test
   @Category(MaintainedByDiffblue.class)
   @MethodsUnderTest({"org.tron.common.zksnark.MerklePath IncrementalMerkleTreeContainer.path()"})
   public void testPath2() throws ZksnarkException {
     // Arrange
-    IncrementalMerkleTreeContainer incrementalMerkleTreeContainer = new IncrementalMerkleTreeContainer(
-        new IncrementalMerkleTreeCapsule());
+    IncrementalMerkleTreeContainer incrementalMerkleTreeContainer =
+        new IncrementalMerkleTreeContainer(new IncrementalMerkleTreeCapsule());
     incrementalMerkleTreeContainer.append(PedersenHash.getDefaultInstance());
 
     // Act and Assert
@@ -711,55 +771,65 @@ public class IncrementalMerkleTreeContainerDiffblueTest {
 
   /**
    * Test {@link IncrementalMerkleTreeContainer#path(Deque)} with {@code Deque}.
-   * <p>
-   * Method under test: {@link IncrementalMerkleTreeContainer#path(Deque)}
+   *
+   * <p>Method under test: {@link IncrementalMerkleTreeContainer#path(Deque)}
    */
   @Test
   @Category(MaintainedByDiffblue.class)
-  @MethodsUnderTest({"org.tron.common.zksnark.MerklePath IncrementalMerkleTreeContainer.path(Deque)"})
+  @MethodsUnderTest({
+    "org.tron.common.zksnark.MerklePath IncrementalMerkleTreeContainer.path(Deque)"
+  })
   public void testPathWithDeque() throws ZksnarkException {
     // Arrange
-    IncrementalMerkleTreeContainer incrementalMerkleTreeContainer = new IncrementalMerkleTreeContainer(
-        new IncrementalMerkleTreeCapsule());
+    IncrementalMerkleTreeContainer incrementalMerkleTreeContainer =
+        new IncrementalMerkleTreeContainer(new IncrementalMerkleTreeCapsule());
 
     // Act and Assert
-    assertThrows(ZksnarkException.class, () -> incrementalMerkleTreeContainer.path(new LinkedList<>()));
+    assertThrows(
+        ZksnarkException.class, () -> incrementalMerkleTreeContainer.path(new LinkedList<>()));
   }
 
   /**
    * Test {@link IncrementalMerkleTreeContainer#path(Deque)} with {@code Deque}.
-   * <p>
-   * Method under test: {@link IncrementalMerkleTreeContainer#path(Deque)}
+   *
+   * <p>Method under test: {@link IncrementalMerkleTreeContainer#path(Deque)}
    */
   @Test
   @Category(MaintainedByDiffblue.class)
-  @MethodsUnderTest({"org.tron.common.zksnark.MerklePath IncrementalMerkleTreeContainer.path(Deque)"})
+  @MethodsUnderTest({
+    "org.tron.common.zksnark.MerklePath IncrementalMerkleTreeContainer.path(Deque)"
+  })
   public void testPathWithDeque2() throws ZksnarkException {
     // Arrange
-    IncrementalMerkleTreeContainer incrementalMerkleTreeContainer = new IncrementalMerkleTreeContainer(
-        new IncrementalMerkleTreeCapsule());
+    IncrementalMerkleTreeContainer incrementalMerkleTreeContainer =
+        new IncrementalMerkleTreeContainer(new IncrementalMerkleTreeCapsule());
     incrementalMerkleTreeContainer.append(PedersenHash.getDefaultInstance());
 
     // Act and Assert
-    assertThrows(ZksnarkException.class, () -> incrementalMerkleTreeContainer.path(new LinkedList<>()));
+    assertThrows(
+        ZksnarkException.class, () -> incrementalMerkleTreeContainer.path(new LinkedList<>()));
   }
 
   /**
    * Test {@link IncrementalMerkleTreeContainer#path(Deque)} with {@code Deque}.
+   *
    * <ul>
-   *   <li>Given DefaultInstance.</li>
-   *   <li>When {@link LinkedList#LinkedList()} add DefaultInstance.</li>
+   *   <li>Given DefaultInstance.
+   *   <li>When {@link LinkedList#LinkedList()} add DefaultInstance.
    * </ul>
-   * <p>
-   * Method under test: {@link IncrementalMerkleTreeContainer#path(Deque)}
+   *
+   * <p>Method under test: {@link IncrementalMerkleTreeContainer#path(Deque)}
    */
   @Test
   @Category(MaintainedByDiffblue.class)
-  @MethodsUnderTest({"org.tron.common.zksnark.MerklePath IncrementalMerkleTreeContainer.path(Deque)"})
-  public void testPathWithDeque_givenDefaultInstance_whenLinkedListAddDefaultInstance() throws ZksnarkException {
+  @MethodsUnderTest({
+    "org.tron.common.zksnark.MerklePath IncrementalMerkleTreeContainer.path(Deque)"
+  })
+  public void testPathWithDeque_givenDefaultInstance_whenLinkedListAddDefaultInstance()
+      throws ZksnarkException {
     // Arrange
-    IncrementalMerkleTreeContainer incrementalMerkleTreeContainer = new IncrementalMerkleTreeContainer(
-        new IncrementalMerkleTreeCapsule());
+    IncrementalMerkleTreeContainer incrementalMerkleTreeContainer =
+        new IncrementalMerkleTreeContainer(new IncrementalMerkleTreeCapsule());
 
     LinkedList<PedersenHash> fillerHashes = new LinkedList<>();
     fillerHashes.add(PedersenHash.getDefaultInstance());
@@ -770,20 +840,24 @@ public class IncrementalMerkleTreeContainerDiffblueTest {
 
   /**
    * Test {@link IncrementalMerkleTreeContainer#path(Deque)} with {@code Deque}.
+   *
    * <ul>
-   *   <li>Given DefaultInstance.</li>
-   *   <li>When {@link LinkedList#LinkedList()} add DefaultInstance.</li>
+   *   <li>Given DefaultInstance.
+   *   <li>When {@link LinkedList#LinkedList()} add DefaultInstance.
    * </ul>
-   * <p>
-   * Method under test: {@link IncrementalMerkleTreeContainer#path(Deque)}
+   *
+   * <p>Method under test: {@link IncrementalMerkleTreeContainer#path(Deque)}
    */
   @Test
   @Category(MaintainedByDiffblue.class)
-  @MethodsUnderTest({"org.tron.common.zksnark.MerklePath IncrementalMerkleTreeContainer.path(Deque)"})
-  public void testPathWithDeque_givenDefaultInstance_whenLinkedListAddDefaultInstance2() throws ZksnarkException {
+  @MethodsUnderTest({
+    "org.tron.common.zksnark.MerklePath IncrementalMerkleTreeContainer.path(Deque)"
+  })
+  public void testPathWithDeque_givenDefaultInstance_whenLinkedListAddDefaultInstance2()
+      throws ZksnarkException {
     // Arrange
-    IncrementalMerkleTreeContainer incrementalMerkleTreeContainer = new IncrementalMerkleTreeContainer(
-        new IncrementalMerkleTreeCapsule());
+    IncrementalMerkleTreeContainer incrementalMerkleTreeContainer =
+        new IncrementalMerkleTreeContainer(new IncrementalMerkleTreeCapsule());
 
     LinkedList<PedersenHash> fillerHashes = new LinkedList<>();
     fillerHashes.add(PedersenHash.getDefaultInstance());
@@ -795,31 +869,36 @@ public class IncrementalMerkleTreeContainerDiffblueTest {
 
   /**
    * Test {@link IncrementalMerkleTreeContainer#getMerkleTreeKey()}.
-   * <p>
-   * Method under test: {@link IncrementalMerkleTreeContainer#getMerkleTreeKey()}
+   *
+   * <p>Method under test: {@link IncrementalMerkleTreeContainer#getMerkleTreeKey()}
    */
   @Test
   @Category(MaintainedByDiffblue.class)
   @MethodsUnderTest({"byte[] IncrementalMerkleTreeContainer.getMerkleTreeKey()"})
   public void testGetMerkleTreeKey() throws ZksnarkException {
     // Arrange
-    IncrementalMerkleTreeContainer incrementalMerkleTreeContainer = new IncrementalMerkleTreeContainer(
-        new IncrementalMerkleTreeCapsule());
+    IncrementalMerkleTreeContainer incrementalMerkleTreeContainer =
+        new IncrementalMerkleTreeContainer(new IncrementalMerkleTreeCapsule());
     incrementalMerkleTreeContainer.append(PedersenHash.getDefaultInstance());
 
     // Act and Assert
     assertArrayEquals(
-        new byte[]{0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0},
+        new byte[] {
+          0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0,
+          0, 0
+        },
         incrementalMerkleTreeContainer.getMerkleTreeKey());
   }
 
   /**
    * Test {@link IncrementalMerkleTreeContainer#getMerkleTreeKey()}.
+   *
    * <ul>
-   *   <li>Given {@link IncrementalMerkleTreeCapsule#IncrementalMerkleTreeCapsule()} addParents DefaultInstance.</li>
+   *   <li>Given {@link IncrementalMerkleTreeCapsule#IncrementalMerkleTreeCapsule()} addParents
+   *       DefaultInstance.
    * </ul>
-   * <p>
-   * Method under test: {@link IncrementalMerkleTreeContainer#getMerkleTreeKey()}
+   *
+   * <p>Method under test: {@link IncrementalMerkleTreeContainer#getMerkleTreeKey()}
    */
   @Test
   @Category(MaintainedByDiffblue.class)
@@ -832,17 +911,21 @@ public class IncrementalMerkleTreeContainerDiffblueTest {
 
     // Act and Assert
     assertArrayEquals(
-        new byte[]{0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0},
-        (new IncrementalMerkleTreeContainer(treeCapsule)).getMerkleTreeKey());
+        new byte[] {
+          0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0,
+          0, 0
+        },
+        new IncrementalMerkleTreeContainer(treeCapsule).getMerkleTreeKey());
   }
 
   /**
    * Test {@link IncrementalMerkleTreeContainer#getMerkleTreeKey()}.
+   *
    * <ul>
-   *   <li>Then return array of {@code byte} with zero and zero.</li>
+   *   <li>Then return array of {@code byte} with zero and zero.
    * </ul>
-   * <p>
-   * Method under test: {@link IncrementalMerkleTreeContainer#getMerkleTreeKey()}
+   *
+   * <p>Method under test: {@link IncrementalMerkleTreeContainer#getMerkleTreeKey()}
    */
   @Test
   @Category(MaintainedByDiffblue.class)
@@ -850,59 +933,72 @@ public class IncrementalMerkleTreeContainerDiffblueTest {
   public void testGetMerkleTreeKey_thenReturnArrayOfByteWithZeroAndZero() throws ZksnarkException {
     // Arrange, Act and Assert
     assertArrayEquals(
-        new byte[]{0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0},
-        (new IncrementalMerkleTreeContainer(new IncrementalMerkleTreeCapsule())).getMerkleTreeKey());
+        new byte[] {
+          0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0,
+          0, 0
+        },
+        new IncrementalMerkleTreeContainer(new IncrementalMerkleTreeCapsule()).getMerkleTreeKey());
   }
 
   /**
    * Test {@link IncrementalMerkleTreeContainer#getRootArray()}.
-   * <p>
-   * Method under test: {@link IncrementalMerkleTreeContainer#getRootArray()}
+   *
+   * <p>Method under test: {@link IncrementalMerkleTreeContainer#getRootArray()}
    */
   @Test
   @Category(MaintainedByDiffblue.class)
   @MethodsUnderTest({"byte[] IncrementalMerkleTreeContainer.getRootArray()"})
   public void testGetRootArray() throws ZksnarkException {
     // Arrange
-    IncrementalMerkleTreeContainer incrementalMerkleTreeContainer = new IncrementalMerkleTreeContainer(
-        new IncrementalMerkleTreeCapsule());
+    IncrementalMerkleTreeContainer incrementalMerkleTreeContainer =
+        new IncrementalMerkleTreeContainer(new IncrementalMerkleTreeCapsule());
     incrementalMerkleTreeContainer.append(PedersenHash.getDefaultInstance());
 
     // Act and Assert
     assertArrayEquals(
-        new byte[]{0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0},
+        new byte[] {
+          0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0,
+          0, 0
+        },
         incrementalMerkleTreeContainer.getRootArray());
   }
 
   /**
    * Test {@link IncrementalMerkleTreeContainer#getRootArray()}.
+   *
    * <ul>
-   *   <li>Given {@link IncrementalMerkleTreeCapsule#IncrementalMerkleTreeCapsule()} addParents DefaultInstance.</li>
+   *   <li>Given {@link IncrementalMerkleTreeCapsule#IncrementalMerkleTreeCapsule()} addParents
+   *       DefaultInstance.
    * </ul>
-   * <p>
-   * Method under test: {@link IncrementalMerkleTreeContainer#getRootArray()}
+   *
+   * <p>Method under test: {@link IncrementalMerkleTreeContainer#getRootArray()}
    */
   @Test
   @Category(MaintainedByDiffblue.class)
   @MethodsUnderTest({"byte[] IncrementalMerkleTreeContainer.getRootArray()"})
-  public void testGetRootArray_givenIncrementalMerkleTreeCapsuleAddParentsDefaultInstance() throws ZksnarkException {
+  public void testGetRootArray_givenIncrementalMerkleTreeCapsuleAddParentsDefaultInstance()
+      throws ZksnarkException {
     // Arrange
     IncrementalMerkleTreeCapsule treeCapsule = new IncrementalMerkleTreeCapsule();
     treeCapsule.addParents(PedersenHash.getDefaultInstance());
 
     // Act and Assert
     assertArrayEquals(
-        new byte[]{0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0},
-        (new IncrementalMerkleTreeContainer(treeCapsule)).getRootArray());
+        new byte[] {
+          0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0,
+          0, 0
+        },
+        new IncrementalMerkleTreeContainer(treeCapsule).getRootArray());
   }
 
   /**
    * Test {@link IncrementalMerkleTreeContainer#getRootArray()}.
+   *
    * <ul>
-   *   <li>Then return array of {@code byte} with zero and zero.</li>
+   *   <li>Then return array of {@code byte} with zero and zero.
    * </ul>
-   * <p>
-   * Method under test: {@link IncrementalMerkleTreeContainer#getRootArray()}
+   *
+   * <p>Method under test: {@link IncrementalMerkleTreeContainer#getRootArray()}
    */
   @Test
   @Category(MaintainedByDiffblue.class)
@@ -910,31 +1006,37 @@ public class IncrementalMerkleTreeContainerDiffblueTest {
   public void testGetRootArray_thenReturnArrayOfByteWithZeroAndZero() throws ZksnarkException {
     // Arrange, Act and Assert
     assertArrayEquals(
-        new byte[]{0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0},
-        (new IncrementalMerkleTreeContainer(new IncrementalMerkleTreeCapsule())).getRootArray());
+        new byte[] {
+          0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0,
+          0, 0
+        },
+        new IncrementalMerkleTreeContainer(new IncrementalMerkleTreeCapsule()).getRootArray());
   }
 
   /**
    * Test {@link IncrementalMerkleTreeContainer#toVoucher()}.
+   *
    * <ul>
-   *   <li>Then return size is zero.</li>
+   *   <li>Then return size is zero.
    * </ul>
-   * <p>
-   * Method under test: {@link IncrementalMerkleTreeContainer#toVoucher()}
+   *
+   * <p>Method under test: {@link IncrementalMerkleTreeContainer#toVoucher()}
    */
   @Test
   @Category(MaintainedByDiffblue.class)
-  @MethodsUnderTest({"IncrementalMerkleVoucherContainer IncrementalMerkleTreeContainer.toVoucher()"})
+  @MethodsUnderTest({
+    "IncrementalMerkleVoucherContainer IncrementalMerkleTreeContainer.toVoucher()"
+  })
   public void testToVoucher_thenReturnSizeIsZero() {
     // Arrange and Act
-    IncrementalMerkleVoucherContainer actualToVoucherResult = (new IncrementalMerkleTreeContainer(
-        new IncrementalMerkleTreeCapsule())).toVoucher();
+    IncrementalMerkleVoucherContainer actualToVoucherResult =
+        new IncrementalMerkleTreeContainer(new IncrementalMerkleTreeCapsule()).toVoucher();
 
     // Assert
     assertEquals(0, actualToVoucherResult.size());
     IncrementalMerkleVoucherCapsule voucherCapsule = actualToVoucherResult.getVoucherCapsule();
     assertEquals(0L, voucherCapsule.getCursorDepth());
     assertTrue(voucherCapsule.getFilled().isEmpty());
-    assertArrayEquals(new byte[]{'\n', 0}, voucherCapsule.getData());
+    assertArrayEquals(new byte[] {'\n', 0}, voucherCapsule.getData());
   }
 }

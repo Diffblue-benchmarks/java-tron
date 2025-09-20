@@ -2,7 +2,6 @@ package org.tron.core.consensus;
 
 import static org.junit.Assert.assertNull;
 import static org.junit.Assert.assertTrue;
-import static org.mockito.ArgumentMatchers.eq;
 import static org.mockito.Mockito.anyLong;
 import static org.mockito.Mockito.mock;
 import static org.mockito.Mockito.verify;
@@ -23,16 +22,14 @@ import org.tron.core.exception.ItemNotFoundException;
 
 @RunWith(MockitoJUnitRunner.class)
 public class PbftBaseImplDiffblueTest {
-  @Mock
-  private Manager manager;
+  @Mock private Manager manager;
 
-  @InjectMocks
-  private PbftBaseImpl pbftBaseImpl;
+  @InjectMocks private PbftBaseImpl pbftBaseImpl;
 
   /**
    * Test {@link PbftBaseImpl#isSyncing()}.
-   * <p>
-   * Method under test: {@link PbftBaseImpl#isSyncing()}
+   *
+   * <p>Method under test: {@link PbftBaseImpl#isSyncing()}
    */
   @Test
   @Category(MaintainedByDiffblue.class)
@@ -44,12 +41,14 @@ public class PbftBaseImplDiffblueTest {
 
   /**
    * Test {@link PbftBaseImpl#getBlock(long)}.
+   *
    * <ul>
-   *   <li>Given {@link ChainBaseManager} {@link ChainBaseManager#getBlockByNum(long)} return {@code null}.</li>
-   *   <li>Then return {@code null}.</li>
+   *   <li>Given {@link ChainBaseManager} {@link ChainBaseManager#getBlockByNum(long)} return {@code
+   *       null}.
+   *   <li>Then return {@code null}.
    * </ul>
-   * <p>
-   * Method under test: {@link PbftBaseImpl#getBlock(long)}
+   *
+   * <p>Method under test: {@link PbftBaseImpl#getBlock(long)}
    */
   @Test
   @Category(MaintainedByDiffblue.class)
@@ -65,7 +64,7 @@ public class PbftBaseImplDiffblueTest {
     BlockCapsule actualBlock = pbftBaseImpl.getBlock(1L);
 
     // Assert
-    verify(chainBaseManager).getBlockByNum(eq(1L));
+    verify(chainBaseManager).getBlockByNum(1L);
     verify(manager).getChainBaseManager();
     assertNull(actualBlock);
   }

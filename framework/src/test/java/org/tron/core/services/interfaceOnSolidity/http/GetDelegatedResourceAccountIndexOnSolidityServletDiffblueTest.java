@@ -8,6 +8,7 @@ import com.diffblue.cover.annotations.MethodsUnderTest;
 import java.io.IOException;
 import javax.servlet.http.HttpServletRequest;
 import javax.servlet.http.HttpServletResponse;
+import javax.servlet.http.HttpServletResponseWrapper;
 import org.junit.Test;
 import org.junit.experimental.categories.Category;
 import org.junit.runner.RunWith;
@@ -17,56 +18,67 @@ import org.mockito.Mockito;
 import org.mockito.junit.MockitoJUnitRunner;
 import org.springframework.mock.web.MockHttpServletRequest;
 import org.springframework.mock.web.MockHttpServletResponse;
+import org.tron.common.utils.client.utils.HttpMethed;
 import org.tron.core.services.filter.CharResponseWrapper;
 import org.tron.core.services.interfaceOnSolidity.WalletOnSolidity;
 
 @RunWith(MockitoJUnitRunner.class)
 public class GetDelegatedResourceAccountIndexOnSolidityServletDiffblueTest {
   @InjectMocks
-  private GetDelegatedResourceAccountIndexOnSolidityServlet getDelegatedResourceAccountIndexOnSolidityServlet;
+  private GetDelegatedResourceAccountIndexOnSolidityServlet
+      getDelegatedResourceAccountIndexOnSolidityServlet;
 
-  @Mock
-  private WalletOnSolidity walletOnSolidity;
+  @Mock private WalletOnSolidity walletOnSolidity;
 
   /**
-   * Test {@link GetDelegatedResourceAccountIndexOnSolidityServlet#doGet(HttpServletRequest, HttpServletResponse)}.
-   * <p>
-   * Method under test: {@link GetDelegatedResourceAccountIndexOnSolidityServlet#doGet(HttpServletRequest, HttpServletResponse)}
+   * Test {@link GetDelegatedResourceAccountIndexOnSolidityServlet#doGet(HttpServletRequest,
+   * HttpServletResponse)}.
+   *
+   * <p>Method under test: {@link
+   * GetDelegatedResourceAccountIndexOnSolidityServlet#doGet(HttpServletRequest,
+   * HttpServletResponse)}
    */
   @Test
   @Category(MaintainedByDiffblue.class)
   @MethodsUnderTest({
-      "void GetDelegatedResourceAccountIndexOnSolidityServlet.doGet(HttpServletRequest, HttpServletResponse)"})
+    "void GetDelegatedResourceAccountIndexOnSolidityServlet.doGet(HttpServletRequest, HttpServletResponse)"
+  })
   public void testDoGet() throws IOException {
     // Arrange
     doNothing().when(walletOnSolidity).futureGet(Mockito.<Runnable>any());
-    MockHttpServletRequest request = new MockHttpServletRequest();
+    MockHttpServletRequest request = HttpMethed.createRequest("https://example.org/example");
 
     // Act
-    getDelegatedResourceAccountIndexOnSolidityServlet.doGet(request,
-        new CharResponseWrapper(new MockHttpServletResponse()));
+    getDelegatedResourceAccountIndexOnSolidityServlet.doGet(
+        request,
+        new HttpServletResponseWrapper(new CharResponseWrapper(new MockHttpServletResponse())));
 
     // Assert
     verify(walletOnSolidity).futureGet(isA(Runnable.class));
   }
 
   /**
-   * Test {@link GetDelegatedResourceAccountIndexOnSolidityServlet#doPost(HttpServletRequest, HttpServletResponse)}.
-   * <p>
-   * Method under test: {@link GetDelegatedResourceAccountIndexOnSolidityServlet#doPost(HttpServletRequest, HttpServletResponse)}
+   * Test {@link GetDelegatedResourceAccountIndexOnSolidityServlet#doPost(HttpServletRequest,
+   * HttpServletResponse)}.
+   *
+   * <p>Method under test: {@link
+   * GetDelegatedResourceAccountIndexOnSolidityServlet#doPost(HttpServletRequest,
+   * HttpServletResponse)}
    */
   @Test
   @Category(MaintainedByDiffblue.class)
   @MethodsUnderTest({
-      "void GetDelegatedResourceAccountIndexOnSolidityServlet.doPost(HttpServletRequest, HttpServletResponse)"})
+    "void GetDelegatedResourceAccountIndexOnSolidityServlet.doPost(HttpServletRequest, HttpServletResponse)"
+  })
   public void testDoPost() throws IOException {
     // Arrange
     doNothing().when(walletOnSolidity).futureGet(Mockito.<Runnable>any());
-    MockHttpServletRequest request = new MockHttpServletRequest();
+    MockHttpServletRequest request = HttpMethed.createRequest("https://example.org/example");
 
     // Act
-    getDelegatedResourceAccountIndexOnSolidityServlet.doPost(request,
-        new CharResponseWrapper(new MockHttpServletResponse()));
+    getDelegatedResourceAccountIndexOnSolidityServlet.doPost(
+        request,
+        new HttpServletResponseWrapper(new CharResponseWrapper(new MockHttpServletResponse())));
 
     // Assert
     verify(walletOnSolidity).futureGet(isA(Runnable.class));

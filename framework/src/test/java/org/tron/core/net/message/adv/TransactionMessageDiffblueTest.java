@@ -16,24 +16,26 @@ import org.tron.protos.Protocol.Transaction;
 public class TransactionMessageDiffblueTest {
   /**
    * Test {@link TransactionMessage#TransactionMessage(Transaction)}.
+   *
    * <ul>
-   *   <li>Then SendData return {@link UnpooledHeapByteBuf}.</li>
+   *   <li>Then SendData return {@link UnpooledHeapByteBuf}.
    * </ul>
-   * <p>
-   * Method under test: {@link TransactionMessage#TransactionMessage(Transaction)}
+   *
+   * <p>Method under test: {@link TransactionMessage#TransactionMessage(Transaction)}
    */
   @Test
   @Category(MaintainedByDiffblue.class)
   @MethodsUnderTest({"void TransactionMessage.<init>(Transaction)"})
   public void testNewTransactionMessage_thenSendDataReturnUnpooledHeapByteBuf() {
     // Arrange and Act
-    TransactionMessage actualTransactionMessage = new TransactionMessage(Transaction.getDefaultInstance());
+    TransactionMessage actualTransactionMessage =
+        new TransactionMessage(Transaction.getDefaultInstance());
 
     // Assert
     assertTrue(actualTransactionMessage.getSendData() instanceof UnpooledHeapByteBuf);
     assertNull(actualTransactionMessage.getAnswerMessage());
     assertEquals(MessageTypes.TRX, actualTransactionMessage.getType());
-    assertArrayEquals(new byte[]{}, actualTransactionMessage.getData());
-    assertArrayEquals(new byte[]{1}, actualTransactionMessage.getSendBytes());
+    assertArrayEquals(new byte[] {}, actualTransactionMessage.getData());
+    assertArrayEquals(new byte[] {1}, actualTransactionMessage.getSendBytes());
   }
 }

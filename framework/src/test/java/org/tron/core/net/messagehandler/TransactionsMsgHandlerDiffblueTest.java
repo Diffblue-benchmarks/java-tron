@@ -14,26 +14,28 @@ import org.tron.core.net.peer.PeerConnection;
 
 @RunWith(MockitoJUnitRunner.class)
 public class TransactionsMsgHandlerDiffblueTest {
-  @Mock
-  private PeerConnection peerConnection;
+  @Mock private PeerConnection peerConnection;
 
-  @Mock
-  private TransactionMessage transactionMessage;
+  @Mock private TransactionMessage transactionMessage;
 
-  @Mock
-  private TransactionsMsgHandler transactionsMsgHandler;
+  @Mock private TransactionsMsgHandler transactionsMsgHandler;
 
   /**
-   * Test TrxEvent {@link TrxEvent#TrxEvent(TransactionsMsgHandler, PeerConnection, TransactionMessage)}.
-   * <p>
-   * Method under test: {@link TrxEvent#TrxEvent(TransactionsMsgHandler, PeerConnection, TransactionMessage)}
+   * Test TrxEvent {@link TrxEvent#TrxEvent(TransactionsMsgHandler, PeerConnection,
+   * TransactionMessage)}.
+   *
+   * <p>Method under test: {@link TrxEvent#TrxEvent(TransactionsMsgHandler, PeerConnection,
+   * TransactionMessage)}
    */
   @Test
   @Category(MaintainedByDiffblue.class)
-  @MethodsUnderTest({"void TrxEvent.<init>(TransactionsMsgHandler, PeerConnection, TransactionMessage)"})
+  @MethodsUnderTest({
+    "void TrxEvent.<init>(TransactionsMsgHandler, PeerConnection, TransactionMessage)"
+  })
   public void testTrxEventNewTrxEvent() {
     // Arrange and Act
-    TrxEvent actualTrxEvent = transactionsMsgHandler.new TrxEvent(peerConnection, transactionMessage);
+    TrxEvent actualTrxEvent =
+        transactionsMsgHandler.new TrxEvent(peerConnection, transactionMessage);
 
     // Assert
     assertSame(transactionMessage, actualTrxEvent.getMsg());

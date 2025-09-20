@@ -21,8 +21,8 @@ import org.tron.core.capsule.TransactionCapsule;
 public class BlockLogTriggerCapsuleDiffblueTest {
   /**
    * Test {@link BlockLogTriggerCapsule#BlockLogTriggerCapsule(BlockCapsule)}.
-   * <p>
-   * Method under test: {@link BlockLogTriggerCapsule#BlockLogTriggerCapsule(BlockCapsule)}
+   *
+   * <p>Method under test: {@link BlockLogTriggerCapsule#BlockLogTriggerCapsule(BlockCapsule)}
    */
   @Test
   @Category(MaintainedByDiffblue.class)
@@ -34,6 +34,7 @@ public class BlockLogTriggerCapsuleDiffblueTest {
 
     ArrayList<TransactionCapsule> transactionCapsuleList = new ArrayList<>();
     transactionCapsuleList.add(transactionCapsule);
+
     BlockCapsule block = mock(BlockCapsule.class);
     when(block.getTransactions()).thenReturn(transactionCapsuleList);
     when(block.getNum()).thenReturn(1L);
@@ -52,15 +53,18 @@ public class BlockLogTriggerCapsuleDiffblueTest {
     BlockLogTrigger blockLogTrigger = actualBlockLogTriggerCapsule.getBlockLogTrigger();
     List<String> transactionList = blockLogTrigger.getTransactionList();
     assertEquals(1, transactionList.size());
-    assertEquals("0000000000000000000000000000000000000000000000000000000000000000", transactionList.get(0));
-    assertEquals("0000000000000000000000000000000000000000000000000000000000000000", blockLogTrigger.getBlockHash());
+    assertEquals(
+        "0000000000000000000000000000000000000000000000000000000000000000", transactionList.get(0));
+    assertEquals(
+        "0000000000000000000000000000000000000000000000000000000000000000",
+        blockLogTrigger.getBlockHash());
     assertEquals(1L, blockLogTrigger.getTransactionSize());
   }
 
   /**
    * Test {@link BlockLogTriggerCapsule#BlockLogTriggerCapsule(BlockCapsule)}.
-   * <p>
-   * Method under test: {@link BlockLogTriggerCapsule#BlockLogTriggerCapsule(BlockCapsule)}
+   *
+   * <p>Method under test: {@link BlockLogTriggerCapsule#BlockLogTriggerCapsule(BlockCapsule)}
    */
   @Test
   @Category(MaintainedByDiffblue.class)
@@ -72,6 +76,7 @@ public class BlockLogTriggerCapsuleDiffblueTest {
 
     ArrayList<TransactionCapsule> transactionCapsuleList = new ArrayList<>();
     transactionCapsuleList.add(transactionCapsule);
+
     BlockCapsule block = mock(BlockCapsule.class);
     when(block.getTransactions()).thenReturn(transactionCapsuleList);
     when(block.getNum()).thenReturn(1L);
@@ -88,7 +93,9 @@ public class BlockLogTriggerCapsuleDiffblueTest {
     verify(block, atLeast(1)).getTransactions();
     verify(transactionCapsule).getTransactionId();
     BlockLogTrigger blockLogTrigger = actualBlockLogTriggerCapsule.getBlockLogTrigger();
-    assertEquals("0000000000000000000000000000000000000000000000000000000000000000", blockLogTrigger.getBlockHash());
+    assertEquals(
+        "0000000000000000000000000000000000000000000000000000000000000000",
+        blockLogTrigger.getBlockHash());
     assertEquals("blockTrigger", blockLogTrigger.getTriggerName());
     assertEquals(0L, blockLogTrigger.getLatestSolidifiedBlockNumber());
     assertEquals(1, blockLogTrigger.getTransactionList().size());
@@ -99,11 +106,12 @@ public class BlockLogTriggerCapsuleDiffblueTest {
 
   /**
    * Test {@link BlockLogTriggerCapsule#BlockLogTriggerCapsule(BlockCapsule)}.
+   *
    * <ul>
-   *   <li>Given {@link BlockId}.</li>
+   *   <li>Given {@link BlockId}.
    * </ul>
-   * <p>
-   * Method under test: {@link BlockLogTriggerCapsule#BlockLogTriggerCapsule(BlockCapsule)}
+   *
+   * <p>Method under test: {@link BlockLogTriggerCapsule#BlockLogTriggerCapsule(BlockCapsule)}
    */
   @Test
   @Category(MaintainedByDiffblue.class)
@@ -135,11 +143,12 @@ public class BlockLogTriggerCapsuleDiffblueTest {
 
   /**
    * Test {@link BlockLogTriggerCapsule#BlockLogTriggerCapsule(BlockCapsule)}.
+   *
    * <ul>
-   *   <li>Then return BlockLogTrigger TransactionSize is zero.</li>
+   *   <li>Then return BlockLogTrigger TransactionSize is zero.
    * </ul>
-   * <p>
-   * Method under test: {@link BlockLogTriggerCapsule#BlockLogTriggerCapsule(BlockCapsule)}
+   *
+   * <p>Method under test: {@link BlockLogTriggerCapsule#BlockLogTriggerCapsule(BlockCapsule)}
    */
   @Test
   @Category(MaintainedByDiffblue.class)
@@ -161,7 +170,9 @@ public class BlockLogTriggerCapsuleDiffblueTest {
     verify(block).getTimeStamp();
     verify(block, atLeast(1)).getTransactions();
     BlockLogTrigger blockLogTrigger = actualBlockLogTriggerCapsule.getBlockLogTrigger();
-    assertEquals("0000000000000000000000000000000000000000000000000000000000000000", blockLogTrigger.getBlockHash());
+    assertEquals(
+        "0000000000000000000000000000000000000000000000000000000000000000",
+        blockLogTrigger.getBlockHash());
     assertEquals("blockTrigger", blockLogTrigger.getTriggerName());
     assertEquals(0L, blockLogTrigger.getLatestSolidifiedBlockNumber());
     assertEquals(0L, blockLogTrigger.getTransactionSize());
@@ -172,8 +183,8 @@ public class BlockLogTriggerCapsuleDiffblueTest {
 
   /**
    * Test {@link BlockLogTriggerCapsule#setLatestSolidifiedBlockNumber(long)}.
-   * <p>
-   * Method under test: {@link BlockLogTriggerCapsule#setLatestSolidifiedBlockNumber(long)}
+   *
+   * <p>Method under test: {@link BlockLogTriggerCapsule#setLatestSolidifiedBlockNumber(long)}
    */
   @Test
   @Category(MaintainedByDiffblue.class)

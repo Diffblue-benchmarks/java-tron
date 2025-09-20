@@ -12,8 +12,9 @@ import org.tron.core.exception.ZksnarkException;
 public class PaymentAddressDiffblueTest {
   /**
    * Test getters and setters.
-   * <p>
-   * Methods under test:
+   *
+   * <p>Methods under test:
+   *
    * <ul>
    *   <li>{@link PaymentAddress#PaymentAddress(DiversifierT, byte[])}
    *   <li>{@link PaymentAddress#setD(DiversifierT)}
@@ -24,16 +25,19 @@ public class PaymentAddressDiffblueTest {
    */
   @Test
   @Category(MaintainedByDiffblue.class)
-  @MethodsUnderTest({"void PaymentAddress.<init>(DiversifierT, byte[])", "DiversifierT PaymentAddress.getD()",
-      "byte[] PaymentAddress.getPkD()", "void PaymentAddress.setD(DiversifierT)", "void PaymentAddress.setPkD(byte[])"})
+  @MethodsUnderTest({
+    "void PaymentAddress.<init>(DiversifierT, byte[])",
+    "DiversifierT PaymentAddress.getD()",
+    "byte[] PaymentAddress.getPkD()",
+    "void PaymentAddress.setD(DiversifierT)",
+    "void PaymentAddress.setPkD(byte[])"
+  })
   public void testGettersAndSetters() throws UnsupportedEncodingException, ZksnarkException {
-    // Arrange
+    // Arrange and Act
+    PaymentAddress actualPaymentAddress =
+        new PaymentAddress(DiversifierT.random(), "AXAXAXAX".getBytes("UTF-8"));
     DiversifierT d = DiversifierT.random();
-
-    // Act
-    PaymentAddress actualPaymentAddress = new PaymentAddress(d, "AXAXAXAX".getBytes("UTF-8"));
-    DiversifierT d2 = DiversifierT.random();
-    actualPaymentAddress.setD(d2);
+    actualPaymentAddress.setD(d);
     byte[] pkD = "AXAXAXAX".getBytes("UTF-8");
     actualPaymentAddress.setPkD(pkD);
     DiversifierT actualD = actualPaymentAddress.getD();
@@ -41,7 +45,7 @@ public class PaymentAddressDiffblueTest {
 
     // Assert
     assertSame(pkD, actualPkD);
-    assertSame(d2, actualD);
+    assertSame(d, actualD);
     assertArrayEquals("AXAXAXAX".getBytes("UTF-8"), actualPkD);
   }
 }

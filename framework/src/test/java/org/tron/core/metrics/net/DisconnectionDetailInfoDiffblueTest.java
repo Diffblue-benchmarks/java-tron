@@ -9,13 +9,16 @@ import org.junit.experimental.categories.Category;
 
 public class DisconnectionDetailInfoDiffblueTest {
   /**
-   * Test {@link DisconnectionDetailInfo#equals(Object)}, and {@link DisconnectionDetailInfo#hashCode()}.
+   * Test {@link DisconnectionDetailInfo#equals(Object)}, and {@link
+   * DisconnectionDetailInfo#hashCode()}.
+   *
    * <ul>
-   *   <li>When other is equal.</li>
-   *   <li>Then return equal.</li>
+   *   <li>When other is equal.
+   *   <li>Then return equal.
    * </ul>
-   * <p>
-   * Methods under test:
+   *
+   * <p>Methods under test:
+   *
    * <ul>
    *   <li>{@link DisconnectionDetailInfo#equals(Object)}
    *   <li>{@link DisconnectionDetailInfo#hashCode()}
@@ -23,7 +26,10 @@ public class DisconnectionDetailInfoDiffblueTest {
    */
   @Test
   @Category(MaintainedByDiffblue.class)
-  @MethodsUnderTest({"boolean DisconnectionDetailInfo.equals(Object)", "int DisconnectionDetailInfo.hashCode()"})
+  @MethodsUnderTest({
+    "boolean DisconnectionDetailInfo.equals(Object)",
+    "int DisconnectionDetailInfo.hashCode()"
+  })
   public void testEqualsAndHashCode_whenOtherIsEqual_thenReturnEqual() {
     // Arrange
     DisconnectionDetailInfo disconnectionDetailInfo = new DisconnectionDetailInfo();
@@ -36,18 +42,20 @@ public class DisconnectionDetailInfoDiffblueTest {
 
     // Act and Assert
     assertEquals(disconnectionDetailInfo, disconnectionDetailInfo2);
-    int expectedHashCodeResult = disconnectionDetailInfo.hashCode();
-    assertEquals(expectedHashCodeResult, disconnectionDetailInfo2.hashCode());
+    assertEquals(disconnectionDetailInfo.hashCode(), disconnectionDetailInfo2.hashCode());
   }
 
   /**
-   * Test {@link DisconnectionDetailInfo#equals(Object)}, and {@link DisconnectionDetailInfo#hashCode()}.
+   * Test {@link DisconnectionDetailInfo#equals(Object)}, and {@link
+   * DisconnectionDetailInfo#hashCode()}.
+   *
    * <ul>
-   *   <li>When other is equal.</li>
-   *   <li>Then return equal.</li>
+   *   <li>When other is equal.
+   *   <li>Then return equal.
    * </ul>
-   * <p>
-   * Methods under test:
+   *
+   * <p>Methods under test:
+   *
    * <ul>
    *   <li>{@link DisconnectionDetailInfo#equals(Object)}
    *   <li>{@link DisconnectionDetailInfo#hashCode()}
@@ -55,7 +63,10 @@ public class DisconnectionDetailInfoDiffblueTest {
    */
   @Test
   @Category(MaintainedByDiffblue.class)
-  @MethodsUnderTest({"boolean DisconnectionDetailInfo.equals(Object)", "int DisconnectionDetailInfo.hashCode()"})
+  @MethodsUnderTest({
+    "boolean DisconnectionDetailInfo.equals(Object)",
+    "int DisconnectionDetailInfo.hashCode()"
+  })
   public void testEqualsAndHashCode_whenOtherIsEqual_thenReturnEqual2() {
     // Arrange
     DisconnectionDetailInfo disconnectionDetailInfo = new DisconnectionDetailInfo();
@@ -68,18 +79,20 @@ public class DisconnectionDetailInfoDiffblueTest {
 
     // Act and Assert
     assertEquals(disconnectionDetailInfo, disconnectionDetailInfo2);
-    int expectedHashCodeResult = disconnectionDetailInfo.hashCode();
-    assertEquals(expectedHashCodeResult, disconnectionDetailInfo2.hashCode());
+    assertEquals(disconnectionDetailInfo.hashCode(), disconnectionDetailInfo2.hashCode());
   }
 
   /**
-   * Test {@link DisconnectionDetailInfo#equals(Object)}, and {@link DisconnectionDetailInfo#hashCode()}.
+   * Test {@link DisconnectionDetailInfo#equals(Object)}, and {@link
+   * DisconnectionDetailInfo#hashCode()}.
+   *
    * <ul>
-   *   <li>When other is same.</li>
-   *   <li>Then return equal.</li>
+   *   <li>When other is same.
+   *   <li>Then return equal.
    * </ul>
-   * <p>
-   * Methods under test:
+   *
+   * <p>Methods under test:
+   *
    * <ul>
    *   <li>{@link DisconnectionDetailInfo#equals(Object)}
    *   <li>{@link DisconnectionDetailInfo#hashCode()}
@@ -87,7 +100,10 @@ public class DisconnectionDetailInfoDiffblueTest {
    */
   @Test
   @Category(MaintainedByDiffblue.class)
-  @MethodsUnderTest({"boolean DisconnectionDetailInfo.equals(Object)", "int DisconnectionDetailInfo.hashCode()"})
+  @MethodsUnderTest({
+    "boolean DisconnectionDetailInfo.equals(Object)",
+    "int DisconnectionDetailInfo.hashCode()"
+  })
   public void testEqualsAndHashCode_whenOtherIsSame_thenReturnEqual() {
     // Arrange
     DisconnectionDetailInfo disconnectionDetailInfo = new DisconnectionDetailInfo();
@@ -102,16 +118,20 @@ public class DisconnectionDetailInfoDiffblueTest {
 
   /**
    * Test {@link DisconnectionDetailInfo#equals(Object)}.
+   *
    * <ul>
-   *   <li>When other is different.</li>
-   *   <li>Then return not equal.</li>
+   *   <li>When other is different.
+   *   <li>Then return not equal.
    * </ul>
-   * <p>
-   * Method under test: {@link DisconnectionDetailInfo#equals(Object)}
+   *
+   * <p>Method under test: {@link DisconnectionDetailInfo#equals(Object)}
    */
   @Test
   @Category(MaintainedByDiffblue.class)
-  @MethodsUnderTest({"boolean DisconnectionDetailInfo.equals(Object)", "int DisconnectionDetailInfo.hashCode()"})
+  @MethodsUnderTest({
+    "boolean DisconnectionDetailInfo.equals(Object)",
+    "int DisconnectionDetailInfo.hashCode()"
+  })
   public void testEquals_whenOtherIsDifferent_thenReturnNotEqual() {
     // Arrange
     DisconnectionDetailInfo disconnectionDetailInfo = new DisconnectionDetailInfo();
@@ -128,16 +148,20 @@ public class DisconnectionDetailInfoDiffblueTest {
 
   /**
    * Test {@link DisconnectionDetailInfo#equals(Object)}.
+   *
    * <ul>
-   *   <li>When other is different.</li>
-   *   <li>Then return not equal.</li>
+   *   <li>When other is different.
+   *   <li>Then return not equal.
    * </ul>
-   * <p>
-   * Method under test: {@link DisconnectionDetailInfo#equals(Object)}
+   *
+   * <p>Method under test: {@link DisconnectionDetailInfo#equals(Object)}
    */
   @Test
   @Category(MaintainedByDiffblue.class)
-  @MethodsUnderTest({"boolean DisconnectionDetailInfo.equals(Object)", "int DisconnectionDetailInfo.hashCode()"})
+  @MethodsUnderTest({
+    "boolean DisconnectionDetailInfo.equals(Object)",
+    "int DisconnectionDetailInfo.hashCode()"
+  })
   public void testEquals_whenOtherIsDifferent_thenReturnNotEqual2() {
     // Arrange
     DisconnectionDetailInfo disconnectionDetailInfo = new DisconnectionDetailInfo();
@@ -154,16 +178,20 @@ public class DisconnectionDetailInfoDiffblueTest {
 
   /**
    * Test {@link DisconnectionDetailInfo#equals(Object)}.
+   *
    * <ul>
-   *   <li>When other is different.</li>
-   *   <li>Then return not equal.</li>
+   *   <li>When other is different.
+   *   <li>Then return not equal.
    * </ul>
-   * <p>
-   * Method under test: {@link DisconnectionDetailInfo#equals(Object)}
+   *
+   * <p>Method under test: {@link DisconnectionDetailInfo#equals(Object)}
    */
   @Test
   @Category(MaintainedByDiffblue.class)
-  @MethodsUnderTest({"boolean DisconnectionDetailInfo.equals(Object)", "int DisconnectionDetailInfo.hashCode()"})
+  @MethodsUnderTest({
+    "boolean DisconnectionDetailInfo.equals(Object)",
+    "int DisconnectionDetailInfo.hashCode()"
+  })
   public void testEquals_whenOtherIsDifferent_thenReturnNotEqual3() {
     // Arrange
     DisconnectionDetailInfo disconnectionDetailInfo = new DisconnectionDetailInfo();
@@ -180,16 +208,20 @@ public class DisconnectionDetailInfoDiffblueTest {
 
   /**
    * Test {@link DisconnectionDetailInfo#equals(Object)}.
+   *
    * <ul>
-   *   <li>When other is {@code null}.</li>
-   *   <li>Then return not equal.</li>
+   *   <li>When other is {@code null}.
+   *   <li>Then return not equal.
    * </ul>
-   * <p>
-   * Method under test: {@link DisconnectionDetailInfo#equals(Object)}
+   *
+   * <p>Method under test: {@link DisconnectionDetailInfo#equals(Object)}
    */
   @Test
   @Category(MaintainedByDiffblue.class)
-  @MethodsUnderTest({"boolean DisconnectionDetailInfo.equals(Object)", "int DisconnectionDetailInfo.hashCode()"})
+  @MethodsUnderTest({
+    "boolean DisconnectionDetailInfo.equals(Object)",
+    "int DisconnectionDetailInfo.hashCode()"
+  })
   public void testEquals_whenOtherIsNull_thenReturnNotEqual() {
     // Arrange
     DisconnectionDetailInfo disconnectionDetailInfo = new DisconnectionDetailInfo();
@@ -202,16 +234,20 @@ public class DisconnectionDetailInfoDiffblueTest {
 
   /**
    * Test {@link DisconnectionDetailInfo#equals(Object)}.
+   *
    * <ul>
-   *   <li>When other is wrong type.</li>
-   *   <li>Then return not equal.</li>
+   *   <li>When other is wrong type.
+   *   <li>Then return not equal.
    * </ul>
-   * <p>
-   * Method under test: {@link DisconnectionDetailInfo#equals(Object)}
+   *
+   * <p>Method under test: {@link DisconnectionDetailInfo#equals(Object)}
    */
   @Test
   @Category(MaintainedByDiffblue.class)
-  @MethodsUnderTest({"boolean DisconnectionDetailInfo.equals(Object)", "int DisconnectionDetailInfo.hashCode()"})
+  @MethodsUnderTest({
+    "boolean DisconnectionDetailInfo.equals(Object)",
+    "int DisconnectionDetailInfo.hashCode()"
+  })
   public void testEquals_whenOtherIsWrongType_thenReturnNotEqual() {
     // Arrange
     DisconnectionDetailInfo disconnectionDetailInfo = new DisconnectionDetailInfo();
@@ -224,8 +260,9 @@ public class DisconnectionDetailInfoDiffblueTest {
 
   /**
    * Test getters and setters.
-   * <p>
-   * Methods under test:
+   *
+   * <p>Methods under test:
+   *
    * <ul>
    *   <li>default or parameterless constructor of {@link DisconnectionDetailInfo}
    *   <li>{@link DisconnectionDetailInfo#setCount(int)}
@@ -237,9 +274,14 @@ public class DisconnectionDetailInfoDiffblueTest {
    */
   @Test
   @Category(MaintainedByDiffblue.class)
-  @MethodsUnderTest({"void DisconnectionDetailInfo.<init>()", "int DisconnectionDetailInfo.getCount()",
-      "String DisconnectionDetailInfo.getReason()", "void DisconnectionDetailInfo.setCount(int)",
-      "void DisconnectionDetailInfo.setReason(String)", "String DisconnectionDetailInfo.toString()"})
+  @MethodsUnderTest({
+    "void DisconnectionDetailInfo.<init>()",
+    "int DisconnectionDetailInfo.getCount()",
+    "String DisconnectionDetailInfo.getReason()",
+    "void DisconnectionDetailInfo.setCount(int)",
+    "void DisconnectionDetailInfo.setReason(String)",
+    "String DisconnectionDetailInfo.toString()"
+  })
   public void testGettersAndSetters() {
     // Arrange and Act
     DisconnectionDetailInfo actualDisconnectionDetailInfo = new DisconnectionDetailInfo();

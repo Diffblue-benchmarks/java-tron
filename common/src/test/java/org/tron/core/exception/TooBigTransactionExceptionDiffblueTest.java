@@ -10,8 +10,8 @@ import org.junit.experimental.categories.Category;
 public class TooBigTransactionExceptionDiffblueTest {
   /**
    * Test {@link TooBigTransactionException#TooBigTransactionException()}.
-   * <p>
-   * Method under test: {@link TooBigTransactionException#TooBigTransactionException()}
+   *
+   * <p>Method under test: {@link TooBigTransactionException#TooBigTransactionException()}
    */
   @Test
   @Category(MaintainedByDiffblue.class)
@@ -29,15 +29,16 @@ public class TooBigTransactionExceptionDiffblueTest {
 
   /**
    * Test {@link TooBigTransactionException#TooBigTransactionException(String)}.
-   * <p>
-   * Method under test: {@link TooBigTransactionException#TooBigTransactionException(String)}
+   *
+   * <p>Method under test: {@link TooBigTransactionException#TooBigTransactionException(String)}
    */
   @Test
   @Category(MaintainedByDiffblue.class)
   @MethodsUnderTest({"void TooBigTransactionException.<init>(String)"})
   public void testNewTooBigTransactionException2() {
     // Arrange and Act
-    TooBigTransactionException actualTooBigTransactionException = new TooBigTransactionException("An error occurred");
+    TooBigTransactionException actualTooBigTransactionException =
+        new TooBigTransactionException("An error occurred");
 
     // Assert
     assertEquals("An error occurred", actualTooBigTransactionException.getLocalizedMessage());

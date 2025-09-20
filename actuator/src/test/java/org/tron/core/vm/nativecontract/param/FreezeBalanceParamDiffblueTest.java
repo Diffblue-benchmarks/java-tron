@@ -15,8 +15,9 @@ import org.tron.protos.contract.Common.ResourceCode;
 public class FreezeBalanceParamDiffblueTest {
   /**
    * Test getters and setters.
-   * <p>
-   * Methods under test:
+   *
+   * <p>Methods under test:
+   *
    * <ul>
    *   <li>default or parameterless constructor of {@link FreezeBalanceParam}
    *   <li>{@link FreezeBalanceParam#setDelegating(boolean)}
@@ -35,13 +36,21 @@ public class FreezeBalanceParamDiffblueTest {
    */
   @Test
   @Category(MaintainedByDiffblue.class)
-  @MethodsUnderTest({"void FreezeBalanceParam.<init>()", "long FreezeBalanceParam.getFrozenBalance()",
-      "long FreezeBalanceParam.getFrozenDuration()", "byte[] FreezeBalanceParam.getOwnerAddress()",
-      "byte[] FreezeBalanceParam.getReceiverAddress()", "ResourceCode FreezeBalanceParam.getResourceType()",
-      "boolean FreezeBalanceParam.isDelegating()", "void FreezeBalanceParam.setDelegating(boolean)",
-      "void FreezeBalanceParam.setFrozenBalance(long)", "void FreezeBalanceParam.setFrozenDuration(long)",
-      "void FreezeBalanceParam.setOwnerAddress(byte[])", "void FreezeBalanceParam.setReceiverAddress(byte[])",
-      "void FreezeBalanceParam.setResourceType(ResourceCode)"})
+  @MethodsUnderTest({
+    "void FreezeBalanceParam.<init>()",
+    "long FreezeBalanceParam.getFrozenBalance()",
+    "long FreezeBalanceParam.getFrozenDuration()",
+    "byte[] FreezeBalanceParam.getOwnerAddress()",
+    "byte[] FreezeBalanceParam.getReceiverAddress()",
+    "ResourceCode FreezeBalanceParam.getResourceType()",
+    "boolean FreezeBalanceParam.isDelegating()",
+    "void FreezeBalanceParam.setDelegating(boolean)",
+    "void FreezeBalanceParam.setFrozenBalance(long)",
+    "void FreezeBalanceParam.setFrozenDuration(long)",
+    "void FreezeBalanceParam.setOwnerAddress(byte[])",
+    "void FreezeBalanceParam.setReceiverAddress(byte[])",
+    "void FreezeBalanceParam.setResourceType(ResourceCode)"
+  })
   public void testGettersAndSetters() throws UnsupportedEncodingException {
     // Arrange and Act
     FreezeBalanceParam actualFreezeBalanceParam = new FreezeBalanceParam();

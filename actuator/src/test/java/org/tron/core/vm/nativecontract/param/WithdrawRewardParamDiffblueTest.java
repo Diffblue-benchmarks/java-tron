@@ -12,8 +12,9 @@ import org.junit.experimental.categories.Category;
 public class WithdrawRewardParamDiffblueTest {
   /**
    * Test getters and setters.
-   * <p>
-   * Methods under test:
+   *
+   * <p>Methods under test:
+   *
    * <ul>
    *   <li>default or parameterless constructor of {@link WithdrawRewardParam}
    *   <li>{@link WithdrawRewardParam#setNowInMs(long)}
@@ -24,9 +25,13 @@ public class WithdrawRewardParamDiffblueTest {
    */
   @Test
   @Category(MaintainedByDiffblue.class)
-  @MethodsUnderTest({"void WithdrawRewardParam.<init>()", "long WithdrawRewardParam.getNowInMs()",
-      "byte[] WithdrawRewardParam.getOwnerAddress()", "void WithdrawRewardParam.setNowInMs(long)",
-      "void WithdrawRewardParam.setOwnerAddress(byte[])"})
+  @MethodsUnderTest({
+    "void WithdrawRewardParam.<init>()",
+    "long WithdrawRewardParam.getNowInMs()",
+    "byte[] WithdrawRewardParam.getOwnerAddress()",
+    "void WithdrawRewardParam.setNowInMs(long)",
+    "void WithdrawRewardParam.setOwnerAddress(byte[])"
+  })
   public void testGettersAndSetters() throws UnsupportedEncodingException {
     // Arrange and Act
     WithdrawRewardParam actualWithdrawRewardParam = new WithdrawRewardParam();

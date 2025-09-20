@@ -9,8 +9,9 @@ import org.junit.experimental.categories.Category;
 public class RuntimeImplDiffblueTest {
   /**
    * Test getters and setters.
-   * <p>
-   * Methods under test:
+   *
+   * <p>Methods under test:
+   *
    * <ul>
    *   <li>default or parameterless constructor of {@link RuntimeImpl}
    *   <li>{@link RuntimeImpl#getActuator2()}
@@ -18,9 +19,12 @@ public class RuntimeImplDiffblueTest {
    */
   @Test
   @Category(MaintainedByDiffblue.class)
-  @MethodsUnderTest({"void RuntimeImpl.<init>()", "org.tron.core.actuator.Actuator2 RuntimeImpl.getActuator2()"})
+  @MethodsUnderTest({
+    "void RuntimeImpl.<init>()",
+    "org.tron.core.actuator.Actuator2 RuntimeImpl.getActuator2()"
+  })
   public void testGettersAndSetters() {
     // Arrange, Act and Assert
-    assertNull((new RuntimeImpl()).getActuator2());
+    assertNull(new RuntimeImpl().getActuator2());
   }
 }

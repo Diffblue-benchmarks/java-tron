@@ -11,15 +11,17 @@ import org.junit.experimental.categories.Category;
 public class ZkProofValidateExceptionDiffblueTest {
   /**
    * Test {@link ZkProofValidateException#ZkProofValidateException(String, boolean)}.
-   * <p>
-   * Method under test: {@link ZkProofValidateException#ZkProofValidateException(String, boolean)}
+   *
+   * <p>Method under test: {@link ZkProofValidateException#ZkProofValidateException(String,
+   * boolean)}
    */
   @Test
   @Category(MaintainedByDiffblue.class)
   @MethodsUnderTest({"void ZkProofValidateException.<init>(String, boolean)"})
   public void testNewZkProofValidateException() {
     // Arrange and Act
-    ZkProofValidateException actualZkProofValidateException = new ZkProofValidateException("An error occurred", true);
+    ZkProofValidateException actualZkProofValidateException =
+        new ZkProofValidateException("An error occurred", true);
 
     // Assert
     assertEquals("An error occurred", actualZkProofValidateException.getLocalizedMessage());
@@ -31,8 +33,9 @@ public class ZkProofValidateExceptionDiffblueTest {
 
   /**
    * Test getters and setters.
-   * <p>
-   * Methods under test:
+   *
+   * <p>Methods under test:
+   *
    * <ul>
    *   <li>{@link ZkProofValidateException#setFirstValidated(boolean)}
    *   <li>{@link ZkProofValidateException#isFirstValidated()}
@@ -40,11 +43,14 @@ public class ZkProofValidateExceptionDiffblueTest {
    */
   @Test
   @Category(MaintainedByDiffblue.class)
-  @MethodsUnderTest({"boolean ZkProofValidateException.isFirstValidated()",
-      "void ZkProofValidateException.setFirstValidated(boolean)"})
+  @MethodsUnderTest({
+    "boolean ZkProofValidateException.isFirstValidated()",
+    "void ZkProofValidateException.setFirstValidated(boolean)"
+  })
   public void testGettersAndSetters() {
     // Arrange
-    ZkProofValidateException zkProofValidateException = new ZkProofValidateException("An error occurred", true);
+    ZkProofValidateException zkProofValidateException =
+        new ZkProofValidateException("An error occurred", true);
 
     // Act
     zkProofValidateException.setFirstValidated(true);

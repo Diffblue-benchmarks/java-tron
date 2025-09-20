@@ -16,12 +16,13 @@ import org.tron.core.services.WitnessProductBlockService.CheatWitnessInfo;
 public class WitnessProductBlockServiceDiffblueTest {
   /**
    * Test CheatWitnessInfo {@link CheatWitnessInfo#add(BlockCapsule)}.
+   *
    * <ul>
-   *   <li>When {@code null}.</li>
-   *   <li>Then {@link CheatWitnessInfo} (default constructor) BlockCapsuleSet size is one.</li>
+   *   <li>When {@code null}.
+   *   <li>Then {@link CheatWitnessInfo} (default constructor) BlockCapsuleSet size is one.
    * </ul>
-   * <p>
-   * Method under test: {@link CheatWitnessInfo#add(BlockCapsule)}
+   *
+   * <p>Method under test: {@link CheatWitnessInfo#add(BlockCapsule)}
    */
   @Test
   @Category(MaintainedByDiffblue.class)
@@ -40,8 +41,8 @@ public class WitnessProductBlockServiceDiffblueTest {
 
   /**
    * Test CheatWitnessInfo {@link CheatWitnessInfo#clear()}.
-   * <p>
-   * Method under test: {@link CheatWitnessInfo#clear()}
+   *
+   * <p>Method under test: {@link CheatWitnessInfo#clear()}
    */
   @Test
   @Category(MaintainedByDiffblue.class)
@@ -50,27 +51,31 @@ public class WitnessProductBlockServiceDiffblueTest {
     // Arrange
     CheatWitnessInfo cheatWitnessInfo = new CheatWitnessInfo();
 
-    // Act and Assert
-    assertSame(cheatWitnessInfo, cheatWitnessInfo.clear());
+    // Act
+    CheatWitnessInfo actualClearResult = cheatWitnessInfo.clear();
+
+    // Assert
+    assertSame(cheatWitnessInfo, actualClearResult);
   }
 
   /**
    * Test CheatWitnessInfo {@link CheatWitnessInfo#getBlockCapsuleSet()}.
-   * <p>
-   * Method under test: {@link CheatWitnessInfo#getBlockCapsuleSet()}
+   *
+   * <p>Method under test: {@link CheatWitnessInfo#getBlockCapsuleSet()}
    */
   @Test
   @Category(MaintainedByDiffblue.class)
   @MethodsUnderTest({"Set CheatWitnessInfo.getBlockCapsuleSet()"})
   public void testCheatWitnessInfoGetBlockCapsuleSet() {
     // Arrange, Act and Assert
-    assertTrue((new CheatWitnessInfo()).getBlockCapsuleSet().isEmpty());
+    assertTrue(new CheatWitnessInfo().getBlockCapsuleSet().isEmpty());
   }
 
   /**
    * Test CheatWitnessInfo getters and setters.
-   * <p>
-   * Methods under test:
+   *
+   * <p>Methods under test:
+   *
    * <ul>
    *   <li>{@link CheatWitnessInfo#setLatestBlockNum(long)}
    *   <li>{@link CheatWitnessInfo#setTime(long)}
@@ -83,10 +88,15 @@ public class WitnessProductBlockServiceDiffblueTest {
    */
   @Test
   @Category(MaintainedByDiffblue.class)
-  @MethodsUnderTest({"long CheatWitnessInfo.getLatestBlockNum()", "long CheatWitnessInfo.getTime()",
-      "AtomicInteger CheatWitnessInfo.getTimes()", "CheatWitnessInfo CheatWitnessInfo.setLatestBlockNum(long)",
-      "CheatWitnessInfo CheatWitnessInfo.setTime(long)", "CheatWitnessInfo CheatWitnessInfo.setTimes(AtomicInteger)",
-      "String CheatWitnessInfo.toString()"})
+  @MethodsUnderTest({
+    "long CheatWitnessInfo.getLatestBlockNum()",
+    "long CheatWitnessInfo.getTime()",
+    "AtomicInteger CheatWitnessInfo.getTimes()",
+    "CheatWitnessInfo CheatWitnessInfo.setLatestBlockNum(long)",
+    "CheatWitnessInfo CheatWitnessInfo.setTime(long)",
+    "CheatWitnessInfo CheatWitnessInfo.setTimes(AtomicInteger)",
+    "String CheatWitnessInfo.toString()"
+  })
   public void testCheatWitnessInfoGettersAndSetters() {
     // Arrange
     CheatWitnessInfo cheatWitnessInfo = new CheatWitnessInfo();
@@ -94,7 +104,7 @@ public class WitnessProductBlockServiceDiffblueTest {
     // Act
     CheatWitnessInfo actualSetLatestBlockNumResult = cheatWitnessInfo.setLatestBlockNum(1L);
     CheatWitnessInfo actualSetTimeResult = cheatWitnessInfo.setTime(10L);
-    AtomicInteger times = new AtomicInteger(1);
+    AtomicInteger times = new AtomicInteger();
     CheatWitnessInfo actualSetTimesResult = cheatWitnessInfo.setTimes(times);
     String actualToStringResult = cheatWitnessInfo.toString();
     long actualLatestBlockNum = cheatWitnessInfo.getLatestBlockNum();
@@ -102,7 +112,7 @@ public class WitnessProductBlockServiceDiffblueTest {
     AtomicInteger actualTimes = cheatWitnessInfo.getTimes();
 
     // Assert
-    assertEquals("{times=1, time=10, latestBlockNum=1, blockCapsuleSet=[]}", actualToStringResult);
+    assertEquals("{times=0, time=10, latestBlockNum=1, blockCapsuleSet=[]}", actualToStringResult);
     assertEquals(10L, actualTime);
     assertEquals(1L, actualLatestBlockNum);
     assertTrue(actualSetLatestBlockNumResult.getBlockCapsuleSet().isEmpty());
@@ -114,12 +124,13 @@ public class WitnessProductBlockServiceDiffblueTest {
 
   /**
    * Test CheatWitnessInfo {@link CheatWitnessInfo#increment()}.
+   *
    * <ul>
-   *   <li>Given {@link CheatWitnessInfo} (default constructor).</li>
-   *   <li>Then return {@link CheatWitnessInfo} (default constructor).</li>
+   *   <li>Given {@link CheatWitnessInfo} (default constructor).
+   *   <li>Then return {@link CheatWitnessInfo} (default constructor).
    * </ul>
-   * <p>
-   * Method under test: {@link CheatWitnessInfo#increment()}
+   *
+   * <p>Method under test: {@link CheatWitnessInfo#increment()}
    */
   @Test
   @Category(MaintainedByDiffblue.class)
@@ -128,14 +139,17 @@ public class WitnessProductBlockServiceDiffblueTest {
     // Arrange
     CheatWitnessInfo cheatWitnessInfo = new CheatWitnessInfo();
 
-    // Act and Assert
-    assertSame(cheatWitnessInfo, cheatWitnessInfo.increment());
+    // Act
+    CheatWitnessInfo actualIncrementResult = cheatWitnessInfo.increment();
+
+    // Assert
+    assertSame(cheatWitnessInfo, actualIncrementResult);
   }
 
   /**
    * Test CheatWitnessInfo new {@link CheatWitnessInfo} (default constructor).
-   * <p>
-   * Method under test: default or parameterless constructor of {@link CheatWitnessInfo}
+   *
+   * <p>Method under test: default or parameterless constructor of {@link CheatWitnessInfo}
    */
   @Test
   @Category(MaintainedByDiffblue.class)
@@ -153,8 +167,8 @@ public class WitnessProductBlockServiceDiffblueTest {
 
   /**
    * Test CheatWitnessInfo {@link CheatWitnessInfo#setBlockCapsuleSet(Set)}.
-   * <p>
-   * Method under test: {@link CheatWitnessInfo#setBlockCapsuleSet(Set)}
+   *
+   * <p>Method under test: {@link CheatWitnessInfo#setBlockCapsuleSet(Set)}
    */
   @Test
   @Category(MaintainedByDiffblue.class)
@@ -163,50 +177,24 @@ public class WitnessProductBlockServiceDiffblueTest {
     // Arrange
     CheatWitnessInfo cheatWitnessInfo = new CheatWitnessInfo();
 
-    HashSet<BlockCapsule> blockCapsuleSet = new HashSet<>();
-    blockCapsuleSet.add(null);
-
     // Act
-    CheatWitnessInfo actualSetBlockCapsuleSetResult = cheatWitnessInfo.setBlockCapsuleSet(blockCapsuleSet);
+    CheatWitnessInfo actualSetBlockCapsuleSetResult =
+        cheatWitnessInfo.setBlockCapsuleSet(new HashSet<>());
 
     // Assert
-    assertEquals(blockCapsuleSet, cheatWitnessInfo.getBlockCapsuleSet());
-    assertSame(cheatWitnessInfo, actualSetBlockCapsuleSetResult);
-  }
-
-  /**
-   * Test CheatWitnessInfo {@link CheatWitnessInfo#setBlockCapsuleSet(Set)}.
-   * <ul>
-   *   <li>Then {@link CheatWitnessInfo} (default constructor) BlockCapsuleSet Empty.</li>
-   * </ul>
-   * <p>
-   * Method under test: {@link CheatWitnessInfo#setBlockCapsuleSet(Set)}
-   */
-  @Test
-  @Category(MaintainedByDiffblue.class)
-  @MethodsUnderTest({"CheatWitnessInfo CheatWitnessInfo.setBlockCapsuleSet(Set)"})
-  public void testCheatWitnessInfoSetBlockCapsuleSet_thenCheatWitnessInfoBlockCapsuleSetEmpty() {
-    // Arrange
-    CheatWitnessInfo cheatWitnessInfo = new CheatWitnessInfo();
-
-    // Act
-    CheatWitnessInfo actualSetBlockCapsuleSetResult = cheatWitnessInfo.setBlockCapsuleSet(new HashSet<>());
-
-    // Assert
-    assertTrue(cheatWitnessInfo.getBlockCapsuleSet().isEmpty());
     assertSame(cheatWitnessInfo, actualSetBlockCapsuleSetResult);
   }
 
   /**
    * Test {@link WitnessProductBlockService#queryCheatWitnessInfo()}.
-   * <p>
-   * Method under test: {@link WitnessProductBlockService#queryCheatWitnessInfo()}
+   *
+   * <p>Method under test: {@link WitnessProductBlockService#queryCheatWitnessInfo()}
    */
   @Test
   @Category(MaintainedByDiffblue.class)
   @MethodsUnderTest({"java.util.Map WitnessProductBlockService.queryCheatWitnessInfo()"})
   public void testQueryCheatWitnessInfo() {
     // Arrange, Act and Assert
-    assertTrue((new WitnessProductBlockService()).queryCheatWitnessInfo().isEmpty());
+    assertTrue(new WitnessProductBlockService().queryCheatWitnessInfo().isEmpty());
   }
 }

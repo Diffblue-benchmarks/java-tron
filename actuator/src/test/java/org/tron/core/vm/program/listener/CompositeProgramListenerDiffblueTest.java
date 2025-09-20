@@ -10,28 +10,30 @@ import org.junit.experimental.categories.Category;
 public class CompositeProgramListenerDiffblueTest {
   /**
    * Test {@link CompositeProgramListener#isEmpty()}.
+   *
    * <ul>
-   *   <li>Given {@link CompositeProgramListener} (default constructor).</li>
-   *   <li>Then return {@code true}.</li>
+   *   <li>Given {@link CompositeProgramListener} (default constructor).
+   *   <li>Then return {@code true}.
    * </ul>
-   * <p>
-   * Method under test: {@link CompositeProgramListener#isEmpty()}
+   *
+   * <p>Method under test: {@link CompositeProgramListener#isEmpty()}
    */
   @Test
   @Category(MaintainedByDiffblue.class)
   @MethodsUnderTest({"boolean CompositeProgramListener.isEmpty()"})
   public void testIsEmpty_givenCompositeProgramListener_thenReturnTrue() {
     // Arrange, Act and Assert
-    assertTrue((new CompositeProgramListener()).isEmpty());
+    assertTrue(new CompositeProgramListener().isEmpty());
   }
 
   /**
    * Test {@link CompositeProgramListener#isEmpty()}.
+   *
    * <ul>
-   *   <li>Then return {@code false}.</li>
+   *   <li>Then return {@code false}.
    * </ul>
-   * <p>
-   * Method under test: {@link CompositeProgramListener#isEmpty()}
+   *
+   * <p>Method under test: {@link CompositeProgramListener#isEmpty()}
    */
   @Test
   @Category(MaintainedByDiffblue.class)
@@ -47,14 +49,14 @@ public class CompositeProgramListenerDiffblueTest {
 
   /**
    * Test new {@link CompositeProgramListener} (default constructor).
-   * <p>
-   * Method under test: default or parameterless constructor of {@link CompositeProgramListener}
+   *
+   * <p>Method under test: default or parameterless constructor of {@link CompositeProgramListener}
    */
   @Test
   @Category(MaintainedByDiffblue.class)
   @MethodsUnderTest({"void CompositeProgramListener.<init>()"})
   public void testNewCompositeProgramListener() {
     // Arrange, Act and Assert
-    assertTrue((new CompositeProgramListener()).isEmpty());
+    assertTrue(new CompositeProgramListener().isEmpty());
   }
 }

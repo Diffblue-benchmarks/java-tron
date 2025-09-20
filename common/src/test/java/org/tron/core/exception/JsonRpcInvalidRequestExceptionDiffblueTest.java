@@ -11,15 +11,16 @@ import org.junit.experimental.categories.Category;
 public class JsonRpcInvalidRequestExceptionDiffblueTest {
   /**
    * Test {@link JsonRpcInvalidRequestException#JsonRpcInvalidRequestException()}.
-   * <p>
-   * Method under test: {@link JsonRpcInvalidRequestException#JsonRpcInvalidRequestException()}
+   *
+   * <p>Method under test: {@link JsonRpcInvalidRequestException#JsonRpcInvalidRequestException()}
    */
   @Test
   @Category(MaintainedByDiffblue.class)
   @MethodsUnderTest({"void JsonRpcInvalidRequestException.<init>()"})
   public void testNewJsonRpcInvalidRequestException() {
     // Arrange and Act
-    JsonRpcInvalidRequestException actualJsonRpcInvalidRequestException = new JsonRpcInvalidRequestException();
+    JsonRpcInvalidRequestException actualJsonRpcInvalidRequestException =
+        new JsonRpcInvalidRequestException();
 
     // Assert
     assertNull(actualJsonRpcInvalidRequestException.getLocalizedMessage());
@@ -30,16 +31,17 @@ public class JsonRpcInvalidRequestExceptionDiffblueTest {
 
   /**
    * Test {@link JsonRpcInvalidRequestException#JsonRpcInvalidRequestException(String)}.
-   * <p>
-   * Method under test: {@link JsonRpcInvalidRequestException#JsonRpcInvalidRequestException(String)}
+   *
+   * <p>Method under test: {@link
+   * JsonRpcInvalidRequestException#JsonRpcInvalidRequestException(String)}
    */
   @Test
   @Category(MaintainedByDiffblue.class)
   @MethodsUnderTest({"void JsonRpcInvalidRequestException.<init>(String)"})
   public void testNewJsonRpcInvalidRequestException2() {
     // Arrange and Act
-    JsonRpcInvalidRequestException actualJsonRpcInvalidRequestException = new JsonRpcInvalidRequestException(
-        "An error occurred");
+    JsonRpcInvalidRequestException actualJsonRpcInvalidRequestException =
+        new JsonRpcInvalidRequestException("An error occurred");
 
     // Assert
     assertEquals("An error occurred", actualJsonRpcInvalidRequestException.getLocalizedMessage());
@@ -50,8 +52,9 @@ public class JsonRpcInvalidRequestExceptionDiffblueTest {
 
   /**
    * Test {@link JsonRpcInvalidRequestException#JsonRpcInvalidRequestException(String, Throwable)}.
-   * <p>
-   * Method under test: {@link JsonRpcInvalidRequestException#JsonRpcInvalidRequestException(String, Throwable)}
+   *
+   * <p>Method under test: {@link
+   * JsonRpcInvalidRequestException#JsonRpcInvalidRequestException(String, Throwable)}
    */
   @Test
   @Category(MaintainedByDiffblue.class)
@@ -61,8 +64,8 @@ public class JsonRpcInvalidRequestExceptionDiffblueTest {
     Throwable cause = new Throwable();
 
     // Act
-    JsonRpcInvalidRequestException actualJsonRpcInvalidRequestException = new JsonRpcInvalidRequestException(
-        "An error occurred", cause);
+    JsonRpcInvalidRequestException actualJsonRpcInvalidRequestException =
+        new JsonRpcInvalidRequestException("An error occurred", cause);
 
     // Assert
     assertEquals("An error occurred", actualJsonRpcInvalidRequestException.getLocalizedMessage());

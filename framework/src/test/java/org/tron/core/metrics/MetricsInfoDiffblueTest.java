@@ -14,8 +14,9 @@ import org.tron.core.metrics.node.NodeInfo;
 public class MetricsInfoDiffblueTest {
   /**
    * Test getters and setters.
-   * <p>
-   * Methods under test:
+   *
+   * <p>Methods under test:
+   *
    * <ul>
    *   <li>default or parameterless constructor of {@link MetricsInfo}
    *   <li>{@link MetricsInfo#setInterval(long)}
@@ -29,11 +30,18 @@ public class MetricsInfoDiffblueTest {
    */
   @Test
   @Category(MaintainedByDiffblue.class)
-  @MethodsUnderTest({"void MetricsInfo.<init>()", "BlockChainInfo MetricsInfo.getBlockchain()",
-      "long MetricsInfo.getInterval()", "NetInfo MetricsInfo.getNet()", "NodeInfo MetricsInfo.getNode()",
-      "void MetricsInfo.setBlockchain(BlockChainInfo)", "void MetricsInfo.setInterval(long)",
-      "void MetricsInfo.setNet(NetInfo)", "void MetricsInfo.setNode(NodeInfo)",
-      "java.lang.String MetricsInfo.toString()"})
+  @MethodsUnderTest({
+    "void MetricsInfo.<init>()",
+    "BlockChainInfo MetricsInfo.getBlockchain()",
+    "long MetricsInfo.getInterval()",
+    "NetInfo MetricsInfo.getNet()",
+    "NodeInfo MetricsInfo.getNode()",
+    "void MetricsInfo.setBlockchain(BlockChainInfo)",
+    "void MetricsInfo.setInterval(long)",
+    "void MetricsInfo.setNet(NetInfo)",
+    "void MetricsInfo.setNode(NodeInfo)",
+    "java.lang.String MetricsInfo.toString()"
+  })
   public void testGettersAndSetters() {
     // Arrange and Act
     MetricsInfo actualMetricsInfo = new MetricsInfo();

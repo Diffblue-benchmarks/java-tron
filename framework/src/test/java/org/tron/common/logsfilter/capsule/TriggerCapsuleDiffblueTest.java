@@ -9,14 +9,14 @@ import org.junit.experimental.categories.Category;
 public class TriggerCapsuleDiffblueTest {
   /**
    * Test {@link TriggerCapsule#processTrigger()}.
-   * <p>
-   * Method under test: {@link TriggerCapsule#processTrigger()}
+   *
+   * <p>Method under test: {@link TriggerCapsule#processTrigger()}
    */
   @Test
   @Category(MaintainedByDiffblue.class)
   @MethodsUnderTest({"void TriggerCapsule.processTrigger()"})
   public void testProcessTrigger() {
     // Arrange, Act and Assert
-    assertThrows(UnsupportedOperationException.class, () -> (new TriggerCapsule()).processTrigger());
+    assertThrows(UnsupportedOperationException.class, () -> new TriggerCapsule().processTrigger());
   }
 }

@@ -16,8 +16,8 @@ import org.tron.protos.Protocol.MarketPrice;
 public class MarketPriceCapsuleDiffblueTest {
   /**
    * Test {@link MarketPriceCapsule#MarketPriceCapsule()}.
-   * <p>
-   * Method under test: {@link MarketPriceCapsule#MarketPriceCapsule()}
+   *
+   * <p>Method under test: {@link MarketPriceCapsule#MarketPriceCapsule()}
    */
   @Test
   @Category(MaintainedByDiffblue.class)
@@ -38,14 +38,15 @@ public class MarketPriceCapsuleDiffblueTest {
     assertTrue(instance.getAllFields().isEmpty());
     assertTrue(actualMarketPriceCapsule.isNull());
     assertTrue(instance.isInitialized());
-    assertEquals(instance, instance.getDefaultInstanceForType());
-    assertArrayEquals(new byte[]{}, actualMarketPriceCapsule.getData());
+    MarketPrice actualDefaultInstanceForType = instance.getDefaultInstanceForType();
+    assertEquals(instance, actualDefaultInstanceForType);
+    assertArrayEquals(new byte[] {}, actualMarketPriceCapsule.getData());
   }
 
   /**
    * Test {@link MarketPriceCapsule#MarketPriceCapsule(long, long)}.
-   * <p>
-   * Method under test: {@link MarketPriceCapsule#MarketPriceCapsule(long, long)}
+   *
+   * <p>Method under test: {@link MarketPriceCapsule#MarketPriceCapsule(long, long)}
    */
   @Test
   @Category(MaintainedByDiffblue.class)
@@ -66,20 +67,20 @@ public class MarketPriceCapsuleDiffblueTest {
     assertFalse(actualMarketPriceCapsule.isNull());
     assertTrue(instance.findInitializationErrors().isEmpty());
     assertTrue(instance.isInitialized());
-    assertArrayEquals(new byte[]{'\b', 1, 16, 1}, actualMarketPriceCapsule.getData());
+    assertArrayEquals(new byte[] {'\b', 1, 16, 1}, actualMarketPriceCapsule.getData());
   }
 
   /**
    * Test {@link MarketPriceCapsule#MarketPriceCapsule(byte[])}.
-   * <p>
-   * Method under test: {@link MarketPriceCapsule#MarketPriceCapsule(byte[])}
+   *
+   * <p>Method under test: {@link MarketPriceCapsule#MarketPriceCapsule(byte[])}
    */
   @Test
   @Category(MaintainedByDiffblue.class)
   @MethodsUnderTest({"void MarketPriceCapsule.<init>(byte[])"})
   public void testNewMarketPriceCapsule3() {
     // Arrange and Act
-    MarketPriceCapsule actualMarketPriceCapsule = new MarketPriceCapsule(new byte[]{});
+    MarketPriceCapsule actualMarketPriceCapsule = new MarketPriceCapsule(new byte[] {});
 
     // Assert
     MarketPrice instance = actualMarketPriceCapsule.getInstance();
@@ -93,80 +94,97 @@ public class MarketPriceCapsuleDiffblueTest {
     assertTrue(instance.getAllFields().isEmpty());
     assertTrue(actualMarketPriceCapsule.isNull());
     assertTrue(instance.isInitialized());
-    assertEquals(instance, instance.getDefaultInstanceForType());
-    assertArrayEquals(new byte[]{}, actualMarketPriceCapsule.getData());
+    MarketPrice actualDefaultInstanceForType = instance.getDefaultInstanceForType();
+    assertEquals(instance, actualDefaultInstanceForType);
+    assertArrayEquals(new byte[] {}, actualMarketPriceCapsule.getData());
   }
 
   /**
    * Test {@link MarketPriceCapsule#MarketPriceCapsule(byte[])}.
-   * <p>
-   * Method under test: {@link MarketPriceCapsule#MarketPriceCapsule(byte[])}
+   *
+   * <p>Method under test: {@link MarketPriceCapsule#MarketPriceCapsule(byte[])}
    */
   @Test
   @Category(MaintainedByDiffblue.class)
   @MethodsUnderTest({"void MarketPriceCapsule.<init>(byte[])"})
   public void testNewMarketPriceCapsule4() throws UnsupportedEncodingException {
     // Arrange, Act and Assert
-    assertNull((new MarketPriceCapsule("A\bA\bA\bA\bA\bA\bA\bA\b".getBytes("UTF-8"))).getInstance());
+    assertNull(new MarketPriceCapsule("A\bA\bA\bA\bA\bA\bA\bA\b".getBytes("UTF-8")).getInstance());
   }
 
   /**
    * Test {@link MarketPriceCapsule#MarketPriceCapsule(byte[])}.
+   *
    * <ul>
-   *   <li>When array of {@code byte} with minus one and {@code X}.</li>
+   *   <li>When array of {@code byte} with minus one and {@code X}.
    * </ul>
-   * <p>
-   * Method under test: {@link MarketPriceCapsule#MarketPriceCapsule(byte[])}
+   *
+   * <p>Method under test: {@link MarketPriceCapsule#MarketPriceCapsule(byte[])}
    */
   @Test
   @Category(MaintainedByDiffblue.class)
   @MethodsUnderTest({"void MarketPriceCapsule.<init>(byte[])"})
   public void testNewMarketPriceCapsule_whenArrayOfByteWithMinusOneAndX() {
-    // Arrange, Act and Assert
-    assertNull((new MarketPriceCapsule(new byte[]{-1, 'X', 'A', 'X', 'A', 'X', 'A', 'X'})).getInstance());
+    // Arrange and Act
+    MarketPriceCapsule actualMarketPriceCapsule =
+        new MarketPriceCapsule(new byte[] {-1, 'X', 'A', 'X', 'A', 'X', 'A', 'X'});
+
+    // Assert
+    assertNull(actualMarketPriceCapsule.getInstance());
   }
 
   /**
    * Test {@link MarketPriceCapsule#MarketPriceCapsule(byte[])}.
+   *
    * <ul>
-   *   <li>When array of {@code byte} with sixteen and {@code X}.</li>
+   *   <li>When array of {@code byte} with sixteen and {@code X}.
    * </ul>
-   * <p>
-   * Method under test: {@link MarketPriceCapsule#MarketPriceCapsule(byte[])}
+   *
+   * <p>Method under test: {@link MarketPriceCapsule#MarketPriceCapsule(byte[])}
    */
   @Test
   @Category(MaintainedByDiffblue.class)
   @MethodsUnderTest({"void MarketPriceCapsule.<init>(byte[])"})
   public void testNewMarketPriceCapsule_whenArrayOfByteWithSixteenAndX() {
-    // Arrange, Act and Assert
-    assertNull((new MarketPriceCapsule(new byte[]{16, 'X', 'A', 'X', 'A', 'X', 'A', 'X'})).getInstance());
+    // Arrange and Act
+    MarketPriceCapsule actualMarketPriceCapsule =
+        new MarketPriceCapsule(new byte[] {16, 'X', 'A', 'X', 'A', 'X', 'A', 'X'});
+
+    // Assert
+    assertNull(actualMarketPriceCapsule.getInstance());
   }
 
   /**
    * Test {@link MarketPriceCapsule#MarketPriceCapsule(byte[])}.
+   *
    * <ul>
-   *   <li>When array of {@code byte} with zero and {@code X}.</li>
-   *   <li>Then return Instance is {@code null}.</li>
+   *   <li>When array of {@code byte} with zero and {@code X}.
+   *   <li>Then return Instance is {@code null}.
    * </ul>
-   * <p>
-   * Method under test: {@link MarketPriceCapsule#MarketPriceCapsule(byte[])}
+   *
+   * <p>Method under test: {@link MarketPriceCapsule#MarketPriceCapsule(byte[])}
    */
   @Test
   @Category(MaintainedByDiffblue.class)
   @MethodsUnderTest({"void MarketPriceCapsule.<init>(byte[])"})
   public void testNewMarketPriceCapsule_whenArrayOfByteWithZeroAndX_thenReturnInstanceIsNull() {
-    // Arrange, Act and Assert
-    assertNull((new MarketPriceCapsule(new byte[]{0, 'X', 'A', 'X', 'A', 'X', 'A', 'X'})).getInstance());
+    // Arrange and Act
+    MarketPriceCapsule actualMarketPriceCapsule =
+        new MarketPriceCapsule(new byte[] {0, 'X', 'A', 'X', 'A', 'X', 'A', 'X'});
+
+    // Assert
+    assertNull(actualMarketPriceCapsule.getInstance());
   }
 
   /**
    * Test {@link MarketPriceCapsule#MarketPriceCapsule(byte[])}.
+   *
    * <ul>
-   *   <li>When {@code AXAXAXAX} Bytes is {@code UTF-8}.</li>
-   *   <li>Then return Instance is {@code null}.</li>
+   *   <li>When {@code AXAXAXAX} Bytes is {@code UTF-8}.
+   *   <li>Then return Instance is {@code null}.
    * </ul>
-   * <p>
-   * Method under test: {@link MarketPriceCapsule#MarketPriceCapsule(byte[])}
+   *
+   * <p>Method under test: {@link MarketPriceCapsule#MarketPriceCapsule(byte[])}
    */
   @Test
   @Category(MaintainedByDiffblue.class)
@@ -174,35 +192,68 @@ public class MarketPriceCapsuleDiffblueTest {
   public void testNewMarketPriceCapsule_whenAxaxaxaxBytesIsUtf8_thenReturnInstanceIsNull()
       throws UnsupportedEncodingException {
     // Arrange, Act and Assert
-    assertNull((new MarketPriceCapsule("AXAXAXAX".getBytes("UTF-8"))).getInstance());
+    assertNull(new MarketPriceCapsule("AXAXAXAX".getBytes("UTF-8")).getInstance());
   }
 
   /**
    * Test {@link MarketPriceCapsule#MarketPriceCapsule(byte[])}.
+   *
    * <ul>
-   *   <li>When {@code XAXAXAX} Bytes is {@code UTF-8}.</li>
-   *   <li>Then return Instance is {@code null}.</li>
+   *   <li>When backspace.
+   *   <li>Then return Instance is {@code null}.
    * </ul>
-   * <p>
-   * Method under test: {@link MarketPriceCapsule#MarketPriceCapsule(byte[])}
+   *
+   * <p>Method under test: {@link MarketPriceCapsule#MarketPriceCapsule(byte[])}
    */
   @Test
   @Category(MaintainedByDiffblue.class)
   @MethodsUnderTest({"void MarketPriceCapsule.<init>(byte[])"})
-  public void testNewMarketPriceCapsule_whenXaxaxaxBytesIsUtf8_thenReturnInstanceIsNull()
-      throws UnsupportedEncodingException {
-    // Arrange, Act and Assert
-    assertNull((new MarketPriceCapsule("\bXAXAXAX".getBytes("UTF-8"))).getInstance());
+  public void testNewMarketPriceCapsule_whenBackspace_thenReturnInstanceIsNull() {
+    // Arrange and Act
+    MarketPriceCapsule actualMarketPriceCapsule =
+        new MarketPriceCapsule(
+            new byte[] {
+              'A', '\b', 'A', '\b', 'A', '\b', 'A', '\b', 'A', '\b', 'A', '\b', 'A', '\b', 'A', 16
+            });
+
+    // Assert
+    assertNull(actualMarketPriceCapsule.getInstance());
   }
 
   /**
    * Test {@link MarketPriceCapsule#MarketPriceCapsule(byte[])}.
+   *
    * <ul>
-   *   <li>When {@code XXAXAXAX} Bytes is {@code UTF-8}.</li>
-   *   <li>Then return Instance is {@code null}.</li>
+   *   <li>When backspace.
+   *   <li>Then return Instance is {@code null}.
    * </ul>
-   * <p>
-   * Method under test: {@link MarketPriceCapsule#MarketPriceCapsule(byte[])}
+   *
+   * <p>Method under test: {@link MarketPriceCapsule#MarketPriceCapsule(byte[])}
+   */
+  @Test
+  @Category(MaintainedByDiffblue.class)
+  @MethodsUnderTest({"void MarketPriceCapsule.<init>(byte[])"})
+  public void testNewMarketPriceCapsule_whenBackspace_thenReturnInstanceIsNull2() {
+    // Arrange and Act
+    MarketPriceCapsule actualMarketPriceCapsule =
+        new MarketPriceCapsule(
+            new byte[] {
+              'A', '\b', 'A', '\b', 'A', '\b', 'A', '\b', 'A', '\b', 'A', '\b', 'A', '\b', 'A', -1
+            });
+
+    // Assert
+    assertNull(actualMarketPriceCapsule.getInstance());
+  }
+
+  /**
+   * Test {@link MarketPriceCapsule#MarketPriceCapsule(byte[])}.
+   *
+   * <ul>
+   *   <li>When {@code XXAXAXAX} Bytes is {@code UTF-8}.
+   *   <li>Then return Instance is {@code null}.
+   * </ul>
+   *
+   * <p>Method under test: {@link MarketPriceCapsule#MarketPriceCapsule(byte[])}
    */
   @Test
   @Category(MaintainedByDiffblue.class)
@@ -210,26 +261,26 @@ public class MarketPriceCapsuleDiffblueTest {
   public void testNewMarketPriceCapsule_whenXxaxaxaxBytesIsUtf8_thenReturnInstanceIsNull()
       throws UnsupportedEncodingException {
     // Arrange, Act and Assert
-    assertNull((new MarketPriceCapsule("XXAXAXAX".getBytes("UTF-8"))).getInstance());
+    assertNull(new MarketPriceCapsule("XXAXAXAX".getBytes("UTF-8")).getInstance());
   }
 
   /**
    * Test {@link MarketPriceCapsule#getSellTokenQuantity()}.
-   * <p>
-   * Method under test: {@link MarketPriceCapsule#getSellTokenQuantity()}
+   *
+   * <p>Method under test: {@link MarketPriceCapsule#getSellTokenQuantity()}
    */
   @Test
   @Category(MaintainedByDiffblue.class)
   @MethodsUnderTest({"long MarketPriceCapsule.getSellTokenQuantity()"})
   public void testGetSellTokenQuantity() {
     // Arrange, Act and Assert
-    assertEquals(0L, (new MarketPriceCapsule()).getSellTokenQuantity());
+    assertEquals(0L, new MarketPriceCapsule().getSellTokenQuantity());
   }
 
   /**
    * Test {@link MarketPriceCapsule#setSellTokenQuantity(long)}.
-   * <p>
-   * Method under test: {@link MarketPriceCapsule#setSellTokenQuantity(long)}
+   *
+   * <p>Method under test: {@link MarketPriceCapsule#setSellTokenQuantity(long)}
    */
   @Test
   @Category(MaintainedByDiffblue.class)
@@ -249,16 +300,17 @@ public class MarketPriceCapsuleDiffblueTest {
     assertEquals(2, instance.getAllFields().size());
     assertEquals(4, instance.getSerializedSize());
     assertFalse(marketPriceCapsule.isNull());
-    assertArrayEquals(new byte[]{'\b', 1, 16, 1}, marketPriceCapsule.getData());
+    assertArrayEquals(new byte[] {'\b', 1, 16, 1}, marketPriceCapsule.getData());
   }
 
   /**
    * Test {@link MarketPriceCapsule#setSellTokenQuantity(long)}.
+   *
    * <ul>
-   *   <li>Then {@link MarketPriceCapsule#MarketPriceCapsule()} Instance AllFields size is one.</li>
+   *   <li>Then {@link MarketPriceCapsule#MarketPriceCapsule()} Instance AllFields size is one.
    * </ul>
-   * <p>
-   * Method under test: {@link MarketPriceCapsule#setSellTokenQuantity(long)}
+   *
+   * <p>Method under test: {@link MarketPriceCapsule#setSellTokenQuantity(long)}
    */
   @Test
   @Category(MaintainedByDiffblue.class)
@@ -278,26 +330,26 @@ public class MarketPriceCapsuleDiffblueTest {
     assertEquals(2, instance.getDescriptorForType().getFields().size());
     assertEquals(2, instance.getSerializedSize());
     assertFalse(marketPriceCapsule.isNull());
-    assertArrayEquals(new byte[]{'\b', 1}, marketPriceCapsule.getData());
+    assertArrayEquals(new byte[] {'\b', 1}, marketPriceCapsule.getData());
   }
 
   /**
    * Test {@link MarketPriceCapsule#getBuyTokenQuantity()}.
-   * <p>
-   * Method under test: {@link MarketPriceCapsule#getBuyTokenQuantity()}
+   *
+   * <p>Method under test: {@link MarketPriceCapsule#getBuyTokenQuantity()}
    */
   @Test
   @Category(MaintainedByDiffblue.class)
   @MethodsUnderTest({"long MarketPriceCapsule.getBuyTokenQuantity()"})
   public void testGetBuyTokenQuantity() {
     // Arrange, Act and Assert
-    assertEquals(0L, (new MarketPriceCapsule()).getBuyTokenQuantity());
+    assertEquals(0L, new MarketPriceCapsule().getBuyTokenQuantity());
   }
 
   /**
    * Test {@link MarketPriceCapsule#setBuyTokenQuantity(long)}.
-   * <p>
-   * Method under test: {@link MarketPriceCapsule#setBuyTokenQuantity(long)}
+   *
+   * <p>Method under test: {@link MarketPriceCapsule#setBuyTokenQuantity(long)}
    */
   @Test
   @Category(MaintainedByDiffblue.class)
@@ -315,16 +367,17 @@ public class MarketPriceCapsuleDiffblueTest {
     assertEquals(2, instance.getAllFields().size());
     assertEquals(4, instance.getSerializedSize());
     assertFalse(marketPriceCapsule.isNull());
-    assertArrayEquals(new byte[]{'\b', 2, 16, '*'}, marketPriceCapsule.getData());
+    assertArrayEquals(new byte[] {'\b', 2, 16, '*'}, marketPriceCapsule.getData());
   }
 
   /**
    * Test {@link MarketPriceCapsule#setBuyTokenQuantity(long)}.
+   *
    * <ul>
-   *   <li>Then {@link MarketPriceCapsule#MarketPriceCapsule()} Instance AllFields size is one.</li>
+   *   <li>Then {@link MarketPriceCapsule#MarketPriceCapsule()} Instance AllFields size is one.
    * </ul>
-   * <p>
-   * Method under test: {@link MarketPriceCapsule#setBuyTokenQuantity(long)}
+   *
+   * <p>Method under test: {@link MarketPriceCapsule#setBuyTokenQuantity(long)}
    */
   @Test
   @Category(MaintainedByDiffblue.class)
@@ -342,227 +395,140 @@ public class MarketPriceCapsuleDiffblueTest {
     assertEquals(2, instance.getDescriptorForType().getFields().size());
     assertEquals(2, instance.getSerializedSize());
     assertFalse(marketPriceCapsule.isNull());
-    assertArrayEquals(new byte[]{16, '*'}, marketPriceCapsule.getData());
+    assertArrayEquals(new byte[] {16, '*'}, marketPriceCapsule.getData());
   }
 
   /**
    * Test {@link MarketPriceCapsule#getKey(byte[], byte[])}.
-   * <p>
-   * Method under test: {@link MarketPriceCapsule#getKey(byte[], byte[])}
-   */
-  @Test
-  @Category(MaintainedByDiffblue.class)
-  @MethodsUnderTest({"byte[] MarketPriceCapsule.getKey(byte[], byte[])"})
-  public void testGetKey() throws UnsupportedEncodingException {
-    // Arrange
-    MarketPriceCapsule marketPriceCapsule = new MarketPriceCapsule(1L, 1L);
-    byte[] sellTokenId = "AXAXAXAX".getBytes("UTF-8");
-
-    // Act and Assert
-    assertArrayEquals(
-        new byte[]{'A', 'X', 'A', 'X', 'A', 'X', 'A', 'X', 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 'A', 'X', 'A', 'X', 'A',
-            'X', 'A', 'X', 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 1, 0, 0, 0, 0, 0, 0, 0, 1},
-        marketPriceCapsule.getKey(sellTokenId, "AXAXAXAX".getBytes("UTF-8")));
-  }
-
-  /**
-   * Test {@link MarketPriceCapsule#getKey(byte[], byte[])}.
+   *
    * <ul>
-   *   <li>Given {@link MarketPriceCapsule#MarketPriceCapsule()} BuyTokenQuantity is forty-two.</li>
+   *   <li>Given {@link MarketPriceCapsule#MarketPriceCapsule()}.
+   *   <li>Then return empty array of {@code byte}.
    * </ul>
-   * <p>
-   * Method under test: {@link MarketPriceCapsule#getKey(byte[], byte[])}
+   *
+   * <p>Method under test: {@link MarketPriceCapsule#getKey(byte[], byte[])}
    */
   @Test
   @Category(MaintainedByDiffblue.class)
   @MethodsUnderTest({"byte[] MarketPriceCapsule.getKey(byte[], byte[])"})
-  public void testGetKey_givenMarketPriceCapsuleBuyTokenQuantityIsFortyTwo() throws UnsupportedEncodingException {
-    // Arrange
-    MarketPriceCapsule marketPriceCapsule = new MarketPriceCapsule();
-    marketPriceCapsule.setBuyTokenQuantity(42L);
-    byte[] sellTokenId = "AXAXAXAX".getBytes("UTF-8");
-
-    // Act and Assert
-    assertArrayEquals(
-        new byte[]{'A', 'X', 'A', 'X', 'A', 'X', 'A', 'X', 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 'A', 'X', 'A', 'X', 'A',
-            'X', 'A', 'X', 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, '*'},
-        marketPriceCapsule.getKey(sellTokenId, "AXAXAXAX".getBytes("UTF-8")));
-  }
-
-  /**
-   * Test {@link MarketPriceCapsule#getKey(byte[], byte[])}.
-   * <ul>
-   *   <li>Given {@link MarketPriceCapsule#MarketPriceCapsule()} SellTokenQuantity is one.</li>
-   * </ul>
-   * <p>
-   * Method under test: {@link MarketPriceCapsule#getKey(byte[], byte[])}
-   */
-  @Test
-  @Category(MaintainedByDiffblue.class)
-  @MethodsUnderTest({"byte[] MarketPriceCapsule.getKey(byte[], byte[])"})
-  public void testGetKey_givenMarketPriceCapsuleSellTokenQuantityIsOne() throws UnsupportedEncodingException {
-    // Arrange
-    MarketPriceCapsule marketPriceCapsule = new MarketPriceCapsule();
-    marketPriceCapsule.setSellTokenQuantity(1L);
-    byte[] sellTokenId = "AXAXAXAX".getBytes("UTF-8");
-
-    // Act and Assert
-    assertArrayEquals(
-        new byte[]{'A', 'X', 'A', 'X', 'A', 'X', 'A', 'X', 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 'A', 'X', 'A', 'X', 'A',
-            'X', 'A', 'X', 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 1, 0, 0, 0, 0, 0, 0, 0, 0},
-        marketPriceCapsule.getKey(sellTokenId, "AXAXAXAX".getBytes("UTF-8")));
-  }
-
-  /**
-   * Test {@link MarketPriceCapsule#getKey(byte[], byte[])}.
-   * <ul>
-   *   <li>Given {@link MarketPriceCapsule#MarketPriceCapsule()}.</li>
-   *   <li>Then return empty array of {@code byte}.</li>
-   * </ul>
-   * <p>
-   * Method under test: {@link MarketPriceCapsule#getKey(byte[], byte[])}
-   */
-  @Test
-  @Category(MaintainedByDiffblue.class)
-  @MethodsUnderTest({"byte[] MarketPriceCapsule.getKey(byte[], byte[])"})
-  public void testGetKey_givenMarketPriceCapsule_thenReturnEmptyArrayOfByte() throws UnsupportedEncodingException {
-    // Arrange
-    MarketPriceCapsule marketPriceCapsule = new MarketPriceCapsule();
-    byte[] sellTokenId = "AXAXAXAX".getBytes("UTF-8");
-
-    // Act and Assert
-    assertArrayEquals(new byte[]{}, marketPriceCapsule.getKey(sellTokenId, "AXAXAXAX".getBytes("UTF-8")));
-  }
-
-  /**
-   * Test {@link MarketPriceCapsule#isNull()}.
-   * <p>
-   * Method under test: {@link MarketPriceCapsule#isNull()}
-   */
-  @Test
-  @Category(MaintainedByDiffblue.class)
-  @MethodsUnderTest({"boolean MarketPriceCapsule.isNull()"})
-  public void testIsNull() {
+  public void testGetKey_givenMarketPriceCapsule_thenReturnEmptyArrayOfByte()
+      throws UnsupportedEncodingException {
     // Arrange, Act and Assert
-    assertFalse((new MarketPriceCapsule(1L, 1L)).isNull());
+    assertArrayEquals(
+        new byte[] {},
+        new MarketPriceCapsule()
+            .getKey("AXAXAXAX".getBytes("UTF-8"), "AXAXAXAX".getBytes("UTF-8")));
   }
 
   /**
-   * Test {@link MarketPriceCapsule#isNull()}.
+   * Test {@link MarketPriceCapsule#getKey(byte[], byte[])}.
+   *
    * <ul>
-   *   <li>Given {@link MarketPriceCapsule#MarketPriceCapsule()} BuyTokenQuantity is forty-two.</li>
-   *   <li>Then return {@code false}.</li>
+   *   <li>Then return array of {@code byte} with {@code A} and {@code X}.
    * </ul>
-   * <p>
-   * Method under test: {@link MarketPriceCapsule#isNull()}
+   *
+   * <p>Method under test: {@link MarketPriceCapsule#getKey(byte[], byte[])}
    */
   @Test
   @Category(MaintainedByDiffblue.class)
-  @MethodsUnderTest({"boolean MarketPriceCapsule.isNull()"})
-  public void testIsNull_givenMarketPriceCapsuleBuyTokenQuantityIsFortyTwo_thenReturnFalse() {
-    // Arrange
-    MarketPriceCapsule marketPriceCapsule = new MarketPriceCapsule();
-    marketPriceCapsule.setBuyTokenQuantity(42L);
-
-    // Act and Assert
-    assertFalse(marketPriceCapsule.isNull());
+  @MethodsUnderTest({"byte[] MarketPriceCapsule.getKey(byte[], byte[])"})
+  public void testGetKey_thenReturnArrayOfByteWithAAndX() throws UnsupportedEncodingException {
+    // Arrange, Act and Assert
+    assertArrayEquals(
+        new byte[] {
+          'A', 'X', 'A', 'X', 'A', 'X', 'A', 'X', 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 'A', 'X', 'A',
+          'X', 'A', 'X', 'A', 'X', 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 1, 0, 0, 0,
+          0, 0, 0, 0, 1
+        },
+        new MarketPriceCapsule(1L, 1L)
+            .getKey("AXAXAXAX".getBytes("UTF-8"), "AXAXAXAX".getBytes("UTF-8")));
   }
 
   /**
    * Test {@link MarketPriceCapsule#isNull()}.
+   *
    * <ul>
-   *   <li>Given {@link MarketPriceCapsule#MarketPriceCapsule()}.</li>
-   *   <li>Then return {@code true}.</li>
+   *   <li>Given {@link MarketPriceCapsule#MarketPriceCapsule()}.
+   *   <li>Then return {@code true}.
    * </ul>
-   * <p>
-   * Method under test: {@link MarketPriceCapsule#isNull()}
+   *
+   * <p>Method under test: {@link MarketPriceCapsule#isNull()}
    */
   @Test
   @Category(MaintainedByDiffblue.class)
   @MethodsUnderTest({"boolean MarketPriceCapsule.isNull()"})
   public void testIsNull_givenMarketPriceCapsule_thenReturnTrue() {
     // Arrange, Act and Assert
-    assertTrue((new MarketPriceCapsule()).isNull());
+    assertTrue(new MarketPriceCapsule().isNull());
   }
 
   /**
-   * Test {@link MarketPriceCapsule#getData()}.
-   * <p>
-   * Method under test: {@link MarketPriceCapsule#getData()}
-   */
-  @Test
-  @Category(MaintainedByDiffblue.class)
-  @MethodsUnderTest({"byte[] MarketPriceCapsule.getData()"})
-  public void testGetData() {
-    // Arrange, Act and Assert
-    assertArrayEquals(
-        new byte[]{'\b', -1, -1, -1, -1, -1, -1, -1, -1, -1, 1, 16, -1, -1, -1, -1, -1, -1, -1, -1, -1, 1},
-        (new MarketPriceCapsule(-1L, -1L)).getData());
-  }
-
-  /**
-   * Test {@link MarketPriceCapsule#getData()}.
-   * <p>
-   * Method under test: {@link MarketPriceCapsule#getData()}
-   */
-  @Test
-  @Category(MaintainedByDiffblue.class)
-  @MethodsUnderTest({"byte[] MarketPriceCapsule.getData()"})
-  public void testGetData2() {
-    // Arrange, Act and Assert
-    assertArrayEquals(
-        new byte[]{'\b', -1, -1, -1, -1, -1, -1, -1, -1, Byte.MAX_VALUE, 16, -1, -1, -1, -1, -1, -1, -1, -1, -1, 1},
-        (new MarketPriceCapsule(Long.MAX_VALUE, -1L)).getData());
-  }
-
-  /**
-   * Test {@link MarketPriceCapsule#getData()}.
+   * Test {@link MarketPriceCapsule#isNull()}.
+   *
    * <ul>
-   *   <li>Given {@link MarketPriceCapsule#MarketPriceCapsule()}.</li>
-   *   <li>Then return empty array of {@code byte}.</li>
+   *   <li>Then return {@code false}.
    * </ul>
-   * <p>
-   * Method under test: {@link MarketPriceCapsule#getData()}
+   *
+   * <p>Method under test: {@link MarketPriceCapsule#isNull()}
+   */
+  @Test
+  @Category(MaintainedByDiffblue.class)
+  @MethodsUnderTest({"boolean MarketPriceCapsule.isNull()"})
+  public void testIsNull_thenReturnFalse() {
+    // Arrange, Act and Assert
+    assertFalse(new MarketPriceCapsule(1L, 1L).isNull());
+  }
+
+  /**
+   * Test {@link MarketPriceCapsule#getData()}.
+   *
+   * <ul>
+   *   <li>Given {@link MarketPriceCapsule#MarketPriceCapsule()}.
+   *   <li>Then return empty array of {@code byte}.
+   * </ul>
+   *
+   * <p>Method under test: {@link MarketPriceCapsule#getData()}
    */
   @Test
   @Category(MaintainedByDiffblue.class)
   @MethodsUnderTest({"byte[] MarketPriceCapsule.getData()"})
   public void testGetData_givenMarketPriceCapsule_thenReturnEmptyArrayOfByte() {
     // Arrange, Act and Assert
-    assertArrayEquals(new byte[]{}, (new MarketPriceCapsule()).getData());
+    assertArrayEquals(new byte[] {}, new MarketPriceCapsule().getData());
   }
 
   /**
    * Test {@link MarketPriceCapsule#getData()}.
+   *
    * <ul>
-   *   <li>Then return array of {@code byte} with sixteen and {@code *}.</li>
+   *   <li>Then return array of {@code byte} with backspace and minus one.
    * </ul>
-   * <p>
-   * Method under test: {@link MarketPriceCapsule#getData()}
+   *
+   * <p>Method under test: {@link MarketPriceCapsule#getData()}
    */
   @Test
   @Category(MaintainedByDiffblue.class)
   @MethodsUnderTest({"byte[] MarketPriceCapsule.getData()"})
-  public void testGetData_thenReturnArrayOfByteWithSixteenAndAsterisk() {
-    // Arrange
-    MarketPriceCapsule marketPriceCapsule = new MarketPriceCapsule();
-    marketPriceCapsule.setBuyTokenQuantity(42L);
-
-    // Act and Assert
-    assertArrayEquals(new byte[]{16, '*'}, marketPriceCapsule.getData());
+  public void testGetData_thenReturnArrayOfByteWithBackspaceAndMinusOne() {
+    // Arrange, Act and Assert
+    assertArrayEquals(
+        new byte[] {
+          '\b', -1, -1, -1, -1, -1, -1, -1, -1, -1, 1, 16, -1, -1, -1, -1, -1, -1, -1, -1, -1, 1
+        },
+        new MarketPriceCapsule(-1L, -1L).getData());
   }
 
   /**
    * Test {@link MarketPriceCapsule#getInstance()}.
-   * <p>
-   * Method under test: {@link MarketPriceCapsule#getInstance()}
+   *
+   * <p>Method under test: {@link MarketPriceCapsule#getInstance()}
    */
   @Test
   @Category(MaintainedByDiffblue.class)
   @MethodsUnderTest({"MarketPrice MarketPriceCapsule.getInstance()"})
   public void testGetInstance() {
     // Arrange and Act
-    MarketPrice actualInstance = (new MarketPriceCapsule()).getInstance();
+    MarketPrice actualInstance = new MarketPriceCapsule().getInstance();
 
     // Assert
     assertEquals("", actualInstance.getInitializationErrorString());
@@ -572,6 +538,7 @@ public class MarketPriceCapsuleDiffblueTest {
     assertTrue(actualInstance.findInitializationErrors().isEmpty());
     assertTrue(actualInstance.getAllFields().isEmpty());
     assertTrue(actualInstance.isInitialized());
-    assertEquals(actualInstance, actualInstance.getDefaultInstanceForType());
+    MarketPrice actualDefaultInstanceForType = actualInstance.getDefaultInstanceForType();
+    assertEquals(actualInstance, actualDefaultInstanceForType);
   }
 }

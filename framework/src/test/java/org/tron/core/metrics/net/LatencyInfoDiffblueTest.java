@@ -14,12 +14,14 @@ import org.junit.experimental.categories.Category;
 public class LatencyInfoDiffblueTest {
   /**
    * Test {@link LatencyInfo#equals(Object)}, and {@link LatencyInfo#hashCode()}.
+   *
    * <ul>
-   *   <li>When other is equal.</li>
-   *   <li>Then return equal.</li>
+   *   <li>When other is equal.
+   *   <li>Then return equal.
    * </ul>
-   * <p>
-   * Methods under test:
+   *
+   * <p>Methods under test:
+   *
    * <ul>
    *   <li>{@link LatencyInfo#equals(Object)}
    *   <li>{@link LatencyInfo#hashCode()}
@@ -52,18 +54,19 @@ public class LatencyInfoDiffblueTest {
 
     // Act and Assert
     assertEquals(latencyInfo, latencyInfo2);
-    int expectedHashCodeResult = latencyInfo.hashCode();
-    assertEquals(expectedHashCodeResult, latencyInfo2.hashCode());
+    assertEquals(latencyInfo.hashCode(), latencyInfo2.hashCode());
   }
 
   /**
    * Test {@link LatencyInfo#equals(Object)}, and {@link LatencyInfo#hashCode()}.
+   *
    * <ul>
-   *   <li>When other is same.</li>
-   *   <li>Then return equal.</li>
+   *   <li>When other is same.
+   *   <li>Then return equal.
    * </ul>
-   * <p>
-   * Methods under test:
+   *
+   * <p>Methods under test:
+   *
    * <ul>
    *   <li>{@link LatencyInfo#equals(Object)}
    *   <li>{@link LatencyInfo#hashCode()}
@@ -92,12 +95,13 @@ public class LatencyInfoDiffblueTest {
 
   /**
    * Test {@link LatencyInfo#equals(Object)}.
+   *
    * <ul>
-   *   <li>When other is different.</li>
-   *   <li>Then return not equal.</li>
+   *   <li>When other is different.
+   *   <li>Then return not equal.
    * </ul>
-   * <p>
-   * Method under test: {@link LatencyInfo#equals(Object)}
+   *
+   * <p>Method under test: {@link LatencyInfo#equals(Object)}
    */
   @Test
   @Category(MaintainedByDiffblue.class)
@@ -130,12 +134,13 @@ public class LatencyInfoDiffblueTest {
 
   /**
    * Test {@link LatencyInfo#equals(Object)}.
+   *
    * <ul>
-   *   <li>When other is different.</li>
-   *   <li>Then return not equal.</li>
+   *   <li>When other is different.
+   *   <li>Then return not equal.
    * </ul>
-   * <p>
-   * Method under test: {@link LatencyInfo#equals(Object)}
+   *
+   * <p>Method under test: {@link LatencyInfo#equals(Object)}
    */
   @Test
   @Category(MaintainedByDiffblue.class)
@@ -168,12 +173,13 @@ public class LatencyInfoDiffblueTest {
 
   /**
    * Test {@link LatencyInfo#equals(Object)}.
+   *
    * <ul>
-   *   <li>When other is different.</li>
-   *   <li>Then return not equal.</li>
+   *   <li>When other is different.
+   *   <li>Then return not equal.
    * </ul>
-   * <p>
-   * Method under test: {@link LatencyInfo#equals(Object)}
+   *
+   * <p>Method under test: {@link LatencyInfo#equals(Object)}
    */
   @Test
   @Category(MaintainedByDiffblue.class)
@@ -206,12 +212,13 @@ public class LatencyInfoDiffblueTest {
 
   /**
    * Test {@link LatencyInfo#equals(Object)}.
+   *
    * <ul>
-   *   <li>When other is different.</li>
-   *   <li>Then return not equal.</li>
+   *   <li>When other is different.
+   *   <li>Then return not equal.
    * </ul>
-   * <p>
-   * Method under test: {@link LatencyInfo#equals(Object)}
+   *
+   * <p>Method under test: {@link LatencyInfo#equals(Object)}
    */
   @Test
   @Category(MaintainedByDiffblue.class)
@@ -257,12 +264,13 @@ public class LatencyInfoDiffblueTest {
 
   /**
    * Test {@link LatencyInfo#equals(Object)}.
+   *
    * <ul>
-   *   <li>When other is different.</li>
-   *   <li>Then return not equal.</li>
+   *   <li>When other is different.
+   *   <li>Then return not equal.
    * </ul>
-   * <p>
-   * Method under test: {@link LatencyInfo#equals(Object)}
+   *
+   * <p>Method under test: {@link LatencyInfo#equals(Object)}
    */
   @Test
   @Category(MaintainedByDiffblue.class)
@@ -295,12 +303,13 @@ public class LatencyInfoDiffblueTest {
 
   /**
    * Test {@link LatencyInfo#equals(Object)}.
+   *
    * <ul>
-   *   <li>When other is different.</li>
-   *   <li>Then return not equal.</li>
+   *   <li>When other is different.
+   *   <li>Then return not equal.
    * </ul>
-   * <p>
-   * Method under test: {@link LatencyInfo#equals(Object)}
+   *
+   * <p>Method under test: {@link LatencyInfo#equals(Object)}
    */
   @Test
   @Category(MaintainedByDiffblue.class)
@@ -333,12 +342,13 @@ public class LatencyInfoDiffblueTest {
 
   /**
    * Test {@link LatencyInfo#equals(Object)}.
+   *
    * <ul>
-   *   <li>When other is different.</li>
-   *   <li>Then return not equal.</li>
+   *   <li>When other is different.
+   *   <li>Then return not equal.
    * </ul>
-   * <p>
-   * Method under test: {@link LatencyInfo#equals(Object)}
+   *
+   * <p>Method under test: {@link LatencyInfo#equals(Object)}
    */
   @Test
   @Category(MaintainedByDiffblue.class)
@@ -371,12 +381,13 @@ public class LatencyInfoDiffblueTest {
 
   /**
    * Test {@link LatencyInfo#equals(Object)}.
+   *
    * <ul>
-   *   <li>When other is different.</li>
-   *   <li>Then return not equal.</li>
+   *   <li>When other is different.
+   *   <li>Then return not equal.
    * </ul>
-   * <p>
-   * Method under test: {@link LatencyInfo#equals(Object)}
+   *
+   * <p>Method under test: {@link LatencyInfo#equals(Object)}
    */
   @Test
   @Category(MaintainedByDiffblue.class)
@@ -409,12 +420,13 @@ public class LatencyInfoDiffblueTest {
 
   /**
    * Test {@link LatencyInfo#equals(Object)}.
+   *
    * <ul>
-   *   <li>When other is {@code null}.</li>
-   *   <li>Then return not equal.</li>
+   *   <li>When other is {@code null}.
+   *   <li>Then return not equal.
    * </ul>
-   * <p>
-   * Method under test: {@link LatencyInfo#equals(Object)}
+   *
+   * <p>Method under test: {@link LatencyInfo#equals(Object)}
    */
   @Test
   @Category(MaintainedByDiffblue.class)
@@ -437,12 +449,13 @@ public class LatencyInfoDiffblueTest {
 
   /**
    * Test {@link LatencyInfo#equals(Object)}.
+   *
    * <ul>
-   *   <li>When other is wrong type.</li>
-   *   <li>Then return not equal.</li>
+   *   <li>When other is wrong type.
+   *   <li>Then return not equal.
    * </ul>
-   * <p>
-   * Method under test: {@link LatencyInfo#equals(Object)}
+   *
+   * <p>Method under test: {@link LatencyInfo#equals(Object)}
    */
   @Test
   @Category(MaintainedByDiffblue.class)
@@ -465,8 +478,9 @@ public class LatencyInfoDiffblueTest {
 
   /**
    * Test getters and setters.
-   * <p>
-   * Methods under test:
+   *
+   * <p>Methods under test:
+   *
    * <ul>
    *   <li>default or parameterless constructor of {@link LatencyInfo}
    *   <li>{@link LatencyInfo#setDelay1S(int)}
@@ -490,12 +504,26 @@ public class LatencyInfoDiffblueTest {
    */
   @Test
   @Category(MaintainedByDiffblue.class)
-  @MethodsUnderTest({"void LatencyInfo.<init>()", "int LatencyInfo.getDelay1S()", "int LatencyInfo.getDelay2S()",
-      "int LatencyInfo.getDelay3S()", "List LatencyInfo.getDetail()", "int LatencyInfo.getTop75()",
-      "int LatencyInfo.getTop95()", "int LatencyInfo.getTop99()", "int LatencyInfo.getTotalCount()",
-      "void LatencyInfo.setDelay1S(int)", "void LatencyInfo.setDelay2S(int)", "void LatencyInfo.setDelay3S(int)",
-      "void LatencyInfo.setDetail(List)", "void LatencyInfo.setTop75(int)", "void LatencyInfo.setTop95(int)",
-      "void LatencyInfo.setTop99(int)", "void LatencyInfo.setTotalCount(int)", "String LatencyInfo.toString()"})
+  @MethodsUnderTest({
+    "void LatencyInfo.<init>()",
+    "int LatencyInfo.getDelay1S()",
+    "int LatencyInfo.getDelay2S()",
+    "int LatencyInfo.getDelay3S()",
+    "List LatencyInfo.getDetail()",
+    "int LatencyInfo.getTop75()",
+    "int LatencyInfo.getTop95()",
+    "int LatencyInfo.getTop99()",
+    "int LatencyInfo.getTotalCount()",
+    "void LatencyInfo.setDelay1S(int)",
+    "void LatencyInfo.setDelay2S(int)",
+    "void LatencyInfo.setDelay3S(int)",
+    "void LatencyInfo.setDetail(List)",
+    "void LatencyInfo.setTop75(int)",
+    "void LatencyInfo.setTop95(int)",
+    "void LatencyInfo.setTop99(int)",
+    "void LatencyInfo.setTotalCount(int)",
+    "String LatencyInfo.toString()"
+  })
   public void testGettersAndSetters() {
     // Arrange and Act
     LatencyInfo actualLatencyInfo = new LatencyInfo();
@@ -518,7 +546,8 @@ public class LatencyInfoDiffblueTest {
     int actualTop99 = actualLatencyInfo.getTop99();
 
     // Assert
-    assertEquals("LatencyInfo(top99=1, top95=1, top75=1, totalCount=3, delay1S=1, delay2S=1, delay3S=1, detail=[])",
+    assertEquals(
+        "LatencyInfo(top99=1, top95=1, top75=1, totalCount=3, delay1S=1, delay2S=1, delay3S=1, detail=[])",
         actualToStringResult);
     assertEquals(1, actualDelay1S);
     assertEquals(1, actualDelay2S);

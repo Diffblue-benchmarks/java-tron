@@ -12,8 +12,8 @@ import org.junit.experimental.categories.Category;
 public class BlockResultDiffblueTest {
   /**
    * Test {@link BlockResult#BlockResult()}.
-   * <p>
-   * Method under test: {@link BlockResult#BlockResult()}
+   *
+   * <p>Method under test: {@link BlockResult#BlockResult()}
    */
   @Test
   @Category(MaintainedByDiffblue.class)
@@ -24,9 +24,10 @@ public class BlockResultDiffblueTest {
 
     // Assert
     assertEquals("0x0", actualBlockResult.getBaseFeePerGas());
-    assertEquals("0x0000000000000000000000000000000000000000000000000000000000000000", actualBlockResult.getMixHash());
+    assertEquals(
+        "0x0000000000000000000000000000000000000000000000000000000000000000",
+        actualBlockResult.getMixHash());
     assertNull(actualBlockResult.getTransactions());
-    assertNull(actualBlockResult.getUncles());
     assertNull(actualBlockResult.getDifficulty());
     assertNull(actualBlockResult.getExtraData());
     assertNull(actualBlockResult.getGasLimit());
@@ -44,12 +45,14 @@ public class BlockResultDiffblueTest {
     assertNull(actualBlockResult.getTimestamp());
     assertNull(actualBlockResult.getTotalDifficulty());
     assertNull(actualBlockResult.getTransactionsRoot());
+    assertNull(actualBlockResult.getUncles());
   }
 
   /**
    * Test getters and setters.
-   * <p>
-   * Methods under test:
+   *
+   * <p>Methods under test:
+   *
    * <ul>
    *   <li>{@link BlockResult#setBaseFeePerGas(String)}
    *   <li>{@link BlockResult#setDifficulty(String)}
@@ -97,24 +100,50 @@ public class BlockResultDiffblueTest {
    */
   @Test
   @Category(MaintainedByDiffblue.class)
-  @MethodsUnderTest({"String BlockResult.getBaseFeePerGas()", "String BlockResult.getDifficulty()",
-      "String BlockResult.getExtraData()", "String BlockResult.getGasLimit()", "String BlockResult.getGasUsed()",
-      "String BlockResult.getHash()", "String BlockResult.getLogsBloom()", "String BlockResult.getMiner()",
-      "String BlockResult.getMixHash()", "String BlockResult.getNonce()", "String BlockResult.getNumber()",
-      "String BlockResult.getParentHash()", "String BlockResult.getReceiptsRoot()",
-      "String BlockResult.getSha3Uncles()", "String BlockResult.getSize()", "String BlockResult.getStateRoot()",
-      "String BlockResult.getTimestamp()", "String BlockResult.getTotalDifficulty()",
-      "Object[] BlockResult.getTransactions()", "String BlockResult.getTransactionsRoot()",
-      "String[] BlockResult.getUncles()", "void BlockResult.setBaseFeePerGas(String)",
-      "void BlockResult.setDifficulty(String)", "void BlockResult.setExtraData(String)",
-      "void BlockResult.setGasLimit(String)", "void BlockResult.setGasUsed(String)", "void BlockResult.setHash(String)",
-      "void BlockResult.setLogsBloom(String)", "void BlockResult.setMiner(String)",
-      "void BlockResult.setMixHash(String)", "void BlockResult.setNonce(String)", "void BlockResult.setNumber(String)",
-      "void BlockResult.setParentHash(String)", "void BlockResult.setReceiptsRoot(String)",
-      "void BlockResult.setSha3Uncles(String)", "void BlockResult.setSize(String)",
-      "void BlockResult.setStateRoot(String)", "void BlockResult.setTimestamp(String)",
-      "void BlockResult.setTotalDifficulty(String)", "void BlockResult.setTransactions(Object[])",
-      "void BlockResult.setTransactionsRoot(String)", "void BlockResult.setUncles(String[])"})
+  @MethodsUnderTest({
+    "String BlockResult.getBaseFeePerGas()",
+    "String BlockResult.getDifficulty()",
+    "String BlockResult.getExtraData()",
+    "String BlockResult.getGasLimit()",
+    "String BlockResult.getGasUsed()",
+    "String BlockResult.getHash()",
+    "String BlockResult.getLogsBloom()",
+    "String BlockResult.getMiner()",
+    "String BlockResult.getMixHash()",
+    "String BlockResult.getNonce()",
+    "String BlockResult.getNumber()",
+    "String BlockResult.getParentHash()",
+    "String BlockResult.getReceiptsRoot()",
+    "String BlockResult.getSha3Uncles()",
+    "String BlockResult.getSize()",
+    "String BlockResult.getStateRoot()",
+    "String BlockResult.getTimestamp()",
+    "String BlockResult.getTotalDifficulty()",
+    "Object[] BlockResult.getTransactions()",
+    "String BlockResult.getTransactionsRoot()",
+    "String[] BlockResult.getUncles()",
+    "void BlockResult.setBaseFeePerGas(String)",
+    "void BlockResult.setDifficulty(String)",
+    "void BlockResult.setExtraData(String)",
+    "void BlockResult.setGasLimit(String)",
+    "void BlockResult.setGasUsed(String)",
+    "void BlockResult.setHash(String)",
+    "void BlockResult.setLogsBloom(String)",
+    "void BlockResult.setMiner(String)",
+    "void BlockResult.setMixHash(String)",
+    "void BlockResult.setNonce(String)",
+    "void BlockResult.setNumber(String)",
+    "void BlockResult.setParentHash(String)",
+    "void BlockResult.setReceiptsRoot(String)",
+    "void BlockResult.setSha3Uncles(String)",
+    "void BlockResult.setSize(String)",
+    "void BlockResult.setStateRoot(String)",
+    "void BlockResult.setTimestamp(String)",
+    "void BlockResult.setTotalDifficulty(String)",
+    "void BlockResult.setTransactions(Object[])",
+    "void BlockResult.setTransactionsRoot(String)",
+    "void BlockResult.setUncles(String[])"
+  })
   public void testGettersAndSetters() {
     // Arrange
     BlockResult blockResult = new BlockResult();
@@ -138,10 +167,10 @@ public class BlockResultDiffblueTest {
     blockResult.setStateRoot("MD");
     blockResult.setTimestamp("Timestamp");
     blockResult.setTotalDifficulty("Total Difficulty");
-    Object[] transactions = new Object[]{"Transactions"};
+    Object[] transactions = new Object[] {"Transactions"};
     blockResult.setTransactions(transactions);
     blockResult.setTransactionsRoot("Transactions Root");
-    String[] uncles = new String[]{"Uncles"};
+    String[] uncles = new String[] {"Uncles"};
     blockResult.setUncles(uncles);
     String actualBaseFeePerGas = blockResult.getBaseFeePerGas();
     String actualDifficulty = blockResult.getDifficulty();
@@ -189,6 +218,6 @@ public class BlockResultDiffblueTest {
     assertEquals(1, actualTransactions.length);
     assertSame(transactions, actualTransactions);
     assertSame(uncles, actualUncles);
-    assertArrayEquals(new String[]{"Uncles"}, actualUncles);
+    assertArrayEquals(new String[] {"Uncles"}, actualUncles);
   }
 }

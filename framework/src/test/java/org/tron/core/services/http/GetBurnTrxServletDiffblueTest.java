@@ -3,16 +3,20 @@ package org.tron.core.services.http;
 import static org.junit.Assert.assertArrayEquals;
 import static org.junit.Assert.assertEquals;
 import static org.junit.Assert.assertFalse;
+import static org.junit.Assert.assertSame;
+import static org.junit.Assert.assertThrows;
 import static org.junit.Assert.assertTrue;
+import static org.mockito.Mockito.mock;
 import static org.mockito.Mockito.verify;
 import static org.mockito.Mockito.when;
 import com.diffblue.cover.annotations.MaintainedByDiffblue;
 import com.diffblue.cover.annotations.MethodsUnderTest;
 import java.io.IOException;
-import java.nio.ByteBuffer;
+import java.io.PrintWriter;
 import javax.servlet.ServletResponse;
 import javax.servlet.http.HttpServletRequest;
 import javax.servlet.http.HttpServletResponse;
+import javax.servlet.http.HttpServletResponseWrapper;
 import org.eclipse.jetty.http.HttpCompliance;
 import org.eclipse.jetty.io.ByteArrayEndPoint;
 import org.eclipse.jetty.server.HttpChannel;
@@ -31,21 +35,20 @@ import org.mockito.Mock;
 import org.mockito.junit.MockitoJUnitRunner;
 import org.springframework.mock.web.MockHttpServletRequest;
 import org.springframework.mock.web.MockHttpServletResponse;
+import org.tron.common.utils.client.utils.HttpMethed;
 import org.tron.core.db.Manager;
 import org.tron.core.services.filter.CharResponseWrapper;
 
 @RunWith(MockitoJUnitRunner.class)
 public class GetBurnTrxServletDiffblueTest {
-  @InjectMocks
-  private GetBurnTrxServlet getBurnTrxServlet;
+  @InjectMocks private GetBurnTrxServlet getBurnTrxServlet;
 
-  @Mock
-  private Manager manager;
+  @Mock private Manager manager;
 
   /**
    * Test {@link GetBurnTrxServlet#doGet(HttpServletRequest, HttpServletResponse)}.
-   * <p>
-   * Method under test: {@link GetBurnTrxServlet#doGet(HttpServletRequest, HttpServletResponse)}
+   *
+   * <p>Method under test: {@link GetBurnTrxServlet#doGet(HttpServletRequest, HttpServletResponse)}
    */
   @Test
   @Category(MaintainedByDiffblue.class)
@@ -53,8 +56,9 @@ public class GetBurnTrxServletDiffblueTest {
   public void testDoGet() throws IOException {
     // Arrange
     when(manager.getDynamicPropertiesStore()).thenReturn(null);
-    MockHttpServletRequest request = new MockHttpServletRequest();
-    CharResponseWrapper response = new CharResponseWrapper(new MockHttpServletResponse());
+    MockHttpServletRequest request = HttpMethed.createRequest("https://example.org/example");
+    HttpServletResponseWrapper response =
+        new HttpServletResponseWrapper(new CharResponseWrapper(new MockHttpServletResponse()));
 
     // Act
     getBurnTrxServlet.doGet(request, response);
@@ -62,65 +66,180 @@ public class GetBurnTrxServletDiffblueTest {
     // Assert
     verify(manager).getDynamicPropertiesStore();
     ServletResponse response2 = response.getResponse();
-    assertTrue(response2 instanceof MockHttpServletResponse);
-    assertEquals("{\"Error\":\"class java.lang.NullPointerException : null\"}\n",
-        ((MockHttpServletResponse) response2).getContentAsString());
-    assertEquals(56, response.getByteSize());
-    byte[] expectedContentAsByteArray = "{\"Error\":\"class java.lang.NullPointerException : null\"}\n"
-        .getBytes("UTF-8");
-    assertArrayEquals(expectedContentAsByteArray, ((MockHttpServletResponse) response2).getContentAsByteArray());
+    ServletResponse response3 = ((CharResponseWrapper) response2).getResponse();
+    assertTrue(response3 instanceof MockHttpServletResponse);
+    assertTrue(response2 instanceof CharResponseWrapper);
+    assertEquals(
+        "{\"Error\":\"class java.lang.NullPointerException : null\"}\n",
+        ((MockHttpServletResponse) response3).getContentAsString());
+    assertEquals(56, ((CharResponseWrapper) response2).getByteSize());
+    assertArrayEquals(
+        "{\"Error\":\"class java.lang.NullPointerException : null\"}\n".getBytes("UTF-8"),
+        ((MockHttpServletResponse) response3).getContentAsByteArray());
   }
 
   /**
    * Test {@link GetBurnTrxServlet#doGet(HttpServletRequest, HttpServletResponse)}.
-   * <p>
-   * Method under test: {@link GetBurnTrxServlet#doGet(HttpServletRequest, HttpServletResponse)}
+   *
+   * <p>Method under test: {@link GetBurnTrxServlet#doGet(HttpServletRequest, HttpServletResponse)}
    */
   @Test
   @Category(MaintainedByDiffblue.class)
   @MethodsUnderTest({"void GetBurnTrxServlet.doGet(HttpServletRequest, HttpServletResponse)"})
   public void testDoGet2() throws IOException {
     // Arrange
-    when(manager.getDynamicPropertiesStore()).thenReturn(null);
-    MockHttpServletRequest request = new MockHttpServletRequest();
-    LocalConnector connector = new LocalConnector(new Server());
-    HttpConfiguration configuration = new HttpConfiguration();
-    ByteArrayEndPoint endPoint = new ByteArrayEndPoint();
-    HttpConfiguration config = new HttpConfiguration();
-    LocalConnector connector2 = new LocalConnector(new Server());
-    HttpChannel channel = new HttpChannel(connector, configuration, endPoint,
-        new HttpConnection(config, connector2, new ByteArrayEndPoint(), HttpCompliance.LEGACY, true));
-
-    LocalConnector connector3 = new LocalConnector(new Server());
-    HttpConfiguration configuration2 = new HttpConfiguration();
-    ByteArrayEndPoint endPoint2 = new ByteArrayEndPoint();
-    HttpConfiguration config2 = new HttpConfiguration();
-    LocalConnector connector4 = new LocalConnector(new Server());
-    Response response = new Response(channel, new HttpOutput(new HttpChannel(connector3, configuration2, endPoint2,
-        new HttpConnection(config2, connector4, new ByteArrayEndPoint(), HttpCompliance.LEGACY, true))));
+    when(manager.getDynamicPropertiesStore()).thenThrow(new RuntimeException());
+    MockHttpServletRequest request = HttpMethed.createRequest("https://example.org/example");
+    HttpServletResponseWrapper response =
+        new HttpServletResponseWrapper(new CharResponseWrapper(new MockHttpServletResponse()));
 
     // Act
     getBurnTrxServlet.doGet(request, response);
 
     // Assert
     verify(manager).getDynamicPropertiesStore();
-    assertTrue(response.getHttpChannel().getHttpTransport() instanceof HttpConnection);
-    assertTrue(response.getWriter() instanceof ResponseWriter);
-    HttpOutput httpOutput = response.getHttpOutput();
-    ByteBuffer buffer = httpOutput.getBuffer();
-    assertEquals(56, buffer.limit());
+    ServletResponse response2 = response.getResponse();
+    ServletResponse response3 = ((CharResponseWrapper) response2).getResponse();
+    assertTrue(response3 instanceof MockHttpServletResponse);
+    assertTrue(response2 instanceof CharResponseWrapper);
+    assertEquals(
+        "{\"Error\":\"class java.lang.RuntimeException : null\"}\n",
+        ((MockHttpServletResponse) response3).getContentAsString());
+    assertEquals(52, ((CharResponseWrapper) response2).getByteSize());
+    assertArrayEquals(
+        "{\"Error\":\"class java.lang.RuntimeException : null\"}\n".getBytes("UTF-8"),
+        ((MockHttpServletResponse) response3).getContentAsByteArray());
+  }
+
+  /**
+   * Test {@link GetBurnTrxServlet#doGet(HttpServletRequest, HttpServletResponse)}.
+   *
+   * <p>Method under test: {@link GetBurnTrxServlet#doGet(HttpServletRequest, HttpServletResponse)}
+   */
+  @Test
+  @Category(MaintainedByDiffblue.class)
+  @MethodsUnderTest({"void GetBurnTrxServlet.doGet(HttpServletRequest, HttpServletResponse)"})
+  public void testDoGet3() throws IOException {
+    // Arrange
+    when(manager.getDynamicPropertiesStore()).thenReturn(null);
+    MockHttpServletRequest request = HttpMethed.createRequest("https://example.org/example");
+
+    Response response = mock(Response.class);
+    when(response.getOutputStream()).thenThrow(new IOException());
+    CharResponseWrapper response2 = new CharResponseWrapper(response);
+    HttpServletResponseWrapper response3 = new HttpServletResponseWrapper(response2);
+
+    // Act
+    getBurnTrxServlet.doGet(request, response3);
+
+    // Assert that nothing has changed
+    verify(response).getOutputStream();
+    verify(manager).getDynamicPropertiesStore();
+    ServletResponse response4 = response3.getResponse();
+    assertTrue(response4 instanceof CharResponseWrapper);
+    assertEquals(0, ((CharResponseWrapper) response4).getByteSize());
+  }
+
+  /**
+   * Test {@link GetBurnTrxServlet#doGet(HttpServletRequest, HttpServletResponse)}.
+   *
+   * <ul>
+   *   <li>Given {@link RuntimeException#RuntimeException()}.
+   *   <li>Then throw {@link RuntimeException}.
+   * </ul>
+   *
+   * <p>Method under test: {@link GetBurnTrxServlet#doGet(HttpServletRequest, HttpServletResponse)}
+   */
+  @Test
+  @Category(MaintainedByDiffblue.class)
+  @MethodsUnderTest({"void GetBurnTrxServlet.doGet(HttpServletRequest, HttpServletResponse)"})
+  public void testDoGet_givenRuntimeException_thenThrowRuntimeException() throws IOException {
+    // Arrange
+    when(manager.getDynamicPropertiesStore()).thenReturn(null);
+    MockHttpServletRequest request = HttpMethed.createRequest("https://example.org/example");
+
+    Response response = mock(Response.class);
+    when(response.getWriter()).thenThrow(new RuntimeException());
+
+    // Act and Assert
+    assertThrows(
+        RuntimeException.class,
+        () -> getBurnTrxServlet.doGet(request, new HttpServletResponseWrapper(response)));
+    verify(response).getWriter();
+    verify(manager).getDynamicPropertiesStore();
+  }
+
+  /**
+   * Test {@link GetBurnTrxServlet#doGet(HttpServletRequest, HttpServletResponse)}.
+   *
+   * <ul>
+   *   <li>Then {@link HttpServletResponseWrapper#HttpServletResponseWrapper(HttpServletResponse)}
+   *       with response is {@link Response#Response(HttpChannel, HttpOutput)} Response {@link
+   *       Response}.
+   * </ul>
+   *
+   * <p>Method under test: {@link GetBurnTrxServlet#doGet(HttpServletRequest, HttpServletResponse)}
+   */
+  @Test
+  @Category(MaintainedByDiffblue.class)
+  @MethodsUnderTest({"void GetBurnTrxServlet.doGet(HttpServletRequest, HttpServletResponse)"})
+  public void testDoGet_thenHttpServletResponseWrapperWithResponseIsResponseResponseResponse()
+      throws IOException {
+    // Arrange
+    when(manager.getDynamicPropertiesStore()).thenReturn(null);
+    MockHttpServletRequest request = HttpMethed.createRequest("https://example.org/example");
+    LocalConnector connector = new LocalConnector(new Server());
+    HttpConfiguration configuration = new HttpConfiguration();
+    ByteArrayEndPoint endPoint = new ByteArrayEndPoint();
+    HttpConfiguration config = new HttpConfiguration();
+    LocalConnector connector2 = new LocalConnector(new Server());
+
+    HttpConnection transport =
+        new HttpConnection(
+            config, connector2, new ByteArrayEndPoint(), HttpCompliance.LEGACY, true);
+
+    HttpChannel channel = new HttpChannel(connector, configuration, endPoint, transport);
+    LocalConnector connector3 = new LocalConnector(new Server());
+    HttpConfiguration configuration2 = new HttpConfiguration();
+    ByteArrayEndPoint endPoint2 = new ByteArrayEndPoint();
+    HttpConfiguration config2 = new HttpConfiguration();
+    LocalConnector connector4 = new LocalConnector(new Server());
+
+    HttpConnection transport2 =
+        new HttpConnection(
+            config2, connector4, new ByteArrayEndPoint(), HttpCompliance.LEGACY, true);
+
+    HttpChannel channel2 = new HttpChannel(connector3, configuration2, endPoint2, transport2);
+    Response response = new Response(channel, new HttpOutput(channel2));
+    HttpServletResponseWrapper response2 = new HttpServletResponseWrapper(response);
+
+    // Act
+    getBurnTrxServlet.doGet(request, response2);
+
+    // Assert
+    verify(manager).getDynamicPropertiesStore();
+    ServletResponse response3 = response2.getResponse();
+    assertTrue(response3 instanceof Response);
+    PrintWriter writer = response2.getWriter();
+    assertTrue(writer instanceof ResponseWriter);
+    HttpOutput httpOutput = ((Response) response3).getHttpOutput();
+    assertEquals(32768, httpOutput.getBufferSize());
     assertEquals(56L, httpOutput.getWritten());
-    assertEquals(56L, response.getContentCount());
-    assertFalse(response.isStreaming());
-    assertTrue(buffer.hasRemaining());
+    assertEquals(56L, ((Response) response3).getContentCount());
+    assertFalse(httpOutput.isAsync());
+    assertFalse(httpOutput.isClosed());
+    assertFalse(((Response) response3).isStreaming());
     assertTrue(httpOutput.isWritten());
-    assertTrue(response.isWriting());
+    assertTrue(((Response) response3).isWriting());
+    assertSame(channel2, httpOutput.getHttpChannel());
+    assertSame(channel2, httpOutput.getInterceptor());
+    assertSame(writer, response3.getWriter());
   }
 
   /**
    * Test {@link GetBurnTrxServlet#doPost(HttpServletRequest, HttpServletResponse)}.
-   * <p>
-   * Method under test: {@link GetBurnTrxServlet#doPost(HttpServletRequest, HttpServletResponse)}
+   *
+   * <p>Method under test: {@link GetBurnTrxServlet#doPost(HttpServletRequest, HttpServletResponse)}
    */
   @Test
   @Category(MaintainedByDiffblue.class)
@@ -128,8 +247,9 @@ public class GetBurnTrxServletDiffblueTest {
   public void testDoPost() throws IOException {
     // Arrange
     when(manager.getDynamicPropertiesStore()).thenReturn(null);
-    MockHttpServletRequest request = new MockHttpServletRequest();
-    CharResponseWrapper response = new CharResponseWrapper(new MockHttpServletResponse());
+    MockHttpServletRequest request = HttpMethed.createRequest("https://example.org/example");
+    HttpServletResponseWrapper response =
+        new HttpServletResponseWrapper(new CharResponseWrapper(new MockHttpServletResponse()));
 
     // Act
     getBurnTrxServlet.doPost(request, response);
@@ -137,19 +257,22 @@ public class GetBurnTrxServletDiffblueTest {
     // Assert
     verify(manager).getDynamicPropertiesStore();
     ServletResponse response2 = response.getResponse();
-    assertTrue(response2 instanceof MockHttpServletResponse);
-    assertEquals("{\"Error\":\"class java.lang.NullPointerException : null\"}\n",
-        ((MockHttpServletResponse) response2).getContentAsString());
-    assertEquals(56, response.getByteSize());
-    byte[] expectedContentAsByteArray = "{\"Error\":\"class java.lang.NullPointerException : null\"}\n"
-        .getBytes("UTF-8");
-    assertArrayEquals(expectedContentAsByteArray, ((MockHttpServletResponse) response2).getContentAsByteArray());
+    ServletResponse response3 = ((CharResponseWrapper) response2).getResponse();
+    assertTrue(response3 instanceof MockHttpServletResponse);
+    assertTrue(response2 instanceof CharResponseWrapper);
+    assertEquals(
+        "{\"Error\":\"class java.lang.NullPointerException : null\"}\n",
+        ((MockHttpServletResponse) response3).getContentAsString());
+    assertEquals(56, ((CharResponseWrapper) response2).getByteSize());
+    assertArrayEquals(
+        "{\"Error\":\"class java.lang.NullPointerException : null\"}\n".getBytes("UTF-8"),
+        ((MockHttpServletResponse) response3).getContentAsByteArray());
   }
 
   /**
    * Test {@link GetBurnTrxServlet#doPost(HttpServletRequest, HttpServletResponse)}.
-   * <p>
-   * Method under test: {@link GetBurnTrxServlet#doPost(HttpServletRequest, HttpServletResponse)}
+   *
+   * <p>Method under test: {@link GetBurnTrxServlet#doPost(HttpServletRequest, HttpServletResponse)}
    */
   @Test
   @Category(MaintainedByDiffblue.class)
@@ -157,38 +280,124 @@ public class GetBurnTrxServletDiffblueTest {
   public void testDoPost2() throws IOException {
     // Arrange
     when(manager.getDynamicPropertiesStore()).thenReturn(null);
-    MockHttpServletRequest request = new MockHttpServletRequest();
-    LocalConnector connector = new LocalConnector(new Server());
-    HttpConfiguration configuration = new HttpConfiguration();
-    ByteArrayEndPoint endPoint = new ByteArrayEndPoint();
-    HttpConfiguration config = new HttpConfiguration();
-    LocalConnector connector2 = new LocalConnector(new Server());
-    HttpChannel channel = new HttpChannel(connector, configuration, endPoint,
-        new HttpConnection(config, connector2, new ByteArrayEndPoint(), HttpCompliance.LEGACY, true));
+    MockHttpServletRequest request = HttpMethed.createRequest("https://example.org/example");
 
-    LocalConnector connector3 = new LocalConnector(new Server());
-    HttpConfiguration configuration2 = new HttpConfiguration();
-    ByteArrayEndPoint endPoint2 = new ByteArrayEndPoint();
-    HttpConfiguration config2 = new HttpConfiguration();
-    LocalConnector connector4 = new LocalConnector(new Server());
-    Response response = new Response(channel, new HttpOutput(new HttpChannel(connector3, configuration2, endPoint2,
-        new HttpConnection(config2, connector4, new ByteArrayEndPoint(), HttpCompliance.LEGACY, true))));
+    Response response = mock(Response.class);
+    when(response.getOutputStream()).thenThrow(new IOException());
+    CharResponseWrapper response2 = new CharResponseWrapper(response);
+    HttpServletResponseWrapper response3 = new HttpServletResponseWrapper(response2);
+
+    // Act
+    getBurnTrxServlet.doPost(request, response3);
+
+    // Assert that nothing has changed
+    verify(response).getOutputStream();
+    verify(manager).getDynamicPropertiesStore();
+    ServletResponse response4 = response3.getResponse();
+    assertTrue(response4 instanceof CharResponseWrapper);
+    assertEquals(0, ((CharResponseWrapper) response4).getByteSize());
+  }
+
+  /**
+   * Test {@link GetBurnTrxServlet#doPost(HttpServletRequest, HttpServletResponse)}.
+   *
+   * <ul>
+   *   <li>Given {@link GetBurnTrxServlet} (default constructor).
+   * </ul>
+   *
+   * <p>Method under test: {@link GetBurnTrxServlet#doPost(HttpServletRequest, HttpServletResponse)}
+   */
+  @Test
+  @Category(MaintainedByDiffblue.class)
+  @MethodsUnderTest({"void GetBurnTrxServlet.doPost(HttpServletRequest, HttpServletResponse)"})
+  public void testDoPost_givenGetBurnTrxServlet() throws IOException {
+    // Arrange
+    GetBurnTrxServlet getBurnTrxServlet = new GetBurnTrxServlet();
+    MockHttpServletRequest request = HttpMethed.createRequest("https://example.org/example");
+    HttpServletResponseWrapper response =
+        new HttpServletResponseWrapper(new CharResponseWrapper(new MockHttpServletResponse()));
 
     // Act
     getBurnTrxServlet.doPost(request, response);
 
     // Assert
+    ServletResponse response2 = response.getResponse();
+    ServletResponse response3 = ((CharResponseWrapper) response2).getResponse();
+    assertTrue(response3 instanceof MockHttpServletResponse);
+    assertTrue(response2 instanceof CharResponseWrapper);
+    assertEquals(
+        "{\"Error\":\"class java.lang.NullPointerException : null\"}\n",
+        ((MockHttpServletResponse) response3).getContentAsString());
+    assertEquals(56, ((CharResponseWrapper) response2).getByteSize());
+    assertArrayEquals(
+        "{\"Error\":\"class java.lang.NullPointerException : null\"}\n".getBytes("UTF-8"),
+        ((MockHttpServletResponse) response3).getContentAsByteArray());
+  }
+
+  /**
+   * Test {@link GetBurnTrxServlet#doPost(HttpServletRequest, HttpServletResponse)}.
+   *
+   * <ul>
+   *   <li>Then {@link HttpServletResponseWrapper#HttpServletResponseWrapper(HttpServletResponse)}
+   *       with response is {@link Response#Response(HttpChannel, HttpOutput)} Response {@link
+   *       Response}.
+   * </ul>
+   *
+   * <p>Method under test: {@link GetBurnTrxServlet#doPost(HttpServletRequest, HttpServletResponse)}
+   */
+  @Test
+  @Category(MaintainedByDiffblue.class)
+  @MethodsUnderTest({"void GetBurnTrxServlet.doPost(HttpServletRequest, HttpServletResponse)"})
+  public void testDoPost_thenHttpServletResponseWrapperWithResponseIsResponseResponseResponse()
+      throws IOException {
+    // Arrange
+    when(manager.getDynamicPropertiesStore()).thenReturn(null);
+    MockHttpServletRequest request = HttpMethed.createRequest("https://example.org/example");
+    LocalConnector connector = new LocalConnector(new Server());
+    HttpConfiguration configuration = new HttpConfiguration();
+    ByteArrayEndPoint endPoint = new ByteArrayEndPoint();
+    HttpConfiguration config = new HttpConfiguration();
+    LocalConnector connector2 = new LocalConnector(new Server());
+
+    HttpConnection transport =
+        new HttpConnection(
+            config, connector2, new ByteArrayEndPoint(), HttpCompliance.LEGACY, true);
+
+    HttpChannel channel = new HttpChannel(connector, configuration, endPoint, transport);
+    LocalConnector connector3 = new LocalConnector(new Server());
+    HttpConfiguration configuration2 = new HttpConfiguration();
+    ByteArrayEndPoint endPoint2 = new ByteArrayEndPoint();
+    HttpConfiguration config2 = new HttpConfiguration();
+    LocalConnector connector4 = new LocalConnector(new Server());
+
+    HttpConnection transport2 =
+        new HttpConnection(
+            config2, connector4, new ByteArrayEndPoint(), HttpCompliance.LEGACY, true);
+
+    HttpChannel channel2 = new HttpChannel(connector3, configuration2, endPoint2, transport2);
+    Response response = new Response(channel, new HttpOutput(channel2));
+    HttpServletResponseWrapper response2 = new HttpServletResponseWrapper(response);
+
+    // Act
+    getBurnTrxServlet.doPost(request, response2);
+
+    // Assert
     verify(manager).getDynamicPropertiesStore();
-    assertTrue(response.getHttpChannel().getHttpTransport() instanceof HttpConnection);
-    assertTrue(response.getWriter() instanceof ResponseWriter);
-    HttpOutput httpOutput = response.getHttpOutput();
-    ByteBuffer buffer = httpOutput.getBuffer();
-    assertEquals(56, buffer.limit());
+    ServletResponse response3 = response2.getResponse();
+    assertTrue(response3 instanceof Response);
+    PrintWriter writer = response2.getWriter();
+    assertTrue(writer instanceof ResponseWriter);
+    HttpOutput httpOutput = ((Response) response3).getHttpOutput();
+    assertEquals(32768, httpOutput.getBufferSize());
     assertEquals(56L, httpOutput.getWritten());
-    assertEquals(56L, response.getContentCount());
-    assertFalse(response.isStreaming());
-    assertTrue(buffer.hasRemaining());
+    assertEquals(56L, ((Response) response3).getContentCount());
+    assertFalse(httpOutput.isAsync());
+    assertFalse(httpOutput.isClosed());
+    assertFalse(((Response) response3).isStreaming());
     assertTrue(httpOutput.isWritten());
-    assertTrue(response.isWriting());
+    assertTrue(((Response) response3).isWriting());
+    assertSame(channel2, httpOutput.getHttpChannel());
+    assertSame(channel2, httpOutput.getInterceptor());
+    assertSame(writer, response3.getWriter());
   }
 }

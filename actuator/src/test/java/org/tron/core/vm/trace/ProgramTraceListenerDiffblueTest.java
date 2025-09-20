@@ -9,15 +9,15 @@ import org.junit.experimental.categories.Category;
 public class ProgramTraceListenerDiffblueTest {
   /**
    * Test {@link ProgramTraceListener#resetActions()}.
-   * <p>
-   * Method under test: {@link ProgramTraceListener#resetActions()}
+   *
+   * <p>Method under test: {@link ProgramTraceListener#resetActions()}
    */
   @Test
   @Category(MaintainedByDiffblue.class)
   @MethodsUnderTest({"OpActions ProgramTraceListener.resetActions()"})
   public void testResetActions() {
     // Arrange and Act
-    OpActions actualResetActionsResult = (new ProgramTraceListener(true)).resetActions();
+    OpActions actualResetActionsResult = new ProgramTraceListener(true).resetActions();
 
     // Assert
     assertTrue(actualResetActionsResult.getMemory().isEmpty());

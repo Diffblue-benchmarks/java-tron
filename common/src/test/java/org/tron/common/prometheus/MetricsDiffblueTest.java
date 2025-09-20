@@ -2,7 +2,6 @@ package org.tron.common.prometheus;
 
 import static org.junit.Assert.assertNull;
 import static org.junit.Assert.assertThrows;
-import static org.junit.Assert.assertTrue;
 import static org.mockito.Mockito.mock;
 import static org.mockito.Mockito.verify;
 import static org.mockito.Mockito.when;
@@ -15,22 +14,9 @@ import org.junit.experimental.categories.Category;
 
 public class MetricsDiffblueTest {
   /**
-   * Test {@link Metrics#enabled()}.
-   * <p>
-   * Method under test: {@link Metrics#enabled()}
-   */
-  @Test
-  @Category(MaintainedByDiffblue.class)
-  @MethodsUnderTest({"boolean Metrics.enabled()"})
-  public void testEnabled() {
-    // Arrange, Act and Assert
-    assertTrue(Metrics.enabled());
-  }
-
-  /**
    * Test {@link Metrics#histogramStartTimer(String, String[])}.
-   * <p>
-   * Method under test: {@link Metrics#histogramStartTimer(String, String[])}
+   *
+   * <p>Method under test: {@link Metrics#histogramStartTimer(String, String[])}
    */
   @Test
   @Category(MaintainedByDiffblue.class)
@@ -42,12 +28,13 @@ public class MetricsDiffblueTest {
 
   /**
    * Test {@link Metrics#histogramObserve(Timer)} with {@code startTimer}.
+   *
    * <ul>
-   *   <li>Given ten.</li>
-   *   <li>When {@link Histogram.Timer} {@link Histogram.Timer#observeDuration()} return ten.</li>
+   *   <li>Given ten.
+   *   <li>When {@link Histogram.Timer} {@link Histogram.Timer#observeDuration()} return ten.
    * </ul>
-   * <p>
-   * Method under test: {@link Metrics#histogramObserve(Histogram.Timer)}
+   *
+   * <p>Method under test: {@link Metrics#histogramObserve(Histogram.Timer)}
    */
   @Test
   @Category(MaintainedByDiffblue.class)
@@ -66,11 +53,12 @@ public class MetricsDiffblueTest {
 
   /**
    * Test {@link Metrics#histogramObserve(Timer)} with {@code startTimer}.
+   *
    * <ul>
-   *   <li>Then throw {@link IllegalStateException}.</li>
+   *   <li>Then throw {@link IllegalStateException}.
    * </ul>
-   * <p>
-   * Method under test: {@link Metrics#histogramObserve(Histogram.Timer)}
+   *
+   * <p>Method under test: {@link Metrics#histogramObserve(Histogram.Timer)}
    */
   @Test
   @Category(MaintainedByDiffblue.class)
@@ -78,7 +66,7 @@ public class MetricsDiffblueTest {
   public void testHistogramObserveWithStartTimer_thenThrowIllegalStateException() {
     // Arrange
     Timer startTimer = mock(Timer.class);
-    when(startTimer.observeDuration()).thenThrow(new IllegalStateException("foo"));
+    when(startTimer.observeDuration()).thenThrow(new IllegalStateException());
 
     // Act and Assert
     assertThrows(IllegalStateException.class, () -> Metrics.histogramObserve(startTimer));

@@ -14,8 +14,8 @@ import org.junit.experimental.categories.Category;
 public class DbOptionalsUtilsDiffblueTest {
   /**
    * Test {@link DbOptionalsUtils#createDefaultDbOptions()}.
-   * <p>
-   * Method under test: {@link DbOptionalsUtils#createDefaultDbOptions()}
+   *
+   * <p>Method under test: {@link DbOptionalsUtils#createDefaultDbOptions()}
    */
   @Test
   @Category(MaintainedByDiffblue.class)
@@ -33,73 +33,89 @@ public class DbOptionalsUtilsDiffblueTest {
     assertTrue(actualCreateDefaultDbOptionsResult.paranoidChecks());
     assertTrue(actualCreateDefaultDbOptionsResult.verifyChecksums());
     assertEquals(Short.SIZE, actualCreateDefaultDbOptionsResult.blockRestartInterval());
-    assertEquals(DbOptionalsUtils.DEFAULT_BLOCK_SIZE, actualCreateDefaultDbOptionsResult.blockSize());
-    assertEquals(DbOptionalsUtils.DEFAULT_CACHE_SIZE, actualCreateDefaultDbOptionsResult.cacheSize());
-    assertEquals(DbOptionalsUtils.DEFAULT_MAX_OPEN_FILES, actualCreateDefaultDbOptionsResult.maxOpenFiles());
-    assertEquals(DbOptionalsUtils.DEFAULT_WRITE_BUFFER_SIZE, actualCreateDefaultDbOptionsResult.writeBufferSize());
+    assertEquals(
+        DbOptionalsUtils.DEFAULT_BLOCK_SIZE, actualCreateDefaultDbOptionsResult.blockSize());
+    assertEquals(
+        DbOptionalsUtils.DEFAULT_CACHE_SIZE, actualCreateDefaultDbOptionsResult.cacheSize());
+    assertEquals(
+        DbOptionalsUtils.DEFAULT_MAX_OPEN_FILES, actualCreateDefaultDbOptionsResult.maxOpenFiles());
+    assertEquals(
+        DbOptionalsUtils.DEFAULT_WRITE_BUFFER_SIZE,
+        actualCreateDefaultDbOptionsResult.writeBufferSize());
   }
 
   /**
    * Test {@link DbOptionalsUtils#newDefaultDbOptions(String, Options)}.
+   *
    * <ul>
-   *   <li>Then return writeBufferSize is {@link DbOptionalsUtils#DEFAULT_WRITE_BUFFER_SIZE}.</li>
+   *   <li>Then return writeBufferSize is {@link DbOptionalsUtils#DEFAULT_WRITE_BUFFER_SIZE}.
    * </ul>
-   * <p>
-   * Method under test: {@link DbOptionalsUtils#newDefaultDbOptions(String, Options)}
+   *
+   * <p>Method under test: {@link DbOptionalsUtils#newDefaultDbOptions(String, Options)}
    */
   @Test
   @Category(MaintainedByDiffblue.class)
   @MethodsUnderTest({"Options DbOptionalsUtils.newDefaultDbOptions(String, Options)"})
   public void testNewDefaultDbOptions_thenReturnWriteBufferSizeIsDefault_write_buffer_size() {
     // Arrange and Act
-    Options actualNewDefaultDbOptionsResult = DbOptionalsUtils.newDefaultDbOptions("Name",
-        DbOptionalsUtils.createDefaultDbOptions());
+    Options actualNewDefaultDbOptionsResult =
+        DbOptionalsUtils.newDefaultDbOptions("Name", DbOptionalsUtils.createDefaultDbOptions());
 
     // Assert
     assertTrue(actualNewDefaultDbOptionsResult.paranoidChecks());
     assertEquals(DbOptionalsUtils.DEFAULT_CACHE_SIZE, actualNewDefaultDbOptionsResult.cacheSize());
-    assertEquals(DbOptionalsUtils.DEFAULT_MAX_OPEN_FILES, actualNewDefaultDbOptionsResult.maxOpenFiles());
-    assertEquals(DbOptionalsUtils.DEFAULT_WRITE_BUFFER_SIZE, actualNewDefaultDbOptionsResult.writeBufferSize());
+    assertEquals(
+        DbOptionalsUtils.DEFAULT_MAX_OPEN_FILES, actualNewDefaultDbOptionsResult.maxOpenFiles());
+    assertEquals(
+        DbOptionalsUtils.DEFAULT_WRITE_BUFFER_SIZE,
+        actualNewDefaultDbOptionsResult.writeBufferSize());
   }
 
   /**
    * Test {@link DbOptionalsUtils#newDefaultDbOptions(String, Options)}.
+   *
    * <ul>
-   *   <li>Then return writeBufferSize is {@link DbOptionalsUtils#DEFAULT_WRITE_BUFFER_SIZE_M}.</li>
+   *   <li>Then return writeBufferSize is {@link DbOptionalsUtils#DEFAULT_WRITE_BUFFER_SIZE_M}.
    * </ul>
-   * <p>
-   * Method under test: {@link DbOptionalsUtils#newDefaultDbOptions(String, Options)}
+   *
+   * <p>Method under test: {@link DbOptionalsUtils#newDefaultDbOptions(String, Options)}
    */
   @Test
   @Category(MaintainedByDiffblue.class)
   @MethodsUnderTest({"Options DbOptionalsUtils.newDefaultDbOptions(String, Options)"})
   public void testNewDefaultDbOptions_thenReturnWriteBufferSizeIsDefault_write_buffer_size_m() {
     // Arrange and Act
-    Options actualNewDefaultDbOptionsResult = DbOptionalsUtils.newDefaultDbOptions("delegation",
-        DbOptionalsUtils.createDefaultDbOptions());
+    Options actualNewDefaultDbOptionsResult =
+        DbOptionalsUtils.newDefaultDbOptions(
+            "delegation", DbOptionalsUtils.createDefaultDbOptions());
 
     // Assert
     assertTrue(actualNewDefaultDbOptionsResult.paranoidChecks());
     assertEquals(DbOptionalsUtils.DEFAULT_CACHE_SIZE, actualNewDefaultDbOptionsResult.cacheSize());
-    assertEquals(DbOptionalsUtils.DEFAULT_MAX_OPEN_FILES, actualNewDefaultDbOptionsResult.maxOpenFiles());
-    assertEquals(DbOptionalsUtils.DEFAULT_WRITE_BUFFER_SIZE_M, actualNewDefaultDbOptionsResult.writeBufferSize());
+    assertEquals(
+        DbOptionalsUtils.DEFAULT_MAX_OPEN_FILES, actualNewDefaultDbOptionsResult.maxOpenFiles());
+    assertEquals(
+        DbOptionalsUtils.DEFAULT_WRITE_BUFFER_SIZE_M,
+        actualNewDefaultDbOptionsResult.writeBufferSize());
   }
 
   /**
    * Test {@link DbOptionalsUtils#newDefaultDbOptions(String, Options)}.
+   *
    * <ul>
-   *   <li>When {@link Options} (default constructor).</li>
-   *   <li>Then return cacheSize is zero.</li>
+   *   <li>When {@link Options} (default constructor).
+   *   <li>Then return cacheSize is zero.
    * </ul>
-   * <p>
-   * Method under test: {@link DbOptionalsUtils#newDefaultDbOptions(String, Options)}
+   *
+   * <p>Method under test: {@link DbOptionalsUtils#newDefaultDbOptions(String, Options)}
    */
   @Test
   @Category(MaintainedByDiffblue.class)
   @MethodsUnderTest({"Options DbOptionalsUtils.newDefaultDbOptions(String, Options)"})
   public void testNewDefaultDbOptions_whenOptions_thenReturnCacheSizeIsZero() {
     // Arrange and Act
-    Options actualNewDefaultDbOptionsResult = DbOptionalsUtils.newDefaultDbOptions("Name", new Options());
+    Options actualNewDefaultDbOptionsResult =
+        DbOptionalsUtils.newDefaultDbOptions("Name", new Options());
 
     // Assert
     assertEquals(0L, actualNewDefaultDbOptionsResult.cacheSize());

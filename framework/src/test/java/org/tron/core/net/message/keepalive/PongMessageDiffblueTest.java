@@ -15,8 +15,9 @@ import org.tron.core.net.message.MessageTypes;
 public class PongMessageDiffblueTest {
   /**
    * Test getters and setters.
-   * <p>
-   * Methods under test:
+   *
+   * <p>Methods under test:
+   *
    * <ul>
    *   <li>{@link PongMessage#PongMessage(byte, byte[])}
    *   <li>{@link PongMessage#toString()}
@@ -26,8 +27,12 @@ public class PongMessageDiffblueTest {
    */
   @Test
   @Category(MaintainedByDiffblue.class)
-  @MethodsUnderTest({"void PongMessage.<init>(byte, byte[])", "Class PongMessage.getAnswerMessage()",
-      "byte[] PongMessage.getData()", "String PongMessage.toString()"})
+  @MethodsUnderTest({
+    "void PongMessage.<init>(byte, byte[])",
+    "Class PongMessage.getAnswerMessage()",
+    "byte[] PongMessage.getData()",
+    "String PongMessage.toString()"
+  })
   public void testGettersAndSetters() throws UnsupportedEncodingException {
     // Arrange and Act
     PongMessage actualPongMessage = new PongMessage((byte) 'A', "AXAXAXAX".getBytes("UTF-8"));
@@ -37,13 +42,13 @@ public class PongMessageDiffblueTest {
     // Assert
     assertEquals("type: null\n", actualToStringResult);
     assertNull(actualAnswerMessage);
-    assertArrayEquals(new byte[]{-64}, actualPongMessage.getData());
+    assertArrayEquals(new byte[] {-64}, actualPongMessage.getData());
   }
 
   /**
    * Test {@link PongMessage#PongMessage()}.
-   * <p>
-   * Method under test: {@link PongMessage#PongMessage()}
+   *
+   * <p>Method under test: {@link PongMessage#PongMessage()}
    */
   @Test
   @Category(MaintainedByDiffblue.class)
@@ -56,14 +61,14 @@ public class PongMessageDiffblueTest {
     assertTrue(actualPongMessage.getSendData() instanceof UnpooledHeapByteBuf);
     assertNull(actualPongMessage.getAnswerMessage());
     assertEquals(MessageTypes.P2P_PONG, actualPongMessage.getType());
-    assertArrayEquals(new byte[]{-64}, actualPongMessage.getData());
-    assertArrayEquals(new byte[]{'#', -64}, actualPongMessage.getSendBytes());
+    assertArrayEquals(new byte[] {-64}, actualPongMessage.getData());
+    assertArrayEquals(new byte[] {'#', -64}, actualPongMessage.getSendBytes());
   }
 
   /**
    * Test {@link PongMessage#PongMessage(byte[])}.
-   * <p>
-   * Method under test: {@link PongMessage#PongMessage(byte[])}
+   *
+   * <p>Method under test: {@link PongMessage#PongMessage(byte[])}
    */
   @Test
   @Category(MaintainedByDiffblue.class)
@@ -76,20 +81,20 @@ public class PongMessageDiffblueTest {
     assertTrue(actualPongMessage.getSendData() instanceof UnpooledHeapByteBuf);
     assertNull(actualPongMessage.getAnswerMessage());
     assertEquals(MessageTypes.P2P_PONG, actualPongMessage.getType());
-    assertArrayEquals(new byte[]{-64}, actualPongMessage.getData());
-    assertArrayEquals(new byte[]{'#', -64}, actualPongMessage.getSendBytes());
+    assertArrayEquals(new byte[] {-64}, actualPongMessage.getData());
+    assertArrayEquals(new byte[] {'#', -64}, actualPongMessage.getSendBytes());
   }
 
   /**
    * Test {@link PongMessage#getType()}.
-   * <p>
-   * Method under test: {@link PongMessage#getType()}
+   *
+   * <p>Method under test: {@link PongMessage#getType()}
    */
   @Test
   @Category(MaintainedByDiffblue.class)
   @MethodsUnderTest({"MessageTypes PongMessage.getType()"})
   public void testGetType() {
     // Arrange, Act and Assert
-    assertEquals(MessageTypes.P2P_PONG, (new PongMessage()).getType());
+    assertEquals(MessageTypes.P2P_PONG, new PongMessage().getType());
   }
 }

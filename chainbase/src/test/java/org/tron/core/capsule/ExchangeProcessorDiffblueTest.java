@@ -9,81 +9,88 @@ import org.junit.experimental.categories.Category;
 public class ExchangeProcessorDiffblueTest {
   /**
    * Test {@link ExchangeProcessor#exchange(long, long, long)}.
+   *
    * <ul>
-   *   <li>Given {@link ExchangeProcessor#ExchangeProcessor(long, boolean)} with supply is five and useStrictMath is {@code false}.</li>
+   *   <li>Given {@link ExchangeProcessor#ExchangeProcessor(long, boolean)} with supply is five and
+   *       useStrictMath is {@code false}.
    * </ul>
-   * <p>
-   * Method under test: {@link ExchangeProcessor#exchange(long, long, long)}
+   *
+   * <p>Method under test: {@link ExchangeProcessor#exchange(long, long, long)}
    */
   @Test
   @Category(MaintainedByDiffblue.class)
   @MethodsUnderTest({"long ExchangeProcessor.exchange(long, long, long)"})
   public void testExchange_givenExchangeProcessorWithSupplyIsFiveAndUseStrictMathIsFalse() {
     // Arrange, Act and Assert
-    assertEquals(0L, (new ExchangeProcessor(5L, false)).exchange(42L, 42L, 5L));
+    assertEquals(0L, new ExchangeProcessor(5L, false).exchange(42L, 42L, 5L));
   }
 
   /**
    * Test {@link ExchangeProcessor#exchange(long, long, long)}.
+   *
    * <ul>
-   *   <li>Given {@link ExchangeProcessor#ExchangeProcessor(long, boolean)} with supply is five and useStrictMath is {@code true}.</li>
+   *   <li>Given {@link ExchangeProcessor#ExchangeProcessor(long, boolean)} with supply is five and
+   *       useStrictMath is {@code true}.
    * </ul>
-   * <p>
-   * Method under test: {@link ExchangeProcessor#exchange(long, long, long)}
+   *
+   * <p>Method under test: {@link ExchangeProcessor#exchange(long, long, long)}
    */
   @Test
   @Category(MaintainedByDiffblue.class)
   @MethodsUnderTest({"long ExchangeProcessor.exchange(long, long, long)"})
   public void testExchange_givenExchangeProcessorWithSupplyIsFiveAndUseStrictMathIsTrue() {
     // Arrange, Act and Assert
-    assertEquals(0L, (new ExchangeProcessor(5L, true)).exchange(42L, 42L, 5L));
+    assertEquals(0L, new ExchangeProcessor(5L, true).exchange(42L, 42L, 5L));
   }
 
   /**
    * Test {@link ExchangeProcessor#exchange(long, long, long)}.
+   *
    * <ul>
-   *   <li>When minus one.</li>
+   *   <li>When minus one.
    * </ul>
-   * <p>
-   * Method under test: {@link ExchangeProcessor#exchange(long, long, long)}
+   *
+   * <p>Method under test: {@link ExchangeProcessor#exchange(long, long, long)}
    */
   @Test
   @Category(MaintainedByDiffblue.class)
   @MethodsUnderTest({"long ExchangeProcessor.exchange(long, long, long)"})
   public void testExchange_whenMinusOne() {
     // Arrange, Act and Assert
-    assertEquals(0L, (new ExchangeProcessor(5L, true)).exchange(-1L, 42L, 5L));
+    assertEquals(0L, new ExchangeProcessor(5L, true).exchange(-1L, 42L, 5L));
   }
 
   /**
    * Test {@link ExchangeProcessor#exchange(long, long, long)}.
+   *
    * <ul>
-   *   <li>When one.</li>
+   *   <li>When one.
    * </ul>
-   * <p>
-   * Method under test: {@link ExchangeProcessor#exchange(long, long, long)}
+   *
+   * <p>Method under test: {@link ExchangeProcessor#exchange(long, long, long)}
    */
   @Test
   @Category(MaintainedByDiffblue.class)
   @MethodsUnderTest({"long ExchangeProcessor.exchange(long, long, long)"})
   public void testExchange_whenOne() {
     // Arrange, Act and Assert
-    assertEquals(0L, (new ExchangeProcessor(5L, true)).exchange(1L, 42L, 5L));
+    assertEquals(0L, new ExchangeProcessor(5L, true).exchange(1L, 42L, 5L));
   }
 
   /**
    * Test {@link ExchangeProcessor#exchange(long, long, long)}.
+   *
    * <ul>
-   *   <li>When zero.</li>
+   *   <li>When zero.
    * </ul>
-   * <p>
-   * Method under test: {@link ExchangeProcessor#exchange(long, long, long)}
+   *
+   * <p>Method under test: {@link ExchangeProcessor#exchange(long, long, long)}
    */
   @Test
   @Category(MaintainedByDiffblue.class)
   @MethodsUnderTest({"long ExchangeProcessor.exchange(long, long, long)"})
   public void testExchange_whenZero() {
     // Arrange, Act and Assert
-    assertEquals(0L, (new ExchangeProcessor(5L, true)).exchange(0L, 42L, 5L));
+    assertEquals(0L, new ExchangeProcessor(5L, true).exchange(0L, 42L, 5L));
   }
 }

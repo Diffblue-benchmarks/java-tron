@@ -14,8 +14,9 @@ import org.junit.experimental.categories.Category;
 public class ValueDiffblueTest {
   /**
    * Test getters and setters.
-   * <p>
-   * Methods under test:
+   *
+   * <p>Methods under test:
+   *
    * <ul>
    *   <li>{@link Value#Value()}
    *   <li>{@link Value#init(byte[])}
@@ -41,12 +42,13 @@ public class ValueDiffblueTest {
 
   /**
    * Test {@link Value#Value(Object)}.
+   *
    * <ul>
-   *   <li>When {@code null}.</li>
-   *   <li>Then return not String.</li>
+   *   <li>When {@code null}.
+   *   <li>Then return not String.
    * </ul>
-   * <p>
-   * Method under test: {@link Value#Value(Object)}
+   *
+   * <p>Method under test: {@link Value#Value(Object)}
    */
   @Test
   @Category(MaintainedByDiffblue.class)
@@ -67,12 +69,13 @@ public class ValueDiffblueTest {
 
   /**
    * Test {@link Value#Value(Object)}.
+   *
    * <ul>
-   *   <li>When {@code Obj}.</li>
-   *   <li>Then return not Null.</li>
+   *   <li>When {@code Obj}.
+   *   <li>Then return not Null.
    * </ul>
-   * <p>
-   * Method under test: {@link Value#Value(Object)}
+   *
+   * <p>Method under test: {@link Value#Value(Object)}
    */
   @Test
   @Category(MaintainedByDiffblue.class)
@@ -93,12 +96,13 @@ public class ValueDiffblueTest {
 
   /**
    * Test {@link Value#Value(Object)}.
+   *
    * <ul>
-   *   <li>When {@link Value#Value()}.</li>
-   *   <li>Then return not String.</li>
+   *   <li>When {@link Value#Value()}.
+   *   <li>Then return not String.
    * </ul>
-   * <p>
-   * Method under test: {@link Value#Value(Object)}
+   *
+   * <p>Method under test: {@link Value#Value(Object)}
    */
   @Test
   @Category(MaintainedByDiffblue.class)
@@ -119,162 +123,167 @@ public class ValueDiffblueTest {
 
   /**
    * Test {@link Value#asObj()}.
-   * <p>
-   * Method under test: {@link Value#asObj()}
+   *
+   * <p>Method under test: {@link Value#asObj()}
    */
   @Test
   @Category(MaintainedByDiffblue.class)
   @MethodsUnderTest({"Object Value.asObj()"})
   public void testAsObj() {
     // Arrange, Act and Assert
-    assertNull((new Value()).asObj());
+    assertNull(new Value().asObj());
   }
 
   /**
    * Test {@link Value#asInt()}.
+   *
    * <ul>
-   *   <li>Given {@link Value#Value(Object)} with obj is {@link DecodeUtil#ADDRESS_SIZE}.</li>
-   *   <li>Then return {@link DecodeUtil#ADDRESS_SIZE}.</li>
+   *   <li>Given {@link Value#Value(Object)} with obj is {@link DecodeUtil#ADDRESS_SIZE}.
+   *   <li>Then return {@link DecodeUtil#ADDRESS_SIZE}.
    * </ul>
-   * <p>
-   * Method under test: {@link Value#asInt()}
+   *
+   * <p>Method under test: {@link Value#asInt()}
    */
   @Test
   @Category(MaintainedByDiffblue.class)
   @MethodsUnderTest({"int Value.asInt()"})
   public void testAsInt_givenValueWithObjIsAddress_size_thenReturnAddress_size() {
     // Arrange, Act and Assert
-    assertEquals(DecodeUtil.ADDRESS_SIZE, (new Value(DecodeUtil.ADDRESS_SIZE)).asInt());
+    assertEquals(DecodeUtil.ADDRESS_SIZE, new Value(DecodeUtil.ADDRESS_SIZE).asInt());
   }
 
   /**
    * Test {@link Value#asInt()}.
+   *
    * <ul>
-   *   <li>Given {@link Value#Value()}.</li>
-   *   <li>Then return zero.</li>
+   *   <li>Given {@link Value#Value()}.
+   *   <li>Then return zero.
    * </ul>
-   * <p>
-   * Method under test: {@link Value#asInt()}
+   *
+   * <p>Method under test: {@link Value#asInt()}
    */
   @Test
   @Category(MaintainedByDiffblue.class)
   @MethodsUnderTest({"int Value.asInt()"})
   public void testAsInt_givenValue_thenReturnZero() {
     // Arrange, Act and Assert
-    assertEquals(0, (new Value()).asInt());
+    assertEquals(0, new Value().asInt());
   }
 
   /**
    * Test {@link Value#asLong()}.
-   * <p>
-   * Method under test: {@link Value#asLong()}
+   *
+   * <p>Method under test: {@link Value#asLong()}
    */
   @Test
   @Category(MaintainedByDiffblue.class)
   @MethodsUnderTest({"long Value.asLong()"})
   public void testAsLong() {
     // Arrange, Act and Assert
-    assertEquals(0L, (new Value()).asLong());
+    assertEquals(0L, new Value().asLong());
   }
 
   /**
    * Test {@link Value#asBigInt()}.
-   * <p>
-   * Method under test: {@link Value#asBigInt()}
+   *
+   * <p>Method under test: {@link Value#asBigInt()}
    */
   @Test
   @Category(MaintainedByDiffblue.class)
   @MethodsUnderTest({"java.math.BigInteger Value.asBigInt()"})
   public void testAsBigInt() {
     // Arrange, Act and Assert
-    assertNull((new Value()).asBigInt());
+    assertNull(new Value().asBigInt());
   }
 
   /**
    * Test {@link Value#asString()}.
+   *
    * <ul>
-   *   <li>Given {@link Value#Value(Object)} with {@code Obj}.</li>
-   *   <li>Then return {@code Obj}.</li>
+   *   <li>Given {@link Value#Value(Object)} with {@code Obj}.
+   *   <li>Then return {@code Obj}.
    * </ul>
-   * <p>
-   * Method under test: {@link Value#asString()}
+   *
+   * <p>Method under test: {@link Value#asString()}
    */
   @Test
   @Category(MaintainedByDiffblue.class)
   @MethodsUnderTest({"java.lang.String Value.asString()"})
   public void testAsString_givenValueWithObj_thenReturnObj() {
     // Arrange, Act and Assert
-    assertEquals("Obj", (new Value("Obj")).asString());
+    assertEquals("Obj", new Value("Obj").asString());
   }
 
   /**
    * Test {@link Value#asString()}.
+   *
    * <ul>
-   *   <li>Given {@link Value#Value()}.</li>
-   *   <li>Then return empty string.</li>
+   *   <li>Given {@link Value#Value()}.
+   *   <li>Then return empty string.
    * </ul>
-   * <p>
-   * Method under test: {@link Value#asString()}
+   *
+   * <p>Method under test: {@link Value#asString()}
    */
   @Test
   @Category(MaintainedByDiffblue.class)
   @MethodsUnderTest({"java.lang.String Value.asString()"})
   public void testAsString_givenValue_thenReturnEmptyString() {
     // Arrange, Act and Assert
-    assertEquals("", (new Value()).asString());
+    assertEquals("", new Value().asString());
   }
 
   /**
    * Test {@link Value#asBytes()}.
+   *
    * <ul>
-   *   <li>Given {@link Value#Value(Object)} with {@code Obj}.</li>
-   *   <li>Then return {@code Obj} Bytes is {@code UTF-8}.</li>
+   *   <li>Given {@link Value#Value(Object)} with {@code Obj}.
+   *   <li>Then return {@code Obj} Bytes is {@code UTF-8}.
    * </ul>
-   * <p>
-   * Method under test: {@link Value#asBytes()}
+   *
+   * <p>Method under test: {@link Value#asBytes()}
    */
   @Test
   @Category(MaintainedByDiffblue.class)
   @MethodsUnderTest({"byte[] Value.asBytes()"})
-  public void testAsBytes_givenValueWithObj_thenReturnObjBytesIsUtf8() throws UnsupportedEncodingException {
-    // Arrange and Act
-    byte[] actualAsBytesResult = (new Value("Obj")).asBytes();
-
-    // Assert
-    assertArrayEquals("Obj".getBytes("UTF-8"), actualAsBytesResult);
+  public void testAsBytes_givenValueWithObj_thenReturnObjBytesIsUtf8()
+      throws UnsupportedEncodingException {
+    // Arrange, Act and Assert
+    assertArrayEquals("Obj".getBytes("UTF-8"), new Value("Obj").asBytes());
   }
 
   /**
    * Test {@link Value#asBytes()}.
+   *
    * <ul>
-   *   <li>Given {@link Value#Value()}.</li>
-   *   <li>Then return empty array of {@code byte}.</li>
+   *   <li>Given {@link Value#Value()}.
+   *   <li>Then return empty array of {@code byte}.
    * </ul>
-   * <p>
-   * Method under test: {@link Value#asBytes()}
+   *
+   * <p>Method under test: {@link Value#asBytes()}
    */
   @Test
   @Category(MaintainedByDiffblue.class)
   @MethodsUnderTest({"byte[] Value.asBytes()"})
   public void testAsBytes_givenValue_thenReturnEmptyArrayOfByte() {
     // Arrange, Act and Assert
-    assertArrayEquals(new byte[]{}, (new Value()).asBytes());
+    assertArrayEquals(new byte[] {}, new Value().asBytes());
   }
 
   /**
    * Test {@link Value#get(int)}.
+   *
    * <ul>
-   *   <li>Given {@link Value#Value()}.</li>
+   *   <li>Given {@link Value#Value()}.
    * </ul>
-   * <p>
-   * Method under test: {@link Value#get(int)}
+   *
+   * <p>Method under test: {@link Value#get(int)}
    */
   @Test
   @Category(MaintainedByDiffblue.class)
   @MethodsUnderTest({"Value Value.get(int)"})
   public void testGet_givenValue() {
     // Arrange and Act
-    Value actualGetResult = (new Value()).get(1);
+    Value actualGetResult = new Value().get(1);
 
     // Assert
     assertFalse(actualGetResult.isBigInt());
@@ -288,18 +297,19 @@ public class ValueDiffblueTest {
 
   /**
    * Test {@link Value#get(int)}.
+   *
    * <ul>
-   *   <li>Given {@link Value#Value(Object)} with {@code Obj}.</li>
+   *   <li>Given {@link Value#Value(Object)} with {@code Obj}.
    * </ul>
-   * <p>
-   * Method under test: {@link Value#get(int)}
+   *
+   * <p>Method under test: {@link Value#get(int)}
    */
   @Test
   @Category(MaintainedByDiffblue.class)
   @MethodsUnderTest({"Value Value.get(int)"})
   public void testGet_givenValueWithObj() {
     // Arrange and Act
-    Value actualGetResult = (new Value("Obj")).get(1);
+    Value actualGetResult = new Value("Obj").get(1);
 
     // Assert
     assertFalse(actualGetResult.isBigInt());
@@ -313,12 +323,13 @@ public class ValueDiffblueTest {
 
   /**
    * Test {@link Value#cmp(Value)}.
+   *
    * <ul>
-   *   <li>Given {@link Value#Value()} init array of {@code byte} with {@code A} and four.</li>
-   *   <li>Then return {@code true}.</li>
+   *   <li>Given {@link Value#Value()} init array of {@code byte} with {@code A} and four.
+   *   <li>Then return {@code true}.
    * </ul>
-   * <p>
-   * Method under test: {@link Value#cmp(Value)}
+   *
+   * <p>Method under test: {@link Value#cmp(Value)}
    */
   @Test
   @Category(MaintainedByDiffblue.class)
@@ -326,10 +337,10 @@ public class ValueDiffblueTest {
   public void testCmp_givenValueInitArrayOfByteWithAAndFour_thenReturnTrue() {
     // Arrange
     Value value = new Value();
-    value.init(new byte[]{'A', 4, 'A', 4, 'A', 4, 'A', 4});
+    value.init(new byte[] {'A', 4, 'A', 4, 'A', 4, 'A', 4});
 
     Value o = new Value();
-    o.init(new byte[]{'A', 4, 'A', 4, 'A', 4, 'A', 4});
+    o.init(new byte[] {'A', 4, 'A', 4, 'A', 4, 'A', 4});
 
     // Act and Assert
     assertTrue(value.cmp(o));
@@ -337,12 +348,13 @@ public class ValueDiffblueTest {
 
   /**
    * Test {@link Value#cmp(Value)}.
+   *
    * <ul>
-   *   <li>Given {@link Value#Value()} init empty array of {@code byte}.</li>
-   *   <li>When {@link Value#Value()} init array of {@code byte} with {@code A} and four.</li>
+   *   <li>Given {@link Value#Value()} init empty array of {@code byte}.
+   *   <li>When {@link Value#Value()} init array of {@code byte} with {@code A} and four.
    * </ul>
-   * <p>
-   * Method under test: {@link Value#cmp(Value)}
+   *
+   * <p>Method under test: {@link Value#cmp(Value)}
    */
   @Test
   @Category(MaintainedByDiffblue.class)
@@ -350,10 +362,10 @@ public class ValueDiffblueTest {
   public void testCmp_givenValueInitEmptyArrayOfByte_whenValueInitArrayOfByteWithAAndFour() {
     // Arrange
     Value value = new Value();
-    value.init(new byte[]{});
+    value.init(new byte[] {});
 
     Value o = new Value();
-    o.init(new byte[]{'A', 4, 'A', 4, 'A', 4, 'A', 4});
+    o.init(new byte[] {'A', 4, 'A', 4, 'A', 4, 'A', 4});
 
     // Act and Assert
     assertFalse(value.cmp(o));
@@ -361,13 +373,14 @@ public class ValueDiffblueTest {
 
   /**
    * Test {@link Value#cmp(Value)}.
+   *
    * <ul>
-   *   <li>Given {@link Value#Value(Object)} with obj is four.</li>
-   *   <li>When {@link Value#Value(Object)} with {@code Obj}.</li>
-   *   <li>Then return {@code false}.</li>
+   *   <li>Given {@link Value#Value(Object)} with obj is four.
+   *   <li>When {@link Value#Value(Object)} with {@code Obj}.
+   *   <li>Then return {@code false}.
    * </ul>
-   * <p>
-   * Method under test: {@link Value#cmp(Value)}
+   *
+   * <p>Method under test: {@link Value#cmp(Value)}
    */
   @Test
   @Category(MaintainedByDiffblue.class)
@@ -376,19 +389,23 @@ public class ValueDiffblueTest {
     // Arrange
     Value value = new Value(4);
 
-    // Act and Assert
-    assertFalse(value.cmp(new Value("Obj")));
+    // Act
+    boolean actualCmpResult = value.cmp(new Value("Obj"));
+
+    // Assert
+    assertFalse(actualCmpResult);
   }
 
   /**
    * Test {@link Value#cmp(Value)}.
+   *
    * <ul>
-   *   <li>Given {@link Value#Value(Object)} with {@code Obj}.</li>
-   *   <li>When {@link Value#Value()}.</li>
-   *   <li>Then return {@code false}.</li>
+   *   <li>Given {@link Value#Value(Object)} with {@code Obj}.
+   *   <li>When {@link Value#Value()}.
+   *   <li>Then return {@code false}.
    * </ul>
-   * <p>
-   * Method under test: {@link Value#cmp(Value)}
+   *
+   * <p>Method under test: {@link Value#cmp(Value)}
    */
   @Test
   @Category(MaintainedByDiffblue.class)
@@ -403,31 +420,33 @@ public class ValueDiffblueTest {
 
   /**
    * Test {@link Value#cmp(Value)}.
+   *
    * <ul>
-   *   <li>Given {@link Value#Value()}.</li>
-   *   <li>When {@code null}.</li>
-   *   <li>Then return {@code false}.</li>
+   *   <li>Given {@link Value#Value()}.
+   *   <li>When {@code null}.
+   *   <li>Then return {@code false}.
    * </ul>
-   * <p>
-   * Method under test: {@link Value#cmp(Value)}
+   *
+   * <p>Method under test: {@link Value#cmp(Value)}
    */
   @Test
   @Category(MaintainedByDiffblue.class)
   @MethodsUnderTest({"boolean Value.cmp(Value)"})
   public void testCmp_givenValue_whenNull_thenReturnFalse() {
     // Arrange, Act and Assert
-    assertFalse((new Value()).cmp(null));
+    assertFalse(new Value().cmp(null));
   }
 
   /**
    * Test {@link Value#cmp(Value)}.
+   *
    * <ul>
-   *   <li>Given {@link Value#Value()}.</li>
-   *   <li>When {@link Value#Value()} init array of {@code byte} with {@code A} and four.</li>
-   *   <li>Then return {@code false}.</li>
+   *   <li>Given {@link Value#Value()}.
+   *   <li>When {@link Value#Value()} init array of {@code byte} with {@code A} and four.
+   *   <li>Then return {@code false}.
    * </ul>
-   * <p>
-   * Method under test: {@link Value#cmp(Value)}
+   *
+   * <p>Method under test: {@link Value#cmp(Value)}
    */
   @Test
   @Category(MaintainedByDiffblue.class)
@@ -437,7 +456,7 @@ public class ValueDiffblueTest {
     Value value = new Value();
 
     Value o = new Value();
-    o.init(new byte[]{'A', 4, 'A', 4, 'A', 4, 'A', 4});
+    o.init(new byte[] {'A', 4, 'A', 4, 'A', 4, 'A', 4});
 
     // Act and Assert
     assertFalse(value.cmp(o));
@@ -445,13 +464,14 @@ public class ValueDiffblueTest {
 
   /**
    * Test {@link Value#cmp(Value)}.
+   *
    * <ul>
-   *   <li>Given {@link Value#Value()}.</li>
-   *   <li>When {@link Value#Value()}.</li>
-   *   <li>Then return {@code true}.</li>
+   *   <li>Given {@link Value#Value()}.
+   *   <li>When {@link Value#Value()}.
+   *   <li>Then return {@code true}.
    * </ul>
-   * <p>
-   * Method under test: {@link Value#cmp(Value)}
+   *
+   * <p>Method under test: {@link Value#cmp(Value)}
    */
   @Test
   @Category(MaintainedByDiffblue.class)
@@ -466,408 +486,430 @@ public class ValueDiffblueTest {
 
   /**
    * Test {@link Value#isList()}.
+   *
    * <ul>
-   *   <li>Given {@link Value#Value()}.</li>
+   *   <li>Given {@link Value#Value()}.
    * </ul>
-   * <p>
-   * Method under test: {@link Value#isList()}
+   *
+   * <p>Method under test: {@link Value#isList()}
    */
   @Test
   @Category(MaintainedByDiffblue.class)
   @MethodsUnderTest({"boolean Value.isList()"})
   public void testIsList_givenValue() {
     // Arrange, Act and Assert
-    assertFalse((new Value()).isList());
+    assertFalse(new Value().isList());
   }
 
   /**
    * Test {@link Value#isList()}.
+   *
    * <ul>
-   *   <li>Given {@link Value#Value(Object)} with {@code Obj}.</li>
+   *   <li>Given {@link Value#Value(Object)} with {@code Obj}.
    * </ul>
-   * <p>
-   * Method under test: {@link Value#isList()}
+   *
+   * <p>Method under test: {@link Value#isList()}
    */
   @Test
   @Category(MaintainedByDiffblue.class)
   @MethodsUnderTest({"boolean Value.isList()"})
   public void testIsList_givenValueWithObj() {
     // Arrange, Act and Assert
-    assertFalse((new Value("Obj")).isList());
+    assertFalse(new Value("Obj").isList());
   }
 
   /**
    * Test {@link Value#isString()}.
+   *
    * <ul>
-   *   <li>Given {@link Value#Value(Object)} with {@code Obj}.</li>
-   *   <li>Then return {@code true}.</li>
+   *   <li>Given {@link Value#Value(Object)} with {@code Obj}.
+   *   <li>Then return {@code true}.
    * </ul>
-   * <p>
-   * Method under test: {@link Value#isString()}
+   *
+   * <p>Method under test: {@link Value#isString()}
    */
   @Test
   @Category(MaintainedByDiffblue.class)
   @MethodsUnderTest({"boolean Value.isString()"})
   public void testIsString_givenValueWithObj_thenReturnTrue() {
     // Arrange, Act and Assert
-    assertTrue((new Value("Obj")).isString());
+    assertTrue(new Value("Obj").isString());
   }
 
   /**
    * Test {@link Value#isString()}.
+   *
    * <ul>
-   *   <li>Given {@link Value#Value()}.</li>
-   *   <li>Then return {@code false}.</li>
+   *   <li>Given {@link Value#Value()}.
+   *   <li>Then return {@code false}.
    * </ul>
-   * <p>
-   * Method under test: {@link Value#isString()}
+   *
+   * <p>Method under test: {@link Value#isString()}
    */
   @Test
   @Category(MaintainedByDiffblue.class)
   @MethodsUnderTest({"boolean Value.isString()"})
   public void testIsString_givenValue_thenReturnFalse() {
     // Arrange, Act and Assert
-    assertFalse((new Value()).isString());
+    assertFalse(new Value().isString());
   }
 
   /**
    * Test {@link Value#isInt()}.
+   *
    * <ul>
-   *   <li>Given {@link Value#Value(Object)} with obj is {@link DecodeUtil#ADDRESS_SIZE}.</li>
-   *   <li>Then return {@code true}.</li>
+   *   <li>Given {@link Value#Value(Object)} with obj is {@link DecodeUtil#ADDRESS_SIZE}.
+   *   <li>Then return {@code true}.
    * </ul>
-   * <p>
-   * Method under test: {@link Value#isInt()}
+   *
+   * <p>Method under test: {@link Value#isInt()}
    */
   @Test
   @Category(MaintainedByDiffblue.class)
   @MethodsUnderTest({"boolean Value.isInt()"})
   public void testIsInt_givenValueWithObjIsAddress_size_thenReturnTrue() {
     // Arrange, Act and Assert
-    assertTrue((new Value(DecodeUtil.ADDRESS_SIZE)).isInt());
+    assertTrue(new Value(DecodeUtil.ADDRESS_SIZE).isInt());
   }
 
   /**
    * Test {@link Value#isInt()}.
+   *
    * <ul>
-   *   <li>Given {@link Value#Value()}.</li>
-   *   <li>Then return {@code false}.</li>
+   *   <li>Given {@link Value#Value()}.
+   *   <li>Then return {@code false}.
    * </ul>
-   * <p>
-   * Method under test: {@link Value#isInt()}
+   *
+   * <p>Method under test: {@link Value#isInt()}
    */
   @Test
   @Category(MaintainedByDiffblue.class)
   @MethodsUnderTest({"boolean Value.isInt()"})
   public void testIsInt_givenValue_thenReturnFalse() {
     // Arrange, Act and Assert
-    assertFalse((new Value()).isInt());
+    assertFalse(new Value().isInt());
   }
 
   /**
    * Test {@link Value#isLong()}.
-   * <p>
-   * Method under test: {@link Value#isLong()}
+   *
+   * <p>Method under test: {@link Value#isLong()}
    */
   @Test
   @Category(MaintainedByDiffblue.class)
   @MethodsUnderTest({"boolean Value.isLong()"})
   public void testIsLong() {
     // Arrange, Act and Assert
-    assertFalse((new Value()).isLong());
+    assertFalse(new Value().isLong());
   }
 
   /**
    * Test {@link Value#isBigInt()}.
-   * <p>
-   * Method under test: {@link Value#isBigInt()}
+   *
+   * <p>Method under test: {@link Value#isBigInt()}
    */
   @Test
   @Category(MaintainedByDiffblue.class)
   @MethodsUnderTest({"boolean Value.isBigInt()"})
   public void testIsBigInt() {
     // Arrange, Act and Assert
-    assertFalse((new Value()).isBigInt());
+    assertFalse(new Value().isBigInt());
   }
 
   /**
    * Test {@link Value#isBytes()}.
-   * <p>
-   * Method under test: {@link Value#isBytes()}
+   *
+   * <p>Method under test: {@link Value#isBytes()}
    */
   @Test
   @Category(MaintainedByDiffblue.class)
   @MethodsUnderTest({"boolean Value.isBytes()"})
   public void testIsBytes() {
     // Arrange, Act and Assert
-    assertFalse((new Value()).isBytes());
+    assertFalse(new Value().isBytes());
   }
 
   /**
    * Test {@link Value#isHashCode()}.
+   *
    * <ul>
-   *   <li>Given {@link Value#Value()}.</li>
+   *   <li>Given {@link Value#Value()}.
    * </ul>
-   * <p>
-   * Method under test: {@link Value#isHashCode()}
+   *
+   * <p>Method under test: {@link Value#isHashCode()}
    */
   @Test
   @Category(MaintainedByDiffblue.class)
   @MethodsUnderTest({"boolean Value.isHashCode()"})
   public void testIsHashCode_givenValue() {
     // Arrange, Act and Assert
-    assertFalse((new Value()).isHashCode());
+    assertFalse(new Value().isHashCode());
   }
 
   /**
    * Test {@link Value#isHashCode()}.
+   *
    * <ul>
-   *   <li>Given {@link Value#Value(Object)} with {@code Obj}.</li>
+   *   <li>Given {@link Value#Value(Object)} with {@code Obj}.
    * </ul>
-   * <p>
-   * Method under test: {@link Value#isHashCode()}
+   *
+   * <p>Method under test: {@link Value#isHashCode()}
    */
   @Test
   @Category(MaintainedByDiffblue.class)
   @MethodsUnderTest({"boolean Value.isHashCode()"})
   public void testIsHashCode_givenValueWithObj() {
     // Arrange, Act and Assert
-    assertFalse((new Value("Obj")).isHashCode());
+    assertFalse(new Value("Obj").isHashCode());
   }
 
   /**
    * Test {@link Value#isNull()}.
+   *
    * <ul>
-   *   <li>Given {@link Value#Value(Object)} with {@code Obj}.</li>
-   *   <li>Then return {@code false}.</li>
+   *   <li>Given {@link Value#Value(Object)} with {@code Obj}.
+   *   <li>Then return {@code false}.
    * </ul>
-   * <p>
-   * Method under test: {@link Value#isNull()}
+   *
+   * <p>Method under test: {@link Value#isNull()}
    */
   @Test
   @Category(MaintainedByDiffblue.class)
   @MethodsUnderTest({"boolean Value.isNull()"})
   public void testIsNull_givenValueWithObj_thenReturnFalse() {
     // Arrange, Act and Assert
-    assertFalse((new Value("Obj")).isNull());
+    assertFalse(new Value("Obj").isNull());
   }
 
   /**
    * Test {@link Value#isNull()}.
+   *
    * <ul>
-   *   <li>Given {@link Value#Value()}.</li>
-   *   <li>Then return {@code true}.</li>
+   *   <li>Given {@link Value#Value()}.
+   *   <li>Then return {@code true}.
    * </ul>
-   * <p>
-   * Method under test: {@link Value#isNull()}
+   *
+   * <p>Method under test: {@link Value#isNull()}
    */
   @Test
   @Category(MaintainedByDiffblue.class)
   @MethodsUnderTest({"boolean Value.isNull()"})
   public void testIsNull_givenValue_thenReturnTrue() {
     // Arrange, Act and Assert
-    assertTrue((new Value()).isNull());
+    assertTrue(new Value().isNull());
   }
 
   /**
    * Test {@link Value#isEmpty()}.
+   *
    * <ul>
-   *   <li>Given {@link Value#Value(Object)} with obj is empty string.</li>
-   *   <li>Then return {@code true}.</li>
+   *   <li>Given {@link Value#Value(Object)} with obj is empty string.
+   *   <li>Then return {@code true}.
    * </ul>
-   * <p>
-   * Method under test: {@link Value#isEmpty()}
+   *
+   * <p>Method under test: {@link Value#isEmpty()}
    */
   @Test
   @Category(MaintainedByDiffblue.class)
   @MethodsUnderTest({"boolean Value.isEmpty()"})
   public void testIsEmpty_givenValueWithObjIsEmptyString_thenReturnTrue() {
     // Arrange, Act and Assert
-    assertTrue((new Value("")).isEmpty());
+    assertTrue(new Value("").isEmpty());
   }
 
   /**
    * Test {@link Value#isEmpty()}.
+   *
    * <ul>
-   *   <li>Given {@link Value#Value(Object)} with obj is four.</li>
-   *   <li>Then return {@code false}.</li>
+   *   <li>Given {@link Value#Value(Object)} with obj is four.
+   *   <li>Then return {@code false}.
    * </ul>
-   * <p>
-   * Method under test: {@link Value#isEmpty()}
+   *
+   * <p>Method under test: {@link Value#isEmpty()}
    */
   @Test
   @Category(MaintainedByDiffblue.class)
   @MethodsUnderTest({"boolean Value.isEmpty()"})
   public void testIsEmpty_givenValueWithObjIsFour_thenReturnFalse() {
     // Arrange, Act and Assert
-    assertFalse((new Value(4)).isEmpty());
+    assertFalse(new Value(4).isEmpty());
   }
 
   /**
    * Test {@link Value#isEmpty()}.
+   *
    * <ul>
-   *   <li>Given {@link Value#Value(Object)} with {@code Obj}.</li>
-   *   <li>Then return {@code false}.</li>
+   *   <li>Given {@link Value#Value(Object)} with {@code Obj}.
+   *   <li>Then return {@code false}.
    * </ul>
-   * <p>
-   * Method under test: {@link Value#isEmpty()}
+   *
+   * <p>Method under test: {@link Value#isEmpty()}
    */
   @Test
   @Category(MaintainedByDiffblue.class)
   @MethodsUnderTest({"boolean Value.isEmpty()"})
   public void testIsEmpty_givenValueWithObj_thenReturnFalse() {
     // Arrange, Act and Assert
-    assertFalse((new Value("Obj")).isEmpty());
+    assertFalse(new Value("Obj").isEmpty());
   }
 
   /**
    * Test {@link Value#isEmpty()}.
+   *
    * <ul>
-   *   <li>Given {@link Value#Value()}.</li>
-   *   <li>Then return {@code true}.</li>
+   *   <li>Given {@link Value#Value()}.
+   *   <li>Then return {@code true}.
    * </ul>
-   * <p>
-   * Method under test: {@link Value#isEmpty()}
+   *
+   * <p>Method under test: {@link Value#isEmpty()}
    */
   @Test
   @Category(MaintainedByDiffblue.class)
   @MethodsUnderTest({"boolean Value.isEmpty()"})
   public void testIsEmpty_givenValue_thenReturnTrue() {
     // Arrange, Act and Assert
-    assertTrue((new Value()).isEmpty());
+    assertTrue(new Value().isEmpty());
   }
 
   /**
    * Test {@link Value#length()}.
+   *
    * <ul>
-   *   <li>Given {@link Value#Value(Object)} with {@code Obj}.</li>
-   *   <li>Then return three.</li>
+   *   <li>Given {@link Value#Value(Object)} with {@code Obj}.
+   *   <li>Then return three.
    * </ul>
-   * <p>
-   * Method under test: {@link Value#length()}
+   *
+   * <p>Method under test: {@link Value#length()}
    */
   @Test
   @Category(MaintainedByDiffblue.class)
   @MethodsUnderTest({"int Value.length()"})
   public void testLength_givenValueWithObj_thenReturnThree() {
     // Arrange, Act and Assert
-    assertEquals(3, (new Value("Obj")).length());
+    assertEquals(3, new Value("Obj").length());
   }
 
   /**
    * Test {@link Value#length()}.
+   *
    * <ul>
-   *   <li>Given {@link Value#Value()}.</li>
-   *   <li>Then return zero.</li>
+   *   <li>Given {@link Value#Value()}.
+   *   <li>Then return zero.
    * </ul>
-   * <p>
-   * Method under test: {@link Value#length()}
+   *
+   * <p>Method under test: {@link Value#length()}
    */
   @Test
   @Category(MaintainedByDiffblue.class)
   @MethodsUnderTest({"int Value.length()"})
   public void testLength_givenValue_thenReturnZero() {
     // Arrange, Act and Assert
-    assertEquals(0, (new Value()).length());
+    assertEquals(0, new Value().length());
   }
 
   /**
    * Test {@link Value#toString()}.
+   *
    * <ul>
-   *   <li>Given {@link Value#Value(Object)} with obj is empty string.</li>
-   *   <li>Then return empty string.</li>
+   *   <li>Given {@link Value#Value(Object)} with obj is empty string.
+   *   <li>Then return empty string.
    * </ul>
-   * <p>
-   * Method under test: {@link Value#toString()}
+   *
+   * <p>Method under test: {@link Value#toString()}
    */
   @Test
   @Category(MaintainedByDiffblue.class)
   @MethodsUnderTest({"java.lang.String Value.toString()"})
   public void testToString_givenValueWithObjIsEmptyString_thenReturnEmptyString() {
     // Arrange, Act and Assert
-    assertEquals("", (new Value("")).toString());
+    assertEquals("", new Value("").toString());
   }
 
   /**
    * Test {@link Value#toString()}.
+   *
    * <ul>
-   *   <li>Given {@link Value#Value(Object)} with obj is four.</li>
-   *   <li>Then return {@code Unexpected type}.</li>
+   *   <li>Given {@link Value#Value(Object)} with obj is four.
+   *   <li>Then return {@code Unexpected type}.
    * </ul>
-   * <p>
-   * Method under test: {@link Value#toString()}
+   *
+   * <p>Method under test: {@link Value#toString()}
    */
   @Test
   @Category(MaintainedByDiffblue.class)
   @MethodsUnderTest({"java.lang.String Value.toString()"})
   public void testToString_givenValueWithObjIsFour_thenReturnUnexpectedType() {
     // Arrange, Act and Assert
-    assertEquals("Unexpected type", (new Value(4)).toString());
+    assertEquals("Unexpected type", new Value(4).toString());
   }
 
   /**
    * Test {@link Value#toString()}.
+   *
    * <ul>
-   *   <li>Given {@link Value#Value(Object)} with {@code Obj}.</li>
-   *   <li>Then return {@code Obj}.</li>
+   *   <li>Given {@link Value#Value(Object)} with {@code Obj}.
+   *   <li>Then return {@code Obj}.
    * </ul>
-   * <p>
-   * Method under test: {@link Value#toString()}
+   *
+   * <p>Method under test: {@link Value#toString()}
    */
   @Test
   @Category(MaintainedByDiffblue.class)
   @MethodsUnderTest({"java.lang.String Value.toString()"})
   public void testToString_givenValueWithObj_thenReturnObj() {
     // Arrange, Act and Assert
-    assertEquals("Obj", (new Value("Obj")).toString());
+    assertEquals("Obj", new Value("Obj").toString());
   }
 
   /**
    * Test {@link Value#toString()}.
+   *
    * <ul>
-   *   <li>Given {@link Value#Value()}.</li>
-   *   <li>Then return empty string.</li>
+   *   <li>Given {@link Value#Value()}.
+   *   <li>Then return empty string.
    * </ul>
-   * <p>
-   * Method under test: {@link Value#toString()}
+   *
+   * <p>Method under test: {@link Value#toString()}
    */
   @Test
   @Category(MaintainedByDiffblue.class)
   @MethodsUnderTest({"java.lang.String Value.toString()"})
   public void testToString_givenValue_thenReturnEmptyString() {
     // Arrange, Act and Assert
-    assertEquals("", (new Value()).toString());
+    assertEquals("", new Value().toString());
   }
 
   /**
    * Test {@link Value#countBranchNodes()}.
+   *
    * <ul>
-   *   <li>Given {@link Value#Value()}.</li>
+   *   <li>Given {@link Value#Value()}.
    * </ul>
-   * <p>
-   * Method under test: {@link Value#countBranchNodes()}
+   *
+   * <p>Method under test: {@link Value#countBranchNodes()}
    */
   @Test
   @Category(MaintainedByDiffblue.class)
   @MethodsUnderTest({"int Value.countBranchNodes()"})
   public void testCountBranchNodes_givenValue() {
     // Arrange, Act and Assert
-    assertEquals(0, (new Value()).countBranchNodes());
+    assertEquals(0, new Value().countBranchNodes());
   }
 
   /**
    * Test {@link Value#countBranchNodes()}.
+   *
    * <ul>
-   *   <li>Given {@link Value#Value(Object)} with {@code Obj}.</li>
+   *   <li>Given {@link Value#Value(Object)} with {@code Obj}.
    * </ul>
-   * <p>
-   * Method under test: {@link Value#countBranchNodes()}
+   *
+   * <p>Method under test: {@link Value#countBranchNodes()}
    */
   @Test
   @Category(MaintainedByDiffblue.class)
   @MethodsUnderTest({"int Value.countBranchNodes()"})
   public void testCountBranchNodes_givenValueWithObj() {
     // Arrange, Act and Assert
-    assertEquals(0, (new Value("Obj")).countBranchNodes());
+    assertEquals(0, new Value("Obj").countBranchNodes());
   }
 }

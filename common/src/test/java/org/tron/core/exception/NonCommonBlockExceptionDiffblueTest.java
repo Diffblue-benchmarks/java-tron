@@ -11,8 +11,8 @@ import org.junit.experimental.categories.Category;
 public class NonCommonBlockExceptionDiffblueTest {
   /**
    * Test {@link NonCommonBlockException#NonCommonBlockException()}.
-   * <p>
-   * Method under test: {@link NonCommonBlockException#NonCommonBlockException()}
+   *
+   * <p>Method under test: {@link NonCommonBlockException#NonCommonBlockException()}
    */
   @Test
   @Category(MaintainedByDiffblue.class)
@@ -30,15 +30,16 @@ public class NonCommonBlockExceptionDiffblueTest {
 
   /**
    * Test {@link NonCommonBlockException#NonCommonBlockException(String)}.
-   * <p>
-   * Method under test: {@link NonCommonBlockException#NonCommonBlockException(String)}
+   *
+   * <p>Method under test: {@link NonCommonBlockException#NonCommonBlockException(String)}
    */
   @Test
   @Category(MaintainedByDiffblue.class)
   @MethodsUnderTest({"void NonCommonBlockException.<init>(String)"})
   public void testNewNonCommonBlockException2() {
     // Arrange and Act
-    NonCommonBlockException actualNonCommonBlockException = new NonCommonBlockException("An error occurred");
+    NonCommonBlockException actualNonCommonBlockException =
+        new NonCommonBlockException("An error occurred");
 
     // Assert
     assertEquals("An error occurred", actualNonCommonBlockException.getLocalizedMessage());
@@ -49,8 +50,9 @@ public class NonCommonBlockExceptionDiffblueTest {
 
   /**
    * Test {@link NonCommonBlockException#NonCommonBlockException(String, Throwable)}.
-   * <p>
-   * Method under test: {@link NonCommonBlockException#NonCommonBlockException(String, Throwable)}
+   *
+   * <p>Method under test: {@link NonCommonBlockException#NonCommonBlockException(String,
+   * Throwable)}
    */
   @Test
   @Category(MaintainedByDiffblue.class)
@@ -60,7 +62,8 @@ public class NonCommonBlockExceptionDiffblueTest {
     Throwable cause = new Throwable();
 
     // Act
-    NonCommonBlockException actualNonCommonBlockException = new NonCommonBlockException("An error occurred", cause);
+    NonCommonBlockException actualNonCommonBlockException =
+        new NonCommonBlockException("An error occurred", cause);
 
     // Assert
     assertEquals("An error occurred", actualNonCommonBlockException.getLocalizedMessage());

@@ -14,8 +14,9 @@ import org.tron.protos.contract.Common.ResourceCode;
 public class UnDelegateResourceParamDiffblueTest {
   /**
    * Test getters and setters.
-   * <p>
-   * Methods under test:
+   *
+   * <p>Methods under test:
+   *
    * <ul>
    *   <li>default or parameterless constructor of {@link UnDelegateResourceParam}
    *   <li>{@link UnDelegateResourceParam#setOwnerAddress(byte[])}
@@ -30,12 +31,17 @@ public class UnDelegateResourceParamDiffblueTest {
    */
   @Test
   @Category(MaintainedByDiffblue.class)
-  @MethodsUnderTest({"void UnDelegateResourceParam.<init>()", "byte[] UnDelegateResourceParam.getOwnerAddress()",
-      "byte[] UnDelegateResourceParam.getReceiverAddress()", "ResourceCode UnDelegateResourceParam.getResourceType()",
-      "long UnDelegateResourceParam.getUnDelegateBalance()", "void UnDelegateResourceParam.setOwnerAddress(byte[])",
-      "void UnDelegateResourceParam.setReceiverAddress(byte[])",
-      "void UnDelegateResourceParam.setResourceType(ResourceCode)",
-      "void UnDelegateResourceParam.setUnDelegateBalance(long)"})
+  @MethodsUnderTest({
+    "void UnDelegateResourceParam.<init>()",
+    "byte[] UnDelegateResourceParam.getOwnerAddress()",
+    "byte[] UnDelegateResourceParam.getReceiverAddress()",
+    "ResourceCode UnDelegateResourceParam.getResourceType()",
+    "long UnDelegateResourceParam.getUnDelegateBalance()",
+    "void UnDelegateResourceParam.setOwnerAddress(byte[])",
+    "void UnDelegateResourceParam.setReceiverAddress(byte[])",
+    "void UnDelegateResourceParam.setResourceType(ResourceCode)",
+    "void UnDelegateResourceParam.setUnDelegateBalance(long)"
+  })
   public void testGettersAndSetters() throws UnsupportedEncodingException {
     // Arrange and Act
     UnDelegateResourceParam actualUnDelegateResourceParam = new UnDelegateResourceParam();

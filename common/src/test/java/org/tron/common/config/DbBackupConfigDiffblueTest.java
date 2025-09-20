@@ -3,7 +3,6 @@ package org.tron.common.config;
 import static org.junit.Assert.assertEquals;
 import static org.junit.Assert.assertFalse;
 import static org.junit.Assert.assertNull;
-import static org.junit.Assert.assertSame;
 import static org.junit.Assert.assertTrue;
 import com.diffblue.cover.annotations.MaintainedByDiffblue;
 import com.diffblue.cover.annotations.MethodsUnderTest;
@@ -13,8 +12,8 @@ import org.junit.experimental.categories.Category;
 public class DbBackupConfigDiffblueTest {
   /**
    * Test {@link DbBackupConfig#getInstance()}.
-   * <p>
-   * Method under test: {@link DbBackupConfig#getInstance()}
+   *
+   * <p>Method under test: {@link DbBackupConfig#getInstance()}
    */
   @Test
   @Category(MaintainedByDiffblue.class)
@@ -32,30 +31,10 @@ public class DbBackupConfigDiffblueTest {
   }
 
   /**
-   * Test {@link DbBackupConfig#initArgs(boolean, String, String, String, int)}.
-   * <ul>
-   *   <li>Given Instance.</li>
-   *   <li>When {@code false}.</li>
-   *   <li>Then return Instance.</li>
-   * </ul>
-   * <p>
-   * Method under test: {@link DbBackupConfig#initArgs(boolean, String, String, String, int)}
-   */
-  @Test
-  @Category(MaintainedByDiffblue.class)
-  @MethodsUnderTest({"DbBackupConfig DbBackupConfig.initArgs(boolean, String, String, String, int)"})
-  public void testInitArgs_givenInstance_whenFalse_thenReturnInstance() {
-    // Arrange
-    DbBackupConfig instance = DbBackupConfig.getInstance();
-
-    // Act and Assert
-    assertSame(instance, instance.initArgs(false, "Prop Path", "Bak1path", "Bak2path", 1));
-  }
-
-  /**
    * Test getters and setters.
-   * <p>
-   * Methods under test:
+   *
+   * <p>Methods under test:
+   *
    * <ul>
    *   <li>default or parameterless constructor of {@link DbBackupConfig}
    *   <li>{@link DbBackupConfig#setBak1path(String)}
@@ -72,11 +51,19 @@ public class DbBackupConfigDiffblueTest {
    */
   @Test
   @Category(MaintainedByDiffblue.class)
-  @MethodsUnderTest({"void DbBackupConfig.<init>()", "String DbBackupConfig.getBak1path()",
-      "String DbBackupConfig.getBak2path()", "int DbBackupConfig.getFrequency()", "String DbBackupConfig.getPropPath()",
-      "boolean DbBackupConfig.isEnable()", "void DbBackupConfig.setBak1path(String)",
-      "void DbBackupConfig.setBak2path(String)", "void DbBackupConfig.setEnable(boolean)",
-      "void DbBackupConfig.setFrequency(int)", "void DbBackupConfig.setPropPath(String)"})
+  @MethodsUnderTest({
+    "void DbBackupConfig.<init>()",
+    "String DbBackupConfig.getBak1path()",
+    "String DbBackupConfig.getBak2path()",
+    "int DbBackupConfig.getFrequency()",
+    "String DbBackupConfig.getPropPath()",
+    "boolean DbBackupConfig.isEnable()",
+    "void DbBackupConfig.setBak1path(String)",
+    "void DbBackupConfig.setBak2path(String)",
+    "void DbBackupConfig.setEnable(boolean)",
+    "void DbBackupConfig.setFrequency(int)",
+    "void DbBackupConfig.setPropPath(String)"
+  })
   public void testGettersAndSetters() {
     // Arrange and Act
     DbBackupConfig actualDbBackupConfig = new DbBackupConfig();

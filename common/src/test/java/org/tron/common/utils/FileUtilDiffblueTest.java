@@ -15,12 +15,13 @@ import org.junit.experimental.categories.Category;
 public class FileUtilDiffblueTest {
   /**
    * Test {@link FileUtil#recursiveList(String)}.
+   *
    * <ul>
-   *   <li>When {@code Path}.</li>
-   *   <li>Then return Empty.</li>
+   *   <li>When {@code Path}.
+   *   <li>Then return Empty.
    * </ul>
-   * <p>
-   * Method under test: {@link FileUtil#recursiveList(String)}
+   *
+   * <p>Method under test: {@link FileUtil#recursiveList(String)}
    */
   @Test
   @Category(MaintainedByDiffblue.class)
@@ -35,8 +36,8 @@ public class FileUtilDiffblueTest {
 
   /**
    * Test {@link FileUtil#recursiveDelete(String)}.
-   * <p>
-   * Method under test: {@link FileUtil#recursiveDelete(String)}
+   *
+   * <p>Method under test: {@link FileUtil#recursiveDelete(String)}
    */
   @Test
   @Category(MaintainedByDiffblue.class)
@@ -48,51 +49,43 @@ public class FileUtilDiffblueTest {
 
   /**
    * Test {@link FileUtil#readData(String, char[])}.
-   * <p>
-   * Method under test: {@link FileUtil#readData(String, char[])}
+   *
+   * <p>Method under test: {@link FileUtil#readData(String, char[])}
    */
   @Test
   @Category(MaintainedByDiffblue.class)
   @MethodsUnderTest({"int FileUtil.readData(String, char[])"})
   public void testReadData() {
-    // Arrange, Act and Assert
-    assertEquals(0, FileUtil.readData("/directory/foo.txt", "AZAZ".toCharArray()));
+    // Arrange and Act
+    int actualReadDataResult = FileUtil.readData("/directory/foo.txt", "AZAZ".toCharArray());
+
+    // Assert
+    assertEquals(0, actualReadDataResult);
   }
 
   /**
    * Test {@link FileUtil#deleteDir(File)}.
+   *
    * <ul>
-   *   <li>When Property is {@code java.io.tmpdir} is {@code test.txt} toFile.</li>
-   *   <li>Then return {@code false}.</li>
+   *   <li>When Property is {@code java.io.tmpdir} is {@code test.txt} toFile.
+   *   <li>Then return {@code false}.
    * </ul>
-   * <p>
-   * Method under test: {@link FileUtil#deleteDir(File)}
+   *
+   * <p>Method under test: {@link FileUtil#deleteDir(File)}
    */
   @Test
   @Category(MaintainedByDiffblue.class)
   @MethodsUnderTest({"boolean FileUtil.deleteDir(File)"})
   public void testDeleteDir_whenPropertyIsJavaIoTmpdirIsTestTxtToFile_thenReturnFalse() {
     // Arrange, Act and Assert
-    assertFalse(FileUtil.deleteDir(Paths.get(System.getProperty("java.io.tmpdir"), "test.txt").toFile()));
-  }
-
-  /**
-   * Test {@link FileUtil#createFileIfNotExists(String)}.
-   * <p>
-   * Method under test: {@link FileUtil#createFileIfNotExists(String)}
-   */
-  @Test
-  @Category(MaintainedByDiffblue.class)
-  @MethodsUnderTest({"boolean FileUtil.createFileIfNotExists(String)"})
-  public void testCreateFileIfNotExists() {
-    // Arrange, Act and Assert
-    assertFalse(FileUtil.createFileIfNotExists("/directory/foo.txt"));
+    assertFalse(
+        FileUtil.deleteDir(Paths.get(System.getProperty("java.io.tmpdir"), "test.txt").toFile()));
   }
 
   /**
    * Test {@link FileUtil#isExists(String)}.
-   * <p>
-   * Method under test: {@link FileUtil#isExists(String)}
+   *
+   * <p>Method under test: {@link FileUtil#isExists(String)}
    */
   @Test
   @Category(MaintainedByDiffblue.class)

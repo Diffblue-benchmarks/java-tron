@@ -2,6 +2,7 @@ package org.tron.core.metrics.blockchain;
 
 import static org.junit.Assert.assertEquals;
 import static org.junit.Assert.assertNotEquals;
+import static org.junit.Assert.assertNull;
 import static org.junit.Assert.assertSame;
 import static org.junit.Assert.assertTrue;
 import static org.mockito.Mockito.mock;
@@ -16,12 +17,14 @@ import org.tron.core.metrics.net.RateInfo;
 public class BlockChainInfoDiffblueTest {
   /**
    * Test {@link BlockChainInfo#equals(Object)}, and {@link BlockChainInfo#hashCode()}.
+   *
    * <ul>
-   *   <li>When other is equal.</li>
-   *   <li>Then return equal.</li>
+   *   <li>When other is equal.
+   *   <li>Then return equal.
    * </ul>
-   * <p>
-   * Methods under test:
+   *
+   * <p>Methods under test:
+   *
    * <ul>
    *   <li>{@link BlockChainInfo#equals(Object)}
    *   <li>{@link BlockChainInfo#hashCode()}
@@ -64,18 +67,19 @@ public class BlockChainInfoDiffblueTest {
 
     // Act and Assert
     assertEquals(blockChainInfo, blockChainInfo2);
-    int expectedHashCodeResult = blockChainInfo.hashCode();
-    assertEquals(expectedHashCodeResult, blockChainInfo2.hashCode());
+    assertEquals(blockChainInfo.hashCode(), blockChainInfo2.hashCode());
   }
 
   /**
    * Test {@link BlockChainInfo#equals(Object)}, and {@link BlockChainInfo#hashCode()}.
+   *
    * <ul>
-   *   <li>When other is equal.</li>
-   *   <li>Then return equal.</li>
+   *   <li>When other is equal.
+   *   <li>Then return equal.
    * </ul>
-   * <p>
-   * Methods under test:
+   *
+   * <p>Methods under test:
+   *
    * <ul>
    *   <li>{@link BlockChainInfo#equals(Object)}
    *   <li>{@link BlockChainInfo#hashCode()}
@@ -118,18 +122,19 @@ public class BlockChainInfoDiffblueTest {
 
     // Act and Assert
     assertEquals(blockChainInfo, blockChainInfo2);
-    int expectedHashCodeResult = blockChainInfo.hashCode();
-    assertEquals(expectedHashCodeResult, blockChainInfo2.hashCode());
+    assertEquals(blockChainInfo.hashCode(), blockChainInfo2.hashCode());
   }
 
   /**
    * Test {@link BlockChainInfo#equals(Object)}, and {@link BlockChainInfo#hashCode()}.
+   *
    * <ul>
-   *   <li>When other is same.</li>
-   *   <li>Then return equal.</li>
+   *   <li>When other is same.
+   *   <li>Then return equal.
    * </ul>
-   * <p>
-   * Methods under test:
+   *
+   * <p>Methods under test:
+   *
    * <ul>
    *   <li>{@link BlockChainInfo#equals(Object)}
    *   <li>{@link BlockChainInfo#hashCode()}
@@ -163,12 +168,13 @@ public class BlockChainInfoDiffblueTest {
 
   /**
    * Test {@link BlockChainInfo#equals(Object)}.
+   *
    * <ul>
-   *   <li>When other is different.</li>
-   *   <li>Then return not equal.</li>
+   *   <li>When other is different.
+   *   <li>Then return not equal.
    * </ul>
-   * <p>
-   * Method under test: {@link BlockChainInfo#equals(Object)}
+   *
+   * <p>Method under test: {@link BlockChainInfo#equals(Object)}
    */
   @Test
   @Category(MaintainedByDiffblue.class)
@@ -211,12 +217,13 @@ public class BlockChainInfoDiffblueTest {
 
   /**
    * Test {@link BlockChainInfo#equals(Object)}.
+   *
    * <ul>
-   *   <li>When other is different.</li>
-   *   <li>Then return not equal.</li>
+   *   <li>When other is different.
+   *   <li>Then return not equal.
    * </ul>
-   * <p>
-   * Method under test: {@link BlockChainInfo#equals(Object)}
+   *
+   * <p>Method under test: {@link BlockChainInfo#equals(Object)}
    */
   @Test
   @Category(MaintainedByDiffblue.class)
@@ -259,12 +266,13 @@ public class BlockChainInfoDiffblueTest {
 
   /**
    * Test {@link BlockChainInfo#equals(Object)}.
+   *
    * <ul>
-   *   <li>When other is different.</li>
-   *   <li>Then return not equal.</li>
+   *   <li>When other is different.
+   *   <li>Then return not equal.
    * </ul>
-   * <p>
-   * Method under test: {@link BlockChainInfo#equals(Object)}
+   *
+   * <p>Method under test: {@link BlockChainInfo#equals(Object)}
    */
   @Test
   @Category(MaintainedByDiffblue.class)
@@ -315,12 +323,13 @@ public class BlockChainInfoDiffblueTest {
 
   /**
    * Test {@link BlockChainInfo#equals(Object)}.
+   *
    * <ul>
-   *   <li>When other is different.</li>
-   *   <li>Then return not equal.</li>
+   *   <li>When other is different.
+   *   <li>Then return not equal.
    * </ul>
-   * <p>
-   * Method under test: {@link BlockChainInfo#equals(Object)}
+   *
+   * <p>Method under test: {@link BlockChainInfo#equals(Object)}
    */
   @Test
   @Category(MaintainedByDiffblue.class)
@@ -363,12 +372,13 @@ public class BlockChainInfoDiffblueTest {
 
   /**
    * Test {@link BlockChainInfo#equals(Object)}.
+   *
    * <ul>
-   *   <li>When other is different.</li>
-   *   <li>Then return not equal.</li>
+   *   <li>When other is different.
+   *   <li>Then return not equal.
    * </ul>
-   * <p>
-   * Method under test: {@link BlockChainInfo#equals(Object)}
+   *
+   * <p>Method under test: {@link BlockChainInfo#equals(Object)}
    */
   @Test
   @Category(MaintainedByDiffblue.class)
@@ -411,12 +421,13 @@ public class BlockChainInfoDiffblueTest {
 
   /**
    * Test {@link BlockChainInfo#equals(Object)}.
+   *
    * <ul>
-   *   <li>When other is different.</li>
-   *   <li>Then return not equal.</li>
+   *   <li>When other is different.
+   *   <li>Then return not equal.
    * </ul>
-   * <p>
-   * Method under test: {@link BlockChainInfo#equals(Object)}
+   *
+   * <p>Method under test: {@link BlockChainInfo#equals(Object)}
    */
   @Test
   @Category(MaintainedByDiffblue.class)
@@ -459,12 +470,13 @@ public class BlockChainInfoDiffblueTest {
 
   /**
    * Test {@link BlockChainInfo#equals(Object)}.
+   *
    * <ul>
-   *   <li>When other is different.</li>
-   *   <li>Then return not equal.</li>
+   *   <li>When other is different.
+   *   <li>Then return not equal.
    * </ul>
-   * <p>
-   * Method under test: {@link BlockChainInfo#equals(Object)}
+   *
+   * <p>Method under test: {@link BlockChainInfo#equals(Object)}
    */
   @Test
   @Category(MaintainedByDiffblue.class)
@@ -507,12 +519,13 @@ public class BlockChainInfoDiffblueTest {
 
   /**
    * Test {@link BlockChainInfo#equals(Object)}.
+   *
    * <ul>
-   *   <li>When other is different.</li>
-   *   <li>Then return not equal.</li>
+   *   <li>When other is different.
+   *   <li>Then return not equal.
    * </ul>
-   * <p>
-   * Method under test: {@link BlockChainInfo#equals(Object)}
+   *
+   * <p>Method under test: {@link BlockChainInfo#equals(Object)}
    */
   @Test
   @Category(MaintainedByDiffblue.class)
@@ -555,12 +568,13 @@ public class BlockChainInfoDiffblueTest {
 
   /**
    * Test {@link BlockChainInfo#equals(Object)}.
+   *
    * <ul>
-   *   <li>When other is different.</li>
-   *   <li>Then return not equal.</li>
+   *   <li>When other is different.
+   *   <li>Then return not equal.
    * </ul>
-   * <p>
-   * Method under test: {@link BlockChainInfo#equals(Object)}
+   *
+   * <p>Method under test: {@link BlockChainInfo#equals(Object)}
    */
   @Test
   @Category(MaintainedByDiffblue.class)
@@ -603,12 +617,13 @@ public class BlockChainInfoDiffblueTest {
 
   /**
    * Test {@link BlockChainInfo#equals(Object)}.
+   *
    * <ul>
-   *   <li>When other is different.</li>
-   *   <li>Then return not equal.</li>
+   *   <li>When other is different.
+   *   <li>Then return not equal.
    * </ul>
-   * <p>
-   * Method under test: {@link BlockChainInfo#equals(Object)}
+   *
+   * <p>Method under test: {@link BlockChainInfo#equals(Object)}
    */
   @Test
   @Category(MaintainedByDiffblue.class)
@@ -651,12 +666,13 @@ public class BlockChainInfoDiffblueTest {
 
   /**
    * Test {@link BlockChainInfo#equals(Object)}.
+   *
    * <ul>
-   *   <li>When other is different.</li>
-   *   <li>Then return not equal.</li>
+   *   <li>When other is different.
+   *   <li>Then return not equal.
    * </ul>
-   * <p>
-   * Method under test: {@link BlockChainInfo#equals(Object)}
+   *
+   * <p>Method under test: {@link BlockChainInfo#equals(Object)}
    */
   @Test
   @Category(MaintainedByDiffblue.class)
@@ -699,12 +715,13 @@ public class BlockChainInfoDiffblueTest {
 
   /**
    * Test {@link BlockChainInfo#equals(Object)}.
+   *
    * <ul>
-   *   <li>When other is different.</li>
-   *   <li>Then return not equal.</li>
+   *   <li>When other is different.
+   *   <li>Then return not equal.
    * </ul>
-   * <p>
-   * Method under test: {@link BlockChainInfo#equals(Object)}
+   *
+   * <p>Method under test: {@link BlockChainInfo#equals(Object)}
    */
   @Test
   @Category(MaintainedByDiffblue.class)
@@ -747,12 +764,13 @@ public class BlockChainInfoDiffblueTest {
 
   /**
    * Test {@link BlockChainInfo#equals(Object)}.
+   *
    * <ul>
-   *   <li>When other is different.</li>
-   *   <li>Then return not equal.</li>
+   *   <li>When other is different.
+   *   <li>Then return not equal.
    * </ul>
-   * <p>
-   * Method under test: {@link BlockChainInfo#equals(Object)}
+   *
+   * <p>Method under test: {@link BlockChainInfo#equals(Object)}
    */
   @Test
   @Category(MaintainedByDiffblue.class)
@@ -795,12 +813,13 @@ public class BlockChainInfoDiffblueTest {
 
   /**
    * Test {@link BlockChainInfo#equals(Object)}.
+   *
    * <ul>
-   *   <li>When other is different.</li>
-   *   <li>Then return not equal.</li>
+   *   <li>When other is different.
+   *   <li>Then return not equal.
    * </ul>
-   * <p>
-   * Method under test: {@link BlockChainInfo#equals(Object)}
+   *
+   * <p>Method under test: {@link BlockChainInfo#equals(Object)}
    */
   @Test
   @Category(MaintainedByDiffblue.class)
@@ -843,12 +862,13 @@ public class BlockChainInfoDiffblueTest {
 
   /**
    * Test {@link BlockChainInfo#equals(Object)}.
+   *
    * <ul>
-   *   <li>When other is different.</li>
-   *   <li>Then return not equal.</li>
+   *   <li>When other is different.
+   *   <li>Then return not equal.
    * </ul>
-   * <p>
-   * Method under test: {@link BlockChainInfo#equals(Object)}
+   *
+   * <p>Method under test: {@link BlockChainInfo#equals(Object)}
    */
   @Test
   @Category(MaintainedByDiffblue.class)
@@ -891,12 +911,13 @@ public class BlockChainInfoDiffblueTest {
 
   /**
    * Test {@link BlockChainInfo#equals(Object)}.
+   *
    * <ul>
-   *   <li>When other is different.</li>
-   *   <li>Then return not equal.</li>
+   *   <li>When other is different.
+   *   <li>Then return not equal.
    * </ul>
-   * <p>
-   * Method under test: {@link BlockChainInfo#equals(Object)}
+   *
+   * <p>Method under test: {@link BlockChainInfo#equals(Object)}
    */
   @Test
   @Category(MaintainedByDiffblue.class)
@@ -939,12 +960,13 @@ public class BlockChainInfoDiffblueTest {
 
   /**
    * Test {@link BlockChainInfo#equals(Object)}.
+   *
    * <ul>
-   *   <li>When other is different.</li>
-   *   <li>Then return not equal.</li>
+   *   <li>When other is different.
+   *   <li>Then return not equal.
    * </ul>
-   * <p>
-   * Method under test: {@link BlockChainInfo#equals(Object)}
+   *
+   * <p>Method under test: {@link BlockChainInfo#equals(Object)}
    */
   @Test
   @Category(MaintainedByDiffblue.class)
@@ -987,12 +1009,13 @@ public class BlockChainInfoDiffblueTest {
 
   /**
    * Test {@link BlockChainInfo#equals(Object)}.
+   *
    * <ul>
-   *   <li>When other is different.</li>
-   *   <li>Then return not equal.</li>
+   *   <li>When other is different.
+   *   <li>Then return not equal.
    * </ul>
-   * <p>
-   * Method under test: {@link BlockChainInfo#equals(Object)}
+   *
+   * <p>Method under test: {@link BlockChainInfo#equals(Object)}
    */
   @Test
   @Category(MaintainedByDiffblue.class)
@@ -1038,12 +1061,13 @@ public class BlockChainInfoDiffblueTest {
 
   /**
    * Test {@link BlockChainInfo#equals(Object)}.
+   *
    * <ul>
-   *   <li>When other is {@code null}.</li>
-   *   <li>Then return not equal.</li>
+   *   <li>When other is {@code null}.
+   *   <li>Then return not equal.
    * </ul>
-   * <p>
-   * Method under test: {@link BlockChainInfo#equals(Object)}
+   *
+   * <p>Method under test: {@link BlockChainInfo#equals(Object)}
    */
   @Test
   @Category(MaintainedByDiffblue.class)
@@ -1071,12 +1095,13 @@ public class BlockChainInfoDiffblueTest {
 
   /**
    * Test {@link BlockChainInfo#equals(Object)}.
+   *
    * <ul>
-   *   <li>When other is wrong type.</li>
-   *   <li>Then return not equal.</li>
+   *   <li>When other is wrong type.
+   *   <li>Then return not equal.
    * </ul>
-   * <p>
-   * Method under test: {@link BlockChainInfo#equals(Object)}
+   *
+   * <p>Method under test: {@link BlockChainInfo#equals(Object)}
    */
   @Test
   @Category(MaintainedByDiffblue.class)
@@ -1104,11 +1129,11 @@ public class BlockChainInfoDiffblueTest {
 
   /**
    * Test getters and setters.
-   * <p>
-   * Methods under test:
+   *
+   * <p>Methods under test:
+   *
    * <ul>
    *   <li>default or parameterless constructor of {@link BlockChainInfo}
-   *   <li>{@link BlockChainInfo#setBlockProcessTime(RateInfo)}
    *   <li>{@link BlockChainInfo#setDupWitness(List)}
    *   <li>{@link BlockChainInfo#setFailForkCount(int)}
    *   <li>{@link BlockChainInfo#setFailProcessBlockNum(long)}
@@ -1139,25 +1164,39 @@ public class BlockChainInfoDiffblueTest {
    */
   @Test
   @Category(MaintainedByDiffblue.class)
-  @MethodsUnderTest({"void BlockChainInfo.<init>()", "RateInfo BlockChainInfo.getBlockProcessTime()",
-      "List BlockChainInfo.getDupWitness()", "int BlockChainInfo.getFailForkCount()",
-      "long BlockChainInfo.getFailProcessBlockNum()", "String BlockChainInfo.getFailProcessBlockReason()",
-      "int BlockChainInfo.getForkCount()", "String BlockChainInfo.getHeadBlockHash()",
-      "long BlockChainInfo.getHeadBlockNum()", "long BlockChainInfo.getHeadBlockTimestamp()",
-      "RateInfo BlockChainInfo.getMissedTransaction()", "RateInfo BlockChainInfo.getTps()",
-      "int BlockChainInfo.getTransactionCacheSize()", "List BlockChainInfo.getWitnesses()",
-      "void BlockChainInfo.setBlockProcessTime(RateInfo)", "void BlockChainInfo.setDupWitness(List)",
-      "void BlockChainInfo.setFailForkCount(int)", "void BlockChainInfo.setFailProcessBlockNum(long)",
-      "void BlockChainInfo.setFailProcessBlockReason(String)", "void BlockChainInfo.setForkCount(int)",
-      "void BlockChainInfo.setHeadBlockHash(String)", "void BlockChainInfo.setHeadBlockNum(long)",
-      "void BlockChainInfo.setHeadBlockTimestamp(long)", "void BlockChainInfo.setMissedTransaction(RateInfo)",
-      "void BlockChainInfo.setTps(RateInfo)", "void BlockChainInfo.setTransactionCacheSize(int)",
-      "void BlockChainInfo.setWitnesses(List)", "String BlockChainInfo.toString()"})
+  @MethodsUnderTest({
+    "void BlockChainInfo.<init>()",
+    "RateInfo BlockChainInfo.getBlockProcessTime()",
+    "List BlockChainInfo.getDupWitness()",
+    "int BlockChainInfo.getFailForkCount()",
+    "long BlockChainInfo.getFailProcessBlockNum()",
+    "String BlockChainInfo.getFailProcessBlockReason()",
+    "int BlockChainInfo.getForkCount()",
+    "String BlockChainInfo.getHeadBlockHash()",
+    "long BlockChainInfo.getHeadBlockNum()",
+    "long BlockChainInfo.getHeadBlockTimestamp()",
+    "RateInfo BlockChainInfo.getMissedTransaction()",
+    "RateInfo BlockChainInfo.getTps()",
+    "int BlockChainInfo.getTransactionCacheSize()",
+    "List BlockChainInfo.getWitnesses()",
+    "void BlockChainInfo.setBlockProcessTime(RateInfo)",
+    "void BlockChainInfo.setDupWitness(List)",
+    "void BlockChainInfo.setFailForkCount(int)",
+    "void BlockChainInfo.setFailProcessBlockNum(long)",
+    "void BlockChainInfo.setFailProcessBlockReason(String)",
+    "void BlockChainInfo.setForkCount(int)",
+    "void BlockChainInfo.setHeadBlockHash(String)",
+    "void BlockChainInfo.setHeadBlockNum(long)",
+    "void BlockChainInfo.setHeadBlockTimestamp(long)",
+    "void BlockChainInfo.setMissedTransaction(RateInfo)",
+    "void BlockChainInfo.setTps(RateInfo)",
+    "void BlockChainInfo.setTransactionCacheSize(int)",
+    "void BlockChainInfo.setWitnesses(List)",
+    "String BlockChainInfo.toString()"
+  })
   public void testGettersAndSetters() {
     // Arrange and Act
     BlockChainInfo actualBlockChainInfo = new BlockChainInfo();
-    RateInfo blockProcessTime = new RateInfo();
-    actualBlockChainInfo.setBlockProcessTime(blockProcessTime);
     ArrayList<DupWitnessInfo> dupWitness = new ArrayList<>();
     actualBlockChainInfo.setDupWitness(dupWitness);
     actualBlockChainInfo.setFailForkCount(3);
@@ -1190,14 +1229,16 @@ public class BlockChainInfoDiffblueTest {
     List<WitnessInfo> actualWitnesses = actualBlockChainInfo.getWitnesses();
 
     // Assert
-    assertEquals("BlockChainInfo(headBlockNum=1, headBlockTimestamp=1, headBlockHash=Head Block Hash, forkCount=3,"
-        + " failForkCount=3, blockProcessTime=RateInfo(meanRate=0.0, oneMinuteRate=0.0, fiveMinuteRate=0.0,"
-        + " fifteenMinuteRate=0.0, count=0), tps=RateInfo(meanRate=0.0, oneMinuteRate=0.0, fiveMinuteRate=0.0,"
-        + " fifteenMinuteRate=0.0, count=0), transactionCacheSize=3, missedTransaction=RateInfo(meanRate=0.0,"
-        + " oneMinuteRate=0.0, fiveMinuteRate=0.0, fifteenMinuteRate=0.0, count=0), witnesses=[], failProcessBlockNum=1,"
-        + " failProcessBlockReason=Just cause, dupWitness=[])", actualToStringResult);
+    assertEquals(
+        "BlockChainInfo(headBlockNum=1, headBlockTimestamp=1, headBlockHash=Head Block Hash, forkCount=3,"
+            + " failForkCount=3, blockProcessTime=null, tps=RateInfo(meanRate=0.0, oneMinuteRate=0.0, fiveMinuteRate=0.0,"
+            + " fifteenMinuteRate=0.0, count=0), transactionCacheSize=3, missedTransaction=RateInfo(meanRate=0.0,"
+            + " oneMinuteRate=0.0, fiveMinuteRate=0.0, fifteenMinuteRate=0.0, count=0), witnesses=[], failProcessBlockNum=1,"
+            + " failProcessBlockReason=Just cause, dupWitness=[])",
+        actualToStringResult);
     assertEquals("Head Block Hash", actualHeadBlockHash);
     assertEquals("Just cause", actualFailProcessBlockReason);
+    assertNull(actualBlockProcessTime);
     assertEquals(1L, actualFailProcessBlockNum);
     assertEquals(1L, actualHeadBlockNum);
     assertEquals(1L, actualHeadBlockTimestamp);
@@ -1208,7 +1249,6 @@ public class BlockChainInfoDiffblueTest {
     assertTrue(actualWitnesses.isEmpty());
     assertSame(dupWitness, actualDupWitness);
     assertSame(witnesses, actualWitnesses);
-    assertSame(blockProcessTime, actualBlockProcessTime);
     assertSame(missedTransaction, actualMissedTransaction);
     assertSame(tps, actualTps);
   }

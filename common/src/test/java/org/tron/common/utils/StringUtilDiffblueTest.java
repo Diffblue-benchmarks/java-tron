@@ -10,6 +10,7 @@ import static org.mockito.Mockito.when;
 import com.diffblue.cover.annotations.MaintainedByDiffblue;
 import com.diffblue.cover.annotations.MethodsUnderTest;
 import com.google.protobuf.ByteString;
+import com.google.protobuf.ByteString.ByteIterator;
 import java.io.UnsupportedEncodingException;
 import org.junit.Test;
 import org.junit.experimental.categories.Category;
@@ -17,8 +18,8 @@ import org.junit.experimental.categories.Category;
 public class StringUtilDiffblueTest {
   /**
    * Test {@link StringUtil#createDbKey(ByteString)}.
-   * <p>
-   * Method under test: {@link StringUtil#createDbKey(ByteString)}
+   *
+   * <p>Method under test: {@link StringUtil#createDbKey(ByteString)}
    */
   @Test
   @Category(MaintainedByDiffblue.class)
@@ -38,28 +39,31 @@ public class StringUtilDiffblueTest {
 
   /**
    * Test {@link StringUtil#createReadableString(byte[])} with {@code bytes}.
+   *
    * <ul>
-   *   <li>Then return {@code 4158415841584158}.</li>
+   *   <li>Then return {@code 4158415841584158}.
    * </ul>
-   * <p>
-   * Method under test: {@link StringUtil#createReadableString(byte[])}
+   *
+   * <p>Method under test: {@link StringUtil#createReadableString(byte[])}
    */
   @Test
   @Category(MaintainedByDiffblue.class)
   @MethodsUnderTest({"String StringUtil.createReadableString(byte[])"})
-  public void testCreateReadableStringWithBytes_thenReturn4158415841584158() throws UnsupportedEncodingException {
+  public void testCreateReadableStringWithBytes_thenReturn4158415841584158()
+      throws UnsupportedEncodingException {
     // Arrange, Act and Assert
     assertEquals("4158415841584158", StringUtil.createReadableString("AXAXAXAX".getBytes("UTF-8")));
   }
 
   /**
    * Test {@link StringUtil#createReadableString(byte[])} with {@code bytes}.
+   *
    * <ul>
-   *   <li>When {@code null}.</li>
-   *   <li>Then return empty string.</li>
+   *   <li>When {@code null}.
+   *   <li>Then return empty string.
    * </ul>
-   * <p>
-   * Method under test: {@link StringUtil#createReadableString(byte[])}
+   *
+   * <p>Method under test: {@link StringUtil#createReadableString(byte[])}
    */
   @Test
   @Category(MaintainedByDiffblue.class)
@@ -71,8 +75,8 @@ public class StringUtilDiffblueTest {
 
   /**
    * Test {@link StringUtil#createReadableString(ByteString)} with {@code string}.
-   * <p>
-   * Method under test: {@link StringUtil#createReadableString(ByteString)}
+   *
+   * <p>Method under test: {@link StringUtil#createReadableString(ByteString)}
    */
   @Test
   @Category(MaintainedByDiffblue.class)
@@ -92,12 +96,13 @@ public class StringUtilDiffblueTest {
 
   /**
    * Test {@link StringUtil#hexString2ByteString(String)}.
+   *
    * <ul>
-   *   <li>When {@code 0x}.</li>
-   *   <li>Then return toStringUtf8 is empty string.</li>
+   *   <li>When {@code 0x}.
+   *   <li>Then return toStringUtf8 is empty string.
    * </ul>
-   * <p>
-   * Method under test: {@link StringUtil#hexString2ByteString(String)}
+   *
+   * <p>Method under test: {@link StringUtil#hexString2ByteString(String)}
    */
   @Test
   @Category(MaintainedByDiffblue.class)
@@ -110,5 +115,35 @@ public class StringUtilDiffblueTest {
     assertEquals("", actualHexString2ByteStringResult.toStringUtf8());
     assertFalse(actualHexString2ByteStringResult.iterator().hasNext());
     assertTrue(actualHexString2ByteStringResult.isEmpty());
+  }
+
+  /**
+   * Test {@link StringUtil#hexString2ByteString(String)}.
+   *
+   * <ul>
+   *   <li>When {@code 0123456789ABCDEF}.
+   *   <li>Then return not Empty.
+   * </ul>
+   *
+   * <p>Method under test: {@link StringUtil#hexString2ByteString(String)}
+   */
+  @Test
+  @Category(MaintainedByDiffblue.class)
+  @MethodsUnderTest({"ByteString StringUtil.hexString2ByteString(String)"})
+  public void testHexString2ByteString_when0123456789abcdef_thenReturnNotEmpty() {
+    // Arrange and Act
+    ByteString actualHexString2ByteStringResult =
+        StringUtil.hexString2ByteString("0123456789ABCDEF");
+
+    // Assert
+    assertFalse(actualHexString2ByteStringResult.isEmpty());
+    ByteIterator iteratorResult = actualHexString2ByteStringResult.iterator();
+    assertTrue(iteratorResult.hasNext());
+    assertEquals((byte) 1, iteratorResult.next().byteValue());
+    assertEquals('#', iteratorResult.next().byteValue());
+    assertEquals('E', iteratorResult.next().byteValue());
+    assertEquals('g', iteratorResult.next().byteValue());
+    assertEquals((byte) -119, iteratorResult.next().byteValue());
+    assertEquals("\u0001#Eg����", actualHexString2ByteStringResult.toStringUtf8());
   }
 }

@@ -2,9 +2,7 @@ package org.tron.core.vm.repository;
 
 import static org.junit.Assert.assertArrayEquals;
 import static org.junit.Assert.assertEquals;
-import static org.junit.Assert.assertFalse;
 import static org.junit.Assert.assertNull;
-import static org.junit.Assert.assertSame;
 import static org.junit.Assert.assertTrue;
 import static org.mockito.Mockito.mock;
 import static org.mockito.Mockito.verify;
@@ -12,10 +10,10 @@ import static org.mockito.Mockito.when;
 import com.diffblue.cover.annotations.MaintainedByDiffblue;
 import com.diffblue.cover.annotations.MethodsUnderTest;
 import java.io.UnsupportedEncodingException;
-import java.util.List;
 import org.junit.Test;
 import org.junit.experimental.categories.Category;
 import org.tron.core.capsule.AccountCapsule;
+import org.tron.core.capsule.BytesCapsule;
 import org.tron.core.capsule.ProtoCapsule;
 import org.tron.core.db.BlockIndexStore;
 import org.tron.core.db.BlockStore;
@@ -36,15 +34,13 @@ import org.tron.core.store.StoreFactory;
 import org.tron.core.store.VotesStore;
 import org.tron.core.vm.program.Storage;
 import org.tron.protos.Protocol;
-import org.tron.protos.Protocol.Account;
-import org.tron.protos.Protocol.Account.Frozen;
 import org.tron.protos.Protocol.AccountType;
 
 public class RepositoryImplDiffblueTest {
   /**
    * Test {@link RepositoryImpl#RepositoryImpl(StoreFactory, RepositoryImpl)}.
-   * <p>
-   * Method under test: {@link RepositoryImpl#RepositoryImpl(StoreFactory, RepositoryImpl)}
+   *
+   * <p>Method under test: {@link RepositoryImpl#RepositoryImpl(StoreFactory, RepositoryImpl)}
    */
   @Test
   @Category(MaintainedByDiffblue.class)
@@ -54,8 +50,8 @@ public class RepositoryImplDiffblueTest {
     StoreFactory storeFactory = StoreFactory.getInstance();
 
     // Act
-    RepositoryImpl actualRepositoryImpl = new RepositoryImpl(storeFactory,
-        RepositoryImpl.createRoot(StoreFactory.getInstance()));
+    RepositoryImpl actualRepositoryImpl =
+        new RepositoryImpl(storeFactory, RepositoryImpl.createRoot(StoreFactory.getInstance()));
 
     // Assert
     assertNull(actualRepositoryImpl.getBlockIndexStore());
@@ -79,8 +75,8 @@ public class RepositoryImplDiffblueTest {
 
   /**
    * Test {@link RepositoryImpl#createRoot(StoreFactory)}.
-   * <p>
-   * Method under test: {@link RepositoryImpl#createRoot(StoreFactory)}
+   *
+   * <p>Method under test: {@link RepositoryImpl#createRoot(StoreFactory)}
    */
   @Test
   @Category(MaintainedByDiffblue.class)
@@ -111,16 +107,16 @@ public class RepositoryImplDiffblueTest {
 
   /**
    * Test {@link RepositoryImpl#newRepositoryChild()}.
-   * <p>
-   * Method under test: {@link RepositoryImpl#newRepositoryChild()}
+   *
+   * <p>Method under test: {@link RepositoryImpl#newRepositoryChild()}
    */
   @Test
   @Category(MaintainedByDiffblue.class)
   @MethodsUnderTest({"Repository RepositoryImpl.newRepositoryChild()"})
   public void testNewRepositoryChild() {
     // Arrange and Act
-    Repository actualNewRepositoryChildResult = RepositoryImpl.createRoot(StoreFactory.getInstance())
-        .newRepositoryChild();
+    Repository actualNewRepositoryChildResult =
+        RepositoryImpl.createRoot(StoreFactory.getInstance()).newRepositoryChild();
 
     // Assert
     assertTrue(actualNewRepositoryChildResult instanceof RepositoryImpl);
@@ -134,7 +130,8 @@ public class RepositoryImplDiffblueTest {
     assertNull(((RepositoryImpl) actualNewRepositoryChildResult).getCodeStore());
     assertNull(((RepositoryImpl) actualNewRepositoryChildResult).getContractStateStore());
     assertNull(((RepositoryImpl) actualNewRepositoryChildResult).getContractStore());
-    assertNull(((RepositoryImpl) actualNewRepositoryChildResult).getDelegatedResourceAccountIndexStore());
+    assertNull(
+        ((RepositoryImpl) actualNewRepositoryChildResult).getDelegatedResourceAccountIndexStore());
     assertNull(((RepositoryImpl) actualNewRepositoryChildResult).getDelegatedResourceStore());
     assertNull(actualNewRepositoryChildResult.getDelegationStore());
     assertNull(actualNewRepositoryChildResult.getDynamicPropertiesStore());
@@ -144,174 +141,280 @@ public class RepositoryImplDiffblueTest {
   }
 
   /**
-   * Test {@link RepositoryImpl#createAccount(byte[], String, AccountType)} with {@code address}, {@code accountName}, {@code type}.
-   * <ul>
-   *   <li>Then return FrozenCount is zero.</li>
-   * </ul>
-   * <p>
-   * Method under test: {@link RepositoryImpl#createAccount(byte[], String, AccountType)}
+   * Test {@link RepositoryImpl#createAccount(byte[], String, AccountType)} with {@code address},
+   * {@code accountName}, {@code type}.
+   *
+   * <p>Method under test: {@link RepositoryImpl#createAccount(byte[], String,
+   * Protocol.AccountType)}
    */
   @Test
   @Category(MaintainedByDiffblue.class)
-  @MethodsUnderTest({"AccountCapsule RepositoryImpl.createAccount(byte[], String, AccountType)"})
-  public void testCreateAccountWithAddressAccountNameType_thenReturnFrozenCountIsZero()
-      throws UnsupportedEncodingException {
-    // Arrange
-    RepositoryImpl createRootResult = RepositoryImpl.createRoot(StoreFactory.getInstance());
-
-    // Act
-    AccountCapsule actualCreateAccountResult = createRootResult.createAccount("AXAXAXAX".getBytes("UTF-8"),
-        "Dr Jane Doe", AccountType.Normal);
-
-    // Assert
-    assertEquals(0, actualCreateAccountResult.getFrozenCount());
-    assertEquals(0, actualCreateAccountResult.getFrozenSupplyCount());
-    assertEquals(0L, actualCreateAccountResult.getAcquiredDelegatedFrozenBalanceForBandwidth());
-    assertEquals(0L, actualCreateAccountResult.getAcquiredDelegatedFrozenBalanceForEnergy());
-    assertEquals(0L, actualCreateAccountResult.getAcquiredDelegatedFrozenV2BalanceForBandwidth());
-    assertEquals(0L, actualCreateAccountResult.getAcquiredDelegatedFrozenV2BalanceForEnergy());
-    assertEquals(0L, actualCreateAccountResult.getAllFrozenBalanceForBandwidth());
-    assertEquals(0L, actualCreateAccountResult.getAllFrozenBalanceForEnergy());
-    assertEquals(0L, actualCreateAccountResult.getAllTronPower());
-    assertEquals(0L, actualCreateAccountResult.getAllowance());
-    assertEquals(0L, actualCreateAccountResult.getBalance());
-    assertEquals(0L, actualCreateAccountResult.getDelegatedFrozenBalanceForBandwidth());
-    assertEquals(0L, actualCreateAccountResult.getDelegatedFrozenBalanceForEnergy());
-    assertEquals(0L, actualCreateAccountResult.getDelegatedFrozenV2BalanceForBandwidth());
-    assertEquals(0L, actualCreateAccountResult.getDelegatedFrozenV2BalanceForEnergy());
-    assertEquals(0L, actualCreateAccountResult.getEnergyFrozenBalance());
-    assertEquals(0L, actualCreateAccountResult.getEnergyUsage());
-    assertEquals(0L, actualCreateAccountResult.getFreeNetUsage());
-    assertEquals(0L, actualCreateAccountResult.getFrozenBalance());
-    assertEquals(0L, actualCreateAccountResult.getFrozenSupplyBalance());
-    assertEquals(0L, actualCreateAccountResult.getFrozenV2BalanceForBandwidth());
-    assertEquals(0L, actualCreateAccountResult.getFrozenV2BalanceForEnergy());
-    assertEquals(0L, actualCreateAccountResult.getLatestConsumeFreeTime());
-    assertEquals(0L, actualCreateAccountResult.getLatestConsumeTime());
-    assertEquals(0L, actualCreateAccountResult.getLatestConsumeTimeForEnergy());
-    assertEquals(0L, actualCreateAccountResult.getLatestExchangeStorageTime());
-    assertEquals(0L, actualCreateAccountResult.getLatestOperationTime());
-    assertEquals(0L, actualCreateAccountResult.getLatestWithdrawTime());
-    assertEquals(0L, actualCreateAccountResult.getNetUsage());
-    assertEquals(0L, actualCreateAccountResult.getStorageLeft());
-    assertEquals(0L, actualCreateAccountResult.getStorageLimit());
-    assertEquals(0L, actualCreateAccountResult.getStorageUsage());
-    assertEquals(0L, actualCreateAccountResult.getTotalAcquiredDelegatedFrozenBalanceForBandwidth());
-    assertEquals(0L, actualCreateAccountResult.getTotalAcquiredDelegatedFrozenBalanceForEnergy());
-    assertEquals(0L, actualCreateAccountResult.getTotalDelegatedFrozenBalanceForBandwidth());
-    assertEquals(0L, actualCreateAccountResult.getTotalDelegatedFrozenBalanceForEnergy());
-    assertEquals(0L, actualCreateAccountResult.getTronPower());
-    assertEquals(0L, actualCreateAccountResult.getTronPowerFrozenBalance());
-    assertEquals(0L, actualCreateAccountResult.getTronPowerFrozenV2Balance());
-    assertEquals(0L, actualCreateAccountResult.getTronPowerUsage());
-    assertEquals(AccountType.Normal, actualCreateAccountResult.getType());
-    assertFalse(actualCreateAccountResult.getAssetOptimized());
-    assertFalse(actualCreateAccountResult.getIsCommittee());
-    assertFalse(actualCreateAccountResult.getIsWitness());
-    List<Frozen> frozenList = actualCreateAccountResult.getFrozenList();
-    assertTrue(frozenList.isEmpty());
-    assertTrue(actualCreateAccountResult.getAllFreeAssetNetUsage().isEmpty());
-    assertTrue(actualCreateAccountResult.getAllFreeAssetNetUsageV2().isEmpty());
-    assertTrue(actualCreateAccountResult.getAssetMap().isEmpty());
-    assertTrue(actualCreateAccountResult.getAssetMapForTest().isEmpty());
-    assertTrue(actualCreateAccountResult.getLatestAssetOperationTimeMap().isEmpty());
-    assertTrue(actualCreateAccountResult.getLatestAssetOperationTimeMapV2().isEmpty());
-    assertSame(frozenList, actualCreateAccountResult.getFrozenSupplyList());
-    assertSame(frozenList, actualCreateAccountResult.getFrozenV2List());
-    assertSame(frozenList, actualCreateAccountResult.getUnfrozenV2List());
-    assertSame(frozenList, actualCreateAccountResult.getVotesList());
-    byte[] expectedWitnessPermissionAddress = "AXAXAXAX".getBytes("UTF-8");
-    assertArrayEquals(expectedWitnessPermissionAddress, actualCreateAccountResult.getWitnessPermissionAddress());
-    assertArrayEquals(new byte[]{'\n', 11, 'D', 'r', ' ', 'J', 'a', 'n', 'e', ' ', 'D', 'o', 'e', 26, '\b', 'A', 'X',
-        'A', 'X', 'A', 'X', 'A', 'X'}, actualCreateAccountResult.getData());
-  }
-
-  /**
-   * Test {@link RepositoryImpl#createAccount(byte[], AccountType)} with {@code address}, {@code type}.
-   * <ul>
-   *   <li>Then return FrozenCount is zero.</li>
-   * </ul>
-   * <p>
-   * Method under test: {@link RepositoryImpl#createAccount(byte[], AccountType)}
-   */
-  @Test
-  @Category(MaintainedByDiffblue.class)
-  @MethodsUnderTest({"AccountCapsule RepositoryImpl.createAccount(byte[], AccountType)"})
-  public void testCreateAccountWithAddressType_thenReturnFrozenCountIsZero() throws UnsupportedEncodingException {
-    // Arrange
-    RepositoryImpl createRootResult = RepositoryImpl.createRoot(StoreFactory.getInstance());
-
-    // Act
-    AccountCapsule actualCreateAccountResult = createRootResult.createAccount("AXAXAXAX".getBytes("UTF-8"),
-        AccountType.Normal);
+  @MethodsUnderTest({
+    "AccountCapsule RepositoryImpl.createAccount(byte[], String, Protocol.AccountType)"
+  })
+  public void testCreateAccountWithAddressAccountNameType() throws UnsupportedEncodingException {
+    // Arrange and Act
+    AccountCapsule actualCreateAccountResult =
+        RepositoryImpl.createRoot(StoreFactory.getInstance())
+            .createAccount("AXAXAXAX".getBytes("UTF-8"), "Dr Jane Doe", AccountType.Normal);
 
     // Assert
-    assertEquals(0, actualCreateAccountResult.getFrozenCount());
-    assertEquals(0, actualCreateAccountResult.getFrozenSupplyCount());
-    assertEquals(0L, actualCreateAccountResult.getAcquiredDelegatedFrozenBalanceForBandwidth());
-    assertEquals(0L, actualCreateAccountResult.getAcquiredDelegatedFrozenBalanceForEnergy());
-    assertEquals(0L, actualCreateAccountResult.getAcquiredDelegatedFrozenV2BalanceForBandwidth());
-    assertEquals(0L, actualCreateAccountResult.getAcquiredDelegatedFrozenV2BalanceForEnergy());
-    assertEquals(0L, actualCreateAccountResult.getAllFrozenBalanceForBandwidth());
-    assertEquals(0L, actualCreateAccountResult.getAllFrozenBalanceForEnergy());
-    assertEquals(0L, actualCreateAccountResult.getAllTronPower());
-    assertEquals(0L, actualCreateAccountResult.getAllowance());
-    assertEquals(0L, actualCreateAccountResult.getBalance());
-    assertEquals(0L, actualCreateAccountResult.getDelegatedFrozenBalanceForBandwidth());
-    assertEquals(0L, actualCreateAccountResult.getDelegatedFrozenBalanceForEnergy());
-    assertEquals(0L, actualCreateAccountResult.getDelegatedFrozenV2BalanceForBandwidth());
-    assertEquals(0L, actualCreateAccountResult.getDelegatedFrozenV2BalanceForEnergy());
-    assertEquals(0L, actualCreateAccountResult.getEnergyFrozenBalance());
-    assertEquals(0L, actualCreateAccountResult.getEnergyUsage());
-    assertEquals(0L, actualCreateAccountResult.getFreeNetUsage());
-    assertEquals(0L, actualCreateAccountResult.getFrozenBalance());
-    assertEquals(0L, actualCreateAccountResult.getFrozenSupplyBalance());
-    assertEquals(0L, actualCreateAccountResult.getFrozenV2BalanceForBandwidth());
-    assertEquals(0L, actualCreateAccountResult.getFrozenV2BalanceForEnergy());
-    assertEquals(0L, actualCreateAccountResult.getLatestConsumeFreeTime());
-    assertEquals(0L, actualCreateAccountResult.getLatestConsumeTime());
-    assertEquals(0L, actualCreateAccountResult.getLatestConsumeTimeForEnergy());
-    assertEquals(0L, actualCreateAccountResult.getLatestExchangeStorageTime());
-    assertEquals(0L, actualCreateAccountResult.getLatestOperationTime());
-    assertEquals(0L, actualCreateAccountResult.getLatestWithdrawTime());
-    assertEquals(0L, actualCreateAccountResult.getNetUsage());
-    assertEquals(0L, actualCreateAccountResult.getStorageLeft());
-    assertEquals(0L, actualCreateAccountResult.getStorageLimit());
-    assertEquals(0L, actualCreateAccountResult.getStorageUsage());
-    assertEquals(0L, actualCreateAccountResult.getTotalAcquiredDelegatedFrozenBalanceForBandwidth());
-    assertEquals(0L, actualCreateAccountResult.getTotalAcquiredDelegatedFrozenBalanceForEnergy());
-    assertEquals(0L, actualCreateAccountResult.getTotalDelegatedFrozenBalanceForBandwidth());
-    assertEquals(0L, actualCreateAccountResult.getTotalDelegatedFrozenBalanceForEnergy());
-    assertEquals(0L, actualCreateAccountResult.getTronPower());
-    assertEquals(0L, actualCreateAccountResult.getTronPowerFrozenBalance());
-    assertEquals(0L, actualCreateAccountResult.getTronPowerFrozenV2Balance());
-    assertEquals(0L, actualCreateAccountResult.getTronPowerUsage());
-    assertEquals(AccountType.Normal, actualCreateAccountResult.getType());
-    assertFalse(actualCreateAccountResult.getAssetOptimized());
-    assertFalse(actualCreateAccountResult.getIsCommittee());
-    assertFalse(actualCreateAccountResult.getIsWitness());
-    List<Frozen> frozenList = actualCreateAccountResult.getFrozenList();
-    assertTrue(frozenList.isEmpty());
-    assertTrue(actualCreateAccountResult.getAllFreeAssetNetUsage().isEmpty());
-    assertTrue(actualCreateAccountResult.getAllFreeAssetNetUsageV2().isEmpty());
-    assertTrue(actualCreateAccountResult.getAssetMap().isEmpty());
-    assertTrue(actualCreateAccountResult.getAssetMapForTest().isEmpty());
-    assertTrue(actualCreateAccountResult.getLatestAssetOperationTimeMap().isEmpty());
-    assertTrue(actualCreateAccountResult.getLatestAssetOperationTimeMapV2().isEmpty());
-    assertSame(frozenList, actualCreateAccountResult.getFrozenSupplyList());
-    assertSame(frozenList, actualCreateAccountResult.getFrozenV2List());
-    assertSame(frozenList, actualCreateAccountResult.getUnfrozenV2List());
-    assertSame(frozenList, actualCreateAccountResult.getVotesList());
-    byte[] expectedWitnessPermissionAddress = "AXAXAXAX".getBytes("UTF-8");
-    assertArrayEquals(expectedWitnessPermissionAddress, actualCreateAccountResult.getWitnessPermissionAddress());
-    assertArrayEquals(new byte[]{26, '\b', 'A', 'X', 'A', 'X', 'A', 'X', 'A', 'X'},
+    assertArrayEquals(
+        "AXAXAXAX".getBytes("UTF-8"), actualCreateAccountResult.getWitnessPermissionAddress());
+    assertArrayEquals(
+        new byte[] {
+          '\n', 11, 'D', 'r', ' ', 'J', 'a', 'n', 'e', ' ', 'D', 'o', 'e', 26, '\b', 'A', 'X', 'A',
+          'X', 'A', 'X', 'A', 'X'
+        },
         actualCreateAccountResult.getData());
   }
 
   /**
+   * Test {@link RepositoryImpl#createAccount(byte[], String, AccountType)} with {@code address},
+   * {@code accountName}, {@code type}.
+   *
+   * <p>Method under test: {@link RepositoryImpl#createAccount(byte[], String,
+   * Protocol.AccountType)}
+   */
+  @Test
+  @Category(MaintainedByDiffblue.class)
+  @MethodsUnderTest({
+    "AccountCapsule RepositoryImpl.createAccount(byte[], String, Protocol.AccountType)"
+  })
+  public void testCreateAccountWithAddressAccountNameType2() {
+    // Arrange and Act
+    AccountCapsule actualCreateAccountResult =
+        RepositoryImpl.createRoot(StoreFactory.getInstance())
+            .createAccount(new byte[] {}, "Dr Jane Doe", AccountType.Normal);
+
+    // Assert
+    assertArrayEquals(new byte[] {}, actualCreateAccountResult.getWitnessPermissionAddress());
+    assertArrayEquals(
+        new byte[] {'\n', 11, 'D', 'r', ' ', 'J', 'a', 'n', 'e', ' ', 'D', 'o', 'e'},
+        actualCreateAccountResult.getData());
+  }
+
+  /**
+   * Test {@link RepositoryImpl#createAccount(byte[], AccountType)} with {@code address}, {@code
+   * type}.
+   *
+   * <p>Method under test: {@link RepositoryImpl#createAccount(byte[], Protocol.AccountType)}
+   */
+  @Test
+  @Category(MaintainedByDiffblue.class)
+  @MethodsUnderTest({"AccountCapsule RepositoryImpl.createAccount(byte[], Protocol.AccountType)"})
+  public void testCreateAccountWithAddressType() throws UnsupportedEncodingException {
+    // Arrange and Act
+    AccountCapsule actualCreateAccountResult =
+        RepositoryImpl.createRoot(StoreFactory.getInstance())
+            .createAccount("AXAXAXAX".getBytes("UTF-8"), AccountType.Normal);
+
+    // Assert
+    assertArrayEquals(
+        "AXAXAXAX".getBytes("UTF-8"), actualCreateAccountResult.getWitnessPermissionAddress());
+    assertArrayEquals(
+        new byte[] {26, '\b', 'A', 'X', 'A', 'X', 'A', 'X', 'A', 'X'},
+        actualCreateAccountResult.getData());
+  }
+
+  /**
+   * Test {@link RepositoryImpl#createAccount(byte[], AccountType)} with {@code address}, {@code
+   * type}.
+   *
+   * <ul>
+   *   <li>Then return Data is empty array of {@code byte}.
+   * </ul>
+   *
+   * <p>Method under test: {@link RepositoryImpl#createAccount(byte[], Protocol.AccountType)}
+   */
+  @Test
+  @Category(MaintainedByDiffblue.class)
+  @MethodsUnderTest({"AccountCapsule RepositoryImpl.createAccount(byte[], Protocol.AccountType)"})
+  public void testCreateAccountWithAddressType_thenReturnDataIsEmptyArrayOfByte() {
+    // Arrange and Act
+    AccountCapsule actualCreateAccountResult =
+        RepositoryImpl.createRoot(StoreFactory.getInstance())
+            .createAccount(new byte[] {}, AccountType.Normal);
+
+    // Assert
+    assertArrayEquals(new byte[] {}, actualCreateAccountResult.getData());
+    assertArrayEquals(new byte[] {}, actualCreateAccountResult.getWitnessPermissionAddress());
+  }
+
+  /**
+   * Test {@link RepositoryImpl#getDelegation(Key)}.
+   *
+   * <ul>
+   *   <li>Given {@code A}.
+   *   <li>When create {@code AXAXAXAX} Bytes is {@code UTF-8}.
+   *   <li>Then return Instance is {@code null}.
+   * </ul>
+   *
+   * <p>Method under test: {@link RepositoryImpl#getDelegation(Key)}
+   */
+  @Test
+  @Category(MaintainedByDiffblue.class)
+  @MethodsUnderTest({"BytesCapsule RepositoryImpl.getDelegation(Key)"})
+  public void testGetDelegation_givenA_whenCreateAxaxaxaxBytesIsUtf8_thenReturnInstanceIsNull()
+      throws UnsupportedEncodingException {
+    // Arrange
+    ProtoCapsule<Object> capsule = mock(ProtoCapsule.class);
+    when(capsule.getInstance()).thenReturn("Instance");
+    Value<Object> value = Value.create(capsule, 1);
+
+    ProtoCapsule<Object> capsule2 = mock(ProtoCapsule.class);
+    when(capsule2.getInstance()).thenReturn("Instance");
+    Value<Object> value2 = Value.create(capsule2, 1);
+
+    ProtoCapsule<Object> capsule3 = mock(ProtoCapsule.class);
+    when(capsule3.getInstance()).thenReturn("Instance");
+    Value<Object> value3 = Value.create(capsule3, 1);
+
+    ProtoCapsule<Object> capsule4 = mock(ProtoCapsule.class);
+    when(capsule4.getInstance()).thenReturn("Instance");
+    Value<Object> value4 = Value.create(capsule4, 1);
+
+    ProtoCapsule<Object> capsule5 = mock(ProtoCapsule.class);
+    when(capsule5.getInstance()).thenReturn("Instance");
+    Value<Object> value5 = Value.create(capsule5, 1);
+
+    ProtoCapsule<Object> capsule6 = mock(ProtoCapsule.class);
+    when(capsule6.getInstance()).thenReturn("Instance");
+    Value<Object> value6 = Value.create(capsule6, 1);
+
+    ProtoCapsule<Object> capsule7 = mock(ProtoCapsule.class);
+    when(capsule7.getInstance()).thenReturn("Instance");
+    Value<Object> value7 = Value.create(capsule7, 1);
+
+    ProtoCapsule<Object> capsule8 = mock(ProtoCapsule.class);
+    when(capsule8.getInstance()).thenReturn("Instance");
+    Value<Object> value8 = Value.create(capsule8, 1);
+
+    ProtoCapsule<Object> capsule9 = mock(ProtoCapsule.class);
+    when(capsule9.getInstance()).thenReturn("Instance");
+    Value<Object> value9 = Value.create(capsule9, 1);
+
+    ProtoCapsule<Object> capsule10 = mock(ProtoCapsule.class);
+    when(capsule10.getInstance()).thenReturn("Instance");
+    Value<Object> value10 = Value.create(capsule10, 1);
+
+    ProtoCapsule<Object> capsule11 = mock(ProtoCapsule.class);
+    when(capsule11.getInstance()).thenReturn("Instance");
+    Value<Object> value11 = Value.create(capsule11, 1);
+
+    ProtoCapsule<Object> capsule12 = mock(ProtoCapsule.class);
+    when(capsule12.getInstance()).thenReturn("Instance");
+    Value<Object> value12 = Value.create(capsule12, 1);
+
+    ProtoCapsule<Object> capsule13 = mock(ProtoCapsule.class);
+    when(capsule13.getInstance()).thenReturn("Instance");
+    Value<Object> value13 = Value.create(capsule13, 1);
+
+    ProtoCapsule<Object> capsule14 = mock(ProtoCapsule.class);
+    when(capsule14.getInstance()).thenReturn("Instance");
+    Value<Object> value14 = Value.create(capsule14, 1);
+
+    ProtoCapsule<Object> capsule15 = mock(ProtoCapsule.class);
+    when(capsule15.getInstance()).thenReturn("Instance");
+    Value<Object> value15 = Value.create(capsule15, 1);
+
+    ProtoCapsule<Object> capsule16 = mock(ProtoCapsule.class);
+    when(capsule16.getInstance()).thenReturn("Instance");
+    Value<Object> value16 = Value.create(capsule16, 1);
+
+    ProtoCapsule<Object> capsule17 = mock(ProtoCapsule.class);
+    when(capsule17.getInstance()).thenReturn("Instance");
+    Value<Object> value17 = Value.create(capsule17, 1);
+
+    ProtoCapsule<Object> capsule18 = mock(ProtoCapsule.class);
+    when(capsule18.getInstance()).thenReturn("Instance");
+    Value<Object> value18 = Value.create(capsule18, 1);
+
+    ProtoCapsule<Object> capsule19 = mock(ProtoCapsule.class);
+    when(capsule19.getInstance()).thenReturn("Instance");
+    Value<Object> value19 = Value.create(capsule19, 1);
+
+    ProtoCapsule<Object> capsule20 = mock(ProtoCapsule.class);
+    when(capsule20.getInstance()).thenReturn("Instance");
+    Value<Object> value20 = Value.create(capsule20, 1);
+
+    ProtoCapsule<Object> capsule21 = mock(ProtoCapsule.class);
+    when(capsule21.getInstance()).thenReturn("Instance");
+    Value<Object> value21 = Value.create(capsule21, 1);
+
+    ProtoCapsule<Object> capsule22 = mock(ProtoCapsule.class);
+    when(capsule22.getInstance()).thenReturn("Instance");
+    Value<Object> value22 = Value.create(capsule22, 1);
+
+    ProtoCapsule<Object> capsule23 = mock(ProtoCapsule.class);
+    when(capsule23.getInstance()).thenReturn("Instance");
+    Value<Object> value23 = Value.create(capsule23, 1);
+
+    RepositoryImpl createRootResult = RepositoryImpl.createRoot(StoreFactory.getInstance());
+    createRootResult.putAccount(Key.create("AXAXAXAX".getBytes("UTF-8")), value23);
+    createRootResult.putAccount(Key.create("AXAXAXAX".getBytes("UTF-8")), value22);
+    createRootResult.putAccount(Key.create("AXAXAXAX".getBytes("UTF-8")), value21);
+    createRootResult.putAccount(Key.create("AXAXAXAX".getBytes("UTF-8")), value20);
+    createRootResult.putAccount(Key.create("AXAXAXAX".getBytes("UTF-8")), value19);
+    createRootResult.putAccount(Key.create("AXAXAXAX".getBytes("UTF-8")), value18);
+    createRootResult.putAccount(Key.create("AXAXAXAX".getBytes("UTF-8")), value17);
+    createRootResult.putAccount(Key.create("AXAXAXAX".getBytes("UTF-8")), value16);
+    createRootResult.putAccount(Key.create("AXAXAXAX".getBytes("UTF-8")), value15);
+    createRootResult.putAccount(Key.create("AXAXAXAX".getBytes("UTF-8")), value14);
+    createRootResult.putAccount(Key.create("AXAXAXAX".getBytes("UTF-8")), value13);
+    createRootResult.putAccount(Key.create("AXAXAXAX".getBytes("UTF-8")), value12);
+    createRootResult.putAccount(Key.create("AXAXAXAX".getBytes("UTF-8")), value11);
+    createRootResult.putAccount(Key.create("AXAXAXAX".getBytes("UTF-8")), value10);
+    createRootResult.putAccount(Key.create("AXAXAXAX".getBytes("UTF-8")), value9);
+    createRootResult.putAccount(Key.create("AXAXAXAX".getBytes("UTF-8")), value8);
+    createRootResult.putAccount(Key.create("AXAXAXAX".getBytes("UTF-8")), value7);
+    createRootResult.putAccount(Key.create("AXAXAXAX".getBytes("UTF-8")), value6);
+    createRootResult.putAccount(Key.create("AXAXAXAX".getBytes("UTF-8")), value5);
+    createRootResult.putAccount(Key.create("AXAXAXAX".getBytes("UTF-8")), value4);
+    createRootResult.putAccount(Key.create("AXAXAXAX".getBytes("UTF-8")), value3);
+    createRootResult.putAccount(Key.create("AXAXAXAX".getBytes("UTF-8")), value2);
+    createRootResult.putAccount(Key.create("AXAXAXAX".getBytes("UTF-8")), value);
+    Key key = Key.create("AXAXAXAX".getBytes("UTF-8"));
+    Value<byte[]> value24 = Value.create(new byte[] {'A', 1, 'A', 1, 'A', 1, 'A', 1}, 1);
+
+    createRootResult.putDelegation(key, value24);
+
+    // Act
+    BytesCapsule actualDelegation =
+        createRootResult.getDelegation(Key.create("AXAXAXAX".getBytes("UTF-8")));
+
+    // Assert
+    verify(capsule23).getInstance();
+    verify(capsule22).getInstance();
+    verify(capsule21).getInstance();
+    verify(capsule20).getInstance();
+    verify(capsule19).getInstance();
+    verify(capsule18).getInstance();
+    verify(capsule17).getInstance();
+    verify(capsule16).getInstance();
+    verify(capsule15).getInstance();
+    verify(capsule14).getInstance();
+    verify(capsule13).getInstance();
+    verify(capsule12).getInstance();
+    verify(capsule11).getInstance();
+    verify(capsule10).getInstance();
+    verify(capsule9).getInstance();
+    verify(capsule8).getInstance();
+    verify(capsule7).getInstance();
+    verify(capsule6).getInstance();
+    verify(capsule5).getInstance();
+    verify(capsule4).getInstance();
+    verify(capsule3).getInstance();
+    verify(capsule2).getInstance();
+    verify(capsule).getInstance();
+    assertNull(actualDelegation.getInstance());
+    assertArrayEquals(new byte[] {'A', 1, 'A', 1, 'A', 1, 'A', 1}, actualDelegation.getData());
+  }
+
+  /**
    * Test {@link RepositoryImpl#commit()}.
-   * <p>
-   * Method under test: {@link RepositoryImpl#commit()}
+   *
+   * <p>Method under test: {@link RepositoryImpl#commit()}
    */
   @Test
   @Category(MaintainedByDiffblue.class)
@@ -321,10 +424,180 @@ public class RepositoryImplDiffblueTest {
     ProtoCapsule<Object> capsule = mock(ProtoCapsule.class);
     when(capsule.getInstance()).thenReturn("Instance");
     Value<Object> value = Value.create(capsule, 1);
+
+    ProtoCapsule<Object> capsule2 = mock(ProtoCapsule.class);
+    when(capsule2.getInstance()).thenReturn("Instance");
+    Value<Object> value2 = Value.create(capsule2, 2);
     StoreFactory storeFactory = StoreFactory.getInstance();
 
-    RepositoryImpl repositoryImpl = new RepositoryImpl(storeFactory,
-        RepositoryImpl.createRoot(StoreFactory.getInstance()));
+    RepositoryImpl repositoryImpl =
+        new RepositoryImpl(storeFactory, RepositoryImpl.createRoot(StoreFactory.getInstance()));
+    repositoryImpl.putCode(Key.create("AXAXAXAX".getBytes("UTF-8")), value2);
+    repositoryImpl.putAccount(Key.create("AXAXAXAX".getBytes("UTF-8")), value);
+    repositoryImpl.setParent(RepositoryImpl.createRoot(StoreFactory.getInstance()));
+
+    // Act
+    repositoryImpl.commit();
+
+    // Assert
+    verify(capsule2).getInstance();
+    verify(capsule).getInstance();
+  }
+
+  /**
+   * Test {@link RepositoryImpl#commit()}.
+   *
+   * <p>Method under test: {@link RepositoryImpl#commit()}
+   */
+  @Test
+  @Category(MaintainedByDiffblue.class)
+  @MethodsUnderTest({"void RepositoryImpl.commit()"})
+  public void testCommit2() throws UnsupportedEncodingException {
+    // Arrange
+    ProtoCapsule<Object> capsule = mock(ProtoCapsule.class);
+    when(capsule.getInstance()).thenReturn("Instance");
+    Value<Object> value = Value.create(capsule, 1);
+
+    ProtoCapsule<Object> capsule2 = mock(ProtoCapsule.class);
+    when(capsule2.getInstance()).thenReturn("Instance");
+    Value<Object> value2 = Value.create(capsule2, 2);
+
+    ProtoCapsule<Object> capsule3 = mock(ProtoCapsule.class);
+    when(capsule3.getInstance()).thenReturn("Instance");
+    Value<Object> value3 = Value.create(capsule3, 2);
+    StoreFactory storeFactory = StoreFactory.getInstance();
+
+    RepositoryImpl repositoryImpl =
+        new RepositoryImpl(storeFactory, RepositoryImpl.createRoot(StoreFactory.getInstance()));
+    repositoryImpl.putContract(Key.create("AXAXAXAX".getBytes("UTF-8")), value3);
+    repositoryImpl.putCode(Key.create("AXAXAXAX".getBytes("UTF-8")), value2);
+    repositoryImpl.putAccount(Key.create("AXAXAXAX".getBytes("UTF-8")), value);
+    repositoryImpl.setParent(RepositoryImpl.createRoot(StoreFactory.getInstance()));
+
+    // Act
+    repositoryImpl.commit();
+
+    // Assert
+    verify(capsule3).getInstance();
+    verify(capsule2).getInstance();
+    verify(capsule).getInstance();
+  }
+
+  /**
+   * Test {@link RepositoryImpl#commit()}.
+   *
+   * <p>Method under test: {@link RepositoryImpl#commit()}
+   */
+  @Test
+  @Category(MaintainedByDiffblue.class)
+  @MethodsUnderTest({"void RepositoryImpl.commit()"})
+  public void testCommit3() throws UnsupportedEncodingException {
+    // Arrange
+    ProtoCapsule<Object> capsule = mock(ProtoCapsule.class);
+    when(capsule.getInstance()).thenReturn("Instance");
+    Value<Object> value = Value.create(capsule, 1);
+
+    ProtoCapsule<Object> capsule2 = mock(ProtoCapsule.class);
+    when(capsule2.getInstance()).thenReturn("Instance");
+    Value<Object> value2 = Value.create(capsule2, 2);
+
+    ProtoCapsule<Object> capsule3 = mock(ProtoCapsule.class);
+    when(capsule3.getInstance()).thenReturn("Instance");
+    Value<Object> value3 = Value.create(capsule3, 2);
+
+    ProtoCapsule<Object> capsule4 = mock(ProtoCapsule.class);
+    when(capsule4.getInstance()).thenReturn("Instance");
+    Value<Object> value4 = Value.create(capsule4, 2);
+    StoreFactory storeFactory = StoreFactory.getInstance();
+
+    RepositoryImpl repositoryImpl =
+        new RepositoryImpl(storeFactory, RepositoryImpl.createRoot(StoreFactory.getInstance()));
+    repositoryImpl.putContractState(Key.create("AXAXAXAX".getBytes("UTF-8")), value4);
+    repositoryImpl.putContract(Key.create("AXAXAXAX".getBytes("UTF-8")), value3);
+    repositoryImpl.putCode(Key.create("AXAXAXAX".getBytes("UTF-8")), value2);
+    repositoryImpl.putAccount(Key.create("AXAXAXAX".getBytes("UTF-8")), value);
+    repositoryImpl.setParent(RepositoryImpl.createRoot(StoreFactory.getInstance()));
+
+    // Act
+    repositoryImpl.commit();
+
+    // Assert
+    verify(capsule4).getInstance();
+    verify(capsule3).getInstance();
+    verify(capsule2).getInstance();
+    verify(capsule).getInstance();
+  }
+
+  /**
+   * Test {@link RepositoryImpl#commit()}.
+   *
+   * <p>Method under test: {@link RepositoryImpl#commit()}
+   */
+  @Test
+  @Category(MaintainedByDiffblue.class)
+  @MethodsUnderTest({"void RepositoryImpl.commit()"})
+  public void testCommit4() throws UnsupportedEncodingException {
+    // Arrange
+    ProtoCapsule<Object> capsule = mock(ProtoCapsule.class);
+    when(capsule.getInstance()).thenReturn("Instance");
+    Value<Object> value = Value.create(capsule, 1);
+
+    ProtoCapsule<Object> capsule2 = mock(ProtoCapsule.class);
+    when(capsule2.getInstance()).thenReturn("Instance");
+    Value<Object> value2 = Value.create(capsule2, 2);
+
+    ProtoCapsule<Object> capsule3 = mock(ProtoCapsule.class);
+    when(capsule3.getInstance()).thenReturn("Instance");
+    Value<Object> value3 = Value.create(capsule3, 2);
+
+    ProtoCapsule<Object> capsule4 = mock(ProtoCapsule.class);
+    when(capsule4.getInstance()).thenReturn("Instance");
+    Value<Object> value4 = Value.create(capsule4, 2);
+    StoreFactory storeFactory = StoreFactory.getInstance();
+
+    RepositoryImpl repositoryImpl =
+        new RepositoryImpl(storeFactory, RepositoryImpl.createRoot(StoreFactory.getInstance()));
+    Key key = Key.create("AXAXAXAX".getBytes("UTF-8"));
+    Storage cache = new Storage("AXAXAXAX".getBytes("UTF-8"), mock(StorageRowStore.class));
+
+    repositoryImpl.putStorage(key, cache);
+    repositoryImpl.putContractState(Key.create("AXAXAXAX".getBytes("UTF-8")), value4);
+    repositoryImpl.putContract(Key.create("AXAXAXAX".getBytes("UTF-8")), value3);
+    repositoryImpl.putCode(Key.create("AXAXAXAX".getBytes("UTF-8")), value2);
+    repositoryImpl.putAccount(Key.create("AXAXAXAX".getBytes("UTF-8")), value);
+    repositoryImpl.setParent(RepositoryImpl.createRoot(StoreFactory.getInstance()));
+
+    // Act
+    repositoryImpl.commit();
+
+    // Assert
+    verify(capsule4).getInstance();
+    verify(capsule3).getInstance();
+    verify(capsule2).getInstance();
+    verify(capsule).getInstance();
+  }
+
+  /**
+   * Test {@link RepositoryImpl#commit()}.
+   *
+   * <ul>
+   *   <li>Then calls {@link ProtoCapsule#getInstance()}.
+   * </ul>
+   *
+   * <p>Method under test: {@link RepositoryImpl#commit()}
+   */
+  @Test
+  @Category(MaintainedByDiffblue.class)
+  @MethodsUnderTest({"void RepositoryImpl.commit()"})
+  public void testCommit_thenCallsGetInstance() throws UnsupportedEncodingException {
+    // Arrange
+    ProtoCapsule<Object> capsule = mock(ProtoCapsule.class);
+    when(capsule.getInstance()).thenReturn("Instance");
+    Value<Object> value = Value.create(capsule, 1);
+    StoreFactory storeFactory = StoreFactory.getInstance();
+
+    RepositoryImpl repositoryImpl =
+        new RepositoryImpl(storeFactory, RepositoryImpl.createRoot(StoreFactory.getInstance()));
     repositoryImpl.putAccount(Key.create("AXAXAXAX".getBytes("UTF-8")), value);
 
     // Act
@@ -335,624 +608,14 @@ public class RepositoryImplDiffblueTest {
   }
 
   /**
-   * Test {@link RepositoryImpl#commit()}.
-   * <p>
-   * Method under test: {@link RepositoryImpl#commit()}
-   */
-  @Test
-  @Category(MaintainedByDiffblue.class)
-  @MethodsUnderTest({"void RepositoryImpl.commit()"})
-  public void testCommit2() throws UnsupportedEncodingException {
-    // Arrange
-    ProtoCapsule<Object> capsule = mock(ProtoCapsule.class);
-    when(capsule.getInstance()).thenReturn("Instance");
-    Value<Object> value = Value.create(capsule, 1);
-    ProtoCapsule<Object> capsule2 = mock(ProtoCapsule.class);
-    when(capsule2.getInstance()).thenReturn("Instance");
-    Value<Object> value2 = Value.create(capsule2, 2);
-    ProtoCapsule<Object> capsule3 = mock(ProtoCapsule.class);
-    when(capsule3.getInstance()).thenReturn("Instance");
-    Value<Object> value3 = Value.create(capsule3, 2);
-    ProtoCapsule<Object> capsule4 = mock(ProtoCapsule.class);
-    when(capsule4.getInstance()).thenReturn("Instance");
-    Value<Object> value4 = Value.create(capsule4, 2);
-    RepositoryImpl createRootResult = RepositoryImpl.createRoot(StoreFactory.getInstance());
-    createRootResult.putContractState(Key.create("AXAXAXAX".getBytes("UTF-8")), value4);
-    createRootResult.putContract(Key.create("AXAXAXAX".getBytes("UTF-8")), value3);
-    createRootResult.putCode(Key.create("AXAXAXAX".getBytes("UTF-8")), value2);
-    createRootResult.putAccount(Key.create("AXAXAXAX".getBytes("UTF-8")), value);
-    createRootResult.setParent(RepositoryImpl.createRoot(StoreFactory.getInstance()));
-
-    // Act
-    createRootResult.commit();
-
-    // Assert
-    verify(capsule4).getInstance();
-    verify(capsule3).getInstance();
-    verify(capsule2).getInstance();
-    verify(capsule).getInstance();
-  }
-
-  /**
-   * Test {@link RepositoryImpl#commit()}.
-   * <p>
-   * Method under test: {@link RepositoryImpl#commit()}
-   */
-  @Test
-  @Category(MaintainedByDiffblue.class)
-  @MethodsUnderTest({"void RepositoryImpl.commit()"})
-  public void testCommit3() throws UnsupportedEncodingException {
-    // Arrange
-    ProtoCapsule<Object> capsule = mock(ProtoCapsule.class);
-    when(capsule.getInstance()).thenReturn("Instance");
-    Value<Object> value = Value.create(capsule, 1);
-    ProtoCapsule<Object> capsule2 = mock(ProtoCapsule.class);
-    when(capsule2.getInstance()).thenReturn("Instance");
-    Value<Object> value2 = Value.create(capsule2, 2);
-    ProtoCapsule<Object> capsule3 = mock(ProtoCapsule.class);
-    when(capsule3.getInstance()).thenReturn("Instance");
-    Value<Object> value3 = Value.create(capsule3, 2);
-    ProtoCapsule<Object> capsule4 = mock(ProtoCapsule.class);
-    when(capsule4.getInstance()).thenReturn("Instance");
-    Value<Object> value4 = Value.create(capsule4, 2);
-    RepositoryImpl createRootResult = RepositoryImpl.createRoot(StoreFactory.getInstance());
-    Key key = Key.create("AXAXAXAX".getBytes("UTF-8"));
-    createRootResult.putStorage(key, new Storage("AXAXAXAX".getBytes("UTF-8"), mock(StorageRowStore.class)));
-    createRootResult.putContractState(Key.create("AXAXAXAX".getBytes("UTF-8")), value4);
-    createRootResult.putContract(Key.create("AXAXAXAX".getBytes("UTF-8")), value3);
-    createRootResult.putCode(Key.create("AXAXAXAX".getBytes("UTF-8")), value2);
-    createRootResult.putAccount(Key.create("AXAXAXAX".getBytes("UTF-8")), value);
-    createRootResult.setParent(RepositoryImpl.createRoot(StoreFactory.getInstance()));
-
-    // Act
-    createRootResult.commit();
-
-    // Assert
-    verify(capsule4).getInstance();
-    verify(capsule3).getInstance();
-    verify(capsule2).getInstance();
-    verify(capsule).getInstance();
-  }
-
-  /**
-   * Test {@link RepositoryImpl#commit()}.
-   * <p>
-   * Method under test: {@link RepositoryImpl#commit()}
-   */
-  @Test
-  @Category(MaintainedByDiffblue.class)
-  @MethodsUnderTest({"void RepositoryImpl.commit()"})
-  public void testCommit4() throws UnsupportedEncodingException {
-    // Arrange
-    ProtoCapsule<Object> capsule = mock(ProtoCapsule.class);
-    when(capsule.getInstance()).thenReturn("Instance");
-    Value<Object> value = Value.create(capsule, 1);
-    ProtoCapsule<Object> capsule2 = mock(ProtoCapsule.class);
-    when(capsule2.getInstance()).thenReturn("Instance");
-    Value<Object> value2 = Value.create(capsule2, 2);
-    ProtoCapsule<Object> capsule3 = mock(ProtoCapsule.class);
-    when(capsule3.getInstance()).thenReturn("Instance");
-    Value<Object> value3 = Value.create(capsule3, 2);
-    ProtoCapsule<Object> capsule4 = mock(ProtoCapsule.class);
-    when(capsule4.getInstance()).thenReturn("Instance");
-    Value<Object> value4 = Value.create(capsule4, 2);
-    ProtoCapsule<Object> capsule5 = mock(ProtoCapsule.class);
-    when(capsule5.getInstance()).thenReturn("Instance");
-    Value<Object> value5 = Value.create(capsule5, 2);
-    RepositoryImpl createRootResult = RepositoryImpl.createRoot(StoreFactory.getInstance());
-    createRootResult.putDynamicProperty(Key.create("AXAXAXAX".getBytes("UTF-8")), value5);
-    createRootResult.putContractState(Key.create("AXAXAXAX".getBytes("UTF-8")), value4);
-    createRootResult.putContract(Key.create("AXAXAXAX".getBytes("UTF-8")), value3);
-    createRootResult.putCode(Key.create("AXAXAXAX".getBytes("UTF-8")), value2);
-    createRootResult.putAccount(Key.create("AXAXAXAX".getBytes("UTF-8")), value);
-    createRootResult.setParent(RepositoryImpl.createRoot(StoreFactory.getInstance()));
-
-    // Act
-    createRootResult.commit();
-
-    // Assert
-    verify(capsule5).getInstance();
-    verify(capsule4).getInstance();
-    verify(capsule3).getInstance();
-    verify(capsule2).getInstance();
-    verify(capsule).getInstance();
-  }
-
-  /**
-   * Test {@link RepositoryImpl#commit()}.
-   * <p>
-   * Method under test: {@link RepositoryImpl#commit()}
-   */
-  @Test
-  @Category(MaintainedByDiffblue.class)
-  @MethodsUnderTest({"void RepositoryImpl.commit()"})
-  public void testCommit5() throws UnsupportedEncodingException {
-    // Arrange
-    ProtoCapsule<Object> capsule = mock(ProtoCapsule.class);
-    when(capsule.getInstance()).thenReturn("Instance");
-    Value<Object> value = Value.create(capsule, 1);
-    ProtoCapsule<Object> capsule2 = mock(ProtoCapsule.class);
-    when(capsule2.getInstance()).thenReturn("Instance");
-    Value<Object> value2 = Value.create(capsule2, 2);
-    ProtoCapsule<Object> capsule3 = mock(ProtoCapsule.class);
-    when(capsule3.getInstance()).thenReturn("Instance");
-    Value<Object> value3 = Value.create(capsule3, 2);
-    ProtoCapsule<Object> capsule4 = mock(ProtoCapsule.class);
-    when(capsule4.getInstance()).thenReturn("Instance");
-    Value<Object> value4 = Value.create(capsule4, 2);
-    ProtoCapsule<Object> capsule5 = mock(ProtoCapsule.class);
-    when(capsule5.getInstance()).thenReturn("Instance");
-    Value<Object> value5 = Value.create(capsule5, 2);
-    ProtoCapsule<Object> capsule6 = mock(ProtoCapsule.class);
-    when(capsule6.getInstance()).thenReturn("Instance");
-    Value<Object> value6 = Value.create(capsule6, 2);
-    RepositoryImpl createRootResult = RepositoryImpl.createRoot(StoreFactory.getInstance());
-    createRootResult.putDelegatedResource(Key.create("AXAXAXAX".getBytes("UTF-8")), value6);
-    createRootResult.putDynamicProperty(Key.create("AXAXAXAX".getBytes("UTF-8")), value5);
-    createRootResult.putContractState(Key.create("AXAXAXAX".getBytes("UTF-8")), value4);
-    createRootResult.putContract(Key.create("AXAXAXAX".getBytes("UTF-8")), value3);
-    createRootResult.putCode(Key.create("AXAXAXAX".getBytes("UTF-8")), value2);
-    createRootResult.putAccount(Key.create("AXAXAXAX".getBytes("UTF-8")), value);
-    createRootResult.setParent(RepositoryImpl.createRoot(StoreFactory.getInstance()));
-
-    // Act
-    createRootResult.commit();
-
-    // Assert
-    verify(capsule6).getInstance();
-    verify(capsule5).getInstance();
-    verify(capsule4).getInstance();
-    verify(capsule3).getInstance();
-    verify(capsule2).getInstance();
-    verify(capsule).getInstance();
-  }
-
-  /**
-   * Test {@link RepositoryImpl#commit()}.
-   * <p>
-   * Method under test: {@link RepositoryImpl#commit()}
-   */
-  @Test
-  @Category(MaintainedByDiffblue.class)
-  @MethodsUnderTest({"void RepositoryImpl.commit()"})
-  public void testCommit6() throws UnsupportedEncodingException {
-    // Arrange
-    ProtoCapsule<Object> capsule = mock(ProtoCapsule.class);
-    when(capsule.getInstance()).thenReturn("Instance");
-    Value<Object> value = Value.create(capsule, 1);
-    ProtoCapsule<Object> capsule2 = mock(ProtoCapsule.class);
-    when(capsule2.getInstance()).thenReturn("Instance");
-    Value<Object> value2 = Value.create(capsule2, 2);
-    ProtoCapsule<Object> capsule3 = mock(ProtoCapsule.class);
-    when(capsule3.getInstance()).thenReturn("Instance");
-    Value<Object> value3 = Value.create(capsule3, 2);
-    ProtoCapsule<Object> capsule4 = mock(ProtoCapsule.class);
-    when(capsule4.getInstance()).thenReturn("Instance");
-    Value<Object> value4 = Value.create(capsule4, 2);
-    ProtoCapsule<Object> capsule5 = mock(ProtoCapsule.class);
-    when(capsule5.getInstance()).thenReturn("Instance");
-    Value<Object> value5 = Value.create(capsule5, 2);
-    ProtoCapsule<Object> capsule6 = mock(ProtoCapsule.class);
-    when(capsule6.getInstance()).thenReturn("Instance");
-    Value<Object> value6 = Value.create(capsule6, 2);
-    ProtoCapsule<Object> capsule7 = mock(ProtoCapsule.class);
-    when(capsule7.getInstance()).thenReturn("Instance");
-    Value<Object> value7 = Value.create(capsule7, 2);
-    RepositoryImpl createRootResult = RepositoryImpl.createRoot(StoreFactory.getInstance());
-    createRootResult.putVotes(Key.create("AXAXAXAX".getBytes("UTF-8")), value7);
-    createRootResult.putDelegatedResource(Key.create("AXAXAXAX".getBytes("UTF-8")), value6);
-    createRootResult.putDynamicProperty(Key.create("AXAXAXAX".getBytes("UTF-8")), value5);
-    createRootResult.putContractState(Key.create("AXAXAXAX".getBytes("UTF-8")), value4);
-    createRootResult.putContract(Key.create("AXAXAXAX".getBytes("UTF-8")), value3);
-    createRootResult.putCode(Key.create("AXAXAXAX".getBytes("UTF-8")), value2);
-    createRootResult.putAccount(Key.create("AXAXAXAX".getBytes("UTF-8")), value);
-    createRootResult.setParent(RepositoryImpl.createRoot(StoreFactory.getInstance()));
-
-    // Act
-    createRootResult.commit();
-
-    // Assert
-    verify(capsule7).getInstance();
-    verify(capsule6).getInstance();
-    verify(capsule5).getInstance();
-    verify(capsule4).getInstance();
-    verify(capsule3).getInstance();
-    verify(capsule2).getInstance();
-    verify(capsule).getInstance();
-  }
-
-  /**
-   * Test {@link RepositoryImpl#commit()}.
-   * <p>
-   * Method under test: {@link RepositoryImpl#commit()}
-   */
-  @Test
-  @Category(MaintainedByDiffblue.class)
-  @MethodsUnderTest({"void RepositoryImpl.commit()"})
-  public void testCommit7() throws UnsupportedEncodingException {
-    // Arrange
-    ProtoCapsule<Object> capsule = mock(ProtoCapsule.class);
-    when(capsule.getInstance()).thenReturn("Instance");
-    Value<Object> value = Value.create(capsule, 1);
-    ProtoCapsule<Object> capsule2 = mock(ProtoCapsule.class);
-    when(capsule2.getInstance()).thenReturn("Instance");
-    Value<Object> value2 = Value.create(capsule2, 2);
-    ProtoCapsule<Object> capsule3 = mock(ProtoCapsule.class);
-    when(capsule3.getInstance()).thenReturn("Instance");
-    Value<Object> value3 = Value.create(capsule3, 2);
-    ProtoCapsule<Object> capsule4 = mock(ProtoCapsule.class);
-    when(capsule4.getInstance()).thenReturn("Instance");
-    Value<Object> value4 = Value.create(capsule4, 2);
-    ProtoCapsule<Object> capsule5 = mock(ProtoCapsule.class);
-    when(capsule5.getInstance()).thenReturn("Instance");
-    Value<Object> value5 = Value.create(capsule5, 2);
-    ProtoCapsule<Object> capsule6 = mock(ProtoCapsule.class);
-    when(capsule6.getInstance()).thenReturn("Instance");
-    Value<Object> value6 = Value.create(capsule6, 2);
-    ProtoCapsule<Object> capsule7 = mock(ProtoCapsule.class);
-    when(capsule7.getInstance()).thenReturn("Instance");
-    Value<Object> value7 = Value.create(capsule7, 2);
-    ProtoCapsule<Object> capsule8 = mock(ProtoCapsule.class);
-    when(capsule8.getInstance()).thenReturn("Instance");
-    Value<Object> value8 = Value.create(capsule8, 2);
-    RepositoryImpl createRootResult = RepositoryImpl.createRoot(StoreFactory.getInstance());
-    createRootResult.putDelegation(Key.create("AXAXAXAX".getBytes("UTF-8")), value8);
-    createRootResult.putVotes(Key.create("AXAXAXAX".getBytes("UTF-8")), value7);
-    createRootResult.putDelegatedResource(Key.create("AXAXAXAX".getBytes("UTF-8")), value6);
-    createRootResult.putDynamicProperty(Key.create("AXAXAXAX".getBytes("UTF-8")), value5);
-    createRootResult.putContractState(Key.create("AXAXAXAX".getBytes("UTF-8")), value4);
-    createRootResult.putContract(Key.create("AXAXAXAX".getBytes("UTF-8")), value3);
-    createRootResult.putCode(Key.create("AXAXAXAX".getBytes("UTF-8")), value2);
-    createRootResult.putAccount(Key.create("AXAXAXAX".getBytes("UTF-8")), value);
-    createRootResult.setParent(RepositoryImpl.createRoot(StoreFactory.getInstance()));
-
-    // Act
-    createRootResult.commit();
-
-    // Assert
-    verify(capsule8).getInstance();
-    verify(capsule7).getInstance();
-    verify(capsule6).getInstance();
-    verify(capsule5).getInstance();
-    verify(capsule4).getInstance();
-    verify(capsule3).getInstance();
-    verify(capsule2).getInstance();
-    verify(capsule).getInstance();
-  }
-
-  /**
-   * Test {@link RepositoryImpl#commit()}.
-   * <p>
-   * Method under test: {@link RepositoryImpl#commit()}
-   */
-  @Test
-  @Category(MaintainedByDiffblue.class)
-  @MethodsUnderTest({"void RepositoryImpl.commit()"})
-  public void testCommit8() throws UnsupportedEncodingException {
-    // Arrange
-    ProtoCapsule<Object> capsule = mock(ProtoCapsule.class);
-    when(capsule.getInstance()).thenReturn("Instance");
-    Value<Object> value = Value.create(capsule, 1);
-    ProtoCapsule<Object> capsule2 = mock(ProtoCapsule.class);
-    when(capsule2.getInstance()).thenReturn("Instance");
-    Value<Object> value2 = Value.create(capsule2, 2);
-    ProtoCapsule<Object> capsule3 = mock(ProtoCapsule.class);
-    when(capsule3.getInstance()).thenReturn("Instance");
-    Value<Object> value3 = Value.create(capsule3, 2);
-    ProtoCapsule<Object> capsule4 = mock(ProtoCapsule.class);
-    when(capsule4.getInstance()).thenReturn("Instance");
-    Value<Object> value4 = Value.create(capsule4, 2);
-    ProtoCapsule<Object> capsule5 = mock(ProtoCapsule.class);
-    when(capsule5.getInstance()).thenReturn("Instance");
-    Value<Object> value5 = Value.create(capsule5, 2);
-    ProtoCapsule<Object> capsule6 = mock(ProtoCapsule.class);
-    when(capsule6.getInstance()).thenReturn("Instance");
-    Value<Object> value6 = Value.create(capsule6, 2);
-    ProtoCapsule<Object> capsule7 = mock(ProtoCapsule.class);
-    when(capsule7.getInstance()).thenReturn("Instance");
-    Value<Object> value7 = Value.create(capsule7, 2);
-    ProtoCapsule<Object> capsule8 = mock(ProtoCapsule.class);
-    when(capsule8.getInstance()).thenReturn("Instance");
-    Value<Object> value8 = Value.create(capsule8, 2);
-    ProtoCapsule<Object> capsule9 = mock(ProtoCapsule.class);
-    when(capsule9.getInstance()).thenReturn("Instance");
-    Value<Object> value9 = Value.create(capsule9, 2);
-    RepositoryImpl createRootResult = RepositoryImpl.createRoot(StoreFactory.getInstance());
-    createRootResult.putDelegatedResourceAccountIndex(Key.create("AXAXAXAX".getBytes("UTF-8")), value9);
-    createRootResult.putDelegation(Key.create("AXAXAXAX".getBytes("UTF-8")), value8);
-    createRootResult.putVotes(Key.create("AXAXAXAX".getBytes("UTF-8")), value7);
-    createRootResult.putDelegatedResource(Key.create("AXAXAXAX".getBytes("UTF-8")), value6);
-    createRootResult.putDynamicProperty(Key.create("AXAXAXAX".getBytes("UTF-8")), value5);
-    createRootResult.putContractState(Key.create("AXAXAXAX".getBytes("UTF-8")), value4);
-    createRootResult.putContract(Key.create("AXAXAXAX".getBytes("UTF-8")), value3);
-    createRootResult.putCode(Key.create("AXAXAXAX".getBytes("UTF-8")), value2);
-    createRootResult.putAccount(Key.create("AXAXAXAX".getBytes("UTF-8")), value);
-    createRootResult.setParent(RepositoryImpl.createRoot(StoreFactory.getInstance()));
-
-    // Act
-    createRootResult.commit();
-
-    // Assert
-    verify(capsule9).getInstance();
-    verify(capsule8).getInstance();
-    verify(capsule7).getInstance();
-    verify(capsule6).getInstance();
-    verify(capsule5).getInstance();
-    verify(capsule4).getInstance();
-    verify(capsule3).getInstance();
-    verify(capsule2).getInstance();
-    verify(capsule).getInstance();
-  }
-
-  /**
-   * Test {@link RepositoryImpl#commit()}.
-   * <p>
-   * Method under test: {@link RepositoryImpl#commit()}
-   */
-  @Test
-  @Category(MaintainedByDiffblue.class)
-  @MethodsUnderTest({"void RepositoryImpl.commit()"})
-  public void testCommit9() throws UnsupportedEncodingException {
-    // Arrange
-    ProtoCapsule<Object> capsule = mock(ProtoCapsule.class);
-    when(capsule.getInstance()).thenReturn("Instance");
-    Value<Object> value = Value.create(capsule, 1);
-    ProtoCapsule<Object> capsule2 = mock(ProtoCapsule.class);
-    when(capsule2.getInstance()).thenReturn("Instance");
-    Value<Object> value2 = Value.create(capsule2, 2);
-    ProtoCapsule<Object> capsule3 = mock(ProtoCapsule.class);
-    when(capsule3.getInstance()).thenReturn("Instance");
-    Value<Object> value3 = Value.create(capsule3, 2);
-    ProtoCapsule<Object> capsule4 = mock(ProtoCapsule.class);
-    when(capsule4.getInstance()).thenReturn("Instance");
-    Value<Object> value4 = Value.create(capsule4, 2);
-    ProtoCapsule<Object> capsule5 = mock(ProtoCapsule.class);
-    when(capsule5.getInstance()).thenReturn("Instance");
-    Value<Object> value5 = Value.create(capsule5, 2);
-    ProtoCapsule<Object> capsule6 = mock(ProtoCapsule.class);
-    when(capsule6.getInstance()).thenReturn("Instance");
-    Value<Object> value6 = Value.create(capsule6, 2);
-    ProtoCapsule<Object> capsule7 = mock(ProtoCapsule.class);
-    when(capsule7.getInstance()).thenReturn("Instance");
-    Value<Object> value7 = Value.create(capsule7, 2);
-    ProtoCapsule<Object> capsule8 = mock(ProtoCapsule.class);
-    when(capsule8.getInstance()).thenReturn("Instance");
-    Value<Object> value8 = Value.create(capsule8, 2);
-    ProtoCapsule<Object> capsule9 = mock(ProtoCapsule.class);
-    when(capsule9.getInstance()).thenReturn("Instance");
-    Value<Object> value9 = Value.create(capsule9, 2);
-    RepositoryImpl createRootResult = RepositoryImpl.createRoot(StoreFactory.getInstance());
-    createRootResult.putDelegatedResourceAccountIndex(null, value9);
-    createRootResult.putDelegation(Key.create("AXAXAXAX".getBytes("UTF-8")), value8);
-    createRootResult.putVotes(Key.create("AXAXAXAX".getBytes("UTF-8")), value7);
-    createRootResult.putDelegatedResource(Key.create("AXAXAXAX".getBytes("UTF-8")), value6);
-    createRootResult.putDynamicProperty(Key.create("AXAXAXAX".getBytes("UTF-8")), value5);
-    createRootResult.putContractState(Key.create("AXAXAXAX".getBytes("UTF-8")), value4);
-    createRootResult.putContract(Key.create("AXAXAXAX".getBytes("UTF-8")), value3);
-    createRootResult.putCode(Key.create("AXAXAXAX".getBytes("UTF-8")), value2);
-    createRootResult.putAccount(Key.create("AXAXAXAX".getBytes("UTF-8")), value);
-    createRootResult.setParent(RepositoryImpl.createRoot(StoreFactory.getInstance()));
-
-    // Act
-    createRootResult.commit();
-
-    // Assert
-    verify(capsule9).getInstance();
-    verify(capsule8).getInstance();
-    verify(capsule7).getInstance();
-    verify(capsule6).getInstance();
-    verify(capsule5).getInstance();
-    verify(capsule4).getInstance();
-    verify(capsule3).getInstance();
-    verify(capsule2).getInstance();
-    verify(capsule).getInstance();
-  }
-
-  /**
-   * Test {@link RepositoryImpl#commit()}.
-   * <p>
-   * Method under test: {@link RepositoryImpl#commit()}
-   */
-  @Test
-  @Category(MaintainedByDiffblue.class)
-  @MethodsUnderTest({"void RepositoryImpl.commit()"})
-  public void testCommit10() throws UnsupportedEncodingException {
-    // Arrange
-    ProtoCapsule<Object> capsule = mock(ProtoCapsule.class);
-    when(capsule.getInstance()).thenReturn("Instance");
-    Value<Object> value = Value.create(capsule, 1);
-    ProtoCapsule<Object> capsule2 = mock(ProtoCapsule.class);
-    when(capsule2.getInstance()).thenReturn("Instance");
-    Value<Object> value2 = Value.create(capsule2, 2);
-    ProtoCapsule<Object> capsule3 = mock(ProtoCapsule.class);
-    when(capsule3.getInstance()).thenReturn("Instance");
-    Value<Object> value3 = Value.create(capsule3, 2);
-    ProtoCapsule<Object> capsule4 = mock(ProtoCapsule.class);
-    when(capsule4.getInstance()).thenReturn("Instance");
-    Value<Object> value4 = Value.create(capsule4, 2);
-    ProtoCapsule<Object> capsule5 = mock(ProtoCapsule.class);
-    when(capsule5.getInstance()).thenReturn("Instance");
-    Value<Object> value5 = Value.create(capsule5, 2);
-    ProtoCapsule<Object> capsule6 = mock(ProtoCapsule.class);
-    when(capsule6.getInstance()).thenReturn("Instance");
-    Value<Object> value6 = Value.create(capsule6, 2);
-    ProtoCapsule<Object> capsule7 = mock(ProtoCapsule.class);
-    when(capsule7.getInstance()).thenReturn("Instance");
-    Value<Object> value7 = Value.create(capsule7, 2);
-    ProtoCapsule<Object> capsule8 = mock(ProtoCapsule.class);
-    when(capsule8.getInstance()).thenReturn("Instance");
-    Value<Object> value8 = Value.create(capsule8, 2);
-    ProtoCapsule<Object> capsule9 = mock(ProtoCapsule.class);
-    when(capsule9.getInstance()).thenReturn("Instance");
-    Value<Object> value9 = Value.create(capsule9, 1);
-    RepositoryImpl createRootResult = RepositoryImpl.createRoot(StoreFactory.getInstance());
-    createRootResult.putDelegatedResourceAccountIndex(Key.create("AXAXAXAX".getBytes("UTF-8")), value9);
-    createRootResult.putDelegation(Key.create("AXAXAXAX".getBytes("UTF-8")), value8);
-    createRootResult.putVotes(Key.create("AXAXAXAX".getBytes("UTF-8")), value7);
-    createRootResult.putDelegatedResource(Key.create("AXAXAXAX".getBytes("UTF-8")), value6);
-    createRootResult.putDynamicProperty(Key.create("AXAXAXAX".getBytes("UTF-8")), value5);
-    createRootResult.putContractState(Key.create("AXAXAXAX".getBytes("UTF-8")), value4);
-    createRootResult.putContract(Key.create("AXAXAXAX".getBytes("UTF-8")), value3);
-    createRootResult.putCode(Key.create("AXAXAXAX".getBytes("UTF-8")), value2);
-    createRootResult.putAccount(Key.create("AXAXAXAX".getBytes("UTF-8")), value);
-    createRootResult.setParent(RepositoryImpl.createRoot(StoreFactory.getInstance()));
-
-    // Act
-    createRootResult.commit();
-
-    // Assert
-    verify(capsule9).getInstance();
-    verify(capsule8).getInstance();
-    verify(capsule7).getInstance();
-    verify(capsule6).getInstance();
-    verify(capsule5).getInstance();
-    verify(capsule4).getInstance();
-    verify(capsule3).getInstance();
-    verify(capsule2).getInstance();
-    verify(capsule).getInstance();
-  }
-
-  /**
-   * Test {@link RepositoryImpl#commit()}.
-   * <p>
-   * Method under test: {@link RepositoryImpl#commit()}
-   */
-  @Test
-  @Category(MaintainedByDiffblue.class)
-  @MethodsUnderTest({"void RepositoryImpl.commit()"})
-  public void testCommit11() throws UnsupportedEncodingException {
-    // Arrange
-    ProtoCapsule<Object> capsule = mock(ProtoCapsule.class);
-    when(capsule.getInstance()).thenReturn("Instance");
-    Value<Object> value = Value.create(capsule, 1);
-    ProtoCapsule<Object> capsule2 = mock(ProtoCapsule.class);
-    when(capsule2.getInstance()).thenReturn("Instance");
-    Value<Object> value2 = Value.create(capsule2, 2);
-    ProtoCapsule<Object> capsule3 = mock(ProtoCapsule.class);
-    when(capsule3.getInstance()).thenReturn("Instance");
-    Value<Object> value3 = Value.create(capsule3, 2);
-    ProtoCapsule<Object> capsule4 = mock(ProtoCapsule.class);
-    when(capsule4.getInstance()).thenReturn("Instance");
-    Value<Object> value4 = Value.create(capsule4, 2);
-    ProtoCapsule<Object> capsule5 = mock(ProtoCapsule.class);
-    when(capsule5.getInstance()).thenReturn("Instance");
-    Value<Object> value5 = Value.create(capsule5, 2);
-    ProtoCapsule<Object> capsule6 = mock(ProtoCapsule.class);
-    when(capsule6.getInstance()).thenReturn("Instance");
-    Value<Object> value6 = Value.create(capsule6, 2);
-    ProtoCapsule<Object> capsule7 = mock(ProtoCapsule.class);
-    when(capsule7.getInstance()).thenReturn("Instance");
-    Value<Object> value7 = Value.create(capsule7, 2);
-    ProtoCapsule<Object> capsule8 = mock(ProtoCapsule.class);
-    when(capsule8.getInstance()).thenReturn("Instance");
-    Value<Object> value8 = Value.create(capsule8, 2);
-    ProtoCapsule<Object> capsule9 = mock(ProtoCapsule.class);
-    when(capsule9.getInstance()).thenReturn("Instance");
-    Value<Object> value9 = Value.create(capsule9, 0);
-    RepositoryImpl createRootResult = RepositoryImpl.createRoot(StoreFactory.getInstance());
-    createRootResult.putDelegatedResourceAccountIndex(Key.create("AXAXAXAX".getBytes("UTF-8")), value9);
-    createRootResult.putDelegation(Key.create("AXAXAXAX".getBytes("UTF-8")), value8);
-    createRootResult.putVotes(Key.create("AXAXAXAX".getBytes("UTF-8")), value7);
-    createRootResult.putDelegatedResource(Key.create("AXAXAXAX".getBytes("UTF-8")), value6);
-    createRootResult.putDynamicProperty(Key.create("AXAXAXAX".getBytes("UTF-8")), value5);
-    createRootResult.putContractState(Key.create("AXAXAXAX".getBytes("UTF-8")), value4);
-    createRootResult.putContract(Key.create("AXAXAXAX".getBytes("UTF-8")), value3);
-    createRootResult.putCode(Key.create("AXAXAXAX".getBytes("UTF-8")), value2);
-    createRootResult.putAccount(Key.create("AXAXAXAX".getBytes("UTF-8")), value);
-    createRootResult.setParent(RepositoryImpl.createRoot(StoreFactory.getInstance()));
-
-    // Act
-    createRootResult.commit();
-
-    // Assert
-    verify(capsule9).getInstance();
-    verify(capsule8).getInstance();
-    verify(capsule7).getInstance();
-    verify(capsule6).getInstance();
-    verify(capsule5).getInstance();
-    verify(capsule4).getInstance();
-    verify(capsule3).getInstance();
-    verify(capsule2).getInstance();
-    verify(capsule).getInstance();
-  }
-
-  /**
-   * Test {@link RepositoryImpl#commit()}.
-   * <ul>
-   *   <li>Then calls {@link ProtoCapsule#getInstance()}.</li>
-   * </ul>
-   * <p>
-   * Method under test: {@link RepositoryImpl#commit()}
-   */
-  @Test
-  @Category(MaintainedByDiffblue.class)
-  @MethodsUnderTest({"void RepositoryImpl.commit()"})
-  public void testCommit_thenCallsGetInstance() throws UnsupportedEncodingException {
-    // Arrange
-    ProtoCapsule<Object> capsule = mock(ProtoCapsule.class);
-    when(capsule.getInstance()).thenReturn("Instance");
-    Value<Object> value = Value.create(capsule, 1);
-    ProtoCapsule<Object> capsule2 = mock(ProtoCapsule.class);
-    when(capsule2.getInstance()).thenReturn("Instance");
-    Value<Object> value2 = Value.create(capsule2, 2);
-    RepositoryImpl createRootResult = RepositoryImpl.createRoot(StoreFactory.getInstance());
-    createRootResult.putCode(Key.create("AXAXAXAX".getBytes("UTF-8")), value2);
-    createRootResult.putAccount(Key.create("AXAXAXAX".getBytes("UTF-8")), value);
-    createRootResult.setParent(RepositoryImpl.createRoot(StoreFactory.getInstance()));
-
-    // Act
-    createRootResult.commit();
-
-    // Assert
-    verify(capsule2).getInstance();
-    verify(capsule).getInstance();
-  }
-
-  /**
-   * Test {@link RepositoryImpl#commit()}.
-   * <ul>
-   *   <li>Then calls {@link ProtoCapsule#getInstance()}.</li>
-   * </ul>
-   * <p>
-   * Method under test: {@link RepositoryImpl#commit()}
-   */
-  @Test
-  @Category(MaintainedByDiffblue.class)
-  @MethodsUnderTest({"void RepositoryImpl.commit()"})
-  public void testCommit_thenCallsGetInstance2() throws UnsupportedEncodingException {
-    // Arrange
-    ProtoCapsule<Object> capsule = mock(ProtoCapsule.class);
-    when(capsule.getInstance()).thenReturn("Instance");
-    Value<Object> value = Value.create(capsule, 1);
-    ProtoCapsule<Object> capsule2 = mock(ProtoCapsule.class);
-    when(capsule2.getInstance()).thenReturn("Instance");
-    Value<Object> value2 = Value.create(capsule2, 2);
-    ProtoCapsule<Object> capsule3 = mock(ProtoCapsule.class);
-    when(capsule3.getInstance()).thenReturn("Instance");
-    Value<Object> value3 = Value.create(capsule3, 2);
-    RepositoryImpl createRootResult = RepositoryImpl.createRoot(StoreFactory.getInstance());
-    createRootResult.putContract(Key.create("AXAXAXAX".getBytes("UTF-8")), value3);
-    createRootResult.putCode(Key.create("AXAXAXAX".getBytes("UTF-8")), value2);
-    createRootResult.putAccount(Key.create("AXAXAXAX".getBytes("UTF-8")), value);
-    createRootResult.setParent(RepositoryImpl.createRoot(StoreFactory.getInstance()));
-
-    // Act
-    createRootResult.commit();
-
-    // Assert
-    verify(capsule3).getInstance();
-    verify(capsule2).getInstance();
-    verify(capsule).getInstance();
-  }
-
-  /**
    * Test {@link RepositoryImpl#putAccount(Key, Value)}.
+   *
    * <ul>
-   *   <li>Given createRoot Instance.</li>
-   *   <li>When create {@code AXAXAXAX} Bytes is {@code UTF-8}.</li>
+   *   <li>Given createRoot Instance.
+   *   <li>When create {@code AXAXAXAX} Bytes is {@code UTF-8}.
    * </ul>
-   * <p>
-   * Method under test: {@link RepositoryImpl#putAccount(Key, Value)}
+   *
+   * <p>Method under test: {@link RepositoryImpl#putAccount(Key, Value)}
    */
   @Test
   @Category(MaintainedByDiffblue.class)
@@ -962,6 +625,7 @@ public class RepositoryImplDiffblueTest {
     // Arrange
     RepositoryImpl createRootResult = RepositoryImpl.createRoot(StoreFactory.getInstance());
     Key key = Key.create("AXAXAXAX".getBytes("UTF-8"));
+
     ProtoCapsule<Object> capsule = mock(ProtoCapsule.class);
     when(capsule.getInstance()).thenReturn("Instance");
     Value<Object> value = Value.create(capsule, 1);
@@ -975,23 +639,27 @@ public class RepositoryImplDiffblueTest {
 
   /**
    * Test {@link RepositoryImpl#putAccount(Key, Value)}.
+   *
    * <ul>
-   *   <li>Given {@link ProtoCapsule} {@link ProtoCapsule#getInstance()} return {@code Instance}.</li>
+   *   <li>Given {@link ProtoCapsule} {@link ProtoCapsule#getInstance()} return {@code Instance}.
    * </ul>
-   * <p>
-   * Method under test: {@link RepositoryImpl#putAccount(Key, Value)}
+   *
+   * <p>Method under test: {@link RepositoryImpl#putAccount(Key, Value)}
    */
   @Test
   @Category(MaintainedByDiffblue.class)
   @MethodsUnderTest({"void RepositoryImpl.putAccount(Key, Value)"})
-  public void testPutAccount_givenProtoCapsuleGetInstanceReturnInstance() throws UnsupportedEncodingException {
+  public void testPutAccount_givenProtoCapsuleGetInstanceReturnInstance()
+      throws UnsupportedEncodingException {
     // Arrange
     ProtoCapsule<Object> capsule = mock(ProtoCapsule.class);
     when(capsule.getInstance()).thenReturn("Instance");
     Value<Object> value = Value.create(capsule, 1);
+
     RepositoryImpl createRootResult = RepositoryImpl.createRoot(StoreFactory.getInstance());
     createRootResult.putAccount(Key.create("AXAXAXAX".getBytes("UTF-8")), value);
     Key key = Key.create("AXAXAXAX".getBytes("UTF-8"));
+
     ProtoCapsule<Object> capsule2 = mock(ProtoCapsule.class);
     when(capsule2.getInstance()).thenReturn("Instance");
     Value<Object> value2 = Value.create(capsule2, 1);
@@ -1006,23 +674,27 @@ public class RepositoryImplDiffblueTest {
 
   /**
    * Test {@link RepositoryImpl#putAccount(Key, Value)}.
+   *
    * <ul>
-   *   <li>Given {@link ProtoCapsule} {@link ProtoCapsule#getInstance()} return {@code Instance}.</li>
-   *   <li>When {@code null}.</li>
+   *   <li>Given {@link ProtoCapsule} {@link ProtoCapsule#getInstance()} return {@code Instance}.
+   *   <li>When {@code null}.
    * </ul>
-   * <p>
-   * Method under test: {@link RepositoryImpl#putAccount(Key, Value)}
+   *
+   * <p>Method under test: {@link RepositoryImpl#putAccount(Key, Value)}
    */
   @Test
   @Category(MaintainedByDiffblue.class)
   @MethodsUnderTest({"void RepositoryImpl.putAccount(Key, Value)"})
-  public void testPutAccount_givenProtoCapsuleGetInstanceReturnInstance_whenNull() throws UnsupportedEncodingException {
+  public void testPutAccount_givenProtoCapsuleGetInstanceReturnInstance_whenNull()
+      throws UnsupportedEncodingException {
     // Arrange
     ProtoCapsule<Object> capsule = mock(ProtoCapsule.class);
     when(capsule.getInstance()).thenReturn("Instance");
     Value<Object> value = Value.create(capsule, 1);
+
     RepositoryImpl createRootResult = RepositoryImpl.createRoot(StoreFactory.getInstance());
     createRootResult.putAccount(Key.create("AXAXAXAX".getBytes("UTF-8")), value);
+
     ProtoCapsule<Object> capsule2 = mock(ProtoCapsule.class);
     when(capsule2.getInstance()).thenReturn("Instance");
     Value<Object> value2 = Value.create(capsule2, 1);
@@ -1037,20 +709,23 @@ public class RepositoryImplDiffblueTest {
 
   /**
    * Test {@link RepositoryImpl#putCode(Key, Value)}.
+   *
    * <ul>
-   *   <li>Given createRoot Instance.</li>
-   *   <li>When create {@code AXAXAXAX} Bytes is {@code UTF-8}.</li>
+   *   <li>Given createRoot Instance.
+   *   <li>When create {@code AXAXAXAX} Bytes is {@code UTF-8}.
    * </ul>
-   * <p>
-   * Method under test: {@link RepositoryImpl#putCode(Key, Value)}
+   *
+   * <p>Method under test: {@link RepositoryImpl#putCode(Key, Value)}
    */
   @Test
   @Category(MaintainedByDiffblue.class)
   @MethodsUnderTest({"void RepositoryImpl.putCode(Key, Value)"})
-  public void testPutCode_givenCreateRootInstance_whenCreateAxaxaxaxBytesIsUtf8() throws UnsupportedEncodingException {
+  public void testPutCode_givenCreateRootInstance_whenCreateAxaxaxaxBytesIsUtf8()
+      throws UnsupportedEncodingException {
     // Arrange
     RepositoryImpl createRootResult = RepositoryImpl.createRoot(StoreFactory.getInstance());
     Key key = Key.create("AXAXAXAX".getBytes("UTF-8"));
+
     ProtoCapsule<Object> capsule = mock(ProtoCapsule.class);
     when(capsule.getInstance()).thenReturn("Instance");
     Value<Object> value = Value.create(capsule, 1);
@@ -1064,23 +739,27 @@ public class RepositoryImplDiffblueTest {
 
   /**
    * Test {@link RepositoryImpl#putCode(Key, Value)}.
+   *
    * <ul>
-   *   <li>Given {@link ProtoCapsule} {@link ProtoCapsule#getInstance()} return {@code Instance}.</li>
+   *   <li>Given {@link ProtoCapsule} {@link ProtoCapsule#getInstance()} return {@code Instance}.
    * </ul>
-   * <p>
-   * Method under test: {@link RepositoryImpl#putCode(Key, Value)}
+   *
+   * <p>Method under test: {@link RepositoryImpl#putCode(Key, Value)}
    */
   @Test
   @Category(MaintainedByDiffblue.class)
   @MethodsUnderTest({"void RepositoryImpl.putCode(Key, Value)"})
-  public void testPutCode_givenProtoCapsuleGetInstanceReturnInstance() throws UnsupportedEncodingException {
+  public void testPutCode_givenProtoCapsuleGetInstanceReturnInstance()
+      throws UnsupportedEncodingException {
     // Arrange
     ProtoCapsule<Object> capsule = mock(ProtoCapsule.class);
     when(capsule.getInstance()).thenReturn("Instance");
     Value<Object> value = Value.create(capsule, 1);
+
     RepositoryImpl createRootResult = RepositoryImpl.createRoot(StoreFactory.getInstance());
     createRootResult.putCode(Key.create("AXAXAXAX".getBytes("UTF-8")), value);
     Key key = Key.create("AXAXAXAX".getBytes("UTF-8"));
+
     ProtoCapsule<Object> capsule2 = mock(ProtoCapsule.class);
     when(capsule2.getInstance()).thenReturn("Instance");
     Value<Object> value2 = Value.create(capsule2, 1);
@@ -1095,23 +774,27 @@ public class RepositoryImplDiffblueTest {
 
   /**
    * Test {@link RepositoryImpl#putCode(Key, Value)}.
+   *
    * <ul>
-   *   <li>Given {@link ProtoCapsule} {@link ProtoCapsule#getInstance()} return {@code Instance}.</li>
-   *   <li>When {@code null}.</li>
+   *   <li>Given {@link ProtoCapsule} {@link ProtoCapsule#getInstance()} return {@code Instance}.
+   *   <li>When {@code null}.
    * </ul>
-   * <p>
-   * Method under test: {@link RepositoryImpl#putCode(Key, Value)}
+   *
+   * <p>Method under test: {@link RepositoryImpl#putCode(Key, Value)}
    */
   @Test
   @Category(MaintainedByDiffblue.class)
   @MethodsUnderTest({"void RepositoryImpl.putCode(Key, Value)"})
-  public void testPutCode_givenProtoCapsuleGetInstanceReturnInstance_whenNull() throws UnsupportedEncodingException {
+  public void testPutCode_givenProtoCapsuleGetInstanceReturnInstance_whenNull()
+      throws UnsupportedEncodingException {
     // Arrange
     ProtoCapsule<Object> capsule = mock(ProtoCapsule.class);
     when(capsule.getInstance()).thenReturn("Instance");
     Value<Object> value = Value.create(capsule, 1);
+
     RepositoryImpl createRootResult = RepositoryImpl.createRoot(StoreFactory.getInstance());
     createRootResult.putCode(Key.create("AXAXAXAX".getBytes("UTF-8")), value);
+
     ProtoCapsule<Object> capsule2 = mock(ProtoCapsule.class);
     when(capsule2.getInstance()).thenReturn("Instance");
     Value<Object> value2 = Value.create(capsule2, 1);
@@ -1126,12 +809,13 @@ public class RepositoryImplDiffblueTest {
 
   /**
    * Test {@link RepositoryImpl#putContract(Key, Value)}.
+   *
    * <ul>
-   *   <li>Given createRoot Instance.</li>
-   *   <li>When create {@code AXAXAXAX} Bytes is {@code UTF-8}.</li>
+   *   <li>Given createRoot Instance.
+   *   <li>When create {@code AXAXAXAX} Bytes is {@code UTF-8}.
    * </ul>
-   * <p>
-   * Method under test: {@link RepositoryImpl#putContract(Key, Value)}
+   *
+   * <p>Method under test: {@link RepositoryImpl#putContract(Key, Value)}
    */
   @Test
   @Category(MaintainedByDiffblue.class)
@@ -1141,6 +825,7 @@ public class RepositoryImplDiffblueTest {
     // Arrange
     RepositoryImpl createRootResult = RepositoryImpl.createRoot(StoreFactory.getInstance());
     Key key = Key.create("AXAXAXAX".getBytes("UTF-8"));
+
     ProtoCapsule<Object> capsule = mock(ProtoCapsule.class);
     when(capsule.getInstance()).thenReturn("Instance");
     Value<Object> value = Value.create(capsule, 1);
@@ -1154,23 +839,27 @@ public class RepositoryImplDiffblueTest {
 
   /**
    * Test {@link RepositoryImpl#putContract(Key, Value)}.
+   *
    * <ul>
-   *   <li>Given {@link ProtoCapsule} {@link ProtoCapsule#getInstance()} return {@code Instance}.</li>
+   *   <li>Given {@link ProtoCapsule} {@link ProtoCapsule#getInstance()} return {@code Instance}.
    * </ul>
-   * <p>
-   * Method under test: {@link RepositoryImpl#putContract(Key, Value)}
+   *
+   * <p>Method under test: {@link RepositoryImpl#putContract(Key, Value)}
    */
   @Test
   @Category(MaintainedByDiffblue.class)
   @MethodsUnderTest({"void RepositoryImpl.putContract(Key, Value)"})
-  public void testPutContract_givenProtoCapsuleGetInstanceReturnInstance() throws UnsupportedEncodingException {
+  public void testPutContract_givenProtoCapsuleGetInstanceReturnInstance()
+      throws UnsupportedEncodingException {
     // Arrange
     ProtoCapsule<Object> capsule = mock(ProtoCapsule.class);
     when(capsule.getInstance()).thenReturn("Instance");
     Value<Object> value = Value.create(capsule, 1);
+
     RepositoryImpl createRootResult = RepositoryImpl.createRoot(StoreFactory.getInstance());
     createRootResult.putContract(Key.create("AXAXAXAX".getBytes("UTF-8")), value);
     Key key = Key.create("AXAXAXAX".getBytes("UTF-8"));
+
     ProtoCapsule<Object> capsule2 = mock(ProtoCapsule.class);
     when(capsule2.getInstance()).thenReturn("Instance");
     Value<Object> value2 = Value.create(capsule2, 1);
@@ -1185,12 +874,13 @@ public class RepositoryImplDiffblueTest {
 
   /**
    * Test {@link RepositoryImpl#putContract(Key, Value)}.
+   *
    * <ul>
-   *   <li>Given {@link ProtoCapsule} {@link ProtoCapsule#getInstance()} return {@code Instance}.</li>
-   *   <li>When {@code null}.</li>
+   *   <li>Given {@link ProtoCapsule} {@link ProtoCapsule#getInstance()} return {@code Instance}.
+   *   <li>When {@code null}.
    * </ul>
-   * <p>
-   * Method under test: {@link RepositoryImpl#putContract(Key, Value)}
+   *
+   * <p>Method under test: {@link RepositoryImpl#putContract(Key, Value)}
    */
   @Test
   @Category(MaintainedByDiffblue.class)
@@ -1201,8 +891,10 @@ public class RepositoryImplDiffblueTest {
     ProtoCapsule<Object> capsule = mock(ProtoCapsule.class);
     when(capsule.getInstance()).thenReturn("Instance");
     Value<Object> value = Value.create(capsule, 1);
+
     RepositoryImpl createRootResult = RepositoryImpl.createRoot(StoreFactory.getInstance());
     createRootResult.putContract(Key.create("AXAXAXAX".getBytes("UTF-8")), value);
+
     ProtoCapsule<Object> capsule2 = mock(ProtoCapsule.class);
     when(capsule2.getInstance()).thenReturn("Instance");
     Value<Object> value2 = Value.create(capsule2, 1);
@@ -1217,12 +909,13 @@ public class RepositoryImplDiffblueTest {
 
   /**
    * Test {@link RepositoryImpl#putContractState(Key, Value)}.
+   *
    * <ul>
-   *   <li>Given createRoot Instance.</li>
-   *   <li>When create {@code AXAXAXAX} Bytes is {@code UTF-8}.</li>
+   *   <li>Given createRoot Instance.
+   *   <li>When create {@code AXAXAXAX} Bytes is {@code UTF-8}.
    * </ul>
-   * <p>
-   * Method under test: {@link RepositoryImpl#putContractState(Key, Value)}
+   *
+   * <p>Method under test: {@link RepositoryImpl#putContractState(Key, Value)}
    */
   @Test
   @Category(MaintainedByDiffblue.class)
@@ -1232,6 +925,7 @@ public class RepositoryImplDiffblueTest {
     // Arrange
     RepositoryImpl createRootResult = RepositoryImpl.createRoot(StoreFactory.getInstance());
     Key key = Key.create("AXAXAXAX".getBytes("UTF-8"));
+
     ProtoCapsule<Object> capsule = mock(ProtoCapsule.class);
     when(capsule.getInstance()).thenReturn("Instance");
     Value<Object> value = Value.create(capsule, 1);
@@ -1245,23 +939,27 @@ public class RepositoryImplDiffblueTest {
 
   /**
    * Test {@link RepositoryImpl#putContractState(Key, Value)}.
+   *
    * <ul>
-   *   <li>Given {@link ProtoCapsule} {@link ProtoCapsule#getInstance()} return {@code Instance}.</li>
+   *   <li>Given {@link ProtoCapsule} {@link ProtoCapsule#getInstance()} return {@code Instance}.
    * </ul>
-   * <p>
-   * Method under test: {@link RepositoryImpl#putContractState(Key, Value)}
+   *
+   * <p>Method under test: {@link RepositoryImpl#putContractState(Key, Value)}
    */
   @Test
   @Category(MaintainedByDiffblue.class)
   @MethodsUnderTest({"void RepositoryImpl.putContractState(Key, Value)"})
-  public void testPutContractState_givenProtoCapsuleGetInstanceReturnInstance() throws UnsupportedEncodingException {
+  public void testPutContractState_givenProtoCapsuleGetInstanceReturnInstance()
+      throws UnsupportedEncodingException {
     // Arrange
     ProtoCapsule<Object> capsule = mock(ProtoCapsule.class);
     when(capsule.getInstance()).thenReturn("Instance");
     Value<Object> value = Value.create(capsule, 1);
+
     RepositoryImpl createRootResult = RepositoryImpl.createRoot(StoreFactory.getInstance());
     createRootResult.putContractState(Key.create("AXAXAXAX".getBytes("UTF-8")), value);
     Key key = Key.create("AXAXAXAX".getBytes("UTF-8"));
+
     ProtoCapsule<Object> capsule2 = mock(ProtoCapsule.class);
     when(capsule2.getInstance()).thenReturn("Instance");
     Value<Object> value2 = Value.create(capsule2, 1);
@@ -1276,12 +974,13 @@ public class RepositoryImplDiffblueTest {
 
   /**
    * Test {@link RepositoryImpl#putContractState(Key, Value)}.
+   *
    * <ul>
-   *   <li>Given {@link ProtoCapsule} {@link ProtoCapsule#getInstance()} return {@code Instance}.</li>
-   *   <li>When {@code null}.</li>
+   *   <li>Given {@link ProtoCapsule} {@link ProtoCapsule#getInstance()} return {@code Instance}.
+   *   <li>When {@code null}.
    * </ul>
-   * <p>
-   * Method under test: {@link RepositoryImpl#putContractState(Key, Value)}
+   *
+   * <p>Method under test: {@link RepositoryImpl#putContractState(Key, Value)}
    */
   @Test
   @Category(MaintainedByDiffblue.class)
@@ -1292,8 +991,10 @@ public class RepositoryImplDiffblueTest {
     ProtoCapsule<Object> capsule = mock(ProtoCapsule.class);
     when(capsule.getInstance()).thenReturn("Instance");
     Value<Object> value = Value.create(capsule, 1);
+
     RepositoryImpl createRootResult = RepositoryImpl.createRoot(StoreFactory.getInstance());
     createRootResult.putContractState(Key.create("AXAXAXAX".getBytes("UTF-8")), value);
+
     ProtoCapsule<Object> capsule2 = mock(ProtoCapsule.class);
     when(capsule2.getInstance()).thenReturn("Instance");
     Value<Object> value2 = Value.create(capsule2, 1);
@@ -1308,12 +1009,13 @@ public class RepositoryImplDiffblueTest {
 
   /**
    * Test {@link RepositoryImpl#putDynamicProperty(Key, Value)}.
+   *
    * <ul>
-   *   <li>Given createRoot Instance.</li>
-   *   <li>When create {@code AXAXAXAX} Bytes is {@code UTF-8}.</li>
+   *   <li>Given createRoot Instance.
+   *   <li>When create {@code AXAXAXAX} Bytes is {@code UTF-8}.
    * </ul>
-   * <p>
-   * Method under test: {@link RepositoryImpl#putDynamicProperty(Key, Value)}
+   *
+   * <p>Method under test: {@link RepositoryImpl#putDynamicProperty(Key, Value)}
    */
   @Test
   @Category(MaintainedByDiffblue.class)
@@ -1323,6 +1025,7 @@ public class RepositoryImplDiffblueTest {
     // Arrange
     RepositoryImpl createRootResult = RepositoryImpl.createRoot(StoreFactory.getInstance());
     Key key = Key.create("AXAXAXAX".getBytes("UTF-8"));
+
     ProtoCapsule<Object> capsule = mock(ProtoCapsule.class);
     when(capsule.getInstance()).thenReturn("Instance");
     Value<Object> value = Value.create(capsule, 1);
@@ -1336,23 +1039,27 @@ public class RepositoryImplDiffblueTest {
 
   /**
    * Test {@link RepositoryImpl#putDynamicProperty(Key, Value)}.
+   *
    * <ul>
-   *   <li>Given {@link ProtoCapsule} {@link ProtoCapsule#getInstance()} return {@code Instance}.</li>
+   *   <li>Given {@link ProtoCapsule} {@link ProtoCapsule#getInstance()} return {@code Instance}.
    * </ul>
-   * <p>
-   * Method under test: {@link RepositoryImpl#putDynamicProperty(Key, Value)}
+   *
+   * <p>Method under test: {@link RepositoryImpl#putDynamicProperty(Key, Value)}
    */
   @Test
   @Category(MaintainedByDiffblue.class)
   @MethodsUnderTest({"void RepositoryImpl.putDynamicProperty(Key, Value)"})
-  public void testPutDynamicProperty_givenProtoCapsuleGetInstanceReturnInstance() throws UnsupportedEncodingException {
+  public void testPutDynamicProperty_givenProtoCapsuleGetInstanceReturnInstance()
+      throws UnsupportedEncodingException {
     // Arrange
     ProtoCapsule<Object> capsule = mock(ProtoCapsule.class);
     when(capsule.getInstance()).thenReturn("Instance");
     Value<Object> value = Value.create(capsule, 1);
+
     RepositoryImpl createRootResult = RepositoryImpl.createRoot(StoreFactory.getInstance());
     createRootResult.putDynamicProperty(Key.create("AXAXAXAX".getBytes("UTF-8")), value);
     Key key = Key.create("AXAXAXAX".getBytes("UTF-8"));
+
     ProtoCapsule<Object> capsule2 = mock(ProtoCapsule.class);
     when(capsule2.getInstance()).thenReturn("Instance");
     Value<Object> value2 = Value.create(capsule2, 1);
@@ -1367,12 +1074,13 @@ public class RepositoryImplDiffblueTest {
 
   /**
    * Test {@link RepositoryImpl#putDynamicProperty(Key, Value)}.
+   *
    * <ul>
-   *   <li>Given {@link ProtoCapsule} {@link ProtoCapsule#getInstance()} return {@code Instance}.</li>
-   *   <li>When {@code null}.</li>
+   *   <li>Given {@link ProtoCapsule} {@link ProtoCapsule#getInstance()} return {@code Instance}.
+   *   <li>When {@code null}.
    * </ul>
-   * <p>
-   * Method under test: {@link RepositoryImpl#putDynamicProperty(Key, Value)}
+   *
+   * <p>Method under test: {@link RepositoryImpl#putDynamicProperty(Key, Value)}
    */
   @Test
   @Category(MaintainedByDiffblue.class)
@@ -1383,8 +1091,10 @@ public class RepositoryImplDiffblueTest {
     ProtoCapsule<Object> capsule = mock(ProtoCapsule.class);
     when(capsule.getInstance()).thenReturn("Instance");
     Value<Object> value = Value.create(capsule, 1);
+
     RepositoryImpl createRootResult = RepositoryImpl.createRoot(StoreFactory.getInstance());
     createRootResult.putDynamicProperty(Key.create("AXAXAXAX".getBytes("UTF-8")), value);
+
     ProtoCapsule<Object> capsule2 = mock(ProtoCapsule.class);
     when(capsule2.getInstance()).thenReturn("Instance");
     Value<Object> value2 = Value.create(capsule2, 1);
@@ -1399,12 +1109,13 @@ public class RepositoryImplDiffblueTest {
 
   /**
    * Test {@link RepositoryImpl#putDelegatedResource(Key, Value)}.
+   *
    * <ul>
-   *   <li>Given createRoot Instance.</li>
-   *   <li>When create {@code AXAXAXAX} Bytes is {@code UTF-8}.</li>
+   *   <li>Given createRoot Instance.
+   *   <li>When create {@code AXAXAXAX} Bytes is {@code UTF-8}.
    * </ul>
-   * <p>
-   * Method under test: {@link RepositoryImpl#putDelegatedResource(Key, Value)}
+   *
+   * <p>Method under test: {@link RepositoryImpl#putDelegatedResource(Key, Value)}
    */
   @Test
   @Category(MaintainedByDiffblue.class)
@@ -1414,6 +1125,7 @@ public class RepositoryImplDiffblueTest {
     // Arrange
     RepositoryImpl createRootResult = RepositoryImpl.createRoot(StoreFactory.getInstance());
     Key key = Key.create("AXAXAXAX".getBytes("UTF-8"));
+
     ProtoCapsule<Object> capsule = mock(ProtoCapsule.class);
     when(capsule.getInstance()).thenReturn("Instance");
     Value<Object> value = Value.create(capsule, 1);
@@ -1427,11 +1139,12 @@ public class RepositoryImplDiffblueTest {
 
   /**
    * Test {@link RepositoryImpl#putDelegatedResource(Key, Value)}.
+   *
    * <ul>
-   *   <li>Given {@link ProtoCapsule} {@link ProtoCapsule#getInstance()} return {@code Instance}.</li>
+   *   <li>Given {@link ProtoCapsule} {@link ProtoCapsule#getInstance()} return {@code Instance}.
    * </ul>
-   * <p>
-   * Method under test: {@link RepositoryImpl#putDelegatedResource(Key, Value)}
+   *
+   * <p>Method under test: {@link RepositoryImpl#putDelegatedResource(Key, Value)}
    */
   @Test
   @Category(MaintainedByDiffblue.class)
@@ -1442,9 +1155,11 @@ public class RepositoryImplDiffblueTest {
     ProtoCapsule<Object> capsule = mock(ProtoCapsule.class);
     when(capsule.getInstance()).thenReturn("Instance");
     Value<Object> value = Value.create(capsule, 1);
+
     RepositoryImpl createRootResult = RepositoryImpl.createRoot(StoreFactory.getInstance());
     createRootResult.putDelegatedResource(Key.create("AXAXAXAX".getBytes("UTF-8")), value);
     Key key = Key.create("AXAXAXAX".getBytes("UTF-8"));
+
     ProtoCapsule<Object> capsule2 = mock(ProtoCapsule.class);
     when(capsule2.getInstance()).thenReturn("Instance");
     Value<Object> value2 = Value.create(capsule2, 1);
@@ -1459,12 +1174,13 @@ public class RepositoryImplDiffblueTest {
 
   /**
    * Test {@link RepositoryImpl#putDelegatedResource(Key, Value)}.
+   *
    * <ul>
-   *   <li>Given {@link ProtoCapsule} {@link ProtoCapsule#getInstance()} return {@code Instance}.</li>
-   *   <li>When {@code null}.</li>
+   *   <li>Given {@link ProtoCapsule} {@link ProtoCapsule#getInstance()} return {@code Instance}.
+   *   <li>When {@code null}.
    * </ul>
-   * <p>
-   * Method under test: {@link RepositoryImpl#putDelegatedResource(Key, Value)}
+   *
+   * <p>Method under test: {@link RepositoryImpl#putDelegatedResource(Key, Value)}
    */
   @Test
   @Category(MaintainedByDiffblue.class)
@@ -1475,8 +1191,10 @@ public class RepositoryImplDiffblueTest {
     ProtoCapsule<Object> capsule = mock(ProtoCapsule.class);
     when(capsule.getInstance()).thenReturn("Instance");
     Value<Object> value = Value.create(capsule, 1);
+
     RepositoryImpl createRootResult = RepositoryImpl.createRoot(StoreFactory.getInstance());
     createRootResult.putDelegatedResource(Key.create("AXAXAXAX".getBytes("UTF-8")), value);
+
     ProtoCapsule<Object> capsule2 = mock(ProtoCapsule.class);
     when(capsule2.getInstance()).thenReturn("Instance");
     Value<Object> value2 = Value.create(capsule2, 1);
@@ -1491,20 +1209,23 @@ public class RepositoryImplDiffblueTest {
 
   /**
    * Test {@link RepositoryImpl#putVotes(Key, Value)}.
+   *
    * <ul>
-   *   <li>Given createRoot Instance.</li>
-   *   <li>When create {@code AXAXAXAX} Bytes is {@code UTF-8}.</li>
+   *   <li>Given createRoot Instance.
+   *   <li>When create {@code AXAXAXAX} Bytes is {@code UTF-8}.
    * </ul>
-   * <p>
-   * Method under test: {@link RepositoryImpl#putVotes(Key, Value)}
+   *
+   * <p>Method under test: {@link RepositoryImpl#putVotes(Key, Value)}
    */
   @Test
   @Category(MaintainedByDiffblue.class)
   @MethodsUnderTest({"void RepositoryImpl.putVotes(Key, Value)"})
-  public void testPutVotes_givenCreateRootInstance_whenCreateAxaxaxaxBytesIsUtf8() throws UnsupportedEncodingException {
+  public void testPutVotes_givenCreateRootInstance_whenCreateAxaxaxaxBytesIsUtf8()
+      throws UnsupportedEncodingException {
     // Arrange
     RepositoryImpl createRootResult = RepositoryImpl.createRoot(StoreFactory.getInstance());
     Key key = Key.create("AXAXAXAX".getBytes("UTF-8"));
+
     ProtoCapsule<Object> capsule = mock(ProtoCapsule.class);
     when(capsule.getInstance()).thenReturn("Instance");
     Value<Object> value = Value.create(capsule, 1);
@@ -1518,23 +1239,27 @@ public class RepositoryImplDiffblueTest {
 
   /**
    * Test {@link RepositoryImpl#putVotes(Key, Value)}.
+   *
    * <ul>
-   *   <li>Given {@link ProtoCapsule} {@link ProtoCapsule#getInstance()} return {@code Instance}.</li>
+   *   <li>Given {@link ProtoCapsule} {@link ProtoCapsule#getInstance()} return {@code Instance}.
    * </ul>
-   * <p>
-   * Method under test: {@link RepositoryImpl#putVotes(Key, Value)}
+   *
+   * <p>Method under test: {@link RepositoryImpl#putVotes(Key, Value)}
    */
   @Test
   @Category(MaintainedByDiffblue.class)
   @MethodsUnderTest({"void RepositoryImpl.putVotes(Key, Value)"})
-  public void testPutVotes_givenProtoCapsuleGetInstanceReturnInstance() throws UnsupportedEncodingException {
+  public void testPutVotes_givenProtoCapsuleGetInstanceReturnInstance()
+      throws UnsupportedEncodingException {
     // Arrange
     ProtoCapsule<Object> capsule = mock(ProtoCapsule.class);
     when(capsule.getInstance()).thenReturn("Instance");
     Value<Object> value = Value.create(capsule, 1);
+
     RepositoryImpl createRootResult = RepositoryImpl.createRoot(StoreFactory.getInstance());
     createRootResult.putVotes(Key.create("AXAXAXAX".getBytes("UTF-8")), value);
     Key key = Key.create("AXAXAXAX".getBytes("UTF-8"));
+
     ProtoCapsule<Object> capsule2 = mock(ProtoCapsule.class);
     when(capsule2.getInstance()).thenReturn("Instance");
     Value<Object> value2 = Value.create(capsule2, 1);
@@ -1549,23 +1274,27 @@ public class RepositoryImplDiffblueTest {
 
   /**
    * Test {@link RepositoryImpl#putVotes(Key, Value)}.
+   *
    * <ul>
-   *   <li>Given {@link ProtoCapsule} {@link ProtoCapsule#getInstance()} return {@code Instance}.</li>
-   *   <li>When {@code null}.</li>
+   *   <li>Given {@link ProtoCapsule} {@link ProtoCapsule#getInstance()} return {@code Instance}.
+   *   <li>When {@code null}.
    * </ul>
-   * <p>
-   * Method under test: {@link RepositoryImpl#putVotes(Key, Value)}
+   *
+   * <p>Method under test: {@link RepositoryImpl#putVotes(Key, Value)}
    */
   @Test
   @Category(MaintainedByDiffblue.class)
   @MethodsUnderTest({"void RepositoryImpl.putVotes(Key, Value)"})
-  public void testPutVotes_givenProtoCapsuleGetInstanceReturnInstance_whenNull() throws UnsupportedEncodingException {
+  public void testPutVotes_givenProtoCapsuleGetInstanceReturnInstance_whenNull()
+      throws UnsupportedEncodingException {
     // Arrange
     ProtoCapsule<Object> capsule = mock(ProtoCapsule.class);
     when(capsule.getInstance()).thenReturn("Instance");
     Value<Object> value = Value.create(capsule, 1);
+
     RepositoryImpl createRootResult = RepositoryImpl.createRoot(StoreFactory.getInstance());
     createRootResult.putVotes(Key.create("AXAXAXAX".getBytes("UTF-8")), value);
+
     ProtoCapsule<Object> capsule2 = mock(ProtoCapsule.class);
     when(capsule2.getInstance()).thenReturn("Instance");
     Value<Object> value2 = Value.create(capsule2, 1);
@@ -1580,12 +1309,13 @@ public class RepositoryImplDiffblueTest {
 
   /**
    * Test {@link RepositoryImpl#putDelegation(Key, Value)}.
+   *
    * <ul>
-   *   <li>Given createRoot Instance.</li>
-   *   <li>When create {@code AXAXAXAX} Bytes is {@code UTF-8}.</li>
+   *   <li>Given createRoot Instance.
+   *   <li>When create {@code AXAXAXAX} Bytes is {@code UTF-8}.
    * </ul>
-   * <p>
-   * Method under test: {@link RepositoryImpl#putDelegation(Key, Value)}
+   *
+   * <p>Method under test: {@link RepositoryImpl#putDelegation(Key, Value)}
    */
   @Test
   @Category(MaintainedByDiffblue.class)
@@ -1595,6 +1325,7 @@ public class RepositoryImplDiffblueTest {
     // Arrange
     RepositoryImpl createRootResult = RepositoryImpl.createRoot(StoreFactory.getInstance());
     Key key = Key.create("AXAXAXAX".getBytes("UTF-8"));
+
     ProtoCapsule<Object> capsule = mock(ProtoCapsule.class);
     when(capsule.getInstance()).thenReturn("Instance");
     Value<Object> value = Value.create(capsule, 1);
@@ -1608,23 +1339,27 @@ public class RepositoryImplDiffblueTest {
 
   /**
    * Test {@link RepositoryImpl#putDelegation(Key, Value)}.
+   *
    * <ul>
-   *   <li>Given {@link ProtoCapsule} {@link ProtoCapsule#getInstance()} return {@code Instance}.</li>
+   *   <li>Given {@link ProtoCapsule} {@link ProtoCapsule#getInstance()} return {@code Instance}.
    * </ul>
-   * <p>
-   * Method under test: {@link RepositoryImpl#putDelegation(Key, Value)}
+   *
+   * <p>Method under test: {@link RepositoryImpl#putDelegation(Key, Value)}
    */
   @Test
   @Category(MaintainedByDiffblue.class)
   @MethodsUnderTest({"void RepositoryImpl.putDelegation(Key, Value)"})
-  public void testPutDelegation_givenProtoCapsuleGetInstanceReturnInstance() throws UnsupportedEncodingException {
+  public void testPutDelegation_givenProtoCapsuleGetInstanceReturnInstance()
+      throws UnsupportedEncodingException {
     // Arrange
     ProtoCapsule<Object> capsule = mock(ProtoCapsule.class);
     when(capsule.getInstance()).thenReturn("Instance");
     Value<Object> value = Value.create(capsule, 1);
+
     RepositoryImpl createRootResult = RepositoryImpl.createRoot(StoreFactory.getInstance());
     createRootResult.putDelegation(Key.create("AXAXAXAX".getBytes("UTF-8")), value);
     Key key = Key.create("AXAXAXAX".getBytes("UTF-8"));
+
     ProtoCapsule<Object> capsule2 = mock(ProtoCapsule.class);
     when(capsule2.getInstance()).thenReturn("Instance");
     Value<Object> value2 = Value.create(capsule2, 1);
@@ -1639,12 +1374,13 @@ public class RepositoryImplDiffblueTest {
 
   /**
    * Test {@link RepositoryImpl#putDelegation(Key, Value)}.
+   *
    * <ul>
-   *   <li>Given {@link ProtoCapsule} {@link ProtoCapsule#getInstance()} return {@code Instance}.</li>
-   *   <li>When {@code null}.</li>
+   *   <li>Given {@link ProtoCapsule} {@link ProtoCapsule#getInstance()} return {@code Instance}.
+   *   <li>When {@code null}.
    * </ul>
-   * <p>
-   * Method under test: {@link RepositoryImpl#putDelegation(Key, Value)}
+   *
+   * <p>Method under test: {@link RepositoryImpl#putDelegation(Key, Value)}
    */
   @Test
   @Category(MaintainedByDiffblue.class)
@@ -1655,8 +1391,10 @@ public class RepositoryImplDiffblueTest {
     ProtoCapsule<Object> capsule = mock(ProtoCapsule.class);
     when(capsule.getInstance()).thenReturn("Instance");
     Value<Object> value = Value.create(capsule, 1);
+
     RepositoryImpl createRootResult = RepositoryImpl.createRoot(StoreFactory.getInstance());
     createRootResult.putDelegation(Key.create("AXAXAXAX".getBytes("UTF-8")), value);
+
     ProtoCapsule<Object> capsule2 = mock(ProtoCapsule.class);
     when(capsule2.getInstance()).thenReturn("Instance");
     Value<Object> value2 = Value.create(capsule2, 1);
@@ -1671,19 +1409,22 @@ public class RepositoryImplDiffblueTest {
 
   /**
    * Test {@link RepositoryImpl#putDelegatedResourceAccountIndex(Key, Value)}.
+   *
    * <ul>
-   *   <li>Given createRoot Instance.</li>
+   *   <li>Given createRoot Instance.
    * </ul>
-   * <p>
-   * Method under test: {@link RepositoryImpl#putDelegatedResourceAccountIndex(Key, Value)}
+   *
+   * <p>Method under test: {@link RepositoryImpl#putDelegatedResourceAccountIndex(Key, Value)}
    */
   @Test
   @Category(MaintainedByDiffblue.class)
   @MethodsUnderTest({"void RepositoryImpl.putDelegatedResourceAccountIndex(Key, Value)"})
-  public void testPutDelegatedResourceAccountIndex_givenCreateRootInstance() throws UnsupportedEncodingException {
+  public void testPutDelegatedResourceAccountIndex_givenCreateRootInstance()
+      throws UnsupportedEncodingException {
     // Arrange
     RepositoryImpl createRootResult = RepositoryImpl.createRoot(StoreFactory.getInstance());
     Key key = Key.create("AXAXAXAX".getBytes("UTF-8"));
+
     ProtoCapsule<Object> capsule = mock(ProtoCapsule.class);
     when(capsule.getInstance()).thenReturn("Instance");
     Value<Object> value = Value.create(capsule, 1);
@@ -1697,11 +1438,12 @@ public class RepositoryImplDiffblueTest {
 
   /**
    * Test {@link RepositoryImpl#putDelegatedResourceAccountIndex(Key, Value)}.
+   *
    * <ul>
-   *   <li>Given {@link ProtoCapsule} {@link ProtoCapsule#getInstance()} return {@code Instance}.</li>
+   *   <li>Given {@link ProtoCapsule} {@link ProtoCapsule#getInstance()} return {@code Instance}.
    * </ul>
-   * <p>
-   * Method under test: {@link RepositoryImpl#putDelegatedResourceAccountIndex(Key, Value)}
+   *
+   * <p>Method under test: {@link RepositoryImpl#putDelegatedResourceAccountIndex(Key, Value)}
    */
   @Test
   @Category(MaintainedByDiffblue.class)
@@ -1712,9 +1454,12 @@ public class RepositoryImplDiffblueTest {
     ProtoCapsule<Object> capsule = mock(ProtoCapsule.class);
     when(capsule.getInstance()).thenReturn("Instance");
     Value<Object> value = Value.create(capsule, 1);
+
     RepositoryImpl createRootResult = RepositoryImpl.createRoot(StoreFactory.getInstance());
-    createRootResult.putDelegatedResourceAccountIndex(Key.create("AXAXAXAX".getBytes("UTF-8")), value);
+    createRootResult.putDelegatedResourceAccountIndex(
+        Key.create("AXAXAXAX".getBytes("UTF-8")), value);
     Key key = Key.create("AXAXAXAX".getBytes("UTF-8"));
+
     ProtoCapsule<Object> capsule2 = mock(ProtoCapsule.class);
     when(capsule2.getInstance()).thenReturn("Instance");
     Value<Object> value2 = Value.create(capsule2, 1);
@@ -1729,11 +1474,12 @@ public class RepositoryImplDiffblueTest {
 
   /**
    * Test {@link RepositoryImpl#putDelegatedResourceAccountIndex(Key, Value)}.
+   *
    * <ul>
-   *   <li>When {@code null}.</li>
+   *   <li>When {@code null}.
    * </ul>
-   * <p>
-   * Method under test: {@link RepositoryImpl#putDelegatedResourceAccountIndex(Key, Value)}
+   *
+   * <p>Method under test: {@link RepositoryImpl#putDelegatedResourceAccountIndex(Key, Value)}
    */
   @Test
   @Category(MaintainedByDiffblue.class)
@@ -1743,8 +1489,11 @@ public class RepositoryImplDiffblueTest {
     ProtoCapsule<Object> capsule = mock(ProtoCapsule.class);
     when(capsule.getInstance()).thenReturn("Instance");
     Value<Object> value = Value.create(capsule, 1);
+
     RepositoryImpl createRootResult = RepositoryImpl.createRoot(StoreFactory.getInstance());
-    createRootResult.putDelegatedResourceAccountIndex(Key.create("AXAXAXAX".getBytes("UTF-8")), value);
+    createRootResult.putDelegatedResourceAccountIndex(
+        Key.create("AXAXAXAX".getBytes("UTF-8")), value);
+
     ProtoCapsule<Object> capsule2 = mock(ProtoCapsule.class);
     when(capsule2.getInstance()).thenReturn("Instance");
     Value<Object> value2 = Value.create(capsule2, 1);
@@ -1759,8 +1508,8 @@ public class RepositoryImplDiffblueTest {
 
   /**
    * Test {@link RepositoryImpl#saveTotalNetWeight(long)}.
-   * <p>
-   * Method under test: {@link RepositoryImpl#saveTotalNetWeight(long)}
+   *
+   * <p>Method under test: {@link RepositoryImpl#saveTotalNetWeight(long)}
    */
   @Test
   @Category(MaintainedByDiffblue.class)
@@ -1778,8 +1527,8 @@ public class RepositoryImplDiffblueTest {
 
   /**
    * Test {@link RepositoryImpl#saveTotalEnergyWeight(long)}.
-   * <p>
-   * Method under test: {@link RepositoryImpl#saveTotalEnergyWeight(long)}
+   *
+   * <p>Method under test: {@link RepositoryImpl#saveTotalEnergyWeight(long)}
    */
   @Test
   @Category(MaintainedByDiffblue.class)
@@ -1797,8 +1546,8 @@ public class RepositoryImplDiffblueTest {
 
   /**
    * Test {@link RepositoryImpl#saveTotalTronPowerWeight(long)}.
-   * <p>
-   * Method under test: {@link RepositoryImpl#saveTotalTronPowerWeight(long)}
+   *
+   * <p>Method under test: {@link RepositoryImpl#saveTotalTronPowerWeight(long)}
    */
   @Test
   @Category(MaintainedByDiffblue.class)
@@ -1816,8 +1565,9 @@ public class RepositoryImplDiffblueTest {
 
   /**
    * Test getters and setters.
-   * <p>
-   * Methods under test:
+   *
+   * <p>Methods under test:
+   *
    * <ul>
    *   <li>{@link RepositoryImpl#setParent(Repository)}
    *   <li>{@link RepositoryImpl#removeLruCache(byte[])}
@@ -1842,18 +1592,27 @@ public class RepositoryImplDiffblueTest {
    */
   @Test
   @Category(MaintainedByDiffblue.class)
-  @MethodsUnderTest({"AbiStore RepositoryImpl.getAbiStore()", "AccountStore RepositoryImpl.getAccountStore()",
-      "AssetIssueStore RepositoryImpl.getAssetIssueStore()", "AssetIssueV2Store RepositoryImpl.getAssetIssueV2Store()",
-      "BlockIndexStore RepositoryImpl.getBlockIndexStore()", "BlockStore RepositoryImpl.getBlockStore()",
-      "CodeStore RepositoryImpl.getCodeStore()", "ContractStateStore RepositoryImpl.getContractStateStore()",
-      "ContractStore RepositoryImpl.getContractStore()",
-      "DelegatedResourceAccountIndexStore RepositoryImpl.getDelegatedResourceAccountIndexStore()",
-      "DelegatedResourceStore RepositoryImpl.getDelegatedResourceStore()",
-      "DelegationStore RepositoryImpl.getDelegationStore()",
-      "DynamicPropertiesStore RepositoryImpl.getDynamicPropertiesStore()", "KhaosDatabase RepositoryImpl.getKhaosDb()",
-      "StorageRowStore RepositoryImpl.getStorageRowStore()", "VotesStore RepositoryImpl.getVotesStore()",
-      "org.tron.core.store.WitnessStore RepositoryImpl.getWitnessStore()", "void RepositoryImpl.removeLruCache(byte[])",
-      "void RepositoryImpl.setParent(Repository)"})
+  @MethodsUnderTest({
+    "AbiStore RepositoryImpl.getAbiStore()",
+    "AccountStore RepositoryImpl.getAccountStore()",
+    "AssetIssueStore RepositoryImpl.getAssetIssueStore()",
+    "AssetIssueV2Store RepositoryImpl.getAssetIssueV2Store()",
+    "BlockIndexStore RepositoryImpl.getBlockIndexStore()",
+    "BlockStore RepositoryImpl.getBlockStore()",
+    "CodeStore RepositoryImpl.getCodeStore()",
+    "ContractStateStore RepositoryImpl.getContractStateStore()",
+    "ContractStore RepositoryImpl.getContractStore()",
+    "DelegatedResourceAccountIndexStore RepositoryImpl.getDelegatedResourceAccountIndexStore()",
+    "DelegatedResourceStore RepositoryImpl.getDelegatedResourceStore()",
+    "DelegationStore RepositoryImpl.getDelegationStore()",
+    "DynamicPropertiesStore RepositoryImpl.getDynamicPropertiesStore()",
+    "KhaosDatabase RepositoryImpl.getKhaosDb()",
+    "StorageRowStore RepositoryImpl.getStorageRowStore()",
+    "VotesStore RepositoryImpl.getVotesStore()",
+    "org.tron.core.store.WitnessStore RepositoryImpl.getWitnessStore()",
+    "void RepositoryImpl.removeLruCache(byte[])",
+    "void RepositoryImpl.setParent(Repository)"
+  })
   public void testGettersAndSetters() throws UnsupportedEncodingException {
     // Arrange
     RepositoryImpl createRootResult = RepositoryImpl.createRoot(StoreFactory.getInstance());
@@ -1870,11 +1629,13 @@ public class RepositoryImplDiffblueTest {
     CodeStore actualCodeStore = createRootResult.getCodeStore();
     ContractStateStore actualContractStateStore = createRootResult.getContractStateStore();
     ContractStore actualContractStore = createRootResult.getContractStore();
-    DelegatedResourceAccountIndexStore actualDelegatedResourceAccountIndexStore = createRootResult
-        .getDelegatedResourceAccountIndexStore();
-    DelegatedResourceStore actualDelegatedResourceStore = createRootResult.getDelegatedResourceStore();
+    DelegatedResourceAccountIndexStore actualDelegatedResourceAccountIndexStore =
+        createRootResult.getDelegatedResourceAccountIndexStore();
+    DelegatedResourceStore actualDelegatedResourceStore =
+        createRootResult.getDelegatedResourceStore();
     DelegationStore actualDelegationStore = createRootResult.getDelegationStore();
-    DynamicPropertiesStore actualDynamicPropertiesStore = createRootResult.getDynamicPropertiesStore();
+    DynamicPropertiesStore actualDynamicPropertiesStore =
+        createRootResult.getDynamicPropertiesStore();
     KhaosDatabase actualKhaosDb = createRootResult.getKhaosDb();
     StorageRowStore actualStorageRowStore = createRootResult.getStorageRowStore();
     VotesStore actualVotesStore = createRootResult.getVotesStore();

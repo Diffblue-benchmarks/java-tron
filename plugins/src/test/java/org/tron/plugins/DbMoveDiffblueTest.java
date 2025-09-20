@@ -16,21 +16,27 @@ import org.tron.plugins.DbMove.Property;
 public class DbMoveDiffblueTest {
   /**
    * Test ConfigConverter {@link ConfigConverter#convert(String)}.
-   * <p>
-   * Method under test: {@link ConfigConverter#convert(String)}
+   *
+   * <ul>
+   *   <li>When {@code storage.properties}.
+   *   <li>Then throw {@link IOException}.
+   * </ul>
+   *
+   * <p>Method under test: {@link ConfigConverter#convert(String)}
    */
   @Test
   @Category(MaintainedByDiffblue.class)
   @MethodsUnderTest({"com.typesafe.config.Config ConfigConverter.convert(String)"})
-  public void testConfigConverterConvert() throws Exception {
+  public void testConfigConverterConvert_whenStorageProperties_thenThrowIOException()
+      throws Exception {
     // Arrange, Act and Assert
-    assertThrows(IOException.class, () -> (new ConfigConverter()).convert("42"));
+    assertThrows(IOException.class, () -> new ConfigConverter().convert("storage.properties"));
   }
 
   /**
    * Test new {@link DbMove} (default constructor).
-   * <p>
-   * Method under test: default or parameterless constructor of {@link DbMove}
+   *
+   * <p>Method under test: default or parameterless constructor of {@link DbMove}
    */
   @Test
   @Category(MaintainedByDiffblue.class)
@@ -46,52 +52,62 @@ public class DbMoveDiffblueTest {
 
   /**
    * Test PathConverter {@link PathConverter#convert(String)}.
-   * <p>
-   * Method under test: {@link PathConverter#convert(String)}
+   *
+   * <ul>
+   *   <li>When {@code DB path [}.
+   * </ul>
+   *
+   * <p>Method under test: {@link PathConverter#convert(String)}
    */
   @Test
   @Category(MaintainedByDiffblue.class)
   @MethodsUnderTest({"Path PathConverter.convert(String)"})
-  public void testPathConverterConvert() throws IOException {
+  public void testPathConverterConvert_whenDbPath() throws IOException {
     // Arrange, Act and Assert
-    assertThrows(IOException.class, () -> (new PathConverter()).convert("42"));
+    assertThrows(IOException.class, () -> new PathConverter().convert("DB path ["));
   }
 
   /**
    * Test Property {@link Property#Property(String, Path, Path)}.
+   *
    * <ul>
-   *   <li>Then throw {@link IOException}.</li>
+   *   <li>Then throw {@link IOException}.
    * </ul>
-   * <p>
-   * Method under test: {@link Property#Property(String, Path, Path)}
+   *
+   * <p>Method under test: {@link Property#Property(String, Path, Path)}
    */
   @Test
   @Category(MaintainedByDiffblue.class)
   @MethodsUnderTest({"void Property.<init>(String, Path, Path)"})
   public void testPropertyNewProperty_thenThrowIOException() throws IOException {
-    // Arrange, Act and Assert
-    assertThrows(IOException.class, () -> new Property("Name", Paths.get(System.getProperty("java.io.tmpdir"), ""),
-        Paths.get(System.getProperty("java.io.tmpdir"), "")));
+    // Arrange
+    Path original = Paths.get(System.getProperty("java.io.tmpdir"), "");
+    Path destination = Paths.get(System.getProperty("java.io.tmpdir"), "");
 
+    // Act and Assert
+    assertThrows(IOException.class, () -> new Property("Name", original, destination));
   }
 
   /**
    * Test Property {@link Property#Property(String, Path, Path)}.
+   *
    * <ul>
-   *   <li>When Property is {@code java.io.tmpdir} is {@code test.txt}.</li>
-   *   <li>Then throw {@link IOException}.</li>
+   *   <li>When Property is {@code java.io.tmpdir} is {@code test.txt}.
+   *   <li>Then throw {@link IOException}.
    * </ul>
-   * <p>
-   * Method under test: {@link Property#Property(String, Path, Path)}
+   *
+   * <p>Method under test: {@link Property#Property(String, Path, Path)}
    */
   @Test
   @Category(MaintainedByDiffblue.class)
   @MethodsUnderTest({"void Property.<init>(String, Path, Path)"})
-  public void testPropertyNewProperty_whenPropertyIsJavaIoTmpdirIsTestTxt_thenThrowIOException() throws IOException {
-    // Arrange, Act and Assert
-    assertThrows(IOException.class,
-        () -> new Property("Name", Paths.get(System.getProperty("java.io.tmpdir"), "test.txt"),
-            Paths.get(System.getProperty("java.io.tmpdir"), "test.txt")));
+  public void testPropertyNewProperty_whenPropertyIsJavaIoTmpdirIsTestTxt_thenThrowIOException()
+      throws IOException {
+    // Arrange
+    Path original = Paths.get(System.getProperty("java.io.tmpdir"), "test.txt");
+    Path destination = Paths.get(System.getProperty("java.io.tmpdir"), "test.txt");
 
+    // Act and Assert
+    assertThrows(IOException.class, () -> new Property("Name", original, destination));
   }
 }

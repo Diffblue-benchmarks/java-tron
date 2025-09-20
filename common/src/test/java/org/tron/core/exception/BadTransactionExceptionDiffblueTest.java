@@ -11,8 +11,8 @@ import org.junit.experimental.categories.Category;
 public class BadTransactionExceptionDiffblueTest {
   /**
    * Test {@link BadTransactionException#BadTransactionException()}.
-   * <p>
-   * Method under test: {@link BadTransactionException#BadTransactionException()}
+   *
+   * <p>Method under test: {@link BadTransactionException#BadTransactionException()}
    */
   @Test
   @Category(MaintainedByDiffblue.class)
@@ -30,15 +30,16 @@ public class BadTransactionExceptionDiffblueTest {
 
   /**
    * Test {@link BadTransactionException#BadTransactionException(String)}.
-   * <p>
-   * Method under test: {@link BadTransactionException#BadTransactionException(String)}
+   *
+   * <p>Method under test: {@link BadTransactionException#BadTransactionException(String)}
    */
   @Test
   @Category(MaintainedByDiffblue.class)
   @MethodsUnderTest({"void BadTransactionException.<init>(String)"})
   public void testNewBadTransactionException2() {
     // Arrange and Act
-    BadTransactionException actualBadTransactionException = new BadTransactionException("An error occurred");
+    BadTransactionException actualBadTransactionException =
+        new BadTransactionException("An error occurred");
 
     // Assert
     assertEquals("An error occurred", actualBadTransactionException.getLocalizedMessage());
@@ -49,8 +50,9 @@ public class BadTransactionExceptionDiffblueTest {
 
   /**
    * Test {@link BadTransactionException#BadTransactionException(String, Throwable)}.
-   * <p>
-   * Method under test: {@link BadTransactionException#BadTransactionException(String, Throwable)}
+   *
+   * <p>Method under test: {@link BadTransactionException#BadTransactionException(String,
+   * Throwable)}
    */
   @Test
   @Category(MaintainedByDiffblue.class)
@@ -60,7 +62,8 @@ public class BadTransactionExceptionDiffblueTest {
     Throwable cause = new Throwable();
 
     // Act
-    BadTransactionException actualBadTransactionException = new BadTransactionException("An error occurred", cause);
+    BadTransactionException actualBadTransactionException =
+        new BadTransactionException("An error occurred", cause);
 
     // Assert
     assertEquals("An error occurred", actualBadTransactionException.getLocalizedMessage());

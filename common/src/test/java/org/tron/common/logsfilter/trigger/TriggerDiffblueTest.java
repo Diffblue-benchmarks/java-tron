@@ -9,8 +9,9 @@ import org.junit.experimental.categories.Category;
 public class TriggerDiffblueTest {
   /**
    * Test getters and setters.
-   * <p>
-   * Methods under test:
+   *
+   * <p>Methods under test:
+   *
    * <ul>
    *   <li>default or parameterless constructor of {@link Trigger}
    *   <li>{@link Trigger#setTimeStamp(long)}
@@ -21,8 +22,13 @@ public class TriggerDiffblueTest {
    */
   @Test
   @Category(MaintainedByDiffblue.class)
-  @MethodsUnderTest({"void Trigger.<init>()", "long Trigger.getTimeStamp()", "String Trigger.getTriggerName()",
-      "void Trigger.setTimeStamp(long)", "void Trigger.setTriggerName(String)"})
+  @MethodsUnderTest({
+    "void Trigger.<init>()",
+    "long Trigger.getTimeStamp()",
+    "String Trigger.getTriggerName()",
+    "void Trigger.setTimeStamp(long)",
+    "void Trigger.setTriggerName(String)"
+  })
   public void testGettersAndSetters() {
     // Arrange and Act
     Trigger actualTrigger = new Trigger();

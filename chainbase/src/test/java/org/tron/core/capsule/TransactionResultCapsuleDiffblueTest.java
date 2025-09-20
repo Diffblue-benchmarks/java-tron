@@ -33,8 +33,8 @@ import org.tron.protos.Protocol.Transaction.Result.contractResult;
 public class TransactionResultCapsuleDiffblueTest {
   /**
    * Test {@link TransactionResultCapsule#TransactionResultCapsule()}.
-   * <p>
-   * Method under test: {@link TransactionResultCapsule#TransactionResultCapsule()}
+   *
+   * <p>Method under test: {@link TransactionResultCapsule#TransactionResultCapsule()}
    */
   @Test
   @Category(MaintainedByDiffblue.class)
@@ -56,37 +56,74 @@ public class TransactionResultCapsuleDiffblueTest {
     assertEquals(0L, actualTransactionResultCapsule.getWithdrawExpireAmount());
     assertTrue(actualTransactionResultCapsule.getOrderDetailsList().isEmpty());
     assertTrue(actualTransactionResultCapsule.getCancelUnfreezeV2AmountMap().isEmpty());
-    assertArrayEquals(new byte[]{}, actualTransactionResultCapsule.getData());
+    assertArrayEquals(new byte[] {}, actualTransactionResultCapsule.getData());
   }
 
   /**
    * Test {@link TransactionResultCapsule#TransactionResultCapsule(byte[])}.
-   * <p>
-   * Method under test: {@link TransactionResultCapsule#TransactionResultCapsule(byte[])}
+   *
+   * <p>Method under test: {@link TransactionResultCapsule#TransactionResultCapsule(byte[])}
    */
   @Test
   @Category(MaintainedByDiffblue.class)
   @MethodsUnderTest({"void TransactionResultCapsule.<init>(byte[])"})
-  public void testNewTransactionResultCapsule2() throws UnsupportedEncodingException, BadItemException {
+  public void testNewTransactionResultCapsule2()
+      throws UnsupportedEncodingException, BadItemException {
     // Arrange, Act and Assert
-    assertThrows(BadItemException.class,
+    assertThrows(
+        BadItemException.class,
         () -> new TransactionResultCapsule("A\bA\bA\bA\bA\bA\bA\bA\b".getBytes("UTF-8")));
   }
 
   /**
    * Test {@link TransactionResultCapsule#TransactionResultCapsule(byte[])}.
-   * <ul>
-   *   <li>Then return AssetIssueID is empty string.</li>
-   * </ul>
-   * <p>
-   * Method under test: {@link TransactionResultCapsule#TransactionResultCapsule(byte[])}
+   *
+   * <p>Method under test: {@link TransactionResultCapsule#TransactionResultCapsule(byte[])}
    */
   @Test
   @Category(MaintainedByDiffblue.class)
   @MethodsUnderTest({"void TransactionResultCapsule.<init>(byte[])"})
-  public void testNewTransactionResultCapsule_thenReturnAssetIssueIDIsEmptyString() throws BadItemException {
+  public void testNewTransactionResultCapsule3()
+      throws UnsupportedEncodingException, BadItemException {
+    // Arrange, Act and Assert
+    assertThrows(
+        BadItemException.class,
+        () -> new TransactionResultCapsule("r\bA\bA\bA\bA\bA\bA\bA\b".getBytes("UTF-8")));
+  }
+
+  /**
+   * Test {@link TransactionResultCapsule#TransactionResultCapsule(byte[])}.
+   *
+   * <p>Method under test: {@link TransactionResultCapsule#TransactionResultCapsule(byte[])}
+   */
+  @Test
+  @Category(MaintainedByDiffblue.class)
+  @MethodsUnderTest({"void TransactionResultCapsule.<init>(byte[])"})
+  public void testNewTransactionResultCapsule4()
+      throws UnsupportedEncodingException, BadItemException {
+    // Arrange, Act and Assert
+    assertThrows(
+        BadItemException.class,
+        () -> new TransactionResultCapsule("A\bA\bA\bA\bA\bA\bA\bAx".getBytes("UTF-8")));
+  }
+
+  /**
+   * Test {@link TransactionResultCapsule#TransactionResultCapsule(byte[])}.
+   *
+   * <ul>
+   *   <li>Then return AssetIssueID is empty string.
+   * </ul>
+   *
+   * <p>Method under test: {@link TransactionResultCapsule#TransactionResultCapsule(byte[])}
+   */
+  @Test
+  @Category(MaintainedByDiffblue.class)
+  @MethodsUnderTest({"void TransactionResultCapsule.<init>(byte[])"})
+  public void testNewTransactionResultCapsule_thenReturnAssetIssueIDIsEmptyString()
+      throws BadItemException {
     // Arrange and Act
-    TransactionResultCapsule actualTransactionResultCapsule = new TransactionResultCapsule(new byte[]{});
+    TransactionResultCapsule actualTransactionResultCapsule =
+        new TransactionResultCapsule(new byte[] {});
 
     // Assert
     assertEquals("", actualTransactionResultCapsule.getAssetIssueID());
@@ -101,101 +138,97 @@ public class TransactionResultCapsuleDiffblueTest {
     assertEquals(0L, actualTransactionResultCapsule.getWithdrawExpireAmount());
     assertTrue(actualTransactionResultCapsule.getOrderDetailsList().isEmpty());
     assertTrue(actualTransactionResultCapsule.getCancelUnfreezeV2AmountMap().isEmpty());
-    assertArrayEquals(new byte[]{}, actualTransactionResultCapsule.getData());
+    assertArrayEquals(new byte[] {}, actualTransactionResultCapsule.getData());
   }
 
   /**
    * Test {@link TransactionResultCapsule#TransactionResultCapsule(byte[])}.
+   *
    * <ul>
-   *   <li>When array of {@code byte} with minus one and {@code X}.</li>
+   *   <li>When array of {@code byte} with minus one and {@code X}.
    * </ul>
-   * <p>
-   * Method under test: {@link TransactionResultCapsule#TransactionResultCapsule(byte[])}
+   *
+   * <p>Method under test: {@link TransactionResultCapsule#TransactionResultCapsule(byte[])}
    */
   @Test
   @Category(MaintainedByDiffblue.class)
   @MethodsUnderTest({"void TransactionResultCapsule.<init>(byte[])"})
-  public void testNewTransactionResultCapsule_whenArrayOfByteWithMinusOneAndX() throws BadItemException {
+  public void testNewTransactionResultCapsule_whenArrayOfByteWithMinusOneAndX()
+      throws BadItemException {
     // Arrange, Act and Assert
-    assertThrows(BadItemException.class,
-        () -> new TransactionResultCapsule(new byte[]{-1, 'X', 'A', 'X', 'A', 'X', 'A', 'X'}));
+    assertThrows(
+        BadItemException.class,
+        () -> new TransactionResultCapsule(new byte[] {-1, 'X', 'A', 'X', 'A', 'X', 'A', 'X'}));
   }
 
   /**
    * Test {@link TransactionResultCapsule#TransactionResultCapsule(byte[])}.
+   *
    * <ul>
-   *   <li>When array of {@code byte} with {@code r} and zero.</li>
+   *   <li>When array of {@code byte} with sixteen and {@code X}.
    * </ul>
-   * <p>
-   * Method under test: {@link TransactionResultCapsule#TransactionResultCapsule(byte[])}
+   *
+   * <p>Method under test: {@link TransactionResultCapsule#TransactionResultCapsule(byte[])}
    */
   @Test
   @Category(MaintainedByDiffblue.class)
   @MethodsUnderTest({"void TransactionResultCapsule.<init>(byte[])"})
-  public void testNewTransactionResultCapsule_whenArrayOfByteWithRAndZero() throws BadItemException {
+  public void testNewTransactionResultCapsule_whenArrayOfByteWithSixteenAndX()
+      throws BadItemException {
     // Arrange, Act and Assert
-    assertThrows(BadItemException.class,
-        () -> new TransactionResultCapsule(new byte[]{'r', 0, 'A', 'X', 'A', 'X', 'A', 'X'}));
+    assertThrows(
+        BadItemException.class,
+        () -> new TransactionResultCapsule(new byte[] {16, 'X', 'A', 'X', 'A', 'X', 'A', 'X'}));
   }
 
   /**
    * Test {@link TransactionResultCapsule#TransactionResultCapsule(byte[])}.
+   *
    * <ul>
-   *   <li>When array of {@code byte} with sixteen and {@code X}.</li>
+   *   <li>When array of {@code byte} with twenty-four and {@code X}.
    * </ul>
-   * <p>
-   * Method under test: {@link TransactionResultCapsule#TransactionResultCapsule(byte[])}
+   *
+   * <p>Method under test: {@link TransactionResultCapsule#TransactionResultCapsule(byte[])}
    */
   @Test
   @Category(MaintainedByDiffblue.class)
   @MethodsUnderTest({"void TransactionResultCapsule.<init>(byte[])"})
-  public void testNewTransactionResultCapsule_whenArrayOfByteWithSixteenAndX() throws BadItemException {
+  public void testNewTransactionResultCapsule_whenArrayOfByteWithTwentyFourAndX()
+      throws BadItemException {
     // Arrange, Act and Assert
-    assertThrows(BadItemException.class,
-        () -> new TransactionResultCapsule(new byte[]{16, 'X', 'A', 'X', 'A', 'X', 'A', 'X'}));
+    assertThrows(
+        BadItemException.class,
+        () -> new TransactionResultCapsule(new byte[] {24, 'X', 'A', 'X', 'A', 'X', 'A', 'X'}));
   }
 
   /**
    * Test {@link TransactionResultCapsule#TransactionResultCapsule(byte[])}.
+   *
    * <ul>
-   *   <li>When array of {@code byte} with twenty-four and {@code X}.</li>
+   *   <li>When array of {@code byte} with zero and {@code X}.
    * </ul>
-   * <p>
-   * Method under test: {@link TransactionResultCapsule#TransactionResultCapsule(byte[])}
+   *
+   * <p>Method under test: {@link TransactionResultCapsule#TransactionResultCapsule(byte[])}
    */
   @Test
   @Category(MaintainedByDiffblue.class)
   @MethodsUnderTest({"void TransactionResultCapsule.<init>(byte[])"})
-  public void testNewTransactionResultCapsule_whenArrayOfByteWithTwentyFourAndX() throws BadItemException {
+  public void testNewTransactionResultCapsule_whenArrayOfByteWithZeroAndX()
+      throws BadItemException {
     // Arrange, Act and Assert
-    assertThrows(BadItemException.class,
-        () -> new TransactionResultCapsule(new byte[]{24, 'X', 'A', 'X', 'A', 'X', 'A', 'X'}));
+    assertThrows(
+        BadItemException.class,
+        () -> new TransactionResultCapsule(new byte[] {0, 'X', 'A', 'X', 'A', 'X', 'A', 'X'}));
   }
 
   /**
    * Test {@link TransactionResultCapsule#TransactionResultCapsule(byte[])}.
+   *
    * <ul>
-   *   <li>When array of {@code byte} with zero and {@code X}.</li>
+   *   <li>When {@code AXAXAXAX} Bytes is {@code UTF-8}.
    * </ul>
-   * <p>
-   * Method under test: {@link TransactionResultCapsule#TransactionResultCapsule(byte[])}
-   */
-  @Test
-  @Category(MaintainedByDiffblue.class)
-  @MethodsUnderTest({"void TransactionResultCapsule.<init>(byte[])"})
-  public void testNewTransactionResultCapsule_whenArrayOfByteWithZeroAndX() throws BadItemException {
-    // Arrange, Act and Assert
-    assertThrows(BadItemException.class,
-        () -> new TransactionResultCapsule(new byte[]{0, 'X', 'A', 'X', 'A', 'X', 'A', 'X'}));
-  }
-
-  /**
-   * Test {@link TransactionResultCapsule#TransactionResultCapsule(byte[])}.
-   * <ul>
-   *   <li>When {@code AXAXAXAX} Bytes is {@code UTF-8}.</li>
-   * </ul>
-   * <p>
-   * Method under test: {@link TransactionResultCapsule#TransactionResultCapsule(byte[])}
+   *
+   * <p>Method under test: {@link TransactionResultCapsule#TransactionResultCapsule(byte[])}
    */
   @Test
   @Category(MaintainedByDiffblue.class)
@@ -203,24 +236,119 @@ public class TransactionResultCapsuleDiffblueTest {
   public void testNewTransactionResultCapsule_whenAxaxaxaxBytesIsUtf8()
       throws UnsupportedEncodingException, BadItemException {
     // Arrange, Act and Assert
-    assertThrows(BadItemException.class, () -> new TransactionResultCapsule("AXAXAXAX".getBytes("UTF-8")));
+    assertThrows(
+        BadItemException.class, () -> new TransactionResultCapsule("AXAXAXAX".getBytes("UTF-8")));
+  }
+
+  /**
+   * Test {@link TransactionResultCapsule#TransactionResultCapsule(byte[])}.
+   *
+   * <ul>
+   *   <li>When backspace.
+   *   <li>Then throw {@link BadItemException}.
+   * </ul>
+   *
+   * <p>Method under test: {@link TransactionResultCapsule#TransactionResultCapsule(byte[])}
+   */
+  @Test
+  @Category(MaintainedByDiffblue.class)
+  @MethodsUnderTest({"void TransactionResultCapsule.<init>(byte[])"})
+  public void testNewTransactionResultCapsule_whenBackspace_thenThrowBadItemException()
+      throws BadItemException {
+    // Arrange, Act and Assert
+    assertThrows(
+        BadItemException.class,
+        () ->
+            new TransactionResultCapsule(
+                new byte[] {
+                  'A', '\b', 'A', '\b', 'A', '\b', 'A', '\b', 'A', '\b', 'A', '\b', 'A', '\b', 'A',
+                  16
+                }));
+  }
+
+  /**
+   * Test {@link TransactionResultCapsule#TransactionResultCapsule(byte[])}.
+   *
+   * <ul>
+   *   <li>When backspace.
+   *   <li>Then throw {@link BadItemException}.
+   * </ul>
+   *
+   * <p>Method under test: {@link TransactionResultCapsule#TransactionResultCapsule(byte[])}
+   */
+  @Test
+  @Category(MaintainedByDiffblue.class)
+  @MethodsUnderTest({"void TransactionResultCapsule.<init>(byte[])"})
+  public void testNewTransactionResultCapsule_whenBackspace_thenThrowBadItemException2()
+      throws BadItemException {
+    // Arrange, Act and Assert
+    assertThrows(
+        BadItemException.class,
+        () ->
+            new TransactionResultCapsule(
+                new byte[] {
+                  'A', '\b', 'A', '\b', 'A', '\b', 'A', '\b', 'A', '\b', 'A', '\b', 'A', '\b', 'A',
+                  24
+                }));
+  }
+
+  /**
+   * Test {@link TransactionResultCapsule#TransactionResultCapsule(byte[])}.
+   *
+   * <ul>
+   *   <li>When backspace.
+   *   <li>Then throw {@link BadItemException}.
+   * </ul>
+   *
+   * <p>Method under test: {@link TransactionResultCapsule#TransactionResultCapsule(byte[])}
+   */
+  @Test
+  @Category(MaintainedByDiffblue.class)
+  @MethodsUnderTest({"void TransactionResultCapsule.<init>(byte[])"})
+  public void testNewTransactionResultCapsule_whenBackspace_thenThrowBadItemException3()
+      throws BadItemException {
+    // Arrange, Act and Assert
+    assertThrows(
+        BadItemException.class,
+        () ->
+            new TransactionResultCapsule(
+                new byte[] {
+                  'A',
+                  '\b',
+                  'A',
+                  '\b',
+                  'A',
+                  '\b',
+                  'A',
+                  '\b',
+                  'A',
+                  '\b',
+                  'A',
+                  '\b',
+                  'A',
+                  '\b',
+                  'A',
+                  Byte.MIN_VALUE
+                }));
   }
 
   /**
    * Test {@link TransactionResultCapsule#TransactionResultCapsule(contractResult)}.
+   *
    * <ul>
-   *   <li>When {@code DEFAULT}.</li>
-   *   <li>Then return AssetIssueID is empty string.</li>
+   *   <li>When {@code DEFAULT}.
+   *   <li>Then return AssetIssueID is empty string.
    * </ul>
-   * <p>
-   * Method under test: {@link TransactionResultCapsule#TransactionResultCapsule(contractResult)}
+   *
+   * <p>Method under test: {@link TransactionResultCapsule#TransactionResultCapsule(contractResult)}
    */
   @Test
   @Category(MaintainedByDiffblue.class)
   @MethodsUnderTest({"void TransactionResultCapsule.<init>(contractResult)"})
   public void testNewTransactionResultCapsule_whenDefault_thenReturnAssetIssueIDIsEmptyString() {
     // Arrange and Act
-    TransactionResultCapsule actualTransactionResultCapsule = new TransactionResultCapsule(contractResult.DEFAULT);
+    TransactionResultCapsule actualTransactionResultCapsule =
+        new TransactionResultCapsule(contractResult.DEFAULT);
 
     // Assert
     assertEquals("", actualTransactionResultCapsule.getAssetIssueID());
@@ -235,16 +363,17 @@ public class TransactionResultCapsuleDiffblueTest {
     assertEquals(0L, actualTransactionResultCapsule.getWithdrawExpireAmount());
     assertTrue(actualTransactionResultCapsule.getOrderDetailsList().isEmpty());
     assertTrue(actualTransactionResultCapsule.getCancelUnfreezeV2AmountMap().isEmpty());
-    assertArrayEquals(new byte[]{}, actualTransactionResultCapsule.getData());
+    assertArrayEquals(new byte[] {}, actualTransactionResultCapsule.getData());
   }
 
   /**
    * Test {@link TransactionResultCapsule#TransactionResultCapsule(byte[])}.
+   *
    * <ul>
-   *   <li>When {@code rXAXAXAX} Bytes is {@code UTF-8}.</li>
+   *   <li>When {@code rXAXAXAX} Bytes is {@code UTF-8}.
    * </ul>
-   * <p>
-   * Method under test: {@link TransactionResultCapsule#TransactionResultCapsule(byte[])}
+   *
+   * <p>Method under test: {@link TransactionResultCapsule#TransactionResultCapsule(byte[])}
    */
   @Test
   @Category(MaintainedByDiffblue.class)
@@ -252,24 +381,27 @@ public class TransactionResultCapsuleDiffblueTest {
   public void testNewTransactionResultCapsule_whenRXAXAXAXBytesIsUtf8()
       throws UnsupportedEncodingException, BadItemException {
     // Arrange, Act and Assert
-    assertThrows(BadItemException.class, () -> new TransactionResultCapsule("rXAXAXAX".getBytes("UTF-8")));
+    assertThrows(
+        BadItemException.class, () -> new TransactionResultCapsule("rXAXAXAX".getBytes("UTF-8")));
   }
 
   /**
    * Test {@link TransactionResultCapsule#TransactionResultCapsule(code, long)}.
+   *
    * <ul>
-   *   <li>When {@code SUCESS}.</li>
-   *   <li>Then return AssetIssueID is empty string.</li>
+   *   <li>When {@code SUCESS}.
+   *   <li>Then return AssetIssueID is empty string.
    * </ul>
-   * <p>
-   * Method under test: {@link TransactionResultCapsule#TransactionResultCapsule(code, long)}
+   *
+   * <p>Method under test: {@link TransactionResultCapsule#TransactionResultCapsule(code, long)}
    */
   @Test
   @Category(MaintainedByDiffblue.class)
   @MethodsUnderTest({"void TransactionResultCapsule.<init>(code, long)"})
   public void testNewTransactionResultCapsule_whenSucess_thenReturnAssetIssueIDIsEmptyString() {
     // Arrange and Act
-    TransactionResultCapsule actualTransactionResultCapsule = new TransactionResultCapsule(code.SUCESS, 1L);
+    TransactionResultCapsule actualTransactionResultCapsule =
+        new TransactionResultCapsule(code.SUCESS, 1L);
 
     // Assert
     assertEquals("", actualTransactionResultCapsule.getAssetIssueID());
@@ -284,16 +416,17 @@ public class TransactionResultCapsuleDiffblueTest {
     assertEquals(1L, actualTransactionResultCapsule.getFee());
     assertTrue(actualTransactionResultCapsule.getOrderDetailsList().isEmpty());
     assertTrue(actualTransactionResultCapsule.getCancelUnfreezeV2AmountMap().isEmpty());
-    assertArrayEquals(new byte[]{'\b', 1}, actualTransactionResultCapsule.getData());
+    assertArrayEquals(new byte[] {'\b', 1}, actualTransactionResultCapsule.getData());
   }
 
   /**
    * Test {@link TransactionResultCapsule#TransactionResultCapsule(byte[])}.
+   *
    * <ul>
-   *   <li>When {@code xXAXAXAX} Bytes is {@code UTF-8}.</li>
+   *   <li>When {@code xXAXAXAX} Bytes is {@code UTF-8}.
    * </ul>
-   * <p>
-   * Method under test: {@link TransactionResultCapsule#TransactionResultCapsule(byte[])}
+   *
+   * <p>Method under test: {@link TransactionResultCapsule#TransactionResultCapsule(byte[])}
    */
   @Test
   @Category(MaintainedByDiffblue.class)
@@ -301,34 +434,18 @@ public class TransactionResultCapsuleDiffblueTest {
   public void testNewTransactionResultCapsule_whenXXAXAXAXBytesIsUtf8()
       throws UnsupportedEncodingException, BadItemException {
     // Arrange, Act and Assert
-    assertThrows(BadItemException.class, () -> new TransactionResultCapsule("xXAXAXAX".getBytes("UTF-8")));
+    assertThrows(
+        BadItemException.class, () -> new TransactionResultCapsule("xXAXAXAX".getBytes("UTF-8")));
   }
 
   /**
    * Test {@link TransactionResultCapsule#TransactionResultCapsule(byte[])}.
+   *
    * <ul>
-   *   <li>When {@code XAXAXAX} Bytes is {@code UTF-8}.</li>
-   *   <li>Then throw {@link BadItemException}.</li>
+   *   <li>When {@code XXAXAXAX} Bytes is {@code UTF-8}.
    * </ul>
-   * <p>
-   * Method under test: {@link TransactionResultCapsule#TransactionResultCapsule(byte[])}
-   */
-  @Test
-  @Category(MaintainedByDiffblue.class)
-  @MethodsUnderTest({"void TransactionResultCapsule.<init>(byte[])"})
-  public void testNewTransactionResultCapsule_whenXaxaxaxBytesIsUtf8_thenThrowBadItemException()
-      throws UnsupportedEncodingException, BadItemException {
-    // Arrange, Act and Assert
-    assertThrows(BadItemException.class, () -> new TransactionResultCapsule("\bXAXAXAX".getBytes("UTF-8")));
-  }
-
-  /**
-   * Test {@link TransactionResultCapsule#TransactionResultCapsule(byte[])}.
-   * <ul>
-   *   <li>When {@code XXAXAXAX} Bytes is {@code UTF-8}.</li>
-   * </ul>
-   * <p>
-   * Method under test: {@link TransactionResultCapsule#TransactionResultCapsule(byte[])}
+   *
+   * <p>Method under test: {@link TransactionResultCapsule#TransactionResultCapsule(byte[])}
    */
   @Test
   @Category(MaintainedByDiffblue.class)
@@ -336,20 +453,22 @@ public class TransactionResultCapsuleDiffblueTest {
   public void testNewTransactionResultCapsule_whenXxaxaxaxBytesIsUtf8()
       throws UnsupportedEncodingException, BadItemException {
     // Arrange, Act and Assert
-    assertThrows(BadItemException.class, () -> new TransactionResultCapsule("XXAXAXAX".getBytes("UTF-8")));
+    assertThrows(
+        BadItemException.class, () -> new TransactionResultCapsule("XXAXAXAX".getBytes("UTF-8")));
   }
 
   /**
    * Test {@link TransactionResultCapsule#setStatus(long, code)}.
-   * <p>
-   * Method under test: {@link TransactionResultCapsule#setStatus(long, code)}
+   *
+   * <p>Method under test: {@link TransactionResultCapsule#setStatus(long, code)}
    */
   @Test
   @Category(MaintainedByDiffblue.class)
   @MethodsUnderTest({"void TransactionResultCapsule.setStatus(long, code)"})
   public void testSetStatus() {
     // Arrange
-    TransactionResultCapsule transactionResultCapsule = new TransactionResultCapsule(code.SUCESS, 1L);
+    TransactionResultCapsule transactionResultCapsule =
+        new TransactionResultCapsule(code.SUCESS, 1L);
 
     // Act
     transactionResultCapsule.setStatus(1L, code.SUCESS);
@@ -360,20 +479,21 @@ public class TransactionResultCapsuleDiffblueTest {
     assertEquals(2, instance.getSerializedSize());
     assertEquals(2L, transactionResultCapsule.getFee());
     assertEquals(2L, instance.getFee());
-    assertArrayEquals(new byte[]{'\b', 2}, transactionResultCapsule.getData());
+    assertArrayEquals(new byte[] {'\b', 2}, transactionResultCapsule.getData());
   }
 
   /**
    * Test {@link TransactionResultCapsule#setStatus(long, code)}.
-   * <p>
-   * Method under test: {@link TransactionResultCapsule#setStatus(long, code)}
+   *
+   * <p>Method under test: {@link TransactionResultCapsule#setStatus(long, code)}
    */
   @Test
   @Category(MaintainedByDiffblue.class)
   @MethodsUnderTest({"void TransactionResultCapsule.setStatus(long, code)"})
   public void testSetStatus2() {
     // Arrange
-    TransactionResultCapsule transactionResultCapsule = new TransactionResultCapsule(code.FAILED, 1L);
+    TransactionResultCapsule transactionResultCapsule =
+        new TransactionResultCapsule(code.FAILED, 1L);
 
     // Act
     transactionResultCapsule.setStatus(1L, code.SUCESS);
@@ -384,16 +504,18 @@ public class TransactionResultCapsuleDiffblueTest {
     assertEquals(2L, transactionResultCapsule.getFee());
     assertEquals(2L, instance.getFee());
     assertEquals(code.SUCESS, instance.getRet());
-    assertArrayEquals(new byte[]{'\b', 2}, transactionResultCapsule.getData());
+    assertArrayEquals(new byte[] {'\b', 2}, transactionResultCapsule.getData());
   }
 
   /**
    * Test {@link TransactionResultCapsule#setStatus(long, code)}.
+   *
    * <ul>
-   *   <li>Given {@link TransactionResultCapsule#TransactionResultCapsule()} addOrderDetails DefaultInstance.</li>
+   *   <li>Given {@link TransactionResultCapsule#TransactionResultCapsule()} addOrderDetails
+   *       DefaultInstance.
    * </ul>
-   * <p>
-   * Method under test: {@link TransactionResultCapsule#setStatus(long, code)}
+   *
+   * <p>Method under test: {@link TransactionResultCapsule#setStatus(long, code)}
    */
   @Test
   @Category(MaintainedByDiffblue.class)
@@ -413,16 +535,17 @@ public class TransactionResultCapsuleDiffblueTest {
     assertEquals(1L, instance.getFee());
     assertEquals(2, instance.getAllFields().size());
     assertEquals(5, instance.getSerializedSize());
-    assertArrayEquals(new byte[]{'\b', 1, -46, 1, 0}, transactionResultCapsule.getData());
+    assertArrayEquals(new byte[] {'\b', 1, -46, 1, 0}, transactionResultCapsule.getData());
   }
 
   /**
    * Test {@link TransactionResultCapsule#setStatus(long, code)}.
+   *
    * <ul>
-   *   <li>Given {@link TransactionResultCapsule#TransactionResultCapsule()} ExchangeId is one.</li>
+   *   <li>Given {@link TransactionResultCapsule#TransactionResultCapsule()} ExchangeId is one.
    * </ul>
-   * <p>
-   * Method under test: {@link TransactionResultCapsule#setStatus(long, code)}
+   *
+   * <p>Method under test: {@link TransactionResultCapsule#setStatus(long, code)}
    */
   @Test
   @Category(MaintainedByDiffblue.class)
@@ -442,16 +565,18 @@ public class TransactionResultCapsuleDiffblueTest {
     assertEquals(1L, instance.getFee());
     assertEquals(2, instance.getAllFields().size());
     assertEquals(5, instance.getSerializedSize());
-    assertArrayEquals(new byte[]{'\b', 1, -88, 1, 1}, transactionResultCapsule.getData());
+    assertArrayEquals(new byte[] {'\b', 1, -88, 1, 1}, transactionResultCapsule.getData());
   }
 
   /**
    * Test {@link TransactionResultCapsule#setStatus(long, code)}.
+   *
    * <ul>
-   *   <li>Given {@link TransactionResultCapsule#TransactionResultCapsule()} ExchangeInjectAnotherAmount is ten.</li>
+   *   <li>Given {@link TransactionResultCapsule#TransactionResultCapsule()}
+   *       ExchangeInjectAnotherAmount is ten.
    * </ul>
-   * <p>
-   * Method under test: {@link TransactionResultCapsule#setStatus(long, code)}
+   *
+   * <p>Method under test: {@link TransactionResultCapsule#setStatus(long, code)}
    */
   @Test
   @Category(MaintainedByDiffblue.class)
@@ -471,16 +596,18 @@ public class TransactionResultCapsuleDiffblueTest {
     assertEquals(1L, instance.getFee());
     assertEquals(2, instance.getAllFields().size());
     assertEquals(5, instance.getSerializedSize());
-    assertArrayEquals(new byte[]{'\b', 1, -104, 1, '\n'}, transactionResultCapsule.getData());
+    assertArrayEquals(new byte[] {'\b', 1, -104, 1, '\n'}, transactionResultCapsule.getData());
   }
 
   /**
    * Test {@link TransactionResultCapsule#setStatus(long, code)}.
+   *
    * <ul>
-   *   <li>Given {@link TransactionResultCapsule#TransactionResultCapsule()} ExchangeReceivedAmount is ten.</li>
+   *   <li>Given {@link TransactionResultCapsule#TransactionResultCapsule()} ExchangeReceivedAmount
+   *       is ten.
    * </ul>
-   * <p>
-   * Method under test: {@link TransactionResultCapsule#setStatus(long, code)}
+   *
+   * <p>Method under test: {@link TransactionResultCapsule#setStatus(long, code)}
    */
   @Test
   @Category(MaintainedByDiffblue.class)
@@ -500,16 +627,18 @@ public class TransactionResultCapsuleDiffblueTest {
     assertEquals(1L, instance.getFee());
     assertEquals(2, instance.getAllFields().size());
     assertEquals(5, instance.getSerializedSize());
-    assertArrayEquals(new byte[]{'\b', 1, -112, 1, '\n'}, transactionResultCapsule.getData());
+    assertArrayEquals(new byte[] {'\b', 1, -112, 1, '\n'}, transactionResultCapsule.getData());
   }
 
   /**
    * Test {@link TransactionResultCapsule#setStatus(long, code)}.
+   *
    * <ul>
-   *   <li>Given {@link TransactionResultCapsule#TransactionResultCapsule()} ExchangeWithdrawAnotherAmount is ten.</li>
+   *   <li>Given {@link TransactionResultCapsule#TransactionResultCapsule()}
+   *       ExchangeWithdrawAnotherAmount is ten.
    * </ul>
-   * <p>
-   * Method under test: {@link TransactionResultCapsule#setStatus(long, code)}
+   *
+   * <p>Method under test: {@link TransactionResultCapsule#setStatus(long, code)}
    */
   @Test
   @Category(MaintainedByDiffblue.class)
@@ -529,16 +658,18 @@ public class TransactionResultCapsuleDiffblueTest {
     assertEquals(1L, instance.getFee());
     assertEquals(2, instance.getAllFields().size());
     assertEquals(5, instance.getSerializedSize());
-    assertArrayEquals(new byte[]{'\b', 1, -96, 1, '\n'}, transactionResultCapsule.getData());
+    assertArrayEquals(new byte[] {'\b', 1, -96, 1, '\n'}, transactionResultCapsule.getData());
   }
 
   /**
    * Test {@link TransactionResultCapsule#setStatus(long, code)}.
+   *
    * <ul>
-   *   <li>Given {@link TransactionResultCapsule#TransactionResultCapsule()} OrderId is {@link ByteString}.</li>
+   *   <li>Given {@link TransactionResultCapsule#TransactionResultCapsule()} OrderId is {@link
+   *       ByteString}.
    * </ul>
-   * <p>
-   * Method under test: {@link TransactionResultCapsule#setStatus(long, code)}
+   *
+   * <p>Method under test: {@link TransactionResultCapsule#setStatus(long, code)}
    */
   @Test
   @Category(MaintainedByDiffblue.class)
@@ -558,16 +689,18 @@ public class TransactionResultCapsuleDiffblueTest {
     assertEquals(1L, instance.getFee());
     assertEquals(2, instance.getAllFields().size());
     assertEquals(5, instance.getSerializedSize());
-    assertArrayEquals(new byte[]{'\b', 1, -54, 1, 0}, transactionResultCapsule.getData());
+    assertArrayEquals(new byte[] {'\b', 1, -54, 1, 0}, transactionResultCapsule.getData());
   }
 
   /**
    * Test {@link TransactionResultCapsule#setStatus(long, code)}.
+   *
    * <ul>
-   *   <li>Given {@link TransactionResultCapsule#TransactionResultCapsule()} ShieldedTransactionFee is one.</li>
+   *   <li>Given {@link TransactionResultCapsule#TransactionResultCapsule()} ShieldedTransactionFee
+   *       is one.
    * </ul>
-   * <p>
-   * Method under test: {@link TransactionResultCapsule#setStatus(long, code)}
+   *
+   * <p>Method under test: {@link TransactionResultCapsule#setStatus(long, code)}
    */
   @Test
   @Category(MaintainedByDiffblue.class)
@@ -587,16 +720,17 @@ public class TransactionResultCapsuleDiffblueTest {
     assertEquals(1L, instance.getFee());
     assertEquals(2, instance.getAllFields().size());
     assertEquals(5, instance.getSerializedSize());
-    assertArrayEquals(new byte[]{'\b', 1, -80, 1, 1}, transactionResultCapsule.getData());
+    assertArrayEquals(new byte[] {'\b', 1, -80, 1, 1}, transactionResultCapsule.getData());
   }
 
   /**
    * Test {@link TransactionResultCapsule#setStatus(long, code)}.
+   *
    * <ul>
-   *   <li>Given {@link TransactionResultCapsule#TransactionResultCapsule()} UnfreezeAmount is ten.</li>
+   *   <li>Given {@link TransactionResultCapsule#TransactionResultCapsule()} UnfreezeAmount is ten.
    * </ul>
-   * <p>
-   * Method under test: {@link TransactionResultCapsule#setStatus(long, code)}
+   *
+   * <p>Method under test: {@link TransactionResultCapsule#setStatus(long, code)}
    */
   @Test
   @Category(MaintainedByDiffblue.class)
@@ -616,16 +750,19 @@ public class TransactionResultCapsuleDiffblueTest {
     assertEquals(1L, instance.getFee());
     assertEquals(2, instance.getAllFields().size());
     assertEquals(5, instance.getSerializedSize());
-    assertArrayEquals(new byte[]{'\b', 1, Byte.MIN_VALUE, 1, '\n'}, transactionResultCapsule.getData());
+    assertArrayEquals(
+        new byte[] {'\b', 1, Byte.MIN_VALUE, 1, '\n'}, transactionResultCapsule.getData());
   }
 
   /**
    * Test {@link TransactionResultCapsule#setStatus(long, code)}.
+   *
    * <ul>
-   *   <li>Given {@link TransactionResultCapsule#TransactionResultCapsule()} WithdrawExpireAmount is ten.</li>
+   *   <li>Given {@link TransactionResultCapsule#TransactionResultCapsule()} WithdrawExpireAmount is
+   *       ten.
    * </ul>
-   * <p>
-   * Method under test: {@link TransactionResultCapsule#setStatus(long, code)}
+   *
+   * <p>Method under test: {@link TransactionResultCapsule#setStatus(long, code)}
    */
   @Test
   @Category(MaintainedByDiffblue.class)
@@ -645,16 +782,18 @@ public class TransactionResultCapsuleDiffblueTest {
     assertEquals(1L, instance.getFee());
     assertEquals(2, instance.getAllFields().size());
     assertEquals(5, instance.getSerializedSize());
-    assertArrayEquals(new byte[]{'\b', 1, -40, 1, '\n'}, transactionResultCapsule.getData());
+    assertArrayEquals(new byte[] {'\b', 1, -40, 1, '\n'}, transactionResultCapsule.getData());
   }
 
   /**
    * Test {@link TransactionResultCapsule#setStatus(long, code)}.
+   *
    * <ul>
-   *   <li>Then {@link TransactionResultCapsule#TransactionResultCapsule()} Instance AllFields size is one.</li>
+   *   <li>Then {@link TransactionResultCapsule#TransactionResultCapsule()} Instance AllFields size
+   *       is one.
    * </ul>
-   * <p>
-   * Method under test: {@link TransactionResultCapsule#setStatus(long, code)}
+   *
+   * <p>Method under test: {@link TransactionResultCapsule#setStatus(long, code)}
    */
   @Test
   @Category(MaintainedByDiffblue.class)
@@ -672,16 +811,18 @@ public class TransactionResultCapsuleDiffblueTest {
     assertEquals(1L, transactionResultCapsule.getFee());
     assertEquals(1L, instance.getFee());
     assertEquals(2, instance.getSerializedSize());
-    assertArrayEquals(new byte[]{'\b', 1}, transactionResultCapsule.getData());
+    assertArrayEquals(new byte[] {'\b', 1}, transactionResultCapsule.getData());
   }
 
   /**
    * Test {@link TransactionResultCapsule#setStatus(long, code)}.
+   *
    * <ul>
-   *   <li>Then {@link TransactionResultCapsule#TransactionResultCapsule()} Instance AllFields size is one.</li>
+   *   <li>Then {@link TransactionResultCapsule#TransactionResultCapsule()} Instance AllFields size
+   *       is one.
    * </ul>
-   * <p>
-   * Method under test: {@link TransactionResultCapsule#setStatus(long, code)}
+   *
+   * <p>Method under test: {@link TransactionResultCapsule#setStatus(long, code)}
    */
   @Test
   @Category(MaintainedByDiffblue.class)
@@ -700,16 +841,18 @@ public class TransactionResultCapsuleDiffblueTest {
     assertEquals(1L, transactionResultCapsule.getFee());
     assertEquals(1L, instance.getFee());
     assertEquals(2, instance.getSerializedSize());
-    assertArrayEquals(new byte[]{'\b', 1}, transactionResultCapsule.getData());
+    assertArrayEquals(new byte[] {'\b', 1}, transactionResultCapsule.getData());
   }
 
   /**
    * Test {@link TransactionResultCapsule#setStatus(long, code)}.
+   *
    * <ul>
-   *   <li>Then {@link TransactionResultCapsule#TransactionResultCapsule()} Instance SerializedSize is four.</li>
+   *   <li>Then {@link TransactionResultCapsule#TransactionResultCapsule()} Instance SerializedSize
+   *       is four.
    * </ul>
-   * <p>
-   * Method under test: {@link TransactionResultCapsule#setStatus(long, code)}
+   *
+   * <p>Method under test: {@link TransactionResultCapsule#setStatus(long, code)}
    */
   @Test
   @Category(MaintainedByDiffblue.class)
@@ -729,16 +872,18 @@ public class TransactionResultCapsuleDiffblueTest {
     assertEquals(1L, instance.getFee());
     assertEquals(2, instance.getAllFields().size());
     assertEquals(4, instance.getSerializedSize());
-    assertArrayEquals(new byte[]{'\b', 1, 'x', '\n'}, transactionResultCapsule.getData());
+    assertArrayEquals(new byte[] {'\b', 1, 'x', '\n'}, transactionResultCapsule.getData());
   }
 
   /**
    * Test {@link TransactionResultCapsule#setStatus(long, code)}.
+   *
    * <ul>
-   *   <li>Then {@link TransactionResultCapsule#TransactionResultCapsule()} Instance SerializedSize is six.</li>
+   *   <li>Then {@link TransactionResultCapsule#TransactionResultCapsule()} Instance SerializedSize
+   *       is six.
    * </ul>
-   * <p>
-   * Method under test: {@link TransactionResultCapsule#setStatus(long, code)}
+   *
+   * <p>Method under test: {@link TransactionResultCapsule#setStatus(long, code)}
    */
   @Test
   @Category(MaintainedByDiffblue.class)
@@ -758,16 +903,18 @@ public class TransactionResultCapsuleDiffblueTest {
     assertEquals(1L, instance.getFee());
     assertEquals(2, instance.getAllFields().size());
     assertEquals(6, instance.getSerializedSize());
-    assertArrayEquals(new byte[]{'\b', 1, 'r', 2, '4', '2'}, transactionResultCapsule.getData());
+    assertArrayEquals(new byte[] {'\b', 1, 'r', 2, '4', '2'}, transactionResultCapsule.getData());
   }
 
   /**
    * Test {@link TransactionResultCapsule#setStatus(long, code)}.
+   *
    * <ul>
-   *   <li>Then {@link TransactionResultCapsule#TransactionResultCapsule()} Instance SerializedSize is twelve.</li>
+   *   <li>Then {@link TransactionResultCapsule#TransactionResultCapsule()} Instance SerializedSize
+   *       is twelve.
    * </ul>
-   * <p>
-   * Method under test: {@link TransactionResultCapsule#setStatus(long, code)}
+   *
+   * <p>Method under test: {@link TransactionResultCapsule#setStatus(long, code)}
    */
   @Test
   @Category(MaintainedByDiffblue.class)
@@ -789,34 +936,36 @@ public class TransactionResultCapsuleDiffblueTest {
     assertEquals(1L, transactionResultCapsule.getFee());
     assertEquals(1L, instance.getFee());
     assertEquals(2, instance.getAllFields().size());
-    assertArrayEquals(new byte[]{'\b', 1, -30, 1, 7, '\n', 3, 'f', 'o', 'o', 16, 1},
+    assertArrayEquals(
+        new byte[] {'\b', 1, -30, 1, 7, '\n', 3, 'f', 'o', 'o', 16, 1},
         transactionResultCapsule.getData());
   }
 
   /**
    * Test {@link TransactionResultCapsule#getFee()}.
-   * <p>
-   * Method under test: {@link TransactionResultCapsule#getFee()}
+   *
+   * <p>Method under test: {@link TransactionResultCapsule#getFee()}
    */
   @Test
   @Category(MaintainedByDiffblue.class)
   @MethodsUnderTest({"long TransactionResultCapsule.getFee()"})
   public void testGetFee() {
     // Arrange, Act and Assert
-    assertEquals(0L, (new TransactionResultCapsule()).getFee());
+    assertEquals(0L, new TransactionResultCapsule().getFee());
   }
 
   /**
    * Test {@link TransactionResultCapsule#setFee(long)}.
-   * <p>
-   * Method under test: {@link TransactionResultCapsule#setFee(long)}
+   *
+   * <p>Method under test: {@link TransactionResultCapsule#setFee(long)}
    */
   @Test
   @Category(MaintainedByDiffblue.class)
   @MethodsUnderTest({"void TransactionResultCapsule.setFee(long)"})
   public void testSetFee() {
     // Arrange
-    TransactionResultCapsule transactionResultCapsule = new TransactionResultCapsule(code.SUCESS, 1L);
+    TransactionResultCapsule transactionResultCapsule =
+        new TransactionResultCapsule(code.SUCESS, 1L);
 
     // Act
     transactionResultCapsule.setFee(1L);
@@ -827,16 +976,17 @@ public class TransactionResultCapsuleDiffblueTest {
     assertEquals(1L, transactionResultCapsule.getFee());
     assertEquals(1L, instance.getFee());
     assertEquals(2, instance.getSerializedSize());
-    assertArrayEquals(new byte[]{'\b', 1}, transactionResultCapsule.getData());
+    assertArrayEquals(new byte[] {'\b', 1}, transactionResultCapsule.getData());
   }
 
   /**
    * Test {@link TransactionResultCapsule#setFee(long)}.
+   *
    * <ul>
-   *   <li>Given {@link TransactionResultCapsule#TransactionResultCapsule()}.</li>
+   *   <li>Given {@link TransactionResultCapsule#TransactionResultCapsule()}.
    * </ul>
-   * <p>
-   * Method under test: {@link TransactionResultCapsule#setFee(long)}
+   *
+   * <p>Method under test: {@link TransactionResultCapsule#setFee(long)}
    */
   @Test
   @Category(MaintainedByDiffblue.class)
@@ -854,16 +1004,18 @@ public class TransactionResultCapsuleDiffblueTest {
     assertEquals(1L, transactionResultCapsule.getFee());
     assertEquals(1L, instance.getFee());
     assertEquals(2, instance.getSerializedSize());
-    assertArrayEquals(new byte[]{'\b', 1}, transactionResultCapsule.getData());
+    assertArrayEquals(new byte[] {'\b', 1}, transactionResultCapsule.getData());
   }
 
   /**
    * Test {@link TransactionResultCapsule#setFee(long)}.
+   *
    * <ul>
-   *   <li>Given {@link TransactionResultCapsule#TransactionResultCapsule()} addOrderDetails DefaultInstance.</li>
+   *   <li>Given {@link TransactionResultCapsule#TransactionResultCapsule()} addOrderDetails
+   *       DefaultInstance.
    * </ul>
-   * <p>
-   * Method under test: {@link TransactionResultCapsule#setFee(long)}
+   *
+   * <p>Method under test: {@link TransactionResultCapsule#setFee(long)}
    */
   @Test
   @Category(MaintainedByDiffblue.class)
@@ -883,16 +1035,17 @@ public class TransactionResultCapsuleDiffblueTest {
     assertEquals(1L, instance.getFee());
     assertEquals(2, instance.getAllFields().size());
     assertEquals(5, instance.getSerializedSize());
-    assertArrayEquals(new byte[]{'\b', 1, -46, 1, 0}, transactionResultCapsule.getData());
+    assertArrayEquals(new byte[] {'\b', 1, -46, 1, 0}, transactionResultCapsule.getData());
   }
 
   /**
    * Test {@link TransactionResultCapsule#setFee(long)}.
+   *
    * <ul>
-   *   <li>Given {@link TransactionResultCapsule#TransactionResultCapsule()} ExchangeId is one.</li>
+   *   <li>Given {@link TransactionResultCapsule#TransactionResultCapsule()} ExchangeId is one.
    * </ul>
-   * <p>
-   * Method under test: {@link TransactionResultCapsule#setFee(long)}
+   *
+   * <p>Method under test: {@link TransactionResultCapsule#setFee(long)}
    */
   @Test
   @Category(MaintainedByDiffblue.class)
@@ -912,16 +1065,18 @@ public class TransactionResultCapsuleDiffblueTest {
     assertEquals(1L, instance.getFee());
     assertEquals(2, instance.getAllFields().size());
     assertEquals(5, instance.getSerializedSize());
-    assertArrayEquals(new byte[]{'\b', 1, -88, 1, 1}, transactionResultCapsule.getData());
+    assertArrayEquals(new byte[] {'\b', 1, -88, 1, 1}, transactionResultCapsule.getData());
   }
 
   /**
    * Test {@link TransactionResultCapsule#setFee(long)}.
+   *
    * <ul>
-   *   <li>Given {@link TransactionResultCapsule#TransactionResultCapsule()} ExchangeInjectAnotherAmount is ten.</li>
+   *   <li>Given {@link TransactionResultCapsule#TransactionResultCapsule()}
+   *       ExchangeInjectAnotherAmount is ten.
    * </ul>
-   * <p>
-   * Method under test: {@link TransactionResultCapsule#setFee(long)}
+   *
+   * <p>Method under test: {@link TransactionResultCapsule#setFee(long)}
    */
   @Test
   @Category(MaintainedByDiffblue.class)
@@ -941,16 +1096,18 @@ public class TransactionResultCapsuleDiffblueTest {
     assertEquals(1L, instance.getFee());
     assertEquals(2, instance.getAllFields().size());
     assertEquals(5, instance.getSerializedSize());
-    assertArrayEquals(new byte[]{'\b', 1, -104, 1, '\n'}, transactionResultCapsule.getData());
+    assertArrayEquals(new byte[] {'\b', 1, -104, 1, '\n'}, transactionResultCapsule.getData());
   }
 
   /**
    * Test {@link TransactionResultCapsule#setFee(long)}.
+   *
    * <ul>
-   *   <li>Given {@link TransactionResultCapsule#TransactionResultCapsule()} ExchangeReceivedAmount is ten.</li>
+   *   <li>Given {@link TransactionResultCapsule#TransactionResultCapsule()} ExchangeReceivedAmount
+   *       is ten.
    * </ul>
-   * <p>
-   * Method under test: {@link TransactionResultCapsule#setFee(long)}
+   *
+   * <p>Method under test: {@link TransactionResultCapsule#setFee(long)}
    */
   @Test
   @Category(MaintainedByDiffblue.class)
@@ -970,16 +1127,18 @@ public class TransactionResultCapsuleDiffblueTest {
     assertEquals(1L, instance.getFee());
     assertEquals(2, instance.getAllFields().size());
     assertEquals(5, instance.getSerializedSize());
-    assertArrayEquals(new byte[]{'\b', 1, -112, 1, '\n'}, transactionResultCapsule.getData());
+    assertArrayEquals(new byte[] {'\b', 1, -112, 1, '\n'}, transactionResultCapsule.getData());
   }
 
   /**
    * Test {@link TransactionResultCapsule#setFee(long)}.
+   *
    * <ul>
-   *   <li>Given {@link TransactionResultCapsule#TransactionResultCapsule()} ExchangeWithdrawAnotherAmount is ten.</li>
+   *   <li>Given {@link TransactionResultCapsule#TransactionResultCapsule()}
+   *       ExchangeWithdrawAnotherAmount is ten.
    * </ul>
-   * <p>
-   * Method under test: {@link TransactionResultCapsule#setFee(long)}
+   *
+   * <p>Method under test: {@link TransactionResultCapsule#setFee(long)}
    */
   @Test
   @Category(MaintainedByDiffblue.class)
@@ -999,16 +1158,18 @@ public class TransactionResultCapsuleDiffblueTest {
     assertEquals(1L, instance.getFee());
     assertEquals(2, instance.getAllFields().size());
     assertEquals(5, instance.getSerializedSize());
-    assertArrayEquals(new byte[]{'\b', 1, -96, 1, '\n'}, transactionResultCapsule.getData());
+    assertArrayEquals(new byte[] {'\b', 1, -96, 1, '\n'}, transactionResultCapsule.getData());
   }
 
   /**
    * Test {@link TransactionResultCapsule#setFee(long)}.
+   *
    * <ul>
-   *   <li>Given {@link TransactionResultCapsule#TransactionResultCapsule()} OrderId is {@link ByteString}.</li>
+   *   <li>Given {@link TransactionResultCapsule#TransactionResultCapsule()} OrderId is {@link
+   *       ByteString}.
    * </ul>
-   * <p>
-   * Method under test: {@link TransactionResultCapsule#setFee(long)}
+   *
+   * <p>Method under test: {@link TransactionResultCapsule#setFee(long)}
    */
   @Test
   @Category(MaintainedByDiffblue.class)
@@ -1028,16 +1189,18 @@ public class TransactionResultCapsuleDiffblueTest {
     assertEquals(1L, instance.getFee());
     assertEquals(2, instance.getAllFields().size());
     assertEquals(5, instance.getSerializedSize());
-    assertArrayEquals(new byte[]{'\b', 1, -54, 1, 0}, transactionResultCapsule.getData());
+    assertArrayEquals(new byte[] {'\b', 1, -54, 1, 0}, transactionResultCapsule.getData());
   }
 
   /**
    * Test {@link TransactionResultCapsule#setFee(long)}.
+   *
    * <ul>
-   *   <li>Given {@link TransactionResultCapsule#TransactionResultCapsule()} ShieldedTransactionFee is one.</li>
+   *   <li>Given {@link TransactionResultCapsule#TransactionResultCapsule()} ShieldedTransactionFee
+   *       is one.
    * </ul>
-   * <p>
-   * Method under test: {@link TransactionResultCapsule#setFee(long)}
+   *
+   * <p>Method under test: {@link TransactionResultCapsule#setFee(long)}
    */
   @Test
   @Category(MaintainedByDiffblue.class)
@@ -1057,16 +1220,17 @@ public class TransactionResultCapsuleDiffblueTest {
     assertEquals(1L, instance.getFee());
     assertEquals(2, instance.getAllFields().size());
     assertEquals(5, instance.getSerializedSize());
-    assertArrayEquals(new byte[]{'\b', 1, -80, 1, 1}, transactionResultCapsule.getData());
+    assertArrayEquals(new byte[] {'\b', 1, -80, 1, 1}, transactionResultCapsule.getData());
   }
 
   /**
    * Test {@link TransactionResultCapsule#setFee(long)}.
+   *
    * <ul>
-   *   <li>Given {@link TransactionResultCapsule#TransactionResultCapsule()} UnfreezeAmount is ten.</li>
+   *   <li>Given {@link TransactionResultCapsule#TransactionResultCapsule()} UnfreezeAmount is ten.
    * </ul>
-   * <p>
-   * Method under test: {@link TransactionResultCapsule#setFee(long)}
+   *
+   * <p>Method under test: {@link TransactionResultCapsule#setFee(long)}
    */
   @Test
   @Category(MaintainedByDiffblue.class)
@@ -1086,16 +1250,19 @@ public class TransactionResultCapsuleDiffblueTest {
     assertEquals(1L, instance.getFee());
     assertEquals(2, instance.getAllFields().size());
     assertEquals(5, instance.getSerializedSize());
-    assertArrayEquals(new byte[]{'\b', 1, Byte.MIN_VALUE, 1, '\n'}, transactionResultCapsule.getData());
+    assertArrayEquals(
+        new byte[] {'\b', 1, Byte.MIN_VALUE, 1, '\n'}, transactionResultCapsule.getData());
   }
 
   /**
    * Test {@link TransactionResultCapsule#setFee(long)}.
+   *
    * <ul>
-   *   <li>Given {@link TransactionResultCapsule#TransactionResultCapsule()} WithdrawExpireAmount is ten.</li>
+   *   <li>Given {@link TransactionResultCapsule#TransactionResultCapsule()} WithdrawExpireAmount is
+   *       ten.
    * </ul>
-   * <p>
-   * Method under test: {@link TransactionResultCapsule#setFee(long)}
+   *
+   * <p>Method under test: {@link TransactionResultCapsule#setFee(long)}
    */
   @Test
   @Category(MaintainedByDiffblue.class)
@@ -1115,16 +1282,18 @@ public class TransactionResultCapsuleDiffblueTest {
     assertEquals(1L, instance.getFee());
     assertEquals(2, instance.getAllFields().size());
     assertEquals(5, instance.getSerializedSize());
-    assertArrayEquals(new byte[]{'\b', 1, -40, 1, '\n'}, transactionResultCapsule.getData());
+    assertArrayEquals(new byte[] {'\b', 1, -40, 1, '\n'}, transactionResultCapsule.getData());
   }
 
   /**
    * Test {@link TransactionResultCapsule#setFee(long)}.
+   *
    * <ul>
-   *   <li>Then {@link TransactionResultCapsule#TransactionResultCapsule()} Instance AllFields size is one.</li>
+   *   <li>Then {@link TransactionResultCapsule#TransactionResultCapsule()} Instance AllFields size
+   *       is one.
    * </ul>
-   * <p>
-   * Method under test: {@link TransactionResultCapsule#setFee(long)}
+   *
+   * <p>Method under test: {@link TransactionResultCapsule#setFee(long)}
    */
   @Test
   @Category(MaintainedByDiffblue.class)
@@ -1143,16 +1312,18 @@ public class TransactionResultCapsuleDiffblueTest {
     assertEquals(1L, transactionResultCapsule.getFee());
     assertEquals(1L, instance.getFee());
     assertEquals(2, instance.getSerializedSize());
-    assertArrayEquals(new byte[]{'\b', 1}, transactionResultCapsule.getData());
+    assertArrayEquals(new byte[] {'\b', 1}, transactionResultCapsule.getData());
   }
 
   /**
    * Test {@link TransactionResultCapsule#setFee(long)}.
+   *
    * <ul>
-   *   <li>Then {@link TransactionResultCapsule#TransactionResultCapsule()} Instance SerializedSize is four.</li>
+   *   <li>Then {@link TransactionResultCapsule#TransactionResultCapsule()} Instance SerializedSize
+   *       is four.
    * </ul>
-   * <p>
-   * Method under test: {@link TransactionResultCapsule#setFee(long)}
+   *
+   * <p>Method under test: {@link TransactionResultCapsule#setFee(long)}
    */
   @Test
   @Category(MaintainedByDiffblue.class)
@@ -1172,16 +1343,18 @@ public class TransactionResultCapsuleDiffblueTest {
     assertEquals(1L, instance.getFee());
     assertEquals(2, instance.getAllFields().size());
     assertEquals(4, instance.getSerializedSize());
-    assertArrayEquals(new byte[]{'\b', 1, 'x', '\n'}, transactionResultCapsule.getData());
+    assertArrayEquals(new byte[] {'\b', 1, 'x', '\n'}, transactionResultCapsule.getData());
   }
 
   /**
    * Test {@link TransactionResultCapsule#setFee(long)}.
+   *
    * <ul>
-   *   <li>Then {@link TransactionResultCapsule#TransactionResultCapsule()} Instance SerializedSize is six.</li>
+   *   <li>Then {@link TransactionResultCapsule#TransactionResultCapsule()} Instance SerializedSize
+   *       is six.
    * </ul>
-   * <p>
-   * Method under test: {@link TransactionResultCapsule#setFee(long)}
+   *
+   * <p>Method under test: {@link TransactionResultCapsule#setFee(long)}
    */
   @Test
   @Category(MaintainedByDiffblue.class)
@@ -1201,16 +1374,18 @@ public class TransactionResultCapsuleDiffblueTest {
     assertEquals(1L, instance.getFee());
     assertEquals(2, instance.getAllFields().size());
     assertEquals(6, instance.getSerializedSize());
-    assertArrayEquals(new byte[]{'\b', 1, 'r', 2, '4', '2'}, transactionResultCapsule.getData());
+    assertArrayEquals(new byte[] {'\b', 1, 'r', 2, '4', '2'}, transactionResultCapsule.getData());
   }
 
   /**
    * Test {@link TransactionResultCapsule#setFee(long)}.
+   *
    * <ul>
-   *   <li>Then {@link TransactionResultCapsule#TransactionResultCapsule()} Instance SerializedSize is twelve.</li>
+   *   <li>Then {@link TransactionResultCapsule#TransactionResultCapsule()} Instance SerializedSize
+   *       is twelve.
    * </ul>
-   * <p>
-   * Method under test: {@link TransactionResultCapsule#setFee(long)}
+   *
+   * <p>Method under test: {@link TransactionResultCapsule#setFee(long)}
    */
   @Test
   @Category(MaintainedByDiffblue.class)
@@ -1232,24 +1407,28 @@ public class TransactionResultCapsuleDiffblueTest {
     assertEquals(1L, transactionResultCapsule.getFee());
     assertEquals(1L, instance.getFee());
     assertEquals(2, instance.getAllFields().size());
-    assertArrayEquals(new byte[]{'\b', 1, -30, 1, 7, '\n', 3, 'f', 'o', 'o', 16, 1},
+    assertArrayEquals(
+        new byte[] {'\b', 1, -30, 1, 7, '\n', 3, 'f', 'o', 'o', 16, 1},
         transactionResultCapsule.getData());
   }
 
   /**
    * Test {@link TransactionResultCapsule#setFee(long)}.
+   *
    * <ul>
-   *   <li>Then {@link TransactionResultCapsule#TransactionResultCapsule(code, long)} with code is {@code FAILED} and fee is one Fee is one.</li>
+   *   <li>Then {@link TransactionResultCapsule#TransactionResultCapsule(code, long)} with code is
+   *       {@code FAILED} and fee is one Fee is one.
    * </ul>
-   * <p>
-   * Method under test: {@link TransactionResultCapsule#setFee(long)}
+   *
+   * <p>Method under test: {@link TransactionResultCapsule#setFee(long)}
    */
   @Test
   @Category(MaintainedByDiffblue.class)
   @MethodsUnderTest({"void TransactionResultCapsule.setFee(long)"})
   public void testSetFee_thenTransactionResultCapsuleWithCodeIsFailedAndFeeIsOneFeeIsOne() {
     // Arrange
-    TransactionResultCapsule transactionResultCapsule = new TransactionResultCapsule(code.FAILED, 1L);
+    TransactionResultCapsule transactionResultCapsule =
+        new TransactionResultCapsule(code.FAILED, 1L);
 
     // Act
     transactionResultCapsule.setFee(1L);
@@ -1260,33 +1439,34 @@ public class TransactionResultCapsuleDiffblueTest {
     assertEquals(1L, instance.getFee());
     assertEquals(2, instance.getAllFields().size());
     assertEquals(4, instance.getSerializedSize());
-    assertArrayEquals(new byte[]{'\b', 1, 16, 1}, transactionResultCapsule.getData());
+    assertArrayEquals(new byte[] {'\b', 1, 16, 1}, transactionResultCapsule.getData());
   }
 
   /**
    * Test {@link TransactionResultCapsule#getUnfreezeAmount()}.
-   * <p>
-   * Method under test: {@link TransactionResultCapsule#getUnfreezeAmount()}
+   *
+   * <p>Method under test: {@link TransactionResultCapsule#getUnfreezeAmount()}
    */
   @Test
   @Category(MaintainedByDiffblue.class)
   @MethodsUnderTest({"long TransactionResultCapsule.getUnfreezeAmount()"})
   public void testGetUnfreezeAmount() {
     // Arrange, Act and Assert
-    assertEquals(0L, (new TransactionResultCapsule()).getUnfreezeAmount());
+    assertEquals(0L, new TransactionResultCapsule().getUnfreezeAmount());
   }
 
   /**
    * Test {@link TransactionResultCapsule#setUnfreezeAmount(long)}.
-   * <p>
-   * Method under test: {@link TransactionResultCapsule#setUnfreezeAmount(long)}
+   *
+   * <p>Method under test: {@link TransactionResultCapsule#setUnfreezeAmount(long)}
    */
   @Test
   @Category(MaintainedByDiffblue.class)
   @MethodsUnderTest({"void TransactionResultCapsule.setUnfreezeAmount(long)"})
   public void testSetUnfreezeAmount() {
     // Arrange
-    TransactionResultCapsule transactionResultCapsule = new TransactionResultCapsule(code.SUCESS, 1L);
+    TransactionResultCapsule transactionResultCapsule =
+        new TransactionResultCapsule(code.SUCESS, 1L);
 
     // Act
     transactionResultCapsule.setUnfreezeAmount(10L);
@@ -1297,13 +1477,14 @@ public class TransactionResultCapsuleDiffblueTest {
     assertEquals(10L, instance.getUnfreezeAmount());
     assertEquals(2, instance.getAllFields().size());
     assertEquals(5, instance.getSerializedSize());
-    assertArrayEquals(new byte[]{'\b', 1, Byte.MIN_VALUE, 1, '\n'}, transactionResultCapsule.getData());
+    assertArrayEquals(
+        new byte[] {'\b', 1, Byte.MIN_VALUE, 1, '\n'}, transactionResultCapsule.getData());
   }
 
   /**
    * Test {@link TransactionResultCapsule#setUnfreezeAmount(long)}.
-   * <p>
-   * Method under test: {@link TransactionResultCapsule#setUnfreezeAmount(long)}
+   *
+   * <p>Method under test: {@link TransactionResultCapsule#setUnfreezeAmount(long)}
    */
   @Test
   @Category(MaintainedByDiffblue.class)
@@ -1323,13 +1504,14 @@ public class TransactionResultCapsuleDiffblueTest {
     assertEquals(10L, instance.getUnfreezeAmount());
     assertEquals(2, instance.getAllFields().size());
     assertEquals(6, instance.getSerializedSize());
-    assertArrayEquals(new byte[]{Byte.MIN_VALUE, 1, '\n', -46, 1, 0}, transactionResultCapsule.getData());
+    assertArrayEquals(
+        new byte[] {Byte.MIN_VALUE, 1, '\n', -46, 1, 0}, transactionResultCapsule.getData());
   }
 
   /**
    * Test {@link TransactionResultCapsule#setUnfreezeAmount(long)}.
-   * <p>
-   * Method under test: {@link TransactionResultCapsule#setUnfreezeAmount(long)}
+   *
+   * <p>Method under test: {@link TransactionResultCapsule#setUnfreezeAmount(long)}
    */
   @Test
   @Category(MaintainedByDiffblue.class)
@@ -1349,13 +1531,14 @@ public class TransactionResultCapsuleDiffblueTest {
     assertEquals(10L, instance.getUnfreezeAmount());
     assertEquals(2, instance.getAllFields().size());
     assertEquals(6, instance.getSerializedSize());
-    assertArrayEquals(new byte[]{Byte.MIN_VALUE, 1, '\n', -96, 1, '\n'}, transactionResultCapsule.getData());
+    assertArrayEquals(
+        new byte[] {Byte.MIN_VALUE, 1, '\n', -96, 1, '\n'}, transactionResultCapsule.getData());
   }
 
   /**
    * Test {@link TransactionResultCapsule#setUnfreezeAmount(long)}.
-   * <p>
-   * Method under test: {@link TransactionResultCapsule#setUnfreezeAmount(long)}
+   *
+   * <p>Method under test: {@link TransactionResultCapsule#setUnfreezeAmount(long)}
    */
   @Test
   @Category(MaintainedByDiffblue.class)
@@ -1375,20 +1558,22 @@ public class TransactionResultCapsuleDiffblueTest {
     assertEquals(10L, instance.getUnfreezeAmount());
     assertEquals(2, instance.getAllFields().size());
     assertEquals(6, instance.getSerializedSize());
-    assertArrayEquals(new byte[]{Byte.MIN_VALUE, 1, '\n', -104, 1, '\n'}, transactionResultCapsule.getData());
+    assertArrayEquals(
+        new byte[] {Byte.MIN_VALUE, 1, '\n', -104, 1, '\n'}, transactionResultCapsule.getData());
   }
 
   /**
    * Test {@link TransactionResultCapsule#setUnfreezeAmount(long)}.
-   * <p>
-   * Method under test: {@link TransactionResultCapsule#setUnfreezeAmount(long)}
+   *
+   * <p>Method under test: {@link TransactionResultCapsule#setUnfreezeAmount(long)}
    */
   @Test
   @Category(MaintainedByDiffblue.class)
   @MethodsUnderTest({"void TransactionResultCapsule.setUnfreezeAmount(long)"})
   public void testSetUnfreezeAmount5() {
     // Arrange
-    TransactionResultCapsule transactionResultCapsule = new TransactionResultCapsule(code.FAILED, 1L);
+    TransactionResultCapsule transactionResultCapsule =
+        new TransactionResultCapsule(code.FAILED, 1L);
 
     // Act
     transactionResultCapsule.setUnfreezeAmount(10L);
@@ -1399,13 +1584,14 @@ public class TransactionResultCapsuleDiffblueTest {
     assertEquals(10L, instance.getUnfreezeAmount());
     assertEquals(3, instance.getAllFields().size());
     assertEquals(7, instance.getSerializedSize());
-    assertArrayEquals(new byte[]{'\b', 1, 16, 1, Byte.MIN_VALUE, 1, '\n'}, transactionResultCapsule.getData());
+    assertArrayEquals(
+        new byte[] {'\b', 1, 16, 1, Byte.MIN_VALUE, 1, '\n'}, transactionResultCapsule.getData());
   }
 
   /**
    * Test {@link TransactionResultCapsule#setUnfreezeAmount(long)}.
-   * <p>
-   * Method under test: {@link TransactionResultCapsule#setUnfreezeAmount(long)}
+   *
+   * <p>Method under test: {@link TransactionResultCapsule#setUnfreezeAmount(long)}
    */
   @Test
   @Category(MaintainedByDiffblue.class)
@@ -1427,17 +1613,19 @@ public class TransactionResultCapsuleDiffblueTest {
     assertEquals(10L, instance.getUnfreezeAmount());
     assertEquals(13, instance.getSerializedSize());
     assertEquals(2, instance.getAllFields().size());
-    assertArrayEquals(new byte[]{Byte.MIN_VALUE, 1, '\n', -30, 1, 7, '\n', 3, 'f', 'o', 'o', 16, 1},
+    assertArrayEquals(
+        new byte[] {Byte.MIN_VALUE, 1, '\n', -30, 1, 7, '\n', 3, 'f', 'o', 'o', 16, 1},
         transactionResultCapsule.getData());
   }
 
   /**
    * Test {@link TransactionResultCapsule#setUnfreezeAmount(long)}.
+   *
    * <ul>
-   *   <li>Given {@link TransactionResultCapsule#TransactionResultCapsule()}.</li>
+   *   <li>Given {@link TransactionResultCapsule#TransactionResultCapsule()}.
    * </ul>
-   * <p>
-   * Method under test: {@link TransactionResultCapsule#setUnfreezeAmount(long)}
+   *
+   * <p>Method under test: {@link TransactionResultCapsule#setUnfreezeAmount(long)}
    */
   @Test
   @Category(MaintainedByDiffblue.class)
@@ -1455,16 +1643,17 @@ public class TransactionResultCapsuleDiffblueTest {
     assertEquals(10L, transactionResultCapsule.getUnfreezeAmount());
     assertEquals(10L, instance.getUnfreezeAmount());
     assertEquals(3, instance.getSerializedSize());
-    assertArrayEquals(new byte[]{Byte.MIN_VALUE, 1, '\n'}, transactionResultCapsule.getData());
+    assertArrayEquals(new byte[] {Byte.MIN_VALUE, 1, '\n'}, transactionResultCapsule.getData());
   }
 
   /**
    * Test {@link TransactionResultCapsule#setUnfreezeAmount(long)}.
+   *
    * <ul>
-   *   <li>Given {@link TransactionResultCapsule#TransactionResultCapsule()} ExchangeId is one.</li>
+   *   <li>Given {@link TransactionResultCapsule#TransactionResultCapsule()} ExchangeId is one.
    * </ul>
-   * <p>
-   * Method under test: {@link TransactionResultCapsule#setUnfreezeAmount(long)}
+   *
+   * <p>Method under test: {@link TransactionResultCapsule#setUnfreezeAmount(long)}
    */
   @Test
   @Category(MaintainedByDiffblue.class)
@@ -1484,16 +1673,19 @@ public class TransactionResultCapsuleDiffblueTest {
     assertEquals(10L, instance.getUnfreezeAmount());
     assertEquals(2, instance.getAllFields().size());
     assertEquals(6, instance.getSerializedSize());
-    assertArrayEquals(new byte[]{Byte.MIN_VALUE, 1, '\n', -88, 1, 1}, transactionResultCapsule.getData());
+    assertArrayEquals(
+        new byte[] {Byte.MIN_VALUE, 1, '\n', -88, 1, 1}, transactionResultCapsule.getData());
   }
 
   /**
    * Test {@link TransactionResultCapsule#setUnfreezeAmount(long)}.
+   *
    * <ul>
-   *   <li>Given {@link TransactionResultCapsule#TransactionResultCapsule()} ExchangeReceivedAmount is ten.</li>
+   *   <li>Given {@link TransactionResultCapsule#TransactionResultCapsule()} ExchangeReceivedAmount
+   *       is ten.
    * </ul>
-   * <p>
-   * Method under test: {@link TransactionResultCapsule#setUnfreezeAmount(long)}
+   *
+   * <p>Method under test: {@link TransactionResultCapsule#setUnfreezeAmount(long)}
    */
   @Test
   @Category(MaintainedByDiffblue.class)
@@ -1513,16 +1705,19 @@ public class TransactionResultCapsuleDiffblueTest {
     assertEquals(10L, instance.getUnfreezeAmount());
     assertEquals(2, instance.getAllFields().size());
     assertEquals(6, instance.getSerializedSize());
-    assertArrayEquals(new byte[]{Byte.MIN_VALUE, 1, '\n', -112, 1, '\n'}, transactionResultCapsule.getData());
+    assertArrayEquals(
+        new byte[] {Byte.MIN_VALUE, 1, '\n', -112, 1, '\n'}, transactionResultCapsule.getData());
   }
 
   /**
    * Test {@link TransactionResultCapsule#setUnfreezeAmount(long)}.
+   *
    * <ul>
-   *   <li>Given {@link TransactionResultCapsule#TransactionResultCapsule()} OrderId is {@link ByteString}.</li>
+   *   <li>Given {@link TransactionResultCapsule#TransactionResultCapsule()} OrderId is {@link
+   *       ByteString}.
    * </ul>
-   * <p>
-   * Method under test: {@link TransactionResultCapsule#setUnfreezeAmount(long)}
+   *
+   * <p>Method under test: {@link TransactionResultCapsule#setUnfreezeAmount(long)}
    */
   @Test
   @Category(MaintainedByDiffblue.class)
@@ -1542,16 +1737,19 @@ public class TransactionResultCapsuleDiffblueTest {
     assertEquals(10L, instance.getUnfreezeAmount());
     assertEquals(2, instance.getAllFields().size());
     assertEquals(6, instance.getSerializedSize());
-    assertArrayEquals(new byte[]{Byte.MIN_VALUE, 1, '\n', -54, 1, 0}, transactionResultCapsule.getData());
+    assertArrayEquals(
+        new byte[] {Byte.MIN_VALUE, 1, '\n', -54, 1, 0}, transactionResultCapsule.getData());
   }
 
   /**
    * Test {@link TransactionResultCapsule#setUnfreezeAmount(long)}.
+   *
    * <ul>
-   *   <li>Given {@link TransactionResultCapsule#TransactionResultCapsule()} ShieldedTransactionFee is one.</li>
+   *   <li>Given {@link TransactionResultCapsule#TransactionResultCapsule()} ShieldedTransactionFee
+   *       is one.
    * </ul>
-   * <p>
-   * Method under test: {@link TransactionResultCapsule#setUnfreezeAmount(long)}
+   *
+   * <p>Method under test: {@link TransactionResultCapsule#setUnfreezeAmount(long)}
    */
   @Test
   @Category(MaintainedByDiffblue.class)
@@ -1571,16 +1769,19 @@ public class TransactionResultCapsuleDiffblueTest {
     assertEquals(10L, instance.getUnfreezeAmount());
     assertEquals(2, instance.getAllFields().size());
     assertEquals(6, instance.getSerializedSize());
-    assertArrayEquals(new byte[]{Byte.MIN_VALUE, 1, '\n', -80, 1, 1}, transactionResultCapsule.getData());
+    assertArrayEquals(
+        new byte[] {Byte.MIN_VALUE, 1, '\n', -80, 1, 1}, transactionResultCapsule.getData());
   }
 
   /**
    * Test {@link TransactionResultCapsule#setUnfreezeAmount(long)}.
+   *
    * <ul>
-   *   <li>Given {@link TransactionResultCapsule#TransactionResultCapsule()} WithdrawExpireAmount is ten.</li>
+   *   <li>Given {@link TransactionResultCapsule#TransactionResultCapsule()} WithdrawExpireAmount is
+   *       ten.
    * </ul>
-   * <p>
-   * Method under test: {@link TransactionResultCapsule#setUnfreezeAmount(long)}
+   *
+   * <p>Method under test: {@link TransactionResultCapsule#setUnfreezeAmount(long)}
    */
   @Test
   @Category(MaintainedByDiffblue.class)
@@ -1600,16 +1801,19 @@ public class TransactionResultCapsuleDiffblueTest {
     assertEquals(10L, instance.getUnfreezeAmount());
     assertEquals(2, instance.getAllFields().size());
     assertEquals(6, instance.getSerializedSize());
-    assertArrayEquals(new byte[]{Byte.MIN_VALUE, 1, '\n', -40, 1, '\n'}, transactionResultCapsule.getData());
+    assertArrayEquals(
+        new byte[] {Byte.MIN_VALUE, 1, '\n', -40, 1, '\n'}, transactionResultCapsule.getData());
   }
 
   /**
    * Test {@link TransactionResultCapsule#setUnfreezeAmount(long)}.
+   *
    * <ul>
-   *   <li>Then {@link TransactionResultCapsule#TransactionResultCapsule()} Instance AllFields size is one.</li>
+   *   <li>Then {@link TransactionResultCapsule#TransactionResultCapsule()} Instance AllFields size
+   *       is one.
    * </ul>
-   * <p>
-   * Method under test: {@link TransactionResultCapsule#setUnfreezeAmount(long)}
+   *
+   * <p>Method under test: {@link TransactionResultCapsule#setUnfreezeAmount(long)}
    */
   @Test
   @Category(MaintainedByDiffblue.class)
@@ -1628,16 +1832,18 @@ public class TransactionResultCapsuleDiffblueTest {
     assertEquals(10L, transactionResultCapsule.getUnfreezeAmount());
     assertEquals(10L, instance.getUnfreezeAmount());
     assertEquals(3, instance.getSerializedSize());
-    assertArrayEquals(new byte[]{Byte.MIN_VALUE, 1, '\n'}, transactionResultCapsule.getData());
+    assertArrayEquals(new byte[] {Byte.MIN_VALUE, 1, '\n'}, transactionResultCapsule.getData());
   }
 
   /**
    * Test {@link TransactionResultCapsule#setUnfreezeAmount(long)}.
+   *
    * <ul>
-   *   <li>Then {@link TransactionResultCapsule#TransactionResultCapsule()} Instance SerializedSize is five.</li>
+   *   <li>Then {@link TransactionResultCapsule#TransactionResultCapsule()} Instance SerializedSize
+   *       is five.
    * </ul>
-   * <p>
-   * Method under test: {@link TransactionResultCapsule#setUnfreezeAmount(long)}
+   *
+   * <p>Method under test: {@link TransactionResultCapsule#setUnfreezeAmount(long)}
    */
   @Test
   @Category(MaintainedByDiffblue.class)
@@ -1657,16 +1863,19 @@ public class TransactionResultCapsuleDiffblueTest {
     assertEquals(10L, instance.getUnfreezeAmount());
     assertEquals(2, instance.getAllFields().size());
     assertEquals(5, instance.getSerializedSize());
-    assertArrayEquals(new byte[]{'x', '\n', Byte.MIN_VALUE, 1, '\n'}, transactionResultCapsule.getData());
+    assertArrayEquals(
+        new byte[] {'x', '\n', Byte.MIN_VALUE, 1, '\n'}, transactionResultCapsule.getData());
   }
 
   /**
    * Test {@link TransactionResultCapsule#setUnfreezeAmount(long)}.
+   *
    * <ul>
-   *   <li>Then {@link TransactionResultCapsule#TransactionResultCapsule()} Instance SerializedSize is seven.</li>
+   *   <li>Then {@link TransactionResultCapsule#TransactionResultCapsule()} Instance SerializedSize
+   *       is seven.
    * </ul>
-   * <p>
-   * Method under test: {@link TransactionResultCapsule#setUnfreezeAmount(long)}
+   *
+   * <p>Method under test: {@link TransactionResultCapsule#setUnfreezeAmount(long)}
    */
   @Test
   @Category(MaintainedByDiffblue.class)
@@ -1686,33 +1895,35 @@ public class TransactionResultCapsuleDiffblueTest {
     assertEquals(10L, instance.getUnfreezeAmount());
     assertEquals(2, instance.getAllFields().size());
     assertEquals(7, instance.getSerializedSize());
-    assertArrayEquals(new byte[]{'r', 2, '4', '2', Byte.MIN_VALUE, 1, '\n'}, transactionResultCapsule.getData());
+    assertArrayEquals(
+        new byte[] {'r', 2, '4', '2', Byte.MIN_VALUE, 1, '\n'}, transactionResultCapsule.getData());
   }
 
   /**
    * Test {@link TransactionResultCapsule#getAssetIssueID()}.
-   * <p>
-   * Method under test: {@link TransactionResultCapsule#getAssetIssueID()}
+   *
+   * <p>Method under test: {@link TransactionResultCapsule#getAssetIssueID()}
    */
   @Test
   @Category(MaintainedByDiffblue.class)
   @MethodsUnderTest({"String TransactionResultCapsule.getAssetIssueID()"})
   public void testGetAssetIssueID() {
     // Arrange, Act and Assert
-    assertEquals("", (new TransactionResultCapsule()).getAssetIssueID());
+    assertEquals("", new TransactionResultCapsule().getAssetIssueID());
   }
 
   /**
    * Test {@link TransactionResultCapsule#setAssetIssueID(String)}.
-   * <p>
-   * Method under test: {@link TransactionResultCapsule#setAssetIssueID(String)}
+   *
+   * <p>Method under test: {@link TransactionResultCapsule#setAssetIssueID(String)}
    */
   @Test
   @Category(MaintainedByDiffblue.class)
   @MethodsUnderTest({"void TransactionResultCapsule.setAssetIssueID(String)"})
   public void testSetAssetIssueID() {
     // Arrange
-    TransactionResultCapsule transactionResultCapsule = new TransactionResultCapsule(code.SUCESS, 1L);
+    TransactionResultCapsule transactionResultCapsule =
+        new TransactionResultCapsule(code.SUCESS, 1L);
 
     // Act
     transactionResultCapsule.setAssetIssueID("42");
@@ -1721,13 +1932,13 @@ public class TransactionResultCapsuleDiffblueTest {
     Result instance = transactionResultCapsule.getInstance();
     assertEquals(2, instance.getAllFields().size());
     assertEquals(6, instance.getSerializedSize());
-    assertArrayEquals(new byte[]{'\b', 1, 'r', 2, '4', '2'}, transactionResultCapsule.getData());
+    assertArrayEquals(new byte[] {'\b', 1, 'r', 2, '4', '2'}, transactionResultCapsule.getData());
   }
 
   /**
    * Test {@link TransactionResultCapsule#setAssetIssueID(String)}.
-   * <p>
-   * Method under test: {@link TransactionResultCapsule#setAssetIssueID(String)}
+   *
+   * <p>Method under test: {@link TransactionResultCapsule#setAssetIssueID(String)}
    */
   @Test
   @Category(MaintainedByDiffblue.class)
@@ -1745,13 +1956,14 @@ public class TransactionResultCapsuleDiffblueTest {
     Result instance = transactionResultCapsule.getInstance();
     assertEquals(2, instance.getAllFields().size());
     assertEquals(7, instance.getSerializedSize());
-    assertArrayEquals(new byte[]{'r', 2, '4', '2', -96, 1, '\n'}, transactionResultCapsule.getData());
+    assertArrayEquals(
+        new byte[] {'r', 2, '4', '2', -96, 1, '\n'}, transactionResultCapsule.getData());
   }
 
   /**
    * Test {@link TransactionResultCapsule#setAssetIssueID(String)}.
-   * <p>
-   * Method under test: {@link TransactionResultCapsule#setAssetIssueID(String)}
+   *
+   * <p>Method under test: {@link TransactionResultCapsule#setAssetIssueID(String)}
    */
   @Test
   @Category(MaintainedByDiffblue.class)
@@ -1769,20 +1981,22 @@ public class TransactionResultCapsuleDiffblueTest {
     Result instance = transactionResultCapsule.getInstance();
     assertEquals(2, instance.getAllFields().size());
     assertEquals(7, instance.getSerializedSize());
-    assertArrayEquals(new byte[]{'r', 2, '4', '2', -104, 1, '\n'}, transactionResultCapsule.getData());
+    assertArrayEquals(
+        new byte[] {'r', 2, '4', '2', -104, 1, '\n'}, transactionResultCapsule.getData());
   }
 
   /**
    * Test {@link TransactionResultCapsule#setAssetIssueID(String)}.
-   * <p>
-   * Method under test: {@link TransactionResultCapsule#setAssetIssueID(String)}
+   *
+   * <p>Method under test: {@link TransactionResultCapsule#setAssetIssueID(String)}
    */
   @Test
   @Category(MaintainedByDiffblue.class)
   @MethodsUnderTest({"void TransactionResultCapsule.setAssetIssueID(String)"})
   public void testSetAssetIssueID4() {
     // Arrange
-    TransactionResultCapsule transactionResultCapsule = new TransactionResultCapsule(code.FAILED, 1L);
+    TransactionResultCapsule transactionResultCapsule =
+        new TransactionResultCapsule(code.FAILED, 1L);
 
     // Act
     transactionResultCapsule.setAssetIssueID("42");
@@ -1791,41 +2005,19 @@ public class TransactionResultCapsuleDiffblueTest {
     Result instance = transactionResultCapsule.getInstance();
     assertEquals(3, instance.getAllFields().size());
     assertEquals(8, instance.getSerializedSize());
-    assertArrayEquals(new byte[]{'\b', 1, 16, 1, 'r', 2, '4', '2'}, transactionResultCapsule.getData());
+    assertArrayEquals(
+        new byte[] {'\b', 1, 16, 1, 'r', 2, '4', '2'}, transactionResultCapsule.getData());
   }
 
   /**
    * Test {@link TransactionResultCapsule#setAssetIssueID(String)}.
+   *
    * <ul>
-   *   <li>Given {@link TransactionResultCapsule#TransactionResultCapsule()}.</li>
+   *   <li>Given {@link TransactionResultCapsule#TransactionResultCapsule()} addOrderDetails
+   *       DefaultInstance.
    * </ul>
-   * <p>
-   * Method under test: {@link TransactionResultCapsule#setAssetIssueID(String)}
-   */
-  @Test
-  @Category(MaintainedByDiffblue.class)
-  @MethodsUnderTest({"void TransactionResultCapsule.setAssetIssueID(String)"})
-  public void testSetAssetIssueID_givenTransactionResultCapsule() {
-    // Arrange
-    TransactionResultCapsule transactionResultCapsule = new TransactionResultCapsule();
-
-    // Act
-    transactionResultCapsule.setAssetIssueID("42");
-
-    // Assert
-    Result instance = transactionResultCapsule.getInstance();
-    assertEquals(1, instance.getAllFields().size());
-    assertEquals(4, instance.getSerializedSize());
-    assertArrayEquals(new byte[]{'r', 2, '4', '2'}, transactionResultCapsule.getData());
-  }
-
-  /**
-   * Test {@link TransactionResultCapsule#setAssetIssueID(String)}.
-   * <ul>
-   *   <li>Given {@link TransactionResultCapsule#TransactionResultCapsule()} addOrderDetails DefaultInstance.</li>
-   * </ul>
-   * <p>
-   * Method under test: {@link TransactionResultCapsule#setAssetIssueID(String)}
+   *
+   * <p>Method under test: {@link TransactionResultCapsule#setAssetIssueID(String)}
    */
   @Test
   @Category(MaintainedByDiffblue.class)
@@ -1843,16 +2035,17 @@ public class TransactionResultCapsuleDiffblueTest {
     Result instance = transactionResultCapsule.getInstance();
     assertEquals(2, instance.getAllFields().size());
     assertEquals(7, instance.getSerializedSize());
-    assertArrayEquals(new byte[]{'r', 2, '4', '2', -46, 1, 0}, transactionResultCapsule.getData());
+    assertArrayEquals(new byte[] {'r', 2, '4', '2', -46, 1, 0}, transactionResultCapsule.getData());
   }
 
   /**
    * Test {@link TransactionResultCapsule#setAssetIssueID(String)}.
+   *
    * <ul>
-   *   <li>Given {@link TransactionResultCapsule#TransactionResultCapsule()} ExchangeId is one.</li>
+   *   <li>Given {@link TransactionResultCapsule#TransactionResultCapsule()} ExchangeId is one.
    * </ul>
-   * <p>
-   * Method under test: {@link TransactionResultCapsule#setAssetIssueID(String)}
+   *
+   * <p>Method under test: {@link TransactionResultCapsule#setAssetIssueID(String)}
    */
   @Test
   @Category(MaintainedByDiffblue.class)
@@ -1870,16 +2063,18 @@ public class TransactionResultCapsuleDiffblueTest {
     Result instance = transactionResultCapsule.getInstance();
     assertEquals(2, instance.getAllFields().size());
     assertEquals(7, instance.getSerializedSize());
-    assertArrayEquals(new byte[]{'r', 2, '4', '2', -88, 1, 1}, transactionResultCapsule.getData());
+    assertArrayEquals(new byte[] {'r', 2, '4', '2', -88, 1, 1}, transactionResultCapsule.getData());
   }
 
   /**
    * Test {@link TransactionResultCapsule#setAssetIssueID(String)}.
+   *
    * <ul>
-   *   <li>Given {@link TransactionResultCapsule#TransactionResultCapsule()} ExchangeReceivedAmount is ten.</li>
+   *   <li>Given {@link TransactionResultCapsule#TransactionResultCapsule()} ExchangeReceivedAmount
+   *       is ten.
    * </ul>
-   * <p>
-   * Method under test: {@link TransactionResultCapsule#setAssetIssueID(String)}
+   *
+   * <p>Method under test: {@link TransactionResultCapsule#setAssetIssueID(String)}
    */
   @Test
   @Category(MaintainedByDiffblue.class)
@@ -1897,16 +2092,19 @@ public class TransactionResultCapsuleDiffblueTest {
     Result instance = transactionResultCapsule.getInstance();
     assertEquals(2, instance.getAllFields().size());
     assertEquals(7, instance.getSerializedSize());
-    assertArrayEquals(new byte[]{'r', 2, '4', '2', -112, 1, '\n'}, transactionResultCapsule.getData());
+    assertArrayEquals(
+        new byte[] {'r', 2, '4', '2', -112, 1, '\n'}, transactionResultCapsule.getData());
   }
 
   /**
    * Test {@link TransactionResultCapsule#setAssetIssueID(String)}.
+   *
    * <ul>
-   *   <li>Given {@link TransactionResultCapsule#TransactionResultCapsule()} OrderId is {@link ByteString}.</li>
+   *   <li>Given {@link TransactionResultCapsule#TransactionResultCapsule()} OrderId is {@link
+   *       ByteString}.
    * </ul>
-   * <p>
-   * Method under test: {@link TransactionResultCapsule#setAssetIssueID(String)}
+   *
+   * <p>Method under test: {@link TransactionResultCapsule#setAssetIssueID(String)}
    */
   @Test
   @Category(MaintainedByDiffblue.class)
@@ -1921,16 +2119,18 @@ public class TransactionResultCapsuleDiffblueTest {
     transactionResultCapsule.setAssetIssueID("42");
 
     // Assert
-    assertArrayEquals(new byte[]{'r', 2, '4', '2', -54, 1, 0}, transactionResultCapsule.getData());
+    assertArrayEquals(new byte[] {'r', 2, '4', '2', -54, 1, 0}, transactionResultCapsule.getData());
   }
 
   /**
    * Test {@link TransactionResultCapsule#setAssetIssueID(String)}.
+   *
    * <ul>
-   *   <li>Given {@link TransactionResultCapsule#TransactionResultCapsule()} ShieldedTransactionFee is one.</li>
+   *   <li>Given {@link TransactionResultCapsule#TransactionResultCapsule()} ShieldedTransactionFee
+   *       is one.
    * </ul>
-   * <p>
-   * Method under test: {@link TransactionResultCapsule#setAssetIssueID(String)}
+   *
+   * <p>Method under test: {@link TransactionResultCapsule#setAssetIssueID(String)}
    */
   @Test
   @Category(MaintainedByDiffblue.class)
@@ -1948,16 +2148,17 @@ public class TransactionResultCapsuleDiffblueTest {
     Result instance = transactionResultCapsule.getInstance();
     assertEquals(2, instance.getAllFields().size());
     assertEquals(7, instance.getSerializedSize());
-    assertArrayEquals(new byte[]{'r', 2, '4', '2', -80, 1, 1}, transactionResultCapsule.getData());
+    assertArrayEquals(new byte[] {'r', 2, '4', '2', -80, 1, 1}, transactionResultCapsule.getData());
   }
 
   /**
    * Test {@link TransactionResultCapsule#setAssetIssueID(String)}.
+   *
    * <ul>
-   *   <li>Given {@link TransactionResultCapsule#TransactionResultCapsule()} UnfreezeAmount is ten.</li>
+   *   <li>Given {@link TransactionResultCapsule#TransactionResultCapsule()} UnfreezeAmount is ten.
    * </ul>
-   * <p>
-   * Method under test: {@link TransactionResultCapsule#setAssetIssueID(String)}
+   *
+   * <p>Method under test: {@link TransactionResultCapsule#setAssetIssueID(String)}
    */
   @Test
   @Category(MaintainedByDiffblue.class)
@@ -1975,16 +2176,19 @@ public class TransactionResultCapsuleDiffblueTest {
     Result instance = transactionResultCapsule.getInstance();
     assertEquals(2, instance.getAllFields().size());
     assertEquals(7, instance.getSerializedSize());
-    assertArrayEquals(new byte[]{'r', 2, '4', '2', Byte.MIN_VALUE, 1, '\n'}, transactionResultCapsule.getData());
+    assertArrayEquals(
+        new byte[] {'r', 2, '4', '2', Byte.MIN_VALUE, 1, '\n'}, transactionResultCapsule.getData());
   }
 
   /**
    * Test {@link TransactionResultCapsule#setAssetIssueID(String)}.
+   *
    * <ul>
-   *   <li>Given {@link TransactionResultCapsule#TransactionResultCapsule()} WithdrawExpireAmount is ten.</li>
+   *   <li>Given {@link TransactionResultCapsule#TransactionResultCapsule()} WithdrawExpireAmount is
+   *       ten.
    * </ul>
-   * <p>
-   * Method under test: {@link TransactionResultCapsule#setAssetIssueID(String)}
+   *
+   * <p>Method under test: {@link TransactionResultCapsule#setAssetIssueID(String)}
    */
   @Test
   @Category(MaintainedByDiffblue.class)
@@ -2002,21 +2206,51 @@ public class TransactionResultCapsuleDiffblueTest {
     Result instance = transactionResultCapsule.getInstance();
     assertEquals(2, instance.getAllFields().size());
     assertEquals(7, instance.getSerializedSize());
-    assertArrayEquals(new byte[]{'r', 2, '4', '2', -40, 1, '\n'}, transactionResultCapsule.getData());
+    assertArrayEquals(
+        new byte[] {'r', 2, '4', '2', -40, 1, '\n'}, transactionResultCapsule.getData());
   }
 
   /**
    * Test {@link TransactionResultCapsule#setAssetIssueID(String)}.
+   *
    * <ul>
-   *   <li>Then {@link TransactionResultCapsule#TransactionResultCapsule()} Instance AllFields size is one.</li>
+   *   <li>Then {@link TransactionResultCapsule#TransactionResultCapsule()} Instance AllFields size
+   *       is one.
    * </ul>
-   * <p>
-   * Method under test: {@link TransactionResultCapsule#setAssetIssueID(String)}
+   *
+   * <p>Method under test: {@link TransactionResultCapsule#setAssetIssueID(String)}
    */
   @Test
   @Category(MaintainedByDiffblue.class)
   @MethodsUnderTest({"void TransactionResultCapsule.setAssetIssueID(String)"})
   public void testSetAssetIssueID_thenTransactionResultCapsuleInstanceAllFieldsSizeIsOne() {
+    // Arrange
+    TransactionResultCapsule transactionResultCapsule = new TransactionResultCapsule();
+
+    // Act
+    transactionResultCapsule.setAssetIssueID("42");
+
+    // Assert
+    Result instance = transactionResultCapsule.getInstance();
+    assertEquals(1, instance.getAllFields().size());
+    assertEquals(4, instance.getSerializedSize());
+    assertArrayEquals(new byte[] {'r', 2, '4', '2'}, transactionResultCapsule.getData());
+  }
+
+  /**
+   * Test {@link TransactionResultCapsule#setAssetIssueID(String)}.
+   *
+   * <ul>
+   *   <li>Then {@link TransactionResultCapsule#TransactionResultCapsule()} Instance AllFields size
+   *       is one.
+   * </ul>
+   *
+   * <p>Method under test: {@link TransactionResultCapsule#setAssetIssueID(String)}
+   */
+  @Test
+  @Category(MaintainedByDiffblue.class)
+  @MethodsUnderTest({"void TransactionResultCapsule.setAssetIssueID(String)"})
+  public void testSetAssetIssueID_thenTransactionResultCapsuleInstanceAllFieldsSizeIsOne2() {
     // Arrange
     TransactionResultCapsule transactionResultCapsule = new TransactionResultCapsule();
     transactionResultCapsule.putAllCancelUnfreezeV2AmountMap(new HashMap<>());
@@ -2028,16 +2262,18 @@ public class TransactionResultCapsuleDiffblueTest {
     Result instance = transactionResultCapsule.getInstance();
     assertEquals(1, instance.getAllFields().size());
     assertEquals(4, instance.getSerializedSize());
-    assertArrayEquals(new byte[]{'r', 2, '4', '2'}, transactionResultCapsule.getData());
+    assertArrayEquals(new byte[] {'r', 2, '4', '2'}, transactionResultCapsule.getData());
   }
 
   /**
    * Test {@link TransactionResultCapsule#setAssetIssueID(String)}.
+   *
    * <ul>
-   *   <li>Then {@link TransactionResultCapsule#TransactionResultCapsule()} Instance SerializedSize is fourteen.</li>
+   *   <li>Then {@link TransactionResultCapsule#TransactionResultCapsule()} Instance SerializedSize
+   *       is fourteen.
    * </ul>
-   * <p>
-   * Method under test: {@link TransactionResultCapsule#setAssetIssueID(String)}
+   *
+   * <p>Method under test: {@link TransactionResultCapsule#setAssetIssueID(String)}
    */
   @Test
   @Category(MaintainedByDiffblue.class)
@@ -2057,17 +2293,20 @@ public class TransactionResultCapsuleDiffblueTest {
     Result instance = transactionResultCapsule.getInstance();
     assertEquals(14, instance.getSerializedSize());
     assertEquals(2, instance.getAllFields().size());
-    assertArrayEquals(new byte[]{'r', 2, '4', '2', -30, 1, 7, '\n', 3, 'f', 'o', 'o', 16, 1},
+    assertArrayEquals(
+        new byte[] {'r', 2, '4', '2', -30, 1, 7, '\n', 3, 'f', 'o', 'o', 16, 1},
         transactionResultCapsule.getData());
   }
 
   /**
    * Test {@link TransactionResultCapsule#setAssetIssueID(String)}.
+   *
    * <ul>
-   *   <li>Then {@link TransactionResultCapsule#TransactionResultCapsule()} Instance SerializedSize is six.</li>
+   *   <li>Then {@link TransactionResultCapsule#TransactionResultCapsule()} Instance SerializedSize
+   *       is six.
    * </ul>
-   * <p>
-   * Method under test: {@link TransactionResultCapsule#setAssetIssueID(String)}
+   *
+   * <p>Method under test: {@link TransactionResultCapsule#setAssetIssueID(String)}
    */
   @Test
   @Category(MaintainedByDiffblue.class)
@@ -2085,33 +2324,34 @@ public class TransactionResultCapsuleDiffblueTest {
     Result instance = transactionResultCapsule.getInstance();
     assertEquals(2, instance.getAllFields().size());
     assertEquals(6, instance.getSerializedSize());
-    assertArrayEquals(new byte[]{'r', 2, '4', '2', 'x', '\n'}, transactionResultCapsule.getData());
+    assertArrayEquals(new byte[] {'r', 2, '4', '2', 'x', '\n'}, transactionResultCapsule.getData());
   }
 
   /**
    * Test {@link TransactionResultCapsule#getWithdrawAmount()}.
-   * <p>
-   * Method under test: {@link TransactionResultCapsule#getWithdrawAmount()}
+   *
+   * <p>Method under test: {@link TransactionResultCapsule#getWithdrawAmount()}
    */
   @Test
   @Category(MaintainedByDiffblue.class)
   @MethodsUnderTest({"long TransactionResultCapsule.getWithdrawAmount()"})
   public void testGetWithdrawAmount() {
     // Arrange, Act and Assert
-    assertEquals(0L, (new TransactionResultCapsule()).getWithdrawAmount());
+    assertEquals(0L, new TransactionResultCapsule().getWithdrawAmount());
   }
 
   /**
    * Test {@link TransactionResultCapsule#setWithdrawAmount(long)}.
-   * <p>
-   * Method under test: {@link TransactionResultCapsule#setWithdrawAmount(long)}
+   *
+   * <p>Method under test: {@link TransactionResultCapsule#setWithdrawAmount(long)}
    */
   @Test
   @Category(MaintainedByDiffblue.class)
   @MethodsUnderTest({"void TransactionResultCapsule.setWithdrawAmount(long)"})
   public void testSetWithdrawAmount() {
     // Arrange
-    TransactionResultCapsule transactionResultCapsule = new TransactionResultCapsule(code.SUCESS, 1L);
+    TransactionResultCapsule transactionResultCapsule =
+        new TransactionResultCapsule(code.SUCESS, 1L);
 
     // Act
     transactionResultCapsule.setWithdrawAmount(10L);
@@ -2122,13 +2362,13 @@ public class TransactionResultCapsuleDiffblueTest {
     assertEquals(10L, instance.getWithdrawAmount());
     assertEquals(2, instance.getAllFields().size());
     assertEquals(4, instance.getSerializedSize());
-    assertArrayEquals(new byte[]{'\b', 1, 'x', '\n'}, transactionResultCapsule.getData());
+    assertArrayEquals(new byte[] {'\b', 1, 'x', '\n'}, transactionResultCapsule.getData());
   }
 
   /**
    * Test {@link TransactionResultCapsule#setWithdrawAmount(long)}.
-   * <p>
-   * Method under test: {@link TransactionResultCapsule#setWithdrawAmount(long)}
+   *
+   * <p>Method under test: {@link TransactionResultCapsule#setWithdrawAmount(long)}
    */
   @Test
   @Category(MaintainedByDiffblue.class)
@@ -2148,13 +2388,13 @@ public class TransactionResultCapsuleDiffblueTest {
     assertEquals(10L, instance.getWithdrawAmount());
     assertEquals(2, instance.getAllFields().size());
     assertEquals(5, instance.getSerializedSize());
-    assertArrayEquals(new byte[]{'x', '\n', -46, 1, 0}, transactionResultCapsule.getData());
+    assertArrayEquals(new byte[] {'x', '\n', -46, 1, 0}, transactionResultCapsule.getData());
   }
 
   /**
    * Test {@link TransactionResultCapsule#setWithdrawAmount(long)}.
-   * <p>
-   * Method under test: {@link TransactionResultCapsule#setWithdrawAmount(long)}
+   *
+   * <p>Method under test: {@link TransactionResultCapsule#setWithdrawAmount(long)}
    */
   @Test
   @Category(MaintainedByDiffblue.class)
@@ -2174,13 +2414,13 @@ public class TransactionResultCapsuleDiffblueTest {
     assertEquals(10L, instance.getWithdrawAmount());
     assertEquals(2, instance.getAllFields().size());
     assertEquals(5, instance.getSerializedSize());
-    assertArrayEquals(new byte[]{'x', '\n', -96, 1, '\n'}, transactionResultCapsule.getData());
+    assertArrayEquals(new byte[] {'x', '\n', -96, 1, '\n'}, transactionResultCapsule.getData());
   }
 
   /**
    * Test {@link TransactionResultCapsule#setWithdrawAmount(long)}.
-   * <p>
-   * Method under test: {@link TransactionResultCapsule#setWithdrawAmount(long)}
+   *
+   * <p>Method under test: {@link TransactionResultCapsule#setWithdrawAmount(long)}
    */
   @Test
   @Category(MaintainedByDiffblue.class)
@@ -2200,20 +2440,21 @@ public class TransactionResultCapsuleDiffblueTest {
     assertEquals(10L, instance.getWithdrawAmount());
     assertEquals(2, instance.getAllFields().size());
     assertEquals(5, instance.getSerializedSize());
-    assertArrayEquals(new byte[]{'x', '\n', -104, 1, '\n'}, transactionResultCapsule.getData());
+    assertArrayEquals(new byte[] {'x', '\n', -104, 1, '\n'}, transactionResultCapsule.getData());
   }
 
   /**
    * Test {@link TransactionResultCapsule#setWithdrawAmount(long)}.
-   * <p>
-   * Method under test: {@link TransactionResultCapsule#setWithdrawAmount(long)}
+   *
+   * <p>Method under test: {@link TransactionResultCapsule#setWithdrawAmount(long)}
    */
   @Test
   @Category(MaintainedByDiffblue.class)
   @MethodsUnderTest({"void TransactionResultCapsule.setWithdrawAmount(long)"})
   public void testSetWithdrawAmount5() {
     // Arrange
-    TransactionResultCapsule transactionResultCapsule = new TransactionResultCapsule(code.FAILED, 1L);
+    TransactionResultCapsule transactionResultCapsule =
+        new TransactionResultCapsule(code.FAILED, 1L);
 
     // Act
     transactionResultCapsule.setWithdrawAmount(10L);
@@ -2224,16 +2465,17 @@ public class TransactionResultCapsuleDiffblueTest {
     assertEquals(10L, instance.getWithdrawAmount());
     assertEquals(3, instance.getAllFields().size());
     assertEquals(6, instance.getSerializedSize());
-    assertArrayEquals(new byte[]{'\b', 1, 16, 1, 'x', '\n'}, transactionResultCapsule.getData());
+    assertArrayEquals(new byte[] {'\b', 1, 16, 1, 'x', '\n'}, transactionResultCapsule.getData());
   }
 
   /**
    * Test {@link TransactionResultCapsule#setWithdrawAmount(long)}.
+   *
    * <ul>
-   *   <li>Given {@link TransactionResultCapsule#TransactionResultCapsule()}.</li>
+   *   <li>Given {@link TransactionResultCapsule#TransactionResultCapsule()}.
    * </ul>
-   * <p>
-   * Method under test: {@link TransactionResultCapsule#setWithdrawAmount(long)}
+   *
+   * <p>Method under test: {@link TransactionResultCapsule#setWithdrawAmount(long)}
    */
   @Test
   @Category(MaintainedByDiffblue.class)
@@ -2251,16 +2493,17 @@ public class TransactionResultCapsuleDiffblueTest {
     assertEquals(10L, transactionResultCapsule.getWithdrawAmount());
     assertEquals(10L, instance.getWithdrawAmount());
     assertEquals(2, instance.getSerializedSize());
-    assertArrayEquals(new byte[]{'x', '\n'}, transactionResultCapsule.getData());
+    assertArrayEquals(new byte[] {'x', '\n'}, transactionResultCapsule.getData());
   }
 
   /**
    * Test {@link TransactionResultCapsule#setWithdrawAmount(long)}.
+   *
    * <ul>
-   *   <li>Given {@link TransactionResultCapsule#TransactionResultCapsule()} ExchangeId is one.</li>
+   *   <li>Given {@link TransactionResultCapsule#TransactionResultCapsule()} ExchangeId is one.
    * </ul>
-   * <p>
-   * Method under test: {@link TransactionResultCapsule#setWithdrawAmount(long)}
+   *
+   * <p>Method under test: {@link TransactionResultCapsule#setWithdrawAmount(long)}
    */
   @Test
   @Category(MaintainedByDiffblue.class)
@@ -2280,16 +2523,18 @@ public class TransactionResultCapsuleDiffblueTest {
     assertEquals(10L, instance.getWithdrawAmount());
     assertEquals(2, instance.getAllFields().size());
     assertEquals(5, instance.getSerializedSize());
-    assertArrayEquals(new byte[]{'x', '\n', -88, 1, 1}, transactionResultCapsule.getData());
+    assertArrayEquals(new byte[] {'x', '\n', -88, 1, 1}, transactionResultCapsule.getData());
   }
 
   /**
    * Test {@link TransactionResultCapsule#setWithdrawAmount(long)}.
+   *
    * <ul>
-   *   <li>Given {@link TransactionResultCapsule#TransactionResultCapsule()} ExchangeReceivedAmount is ten.</li>
+   *   <li>Given {@link TransactionResultCapsule#TransactionResultCapsule()} ExchangeReceivedAmount
+   *       is ten.
    * </ul>
-   * <p>
-   * Method under test: {@link TransactionResultCapsule#setWithdrawAmount(long)}
+   *
+   * <p>Method under test: {@link TransactionResultCapsule#setWithdrawAmount(long)}
    */
   @Test
   @Category(MaintainedByDiffblue.class)
@@ -2309,16 +2554,18 @@ public class TransactionResultCapsuleDiffblueTest {
     assertEquals(10L, instance.getWithdrawAmount());
     assertEquals(2, instance.getAllFields().size());
     assertEquals(5, instance.getSerializedSize());
-    assertArrayEquals(new byte[]{'x', '\n', -112, 1, '\n'}, transactionResultCapsule.getData());
+    assertArrayEquals(new byte[] {'x', '\n', -112, 1, '\n'}, transactionResultCapsule.getData());
   }
 
   /**
    * Test {@link TransactionResultCapsule#setWithdrawAmount(long)}.
+   *
    * <ul>
-   *   <li>Given {@link TransactionResultCapsule#TransactionResultCapsule()} OrderId is {@link ByteString}.</li>
+   *   <li>Given {@link TransactionResultCapsule#TransactionResultCapsule()} OrderId is {@link
+   *       ByteString}.
    * </ul>
-   * <p>
-   * Method under test: {@link TransactionResultCapsule#setWithdrawAmount(long)}
+   *
+   * <p>Method under test: {@link TransactionResultCapsule#setWithdrawAmount(long)}
    */
   @Test
   @Category(MaintainedByDiffblue.class)
@@ -2338,16 +2585,18 @@ public class TransactionResultCapsuleDiffblueTest {
     assertEquals(10L, instance.getWithdrawAmount());
     assertEquals(2, instance.getAllFields().size());
     assertEquals(5, instance.getSerializedSize());
-    assertArrayEquals(new byte[]{'x', '\n', -54, 1, 0}, transactionResultCapsule.getData());
+    assertArrayEquals(new byte[] {'x', '\n', -54, 1, 0}, transactionResultCapsule.getData());
   }
 
   /**
    * Test {@link TransactionResultCapsule#setWithdrawAmount(long)}.
+   *
    * <ul>
-   *   <li>Given {@link TransactionResultCapsule#TransactionResultCapsule()} ShieldedTransactionFee is one.</li>
+   *   <li>Given {@link TransactionResultCapsule#TransactionResultCapsule()} ShieldedTransactionFee
+   *       is one.
    * </ul>
-   * <p>
-   * Method under test: {@link TransactionResultCapsule#setWithdrawAmount(long)}
+   *
+   * <p>Method under test: {@link TransactionResultCapsule#setWithdrawAmount(long)}
    */
   @Test
   @Category(MaintainedByDiffblue.class)
@@ -2367,16 +2616,17 @@ public class TransactionResultCapsuleDiffblueTest {
     assertEquals(10L, instance.getWithdrawAmount());
     assertEquals(2, instance.getAllFields().size());
     assertEquals(5, instance.getSerializedSize());
-    assertArrayEquals(new byte[]{'x', '\n', -80, 1, 1}, transactionResultCapsule.getData());
+    assertArrayEquals(new byte[] {'x', '\n', -80, 1, 1}, transactionResultCapsule.getData());
   }
 
   /**
    * Test {@link TransactionResultCapsule#setWithdrawAmount(long)}.
+   *
    * <ul>
-   *   <li>Given {@link TransactionResultCapsule#TransactionResultCapsule()} UnfreezeAmount is ten.</li>
+   *   <li>Given {@link TransactionResultCapsule#TransactionResultCapsule()} UnfreezeAmount is ten.
    * </ul>
-   * <p>
-   * Method under test: {@link TransactionResultCapsule#setWithdrawAmount(long)}
+   *
+   * <p>Method under test: {@link TransactionResultCapsule#setWithdrawAmount(long)}
    */
   @Test
   @Category(MaintainedByDiffblue.class)
@@ -2396,16 +2646,19 @@ public class TransactionResultCapsuleDiffblueTest {
     assertEquals(10L, instance.getWithdrawAmount());
     assertEquals(2, instance.getAllFields().size());
     assertEquals(5, instance.getSerializedSize());
-    assertArrayEquals(new byte[]{'x', '\n', Byte.MIN_VALUE, 1, '\n'}, transactionResultCapsule.getData());
+    assertArrayEquals(
+        new byte[] {'x', '\n', Byte.MIN_VALUE, 1, '\n'}, transactionResultCapsule.getData());
   }
 
   /**
    * Test {@link TransactionResultCapsule#setWithdrawAmount(long)}.
+   *
    * <ul>
-   *   <li>Given {@link TransactionResultCapsule#TransactionResultCapsule()} WithdrawExpireAmount is ten.</li>
+   *   <li>Given {@link TransactionResultCapsule#TransactionResultCapsule()} WithdrawExpireAmount is
+   *       ten.
    * </ul>
-   * <p>
-   * Method under test: {@link TransactionResultCapsule#setWithdrawAmount(long)}
+   *
+   * <p>Method under test: {@link TransactionResultCapsule#setWithdrawAmount(long)}
    */
   @Test
   @Category(MaintainedByDiffblue.class)
@@ -2425,16 +2678,18 @@ public class TransactionResultCapsuleDiffblueTest {
     assertEquals(10L, instance.getWithdrawAmount());
     assertEquals(2, instance.getAllFields().size());
     assertEquals(5, instance.getSerializedSize());
-    assertArrayEquals(new byte[]{'x', '\n', -40, 1, '\n'}, transactionResultCapsule.getData());
+    assertArrayEquals(new byte[] {'x', '\n', -40, 1, '\n'}, transactionResultCapsule.getData());
   }
 
   /**
    * Test {@link TransactionResultCapsule#setWithdrawAmount(long)}.
+   *
    * <ul>
-   *   <li>Then {@link TransactionResultCapsule#TransactionResultCapsule()} Instance AllFields size is one.</li>
+   *   <li>Then {@link TransactionResultCapsule#TransactionResultCapsule()} Instance AllFields size
+   *       is one.
    * </ul>
-   * <p>
-   * Method under test: {@link TransactionResultCapsule#setWithdrawAmount(long)}
+   *
+   * <p>Method under test: {@link TransactionResultCapsule#setWithdrawAmount(long)}
    */
   @Test
   @Category(MaintainedByDiffblue.class)
@@ -2453,16 +2708,18 @@ public class TransactionResultCapsuleDiffblueTest {
     assertEquals(10L, transactionResultCapsule.getWithdrawAmount());
     assertEquals(10L, instance.getWithdrawAmount());
     assertEquals(2, instance.getSerializedSize());
-    assertArrayEquals(new byte[]{'x', '\n'}, transactionResultCapsule.getData());
+    assertArrayEquals(new byte[] {'x', '\n'}, transactionResultCapsule.getData());
   }
 
   /**
    * Test {@link TransactionResultCapsule#setWithdrawAmount(long)}.
+   *
    * <ul>
-   *   <li>Then {@link TransactionResultCapsule#TransactionResultCapsule()} Instance SerializedSize is six.</li>
+   *   <li>Then {@link TransactionResultCapsule#TransactionResultCapsule()} Instance SerializedSize
+   *       is six.
    * </ul>
-   * <p>
-   * Method under test: {@link TransactionResultCapsule#setWithdrawAmount(long)}
+   *
+   * <p>Method under test: {@link TransactionResultCapsule#setWithdrawAmount(long)}
    */
   @Test
   @Category(MaintainedByDiffblue.class)
@@ -2482,16 +2739,18 @@ public class TransactionResultCapsuleDiffblueTest {
     assertEquals(10L, instance.getWithdrawAmount());
     assertEquals(2, instance.getAllFields().size());
     assertEquals(6, instance.getSerializedSize());
-    assertArrayEquals(new byte[]{'r', 2, '4', '2', 'x', '\n'}, transactionResultCapsule.getData());
+    assertArrayEquals(new byte[] {'r', 2, '4', '2', 'x', '\n'}, transactionResultCapsule.getData());
   }
 
   /**
    * Test {@link TransactionResultCapsule#setWithdrawAmount(long)}.
+   *
    * <ul>
-   *   <li>Then {@link TransactionResultCapsule#TransactionResultCapsule()} Instance SerializedSize is twelve.</li>
+   *   <li>Then {@link TransactionResultCapsule#TransactionResultCapsule()} Instance SerializedSize
+   *       is twelve.
    * </ul>
-   * <p>
-   * Method under test: {@link TransactionResultCapsule#setWithdrawAmount(long)}
+   *
+   * <p>Method under test: {@link TransactionResultCapsule#setWithdrawAmount(long)}
    */
   @Test
   @Category(MaintainedByDiffblue.class)
@@ -2513,34 +2772,36 @@ public class TransactionResultCapsuleDiffblueTest {
     assertEquals(10L, instance.getWithdrawAmount());
     assertEquals(12, instance.getSerializedSize());
     assertEquals(2, instance.getAllFields().size());
-    assertArrayEquals(new byte[]{'x', '\n', -30, 1, 7, '\n', 3, 'f', 'o', 'o', 16, 1},
+    assertArrayEquals(
+        new byte[] {'x', '\n', -30, 1, 7, '\n', 3, 'f', 'o', 'o', 16, 1},
         transactionResultCapsule.getData());
   }
 
   /**
    * Test {@link TransactionResultCapsule#getWithdrawExpireAmount()}.
-   * <p>
-   * Method under test: {@link TransactionResultCapsule#getWithdrawExpireAmount()}
+   *
+   * <p>Method under test: {@link TransactionResultCapsule#getWithdrawExpireAmount()}
    */
   @Test
   @Category(MaintainedByDiffblue.class)
   @MethodsUnderTest({"long TransactionResultCapsule.getWithdrawExpireAmount()"})
   public void testGetWithdrawExpireAmount() {
     // Arrange, Act and Assert
-    assertEquals(0L, (new TransactionResultCapsule()).getWithdrawExpireAmount());
+    assertEquals(0L, new TransactionResultCapsule().getWithdrawExpireAmount());
   }
 
   /**
    * Test {@link TransactionResultCapsule#setWithdrawExpireAmount(long)}.
-   * <p>
-   * Method under test: {@link TransactionResultCapsule#setWithdrawExpireAmount(long)}
+   *
+   * <p>Method under test: {@link TransactionResultCapsule#setWithdrawExpireAmount(long)}
    */
   @Test
   @Category(MaintainedByDiffblue.class)
   @MethodsUnderTest({"void TransactionResultCapsule.setWithdrawExpireAmount(long)"})
   public void testSetWithdrawExpireAmount() {
     // Arrange
-    TransactionResultCapsule transactionResultCapsule = new TransactionResultCapsule(code.SUCESS, 1L);
+    TransactionResultCapsule transactionResultCapsule =
+        new TransactionResultCapsule(code.SUCESS, 1L);
 
     // Act
     transactionResultCapsule.setWithdrawExpireAmount(10L);
@@ -2551,13 +2812,13 @@ public class TransactionResultCapsuleDiffblueTest {
     assertEquals(10L, instance.getWithdrawExpireAmount());
     assertEquals(2, instance.getAllFields().size());
     assertEquals(5, instance.getSerializedSize());
-    assertArrayEquals(new byte[]{'\b', 1, -40, 1, '\n'}, transactionResultCapsule.getData());
+    assertArrayEquals(new byte[] {'\b', 1, -40, 1, '\n'}, transactionResultCapsule.getData());
   }
 
   /**
    * Test {@link TransactionResultCapsule#setWithdrawExpireAmount(long)}.
-   * <p>
-   * Method under test: {@link TransactionResultCapsule#setWithdrawExpireAmount(long)}
+   *
+   * <p>Method under test: {@link TransactionResultCapsule#setWithdrawExpireAmount(long)}
    */
   @Test
   @Category(MaintainedByDiffblue.class)
@@ -2576,13 +2837,13 @@ public class TransactionResultCapsuleDiffblueTest {
     assertEquals(10L, transactionResultCapsule.getWithdrawExpireAmount());
     assertEquals(10L, instance.getWithdrawExpireAmount());
     assertEquals(3, instance.getSerializedSize());
-    assertArrayEquals(new byte[]{-40, 1, '\n'}, transactionResultCapsule.getData());
+    assertArrayEquals(new byte[] {-40, 1, '\n'}, transactionResultCapsule.getData());
   }
 
   /**
    * Test {@link TransactionResultCapsule#setWithdrawExpireAmount(long)}.
-   * <p>
-   * Method under test: {@link TransactionResultCapsule#setWithdrawExpireAmount(long)}
+   *
+   * <p>Method under test: {@link TransactionResultCapsule#setWithdrawExpireAmount(long)}
    */
   @Test
   @Category(MaintainedByDiffblue.class)
@@ -2602,13 +2863,13 @@ public class TransactionResultCapsuleDiffblueTest {
     assertEquals(10L, instance.getWithdrawExpireAmount());
     assertEquals(2, instance.getAllFields().size());
     assertEquals(6, instance.getSerializedSize());
-    assertArrayEquals(new byte[]{-46, 1, 0, -40, 1, '\n'}, transactionResultCapsule.getData());
+    assertArrayEquals(new byte[] {-46, 1, 0, -40, 1, '\n'}, transactionResultCapsule.getData());
   }
 
   /**
    * Test {@link TransactionResultCapsule#setWithdrawExpireAmount(long)}.
-   * <p>
-   * Method under test: {@link TransactionResultCapsule#setWithdrawExpireAmount(long)}
+   *
+   * <p>Method under test: {@link TransactionResultCapsule#setWithdrawExpireAmount(long)}
    */
   @Test
   @Category(MaintainedByDiffblue.class)
@@ -2628,13 +2889,14 @@ public class TransactionResultCapsuleDiffblueTest {
     assertEquals(10L, instance.getWithdrawExpireAmount());
     assertEquals(2, instance.getAllFields().size());
     assertEquals(6, instance.getSerializedSize());
-    assertArrayEquals(new byte[]{Byte.MIN_VALUE, 1, '\n', -40, 1, '\n'}, transactionResultCapsule.getData());
+    assertArrayEquals(
+        new byte[] {Byte.MIN_VALUE, 1, '\n', -40, 1, '\n'}, transactionResultCapsule.getData());
   }
 
   /**
    * Test {@link TransactionResultCapsule#setWithdrawExpireAmount(long)}.
-   * <p>
-   * Method under test: {@link TransactionResultCapsule#setWithdrawExpireAmount(long)}
+   *
+   * <p>Method under test: {@link TransactionResultCapsule#setWithdrawExpireAmount(long)}
    */
   @Test
   @Category(MaintainedByDiffblue.class)
@@ -2654,13 +2916,14 @@ public class TransactionResultCapsuleDiffblueTest {
     assertEquals(10L, instance.getWithdrawExpireAmount());
     assertEquals(2, instance.getAllFields().size());
     assertEquals(7, instance.getSerializedSize());
-    assertArrayEquals(new byte[]{'r', 2, '4', '2', -40, 1, '\n'}, transactionResultCapsule.getData());
+    assertArrayEquals(
+        new byte[] {'r', 2, '4', '2', -40, 1, '\n'}, transactionResultCapsule.getData());
   }
 
   /**
    * Test {@link TransactionResultCapsule#setWithdrawExpireAmount(long)}.
-   * <p>
-   * Method under test: {@link TransactionResultCapsule#setWithdrawExpireAmount(long)}
+   *
+   * <p>Method under test: {@link TransactionResultCapsule#setWithdrawExpireAmount(long)}
    */
   @Test
   @Category(MaintainedByDiffblue.class)
@@ -2680,13 +2943,13 @@ public class TransactionResultCapsuleDiffblueTest {
     assertEquals(10L, instance.getWithdrawExpireAmount());
     assertEquals(2, instance.getAllFields().size());
     assertEquals(5, instance.getSerializedSize());
-    assertArrayEquals(new byte[]{'x', '\n', -40, 1, '\n'}, transactionResultCapsule.getData());
+    assertArrayEquals(new byte[] {'x', '\n', -40, 1, '\n'}, transactionResultCapsule.getData());
   }
 
   /**
    * Test {@link TransactionResultCapsule#setWithdrawExpireAmount(long)}.
-   * <p>
-   * Method under test: {@link TransactionResultCapsule#setWithdrawExpireAmount(long)}
+   *
+   * <p>Method under test: {@link TransactionResultCapsule#setWithdrawExpireAmount(long)}
    */
   @Test
   @Category(MaintainedByDiffblue.class)
@@ -2706,13 +2969,13 @@ public class TransactionResultCapsuleDiffblueTest {
     assertEquals(10L, instance.getWithdrawExpireAmount());
     assertEquals(2, instance.getAllFields().size());
     assertEquals(6, instance.getSerializedSize());
-    assertArrayEquals(new byte[]{-112, 1, '\n', -40, 1, '\n'}, transactionResultCapsule.getData());
+    assertArrayEquals(new byte[] {-112, 1, '\n', -40, 1, '\n'}, transactionResultCapsule.getData());
   }
 
   /**
    * Test {@link TransactionResultCapsule#setWithdrawExpireAmount(long)}.
-   * <p>
-   * Method under test: {@link TransactionResultCapsule#setWithdrawExpireAmount(long)}
+   *
+   * <p>Method under test: {@link TransactionResultCapsule#setWithdrawExpireAmount(long)}
    */
   @Test
   @Category(MaintainedByDiffblue.class)
@@ -2732,13 +2995,13 @@ public class TransactionResultCapsuleDiffblueTest {
     assertEquals(10L, instance.getWithdrawExpireAmount());
     assertEquals(2, instance.getAllFields().size());
     assertEquals(6, instance.getSerializedSize());
-    assertArrayEquals(new byte[]{-96, 1, '\n', -40, 1, '\n'}, transactionResultCapsule.getData());
+    assertArrayEquals(new byte[] {-96, 1, '\n', -40, 1, '\n'}, transactionResultCapsule.getData());
   }
 
   /**
    * Test {@link TransactionResultCapsule#setWithdrawExpireAmount(long)}.
-   * <p>
-   * Method under test: {@link TransactionResultCapsule#setWithdrawExpireAmount(long)}
+   *
+   * <p>Method under test: {@link TransactionResultCapsule#setWithdrawExpireAmount(long)}
    */
   @Test
   @Category(MaintainedByDiffblue.class)
@@ -2758,13 +3021,13 @@ public class TransactionResultCapsuleDiffblueTest {
     assertEquals(10L, instance.getWithdrawExpireAmount());
     assertEquals(2, instance.getAllFields().size());
     assertEquals(6, instance.getSerializedSize());
-    assertArrayEquals(new byte[]{-88, 1, 1, -40, 1, '\n'}, transactionResultCapsule.getData());
+    assertArrayEquals(new byte[] {-88, 1, 1, -40, 1, '\n'}, transactionResultCapsule.getData());
   }
 
   /**
    * Test {@link TransactionResultCapsule#setWithdrawExpireAmount(long)}.
-   * <p>
-   * Method under test: {@link TransactionResultCapsule#setWithdrawExpireAmount(long)}
+   *
+   * <p>Method under test: {@link TransactionResultCapsule#setWithdrawExpireAmount(long)}
    */
   @Test
   @Category(MaintainedByDiffblue.class)
@@ -2784,13 +3047,13 @@ public class TransactionResultCapsuleDiffblueTest {
     assertEquals(10L, instance.getWithdrawExpireAmount());
     assertEquals(2, instance.getAllFields().size());
     assertEquals(6, instance.getSerializedSize());
-    assertArrayEquals(new byte[]{-104, 1, '\n', -40, 1, '\n'}, transactionResultCapsule.getData());
+    assertArrayEquals(new byte[] {-104, 1, '\n', -40, 1, '\n'}, transactionResultCapsule.getData());
   }
 
   /**
    * Test {@link TransactionResultCapsule#setWithdrawExpireAmount(long)}.
-   * <p>
-   * Method under test: {@link TransactionResultCapsule#setWithdrawExpireAmount(long)}
+   *
+   * <p>Method under test: {@link TransactionResultCapsule#setWithdrawExpireAmount(long)}
    */
   @Test
   @Category(MaintainedByDiffblue.class)
@@ -2810,13 +3073,13 @@ public class TransactionResultCapsuleDiffblueTest {
     assertEquals(10L, instance.getWithdrawExpireAmount());
     assertEquals(2, instance.getAllFields().size());
     assertEquals(6, instance.getSerializedSize());
-    assertArrayEquals(new byte[]{-80, 1, 1, -40, 1, '\n'}, transactionResultCapsule.getData());
+    assertArrayEquals(new byte[] {-80, 1, 1, -40, 1, '\n'}, transactionResultCapsule.getData());
   }
 
   /**
    * Test {@link TransactionResultCapsule#setWithdrawExpireAmount(long)}.
-   * <p>
-   * Method under test: {@link TransactionResultCapsule#setWithdrawExpireAmount(long)}
+   *
+   * <p>Method under test: {@link TransactionResultCapsule#setWithdrawExpireAmount(long)}
    */
   @Test
   @Category(MaintainedByDiffblue.class)
@@ -2836,20 +3099,21 @@ public class TransactionResultCapsuleDiffblueTest {
     assertEquals(10L, instance.getWithdrawExpireAmount());
     assertEquals(2, instance.getAllFields().size());
     assertEquals(6, instance.getSerializedSize());
-    assertArrayEquals(new byte[]{-54, 1, 0, -40, 1, '\n'}, transactionResultCapsule.getData());
+    assertArrayEquals(new byte[] {-54, 1, 0, -40, 1, '\n'}, transactionResultCapsule.getData());
   }
 
   /**
    * Test {@link TransactionResultCapsule#setWithdrawExpireAmount(long)}.
-   * <p>
-   * Method under test: {@link TransactionResultCapsule#setWithdrawExpireAmount(long)}
+   *
+   * <p>Method under test: {@link TransactionResultCapsule#setWithdrawExpireAmount(long)}
    */
   @Test
   @Category(MaintainedByDiffblue.class)
   @MethodsUnderTest({"void TransactionResultCapsule.setWithdrawExpireAmount(long)"})
   public void testSetWithdrawExpireAmount13() {
     // Arrange
-    TransactionResultCapsule transactionResultCapsule = new TransactionResultCapsule(code.FAILED, 1L);
+    TransactionResultCapsule transactionResultCapsule =
+        new TransactionResultCapsule(code.FAILED, 1L);
 
     // Act
     transactionResultCapsule.setWithdrawExpireAmount(10L);
@@ -2860,13 +3124,14 @@ public class TransactionResultCapsuleDiffblueTest {
     assertEquals(10L, instance.getWithdrawExpireAmount());
     assertEquals(3, instance.getAllFields().size());
     assertEquals(7, instance.getSerializedSize());
-    assertArrayEquals(new byte[]{'\b', 1, 16, 1, -40, 1, '\n'}, transactionResultCapsule.getData());
+    assertArrayEquals(
+        new byte[] {'\b', 1, 16, 1, -40, 1, '\n'}, transactionResultCapsule.getData());
   }
 
   /**
    * Test {@link TransactionResultCapsule#setWithdrawExpireAmount(long)}.
-   * <p>
-   * Method under test: {@link TransactionResultCapsule#setWithdrawExpireAmount(long)}
+   *
+   * <p>Method under test: {@link TransactionResultCapsule#setWithdrawExpireAmount(long)}
    */
   @Test
   @Category(MaintainedByDiffblue.class)
@@ -2888,17 +3153,19 @@ public class TransactionResultCapsuleDiffblueTest {
     assertEquals(10L, instance.getWithdrawExpireAmount());
     assertEquals(13, instance.getSerializedSize());
     assertEquals(2, instance.getAllFields().size());
-    assertArrayEquals(new byte[]{-40, 1, '\n', -30, 1, 7, '\n', 3, 'f', 'o', 'o', 16, 1},
+    assertArrayEquals(
+        new byte[] {-40, 1, '\n', -30, 1, 7, '\n', 3, 'f', 'o', 'o', 16, 1},
         transactionResultCapsule.getData());
   }
 
   /**
    * Test {@link TransactionResultCapsule#setWithdrawExpireAmount(long)}.
+   *
    * <ul>
-   *   <li>Given {@link TransactionResultCapsule#TransactionResultCapsule()}.</li>
+   *   <li>Given {@link TransactionResultCapsule#TransactionResultCapsule()}.
    * </ul>
-   * <p>
-   * Method under test: {@link TransactionResultCapsule#setWithdrawExpireAmount(long)}
+   *
+   * <p>Method under test: {@link TransactionResultCapsule#setWithdrawExpireAmount(long)}
    */
   @Test
   @Category(MaintainedByDiffblue.class)
@@ -2916,13 +3183,13 @@ public class TransactionResultCapsuleDiffblueTest {
     assertEquals(10L, transactionResultCapsule.getWithdrawExpireAmount());
     assertEquals(10L, instance.getWithdrawExpireAmount());
     assertEquals(3, instance.getSerializedSize());
-    assertArrayEquals(new byte[]{-40, 1, '\n'}, transactionResultCapsule.getData());
+    assertArrayEquals(new byte[] {-40, 1, '\n'}, transactionResultCapsule.getData());
   }
 
   /**
    * Test {@link TransactionResultCapsule#getCancelUnfreezeV2AmountMap()}.
-   * <p>
-   * Method under test: {@link TransactionResultCapsule#getCancelUnfreezeV2AmountMap()}
+   *
+   * <p>Method under test: {@link TransactionResultCapsule#getCancelUnfreezeV2AmountMap()}
    */
   @Test
   @Category(MaintainedByDiffblue.class)
@@ -2938,24 +3205,25 @@ public class TransactionResultCapsuleDiffblueTest {
 
   /**
    * Test {@link TransactionResultCapsule#getCancelUnfreezeV2AmountMap()}.
+   *
    * <ul>
-   *   <li>Given {@link TransactionResultCapsule#TransactionResultCapsule()}.</li>
+   *   <li>Given {@link TransactionResultCapsule#TransactionResultCapsule()}.
    * </ul>
-   * <p>
-   * Method under test: {@link TransactionResultCapsule#getCancelUnfreezeV2AmountMap()}
+   *
+   * <p>Method under test: {@link TransactionResultCapsule#getCancelUnfreezeV2AmountMap()}
    */
   @Test
   @Category(MaintainedByDiffblue.class)
   @MethodsUnderTest({"Map TransactionResultCapsule.getCancelUnfreezeV2AmountMap()"})
   public void testGetCancelUnfreezeV2AmountMap_givenTransactionResultCapsule() {
     // Arrange, Act and Assert
-    assertTrue((new TransactionResultCapsule()).getCancelUnfreezeV2AmountMap().isEmpty());
+    assertTrue(new TransactionResultCapsule().getCancelUnfreezeV2AmountMap().isEmpty());
   }
 
   /**
    * Test {@link TransactionResultCapsule#putAllCancelUnfreezeV2AmountMap(Map)}.
-   * <p>
-   * Method under test: {@link TransactionResultCapsule#putAllCancelUnfreezeV2AmountMap(Map)}
+   *
+   * <p>Method under test: {@link TransactionResultCapsule#putAllCancelUnfreezeV2AmountMap(Map)}
    */
   @Test
   @Category(MaintainedByDiffblue.class)
@@ -2981,20 +3249,21 @@ public class TransactionResultCapsuleDiffblueTest {
     FeatureSet features = descriptorForType.getOptions().getFeatures();
     assertEquals(map, features.getAllFields());
     assertEquals(map, features.getAllFieldsRaw());
-    assertArrayEquals(new byte[]{}, transactionResultCapsule.getData());
+    assertArrayEquals(new byte[] {}, transactionResultCapsule.getData());
   }
 
   /**
    * Test {@link TransactionResultCapsule#putAllCancelUnfreezeV2AmountMap(Map)}.
-   * <p>
-   * Method under test: {@link TransactionResultCapsule#putAllCancelUnfreezeV2AmountMap(Map)}
+   *
+   * <p>Method under test: {@link TransactionResultCapsule#putAllCancelUnfreezeV2AmountMap(Map)}
    */
   @Test
   @Category(MaintainedByDiffblue.class)
   @MethodsUnderTest({"void TransactionResultCapsule.putAllCancelUnfreezeV2AmountMap(Map)"})
   public void testPutAllCancelUnfreezeV2AmountMap2() {
     // Arrange
-    TransactionResultCapsule transactionResultCapsule = new TransactionResultCapsule(code.SUCESS, 1L);
+    TransactionResultCapsule transactionResultCapsule =
+        new TransactionResultCapsule(code.SUCESS, 1L);
     HashMap<String, Long> map = new HashMap<>();
 
     // Act
@@ -3013,13 +3282,13 @@ public class TransactionResultCapsuleDiffblueTest {
     FeatureSet features = descriptorForType.getOptions().getFeatures();
     assertEquals(map, features.getAllFields());
     assertEquals(map, features.getAllFieldsRaw());
-    assertArrayEquals(new byte[]{'\b', 1}, transactionResultCapsule.getData());
+    assertArrayEquals(new byte[] {'\b', 1}, transactionResultCapsule.getData());
   }
 
   /**
    * Test {@link TransactionResultCapsule#putAllCancelUnfreezeV2AmountMap(Map)}.
-   * <p>
-   * Method under test: {@link TransactionResultCapsule#putAllCancelUnfreezeV2AmountMap(Map)}
+   *
+   * <p>Method under test: {@link TransactionResultCapsule#putAllCancelUnfreezeV2AmountMap(Map)}
    */
   @Test
   @Category(MaintainedByDiffblue.class)
@@ -3046,13 +3315,13 @@ public class TransactionResultCapsuleDiffblueTest {
     FeatureSet features = descriptorForType.getOptions().getFeatures();
     assertEquals(map, features.getAllFields());
     assertEquals(map, features.getAllFieldsRaw());
-    assertArrayEquals(new byte[]{}, transactionResultCapsule.getData());
+    assertArrayEquals(new byte[] {}, transactionResultCapsule.getData());
   }
 
   /**
    * Test {@link TransactionResultCapsule#putAllCancelUnfreezeV2AmountMap(Map)}.
-   * <p>
-   * Method under test: {@link TransactionResultCapsule#putAllCancelUnfreezeV2AmountMap(Map)}
+   *
+   * <p>Method under test: {@link TransactionResultCapsule#putAllCancelUnfreezeV2AmountMap(Map)}
    */
   @Test
   @Category(MaintainedByDiffblue.class)
@@ -3080,13 +3349,13 @@ public class TransactionResultCapsuleDiffblueTest {
     FeatureSet features = descriptorForType.getOptions().getFeatures();
     assertEquals(map, features.getAllFields());
     assertEquals(map, features.getAllFieldsRaw());
-    assertArrayEquals(new byte[]{-46, 1, 0}, transactionResultCapsule.getData());
+    assertArrayEquals(new byte[] {-46, 1, 0}, transactionResultCapsule.getData());
   }
 
   /**
    * Test {@link TransactionResultCapsule#putAllCancelUnfreezeV2AmountMap(Map)}.
-   * <p>
-   * Method under test: {@link TransactionResultCapsule#putAllCancelUnfreezeV2AmountMap(Map)}
+   *
+   * <p>Method under test: {@link TransactionResultCapsule#putAllCancelUnfreezeV2AmountMap(Map)}
    */
   @Test
   @Category(MaintainedByDiffblue.class)
@@ -3114,13 +3383,13 @@ public class TransactionResultCapsuleDiffblueTest {
     FeatureSet features = descriptorForType.getOptions().getFeatures();
     assertEquals(map, features.getAllFields());
     assertEquals(map, features.getAllFieldsRaw());
-    assertArrayEquals(new byte[]{Byte.MIN_VALUE, 1, '\n'}, transactionResultCapsule.getData());
+    assertArrayEquals(new byte[] {Byte.MIN_VALUE, 1, '\n'}, transactionResultCapsule.getData());
   }
 
   /**
    * Test {@link TransactionResultCapsule#putAllCancelUnfreezeV2AmountMap(Map)}.
-   * <p>
-   * Method under test: {@link TransactionResultCapsule#putAllCancelUnfreezeV2AmountMap(Map)}
+   *
+   * <p>Method under test: {@link TransactionResultCapsule#putAllCancelUnfreezeV2AmountMap(Map)}
    */
   @Test
   @Category(MaintainedByDiffblue.class)
@@ -3148,13 +3417,13 @@ public class TransactionResultCapsuleDiffblueTest {
     FeatureSet features = descriptorForType.getOptions().getFeatures();
     assertEquals(map, features.getAllFields());
     assertEquals(map, features.getAllFieldsRaw());
-    assertArrayEquals(new byte[]{'r', 2, '4', '2'}, transactionResultCapsule.getData());
+    assertArrayEquals(new byte[] {'r', 2, '4', '2'}, transactionResultCapsule.getData());
   }
 
   /**
    * Test {@link TransactionResultCapsule#putAllCancelUnfreezeV2AmountMap(Map)}.
-   * <p>
-   * Method under test: {@link TransactionResultCapsule#putAllCancelUnfreezeV2AmountMap(Map)}
+   *
+   * <p>Method under test: {@link TransactionResultCapsule#putAllCancelUnfreezeV2AmountMap(Map)}
    */
   @Test
   @Category(MaintainedByDiffblue.class)
@@ -3182,13 +3451,13 @@ public class TransactionResultCapsuleDiffblueTest {
     FeatureSet features = descriptorForType.getOptions().getFeatures();
     assertEquals(map, features.getAllFields());
     assertEquals(map, features.getAllFieldsRaw());
-    assertArrayEquals(new byte[]{'x', '\n'}, transactionResultCapsule.getData());
+    assertArrayEquals(new byte[] {'x', '\n'}, transactionResultCapsule.getData());
   }
 
   /**
    * Test {@link TransactionResultCapsule#putAllCancelUnfreezeV2AmountMap(Map)}.
-   * <p>
-   * Method under test: {@link TransactionResultCapsule#putAllCancelUnfreezeV2AmountMap(Map)}
+   *
+   * <p>Method under test: {@link TransactionResultCapsule#putAllCancelUnfreezeV2AmountMap(Map)}
    */
   @Test
   @Category(MaintainedByDiffblue.class)
@@ -3216,13 +3485,13 @@ public class TransactionResultCapsuleDiffblueTest {
     FeatureSet features = descriptorForType.getOptions().getFeatures();
     assertEquals(map, features.getAllFields());
     assertEquals(map, features.getAllFieldsRaw());
-    assertArrayEquals(new byte[]{-40, 1, '\n'}, transactionResultCapsule.getData());
+    assertArrayEquals(new byte[] {-40, 1, '\n'}, transactionResultCapsule.getData());
   }
 
   /**
    * Test {@link TransactionResultCapsule#putAllCancelUnfreezeV2AmountMap(Map)}.
-   * <p>
-   * Method under test: {@link TransactionResultCapsule#putAllCancelUnfreezeV2AmountMap(Map)}
+   *
+   * <p>Method under test: {@link TransactionResultCapsule#putAllCancelUnfreezeV2AmountMap(Map)}
    */
   @Test
   @Category(MaintainedByDiffblue.class)
@@ -3250,13 +3519,13 @@ public class TransactionResultCapsuleDiffblueTest {
     FeatureSet features = descriptorForType.getOptions().getFeatures();
     assertEquals(map, features.getAllFields());
     assertEquals(map, features.getAllFieldsRaw());
-    assertArrayEquals(new byte[]{-112, 1, '\n'}, transactionResultCapsule.getData());
+    assertArrayEquals(new byte[] {-112, 1, '\n'}, transactionResultCapsule.getData());
   }
 
   /**
    * Test {@link TransactionResultCapsule#putAllCancelUnfreezeV2AmountMap(Map)}.
-   * <p>
-   * Method under test: {@link TransactionResultCapsule#putAllCancelUnfreezeV2AmountMap(Map)}
+   *
+   * <p>Method under test: {@link TransactionResultCapsule#putAllCancelUnfreezeV2AmountMap(Map)}
    */
   @Test
   @Category(MaintainedByDiffblue.class)
@@ -3284,13 +3553,13 @@ public class TransactionResultCapsuleDiffblueTest {
     FeatureSet features = descriptorForType.getOptions().getFeatures();
     assertEquals(map, features.getAllFields());
     assertEquals(map, features.getAllFieldsRaw());
-    assertArrayEquals(new byte[]{-96, 1, '\n'}, transactionResultCapsule.getData());
+    assertArrayEquals(new byte[] {-96, 1, '\n'}, transactionResultCapsule.getData());
   }
 
   /**
    * Test {@link TransactionResultCapsule#putAllCancelUnfreezeV2AmountMap(Map)}.
-   * <p>
-   * Method under test: {@link TransactionResultCapsule#putAllCancelUnfreezeV2AmountMap(Map)}
+   *
+   * <p>Method under test: {@link TransactionResultCapsule#putAllCancelUnfreezeV2AmountMap(Map)}
    */
   @Test
   @Category(MaintainedByDiffblue.class)
@@ -3318,13 +3587,13 @@ public class TransactionResultCapsuleDiffblueTest {
     FeatureSet features = descriptorForType.getOptions().getFeatures();
     assertEquals(map, features.getAllFields());
     assertEquals(map, features.getAllFieldsRaw());
-    assertArrayEquals(new byte[]{-88, 1, 1}, transactionResultCapsule.getData());
+    assertArrayEquals(new byte[] {-88, 1, 1}, transactionResultCapsule.getData());
   }
 
   /**
    * Test {@link TransactionResultCapsule#putAllCancelUnfreezeV2AmountMap(Map)}.
-   * <p>
-   * Method under test: {@link TransactionResultCapsule#putAllCancelUnfreezeV2AmountMap(Map)}
+   *
+   * <p>Method under test: {@link TransactionResultCapsule#putAllCancelUnfreezeV2AmountMap(Map)}
    */
   @Test
   @Category(MaintainedByDiffblue.class)
@@ -3352,13 +3621,13 @@ public class TransactionResultCapsuleDiffblueTest {
     FeatureSet features = descriptorForType.getOptions().getFeatures();
     assertEquals(map, features.getAllFields());
     assertEquals(map, features.getAllFieldsRaw());
-    assertArrayEquals(new byte[]{-104, 1, '\n'}, transactionResultCapsule.getData());
+    assertArrayEquals(new byte[] {-104, 1, '\n'}, transactionResultCapsule.getData());
   }
 
   /**
    * Test {@link TransactionResultCapsule#putAllCancelUnfreezeV2AmountMap(Map)}.
-   * <p>
-   * Method under test: {@link TransactionResultCapsule#putAllCancelUnfreezeV2AmountMap(Map)}
+   *
+   * <p>Method under test: {@link TransactionResultCapsule#putAllCancelUnfreezeV2AmountMap(Map)}
    */
   @Test
   @Category(MaintainedByDiffblue.class)
@@ -3386,13 +3655,13 @@ public class TransactionResultCapsuleDiffblueTest {
     FeatureSet features = descriptorForType.getOptions().getFeatures();
     assertEquals(map, features.getAllFields());
     assertEquals(map, features.getAllFieldsRaw());
-    assertArrayEquals(new byte[]{-80, 1, 1}, transactionResultCapsule.getData());
+    assertArrayEquals(new byte[] {-80, 1, 1}, transactionResultCapsule.getData());
   }
 
   /**
    * Test {@link TransactionResultCapsule#putAllCancelUnfreezeV2AmountMap(Map)}.
-   * <p>
-   * Method under test: {@link TransactionResultCapsule#putAllCancelUnfreezeV2AmountMap(Map)}
+   *
+   * <p>Method under test: {@link TransactionResultCapsule#putAllCancelUnfreezeV2AmountMap(Map)}
    */
   @Test
   @Category(MaintainedByDiffblue.class)
@@ -3420,13 +3689,13 @@ public class TransactionResultCapsuleDiffblueTest {
     FeatureSet features = descriptorForType.getOptions().getFeatures();
     assertEquals(map, features.getAllFields());
     assertEquals(map, features.getAllFieldsRaw());
-    assertArrayEquals(new byte[]{-54, 1, 0}, transactionResultCapsule.getData());
+    assertArrayEquals(new byte[] {-54, 1, 0}, transactionResultCapsule.getData());
   }
 
   /**
    * Test {@link TransactionResultCapsule#putAllCancelUnfreezeV2AmountMap(Map)}.
-   * <p>
-   * Method under test: {@link TransactionResultCapsule#putAllCancelUnfreezeV2AmountMap(Map)}
+   *
+   * <p>Method under test: {@link TransactionResultCapsule#putAllCancelUnfreezeV2AmountMap(Map)}
    */
   @Test
   @Category(MaintainedByDiffblue.class)
@@ -3449,20 +3718,22 @@ public class TransactionResultCapsuleDiffblueTest {
     assertEquals(map, transactionResultCapsule.getCancelUnfreezeV2AmountMap());
     assertEquals(map, instance.getCancelUnfreezeV2Amount());
     assertEquals(map, instance.getCancelUnfreezeV2AmountMap());
-    assertArrayEquals(new byte[]{-30, 1, 7, '\n', 3, 'f', 'o', 'o', 16, 1}, transactionResultCapsule.getData());
+    assertArrayEquals(
+        new byte[] {-30, 1, 7, '\n', 3, 'f', 'o', 'o', 16, 1}, transactionResultCapsule.getData());
   }
 
   /**
    * Test {@link TransactionResultCapsule#putAllCancelUnfreezeV2AmountMap(Map)}.
-   * <p>
-   * Method under test: {@link TransactionResultCapsule#putAllCancelUnfreezeV2AmountMap(Map)}
+   *
+   * <p>Method under test: {@link TransactionResultCapsule#putAllCancelUnfreezeV2AmountMap(Map)}
    */
   @Test
   @Category(MaintainedByDiffblue.class)
   @MethodsUnderTest({"void TransactionResultCapsule.putAllCancelUnfreezeV2AmountMap(Map)"})
   public void testPutAllCancelUnfreezeV2AmountMap16() {
     // Arrange
-    TransactionResultCapsule transactionResultCapsule = new TransactionResultCapsule(code.FAILED, 1L);
+    TransactionResultCapsule transactionResultCapsule =
+        new TransactionResultCapsule(code.FAILED, 1L);
     HashMap<String, Long> map = new HashMap<>();
 
     // Act
@@ -3481,33 +3752,34 @@ public class TransactionResultCapsuleDiffblueTest {
     FeatureSet features = descriptorForType.getOptions().getFeatures();
     assertEquals(map, features.getAllFields());
     assertEquals(map, features.getAllFieldsRaw());
-    assertArrayEquals(new byte[]{'\b', 1, 16, 1}, transactionResultCapsule.getData());
+    assertArrayEquals(new byte[] {'\b', 1, 16, 1}, transactionResultCapsule.getData());
   }
 
   /**
    * Test {@link TransactionResultCapsule#getExchangeReceivedAmount()}.
-   * <p>
-   * Method under test: {@link TransactionResultCapsule#getExchangeReceivedAmount()}
+   *
+   * <p>Method under test: {@link TransactionResultCapsule#getExchangeReceivedAmount()}
    */
   @Test
   @Category(MaintainedByDiffblue.class)
   @MethodsUnderTest({"long TransactionResultCapsule.getExchangeReceivedAmount()"})
   public void testGetExchangeReceivedAmount() {
     // Arrange, Act and Assert
-    assertEquals(0L, (new TransactionResultCapsule()).getExchangeReceivedAmount());
+    assertEquals(0L, new TransactionResultCapsule().getExchangeReceivedAmount());
   }
 
   /**
    * Test {@link TransactionResultCapsule#setExchangeReceivedAmount(long)}.
-   * <p>
-   * Method under test: {@link TransactionResultCapsule#setExchangeReceivedAmount(long)}
+   *
+   * <p>Method under test: {@link TransactionResultCapsule#setExchangeReceivedAmount(long)}
    */
   @Test
   @Category(MaintainedByDiffblue.class)
   @MethodsUnderTest({"void TransactionResultCapsule.setExchangeReceivedAmount(long)"})
   public void testSetExchangeReceivedAmount() {
     // Arrange
-    TransactionResultCapsule transactionResultCapsule = new TransactionResultCapsule(code.SUCESS, 1L);
+    TransactionResultCapsule transactionResultCapsule =
+        new TransactionResultCapsule(code.SUCESS, 1L);
 
     // Act
     transactionResultCapsule.setExchangeReceivedAmount(10L);
@@ -3518,13 +3790,13 @@ public class TransactionResultCapsuleDiffblueTest {
     assertEquals(10L, instance.getExchangeReceivedAmount());
     assertEquals(2, instance.getAllFields().size());
     assertEquals(5, instance.getSerializedSize());
-    assertArrayEquals(new byte[]{'\b', 1, -112, 1, '\n'}, transactionResultCapsule.getData());
+    assertArrayEquals(new byte[] {'\b', 1, -112, 1, '\n'}, transactionResultCapsule.getData());
   }
 
   /**
    * Test {@link TransactionResultCapsule#setExchangeReceivedAmount(long)}.
-   * <p>
-   * Method under test: {@link TransactionResultCapsule#setExchangeReceivedAmount(long)}
+   *
+   * <p>Method under test: {@link TransactionResultCapsule#setExchangeReceivedAmount(long)}
    */
   @Test
   @Category(MaintainedByDiffblue.class)
@@ -3543,13 +3815,13 @@ public class TransactionResultCapsuleDiffblueTest {
     assertEquals(10L, transactionResultCapsule.getExchangeReceivedAmount());
     assertEquals(10L, instance.getExchangeReceivedAmount());
     assertEquals(3, instance.getSerializedSize());
-    assertArrayEquals(new byte[]{-112, 1, '\n'}, transactionResultCapsule.getData());
+    assertArrayEquals(new byte[] {-112, 1, '\n'}, transactionResultCapsule.getData());
   }
 
   /**
    * Test {@link TransactionResultCapsule#setExchangeReceivedAmount(long)}.
-   * <p>
-   * Method under test: {@link TransactionResultCapsule#setExchangeReceivedAmount(long)}
+   *
+   * <p>Method under test: {@link TransactionResultCapsule#setExchangeReceivedAmount(long)}
    */
   @Test
   @Category(MaintainedByDiffblue.class)
@@ -3569,13 +3841,13 @@ public class TransactionResultCapsuleDiffblueTest {
     assertEquals(10L, instance.getExchangeReceivedAmount());
     assertEquals(2, instance.getAllFields().size());
     assertEquals(6, instance.getSerializedSize());
-    assertArrayEquals(new byte[]{-112, 1, '\n', -46, 1, 0}, transactionResultCapsule.getData());
+    assertArrayEquals(new byte[] {-112, 1, '\n', -46, 1, 0}, transactionResultCapsule.getData());
   }
 
   /**
    * Test {@link TransactionResultCapsule#setExchangeReceivedAmount(long)}.
-   * <p>
-   * Method under test: {@link TransactionResultCapsule#setExchangeReceivedAmount(long)}
+   *
+   * <p>Method under test: {@link TransactionResultCapsule#setExchangeReceivedAmount(long)}
    */
   @Test
   @Category(MaintainedByDiffblue.class)
@@ -3595,13 +3867,14 @@ public class TransactionResultCapsuleDiffblueTest {
     assertEquals(10L, instance.getExchangeReceivedAmount());
     assertEquals(2, instance.getAllFields().size());
     assertEquals(6, instance.getSerializedSize());
-    assertArrayEquals(new byte[]{Byte.MIN_VALUE, 1, '\n', -112, 1, '\n'}, transactionResultCapsule.getData());
+    assertArrayEquals(
+        new byte[] {Byte.MIN_VALUE, 1, '\n', -112, 1, '\n'}, transactionResultCapsule.getData());
   }
 
   /**
    * Test {@link TransactionResultCapsule#setExchangeReceivedAmount(long)}.
-   * <p>
-   * Method under test: {@link TransactionResultCapsule#setExchangeReceivedAmount(long)}
+   *
+   * <p>Method under test: {@link TransactionResultCapsule#setExchangeReceivedAmount(long)}
    */
   @Test
   @Category(MaintainedByDiffblue.class)
@@ -3621,13 +3894,14 @@ public class TransactionResultCapsuleDiffblueTest {
     assertEquals(10L, instance.getExchangeReceivedAmount());
     assertEquals(2, instance.getAllFields().size());
     assertEquals(7, instance.getSerializedSize());
-    assertArrayEquals(new byte[]{'r', 2, '4', '2', -112, 1, '\n'}, transactionResultCapsule.getData());
+    assertArrayEquals(
+        new byte[] {'r', 2, '4', '2', -112, 1, '\n'}, transactionResultCapsule.getData());
   }
 
   /**
    * Test {@link TransactionResultCapsule#setExchangeReceivedAmount(long)}.
-   * <p>
-   * Method under test: {@link TransactionResultCapsule#setExchangeReceivedAmount(long)}
+   *
+   * <p>Method under test: {@link TransactionResultCapsule#setExchangeReceivedAmount(long)}
    */
   @Test
   @Category(MaintainedByDiffblue.class)
@@ -3647,13 +3921,13 @@ public class TransactionResultCapsuleDiffblueTest {
     assertEquals(10L, instance.getExchangeReceivedAmount());
     assertEquals(2, instance.getAllFields().size());
     assertEquals(5, instance.getSerializedSize());
-    assertArrayEquals(new byte[]{'x', '\n', -112, 1, '\n'}, transactionResultCapsule.getData());
+    assertArrayEquals(new byte[] {'x', '\n', -112, 1, '\n'}, transactionResultCapsule.getData());
   }
 
   /**
    * Test {@link TransactionResultCapsule#setExchangeReceivedAmount(long)}.
-   * <p>
-   * Method under test: {@link TransactionResultCapsule#setExchangeReceivedAmount(long)}
+   *
+   * <p>Method under test: {@link TransactionResultCapsule#setExchangeReceivedAmount(long)}
    */
   @Test
   @Category(MaintainedByDiffblue.class)
@@ -3673,13 +3947,13 @@ public class TransactionResultCapsuleDiffblueTest {
     assertEquals(10L, instance.getExchangeReceivedAmount());
     assertEquals(2, instance.getAllFields().size());
     assertEquals(6, instance.getSerializedSize());
-    assertArrayEquals(new byte[]{-112, 1, '\n', -40, 1, '\n'}, transactionResultCapsule.getData());
+    assertArrayEquals(new byte[] {-112, 1, '\n', -40, 1, '\n'}, transactionResultCapsule.getData());
   }
 
   /**
    * Test {@link TransactionResultCapsule#setExchangeReceivedAmount(long)}.
-   * <p>
-   * Method under test: {@link TransactionResultCapsule#setExchangeReceivedAmount(long)}
+   *
+   * <p>Method under test: {@link TransactionResultCapsule#setExchangeReceivedAmount(long)}
    */
   @Test
   @Category(MaintainedByDiffblue.class)
@@ -3699,13 +3973,13 @@ public class TransactionResultCapsuleDiffblueTest {
     assertEquals(10L, instance.getExchangeReceivedAmount());
     assertEquals(2, instance.getAllFields().size());
     assertEquals(6, instance.getSerializedSize());
-    assertArrayEquals(new byte[]{-112, 1, '\n', -96, 1, '\n'}, transactionResultCapsule.getData());
+    assertArrayEquals(new byte[] {-112, 1, '\n', -96, 1, '\n'}, transactionResultCapsule.getData());
   }
 
   /**
    * Test {@link TransactionResultCapsule#setExchangeReceivedAmount(long)}.
-   * <p>
-   * Method under test: {@link TransactionResultCapsule#setExchangeReceivedAmount(long)}
+   *
+   * <p>Method under test: {@link TransactionResultCapsule#setExchangeReceivedAmount(long)}
    */
   @Test
   @Category(MaintainedByDiffblue.class)
@@ -3725,13 +3999,14 @@ public class TransactionResultCapsuleDiffblueTest {
     assertEquals(10L, instance.getExchangeReceivedAmount());
     assertEquals(2, instance.getAllFields().size());
     assertEquals(6, instance.getSerializedSize());
-    assertArrayEquals(new byte[]{-112, 1, '\n', -104, 1, '\n'}, transactionResultCapsule.getData());
+    assertArrayEquals(
+        new byte[] {-112, 1, '\n', -104, 1, '\n'}, transactionResultCapsule.getData());
   }
 
   /**
    * Test {@link TransactionResultCapsule#setExchangeReceivedAmount(long)}.
-   * <p>
-   * Method under test: {@link TransactionResultCapsule#setExchangeReceivedAmount(long)}
+   *
+   * <p>Method under test: {@link TransactionResultCapsule#setExchangeReceivedAmount(long)}
    */
   @Test
   @Category(MaintainedByDiffblue.class)
@@ -3751,20 +4026,21 @@ public class TransactionResultCapsuleDiffblueTest {
     assertEquals(10L, instance.getExchangeReceivedAmount());
     assertEquals(2, instance.getAllFields().size());
     assertEquals(6, instance.getSerializedSize());
-    assertArrayEquals(new byte[]{-112, 1, '\n', -80, 1, 1}, transactionResultCapsule.getData());
+    assertArrayEquals(new byte[] {-112, 1, '\n', -80, 1, 1}, transactionResultCapsule.getData());
   }
 
   /**
    * Test {@link TransactionResultCapsule#setExchangeReceivedAmount(long)}.
-   * <p>
-   * Method under test: {@link TransactionResultCapsule#setExchangeReceivedAmount(long)}
+   *
+   * <p>Method under test: {@link TransactionResultCapsule#setExchangeReceivedAmount(long)}
    */
   @Test
   @Category(MaintainedByDiffblue.class)
   @MethodsUnderTest({"void TransactionResultCapsule.setExchangeReceivedAmount(long)"})
   public void testSetExchangeReceivedAmount11() {
     // Arrange
-    TransactionResultCapsule transactionResultCapsule = new TransactionResultCapsule(code.FAILED, 1L);
+    TransactionResultCapsule transactionResultCapsule =
+        new TransactionResultCapsule(code.FAILED, 1L);
 
     // Act
     transactionResultCapsule.setExchangeReceivedAmount(10L);
@@ -3775,13 +4051,14 @@ public class TransactionResultCapsuleDiffblueTest {
     assertEquals(10L, instance.getExchangeReceivedAmount());
     assertEquals(3, instance.getAllFields().size());
     assertEquals(7, instance.getSerializedSize());
-    assertArrayEquals(new byte[]{'\b', 1, 16, 1, -112, 1, '\n'}, transactionResultCapsule.getData());
+    assertArrayEquals(
+        new byte[] {'\b', 1, 16, 1, -112, 1, '\n'}, transactionResultCapsule.getData());
   }
 
   /**
    * Test {@link TransactionResultCapsule#setExchangeReceivedAmount(long)}.
-   * <p>
-   * Method under test: {@link TransactionResultCapsule#setExchangeReceivedAmount(long)}
+   *
+   * <p>Method under test: {@link TransactionResultCapsule#setExchangeReceivedAmount(long)}
    */
   @Test
   @Category(MaintainedByDiffblue.class)
@@ -3803,17 +4080,19 @@ public class TransactionResultCapsuleDiffblueTest {
     assertEquals(10L, instance.getExchangeReceivedAmount());
     assertEquals(13, instance.getSerializedSize());
     assertEquals(2, instance.getAllFields().size());
-    assertArrayEquals(new byte[]{-112, 1, '\n', -30, 1, 7, '\n', 3, 'f', 'o', 'o', 16, 1},
+    assertArrayEquals(
+        new byte[] {-112, 1, '\n', -30, 1, 7, '\n', 3, 'f', 'o', 'o', 16, 1},
         transactionResultCapsule.getData());
   }
 
   /**
    * Test {@link TransactionResultCapsule#setExchangeReceivedAmount(long)}.
+   *
    * <ul>
-   *   <li>Given {@link TransactionResultCapsule#TransactionResultCapsule()}.</li>
+   *   <li>Given {@link TransactionResultCapsule#TransactionResultCapsule()}.
    * </ul>
-   * <p>
-   * Method under test: {@link TransactionResultCapsule#setExchangeReceivedAmount(long)}
+   *
+   * <p>Method under test: {@link TransactionResultCapsule#setExchangeReceivedAmount(long)}
    */
   @Test
   @Category(MaintainedByDiffblue.class)
@@ -3831,16 +4110,17 @@ public class TransactionResultCapsuleDiffblueTest {
     assertEquals(10L, transactionResultCapsule.getExchangeReceivedAmount());
     assertEquals(10L, instance.getExchangeReceivedAmount());
     assertEquals(3, instance.getSerializedSize());
-    assertArrayEquals(new byte[]{-112, 1, '\n'}, transactionResultCapsule.getData());
+    assertArrayEquals(new byte[] {-112, 1, '\n'}, transactionResultCapsule.getData());
   }
 
   /**
    * Test {@link TransactionResultCapsule#setExchangeReceivedAmount(long)}.
+   *
    * <ul>
-   *   <li>Given {@link TransactionResultCapsule#TransactionResultCapsule()} ExchangeId is one.</li>
+   *   <li>Given {@link TransactionResultCapsule#TransactionResultCapsule()} ExchangeId is one.
    * </ul>
-   * <p>
-   * Method under test: {@link TransactionResultCapsule#setExchangeReceivedAmount(long)}
+   *
+   * <p>Method under test: {@link TransactionResultCapsule#setExchangeReceivedAmount(long)}
    */
   @Test
   @Category(MaintainedByDiffblue.class)
@@ -3860,16 +4140,18 @@ public class TransactionResultCapsuleDiffblueTest {
     assertEquals(10L, instance.getExchangeReceivedAmount());
     assertEquals(2, instance.getAllFields().size());
     assertEquals(6, instance.getSerializedSize());
-    assertArrayEquals(new byte[]{-112, 1, '\n', -88, 1, 1}, transactionResultCapsule.getData());
+    assertArrayEquals(new byte[] {-112, 1, '\n', -88, 1, 1}, transactionResultCapsule.getData());
   }
 
   /**
    * Test {@link TransactionResultCapsule#setExchangeReceivedAmount(long)}.
+   *
    * <ul>
-   *   <li>Given {@link TransactionResultCapsule#TransactionResultCapsule()} OrderId is {@link ByteString}.</li>
+   *   <li>Given {@link TransactionResultCapsule#TransactionResultCapsule()} OrderId is {@link
+   *       ByteString}.
    * </ul>
-   * <p>
-   * Method under test: {@link TransactionResultCapsule#setExchangeReceivedAmount(long)}
+   *
+   * <p>Method under test: {@link TransactionResultCapsule#setExchangeReceivedAmount(long)}
    */
   @Test
   @Category(MaintainedByDiffblue.class)
@@ -3889,33 +4171,34 @@ public class TransactionResultCapsuleDiffblueTest {
     assertEquals(10L, instance.getExchangeReceivedAmount());
     assertEquals(2, instance.getAllFields().size());
     assertEquals(6, instance.getSerializedSize());
-    assertArrayEquals(new byte[]{-112, 1, '\n', -54, 1, 0}, transactionResultCapsule.getData());
+    assertArrayEquals(new byte[] {-112, 1, '\n', -54, 1, 0}, transactionResultCapsule.getData());
   }
 
   /**
    * Test {@link TransactionResultCapsule#getExchangeWithdrawAnotherAmount()}.
-   * <p>
-   * Method under test: {@link TransactionResultCapsule#getExchangeWithdrawAnotherAmount()}
+   *
+   * <p>Method under test: {@link TransactionResultCapsule#getExchangeWithdrawAnotherAmount()}
    */
   @Test
   @Category(MaintainedByDiffblue.class)
   @MethodsUnderTest({"long TransactionResultCapsule.getExchangeWithdrawAnotherAmount()"})
   public void testGetExchangeWithdrawAnotherAmount() {
     // Arrange, Act and Assert
-    assertEquals(0L, (new TransactionResultCapsule()).getExchangeWithdrawAnotherAmount());
+    assertEquals(0L, new TransactionResultCapsule().getExchangeWithdrawAnotherAmount());
   }
 
   /**
    * Test {@link TransactionResultCapsule#setExchangeWithdrawAnotherAmount(long)}.
-   * <p>
-   * Method under test: {@link TransactionResultCapsule#setExchangeWithdrawAnotherAmount(long)}
+   *
+   * <p>Method under test: {@link TransactionResultCapsule#setExchangeWithdrawAnotherAmount(long)}
    */
   @Test
   @Category(MaintainedByDiffblue.class)
   @MethodsUnderTest({"void TransactionResultCapsule.setExchangeWithdrawAnotherAmount(long)"})
   public void testSetExchangeWithdrawAnotherAmount() {
     // Arrange
-    TransactionResultCapsule transactionResultCapsule = new TransactionResultCapsule(code.SUCESS, 1L);
+    TransactionResultCapsule transactionResultCapsule =
+        new TransactionResultCapsule(code.SUCESS, 1L);
 
     // Act
     transactionResultCapsule.setExchangeWithdrawAnotherAmount(10L);
@@ -3926,13 +4209,13 @@ public class TransactionResultCapsuleDiffblueTest {
     assertEquals(10L, instance.getExchangeWithdrawAnotherAmount());
     assertEquals(2, instance.getAllFields().size());
     assertEquals(5, instance.getSerializedSize());
-    assertArrayEquals(new byte[]{'\b', 1, -96, 1, '\n'}, transactionResultCapsule.getData());
+    assertArrayEquals(new byte[] {'\b', 1, -96, 1, '\n'}, transactionResultCapsule.getData());
   }
 
   /**
    * Test {@link TransactionResultCapsule#setExchangeWithdrawAnotherAmount(long)}.
-   * <p>
-   * Method under test: {@link TransactionResultCapsule#setExchangeWithdrawAnotherAmount(long)}
+   *
+   * <p>Method under test: {@link TransactionResultCapsule#setExchangeWithdrawAnotherAmount(long)}
    */
   @Test
   @Category(MaintainedByDiffblue.class)
@@ -3951,13 +4234,13 @@ public class TransactionResultCapsuleDiffblueTest {
     assertEquals(10L, transactionResultCapsule.getExchangeWithdrawAnotherAmount());
     assertEquals(10L, instance.getExchangeWithdrawAnotherAmount());
     assertEquals(3, instance.getSerializedSize());
-    assertArrayEquals(new byte[]{-96, 1, '\n'}, transactionResultCapsule.getData());
+    assertArrayEquals(new byte[] {-96, 1, '\n'}, transactionResultCapsule.getData());
   }
 
   /**
    * Test {@link TransactionResultCapsule#setExchangeWithdrawAnotherAmount(long)}.
-   * <p>
-   * Method under test: {@link TransactionResultCapsule#setExchangeWithdrawAnotherAmount(long)}
+   *
+   * <p>Method under test: {@link TransactionResultCapsule#setExchangeWithdrawAnotherAmount(long)}
    */
   @Test
   @Category(MaintainedByDiffblue.class)
@@ -3977,13 +4260,13 @@ public class TransactionResultCapsuleDiffblueTest {
     assertEquals(10L, instance.getExchangeWithdrawAnotherAmount());
     assertEquals(2, instance.getAllFields().size());
     assertEquals(6, instance.getSerializedSize());
-    assertArrayEquals(new byte[]{-96, 1, '\n', -46, 1, 0}, transactionResultCapsule.getData());
+    assertArrayEquals(new byte[] {-96, 1, '\n', -46, 1, 0}, transactionResultCapsule.getData());
   }
 
   /**
    * Test {@link TransactionResultCapsule#setExchangeWithdrawAnotherAmount(long)}.
-   * <p>
-   * Method under test: {@link TransactionResultCapsule#setExchangeWithdrawAnotherAmount(long)}
+   *
+   * <p>Method under test: {@link TransactionResultCapsule#setExchangeWithdrawAnotherAmount(long)}
    */
   @Test
   @Category(MaintainedByDiffblue.class)
@@ -4003,13 +4286,14 @@ public class TransactionResultCapsuleDiffblueTest {
     assertEquals(10L, instance.getExchangeWithdrawAnotherAmount());
     assertEquals(2, instance.getAllFields().size());
     assertEquals(6, instance.getSerializedSize());
-    assertArrayEquals(new byte[]{Byte.MIN_VALUE, 1, '\n', -96, 1, '\n'}, transactionResultCapsule.getData());
+    assertArrayEquals(
+        new byte[] {Byte.MIN_VALUE, 1, '\n', -96, 1, '\n'}, transactionResultCapsule.getData());
   }
 
   /**
    * Test {@link TransactionResultCapsule#setExchangeWithdrawAnotherAmount(long)}.
-   * <p>
-   * Method under test: {@link TransactionResultCapsule#setExchangeWithdrawAnotherAmount(long)}
+   *
+   * <p>Method under test: {@link TransactionResultCapsule#setExchangeWithdrawAnotherAmount(long)}
    */
   @Test
   @Category(MaintainedByDiffblue.class)
@@ -4029,13 +4313,14 @@ public class TransactionResultCapsuleDiffblueTest {
     assertEquals(10L, instance.getExchangeWithdrawAnotherAmount());
     assertEquals(2, instance.getAllFields().size());
     assertEquals(7, instance.getSerializedSize());
-    assertArrayEquals(new byte[]{'r', 2, '4', '2', -96, 1, '\n'}, transactionResultCapsule.getData());
+    assertArrayEquals(
+        new byte[] {'r', 2, '4', '2', -96, 1, '\n'}, transactionResultCapsule.getData());
   }
 
   /**
    * Test {@link TransactionResultCapsule#setExchangeWithdrawAnotherAmount(long)}.
-   * <p>
-   * Method under test: {@link TransactionResultCapsule#setExchangeWithdrawAnotherAmount(long)}
+   *
+   * <p>Method under test: {@link TransactionResultCapsule#setExchangeWithdrawAnotherAmount(long)}
    */
   @Test
   @Category(MaintainedByDiffblue.class)
@@ -4055,13 +4340,13 @@ public class TransactionResultCapsuleDiffblueTest {
     assertEquals(10L, instance.getExchangeWithdrawAnotherAmount());
     assertEquals(2, instance.getAllFields().size());
     assertEquals(5, instance.getSerializedSize());
-    assertArrayEquals(new byte[]{'x', '\n', -96, 1, '\n'}, transactionResultCapsule.getData());
+    assertArrayEquals(new byte[] {'x', '\n', -96, 1, '\n'}, transactionResultCapsule.getData());
   }
 
   /**
    * Test {@link TransactionResultCapsule#setExchangeWithdrawAnotherAmount(long)}.
-   * <p>
-   * Method under test: {@link TransactionResultCapsule#setExchangeWithdrawAnotherAmount(long)}
+   *
+   * <p>Method under test: {@link TransactionResultCapsule#setExchangeWithdrawAnotherAmount(long)}
    */
   @Test
   @Category(MaintainedByDiffblue.class)
@@ -4081,13 +4366,13 @@ public class TransactionResultCapsuleDiffblueTest {
     assertEquals(10L, instance.getExchangeWithdrawAnotherAmount());
     assertEquals(2, instance.getAllFields().size());
     assertEquals(6, instance.getSerializedSize());
-    assertArrayEquals(new byte[]{-96, 1, '\n', -40, 1, '\n'}, transactionResultCapsule.getData());
+    assertArrayEquals(new byte[] {-96, 1, '\n', -40, 1, '\n'}, transactionResultCapsule.getData());
   }
 
   /**
    * Test {@link TransactionResultCapsule#setExchangeWithdrawAnotherAmount(long)}.
-   * <p>
-   * Method under test: {@link TransactionResultCapsule#setExchangeWithdrawAnotherAmount(long)}
+   *
+   * <p>Method under test: {@link TransactionResultCapsule#setExchangeWithdrawAnotherAmount(long)}
    */
   @Test
   @Category(MaintainedByDiffblue.class)
@@ -4107,13 +4392,13 @@ public class TransactionResultCapsuleDiffblueTest {
     assertEquals(10L, instance.getExchangeWithdrawAnotherAmount());
     assertEquals(2, instance.getAllFields().size());
     assertEquals(6, instance.getSerializedSize());
-    assertArrayEquals(new byte[]{-112, 1, '\n', -96, 1, '\n'}, transactionResultCapsule.getData());
+    assertArrayEquals(new byte[] {-112, 1, '\n', -96, 1, '\n'}, transactionResultCapsule.getData());
   }
 
   /**
    * Test {@link TransactionResultCapsule#setExchangeWithdrawAnotherAmount(long)}.
-   * <p>
-   * Method under test: {@link TransactionResultCapsule#setExchangeWithdrawAnotherAmount(long)}
+   *
+   * <p>Method under test: {@link TransactionResultCapsule#setExchangeWithdrawAnotherAmount(long)}
    */
   @Test
   @Category(MaintainedByDiffblue.class)
@@ -4133,13 +4418,13 @@ public class TransactionResultCapsuleDiffblueTest {
     assertEquals(10L, instance.getExchangeWithdrawAnotherAmount());
     assertEquals(2, instance.getAllFields().size());
     assertEquals(6, instance.getSerializedSize());
-    assertArrayEquals(new byte[]{-96, 1, '\n', -88, 1, 1}, transactionResultCapsule.getData());
+    assertArrayEquals(new byte[] {-96, 1, '\n', -88, 1, 1}, transactionResultCapsule.getData());
   }
 
   /**
    * Test {@link TransactionResultCapsule#setExchangeWithdrawAnotherAmount(long)}.
-   * <p>
-   * Method under test: {@link TransactionResultCapsule#setExchangeWithdrawAnotherAmount(long)}
+   *
+   * <p>Method under test: {@link TransactionResultCapsule#setExchangeWithdrawAnotherAmount(long)}
    */
   @Test
   @Category(MaintainedByDiffblue.class)
@@ -4159,13 +4444,13 @@ public class TransactionResultCapsuleDiffblueTest {
     assertEquals(10L, instance.getExchangeWithdrawAnotherAmount());
     assertEquals(2, instance.getAllFields().size());
     assertEquals(6, instance.getSerializedSize());
-    assertArrayEquals(new byte[]{-104, 1, '\n', -96, 1, '\n'}, transactionResultCapsule.getData());
+    assertArrayEquals(new byte[] {-104, 1, '\n', -96, 1, '\n'}, transactionResultCapsule.getData());
   }
 
   /**
    * Test {@link TransactionResultCapsule#setExchangeWithdrawAnotherAmount(long)}.
-   * <p>
-   * Method under test: {@link TransactionResultCapsule#setExchangeWithdrawAnotherAmount(long)}
+   *
+   * <p>Method under test: {@link TransactionResultCapsule#setExchangeWithdrawAnotherAmount(long)}
    */
   @Test
   @Category(MaintainedByDiffblue.class)
@@ -4185,13 +4470,13 @@ public class TransactionResultCapsuleDiffblueTest {
     assertEquals(10L, instance.getExchangeWithdrawAnotherAmount());
     assertEquals(2, instance.getAllFields().size());
     assertEquals(6, instance.getSerializedSize());
-    assertArrayEquals(new byte[]{-96, 1, '\n', -80, 1, 1}, transactionResultCapsule.getData());
+    assertArrayEquals(new byte[] {-96, 1, '\n', -80, 1, 1}, transactionResultCapsule.getData());
   }
 
   /**
    * Test {@link TransactionResultCapsule#setExchangeWithdrawAnotherAmount(long)}.
-   * <p>
-   * Method under test: {@link TransactionResultCapsule#setExchangeWithdrawAnotherAmount(long)}
+   *
+   * <p>Method under test: {@link TransactionResultCapsule#setExchangeWithdrawAnotherAmount(long)}
    */
   @Test
   @Category(MaintainedByDiffblue.class)
@@ -4211,20 +4496,21 @@ public class TransactionResultCapsuleDiffblueTest {
     assertEquals(10L, instance.getExchangeWithdrawAnotherAmount());
     assertEquals(2, instance.getAllFields().size());
     assertEquals(6, instance.getSerializedSize());
-    assertArrayEquals(new byte[]{-96, 1, '\n', -54, 1, 0}, transactionResultCapsule.getData());
+    assertArrayEquals(new byte[] {-96, 1, '\n', -54, 1, 0}, transactionResultCapsule.getData());
   }
 
   /**
    * Test {@link TransactionResultCapsule#setExchangeWithdrawAnotherAmount(long)}.
-   * <p>
-   * Method under test: {@link TransactionResultCapsule#setExchangeWithdrawAnotherAmount(long)}
+   *
+   * <p>Method under test: {@link TransactionResultCapsule#setExchangeWithdrawAnotherAmount(long)}
    */
   @Test
   @Category(MaintainedByDiffblue.class)
   @MethodsUnderTest({"void TransactionResultCapsule.setExchangeWithdrawAnotherAmount(long)"})
   public void testSetExchangeWithdrawAnotherAmount13() {
     // Arrange
-    TransactionResultCapsule transactionResultCapsule = new TransactionResultCapsule(code.FAILED, 1L);
+    TransactionResultCapsule transactionResultCapsule =
+        new TransactionResultCapsule(code.FAILED, 1L);
 
     // Act
     transactionResultCapsule.setExchangeWithdrawAnotherAmount(10L);
@@ -4235,13 +4521,14 @@ public class TransactionResultCapsuleDiffblueTest {
     assertEquals(10L, instance.getExchangeWithdrawAnotherAmount());
     assertEquals(3, instance.getAllFields().size());
     assertEquals(7, instance.getSerializedSize());
-    assertArrayEquals(new byte[]{'\b', 1, 16, 1, -96, 1, '\n'}, transactionResultCapsule.getData());
+    assertArrayEquals(
+        new byte[] {'\b', 1, 16, 1, -96, 1, '\n'}, transactionResultCapsule.getData());
   }
 
   /**
    * Test {@link TransactionResultCapsule#setExchangeWithdrawAnotherAmount(long)}.
-   * <p>
-   * Method under test: {@link TransactionResultCapsule#setExchangeWithdrawAnotherAmount(long)}
+   *
+   * <p>Method under test: {@link TransactionResultCapsule#setExchangeWithdrawAnotherAmount(long)}
    */
   @Test
   @Category(MaintainedByDiffblue.class)
@@ -4263,17 +4550,19 @@ public class TransactionResultCapsuleDiffblueTest {
     assertEquals(10L, instance.getExchangeWithdrawAnotherAmount());
     assertEquals(13, instance.getSerializedSize());
     assertEquals(2, instance.getAllFields().size());
-    assertArrayEquals(new byte[]{-96, 1, '\n', -30, 1, 7, '\n', 3, 'f', 'o', 'o', 16, 1},
+    assertArrayEquals(
+        new byte[] {-96, 1, '\n', -30, 1, 7, '\n', 3, 'f', 'o', 'o', 16, 1},
         transactionResultCapsule.getData());
   }
 
   /**
    * Test {@link TransactionResultCapsule#setExchangeWithdrawAnotherAmount(long)}.
+   *
    * <ul>
-   *   <li>Given {@link TransactionResultCapsule#TransactionResultCapsule()}.</li>
+   *   <li>Given {@link TransactionResultCapsule#TransactionResultCapsule()}.
    * </ul>
-   * <p>
-   * Method under test: {@link TransactionResultCapsule#setExchangeWithdrawAnotherAmount(long)}
+   *
+   * <p>Method under test: {@link TransactionResultCapsule#setExchangeWithdrawAnotherAmount(long)}
    */
   @Test
   @Category(MaintainedByDiffblue.class)
@@ -4291,33 +4580,34 @@ public class TransactionResultCapsuleDiffblueTest {
     assertEquals(10L, transactionResultCapsule.getExchangeWithdrawAnotherAmount());
     assertEquals(10L, instance.getExchangeWithdrawAnotherAmount());
     assertEquals(3, instance.getSerializedSize());
-    assertArrayEquals(new byte[]{-96, 1, '\n'}, transactionResultCapsule.getData());
+    assertArrayEquals(new byte[] {-96, 1, '\n'}, transactionResultCapsule.getData());
   }
 
   /**
    * Test {@link TransactionResultCapsule#getExchangeId()}.
-   * <p>
-   * Method under test: {@link TransactionResultCapsule#getExchangeId()}
+   *
+   * <p>Method under test: {@link TransactionResultCapsule#getExchangeId()}
    */
   @Test
   @Category(MaintainedByDiffblue.class)
   @MethodsUnderTest({"long TransactionResultCapsule.getExchangeId()"})
   public void testGetExchangeId() {
     // Arrange, Act and Assert
-    assertEquals(0L, (new TransactionResultCapsule()).getExchangeId());
+    assertEquals(0L, new TransactionResultCapsule().getExchangeId());
   }
 
   /**
    * Test {@link TransactionResultCapsule#setExchangeId(long)}.
-   * <p>
-   * Method under test: {@link TransactionResultCapsule#setExchangeId(long)}
+   *
+   * <p>Method under test: {@link TransactionResultCapsule#setExchangeId(long)}
    */
   @Test
   @Category(MaintainedByDiffblue.class)
   @MethodsUnderTest({"void TransactionResultCapsule.setExchangeId(long)"})
   public void testSetExchangeId() {
     // Arrange
-    TransactionResultCapsule transactionResultCapsule = new TransactionResultCapsule(code.SUCESS, 1L);
+    TransactionResultCapsule transactionResultCapsule =
+        new TransactionResultCapsule(code.SUCESS, 1L);
 
     // Act
     transactionResultCapsule.setExchangeId(1L);
@@ -4328,13 +4618,13 @@ public class TransactionResultCapsuleDiffblueTest {
     assertEquals(1L, instance.getExchangeId());
     assertEquals(2, instance.getAllFields().size());
     assertEquals(5, instance.getSerializedSize());
-    assertArrayEquals(new byte[]{'\b', 1, -88, 1, 1}, transactionResultCapsule.getData());
+    assertArrayEquals(new byte[] {'\b', 1, -88, 1, 1}, transactionResultCapsule.getData());
   }
 
   /**
    * Test {@link TransactionResultCapsule#setExchangeId(long)}.
-   * <p>
-   * Method under test: {@link TransactionResultCapsule#setExchangeId(long)}
+   *
+   * <p>Method under test: {@link TransactionResultCapsule#setExchangeId(long)}
    */
   @Test
   @Category(MaintainedByDiffblue.class)
@@ -4354,13 +4644,14 @@ public class TransactionResultCapsuleDiffblueTest {
     assertEquals(1L, instance.getExchangeId());
     assertEquals(2, instance.getAllFields().size());
     assertEquals(6, instance.getSerializedSize());
-    assertArrayEquals(new byte[]{Byte.MIN_VALUE, 1, '\n', -88, 1, 1}, transactionResultCapsule.getData());
+    assertArrayEquals(
+        new byte[] {Byte.MIN_VALUE, 1, '\n', -88, 1, 1}, transactionResultCapsule.getData());
   }
 
   /**
    * Test {@link TransactionResultCapsule#setExchangeId(long)}.
-   * <p>
-   * Method under test: {@link TransactionResultCapsule#setExchangeId(long)}
+   *
+   * <p>Method under test: {@link TransactionResultCapsule#setExchangeId(long)}
    */
   @Test
   @Category(MaintainedByDiffblue.class)
@@ -4380,13 +4671,13 @@ public class TransactionResultCapsuleDiffblueTest {
     assertEquals(1L, instance.getExchangeId());
     assertEquals(2, instance.getAllFields().size());
     assertEquals(6, instance.getSerializedSize());
-    assertArrayEquals(new byte[]{-112, 1, '\n', -88, 1, 1}, transactionResultCapsule.getData());
+    assertArrayEquals(new byte[] {-112, 1, '\n', -88, 1, 1}, transactionResultCapsule.getData());
   }
 
   /**
    * Test {@link TransactionResultCapsule#setExchangeId(long)}.
-   * <p>
-   * Method under test: {@link TransactionResultCapsule#setExchangeId(long)}
+   *
+   * <p>Method under test: {@link TransactionResultCapsule#setExchangeId(long)}
    */
   @Test
   @Category(MaintainedByDiffblue.class)
@@ -4406,13 +4697,13 @@ public class TransactionResultCapsuleDiffblueTest {
     assertEquals(1L, instance.getExchangeId());
     assertEquals(2, instance.getAllFields().size());
     assertEquals(6, instance.getSerializedSize());
-    assertArrayEquals(new byte[]{-96, 1, '\n', -88, 1, 1}, transactionResultCapsule.getData());
+    assertArrayEquals(new byte[] {-96, 1, '\n', -88, 1, 1}, transactionResultCapsule.getData());
   }
 
   /**
    * Test {@link TransactionResultCapsule#setExchangeId(long)}.
-   * <p>
-   * Method under test: {@link TransactionResultCapsule#setExchangeId(long)}
+   *
+   * <p>Method under test: {@link TransactionResultCapsule#setExchangeId(long)}
    */
   @Test
   @Category(MaintainedByDiffblue.class)
@@ -4432,20 +4723,21 @@ public class TransactionResultCapsuleDiffblueTest {
     assertEquals(1L, instance.getExchangeId());
     assertEquals(2, instance.getAllFields().size());
     assertEquals(6, instance.getSerializedSize());
-    assertArrayEquals(new byte[]{-104, 1, '\n', -88, 1, 1}, transactionResultCapsule.getData());
+    assertArrayEquals(new byte[] {-104, 1, '\n', -88, 1, 1}, transactionResultCapsule.getData());
   }
 
   /**
    * Test {@link TransactionResultCapsule#setExchangeId(long)}.
-   * <p>
-   * Method under test: {@link TransactionResultCapsule#setExchangeId(long)}
+   *
+   * <p>Method under test: {@link TransactionResultCapsule#setExchangeId(long)}
    */
   @Test
   @Category(MaintainedByDiffblue.class)
   @MethodsUnderTest({"void TransactionResultCapsule.setExchangeId(long)"})
   public void testSetExchangeId6() {
     // Arrange
-    TransactionResultCapsule transactionResultCapsule = new TransactionResultCapsule(code.FAILED, 1L);
+    TransactionResultCapsule transactionResultCapsule =
+        new TransactionResultCapsule(code.FAILED, 1L);
 
     // Act
     transactionResultCapsule.setExchangeId(1L);
@@ -4456,16 +4748,17 @@ public class TransactionResultCapsuleDiffblueTest {
     assertEquals(1L, instance.getExchangeId());
     assertEquals(3, instance.getAllFields().size());
     assertEquals(7, instance.getSerializedSize());
-    assertArrayEquals(new byte[]{'\b', 1, 16, 1, -88, 1, 1}, transactionResultCapsule.getData());
+    assertArrayEquals(new byte[] {'\b', 1, 16, 1, -88, 1, 1}, transactionResultCapsule.getData());
   }
 
   /**
    * Test {@link TransactionResultCapsule#setExchangeId(long)}.
+   *
    * <ul>
-   *   <li>Given {@link TransactionResultCapsule#TransactionResultCapsule()}.</li>
+   *   <li>Given {@link TransactionResultCapsule#TransactionResultCapsule()}.
    * </ul>
-   * <p>
-   * Method under test: {@link TransactionResultCapsule#setExchangeId(long)}
+   *
+   * <p>Method under test: {@link TransactionResultCapsule#setExchangeId(long)}
    */
   @Test
   @Category(MaintainedByDiffblue.class)
@@ -4483,16 +4776,18 @@ public class TransactionResultCapsuleDiffblueTest {
     assertEquals(1L, transactionResultCapsule.getExchangeId());
     assertEquals(1L, instance.getExchangeId());
     assertEquals(3, instance.getSerializedSize());
-    assertArrayEquals(new byte[]{-88, 1, 1}, transactionResultCapsule.getData());
+    assertArrayEquals(new byte[] {-88, 1, 1}, transactionResultCapsule.getData());
   }
 
   /**
    * Test {@link TransactionResultCapsule#setExchangeId(long)}.
+   *
    * <ul>
-   *   <li>Given {@link TransactionResultCapsule#TransactionResultCapsule()} addOrderDetails DefaultInstance.</li>
+   *   <li>Given {@link TransactionResultCapsule#TransactionResultCapsule()} addOrderDetails
+   *       DefaultInstance.
    * </ul>
-   * <p>
-   * Method under test: {@link TransactionResultCapsule#setExchangeId(long)}
+   *
+   * <p>Method under test: {@link TransactionResultCapsule#setExchangeId(long)}
    */
   @Test
   @Category(MaintainedByDiffblue.class)
@@ -4512,16 +4807,18 @@ public class TransactionResultCapsuleDiffblueTest {
     assertEquals(1L, instance.getExchangeId());
     assertEquals(2, instance.getAllFields().size());
     assertEquals(6, instance.getSerializedSize());
-    assertArrayEquals(new byte[]{-88, 1, 1, -46, 1, 0}, transactionResultCapsule.getData());
+    assertArrayEquals(new byte[] {-88, 1, 1, -46, 1, 0}, transactionResultCapsule.getData());
   }
 
   /**
    * Test {@link TransactionResultCapsule#setExchangeId(long)}.
+   *
    * <ul>
-   *   <li>Given {@link TransactionResultCapsule#TransactionResultCapsule()} OrderId is {@link ByteString}.</li>
+   *   <li>Given {@link TransactionResultCapsule#TransactionResultCapsule()} OrderId is {@link
+   *       ByteString}.
    * </ul>
-   * <p>
-   * Method under test: {@link TransactionResultCapsule#setExchangeId(long)}
+   *
+   * <p>Method under test: {@link TransactionResultCapsule#setExchangeId(long)}
    */
   @Test
   @Category(MaintainedByDiffblue.class)
@@ -4541,16 +4838,18 @@ public class TransactionResultCapsuleDiffblueTest {
     assertEquals(1L, instance.getExchangeId());
     assertEquals(2, instance.getAllFields().size());
     assertEquals(6, instance.getSerializedSize());
-    assertArrayEquals(new byte[]{-88, 1, 1, -54, 1, 0}, transactionResultCapsule.getData());
+    assertArrayEquals(new byte[] {-88, 1, 1, -54, 1, 0}, transactionResultCapsule.getData());
   }
 
   /**
    * Test {@link TransactionResultCapsule#setExchangeId(long)}.
+   *
    * <ul>
-   *   <li>Given {@link TransactionResultCapsule#TransactionResultCapsule()} ShieldedTransactionFee is one.</li>
+   *   <li>Given {@link TransactionResultCapsule#TransactionResultCapsule()} ShieldedTransactionFee
+   *       is one.
    * </ul>
-   * <p>
-   * Method under test: {@link TransactionResultCapsule#setExchangeId(long)}
+   *
+   * <p>Method under test: {@link TransactionResultCapsule#setExchangeId(long)}
    */
   @Test
   @Category(MaintainedByDiffblue.class)
@@ -4570,16 +4869,18 @@ public class TransactionResultCapsuleDiffblueTest {
     assertEquals(1L, instance.getExchangeId());
     assertEquals(2, instance.getAllFields().size());
     assertEquals(6, instance.getSerializedSize());
-    assertArrayEquals(new byte[]{-88, 1, 1, -80, 1, 1}, transactionResultCapsule.getData());
+    assertArrayEquals(new byte[] {-88, 1, 1, -80, 1, 1}, transactionResultCapsule.getData());
   }
 
   /**
    * Test {@link TransactionResultCapsule#setExchangeId(long)}.
+   *
    * <ul>
-   *   <li>Given {@link TransactionResultCapsule#TransactionResultCapsule()} WithdrawExpireAmount is ten.</li>
+   *   <li>Given {@link TransactionResultCapsule#TransactionResultCapsule()} WithdrawExpireAmount is
+   *       ten.
    * </ul>
-   * <p>
-   * Method under test: {@link TransactionResultCapsule#setExchangeId(long)}
+   *
+   * <p>Method under test: {@link TransactionResultCapsule#setExchangeId(long)}
    */
   @Test
   @Category(MaintainedByDiffblue.class)
@@ -4599,16 +4900,18 @@ public class TransactionResultCapsuleDiffblueTest {
     assertEquals(1L, instance.getExchangeId());
     assertEquals(2, instance.getAllFields().size());
     assertEquals(6, instance.getSerializedSize());
-    assertArrayEquals(new byte[]{-88, 1, 1, -40, 1, '\n'}, transactionResultCapsule.getData());
+    assertArrayEquals(new byte[] {-88, 1, 1, -40, 1, '\n'}, transactionResultCapsule.getData());
   }
 
   /**
    * Test {@link TransactionResultCapsule#setExchangeId(long)}.
+   *
    * <ul>
-   *   <li>Then {@link TransactionResultCapsule#TransactionResultCapsule()} Instance AllFields size is one.</li>
+   *   <li>Then {@link TransactionResultCapsule#TransactionResultCapsule()} Instance AllFields size
+   *       is one.
    * </ul>
-   * <p>
-   * Method under test: {@link TransactionResultCapsule#setExchangeId(long)}
+   *
+   * <p>Method under test: {@link TransactionResultCapsule#setExchangeId(long)}
    */
   @Test
   @Category(MaintainedByDiffblue.class)
@@ -4627,16 +4930,18 @@ public class TransactionResultCapsuleDiffblueTest {
     assertEquals(1L, transactionResultCapsule.getExchangeId());
     assertEquals(1L, instance.getExchangeId());
     assertEquals(3, instance.getSerializedSize());
-    assertArrayEquals(new byte[]{-88, 1, 1}, transactionResultCapsule.getData());
+    assertArrayEquals(new byte[] {-88, 1, 1}, transactionResultCapsule.getData());
   }
 
   /**
    * Test {@link TransactionResultCapsule#setExchangeId(long)}.
+   *
    * <ul>
-   *   <li>Then {@link TransactionResultCapsule#TransactionResultCapsule()} Instance SerializedSize is five.</li>
+   *   <li>Then {@link TransactionResultCapsule#TransactionResultCapsule()} Instance SerializedSize
+   *       is five.
    * </ul>
-   * <p>
-   * Method under test: {@link TransactionResultCapsule#setExchangeId(long)}
+   *
+   * <p>Method under test: {@link TransactionResultCapsule#setExchangeId(long)}
    */
   @Test
   @Category(MaintainedByDiffblue.class)
@@ -4656,16 +4961,18 @@ public class TransactionResultCapsuleDiffblueTest {
     assertEquals(1L, instance.getExchangeId());
     assertEquals(2, instance.getAllFields().size());
     assertEquals(5, instance.getSerializedSize());
-    assertArrayEquals(new byte[]{'x', '\n', -88, 1, 1}, transactionResultCapsule.getData());
+    assertArrayEquals(new byte[] {'x', '\n', -88, 1, 1}, transactionResultCapsule.getData());
   }
 
   /**
    * Test {@link TransactionResultCapsule#setExchangeId(long)}.
+   *
    * <ul>
-   *   <li>Then {@link TransactionResultCapsule#TransactionResultCapsule()} Instance SerializedSize is seven.</li>
+   *   <li>Then {@link TransactionResultCapsule#TransactionResultCapsule()} Instance SerializedSize
+   *       is seven.
    * </ul>
-   * <p>
-   * Method under test: {@link TransactionResultCapsule#setExchangeId(long)}
+   *
+   * <p>Method under test: {@link TransactionResultCapsule#setExchangeId(long)}
    */
   @Test
   @Category(MaintainedByDiffblue.class)
@@ -4685,16 +4992,18 @@ public class TransactionResultCapsuleDiffblueTest {
     assertEquals(1L, instance.getExchangeId());
     assertEquals(2, instance.getAllFields().size());
     assertEquals(7, instance.getSerializedSize());
-    assertArrayEquals(new byte[]{'r', 2, '4', '2', -88, 1, 1}, transactionResultCapsule.getData());
+    assertArrayEquals(new byte[] {'r', 2, '4', '2', -88, 1, 1}, transactionResultCapsule.getData());
   }
 
   /**
    * Test {@link TransactionResultCapsule#setExchangeId(long)}.
+   *
    * <ul>
-   *   <li>Then {@link TransactionResultCapsule#TransactionResultCapsule()} Instance SerializedSize is thirteen.</li>
+   *   <li>Then {@link TransactionResultCapsule#TransactionResultCapsule()} Instance SerializedSize
+   *       is thirteen.
    * </ul>
-   * <p>
-   * Method under test: {@link TransactionResultCapsule#setExchangeId(long)}
+   *
+   * <p>Method under test: {@link TransactionResultCapsule#setExchangeId(long)}
    */
   @Test
   @Category(MaintainedByDiffblue.class)
@@ -4716,34 +5025,36 @@ public class TransactionResultCapsuleDiffblueTest {
     assertEquals(1L, transactionResultCapsule.getExchangeId());
     assertEquals(1L, instance.getExchangeId());
     assertEquals(2, instance.getAllFields().size());
-    assertArrayEquals(new byte[]{-88, 1, 1, -30, 1, 7, '\n', 3, 'f', 'o', 'o', 16, 1},
+    assertArrayEquals(
+        new byte[] {-88, 1, 1, -30, 1, 7, '\n', 3, 'f', 'o', 'o', 16, 1},
         transactionResultCapsule.getData());
   }
 
   /**
    * Test {@link TransactionResultCapsule#getExchangeInjectAnotherAmount()}.
-   * <p>
-   * Method under test: {@link TransactionResultCapsule#getExchangeInjectAnotherAmount()}
+   *
+   * <p>Method under test: {@link TransactionResultCapsule#getExchangeInjectAnotherAmount()}
    */
   @Test
   @Category(MaintainedByDiffblue.class)
   @MethodsUnderTest({"long TransactionResultCapsule.getExchangeInjectAnotherAmount()"})
   public void testGetExchangeInjectAnotherAmount() {
     // Arrange, Act and Assert
-    assertEquals(0L, (new TransactionResultCapsule()).getExchangeInjectAnotherAmount());
+    assertEquals(0L, new TransactionResultCapsule().getExchangeInjectAnotherAmount());
   }
 
   /**
    * Test {@link TransactionResultCapsule#setExchangeInjectAnotherAmount(long)}.
-   * <p>
-   * Method under test: {@link TransactionResultCapsule#setExchangeInjectAnotherAmount(long)}
+   *
+   * <p>Method under test: {@link TransactionResultCapsule#setExchangeInjectAnotherAmount(long)}
    */
   @Test
   @Category(MaintainedByDiffblue.class)
   @MethodsUnderTest({"void TransactionResultCapsule.setExchangeInjectAnotherAmount(long)"})
   public void testSetExchangeInjectAnotherAmount() {
     // Arrange
-    TransactionResultCapsule transactionResultCapsule = new TransactionResultCapsule(code.SUCESS, 1L);
+    TransactionResultCapsule transactionResultCapsule =
+        new TransactionResultCapsule(code.SUCESS, 1L);
 
     // Act
     transactionResultCapsule.setExchangeInjectAnotherAmount(10L);
@@ -4754,13 +5065,13 @@ public class TransactionResultCapsuleDiffblueTest {
     assertEquals(10L, instance.getExchangeInjectAnotherAmount());
     assertEquals(2, instance.getAllFields().size());
     assertEquals(5, instance.getSerializedSize());
-    assertArrayEquals(new byte[]{'\b', 1, -104, 1, '\n'}, transactionResultCapsule.getData());
+    assertArrayEquals(new byte[] {'\b', 1, -104, 1, '\n'}, transactionResultCapsule.getData());
   }
 
   /**
    * Test {@link TransactionResultCapsule#setExchangeInjectAnotherAmount(long)}.
-   * <p>
-   * Method under test: {@link TransactionResultCapsule#setExchangeInjectAnotherAmount(long)}
+   *
+   * <p>Method under test: {@link TransactionResultCapsule#setExchangeInjectAnotherAmount(long)}
    */
   @Test
   @Category(MaintainedByDiffblue.class)
@@ -4779,13 +5090,13 @@ public class TransactionResultCapsuleDiffblueTest {
     assertEquals(10L, transactionResultCapsule.getExchangeInjectAnotherAmount());
     assertEquals(10L, instance.getExchangeInjectAnotherAmount());
     assertEquals(3, instance.getSerializedSize());
-    assertArrayEquals(new byte[]{-104, 1, '\n'}, transactionResultCapsule.getData());
+    assertArrayEquals(new byte[] {-104, 1, '\n'}, transactionResultCapsule.getData());
   }
 
   /**
    * Test {@link TransactionResultCapsule#setExchangeInjectAnotherAmount(long)}.
-   * <p>
-   * Method under test: {@link TransactionResultCapsule#setExchangeInjectAnotherAmount(long)}
+   *
+   * <p>Method under test: {@link TransactionResultCapsule#setExchangeInjectAnotherAmount(long)}
    */
   @Test
   @Category(MaintainedByDiffblue.class)
@@ -4805,13 +5116,13 @@ public class TransactionResultCapsuleDiffblueTest {
     assertEquals(10L, instance.getExchangeInjectAnotherAmount());
     assertEquals(2, instance.getAllFields().size());
     assertEquals(6, instance.getSerializedSize());
-    assertArrayEquals(new byte[]{-104, 1, '\n', -46, 1, 0}, transactionResultCapsule.getData());
+    assertArrayEquals(new byte[] {-104, 1, '\n', -46, 1, 0}, transactionResultCapsule.getData());
   }
 
   /**
    * Test {@link TransactionResultCapsule#setExchangeInjectAnotherAmount(long)}.
-   * <p>
-   * Method under test: {@link TransactionResultCapsule#setExchangeInjectAnotherAmount(long)}
+   *
+   * <p>Method under test: {@link TransactionResultCapsule#setExchangeInjectAnotherAmount(long)}
    */
   @Test
   @Category(MaintainedByDiffblue.class)
@@ -4831,13 +5142,14 @@ public class TransactionResultCapsuleDiffblueTest {
     assertEquals(10L, instance.getExchangeInjectAnotherAmount());
     assertEquals(2, instance.getAllFields().size());
     assertEquals(6, instance.getSerializedSize());
-    assertArrayEquals(new byte[]{Byte.MIN_VALUE, 1, '\n', -104, 1, '\n'}, transactionResultCapsule.getData());
+    assertArrayEquals(
+        new byte[] {Byte.MIN_VALUE, 1, '\n', -104, 1, '\n'}, transactionResultCapsule.getData());
   }
 
   /**
    * Test {@link TransactionResultCapsule#setExchangeInjectAnotherAmount(long)}.
-   * <p>
-   * Method under test: {@link TransactionResultCapsule#setExchangeInjectAnotherAmount(long)}
+   *
+   * <p>Method under test: {@link TransactionResultCapsule#setExchangeInjectAnotherAmount(long)}
    */
   @Test
   @Category(MaintainedByDiffblue.class)
@@ -4857,13 +5169,14 @@ public class TransactionResultCapsuleDiffblueTest {
     assertEquals(10L, instance.getExchangeInjectAnotherAmount());
     assertEquals(2, instance.getAllFields().size());
     assertEquals(7, instance.getSerializedSize());
-    assertArrayEquals(new byte[]{'r', 2, '4', '2', -104, 1, '\n'}, transactionResultCapsule.getData());
+    assertArrayEquals(
+        new byte[] {'r', 2, '4', '2', -104, 1, '\n'}, transactionResultCapsule.getData());
   }
 
   /**
    * Test {@link TransactionResultCapsule#setExchangeInjectAnotherAmount(long)}.
-   * <p>
-   * Method under test: {@link TransactionResultCapsule#setExchangeInjectAnotherAmount(long)}
+   *
+   * <p>Method under test: {@link TransactionResultCapsule#setExchangeInjectAnotherAmount(long)}
    */
   @Test
   @Category(MaintainedByDiffblue.class)
@@ -4883,13 +5196,13 @@ public class TransactionResultCapsuleDiffblueTest {
     assertEquals(10L, instance.getExchangeInjectAnotherAmount());
     assertEquals(2, instance.getAllFields().size());
     assertEquals(5, instance.getSerializedSize());
-    assertArrayEquals(new byte[]{'x', '\n', -104, 1, '\n'}, transactionResultCapsule.getData());
+    assertArrayEquals(new byte[] {'x', '\n', -104, 1, '\n'}, transactionResultCapsule.getData());
   }
 
   /**
    * Test {@link TransactionResultCapsule#setExchangeInjectAnotherAmount(long)}.
-   * <p>
-   * Method under test: {@link TransactionResultCapsule#setExchangeInjectAnotherAmount(long)}
+   *
+   * <p>Method under test: {@link TransactionResultCapsule#setExchangeInjectAnotherAmount(long)}
    */
   @Test
   @Category(MaintainedByDiffblue.class)
@@ -4909,13 +5222,13 @@ public class TransactionResultCapsuleDiffblueTest {
     assertEquals(10L, instance.getExchangeInjectAnotherAmount());
     assertEquals(2, instance.getAllFields().size());
     assertEquals(6, instance.getSerializedSize());
-    assertArrayEquals(new byte[]{-104, 1, '\n', -40, 1, '\n'}, transactionResultCapsule.getData());
+    assertArrayEquals(new byte[] {-104, 1, '\n', -40, 1, '\n'}, transactionResultCapsule.getData());
   }
 
   /**
    * Test {@link TransactionResultCapsule#setExchangeInjectAnotherAmount(long)}.
-   * <p>
-   * Method under test: {@link TransactionResultCapsule#setExchangeInjectAnotherAmount(long)}
+   *
+   * <p>Method under test: {@link TransactionResultCapsule#setExchangeInjectAnotherAmount(long)}
    */
   @Test
   @Category(MaintainedByDiffblue.class)
@@ -4935,13 +5248,14 @@ public class TransactionResultCapsuleDiffblueTest {
     assertEquals(10L, instance.getExchangeInjectAnotherAmount());
     assertEquals(2, instance.getAllFields().size());
     assertEquals(6, instance.getSerializedSize());
-    assertArrayEquals(new byte[]{-112, 1, '\n', -104, 1, '\n'}, transactionResultCapsule.getData());
+    assertArrayEquals(
+        new byte[] {-112, 1, '\n', -104, 1, '\n'}, transactionResultCapsule.getData());
   }
 
   /**
    * Test {@link TransactionResultCapsule#setExchangeInjectAnotherAmount(long)}.
-   * <p>
-   * Method under test: {@link TransactionResultCapsule#setExchangeInjectAnotherAmount(long)}
+   *
+   * <p>Method under test: {@link TransactionResultCapsule#setExchangeInjectAnotherAmount(long)}
    */
   @Test
   @Category(MaintainedByDiffblue.class)
@@ -4961,13 +5275,13 @@ public class TransactionResultCapsuleDiffblueTest {
     assertEquals(10L, instance.getExchangeInjectAnotherAmount());
     assertEquals(2, instance.getAllFields().size());
     assertEquals(6, instance.getSerializedSize());
-    assertArrayEquals(new byte[]{-104, 1, '\n', -96, 1, '\n'}, transactionResultCapsule.getData());
+    assertArrayEquals(new byte[] {-104, 1, '\n', -96, 1, '\n'}, transactionResultCapsule.getData());
   }
 
   /**
    * Test {@link TransactionResultCapsule#setExchangeInjectAnotherAmount(long)}.
-   * <p>
-   * Method under test: {@link TransactionResultCapsule#setExchangeInjectAnotherAmount(long)}
+   *
+   * <p>Method under test: {@link TransactionResultCapsule#setExchangeInjectAnotherAmount(long)}
    */
   @Test
   @Category(MaintainedByDiffblue.class)
@@ -4987,13 +5301,13 @@ public class TransactionResultCapsuleDiffblueTest {
     assertEquals(10L, instance.getExchangeInjectAnotherAmount());
     assertEquals(2, instance.getAllFields().size());
     assertEquals(6, instance.getSerializedSize());
-    assertArrayEquals(new byte[]{-104, 1, '\n', -80, 1, 1}, transactionResultCapsule.getData());
+    assertArrayEquals(new byte[] {-104, 1, '\n', -80, 1, 1}, transactionResultCapsule.getData());
   }
 
   /**
    * Test {@link TransactionResultCapsule#setExchangeInjectAnotherAmount(long)}.
-   * <p>
-   * Method under test: {@link TransactionResultCapsule#setExchangeInjectAnotherAmount(long)}
+   *
+   * <p>Method under test: {@link TransactionResultCapsule#setExchangeInjectAnotherAmount(long)}
    */
   @Test
   @Category(MaintainedByDiffblue.class)
@@ -5013,20 +5327,21 @@ public class TransactionResultCapsuleDiffblueTest {
     assertEquals(10L, instance.getExchangeInjectAnotherAmount());
     assertEquals(2, instance.getAllFields().size());
     assertEquals(6, instance.getSerializedSize());
-    assertArrayEquals(new byte[]{-104, 1, '\n', -54, 1, 0}, transactionResultCapsule.getData());
+    assertArrayEquals(new byte[] {-104, 1, '\n', -54, 1, 0}, transactionResultCapsule.getData());
   }
 
   /**
    * Test {@link TransactionResultCapsule#setExchangeInjectAnotherAmount(long)}.
-   * <p>
-   * Method under test: {@link TransactionResultCapsule#setExchangeInjectAnotherAmount(long)}
+   *
+   * <p>Method under test: {@link TransactionResultCapsule#setExchangeInjectAnotherAmount(long)}
    */
   @Test
   @Category(MaintainedByDiffblue.class)
   @MethodsUnderTest({"void TransactionResultCapsule.setExchangeInjectAnotherAmount(long)"})
   public void testSetExchangeInjectAnotherAmount12() {
     // Arrange
-    TransactionResultCapsule transactionResultCapsule = new TransactionResultCapsule(code.FAILED, 1L);
+    TransactionResultCapsule transactionResultCapsule =
+        new TransactionResultCapsule(code.FAILED, 1L);
 
     // Act
     transactionResultCapsule.setExchangeInjectAnotherAmount(10L);
@@ -5037,13 +5352,14 @@ public class TransactionResultCapsuleDiffblueTest {
     assertEquals(10L, instance.getExchangeInjectAnotherAmount());
     assertEquals(3, instance.getAllFields().size());
     assertEquals(7, instance.getSerializedSize());
-    assertArrayEquals(new byte[]{'\b', 1, 16, 1, -104, 1, '\n'}, transactionResultCapsule.getData());
+    assertArrayEquals(
+        new byte[] {'\b', 1, 16, 1, -104, 1, '\n'}, transactionResultCapsule.getData());
   }
 
   /**
    * Test {@link TransactionResultCapsule#setExchangeInjectAnotherAmount(long)}.
-   * <p>
-   * Method under test: {@link TransactionResultCapsule#setExchangeInjectAnotherAmount(long)}
+   *
+   * <p>Method under test: {@link TransactionResultCapsule#setExchangeInjectAnotherAmount(long)}
    */
   @Test
   @Category(MaintainedByDiffblue.class)
@@ -5065,17 +5381,19 @@ public class TransactionResultCapsuleDiffblueTest {
     assertEquals(10L, instance.getExchangeInjectAnotherAmount());
     assertEquals(13, instance.getSerializedSize());
     assertEquals(2, instance.getAllFields().size());
-    assertArrayEquals(new byte[]{-104, 1, '\n', -30, 1, 7, '\n', 3, 'f', 'o', 'o', 16, 1},
+    assertArrayEquals(
+        new byte[] {-104, 1, '\n', -30, 1, 7, '\n', 3, 'f', 'o', 'o', 16, 1},
         transactionResultCapsule.getData());
   }
 
   /**
    * Test {@link TransactionResultCapsule#setExchangeInjectAnotherAmount(long)}.
+   *
    * <ul>
-   *   <li>Given {@link TransactionResultCapsule#TransactionResultCapsule()}.</li>
+   *   <li>Given {@link TransactionResultCapsule#TransactionResultCapsule()}.
    * </ul>
-   * <p>
-   * Method under test: {@link TransactionResultCapsule#setExchangeInjectAnotherAmount(long)}
+   *
+   * <p>Method under test: {@link TransactionResultCapsule#setExchangeInjectAnotherAmount(long)}
    */
   @Test
   @Category(MaintainedByDiffblue.class)
@@ -5093,16 +5411,17 @@ public class TransactionResultCapsuleDiffblueTest {
     assertEquals(10L, transactionResultCapsule.getExchangeInjectAnotherAmount());
     assertEquals(10L, instance.getExchangeInjectAnotherAmount());
     assertEquals(3, instance.getSerializedSize());
-    assertArrayEquals(new byte[]{-104, 1, '\n'}, transactionResultCapsule.getData());
+    assertArrayEquals(new byte[] {-104, 1, '\n'}, transactionResultCapsule.getData());
   }
 
   /**
    * Test {@link TransactionResultCapsule#setExchangeInjectAnotherAmount(long)}.
+   *
    * <ul>
-   *   <li>Given {@link TransactionResultCapsule#TransactionResultCapsule()} ExchangeId is one.</li>
+   *   <li>Given {@link TransactionResultCapsule#TransactionResultCapsule()} ExchangeId is one.
    * </ul>
-   * <p>
-   * Method under test: {@link TransactionResultCapsule#setExchangeInjectAnotherAmount(long)}
+   *
+   * <p>Method under test: {@link TransactionResultCapsule#setExchangeInjectAnotherAmount(long)}
    */
   @Test
   @Category(MaintainedByDiffblue.class)
@@ -5122,20 +5441,21 @@ public class TransactionResultCapsuleDiffblueTest {
     assertEquals(10L, instance.getExchangeInjectAnotherAmount());
     assertEquals(2, instance.getAllFields().size());
     assertEquals(6, instance.getSerializedSize());
-    assertArrayEquals(new byte[]{-104, 1, '\n', -88, 1, 1}, transactionResultCapsule.getData());
+    assertArrayEquals(new byte[] {-104, 1, '\n', -88, 1, 1}, transactionResultCapsule.getData());
   }
 
   /**
    * Test {@link TransactionResultCapsule#addFee(long)}.
-   * <p>
-   * Method under test: {@link TransactionResultCapsule#addFee(long)}
+   *
+   * <p>Method under test: {@link TransactionResultCapsule#addFee(long)}
    */
   @Test
   @Category(MaintainedByDiffblue.class)
   @MethodsUnderTest({"void TransactionResultCapsule.addFee(long)"})
   public void testAddFee() {
     // Arrange
-    TransactionResultCapsule transactionResultCapsule = new TransactionResultCapsule(code.SUCESS, 1L);
+    TransactionResultCapsule transactionResultCapsule =
+        new TransactionResultCapsule(code.SUCESS, 1L);
 
     // Act
     transactionResultCapsule.addFee(1L);
@@ -5146,20 +5466,21 @@ public class TransactionResultCapsuleDiffblueTest {
     assertEquals(2, instance.getSerializedSize());
     assertEquals(2L, transactionResultCapsule.getFee());
     assertEquals(2L, instance.getFee());
-    assertArrayEquals(new byte[]{'\b', 2}, transactionResultCapsule.getData());
+    assertArrayEquals(new byte[] {'\b', 2}, transactionResultCapsule.getData());
   }
 
   /**
    * Test {@link TransactionResultCapsule#addFee(long)}.
-   * <p>
-   * Method under test: {@link TransactionResultCapsule#addFee(long)}
+   *
+   * <p>Method under test: {@link TransactionResultCapsule#addFee(long)}
    */
   @Test
   @Category(MaintainedByDiffblue.class)
   @MethodsUnderTest({"void TransactionResultCapsule.addFee(long)"})
   public void testAddFee2() {
     // Arrange
-    TransactionResultCapsule transactionResultCapsule = new TransactionResultCapsule(code.FAILED, 1L);
+    TransactionResultCapsule transactionResultCapsule =
+        new TransactionResultCapsule(code.FAILED, 1L);
 
     // Act
     transactionResultCapsule.addFee(1L);
@@ -5170,16 +5491,17 @@ public class TransactionResultCapsuleDiffblueTest {
     assertEquals(2L, transactionResultCapsule.getFee());
     assertEquals(2L, instance.getFee());
     assertEquals(4, instance.getSerializedSize());
-    assertArrayEquals(new byte[]{'\b', 2, 16, 1}, transactionResultCapsule.getData());
+    assertArrayEquals(new byte[] {'\b', 2, 16, 1}, transactionResultCapsule.getData());
   }
 
   /**
    * Test {@link TransactionResultCapsule#addFee(long)}.
+   *
    * <ul>
-   *   <li>Given {@link TransactionResultCapsule#TransactionResultCapsule()}.</li>
+   *   <li>Given {@link TransactionResultCapsule#TransactionResultCapsule()}.
    * </ul>
-   * <p>
-   * Method under test: {@link TransactionResultCapsule#addFee(long)}
+   *
+   * <p>Method under test: {@link TransactionResultCapsule#addFee(long)}
    */
   @Test
   @Category(MaintainedByDiffblue.class)
@@ -5197,16 +5519,18 @@ public class TransactionResultCapsuleDiffblueTest {
     assertEquals(1L, transactionResultCapsule.getFee());
     assertEquals(1L, instance.getFee());
     assertEquals(2, instance.getSerializedSize());
-    assertArrayEquals(new byte[]{'\b', 1}, transactionResultCapsule.getData());
+    assertArrayEquals(new byte[] {'\b', 1}, transactionResultCapsule.getData());
   }
 
   /**
    * Test {@link TransactionResultCapsule#addFee(long)}.
+   *
    * <ul>
-   *   <li>Given {@link TransactionResultCapsule#TransactionResultCapsule()} addOrderDetails DefaultInstance.</li>
+   *   <li>Given {@link TransactionResultCapsule#TransactionResultCapsule()} addOrderDetails
+   *       DefaultInstance.
    * </ul>
-   * <p>
-   * Method under test: {@link TransactionResultCapsule#addFee(long)}
+   *
+   * <p>Method under test: {@link TransactionResultCapsule#addFee(long)}
    */
   @Test
   @Category(MaintainedByDiffblue.class)
@@ -5226,16 +5550,17 @@ public class TransactionResultCapsuleDiffblueTest {
     assertEquals(1L, instance.getFee());
     assertEquals(2, instance.getAllFields().size());
     assertEquals(5, instance.getSerializedSize());
-    assertArrayEquals(new byte[]{'\b', 1, -46, 1, 0}, transactionResultCapsule.getData());
+    assertArrayEquals(new byte[] {'\b', 1, -46, 1, 0}, transactionResultCapsule.getData());
   }
 
   /**
    * Test {@link TransactionResultCapsule#addFee(long)}.
+   *
    * <ul>
-   *   <li>Given {@link TransactionResultCapsule#TransactionResultCapsule()} ExchangeId is one.</li>
+   *   <li>Given {@link TransactionResultCapsule#TransactionResultCapsule()} ExchangeId is one.
    * </ul>
-   * <p>
-   * Method under test: {@link TransactionResultCapsule#addFee(long)}
+   *
+   * <p>Method under test: {@link TransactionResultCapsule#addFee(long)}
    */
   @Test
   @Category(MaintainedByDiffblue.class)
@@ -5255,16 +5580,18 @@ public class TransactionResultCapsuleDiffblueTest {
     assertEquals(1L, instance.getFee());
     assertEquals(2, instance.getAllFields().size());
     assertEquals(5, instance.getSerializedSize());
-    assertArrayEquals(new byte[]{'\b', 1, -88, 1, 1}, transactionResultCapsule.getData());
+    assertArrayEquals(new byte[] {'\b', 1, -88, 1, 1}, transactionResultCapsule.getData());
   }
 
   /**
    * Test {@link TransactionResultCapsule#addFee(long)}.
+   *
    * <ul>
-   *   <li>Given {@link TransactionResultCapsule#TransactionResultCapsule()} ExchangeInjectAnotherAmount is ten.</li>
+   *   <li>Given {@link TransactionResultCapsule#TransactionResultCapsule()}
+   *       ExchangeInjectAnotherAmount is ten.
    * </ul>
-   * <p>
-   * Method under test: {@link TransactionResultCapsule#addFee(long)}
+   *
+   * <p>Method under test: {@link TransactionResultCapsule#addFee(long)}
    */
   @Test
   @Category(MaintainedByDiffblue.class)
@@ -5284,16 +5611,18 @@ public class TransactionResultCapsuleDiffblueTest {
     assertEquals(1L, instance.getFee());
     assertEquals(2, instance.getAllFields().size());
     assertEquals(5, instance.getSerializedSize());
-    assertArrayEquals(new byte[]{'\b', 1, -104, 1, '\n'}, transactionResultCapsule.getData());
+    assertArrayEquals(new byte[] {'\b', 1, -104, 1, '\n'}, transactionResultCapsule.getData());
   }
 
   /**
    * Test {@link TransactionResultCapsule#addFee(long)}.
+   *
    * <ul>
-   *   <li>Given {@link TransactionResultCapsule#TransactionResultCapsule()} ExchangeReceivedAmount is ten.</li>
+   *   <li>Given {@link TransactionResultCapsule#TransactionResultCapsule()} ExchangeReceivedAmount
+   *       is ten.
    * </ul>
-   * <p>
-   * Method under test: {@link TransactionResultCapsule#addFee(long)}
+   *
+   * <p>Method under test: {@link TransactionResultCapsule#addFee(long)}
    */
   @Test
   @Category(MaintainedByDiffblue.class)
@@ -5313,16 +5642,18 @@ public class TransactionResultCapsuleDiffblueTest {
     assertEquals(1L, instance.getFee());
     assertEquals(2, instance.getAllFields().size());
     assertEquals(5, instance.getSerializedSize());
-    assertArrayEquals(new byte[]{'\b', 1, -112, 1, '\n'}, transactionResultCapsule.getData());
+    assertArrayEquals(new byte[] {'\b', 1, -112, 1, '\n'}, transactionResultCapsule.getData());
   }
 
   /**
    * Test {@link TransactionResultCapsule#addFee(long)}.
+   *
    * <ul>
-   *   <li>Given {@link TransactionResultCapsule#TransactionResultCapsule()} ExchangeWithdrawAnotherAmount is ten.</li>
+   *   <li>Given {@link TransactionResultCapsule#TransactionResultCapsule()}
+   *       ExchangeWithdrawAnotherAmount is ten.
    * </ul>
-   * <p>
-   * Method under test: {@link TransactionResultCapsule#addFee(long)}
+   *
+   * <p>Method under test: {@link TransactionResultCapsule#addFee(long)}
    */
   @Test
   @Category(MaintainedByDiffblue.class)
@@ -5342,16 +5673,18 @@ public class TransactionResultCapsuleDiffblueTest {
     assertEquals(1L, instance.getFee());
     assertEquals(2, instance.getAllFields().size());
     assertEquals(5, instance.getSerializedSize());
-    assertArrayEquals(new byte[]{'\b', 1, -96, 1, '\n'}, transactionResultCapsule.getData());
+    assertArrayEquals(new byte[] {'\b', 1, -96, 1, '\n'}, transactionResultCapsule.getData());
   }
 
   /**
    * Test {@link TransactionResultCapsule#addFee(long)}.
+   *
    * <ul>
-   *   <li>Given {@link TransactionResultCapsule#TransactionResultCapsule()} OrderId is {@link ByteString}.</li>
+   *   <li>Given {@link TransactionResultCapsule#TransactionResultCapsule()} OrderId is {@link
+   *       ByteString}.
    * </ul>
-   * <p>
-   * Method under test: {@link TransactionResultCapsule#addFee(long)}
+   *
+   * <p>Method under test: {@link TransactionResultCapsule#addFee(long)}
    */
   @Test
   @Category(MaintainedByDiffblue.class)
@@ -5371,16 +5704,18 @@ public class TransactionResultCapsuleDiffblueTest {
     assertEquals(1L, instance.getFee());
     assertEquals(2, instance.getAllFields().size());
     assertEquals(5, instance.getSerializedSize());
-    assertArrayEquals(new byte[]{'\b', 1, -54, 1, 0}, transactionResultCapsule.getData());
+    assertArrayEquals(new byte[] {'\b', 1, -54, 1, 0}, transactionResultCapsule.getData());
   }
 
   /**
    * Test {@link TransactionResultCapsule#addFee(long)}.
+   *
    * <ul>
-   *   <li>Given {@link TransactionResultCapsule#TransactionResultCapsule()} ShieldedTransactionFee is one.</li>
+   *   <li>Given {@link TransactionResultCapsule#TransactionResultCapsule()} ShieldedTransactionFee
+   *       is one.
    * </ul>
-   * <p>
-   * Method under test: {@link TransactionResultCapsule#addFee(long)}
+   *
+   * <p>Method under test: {@link TransactionResultCapsule#addFee(long)}
    */
   @Test
   @Category(MaintainedByDiffblue.class)
@@ -5400,16 +5735,17 @@ public class TransactionResultCapsuleDiffblueTest {
     assertEquals(1L, instance.getFee());
     assertEquals(2, instance.getAllFields().size());
     assertEquals(5, instance.getSerializedSize());
-    assertArrayEquals(new byte[]{'\b', 1, -80, 1, 1}, transactionResultCapsule.getData());
+    assertArrayEquals(new byte[] {'\b', 1, -80, 1, 1}, transactionResultCapsule.getData());
   }
 
   /**
    * Test {@link TransactionResultCapsule#addFee(long)}.
+   *
    * <ul>
-   *   <li>Given {@link TransactionResultCapsule#TransactionResultCapsule()} UnfreezeAmount is ten.</li>
+   *   <li>Given {@link TransactionResultCapsule#TransactionResultCapsule()} UnfreezeAmount is ten.
    * </ul>
-   * <p>
-   * Method under test: {@link TransactionResultCapsule#addFee(long)}
+   *
+   * <p>Method under test: {@link TransactionResultCapsule#addFee(long)}
    */
   @Test
   @Category(MaintainedByDiffblue.class)
@@ -5429,16 +5765,19 @@ public class TransactionResultCapsuleDiffblueTest {
     assertEquals(1L, instance.getFee());
     assertEquals(2, instance.getAllFields().size());
     assertEquals(5, instance.getSerializedSize());
-    assertArrayEquals(new byte[]{'\b', 1, Byte.MIN_VALUE, 1, '\n'}, transactionResultCapsule.getData());
+    assertArrayEquals(
+        new byte[] {'\b', 1, Byte.MIN_VALUE, 1, '\n'}, transactionResultCapsule.getData());
   }
 
   /**
    * Test {@link TransactionResultCapsule#addFee(long)}.
+   *
    * <ul>
-   *   <li>Given {@link TransactionResultCapsule#TransactionResultCapsule()} WithdrawExpireAmount is ten.</li>
+   *   <li>Given {@link TransactionResultCapsule#TransactionResultCapsule()} WithdrawExpireAmount is
+   *       ten.
    * </ul>
-   * <p>
-   * Method under test: {@link TransactionResultCapsule#addFee(long)}
+   *
+   * <p>Method under test: {@link TransactionResultCapsule#addFee(long)}
    */
   @Test
   @Category(MaintainedByDiffblue.class)
@@ -5458,16 +5797,18 @@ public class TransactionResultCapsuleDiffblueTest {
     assertEquals(1L, instance.getFee());
     assertEquals(2, instance.getAllFields().size());
     assertEquals(5, instance.getSerializedSize());
-    assertArrayEquals(new byte[]{'\b', 1, -40, 1, '\n'}, transactionResultCapsule.getData());
+    assertArrayEquals(new byte[] {'\b', 1, -40, 1, '\n'}, transactionResultCapsule.getData());
   }
 
   /**
    * Test {@link TransactionResultCapsule#addFee(long)}.
+   *
    * <ul>
-   *   <li>Then {@link TransactionResultCapsule#TransactionResultCapsule()} Instance AllFields size is one.</li>
+   *   <li>Then {@link TransactionResultCapsule#TransactionResultCapsule()} Instance AllFields size
+   *       is one.
    * </ul>
-   * <p>
-   * Method under test: {@link TransactionResultCapsule#addFee(long)}
+   *
+   * <p>Method under test: {@link TransactionResultCapsule#addFee(long)}
    */
   @Test
   @Category(MaintainedByDiffblue.class)
@@ -5486,16 +5827,18 @@ public class TransactionResultCapsuleDiffblueTest {
     assertEquals(1L, transactionResultCapsule.getFee());
     assertEquals(1L, instance.getFee());
     assertEquals(2, instance.getSerializedSize());
-    assertArrayEquals(new byte[]{'\b', 1}, transactionResultCapsule.getData());
+    assertArrayEquals(new byte[] {'\b', 1}, transactionResultCapsule.getData());
   }
 
   /**
    * Test {@link TransactionResultCapsule#addFee(long)}.
+   *
    * <ul>
-   *   <li>Then {@link TransactionResultCapsule#TransactionResultCapsule()} Instance SerializedSize is four.</li>
+   *   <li>Then {@link TransactionResultCapsule#TransactionResultCapsule()} Instance SerializedSize
+   *       is four.
    * </ul>
-   * <p>
-   * Method under test: {@link TransactionResultCapsule#addFee(long)}
+   *
+   * <p>Method under test: {@link TransactionResultCapsule#addFee(long)}
    */
   @Test
   @Category(MaintainedByDiffblue.class)
@@ -5515,16 +5858,18 @@ public class TransactionResultCapsuleDiffblueTest {
     assertEquals(1L, instance.getFee());
     assertEquals(2, instance.getAllFields().size());
     assertEquals(4, instance.getSerializedSize());
-    assertArrayEquals(new byte[]{'\b', 1, 'x', '\n'}, transactionResultCapsule.getData());
+    assertArrayEquals(new byte[] {'\b', 1, 'x', '\n'}, transactionResultCapsule.getData());
   }
 
   /**
    * Test {@link TransactionResultCapsule#addFee(long)}.
+   *
    * <ul>
-   *   <li>Then {@link TransactionResultCapsule#TransactionResultCapsule()} Instance SerializedSize is six.</li>
+   *   <li>Then {@link TransactionResultCapsule#TransactionResultCapsule()} Instance SerializedSize
+   *       is six.
    * </ul>
-   * <p>
-   * Method under test: {@link TransactionResultCapsule#addFee(long)}
+   *
+   * <p>Method under test: {@link TransactionResultCapsule#addFee(long)}
    */
   @Test
   @Category(MaintainedByDiffblue.class)
@@ -5544,16 +5889,18 @@ public class TransactionResultCapsuleDiffblueTest {
     assertEquals(1L, instance.getFee());
     assertEquals(2, instance.getAllFields().size());
     assertEquals(6, instance.getSerializedSize());
-    assertArrayEquals(new byte[]{'\b', 1, 'r', 2, '4', '2'}, transactionResultCapsule.getData());
+    assertArrayEquals(new byte[] {'\b', 1, 'r', 2, '4', '2'}, transactionResultCapsule.getData());
   }
 
   /**
    * Test {@link TransactionResultCapsule#addFee(long)}.
+   *
    * <ul>
-   *   <li>Then {@link TransactionResultCapsule#TransactionResultCapsule()} Instance SerializedSize is twelve.</li>
+   *   <li>Then {@link TransactionResultCapsule#TransactionResultCapsule()} Instance SerializedSize
+   *       is twelve.
    * </ul>
-   * <p>
-   * Method under test: {@link TransactionResultCapsule#addFee(long)}
+   *
+   * <p>Method under test: {@link TransactionResultCapsule#addFee(long)}
    */
   @Test
   @Category(MaintainedByDiffblue.class)
@@ -5575,21 +5922,23 @@ public class TransactionResultCapsuleDiffblueTest {
     assertEquals(1L, transactionResultCapsule.getFee());
     assertEquals(1L, instance.getFee());
     assertEquals(2, instance.getAllFields().size());
-    assertArrayEquals(new byte[]{'\b', 1, -30, 1, 7, '\n', 3, 'f', 'o', 'o', 16, 1},
+    assertArrayEquals(
+        new byte[] {'\b', 1, -30, 1, 7, '\n', 3, 'f', 'o', 'o', 16, 1},
         transactionResultCapsule.getData());
   }
 
   /**
    * Test {@link TransactionResultCapsule#setErrorCode(code)}.
-   * <p>
-   * Method under test: {@link TransactionResultCapsule#setErrorCode(code)}
+   *
+   * <p>Method under test: {@link TransactionResultCapsule#setErrorCode(code)}
    */
   @Test
   @Category(MaintainedByDiffblue.class)
   @MethodsUnderTest({"void TransactionResultCapsule.setErrorCode(code)"})
   public void testSetErrorCode() {
     // Arrange
-    TransactionResultCapsule transactionResultCapsule = new TransactionResultCapsule(code.SUCESS, 1L);
+    TransactionResultCapsule transactionResultCapsule =
+        new TransactionResultCapsule(code.SUCESS, 1L);
 
     // Act
     transactionResultCapsule.setErrorCode(code.SUCESS);
@@ -5600,13 +5949,13 @@ public class TransactionResultCapsuleDiffblueTest {
     assertEquals(1, instance.getAllFields().size());
     assertEquals(2, instance.getSerializedSize());
     assertEquals(code.SUCESS, instance.getRet());
-    assertArrayEquals(new byte[]{'\b', 1}, transactionResultCapsule.getData());
+    assertArrayEquals(new byte[] {'\b', 1}, transactionResultCapsule.getData());
   }
 
   /**
    * Test {@link TransactionResultCapsule#setErrorCode(code)}.
-   * <p>
-   * Method under test: {@link TransactionResultCapsule#setErrorCode(code)}
+   *
+   * <p>Method under test: {@link TransactionResultCapsule#setErrorCode(code)}
    */
   @Test
   @Category(MaintainedByDiffblue.class)
@@ -5626,13 +5975,13 @@ public class TransactionResultCapsuleDiffblueTest {
     assertEquals(1, instance.getAllFields().size());
     assertEquals(3, instance.getSerializedSize());
     assertEquals(code.SUCESS, instance.getRet());
-    assertArrayEquals(new byte[]{-46, 1, 0}, transactionResultCapsule.getData());
+    assertArrayEquals(new byte[] {-46, 1, 0}, transactionResultCapsule.getData());
   }
 
   /**
    * Test {@link TransactionResultCapsule#setErrorCode(code)}.
-   * <p>
-   * Method under test: {@link TransactionResultCapsule#setErrorCode(code)}
+   *
+   * <p>Method under test: {@link TransactionResultCapsule#setErrorCode(code)}
    */
   @Test
   @Category(MaintainedByDiffblue.class)
@@ -5652,13 +6001,13 @@ public class TransactionResultCapsuleDiffblueTest {
     assertEquals(1, instance.getAllFields().size());
     assertEquals(3, instance.getSerializedSize());
     assertEquals(code.SUCESS, instance.getRet());
-    assertArrayEquals(new byte[]{Byte.MIN_VALUE, 1, '\n'}, transactionResultCapsule.getData());
+    assertArrayEquals(new byte[] {Byte.MIN_VALUE, 1, '\n'}, transactionResultCapsule.getData());
   }
 
   /**
    * Test {@link TransactionResultCapsule#setErrorCode(code)}.
-   * <p>
-   * Method under test: {@link TransactionResultCapsule#setErrorCode(code)}
+   *
+   * <p>Method under test: {@link TransactionResultCapsule#setErrorCode(code)}
    */
   @Test
   @Category(MaintainedByDiffblue.class)
@@ -5678,13 +6027,13 @@ public class TransactionResultCapsuleDiffblueTest {
     assertEquals(1, instance.getAllFields().size());
     assertEquals(3, instance.getSerializedSize());
     assertEquals(code.SUCESS, instance.getRet());
-    assertArrayEquals(new byte[]{-40, 1, '\n'}, transactionResultCapsule.getData());
+    assertArrayEquals(new byte[] {-40, 1, '\n'}, transactionResultCapsule.getData());
   }
 
   /**
    * Test {@link TransactionResultCapsule#setErrorCode(code)}.
-   * <p>
-   * Method under test: {@link TransactionResultCapsule#setErrorCode(code)}
+   *
+   * <p>Method under test: {@link TransactionResultCapsule#setErrorCode(code)}
    */
   @Test
   @Category(MaintainedByDiffblue.class)
@@ -5704,13 +6053,13 @@ public class TransactionResultCapsuleDiffblueTest {
     assertEquals(1, instance.getAllFields().size());
     assertEquals(3, instance.getSerializedSize());
     assertEquals(code.SUCESS, instance.getRet());
-    assertArrayEquals(new byte[]{-112, 1, '\n'}, transactionResultCapsule.getData());
+    assertArrayEquals(new byte[] {-112, 1, '\n'}, transactionResultCapsule.getData());
   }
 
   /**
    * Test {@link TransactionResultCapsule#setErrorCode(code)}.
-   * <p>
-   * Method under test: {@link TransactionResultCapsule#setErrorCode(code)}
+   *
+   * <p>Method under test: {@link TransactionResultCapsule#setErrorCode(code)}
    */
   @Test
   @Category(MaintainedByDiffblue.class)
@@ -5730,13 +6079,13 @@ public class TransactionResultCapsuleDiffblueTest {
     assertEquals(1, instance.getAllFields().size());
     assertEquals(3, instance.getSerializedSize());
     assertEquals(code.SUCESS, instance.getRet());
-    assertArrayEquals(new byte[]{-96, 1, '\n'}, transactionResultCapsule.getData());
+    assertArrayEquals(new byte[] {-96, 1, '\n'}, transactionResultCapsule.getData());
   }
 
   /**
    * Test {@link TransactionResultCapsule#setErrorCode(code)}.
-   * <p>
-   * Method under test: {@link TransactionResultCapsule#setErrorCode(code)}
+   *
+   * <p>Method under test: {@link TransactionResultCapsule#setErrorCode(code)}
    */
   @Test
   @Category(MaintainedByDiffblue.class)
@@ -5756,13 +6105,13 @@ public class TransactionResultCapsuleDiffblueTest {
     assertEquals(1, instance.getAllFields().size());
     assertEquals(3, instance.getSerializedSize());
     assertEquals(code.SUCESS, instance.getRet());
-    assertArrayEquals(new byte[]{-88, 1, 1}, transactionResultCapsule.getData());
+    assertArrayEquals(new byte[] {-88, 1, 1}, transactionResultCapsule.getData());
   }
 
   /**
    * Test {@link TransactionResultCapsule#setErrorCode(code)}.
-   * <p>
-   * Method under test: {@link TransactionResultCapsule#setErrorCode(code)}
+   *
+   * <p>Method under test: {@link TransactionResultCapsule#setErrorCode(code)}
    */
   @Test
   @Category(MaintainedByDiffblue.class)
@@ -5782,13 +6131,13 @@ public class TransactionResultCapsuleDiffblueTest {
     assertEquals(1, instance.getAllFields().size());
     assertEquals(3, instance.getSerializedSize());
     assertEquals(code.SUCESS, instance.getRet());
-    assertArrayEquals(new byte[]{-104, 1, '\n'}, transactionResultCapsule.getData());
+    assertArrayEquals(new byte[] {-104, 1, '\n'}, transactionResultCapsule.getData());
   }
 
   /**
    * Test {@link TransactionResultCapsule#setErrorCode(code)}.
-   * <p>
-   * Method under test: {@link TransactionResultCapsule#setErrorCode(code)}
+   *
+   * <p>Method under test: {@link TransactionResultCapsule#setErrorCode(code)}
    */
   @Test
   @Category(MaintainedByDiffblue.class)
@@ -5808,13 +6157,13 @@ public class TransactionResultCapsuleDiffblueTest {
     assertEquals(1, instance.getAllFields().size());
     assertEquals(3, instance.getSerializedSize());
     assertEquals(code.SUCESS, instance.getRet());
-    assertArrayEquals(new byte[]{-80, 1, 1}, transactionResultCapsule.getData());
+    assertArrayEquals(new byte[] {-80, 1, 1}, transactionResultCapsule.getData());
   }
 
   /**
    * Test {@link TransactionResultCapsule#setErrorCode(code)}.
-   * <p>
-   * Method under test: {@link TransactionResultCapsule#setErrorCode(code)}
+   *
+   * <p>Method under test: {@link TransactionResultCapsule#setErrorCode(code)}
    */
   @Test
   @Category(MaintainedByDiffblue.class)
@@ -5834,20 +6183,21 @@ public class TransactionResultCapsuleDiffblueTest {
     assertEquals(1, instance.getAllFields().size());
     assertEquals(3, instance.getSerializedSize());
     assertEquals(code.SUCESS, instance.getRet());
-    assertArrayEquals(new byte[]{-54, 1, 0}, transactionResultCapsule.getData());
+    assertArrayEquals(new byte[] {-54, 1, 0}, transactionResultCapsule.getData());
   }
 
   /**
    * Test {@link TransactionResultCapsule#setErrorCode(code)}.
-   * <p>
-   * Method under test: {@link TransactionResultCapsule#setErrorCode(code)}
+   *
+   * <p>Method under test: {@link TransactionResultCapsule#setErrorCode(code)}
    */
   @Test
   @Category(MaintainedByDiffblue.class)
   @MethodsUnderTest({"void TransactionResultCapsule.setErrorCode(code)"})
   public void testSetErrorCode11() {
     // Arrange
-    TransactionResultCapsule transactionResultCapsule = new TransactionResultCapsule(code.FAILED, 1L);
+    TransactionResultCapsule transactionResultCapsule =
+        new TransactionResultCapsule(code.FAILED, 1L);
 
     // Act
     transactionResultCapsule.setErrorCode(code.SUCESS);
@@ -5858,16 +6208,18 @@ public class TransactionResultCapsuleDiffblueTest {
     assertEquals(1, instance.getAllFields().size());
     assertEquals(2, instance.getSerializedSize());
     assertEquals(code.SUCESS, instance.getRet());
-    assertArrayEquals(new byte[]{'\b', 1}, transactionResultCapsule.getData());
+    assertArrayEquals(new byte[] {'\b', 1}, transactionResultCapsule.getData());
   }
 
   /**
    * Test {@link TransactionResultCapsule#setErrorCode(code)}.
+   *
    * <ul>
-   *   <li>Then {@link TransactionResultCapsule#TransactionResultCapsule()} Instance SerializedSize is four.</li>
+   *   <li>Then {@link TransactionResultCapsule#TransactionResultCapsule()} Instance SerializedSize
+   *       is four.
    * </ul>
-   * <p>
-   * Method under test: {@link TransactionResultCapsule#setErrorCode(code)}
+   *
+   * <p>Method under test: {@link TransactionResultCapsule#setErrorCode(code)}
    */
   @Test
   @Category(MaintainedByDiffblue.class)
@@ -5887,16 +6239,18 @@ public class TransactionResultCapsuleDiffblueTest {
     assertEquals(1, instance.getAllFields().size());
     assertEquals(4, instance.getSerializedSize());
     assertEquals(code.SUCESS, instance.getRet());
-    assertArrayEquals(new byte[]{'r', 2, '4', '2'}, transactionResultCapsule.getData());
+    assertArrayEquals(new byte[] {'r', 2, '4', '2'}, transactionResultCapsule.getData());
   }
 
   /**
    * Test {@link TransactionResultCapsule#setErrorCode(code)}.
+   *
    * <ul>
-   *   <li>Then {@link TransactionResultCapsule#TransactionResultCapsule()} Instance SerializedSize is ten.</li>
+   *   <li>Then {@link TransactionResultCapsule#TransactionResultCapsule()} Instance SerializedSize
+   *       is ten.
    * </ul>
-   * <p>
-   * Method under test: {@link TransactionResultCapsule#setErrorCode(code)}
+   *
+   * <p>Method under test: {@link TransactionResultCapsule#setErrorCode(code)}
    */
   @Test
   @Category(MaintainedByDiffblue.class)
@@ -5918,16 +6272,19 @@ public class TransactionResultCapsuleDiffblueTest {
     assertEquals(1, instance.getAllFields().size());
     assertEquals(10, instance.getSerializedSize());
     assertEquals(code.SUCESS, instance.getRet());
-    assertArrayEquals(new byte[]{-30, 1, 7, '\n', 3, 'f', 'o', 'o', 16, 1}, transactionResultCapsule.getData());
+    assertArrayEquals(
+        new byte[] {-30, 1, 7, '\n', 3, 'f', 'o', 'o', 16, 1}, transactionResultCapsule.getData());
   }
 
   /**
    * Test {@link TransactionResultCapsule#setErrorCode(code)}.
+   *
    * <ul>
-   *   <li>Then {@link TransactionResultCapsule#TransactionResultCapsule()} Instance SerializedSize is two.</li>
+   *   <li>Then {@link TransactionResultCapsule#TransactionResultCapsule()} Instance SerializedSize
+   *       is two.
    * </ul>
-   * <p>
-   * Method under test: {@link TransactionResultCapsule#setErrorCode(code)}
+   *
+   * <p>Method under test: {@link TransactionResultCapsule#setErrorCode(code)}
    */
   @Test
   @Category(MaintainedByDiffblue.class)
@@ -5947,16 +6304,18 @@ public class TransactionResultCapsuleDiffblueTest {
     assertEquals(1, instance.getAllFields().size());
     assertEquals(2, instance.getSerializedSize());
     assertEquals(code.SUCESS, instance.getRet());
-    assertArrayEquals(new byte[]{'x', '\n'}, transactionResultCapsule.getData());
+    assertArrayEquals(new byte[] {'x', '\n'}, transactionResultCapsule.getData());
   }
 
   /**
    * Test {@link TransactionResultCapsule#setErrorCode(code)}.
+   *
    * <ul>
-   *   <li>Then {@link TransactionResultCapsule#TransactionResultCapsule()} Instance SerializedSize is zero.</li>
+   *   <li>Then {@link TransactionResultCapsule#TransactionResultCapsule()} Instance SerializedSize
+   *       is zero.
    * </ul>
-   * <p>
-   * Method under test: {@link TransactionResultCapsule#setErrorCode(code)}
+   *
+   * <p>Method under test: {@link TransactionResultCapsule#setErrorCode(code)}
    */
   @Test
   @Category(MaintainedByDiffblue.class)
@@ -5974,16 +6333,18 @@ public class TransactionResultCapsuleDiffblueTest {
     assertEquals(0, instance.getSerializedSize());
     assertEquals(code.SUCESS, instance.getRet());
     assertTrue(instance.getAllFields().isEmpty());
-    assertArrayEquals(new byte[]{}, transactionResultCapsule.getData());
+    assertArrayEquals(new byte[] {}, transactionResultCapsule.getData());
   }
 
   /**
    * Test {@link TransactionResultCapsule#setErrorCode(code)}.
+   *
    * <ul>
-   *   <li>Then {@link TransactionResultCapsule#TransactionResultCapsule()} Instance SerializedSize is zero.</li>
+   *   <li>Then {@link TransactionResultCapsule#TransactionResultCapsule()} Instance SerializedSize
+   *       is zero.
    * </ul>
-   * <p>
-   * Method under test: {@link TransactionResultCapsule#setErrorCode(code)}
+   *
+   * <p>Method under test: {@link TransactionResultCapsule#setErrorCode(code)}
    */
   @Test
   @Category(MaintainedByDiffblue.class)
@@ -6002,33 +6363,34 @@ public class TransactionResultCapsuleDiffblueTest {
     assertEquals(0, instance.getSerializedSize());
     assertEquals(code.SUCESS, instance.getRet());
     assertTrue(instance.getAllFields().isEmpty());
-    assertArrayEquals(new byte[]{}, transactionResultCapsule.getData());
+    assertArrayEquals(new byte[] {}, transactionResultCapsule.getData());
   }
 
   /**
    * Test {@link TransactionResultCapsule#getShieldedTransactionFee()}.
-   * <p>
-   * Method under test: {@link TransactionResultCapsule#getShieldedTransactionFee()}
+   *
+   * <p>Method under test: {@link TransactionResultCapsule#getShieldedTransactionFee()}
    */
   @Test
   @Category(MaintainedByDiffblue.class)
   @MethodsUnderTest({"long TransactionResultCapsule.getShieldedTransactionFee()"})
   public void testGetShieldedTransactionFee() {
     // Arrange, Act and Assert
-    assertEquals(0L, (new TransactionResultCapsule()).getShieldedTransactionFee());
+    assertEquals(0L, new TransactionResultCapsule().getShieldedTransactionFee());
   }
 
   /**
    * Test {@link TransactionResultCapsule#setShieldedTransactionFee(long)}.
-   * <p>
-   * Method under test: {@link TransactionResultCapsule#setShieldedTransactionFee(long)}
+   *
+   * <p>Method under test: {@link TransactionResultCapsule#setShieldedTransactionFee(long)}
    */
   @Test
   @Category(MaintainedByDiffblue.class)
   @MethodsUnderTest({"void TransactionResultCapsule.setShieldedTransactionFee(long)"})
   public void testSetShieldedTransactionFee() {
     // Arrange
-    TransactionResultCapsule transactionResultCapsule = new TransactionResultCapsule(code.SUCESS, 1L);
+    TransactionResultCapsule transactionResultCapsule =
+        new TransactionResultCapsule(code.SUCESS, 1L);
 
     // Act
     transactionResultCapsule.setShieldedTransactionFee(1L);
@@ -6039,13 +6401,13 @@ public class TransactionResultCapsuleDiffblueTest {
     assertEquals(1L, instance.getShieldedTransactionFee());
     assertEquals(2, instance.getAllFields().size());
     assertEquals(5, instance.getSerializedSize());
-    assertArrayEquals(new byte[]{'\b', 1, -80, 1, 1}, transactionResultCapsule.getData());
+    assertArrayEquals(new byte[] {'\b', 1, -80, 1, 1}, transactionResultCapsule.getData());
   }
 
   /**
    * Test {@link TransactionResultCapsule#setShieldedTransactionFee(long)}.
-   * <p>
-   * Method under test: {@link TransactionResultCapsule#setShieldedTransactionFee(long)}
+   *
+   * <p>Method under test: {@link TransactionResultCapsule#setShieldedTransactionFee(long)}
    */
   @Test
   @Category(MaintainedByDiffblue.class)
@@ -6064,13 +6426,13 @@ public class TransactionResultCapsuleDiffblueTest {
     assertEquals(1L, transactionResultCapsule.getShieldedTransactionFee());
     assertEquals(1L, instance.getShieldedTransactionFee());
     assertEquals(3, instance.getSerializedSize());
-    assertArrayEquals(new byte[]{-80, 1, 1}, transactionResultCapsule.getData());
+    assertArrayEquals(new byte[] {-80, 1, 1}, transactionResultCapsule.getData());
   }
 
   /**
    * Test {@link TransactionResultCapsule#setShieldedTransactionFee(long)}.
-   * <p>
-   * Method under test: {@link TransactionResultCapsule#setShieldedTransactionFee(long)}
+   *
+   * <p>Method under test: {@link TransactionResultCapsule#setShieldedTransactionFee(long)}
    */
   @Test
   @Category(MaintainedByDiffblue.class)
@@ -6090,13 +6452,13 @@ public class TransactionResultCapsuleDiffblueTest {
     assertEquals(1L, instance.getShieldedTransactionFee());
     assertEquals(2, instance.getAllFields().size());
     assertEquals(6, instance.getSerializedSize());
-    assertArrayEquals(new byte[]{-80, 1, 1, -46, 1, 0}, transactionResultCapsule.getData());
+    assertArrayEquals(new byte[] {-80, 1, 1, -46, 1, 0}, transactionResultCapsule.getData());
   }
 
   /**
    * Test {@link TransactionResultCapsule#setShieldedTransactionFee(long)}.
-   * <p>
-   * Method under test: {@link TransactionResultCapsule#setShieldedTransactionFee(long)}
+   *
+   * <p>Method under test: {@link TransactionResultCapsule#setShieldedTransactionFee(long)}
    */
   @Test
   @Category(MaintainedByDiffblue.class)
@@ -6116,13 +6478,14 @@ public class TransactionResultCapsuleDiffblueTest {
     assertEquals(1L, instance.getShieldedTransactionFee());
     assertEquals(2, instance.getAllFields().size());
     assertEquals(6, instance.getSerializedSize());
-    assertArrayEquals(new byte[]{Byte.MIN_VALUE, 1, '\n', -80, 1, 1}, transactionResultCapsule.getData());
+    assertArrayEquals(
+        new byte[] {Byte.MIN_VALUE, 1, '\n', -80, 1, 1}, transactionResultCapsule.getData());
   }
 
   /**
    * Test {@link TransactionResultCapsule#setShieldedTransactionFee(long)}.
-   * <p>
-   * Method under test: {@link TransactionResultCapsule#setShieldedTransactionFee(long)}
+   *
+   * <p>Method under test: {@link TransactionResultCapsule#setShieldedTransactionFee(long)}
    */
   @Test
   @Category(MaintainedByDiffblue.class)
@@ -6142,13 +6505,13 @@ public class TransactionResultCapsuleDiffblueTest {
     assertEquals(1L, instance.getShieldedTransactionFee());
     assertEquals(2, instance.getAllFields().size());
     assertEquals(7, instance.getSerializedSize());
-    assertArrayEquals(new byte[]{'r', 2, '4', '2', -80, 1, 1}, transactionResultCapsule.getData());
+    assertArrayEquals(new byte[] {'r', 2, '4', '2', -80, 1, 1}, transactionResultCapsule.getData());
   }
 
   /**
    * Test {@link TransactionResultCapsule#setShieldedTransactionFee(long)}.
-   * <p>
-   * Method under test: {@link TransactionResultCapsule#setShieldedTransactionFee(long)}
+   *
+   * <p>Method under test: {@link TransactionResultCapsule#setShieldedTransactionFee(long)}
    */
   @Test
   @Category(MaintainedByDiffblue.class)
@@ -6168,13 +6531,13 @@ public class TransactionResultCapsuleDiffblueTest {
     assertEquals(1L, instance.getShieldedTransactionFee());
     assertEquals(2, instance.getAllFields().size());
     assertEquals(5, instance.getSerializedSize());
-    assertArrayEquals(new byte[]{'x', '\n', -80, 1, 1}, transactionResultCapsule.getData());
+    assertArrayEquals(new byte[] {'x', '\n', -80, 1, 1}, transactionResultCapsule.getData());
   }
 
   /**
    * Test {@link TransactionResultCapsule#setShieldedTransactionFee(long)}.
-   * <p>
-   * Method under test: {@link TransactionResultCapsule#setShieldedTransactionFee(long)}
+   *
+   * <p>Method under test: {@link TransactionResultCapsule#setShieldedTransactionFee(long)}
    */
   @Test
   @Category(MaintainedByDiffblue.class)
@@ -6194,13 +6557,13 @@ public class TransactionResultCapsuleDiffblueTest {
     assertEquals(1L, instance.getShieldedTransactionFee());
     assertEquals(2, instance.getAllFields().size());
     assertEquals(6, instance.getSerializedSize());
-    assertArrayEquals(new byte[]{-80, 1, 1, -40, 1, '\n'}, transactionResultCapsule.getData());
+    assertArrayEquals(new byte[] {-80, 1, 1, -40, 1, '\n'}, transactionResultCapsule.getData());
   }
 
   /**
    * Test {@link TransactionResultCapsule#setShieldedTransactionFee(long)}.
-   * <p>
-   * Method under test: {@link TransactionResultCapsule#setShieldedTransactionFee(long)}
+   *
+   * <p>Method under test: {@link TransactionResultCapsule#setShieldedTransactionFee(long)}
    */
   @Test
   @Category(MaintainedByDiffblue.class)
@@ -6220,13 +6583,13 @@ public class TransactionResultCapsuleDiffblueTest {
     assertEquals(1L, instance.getShieldedTransactionFee());
     assertEquals(2, instance.getAllFields().size());
     assertEquals(6, instance.getSerializedSize());
-    assertArrayEquals(new byte[]{-112, 1, '\n', -80, 1, 1}, transactionResultCapsule.getData());
+    assertArrayEquals(new byte[] {-112, 1, '\n', -80, 1, 1}, transactionResultCapsule.getData());
   }
 
   /**
    * Test {@link TransactionResultCapsule#setShieldedTransactionFee(long)}.
-   * <p>
-   * Method under test: {@link TransactionResultCapsule#setShieldedTransactionFee(long)}
+   *
+   * <p>Method under test: {@link TransactionResultCapsule#setShieldedTransactionFee(long)}
    */
   @Test
   @Category(MaintainedByDiffblue.class)
@@ -6246,13 +6609,13 @@ public class TransactionResultCapsuleDiffblueTest {
     assertEquals(1L, instance.getShieldedTransactionFee());
     assertEquals(2, instance.getAllFields().size());
     assertEquals(6, instance.getSerializedSize());
-    assertArrayEquals(new byte[]{-96, 1, '\n', -80, 1, 1}, transactionResultCapsule.getData());
+    assertArrayEquals(new byte[] {-96, 1, '\n', -80, 1, 1}, transactionResultCapsule.getData());
   }
 
   /**
    * Test {@link TransactionResultCapsule#setShieldedTransactionFee(long)}.
-   * <p>
-   * Method under test: {@link TransactionResultCapsule#setShieldedTransactionFee(long)}
+   *
+   * <p>Method under test: {@link TransactionResultCapsule#setShieldedTransactionFee(long)}
    */
   @Test
   @Category(MaintainedByDiffblue.class)
@@ -6272,13 +6635,13 @@ public class TransactionResultCapsuleDiffblueTest {
     assertEquals(1L, instance.getShieldedTransactionFee());
     assertEquals(2, instance.getAllFields().size());
     assertEquals(6, instance.getSerializedSize());
-    assertArrayEquals(new byte[]{-88, 1, 1, -80, 1, 1}, transactionResultCapsule.getData());
+    assertArrayEquals(new byte[] {-88, 1, 1, -80, 1, 1}, transactionResultCapsule.getData());
   }
 
   /**
    * Test {@link TransactionResultCapsule#setShieldedTransactionFee(long)}.
-   * <p>
-   * Method under test: {@link TransactionResultCapsule#setShieldedTransactionFee(long)}
+   *
+   * <p>Method under test: {@link TransactionResultCapsule#setShieldedTransactionFee(long)}
    */
   @Test
   @Category(MaintainedByDiffblue.class)
@@ -6298,20 +6661,21 @@ public class TransactionResultCapsuleDiffblueTest {
     assertEquals(1L, instance.getShieldedTransactionFee());
     assertEquals(2, instance.getAllFields().size());
     assertEquals(6, instance.getSerializedSize());
-    assertArrayEquals(new byte[]{-104, 1, '\n', -80, 1, 1}, transactionResultCapsule.getData());
+    assertArrayEquals(new byte[] {-104, 1, '\n', -80, 1, 1}, transactionResultCapsule.getData());
   }
 
   /**
    * Test {@link TransactionResultCapsule#setShieldedTransactionFee(long)}.
-   * <p>
-   * Method under test: {@link TransactionResultCapsule#setShieldedTransactionFee(long)}
+   *
+   * <p>Method under test: {@link TransactionResultCapsule#setShieldedTransactionFee(long)}
    */
   @Test
   @Category(MaintainedByDiffblue.class)
   @MethodsUnderTest({"void TransactionResultCapsule.setShieldedTransactionFee(long)"})
   public void testSetShieldedTransactionFee12() {
     // Arrange
-    TransactionResultCapsule transactionResultCapsule = new TransactionResultCapsule(code.FAILED, 1L);
+    TransactionResultCapsule transactionResultCapsule =
+        new TransactionResultCapsule(code.FAILED, 1L);
 
     // Act
     transactionResultCapsule.setShieldedTransactionFee(1L);
@@ -6322,13 +6686,13 @@ public class TransactionResultCapsuleDiffblueTest {
     assertEquals(1L, instance.getShieldedTransactionFee());
     assertEquals(3, instance.getAllFields().size());
     assertEquals(7, instance.getSerializedSize());
-    assertArrayEquals(new byte[]{'\b', 1, 16, 1, -80, 1, 1}, transactionResultCapsule.getData());
+    assertArrayEquals(new byte[] {'\b', 1, 16, 1, -80, 1, 1}, transactionResultCapsule.getData());
   }
 
   /**
    * Test {@link TransactionResultCapsule#setShieldedTransactionFee(long)}.
-   * <p>
-   * Method under test: {@link TransactionResultCapsule#setShieldedTransactionFee(long)}
+   *
+   * <p>Method under test: {@link TransactionResultCapsule#setShieldedTransactionFee(long)}
    */
   @Test
   @Category(MaintainedByDiffblue.class)
@@ -6350,17 +6714,19 @@ public class TransactionResultCapsuleDiffblueTest {
     assertEquals(1L, transactionResultCapsule.getShieldedTransactionFee());
     assertEquals(1L, instance.getShieldedTransactionFee());
     assertEquals(2, instance.getAllFields().size());
-    assertArrayEquals(new byte[]{-80, 1, 1, -30, 1, 7, '\n', 3, 'f', 'o', 'o', 16, 1},
+    assertArrayEquals(
+        new byte[] {-80, 1, 1, -30, 1, 7, '\n', 3, 'f', 'o', 'o', 16, 1},
         transactionResultCapsule.getData());
   }
 
   /**
    * Test {@link TransactionResultCapsule#setShieldedTransactionFee(long)}.
+   *
    * <ul>
-   *   <li>Given {@link TransactionResultCapsule#TransactionResultCapsule()}.</li>
+   *   <li>Given {@link TransactionResultCapsule#TransactionResultCapsule()}.
    * </ul>
-   * <p>
-   * Method under test: {@link TransactionResultCapsule#setShieldedTransactionFee(long)}
+   *
+   * <p>Method under test: {@link TransactionResultCapsule#setShieldedTransactionFee(long)}
    */
   @Test
   @Category(MaintainedByDiffblue.class)
@@ -6378,16 +6744,18 @@ public class TransactionResultCapsuleDiffblueTest {
     assertEquals(1L, transactionResultCapsule.getShieldedTransactionFee());
     assertEquals(1L, instance.getShieldedTransactionFee());
     assertEquals(3, instance.getSerializedSize());
-    assertArrayEquals(new byte[]{-80, 1, 1}, transactionResultCapsule.getData());
+    assertArrayEquals(new byte[] {-80, 1, 1}, transactionResultCapsule.getData());
   }
 
   /**
    * Test {@link TransactionResultCapsule#setShieldedTransactionFee(long)}.
+   *
    * <ul>
-   *   <li>Given {@link TransactionResultCapsule#TransactionResultCapsule()} OrderId is {@link ByteString}.</li>
+   *   <li>Given {@link TransactionResultCapsule#TransactionResultCapsule()} OrderId is {@link
+   *       ByteString}.
    * </ul>
-   * <p>
-   * Method under test: {@link TransactionResultCapsule#setShieldedTransactionFee(long)}
+   *
+   * <p>Method under test: {@link TransactionResultCapsule#setShieldedTransactionFee(long)}
    */
   @Test
   @Category(MaintainedByDiffblue.class)
@@ -6407,13 +6775,13 @@ public class TransactionResultCapsuleDiffblueTest {
     assertEquals(1L, instance.getShieldedTransactionFee());
     assertEquals(2, instance.getAllFields().size());
     assertEquals(6, instance.getSerializedSize());
-    assertArrayEquals(new byte[]{-80, 1, 1, -54, 1, 0}, transactionResultCapsule.getData());
+    assertArrayEquals(new byte[] {-80, 1, 1, -54, 1, 0}, transactionResultCapsule.getData());
   }
 
   /**
    * Test {@link TransactionResultCapsule#getOrderId()}.
-   * <p>
-   * Method under test: {@link TransactionResultCapsule#getOrderId()}
+   *
+   * <p>Method under test: {@link TransactionResultCapsule#getOrderId()}
    */
   @Test
   @Category(MaintainedByDiffblue.class)
@@ -6426,7 +6794,7 @@ public class TransactionResultCapsuleDiffblueTest {
     ByteString actualOrderId = transactionResultCapsule.getOrderId();
 
     // Assert
-    ByteString byteString = actualOrderId.EMPTY;
+    ByteString byteString = ByteString.EMPTY;
     Result instance = transactionResultCapsule.getInstance();
     assertEquals(byteString, instance.getAssetIssueIDBytes());
     Result defaultInstanceForType = instance.getDefaultInstanceForType();
@@ -6438,27 +6806,28 @@ public class TransactionResultCapsuleDiffblueTest {
 
   /**
    * Test {@link TransactionResultCapsule#setOrderId(ByteString)}.
-   * <p>
-   * Method under test: {@link TransactionResultCapsule#setOrderId(ByteString)}
+   *
+   * <p>Method under test: {@link TransactionResultCapsule#setOrderId(ByteString)}
    */
   @Test
   @Category(MaintainedByDiffblue.class)
   @MethodsUnderTest({"void TransactionResultCapsule.setOrderId(ByteString)"})
   public void testSetOrderId() {
     // Arrange
-    TransactionResultCapsule transactionResultCapsule = new TransactionResultCapsule(code.SUCESS, 1L);
+    TransactionResultCapsule transactionResultCapsule =
+        new TransactionResultCapsule(code.SUCESS, 1L);
 
     // Act
     transactionResultCapsule.setOrderId(mock(ByteString.class));
 
     // Assert
-    assertArrayEquals(new byte[]{'\b', 1, -54, 1, 0}, transactionResultCapsule.getData());
+    assertArrayEquals(new byte[] {'\b', 1, -54, 1, 0}, transactionResultCapsule.getData());
   }
 
   /**
    * Test {@link TransactionResultCapsule#setOrderId(ByteString)}.
-   * <p>
-   * Method under test: {@link TransactionResultCapsule#setOrderId(ByteString)}
+   *
+   * <p>Method under test: {@link TransactionResultCapsule#setOrderId(ByteString)}
    */
   @Test
   @Category(MaintainedByDiffblue.class)
@@ -6477,13 +6846,13 @@ public class TransactionResultCapsuleDiffblueTest {
     assertEquals(15, instance.getDescriptorForType().getFields().size());
     assertEquals(2, instance.getAllFields().size());
     assertEquals(6, instance.getSerializedSize());
-    assertArrayEquals(new byte[]{-112, 1, '\n', -54, 1, 0}, transactionResultCapsule.getData());
+    assertArrayEquals(new byte[] {-112, 1, '\n', -54, 1, 0}, transactionResultCapsule.getData());
   }
 
   /**
    * Test {@link TransactionResultCapsule#setOrderId(ByteString)}.
-   * <p>
-   * Method under test: {@link TransactionResultCapsule#setOrderId(ByteString)}
+   *
+   * <p>Method under test: {@link TransactionResultCapsule#setOrderId(ByteString)}
    */
   @Test
   @Category(MaintainedByDiffblue.class)
@@ -6502,13 +6871,13 @@ public class TransactionResultCapsuleDiffblueTest {
     assertEquals(15, instance.getDescriptorForType().getFields().size());
     assertEquals(2, instance.getAllFields().size());
     assertEquals(6, instance.getSerializedSize());
-    assertArrayEquals(new byte[]{-96, 1, '\n', -54, 1, 0}, transactionResultCapsule.getData());
+    assertArrayEquals(new byte[] {-96, 1, '\n', -54, 1, 0}, transactionResultCapsule.getData());
   }
 
   /**
    * Test {@link TransactionResultCapsule#setOrderId(ByteString)}.
-   * <p>
-   * Method under test: {@link TransactionResultCapsule#setOrderId(ByteString)}
+   *
+   * <p>Method under test: {@link TransactionResultCapsule#setOrderId(ByteString)}
    */
   @Test
   @Category(MaintainedByDiffblue.class)
@@ -6527,13 +6896,13 @@ public class TransactionResultCapsuleDiffblueTest {
     assertEquals(15, instance.getDescriptorForType().getFields().size());
     assertEquals(2, instance.getAllFields().size());
     assertEquals(6, instance.getSerializedSize());
-    assertArrayEquals(new byte[]{-88, 1, 1, -54, 1, 0}, transactionResultCapsule.getData());
+    assertArrayEquals(new byte[] {-88, 1, 1, -54, 1, 0}, transactionResultCapsule.getData());
   }
 
   /**
    * Test {@link TransactionResultCapsule#setOrderId(ByteString)}.
-   * <p>
-   * Method under test: {@link TransactionResultCapsule#setOrderId(ByteString)}
+   *
+   * <p>Method under test: {@link TransactionResultCapsule#setOrderId(ByteString)}
    */
   @Test
   @Category(MaintainedByDiffblue.class)
@@ -6552,13 +6921,13 @@ public class TransactionResultCapsuleDiffblueTest {
     assertEquals(15, instance.getDescriptorForType().getFields().size());
     assertEquals(2, instance.getAllFields().size());
     assertEquals(6, instance.getSerializedSize());
-    assertArrayEquals(new byte[]{-104, 1, '\n', -54, 1, 0}, transactionResultCapsule.getData());
+    assertArrayEquals(new byte[] {-104, 1, '\n', -54, 1, 0}, transactionResultCapsule.getData());
   }
 
   /**
    * Test {@link TransactionResultCapsule#setOrderId(ByteString)}.
-   * <p>
-   * Method under test: {@link TransactionResultCapsule#setOrderId(ByteString)}
+   *
+   * <p>Method under test: {@link TransactionResultCapsule#setOrderId(ByteString)}
    */
   @Test
   @Category(MaintainedByDiffblue.class)
@@ -6577,36 +6946,39 @@ public class TransactionResultCapsuleDiffblueTest {
     assertEquals(15, instance.getDescriptorForType().getFields().size());
     assertEquals(2, instance.getAllFields().size());
     assertEquals(6, instance.getSerializedSize());
-    assertArrayEquals(new byte[]{-80, 1, 1, -54, 1, 0}, transactionResultCapsule.getData());
+    assertArrayEquals(new byte[] {-80, 1, 1, -54, 1, 0}, transactionResultCapsule.getData());
   }
 
   /**
    * Test {@link TransactionResultCapsule#setOrderId(ByteString)}.
-   * <p>
-   * Method under test: {@link TransactionResultCapsule#setOrderId(ByteString)}
+   *
+   * <p>Method under test: {@link TransactionResultCapsule#setOrderId(ByteString)}
    */
   @Test
   @Category(MaintainedByDiffblue.class)
   @MethodsUnderTest({"void TransactionResultCapsule.setOrderId(ByteString)"})
   public void testSetOrderId7() {
     // Arrange
-    TransactionResultCapsule transactionResultCapsule = new TransactionResultCapsule(code.FAILED, 1L);
+    TransactionResultCapsule transactionResultCapsule =
+        new TransactionResultCapsule(code.FAILED, 1L);
 
     // Act
     transactionResultCapsule.setOrderId(mock(ByteString.class));
 
     // Assert
     assertEquals(3, transactionResultCapsule.getInstance().getAllFields().size());
-    assertArrayEquals(new byte[]{'\b', 1, 16, 1, -54, 1, 0}, transactionResultCapsule.getData());
+    assertArrayEquals(new byte[] {'\b', 1, 16, 1, -54, 1, 0}, transactionResultCapsule.getData());
   }
 
   /**
    * Test {@link TransactionResultCapsule#setOrderId(ByteString)}.
+   *
    * <ul>
-   *   <li>Given {@link TransactionResultCapsule#TransactionResultCapsule()} WithdrawExpireAmount is ten.</li>
+   *   <li>Given {@link TransactionResultCapsule#TransactionResultCapsule()} WithdrawExpireAmount is
+   *       ten.
    * </ul>
-   * <p>
-   * Method under test: {@link TransactionResultCapsule#setOrderId(ByteString)}
+   *
+   * <p>Method under test: {@link TransactionResultCapsule#setOrderId(ByteString)}
    */
   @Test
   @Category(MaintainedByDiffblue.class)
@@ -6625,16 +6997,18 @@ public class TransactionResultCapsuleDiffblueTest {
     assertEquals(15, instance.getDescriptorForType().getFields().size());
     assertEquals(2, instance.getAllFields().size());
     assertEquals(6, instance.getSerializedSize());
-    assertArrayEquals(new byte[]{-54, 1, 0, -40, 1, '\n'}, transactionResultCapsule.getData());
+    assertArrayEquals(new byte[] {-54, 1, 0, -40, 1, '\n'}, transactionResultCapsule.getData());
   }
 
   /**
    * Test {@link TransactionResultCapsule#setOrderId(ByteString)}.
+   *
    * <ul>
-   *   <li>Then {@link TransactionResultCapsule#TransactionResultCapsule()} Data is array of {@code byte} with {@link Byte#MIN_VALUE} and one.</li>
+   *   <li>Then {@link TransactionResultCapsule#TransactionResultCapsule()} Data is array of {@code
+   *       byte} with {@link Byte#MIN_VALUE} and one.
    * </ul>
-   * <p>
-   * Method under test: {@link TransactionResultCapsule#setOrderId(ByteString)}
+   *
+   * <p>Method under test: {@link TransactionResultCapsule#setOrderId(ByteString)}
    */
   @Test
   @Category(MaintainedByDiffblue.class)
@@ -6653,16 +7027,19 @@ public class TransactionResultCapsuleDiffblueTest {
     assertEquals(15, instance.getDescriptorForType().getFields().size());
     assertEquals(2, instance.getAllFields().size());
     assertEquals(6, instance.getSerializedSize());
-    assertArrayEquals(new byte[]{Byte.MIN_VALUE, 1, '\n', -54, 1, 0}, transactionResultCapsule.getData());
+    assertArrayEquals(
+        new byte[] {Byte.MIN_VALUE, 1, '\n', -54, 1, 0}, transactionResultCapsule.getData());
   }
 
   /**
    * Test {@link TransactionResultCapsule#setOrderId(ByteString)}.
+   *
    * <ul>
-   *   <li>Then {@link TransactionResultCapsule#TransactionResultCapsule()} Instance AllFields size is one.</li>
+   *   <li>Then {@link TransactionResultCapsule#TransactionResultCapsule()} Instance AllFields size
+   *       is one.
    * </ul>
-   * <p>
-   * Method under test: {@link TransactionResultCapsule#setOrderId(ByteString)}
+   *
+   * <p>Method under test: {@link TransactionResultCapsule#setOrderId(ByteString)}
    */
   @Test
   @Category(MaintainedByDiffblue.class)
@@ -6679,16 +7056,18 @@ public class TransactionResultCapsuleDiffblueTest {
     assertEquals(1, instance.getAllFields().size());
     assertEquals(15, instance.getDescriptorForType().getFields().size());
     assertEquals(3, instance.getSerializedSize());
-    assertArrayEquals(new byte[]{-54, 1, 0}, transactionResultCapsule.getData());
+    assertArrayEquals(new byte[] {-54, 1, 0}, transactionResultCapsule.getData());
   }
 
   /**
    * Test {@link TransactionResultCapsule#setOrderId(ByteString)}.
+   *
    * <ul>
-   *   <li>Then {@link TransactionResultCapsule#TransactionResultCapsule()} Instance AllFields size is one.</li>
+   *   <li>Then {@link TransactionResultCapsule#TransactionResultCapsule()} Instance AllFields size
+   *       is one.
    * </ul>
-   * <p>
-   * Method under test: {@link TransactionResultCapsule#setOrderId(ByteString)}
+   *
+   * <p>Method under test: {@link TransactionResultCapsule#setOrderId(ByteString)}
    */
   @Test
   @Category(MaintainedByDiffblue.class)
@@ -6706,16 +7085,18 @@ public class TransactionResultCapsuleDiffblueTest {
     assertEquals(1, instance.getAllFields().size());
     assertEquals(15, instance.getDescriptorForType().getFields().size());
     assertEquals(3, instance.getSerializedSize());
-    assertArrayEquals(new byte[]{-54, 1, 0}, transactionResultCapsule.getData());
+    assertArrayEquals(new byte[] {-54, 1, 0}, transactionResultCapsule.getData());
   }
 
   /**
    * Test {@link TransactionResultCapsule#setOrderId(ByteString)}.
+   *
    * <ul>
-   *   <li>Then {@link TransactionResultCapsule#TransactionResultCapsule()} Instance SerializedSize is five.</li>
+   *   <li>Then {@link TransactionResultCapsule#TransactionResultCapsule()} Instance SerializedSize
+   *       is five.
    * </ul>
-   * <p>
-   * Method under test: {@link TransactionResultCapsule#setOrderId(ByteString)}
+   *
+   * <p>Method under test: {@link TransactionResultCapsule#setOrderId(ByteString)}
    */
   @Test
   @Category(MaintainedByDiffblue.class)
@@ -6734,16 +7115,18 @@ public class TransactionResultCapsuleDiffblueTest {
     assertEquals(15, instance.getDescriptorForType().getFields().size());
     assertEquals(2, instance.getAllFields().size());
     assertEquals(5, instance.getSerializedSize());
-    assertArrayEquals(new byte[]{'x', '\n', -54, 1, 0}, transactionResultCapsule.getData());
+    assertArrayEquals(new byte[] {'x', '\n', -54, 1, 0}, transactionResultCapsule.getData());
   }
 
   /**
    * Test {@link TransactionResultCapsule#setOrderId(ByteString)}.
+   *
    * <ul>
-   *   <li>Then {@link TransactionResultCapsule#TransactionResultCapsule()} Instance SerializedSize is seven.</li>
+   *   <li>Then {@link TransactionResultCapsule#TransactionResultCapsule()} Instance SerializedSize
+   *       is seven.
    * </ul>
-   * <p>
-   * Method under test: {@link TransactionResultCapsule#setOrderId(ByteString)}
+   *
+   * <p>Method under test: {@link TransactionResultCapsule#setOrderId(ByteString)}
    */
   @Test
   @Category(MaintainedByDiffblue.class)
@@ -6762,16 +7145,18 @@ public class TransactionResultCapsuleDiffblueTest {
     assertEquals(15, instance.getDescriptorForType().getFields().size());
     assertEquals(2, instance.getAllFields().size());
     assertEquals(7, instance.getSerializedSize());
-    assertArrayEquals(new byte[]{'r', 2, '4', '2', -54, 1, 0}, transactionResultCapsule.getData());
+    assertArrayEquals(new byte[] {'r', 2, '4', '2', -54, 1, 0}, transactionResultCapsule.getData());
   }
 
   /**
    * Test {@link TransactionResultCapsule#setOrderId(ByteString)}.
+   *
    * <ul>
-   *   <li>Then {@link TransactionResultCapsule#TransactionResultCapsule()} Instance SerializedSize is thirteen.</li>
+   *   <li>Then {@link TransactionResultCapsule#TransactionResultCapsule()} Instance SerializedSize
+   *       is thirteen.
    * </ul>
-   * <p>
-   * Method under test: {@link TransactionResultCapsule#setOrderId(ByteString)}
+   *
+   * <p>Method under test: {@link TransactionResultCapsule#setOrderId(ByteString)}
    */
   @Test
   @Category(MaintainedByDiffblue.class)
@@ -6792,17 +7177,20 @@ public class TransactionResultCapsuleDiffblueTest {
     assertEquals(13, instance.getSerializedSize());
     assertEquals(15, instance.getDescriptorForType().getFields().size());
     assertEquals(2, instance.getAllFields().size());
-    assertArrayEquals(new byte[]{-54, 1, 0, -30, 1, 7, '\n', 3, 'f', 'o', 'o', 16, 1},
+    assertArrayEquals(
+        new byte[] {-54, 1, 0, -30, 1, 7, '\n', 3, 'f', 'o', 'o', 16, 1},
         transactionResultCapsule.getData());
   }
 
   /**
    * Test {@link TransactionResultCapsule#setOrderId(ByteString)}.
+   *
    * <ul>
-   *   <li>Then {@link TransactionResultCapsule#TransactionResultCapsule()} OrderDetailsList size is one.</li>
+   *   <li>Then {@link TransactionResultCapsule#TransactionResultCapsule()} OrderDetailsList size is
+   *       one.
    * </ul>
-   * <p>
-   * Method under test: {@link TransactionResultCapsule#setOrderId(ByteString)}
+   *
+   * <p>Method under test: {@link TransactionResultCapsule#setOrderId(ByteString)}
    */
   @Test
   @Category(MaintainedByDiffblue.class)
@@ -6812,47 +7200,47 @@ public class TransactionResultCapsuleDiffblueTest {
     TransactionResultCapsule transactionResultCapsule = new TransactionResultCapsule();
     transactionResultCapsule.addOrderDetails(MarketOrderDetail.getDefaultInstance());
     transactionResultCapsule.putAllCancelUnfreezeV2AmountMap(new HashMap<>());
-    ByteString orderId = mock(ByteString.class);
 
     // Act
-    transactionResultCapsule.setOrderId(orderId);
+    transactionResultCapsule.setOrderId(mock(ByteString.class));
 
     // Assert
     List<MarketOrderDetail> orderDetailsList = transactionResultCapsule.getOrderDetailsList();
     assertEquals(1, orderDetailsList.size());
-    ByteString byteString = orderId.EMPTY;
+    ByteString byteString = ByteString.EMPTY;
     MarketOrderDetail getResult = orderDetailsList.get(0);
     assertSame(byteString, getResult.getMakerOrderId());
     assertSame(byteString, getResult.getTakerOrderId());
-    assertArrayEquals(new byte[]{-54, 1, 0, -46, 1, 0}, transactionResultCapsule.getData());
+    assertArrayEquals(new byte[] {-54, 1, 0, -46, 1, 0}, transactionResultCapsule.getData());
   }
 
   /**
    * Test {@link TransactionResultCapsule#getOrderDetailsList()}.
-   * <p>
-   * Method under test: {@link TransactionResultCapsule#getOrderDetailsList()}
+   *
+   * <p>Method under test: {@link TransactionResultCapsule#getOrderDetailsList()}
    */
   @Test
   @Category(MaintainedByDiffblue.class)
   @MethodsUnderTest({"List TransactionResultCapsule.getOrderDetailsList()"})
   public void testGetOrderDetailsList() {
     // Arrange, Act and Assert
-    assertTrue((new TransactionResultCapsule()).getOrderDetailsList().isEmpty());
+    assertTrue(new TransactionResultCapsule().getOrderDetailsList().isEmpty());
   }
 
   /**
    * Test {@link TransactionResultCapsule#getData()}.
+   *
    * <ul>
-   *   <li>Given {@link ByteString} {@link ByteString#isEmpty()} return {@code true}.</li>
-   *   <li>Then calls {@link ByteString#isEmpty()}.</li>
+   *   <li>Given {@link ByteString} {@link ByteString#isEmpty()} return {@code true}.
+   *   <li>Then return empty array of {@code byte}.
    * </ul>
-   * <p>
-   * Method under test: {@link TransactionResultCapsule#getData()}
+   *
+   * <p>Method under test: {@link TransactionResultCapsule#getData()}
    */
   @Test
   @Category(MaintainedByDiffblue.class)
   @MethodsUnderTest({"byte[] TransactionResultCapsule.getData()"})
-  public void testGetData_givenByteStringIsEmptyReturnTrue_thenCallsIsEmpty() {
+  public void testGetData_givenByteStringIsEmptyReturnTrue_thenReturnEmptyArrayOfByte() {
     // Arrange
     ByteString orderId = mock(ByteString.class);
     when(orderId.isEmpty()).thenReturn(true);
@@ -6866,17 +7254,18 @@ public class TransactionResultCapsuleDiffblueTest {
 
     // Assert
     verify(orderId, atLeast(1)).isEmpty();
-    assertArrayEquals(new byte[]{}, actualData);
+    assertArrayEquals(new byte[] {}, actualData);
   }
 
   /**
    * Test {@link TransactionResultCapsule#getData()}.
+   *
    * <ul>
-   *   <li>Given {@link HashMap#HashMap()} {@code foo} is minus one.</li>
-   *   <li>Then return array of {@code byte} with minus thirty and one.</li>
+   *   <li>Given {@link HashMap#HashMap()} {@code foo} is minus one.
+   *   <li>Then return array of {@code byte} with minus thirty and one.
    * </ul>
-   * <p>
-   * Method under test: {@link TransactionResultCapsule#getData()}
+   *
+   * <p>Method under test: {@link TransactionResultCapsule#getData()}
    */
   @Test
   @Category(MaintainedByDiffblue.class)
@@ -6885,6 +7274,7 @@ public class TransactionResultCapsuleDiffblueTest {
     // Arrange
     HashMap<String, Long> map = new HashMap<>();
     map.put("foo", -1L);
+
     ByteString orderId = mock(ByteString.class);
     when(orderId.isEmpty()).thenReturn(true);
 
@@ -6897,51 +7287,56 @@ public class TransactionResultCapsuleDiffblueTest {
 
     // Assert
     verify(orderId, atLeast(1)).isEmpty();
-    assertArrayEquals(new byte[]{-30, 1, 16, '\n', 3, 'f', 'o', 'o', 16, -1, -1, -1, -1, -1, -1, -1, -1, -1, 1},
+    assertArrayEquals(
+        new byte[] {-30, 1, 16, '\n', 3, 'f', 'o', 'o', 16, -1, -1, -1, -1, -1, -1, -1, -1, -1, 1},
         actualData);
   }
 
   /**
    * Test {@link TransactionResultCapsule#getData()}.
+   *
    * <ul>
-   *   <li>Given {@link TransactionResultCapsule#TransactionResultCapsule()}.</li>
-   *   <li>Then return empty array of {@code byte}.</li>
+   *   <li>Given {@link TransactionResultCapsule#TransactionResultCapsule()}.
+   *   <li>Then return empty array of {@code byte}.
    * </ul>
-   * <p>
-   * Method under test: {@link TransactionResultCapsule#getData()}
+   *
+   * <p>Method under test: {@link TransactionResultCapsule#getData()}
    */
   @Test
   @Category(MaintainedByDiffblue.class)
   @MethodsUnderTest({"byte[] TransactionResultCapsule.getData()"})
   public void testGetData_givenTransactionResultCapsule_thenReturnEmptyArrayOfByte() {
     // Arrange, Act and Assert
-    assertArrayEquals(new byte[]{}, (new TransactionResultCapsule()).getData());
+    assertArrayEquals(new byte[] {}, new TransactionResultCapsule().getData());
   }
 
   /**
    * Test {@link TransactionResultCapsule#getData()}.
+   *
    * <ul>
-   *   <li>Then return array of {@code byte} with backspace and minus one.</li>
+   *   <li>Then return array of {@code byte} with backspace and minus one.
    * </ul>
-   * <p>
-   * Method under test: {@link TransactionResultCapsule#getData()}
+   *
+   * <p>Method under test: {@link TransactionResultCapsule#getData()}
    */
   @Test
   @Category(MaintainedByDiffblue.class)
   @MethodsUnderTest({"byte[] TransactionResultCapsule.getData()"})
   public void testGetData_thenReturnArrayOfByteWithBackspaceAndMinusOne() {
     // Arrange, Act and Assert
-    assertArrayEquals(new byte[]{'\b', -1, -1, -1, -1, -1, -1, -1, -1, -1, 1},
-        (new TransactionResultCapsule(code.SUCESS, -1L)).getData());
+    assertArrayEquals(
+        new byte[] {'\b', -1, -1, -1, -1, -1, -1, -1, -1, -1, 1},
+        new TransactionResultCapsule(code.SUCESS, -1L).getData());
   }
 
   /**
    * Test {@link TransactionResultCapsule#getData()}.
+   *
    * <ul>
-   *   <li>Then return array of {@code byte} with backspace and one.</li>
+   *   <li>Then return array of {@code byte} with backspace and one.
    * </ul>
-   * <p>
-   * Method under test: {@link TransactionResultCapsule#getData()}
+   *
+   * <p>Method under test: {@link TransactionResultCapsule#getData()}
    */
   @Test
   @Category(MaintainedByDiffblue.class)
@@ -6953,16 +7348,17 @@ public class TransactionResultCapsuleDiffblueTest {
     transactionResultCapsule.putAllCancelUnfreezeV2AmountMap(new HashMap<>());
 
     // Act and Assert
-    assertArrayEquals(new byte[]{'\b', 1}, transactionResultCapsule.getData());
+    assertArrayEquals(new byte[] {'\b', 1}, transactionResultCapsule.getData());
   }
 
   /**
    * Test {@link TransactionResultCapsule#getData()}.
+   *
    * <ul>
-   *   <li>Then return array of {@code byte} with {@link Byte#MIN_VALUE} and one.</li>
+   *   <li>Then return array of {@code byte} with {@link Byte#MIN_VALUE} and one.
    * </ul>
-   * <p>
-   * Method under test: {@link TransactionResultCapsule#getData()}
+   *
+   * <p>Method under test: {@link TransactionResultCapsule#getData()}
    */
   @Test
   @Category(MaintainedByDiffblue.class)
@@ -6974,16 +7370,17 @@ public class TransactionResultCapsuleDiffblueTest {
     transactionResultCapsule.putAllCancelUnfreezeV2AmountMap(new HashMap<>());
 
     // Act and Assert
-    assertArrayEquals(new byte[]{Byte.MIN_VALUE, 1, '\n'}, transactionResultCapsule.getData());
+    assertArrayEquals(new byte[] {Byte.MIN_VALUE, 1, '\n'}, transactionResultCapsule.getData());
   }
 
   /**
    * Test {@link TransactionResultCapsule#getData()}.
+   *
    * <ul>
-   *   <li>Then return array of {@code byte} with minus eighty and one.</li>
+   *   <li>Then return array of {@code byte} with minus eighty and one.
    * </ul>
-   * <p>
-   * Method under test: {@link TransactionResultCapsule#getData()}
+   *
+   * <p>Method under test: {@link TransactionResultCapsule#getData()}
    */
   @Test
   @Category(MaintainedByDiffblue.class)
@@ -6995,16 +7392,19 @@ public class TransactionResultCapsuleDiffblueTest {
     transactionResultCapsule.putAllCancelUnfreezeV2AmountMap(new HashMap<>());
 
     // Act and Assert
-    assertArrayEquals(new byte[]{-80, 1, -1, -1, -1, -1, -1, -1, -1, -1, -1, 1}, transactionResultCapsule.getData());
+    assertArrayEquals(
+        new byte[] {-80, 1, -1, -1, -1, -1, -1, -1, -1, -1, -1, 1},
+        transactionResultCapsule.getData());
   }
 
   /**
    * Test {@link TransactionResultCapsule#getData()}.
+   *
    * <ul>
-   *   <li>Then return array of {@code byte} with minus eighty-eight and one.</li>
+   *   <li>Then return array of {@code byte} with minus eighty-eight and one.
    * </ul>
-   * <p>
-   * Method under test: {@link TransactionResultCapsule#getData()}
+   *
+   * <p>Method under test: {@link TransactionResultCapsule#getData()}
    */
   @Test
   @Category(MaintainedByDiffblue.class)
@@ -7016,16 +7416,83 @@ public class TransactionResultCapsuleDiffblueTest {
     transactionResultCapsule.putAllCancelUnfreezeV2AmountMap(new HashMap<>());
 
     // Act and Assert
-    assertArrayEquals(new byte[]{-88, 1, 1}, transactionResultCapsule.getData());
+    assertArrayEquals(new byte[] {-88, 1, 1}, transactionResultCapsule.getData());
   }
 
   /**
    * Test {@link TransactionResultCapsule#getData()}.
+   *
    * <ul>
-   *   <li>Then return array of {@code byte} with minus forty and one.</li>
+   *   <li>Then return array of {@code byte} with minus fifty-four and one.
    * </ul>
-   * <p>
-   * Method under test: {@link TransactionResultCapsule#getData()}
+   *
+   * <p>Method under test: {@link TransactionResultCapsule#getData()}
+   */
+  @Test
+  @Category(MaintainedByDiffblue.class)
+  @MethodsUnderTest({"byte[] TransactionResultCapsule.getData()"})
+  public void testGetData_thenReturnArrayOfByteWithMinusFiftyFourAndOne() {
+    // Arrange
+    ByteString orderId = mock(ByteString.class);
+    when(orderId.size()).thenReturn(0);
+    when(orderId.isEmpty()).thenReturn(false);
+
+    TransactionResultCapsule transactionResultCapsule = new TransactionResultCapsule();
+    transactionResultCapsule.setOrderId(orderId);
+    transactionResultCapsule.putAllCancelUnfreezeV2AmountMap(new HashMap<>());
+
+    // Act
+    byte[] actualData = transactionResultCapsule.getData();
+
+    // Assert
+    verify(orderId, atLeast(1)).isEmpty();
+    verify(orderId, atLeast(1)).size();
+    assertArrayEquals(new byte[] {-54, 1, 0}, actualData);
+  }
+
+  /**
+   * Test {@link TransactionResultCapsule#getData()}.
+   *
+   * <ul>
+   *   <li>Then return array of {@code byte} with minus fifty-four and one.
+   * </ul>
+   *
+   * <p>Method under test: {@link TransactionResultCapsule#getData()}
+   */
+  @Test
+  @Category(MaintainedByDiffblue.class)
+  @MethodsUnderTest({"byte[] TransactionResultCapsule.getData()"})
+  public void testGetData_thenReturnArrayOfByteWithMinusFiftyFourAndOne2() {
+    // Arrange
+    ByteString orderId = mock(ByteString.class);
+    when(orderId.size()).thenReturn(0);
+    when(orderId.isEmpty()).thenReturn(false);
+
+    TransactionResultCapsule transactionResultCapsule = new TransactionResultCapsule();
+    transactionResultCapsule.setWithdrawExpireAmount(Long.MAX_VALUE);
+    transactionResultCapsule.addOrderDetails(MarketOrderDetail.getDefaultInstance());
+    transactionResultCapsule.setOrderId(orderId);
+    transactionResultCapsule.putAllCancelUnfreezeV2AmountMap(new HashMap<>());
+
+    // Act
+    byte[] actualData = transactionResultCapsule.getData();
+
+    // Assert
+    verify(orderId, atLeast(1)).isEmpty();
+    verify(orderId, atLeast(1)).size();
+    assertArrayEquals(
+        new byte[] {-54, 1, 0, -46, 1, 0, -40, 1, -1, -1, -1, -1, -1, -1, -1, -1, Byte.MAX_VALUE},
+        actualData);
+  }
+
+  /**
+   * Test {@link TransactionResultCapsule#getData()}.
+   *
+   * <ul>
+   *   <li>Then return array of {@code byte} with minus forty and one.
+   * </ul>
+   *
+   * <p>Method under test: {@link TransactionResultCapsule#getData()}
    */
   @Test
   @Category(MaintainedByDiffblue.class)
@@ -7037,16 +7504,17 @@ public class TransactionResultCapsuleDiffblueTest {
     transactionResultCapsule.putAllCancelUnfreezeV2AmountMap(new HashMap<>());
 
     // Act and Assert
-    assertArrayEquals(new byte[]{-40, 1, '\n'}, transactionResultCapsule.getData());
+    assertArrayEquals(new byte[] {-40, 1, '\n'}, transactionResultCapsule.getData());
   }
 
   /**
    * Test {@link TransactionResultCapsule#getData()}.
+   *
    * <ul>
-   *   <li>Then return array of {@code byte} with minus forty-six and one.</li>
+   *   <li>Then return array of {@code byte} with minus forty-six and one.
    * </ul>
-   * <p>
-   * Method under test: {@link TransactionResultCapsule#getData()}
+   *
+   * <p>Method under test: {@link TransactionResultCapsule#getData()}
    */
   @Test
   @Category(MaintainedByDiffblue.class)
@@ -7058,16 +7526,17 @@ public class TransactionResultCapsuleDiffblueTest {
     transactionResultCapsule.putAllCancelUnfreezeV2AmountMap(new HashMap<>());
 
     // Act and Assert
-    assertArrayEquals(new byte[]{-46, 1, 0}, transactionResultCapsule.getData());
+    assertArrayEquals(new byte[] {-46, 1, 0}, transactionResultCapsule.getData());
   }
 
   /**
    * Test {@link TransactionResultCapsule#getData()}.
+   *
    * <ul>
-   *   <li>Then return array of {@code byte} with minus ninety-six and one.</li>
+   *   <li>Then return array of {@code byte} with minus ninety-six and one.
    * </ul>
-   * <p>
-   * Method under test: {@link TransactionResultCapsule#getData()}
+   *
+   * <p>Method under test: {@link TransactionResultCapsule#getData()}
    */
   @Test
   @Category(MaintainedByDiffblue.class)
@@ -7079,16 +7548,17 @@ public class TransactionResultCapsuleDiffblueTest {
     transactionResultCapsule.putAllCancelUnfreezeV2AmountMap(new HashMap<>());
 
     // Act and Assert
-    assertArrayEquals(new byte[]{-96, 1, '\n'}, transactionResultCapsule.getData());
+    assertArrayEquals(new byte[] {-96, 1, '\n'}, transactionResultCapsule.getData());
   }
 
   /**
    * Test {@link TransactionResultCapsule#getData()}.
+   *
    * <ul>
-   *   <li>Then return array of {@code byte} with minus one hundred four and one.</li>
+   *   <li>Then return array of {@code byte} with minus one hundred four and one.
    * </ul>
-   * <p>
-   * Method under test: {@link TransactionResultCapsule#getData()}
+   *
+   * <p>Method under test: {@link TransactionResultCapsule#getData()}
    */
   @Test
   @Category(MaintainedByDiffblue.class)
@@ -7100,16 +7570,17 @@ public class TransactionResultCapsuleDiffblueTest {
     transactionResultCapsule.putAllCancelUnfreezeV2AmountMap(new HashMap<>());
 
     // Act and Assert
-    assertArrayEquals(new byte[]{-104, 1, '\n'}, transactionResultCapsule.getData());
+    assertArrayEquals(new byte[] {-104, 1, '\n'}, transactionResultCapsule.getData());
   }
 
   /**
    * Test {@link TransactionResultCapsule#getData()}.
+   *
    * <ul>
-   *   <li>Then return array of {@code byte} with minus one hundred twelve and one.</li>
+   *   <li>Then return array of {@code byte} with minus one hundred twelve and one.
    * </ul>
-   * <p>
-   * Method under test: {@link TransactionResultCapsule#getData()}
+   *
+   * <p>Method under test: {@link TransactionResultCapsule#getData()}
    */
   @Test
   @Category(MaintainedByDiffblue.class)
@@ -7121,16 +7592,17 @@ public class TransactionResultCapsuleDiffblueTest {
     transactionResultCapsule.putAllCancelUnfreezeV2AmountMap(new HashMap<>());
 
     // Act and Assert
-    assertArrayEquals(new byte[]{-112, 1, '\n'}, transactionResultCapsule.getData());
+    assertArrayEquals(new byte[] {-112, 1, '\n'}, transactionResultCapsule.getData());
   }
 
   /**
    * Test {@link TransactionResultCapsule#getData()}.
+   *
    * <ul>
-   *   <li>Then return array of {@code byte} with {@code r} and two.</li>
+   *   <li>Then return array of {@code byte} with {@code r} and two.
    * </ul>
-   * <p>
-   * Method under test: {@link TransactionResultCapsule#getData()}
+   *
+   * <p>Method under test: {@link TransactionResultCapsule#getData()}
    */
   @Test
   @Category(MaintainedByDiffblue.class)
@@ -7142,16 +7614,17 @@ public class TransactionResultCapsuleDiffblueTest {
     transactionResultCapsule.putAllCancelUnfreezeV2AmountMap(new HashMap<>());
 
     // Act and Assert
-    assertArrayEquals(new byte[]{'r', 2, '4', '2'}, transactionResultCapsule.getData());
+    assertArrayEquals(new byte[] {'r', 2, '4', '2'}, transactionResultCapsule.getData());
   }
 
   /**
    * Test {@link TransactionResultCapsule#getData()}.
+   *
    * <ul>
-   *   <li>Then return array of {@code byte} with {@code x} and lf.</li>
+   *   <li>Then return array of {@code byte} with {@code x} and lf.
    * </ul>
-   * <p>
-   * Method under test: {@link TransactionResultCapsule#getData()}
+   *
+   * <p>Method under test: {@link TransactionResultCapsule#getData()}
    */
   @Test
   @Category(MaintainedByDiffblue.class)
@@ -7163,16 +7636,17 @@ public class TransactionResultCapsuleDiffblueTest {
     transactionResultCapsule.putAllCancelUnfreezeV2AmountMap(new HashMap<>());
 
     // Act and Assert
-    assertArrayEquals(new byte[]{'x', '\n'}, transactionResultCapsule.getData());
+    assertArrayEquals(new byte[] {'x', '\n'}, transactionResultCapsule.getData());
   }
 
   /**
    * Test {@link TransactionResultCapsule#getData()}.
+   *
    * <ul>
-   *   <li>Then return empty array of {@code byte}.</li>
+   *   <li>Then return empty array of {@code byte}.
    * </ul>
-   * <p>
-   * Method under test: {@link TransactionResultCapsule#getData()}
+   *
+   * <p>Method under test: {@link TransactionResultCapsule#getData()}
    */
   @Test
   @Category(MaintainedByDiffblue.class)
@@ -7183,20 +7657,20 @@ public class TransactionResultCapsuleDiffblueTest {
     transactionResultCapsule.putAllCancelUnfreezeV2AmountMap(new HashMap<>());
 
     // Act and Assert
-    assertArrayEquals(new byte[]{}, transactionResultCapsule.getData());
+    assertArrayEquals(new byte[] {}, transactionResultCapsule.getData());
   }
 
   /**
    * Test {@link TransactionResultCapsule#getInstance()}.
-   * <p>
-   * Method under test: {@link TransactionResultCapsule#getInstance()}
+   *
+   * <p>Method under test: {@link TransactionResultCapsule#getInstance()}
    */
   @Test
   @Category(MaintainedByDiffblue.class)
   @MethodsUnderTest({"Result TransactionResultCapsule.getInstance()"})
   public void testGetInstance() {
     // Arrange and Act
-    Result actualInstance = (new TransactionResultCapsule()).getInstance();
+    Result actualInstance = new TransactionResultCapsule().getInstance();
 
     // Assert
     assertEquals("", actualInstance.getInitializationErrorString());
@@ -7224,7 +7698,8 @@ public class TransactionResultCapsuleDiffblueTest {
     assertTrue(actualInstance.getCancelUnfreezeV2Amount().isEmpty());
     assertTrue(actualInstance.getCancelUnfreezeV2AmountMap().isEmpty());
     assertTrue(actualInstance.isInitialized());
-    assertEquals(actualInstance, actualInstance.getDefaultInstanceForType());
+    Result actualDefaultInstanceForType = actualInstance.getDefaultInstanceForType();
+    assertEquals(actualInstance, actualDefaultInstanceForType);
     assertSame(orderDetailsList, actualInstance.getOrderDetailsOrBuilderList());
   }
 }

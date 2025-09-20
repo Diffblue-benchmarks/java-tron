@@ -24,12 +24,10 @@ import com.fasterxml.jackson.databind.deser.BeanDeserializerFactory;
 import com.fasterxml.jackson.databind.deser.DefaultDeserializationContext;
 import com.fasterxml.jackson.databind.deser.DefaultDeserializationContext.Impl;
 import com.fasterxml.jackson.databind.json.JsonMapper;
-import com.fasterxml.jackson.databind.json.JsonMapper.Builder;
 import com.fasterxml.jackson.databind.util.AccessPattern;
 import java.io.IOException;
 import org.junit.Test;
 import org.junit.experimental.categories.Category;
-import org.mockito.Mockito;
 import org.tron.keystore.WalletFile.Aes128CtrKdfParams;
 import org.tron.keystore.WalletFile.CipherParams;
 import org.tron.keystore.WalletFile.Crypto;
@@ -39,13 +37,16 @@ import org.tron.keystore.WalletFile.ScryptKdfParams;
 
 public class WalletFileDiffblueTest {
   /**
-   * Test Aes128CtrKdfParams {@link Aes128CtrKdfParams#equals(Object)}, and {@link Aes128CtrKdfParams#hashCode()}.
+   * Test Aes128CtrKdfParams {@link Aes128CtrKdfParams#equals(Object)}, and {@link
+   * Aes128CtrKdfParams#hashCode()}.
+   *
    * <ul>
-   *   <li>When other is equal.</li>
-   *   <li>Then return equal.</li>
+   *   <li>When other is equal.
+   *   <li>Then return equal.
    * </ul>
-   * <p>
-   * Methods under test:
+   *
+   * <p>Methods under test:
+   *
    * <ul>
    *   <li>{@link Aes128CtrKdfParams#equals(Object)}
    *   <li>{@link Aes128CtrKdfParams#hashCode()}
@@ -53,7 +54,10 @@ public class WalletFileDiffblueTest {
    */
   @Test
   @Category(MaintainedByDiffblue.class)
-  @MethodsUnderTest({"boolean Aes128CtrKdfParams.equals(Object)", "int Aes128CtrKdfParams.hashCode()"})
+  @MethodsUnderTest({
+    "boolean Aes128CtrKdfParams.equals(Object)",
+    "int Aes128CtrKdfParams.hashCode()"
+  })
   public void testAes128CtrKdfParamsEqualsAndHashCode_whenOtherIsEqual_thenReturnEqual() {
     // Arrange
     Aes128CtrKdfParams aes128CtrKdfParams = new Aes128CtrKdfParams();
@@ -70,18 +74,20 @@ public class WalletFileDiffblueTest {
 
     // Act and Assert
     assertEquals(aes128CtrKdfParams, aes128CtrKdfParams2);
-    int expectedHashCodeResult = aes128CtrKdfParams.hashCode();
-    assertEquals(expectedHashCodeResult, aes128CtrKdfParams2.hashCode());
+    assertEquals(aes128CtrKdfParams.hashCode(), aes128CtrKdfParams2.hashCode());
   }
 
   /**
-   * Test Aes128CtrKdfParams {@link Aes128CtrKdfParams#equals(Object)}, and {@link Aes128CtrKdfParams#hashCode()}.
+   * Test Aes128CtrKdfParams {@link Aes128CtrKdfParams#equals(Object)}, and {@link
+   * Aes128CtrKdfParams#hashCode()}.
+   *
    * <ul>
-   *   <li>When other is equal.</li>
-   *   <li>Then return equal.</li>
+   *   <li>When other is equal.
+   *   <li>Then return equal.
    * </ul>
-   * <p>
-   * Methods under test:
+   *
+   * <p>Methods under test:
+   *
    * <ul>
    *   <li>{@link Aes128CtrKdfParams#equals(Object)}
    *   <li>{@link Aes128CtrKdfParams#hashCode()}
@@ -89,7 +95,10 @@ public class WalletFileDiffblueTest {
    */
   @Test
   @Category(MaintainedByDiffblue.class)
-  @MethodsUnderTest({"boolean Aes128CtrKdfParams.equals(Object)", "int Aes128CtrKdfParams.hashCode()"})
+  @MethodsUnderTest({
+    "boolean Aes128CtrKdfParams.equals(Object)",
+    "int Aes128CtrKdfParams.hashCode()"
+  })
   public void testAes128CtrKdfParamsEqualsAndHashCode_whenOtherIsEqual_thenReturnEqual2() {
     // Arrange
     Aes128CtrKdfParams aes128CtrKdfParams = new Aes128CtrKdfParams();
@@ -106,18 +115,20 @@ public class WalletFileDiffblueTest {
 
     // Act and Assert
     assertEquals(aes128CtrKdfParams, aes128CtrKdfParams2);
-    int expectedHashCodeResult = aes128CtrKdfParams.hashCode();
-    assertEquals(expectedHashCodeResult, aes128CtrKdfParams2.hashCode());
+    assertEquals(aes128CtrKdfParams.hashCode(), aes128CtrKdfParams2.hashCode());
   }
 
   /**
-   * Test Aes128CtrKdfParams {@link Aes128CtrKdfParams#equals(Object)}, and {@link Aes128CtrKdfParams#hashCode()}.
+   * Test Aes128CtrKdfParams {@link Aes128CtrKdfParams#equals(Object)}, and {@link
+   * Aes128CtrKdfParams#hashCode()}.
+   *
    * <ul>
-   *   <li>When other is equal.</li>
-   *   <li>Then return equal.</li>
+   *   <li>When other is equal.
+   *   <li>Then return equal.
    * </ul>
-   * <p>
-   * Methods under test:
+   *
+   * <p>Methods under test:
+   *
    * <ul>
    *   <li>{@link Aes128CtrKdfParams#equals(Object)}
    *   <li>{@link Aes128CtrKdfParams#hashCode()}
@@ -125,7 +136,10 @@ public class WalletFileDiffblueTest {
    */
   @Test
   @Category(MaintainedByDiffblue.class)
-  @MethodsUnderTest({"boolean Aes128CtrKdfParams.equals(Object)", "int Aes128CtrKdfParams.hashCode()"})
+  @MethodsUnderTest({
+    "boolean Aes128CtrKdfParams.equals(Object)",
+    "int Aes128CtrKdfParams.hashCode()"
+  })
   public void testAes128CtrKdfParamsEqualsAndHashCode_whenOtherIsEqual_thenReturnEqual3() {
     // Arrange
     Aes128CtrKdfParams aes128CtrKdfParams = new Aes128CtrKdfParams();
@@ -142,18 +156,20 @@ public class WalletFileDiffblueTest {
 
     // Act and Assert
     assertEquals(aes128CtrKdfParams, aes128CtrKdfParams2);
-    int expectedHashCodeResult = aes128CtrKdfParams.hashCode();
-    assertEquals(expectedHashCodeResult, aes128CtrKdfParams2.hashCode());
+    assertEquals(aes128CtrKdfParams.hashCode(), aes128CtrKdfParams2.hashCode());
   }
 
   /**
-   * Test Aes128CtrKdfParams {@link Aes128CtrKdfParams#equals(Object)}, and {@link Aes128CtrKdfParams#hashCode()}.
+   * Test Aes128CtrKdfParams {@link Aes128CtrKdfParams#equals(Object)}, and {@link
+   * Aes128CtrKdfParams#hashCode()}.
+   *
    * <ul>
-   *   <li>When other is same.</li>
-   *   <li>Then return equal.</li>
+   *   <li>When other is same.
+   *   <li>Then return equal.
    * </ul>
-   * <p>
-   * Methods under test:
+   *
+   * <p>Methods under test:
+   *
    * <ul>
    *   <li>{@link Aes128CtrKdfParams#equals(Object)}
    *   <li>{@link Aes128CtrKdfParams#hashCode()}
@@ -161,7 +177,10 @@ public class WalletFileDiffblueTest {
    */
   @Test
   @Category(MaintainedByDiffblue.class)
-  @MethodsUnderTest({"boolean Aes128CtrKdfParams.equals(Object)", "int Aes128CtrKdfParams.hashCode()"})
+  @MethodsUnderTest({
+    "boolean Aes128CtrKdfParams.equals(Object)",
+    "int Aes128CtrKdfParams.hashCode()"
+  })
   public void testAes128CtrKdfParamsEqualsAndHashCode_whenOtherIsSame_thenReturnEqual() {
     // Arrange
     Aes128CtrKdfParams aes128CtrKdfParams = new Aes128CtrKdfParams();
@@ -178,16 +197,20 @@ public class WalletFileDiffblueTest {
 
   /**
    * Test Aes128CtrKdfParams {@link Aes128CtrKdfParams#equals(Object)}.
+   *
    * <ul>
-   *   <li>When other is different.</li>
-   *   <li>Then return not equal.</li>
+   *   <li>When other is different.
+   *   <li>Then return not equal.
    * </ul>
-   * <p>
-   * Method under test: {@link Aes128CtrKdfParams#equals(Object)}
+   *
+   * <p>Method under test: {@link Aes128CtrKdfParams#equals(Object)}
    */
   @Test
   @Category(MaintainedByDiffblue.class)
-  @MethodsUnderTest({"boolean Aes128CtrKdfParams.equals(Object)", "int Aes128CtrKdfParams.hashCode()"})
+  @MethodsUnderTest({
+    "boolean Aes128CtrKdfParams.equals(Object)",
+    "int Aes128CtrKdfParams.hashCode()"
+  })
   public void testAes128CtrKdfParamsEquals_whenOtherIsDifferent_thenReturnNotEqual() {
     // Arrange
     Aes128CtrKdfParams aes128CtrKdfParams = new Aes128CtrKdfParams();
@@ -208,16 +231,20 @@ public class WalletFileDiffblueTest {
 
   /**
    * Test Aes128CtrKdfParams {@link Aes128CtrKdfParams#equals(Object)}.
+   *
    * <ul>
-   *   <li>When other is different.</li>
-   *   <li>Then return not equal.</li>
+   *   <li>When other is different.
+   *   <li>Then return not equal.
    * </ul>
-   * <p>
-   * Method under test: {@link Aes128CtrKdfParams#equals(Object)}
+   *
+   * <p>Method under test: {@link Aes128CtrKdfParams#equals(Object)}
    */
   @Test
   @Category(MaintainedByDiffblue.class)
-  @MethodsUnderTest({"boolean Aes128CtrKdfParams.equals(Object)", "int Aes128CtrKdfParams.hashCode()"})
+  @MethodsUnderTest({
+    "boolean Aes128CtrKdfParams.equals(Object)",
+    "int Aes128CtrKdfParams.hashCode()"
+  })
   public void testAes128CtrKdfParamsEquals_whenOtherIsDifferent_thenReturnNotEqual2() {
     // Arrange
     Aes128CtrKdfParams aes128CtrKdfParams = new Aes128CtrKdfParams();
@@ -238,16 +265,20 @@ public class WalletFileDiffblueTest {
 
   /**
    * Test Aes128CtrKdfParams {@link Aes128CtrKdfParams#equals(Object)}.
+   *
    * <ul>
-   *   <li>When other is different.</li>
-   *   <li>Then return not equal.</li>
+   *   <li>When other is different.
+   *   <li>Then return not equal.
    * </ul>
-   * <p>
-   * Method under test: {@link Aes128CtrKdfParams#equals(Object)}
+   *
+   * <p>Method under test: {@link Aes128CtrKdfParams#equals(Object)}
    */
   @Test
   @Category(MaintainedByDiffblue.class)
-  @MethodsUnderTest({"boolean Aes128CtrKdfParams.equals(Object)", "int Aes128CtrKdfParams.hashCode()"})
+  @MethodsUnderTest({
+    "boolean Aes128CtrKdfParams.equals(Object)",
+    "int Aes128CtrKdfParams.hashCode()"
+  })
   public void testAes128CtrKdfParamsEquals_whenOtherIsDifferent_thenReturnNotEqual3() {
     // Arrange
     Aes128CtrKdfParams aes128CtrKdfParams = new Aes128CtrKdfParams();
@@ -268,16 +299,20 @@ public class WalletFileDiffblueTest {
 
   /**
    * Test Aes128CtrKdfParams {@link Aes128CtrKdfParams#equals(Object)}.
+   *
    * <ul>
-   *   <li>When other is different.</li>
-   *   <li>Then return not equal.</li>
+   *   <li>When other is different.
+   *   <li>Then return not equal.
    * </ul>
-   * <p>
-   * Method under test: {@link Aes128CtrKdfParams#equals(Object)}
+   *
+   * <p>Method under test: {@link Aes128CtrKdfParams#equals(Object)}
    */
   @Test
   @Category(MaintainedByDiffblue.class)
-  @MethodsUnderTest({"boolean Aes128CtrKdfParams.equals(Object)", "int Aes128CtrKdfParams.hashCode()"})
+  @MethodsUnderTest({
+    "boolean Aes128CtrKdfParams.equals(Object)",
+    "int Aes128CtrKdfParams.hashCode()"
+  })
   public void testAes128CtrKdfParamsEquals_whenOtherIsDifferent_thenReturnNotEqual4() {
     // Arrange
     Aes128CtrKdfParams aes128CtrKdfParams = new Aes128CtrKdfParams();
@@ -298,16 +333,20 @@ public class WalletFileDiffblueTest {
 
   /**
    * Test Aes128CtrKdfParams {@link Aes128CtrKdfParams#equals(Object)}.
+   *
    * <ul>
-   *   <li>When other is different.</li>
-   *   <li>Then return not equal.</li>
+   *   <li>When other is different.
+   *   <li>Then return not equal.
    * </ul>
-   * <p>
-   * Method under test: {@link Aes128CtrKdfParams#equals(Object)}
+   *
+   * <p>Method under test: {@link Aes128CtrKdfParams#equals(Object)}
    */
   @Test
   @Category(MaintainedByDiffblue.class)
-  @MethodsUnderTest({"boolean Aes128CtrKdfParams.equals(Object)", "int Aes128CtrKdfParams.hashCode()"})
+  @MethodsUnderTest({
+    "boolean Aes128CtrKdfParams.equals(Object)",
+    "int Aes128CtrKdfParams.hashCode()"
+  })
   public void testAes128CtrKdfParamsEquals_whenOtherIsDifferent_thenReturnNotEqual5() {
     // Arrange
     Aes128CtrKdfParams aes128CtrKdfParams = new Aes128CtrKdfParams();
@@ -328,16 +367,20 @@ public class WalletFileDiffblueTest {
 
   /**
    * Test Aes128CtrKdfParams {@link Aes128CtrKdfParams#equals(Object)}.
+   *
    * <ul>
-   *   <li>When other is {@code null}.</li>
-   *   <li>Then return not equal.</li>
+   *   <li>When other is {@code null}.
+   *   <li>Then return not equal.
    * </ul>
-   * <p>
-   * Method under test: {@link Aes128CtrKdfParams#equals(Object)}
+   *
+   * <p>Method under test: {@link Aes128CtrKdfParams#equals(Object)}
    */
   @Test
   @Category(MaintainedByDiffblue.class)
-  @MethodsUnderTest({"boolean Aes128CtrKdfParams.equals(Object)", "int Aes128CtrKdfParams.hashCode()"})
+  @MethodsUnderTest({
+    "boolean Aes128CtrKdfParams.equals(Object)",
+    "int Aes128CtrKdfParams.hashCode()"
+  })
   public void testAes128CtrKdfParamsEquals_whenOtherIsNull_thenReturnNotEqual() {
     // Arrange
     Aes128CtrKdfParams aes128CtrKdfParams = new Aes128CtrKdfParams();
@@ -352,16 +395,20 @@ public class WalletFileDiffblueTest {
 
   /**
    * Test Aes128CtrKdfParams {@link Aes128CtrKdfParams#equals(Object)}.
+   *
    * <ul>
-   *   <li>When other is wrong type.</li>
-   *   <li>Then return not equal.</li>
+   *   <li>When other is wrong type.
+   *   <li>Then return not equal.
    * </ul>
-   * <p>
-   * Method under test: {@link Aes128CtrKdfParams#equals(Object)}
+   *
+   * <p>Method under test: {@link Aes128CtrKdfParams#equals(Object)}
    */
   @Test
   @Category(MaintainedByDiffblue.class)
-  @MethodsUnderTest({"boolean Aes128CtrKdfParams.equals(Object)", "int Aes128CtrKdfParams.hashCode()"})
+  @MethodsUnderTest({
+    "boolean Aes128CtrKdfParams.equals(Object)",
+    "int Aes128CtrKdfParams.hashCode()"
+  })
   public void testAes128CtrKdfParamsEquals_whenOtherIsWrongType_thenReturnNotEqual() {
     // Arrange
     Aes128CtrKdfParams aes128CtrKdfParams = new Aes128CtrKdfParams();
@@ -376,8 +423,9 @@ public class WalletFileDiffblueTest {
 
   /**
    * Test Aes128CtrKdfParams getters and setters.
-   * <p>
-   * Methods under test:
+   *
+   * <p>Methods under test:
+   *
    * <ul>
    *   <li>default or parameterless constructor of {@link Aes128CtrKdfParams}
    *   <li>{@link Aes128CtrKdfParams#setC(int)}
@@ -392,10 +440,17 @@ public class WalletFileDiffblueTest {
    */
   @Test
   @Category(MaintainedByDiffblue.class)
-  @MethodsUnderTest({"void Aes128CtrKdfParams.<init>()", "int Aes128CtrKdfParams.getC()",
-      "int Aes128CtrKdfParams.getDklen()", "String Aes128CtrKdfParams.getPrf()", "String Aes128CtrKdfParams.getSalt()",
-      "void Aes128CtrKdfParams.setC(int)", "void Aes128CtrKdfParams.setDklen(int)",
-      "void Aes128CtrKdfParams.setPrf(String)", "void Aes128CtrKdfParams.setSalt(String)"})
+  @MethodsUnderTest({
+    "void Aes128CtrKdfParams.<init>()",
+    "int Aes128CtrKdfParams.getC()",
+    "int Aes128CtrKdfParams.getDklen()",
+    "String Aes128CtrKdfParams.getPrf()",
+    "String Aes128CtrKdfParams.getSalt()",
+    "void Aes128CtrKdfParams.setC(int)",
+    "void Aes128CtrKdfParams.setDklen(int)",
+    "void Aes128CtrKdfParams.setPrf(String)",
+    "void Aes128CtrKdfParams.setSalt(String)"
+  })
   public void testAes128CtrKdfParamsGettersAndSetters() {
     // Arrange and Act
     Aes128CtrKdfParams actualAes128CtrKdfParams = new Aes128CtrKdfParams();
@@ -416,12 +471,14 @@ public class WalletFileDiffblueTest {
 
   /**
    * Test CipherParams {@link CipherParams#equals(Object)}, and {@link CipherParams#hashCode()}.
+   *
    * <ul>
-   *   <li>When other is equal.</li>
-   *   <li>Then return equal.</li>
+   *   <li>When other is equal.
+   *   <li>Then return equal.
    * </ul>
-   * <p>
-   * Methods under test:
+   *
+   * <p>Methods under test:
+   *
    * <ul>
    *   <li>{@link CipherParams#equals(Object)}
    *   <li>{@link CipherParams#hashCode()}
@@ -440,18 +497,19 @@ public class WalletFileDiffblueTest {
 
     // Act and Assert
     assertEquals(cipherParams, cipherParams2);
-    int expectedHashCodeResult = cipherParams.hashCode();
-    assertEquals(expectedHashCodeResult, cipherParams2.hashCode());
+    assertEquals(cipherParams.hashCode(), cipherParams2.hashCode());
   }
 
   /**
    * Test CipherParams {@link CipherParams#equals(Object)}, and {@link CipherParams#hashCode()}.
+   *
    * <ul>
-   *   <li>When other is equal.</li>
-   *   <li>Then return equal.</li>
+   *   <li>When other is equal.
+   *   <li>Then return equal.
    * </ul>
-   * <p>
-   * Methods under test:
+   *
+   * <p>Methods under test:
+   *
    * <ul>
    *   <li>{@link CipherParams#equals(Object)}
    *   <li>{@link CipherParams#hashCode()}
@@ -470,18 +528,19 @@ public class WalletFileDiffblueTest {
 
     // Act and Assert
     assertEquals(cipherParams, cipherParams2);
-    int expectedHashCodeResult = cipherParams.hashCode();
-    assertEquals(expectedHashCodeResult, cipherParams2.hashCode());
+    assertEquals(cipherParams.hashCode(), cipherParams2.hashCode());
   }
 
   /**
    * Test CipherParams {@link CipherParams#equals(Object)}, and {@link CipherParams#hashCode()}.
+   *
    * <ul>
-   *   <li>When other is same.</li>
-   *   <li>Then return equal.</li>
+   *   <li>When other is same.
+   *   <li>Then return equal.
    * </ul>
-   * <p>
-   * Methods under test:
+   *
+   * <p>Methods under test:
+   *
    * <ul>
    *   <li>{@link CipherParams#equals(Object)}
    *   <li>{@link CipherParams#hashCode()}
@@ -503,12 +562,13 @@ public class WalletFileDiffblueTest {
 
   /**
    * Test CipherParams {@link CipherParams#equals(Object)}.
+   *
    * <ul>
-   *   <li>When other is different.</li>
-   *   <li>Then return not equal.</li>
+   *   <li>When other is different.
+   *   <li>Then return not equal.
    * </ul>
-   * <p>
-   * Method under test: {@link CipherParams#equals(Object)}
+   *
+   * <p>Method under test: {@link CipherParams#equals(Object)}
    */
   @Test
   @Category(MaintainedByDiffblue.class)
@@ -527,12 +587,13 @@ public class WalletFileDiffblueTest {
 
   /**
    * Test CipherParams {@link CipherParams#equals(Object)}.
+   *
    * <ul>
-   *   <li>When other is {@code null}.</li>
-   *   <li>Then return not equal.</li>
+   *   <li>When other is {@code null}.
+   *   <li>Then return not equal.
    * </ul>
-   * <p>
-   * Method under test: {@link CipherParams#equals(Object)}
+   *
+   * <p>Method under test: {@link CipherParams#equals(Object)}
    */
   @Test
   @Category(MaintainedByDiffblue.class)
@@ -548,12 +609,13 @@ public class WalletFileDiffblueTest {
 
   /**
    * Test CipherParams {@link CipherParams#equals(Object)}.
+   *
    * <ul>
-   *   <li>When other is wrong type.</li>
-   *   <li>Then return not equal.</li>
+   *   <li>When other is wrong type.
+   *   <li>Then return not equal.
    * </ul>
-   * <p>
-   * Method under test: {@link CipherParams#equals(Object)}
+   *
+   * <p>Method under test: {@link CipherParams#equals(Object)}
    */
   @Test
   @Category(MaintainedByDiffblue.class)
@@ -569,8 +631,9 @@ public class WalletFileDiffblueTest {
 
   /**
    * Test CipherParams getters and setters.
-   * <p>
-   * Methods under test:
+   *
+   * <p>Methods under test:
+   *
    * <ul>
    *   <li>default or parameterless constructor of {@link CipherParams}
    *   <li>{@link CipherParams#setIv(String)}
@@ -579,7 +642,11 @@ public class WalletFileDiffblueTest {
    */
   @Test
   @Category(MaintainedByDiffblue.class)
-  @MethodsUnderTest({"void CipherParams.<init>()", "String CipherParams.getIv()", "void CipherParams.setIv(String)"})
+  @MethodsUnderTest({
+    "void CipherParams.<init>()",
+    "String CipherParams.getIv()",
+    "void CipherParams.setIv(String)"
+  })
   public void testCipherParamsGettersAndSetters() {
     // Arrange and Act
     CipherParams actualCipherParams = new CipherParams();
@@ -591,12 +658,14 @@ public class WalletFileDiffblueTest {
 
   /**
    * Test Crypto {@link Crypto#equals(Object)}, and {@link Crypto#hashCode()}.
+   *
    * <ul>
-   *   <li>When other is equal.</li>
-   *   <li>Then return equal.</li>
+   *   <li>When other is equal.
+   *   <li>Then return equal.
    * </ul>
-   * <p>
-   * Methods under test:
+   *
+   * <p>Methods under test:
+   *
    * <ul>
    *   <li>{@link Crypto#equals(Object)}
    *   <li>{@link Crypto#hashCode()}
@@ -631,18 +700,254 @@ public class WalletFileDiffblueTest {
 
     // Act and Assert
     assertEquals(crypto, crypto2);
-    int expectedHashCodeResult = crypto.hashCode();
-    assertEquals(expectedHashCodeResult, crypto2.hashCode());
+    assertEquals(crypto.hashCode(), crypto2.hashCode());
   }
 
   /**
    * Test Crypto {@link Crypto#equals(Object)}, and {@link Crypto#hashCode()}.
+   *
    * <ul>
-   *   <li>When other is same.</li>
-   *   <li>Then return equal.</li>
+   *   <li>When other is equal.
+   *   <li>Then return equal.
    * </ul>
-   * <p>
-   * Methods under test:
+   *
+   * <p>Methods under test:
+   *
+   * <ul>
+   *   <li>{@link Crypto#equals(Object)}
+   *   <li>{@link Crypto#hashCode()}
+   * </ul>
+   */
+  @Test
+  @Category(MaintainedByDiffblue.class)
+  @MethodsUnderTest({"boolean Crypto.equals(Object)", "int Crypto.hashCode()"})
+  public void testCryptoEqualsAndHashCode_whenOtherIsEqual_thenReturnEqual2() {
+    // Arrange
+    CipherParams cipherparams = new CipherParams();
+    cipherparams.setIv("Iv");
+
+    Crypto crypto = new Crypto();
+    crypto.setCipher(null);
+    crypto.setCipherparams(cipherparams);
+    crypto.setCiphertext("Ciphertext");
+    crypto.setKdf("Kdf");
+    crypto.setKdfparams(new Aes128CtrKdfParams());
+    crypto.setMac("Mac");
+
+    CipherParams cipherparams2 = new CipherParams();
+    cipherparams2.setIv("Iv");
+
+    Crypto crypto2 = new Crypto();
+    crypto2.setCipher(null);
+    crypto2.setCipherparams(cipherparams2);
+    crypto2.setCiphertext("Ciphertext");
+    crypto2.setKdf("Kdf");
+    crypto2.setKdfparams(new Aes128CtrKdfParams());
+    crypto2.setMac("Mac");
+
+    // Act and Assert
+    assertEquals(crypto, crypto2);
+    assertEquals(crypto.hashCode(), crypto2.hashCode());
+  }
+
+  /**
+   * Test Crypto {@link Crypto#equals(Object)}, and {@link Crypto#hashCode()}.
+   *
+   * <ul>
+   *   <li>When other is equal.
+   *   <li>Then return equal.
+   * </ul>
+   *
+   * <p>Methods under test:
+   *
+   * <ul>
+   *   <li>{@link Crypto#equals(Object)}
+   *   <li>{@link Crypto#hashCode()}
+   * </ul>
+   */
+  @Test
+  @Category(MaintainedByDiffblue.class)
+  @MethodsUnderTest({"boolean Crypto.equals(Object)", "int Crypto.hashCode()"})
+  public void testCryptoEqualsAndHashCode_whenOtherIsEqual_thenReturnEqual3() {
+    // Arrange
+    CipherParams cipherparams = new CipherParams();
+    cipherparams.setIv("Iv");
+
+    Crypto crypto = new Crypto();
+    crypto.setCipher("Cipher");
+    crypto.setCipherparams(cipherparams);
+    crypto.setCiphertext(null);
+    crypto.setKdf("Kdf");
+    crypto.setKdfparams(new Aes128CtrKdfParams());
+    crypto.setMac("Mac");
+
+    CipherParams cipherparams2 = new CipherParams();
+    cipherparams2.setIv("Iv");
+
+    Crypto crypto2 = new Crypto();
+    crypto2.setCipher("Cipher");
+    crypto2.setCipherparams(cipherparams2);
+    crypto2.setCiphertext(null);
+    crypto2.setKdf("Kdf");
+    crypto2.setKdfparams(new Aes128CtrKdfParams());
+    crypto2.setMac("Mac");
+
+    // Act and Assert
+    assertEquals(crypto, crypto2);
+    assertEquals(crypto.hashCode(), crypto2.hashCode());
+  }
+
+  /**
+   * Test Crypto {@link Crypto#equals(Object)}, and {@link Crypto#hashCode()}.
+   *
+   * <ul>
+   *   <li>When other is equal.
+   *   <li>Then return equal.
+   * </ul>
+   *
+   * <p>Methods under test:
+   *
+   * <ul>
+   *   <li>{@link Crypto#equals(Object)}
+   *   <li>{@link Crypto#hashCode()}
+   * </ul>
+   */
+  @Test
+  @Category(MaintainedByDiffblue.class)
+  @MethodsUnderTest({"boolean Crypto.equals(Object)", "int Crypto.hashCode()"})
+  public void testCryptoEqualsAndHashCode_whenOtherIsEqual_thenReturnEqual4() {
+    // Arrange
+    CipherParams cipherparams = new CipherParams();
+    cipherparams.setIv("Iv");
+
+    Crypto crypto = new Crypto();
+    crypto.setCipher("Cipher");
+    crypto.setCipherparams(cipherparams);
+    crypto.setCiphertext("Ciphertext");
+    crypto.setKdf(null);
+    crypto.setKdfparams(new Aes128CtrKdfParams());
+    crypto.setMac("Mac");
+
+    CipherParams cipherparams2 = new CipherParams();
+    cipherparams2.setIv("Iv");
+
+    Crypto crypto2 = new Crypto();
+    crypto2.setCipher("Cipher");
+    crypto2.setCipherparams(cipherparams2);
+    crypto2.setCiphertext("Ciphertext");
+    crypto2.setKdf(null);
+    crypto2.setKdfparams(new Aes128CtrKdfParams());
+    crypto2.setMac("Mac");
+
+    // Act and Assert
+    assertEquals(crypto, crypto2);
+    assertEquals(crypto.hashCode(), crypto2.hashCode());
+  }
+
+  /**
+   * Test Crypto {@link Crypto#equals(Object)}, and {@link Crypto#hashCode()}.
+   *
+   * <ul>
+   *   <li>When other is equal.
+   *   <li>Then return equal.
+   * </ul>
+   *
+   * <p>Methods under test:
+   *
+   * <ul>
+   *   <li>{@link Crypto#equals(Object)}
+   *   <li>{@link Crypto#hashCode()}
+   * </ul>
+   */
+  @Test
+  @Category(MaintainedByDiffblue.class)
+  @MethodsUnderTest({"boolean Crypto.equals(Object)", "int Crypto.hashCode()"})
+  public void testCryptoEqualsAndHashCode_whenOtherIsEqual_thenReturnEqual5() {
+    // Arrange
+    CipherParams cipherparams = new CipherParams();
+    cipherparams.setIv("Iv");
+
+    Crypto crypto = new Crypto();
+    crypto.setCipher("Cipher");
+    crypto.setCipherparams(cipherparams);
+    crypto.setCiphertext("Ciphertext");
+    crypto.setKdf("Kdf");
+    crypto.setKdfparams(null);
+    crypto.setMac("Mac");
+
+    CipherParams cipherparams2 = new CipherParams();
+    cipherparams2.setIv("Iv");
+
+    Crypto crypto2 = new Crypto();
+    crypto2.setCipher("Cipher");
+    crypto2.setCipherparams(cipherparams2);
+    crypto2.setCiphertext("Ciphertext");
+    crypto2.setKdf("Kdf");
+    crypto2.setKdfparams(null);
+    crypto2.setMac("Mac");
+
+    // Act and Assert
+    assertEquals(crypto, crypto2);
+    assertEquals(crypto.hashCode(), crypto2.hashCode());
+  }
+
+  /**
+   * Test Crypto {@link Crypto#equals(Object)}, and {@link Crypto#hashCode()}.
+   *
+   * <ul>
+   *   <li>When other is equal.
+   *   <li>Then return equal.
+   * </ul>
+   *
+   * <p>Methods under test:
+   *
+   * <ul>
+   *   <li>{@link Crypto#equals(Object)}
+   *   <li>{@link Crypto#hashCode()}
+   * </ul>
+   */
+  @Test
+  @Category(MaintainedByDiffblue.class)
+  @MethodsUnderTest({"boolean Crypto.equals(Object)", "int Crypto.hashCode()"})
+  public void testCryptoEqualsAndHashCode_whenOtherIsEqual_thenReturnEqual6() {
+    // Arrange
+    CipherParams cipherparams = new CipherParams();
+    cipherparams.setIv("Iv");
+
+    Crypto crypto = new Crypto();
+    crypto.setCipher("Cipher");
+    crypto.setCipherparams(cipherparams);
+    crypto.setCiphertext("Ciphertext");
+    crypto.setKdf("Kdf");
+    crypto.setKdfparams(new Aes128CtrKdfParams());
+    crypto.setMac(null);
+
+    CipherParams cipherparams2 = new CipherParams();
+    cipherparams2.setIv("Iv");
+
+    Crypto crypto2 = new Crypto();
+    crypto2.setCipher("Cipher");
+    crypto2.setCipherparams(cipherparams2);
+    crypto2.setCiphertext("Ciphertext");
+    crypto2.setKdf("Kdf");
+    crypto2.setKdfparams(new Aes128CtrKdfParams());
+    crypto2.setMac(null);
+
+    // Act and Assert
+    assertEquals(crypto, crypto2);
+    assertEquals(crypto.hashCode(), crypto2.hashCode());
+  }
+
+  /**
+   * Test Crypto {@link Crypto#equals(Object)}, and {@link Crypto#hashCode()}.
+   *
+   * <ul>
+   *   <li>When other is same.
+   *   <li>Then return equal.
+   * </ul>
+   *
+   * <p>Methods under test:
+   *
    * <ul>
    *   <li>{@link Crypto#equals(Object)}
    *   <li>{@link Crypto#hashCode()}
@@ -672,12 +977,13 @@ public class WalletFileDiffblueTest {
 
   /**
    * Test Crypto {@link Crypto#equals(Object)}.
+   *
    * <ul>
-   *   <li>When other is different.</li>
-   *   <li>Then return not equal.</li>
+   *   <li>When other is different.
+   *   <li>Then return not equal.
    * </ul>
-   * <p>
-   * Method under test: {@link Crypto#equals(Object)}
+   *
+   * <p>Method under test: {@link Crypto#equals(Object)}
    */
   @Test
   @Category(MaintainedByDiffblue.class)
@@ -712,12 +1018,13 @@ public class WalletFileDiffblueTest {
 
   /**
    * Test Crypto {@link Crypto#equals(Object)}.
+   *
    * <ul>
-   *   <li>When other is different.</li>
-   *   <li>Then return not equal.</li>
+   *   <li>When other is different.
+   *   <li>Then return not equal.
    * </ul>
-   * <p>
-   * Method under test: {@link Crypto#equals(Object)}
+   *
+   * <p>Method under test: {@link Crypto#equals(Object)}
    */
   @Test
   @Category(MaintainedByDiffblue.class)
@@ -752,21 +1059,21 @@ public class WalletFileDiffblueTest {
 
   /**
    * Test Crypto {@link Crypto#equals(Object)}.
+   *
    * <ul>
-   *   <li>When other is different.</li>
-   *   <li>Then return not equal.</li>
+   *   <li>When other is different.
+   *   <li>Then return not equal.
    * </ul>
-   * <p>
-   * Method under test: {@link Crypto#equals(Object)}
+   *
+   * <p>Method under test: {@link Crypto#equals(Object)}
    */
   @Test
   @Category(MaintainedByDiffblue.class)
   @MethodsUnderTest({"boolean Crypto.equals(Object)", "int Crypto.hashCode()"})
   public void testCryptoEquals_whenOtherIsDifferent_thenReturnNotEqual3() {
     // Arrange
-    CipherParams cipherparams = mock(CipherParams.class);
-    doNothing().when(cipherparams).setIv(Mockito.<String>any());
-    cipherparams.setIv("Iv");
+    CipherParams cipherparams = new CipherParams();
+    cipherparams.setIv("Cipher");
 
     Crypto crypto = new Crypto();
     crypto.setCipher("Cipher");
@@ -793,20 +1100,20 @@ public class WalletFileDiffblueTest {
 
   /**
    * Test Crypto {@link Crypto#equals(Object)}.
+   *
    * <ul>
-   *   <li>When other is different.</li>
-   *   <li>Then return not equal.</li>
+   *   <li>When other is different.
+   *   <li>Then return not equal.
    * </ul>
-   * <p>
-   * Method under test: {@link Crypto#equals(Object)}
+   *
+   * <p>Method under test: {@link Crypto#equals(Object)}
    */
   @Test
   @Category(MaintainedByDiffblue.class)
   @MethodsUnderTest({"boolean Crypto.equals(Object)", "int Crypto.hashCode()"})
   public void testCryptoEquals_whenOtherIsDifferent_thenReturnNotEqual4() {
     // Arrange
-    CipherParams cipherparams = mock(CipherParams.class);
-    doNothing().when(cipherparams).setIv(Mockito.<String>any());
+    CipherParams cipherparams = new CipherParams();
     cipherparams.setIv("Iv");
 
     Crypto crypto = new Crypto();
@@ -834,20 +1141,20 @@ public class WalletFileDiffblueTest {
 
   /**
    * Test Crypto {@link Crypto#equals(Object)}.
+   *
    * <ul>
-   *   <li>When other is different.</li>
-   *   <li>Then return not equal.</li>
+   *   <li>When other is different.
+   *   <li>Then return not equal.
    * </ul>
-   * <p>
-   * Method under test: {@link Crypto#equals(Object)}
+   *
+   * <p>Method under test: {@link Crypto#equals(Object)}
    */
   @Test
   @Category(MaintainedByDiffblue.class)
   @MethodsUnderTest({"boolean Crypto.equals(Object)", "int Crypto.hashCode()"})
   public void testCryptoEquals_whenOtherIsDifferent_thenReturnNotEqual5() {
     // Arrange
-    CipherParams cipherparams = mock(CipherParams.class);
-    doNothing().when(cipherparams).setIv(Mockito.<String>any());
+    CipherParams cipherparams = new CipherParams();
     cipherparams.setIv("Iv");
 
     Crypto crypto = new Crypto();
@@ -875,27 +1182,27 @@ public class WalletFileDiffblueTest {
 
   /**
    * Test Crypto {@link Crypto#equals(Object)}.
+   *
    * <ul>
-   *   <li>When other is different.</li>
-   *   <li>Then return not equal.</li>
+   *   <li>When other is different.
+   *   <li>Then return not equal.
    * </ul>
-   * <p>
-   * Method under test: {@link Crypto#equals(Object)}
+   *
+   * <p>Method under test: {@link Crypto#equals(Object)}
    */
   @Test
   @Category(MaintainedByDiffblue.class)
   @MethodsUnderTest({"boolean Crypto.equals(Object)", "int Crypto.hashCode()"})
   public void testCryptoEquals_whenOtherIsDifferent_thenReturnNotEqual6() {
     // Arrange
-    CipherParams cipherparams = mock(CipherParams.class);
-    doNothing().when(cipherparams).setIv(Mockito.<String>any());
+    CipherParams cipherparams = new CipherParams();
     cipherparams.setIv("Iv");
 
     Crypto crypto = new Crypto();
     crypto.setCipher("Cipher");
     crypto.setCipherparams(cipherparams);
-    crypto.setCiphertext(null);
-    crypto.setKdf("Kdf");
+    crypto.setCiphertext("Ciphertext");
+    crypto.setKdf("Cipher");
     crypto.setKdfparams(new Aes128CtrKdfParams());
     crypto.setMac("Mac");
 
@@ -905,7 +1212,7 @@ public class WalletFileDiffblueTest {
     Crypto crypto2 = new Crypto();
     crypto2.setCipher("Cipher");
     crypto2.setCipherparams(cipherparams2);
-    crypto2.setCiphertext(null);
+    crypto2.setCiphertext("Ciphertext");
     crypto2.setKdf("Kdf");
     crypto2.setKdfparams(new Aes128CtrKdfParams());
     crypto2.setMac("Mac");
@@ -916,12 +1223,177 @@ public class WalletFileDiffblueTest {
 
   /**
    * Test Crypto {@link Crypto#equals(Object)}.
+   *
    * <ul>
-   *   <li>When other is {@code null}.</li>
-   *   <li>Then return not equal.</li>
+   *   <li>When other is different.
+   *   <li>Then return not equal.
    * </ul>
-   * <p>
-   * Method under test: {@link Crypto#equals(Object)}
+   *
+   * <p>Method under test: {@link Crypto#equals(Object)}
+   */
+  @Test
+  @Category(MaintainedByDiffblue.class)
+  @MethodsUnderTest({"boolean Crypto.equals(Object)", "int Crypto.hashCode()"})
+  public void testCryptoEquals_whenOtherIsDifferent_thenReturnNotEqual7() {
+    // Arrange
+    CipherParams cipherparams = new CipherParams();
+    cipherparams.setIv("Iv");
+
+    Crypto crypto = new Crypto();
+    crypto.setCipher("Cipher");
+    crypto.setCipherparams(cipherparams);
+    crypto.setCiphertext("Ciphertext");
+    crypto.setKdf(null);
+    crypto.setKdfparams(new Aes128CtrKdfParams());
+    crypto.setMac("Mac");
+
+    CipherParams cipherparams2 = new CipherParams();
+    cipherparams2.setIv("Iv");
+
+    Crypto crypto2 = new Crypto();
+    crypto2.setCipher("Cipher");
+    crypto2.setCipherparams(cipherparams2);
+    crypto2.setCiphertext("Ciphertext");
+    crypto2.setKdf("Kdf");
+    crypto2.setKdfparams(new Aes128CtrKdfParams());
+    crypto2.setMac("Mac");
+
+    // Act and Assert
+    assertNotEquals(crypto, crypto2);
+  }
+
+  /**
+   * Test Crypto {@link Crypto#equals(Object)}.
+   *
+   * <ul>
+   *   <li>When other is different.
+   *   <li>Then return not equal.
+   * </ul>
+   *
+   * <p>Method under test: {@link Crypto#equals(Object)}
+   */
+  @Test
+  @Category(MaintainedByDiffblue.class)
+  @MethodsUnderTest({"boolean Crypto.equals(Object)", "int Crypto.hashCode()"})
+  public void testCryptoEquals_whenOtherIsDifferent_thenReturnNotEqual8() {
+    // Arrange
+    CipherParams cipherparams = new CipherParams();
+    cipherparams.setIv("Iv");
+
+    Crypto crypto = new Crypto();
+    crypto.setCipher("Cipher");
+    crypto.setCipherparams(cipherparams);
+    crypto.setCiphertext("Ciphertext");
+    crypto.setKdf("Kdf");
+    crypto.setKdfparams(null);
+    crypto.setMac("Mac");
+
+    CipherParams cipherparams2 = new CipherParams();
+    cipherparams2.setIv("Iv");
+
+    Crypto crypto2 = new Crypto();
+    crypto2.setCipher("Cipher");
+    crypto2.setCipherparams(cipherparams2);
+    crypto2.setCiphertext("Ciphertext");
+    crypto2.setKdf("Kdf");
+    crypto2.setKdfparams(new Aes128CtrKdfParams());
+    crypto2.setMac("Mac");
+
+    // Act and Assert
+    assertNotEquals(crypto, crypto2);
+  }
+
+  /**
+   * Test Crypto {@link Crypto#equals(Object)}.
+   *
+   * <ul>
+   *   <li>When other is different.
+   *   <li>Then return not equal.
+   * </ul>
+   *
+   * <p>Method under test: {@link Crypto#equals(Object)}
+   */
+  @Test
+  @Category(MaintainedByDiffblue.class)
+  @MethodsUnderTest({"boolean Crypto.equals(Object)", "int Crypto.hashCode()"})
+  public void testCryptoEquals_whenOtherIsDifferent_thenReturnNotEqual9() {
+    // Arrange
+    CipherParams cipherparams = new CipherParams();
+    cipherparams.setIv("Iv");
+
+    Crypto crypto = new Crypto();
+    crypto.setCipher("Cipher");
+    crypto.setCipherparams(cipherparams);
+    crypto.setCiphertext("Ciphertext");
+    crypto.setKdf("Kdf");
+    crypto.setKdfparams(mock(Aes128CtrKdfParams.class));
+    crypto.setMac("Mac");
+
+    CipherParams cipherparams2 = new CipherParams();
+    cipherparams2.setIv("Iv");
+
+    Crypto crypto2 = new Crypto();
+    crypto2.setCipher("Cipher");
+    crypto2.setCipherparams(cipherparams2);
+    crypto2.setCiphertext("Ciphertext");
+    crypto2.setKdf("Kdf");
+    crypto2.setKdfparams(new Aes128CtrKdfParams());
+    crypto2.setMac("Mac");
+
+    // Act and Assert
+    assertNotEquals(crypto, crypto2);
+  }
+
+  /**
+   * Test Crypto {@link Crypto#equals(Object)}.
+   *
+   * <ul>
+   *   <li>When other is different.
+   *   <li>Then return not equal.
+   * </ul>
+   *
+   * <p>Method under test: {@link Crypto#equals(Object)}
+   */
+  @Test
+  @Category(MaintainedByDiffblue.class)
+  @MethodsUnderTest({"boolean Crypto.equals(Object)", "int Crypto.hashCode()"})
+  public void testCryptoEquals_whenOtherIsDifferent_thenReturnNotEqual10() {
+    // Arrange
+    CipherParams cipherparams = new CipherParams();
+    cipherparams.setIv("Iv");
+
+    Crypto crypto = new Crypto();
+    crypto.setCipher("Cipher");
+    crypto.setCipherparams(cipherparams);
+    crypto.setCiphertext("Ciphertext");
+    crypto.setKdf("Kdf");
+    crypto.setKdfparams(new Aes128CtrKdfParams());
+    crypto.setMac(null);
+
+    CipherParams cipherparams2 = new CipherParams();
+    cipherparams2.setIv("Iv");
+
+    Crypto crypto2 = new Crypto();
+    crypto2.setCipher("Cipher");
+    crypto2.setCipherparams(cipherparams2);
+    crypto2.setCiphertext("Ciphertext");
+    crypto2.setKdf("Kdf");
+    crypto2.setKdfparams(new Aes128CtrKdfParams());
+    crypto2.setMac("Mac");
+
+    // Act and Assert
+    assertNotEquals(crypto, crypto2);
+  }
+
+  /**
+   * Test Crypto {@link Crypto#equals(Object)}.
+   *
+   * <ul>
+   *   <li>When other is {@code null}.
+   *   <li>Then return not equal.
+   * </ul>
+   *
+   * <p>Method under test: {@link Crypto#equals(Object)}
    */
   @Test
   @Category(MaintainedByDiffblue.class)
@@ -945,12 +1417,13 @@ public class WalletFileDiffblueTest {
 
   /**
    * Test Crypto {@link Crypto#equals(Object)}.
+   *
    * <ul>
-   *   <li>When other is wrong type.</li>
-   *   <li>Then return not equal.</li>
+   *   <li>When other is wrong type.
+   *   <li>Then return not equal.
    * </ul>
-   * <p>
-   * Method under test: {@link Crypto#equals(Object)}
+   *
+   * <p>Method under test: {@link Crypto#equals(Object)}
    */
   @Test
   @Category(MaintainedByDiffblue.class)
@@ -974,8 +1447,9 @@ public class WalletFileDiffblueTest {
 
   /**
    * Test Crypto getters and setters.
-   * <p>
-   * Methods under test:
+   *
+   * <p>Methods under test:
+   *
    * <ul>
    *   <li>default or parameterless constructor of {@link Crypto}
    *   <li>{@link Crypto#setCipher(String)}
@@ -994,11 +1468,21 @@ public class WalletFileDiffblueTest {
    */
   @Test
   @Category(MaintainedByDiffblue.class)
-  @MethodsUnderTest({"void Crypto.<init>()", "String Crypto.getCipher()", "CipherParams Crypto.getCipherparams()",
-      "String Crypto.getCiphertext()", "String Crypto.getKdf()", "KdfParams Crypto.getKdfparams()",
-      "String Crypto.getMac()", "void Crypto.setCipher(String)", "void Crypto.setCipherparams(CipherParams)",
-      "void Crypto.setCiphertext(String)", "void Crypto.setKdf(String)", "void Crypto.setKdfparams(KdfParams)",
-      "void Crypto.setMac(String)"})
+  @MethodsUnderTest({
+    "void Crypto.<init>()",
+    "String Crypto.getCipher()",
+    "CipherParams Crypto.getCipherparams()",
+    "String Crypto.getCiphertext()",
+    "String Crypto.getKdf()",
+    "KdfParams Crypto.getKdfparams()",
+    "String Crypto.getMac()",
+    "void Crypto.setCipher(String)",
+    "void Crypto.setCipherparams(CipherParams)",
+    "void Crypto.setCiphertext(String)",
+    "void Crypto.setKdf(String)",
+    "void Crypto.setKdfparams(KdfParams)",
+    "void Crypto.setMac(String)"
+  })
   public void testCryptoGettersAndSetters() {
     // Arrange and Act
     Crypto actualCrypto = new Crypto();
@@ -1016,22 +1500,22 @@ public class WalletFileDiffblueTest {
     String actualCiphertext = actualCrypto.getCiphertext();
     String actualKdf = actualCrypto.getKdf();
     KdfParams actualKdfparams = actualCrypto.getKdfparams();
-    String actualMac = actualCrypto.getMac();
 
     // Assert
     assertEquals("Cipher", actualCipher);
     assertEquals("Ciphertext", actualCiphertext);
     assertEquals("Iv", actualCipherparams.getIv());
     assertEquals("Kdf", actualKdf);
-    assertEquals("Mac", actualMac);
+    assertEquals("Mac", actualCrypto.getMac());
     assertSame(kdfparams, actualKdfparams);
     assertSame(cipherparams, actualCipherparams);
   }
 
   /**
    * Test getters and setters.
-   * <p>
-   * Methods under test:
+   *
+   * <p>Methods under test:
+   *
    * <ul>
    *   <li>default or parameterless constructor of {@link WalletFile}
    *   <li>{@link WalletFile#setAddress(String)}
@@ -1046,9 +1530,17 @@ public class WalletFileDiffblueTest {
    */
   @Test
   @Category(MaintainedByDiffblue.class)
-  @MethodsUnderTest({"void WalletFile.<init>()", "String WalletFile.getAddress()", "Crypto WalletFile.getCrypto()",
-      "String WalletFile.getId()", "int WalletFile.getVersion()", "void WalletFile.setAddress(String)",
-      "void WalletFile.setCrypto(Crypto)", "void WalletFile.setId(String)", "void WalletFile.setVersion(int)"})
+  @MethodsUnderTest({
+    "void WalletFile.<init>()",
+    "String WalletFile.getAddress()",
+    "Crypto WalletFile.getCrypto()",
+    "String WalletFile.getId()",
+    "int WalletFile.getVersion()",
+    "void WalletFile.setAddress(String)",
+    "void WalletFile.setCrypto(Crypto)",
+    "void WalletFile.setId(String)",
+    "void WalletFile.setVersion(int)"
+  })
   public void testGettersAndSetters() {
     // Arrange and Act
     WalletFile actualWalletFile = new WalletFile();
@@ -1077,16 +1569,22 @@ public class WalletFileDiffblueTest {
   }
 
   /**
-   * Test KdfParamsDeserialiser {@link KdfParamsDeserialiser#deserialize(JsonParser, DeserializationContext)} with {@code jsonParser}, {@code deserializationContext}.
-   * <p>
-   * Method under test: {@link KdfParamsDeserialiser#deserialize(JsonParser, DeserializationContext)}
+   * Test KdfParamsDeserialiser {@link KdfParamsDeserialiser#deserialize(JsonParser,
+   * DeserializationContext)} with {@code jsonParser}, {@code deserializationContext}.
+   *
+   * <p>Method under test: {@link KdfParamsDeserialiser#deserialize(JsonParser,
+   * DeserializationContext)}
    */
   @Test
   @Category(MaintainedByDiffblue.class)
-  @MethodsUnderTest({"KdfParams KdfParamsDeserialiser.deserialize(JsonParser, DeserializationContext)"})
-  public void testKdfParamsDeserialiserDeserializeWithJsonParserDeserializationContext() throws IOException {
+  @MethodsUnderTest({
+    "KdfParams KdfParamsDeserialiser.deserialize(JsonParser, DeserializationContext)"
+  })
+  public void testKdfParamsDeserialiserDeserializeWithJsonParserDeserializationContext()
+      throws IOException {
     // Arrange
     KdfParamsDeserialiser kdfParamsDeserialiser = new KdfParamsDeserialiser();
+
     JsonParser d = mock(JsonParser.class);
     doNothing().when(d).clearCurrentToken();
     JacksonFeatureSet<StreamReadCapability> fromBitmaskResult = JacksonFeatureSet.fromBitmask(1);
@@ -1098,91 +1596,9 @@ public class WalletFileDiffblueTest {
     JsonParserDelegate jsonParser = new JsonParserDelegate(d);
 
     // Act
-    KdfParams actualDeserializeResult = kdfParamsDeserialiser.deserialize(jsonParser,
-        new Impl(new BeanDeserializerFactory(new DeserializerFactoryConfig())));
-
-    // Assert
-    verify(d).clearCurrentToken();
-    verify(d, atLeast(1)).currentToken();
-    verify(d).currentTokenId();
-    verify(d).getCodec();
-    verify(d).getReadCapabilities();
-    verify(d).nextToken();
-    assertTrue(actualDeserializeResult instanceof Aes128CtrKdfParams);
-    assertNull(((Aes128CtrKdfParams) actualDeserializeResult).getPrf());
-    assertNull(actualDeserializeResult.getSalt());
-    assertEquals(0, ((Aes128CtrKdfParams) actualDeserializeResult).getC());
-    assertEquals(0, actualDeserializeResult.getDklen());
-  }
-
-  /**
-   * Test KdfParamsDeserialiser {@link KdfParamsDeserialiser#deserialize(JsonParser, DeserializationContext)} with {@code jsonParser}, {@code deserializationContext}.
-   * <p>
-   * Method under test: {@link KdfParamsDeserialiser#deserialize(JsonParser, DeserializationContext)}
-   */
-  @Test
-  @Category(MaintainedByDiffblue.class)
-  @MethodsUnderTest({"KdfParams KdfParamsDeserialiser.deserialize(JsonParser, DeserializationContext)"})
-  public void testKdfParamsDeserialiserDeserializeWithJsonParserDeserializationContext2() throws IOException {
-    // Arrange
-    KdfParamsDeserialiser kdfParamsDeserialiser = new KdfParamsDeserialiser();
-    JsonParser d = mock(JsonParser.class);
-    doNothing().when(d).clearCurrentToken();
-    JacksonFeatureSet<StreamReadCapability> fromBitmaskResult = JacksonFeatureSet.fromBitmask(1);
-    when(d.getReadCapabilities()).thenReturn(fromBitmaskResult);
-    when(d.currentTokenId()).thenReturn(1);
-    when(d.nextToken()).thenReturn(JsonToken.NOT_AVAILABLE);
-    when(d.currentToken()).thenReturn(null);
-    when(d.getCodec()).thenReturn(JsonMapper.builder().findAndAddModules().build());
-    JsonParserDelegate jsonParser = new JsonParserDelegate(d);
-
-    // Act
-    KdfParams actualDeserializeResult = kdfParamsDeserialiser.deserialize(jsonParser,
-        new Impl(new BeanDeserializerFactory(new DeserializerFactoryConfig())));
-
-    // Assert
-    verify(d).clearCurrentToken();
-    verify(d, atLeast(1)).currentToken();
-    verify(d).currentTokenId();
-    verify(d).getCodec();
-    verify(d).getReadCapabilities();
-    verify(d, atLeast(1)).nextToken();
-    assertTrue(actualDeserializeResult instanceof Aes128CtrKdfParams);
-    assertNull(((Aes128CtrKdfParams) actualDeserializeResult).getPrf());
-    assertNull(actualDeserializeResult.getSalt());
-    assertEquals(0, ((Aes128CtrKdfParams) actualDeserializeResult).getC());
-    assertEquals(0, actualDeserializeResult.getDklen());
-  }
-
-  /**
-   * Test KdfParamsDeserialiser {@link KdfParamsDeserialiser#deserialize(JsonParser, DeserializationContext)} with {@code jsonParser}, {@code deserializationContext}.
-   * <p>
-   * Method under test: {@link KdfParamsDeserialiser#deserialize(JsonParser, DeserializationContext)}
-   */
-  @Test
-  @Category(MaintainedByDiffblue.class)
-  @MethodsUnderTest({"KdfParams KdfParamsDeserialiser.deserialize(JsonParser, DeserializationContext)"})
-  public void testKdfParamsDeserialiserDeserializeWithJsonParserDeserializationContext3() throws IOException {
-    // Arrange
-    KdfParamsDeserialiser kdfParamsDeserialiser = new KdfParamsDeserialiser();
-    Builder builderResult = JsonMapper.builder();
-    Class<Object> target = Object.class;
-    Class<Object> mixinSource = Object.class;
-    builderResult.addMixIn(target, mixinSource);
-    JsonMapper buildResult = builderResult.findAndAddModules().build();
-    JsonParser d = mock(JsonParser.class);
-    doNothing().when(d).clearCurrentToken();
-    JacksonFeatureSet<StreamReadCapability> fromBitmaskResult = JacksonFeatureSet.fromBitmask(1);
-    when(d.getReadCapabilities()).thenReturn(fromBitmaskResult);
-    when(d.currentTokenId()).thenReturn(1);
-    when(d.nextToken()).thenReturn(JsonToken.NOT_AVAILABLE);
-    when(d.currentToken()).thenReturn(JsonToken.NOT_AVAILABLE);
-    when(d.getCodec()).thenReturn(buildResult);
-    JsonParserDelegate jsonParser = new JsonParserDelegate(d);
-
-    // Act
-    KdfParams actualDeserializeResult = kdfParamsDeserialiser.deserialize(jsonParser,
-        new Impl(new BeanDeserializerFactory(new DeserializerFactoryConfig())));
+    KdfParams actualDeserializeResult =
+        kdfParamsDeserialiser.deserialize(
+            jsonParser, new Impl(new BeanDeserializerFactory(new DeserializerFactoryConfig())));
 
     // Assert
     verify(d).clearCurrentToken();
@@ -1200,8 +1616,8 @@ public class WalletFileDiffblueTest {
 
   /**
    * Test KdfParamsDeserialiser new {@link KdfParamsDeserialiser} (default constructor).
-   * <p>
-   * Method under test: default or parameterless constructor of {@link KdfParamsDeserialiser}
+   *
+   * <p>Method under test: default or parameterless constructor of {@link KdfParamsDeserialiser}
    */
   @Test
   @Category(MaintainedByDiffblue.class)
@@ -1222,13 +1638,16 @@ public class WalletFileDiffblueTest {
   }
 
   /**
-   * Test ScryptKdfParams {@link ScryptKdfParams#equals(Object)}, and {@link ScryptKdfParams#hashCode()}.
+   * Test ScryptKdfParams {@link ScryptKdfParams#equals(Object)}, and {@link
+   * ScryptKdfParams#hashCode()}.
+   *
    * <ul>
-   *   <li>When other is equal.</li>
-   *   <li>Then return equal.</li>
+   *   <li>When other is equal.
+   *   <li>Then return equal.
    * </ul>
-   * <p>
-   * Methods under test:
+   *
+   * <p>Methods under test:
+   *
    * <ul>
    *   <li>{@link ScryptKdfParams#equals(Object)}
    *   <li>{@link ScryptKdfParams#hashCode()}
@@ -1255,18 +1674,20 @@ public class WalletFileDiffblueTest {
 
     // Act and Assert
     assertEquals(scryptKdfParams, scryptKdfParams2);
-    int expectedHashCodeResult = scryptKdfParams.hashCode();
-    assertEquals(expectedHashCodeResult, scryptKdfParams2.hashCode());
+    assertEquals(scryptKdfParams.hashCode(), scryptKdfParams2.hashCode());
   }
 
   /**
-   * Test ScryptKdfParams {@link ScryptKdfParams#equals(Object)}, and {@link ScryptKdfParams#hashCode()}.
+   * Test ScryptKdfParams {@link ScryptKdfParams#equals(Object)}, and {@link
+   * ScryptKdfParams#hashCode()}.
+   *
    * <ul>
-   *   <li>When other is equal.</li>
-   *   <li>Then return equal.</li>
+   *   <li>When other is equal.
+   *   <li>Then return equal.
    * </ul>
-   * <p>
-   * Methods under test:
+   *
+   * <p>Methods under test:
+   *
    * <ul>
    *   <li>{@link ScryptKdfParams#equals(Object)}
    *   <li>{@link ScryptKdfParams#hashCode()}
@@ -1293,18 +1714,20 @@ public class WalletFileDiffblueTest {
 
     // Act and Assert
     assertEquals(scryptKdfParams, scryptKdfParams2);
-    int expectedHashCodeResult = scryptKdfParams.hashCode();
-    assertEquals(expectedHashCodeResult, scryptKdfParams2.hashCode());
+    assertEquals(scryptKdfParams.hashCode(), scryptKdfParams2.hashCode());
   }
 
   /**
-   * Test ScryptKdfParams {@link ScryptKdfParams#equals(Object)}, and {@link ScryptKdfParams#hashCode()}.
+   * Test ScryptKdfParams {@link ScryptKdfParams#equals(Object)}, and {@link
+   * ScryptKdfParams#hashCode()}.
+   *
    * <ul>
-   *   <li>When other is same.</li>
-   *   <li>Then return equal.</li>
+   *   <li>When other is same.
+   *   <li>Then return equal.
    * </ul>
-   * <p>
-   * Methods under test:
+   *
+   * <p>Methods under test:
+   *
    * <ul>
    *   <li>{@link ScryptKdfParams#equals(Object)}
    *   <li>{@link ScryptKdfParams#hashCode()}
@@ -1330,12 +1753,13 @@ public class WalletFileDiffblueTest {
 
   /**
    * Test ScryptKdfParams {@link ScryptKdfParams#equals(Object)}.
+   *
    * <ul>
-   *   <li>When other is different.</li>
-   *   <li>Then return not equal.</li>
+   *   <li>When other is different.
+   *   <li>Then return not equal.
    * </ul>
-   * <p>
-   * Method under test: {@link ScryptKdfParams#equals(Object)}
+   *
+   * <p>Method under test: {@link ScryptKdfParams#equals(Object)}
    */
   @Test
   @Category(MaintainedByDiffblue.class)
@@ -1362,12 +1786,13 @@ public class WalletFileDiffblueTest {
 
   /**
    * Test ScryptKdfParams {@link ScryptKdfParams#equals(Object)}.
+   *
    * <ul>
-   *   <li>When other is different.</li>
-   *   <li>Then return not equal.</li>
+   *   <li>When other is different.
+   *   <li>Then return not equal.
    * </ul>
-   * <p>
-   * Method under test: {@link ScryptKdfParams#equals(Object)}
+   *
+   * <p>Method under test: {@link ScryptKdfParams#equals(Object)}
    */
   @Test
   @Category(MaintainedByDiffblue.class)
@@ -1394,12 +1819,13 @@ public class WalletFileDiffblueTest {
 
   /**
    * Test ScryptKdfParams {@link ScryptKdfParams#equals(Object)}.
+   *
    * <ul>
-   *   <li>When other is different.</li>
-   *   <li>Then return not equal.</li>
+   *   <li>When other is different.
+   *   <li>Then return not equal.
    * </ul>
-   * <p>
-   * Method under test: {@link ScryptKdfParams#equals(Object)}
+   *
+   * <p>Method under test: {@link ScryptKdfParams#equals(Object)}
    */
   @Test
   @Category(MaintainedByDiffblue.class)
@@ -1426,12 +1852,13 @@ public class WalletFileDiffblueTest {
 
   /**
    * Test ScryptKdfParams {@link ScryptKdfParams#equals(Object)}.
+   *
    * <ul>
-   *   <li>When other is different.</li>
-   *   <li>Then return not equal.</li>
+   *   <li>When other is different.
+   *   <li>Then return not equal.
    * </ul>
-   * <p>
-   * Method under test: {@link ScryptKdfParams#equals(Object)}
+   *
+   * <p>Method under test: {@link ScryptKdfParams#equals(Object)}
    */
   @Test
   @Category(MaintainedByDiffblue.class)
@@ -1458,12 +1885,13 @@ public class WalletFileDiffblueTest {
 
   /**
    * Test ScryptKdfParams {@link ScryptKdfParams#equals(Object)}.
+   *
    * <ul>
-   *   <li>When other is different.</li>
-   *   <li>Then return not equal.</li>
+   *   <li>When other is different.
+   *   <li>Then return not equal.
    * </ul>
-   * <p>
-   * Method under test: {@link ScryptKdfParams#equals(Object)}
+   *
+   * <p>Method under test: {@link ScryptKdfParams#equals(Object)}
    */
   @Test
   @Category(MaintainedByDiffblue.class)
@@ -1490,12 +1918,13 @@ public class WalletFileDiffblueTest {
 
   /**
    * Test ScryptKdfParams {@link ScryptKdfParams#equals(Object)}.
+   *
    * <ul>
-   *   <li>When other is {@code null}.</li>
-   *   <li>Then return not equal.</li>
+   *   <li>When other is {@code null}.
+   *   <li>Then return not equal.
    * </ul>
-   * <p>
-   * Method under test: {@link ScryptKdfParams#equals(Object)}
+   *
+   * <p>Method under test: {@link ScryptKdfParams#equals(Object)}
    */
   @Test
   @Category(MaintainedByDiffblue.class)
@@ -1515,12 +1944,13 @@ public class WalletFileDiffblueTest {
 
   /**
    * Test ScryptKdfParams {@link ScryptKdfParams#equals(Object)}.
+   *
    * <ul>
-   *   <li>When other is wrong type.</li>
-   *   <li>Then return not equal.</li>
+   *   <li>When other is wrong type.
+   *   <li>Then return not equal.
    * </ul>
-   * <p>
-   * Method under test: {@link ScryptKdfParams#equals(Object)}
+   *
+   * <p>Method under test: {@link ScryptKdfParams#equals(Object)}
    */
   @Test
   @Category(MaintainedByDiffblue.class)
@@ -1540,8 +1970,9 @@ public class WalletFileDiffblueTest {
 
   /**
    * Test ScryptKdfParams getters and setters.
-   * <p>
-   * Methods under test:
+   *
+   * <p>Methods under test:
+   *
    * <ul>
    *   <li>default or parameterless constructor of {@link ScryptKdfParams}
    *   <li>{@link ScryptKdfParams#setDklen(int)}
@@ -1558,10 +1989,19 @@ public class WalletFileDiffblueTest {
    */
   @Test
   @Category(MaintainedByDiffblue.class)
-  @MethodsUnderTest({"void ScryptKdfParams.<init>()", "int ScryptKdfParams.getDklen()", "int ScryptKdfParams.getN()",
-      "int ScryptKdfParams.getP()", "int ScryptKdfParams.getR()", "String ScryptKdfParams.getSalt()",
-      "void ScryptKdfParams.setDklen(int)", "void ScryptKdfParams.setN(int)", "void ScryptKdfParams.setP(int)",
-      "void ScryptKdfParams.setR(int)", "void ScryptKdfParams.setSalt(String)"})
+  @MethodsUnderTest({
+    "void ScryptKdfParams.<init>()",
+    "int ScryptKdfParams.getDklen()",
+    "int ScryptKdfParams.getN()",
+    "int ScryptKdfParams.getP()",
+    "int ScryptKdfParams.getR()",
+    "String ScryptKdfParams.getSalt()",
+    "void ScryptKdfParams.setDklen(int)",
+    "void ScryptKdfParams.setN(int)",
+    "void ScryptKdfParams.setP(int)",
+    "void ScryptKdfParams.setR(int)",
+    "void ScryptKdfParams.setSalt(String)"
+  })
   public void testScryptKdfParamsGettersAndSetters() {
     // Arrange and Act
     ScryptKdfParams actualScryptKdfParams = new ScryptKdfParams();
@@ -1585,8 +2025,8 @@ public class WalletFileDiffblueTest {
 
   /**
    * Test {@link WalletFile#setCryptoV1(Crypto)}.
-   * <p>
-   * Method under test: {@link WalletFile#setCryptoV1(Crypto)}
+   *
+   * <p>Method under test: {@link WalletFile#setCryptoV1(Crypto)}
    */
   @Test
   @Category(MaintainedByDiffblue.class)
@@ -1615,12 +2055,14 @@ public class WalletFileDiffblueTest {
 
   /**
    * Test {@link WalletFile#equals(Object)}, and {@link WalletFile#hashCode()}.
+   *
    * <ul>
-   *   <li>When other is equal.</li>
-   *   <li>Then return equal.</li>
+   *   <li>When other is equal.
+   *   <li>Then return equal.
    * </ul>
-   * <p>
-   * Methods under test:
+   *
+   * <p>Methods under test:
+   *
    * <ul>
    *   <li>{@link WalletFile#equals(Object)}
    *   <li>{@link WalletFile#hashCode()}
@@ -1667,18 +2109,137 @@ public class WalletFileDiffblueTest {
 
     // Act and Assert
     assertEquals(walletFile, walletFile2);
-    int expectedHashCodeResult = walletFile.hashCode();
-    assertEquals(expectedHashCodeResult, walletFile2.hashCode());
+    assertEquals(walletFile.hashCode(), walletFile2.hashCode());
   }
 
   /**
    * Test {@link WalletFile#equals(Object)}, and {@link WalletFile#hashCode()}.
+   *
    * <ul>
-   *   <li>When other is same.</li>
-   *   <li>Then return equal.</li>
+   *   <li>When other is equal.
+   *   <li>Then return equal.
    * </ul>
-   * <p>
-   * Methods under test:
+   *
+   * <p>Methods under test:
+   *
+   * <ul>
+   *   <li>{@link WalletFile#equals(Object)}
+   *   <li>{@link WalletFile#hashCode()}
+   * </ul>
+   */
+  @Test
+  @Category(MaintainedByDiffblue.class)
+  @MethodsUnderTest({"boolean WalletFile.equals(Object)", "int WalletFile.hashCode()"})
+  public void testEqualsAndHashCode_whenOtherIsEqual_thenReturnEqual2() {
+    // Arrange
+    CipherParams cipherparams = new CipherParams();
+    cipherparams.setIv("Iv");
+
+    Crypto crypto = new Crypto();
+    crypto.setCipher("Cipher");
+    crypto.setCipherparams(cipherparams);
+    crypto.setCiphertext("Ciphertext");
+    crypto.setKdf("Kdf");
+    crypto.setKdfparams(new Aes128CtrKdfParams());
+    crypto.setMac("Mac");
+
+    WalletFile walletFile = new WalletFile();
+    walletFile.setAddress(null);
+    walletFile.setCrypto(crypto);
+    walletFile.setId("42");
+    walletFile.setVersion(1);
+
+    CipherParams cipherparams2 = new CipherParams();
+    cipherparams2.setIv("Iv");
+
+    Crypto crypto2 = new Crypto();
+    crypto2.setCipher("Cipher");
+    crypto2.setCipherparams(cipherparams2);
+    crypto2.setCiphertext("Ciphertext");
+    crypto2.setKdf("Kdf");
+    crypto2.setKdfparams(new Aes128CtrKdfParams());
+    crypto2.setMac("Mac");
+
+    WalletFile walletFile2 = new WalletFile();
+    walletFile2.setAddress(null);
+    walletFile2.setCrypto(crypto2);
+    walletFile2.setId("42");
+    walletFile2.setVersion(1);
+
+    // Act and Assert
+    assertEquals(walletFile, walletFile2);
+    assertEquals(walletFile.hashCode(), walletFile2.hashCode());
+  }
+
+  /**
+   * Test {@link WalletFile#equals(Object)}, and {@link WalletFile#hashCode()}.
+   *
+   * <ul>
+   *   <li>When other is equal.
+   *   <li>Then return equal.
+   * </ul>
+   *
+   * <p>Methods under test:
+   *
+   * <ul>
+   *   <li>{@link WalletFile#equals(Object)}
+   *   <li>{@link WalletFile#hashCode()}
+   * </ul>
+   */
+  @Test
+  @Category(MaintainedByDiffblue.class)
+  @MethodsUnderTest({"boolean WalletFile.equals(Object)", "int WalletFile.hashCode()"})
+  public void testEqualsAndHashCode_whenOtherIsEqual_thenReturnEqual3() {
+    // Arrange
+    CipherParams cipherparams = new CipherParams();
+    cipherparams.setIv("Iv");
+
+    Crypto crypto = new Crypto();
+    crypto.setCipher("Cipher");
+    crypto.setCipherparams(cipherparams);
+    crypto.setCiphertext("Ciphertext");
+    crypto.setKdf("Kdf");
+    crypto.setKdfparams(new Aes128CtrKdfParams());
+    crypto.setMac("Mac");
+
+    WalletFile walletFile = new WalletFile();
+    walletFile.setAddress("42 Main St");
+    walletFile.setCrypto(crypto);
+    walletFile.setId(null);
+    walletFile.setVersion(1);
+
+    CipherParams cipherparams2 = new CipherParams();
+    cipherparams2.setIv("Iv");
+
+    Crypto crypto2 = new Crypto();
+    crypto2.setCipher("Cipher");
+    crypto2.setCipherparams(cipherparams2);
+    crypto2.setCiphertext("Ciphertext");
+    crypto2.setKdf("Kdf");
+    crypto2.setKdfparams(new Aes128CtrKdfParams());
+    crypto2.setMac("Mac");
+
+    WalletFile walletFile2 = new WalletFile();
+    walletFile2.setAddress("42 Main St");
+    walletFile2.setCrypto(crypto2);
+    walletFile2.setId(null);
+    walletFile2.setVersion(1);
+
+    // Act and Assert
+    assertEquals(walletFile, walletFile2);
+    assertEquals(walletFile.hashCode(), walletFile2.hashCode());
+  }
+
+  /**
+   * Test {@link WalletFile#equals(Object)}, and {@link WalletFile#hashCode()}.
+   *
+   * <ul>
+   *   <li>When other is same.
+   *   <li>Then return equal.
+   * </ul>
+   *
+   * <p>Methods under test:
+   *
    * <ul>
    *   <li>{@link WalletFile#equals(Object)}
    *   <li>{@link WalletFile#hashCode()}
@@ -1714,12 +2275,13 @@ public class WalletFileDiffblueTest {
 
   /**
    * Test {@link WalletFile#equals(Object)}.
+   *
    * <ul>
-   *   <li>When other is different.</li>
-   *   <li>Then return not equal.</li>
+   *   <li>When other is different.
+   *   <li>Then return not equal.
    * </ul>
-   * <p>
-   * Method under test: {@link WalletFile#equals(Object)}
+   *
+   * <p>Method under test: {@link WalletFile#equals(Object)}
    */
   @Test
   @Category(MaintainedByDiffblue.class)
@@ -1766,12 +2328,13 @@ public class WalletFileDiffblueTest {
 
   /**
    * Test {@link WalletFile#equals(Object)}.
+   *
    * <ul>
-   *   <li>When other is different.</li>
-   *   <li>Then return not equal.</li>
+   *   <li>When other is different.
+   *   <li>Then return not equal.
    * </ul>
-   * <p>
-   * Method under test: {@link WalletFile#equals(Object)}
+   *
+   * <p>Method under test: {@link WalletFile#equals(Object)}
    */
   @Test
   @Category(MaintainedByDiffblue.class)
@@ -1818,12 +2381,13 @@ public class WalletFileDiffblueTest {
 
   /**
    * Test {@link WalletFile#equals(Object)}.
+   *
    * <ul>
-   *   <li>When other is different.</li>
-   *   <li>Then return not equal.</li>
+   *   <li>When other is different.
+   *   <li>Then return not equal.
    * </ul>
-   * <p>
-   * Method under test: {@link WalletFile#equals(Object)}
+   *
+   * <p>Method under test: {@link WalletFile#equals(Object)}
    */
   @Test
   @Category(MaintainedByDiffblue.class)
@@ -1832,14 +2396,9 @@ public class WalletFileDiffblueTest {
     // Arrange
     CipherParams cipherparams = new CipherParams();
     cipherparams.setIv("Iv");
-    Crypto crypto = mock(Crypto.class);
-    doNothing().when(crypto).setCipher(Mockito.<String>any());
-    doNothing().when(crypto).setCipherparams(Mockito.<CipherParams>any());
-    doNothing().when(crypto).setCiphertext(Mockito.<String>any());
-    doNothing().when(crypto).setKdf(Mockito.<String>any());
-    doNothing().when(crypto).setKdfparams(Mockito.<KdfParams>any());
-    doNothing().when(crypto).setMac(Mockito.<String>any());
-    crypto.setCipher("Cipher");
+
+    Crypto crypto = new Crypto();
+    crypto.setCipher("42 Main St");
     crypto.setCipherparams(cipherparams);
     crypto.setCiphertext("Ciphertext");
     crypto.setKdf("Kdf");
@@ -1875,12 +2434,172 @@ public class WalletFileDiffblueTest {
 
   /**
    * Test {@link WalletFile#equals(Object)}.
+   *
    * <ul>
-   *   <li>When other is {@code null}.</li>
-   *   <li>Then return not equal.</li>
+   *   <li>When other is different.
+   *   <li>Then return not equal.
    * </ul>
-   * <p>
-   * Method under test: {@link WalletFile#equals(Object)}
+   *
+   * <p>Method under test: {@link WalletFile#equals(Object)}
+   */
+  @Test
+  @Category(MaintainedByDiffblue.class)
+  @MethodsUnderTest({"boolean WalletFile.equals(Object)", "int WalletFile.hashCode()"})
+  public void testEquals_whenOtherIsDifferent_thenReturnNotEqual4() {
+    // Arrange
+    CipherParams cipherparams = new CipherParams();
+    cipherparams.setIv("Iv");
+
+    Crypto crypto = new Crypto();
+    crypto.setCipher("Cipher");
+    crypto.setCipherparams(cipherparams);
+    crypto.setCiphertext("Ciphertext");
+    crypto.setKdf("Kdf");
+    crypto.setKdfparams(new Aes128CtrKdfParams());
+    crypto.setMac("Mac");
+
+    WalletFile walletFile = new WalletFile();
+    walletFile.setAddress("42 Main St");
+    walletFile.setCrypto(crypto);
+    walletFile.setId("42 Main St");
+    walletFile.setVersion(1);
+
+    CipherParams cipherparams2 = new CipherParams();
+    cipherparams2.setIv("Iv");
+
+    Crypto crypto2 = new Crypto();
+    crypto2.setCipher("Cipher");
+    crypto2.setCipherparams(cipherparams2);
+    crypto2.setCiphertext("Ciphertext");
+    crypto2.setKdf("Kdf");
+    crypto2.setKdfparams(new Aes128CtrKdfParams());
+    crypto2.setMac("Mac");
+
+    WalletFile walletFile2 = new WalletFile();
+    walletFile2.setAddress("42 Main St");
+    walletFile2.setCrypto(crypto2);
+    walletFile2.setId("42");
+    walletFile2.setVersion(1);
+
+    // Act and Assert
+    assertNotEquals(walletFile, walletFile2);
+  }
+
+  /**
+   * Test {@link WalletFile#equals(Object)}.
+   *
+   * <ul>
+   *   <li>When other is different.
+   *   <li>Then return not equal.
+   * </ul>
+   *
+   * <p>Method under test: {@link WalletFile#equals(Object)}
+   */
+  @Test
+  @Category(MaintainedByDiffblue.class)
+  @MethodsUnderTest({"boolean WalletFile.equals(Object)", "int WalletFile.hashCode()"})
+  public void testEquals_whenOtherIsDifferent_thenReturnNotEqual5() {
+    // Arrange
+    CipherParams cipherparams = new CipherParams();
+    cipherparams.setIv("Iv");
+
+    Crypto crypto = new Crypto();
+    crypto.setCipher("Cipher");
+    crypto.setCipherparams(cipherparams);
+    crypto.setCiphertext("Ciphertext");
+    crypto.setKdf("Kdf");
+    crypto.setKdfparams(new Aes128CtrKdfParams());
+    crypto.setMac("Mac");
+
+    WalletFile walletFile = new WalletFile();
+    walletFile.setAddress("42 Main St");
+    walletFile.setCrypto(crypto);
+    walletFile.setId(null);
+    walletFile.setVersion(1);
+
+    CipherParams cipherparams2 = new CipherParams();
+    cipherparams2.setIv("Iv");
+
+    Crypto crypto2 = new Crypto();
+    crypto2.setCipher("Cipher");
+    crypto2.setCipherparams(cipherparams2);
+    crypto2.setCiphertext("Ciphertext");
+    crypto2.setKdf("Kdf");
+    crypto2.setKdfparams(new Aes128CtrKdfParams());
+    crypto2.setMac("Mac");
+
+    WalletFile walletFile2 = new WalletFile();
+    walletFile2.setAddress("42 Main St");
+    walletFile2.setCrypto(crypto2);
+    walletFile2.setId("42");
+    walletFile2.setVersion(1);
+
+    // Act and Assert
+    assertNotEquals(walletFile, walletFile2);
+  }
+
+  /**
+   * Test {@link WalletFile#equals(Object)}.
+   *
+   * <ul>
+   *   <li>When other is different.
+   *   <li>Then return not equal.
+   * </ul>
+   *
+   * <p>Method under test: {@link WalletFile#equals(Object)}
+   */
+  @Test
+  @Category(MaintainedByDiffblue.class)
+  @MethodsUnderTest({"boolean WalletFile.equals(Object)", "int WalletFile.hashCode()"})
+  public void testEquals_whenOtherIsDifferent_thenReturnNotEqual6() {
+    // Arrange
+    CipherParams cipherparams = new CipherParams();
+    cipherparams.setIv("Iv");
+
+    Crypto crypto = new Crypto();
+    crypto.setCipher("Cipher");
+    crypto.setCipherparams(cipherparams);
+    crypto.setCiphertext("Ciphertext");
+    crypto.setKdf("Kdf");
+    crypto.setKdfparams(new Aes128CtrKdfParams());
+    crypto.setMac("Mac");
+
+    WalletFile walletFile = new WalletFile();
+    walletFile.setAddress("42 Main St");
+    walletFile.setCrypto(crypto);
+    walletFile.setId("42");
+    walletFile.setVersion(0);
+
+    CipherParams cipherparams2 = new CipherParams();
+    cipherparams2.setIv("Iv");
+
+    Crypto crypto2 = new Crypto();
+    crypto2.setCipher("Cipher");
+    crypto2.setCipherparams(cipherparams2);
+    crypto2.setCiphertext("Ciphertext");
+    crypto2.setKdf("Kdf");
+    crypto2.setKdfparams(new Aes128CtrKdfParams());
+    crypto2.setMac("Mac");
+
+    WalletFile walletFile2 = new WalletFile();
+    walletFile2.setAddress("42 Main St");
+    walletFile2.setCrypto(crypto2);
+    walletFile2.setId("42");
+    walletFile2.setVersion(1);
+
+    // Act and Assert
+    assertNotEquals(walletFile, walletFile2);
+  }
+
+  /**
+   * Test {@link WalletFile#equals(Object)}.
+   *
+   * <ul>
+   *   <li>When other is {@code null}.
+   *   <li>Then return not equal.
+   * </ul>
+   *
+   * <p>Method under test: {@link WalletFile#equals(Object)}
    */
   @Test
   @Category(MaintainedByDiffblue.class)
@@ -1910,12 +2629,13 @@ public class WalletFileDiffblueTest {
 
   /**
    * Test {@link WalletFile#equals(Object)}.
+   *
    * <ul>
-   *   <li>When other is wrong type.</li>
-   *   <li>Then return not equal.</li>
+   *   <li>When other is wrong type.
+   *   <li>Then return not equal.
    * </ul>
-   * <p>
-   * Method under test: {@link WalletFile#equals(Object)}
+   *
+   * <p>Method under test: {@link WalletFile#equals(Object)}
    */
   @Test
   @Category(MaintainedByDiffblue.class)

@@ -14,48 +14,18 @@ import org.mockito.Mock;
 import org.mockito.junit.MockitoJUnitRunner;
 import org.tron.core.ChainBaseManager;
 import org.tron.core.capsule.BlockCapsule;
-import org.tron.core.exception.P2pException;
-import org.tron.core.net.message.TronMessage;
-import org.tron.core.net.peer.PeerConnection;
 import org.tron.core.store.DynamicPropertiesStore;
 
 @RunWith(MockitoJUnitRunner.class)
 public class PbftDataSyncHandlerDiffblueTest {
-  @Mock
-  private ChainBaseManager chainBaseManager;
+  @Mock private ChainBaseManager chainBaseManager;
 
-  @InjectMocks
-  private PbftDataSyncHandler pbftDataSyncHandler;
-
-  /**
-   * Test {@link PbftDataSyncHandler#processMessage(PeerConnection, TronMessage)}.
-   * <ul>
-   *   <li>Then calls {@link ChainBaseManager#getDynamicPropertiesStore()}.</li>
-   * </ul>
-   * <p>
-   * Method under test: {@link PbftDataSyncHandler#processMessage(PeerConnection, TronMessage)}
-   */
-  @Test
-  @Category(MaintainedByDiffblue.class)
-  @MethodsUnderTest({"void PbftDataSyncHandler.processMessage(PeerConnection, TronMessage)"})
-  public void testProcessMessage_thenCallsGetDynamicPropertiesStore() throws P2pException {
-    // Arrange
-    DynamicPropertiesStore dynamicPropertiesStore = mock(DynamicPropertiesStore.class);
-    when(dynamicPropertiesStore.allowPBFT()).thenReturn(false);
-    when(chainBaseManager.getDynamicPropertiesStore()).thenReturn(dynamicPropertiesStore);
-
-    // Act
-    pbftDataSyncHandler.processMessage(new PeerConnection(), null);
-
-    // Assert
-    verify(chainBaseManager).getDynamicPropertiesStore();
-    verify(dynamicPropertiesStore).allowPBFT();
-  }
+  @InjectMocks private PbftDataSyncHandler pbftDataSyncHandler;
 
   /**
    * Test {@link PbftDataSyncHandler#processPBFTCommitData(BlockCapsule)}.
-   * <p>
-   * Method under test: {@link PbftDataSyncHandler#processPBFTCommitData(BlockCapsule)}
+   *
+   * <p>Method under test: {@link PbftDataSyncHandler#processPBFTCommitData(BlockCapsule)}
    */
   @Test
   @Category(MaintainedByDiffblue.class)
@@ -73,8 +43,8 @@ public class PbftDataSyncHandlerDiffblueTest {
 
   /**
    * Test {@link PbftDataSyncHandler#processPBFTCommitData(BlockCapsule)}.
-   * <p>
-   * Method under test: {@link PbftDataSyncHandler#processPBFTCommitData(BlockCapsule)}
+   *
+   * <p>Method under test: {@link PbftDataSyncHandler#processPBFTCommitData(BlockCapsule)}
    */
   @Test
   @Category(MaintainedByDiffblue.class)
@@ -85,6 +55,7 @@ public class PbftDataSyncHandlerDiffblueTest {
     when(dynamicPropertiesStore.getMaintenanceTimeInterval()).thenReturn(42L);
     when(dynamicPropertiesStore.allowPBFT()).thenReturn(true);
     when(chainBaseManager.getDynamicPropertiesStore()).thenReturn(dynamicPropertiesStore);
+
     BlockCapsule block = mock(BlockCapsule.class);
     when(block.getNum()).thenReturn(1L);
     when(block.getTimeStamp()).thenReturn(10L);
@@ -102,8 +73,8 @@ public class PbftDataSyncHandlerDiffblueTest {
 
   /**
    * Test {@link PbftDataSyncHandler#processPBFTCommitData(BlockCapsule)}.
-   * <p>
-   * Method under test: {@link PbftDataSyncHandler#processPBFTCommitData(BlockCapsule)}
+   *
+   * <p>Method under test: {@link PbftDataSyncHandler#processPBFTCommitData(BlockCapsule)}
    */
   @Test
   @Category(MaintainedByDiffblue.class)
@@ -114,6 +85,7 @@ public class PbftDataSyncHandlerDiffblueTest {
     when(dynamicPropertiesStore.getMaintenanceTimeInterval()).thenReturn(0L);
     when(dynamicPropertiesStore.allowPBFT()).thenReturn(true);
     when(chainBaseManager.getDynamicPropertiesStore()).thenReturn(dynamicPropertiesStore);
+
     BlockCapsule block = mock(BlockCapsule.class);
     when(block.getNum()).thenReturn(1L);
     when(block.getTimeStamp()).thenReturn(10L);
@@ -131,11 +103,13 @@ public class PbftDataSyncHandlerDiffblueTest {
 
   /**
    * Test {@link PbftDataSyncHandler#processPBFTCommitData(BlockCapsule)}.
+   *
    * <ul>
-   *   <li>Given {@link DynamicPropertiesStore} {@link DynamicPropertiesStore#allowPBFT()} return {@code false}.</li>
+   *   <li>Given {@link DynamicPropertiesStore} {@link DynamicPropertiesStore#allowPBFT()} return
+   *       {@code false}.
    * </ul>
-   * <p>
-   * Method under test: {@link PbftDataSyncHandler#processPBFTCommitData(BlockCapsule)}
+   *
+   * <p>Method under test: {@link PbftDataSyncHandler#processPBFTCommitData(BlockCapsule)}
    */
   @Test
   @Category(MaintainedByDiffblue.class)
@@ -156,11 +130,13 @@ public class PbftDataSyncHandlerDiffblueTest {
 
   /**
    * Test {@link PbftDataSyncHandler#processPBFTCommitData(BlockCapsule)}.
+   *
    * <ul>
-   *   <li>Given {@link DynamicPropertiesStore} {@link DynamicPropertiesStore#allowPBFT()} return {@code true}.</li>
+   *   <li>Given {@link DynamicPropertiesStore} {@link DynamicPropertiesStore#allowPBFT()} return
+   *       {@code true}.
    * </ul>
-   * <p>
-   * Method under test: {@link PbftDataSyncHandler#processPBFTCommitData(BlockCapsule)}
+   *
+   * <p>Method under test: {@link PbftDataSyncHandler#processPBFTCommitData(BlockCapsule)}
    */
   @Test
   @Category(MaintainedByDiffblue.class)

@@ -16,12 +16,13 @@ import org.junit.experimental.categories.Category;
 public class MerkleRootDiffblueTest {
   /**
    * Test {@link MerkleRoot#root(List)}.
+   *
    * <ul>
-   *   <li>Given {@link Sha256Hash#ZERO_HASH}.</li>
-   *   <li>Then return ByteString iterator next byteValue is minus eleven.</li>
+   *   <li>Given {@link Sha256Hash#ZERO_HASH}.
+   *   <li>Then return ByteString iterator next byteValue is minus eleven.
    * </ul>
-   * <p>
-   * Method under test: {@link MerkleRoot#root(List)}
+   *
+   * <p>Method under test: {@link MerkleRoot#root(List)}
    */
   @Test
   @Category(MaintainedByDiffblue.class)
@@ -47,18 +48,23 @@ public class MerkleRootDiffblueTest {
     assertEquals((byte) -3, nextResult3.byteValue());
     assertEquals((byte) -91, nextResult2.byteValue());
     assertTrue(actualHasNextResult);
-    assertArrayEquals(new byte[]{-11, -91, -3, 'B', -47, 'j', ' ', '0', '\'', -104, -17, 'n', -45, '\t', -105, -101,
-        'C', 0, '=', '#', ' ', -39, -16, -24, -22, -104, '1', -87, '\'', 'Y', -5, 'K'}, actualRootResult.getBytes());
+    assertArrayEquals(
+        new byte[] {
+          -11, -91, -3, 'B', -47, 'j', ' ', '0', '\'', -104, -17, 'n', -45, '\t', -105, -101, 'C',
+          0, '=', '#', ' ', -39, -16, -24, -22, -104, '1', -87, '\'', 'Y', -5, 'K'
+        },
+        actualRootResult.getBytes());
   }
 
   /**
    * Test {@link MerkleRoot#root(List)}.
+   *
    * <ul>
-   *   <li>Given {@link Sha256Hash#ZERO_HASH}.</li>
-   *   <li>Then return ByteString iterator next byteValue is one.</li>
+   *   <li>Given {@link Sha256Hash#ZERO_HASH}.
+   *   <li>Then return ByteString iterator next byteValue is one.
    * </ul>
-   * <p>
-   * Method under test: {@link MerkleRoot#root(List)}
+   *
+   * <p>Method under test: {@link MerkleRoot#root(List)}
    */
   @Test
   @Category(MaintainedByDiffblue.class)
@@ -85,18 +91,23 @@ public class MerkleRootDiffblueTest {
     assertEquals((byte) 5, nextResult2.byteValue());
     assertTrue(actualHasNextResult);
     assertEquals('z', nextResult.byteValue());
-    assertArrayEquals(new byte[]{'z', 5, 1, -11, -107, '{', -33, -100, -77, -88, -1, 'I', 'f', -16, '"', 'e', -7, 'h',
-        'e', -117, 'z', -100, 'b', 'd', ',', -70, 17, 'e', -24, 'f', 'B', -11}, actualRootResult.getBytes());
+    assertArrayEquals(
+        new byte[] {
+          'z', 5, 1, -11, -107, '{', -33, -100, -77, -88, -1, 'I', 'f', -16, '"', 'e', -7, 'h', 'e',
+          -117, 'z', -100, 'b', 'd', ',', -70, 17, 'e', -24, 'f', 'B', -11
+        },
+        actualRootResult.getBytes());
   }
 
   /**
    * Test {@link MerkleRoot#root(List)}.
+   *
    * <ul>
-   *   <li>Given {@link Sha256Hash#ZERO_HASH}.</li>
-   *   <li>Then return ByteString iterator next byteValue is zero.</li>
+   *   <li>Given {@link Sha256Hash#ZERO_HASH}.
+   *   <li>Then return ByteString iterator next byteValue is zero.
    * </ul>
-   * <p>
-   * Method under test: {@link MerkleRoot#root(List)}
+   *
+   * <p>Method under test: {@link MerkleRoot#root(List)}
    */
   @Test
   @Category(MaintainedByDiffblue.class)
@@ -120,19 +131,23 @@ public class MerkleRootDiffblueTest {
     assertEquals((byte) 0, iteratorResult.next().byteValue());
     assertTrue(iteratorResult.hasNext());
     assertArrayEquals(
-        new byte[]{0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0},
+        new byte[] {
+          0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0,
+          0, 0
+        },
         actualRootResult.getBytes());
   }
 
   /**
    * Test {@link MerkleRoot#root(List)}.
+   *
    * <ul>
-   *   <li>Given {@link Sha256Hash#ZERO_HASH}.</li>
-   *   <li>When {@link ArrayList#ArrayList()} add {@link Sha256Hash#ZERO_HASH}.</li>
-   *   <li>Then {@link ArrayList#ArrayList()} size is five.</li>
+   *   <li>Given {@link Sha256Hash#ZERO_HASH}.
+   *   <li>When {@link ArrayList#ArrayList()} add {@link Sha256Hash#ZERO_HASH}.
+   *   <li>Then {@link ArrayList#ArrayList()} size is five.
    * </ul>
-   * <p>
-   * Method under test: {@link MerkleRoot#root(List)}
+   *
+   * <p>Method under test: {@link MerkleRoot#root(List)}
    */
   @Test
   @Category(MaintainedByDiffblue.class)
@@ -150,7 +165,6 @@ public class MerkleRootDiffblueTest {
     Sha256Hash actualRootResult = MerkleRoot.root(hashList);
 
     // Assert
-    Sha256Hash sha256Hash = actualRootResult.ZERO_HASH;
     ByteString byteString = actualRootResult.getByteString();
     ByteIterator iteratorResult = byteString.iterator();
     Byte nextResult = iteratorResult.next();
@@ -163,20 +177,26 @@ public class MerkleRootDiffblueTest {
     assertEquals((byte) 24, nextResult3.byteValue());
     assertTrue(actualHasNextResult);
     assertEquals('(', nextResult.byteValue());
+    Sha256Hash sha256Hash = Sha256Hash.ZERO_HASH;
     assertSame(sha256Hash, hashList.get(3));
     assertSame(sha256Hash, hashList.get(4));
-    assertArrayEquals(new byte[]{'(', -70, 24, '4', -93, -89, -74, 'W', 'F', '\f', -25, -97, -93, -95, -39, '\t', -85,
-        -120, '(', -3, 'U', 'v', 'Y', -44, -48, 'U', 'J', -101, -37, -64, -20, '0'}, actualRootResult.getBytes());
+    assertArrayEquals(
+        new byte[] {
+          '(', -70, 24, '4', -93, -89, -74, 'W', 'F', '\f', -25, -97, -93, -95, -39, '\t', -85,
+          -120, '(', -3, 'U', 'v', 'Y', -44, -48, 'U', 'J', -101, -37, -64, -20, '0'
+        },
+        actualRootResult.getBytes());
   }
 
   /**
    * Test {@link MerkleRoot#root(List)}.
+   *
    * <ul>
-   *   <li>When {@link ArrayList#ArrayList()}.</li>
-   *   <li>Then return ByteString iterator next byteValue is zero.</li>
+   *   <li>When {@link ArrayList#ArrayList()}.
+   *   <li>Then return ByteString iterator next byteValue is zero.
    * </ul>
-   * <p>
-   * Method under test: {@link MerkleRoot#root(List)}
+   *
+   * <p>Method under test: {@link MerkleRoot#root(List)}
    */
   @Test
   @Category(MaintainedByDiffblue.class)
@@ -196,7 +216,10 @@ public class MerkleRootDiffblueTest {
     assertEquals((byte) 0, iteratorResult.next().byteValue());
     assertTrue(iteratorResult.hasNext());
     assertArrayEquals(
-        new byte[]{0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0},
+        new byte[] {
+          0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0,
+          0, 0
+        },
         actualRootResult.getBytes());
   }
 }

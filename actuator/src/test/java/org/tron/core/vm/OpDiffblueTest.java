@@ -9,8 +9,8 @@ import org.junit.experimental.categories.Category;
 public class OpDiffblueTest {
   /**
    * Test {@link Op#getNameOf(byte)} with {@code byte}.
-   * <p>
-   * Method under test: {@link Op#getNameOf(byte)}
+   *
+   * <p>Method under test: {@link Op#getNameOf(byte)}
    */
   @Test
   @Category(MaintainedByDiffblue.class)
@@ -22,12 +22,13 @@ public class OpDiffblueTest {
 
   /**
    * Test {@link Op#getNameOf(int)} with {@code int}.
+   *
    * <ul>
-   *   <li>When one.</li>
-   *   <li>Then return {@code ADD}.</li>
+   *   <li>When one.
+   *   <li>Then return {@code ADD}.
    * </ul>
-   * <p>
-   * Method under test: {@link Op#getNameOf(int)}
+   *
+   * <p>Method under test: {@link Op#getNameOf(int)}
    */
   @Test
   @Category(MaintainedByDiffblue.class)

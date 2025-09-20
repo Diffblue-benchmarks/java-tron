@@ -10,8 +10,9 @@ import org.junit.experimental.categories.Category;
 public class PairDiffblueTest {
   /**
    * Test getters and setters.
-   * <p>
-   * Methods under test:
+   *
+   * <p>Methods under test:
+   *
    * <ul>
    *   <li>{@link Pair#Pair(Object, Object)}
    *   <li>{@link Pair#toString()}
@@ -21,8 +22,12 @@ public class PairDiffblueTest {
    */
   @Test
   @Category(MaintainedByDiffblue.class)
-  @MethodsUnderTest({"void Pair.<init>(Object, Object)", "Object Pair.getKey()", "Object Pair.getValue()",
-      "String Pair.toString()"})
+  @MethodsUnderTest({
+    "void Pair.<init>(Object, Object)",
+    "Object Pair.getKey()",
+    "Object Pair.getValue()",
+    "String Pair.toString()"
+  })
   public void testGettersAndSetters() {
     // Arrange and Act
     Pair<Object, Object> actualPair = new Pair<>("Key", "Value");
@@ -37,12 +42,14 @@ public class PairDiffblueTest {
 
   /**
    * Test {@link Pair#equals(Object)}, and {@link Pair#hashCode()}.
+   *
    * <ul>
-   *   <li>When other is equal.</li>
-   *   <li>Then return equal.</li>
+   *   <li>When other is equal.
+   *   <li>Then return equal.
    * </ul>
-   * <p>
-   * Methods under test:
+   *
+   * <p>Methods under test:
+   *
    * <ul>
    *   <li>{@link Pair#equals(Object)}
    *   <li>{@link Pair#hashCode()}
@@ -58,18 +65,19 @@ public class PairDiffblueTest {
 
     // Act and Assert
     assertEquals(pair, pair2);
-    int expectedHashCodeResult = pair.hashCode();
-    assertEquals(expectedHashCodeResult, pair2.hashCode());
+    assertEquals(pair.hashCode(), pair2.hashCode());
   }
 
   /**
    * Test {@link Pair#equals(Object)}, and {@link Pair#hashCode()}.
+   *
    * <ul>
-   *   <li>When other is same.</li>
-   *   <li>Then return equal.</li>
+   *   <li>When other is same.
+   *   <li>Then return equal.
    * </ul>
-   * <p>
-   * Methods under test:
+   *
+   * <p>Methods under test:
+   *
    * <ul>
    *   <li>{@link Pair#equals(Object)}
    *   <li>{@link Pair#hashCode()}
@@ -90,12 +98,13 @@ public class PairDiffblueTest {
 
   /**
    * Test {@link Pair#equals(Object)}.
+   *
    * <ul>
-   *   <li>When other is different.</li>
-   *   <li>Then return not equal.</li>
+   *   <li>When other is different.
+   *   <li>Then return not equal.
    * </ul>
-   * <p>
-   * Method under test: {@link Pair#equals(Object)}
+   *
+   * <p>Method under test: {@link Pair#equals(Object)}
    */
   @Test
   @Category(MaintainedByDiffblue.class)
@@ -110,12 +119,13 @@ public class PairDiffblueTest {
 
   /**
    * Test {@link Pair#equals(Object)}.
+   *
    * <ul>
-   *   <li>When other is different.</li>
-   *   <li>Then return not equal.</li>
+   *   <li>When other is different.
+   *   <li>Then return not equal.
    * </ul>
-   * <p>
-   * Method under test: {@link Pair#equals(Object)}
+   *
+   * <p>Method under test: {@link Pair#equals(Object)}
    */
   @Test
   @Category(MaintainedByDiffblue.class)
@@ -130,12 +140,13 @@ public class PairDiffblueTest {
 
   /**
    * Test {@link Pair#equals(Object)}.
+   *
    * <ul>
-   *   <li>When other is different.</li>
-   *   <li>Then return not equal.</li>
+   *   <li>When other is different.
+   *   <li>Then return not equal.
    * </ul>
-   * <p>
-   * Method under test: {@link Pair#equals(Object)}
+   *
+   * <p>Method under test: {@link Pair#equals(Object)}
    */
   @Test
   @Category(MaintainedByDiffblue.class)
@@ -150,12 +161,13 @@ public class PairDiffblueTest {
 
   /**
    * Test {@link Pair#equals(Object)}.
+   *
    * <ul>
-   *   <li>When other is different.</li>
-   *   <li>Then return not equal.</li>
+   *   <li>When other is different.
+   *   <li>Then return not equal.
    * </ul>
-   * <p>
-   * Method under test: {@link Pair#equals(Object)}
+   *
+   * <p>Method under test: {@link Pair#equals(Object)}
    */
   @Test
   @Category(MaintainedByDiffblue.class)
@@ -170,12 +182,13 @@ public class PairDiffblueTest {
 
   /**
    * Test {@link Pair#equals(Object)}.
+   *
    * <ul>
-   *   <li>When other is {@code null}.</li>
-   *   <li>Then return not equal.</li>
+   *   <li>When other is {@code null}.
+   *   <li>Then return not equal.
    * </ul>
-   * <p>
-   * Method under test: {@link Pair#equals(Object)}
+   *
+   * <p>Method under test: {@link Pair#equals(Object)}
    */
   @Test
   @Category(MaintainedByDiffblue.class)
@@ -190,12 +203,13 @@ public class PairDiffblueTest {
 
   /**
    * Test {@link Pair#equals(Object)}.
+   *
    * <ul>
-   *   <li>When other is wrong type.</li>
-   *   <li>Then return not equal.</li>
+   *   <li>When other is wrong type.
+   *   <li>Then return not equal.
    * </ul>
-   * <p>
-   * Method under test: {@link Pair#equals(Object)}
+   *
+   * <p>Method under test: {@link Pair#equals(Object)}
    */
   @Test
   @Category(MaintainedByDiffblue.class)

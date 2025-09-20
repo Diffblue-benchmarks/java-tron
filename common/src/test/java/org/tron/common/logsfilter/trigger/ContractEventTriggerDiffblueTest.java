@@ -15,8 +15,8 @@ import org.junit.experimental.categories.Category;
 public class ContractEventTriggerDiffblueTest {
   /**
    * Test new {@link ContractEventTrigger} (default constructor).
-   * <p>
-   * Method under test: default or parameterless constructor of {@link ContractEventTrigger}
+   *
+   * <p>Method under test: default or parameterless constructor of {@link ContractEventTrigger}
    */
   @Test
   @Category(MaintainedByDiffblue.class)
@@ -50,8 +50,9 @@ public class ContractEventTriggerDiffblueTest {
 
   /**
    * Test getters and setters.
-   * <p>
-   * Methods under test:
+   *
+   * <p>Methods under test:
+   *
    * <ul>
    *   <li>{@link ContractEventTrigger#setDataMap(Map)}
    *   <li>{@link ContractEventTrigger#setEventName(String)}
@@ -67,11 +68,18 @@ public class ContractEventTriggerDiffblueTest {
    */
   @Test
   @Category(MaintainedByDiffblue.class)
-  @MethodsUnderTest({"Map ContractEventTrigger.getDataMap()", "String ContractEventTrigger.getEventName()",
-      "String ContractEventTrigger.getEventSignature()", "String ContractEventTrigger.getEventSignatureFull()",
-      "Map ContractEventTrigger.getTopicMap()", "void ContractEventTrigger.setDataMap(Map)",
-      "void ContractEventTrigger.setEventName(String)", "void ContractEventTrigger.setEventSignature(String)",
-      "void ContractEventTrigger.setEventSignatureFull(String)", "void ContractEventTrigger.setTopicMap(Map)"})
+  @MethodsUnderTest({
+    "Map ContractEventTrigger.getDataMap()",
+    "String ContractEventTrigger.getEventName()",
+    "String ContractEventTrigger.getEventSignature()",
+    "String ContractEventTrigger.getEventSignatureFull()",
+    "Map ContractEventTrigger.getTopicMap()",
+    "void ContractEventTrigger.setDataMap(Map)",
+    "void ContractEventTrigger.setEventName(String)",
+    "void ContractEventTrigger.setEventSignature(String)",
+    "void ContractEventTrigger.setEventSignatureFull(String)",
+    "void ContractEventTrigger.setTopicMap(Map)"
+  })
   public void testGettersAndSetters() {
     // Arrange
     ContractEventTrigger contractEventTrigger = new ContractEventTrigger();

@@ -11,24 +11,29 @@ import org.junit.experimental.categories.Category;
 public class TronRuntimeExceptionDiffblueTest {
   /**
    * Test {@link TronRuntimeException#TronRuntimeException(String, Throwable)}.
+   *
    * <ul>
-   *   <li>Then return Message is {@code An error occurred}.</li>
+   *   <li>Then return Message is {@code An error occurred}.
    * </ul>
-   * <p>
-   * Method under test: {@link TronRuntimeException#TronRuntimeException(String, Throwable)}
+   *
+   * <p>Method under test: {@link TronRuntimeException#TronRuntimeException(String, Throwable)}
    */
   @Test
   @Category(MaintainedByDiffblue.class)
-  @MethodsUnderTest({"void TronRuntimeException.<init>()", "void TronRuntimeException.<init>(String)",
-      "void TronRuntimeException.<init>(String, Throwable)",
-      "void TronRuntimeException.<init>(String, Throwable, boolean, boolean)",
-      "void TronRuntimeException.<init>(Throwable)"})
+  @MethodsUnderTest({
+    "void TronRuntimeException.<init>()",
+    "void TronRuntimeException.<init>(String)",
+    "void TronRuntimeException.<init>(String, Throwable)",
+    "void TronRuntimeException.<init>(String, Throwable, boolean, boolean)",
+    "void TronRuntimeException.<init>(Throwable)"
+  })
   public void testNewTronRuntimeException_thenReturnMessageIsAnErrorOccurred() {
     // Arrange
     Throwable cause = new Throwable();
 
     // Act
-    TronRuntimeException actualTronRuntimeException = new TronRuntimeException("An error occurred", cause);
+    TronRuntimeException actualTronRuntimeException =
+        new TronRuntimeException("An error occurred", cause);
 
     // Assert
     assertEquals("An error occurred", actualTronRuntimeException.getMessage());
@@ -38,18 +43,22 @@ public class TronRuntimeExceptionDiffblueTest {
 
   /**
    * Test {@link TronRuntimeException#TronRuntimeException()}.
+   *
    * <ul>
-   *   <li>Then return Message is {@code null}.</li>
+   *   <li>Then return Message is {@code null}.
    * </ul>
-   * <p>
-   * Method under test: {@link TronRuntimeException#TronRuntimeException()}
+   *
+   * <p>Method under test: {@link TronRuntimeException#TronRuntimeException()}
    */
   @Test
   @Category(MaintainedByDiffblue.class)
-  @MethodsUnderTest({"void TronRuntimeException.<init>()", "void TronRuntimeException.<init>(String)",
-      "void TronRuntimeException.<init>(String, Throwable)",
-      "void TronRuntimeException.<init>(String, Throwable, boolean, boolean)",
-      "void TronRuntimeException.<init>(Throwable)"})
+  @MethodsUnderTest({
+    "void TronRuntimeException.<init>()",
+    "void TronRuntimeException.<init>(String)",
+    "void TronRuntimeException.<init>(String, Throwable)",
+    "void TronRuntimeException.<init>(String, Throwable, boolean, boolean)",
+    "void TronRuntimeException.<init>(Throwable)"
+  })
   public void testNewTronRuntimeException_thenReturnMessageIsNull() {
     // Arrange and Act
     TronRuntimeException actualTronRuntimeException = new TronRuntimeException();
@@ -62,19 +71,23 @@ public class TronRuntimeExceptionDiffblueTest {
 
   /**
    * Test {@link TronRuntimeException#TronRuntimeException(String)}.
+   *
    * <ul>
-   *   <li>When {@code An error occurred}.</li>
-   *   <li>Then return Cause is {@code null}.</li>
+   *   <li>When {@code An error occurred}.
+   *   <li>Then return Cause is {@code null}.
    * </ul>
-   * <p>
-   * Method under test: {@link TronRuntimeException#TronRuntimeException(String)}
+   *
+   * <p>Method under test: {@link TronRuntimeException#TronRuntimeException(String)}
    */
   @Test
   @Category(MaintainedByDiffblue.class)
-  @MethodsUnderTest({"void TronRuntimeException.<init>()", "void TronRuntimeException.<init>(String)",
-      "void TronRuntimeException.<init>(String, Throwable)",
-      "void TronRuntimeException.<init>(String, Throwable, boolean, boolean)",
-      "void TronRuntimeException.<init>(Throwable)"})
+  @MethodsUnderTest({
+    "void TronRuntimeException.<init>()",
+    "void TronRuntimeException.<init>(String)",
+    "void TronRuntimeException.<init>(String, Throwable)",
+    "void TronRuntimeException.<init>(String, Throwable, boolean, boolean)",
+    "void TronRuntimeException.<init>(Throwable)"
+  })
   public void testNewTronRuntimeException_whenAnErrorOccurred_thenReturnCauseIsNull() {
     // Arrange and Act
     TronRuntimeException actualTronRuntimeException = new TronRuntimeException("An error occurred");
@@ -87,19 +100,23 @@ public class TronRuntimeExceptionDiffblueTest {
 
   /**
    * Test {@link TronRuntimeException#TronRuntimeException(Throwable)}.
+   *
    * <ul>
-   *   <li>When {@link Throwable#Throwable()}.</li>
-   *   <li>Then return Message is {@code Throwable}.</li>
+   *   <li>When {@link Throwable#Throwable()}.
+   *   <li>Then return Message is {@code Throwable}.
    * </ul>
-   * <p>
-   * Method under test: {@link TronRuntimeException#TronRuntimeException(Throwable)}
+   *
+   * <p>Method under test: {@link TronRuntimeException#TronRuntimeException(Throwable)}
    */
   @Test
   @Category(MaintainedByDiffblue.class)
-  @MethodsUnderTest({"void TronRuntimeException.<init>()", "void TronRuntimeException.<init>(String)",
-      "void TronRuntimeException.<init>(String, Throwable)",
-      "void TronRuntimeException.<init>(String, Throwable, boolean, boolean)",
-      "void TronRuntimeException.<init>(Throwable)"})
+  @MethodsUnderTest({
+    "void TronRuntimeException.<init>()",
+    "void TronRuntimeException.<init>(String)",
+    "void TronRuntimeException.<init>(String, Throwable)",
+    "void TronRuntimeException.<init>(String, Throwable, boolean, boolean)",
+    "void TronRuntimeException.<init>(Throwable)"
+  })
   public void testNewTronRuntimeException_whenThrowable_thenReturnMessageIsJavaLangThrowable() {
     // Arrange
     Throwable cause = new Throwable();
@@ -115,25 +132,31 @@ public class TronRuntimeExceptionDiffblueTest {
 
   /**
    * Test {@link TronRuntimeException#TronRuntimeException(String, Throwable, boolean, boolean)}.
+   *
    * <ul>
-   *   <li>When {@code true}.</li>
-   *   <li>Then return Message is {@code An error occurred}.</li>
+   *   <li>When {@code true}.
+   *   <li>Then return Message is {@code An error occurred}.
    * </ul>
-   * <p>
-   * Method under test: {@link TronRuntimeException#TronRuntimeException(String, Throwable, boolean, boolean)}
+   *
+   * <p>Method under test: {@link TronRuntimeException#TronRuntimeException(String, Throwable,
+   * boolean, boolean)}
    */
   @Test
   @Category(MaintainedByDiffblue.class)
-  @MethodsUnderTest({"void TronRuntimeException.<init>()", "void TronRuntimeException.<init>(String)",
-      "void TronRuntimeException.<init>(String, Throwable)",
-      "void TronRuntimeException.<init>(String, Throwable, boolean, boolean)",
-      "void TronRuntimeException.<init>(Throwable)"})
+  @MethodsUnderTest({
+    "void TronRuntimeException.<init>()",
+    "void TronRuntimeException.<init>(String)",
+    "void TronRuntimeException.<init>(String, Throwable)",
+    "void TronRuntimeException.<init>(String, Throwable, boolean, boolean)",
+    "void TronRuntimeException.<init>(Throwable)"
+  })
   public void testNewTronRuntimeException_whenTrue_thenReturnMessageIsAnErrorOccurred() {
     // Arrange
     Throwable cause = new Throwable();
 
     // Act
-    TronRuntimeException actualTronRuntimeException = new TronRuntimeException("An error occurred", cause, true, true);
+    TronRuntimeException actualTronRuntimeException =
+        new TronRuntimeException("An error occurred", cause, true, true);
 
     // Assert
     assertEquals("An error occurred", actualTronRuntimeException.getMessage());

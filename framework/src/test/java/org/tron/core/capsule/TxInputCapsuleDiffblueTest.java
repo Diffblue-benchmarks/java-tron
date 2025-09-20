@@ -57,19 +57,20 @@ import org.tron.protos.Protocol.TXInput.raw;
 public class TxInputCapsuleDiffblueTest {
   /**
    * Test {@link TxInputCapsule#TxInputCapsule(byte[], long, byte[], byte[])}.
-   * <p>
-   * Method under test: {@link TxInputCapsule#TxInputCapsule(byte[], long, byte[], byte[])}
+   *
+   * <p>Method under test: {@link TxInputCapsule#TxInputCapsule(byte[], long, byte[], byte[])}
    */
   @Test
   @Category(MaintainedByDiffblue.class)
   @MethodsUnderTest({"void TxInputCapsule.<init>(byte[], long, byte[], byte[])"})
   public void testNewTxInputCapsule() throws UnsupportedEncodingException {
-    // Arrange
-    byte[] txId = "AXAXAXAX".getBytes("UTF-8");
-    byte[] signature = "AXAXAXAX".getBytes("UTF-8");
-
-    // Act
-    TxInputCapsule actualTxInputCapsule = new TxInputCapsule(txId, 1L, signature, "AXAXAXAX".getBytes("UTF-8"));
+    // Arrange and Act
+    TxInputCapsule actualTxInputCapsule =
+        new TxInputCapsule(
+            "AXAXAXAX".getBytes("UTF-8"),
+            1L,
+            "AXAXAXAX".getBytes("UTF-8"),
+            "AXAXAXAX".getBytes("UTF-8"));
 
     // Assert
     TXInput instance = actualTxInputCapsule.getInstance();
@@ -81,24 +82,26 @@ public class TxInputCapsuleDiffblueTest {
     assertTrue(instance.hasRawData());
     assertTrue(instance.isInitialized());
     assertSame(instance, actualTxInputCapsule.getTxInput());
-    assertArrayEquals(new byte[]{}, actualTxInputCapsule.getData());
+    assertArrayEquals(new byte[] {}, actualTxInputCapsule.getData());
   }
 
   /**
    * Test {@link TxInputCapsule#getTxInput()}.
-   * <p>
-   * Method under test: {@link TxInputCapsule#getTxInput()}
+   *
+   * <p>Method under test: {@link TxInputCapsule#getTxInput()}
    */
   @Test
   @Category(MaintainedByDiffblue.class)
   @MethodsUnderTest({"TXInput TxInputCapsule.getTxInput()"})
   public void testGetTxInput() throws UnsupportedEncodingException {
-    // Arrange
-    byte[] txId = "AXAXAXAX".getBytes("UTF-8");
-    byte[] signature = "AXAXAXAX".getBytes("UTF-8");
-
-    // Act
-    TXInput actualTxInput = (new TxInputCapsule(txId, 1L, signature, "AXAXAXAX".getBytes("UTF-8"))).getTxInput();
+    // Arrange and Act
+    TXInput actualTxInput =
+        new TxInputCapsule(
+                "AXAXAXAX".getBytes("UTF-8"),
+                1L,
+                "AXAXAXAX".getBytes("UTF-8"),
+                "AXAXAXAX".getBytes("UTF-8"))
+            .getTxInput();
 
     // Assert
     boolean actualIsEmptyResult = actualTxInput.findInitializationErrors().isEmpty();
@@ -109,8 +112,8 @@ public class TxInputCapsuleDiffblueTest {
     raw rawData = defaultInstanceForType.getRawData();
     boolean actualIsEmptyResult4 = rawData.findInitializationErrors().isEmpty();
     boolean actualIsEmptyResult5 = rawData.getAllFields().isEmpty();
-    ByteString signature2 = defaultInstanceForType.getSignature();
-    boolean actualHasNextResult = signature2.iterator().hasNext();
+    ByteString signature = defaultInstanceForType.getSignature();
+    boolean actualHasNextResult = signature.iterator().hasNext();
     Descriptor descriptorForType = actualTxInput.getDescriptorForType();
     boolean actualIsEmptyResult6 = descriptorForType.getEnumTypes().isEmpty();
     boolean actualIsEmptyResult7 = descriptorForType.getExtensions().isEmpty();
@@ -217,8 +220,8 @@ public class TxInputCapsuleDiffblueTest {
     List<OneofDescriptor> oneofs2 = descriptorForType7.getOneofs();
     List<OneofDescriptor> realOneofs3 = descriptorForType7.getRealOneofs();
     DescriptorProto toProtoResult6 = descriptorForType7.toProto();
-    ByteString signature3 = actualTxInput.getSignature();
-    ByteIterator iteratorResult8 = signature3.iterator();
+    ByteString signature2 = actualTxInput.getSignature();
+    ByteIterator iteratorResult8 = signature2.iterator();
     Byte nextResult9 = iteratorResult8.next();
     Byte nextResult10 = iteratorResult8.next();
     Byte nextResult11 = iteratorResult8.next();
@@ -242,7 +245,7 @@ public class TxInputCapsuleDiffblueTest {
     assertEquals("", defaultInstanceForType.getInitializationErrorString());
     assertEquals("", rawData2.getInitializationErrorString());
     assertEquals("", rawData.getInitializationErrorString());
-    assertEquals("", signature2.toStringUtf8());
+    assertEquals("", signature.toStringUtf8());
     assertEquals("", defaultInstanceForType4.getName());
     assertEquals("", toProtoResult.getDefaultValue());
     assertEquals("", toProtoResult2.getDefaultValue());
@@ -278,7 +281,7 @@ public class TxInputCapsuleDiffblueTest {
     assertEquals("", getResult4.getEditionName());
     assertEquals("", getResult5.getEditionName());
     assertEquals(".protocol.TXInput.raw", toProtoResult.getTypeName());
-    assertEquals("AXAXAXAX", signature3.toStringUtf8());
+    assertEquals("AXAXAXAX", signature2.toStringUtf8());
     assertEquals(45, messageTypes.size());
     assertEquals("AccountId", getResult8.getName());
     assertEquals(2, enumTypes.size());
@@ -481,7 +484,8 @@ public class TxInputCapsuleDiffblueTest {
     assertEquals(FieldPresence.FIELD_PRESENCE_UNKNOWN, features.getFieldPresence());
     assertEquals(JsonFormat.JSON_FORMAT_UNKNOWN, features.getJsonFormat());
     assertEquals(MessageEncoding.MESSAGE_ENCODING_UNKNOWN, features.getMessageEncoding());
-    assertEquals(RepeatedFieldEncoding.REPEATED_FIELD_ENCODING_UNKNOWN, features.getRepeatedFieldEncoding());
+    assertEquals(
+        RepeatedFieldEncoding.REPEATED_FIELD_ENCODING_UNKNOWN, features.getRepeatedFieldEncoding());
     assertEquals(Utf8Validation.UTF8_VALIDATION_UNKNOWN, features.getUtf8Validation());
     assertEquals(Label.LABEL_OPTIONAL, toProtoResult.getLabel());
     assertEquals(Label.LABEL_OPTIONAL, toProtoResult2.getLabel());
@@ -512,7 +516,7 @@ public class TxInputCapsuleDiffblueTest {
     assertFalse(goPackageBytes.isEmpty());
     assertFalse(javaOuterClassnameBytes.isEmpty());
     assertFalse(javaPackageBytes.isEmpty());
-    assertFalse(signature3.isEmpty());
+    assertFalse(signature2.isEmpty());
     assertFalse(defaultInstanceForType4.hasName());
     assertFalse(defaultInstanceForType4.hasOptions());
     assertFalse(toProtoResult4.hasOptions());
@@ -658,7 +662,7 @@ public class TxInputCapsuleDiffblueTest {
     assertFalse(getResult2.isRequired());
     assertFalse(actualHasNextResult);
     assertFalse(defaultInstanceForType.hasRawData());
-    assertTrue(signature2.isEmpty());
+    assertTrue(signature.isEmpty());
     assertTrue(toProtoResult4.hasName());
     assertTrue(toProtoResult5.hasName());
     assertTrue(toProtoResult6.hasName());
@@ -766,53 +770,60 @@ public class TxInputCapsuleDiffblueTest {
 
   /**
    * Test {@link TxInputCapsule#validate()}.
-   * <p>
-   * Method under test: {@link TxInputCapsule#validate()}
+   *
+   * <p>Method under test: {@link TxInputCapsule#validate()}
    */
   @Test
   @Category(MaintainedByDiffblue.class)
   @MethodsUnderTest({"boolean TxInputCapsule.validate()"})
   public void testValidate() throws UnsupportedEncodingException {
-    // Arrange
-    byte[] txId = "AXAXAXAX".getBytes("UTF-8");
-    byte[] signature = "AXAXAXAX".getBytes("UTF-8");
-
-    // Act and Assert
-    assertTrue((new TxInputCapsule(txId, 1L, signature, "AXAXAXAX".getBytes("UTF-8"))).validate());
+    // Arrange, Act and Assert
+    assertTrue(
+        new TxInputCapsule(
+                "AXAXAXAX".getBytes("UTF-8"),
+                1L,
+                "AXAXAXAX".getBytes("UTF-8"),
+                "AXAXAXAX".getBytes("UTF-8"))
+            .validate());
   }
 
   /**
    * Test {@link TxInputCapsule#getData()}.
-   * <p>
-   * Method under test: {@link TxInputCapsule#getData()}
+   *
+   * <p>Method under test: {@link TxInputCapsule#getData()}
    */
   @Test
   @Category(MaintainedByDiffblue.class)
   @MethodsUnderTest({"byte[] TxInputCapsule.getData()"})
   public void testGetData() throws UnsupportedEncodingException {
-    // Arrange
-    byte[] txId = "AXAXAXAX".getBytes("UTF-8");
-    byte[] signature = "AXAXAXAX".getBytes("UTF-8");
-
-    // Act and Assert
-    assertArrayEquals(new byte[]{}, (new TxInputCapsule(txId, 1L, signature, "AXAXAXAX".getBytes("UTF-8"))).getData());
+    // Arrange, Act and Assert
+    assertArrayEquals(
+        new byte[] {},
+        new TxInputCapsule(
+                "AXAXAXAX".getBytes("UTF-8"),
+                1L,
+                "AXAXAXAX".getBytes("UTF-8"),
+                "AXAXAXAX".getBytes("UTF-8"))
+            .getData());
   }
 
   /**
    * Test {@link TxInputCapsule#getInstance()}.
-   * <p>
-   * Method under test: {@link TxInputCapsule#getInstance()}
+   *
+   * <p>Method under test: {@link TxInputCapsule#getInstance()}
    */
   @Test
   @Category(MaintainedByDiffblue.class)
   @MethodsUnderTest({"TXInput TxInputCapsule.getInstance()"})
   public void testGetInstance() throws UnsupportedEncodingException {
-    // Arrange
-    byte[] txId = "AXAXAXAX".getBytes("UTF-8");
-    byte[] signature = "AXAXAXAX".getBytes("UTF-8");
-
-    // Act
-    TXInput actualInstance = (new TxInputCapsule(txId, 1L, signature, "AXAXAXAX".getBytes("UTF-8"))).getInstance();
+    // Arrange and Act
+    TXInput actualInstance =
+        new TxInputCapsule(
+                "AXAXAXAX".getBytes("UTF-8"),
+                1L,
+                "AXAXAXAX".getBytes("UTF-8"),
+                "AXAXAXAX".getBytes("UTF-8"))
+            .getInstance();
 
     // Assert
     assertEquals("", actualInstance.getInitializationErrorString());

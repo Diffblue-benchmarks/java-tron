@@ -12,13 +12,14 @@ import org.junit.experimental.categories.Category;
 public class RandomGeneratorDiffblueTest {
   /**
    * Test {@link RandomGenerator#shuffle(List, long)}.
+   *
    * <ul>
-   *   <li>Given {@code 42}.</li>
-   *   <li>When {@link ArrayList#ArrayList()} add {@code 42}.</li>
-   *   <li>Then return {@link ArrayList#ArrayList()}.</li>
+   *   <li>Given {@code 42}.
+   *   <li>When {@link ArrayList#ArrayList()} add {@code 42}.
+   *   <li>Then return {@link ArrayList#ArrayList()}.
    * </ul>
-   * <p>
-   * Method under test: {@link RandomGenerator#shuffle(List, long)}
+   *
+   * <p>Method under test: {@link RandomGenerator#shuffle(List, long)}
    */
   @Test
   @Category(MaintainedByDiffblue.class)
@@ -30,19 +31,23 @@ public class RandomGeneratorDiffblueTest {
     ArrayList<Object> list = new ArrayList<>();
     list.add("42");
 
-    // Act and Assert
-    assertSame(list, randomGenerator.shuffle(list, 10L));
+    // Act
+    List<Object> actualShuffleResult = randomGenerator.shuffle(list, 10L);
+
+    // Assert
+    assertSame(list, actualShuffleResult);
   }
 
   /**
    * Test {@link RandomGenerator#shuffle(List, long)}.
+   *
    * <ul>
-   *   <li>Given {@code 42}.</li>
-   *   <li>When {@link ArrayList#ArrayList()} add {@code 42}.</li>
-   *   <li>Then return {@link ArrayList#ArrayList()}.</li>
+   *   <li>Given {@code 42}.
+   *   <li>When {@link ArrayList#ArrayList()} add {@code 42}.
+   *   <li>Then return {@link ArrayList#ArrayList()}.
    * </ul>
-   * <p>
-   * Method under test: {@link RandomGenerator#shuffle(List, long)}
+   *
+   * <p>Method under test: {@link RandomGenerator#shuffle(List, long)}
    */
   @Test
   @Category(MaintainedByDiffblue.class)
@@ -55,19 +60,23 @@ public class RandomGeneratorDiffblueTest {
     list.add("42");
     list.add("42");
 
-    // Act and Assert
-    assertSame(list, randomGenerator.shuffle(list, 10L));
+    // Act
+    List<Object> actualShuffleResult = randomGenerator.shuffle(list, 10L);
+
+    // Assert
+    assertSame(list, actualShuffleResult);
   }
 
   /**
    * Test {@link RandomGenerator#shuffle(List, long)}.
+   *
    * <ul>
-   *   <li>Given {@code 42}.</li>
-   *   <li>When minus one.</li>
-   *   <li>Then return {@link ArrayList#ArrayList()}.</li>
+   *   <li>Given {@code 42}.
+   *   <li>When minus one.
+   *   <li>Then return {@link ArrayList#ArrayList()}.
    * </ul>
-   * <p>
-   * Method under test: {@link RandomGenerator#shuffle(List, long)}
+   *
+   * <p>Method under test: {@link RandomGenerator#shuffle(List, long)}
    */
   @Test
   @Category(MaintainedByDiffblue.class)
@@ -80,18 +89,22 @@ public class RandomGeneratorDiffblueTest {
     list.add("42");
     list.add("42");
 
-    // Act and Assert
-    assertSame(list, randomGenerator.shuffle(list, -1L));
+    // Act
+    List<Object> actualShuffleResult = randomGenerator.shuffle(list, -1L);
+
+    // Assert
+    assertSame(list, actualShuffleResult);
   }
 
   /**
    * Test {@link RandomGenerator#shuffle(List, long)}.
+   *
    * <ul>
-   *   <li>When {@link ArrayList#ArrayList()}.</li>
-   *   <li>Then return Empty.</li>
+   *   <li>When {@link ArrayList#ArrayList()}.
+   *   <li>Then return Empty.
    * </ul>
-   * <p>
-   * Method under test: {@link RandomGenerator#shuffle(List, long)}
+   *
+   * <p>Method under test: {@link RandomGenerator#shuffle(List, long)}
    */
   @Test
   @Category(MaintainedByDiffblue.class)

@@ -6,8 +6,6 @@ import static org.junit.Assert.assertNull;
 import static org.junit.Assert.assertSame;
 import static org.junit.Assert.assertThrows;
 import static org.junit.Assert.assertTrue;
-import static org.mockito.ArgumentMatchers.eq;
-import static org.mockito.ArgumentMatchers.isA;
 import static org.mockito.Mockito.atLeast;
 import static org.mockito.Mockito.mock;
 import static org.mockito.Mockito.verify;
@@ -16,14 +14,10 @@ import com.diffblue.cover.annotations.MaintainedByDiffblue;
 import com.diffblue.cover.annotations.MethodsUnderTest;
 import com.typesafe.config.Config;
 import com.typesafe.config.ConfigObject;
-import com.typesafe.config.ConfigValue;
-import java.util.AbstractMap;
-import java.util.AbstractMap.SimpleEntry;
 import java.util.ArrayList;
 import java.util.HashSet;
 import java.util.List;
 import java.util.Map;
-import java.util.Map.Entry;
 import org.junit.Test;
 import org.junit.experimental.categories.Category;
 import org.mockito.Mockito;
@@ -34,50 +28,13 @@ import org.tron.common.utils.Sha256Hash;
 public class StorageDiffblueTest {
   /**
    * Test {@link Storage#getDbEngineFromConfig(Config)}.
-   * <p>
-   * Method under test: {@link Storage#getDbEngineFromConfig(Config)}
-   */
-  @Test
-  @Category(MaintainedByDiffblue.class)
-  @MethodsUnderTest({"String Storage.getDbEngineFromConfig(Config)"})
-  public void testGetDbEngineFromConfig() {
-    // Arrange
-    Config config = mock(Config.class);
-    when(config.getString(Mockito.<String>any())).thenThrow(new IllegalArgumentException("storage.db.engine"));
-    when(config.hasPath(Mockito.<String>any())).thenReturn(true);
-
-    // Act and Assert
-    assertThrows(IllegalArgumentException.class, () -> Storage.getDbEngineFromConfig(config));
-    verify(config).getString(eq("storage.db.engine"));
-    verify(config).hasPath(eq("storage.db.engine"));
-  }
-
-  /**
-   * Test {@link Storage#getDbEngineFromConfig(Config)}.
-   * <p>
-   * Method under test: {@link Storage#getDbEngineFromConfig(Config)}
-   */
-  @Test
-  @Category(MaintainedByDiffblue.class)
-  @MethodsUnderTest({"String Storage.getDbEngineFromConfig(Config)"})
-  public void testGetDbEngineFromConfig2() {
-    // Arrange
-    Config config = mock(Config.class);
-    when(config.hasPath(Mockito.<String>any())).thenThrow(new IllegalArgumentException("storage.db.engine"));
-
-    // Act and Assert
-    assertThrows(IllegalArgumentException.class, () -> Storage.getDbEngineFromConfig(config));
-    verify(config).hasPath(eq("storage.db.engine"));
-  }
-
-  /**
-   * Test {@link Storage#getDbEngineFromConfig(Config)}.
+   *
    * <ul>
-   *   <li>Given {@code false}.</li>
-   *   <li>Then return {@code LEVELDB}.</li>
+   *   <li>Given {@code false}.
+   *   <li>Then return {@code LEVELDB}.
    * </ul>
-   * <p>
-   * Method under test: {@link Storage#getDbEngineFromConfig(Config)}
+   *
+   * <p>Method under test: {@link Storage#getDbEngineFromConfig(Config)}
    */
   @Test
   @Category(MaintainedByDiffblue.class)
@@ -91,18 +48,19 @@ public class StorageDiffblueTest {
     String actualDbEngineFromConfig = Storage.getDbEngineFromConfig(config);
 
     // Assert
-    verify(config).hasPath(eq("storage.db.engine"));
+    verify(config).hasPath("storage.db.engine");
     assertEquals("LEVELDB", actualDbEngineFromConfig);
   }
 
   /**
    * Test {@link Storage#getDbEngineFromConfig(Config)}.
+   *
    * <ul>
-   *   <li>Given {@code String}.</li>
-   *   <li>Then return {@code String}.</li>
+   *   <li>Given {@code String}.
+   *   <li>Then return {@code String}.
    * </ul>
-   * <p>
-   * Method under test: {@link Storage#getDbEngineFromConfig(Config)}
+   *
+   * <p>Method under test: {@link Storage#getDbEngineFromConfig(Config)}
    */
   @Test
   @Category(MaintainedByDiffblue.class)
@@ -117,84 +75,94 @@ public class StorageDiffblueTest {
     String actualDbEngineFromConfig = Storage.getDbEngineFromConfig(config);
 
     // Assert
-    verify(config).getString(eq("storage.db.engine"));
-    verify(config).hasPath(eq("storage.db.engine"));
+    verify(config).getString("storage.db.engine");
+    verify(config).hasPath("storage.db.engine");
     assertEquals("String", actualDbEngineFromConfig);
   }
 
   /**
-   * Test {@link Storage#getDbVersionSyncFromConfig(Config)}.
-   * <p>
-   * Method under test: {@link Storage#getDbVersionSyncFromConfig(Config)}
-   */
-  @Test
-  @Category(MaintainedByDiffblue.class)
-  @MethodsUnderTest({"Boolean Storage.getDbVersionSyncFromConfig(Config)"})
-  public void testGetDbVersionSyncFromConfig() {
-    // Arrange
-    Config config = mock(Config.class);
-    when(config.getBoolean(Mockito.<String>any())).thenThrow(new IllegalArgumentException("storage.db.sync"));
-    when(config.hasPath(Mockito.<String>any())).thenReturn(true);
-
-    // Act and Assert
-    assertThrows(IllegalArgumentException.class, () -> Storage.getDbVersionSyncFromConfig(config));
-    verify(config).getBoolean(eq("storage.db.sync"));
-    verify(config).hasPath(eq("storage.db.sync"));
-  }
-
-  /**
-   * Test {@link Storage#getDbVersionSyncFromConfig(Config)}.
-   * <p>
-   * Method under test: {@link Storage#getDbVersionSyncFromConfig(Config)}
-   */
-  @Test
-  @Category(MaintainedByDiffblue.class)
-  @MethodsUnderTest({"Boolean Storage.getDbVersionSyncFromConfig(Config)"})
-  public void testGetDbVersionSyncFromConfig2() {
-    // Arrange
-    Config config = mock(Config.class);
-    when(config.hasPath(Mockito.<String>any())).thenThrow(new IllegalArgumentException("storage.db.sync"));
-
-    // Act and Assert
-    assertThrows(IllegalArgumentException.class, () -> Storage.getDbVersionSyncFromConfig(config));
-    verify(config).hasPath(eq("storage.db.sync"));
-  }
-
-  /**
-   * Test {@link Storage#getDbVersionSyncFromConfig(Config)}.
+   * Test {@link Storage#getDbEngineFromConfig(Config)}.
+   *
    * <ul>
-   *   <li>When {@link Config} {@link Config#getBoolean(String)} return {@code false}.</li>
-   *   <li>Then return {@code false}.</li>
+   *   <li>When {@link Config} {@link Config#getString(String)} throw {@link
+   *       IllegalArgumentException#IllegalArgumentException()}.
    * </ul>
-   * <p>
-   * Method under test: {@link Storage#getDbVersionSyncFromConfig(Config)}
+   *
+   * <p>Method under test: {@link Storage#getDbEngineFromConfig(Config)}
+   */
+  @Test
+  @Category(MaintainedByDiffblue.class)
+  @MethodsUnderTest({"String Storage.getDbEngineFromConfig(Config)"})
+  public void testGetDbEngineFromConfig_whenConfigGetStringThrowIllegalArgumentException() {
+    // Arrange
+    Config config = mock(Config.class);
+    when(config.getString(Mockito.<String>any())).thenThrow(new IllegalArgumentException());
+    when(config.hasPath(Mockito.<String>any())).thenReturn(true);
+
+    // Act and Assert
+    assertThrows(IllegalArgumentException.class, () -> Storage.getDbEngineFromConfig(config));
+    verify(config).getString("storage.db.engine");
+    verify(config).hasPath("storage.db.engine");
+  }
+
+  /**
+   * Test {@link Storage#getDbEngineFromConfig(Config)}.
+   *
+   * <ul>
+   *   <li>When {@link Config} {@link Config#hasPath(String)} throw {@link
+   *       IllegalArgumentException#IllegalArgumentException()}.
+   * </ul>
+   *
+   * <p>Method under test: {@link Storage#getDbEngineFromConfig(Config)}
+   */
+  @Test
+  @Category(MaintainedByDiffblue.class)
+  @MethodsUnderTest({"String Storage.getDbEngineFromConfig(Config)"})
+  public void testGetDbEngineFromConfig_whenConfigHasPathThrowIllegalArgumentException() {
+    // Arrange
+    Config config = mock(Config.class);
+    when(config.hasPath(Mockito.<String>any())).thenThrow(new IllegalArgumentException());
+
+    // Act and Assert
+    assertThrows(IllegalArgumentException.class, () -> Storage.getDbEngineFromConfig(config));
+    verify(config).hasPath("storage.db.engine");
+  }
+
+  /**
+   * Test {@link Storage#getDbVersionSyncFromConfig(Config)}.
+   *
+   * <ul>
+   *   <li>Given {@code false}.
+   *   <li>Then return {@code false}.
+   * </ul>
+   *
+   * <p>Method under test: {@link Storage#getDbVersionSyncFromConfig(Config)}
    */
   @Test
   @Category(MaintainedByDiffblue.class)
   @MethodsUnderTest({"Boolean Storage.getDbVersionSyncFromConfig(Config)"})
-  public void testGetDbVersionSyncFromConfig_whenConfigGetBooleanReturnFalse_thenReturnFalse() {
+  public void testGetDbVersionSyncFromConfig_givenFalse_thenReturnFalse() {
     // Arrange
     Config config = mock(Config.class);
-    when(config.getBoolean(Mockito.<String>any())).thenReturn(false);
-    when(config.hasPath(Mockito.<String>any())).thenReturn(true);
+    when(config.hasPath(Mockito.<String>any())).thenReturn(false);
 
     // Act
     Boolean actualDbVersionSyncFromConfig = Storage.getDbVersionSyncFromConfig(config);
 
     // Assert
-    verify(config).getBoolean(eq("storage.db.sync"));
-    verify(config).hasPath(eq("storage.db.sync"));
+    verify(config).hasPath("storage.db.sync");
     assertFalse(actualDbVersionSyncFromConfig);
   }
 
   /**
    * Test {@link Storage#getDbVersionSyncFromConfig(Config)}.
+   *
    * <ul>
-   *   <li>When {@link Config} {@link Config#getBoolean(String)} return {@code true}.</li>
-   *   <li>Then return {@code true}.</li>
+   *   <li>When {@link Config} {@link Config#getBoolean(String)} return {@code true}.
+   *   <li>Then return {@code true}.
    * </ul>
-   * <p>
-   * Method under test: {@link Storage#getDbVersionSyncFromConfig(Config)}
+   *
+   * <p>Method under test: {@link Storage#getDbVersionSyncFromConfig(Config)}
    */
   @Test
   @Category(MaintainedByDiffblue.class)
@@ -209,40 +177,63 @@ public class StorageDiffblueTest {
     Boolean actualDbVersionSyncFromConfig = Storage.getDbVersionSyncFromConfig(config);
 
     // Assert
-    verify(config).getBoolean(eq("storage.db.sync"));
-    verify(config).hasPath(eq("storage.db.sync"));
+    verify(config).getBoolean("storage.db.sync");
+    verify(config).hasPath("storage.db.sync");
     assertTrue(actualDbVersionSyncFromConfig);
   }
 
   /**
    * Test {@link Storage#getDbVersionSyncFromConfig(Config)}.
+   *
    * <ul>
-   *   <li>When {@link Config} {@link Config#hasPath(String)} return {@code false}.</li>
-   *   <li>Then return {@code false}.</li>
+   *   <li>When {@link Config} {@link Config#getBoolean(String)} throw {@link
+   *       IllegalArgumentException#IllegalArgumentException()}.
    * </ul>
-   * <p>
-   * Method under test: {@link Storage#getDbVersionSyncFromConfig(Config)}
+   *
+   * <p>Method under test: {@link Storage#getDbVersionSyncFromConfig(Config)}
    */
   @Test
   @Category(MaintainedByDiffblue.class)
   @MethodsUnderTest({"Boolean Storage.getDbVersionSyncFromConfig(Config)"})
-  public void testGetDbVersionSyncFromConfig_whenConfigHasPathReturnFalse_thenReturnFalse() {
+  public void testGetDbVersionSyncFromConfig_whenConfigGetBooleanThrowIllegalArgumentException() {
     // Arrange
     Config config = mock(Config.class);
-    when(config.hasPath(Mockito.<String>any())).thenReturn(false);
+    when(config.getBoolean(Mockito.<String>any())).thenThrow(new IllegalArgumentException());
+    when(config.hasPath(Mockito.<String>any())).thenReturn(true);
 
-    // Act
-    Boolean actualDbVersionSyncFromConfig = Storage.getDbVersionSyncFromConfig(config);
+    // Act and Assert
+    assertThrows(IllegalArgumentException.class, () -> Storage.getDbVersionSyncFromConfig(config));
+    verify(config).getBoolean("storage.db.sync");
+    verify(config).hasPath("storage.db.sync");
+  }
 
-    // Assert
-    verify(config).hasPath(eq("storage.db.sync"));
-    assertFalse(actualDbVersionSyncFromConfig);
+  /**
+   * Test {@link Storage#getDbVersionSyncFromConfig(Config)}.
+   *
+   * <ul>
+   *   <li>When {@link Config} {@link Config#hasPath(String)} throw {@link
+   *       IllegalArgumentException#IllegalArgumentException()}.
+   * </ul>
+   *
+   * <p>Method under test: {@link Storage#getDbVersionSyncFromConfig(Config)}
+   */
+  @Test
+  @Category(MaintainedByDiffblue.class)
+  @MethodsUnderTest({"Boolean Storage.getDbVersionSyncFromConfig(Config)"})
+  public void testGetDbVersionSyncFromConfig_whenConfigHasPathThrowIllegalArgumentException() {
+    // Arrange
+    Config config = mock(Config.class);
+    when(config.hasPath(Mockito.<String>any())).thenThrow(new IllegalArgumentException());
+
+    // Act and Assert
+    assertThrows(IllegalArgumentException.class, () -> Storage.getDbVersionSyncFromConfig(config));
+    verify(config).hasPath("storage.db.sync");
   }
 
   /**
    * Test {@link Storage#getSnapshotMaxFlushCountFromConfig(Config)}.
-   * <p>
-   * Method under test: {@link Storage#getSnapshotMaxFlushCountFromConfig(Config)}
+   *
+   * <p>Method under test: {@link Storage#getSnapshotMaxFlushCountFromConfig(Config)}
    */
   @Test
   @Category(MaintainedByDiffblue.class)
@@ -250,20 +241,18 @@ public class StorageDiffblueTest {
   public void testGetSnapshotMaxFlushCountFromConfig() {
     // Arrange
     Config config = mock(Config.class);
-    when(config.getInt(Mockito.<String>any()))
-        .thenThrow(new IllegalArgumentException("storage.snapshot.maxFlushCount"));
-    when(config.hasPath(Mockito.<String>any())).thenReturn(true);
+    when(config.hasPath(Mockito.<String>any())).thenThrow(new IllegalArgumentException());
 
     // Act and Assert
-    assertThrows(IllegalArgumentException.class, () -> Storage.getSnapshotMaxFlushCountFromConfig(config));
-    verify(config).getInt(eq("storage.snapshot.maxFlushCount"));
-    verify(config).hasPath(eq("storage.snapshot.maxFlushCount"));
+    assertThrows(
+        IllegalArgumentException.class, () -> Storage.getSnapshotMaxFlushCountFromConfig(config));
+    verify(config).hasPath("storage.snapshot.maxFlushCount");
   }
 
   /**
    * Test {@link Storage#getSnapshotMaxFlushCountFromConfig(Config)}.
-   * <p>
-   * Method under test: {@link Storage#getSnapshotMaxFlushCountFromConfig(Config)}
+   *
+   * <p>Method under test: {@link Storage#getSnapshotMaxFlushCountFromConfig(Config)}
    */
   @Test
   @Category(MaintainedByDiffblue.class)
@@ -271,22 +260,25 @@ public class StorageDiffblueTest {
   public void testGetSnapshotMaxFlushCountFromConfig2() {
     // Arrange
     Config config = mock(Config.class);
-    when(config.hasPath(Mockito.<String>any()))
-        .thenThrow(new IllegalArgumentException("storage.snapshot.maxFlushCount"));
+    when(config.getInt(Mockito.<String>any())).thenThrow(new IllegalArgumentException());
+    when(config.hasPath(Mockito.<String>any())).thenReturn(true);
 
     // Act and Assert
-    assertThrows(IllegalArgumentException.class, () -> Storage.getSnapshotMaxFlushCountFromConfig(config));
-    verify(config).hasPath(eq("storage.snapshot.maxFlushCount"));
+    assertThrows(
+        IllegalArgumentException.class, () -> Storage.getSnapshotMaxFlushCountFromConfig(config));
+    verify(config).getInt("storage.snapshot.maxFlushCount");
+    verify(config).hasPath("storage.snapshot.maxFlushCount");
   }
 
   /**
    * Test {@link Storage#getSnapshotMaxFlushCountFromConfig(Config)}.
+   *
    * <ul>
-   *   <li>Given {@code false}.</li>
-   *   <li>When {@link Config} {@link Config#hasPath(String)} return {@code false}.</li>
+   *   <li>Given {@code false}.
+   *   <li>When {@link Config} {@link Config#hasPath(String)} return {@code false}.
    * </ul>
-   * <p>
-   * Method under test: {@link Storage#getSnapshotMaxFlushCountFromConfig(Config)}
+   *
+   * <p>Method under test: {@link Storage#getSnapshotMaxFlushCountFromConfig(Config)}
    */
   @Test
   @Category(MaintainedByDiffblue.class)
@@ -300,18 +292,44 @@ public class StorageDiffblueTest {
     int actualSnapshotMaxFlushCountFromConfig = Storage.getSnapshotMaxFlushCountFromConfig(config);
 
     // Assert
-    verify(config).hasPath(eq("storage.snapshot.maxFlushCount"));
+    verify(config).hasPath("storage.snapshot.maxFlushCount");
     assertEquals(1, actualSnapshotMaxFlushCountFromConfig);
   }
 
   /**
    * Test {@link Storage#getSnapshotMaxFlushCountFromConfig(Config)}.
+   *
    * <ul>
-   *   <li>Given one.</li>
-   *   <li>When {@link Config} {@link Config#getInt(String)} return one.</li>
+   *   <li>Given five hundred one.
    * </ul>
-   * <p>
-   * Method under test: {@link Storage#getSnapshotMaxFlushCountFromConfig(Config)}
+   *
+   * <p>Method under test: {@link Storage#getSnapshotMaxFlushCountFromConfig(Config)}
+   */
+  @Test
+  @Category(MaintainedByDiffblue.class)
+  @MethodsUnderTest({"int Storage.getSnapshotMaxFlushCountFromConfig(Config)"})
+  public void testGetSnapshotMaxFlushCountFromConfig_givenFiveHundredOne() {
+    // Arrange
+    Config config = mock(Config.class);
+    when(config.getInt(Mockito.<String>any())).thenReturn(501);
+    when(config.hasPath(Mockito.<String>any())).thenReturn(true);
+
+    // Act and Assert
+    assertThrows(
+        IllegalArgumentException.class, () -> Storage.getSnapshotMaxFlushCountFromConfig(config));
+    verify(config).getInt("storage.snapshot.maxFlushCount");
+    verify(config).hasPath("storage.snapshot.maxFlushCount");
+  }
+
+  /**
+   * Test {@link Storage#getSnapshotMaxFlushCountFromConfig(Config)}.
+   *
+   * <ul>
+   *   <li>Given one.
+   *   <li>When {@link Config} {@link Config#getInt(String)} return one.
+   * </ul>
+   *
+   * <p>Method under test: {@link Storage#getSnapshotMaxFlushCountFromConfig(Config)}
    */
   @Test
   @Category(MaintainedByDiffblue.class)
@@ -326,19 +344,20 @@ public class StorageDiffblueTest {
     int actualSnapshotMaxFlushCountFromConfig = Storage.getSnapshotMaxFlushCountFromConfig(config);
 
     // Assert
-    verify(config).getInt(eq("storage.snapshot.maxFlushCount"));
-    verify(config).hasPath(eq("storage.snapshot.maxFlushCount"));
+    verify(config).getInt("storage.snapshot.maxFlushCount");
+    verify(config).hasPath("storage.snapshot.maxFlushCount");
     assertEquals(1, actualSnapshotMaxFlushCountFromConfig);
   }
 
   /**
    * Test {@link Storage#getSnapshotMaxFlushCountFromConfig(Config)}.
+   *
    * <ul>
-   *   <li>Given zero.</li>
-   *   <li>When {@link Config} {@link Config#getInt(String)} return zero.</li>
+   *   <li>Given zero.
+   *   <li>When {@link Config} {@link Config#getInt(String)} return zero.
    * </ul>
-   * <p>
-   * Method under test: {@link Storage#getSnapshotMaxFlushCountFromConfig(Config)}
+   *
+   * <p>Method under test: {@link Storage#getSnapshotMaxFlushCountFromConfig(Config)}
    */
   @Test
   @Category(MaintainedByDiffblue.class)
@@ -350,15 +369,16 @@ public class StorageDiffblueTest {
     when(config.hasPath(Mockito.<String>any())).thenReturn(true);
 
     // Act and Assert
-    assertThrows(IllegalArgumentException.class, () -> Storage.getSnapshotMaxFlushCountFromConfig(config));
-    verify(config).getInt(eq("storage.snapshot.maxFlushCount"));
-    verify(config).hasPath(eq("storage.snapshot.maxFlushCount"));
+    assertThrows(
+        IllegalArgumentException.class, () -> Storage.getSnapshotMaxFlushCountFromConfig(config));
+    verify(config).getInt("storage.snapshot.maxFlushCount");
+    verify(config).hasPath("storage.snapshot.maxFlushCount");
   }
 
   /**
    * Test {@link Storage#getContractParseSwitchFromConfig(Config)}.
-   * <p>
-   * Method under test: {@link Storage#getContractParseSwitchFromConfig(Config)}
+   *
+   * <p>Method under test: {@link Storage#getContractParseSwitchFromConfig(Config)}
    */
   @Test
   @Category(MaintainedByDiffblue.class)
@@ -366,20 +386,18 @@ public class StorageDiffblueTest {
   public void testGetContractParseSwitchFromConfig() {
     // Arrange
     Config config = mock(Config.class);
-    when(config.getBoolean(Mockito.<String>any()))
-        .thenThrow(new IllegalArgumentException("event.subscribe.contractParse"));
-    when(config.hasPath(Mockito.<String>any())).thenReturn(true);
+    when(config.hasPath(Mockito.<String>any())).thenThrow(new IllegalArgumentException());
 
     // Act and Assert
-    assertThrows(IllegalArgumentException.class, () -> Storage.getContractParseSwitchFromConfig(config));
-    verify(config).getBoolean(eq("event.subscribe.contractParse"));
-    verify(config).hasPath(eq("event.subscribe.contractParse"));
+    assertThrows(
+        IllegalArgumentException.class, () -> Storage.getContractParseSwitchFromConfig(config));
+    verify(config).hasPath("event.subscribe.contractParse");
   }
 
   /**
    * Test {@link Storage#getContractParseSwitchFromConfig(Config)}.
-   * <p>
-   * Method under test: {@link Storage#getContractParseSwitchFromConfig(Config)}
+   *
+   * <p>Method under test: {@link Storage#getContractParseSwitchFromConfig(Config)}
    */
   @Test
   @Category(MaintainedByDiffblue.class)
@@ -387,21 +405,24 @@ public class StorageDiffblueTest {
   public void testGetContractParseSwitchFromConfig2() {
     // Arrange
     Config config = mock(Config.class);
-    when(config.hasPath(Mockito.<String>any()))
-        .thenThrow(new IllegalArgumentException("event.subscribe.contractParse"));
+    when(config.getBoolean(Mockito.<String>any())).thenThrow(new IllegalArgumentException());
+    when(config.hasPath(Mockito.<String>any())).thenReturn(true);
 
     // Act and Assert
-    assertThrows(IllegalArgumentException.class, () -> Storage.getContractParseSwitchFromConfig(config));
-    verify(config).hasPath(eq("event.subscribe.contractParse"));
+    assertThrows(
+        IllegalArgumentException.class, () -> Storage.getContractParseSwitchFromConfig(config));
+    verify(config).getBoolean("event.subscribe.contractParse");
+    verify(config).hasPath("event.subscribe.contractParse");
   }
 
   /**
    * Test {@link Storage#getContractParseSwitchFromConfig(Config)}.
+   *
    * <ul>
-   *   <li>Then return {@code false}.</li>
+   *   <li>Then return {@code false}.
    * </ul>
-   * <p>
-   * Method under test: {@link Storage#getContractParseSwitchFromConfig(Config)}
+   *
+   * <p>Method under test: {@link Storage#getContractParseSwitchFromConfig(Config)}
    */
   @Test
   @Category(MaintainedByDiffblue.class)
@@ -416,18 +437,19 @@ public class StorageDiffblueTest {
     Boolean actualContractParseSwitchFromConfig = Storage.getContractParseSwitchFromConfig(config);
 
     // Assert
-    verify(config).getBoolean(eq("event.subscribe.contractParse"));
-    verify(config).hasPath(eq("event.subscribe.contractParse"));
+    verify(config).getBoolean("event.subscribe.contractParse");
+    verify(config).hasPath("event.subscribe.contractParse");
     assertFalse(actualContractParseSwitchFromConfig);
   }
 
   /**
    * Test {@link Storage#getContractParseSwitchFromConfig(Config)}.
+   *
    * <ul>
-   *   <li>When {@link Config} {@link Config#getBoolean(String)} return {@code true}.</li>
+   *   <li>When {@link Config} {@link Config#getBoolean(String)} return {@code true}.
    * </ul>
-   * <p>
-   * Method under test: {@link Storage#getContractParseSwitchFromConfig(Config)}
+   *
+   * <p>Method under test: {@link Storage#getContractParseSwitchFromConfig(Config)}
    */
   @Test
   @Category(MaintainedByDiffblue.class)
@@ -442,19 +464,20 @@ public class StorageDiffblueTest {
     Boolean actualContractParseSwitchFromConfig = Storage.getContractParseSwitchFromConfig(config);
 
     // Assert
-    verify(config).getBoolean(eq("event.subscribe.contractParse"));
-    verify(config).hasPath(eq("event.subscribe.contractParse"));
+    verify(config).getBoolean("event.subscribe.contractParse");
+    verify(config).hasPath("event.subscribe.contractParse");
     assertTrue(actualContractParseSwitchFromConfig);
   }
 
   /**
    * Test {@link Storage#getContractParseSwitchFromConfig(Config)}.
+   *
    * <ul>
-   *   <li>When {@link Config} {@link Config#hasPath(String)} return {@code false}.</li>
-   *   <li>Then return {@code true}.</li>
+   *   <li>When {@link Config} {@link Config#hasPath(String)} return {@code false}.
+   *   <li>Then return {@code true}.
    * </ul>
-   * <p>
-   * Method under test: {@link Storage#getContractParseSwitchFromConfig(Config)}
+   *
+   * <p>Method under test: {@link Storage#getContractParseSwitchFromConfig(Config)}
    */
   @Test
   @Category(MaintainedByDiffblue.class)
@@ -468,56 +491,19 @@ public class StorageDiffblueTest {
     Boolean actualContractParseSwitchFromConfig = Storage.getContractParseSwitchFromConfig(config);
 
     // Assert
-    verify(config).hasPath(eq("event.subscribe.contractParse"));
+    verify(config).hasPath("event.subscribe.contractParse");
     assertTrue(actualContractParseSwitchFromConfig);
   }
 
   /**
    * Test {@link Storage#getDbDirectoryFromConfig(Config)}.
-   * <p>
-   * Method under test: {@link Storage#getDbDirectoryFromConfig(Config)}
-   */
-  @Test
-  @Category(MaintainedByDiffblue.class)
-  @MethodsUnderTest({"String Storage.getDbDirectoryFromConfig(Config)"})
-  public void testGetDbDirectoryFromConfig() {
-    // Arrange
-    Config config = mock(Config.class);
-    when(config.getString(Mockito.<String>any())).thenThrow(new IllegalArgumentException("storage.db.directory"));
-    when(config.hasPath(Mockito.<String>any())).thenReturn(true);
-
-    // Act and Assert
-    assertThrows(IllegalArgumentException.class, () -> Storage.getDbDirectoryFromConfig(config));
-    verify(config).getString(eq("storage.db.directory"));
-    verify(config).hasPath(eq("storage.db.directory"));
-  }
-
-  /**
-   * Test {@link Storage#getDbDirectoryFromConfig(Config)}.
-   * <p>
-   * Method under test: {@link Storage#getDbDirectoryFromConfig(Config)}
-   */
-  @Test
-  @Category(MaintainedByDiffblue.class)
-  @MethodsUnderTest({"String Storage.getDbDirectoryFromConfig(Config)"})
-  public void testGetDbDirectoryFromConfig2() {
-    // Arrange
-    Config config = mock(Config.class);
-    when(config.hasPath(Mockito.<String>any())).thenThrow(new IllegalArgumentException("storage.db.directory"));
-
-    // Act and Assert
-    assertThrows(IllegalArgumentException.class, () -> Storage.getDbDirectoryFromConfig(config));
-    verify(config).hasPath(eq("storage.db.directory"));
-  }
-
-  /**
-   * Test {@link Storage#getDbDirectoryFromConfig(Config)}.
+   *
    * <ul>
-   *   <li>Given {@code false}.</li>
-   *   <li>Then return {@code database}.</li>
+   *   <li>Given {@code false}.
+   *   <li>Then return {@code database}.
    * </ul>
-   * <p>
-   * Method under test: {@link Storage#getDbDirectoryFromConfig(Config)}
+   *
+   * <p>Method under test: {@link Storage#getDbDirectoryFromConfig(Config)}
    */
   @Test
   @Category(MaintainedByDiffblue.class)
@@ -531,18 +517,19 @@ public class StorageDiffblueTest {
     String actualDbDirectoryFromConfig = Storage.getDbDirectoryFromConfig(config);
 
     // Assert
-    verify(config).hasPath(eq("storage.db.directory"));
+    verify(config).hasPath("storage.db.directory");
     assertEquals("database", actualDbDirectoryFromConfig);
   }
 
   /**
    * Test {@link Storage#getDbDirectoryFromConfig(Config)}.
+   *
    * <ul>
-   *   <li>Given {@code String}.</li>
-   *   <li>Then return {@code String}.</li>
+   *   <li>Given {@code String}.
+   *   <li>Then return {@code String}.
    * </ul>
-   * <p>
-   * Method under test: {@link Storage#getDbDirectoryFromConfig(Config)}
+   *
+   * <p>Method under test: {@link Storage#getDbDirectoryFromConfig(Config)}
    */
   @Test
   @Category(MaintainedByDiffblue.class)
@@ -557,57 +544,68 @@ public class StorageDiffblueTest {
     String actualDbDirectoryFromConfig = Storage.getDbDirectoryFromConfig(config);
 
     // Assert
-    verify(config).getString(eq("storage.db.directory"));
-    verify(config).hasPath(eq("storage.db.directory"));
+    verify(config).getString("storage.db.directory");
+    verify(config).hasPath("storage.db.directory");
     assertEquals("String", actualDbDirectoryFromConfig);
   }
 
   /**
-   * Test {@link Storage#getIndexDirectoryFromConfig(Config)}.
-   * <p>
-   * Method under test: {@link Storage#getIndexDirectoryFromConfig(Config)}
+   * Test {@link Storage#getDbDirectoryFromConfig(Config)}.
+   *
+   * <ul>
+   *   <li>When {@link Config} {@link Config#getString(String)} throw {@link
+   *       IllegalArgumentException#IllegalArgumentException()}.
+   * </ul>
+   *
+   * <p>Method under test: {@link Storage#getDbDirectoryFromConfig(Config)}
    */
   @Test
   @Category(MaintainedByDiffblue.class)
-  @MethodsUnderTest({"String Storage.getIndexDirectoryFromConfig(Config)"})
-  public void testGetIndexDirectoryFromConfig() {
+  @MethodsUnderTest({"String Storage.getDbDirectoryFromConfig(Config)"})
+  public void testGetDbDirectoryFromConfig_whenConfigGetStringThrowIllegalArgumentException() {
     // Arrange
     Config config = mock(Config.class);
-    when(config.getString(Mockito.<String>any())).thenThrow(new IllegalArgumentException("storage.index.directory"));
+    when(config.getString(Mockito.<String>any())).thenThrow(new IllegalArgumentException());
     when(config.hasPath(Mockito.<String>any())).thenReturn(true);
 
     // Act and Assert
-    assertThrows(IllegalArgumentException.class, () -> Storage.getIndexDirectoryFromConfig(config));
-    verify(config).getString(eq("storage.index.directory"));
-    verify(config).hasPath(eq("storage.index.directory"));
+    assertThrows(IllegalArgumentException.class, () -> Storage.getDbDirectoryFromConfig(config));
+    verify(config).getString("storage.db.directory");
+    verify(config).hasPath("storage.db.directory");
   }
 
   /**
-   * Test {@link Storage#getIndexDirectoryFromConfig(Config)}.
-   * <p>
-   * Method under test: {@link Storage#getIndexDirectoryFromConfig(Config)}
+   * Test {@link Storage#getDbDirectoryFromConfig(Config)}.
+   *
+   * <ul>
+   *   <li>When {@link Config} {@link Config#hasPath(String)} throw {@link
+   *       IllegalArgumentException#IllegalArgumentException()}.
+   * </ul>
+   *
+   * <p>Method under test: {@link Storage#getDbDirectoryFromConfig(Config)}
    */
   @Test
   @Category(MaintainedByDiffblue.class)
-  @MethodsUnderTest({"String Storage.getIndexDirectoryFromConfig(Config)"})
-  public void testGetIndexDirectoryFromConfig2() {
+  @MethodsUnderTest({"String Storage.getDbDirectoryFromConfig(Config)"})
+  public void testGetDbDirectoryFromConfig_whenConfigHasPathThrowIllegalArgumentException() {
     // Arrange
     Config config = mock(Config.class);
-    when(config.hasPath(Mockito.<String>any())).thenThrow(new IllegalArgumentException("storage.index.directory"));
+    when(config.hasPath(Mockito.<String>any())).thenThrow(new IllegalArgumentException());
 
     // Act and Assert
-    assertThrows(IllegalArgumentException.class, () -> Storage.getIndexDirectoryFromConfig(config));
-    verify(config).hasPath(eq("storage.index.directory"));
+    assertThrows(IllegalArgumentException.class, () -> Storage.getDbDirectoryFromConfig(config));
+    verify(config).hasPath("storage.db.directory");
   }
 
   /**
    * Test {@link Storage#getIndexDirectoryFromConfig(Config)}.
+   *
    * <ul>
-   *   <li>Given {@code false}.</li>
-   *   <li>Then return {@code index}.</li>
+   *   <li>Given {@code false}.
+   *   <li>Then return {@code index}.
    * </ul>
-   * <p>
-   * Method under test: {@link Storage#getIndexDirectoryFromConfig(Config)}
+   *
+   * <p>Method under test: {@link Storage#getIndexDirectoryFromConfig(Config)}
    */
   @Test
   @Category(MaintainedByDiffblue.class)
@@ -621,18 +619,19 @@ public class StorageDiffblueTest {
     String actualIndexDirectoryFromConfig = Storage.getIndexDirectoryFromConfig(config);
 
     // Assert
-    verify(config).hasPath(eq("storage.index.directory"));
+    verify(config).hasPath("storage.index.directory");
     assertEquals("index", actualIndexDirectoryFromConfig);
   }
 
   /**
    * Test {@link Storage#getIndexDirectoryFromConfig(Config)}.
+   *
    * <ul>
-   *   <li>Given {@code String}.</li>
-   *   <li>Then return {@code String}.</li>
+   *   <li>Given {@code String}.
+   *   <li>Then return {@code String}.
    * </ul>
-   * <p>
-   * Method under test: {@link Storage#getIndexDirectoryFromConfig(Config)}
+   *
+   * <p>Method under test: {@link Storage#getIndexDirectoryFromConfig(Config)}
    */
   @Test
   @Category(MaintainedByDiffblue.class)
@@ -647,56 +646,67 @@ public class StorageDiffblueTest {
     String actualIndexDirectoryFromConfig = Storage.getIndexDirectoryFromConfig(config);
 
     // Assert
-    verify(config).getString(eq("storage.index.directory"));
-    verify(config).hasPath(eq("storage.index.directory"));
+    verify(config).getString("storage.index.directory");
+    verify(config).hasPath("storage.index.directory");
     assertEquals("String", actualIndexDirectoryFromConfig);
   }
 
   /**
-   * Test {@link Storage#getIndexSwitchFromConfig(Config)}.
-   * <p>
-   * Method under test: {@link Storage#getIndexSwitchFromConfig(Config)}
+   * Test {@link Storage#getIndexDirectoryFromConfig(Config)}.
+   *
+   * <ul>
+   *   <li>When {@link Config} {@link Config#getString(String)} throw {@link
+   *       IllegalArgumentException#IllegalArgumentException()}.
+   * </ul>
+   *
+   * <p>Method under test: {@link Storage#getIndexDirectoryFromConfig(Config)}
    */
   @Test
   @Category(MaintainedByDiffblue.class)
-  @MethodsUnderTest({"String Storage.getIndexSwitchFromConfig(Config)"})
-  public void testGetIndexSwitchFromConfig() {
+  @MethodsUnderTest({"String Storage.getIndexDirectoryFromConfig(Config)"})
+  public void testGetIndexDirectoryFromConfig_whenConfigGetStringThrowIllegalArgumentException() {
     // Arrange
     Config config = mock(Config.class);
-    when(config.getString(Mockito.<String>any())).thenThrow(new IllegalArgumentException("storage.index.switch"));
+    when(config.getString(Mockito.<String>any())).thenThrow(new IllegalArgumentException());
     when(config.hasPath(Mockito.<String>any())).thenReturn(true);
 
     // Act and Assert
-    assertThrows(IllegalArgumentException.class, () -> Storage.getIndexSwitchFromConfig(config));
-    verify(config).getString(eq("storage.index.switch"));
-    verify(config).hasPath(eq("storage.index.switch"));
+    assertThrows(IllegalArgumentException.class, () -> Storage.getIndexDirectoryFromConfig(config));
+    verify(config).getString("storage.index.directory");
+    verify(config).hasPath("storage.index.directory");
   }
 
   /**
-   * Test {@link Storage#getIndexSwitchFromConfig(Config)}.
-   * <p>
-   * Method under test: {@link Storage#getIndexSwitchFromConfig(Config)}
+   * Test {@link Storage#getIndexDirectoryFromConfig(Config)}.
+   *
+   * <ul>
+   *   <li>When {@link Config} {@link Config#hasPath(String)} throw {@link
+   *       IllegalArgumentException#IllegalArgumentException()}.
+   * </ul>
+   *
+   * <p>Method under test: {@link Storage#getIndexDirectoryFromConfig(Config)}
    */
   @Test
   @Category(MaintainedByDiffblue.class)
-  @MethodsUnderTest({"String Storage.getIndexSwitchFromConfig(Config)"})
-  public void testGetIndexSwitchFromConfig2() {
+  @MethodsUnderTest({"String Storage.getIndexDirectoryFromConfig(Config)"})
+  public void testGetIndexDirectoryFromConfig_whenConfigHasPathThrowIllegalArgumentException() {
     // Arrange
     Config config = mock(Config.class);
-    when(config.hasPath(Mockito.<String>any())).thenThrow(new IllegalArgumentException("storage.index.switch"));
+    when(config.hasPath(Mockito.<String>any())).thenThrow(new IllegalArgumentException());
 
     // Act and Assert
-    assertThrows(IllegalArgumentException.class, () -> Storage.getIndexSwitchFromConfig(config));
-    verify(config).hasPath(eq("storage.index.switch"));
+    assertThrows(IllegalArgumentException.class, () -> Storage.getIndexDirectoryFromConfig(config));
+    verify(config).hasPath("storage.index.directory");
   }
 
   /**
    * Test {@link Storage#getIndexSwitchFromConfig(Config)}.
+   *
    * <ul>
-   *   <li>Given empty string.</li>
+   *   <li>Given empty string.
    * </ul>
-   * <p>
-   * Method under test: {@link Storage#getIndexSwitchFromConfig(Config)}
+   *
+   * <p>Method under test: {@link Storage#getIndexSwitchFromConfig(Config)}
    */
   @Test
   @Category(MaintainedByDiffblue.class)
@@ -711,19 +721,20 @@ public class StorageDiffblueTest {
     String actualIndexSwitchFromConfig = Storage.getIndexSwitchFromConfig(config);
 
     // Assert
-    verify(config).getString(eq("storage.index.switch"));
-    verify(config).hasPath(eq("storage.index.switch"));
+    verify(config).getString("storage.index.switch");
+    verify(config).hasPath("storage.index.switch");
     assertEquals("on", actualIndexSwitchFromConfig);
   }
 
   /**
    * Test {@link Storage#getIndexSwitchFromConfig(Config)}.
+   *
    * <ul>
-   *   <li>Given {@code false}.</li>
-   *   <li>When {@link Config} {@link Config#hasPath(String)} return {@code false}.</li>
+   *   <li>Given {@code false}.
+   *   <li>When {@link Config} {@link Config#hasPath(String)} return {@code false}.
    * </ul>
-   * <p>
-   * Method under test: {@link Storage#getIndexSwitchFromConfig(Config)}
+   *
+   * <p>Method under test: {@link Storage#getIndexSwitchFromConfig(Config)}
    */
   @Test
   @Category(MaintainedByDiffblue.class)
@@ -737,41 +748,118 @@ public class StorageDiffblueTest {
     String actualIndexSwitchFromConfig = Storage.getIndexSwitchFromConfig(config);
 
     // Assert
-    verify(config).hasPath(eq("storage.index.switch"));
+    verify(config).hasPath("storage.index.switch");
     assertEquals("on", actualIndexSwitchFromConfig);
   }
 
   /**
    * Test {@link Storage#getIndexSwitchFromConfig(Config)}.
+   *
    * <ul>
-   *   <li>Given {@code String}.</li>
-   *   <li>Then return {@code String}.</li>
+   *   <li>Given {@code not empty}.
+   *   <li>Then return {@code not empty}.
    * </ul>
-   * <p>
-   * Method under test: {@link Storage#getIndexSwitchFromConfig(Config)}
+   *
+   * <p>Method under test: {@link Storage#getIndexSwitchFromConfig(Config)}
    */
   @Test
   @Category(MaintainedByDiffblue.class)
   @MethodsUnderTest({"String Storage.getIndexSwitchFromConfig(Config)"})
-  public void testGetIndexSwitchFromConfig_givenString_thenReturnString() {
+  public void testGetIndexSwitchFromConfig_givenNotEmpty_thenReturnNotEmpty() {
     // Arrange
     Config config = mock(Config.class);
-    when(config.getString(Mockito.<String>any())).thenReturn("String");
+    when(config.getString(Mockito.<String>any())).thenReturn("not empty");
     when(config.hasPath(Mockito.<String>any())).thenReturn(true);
 
     // Act
     String actualIndexSwitchFromConfig = Storage.getIndexSwitchFromConfig(config);
 
     // Assert
-    verify(config, atLeast(1)).getString(eq("storage.index.switch"));
-    verify(config).hasPath(eq("storage.index.switch"));
-    assertEquals("String", actualIndexSwitchFromConfig);
+    verify(config, atLeast(1)).getString("storage.index.switch");
+    verify(config).hasPath("storage.index.switch");
+    assertEquals("not empty", actualIndexSwitchFromConfig);
+  }
+
+  /**
+   * Test {@link Storage#getIndexSwitchFromConfig(Config)}.
+   *
+   * <ul>
+   *   <li>Given {@code null}.
+   *   <li>When {@link Config} {@link Config#getString(String)} return {@code null}.
+   * </ul>
+   *
+   * <p>Method under test: {@link Storage#getIndexSwitchFromConfig(Config)}
+   */
+  @Test
+  @Category(MaintainedByDiffblue.class)
+  @MethodsUnderTest({"String Storage.getIndexSwitchFromConfig(Config)"})
+  public void testGetIndexSwitchFromConfig_givenNull_whenConfigGetStringReturnNull() {
+    // Arrange
+    Config config = mock(Config.class);
+    when(config.getString(Mockito.<String>any())).thenReturn(null);
+    when(config.hasPath(Mockito.<String>any())).thenReturn(true);
+
+    // Act
+    String actualIndexSwitchFromConfig = Storage.getIndexSwitchFromConfig(config);
+
+    // Assert
+    verify(config).getString("storage.index.switch");
+    verify(config).hasPath("storage.index.switch");
+    assertEquals("on", actualIndexSwitchFromConfig);
+  }
+
+  /**
+   * Test {@link Storage#getIndexSwitchFromConfig(Config)}.
+   *
+   * <ul>
+   *   <li>When {@link Config} {@link Config#getString(String)} throw {@link
+   *       IllegalArgumentException#IllegalArgumentException()}.
+   * </ul>
+   *
+   * <p>Method under test: {@link Storage#getIndexSwitchFromConfig(Config)}
+   */
+  @Test
+  @Category(MaintainedByDiffblue.class)
+  @MethodsUnderTest({"String Storage.getIndexSwitchFromConfig(Config)"})
+  public void testGetIndexSwitchFromConfig_whenConfigGetStringThrowIllegalArgumentException() {
+    // Arrange
+    Config config = mock(Config.class);
+    when(config.getString(Mockito.<String>any())).thenThrow(new IllegalArgumentException());
+    when(config.hasPath(Mockito.<String>any())).thenReturn(true);
+
+    // Act and Assert
+    assertThrows(IllegalArgumentException.class, () -> Storage.getIndexSwitchFromConfig(config));
+    verify(config).getString("storage.index.switch");
+    verify(config).hasPath("storage.index.switch");
+  }
+
+  /**
+   * Test {@link Storage#getIndexSwitchFromConfig(Config)}.
+   *
+   * <ul>
+   *   <li>When {@link Config} {@link Config#hasPath(String)} throw {@link
+   *       IllegalArgumentException#IllegalArgumentException()}.
+   * </ul>
+   *
+   * <p>Method under test: {@link Storage#getIndexSwitchFromConfig(Config)}
+   */
+  @Test
+  @Category(MaintainedByDiffblue.class)
+  @MethodsUnderTest({"String Storage.getIndexSwitchFromConfig(Config)"})
+  public void testGetIndexSwitchFromConfig_whenConfigHasPathThrowIllegalArgumentException() {
+    // Arrange
+    Config config = mock(Config.class);
+    when(config.hasPath(Mockito.<String>any())).thenThrow(new IllegalArgumentException());
+
+    // Act and Assert
+    assertThrows(IllegalArgumentException.class, () -> Storage.getIndexSwitchFromConfig(config));
+    verify(config).hasPath("storage.index.switch");
   }
 
   /**
    * Test {@link Storage#getTransactionHistorySwitchFromConfig(Config)}.
-   * <p>
-   * Method under test: {@link Storage#getTransactionHistorySwitchFromConfig(Config)}
+   *
+   * <p>Method under test: {@link Storage#getTransactionHistorySwitchFromConfig(Config)}
    */
   @Test
   @Category(MaintainedByDiffblue.class)
@@ -779,20 +867,19 @@ public class StorageDiffblueTest {
   public void testGetTransactionHistorySwitchFromConfig() {
     // Arrange
     Config config = mock(Config.class);
-    when(config.getString(Mockito.<String>any()))
-        .thenThrow(new IllegalArgumentException("storage.transHistory.switch"));
-    when(config.hasPath(Mockito.<String>any())).thenReturn(true);
+    when(config.hasPath(Mockito.<String>any())).thenThrow(new IllegalArgumentException());
 
     // Act and Assert
-    assertThrows(IllegalArgumentException.class, () -> Storage.getTransactionHistorySwitchFromConfig(config));
-    verify(config).getString(eq("storage.transHistory.switch"));
-    verify(config).hasPath(eq("storage.transHistory.switch"));
+    assertThrows(
+        IllegalArgumentException.class,
+        () -> Storage.getTransactionHistorySwitchFromConfig(config));
+    verify(config).hasPath("storage.transHistory.switch");
   }
 
   /**
    * Test {@link Storage#getTransactionHistorySwitchFromConfig(Config)}.
-   * <p>
-   * Method under test: {@link Storage#getTransactionHistorySwitchFromConfig(Config)}
+   *
+   * <p>Method under test: {@link Storage#getTransactionHistorySwitchFromConfig(Config)}
    */
   @Test
   @Category(MaintainedByDiffblue.class)
@@ -800,21 +887,26 @@ public class StorageDiffblueTest {
   public void testGetTransactionHistorySwitchFromConfig2() {
     // Arrange
     Config config = mock(Config.class);
-    when(config.hasPath(Mockito.<String>any())).thenThrow(new IllegalArgumentException("storage.transHistory.switch"));
+    when(config.getString(Mockito.<String>any())).thenThrow(new IllegalArgumentException());
+    when(config.hasPath(Mockito.<String>any())).thenReturn(true);
 
     // Act and Assert
-    assertThrows(IllegalArgumentException.class, () -> Storage.getTransactionHistorySwitchFromConfig(config));
-    verify(config).hasPath(eq("storage.transHistory.switch"));
+    assertThrows(
+        IllegalArgumentException.class,
+        () -> Storage.getTransactionHistorySwitchFromConfig(config));
+    verify(config).getString("storage.transHistory.switch");
+    verify(config).hasPath("storage.transHistory.switch");
   }
 
   /**
    * Test {@link Storage#getTransactionHistorySwitchFromConfig(Config)}.
+   *
    * <ul>
-   *   <li>Given {@code false}.</li>
-   *   <li>Then return {@code on}.</li>
+   *   <li>Given {@code false}.
+   *   <li>Then return {@code on}.
    * </ul>
-   * <p>
-   * Method under test: {@link Storage#getTransactionHistorySwitchFromConfig(Config)}
+   *
+   * <p>Method under test: {@link Storage#getTransactionHistorySwitchFromConfig(Config)}
    */
   @Test
   @Category(MaintainedByDiffblue.class)
@@ -825,21 +917,23 @@ public class StorageDiffblueTest {
     when(config.hasPath(Mockito.<String>any())).thenReturn(false);
 
     // Act
-    String actualTransactionHistorySwitchFromConfig = Storage.getTransactionHistorySwitchFromConfig(config);
+    String actualTransactionHistorySwitchFromConfig =
+        Storage.getTransactionHistorySwitchFromConfig(config);
 
     // Assert
-    verify(config).hasPath(eq("storage.transHistory.switch"));
+    verify(config).hasPath("storage.transHistory.switch");
     assertEquals("on", actualTransactionHistorySwitchFromConfig);
   }
 
   /**
    * Test {@link Storage#getTransactionHistorySwitchFromConfig(Config)}.
+   *
    * <ul>
-   *   <li>Given {@code String}.</li>
-   *   <li>Then return {@code String}.</li>
+   *   <li>Given {@code String}.
+   *   <li>Then return {@code String}.
    * </ul>
-   * <p>
-   * Method under test: {@link Storage#getTransactionHistorySwitchFromConfig(Config)}
+   *
+   * <p>Method under test: {@link Storage#getTransactionHistorySwitchFromConfig(Config)}
    */
   @Test
   @Category(MaintainedByDiffblue.class)
@@ -851,18 +945,19 @@ public class StorageDiffblueTest {
     when(config.hasPath(Mockito.<String>any())).thenReturn(true);
 
     // Act
-    String actualTransactionHistorySwitchFromConfig = Storage.getTransactionHistorySwitchFromConfig(config);
+    String actualTransactionHistorySwitchFromConfig =
+        Storage.getTransactionHistorySwitchFromConfig(config);
 
     // Assert
-    verify(config).getString(eq("storage.transHistory.switch"));
-    verify(config).hasPath(eq("storage.transHistory.switch"));
+    verify(config).getString("storage.transHistory.switch");
+    verify(config).hasPath("storage.transHistory.switch");
     assertEquals("String", actualTransactionHistorySwitchFromConfig);
   }
 
   /**
    * Test {@link Storage#getCheckpointVersionFromConfig(Config)}.
-   * <p>
-   * Method under test: {@link Storage#getCheckpointVersionFromConfig(Config)}
+   *
+   * <p>Method under test: {@link Storage#getCheckpointVersionFromConfig(Config)}
    */
   @Test
   @Category(MaintainedByDiffblue.class)
@@ -870,41 +965,23 @@ public class StorageDiffblueTest {
   public void testGetCheckpointVersionFromConfig() {
     // Arrange
     Config config = mock(Config.class);
-    when(config.getInt(Mockito.<String>any())).thenThrow(new IllegalArgumentException("storage.checkpoint.version"));
-    when(config.hasPath(Mockito.<String>any())).thenReturn(true);
+    when(config.hasPath(Mockito.<String>any())).thenThrow(new IllegalArgumentException());
 
     // Act and Assert
-    assertThrows(IllegalArgumentException.class, () -> Storage.getCheckpointVersionFromConfig(config));
-    verify(config).getInt(eq("storage.checkpoint.version"));
-    verify(config).hasPath(eq("storage.checkpoint.version"));
+    assertThrows(
+        IllegalArgumentException.class, () -> Storage.getCheckpointVersionFromConfig(config));
+    verify(config).hasPath("storage.checkpoint.version");
   }
 
   /**
    * Test {@link Storage#getCheckpointVersionFromConfig(Config)}.
-   * <p>
-   * Method under test: {@link Storage#getCheckpointVersionFromConfig(Config)}
-   */
-  @Test
-  @Category(MaintainedByDiffblue.class)
-  @MethodsUnderTest({"int Storage.getCheckpointVersionFromConfig(Config)"})
-  public void testGetCheckpointVersionFromConfig2() {
-    // Arrange
-    Config config = mock(Config.class);
-    when(config.hasPath(Mockito.<String>any())).thenThrow(new IllegalArgumentException("storage.checkpoint.version"));
-
-    // Act and Assert
-    assertThrows(IllegalArgumentException.class, () -> Storage.getCheckpointVersionFromConfig(config));
-    verify(config).hasPath(eq("storage.checkpoint.version"));
-  }
-
-  /**
-   * Test {@link Storage#getCheckpointVersionFromConfig(Config)}.
+   *
    * <ul>
-   *   <li>Given {@code false}.</li>
-   *   <li>When {@link Config} {@link Config#hasPath(String)} return {@code false}.</li>
+   *   <li>Given {@code false}.
+   *   <li>When {@link Config} {@link Config#hasPath(String)} return {@code false}.
    * </ul>
-   * <p>
-   * Method under test: {@link Storage#getCheckpointVersionFromConfig(Config)}
+   *
+   * <p>Method under test: {@link Storage#getCheckpointVersionFromConfig(Config)}
    */
   @Test
   @Category(MaintainedByDiffblue.class)
@@ -918,18 +995,19 @@ public class StorageDiffblueTest {
     int actualCheckpointVersionFromConfig = Storage.getCheckpointVersionFromConfig(config);
 
     // Assert
-    verify(config).hasPath(eq("storage.checkpoint.version"));
+    verify(config).hasPath("storage.checkpoint.version");
     assertEquals(1, actualCheckpointVersionFromConfig);
   }
 
   /**
    * Test {@link Storage#getCheckpointVersionFromConfig(Config)}.
+   *
    * <ul>
-   *   <li>Given one.</li>
-   *   <li>When {@link Config} {@link Config#getInt(String)} return one.</li>
+   *   <li>Given one.
+   *   <li>When {@link Config} {@link Config#getInt(String)} return one.
    * </ul>
-   * <p>
-   * Method under test: {@link Storage#getCheckpointVersionFromConfig(Config)}
+   *
+   * <p>Method under test: {@link Storage#getCheckpointVersionFromConfig(Config)}
    */
   @Test
   @Category(MaintainedByDiffblue.class)
@@ -944,15 +1022,41 @@ public class StorageDiffblueTest {
     int actualCheckpointVersionFromConfig = Storage.getCheckpointVersionFromConfig(config);
 
     // Assert
-    verify(config).getInt(eq("storage.checkpoint.version"));
-    verify(config).hasPath(eq("storage.checkpoint.version"));
+    verify(config).getInt("storage.checkpoint.version");
+    verify(config).hasPath("storage.checkpoint.version");
     assertEquals(1, actualCheckpointVersionFromConfig);
   }
 
   /**
+   * Test {@link Storage#getCheckpointVersionFromConfig(Config)}.
+   *
+   * <ul>
+   *   <li>When {@link Config} {@link Config#getInt(String)} throw {@link
+   *       IllegalArgumentException#IllegalArgumentException()}.
+   * </ul>
+   *
+   * <p>Method under test: {@link Storage#getCheckpointVersionFromConfig(Config)}
+   */
+  @Test
+  @Category(MaintainedByDiffblue.class)
+  @MethodsUnderTest({"int Storage.getCheckpointVersionFromConfig(Config)"})
+  public void testGetCheckpointVersionFromConfig_whenConfigGetIntThrowIllegalArgumentException() {
+    // Arrange
+    Config config = mock(Config.class);
+    when(config.getInt(Mockito.<String>any())).thenThrow(new IllegalArgumentException());
+    when(config.hasPath(Mockito.<String>any())).thenReturn(true);
+
+    // Act and Assert
+    assertThrows(
+        IllegalArgumentException.class, () -> Storage.getCheckpointVersionFromConfig(config));
+    verify(config).getInt("storage.checkpoint.version");
+    verify(config).hasPath("storage.checkpoint.version");
+  }
+
+  /**
    * Test {@link Storage#getCheckpointSyncFromConfig(Config)}.
-   * <p>
-   * Method under test: {@link Storage#getCheckpointSyncFromConfig(Config)}
+   *
+   * <p>Method under test: {@link Storage#getCheckpointSyncFromConfig(Config)}
    */
   @Test
   @Category(MaintainedByDiffblue.class)
@@ -960,41 +1064,24 @@ public class StorageDiffblueTest {
   public void testGetCheckpointSyncFromConfig() {
     // Arrange
     Config config = mock(Config.class);
-    when(config.getBoolean(Mockito.<String>any())).thenThrow(new IllegalArgumentException("storage.checkpoint.sync"));
+    when(config.getBoolean(Mockito.<String>any())).thenThrow(new IllegalArgumentException());
     when(config.hasPath(Mockito.<String>any())).thenReturn(true);
 
     // Act and Assert
     assertThrows(IllegalArgumentException.class, () -> Storage.getCheckpointSyncFromConfig(config));
-    verify(config).getBoolean(eq("storage.checkpoint.sync"));
-    verify(config).hasPath(eq("storage.checkpoint.sync"));
+    verify(config).getBoolean("storage.checkpoint.sync");
+    verify(config).hasPath("storage.checkpoint.sync");
   }
 
   /**
    * Test {@link Storage#getCheckpointSyncFromConfig(Config)}.
-   * <p>
-   * Method under test: {@link Storage#getCheckpointSyncFromConfig(Config)}
-   */
-  @Test
-  @Category(MaintainedByDiffblue.class)
-  @MethodsUnderTest({"boolean Storage.getCheckpointSyncFromConfig(Config)"})
-  public void testGetCheckpointSyncFromConfig2() {
-    // Arrange
-    Config config = mock(Config.class);
-    when(config.hasPath(Mockito.<String>any())).thenThrow(new IllegalArgumentException("storage.checkpoint.sync"));
-
-    // Act and Assert
-    assertThrows(IllegalArgumentException.class, () -> Storage.getCheckpointSyncFromConfig(config));
-    verify(config).hasPath(eq("storage.checkpoint.sync"));
-  }
-
-  /**
-   * Test {@link Storage#getCheckpointSyncFromConfig(Config)}.
+   *
    * <ul>
-   *   <li>When {@link Config} {@link Config#getBoolean(String)} return {@code false}.</li>
-   *   <li>Then return {@code false}.</li>
+   *   <li>When {@link Config} {@link Config#getBoolean(String)} return {@code false}.
+   *   <li>Then return {@code false}.
    * </ul>
-   * <p>
-   * Method under test: {@link Storage#getCheckpointSyncFromConfig(Config)}
+   *
+   * <p>Method under test: {@link Storage#getCheckpointSyncFromConfig(Config)}
    */
   @Test
   @Category(MaintainedByDiffblue.class)
@@ -1009,19 +1096,20 @@ public class StorageDiffblueTest {
     boolean actualCheckpointSyncFromConfig = Storage.getCheckpointSyncFromConfig(config);
 
     // Assert
-    verify(config).getBoolean(eq("storage.checkpoint.sync"));
-    verify(config).hasPath(eq("storage.checkpoint.sync"));
+    verify(config).getBoolean("storage.checkpoint.sync");
+    verify(config).hasPath("storage.checkpoint.sync");
     assertFalse(actualCheckpointSyncFromConfig);
   }
 
   /**
    * Test {@link Storage#getCheckpointSyncFromConfig(Config)}.
+   *
    * <ul>
-   *   <li>When {@link Config} {@link Config#getBoolean(String)} return {@code true}.</li>
-   *   <li>Then return {@code true}.</li>
+   *   <li>When {@link Config} {@link Config#getBoolean(String)} return {@code true}.
+   *   <li>Then return {@code true}.
    * </ul>
-   * <p>
-   * Method under test: {@link Storage#getCheckpointSyncFromConfig(Config)}
+   *
+   * <p>Method under test: {@link Storage#getCheckpointSyncFromConfig(Config)}
    */
   @Test
   @Category(MaintainedByDiffblue.class)
@@ -1036,19 +1124,20 @@ public class StorageDiffblueTest {
     boolean actualCheckpointSyncFromConfig = Storage.getCheckpointSyncFromConfig(config);
 
     // Assert
-    verify(config).getBoolean(eq("storage.checkpoint.sync"));
-    verify(config).hasPath(eq("storage.checkpoint.sync"));
+    verify(config).getBoolean("storage.checkpoint.sync");
+    verify(config).hasPath("storage.checkpoint.sync");
     assertTrue(actualCheckpointSyncFromConfig);
   }
 
   /**
    * Test {@link Storage#getCheckpointSyncFromConfig(Config)}.
+   *
    * <ul>
-   *   <li>When {@link Config} {@link Config#hasPath(String)} return {@code false}.</li>
-   *   <li>Then return {@code true}.</li>
+   *   <li>When {@link Config} {@link Config#hasPath(String)} return {@code false}.
+   *   <li>Then return {@code true}.
    * </ul>
-   * <p>
-   * Method under test: {@link Storage#getCheckpointSyncFromConfig(Config)}
+   *
+   * <p>Method under test: {@link Storage#getCheckpointSyncFromConfig(Config)}
    */
   @Test
   @Category(MaintainedByDiffblue.class)
@@ -1062,14 +1151,37 @@ public class StorageDiffblueTest {
     boolean actualCheckpointSyncFromConfig = Storage.getCheckpointSyncFromConfig(config);
 
     // Assert
-    verify(config).hasPath(eq("storage.checkpoint.sync"));
+    verify(config).hasPath("storage.checkpoint.sync");
     assertTrue(actualCheckpointSyncFromConfig);
   }
 
   /**
+   * Test {@link Storage#getCheckpointSyncFromConfig(Config)}.
+   *
+   * <ul>
+   *   <li>When {@link Config} {@link Config#hasPath(String)} throw {@link
+   *       IllegalArgumentException#IllegalArgumentException()}.
+   * </ul>
+   *
+   * <p>Method under test: {@link Storage#getCheckpointSyncFromConfig(Config)}
+   */
+  @Test
+  @Category(MaintainedByDiffblue.class)
+  @MethodsUnderTest({"boolean Storage.getCheckpointSyncFromConfig(Config)"})
+  public void testGetCheckpointSyncFromConfig_whenConfigHasPathThrowIllegalArgumentException() {
+    // Arrange
+    Config config = mock(Config.class);
+    when(config.hasPath(Mockito.<String>any())).thenThrow(new IllegalArgumentException());
+
+    // Act and Assert
+    assertThrows(IllegalArgumentException.class, () -> Storage.getCheckpointSyncFromConfig(config));
+    verify(config).hasPath("storage.checkpoint.sync");
+  }
+
+  /**
    * Test {@link Storage#getEstimatedTransactionsFromConfig(Config)}.
-   * <p>
-   * Method under test: {@link Storage#getEstimatedTransactionsFromConfig(Config)}
+   *
+   * <p>Method under test: {@link Storage#getEstimatedTransactionsFromConfig(Config)}
    */
   @Test
   @Category(MaintainedByDiffblue.class)
@@ -1077,20 +1189,18 @@ public class StorageDiffblueTest {
   public void testGetEstimatedTransactionsFromConfig() {
     // Arrange
     Config config = mock(Config.class);
-    when(config.getInt(Mockito.<String>any()))
-        .thenThrow(new IllegalArgumentException("storage.txCache.estimatedTransactions"));
-    when(config.hasPath(Mockito.<String>any())).thenReturn(true);
+    when(config.hasPath(Mockito.<String>any())).thenThrow(new IllegalArgumentException());
 
     // Act and Assert
-    assertThrows(IllegalArgumentException.class, () -> Storage.getEstimatedTransactionsFromConfig(config));
-    verify(config).getInt(eq("storage.txCache.estimatedTransactions"));
-    verify(config).hasPath(eq("storage.txCache.estimatedTransactions"));
+    assertThrows(
+        IllegalArgumentException.class, () -> Storage.getEstimatedTransactionsFromConfig(config));
+    verify(config).hasPath("storage.txCache.estimatedTransactions");
   }
 
   /**
    * Test {@link Storage#getEstimatedTransactionsFromConfig(Config)}.
-   * <p>
-   * Method under test: {@link Storage#getEstimatedTransactionsFromConfig(Config)}
+   *
+   * <p>Method under test: {@link Storage#getEstimatedTransactionsFromConfig(Config)}
    */
   @Test
   @Category(MaintainedByDiffblue.class)
@@ -1098,27 +1208,30 @@ public class StorageDiffblueTest {
   public void testGetEstimatedTransactionsFromConfig2() {
     // Arrange
     Config config = mock(Config.class);
-    when(config.hasPath(Mockito.<String>any()))
-        .thenThrow(new IllegalArgumentException("storage.txCache.estimatedTransactions"));
+    when(config.getInt(Mockito.<String>any())).thenThrow(new IllegalArgumentException());
+    when(config.hasPath(Mockito.<String>any())).thenReturn(true);
 
     // Act and Assert
-    assertThrows(IllegalArgumentException.class, () -> Storage.getEstimatedTransactionsFromConfig(config));
-    verify(config).hasPath(eq("storage.txCache.estimatedTransactions"));
+    assertThrows(
+        IllegalArgumentException.class, () -> Storage.getEstimatedTransactionsFromConfig(config));
+    verify(config).getInt("storage.txCache.estimatedTransactions");
+    verify(config).hasPath("storage.txCache.estimatedTransactions");
   }
 
   /**
    * Test {@link Storage#getEstimatedTransactionsFromConfig(Config)}.
+   *
    * <ul>
-   *   <li>Given {@code 10000}.</li>
-   *   <li>Then return {@code 10000}.</li>
+   *   <li>Given {@code 10000}.
+   *   <li>When {@link Config} {@link Config#getInt(String)} return {@code 10000}.
    * </ul>
-   * <p>
-   * Method under test: {@link Storage#getEstimatedTransactionsFromConfig(Config)}
+   *
+   * <p>Method under test: {@link Storage#getEstimatedTransactionsFromConfig(Config)}
    */
   @Test
   @Category(MaintainedByDiffblue.class)
   @MethodsUnderTest({"int Storage.getEstimatedTransactionsFromConfig(Config)"})
-  public void testGetEstimatedTransactionsFromConfig_given10000_thenReturn10000() {
+  public void testGetEstimatedTransactionsFromConfig_given10000_whenConfigGetIntReturn10000() {
     // Arrange
     Config config = mock(Config.class);
     when(config.getInt(Mockito.<String>any())).thenReturn(10000);
@@ -1128,19 +1241,48 @@ public class StorageDiffblueTest {
     int actualEstimatedTransactionsFromConfig = Storage.getEstimatedTransactionsFromConfig(config);
 
     // Assert
-    verify(config).getInt(eq("storage.txCache.estimatedTransactions"));
-    verify(config).hasPath(eq("storage.txCache.estimatedTransactions"));
+    verify(config).getInt("storage.txCache.estimatedTransactions");
+    verify(config).hasPath("storage.txCache.estimatedTransactions");
     assertEquals(10000, actualEstimatedTransactionsFromConfig);
   }
 
   /**
    * Test {@link Storage#getEstimatedTransactionsFromConfig(Config)}.
+   *
    * <ul>
-   *   <li>Given {@code false}.</li>
-   *   <li>Then return one thousand.</li>
+   *   <li>Given {@code 10001}.
+   *   <li>When {@link Config} {@link Config#getInt(String)} return {@code 10001}.
    * </ul>
-   * <p>
-   * Method under test: {@link Storage#getEstimatedTransactionsFromConfig(Config)}
+   *
+   * <p>Method under test: {@link Storage#getEstimatedTransactionsFromConfig(Config)}
+   */
+  @Test
+  @Category(MaintainedByDiffblue.class)
+  @MethodsUnderTest({"int Storage.getEstimatedTransactionsFromConfig(Config)"})
+  public void testGetEstimatedTransactionsFromConfig_given10001_whenConfigGetIntReturn10001() {
+    // Arrange
+    Config config = mock(Config.class);
+    when(config.getInt(Mockito.<String>any())).thenReturn(10001);
+    when(config.hasPath(Mockito.<String>any())).thenReturn(true);
+
+    // Act
+    int actualEstimatedTransactionsFromConfig = Storage.getEstimatedTransactionsFromConfig(config);
+
+    // Assert
+    verify(config).getInt("storage.txCache.estimatedTransactions");
+    verify(config).hasPath("storage.txCache.estimatedTransactions");
+    assertEquals(10000, actualEstimatedTransactionsFromConfig);
+  }
+
+  /**
+   * Test {@link Storage#getEstimatedTransactionsFromConfig(Config)}.
+   *
+   * <ul>
+   *   <li>Given {@code false}.
+   *   <li>Then return one thousand.
+   * </ul>
+   *
+   * <p>Method under test: {@link Storage#getEstimatedTransactionsFromConfig(Config)}
    */
   @Test
   @Category(MaintainedByDiffblue.class)
@@ -1154,41 +1296,42 @@ public class StorageDiffblueTest {
     int actualEstimatedTransactionsFromConfig = Storage.getEstimatedTransactionsFromConfig(config);
 
     // Assert
-    verify(config).hasPath(eq("storage.txCache.estimatedTransactions"));
+    verify(config).hasPath("storage.txCache.estimatedTransactions");
     assertEquals(1000, actualEstimatedTransactionsFromConfig);
   }
 
   /**
    * Test {@link Storage#getEstimatedTransactionsFromConfig(Config)}.
+   *
    * <ul>
-   *   <li>Given one.</li>
-   *   <li>Then return one hundred.</li>
+   *   <li>Given ninety-nine.
+   *   <li>Then return one hundred.
    * </ul>
-   * <p>
-   * Method under test: {@link Storage#getEstimatedTransactionsFromConfig(Config)}
+   *
+   * <p>Method under test: {@link Storage#getEstimatedTransactionsFromConfig(Config)}
    */
   @Test
   @Category(MaintainedByDiffblue.class)
   @MethodsUnderTest({"int Storage.getEstimatedTransactionsFromConfig(Config)"})
-  public void testGetEstimatedTransactionsFromConfig_givenOne_thenReturnOneHundred() {
+  public void testGetEstimatedTransactionsFromConfig_givenNinetyNine_thenReturnOneHundred() {
     // Arrange
     Config config = mock(Config.class);
-    when(config.getInt(Mockito.<String>any())).thenReturn(1);
+    when(config.getInt(Mockito.<String>any())).thenReturn(99);
     when(config.hasPath(Mockito.<String>any())).thenReturn(true);
 
     // Act
     int actualEstimatedTransactionsFromConfig = Storage.getEstimatedTransactionsFromConfig(config);
 
     // Assert
-    verify(config).getInt(eq("storage.txCache.estimatedTransactions"));
-    verify(config).hasPath(eq("storage.txCache.estimatedTransactions"));
+    verify(config).getInt("storage.txCache.estimatedTransactions");
+    verify(config).hasPath("storage.txCache.estimatedTransactions");
     assertEquals(100, actualEstimatedTransactionsFromConfig);
   }
 
   /**
    * Test {@link Storage#getTxCacheInitOptimizationFromConfig(Config)}.
-   * <p>
-   * Method under test: {@link Storage#getTxCacheInitOptimizationFromConfig(Config)}
+   *
+   * <p>Method under test: {@link Storage#getTxCacheInitOptimizationFromConfig(Config)}
    */
   @Test
   @Category(MaintainedByDiffblue.class)
@@ -1196,20 +1339,18 @@ public class StorageDiffblueTest {
   public void testGetTxCacheInitOptimizationFromConfig() {
     // Arrange
     Config config = mock(Config.class);
-    when(config.getBoolean(Mockito.<String>any()))
-        .thenThrow(new IllegalArgumentException(Storage.TX_CACHE_INIT_OPTIMIZATION));
-    when(config.hasPath(Mockito.<String>any())).thenReturn(true);
+    when(config.hasPath(Mockito.<String>any())).thenThrow(new IllegalArgumentException());
 
     // Act and Assert
-    assertThrows(IllegalArgumentException.class, () -> Storage.getTxCacheInitOptimizationFromConfig(config));
-    verify(config).getBoolean(eq("storage.txCache.initOptimization"));
-    verify(config).hasPath(eq("storage.txCache.initOptimization"));
+    assertThrows(
+        IllegalArgumentException.class, () -> Storage.getTxCacheInitOptimizationFromConfig(config));
+    verify(config).hasPath("storage.txCache.initOptimization");
   }
 
   /**
    * Test {@link Storage#getTxCacheInitOptimizationFromConfig(Config)}.
-   * <p>
-   * Method under test: {@link Storage#getTxCacheInitOptimizationFromConfig(Config)}
+   *
+   * <p>Method under test: {@link Storage#getTxCacheInitOptimizationFromConfig(Config)}
    */
   @Test
   @Category(MaintainedByDiffblue.class)
@@ -1217,21 +1358,24 @@ public class StorageDiffblueTest {
   public void testGetTxCacheInitOptimizationFromConfig2() {
     // Arrange
     Config config = mock(Config.class);
-    when(config.hasPath(Mockito.<String>any()))
-        .thenThrow(new IllegalArgumentException(Storage.TX_CACHE_INIT_OPTIMIZATION));
+    when(config.getBoolean(Mockito.<String>any())).thenThrow(new IllegalArgumentException());
+    when(config.hasPath(Mockito.<String>any())).thenReturn(true);
 
     // Act and Assert
-    assertThrows(IllegalArgumentException.class, () -> Storage.getTxCacheInitOptimizationFromConfig(config));
-    verify(config).hasPath(eq("storage.txCache.initOptimization"));
+    assertThrows(
+        IllegalArgumentException.class, () -> Storage.getTxCacheInitOptimizationFromConfig(config));
+    verify(config).getBoolean("storage.txCache.initOptimization");
+    verify(config).hasPath("storage.txCache.initOptimization");
   }
 
   /**
    * Test {@link Storage#getTxCacheInitOptimizationFromConfig(Config)}.
+   *
    * <ul>
-   *   <li>Then return {@code true}.</li>
+   *   <li>Then return {@code true}.
    * </ul>
-   * <p>
-   * Method under test: {@link Storage#getTxCacheInitOptimizationFromConfig(Config)}
+   *
+   * <p>Method under test: {@link Storage#getTxCacheInitOptimizationFromConfig(Config)}
    */
   @Test
   @Category(MaintainedByDiffblue.class)
@@ -1243,21 +1387,23 @@ public class StorageDiffblueTest {
     when(config.hasPath(Mockito.<String>any())).thenReturn(true);
 
     // Act
-    boolean actualTxCacheInitOptimizationFromConfig = Storage.getTxCacheInitOptimizationFromConfig(config);
+    boolean actualTxCacheInitOptimizationFromConfig =
+        Storage.getTxCacheInitOptimizationFromConfig(config);
 
     // Assert
-    verify(config).getBoolean(eq("storage.txCache.initOptimization"));
-    verify(config).hasPath(eq("storage.txCache.initOptimization"));
+    verify(config).getBoolean("storage.txCache.initOptimization");
+    verify(config).hasPath("storage.txCache.initOptimization");
     assertTrue(actualTxCacheInitOptimizationFromConfig);
   }
 
   /**
    * Test {@link Storage#getTxCacheInitOptimizationFromConfig(Config)}.
+   *
    * <ul>
-   *   <li>When {@link Config} {@link Config#getBoolean(String)} return {@code false}.</li>
+   *   <li>When {@link Config} {@link Config#getBoolean(String)} return {@code false}.
    * </ul>
-   * <p>
-   * Method under test: {@link Storage#getTxCacheInitOptimizationFromConfig(Config)}
+   *
+   * <p>Method under test: {@link Storage#getTxCacheInitOptimizationFromConfig(Config)}
    */
   @Test
   @Category(MaintainedByDiffblue.class)
@@ -1269,21 +1415,23 @@ public class StorageDiffblueTest {
     when(config.hasPath(Mockito.<String>any())).thenReturn(true);
 
     // Act
-    boolean actualTxCacheInitOptimizationFromConfig = Storage.getTxCacheInitOptimizationFromConfig(config);
+    boolean actualTxCacheInitOptimizationFromConfig =
+        Storage.getTxCacheInitOptimizationFromConfig(config);
 
     // Assert
-    verify(config).getBoolean(eq("storage.txCache.initOptimization"));
-    verify(config).hasPath(eq("storage.txCache.initOptimization"));
+    verify(config).getBoolean("storage.txCache.initOptimization");
+    verify(config).hasPath("storage.txCache.initOptimization");
     assertFalse(actualTxCacheInitOptimizationFromConfig);
   }
 
   /**
    * Test {@link Storage#getTxCacheInitOptimizationFromConfig(Config)}.
+   *
    * <ul>
-   *   <li>When {@link Config} {@link Config#hasPath(String)} return {@code false}.</li>
+   *   <li>When {@link Config} {@link Config#hasPath(String)} return {@code false}.
    * </ul>
-   * <p>
-   * Method under test: {@link Storage#getTxCacheInitOptimizationFromConfig(Config)}
+   *
+   * <p>Method under test: {@link Storage#getTxCacheInitOptimizationFromConfig(Config)}
    */
   @Test
   @Category(MaintainedByDiffblue.class)
@@ -1294,21 +1442,23 @@ public class StorageDiffblueTest {
     when(config.hasPath(Mockito.<String>any())).thenReturn(false);
 
     // Act
-    boolean actualTxCacheInitOptimizationFromConfig = Storage.getTxCacheInitOptimizationFromConfig(config);
+    boolean actualTxCacheInitOptimizationFromConfig =
+        Storage.getTxCacheInitOptimizationFromConfig(config);
 
     // Assert
-    verify(config).hasPath(eq("storage.txCache.initOptimization"));
+    verify(config).hasPath("storage.txCache.initOptimization");
     assertFalse(actualTxCacheInitOptimizationFromConfig);
   }
 
   /**
    * Test {@link Storage#setCacheStrategies(Config)}.
+   *
    * <ul>
-   *   <li>Given {@link Config} {@link Config#entrySet()} return {@link HashSet#HashSet()}.</li>
-   *   <li>Then calls {@link Config#entrySet()}.</li>
+   *   <li>Given {@link Config} {@link Config#entrySet()} return {@link HashSet#HashSet()}.
+   *   <li>Then calls {@link Config#entrySet()}.
    * </ul>
-   * <p>
-   * Method under test: {@link Storage#setCacheStrategies(Config)}
+   *
+   * <p>Method under test: {@link Storage#setCacheStrategies(Config)}
    */
   @Test
   @Category(MaintainedByDiffblue.class)
@@ -1316,10 +1466,13 @@ public class StorageDiffblueTest {
   public void testSetCacheStrategies_givenConfigEntrySetReturnHashSet_thenCallsEntrySet() {
     // Arrange
     Storage storage = new Storage();
+
     Config config = mock(Config.class);
     when(config.entrySet()).thenReturn(new HashSet<>());
+
     Config config2 = mock(Config.class);
     when(config2.resolve()).thenReturn(config);
+
     Config config3 = mock(Config.class);
     when(config3.getConfig(Mockito.<String>any())).thenReturn(config2);
     when(config3.hasPath(Mockito.<String>any())).thenReturn(true);
@@ -1329,55 +1482,34 @@ public class StorageDiffblueTest {
 
     // Assert
     verify(config).entrySet();
-    verify(config3).getConfig(eq("storage.cache.strategies"));
-    verify(config3).hasPath(eq("storage.cache.strategies"));
+    verify(config3).getConfig("storage.cache.strategies");
+    verify(config3).hasPath("storage.cache.strategies");
     verify(config2).resolve();
   }
 
   /**
    * Test {@link Storage#setCacheStrategies(Config)}.
+   *
    * <ul>
-   *   <li>Given {@code false}.</li>
-   *   <li>When {@link Config} {@link Config#hasPath(String)} return {@code false}.</li>
-   *   <li>Then calls {@link Config#hasPath(String)}.</li>
+   *   <li>Given {@link Config} {@link Config#entrySet()} throw {@link
+   *       IllegalArgumentException#IllegalArgumentException()}.
    * </ul>
-   * <p>
-   * Method under test: {@link Storage#setCacheStrategies(Config)}
+   *
+   * <p>Method under test: {@link Storage#setCacheStrategies(Config)}
    */
   @Test
   @Category(MaintainedByDiffblue.class)
   @MethodsUnderTest({"void Storage.setCacheStrategies(Config)"})
-  public void testSetCacheStrategies_givenFalse_whenConfigHasPathReturnFalse_thenCallsHasPath() {
+  public void testSetCacheStrategies_givenConfigEntrySetThrowIllegalArgumentException() {
     // Arrange
     Storage storage = new Storage();
+
     Config config = mock(Config.class);
-    when(config.hasPath(Mockito.<String>any())).thenReturn(false);
+    when(config.entrySet()).thenThrow(new IllegalArgumentException());
 
-    // Act
-    storage.setCacheStrategies(config);
-
-    // Assert
-    verify(config).hasPath(eq("storage.cache.strategies"));
-  }
-
-  /**
-   * Test {@link Storage#setCacheStrategies(Config)}.
-   * <ul>
-   *   <li>Then throw {@link IllegalArgumentException}.</li>
-   * </ul>
-   * <p>
-   * Method under test: {@link Storage#setCacheStrategies(Config)}
-   */
-  @Test
-  @Category(MaintainedByDiffblue.class)
-  @MethodsUnderTest({"void Storage.setCacheStrategies(Config)"})
-  public void testSetCacheStrategies_thenThrowIllegalArgumentException() {
-    // Arrange
-    Storage storage = new Storage();
-    Config config = mock(Config.class);
-    when(config.entrySet()).thenThrow(new IllegalArgumentException("storage.cache.strategies"));
     Config config2 = mock(Config.class);
     when(config2.resolve()).thenReturn(config);
+
     Config config3 = mock(Config.class);
     when(config3.getConfig(Mockito.<String>any())).thenReturn(config2);
     when(config3.hasPath(Mockito.<String>any())).thenReturn(true);
@@ -1385,132 +1517,204 @@ public class StorageDiffblueTest {
     // Act and Assert
     assertThrows(IllegalArgumentException.class, () -> storage.setCacheStrategies(config3));
     verify(config).entrySet();
-    verify(config3).getConfig(eq("storage.cache.strategies"));
-    verify(config3).hasPath(eq("storage.cache.strategies"));
+    verify(config3).getConfig("storage.cache.strategies");
+    verify(config3).hasPath("storage.cache.strategies");
     verify(config2).resolve();
   }
 
   /**
+   * Test {@link Storage#setCacheStrategies(Config)}.
+   *
+   * <ul>
+   *   <li>Given {@link Config} {@link Config#resolve()} throw {@link
+   *       IllegalArgumentException#IllegalArgumentException()}.
+   * </ul>
+   *
+   * <p>Method under test: {@link Storage#setCacheStrategies(Config)}
+   */
+  @Test
+  @Category(MaintainedByDiffblue.class)
+  @MethodsUnderTest({"void Storage.setCacheStrategies(Config)"})
+  public void testSetCacheStrategies_givenConfigResolveThrowIllegalArgumentException() {
+    // Arrange
+    Storage storage = new Storage();
+
+    Config config = mock(Config.class);
+    when(config.resolve()).thenThrow(new IllegalArgumentException());
+
+    Config config2 = mock(Config.class);
+    when(config2.getConfig(Mockito.<String>any())).thenReturn(config);
+    when(config2.hasPath(Mockito.<String>any())).thenReturn(true);
+
+    // Act and Assert
+    assertThrows(IllegalArgumentException.class, () -> storage.setCacheStrategies(config2));
+    verify(config2).getConfig("storage.cache.strategies");
+    verify(config2).hasPath("storage.cache.strategies");
+    verify(config).resolve();
+  }
+
+  /**
+   * Test {@link Storage#setCacheStrategies(Config)}.
+   *
+   * <ul>
+   *   <li>Given {@code false}.
+   *   <li>When {@link Config} {@link Config#hasPath(String)} return {@code false}.
+   *   <li>Then calls {@link Config#hasPath(String)}.
+   * </ul>
+   *
+   * <p>Method under test: {@link Storage#setCacheStrategies(Config)}
+   */
+  @Test
+  @Category(MaintainedByDiffblue.class)
+  @MethodsUnderTest({"void Storage.setCacheStrategies(Config)"})
+  public void testSetCacheStrategies_givenFalse_whenConfigHasPathReturnFalse_thenCallsHasPath() {
+    // Arrange
+    Storage storage = new Storage();
+
+    Config config = mock(Config.class);
+    when(config.hasPath(Mockito.<String>any())).thenReturn(false);
+
+    // Act
+    storage.setCacheStrategies(config);
+
+    // Assert
+    verify(config).hasPath("storage.cache.strategies");
+  }
+
+  /**
+   * Test {@link Storage#setCacheStrategies(Config)}.
+   *
+   * <ul>
+   *   <li>When {@link Config} {@link Config#getConfig(String)} throw {@link
+   *       IllegalArgumentException#IllegalArgumentException()}.
+   * </ul>
+   *
+   * <p>Method under test: {@link Storage#setCacheStrategies(Config)}
+   */
+  @Test
+  @Category(MaintainedByDiffblue.class)
+  @MethodsUnderTest({"void Storage.setCacheStrategies(Config)"})
+  public void testSetCacheStrategies_whenConfigGetConfigThrowIllegalArgumentException() {
+    // Arrange
+    Storage storage = new Storage();
+
+    Config config = mock(Config.class);
+    when(config.getConfig(Mockito.<String>any())).thenThrow(new IllegalArgumentException());
+    when(config.hasPath(Mockito.<String>any())).thenReturn(true);
+
+    // Act and Assert
+    assertThrows(IllegalArgumentException.class, () -> storage.setCacheStrategies(config));
+    verify(config).getConfig("storage.cache.strategies");
+    verify(config).hasPath("storage.cache.strategies");
+  }
+
+  /**
+   * Test {@link Storage#setCacheStrategies(Config)}.
+   *
+   * <ul>
+   *   <li>When {@link Config} {@link Config#hasPath(String)} throw {@link
+   *       IllegalArgumentException#IllegalArgumentException()}.
+   * </ul>
+   *
+   * <p>Method under test: {@link Storage#setCacheStrategies(Config)}
+   */
+  @Test
+  @Category(MaintainedByDiffblue.class)
+  @MethodsUnderTest({"void Storage.setCacheStrategies(Config)"})
+  public void testSetCacheStrategies_whenConfigHasPathThrowIllegalArgumentException() {
+    // Arrange
+    Storage storage = new Storage();
+
+    Config config = mock(Config.class);
+    when(config.hasPath(Mockito.<String>any())).thenThrow(new IllegalArgumentException());
+
+    // Act and Assert
+    assertThrows(IllegalArgumentException.class, () -> storage.setCacheStrategies(config));
+    verify(config).hasPath("storage.cache.strategies");
+  }
+
+  /**
    * Test {@link Storage#getCacheStrategy(CacheType)}.
-   * <p>
-   * Method under test: {@link Storage#getCacheStrategy(CacheType)}
+   *
+   * <p>Method under test: {@link Storage#getCacheStrategy(CacheType)}
    */
   @Test
   @Category(MaintainedByDiffblue.class)
   @MethodsUnderTest({"String Storage.getCacheStrategy(CacheType)"})
   public void testGetCacheStrategy() {
     // Arrange, Act and Assert
-    assertEquals("initialCapacity=1000,maximumSize=1000,expireAfterAccess=30s,concurrencyLevel=8,recordStats",
-        (new Storage()).getCacheStrategy(CacheType.witnessStandby));
+    assertEquals(
+        "initialCapacity=1000,maximumSize=1000,expireAfterAccess=30s,concurrencyLevel=7,recordStats",
+        new Storage().getCacheStrategy(CacheType.witnessStandby));
   }
 
   /**
    * Test {@link Storage#getCacheStrategy(CacheType)}.
-   * <p>
-   * Method under test: {@link Storage#getCacheStrategy(CacheType)}
+   *
+   * <p>Method under test: {@link Storage#getCacheStrategy(CacheType)}
    */
   @Test
   @Category(MaintainedByDiffblue.class)
   @MethodsUnderTest({"String Storage.getCacheStrategy(CacheType)"})
   public void testGetCacheStrategy2() {
     // Arrange, Act and Assert
-    assertEquals("initialCapacity=100,maximumSize=100,expireAfterAccess=30s,concurrencyLevel=8,recordStats",
-        (new Storage()).getCacheStrategy(CacheType.recentBlock));
+    assertEquals(
+        "initialCapacity=100,maximumSize=100,expireAfterAccess=30s,concurrencyLevel=7,recordStats",
+        new Storage().getCacheStrategy(CacheType.recentBlock));
   }
 
   /**
    * Test {@link Storage#getCacheStrategy(CacheType)}.
-   * <p>
-   * Method under test: {@link Storage#getCacheStrategy(CacheType)}
+   *
+   * <p>Method under test: {@link Storage#getCacheStrategy(CacheType)}
    */
   @Test
   @Category(MaintainedByDiffblue.class)
   @MethodsUnderTest({"String Storage.getCacheStrategy(CacheType)"})
   public void testGetCacheStrategy3() {
     // Arrange, Act and Assert
-    assertEquals("initialCapacity=500,maximumSize=500,expireAfterAccess=30s,concurrencyLevel=8,recordStats",
-        (new Storage()).getCacheStrategy(CacheType.code));
+    assertEquals(
+        "initialCapacity=500,maximumSize=500,expireAfterAccess=30s,concurrencyLevel=7,recordStats",
+        new Storage().getCacheStrategy(CacheType.code));
   }
 
   /**
    * Test {@link Storage#getCacheStrategy(CacheType)}.
-   * <p>
-   * Method under test: {@link Storage#getCacheStrategy(CacheType)}
+   *
+   * <p>Method under test: {@link Storage#getCacheStrategy(CacheType)}
    */
   @Test
   @Category(MaintainedByDiffblue.class)
   @MethodsUnderTest({"String Storage.getCacheStrategy(CacheType)"})
   public void testGetCacheStrategy4() {
     // Arrange, Act and Assert
-    assertEquals("initialCapacity=10000,maximumSize=10000,expireAfterAccess=30s,concurrencyLevel=8,recordStats",
-        (new Storage()).getCacheStrategy(CacheType.delegation));
-  }
-
-  /**
-   * Test {@link Storage#getCacheStrategy(CacheType)}.
-   * <p>
-   * Method under test: {@link Storage#getCacheStrategy(CacheType)}
-   */
-  @Test
-  @Category(MaintainedByDiffblue.class)
-  @MethodsUnderTest({"String Storage.getCacheStrategy(CacheType)"})
-  public void testGetCacheStrategy5() {
-    // Arrange, Act and Assert
-    assertEquals("initialCapacity=20000,maximumSize=20000,expireAfterAccess=30s,concurrencyLevel=8,recordStats",
-        (new Storage()).getCacheStrategy(CacheType.storageRow));
+    assertEquals(
+        "initialCapacity=10000,maximumSize=10000,expireAfterAccess=30s,concurrencyLevel=7,recordStats",
+        new Storage().getCacheStrategy(CacheType.delegation));
   }
 
   /**
    * Test {@link Storage#getDbRoot(String, Sha256Hash)}.
-   * <p>
-   * Method under test: {@link Storage#getDbRoot(String, Sha256Hash)}
+   *
+   * <p>Method under test: {@link Storage#getDbRoot(String, Sha256Hash)}
    */
   @Test
   @Category(MaintainedByDiffblue.class)
   @MethodsUnderTest({"Sha256Hash Storage.getDbRoot(String, Sha256Hash)"})
   public void testGetDbRoot() {
-    // Arrange and Act
-    Sha256Hash actualDbRoot = (new Storage()).getDbRoot("Db Name", Sha256Hash.ZERO_HASH);
-
-    // Assert
-    assertSame(actualDbRoot.ZERO_HASH, actualDbRoot);
+    // Arrange, Act and Assert
+    assertSame(Sha256Hash.ZERO_HASH, new Storage().getDbRoot("Db Name", Sha256Hash.ZERO_HASH));
   }
 
   /**
    * Test {@link Storage#setDbRoots(Config)}.
-   * <p>
-   * Method under test: {@link Storage#setDbRoots(Config)}
-   */
-  @Test
-  @Category(MaintainedByDiffblue.class)
-  @MethodsUnderTest({"void Storage.setDbRoots(Config)"})
-  public void testSetDbRoots() {
-    // Arrange
-    Storage storage = new Storage();
-    Config config = mock(Config.class);
-    when(config.entrySet()).thenThrow(new IllegalArgumentException("storage.merkleRoot"));
-    Config config2 = mock(Config.class);
-    when(config2.resolve()).thenReturn(config);
-    Config config3 = mock(Config.class);
-    when(config3.getConfig(Mockito.<String>any())).thenReturn(config2);
-    when(config3.hasPath(Mockito.<String>any())).thenReturn(true);
-
-    // Act and Assert
-    assertThrows(IllegalArgumentException.class, () -> storage.setDbRoots(config3));
-    verify(config).entrySet();
-    verify(config3).getConfig(eq("storage.merkleRoot"));
-    verify(config3).hasPath(eq("storage.merkleRoot"));
-    verify(config2).resolve();
-  }
-
-  /**
-   * Test {@link Storage#setDbRoots(Config)}.
+   *
    * <ul>
-   *   <li>Given {@link Config} {@link Config#entrySet()} return {@link HashSet#HashSet()}.</li>
-   *   <li>Then calls {@link Config#entrySet()}.</li>
+   *   <li>Given {@link Config} {@link Config#entrySet()} return {@link HashSet#HashSet()}.
+   *   <li>Then calls {@link Config#entrySet()}.
    * </ul>
-   * <p>
-   * Method under test: {@link Storage#setDbRoots(Config)}
+   *
+   * <p>Method under test: {@link Storage#setDbRoots(Config)}
    */
   @Test
   @Category(MaintainedByDiffblue.class)
@@ -1518,10 +1722,13 @@ public class StorageDiffblueTest {
   public void testSetDbRoots_givenConfigEntrySetReturnHashSet_thenCallsEntrySet() {
     // Arrange
     Storage storage = new Storage();
+
     Config config = mock(Config.class);
     when(config.entrySet()).thenReturn(new HashSet<>());
+
     Config config2 = mock(Config.class);
     when(config2.resolve()).thenReturn(config);
+
     Config config3 = mock(Config.class);
     when(config3.getConfig(Mockito.<String>any())).thenReturn(config2);
     when(config3.hasPath(Mockito.<String>any())).thenReturn(true);
@@ -1531,62 +1738,34 @@ public class StorageDiffblueTest {
 
     // Assert
     verify(config).entrySet();
-    verify(config3).getConfig(eq("storage.merkleRoot"));
-    verify(config3).hasPath(eq("storage.merkleRoot"));
+    verify(config3).getConfig("storage.merkleRoot");
+    verify(config3).hasPath("storage.merkleRoot");
     verify(config2).resolve();
   }
 
   /**
    * Test {@link Storage#setDbRoots(Config)}.
+   *
    * <ul>
-   *   <li>Given {@code false}.</li>
-   *   <li>When {@link Config} {@link Config#hasPath(String)} return {@code false}.</li>
-   *   <li>Then calls {@link Config#hasPath(String)}.</li>
+   *   <li>Given {@link Config} {@link Config#entrySet()} throw {@link
+   *       IllegalArgumentException#IllegalArgumentException()}.
    * </ul>
-   * <p>
-   * Method under test: {@link Storage#setDbRoots(Config)}
+   *
+   * <p>Method under test: {@link Storage#setDbRoots(Config)}
    */
   @Test
   @Category(MaintainedByDiffblue.class)
   @MethodsUnderTest({"void Storage.setDbRoots(Config)"})
-  public void testSetDbRoots_givenFalse_whenConfigHasPathReturnFalse_thenCallsHasPath() {
+  public void testSetDbRoots_givenConfigEntrySetThrowIllegalArgumentException() {
     // Arrange
     Storage storage = new Storage();
+
     Config config = mock(Config.class);
-    when(config.hasPath(Mockito.<String>any())).thenReturn(false);
+    when(config.entrySet()).thenThrow(new IllegalArgumentException());
 
-    // Act
-    storage.setDbRoots(config);
-
-    // Assert
-    verify(config).hasPath(eq("storage.merkleRoot"));
-  }
-
-  /**
-   * Test {@link Storage#setDbRoots(Config)}.
-   * <ul>
-   *   <li>Then calls {@link ConfigValue#unwrapped()}.</li>
-   * </ul>
-   * <p>
-   * Method under test: {@link Storage#setDbRoots(Config)}
-   */
-  @Test
-  @Category(MaintainedByDiffblue.class)
-  @MethodsUnderTest({"void Storage.setDbRoots(Config)"})
-  public void testSetDbRoots_thenCallsUnwrapped() {
-    // Arrange
-    Storage storage = new Storage();
-    ConfigValue configValue = mock(ConfigValue.class);
-    when(configValue.unwrapped()).thenThrow(new IllegalArgumentException("storage.merkleRoot"));
-    SimpleEntry<String, ConfigValue> simpleEntry = new SimpleEntry<>(
-        new SimpleEntry<>("storage.merkleRoot", configValue));
-
-    HashSet<Entry<String, ConfigValue>> entrySet = new HashSet<>();
-    entrySet.add(simpleEntry);
-    Config config = mock(Config.class);
-    when(config.entrySet()).thenReturn(entrySet);
     Config config2 = mock(Config.class);
     when(config2.resolve()).thenReturn(config);
+
     Config config3 = mock(Config.class);
     when(config3.getConfig(Mockito.<String>any())).thenReturn(config2);
     when(config3.hasPath(Mockito.<String>any())).thenReturn(true);
@@ -1594,20 +1773,155 @@ public class StorageDiffblueTest {
     // Act and Assert
     assertThrows(IllegalArgumentException.class, () -> storage.setDbRoots(config3));
     verify(config).entrySet();
-    verify(config3).getConfig(eq("storage.merkleRoot"));
-    verify(config3).hasPath(eq("storage.merkleRoot"));
+    verify(config3).getConfig("storage.merkleRoot");
+    verify(config3).hasPath("storage.merkleRoot");
     verify(config2).resolve();
-    verify(configValue).unwrapped();
+  }
+
+  /**
+   * Test {@link Storage#setDbRoots(Config)}.
+   *
+   * <ul>
+   *   <li>Given {@link Config} {@link Config#resolve()} throw {@link
+   *       IllegalArgumentException#IllegalArgumentException()}.
+   *   <li>Then calls {@link Config#resolve()}.
+   * </ul>
+   *
+   * <p>Method under test: {@link Storage#setDbRoots(Config)}
+   */
+  @Test
+  @Category(MaintainedByDiffblue.class)
+  @MethodsUnderTest({"void Storage.setDbRoots(Config)"})
+  public void testSetDbRoots_givenConfigResolveThrowIllegalArgumentException_thenCallsResolve() {
+    // Arrange
+    Storage storage = new Storage();
+
+    Config config = mock(Config.class);
+    when(config.resolve()).thenThrow(new IllegalArgumentException());
+
+    Config config2 = mock(Config.class);
+    when(config2.getConfig(Mockito.<String>any())).thenReturn(config);
+    when(config2.hasPath(Mockito.<String>any())).thenReturn(true);
+
+    // Act and Assert
+    assertThrows(IllegalArgumentException.class, () -> storage.setDbRoots(config2));
+    verify(config2).getConfig("storage.merkleRoot");
+    verify(config2).hasPath("storage.merkleRoot");
+    verify(config).resolve();
+  }
+
+  /**
+   * Test {@link Storage#setDbRoots(Config)}.
+   *
+   * <ul>
+   *   <li>Given {@code false}.
+   *   <li>When {@link Config} {@link Config#hasPath(String)} return {@code false}.
+   *   <li>Then calls {@link Config#hasPath(String)}.
+   * </ul>
+   *
+   * <p>Method under test: {@link Storage#setDbRoots(Config)}
+   */
+  @Test
+  @Category(MaintainedByDiffblue.class)
+  @MethodsUnderTest({"void Storage.setDbRoots(Config)"})
+  public void testSetDbRoots_givenFalse_whenConfigHasPathReturnFalse_thenCallsHasPath() {
+    // Arrange
+    Storage storage = new Storage();
+
+    Config config = mock(Config.class);
+    when(config.hasPath(Mockito.<String>any())).thenReturn(false);
+
+    // Act
+    storage.setDbRoots(config);
+
+    // Assert
+    verify(config).hasPath("storage.merkleRoot");
+  }
+
+  /**
+   * Test {@link Storage#setDbRoots(Config)}.
+   *
+   * <ul>
+   *   <li>When {@link Config} {@link Config#getConfig(String)} throw {@link
+   *       IllegalArgumentException#IllegalArgumentException()}.
+   * </ul>
+   *
+   * <p>Method under test: {@link Storage#setDbRoots(Config)}
+   */
+  @Test
+  @Category(MaintainedByDiffblue.class)
+  @MethodsUnderTest({"void Storage.setDbRoots(Config)"})
+  public void testSetDbRoots_whenConfigGetConfigThrowIllegalArgumentException() {
+    // Arrange
+    Storage storage = new Storage();
+
+    Config config = mock(Config.class);
+    when(config.getConfig(Mockito.<String>any())).thenThrow(new IllegalArgumentException());
+    when(config.hasPath(Mockito.<String>any())).thenReturn(true);
+
+    // Act and Assert
+    assertThrows(IllegalArgumentException.class, () -> storage.setDbRoots(config));
+    verify(config).getConfig("storage.merkleRoot");
+    verify(config).hasPath("storage.merkleRoot");
+  }
+
+  /**
+   * Test {@link Storage#setDbRoots(Config)}.
+   *
+   * <ul>
+   *   <li>When {@link Config} {@link Config#hasPath(String)} throw {@link
+   *       IllegalArgumentException#IllegalArgumentException()}.
+   * </ul>
+   *
+   * <p>Method under test: {@link Storage#setDbRoots(Config)}
+   */
+  @Test
+  @Category(MaintainedByDiffblue.class)
+  @MethodsUnderTest({"void Storage.setDbRoots(Config)"})
+  public void testSetDbRoots_whenConfigHasPathThrowIllegalArgumentException() {
+    // Arrange
+    Storage storage = new Storage();
+
+    Config config = mock(Config.class);
+    when(config.hasPath(Mockito.<String>any())).thenThrow(new IllegalArgumentException());
+
+    // Act and Assert
+    assertThrows(IllegalArgumentException.class, () -> storage.setDbRoots(config));
+    verify(config).hasPath("storage.merkleRoot");
   }
 
   /**
    * Test {@link Storage#setPropertyMapFromConfig(Config)}.
+   *
+   * <p>Method under test: {@link Storage#setPropertyMapFromConfig(Config)}
+   */
+  @Test
+  @Category(MaintainedByDiffblue.class)
+  @MethodsUnderTest({"void Storage.setPropertyMapFromConfig(Config)"})
+  public void testSetPropertyMapFromConfig() {
+    // Arrange
+    Storage storage = new Storage();
+
+    Config config = mock(Config.class);
+    Mockito.<List<? extends ConfigObject>>when(config.getObjectList(Mockito.<String>any()))
+        .thenThrow(new IllegalArgumentException());
+    when(config.hasPath(Mockito.<String>any())).thenReturn(true);
+
+    // Act and Assert
+    assertThrows(IllegalArgumentException.class, () -> storage.setPropertyMapFromConfig(config));
+    verify(config).getObjectList("storage.properties");
+    verify(config).hasPath("storage.properties");
+  }
+
+  /**
+   * Test {@link Storage#setPropertyMapFromConfig(Config)}.
+   *
    * <ul>
-   *   <li>Given {@link ArrayList#ArrayList()}.</li>
-   *   <li>Then {@link Storage} (default constructor) PropertyMap Empty.</li>
+   *   <li>Given {@link ArrayList#ArrayList()}.
+   *   <li>Then {@link Storage} (default constructor) PropertyMap Empty.
    * </ul>
-   * <p>
-   * Method under test: {@link Storage#setPropertyMapFromConfig(Config)}
+   *
+   * <p>Method under test: {@link Storage#setPropertyMapFromConfig(Config)}
    */
   @Test
   @Category(MaintainedByDiffblue.class)
@@ -1615,6 +1929,7 @@ public class StorageDiffblueTest {
   public void testSetPropertyMapFromConfig_givenArrayList_thenStoragePropertyMapEmpty() {
     // Arrange
     Storage storage = new Storage();
+
     Config config = mock(Config.class);
     Mockito.<List<? extends ConfigObject>>when(config.getObjectList(Mockito.<String>any()))
         .thenReturn(new ArrayList<>());
@@ -1624,79 +1939,71 @@ public class StorageDiffblueTest {
     storage.setPropertyMapFromConfig(config);
 
     // Assert
-    verify(config).getObjectList(eq("storage.properties"));
-    verify(config).hasPath(eq("storage.properties"));
+    verify(config).getObjectList("storage.properties");
+    verify(config).hasPath("storage.properties");
     assertTrue(storage.getPropertyMap().isEmpty());
   }
 
   /**
    * Test {@link Storage#setPropertyMapFromConfig(Config)}.
+   *
    * <ul>
-   *   <li>Given {@link IllegalArgumentException#IllegalArgumentException(String)} with {@code storage.properties}.</li>
+   *   <li>Given {@code false}.
+   *   <li>When {@link Config} {@link Config#hasPath(String)} return {@code false}.
    * </ul>
-   * <p>
-   * Method under test: {@link Storage#setPropertyMapFromConfig(Config)}
+   *
+   * <p>Method under test: {@link Storage#setPropertyMapFromConfig(Config)}
    */
   @Test
   @Category(MaintainedByDiffblue.class)
   @MethodsUnderTest({"void Storage.setPropertyMapFromConfig(Config)"})
-  public void testSetPropertyMapFromConfig_givenIllegalArgumentExceptionWithStorageProperties() {
+  public void testSetPropertyMapFromConfig_givenFalse_whenConfigHasPathReturnFalse() {
     // Arrange
     Storage storage = new Storage();
-    Config config = mock(Config.class);
-    Mockito.<List<? extends ConfigObject>>when(config.getObjectList(Mockito.<String>any()))
-        .thenThrow(new IllegalArgumentException("storage.properties"));
-    when(config.hasPath(Mockito.<String>any())).thenReturn(true);
 
-    // Act and Assert
-    assertThrows(IllegalArgumentException.class, () -> storage.setPropertyMapFromConfig(config));
-    verify(config).getObjectList(eq("storage.properties"));
-    verify(config).hasPath(eq("storage.properties"));
+    Config config = mock(Config.class);
+    when(config.hasPath(Mockito.<String>any())).thenReturn(false);
+
+    // Act
+    storage.setPropertyMapFromConfig(config);
+
+    // Assert that nothing has changed
+    verify(config).hasPath("storage.properties");
   }
 
   /**
    * Test {@link Storage#setPropertyMapFromConfig(Config)}.
+   *
    * <ul>
-   *   <li>Then calls {@link ConfigObject#get(Object)}.</li>
+   *   <li>When {@link Config} {@link Config#hasPath(String)} throw {@link
+   *       IllegalArgumentException#IllegalArgumentException()}.
    * </ul>
-   * <p>
-   * Method under test: {@link Storage#setPropertyMapFromConfig(Config)}
+   *
+   * <p>Method under test: {@link Storage#setPropertyMapFromConfig(Config)}
    */
   @Test
   @Category(MaintainedByDiffblue.class)
   @MethodsUnderTest({"void Storage.setPropertyMapFromConfig(Config)"})
-  public void testSetPropertyMapFromConfig_thenCallsGet() {
+  public void testSetPropertyMapFromConfig_whenConfigHasPathThrowIllegalArgumentException() {
     // Arrange
     Storage storage = new Storage();
-    ConfigValue configValue = mock(ConfigValue.class);
-    when(configValue.unwrapped()).thenThrow(new IllegalArgumentException("storage.properties"));
-    ConfigObject configObject = mock(ConfigObject.class);
-    when(configObject.get(Mockito.<Object>any())).thenReturn(configValue);
-    when(configObject.containsKey(Mockito.<Object>any())).thenReturn(true);
 
-    ArrayList<ConfigObject> configObjectList = new ArrayList<>();
-    configObjectList.add(configObject);
     Config config = mock(Config.class);
-    Mockito.<List<? extends ConfigObject>>when(config.getObjectList(Mockito.<String>any()))
-        .thenReturn(configObjectList);
-    when(config.hasPath(Mockito.<String>any())).thenReturn(true);
+    when(config.hasPath(Mockito.<String>any())).thenThrow(new IllegalArgumentException());
 
     // Act and Assert
     assertThrows(IllegalArgumentException.class, () -> storage.setPropertyMapFromConfig(config));
-    verify(config).getObjectList(eq("storage.properties"));
-    verify(config).hasPath(eq("storage.properties"));
-    verify(configObject).get(isA(Object.class));
-    verify(configValue).unwrapped();
-    verify(configObject).containsKey(isA(Object.class));
+    verify(config).hasPath("storage.properties");
   }
 
   /**
    * Test {@link Storage#deleteAllStoragePaths()}.
+   *
    * <ul>
-   *   <li>Then calls {@link Config#getObjectList(String)}.</li>
+   *   <li>Then calls {@link Config#getObjectList(String)}.
    * </ul>
-   * <p>
-   * Method under test: {@link Storage#deleteAllStoragePaths()}
+   *
+   * <p>Method under test: {@link Storage#deleteAllStoragePaths()}
    */
   @Test
   @Category(MaintainedByDiffblue.class)
@@ -1715,18 +2022,19 @@ public class StorageDiffblueTest {
     storage.deleteAllStoragePaths();
 
     // Assert
-    verify(config).getObjectList(eq("storage.properties"));
-    verify(config).hasPath(eq("storage.properties"));
+    verify(config).getObjectList("storage.properties");
+    verify(config).hasPath("storage.properties");
   }
 
   /**
    * Test {@link Storage#setDefaultDbOptions(Config)}.
+   *
    * <ul>
-   *   <li>Given {@link Config}.</li>
-   *   <li>When {@link Config} {@link Config#getConfig(String)} return {@link Config}.</li>
+   *   <li>Given {@link Config}.
+   *   <li>When {@link Config} {@link Config#getConfig(String)} return {@link Config}.
    * </ul>
-   * <p>
-   * Method under test: {@link Storage#setDefaultDbOptions(Config)}
+   *
+   * <p>Method under test: {@link Storage#setDefaultDbOptions(Config)}
    */
   @Test
   @Category(MaintainedByDiffblue.class)
@@ -1734,6 +2042,7 @@ public class StorageDiffblueTest {
   public void testSetDefaultDbOptions_givenConfig_whenConfigGetConfigReturnConfig() {
     // Arrange
     Storage storage = new Storage();
+
     Config config = mock(Config.class);
     when(config.getConfig(Mockito.<String>any())).thenReturn(mock(Config.class));
 
@@ -1741,16 +2050,17 @@ public class StorageDiffblueTest {
     storage.setDefaultDbOptions(config);
 
     // Assert
-    verify(config).getConfig(eq("storage"));
+    verify(config).getConfig("storage");
   }
 
   /**
    * Test {@link Storage#setDefaultDbOptions(Config)}.
+   *
    * <ul>
-   *   <li>Then throw {@link IllegalArgumentException}.</li>
+   *   <li>Then throw {@link IllegalArgumentException}.
    * </ul>
-   * <p>
-   * Method under test: {@link Storage#setDefaultDbOptions(Config)}
+   *
+   * <p>Method under test: {@link Storage#setDefaultDbOptions(Config)}
    */
   @Test
   @Category(MaintainedByDiffblue.class)
@@ -1758,18 +2068,20 @@ public class StorageDiffblueTest {
   public void testSetDefaultDbOptions_thenThrowIllegalArgumentException() {
     // Arrange
     Storage storage = new Storage();
+
     Config config = mock(Config.class);
-    when(config.getConfig(Mockito.<String>any())).thenThrow(new IllegalArgumentException("storage"));
+    when(config.getConfig(Mockito.<String>any())).thenThrow(new IllegalArgumentException());
 
     // Act and Assert
     assertThrows(IllegalArgumentException.class, () -> storage.setDefaultDbOptions(config));
-    verify(config).getConfig(eq("storage"));
+    verify(config).getConfig("storage");
   }
 
   /**
    * Test getters and setters.
-   * <p>
-   * Methods under test:
+   *
+   * <p>Methods under test:
+   *
    * <ul>
    *   <li>{@link Storage#setCheckpointSync(boolean)}
    *   <li>{@link Storage#setCheckpointVersion(int)}
@@ -1801,17 +2113,34 @@ public class StorageDiffblueTest {
    */
   @Test
   @Category(MaintainedByDiffblue.class)
-  @MethodsUnderTest({"List Storage.getCacheDbs()", "int Storage.getCheckpointVersion()",
-      "String Storage.getDbDirectory()", "String Storage.getDbEngine()", "int Storage.getEstimatedBlockTransactions()",
-      "String Storage.getIndexDirectory()", "String Storage.getIndexSwitch()", "int Storage.getMaxFlushCount()",
-      "Map Storage.getPropertyMap()", "String Storage.getTransactionHistorySwitch()",
-      "boolean Storage.isCheckpointSync()", "boolean Storage.isContractParseSwitch()", "boolean Storage.isDbSync()",
-      "boolean Storage.isTxCacheInitOptimization()", "void Storage.setCheckpointSync(boolean)",
-      "void Storage.setCheckpointVersion(int)", "void Storage.setContractParseSwitch(boolean)",
-      "void Storage.setDbDirectory(String)", "void Storage.setDbEngine(String)", "void Storage.setDbSync(boolean)",
-      "void Storage.setEstimatedBlockTransactions(int)", "void Storage.setIndexDirectory(String)",
-      "void Storage.setIndexSwitch(String)", "void Storage.setMaxFlushCount(int)",
-      "void Storage.setTransactionHistorySwitch(String)", "void Storage.setTxCacheInitOptimization(boolean)"})
+  @MethodsUnderTest({
+    "List Storage.getCacheDbs()",
+    "int Storage.getCheckpointVersion()",
+    "String Storage.getDbDirectory()",
+    "String Storage.getDbEngine()",
+    "int Storage.getEstimatedBlockTransactions()",
+    "String Storage.getIndexDirectory()",
+    "String Storage.getIndexSwitch()",
+    "int Storage.getMaxFlushCount()",
+    "Map Storage.getPropertyMap()",
+    "String Storage.getTransactionHistorySwitch()",
+    "boolean Storage.isCheckpointSync()",
+    "boolean Storage.isContractParseSwitch()",
+    "boolean Storage.isDbSync()",
+    "boolean Storage.isTxCacheInitOptimization()",
+    "void Storage.setCheckpointSync(boolean)",
+    "void Storage.setCheckpointVersion(int)",
+    "void Storage.setContractParseSwitch(boolean)",
+    "void Storage.setDbDirectory(String)",
+    "void Storage.setDbEngine(String)",
+    "void Storage.setDbSync(boolean)",
+    "void Storage.setEstimatedBlockTransactions(int)",
+    "void Storage.setIndexDirectory(String)",
+    "void Storage.setIndexSwitch(String)",
+    "void Storage.setMaxFlushCount(int)",
+    "void Storage.setTransactionHistorySwitch(String)",
+    "void Storage.setTxCacheInitOptimization(boolean)"
+  })
   public void testGettersAndSetters() {
     // Arrange
     Storage storage = new Storage();
@@ -1874,8 +2203,8 @@ public class StorageDiffblueTest {
 
   /**
    * Test new {@link Storage} (default constructor).
-   * <p>
-   * Method under test: default or parameterless constructor of {@link Storage}
+   *
+   * <p>Method under test: default or parameterless constructor of {@link Storage}
    */
   @Test
   @Category(MaintainedByDiffblue.class)

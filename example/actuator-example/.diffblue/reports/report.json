@@ -3,24 +3,28 @@
     "reportVersion" : "2.7"
   },
   "run" : {
-    "version" : "2025.03.02-9a94c7b-licensed",
-    "creationTimestamp" : "2025-04-28T10:53:26.261Z",
-    "command" : "dcover coverage-reports --exclude-modules=protocol",
-    "totalTime" : 94.999,
-    "environmentDetectionTime" : 46.706,
-    "indexingTime" : 0.0,
-    "entryPointsTime" : 0.0,
-    "generationTime" : 0.0,
-    "timeToFirstTest" : 94.999,
-    "timeToLastTest" : 94.999,
-    "indexQueryTime" : 0.0,
-    "verificationTime" : 0.0,
-    "validationTime" : 0.0
+    "version" : "2025.09.01-44e352d-licensed",
+    "creationTimestamp" : "2025-09-19T11:17:04.238Z",
+    "command" : "dcover create --coverage-reports --upload http://localhost:8080 --project-name java-tron --name with-diffblue-tests",
+    "totalTime" : 265.253,
+    "environmentDetectionTime" : 0.022,
+    "indexingTime" : 0.316,
+    "entryPointsTime" : 0.012,
+    "generationTime" : 40604.971,
+    "timeToFirstTest" : 32769.417,
+    "timeToLastTest" : 41170.149,
+    "indexQueryTime" : 10.085,
+    "verificationTime" : 278.349,
+    "validationTime" : 22.345
   },
   "codes" : {
+    "R013" : "No inputs found that don't throw a trivial exception",
+    "R081" : "Exception in arrange section",
     "T000" : "Method eligible for test creation",
     "T001" : "Trivial getter",
-    "T012" : "Synthetic method"
+    "T023" : "Testability unknown",
+    "V000" : "Validated successfully",
+    "V003" : "Tests discarded during validation"
   },
   "summary" : {
     "classesCount" : 1,
@@ -34,12 +38,16 @@
     "perMethodTestability" : {
       "T000" : 4,
       "T001" : 1,
-      "T012" : 1
+      "T023" : 1
     },
     "perMethodOutcome" : {
-      "T000" : 4,
-      "T001" : 1,
-      "T012" : 1
+      "R013" : 4,
+      "R081" : 1,
+      "T023" : 1
+    },
+    "perTestValidation" : {
+      "V000" : 546,
+      "V003" : 3
     }
   },
   "classes" : {
@@ -50,12 +58,12 @@
       "perMethodTestability" : {
         "T000" : 4,
         "T001" : 1,
-        "T012" : 1
+        "T023" : 1
       },
       "perMethodOutcome" : {
-        "T000" : 4,
-        "T001" : 1,
-        "T012" : 1
+        "R013" : 4,
+        "R081" : 1,
+        "T023" : 1
       }
     }
   },
@@ -63,17 +71,14 @@
     "org.tron.core.actuator.ExampleActuator.<clinit>:()V" : {
       "completeTestCount" : 0,
       "incompleteTestCount" : 0,
-      "perMethodTestability" : "T012",
-      "perMethodOutcome" : "T012",
-      "lineNumbers" : [
-        9
-      ]
+      "perMethodTestability" : "T023",
+      "perMethodOutcome" : "T023"
     },
     "org.tron.core.actuator.ExampleActuator.<init>:()V" : {
       "completeTestCount" : 0,
       "incompleteTestCount" : 0,
       "perMethodTestability" : "T000",
-      "perMethodOutcome" : "T000",
+      "perMethodOutcome" : "R013",
       "lineNumbers" : [
         13,
         14,
@@ -84,7 +89,7 @@
       "completeTestCount" : 0,
       "incompleteTestCount" : 0,
       "perMethodTestability" : "T000",
-      "perMethodOutcome" : "T000",
+      "perMethodOutcome" : "R013",
       "lineNumbers" : [
         36
       ]
@@ -93,7 +98,7 @@
       "completeTestCount" : 0,
       "incompleteTestCount" : 0,
       "perMethodTestability" : "T000",
-      "perMethodOutcome" : "T000",
+      "perMethodOutcome" : "R013",
       "lineNumbers" : [
         19,
         20
@@ -103,7 +108,7 @@
       "completeTestCount" : 0,
       "incompleteTestCount" : 0,
       "perMethodTestability" : "T001",
-      "perMethodOutcome" : "T001",
+      "perMethodOutcome" : "R081",
       "lineNumbers" : [
         31
       ]
@@ -112,7 +117,7 @@
       "completeTestCount" : 0,
       "incompleteTestCount" : 0,
       "perMethodTestability" : "T000",
-      "perMethodOutcome" : "T000",
+      "perMethodOutcome" : "R013",
       "lineNumbers" : [
         25,
         26

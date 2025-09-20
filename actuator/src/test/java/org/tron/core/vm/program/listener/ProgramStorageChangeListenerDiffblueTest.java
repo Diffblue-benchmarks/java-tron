@@ -11,8 +11,8 @@ import org.tron.common.runtime.vm.DataWord;
 public class ProgramStorageChangeListenerDiffblueTest {
   /**
    * Test {@link ProgramStorageChangeListener#onStoragePut(DataWord, DataWord)}.
-   * <p>
-   * Method under test: {@link ProgramStorageChangeListener#onStoragePut(DataWord, DataWord)}
+   *
+   * <p>Method under test: {@link ProgramStorageChangeListener#onStoragePut(DataWord, DataWord)}
    */
   @Test
   @Category(MaintainedByDiffblue.class)
@@ -31,21 +31,22 @@ public class ProgramStorageChangeListenerDiffblueTest {
 
   /**
    * Test {@link ProgramStorageChangeListener#getDiff()}.
-   * <p>
-   * Method under test: {@link ProgramStorageChangeListener#getDiff()}
+   *
+   * <p>Method under test: {@link ProgramStorageChangeListener#getDiff()}
    */
   @Test
   @Category(MaintainedByDiffblue.class)
   @MethodsUnderTest({"java.util.Map ProgramStorageChangeListener.getDiff()"})
   public void testGetDiff() {
     // Arrange, Act and Assert
-    assertTrue((new ProgramStorageChangeListener()).getDiff().isEmpty());
+    assertTrue(new ProgramStorageChangeListener().getDiff().isEmpty());
   }
 
   /**
    * Test getters and setters.
-   * <p>
-   * Methods under test:
+   *
+   * <p>Methods under test:
+   *
    * <ul>
    *   <li>default or parameterless constructor of {@link ProgramStorageChangeListener}
    *   <li>{@link ProgramStorageChangeListener#onStorageClear()}
@@ -53,11 +54,14 @@ public class ProgramStorageChangeListenerDiffblueTest {
    */
   @Test
   @Category(MaintainedByDiffblue.class)
-  @MethodsUnderTest({"void ProgramStorageChangeListener.<init>()",
-      "void ProgramStorageChangeListener.onStorageClear()"})
+  @MethodsUnderTest({
+    "void ProgramStorageChangeListener.<init>()",
+    "void ProgramStorageChangeListener.onStorageClear()"
+  })
   public void testGettersAndSetters() {
     // Arrange and Act
-    ProgramStorageChangeListener actualProgramStorageChangeListener = new ProgramStorageChangeListener();
+    ProgramStorageChangeListener actualProgramStorageChangeListener =
+        new ProgramStorageChangeListener();
     actualProgramStorageChangeListener.onStorageClear();
 
     // Assert

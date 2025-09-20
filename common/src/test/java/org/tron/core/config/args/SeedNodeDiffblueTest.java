@@ -13,8 +13,9 @@ import org.junit.experimental.categories.Category;
 public class SeedNodeDiffblueTest {
   /**
    * Test getters and setters.
-   * <p>
-   * Methods under test:
+   *
+   * <p>Methods under test:
+   *
    * <ul>
    *   <li>default or parameterless constructor of {@link SeedNode}
    *   <li>{@link SeedNode#setAddressList(List)}
@@ -23,7 +24,11 @@ public class SeedNodeDiffblueTest {
    */
   @Test
   @Category(MaintainedByDiffblue.class)
-  @MethodsUnderTest({"void SeedNode.<init>()", "List SeedNode.getAddressList()", "void SeedNode.setAddressList(List)"})
+  @MethodsUnderTest({
+    "void SeedNode.<init>()",
+    "List SeedNode.getAddressList()",
+    "void SeedNode.setAddressList(List)"
+  })
   public void testGettersAndSetters() {
     // Arrange and Act
     SeedNode actualSeedNode = new SeedNode();

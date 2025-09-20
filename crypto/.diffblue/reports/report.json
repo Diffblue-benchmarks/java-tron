@@ -3,21 +3,25 @@
     "reportVersion" : "2.7"
   },
   "run" : {
-    "version" : "2025.03.02-9a94c7b-licensed",
-    "creationTimestamp" : "2025-04-28T10:51:35.869Z",
-    "command" : "dcover coverage-reports --exclude-modules=protocol",
-    "totalTime" : 110.377,
-    "environmentDetectionTime" : 51.162,
-    "indexingTime" : 0.0,
-    "entryPointsTime" : 0.0,
-    "generationTime" : 0.0,
-    "timeToFirstTest" : 110.377,
-    "timeToLastTest" : 110.377,
-    "indexQueryTime" : 0.0,
-    "verificationTime" : 0.0,
-    "validationTime" : 0.0
+    "version" : "2025.09.01-44e352d-licensed",
+    "creationTimestamp" : "2025-09-19T11:17:04.238Z",
+    "command" : "dcover create --coverage-reports --upload http://localhost:8080 --project-name java-tron --name with-diffblue-tests",
+    "totalTime" : 964.318,
+    "environmentDetectionTime" : 0.652,
+    "indexingTime" : 0.313,
+    "entryPointsTime" : 0.64,
+    "generationTime" : 40405.39,
+    "timeToFirstTest" : 32502.598,
+    "timeToLastTest" : 40930.123,
+    "indexQueryTime" : 9.582,
+    "verificationTime" : 278.349,
+    "validationTime" : 22.345
   },
   "codes" : {
+    "R000" : "Success",
+    "R002" : "Missing observers",
+    "R004" : "No meaningful assertions found",
+    "R013" : "No inputs found that don't throw a trivial exception",
     "T000" : "Method eligible for test creation",
     "T001" : "Trivial getter",
     "T003" : "Private method",
@@ -26,91 +30,122 @@
     "T010" : "Abstract or interface method",
     "T012" : "Synthetic method",
     "T020" : "Other trivial method",
-    "T021" : "Empty method body"
+    "T021" : "Empty method body",
+    "T023" : "Testability unknown",
+    "V000" : "Validated successfully",
+    "V003" : "Tests discarded during validation",
+    "W002" : "Test compiled, but did not pass"
   },
   "summary" : {
     "classesCount" : 42,
-    "methodsCount" : 415,
-    "cumulativeDiffblueTestCount" : 522,
+    "methodsCount" : 437,
+    "cumulativeDiffblueTestCount" : 546,
     "cumulativeManualTestCount" : 0,
-    "completeTestCount" : 0,
+    "completeTestCount" : 546,
     "incompleteTestCount" : 0,
     "skeletonTestCount" : 0,
     "totalPhysicalLineCount" : 3727,
     "perMethodTestability" : {
-      "T000" : 262,
+      "T000" : 284,
       "T001" : 3,
       "T003" : 34,
       "T005" : 17,
       "T008" : 7,
       "T010" : 38,
-      "T012" : 45,
+      "T012" : 26,
       "T020" : 5,
-      "T021" : 4
+      "T021" : 4,
+      "T023" : 19
     },
     "perMethodOutcome" : {
-      "T000" : 262,
-      "T001" : 3,
+      "R000" : 262,
+      "R002" : 4,
+      "R004" : 7,
+      "R013" : 19,
       "T003" : 34,
-      "T005" : 17,
+      "T005" : 4,
       "T008" : 7,
       "T010" : 38,
-      "T012" : 45,
-      "T020" : 5,
-      "T021" : 4
+      "T012" : 26,
+      "T023" : 19,
+      "W002" : 17
+    },
+    "perTestOutcome" : {
+      "R000" : 546
+    },
+    "perTestValidation" : {
+      "V000" : 546,
+      "V003" : 3
+    },
+    "warnings" : {
+      "W002" : 100
     }
   },
   "classes" : {
     "org.tron.common.crypto.Blake2bfMessageDigest" : {
       "methodsCount" : 1,
-      "completeTestCount" : 0,
+      "completeTestCount" : 1,
       "incompleteTestCount" : 0,
       "perMethodTestability" : {
         "T000" : 1
       },
       "perMethodOutcome" : {
-        "T000" : 1
+        "R000" : 1
+      },
+      "perTestOutcome" : {
+        "R000" : 1
       }
     },
     "org.tron.common.crypto.Blake2bfMessageDigest$Blake2bfDigest" : {
       "methodsCount" : 14,
-      "completeTestCount" : 0,
+      "completeTestCount" : 5,
       "incompleteTestCount" : 0,
       "perMethodTestability" : {
         "T000" : 7,
         "T001" : 1,
         "T003" : 5,
-        "T012" : 1
+        "T023" : 1
       },
       "perMethodOutcome" : {
-        "T000" : 7,
-        "T001" : 1,
+        "R000" : 5,
+        "R004" : 2,
+        "R013" : 1,
         "T003" : 5,
-        "T012" : 1
+        "T023" : 1
+      },
+      "perTestOutcome" : {
+        "R000" : 5
       }
     },
     "org.tron.common.crypto.ECKey" : {
       "methodsCount" : 51,
-      "completeTestCount" : 0,
+      "completeTestCount" : 111,
       "incompleteTestCount" : 0,
       "perMethodTestability" : {
         "T000" : 42,
         "T001" : 1,
         "T003" : 5,
-        "T012" : 2,
-        "T020" : 1
+        "T012" : 1,
+        "T020" : 1,
+        "T023" : 1
       },
       "perMethodOutcome" : {
-        "T000" : 42,
-        "T001" : 1,
+        "R000" : 39,
         "T003" : 5,
-        "T012" : 2,
-        "T020" : 1
+        "T012" : 1,
+        "T023" : 1,
+        "W002" : 5
+      },
+      "perTestOutcome" : {
+        "R000" : 111
+      },
+      "warnings" : {
+        "W002" : 32
       }
     },
     "org.tron.common.crypto.ECKey$ECDSASignature" : {
       "methodsCount" : 12,
-      "completeTestCount" : 0,
+      "completeTestCount" : 24,
       "incompleteTestCount" : 0,
       "perMethodTestability" : {
         "T000" : 10,
@@ -118,35 +153,43 @@
         "T005" : 1
       },
       "perMethodOutcome" : {
-        "T000" : 10,
-        "T003" : 1,
-        "T005" : 1
+        "R000" : 11,
+        "T003" : 1
+      },
+      "perTestOutcome" : {
+        "R000" : 24
       }
     },
     "org.tron.common.crypto.ECKey$MissingPrivateKeyException" : {
       "methodsCount" : 1,
-      "completeTestCount" : 0,
+      "completeTestCount" : 1,
       "incompleteTestCount" : 0,
       "perMethodTestability" : {
         "T005" : 1
       },
       "perMethodOutcome" : {
-        "T005" : 1
+        "R000" : 1
+      },
+      "perTestOutcome" : {
+        "R000" : 1
       }
     },
     "org.tron.common.crypto.Hash" : {
       "methodsCount" : 10,
-      "completeTestCount" : 0,
+      "completeTestCount" : 14,
       "incompleteTestCount" : 0,
       "perMethodTestability" : {
         "T000" : 8,
         "T005" : 1,
-        "T012" : 1
+        "T023" : 1
       },
       "perMethodOutcome" : {
-        "T000" : 8,
+        "R000" : 8,
         "T005" : 1,
-        "T012" : 1
+        "T023" : 1
+      },
+      "perTestOutcome" : {
+        "R000" : 14
       }
     },
     "org.tron.common.crypto.SignInterface" : {
@@ -162,15 +205,23 @@
     },
     "org.tron.common.crypto.SignUtils" : {
       "methodsCount" : 6,
-      "completeTestCount" : 0,
+      "completeTestCount" : 12,
       "incompleteTestCount" : 0,
       "perMethodTestability" : {
         "T000" : 5,
         "T005" : 1
       },
       "perMethodOutcome" : {
-        "T000" : 5,
-        "T005" : 1
+        "R000" : 2,
+        "R013" : 1,
+        "T005" : 1,
+        "W002" : 2
+      },
+      "perTestOutcome" : {
+        "R000" : 12
+      },
+      "warnings" : {
+        "W002" : 10
       }
     },
     "org.tron.common.crypto.SignatureInterface" : {
@@ -197,7 +248,7 @@
     },
     "org.tron.common.crypto.cryptohash.DigestEngine" : {
       "methodsCount" : 18,
-      "completeTestCount" : 0,
+      "completeTestCount" : 11,
       "incompleteTestCount" : 0,
       "perMethodTestability" : {
         "T000" : 12,
@@ -205,14 +256,18 @@
         "T010" : 5
       },
       "perMethodOutcome" : {
-        "T000" : 12,
+        "R000" : 11,
+        "R004" : 1,
         "T003" : 1,
         "T010" : 5
+      },
+      "perTestOutcome" : {
+        "R000" : 11
       }
     },
     "org.tron.common.crypto.cryptohash.Keccak256" : {
       "methodsCount" : 8,
-      "completeTestCount" : 0,
+      "completeTestCount" : 4,
       "incompleteTestCount" : 0,
       "perMethodTestability" : {
         "T000" : 4,
@@ -220,14 +275,17 @@
         "T021" : 2
       },
       "perMethodOutcome" : {
-        "T000" : 4,
-        "T012" : 2,
-        "T021" : 2
+        "R000" : 4,
+        "R002" : 2,
+        "T012" : 2
+      },
+      "perTestOutcome" : {
+        "R000" : 4
       }
     },
     "org.tron.common.crypto.cryptohash.Keccak512" : {
       "methodsCount" : 8,
-      "completeTestCount" : 0,
+      "completeTestCount" : 4,
       "incompleteTestCount" : 0,
       "perMethodTestability" : {
         "T000" : 4,
@@ -235,39 +293,50 @@
         "T021" : 2
       },
       "perMethodOutcome" : {
-        "T000" : 4,
-        "T012" : 2,
-        "T021" : 2
+        "R000" : 4,
+        "R002" : 2,
+        "T012" : 2
+      },
+      "perTestOutcome" : {
+        "R000" : 4
       }
     },
     "org.tron.common.crypto.cryptohash.KeccakCore" : {
       "methodsCount" : 12,
-      "completeTestCount" : 0,
+      "completeTestCount" : 4,
       "incompleteTestCount" : 0,
       "perMethodTestability" : {
         "T000" : 7,
         "T003" : 3,
         "T010" : 1,
-        "T012" : 1
+        "T023" : 1
       },
       "perMethodOutcome" : {
-        "T000" : 7,
+        "R000" : 3,
+        "R004" : 3,
+        "R013" : 1,
         "T003" : 3,
         "T010" : 1,
-        "T012" : 1
+        "T023" : 1
+      },
+      "perTestOutcome" : {
+        "R000" : 4
       }
     },
     "org.tron.common.crypto.jce.ECAlgorithmParameters" : {
       "methodsCount" : 3,
-      "completeTestCount" : 0,
+      "completeTestCount" : 2,
       "incompleteTestCount" : 0,
       "perMethodTestability" : {
         "T000" : 2,
         "T003" : 1
       },
       "perMethodOutcome" : {
-        "T000" : 2,
+        "R000" : 2,
         "T003" : 1
+      },
+      "perTestOutcome" : {
+        "R000" : 2
       }
     },
     "org.tron.common.crypto.jce.ECAlgorithmParameters$Holder" : {
@@ -276,37 +345,47 @@
       "incompleteTestCount" : 0,
       "perMethodTestability" : {
         "T008" : 1,
-        "T012" : 2
+        "T012" : 1,
+        "T023" : 1
       },
       "perMethodOutcome" : {
         "T008" : 1,
-        "T012" : 2
+        "T012" : 1,
+        "T023" : 1
       }
     },
     "org.tron.common.crypto.jce.ECKeyAgreement" : {
       "methodsCount" : 4,
-      "completeTestCount" : 0,
+      "completeTestCount" : 2,
       "incompleteTestCount" : 0,
       "perMethodTestability" : {
         "T000" : 3,
         "T008" : 1
       },
       "perMethodOutcome" : {
-        "T000" : 3,
+        "R000" : 2,
+        "R013" : 1,
         "T008" : 1
+      },
+      "perTestOutcome" : {
+        "R000" : 2
       }
     },
     "org.tron.common.crypto.jce.ECKeyFactory" : {
       "methodsCount" : 4,
-      "completeTestCount" : 0,
+      "completeTestCount" : 2,
       "incompleteTestCount" : 0,
       "perMethodTestability" : {
         "T000" : 3,
         "T003" : 1
       },
       "perMethodOutcome" : {
-        "T000" : 3,
+        "R000" : 2,
+        "R013" : 1,
         "T003" : 1
+      },
+      "perTestOutcome" : {
+        "R000" : 2
       }
     },
     "org.tron.common.crypto.jce.ECKeyFactory$Holder" : {
@@ -315,26 +394,34 @@
       "incompleteTestCount" : 0,
       "perMethodTestability" : {
         "T008" : 1,
-        "T012" : 2
+        "T012" : 1,
+        "T023" : 1
       },
       "perMethodOutcome" : {
         "T008" : 1,
-        "T012" : 2
+        "T012" : 1,
+        "T023" : 1
       }
     },
     "org.tron.common.crypto.jce.ECKeyPairGenerator" : {
       "methodsCount" : 6,
-      "completeTestCount" : 0,
+      "completeTestCount" : 2,
       "incompleteTestCount" : 0,
       "perMethodTestability" : {
         "T000" : 3,
         "T003" : 1,
-        "T012" : 2
+        "T012" : 1,
+        "T023" : 1
       },
       "perMethodOutcome" : {
-        "T000" : 3,
+        "R000" : 2,
+        "R013" : 1,
         "T003" : 1,
-        "T012" : 2
+        "T012" : 1,
+        "T023" : 1
+      },
+      "perTestOutcome" : {
+        "R000" : 2
       }
     },
     "org.tron.common.crypto.jce.ECKeyPairGenerator$Holder" : {
@@ -343,37 +430,46 @@
       "incompleteTestCount" : 0,
       "perMethodTestability" : {
         "T008" : 1,
-        "T012" : 2
+        "T012" : 1,
+        "T023" : 1
       },
       "perMethodOutcome" : {
         "T008" : 1,
-        "T012" : 2
+        "T012" : 1,
+        "T023" : 1
       }
     },
     "org.tron.common.crypto.jce.ECSignatureFactory" : {
       "methodsCount" : 4,
-      "completeTestCount" : 0,
+      "completeTestCount" : 2,
       "incompleteTestCount" : 0,
       "perMethodTestability" : {
         "T000" : 3,
         "T008" : 1
       },
       "perMethodOutcome" : {
-        "T000" : 3,
+        "R000" : 2,
+        "R013" : 1,
         "T008" : 1
+      },
+      "perTestOutcome" : {
+        "R000" : 2
       }
     },
     "org.tron.common.crypto.jce.TronCastleProvider" : {
       "methodsCount" : 2,
-      "completeTestCount" : 0,
+      "completeTestCount" : 1,
       "incompleteTestCount" : 0,
       "perMethodTestability" : {
         "T000" : 1,
         "T005" : 1
       },
       "perMethodOutcome" : {
-        "T000" : 1,
+        "R000" : 1,
         "T005" : 1
+      },
+      "perTestOutcome" : {
+        "R000" : 1
       }
     },
     "org.tron.common.crypto.jce.TronCastleProvider$Holder" : {
@@ -382,35 +478,45 @@
       "incompleteTestCount" : 0,
       "perMethodTestability" : {
         "T008" : 1,
-        "T012" : 2
+        "T012" : 1,
+        "T023" : 1
       },
       "perMethodOutcome" : {
         "T008" : 1,
-        "T012" : 2
+        "T012" : 1,
+        "T023" : 1
       }
     },
     "org.tron.common.crypto.sm2.SM2" : {
       "methodsCount" : 61,
-      "completeTestCount" : 0,
+      "completeTestCount" : 96,
       "incompleteTestCount" : 0,
       "perMethodTestability" : {
         "T000" : 51,
         "T001" : 1,
         "T003" : 6,
-        "T012" : 2,
-        "T020" : 1
+        "T012" : 1,
+        "T020" : 1,
+        "T023" : 1
       },
       "perMethodOutcome" : {
-        "T000" : 51,
-        "T001" : 1,
+        "R000" : 39,
+        "R013" : 4,
         "T003" : 6,
-        "T012" : 2,
-        "T020" : 1
+        "T012" : 1,
+        "T023" : 1,
+        "W002" : 10
+      },
+      "perTestOutcome" : {
+        "R000" : 96
+      },
+      "warnings" : {
+        "W002" : 58
       }
     },
     "org.tron.common.crypto.sm2.SM2$SM2Signature" : {
       "methodsCount" : 12,
-      "completeTestCount" : 0,
+      "completeTestCount" : 44,
       "incompleteTestCount" : 0,
       "perMethodTestability" : {
         "T000" : 10,
@@ -418,14 +524,17 @@
         "T005" : 1
       },
       "perMethodOutcome" : {
-        "T000" : 10,
-        "T003" : 1,
-        "T005" : 1
+        "R000" : 9,
+        "R013" : 2,
+        "T003" : 1
+      },
+      "perTestOutcome" : {
+        "R000" : 44
       }
     },
     "org.tron.common.crypto.sm2.SM2Signer" : {
       "methodsCount" : 12,
-      "completeTestCount" : 0,
+      "completeTestCount" : 6,
       "incompleteTestCount" : 0,
       "perMethodTestability" : {
         "T000" : 9,
@@ -433,14 +542,18 @@
         "T008" : 1
       },
       "perMethodOutcome" : {
-        "T000" : 9,
+        "R000" : 5,
+        "R013" : 4,
         "T003" : 2,
         "T008" : 1
+      },
+      "perTestOutcome" : {
+        "R000" : 6
       }
     },
     "org.tron.common.crypto.zksnark.BN128" : {
       "methodsCount" : 17,
-      "completeTestCount" : 0,
+      "completeTestCount" : 38,
       "incompleteTestCount" : 0,
       "perMethodTestability" : {
         "T000" : 11,
@@ -448,67 +561,83 @@
         "T010" : 5
       },
       "perMethodOutcome" : {
-        "T000" : 11,
+        "R000" : 11,
         "T003" : 1,
         "T010" : 5
+      },
+      "perTestOutcome" : {
+        "R000" : 38
       }
     },
     "org.tron.common.crypto.zksnark.BN128Fp" : {
-      "methodsCount" : 6,
-      "completeTestCount" : 0,
+      "methodsCount" : 8,
+      "completeTestCount" : 8,
       "incompleteTestCount" : 0,
       "perMethodTestability" : {
-        "T000" : 3,
+        "T000" : 5,
         "T005" : 1,
-        "T012" : 2
+        "T012" : 1,
+        "T023" : 1
       },
       "perMethodOutcome" : {
-        "T000" : 3,
-        "T005" : 1,
-        "T012" : 2
+        "R000" : 6,
+        "T012" : 1,
+        "T023" : 1
+      },
+      "perTestOutcome" : {
+        "R000" : 8
       }
     },
     "org.tron.common.crypto.zksnark.BN128Fp2" : {
-      "methodsCount" : 7,
-      "completeTestCount" : 0,
+      "methodsCount" : 9,
+      "completeTestCount" : 9,
       "incompleteTestCount" : 0,
       "perMethodTestability" : {
-        "T000" : 4,
+        "T000" : 6,
         "T005" : 1,
-        "T012" : 2
+        "T012" : 1,
+        "T023" : 1
       },
       "perMethodOutcome" : {
-        "T000" : 4,
-        "T005" : 1,
-        "T012" : 2
+        "R000" : 7,
+        "T012" : 1,
+        "T023" : 1
+      },
+      "perTestOutcome" : {
+        "R000" : 9
       }
     },
     "org.tron.common.crypto.zksnark.BN128G1" : {
-      "methodsCount" : 2,
-      "completeTestCount" : 0,
+      "methodsCount" : 3,
+      "completeTestCount" : 6,
       "incompleteTestCount" : 0,
       "perMethodTestability" : {
-        "T000" : 2
+        "T000" : 3
       },
       "perMethodOutcome" : {
-        "T000" : 2
+        "R000" : 3
+      },
+      "perTestOutcome" : {
+        "R000" : 6
       }
     },
     "org.tron.common.crypto.zksnark.BN128G2" : {
-      "methodsCount" : 6,
-      "completeTestCount" : 0,
+      "methodsCount" : 7,
+      "completeTestCount" : 8,
       "incompleteTestCount" : 0,
       "perMethodTestability" : {
-        "T000" : 3,
+        "T000" : 4,
         "T003" : 1,
         "T005" : 1,
-        "T012" : 1
+        "T023" : 1
       },
       "perMethodOutcome" : {
-        "T000" : 3,
+        "R000" : 5,
         "T003" : 1,
-        "T005" : 1,
-        "T012" : 1
+        "T023" : 1
+      },
+      "perTestOutcome" : {
+        "R000" : 8
       }
     },
     "org.tron.common.crypto.zksnark.Field" : {
@@ -523,121 +652,148 @@
       }
     },
     "org.tron.common.crypto.zksnark.Fp" : {
-      "methodsCount" : 17,
-      "completeTestCount" : 0,
+      "methodsCount" : 21,
+      "completeTestCount" : 24,
       "incompleteTestCount" : 0,
       "perMethodTestability" : {
-        "T000" : 11,
+        "T000" : 15,
         "T005" : 1,
-        "T012" : 4,
-        "T020" : 1
+        "T012" : 3,
+        "T020" : 1,
+        "T023" : 1
       },
       "perMethodOutcome" : {
-        "T000" : 11,
-        "T005" : 1,
-        "T012" : 4,
-        "T020" : 1
+        "R000" : 17,
+        "T012" : 3,
+        "T023" : 1
+      },
+      "perTestOutcome" : {
+        "R000" : 24
       }
     },
     "org.tron.common.crypto.zksnark.Fp12" : {
-      "methodsCount" : 19,
-      "completeTestCount" : 0,
+      "methodsCount" : 23,
+      "completeTestCount" : 38,
       "incompleteTestCount" : 0,
       "perMethodTestability" : {
-        "T000" : 13,
+        "T000" : 17,
         "T005" : 1,
-        "T012" : 4,
-        "T020" : 1
+        "T012" : 3,
+        "T020" : 1,
+        "T023" : 1
       },
       "perMethodOutcome" : {
-        "T000" : 13,
-        "T005" : 1,
-        "T012" : 4,
-        "T020" : 1
+        "R000" : 19,
+        "T012" : 3,
+        "T023" : 1
+      },
+      "perTestOutcome" : {
+        "R000" : 38
       }
     },
     "org.tron.common.crypto.zksnark.Fp2" : {
-      "methodsCount" : 18,
-      "completeTestCount" : 0,
+      "methodsCount" : 22,
+      "completeTestCount" : 27,
       "incompleteTestCount" : 0,
       "perMethodTestability" : {
-        "T000" : 12,
+        "T000" : 16,
         "T005" : 1,
-        "T012" : 4,
-        "T020" : 1
+        "T012" : 3,
+        "T020" : 1,
+        "T023" : 1
       },
       "perMethodOutcome" : {
-        "T000" : 12,
-        "T005" : 1,
-        "T012" : 4,
-        "T020" : 1
+        "R000" : 18,
+        "T012" : 3,
+        "T023" : 1
+      },
+      "perTestOutcome" : {
+        "R000" : 27
       }
     },
     "org.tron.common.crypto.zksnark.Fp6" : {
-      "methodsCount" : 15,
-      "completeTestCount" : 0,
+      "methodsCount" : 19,
+      "completeTestCount" : 31,
       "incompleteTestCount" : 0,
       "perMethodTestability" : {
-        "T000" : 10,
+        "T000" : 14,
         "T005" : 1,
-        "T012" : 4
+        "T012" : 3,
+        "T023" : 1
       },
       "perMethodOutcome" : {
-        "T000" : 10,
-        "T005" : 1,
-        "T012" : 4
+        "R000" : 15,
+        "T012" : 3,
+        "T023" : 1
+      },
+      "perTestOutcome" : {
+        "R000" : 31
       }
     },
     "org.tron.common.crypto.zksnark.PairingCheck" : {
       "methodsCount" : 12,
-      "completeTestCount" : 0,
+      "completeTestCount" : 2,
       "incompleteTestCount" : 0,
       "perMethodTestability" : {
         "T000" : 5,
         "T003" : 5,
-        "T012" : 2
+        "T012" : 1,
+        "T023" : 1
       },
       "perMethodOutcome" : {
-        "T000" : 5,
+        "R000" : 2,
+        "R004" : 1,
+        "R013" : 2,
         "T003" : 5,
-        "T012" : 2
+        "T012" : 1,
+        "T023" : 1
+      },
+      "perTestOutcome" : {
+        "R000" : 2
       }
     },
     "org.tron.common.crypto.zksnark.PairingCheck$EllCoeffs" : {
       "methodsCount" : 1,
-      "completeTestCount" : 0,
+      "completeTestCount" : 1,
       "incompleteTestCount" : 0,
       "perMethodTestability" : {
         "T005" : 1
       },
       "perMethodOutcome" : {
-        "T005" : 1
+        "R000" : 1
+      },
+      "perTestOutcome" : {
+        "R000" : 1
       }
     },
     "org.tron.common.crypto.zksnark.PairingCheck$Pair" : {
       "methodsCount" : 3,
-      "completeTestCount" : 0,
+      "completeTestCount" : 4,
       "incompleteTestCount" : 0,
       "perMethodTestability" : {
         "T000" : 2,
         "T005" : 1
       },
       "perMethodOutcome" : {
-        "T000" : 2,
-        "T005" : 1
+        "R000" : 3
+      },
+      "perTestOutcome" : {
+        "R000" : 4
       }
     },
     "org.tron.common.crypto.zksnark.PairingCheck$Precomputed" : {
       "methodsCount" : 2,
-      "completeTestCount" : 0,
+      "completeTestCount" : 2,
       "incompleteTestCount" : 0,
       "perMethodTestability" : {
         "T000" : 1,
         "T005" : 1
       },
       "perMethodOutcome" : {
-        "T000" : 1,
-        "T005" : 1
+        "R000" : 2
+      },
+      "perTestOutcome" : {
+        "R000" : 2
       }
     },
     "org.tron.common.crypto.zksnark.Params" : {
@@ -646,11 +802,11 @@
       "incompleteTestCount" : 0,
       "perMethodTestability" : {
         "T005" : 1,
-        "T012" : 1
+        "T023" : 1
       },
       "perMethodOutcome" : {
         "T005" : 1,
-        "T012" : 1
+        "T023" : 1
       }
     }
   },
@@ -658,19 +814,17 @@
     "org.tron.common.crypto.Blake2bfMessageDigest$Blake2bfDigest.<clinit>:()V" : {
       "completeTestCount" : 0,
       "incompleteTestCount" : 0,
-      "perMethodTestability" : "T012",
-      "perMethodOutcome" : "T012",
-      "lineNumbers" : [
-        25,
-        29,
-        35
-      ]
+      "perMethodTestability" : "T023",
+      "perMethodOutcome" : "T023"
     },
     "org.tron.common.crypto.Blake2bfMessageDigest$Blake2bfDigest.<init>:()V" : {
-      "completeTestCount" : 0,
+      "completeTestCount" : 1,
       "incompleteTestCount" : 0,
       "perMethodTestability" : "T000",
-      "perMethodOutcome" : "T000",
+      "perMethodOutcome" : "R000",
+      "perTestOutcome" : {
+        "R000" : 1
+      },
       "lineNumbers" : [
         66,
         67,
@@ -685,10 +839,13 @@
       ]
     },
     "org.tron.common.crypto.Blake2bfMessageDigest$Blake2bfDigest.<init>:([J[J[JZJ)V" : {
-      "completeTestCount" : 0,
+      "completeTestCount" : 1,
       "incompleteTestCount" : 0,
       "perMethodTestability" : "T000",
-      "perMethodOutcome" : "T000",
+      "perMethodOutcome" : "R000",
+      "perTestOutcome" : {
+        "R000" : 1
+      },
       "lineNumbers" : [
         81,
         82,
@@ -753,10 +910,13 @@
       ]
     },
     "org.tron.common.crypto.Blake2bfMessageDigest$Blake2bfDigest.doFinal:([BI)I" : {
-      "completeTestCount" : 0,
+      "completeTestCount" : 1,
       "incompleteTestCount" : 0,
       "perMethodTestability" : "T000",
-      "perMethodOutcome" : "T000",
+      "perMethodOutcome" : "R000",
+      "perTestOutcome" : {
+        "R000" : 1
+      },
       "lineNumbers" : [
         163,
         164,
@@ -769,19 +929,25 @@
       ]
     },
     "org.tron.common.crypto.Blake2bfMessageDigest$Blake2bfDigest.getAlgorithmName:()Ljava/lang/String;" : {
-      "completeTestCount" : 0,
+      "completeTestCount" : 1,
       "incompleteTestCount" : 0,
       "perMethodTestability" : "T001",
-      "perMethodOutcome" : "T001",
+      "perMethodOutcome" : "R000",
+      "perTestOutcome" : {
+        "R000" : 1
+      },
       "lineNumbers" : [
         97
       ]
     },
     "org.tron.common.crypto.Blake2bfMessageDigest$Blake2bfDigest.getDigestSize:()I" : {
-      "completeTestCount" : 0,
+      "completeTestCount" : 1,
       "incompleteTestCount" : 0,
       "perMethodTestability" : "T000",
-      "perMethodOutcome" : "T000",
+      "perMethodOutcome" : "R000",
+      "perTestOutcome" : {
+        "R000" : 1
+      },
       "lineNumbers" : [
         102
       ]
@@ -828,7 +994,7 @@
       "completeTestCount" : 0,
       "incompleteTestCount" : 0,
       "perMethodTestability" : "T000",
-      "perMethodOutcome" : "T000",
+      "perMethodOutcome" : "R004",
       "lineNumbers" : [
         181,
         182,
@@ -845,7 +1011,7 @@
       "completeTestCount" : 0,
       "incompleteTestCount" : 0,
       "perMethodTestability" : "T000",
-      "perMethodOutcome" : "T000",
+      "perMethodOutcome" : "R004",
       "lineNumbers" : [
         113,
         114,
@@ -860,7 +1026,7 @@
       "completeTestCount" : 0,
       "incompleteTestCount" : 0,
       "perMethodTestability" : "T000",
-      "perMethodOutcome" : "T000",
+      "perMethodOutcome" : "R013",
       "lineNumbers" : [
         133,
         134,
@@ -874,20 +1040,26 @@
       ]
     },
     "org.tron.common.crypto.Blake2bfMessageDigest.<init>:()V" : {
-      "completeTestCount" : 0,
+      "completeTestCount" : 1,
       "incompleteTestCount" : 0,
       "perMethodTestability" : "T000",
-      "perMethodOutcome" : "T000",
+      "perMethodOutcome" : "R000",
+      "perTestOutcome" : {
+        "R000" : 1
+      },
       "lineNumbers" : [
         13,
         14
       ]
     },
     "org.tron.common.crypto.ECKey$ECDSASignature.<init>:(Ljava/math/BigInteger;Ljava/math/BigInteger;)V" : {
-      "completeTestCount" : 0,
+      "completeTestCount" : 1,
       "incompleteTestCount" : 0,
       "perMethodTestability" : "T005",
-      "perMethodOutcome" : "T005",
+      "perMethodOutcome" : "R000",
+      "perTestOutcome" : {
+        "R000" : 1
+      },
       "lineNumbers" : [
         888,
         889,
@@ -896,10 +1068,13 @@
       ]
     },
     "org.tron.common.crypto.ECKey$ECDSASignature.<init>:([B[BB)V" : {
-      "completeTestCount" : 0,
+      "completeTestCount" : 1,
       "incompleteTestCount" : 0,
       "perMethodTestability" : "T000",
-      "perMethodOutcome" : "T000",
+      "perMethodOutcome" : "R000",
+      "perTestOutcome" : {
+        "R000" : 1
+      },
       "lineNumbers" : [
         893,
         894,
@@ -909,10 +1084,13 @@
       ]
     },
     "org.tron.common.crypto.ECKey$ECDSASignature.equals:(Ljava/lang/Object;)Z" : {
-      "completeTestCount" : 0,
+      "completeTestCount" : 5,
       "incompleteTestCount" : 0,
       "perMethodTestability" : "T000",
-      "perMethodOutcome" : "T000",
+      "perMethodOutcome" : "R000",
+      "perTestOutcome" : {
+        "R000" : 5
+      },
       "lineNumbers" : [
         994,
         995,
@@ -934,10 +1112,13 @@
       ]
     },
     "org.tron.common.crypto.ECKey$ECDSASignature.fromComponents:([B[BB)Lorg/tron/common/crypto/ECKey$ECDSASignature;" : {
-      "completeTestCount" : 0,
+      "completeTestCount" : 1,
       "incompleteTestCount" : 0,
       "perMethodTestability" : "T000",
-      "perMethodOutcome" : "T000",
+      "perMethodOutcome" : "R000",
+      "perTestOutcome" : {
+        "R000" : 1
+      },
       "lineNumbers" : [
         917,
         918,
@@ -945,10 +1126,13 @@
       ]
     },
     "org.tron.common.crypto.ECKey$ECDSASignature.hashCode:()I" : {
-      "completeTestCount" : 0,
+      "completeTestCount" : 5,
       "incompleteTestCount" : 0,
       "perMethodTestability" : "T000",
-      "perMethodOutcome" : "T000",
+      "perMethodOutcome" : "R000",
+      "perTestOutcome" : {
+        "R000" : 5
+      },
       "lineNumbers" : [
         1011,
         1012,
@@ -956,10 +1140,13 @@
       ]
     },
     "org.tron.common.crypto.ECKey$ECDSASignature.toBase64:()Ljava/lang/String;" : {
-      "completeTestCount" : 0,
+      "completeTestCount" : 1,
       "incompleteTestCount" : 0,
       "perMethodTestability" : "T000",
-      "perMethodOutcome" : "T000",
+      "perMethodOutcome" : "R000",
+      "perTestOutcome" : {
+        "R000" : 1
+      },
       "lineNumbers" : [
         968,
         970,
@@ -969,10 +1156,13 @@
       ]
     },
     "org.tron.common.crypto.ECKey$ECDSASignature.toByteArray:()[B" : {
-      "completeTestCount" : 0,
+      "completeTestCount" : 2,
       "incompleteTestCount" : 0,
       "perMethodTestability" : "T000",
-      "perMethodOutcome" : "T000",
+      "perMethodOutcome" : "R000",
+      "perTestOutcome" : {
+        "R000" : 2
+      },
       "lineNumbers" : [
         978,
         982,
@@ -982,10 +1172,13 @@
       ]
     },
     "org.tron.common.crypto.ECKey$ECDSASignature.toCanonicalised:()Lorg/tron/common/crypto/ECKey$ECDSASignature;" : {
-      "completeTestCount" : 0,
+      "completeTestCount" : 1,
       "incompleteTestCount" : 0,
       "perMethodTestability" : "T000",
-      "perMethodOutcome" : "T000",
+      "perMethodOutcome" : "R000",
+      "perTestOutcome" : {
+        "R000" : 1
+      },
       "lineNumbers" : [
         948,
         958,
@@ -993,28 +1186,37 @@
       ]
     },
     "org.tron.common.crypto.ECKey$ECDSASignature.toHex:()Ljava/lang/String;" : {
-      "completeTestCount" : 0,
+      "completeTestCount" : 2,
       "incompleteTestCount" : 0,
       "perMethodTestability" : "T000",
-      "perMethodOutcome" : "T000",
+      "perMethodOutcome" : "R000",
+      "perTestOutcome" : {
+        "R000" : 2
+      },
       "lineNumbers" : [
         989
       ]
     },
     "org.tron.common.crypto.ECKey$ECDSASignature.validateComponents:()Z" : {
-      "completeTestCount" : 0,
+      "completeTestCount" : 5,
       "incompleteTestCount" : 0,
       "perMethodTestability" : "T000",
-      "perMethodOutcome" : "T000",
+      "perMethodOutcome" : "R000",
+      "perTestOutcome" : {
+        "R000" : 5
+      },
       "lineNumbers" : [
         944
       ]
     },
     "org.tron.common.crypto.ECKey$ECDSASignature.validateComponents:(Ljava/math/BigInteger;Ljava/math/BigInteger;B)Z" : {
-      "completeTestCount" : 0,
+      "completeTestCount" : 5,
       "incompleteTestCount" : 0,
       "perMethodTestability" : "T000",
-      "perMethodOutcome" : "T000",
+      "perMethodOutcome" : "R000",
+      "perTestOutcome" : {
+        "R000" : 5
+      },
       "lineNumbers" : [
         925,
         926,
@@ -1028,10 +1230,13 @@
       ]
     },
     "org.tron.common.crypto.ECKey$MissingPrivateKeyException.<init>:()V" : {
-      "completeTestCount" : 0,
+      "completeTestCount" : 1,
       "incompleteTestCount" : 0,
       "perMethodTestability" : "T005",
-      "perMethodOutcome" : "T005",
+      "perMethodOutcome" : "R000",
+      "perTestOutcome" : {
+        "R000" : 1
+      },
       "lineNumbers" : [
         1018
       ]
@@ -1039,36 +1244,33 @@
     "org.tron.common.crypto.ECKey.<clinit>:()V" : {
       "completeTestCount" : 0,
       "incompleteTestCount" : 0,
-      "perMethodTestability" : "T012",
-      "perMethodOutcome" : "T012",
-      "lineNumbers" : [
-        60,
-        79,
-        86,
-        87,
-        88,
-        89,
-        90,
-        91,
-        92,
-        93
-      ]
+      "perMethodTestability" : "T023",
+      "perMethodOutcome" : "T023"
     },
     "org.tron.common.crypto.ECKey.<init>:()V" : {
       "completeTestCount" : 0,
       "incompleteTestCount" : 0,
       "perMethodTestability" : "T000",
-      "perMethodOutcome" : "T000",
+      "perMethodOutcome" : "W002",
+      "warnings" : {
+        "W002" : 1
+      },
       "lineNumbers" : [
         119,
         120
       ]
     },
     "org.tron.common.crypto.ECKey.<init>:(Ljava/math/BigInteger;Lorg/bouncycastle/math/ec/ECPoint;)V" : {
-      "completeTestCount" : 0,
+      "completeTestCount" : 1,
       "incompleteTestCount" : 0,
       "perMethodTestability" : "T000",
-      "perMethodOutcome" : "T000",
+      "perMethodOutcome" : "R000",
+      "perTestOutcome" : {
+        "R000" : 1
+      },
+      "warnings" : {
+        "W002" : 1
+      },
       "lineNumbers" : [
         202,
         203,
@@ -1078,10 +1280,13 @@
       ]
     },
     "org.tron.common.crypto.ECKey.<init>:(Ljava/security/Provider;Ljava/security/PrivateKey;Lorg/bouncycastle/math/ec/ECPoint;)V" : {
-      "completeTestCount" : 0,
+      "completeTestCount" : 4,
       "incompleteTestCount" : 0,
       "perMethodTestability" : "T000",
-      "perMethodOutcome" : "T000",
+      "perMethodOutcome" : "R000",
+      "perTestOutcome" : {
+        "R000" : 4
+      },
       "lineNumbers" : [
         176,
         177,
@@ -1097,10 +1302,13 @@
       ]
     },
     "org.tron.common.crypto.ECKey.<init>:(Ljava/security/Provider;Ljava/security/SecureRandom;)V" : {
-      "completeTestCount" : 0,
+      "completeTestCount" : 2,
       "incompleteTestCount" : 0,
       "perMethodTestability" : "T000",
-      "perMethodOutcome" : "T000",
+      "perMethodOutcome" : "R000",
+      "perTestOutcome" : {
+        "R000" : 2
+      },
       "lineNumbers" : [
         127,
         128,
@@ -1122,17 +1330,26 @@
       "completeTestCount" : 0,
       "incompleteTestCount" : 0,
       "perMethodTestability" : "T000",
-      "perMethodOutcome" : "T000",
+      "perMethodOutcome" : "W002",
+      "warnings" : {
+        "W002" : 2
+      },
       "lineNumbers" : [
         155,
         156
       ]
     },
     "org.tron.common.crypto.ECKey.<init>:([BZ)V" : {
-      "completeTestCount" : 0,
+      "completeTestCount" : 1,
       "incompleteTestCount" : 0,
       "perMethodTestability" : "T000",
-      "perMethodOutcome" : "T000",
+      "perMethodOutcome" : "R000",
+      "perTestOutcome" : {
+        "R000" : 1
+      },
+      "warnings" : {
+        "W002" : 6
+      },
       "lineNumbers" : [
         164,
         165,
@@ -1147,10 +1364,13 @@
       ]
     },
     "org.tron.common.crypto.ECKey.Base64toBytes:(Ljava/lang/String;)[B" : {
-      "completeTestCount" : 0,
+      "completeTestCount" : 1,
       "incompleteTestCount" : 0,
       "perMethodTestability" : "T000",
-      "perMethodOutcome" : "T000",
+      "perMethodOutcome" : "R000",
+      "perTestOutcome" : {
+        "R000" : 1
+      },
       "lineNumbers" : [
         683,
         684,
@@ -1179,10 +1399,13 @@
       ]
     },
     "org.tron.common.crypto.ECKey.compressPoint:(Lorg/bouncycastle/math/ec/ECPoint;)Lorg/bouncycastle/math/ec/ECPoint;" : {
-      "completeTestCount" : 0,
+      "completeTestCount" : 1,
       "incompleteTestCount" : 0,
       "perMethodTestability" : "T000",
-      "perMethodOutcome" : "T000",
+      "perMethodOutcome" : "R000",
+      "perTestOutcome" : {
+        "R000" : 1
+      },
       "lineNumbers" : [
         256
       ]
@@ -1202,19 +1425,25 @@
       ]
     },
     "org.tron.common.crypto.ECKey.decompressPoint:(Lorg/bouncycastle/math/ec/ECPoint;)Lorg/bouncycastle/math/ec/ECPoint;" : {
-      "completeTestCount" : 0,
+      "completeTestCount" : 1,
       "incompleteTestCount" : 0,
       "perMethodTestability" : "T000",
-      "perMethodOutcome" : "T000",
+      "perMethodOutcome" : "R000",
+      "perTestOutcome" : {
+        "R000" : 1
+      },
       "lineNumbers" : [
         268
       ]
     },
     "org.tron.common.crypto.ECKey.doSign:([B)Lorg/tron/common/crypto/ECKey$ECDSASignature;" : {
-      "completeTestCount" : 0,
+      "completeTestCount" : 1,
       "incompleteTestCount" : 0,
       "perMethodTestability" : "T000",
-      "perMethodOutcome" : "T000",
+      "perMethodOutcome" : "R000",
+      "perTestOutcome" : {
+        "R000" : 1
+      },
       "lineNumbers" : [
         770,
         771,
@@ -1233,10 +1462,16 @@
       ]
     },
     "org.tron.common.crypto.ECKey.equals:(Ljava/lang/Object;)Z" : {
-      "completeTestCount" : 0,
+      "completeTestCount" : 4,
       "incompleteTestCount" : 0,
       "perMethodTestability" : "T000",
-      "perMethodOutcome" : "T000",
+      "perMethodOutcome" : "R000",
+      "perTestOutcome" : {
+        "R000" : 4
+      },
+      "warnings" : {
+        "W002" : 1
+      },
       "lineNumbers" : [
         852,
         853,
@@ -1261,10 +1496,13 @@
       ]
     },
     "org.tron.common.crypto.ECKey.fromNodeId:([B)Lorg/tron/common/crypto/ECKey;" : {
-      "completeTestCount" : 0,
+      "completeTestCount" : 1,
       "incompleteTestCount" : 0,
       "perMethodTestability" : "T000",
-      "perMethodOutcome" : "T000",
+      "perMethodOutcome" : "R000",
+      "perTestOutcome" : {
+        "R000" : 1
+      },
       "lineNumbers" : [
         379,
         380,
@@ -1277,16 +1515,25 @@
       "completeTestCount" : 0,
       "incompleteTestCount" : 0,
       "perMethodTestability" : "T000",
-      "perMethodOutcome" : "T000",
+      "perMethodOutcome" : "W002",
+      "warnings" : {
+        "W002" : 5
+      },
       "lineNumbers" : [
         278
       ]
     },
     "org.tron.common.crypto.ECKey.fromPrivate:([B)Lorg/tron/common/crypto/ECKey;" : {
-      "completeTestCount" : 0,
+      "completeTestCount" : 1,
       "incompleteTestCount" : 0,
       "perMethodTestability" : "T000",
-      "perMethodOutcome" : "T000",
+      "perMethodOutcome" : "R000",
+      "perTestOutcome" : {
+        "R000" : 1
+      },
+      "warnings" : {
+        "W002" : 5
+      },
       "lineNumbers" : [
         288,
         289,
@@ -1294,19 +1541,31 @@
       ]
     },
     "org.tron.common.crypto.ECKey.fromPrivateAndPrecalculatedPublic:(Ljava/math/BigInteger;Lorg/bouncycastle/math/ec/ECPoint;)Lorg/tron/common/crypto/ECKey;" : {
-      "completeTestCount" : 0,
+      "completeTestCount" : 1,
       "incompleteTestCount" : 0,
       "perMethodTestability" : "T000",
-      "perMethodOutcome" : "T000",
+      "perMethodOutcome" : "R000",
+      "perTestOutcome" : {
+        "R000" : 1
+      },
+      "warnings" : {
+        "W002" : 1
+      },
       "lineNumbers" : [
         305
       ]
     },
     "org.tron.common.crypto.ECKey.fromPrivateAndPrecalculatedPublic:([B[B)Lorg/tron/common/crypto/ECKey;" : {
-      "completeTestCount" : 0,
+      "completeTestCount" : 2,
       "incompleteTestCount" : 0,
       "perMethodTestability" : "T000",
-      "perMethodOutcome" : "T000",
+      "perMethodOutcome" : "R000",
+      "perTestOutcome" : {
+        "R000" : 2
+      },
+      "warnings" : {
+        "W002" : 1
+      },
       "lineNumbers" : [
         319,
         320,
@@ -1316,28 +1575,40 @@
       ]
     },
     "org.tron.common.crypto.ECKey.fromPublicOnly:(Lorg/bouncycastle/math/ec/ECPoint;)Lorg/tron/common/crypto/ECKey;" : {
-      "completeTestCount" : 0,
+      "completeTestCount" : 2,
       "incompleteTestCount" : 0,
       "perMethodTestability" : "T000",
-      "perMethodOutcome" : "T000",
+      "perMethodOutcome" : "R000",
+      "perTestOutcome" : {
+        "R000" : 2
+      },
       "lineNumbers" : [
         333
       ]
     },
     "org.tron.common.crypto.ECKey.fromPublicOnly:([B)Lorg/tron/common/crypto/ECKey;" : {
-      "completeTestCount" : 0,
+      "completeTestCount" : 1,
       "incompleteTestCount" : 0,
       "perMethodTestability" : "T000",
-      "perMethodOutcome" : "T000",
+      "perMethodOutcome" : "R000",
+      "perTestOutcome" : {
+        "R000" : 1
+      },
       "lineNumbers" : [
         344
       ]
     },
     "org.tron.common.crypto.ECKey.getAddress:()[B" : {
-      "completeTestCount" : 0,
+      "completeTestCount" : 2,
       "incompleteTestCount" : 0,
       "perMethodTestability" : "T000",
-      "perMethodOutcome" : "T000",
+      "perMethodOutcome" : "R000",
+      "perTestOutcome" : {
+        "R000" : 2
+      },
+      "warnings" : {
+        "W002" : 1
+      },
       "lineNumbers" : [
         671,
         672,
@@ -1345,10 +1616,16 @@
       ]
     },
     "org.tron.common.crypto.ECKey.getNodeId:()[B" : {
-      "completeTestCount" : 0,
+      "completeTestCount" : 2,
       "incompleteTestCount" : 0,
       "perMethodTestability" : "T000",
-      "perMethodOutcome" : "T000",
+      "perMethodOutcome" : "R000",
+      "perTestOutcome" : {
+        "R000" : 2
+      },
+      "warnings" : {
+        "W002" : 1
+      },
       "lineNumbers" : [
         693,
         694,
@@ -1356,10 +1633,16 @@
       ]
     },
     "org.tron.common.crypto.ECKey.getPrivKey:()Ljava/math/BigInteger;" : {
-      "completeTestCount" : 0,
+      "completeTestCount" : 1,
       "incompleteTestCount" : 0,
       "perMethodTestability" : "T000",
-      "perMethodOutcome" : "T000",
+      "perMethodOutcome" : "R000",
+      "perTestOutcome" : {
+        "R000" : 1
+      },
+      "warnings" : {
+        "W002" : 1
+      },
       "lineNumbers" : [
         731,
         732,
@@ -1369,10 +1652,16 @@
       ]
     },
     "org.tron.common.crypto.ECKey.getPrivKeyBytes:()[B" : {
-      "completeTestCount" : 0,
+      "completeTestCount" : 1,
       "incompleteTestCount" : 0,
       "perMethodTestability" : "T000",
-      "perMethodOutcome" : "T000",
+      "perMethodOutcome" : "R000",
+      "perTestOutcome" : {
+        "R000" : 1
+      },
+      "warnings" : {
+        "W002" : 2
+      },
       "lineNumbers" : [
         839,
         840,
@@ -1384,19 +1673,28 @@
       ]
     },
     "org.tron.common.crypto.ECKey.getPrivateKey:()[B" : {
-      "completeTestCount" : 0,
+      "completeTestCount" : 1,
       "incompleteTestCount" : 0,
       "perMethodTestability" : "T000",
-      "perMethodOutcome" : "T000",
+      "perMethodOutcome" : "R000",
+      "perTestOutcome" : {
+        "R000" : 1
+      },
       "lineNumbers" : [
         702
       ]
     },
     "org.tron.common.crypto.ECKey.getPubKey:()[B" : {
-      "completeTestCount" : 0,
+      "completeTestCount" : 3,
       "incompleteTestCount" : 0,
       "perMethodTestability" : "T000",
-      "perMethodOutcome" : "T000",
+      "perMethodOutcome" : "R000",
+      "perTestOutcome" : {
+        "R000" : 3
+      },
+      "warnings" : {
+        "W002" : 1
+      },
       "lineNumbers" : [
         711
       ]
@@ -1405,25 +1703,37 @@
       "completeTestCount" : 0,
       "incompleteTestCount" : 0,
       "perMethodTestability" : "T001",
-      "perMethodOutcome" : "T001",
+      "perMethodOutcome" : "W002",
+      "warnings" : {
+        "W002" : 1
+      },
       "lineNumbers" : [
         720
       ]
     },
     "org.tron.common.crypto.ECKey.hasPrivKey:()Z" : {
-      "completeTestCount" : 0,
+      "completeTestCount" : 2,
       "incompleteTestCount" : 0,
       "perMethodTestability" : "T000",
-      "perMethodOutcome" : "T000",
+      "perMethodOutcome" : "R000",
+      "perTestOutcome" : {
+        "R000" : 2
+      },
       "lineNumbers" : [
         662
       ]
     },
     "org.tron.common.crypto.ECKey.hashCode:()I" : {
-      "completeTestCount" : 0,
+      "completeTestCount" : 4,
       "incompleteTestCount" : 0,
       "perMethodTestability" : "T000",
-      "perMethodOutcome" : "T000",
+      "perMethodOutcome" : "R000",
+      "perTestOutcome" : {
+        "R000" : 4
+      },
+      "warnings" : {
+        "W002" : 1
+      },
       "lineNumbers" : [
         870
       ]
@@ -1440,19 +1750,28 @@
       ]
     },
     "org.tron.common.crypto.ECKey.isPubKeyCanonical:()Z" : {
-      "completeTestCount" : 0,
+      "completeTestCount" : 6,
       "incompleteTestCount" : 0,
       "perMethodTestability" : "T000",
-      "perMethodOutcome" : "T000",
+      "perMethodOutcome" : "R000",
+      "perTestOutcome" : {
+        "R000" : 6
+      },
+      "warnings" : {
+        "W002" : 1
+      },
       "lineNumbers" : [
         828
       ]
     },
     "org.tron.common.crypto.ECKey.isPubKeyCanonical:([B)Z" : {
-      "completeTestCount" : 0,
+      "completeTestCount" : 4,
       "incompleteTestCount" : 0,
       "perMethodTestability" : "T000",
-      "perMethodOutcome" : "T000",
+      "perMethodOutcome" : "R000",
+      "perTestOutcome" : {
+        "R000" : 4
+      },
       "lineNumbers" : [
         483,
         485,
@@ -1462,10 +1781,13 @@
       ]
     },
     "org.tron.common.crypto.ECKey.isPubKeyOnly:()Z" : {
-      "completeTestCount" : 0,
+      "completeTestCount" : 2,
       "incompleteTestCount" : 0,
       "perMethodTestability" : "T000",
-      "perMethodOutcome" : "T000",
+      "perMethodOutcome" : "R000",
+      "perTestOutcome" : {
+        "R000" : 2
+      },
       "lineNumbers" : [
         652
       ]
@@ -1486,30 +1808,39 @@
       ]
     },
     "org.tron.common.crypto.ECKey.pubBytesWithoutFormat:(Lorg/bouncycastle/math/ec/ECPoint;)[B" : {
-      "completeTestCount" : 0,
+      "completeTestCount" : 2,
       "incompleteTestCount" : 0,
       "perMethodTestability" : "T000",
-      "perMethodOutcome" : "T000",
+      "perMethodOutcome" : "R000",
+      "perTestOutcome" : {
+        "R000" : 2
+      },
       "lineNumbers" : [
         369,
         370
       ]
     },
     "org.tron.common.crypto.ECKey.publicKeyFromPrivate:(Ljava/math/BigInteger;Z)[B" : {
-      "completeTestCount" : 0,
+      "completeTestCount" : 7,
       "incompleteTestCount" : 0,
       "perMethodTestability" : "T000",
-      "perMethodOutcome" : "T000",
+      "perMethodOutcome" : "R000",
+      "perTestOutcome" : {
+        "R000" : 7
+      },
       "lineNumbers" : [
         357,
         358
       ]
     },
     "org.tron.common.crypto.ECKey.recoverAddressFromSignature:(ILorg/tron/common/crypto/ECKey$ECDSASignature;[B)[B" : {
-      "completeTestCount" : 0,
+      "completeTestCount" : 13,
       "incompleteTestCount" : 0,
       "perMethodTestability" : "T000",
-      "perMethodOutcome" : "T000",
+      "perMethodOutcome" : "R000",
+      "perTestOutcome" : {
+        "R000" : 13
+      },
       "lineNumbers" : [
         596,
         598,
@@ -1518,10 +1849,13 @@
       ]
     },
     "org.tron.common.crypto.ECKey.recoverFromSignature:(ILorg/tron/common/crypto/ECKey$ECDSASignature;[B)Lorg/tron/common/crypto/ECKey;" : {
-      "completeTestCount" : 0,
+      "completeTestCount" : 13,
       "incompleteTestCount" : 0,
       "perMethodTestability" : "T000",
-      "perMethodOutcome" : "T000",
+      "perMethodOutcome" : "R000",
+      "perTestOutcome" : {
+        "R000" : 13
+      },
       "lineNumbers" : [
         614,
         616,
@@ -1530,10 +1864,13 @@
       ]
     },
     "org.tron.common.crypto.ECKey.recoverPubBytesFromSignature:(ILorg/tron/common/crypto/ECKey$ECDSASignature;[B)[B" : {
-      "completeTestCount" : 0,
+      "completeTestCount" : 13,
       "incompleteTestCount" : 0,
       "perMethodTestability" : "T000",
-      "perMethodOutcome" : "T000",
+      "perMethodOutcome" : "R000",
+      "perTestOutcome" : {
+        "R000" : 13
+      },
       "lineNumbers" : [
         519,
         520,
@@ -1561,10 +1898,13 @@
       ]
     },
     "org.tron.common.crypto.ECKey.sign:([B)Lorg/tron/common/crypto/ECKey$ECDSASignature;" : {
-      "completeTestCount" : 0,
+      "completeTestCount" : 1,
       "incompleteTestCount" : 0,
       "perMethodTestability" : "T000",
-      "perMethodOutcome" : "T000",
+      "perMethodOutcome" : "R000",
+      "perTestOutcome" : {
+        "R000" : 1
+      },
       "lineNumbers" : [
         800,
         803,
@@ -1582,47 +1922,62 @@
       ]
     },
     "org.tron.common.crypto.ECKey.signHash:([B)Ljava/lang/String;" : {
-      "completeTestCount" : 0,
+      "completeTestCount" : 1,
       "incompleteTestCount" : 0,
       "perMethodTestability" : "T000",
-      "perMethodOutcome" : "T000",
+      "perMethodOutcome" : "R000",
+      "perTestOutcome" : {
+        "R000" : 1
+      },
       "lineNumbers" : [
         679
       ]
     },
     "org.tron.common.crypto.ECKey.signatureToAddress:([BLjava/lang/String;)[B" : {
-      "completeTestCount" : 0,
+      "completeTestCount" : 3,
       "incompleteTestCount" : 0,
       "perMethodTestability" : "T000",
-      "perMethodOutcome" : "T000",
+      "perMethodOutcome" : "R000",
+      "perTestOutcome" : {
+        "R000" : 3
+      },
       "lineNumbers" : [
         444
       ]
     },
     "org.tron.common.crypto.ECKey.signatureToAddress:([BLorg/tron/common/crypto/ECKey$ECDSASignature;)[B" : {
-      "completeTestCount" : 0,
+      "completeTestCount" : 1,
       "incompleteTestCount" : 0,
       "perMethodTestability" : "T000",
-      "perMethodOutcome" : "T000",
+      "perMethodOutcome" : "R000",
+      "perTestOutcome" : {
+        "R000" : 1
+      },
       "lineNumbers" : [
         458
       ]
     },
     "org.tron.common.crypto.ECKey.signatureToKey:([BLjava/lang/String;)Lorg/tron/common/crypto/ECKey;" : {
-      "completeTestCount" : 0,
+      "completeTestCount" : 3,
       "incompleteTestCount" : 0,
       "perMethodTestability" : "T000",
-      "perMethodOutcome" : "T000",
+      "perMethodOutcome" : "R000",
+      "perTestOutcome" : {
+        "R000" : 3
+      },
       "lineNumbers" : [
         470,
         472
       ]
     },
     "org.tron.common.crypto.ECKey.signatureToKeyBytes:([BLjava/lang/String;)[B" : {
-      "completeTestCount" : 0,
+      "completeTestCount" : 3,
       "incompleteTestCount" : 0,
       "perMethodTestability" : "T000",
-      "perMethodOutcome" : "T000",
+      "perMethodOutcome" : "R000",
+      "perTestOutcome" : {
+        "R000" : 3
+      },
       "lineNumbers" : [
         390,
         395,
@@ -1638,10 +1993,13 @@
       ]
     },
     "org.tron.common.crypto.ECKey.signatureToKeyBytes:([BLorg/tron/common/crypto/ECKey$ECDSASignature;)[B" : {
-      "completeTestCount" : 0,
+      "completeTestCount" : 1,
       "incompleteTestCount" : 0,
       "perMethodTestability" : "T000",
-      "perMethodOutcome" : "T000",
+      "perMethodOutcome" : "R000",
+      "perTestOutcome" : {
+        "R000" : 1
+      },
       "lineNumbers" : [
         412,
         414,
@@ -1660,7 +2018,10 @@
       "completeTestCount" : 0,
       "incompleteTestCount" : 0,
       "perMethodTestability" : "T020",
-      "perMethodOutcome" : "T020",
+      "perMethodOutcome" : "W002",
+      "warnings" : {
+        "W002" : 1
+      },
       "lineNumbers" : [
         741,
         742,
@@ -1668,10 +2029,16 @@
       ]
     },
     "org.tron.common.crypto.ECKey.toStringWithPrivate:()Ljava/lang/String;" : {
-      "completeTestCount" : 0,
+      "completeTestCount" : 2,
       "incompleteTestCount" : 0,
       "perMethodTestability" : "T000",
-      "perMethodOutcome" : "T000",
+      "perMethodOutcome" : "R000",
+      "perTestOutcome" : {
+        "R000" : 2
+      },
+      "warnings" : {
+        "W002" : 1
+      },
       "lineNumbers" : [
         753,
         754,
@@ -1685,17 +2052,8 @@
     "org.tron.common.crypto.Hash.<clinit>:()V" : {
       "completeTestCount" : 0,
       "incompleteTestCount" : 0,
-      "perMethodTestability" : "T012",
-      "perMethodOutcome" : "T012",
-      "lineNumbers" : [
-        38,
-        71,
-        72,
-        73,
-        74,
-        75,
-        76
-      ]
+      "perMethodTestability" : "T023",
+      "perMethodOutcome" : "T023"
     },
     "org.tron.common.crypto.Hash.<init>:()V" : {
       "completeTestCount" : 0,
@@ -1707,19 +2065,25 @@
       ]
     },
     "org.tron.common.crypto.Hash.computeAddress:(Lorg/bouncycastle/math/ec/ECPoint;)[B" : {
-      "completeTestCount" : 0,
+      "completeTestCount" : 2,
       "incompleteTestCount" : 0,
       "perMethodTestability" : "T000",
-      "perMethodOutcome" : "T000",
+      "perMethodOutcome" : "R000",
+      "perTestOutcome" : {
+        "R000" : 2
+      },
       "lineNumbers" : [
         180
       ]
     },
     "org.tron.common.crypto.Hash.computeAddress:([B)[B" : {
-      "completeTestCount" : 0,
+      "completeTestCount" : 1,
       "incompleteTestCount" : 0,
       "perMethodTestability" : "T000",
-      "perMethodOutcome" : "T000",
+      "perMethodOutcome" : "R000",
+      "perTestOutcome" : {
+        "R000" : 1
+      },
       "lineNumbers" : [
         184,
         185,
@@ -1727,10 +2091,13 @@
       ]
     },
     "org.tron.common.crypto.Hash.encodeElement:([B)[B" : {
-      "completeTestCount" : 0,
+      "completeTestCount" : 6,
       "incompleteTestCount" : 0,
       "perMethodTestability" : "T000",
-      "perMethodOutcome" : "T000",
+      "perMethodOutcome" : "R000",
+      "perTestOutcome" : {
+        "R000" : 6
+      },
       "lineNumbers" : [
         130,
         131,
@@ -1761,10 +2128,13 @@
       ]
     },
     "org.tron.common.crypto.Hash.ripemd160:([B)[B" : {
-      "completeTestCount" : 0,
+      "completeTestCount" : 1,
       "incompleteTestCount" : 0,
       "perMethodTestability" : "T000",
-      "perMethodOutcome" : "T000",
+      "perMethodOutcome" : "R000",
+      "perTestOutcome" : {
+        "R000" : 1
+      },
       "lineNumbers" : [
         206,
         208,
@@ -1774,10 +2144,13 @@
       ]
     },
     "org.tron.common.crypto.Hash.sha3:([B)[B" : {
-      "completeTestCount" : 0,
+      "completeTestCount" : 1,
       "incompleteTestCount" : 0,
       "perMethodTestability" : "T000",
-      "perMethodOutcome" : "T000",
+      "perMethodOutcome" : "R000",
+      "perTestOutcome" : {
+        "R000" : 1
+      },
       "lineNumbers" : [
         81,
         83,
@@ -1788,10 +2161,13 @@
       ]
     },
     "org.tron.common.crypto.Hash.sha3:([BII)[B" : {
-      "completeTestCount" : 0,
+      "completeTestCount" : 1,
       "incompleteTestCount" : 0,
       "perMethodTestability" : "T000",
-      "perMethodOutcome" : "T000",
+      "perMethodOutcome" : "R000",
+      "perTestOutcome" : {
+        "R000" : 1
+      },
       "lineNumbers" : [
         117,
         119,
@@ -1802,10 +2178,13 @@
       ]
     },
     "org.tron.common.crypto.Hash.sha3:([B[B)[B" : {
-      "completeTestCount" : 0,
+      "completeTestCount" : 1,
       "incompleteTestCount" : 0,
       "perMethodTestability" : "T000",
-      "perMethodOutcome" : "T000",
+      "perMethodOutcome" : "R000",
+      "perTestOutcome" : {
+        "R000" : 1
+      },
       "lineNumbers" : [
         95,
         97,
@@ -1817,10 +2196,13 @@
       ]
     },
     "org.tron.common.crypto.Hash.sha3omit12:([B)[B" : {
-      "completeTestCount" : 0,
+      "completeTestCount" : 1,
       "incompleteTestCount" : 0,
       "perMethodTestability" : "T000",
-      "perMethodOutcome" : "T000",
+      "perMethodOutcome" : "R000",
+      "perTestOutcome" : {
+        "R000" : 1
+      },
       "lineNumbers" : [
         195,
         196,
@@ -1874,10 +2256,13 @@
       ]
     },
     "org.tron.common.crypto.SignUtils.fromComponents:([B[BBZ)Lorg/tron/common/crypto/SignatureInterface;" : {
-      "completeTestCount" : 0,
+      "completeTestCount" : 10,
       "incompleteTestCount" : 0,
       "perMethodTestability" : "T000",
-      "perMethodOutcome" : "T000",
+      "perMethodOutcome" : "R000",
+      "perTestOutcome" : {
+        "R000" : 10
+      },
       "lineNumbers" : [
         41,
         42,
@@ -1888,7 +2273,10 @@
       "completeTestCount" : 0,
       "incompleteTestCount" : 0,
       "perMethodTestability" : "T000",
-      "perMethodOutcome" : "T000",
+      "perMethodOutcome" : "W002",
+      "warnings" : {
+        "W002" : 7
+      },
       "lineNumbers" : [
         20,
         21,
@@ -1899,7 +2287,10 @@
       "completeTestCount" : 0,
       "incompleteTestCount" : 0,
       "perMethodTestability" : "T000",
-      "perMethodOutcome" : "T000",
+      "perMethodOutcome" : "W002",
+      "warnings" : {
+        "W002" : 3
+      },
       "lineNumbers" : [
         13,
         14,
@@ -1907,10 +2298,13 @@
       ]
     },
     "org.tron.common.crypto.SignUtils.signatureToAddress:([BLjava/lang/String;Z)[B" : {
-      "completeTestCount" : 0,
+      "completeTestCount" : 2,
       "incompleteTestCount" : 0,
       "perMethodTestability" : "T000",
-      "perMethodOutcome" : "T000",
+      "perMethodOutcome" : "R000",
+      "perTestOutcome" : {
+        "R000" : 2
+      },
       "lineNumbers" : [
         30,
         31,
@@ -1923,7 +2317,7 @@
       "completeTestCount" : 0,
       "incompleteTestCount" : 0,
       "perMethodTestability" : "T000",
-      "perMethodOutcome" : "T000",
+      "perMethodOutcome" : "R013",
       "lineNumbers" : [
         50,
         51,
@@ -2032,10 +2426,13 @@
       ]
     },
     "org.tron.common.crypto.cryptohash.DigestEngine.copyState:(Lorg/tron/common/crypto/cryptohash/DigestEngine;)Lorg/tron/common/crypto/cryptohash/Digest;" : {
-      "completeTestCount" : 0,
+      "completeTestCount" : 1,
       "incompleteTestCount" : 0,
       "perMethodTestability" : "T000",
-      "perMethodOutcome" : "T000",
+      "perMethodOutcome" : "R000",
+      "perTestOutcome" : {
+        "R000" : 1
+      },
       "lineNumbers" : [
         219,
         220,
@@ -2047,10 +2444,13 @@
       ]
     },
     "org.tron.common.crypto.cryptohash.DigestEngine.digest:()[B" : {
-      "completeTestCount" : 0,
+      "completeTestCount" : 1,
       "incompleteTestCount" : 0,
       "perMethodTestability" : "T000",
-      "perMethodOutcome" : "T000",
+      "perMethodOutcome" : "R000",
+      "perTestOutcome" : {
+        "R000" : 1
+      },
       "lineNumbers" : [
         83,
         84,
@@ -2059,20 +2459,26 @@
       ]
     },
     "org.tron.common.crypto.cryptohash.DigestEngine.digest:([B)[B" : {
-      "completeTestCount" : 0,
+      "completeTestCount" : 1,
       "incompleteTestCount" : 0,
       "perMethodTestability" : "T000",
-      "perMethodOutcome" : "T000",
+      "perMethodOutcome" : "R000",
+      "perTestOutcome" : {
+        "R000" : 1
+      },
       "lineNumbers" : [
         93,
         94
       ]
     },
     "org.tron.common.crypto.cryptohash.DigestEngine.digest:([BII)I" : {
-      "completeTestCount" : 0,
+      "completeTestCount" : 1,
       "incompleteTestCount" : 0,
       "perMethodTestability" : "T000",
-      "perMethodOutcome" : "T000",
+      "perMethodOutcome" : "R000",
+      "perTestOutcome" : {
+        "R000" : 1
+      },
       "lineNumbers" : [
         101,
         102,
@@ -2104,37 +2510,49 @@
       "perMethodOutcome" : "T010"
     },
     "org.tron.common.crypto.cryptohash.DigestEngine.flush:()I" : {
-      "completeTestCount" : 0,
+      "completeTestCount" : 1,
       "incompleteTestCount" : 0,
       "perMethodTestability" : "T000",
-      "perMethodOutcome" : "T000",
+      "perMethodOutcome" : "R000",
+      "perTestOutcome" : {
+        "R000" : 1
+      },
       "lineNumbers" : [
         183
       ]
     },
     "org.tron.common.crypto.cryptohash.DigestEngine.getBlockBuffer:()[B" : {
-      "completeTestCount" : 0,
+      "completeTestCount" : 1,
       "incompleteTestCount" : 0,
       "perMethodTestability" : "T000",
-      "perMethodOutcome" : "T000",
+      "perMethodOutcome" : "R000",
+      "perTestOutcome" : {
+        "R000" : 1
+      },
       "lineNumbers" : [
         196
       ]
     },
     "org.tron.common.crypto.cryptohash.DigestEngine.getBlockCount:()J" : {
-      "completeTestCount" : 0,
+      "completeTestCount" : 1,
       "incompleteTestCount" : 0,
       "perMethodTestability" : "T000",
-      "perMethodOutcome" : "T000",
+      "perMethodOutcome" : "R000",
+      "perTestOutcome" : {
+        "R000" : 1
+      },
       "lineNumbers" : [
         207
       ]
     },
     "org.tron.common.crypto.cryptohash.DigestEngine.getInternalBlockLength:()I" : {
-      "completeTestCount" : 0,
+      "completeTestCount" : 1,
       "incompleteTestCount" : 0,
       "perMethodTestability" : "T000",
-      "perMethodOutcome" : "T000",
+      "perMethodOutcome" : "R000",
+      "perTestOutcome" : {
+        "R000" : 1
+      },
       "lineNumbers" : [
         174
       ]
@@ -2149,7 +2567,7 @@
       "completeTestCount" : 0,
       "incompleteTestCount" : 0,
       "perMethodTestability" : "T000",
-      "perMethodOutcome" : "T000",
+      "perMethodOutcome" : "R004",
       "lineNumbers" : [
         118,
         119,
@@ -2158,10 +2576,13 @@
       ]
     },
     "org.tron.common.crypto.cryptohash.DigestEngine.update:(B)V" : {
-      "completeTestCount" : 0,
+      "completeTestCount" : 1,
       "incompleteTestCount" : 0,
       "perMethodTestability" : "T000",
-      "perMethodOutcome" : "T000",
+      "perMethodOutcome" : "R000",
+      "perTestOutcome" : {
+        "R000" : 1
+      },
       "lineNumbers" : [
         127,
         128,
@@ -2172,20 +2593,26 @@
       ]
     },
     "org.tron.common.crypto.cryptohash.DigestEngine.update:([B)V" : {
-      "completeTestCount" : 0,
+      "completeTestCount" : 1,
       "incompleteTestCount" : 0,
       "perMethodTestability" : "T000",
-      "perMethodOutcome" : "T000",
+      "perMethodOutcome" : "R000",
+      "perTestOutcome" : {
+        "R000" : 1
+      },
       "lineNumbers" : [
         139,
         140
       ]
     },
     "org.tron.common.crypto.cryptohash.DigestEngine.update:([BII)V" : {
-      "completeTestCount" : 0,
+      "completeTestCount" : 1,
       "incompleteTestCount" : 0,
       "perMethodTestability" : "T000",
-      "perMethodOutcome" : "T000",
+      "perMethodOutcome" : "R000",
+      "perTestOutcome" : {
+        "R000" : 1
+      },
       "lineNumbers" : [
         146,
         147,
@@ -2204,38 +2631,50 @@
       ]
     },
     "org.tron.common.crypto.cryptohash.Keccak256.<init>:()V" : {
-      "completeTestCount" : 0,
+      "completeTestCount" : 1,
       "incompleteTestCount" : 0,
       "perMethodTestability" : "T000",
-      "perMethodOutcome" : "T000",
+      "perMethodOutcome" : "R000",
+      "perTestOutcome" : {
+        "R000" : 1
+      },
       "lineNumbers" : [
         27,
         28
       ]
     },
     "org.tron.common.crypto.cryptohash.Keccak256.copy:()Lorg/tron/common/crypto/cryptohash/Digest;" : {
-      "completeTestCount" : 0,
+      "completeTestCount" : 1,
       "incompleteTestCount" : 0,
       "perMethodTestability" : "T000",
-      "perMethodOutcome" : "T000",
+      "perMethodOutcome" : "R000",
+      "perTestOutcome" : {
+        "R000" : 1
+      },
       "lineNumbers" : [
         31
       ]
     },
     "org.tron.common.crypto.cryptohash.Keccak256.engineDigest:()[B" : {
-      "completeTestCount" : 0,
+      "completeTestCount" : 1,
       "incompleteTestCount" : 0,
       "perMethodTestability" : "T000",
-      "perMethodOutcome" : "T000",
+      "perMethodOutcome" : "R000",
+      "perTestOutcome" : {
+        "R000" : 1
+      },
       "lineNumbers" : [
         40
       ]
     },
     "org.tron.common.crypto.cryptohash.Keccak256.engineGetDigestLength:()I" : {
-      "completeTestCount" : 0,
+      "completeTestCount" : 1,
       "incompleteTestCount" : 0,
       "perMethodTestability" : "T000",
-      "perMethodOutcome" : "T000",
+      "perMethodOutcome" : "R000",
+      "perTestOutcome" : {
+        "R000" : 1
+      },
       "lineNumbers" : [
         35
       ]
@@ -2244,7 +2683,7 @@
       "completeTestCount" : 0,
       "incompleteTestCount" : 0,
       "perMethodTestability" : "T021",
-      "perMethodOutcome" : "T021",
+      "perMethodOutcome" : "R002",
       "lineNumbers" : [
         45
       ]
@@ -2253,7 +2692,7 @@
       "completeTestCount" : 0,
       "incompleteTestCount" : 0,
       "perMethodTestability" : "T021",
-      "perMethodOutcome" : "T021",
+      "perMethodOutcome" : "R002",
       "lineNumbers" : [
         49
       ]
@@ -2277,38 +2716,50 @@
       ]
     },
     "org.tron.common.crypto.cryptohash.Keccak512.<init>:()V" : {
-      "completeTestCount" : 0,
+      "completeTestCount" : 1,
       "incompleteTestCount" : 0,
       "perMethodTestability" : "T000",
-      "perMethodOutcome" : "T000",
+      "perMethodOutcome" : "R000",
+      "perTestOutcome" : {
+        "R000" : 1
+      },
       "lineNumbers" : [
         27,
         28
       ]
     },
     "org.tron.common.crypto.cryptohash.Keccak512.copy:()Lorg/tron/common/crypto/cryptohash/Digest;" : {
-      "completeTestCount" : 0,
+      "completeTestCount" : 1,
       "incompleteTestCount" : 0,
       "perMethodTestability" : "T000",
-      "perMethodOutcome" : "T000",
+      "perMethodOutcome" : "R000",
+      "perTestOutcome" : {
+        "R000" : 1
+      },
       "lineNumbers" : [
         31
       ]
     },
     "org.tron.common.crypto.cryptohash.Keccak512.engineDigest:()[B" : {
-      "completeTestCount" : 0,
+      "completeTestCount" : 1,
       "incompleteTestCount" : 0,
       "perMethodTestability" : "T000",
-      "perMethodOutcome" : "T000",
+      "perMethodOutcome" : "R000",
+      "perTestOutcome" : {
+        "R000" : 1
+      },
       "lineNumbers" : [
         40
       ]
     },
     "org.tron.common.crypto.cryptohash.Keccak512.engineGetDigestLength:()I" : {
-      "completeTestCount" : 0,
+      "completeTestCount" : 1,
       "incompleteTestCount" : 0,
       "perMethodTestability" : "T000",
-      "perMethodOutcome" : "T000",
+      "perMethodOutcome" : "R000",
+      "perTestOutcome" : {
+        "R000" : 1
+      },
       "lineNumbers" : [
         35
       ]
@@ -2317,7 +2768,7 @@
       "completeTestCount" : 0,
       "incompleteTestCount" : 0,
       "perMethodTestability" : "T021",
-      "perMethodOutcome" : "T021",
+      "perMethodOutcome" : "R002",
       "lineNumbers" : [
         45
       ]
@@ -2326,7 +2777,7 @@
       "completeTestCount" : 0,
       "incompleteTestCount" : 0,
       "perMethodTestability" : "T021",
-      "perMethodOutcome" : "T021",
+      "perMethodOutcome" : "R002",
       "lineNumbers" : [
         49
       ]
@@ -2352,11 +2803,8 @@
     "org.tron.common.crypto.cryptohash.KeccakCore.<clinit>:()V" : {
       "completeTestCount" : 0,
       "incompleteTestCount" : 0,
-      "perMethodTestability" : "T012",
-      "perMethodOutcome" : "T012",
-      "lineNumbers" : [
-        23
-      ]
+      "perMethodTestability" : "T023",
+      "perMethodOutcome" : "T023"
     },
     "org.tron.common.crypto.cryptohash.KeccakCore.<init>:(Ljava/lang/String;)V" : {
       "completeTestCount" : 0,
@@ -2369,10 +2817,13 @@
       ]
     },
     "org.tron.common.crypto.cryptohash.KeccakCore.copyState:(Lorg/tron/common/crypto/cryptohash/KeccakCore;)Lorg/tron/common/crypto/cryptohash/Digest;" : {
-      "completeTestCount" : 0,
+      "completeTestCount" : 1,
       "incompleteTestCount" : 0,
       "perMethodTestability" : "T000",
-      "perMethodOutcome" : "T000",
+      "perMethodOutcome" : "R000",
+      "perTestOutcome" : {
+        "R000" : 1
+      },
       "lineNumbers" : [
         543,
         544
@@ -2391,7 +2842,7 @@
       "completeTestCount" : 0,
       "incompleteTestCount" : 0,
       "perMethodTestability" : "T000",
-      "perMethodOutcome" : "T000",
+      "perMethodOutcome" : "R004",
       "lineNumbers" : [
         521,
         522,
@@ -2403,7 +2854,7 @@
       "completeTestCount" : 0,
       "incompleteTestCount" : 0,
       "perMethodTestability" : "T000",
-      "perMethodOutcome" : "T000",
+      "perMethodOutcome" : "R013",
       "lineNumbers" : [
         495,
         496,
@@ -2468,17 +2919,20 @@
       "completeTestCount" : 0,
       "incompleteTestCount" : 0,
       "perMethodTestability" : "T000",
-      "perMethodOutcome" : "T000",
+      "perMethodOutcome" : "R004",
       "lineNumbers" : [
         82,
         83
       ]
     },
     "org.tron.common.crypto.cryptohash.KeccakCore.getBlockLength:()I" : {
-      "completeTestCount" : 0,
+      "completeTestCount" : 1,
       "incompleteTestCount" : 0,
       "perMethodTestability" : "T000",
-      "perMethodOutcome" : "T000",
+      "perMethodOutcome" : "R000",
+      "perTestOutcome" : {
+        "R000" : 1
+      },
       "lineNumbers" : [
         527
       ]
@@ -2487,7 +2941,7 @@
       "completeTestCount" : 0,
       "incompleteTestCount" : 0,
       "perMethodTestability" : "T000",
-      "perMethodOutcome" : "T000",
+      "perMethodOutcome" : "R004",
       "lineNumbers" : [
         87,
         88,
@@ -2874,10 +3328,13 @@
       ]
     },
     "org.tron.common.crypto.cryptohash.KeccakCore.toString:()Ljava/lang/String;" : {
-      "completeTestCount" : 0,
+      "completeTestCount" : 2,
       "incompleteTestCount" : 0,
       "perMethodTestability" : "T000",
-      "perMethodOutcome" : "T000",
+      "perMethodOutcome" : "R000",
+      "perTestOutcome" : {
+        "R000" : 2
+      },
       "lineNumbers" : [
         548
       ]
@@ -2885,19 +3342,8 @@
     "org.tron.common.crypto.jce.ECAlgorithmParameters$Holder.<clinit>:()V" : {
       "completeTestCount" : 0,
       "incompleteTestCount" : 0,
-      "perMethodTestability" : "T012",
-      "perMethodOutcome" : "T012",
-      "lineNumbers" : [
-        58,
-        63,
-        64,
-        71,
-        65,
-        66,
-        68,
-        69,
-        72
-      ]
+      "perMethodTestability" : "T023",
+      "perMethodOutcome" : "T023"
     },
     "org.tron.common.crypto.jce.ECAlgorithmParameters$Holder.<init>:()V" : {
       "completeTestCount" : 0,
@@ -2928,10 +3374,13 @@
       ]
     },
     "org.tron.common.crypto.jce.ECAlgorithmParameters.getASN1Encoding:()[B" : {
-      "completeTestCount" : 0,
+      "completeTestCount" : 1,
       "incompleteTestCount" : 0,
       "perMethodTestability" : "T000",
-      "perMethodOutcome" : "T000",
+      "perMethodOutcome" : "R000",
+      "perTestOutcome" : {
+        "R000" : 1
+      },
       "lineNumbers" : [
         47,
         48,
@@ -2939,10 +3388,13 @@
       ]
     },
     "org.tron.common.crypto.jce.ECAlgorithmParameters.getParameterSpec:()Ljava/security/spec/ECParameterSpec;" : {
-      "completeTestCount" : 0,
+      "completeTestCount" : 1,
       "incompleteTestCount" : 0,
       "perMethodTestability" : "T000",
-      "perMethodOutcome" : "T000",
+      "perMethodOutcome" : "R000",
+      "perTestOutcome" : {
+        "R000" : 1
+      },
       "lineNumbers" : [
         38,
         39,
@@ -2960,10 +3412,13 @@
       ]
     },
     "org.tron.common.crypto.jce.ECKeyAgreement.getInstance:()Ljavax/crypto/KeyAgreement;" : {
-      "completeTestCount" : 0,
+      "completeTestCount" : 1,
       "incompleteTestCount" : 0,
       "perMethodTestability" : "T000",
-      "perMethodOutcome" : "T000",
+      "perMethodOutcome" : "R000",
+      "perTestOutcome" : {
+        "R000" : 1
+      },
       "lineNumbers" : [
         38,
         39,
@@ -2974,7 +3429,7 @@
       "completeTestCount" : 0,
       "incompleteTestCount" : 0,
       "perMethodTestability" : "T000",
-      "perMethodOutcome" : "T000",
+      "perMethodOutcome" : "R013",
       "lineNumbers" : [
         47,
         48,
@@ -2982,10 +3437,13 @@
       ]
     },
     "org.tron.common.crypto.jce.ECKeyAgreement.getInstance:(Ljava/security/Provider;)Ljavax/crypto/KeyAgreement;" : {
-      "completeTestCount" : 0,
+      "completeTestCount" : 1,
       "incompleteTestCount" : 0,
       "perMethodTestability" : "T000",
-      "perMethodOutcome" : "T000",
+      "perMethodOutcome" : "R000",
+      "perTestOutcome" : {
+        "R000" : 1
+      },
       "lineNumbers" : [
         55,
         56,
@@ -2995,15 +3453,8 @@
     "org.tron.common.crypto.jce.ECKeyFactory$Holder.<clinit>:()V" : {
       "completeTestCount" : 0,
       "incompleteTestCount" : 0,
-      "perMethodTestability" : "T012",
-      "perMethodOutcome" : "T012",
-      "lineNumbers" : [
-        63,
-        66,
-        64,
-        65,
-        67
-      ]
+      "perMethodTestability" : "T023",
+      "perMethodOutcome" : "T023"
     },
     "org.tron.common.crypto.jce.ECKeyFactory$Holder.<init>:()V" : {
       "completeTestCount" : 0,
@@ -3034,10 +3485,13 @@
       ]
     },
     "org.tron.common.crypto.jce.ECKeyFactory.getInstance:()Ljava/security/KeyFactory;" : {
-      "completeTestCount" : 0,
+      "completeTestCount" : 1,
       "incompleteTestCount" : 0,
       "perMethodTestability" : "T000",
-      "perMethodOutcome" : "T000",
+      "perMethodOutcome" : "R000",
+      "perTestOutcome" : {
+        "R000" : 1
+      },
       "lineNumbers" : [
         37
       ]
@@ -3046,7 +3500,7 @@
       "completeTestCount" : 0,
       "incompleteTestCount" : 0,
       "perMethodTestability" : "T000",
-      "perMethodOutcome" : "T000",
+      "perMethodOutcome" : "R013",
       "lineNumbers" : [
         43,
         44,
@@ -3054,10 +3508,13 @@
       ]
     },
     "org.tron.common.crypto.jce.ECKeyFactory.getInstance:(Ljava/security/Provider;)Ljava/security/KeyFactory;" : {
-      "completeTestCount" : 0,
+      "completeTestCount" : 1,
       "incompleteTestCount" : 0,
       "perMethodTestability" : "T000",
-      "perMethodOutcome" : "T000",
+      "perMethodOutcome" : "R000",
+      "perTestOutcome" : {
+        "R000" : 1
+      },
       "lineNumbers" : [
         51,
         52,
@@ -3067,18 +3524,8 @@
     "org.tron.common.crypto.jce.ECKeyPairGenerator$Holder.<clinit>:()V" : {
       "completeTestCount" : 0,
       "incompleteTestCount" : 0,
-      "perMethodTestability" : "T012",
-      "perMethodOutcome" : "T012",
-      "lineNumbers" : [
-        85,
-        86,
-        91,
-        87,
-        88,
-        89,
-        90,
-        92
-      ]
+      "perMethodTestability" : "T023",
+      "perMethodOutcome" : "T023"
     },
     "org.tron.common.crypto.jce.ECKeyPairGenerator$Holder.<init>:()V" : {
       "completeTestCount" : 0,
@@ -3101,11 +3548,8 @@
     "org.tron.common.crypto.jce.ECKeyPairGenerator.<clinit>:()V" : {
       "completeTestCount" : 0,
       "incompleteTestCount" : 0,
-      "perMethodTestability" : "T012",
-      "perMethodOutcome" : "T012",
-      "lineNumbers" : [
-        41
-      ]
+      "perMethodTestability" : "T023",
+      "perMethodOutcome" : "T023"
     },
     "org.tron.common.crypto.jce.ECKeyPairGenerator.<init>:()V" : {
       "completeTestCount" : 0,
@@ -3127,10 +3571,13 @@
       ]
     },
     "org.tron.common.crypto.jce.ECKeyPairGenerator.generateKeyPair:()Ljava/security/KeyPair;" : {
-      "completeTestCount" : 0,
+      "completeTestCount" : 1,
       "incompleteTestCount" : 0,
       "perMethodTestability" : "T000",
-      "perMethodOutcome" : "T000",
+      "perMethodOutcome" : "R000",
+      "perTestOutcome" : {
+        "R000" : 1
+      },
       "lineNumbers" : [
         48
       ]
@@ -3139,7 +3586,7 @@
       "completeTestCount" : 0,
       "incompleteTestCount" : 0,
       "perMethodTestability" : "T000",
-      "perMethodOutcome" : "T000",
+      "perMethodOutcome" : "R013",
       "lineNumbers" : [
         54,
         55,
@@ -3152,10 +3599,13 @@
       ]
     },
     "org.tron.common.crypto.jce.ECKeyPairGenerator.getInstance:(Ljava/security/Provider;Ljava/security/SecureRandom;)Ljava/security/KeyPairGenerator;" : {
-      "completeTestCount" : 0,
+      "completeTestCount" : 1,
       "incompleteTestCount" : 0,
       "perMethodTestability" : "T000",
-      "perMethodOutcome" : "T000",
+      "perMethodOutcome" : "R000",
+      "perTestOutcome" : {
+        "R000" : 1
+      },
       "lineNumbers" : [
         68,
         69,
@@ -3178,10 +3628,13 @@
       ]
     },
     "org.tron.common.crypto.jce.ECSignatureFactory.getRawInstance:()Ljava/security/Signature;" : {
-      "completeTestCount" : 0,
+      "completeTestCount" : 1,
       "incompleteTestCount" : 0,
       "perMethodTestability" : "T000",
-      "perMethodOutcome" : "T000",
+      "perMethodOutcome" : "R000",
+      "perTestOutcome" : {
+        "R000" : 1
+      },
       "lineNumbers" : [
         38,
         39,
@@ -3192,7 +3645,7 @@
       "completeTestCount" : 0,
       "incompleteTestCount" : 0,
       "perMethodTestability" : "T000",
-      "perMethodOutcome" : "T000",
+      "perMethodOutcome" : "R013",
       "lineNumbers" : [
         47,
         48,
@@ -3200,10 +3653,13 @@
       ]
     },
     "org.tron.common.crypto.jce.ECSignatureFactory.getRawInstance:(Ljava/security/Provider;)Ljava/security/Signature;" : {
-      "completeTestCount" : 0,
+      "completeTestCount" : 1,
       "incompleteTestCount" : 0,
       "perMethodTestability" : "T000",
-      "perMethodOutcome" : "T000",
+      "perMethodOutcome" : "R000",
+      "perTestOutcome" : {
+        "R000" : 1
+      },
       "lineNumbers" : [
         55,
         56,
@@ -3213,15 +3669,8 @@
     "org.tron.common.crypto.jce.TronCastleProvider$Holder.<clinit>:()V" : {
       "completeTestCount" : 0,
       "incompleteTestCount" : 0,
-      "perMethodTestability" : "T012",
-      "perMethodOutcome" : "T012",
-      "lineNumbers" : [
-        38,
-        40,
-        41,
-        42,
-        43
-      ]
+      "perMethodTestability" : "T023",
+      "perMethodOutcome" : "T023"
     },
     "org.tron.common.crypto.jce.TronCastleProvider$Holder.<init>:()V" : {
       "completeTestCount" : 0,
@@ -3251,19 +3700,25 @@
       ]
     },
     "org.tron.common.crypto.jce.TronCastleProvider.getInstance:()Ljava/security/Provider;" : {
-      "completeTestCount" : 0,
+      "completeTestCount" : 1,
       "incompleteTestCount" : 0,
       "perMethodTestability" : "T000",
-      "perMethodOutcome" : "T000",
+      "perMethodOutcome" : "R000",
+      "perTestOutcome" : {
+        "R000" : 1
+      },
       "lineNumbers" : [
         30
       ]
     },
     "org.tron.common.crypto.sm2.SM2$SM2Signature.<init>:(Ljava/math/BigInteger;Ljava/math/BigInteger;)V" : {
-      "completeTestCount" : 0,
+      "completeTestCount" : 1,
       "incompleteTestCount" : 0,
       "perMethodTestability" : "T005",
-      "perMethodOutcome" : "T005",
+      "perMethodOutcome" : "R000",
+      "perTestOutcome" : {
+        "R000" : 1
+      },
       "lineNumbers" : [
         996,
         997,
@@ -3272,10 +3727,13 @@
       ]
     },
     "org.tron.common.crypto.sm2.SM2$SM2Signature.<init>:([B[BB)V" : {
-      "completeTestCount" : 0,
+      "completeTestCount" : 1,
       "incompleteTestCount" : 0,
       "perMethodTestability" : "T000",
-      "perMethodOutcome" : "T000",
+      "perMethodOutcome" : "R000",
+      "perTestOutcome" : {
+        "R000" : 1
+      },
       "lineNumbers" : [
         1001,
         1002,
@@ -3285,10 +3743,13 @@
       ]
     },
     "org.tron.common.crypto.sm2.SM2$SM2Signature.decodeFromDER:([B)Lorg/tron/common/crypto/sm2/SM2$SM2Signature;" : {
-      "completeTestCount" : 0,
+      "completeTestCount" : 26,
       "incompleteTestCount" : 0,
       "perMethodTestability" : "T000",
-      "perMethodOutcome" : "T000",
+      "perMethodOutcome" : "R000",
+      "perTestOutcome" : {
+        "R000" : 26
+      },
       "lineNumbers" : [
         1051,
         1053,
@@ -3320,7 +3781,7 @@
       "completeTestCount" : 0,
       "incompleteTestCount" : 0,
       "perMethodTestability" : "T000",
-      "perMethodOutcome" : "T000",
+      "perMethodOutcome" : "R013",
       "lineNumbers" : [
         1120,
         1121,
@@ -3342,10 +3803,13 @@
       ]
     },
     "org.tron.common.crypto.sm2.SM2$SM2Signature.fromComponents:([B[BB)Lorg/tron/common/crypto/sm2/SM2$SM2Signature;" : {
-      "completeTestCount" : 0,
+      "completeTestCount" : 1,
       "incompleteTestCount" : 0,
       "perMethodTestability" : "T000",
-      "perMethodOutcome" : "T000",
+      "perMethodOutcome" : "R000",
+      "perTestOutcome" : {
+        "R000" : 1
+      },
       "lineNumbers" : [
         1025,
         1026,
@@ -3356,7 +3820,7 @@
       "completeTestCount" : 0,
       "incompleteTestCount" : 0,
       "perMethodTestability" : "T000",
-      "perMethodOutcome" : "T000",
+      "perMethodOutcome" : "R013",
       "lineNumbers" : [
         1137,
         1138,
@@ -3364,10 +3828,13 @@
       ]
     },
     "org.tron.common.crypto.sm2.SM2$SM2Signature.toBase64:()Ljava/lang/String;" : {
-      "completeTestCount" : 0,
+      "completeTestCount" : 1,
       "incompleteTestCount" : 0,
       "perMethodTestability" : "T000",
-      "perMethodOutcome" : "T000",
+      "perMethodOutcome" : "R000",
+      "perTestOutcome" : {
+        "R000" : 1
+      },
       "lineNumbers" : [
         1094,
         1096,
@@ -3377,10 +3844,13 @@
       ]
     },
     "org.tron.common.crypto.sm2.SM2$SM2Signature.toByteArray:()[B" : {
-      "completeTestCount" : 0,
+      "completeTestCount" : 2,
       "incompleteTestCount" : 0,
       "perMethodTestability" : "T000",
-      "perMethodOutcome" : "T000",
+      "perMethodOutcome" : "R000",
+      "perTestOutcome" : {
+        "R000" : 2
+      },
       "lineNumbers" : [
         1104,
         1108,
@@ -3390,28 +3860,37 @@
       ]
     },
     "org.tron.common.crypto.sm2.SM2$SM2Signature.toHex:()Ljava/lang/String;" : {
-      "completeTestCount" : 0,
+      "completeTestCount" : 2,
       "incompleteTestCount" : 0,
       "perMethodTestability" : "T000",
-      "perMethodOutcome" : "T000",
+      "perMethodOutcome" : "R000",
+      "perTestOutcome" : {
+        "R000" : 2
+      },
       "lineNumbers" : [
         1115
       ]
     },
     "org.tron.common.crypto.sm2.SM2$SM2Signature.validateComponents:()Z" : {
-      "completeTestCount" : 0,
+      "completeTestCount" : 5,
       "incompleteTestCount" : 0,
       "perMethodTestability" : "T000",
-      "perMethodOutcome" : "T000",
+      "perMethodOutcome" : "R000",
+      "perTestOutcome" : {
+        "R000" : 5
+      },
       "lineNumbers" : [
         1086
       ]
     },
     "org.tron.common.crypto.sm2.SM2$SM2Signature.validateComponents:(Ljava/math/BigInteger;Ljava/math/BigInteger;B)Z" : {
-      "completeTestCount" : 0,
+      "completeTestCount" : 5,
       "incompleteTestCount" : 0,
       "perMethodTestability" : "T000",
-      "perMethodOutcome" : "T000",
+      "perMethodOutcome" : "R000",
+      "perTestOutcome" : {
+        "R000" : 5
+      },
       "lineNumbers" : [
         1033,
         1034,
@@ -3427,39 +3906,33 @@
     "org.tron.common.crypto.sm2.SM2.<clinit>:()V" : {
       "completeTestCount" : 0,
       "incompleteTestCount" : 0,
-      "perMethodTestability" : "T012",
-      "perMethodOutcome" : "T012",
-      "lineNumbers" : [
-        49,
-        52,
-        54,
-        56,
-        58,
-        60,
-        62,
-        74,
-        75,
-        76,
-        77,
-        78,
-        79
-      ]
+      "perMethodTestability" : "T023",
+      "perMethodOutcome" : "T023"
     },
     "org.tron.common.crypto.sm2.SM2.<init>:()V" : {
       "completeTestCount" : 0,
       "incompleteTestCount" : 0,
       "perMethodTestability" : "T000",
-      "perMethodOutcome" : "T000",
+      "perMethodOutcome" : "W002",
+      "warnings" : {
+        "W002" : 1
+      },
       "lineNumbers" : [
         92,
         93
       ]
     },
     "org.tron.common.crypto.sm2.SM2.<init>:(Ljava/math/BigInteger;Lorg/bouncycastle/math/ec/ECPoint;)V" : {
-      "completeTestCount" : 0,
+      "completeTestCount" : 1,
       "incompleteTestCount" : 0,
       "perMethodTestability" : "T000",
-      "perMethodOutcome" : "T000",
+      "perMethodOutcome" : "R000",
+      "perTestOutcome" : {
+        "R000" : 1
+      },
+      "warnings" : {
+        "W002" : 1
+      },
       "lineNumbers" : [
         163,
         164,
@@ -3468,10 +3941,13 @@
       ]
     },
     "org.tron.common.crypto.sm2.SM2.<init>:(Ljava/security/PrivateKey;Lorg/bouncycastle/math/ec/ECPoint;)V" : {
-      "completeTestCount" : 0,
+      "completeTestCount" : 5,
       "incompleteTestCount" : 0,
       "perMethodTestability" : "T000",
-      "perMethodOutcome" : "T000",
+      "perMethodOutcome" : "R000",
+      "perTestOutcome" : {
+        "R000" : 5
+      },
       "lineNumbers" : [
         139,
         141,
@@ -3489,7 +3965,10 @@
       "completeTestCount" : 0,
       "incompleteTestCount" : 0,
       "perMethodTestability" : "T000",
-      "perMethodOutcome" : "T000",
+      "perMethodOutcome" : "W002",
+      "warnings" : {
+        "W002" : 2
+      },
       "lineNumbers" : [
         106,
         108,
@@ -3505,10 +3984,16 @@
       ]
     },
     "org.tron.common.crypto.sm2.SM2.<init>:([BZ)V" : {
-      "completeTestCount" : 0,
+      "completeTestCount" : 1,
       "incompleteTestCount" : 0,
       "perMethodTestability" : "T000",
-      "perMethodOutcome" : "T000",
+      "perMethodOutcome" : "R000",
+      "perTestOutcome" : {
+        "R000" : 1
+      },
+      "warnings" : {
+        "W002" : 4
+      },
       "lineNumbers" : [
         121,
         122,
@@ -3525,7 +4010,10 @@
       "completeTestCount" : 0,
       "incompleteTestCount" : 0,
       "perMethodTestability" : "T000",
-      "perMethodOutcome" : "T000",
+      "perMethodOutcome" : "W002",
+      "warnings" : {
+        "W002" : 1
+      },
       "lineNumbers" : [
         534,
         535,
@@ -3554,10 +4042,13 @@
       ]
     },
     "org.tron.common.crypto.sm2.SM2.compressPoint:(Lorg/bouncycastle/math/ec/ECPoint;)Lorg/bouncycastle/math/ec/ECPoint;" : {
-      "completeTestCount" : 0,
+      "completeTestCount" : 1,
       "incompleteTestCount" : 0,
       "perMethodTestability" : "T000",
-      "perMethodOutcome" : "T000",
+      "perMethodOutcome" : "R000",
+      "perTestOutcome" : {
+        "R000" : 1
+      },
       "lineNumbers" : [
         218
       ]
@@ -3577,10 +4068,13 @@
       ]
     },
     "org.tron.common.crypto.sm2.SM2.decompressPoint:(Lorg/bouncycastle/math/ec/ECPoint;)Lorg/bouncycastle/math/ec/ECPoint;" : {
-      "completeTestCount" : 0,
+      "completeTestCount" : 1,
       "incompleteTestCount" : 0,
       "perMethodTestability" : "T000",
-      "perMethodOutcome" : "T000",
+      "perMethodOutcome" : "R000",
+      "perTestOutcome" : {
+        "R000" : 1
+      },
       "lineNumbers" : [
         230
       ]
@@ -3589,7 +4083,10 @@
       "completeTestCount" : 0,
       "incompleteTestCount" : 0,
       "perMethodTestability" : "T000",
-      "perMethodOutcome" : "T000",
+      "perMethodOutcome" : "W002",
+      "warnings" : {
+        "W002" : 5
+      },
       "lineNumbers" : [
         959,
         960,
@@ -3614,10 +4111,13 @@
       ]
     },
     "org.tron.common.crypto.sm2.SM2.fromNodeId:([B)Lorg/tron/common/crypto/sm2/SM2;" : {
-      "completeTestCount" : 0,
+      "completeTestCount" : 1,
       "incompleteTestCount" : 0,
       "perMethodTestability" : "T000",
-      "perMethodOutcome" : "T000",
+      "perMethodOutcome" : "R000",
+      "perTestOutcome" : {
+        "R000" : 1
+      },
       "lineNumbers" : [
         341,
         342,
@@ -3630,16 +4130,25 @@
       "completeTestCount" : 0,
       "incompleteTestCount" : 0,
       "perMethodTestability" : "T000",
-      "perMethodOutcome" : "T000",
+      "perMethodOutcome" : "W002",
+      "warnings" : {
+        "W002" : 4
+      },
       "lineNumbers" : [
         240
       ]
     },
     "org.tron.common.crypto.sm2.SM2.fromPrivate:([B)Lorg/tron/common/crypto/sm2/SM2;" : {
-      "completeTestCount" : 0,
+      "completeTestCount" : 1,
       "incompleteTestCount" : 0,
       "perMethodTestability" : "T000",
-      "perMethodOutcome" : "T000",
+      "perMethodOutcome" : "R000",
+      "perTestOutcome" : {
+        "R000" : 1
+      },
+      "warnings" : {
+        "W002" : 3
+      },
       "lineNumbers" : [
         250,
         251,
@@ -3647,19 +4156,31 @@
       ]
     },
     "org.tron.common.crypto.sm2.SM2.fromPrivateAndPrecalculatedPublic:(Ljava/math/BigInteger;Lorg/bouncycastle/math/ec/ECPoint;)Lorg/tron/common/crypto/sm2/SM2;" : {
-      "completeTestCount" : 0,
+      "completeTestCount" : 1,
       "incompleteTestCount" : 0,
       "perMethodTestability" : "T000",
-      "perMethodOutcome" : "T000",
+      "perMethodOutcome" : "R000",
+      "perTestOutcome" : {
+        "R000" : 1
+      },
+      "warnings" : {
+        "W002" : 1
+      },
       "lineNumbers" : [
         267
       ]
     },
     "org.tron.common.crypto.sm2.SM2.fromPrivateAndPrecalculatedPublic:([B[B)Lorg/tron/common/crypto/sm2/SM2;" : {
-      "completeTestCount" : 0,
+      "completeTestCount" : 2,
       "incompleteTestCount" : 0,
       "perMethodTestability" : "T000",
-      "perMethodOutcome" : "T000",
+      "perMethodOutcome" : "R000",
+      "perTestOutcome" : {
+        "R000" : 2
+      },
+      "warnings" : {
+        "W002" : 1
+      },
       "lineNumbers" : [
         281,
         282,
@@ -3669,28 +4190,40 @@
       ]
     },
     "org.tron.common.crypto.sm2.SM2.fromPublicOnly:(Lorg/bouncycastle/math/ec/ECPoint;)Lorg/tron/common/crypto/sm2/SM2;" : {
-      "completeTestCount" : 0,
+      "completeTestCount" : 2,
       "incompleteTestCount" : 0,
       "perMethodTestability" : "T000",
-      "perMethodOutcome" : "T000",
+      "perMethodOutcome" : "R000",
+      "perTestOutcome" : {
+        "R000" : 2
+      },
       "lineNumbers" : [
         295
       ]
     },
     "org.tron.common.crypto.sm2.SM2.fromPublicOnly:([B)Lorg/tron/common/crypto/sm2/SM2;" : {
-      "completeTestCount" : 0,
+      "completeTestCount" : 1,
       "incompleteTestCount" : 0,
       "perMethodTestability" : "T000",
-      "perMethodOutcome" : "T000",
+      "perMethodOutcome" : "R000",
+      "perTestOutcome" : {
+        "R000" : 1
+      },
       "lineNumbers" : [
         306
       ]
     },
     "org.tron.common.crypto.sm2.SM2.getAddress:()[B" : {
-      "completeTestCount" : 0,
+      "completeTestCount" : 2,
       "incompleteTestCount" : 0,
       "perMethodTestability" : "T000",
-      "perMethodOutcome" : "T000",
+      "perMethodOutcome" : "R000",
+      "perTestOutcome" : {
+        "R000" : 2
+      },
+      "warnings" : {
+        "W002" : 1
+      },
       "lineNumbers" : [
         426,
         427,
@@ -3698,10 +4231,16 @@
       ]
     },
     "org.tron.common.crypto.sm2.SM2.getNodeId:()[B" : {
-      "completeTestCount" : 0,
+      "completeTestCount" : 2,
       "incompleteTestCount" : 0,
       "perMethodTestability" : "T000",
-      "perMethodOutcome" : "T000",
+      "perMethodOutcome" : "R000",
+      "perTestOutcome" : {
+        "R000" : 2
+      },
+      "warnings" : {
+        "W002" : 1
+      },
       "lineNumbers" : [
         853,
         854,
@@ -3709,10 +4248,16 @@
       ]
     },
     "org.tron.common.crypto.sm2.SM2.getPrivKey:()Ljava/math/BigInteger;" : {
-      "completeTestCount" : 0,
+      "completeTestCount" : 1,
       "incompleteTestCount" : 0,
       "perMethodTestability" : "T000",
-      "perMethodOutcome" : "T000",
+      "perMethodOutcome" : "R000",
+      "perTestOutcome" : {
+        "R000" : 1
+      },
+      "warnings" : {
+        "W002" : 1
+      },
       "lineNumbers" : [
         877,
         878,
@@ -3722,10 +4267,13 @@
       ]
     },
     "org.tron.common.crypto.sm2.SM2.getPrivKeyBytes:()[B" : {
-      "completeTestCount" : 0,
+      "completeTestCount" : 1,
       "incompleteTestCount" : 0,
       "perMethodTestability" : "T000",
-      "perMethodOutcome" : "T000",
+      "perMethodOutcome" : "R000",
+      "perTestOutcome" : {
+        "R000" : 1
+      },
       "lineNumbers" : [
         948,
         949,
@@ -3735,19 +4283,31 @@
       ]
     },
     "org.tron.common.crypto.sm2.SM2.getPrivateKey:()[B" : {
-      "completeTestCount" : 0,
+      "completeTestCount" : 1,
       "incompleteTestCount" : 0,
       "perMethodTestability" : "T000",
-      "perMethodOutcome" : "T000",
+      "perMethodOutcome" : "R000",
+      "perTestOutcome" : {
+        "R000" : 1
+      },
+      "warnings" : {
+        "W002" : 1
+      },
       "lineNumbers" : [
         406
       ]
     },
     "org.tron.common.crypto.sm2.SM2.getPubKey:()[B" : {
-      "completeTestCount" : 0,
+      "completeTestCount" : 2,
       "incompleteTestCount" : 0,
       "perMethodTestability" : "T000",
-      "perMethodOutcome" : "T000",
+      "perMethodOutcome" : "R000",
+      "perTestOutcome" : {
+        "R000" : 2
+      },
+      "warnings" : {
+        "W002" : 2
+      },
       "lineNumbers" : [
         416
       ]
@@ -3756,16 +4316,25 @@
       "completeTestCount" : 0,
       "incompleteTestCount" : 0,
       "perMethodTestability" : "T001",
-      "perMethodOutcome" : "T001",
+      "perMethodOutcome" : "W002",
+      "warnings" : {
+        "W002" : 1
+      },
       "lineNumbers" : [
         866
       ]
     },
     "org.tron.common.crypto.sm2.SM2.getSM2SignerForHash:()Lorg/tron/common/crypto/sm2/SM2Signer;" : {
-      "completeTestCount" : 0,
+      "completeTestCount" : 3,
       "incompleteTestCount" : 0,
       "perMethodTestability" : "T000",
-      "perMethodOutcome" : "T000",
+      "perMethodOutcome" : "R000",
+      "perTestOutcome" : {
+        "R000" : 3
+      },
+      "warnings" : {
+        "W002" : 2
+      },
       "lineNumbers" : [
         601,
         602,
@@ -3787,19 +4356,31 @@
       ]
     },
     "org.tron.common.crypto.sm2.SM2.hasPrivKey:()Z" : {
-      "completeTestCount" : 0,
+      "completeTestCount" : 1,
       "incompleteTestCount" : 0,
       "perMethodTestability" : "T000",
-      "perMethodOutcome" : "T000",
+      "perMethodOutcome" : "R000",
+      "perTestOutcome" : {
+        "R000" : 1
+      },
+      "warnings" : {
+        "W002" : 1
+      },
       "lineNumbers" : [
         845
       ]
     },
     "org.tron.common.crypto.sm2.SM2.hash:([B)[B" : {
-      "completeTestCount" : 0,
+      "completeTestCount" : 3,
       "incompleteTestCount" : 0,
       "perMethodTestability" : "T000",
-      "perMethodOutcome" : "T000",
+      "perMethodOutcome" : "R000",
+      "perTestOutcome" : {
+        "R000" : 3
+      },
+      "warnings" : {
+        "W002" : 1
+      },
       "lineNumbers" : [
         400,
         401
@@ -3809,7 +4390,10 @@
       "completeTestCount" : 0,
       "incompleteTestCount" : 0,
       "perMethodTestability" : "T000",
-      "perMethodOutcome" : "T000",
+      "perMethodOutcome" : "W002",
+      "warnings" : {
+        "W002" : 5
+      },
       "lineNumbers" : [
         977
       ]
@@ -3826,19 +4410,28 @@
       ]
     },
     "org.tron.common.crypto.sm2.SM2.isPubKeyCanonical:()Z" : {
-      "completeTestCount" : 0,
+      "completeTestCount" : 5,
       "incompleteTestCount" : 0,
       "perMethodTestability" : "T000",
-      "perMethodOutcome" : "T000",
+      "perMethodOutcome" : "R000",
+      "perTestOutcome" : {
+        "R000" : 5
+      },
+      "warnings" : {
+        "W002" : 2
+      },
       "lineNumbers" : [
         937
       ]
     },
     "org.tron.common.crypto.sm2.SM2.isPubKeyCanonical:([B)Z" : {
-      "completeTestCount" : 0,
+      "completeTestCount" : 4,
       "incompleteTestCount" : 0,
       "perMethodTestability" : "T000",
-      "perMethodOutcome" : "T000",
+      "perMethodOutcome" : "R000",
+      "perTestOutcome" : {
+        "R000" : 4
+      },
       "lineNumbers" : [
         780,
         782,
@@ -3848,10 +4441,16 @@
       ]
     },
     "org.tron.common.crypto.sm2.SM2.isPubKeyOnly:()Z" : {
-      "completeTestCount" : 0,
+      "completeTestCount" : 1,
       "incompleteTestCount" : 0,
       "perMethodTestability" : "T000",
-      "perMethodOutcome" : "T000",
+      "perMethodOutcome" : "R000",
+      "perTestOutcome" : {
+        "R000" : 1
+      },
+      "warnings" : {
+        "W002" : 1
+      },
       "lineNumbers" : [
         835
       ]
@@ -3872,30 +4471,39 @@
       ]
     },
     "org.tron.common.crypto.sm2.SM2.pubBytesWithoutFormat:(Lorg/bouncycastle/math/ec/ECPoint;)[B" : {
-      "completeTestCount" : 0,
+      "completeTestCount" : 2,
       "incompleteTestCount" : 0,
       "perMethodTestability" : "T000",
-      "perMethodOutcome" : "T000",
+      "perMethodOutcome" : "R000",
+      "perTestOutcome" : {
+        "R000" : 2
+      },
       "lineNumbers" : [
         331,
         332
       ]
     },
     "org.tron.common.crypto.sm2.SM2.publicKeyFromPrivate:(Ljava/math/BigInteger;Z)[B" : {
-      "completeTestCount" : 0,
+      "completeTestCount" : 6,
       "incompleteTestCount" : 0,
       "perMethodTestability" : "T000",
-      "perMethodOutcome" : "T000",
+      "perMethodOutcome" : "R000",
+      "perTestOutcome" : {
+        "R000" : 6
+      },
       "lineNumbers" : [
         319,
         320
       ]
     },
     "org.tron.common.crypto.sm2.SM2.recoverAddressFromSignature:(ILorg/tron/common/crypto/sm2/SM2$SM2Signature;[B)[B" : {
-      "completeTestCount" : 0,
+      "completeTestCount" : 9,
       "incompleteTestCount" : 0,
       "perMethodTestability" : "T000",
-      "perMethodOutcome" : "T000",
+      "perMethodOutcome" : "R000",
+      "perTestOutcome" : {
+        "R000" : 9
+      },
       "lineNumbers" : [
         801,
         803,
@@ -3904,10 +4512,13 @@
       ]
     },
     "org.tron.common.crypto.sm2.SM2.recoverFromSignature:(ILorg/tron/common/crypto/sm2/SM2$SM2Signature;[B)Lorg/tron/common/crypto/sm2/SM2;" : {
-      "completeTestCount" : 0,
+      "completeTestCount" : 9,
       "incompleteTestCount" : 0,
       "perMethodTestability" : "T000",
-      "perMethodOutcome" : "T000",
+      "perMethodOutcome" : "R000",
+      "perTestOutcome" : {
+        "R000" : 9
+      },
       "lineNumbers" : [
         819,
         821,
@@ -3916,10 +4527,13 @@
       ]
     },
     "org.tron.common.crypto.sm2.SM2.recoverPubBytesFromSignature:(ILorg/tron/common/crypto/sm2/SM2$SM2Signature;[B)[B" : {
-      "completeTestCount" : 0,
+      "completeTestCount" : 9,
       "incompleteTestCount" : 0,
       "perMethodTestability" : "T000",
-      "perMethodOutcome" : "T000",
+      "perMethodOutcome" : "R000",
+      "perTestOutcome" : {
+        "R000" : 9
+      },
       "lineNumbers" : [
         616,
         617,
@@ -3950,7 +4564,10 @@
       "completeTestCount" : 0,
       "incompleteTestCount" : 0,
       "perMethodTestability" : "T000",
-      "perMethodOutcome" : "T000",
+      "perMethodOutcome" : "W002",
+      "warnings" : {
+        "W002" : 1
+      },
       "lineNumbers" : [
         494,
         495,
@@ -3975,16 +4592,25 @@
       "completeTestCount" : 0,
       "incompleteTestCount" : 0,
       "perMethodTestability" : "T000",
-      "perMethodOutcome" : "T000",
+      "perMethodOutcome" : "W002",
+      "warnings" : {
+        "W002" : 1
+      },
       "lineNumbers" : [
         530
       ]
     },
     "org.tron.common.crypto.sm2.SM2.signMessage:([BLjava/lang/String;)Lorg/tron/common/crypto/sm2/SM2$SM2Signature;" : {
-      "completeTestCount" : 0,
+      "completeTestCount" : 1,
       "incompleteTestCount" : 0,
       "perMethodTestability" : "T000",
-      "perMethodOutcome" : "T000",
+      "perMethodOutcome" : "R000",
+      "perTestOutcome" : {
+        "R000" : 1
+      },
+      "warnings" : {
+        "W002" : 7
+      },
       "lineNumbers" : [
         548,
         551,
@@ -4004,10 +4630,16 @@
       ]
     },
     "org.tron.common.crypto.sm2.SM2.signMsg:([BLjava/lang/String;)Lorg/tron/common/crypto/sm2/SM2$SM2Signature;" : {
-      "completeTestCount" : 0,
+      "completeTestCount" : 1,
       "incompleteTestCount" : 0,
       "perMethodTestability" : "T000",
-      "perMethodOutcome" : "T000",
+      "perMethodOutcome" : "R000",
+      "perTestOutcome" : {
+        "R000" : 1
+      },
+      "warnings" : {
+        "W002" : 8
+      },
       "lineNumbers" : [
         579,
         580,
@@ -4017,48 +4649,63 @@
       ]
     },
     "org.tron.common.crypto.sm2.SM2.signatureToAddress:([BLjava/lang/String;)[B" : {
-      "completeTestCount" : 0,
+      "completeTestCount" : 3,
       "incompleteTestCount" : 0,
       "perMethodTestability" : "T000",
-      "perMethodOutcome" : "T000",
+      "perMethodOutcome" : "R000",
+      "perTestOutcome" : {
+        "R000" : 3
+      },
       "lineNumbers" : [
         442
       ]
     },
     "org.tron.common.crypto.sm2.SM2.signatureToAddress:([BLorg/tron/common/crypto/sm2/SM2$SM2Signature;)[B" : {
-      "completeTestCount" : 0,
+      "completeTestCount" : 1,
       "incompleteTestCount" : 0,
       "perMethodTestability" : "T000",
-      "perMethodOutcome" : "T000",
+      "perMethodOutcome" : "R000",
+      "perTestOutcome" : {
+        "R000" : 1
+      },
       "lineNumbers" : [
         456
       ]
     },
     "org.tron.common.crypto.sm2.SM2.signatureToKey:([BLjava/lang/String;)Lorg/tron/common/crypto/sm2/SM2;" : {
-      "completeTestCount" : 0,
+      "completeTestCount" : 3,
       "incompleteTestCount" : 0,
       "perMethodTestability" : "T000",
-      "perMethodOutcome" : "T000",
+      "perMethodOutcome" : "R000",
+      "perTestOutcome" : {
+        "R000" : 3
+      },
       "lineNumbers" : [
         468,
         470
       ]
     },
     "org.tron.common.crypto.sm2.SM2.signatureToKey:([BLorg/tron/common/crypto/sm2/SM2$SM2Signature;)Lorg/tron/common/crypto/sm2/SM2;" : {
-      "completeTestCount" : 0,
+      "completeTestCount" : 1,
       "incompleteTestCount" : 0,
       "perMethodTestability" : "T000",
-      "perMethodOutcome" : "T000",
+      "perMethodOutcome" : "R000",
+      "perTestOutcome" : {
+        "R000" : 1
+      },
       "lineNumbers" : [
         482,
         483
       ]
     },
     "org.tron.common.crypto.sm2.SM2.signatureToKeyBytes:([BLjava/lang/String;)[B" : {
-      "completeTestCount" : 0,
+      "completeTestCount" : 3,
       "incompleteTestCount" : 0,
       "perMethodTestability" : "T000",
-      "perMethodOutcome" : "T000",
+      "perMethodOutcome" : "R000",
+      "perTestOutcome" : {
+        "R000" : 3
+      },
       "lineNumbers" : [
         352,
         357,
@@ -4074,10 +4721,13 @@
       ]
     },
     "org.tron.common.crypto.sm2.SM2.signatureToKeyBytes:([BLorg/tron/common/crypto/sm2/SM2$SM2Signature;)[B" : {
-      "completeTestCount" : 0,
+      "completeTestCount" : 1,
       "incompleteTestCount" : 0,
       "perMethodTestability" : "T000",
-      "perMethodOutcome" : "T000",
+      "perMethodOutcome" : "R000",
+      "perTestOutcome" : {
+        "R000" : 1
+      },
       "lineNumbers" : [
         375,
         377,
@@ -4096,7 +4746,10 @@
       "completeTestCount" : 0,
       "incompleteTestCount" : 0,
       "perMethodTestability" : "T020",
-      "perMethodOutcome" : "T020",
+      "perMethodOutcome" : "W002",
+      "warnings" : {
+        "W002" : 1
+      },
       "lineNumbers" : [
         887,
         888,
@@ -4104,10 +4757,16 @@
       ]
     },
     "org.tron.common.crypto.sm2.SM2.toStringWithPrivate:()Ljava/lang/String;" : {
-      "completeTestCount" : 0,
+      "completeTestCount" : 2,
       "incompleteTestCount" : 0,
       "perMethodTestability" : "T000",
-      "perMethodOutcome" : "T000",
+      "perMethodOutcome" : "R000",
+      "perTestOutcome" : {
+        "R000" : 2
+      },
+      "warnings" : {
+        "W002" : 1
+      },
       "lineNumbers" : [
         899,
         900,
@@ -4119,10 +4778,16 @@
       ]
     },
     "org.tron.common.crypto.sm2.SM2.verify:([BLorg/tron/common/crypto/sm2/SM2$SM2Signature;)Z" : {
-      "completeTestCount" : 0,
+      "completeTestCount" : 1,
       "incompleteTestCount" : 0,
       "perMethodTestability" : "T000",
-      "perMethodOutcome" : "T000",
+      "perMethodOutcome" : "R000",
+      "perTestOutcome" : {
+        "R000" : 1
+      },
+      "warnings" : {
+        "W002" : 3
+      },
       "lineNumbers" : [
         927
       ]
@@ -4131,7 +4796,7 @@
       "completeTestCount" : 0,
       "incompleteTestCount" : 0,
       "perMethodTestability" : "T000",
-      "perMethodOutcome" : "T000",
+      "perMethodOutcome" : "R013",
       "lineNumbers" : [
         704,
         705,
@@ -4144,10 +4809,13 @@
       ]
     },
     "org.tron.common.crypto.sm2.SM2.verify:([B[B)Z" : {
-      "completeTestCount" : 0,
+      "completeTestCount" : 1,
       "incompleteTestCount" : 0,
       "perMethodTestability" : "T000",
-      "perMethodOutcome" : "T000",
+      "perMethodOutcome" : "R000",
+      "perTestOutcome" : {
+        "R000" : 1
+      },
       "lineNumbers" : [
         916
       ]
@@ -4156,7 +4824,7 @@
       "completeTestCount" : 0,
       "incompleteTestCount" : 0,
       "perMethodTestability" : "T000",
-      "perMethodOutcome" : "T000",
+      "perMethodOutcome" : "R013",
       "lineNumbers" : [
         729
       ]
@@ -4165,7 +4833,7 @@
       "completeTestCount" : 0,
       "incompleteTestCount" : 0,
       "perMethodTestability" : "T000",
-      "perMethodOutcome" : "T000",
+      "perMethodOutcome" : "R013",
       "lineNumbers" : [
         742,
         743,
@@ -4181,16 +4849,19 @@
       "completeTestCount" : 0,
       "incompleteTestCount" : 0,
       "perMethodTestability" : "T000",
-      "perMethodOutcome" : "T000",
+      "perMethodOutcome" : "R013",
       "lineNumbers" : [
         768
       ]
     },
     "org.tron.common.crypto.sm2.SM2Signer.<init>:()V" : {
-      "completeTestCount" : 0,
+      "completeTestCount" : 1,
       "incompleteTestCount" : 0,
       "perMethodTestability" : "T000",
-      "perMethodOutcome" : "T000",
+      "perMethodOutcome" : "R000",
+      "perTestOutcome" : {
+        "R000" : 1
+      },
       "lineNumbers" : [
         24,
         27
@@ -4221,28 +4892,37 @@
       ]
     },
     "org.tron.common.crypto.sm2.SM2Signer.calculateE:([B)Ljava/math/BigInteger;" : {
-      "completeTestCount" : 0,
+      "completeTestCount" : 1,
       "incompleteTestCount" : 0,
       "perMethodTestability" : "T000",
-      "perMethodOutcome" : "T000",
+      "perMethodOutcome" : "R000",
+      "perTestOutcome" : {
+        "R000" : 1
+      },
       "lineNumbers" : [
         258
       ]
     },
     "org.tron.common.crypto.sm2.SM2Signer.createBasePointMultiplier:()Lorg/bouncycastle/math/ec/ECMultiplier;" : {
-      "completeTestCount" : 0,
+      "completeTestCount" : 1,
       "incompleteTestCount" : 0,
       "perMethodTestability" : "T000",
-      "perMethodOutcome" : "T000",
+      "perMethodOutcome" : "R000",
+      "perTestOutcome" : {
+        "R000" : 1
+      },
       "lineNumbers" : [
         254
       ]
     },
     "org.tron.common.crypto.sm2.SM2Signer.generateHashSignature:([B)[Ljava/math/BigInteger;" : {
-      "completeTestCount" : 0,
+      "completeTestCount" : 1,
       "incompleteTestCount" : 0,
       "perMethodTestability" : "T000",
-      "perMethodOutcome" : "T000",
+      "perMethodOutcome" : "R000",
+      "perTestOutcome" : {
+        "R000" : 1
+      },
       "lineNumbers" : [
         105,
         106,
@@ -4265,7 +4945,7 @@
       "completeTestCount" : 0,
       "incompleteTestCount" : 0,
       "perMethodTestability" : "T000",
-      "perMethodOutcome" : "T000",
+      "perMethodOutcome" : "R013",
       "lineNumbers" : [
         89,
         90,
@@ -4280,7 +4960,7 @@
       "completeTestCount" : 0,
       "incompleteTestCount" : 0,
       "perMethodTestability" : "T000",
-      "perMethodOutcome" : "T000",
+      "perMethodOutcome" : "R013",
       "lineNumbers" : [
         78,
         79
@@ -4304,10 +4984,13 @@
       ]
     },
     "org.tron.common.crypto.sm2.SM2Signer.init:(ZLorg/bouncycastle/crypto/CipherParameters;)V" : {
-      "completeTestCount" : 0,
+      "completeTestCount" : 2,
       "incompleteTestCount" : 0,
       "perMethodTestability" : "T000",
-      "perMethodOutcome" : "T000",
+      "perMethodOutcome" : "R000",
+      "perTestOutcome" : {
+        "R000" : 2
+      },
       "lineNumbers" : [
         41,
         42,
@@ -4336,7 +5019,7 @@
       "completeTestCount" : 0,
       "incompleteTestCount" : 0,
       "perMethodTestability" : "T000",
-      "perMethodOutcome" : "T000",
+      "perMethodOutcome" : "R013",
       "lineNumbers" : [
         191,
         195,
@@ -4357,7 +5040,7 @@
       "completeTestCount" : 0,
       "incompleteTestCount" : 0,
       "perMethodTestability" : "T000",
-      "perMethodOutcome" : "T000",
+      "perMethodOutcome" : "R013",
       "lineNumbers" : [
         150,
         154,
@@ -4391,10 +5074,13 @@
       ]
     },
     "org.tron.common.crypto.zksnark.BN128.add:(Lorg/tron/common/crypto/zksnark/BN128;)Lorg/tron/common/crypto/zksnark/BN128;" : {
-      "completeTestCount" : 0,
+      "completeTestCount" : 5,
       "incompleteTestCount" : 0,
       "perMethodTestability" : "T000",
-      "perMethodOutcome" : "T000",
+      "perMethodOutcome" : "R000",
+      "perTestOutcome" : {
+        "R000" : 5
+      },
       "lineNumbers" : [
         118,
         119,
@@ -4453,10 +5139,13 @@
       ]
     },
     "org.tron.common.crypto.zksnark.BN128.equals:(Ljava/lang/Object;)Z" : {
-      "completeTestCount" : 0,
+      "completeTestCount" : 14,
       "incompleteTestCount" : 0,
       "perMethodTestability" : "T000",
-      "perMethodOutcome" : "T000",
+      "perMethodOutcome" : "R000",
+      "perTestOutcome" : {
+        "R000" : 14
+      },
       "lineNumbers" : [
         246,
         247,
@@ -4477,10 +5166,13 @@
       "perMethodOutcome" : "T010"
     },
     "org.tron.common.crypto.zksnark.BN128.isOnCurve:()Z" : {
-      "completeTestCount" : 0,
+      "completeTestCount" : 2,
       "incompleteTestCount" : 0,
       "perMethodTestability" : "T000",
-      "perMethodOutcome" : "T000",
+      "perMethodOutcome" : "R000",
+      "perTestOutcome" : {
+        "R000" : 2
+      },
       "lineNumbers" : [
         105,
         106,
@@ -4491,10 +5183,13 @@
       ]
     },
     "org.tron.common.crypto.zksnark.BN128.isValid:()Z" : {
-      "completeTestCount" : 0,
+      "completeTestCount" : 5,
       "incompleteTestCount" : 0,
       "perMethodTestability" : "T000",
-      "perMethodOutcome" : "T000",
+      "perMethodOutcome" : "R000",
+      "perTestOutcome" : {
+        "R000" : 5
+      },
       "lineNumbers" : [
         226,
         227,
@@ -4504,19 +5199,25 @@
       ]
     },
     "org.tron.common.crypto.zksnark.BN128.isZero:()Z" : {
-      "completeTestCount" : 0,
+      "completeTestCount" : 2,
       "incompleteTestCount" : 0,
       "perMethodTestability" : "T000",
-      "perMethodOutcome" : "T000",
+      "perMethodOutcome" : "R000",
+      "perTestOutcome" : {
+        "R000" : 2
+      },
       "lineNumbers" : [
         220
       ]
     },
     "org.tron.common.crypto.zksnark.BN128.mul:(Ljava/math/BigInteger;)Lorg/tron/common/crypto/zksnark/BN128;" : {
-      "completeTestCount" : 0,
+      "completeTestCount" : 2,
       "incompleteTestCount" : 0,
       "perMethodTestability" : "T000",
-      "perMethodOutcome" : "T000",
+      "perMethodOutcome" : "R000",
+      "perTestOutcome" : {
+        "R000" : 2
+      },
       "lineNumbers" : [
         164,
         166,
@@ -4538,10 +5239,13 @@
       "perMethodOutcome" : "T010"
     },
     "org.tron.common.crypto.zksnark.BN128.toAffine:()Lorg/tron/common/crypto/zksnark/BN128;" : {
-      "completeTestCount" : 0,
+      "completeTestCount" : 3,
       "incompleteTestCount" : 0,
       "perMethodTestability" : "T000",
-      "perMethodOutcome" : "T000",
+      "perMethodOutcome" : "R000",
+      "perTestOutcome" : {
+        "R000" : 3
+      },
       "lineNumbers" : [
         74,
         75,
@@ -4555,10 +5259,13 @@
       ]
     },
     "org.tron.common.crypto.zksnark.BN128.toEthNotation:()Lorg/tron/common/crypto/zksnark/BN128;" : {
-      "completeTestCount" : 0,
+      "completeTestCount" : 2,
       "incompleteTestCount" : 0,
       "perMethodTestability" : "T000",
-      "perMethodOutcome" : "T000",
+      "perMethodOutcome" : "R000",
+      "perTestOutcome" : {
+        "R000" : 2
+      },
       "lineNumbers" : [
         93,
         96,
@@ -4567,28 +5274,37 @@
       ]
     },
     "org.tron.common.crypto.zksnark.BN128.toString:()Ljava/lang/String;" : {
-      "completeTestCount" : 0,
+      "completeTestCount" : 1,
       "incompleteTestCount" : 0,
       "perMethodTestability" : "T000",
-      "perMethodOutcome" : "T000",
+      "perMethodOutcome" : "R000",
+      "perTestOutcome" : {
+        "R000" : 1
+      },
       "lineNumbers" : [
         240
       ]
     },
     "org.tron.common.crypto.zksnark.BN128.x:()Lorg/tron/common/crypto/zksnark/Field;" : {
-      "completeTestCount" : 0,
+      "completeTestCount" : 1,
       "incompleteTestCount" : 0,
       "perMethodTestability" : "T000",
-      "perMethodOutcome" : "T000",
+      "perMethodOutcome" : "R000",
+      "perTestOutcome" : {
+        "R000" : 1
+      },
       "lineNumbers" : [
         212
       ]
     },
     "org.tron.common.crypto.zksnark.BN128.y:()Lorg/tron/common/crypto/zksnark/Field;" : {
-      "completeTestCount" : 0,
+      "completeTestCount" : 1,
       "incompleteTestCount" : 0,
       "perMethodTestability" : "T000",
-      "perMethodOutcome" : "T000",
+      "perMethodOutcome" : "R000",
+      "perTestOutcome" : {
+        "R000" : 1
+      },
       "lineNumbers" : [
         216
       ]
@@ -4602,27 +5318,42 @@
     "org.tron.common.crypto.zksnark.BN128Fp.<clinit>:()V" : {
       "completeTestCount" : 0,
       "incompleteTestCount" : 0,
-      "perMethodTestability" : "T012",
-      "perMethodOutcome" : "T012",
-      "lineNumbers" : [
-        33
-      ]
+      "perMethodTestability" : "T023",
+      "perMethodOutcome" : "T023"
     },
     "org.tron.common.crypto.zksnark.BN128Fp.<init>:(Lorg/tron/common/crypto/zksnark/Fp;Lorg/tron/common/crypto/zksnark/Fp;Lorg/tron/common/crypto/zksnark/Fp;)V" : {
-      "completeTestCount" : 0,
+      "completeTestCount" : 1,
       "incompleteTestCount" : 0,
       "perMethodTestability" : "T005",
-      "perMethodOutcome" : "T005",
+      "perMethodOutcome" : "R000",
+      "perTestOutcome" : {
+        "R000" : 1
+      },
       "lineNumbers" : [
         36,
         37
       ]
     },
-    "org.tron.common.crypto.zksnark.BN128Fp.create:([B[B)Lorg/tron/common/crypto/zksnark/BN128;" : {
-      "completeTestCount" : 0,
+    "org.tron.common.crypto.zksnark.BN128Fp.b:()Lorg/tron/common/crypto/zksnark/Fp;" : {
+      "completeTestCount" : 1,
       "incompleteTestCount" : 0,
       "perMethodTestability" : "T000",
-      "perMethodOutcome" : "T000",
+      "perMethodOutcome" : "R000",
+      "perTestOutcome" : {
+        "R000" : 1
+      },
+      "lineNumbers" : [
+        77
+      ]
+    },
+    "org.tron.common.crypto.zksnark.BN128Fp.create:([B[B)Lorg/tron/common/crypto/zksnark/BN128;" : {
+      "completeTestCount" : 3,
+      "incompleteTestCount" : 0,
+      "perMethodTestability" : "T000",
+      "perMethodOutcome" : "R000",
+      "perTestOutcome" : {
+        "R000" : 3
+      },
       "lineNumbers" : [
         47,
         48,
@@ -4644,19 +5375,37 @@
       ]
     },
     "org.tron.common.crypto.zksnark.BN128Fp.instance:(Lorg/tron/common/crypto/zksnark/Fp;Lorg/tron/common/crypto/zksnark/Fp;Lorg/tron/common/crypto/zksnark/Fp;)Lorg/tron/common/crypto/zksnark/BN128;" : {
-      "completeTestCount" : 0,
+      "completeTestCount" : 1,
       "incompleteTestCount" : 0,
       "perMethodTestability" : "T000",
-      "perMethodOutcome" : "T000",
+      "perMethodOutcome" : "R000",
+      "perTestOutcome" : {
+        "R000" : 1
+      },
       "lineNumbers" : [
         72
       ]
     },
-    "org.tron.common.crypto.zksnark.BN128Fp.zero:()Lorg/tron/common/crypto/zksnark/BN128;" : {
-      "completeTestCount" : 0,
+    "org.tron.common.crypto.zksnark.BN128Fp.one:()Lorg/tron/common/crypto/zksnark/Fp;" : {
+      "completeTestCount" : 1,
       "incompleteTestCount" : 0,
       "perMethodTestability" : "T000",
-      "perMethodOutcome" : "T000",
+      "perMethodOutcome" : "R000",
+      "perTestOutcome" : {
+        "R000" : 1
+      },
+      "lineNumbers" : [
+        82
+      ]
+    },
+    "org.tron.common.crypto.zksnark.BN128Fp.zero:()Lorg/tron/common/crypto/zksnark/BN128;" : {
+      "completeTestCount" : 1,
+      "incompleteTestCount" : 0,
+      "perMethodTestability" : "T000",
+      "perMethodOutcome" : "R000",
+      "perTestOutcome" : {
+        "R000" : 1
+      },
       "lineNumbers" : [
         67
       ]
@@ -4664,37 +5413,55 @@
     "org.tron.common.crypto.zksnark.BN128Fp2.<clinit>:()V" : {
       "completeTestCount" : 0,
       "incompleteTestCount" : 0,
-      "perMethodTestability" : "T012",
-      "perMethodOutcome" : "T012",
-      "lineNumbers" : [
-        35
-      ]
+      "perMethodTestability" : "T023",
+      "perMethodOutcome" : "T023"
     },
     "org.tron.common.crypto.zksnark.BN128Fp2.<init>:(Ljava/math/BigInteger;Ljava/math/BigInteger;Ljava/math/BigInteger;Ljava/math/BigInteger;)V" : {
-      "completeTestCount" : 0,
+      "completeTestCount" : 1,
       "incompleteTestCount" : 0,
       "perMethodTestability" : "T000",
-      "perMethodOutcome" : "T000",
+      "perMethodOutcome" : "R000",
+      "perTestOutcome" : {
+        "R000" : 1
+      },
       "lineNumbers" : [
         42,
         43
       ]
     },
     "org.tron.common.crypto.zksnark.BN128Fp2.<init>:(Lorg/tron/common/crypto/zksnark/Fp2;Lorg/tron/common/crypto/zksnark/Fp2;Lorg/tron/common/crypto/zksnark/Fp2;)V" : {
-      "completeTestCount" : 0,
+      "completeTestCount" : 1,
       "incompleteTestCount" : 0,
       "perMethodTestability" : "T005",
-      "perMethodOutcome" : "T005",
+      "perMethodOutcome" : "R000",
+      "perTestOutcome" : {
+        "R000" : 1
+      },
       "lineNumbers" : [
         38,
         39
       ]
     },
-    "org.tron.common.crypto.zksnark.BN128Fp2.create:([B[B[B[B)Lorg/tron/common/crypto/zksnark/BN128;" : {
-      "completeTestCount" : 0,
+    "org.tron.common.crypto.zksnark.BN128Fp2.b:()Lorg/tron/common/crypto/zksnark/Fp2;" : {
+      "completeTestCount" : 1,
       "incompleteTestCount" : 0,
       "perMethodTestability" : "T000",
-      "perMethodOutcome" : "T000",
+      "perMethodOutcome" : "R000",
+      "perTestOutcome" : {
+        "R000" : 1
+      },
+      "lineNumbers" : [
+        82
+      ]
+    },
+    "org.tron.common.crypto.zksnark.BN128Fp2.create:([B[B[B[B)Lorg/tron/common/crypto/zksnark/BN128;" : {
+      "completeTestCount" : 3,
+      "incompleteTestCount" : 0,
+      "perMethodTestability" : "T000",
+      "perMethodOutcome" : "R000",
+      "perTestOutcome" : {
+        "R000" : 3
+      },
       "lineNumbers" : [
         52,
         53,
@@ -4716,38 +5483,62 @@
       ]
     },
     "org.tron.common.crypto.zksnark.BN128Fp2.instance:(Lorg/tron/common/crypto/zksnark/Fp2;Lorg/tron/common/crypto/zksnark/Fp2;Lorg/tron/common/crypto/zksnark/Fp2;)Lorg/tron/common/crypto/zksnark/BN128;" : {
-      "completeTestCount" : 0,
+      "completeTestCount" : 1,
       "incompleteTestCount" : 0,
       "perMethodTestability" : "T000",
-      "perMethodOutcome" : "T000",
+      "perMethodOutcome" : "R000",
+      "perTestOutcome" : {
+        "R000" : 1
+      },
       "lineNumbers" : [
         77
       ]
     },
-    "org.tron.common.crypto.zksnark.BN128Fp2.zero:()Lorg/tron/common/crypto/zksnark/BN128;" : {
-      "completeTestCount" : 0,
+    "org.tron.common.crypto.zksnark.BN128Fp2.one:()Lorg/tron/common/crypto/zksnark/Fp2;" : {
+      "completeTestCount" : 1,
       "incompleteTestCount" : 0,
       "perMethodTestability" : "T000",
-      "perMethodOutcome" : "T000",
+      "perMethodOutcome" : "R000",
+      "perTestOutcome" : {
+        "R000" : 1
+      },
+      "lineNumbers" : [
+        87
+      ]
+    },
+    "org.tron.common.crypto.zksnark.BN128Fp2.zero:()Lorg/tron/common/crypto/zksnark/BN128;" : {
+      "completeTestCount" : 1,
+      "incompleteTestCount" : 0,
+      "perMethodTestability" : "T000",
+      "perMethodOutcome" : "R000",
+      "perTestOutcome" : {
+        "R000" : 1
+      },
       "lineNumbers" : [
         72
       ]
     },
     "org.tron.common.crypto.zksnark.BN128G1.<init>:(Lorg/tron/common/crypto/zksnark/BN128;)V" : {
-      "completeTestCount" : 0,
+      "completeTestCount" : 1,
       "incompleteTestCount" : 0,
       "perMethodTestability" : "T000",
-      "perMethodOutcome" : "T000",
+      "perMethodOutcome" : "R000",
+      "perTestOutcome" : {
+        "R000" : 1
+      },
       "lineNumbers" : [
         33,
         34
       ]
     },
     "org.tron.common.crypto.zksnark.BN128G1.create:([B[B)Lorg/tron/common/crypto/zksnark/BN128G1;" : {
-      "completeTestCount" : 0,
+      "completeTestCount" : 3,
       "incompleteTestCount" : 0,
       "perMethodTestability" : "T000",
-      "perMethodOutcome" : "T000",
+      "perMethodOutcome" : "R000",
+      "perTestOutcome" : {
+        "R000" : 3
+      },
       "lineNumbers" : [
         42,
         44,
@@ -4755,40 +5546,58 @@
         48
       ]
     },
+    "org.tron.common.crypto.zksnark.BN128G1.toAffine:()Lorg/tron/common/crypto/zksnark/BN128G1;" : {
+      "completeTestCount" : 2,
+      "incompleteTestCount" : 0,
+      "perMethodTestability" : "T000",
+      "perMethodOutcome" : "R000",
+      "perTestOutcome" : {
+        "R000" : 2
+      },
+      "lineNumbers" : [
+        53
+      ]
+    },
     "org.tron.common.crypto.zksnark.BN128G2.<clinit>:()V" : {
       "completeTestCount" : 0,
       "incompleteTestCount" : 0,
-      "perMethodTestability" : "T012",
-      "perMethodOutcome" : "T012",
-      "lineNumbers" : [
-        42
-      ]
+      "perMethodTestability" : "T023",
+      "perMethodOutcome" : "T023"
     },
     "org.tron.common.crypto.zksnark.BN128G2.<init>:(Lorg/tron/common/crypto/zksnark/BN128;)V" : {
-      "completeTestCount" : 0,
+      "completeTestCount" : 1,
       "incompleteTestCount" : 0,
       "perMethodTestability" : "T000",
-      "perMethodOutcome" : "T000",
+      "perMethodOutcome" : "R000",
+      "perTestOutcome" : {
+        "R000" : 1
+      },
       "lineNumbers" : [
         45,
         46
       ]
     },
     "org.tron.common.crypto.zksnark.BN128G2.<init>:(Lorg/tron/common/crypto/zksnark/Fp2;Lorg/tron/common/crypto/zksnark/Fp2;Lorg/tron/common/crypto/zksnark/Fp2;)V" : {
-      "completeTestCount" : 0,
+      "completeTestCount" : 1,
       "incompleteTestCount" : 0,
       "perMethodTestability" : "T005",
-      "perMethodOutcome" : "T005",
+      "perMethodOutcome" : "R000",
+      "perTestOutcome" : {
+        "R000" : 1
+      },
       "lineNumbers" : [
         49,
         50
       ]
     },
     "org.tron.common.crypto.zksnark.BN128G2.create:([B[B[B[B)Lorg/tron/common/crypto/zksnark/BN128G2;" : {
-      "completeTestCount" : 0,
+      "completeTestCount" : 3,
       "incompleteTestCount" : 0,
       "perMethodTestability" : "T000",
-      "perMethodOutcome" : "T000",
+      "perMethodOutcome" : "R000",
+      "perTestOutcome" : {
+        "R000" : 3
+      },
       "lineNumbers" : [
         58,
         61,
@@ -4809,15 +5618,30 @@
       ]
     },
     "org.tron.common.crypto.zksnark.BN128G2.mulByP:()Lorg/tron/common/crypto/zksnark/BN128G2;" : {
-      "completeTestCount" : 0,
+      "completeTestCount" : 1,
       "incompleteTestCount" : 0,
       "perMethodTestability" : "T000",
-      "perMethodOutcome" : "T000",
+      "perMethodOutcome" : "R000",
+      "perTestOutcome" : {
+        "R000" : 1
+      },
       "lineNumbers" : [
         85,
         86,
         87,
         89
+      ]
+    },
+    "org.tron.common.crypto.zksnark.BN128G2.toAffine:()Lorg/tron/common/crypto/zksnark/BN128G2;" : {
+      "completeTestCount" : 2,
+      "incompleteTestCount" : 0,
+      "perMethodTestability" : "T000",
+      "perMethodOutcome" : "R000",
+      "perTestOutcome" : {
+        "R000" : 2
+      },
+      "lineNumbers" : [
+        80
       ]
     },
     "org.tron.common.crypto.zksnark.Field.add:(Ljava/lang/Object;)Ljava/lang/Object;" : {
@@ -4877,20 +5701,17 @@
     "org.tron.common.crypto.zksnark.Fp.<clinit>:()V" : {
       "completeTestCount" : 0,
       "incompleteTestCount" : 0,
-      "perMethodTestability" : "T012",
-      "perMethodOutcome" : "T012",
-      "lineNumbers" : [
-        32,
-        33,
-        34,
-        37
-      ]
+      "perMethodTestability" : "T023",
+      "perMethodOutcome" : "T023"
     },
     "org.tron.common.crypto.zksnark.Fp.<init>:(Ljava/math/BigInteger;)V" : {
-      "completeTestCount" : 0,
+      "completeTestCount" : 1,
       "incompleteTestCount" : 0,
       "perMethodTestability" : "T005",
-      "perMethodOutcome" : "T005",
+      "perMethodOutcome" : "R000",
+      "perTestOutcome" : {
+        "R000" : 1
+      },
       "lineNumbers" : [
         41,
         42,
@@ -4907,46 +5728,73 @@
       ]
     },
     "org.tron.common.crypto.zksnark.Fp.add:(Lorg/tron/common/crypto/zksnark/Fp;)Lorg/tron/common/crypto/zksnark/Fp;" : {
-      "completeTestCount" : 0,
+      "completeTestCount" : 1,
       "incompleteTestCount" : 0,
       "perMethodTestability" : "T000",
-      "perMethodOutcome" : "T000",
+      "perMethodOutcome" : "R000",
+      "perTestOutcome" : {
+        "R000" : 1
+      },
       "lineNumbers" : [
         55
       ]
     },
     "org.tron.common.crypto.zksnark.Fp.bytes:()[B" : {
-      "completeTestCount" : 0,
+      "completeTestCount" : 1,
       "incompleteTestCount" : 0,
       "perMethodTestability" : "T000",
-      "perMethodOutcome" : "T000",
+      "perMethodOutcome" : "R000",
+      "perTestOutcome" : {
+        "R000" : 1
+      },
       "lineNumbers" : [
         106
       ]
     },
     "org.tron.common.crypto.zksnark.Fp.create:(Ljava/math/BigInteger;)Lorg/tron/common/crypto/zksnark/Fp;" : {
-      "completeTestCount" : 0,
+      "completeTestCount" : 1,
       "incompleteTestCount" : 0,
       "perMethodTestability" : "T000",
-      "perMethodOutcome" : "T000",
+      "perMethodOutcome" : "R000",
+      "perTestOutcome" : {
+        "R000" : 1
+      },
       "lineNumbers" : [
         50
       ]
     },
     "org.tron.common.crypto.zksnark.Fp.create:([B)Lorg/tron/common/crypto/zksnark/Fp;" : {
-      "completeTestCount" : 0,
+      "completeTestCount" : 1,
       "incompleteTestCount" : 0,
       "perMethodTestability" : "T000",
-      "perMethodOutcome" : "T000",
+      "perMethodOutcome" : "R000",
+      "perTestOutcome" : {
+        "R000" : 1
+      },
       "lineNumbers" : [
         46
       ]
     },
-    "org.tron.common.crypto.zksnark.Fp.equals:(Ljava/lang/Object;)Z" : {
-      "completeTestCount" : 0,
+    "org.tron.common.crypto.zksnark.Fp.dbl:()Lorg/tron/common/crypto/zksnark/Fp;" : {
+      "completeTestCount" : 1,
       "incompleteTestCount" : 0,
       "perMethodTestability" : "T000",
-      "perMethodOutcome" : "T000",
+      "perMethodOutcome" : "R000",
+      "perTestOutcome" : {
+        "R000" : 1
+      },
+      "lineNumbers" : [
+        75
+      ]
+    },
+    "org.tron.common.crypto.zksnark.Fp.equals:(Ljava/lang/Object;)Z" : {
+      "completeTestCount" : 8,
+      "incompleteTestCount" : 0,
+      "perMethodTestability" : "T000",
+      "perMethodOutcome" : "R000",
+      "perTestOutcome" : {
+        "R000" : 8
+      },
       "lineNumbers" : [
         111,
         112,
@@ -4957,28 +5805,49 @@
       ]
     },
     "org.tron.common.crypto.zksnark.Fp.hashCode:()I" : {
-      "completeTestCount" : 0,
+      "completeTestCount" : 8,
       "incompleteTestCount" : 0,
       "perMethodTestability" : "T000",
-      "perMethodOutcome" : "T000",
+      "perMethodOutcome" : "R000",
+      "perTestOutcome" : {
+        "R000" : 8
+      },
       "lineNumbers" : [
         125
       ]
     },
-    "org.tron.common.crypto.zksnark.Fp.isValid:()Z" : {
-      "completeTestCount" : 0,
+    "org.tron.common.crypto.zksnark.Fp.inverse:()Lorg/tron/common/crypto/zksnark/Fp;" : {
+      "completeTestCount" : 1,
       "incompleteTestCount" : 0,
       "perMethodTestability" : "T000",
-      "perMethodOutcome" : "T000",
+      "perMethodOutcome" : "R000",
+      "perTestOutcome" : {
+        "R000" : 1
+      },
+      "lineNumbers" : [
+        80
+      ]
+    },
+    "org.tron.common.crypto.zksnark.Fp.isValid:()Z" : {
+      "completeTestCount" : 2,
+      "incompleteTestCount" : 0,
+      "perMethodTestability" : "T000",
+      "perMethodOutcome" : "R000",
+      "perTestOutcome" : {
+        "R000" : 2
+      },
       "lineNumbers" : [
         98
       ]
     },
     "org.tron.common.crypto.zksnark.Fp.isZero:()Z" : {
-      "completeTestCount" : 0,
+      "completeTestCount" : 2,
       "incompleteTestCount" : 0,
       "perMethodTestability" : "T000",
-      "perMethodOutcome" : "T000",
+      "perMethodOutcome" : "R000",
+      "perTestOutcome" : {
+        "R000" : 2
+      },
       "lineNumbers" : [
         90
       ]
@@ -4993,21 +5862,51 @@
       ]
     },
     "org.tron.common.crypto.zksnark.Fp.mul:(Lorg/tron/common/crypto/zksnark/Fp2;)Lorg/tron/common/crypto/zksnark/Fp2;" : {
-      "completeTestCount" : 0,
+      "completeTestCount" : 1,
       "incompleteTestCount" : 0,
       "perMethodTestability" : "T000",
-      "perMethodOutcome" : "T000",
+      "perMethodOutcome" : "R000",
+      "perTestOutcome" : {
+        "R000" : 1
+      },
       "lineNumbers" : [
         102
       ]
     },
     "org.tron.common.crypto.zksnark.Fp.mul:(Lorg/tron/common/crypto/zksnark/Fp;)Lorg/tron/common/crypto/zksnark/Fp;" : {
-      "completeTestCount" : 0,
+      "completeTestCount" : 1,
       "incompleteTestCount" : 0,
       "perMethodTestability" : "T000",
-      "perMethodOutcome" : "T000",
+      "perMethodOutcome" : "R000",
+      "perTestOutcome" : {
+        "R000" : 1
+      },
       "lineNumbers" : [
         60
+      ]
+    },
+    "org.tron.common.crypto.zksnark.Fp.negate:()Lorg/tron/common/crypto/zksnark/Fp;" : {
+      "completeTestCount" : 1,
+      "incompleteTestCount" : 0,
+      "perMethodTestability" : "T000",
+      "perMethodOutcome" : "R000",
+      "perTestOutcome" : {
+        "R000" : 1
+      },
+      "lineNumbers" : [
+        85
+      ]
+    },
+    "org.tron.common.crypto.zksnark.Fp.squared:()Lorg/tron/common/crypto/zksnark/Fp;" : {
+      "completeTestCount" : 1,
+      "incompleteTestCount" : 0,
+      "perMethodTestability" : "T000",
+      "perMethodOutcome" : "R000",
+      "perTestOutcome" : {
+        "R000" : 1
+      },
+      "lineNumbers" : [
+        70
       ]
     },
     "org.tron.common.crypto.zksnark.Fp.sub:(Ljava/lang/Object;)Ljava/lang/Object;" : {
@@ -5020,19 +5919,25 @@
       ]
     },
     "org.tron.common.crypto.zksnark.Fp.sub:(Lorg/tron/common/crypto/zksnark/Fp;)Lorg/tron/common/crypto/zksnark/Fp;" : {
-      "completeTestCount" : 0,
+      "completeTestCount" : 1,
       "incompleteTestCount" : 0,
       "perMethodTestability" : "T000",
-      "perMethodOutcome" : "T000",
+      "perMethodOutcome" : "R000",
+      "perTestOutcome" : {
+        "R000" : 1
+      },
       "lineNumbers" : [
         65
       ]
     },
     "org.tron.common.crypto.zksnark.Fp.toString:()Ljava/lang/String;" : {
-      "completeTestCount" : 0,
+      "completeTestCount" : 1,
       "incompleteTestCount" : 0,
       "perMethodTestability" : "T020",
-      "perMethodOutcome" : "T020",
+      "perMethodOutcome" : "R000",
+      "perTestOutcome" : {
+        "R000" : 1
+      },
       "lineNumbers" : [
         130
       ]
@@ -5040,19 +5945,17 @@
     "org.tron.common.crypto.zksnark.Fp12.<clinit>:()V" : {
       "completeTestCount" : 0,
       "incompleteTestCount" : 0,
-      "perMethodTestability" : "T012",
-      "perMethodOutcome" : "T012",
-      "lineNumbers" : [
-        35,
-        36,
-        37
-      ]
+      "perMethodTestability" : "T023",
+      "perMethodOutcome" : "T023"
     },
     "org.tron.common.crypto.zksnark.Fp12.<init>:(Lorg/tron/common/crypto/zksnark/Fp6;Lorg/tron/common/crypto/zksnark/Fp6;)V" : {
-      "completeTestCount" : 0,
+      "completeTestCount" : 1,
       "incompleteTestCount" : 0,
       "perMethodTestability" : "T005",
-      "perMethodOutcome" : "T005",
+      "perMethodOutcome" : "R000",
+      "perTestOutcome" : {
+        "R000" : 1
+      },
       "lineNumbers" : [
         93,
         94,
@@ -5070,19 +5973,25 @@
       ]
     },
     "org.tron.common.crypto.zksnark.Fp12.add:(Lorg/tron/common/crypto/zksnark/Fp12;)Lorg/tron/common/crypto/zksnark/Fp12;" : {
-      "completeTestCount" : 0,
+      "completeTestCount" : 1,
       "incompleteTestCount" : 0,
       "perMethodTestability" : "T000",
-      "perMethodOutcome" : "T000",
+      "perMethodOutcome" : "R000",
+      "perTestOutcome" : {
+        "R000" : 1
+      },
       "lineNumbers" : [
         189
       ]
     },
     "org.tron.common.crypto.zksnark.Fp12.cyclotomicExp:(Ljava/math/BigInteger;)Lorg/tron/common/crypto/zksnark/Fp12;" : {
-      "completeTestCount" : 0,
+      "completeTestCount" : 1,
       "incompleteTestCount" : 0,
       "perMethodTestability" : "T000",
-      "perMethodOutcome" : "T000",
+      "perMethodOutcome" : "R000",
+      "perTestOutcome" : {
+        "R000" : 1
+      },
       "lineNumbers" : [
         314,
         316,
@@ -5094,10 +6003,13 @@
       ]
     },
     "org.tron.common.crypto.zksnark.Fp12.cyclotomicSquared:()Lorg/tron/common/crypto/zksnark/Fp12;" : {
-      "completeTestCount" : 0,
+      "completeTestCount" : 1,
       "incompleteTestCount" : 0,
       "perMethodTestability" : "T000",
-      "perMethodOutcome" : "T000",
+      "perMethodOutcome" : "R000",
+      "perTestOutcome" : {
+        "R000" : 1
+      },
       "lineNumbers" : [
         251,
         252,
@@ -5136,11 +6048,26 @@
         309
       ]
     },
-    "org.tron.common.crypto.zksnark.Fp12.equals:(Ljava/lang/Object;)Z" : {
-      "completeTestCount" : 0,
+    "org.tron.common.crypto.zksnark.Fp12.dbl:()Lorg/tron/common/crypto/zksnark/Fp12;" : {
+      "completeTestCount" : 1,
       "incompleteTestCount" : 0,
       "perMethodTestability" : "T000",
-      "perMethodOutcome" : "T000",
+      "perMethodOutcome" : "R000",
+      "perTestOutcome" : {
+        "R000" : 1
+      },
+      "lineNumbers" : [
+        111
+      ]
+    },
+    "org.tron.common.crypto.zksnark.Fp12.equals:(Ljava/lang/Object;)Z" : {
+      "completeTestCount" : 11,
+      "incompleteTestCount" : 0,
+      "perMethodTestability" : "T000",
+      "perMethodOutcome" : "R000",
+      "perTestOutcome" : {
+        "R000" : 11
+      },
       "lineNumbers" : [
         341,
         342,
@@ -5153,10 +6080,13 @@
       ]
     },
     "org.tron.common.crypto.zksnark.Fp12.frobeniusMap:(I)Lorg/tron/common/crypto/zksnark/Fp12;" : {
-      "completeTestCount" : 0,
+      "completeTestCount" : 1,
       "incompleteTestCount" : 0,
       "perMethodTestability" : "T000",
-      "perMethodOutcome" : "T000",
+      "perMethodOutcome" : "R000",
+      "perTestOutcome" : {
+        "R000" : 1
+      },
       "lineNumbers" : [
         243,
         244,
@@ -5164,28 +6094,55 @@
       ]
     },
     "org.tron.common.crypto.zksnark.Fp12.hashCode:()I" : {
-      "completeTestCount" : 0,
+      "completeTestCount" : 11,
       "incompleteTestCount" : 0,
       "perMethodTestability" : "T000",
-      "perMethodOutcome" : "T000",
+      "perMethodOutcome" : "R000",
+      "perTestOutcome" : {
+        "R000" : 11
+      },
       "lineNumbers" : [
         359
       ]
     },
-    "org.tron.common.crypto.zksnark.Fp12.isValid:()Z" : {
-      "completeTestCount" : 0,
+    "org.tron.common.crypto.zksnark.Fp12.inverse:()Lorg/tron/common/crypto/zksnark/Fp12;" : {
+      "completeTestCount" : 1,
       "incompleteTestCount" : 0,
       "perMethodTestability" : "T000",
-      "perMethodOutcome" : "T000",
+      "perMethodOutcome" : "R000",
+      "perTestOutcome" : {
+        "R000" : 1
+      },
+      "lineNumbers" : [
+        215,
+        216,
+        217,
+        218,
+        220,
+        221,
+        223
+      ]
+    },
+    "org.tron.common.crypto.zksnark.Fp12.isValid:()Z" : {
+      "completeTestCount" : 1,
+      "incompleteTestCount" : 0,
+      "perMethodTestability" : "T000",
+      "perMethodOutcome" : "R000",
+      "perTestOutcome" : {
+        "R000" : 1
+      },
       "lineNumbers" : [
         238
       ]
     },
     "org.tron.common.crypto.zksnark.Fp12.isZero:()Z" : {
-      "completeTestCount" : 0,
+      "completeTestCount" : 12,
       "incompleteTestCount" : 0,
       "perMethodTestability" : "T000",
-      "perMethodOutcome" : "T000",
+      "perMethodOutcome" : "R000",
+      "perTestOutcome" : {
+        "R000" : 12
+      },
       "lineNumbers" : [
         233
       ]
@@ -5200,10 +6157,13 @@
       ]
     },
     "org.tron.common.crypto.zksnark.Fp12.mul:(Lorg/tron/common/crypto/zksnark/Fp12;)Lorg/tron/common/crypto/zksnark/Fp12;" : {
-      "completeTestCount" : 0,
+      "completeTestCount" : 1,
       "incompleteTestCount" : 0,
       "perMethodTestability" : "T000",
-      "perMethodOutcome" : "T000",
+      "perMethodOutcome" : "R000",
+      "perTestOutcome" : {
+        "R000" : 1
+      },
       "lineNumbers" : [
         195,
         196,
@@ -5215,10 +6175,13 @@
       ]
     },
     "org.tron.common.crypto.zksnark.Fp12.mulBy024:(Lorg/tron/common/crypto/zksnark/Fp2;Lorg/tron/common/crypto/zksnark/Fp2;Lorg/tron/common/crypto/zksnark/Fp2;)Lorg/tron/common/crypto/zksnark/Fp12;" : {
-      "completeTestCount" : 0,
+      "completeTestCount" : 1,
       "incompleteTestCount" : 0,
       "perMethodTestability" : "T000",
-      "perMethodOutcome" : "T000",
+      "perMethodOutcome" : "R000",
+      "perTestOutcome" : {
+        "R000" : 1
+      },
       "lineNumbers" : [
         116,
         117,
@@ -5275,12 +6238,42 @@
       ]
     },
     "org.tron.common.crypto.zksnark.Fp12.negExp:(Ljava/math/BigInteger;)Lorg/tron/common/crypto/zksnark/Fp12;" : {
-      "completeTestCount" : 0,
+      "completeTestCount" : 1,
       "incompleteTestCount" : 0,
       "perMethodTestability" : "T000",
-      "perMethodOutcome" : "T000",
+      "perMethodOutcome" : "R000",
+      "perTestOutcome" : {
+        "R000" : 1
+      },
       "lineNumbers" : [
         336
+      ]
+    },
+    "org.tron.common.crypto.zksnark.Fp12.negate:()Lorg/tron/common/crypto/zksnark/Fp12;" : {
+      "completeTestCount" : 1,
+      "incompleteTestCount" : 0,
+      "perMethodTestability" : "T000",
+      "perMethodOutcome" : "R000",
+      "perTestOutcome" : {
+        "R000" : 1
+      },
+      "lineNumbers" : [
+        228
+      ]
+    },
+    "org.tron.common.crypto.zksnark.Fp12.squared:()Lorg/tron/common/crypto/zksnark/Fp12;" : {
+      "completeTestCount" : 1,
+      "incompleteTestCount" : 0,
+      "perMethodTestability" : "T000",
+      "perMethodOutcome" : "R000",
+      "perTestOutcome" : {
+        "R000" : 1
+      },
+      "lineNumbers" : [
+        101,
+        103,
+        104,
+        106
       ]
     },
     "org.tron.common.crypto.zksnark.Fp12.sub:(Ljava/lang/Object;)Ljava/lang/Object;" : {
@@ -5293,28 +6286,37 @@
       ]
     },
     "org.tron.common.crypto.zksnark.Fp12.sub:(Lorg/tron/common/crypto/zksnark/Fp12;)Lorg/tron/common/crypto/zksnark/Fp12;" : {
-      "completeTestCount" : 0,
+      "completeTestCount" : 1,
       "incompleteTestCount" : 0,
       "perMethodTestability" : "T000",
-      "perMethodOutcome" : "T000",
+      "perMethodOutcome" : "R000",
+      "perTestOutcome" : {
+        "R000" : 1
+      },
       "lineNumbers" : [
         209
       ]
     },
     "org.tron.common.crypto.zksnark.Fp12.toString:()Ljava/lang/String;" : {
-      "completeTestCount" : 0,
+      "completeTestCount" : 1,
       "incompleteTestCount" : 0,
       "perMethodTestability" : "T020",
-      "perMethodOutcome" : "T020",
+      "perMethodOutcome" : "R000",
+      "perTestOutcome" : {
+        "R000" : 1
+      },
       "lineNumbers" : [
         364
       ]
     },
     "org.tron.common.crypto.zksnark.Fp12.unitaryInverse:()Lorg/tron/common/crypto/zksnark/Fp12;" : {
-      "completeTestCount" : 0,
+      "completeTestCount" : 1,
       "incompleteTestCount" : 0,
       "perMethodTestability" : "T000",
-      "perMethodOutcome" : "T000",
+      "perMethodOutcome" : "R000",
+      "perTestOutcome" : {
+        "R000" : 1
+      },
       "lineNumbers" : [
         329,
         330,
@@ -5324,30 +6326,30 @@
     "org.tron.common.crypto.zksnark.Fp2.<clinit>:()V" : {
       "completeTestCount" : 0,
       "incompleteTestCount" : 0,
-      "perMethodTestability" : "T012",
-      "perMethodOutcome" : "T012",
-      "lineNumbers" : [
-        37,
-        38,
-        39,
-        41
-      ]
+      "perMethodTestability" : "T023",
+      "perMethodOutcome" : "T023"
     },
     "org.tron.common.crypto.zksnark.Fp2.<init>:(Ljava/math/BigInteger;Ljava/math/BigInteger;)V" : {
-      "completeTestCount" : 0,
+      "completeTestCount" : 1,
       "incompleteTestCount" : 0,
       "perMethodTestability" : "T000",
-      "perMethodOutcome" : "T000",
+      "perMethodOutcome" : "R000",
+      "perTestOutcome" : {
+        "R000" : 1
+      },
       "lineNumbers" : [
         56,
         57
       ]
     },
     "org.tron.common.crypto.zksnark.Fp2.<init>:(Lorg/tron/common/crypto/zksnark/Fp;Lorg/tron/common/crypto/zksnark/Fp;)V" : {
-      "completeTestCount" : 0,
+      "completeTestCount" : 1,
       "incompleteTestCount" : 0,
       "perMethodTestability" : "T005",
-      "perMethodOutcome" : "T005",
+      "perMethodOutcome" : "R000",
+      "perTestOutcome" : {
+        "R000" : 1
+      },
       "lineNumbers" : [
         50,
         51,
@@ -5365,19 +6367,25 @@
       ]
     },
     "org.tron.common.crypto.zksnark.Fp2.add:(Lorg/tron/common/crypto/zksnark/Fp2;)Lorg/tron/common/crypto/zksnark/Fp2;" : {
-      "completeTestCount" : 0,
+      "completeTestCount" : 1,
       "incompleteTestCount" : 0,
       "perMethodTestability" : "T000",
-      "perMethodOutcome" : "T000",
+      "perMethodOutcome" : "R000",
+      "perTestOutcome" : {
+        "R000" : 1
+      },
       "lineNumbers" : [
         105
       ]
     },
     "org.tron.common.crypto.zksnark.Fp2.create:(Ljava/math/BigInteger;Ljava/math/BigInteger;)Lorg/tron/common/crypto/zksnark/Fp2;" : {
-      "completeTestCount" : 0,
+      "completeTestCount" : 1,
       "incompleteTestCount" : 0,
       "perMethodTestability" : "T000",
-      "perMethodOutcome" : "T000",
+      "perMethodOutcome" : "R000",
+      "perTestOutcome" : {
+        "R000" : 1
+      },
       "lineNumbers" : [
         61,
         62,
@@ -5385,21 +6393,39 @@
       ]
     },
     "org.tron.common.crypto.zksnark.Fp2.create:([B[B)Lorg/tron/common/crypto/zksnark/Fp2;" : {
-      "completeTestCount" : 0,
+      "completeTestCount" : 1,
       "incompleteTestCount" : 0,
       "perMethodTestability" : "T000",
-      "perMethodOutcome" : "T000",
+      "perMethodOutcome" : "R000",
+      "perTestOutcome" : {
+        "R000" : 1
+      },
       "lineNumbers" : [
         69,
         70,
         72
       ]
     },
-    "org.tron.common.crypto.zksnark.Fp2.equals:(Ljava/lang/Object;)Z" : {
-      "completeTestCount" : 0,
+    "org.tron.common.crypto.zksnark.Fp2.dbl:()Lorg/tron/common/crypto/zksnark/Fp2;" : {
+      "completeTestCount" : 1,
       "incompleteTestCount" : 0,
       "perMethodTestability" : "T000",
-      "perMethodOutcome" : "T000",
+      "perMethodOutcome" : "R000",
+      "perTestOutcome" : {
+        "R000" : 1
+      },
+      "lineNumbers" : [
+        115
+      ]
+    },
+    "org.tron.common.crypto.zksnark.Fp2.equals:(Ljava/lang/Object;)Z" : {
+      "completeTestCount" : 6,
+      "incompleteTestCount" : 0,
+      "perMethodTestability" : "T000",
+      "perMethodOutcome" : "R000",
+      "perTestOutcome" : {
+        "R000" : 6
+      },
       "lineNumbers" : [
         149,
         150,
@@ -5412,10 +6438,13 @@
       ]
     },
     "org.tron.common.crypto.zksnark.Fp2.frobeniusMap:(I)Lorg/tron/common/crypto/zksnark/Fp2;" : {
-      "completeTestCount" : 0,
+      "completeTestCount" : 1,
       "incompleteTestCount" : 0,
       "perMethodTestability" : "T000",
-      "perMethodOutcome" : "T000",
+      "perMethodOutcome" : "R000",
+      "perTestOutcome" : {
+        "R000" : 1
+      },
       "lineNumbers" : [
         172,
         173,
@@ -5423,28 +6452,55 @@
       ]
     },
     "org.tron.common.crypto.zksnark.Fp2.hashCode:()I" : {
-      "completeTestCount" : 0,
+      "completeTestCount" : 6,
       "incompleteTestCount" : 0,
       "perMethodTestability" : "T000",
-      "perMethodOutcome" : "T000",
+      "perMethodOutcome" : "R000",
+      "perTestOutcome" : {
+        "R000" : 6
+      },
       "lineNumbers" : [
         167
       ]
     },
-    "org.tron.common.crypto.zksnark.Fp2.isValid:()Z" : {
-      "completeTestCount" : 0,
+    "org.tron.common.crypto.zksnark.Fp2.inverse:()Lorg/tron/common/crypto/zksnark/Fp2;" : {
+      "completeTestCount" : 1,
       "incompleteTestCount" : 0,
       "perMethodTestability" : "T000",
-      "perMethodOutcome" : "T000",
+      "perMethodOutcome" : "R000",
+      "perTestOutcome" : {
+        "R000" : 1
+      },
+      "lineNumbers" : [
+        121,
+        122,
+        123,
+        124,
+        126,
+        127,
+        129
+      ]
+    },
+    "org.tron.common.crypto.zksnark.Fp2.isValid:()Z" : {
+      "completeTestCount" : 3,
+      "incompleteTestCount" : 0,
+      "perMethodTestability" : "T000",
+      "perMethodOutcome" : "R000",
+      "perTestOutcome" : {
+        "R000" : 3
+      },
       "lineNumbers" : [
         144
       ]
     },
     "org.tron.common.crypto.zksnark.Fp2.isZero:()Z" : {
-      "completeTestCount" : 0,
+      "completeTestCount" : 5,
       "incompleteTestCount" : 0,
       "perMethodTestability" : "T000",
-      "perMethodOutcome" : "T000",
+      "perMethodOutcome" : "R000",
+      "perTestOutcome" : {
+        "R000" : 5
+      },
       "lineNumbers" : [
         139
       ]
@@ -5459,10 +6515,13 @@
       ]
     },
     "org.tron.common.crypto.zksnark.Fp2.mul:(Lorg/tron/common/crypto/zksnark/Fp2;)Lorg/tron/common/crypto/zksnark/Fp2;" : {
-      "completeTestCount" : 0,
+      "completeTestCount" : 1,
       "incompleteTestCount" : 0,
       "perMethodTestability" : "T000",
-      "perMethodOutcome" : "T000",
+      "perMethodOutcome" : "R000",
+      "perTestOutcome" : {
+        "R000" : 1
+      },
       "lineNumbers" : [
         93,
         94,
@@ -5473,12 +6532,44 @@
       ]
     },
     "org.tron.common.crypto.zksnark.Fp2.mulByNonResidue:()Lorg/tron/common/crypto/zksnark/Fp2;" : {
-      "completeTestCount" : 0,
+      "completeTestCount" : 1,
       "incompleteTestCount" : 0,
       "perMethodTestability" : "T000",
-      "perMethodOutcome" : "T000",
+      "perMethodOutcome" : "R000",
+      "perTestOutcome" : {
+        "R000" : 1
+      },
       "lineNumbers" : [
         179
+      ]
+    },
+    "org.tron.common.crypto.zksnark.Fp2.negate:()Lorg/tron/common/crypto/zksnark/Fp2;" : {
+      "completeTestCount" : 1,
+      "incompleteTestCount" : 0,
+      "perMethodTestability" : "T000",
+      "perMethodOutcome" : "R000",
+      "perTestOutcome" : {
+        "R000" : 1
+      },
+      "lineNumbers" : [
+        134
+      ]
+    },
+    "org.tron.common.crypto.zksnark.Fp2.squared:()Lorg/tron/common/crypto/zksnark/Fp2;" : {
+      "completeTestCount" : 1,
+      "incompleteTestCount" : 0,
+      "perMethodTestability" : "T000",
+      "perMethodOutcome" : "R000",
+      "perTestOutcome" : {
+        "R000" : 1
+      },
+      "lineNumbers" : [
+        80,
+        82,
+        83,
+        84,
+        85,
+        87
       ]
     },
     "org.tron.common.crypto.zksnark.Fp2.sub:(Ljava/lang/Object;)Ljava/lang/Object;" : {
@@ -5491,19 +6582,25 @@
       ]
     },
     "org.tron.common.crypto.zksnark.Fp2.sub:(Lorg/tron/common/crypto/zksnark/Fp2;)Lorg/tron/common/crypto/zksnark/Fp2;" : {
-      "completeTestCount" : 0,
+      "completeTestCount" : 1,
       "incompleteTestCount" : 0,
       "perMethodTestability" : "T000",
-      "perMethodOutcome" : "T000",
+      "perMethodOutcome" : "R000",
+      "perTestOutcome" : {
+        "R000" : 1
+      },
       "lineNumbers" : [
         110
       ]
     },
     "org.tron.common.crypto.zksnark.Fp2.toString:()Ljava/lang/String;" : {
-      "completeTestCount" : 0,
+      "completeTestCount" : 1,
       "incompleteTestCount" : 0,
       "perMethodTestability" : "T020",
-      "perMethodOutcome" : "T020",
+      "perMethodOutcome" : "R000",
+      "perTestOutcome" : {
+        "R000" : 1
+      },
       "lineNumbers" : [
         184
       ]
@@ -5511,21 +6608,17 @@
     "org.tron.common.crypto.zksnark.Fp6.<clinit>:()V" : {
       "completeTestCount" : 0,
       "incompleteTestCount" : 0,
-      "perMethodTestability" : "T012",
-      "perMethodOutcome" : "T012",
-      "lineNumbers" : [
-        35,
-        36,
-        37,
-        38,
-        65
-      ]
+      "perMethodTestability" : "T023",
+      "perMethodOutcome" : "T023"
     },
     "org.tron.common.crypto.zksnark.Fp6.<init>:(Lorg/tron/common/crypto/zksnark/Fp2;Lorg/tron/common/crypto/zksnark/Fp2;Lorg/tron/common/crypto/zksnark/Fp2;)V" : {
-      "completeTestCount" : 0,
+      "completeTestCount" : 1,
       "incompleteTestCount" : 0,
       "perMethodTestability" : "T005",
-      "perMethodOutcome" : "T005",
+      "perMethodOutcome" : "R000",
+      "perTestOutcome" : {
+        "R000" : 1
+      },
       "lineNumbers" : [
         96,
         97,
@@ -5544,10 +6637,13 @@
       ]
     },
     "org.tron.common.crypto.zksnark.Fp6.add:(Lorg/tron/common/crypto/zksnark/Fp6;)Lorg/tron/common/crypto/zksnark/Fp6;" : {
-      "completeTestCount" : 0,
+      "completeTestCount" : 1,
       "incompleteTestCount" : 0,
       "perMethodTestability" : "T000",
-      "perMethodOutcome" : "T000",
+      "perMethodOutcome" : "R000",
+      "perTestOutcome" : {
+        "R000" : 1
+      },
       "lineNumbers" : [
         163,
         164,
@@ -5555,11 +6651,26 @@
         167
       ]
     },
-    "org.tron.common.crypto.zksnark.Fp6.equals:(Ljava/lang/Object;)Z" : {
-      "completeTestCount" : 0,
+    "org.tron.common.crypto.zksnark.Fp6.dbl:()Lorg/tron/common/crypto/zksnark/Fp6;" : {
+      "completeTestCount" : 1,
       "incompleteTestCount" : 0,
       "perMethodTestability" : "T000",
-      "perMethodOutcome" : "T000",
+      "perMethodOutcome" : "R000",
+      "perTestOutcome" : {
+        "R000" : 1
+      },
+      "lineNumbers" : [
+        122
+      ]
+    },
+    "org.tron.common.crypto.zksnark.Fp6.equals:(Ljava/lang/Object;)Z" : {
+      "completeTestCount" : 11,
+      "incompleteTestCount" : 0,
+      "perMethodTestability" : "T000",
+      "perMethodOutcome" : "R000",
+      "perTestOutcome" : {
+        "R000" : 11
+      },
       "lineNumbers" : [
         229,
         230,
@@ -5574,10 +6685,13 @@
       ]
     },
     "org.tron.common.crypto.zksnark.Fp6.frobeniusMap:(I)Lorg/tron/common/crypto/zksnark/Fp6;" : {
-      "completeTestCount" : 0,
+      "completeTestCount" : 1,
       "incompleteTestCount" : 0,
       "perMethodTestability" : "T000",
-      "perMethodOutcome" : "T000",
+      "perMethodOutcome" : "R000",
+      "perTestOutcome" : {
+        "R000" : 1
+      },
       "lineNumbers" : [
         220,
         221,
@@ -5586,28 +6700,62 @@
       ]
     },
     "org.tron.common.crypto.zksnark.Fp6.hashCode:()I" : {
-      "completeTestCount" : 0,
+      "completeTestCount" : 11,
       "incompleteTestCount" : 0,
       "perMethodTestability" : "T000",
-      "perMethodOutcome" : "T000",
+      "perMethodOutcome" : "R000",
+      "perTestOutcome" : {
+        "R000" : 11
+      },
       "lineNumbers" : [
         249
       ]
     },
-    "org.tron.common.crypto.zksnark.Fp6.isValid:()Z" : {
-      "completeTestCount" : 0,
+    "org.tron.common.crypto.zksnark.Fp6.inverse:()Lorg/tron/common/crypto/zksnark/Fp6;" : {
+      "completeTestCount" : 1,
       "incompleteTestCount" : 0,
       "perMethodTestability" : "T000",
-      "perMethodOutcome" : "T000",
+      "perMethodOutcome" : "R000",
+      "perTestOutcome" : {
+        "R000" : 1
+      },
+      "lineNumbers" : [
+        185,
+        186,
+        187,
+        188,
+        189,
+        190,
+        191,
+        192,
+        193,
+        194,
+        196,
+        197,
+        198,
+        200
+      ]
+    },
+    "org.tron.common.crypto.zksnark.Fp6.isValid:()Z" : {
+      "completeTestCount" : 1,
+      "incompleteTestCount" : 0,
+      "perMethodTestability" : "T000",
+      "perMethodOutcome" : "R000",
+      "perTestOutcome" : {
+        "R000" : 1
+      },
       "lineNumbers" : [
         215
       ]
     },
     "org.tron.common.crypto.zksnark.Fp6.isZero:()Z" : {
-      "completeTestCount" : 0,
+      "completeTestCount" : 8,
       "incompleteTestCount" : 0,
       "perMethodTestability" : "T000",
-      "perMethodOutcome" : "T000",
+      "perMethodOutcome" : "R000",
+      "perTestOutcome" : {
+        "R000" : 8
+      },
       "lineNumbers" : [
         210
       ]
@@ -5622,10 +6770,13 @@
       ]
     },
     "org.tron.common.crypto.zksnark.Fp6.mul:(Lorg/tron/common/crypto/zksnark/Fp2;)Lorg/tron/common/crypto/zksnark/Fp6;" : {
-      "completeTestCount" : 0,
+      "completeTestCount" : 1,
       "incompleteTestCount" : 0,
       "perMethodTestability" : "T000",
-      "perMethodOutcome" : "T000",
+      "perMethodOutcome" : "R000",
+      "perTestOutcome" : {
+        "R000" : 1
+      },
       "lineNumbers" : [
         144,
         145,
@@ -5634,10 +6785,13 @@
       ]
     },
     "org.tron.common.crypto.zksnark.Fp6.mul:(Lorg/tron/common/crypto/zksnark/Fp6;)Lorg/tron/common/crypto/zksnark/Fp6;" : {
-      "completeTestCount" : 0,
+      "completeTestCount" : 1,
       "incompleteTestCount" : 0,
       "perMethodTestability" : "T000",
-      "perMethodOutcome" : "T000",
+      "perMethodOutcome" : "R000",
+      "perTestOutcome" : {
+        "R000" : 1
+      },
       "lineNumbers" : [
         128,
         129,
@@ -5651,15 +6805,52 @@
       ]
     },
     "org.tron.common.crypto.zksnark.Fp6.mulByNonResidue:()Lorg/tron/common/crypto/zksnark/Fp6;" : {
-      "completeTestCount" : 0,
+      "completeTestCount" : 1,
       "incompleteTestCount" : 0,
       "perMethodTestability" : "T000",
-      "perMethodOutcome" : "T000",
+      "perMethodOutcome" : "R000",
+      "perTestOutcome" : {
+        "R000" : 1
+      },
       "lineNumbers" : [
         153,
         154,
         155,
         157
+      ]
+    },
+    "org.tron.common.crypto.zksnark.Fp6.negate:()Lorg/tron/common/crypto/zksnark/Fp6;" : {
+      "completeTestCount" : 1,
+      "incompleteTestCount" : 0,
+      "perMethodTestability" : "T000",
+      "perMethodOutcome" : "R000",
+      "perTestOutcome" : {
+        "R000" : 1
+      },
+      "lineNumbers" : [
+        205
+      ]
+    },
+    "org.tron.common.crypto.zksnark.Fp6.squared:()Lorg/tron/common/crypto/zksnark/Fp6;" : {
+      "completeTestCount" : 1,
+      "incompleteTestCount" : 0,
+      "perMethodTestability" : "T000",
+      "perMethodOutcome" : "R000",
+      "perTestOutcome" : {
+        "R000" : 1
+      },
+      "lineNumbers" : [
+        105,
+        106,
+        107,
+        108,
+        109,
+        110,
+        111,
+        113,
+        114,
+        115,
+        117
       ]
     },
     "org.tron.common.crypto.zksnark.Fp6.sub:(Ljava/lang/Object;)Ljava/lang/Object;" : {
@@ -5672,10 +6863,13 @@
       ]
     },
     "org.tron.common.crypto.zksnark.Fp6.sub:(Lorg/tron/common/crypto/zksnark/Fp6;)Lorg/tron/common/crypto/zksnark/Fp6;" : {
-      "completeTestCount" : 0,
+      "completeTestCount" : 1,
       "incompleteTestCount" : 0,
       "perMethodTestability" : "T000",
-      "perMethodOutcome" : "T000",
+      "perMethodOutcome" : "R000",
+      "perTestOutcome" : {
+        "R000" : 1
+      },
       "lineNumbers" : [
         173,
         174,
@@ -5684,10 +6878,13 @@
       ]
     },
     "org.tron.common.crypto.zksnark.PairingCheck$EllCoeffs.<init>:(Lorg/tron/common/crypto/zksnark/Fp2;Lorg/tron/common/crypto/zksnark/Fp2;Lorg/tron/common/crypto/zksnark/Fp2;)V" : {
-      "completeTestCount" : 0,
+      "completeTestCount" : 1,
       "incompleteTestCount" : 0,
       "perMethodTestability" : "T005",
-      "perMethodOutcome" : "T005",
+      "perMethodOutcome" : "R000",
+      "perTestOutcome" : {
+        "R000" : 1
+      },
       "lineNumbers" : [
         300,
         301,
@@ -5697,10 +6894,13 @@
       ]
     },
     "org.tron.common.crypto.zksnark.PairingCheck$Pair.<init>:(Lorg/tron/common/crypto/zksnark/BN128G1;Lorg/tron/common/crypto/zksnark/BN128G2;)V" : {
-      "completeTestCount" : 0,
+      "completeTestCount" : 1,
       "incompleteTestCount" : 0,
       "perMethodTestability" : "T005",
-      "perMethodOutcome" : "T005",
+      "perMethodOutcome" : "R000",
+      "perTestOutcome" : {
+        "R000" : 1
+      },
       "lineNumbers" : [
         271,
         272,
@@ -5709,10 +6909,13 @@
       ]
     },
     "org.tron.common.crypto.zksnark.PairingCheck$Pair.millerLoop:()Lorg/tron/common/crypto/zksnark/Fp12;" : {
-      "completeTestCount" : 0,
+      "completeTestCount" : 2,
       "incompleteTestCount" : 0,
       "perMethodTestability" : "T000",
-      "perMethodOutcome" : "T000",
+      "perMethodOutcome" : "R000",
+      "perTestOutcome" : {
+        "R000" : 2
+      },
       "lineNumbers" : [
         283,
         284,
@@ -5722,19 +6925,25 @@
       ]
     },
     "org.tron.common.crypto.zksnark.PairingCheck$Pair.of:(Lorg/tron/common/crypto/zksnark/BN128G1;Lorg/tron/common/crypto/zksnark/BN128G2;)Lorg/tron/common/crypto/zksnark/PairingCheck$Pair;" : {
-      "completeTestCount" : 0,
+      "completeTestCount" : 1,
       "incompleteTestCount" : 0,
       "perMethodTestability" : "T000",
-      "perMethodOutcome" : "T000",
+      "perMethodOutcome" : "R000",
+      "perTestOutcome" : {
+        "R000" : 1
+      },
       "lineNumbers" : [
         277
       ]
     },
     "org.tron.common.crypto.zksnark.PairingCheck$Precomputed.<init>:(Lorg/tron/common/crypto/zksnark/BN128G2;Lorg/tron/common/crypto/zksnark/PairingCheck$EllCoeffs;)V" : {
-      "completeTestCount" : 0,
+      "completeTestCount" : 1,
       "incompleteTestCount" : 0,
       "perMethodTestability" : "T005",
-      "perMethodOutcome" : "T005",
+      "perMethodOutcome" : "R000",
+      "perTestOutcome" : {
+        "R000" : 1
+      },
       "lineNumbers" : [
         256,
         257,
@@ -5743,10 +6952,13 @@
       ]
     },
     "org.tron.common.crypto.zksnark.PairingCheck$Precomputed.of:(Lorg/tron/common/crypto/zksnark/BN128G2;Lorg/tron/common/crypto/zksnark/PairingCheck$EllCoeffs;)Lorg/tron/common/crypto/zksnark/PairingCheck$Precomputed;" : {
-      "completeTestCount" : 0,
+      "completeTestCount" : 1,
       "incompleteTestCount" : 0,
       "perMethodTestability" : "T000",
-      "perMethodOutcome" : "T000",
+      "perMethodOutcome" : "R000",
+      "perTestOutcome" : {
+        "R000" : 1
+      },
       "lineNumbers" : [
         262
       ]
@@ -5754,11 +6966,8 @@
     "org.tron.common.crypto.zksnark.PairingCheck.<clinit>:()V" : {
       "completeTestCount" : 0,
       "incompleteTestCount" : 0,
-      "perMethodTestability" : "T012",
-      "perMethodOutcome" : "T012",
-      "lineNumbers" : [
-        51
-      ]
+      "perMethodTestability" : "T023",
+      "perMethodOutcome" : "T023"
     },
     "org.tron.common.crypto.zksnark.PairingCheck.<init>:()V" : {
       "completeTestCount" : 0,
@@ -5785,7 +6994,7 @@
       "completeTestCount" : 0,
       "incompleteTestCount" : 0,
       "perMethodTestability" : "T000",
-      "perMethodOutcome" : "T000",
+      "perMethodOutcome" : "R004",
       "lineNumbers" : [
         228,
         229
@@ -5820,10 +7029,13 @@
       ]
     },
     "org.tron.common.crypto.zksnark.PairingCheck.create:()Lorg/tron/common/crypto/zksnark/PairingCheck;" : {
-      "completeTestCount" : 0,
+      "completeTestCount" : 1,
       "incompleteTestCount" : 0,
       "perMethodTestability" : "T000",
-      "perMethodOutcome" : "T000",
+      "perMethodOutcome" : "R000",
+      "perTestOutcome" : {
+        "R000" : 1
+      },
       "lineNumbers" : [
         60
       ]
@@ -5832,7 +7044,7 @@
       "completeTestCount" : 0,
       "incompleteTestCount" : 0,
       "perMethodTestability" : "T000",
-      "perMethodOutcome" : "T000",
+      "perMethodOutcome" : "R013",
       "lineNumbers" : [
         194,
         195,
@@ -5942,10 +7154,13 @@
       ]
     },
     "org.tron.common.crypto.zksnark.PairingCheck.result:()I" : {
-      "completeTestCount" : 0,
+      "completeTestCount" : 1,
       "incompleteTestCount" : 0,
       "perMethodTestability" : "T000",
-      "perMethodOutcome" : "T000",
+      "perMethodOutcome" : "R000",
+      "perTestOutcome" : {
+        "R000" : 1
+      },
       "lineNumbers" : [
         248
       ]
@@ -5954,7 +7169,7 @@
       "completeTestCount" : 0,
       "incompleteTestCount" : 0,
       "perMethodTestability" : "T000",
-      "perMethodOutcome" : "T000",
+      "perMethodOutcome" : "R013",
       "lineNumbers" : [
         233,
         235,
@@ -5968,18 +7183,8 @@
     "org.tron.common.crypto.zksnark.Params.<clinit>:()V" : {
       "completeTestCount" : 0,
       "incompleteTestCount" : 0,
-      "perMethodTestability" : "T012",
-      "perMethodOutcome" : "T012",
-      "lineNumbers" : [
-        33,
-        39,
-        45,
-        50,
-        55,
-        57,
-        64,
-        70
-      ]
+      "perMethodTestability" : "T023",
+      "perMethodOutcome" : "T023"
     },
     "org.tron.common.crypto.zksnark.Params.<init>:()V" : {
       "completeTestCount" : 0,

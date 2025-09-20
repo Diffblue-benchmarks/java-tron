@@ -1,7 +1,7 @@
 package org.tron.core.services.jsonrpc;
 
 import static org.mockito.ArgumentMatchers.isA;
-import static org.mockito.Mockito.doNothing;
+import static org.mockito.Mockito.doThrow;
 import static org.mockito.Mockito.verify;
 import com.diffblue.cover.annotations.MaintainedByDiffblue;
 import com.diffblue.cover.annotations.MethodsUnderTest;
@@ -17,26 +17,31 @@ import org.mockito.junit.MockitoJUnitRunner;
 import org.springframework.test.annotation.DirtiesContext;
 import org.springframework.test.annotation.DirtiesContext.ClassMode;
 
-@RunWith(MockitoJUnitRunner.class)
 @DirtiesContext(classMode = ClassMode.AFTER_EACH_TEST_METHOD)
+@RunWith(MockitoJUnitRunner.class)
 public class FullNodeJsonRpcHttpServiceDiffblueTest {
-  @InjectMocks
-  private FullNodeJsonRpcHttpService fullNodeJsonRpcHttpService;
+  @InjectMocks private FullNodeJsonRpcHttpService fullNodeJsonRpcHttpService;
 
-  @Mock
-  private JsonRpcServlet jsonRpcServlet;
+  @Mock private JsonRpcServlet jsonRpcServlet;
 
   /**
    * Test {@link FullNodeJsonRpcHttpService#start()}.
-   * <p>
-   * Method under test: {@link FullNodeJsonRpcHttpService#start()}
+   *
+   * <ul>
+   *   <li>Given {@link JsonRpcServlet} {@link JsonRpcServlet#init(ServletConfig)} throw {@link
+   *       RuntimeException#RuntimeException()}.
+   *   <li>Then calls {@link JsonRpcServlet#init(ServletConfig)}.
+   * </ul>
+   *
+   * <p>Method under test: {@link FullNodeJsonRpcHttpService#start()}
    */
   @Test
   @Category(MaintainedByDiffblue.class)
   @MethodsUnderTest({"void FullNodeJsonRpcHttpService.start()"})
-  public void testStart() throws ServletException {
+  public void testStart_givenJsonRpcServletInitThrowRuntimeException_thenCallsInit()
+      throws ServletException {
     // Arrange
-    doNothing().when(jsonRpcServlet).init(Mockito.<ServletConfig>any());
+    doThrow(new RuntimeException()).when(jsonRpcServlet).init(Mockito.<ServletConfig>any());
 
     // Act
     fullNodeJsonRpcHttpService.start();

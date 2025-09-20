@@ -12,18 +12,19 @@ import org.tron.core.services.ratelimiter.strategy.Strategy.ParamItem;
 public class GlobalPreemptibleStrategyDiffblueTest {
   /**
    * Test {@link GlobalPreemptibleStrategy#GlobalPreemptibleStrategy(String)}.
+   *
    * <ul>
-   *   <li>When empty string.</li>
+   *   <li>When empty string.
    * </ul>
-   * <p>
-   * Method under test: {@link GlobalPreemptibleStrategy#GlobalPreemptibleStrategy(String)}
+   *
+   * <p>Method under test: {@link GlobalPreemptibleStrategy#GlobalPreemptibleStrategy(String)}
    */
   @Test
   @Category(MaintainedByDiffblue.class)
   @MethodsUnderTest({"void GlobalPreemptibleStrategy.<init>(String)"})
   public void testNewGlobalPreemptibleStrategy_whenEmptyString() {
     // Arrange, Act and Assert
-    Map<String, ParamItem> mapParams = (new GlobalPreemptibleStrategy("")).getMapParams();
+    Map<String, ParamItem> mapParams = new GlobalPreemptibleStrategy("").getMapParams();
     assertEquals(1, mapParams.size());
     ParamItem getResult = mapParams.get(GlobalPreemptibleStrategy.STRATEGY_PARAM_PERMIT);
     assertEquals(1, ((Integer) getResult.value).intValue());
@@ -33,18 +34,19 @@ public class GlobalPreemptibleStrategyDiffblueTest {
 
   /**
    * Test {@link GlobalPreemptibleStrategy#GlobalPreemptibleStrategy(String)}.
+   *
    * <ul>
-   *   <li>When {@code null}.</li>
+   *   <li>When {@code null}.
    * </ul>
-   * <p>
-   * Method under test: {@link GlobalPreemptibleStrategy#GlobalPreemptibleStrategy(String)}
+   *
+   * <p>Method under test: {@link GlobalPreemptibleStrategy#GlobalPreemptibleStrategy(String)}
    */
   @Test
   @Category(MaintainedByDiffblue.class)
   @MethodsUnderTest({"void GlobalPreemptibleStrategy.<init>(String)"})
   public void testNewGlobalPreemptibleStrategy_whenNull() {
     // Arrange, Act and Assert
-    Map<String, ParamItem> mapParams = (new GlobalPreemptibleStrategy(null)).getMapParams();
+    Map<String, ParamItem> mapParams = new GlobalPreemptibleStrategy(null).getMapParams();
     assertEquals(1, mapParams.size());
     ParamItem getResult = mapParams.get(GlobalPreemptibleStrategy.STRATEGY_PARAM_PERMIT);
     assertEquals(1, ((Integer) getResult.value).intValue());
@@ -54,18 +56,19 @@ public class GlobalPreemptibleStrategyDiffblueTest {
 
   /**
    * Test {@link GlobalPreemptibleStrategy#GlobalPreemptibleStrategy(String)}.
+   *
    * <ul>
-   *   <li>When {@code Param String}.</li>
+   *   <li>When {@code Param String}.
    * </ul>
-   * <p>
-   * Method under test: {@link GlobalPreemptibleStrategy#GlobalPreemptibleStrategy(String)}
+   *
+   * <p>Method under test: {@link GlobalPreemptibleStrategy#GlobalPreemptibleStrategy(String)}
    */
   @Test
   @Category(MaintainedByDiffblue.class)
   @MethodsUnderTest({"void GlobalPreemptibleStrategy.<init>(String)"})
   public void testNewGlobalPreemptibleStrategy_whenParamString() {
     // Arrange, Act and Assert
-    Map<String, ParamItem> mapParams = (new GlobalPreemptibleStrategy("Param String")).getMapParams();
+    Map<String, ParamItem> mapParams = new GlobalPreemptibleStrategy("Param String").getMapParams();
     assertEquals(1, mapParams.size());
     ParamItem getResult = mapParams.get(GlobalPreemptibleStrategy.STRATEGY_PARAM_PERMIT);
     assertEquals(1, ((Integer) getResult.value).intValue());
@@ -75,18 +78,19 @@ public class GlobalPreemptibleStrategyDiffblueTest {
 
   /**
    * Test {@link GlobalPreemptibleStrategy#GlobalPreemptibleStrategy(String)}.
+   *
    * <ul>
-   *   <li>When {@code UUU=UUU}.</li>
+   *   <li>When {@code UUU=UUU}.
    * </ul>
-   * <p>
-   * Method under test: {@link GlobalPreemptibleStrategy#GlobalPreemptibleStrategy(String)}
+   *
+   * <p>Method under test: {@link GlobalPreemptibleStrategy#GlobalPreemptibleStrategy(String)}
    */
   @Test
   @Category(MaintainedByDiffblue.class)
   @MethodsUnderTest({"void GlobalPreemptibleStrategy.<init>(String)"})
   public void testNewGlobalPreemptibleStrategy_whenUuuUuu() {
     // Arrange, Act and Assert
-    Map<String, ParamItem> mapParams = (new GlobalPreemptibleStrategy("UUU=UUU")).getMapParams();
+    Map<String, ParamItem> mapParams = new GlobalPreemptibleStrategy("UUU=UUU").getMapParams();
     assertEquals(1, mapParams.size());
     ParamItem getResult = mapParams.get(GlobalPreemptibleStrategy.STRATEGY_PARAM_PERMIT);
     assertEquals(1, ((Integer) getResult.value).intValue());
@@ -96,19 +100,21 @@ public class GlobalPreemptibleStrategyDiffblueTest {
 
   /**
    * Test {@link GlobalPreemptibleStrategy#defaultParam()}.
-   * <p>
-   * Method under test: {@link GlobalPreemptibleStrategy#defaultParam()}
+   *
+   * <p>Method under test: {@link GlobalPreemptibleStrategy#defaultParam()}
    */
   @Test
   @Category(MaintainedByDiffblue.class)
   @MethodsUnderTest({"Map GlobalPreemptibleStrategy.defaultParam()"})
   public void testDefaultParam() {
     // Arrange and Act
-    Map<String, ParamItem> actualDefaultParamResult = (new GlobalPreemptibleStrategy("Param String")).defaultParam();
+    Map<String, ParamItem> actualDefaultParamResult =
+        new GlobalPreemptibleStrategy("Param String").defaultParam();
 
     // Assert
     assertEquals(1, actualDefaultParamResult.size());
-    ParamItem getResult = actualDefaultParamResult.get(GlobalPreemptibleStrategy.STRATEGY_PARAM_PERMIT);
+    ParamItem getResult =
+        actualDefaultParamResult.get(GlobalPreemptibleStrategy.STRATEGY_PARAM_PERMIT);
     assertEquals(1, ((Integer) getResult.value).intValue());
     Class<Integer> expectedResultClass = Integer.class;
     assertEquals(expectedResultClass, getResult.type);
@@ -116,14 +122,14 @@ public class GlobalPreemptibleStrategyDiffblueTest {
 
   /**
    * Test {@link GlobalPreemptibleStrategy#acquire()}.
-   * <p>
-   * Method under test: {@link GlobalPreemptibleStrategy#acquire()}
+   *
+   * <p>Method under test: {@link GlobalPreemptibleStrategy#acquire()}
    */
   @Test
   @Category(MaintainedByDiffblue.class)
   @MethodsUnderTest({"boolean GlobalPreemptibleStrategy.acquire()"})
   public void testAcquire() {
     // Arrange, Act and Assert
-    assertTrue((new GlobalPreemptibleStrategy("Param String")).acquire());
+    assertTrue(new GlobalPreemptibleStrategy("Param String").acquire());
   }
 }

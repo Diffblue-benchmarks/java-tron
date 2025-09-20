@@ -11,15 +11,15 @@ import org.tron.common.logsfilter.trigger.SolidityTrigger;
 public class SolidityTriggerCapsuleDiffblueTest {
   /**
    * Test {@link SolidityTriggerCapsule#SolidityTriggerCapsule(long)}.
-   * <p>
-   * Method under test: {@link SolidityTriggerCapsule#SolidityTriggerCapsule(long)}
+   *
+   * <p>Method under test: {@link SolidityTriggerCapsule#SolidityTriggerCapsule(long)}
    */
   @Test
   @Category(MaintainedByDiffblue.class)
   @MethodsUnderTest({"void SolidityTriggerCapsule.<init>(long)"})
   public void testNewSolidityTriggerCapsule() {
     // Arrange, Act and Assert
-    SolidityTrigger solidityTrigger = (new SolidityTriggerCapsule(1L)).getSolidityTrigger();
+    SolidityTrigger solidityTrigger = new SolidityTriggerCapsule(1L).getSolidityTrigger();
     assertEquals("solidityTrigger", solidityTrigger.getTriggerName());
     assertEquals(0L, solidityTrigger.getTimeStamp());
     assertEquals(1L, solidityTrigger.getLatestSolidifiedBlockNumber());
@@ -27,8 +27,8 @@ public class SolidityTriggerCapsuleDiffblueTest {
 
   /**
    * Test {@link SolidityTriggerCapsule#setTimeStamp(long)}.
-   * <p>
-   * Method under test: {@link SolidityTriggerCapsule#setTimeStamp(long)}
+   *
+   * <p>Method under test: {@link SolidityTriggerCapsule#setTimeStamp(long)}
    */
   @Test
   @Category(MaintainedByDiffblue.class)
@@ -46,8 +46,9 @@ public class SolidityTriggerCapsuleDiffblueTest {
 
   /**
    * Test getters and setters.
-   * <p>
-   * Methods under test:
+   *
+   * <p>Methods under test:
+   *
    * <ul>
    *   <li>{@link SolidityTriggerCapsule#setSolidityTrigger(SolidityTrigger)}
    *   <li>{@link SolidityTriggerCapsule#getSolidityTrigger()}
@@ -55,8 +56,10 @@ public class SolidityTriggerCapsuleDiffblueTest {
    */
   @Test
   @Category(MaintainedByDiffblue.class)
-  @MethodsUnderTest({"SolidityTrigger SolidityTriggerCapsule.getSolidityTrigger()",
-      "void SolidityTriggerCapsule.setSolidityTrigger(SolidityTrigger)"})
+  @MethodsUnderTest({
+    "SolidityTrigger SolidityTriggerCapsule.getSolidityTrigger()",
+    "void SolidityTriggerCapsule.setSolidityTrigger(SolidityTrigger)"
+  })
   public void testGettersAndSetters() {
     // Arrange
     SolidityTriggerCapsule solidityTriggerCapsule = new SolidityTriggerCapsule(1L);

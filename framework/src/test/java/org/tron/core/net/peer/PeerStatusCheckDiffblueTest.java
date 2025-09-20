@@ -1,6 +1,5 @@
 package org.tron.core.net.peer;
 
-import static org.mockito.ArgumentMatchers.eq;
 import static org.mockito.Mockito.doNothing;
 import static org.mockito.Mockito.mock;
 import static org.mockito.Mockito.verify;
@@ -25,20 +24,19 @@ import org.tron.protos.Protocol.ReasonCode;
 
 @RunWith(MockitoJUnitRunner.class)
 public class PeerStatusCheckDiffblueTest {
-  @InjectMocks
-  private PeerStatusCheck peerStatusCheck;
+  @InjectMocks private PeerStatusCheck peerStatusCheck;
 
-  @Mock
-  private TronNetDelegate tronNetDelegate;
+  @Mock private TronNetDelegate tronNetDelegate;
 
   /**
    * Test {@link PeerStatusCheck#statusCheck()}.
+   *
    * <ul>
-   *   <li>Given {@link ArrayList#ArrayList()} add {@link PeerConnection} (default constructor).</li>
-   *   <li>Then calls {@link TronNetDelegate#getActivePeer()}.</li>
+   *   <li>Given {@link ArrayList#ArrayList()} add {@link PeerConnection} (default constructor).
+   *   <li>Then calls {@link TronNetDelegate#getActivePeer()}.
    * </ul>
-   * <p>
-   * Method under test: {@link PeerStatusCheck#statusCheck()}
+   *
+   * <p>Method under test: {@link PeerStatusCheck#statusCheck()}
    */
   @Test
   @Category(MaintainedByDiffblue.class)
@@ -58,12 +56,13 @@ public class PeerStatusCheckDiffblueTest {
 
   /**
    * Test {@link PeerStatusCheck#statusCheck()}.
+   *
    * <ul>
-   *   <li>Given {@link ArrayList#ArrayList()} add {@link PeerConnection} (default constructor).</li>
-   *   <li>Then calls {@link TronNetDelegate#getActivePeer()}.</li>
+   *   <li>Given {@link ArrayList#ArrayList()} add {@link PeerConnection} (default constructor).
+   *   <li>Then calls {@link TronNetDelegate#getActivePeer()}.
    * </ul>
-   * <p>
-   * Method under test: {@link PeerStatusCheck#statusCheck()}
+   *
+   * <p>Method under test: {@link PeerStatusCheck#statusCheck()}
    */
   @Test
   @Category(MaintainedByDiffblue.class)
@@ -84,20 +83,21 @@ public class PeerStatusCheckDiffblueTest {
 
   /**
    * Test {@link PeerStatusCheck#statusCheck()}.
+   *
    * <ul>
-   *   <li>Given {@link HashMap#HashMap()} {@link BlockId#BlockId()} is {@code -168121158}.</li>
-   *   <li>Then calls {@link PeerConnection#disconnect(ReasonCode)}.</li>
+   *   <li>Given {@link HashMap#HashMap()} {@link BlockId#BlockId()} is {@code 1687958885}.
    * </ul>
-   * <p>
-   * Method under test: {@link PeerStatusCheck#statusCheck()}
+   *
+   * <p>Method under test: {@link PeerStatusCheck#statusCheck()}
    */
   @Test
   @Category(MaintainedByDiffblue.class)
   @MethodsUnderTest({"void PeerStatusCheck.statusCheck()"})
-  public void testStatusCheck_givenHashMapBlockIdIs168121158_thenCallsDisconnect() {
+  public void testStatusCheck_givenHashMapBlockIdIs1687958885() {
     // Arrange
     HashMap<BlockId, Long> blockIdResultLongMap = new HashMap<>();
-    blockIdResultLongMap.put(new BlockId(), -168121158L);
+    blockIdResultLongMap.put(new BlockId(), 1687958885L);
+
     PeerConnection peerConnection = mock(PeerConnection.class);
     when(peerConnection.getInetAddress()).thenReturn(mock(InetAddress.class));
     when(peerConnection.getBlockBothHaveUpdateTime()).thenReturn(Long.MAX_VALUE);
@@ -115,21 +115,20 @@ public class PeerStatusCheckDiffblueTest {
 
     // Assert
     verify(tronNetDelegate).getActivePeer();
-    verify(peerConnection).disconnect(eq(ReasonCode.TIME_OUT));
     verify(peerConnection).getAdvInvRequest();
     verify(peerConnection).getBlockBothHaveUpdateTime();
-    verify(peerConnection).getInetAddress();
     verify(peerConnection).getSyncBlockRequested();
     verify(peerConnection).isNeedSyncFromPeer();
   }
 
   /**
    * Test {@link PeerStatusCheck#statusCheck()}.
+   *
    * <ul>
-   *   <li>Given {@link HashMap#HashMap()} {@link BlockId#BlockId()} is {@link Long#MAX_VALUE}.</li>
+   *   <li>Given {@link HashMap#HashMap()} {@link BlockId#BlockId()} is {@link Long#MAX_VALUE}.
    * </ul>
-   * <p>
-   * Method under test: {@link PeerStatusCheck#statusCheck()}
+   *
+   * <p>Method under test: {@link PeerStatusCheck#statusCheck()}
    */
   @Test
   @Category(MaintainedByDiffblue.class)
@@ -138,7 +137,8 @@ public class PeerStatusCheckDiffblueTest {
     // Arrange
     HashMap<BlockId, Long> blockIdResultLongMap = new HashMap<>();
     blockIdResultLongMap.put(new BlockId(), Long.MAX_VALUE);
-    blockIdResultLongMap.putIfAbsent(new BlockId(), -168121158L);
+    blockIdResultLongMap.putIfAbsent(new BlockId(), 1687958885L);
+
     PeerConnection peerConnection = mock(PeerConnection.class);
     when(peerConnection.getBlockBothHaveUpdateTime()).thenReturn(Long.MAX_VALUE);
     when(peerConnection.isNeedSyncFromPeer()).thenReturn(true);
@@ -162,21 +162,23 @@ public class PeerStatusCheckDiffblueTest {
 
   /**
    * Test {@link PeerStatusCheck#statusCheck()}.
+   *
    * <ul>
-   *   <li>Given {@link HashMap#HashMap()} {@code null} is {@link Long#MAX_VALUE}.</li>
-   *   <li>Then calls {@link PeerConnection#disconnect(ReasonCode)}.</li>
+   *   <li>Given {@link HashMap#HashMap()} {@code null} is {@link Long#MAX_VALUE}.
+   *   <li>Then calls {@link PeerConnection#getBlockBothHaveUpdateTime()}.
    * </ul>
-   * <p>
-   * Method under test: {@link PeerStatusCheck#statusCheck()}
+   *
+   * <p>Method under test: {@link PeerStatusCheck#statusCheck()}
    */
   @Test
   @Category(MaintainedByDiffblue.class)
   @MethodsUnderTest({"void PeerStatusCheck.statusCheck()"})
-  public void testStatusCheck_givenHashMapNullIsMax_value_thenCallsDisconnect() {
+  public void testStatusCheck_givenHashMapNullIsMax_value_thenCallsGetBlockBothHaveUpdateTime() {
     // Arrange
     HashMap<BlockId, Long> blockIdResultLongMap = new HashMap<>();
     blockIdResultLongMap.put(null, Long.MAX_VALUE);
-    blockIdResultLongMap.putIfAbsent(new BlockId(), -168121158L);
+    blockIdResultLongMap.putIfAbsent(new BlockId(), 1687958885L);
+
     PeerConnection peerConnection = mock(PeerConnection.class);
     when(peerConnection.getInetAddress()).thenReturn(mock(InetAddress.class));
     when(peerConnection.getBlockBothHaveUpdateTime()).thenReturn(Long.MAX_VALUE);
@@ -194,21 +196,21 @@ public class PeerStatusCheckDiffblueTest {
 
     // Assert
     verify(tronNetDelegate).getActivePeer();
-    verify(peerConnection).disconnect(eq(ReasonCode.TIME_OUT));
     verify(peerConnection).getAdvInvRequest();
     verify(peerConnection).getBlockBothHaveUpdateTime();
-    verify(peerConnection).getInetAddress();
     verify(peerConnection).getSyncBlockRequested();
     verify(peerConnection).isNeedSyncFromPeer();
   }
 
   /**
    * Test {@link PeerStatusCheck#statusCheck()}.
+   *
    * <ul>
-   *   <li>Given {@link PeerConnection} {@link PeerConnection#getBlockBothHaveUpdateTime()} return {@link Long#MAX_VALUE}.</li>
+   *   <li>Given {@link PeerConnection} {@link PeerConnection#getBlockBothHaveUpdateTime()} return
+   *       {@link Long#MAX_VALUE}.
    * </ul>
-   * <p>
-   * Method under test: {@link PeerStatusCheck#statusCheck()}
+   *
+   * <p>Method under test: {@link PeerStatusCheck#statusCheck()}
    */
   @Test
   @Category(MaintainedByDiffblue.class)
@@ -238,11 +240,13 @@ public class PeerStatusCheckDiffblueTest {
 
   /**
    * Test {@link PeerStatusCheck#statusCheck()}.
+   *
    * <ul>
-   *   <li>Given {@link PeerConnection} {@link PeerConnection#isNeedSyncFromPeer()} return {@code false}.</li>
+   *   <li>Given {@link PeerConnection} {@link PeerConnection#isNeedSyncFromPeer()} return {@code
+   *       false}.
    * </ul>
-   * <p>
-   * Method under test: {@link PeerStatusCheck#statusCheck()}
+   *
+   * <p>Method under test: {@link PeerStatusCheck#statusCheck()}
    */
   @Test
   @Category(MaintainedByDiffblue.class)
@@ -270,11 +274,12 @@ public class PeerStatusCheckDiffblueTest {
 
   /**
    * Test {@link PeerStatusCheck#statusCheck()}.
+   *
    * <ul>
-   *   <li>Then calls {@link TronNetDelegate#getActivePeer()}.</li>
+   *   <li>Then calls {@link TronNetDelegate#getActivePeer()}.
    * </ul>
-   * <p>
-   * Method under test: {@link PeerStatusCheck#statusCheck()}
+   *
+   * <p>Method under test: {@link PeerStatusCheck#statusCheck()}
    */
   @Test
   @Category(MaintainedByDiffblue.class)

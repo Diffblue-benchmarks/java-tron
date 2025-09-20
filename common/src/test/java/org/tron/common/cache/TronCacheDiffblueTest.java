@@ -17,12 +17,13 @@ import org.junit.experimental.categories.Category;
 public class TronCacheDiffblueTest {
   /**
    * Test {@link TronCache#TronCache(CacheType, String)}.
+   *
    * <ul>
-   *   <li>When empty string.</li>
-   *   <li>Then return stats evictionCount is zero.</li>
+   *   <li>When empty string.
+   *   <li>Then return stats evictionCount is zero.
    * </ul>
-   * <p>
-   * Method under test: {@link TronCache#TronCache(CacheType, String)}
+   *
+   * <p>Method under test: {@link TronCache#TronCache(CacheType, String)}
    */
   @Test
   @Category(MaintainedByDiffblue.class)
@@ -44,19 +45,21 @@ public class TronCacheDiffblueTest {
 
   /**
    * Test {@link TronCache#TronCache(CacheType, String, CacheLoader)}.
+   *
    * <ul>
-   *   <li>When empty string.</li>
-   *   <li>Then return stats evictionCount is zero.</li>
+   *   <li>When empty string.
+   *   <li>Then return stats evictionCount is zero.
    * </ul>
-   * <p>
-   * Method under test: {@link TronCache#TronCache(CacheType, String, CacheLoader)}
+   *
+   * <p>Method under test: {@link TronCache#TronCache(CacheType, String, CacheLoader)}
    */
   @Test
   @Category(MaintainedByDiffblue.class)
   @MethodsUnderTest({"void TronCache.<init>(CacheType, String, CacheLoader)"})
   public void testNewTronCache_whenEmptyString_thenReturnStatsEvictionCountIsZero2() {
     // Arrange and Act
-    TronCache<Object, Object> actualTronCache = new TronCache<>(CacheType.witnessStandby, "", mock(CacheLoader.class));
+    TronCache<Object, Object> actualTronCache =
+        new TronCache<>(CacheType.witnessStandby, "", mock(CacheLoader.class));
 
     // Assert
     CacheStats statsResult = actualTronCache.stats();
@@ -71,12 +74,13 @@ public class TronCacheDiffblueTest {
 
   /**
    * Test {@link TronCache#getIfPresent(Object)}.
+   *
    * <ul>
-   *   <li>Given allocate {@code witnessStandby} and empty string {@code 42} is {@code 42}.</li>
-   *   <li>Then return {@code 42}.</li>
+   *   <li>Given allocate {@code witnessStandby} and empty string {@code 42} is {@code 42}.
+   *   <li>Then return {@code 42}.
    * </ul>
-   * <p>
-   * Method under test: {@link TronCache#getIfPresent(Object)}
+   *
+   * <p>Method under test: {@link TronCache#getIfPresent(Object)}
    */
   @Test
   @Category(MaintainedByDiffblue.class)
@@ -92,12 +96,13 @@ public class TronCacheDiffblueTest {
 
   /**
    * Test {@link TronCache#getIfPresent(Object)}.
+   *
    * <ul>
-   *   <li>Given allocate {@code witnessStandby} and empty string.</li>
-   *   <li>Then return {@code null}.</li>
+   *   <li>Given allocate {@code witnessStandby} and empty string.
+   *   <li>Then return {@code null}.
    * </ul>
-   * <p>
-   * Method under test: {@link TronCache#getIfPresent(Object)}
+   *
+   * <p>Method under test: {@link TronCache#getIfPresent(Object)}
    */
   @Test
   @Category(MaintainedByDiffblue.class)
@@ -112,17 +117,19 @@ public class TronCacheDiffblueTest {
 
   /**
    * Test {@link TronCache#get(Object, Callable)}.
+   *
    * <ul>
-   *   <li>Given allocate {@code witnessStandby} and empty string {@code 42} is {@code 42}.</li>
-   *   <li>Then return {@code 42}.</li>
+   *   <li>Given allocate {@code witnessStandby} and empty string {@code 42} is {@code 42}.
+   *   <li>Then return {@code 42}.
    * </ul>
-   * <p>
-   * Method under test: {@link TronCache#get(Object, Callable)}
+   *
+   * <p>Method under test: {@link TronCache#get(Object, Callable)}
    */
   @Test
   @Category(MaintainedByDiffblue.class)
   @MethodsUnderTest({"Object TronCache.get(Object, Callable)"})
-  public void testGet_givenAllocateWitnessStandbyAndEmptyString42Is42_thenReturn42() throws ExecutionException {
+  public void testGet_givenAllocateWitnessStandbyAndEmptyString42Is42_thenReturn42()
+      throws ExecutionException {
     // Arrange
     TronCache<Object, Object> allocateResult = CacheManager.allocate(CacheType.witnessStandby, "");
     allocateResult.put("42", "42");
@@ -133,13 +140,14 @@ public class TronCacheDiffblueTest {
 
   /**
    * Test {@link TronCache#get(Object, Callable)}.
+   *
    * <ul>
-   *   <li>Given {@code Call}.</li>
-   *   <li>When {@link Callable} {@link Callable#call()} return {@code Call}.</li>
-   *   <li>Then return {@code Call}.</li>
+   *   <li>Given {@code Call}.
+   *   <li>When {@link Callable} {@link Callable#call()} return {@code Call}.
+   *   <li>Then return {@code Call}.
    * </ul>
-   * <p>
-   * Method under test: {@link TronCache#get(Object, Callable)}
+   *
+   * <p>Method under test: {@link TronCache#get(Object, Callable)}
    */
   @Test
   @Category(MaintainedByDiffblue.class)
@@ -147,6 +155,7 @@ public class TronCacheDiffblueTest {
   public void testGet_givenCall_whenCallableCallReturnCall_thenReturnCall() throws Exception {
     // Arrange
     TronCache<Object, Object> allocateResult = CacheManager.allocate(CacheType.witnessStandby, "");
+
     Callable<Object> loader = mock(Callable.class);
     when(loader.call()).thenReturn("Call");
 
@@ -160,11 +169,12 @@ public class TronCacheDiffblueTest {
 
   /**
    * Test {@link TronCache#stats()}.
+   *
    * <ul>
-   *   <li>Then return evictionCount is zero.</li>
+   *   <li>Then return evictionCount is zero.
    * </ul>
-   * <p>
-   * Method under test: {@link TronCache#stats()}
+   *
+   * <p>Method under test: {@link TronCache#stats()}
    */
   @Test
   @Category(MaintainedByDiffblue.class)

@@ -10,12 +10,14 @@ import org.junit.experimental.categories.Category;
 public class DupWitnessInfoDiffblueTest {
   /**
    * Test {@link DupWitnessInfo#equals(Object)}, and {@link DupWitnessInfo#hashCode()}.
+   *
    * <ul>
-   *   <li>When other is equal.</li>
-   *   <li>Then return equal.</li>
+   *   <li>When other is equal.
+   *   <li>Then return equal.
    * </ul>
-   * <p>
-   * Methods under test:
+   *
+   * <p>Methods under test:
+   *
    * <ul>
    *   <li>{@link DupWitnessInfo#equals(Object)}
    *   <li>{@link DupWitnessInfo#hashCode()}
@@ -38,18 +40,19 @@ public class DupWitnessInfoDiffblueTest {
 
     // Act and Assert
     assertEquals(dupWitnessInfo, dupWitnessInfo2);
-    int expectedHashCodeResult = dupWitnessInfo.hashCode();
-    assertEquals(expectedHashCodeResult, dupWitnessInfo2.hashCode());
+    assertEquals(dupWitnessInfo.hashCode(), dupWitnessInfo2.hashCode());
   }
 
   /**
    * Test {@link DupWitnessInfo#equals(Object)}, and {@link DupWitnessInfo#hashCode()}.
+   *
    * <ul>
-   *   <li>When other is equal.</li>
-   *   <li>Then return equal.</li>
+   *   <li>When other is equal.
+   *   <li>Then return equal.
    * </ul>
-   * <p>
-   * Methods under test:
+   *
+   * <p>Methods under test:
+   *
    * <ul>
    *   <li>{@link DupWitnessInfo#equals(Object)}
    *   <li>{@link DupWitnessInfo#hashCode()}
@@ -72,18 +75,19 @@ public class DupWitnessInfoDiffblueTest {
 
     // Act and Assert
     assertEquals(dupWitnessInfo, dupWitnessInfo2);
-    int expectedHashCodeResult = dupWitnessInfo.hashCode();
-    assertEquals(expectedHashCodeResult, dupWitnessInfo2.hashCode());
+    assertEquals(dupWitnessInfo.hashCode(), dupWitnessInfo2.hashCode());
   }
 
   /**
    * Test {@link DupWitnessInfo#equals(Object)}, and {@link DupWitnessInfo#hashCode()}.
+   *
    * <ul>
-   *   <li>When other is same.</li>
-   *   <li>Then return equal.</li>
+   *   <li>When other is same.
+   *   <li>Then return equal.
    * </ul>
-   * <p>
-   * Methods under test:
+   *
+   * <p>Methods under test:
+   *
    * <ul>
    *   <li>{@link DupWitnessInfo#equals(Object)}
    *   <li>{@link DupWitnessInfo#hashCode()}
@@ -107,12 +111,13 @@ public class DupWitnessInfoDiffblueTest {
 
   /**
    * Test {@link DupWitnessInfo#equals(Object)}.
+   *
    * <ul>
-   *   <li>When other is different.</li>
-   *   <li>Then return not equal.</li>
+   *   <li>When other is different.
+   *   <li>Then return not equal.
    * </ul>
-   * <p>
-   * Method under test: {@link DupWitnessInfo#equals(Object)}
+   *
+   * <p>Method under test: {@link DupWitnessInfo#equals(Object)}
    */
   @Test
   @Category(MaintainedByDiffblue.class)
@@ -135,12 +140,13 @@ public class DupWitnessInfoDiffblueTest {
 
   /**
    * Test {@link DupWitnessInfo#equals(Object)}.
+   *
    * <ul>
-   *   <li>When other is different.</li>
-   *   <li>Then return not equal.</li>
+   *   <li>When other is different.
+   *   <li>Then return not equal.
    * </ul>
-   * <p>
-   * Method under test: {@link DupWitnessInfo#equals(Object)}
+   *
+   * <p>Method under test: {@link DupWitnessInfo#equals(Object)}
    */
   @Test
   @Category(MaintainedByDiffblue.class)
@@ -163,12 +169,13 @@ public class DupWitnessInfoDiffblueTest {
 
   /**
    * Test {@link DupWitnessInfo#equals(Object)}.
+   *
    * <ul>
-   *   <li>When other is different.</li>
-   *   <li>Then return not equal.</li>
+   *   <li>When other is different.
+   *   <li>Then return not equal.
    * </ul>
-   * <p>
-   * Method under test: {@link DupWitnessInfo#equals(Object)}
+   *
+   * <p>Method under test: {@link DupWitnessInfo#equals(Object)}
    */
   @Test
   @Category(MaintainedByDiffblue.class)
@@ -191,12 +198,13 @@ public class DupWitnessInfoDiffblueTest {
 
   /**
    * Test {@link DupWitnessInfo#equals(Object)}.
+   *
    * <ul>
-   *   <li>When other is different.</li>
-   *   <li>Then return not equal.</li>
+   *   <li>When other is different.
+   *   <li>Then return not equal.
    * </ul>
-   * <p>
-   * Method under test: {@link DupWitnessInfo#equals(Object)}
+   *
+   * <p>Method under test: {@link DupWitnessInfo#equals(Object)}
    */
   @Test
   @Category(MaintainedByDiffblue.class)
@@ -219,12 +227,13 @@ public class DupWitnessInfoDiffblueTest {
 
   /**
    * Test {@link DupWitnessInfo#equals(Object)}.
+   *
    * <ul>
-   *   <li>When other is {@code null}.</li>
-   *   <li>Then return not equal.</li>
+   *   <li>When other is {@code null}.
+   *   <li>Then return not equal.
    * </ul>
-   * <p>
-   * Method under test: {@link DupWitnessInfo#equals(Object)}
+   *
+   * <p>Method under test: {@link DupWitnessInfo#equals(Object)}
    */
   @Test
   @Category(MaintainedByDiffblue.class)
@@ -242,12 +251,13 @@ public class DupWitnessInfoDiffblueTest {
 
   /**
    * Test {@link DupWitnessInfo#equals(Object)}.
+   *
    * <ul>
-   *   <li>When other is wrong type.</li>
-   *   <li>Then return not equal.</li>
+   *   <li>When other is wrong type.
+   *   <li>Then return not equal.
    * </ul>
-   * <p>
-   * Method under test: {@link DupWitnessInfo#equals(Object)}
+   *
+   * <p>Method under test: {@link DupWitnessInfo#equals(Object)}
    */
   @Test
   @Category(MaintainedByDiffblue.class)
@@ -265,8 +275,9 @@ public class DupWitnessInfoDiffblueTest {
 
   /**
    * Test getters and setters.
-   * <p>
-   * Methods under test:
+   *
+   * <p>Methods under test:
+   *
    * <ul>
    *   <li>default or parameterless constructor of {@link DupWitnessInfo}
    *   <li>{@link DupWitnessInfo#setAddress(String)}
@@ -280,9 +291,16 @@ public class DupWitnessInfoDiffblueTest {
    */
   @Test
   @Category(MaintainedByDiffblue.class)
-  @MethodsUnderTest({"void DupWitnessInfo.<init>()", "String DupWitnessInfo.getAddress()",
-      "long DupWitnessInfo.getBlockNum()", "int DupWitnessInfo.getCount()", "void DupWitnessInfo.setAddress(String)",
-      "void DupWitnessInfo.setBlockNum(long)", "void DupWitnessInfo.setCount(int)", "String DupWitnessInfo.toString()"})
+  @MethodsUnderTest({
+    "void DupWitnessInfo.<init>()",
+    "String DupWitnessInfo.getAddress()",
+    "long DupWitnessInfo.getBlockNum()",
+    "int DupWitnessInfo.getCount()",
+    "void DupWitnessInfo.setAddress(String)",
+    "void DupWitnessInfo.setBlockNum(long)",
+    "void DupWitnessInfo.setCount(int)",
+    "String DupWitnessInfo.toString()"
+  })
   public void testGettersAndSetters() {
     // Arrange and Act
     DupWitnessInfo actualDupWitnessInfo = new DupWitnessInfo();

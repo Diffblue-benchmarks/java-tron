@@ -22,8 +22,9 @@ import org.tron.core.vm.repository.RepositoryImpl;
 public class FreezeV2UtilDiffblueTest {
   /**
    * Test {@link FreezeV2Util#queryExpireUnfreezeBalanceV2(byte[], long, Repository)}.
-   * <p>
-   * Method under test: {@link FreezeV2Util#queryExpireUnfreezeBalanceV2(byte[], long, Repository)}
+   *
+   * <p>Method under test: {@link FreezeV2Util#queryExpireUnfreezeBalanceV2(byte[], long,
+   * Repository)}
    */
   @Test
   @Category(MaintainedByDiffblue.class)
@@ -31,16 +32,17 @@ public class FreezeV2UtilDiffblueTest {
   public void testQueryExpireUnfreezeBalanceV2() throws UnsupportedEncodingException {
     // Arrange
     byte[] address = "AXAXAXAX".getBytes("UTF-8");
+    RepositoryImpl repository =
+        new RepositoryImpl(StoreFactory.getInstance(), mock(RepositoryImpl.class));
 
     // Act and Assert
-    assertEquals(0L, FreezeV2Util.queryExpireUnfreezeBalanceV2(address, 10L,
-        new RepositoryImpl(StoreFactory.getInstance(), mock(RepositoryImpl.class))));
+    assertEquals(0L, FreezeV2Util.queryExpireUnfreezeBalanceV2(address, 10L, repository));
   }
 
   /**
    * Test {@link FreezeV2Util#queryUnfreezableBalanceV2(byte[], long, Repository)}.
-   * <p>
-   * Method under test: {@link FreezeV2Util#queryUnfreezableBalanceV2(byte[], long, Repository)}
+   *
+   * <p>Method under test: {@link FreezeV2Util#queryUnfreezableBalanceV2(byte[], long, Repository)}
    */
   @Test
   @Category(MaintainedByDiffblue.class)
@@ -48,16 +50,17 @@ public class FreezeV2UtilDiffblueTest {
   public void testQueryUnfreezableBalanceV2() throws UnsupportedEncodingException {
     // Arrange
     byte[] address = "AXAXAXAX".getBytes("UTF-8");
+    RepositoryImpl repository =
+        new RepositoryImpl(StoreFactory.getInstance(), mock(RepositoryImpl.class));
 
     // Act and Assert
-    assertEquals(0L, FreezeV2Util.queryUnfreezableBalanceV2(address, 1L,
-        new RepositoryImpl(StoreFactory.getInstance(), mock(RepositoryImpl.class))));
+    assertEquals(0L, FreezeV2Util.queryUnfreezableBalanceV2(address, 1L, repository));
   }
 
   /**
    * Test {@link FreezeV2Util#queryResourceV2(byte[], byte[], long, Repository)}.
-   * <p>
-   * Method under test: {@link FreezeV2Util#queryResourceV2(byte[], byte[], long, Repository)}
+   *
+   * <p>Method under test: {@link FreezeV2Util#queryResourceV2(byte[], byte[], long, Repository)}
    */
   @Test
   @Category(MaintainedByDiffblue.class)
@@ -66,16 +69,20 @@ public class FreezeV2UtilDiffblueTest {
     // Arrange
     byte[] from = "AXAXAXAX".getBytes("UTF-8");
     byte[] resultTo = "AXAXAXAX".getBytes("UTF-8");
+    RepositoryImpl repository =
+        new RepositoryImpl(StoreFactory.getInstance(), mock(RepositoryImpl.class));
 
-    // Act and Assert
-    assertEquals(0L, FreezeV2Util.queryResourceV2(from, resultTo, 1L,
-        new RepositoryImpl(StoreFactory.getInstance(), mock(RepositoryImpl.class))));
+    // Act
+    long actualQueryResourceV2Result = FreezeV2Util.queryResourceV2(from, resultTo, 1L, repository);
+
+    // Assert
+    assertEquals(0L, actualQueryResourceV2Result);
   }
 
   /**
    * Test {@link FreezeV2Util#queryFrozenBalanceUsage(byte[], long, Repository)}.
-   * <p>
-   * Method under test: {@link FreezeV2Util#queryFrozenBalanceUsage(byte[], long, Repository)}
+   *
+   * <p>Method under test: {@link FreezeV2Util#queryFrozenBalanceUsage(byte[], long, Repository)}
    */
   @Test
   @Category(MaintainedByDiffblue.class)
@@ -83,10 +90,12 @@ public class FreezeV2UtilDiffblueTest {
   public void testQueryFrozenBalanceUsage() throws UnsupportedEncodingException {
     // Arrange
     byte[] address = "AXAXAXAX".getBytes("UTF-8");
+    RepositoryImpl repository =
+        new RepositoryImpl(StoreFactory.getInstance(), mock(RepositoryImpl.class));
 
     // Act
-    Pair<Long, Long> actualQueryFrozenBalanceUsageResult = FreezeV2Util.queryFrozenBalanceUsage(address, 1L,
-        new RepositoryImpl(StoreFactory.getInstance(), mock(RepositoryImpl.class)));
+    Pair<Long, Long> actualQueryFrozenBalanceUsageResult =
+        FreezeV2Util.queryFrozenBalanceUsage(address, 1L, repository);
 
     // Assert
     assertTrue(actualQueryFrozenBalanceUsageResult instanceof ImmutablePair);
@@ -98,8 +107,8 @@ public class FreezeV2UtilDiffblueTest {
 
   /**
    * Test {@link FreezeV2Util#queryAvailableUnfreezeV2Size(byte[], Repository)}.
-   * <p>
-   * Method under test: {@link FreezeV2Util#queryAvailableUnfreezeV2Size(byte[], Repository)}
+   *
+   * <p>Method under test: {@link FreezeV2Util#queryAvailableUnfreezeV2Size(byte[], Repository)}
    */
   @Test
   @Category(MaintainedByDiffblue.class)
@@ -107,16 +116,21 @@ public class FreezeV2UtilDiffblueTest {
   public void testQueryAvailableUnfreezeV2Size() throws UnsupportedEncodingException {
     // Arrange
     byte[] address = "AXAXAXAX".getBytes("UTF-8");
+    RepositoryImpl repository =
+        new RepositoryImpl(StoreFactory.getInstance(), mock(RepositoryImpl.class));
 
-    // Act and Assert
-    assertEquals(0L, FreezeV2Util.queryAvailableUnfreezeV2Size(address,
-        new RepositoryImpl(StoreFactory.getInstance(), mock(RepositoryImpl.class))));
+    // Act
+    long actualQueryAvailableUnfreezeV2SizeResult =
+        FreezeV2Util.queryAvailableUnfreezeV2Size(address, repository);
+
+    // Assert
+    assertEquals(0L, actualQueryAvailableUnfreezeV2SizeResult);
   }
 
   /**
    * Test {@link FreezeV2Util#queryDelegatableResource(byte[], long, Repository)}.
-   * <p>
-   * Method under test: {@link FreezeV2Util#queryDelegatableResource(byte[], long, Repository)}
+   *
+   * <p>Method under test: {@link FreezeV2Util#queryDelegatableResource(byte[], long, Repository)}
    */
   @Test
   @Category(MaintainedByDiffblue.class)
@@ -124,16 +138,18 @@ public class FreezeV2UtilDiffblueTest {
   public void testQueryDelegatableResource() throws UnsupportedEncodingException {
     // Arrange
     byte[] address = "AXAXAXAX".getBytes("UTF-8");
+    RepositoryImpl repository =
+        new RepositoryImpl(StoreFactory.getInstance(), mock(RepositoryImpl.class));
 
     // Act and Assert
-    assertEquals(0L, FreezeV2Util.queryDelegatableResource(address, 1L,
-        new RepositoryImpl(StoreFactory.getInstance(), mock(RepositoryImpl.class))));
+    assertEquals(0L, FreezeV2Util.queryDelegatableResource(address, 1L, repository));
   }
 
   /**
    * Test {@link FreezeV2Util#checkUndelegateResource(byte[], long, long, Repository)}.
-   * <p>
-   * Method under test: {@link FreezeV2Util#checkUndelegateResource(byte[], long, long, Repository)}
+   *
+   * <p>Method under test: {@link FreezeV2Util#checkUndelegateResource(byte[], long, long,
+   * Repository)}
    */
   @Test
   @Category(MaintainedByDiffblue.class)
@@ -141,10 +157,12 @@ public class FreezeV2UtilDiffblueTest {
   public void testCheckUndelegateResource() throws UnsupportedEncodingException {
     // Arrange
     byte[] address = "AXAXAXAX".getBytes("UTF-8");
+    RepositoryImpl repository =
+        new RepositoryImpl(StoreFactory.getInstance(), mock(RepositoryImpl.class));
 
     // Act
-    Triple<Long, Long, Long> actualCheckUndelegateResourceResult = FreezeV2Util.checkUndelegateResource(address, 10L,
-        1L, new RepositoryImpl(StoreFactory.getInstance(), mock(RepositoryImpl.class)));
+    Triple<Long, Long, Long> actualCheckUndelegateResourceResult =
+        FreezeV2Util.checkUndelegateResource(address, 10L, 1L, repository);
 
     // Assert
     assertTrue(actualCheckUndelegateResourceResult instanceof ImmutableTriple);
@@ -155,12 +173,13 @@ public class FreezeV2UtilDiffblueTest {
 
   /**
    * Test {@link FreezeV2Util#getV2NetUsage(AccountCapsule, long)}.
+   *
    * <ul>
-   *   <li>Given one.</li>
-   *   <li>Then return zero.</li>
+   *   <li>Given one.
+   *   <li>Then return zero.
    * </ul>
-   * <p>
-   * Method under test: {@link FreezeV2Util#getV2NetUsage(AccountCapsule, long)}
+   *
+   * <p>Method under test: {@link FreezeV2Util#getV2NetUsage(AccountCapsule, long)}
    */
   @Test
   @Category(MaintainedByDiffblue.class)
@@ -184,12 +203,13 @@ public class FreezeV2UtilDiffblueTest {
 
   /**
    * Test {@link FreezeV2Util#getV2EnergyUsage(AccountCapsule, long)}.
+   *
    * <ul>
-   *   <li>Given forty-two.</li>
-   *   <li>Then return zero.</li>
+   *   <li>Given forty-two.
+   *   <li>Then return zero.
    * </ul>
-   * <p>
-   * Method under test: {@link FreezeV2Util#getV2EnergyUsage(AccountCapsule, long)}
+   *
+   * <p>Method under test: {@link FreezeV2Util#getV2EnergyUsage(AccountCapsule, long)}
    */
   @Test
   @Category(MaintainedByDiffblue.class)

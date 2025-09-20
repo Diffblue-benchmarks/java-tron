@@ -18,14 +18,13 @@ import org.junit.experimental.categories.Category;
 import org.mockito.Mockito;
 import org.tron.common.runtime.vm.DataWord;
 import org.tron.core.capsule.StorageRowCapsule;
-import org.tron.core.db.TronStoreWithRevoking;
 import org.tron.core.store.StorageRowStore;
 
 public class StorageDiffblueTest {
   /**
    * Test {@link Storage#Storage(byte[], StorageRowStore)}.
-   * <p>
-   * Method under test: {@link Storage#Storage(byte[], StorageRowStore)}
+   *
+   * <p>Method under test: {@link Storage#Storage(byte[], StorageRowStore)}
    */
   @Test
   @Category(MaintainedByDiffblue.class)
@@ -37,25 +36,66 @@ public class StorageDiffblueTest {
     // Assert
     assertNull(actualStorage.getStore());
     assertTrue(actualStorage.getRowCache().isEmpty());
-    byte[] expectedAddress = "AXAXAXAX".getBytes("UTF-8");
-    assertArrayEquals(expectedAddress, actualStorage.getAddress());
-    assertArrayEquals(new byte[]{-84, -91, '3', -51, -53, '2', -79, '"', '\b', 1, -60, '1', '\n', '>', -48, '0', -75,
-        -41, '`', -121, '(', -22, -111, -6, 'J', 't', -83, 'Q', -3, -89, -95, -54}, actualStorage.getAddrHash());
+    assertArrayEquals("AXAXAXAX".getBytes("UTF-8"), actualStorage.getAddress());
+    assertArrayEquals(
+        new byte[] {
+          -84, -91, '3', -51, -53, '2', -79, '"', '\b', 1, -60, '1', '\n', '>', -48, '0', -75, -41,
+          '`', -121, '(', -22, -111, -6, 'J', 't', -83, 'Q', -3, -89, -95, -54
+        },
+        actualStorage.getAddrHash());
   }
 
   /**
    * Test {@link Storage#Storage(Storage)}.
+   *
    * <ul>
-   *   <li>Given ZERO.</li>
-   *   <li>Then return RowCache size is one.</li>
+   *   <li>Given {@link DataWord} with num is {@code A}.
+   *   <li>Then return RowCache size is two.
    * </ul>
-   * <p>
-   * Method under test: {@link Storage#Storage(Storage)}
+   *
+   * <p>Method under test: {@link Storage#Storage(Storage)}
    */
   @Test
   @Category(MaintainedByDiffblue.class)
   @MethodsUnderTest({"void Storage.<init>(Storage)"})
-  public void testNewStorage_givenZero_thenReturnRowCacheSizeIsOne() throws UnsupportedEncodingException {
+  public void testNewStorage_givenDataWordWithNumIsA_thenReturnRowCacheSizeIsTwo()
+      throws UnsupportedEncodingException {
+    // Arrange
+    Storage storage = new Storage("AXAXAXAX".getBytes("UTF-8"), mock(StorageRowStore.class));
+    DataWord key = DataWord.of((byte) 'A');
+    storage.put(key, DataWord.ZERO());
+    DataWord key2 = DataWord.ZERO();
+    storage.put(key2, DataWord.ZERO());
+
+    // Act
+    Storage actualStorage = new Storage(storage);
+
+    // Assert
+    assertEquals(2, actualStorage.getRowCache().size());
+    assertArrayEquals("AXAXAXAX".getBytes("UTF-8"), actualStorage.getAddress());
+    assertArrayEquals(
+        new byte[] {
+          -84, -91, '3', -51, -53, '2', -79, '"', '\b', 1, -60, '1', '\n', '>', -48, '0', -75, -41,
+          '`', -121, '(', -22, -111, -6, 'J', 't', -83, 'Q', -3, -89, -95, -54
+        },
+        actualStorage.getAddrHash());
+  }
+
+  /**
+   * Test {@link Storage#Storage(Storage)}.
+   *
+   * <ul>
+   *   <li>Given ZERO.
+   *   <li>Then return RowCache size is one.
+   * </ul>
+   *
+   * <p>Method under test: {@link Storage#Storage(Storage)}
+   */
+  @Test
+  @Category(MaintainedByDiffblue.class)
+  @MethodsUnderTest({"void Storage.<init>(Storage)"})
+  public void testNewStorage_givenZero_thenReturnRowCacheSizeIsOne()
+      throws UnsupportedEncodingException {
     // Arrange
     Storage storage = new Storage("AXAXAXAX".getBytes("UTF-8"), mock(StorageRowStore.class));
     DataWord key = DataWord.ZERO();
@@ -66,39 +106,49 @@ public class StorageDiffblueTest {
 
     // Assert
     assertEquals(1, actualStorage.getRowCache().size());
-    byte[] expectedAddress = "AXAXAXAX".getBytes("UTF-8");
-    assertArrayEquals(expectedAddress, actualStorage.getAddress());
-    assertArrayEquals(new byte[]{-84, -91, '3', -51, -53, '2', -79, '"', '\b', 1, -60, '1', '\n', '>', -48, '0', -75,
-        -41, '`', -121, '(', -22, -111, -6, 'J', 't', -83, 'Q', -3, -89, -95, -54}, actualStorage.getAddrHash());
+    assertArrayEquals("AXAXAXAX".getBytes("UTF-8"), actualStorage.getAddress());
+    assertArrayEquals(
+        new byte[] {
+          -84, -91, '3', -51, -53, '2', -79, '"', '\b', 1, -60, '1', '\n', '>', -48, '0', -75, -41,
+          '`', -121, '(', -22, -111, -6, 'J', 't', -83, 'Q', -3, -89, -95, -54
+        },
+        actualStorage.getAddrHash());
   }
 
   /**
    * Test {@link Storage#Storage(Storage)}.
+   *
    * <ul>
-   *   <li>Then return RowCache Empty.</li>
+   *   <li>Then return RowCache Empty.
    * </ul>
-   * <p>
-   * Method under test: {@link Storage#Storage(Storage)}
+   *
+   * <p>Method under test: {@link Storage#Storage(Storage)}
    */
   @Test
   @Category(MaintainedByDiffblue.class)
   @MethodsUnderTest({"void Storage.<init>(Storage)"})
   public void testNewStorage_thenReturnRowCacheEmpty() throws UnsupportedEncodingException {
-    // Arrange and Act
-    Storage actualStorage = new Storage(new Storage("AXAXAXAX".getBytes("UTF-8"), mock(StorageRowStore.class)));
+    // Arrange
+    Storage storage = new Storage("AXAXAXAX".getBytes("UTF-8"), mock(StorageRowStore.class));
+
+    // Act
+    Storage actualStorage = new Storage(storage);
 
     // Assert
     assertTrue(actualStorage.getRowCache().isEmpty());
-    byte[] expectedAddress = "AXAXAXAX".getBytes("UTF-8");
-    assertArrayEquals(expectedAddress, actualStorage.getAddress());
-    assertArrayEquals(new byte[]{-84, -91, '3', -51, -53, '2', -79, '"', '\b', 1, -60, '1', '\n', '>', -48, '0', -75,
-        -41, '`', -121, '(', -22, -111, -6, 'J', 't', -83, 'Q', -3, -89, -95, -54}, actualStorage.getAddrHash());
+    assertArrayEquals("AXAXAXAX".getBytes("UTF-8"), actualStorage.getAddress());
+    assertArrayEquals(
+        new byte[] {
+          -84, -91, '3', -51, -53, '2', -79, '"', '\b', 1, -60, '1', '\n', '>', -48, '0', -75, -41,
+          '`', -121, '(', -22, -111, -6, 'J', 't', -83, 'Q', -3, -89, -95, -54
+        },
+        actualStorage.getAddrHash());
   }
 
   /**
    * Test {@link Storage#generateAddrHash(byte[])}.
-   * <p>
-   * Method under test: {@link Storage#generateAddrHash(byte[])}
+   *
+   * <p>Method under test: {@link Storage#generateAddrHash(byte[])}
    */
   @Test
   @Category(MaintainedByDiffblue.class)
@@ -111,17 +161,22 @@ public class StorageDiffblueTest {
     storage.generateAddrHash("AXAXAXAX".getBytes("UTF-8"));
 
     // Assert
-    assertArrayEquals(new byte[]{'_', '\\', 'K', 24, 24, ',', -86, -15, -90, -81, -99, -127, '{', -23, 'i', -48, -7,
-        -113, -47, '4', -19, -90, -77, -105, -79, '@', 'I', 'w', -34, '1', 'F', 16}, storage.getAddrHash());
+    assertArrayEquals(
+        new byte[] {
+          '_', '\\', 'K', 24, 24, ',', -86, -15, -90, -81, -99, -127, '{', -23, 'i', -48, -7, -113,
+          -47, '4', -19, -90, -77, -105, -79, '@', 'I', 'w', -34, '1', 'F', 16
+        },
+        storage.getAddrHash());
   }
 
   /**
    * Test {@link Storage#generateAddrHash(byte[])}.
+   *
    * <ul>
-   *   <li>When empty array of {@code byte}.</li>
+   *   <li>When empty array of {@code byte}.
    * </ul>
-   * <p>
-   * Method under test: {@link Storage#generateAddrHash(byte[])}
+   *
+   * <p>Method under test: {@link Storage#generateAddrHash(byte[])}
    */
   @Test
   @Category(MaintainedByDiffblue.class)
@@ -131,20 +186,25 @@ public class StorageDiffblueTest {
     Storage storage = new Storage("AXAXAXAX".getBytes("UTF-8"), mock(StorageRowStore.class));
 
     // Act
-    storage.generateAddrHash(new byte[]{});
+    storage.generateAddrHash(new byte[] {});
 
     // Assert that nothing has changed
-    assertArrayEquals(new byte[]{-84, -91, '3', -51, -53, '2', -79, '"', '\b', 1, -60, '1', '\n', '>', -48, '0', -75,
-        -41, '`', -121, '(', -22, -111, -6, 'J', 't', -83, 'Q', -3, -89, -95, -54}, storage.getAddrHash());
+    assertArrayEquals(
+        new byte[] {
+          -84, -91, '3', -51, -53, '2', -79, '"', '\b', 1, -60, '1', '\n', '>', -48, '0', -75, -41,
+          '`', -121, '(', -22, -111, -6, 'J', 't', -83, 'Q', -3, -89, -95, -54
+        },
+        storage.getAddrHash());
   }
 
   /**
    * Test {@link Storage#generateAddrHash(byte[])}.
+   *
    * <ul>
-   *   <li>When {@code null}.</li>
+   *   <li>When {@code null}.
    * </ul>
-   * <p>
-   * Method under test: {@link Storage#generateAddrHash(byte[])}
+   *
+   * <p>Method under test: {@link Storage#generateAddrHash(byte[])}
    */
   @Test
   @Category(MaintainedByDiffblue.class)
@@ -157,14 +217,18 @@ public class StorageDiffblueTest {
     storage.generateAddrHash(null);
 
     // Assert that nothing has changed
-    assertArrayEquals(new byte[]{-84, -91, '3', -51, -53, '2', -79, '"', '\b', 1, -60, '1', '\n', '>', -48, '0', -75,
-        -41, '`', -121, '(', -22, -111, -6, 'J', 't', -83, 'Q', -3, -89, -95, -54}, storage.getAddrHash());
+    assertArrayEquals(
+        new byte[] {
+          -84, -91, '3', -51, -53, '2', -79, '"', '\b', 1, -60, '1', '\n', '>', -48, '0', -75, -41,
+          '`', -121, '(', -22, -111, -6, 'J', 't', -83, 'Q', -3, -89, -95, -54
+        },
+        storage.getAddrHash());
   }
 
   /**
    * Test {@link Storage#getValue(DataWord)}.
-   * <p>
-   * Method under test: {@link Storage#getValue(DataWord)}
+   *
+   * <p>Method under test: {@link Storage#getValue(DataWord)}
    */
   @Test
   @Category(MaintainedByDiffblue.class)
@@ -172,7 +236,8 @@ public class StorageDiffblueTest {
   public void testGetValue() throws UnsupportedEncodingException {
     // Arrange
     StorageRowStore store = mock(StorageRowStore.class);
-    when(store.get(Mockito.<byte[]>any())).thenReturn(new StorageRowCapsule("AXAXAXAX".getBytes("UTF-8")));
+    when(store.get(Mockito.<byte[]>any()))
+        .thenReturn(new StorageRowCapsule("AXAXAXAX".getBytes("UTF-8")));
 
     Storage storage = new Storage("AXAXAXAX".getBytes("UTF-8"), store);
     storage.setContractVersion(1);
@@ -182,27 +247,39 @@ public class StorageDiffblueTest {
 
     // Assert
     verify(store).get(isA(byte[].class));
-    byte[] expectedNoLeadZeroesData = "AXAXAXAX".getBytes("UTF-8");
-    assertArrayEquals(expectedNoLeadZeroesData, actualValue.getNoLeadZeroesData());
-    assertArrayEquals(new byte[]{0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 'A', 'X', 'A', 'X', 'A', 'X', 'A', 'X'},
+    assertArrayEquals("AXAXAXAX".getBytes("UTF-8"), actualValue.getNoLeadZeroesData());
+    assertArrayEquals(
+        new byte[] {0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 'A', 'X', 'A', 'X', 'A', 'X', 'A', 'X'},
         actualValue.getLast20Bytes());
-    assertArrayEquals(new byte[]{'A', 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 'A', 'X', 'A', 'X', 'A', 'X', 'A', 'X'},
+    assertArrayEquals(
+        new byte[] {
+          'A', 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 'A', 'X', 'A', 'X', 'A', 'X', 'A', 'X'
+        },
         actualValue.toTronAddress());
-    assertArrayEquals(new byte[]{0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 'A', 'X', 'A',
-        'X', 'A', 'X', 'A', 'X'}, actualValue.getClonedData());
-    assertArrayEquals(new byte[]{0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 'A', 'X', 'A',
-        'X', 'A', 'X', 'A', 'X'}, actualValue.getData());
+    assertArrayEquals(
+        new byte[] {
+          0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 'A', 'X', 'A',
+          'X', 'A', 'X', 'A', 'X'
+        },
+        actualValue.getClonedData());
+    assertArrayEquals(
+        new byte[] {
+          0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 'A', 'X', 'A',
+          'X', 'A', 'X', 'A', 'X'
+        },
+        actualValue.getData());
   }
 
   /**
    * Test {@link Storage#getValue(DataWord)}.
+   *
    * <ul>
-   *   <li>Given {@link StorageRowStore} {@link StorageRowStore#get(byte[])} return {@code null}.</li>
-   *   <li>When ZERO.</li>
-   *   <li>Then return {@code null}.</li>
+   *   <li>Given {@link StorageRowStore} {@link StorageRowStore#get(byte[])} return {@code null}.
+   *   <li>When ZERO.
+   *   <li>Then return {@code null}.
    * </ul>
-   * <p>
-   * Method under test: {@link Storage#getValue(DataWord)}
+   *
+   * <p>Method under test: {@link Storage#getValue(DataWord)}
    */
   @Test
   @Category(MaintainedByDiffblue.class)
@@ -224,11 +301,13 @@ public class StorageDiffblueTest {
 
   /**
    * Test {@link Storage#getValue(DataWord)}.
+   *
    * <ul>
-   *   <li>Given {@link StorageRowStore} {@link StorageRowStore#get(byte[])} return {@link StorageRowCapsule#StorageRowCapsule(byte[])} with rowValue is {@code null}.</li>
+   *   <li>Given {@link StorageRowStore} {@link StorageRowStore#get(byte[])} return {@link
+   *       StorageRowCapsule#StorageRowCapsule(byte[])} with rowValue is {@code null}.
    * </ul>
-   * <p>
-   * Method under test: {@link Storage#getValue(DataWord)}
+   *
+   * <p>Method under test: {@link Storage#getValue(DataWord)}
    */
   @Test
   @Category(MaintainedByDiffblue.class)
@@ -250,19 +329,22 @@ public class StorageDiffblueTest {
 
   /**
    * Test {@link Storage#getValue(DataWord)}.
+   *
    * <ul>
-   *   <li>Then return NoLeadZeroesData is {@code AXAXAXAX} Bytes is {@code UTF-8}.</li>
+   *   <li>Then return NoLeadZeroesData is {@code AXAXAXAX} Bytes is {@code UTF-8}.
    * </ul>
-   * <p>
-   * Method under test: {@link Storage#getValue(DataWord)}
+   *
+   * <p>Method under test: {@link Storage#getValue(DataWord)}
    */
   @Test
   @Category(MaintainedByDiffblue.class)
   @MethodsUnderTest({"DataWord Storage.getValue(DataWord)"})
-  public void testGetValue_thenReturnNoLeadZeroesDataIsAxaxaxaxBytesIsUtf8() throws UnsupportedEncodingException {
+  public void testGetValue_thenReturnNoLeadZeroesDataIsAxaxaxaxBytesIsUtf8()
+      throws UnsupportedEncodingException {
     // Arrange
     StorageRowStore store = mock(StorageRowStore.class);
-    when(store.get(Mockito.<byte[]>any())).thenReturn(new StorageRowCapsule("AXAXAXAX".getBytes("UTF-8")));
+    when(store.get(Mockito.<byte[]>any()))
+        .thenReturn(new StorageRowCapsule("AXAXAXAX".getBytes("UTF-8")));
     Storage storage = new Storage("AXAXAXAX".getBytes("UTF-8"), store);
 
     // Act
@@ -270,25 +352,37 @@ public class StorageDiffblueTest {
 
     // Assert
     verify(store).get(isA(byte[].class));
-    byte[] expectedNoLeadZeroesData = "AXAXAXAX".getBytes("UTF-8");
-    assertArrayEquals(expectedNoLeadZeroesData, actualValue.getNoLeadZeroesData());
-    assertArrayEquals(new byte[]{0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 'A', 'X', 'A', 'X', 'A', 'X', 'A', 'X'},
+    assertArrayEquals("AXAXAXAX".getBytes("UTF-8"), actualValue.getNoLeadZeroesData());
+    assertArrayEquals(
+        new byte[] {0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 'A', 'X', 'A', 'X', 'A', 'X', 'A', 'X'},
         actualValue.getLast20Bytes());
-    assertArrayEquals(new byte[]{'A', 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 'A', 'X', 'A', 'X', 'A', 'X', 'A', 'X'},
+    assertArrayEquals(
+        new byte[] {
+          'A', 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 'A', 'X', 'A', 'X', 'A', 'X', 'A', 'X'
+        },
         actualValue.toTronAddress());
-    assertArrayEquals(new byte[]{0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 'A', 'X', 'A',
-        'X', 'A', 'X', 'A', 'X'}, actualValue.getClonedData());
-    assertArrayEquals(new byte[]{0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 'A', 'X', 'A',
-        'X', 'A', 'X', 'A', 'X'}, actualValue.getData());
+    assertArrayEquals(
+        new byte[] {
+          0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 'A', 'X', 'A',
+          'X', 'A', 'X', 'A', 'X'
+        },
+        actualValue.getClonedData());
+    assertArrayEquals(
+        new byte[] {
+          0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 'A', 'X', 'A',
+          'X', 'A', 'X', 'A', 'X'
+        },
+        actualValue.getData());
   }
 
   /**
    * Test {@link Storage#getValue(DataWord)}.
+   *
    * <ul>
-   *   <li>Then return ZERO.</li>
+   *   <li>Then return ZERO.
    * </ul>
-   * <p>
-   * Method under test: {@link Storage#getValue(DataWord)}
+   *
+   * <p>Method under test: {@link Storage#getValue(DataWord)}
    */
   @Test
   @Category(MaintainedByDiffblue.class)
@@ -305,8 +399,8 @@ public class StorageDiffblueTest {
 
   /**
    * Test {@link Storage#put(DataWord, DataWord)}.
-   * <p>
-   * Method under test: {@link Storage#put(DataWord, DataWord)}
+   *
+   * <p>Method under test: {@link Storage#put(DataWord, DataWord)}
    */
   @Test
   @Category(MaintainedByDiffblue.class)
@@ -325,8 +419,8 @@ public class StorageDiffblueTest {
 
   /**
    * Test {@link Storage#put(DataWord, DataWord)}.
-   * <p>
-   * Method under test: {@link Storage#put(DataWord, DataWord)}
+   *
+   * <p>Method under test: {@link Storage#put(DataWord, DataWord)}
    */
   @Test
   @Category(MaintainedByDiffblue.class)
@@ -347,38 +441,48 @@ public class StorageDiffblueTest {
 
   /**
    * Test {@link Storage#put(DataWord, DataWord)}.
-   * <p>
-   * Method under test: {@link Storage#put(DataWord, DataWord)}
+   *
+   * <ul>
+   *   <li>Then {@link Storage#Storage(Storage)} with storage is {@link Storage#Storage(byte[],
+   *       StorageRowStore)} RowCache size is one.
+   * </ul>
+   *
+   * <p>Method under test: {@link Storage#put(DataWord, DataWord)}
    */
   @Test
   @Category(MaintainedByDiffblue.class)
   @MethodsUnderTest({"void Storage.put(DataWord, DataWord)"})
-  public void testPut3() throws UnsupportedEncodingException {
+  public void testPut_thenStorageWithStorageIsStorageRowCacheSizeIsOne()
+      throws UnsupportedEncodingException {
     // Arrange
     Storage storage = new Storage("AXAXAXAX".getBytes("UTF-8"), mock(StorageRowStore.class));
-    storage.setContractVersion(1);
+
+    Storage storage2 = new Storage(storage);
+    storage2.setContractVersion(1);
     DataWord key = DataWord.ZERO();
 
     // Act
-    storage.put(key, DataWord.ZERO());
+    storage2.put(key, DataWord.ZERO());
 
     // Assert
-    assertEquals(1, storage.getRowCache().size());
+    assertEquals(1, storage2.getRowCache().size());
   }
 
   /**
    * Test {@link Storage#commit()}.
+   *
    * <ul>
-   *   <li>Given {@link StorageRowStore} {@link TronStoreWithRevoking#delete(byte[])} does nothing.</li>
-   *   <li>Then calls {@link TronStoreWithRevoking#delete(byte[])}.</li>
+   *   <li>Given {@link StorageRowStore} {@link StorageRowStore#delete(byte[])} does nothing.
+   *   <li>Then calls {@link StorageRowStore#delete(byte[])}.
    * </ul>
-   * <p>
-   * Method under test: {@link Storage#commit()}
+   *
+   * <p>Method under test: {@link Storage#commit()}
    */
   @Test
   @Category(MaintainedByDiffblue.class)
   @MethodsUnderTest({"void Storage.commit()"})
-  public void testCommit_givenStorageRowStoreDeleteDoesNothing_thenCallsDelete() throws UnsupportedEncodingException {
+  public void testCommit_givenStorageRowStoreDeleteDoesNothing_thenCallsDelete()
+      throws UnsupportedEncodingException {
     // Arrange
     StorageRowStore store = mock(StorageRowStore.class);
     doNothing().when(store).delete(Mockito.<byte[]>any());
@@ -396,17 +500,20 @@ public class StorageDiffblueTest {
 
   /**
    * Test {@link Storage#commit()}.
+   *
    * <ul>
-   *   <li>Given {@link StorageRowStore} {@link TronStoreWithRevoking#put(byte[], ProtoCapsule)} does nothing.</li>
-   *   <li>Then calls {@link TronStoreWithRevoking#put(byte[], ProtoCapsule)}.</li>
+   *   <li>Given {@link StorageRowStore} {@link StorageRowStore#put(byte[], ProtoCapsule)} does
+   *       nothing.
+   *   <li>Then calls {@link StorageRowStore#put(byte[], ProtoCapsule)}.
    * </ul>
-   * <p>
-   * Method under test: {@link Storage#commit()}
+   *
+   * <p>Method under test: {@link Storage#commit()}
    */
   @Test
   @Category(MaintainedByDiffblue.class)
   @MethodsUnderTest({"void Storage.commit()"})
-  public void testCommit_givenStorageRowStorePutDoesNothing_thenCallsPut() throws UnsupportedEncodingException {
+  public void testCommit_givenStorageRowStorePutDoesNothing_thenCallsPut()
+      throws UnsupportedEncodingException {
     // Arrange
     StorageRowStore store = mock(StorageRowStore.class);
     doNothing().when(store).put(Mockito.<byte[]>any(), Mockito.<StorageRowCapsule>any());
@@ -424,8 +531,9 @@ public class StorageDiffblueTest {
 
   /**
    * Test getters and setters.
-   * <p>
-   * Methods under test:
+   *
+   * <p>Methods under test:
+   *
    * <ul>
    *   <li>{@link Storage#setContractVersion(int)}
    *   <li>{@link Storage#getAddrHash()}
@@ -436,8 +544,13 @@ public class StorageDiffblueTest {
    */
   @Test
   @Category(MaintainedByDiffblue.class)
-  @MethodsUnderTest({"byte[] Storage.getAddrHash()", "byte[] Storage.getAddress()", "Map Storage.getRowCache()",
-      "StorageRowStore Storage.getStore()", "void Storage.setContractVersion(int)"})
+  @MethodsUnderTest({
+    "byte[] Storage.getAddrHash()",
+    "byte[] Storage.getAddress()",
+    "Map Storage.getRowCache()",
+    "StorageRowStore Storage.getStore()",
+    "void Storage.setContractVersion(int)"
+  })
   public void testGettersAndSetters() throws UnsupportedEncodingException {
     // Arrange
     Storage storage = new Storage("AXAXAXAX".getBytes("UTF-8"), null);
@@ -452,7 +565,11 @@ public class StorageDiffblueTest {
     assertNull(storage.getStore());
     assertTrue(actualRowCache.isEmpty());
     assertArrayEquals("AXAXAXAX".getBytes("UTF-8"), actualAddress);
-    assertArrayEquals(new byte[]{-84, -91, '3', -51, -53, '2', -79, '"', '\b', 1, -60, '1', '\n', '>', -48, '0', -75,
-        -41, '`', -121, '(', -22, -111, -6, 'J', 't', -83, 'Q', -3, -89, -95, -54}, actualAddrHash);
+    assertArrayEquals(
+        new byte[] {
+          -84, -91, '3', -51, -53, '2', -79, '"', '\b', 1, -60, '1', '\n', '>', -48, '0', -75, -41,
+          '`', -121, '(', -22, -111, -6, 'J', 't', -83, 'Q', -3, -89, -95, -54
+        },
+        actualAddrHash);
   }
 }

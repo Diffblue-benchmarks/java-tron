@@ -15,12 +15,13 @@ import org.tron.common.runtime.vm.DataWord;
 public class BIUtilDiffblueTest {
   /**
    * Test {@link BIUtil#isLessThan(BigInteger, BigInteger)}.
+   *
    * <ul>
-   *   <li>When {@link DataWord#MAX_VALUE}.</li>
-   *   <li>Then return {@code false}.</li>
+   *   <li>When {@link DataWord#MAX_VALUE}.
+   *   <li>Then return {@code false}.
    * </ul>
-   * <p>
-   * Method under test: {@link BIUtil#isLessThan(BigInteger, BigInteger)}
+   *
+   * <p>Method under test: {@link BIUtil#isLessThan(BigInteger, BigInteger)}
    */
   @Test
   @Category(MaintainedByDiffblue.class)
@@ -32,12 +33,13 @@ public class BIUtilDiffblueTest {
 
   /**
    * Test {@link BIUtil#isLessThan(BigInteger, BigInteger)}.
+   *
    * <ul>
-   *   <li>When valueOf one.</li>
-   *   <li>Then return {@code true}.</li>
+   *   <li>When valueOf one.
+   *   <li>Then return {@code true}.
    * </ul>
-   * <p>
-   * Method under test: {@link BIUtil#isLessThan(BigInteger, BigInteger)}
+   *
+   * <p>Method under test: {@link BIUtil#isLessThan(BigInteger, BigInteger)}
    */
   @Test
   @Category(MaintainedByDiffblue.class)
@@ -49,12 +51,13 @@ public class BIUtilDiffblueTest {
 
   /**
    * Test {@link BIUtil#isZero(BigInteger)}.
+   *
    * <ul>
-   *   <li>When {@link DataWord#MAX_VALUE}.</li>
-   *   <li>Then return {@code false}.</li>
+   *   <li>When {@link DataWord#MAX_VALUE}.
+   *   <li>Then return {@code false}.
    * </ul>
-   * <p>
-   * Method under test: {@link BIUtil#isZero(BigInteger)}
+   *
+   * <p>Method under test: {@link BIUtil#isZero(BigInteger)}
    */
   @Test
   @Category(MaintainedByDiffblue.class)
@@ -66,12 +69,13 @@ public class BIUtilDiffblueTest {
 
   /**
    * Test {@link BIUtil#isZero(BigInteger)}.
+   *
    * <ul>
-   *   <li>When valueOf zero.</li>
-   *   <li>Then return {@code true}.</li>
+   *   <li>When valueOf zero.
+   *   <li>Then return {@code true}.
    * </ul>
-   * <p>
-   * Method under test: {@link BIUtil#isZero(BigInteger)}
+   *
+   * <p>Method under test: {@link BIUtil#isZero(BigInteger)}
    */
   @Test
   @Category(MaintainedByDiffblue.class)
@@ -83,12 +87,13 @@ public class BIUtilDiffblueTest {
 
   /**
    * Test {@link BIUtil#isEqual(BigInteger, BigInteger)}.
+   *
    * <ul>
-   *   <li>When {@link DataWord#MAX_VALUE}.</li>
-   *   <li>Then return {@code true}.</li>
+   *   <li>When {@link DataWord#MAX_VALUE}.
+   *   <li>Then return {@code true}.
    * </ul>
-   * <p>
-   * Method under test: {@link BIUtil#isEqual(BigInteger, BigInteger)}
+   *
+   * <p>Method under test: {@link BIUtil#isEqual(BigInteger, BigInteger)}
    */
   @Test
   @Category(MaintainedByDiffblue.class)
@@ -100,12 +105,13 @@ public class BIUtilDiffblueTest {
 
   /**
    * Test {@link BIUtil#isEqual(BigInteger, BigInteger)}.
+   *
    * <ul>
-   *   <li>When {@link DataWord#_2_256}.</li>
-   *   <li>Then return {@code false}.</li>
+   *   <li>When {@link DataWord#_2_256}.
+   *   <li>Then return {@code false}.
    * </ul>
-   * <p>
-   * Method under test: {@link BIUtil#isEqual(BigInteger, BigInteger)}
+   *
+   * <p>Method under test: {@link BIUtil#isEqual(BigInteger, BigInteger)}
    */
   @Test
   @Category(MaintainedByDiffblue.class)
@@ -117,12 +123,13 @@ public class BIUtilDiffblueTest {
 
   /**
    * Test {@link BIUtil#isNotEqual(BigInteger, BigInteger)}.
+   *
    * <ul>
-   *   <li>When {@link DataWord#MAX_VALUE}.</li>
-   *   <li>Then return {@code false}.</li>
+   *   <li>When {@link DataWord#MAX_VALUE}.
+   *   <li>Then return {@code false}.
    * </ul>
-   * <p>
-   * Method under test: {@link BIUtil#isNotEqual(BigInteger, BigInteger)}
+   *
+   * <p>Method under test: {@link BIUtil#isNotEqual(BigInteger, BigInteger)}
    */
   @Test
   @Category(MaintainedByDiffblue.class)
@@ -134,12 +141,13 @@ public class BIUtilDiffblueTest {
 
   /**
    * Test {@link BIUtil#isNotEqual(BigInteger, BigInteger)}.
+   *
    * <ul>
-   *   <li>When {@link DataWord#_2_256}.</li>
-   *   <li>Then return {@code true}.</li>
+   *   <li>When {@link DataWord#_2_256}.
+   *   <li>Then return {@code true}.
    * </ul>
-   * <p>
-   * Method under test: {@link BIUtil#isNotEqual(BigInteger, BigInteger)}
+   *
+   * <p>Method under test: {@link BIUtil#isNotEqual(BigInteger, BigInteger)}
    */
   @Test
   @Category(MaintainedByDiffblue.class)
@@ -151,12 +159,13 @@ public class BIUtilDiffblueTest {
 
   /**
    * Test {@link BIUtil#isMoreThan(BigInteger, BigInteger)}.
+   *
    * <ul>
-   *   <li>When {@link DataWord#MAX_VALUE}.</li>
-   *   <li>Then return {@code false}.</li>
+   *   <li>When {@link DataWord#MAX_VALUE}.
+   *   <li>Then return {@code false}.
    * </ul>
-   * <p>
-   * Method under test: {@link BIUtil#isMoreThan(BigInteger, BigInteger)}
+   *
+   * <p>Method under test: {@link BIUtil#isMoreThan(BigInteger, BigInteger)}
    */
   @Test
   @Category(MaintainedByDiffblue.class)
@@ -168,12 +177,13 @@ public class BIUtilDiffblueTest {
 
   /**
    * Test {@link BIUtil#isMoreThan(BigInteger, BigInteger)}.
+   *
    * <ul>
-   *   <li>When {@link DataWord#_2_256}.</li>
-   *   <li>Then return {@code true}.</li>
+   *   <li>When {@link DataWord#_2_256}.
+   *   <li>Then return {@code true}.
    * </ul>
-   * <p>
-   * Method under test: {@link BIUtil#isMoreThan(BigInteger, BigInteger)}
+   *
+   * <p>Method under test: {@link BIUtil#isMoreThan(BigInteger, BigInteger)}
    */
   @Test
   @Category(MaintainedByDiffblue.class)
@@ -185,8 +195,8 @@ public class BIUtilDiffblueTest {
 
   /**
    * Test {@link BIUtil#sum(BigInteger, BigInteger)}.
-   * <p>
-   * Method under test: {@link BIUtil#sum(BigInteger, BigInteger)}
+   *
+   * <p>Method under test: {@link BIUtil#sum(BigInteger, BigInteger)}
    */
   @Test
   @Category(MaintainedByDiffblue.class)
@@ -196,18 +206,23 @@ public class BIUtilDiffblueTest {
     BigInteger actualSumResult = BIUtil.sum(DataWord.MAX_VALUE, DataWord.MAX_VALUE);
 
     // Assert
-    assertEquals("231584178474632390847141970017375815706539969331281128078915168015826259279870",
+    assertEquals(
+        "231584178474632390847141970017375815706539969331281128078915168015826259279870",
         actualSumResult.toString());
     assertEquals(1, actualSumResult.getLowestSetBit());
     assertEquals(1, actualSumResult.signum());
-    assertArrayEquals(new byte[]{1, -1, -1, -1, -1, -1, -1, -1, -1, -1, -1, -1, -1, -1, -1, -1, -1, -1, -1, -1, -1, -1,
-        -1, -1, -1, -1, -1, -1, -1, -1, -1, -1, -2}, actualSumResult.toByteArray());
+    assertArrayEquals(
+        new byte[] {
+          1, -1, -1, -1, -1, -1, -1, -1, -1, -1, -1, -1, -1, -1, -1, -1, -1, -1, -1, -1, -1, -1, -1,
+          -1, -1, -1, -1, -1, -1, -1, -1, -1, -2
+        },
+        actualSumResult.toByteArray());
   }
 
   /**
    * Test {@link BIUtil#sum(BigInteger, BigInteger)}.
-   * <p>
-   * Method under test: {@link BIUtil#sum(BigInteger, BigInteger)}
+   *
+   * <p>Method under test: {@link BIUtil#sum(BigInteger, BigInteger)}
    */
   @Test
   @Category(MaintainedByDiffblue.class)
@@ -217,18 +232,23 @@ public class BIUtilDiffblueTest {
     BigInteger actualSumResult = BIUtil.sum(DataWord._2_256, DataWord.MAX_VALUE);
 
     // Assert
-    assertEquals("231584178474632390847141970017375815706539969331281128078915168015826259279871",
+    assertEquals(
+        "231584178474632390847141970017375815706539969331281128078915168015826259279871",
         actualSumResult.toString());
     assertEquals(0, actualSumResult.getLowestSetBit());
     assertEquals(1, actualSumResult.signum());
-    assertArrayEquals(new byte[]{1, -1, -1, -1, -1, -1, -1, -1, -1, -1, -1, -1, -1, -1, -1, -1, -1, -1, -1, -1, -1, -1,
-        -1, -1, -1, -1, -1, -1, -1, -1, -1, -1, -1}, actualSumResult.toByteArray());
+    assertArrayEquals(
+        new byte[] {
+          1, -1, -1, -1, -1, -1, -1, -1, -1, -1, -1, -1, -1, -1, -1, -1, -1, -1, -1, -1, -1, -1, -1,
+          -1, -1, -1, -1, -1, -1, -1, -1, -1, -1
+        },
+        actualSumResult.toByteArray());
   }
 
   /**
    * Test {@link BIUtil#sum(BigInteger, BigInteger)}.
-   * <p>
-   * Method under test: {@link BIUtil#sum(BigInteger, BigInteger)}
+   *
+   * <p>Method under test: {@link BIUtil#sum(BigInteger, BigInteger)}
    */
   @Test
   @Category(MaintainedByDiffblue.class)
@@ -238,19 +258,23 @@ public class BIUtilDiffblueTest {
     BigInteger actualSumResult = BIUtil.sum(BigInteger.valueOf(5L), DataWord.MAX_VALUE);
 
     // Assert
-    assertEquals("115792089237316195423570985008687907853269984665640564039457584007913129639940",
+    assertEquals(
+        "115792089237316195423570985008687907853269984665640564039457584007913129639940",
         actualSumResult.toString());
     assertEquals(1, actualSumResult.signum());
     assertEquals(2, actualSumResult.getLowestSetBit());
     assertArrayEquals(
-        new byte[]{1, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 4},
+        new byte[] {
+          1, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0,
+          0, 0, 4
+        },
         actualSumResult.toByteArray());
   }
 
   /**
    * Test {@link BIUtil#sum(BigInteger, BigInteger)}.
-   * <p>
-   * Method under test: {@link BIUtil#sum(BigInteger, BigInteger)}
+   *
+   * <p>Method under test: {@link BIUtil#sum(BigInteger, BigInteger)}
    */
   @Test
   @Category(MaintainedByDiffblue.class)
@@ -260,19 +284,23 @@ public class BIUtilDiffblueTest {
     BigInteger actualSumResult = BIUtil.sum(DataWord._2_256, DataWord._2_256);
 
     // Assert
-    assertEquals("231584178474632390847141970017375815706539969331281128078915168015826259279872",
+    assertEquals(
+        "231584178474632390847141970017375815706539969331281128078915168015826259279872",
         actualSumResult.toString());
     assertEquals(1, actualSumResult.signum());
     assertEquals(257, actualSumResult.getLowestSetBit());
     assertArrayEquals(
-        new byte[]{2, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0},
+        new byte[] {
+          2, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0,
+          0, 0, 0
+        },
         actualSumResult.toByteArray());
   }
 
   /**
    * Test {@link BIUtil#toBI(byte[])} with {@code byte[]}.
-   * <p>
-   * Method under test: {@link BIUtil#toBI(byte[])}
+   *
+   * <p>Method under test: {@link BIUtil#toBI(byte[])}
    */
   @Test
   @Category(MaintainedByDiffblue.class)
@@ -291,8 +319,8 @@ public class BIUtilDiffblueTest {
 
   /**
    * Test {@link BIUtil#toBI(long)} with {@code long}.
-   * <p>
-   * Method under test: {@link BIUtil#toBI(long)}
+   *
+   * <p>Method under test: {@link BIUtil#toBI(long)}
    */
   @Test
   @Category(MaintainedByDiffblue.class)
@@ -305,17 +333,18 @@ public class BIUtilDiffblueTest {
     assertEquals("1", actualToBIResult.toString());
     assertEquals(0, actualToBIResult.getLowestSetBit());
     assertEquals(1, actualToBIResult.signum());
-    assertArrayEquals(new byte[]{1}, actualToBIResult.toByteArray());
+    assertArrayEquals(new byte[] {1}, actualToBIResult.toByteArray());
   }
 
   /**
    * Test {@link BIUtil#isPositive(BigInteger)}.
+   *
    * <ul>
-   *   <li>When {@link DataWord#MAX_VALUE}.</li>
-   *   <li>Then return {@code true}.</li>
+   *   <li>When {@link DataWord#MAX_VALUE}.
+   *   <li>Then return {@code true}.
    * </ul>
-   * <p>
-   * Method under test: {@link BIUtil#isPositive(BigInteger)}
+   *
+   * <p>Method under test: {@link BIUtil#isPositive(BigInteger)}
    */
   @Test
   @Category(MaintainedByDiffblue.class)
@@ -327,12 +356,13 @@ public class BIUtilDiffblueTest {
 
   /**
    * Test {@link BIUtil#isPositive(BigInteger)}.
+   *
    * <ul>
-   *   <li>When valueOf minus one.</li>
-   *   <li>Then return {@code false}.</li>
+   *   <li>When valueOf minus one.
+   *   <li>Then return {@code false}.
    * </ul>
-   * <p>
-   * Method under test: {@link BIUtil#isPositive(BigInteger)}
+   *
+   * <p>Method under test: {@link BIUtil#isPositive(BigInteger)}
    */
   @Test
   @Category(MaintainedByDiffblue.class)
@@ -344,12 +374,13 @@ public class BIUtilDiffblueTest {
 
   /**
    * Test {@link BIUtil#isNotCovers(BigInteger, BigInteger)}.
+   *
    * <ul>
-   *   <li>When {@link DataWord#MAX_VALUE}.</li>
-   *   <li>Then return {@code false}.</li>
+   *   <li>When {@link DataWord#MAX_VALUE}.
+   *   <li>Then return {@code false}.
    * </ul>
-   * <p>
-   * Method under test: {@link BIUtil#isNotCovers(BigInteger, BigInteger)}
+   *
+   * <p>Method under test: {@link BIUtil#isNotCovers(BigInteger, BigInteger)}
    */
   @Test
   @Category(MaintainedByDiffblue.class)
@@ -361,12 +392,13 @@ public class BIUtilDiffblueTest {
 
   /**
    * Test {@link BIUtil#isNotCovers(BigInteger, BigInteger)}.
+   *
    * <ul>
-   *   <li>When valueOf one.</li>
-   *   <li>Then return {@code true}.</li>
+   *   <li>When valueOf one.
+   *   <li>Then return {@code true}.
    * </ul>
-   * <p>
-   * Method under test: {@link BIUtil#isNotCovers(BigInteger, BigInteger)}
+   *
+   * <p>Method under test: {@link BIUtil#isNotCovers(BigInteger, BigInteger)}
    */
   @Test
   @Category(MaintainedByDiffblue.class)
@@ -378,8 +410,8 @@ public class BIUtilDiffblueTest {
 
   /**
    * Test {@link BIUtil#max(BigInteger, BigInteger)}.
-   * <p>
-   * Method under test: {@link BIUtil#max(BigInteger, BigInteger)}
+   *
+   * <p>Method under test: {@link BIUtil#max(BigInteger, BigInteger)}
    */
   @Test
   @Category(MaintainedByDiffblue.class)
@@ -389,18 +421,23 @@ public class BIUtilDiffblueTest {
     BigInteger actualMaxResult = BIUtil.max(DataWord.MAX_VALUE, DataWord.MAX_VALUE);
 
     // Assert
-    assertEquals("115792089237316195423570985008687907853269984665640564039457584007913129639935",
+    assertEquals(
+        "115792089237316195423570985008687907853269984665640564039457584007913129639935",
         actualMaxResult.toString());
     assertEquals(0, actualMaxResult.getLowestSetBit());
     assertEquals(1, actualMaxResult.signum());
-    assertArrayEquals(new byte[]{0, -1, -1, -1, -1, -1, -1, -1, -1, -1, -1, -1, -1, -1, -1, -1, -1, -1, -1, -1, -1, -1,
-        -1, -1, -1, -1, -1, -1, -1, -1, -1, -1, -1}, actualMaxResult.toByteArray());
+    assertArrayEquals(
+        new byte[] {
+          0, -1, -1, -1, -1, -1, -1, -1, -1, -1, -1, -1, -1, -1, -1, -1, -1, -1, -1, -1, -1, -1, -1,
+          -1, -1, -1, -1, -1, -1, -1, -1, -1, -1
+        },
+        actualMaxResult.toByteArray());
   }
 
   /**
    * Test {@link BIUtil#max(BigInteger, BigInteger)}.
-   * <p>
-   * Method under test: {@link BIUtil#max(BigInteger, BigInteger)}
+   *
+   * <p>Method under test: {@link BIUtil#max(BigInteger, BigInteger)}
    */
   @Test
   @Category(MaintainedByDiffblue.class)
@@ -410,19 +447,23 @@ public class BIUtilDiffblueTest {
     BigInteger actualMaxResult = BIUtil.max(DataWord._2_256, DataWord.MAX_VALUE);
 
     // Assert
-    assertEquals("115792089237316195423570985008687907853269984665640564039457584007913129639936",
+    assertEquals(
+        "115792089237316195423570985008687907853269984665640564039457584007913129639936",
         actualMaxResult.toString());
     assertEquals(1, actualMaxResult.signum());
     assertEquals(256, actualMaxResult.getLowestSetBit());
     assertArrayEquals(
-        new byte[]{1, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0},
+        new byte[] {
+          1, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0,
+          0, 0, 0
+        },
         actualMaxResult.toByteArray());
   }
 
   /**
    * Test {@link BIUtil#max(BigInteger, BigInteger)}.
-   * <p>
-   * Method under test: {@link BIUtil#max(BigInteger, BigInteger)}
+   *
+   * <p>Method under test: {@link BIUtil#max(BigInteger, BigInteger)}
    */
   @Test
   @Category(MaintainedByDiffblue.class)
@@ -432,22 +473,27 @@ public class BIUtilDiffblueTest {
     BigInteger actualMaxResult = BIUtil.max(DataWord._2_256, DataWord._2_256);
 
     // Assert
-    assertEquals("115792089237316195423570985008687907853269984665640564039457584007913129639936",
+    assertEquals(
+        "115792089237316195423570985008687907853269984665640564039457584007913129639936",
         actualMaxResult.toString());
     assertEquals(1, actualMaxResult.signum());
     assertEquals(256, actualMaxResult.getLowestSetBit());
     assertArrayEquals(
-        new byte[]{1, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0},
+        new byte[] {
+          1, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0,
+          0, 0, 0
+        },
         actualMaxResult.toByteArray());
   }
 
   /**
    * Test {@link BIUtil#max(BigInteger, BigInteger)}.
+   *
    * <ul>
-   *   <li>When valueOf five.</li>
+   *   <li>When valueOf five.
    * </ul>
-   * <p>
-   * Method under test: {@link BIUtil#max(BigInteger, BigInteger)}
+   *
+   * <p>Method under test: {@link BIUtil#max(BigInteger, BigInteger)}
    */
   @Test
   @Category(MaintainedByDiffblue.class)
@@ -457,56 +503,64 @@ public class BIUtilDiffblueTest {
     BigInteger actualMaxResult = BIUtil.max(BigInteger.valueOf(5L), DataWord.MAX_VALUE);
 
     // Assert
-    assertEquals("115792089237316195423570985008687907853269984665640564039457584007913129639935",
+    assertEquals(
+        "115792089237316195423570985008687907853269984665640564039457584007913129639935",
         actualMaxResult.toString());
     assertEquals(0, actualMaxResult.getLowestSetBit());
     assertEquals(1, actualMaxResult.signum());
-    assertArrayEquals(new byte[]{0, -1, -1, -1, -1, -1, -1, -1, -1, -1, -1, -1, -1, -1, -1, -1, -1, -1, -1, -1, -1, -1,
-        -1, -1, -1, -1, -1, -1, -1, -1, -1, -1, -1}, actualMaxResult.toByteArray());
+    assertArrayEquals(
+        new byte[] {
+          0, -1, -1, -1, -1, -1, -1, -1, -1, -1, -1, -1, -1, -1, -1, -1, -1, -1, -1, -1, -1, -1, -1,
+          -1, -1, -1, -1, -1, -1, -1, -1, -1, -1
+        },
+        actualMaxResult.toByteArray());
   }
 
   /**
    * Test {@link BIUtil#addSafely(int, int)}.
+   *
    * <ul>
-   *   <li>When four.</li>
-   *   <li>Then return six.</li>
+   *   <li>When {@link Integer#MAX_VALUE}.
+   *   <li>Then return {@link Integer#MAX_VALUE}.
    * </ul>
-   * <p>
-   * Method under test: {@link BIUtil#addSafely(int, int)}
-   */
-  @Test
-  @Category(MaintainedByDiffblue.class)
-  @MethodsUnderTest({"int BIUtil.addSafely(int, int)"})
-  public void testAddSafely_whenFour_thenReturnSix() {
-    // Arrange, Act and Assert
-    assertEquals(6, BIUtil.addSafely(4, 2));
-  }
-
-  /**
-   * Test {@link BIUtil#addSafely(int, int)}.
-   * <ul>
-   *   <li>When {@link Integer#MAX_VALUE}.</li>
-   *   <li>Then return {@link Integer#MAX_VALUE}.</li>
-   * </ul>
-   * <p>
-   * Method under test: {@link BIUtil#addSafely(int, int)}
+   *
+   * <p>Method under test: {@link BIUtil#addSafely(int, int)}
    */
   @Test
   @Category(MaintainedByDiffblue.class)
   @MethodsUnderTest({"int BIUtil.addSafely(int, int)"})
   public void testAddSafely_whenMax_value_thenReturnMax_value() {
     // Arrange, Act and Assert
-    assertEquals(Integer.MAX_VALUE, BIUtil.addSafely(Integer.MAX_VALUE, 2));
+    assertEquals(Integer.MAX_VALUE, BIUtil.addSafely(3, Integer.MAX_VALUE));
   }
 
   /**
    * Test {@link BIUtil#addSafely(int, int)}.
+   *
    * <ul>
-   *   <li>When minus one.</li>
-   *   <li>Then return one.</li>
+   *   <li>When {@link Integer#MIN_VALUE}.
+   *   <li>Then return {@code -2147483646}.
    * </ul>
-   * <p>
-   * Method under test: {@link BIUtil#addSafely(int, int)}
+   *
+   * <p>Method under test: {@link BIUtil#addSafely(int, int)}
+   */
+  @Test
+  @Category(MaintainedByDiffblue.class)
+  @MethodsUnderTest({"int BIUtil.addSafely(int, int)"})
+  public void testAddSafely_whenMin_value_thenReturn2147483646() {
+    // Arrange, Act and Assert
+    assertEquals(-2147483646, BIUtil.addSafely(Integer.MIN_VALUE, 2));
+  }
+
+  /**
+   * Test {@link BIUtil#addSafely(int, int)}.
+   *
+   * <ul>
+   *   <li>When minus one.
+   *   <li>Then return one.
+   * </ul>
+   *
+   * <p>Method under test: {@link BIUtil#addSafely(int, int)}
    */
   @Test
   @Category(MaintainedByDiffblue.class)
@@ -518,18 +572,37 @@ public class BIUtilDiffblueTest {
 
   /**
    * Test {@link BIUtil#addSafely(int, int)}.
+   *
    * <ul>
-   *   <li>When two.</li>
-   *   <li>Then return four.</li>
+   *   <li>When one.
+   *   <li>Then return three.
    * </ul>
-   * <p>
-   * Method under test: {@link BIUtil#addSafely(int, int)}
+   *
+   * <p>Method under test: {@link BIUtil#addSafely(int, int)}
    */
   @Test
   @Category(MaintainedByDiffblue.class)
   @MethodsUnderTest({"int BIUtil.addSafely(int, int)"})
-  public void testAddSafely_whenTwo_thenReturnFour() {
+  public void testAddSafely_whenOne_thenReturnThree() {
     // Arrange, Act and Assert
-    assertEquals(4, BIUtil.addSafely(2, 2));
+    assertEquals(3, BIUtil.addSafely(1, 2));
+  }
+
+  /**
+   * Test {@link BIUtil#addSafely(int, int)}.
+   *
+   * <ul>
+   *   <li>When three.
+   *   <li>Then return five.
+   * </ul>
+   *
+   * <p>Method under test: {@link BIUtil#addSafely(int, int)}
+   */
+  @Test
+  @Category(MaintainedByDiffblue.class)
+  @MethodsUnderTest({"int BIUtil.addSafely(int, int)"})
+  public void testAddSafely_whenThree_thenReturnFive() {
+    // Arrange, Act and Assert
+    assertEquals(5, BIUtil.addSafely(3, 2));
   }
 }

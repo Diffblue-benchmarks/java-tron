@@ -19,8 +19,8 @@ import org.junit.experimental.categories.Category;
 public class Sha256HashDiffblueTest {
   /**
    * Test {@link Sha256Hash#of(boolean, byte[])} with {@code isSha256}, {@code contents}.
-   * <p>
-   * Method under test: {@link Sha256Hash#of(boolean, byte[])}
+   *
+   * <p>Method under test: {@link Sha256Hash#of(boolean, byte[])}
    */
   @Test
   @Category(MaintainedByDiffblue.class)
@@ -35,30 +35,35 @@ public class Sha256HashDiffblueTest {
     Byte nextResult = iteratorResult.next();
     Byte nextResult2 = iteratorResult.next();
     Byte nextResult3 = iteratorResult.next();
-    boolean actualHasNextResult = iteratorResult.hasNext();
     assertEquals("\\[b\t�g�� �\ru�/���l�؊KS�\u0001�9�\u001a`��", byteString.toStringUtf8());
-    assertTrue(actualHasNextResult);
+    assertTrue(iteratorResult.hasNext());
     assertEquals('[', nextResult2.byteValue());
     assertEquals('\\', nextResult.byteValue());
     assertEquals('b', nextResult3.byteValue());
-    assertArrayEquals(new byte[]{'\\', '[', 'b', '\t', -40, 'g', -88, -64, ' ', -22, '\r', 'u', -94, '/', -77, -52, -10,
-        'l', -76, -40, -118, 'K', 'S', -32, 1, -31, '9', -113, 26, '`', -70, -36}, actualOfResult.getBytes());
+    assertArrayEquals(
+        new byte[] {
+          '\\', '[', 'b', '\t', -40, 'g', -88, -64, ' ', -22, '\r', 'u', -94, '/', -77, -52, -10,
+          'l', -76, -40, -118, 'K', 'S', -32, 1, -31, '9', -113, 26, '`', -70, -36
+        },
+        actualOfResult.getBytes());
   }
 
   /**
    * Test {@link Sha256Hash#of(boolean, byte[])} with {@code isSha256}, {@code contents}.
+   *
    * <ul>
-   *   <li>Then return ByteString iterator next byteValue is minus two.</li>
+   *   <li>Then return ByteString iterator next byteValue is minus two.
    * </ul>
-   * <p>
-   * Method under test: {@link Sha256Hash#of(boolean, byte[])}
+   *
+   * <p>Method under test: {@link Sha256Hash#of(boolean, byte[])}
    */
   @Test
   @Category(MaintainedByDiffblue.class)
   @MethodsUnderTest({"Sha256Hash Sha256Hash.of(boolean, byte[])"})
   public void testOfWithIsSha256Contents_thenReturnByteStringIteratorNextByteValueIsMinusTwo() {
     // Arrange and Act
-    Sha256Hash actualOfResult = Sha256Hash.of(false, new byte[]{'A', 'X', 'A', 'X', 'A', 'X', 'A', 'X'});
+    Sha256Hash actualOfResult =
+        Sha256Hash.of(false, new byte[] {'A', 'X', 'A', 'X', 'A', 'X', 'A', 'X'});
 
     // Assert
     ByteString byteString = actualOfResult.getByteString();
@@ -72,15 +77,48 @@ public class Sha256HashDiffblueTest {
     assertTrue(actualHasNextResult);
     assertEquals('C', nextResult3.byteValue());
     assertEquals('E', nextResult.byteValue());
-    assertArrayEquals(new byte[]{'E', -2, 'C', '\\', -12, ']', -77, -93, 6, -119, -105, 's', -83, 'F', -31, -103, -27,
-        -72, 'U', -6, -125, 'h', -105, '7', -7, -51, 'T', -83, '_', '\t', -101, Byte.MAX_VALUE},
+    assertArrayEquals(
+        new byte[] {
+          'E',
+          -2,
+          'C',
+          '\\',
+          -12,
+          ']',
+          -77,
+          -93,
+          6,
+          -119,
+          -105,
+          's',
+          -83,
+          'F',
+          -31,
+          -103,
+          -27,
+          -72,
+          'U',
+          -6,
+          -125,
+          'h',
+          -105,
+          '7',
+          -7,
+          -51,
+          'T',
+          -83,
+          '_',
+          '\t',
+          -101,
+          Byte.MAX_VALUE
+        },
         actualOfResult.getBytes());
   }
 
   /**
    * Test {@link Sha256Hash#newDigest()}.
-   * <p>
-   * Method under test: {@link Sha256Hash#newDigest()}
+   *
+   * <p>Method under test: {@link Sha256Hash#newDigest()}
    */
   @Test
   @Category(MaintainedByDiffblue.class)
@@ -98,14 +136,15 @@ public class Sha256HashDiffblueTest {
     assertEquals("SHA1withDSA", provider.get("Alg.Alias.Signature.SHA1/DSA"));
     assertEquals("Software", provider.get("SecureRandom.SHA1PRNG ImplementedIn"));
     assertEquals("sun.security.provider.JavaKeyStore$DualFormatJKS", provider.get("KeyStore.JKS"));
-    assertEquals("sun.security.provider.SHA5$SHA512_224", provider.get("MessageDigest.SHA-512/224"));
+    assertEquals(
+        "sun.security.provider.SHA5$SHA512_224", provider.get("MessageDigest.SHA-512/224"));
     assertEquals(Sha256Hash.LENGTH, actualNewDigestResult.getDigestLength());
   }
 
   /**
    * Test {@link Sha256Hash#newSM3Digest()}.
-   * <p>
-   * Method under test: {@link Sha256Hash#newSM3Digest()}
+   *
+   * <p>Method under test: {@link Sha256Hash#newSM3Digest()}
    */
   @Test
   @Category(MaintainedByDiffblue.class)
@@ -121,101 +160,195 @@ public class Sha256HashDiffblueTest {
   }
 
   /**
-   * Test {@link Sha256Hash#hash(boolean, byte[], int, int)} with {@code isSha256}, {@code input}, {@code offset}, {@code length}.
-   * <p>
-   * Method under test: {@link Sha256Hash#hash(boolean, byte[], int, int)}
+   * Test {@link Sha256Hash#hash(boolean, byte[], int, int)} with {@code isSha256}, {@code input},
+   * {@code offset}, {@code length}.
+   *
+   * <p>Method under test: {@link Sha256Hash#hash(boolean, byte[], int, int)}
    */
   @Test
   @Category(MaintainedByDiffblue.class)
   @MethodsUnderTest({"byte[] Sha256Hash.hash(boolean, byte[], int, int)"})
   public void testHashWithIsSha256InputOffsetLength() throws UnsupportedEncodingException {
-    // Arrange, Act and Assert
+    // Arrange and Act
+    byte[] actualHashResult = Sha256Hash.hash(true, "AXAXAXAX".getBytes("UTF-8"), 2, 3);
+
+    // Assert
     assertArrayEquals(
-        new byte[]{-80, '(', 16, 'i', 'n', -65, '\t', -91, 7, -105, -63, -117, 'r', 6, -112, '+', -41, -28, -87, 'k',
-            '<', 1, 3, -125, -91, '*', 26, -57, 'z', ',', ',', -65},
-        Sha256Hash.hash(true, "AXAXAXAX".getBytes("UTF-8"), 2, 3));
+        new byte[] {
+          -80, '(', 16, 'i', 'n', -65, '\t', -91, 7, -105, -63, -117, 'r', 6, -112, '+', -41, -28,
+          -87, 'k', '<', 1, 3, -125, -91, '*', 26, -57, 'z', ',', ',', -65
+        },
+        actualHashResult);
   }
 
   /**
-   * Test {@link Sha256Hash#hash(boolean, byte[], int, int)} with {@code isSha256}, {@code input}, {@code offset}, {@code length}.
-   * <p>
-   * Method under test: {@link Sha256Hash#hash(boolean, byte[], int, int)}
+   * Test {@link Sha256Hash#hash(boolean, byte[], int, int)} with {@code isSha256}, {@code input},
+   * {@code offset}, {@code length}.
+   *
+   * <p>Method under test: {@link Sha256Hash#hash(boolean, byte[], int, int)}
    */
   @Test
   @Category(MaintainedByDiffblue.class)
   @MethodsUnderTest({"byte[] Sha256Hash.hash(boolean, byte[], int, int)"})
   public void testHashWithIsSha256InputOffsetLength2() {
-    // Arrange, Act and Assert
+    // Arrange and Act
+    byte[] actualHashResult =
+        Sha256Hash.hash(false, new byte[] {'A', 'X', 'A', 'X', 'A', 'X', 'A', 'X'}, 2, 3);
+
+    // Assert
     assertArrayEquals(
-        new byte[]{21, -114, -117, -61, '\\', 14, -97, '\t', -54, '4', '\f', -43, 26, '\'', 2, -43, '2', '\'', -26, -78,
-            -71, '\f', -117, -59, -74, -82, -110, '\'', -45, 'V', -69, -26},
-        Sha256Hash.hash(false, new byte[]{'A', 'X', 'A', 'X', 'A', 'X', 'A', 'X'}, 2, 3));
+        new byte[] {
+          21, -114, -117, -61, '\\', 14, -97, '\t', -54, '4', '\f', -43, 26, '\'', 2, -43, '2',
+          '\'', -26, -78, -71, '\f', -117, -59, -74, -82, -110, '\'', -45, 'V', -69, -26
+        },
+        actualHashResult);
   }
 
   /**
-   * Test {@link Sha256Hash#hash(boolean, byte[], int, int)} with {@code isSha256}, {@code input}, {@code offset}, {@code length}.
-   * <p>
-   * Method under test: {@link Sha256Hash#hash(boolean, byte[], int, int)}
+   * Test {@link Sha256Hash#hash(boolean, byte[], int, int)} with {@code isSha256}, {@code input},
+   * {@code offset}, {@code length}.
+   *
+   * <p>Method under test: {@link Sha256Hash#hash(boolean, byte[], int, int)}
    */
   @Test
   @Category(MaintainedByDiffblue.class)
   @MethodsUnderTest({"byte[] Sha256Hash.hash(boolean, byte[], int, int)"})
   public void testHashWithIsSha256InputOffsetLength3() {
-    // Arrange, Act and Assert
+    // Arrange and Act
+    byte[] actualHashResult = Sha256Hash.hash(false, new byte[] {}, 2, 0);
+
+    // Assert
     assertArrayEquals(
-        new byte[]{26, -78, 29, -125, 'U', -49, -95, Byte.MAX_VALUE, -114, 'a', 25, 'H', '1', -24, 26, -113, '"', -66,
-            -56, -57, '(', -2, -5, 't', '~', -48, '5', -21, 'P', -126, -86, '+'},
-        Sha256Hash.hash(false, new byte[]{}, 2, 0));
+        new byte[] {
+          26,
+          -78,
+          29,
+          -125,
+          'U',
+          -49,
+          -95,
+          Byte.MAX_VALUE,
+          -114,
+          'a',
+          25,
+          'H',
+          '1',
+          -24,
+          26,
+          -113,
+          '"',
+          -66,
+          -56,
+          -57,
+          '(',
+          -2,
+          -5,
+          't',
+          '~',
+          -48,
+          '5',
+          -21,
+          'P',
+          -126,
+          -86,
+          '+'
+        },
+        actualHashResult);
   }
 
   /**
    * Test {@link Sha256Hash#hash(boolean, byte[])} with {@code isSha256}, {@code input}.
+   *
    * <ul>
-   *   <li>Then return array of {@code byte} with {@code \} and {@code [}.</li>
+   *   <li>Then return array of {@code byte} with {@code \} and {@code [}.
    * </ul>
-   * <p>
-   * Method under test: {@link Sha256Hash#hash(boolean, byte[])}
+   *
+   * <p>Method under test: {@link Sha256Hash#hash(boolean, byte[])}
    */
   @Test
   @Category(MaintainedByDiffblue.class)
   @MethodsUnderTest({"byte[] Sha256Hash.hash(boolean, byte[])"})
   public void testHashWithIsSha256Input_thenReturnArrayOfByteWithBackslashAndLeftSquareBracket()
       throws UnsupportedEncodingException {
-    // Arrange, Act and Assert
+    // Arrange and Act
+    byte[] actualHashResult = Sha256Hash.hash(true, "AXAXAXAX".getBytes("UTF-8"));
+
+    // Assert
     assertArrayEquals(
-        new byte[]{'\\', '[', 'b', '\t', -40, 'g', -88, -64, ' ', -22, '\r', 'u', -94, '/', -77, -52, -10, 'l', -76,
-            -40, -118, 'K', 'S', -32, 1, -31, '9', -113, 26, '`', -70, -36},
-        Sha256Hash.hash(true, "AXAXAXAX".getBytes("UTF-8")));
+        new byte[] {
+          '\\', '[', 'b', '\t', -40, 'g', -88, -64, ' ', -22, '\r', 'u', -94, '/', -77, -52, -10,
+          'l', -76, -40, -118, 'K', 'S', -32, 1, -31, '9', -113, 26, '`', -70, -36
+        },
+        actualHashResult);
   }
 
   /**
    * Test {@link Sha256Hash#hash(boolean, byte[])} with {@code isSha256}, {@code input}.
+   *
    * <ul>
-   *   <li>When {@code false}.</li>
-   *   <li>Then return array of {@code byte} with {@code E} and minus two.</li>
+   *   <li>When {@code false}.
+   *   <li>Then return array of {@code byte} with {@code E} and minus two.
    * </ul>
-   * <p>
-   * Method under test: {@link Sha256Hash#hash(boolean, byte[])}
+   *
+   * <p>Method under test: {@link Sha256Hash#hash(boolean, byte[])}
    */
   @Test
   @Category(MaintainedByDiffblue.class)
   @MethodsUnderTest({"byte[] Sha256Hash.hash(boolean, byte[])"})
   public void testHashWithIsSha256Input_whenFalse_thenReturnArrayOfByteWithEAndMinusTwo() {
-    // Arrange, Act and Assert
+    // Arrange and Act
+    byte[] actualHashResult =
+        Sha256Hash.hash(false, new byte[] {'A', 'X', 'A', 'X', 'A', 'X', 'A', 'X'});
+
+    // Assert
     assertArrayEquals(
-        new byte[]{'E', -2, 'C', '\\', -12, ']', -77, -93, 6, -119, -105, 's', -83, 'F', -31, -103, -27, -72, 'U', -6,
-            -125, 'h', -105, '7', -7, -51, 'T', -83, '_', '\t', -101, Byte.MAX_VALUE},
-        Sha256Hash.hash(false, new byte[]{'A', 'X', 'A', 'X', 'A', 'X', 'A', 'X'}));
+        new byte[] {
+          'E',
+          -2,
+          'C',
+          '\\',
+          -12,
+          ']',
+          -77,
+          -93,
+          6,
+          -119,
+          -105,
+          's',
+          -83,
+          'F',
+          -31,
+          -103,
+          -27,
+          -72,
+          'U',
+          -6,
+          -125,
+          'h',
+          -105,
+          '7',
+          -7,
+          -51,
+          'T',
+          -83,
+          '_',
+          '\t',
+          -101,
+          Byte.MAX_VALUE
+        },
+        actualHashResult);
   }
 
   /**
    * Test {@link Sha256Hash#equals(Object)}, and {@link Sha256Hash#hashCode()}.
+   *
    * <ul>
-   *   <li>When other is equal.</li>
-   *   <li>Then return equal.</li>
+   *   <li>When other is equal.
+   *   <li>Then return equal.
    * </ul>
-   * <p>
-   * Methods under test:
+   *
+   * <p>Methods under test:
+   *
    * <ul>
    *   <li>{@link Sha256Hash#equals(Object)}
    *   <li>{@link Sha256Hash#hashCode()}
@@ -231,18 +364,19 @@ public class Sha256HashDiffblueTest {
 
     // Act and Assert
     assertEquals(sha256Hash, sha256Hash2);
-    int expectedHashCodeResult = sha256Hash.hashCode();
-    assertEquals(expectedHashCodeResult, sha256Hash2.hashCode());
+    assertEquals(sha256Hash.hashCode(), sha256Hash2.hashCode());
   }
 
   /**
    * Test {@link Sha256Hash#equals(Object)}, and {@link Sha256Hash#hashCode()}.
+   *
    * <ul>
-   *   <li>When other is same.</li>
-   *   <li>Then return equal.</li>
+   *   <li>When other is same.
+   *   <li>Then return equal.
    * </ul>
-   * <p>
-   * Methods under test:
+   *
+   * <p>Methods under test:
+   *
    * <ul>
    *   <li>{@link Sha256Hash#equals(Object)}
    *   <li>{@link Sha256Hash#hashCode()}
@@ -263,12 +397,13 @@ public class Sha256HashDiffblueTest {
 
   /**
    * Test {@link Sha256Hash#equals(Object)}.
+   *
    * <ul>
-   *   <li>When other is different.</li>
-   *   <li>Then return not equal.</li>
+   *   <li>When other is different.
+   *   <li>Then return not equal.
    * </ul>
-   * <p>
-   * Method under test: {@link Sha256Hash#equals(Object)}
+   *
+   * <p>Method under test: {@link Sha256Hash#equals(Object)}
    */
   @Test
   @Category(MaintainedByDiffblue.class)
@@ -280,12 +415,13 @@ public class Sha256HashDiffblueTest {
 
   /**
    * Test {@link Sha256Hash#equals(Object)}.
+   *
    * <ul>
-   *   <li>When other is {@code null}.</li>
-   *   <li>Then return not equal.</li>
+   *   <li>When other is {@code null}.
+   *   <li>Then return not equal.
    * </ul>
-   * <p>
-   * Method under test: {@link Sha256Hash#equals(Object)}
+   *
+   * <p>Method under test: {@link Sha256Hash#equals(Object)}
    */
   @Test
   @Category(MaintainedByDiffblue.class)
@@ -297,12 +433,13 @@ public class Sha256HashDiffblueTest {
 
   /**
    * Test {@link Sha256Hash#equals(Object)}.
+   *
    * <ul>
-   *   <li>When other is wrong type.</li>
-   *   <li>Then return not equal.</li>
+   *   <li>When other is wrong type.
+   *   <li>Then return not equal.
    * </ul>
-   * <p>
-   * Method under test: {@link Sha256Hash#equals(Object)}
+   *
+   * <p>Method under test: {@link Sha256Hash#equals(Object)}
    */
   @Test
   @Category(MaintainedByDiffblue.class)
@@ -314,8 +451,8 @@ public class Sha256HashDiffblueTest {
 
   /**
    * Test {@link Sha256Hash#getByteString()}.
-   * <p>
-   * Method under test: {@link Sha256Hash#getByteString()}
+   *
+   * <p>Method under test: {@link Sha256Hash#getByteString()}
    */
   @Test
   @Category(MaintainedByDiffblue.class)
@@ -340,12 +477,13 @@ public class Sha256HashDiffblueTest {
 
   /**
    * Test {@link Sha256Hash#compareTo(Sha256Hash)} with {@code Sha256Hash}.
+   *
    * <ul>
-   *   <li>When {@link Sha256Hash#ZERO_HASH}.</li>
-   *   <li>Then return zero.</li>
+   *   <li>When {@link Sha256Hash#ZERO_HASH}.
+   *   <li>Then return zero.
    * </ul>
-   * <p>
-   * Method under test: {@link Sha256Hash#compareTo(Sha256Hash)}
+   *
+   * <p>Method under test: {@link Sha256Hash#compareTo(Sha256Hash)}
    */
   @Test
   @Category(MaintainedByDiffblue.class)

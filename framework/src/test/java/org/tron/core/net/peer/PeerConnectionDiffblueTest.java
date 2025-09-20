@@ -36,7 +36,6 @@ import org.tron.consensus.pbft.message.PbftMessage;
 import org.tron.core.capsule.BlockCapsule;
 import org.tron.core.capsule.BlockCapsule.BlockId;
 import org.tron.core.net.message.adv.FetchInvDataMessage;
-import org.tron.core.net.message.adv.InventoryMessage;
 import org.tron.core.net.message.adv.TransactionsMessage;
 import org.tron.core.net.message.handshake.HelloMessage;
 import org.tron.core.net.message.keepalive.PingMessage;
@@ -49,16 +48,15 @@ import org.tron.protos.Protocol;
 import org.tron.protos.Protocol.Inventory;
 import org.tron.protos.Protocol.Inventory.InventoryType;
 
-@RunWith(MockitoJUnitRunner.class)
 @DirtiesContext(classMode = ClassMode.AFTER_EACH_TEST_METHOD)
+@RunWith(MockitoJUnitRunner.class)
 public class PeerConnectionDiffblueTest {
-  @InjectMocks
-  private PeerConnection peerConnection;
+  @InjectMocks private PeerConnection peerConnection;
 
   /**
    * Test {@link PeerConnection#setBlockBothHave(BlockId)}.
-   * <p>
-   * Method under test: {@link PeerConnection#setBlockBothHave(BlockId)}
+   *
+   * <p>Method under test: {@link PeerConnection#setBlockBothHave(BlockId)}
    */
   @Test
   @Category(MaintainedByDiffblue.class)
@@ -76,12 +74,54 @@ public class PeerConnectionDiffblueTest {
 
   /**
    * Test {@link PeerConnection#isIdle()}.
+   *
+   * <p>Method under test: {@link PeerConnection#isIdle()}
+   */
+  @Test
+  @Category(MaintainedByDiffblue.class)
+  @MethodsUnderTest({"boolean PeerConnection.isIdle()"})
+  public void testIsIdle() {
+    // Arrange
+    peerConnection.setSyncChainRequested(new Pair<>(new LinkedList<>(), 42L));
+
+    // Act and Assert
+    assertFalse(peerConnection.isIdle());
+  }
+
+  /**
+   * Test {@link PeerConnection#isIdle()}.
+   *
    * <ul>
-   *   <li>Given {@link PeerConnection}.</li>
-   *   <li>Then return {@code true}.</li>
+   *   <li>Given {@link HashMap#HashMap()} {@link BlockId#BlockId()} is one.
+   *   <li>Then return {@code false}.
    * </ul>
-   * <p>
-   * Method under test: {@link PeerConnection#isIdle()}
+   *
+   * <p>Method under test: {@link PeerConnection#isIdle()}
+   */
+  @Test
+  @Category(MaintainedByDiffblue.class)
+  @MethodsUnderTest({"boolean PeerConnection.isIdle()"})
+  public void testIsIdle_givenHashMapBlockIdIsOne_thenReturnFalse() {
+    // Arrange
+    HashMap<BlockId, Long> syncBlockRequested = new HashMap<>();
+    syncBlockRequested.put(new BlockId(), 1L);
+
+    PeerConnection peerConnection = new PeerConnection();
+    peerConnection.setSyncBlockRequested(syncBlockRequested);
+
+    // Act and Assert
+    assertFalse(peerConnection.isIdle());
+  }
+
+  /**
+   * Test {@link PeerConnection#isIdle()}.
+   *
+   * <ul>
+   *   <li>Given {@link PeerConnection}.
+   *   <li>Then return {@code true}.
+   * </ul>
+   *
+   * <p>Method under test: {@link PeerConnection#isIdle()}
    */
   @Test
   @Category(MaintainedByDiffblue.class)
@@ -92,32 +132,55 @@ public class PeerConnectionDiffblueTest {
   }
 
   /**
-   * Test {@link PeerConnection#isIdle()}.
-   * <ul>
-   *   <li>Then return {@code false}.</li>
-   * </ul>
-   * <p>
-   * Method under test: {@link PeerConnection#isIdle()}
+   * Test {@link PeerConnection#isSyncIdle()}.
+   *
+   * <p>Method under test: {@link PeerConnection#isSyncIdle()}
    */
   @Test
   @Category(MaintainedByDiffblue.class)
-  @MethodsUnderTest({"boolean PeerConnection.isIdle()"})
-  public void testIsIdle_thenReturnFalse() {
+  @MethodsUnderTest({"boolean PeerConnection.isSyncIdle()"})
+  public void testIsSyncIdle() {
     // Arrange
     peerConnection.setSyncChainRequested(new Pair<>(new LinkedList<>(), 42L));
 
     // Act and Assert
-    assertFalse(peerConnection.isIdle());
+    assertFalse(peerConnection.isSyncIdle());
   }
 
   /**
    * Test {@link PeerConnection#isSyncIdle()}.
+   *
    * <ul>
-   *   <li>Given {@link PeerConnection}.</li>
-   *   <li>Then return {@code true}.</li>
+   *   <li>Given {@link HashMap#HashMap()} {@link BlockId#BlockId()} is one.
+   *   <li>Then return {@code false}.
    * </ul>
-   * <p>
-   * Method under test: {@link PeerConnection#isSyncIdle()}
+   *
+   * <p>Method under test: {@link PeerConnection#isSyncIdle()}
+   */
+  @Test
+  @Category(MaintainedByDiffblue.class)
+  @MethodsUnderTest({"boolean PeerConnection.isSyncIdle()"})
+  public void testIsSyncIdle_givenHashMapBlockIdIsOne_thenReturnFalse() {
+    // Arrange
+    HashMap<BlockId, Long> syncBlockRequested = new HashMap<>();
+    syncBlockRequested.put(new BlockId(), 1L);
+
+    PeerConnection peerConnection = new PeerConnection();
+    peerConnection.setSyncBlockRequested(syncBlockRequested);
+
+    // Act and Assert
+    assertFalse(peerConnection.isSyncIdle());
+  }
+
+  /**
+   * Test {@link PeerConnection#isSyncIdle()}.
+   *
+   * <ul>
+   *   <li>Given {@link PeerConnection}.
+   *   <li>Then return {@code true}.
+   * </ul>
+   *
+   * <p>Method under test: {@link PeerConnection#isSyncIdle()}
    */
   @Test
   @Category(MaintainedByDiffblue.class)
@@ -128,31 +191,13 @@ public class PeerConnectionDiffblueTest {
   }
 
   /**
-   * Test {@link PeerConnection#isSyncIdle()}.
-   * <ul>
-   *   <li>Then return {@code false}.</li>
-   * </ul>
-   * <p>
-   * Method under test: {@link PeerConnection#isSyncIdle()}
-   */
-  @Test
-  @Category(MaintainedByDiffblue.class)
-  @MethodsUnderTest({"boolean PeerConnection.isSyncIdle()"})
-  public void testIsSyncIdle_thenReturnFalse() {
-    // Arrange
-    peerConnection.setSyncChainRequested(new Pair<>(new LinkedList<>(), 42L));
-
-    // Act and Assert
-    assertFalse(peerConnection.isSyncIdle());
-  }
-
-  /**
    * Test {@link PeerConnection#onConnect()}.
+   *
    * <ul>
-   *   <li>Then not {@link PeerConnection} (default constructor) NeedSyncFromUs.</li>
+   *   <li>Then not {@link PeerConnection} (default constructor) NeedSyncFromUs.
    * </ul>
-   * <p>
-   * Method under test: {@link PeerConnection#onConnect()}
+   *
+   * <p>Method under test: {@link PeerConnection#onConnect()}
    */
   @Test
   @Category(MaintainedByDiffblue.class)
@@ -161,10 +206,13 @@ public class PeerConnectionDiffblueTest {
     // Arrange
     BlockId blockId = mock(BlockId.class);
     when(blockId.getNum()).thenReturn(1L);
+
     HelloMessage helloMessageSend = mock(HelloMessage.class);
     when(helloMessageSend.getHeadBlockId()).thenReturn(blockId);
+
     BlockId blockId2 = mock(BlockId.class);
     when(blockId2.getNum()).thenReturn(1L);
+
     HelloMessage helloMessageReceive = mock(HelloMessage.class);
     when(helloMessageReceive.getHeadBlockId()).thenReturn(blockId2);
 
@@ -188,11 +236,12 @@ public class PeerConnectionDiffblueTest {
 
   /**
    * Test {@link PeerConnection#onConnect()}.
+   *
    * <ul>
-   *   <li>Then not {@link PeerConnection} (default constructor) SyncFinish.</li>
+   *   <li>Then not {@link PeerConnection} (default constructor) SyncFinish.
    * </ul>
-   * <p>
-   * Method under test: {@link PeerConnection#onConnect()}
+   *
+   * <p>Method under test: {@link PeerConnection#onConnect()}
    */
   @Test
   @Category(MaintainedByDiffblue.class)
@@ -201,8 +250,10 @@ public class PeerConnectionDiffblueTest {
     // Arrange
     BlockId blockId = mock(BlockId.class);
     when(blockId.getNum()).thenReturn(1L);
+
     HelloMessage helloMessageSend = mock(HelloMessage.class);
     when(helloMessageSend.getHeadBlockId()).thenReturn(blockId);
+
     HelloMessage helloMessageReceive = mock(HelloMessage.class);
     when(helloMessageReceive.getHeadBlockId()).thenReturn(new BlockId());
 
@@ -225,12 +276,13 @@ public class PeerConnectionDiffblueTest {
 
   /**
    * Test {@link PeerConnection#isSyncFinish()}.
+   *
    * <ul>
-   *   <li>Given {@link PeerConnection} NeedSyncFromUs is {@code false}.</li>
-   *   <li>Then return {@code true}.</li>
+   *   <li>Given {@link PeerConnection} NeedSyncFromUs is {@code false}.
+   *   <li>Then return {@code true}.
    * </ul>
-   * <p>
-   * Method under test: {@link PeerConnection#isSyncFinish()}
+   *
+   * <p>Method under test: {@link PeerConnection#isSyncFinish()}
    */
   @Test
   @Category(MaintainedByDiffblue.class)
@@ -246,12 +298,13 @@ public class PeerConnectionDiffblueTest {
 
   /**
    * Test {@link PeerConnection#isSyncFinish()}.
+   *
    * <ul>
-   *   <li>Given {@link PeerConnection} NeedSyncFromUs is {@code true}.</li>
-   *   <li>Then return {@code false}.</li>
+   *   <li>Given {@link PeerConnection} NeedSyncFromUs is {@code true}.
+   *   <li>Then return {@code false}.
    * </ul>
-   * <p>
-   * Method under test: {@link PeerConnection#isSyncFinish()}
+   *
+   * <p>Method under test: {@link PeerConnection#isSyncFinish()}
    */
   @Test
   @Category(MaintainedByDiffblue.class)
@@ -267,12 +320,13 @@ public class PeerConnectionDiffblueTest {
 
   /**
    * Test {@link PeerConnection#isSyncFinish()}.
+   *
    * <ul>
-   *   <li>Given {@link PeerConnection}.</li>
-   *   <li>Then return {@code false}.</li>
+   *   <li>Given {@link PeerConnection}.
+   *   <li>Then return {@code false}.
    * </ul>
-   * <p>
-   * Method under test: {@link PeerConnection#isSyncFinish()}
+   *
+   * <p>Method under test: {@link PeerConnection#isSyncFinish()}
    */
   @Test
   @Category(MaintainedByDiffblue.class)
@@ -284,12 +338,14 @@ public class PeerConnectionDiffblueTest {
 
   /**
    * Test {@link PeerConnection#needToLog(Message)}.
+   *
    * <ul>
-   *   <li>Given {@code BLOCK}.</li>
-   *   <li>When {@link FetchInvDataMessage} {@link InventoryMessage#getInventoryType()} return {@code BLOCK}.</li>
+   *   <li>Given {@code BLOCK}.
+   *   <li>When {@link FetchInvDataMessage} {@link FetchInvDataMessage#getInventoryType()} return
+   *       {@code BLOCK}.
    * </ul>
-   * <p>
-   * Method under test: {@link PeerConnection#needToLog(Message)}
+   *
+   * <p>Method under test: {@link PeerConnection#needToLog(Message)}
    */
   @Test
   @Category(MaintainedByDiffblue.class)
@@ -309,12 +365,14 @@ public class PeerConnectionDiffblueTest {
 
   /**
    * Test {@link PeerConnection#needToLog(Message)}.
+   *
    * <ul>
-   *   <li>Given {@code TRX}.</li>
-   *   <li>When {@link FetchInvDataMessage} {@link InventoryMessage#getInventoryType()} return {@code TRX}.</li>
+   *   <li>Given {@code TRX}.
+   *   <li>When {@link FetchInvDataMessage} {@link FetchInvDataMessage#getInventoryType()} return
+   *       {@code TRX}.
    * </ul>
-   * <p>
-   * Method under test: {@link PeerConnection#needToLog(Message)}
+   *
+   * <p>Method under test: {@link PeerConnection#needToLog(Message)}
    */
   @Test
   @Category(MaintainedByDiffblue.class)
@@ -334,28 +392,32 @@ public class PeerConnectionDiffblueTest {
 
   /**
    * Test {@link PeerConnection#needToLog(Message)}.
+   *
    * <ul>
-   *   <li>When {@link FetchInvDataMessage#FetchInvDataMessage(List, InventoryType)} with hashList is {@link ArrayList#ArrayList()} and type is {@code TRX}.</li>
+   *   <li>When {@link FetchInvDataMessage#FetchInvDataMessage(List, InventoryType)} with hashList
+   *       is {@link ArrayList#ArrayList()} and type is {@code TRX}.
    * </ul>
-   * <p>
-   * Method under test: {@link PeerConnection#needToLog(Message)}
+   *
+   * <p>Method under test: {@link PeerConnection#needToLog(Message)}
    */
   @Test
   @Category(MaintainedByDiffblue.class)
   @MethodsUnderTest({"boolean PeerConnection.needToLog(Message)"})
   public void testNeedToLog_whenFetchInvDataMessageWithHashListIsArrayListAndTypeIsTrx() {
     // Arrange, Act and Assert
-    assertFalse(PeerConnection.needToLog(new FetchInvDataMessage(new ArrayList<>(), InventoryType.TRX)));
+    assertFalse(
+        PeerConnection.needToLog(new FetchInvDataMessage(new ArrayList<>(), InventoryType.TRX)));
   }
 
   /**
    * Test {@link PeerConnection#needToLog(Message)}.
+   *
    * <ul>
-   *   <li>When {@code null}.</li>
-   *   <li>Then return {@code true}.</li>
+   *   <li>When {@code null}.
+   *   <li>Then return {@code true}.
    * </ul>
-   * <p>
-   * Method under test: {@link PeerConnection#needToLog(Message)}
+   *
+   * <p>Method under test: {@link PeerConnection#needToLog(Message)}
    */
   @Test
   @Category(MaintainedByDiffblue.class)
@@ -367,12 +429,13 @@ public class PeerConnectionDiffblueTest {
 
   /**
    * Test {@link PeerConnection#needToLog(Message)}.
+   *
    * <ul>
-   *   <li>When {@link PbftMessage#PbftMessage()}.</li>
-   *   <li>Then return {@code false}.</li>
+   *   <li>When {@link PbftMessage#PbftMessage()}.
+   *   <li>Then return {@code false}.
    * </ul>
-   * <p>
-   * Method under test: {@link PeerConnection#needToLog(Message)}
+   *
+   * <p>Method under test: {@link PeerConnection#needToLog(Message)}
    */
   @Test
   @Category(MaintainedByDiffblue.class)
@@ -384,12 +447,13 @@ public class PeerConnectionDiffblueTest {
 
   /**
    * Test {@link PeerConnection#needToLog(Message)}.
+   *
    * <ul>
-   *   <li>When {@link PingMessage#PingMessage()}.</li>
-   *   <li>Then return {@code false}.</li>
+   *   <li>When {@link PingMessage#PingMessage()}.
+   *   <li>Then return {@code false}.
    * </ul>
-   * <p>
-   * Method under test: {@link PeerConnection#needToLog(Message)}
+   *
+   * <p>Method under test: {@link PeerConnection#needToLog(Message)}
    */
   @Test
   @Category(MaintainedByDiffblue.class)
@@ -401,12 +465,13 @@ public class PeerConnectionDiffblueTest {
 
   /**
    * Test {@link PeerConnection#needToLog(Message)}.
+   *
    * <ul>
-   *   <li>When {@link PongMessage#PongMessage()}.</li>
-   *   <li>Then return {@code false}.</li>
+   *   <li>When {@link PongMessage#PongMessage()}.
+   *   <li>Then return {@code false}.
    * </ul>
-   * <p>
-   * Method under test: {@link PeerConnection#needToLog(Message)}
+   *
+   * <p>Method under test: {@link PeerConnection#needToLog(Message)}
    */
   @Test
   @Category(MaintainedByDiffblue.class)
@@ -418,12 +483,14 @@ public class PeerConnectionDiffblueTest {
 
   /**
    * Test {@link PeerConnection#needToLog(Message)}.
+   *
    * <ul>
-   *   <li>When {@link TransactionsMessage#TransactionsMessage(List)} with trxs is {@link ArrayList#ArrayList()}.</li>
-   *   <li>Then return {@code false}.</li>
+   *   <li>When {@link TransactionsMessage#TransactionsMessage(List)} with trxs is {@link
+   *       ArrayList#ArrayList()}.
+   *   <li>Then return {@code false}.
    * </ul>
-   * <p>
-   * Method under test: {@link PeerConnection#needToLog(Message)}
+   *
+   * <p>Method under test: {@link PeerConnection#needToLog(Message)}
    */
   @Test
   @Category(MaintainedByDiffblue.class)
@@ -435,19 +502,21 @@ public class PeerConnectionDiffblueTest {
 
   /**
    * Test {@link PeerConnection#checkAndPutAdvInvRequest(Item, Long)}.
+   *
    * <ul>
-   *   <li>When {@link Item#Item(Sha256Hash, InventoryType)} with hash is {@link BlockId#BlockId()} and type is {@code TRX}.</li>
+   *   <li>When {@link Item#Item(Sha256Hash, InventoryType)} with hash is {@link BlockId#BlockId()}
+   *       and type is {@code TRX}.
    * </ul>
-   * <p>
-   * Method under test: {@link PeerConnection#checkAndPutAdvInvRequest(Item, Long)}
+   *
+   * <p>Method under test: {@link PeerConnection#checkAndPutAdvInvRequest(Item, Long)}
    */
   @Test
   @Category(MaintainedByDiffblue.class)
   @MethodsUnderTest({"boolean PeerConnection.checkAndPutAdvInvRequest(Item, Long)"})
   public void testCheckAndPutAdvInvRequest_whenItemWithHashIsBlockIdAndTypeIsTrx() {
     // Arrange and Act
-    boolean actualCheckAndPutAdvInvRequestResult = peerConnection
-        .checkAndPutAdvInvRequest(new Item(new BlockId(), InventoryType.TRX), 42L);
+    boolean actualCheckAndPutAdvInvRequestResult =
+        peerConnection.checkAndPutAdvInvRequest(new Item(new BlockId(), InventoryType.TRX), 42L);
 
     // Assert
     assertEquals(1, peerConnection.getAdvInvRequest().size());
@@ -457,19 +526,22 @@ public class PeerConnectionDiffblueTest {
 
   /**
    * Test {@link PeerConnection#checkAndPutAdvInvRequest(Item, Long)}.
+   *
    * <ul>
-   *   <li>When {@link Item#Item(Sha256Hash, InventoryType)} with hash is {@link Sha256Hash} and type is {@code TRX}.</li>
+   *   <li>When {@link Item#Item(Sha256Hash, InventoryType)} with hash is {@link Sha256Hash} and
+   *       type is {@code TRX}.
    * </ul>
-   * <p>
-   * Method under test: {@link PeerConnection#checkAndPutAdvInvRequest(Item, Long)}
+   *
+   * <p>Method under test: {@link PeerConnection#checkAndPutAdvInvRequest(Item, Long)}
    */
   @Test
   @Category(MaintainedByDiffblue.class)
   @MethodsUnderTest({"boolean PeerConnection.checkAndPutAdvInvRequest(Item, Long)"})
   public void testCheckAndPutAdvInvRequest_whenItemWithHashIsSha256HashAndTypeIsTrx() {
     // Arrange and Act
-    boolean actualCheckAndPutAdvInvRequestResult = peerConnection
-        .checkAndPutAdvInvRequest(new Item(mock(Sha256Hash.class), InventoryType.TRX), 42L);
+    boolean actualCheckAndPutAdvInvRequestResult =
+        peerConnection.checkAndPutAdvInvRequest(
+            new Item(mock(Sha256Hash.class), InventoryType.TRX), 42L);
 
     // Assert
     assertEquals(1, peerConnection.getAdvInvRequest().size());
@@ -479,19 +551,21 @@ public class PeerConnectionDiffblueTest {
 
   /**
    * Test {@link PeerConnection#checkAndPutAdvInvRequest(Item, Long)}.
+   *
    * <ul>
-   *   <li>When {@link Item}.</li>
-   *   <li>Then {@link PeerConnection} AdvInvRequest size is one.</li>
+   *   <li>When {@link Item}.
+   *   <li>Then {@link PeerConnection} AdvInvRequest size is one.
    * </ul>
-   * <p>
-   * Method under test: {@link PeerConnection#checkAndPutAdvInvRequest(Item, Long)}
+   *
+   * <p>Method under test: {@link PeerConnection#checkAndPutAdvInvRequest(Item, Long)}
    */
   @Test
   @Category(MaintainedByDiffblue.class)
   @MethodsUnderTest({"boolean PeerConnection.checkAndPutAdvInvRequest(Item, Long)"})
   public void testCheckAndPutAdvInvRequest_whenItem_thenPeerConnectionAdvInvRequestSizeIsOne() {
     // Arrange and Act
-    boolean actualCheckAndPutAdvInvRequestResult = peerConnection.checkAndPutAdvInvRequest(mock(Item.class), 42L);
+    boolean actualCheckAndPutAdvInvRequestResult =
+        peerConnection.checkAndPutAdvInvRequest(mock(Item.class), 42L);
 
     // Assert
     assertEquals(1, peerConnection.getAdvInvRequest().size());
@@ -501,29 +575,31 @@ public class PeerConnectionDiffblueTest {
 
   /**
    * Test {@link PeerConnection#equals(Object)}.
+   *
    * <ul>
-   *   <li>When other is different.</li>
-   *   <li>Then return not equal.</li>
+   *   <li>When other is different.
+   *   <li>Then return not equal.
    * </ul>
-   * <p>
-   * Method under test: {@link PeerConnection#equals(Object)}
+   *
+   * <p>Method under test: {@link PeerConnection#equals(Object)}
    */
   @Test
   @Category(MaintainedByDiffblue.class)
   @MethodsUnderTest({"boolean PeerConnection.equals(Object)", "int PeerConnection.hashCode()"})
   public void testEquals_whenOtherIsDifferent_thenReturnNotEqual() {
     // Arrange, Act and Assert
-    assertNotEquals(new PeerConnection(), 1);
+    assertNotEquals(new PeerConnection(), "42");
   }
 
   /**
    * Test {@link PeerConnection#equals(Object)}.
+   *
    * <ul>
-   *   <li>When other is {@code null}.</li>
-   *   <li>Then return not equal.</li>
+   *   <li>When other is {@code null}.
+   *   <li>Then return not equal.
    * </ul>
-   * <p>
-   * Method under test: {@link PeerConnection#equals(Object)}
+   *
+   * <p>Method under test: {@link PeerConnection#equals(Object)}
    */
   @Test
   @Category(MaintainedByDiffblue.class)
@@ -535,29 +611,32 @@ public class PeerConnectionDiffblueTest {
 
   /**
    * Test {@link PeerConnection#equals(Object)}.
+   *
    * <ul>
-   *   <li>When other is same.</li>
-   *   <li>Then throw exception.</li>
+   *   <li>When other is same.
+   *   <li>Then throw exception.
    * </ul>
-   * <p>
-   * Method under test: {@link PeerConnection#equals(Object)}
+   *
+   * <p>Method under test: {@link PeerConnection#equals(Object)}
    */
   @Test
   @Category(MaintainedByDiffblue.class)
   @MethodsUnderTest({"boolean PeerConnection.equals(Object)", "int PeerConnection.hashCode()"})
   public void testEquals_whenOtherIsSame_thenThrowException() {
     // Arrange, Act and Assert
-    assertThrows(NullPointerException.class, () -> (new PeerConnection()).equals(new PeerConnection()));
+    assertThrows(
+        NullPointerException.class, () -> new PeerConnection().equals(new PeerConnection()));
   }
 
   /**
    * Test {@link PeerConnection#equals(Object)}.
+   *
    * <ul>
-   *   <li>When other is wrong type.</li>
-   *   <li>Then return not equal.</li>
+   *   <li>When other is wrong type.
+   *   <li>Then return not equal.
    * </ul>
-   * <p>
-   * Method under test: {@link PeerConnection#equals(Object)}
+   *
+   * <p>Method under test: {@link PeerConnection#equals(Object)}
    */
   @Test
   @Category(MaintainedByDiffblue.class)
@@ -569,8 +648,9 @@ public class PeerConnectionDiffblueTest {
 
   /**
    * Test getters and setters.
-   * <p>
-   * Methods under test:
+   *
+   * <p>Methods under test:
+   *
    * <ul>
    *   <li>{@link PeerConnection#setAddress(ByteString)}
    *   <li>{@link PeerConnection#setAdvInvReceive(Cache)}
@@ -619,29 +699,53 @@ public class PeerConnectionDiffblueTest {
    */
   @Test
   @Category(MaintainedByDiffblue.class)
-  @MethodsUnderTest({"ByteString PeerConnection.getAddress()", "Cache PeerConnection.getAdvInvReceive()",
-      "Map PeerConnection.getAdvInvRequest()", "Cache PeerConnection.getAdvInvSpread()",
-      "BlockId PeerConnection.getBlockBothHave()", "long PeerConnection.getBlockBothHaveUpdateTime()",
-      "Channel PeerConnection.getChannel()", "HelloMessage PeerConnection.getHelloMessageReceive()",
-      "HelloMessage PeerConnection.getHelloMessageSend()", "long PeerConnection.getLastInteractiveTime()",
-      "BlockId PeerConnection.getLastSyncBlockId()", "NodeStatistics PeerConnection.getNodeStatistics()",
-      "PeerStatistics PeerConnection.getPeerStatistics()", "long PeerConnection.getRemainNum()",
-      "Cache PeerConnection.getSyncBlockIdCache()", "Set PeerConnection.getSyncBlockInProcess()",
-      "Map PeerConnection.getSyncBlockRequested()", "Deque PeerConnection.getSyncBlockToFetch()",
-      "Pair PeerConnection.getSyncChainRequested()", "TronState PeerConnection.getTronState()",
-      "boolean PeerConnection.isBadPeer()", "boolean PeerConnection.isFetchAble()",
-      "boolean PeerConnection.isNeedSyncFromPeer()", "boolean PeerConnection.isNeedSyncFromUs()",
-      "boolean PeerConnection.isRelayPeer()", "void PeerConnection.setAddress(ByteString)",
-      "void PeerConnection.setAdvInvReceive(Cache)", "void PeerConnection.setAdvInvRequest(Map)",
-      "void PeerConnection.setAdvInvSpread(Cache)", "void PeerConnection.setBadPeer(boolean)",
-      "void PeerConnection.setFastForwardBlock(BlockId)", "void PeerConnection.setFetchAble(boolean)",
-      "void PeerConnection.setHelloMessageReceive(HelloMessage)",
-      "void PeerConnection.setHelloMessageSend(HelloMessage)", "void PeerConnection.setLastInteractiveTime(long)",
-      "void PeerConnection.setLastSyncBlockId(BlockId)", "void PeerConnection.setNeedSyncFromPeer(boolean)",
-      "void PeerConnection.setNeedSyncFromUs(boolean)", "void PeerConnection.setRelayPeer(boolean)",
-      "void PeerConnection.setRemainNum(long)", "void PeerConnection.setSyncBlockInProcess(Set)",
-      "void PeerConnection.setSyncBlockRequested(Map)", "void PeerConnection.setSyncBlockToFetch(Deque)",
-      "void PeerConnection.setSyncChainRequested(Pair)", "void PeerConnection.setTronState(TronState)"})
+  @MethodsUnderTest({
+    "ByteString PeerConnection.getAddress()",
+    "Cache PeerConnection.getAdvInvReceive()",
+    "Map PeerConnection.getAdvInvRequest()",
+    "Cache PeerConnection.getAdvInvSpread()",
+    "BlockId PeerConnection.getBlockBothHave()",
+    "long PeerConnection.getBlockBothHaveUpdateTime()",
+    "Channel PeerConnection.getChannel()",
+    "HelloMessage PeerConnection.getHelloMessageReceive()",
+    "HelloMessage PeerConnection.getHelloMessageSend()",
+    "long PeerConnection.getLastInteractiveTime()",
+    "BlockId PeerConnection.getLastSyncBlockId()",
+    "NodeStatistics PeerConnection.getNodeStatistics()",
+    "PeerStatistics PeerConnection.getPeerStatistics()",
+    "long PeerConnection.getRemainNum()",
+    "Cache PeerConnection.getSyncBlockIdCache()",
+    "Set PeerConnection.getSyncBlockInProcess()",
+    "Map PeerConnection.getSyncBlockRequested()",
+    "Deque PeerConnection.getSyncBlockToFetch()",
+    "Pair PeerConnection.getSyncChainRequested()",
+    "TronState PeerConnection.getTronState()",
+    "boolean PeerConnection.isBadPeer()",
+    "boolean PeerConnection.isFetchAble()",
+    "boolean PeerConnection.isNeedSyncFromPeer()",
+    "boolean PeerConnection.isNeedSyncFromUs()",
+    "boolean PeerConnection.isRelayPeer()",
+    "void PeerConnection.setAddress(ByteString)",
+    "void PeerConnection.setAdvInvReceive(Cache)",
+    "void PeerConnection.setAdvInvRequest(Map)",
+    "void PeerConnection.setAdvInvSpread(Cache)",
+    "void PeerConnection.setBadPeer(boolean)",
+    "void PeerConnection.setFastForwardBlock(BlockId)",
+    "void PeerConnection.setFetchAble(boolean)",
+    "void PeerConnection.setHelloMessageReceive(HelloMessage)",
+    "void PeerConnection.setHelloMessageSend(HelloMessage)",
+    "void PeerConnection.setLastInteractiveTime(long)",
+    "void PeerConnection.setLastSyncBlockId(BlockId)",
+    "void PeerConnection.setNeedSyncFromPeer(boolean)",
+    "void PeerConnection.setNeedSyncFromUs(boolean)",
+    "void PeerConnection.setRelayPeer(boolean)",
+    "void PeerConnection.setRemainNum(long)",
+    "void PeerConnection.setSyncBlockInProcess(Set)",
+    "void PeerConnection.setSyncBlockRequested(Map)",
+    "void PeerConnection.setSyncBlockToFetch(Deque)",
+    "void PeerConnection.setSyncChainRequested(Pair)",
+    "void PeerConnection.setTronState(TronState)"
+  })
   public void testGettersAndSetters() {
     // Arrange
     PeerConnection peerConnection = new PeerConnection();
@@ -672,7 +776,6 @@ public class PeerConnectionDiffblueTest {
     LinkedList<BlockId> syncBlockToFetch = new LinkedList<>();
     peerConnection.setSyncBlockToFetch(syncBlockToFetch);
     Pair<Deque<BlockId>, Long> syncChainRequested = new Pair<>(new LinkedList<>(), 42L);
-
     peerConnection.setSyncChainRequested(syncChainRequested);
     peerConnection.setTronState(TronState.INIT);
     ByteString actualAddress = peerConnection.getAddress();

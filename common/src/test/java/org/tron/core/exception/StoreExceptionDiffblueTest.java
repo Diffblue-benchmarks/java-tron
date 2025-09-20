@@ -11,16 +11,21 @@ import org.junit.experimental.categories.Category;
 public class StoreExceptionDiffblueTest {
   /**
    * Test {@link StoreException#StoreException()}.
+   *
    * <ul>
-   *   <li>Then return Message is {@code null}.</li>
+   *   <li>Then return Message is {@code null}.
    * </ul>
-   * <p>
-   * Method under test: {@link StoreException#StoreException()}
+   *
+   * <p>Method under test: {@link StoreException#StoreException()}
    */
   @Test
   @Category(MaintainedByDiffblue.class)
-  @MethodsUnderTest({"void StoreException.<init>()", "void StoreException.<init>(String)",
-      "void StoreException.<init>(String, Throwable)", "void StoreException.<init>(Throwable)"})
+  @MethodsUnderTest({
+    "void StoreException.<init>()",
+    "void StoreException.<init>(String)",
+    "void StoreException.<init>(String, Throwable)",
+    "void StoreException.<init>(Throwable)"
+  })
   public void testNewStoreException_thenReturnMessageIsNull() {
     // Arrange and Act
     StoreException actualStoreException = new StoreException();
@@ -33,17 +38,22 @@ public class StoreExceptionDiffblueTest {
 
   /**
    * Test {@link StoreException#StoreException(String)}.
+   *
    * <ul>
-   *   <li>When {@code An error occurred}.</li>
-   *   <li>Then return Message is {@code An error occurred}.</li>
+   *   <li>When {@code An error occurred}.
+   *   <li>Then return Message is {@code An error occurred}.
    * </ul>
-   * <p>
-   * Method under test: {@link StoreException#StoreException(String)}
+   *
+   * <p>Method under test: {@link StoreException#StoreException(String)}
    */
   @Test
   @Category(MaintainedByDiffblue.class)
-  @MethodsUnderTest({"void StoreException.<init>()", "void StoreException.<init>(String)",
-      "void StoreException.<init>(String, Throwable)", "void StoreException.<init>(Throwable)"})
+  @MethodsUnderTest({
+    "void StoreException.<init>()",
+    "void StoreException.<init>(String)",
+    "void StoreException.<init>(String, Throwable)",
+    "void StoreException.<init>(Throwable)"
+  })
   public void testNewStoreException_whenAnErrorOccurred_thenReturnMessageIsAnErrorOccurred() {
     // Arrange and Act
     StoreException actualStoreException = new StoreException("An error occurred");
@@ -56,17 +66,22 @@ public class StoreExceptionDiffblueTest {
 
   /**
    * Test {@link StoreException#StoreException(String, Throwable)}.
+   *
    * <ul>
-   *   <li>When {@code An error occurred}.</li>
-   *   <li>Then return Message is {@code An error occurred}.</li>
+   *   <li>When {@code An error occurred}.
+   *   <li>Then return Message is {@code An error occurred}.
    * </ul>
-   * <p>
-   * Method under test: {@link StoreException#StoreException(String, Throwable)}
+   *
+   * <p>Method under test: {@link StoreException#StoreException(String, Throwable)}
    */
   @Test
   @Category(MaintainedByDiffblue.class)
-  @MethodsUnderTest({"void StoreException.<init>()", "void StoreException.<init>(String)",
-      "void StoreException.<init>(String, Throwable)", "void StoreException.<init>(Throwable)"})
+  @MethodsUnderTest({
+    "void StoreException.<init>()",
+    "void StoreException.<init>(String)",
+    "void StoreException.<init>(String, Throwable)",
+    "void StoreException.<init>(Throwable)"
+  })
   public void testNewStoreException_whenAnErrorOccurred_thenReturnMessageIsAnErrorOccurred2() {
     // Arrange
     Throwable cause = new Throwable();
@@ -82,17 +97,22 @@ public class StoreExceptionDiffblueTest {
 
   /**
    * Test {@link StoreException#StoreException(Throwable)}.
+   *
    * <ul>
-   *   <li>When {@link Throwable#Throwable()}.</li>
-   *   <li>Then return Message is {@code Throwable}.</li>
+   *   <li>When {@link Throwable#Throwable()}.
+   *   <li>Then return Message is {@code Throwable}.
    * </ul>
-   * <p>
-   * Method under test: {@link StoreException#StoreException(Throwable)}
+   *
+   * <p>Method under test: {@link StoreException#StoreException(Throwable)}
    */
   @Test
   @Category(MaintainedByDiffblue.class)
-  @MethodsUnderTest({"void StoreException.<init>()", "void StoreException.<init>(String)",
-      "void StoreException.<init>(String, Throwable)", "void StoreException.<init>(Throwable)"})
+  @MethodsUnderTest({
+    "void StoreException.<init>()",
+    "void StoreException.<init>(String)",
+    "void StoreException.<init>(String, Throwable)",
+    "void StoreException.<init>(Throwable)"
+  })
   public void testNewStoreException_whenThrowable_thenReturnMessageIsJavaLangThrowable() {
     // Arrange
     Throwable cause = new Throwable();

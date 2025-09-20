@@ -11,8 +11,8 @@ import org.junit.experimental.categories.Category;
 public class UnLinkedBlockExceptionDiffblueTest {
   /**
    * Test {@link UnLinkedBlockException#UnLinkedBlockException()}.
-   * <p>
-   * Method under test: {@link UnLinkedBlockException#UnLinkedBlockException()}
+   *
+   * <p>Method under test: {@link UnLinkedBlockException#UnLinkedBlockException()}
    */
   @Test
   @Category(MaintainedByDiffblue.class)
@@ -30,15 +30,16 @@ public class UnLinkedBlockExceptionDiffblueTest {
 
   /**
    * Test {@link UnLinkedBlockException#UnLinkedBlockException(String)}.
-   * <p>
-   * Method under test: {@link UnLinkedBlockException#UnLinkedBlockException(String)}
+   *
+   * <p>Method under test: {@link UnLinkedBlockException#UnLinkedBlockException(String)}
    */
   @Test
   @Category(MaintainedByDiffblue.class)
   @MethodsUnderTest({"void UnLinkedBlockException.<init>(String)"})
   public void testNewUnLinkedBlockException2() {
     // Arrange and Act
-    UnLinkedBlockException actualUnLinkedBlockException = new UnLinkedBlockException("An error occurred");
+    UnLinkedBlockException actualUnLinkedBlockException =
+        new UnLinkedBlockException("An error occurred");
 
     // Assert
     assertEquals("An error occurred", actualUnLinkedBlockException.getLocalizedMessage());
@@ -49,8 +50,8 @@ public class UnLinkedBlockExceptionDiffblueTest {
 
   /**
    * Test {@link UnLinkedBlockException#UnLinkedBlockException(String, Throwable)}.
-   * <p>
-   * Method under test: {@link UnLinkedBlockException#UnLinkedBlockException(String, Throwable)}
+   *
+   * <p>Method under test: {@link UnLinkedBlockException#UnLinkedBlockException(String, Throwable)}
    */
   @Test
   @Category(MaintainedByDiffblue.class)
@@ -60,7 +61,8 @@ public class UnLinkedBlockExceptionDiffblueTest {
     Throwable cause = new Throwable();
 
     // Act
-    UnLinkedBlockException actualUnLinkedBlockException = new UnLinkedBlockException("An error occurred", cause);
+    UnLinkedBlockException actualUnLinkedBlockException =
+        new UnLinkedBlockException("An error occurred", cause);
 
     // Assert
     assertEquals("An error occurred", actualUnLinkedBlockException.getLocalizedMessage());

@@ -19,50 +19,51 @@ import org.tron.core.exception.EventBloomException;
 public class ByteUtilDiffblueTest {
   /**
    * Test {@link ByteUtil#cloneBytes(byte[])}.
+   *
    * <ul>
-   *   <li>When {@code AXAXAXAX} Bytes is {@code UTF-8}.</li>
-   *   <li>Then return {@code AXAXAXAX} Bytes is {@code UTF-8}.</li>
+   *   <li>When {@code AXAXAXAX} Bytes is {@code UTF-8}.
+   *   <li>Then return {@code AXAXAXAX} Bytes is {@code UTF-8}.
    * </ul>
-   * <p>
-   * Method under test: {@link ByteUtil#cloneBytes(byte[])}
+   *
+   * <p>Method under test: {@link ByteUtil#cloneBytes(byte[])}
    */
   @Test
   @Category(MaintainedByDiffblue.class)
   @MethodsUnderTest({"byte[] ByteUtil.cloneBytes(byte[])"})
   public void testCloneBytes_whenAxaxaxaxBytesIsUtf8_thenReturnAxaxaxaxBytesIsUtf8()
       throws UnsupportedEncodingException {
-    // Arrange and Act
-    byte[] actualCloneBytesResult = ByteUtil.cloneBytes("AXAXAXAX".getBytes("UTF-8"));
-
-    // Assert
-    assertArrayEquals("AXAXAXAX".getBytes("UTF-8"), actualCloneBytesResult);
+    // Arrange, Act and Assert
+    assertArrayEquals(
+        "AXAXAXAX".getBytes("UTF-8"), ByteUtil.cloneBytes("AXAXAXAX".getBytes("UTF-8")));
   }
 
   /**
    * Test {@link ByteUtil#cloneBytes(byte[])}.
+   *
    * <ul>
-   *   <li>When empty array of {@code byte}.</li>
-   *   <li>Then return empty array of {@code byte}.</li>
+   *   <li>When empty array of {@code byte}.
+   *   <li>Then return empty array of {@code byte}.
    * </ul>
-   * <p>
-   * Method under test: {@link ByteUtil#cloneBytes(byte[])}
+   *
+   * <p>Method under test: {@link ByteUtil#cloneBytes(byte[])}
    */
   @Test
   @Category(MaintainedByDiffblue.class)
   @MethodsUnderTest({"byte[] ByteUtil.cloneBytes(byte[])"})
   public void testCloneBytes_whenEmptyArrayOfByte_thenReturnEmptyArrayOfByte() {
     // Arrange, Act and Assert
-    assertArrayEquals(new byte[]{}, ByteUtil.cloneBytes(new byte[]{}));
+    assertArrayEquals(new byte[] {}, ByteUtil.cloneBytes(new byte[] {}));
   }
 
   /**
    * Test {@link ByteUtil#cloneBytes(byte[])}.
+   *
    * <ul>
-   *   <li>When {@code null}.</li>
-   *   <li>Then return {@code null}.</li>
+   *   <li>When {@code null}.
+   *   <li>Then return {@code null}.
    * </ul>
-   * <p>
-   * Method under test: {@link ByteUtil#cloneBytes(byte[])}
+   *
+   * <p>Method under test: {@link ByteUtil#cloneBytes(byte[])}
    */
   @Test
   @Category(MaintainedByDiffblue.class)
@@ -74,46 +75,54 @@ public class ByteUtilDiffblueTest {
 
   /**
    * Test {@link ByteUtil#bigIntegerToBytes(BigInteger, int)} with {@code b}, {@code numBytes}.
+   *
    * <ul>
-   *   <li>Then return array of {@code byte} with minus one and minus one.</li>
+   *   <li>Then return array of {@code byte} with minus one and minus one.
    * </ul>
-   * <p>
-   * Method under test: {@link ByteUtil#bigIntegerToBytes(BigInteger, int)}
+   *
+   * <p>Method under test: {@link ByteUtil#bigIntegerToBytes(BigInteger, int)}
    */
   @Test
   @Category(MaintainedByDiffblue.class)
   @MethodsUnderTest({"byte[] ByteUtil.bigIntegerToBytes(BigInteger, int)"})
   public void testBigIntegerToBytesWithBNumBytes_thenReturnArrayOfByteWithMinusOneAndMinusOne() {
     // Arrange, Act and Assert
-    assertArrayEquals(new byte[]{-1, -1, -1, -1, -1, -1, -1, -1, -1, -1, -1, -1, -1, -1, -1, -1, -1, -1, -1, -1, -1, -1,
-        -1, -1, -1, -1, -1, -1, -1, -1, -1, -1}, ByteUtil.bigIntegerToBytes(DataWord.MAX_VALUE, ByteUtil.WORD_SIZE));
+    assertArrayEquals(
+        new byte[] {
+          -1, -1, -1, -1, -1, -1, -1, -1, -1, -1, -1, -1, -1, -1, -1, -1, -1, -1, -1, -1, -1, -1,
+          -1, -1, -1, -1, -1, -1, -1, -1, -1, -1
+        },
+        ByteUtil.bigIntegerToBytes(DataWord.MAX_VALUE, ByteUtil.WORD_SIZE));
   }
 
   /**
    * Test {@link ByteUtil#bigIntegerToBytes(BigInteger, int)} with {@code b}, {@code numBytes}.
+   *
    * <ul>
-   *   <li>Then return array of {@code byte} with zero and minus one.</li>
+   *   <li>Then return array of {@code byte} with zero and minus one.
    * </ul>
-   * <p>
-   * Method under test: {@link ByteUtil#bigIntegerToBytes(BigInteger, int)}
+   *
+   * <p>Method under test: {@link ByteUtil#bigIntegerToBytes(BigInteger, int)}
    */
   @Test
   @Category(MaintainedByDiffblue.class)
   @MethodsUnderTest({"byte[] ByteUtil.bigIntegerToBytes(BigInteger, int)"})
   public void testBigIntegerToBytesWithBNumBytes_thenReturnArrayOfByteWithZeroAndMinusOne() {
     // Arrange, Act and Assert
-    assertArrayEquals(new byte[]{0, -1, -1, -1, -1, -1, -1, -1, -1, -1},
+    assertArrayEquals(
+        new byte[] {0, -1, -1, -1, -1, -1, -1, -1, -1, -1},
         ByteUtil.bigIntegerToBytes(DataWord.MAX_VALUE, 10));
   }
 
   /**
    * Test {@link ByteUtil#bigIntegerToBytes(BigInteger, int)} with {@code b}, {@code numBytes}.
+   *
    * <ul>
-   *   <li>When {@code null}.</li>
-   *   <li>Then return {@code null}.</li>
+   *   <li>When {@code null}.
+   *   <li>Then return {@code null}.
    * </ul>
-   * <p>
-   * Method under test: {@link ByteUtil#bigIntegerToBytes(BigInteger, int)}
+   *
+   * <p>Method under test: {@link ByteUtil#bigIntegerToBytes(BigInteger, int)}
    */
   @Test
   @Category(MaintainedByDiffblue.class)
@@ -125,29 +134,35 @@ public class ByteUtilDiffblueTest {
 
   /**
    * Test {@link ByteUtil#bigIntegerToBytes(BigInteger)} with {@code value}.
+   *
    * <ul>
-   *   <li>Then return array of {@code byte} with minus one and minus one.</li>
+   *   <li>Then return array of {@code byte} with minus one and minus one.
    * </ul>
-   * <p>
-   * Method under test: {@link ByteUtil#bigIntegerToBytes(BigInteger)}
+   *
+   * <p>Method under test: {@link ByteUtil#bigIntegerToBytes(BigInteger)}
    */
   @Test
   @Category(MaintainedByDiffblue.class)
   @MethodsUnderTest({"byte[] ByteUtil.bigIntegerToBytes(BigInteger)"})
   public void testBigIntegerToBytesWithValue_thenReturnArrayOfByteWithMinusOneAndMinusOne() {
     // Arrange, Act and Assert
-    assertArrayEquals(new byte[]{-1, -1, -1, -1, -1, -1, -1, -1, -1, -1, -1, -1, -1, -1, -1, -1, -1, -1, -1, -1, -1, -1,
-        -1, -1, -1, -1, -1, -1, -1, -1, -1, -1}, ByteUtil.bigIntegerToBytes(DataWord.MAX_VALUE));
+    assertArrayEquals(
+        new byte[] {
+          -1, -1, -1, -1, -1, -1, -1, -1, -1, -1, -1, -1, -1, -1, -1, -1, -1, -1, -1, -1, -1, -1,
+          -1, -1, -1, -1, -1, -1, -1, -1, -1, -1
+        },
+        ByteUtil.bigIntegerToBytes(DataWord.MAX_VALUE));
   }
 
   /**
    * Test {@link ByteUtil#bigIntegerToBytes(BigInteger)} with {@code value}.
+   *
    * <ul>
-   *   <li>When {@code null}.</li>
-   *   <li>Then return {@code null}.</li>
+   *   <li>When {@code null}.
+   *   <li>Then return {@code null}.
    * </ul>
-   * <p>
-   * Method under test: {@link ByteUtil#bigIntegerToBytes(BigInteger)}
+   *
+   * <p>Method under test: {@link ByteUtil#bigIntegerToBytes(BigInteger)}
    */
   @Test
   @Category(MaintainedByDiffblue.class)
@@ -159,29 +174,31 @@ public class ByteUtilDiffblueTest {
 
   /**
    * Test {@link ByteUtil#bigIntegerToBytes(BigInteger)} with {@code value}.
+   *
    * <ul>
-   *   <li>When valueOf one.</li>
-   *   <li>Then return array of {@code byte} with one.</li>
+   *   <li>When valueOf one.
+   *   <li>Then return array of {@code byte} with one.
    * </ul>
-   * <p>
-   * Method under test: {@link ByteUtil#bigIntegerToBytes(BigInteger)}
+   *
+   * <p>Method under test: {@link ByteUtil#bigIntegerToBytes(BigInteger)}
    */
   @Test
   @Category(MaintainedByDiffblue.class)
   @MethodsUnderTest({"byte[] ByteUtil.bigIntegerToBytes(BigInteger)"})
   public void testBigIntegerToBytesWithValue_whenValueOfOne_thenReturnArrayOfByteWithOne() {
     // Arrange, Act and Assert
-    assertArrayEquals(new byte[]{1}, ByteUtil.bigIntegerToBytes(BigInteger.valueOf(1L)));
+    assertArrayEquals(new byte[] {1}, ByteUtil.bigIntegerToBytes(BigInteger.valueOf(1L)));
   }
 
   /**
    * Test {@link ByteUtil#bigIntegerToBytes(BigInteger)} with {@code value}.
+   *
    * <ul>
-   *   <li>When {@link DataWord#_2_256}.</li>
-   *   <li>Then return array of {@code byte} with one and zero.</li>
+   *   <li>When {@link DataWord#_2_256}.
+   *   <li>Then return array of {@code byte} with one and zero.
    * </ul>
-   * <p>
-   * Method under test: {@link ByteUtil#bigIntegerToBytes(BigInteger)}
+   *
+   * <p>Method under test: {@link ByteUtil#bigIntegerToBytes(BigInteger)}
    */
   @Test
   @Category(MaintainedByDiffblue.class)
@@ -189,84 +206,85 @@ public class ByteUtilDiffblueTest {
   public void testBigIntegerToBytesWithValue_when_2_256_thenReturnArrayOfByteWithOneAndZero() {
     // Arrange, Act and Assert
     assertArrayEquals(
-        new byte[]{1, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0},
+        new byte[] {
+          1, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0,
+          0, 0, 0
+        },
         ByteUtil.bigIntegerToBytes(DataWord._2_256));
   }
 
   /**
    * Test {@link ByteUtil#merge(byte[][])}.
-   * <p>
-   * Method under test: {@link ByteUtil#merge(byte[][])}
+   *
+   * <p>Method under test: {@link ByteUtil#merge(byte[][])}
    */
   @Test
   @Category(MaintainedByDiffblue.class)
   @MethodsUnderTest({"byte[] ByteUtil.merge(byte[][])"})
   public void testMerge() throws UnsupportedEncodingException {
-    // Arrange and Act
-    byte[] actualMergeResult = ByteUtil.merge("AXAXAXAX".getBytes("UTF-8"));
-
-    // Assert
-    assertArrayEquals("AXAXAXAX".getBytes("UTF-8"), actualMergeResult);
+    // Arrange, Act and Assert
+    assertArrayEquals("AXAXAXAX".getBytes("UTF-8"), ByteUtil.merge("AXAXAXAX".getBytes("UTF-8")));
   }
 
   /**
    * Test {@link ByteUtil#appendByte(byte[], byte)}.
-   * <p>
-   * Method under test: {@link ByteUtil#appendByte(byte[], byte)}
+   *
+   * <p>Method under test: {@link ByteUtil#appendByte(byte[], byte)}
    */
   @Test
   @Category(MaintainedByDiffblue.class)
   @MethodsUnderTest({"byte[] ByteUtil.appendByte(byte[], byte)"})
   public void testAppendByte() throws UnsupportedEncodingException {
-    // Arrange and Act
-    byte[] actualAppendByteResult = ByteUtil.appendByte("AXAXAXAX".getBytes("UTF-8"), (byte) 'A');
-
-    // Assert
-    assertArrayEquals("AXAXAXAXA".getBytes("UTF-8"), actualAppendByteResult);
+    // Arrange, Act and Assert
+    assertArrayEquals(
+        "AXAXAXAXA".getBytes("UTF-8"),
+        ByteUtil.appendByte("AXAXAXAX".getBytes("UTF-8"), (byte) 'A'));
   }
 
   /**
    * Test {@link ByteUtil#nibblesToPrettyString(byte[])}.
-   * <ul>
-   *   <li>Then return {@code \x08\x58\x41\x58\x41\x58\x41\x58}.</li>
-   * </ul>
-   * <p>
-   * Method under test: {@link ByteUtil#nibblesToPrettyString(byte[])}
+   *
+   * <p>Method under test: {@link ByteUtil#nibblesToPrettyString(byte[])}
    */
   @Test
   @Category(MaintainedByDiffblue.class)
   @MethodsUnderTest({"String ByteUtil.nibblesToPrettyString(byte[])"})
-  public void testNibblesToPrettyString_thenReturnX08X58X41X58X41X58X41X58() throws UnsupportedEncodingException {
+  public void testNibblesToPrettyString() throws UnsupportedEncodingException {
     // Arrange, Act and Assert
-    assertEquals("\\x08\\x58\\x41\\x58\\x41\\x58\\x41\\x58",
-        ByteUtil.nibblesToPrettyString("\bXAXAXAX".getBytes("UTF-8")));
+    assertEquals(
+        "\\x41\\x08\\x41\\x08\\x41\\x08\\x41\\x08\\x41\\x08\\x41\\x08\\x41\\x08\\x41\\x08",
+        ByteUtil.nibblesToPrettyString("A\bA\bA\bA\bA\bA\bA\bA\b".getBytes("UTF-8")));
   }
 
   /**
    * Test {@link ByteUtil#nibblesToPrettyString(byte[])}.
+   *
    * <ul>
-   *   <li>Then return {@code \x41\x58\x41\x58\x41\x58\x41\x58}.</li>
+   *   <li>Then return {@code \x41\x58\x41\x58\x41\x58\x41\x58}.
    * </ul>
-   * <p>
-   * Method under test: {@link ByteUtil#nibblesToPrettyString(byte[])}
+   *
+   * <p>Method under test: {@link ByteUtil#nibblesToPrettyString(byte[])}
    */
   @Test
   @Category(MaintainedByDiffblue.class)
   @MethodsUnderTest({"String ByteUtil.nibblesToPrettyString(byte[])"})
-  public void testNibblesToPrettyString_thenReturnX41X58X41X58X41X58X41X58() throws UnsupportedEncodingException {
+  public void testNibblesToPrettyString_thenReturnX41X58X41X58X41X58X41X58()
+      throws UnsupportedEncodingException {
     // Arrange, Act and Assert
-    assertEquals("\\x41\\x58\\x41\\x58\\x41\\x58\\x41\\x58",
+    assertEquals(
+        "\\x41\\x58\\x41\\x58\\x41\\x58\\x41\\x58",
         ByteUtil.nibblesToPrettyString("AXAXAXAX".getBytes("UTF-8")));
   }
 
   /**
    * Test {@link ByteUtil#oneByteToHexString(byte)}.
+   *
    * <ul>
-   *   <li>When {@code A}.</li>
-   *   <li>Then return {@code 41}.</li>
+   *   <li>When {@code A}.
+   *   <li>Then return {@code 41}.
    * </ul>
-   * <p>
-   * Method under test: {@link ByteUtil#oneByteToHexString(byte)}
+   *
+   * <p>Method under test: {@link ByteUtil#oneByteToHexString(byte)}
    */
   @Test
   @Category(MaintainedByDiffblue.class)
@@ -278,12 +296,13 @@ public class ByteUtilDiffblueTest {
 
   /**
    * Test {@link ByteUtil#oneByteToHexString(byte)}.
+   *
    * <ul>
-   *   <li>When one.</li>
-   *   <li>Then return {@code 01}.</li>
+   *   <li>When one.
+   *   <li>Then return {@code 01}.
    * </ul>
-   * <p>
-   * Method under test: {@link ByteUtil#oneByteToHexString(byte)}
+   *
+   * <p>Method under test: {@link ByteUtil#oneByteToHexString(byte)}
    */
   @Test
   @Category(MaintainedByDiffblue.class)
@@ -295,46 +314,50 @@ public class ByteUtilDiffblueTest {
 
   /**
    * Test {@link ByteUtil#byteArrayToInt(byte[])}.
+   *
    * <ul>
-   *   <li>When {@code AXAXAXAX} Bytes is {@code UTF-8}.</li>
-   *   <li>Then return {@code 1096302936}.</li>
+   *   <li>When {@code AXAXAXAX} Bytes is {@code UTF-8}.
+   *   <li>Then return {@code 1096302936}.
    * </ul>
-   * <p>
-   * Method under test: {@link ByteUtil#byteArrayToInt(byte[])}
+   *
+   * <p>Method under test: {@link ByteUtil#byteArrayToInt(byte[])}
    */
   @Test
   @Category(MaintainedByDiffblue.class)
   @MethodsUnderTest({"int ByteUtil.byteArrayToInt(byte[])"})
-  public void testByteArrayToInt_whenAxaxaxaxBytesIsUtf8_thenReturn1096302936() throws UnsupportedEncodingException {
+  public void testByteArrayToInt_whenAxaxaxaxBytesIsUtf8_thenReturn1096302936()
+      throws UnsupportedEncodingException {
     // Arrange, Act and Assert
     assertEquals(1096302936, ByteUtil.byteArrayToInt("AXAXAXAX".getBytes("UTF-8")));
   }
 
   /**
    * Test {@link ByteUtil#byteArrayToInt(byte[])}.
+   *
    * <ul>
-   *   <li>When empty array of {@code byte}.</li>
-   *   <li>Then return zero.</li>
+   *   <li>When empty array of {@code byte}.
+   *   <li>Then return zero.
    * </ul>
-   * <p>
-   * Method under test: {@link ByteUtil#byteArrayToInt(byte[])}
+   *
+   * <p>Method under test: {@link ByteUtil#byteArrayToInt(byte[])}
    */
   @Test
   @Category(MaintainedByDiffblue.class)
   @MethodsUnderTest({"int ByteUtil.byteArrayToInt(byte[])"})
   public void testByteArrayToInt_whenEmptyArrayOfByte_thenReturnZero() {
     // Arrange, Act and Assert
-    assertEquals(0, ByteUtil.byteArrayToInt(new byte[]{}));
+    assertEquals(0, ByteUtil.byteArrayToInt(new byte[] {}));
   }
 
   /**
    * Test {@link ByteUtil#byteArrayToInt(byte[])}.
+   *
    * <ul>
-   *   <li>When {@code null}.</li>
-   *   <li>Then return zero.</li>
+   *   <li>When {@code null}.
+   *   <li>Then return zero.
    * </ul>
-   * <p>
-   * Method under test: {@link ByteUtil#byteArrayToInt(byte[])}
+   *
+   * <p>Method under test: {@link ByteUtil#byteArrayToInt(byte[])}
    */
   @Test
   @Category(MaintainedByDiffblue.class)
@@ -346,116 +369,125 @@ public class ByteUtilDiffblueTest {
 
   /**
    * Test {@link ByteUtil#isSingleZero(byte[])}.
+   *
    * <ul>
-   *   <li>When array of {@code byte} with {@code A}.</li>
-   *   <li>Then return {@code false}.</li>
+   *   <li>When array of {@code byte} with {@code A}.
+   *   <li>Then return {@code false}.
    * </ul>
-   * <p>
-   * Method under test: {@link ByteUtil#isSingleZero(byte[])}
+   *
+   * <p>Method under test: {@link ByteUtil#isSingleZero(byte[])}
    */
   @Test
   @Category(MaintainedByDiffblue.class)
   @MethodsUnderTest({"boolean ByteUtil.isSingleZero(byte[])"})
   public void testIsSingleZero_whenArrayOfByteWithA_thenReturnFalse() {
     // Arrange, Act and Assert
-    assertFalse(ByteUtil.isSingleZero(new byte[]{'A'}));
+    assertFalse(ByteUtil.isSingleZero(new byte[] {'A'}));
   }
 
   /**
    * Test {@link ByteUtil#isSingleZero(byte[])}.
+   *
    * <ul>
-   *   <li>When array of {@code byte} with zero.</li>
-   *   <li>Then return {@code true}.</li>
+   *   <li>When array of {@code byte} with zero.
+   *   <li>Then return {@code true}.
    * </ul>
-   * <p>
-   * Method under test: {@link ByteUtil#isSingleZero(byte[])}
+   *
+   * <p>Method under test: {@link ByteUtil#isSingleZero(byte[])}
    */
   @Test
   @Category(MaintainedByDiffblue.class)
   @MethodsUnderTest({"boolean ByteUtil.isSingleZero(byte[])"})
   public void testIsSingleZero_whenArrayOfByteWithZero_thenReturnTrue() {
     // Arrange, Act and Assert
-    assertTrue(ByteUtil.isSingleZero(new byte[]{0}));
+    assertTrue(ByteUtil.isSingleZero(new byte[] {0}));
   }
 
   /**
    * Test {@link ByteUtil#isSingleZero(byte[])}.
+   *
    * <ul>
-   *   <li>When {@code AXAXAXAX} Bytes is {@code UTF-8}.</li>
-   *   <li>Then return {@code false}.</li>
+   *   <li>When {@code AXAXAXAX} Bytes is {@code UTF-8}.
+   *   <li>Then return {@code false}.
    * </ul>
-   * <p>
-   * Method under test: {@link ByteUtil#isSingleZero(byte[])}
+   *
+   * <p>Method under test: {@link ByteUtil#isSingleZero(byte[])}
    */
   @Test
   @Category(MaintainedByDiffblue.class)
   @MethodsUnderTest({"boolean ByteUtil.isSingleZero(byte[])"})
-  public void testIsSingleZero_whenAxaxaxaxBytesIsUtf8_thenReturnFalse() throws UnsupportedEncodingException {
+  public void testIsSingleZero_whenAxaxaxaxBytesIsUtf8_thenReturnFalse()
+      throws UnsupportedEncodingException {
     // Arrange, Act and Assert
     assertFalse(ByteUtil.isSingleZero("AXAXAXAX".getBytes("UTF-8")));
   }
 
   /**
    * Test {@link ByteUtil#intToBytesNoLeadZeroes(int)}.
+   *
    * <ul>
-   *   <li>When {@link DecodeUtil#ADDRESS_SIZE}.</li>
-   *   <li>Then return array of {@code byte} with {@code *}.</li>
+   *   <li>When {@link DecodeUtil#ADDRESS_SIZE}.
+   *   <li>Then return array of {@code byte} with {@code *}.
    * </ul>
-   * <p>
-   * Method under test: {@link ByteUtil#intToBytesNoLeadZeroes(int)}
+   *
+   * <p>Method under test: {@link ByteUtil#intToBytesNoLeadZeroes(int)}
    */
   @Test
   @Category(MaintainedByDiffblue.class)
   @MethodsUnderTest({"byte[] ByteUtil.intToBytesNoLeadZeroes(int)"})
   public void testIntToBytesNoLeadZeroes_whenAddress_size_thenReturnArrayOfByteWithAsterisk() {
     // Arrange, Act and Assert
-    assertArrayEquals(new byte[]{'*'}, ByteUtil.intToBytesNoLeadZeroes(DecodeUtil.ADDRESS_SIZE));
+    assertArrayEquals(new byte[] {'*'}, ByteUtil.intToBytesNoLeadZeroes(DecodeUtil.ADDRESS_SIZE));
   }
 
   /**
    * Test {@link ByteUtil#intToBytesNoLeadZeroes(int)}.
+   *
    * <ul>
-   *   <li>When zero.</li>
-   *   <li>Then return empty array of {@code byte}.</li>
+   *   <li>When zero.
+   *   <li>Then return empty array of {@code byte}.
    * </ul>
-   * <p>
-   * Method under test: {@link ByteUtil#intToBytesNoLeadZeroes(int)}
+   *
+   * <p>Method under test: {@link ByteUtil#intToBytesNoLeadZeroes(int)}
    */
   @Test
   @Category(MaintainedByDiffblue.class)
   @MethodsUnderTest({"byte[] ByteUtil.intToBytesNoLeadZeroes(int)"})
   public void testIntToBytesNoLeadZeroes_whenZero_thenReturnEmptyArrayOfByte() {
     // Arrange, Act and Assert
-    assertArrayEquals(new byte[]{}, ByteUtil.intToBytesNoLeadZeroes(0));
+    assertArrayEquals(new byte[] {}, ByteUtil.intToBytesNoLeadZeroes(0));
   }
 
   /**
    * Test {@link ByteUtil#intToBytes(int)}.
-   * <p>
-   * Method under test: {@link ByteUtil#intToBytes(int)}
+   *
+   * <p>Method under test: {@link ByteUtil#intToBytes(int)}
    */
   @Test
   @Category(MaintainedByDiffblue.class)
   @MethodsUnderTest({"byte[] ByteUtil.intToBytes(int)"})
   public void testIntToBytes() {
     // Arrange, Act and Assert
-    assertArrayEquals(new byte[]{0, 0, 0, '*'}, ByteUtil.intToBytes(DecodeUtil.ADDRESS_SIZE));
+    assertArrayEquals(new byte[] {0, 0, 0, '*'}, ByteUtil.intToBytes(DecodeUtil.ADDRESS_SIZE));
   }
 
   /**
    * Test {@link ByteUtil#bytesToBigInteger(byte[])}.
+   *
    * <ul>
-   *   <li>Then return toString is {@code 4708585257725083992}.</li>
+   *   <li>Then return toString is {@code 4708585257725083992}.
    * </ul>
-   * <p>
-   * Method under test: {@link ByteUtil#bytesToBigInteger(byte[])}
+   *
+   * <p>Method under test: {@link ByteUtil#bytesToBigInteger(byte[])}
    */
   @Test
   @Category(MaintainedByDiffblue.class)
   @MethodsUnderTest({"BigInteger ByteUtil.bytesToBigInteger(byte[])"})
-  public void testBytesToBigInteger_thenReturnToStringIs4708585257725083992() throws UnsupportedEncodingException {
+  public void testBytesToBigInteger_thenReturnToStringIs4708585257725083992()
+      throws UnsupportedEncodingException {
     // Arrange and Act
-    BigInteger actualBytesToBigIntegerResult = ByteUtil.bytesToBigInteger("AXAXAXAX".getBytes("UTF-8"));
+    BigInteger actualBytesToBigIntegerResult =
+        ByteUtil.bytesToBigInteger("AXAXAXAX".getBytes("UTF-8"));
 
     // Assert
     assertEquals("4708585257725083992", actualBytesToBigIntegerResult.toString());
@@ -467,35 +499,37 @@ public class ByteUtilDiffblueTest {
 
   /**
    * Test {@link ByteUtil#bytesToBigInteger(byte[])}.
+   *
    * <ul>
-   *   <li>When empty array of {@code byte}.</li>
-   *   <li>Then return toString is {@code 0}.</li>
+   *   <li>When empty array of {@code byte}.
+   *   <li>Then return toString is {@code 0}.
    * </ul>
-   * <p>
-   * Method under test: {@link ByteUtil#bytesToBigInteger(byte[])}
+   *
+   * <p>Method under test: {@link ByteUtil#bytesToBigInteger(byte[])}
    */
   @Test
   @Category(MaintainedByDiffblue.class)
   @MethodsUnderTest({"BigInteger ByteUtil.bytesToBigInteger(byte[])"})
   public void testBytesToBigInteger_whenEmptyArrayOfByte_thenReturnToStringIs0() {
     // Arrange and Act
-    BigInteger actualBytesToBigIntegerResult = ByteUtil.bytesToBigInteger(new byte[]{});
+    BigInteger actualBytesToBigIntegerResult = ByteUtil.bytesToBigInteger(new byte[] {});
 
     // Assert
     assertEquals("0", actualBytesToBigIntegerResult.toString());
     assertEquals(-1, actualBytesToBigIntegerResult.getLowestSetBit());
     assertEquals(0, actualBytesToBigIntegerResult.signum());
-    assertArrayEquals(new byte[]{0}, actualBytesToBigIntegerResult.toByteArray());
+    assertArrayEquals(new byte[] {0}, actualBytesToBigIntegerResult.toByteArray());
   }
 
   /**
    * Test {@link ByteUtil#bytesToBigInteger(byte[])}.
+   *
    * <ul>
-   *   <li>When {@code null}.</li>
-   *   <li>Then return toString is {@code 0}.</li>
+   *   <li>When {@code null}.
+   *   <li>Then return toString is {@code 0}.
    * </ul>
-   * <p>
-   * Method under test: {@link ByteUtil#bytesToBigInteger(byte[])}
+   *
+   * <p>Method under test: {@link ByteUtil#bytesToBigInteger(byte[])}
    */
   @Test
   @Category(MaintainedByDiffblue.class)
@@ -508,17 +542,18 @@ public class ByteUtilDiffblueTest {
     assertEquals("0", actualBytesToBigIntegerResult.toString());
     assertEquals(-1, actualBytesToBigIntegerResult.getLowestSetBit());
     assertEquals(0, actualBytesToBigIntegerResult.signum());
-    assertArrayEquals(new byte[]{0}, actualBytesToBigIntegerResult.toByteArray());
+    assertArrayEquals(new byte[] {0}, actualBytesToBigIntegerResult.toByteArray());
   }
 
   /**
    * Test {@link ByteUtil#byteArrayToLong(byte[])}.
+   *
    * <ul>
-   *   <li>When {@code AXAXAXAX} Bytes is {@code UTF-8}.</li>
-   *   <li>Then return {@code 4708585257725083992}.</li>
+   *   <li>When {@code AXAXAXAX} Bytes is {@code UTF-8}.
+   *   <li>Then return {@code 4708585257725083992}.
    * </ul>
-   * <p>
-   * Method under test: {@link ByteUtil#byteArrayToLong(byte[])}
+   *
+   * <p>Method under test: {@link ByteUtil#byteArrayToLong(byte[])}
    */
   @Test
   @Category(MaintainedByDiffblue.class)
@@ -531,29 +566,31 @@ public class ByteUtilDiffblueTest {
 
   /**
    * Test {@link ByteUtil#byteArrayToLong(byte[])}.
+   *
    * <ul>
-   *   <li>When empty array of {@code byte}.</li>
-   *   <li>Then return zero.</li>
+   *   <li>When empty array of {@code byte}.
+   *   <li>Then return zero.
    * </ul>
-   * <p>
-   * Method under test: {@link ByteUtil#byteArrayToLong(byte[])}
+   *
+   * <p>Method under test: {@link ByteUtil#byteArrayToLong(byte[])}
    */
   @Test
   @Category(MaintainedByDiffblue.class)
   @MethodsUnderTest({"long ByteUtil.byteArrayToLong(byte[])"})
   public void testByteArrayToLong_whenEmptyArrayOfByte_thenReturnZero() {
     // Arrange, Act and Assert
-    assertEquals(0L, ByteUtil.byteArrayToLong(new byte[]{}));
+    assertEquals(0L, ByteUtil.byteArrayToLong(new byte[] {}));
   }
 
   /**
    * Test {@link ByteUtil#byteArrayToLong(byte[])}.
+   *
    * <ul>
-   *   <li>When {@code null}.</li>
-   *   <li>Then return zero.</li>
+   *   <li>When {@code null}.
+   *   <li>Then return zero.
    * </ul>
-   * <p>
-   * Method under test: {@link ByteUtil#byteArrayToLong(byte[])}
+   *
+   * <p>Method under test: {@link ByteUtil#byteArrayToLong(byte[])}
    */
   @Test
   @Category(MaintainedByDiffblue.class)
@@ -565,156 +602,169 @@ public class ByteUtilDiffblueTest {
 
   /**
    * Test {@link ByteUtil#firstNonZeroByte(byte[])}.
+   *
    * <ul>
-   *   <li>When array of {@code byte} with zero and zero.</li>
-   *   <li>Then return minus one.</li>
+   *   <li>When array of {@code byte} with zero and zero.
+   *   <li>Then return minus one.
    * </ul>
-   * <p>
-   * Method under test: {@link ByteUtil#firstNonZeroByte(byte[])}
+   *
+   * <p>Method under test: {@link ByteUtil#firstNonZeroByte(byte[])}
    */
   @Test
   @Category(MaintainedByDiffblue.class)
   @MethodsUnderTest({"int ByteUtil.firstNonZeroByte(byte[])"})
   public void testFirstNonZeroByte_whenArrayOfByteWithZeroAndZero_thenReturnMinusOne() {
     // Arrange, Act and Assert
-    assertEquals(-1, ByteUtil.firstNonZeroByte(new byte[]{0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0}));
+    assertEquals(
+        -1,
+        ByteUtil.firstNonZeroByte(
+            new byte[] {0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0}));
   }
 
   /**
    * Test {@link ByteUtil#firstNonZeroByte(byte[])}.
+   *
    * <ul>
-   *   <li>When {@code AXAXAXAX} Bytes is {@code UTF-8}.</li>
-   *   <li>Then return zero.</li>
+   *   <li>When {@code AXAXAXAX} Bytes is {@code UTF-8}.
+   *   <li>Then return zero.
    * </ul>
-   * <p>
-   * Method under test: {@link ByteUtil#firstNonZeroByte(byte[])}
+   *
+   * <p>Method under test: {@link ByteUtil#firstNonZeroByte(byte[])}
    */
   @Test
   @Category(MaintainedByDiffblue.class)
   @MethodsUnderTest({"int ByteUtil.firstNonZeroByte(byte[])"})
-  public void testFirstNonZeroByte_whenAxaxaxaxBytesIsUtf8_thenReturnZero() throws UnsupportedEncodingException {
+  public void testFirstNonZeroByte_whenAxaxaxaxBytesIsUtf8_thenReturnZero()
+      throws UnsupportedEncodingException {
     // Arrange, Act and Assert
     assertEquals(0, ByteUtil.firstNonZeroByte("AXAXAXAX".getBytes("UTF-8")));
   }
 
   /**
    * Test {@link ByteUtil#lastNonZeroByte(byte[])}.
+   *
    * <ul>
-   *   <li>When {@code A}.</li>
-   *   <li>Then return six.</li>
+   *   <li>When {@code A}.
+   *   <li>Then return six.
    * </ul>
-   * <p>
-   * Method under test: {@link ByteUtil#lastNonZeroByte(byte[])}
+   *
+   * <p>Method under test: {@link ByteUtil#lastNonZeroByte(byte[])}
    */
   @Test
   @Category(MaintainedByDiffblue.class)
   @MethodsUnderTest({"int ByteUtil.lastNonZeroByte(byte[])"})
   public void testLastNonZeroByte_whenA_thenReturnSix() {
     // Arrange, Act and Assert
-    assertEquals(6, ByteUtil.lastNonZeroByte(new byte[]{'A', 'X', 'A', 'X', 'A', 'X', 'A', 0}));
+    assertEquals(6, ByteUtil.lastNonZeroByte(new byte[] {'A', 'X', 'A', 'X', 'A', 'X', 'A', 0}));
   }
 
   /**
    * Test {@link ByteUtil#lastNonZeroByte(byte[])}.
+   *
    * <ul>
-   *   <li>When {@code AXAXAXAX} Bytes is {@code UTF-8}.</li>
-   *   <li>Then return seven.</li>
+   *   <li>When {@code AXAXAXAX} Bytes is {@code UTF-8}.
+   *   <li>Then return seven.
    * </ul>
-   * <p>
-   * Method under test: {@link ByteUtil#lastNonZeroByte(byte[])}
+   *
+   * <p>Method under test: {@link ByteUtil#lastNonZeroByte(byte[])}
    */
   @Test
   @Category(MaintainedByDiffblue.class)
   @MethodsUnderTest({"int ByteUtil.lastNonZeroByte(byte[])"})
-  public void testLastNonZeroByte_whenAxaxaxaxBytesIsUtf8_thenReturnSeven() throws UnsupportedEncodingException {
+  public void testLastNonZeroByte_whenAxaxaxaxBytesIsUtf8_thenReturnSeven()
+      throws UnsupportedEncodingException {
     // Arrange, Act and Assert
     assertEquals(7, ByteUtil.lastNonZeroByte("AXAXAXAX".getBytes("UTF-8")));
   }
 
   /**
    * Test {@link ByteUtil#lastNonZeroByte(byte[])}.
+   *
    * <ul>
-   *   <li>When empty array of {@code byte}.</li>
-   *   <li>Then return minus one.</li>
+   *   <li>When empty array of {@code byte}.
+   *   <li>Then return minus one.
    * </ul>
-   * <p>
-   * Method under test: {@link ByteUtil#lastNonZeroByte(byte[])}
+   *
+   * <p>Method under test: {@link ByteUtil#lastNonZeroByte(byte[])}
    */
   @Test
   @Category(MaintainedByDiffblue.class)
   @MethodsUnderTest({"int ByteUtil.lastNonZeroByte(byte[])"})
   public void testLastNonZeroByte_whenEmptyArrayOfByte_thenReturnMinusOne() {
     // Arrange, Act and Assert
-    assertEquals(-1, ByteUtil.lastNonZeroByte(new byte[]{}));
+    assertEquals(-1, ByteUtil.lastNonZeroByte(new byte[] {}));
   }
 
   /**
    * Test {@link ByteUtil#stripLeadingZeroes(byte[])}.
+   *
    * <ul>
-   *   <li>Then return array of {@code byte} with zero.</li>
+   *   <li>Then return array of {@code byte} with zero.
    * </ul>
-   * <p>
-   * Method under test: {@link ByteUtil#stripLeadingZeroes(byte[])}
+   *
+   * <p>Method under test: {@link ByteUtil#stripLeadingZeroes(byte[])}
    */
   @Test
   @Category(MaintainedByDiffblue.class)
   @MethodsUnderTest({"byte[] ByteUtil.stripLeadingZeroes(byte[])"})
   public void testStripLeadingZeroes_thenReturnArrayOfByteWithZero() {
     // Arrange, Act and Assert
-    assertArrayEquals(new byte[]{0},
-        ByteUtil.stripLeadingZeroes(new byte[]{0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0}));
+    assertArrayEquals(
+        new byte[] {0},
+        ByteUtil.stripLeadingZeroes(
+            new byte[] {0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0}));
   }
 
   /**
    * Test {@link ByteUtil#stripLeadingZeroes(byte[])}.
+   *
    * <ul>
-   *   <li>When {@code A}.</li>
-   *   <li>Then return {@code XAXAXAX} Bytes is {@code UTF-8}.</li>
+   *   <li>When {@code A}.
+   *   <li>Then return {@code XAXAXAX} Bytes is {@code UTF-8}.
    * </ul>
-   * <p>
-   * Method under test: {@link ByteUtil#stripLeadingZeroes(byte[])}
+   *
+   * <p>Method under test: {@link ByteUtil#stripLeadingZeroes(byte[])}
    */
   @Test
   @Category(MaintainedByDiffblue.class)
   @MethodsUnderTest({"byte[] ByteUtil.stripLeadingZeroes(byte[])"})
-  public void testStripLeadingZeroes_whenA_thenReturnXaxaxaxBytesIsUtf8() throws UnsupportedEncodingException {
-    // Arrange and Act
-    byte[] actualStripLeadingZeroesResult = ByteUtil
-        .stripLeadingZeroes(new byte[]{0, 'X', 'A', 'X', 'A', 'X', 'A', 'X'});
-
-    // Assert
-    assertArrayEquals("XAXAXAX".getBytes("UTF-8"), actualStripLeadingZeroesResult);
+  public void testStripLeadingZeroes_whenA_thenReturnXaxaxaxBytesIsUtf8()
+      throws UnsupportedEncodingException {
+    // Arrange, Act and Assert
+    assertArrayEquals(
+        "XAXAXAX".getBytes("UTF-8"),
+        ByteUtil.stripLeadingZeroes(new byte[] {0, 'X', 'A', 'X', 'A', 'X', 'A', 'X'}));
   }
 
   /**
    * Test {@link ByteUtil#stripLeadingZeroes(byte[])}.
+   *
    * <ul>
-   *   <li>When {@code AXAXAXAX} Bytes is {@code UTF-8}.</li>
-   *   <li>Then return {@code AXAXAXAX} Bytes is {@code UTF-8}.</li>
+   *   <li>When {@code AXAXAXAX} Bytes is {@code UTF-8}.
+   *   <li>Then return {@code AXAXAXAX} Bytes is {@code UTF-8}.
    * </ul>
-   * <p>
-   * Method under test: {@link ByteUtil#stripLeadingZeroes(byte[])}
+   *
+   * <p>Method under test: {@link ByteUtil#stripLeadingZeroes(byte[])}
    */
   @Test
   @Category(MaintainedByDiffblue.class)
   @MethodsUnderTest({"byte[] ByteUtil.stripLeadingZeroes(byte[])"})
   public void testStripLeadingZeroes_whenAxaxaxaxBytesIsUtf8_thenReturnAxaxaxaxBytesIsUtf8()
       throws UnsupportedEncodingException {
-    // Arrange and Act
-    byte[] actualStripLeadingZeroesResult = ByteUtil.stripLeadingZeroes("AXAXAXAX".getBytes("UTF-8"));
-
-    // Assert
-    assertArrayEquals("AXAXAXAX".getBytes("UTF-8"), actualStripLeadingZeroesResult);
+    // Arrange, Act and Assert
+    assertArrayEquals(
+        "AXAXAXAX".getBytes("UTF-8"), ByteUtil.stripLeadingZeroes("AXAXAXAX".getBytes("UTF-8")));
   }
 
   /**
    * Test {@link ByteUtil#stripLeadingZeroes(byte[])}.
+   *
    * <ul>
-   *   <li>When {@code null}.</li>
-   *   <li>Then return {@code null}.</li>
+   *   <li>When {@code null}.
+   *   <li>Then return {@code null}.
    * </ul>
-   * <p>
-   * Method under test: {@link ByteUtil#stripLeadingZeroes(byte[])}
+   *
+   * <p>Method under test: {@link ByteUtil#stripLeadingZeroes(byte[])}
    */
   @Test
   @Category(MaintainedByDiffblue.class)
@@ -726,53 +776,54 @@ public class ByteUtilDiffblueTest {
 
   /**
    * Test {@link ByteUtil#stripEndingZeroes(byte[])}.
+   *
    * <ul>
-   *   <li>When {@code A}.</li>
-   *   <li>Then return {@code AXAXAXA} Bytes is {@code UTF-8}.</li>
+   *   <li>When {@code A}.
+   *   <li>Then return {@code AXAXAXA} Bytes is {@code UTF-8}.
    * </ul>
-   * <p>
-   * Method under test: {@link ByteUtil#stripEndingZeroes(byte[])}
+   *
+   * <p>Method under test: {@link ByteUtil#stripEndingZeroes(byte[])}
    */
   @Test
   @Category(MaintainedByDiffblue.class)
   @MethodsUnderTest({"byte[] ByteUtil.stripEndingZeroes(byte[])"})
-  public void testStripEndingZeroes_whenA_thenReturnAxaxaxaBytesIsUtf8() throws UnsupportedEncodingException {
-    // Arrange and Act
-    byte[] actualStripEndingZeroesResult = ByteUtil.stripEndingZeroes(new byte[]{'A', 'X', 'A', 'X', 'A', 'X', 'A', 0});
-
-    // Assert
-    assertArrayEquals("AXAXAXA".getBytes("UTF-8"), actualStripEndingZeroesResult);
+  public void testStripEndingZeroes_whenA_thenReturnAxaxaxaBytesIsUtf8()
+      throws UnsupportedEncodingException {
+    // Arrange, Act and Assert
+    assertArrayEquals(
+        "AXAXAXA".getBytes("UTF-8"),
+        ByteUtil.stripEndingZeroes(new byte[] {'A', 'X', 'A', 'X', 'A', 'X', 'A', 0}));
   }
 
   /**
    * Test {@link ByteUtil#stripEndingZeroes(byte[])}.
+   *
    * <ul>
-   *   <li>When {@code AXAXAXAX} Bytes is {@code UTF-8}.</li>
-   *   <li>Then return {@code AXAXAXAX} Bytes is {@code UTF-8}.</li>
+   *   <li>When {@code AXAXAXAX} Bytes is {@code UTF-8}.
+   *   <li>Then return {@code AXAXAXAX} Bytes is {@code UTF-8}.
    * </ul>
-   * <p>
-   * Method under test: {@link ByteUtil#stripEndingZeroes(byte[])}
+   *
+   * <p>Method under test: {@link ByteUtil#stripEndingZeroes(byte[])}
    */
   @Test
   @Category(MaintainedByDiffblue.class)
   @MethodsUnderTest({"byte[] ByteUtil.stripEndingZeroes(byte[])"})
   public void testStripEndingZeroes_whenAxaxaxaxBytesIsUtf8_thenReturnAxaxaxaxBytesIsUtf8()
       throws UnsupportedEncodingException {
-    // Arrange and Act
-    byte[] actualStripEndingZeroesResult = ByteUtil.stripEndingZeroes("AXAXAXAX".getBytes("UTF-8"));
-
-    // Assert
-    assertArrayEquals("AXAXAXAX".getBytes("UTF-8"), actualStripEndingZeroesResult);
+    // Arrange, Act and Assert
+    assertArrayEquals(
+        "AXAXAXAX".getBytes("UTF-8"), ByteUtil.stripEndingZeroes("AXAXAXAX".getBytes("UTF-8")));
   }
 
   /**
    * Test {@link ByteUtil#stripEndingZeroes(byte[])}.
+   *
    * <ul>
-   *   <li>When {@code null}.</li>
-   *   <li>Then return {@code null}.</li>
+   *   <li>When {@code null}.
+   *   <li>Then return {@code null}.
    * </ul>
-   * <p>
-   * Method under test: {@link ByteUtil#stripEndingZeroes(byte[])}
+   *
+   * <p>Method under test: {@link ByteUtil#stripEndingZeroes(byte[])}
    */
   @Test
   @Category(MaintainedByDiffblue.class)
@@ -784,30 +835,36 @@ public class ByteUtilDiffblueTest {
 
   /**
    * Test {@link ByteUtil#copyToArray(BigInteger)}.
+   *
    * <ul>
-   *   <li>When {@link DataWord#MAX_VALUE}.</li>
-   *   <li>Then return array of {@code byte} with minus one and minus one.</li>
+   *   <li>When {@link DataWord#MAX_VALUE}.
+   *   <li>Then return array of {@code byte} with minus one and minus one.
    * </ul>
-   * <p>
-   * Method under test: {@link ByteUtil#copyToArray(BigInteger)}
+   *
+   * <p>Method under test: {@link ByteUtil#copyToArray(BigInteger)}
    */
   @Test
   @Category(MaintainedByDiffblue.class)
   @MethodsUnderTest({"byte[] ByteUtil.copyToArray(BigInteger)"})
   public void testCopyToArray_whenMax_value_thenReturnArrayOfByteWithMinusOneAndMinusOne() {
     // Arrange, Act and Assert
-    assertArrayEquals(new byte[]{-1, -1, -1, -1, -1, -1, -1, -1, -1, -1, -1, -1, -1, -1, -1, -1, -1, -1, -1, -1, -1, -1,
-        -1, -1, -1, -1, -1, -1, -1, -1, -1, -1}, ByteUtil.copyToArray(DataWord.MAX_VALUE));
+    assertArrayEquals(
+        new byte[] {
+          -1, -1, -1, -1, -1, -1, -1, -1, -1, -1, -1, -1, -1, -1, -1, -1, -1, -1, -1, -1, -1, -1,
+          -1, -1, -1, -1, -1, -1, -1, -1, -1, -1
+        },
+        ByteUtil.copyToArray(DataWord.MAX_VALUE));
   }
 
   /**
    * Test {@link ByteUtil#copyToArray(BigInteger)}.
+   *
    * <ul>
-   *   <li>When {@code null}.</li>
-   *   <li>Then return array of {@code byte} with zero and zero.</li>
+   *   <li>When {@code null}.
+   *   <li>Then return array of {@code byte} with zero and zero.
    * </ul>
-   * <p>
-   * Method under test: {@link ByteUtil#copyToArray(BigInteger)}
+   *
+   * <p>Method under test: {@link ByteUtil#copyToArray(BigInteger)}
    */
   @Test
   @Category(MaintainedByDiffblue.class)
@@ -815,18 +872,75 @@ public class ByteUtilDiffblueTest {
   public void testCopyToArray_whenNull_thenReturnArrayOfByteWithZeroAndZero() {
     // Arrange, Act and Assert
     assertArrayEquals(
-        new byte[]{0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0},
+        new byte[] {
+          0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0,
+          0, 0
+        },
         ByteUtil.copyToArray(null));
   }
 
   /**
    * Test {@link ByteUtil#copyToArray(BigInteger)}.
+   *
    * <ul>
-   *   <li>When valueOf thirty-two.</li>
-   *   <li>Then return array of {@code byte} with zero and zero.</li>
+   *   <li>When valueOf {@link Long#MAX_VALUE}.
+   *   <li>Then return array of {@code byte} with zero and zero.
    * </ul>
-   * <p>
-   * Method under test: {@link ByteUtil#copyToArray(BigInteger)}
+   *
+   * <p>Method under test: {@link ByteUtil#copyToArray(BigInteger)}
+   */
+  @Test
+  @Category(MaintainedByDiffblue.class)
+  @MethodsUnderTest({"byte[] ByteUtil.copyToArray(BigInteger)"})
+  public void testCopyToArray_whenValueOfMax_value_thenReturnArrayOfByteWithZeroAndZero() {
+    // Arrange, Act and Assert
+    assertArrayEquals(
+        new byte[] {
+          0,
+          0,
+          0,
+          0,
+          0,
+          0,
+          0,
+          0,
+          0,
+          0,
+          0,
+          0,
+          0,
+          0,
+          0,
+          0,
+          0,
+          0,
+          0,
+          0,
+          0,
+          0,
+          0,
+          0,
+          Byte.MAX_VALUE,
+          -1,
+          -1,
+          -1,
+          -1,
+          -1,
+          -1,
+          -1
+        },
+        ByteUtil.copyToArray(BigInteger.valueOf(Long.MAX_VALUE)));
+  }
+
+  /**
+   * Test {@link ByteUtil#copyToArray(BigInteger)}.
+   *
+   * <ul>
+   *   <li>When valueOf thirty-two.
+   *   <li>Then return array of {@code byte} with zero and zero.
+   * </ul>
+   *
+   * <p>Method under test: {@link ByteUtil#copyToArray(BigInteger)}
    */
   @Test
   @Category(MaintainedByDiffblue.class)
@@ -834,157 +948,183 @@ public class ByteUtilDiffblueTest {
   public void testCopyToArray_whenValueOfThirtyTwo_thenReturnArrayOfByteWithZeroAndZero() {
     // Arrange, Act and Assert
     assertArrayEquals(
-        new byte[]{0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, ' '},
+        new byte[] {
+          0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0,
+          0, ' '
+        },
         ByteUtil.copyToArray(BigInteger.valueOf(32L)));
   }
 
   /**
    * Test {@link ByteUtil#numberOfLeadingZeros(byte[])}.
+   *
    * <ul>
-   *   <li>Then return one hundred forty-four.</li>
+   *   <li>Then return one hundred forty-four.
    * </ul>
-   * <p>
-   * Method under test: {@link ByteUtil#numberOfLeadingZeros(byte[])}
+   *
+   * <p>Method under test: {@link ByteUtil#numberOfLeadingZeros(byte[])}
    */
   @Test
   @Category(MaintainedByDiffblue.class)
   @MethodsUnderTest({"int ByteUtil.numberOfLeadingZeros(byte[])"})
   public void testNumberOfLeadingZeros_thenReturnOneHundredFortyFour() {
     // Arrange, Act and Assert
-    assertEquals(144, ByteUtil.numberOfLeadingZeros(new byte[]{0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0}));
+    assertEquals(
+        144,
+        ByteUtil.numberOfLeadingZeros(
+            new byte[] {0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0}));
   }
 
   /**
    * Test {@link ByteUtil#numberOfLeadingZeros(byte[])}.
+   *
    * <ul>
-   *   <li>When {@code AXAXAXAX} Bytes is {@code UTF-8}.</li>
-   *   <li>Then return one.</li>
+   *   <li>When {@code AXAXAXAX} Bytes is {@code UTF-8}.
+   *   <li>Then return one.
    * </ul>
-   * <p>
-   * Method under test: {@link ByteUtil#numberOfLeadingZeros(byte[])}
+   *
+   * <p>Method under test: {@link ByteUtil#numberOfLeadingZeros(byte[])}
    */
   @Test
   @Category(MaintainedByDiffblue.class)
   @MethodsUnderTest({"int ByteUtil.numberOfLeadingZeros(byte[])"})
-  public void testNumberOfLeadingZeros_whenAxaxaxaxBytesIsUtf8_thenReturnOne() throws UnsupportedEncodingException {
+  public void testNumberOfLeadingZeros_whenAxaxaxaxBytesIsUtf8_thenReturnOne()
+      throws UnsupportedEncodingException {
     // Arrange, Act and Assert
     assertEquals(1, ByteUtil.numberOfLeadingZeros("AXAXAXAX".getBytes("UTF-8")));
   }
 
   /**
    * Test {@link ByteUtil#parseBytes(byte[], int, int)}.
+   *
    * <ul>
-   *   <li>When {@code A}.</li>
-   *   <li>Then return empty array of {@code byte}.</li>
+   *   <li>When {@code A}.
+   *   <li>Then return empty array of {@code byte}.
    * </ul>
-   * <p>
-   * Method under test: {@link ByteUtil#parseBytes(byte[], int, int)}
+   *
+   * <p>Method under test: {@link ByteUtil#parseBytes(byte[], int, int)}
    */
   @Test
   @Category(MaintainedByDiffblue.class)
   @MethodsUnderTest({"byte[] ByteUtil.parseBytes(byte[], int, int)"})
   public void testParseBytes_whenA_thenReturnEmptyArrayOfByte() {
     // Arrange, Act and Assert
-    assertArrayEquals(new byte[]{}, ByteUtil.parseBytes(new byte[]{'A', 'X', 'A', 'X', 'A', 'X', 'A', 'X'}, 2, 0));
+    assertArrayEquals(
+        new byte[] {},
+        ByteUtil.parseBytes(new byte[] {'A', 'X', 'A', 'X', 'A', 'X', 'A', 'X'}, 2, 0));
   }
 
   /**
    * Test {@link ByteUtil#parseBytes(byte[], int, int)}.
+   *
    * <ul>
-   *   <li>When {@code AXAXAXAX} Bytes is {@code UTF-8}.</li>
-   *   <li>Then return {@code AXA} Bytes is {@code UTF-8}.</li>
+   *   <li>When {@code AXAXAXAX} Bytes is {@code UTF-8}.
+   *   <li>Then return {@code AXA} Bytes is {@code UTF-8}.
    * </ul>
-   * <p>
-   * Method under test: {@link ByteUtil#parseBytes(byte[], int, int)}
+   *
+   * <p>Method under test: {@link ByteUtil#parseBytes(byte[], int, int)}
    */
   @Test
   @Category(MaintainedByDiffblue.class)
   @MethodsUnderTest({"byte[] ByteUtil.parseBytes(byte[], int, int)"})
-  public void testParseBytes_whenAxaxaxaxBytesIsUtf8_thenReturnAxaBytesIsUtf8() throws UnsupportedEncodingException {
-    // Arrange and Act
-    byte[] actualParseBytesResult = ByteUtil.parseBytes("AXAXAXAX".getBytes("UTF-8"), 2, 3);
-
-    // Assert
-    assertArrayEquals("AXA".getBytes("UTF-8"), actualParseBytesResult);
+  public void testParseBytes_whenAxaxaxaxBytesIsUtf8_thenReturnAxaBytesIsUtf8()
+      throws UnsupportedEncodingException {
+    // Arrange, Act and Assert
+    assertArrayEquals(
+        "AXA".getBytes("UTF-8"), ByteUtil.parseBytes("AXAXAXAX".getBytes("UTF-8"), 2, 3));
   }
 
   /**
    * Test {@link ByteUtil#parseBytes(byte[], int, int)}.
+   *
    * <ul>
-   *   <li>When empty array of {@code byte}.</li>
-   *   <li>Then return empty array of {@code byte}.</li>
+   *   <li>When empty array of {@code byte}.
+   *   <li>Then return empty array of {@code byte}.
    * </ul>
-   * <p>
-   * Method under test: {@link ByteUtil#parseBytes(byte[], int, int)}
+   *
+   * <p>Method under test: {@link ByteUtil#parseBytes(byte[], int, int)}
    */
   @Test
   @Category(MaintainedByDiffblue.class)
   @MethodsUnderTest({"byte[] ByteUtil.parseBytes(byte[], int, int)"})
   public void testParseBytes_whenEmptyArrayOfByte_thenReturnEmptyArrayOfByte() {
     // Arrange, Act and Assert
-    assertArrayEquals(new byte[]{}, ByteUtil.parseBytes(new byte[]{}, 2, 3));
+    assertArrayEquals(new byte[] {}, ByteUtil.parseBytes(new byte[] {}, 2, 3));
   }
 
   /**
    * Test {@link ByteUtil#parseWord(byte[], int)} with {@code input}, {@code idx}.
+   *
    * <ul>
-   *   <li>When one.</li>
-   *   <li>Then return empty array of {@code byte}.</li>
+   *   <li>When one.
+   *   <li>Then return empty array of {@code byte}.
    * </ul>
-   * <p>
-   * Method under test: {@link ByteUtil#parseWord(byte[], int)}
+   *
+   * <p>Method under test: {@link ByteUtil#parseWord(byte[], int)}
    */
   @Test
   @Category(MaintainedByDiffblue.class)
   @MethodsUnderTest({"byte[] ByteUtil.parseWord(byte[], int)"})
-  public void testParseWordWithInputIdx_whenOne_thenReturnEmptyArrayOfByte() throws UnsupportedEncodingException {
+  public void testParseWordWithInputIdx_whenOne_thenReturnEmptyArrayOfByte()
+      throws UnsupportedEncodingException {
     // Arrange, Act and Assert
-    assertArrayEquals(new byte[]{}, ByteUtil.parseWord("AXAXAXAX".getBytes("UTF-8"), 1));
+    assertArrayEquals(new byte[] {}, ByteUtil.parseWord("AXAXAXAX".getBytes("UTF-8"), 1));
   }
 
   /**
    * Test {@link ByteUtil#parseWord(byte[], int)} with {@code input}, {@code idx}.
+   *
    * <ul>
-   *   <li>When zero.</li>
-   *   <li>Then return array of {@code byte} with {@code A} and {@code X}.</li>
+   *   <li>When zero.
+   *   <li>Then return array of {@code byte} with {@code A} and {@code X}.
    * </ul>
-   * <p>
-   * Method under test: {@link ByteUtil#parseWord(byte[], int)}
+   *
+   * <p>Method under test: {@link ByteUtil#parseWord(byte[], int)}
    */
   @Test
   @Category(MaintainedByDiffblue.class)
   @MethodsUnderTest({"byte[] ByteUtil.parseWord(byte[], int)"})
-  public void testParseWordWithInputIdx_whenZero_thenReturnArrayOfByteWithAAndX() throws UnsupportedEncodingException {
+  public void testParseWordWithInputIdx_whenZero_thenReturnArrayOfByteWithAAndX()
+      throws UnsupportedEncodingException {
     // Arrange, Act and Assert
-    assertArrayEquals(new byte[]{'A', 'X', 'A', 'X', 'A', 'X', 'A', 'X', 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0,
-        0, 0, 0, 0, 0, 0, 0, 0}, ByteUtil.parseWord("AXAXAXAX".getBytes("UTF-8"), 0));
+    assertArrayEquals(
+        new byte[] {
+          'A', 'X', 'A', 'X', 'A', 'X', 'A', 'X', 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0,
+          0, 0, 0, 0, 0, 0, 0
+        },
+        ByteUtil.parseWord("AXAXAXAX".getBytes("UTF-8"), 0));
   }
 
   /**
-   * Test {@link ByteUtil#parseWord(byte[], int, int)} with {@code input}, {@code offset}, {@code idx}.
+   * Test {@link ByteUtil#parseWord(byte[], int, int)} with {@code input}, {@code offset}, {@code
+   * idx}.
+   *
    * <ul>
-   *   <li>When two.</li>
-   *   <li>Then return empty array of {@code byte}.</li>
+   *   <li>When two.
+   *   <li>Then return empty array of {@code byte}.
    * </ul>
-   * <p>
-   * Method under test: {@link ByteUtil#parseWord(byte[], int, int)}
+   *
+   * <p>Method under test: {@link ByteUtil#parseWord(byte[], int, int)}
    */
   @Test
   @Category(MaintainedByDiffblue.class)
   @MethodsUnderTest({"byte[] ByteUtil.parseWord(byte[], int, int)"})
-  public void testParseWordWithInputOffsetIdx_whenTwo_thenReturnEmptyArrayOfByte() throws UnsupportedEncodingException {
+  public void testParseWordWithInputOffsetIdx_whenTwo_thenReturnEmptyArrayOfByte()
+      throws UnsupportedEncodingException {
     // Arrange, Act and Assert
-    assertArrayEquals(new byte[]{}, ByteUtil.parseWord("AXAXAXAX".getBytes("UTF-8"), 2, 1));
+    assertArrayEquals(new byte[] {}, ByteUtil.parseWord("AXAXAXAX".getBytes("UTF-8"), 2, 1));
   }
 
   /**
-   * Test {@link ByteUtil#parseWord(byte[], int, int)} with {@code input}, {@code offset}, {@code idx}.
+   * Test {@link ByteUtil#parseWord(byte[], int, int)} with {@code input}, {@code offset}, {@code
+   * idx}.
+   *
    * <ul>
-   *   <li>When zero.</li>
-   *   <li>Then return array of {@code byte} with {@code A} and {@code X}.</li>
+   *   <li>When zero.
+   *   <li>Then return array of {@code byte} with {@code A} and {@code X}.
    * </ul>
-   * <p>
-   * Method under test: {@link ByteUtil#parseWord(byte[], int, int)}
+   *
+   * <p>Method under test: {@link ByteUtil#parseWord(byte[], int, int)}
    */
   @Test
   @Category(MaintainedByDiffblue.class)
@@ -992,292 +1132,335 @@ public class ByteUtilDiffblueTest {
   public void testParseWordWithInputOffsetIdx_whenZero_thenReturnArrayOfByteWithAAndX()
       throws UnsupportedEncodingException {
     // Arrange, Act and Assert
-    assertArrayEquals(new byte[]{'A', 'X', 'A', 'X', 'A', 'X', 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0,
-        0, 0, 0, 0, 0, 0, 0}, ByteUtil.parseWord("AXAXAXAX".getBytes("UTF-8"), 2, 0));
+    assertArrayEquals(
+        new byte[] {
+          'A', 'X', 'A', 'X', 'A', 'X', 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0,
+          0, 0, 0, 0, 0, 0
+        },
+        ByteUtil.parseWord("AXAXAXAX".getBytes("UTF-8"), 2, 0));
   }
 
   /**
    * Test {@link ByteUtil#greater(byte[], byte[])}.
+   *
    * <ul>
-   *   <li>When {@code AXAXAXAX} Bytes is {@code UTF-8}.</li>
-   *   <li>Then return {@code false}.</li>
+   *   <li>When {@code AXAXAXAX} Bytes is {@code UTF-8}.
+   *   <li>Then return {@code false}.
    * </ul>
-   * <p>
-   * Method under test: {@link ByteUtil#greater(byte[], byte[])}
+   *
+   * <p>Method under test: {@link ByteUtil#greater(byte[], byte[])}
    */
   @Test
   @Category(MaintainedByDiffblue.class)
   @MethodsUnderTest({"boolean ByteUtil.greater(byte[], byte[])"})
-  public void testGreater_whenAxaxaxaxBytesIsUtf8_thenReturnFalse() throws UnsupportedEncodingException {
-    // Arrange
-    byte[] bytes1 = "AXAXAXAX".getBytes("UTF-8");
+  public void testGreater_whenAxaxaxaxBytesIsUtf8_thenReturnFalse()
+      throws UnsupportedEncodingException {
+    // Arrange and Act
+    boolean actualGreaterResult =
+        ByteUtil.greater("AXAXAXAX".getBytes("UTF-8"), "AXAXAXAX".getBytes("UTF-8"));
 
-    // Act and Assert
-    assertFalse(ByteUtil.greater(bytes1, "AXAXAXAX".getBytes("UTF-8")));
+    // Assert
+    assertFalse(actualGreaterResult);
   }
 
   /**
    * Test {@link ByteUtil#greater(byte[], byte[])}.
+   *
    * <ul>
-   *   <li>When {@code XAXAXAX} Bytes is {@code UTF-8}.</li>
-   *   <li>Then return {@code false}.</li>
+   *   <li>When {@code XAXAXAX} Bytes is {@code UTF-8}.
+   *   <li>Then return {@code false}.
    * </ul>
-   * <p>
-   * Method under test: {@link ByteUtil#greater(byte[], byte[])}
+   *
+   * <p>Method under test: {@link ByteUtil#greater(byte[], byte[])}
    */
   @Test
   @Category(MaintainedByDiffblue.class)
   @MethodsUnderTest({"boolean ByteUtil.greater(byte[], byte[])"})
-  public void testGreater_whenXaxaxaxBytesIsUtf8_thenReturnFalse() throws UnsupportedEncodingException {
-    // Arrange
-    byte[] bytes1 = "\bXAXAXAX".getBytes("UTF-8");
+  public void testGreater_whenXaxaxaxBytesIsUtf8_thenReturnFalse()
+      throws UnsupportedEncodingException {
+    // Arrange and Act
+    boolean actualGreaterResult =
+        ByteUtil.greater("\bXAXAXAX".getBytes("UTF-8"), "AXAXAXAX".getBytes("UTF-8"));
 
-    // Act and Assert
-    assertFalse(ByteUtil.greater(bytes1, "AXAXAXAX".getBytes("UTF-8")));
+    // Assert
+    assertFalse(actualGreaterResult);
   }
 
   /**
    * Test {@link ByteUtil#greater(byte[], byte[])}.
+   *
    * <ul>
-   *   <li>When {@code XXAXAXAX} Bytes is {@code UTF-8}.</li>
-   *   <li>Then return {@code true}.</li>
+   *   <li>When {@code XXAXAXAX} Bytes is {@code UTF-8}.
+   *   <li>Then return {@code true}.
    * </ul>
-   * <p>
-   * Method under test: {@link ByteUtil#greater(byte[], byte[])}
+   *
+   * <p>Method under test: {@link ByteUtil#greater(byte[], byte[])}
    */
   @Test
   @Category(MaintainedByDiffblue.class)
   @MethodsUnderTest({"boolean ByteUtil.greater(byte[], byte[])"})
-  public void testGreater_whenXxaxaxaxBytesIsUtf8_thenReturnTrue() throws UnsupportedEncodingException {
-    // Arrange
-    byte[] bytes1 = "XXAXAXAX".getBytes("UTF-8");
+  public void testGreater_whenXxaxaxaxBytesIsUtf8_thenReturnTrue()
+      throws UnsupportedEncodingException {
+    // Arrange and Act
+    boolean actualGreaterResult =
+        ByteUtil.greater("XXAXAXAX".getBytes("UTF-8"), "AXAXAXAX".getBytes("UTF-8"));
 
-    // Act and Assert
-    assertTrue(ByteUtil.greater(bytes1, "AXAXAXAX".getBytes("UTF-8")));
+    // Assert
+    assertTrue(actualGreaterResult);
   }
 
   /**
    * Test {@link ByteUtil#greaterOrEquals(byte[], byte[])}.
+   *
    * <ul>
-   *   <li>When {@code AXAXAXAX} Bytes is {@code UTF-8}.</li>
-   *   <li>Then return {@code true}.</li>
+   *   <li>When {@code AXAXAXAX} Bytes is {@code UTF-8}.
+   *   <li>Then return {@code true}.
    * </ul>
-   * <p>
-   * Method under test: {@link ByteUtil#greaterOrEquals(byte[], byte[])}
+   *
+   * <p>Method under test: {@link ByteUtil#greaterOrEquals(byte[], byte[])}
    */
   @Test
   @Category(MaintainedByDiffblue.class)
   @MethodsUnderTest({"boolean ByteUtil.greaterOrEquals(byte[], byte[])"})
-  public void testGreaterOrEquals_whenAxaxaxaxBytesIsUtf8_thenReturnTrue() throws UnsupportedEncodingException {
-    // Arrange
-    byte[] bytes1 = "AXAXAXAX".getBytes("UTF-8");
+  public void testGreaterOrEquals_whenAxaxaxaxBytesIsUtf8_thenReturnTrue()
+      throws UnsupportedEncodingException {
+    // Arrange and Act
+    boolean actualGreaterOrEqualsResult =
+        ByteUtil.greaterOrEquals("AXAXAXAX".getBytes("UTF-8"), "AXAXAXAX".getBytes("UTF-8"));
 
-    // Act and Assert
-    assertTrue(ByteUtil.greaterOrEquals(bytes1, "AXAXAXAX".getBytes("UTF-8")));
+    // Assert
+    assertTrue(actualGreaterOrEqualsResult);
   }
 
   /**
    * Test {@link ByteUtil#greaterOrEquals(byte[], byte[])}.
+   *
    * <ul>
-   *   <li>When {@code XAXAXAX} Bytes is {@code UTF-8}.</li>
-   *   <li>Then return {@code false}.</li>
+   *   <li>When {@code XAXAXAX} Bytes is {@code UTF-8}.
+   *   <li>Then return {@code false}.
    * </ul>
-   * <p>
-   * Method under test: {@link ByteUtil#greaterOrEquals(byte[], byte[])}
+   *
+   * <p>Method under test: {@link ByteUtil#greaterOrEquals(byte[], byte[])}
    */
   @Test
   @Category(MaintainedByDiffblue.class)
   @MethodsUnderTest({"boolean ByteUtil.greaterOrEquals(byte[], byte[])"})
-  public void testGreaterOrEquals_whenXaxaxaxBytesIsUtf8_thenReturnFalse() throws UnsupportedEncodingException {
-    // Arrange
-    byte[] bytes1 = "\bXAXAXAX".getBytes("UTF-8");
+  public void testGreaterOrEquals_whenXaxaxaxBytesIsUtf8_thenReturnFalse()
+      throws UnsupportedEncodingException {
+    // Arrange and Act
+    boolean actualGreaterOrEqualsResult =
+        ByteUtil.greaterOrEquals("\bXAXAXAX".getBytes("UTF-8"), "AXAXAXAX".getBytes("UTF-8"));
 
-    // Act and Assert
-    assertFalse(ByteUtil.greaterOrEquals(bytes1, "AXAXAXAX".getBytes("UTF-8")));
+    // Assert
+    assertFalse(actualGreaterOrEqualsResult);
   }
 
   /**
    * Test {@link ByteUtil#less(byte[], byte[])}.
+   *
    * <ul>
-   *   <li>When {@code AXAXAXAX} Bytes is {@code UTF-8}.</li>
-   *   <li>Then return {@code false}.</li>
+   *   <li>When {@code AXAXAXAX} Bytes is {@code UTF-8}.
+   *   <li>Then return {@code false}.
    * </ul>
-   * <p>
-   * Method under test: {@link ByteUtil#less(byte[], byte[])}
+   *
+   * <p>Method under test: {@link ByteUtil#less(byte[], byte[])}
    */
   @Test
   @Category(MaintainedByDiffblue.class)
   @MethodsUnderTest({"boolean ByteUtil.less(byte[], byte[])"})
-  public void testLess_whenAxaxaxaxBytesIsUtf8_thenReturnFalse() throws UnsupportedEncodingException {
-    // Arrange
-    byte[] bytes1 = "AXAXAXAX".getBytes("UTF-8");
+  public void testLess_whenAxaxaxaxBytesIsUtf8_thenReturnFalse()
+      throws UnsupportedEncodingException {
+    // Arrange and Act
+    boolean actualLessResult =
+        ByteUtil.less("AXAXAXAX".getBytes("UTF-8"), "AXAXAXAX".getBytes("UTF-8"));
 
-    // Act and Assert
-    assertFalse(ByteUtil.less(bytes1, "AXAXAXAX".getBytes("UTF-8")));
+    // Assert
+    assertFalse(actualLessResult);
   }
 
   /**
    * Test {@link ByteUtil#less(byte[], byte[])}.
+   *
    * <ul>
-   *   <li>When {@code XAXAXAX} Bytes is {@code UTF-8}.</li>
-   *   <li>Then return {@code true}.</li>
+   *   <li>When {@code XAXAXAX} Bytes is {@code UTF-8}.
+   *   <li>Then return {@code true}.
    * </ul>
-   * <p>
-   * Method under test: {@link ByteUtil#less(byte[], byte[])}
+   *
+   * <p>Method under test: {@link ByteUtil#less(byte[], byte[])}
    */
   @Test
   @Category(MaintainedByDiffblue.class)
   @MethodsUnderTest({"boolean ByteUtil.less(byte[], byte[])"})
   public void testLess_whenXaxaxaxBytesIsUtf8_thenReturnTrue() throws UnsupportedEncodingException {
-    // Arrange
-    byte[] bytes1 = "\bXAXAXAX".getBytes("UTF-8");
+    // Arrange and Act
+    boolean actualLessResult =
+        ByteUtil.less("\bXAXAXAX".getBytes("UTF-8"), "AXAXAXAX".getBytes("UTF-8"));
 
-    // Act and Assert
-    assertTrue(ByteUtil.less(bytes1, "AXAXAXAX".getBytes("UTF-8")));
+    // Assert
+    assertTrue(actualLessResult);
   }
 
   /**
    * Test {@link ByteUtil#lessOrEquals(byte[], byte[])}.
+   *
    * <ul>
-   *   <li>When {@code AXAXAXAX} Bytes is {@code UTF-8}.</li>
-   *   <li>Then return {@code true}.</li>
+   *   <li>When {@code AXAXAXAX} Bytes is {@code UTF-8}.
+   *   <li>Then return {@code true}.
    * </ul>
-   * <p>
-   * Method under test: {@link ByteUtil#lessOrEquals(byte[], byte[])}
+   *
+   * <p>Method under test: {@link ByteUtil#lessOrEquals(byte[], byte[])}
    */
   @Test
   @Category(MaintainedByDiffblue.class)
   @MethodsUnderTest({"boolean ByteUtil.lessOrEquals(byte[], byte[])"})
-  public void testLessOrEquals_whenAxaxaxaxBytesIsUtf8_thenReturnTrue() throws UnsupportedEncodingException {
-    // Arrange
-    byte[] bytes1 = "AXAXAXAX".getBytes("UTF-8");
+  public void testLessOrEquals_whenAxaxaxaxBytesIsUtf8_thenReturnTrue()
+      throws UnsupportedEncodingException {
+    // Arrange and Act
+    boolean actualLessOrEqualsResult =
+        ByteUtil.lessOrEquals("AXAXAXAX".getBytes("UTF-8"), "AXAXAXAX".getBytes("UTF-8"));
 
-    // Act and Assert
-    assertTrue(ByteUtil.lessOrEquals(bytes1, "AXAXAXAX".getBytes("UTF-8")));
+    // Assert
+    assertTrue(actualLessOrEqualsResult);
   }
 
   /**
    * Test {@link ByteUtil#lessOrEquals(byte[], byte[])}.
+   *
    * <ul>
-   *   <li>When {@code XAXAXAX} Bytes is {@code UTF-8}.</li>
-   *   <li>Then return {@code true}.</li>
+   *   <li>When {@code XAXAXAX} Bytes is {@code UTF-8}.
+   *   <li>Then return {@code true}.
    * </ul>
-   * <p>
-   * Method under test: {@link ByteUtil#lessOrEquals(byte[], byte[])}
+   *
+   * <p>Method under test: {@link ByteUtil#lessOrEquals(byte[], byte[])}
    */
   @Test
   @Category(MaintainedByDiffblue.class)
   @MethodsUnderTest({"boolean ByteUtil.lessOrEquals(byte[], byte[])"})
-  public void testLessOrEquals_whenXaxaxaxBytesIsUtf8_thenReturnTrue() throws UnsupportedEncodingException {
-    // Arrange
-    byte[] bytes1 = "\bXAXAXAX".getBytes("UTF-8");
+  public void testLessOrEquals_whenXaxaxaxBytesIsUtf8_thenReturnTrue()
+      throws UnsupportedEncodingException {
+    // Arrange and Act
+    boolean actualLessOrEqualsResult =
+        ByteUtil.lessOrEquals("\bXAXAXAX".getBytes("UTF-8"), "AXAXAXAX".getBytes("UTF-8"));
 
-    // Act and Assert
-    assertTrue(ByteUtil.lessOrEquals(bytes1, "AXAXAXAX".getBytes("UTF-8")));
+    // Assert
+    assertTrue(actualLessOrEqualsResult);
   }
 
   /**
    * Test {@link ByteUtil#lessOrEquals(byte[], byte[])}.
+   *
    * <ul>
-   *   <li>When {@code XXAXAXAX} Bytes is {@code UTF-8}.</li>
-   *   <li>Then return {@code false}.</li>
+   *   <li>When {@code XXAXAXAX} Bytes is {@code UTF-8}.
+   *   <li>Then return {@code false}.
    * </ul>
-   * <p>
-   * Method under test: {@link ByteUtil#lessOrEquals(byte[], byte[])}
+   *
+   * <p>Method under test: {@link ByteUtil#lessOrEquals(byte[], byte[])}
    */
   @Test
   @Category(MaintainedByDiffblue.class)
   @MethodsUnderTest({"boolean ByteUtil.lessOrEquals(byte[], byte[])"})
-  public void testLessOrEquals_whenXxaxaxaxBytesIsUtf8_thenReturnFalse() throws UnsupportedEncodingException {
-    // Arrange
-    byte[] bytes1 = "XXAXAXAX".getBytes("UTF-8");
+  public void testLessOrEquals_whenXxaxaxaxBytesIsUtf8_thenReturnFalse()
+      throws UnsupportedEncodingException {
+    // Arrange and Act
+    boolean actualLessOrEqualsResult =
+        ByteUtil.lessOrEquals("XXAXAXAX".getBytes("UTF-8"), "AXAXAXAX".getBytes("UTF-8"));
 
-    // Act and Assert
-    assertFalse(ByteUtil.lessOrEquals(bytes1, "AXAXAXAX".getBytes("UTF-8")));
+    // Assert
+    assertFalse(actualLessOrEqualsResult);
   }
 
   /**
    * Test {@link ByteUtil#equals(byte[], byte[])} with {@code byte[]}, {@code byte[]}.
+   *
    * <ul>
-   *   <li>When {@code AXAXAXAX} Bytes is {@code UTF-8}.</li>
-   *   <li>Then return {@code true}.</li>
+   *   <li>When {@code AXAXAXAX} Bytes is {@code UTF-8}.
+   *   <li>Then return {@code true}.
    * </ul>
-   * <p>
-   * Method under test: {@link ByteUtil#equals(byte[], byte[])}
+   *
+   * <p>Method under test: {@link ByteUtil#equals(byte[], byte[])}
    */
   @Test
   @Category(MaintainedByDiffblue.class)
   @MethodsUnderTest({"boolean ByteUtil.equals(byte[], byte[])"})
-  public void testEqualsWithByteByte_whenAxaxaxaxBytesIsUtf8_thenReturnTrue() throws UnsupportedEncodingException {
-    // Arrange
-    byte[] bytes1 = "AXAXAXAX".getBytes("UTF-8");
+  public void testEqualsWithByteByte_whenAxaxaxaxBytesIsUtf8_thenReturnTrue()
+      throws UnsupportedEncodingException {
+    // Arrange and Act
+    boolean actualEqualsResult =
+        ByteUtil.equals("AXAXAXAX".getBytes("UTF-8"), "AXAXAXAX".getBytes("UTF-8"));
 
-    // Act and Assert
-    assertTrue(ByteUtil.equals(bytes1, "AXAXAXAX".getBytes("UTF-8")));
+    // Assert
+    assertTrue(actualEqualsResult);
   }
 
   /**
    * Test {@link ByteUtil#equals(byte[], byte[])} with {@code byte[]}, {@code byte[]}.
+   *
    * <ul>
-   *   <li>When {@code XAXAXAX} Bytes is {@code UTF-8}.</li>
-   *   <li>Then return {@code false}.</li>
+   *   <li>When {@code XAXAXAX} Bytes is {@code UTF-8}.
+   *   <li>Then return {@code false}.
    * </ul>
-   * <p>
-   * Method under test: {@link ByteUtil#equals(byte[], byte[])}
+   *
+   * <p>Method under test: {@link ByteUtil#equals(byte[], byte[])}
    */
   @Test
   @Category(MaintainedByDiffblue.class)
   @MethodsUnderTest({"boolean ByteUtil.equals(byte[], byte[])"})
-  public void testEqualsWithByteByte_whenXaxaxaxBytesIsUtf8_thenReturnFalse() throws UnsupportedEncodingException {
-    // Arrange
-    byte[] bytes1 = "\bXAXAXAX".getBytes("UTF-8");
+  public void testEqualsWithByteByte_whenXaxaxaxBytesIsUtf8_thenReturnFalse()
+      throws UnsupportedEncodingException {
+    // Arrange and Act
+    boolean actualEqualsResult =
+        ByteUtil.equals("\bXAXAXAX".getBytes("UTF-8"), "AXAXAXAX".getBytes("UTF-8"));
 
-    // Act and Assert
-    assertFalse(ByteUtil.equals(bytes1, "AXAXAXAX".getBytes("UTF-8")));
+    // Assert
+    assertFalse(actualEqualsResult);
   }
 
   /**
    * Test {@link ByteUtil#isNullOrZeroArray(byte[])}.
+   *
    * <ul>
-   *   <li>When {@code AXAXAXAX} Bytes is {@code UTF-8}.</li>
-   *   <li>Then return {@code false}.</li>
+   *   <li>When {@code AXAXAXAX} Bytes is {@code UTF-8}.
+   *   <li>Then return {@code false}.
    * </ul>
-   * <p>
-   * Method under test: {@link ByteUtil#isNullOrZeroArray(byte[])}
+   *
+   * <p>Method under test: {@link ByteUtil#isNullOrZeroArray(byte[])}
    */
   @Test
   @Category(MaintainedByDiffblue.class)
   @MethodsUnderTest({"boolean ByteUtil.isNullOrZeroArray(byte[])"})
-  public void testIsNullOrZeroArray_whenAxaxaxaxBytesIsUtf8_thenReturnFalse() throws UnsupportedEncodingException {
+  public void testIsNullOrZeroArray_whenAxaxaxaxBytesIsUtf8_thenReturnFalse()
+      throws UnsupportedEncodingException {
     // Arrange, Act and Assert
     assertFalse(ByteUtil.isNullOrZeroArray("AXAXAXAX".getBytes("UTF-8")));
   }
 
   /**
    * Test {@link ByteUtil#isNullOrZeroArray(byte[])}.
+   *
    * <ul>
-   *   <li>When empty array of {@code byte}.</li>
-   *   <li>Then return {@code true}.</li>
+   *   <li>When empty array of {@code byte}.
+   *   <li>Then return {@code true}.
    * </ul>
-   * <p>
-   * Method under test: {@link ByteUtil#isNullOrZeroArray(byte[])}
+   *
+   * <p>Method under test: {@link ByteUtil#isNullOrZeroArray(byte[])}
    */
   @Test
   @Category(MaintainedByDiffblue.class)
   @MethodsUnderTest({"boolean ByteUtil.isNullOrZeroArray(byte[])"})
   public void testIsNullOrZeroArray_whenEmptyArrayOfByte_thenReturnTrue() {
     // Arrange, Act and Assert
-    assertTrue(ByteUtil.isNullOrZeroArray(new byte[]{}));
+    assertTrue(ByteUtil.isNullOrZeroArray(new byte[] {}));
   }
 
   /**
    * Test {@link ByteUtil#isNullOrZeroArray(byte[])}.
+   *
    * <ul>
-   *   <li>When {@code null}.</li>
-   *   <li>Then return {@code true}.</li>
+   *   <li>When {@code null}.
+   *   <li>Then return {@code true}.
    * </ul>
-   * <p>
-   * Method under test: {@link ByteUtil#isNullOrZeroArray(byte[])}
+   *
+   * <p>Method under test: {@link ByteUtil#isNullOrZeroArray(byte[])}
    */
   @Test
   @Category(MaintainedByDiffblue.class)
@@ -1289,73 +1472,82 @@ public class ByteUtilDiffblueTest {
 
   /**
    * Test {@link ByteUtil#compare(byte[], byte[])}.
+   *
    * <ul>
-   *   <li>When {@code AXAXAXAX} Bytes is {@code UTF-8}.</li>
-   *   <li>Then return zero.</li>
+   *   <li>When {@code AXAXAXAX} Bytes is {@code UTF-8}.
+   *   <li>Then return zero.
    * </ul>
-   * <p>
-   * Method under test: {@link ByteUtil#compare(byte[], byte[])}
+   *
+   * <p>Method under test: {@link ByteUtil#compare(byte[], byte[])}
    */
   @Test
   @Category(MaintainedByDiffblue.class)
   @MethodsUnderTest({"int ByteUtil.compare(byte[], byte[])"})
-  public void testCompare_whenAxaxaxaxBytesIsUtf8_thenReturnZero() throws UnsupportedEncodingException {
-    // Arrange
-    byte[] bytes1 = "AXAXAXAX".getBytes("UTF-8");
+  public void testCompare_whenAxaxaxaxBytesIsUtf8_thenReturnZero()
+      throws UnsupportedEncodingException {
+    // Arrange and Act
+    int actualCompareResult =
+        ByteUtil.compare("AXAXAXAX".getBytes("UTF-8"), "AXAXAXAX".getBytes("UTF-8"));
 
-    // Act and Assert
-    assertEquals(0, ByteUtil.compare(bytes1, "AXAXAXAX".getBytes("UTF-8")));
+    // Assert
+    assertEquals(0, actualCompareResult);
   }
 
   /**
    * Test {@link ByteUtil#compare(byte[], byte[])}.
+   *
    * <ul>
-   *   <li>When {@code XAXAXAX} Bytes is {@code UTF-8}.</li>
-   *   <li>Then return minus fifty-seven.</li>
+   *   <li>When {@code XAXAXAX} Bytes is {@code UTF-8}.
+   *   <li>Then return minus fifty-seven.
    * </ul>
-   * <p>
-   * Method under test: {@link ByteUtil#compare(byte[], byte[])}
+   *
+   * <p>Method under test: {@link ByteUtil#compare(byte[], byte[])}
    */
   @Test
   @Category(MaintainedByDiffblue.class)
   @MethodsUnderTest({"int ByteUtil.compare(byte[], byte[])"})
-  public void testCompare_whenXaxaxaxBytesIsUtf8_thenReturnMinusFiftySeven() throws UnsupportedEncodingException {
-    // Arrange
-    byte[] bytes1 = "\bXAXAXAX".getBytes("UTF-8");
+  public void testCompare_whenXaxaxaxBytesIsUtf8_thenReturnMinusFiftySeven()
+      throws UnsupportedEncodingException {
+    // Arrange and Act
+    int actualCompareResult =
+        ByteUtil.compare("\bXAXAXAX".getBytes("UTF-8"), "AXAXAXAX".getBytes("UTF-8"));
 
-    // Act and Assert
-    assertEquals(-57, ByteUtil.compare(bytes1, "AXAXAXAX".getBytes("UTF-8")));
+    // Assert
+    assertEquals(-57, actualCompareResult);
   }
 
   /**
    * Test {@link ByteUtil#hexToBytes(String)}.
+   *
    * <ul>
-   *   <li>When {@code 0123456789ABCDEF}.</li>
-   *   <li>Then return array of {@code byte} with one and {@code #}.</li>
+   *   <li>When {@code 0123456789ABCDEF}.
+   *   <li>Then return array of {@code byte} with one and {@code #}.
    * </ul>
-   * <p>
-   * Method under test: {@link ByteUtil#hexToBytes(String)}
+   *
+   * <p>Method under test: {@link ByteUtil#hexToBytes(String)}
    */
   @Test
   @Category(MaintainedByDiffblue.class)
   @MethodsUnderTest({"byte[] ByteUtil.hexToBytes(String)"})
   public void testHexToBytes_when0123456789abcdef_thenReturnArrayOfByteWithOneAndNumberSign() {
     // Arrange, Act and Assert
-    assertArrayEquals(new byte[]{1, '#', 'E', 'g', -119, -85, -51, -17}, ByteUtil.hexToBytes("0123456789ABCDEF"));
+    assertArrayEquals(
+        new byte[] {1, '#', 'E', 'g', -119, -85, -51, -17},
+        ByteUtil.hexToBytes("0123456789ABCDEF"));
   }
 
   /**
    * Test {@link ByteUtil#convertBytesVectorToVector(byte[])}.
-   * <p>
-   * Method under test: {@link ByteUtil#convertBytesVectorToVector(byte[])}
+   *
+   * <p>Method under test: {@link ByteUtil#convertBytesVectorToVector(byte[])}
    */
   @Test
   @Category(MaintainedByDiffblue.class)
   @MethodsUnderTest({"List ByteUtil.convertBytesVectorToVector(byte[])"})
   public void testConvertBytesVectorToVector() throws UnsupportedEncodingException {
     // Arrange and Act
-    List<Boolean> actualConvertBytesVectorToVectorResult = ByteUtil
-        .convertBytesVectorToVector("AXAXAXAX".getBytes("UTF-8"));
+    List<Boolean> actualConvertBytesVectorToVectorResult =
+        ByteUtil.convertBytesVectorToVector("AXAXAXAX".getBytes("UTF-8"));
 
     // Assert
     assertEquals(Double.SIZE, actualConvertBytesVectorToVectorResult.size());
@@ -1375,8 +1567,8 @@ public class ByteUtilDiffblueTest {
 
   /**
    * Test {@link ByteUtil#reverse(byte[])}.
-   * <p>
-   * Method under test: {@link ByteUtil#reverse(byte[])}
+   *
+   * <p>Method under test: {@link ByteUtil#reverse(byte[])}
    */
   @Test
   @Category(MaintainedByDiffblue.class)
@@ -1394,11 +1586,12 @@ public class ByteUtilDiffblueTest {
 
   /**
    * Test {@link ByteUtil#longTo32Bytes(long)}.
+   *
    * <ul>
-   *   <li>When forty-two.</li>
+   *   <li>When forty-two.
    * </ul>
-   * <p>
-   * Method under test: {@link ByteUtil#longTo32Bytes(long)}
+   *
+   * <p>Method under test: {@link ByteUtil#longTo32Bytes(long)}
    */
   @Test
   @Category(MaintainedByDiffblue.class)
@@ -1406,17 +1599,21 @@ public class ByteUtilDiffblueTest {
   public void testLongTo32Bytes_whenFortyTwo() {
     // Arrange, Act and Assert
     assertArrayEquals(
-        new byte[]{0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, '*'},
+        new byte[] {
+          0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0,
+          0, '*'
+        },
         ByteUtil.longTo32Bytes(42L));
   }
 
   /**
    * Test {@link ByteUtil#longTo32Bytes(long)}.
+   *
    * <ul>
-   *   <li>When zero.</li>
+   *   <li>When zero.
    * </ul>
-   * <p>
-   * Method under test: {@link ByteUtil#longTo32Bytes(long)}
+   *
+   * <p>Method under test: {@link ByteUtil#longTo32Bytes(long)}
    */
   @Test
   @Category(MaintainedByDiffblue.class)
@@ -1424,47 +1621,50 @@ public class ByteUtilDiffblueTest {
   public void testLongTo32Bytes_whenZero() {
     // Arrange, Act and Assert
     assertArrayEquals(
-        new byte[]{0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0},
+        new byte[] {
+          0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0,
+          0, 0
+        },
         ByteUtil.longTo32Bytes(0L));
   }
 
   /**
    * Test {@link ByteUtil#setBit(byte[], int, int)}.
+   *
    * <ul>
-   *   <li>When {@code A}.</li>
-   *   <li>Then return {@code AXAXAXAZ} Bytes is {@code UTF-8}.</li>
+   *   <li>When {@code A}.
+   *   <li>Then return {@code AXAXAXAZ} Bytes is {@code UTF-8}.
    * </ul>
-   * <p>
-   * Method under test: {@link ByteUtil#setBit(byte[], int, int)}
+   *
+   * <p>Method under test: {@link ByteUtil#setBit(byte[], int, int)}
    */
   @Test
   @Category(MaintainedByDiffblue.class)
   @MethodsUnderTest({"byte[] ByteUtil.setBit(byte[], int, int)"})
   public void testSetBit_whenA_thenReturnAxaxaxazBytesIsUtf8() throws UnsupportedEncodingException {
     // Arrange
-    byte[] data = new byte[]{'A', 'X', 'A', 'X', 'A', 'X', 'A', 'X'};
+    byte[] data = new byte[] {'A', 'X', 'A', 'X', 'A', 'X', 'A', 'X'};
 
-    // Act
-    byte[] actualSetBitResult = ByteUtil.setBit(data, 1, 1);
-
-    // Assert
-    assertArrayEquals("AXAXAXAZ".getBytes("UTF-8"), actualSetBitResult);
+    // Act and Assert
+    assertArrayEquals("AXAXAXAZ".getBytes("UTF-8"), ByteUtil.setBit(data, 1, 1));
     assertArrayEquals("AXAXAXAZ".getBytes("UTF-8"), data);
   }
 
   /**
    * Test {@link ByteUtil#setBit(byte[], int, int)}.
+   *
    * <ul>
-   *   <li>When {@code AXAXAXAX} Bytes is {@code UTF-8}.</li>
-   *   <li>Then {@code AXAXAXAX} Bytes is {@code UTF-8}.</li>
+   *   <li>When {@code AXAXAXAX} Bytes is {@code UTF-8}.
+   *   <li>Then {@code AXAXAXAX} Bytes is {@code UTF-8}.
    * </ul>
-   * <p>
-   * Method under test: {@link ByteUtil#setBit(byte[], int, int)}
+   *
+   * <p>Method under test: {@link ByteUtil#setBit(byte[], int, int)}
    */
   @Test
   @Category(MaintainedByDiffblue.class)
   @MethodsUnderTest({"byte[] ByteUtil.setBit(byte[], int, int)"})
-  public void testSetBit_whenAxaxaxaxBytesIsUtf8_thenAxaxaxaxBytesIsUtf8() throws UnsupportedEncodingException {
+  public void testSetBit_whenAxaxaxaxBytesIsUtf8_thenAxaxaxaxBytesIsUtf8()
+      throws UnsupportedEncodingException {
     // Arrange
     byte[] data = "AXAXAXAX".getBytes("UTF-8");
 
@@ -1478,32 +1678,34 @@ public class ByteUtilDiffblueTest {
 
   /**
    * Test {@link ByteUtil#setBit(byte[], int, int)}.
+   *
    * <ul>
-   *   <li>When empty array of {@code byte}.</li>
-   *   <li>Then throw {@link Error}.</li>
+   *   <li>When empty array of {@code byte}.
+   *   <li>Then throw {@link Error}.
    * </ul>
-   * <p>
-   * Method under test: {@link ByteUtil#setBit(byte[], int, int)}
+   *
+   * <p>Method under test: {@link ByteUtil#setBit(byte[], int, int)}
    */
   @Test
   @Category(MaintainedByDiffblue.class)
   @MethodsUnderTest({"byte[] ByteUtil.setBit(byte[], int, int)"})
   public void testSetBit_whenEmptyArrayOfByte_thenThrowError() {
     // Arrange, Act and Assert
-    assertThrows(Error.class, () -> ByteUtil.setBit(new byte[]{}, 1, DecodeUtil.ADDRESS_SIZE));
+    assertThrows(Error.class, () -> ByteUtil.setBit(new byte[] {}, 1, DecodeUtil.ADDRESS_SIZE));
   }
 
   /**
    * Test {@link ByteUtil#compress(byte[])}.
-   * <p>
-   * Method under test: {@link ByteUtil#compress(byte[])}
+   *
+   * <p>Method under test: {@link ByteUtil#compress(byte[])}
    */
   @Test
   @Category(MaintainedByDiffblue.class)
   @MethodsUnderTest({"byte[] ByteUtil.compress(byte[])"})
   public void testCompress() throws UnsupportedEncodingException, EventBloomException {
     // Arrange, Act and Assert
-    assertArrayEquals(new byte[]{'x', -100, 's', -116, 'p', 4, 'C', 0, '\n', -100, 2, 'e'},
+    assertArrayEquals(
+        new byte[] {'x', -100, 's', -116, 'p', 4, 'C', 0, '\n', -100, 2, 'e'},
         ByteUtil.compress("AXAXAXAX".getBytes("UTF-8")));
   }
 }

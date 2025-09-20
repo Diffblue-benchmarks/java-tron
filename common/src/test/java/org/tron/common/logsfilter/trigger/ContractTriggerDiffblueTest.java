@@ -11,7 +11,6 @@ import java.util.ArrayList;
 import org.junit.Test;
 import org.junit.experimental.categories.Category;
 import org.tron.common.logsfilter.capsule.RawData;
-import org.tron.common.runtime.vm.DataWord;
 import org.tron.common.runtime.vm.LogInfo;
 import org.tron.protos.contract.SmartContractOuterClass;
 import org.tron.protos.contract.SmartContractOuterClass.SmartContract;
@@ -20,8 +19,9 @@ import org.tron.protos.contract.SmartContractOuterClass.SmartContract.ABI;
 public class ContractTriggerDiffblueTest {
   /**
    * Test getters and setters.
-   * <p>
-   * Methods under test:
+   *
+   * <p>Methods under test:
+   *
    * <ul>
    *   <li>default or parameterless constructor of {@link ContractTrigger}
    *   <li>{@link ContractTrigger#setBlockHash(String)}
@@ -53,19 +53,35 @@ public class ContractTriggerDiffblueTest {
    */
   @Test
   @Category(MaintainedByDiffblue.class)
-  @MethodsUnderTest({"void ContractTrigger.<init>()", "ABI ContractTrigger.getAbi()",
-      "String ContractTrigger.getBlockHash()", "Long ContractTrigger.getBlockNumber()",
-      "String ContractTrigger.getCallerAddress()", "String ContractTrigger.getContractAddress()",
-      "String ContractTrigger.getCreatorAddress()", "long ContractTrigger.getLatestSolidifiedBlockNumber()",
-      "LogInfo ContractTrigger.getLogInfo()", "String ContractTrigger.getOriginAddress()",
-      "RawData ContractTrigger.getRawData()", "String ContractTrigger.getTransactionId()",
-      "String ContractTrigger.getUniqueId()", "boolean ContractTrigger.isRemoved()", "void ContractTrigger.setAbi(ABI)",
-      "void ContractTrigger.setBlockHash(String)", "void ContractTrigger.setBlockNumber(Long)",
-      "void ContractTrigger.setCallerAddress(String)", "void ContractTrigger.setContractAddress(String)",
-      "void ContractTrigger.setCreatorAddress(String)", "void ContractTrigger.setLatestSolidifiedBlockNumber(long)",
-      "void ContractTrigger.setLogInfo(LogInfo)", "void ContractTrigger.setOriginAddress(String)",
-      "void ContractTrigger.setRawData(RawData)", "void ContractTrigger.setRemoved(boolean)",
-      "void ContractTrigger.setTransactionId(String)", "void ContractTrigger.setUniqueId(String)"})
+  @MethodsUnderTest({
+    "void ContractTrigger.<init>()",
+    "ABI ContractTrigger.getAbi()",
+    "String ContractTrigger.getBlockHash()",
+    "Long ContractTrigger.getBlockNumber()",
+    "String ContractTrigger.getCallerAddress()",
+    "String ContractTrigger.getContractAddress()",
+    "String ContractTrigger.getCreatorAddress()",
+    "long ContractTrigger.getLatestSolidifiedBlockNumber()",
+    "LogInfo ContractTrigger.getLogInfo()",
+    "String ContractTrigger.getOriginAddress()",
+    "RawData ContractTrigger.getRawData()",
+    "String ContractTrigger.getTransactionId()",
+    "String ContractTrigger.getUniqueId()",
+    "boolean ContractTrigger.isRemoved()",
+    "void ContractTrigger.setAbi(ABI)",
+    "void ContractTrigger.setBlockHash(String)",
+    "void ContractTrigger.setBlockNumber(Long)",
+    "void ContractTrigger.setCallerAddress(String)",
+    "void ContractTrigger.setContractAddress(String)",
+    "void ContractTrigger.setCreatorAddress(String)",
+    "void ContractTrigger.setLatestSolidifiedBlockNumber(long)",
+    "void ContractTrigger.setLogInfo(LogInfo)",
+    "void ContractTrigger.setOriginAddress(String)",
+    "void ContractTrigger.setRawData(RawData)",
+    "void ContractTrigger.setRemoved(boolean)",
+    "void ContractTrigger.setTransactionId(String)",
+    "void ContractTrigger.setUniqueId(String)"
+  })
   public void testGettersAndSetters() throws UnsupportedEncodingException {
     // Arrange and Act
     ContractTrigger actualContractTrigger = new ContractTrigger();
@@ -76,15 +92,11 @@ public class ContractTriggerDiffblueTest {
     actualContractTrigger.setCreatorAddress("42 Main St");
     actualContractTrigger.setLatestSolidifiedBlockNumber(1L);
     byte[] address = "AXAXAXAX".getBytes("UTF-8");
-    ArrayList<DataWord> topics = new ArrayList<>();
-    LogInfo logInfo = new LogInfo(address, topics, "AXAXAXAX".getBytes("UTF-8"));
-
+    LogInfo logInfo = new LogInfo(address, new ArrayList<>(), "AXAXAXAX".getBytes("UTF-8"));
     actualContractTrigger.setLogInfo(logInfo);
     actualContractTrigger.setOriginAddress("42 Main St");
     byte[] address2 = "AXAXAXAX".getBytes("UTF-8");
-    ArrayList<DataWord> topics2 = new ArrayList<>();
-    RawData rawData = new RawData(address2, topics2, "AXAXAXAX".getBytes("UTF-8"));
-
+    RawData rawData = new RawData(address2, new ArrayList<>(), "AXAXAXAX".getBytes("UTF-8"));
     actualContractTrigger.setRawData(rawData);
     actualContractTrigger.setRemoved(true);
     actualContractTrigger.setTransactionId("42");

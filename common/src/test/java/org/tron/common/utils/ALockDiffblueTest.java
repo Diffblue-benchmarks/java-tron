@@ -1,27 +1,35 @@
 package org.tron.common.utils;
 
-import static org.junit.Assert.assertSame;
+import static org.mockito.Mockito.doNothing;
+import static org.mockito.Mockito.mock;
+import static org.mockito.Mockito.verify;
 import com.diffblue.cover.annotations.MaintainedByDiffblue;
 import com.diffblue.cover.annotations.MethodsUnderTest;
-import java.util.concurrent.locks.Lock;
-import java.util.concurrent.locks.ReentrantLock;
+import org.eclipse.osgi.internal.container.EquinoxReentrantLock;
 import org.junit.Test;
 import org.junit.experimental.categories.Category;
 
 public class ALockDiffblueTest {
   /**
-   * Test {@link ALock#ALock(Lock)}.
-   * <p>
-   * Method under test: {@link ALock#ALock(Lock)}
+   * Test {@link ALock#close()}.
+   *
+   * <ul>
+   *   <li>Given {@link EquinoxReentrantLock} {@link EquinoxReentrantLock#unlock()} does nothing.
+   *   <li>Then calls {@link EquinoxReentrantLock#unlock()}.
+   * </ul>
+   *
+   * <p>Method under test: {@link ALock#close()}
    */
   @Test
   @Category(MaintainedByDiffblue.class)
-  @MethodsUnderTest({"void ALock.<init>(Lock)"})
-  public void testNewALock() {
-    // Arrange and Act
-    ALock actualALock = new ALock(new ReentrantLock());
+  @MethodsUnderTest({"void ALock.close()"})
+  public void testClose_givenEquinoxReentrantLockUnlockDoesNothing_thenCallsUnlock() {
+    // Arrange
+    EquinoxReentrantLock l = mock(EquinoxReentrantLock.class);
+    doNothing().when(l).unlock();
+    try (ALock aLock = new ALock(l)) {}
 
-    // Assert
-    assertSame(actualALock, actualALock.lock());
+    // Act and Assert
+    verify(l).unlock();
   }
 }

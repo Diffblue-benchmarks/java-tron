@@ -9,14 +9,16 @@ import org.junit.experimental.categories.Category;
 public class StoreFactoryDiffblueTest {
   /**
    * Test getters and setters.
-   * <p>
-   * Method under test: {@link StoreFactory#getInstance()}
+   *
+   * <p>Method under test: {@link StoreFactory#getInstance()}
    */
   @Test
   @Category(MaintainedByDiffblue.class)
-  @MethodsUnderTest({"org.tron.core.ChainBaseManager StoreFactory.getChainBaseManager()",
-      "StoreFactory StoreFactory.getInstance()",
-      "StoreFactory StoreFactory.setChainBaseManager(org.tron.core.ChainBaseManager)"})
+  @MethodsUnderTest({
+    "org.tron.core.ChainBaseManager StoreFactory.getChainBaseManager()",
+    "StoreFactory StoreFactory.getInstance()",
+    "StoreFactory StoreFactory.setChainBaseManager(org.tron.core.ChainBaseManager)"
+  })
   public void testGettersAndSetters() {
     // Arrange, Act and Assert
     assertNull(StoreFactory.getInstance().getInstance());

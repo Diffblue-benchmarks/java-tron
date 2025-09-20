@@ -1,7 +1,7 @@
 package org.tron.core.services.interfaceJsonRpcOnSolidity;
 
 import static org.mockito.ArgumentMatchers.isA;
-import static org.mockito.Mockito.doNothing;
+import static org.mockito.Mockito.doThrow;
 import static org.mockito.Mockito.verify;
 import com.diffblue.cover.annotations.MaintainedByDiffblue;
 import com.diffblue.cover.annotations.MethodsUnderTest;
@@ -17,26 +17,34 @@ import org.mockito.junit.MockitoJUnitRunner;
 import org.springframework.test.annotation.DirtiesContext;
 import org.springframework.test.annotation.DirtiesContext.ClassMode;
 
-@RunWith(MockitoJUnitRunner.class)
 @DirtiesContext(classMode = ClassMode.AFTER_EACH_TEST_METHOD)
+@RunWith(MockitoJUnitRunner.class)
 public class JsonRpcServiceOnSolidityDiffblueTest {
-  @Mock
-  private JsonRpcOnSolidityServlet jsonRpcOnSolidityServlet;
+  @Mock private JsonRpcOnSolidityServlet jsonRpcOnSolidityServlet;
 
-  @InjectMocks
-  private JsonRpcServiceOnSolidity jsonRpcServiceOnSolidity;
+  @InjectMocks private JsonRpcServiceOnSolidity jsonRpcServiceOnSolidity;
 
   /**
    * Test {@link JsonRpcServiceOnSolidity#start()}.
-   * <p>
-   * Method under test: {@link JsonRpcServiceOnSolidity#start()}
+   *
+   * <ul>
+   *   <li>Given {@link JsonRpcOnSolidityServlet} {@link
+   *       JsonRpcOnSolidityServlet#init(ServletConfig)} throw {@link
+   *       RuntimeException#RuntimeException()}.
+   *   <li>Then calls {@link JsonRpcOnSolidityServlet#init(ServletConfig)}.
+   * </ul>
+   *
+   * <p>Method under test: {@link JsonRpcServiceOnSolidity#start()}
    */
   @Test
   @Category(MaintainedByDiffblue.class)
   @MethodsUnderTest({"void JsonRpcServiceOnSolidity.start()"})
-  public void testStart() throws ServletException {
+  public void testStart_givenJsonRpcOnSolidityServletInitThrowRuntimeException_thenCallsInit()
+      throws ServletException {
     // Arrange
-    doNothing().when(jsonRpcOnSolidityServlet).init(Mockito.<ServletConfig>any());
+    doThrow(new RuntimeException())
+        .when(jsonRpcOnSolidityServlet)
+        .init(Mockito.<ServletConfig>any());
 
     // Act
     jsonRpcServiceOnSolidity.start();

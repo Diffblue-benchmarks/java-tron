@@ -8,6 +8,7 @@ import com.diffblue.cover.annotations.MethodsUnderTest;
 import java.io.IOException;
 import javax.servlet.http.HttpServletRequest;
 import javax.servlet.http.HttpServletResponse;
+import javax.servlet.http.HttpServletResponseWrapper;
 import org.junit.Test;
 import org.junit.experimental.categories.Category;
 import org.junit.runner.RunWith;
@@ -17,21 +18,21 @@ import org.mockito.Mockito;
 import org.mockito.junit.MockitoJUnitRunner;
 import org.springframework.mock.web.MockHttpServletRequest;
 import org.springframework.mock.web.MockHttpServletResponse;
+import org.tron.common.utils.client.utils.HttpMethed;
 import org.tron.core.services.filter.CharResponseWrapper;
 import org.tron.core.services.interfaceOnPBFT.WalletOnPBFT;
 
 @RunWith(MockitoJUnitRunner.class)
 public class GetBurnTrxOnPBFTServletDiffblueTest {
-  @InjectMocks
-  private GetBurnTrxOnPBFTServlet getBurnTrxOnPBFTServlet;
+  @InjectMocks private GetBurnTrxOnPBFTServlet getBurnTrxOnPBFTServlet;
 
-  @Mock
-  private WalletOnPBFT walletOnPBFT;
+  @Mock private WalletOnPBFT walletOnPBFT;
 
   /**
    * Test {@link GetBurnTrxOnPBFTServlet#doGet(HttpServletRequest, HttpServletResponse)}.
-   * <p>
-   * Method under test: {@link GetBurnTrxOnPBFTServlet#doGet(HttpServletRequest, HttpServletResponse)}
+   *
+   * <p>Method under test: {@link GetBurnTrxOnPBFTServlet#doGet(HttpServletRequest,
+   * HttpServletResponse)}
    */
   @Test
   @Category(MaintainedByDiffblue.class)
@@ -39,10 +40,12 @@ public class GetBurnTrxOnPBFTServletDiffblueTest {
   public void testDoGet() throws IOException {
     // Arrange
     doNothing().when(walletOnPBFT).futureGet(Mockito.<Runnable>any());
-    MockHttpServletRequest request = new MockHttpServletRequest();
+    MockHttpServletRequest request = HttpMethed.createRequest("https://example.org/example");
 
     // Act
-    getBurnTrxOnPBFTServlet.doGet(request, new CharResponseWrapper(new MockHttpServletResponse()));
+    getBurnTrxOnPBFTServlet.doGet(
+        request,
+        new HttpServletResponseWrapper(new CharResponseWrapper(new MockHttpServletResponse())));
 
     // Assert
     verify(walletOnPBFT).futureGet(isA(Runnable.class));
@@ -50,19 +53,24 @@ public class GetBurnTrxOnPBFTServletDiffblueTest {
 
   /**
    * Test {@link GetBurnTrxOnPBFTServlet#doPost(HttpServletRequest, HttpServletResponse)}.
-   * <p>
-   * Method under test: {@link GetBurnTrxOnPBFTServlet#doPost(HttpServletRequest, HttpServletResponse)}
+   *
+   * <p>Method under test: {@link GetBurnTrxOnPBFTServlet#doPost(HttpServletRequest,
+   * HttpServletResponse)}
    */
   @Test
   @Category(MaintainedByDiffblue.class)
-  @MethodsUnderTest({"void GetBurnTrxOnPBFTServlet.doPost(HttpServletRequest, HttpServletResponse)"})
+  @MethodsUnderTest({
+    "void GetBurnTrxOnPBFTServlet.doPost(HttpServletRequest, HttpServletResponse)"
+  })
   public void testDoPost() throws IOException {
     // Arrange
     doNothing().when(walletOnPBFT).futureGet(Mockito.<Runnable>any());
-    MockHttpServletRequest request = new MockHttpServletRequest();
+    MockHttpServletRequest request = HttpMethed.createRequest("https://example.org/example");
 
     // Act
-    getBurnTrxOnPBFTServlet.doPost(request, new CharResponseWrapper(new MockHttpServletResponse()));
+    getBurnTrxOnPBFTServlet.doPost(
+        request,
+        new HttpServletResponseWrapper(new CharResponseWrapper(new MockHttpServletResponse())));
 
     // Assert
     verify(walletOnPBFT).futureGet(isA(Runnable.class));

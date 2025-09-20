@@ -9,14 +9,14 @@ import org.junit.experimental.categories.Category;
 public class DbRootDiffblueTest {
   /**
    * Test new {@link DbRoot} (default constructor).
-   * <p>
-   * Method under test: default or parameterless constructor of {@link DbRoot}
+   *
+   * <p>Method under test: default or parameterless constructor of {@link DbRoot}
    */
   @Test
   @Category(MaintainedByDiffblue.class)
   @MethodsUnderTest({"void DbRoot.<init>()"})
   public void testNewDbRoot() {
     // Arrange, Act and Assert
-    assertNull((new DbRoot()).spec);
+    assertNull(new DbRoot().spec);
   }
 }

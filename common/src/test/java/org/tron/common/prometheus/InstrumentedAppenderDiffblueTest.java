@@ -11,8 +11,8 @@ import org.junit.experimental.categories.Category;
 public class InstrumentedAppenderDiffblueTest {
   /**
    * Test new {@link InstrumentedAppender} (default constructor).
-   * <p>
-   * Method under test: default or parameterless constructor of {@link InstrumentedAppender}
+   *
+   * <p>Method under test: default or parameterless constructor of {@link InstrumentedAppender}
    */
   @Test
   @Category(MaintainedByDiffblue.class)

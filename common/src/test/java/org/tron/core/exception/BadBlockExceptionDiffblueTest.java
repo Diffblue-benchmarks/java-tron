@@ -11,8 +11,8 @@ import org.tron.core.exception.BadBlockException.TypeEnum;
 public class BadBlockExceptionDiffblueTest {
   /**
    * Test {@link BadBlockException#BadBlockException()}.
-   * <p>
-   * Method under test: {@link BadBlockException#BadBlockException()}
+   *
+   * <p>Method under test: {@link BadBlockException#BadBlockException()}
    */
   @Test
   @Category(MaintainedByDiffblue.class)
@@ -31,8 +31,8 @@ public class BadBlockExceptionDiffblueTest {
 
   /**
    * Test {@link BadBlockException#BadBlockException(String)}.
-   * <p>
-   * Method under test: {@link BadBlockException#BadBlockException(String)}
+   *
+   * <p>Method under test: {@link BadBlockException#BadBlockException(String)}
    */
   @Test
   @Category(MaintainedByDiffblue.class)
@@ -51,16 +51,16 @@ public class BadBlockExceptionDiffblueTest {
 
   /**
    * Test {@link BadBlockException#BadBlockException(TypeEnum, String)}.
-   * <p>
-   * Method under test: {@link BadBlockException#BadBlockException(TypeEnum, String)}
+   *
+   * <p>Method under test: {@link BadBlockException#BadBlockException(TypeEnum, String)}
    */
   @Test
   @Category(MaintainedByDiffblue.class)
   @MethodsUnderTest({"void BadBlockException.<init>(TypeEnum, String)"})
   public void testNewBadBlockException3() {
     // Arrange and Act
-    BadBlockException actualBadBlockException = new BadBlockException(TypeEnum.CALC_MERKLE_ROOT_FAILED,
-        "An error occurred");
+    BadBlockException actualBadBlockException =
+        new BadBlockException(TypeEnum.CALC_MERKLE_ROOT_FAILED, "An error occurred");
 
     // Assert
     assertEquals("An error occurred", actualBadBlockException.getLocalizedMessage());
@@ -72,21 +72,21 @@ public class BadBlockExceptionDiffblueTest {
 
   /**
    * Test {@link BadBlockException#getType()}.
-   * <p>
-   * Method under test: {@link BadBlockException#getType()}
+   *
+   * <p>Method under test: {@link BadBlockException#getType()}
    */
   @Test
   @Category(MaintainedByDiffblue.class)
   @MethodsUnderTest({"TypeEnum BadBlockException.getType()"})
   public void testGetType() {
     // Arrange, Act and Assert
-    assertEquals(TypeEnum.DEFAULT, (new BadBlockException()).getType());
+    assertEquals(TypeEnum.DEFAULT, new BadBlockException().getType());
   }
 
   /**
    * Test TypeEnum {@link TypeEnum#getValue()}.
-   * <p>
-   * Method under test: {@link TypeEnum#getValue()}
+   *
+   * <p>Method under test: {@link TypeEnum#getValue()}
    */
   @Test
   @Category(MaintainedByDiffblue.class)

@@ -13,8 +13,9 @@ import org.tron.core.services.jsonrpc.types.TransactionReceipt.TransactionLog;
 public class TransactionReceiptDiffblueTest {
   /**
    * Test TransactionLog getters and setters.
-   * <p>
-   * Methods under test:
+   *
+   * <p>Methods under test:
+   *
    * <ul>
    *   <li>default or parameterless constructor of {@link TransactionLog}
    *   <li>{@link TransactionLog#setAddress(String)}
@@ -39,15 +40,27 @@ public class TransactionReceiptDiffblueTest {
    */
   @Test
   @Category(MaintainedByDiffblue.class)
-  @MethodsUnderTest({"void TransactionLog.<init>()", "String TransactionLog.getAddress()",
-      "String TransactionLog.getBlockHash()", "String TransactionLog.getBlockNumber()",
-      "String TransactionLog.getData()", "String TransactionLog.getLogIndex()", "String[] TransactionLog.getTopics()",
-      "String TransactionLog.getTransactionHash()", "String TransactionLog.getTransactionIndex()",
-      "boolean TransactionLog.isRemoved()", "void TransactionLog.setAddress(String)",
-      "void TransactionLog.setBlockHash(String)", "void TransactionLog.setBlockNumber(String)",
-      "void TransactionLog.setData(String)", "void TransactionLog.setLogIndex(String)",
-      "void TransactionLog.setRemoved(boolean)", "void TransactionLog.setTopics(String[])",
-      "void TransactionLog.setTransactionHash(String)", "void TransactionLog.setTransactionIndex(String)"})
+  @MethodsUnderTest({
+    "void TransactionLog.<init>()",
+    "String TransactionLog.getAddress()",
+    "String TransactionLog.getBlockHash()",
+    "String TransactionLog.getBlockNumber()",
+    "String TransactionLog.getData()",
+    "String TransactionLog.getLogIndex()",
+    "String[] TransactionLog.getTopics()",
+    "String TransactionLog.getTransactionHash()",
+    "String TransactionLog.getTransactionIndex()",
+    "boolean TransactionLog.isRemoved()",
+    "void TransactionLog.setAddress(String)",
+    "void TransactionLog.setBlockHash(String)",
+    "void TransactionLog.setBlockNumber(String)",
+    "void TransactionLog.setData(String)",
+    "void TransactionLog.setLogIndex(String)",
+    "void TransactionLog.setRemoved(boolean)",
+    "void TransactionLog.setTopics(String[])",
+    "void TransactionLog.setTransactionHash(String)",
+    "void TransactionLog.setTransactionIndex(String)"
+  })
   public void testTransactionLogGettersAndSetters() {
     // Arrange and Act
     TransactionLog actualTransactionLog = new TransactionLog();
@@ -57,7 +70,7 @@ public class TransactionReceiptDiffblueTest {
     actualTransactionLog.setData("Data");
     actualTransactionLog.setLogIndex("Log Index");
     actualTransactionLog.setRemoved(true);
-    String[] topics = new String[]{"Topics"};
+    String[] topics = new String[] {"Topics"};
     actualTransactionLog.setTopics(topics);
     actualTransactionLog.setTransactionHash("Transaction Hash");
     actualTransactionLog.setTransactionIndex("Transaction Index");
@@ -80,6 +93,6 @@ public class TransactionReceiptDiffblueTest {
     assertEquals("Transaction Index", actualTransactionIndex);
     assertTrue(actualTransactionLog.isRemoved());
     assertSame(topics, actualTopics);
-    assertArrayEquals(new String[]{"Topics"}, actualTopics);
+    assertArrayEquals(new String[] {"Topics"}, actualTopics);
   }
 }

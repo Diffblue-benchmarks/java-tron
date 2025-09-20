@@ -11,8 +11,9 @@ import org.junit.experimental.categories.Category;
 public class CallCreateDiffblueTest {
   /**
    * Test getters and setters.
-   * <p>
-   * Methods under test:
+   *
+   * <p>Methods under test:
+   *
    * <ul>
    *   <li>{@link CallCreate#CallCreate(byte[], byte[], byte[], byte[])}
    *   <li>{@link CallCreate#getData()}
@@ -23,8 +24,13 @@ public class CallCreateDiffblueTest {
    */
   @Test
   @Category(MaintainedByDiffblue.class)
-  @MethodsUnderTest({"void CallCreate.<init>(byte[], byte[], byte[], byte[])", "byte[] CallCreate.getData()",
-      "byte[] CallCreate.getDestination()", "byte[] CallCreate.getEnergyLimit()", "byte[] CallCreate.getValue()"})
+  @MethodsUnderTest({
+    "void CallCreate.<init>(byte[], byte[], byte[], byte[])",
+    "byte[] CallCreate.getData()",
+    "byte[] CallCreate.getDestination()",
+    "byte[] CallCreate.getEnergyLimit()",
+    "byte[] CallCreate.getValue()"
+  })
   public void testGettersAndSetters() throws UnsupportedEncodingException {
     // Arrange
     byte[] data = "AXAXAXAX".getBytes("UTF-8");

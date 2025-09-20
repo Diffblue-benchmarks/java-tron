@@ -17,13 +17,14 @@ import org.tron.common.runtime.vm.DataWord;
 public class RawDataDiffblueTest {
   /**
    * Test {@link RawData#RawData(byte[], List, byte[])}.
+   *
    * <ul>
-   *   <li>Given {@link DataWord#ZERO}.</li>
-   *   <li>When {@link ArrayList#ArrayList()} add {@link DataWord#ZERO}.</li>
-   *   <li>Then return Topics size is one.</li>
+   *   <li>Given {@link DataWord#ZERO}.
+   *   <li>When {@link ArrayList#ArrayList()} add {@link DataWord#ZERO}.
+   *   <li>Then return Topics size is one.
    * </ul>
-   * <p>
-   * Method under test: {@link RawData#RawData(byte[], List, byte[])}
+   *
+   * <p>Method under test: {@link RawData#RawData(byte[], List, byte[])}
    */
   @Test
   @Category(MaintainedByDiffblue.class)
@@ -36,28 +37,37 @@ public class RawDataDiffblueTest {
     ArrayList<DataWord> topics = new ArrayList<>();
     topics.add(DataWord.ZERO);
 
-    // Act and Assert
-    List<DataWord> topics2 = (new RawData(address, topics, "AXAXAXAX".getBytes("UTF-8"))).getTopics();
+    // Act
+    RawData actualRawData = new RawData(address, topics, "AXAXAXAX".getBytes("UTF-8"));
+
+    // Assert
+    List<DataWord> topics2 = actualRawData.getTopics();
     assertEquals(1, topics2.size());
     DataWord getResult = topics2.get(0);
-    assertArrayEquals(new byte[]{0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0},
+    assertArrayEquals(
+        new byte[] {0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0},
         getResult.getLast20Bytes());
-    assertArrayEquals(new byte[]{'A', 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0},
+    assertArrayEquals(
+        new byte[] {'A', 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0},
         getResult.toTronAddress());
     assertArrayEquals(
-        new byte[]{0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0},
+        new byte[] {
+          0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0,
+          0, 0
+        },
         getResult.getClonedData());
   }
 
   /**
    * Test {@link RawData#RawData(byte[], List, byte[])}.
+   *
    * <ul>
-   *   <li>Given {@link DataWord#ZERO}.</li>
-   *   <li>When {@link ArrayList#ArrayList()} add {@link DataWord#ZERO}.</li>
-   *   <li>Then return Topics size is two.</li>
+   *   <li>Given {@link DataWord#ZERO}.
+   *   <li>When {@link ArrayList#ArrayList()} add {@link DataWord#ZERO}.
+   *   <li>Then return Topics size is two.
    * </ul>
-   * <p>
-   * Method under test: {@link RawData#RawData(byte[], List, byte[])}
+   *
+   * <p>Method under test: {@link RawData#RawData(byte[], List, byte[])}
    */
   @Test
   @Category(MaintainedByDiffblue.class)
@@ -71,39 +81,48 @@ public class RawDataDiffblueTest {
     topics.add(DataWord.ZERO);
     topics.add(DataWord.ZERO);
 
-    // Act and Assert
-    List<DataWord> topics2 = (new RawData(address, topics, "AXAXAXAX".getBytes("UTF-8"))).getTopics();
+    // Act
+    RawData actualRawData = new RawData(address, topics, "AXAXAXAX".getBytes("UTF-8"));
+
+    // Assert
+    List<DataWord> topics2 = actualRawData.getTopics();
     assertEquals(2, topics2.size());
     DataWord getResult = topics2.get(0);
     assertSame(getResult, topics2.get(1));
-    assertArrayEquals(new byte[]{0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0},
+    assertArrayEquals(
+        new byte[] {0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0},
         getResult.getLast20Bytes());
-    assertArrayEquals(new byte[]{'A', 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0},
+    assertArrayEquals(
+        new byte[] {'A', 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0},
         getResult.toTronAddress());
     assertArrayEquals(
-        new byte[]{0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0},
+        new byte[] {
+          0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0,
+          0, 0
+        },
         getResult.getClonedData());
   }
 
   /**
    * Test {@link RawData#RawData(byte[], List, byte[])}.
+   *
    * <ul>
-   *   <li>When {@link ArrayList#ArrayList()}.</li>
-   *   <li>Then return Address is {@code 4158415841584158}.</li>
+   *   <li>When {@link ArrayList#ArrayList()}.
+   *   <li>Then return Address is {@code 4158415841584158}.
    * </ul>
-   * <p>
-   * Method under test: {@link RawData#RawData(byte[], List, byte[])}
+   *
+   * <p>Method under test: {@link RawData#RawData(byte[], List, byte[])}
    */
   @Test
   @Category(MaintainedByDiffblue.class)
   @MethodsUnderTest({"void RawData.<init>(byte[], List, byte[])"})
-  public void testNewRawData_whenArrayList_thenReturnAddressIs4158415841584158() throws UnsupportedEncodingException {
+  public void testNewRawData_whenArrayList_thenReturnAddressIs4158415841584158()
+      throws UnsupportedEncodingException {
     // Arrange
     byte[] address = "AXAXAXAX".getBytes("UTF-8");
-    ArrayList<DataWord> topics = new ArrayList<>();
 
     // Act
-    RawData actualRawData = new RawData(address, topics, "AXAXAXAX".getBytes("UTF-8"));
+    RawData actualRawData = new RawData(address, new ArrayList<>(), "AXAXAXAX".getBytes("UTF-8"));
 
     // Assert
     assertEquals("4158415841584158", actualRawData.getAddress());
@@ -113,12 +132,13 @@ public class RawDataDiffblueTest {
 
   /**
    * Test {@link RawData#RawData(byte[], List, byte[])}.
+   *
    * <ul>
-   *   <li>When {@code null}.</li>
-   *   <li>Then return Address is empty string.</li>
+   *   <li>When {@code null}.
+   *   <li>Then return Address is empty string.
    * </ul>
-   * <p>
-   * Method under test: {@link RawData#RawData(byte[], List, byte[])}
+   *
+   * <p>Method under test: {@link RawData#RawData(byte[], List, byte[])}
    */
   @Test
   @Category(MaintainedByDiffblue.class)
@@ -135,12 +155,14 @@ public class RawDataDiffblueTest {
 
   /**
    * Test {@link RawData#equals(Object)}, and {@link RawData#hashCode()}.
+   *
    * <ul>
-   *   <li>When other is equal.</li>
-   *   <li>Then return equal.</li>
+   *   <li>When other is equal.
+   *   <li>Then return equal.
    * </ul>
-   * <p>
-   * Methods under test:
+   *
+   * <p>Methods under test:
+   *
    * <ul>
    *   <li>{@link RawData#equals(Object)}
    *   <li>{@link RawData#hashCode()}
@@ -149,29 +171,29 @@ public class RawDataDiffblueTest {
   @Test
   @Category(MaintainedByDiffblue.class)
   @MethodsUnderTest({"boolean RawData.equals(Object)", "int RawData.hashCode()"})
-  public void testEqualsAndHashCode_whenOtherIsEqual_thenReturnEqual() throws UnsupportedEncodingException {
+  public void testEqualsAndHashCode_whenOtherIsEqual_thenReturnEqual()
+      throws UnsupportedEncodingException {
     // Arrange
     byte[] address = "AXAXAXAX".getBytes("UTF-8");
-    ArrayList<DataWord> topics = new ArrayList<>();
-    RawData rawData = new RawData(address, topics, "AXAXAXAX".getBytes("UTF-8"));
+    RawData rawData = new RawData(address, new ArrayList<>(), "AXAXAXAX".getBytes("UTF-8"));
     byte[] address2 = "AXAXAXAX".getBytes("UTF-8");
-    ArrayList<DataWord> topics2 = new ArrayList<>();
-    RawData rawData2 = new RawData(address2, topics2, "AXAXAXAX".getBytes("UTF-8"));
+    RawData rawData2 = new RawData(address2, new ArrayList<>(), "AXAXAXAX".getBytes("UTF-8"));
 
     // Act and Assert
     assertEquals(rawData, rawData2);
-    int expectedHashCodeResult = rawData.hashCode();
-    assertEquals(expectedHashCodeResult, rawData2.hashCode());
+    assertEquals(rawData.hashCode(), rawData2.hashCode());
   }
 
   /**
    * Test {@link RawData#equals(Object)}, and {@link RawData#hashCode()}.
+   *
    * <ul>
-   *   <li>When other is same.</li>
-   *   <li>Then return equal.</li>
+   *   <li>When other is same.
+   *   <li>Then return equal.
    * </ul>
-   * <p>
-   * Methods under test:
+   *
+   * <p>Methods under test:
+   *
    * <ul>
    *   <li>{@link RawData#equals(Object)}
    *   <li>{@link RawData#hashCode()}
@@ -180,11 +202,11 @@ public class RawDataDiffblueTest {
   @Test
   @Category(MaintainedByDiffblue.class)
   @MethodsUnderTest({"boolean RawData.equals(Object)", "int RawData.hashCode()"})
-  public void testEqualsAndHashCode_whenOtherIsSame_thenReturnEqual() throws UnsupportedEncodingException {
+  public void testEqualsAndHashCode_whenOtherIsSame_thenReturnEqual()
+      throws UnsupportedEncodingException {
     // Arrange
     byte[] address = "AXAXAXAX".getBytes("UTF-8");
-    ArrayList<DataWord> topics = new ArrayList<>();
-    RawData rawData = new RawData(address, topics, "AXAXAXAX".getBytes("UTF-8"));
+    RawData rawData = new RawData(address, new ArrayList<>(), "AXAXAXAX".getBytes("UTF-8"));
 
     // Act and Assert
     assertEquals(rawData, rawData);
@@ -194,84 +216,141 @@ public class RawDataDiffblueTest {
 
   /**
    * Test {@link RawData#equals(Object)}.
+   *
    * <ul>
-   *   <li>When other is different.</li>
-   *   <li>Then return not equal.</li>
+   *   <li>When other is different.
+   *   <li>Then return not equal.
    * </ul>
-   * <p>
-   * Method under test: {@link RawData#equals(Object)}
+   *
+   * <p>Method under test: {@link RawData#equals(Object)}
    */
   @Test
   @Category(MaintainedByDiffblue.class)
   @MethodsUnderTest({"boolean RawData.equals(Object)", "int RawData.hashCode()"})
-  public void testEquals_whenOtherIsDifferent_thenReturnNotEqual() throws UnsupportedEncodingException {
+  public void testEquals_whenOtherIsDifferent_thenReturnNotEqual()
+      throws UnsupportedEncodingException {
     // Arrange
-    ArrayList<DataWord> topics = new ArrayList<>();
-    RawData rawData = new RawData(new byte[]{1, 'X', 'A', 'X', 'A', 'X', 'A', 'X'}, topics,
-        "AXAXAXAX".getBytes("UTF-8"));
     byte[] address = "AXAXAXAX".getBytes("UTF-8");
-    ArrayList<DataWord> topics2 = new ArrayList<>();
 
     // Act and Assert
-    assertNotEquals(rawData, new RawData(address, topics2, "AXAXAXAX".getBytes("UTF-8")));
+    assertNotEquals(new RawData(address, new ArrayList<>(), "AXAXAXAX".getBytes("UTF-8")), 1);
   }
 
   /**
    * Test {@link RawData#equals(Object)}.
+   *
    * <ul>
-   *   <li>When other is different.</li>
-   *   <li>Then return not equal.</li>
+   *   <li>When other is different.
+   *   <li>Then return not equal.
    * </ul>
-   * <p>
-   * Method under test: {@link RawData#equals(Object)}
+   *
+   * <p>Method under test: {@link RawData#equals(Object)}
    */
   @Test
   @Category(MaintainedByDiffblue.class)
   @MethodsUnderTest({"boolean RawData.equals(Object)", "int RawData.hashCode()"})
-  public void testEquals_whenOtherIsDifferent_thenReturnNotEqual2() throws UnsupportedEncodingException {
+  public void testEquals_whenOtherIsDifferent_thenReturnNotEqual2()
+      throws UnsupportedEncodingException {
+    // Arrange
+    byte[] address = "AXAXAXAX".getBytes("UTF-8");
+
+    RawData rawData = new RawData(address, new ArrayList<>(), "AXAXAXAX".getBytes("UTF-8"));
+    rawData.setAddress("42 Main St");
+    byte[] address2 = "AXAXAXAX".getBytes("UTF-8");
+
+    // Act and Assert
+    assertNotEquals(
+        rawData, new RawData(address2, new ArrayList<>(), "AXAXAXAX".getBytes("UTF-8")));
+  }
+
+  /**
+   * Test {@link RawData#equals(Object)}.
+   *
+   * <ul>
+   *   <li>When other is different.
+   *   <li>Then return not equal.
+   * </ul>
+   *
+   * <p>Method under test: {@link RawData#equals(Object)}
+   */
+  @Test
+  @Category(MaintainedByDiffblue.class)
+  @MethodsUnderTest({"boolean RawData.equals(Object)", "int RawData.hashCode()"})
+  public void testEquals_whenOtherIsDifferent_thenReturnNotEqual3()
+      throws UnsupportedEncodingException {
+    // Arrange
+    byte[] address = "AXAXAXAX".getBytes("UTF-8");
+
+    RawData rawData = new RawData(address, new ArrayList<>(), "AXAXAXAX".getBytes("UTF-8"));
+    rawData.setAddress(null);
+    byte[] address2 = "AXAXAXAX".getBytes("UTF-8");
+
+    // Act and Assert
+    assertNotEquals(
+        rawData, new RawData(address2, new ArrayList<>(), "AXAXAXAX".getBytes("UTF-8")));
+  }
+
+  /**
+   * Test {@link RawData#equals(Object)}.
+   *
+   * <ul>
+   *   <li>When other is different.
+   *   <li>Then return not equal.
+   * </ul>
+   *
+   * <p>Method under test: {@link RawData#equals(Object)}
+   */
+  @Test
+  @Category(MaintainedByDiffblue.class)
+  @MethodsUnderTest({"boolean RawData.equals(Object)", "int RawData.hashCode()"})
+  public void testEquals_whenOtherIsDifferent_thenReturnNotEqual4()
+      throws UnsupportedEncodingException {
     // Arrange
     ArrayList<DataWord> topics = new ArrayList<>();
     topics.add(DataWord.ZERO);
+    RawData rawData =
+        new RawData("AXAXAXAX".getBytes("UTF-8"), topics, "AXAXAXAX".getBytes("UTF-8"));
     byte[] address = "AXAXAXAX".getBytes("UTF-8");
-    RawData rawData = new RawData(address, topics, "AXAXAXAX".getBytes("UTF-8"));
-    byte[] address2 = "AXAXAXAX".getBytes("UTF-8");
-    ArrayList<DataWord> topics2 = new ArrayList<>();
 
     // Act and Assert
-    assertNotEquals(rawData, new RawData(address2, topics2, "AXAXAXAX".getBytes("UTF-8")));
+    assertNotEquals(rawData, new RawData(address, new ArrayList<>(), "AXAXAXAX".getBytes("UTF-8")));
   }
 
   /**
    * Test {@link RawData#equals(Object)}.
+   *
    * <ul>
-   *   <li>When other is different.</li>
-   *   <li>Then return not equal.</li>
+   *   <li>When other is different.
+   *   <li>Then return not equal.
    * </ul>
-   * <p>
-   * Method under test: {@link RawData#equals(Object)}
+   *
+   * <p>Method under test: {@link RawData#equals(Object)}
    */
   @Test
   @Category(MaintainedByDiffblue.class)
   @MethodsUnderTest({"boolean RawData.equals(Object)", "int RawData.hashCode()"})
-  public void testEquals_whenOtherIsDifferent_thenReturnNotEqual3() throws UnsupportedEncodingException {
+  public void testEquals_whenOtherIsDifferent_thenReturnNotEqual5()
+      throws UnsupportedEncodingException {
     // Arrange
     byte[] address = "AXAXAXAX".getBytes("UTF-8");
-    RawData rawData = new RawData(address, new ArrayList<>(), new byte[]{1, 'X', 'A', 'X', 'A', 'X', 'A', 'X'});
+    RawData rawData =
+        new RawData(address, new ArrayList<>(), new byte[] {1, 'X', 'A', 'X', 'A', 'X', 'A', 'X'});
     byte[] address2 = "AXAXAXAX".getBytes("UTF-8");
-    ArrayList<DataWord> topics = new ArrayList<>();
 
     // Act and Assert
-    assertNotEquals(rawData, new RawData(address2, topics, "AXAXAXAX".getBytes("UTF-8")));
+    assertNotEquals(
+        rawData, new RawData(address2, new ArrayList<>(), "AXAXAXAX".getBytes("UTF-8")));
   }
 
   /**
    * Test {@link RawData#equals(Object)}.
+   *
    * <ul>
-   *   <li>When other is {@code null}.</li>
-   *   <li>Then return not equal.</li>
+   *   <li>When other is {@code null}.
+   *   <li>Then return not equal.
    * </ul>
-   * <p>
-   * Method under test: {@link RawData#equals(Object)}
+   *
+   * <p>Method under test: {@link RawData#equals(Object)}
    */
   @Test
   @Category(MaintainedByDiffblue.class)
@@ -279,37 +358,40 @@ public class RawDataDiffblueTest {
   public void testEquals_whenOtherIsNull_thenReturnNotEqual() throws UnsupportedEncodingException {
     // Arrange
     byte[] address = "AXAXAXAX".getBytes("UTF-8");
-    ArrayList<DataWord> topics = new ArrayList<>();
 
     // Act and Assert
-    assertNotEquals(new RawData(address, topics, "AXAXAXAX".getBytes("UTF-8")), null);
+    assertNotEquals(new RawData(address, new ArrayList<>(), "AXAXAXAX".getBytes("UTF-8")), null);
   }
 
   /**
    * Test {@link RawData#equals(Object)}.
+   *
    * <ul>
-   *   <li>When other is wrong type.</li>
-   *   <li>Then return not equal.</li>
+   *   <li>When other is wrong type.
+   *   <li>Then return not equal.
    * </ul>
-   * <p>
-   * Method under test: {@link RawData#equals(Object)}
+   *
+   * <p>Method under test: {@link RawData#equals(Object)}
    */
   @Test
   @Category(MaintainedByDiffblue.class)
   @MethodsUnderTest({"boolean RawData.equals(Object)", "int RawData.hashCode()"})
-  public void testEquals_whenOtherIsWrongType_thenReturnNotEqual() throws UnsupportedEncodingException {
+  public void testEquals_whenOtherIsWrongType_thenReturnNotEqual()
+      throws UnsupportedEncodingException {
     // Arrange
     byte[] address = "AXAXAXAX".getBytes("UTF-8");
-    ArrayList<DataWord> topics = new ArrayList<>();
 
     // Act and Assert
-    assertNotEquals(new RawData(address, topics, "AXAXAXAX".getBytes("UTF-8")), "Different type to RawData");
+    assertNotEquals(
+        new RawData(address, new ArrayList<>(), "AXAXAXAX".getBytes("UTF-8")),
+        "Different type to RawData");
   }
 
   /**
    * Test getters and setters.
-   * <p>
-   * Methods under test:
+   *
+   * <p>Methods under test:
+   *
    * <ul>
    *   <li>{@link RawData#setAddress(String)}
    *   <li>{@link RawData#setData(String)}
@@ -322,20 +404,25 @@ public class RawDataDiffblueTest {
    */
   @Test
   @Category(MaintainedByDiffblue.class)
-  @MethodsUnderTest({"String RawData.getAddress()", "String RawData.getData()", "List RawData.getTopics()",
-      "void RawData.setAddress(String)", "void RawData.setData(String)", "void RawData.setTopics(List)",
-      "String RawData.toString()"})
+  @MethodsUnderTest({
+    "String RawData.getAddress()",
+    "String RawData.getData()",
+    "List RawData.getTopics()",
+    "void RawData.setAddress(String)",
+    "void RawData.setData(String)",
+    "void RawData.setTopics(List)",
+    "String RawData.toString()"
+  })
   public void testGettersAndSetters() throws UnsupportedEncodingException {
     // Arrange
     byte[] address = "AXAXAXAX".getBytes("UTF-8");
-    ArrayList<DataWord> topics = new ArrayList<>();
-    RawData rawData = new RawData(address, topics, "AXAXAXAX".getBytes("UTF-8"));
+    RawData rawData = new RawData(address, new ArrayList<>(), "AXAXAXAX".getBytes("UTF-8"));
 
     // Act
     rawData.setAddress("42 Main St");
     rawData.setData("Data");
-    ArrayList<DataWord> topics2 = new ArrayList<>();
-    rawData.setTopics(topics2);
+    ArrayList<DataWord> topics = new ArrayList<>();
+    rawData.setTopics(topics);
     String actualToStringResult = rawData.toString();
     String actualAddress = rawData.getAddress();
     String actualData = rawData.getData();
@@ -346,6 +433,6 @@ public class RawDataDiffblueTest {
     assertEquals("Data", actualData);
     assertEquals("RawData(address=42 Main St, topics=[], data=Data)", actualToStringResult);
     assertTrue(actualTopics.isEmpty());
-    assertSame(topics2, actualTopics);
+    assertSame(topics, actualTopics);
   }
 }

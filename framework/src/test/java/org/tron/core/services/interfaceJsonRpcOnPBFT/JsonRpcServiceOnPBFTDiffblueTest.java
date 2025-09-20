@@ -1,7 +1,7 @@
 package org.tron.core.services.interfaceJsonRpcOnPBFT;
 
 import static org.mockito.ArgumentMatchers.isA;
-import static org.mockito.Mockito.doNothing;
+import static org.mockito.Mockito.doThrow;
 import static org.mockito.Mockito.verify;
 import com.diffblue.cover.annotations.MaintainedByDiffblue;
 import com.diffblue.cover.annotations.MethodsUnderTest;
@@ -17,26 +17,31 @@ import org.mockito.junit.MockitoJUnitRunner;
 import org.springframework.test.annotation.DirtiesContext;
 import org.springframework.test.annotation.DirtiesContext.ClassMode;
 
-@RunWith(MockitoJUnitRunner.class)
 @DirtiesContext(classMode = ClassMode.AFTER_EACH_TEST_METHOD)
+@RunWith(MockitoJUnitRunner.class)
 public class JsonRpcServiceOnPBFTDiffblueTest {
-  @Mock
-  private JsonRpcOnPBFTServlet jsonRpcOnPBFTServlet;
+  @Mock private JsonRpcOnPBFTServlet jsonRpcOnPBFTServlet;
 
-  @InjectMocks
-  private JsonRpcServiceOnPBFT jsonRpcServiceOnPBFT;
+  @InjectMocks private JsonRpcServiceOnPBFT jsonRpcServiceOnPBFT;
 
   /**
    * Test {@link JsonRpcServiceOnPBFT#start()}.
-   * <p>
-   * Method under test: {@link JsonRpcServiceOnPBFT#start()}
+   *
+   * <ul>
+   *   <li>Given {@link JsonRpcOnPBFTServlet} {@link JsonRpcOnPBFTServlet#init(ServletConfig)} throw
+   *       {@link RuntimeException#RuntimeException()}.
+   *   <li>Then calls {@link JsonRpcOnPBFTServlet#init(ServletConfig)}.
+   * </ul>
+   *
+   * <p>Method under test: {@link JsonRpcServiceOnPBFT#start()}
    */
   @Test
   @Category(MaintainedByDiffblue.class)
   @MethodsUnderTest({"void JsonRpcServiceOnPBFT.start()"})
-  public void testStart() throws ServletException {
+  public void testStart_givenJsonRpcOnPBFTServletInitThrowRuntimeException_thenCallsInit()
+      throws ServletException {
     // Arrange
-    doNothing().when(jsonRpcOnPBFTServlet).init(Mockito.<ServletConfig>any());
+    doThrow(new RuntimeException()).when(jsonRpcOnPBFTServlet).init(Mockito.<ServletConfig>any());
 
     // Act
     jsonRpcServiceOnPBFT.start();

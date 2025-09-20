@@ -20,6 +20,8 @@ import org.mockito.InjectMocks;
 import org.mockito.Mock;
 import org.mockito.Mockito;
 import org.mockito.junit.MockitoJUnitRunner;
+import org.springframework.test.annotation.DirtiesContext;
+import org.springframework.test.annotation.DirtiesContext.ClassMode;
 import org.tron.common.backup.BackupManager;
 import org.tron.common.backup.BackupManager.BackupStatusEnum;
 import org.tron.common.overlay.message.Message;
@@ -49,31 +51,28 @@ import org.tron.core.exception.ValidateSignatureException;
 import org.tron.core.exception.ZksnarkException;
 import org.tron.core.net.TronNetService;
 
+@DirtiesContext(classMode = ClassMode.AFTER_EACH_TEST_METHOD)
 @RunWith(MockitoJUnitRunner.class)
 public class BlockHandleImplDiffblueTest {
-  @Mock
-  private BackupManager backupManager;
+  @Mock private BackupManager backupManager;
 
-  @InjectMocks
-  private BlockHandleImpl blockHandleImpl;
+  @InjectMocks private BlockHandleImpl blockHandleImpl;
 
-  @Mock
-  private Manager manager;
+  @Mock private Consensus consensus;
 
-  @Mock
-  private Consensus consensus;
+  @Mock private Manager manager;
 
-  @Mock
-  private TronNetService tronNetService;
+  @Mock private TronNetService tronNetService;
 
   /**
    * Test {@link BlockHandleImpl#getState()}.
+   *
    * <ul>
-   *   <li>Given {@link BackupManager} {@link BackupManager#getStatus()} return {@code INIT}.</li>
-   *   <li>Then return {@code BACKUP_IS_NOT_MASTER}.</li>
+   *   <li>Given {@link BackupManager} {@link BackupManager#getStatus()} return {@code INIT}.
+   *   <li>Then return {@code BACKUP_IS_NOT_MASTER}.
    * </ul>
-   * <p>
-   * Method under test: {@link BlockHandleImpl#getState()}
+   *
+   * <p>Method under test: {@link BlockHandleImpl#getState()}
    */
   @Test
   @Category(MaintainedByDiffblue.class)
@@ -92,12 +91,13 @@ public class BlockHandleImplDiffblueTest {
 
   /**
    * Test {@link BlockHandleImpl#getState()}.
+   *
    * <ul>
-   *   <li>Given {@link BackupManager} {@link BackupManager#getStatus()} return {@code MASTER}.</li>
-   *   <li>Then return {@code OK}.</li>
+   *   <li>Given {@link BackupManager} {@link BackupManager#getStatus()} return {@code MASTER}.
+   *   <li>Then return {@code OK}.
    * </ul>
-   * <p>
-   * Method under test: {@link BlockHandleImpl#getState()}
+   *
+   * <p>Method under test: {@link BlockHandleImpl#getState()}
    */
   @Test
   @Category(MaintainedByDiffblue.class)
@@ -116,47 +116,51 @@ public class BlockHandleImplDiffblueTest {
 
   /**
    * Test {@link BlockHandleImpl#getLock()}.
-   * <p>
-   * Method under test: {@link BlockHandleImpl#getLock()}
+   *
+   * <p>Method under test: {@link BlockHandleImpl#getLock()}
    */
   @Test
   @Category(MaintainedByDiffblue.class)
   @MethodsUnderTest({"java.lang.Object BlockHandleImpl.getLock()"})
   public void testGetLock() {
     // Arrange, Act and Assert
-    assertNull((new BlockHandleImpl()).getLock());
+    assertNull(new BlockHandleImpl().getLock());
   }
 
   /**
    * Test {@link BlockHandleImpl#produce(Miner, long, long)}.
+   *
    * <ul>
-   *   <li>Given {@link Consensus} {@link Consensus#receiveBlock(BlockCapsule)} does nothing.</li>
-   *   <li>Then calls {@link Consensus#receiveBlock(BlockCapsule)}.</li>
+   *   <li>Given {@link Consensus} {@link Consensus#receiveBlock(BlockCapsule)} does nothing.
+   *   <li>Then calls {@link Consensus#receiveBlock(BlockCapsule)}.
    * </ul>
-   * <p>
-   * Method under test: {@link BlockHandleImpl#produce(Miner, long, long)}
+   *
+   * <p>Method under test: {@link BlockHandleImpl#produce(Miner, long, long)}
    */
   @Test
   @Category(MaintainedByDiffblue.class)
   @MethodsUnderTest({"BlockCapsule BlockHandleImpl.produce(Miner, long, long)"})
   public void testProduce_givenConsensusReceiveBlockDoesNothing_thenCallsReceiveBlock()
       throws UnsupportedEncodingException, AccountResourceInsufficientException, BadBlockException,
-      BadNumberBlockException, ContractExeException, ContractValidateException, DupTransactionException,
-      EventBloomException, NonCommonBlockException, ReceiptCheckErrException, TaposException,
-      TooBigTransactionException, TooBigTransactionResultException, TransactionExpirationException,
-      UnLinkedBlockException, VMIllegalException, ValidateScheduleException, ValidateSignatureException,
-      ZksnarkException {
+          BadNumberBlockException, ContractExeException, ContractValidateException,
+          DupTransactionException, EventBloomException, NonCommonBlockException,
+          ReceiptCheckErrException, TaposException, TooBigTransactionException,
+          TooBigTransactionResultException, TransactionExpirationException, UnLinkedBlockException,
+          VMIllegalException, ValidateScheduleException, ValidateSignatureException,
+          ZksnarkException {
     // Arrange
     doNothing().when(consensus).receiveBlock(Mockito.<BlockCapsule>any());
+
     BlockCapsule blockCapsule = mock(BlockCapsule.class);
     when(blockCapsule.getData()).thenReturn("AXAXAXAX".getBytes("UTF-8"));
     doNothing().when(manager).pushBlock(Mockito.<BlockCapsule>any());
-    when(manager.generateBlock(Mockito.<Miner>any(), anyLong(), anyLong())).thenReturn(blockCapsule);
+    when(manager.generateBlock(Mockito.<Miner>any(), anyLong(), anyLong()))
+        .thenReturn(blockCapsule);
     doNothing().when(tronNetService).broadcast(Mockito.<Message>any());
-    Param instance = Param.getInstance();
+    Miner miner = Param.getInstance().new Miner("AXAXAXAX".getBytes("UTF-8"), null, null);
 
     // Act
-    blockHandleImpl.produce(instance.new Miner("AXAXAXAX".getBytes("UTF-8"), null, null), 1L, 10L);
+    blockHandleImpl.produce(miner, 1L, 10L);
 
     // Assert
     verify(consensus).receiveBlock(isA(BlockCapsule.class));
@@ -168,24 +172,26 @@ public class BlockHandleImplDiffblueTest {
 
   /**
    * Test {@link BlockHandleImpl#produce(Miner, long, long)}.
+   *
    * <ul>
-   *   <li>Given {@link Manager} {@link Manager#generateBlock(Miner, long, long)} return {@code null}.</li>
-   *   <li>Then return {@code null}.</li>
+   *   <li>Given {@link Manager} {@link Manager#generateBlock(Miner, long, long)} return {@code
+   *       null}.
+   *   <li>Then return {@code null}.
    * </ul>
-   * <p>
-   * Method under test: {@link BlockHandleImpl#produce(Miner, long, long)}
+   *
+   * <p>Method under test: {@link BlockHandleImpl#produce(Miner, long, long)}
    */
   @Test
   @Category(MaintainedByDiffblue.class)
   @MethodsUnderTest({"BlockCapsule BlockHandleImpl.produce(Miner, long, long)"})
-  public void testProduce_givenManagerGenerateBlockReturnNull_thenReturnNull() throws UnsupportedEncodingException {
+  public void testProduce_givenManagerGenerateBlockReturnNull_thenReturnNull()
+      throws UnsupportedEncodingException {
     // Arrange
     when(manager.generateBlock(Mockito.<Miner>any(), anyLong(), anyLong())).thenReturn(null);
-    Param instance = Param.getInstance();
+    Miner miner = Param.getInstance().new Miner("AXAXAXAX".getBytes("UTF-8"), null, null);
 
     // Act
-    BlockCapsule actualProduceResult = blockHandleImpl
-        .produce(instance.new Miner("AXAXAXAX".getBytes("UTF-8"), null, null), 1L, 10L);
+    BlockCapsule actualProduceResult = blockHandleImpl.produce(miner, 1L, 10L);
 
     // Assert
     verify(manager).generateBlock(isA(Miner.class), eq(1L), eq(10L));
@@ -194,8 +200,8 @@ public class BlockHandleImplDiffblueTest {
 
   /**
    * Test {@link BlockHandleImpl#setBlockWaitLock(boolean)}.
-   * <p>
-   * Method under test: {@link BlockHandleImpl#setBlockWaitLock(boolean)}
+   *
+   * <p>Method under test: {@link BlockHandleImpl#setBlockWaitLock(boolean)}
    */
   @Test
   @Category(MaintainedByDiffblue.class)
@@ -208,6 +214,6 @@ public class BlockHandleImplDiffblueTest {
     blockHandleImpl.setBlockWaitLock(true);
 
     // Assert
-    verify(manager).setBlockWaitLock(eq(true));
+    verify(manager).setBlockWaitLock(true);
   }
 }

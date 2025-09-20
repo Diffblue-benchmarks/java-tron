@@ -15,8 +15,9 @@ import org.tron.core.capsule.BlockCapsule.BlockId;
 public class BlockFilterCapsuleDiffblueTest {
   /**
    * Test getters and setters.
-   * <p>
-   * Methods under test:
+   *
+   * <p>Methods under test:
+   *
    * <ul>
    *   <li>{@link BlockFilterCapsule#BlockFilterCapsule(String, boolean)}
    *   <li>{@link BlockFilterCapsule#setBlockHash(String)}
@@ -28,9 +29,14 @@ public class BlockFilterCapsuleDiffblueTest {
    */
   @Test
   @Category(MaintainedByDiffblue.class)
-  @MethodsUnderTest({"void BlockFilterCapsule.<init>(String, boolean)", "String BlockFilterCapsule.getBlockHash()",
-      "boolean BlockFilterCapsule.isSolidified()", "void BlockFilterCapsule.setBlockHash(String)",
-      "void BlockFilterCapsule.setSolidified(boolean)", "String BlockFilterCapsule.toString()"})
+  @MethodsUnderTest({
+    "void BlockFilterCapsule.<init>(String, boolean)",
+    "String BlockFilterCapsule.getBlockHash()",
+    "boolean BlockFilterCapsule.isSolidified()",
+    "void BlockFilterCapsule.setBlockHash(String)",
+    "void BlockFilterCapsule.setSolidified(boolean)",
+    "String BlockFilterCapsule.toString()"
+  })
   public void testGettersAndSetters() {
     // Arrange and Act
     BlockFilterCapsule actualBlockFilterCapsule = new BlockFilterCapsule("Block Hash", true);
@@ -47,8 +53,8 @@ public class BlockFilterCapsuleDiffblueTest {
 
   /**
    * Test {@link BlockFilterCapsule#BlockFilterCapsule(BlockCapsule, boolean)}.
-   * <p>
-   * Method under test: {@link BlockFilterCapsule#BlockFilterCapsule(BlockCapsule, boolean)}
+   *
+   * <p>Method under test: {@link BlockFilterCapsule#BlockFilterCapsule(BlockCapsule, boolean)}
    */
   @Test
   @Category(MaintainedByDiffblue.class)
@@ -63,19 +69,21 @@ public class BlockFilterCapsuleDiffblueTest {
 
     // Assert
     verify(block).getBlockId();
-    assertEquals("0000000000000000000000000000000000000000000000000000000000000000",
+    assertEquals(
+        "0000000000000000000000000000000000000000000000000000000000000000",
         actualBlockFilterCapsule.getBlockHash());
     assertTrue(actualBlockFilterCapsule.isSolidified());
   }
 
   /**
    * Test {@link BlockFilterCapsule#BlockFilterCapsule(BlockCapsule, boolean)}.
+   *
    * <ul>
-   *   <li>Given {@link BlockId}.</li>
-   *   <li>When {@link BlockCapsule} {@link BlockCapsule#getBlockId()} return {@link BlockId}.</li>
+   *   <li>Given {@link BlockId}.
+   *   <li>When {@link BlockCapsule} {@link BlockCapsule#getBlockId()} return {@link BlockId}.
    * </ul>
-   * <p>
-   * Method under test: {@link BlockFilterCapsule#BlockFilterCapsule(BlockCapsule, boolean)}
+   *
+   * <p>Method under test: {@link BlockFilterCapsule#BlockFilterCapsule(BlockCapsule, boolean)}
    */
   @Test
   @Category(MaintainedByDiffblue.class)

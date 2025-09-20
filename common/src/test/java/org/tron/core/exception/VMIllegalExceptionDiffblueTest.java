@@ -10,8 +10,8 @@ import org.junit.experimental.categories.Category;
 public class VMIllegalExceptionDiffblueTest {
   /**
    * Test {@link VMIllegalException#VMIllegalException()}.
-   * <p>
-   * Method under test: {@link VMIllegalException#VMIllegalException()}
+   *
+   * <p>Method under test: {@link VMIllegalException#VMIllegalException()}
    */
   @Test
   @Category(MaintainedByDiffblue.class)
@@ -29,8 +29,8 @@ public class VMIllegalExceptionDiffblueTest {
 
   /**
    * Test {@link VMIllegalException#VMIllegalException(String)}.
-   * <p>
-   * Method under test: {@link VMIllegalException#VMIllegalException(String)}
+   *
+   * <p>Method under test: {@link VMIllegalException#VMIllegalException(String)}
    */
   @Test
   @Category(MaintainedByDiffblue.class)

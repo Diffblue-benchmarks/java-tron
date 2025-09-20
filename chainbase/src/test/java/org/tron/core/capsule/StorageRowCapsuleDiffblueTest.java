@@ -8,6 +8,7 @@ import static org.junit.Assert.assertTrue;
 import com.diffblue.cover.annotations.MaintainedByDiffblue;
 import com.diffblue.cover.annotations.MethodsUnderTest;
 import com.google.protobuf.ByteString;
+import com.google.protobuf.ByteString.ByteIterator;
 import java.io.UnsupportedEncodingException;
 import java.math.BigInteger;
 import org.junit.Test;
@@ -17,8 +18,9 @@ import org.tron.common.utils.Sha256Hash;
 public class StorageRowCapsuleDiffblueTest {
   /**
    * Test getters and setters.
-   * <p>
-   * Methods under test:
+   *
+   * <p>Methods under test:
+   *
    * <ul>
    *   <li>{@link StorageRowCapsule#StorageRowCapsule(byte[])}
    *   <li>{@link StorageRowCapsule#setRowKey(byte[])}
@@ -32,10 +34,16 @@ public class StorageRowCapsuleDiffblueTest {
    */
   @Test
   @Category(MaintainedByDiffblue.class)
-  @MethodsUnderTest({"void StorageRowCapsule.<init>(byte[])", "byte[] StorageRowCapsule.getData()",
-      "byte[] StorageRowCapsule.getRowKey()", "byte[] StorageRowCapsule.getRowValue()",
-      "byte[] StorageRowCapsule.getValue()", "boolean StorageRowCapsule.isDirty()",
-      "void StorageRowCapsule.setRowKey(byte[])", "String StorageRowCapsule.toString()"})
+  @MethodsUnderTest({
+    "void StorageRowCapsule.<init>(byte[])",
+    "byte[] StorageRowCapsule.getData()",
+    "byte[] StorageRowCapsule.getRowKey()",
+    "byte[] StorageRowCapsule.getRowValue()",
+    "byte[] StorageRowCapsule.getValue()",
+    "boolean StorageRowCapsule.isDirty()",
+    "void StorageRowCapsule.setRowKey(byte[])",
+    "String StorageRowCapsule.toString()"
+  })
   public void testGettersAndSetters() throws UnsupportedEncodingException {
     // Arrange
     byte[] rowValue = "AXAXAXAX".getBytes("UTF-8");
@@ -65,24 +73,25 @@ public class StorageRowCapsuleDiffblueTest {
 
   /**
    * Test {@link StorageRowCapsule#StorageRowCapsule(byte[], byte[])}.
-   * <p>
-   * Method under test: {@link StorageRowCapsule#StorageRowCapsule(byte[], byte[])}
+   *
+   * <p>Method under test: {@link StorageRowCapsule#StorageRowCapsule(byte[], byte[])}
    */
   @Test
   @Category(MaintainedByDiffblue.class)
   @MethodsUnderTest({"void StorageRowCapsule.<init>(byte[], byte[])"})
   public void testNewStorageRowCapsule() throws UnsupportedEncodingException {
     // Arrange
-    byte[] rowKey = "AXAXAXAX".getBytes("UTF-8");
     byte[] rowValue = "AXAXAXAX".getBytes("UTF-8");
 
     // Act
-    StorageRowCapsule actualStorageRowCapsule = new StorageRowCapsule(rowKey, rowValue);
+    StorageRowCapsule actualStorageRowCapsule =
+        new StorageRowCapsule("AXAXAXAX".getBytes("UTF-8"), rowValue);
 
     // Assert
     Sha256Hash hash = actualStorageRowCapsule.getHash();
     BigInteger toBigIntegerResult = hash.toBigInteger();
-    assertEquals("41774241789126944098306227155094803171342615589867574088397738610130220530396",
+    assertEquals(
+        "41774241789126944098306227155094803171342615589867574088397738610130220530396",
         toBigIntegerResult.toString());
     ByteString byteString = hash.getByteString();
     assertEquals("\\[b\t�g�� �\ru�/���l�؊KS�\u0001�9�\u001a`��", byteString.toStringUtf8());
@@ -94,24 +103,31 @@ public class StorageRowCapsuleDiffblueTest {
     assertSame(rowValue, actualStorageRowCapsule.getInstance());
     assertSame(rowValue, actualStorageRowCapsule.getRowValue());
     assertSame(rowValue, actualStorageRowCapsule.getValue());
-    byte[] expectedData = "AXAXAXAX".getBytes("UTF-8");
-    assertArrayEquals(expectedData, actualStorageRowCapsule.getData());
-    byte[] expectedRowKey = "AXAXAXAX".getBytes("UTF-8");
-    assertArrayEquals(expectedRowKey, actualStorageRowCapsule.getRowKey());
-    assertArrayEquals(new byte[]{'\\', '[', 'b', '\t', -40, 'g', -88, -64, ' ', -22, '\r', 'u', -94, '/', -77, -52, -10,
-        'l', -76, -40, -118, 'K', 'S', -32, 1, -31, '9', -113, 26, '`', -70, -36}, toBigIntegerResult.toByteArray());
-    assertArrayEquals(new byte[]{'\\', '[', 'b', '\t', -40, 'g', -88, -64, ' ', -22, '\r', 'u', -94, '/', -77, -52, -10,
-        'l', -76, -40, -118, 'K', 'S', -32, 1, -31, '9', -113, 26, '`', -70, -36}, hash.getBytes());
+    assertArrayEquals("AXAXAXAX".getBytes("UTF-8"), actualStorageRowCapsule.getData());
+    assertArrayEquals("AXAXAXAX".getBytes("UTF-8"), actualStorageRowCapsule.getRowKey());
+    assertArrayEquals(
+        new byte[] {
+          '\\', '[', 'b', '\t', -40, 'g', -88, -64, ' ', -22, '\r', 'u', -94, '/', -77, -52, -10,
+          'l', -76, -40, -118, 'K', 'S', -32, 1, -31, '9', -113, 26, '`', -70, -36
+        },
+        toBigIntegerResult.toByteArray());
+    assertArrayEquals(
+        new byte[] {
+          '\\', '[', 'b', '\t', -40, 'g', -88, -64, ' ', -22, '\r', 'u', -94, '/', -77, -52, -10,
+          'l', -76, -40, -118, 'K', 'S', -32, 1, -31, '9', -113, 26, '`', -70, -36
+        },
+        hash.getBytes());
   }
 
   /**
    * Test {@link StorageRowCapsule#StorageRowCapsule(StorageRowCapsule)}.
+   *
    * <ul>
-   *   <li>Given {@code AXAXAXAX} Bytes is {@code UTF-8}.</li>
-   *   <li>Then return not Dirty.</li>
+   *   <li>Given {@code AXAXAXAX} Bytes is {@code UTF-8}.
+   *   <li>Then return not Dirty.
    * </ul>
-   * <p>
-   * Method under test: {@link StorageRowCapsule#StorageRowCapsule(StorageRowCapsule)}
+   *
+   * <p>Method under test: {@link StorageRowCapsule#StorageRowCapsule(StorageRowCapsule)}
    */
   @Test
   @Category(MaintainedByDiffblue.class)
@@ -132,33 +148,41 @@ public class StorageRowCapsuleDiffblueTest {
     assertSame(data, actualStorageRowCapsule.getRowValue());
     assertSame(data, actualStorageRowCapsule.getValue());
     assertArrayEquals("AXAXAXAX".getBytes("UTF-8"), data);
-    byte[] expectedRowKey = "AXAXAXAX".getBytes("UTF-8");
-    assertArrayEquals(expectedRowKey, actualStorageRowCapsule.getRowKey());
+    assertArrayEquals("AXAXAXAX".getBytes("UTF-8"), actualStorageRowCapsule.getRowKey());
     Sha256Hash hash = actualStorageRowCapsule.getHash();
-    assertArrayEquals(new byte[]{'\\', '[', 'b', '\t', -40, 'g', -88, -64, ' ', -22, '\r', 'u', -94, '/', -77, -52, -10,
-        'l', -76, -40, -118, 'K', 'S', -32, 1, -31, '9', -113, 26, '`', -70, -36}, hash.toBigInteger().toByteArray());
-    assertArrayEquals(new byte[]{'\\', '[', 'b', '\t', -40, 'g', -88, -64, ' ', -22, '\r', 'u', -94, '/', -77, -52, -10,
-        'l', -76, -40, -118, 'K', 'S', -32, 1, -31, '9', -113, 26, '`', -70, -36}, hash.getBytes());
+    assertArrayEquals(
+        new byte[] {
+          '\\', '[', 'b', '\t', -40, 'g', -88, -64, ' ', -22, '\r', 'u', -94, '/', -77, -52, -10,
+          'l', -76, -40, -118, 'K', 'S', -32, 1, -31, '9', -113, 26, '`', -70, -36
+        },
+        hash.toBigInteger().toByteArray());
+    assertArrayEquals(
+        new byte[] {
+          '\\', '[', 'b', '\t', -40, 'g', -88, -64, ' ', -22, '\r', 'u', -94, '/', -77, -52, -10,
+          'l', -76, -40, -118, 'K', 'S', -32, 1, -31, '9', -113, 26, '`', -70, -36
+        },
+        hash.getBytes());
   }
 
   /**
    * Test {@link StorageRowCapsule#StorageRowCapsule(StorageRowCapsule)}.
+   *
    * <ul>
-   *   <li>Then return Dirty.</li>
+   *   <li>Then return Dirty.
    * </ul>
-   * <p>
-   * Method under test: {@link StorageRowCapsule#StorageRowCapsule(StorageRowCapsule)}
+   *
+   * <p>Method under test: {@link StorageRowCapsule#StorageRowCapsule(StorageRowCapsule)}
    */
   @Test
   @Category(MaintainedByDiffblue.class)
   @MethodsUnderTest({"void StorageRowCapsule.<init>(StorageRowCapsule)"})
   public void testNewStorageRowCapsule_thenReturnDirty() throws UnsupportedEncodingException {
     // Arrange
-    byte[] rowKey = "AXAXAXAX".getBytes("UTF-8");
+    StorageRowCapsule rowCapsule =
+        new StorageRowCapsule("AXAXAXAX".getBytes("UTF-8"), "AXAXAXAX".getBytes("UTF-8"));
 
     // Act
-    StorageRowCapsule actualStorageRowCapsule = new StorageRowCapsule(
-        new StorageRowCapsule(rowKey, "AXAXAXAX".getBytes("UTF-8")));
+    StorageRowCapsule actualStorageRowCapsule = new StorageRowCapsule(rowCapsule);
 
     // Assert
     assertTrue(actualStorageRowCapsule.isDirty());
@@ -167,19 +191,67 @@ public class StorageRowCapsuleDiffblueTest {
     assertSame(data, actualStorageRowCapsule.getRowValue());
     assertSame(data, actualStorageRowCapsule.getValue());
     assertArrayEquals("AXAXAXAX".getBytes("UTF-8"), data);
-    byte[] expectedRowKey = "AXAXAXAX".getBytes("UTF-8");
-    assertArrayEquals(expectedRowKey, actualStorageRowCapsule.getRowKey());
+    assertArrayEquals("AXAXAXAX".getBytes("UTF-8"), actualStorageRowCapsule.getRowKey());
     Sha256Hash hash = actualStorageRowCapsule.getHash();
-    assertArrayEquals(new byte[]{'\\', '[', 'b', '\t', -40, 'g', -88, -64, ' ', -22, '\r', 'u', -94, '/', -77, -52, -10,
-        'l', -76, -40, -118, 'K', 'S', -32, 1, -31, '9', -113, 26, '`', -70, -36}, hash.toBigInteger().toByteArray());
-    assertArrayEquals(new byte[]{'\\', '[', 'b', '\t', -40, 'g', -88, -64, ' ', -22, '\r', 'u', -94, '/', -77, -52, -10,
-        'l', -76, -40, -118, 'K', 'S', -32, 1, -31, '9', -113, 26, '`', -70, -36}, hash.getBytes());
+    assertArrayEquals(
+        new byte[] {
+          '\\', '[', 'b', '\t', -40, 'g', -88, -64, ' ', -22, '\r', 'u', -94, '/', -77, -52, -10,
+          'l', -76, -40, -118, 'K', 'S', -32, 1, -31, '9', -113, 26, '`', -70, -36
+        },
+        hash.toBigInteger().toByteArray());
+    assertArrayEquals(
+        new byte[] {
+          '\\', '[', 'b', '\t', -40, 'g', -88, -64, ' ', -22, '\r', 'u', -94, '/', -77, -52, -10,
+          'l', -76, -40, -118, 'K', 'S', -32, 1, -31, '9', -113, 26, '`', -70, -36
+        },
+        hash.getBytes());
+  }
+
+  /**
+   * Test {@link StorageRowCapsule#getHash()}.
+   *
+   * <p>Method under test: {@link StorageRowCapsule#getHash()}
+   */
+  @Test
+  @Category(MaintainedByDiffblue.class)
+  @MethodsUnderTest({"Sha256Hash StorageRowCapsule.getHash()"})
+  public void testGetHash() throws UnsupportedEncodingException {
+    // Arrange and Act
+    Sha256Hash actualHash = new StorageRowCapsule("AXAXAXAX".getBytes("UTF-8")).getHash();
+
+    // Assert
+    ByteString byteString = actualHash.getByteString();
+    assertFalse(byteString.isEmpty());
+    ByteIterator iteratorResult = byteString.iterator();
+    assertTrue(iteratorResult.hasNext());
+    assertEquals('\\', iteratorResult.next().byteValue());
+    assertEquals('[', iteratorResult.next().byteValue());
+    assertEquals('b', iteratorResult.next().byteValue());
+    assertEquals("\\[b\t�g�� �\ru�/���l�؊KS�\u0001�9�\u001a`��", byteString.toStringUtf8());
+    assertArrayEquals(
+        new byte[] {
+          '\\', '[', 'b', '\t', -40, 'g', -88, -64, ' ', -22, '\r', 'u', -94, '/', -77, -52, -10,
+          'l', -76, -40, -118, 'K', 'S', -32, 1, -31, '9', -113, 26, '`', -70, -36
+        },
+        actualHash.getBytes());
+    BigInteger toBigIntegerResult = actualHash.toBigInteger();
+    assertEquals(2, toBigIntegerResult.getLowestSetBit());
+    assertEquals(1, toBigIntegerResult.signum());
+    assertArrayEquals(
+        new byte[] {
+          '\\', '[', 'b', '\t', -40, 'g', -88, -64, ' ', -22, '\r', 'u', -94, '/', -77, -52, -10,
+          'l', -76, -40, -118, 'K', 'S', -32, 1, -31, '9', -113, 26, '`', -70, -36
+        },
+        toBigIntegerResult.toByteArray());
+    assertEquals(
+        "41774241789126944098306227155094803171342615589867574088397738610130220530396",
+        toBigIntegerResult.toString());
   }
 
   /**
    * Test {@link StorageRowCapsule#setValue(byte[])}.
-   * <p>
-   * Method under test: {@link StorageRowCapsule#setValue(byte[])}
+   *
+   * <p>Method under test: {@link StorageRowCapsule#setValue(byte[])}
    */
   @Test
   @Category(MaintainedByDiffblue.class)
@@ -202,17 +274,16 @@ public class StorageRowCapsuleDiffblueTest {
 
   /**
    * Test {@link StorageRowCapsule#getInstance()}.
-   * <p>
-   * Method under test: {@link StorageRowCapsule#getInstance()}
+   *
+   * <p>Method under test: {@link StorageRowCapsule#getInstance()}
    */
   @Test
   @Category(MaintainedByDiffblue.class)
   @MethodsUnderTest({"byte[] StorageRowCapsule.getInstance()"})
   public void testGetInstance() throws UnsupportedEncodingException {
-    // Arrange and Act
-    byte[] actualInstance = (new StorageRowCapsule("AXAXAXAX".getBytes("UTF-8"))).getInstance();
-
-    // Assert
-    assertArrayEquals("AXAXAXAX".getBytes("UTF-8"), actualInstance);
+    // Arrange, Act and Assert
+    assertArrayEquals(
+        "AXAXAXAX".getBytes("UTF-8"),
+        new StorageRowCapsule("AXAXAXAX".getBytes("UTF-8")).getInstance());
   }
 }

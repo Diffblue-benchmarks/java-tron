@@ -11,12 +11,14 @@ import org.junit.experimental.categories.Category;
 public class AccountDiffblueTest {
   /**
    * Test {@link Account#equals(Object)}, and {@link Account#hashCode()}.
+   *
    * <ul>
-   *   <li>When other is equal.</li>
-   *   <li>Then return equal.</li>
+   *   <li>When other is equal.
+   *   <li>Then return equal.
    * </ul>
-   * <p>
-   * Methods under test:
+   *
+   * <p>Methods under test:
+   *
    * <ul>
    *   <li>{@link Account#equals(Object)}
    *   <li>{@link Account#hashCode()}
@@ -32,18 +34,19 @@ public class AccountDiffblueTest {
 
     // Act and Assert
     assertEquals(ofResult, ofResult2);
-    int expectedHashCodeResult = ofResult.hashCode();
-    assertEquals(expectedHashCodeResult, ofResult2.hashCode());
+    assertEquals(ofResult.hashCode(), ofResult2.hashCode());
   }
 
   /**
    * Test {@link Account#equals(Object)}, and {@link Account#hashCode()}.
+   *
    * <ul>
-   *   <li>When other is equal.</li>
-   *   <li>Then return equal.</li>
+   *   <li>When other is equal.
+   *   <li>Then return equal.
    * </ul>
-   * <p>
-   * Methods under test:
+   *
+   * <p>Methods under test:
+   *
    * <ul>
    *   <li>{@link Account#equals(Object)}
    *   <li>{@link Account#hashCode()}
@@ -56,23 +59,25 @@ public class AccountDiffblueTest {
     // Arrange
     Account ofResult = Account.of();
     ofResult.setAddress("42 Main St");
+
     Account ofResult2 = Account.of();
     ofResult2.setAddress("42 Main St");
 
     // Act and Assert
     assertEquals(ofResult, ofResult2);
-    int expectedHashCodeResult = ofResult.hashCode();
-    assertEquals(expectedHashCodeResult, ofResult2.hashCode());
+    assertEquals(ofResult.hashCode(), ofResult2.hashCode());
   }
 
   /**
    * Test {@link Account#equals(Object)}, and {@link Account#hashCode()}.
+   *
    * <ul>
-   *   <li>When other is equal.</li>
-   *   <li>Then return equal.</li>
+   *   <li>When other is equal.
+   *   <li>Then return equal.
    * </ul>
-   * <p>
-   * Methods under test:
+   *
+   * <p>Methods under test:
+   *
    * <ul>
    *   <li>{@link Account#equals(Object)}
    *   <li>{@link Account#hashCode()}
@@ -85,23 +90,25 @@ public class AccountDiffblueTest {
     // Arrange
     Account ofResult = Account.of();
     ofResult.setName("Name");
+
     Account ofResult2 = Account.of();
     ofResult2.setName("Name");
 
     // Act and Assert
     assertEquals(ofResult, ofResult2);
-    int expectedHashCodeResult = ofResult.hashCode();
-    assertEquals(expectedHashCodeResult, ofResult2.hashCode());
+    assertEquals(ofResult.hashCode(), ofResult2.hashCode());
   }
 
   /**
    * Test {@link Account#equals(Object)}, and {@link Account#hashCode()}.
+   *
    * <ul>
-   *   <li>When other is same.</li>
-   *   <li>Then return equal.</li>
+   *   <li>When other is same.
+   *   <li>Then return equal.
    * </ul>
-   * <p>
-   * Methods under test:
+   *
+   * <p>Methods under test:
+   *
    * <ul>
    *   <li>{@link Account#equals(Object)}
    *   <li>{@link Account#hashCode()}
@@ -122,12 +129,13 @@ public class AccountDiffblueTest {
 
   /**
    * Test {@link Account#equals(Object)}.
+   *
    * <ul>
-   *   <li>When other is different.</li>
-   *   <li>Then return not equal.</li>
+   *   <li>When other is different.
+   *   <li>Then return not equal.
    * </ul>
-   * <p>
-   * Method under test: {@link Account#equals(Object)}
+   *
+   * <p>Method under test: {@link Account#equals(Object)}
    */
   @Test
   @Category(MaintainedByDiffblue.class)
@@ -139,12 +147,13 @@ public class AccountDiffblueTest {
 
   /**
    * Test {@link Account#equals(Object)}.
+   *
    * <ul>
-   *   <li>When other is different.</li>
-   *   <li>Then return not equal.</li>
+   *   <li>When other is different.
+   *   <li>Then return not equal.
    * </ul>
-   * <p>
-   * Method under test: {@link Account#equals(Object)}
+   *
+   * <p>Method under test: {@link Account#equals(Object)}
    */
   @Test
   @Category(MaintainedByDiffblue.class)
@@ -160,12 +169,13 @@ public class AccountDiffblueTest {
 
   /**
    * Test {@link Account#equals(Object)}.
+   *
    * <ul>
-   *   <li>When other is different.</li>
-   *   <li>Then return not equal.</li>
+   *   <li>When other is different.
+   *   <li>Then return not equal.
    * </ul>
-   * <p>
-   * Method under test: {@link Account#equals(Object)}
+   *
+   * <p>Method under test: {@link Account#equals(Object)}
    */
   @Test
   @Category(MaintainedByDiffblue.class)
@@ -181,12 +191,13 @@ public class AccountDiffblueTest {
 
   /**
    * Test {@link Account#equals(Object)}.
+   *
    * <ul>
-   *   <li>When other is different.</li>
-   *   <li>Then return not equal.</li>
+   *   <li>When other is different.
+   *   <li>Then return not equal.
    * </ul>
-   * <p>
-   * Method under test: {@link Account#equals(Object)}
+   *
+   * <p>Method under test: {@link Account#equals(Object)}
    */
   @Test
   @Category(MaintainedByDiffblue.class)
@@ -202,12 +213,13 @@ public class AccountDiffblueTest {
 
   /**
    * Test {@link Account#equals(Object)}.
+   *
    * <ul>
-   *   <li>When other is different.</li>
-   *   <li>Then return not equal.</li>
+   *   <li>When other is different.
+   *   <li>Then return not equal.
    * </ul>
-   * <p>
-   * Method under test: {@link Account#equals(Object)}
+   *
+   * <p>Method under test: {@link Account#equals(Object)}
    */
   @Test
   @Category(MaintainedByDiffblue.class)
@@ -215,6 +227,7 @@ public class AccountDiffblueTest {
   public void testEquals_whenOtherIsDifferent_thenReturnNotEqual5() {
     // Arrange
     Account ofResult = Account.of();
+
     Account ofResult2 = Account.of();
     ofResult2.setAddress("42 Main St");
 
@@ -224,12 +237,13 @@ public class AccountDiffblueTest {
 
   /**
    * Test {@link Account#equals(Object)}.
+   *
    * <ul>
-   *   <li>When other is different.</li>
-   *   <li>Then return not equal.</li>
+   *   <li>When other is different.
+   *   <li>Then return not equal.
    * </ul>
-   * <p>
-   * Method under test: {@link Account#equals(Object)}
+   *
+   * <p>Method under test: {@link Account#equals(Object)}
    */
   @Test
   @Category(MaintainedByDiffblue.class)
@@ -237,6 +251,7 @@ public class AccountDiffblueTest {
   public void testEquals_whenOtherIsDifferent_thenReturnNotEqual6() {
     // Arrange
     Account ofResult = Account.of();
+
     Account ofResult2 = Account.of();
     ofResult2.setName("Name");
 
@@ -246,12 +261,13 @@ public class AccountDiffblueTest {
 
   /**
    * Test {@link Account#equals(Object)}.
+   *
    * <ul>
-   *   <li>When other is {@code null}.</li>
-   *   <li>Then return not equal.</li>
+   *   <li>When other is {@code null}.
+   *   <li>Then return not equal.
    * </ul>
-   * <p>
-   * Method under test: {@link Account#equals(Object)}
+   *
+   * <p>Method under test: {@link Account#equals(Object)}
    */
   @Test
   @Category(MaintainedByDiffblue.class)
@@ -263,12 +279,13 @@ public class AccountDiffblueTest {
 
   /**
    * Test {@link Account#equals(Object)}.
+   *
    * <ul>
-   *   <li>When other is wrong type.</li>
-   *   <li>Then return not equal.</li>
+   *   <li>When other is wrong type.
+   *   <li>Then return not equal.
    * </ul>
-   * <p>
-   * Method under test: {@link Account#equals(Object)}
+   *
+   * <p>Method under test: {@link Account#equals(Object)}
    */
   @Test
   @Category(MaintainedByDiffblue.class)
@@ -280,8 +297,9 @@ public class AccountDiffblueTest {
 
   /**
    * Test getters and setters.
-   * <p>
-   * Methods under test:
+   *
+   * <p>Methods under test:
+   *
    * <ul>
    *   <li>{@link Account#setAddress(String)}
    *   <li>{@link Account#setBalance(long)}
@@ -294,9 +312,15 @@ public class AccountDiffblueTest {
    */
   @Test
   @Category(MaintainedByDiffblue.class)
-  @MethodsUnderTest({"String Account.getAddress()", "long Account.getBalance()", "String Account.getName()",
-      "void Account.setAddress(String)", "void Account.setBalance(long)", "void Account.setName(String)",
-      "String Account.toString()"})
+  @MethodsUnderTest({
+    "String Account.getAddress()",
+    "long Account.getBalance()",
+    "String Account.getName()",
+    "void Account.setAddress(String)",
+    "void Account.setBalance(long)",
+    "void Account.setName(String)",
+    "String Account.toString()"
+  })
   public void testGettersAndSetters() {
     // Arrange
     Account ofResult = Account.of();
@@ -318,8 +342,8 @@ public class AccountDiffblueTest {
 
   /**
    * Test {@link Account#of()}.
-   * <p>
-   * Method under test: {@link Account#of()}
+   *
+   * <p>Method under test: {@link Account#of()}
    */
   @Test
   @Category(MaintainedByDiffblue.class)

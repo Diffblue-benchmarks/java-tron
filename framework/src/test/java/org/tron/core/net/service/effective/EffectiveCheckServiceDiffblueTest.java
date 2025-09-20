@@ -18,25 +18,27 @@ import org.junit.runner.RunWith;
 import org.mockito.InjectMocks;
 import org.mockito.Mock;
 import org.mockito.junit.MockitoJUnitRunner;
+import org.springframework.test.annotation.DirtiesContext;
+import org.springframework.test.annotation.DirtiesContext.ClassMode;
 import org.tron.core.net.TronNetDelegate;
 import org.tron.core.net.peer.PeerConnection;
 
+@DirtiesContext(classMode = ClassMode.AFTER_EACH_TEST_METHOD)
 @RunWith(MockitoJUnitRunner.class)
 public class EffectiveCheckServiceDiffblueTest {
-  @InjectMocks
-  private EffectiveCheckService effectiveCheckService;
+  @InjectMocks private EffectiveCheckService effectiveCheckService;
 
-  @Mock
-  private TronNetDelegate tronNetDelegate;
+  @Mock private TronNetDelegate tronNetDelegate;
 
   /**
    * Test {@link EffectiveCheckService#isIsolateLand()}.
+   *
    * <ul>
-   *   <li>Given {@link ArrayList#ArrayList()} add {@link PeerConnection} (default constructor).</li>
-   *   <li>Then return {@code true}.</li>
+   *   <li>Given {@link ArrayList#ArrayList()} add {@link PeerConnection} (default constructor).
+   *   <li>Then return {@code true}.
    * </ul>
-   * <p>
-   * Method under test: {@link EffectiveCheckService#isIsolateLand()}
+   *
+   * <p>Method under test: {@link EffectiveCheckService#isIsolateLand()}
    */
   @Test
   @Category(MaintainedByDiffblue.class)
@@ -57,12 +59,13 @@ public class EffectiveCheckServiceDiffblueTest {
 
   /**
    * Test {@link EffectiveCheckService#isIsolateLand()}.
+   *
    * <ul>
-   *   <li>Given {@link ArrayList#ArrayList()} add {@link PeerConnection} (default constructor).</li>
-   *   <li>Then return {@code true}.</li>
+   *   <li>Given {@link ArrayList#ArrayList()} add {@link PeerConnection} (default constructor).
+   *   <li>Then return {@code true}.
    * </ul>
-   * <p>
-   * Method under test: {@link EffectiveCheckService#isIsolateLand()}
+   *
+   * <p>Method under test: {@link EffectiveCheckService#isIsolateLand()}
    */
   @Test
   @Category(MaintainedByDiffblue.class)
@@ -84,12 +87,13 @@ public class EffectiveCheckServiceDiffblueTest {
 
   /**
    * Test {@link EffectiveCheckService#isIsolateLand()}.
+   *
    * <ul>
-   *   <li>Given {@link PeerConnection} (default constructor) NeedSyncFromUs is {@code false}.</li>
-   *   <li>Then return {@code false}.</li>
+   *   <li>Given {@link PeerConnection} (default constructor) NeedSyncFromUs is {@code false}.
+   *   <li>Then return {@code false}.
    * </ul>
-   * <p>
-   * Method under test: {@link EffectiveCheckService#isIsolateLand()}
+   *
+   * <p>Method under test: {@link EffectiveCheckService#isIsolateLand()}
    */
   @Test
   @Category(MaintainedByDiffblue.class)
@@ -113,11 +117,12 @@ public class EffectiveCheckServiceDiffblueTest {
 
   /**
    * Test {@link EffectiveCheckService#isIsolateLand()}.
+   *
    * <ul>
-   *   <li>Then calls {@link PeerConnection#isNeedSyncFromUs()}.</li>
+   *   <li>Then calls {@link PeerConnection#isNeedSyncFromUs()}.
    * </ul>
-   * <p>
-   * Method under test: {@link EffectiveCheckService#isIsolateLand()}
+   *
+   * <p>Method under test: {@link EffectiveCheckService#isIsolateLand()}
    */
   @Test
   @Category(MaintainedByDiffblue.class)
@@ -142,11 +147,12 @@ public class EffectiveCheckServiceDiffblueTest {
 
   /**
    * Test {@link EffectiveCheckService#isIsolateLand()}.
+   *
    * <ul>
-   *   <li>Then return {@code true}.</li>
+   *   <li>Then return {@code true}.
    * </ul>
-   * <p>
-   * Method under test: {@link EffectiveCheckService#isIsolateLand()}
+   *
+   * <p>Method under test: {@link EffectiveCheckService#isIsolateLand()}
    */
   @Test
   @Category(MaintainedByDiffblue.class)
@@ -165,11 +171,13 @@ public class EffectiveCheckServiceDiffblueTest {
 
   /**
    * Test {@link EffectiveCheckService#onDisconnect(InetSocketAddress)}.
+   *
    * <ul>
-   *   <li>Given {@link EffectiveCheckService} (default constructor) Cur is createUnresolved {@code foo} and one.</li>
+   *   <li>Given {@link EffectiveCheckService} (default constructor) Cur is createUnresolved {@code
+   *       foo} and one.
    * </ul>
-   * <p>
-   * Method under test: {@link EffectiveCheckService#onDisconnect(InetSocketAddress)}
+   *
+   * <p>Method under test: {@link EffectiveCheckService#onDisconnect(InetSocketAddress)}
    */
   @Test
   @Category(MaintainedByDiffblue.class)
@@ -188,12 +196,13 @@ public class EffectiveCheckServiceDiffblueTest {
 
   /**
    * Test {@link EffectiveCheckService#onDisconnect(InetSocketAddress)}.
+   *
    * <ul>
-   *   <li>Given {@link EffectiveCheckService} (default constructor).</li>
-   *   <li>Then {@link EffectiveCheckService} (default constructor) Cur is {@code null}.</li>
+   *   <li>Given {@link EffectiveCheckService} (default constructor).
+   *   <li>Then {@link EffectiveCheckService} (default constructor) Cur is {@code null}.
    * </ul>
-   * <p>
-   * Method under test: {@link EffectiveCheckService#onDisconnect(InetSocketAddress)}
+   *
+   * <p>Method under test: {@link EffectiveCheckService#onDisconnect(InetSocketAddress)}
    */
   @Test
   @Category(MaintainedByDiffblue.class)
@@ -211,8 +220,9 @@ public class EffectiveCheckServiceDiffblueTest {
 
   /**
    * Test getters and setters.
-   * <p>
-   * Methods under test:
+   *
+   * <p>Methods under test:
+   *
    * <ul>
    *   <li>{@link EffectiveCheckService#setCur(InetSocketAddress)}
    *   <li>{@link EffectiveCheckService#getCur()}
@@ -221,8 +231,11 @@ public class EffectiveCheckServiceDiffblueTest {
    */
   @Test
   @Category(MaintainedByDiffblue.class)
-  @MethodsUnderTest({"InetSocketAddress EffectiveCheckService.getCur()",
-      "boolean EffectiveCheckService.isEffectiveCheck()", "void EffectiveCheckService.setCur(InetSocketAddress)"})
+  @MethodsUnderTest({
+    "InetSocketAddress EffectiveCheckService.getCur()",
+    "boolean EffectiveCheckService.isEffectiveCheck()",
+    "void EffectiveCheckService.setCur(InetSocketAddress)"
+  })
   public void testGettersAndSetters() {
     // Arrange
     EffectiveCheckService effectiveCheckService = new EffectiveCheckService();

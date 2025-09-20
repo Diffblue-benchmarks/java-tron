@@ -9,15 +9,15 @@ import org.junit.experimental.categories.Category;
 public class PeerStatisticsDiffblueTest {
   /**
    * Test new {@link PeerStatistics} (default constructor).
-   * <p>
-   * Method under test: default or parameterless constructor of {@link PeerStatistics}
+   *
+   * <p>Method under test: default or parameterless constructor of {@link PeerStatistics}
    */
   @Test
   @Category(MaintainedByDiffblue.class)
   @MethodsUnderTest({"void PeerStatistics.<init>()"})
   public void testNewPeerStatistics() {
     // Arrange, Act and Assert
-    MessageStatistics messageStatistics = (new PeerStatistics()).messageStatistics;
+    MessageStatistics messageStatistics = new PeerStatistics().messageStatistics;
     assertEquals(0L, messageStatistics.p2pInDisconnect.getTotalCount());
     assertEquals(0L, messageStatistics.p2pInHello.getTotalCount());
     assertEquals(0L, messageStatistics.p2pInPing.getTotalCount());

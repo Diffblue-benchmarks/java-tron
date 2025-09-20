@@ -11,17 +11,21 @@ import org.junit.experimental.categories.Category;
 public class CipherExceptionDiffblueTest {
   /**
    * Test {@link CipherException#CipherException(String)}.
+   *
    * <ul>
-   *   <li>When {@code An error occurred}.</li>
-   *   <li>Then return Cause is {@code null}.</li>
+   *   <li>When {@code An error occurred}.
+   *   <li>Then return Cause is {@code null}.
    * </ul>
-   * <p>
-   * Method under test: {@link CipherException#CipherException(String)}
+   *
+   * <p>Method under test: {@link CipherException#CipherException(String)}
    */
   @Test
   @Category(MaintainedByDiffblue.class)
-  @MethodsUnderTest({"void CipherException.<init>(String)", "void CipherException.<init>(String, Throwable)",
-      "void CipherException.<init>(Throwable)"})
+  @MethodsUnderTest({
+    "void CipherException.<init>(String)",
+    "void CipherException.<init>(String, Throwable)",
+    "void CipherException.<init>(Throwable)"
+  })
   public void testNewCipherException_whenAnErrorOccurred_thenReturnCauseIsNull() {
     // Arrange and Act
     CipherException actualCipherException = new CipherException("An error occurred");
@@ -34,17 +38,21 @@ public class CipherExceptionDiffblueTest {
 
   /**
    * Test {@link CipherException#CipherException(String, Throwable)}.
+   *
    * <ul>
-   *   <li>When {@code An error occurred}.</li>
-   *   <li>Then return Message is {@code An error occurred}.</li>
+   *   <li>When {@code An error occurred}.
+   *   <li>Then return Message is {@code An error occurred}.
    * </ul>
-   * <p>
-   * Method under test: {@link CipherException#CipherException(String, Throwable)}
+   *
+   * <p>Method under test: {@link CipherException#CipherException(String, Throwable)}
    */
   @Test
   @Category(MaintainedByDiffblue.class)
-  @MethodsUnderTest({"void CipherException.<init>(String)", "void CipherException.<init>(String, Throwable)",
-      "void CipherException.<init>(Throwable)"})
+  @MethodsUnderTest({
+    "void CipherException.<init>(String)",
+    "void CipherException.<init>(String, Throwable)",
+    "void CipherException.<init>(Throwable)"
+  })
   public void testNewCipherException_whenAnErrorOccurred_thenReturnMessageIsAnErrorOccurred() {
     // Arrange
     Throwable cause = new Throwable();
@@ -60,17 +68,21 @@ public class CipherExceptionDiffblueTest {
 
   /**
    * Test {@link CipherException#CipherException(Throwable)}.
+   *
    * <ul>
-   *   <li>When {@link Throwable#Throwable()}.</li>
-   *   <li>Then return Message is {@code Throwable}.</li>
+   *   <li>When {@link Throwable#Throwable()}.
+   *   <li>Then return Message is {@code Throwable}.
    * </ul>
-   * <p>
-   * Method under test: {@link CipherException#CipherException(Throwable)}
+   *
+   * <p>Method under test: {@link CipherException#CipherException(Throwable)}
    */
   @Test
   @Category(MaintainedByDiffblue.class)
-  @MethodsUnderTest({"void CipherException.<init>(String)", "void CipherException.<init>(String, Throwable)",
-      "void CipherException.<init>(Throwable)"})
+  @MethodsUnderTest({
+    "void CipherException.<init>(String)",
+    "void CipherException.<init>(String, Throwable)",
+    "void CipherException.<init>(Throwable)"
+  })
   public void testNewCipherException_whenThrowable_thenReturnMessageIsJavaLangThrowable() {
     // Arrange
     Throwable cause = new Throwable();

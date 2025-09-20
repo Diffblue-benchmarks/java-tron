@@ -24,22 +24,18 @@ import org.tron.core.services.WitnessProductBlockService.CheatWitnessInfo;
 
 @RunWith(MockitoJUnitRunner.class)
 public class NodeInfoServiceDiffblueTest {
-  @Mock
-  private ChainBaseManager chainBaseManager;
+  @Mock private ChainBaseManager chainBaseManager;
 
-  @Mock
-  private Manager manager;
+  @Mock private Manager manager;
 
-  @InjectMocks
-  private NodeInfoService nodeInfoService;
+  @InjectMocks private NodeInfoService nodeInfoService;
 
-  @Mock
-  private WitnessProductBlockService witnessProductBlockService;
+  @Mock private WitnessProductBlockService witnessProductBlockService;
 
   /**
    * Test {@link NodeInfoService#setBlockInfo(NodeInfo)}.
-   * <p>
-   * Method under test: {@link NodeInfoService#setBlockInfo(NodeInfo)}
+   *
+   * <p>Method under test: {@link NodeInfoService#setBlockInfo(NodeInfo)}
    */
   @Test
   @Category(MaintainedByDiffblue.class)
@@ -58,16 +54,19 @@ public class NodeInfoServiceDiffblueTest {
     verify(chainBaseManager).getHeadBlockId();
     verify(chainBaseManager).getSolidBlockId();
     verify(manager).fetchSyncBeginNumber();
-    assertEquals("Num:0,ID:0000000000000000000000000000000000000000000000000000000000000000", nodeInfo.getBlock());
-    assertEquals("Num:0,ID:0000000000000000000000000000000000000000000000000000000000000000",
+    assertEquals(
+        "Num:0,ID:0000000000000000000000000000000000000000000000000000000000000000",
+        nodeInfo.getBlock());
+    assertEquals(
+        "Num:0,ID:0000000000000000000000000000000000000000000000000000000000000000",
         nodeInfo.getSolidityBlock());
     assertEquals(1L, nodeInfo.getBeginSyncNum());
   }
 
   /**
    * Test {@link NodeInfoService#setBlockInfo(NodeInfo)}.
-   * <p>
-   * Method under test: {@link NodeInfoService#setBlockInfo(NodeInfo)}
+   *
+   * <p>Method under test: {@link NodeInfoService#setBlockInfo(NodeInfo)}
    */
   @Test
   @Category(MaintainedByDiffblue.class)
@@ -89,18 +88,21 @@ public class NodeInfoServiceDiffblueTest {
     verify(chainBaseManager).getSolidBlockId();
     verify(blockId).getString();
     verify(manager).fetchSyncBeginNumber();
-    assertEquals("Num:0,ID:0000000000000000000000000000000000000000000000000000000000000000", nodeInfo.getBlock());
+    assertEquals(
+        "Num:0,ID:0000000000000000000000000000000000000000000000000000000000000000",
+        nodeInfo.getBlock());
     assertEquals("String", nodeInfo.getSolidityBlock());
     assertEquals(1L, nodeInfo.getBeginSyncNum());
   }
 
   /**
    * Test {@link NodeInfoService#setBlockInfo(NodeInfo)}.
+   *
    * <ul>
-   *   <li>Then {@link NodeInfo} (default constructor) Block is {@code String}.</li>
+   *   <li>Then {@link NodeInfo} (default constructor) Block is {@code String}.
    * </ul>
-   * <p>
-   * Method under test: {@link NodeInfoService#setBlockInfo(NodeInfo)}
+   *
+   * <p>Method under test: {@link NodeInfoService#setBlockInfo(NodeInfo)}
    */
   @Test
   @Category(MaintainedByDiffblue.class)
@@ -109,6 +111,7 @@ public class NodeInfoServiceDiffblueTest {
     // Arrange
     BlockId blockId = mock(BlockId.class);
     when(blockId.getString()).thenReturn("String");
+
     BlockId blockId2 = mock(BlockId.class);
     when(blockId2.getString()).thenReturn("String");
     when(chainBaseManager.getSolidBlockId()).thenReturn(blockId2);
@@ -132,8 +135,8 @@ public class NodeInfoServiceDiffblueTest {
 
   /**
    * Test {@link NodeInfoService#setCheatWitnessInfo(NodeInfo)}.
-   * <p>
-   * Method under test: {@link NodeInfoService#setCheatWitnessInfo(NodeInfo)}
+   *
+   * <p>Method under test: {@link NodeInfoService#setCheatWitnessInfo(NodeInfo)}
    */
   @Test
   @Category(MaintainedByDiffblue.class)
@@ -152,16 +155,18 @@ public class NodeInfoServiceDiffblueTest {
     verify(witnessProductBlockService).queryCheatWitnessInfo();
     Map<String, String> cheatWitnessInfoMap = nodeInfo.getCheatWitnessInfoMap();
     assertEquals(1, cheatWitnessInfoMap.size());
-    assertEquals("{times=0, time=0, latestBlockNum=0, blockCapsuleSet=[]}", cheatWitnessInfoMap.get("foo"));
+    assertEquals(
+        "{times=0, time=0, latestBlockNum=0, blockCapsuleSet=[]}", cheatWitnessInfoMap.get("foo"));
   }
 
   /**
    * Test {@link NodeInfoService#setCheatWitnessInfo(NodeInfo)}.
+   *
    * <ul>
-   *   <li>Then {@link NodeInfo} (default constructor) CheatWitnessInfoMap containsKey {@code foo}.</li>
+   *   <li>Then {@link NodeInfo} (default constructor) CheatWitnessInfoMap containsKey {@code foo}.
    * </ul>
-   * <p>
-   * Method under test: {@link NodeInfoService#setCheatWitnessInfo(NodeInfo)}
+   *
+   * <p>Method under test: {@link NodeInfoService#setCheatWitnessInfo(NodeInfo)}
    */
   @Test
   @Category(MaintainedByDiffblue.class)
@@ -185,12 +190,13 @@ public class NodeInfoServiceDiffblueTest {
 
   /**
    * Test {@link NodeInfoService#setCheatWitnessInfo(NodeInfo)}.
+   *
    * <ul>
-   *   <li>When {@link NodeInfo} (default constructor).</li>
-   *   <li>Then {@link NodeInfo} (default constructor) CheatWitnessInfoMap Empty.</li>
+   *   <li>When {@link NodeInfo} (default constructor).
+   *   <li>Then {@link NodeInfo} (default constructor) CheatWitnessInfoMap Empty.
    * </ul>
-   * <p>
-   * Method under test: {@link NodeInfoService#setCheatWitnessInfo(NodeInfo)}
+   *
+   * <p>Method under test: {@link NodeInfoService#setCheatWitnessInfo(NodeInfo)}
    */
   @Test
   @Category(MaintainedByDiffblue.class)

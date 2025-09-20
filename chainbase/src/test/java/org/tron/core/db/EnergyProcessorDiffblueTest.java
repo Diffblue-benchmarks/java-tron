@@ -3,7 +3,6 @@ package org.tron.core.db;
 import static org.junit.Assert.assertEquals;
 import static org.junit.Assert.assertNull;
 import static org.junit.Assert.assertThrows;
-import static org.mockito.ArgumentMatchers.eq;
 import static org.mockito.Mockito.anyLong;
 import static org.mockito.Mockito.doNothing;
 import static org.mockito.Mockito.mock;
@@ -17,18 +16,21 @@ import org.junit.runner.RunWith;
 import org.mockito.Mock;
 import org.mockito.junit.MockitoJUnitRunner;
 import org.tron.core.capsule.AccountCapsule;
+import org.tron.core.capsule.TransactionCapsule;
+import org.tron.core.exception.AccountResourceInsufficientException;
+import org.tron.core.exception.ContractValidateException;
 import org.tron.core.store.AccountStore;
 import org.tron.core.store.DynamicPropertiesStore;
 
 @RunWith(MockitoJUnitRunner.class)
 public class EnergyProcessorDiffblueTest {
-  @Mock
-  private DynamicPropertiesStore dynamicPropertiesStore;
+  @Mock private DynamicPropertiesStore dynamicPropertiesStore;
 
   /**
    * Test {@link EnergyProcessor#EnergyProcessor(DynamicPropertiesStore, AccountStore)}.
-   * <p>
-   * Method under test: {@link EnergyProcessor#EnergyProcessor(DynamicPropertiesStore, AccountStore)}
+   *
+   * <p>Method under test: {@link EnergyProcessor#EnergyProcessor(DynamicPropertiesStore,
+   * AccountStore)}
    */
   @Test
   @Category(MaintainedByDiffblue.class)
@@ -46,19 +48,21 @@ public class EnergyProcessorDiffblueTest {
   }
 
   /**
-   * Test {@link EnergyProcessor#getHeadSlot(DynamicPropertiesStore)} with {@code DynamicPropertiesStore}.
+   * Test {@link EnergyProcessor#getHeadSlot(DynamicPropertiesStore)} with {@code
+   * DynamicPropertiesStore}.
+   *
    * <ul>
-   *   <li>Then throw {@link RuntimeException}.</li>
+   *   <li>Then throw {@link RuntimeException}.
    * </ul>
-   * <p>
-   * Method under test: {@link EnergyProcessor#getHeadSlot(DynamicPropertiesStore)}
+   *
+   * <p>Method under test: {@link EnergyProcessor#getHeadSlot(DynamicPropertiesStore)}
    */
   @Test
   @Category(MaintainedByDiffblue.class)
   @MethodsUnderTest({"long EnergyProcessor.getHeadSlot(DynamicPropertiesStore)"})
   public void testGetHeadSlotWithDynamicPropertiesStore_thenThrowRuntimeException() {
     // Arrange
-    when(dynamicPropertiesStore.getLatestBlockHeaderTimestamp()).thenThrow(new RuntimeException("foo"));
+    when(dynamicPropertiesStore.getLatestBlockHeaderTimestamp()).thenThrow(new RuntimeException());
 
     // Act and Assert
     assertThrows(RuntimeException.class, () -> EnergyProcessor.getHeadSlot(dynamicPropertiesStore));
@@ -67,8 +71,8 @@ public class EnergyProcessorDiffblueTest {
 
   /**
    * Test {@link EnergyProcessor#updateAdaptiveTotalEnergyLimit()}.
-   * <p>
-   * Method under test: {@link EnergyProcessor#updateAdaptiveTotalEnergyLimit()}
+   *
+   * <p>Method under test: {@link EnergyProcessor#updateAdaptiveTotalEnergyLimit()}
    */
   @Test
   @Category(MaintainedByDiffblue.class)
@@ -82,9 +86,11 @@ public class EnergyProcessorDiffblueTest {
     when(dynamicPropertiesStore.getTotalEnergyLimit()).thenReturn(1L);
     when(dynamicPropertiesStore.getTotalEnergyTargetLimit()).thenReturn(1L);
     doNothing().when(dynamicPropertiesStore).saveTotalEnergyCurrentLimit(anyLong());
+    EnergyProcessor energyProcessor =
+        new EnergyProcessor(dynamicPropertiesStore, mock(AccountStore.class));
 
     // Act
-    (new EnergyProcessor(dynamicPropertiesStore, mock(AccountStore.class))).updateAdaptiveTotalEnergyLimit();
+    energyProcessor.updateAdaptiveTotalEnergyLimit();
 
     // Assert
     verify(dynamicPropertiesStore).getAdaptiveResourceLimitMultiplier();
@@ -92,13 +98,13 @@ public class EnergyProcessorDiffblueTest {
     verify(dynamicPropertiesStore).getTotalEnergyCurrentLimit();
     verify(dynamicPropertiesStore).getTotalEnergyLimit();
     verify(dynamicPropertiesStore).getTotalEnergyTargetLimit();
-    verify(dynamicPropertiesStore).saveTotalEnergyCurrentLimit(eq(1L));
+    verify(dynamicPropertiesStore).saveTotalEnergyCurrentLimit(1L);
   }
 
   /**
    * Test {@link EnergyProcessor#updateAdaptiveTotalEnergyLimit()}.
-   * <p>
-   * Method under test: {@link EnergyProcessor#updateAdaptiveTotalEnergyLimit()}
+   *
+   * <p>Method under test: {@link EnergyProcessor#updateAdaptiveTotalEnergyLimit()}
    */
   @Test
   @Category(MaintainedByDiffblue.class)
@@ -112,9 +118,11 @@ public class EnergyProcessorDiffblueTest {
     when(dynamicPropertiesStore.getTotalEnergyLimit()).thenReturn(1L);
     when(dynamicPropertiesStore.getTotalEnergyTargetLimit()).thenReturn(1L);
     doNothing().when(dynamicPropertiesStore).saveTotalEnergyCurrentLimit(anyLong());
+    EnergyProcessor energyProcessor =
+        new EnergyProcessor(dynamicPropertiesStore, mock(AccountStore.class));
 
     // Act
-    (new EnergyProcessor(dynamicPropertiesStore, mock(AccountStore.class))).updateAdaptiveTotalEnergyLimit();
+    energyProcessor.updateAdaptiveTotalEnergyLimit();
 
     // Assert
     verify(dynamicPropertiesStore).getAdaptiveResourceLimitMultiplier();
@@ -122,16 +130,17 @@ public class EnergyProcessorDiffblueTest {
     verify(dynamicPropertiesStore).getTotalEnergyCurrentLimit();
     verify(dynamicPropertiesStore).getTotalEnergyLimit();
     verify(dynamicPropertiesStore).getTotalEnergyTargetLimit();
-    verify(dynamicPropertiesStore).saveTotalEnergyCurrentLimit(eq(1L));
+    verify(dynamicPropertiesStore).saveTotalEnergyCurrentLimit(1L);
   }
 
   /**
    * Test {@link EnergyProcessor#updateAdaptiveTotalEnergyLimit()}.
+   *
    * <ul>
-   *   <li>Then throw {@link RuntimeException}.</li>
+   *   <li>Then throw {@link RuntimeException}.
    * </ul>
-   * <p>
-   * Method under test: {@link EnergyProcessor#updateAdaptiveTotalEnergyLimit()}
+   *
+   * <p>Method under test: {@link EnergyProcessor#updateAdaptiveTotalEnergyLimit()}
    */
   @Test
   @Category(MaintainedByDiffblue.class)
@@ -139,19 +148,41 @@ public class EnergyProcessorDiffblueTest {
   public void testUpdateAdaptiveTotalEnergyLimit_thenThrowRuntimeException() {
     // Arrange
     DynamicPropertiesStore dynamicPropertiesStore = mock(DynamicPropertiesStore.class);
-    when(dynamicPropertiesStore.getTotalEnergyAverageUsage())
-        .thenThrow(new RuntimeException("Adjust totalEnergyCurrentLimit, old: {}, new: {}."));
+    when(dynamicPropertiesStore.getTotalEnergyAverageUsage()).thenThrow(new RuntimeException());
+    EnergyProcessor energyProcessor =
+        new EnergyProcessor(dynamicPropertiesStore, mock(AccountStore.class));
 
     // Act and Assert
-    assertThrows(RuntimeException.class,
-        () -> (new EnergyProcessor(dynamicPropertiesStore, mock(AccountStore.class))).updateAdaptiveTotalEnergyLimit());
+    assertThrows(RuntimeException.class, () -> energyProcessor.updateAdaptiveTotalEnergyLimit());
     verify(dynamicPropertiesStore).getTotalEnergyAverageUsage();
   }
 
   /**
+   * Test {@link EnergyProcessor#consume(TransactionCapsule, TransactionTrace)}.
+   *
+   * <ul>
+   *   <li>When {@code null}.
+   *   <li>Then throw {@link RuntimeException}.
+   * </ul>
+   *
+   * <p>Method under test: {@link EnergyProcessor#consume(TransactionCapsule, TransactionTrace)}
+   */
+  @Test
+  @Category(MaintainedByDiffblue.class)
+  @MethodsUnderTest({"void EnergyProcessor.consume(TransactionCapsule, TransactionTrace)"})
+  public void testConsume_whenNull_thenThrowRuntimeException()
+      throws AccountResourceInsufficientException, ContractValidateException {
+    // Arrange
+    EnergyProcessor energyProcessor = new EnergyProcessor(null, null);
+
+    // Act and Assert
+    assertThrows(RuntimeException.class, () -> energyProcessor.consume(null, null));
+  }
+
+  /**
    * Test {@link EnergyProcessor#calculateGlobalEnergyLimit(AccountCapsule)}.
-   * <p>
-   * Method under test: {@link EnergyProcessor#calculateGlobalEnergyLimit(AccountCapsule)}
+   *
+   * <p>Method under test: {@link EnergyProcessor#calculateGlobalEnergyLimit(AccountCapsule)}
    */
   @Test
   @Category(MaintainedByDiffblue.class)
@@ -163,11 +194,13 @@ public class EnergyProcessorDiffblueTest {
     when(dynamicPropertiesStore.getTotalEnergyWeight()).thenReturn(1L);
     when(dynamicPropertiesStore.supportUnfreezeDelay()).thenReturn(true);
     EnergyProcessor energyProcessor = new EnergyProcessor(dynamicPropertiesStore, null);
+
     AccountCapsule accountCapsule = mock(AccountCapsule.class);
     when(accountCapsule.getAllFrozenBalanceForEnergy()).thenReturn(42L);
 
     // Act
-    long actualCalculateGlobalEnergyLimitResult = energyProcessor.calculateGlobalEnergyLimit(accountCapsule);
+    long actualCalculateGlobalEnergyLimitResult =
+        energyProcessor.calculateGlobalEnergyLimit(accountCapsule);
 
     // Assert
     verify(accountCapsule).getAllFrozenBalanceForEnergy();
@@ -179,8 +212,8 @@ public class EnergyProcessorDiffblueTest {
 
   /**
    * Test {@link EnergyProcessor#calculateGlobalEnergyLimit(AccountCapsule)}.
-   * <p>
-   * Method under test: {@link EnergyProcessor#calculateGlobalEnergyLimit(AccountCapsule)}
+   *
+   * <p>Method under test: {@link EnergyProcessor#calculateGlobalEnergyLimit(AccountCapsule)}
    */
   @Test
   @Category(MaintainedByDiffblue.class)
@@ -188,14 +221,16 @@ public class EnergyProcessorDiffblueTest {
   public void testCalculateGlobalEnergyLimit2() {
     // Arrange
     DynamicPropertiesStore dynamicPropertiesStore = mock(DynamicPropertiesStore.class);
-    when(dynamicPropertiesStore.getTotalEnergyCurrentLimit()).thenThrow(new RuntimeException("foo"));
+    when(dynamicPropertiesStore.getTotalEnergyCurrentLimit()).thenThrow(new RuntimeException());
     when(dynamicPropertiesStore.supportUnfreezeDelay()).thenReturn(true);
     EnergyProcessor energyProcessor = new EnergyProcessor(dynamicPropertiesStore, null);
+
     AccountCapsule accountCapsule = mock(AccountCapsule.class);
     when(accountCapsule.getAllFrozenBalanceForEnergy()).thenReturn(42L);
 
     // Act and Assert
-    assertThrows(RuntimeException.class, () -> energyProcessor.calculateGlobalEnergyLimit(accountCapsule));
+    assertThrows(
+        RuntimeException.class, () -> energyProcessor.calculateGlobalEnergyLimit(accountCapsule));
     verify(accountCapsule).getAllFrozenBalanceForEnergy();
     verify(dynamicPropertiesStore).getTotalEnergyCurrentLimit();
     verify(dynamicPropertiesStore).supportUnfreezeDelay();
@@ -203,8 +238,8 @@ public class EnergyProcessorDiffblueTest {
 
   /**
    * Test {@link EnergyProcessor#calculateGlobalEnergyLimit(AccountCapsule)}.
-   * <p>
-   * Method under test: {@link EnergyProcessor#calculateGlobalEnergyLimit(AccountCapsule)}
+   *
+   * <p>Method under test: {@link EnergyProcessor#calculateGlobalEnergyLimit(AccountCapsule)}
    */
   @Test
   @Category(MaintainedByDiffblue.class)
@@ -216,11 +251,13 @@ public class EnergyProcessorDiffblueTest {
     when(dynamicPropertiesStore.getTotalEnergyWeight()).thenReturn(0L);
     when(dynamicPropertiesStore.supportUnfreezeDelay()).thenReturn(true);
     EnergyProcessor energyProcessor = new EnergyProcessor(dynamicPropertiesStore, null);
+
     AccountCapsule accountCapsule = mock(AccountCapsule.class);
     when(accountCapsule.getAllFrozenBalanceForEnergy()).thenReturn(42L);
 
     // Act
-    long actualCalculateGlobalEnergyLimitResult = energyProcessor.calculateGlobalEnergyLimit(accountCapsule);
+    long actualCalculateGlobalEnergyLimitResult =
+        energyProcessor.calculateGlobalEnergyLimit(accountCapsule);
 
     // Assert
     verify(accountCapsule).getAllFrozenBalanceForEnergy();
@@ -232,8 +269,8 @@ public class EnergyProcessorDiffblueTest {
 
   /**
    * Test {@link EnergyProcessor#calculateGlobalEnergyLimit(AccountCapsule)}.
-   * <p>
-   * Method under test: {@link EnergyProcessor#calculateGlobalEnergyLimit(AccountCapsule)}
+   *
+   * <p>Method under test: {@link EnergyProcessor#calculateGlobalEnergyLimit(AccountCapsule)}
    */
   @Test
   @Category(MaintainedByDiffblue.class)
@@ -241,16 +278,48 @@ public class EnergyProcessorDiffblueTest {
   public void testCalculateGlobalEnergyLimit4() {
     // Arrange
     DynamicPropertiesStore dynamicPropertiesStore = mock(DynamicPropertiesStore.class);
+    when(dynamicPropertiesStore.allowNewReward()).thenThrow(new RuntimeException());
+    when(dynamicPropertiesStore.getTotalEnergyCurrentLimit()).thenReturn(1L);
+    when(dynamicPropertiesStore.getTotalEnergyWeight()).thenReturn(1L);
+    when(dynamicPropertiesStore.supportUnfreezeDelay()).thenReturn(false);
+    EnergyProcessor energyProcessor = new EnergyProcessor(dynamicPropertiesStore, null);
+
+    AccountCapsule accountCapsule = mock(AccountCapsule.class);
+    when(accountCapsule.getAllFrozenBalanceForEnergy()).thenReturn(1000000L);
+
+    // Act and Assert
+    assertThrows(
+        RuntimeException.class, () -> energyProcessor.calculateGlobalEnergyLimit(accountCapsule));
+    verify(accountCapsule).getAllFrozenBalanceForEnergy();
+    verify(dynamicPropertiesStore).allowNewReward();
+    verify(dynamicPropertiesStore).getTotalEnergyCurrentLimit();
+    verify(dynamicPropertiesStore).getTotalEnergyWeight();
+    verify(dynamicPropertiesStore).supportUnfreezeDelay();
+  }
+
+  /**
+   * Test {@link EnergyProcessor#calculateGlobalEnergyLimit(AccountCapsule)}.
+   *
+   * <p>Method under test: {@link EnergyProcessor#calculateGlobalEnergyLimit(AccountCapsule)}
+   */
+  @Test
+  @Category(MaintainedByDiffblue.class)
+  @MethodsUnderTest({"long EnergyProcessor.calculateGlobalEnergyLimit(AccountCapsule)"})
+  public void testCalculateGlobalEnergyLimit5() {
+    // Arrange
+    DynamicPropertiesStore dynamicPropertiesStore = mock(DynamicPropertiesStore.class);
     when(dynamicPropertiesStore.allowNewReward()).thenReturn(false);
     when(dynamicPropertiesStore.getTotalEnergyCurrentLimit()).thenReturn(1L);
     when(dynamicPropertiesStore.getTotalEnergyWeight()).thenReturn(1L);
     when(dynamicPropertiesStore.supportUnfreezeDelay()).thenReturn(false);
     EnergyProcessor energyProcessor = new EnergyProcessor(dynamicPropertiesStore, null);
+
     AccountCapsule accountCapsule = mock(AccountCapsule.class);
     when(accountCapsule.getAllFrozenBalanceForEnergy()).thenReturn(1000000L);
 
     // Act
-    long actualCalculateGlobalEnergyLimitResult = energyProcessor.calculateGlobalEnergyLimit(accountCapsule);
+    long actualCalculateGlobalEnergyLimitResult =
+        energyProcessor.calculateGlobalEnergyLimit(accountCapsule);
 
     // Assert
     verify(accountCapsule).getAllFrozenBalanceForEnergy();
@@ -263,13 +332,13 @@ public class EnergyProcessorDiffblueTest {
 
   /**
    * Test {@link EnergyProcessor#calculateGlobalEnergyLimit(AccountCapsule)}.
-   * <p>
-   * Method under test: {@link EnergyProcessor#calculateGlobalEnergyLimit(AccountCapsule)}
+   *
+   * <p>Method under test: {@link EnergyProcessor#calculateGlobalEnergyLimit(AccountCapsule)}
    */
   @Test
   @Category(MaintainedByDiffblue.class)
   @MethodsUnderTest({"long EnergyProcessor.calculateGlobalEnergyLimit(AccountCapsule)"})
-  public void testCalculateGlobalEnergyLimit5() {
+  public void testCalculateGlobalEnergyLimit6() {
     // Arrange
     DynamicPropertiesStore dynamicPropertiesStore = mock(DynamicPropertiesStore.class);
     when(dynamicPropertiesStore.allowNewReward()).thenReturn(true);
@@ -277,11 +346,13 @@ public class EnergyProcessorDiffblueTest {
     when(dynamicPropertiesStore.getTotalEnergyWeight()).thenReturn(0L);
     when(dynamicPropertiesStore.supportUnfreezeDelay()).thenReturn(false);
     EnergyProcessor energyProcessor = new EnergyProcessor(dynamicPropertiesStore, null);
+
     AccountCapsule accountCapsule = mock(AccountCapsule.class);
     when(accountCapsule.getAllFrozenBalanceForEnergy()).thenReturn(1000000L);
 
     // Act
-    long actualCalculateGlobalEnergyLimitResult = energyProcessor.calculateGlobalEnergyLimit(accountCapsule);
+    long actualCalculateGlobalEnergyLimitResult =
+        energyProcessor.calculateGlobalEnergyLimit(accountCapsule);
 
     // Assert
     verify(accountCapsule).getAllFrozenBalanceForEnergy();
@@ -294,39 +365,12 @@ public class EnergyProcessorDiffblueTest {
 
   /**
    * Test {@link EnergyProcessor#calculateGlobalEnergyLimit(AccountCapsule)}.
-   * <p>
-   * Method under test: {@link EnergyProcessor#calculateGlobalEnergyLimit(AccountCapsule)}
-   */
-  @Test
-  @Category(MaintainedByDiffblue.class)
-  @MethodsUnderTest({"long EnergyProcessor.calculateGlobalEnergyLimit(AccountCapsule)"})
-  public void testCalculateGlobalEnergyLimit6() {
-    // Arrange
-    DynamicPropertiesStore dynamicPropertiesStore = mock(DynamicPropertiesStore.class);
-    when(dynamicPropertiesStore.allowNewReward()).thenThrow(new RuntimeException("foo"));
-    when(dynamicPropertiesStore.getTotalEnergyCurrentLimit()).thenReturn(1L);
-    when(dynamicPropertiesStore.getTotalEnergyWeight()).thenReturn(1L);
-    when(dynamicPropertiesStore.supportUnfreezeDelay()).thenReturn(false);
-    EnergyProcessor energyProcessor = new EnergyProcessor(dynamicPropertiesStore, null);
-    AccountCapsule accountCapsule = mock(AccountCapsule.class);
-    when(accountCapsule.getAllFrozenBalanceForEnergy()).thenReturn(1000000L);
-
-    // Act and Assert
-    assertThrows(RuntimeException.class, () -> energyProcessor.calculateGlobalEnergyLimit(accountCapsule));
-    verify(accountCapsule).getAllFrozenBalanceForEnergy();
-    verify(dynamicPropertiesStore).allowNewReward();
-    verify(dynamicPropertiesStore).getTotalEnergyCurrentLimit();
-    verify(dynamicPropertiesStore).getTotalEnergyWeight();
-    verify(dynamicPropertiesStore).supportUnfreezeDelay();
-  }
-
-  /**
-   * Test {@link EnergyProcessor#calculateGlobalEnergyLimit(AccountCapsule)}.
+   *
    * <ul>
-   *   <li>Then return one.</li>
+   *   <li>Then return one.
    * </ul>
-   * <p>
-   * Method under test: {@link EnergyProcessor#calculateGlobalEnergyLimit(AccountCapsule)}
+   *
+   * <p>Method under test: {@link EnergyProcessor#calculateGlobalEnergyLimit(AccountCapsule)}
    */
   @Test
   @Category(MaintainedByDiffblue.class)
@@ -339,11 +383,13 @@ public class EnergyProcessorDiffblueTest {
     when(dynamicPropertiesStore.getTotalEnergyWeight()).thenReturn(1L);
     when(dynamicPropertiesStore.supportUnfreezeDelay()).thenReturn(false);
     EnergyProcessor energyProcessor = new EnergyProcessor(dynamicPropertiesStore, null);
+
     AccountCapsule accountCapsule = mock(AccountCapsule.class);
     when(accountCapsule.getAllFrozenBalanceForEnergy()).thenReturn(1000000L);
 
     // Act
-    long actualCalculateGlobalEnergyLimitResult = energyProcessor.calculateGlobalEnergyLimit(accountCapsule);
+    long actualCalculateGlobalEnergyLimitResult =
+        energyProcessor.calculateGlobalEnergyLimit(accountCapsule);
 
     // Assert
     verify(accountCapsule).getAllFrozenBalanceForEnergy();
@@ -356,11 +402,12 @@ public class EnergyProcessorDiffblueTest {
 
   /**
    * Test {@link EnergyProcessor#calculateGlobalEnergyLimit(AccountCapsule)}.
+   *
    * <ul>
-   *   <li>Then return zero.</li>
+   *   <li>Then return zero.
    * </ul>
-   * <p>
-   * Method under test: {@link EnergyProcessor#calculateGlobalEnergyLimit(AccountCapsule)}
+   *
+   * <p>Method under test: {@link EnergyProcessor#calculateGlobalEnergyLimit(AccountCapsule)}
    */
   @Test
   @Category(MaintainedByDiffblue.class)
@@ -370,11 +417,13 @@ public class EnergyProcessorDiffblueTest {
     DynamicPropertiesStore dynamicPropertiesStore = mock(DynamicPropertiesStore.class);
     when(dynamicPropertiesStore.supportUnfreezeDelay()).thenReturn(false);
     EnergyProcessor energyProcessor = new EnergyProcessor(dynamicPropertiesStore, null);
+
     AccountCapsule accountCapsule = mock(AccountCapsule.class);
     when(accountCapsule.getAllFrozenBalanceForEnergy()).thenReturn(42L);
 
     // Act
-    long actualCalculateGlobalEnergyLimitResult = energyProcessor.calculateGlobalEnergyLimit(accountCapsule);
+    long actualCalculateGlobalEnergyLimitResult =
+        energyProcessor.calculateGlobalEnergyLimit(accountCapsule);
 
     // Assert
     verify(accountCapsule).getAllFrozenBalanceForEnergy();
@@ -384,8 +433,8 @@ public class EnergyProcessorDiffblueTest {
 
   /**
    * Test {@link EnergyProcessor#calculateGlobalEnergyLimitV2(long)}.
-   * <p>
-   * Method under test: {@link EnergyProcessor#calculateGlobalEnergyLimitV2(long)}
+   *
+   * <p>Method under test: {@link EnergyProcessor#calculateGlobalEnergyLimitV2(long)}
    */
   @Test
   @Category(MaintainedByDiffblue.class)
@@ -395,10 +444,12 @@ public class EnergyProcessorDiffblueTest {
     DynamicPropertiesStore dynamicPropertiesStore = mock(DynamicPropertiesStore.class);
     when(dynamicPropertiesStore.getTotalEnergyCurrentLimit()).thenReturn(1L);
     when(dynamicPropertiesStore.getTotalEnergyWeight()).thenReturn(1L);
+    EnergyProcessor energyProcessor =
+        new EnergyProcessor(dynamicPropertiesStore, mock(AccountStore.class));
 
     // Act
-    long actualCalculateGlobalEnergyLimitV2Result = (new EnergyProcessor(dynamicPropertiesStore,
-        mock(AccountStore.class))).calculateGlobalEnergyLimitV2(42L);
+    long actualCalculateGlobalEnergyLimitV2Result =
+        energyProcessor.calculateGlobalEnergyLimitV2(42L);
 
     // Assert
     verify(dynamicPropertiesStore).getTotalEnergyCurrentLimit();
@@ -408,11 +459,12 @@ public class EnergyProcessorDiffblueTest {
 
   /**
    * Test {@link EnergyProcessor#calculateGlobalEnergyLimitV2(long)}.
+   *
    * <ul>
-   *   <li>Then throw {@link RuntimeException}.</li>
+   *   <li>Then throw {@link RuntimeException}.
    * </ul>
-   * <p>
-   * Method under test: {@link EnergyProcessor#calculateGlobalEnergyLimitV2(long)}
+   *
+   * <p>Method under test: {@link EnergyProcessor#calculateGlobalEnergyLimitV2(long)}
    */
   @Test
   @Category(MaintainedByDiffblue.class)
@@ -420,18 +472,19 @@ public class EnergyProcessorDiffblueTest {
   public void testCalculateGlobalEnergyLimitV2_thenThrowRuntimeException() {
     // Arrange
     DynamicPropertiesStore dynamicPropertiesStore = mock(DynamicPropertiesStore.class);
-    when(dynamicPropertiesStore.getTotalEnergyCurrentLimit()).thenThrow(new RuntimeException("foo"));
+    when(dynamicPropertiesStore.getTotalEnergyCurrentLimit()).thenThrow(new RuntimeException());
+    EnergyProcessor energyProcessor =
+        new EnergyProcessor(dynamicPropertiesStore, mock(AccountStore.class));
 
     // Act and Assert
-    assertThrows(RuntimeException.class, () -> (new EnergyProcessor(dynamicPropertiesStore, mock(AccountStore.class)))
-        .calculateGlobalEnergyLimitV2(42L));
+    assertThrows(RuntimeException.class, () -> energyProcessor.calculateGlobalEnergyLimitV2(42L));
     verify(dynamicPropertiesStore).getTotalEnergyCurrentLimit();
   }
 
   /**
    * Test {@link EnergyProcessor#calculateGlobalEnergyLimitV2(long)}.
-   * <p>
-   * Method under test: {@link EnergyProcessor#calculateGlobalEnergyLimitV2(long)}
+   *
+   * <p>Method under test: {@link EnergyProcessor#calculateGlobalEnergyLimitV2(long)}
    */
   @Test
   @Category(MaintainedByDiffblue.class)
@@ -441,10 +494,12 @@ public class EnergyProcessorDiffblueTest {
     DynamicPropertiesStore dynamicPropertiesStore = mock(DynamicPropertiesStore.class);
     when(dynamicPropertiesStore.getTotalEnergyCurrentLimit()).thenReturn(1L);
     when(dynamicPropertiesStore.getTotalEnergyWeight()).thenReturn(0L);
+    EnergyProcessor energyProcessor =
+        new EnergyProcessor(dynamicPropertiesStore, mock(AccountStore.class));
 
     // Act
-    long actualCalculateGlobalEnergyLimitV2Result = (new EnergyProcessor(dynamicPropertiesStore,
-        mock(AccountStore.class))).calculateGlobalEnergyLimitV2(42L);
+    long actualCalculateGlobalEnergyLimitV2Result =
+        energyProcessor.calculateGlobalEnergyLimitV2(42L);
 
     // Assert
     verify(dynamicPropertiesStore).getTotalEnergyCurrentLimit();

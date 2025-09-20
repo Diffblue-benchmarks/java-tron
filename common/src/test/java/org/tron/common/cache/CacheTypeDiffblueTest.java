@@ -10,12 +10,13 @@ import org.junit.experimental.categories.Category;
 public class CacheTypeDiffblueTest {
   /**
    * Test {@link CacheType#findByType(String)}.
+   *
    * <ul>
-   *   <li>When {@code Type}.</li>
-   *   <li>Then throw {@link IllegalArgumentException}.</li>
+   *   <li>When {@code Type}.
+   *   <li>Then throw {@link IllegalArgumentException}.
    * </ul>
-   * <p>
-   * Method under test: {@link CacheType#findByType(String)}
+   *
+   * <p>Method under test: {@link CacheType#findByType(String)}
    */
   @Test
   @Category(MaintainedByDiffblue.class)
@@ -27,12 +28,13 @@ public class CacheTypeDiffblueTest {
 
   /**
    * Test {@link CacheType#findByType(String)}.
+   *
    * <ul>
-   *   <li>When {@code witnessStandby}.</li>
-   *   <li>Then return {@code witnessStandby}.</li>
+   *   <li>When {@code witnessStandby}.
+   *   <li>Then return {@code witnessStandby}.
    * </ul>
-   * <p>
-   * Method under test: {@link CacheType#findByType(String)}
+   *
+   * <p>Method under test: {@link CacheType#findByType(String)}
    */
   @Test
   @Category(MaintainedByDiffblue.class)
@@ -44,8 +46,8 @@ public class CacheTypeDiffblueTest {
 
   /**
    * Test {@link CacheType#toString()}.
-   * <p>
-   * Method under test: {@link CacheType#toString()}
+   *
+   * <p>Method under test: {@link CacheType#toString()}
    */
   @Test
   @Category(MaintainedByDiffblue.class)

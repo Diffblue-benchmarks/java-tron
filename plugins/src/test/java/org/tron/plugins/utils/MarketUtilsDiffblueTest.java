@@ -11,78 +11,101 @@ import org.junit.experimental.categories.Category;
 public class MarketUtilsDiffblueTest {
   /**
    * Test {@link MarketUtils#createPairPriceKey(byte[], byte[], long, long)}.
+   *
    * <ul>
-   *   <li>When {@code AXAXAXAX} Bytes is {@code UTF-8}.</li>
+   *   <li>When {@code A}.
    * </ul>
-   * <p>
-   * Method under test: {@link MarketUtils#createPairPriceKey(byte[], byte[], long, long)}
+   *
+   * <p>Method under test: {@link MarketUtils#createPairPriceKey(byte[], byte[], long, long)}
+   */
+  @Test
+  @Category(MaintainedByDiffblue.class)
+  @MethodsUnderTest({"byte[] MarketUtils.createPairPriceKey(byte[], byte[], long, long)"})
+  public void testCreatePairPriceKey_whenA() {
+    // Arrange and Act
+    byte[] actualCreatePairPriceKeyResult =
+        MarketUtils.createPairPriceKey(
+            new byte[] {'A', 'X', 'A', 'X', 'A', 'X', 'A', 'X'},
+            new byte[] {'A', 'X', 'A', 'X', 'A', 'X', 'A', 'X'},
+            0L,
+            0L);
+
+    // Assert
+    assertArrayEquals(
+        new byte[] {
+          'A', 'X', 'A', 'X', 'A', 'X', 'A', 'X', 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 'A', 'X', 'A',
+          'X', 'A', 'X', 'A', 'X', 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0,
+          0, 0, 0, 0, 0
+        },
+        actualCreatePairPriceKeyResult);
+  }
+
+  /**
+   * Test {@link MarketUtils#createPairPriceKey(byte[], byte[], long, long)}.
+   *
+   * <ul>
+   *   <li>When {@code AXAXAXAX} Bytes is {@code UTF-8}.
+   * </ul>
+   *
+   * <p>Method under test: {@link MarketUtils#createPairPriceKey(byte[], byte[], long, long)}
    */
   @Test
   @Category(MaintainedByDiffblue.class)
   @MethodsUnderTest({"byte[] MarketUtils.createPairPriceKey(byte[], byte[], long, long)"})
   public void testCreatePairPriceKey_whenAxaxaxaxBytesIsUtf8() throws UnsupportedEncodingException {
-    // Arrange
-    byte[] sellTokenId = "AXAXAXAX".getBytes("UTF-8");
+    // Arrange and Act
+    byte[] actualCreatePairPriceKeyResult =
+        MarketUtils.createPairPriceKey(
+            "AXAXAXAX".getBytes("UTF-8"), "AXAXAXAX".getBytes("UTF-8"), 1L, 1L);
 
-    // Act and Assert
+    // Assert
     assertArrayEquals(
-        new byte[]{'A', 'X', 'A', 'X', 'A', 'X', 'A', 'X', 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 'A', 'X', 'A', 'X', 'A',
-            'X', 'A', 'X', 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 1, 0, 0, 0, 0, 0, 0, 0, 1},
-        MarketUtils.createPairPriceKey(sellTokenId, "AXAXAXAX".getBytes("UTF-8"), 1L, 1L));
+        new byte[] {
+          'A', 'X', 'A', 'X', 'A', 'X', 'A', 'X', 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 'A', 'X', 'A',
+          'X', 'A', 'X', 'A', 'X', 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 1, 0, 0, 0,
+          0, 0, 0, 0, 1
+        },
+        actualCreatePairPriceKeyResult);
   }
 
   /**
    * Test {@link MarketUtils#createPairPriceKey(byte[], byte[], long, long)}.
+   *
    * <ul>
-   *   <li>When zero.</li>
+   *   <li>When {@code AXAXAXAX} Bytes is {@code UTF-8}.
    * </ul>
-   * <p>
-   * Method under test: {@link MarketUtils#createPairPriceKey(byte[], byte[], long, long)}
+   *
+   * <p>Method under test: {@link MarketUtils#createPairPriceKey(byte[], byte[], long, long)}
    */
   @Test
   @Category(MaintainedByDiffblue.class)
   @MethodsUnderTest({"byte[] MarketUtils.createPairPriceKey(byte[], byte[], long, long)"})
-  public void testCreatePairPriceKey_whenZero() throws UnsupportedEncodingException {
-    // Arrange
-    byte[] sellTokenId = "AXAXAXAX".getBytes("UTF-8");
+  public void testCreatePairPriceKey_whenAxaxaxaxBytesIsUtf82()
+      throws UnsupportedEncodingException {
+    // Arrange and Act
+    byte[] actualCreatePairPriceKeyResult =
+        MarketUtils.createPairPriceKey(
+            "AXAXAXAX".getBytes("UTF-8"), "AXAXAXAX".getBytes("UTF-8"), 1L, 0L);
 
-    // Act and Assert
+    // Assert
     assertArrayEquals(
-        new byte[]{'A', 'X', 'A', 'X', 'A', 'X', 'A', 'X', 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 'A', 'X', 'A', 'X', 'A',
-            'X', 'A', 'X', 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 1},
-        MarketUtils.createPairPriceKey(sellTokenId, "AXAXAXAX".getBytes("UTF-8"), 0L, 1L));
-  }
-
-  /**
-   * Test {@link MarketUtils#createPairPriceKey(byte[], byte[], long, long)}.
-   * <ul>
-   *   <li>When zero.</li>
-   * </ul>
-   * <p>
-   * Method under test: {@link MarketUtils#createPairPriceKey(byte[], byte[], long, long)}
-   */
-  @Test
-  @Category(MaintainedByDiffblue.class)
-  @MethodsUnderTest({"byte[] MarketUtils.createPairPriceKey(byte[], byte[], long, long)"})
-  public void testCreatePairPriceKey_whenZero2() throws UnsupportedEncodingException {
-    // Arrange
-    byte[] sellTokenId = "AXAXAXAX".getBytes("UTF-8");
-
-    // Act and Assert
-    assertArrayEquals(
-        new byte[]{'A', 'X', 'A', 'X', 'A', 'X', 'A', 'X', 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 'A', 'X', 'A', 'X', 'A',
-            'X', 'A', 'X', 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 1, 0, 0, 0, 0, 0, 0, 0, 0},
-        MarketUtils.createPairPriceKey(sellTokenId, "AXAXAXAX".getBytes("UTF-8"), 1L, 0L));
+        new byte[] {
+          'A', 'X', 'A', 'X', 'A', 'X', 'A', 'X', 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 'A', 'X', 'A',
+          'X', 'A', 'X', 'A', 'X', 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 1, 0, 0, 0,
+          0, 0, 0, 0, 0
+        },
+        actualCreatePairPriceKeyResult);
   }
 
   /**
    * Test {@link MarketUtils#findGCD(long, long)}.
+   *
    * <ul>
-   *   <li>When five.</li>
-   *   <li>Then return five.</li>
+   *   <li>When five.
+   *   <li>Then return five.
    * </ul>
-   * <p>
-   * Method under test: {@link MarketUtils#findGCD(long, long)}
+   *
+   * <p>Method under test: {@link MarketUtils#findGCD(long, long)}
    */
   @Test
   @Category(MaintainedByDiffblue.class)
@@ -94,29 +117,13 @@ public class MarketUtilsDiffblueTest {
 
   /**
    * Test {@link MarketUtils#findGCD(long, long)}.
+   *
    * <ul>
-   *   <li>When minus one.</li>
-   *   <li>Then return minus one.</li>
+   *   <li>When one.
+   *   <li>Then return one.
    * </ul>
-   * <p>
-   * Method under test: {@link MarketUtils#findGCD(long, long)}
-   */
-  @Test
-  @Category(MaintainedByDiffblue.class)
-  @MethodsUnderTest({"long MarketUtils.findGCD(long, long)"})
-  public void testFindGCD_whenMinusOne_thenReturnMinusOne() {
-    // Arrange, Act and Assert
-    assertEquals(-1L, MarketUtils.findGCD(-1L, 5L));
-  }
-
-  /**
-   * Test {@link MarketUtils#findGCD(long, long)}.
-   * <ul>
-   *   <li>When one.</li>
-   *   <li>Then return one.</li>
-   * </ul>
-   * <p>
-   * Method under test: {@link MarketUtils#findGCD(long, long)}
+   *
+   * <p>Method under test: {@link MarketUtils#findGCD(long, long)}
    */
   @Test
   @Category(MaintainedByDiffblue.class)
@@ -128,137 +135,181 @@ public class MarketUtilsDiffblueTest {
 
   /**
    * Test {@link MarketUtils#findGCD(long, long)}.
+   *
    * <ul>
-   *   <li>When zero.</li>
-   *   <li>Then return zero.</li>
+   *   <li>When zero.
+   *   <li>Then return zero.
    * </ul>
-   * <p>
-   * Method under test: {@link MarketUtils#findGCD(long, long)}
+   *
+   * <p>Method under test: {@link MarketUtils#findGCD(long, long)}
    */
   @Test
   @Category(MaintainedByDiffblue.class)
   @MethodsUnderTest({"long MarketUtils.findGCD(long, long)"})
   public void testFindGCD_whenZero_thenReturnZero() {
     // Arrange, Act and Assert
-    assertEquals(0L, MarketUtils.findGCD(0L, 5L));
+    assertEquals(0L, MarketUtils.findGCD(0L, 0L));
   }
 
   /**
    * Test {@link MarketUtils#findGCD(long, long)}.
+   *
    * <ul>
-   *   <li>When zero.</li>
-   *   <li>Then return zero.</li>
+   *   <li>When zero.
+   *   <li>Then return zero.
    * </ul>
-   * <p>
-   * Method under test: {@link MarketUtils#findGCD(long, long)}
+   *
+   * <p>Method under test: {@link MarketUtils#findGCD(long, long)}
    */
   @Test
   @Category(MaintainedByDiffblue.class)
   @MethodsUnderTest({"long MarketUtils.findGCD(long, long)"})
   public void testFindGCD_whenZero_thenReturnZero2() {
     // Arrange, Act and Assert
+    assertEquals(0L, MarketUtils.findGCD(0L, 5L));
+  }
+
+  /**
+   * Test {@link MarketUtils#findGCD(long, long)}.
+   *
+   * <ul>
+   *   <li>When zero.
+   *   <li>Then return zero.
+   * </ul>
+   *
+   * <p>Method under test: {@link MarketUtils#findGCD(long, long)}
+   */
+  @Test
+  @Category(MaintainedByDiffblue.class)
+  @MethodsUnderTest({"long MarketUtils.findGCD(long, long)"})
+  public void testFindGCD_whenZero_thenReturnZero3() {
+    // Arrange, Act and Assert
     assertEquals(0L, MarketUtils.findGCD(5L, 0L));
   }
 
   /**
    * Test {@link MarketUtils#comparePrice(long, long, long, long)}.
+   *
    * <ul>
-   *   <li>When five.</li>
-   *   <li>Then return zero.</li>
+   *   <li>When five.
+   *   <li>Then return zero.
    * </ul>
-   * <p>
-   * Method under test: {@link MarketUtils#comparePrice(long, long, long, long)}
+   *
+   * <p>Method under test: {@link MarketUtils#comparePrice(long, long, long, long)}
    */
   @Test
   @Category(MaintainedByDiffblue.class)
   @MethodsUnderTest({"int MarketUtils.comparePrice(long, long, long, long)"})
   public void testComparePrice_whenFive_thenReturnZero() {
-    // Arrange, Act and Assert
-    assertEquals(0, MarketUtils.comparePrice(5L, 5L, 5L, 5L));
+    // Arrange and Act
+    int actualComparePriceResult = MarketUtils.comparePrice(5L, 5L, 5L, 5L);
+
+    // Assert
+    assertEquals(0, actualComparePriceResult);
   }
 
   /**
    * Test {@link MarketUtils#comparePrice(long, long, long, long)}.
+   *
    * <ul>
-   *   <li>When {@link Long#MAX_VALUE}.</li>
-   *   <li>Then return minus one.</li>
+   *   <li>When {@link Long#MAX_VALUE}.
+   *   <li>Then return minus one.
    * </ul>
-   * <p>
-   * Method under test: {@link MarketUtils#comparePrice(long, long, long, long)}
+   *
+   * <p>Method under test: {@link MarketUtils#comparePrice(long, long, long, long)}
    */
   @Test
   @Category(MaintainedByDiffblue.class)
   @MethodsUnderTest({"int MarketUtils.comparePrice(long, long, long, long)"})
   public void testComparePrice_whenMax_value_thenReturnMinusOne() {
-    // Arrange, Act and Assert
-    assertEquals(-1, MarketUtils.comparePrice(Long.MAX_VALUE, 5L, 5L, 5L));
+    // Arrange and Act
+    int actualComparePriceResult = MarketUtils.comparePrice(Long.MAX_VALUE, 5L, 5L, 5L);
+
+    // Assert
+    assertEquals(-1, actualComparePriceResult);
   }
 
   /**
    * Test {@link MarketUtils#comparePrice(long, long, long, long)}.
+   *
    * <ul>
-   *   <li>When {@link Long#MAX_VALUE}.</li>
-   *   <li>Then return one.</li>
+   *   <li>When {@link Long#MAX_VALUE}.
+   *   <li>Then return one.
    * </ul>
-   * <p>
-   * Method under test: {@link MarketUtils#comparePrice(long, long, long, long)}
+   *
+   * <p>Method under test: {@link MarketUtils#comparePrice(long, long, long, long)}
    */
   @Test
   @Category(MaintainedByDiffblue.class)
   @MethodsUnderTest({"int MarketUtils.comparePrice(long, long, long, long)"})
   public void testComparePrice_whenMax_value_thenReturnOne() {
-    // Arrange, Act and Assert
-    assertEquals(1, MarketUtils.comparePrice(5L, Long.MAX_VALUE, 5L, 5L));
+    // Arrange and Act
+    int actualComparePriceResult = MarketUtils.comparePrice(5L, Long.MAX_VALUE, 5L, 5L);
+
+    // Assert
+    assertEquals(1, actualComparePriceResult);
   }
 
   /**
    * Test {@link MarketUtils#comparePrice(long, long, long, long)}.
+   *
    * <ul>
-   *   <li>When minus one.</li>
-   *   <li>Then return one.</li>
+   *   <li>When minus one.
+   *   <li>Then return one.
    * </ul>
-   * <p>
-   * Method under test: {@link MarketUtils#comparePrice(long, long, long, long)}
+   *
+   * <p>Method under test: {@link MarketUtils#comparePrice(long, long, long, long)}
    */
   @Test
   @Category(MaintainedByDiffblue.class)
   @MethodsUnderTest({"int MarketUtils.comparePrice(long, long, long, long)"})
   public void testComparePrice_whenMinusOne_thenReturnOne() {
-    // Arrange, Act and Assert
-    assertEquals(1, MarketUtils.comparePrice(-1L, 5L, 5L, 5L));
+    // Arrange and Act
+    int actualComparePriceResult = MarketUtils.comparePrice(-1L, 5L, 5L, 5L);
+
+    // Assert
+    assertEquals(1, actualComparePriceResult);
   }
 
   /**
    * Test {@link MarketUtils#comparePrice(long, long, long, long)}.
+   *
    * <ul>
-   *   <li>When one.</li>
-   *   <li>Then return one.</li>
+   *   <li>When one.
+   *   <li>Then return one.
    * </ul>
-   * <p>
-   * Method under test: {@link MarketUtils#comparePrice(long, long, long, long)}
+   *
+   * <p>Method under test: {@link MarketUtils#comparePrice(long, long, long, long)}
    */
   @Test
   @Category(MaintainedByDiffblue.class)
   @MethodsUnderTest({"int MarketUtils.comparePrice(long, long, long, long)"})
   public void testComparePrice_whenOne_thenReturnOne() {
-    // Arrange, Act and Assert
-    assertEquals(1, MarketUtils.comparePrice(1L, 5L, 5L, 5L));
+    // Arrange and Act
+    int actualComparePriceResult = MarketUtils.comparePrice(1L, 5L, 5L, 5L);
+
+    // Assert
+    assertEquals(1, actualComparePriceResult);
   }
 
   /**
    * Test {@link MarketUtils#comparePrice(long, long, long, long)}.
+   *
    * <ul>
-   *   <li>When zero.</li>
-   *   <li>Then return one.</li>
+   *   <li>When zero.
+   *   <li>Then return one.
    * </ul>
-   * <p>
-   * Method under test: {@link MarketUtils#comparePrice(long, long, long, long)}
+   *
+   * <p>Method under test: {@link MarketUtils#comparePrice(long, long, long, long)}
    */
   @Test
   @Category(MaintainedByDiffblue.class)
   @MethodsUnderTest({"int MarketUtils.comparePrice(long, long, long, long)"})
   public void testComparePrice_whenZero_thenReturnOne() {
-    // Arrange, Act and Assert
-    assertEquals(1, MarketUtils.comparePrice(0L, 5L, 5L, 5L));
+    // Arrange and Act
+    int actualComparePriceResult = MarketUtils.comparePrice(0L, 5L, 5L, 5L);
+
+    // Assert
+    assertEquals(1, actualComparePriceResult);
   }
 }

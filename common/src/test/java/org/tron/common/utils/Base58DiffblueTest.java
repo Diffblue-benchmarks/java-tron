@@ -10,11 +10,13 @@ import org.junit.experimental.categories.Category;
 public class Base58DiffblueTest {
   /**
    * Test {@link Base58#encode(byte[])}, and {@link Base58#decode(String)}.
+   *
    * <ul>
-   *   <li>Then return decode is {@code AXAXAXAX} Bytes is {@code UTF-8}.</li>
+   *   <li>Then return decode is {@code AXAXAXAX} Bytes is {@code UTF-8}.
    * </ul>
-   * <p>
-   * Methods under test:
+   *
+   * <p>Methods under test:
+   *
    * <ul>
    *   <li>{@link Base58#encode(byte[])}
    *   <li>{@link Base58#decode(String)}
@@ -34,12 +36,14 @@ public class Base58DiffblueTest {
 
   /**
    * Test {@link Base58#encode(byte[])}, and {@link Base58#decode(String)}.
+   *
    * <ul>
-   *   <li>When {@code A}.</li>
-   *   <li>Then return decode is array of {@code byte} with zero and {@code X}.</li>
+   *   <li>When {@code A}.
+   *   <li>Then return decode is array of {@code byte} with zero and {@code X}.
    * </ul>
-   * <p>
-   * Methods under test:
+   *
+   * <p>Methods under test:
+   *
    * <ul>
    *   <li>{@link Base58#encode(byte[])}
    *   <li>{@link Base58#decode(String)}
@@ -48,9 +52,10 @@ public class Base58DiffblueTest {
   @Test
   @Category(MaintainedByDiffblue.class)
   @MethodsUnderTest({"String Base58.encode(byte[])", "byte[] Base58.decode(String)"})
-  public void testEncodeAndDecode_whenA_thenReturnDecodeIsArrayOfByteWithZeroAndX() throws IllegalArgumentException {
+  public void testEncodeAndDecode_whenA_thenReturnDecodeIsArrayOfByteWithZeroAndX()
+      throws IllegalArgumentException {
     // Arrange
-    byte[] input = new byte[]{0, 'X', 'A', 'X', 'A', 'X', 'A', 'X'};
+    byte[] input = new byte[] {0, 'X', 'A', 'X', 'A', 'X', 'A', 'X'};
 
     // Act and Assert
     assertArrayEquals(input, Base58.decode(Base58.encode(input)));
@@ -58,12 +63,14 @@ public class Base58DiffblueTest {
 
   /**
    * Test {@link Base58#encode(byte[])}, and {@link Base58#decode(String)}.
+   *
    * <ul>
-   *   <li>When empty array of {@code byte}.</li>
-   *   <li>Then return decode is empty array of {@code byte}.</li>
+   *   <li>When empty array of {@code byte}.
+   *   <li>Then return decode is empty array of {@code byte}.
    * </ul>
-   * <p>
-   * Methods under test:
+   *
+   * <p>Methods under test:
+   *
    * <ul>
    *   <li>{@link Base58#encode(byte[])}
    *   <li>{@link Base58#decode(String)}
@@ -75,7 +82,7 @@ public class Base58DiffblueTest {
   public void testEncodeAndDecode_whenEmptyArrayOfByte_thenReturnDecodeIsEmptyArrayOfByte()
       throws IllegalArgumentException {
     // Arrange
-    byte[] input = new byte[]{};
+    byte[] input = new byte[] {};
 
     // Act and Assert
     assertArrayEquals(input, Base58.decode(Base58.encode(input)));

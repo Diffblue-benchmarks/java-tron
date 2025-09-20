@@ -8,18 +8,22 @@ import com.diffblue.cover.annotations.MaintainedByDiffblue;
 import com.diffblue.cover.annotations.MethodsUnderTest;
 import java.io.File;
 import java.io.UnsupportedEncodingException;
+import java.util.Map;
 import org.junit.Test;
 import org.junit.experimental.categories.Category;
 import org.rocksdb.RocksDB;
+import org.tron.core.db2.common.WrappedByteArray;
 
 public class RocksDbDataSourceImplDiffblueTest {
   /**
    * Test getters and setters.
+   *
    * <ul>
-   *   <li>Then return DBName is {@code null}.</li>
+   *   <li>Then return DBName is {@code null}.
    * </ul>
-   * <p>
-   * Methods under test:
+   *
+   * <p>Methods under test:
+   *
    * <ul>
    *   <li>{@link RocksDbDataSourceImpl#RocksDbDataSourceImpl()}
    *   <li>{@link RocksDbDataSourceImpl#setDBName(String)}
@@ -33,11 +37,17 @@ public class RocksDbDataSourceImplDiffblueTest {
    */
   @Test
   @Category(MaintainedByDiffblue.class)
-  @MethodsUnderTest({"void RocksDbDataSourceImpl.<init>()", "void RocksDbDataSourceImpl.<init>(String, String)",
-      "String RocksDbDataSourceImpl.getDBName()", "RocksDB RocksDbDataSourceImpl.getDatabase()",
-      "String RocksDbDataSourceImpl.getEngine()", "String RocksDbDataSourceImpl.getName()",
-      "long RocksDbDataSourceImpl.getTotal()", "boolean RocksDbDataSourceImpl.isAlive()",
-      "void RocksDbDataSourceImpl.setDBName(String)"})
+  @MethodsUnderTest({
+    "void RocksDbDataSourceImpl.<init>()",
+    "void RocksDbDataSourceImpl.<init>(String, String)",
+    "String RocksDbDataSourceImpl.getDBName()",
+    "RocksDB RocksDbDataSourceImpl.getDatabase()",
+    "String RocksDbDataSourceImpl.getEngine()",
+    "String RocksDbDataSourceImpl.getName()",
+    "long RocksDbDataSourceImpl.getTotal()",
+    "boolean RocksDbDataSourceImpl.isAlive()",
+    "void RocksDbDataSourceImpl.setDBName(String)"
+  })
   public void testGettersAndSetters_thenReturnDBNameIsNull() throws RuntimeException {
     // Arrange and Act
     RocksDbDataSourceImpl actualRocksDbDataSourceImpl = new RocksDbDataSourceImpl();
@@ -59,12 +69,14 @@ public class RocksDbDataSourceImplDiffblueTest {
 
   /**
    * Test getters and setters.
+   *
    * <ul>
-   *   <li>When {@code Parent Path}.</li>
-   *   <li>Then return DBName is {@code Name}.</li>
+   *   <li>When {@code Parent Path}.
+   *   <li>Then return DBName is {@code Name}.
    * </ul>
-   * <p>
-   * Methods under test:
+   *
+   * <p>Methods under test:
+   *
    * <ul>
    *   <li>{@link RocksDbDataSourceImpl#RocksDbDataSourceImpl(String, String)}
    *   <li>{@link RocksDbDataSourceImpl#setDBName(String)}
@@ -78,14 +90,22 @@ public class RocksDbDataSourceImplDiffblueTest {
    */
   @Test
   @Category(MaintainedByDiffblue.class)
-  @MethodsUnderTest({"void RocksDbDataSourceImpl.<init>()", "void RocksDbDataSourceImpl.<init>(String, String)",
-      "String RocksDbDataSourceImpl.getDBName()", "RocksDB RocksDbDataSourceImpl.getDatabase()",
-      "String RocksDbDataSourceImpl.getEngine()", "String RocksDbDataSourceImpl.getName()",
-      "long RocksDbDataSourceImpl.getTotal()", "boolean RocksDbDataSourceImpl.isAlive()",
-      "void RocksDbDataSourceImpl.setDBName(String)"})
-  public void testGettersAndSetters_whenParentPath_thenReturnDBNameIsName() throws RuntimeException {
+  @MethodsUnderTest({
+    "void RocksDbDataSourceImpl.<init>()",
+    "void RocksDbDataSourceImpl.<init>(String, String)",
+    "String RocksDbDataSourceImpl.getDBName()",
+    "RocksDB RocksDbDataSourceImpl.getDatabase()",
+    "String RocksDbDataSourceImpl.getEngine()",
+    "String RocksDbDataSourceImpl.getName()",
+    "long RocksDbDataSourceImpl.getTotal()",
+    "boolean RocksDbDataSourceImpl.isAlive()",
+    "void RocksDbDataSourceImpl.setDBName(String)"
+  })
+  public void testGettersAndSetters_whenParentPath_thenReturnDBNameIsName()
+      throws RuntimeException {
     // Arrange and Act
-    RocksDbDataSourceImpl actualRocksDbDataSourceImpl = new RocksDbDataSourceImpl("Parent Path", "Name");
+    RocksDbDataSourceImpl actualRocksDbDataSourceImpl =
+        new RocksDbDataSourceImpl("Parent Path", "Name");
     actualRocksDbDataSourceImpl.setDBName("Name");
     String actualDBName = actualRocksDbDataSourceImpl.getDBName();
     RocksDB actualDatabase = actualRocksDbDataSourceImpl.getDatabase();
@@ -104,138 +124,138 @@ public class RocksDbDataSourceImplDiffblueTest {
 
   /**
    * Test {@link RocksDbDataSourceImpl#getDbPath()}.
+   *
    * <ul>
-   *   <li>Then return toFile Name is {@code Name}.</li>
+   *   <li>Then return toFile Name is {@code Name}.
    * </ul>
-   * <p>
-   * Method under test: {@link RocksDbDataSourceImpl#getDbPath()}
+   *
+   * <p>Method under test: {@link RocksDbDataSourceImpl#getDbPath()}
    */
   @Test
   @Category(MaintainedByDiffblue.class)
   @MethodsUnderTest({"java.nio.file.Path RocksDbDataSourceImpl.getDbPath()"})
   public void testGetDbPath_thenReturnToFileNameIsName() {
     // Arrange, Act and Assert
-    File toFileResult = (new RocksDbDataSourceImpl("Parent Path", "Name")).getDbPath().toFile();
+    File toFileResult = new RocksDbDataSourceImpl("Parent Path", "Name").getDbPath().toFile();
     assertEquals("Name", toFileResult.getName());
     assertFalse(toFileResult.isAbsolute());
   }
 
   /**
    * Test {@link RocksDbDataSourceImpl#getData(byte[])} with {@code byte[]}.
-   * <p>
-   * Method under test: {@link RocksDbDataSourceImpl#getData(byte[])}
+   *
+   * <p>Method under test: {@link RocksDbDataSourceImpl#getData(byte[])}
    */
   @Test
   @Category(MaintainedByDiffblue.class)
   @MethodsUnderTest({"byte[] RocksDbDataSourceImpl.getData(byte[])"})
   public void testGetDataWithByte() throws UnsupportedEncodingException {
-    // Arrange
-    RocksDbDataSourceImpl rocksDbDataSourceImpl = new RocksDbDataSourceImpl("Parent Path", "Name");
+    // Arrange and Act
+    byte[] actualData =
+        new RocksDbDataSourceImpl("Parent Path", "Name").getData("AXAXAXAX".getBytes("UTF-8"));
 
-    // Act and Assert
-    assertNull(rocksDbDataSourceImpl.getData("AXAXAXAX".getBytes("UTF-8")));
+    // Assert
+    assertNull(actualData);
   }
 
   /**
    * Test {@link RocksDbDataSourceImpl#flush()}.
-   * <p>
-   * Method under test: {@link RocksDbDataSourceImpl#flush()}
+   *
+   * <p>Method under test: {@link RocksDbDataSourceImpl#flush()}
    */
   @Test
   @Category(MaintainedByDiffblue.class)
   @MethodsUnderTest({"boolean RocksDbDataSourceImpl.flush()"})
   public void testFlush() {
     // Arrange, Act and Assert
-    assertFalse((new RocksDbDataSourceImpl("Parent Path", "Name")).flush());
+    assertFalse(new RocksDbDataSourceImpl("Parent Path", "Name").flush());
   }
 
   /**
    * Test {@link RocksDbDataSourceImpl#getKeysNext(byte[], long)}.
-   * <p>
-   * Method under test: {@link RocksDbDataSourceImpl#getKeysNext(byte[], long)}
+   *
+   * <p>Method under test: {@link RocksDbDataSourceImpl#getKeysNext(byte[], long)}
    */
   @Test
   @Category(MaintainedByDiffblue.class)
   @MethodsUnderTest({"java.util.List RocksDbDataSourceImpl.getKeysNext(byte[], long)"})
   public void testGetKeysNext() throws UnsupportedEncodingException {
-    // Arrange
-    RocksDbDataSourceImpl rocksDbDataSourceImpl = new RocksDbDataSourceImpl("Parent Path", "Name");
-
-    // Act and Assert
-    assertTrue(rocksDbDataSourceImpl.getKeysNext("AXAXAXAX".getBytes("UTF-8"), 1L).isEmpty());
+    // Arrange, Act and Assert
+    assertTrue(
+        new RocksDbDataSourceImpl("Parent Path", "Name")
+            .getKeysNext("AXAXAXAX".getBytes("UTF-8"), 1L)
+            .isEmpty());
   }
 
   /**
    * Test {@link RocksDbDataSourceImpl#getNext(byte[], long)}.
-   * <p>
-   * Method under test: {@link RocksDbDataSourceImpl#getNext(byte[], long)}
+   *
+   * <p>Method under test: {@link RocksDbDataSourceImpl#getNext(byte[], long)}
    */
   @Test
   @Category(MaintainedByDiffblue.class)
-  @MethodsUnderTest({"java.util.Map RocksDbDataSourceImpl.getNext(byte[], long)"})
+  @MethodsUnderTest({"Map RocksDbDataSourceImpl.getNext(byte[], long)"})
   public void testGetNext() throws UnsupportedEncodingException {
-    // Arrange
-    RocksDbDataSourceImpl rocksDbDataSourceImpl = new RocksDbDataSourceImpl("Parent Path", "Name");
-
-    // Act and Assert
-    assertNull(rocksDbDataSourceImpl.getNext("AXAXAXAX".getBytes("UTF-8"), 1L));
+    // Arrange, Act and Assert
+    assertNull(
+        new RocksDbDataSourceImpl("Parent Path", "Name").getNext("AXAXAXAX".getBytes("UTF-8"), 1L));
   }
 
   /**
    * Test {@link RocksDbDataSourceImpl#prefixQuery(byte[])}.
-   * <p>
-   * Method under test: {@link RocksDbDataSourceImpl#prefixQuery(byte[])}
+   *
+   * <p>Method under test: {@link RocksDbDataSourceImpl#prefixQuery(byte[])}
    */
   @Test
   @Category(MaintainedByDiffblue.class)
-  @MethodsUnderTest({"java.util.Map RocksDbDataSourceImpl.prefixQuery(byte[])"})
+  @MethodsUnderTest({"Map RocksDbDataSourceImpl.prefixQuery(byte[])"})
   public void testPrefixQuery() throws UnsupportedEncodingException {
-    // Arrange
-    RocksDbDataSourceImpl rocksDbDataSourceImpl = new RocksDbDataSourceImpl("Parent Path", "Name");
+    // Arrange and Act
+    Map<WrappedByteArray, byte[]> actualPrefixQueryResult =
+        new RocksDbDataSourceImpl("Parent Path", "Name").prefixQuery("AXAXAXAX".getBytes("UTF-8"));
 
-    // Act and Assert
-    assertNull(rocksDbDataSourceImpl.prefixQuery("AXAXAXAX".getBytes("UTF-8")));
+    // Assert
+    assertNull(actualPrefixQueryResult);
   }
 
   /**
    * Test {@link RocksDbDataSourceImpl#getlatestValues(long)}.
-   * <p>
-   * Method under test: {@link RocksDbDataSourceImpl#getlatestValues(long)}
+   *
+   * <p>Method under test: {@link RocksDbDataSourceImpl#getlatestValues(long)}
    */
   @Test
   @Category(MaintainedByDiffblue.class)
   @MethodsUnderTest({"java.util.Set RocksDbDataSourceImpl.getlatestValues(long)"})
   public void testGetlatestValues() {
     // Arrange, Act and Assert
-    assertNull((new RocksDbDataSourceImpl("Parent Path", "Name")).getlatestValues(1L));
+    assertNull(new RocksDbDataSourceImpl("Parent Path", "Name").getlatestValues(1L));
   }
 
   /**
    * Test {@link RocksDbDataSourceImpl#getValuesNext(byte[], long)}.
-   * <p>
-   * Method under test: {@link RocksDbDataSourceImpl#getValuesNext(byte[], long)}
+   *
+   * <p>Method under test: {@link RocksDbDataSourceImpl#getValuesNext(byte[], long)}
    */
   @Test
   @Category(MaintainedByDiffblue.class)
   @MethodsUnderTest({"java.util.Set RocksDbDataSourceImpl.getValuesNext(byte[], long)"})
   public void testGetValuesNext() throws UnsupportedEncodingException {
-    // Arrange
-    RocksDbDataSourceImpl rocksDbDataSourceImpl = new RocksDbDataSourceImpl("Parent Path", "Name");
-
-    // Act and Assert
-    assertNull(rocksDbDataSourceImpl.getValuesNext("AXAXAXAX".getBytes("UTF-8"), 1L));
+    // Arrange, Act and Assert
+    assertNull(
+        new RocksDbDataSourceImpl("Parent Path", "Name")
+            .getValuesNext("AXAXAXAX".getBytes("UTF-8"), 1L));
   }
 
   /**
    * Test {@link RocksDbDataSourceImpl#getStats()}.
-   * <p>
-   * Method under test: {@link RocksDbDataSourceImpl#getStats()}
+   *
+   * <p>Method under test: {@link RocksDbDataSourceImpl#getStats()}
    */
   @Test
   @Category(MaintainedByDiffblue.class)
   @MethodsUnderTest({"java.util.List RocksDbDataSourceImpl.getStats()"})
   public void testGetStats() throws Exception {
     // Arrange, Act and Assert
-    assertTrue((new RocksDbDataSourceImpl("Parent Path", "Name")).getStats().isEmpty());
+    assertTrue(new RocksDbDataSourceImpl("Parent Path", "Name").getStats().isEmpty());
   }
 }

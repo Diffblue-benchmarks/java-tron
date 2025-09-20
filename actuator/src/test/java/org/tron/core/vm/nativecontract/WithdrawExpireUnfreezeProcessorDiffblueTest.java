@@ -1,7 +1,6 @@
 package org.tron.core.vm.nativecontract;
 
 import static org.junit.Assert.assertThrows;
-import static org.mockito.Mockito.mock;
 import com.diffblue.cover.annotations.MaintainedByDiffblue;
 import com.diffblue.cover.annotations.MethodsUnderTest;
 import java.io.UnsupportedEncodingException;
@@ -16,95 +15,127 @@ import org.tron.core.vm.repository.RepositoryImpl;
 public class WithdrawExpireUnfreezeProcessorDiffblueTest {
   /**
    * Test {@link WithdrawExpireUnfreezeProcessor#validate(WithdrawExpireUnfreezeParam, Repository)}.
+   *
    * <ul>
-   *   <li>Given {@code AXAXAXAX} Bytes is {@code UTF-8}.</li>
+   *   <li>Given {@code AXAXAXAX} Bytes is {@code UTF-8}.
    * </ul>
-   * <p>
-   * Method under test: {@link WithdrawExpireUnfreezeProcessor#validate(WithdrawExpireUnfreezeParam, Repository)}
+   *
+   * <p>Method under test: {@link
+   * WithdrawExpireUnfreezeProcessor#validate(WithdrawExpireUnfreezeParam, Repository)}
    */
   @Test
   @Category(MaintainedByDiffblue.class)
-  @MethodsUnderTest({"void WithdrawExpireUnfreezeProcessor.validate(WithdrawExpireUnfreezeParam, Repository)"})
-  public void testValidate_givenAxaxaxaxBytesIsUtf8() throws UnsupportedEncodingException, ContractValidateException {
+  @MethodsUnderTest({
+    "void WithdrawExpireUnfreezeProcessor.validate(WithdrawExpireUnfreezeParam, Repository)"
+  })
+  public void testValidate_givenAxaxaxaxBytesIsUtf8()
+      throws UnsupportedEncodingException, ContractValidateException {
     // Arrange
-    WithdrawExpireUnfreezeProcessor withdrawExpireUnfreezeProcessor = new WithdrawExpireUnfreezeProcessor();
+    WithdrawExpireUnfreezeProcessor withdrawExpireUnfreezeProcessor =
+        new WithdrawExpireUnfreezeProcessor();
 
     WithdrawExpireUnfreezeParam param = new WithdrawExpireUnfreezeParam();
     param.setOwnerAddress("AXAXAXAX".getBytes("UTF-8"));
+    RepositoryImpl repo = new RepositoryImpl(StoreFactory.getInstance(), null);
 
     // Act and Assert
-    assertThrows(ContractValidateException.class, () -> withdrawExpireUnfreezeProcessor.validate(param,
-        new RepositoryImpl(StoreFactory.getInstance(), mock(RepositoryImpl.class))));
+    assertThrows(
+        ContractValidateException.class,
+        () -> withdrawExpireUnfreezeProcessor.validate(param, repo));
   }
 
   /**
    * Test {@link WithdrawExpireUnfreezeProcessor#validate(WithdrawExpireUnfreezeParam, Repository)}.
+   *
    * <ul>
-   *   <li>Given empty array of {@code byte}.</li>
+   *   <li>Given empty array of {@code byte}.
    * </ul>
-   * <p>
-   * Method under test: {@link WithdrawExpireUnfreezeProcessor#validate(WithdrawExpireUnfreezeParam, Repository)}
+   *
+   * <p>Method under test: {@link
+   * WithdrawExpireUnfreezeProcessor#validate(WithdrawExpireUnfreezeParam, Repository)}
    */
   @Test
   @Category(MaintainedByDiffblue.class)
-  @MethodsUnderTest({"void WithdrawExpireUnfreezeProcessor.validate(WithdrawExpireUnfreezeParam, Repository)"})
+  @MethodsUnderTest({
+    "void WithdrawExpireUnfreezeProcessor.validate(WithdrawExpireUnfreezeParam, Repository)"
+  })
   public void testValidate_givenEmptyArrayOfByte() throws ContractValidateException {
     // Arrange
-    WithdrawExpireUnfreezeProcessor withdrawExpireUnfreezeProcessor = new WithdrawExpireUnfreezeProcessor();
+    WithdrawExpireUnfreezeProcessor withdrawExpireUnfreezeProcessor =
+        new WithdrawExpireUnfreezeProcessor();
 
     WithdrawExpireUnfreezeParam param = new WithdrawExpireUnfreezeParam();
-    param.setOwnerAddress(new byte[]{});
+    param.setOwnerAddress(new byte[] {});
+    RepositoryImpl repo = new RepositoryImpl(StoreFactory.getInstance(), null);
 
     // Act and Assert
-    assertThrows(ContractValidateException.class, () -> withdrawExpireUnfreezeProcessor.validate(param,
-        new RepositoryImpl(StoreFactory.getInstance(), mock(RepositoryImpl.class))));
+    assertThrows(
+        ContractValidateException.class,
+        () -> withdrawExpireUnfreezeProcessor.validate(param, repo));
   }
 
   /**
    * Test {@link WithdrawExpireUnfreezeProcessor#validate(WithdrawExpireUnfreezeParam, Repository)}.
+   *
    * <ul>
-   *   <li>Given {@code null}.</li>
-   *   <li>When {@code null}.</li>
+   *   <li>Given {@code null}.
+   *   <li>When {@code null}.
+   *   <li>Then throw {@link ContractValidateException}.
    * </ul>
-   * <p>
-   * Method under test: {@link WithdrawExpireUnfreezeProcessor#validate(WithdrawExpireUnfreezeParam, Repository)}
+   *
+   * <p>Method under test: {@link
+   * WithdrawExpireUnfreezeProcessor#validate(WithdrawExpireUnfreezeParam, Repository)}
    */
   @Test
   @Category(MaintainedByDiffblue.class)
-  @MethodsUnderTest({"void WithdrawExpireUnfreezeProcessor.validate(WithdrawExpireUnfreezeParam, Repository)"})
-  public void testValidate_givenNull_whenNull() throws ContractValidateException {
+  @MethodsUnderTest({
+    "void WithdrawExpireUnfreezeProcessor.validate(WithdrawExpireUnfreezeParam, Repository)"
+  })
+  public void testValidate_givenNull_whenNull_thenThrowContractValidateException()
+      throws ContractValidateException {
     // Arrange
-    WithdrawExpireUnfreezeProcessor withdrawExpireUnfreezeProcessor = new WithdrawExpireUnfreezeProcessor();
+    WithdrawExpireUnfreezeProcessor withdrawExpireUnfreezeProcessor =
+        new WithdrawExpireUnfreezeProcessor();
 
     WithdrawExpireUnfreezeParam param = new WithdrawExpireUnfreezeParam();
     param.setOwnerAddress(null);
 
     // Act and Assert
-    assertThrows(ContractValidateException.class, () -> withdrawExpireUnfreezeProcessor.validate(param, null));
+    assertThrows(
+        ContractValidateException.class,
+        () -> withdrawExpireUnfreezeProcessor.validate(param, null));
   }
 
   /**
    * Test {@link WithdrawExpireUnfreezeProcessor#validate(WithdrawExpireUnfreezeParam, Repository)}.
+   *
    * <ul>
-   *   <li>Given {@code null}.</li>
-   *   <li>When {@link WithdrawExpireUnfreezeParam} (default constructor) OwnerAddress is {@code null}.</li>
+   *   <li>Given {@code null}.
+   *   <li>When {@link WithdrawExpireUnfreezeParam} (default constructor) OwnerAddress is {@code
+   *       null}.
    * </ul>
-   * <p>
-   * Method under test: {@link WithdrawExpireUnfreezeProcessor#validate(WithdrawExpireUnfreezeParam, Repository)}
+   *
+   * <p>Method under test: {@link
+   * WithdrawExpireUnfreezeProcessor#validate(WithdrawExpireUnfreezeParam, Repository)}
    */
   @Test
   @Category(MaintainedByDiffblue.class)
-  @MethodsUnderTest({"void WithdrawExpireUnfreezeProcessor.validate(WithdrawExpireUnfreezeParam, Repository)"})
+  @MethodsUnderTest({
+    "void WithdrawExpireUnfreezeProcessor.validate(WithdrawExpireUnfreezeParam, Repository)"
+  })
   public void testValidate_givenNull_whenWithdrawExpireUnfreezeParamOwnerAddressIsNull()
       throws ContractValidateException {
     // Arrange
-    WithdrawExpireUnfreezeProcessor withdrawExpireUnfreezeProcessor = new WithdrawExpireUnfreezeProcessor();
+    WithdrawExpireUnfreezeProcessor withdrawExpireUnfreezeProcessor =
+        new WithdrawExpireUnfreezeProcessor();
 
     WithdrawExpireUnfreezeParam param = new WithdrawExpireUnfreezeParam();
     param.setOwnerAddress(null);
+    RepositoryImpl repo = new RepositoryImpl(StoreFactory.getInstance(), null);
 
     // Act and Assert
-    assertThrows(ContractValidateException.class, () -> withdrawExpireUnfreezeProcessor.validate(param,
-        new RepositoryImpl(StoreFactory.getInstance(), mock(RepositoryImpl.class))));
+    assertThrows(
+        ContractValidateException.class,
+        () -> withdrawExpireUnfreezeProcessor.validate(param, repo));
   }
 }

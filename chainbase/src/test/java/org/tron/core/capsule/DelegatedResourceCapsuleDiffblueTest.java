@@ -4,17 +4,13 @@ import static org.junit.Assert.assertArrayEquals;
 import static org.junit.Assert.assertEquals;
 import static org.junit.Assert.assertNull;
 import static org.junit.Assert.assertSame;
-import static org.mockito.Mockito.atLeast;
 import static org.mockito.Mockito.mock;
 import static org.mockito.Mockito.verify;
 import static org.mockito.Mockito.when;
 import com.diffblue.cover.annotations.MaintainedByDiffblue;
 import com.diffblue.cover.annotations.MethodsUnderTest;
 import com.google.protobuf.ByteString;
-import com.google.protobuf.Descriptors;
-import com.google.protobuf.Descriptors.FieldDescriptor;
 import java.io.UnsupportedEncodingException;
-import java.util.List;
 import org.junit.Test;
 import org.junit.experimental.categories.Category;
 import org.tron.core.store.DynamicPropertiesStore;
@@ -24,11 +20,13 @@ import org.tron.protos.Protocol.DelegatedResource;
 public class DelegatedResourceCapsuleDiffblueTest {
   /**
    * Test {@link DelegatedResourceCapsule#DelegatedResourceCapsule(ByteString, ByteString)}.
+   *
    * <ul>
-   *   <li>Then return ExpireTimeForBandwidth is zero.</li>
+   *   <li>Then return ExpireTimeForBandwidth is zero.
    * </ul>
-   * <p>
-   * Method under test: {@link DelegatedResourceCapsule#DelegatedResourceCapsule(ByteString, ByteString)}
+   *
+   * <p>Method under test: {@link DelegatedResourceCapsule#DelegatedResourceCapsule(ByteString,
+   * ByteString)}
    */
   @Test
   @Category(MaintainedByDiffblue.class)
@@ -39,7 +37,8 @@ public class DelegatedResourceCapsuleDiffblueTest {
     ByteString resultTo = mock(ByteString.class);
 
     // Act
-    DelegatedResourceCapsule actualDelegatedResourceCapsule = new DelegatedResourceCapsule(from, resultTo);
+    DelegatedResourceCapsule actualDelegatedResourceCapsule =
+        new DelegatedResourceCapsule(from, resultTo);
 
     // Assert
     assertEquals(0L, actualDelegatedResourceCapsule.getExpireTimeForBandwidth());
@@ -48,40 +47,43 @@ public class DelegatedResourceCapsuleDiffblueTest {
     assertEquals(0L, actualDelegatedResourceCapsule.getFrozenBalanceForEnergy());
     assertSame(from, actualDelegatedResourceCapsule.getFrom());
     assertSame(resultTo, actualDelegatedResourceCapsule.getTo());
-    assertArrayEquals(new byte[]{'\n', 0, 18, 0}, actualDelegatedResourceCapsule.getData());
+    assertArrayEquals(new byte[] {'\n', 0, 18, 0}, actualDelegatedResourceCapsule.getData());
   }
 
   /**
    * Test {@link DelegatedResourceCapsule#DelegatedResourceCapsule(byte[])}.
+   *
    * <ul>
-   *   <li>Then return ExpireTimeForBandwidth is zero.</li>
+   *   <li>Then return ExpireTimeForBandwidth is zero.
    * </ul>
-   * <p>
-   * Method under test: {@link DelegatedResourceCapsule#DelegatedResourceCapsule(byte[])}
+   *
+   * <p>Method under test: {@link DelegatedResourceCapsule#DelegatedResourceCapsule(byte[])}
    */
   @Test
   @Category(MaintainedByDiffblue.class)
   @MethodsUnderTest({"void DelegatedResourceCapsule.<init>(byte[])"})
   public void testNewDelegatedResourceCapsule_thenReturnExpireTimeForBandwidthIsZero2() {
     // Arrange and Act
-    DelegatedResourceCapsule actualDelegatedResourceCapsule = new DelegatedResourceCapsule(new byte[]{});
+    DelegatedResourceCapsule actualDelegatedResourceCapsule =
+        new DelegatedResourceCapsule(new byte[] {});
 
     // Assert
     assertEquals(0L, actualDelegatedResourceCapsule.getExpireTimeForBandwidth());
     assertEquals(0L, actualDelegatedResourceCapsule.getExpireTimeForEnergy());
     assertEquals(0L, actualDelegatedResourceCapsule.getFrozenBalanceForBandwidth());
     assertEquals(0L, actualDelegatedResourceCapsule.getFrozenBalanceForEnergy());
-    assertArrayEquals(new byte[]{}, actualDelegatedResourceCapsule.getData());
+    assertArrayEquals(new byte[] {}, actualDelegatedResourceCapsule.getData());
   }
 
   /**
    * Test {@link DelegatedResourceCapsule#DelegatedResourceCapsule(byte[])}.
+   *
    * <ul>
-   *   <li>When {@code 0XAXAXAX} Bytes is {@code UTF-8}.</li>
-   *   <li>Then return Instance is {@code null}.</li>
+   *   <li>When {@code 0XAXAXAX} Bytes is {@code UTF-8}.
+   *   <li>Then return Instance is {@code null}.
    * </ul>
-   * <p>
-   * Method under test: {@link DelegatedResourceCapsule#DelegatedResourceCapsule(byte[])}
+   *
+   * <p>Method under test: {@link DelegatedResourceCapsule#DelegatedResourceCapsule(byte[])}
    */
   @Test
   @Category(MaintainedByDiffblue.class)
@@ -89,113 +91,211 @@ public class DelegatedResourceCapsuleDiffblueTest {
   public void testNewDelegatedResourceCapsule_when0xaxaxaxBytesIsUtf8_thenReturnInstanceIsNull()
       throws UnsupportedEncodingException {
     // Arrange, Act and Assert
-    assertNull((new DelegatedResourceCapsule("0XAXAXAX".getBytes("UTF-8"))).getInstance());
+    assertNull(new DelegatedResourceCapsule("0XAXAXAX".getBytes("UTF-8")).getInstance());
   }
 
   /**
    * Test {@link DelegatedResourceCapsule#DelegatedResourceCapsule(byte[])}.
+   *
    * <ul>
-   *   <li>When array of {@code byte} with eighteen and {@code X}.</li>
+   *   <li>When {@code A A A A A A A A} Bytes is {@code UTF-8}.
+   *   <li>Then return Instance is {@code null}.
    * </ul>
-   * <p>
-   * Method under test: {@link DelegatedResourceCapsule#DelegatedResourceCapsule(byte[])}
+   *
+   * <p>Method under test: {@link DelegatedResourceCapsule#DelegatedResourceCapsule(byte[])}
+   */
+  @Test
+  @Category(MaintainedByDiffblue.class)
+  @MethodsUnderTest({"void DelegatedResourceCapsule.<init>(byte[])"})
+  public void testNewDelegatedResourceCapsule_whenAAAAAAAABytesIsUtf8_thenReturnInstanceIsNull()
+      throws UnsupportedEncodingException {
+    // Arrange, Act and Assert
+    assertNull(
+        new DelegatedResourceCapsule("A\nA\nA\nA\nA\nA\nA\nA\n".getBytes("UTF-8")).getInstance());
+  }
+
+  /**
+   * Test {@link DelegatedResourceCapsule#DelegatedResourceCapsule(byte[])}.
+   *
+   * <ul>
+   *   <li>When {@code A A A A A A A} Bytes is {@code UTF-8}.
+   *   <li>Then return Instance is {@code null}.
+   * </ul>
+   *
+   * <p>Method under test: {@link DelegatedResourceCapsule#DelegatedResourceCapsule(byte[])}
+   */
+  @Test
+  @Category(MaintainedByDiffblue.class)
+  @MethodsUnderTest({"void DelegatedResourceCapsule.<init>(byte[])"})
+  public void testNewDelegatedResourceCapsule_whenAAAAAAABytesIsUtf8_thenReturnInstanceIsNull()
+      throws UnsupportedEncodingException {
+    // Arrange, Act and Assert
+    assertNull(
+        new DelegatedResourceCapsule("\n\nA\nA\nA\nA\nA\nA\nA\n".getBytes("UTF-8")).getInstance());
+  }
+
+  /**
+   * Test {@link DelegatedResourceCapsule#DelegatedResourceCapsule(byte[])}.
+   *
+   * <ul>
+   *   <li>When array of {@code byte} with {@code A} and lf.
+   * </ul>
+   *
+   * <p>Method under test: {@link DelegatedResourceCapsule#DelegatedResourceCapsule(byte[])}
+   */
+  @Test
+  @Category(MaintainedByDiffblue.class)
+  @MethodsUnderTest({"void DelegatedResourceCapsule.<init>(byte[])"})
+  public void testNewDelegatedResourceCapsule_whenArrayOfByteWithAAndLf() {
+    // Arrange and Act
+    DelegatedResourceCapsule actualDelegatedResourceCapsule =
+        new DelegatedResourceCapsule(
+            new byte[] {
+              'A', '\n', 'A', '\n', 'A', '\n', 'A', '\n', 'A', '\n', 0, '\n', 'A', '\n', 'A', '\n'
+            });
+
+    // Assert
+    assertNull(actualDelegatedResourceCapsule.getInstance());
+  }
+
+  /**
+   * Test {@link DelegatedResourceCapsule#DelegatedResourceCapsule(byte[])}.
+   *
+   * <ul>
+   *   <li>When array of {@code byte} with eighteen and lf.
+   * </ul>
+   *
+   * <p>Method under test: {@link DelegatedResourceCapsule#DelegatedResourceCapsule(byte[])}
+   */
+  @Test
+  @Category(MaintainedByDiffblue.class)
+  @MethodsUnderTest({"void DelegatedResourceCapsule.<init>(byte[])"})
+  public void testNewDelegatedResourceCapsule_whenArrayOfByteWithEighteenAndLf() {
+    // Arrange and Act
+    DelegatedResourceCapsule actualDelegatedResourceCapsule =
+        new DelegatedResourceCapsule(
+            new byte[] {
+              18, '\n', 'A', '\n', 'A', '\n', 'A', '\n', 'A', '\n', 'A', '\n', 'A', '\n', 'A', '\n'
+            });
+
+    // Assert
+    assertNull(actualDelegatedResourceCapsule.getInstance());
+  }
+
+  /**
+   * Test {@link DelegatedResourceCapsule#DelegatedResourceCapsule(byte[])}.
+   *
+   * <ul>
+   *   <li>When array of {@code byte} with eighteen and {@code X}.
+   * </ul>
+   *
+   * <p>Method under test: {@link DelegatedResourceCapsule#DelegatedResourceCapsule(byte[])}
    */
   @Test
   @Category(MaintainedByDiffblue.class)
   @MethodsUnderTest({"void DelegatedResourceCapsule.<init>(byte[])"})
   public void testNewDelegatedResourceCapsule_whenArrayOfByteWithEighteenAndX() {
-    // Arrange, Act and Assert
-    assertNull((new DelegatedResourceCapsule(new byte[]{18, 'X', 'A', 'X', 'A', 'X', 'A', 'X'})).getInstance());
+    // Arrange and Act
+    DelegatedResourceCapsule actualDelegatedResourceCapsule =
+        new DelegatedResourceCapsule(new byte[] {18, 'X', 'A', 'X', 'A', 'X', 'A', 'X'});
+
+    // Assert
+    assertNull(actualDelegatedResourceCapsule.getInstance());
   }
 
   /**
    * Test {@link DelegatedResourceCapsule#DelegatedResourceCapsule(byte[])}.
+   *
    * <ul>
-   *   <li>When array of {@code byte} with eighteen and zero.</li>
+   *   <li>When array of {@code byte} with eighteen and zero.
    * </ul>
-   * <p>
-   * Method under test: {@link DelegatedResourceCapsule#DelegatedResourceCapsule(byte[])}
+   *
+   * <p>Method under test: {@link DelegatedResourceCapsule#DelegatedResourceCapsule(byte[])}
    */
   @Test
   @Category(MaintainedByDiffblue.class)
   @MethodsUnderTest({"void DelegatedResourceCapsule.<init>(byte[])"})
   public void testNewDelegatedResourceCapsule_whenArrayOfByteWithEighteenAndZero() {
-    // Arrange, Act and Assert
-    assertNull((new DelegatedResourceCapsule(new byte[]{18, 0, 'A', 'X', 'A', 'X', 'A', 'X'})).getInstance());
+    // Arrange and Act
+    DelegatedResourceCapsule actualDelegatedResourceCapsule =
+        new DelegatedResourceCapsule(new byte[] {18, 0, 'A', 'X', 'A', 'X', 'A', 'X'});
+
+    // Assert
+    assertNull(actualDelegatedResourceCapsule.getInstance());
   }
 
   /**
    * Test {@link DelegatedResourceCapsule#DelegatedResourceCapsule(byte[])}.
+   *
    * <ul>
-   *   <li>When array of {@code byte} with lf and zero.</li>
+   *   <li>When array of {@code byte} with minus one and {@code X}.
    * </ul>
-   * <p>
-   * Method under test: {@link DelegatedResourceCapsule#DelegatedResourceCapsule(byte[])}
-   */
-  @Test
-  @Category(MaintainedByDiffblue.class)
-  @MethodsUnderTest({"void DelegatedResourceCapsule.<init>(byte[])"})
-  public void testNewDelegatedResourceCapsule_whenArrayOfByteWithLfAndZero() {
-    // Arrange, Act and Assert
-    assertNull((new DelegatedResourceCapsule(new byte[]{'\n', 0, 'A', 'X', 'A', 'X', 'A', 'X'})).getInstance());
-  }
-
-  /**
-   * Test {@link DelegatedResourceCapsule#DelegatedResourceCapsule(byte[])}.
-   * <ul>
-   *   <li>When array of {@code byte} with minus one and {@code X}.</li>
-   * </ul>
-   * <p>
-   * Method under test: {@link DelegatedResourceCapsule#DelegatedResourceCapsule(byte[])}
+   *
+   * <p>Method under test: {@link DelegatedResourceCapsule#DelegatedResourceCapsule(byte[])}
    */
   @Test
   @Category(MaintainedByDiffblue.class)
   @MethodsUnderTest({"void DelegatedResourceCapsule.<init>(byte[])"})
   public void testNewDelegatedResourceCapsule_whenArrayOfByteWithMinusOneAndX() {
-    // Arrange, Act and Assert
-    assertNull((new DelegatedResourceCapsule(new byte[]{-1, 'X', 'A', 'X', 'A', 'X', 'A', 'X'})).getInstance());
+    // Arrange and Act
+    DelegatedResourceCapsule actualDelegatedResourceCapsule =
+        new DelegatedResourceCapsule(new byte[] {-1, 'X', 'A', 'X', 'A', 'X', 'A', 'X'});
+
+    // Assert
+    assertNull(actualDelegatedResourceCapsule.getInstance());
   }
 
   /**
    * Test {@link DelegatedResourceCapsule#DelegatedResourceCapsule(byte[])}.
+   *
    * <ul>
-   *   <li>When array of {@code byte} with twenty-four and {@code X}.</li>
+   *   <li>When array of {@code byte} with twenty-four and {@code X}.
    * </ul>
-   * <p>
-   * Method under test: {@link DelegatedResourceCapsule#DelegatedResourceCapsule(byte[])}
+   *
+   * <p>Method under test: {@link DelegatedResourceCapsule#DelegatedResourceCapsule(byte[])}
    */
   @Test
   @Category(MaintainedByDiffblue.class)
   @MethodsUnderTest({"void DelegatedResourceCapsule.<init>(byte[])"})
   public void testNewDelegatedResourceCapsule_whenArrayOfByteWithTwentyFourAndX() {
-    // Arrange, Act and Assert
-    assertNull((new DelegatedResourceCapsule(new byte[]{24, 'X', 'A', 'X', 'A', 'X', 'A', 'X'})).getInstance());
+    // Arrange and Act
+    DelegatedResourceCapsule actualDelegatedResourceCapsule =
+        new DelegatedResourceCapsule(new byte[] {24, 'X', 'A', 'X', 'A', 'X', 'A', 'X'});
+
+    // Assert
+    assertNull(actualDelegatedResourceCapsule.getInstance());
   }
 
   /**
    * Test {@link DelegatedResourceCapsule#DelegatedResourceCapsule(byte[])}.
+   *
    * <ul>
-   *   <li>When array of {@code byte} with zero and {@code X}.</li>
+   *   <li>When array of {@code byte} with zero and {@code X}.
    * </ul>
-   * <p>
-   * Method under test: {@link DelegatedResourceCapsule#DelegatedResourceCapsule(byte[])}
+   *
+   * <p>Method under test: {@link DelegatedResourceCapsule#DelegatedResourceCapsule(byte[])}
    */
   @Test
   @Category(MaintainedByDiffblue.class)
   @MethodsUnderTest({"void DelegatedResourceCapsule.<init>(byte[])"})
   public void testNewDelegatedResourceCapsule_whenArrayOfByteWithZeroAndX() {
-    // Arrange, Act and Assert
-    assertNull((new DelegatedResourceCapsule(new byte[]{0, 'X', 'A', 'X', 'A', 'X', 'A', 'X'})).getInstance());
+    // Arrange and Act
+    DelegatedResourceCapsule actualDelegatedResourceCapsule =
+        new DelegatedResourceCapsule(new byte[] {0, 'X', 'A', 'X', 'A', 'X', 'A', 'X'});
+
+    // Assert
+    assertNull(actualDelegatedResourceCapsule.getInstance());
   }
 
   /**
    * Test {@link DelegatedResourceCapsule#DelegatedResourceCapsule(byte[])}.
+   *
    * <ul>
-   *   <li>When {@code AXAXAXAX} Bytes is {@code UTF-8}.</li>
-   *   <li>Then return Instance is {@code null}.</li>
+   *   <li>When {@code AXAXAXAX} Bytes is {@code UTF-8}.
+   *   <li>Then return Instance is {@code null}.
    * </ul>
-   * <p>
-   * Method under test: {@link DelegatedResourceCapsule#DelegatedResourceCapsule(byte[])}
+   *
+   * <p>Method under test: {@link DelegatedResourceCapsule#DelegatedResourceCapsule(byte[])}
    */
   @Test
   @Category(MaintainedByDiffblue.class)
@@ -203,17 +303,18 @@ public class DelegatedResourceCapsuleDiffblueTest {
   public void testNewDelegatedResourceCapsule_whenAxaxaxaxBytesIsUtf8_thenReturnInstanceIsNull()
       throws UnsupportedEncodingException {
     // Arrange, Act and Assert
-    assertNull((new DelegatedResourceCapsule("AXAXAXAX".getBytes("UTF-8"))).getInstance());
+    assertNull(new DelegatedResourceCapsule("AXAXAXAX".getBytes("UTF-8")).getInstance());
   }
 
   /**
    * Test {@link DelegatedResourceCapsule#DelegatedResourceCapsule(byte[])}.
+   *
    * <ul>
-   *   <li>When {@code XAXAXAX} Bytes is {@code UTF-8}.</li>
-   *   <li>Then return Instance is {@code null}.</li>
+   *   <li>When {@code XAXAXAX} Bytes is {@code UTF-8}.
+   *   <li>Then return Instance is {@code null}.
    * </ul>
-   * <p>
-   * Method under test: {@link DelegatedResourceCapsule#DelegatedResourceCapsule(byte[])}
+   *
+   * <p>Method under test: {@link DelegatedResourceCapsule#DelegatedResourceCapsule(byte[])}
    */
   @Test
   @Category(MaintainedByDiffblue.class)
@@ -221,17 +322,18 @@ public class DelegatedResourceCapsuleDiffblueTest {
   public void testNewDelegatedResourceCapsule_whenXaxaxaxBytesIsUtf8_thenReturnInstanceIsNull()
       throws UnsupportedEncodingException {
     // Arrange, Act and Assert
-    assertNull((new DelegatedResourceCapsule("\nXAXAXAX".getBytes("UTF-8"))).getInstance());
+    assertNull(new DelegatedResourceCapsule(" XAXAXAX".getBytes("UTF-8")).getInstance());
   }
 
   /**
    * Test {@link DelegatedResourceCapsule#DelegatedResourceCapsule(byte[])}.
+   *
    * <ul>
-   *   <li>When {@code XAXAXAX} Bytes is {@code UTF-8}.</li>
-   *   <li>Then return Instance is {@code null}.</li>
+   *   <li>When {@code (XAXAXAX} Bytes is {@code UTF-8}.
+   *   <li>Then return Instance is {@code null}.
    * </ul>
-   * <p>
-   * Method under test: {@link DelegatedResourceCapsule#DelegatedResourceCapsule(byte[])}
+   *
+   * <p>Method under test: {@link DelegatedResourceCapsule#DelegatedResourceCapsule(byte[])}
    */
   @Test
   @Category(MaintainedByDiffblue.class)
@@ -239,35 +341,18 @@ public class DelegatedResourceCapsuleDiffblueTest {
   public void testNewDelegatedResourceCapsule_whenXaxaxaxBytesIsUtf8_thenReturnInstanceIsNull2()
       throws UnsupportedEncodingException {
     // Arrange, Act and Assert
-    assertNull((new DelegatedResourceCapsule(" XAXAXAX".getBytes("UTF-8"))).getInstance());
+    assertNull(new DelegatedResourceCapsule("(XAXAXAX".getBytes("UTF-8")).getInstance());
   }
 
   /**
    * Test {@link DelegatedResourceCapsule#DelegatedResourceCapsule(byte[])}.
+   *
    * <ul>
-   *   <li>When {@code (XAXAXAX} Bytes is {@code UTF-8}.</li>
-   *   <li>Then return Instance is {@code null}.</li>
+   *   <li>When {@code XXAXAXAX} Bytes is {@code UTF-8}.
+   *   <li>Then return Instance is {@code null}.
    * </ul>
-   * <p>
-   * Method under test: {@link DelegatedResourceCapsule#DelegatedResourceCapsule(byte[])}
-   */
-  @Test
-  @Category(MaintainedByDiffblue.class)
-  @MethodsUnderTest({"void DelegatedResourceCapsule.<init>(byte[])"})
-  public void testNewDelegatedResourceCapsule_whenXaxaxaxBytesIsUtf8_thenReturnInstanceIsNull3()
-      throws UnsupportedEncodingException {
-    // Arrange, Act and Assert
-    assertNull((new DelegatedResourceCapsule("(XAXAXAX".getBytes("UTF-8"))).getInstance());
-  }
-
-  /**
-   * Test {@link DelegatedResourceCapsule#DelegatedResourceCapsule(byte[])}.
-   * <ul>
-   *   <li>When {@code XXAXAXAX} Bytes is {@code UTF-8}.</li>
-   *   <li>Then return Instance is {@code null}.</li>
-   * </ul>
-   * <p>
-   * Method under test: {@link DelegatedResourceCapsule#DelegatedResourceCapsule(byte[])}
+   *
+   * <p>Method under test: {@link DelegatedResourceCapsule#DelegatedResourceCapsule(byte[])}
    */
   @Test
   @Category(MaintainedByDiffblue.class)
@@ -275,23 +360,23 @@ public class DelegatedResourceCapsuleDiffblueTest {
   public void testNewDelegatedResourceCapsule_whenXxaxaxaxBytesIsUtf8_thenReturnInstanceIsNull()
       throws UnsupportedEncodingException {
     // Arrange, Act and Assert
-    assertNull((new DelegatedResourceCapsule("XXAXAXAX".getBytes("UTF-8"))).getInstance());
+    assertNull(new DelegatedResourceCapsule("XXAXAXAX".getBytes("UTF-8")).getInstance());
   }
 
   /**
-   * Test {@link DelegatedResourceCapsule#createDbKey(byte[], byte[])} with {@code byte[]}, {@code byte[]}.
-   * <p>
-   * Method under test: {@link DelegatedResourceCapsule#createDbKey(byte[], byte[])}
+   * Test {@link DelegatedResourceCapsule#createDbKey(byte[], byte[])} with {@code byte[]}, {@code
+   * byte[]}.
+   *
+   * <p>Method under test: {@link DelegatedResourceCapsule#createDbKey(byte[], byte[])}
    */
   @Test
   @Category(MaintainedByDiffblue.class)
   @MethodsUnderTest({"byte[] DelegatedResourceCapsule.createDbKey(byte[], byte[])"})
   public void testCreateDbKeyWithByteByte() throws UnsupportedEncodingException {
-    // Arrange
-    byte[] from = "AXAXAXAX".getBytes("UTF-8");
-
-    // Act
-    byte[] actualCreateDbKeyResult = DelegatedResourceCapsule.createDbKey(from, "AXAXAXAX".getBytes("UTF-8"));
+    // Arrange and Act
+    byte[] actualCreateDbKeyResult =
+        DelegatedResourceCapsule.createDbKey(
+            "AXAXAXAX".getBytes("UTF-8"), "AXAXAXAX".getBytes("UTF-8"));
 
     // Assert
     assertArrayEquals("AXAXAXAXAXAXAXAX".getBytes("UTF-8"), actualCreateDbKeyResult);
@@ -299,346 +384,322 @@ public class DelegatedResourceCapsuleDiffblueTest {
 
   /**
    * Test {@link DelegatedResourceCapsule#createDbKey()}.
+   *
    * <ul>
-   *   <li>Then return {@code AXAXAXAXAXAXAXAX} Bytes is {@code UTF-8}.</li>
+   *   <li>Then return empty array of {@code byte}.
    * </ul>
-   * <p>
-   * Method under test: {@link DelegatedResourceCapsule#createDbKey()}
+   *
+   * <p>Method under test: {@link DelegatedResourceCapsule#createDbKey()}
    */
   @Test
   @Category(MaintainedByDiffblue.class)
   @MethodsUnderTest({"byte[] DelegatedResourceCapsule.createDbKey()"})
-  public void testCreateDbKey_thenReturnAxaxaxaxaxaxaxaxBytesIsUtf8() throws UnsupportedEncodingException {
+  public void testCreateDbKey_thenReturnEmptyArrayOfByte() {
     // Arrange
-    ByteString from = mock(ByteString.class);
-    when(from.toByteArray()).thenReturn("AXAXAXAX".getBytes("UTF-8"));
-    ByteString resultTo = mock(ByteString.class);
-    when(resultTo.toByteArray()).thenReturn("AXAXAXAX".getBytes("UTF-8"));
+    DelegatedResourceCapsule delegatedResourceCapsule = new DelegatedResourceCapsule(new byte[] {});
 
-    // Act
-    byte[] actualCreateDbKeyResult = (new DelegatedResourceCapsule(from, resultTo)).createDbKey();
-
-    // Assert
-    verify(from).toByteArray();
-    verify(resultTo).toByteArray();
-    assertArrayEquals("AXAXAXAXAXAXAXAX".getBytes("UTF-8"), actualCreateDbKeyResult);
+    // Act and Assert
+    assertArrayEquals(new byte[] {}, delegatedResourceCapsule.createDbKey());
   }
 
   /**
    * Test {@link DelegatedResourceCapsule#getData()}.
-   * <ul>
-   *   <li>Then return array of {@code byte} with space and one.</li>
-   * </ul>
-   * <p>
-   * Method under test: {@link DelegatedResourceCapsule#getData()}
+   *
+   * <p>Method under test: {@link DelegatedResourceCapsule#getData()}
    */
   @Test
   @Category(MaintainedByDiffblue.class)
   @MethodsUnderTest({"byte[] DelegatedResourceCapsule.getData()"})
-  public void testGetData_thenReturnArrayOfByteWithSpaceAndOne() {
+  public void testGetData() {
     // Arrange
-    ByteString from = mock(ByteString.class);
-    when(from.isEmpty()).thenReturn(true);
-    ByteString resultTo = mock(ByteString.class);
-    when(resultTo.isEmpty()).thenReturn(true);
+    DelegatedResourceCapsule delegatedResourceCapsule = new DelegatedResourceCapsule(new byte[] {});
+    delegatedResourceCapsule.addFrozenBalanceForEnergy(-1L, -1L);
+    delegatedResourceCapsule.addFrozenBalanceForBandwidth(3L, 0L);
 
-    DelegatedResourceCapsule delegatedResourceCapsule = new DelegatedResourceCapsule(from, resultTo);
-    delegatedResourceCapsule.addFrozenBalanceForEnergy(1L, 1L);
-
-    // Act
-    byte[] actualData = delegatedResourceCapsule.getData();
-
-    // Assert
-    verify(from, atLeast(1)).isEmpty();
-    verify(resultTo, atLeast(1)).isEmpty();
-    assertArrayEquals(new byte[]{' ', 1, '0', 1}, actualData);
+    // Act and Assert
+    assertArrayEquals(
+        new byte[] {
+          24, 3, ' ', -1, -1, -1, -1, -1, -1, -1, -1, -1, 1, '0', -1, -1, -1, -1, -1, -1, -1, -1,
+          -1, 1
+        },
+        delegatedResourceCapsule.getData());
   }
 
   /**
    * Test {@link DelegatedResourceCapsule#getData()}.
+   *
    * <ul>
-   *   <li>Then return array of {@code byte} with twenty-four and minus one.</li>
+   *   <li>Then return array of {@code byte} with space and minus one.
    * </ul>
-   * <p>
-   * Method under test: {@link DelegatedResourceCapsule#getData()}
+   *
+   * <p>Method under test: {@link DelegatedResourceCapsule#getData()}
    */
   @Test
   @Category(MaintainedByDiffblue.class)
   @MethodsUnderTest({"byte[] DelegatedResourceCapsule.getData()"})
-  public void testGetData_thenReturnArrayOfByteWithTwentyFourAndMinusOne() {
+  public void testGetData_thenReturnArrayOfByteWithSpaceAndMinusOne() {
     // Arrange
-    ByteString from = mock(ByteString.class);
-    when(from.isEmpty()).thenReturn(true);
-    ByteString resultTo = mock(ByteString.class);
-    when(resultTo.isEmpty()).thenReturn(true);
+    DelegatedResourceCapsule delegatedResourceCapsule = new DelegatedResourceCapsule(new byte[] {});
+    delegatedResourceCapsule.addFrozenBalanceForEnergy(Long.MAX_VALUE, 0L);
 
-    DelegatedResourceCapsule delegatedResourceCapsule = new DelegatedResourceCapsule(from, resultTo);
-    delegatedResourceCapsule.setFrozenBalanceForBandwidth(Long.MAX_VALUE, -1L);
-    delegatedResourceCapsule.addFrozenBalanceForEnergy(1L, 1L);
-
-    // Act
-    byte[] actualData = delegatedResourceCapsule.getData();
-
-    // Assert
-    verify(from, atLeast(1)).isEmpty();
-    verify(resultTo, atLeast(1)).isEmpty();
-    assertArrayEquals(new byte[]{24, -1, -1, -1, -1, -1, -1, -1, -1, Byte.MAX_VALUE, ' ', 1, '(', -1, -1, -1, -1, -1,
-        -1, -1, -1, -1, 1, '0', 1}, actualData);
+    // Act and Assert
+    assertArrayEquals(
+        new byte[] {' ', -1, -1, -1, -1, -1, -1, -1, -1, Byte.MAX_VALUE},
+        delegatedResourceCapsule.getData());
   }
 
   /**
    * Test {@link DelegatedResourceCapsule#getData()}.
+   *
    * <ul>
-   *   <li>Then return array of {@code byte} with twenty-four and one.</li>
+   *   <li>Then return array of {@code byte} with twenty-four and one.
    * </ul>
-   * <p>
-   * Method under test: {@link DelegatedResourceCapsule#getData()}
+   *
+   * <p>Method under test: {@link DelegatedResourceCapsule#getData()}
    */
   @Test
   @Category(MaintainedByDiffblue.class)
   @MethodsUnderTest({"byte[] DelegatedResourceCapsule.getData()"})
   public void testGetData_thenReturnArrayOfByteWithTwentyFourAndOne() {
     // Arrange
-    ByteString from = mock(ByteString.class);
-    when(from.isEmpty()).thenReturn(true);
-    ByteString resultTo = mock(ByteString.class);
-    when(resultTo.isEmpty()).thenReturn(true);
-
-    DelegatedResourceCapsule delegatedResourceCapsule = new DelegatedResourceCapsule(from, resultTo);
+    DelegatedResourceCapsule delegatedResourceCapsule = new DelegatedResourceCapsule(new byte[] {});
     delegatedResourceCapsule.setFrozenBalanceForBandwidth(1L, -1L);
-    delegatedResourceCapsule.addFrozenBalanceForEnergy(1L, 1L);
 
-    // Act
-    byte[] actualData = delegatedResourceCapsule.getData();
-
-    // Assert
-    verify(from, atLeast(1)).isEmpty();
-    verify(resultTo, atLeast(1)).isEmpty();
-    assertArrayEquals(new byte[]{24, 1, ' ', 1, '(', -1, -1, -1, -1, -1, -1, -1, -1, -1, 1, '0', 1}, actualData);
+    // Act and Assert
+    assertArrayEquals(
+        new byte[] {24, 1, '(', -1, -1, -1, -1, -1, -1, -1, -1, -1, 1},
+        delegatedResourceCapsule.getData());
   }
 
   /**
    * Test {@link DelegatedResourceCapsule#getData()}.
+   *
    * <ul>
-   *   <li>Then return array of {@code byte} with twenty-four and two.</li>
+   *   <li>Then return array of {@code byte} with twenty-four and three.
    * </ul>
-   * <p>
-   * Method under test: {@link DelegatedResourceCapsule#getData()}
+   *
+   * <p>Method under test: {@link DelegatedResourceCapsule#getData()}
    */
   @Test
   @Category(MaintainedByDiffblue.class)
   @MethodsUnderTest({"byte[] DelegatedResourceCapsule.getData()"})
-  public void testGetData_thenReturnArrayOfByteWithTwentyFourAndTwo() {
+  public void testGetData_thenReturnArrayOfByteWithTwentyFourAndThree() {
     // Arrange
-    ByteString from = mock(ByteString.class);
-    when(from.isEmpty()).thenReturn(true);
-    ByteString resultTo = mock(ByteString.class);
-    when(resultTo.isEmpty()).thenReturn(true);
+    DelegatedResourceCapsule delegatedResourceCapsule = new DelegatedResourceCapsule(new byte[] {});
+    delegatedResourceCapsule.addFrozenBalanceForBandwidth(3L, 0L);
 
-    DelegatedResourceCapsule delegatedResourceCapsule = new DelegatedResourceCapsule(from, resultTo);
-    delegatedResourceCapsule.addFrozenBalanceForBandwidth(2L, 1L);
-
-    // Act
-    byte[] actualData = delegatedResourceCapsule.getData();
-
-    // Assert
-    verify(from, atLeast(1)).isEmpty();
-    verify(resultTo, atLeast(1)).isEmpty();
-    assertArrayEquals(new byte[]{24, 2, '(', 1}, actualData);
+    // Act and Assert
+    assertArrayEquals(new byte[] {24, 3}, delegatedResourceCapsule.getData());
   }
 
   /**
    * Test {@link DelegatedResourceCapsule#getData()}.
+   *
    * <ul>
-   *   <li>Then return empty array of {@code byte}.</li>
+   *   <li>Then return empty array of {@code byte}.
    * </ul>
-   * <p>
-   * Method under test: {@link DelegatedResourceCapsule#getData()}
+   *
+   * <p>Method under test: {@link DelegatedResourceCapsule#getData()}
    */
   @Test
   @Category(MaintainedByDiffblue.class)
   @MethodsUnderTest({"byte[] DelegatedResourceCapsule.getData()"})
   public void testGetData_thenReturnEmptyArrayOfByte() {
     // Arrange
-    ByteString from = mock(ByteString.class);
-    when(from.isEmpty()).thenReturn(true);
-    ByteString resultTo = mock(ByteString.class);
-    when(resultTo.isEmpty()).thenReturn(true);
+    DelegatedResourceCapsule delegatedResourceCapsule = new DelegatedResourceCapsule(new byte[] {});
 
-    // Act
-    byte[] actualData = (new DelegatedResourceCapsule(from, resultTo)).getData();
-
-    // Assert
-    verify(from, atLeast(1)).isEmpty();
-    verify(resultTo, atLeast(1)).isEmpty();
-    assertArrayEquals(new byte[]{}, actualData);
+    // Act and Assert
+    assertArrayEquals(new byte[] {}, delegatedResourceCapsule.getData());
   }
 
   /**
    * Test {@link DelegatedResourceCapsule#getInstance()}.
+   *
    * <ul>
-   *   <li>Then return {@code null}.</li>
+   *   <li>Then return {@code null}.
    * </ul>
-   * <p>
-   * Method under test: {@link DelegatedResourceCapsule#getInstance()}
+   *
+   * <p>Method under test: {@link DelegatedResourceCapsule#getInstance()}
    */
   @Test
   @Category(MaintainedByDiffblue.class)
   @MethodsUnderTest({"DelegatedResource DelegatedResourceCapsule.getInstance()"})
   public void testGetInstance_thenReturnNull() throws UnsupportedEncodingException {
     // Arrange, Act and Assert
-    assertNull((new DelegatedResourceCapsule("AXAXAXAX".getBytes("UTF-8"))).getInstance());
+    assertNull(new DelegatedResourceCapsule("AXAXAXAX".getBytes("UTF-8")).getInstance());
   }
 
   /**
    * Test {@link DelegatedResourceCapsule#createDbKeyV2(byte[], byte[], boolean)}.
+   *
    * <ul>
-   *   <li>When {@code A}.</li>
-   *   <li>Then return array of {@code byte} with one and {@code A}.</li>
+   *   <li>When {@code A}.
+   *   <li>Then return array of {@code byte} with one and {@code A}.
    * </ul>
-   * <p>
-   * Method under test: {@link DelegatedResourceCapsule#createDbKeyV2(byte[], byte[], boolean)}
+   *
+   * <p>Method under test: {@link DelegatedResourceCapsule#createDbKeyV2(byte[], byte[], boolean)}
    */
   @Test
   @Category(MaintainedByDiffblue.class)
   @MethodsUnderTest({"byte[] DelegatedResourceCapsule.createDbKeyV2(byte[], byte[], boolean)"})
   public void testCreateDbKeyV2_whenA_thenReturnArrayOfByteWithOneAndA() {
-    // Arrange, Act and Assert
-    assertArrayEquals(new byte[]{1, 'A', 'X', 'A', 'X', 'A', 'X', 'A', 'X', 'A', 'X', 'A', 'X', 'A', 'X', 'A', 'X'},
-        DelegatedResourceCapsule.createDbKeyV2(new byte[]{'A', 'X', 'A', 'X', 'A', 'X', 'A', 'X'},
-            new byte[]{'A', 'X', 'A', 'X', 'A', 'X', 'A', 'X'}, false));
+    // Arrange and Act
+    byte[] actualCreateDbKeyV2Result =
+        DelegatedResourceCapsule.createDbKeyV2(
+            new byte[] {'A', 'X', 'A', 'X', 'A', 'X', 'A', 'X'},
+            new byte[] {'A', 'X', 'A', 'X', 'A', 'X', 'A', 'X'},
+            false);
+
+    // Assert
+    assertArrayEquals(
+        new byte[] {
+          1, 'A', 'X', 'A', 'X', 'A', 'X', 'A', 'X', 'A', 'X', 'A', 'X', 'A', 'X', 'A', 'X'
+        },
+        actualCreateDbKeyV2Result);
   }
 
   /**
    * Test {@link DelegatedResourceCapsule#createDbKeyV2(byte[], byte[], boolean)}.
+   *
    * <ul>
-   *   <li>When {@code AXAXAXAX} Bytes is {@code UTF-8}.</li>
-   *   <li>Then return array of {@code byte} with two and {@code A}.</li>
+   *   <li>When {@code AXAXAXAX} Bytes is {@code UTF-8}.
+   *   <li>Then return array of {@code byte} with two and {@code A}.
    * </ul>
-   * <p>
-   * Method under test: {@link DelegatedResourceCapsule#createDbKeyV2(byte[], byte[], boolean)}
+   *
+   * <p>Method under test: {@link DelegatedResourceCapsule#createDbKeyV2(byte[], byte[], boolean)}
    */
   @Test
   @Category(MaintainedByDiffblue.class)
   @MethodsUnderTest({"byte[] DelegatedResourceCapsule.createDbKeyV2(byte[], byte[], boolean)"})
   public void testCreateDbKeyV2_whenAxaxaxaxBytesIsUtf8_thenReturnArrayOfByteWithTwoAndA()
       throws UnsupportedEncodingException {
-    // Arrange
-    byte[] from = "AXAXAXAX".getBytes("UTF-8");
+    // Arrange and Act
+    byte[] actualCreateDbKeyV2Result =
+        DelegatedResourceCapsule.createDbKeyV2(
+            "AXAXAXAX".getBytes("UTF-8"), "AXAXAXAX".getBytes("UTF-8"), true);
 
-    // Act and Assert
-    assertArrayEquals(new byte[]{2, 'A', 'X', 'A', 'X', 'A', 'X', 'A', 'X', 'A', 'X', 'A', 'X', 'A', 'X', 'A', 'X'},
-        DelegatedResourceCapsule.createDbKeyV2(from, "AXAXAXAX".getBytes("UTF-8"), true));
+    // Assert
+    assertArrayEquals(
+        new byte[] {
+          2, 'A', 'X', 'A', 'X', 'A', 'X', 'A', 'X', 'A', 'X', 'A', 'X', 'A', 'X', 'A', 'X'
+        },
+        actualCreateDbKeyV2Result);
   }
 
   /**
    * Test {@link DelegatedResourceCapsule#getFrom()}.
-   * <p>
-   * Method under test: {@link DelegatedResourceCapsule#getFrom()}
+   *
+   * <ul>
+   *   <li>Then return {@link ByteString#EMPTY}.
+   * </ul>
+   *
+   * <p>Method under test: {@link DelegatedResourceCapsule#getFrom()}
    */
   @Test
   @Category(MaintainedByDiffblue.class)
   @MethodsUnderTest({"ByteString DelegatedResourceCapsule.getFrom()"})
-  public void testGetFrom() {
+  public void testGetFrom_thenReturnEmpty() {
     // Arrange
-    DelegatedResourceCapsule delegatedResourceCapsule = new DelegatedResourceCapsule(mock(ByteString.class),
-        mock(ByteString.class));
+    DelegatedResourceCapsule delegatedResourceCapsule = new DelegatedResourceCapsule(new byte[] {});
 
-    // Act
-    ByteString actualFrom = delegatedResourceCapsule.getFrom();
-
-    // Assert
+    // Act and Assert
+    ByteString byteString = ByteString.EMPTY;
+    assertSame(byteString, delegatedResourceCapsule.getFrom());
+    assertSame(byteString, delegatedResourceCapsule.getTo());
     DelegatedResource instance = delegatedResourceCapsule.getInstance();
-    List<FieldDescriptor> fields = instance.getDescriptorForType().getFields();
-    assertEquals(6, fields.size());
-    ByteString byteString = actualFrom.EMPTY;
-    assertSame(byteString, fields.get(0).getDefaultValue());
-    assertSame(byteString, fields.get(1).getDefaultValue());
+    assertSame(byteString, instance.getFrom());
     DelegatedResource defaultInstanceForType = instance.getDefaultInstanceForType();
     assertSame(byteString, defaultInstanceForType.getFrom());
+    assertSame(byteString, instance.getTo());
     assertSame(byteString, defaultInstanceForType.getTo());
   }
 
   /**
    * Test {@link DelegatedResourceCapsule#getTo()}.
-   * <p>
-   * Method under test: {@link DelegatedResourceCapsule#getTo()}
+   *
+   * <ul>
+   *   <li>Then {@link DelegatedResourceCapsule#DelegatedResourceCapsule(byte[])} with data is empty
+   *       array of {@code byte} From is {@link ByteString#EMPTY}.
+   * </ul>
+   *
+   * <p>Method under test: {@link DelegatedResourceCapsule#getTo()}
    */
   @Test
   @Category(MaintainedByDiffblue.class)
   @MethodsUnderTest({"ByteString DelegatedResourceCapsule.getTo()"})
-  public void testGetTo() {
+  public void testGetTo_thenDelegatedResourceCapsuleWithDataIsEmptyArrayOfByteFromIsEmpty() {
     // Arrange
-    DelegatedResourceCapsule delegatedResourceCapsule = new DelegatedResourceCapsule(mock(ByteString.class),
-        mock(ByteString.class));
+    DelegatedResourceCapsule delegatedResourceCapsule = new DelegatedResourceCapsule(new byte[] {});
 
     // Act
     ByteString actualTo = delegatedResourceCapsule.getTo();
 
     // Assert
+    ByteString byteString = ByteString.EMPTY;
+    assertSame(byteString, delegatedResourceCapsule.getFrom());
+    assertSame(byteString, actualTo);
     DelegatedResource instance = delegatedResourceCapsule.getInstance();
-    List<FieldDescriptor> fields = instance.getDescriptorForType().getFields();
-    assertEquals(6, fields.size());
-    ByteString byteString = actualTo.EMPTY;
-    assertSame(byteString, fields.get(0).getDefaultValue());
-    assertSame(byteString, fields.get(1).getDefaultValue());
+    assertSame(byteString, instance.getFrom());
     DelegatedResource defaultInstanceForType = instance.getDefaultInstanceForType();
     assertSame(byteString, defaultInstanceForType.getFrom());
+    assertSame(byteString, instance.getTo());
     assertSame(byteString, defaultInstanceForType.getTo());
   }
 
   /**
    * Test {@link DelegatedResourceCapsule#getFrozenBalanceForEnergy()}.
+   *
    * <ul>
-   *   <li>Then return zero.</li>
+   *   <li>Then return zero.
    * </ul>
-   * <p>
-   * Method under test: {@link DelegatedResourceCapsule#getFrozenBalanceForEnergy()}
+   *
+   * <p>Method under test: {@link DelegatedResourceCapsule#getFrozenBalanceForEnergy()}
    */
   @Test
   @Category(MaintainedByDiffblue.class)
   @MethodsUnderTest({"long DelegatedResourceCapsule.getFrozenBalanceForEnergy()"})
   public void testGetFrozenBalanceForEnergy_thenReturnZero() {
-    // Arrange, Act and Assert
-    assertEquals(0L,
-        (new DelegatedResourceCapsule(mock(ByteString.class), mock(ByteString.class))).getFrozenBalanceForEnergy());
+    // Arrange
+    DelegatedResourceCapsule delegatedResourceCapsule = new DelegatedResourceCapsule(new byte[] {});
+
+    // Act and Assert
+    assertEquals(0L, delegatedResourceCapsule.getFrozenBalanceForEnergy());
   }
 
   /**
    * Test {@link DelegatedResourceCapsule#setFrozenBalanceForEnergy(long, long)}.
-   * <p>
-   * Method under test: {@link DelegatedResourceCapsule#setFrozenBalanceForEnergy(long, long)}
+   *
+   * <p>Method under test: {@link DelegatedResourceCapsule#setFrozenBalanceForEnergy(long, long)}
    */
   @Test
   @Category(MaintainedByDiffblue.class)
   @MethodsUnderTest({"void DelegatedResourceCapsule.setFrozenBalanceForEnergy(long, long)"})
   public void testSetFrozenBalanceForEnergy() {
     // Arrange
-    DelegatedResourceCapsule delegatedResourceCapsule = new DelegatedResourceCapsule(mock(ByteString.class),
-        mock(ByteString.class));
+    DelegatedResourceCapsule delegatedResourceCapsule = new DelegatedResourceCapsule(new byte[] {});
 
     // Act
     delegatedResourceCapsule.setFrozenBalanceForEnergy(1L, 1L);
 
     // Assert
     DelegatedResource instance = delegatedResourceCapsule.getInstance();
-    assertEquals(4, instance.getAllFields().size());
+    assertEquals(2, instance.getAllFields().size());
     assertEquals(6, instance.getDescriptorForType().getFields().size());
-    assertEquals(8, instance.getSerializedSize());
-    assertArrayEquals(new byte[]{'\n', 0, 18, 0, ' ', 1, '0', 1}, delegatedResourceCapsule.getData());
+    assertArrayEquals(new byte[] {' ', 1, '0', 1}, delegatedResourceCapsule.getData());
   }
 
   /**
    * Test {@link DelegatedResourceCapsule#setFrozenBalanceForEnergy(long, long)}.
-   * <p>
-   * Method under test: {@link DelegatedResourceCapsule#setFrozenBalanceForEnergy(long, long)}
+   *
+   * <p>Method under test: {@link DelegatedResourceCapsule#setFrozenBalanceForEnergy(long, long)}
    */
   @Test
   @Category(MaintainedByDiffblue.class)
   @MethodsUnderTest({"void DelegatedResourceCapsule.setFrozenBalanceForEnergy(long, long)"})
   public void testSetFrozenBalanceForEnergy2() {
     // Arrange
-    DelegatedResourceCapsule delegatedResourceCapsule = new DelegatedResourceCapsule(new byte[]{});
+    DelegatedResourceCapsule delegatedResourceCapsule = new DelegatedResourceCapsule(new byte[] {});
+    delegatedResourceCapsule.addFrozenBalanceForEnergy(-1L, -1L);
 
     // Act
     delegatedResourceCapsule.setFrozenBalanceForEnergy(1L, 1L);
@@ -648,343 +709,256 @@ public class DelegatedResourceCapsuleDiffblueTest {
     assertEquals(2, instance.getAllFields().size());
     assertEquals(4, instance.getSerializedSize());
     assertEquals(6, instance.getDescriptorForType().getFields().size());
-    assertArrayEquals(new byte[]{' ', 1, '0', 1}, delegatedResourceCapsule.getData());
+    assertArrayEquals(new byte[] {' ', 1, '0', 1}, delegatedResourceCapsule.getData());
   }
 
   /**
    * Test {@link DelegatedResourceCapsule#setFrozenBalanceForEnergy(long, long)}.
-   * <p>
-   * Method under test: {@link DelegatedResourceCapsule#setFrozenBalanceForEnergy(long, long)}
+   *
+   * <p>Method under test: {@link DelegatedResourceCapsule#setFrozenBalanceForEnergy(long, long)}
    */
   @Test
   @Category(MaintainedByDiffblue.class)
   @MethodsUnderTest({"void DelegatedResourceCapsule.setFrozenBalanceForEnergy(long, long)"})
   public void testSetFrozenBalanceForEnergy3() {
     // Arrange
-    DelegatedResourceCapsule delegatedResourceCapsule = new DelegatedResourceCapsule(mock(ByteString.class),
-        mock(ByteString.class));
-    delegatedResourceCapsule.addFrozenBalanceForEnergy(8L, 8L);
+    DelegatedResourceCapsule delegatedResourceCapsule = new DelegatedResourceCapsule(new byte[] {});
+    delegatedResourceCapsule.addFrozenBalanceForBandwidth(3L, -1L);
 
     // Act
     delegatedResourceCapsule.setFrozenBalanceForEnergy(1L, 1L);
 
     // Assert
     DelegatedResource instance = delegatedResourceCapsule.getInstance();
+    assertEquals(17, instance.getSerializedSize());
     assertEquals(4, instance.getAllFields().size());
     assertEquals(6, instance.getDescriptorForType().getFields().size());
-    assertEquals(8, instance.getSerializedSize());
-    assertArrayEquals(new byte[]{'\n', 0, 18, 0, ' ', 1, '0', 1}, delegatedResourceCapsule.getData());
-  }
-
-  /**
-   * Test {@link DelegatedResourceCapsule#setFrozenBalanceForEnergy(long, long)}.
-   * <p>
-   * Method under test: {@link DelegatedResourceCapsule#setFrozenBalanceForEnergy(long, long)}
-   */
-  @Test
-  @Category(MaintainedByDiffblue.class)
-  @MethodsUnderTest({"void DelegatedResourceCapsule.setFrozenBalanceForEnergy(long, long)"})
-  public void testSetFrozenBalanceForEnergy4() {
-    // Arrange
-    DelegatedResourceCapsule delegatedResourceCapsule = new DelegatedResourceCapsule(mock(ByteString.class),
-        mock(ByteString.class));
-    delegatedResourceCapsule.addFrozenBalanceForBandwidth(3L, 8L);
-
-    // Act
-    delegatedResourceCapsule.setFrozenBalanceForEnergy(1L, 1L);
-
-    // Assert
-    DelegatedResource instance = delegatedResourceCapsule.getInstance();
-    assertEquals(12, instance.getSerializedSize());
-    assertEquals(6, instance.getDescriptorForType().getFields().size());
-    assertEquals(6, instance.getAllFields().size());
-    assertArrayEquals(new byte[]{'\n', 0, 18, 0, 24, 3, ' ', 1, '(', '\b', '0', 1}, delegatedResourceCapsule.getData());
+    assertArrayEquals(
+        new byte[] {24, 3, ' ', 1, '(', -1, -1, -1, -1, -1, -1, -1, -1, -1, 1, '0', 1},
+        delegatedResourceCapsule.getData());
   }
 
   /**
    * Test {@link DelegatedResourceCapsule#addFrozenBalanceForEnergy(long, long)}.
-   * <p>
-   * Method under test: {@link DelegatedResourceCapsule#addFrozenBalanceForEnergy(long, long)}
+   *
+   * <p>Method under test: {@link DelegatedResourceCapsule#addFrozenBalanceForEnergy(long, long)}
    */
   @Test
   @Category(MaintainedByDiffblue.class)
   @MethodsUnderTest({"void DelegatedResourceCapsule.addFrozenBalanceForEnergy(long, long)"})
   public void testAddFrozenBalanceForEnergy() {
     // Arrange
-    DelegatedResourceCapsule delegatedResourceCapsule = new DelegatedResourceCapsule(mock(ByteString.class),
-        mock(ByteString.class));
+    DelegatedResourceCapsule delegatedResourceCapsule = new DelegatedResourceCapsule(new byte[] {});
 
     // Act
     delegatedResourceCapsule.addFrozenBalanceForEnergy(1L, 1L);
 
     // Assert
-    assertEquals(1L, delegatedResourceCapsule.getFrozenBalanceForEnergy());
     DelegatedResource instance = delegatedResourceCapsule.getInstance();
-    assertEquals(1L, instance.getFrozenBalanceForEnergy());
-    assertEquals(4, instance.getAllFields().size());
-    assertEquals(8, instance.getSerializedSize());
-    assertArrayEquals(new byte[]{'\n', 0, 18, 0, ' ', 1, '0', 1}, delegatedResourceCapsule.getData());
+    assertEquals(2, instance.getAllFields().size());
+    assertEquals(4, instance.getSerializedSize());
+    assertEquals(6, instance.getDescriptorForType().getFields().size());
+    assertArrayEquals(new byte[] {' ', 1, '0', 1}, delegatedResourceCapsule.getData());
   }
 
   /**
    * Test {@link DelegatedResourceCapsule#addFrozenBalanceForEnergy(long, long)}.
-   * <p>
-   * Method under test: {@link DelegatedResourceCapsule#addFrozenBalanceForEnergy(long, long)}
+   *
+   * <p>Method under test: {@link DelegatedResourceCapsule#addFrozenBalanceForEnergy(long, long)}
    */
   @Test
   @Category(MaintainedByDiffblue.class)
   @MethodsUnderTest({"void DelegatedResourceCapsule.addFrozenBalanceForEnergy(long, long)"})
   public void testAddFrozenBalanceForEnergy2() {
     // Arrange
-    DelegatedResourceCapsule delegatedResourceCapsule = new DelegatedResourceCapsule(new byte[]{});
+    DelegatedResourceCapsule delegatedResourceCapsule = new DelegatedResourceCapsule(new byte[] {});
+    delegatedResourceCapsule.addFrozenBalanceForEnergy(-1L, -1L);
 
     // Act
     delegatedResourceCapsule.addFrozenBalanceForEnergy(1L, 1L);
 
     // Assert
+    assertEquals(0L, delegatedResourceCapsule.getFrozenBalanceForEnergy());
     DelegatedResource instance = delegatedResourceCapsule.getInstance();
-    assertEquals(2, instance.getAllFields().size());
-    assertEquals(4, instance.getSerializedSize());
-    assertEquals(6, instance.getDescriptorForType().getFields().size());
-    assertArrayEquals(new byte[]{' ', 1, '0', 1}, delegatedResourceCapsule.getData());
+    assertEquals(0L, instance.getFrozenBalanceForEnergy());
+    assertEquals(1, instance.getAllFields().size());
+    assertEquals(2, instance.getSerializedSize());
+    assertArrayEquals(new byte[] {'0', 1}, delegatedResourceCapsule.getData());
   }
 
   /**
    * Test {@link DelegatedResourceCapsule#addFrozenBalanceForEnergy(long, long)}.
-   * <p>
-   * Method under test: {@link DelegatedResourceCapsule#addFrozenBalanceForEnergy(long, long)}
+   *
+   * <p>Method under test: {@link DelegatedResourceCapsule#addFrozenBalanceForEnergy(long, long)}
    */
   @Test
   @Category(MaintainedByDiffblue.class)
   @MethodsUnderTest({"void DelegatedResourceCapsule.addFrozenBalanceForEnergy(long, long)"})
   public void testAddFrozenBalanceForEnergy3() {
     // Arrange
-    DelegatedResourceCapsule delegatedResourceCapsule = new DelegatedResourceCapsule(mock(ByteString.class),
-        mock(ByteString.class));
-    delegatedResourceCapsule.addFrozenBalanceForEnergy(8L, 8L);
+    DelegatedResourceCapsule delegatedResourceCapsule = new DelegatedResourceCapsule(new byte[] {});
+    delegatedResourceCapsule.addFrozenBalanceForBandwidth(3L, -1L);
 
     // Act
     delegatedResourceCapsule.addFrozenBalanceForEnergy(1L, 1L);
 
     // Assert
     DelegatedResource instance = delegatedResourceCapsule.getInstance();
-    assertEquals(4, instance.getAllFields().size());
-    assertEquals(8, instance.getSerializedSize());
-    assertEquals(9L, delegatedResourceCapsule.getFrozenBalanceForEnergy());
-    assertEquals(9L, instance.getFrozenBalanceForEnergy());
-    assertArrayEquals(new byte[]{'\n', 0, 18, 0, ' ', '\t', '0', 1}, delegatedResourceCapsule.getData());
-  }
-
-  /**
-   * Test {@link DelegatedResourceCapsule#addFrozenBalanceForEnergy(long, long)}.
-   * <p>
-   * Method under test: {@link DelegatedResourceCapsule#addFrozenBalanceForEnergy(long, long)}
-   */
-  @Test
-  @Category(MaintainedByDiffblue.class)
-  @MethodsUnderTest({"void DelegatedResourceCapsule.addFrozenBalanceForEnergy(long, long)"})
-  public void testAddFrozenBalanceForEnergy4() {
-    // Arrange
-    DelegatedResourceCapsule delegatedResourceCapsule = new DelegatedResourceCapsule(mock(ByteString.class),
-        mock(ByteString.class));
-    delegatedResourceCapsule.addFrozenBalanceForBandwidth(3L, 8L);
-
-    // Act
-    delegatedResourceCapsule.addFrozenBalanceForEnergy(1L, 1L);
-
-    // Assert
-    DelegatedResource instance = delegatedResourceCapsule.getInstance();
-    assertEquals(12, instance.getSerializedSize());
+    assertEquals(17, instance.getSerializedSize());
     assertEquals(1L, delegatedResourceCapsule.getFrozenBalanceForEnergy());
     assertEquals(1L, instance.getFrozenBalanceForEnergy());
-    assertEquals(6, instance.getAllFields().size());
-    assertArrayEquals(new byte[]{'\n', 0, 18, 0, 24, 3, ' ', 1, '(', '\b', '0', 1}, delegatedResourceCapsule.getData());
+    assertEquals(4, instance.getAllFields().size());
+    assertArrayEquals(
+        new byte[] {24, 3, ' ', 1, '(', -1, -1, -1, -1, -1, -1, -1, -1, -1, 1, '0', 1},
+        delegatedResourceCapsule.getData());
   }
 
   /**
    * Test {@link DelegatedResourceCapsule#getFrozenBalanceForBandwidth()}.
+   *
    * <ul>
-   *   <li>Then return zero.</li>
+   *   <li>Then return zero.
    * </ul>
-   * <p>
-   * Method under test: {@link DelegatedResourceCapsule#getFrozenBalanceForBandwidth()}
+   *
+   * <p>Method under test: {@link DelegatedResourceCapsule#getFrozenBalanceForBandwidth()}
    */
   @Test
   @Category(MaintainedByDiffblue.class)
   @MethodsUnderTest({"long DelegatedResourceCapsule.getFrozenBalanceForBandwidth()"})
   public void testGetFrozenBalanceForBandwidth_thenReturnZero() {
-    // Arrange, Act and Assert
-    assertEquals(0L,
-        (new DelegatedResourceCapsule(mock(ByteString.class), mock(ByteString.class))).getFrozenBalanceForBandwidth());
+    // Arrange
+    DelegatedResourceCapsule delegatedResourceCapsule = new DelegatedResourceCapsule(new byte[] {});
+
+    // Act and Assert
+    assertEquals(0L, delegatedResourceCapsule.getFrozenBalanceForBandwidth());
   }
 
   /**
    * Test {@link DelegatedResourceCapsule#getFrozenBalance(boolean)}.
+   *
    * <ul>
-   *   <li>Then return zero.</li>
+   *   <li>Then return zero.
    * </ul>
-   * <p>
-   * Method under test: {@link DelegatedResourceCapsule#getFrozenBalance(boolean)}
+   *
+   * <p>Method under test: {@link DelegatedResourceCapsule#getFrozenBalance(boolean)}
    */
   @Test
   @Category(MaintainedByDiffblue.class)
   @MethodsUnderTest({"long DelegatedResourceCapsule.getFrozenBalance(boolean)"})
   public void testGetFrozenBalance_thenReturnZero() {
-    // Arrange, Act and Assert
-    assertEquals(0L,
-        (new DelegatedResourceCapsule(mock(ByteString.class), mock(ByteString.class))).getFrozenBalance(true));
+    // Arrange
+    DelegatedResourceCapsule delegatedResourceCapsule = new DelegatedResourceCapsule(new byte[] {});
+
+    // Act and Assert
+    assertEquals(0L, delegatedResourceCapsule.getFrozenBalance(true));
   }
 
   /**
    * Test {@link DelegatedResourceCapsule#getFrozenBalance(boolean)}.
+   *
    * <ul>
-   *   <li>Then return zero.</li>
+   *   <li>Then return zero.
    * </ul>
-   * <p>
-   * Method under test: {@link DelegatedResourceCapsule#getFrozenBalance(boolean)}
+   *
+   * <p>Method under test: {@link DelegatedResourceCapsule#getFrozenBalance(boolean)}
    */
   @Test
   @Category(MaintainedByDiffblue.class)
   @MethodsUnderTest({"long DelegatedResourceCapsule.getFrozenBalance(boolean)"})
   public void testGetFrozenBalance_thenReturnZero2() {
-    // Arrange, Act and Assert
-    assertEquals(0L,
-        (new DelegatedResourceCapsule(mock(ByteString.class), mock(ByteString.class))).getFrozenBalance(false));
+    // Arrange
+    DelegatedResourceCapsule delegatedResourceCapsule = new DelegatedResourceCapsule(new byte[] {});
+
+    // Act and Assert
+    assertEquals(0L, delegatedResourceCapsule.getFrozenBalance(false));
   }
 
   /**
    * Test {@link DelegatedResourceCapsule#setFrozenBalanceForBandwidth(long, long)}.
-   * <p>
-   * Method under test: {@link DelegatedResourceCapsule#setFrozenBalanceForBandwidth(long, long)}
+   *
+   * <p>Method under test: {@link DelegatedResourceCapsule#setFrozenBalanceForBandwidth(long, long)}
    */
   @Test
   @Category(MaintainedByDiffblue.class)
   @MethodsUnderTest({"void DelegatedResourceCapsule.setFrozenBalanceForBandwidth(long, long)"})
   public void testSetFrozenBalanceForBandwidth() {
     // Arrange
-    DelegatedResourceCapsule delegatedResourceCapsule = new DelegatedResourceCapsule(mock(ByteString.class),
-        mock(ByteString.class));
+    DelegatedResourceCapsule delegatedResourceCapsule = new DelegatedResourceCapsule(new byte[] {});
 
     // Act
     delegatedResourceCapsule.setFrozenBalanceForBandwidth(1L, 1L);
 
     // Assert
     DelegatedResource instance = delegatedResourceCapsule.getInstance();
-    assertEquals(4, instance.getAllFields().size());
+    assertEquals(2, instance.getAllFields().size());
     assertEquals(6, instance.getDescriptorForType().getFields().size());
-    assertEquals(8, instance.getSerializedSize());
-    assertArrayEquals(new byte[]{'\n', 0, 18, 0, 24, 1, '(', 1}, delegatedResourceCapsule.getData());
+    assertArrayEquals(new byte[] {24, 1, '(', 1}, delegatedResourceCapsule.getData());
   }
 
   /**
    * Test {@link DelegatedResourceCapsule#setFrozenBalanceForBandwidth(long, long)}.
-   * <p>
-   * Method under test: {@link DelegatedResourceCapsule#setFrozenBalanceForBandwidth(long, long)}
+   *
+   * <p>Method under test: {@link DelegatedResourceCapsule#setFrozenBalanceForBandwidth(long, long)}
    */
   @Test
   @Category(MaintainedByDiffblue.class)
   @MethodsUnderTest({"void DelegatedResourceCapsule.setFrozenBalanceForBandwidth(long, long)"})
   public void testSetFrozenBalanceForBandwidth2() {
     // Arrange
-    DelegatedResourceCapsule delegatedResourceCapsule = new DelegatedResourceCapsule(new byte[]{});
+    DelegatedResourceCapsule delegatedResourceCapsule = new DelegatedResourceCapsule(new byte[] {});
+    delegatedResourceCapsule.addFrozenBalanceForEnergy(-1L, -1L);
 
     // Act
     delegatedResourceCapsule.setFrozenBalanceForBandwidth(1L, 1L);
 
     // Assert
     DelegatedResource instance = delegatedResourceCapsule.getInstance();
-    assertEquals(2, instance.getAllFields().size());
-    assertEquals(4, instance.getSerializedSize());
+    assertEquals(26, instance.getSerializedSize());
+    assertEquals(4, instance.getAllFields().size());
     assertEquals(6, instance.getDescriptorForType().getFields().size());
-    assertArrayEquals(new byte[]{24, 1, '(', 1}, delegatedResourceCapsule.getData());
+    assertArrayEquals(
+        new byte[] {
+          24, 1, ' ', -1, -1, -1, -1, -1, -1, -1, -1, -1, 1, '(', 1, '0', -1, -1, -1, -1, -1, -1,
+          -1, -1, -1, 1
+        },
+        delegatedResourceCapsule.getData());
   }
 
   /**
    * Test {@link DelegatedResourceCapsule#setFrozenBalanceForBandwidth(long, long)}.
-   * <p>
-   * Method under test: {@link DelegatedResourceCapsule#setFrozenBalanceForBandwidth(long, long)}
+   *
+   * <p>Method under test: {@link DelegatedResourceCapsule#setFrozenBalanceForBandwidth(long, long)}
    */
   @Test
   @Category(MaintainedByDiffblue.class)
   @MethodsUnderTest({"void DelegatedResourceCapsule.setFrozenBalanceForBandwidth(long, long)"})
   public void testSetFrozenBalanceForBandwidth3() {
     // Arrange
-    DelegatedResourceCapsule delegatedResourceCapsule = new DelegatedResourceCapsule(mock(ByteString.class),
-        mock(ByteString.class));
-    delegatedResourceCapsule.addFrozenBalanceForEnergy(4L, 4L);
+    DelegatedResourceCapsule delegatedResourceCapsule = new DelegatedResourceCapsule(new byte[] {});
+    delegatedResourceCapsule.addFrozenBalanceForBandwidth(3L, -1L);
 
     // Act
     delegatedResourceCapsule.setFrozenBalanceForBandwidth(1L, 1L);
 
     // Assert
     DelegatedResource instance = delegatedResourceCapsule.getInstance();
-    assertEquals(12, instance.getSerializedSize());
+    assertEquals(2, instance.getAllFields().size());
+    assertEquals(4, instance.getSerializedSize());
     assertEquals(6, instance.getDescriptorForType().getFields().size());
-    assertEquals(6, instance.getAllFields().size());
-    assertArrayEquals(new byte[]{'\n', 0, 18, 0, 24, 1, ' ', 4, '(', 1, '0', 4}, delegatedResourceCapsule.getData());
-  }
-
-  /**
-   * Test {@link DelegatedResourceCapsule#setFrozenBalanceForBandwidth(long, long)}.
-   * <p>
-   * Method under test: {@link DelegatedResourceCapsule#setFrozenBalanceForBandwidth(long, long)}
-   */
-  @Test
-  @Category(MaintainedByDiffblue.class)
-  @MethodsUnderTest({"void DelegatedResourceCapsule.setFrozenBalanceForBandwidth(long, long)"})
-  public void testSetFrozenBalanceForBandwidth4() {
-    // Arrange
-    DelegatedResourceCapsule delegatedResourceCapsule = new DelegatedResourceCapsule(mock(ByteString.class),
-        mock(ByteString.class));
-    delegatedResourceCapsule.addFrozenBalanceForBandwidth(3L, 4L);
-
-    // Act
-    delegatedResourceCapsule.setFrozenBalanceForBandwidth(1L, 1L);
-
-    // Assert
-    DelegatedResource instance = delegatedResourceCapsule.getInstance();
-    assertEquals(4, instance.getAllFields().size());
-    assertEquals(6, instance.getDescriptorForType().getFields().size());
-    assertEquals(8, instance.getSerializedSize());
-    assertArrayEquals(new byte[]{'\n', 0, 18, 0, 24, 1, '(', 1}, delegatedResourceCapsule.getData());
+    assertArrayEquals(new byte[] {24, 1, '(', 1}, delegatedResourceCapsule.getData());
   }
 
   /**
    * Test {@link DelegatedResourceCapsule#addFrozenBalanceForBandwidth(long, long)}.
-   * <p>
-   * Method under test: {@link DelegatedResourceCapsule#addFrozenBalanceForBandwidth(long, long)}
+   *
+   * <p>Method under test: {@link DelegatedResourceCapsule#addFrozenBalanceForBandwidth(long, long)}
    */
   @Test
   @Category(MaintainedByDiffblue.class)
   @MethodsUnderTest({"void DelegatedResourceCapsule.addFrozenBalanceForBandwidth(long, long)"})
   public void testAddFrozenBalanceForBandwidth() {
     // Arrange
-    DelegatedResourceCapsule delegatedResourceCapsule = new DelegatedResourceCapsule(mock(ByteString.class),
-        mock(ByteString.class));
-
-    // Act
-    delegatedResourceCapsule.addFrozenBalanceForBandwidth(1L, 1L);
-
-    // Assert
-    assertEquals(1L, delegatedResourceCapsule.getFrozenBalanceForBandwidth());
-    DelegatedResource instance = delegatedResourceCapsule.getInstance();
-    assertEquals(1L, instance.getFrozenBalanceForBandwidth());
-    assertEquals(4, instance.getAllFields().size());
-    assertEquals(8, instance.getSerializedSize());
-    assertArrayEquals(new byte[]{'\n', 0, 18, 0, 24, 1, '(', 1}, delegatedResourceCapsule.getData());
-  }
-
-  /**
-   * Test {@link DelegatedResourceCapsule#addFrozenBalanceForBandwidth(long, long)}.
-   * <p>
-   * Method under test: {@link DelegatedResourceCapsule#addFrozenBalanceForBandwidth(long, long)}
-   */
-  @Test
-  @Category(MaintainedByDiffblue.class)
-  @MethodsUnderTest({"void DelegatedResourceCapsule.addFrozenBalanceForBandwidth(long, long)"})
-  public void testAddFrozenBalanceForBandwidth2() {
-    // Arrange
-    DelegatedResourceCapsule delegatedResourceCapsule = new DelegatedResourceCapsule(new byte[]{});
+    DelegatedResourceCapsule delegatedResourceCapsule = new DelegatedResourceCapsule(new byte[] {});
 
     // Act
     delegatedResourceCapsule.addFrozenBalanceForBandwidth(1L, 1L);
@@ -992,99 +966,110 @@ public class DelegatedResourceCapsuleDiffblueTest {
     // Assert
     DelegatedResource instance = delegatedResourceCapsule.getInstance();
     assertEquals(2, instance.getAllFields().size());
-    assertEquals(4, instance.getSerializedSize());
     assertEquals(6, instance.getDescriptorForType().getFields().size());
-    assertArrayEquals(new byte[]{24, 1, '(', 1}, delegatedResourceCapsule.getData());
+    assertArrayEquals(new byte[] {24, 1, '(', 1}, delegatedResourceCapsule.getData());
   }
 
   /**
    * Test {@link DelegatedResourceCapsule#addFrozenBalanceForBandwidth(long, long)}.
-   * <p>
-   * Method under test: {@link DelegatedResourceCapsule#addFrozenBalanceForBandwidth(long, long)}
+   *
+   * <p>Method under test: {@link DelegatedResourceCapsule#addFrozenBalanceForBandwidth(long, long)}
+   */
+  @Test
+  @Category(MaintainedByDiffblue.class)
+  @MethodsUnderTest({"void DelegatedResourceCapsule.addFrozenBalanceForBandwidth(long, long)"})
+  public void testAddFrozenBalanceForBandwidth2() {
+    // Arrange
+    DelegatedResourceCapsule delegatedResourceCapsule = new DelegatedResourceCapsule(new byte[] {});
+    delegatedResourceCapsule.addFrozenBalanceForEnergy(-1L, -1L);
+
+    // Act
+    delegatedResourceCapsule.addFrozenBalanceForBandwidth(1L, 1L);
+
+    // Assert
+    assertEquals(1L, delegatedResourceCapsule.getFrozenBalanceForBandwidth());
+    DelegatedResource instance = delegatedResourceCapsule.getInstance();
+    assertEquals(1L, instance.getFrozenBalanceForBandwidth());
+    assertEquals(26, instance.getSerializedSize());
+    assertEquals(4, instance.getAllFields().size());
+    assertArrayEquals(
+        new byte[] {
+          24, 1, ' ', -1, -1, -1, -1, -1, -1, -1, -1, -1, 1, '(', 1, '0', -1, -1, -1, -1, -1, -1,
+          -1, -1, -1, 1
+        },
+        delegatedResourceCapsule.getData());
+  }
+
+  /**
+   * Test {@link DelegatedResourceCapsule#addFrozenBalanceForBandwidth(long, long)}.
+   *
+   * <p>Method under test: {@link DelegatedResourceCapsule#addFrozenBalanceForBandwidth(long, long)}
    */
   @Test
   @Category(MaintainedByDiffblue.class)
   @MethodsUnderTest({"void DelegatedResourceCapsule.addFrozenBalanceForBandwidth(long, long)"})
   public void testAddFrozenBalanceForBandwidth3() {
     // Arrange
-    DelegatedResourceCapsule delegatedResourceCapsule = new DelegatedResourceCapsule(mock(ByteString.class),
-        mock(ByteString.class));
-    delegatedResourceCapsule.addFrozenBalanceForEnergy(4L, 4L);
+    DelegatedResourceCapsule delegatedResourceCapsule = new DelegatedResourceCapsule(new byte[] {});
+    delegatedResourceCapsule.addFrozenBalanceForBandwidth(3L, -1L);
 
     // Act
     delegatedResourceCapsule.addFrozenBalanceForBandwidth(1L, 1L);
 
     // Assert
     DelegatedResource instance = delegatedResourceCapsule.getInstance();
-    assertEquals(12, instance.getSerializedSize());
-    assertEquals(1L, delegatedResourceCapsule.getFrozenBalanceForBandwidth());
-    assertEquals(1L, instance.getFrozenBalanceForBandwidth());
-    assertEquals(6, instance.getAllFields().size());
-    assertArrayEquals(new byte[]{'\n', 0, 18, 0, 24, 1, ' ', 4, '(', 1, '0', 4}, delegatedResourceCapsule.getData());
-  }
-
-  /**
-   * Test {@link DelegatedResourceCapsule#addFrozenBalanceForBandwidth(long, long)}.
-   * <p>
-   * Method under test: {@link DelegatedResourceCapsule#addFrozenBalanceForBandwidth(long, long)}
-   */
-  @Test
-  @Category(MaintainedByDiffblue.class)
-  @MethodsUnderTest({"void DelegatedResourceCapsule.addFrozenBalanceForBandwidth(long, long)"})
-  public void testAddFrozenBalanceForBandwidth4() {
-    // Arrange
-    DelegatedResourceCapsule delegatedResourceCapsule = new DelegatedResourceCapsule(mock(ByteString.class),
-        mock(ByteString.class));
-    delegatedResourceCapsule.addFrozenBalanceForBandwidth(3L, 4L);
-
-    // Act
-    delegatedResourceCapsule.addFrozenBalanceForBandwidth(1L, 1L);
-
-    // Assert
-    DelegatedResource instance = delegatedResourceCapsule.getInstance();
-    assertEquals(4, instance.getAllFields().size());
+    assertEquals(2, instance.getAllFields().size());
     assertEquals(4L, delegatedResourceCapsule.getFrozenBalanceForBandwidth());
     assertEquals(4L, instance.getFrozenBalanceForBandwidth());
-    assertEquals(8, instance.getSerializedSize());
-    assertArrayEquals(new byte[]{'\n', 0, 18, 0, 24, 4, '(', 1}, delegatedResourceCapsule.getData());
+    assertArrayEquals(new byte[] {24, 4, '(', 1}, delegatedResourceCapsule.getData());
   }
 
   /**
    * Test {@link DelegatedResourceCapsule#getExpireTimeForBandwidth()}.
+   *
    * <ul>
-   *   <li>Then return zero.</li>
+   *   <li>Then return zero.
    * </ul>
-   * <p>
-   * Method under test: {@link DelegatedResourceCapsule#getExpireTimeForBandwidth()}
+   *
+   * <p>Method under test: {@link DelegatedResourceCapsule#getExpireTimeForBandwidth()}
    */
   @Test
   @Category(MaintainedByDiffblue.class)
   @MethodsUnderTest({"long DelegatedResourceCapsule.getExpireTimeForBandwidth()"})
   public void testGetExpireTimeForBandwidth_thenReturnZero() {
-    // Arrange, Act and Assert
-    assertEquals(0L,
-        (new DelegatedResourceCapsule(mock(ByteString.class), mock(ByteString.class))).getExpireTimeForBandwidth());
+    // Arrange
+    DelegatedResourceCapsule delegatedResourceCapsule = new DelegatedResourceCapsule(new byte[] {});
+
+    // Act and Assert
+    assertEquals(0L, delegatedResourceCapsule.getExpireTimeForBandwidth());
   }
 
   /**
-   * Test {@link DelegatedResourceCapsule#getExpireTimeForEnergy(DynamicPropertiesStore)} with {@code DynamicPropertiesStore}.
+   * Test {@link DelegatedResourceCapsule#getExpireTimeForEnergy(DynamicPropertiesStore)} with
+   * {@code DynamicPropertiesStore}.
+   *
    * <ul>
-   *   <li>Then return zero.</li>
+   *   <li>Then return zero.
    * </ul>
-   * <p>
-   * Method under test: {@link DelegatedResourceCapsule#getExpireTimeForEnergy(DynamicPropertiesStore)}
+   *
+   * <p>Method under test: {@link
+   * DelegatedResourceCapsule#getExpireTimeForEnergy(DynamicPropertiesStore)}
    */
   @Test
   @Category(MaintainedByDiffblue.class)
-  @MethodsUnderTest({"long DelegatedResourceCapsule.getExpireTimeForEnergy(DynamicPropertiesStore)"})
+  @MethodsUnderTest({
+    "long DelegatedResourceCapsule.getExpireTimeForEnergy(DynamicPropertiesStore)"
+  })
   public void testGetExpireTimeForEnergyWithDynamicPropertiesStore_thenReturnZero() {
     // Arrange
-    DelegatedResourceCapsule delegatedResourceCapsule = new DelegatedResourceCapsule(new byte[]{});
+    DelegatedResourceCapsule delegatedResourceCapsule = new DelegatedResourceCapsule(new byte[] {});
+
     DynamicPropertiesStore dynamicPropertiesStore = mock(DynamicPropertiesStore.class);
-    when(dynamicPropertiesStore.getAllowMultiSign()).thenReturn(1L);
+    when(dynamicPropertiesStore.getAllowMultiSign()).thenReturn(0L);
 
     // Act
-    long actualExpireTimeForEnergy = delegatedResourceCapsule.getExpireTimeForEnergy(dynamicPropertiesStore);
+    long actualExpireTimeForEnergy =
+        delegatedResourceCapsule.getExpireTimeForEnergy(dynamicPropertiesStore);
 
     // Assert
     verify(dynamicPropertiesStore).getAllowMultiSign();
@@ -1092,24 +1077,31 @@ public class DelegatedResourceCapsuleDiffblueTest {
   }
 
   /**
-   * Test {@link DelegatedResourceCapsule#getExpireTimeForEnergy(DynamicPropertiesStore)} with {@code DynamicPropertiesStore}.
+   * Test {@link DelegatedResourceCapsule#getExpireTimeForEnergy(DynamicPropertiesStore)} with
+   * {@code DynamicPropertiesStore}.
+   *
    * <ul>
-   *   <li>Then return zero.</li>
+   *   <li>Then return zero.
    * </ul>
-   * <p>
-   * Method under test: {@link DelegatedResourceCapsule#getExpireTimeForEnergy(DynamicPropertiesStore)}
+   *
+   * <p>Method under test: {@link
+   * DelegatedResourceCapsule#getExpireTimeForEnergy(DynamicPropertiesStore)}
    */
   @Test
   @Category(MaintainedByDiffblue.class)
-  @MethodsUnderTest({"long DelegatedResourceCapsule.getExpireTimeForEnergy(DynamicPropertiesStore)"})
+  @MethodsUnderTest({
+    "long DelegatedResourceCapsule.getExpireTimeForEnergy(DynamicPropertiesStore)"
+  })
   public void testGetExpireTimeForEnergyWithDynamicPropertiesStore_thenReturnZero2() {
     // Arrange
-    DelegatedResourceCapsule delegatedResourceCapsule = new DelegatedResourceCapsule(new byte[]{});
+    DelegatedResourceCapsule delegatedResourceCapsule = new DelegatedResourceCapsule(new byte[] {});
+
     DynamicPropertiesStore dynamicPropertiesStore = mock(DynamicPropertiesStore.class);
-    when(dynamicPropertiesStore.getAllowMultiSign()).thenReturn(0L);
+    when(dynamicPropertiesStore.getAllowMultiSign()).thenReturn(1L);
 
     // Act
-    long actualExpireTimeForEnergy = delegatedResourceCapsule.getExpireTimeForEnergy(dynamicPropertiesStore);
+    long actualExpireTimeForEnergy =
+        delegatedResourceCapsule.getExpireTimeForEnergy(dynamicPropertiesStore);
 
     // Assert
     verify(dynamicPropertiesStore).getAllowMultiSign();
@@ -1118,153 +1110,108 @@ public class DelegatedResourceCapsuleDiffblueTest {
 
   /**
    * Test {@link DelegatedResourceCapsule#getExpireTimeForEnergy()}.
+   *
    * <ul>
-   *   <li>Then return zero.</li>
+   *   <li>Then return zero.
    * </ul>
-   * <p>
-   * Method under test: {@link DelegatedResourceCapsule#getExpireTimeForEnergy()}
+   *
+   * <p>Method under test: {@link DelegatedResourceCapsule#getExpireTimeForEnergy()}
    */
   @Test
   @Category(MaintainedByDiffblue.class)
   @MethodsUnderTest({"long DelegatedResourceCapsule.getExpireTimeForEnergy()"})
   public void testGetExpireTimeForEnergy_thenReturnZero() {
-    // Arrange, Act and Assert
-    assertEquals(0L,
-        (new DelegatedResourceCapsule(mock(ByteString.class), mock(ByteString.class))).getExpireTimeForEnergy());
+    // Arrange
+    DelegatedResourceCapsule delegatedResourceCapsule = new DelegatedResourceCapsule(new byte[] {});
+
+    // Act and Assert
+    assertEquals(0L, delegatedResourceCapsule.getExpireTimeForEnergy());
   }
 
   /**
    * Test {@link DelegatedResourceCapsule#setExpireTimeForEnergy(long)}.
-   * <p>
-   * Method under test: {@link DelegatedResourceCapsule#setExpireTimeForEnergy(long)}
+   *
+   * <p>Method under test: {@link DelegatedResourceCapsule#setExpireTimeForEnergy(long)}
    */
   @Test
   @Category(MaintainedByDiffblue.class)
   @MethodsUnderTest({"void DelegatedResourceCapsule.setExpireTimeForEnergy(long)"})
   public void testSetExpireTimeForEnergy() {
     // Arrange
-    DelegatedResourceCapsule delegatedResourceCapsule = new DelegatedResourceCapsule(mock(ByteString.class),
-        mock(ByteString.class));
+    DelegatedResourceCapsule delegatedResourceCapsule = new DelegatedResourceCapsule(new byte[] {});
 
     // Act
     delegatedResourceCapsule.setExpireTimeForEnergy(1L);
 
     // Assert
     DelegatedResource instance = delegatedResourceCapsule.getInstance();
-    assertEquals(3, instance.getAllFields().size());
+    assertEquals(1, instance.getAllFields().size());
+    assertEquals(2, instance.getSerializedSize());
     assertEquals(6, instance.getDescriptorForType().getFields().size());
-    assertEquals(6, instance.getSerializedSize());
-    assertArrayEquals(new byte[]{'\n', 0, 18, 0, '0', 1}, delegatedResourceCapsule.getData());
+    assertArrayEquals(new byte[] {'0', 1}, delegatedResourceCapsule.getData());
   }
 
   /**
    * Test {@link DelegatedResourceCapsule#setExpireTimeForEnergy(long)}.
-   * <p>
-   * Method under test: {@link DelegatedResourceCapsule#setExpireTimeForEnergy(long)}
+   *
+   * <p>Method under test: {@link DelegatedResourceCapsule#setExpireTimeForEnergy(long)}
    */
   @Test
   @Category(MaintainedByDiffblue.class)
   @MethodsUnderTest({"void DelegatedResourceCapsule.setExpireTimeForEnergy(long)"})
   public void testSetExpireTimeForEnergy2() {
     // Arrange
-    DelegatedResourceCapsule delegatedResourceCapsule = new DelegatedResourceCapsule(new byte[]{});
+    DelegatedResourceCapsule delegatedResourceCapsule = new DelegatedResourceCapsule(new byte[] {});
+    delegatedResourceCapsule.addFrozenBalanceForEnergy(1L, 1L);
 
     // Act
     delegatedResourceCapsule.setExpireTimeForEnergy(1L);
 
-    // Assert
+    // Assert that nothing has changed
+    assertEquals(1L, delegatedResourceCapsule.getExpireTimeForEnergy());
     DelegatedResource instance = delegatedResourceCapsule.getInstance();
-    assertEquals(1, instance.getAllFields().size());
-    assertEquals(2, instance.getSerializedSize());
-    assertEquals(6, instance.getDescriptorForType().getFields().size());
-    assertArrayEquals(new byte[]{'0', 1}, delegatedResourceCapsule.getData());
+    assertEquals(1L, instance.getExpireTimeForEnergy());
+    assertEquals(2, instance.getAllFields().size());
+    assertEquals(4, instance.getSerializedSize());
+    assertArrayEquals(new byte[] {' ', 1, '0', 1}, delegatedResourceCapsule.getData());
   }
 
   /**
    * Test {@link DelegatedResourceCapsule#setExpireTimeForEnergy(long)}.
-   * <p>
-   * Method under test: {@link DelegatedResourceCapsule#setExpireTimeForEnergy(long)}
+   *
+   * <p>Method under test: {@link DelegatedResourceCapsule#setExpireTimeForEnergy(long)}
    */
   @Test
   @Category(MaintainedByDiffblue.class)
   @MethodsUnderTest({"void DelegatedResourceCapsule.setExpireTimeForEnergy(long)"})
   public void testSetExpireTimeForEnergy3() {
     // Arrange
-    DelegatedResourceCapsule delegatedResourceCapsule = new DelegatedResourceCapsule(mock(ByteString.class),
-        mock(ByteString.class));
-    delegatedResourceCapsule.addFrozenBalanceForEnergy(32L, 32L);
+    DelegatedResourceCapsule delegatedResourceCapsule = new DelegatedResourceCapsule(new byte[] {});
+    delegatedResourceCapsule.addFrozenBalanceForBandwidth(3L, 1L);
 
     // Act
     delegatedResourceCapsule.setExpireTimeForEnergy(1L);
 
     // Assert
+    assertEquals(1L, delegatedResourceCapsule.getExpireTimeForEnergy());
     DelegatedResource instance = delegatedResourceCapsule.getInstance();
-    assertEquals(4, instance.getAllFields().size());
-    assertEquals(6, instance.getDescriptorForType().getFields().size());
-    assertEquals(8, instance.getSerializedSize());
-    assertArrayEquals(new byte[]{'\n', 0, 18, 0, ' ', ' ', '0', 1}, delegatedResourceCapsule.getData());
-  }
-
-  /**
-   * Test {@link DelegatedResourceCapsule#setExpireTimeForEnergy(long)}.
-   * <p>
-   * Method under test: {@link DelegatedResourceCapsule#setExpireTimeForEnergy(long)}
-   */
-  @Test
-  @Category(MaintainedByDiffblue.class)
-  @MethodsUnderTest({"void DelegatedResourceCapsule.setExpireTimeForEnergy(long)"})
-  public void testSetExpireTimeForEnergy4() {
-    // Arrange
-    DelegatedResourceCapsule delegatedResourceCapsule = new DelegatedResourceCapsule(mock(ByteString.class),
-        mock(ByteString.class));
-    delegatedResourceCapsule.addFrozenBalanceForBandwidth(3L, 32L);
-
-    // Act
-    delegatedResourceCapsule.setExpireTimeForEnergy(1L);
-
-    // Assert
-    DelegatedResource instance = delegatedResourceCapsule.getInstance();
-    assertEquals(10, instance.getSerializedSize());
-    assertEquals(5, instance.getAllFields().size());
-    assertEquals(6, instance.getDescriptorForType().getFields().size());
-    assertArrayEquals(new byte[]{'\n', 0, 18, 0, 24, 3, '(', ' ', '0', 1}, delegatedResourceCapsule.getData());
+    assertEquals(1L, instance.getExpireTimeForEnergy());
+    assertEquals(3, instance.getAllFields().size());
+    assertEquals(6, instance.getSerializedSize());
+    assertArrayEquals(new byte[] {24, 3, '(', 1, '0', 1}, delegatedResourceCapsule.getData());
   }
 
   /**
    * Test {@link DelegatedResourceCapsule#setExpireTimeForBandwidth(long)}.
-   * <p>
-   * Method under test: {@link DelegatedResourceCapsule#setExpireTimeForBandwidth(long)}
+   *
+   * <p>Method under test: {@link DelegatedResourceCapsule#setExpireTimeForBandwidth(long)}
    */
   @Test
   @Category(MaintainedByDiffblue.class)
   @MethodsUnderTest({"void DelegatedResourceCapsule.setExpireTimeForBandwidth(long)"})
   public void testSetExpireTimeForBandwidth() {
     // Arrange
-    DelegatedResourceCapsule delegatedResourceCapsule = new DelegatedResourceCapsule(mock(ByteString.class),
-        mock(ByteString.class));
-
-    // Act
-    delegatedResourceCapsule.setExpireTimeForBandwidth(1L);
-
-    // Assert
-    DelegatedResource instance = delegatedResourceCapsule.getInstance();
-    assertEquals(3, instance.getAllFields().size());
-    assertEquals(6, instance.getDescriptorForType().getFields().size());
-    assertEquals(6, instance.getSerializedSize());
-    assertArrayEquals(new byte[]{'\n', 0, 18, 0, '(', 1}, delegatedResourceCapsule.getData());
-  }
-
-  /**
-   * Test {@link DelegatedResourceCapsule#setExpireTimeForBandwidth(long)}.
-   * <p>
-   * Method under test: {@link DelegatedResourceCapsule#setExpireTimeForBandwidth(long)}
-   */
-  @Test
-  @Category(MaintainedByDiffblue.class)
-  @MethodsUnderTest({"void DelegatedResourceCapsule.setExpireTimeForBandwidth(long)"})
-  public void testSetExpireTimeForBandwidth2() {
-    // Arrange
-    DelegatedResourceCapsule delegatedResourceCapsule = new DelegatedResourceCapsule(new byte[]{});
+    DelegatedResourceCapsule delegatedResourceCapsule = new DelegatedResourceCapsule(new byte[] {});
 
     // Act
     delegatedResourceCapsule.setExpireTimeForBandwidth(1L);
@@ -1274,56 +1221,56 @@ public class DelegatedResourceCapsuleDiffblueTest {
     assertEquals(1, instance.getAllFields().size());
     assertEquals(2, instance.getSerializedSize());
     assertEquals(6, instance.getDescriptorForType().getFields().size());
-    assertArrayEquals(new byte[]{'(', 1}, delegatedResourceCapsule.getData());
+    assertArrayEquals(new byte[] {'(', 1}, delegatedResourceCapsule.getData());
   }
 
   /**
    * Test {@link DelegatedResourceCapsule#setExpireTimeForBandwidth(long)}.
-   * <p>
-   * Method under test: {@link DelegatedResourceCapsule#setExpireTimeForBandwidth(long)}
+   *
+   * <p>Method under test: {@link DelegatedResourceCapsule#setExpireTimeForBandwidth(long)}
+   */
+  @Test
+  @Category(MaintainedByDiffblue.class)
+  @MethodsUnderTest({"void DelegatedResourceCapsule.setExpireTimeForBandwidth(long)"})
+  public void testSetExpireTimeForBandwidth2() {
+    // Arrange
+    DelegatedResourceCapsule delegatedResourceCapsule = new DelegatedResourceCapsule(new byte[] {});
+    delegatedResourceCapsule.addFrozenBalanceForEnergy(1L, 1L);
+
+    // Act
+    delegatedResourceCapsule.setExpireTimeForBandwidth(1L);
+
+    // Assert
+    assertEquals(1L, delegatedResourceCapsule.getExpireTimeForBandwidth());
+    DelegatedResource instance = delegatedResourceCapsule.getInstance();
+    assertEquals(1L, instance.getExpireTimeForBandwidth());
+    assertEquals(3, instance.getAllFields().size());
+    assertEquals(6, instance.getSerializedSize());
+    assertArrayEquals(new byte[] {' ', 1, '(', 1, '0', 1}, delegatedResourceCapsule.getData());
+  }
+
+  /**
+   * Test {@link DelegatedResourceCapsule#setExpireTimeForBandwidth(long)}.
+   *
+   * <p>Method under test: {@link DelegatedResourceCapsule#setExpireTimeForBandwidth(long)}
    */
   @Test
   @Category(MaintainedByDiffblue.class)
   @MethodsUnderTest({"void DelegatedResourceCapsule.setExpireTimeForBandwidth(long)"})
   public void testSetExpireTimeForBandwidth3() {
     // Arrange
-    DelegatedResourceCapsule delegatedResourceCapsule = new DelegatedResourceCapsule(mock(ByteString.class),
-        mock(ByteString.class));
-    delegatedResourceCapsule.addFrozenBalanceForEnergy(16L, 16L);
+    DelegatedResourceCapsule delegatedResourceCapsule = new DelegatedResourceCapsule(new byte[] {});
+    delegatedResourceCapsule.addFrozenBalanceForBandwidth(3L, 1L);
 
     // Act
     delegatedResourceCapsule.setExpireTimeForBandwidth(1L);
 
-    // Assert
+    // Assert that nothing has changed
+    assertEquals(1L, delegatedResourceCapsule.getExpireTimeForBandwidth());
     DelegatedResource instance = delegatedResourceCapsule.getInstance();
-    assertEquals(10, instance.getSerializedSize());
-    assertEquals(5, instance.getAllFields().size());
-    assertEquals(6, instance.getDescriptorForType().getFields().size());
-    assertArrayEquals(new byte[]{'\n', 0, 18, 0, ' ', 16, '(', 1, '0', 16}, delegatedResourceCapsule.getData());
-  }
-
-  /**
-   * Test {@link DelegatedResourceCapsule#setExpireTimeForBandwidth(long)}.
-   * <p>
-   * Method under test: {@link DelegatedResourceCapsule#setExpireTimeForBandwidth(long)}
-   */
-  @Test
-  @Category(MaintainedByDiffblue.class)
-  @MethodsUnderTest({"void DelegatedResourceCapsule.setExpireTimeForBandwidth(long)"})
-  public void testSetExpireTimeForBandwidth4() {
-    // Arrange
-    DelegatedResourceCapsule delegatedResourceCapsule = new DelegatedResourceCapsule(mock(ByteString.class),
-        mock(ByteString.class));
-    delegatedResourceCapsule.addFrozenBalanceForBandwidth(3L, 16L);
-
-    // Act
-    delegatedResourceCapsule.setExpireTimeForBandwidth(1L);
-
-    // Assert
-    DelegatedResource instance = delegatedResourceCapsule.getInstance();
-    assertEquals(4, instance.getAllFields().size());
-    assertEquals(6, instance.getDescriptorForType().getFields().size());
-    assertEquals(8, instance.getSerializedSize());
-    assertArrayEquals(new byte[]{'\n', 0, 18, 0, 24, 3, '(', 1}, delegatedResourceCapsule.getData());
+    assertEquals(1L, instance.getExpireTimeForBandwidth());
+    assertEquals(2, instance.getAllFields().size());
+    assertEquals(4, instance.getSerializedSize());
+    assertArrayEquals(new byte[] {24, 3, '(', 1}, delegatedResourceCapsule.getData());
   }
 }

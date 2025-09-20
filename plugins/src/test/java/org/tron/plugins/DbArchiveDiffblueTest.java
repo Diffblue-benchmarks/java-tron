@@ -16,69 +16,84 @@ import org.tron.plugins.DbArchive.ArchiveManifest;
 public class DbArchiveDiffblueTest {
   /**
    * Test ArchiveManifest {@link ArchiveManifest#checkManifest(String)}.
-   * <p>
-   * Method under test: {@link ArchiveManifest#checkManifest(String)}
+   *
+   * <p>Method under test: {@link ArchiveManifest#checkManifest(String)}
    */
   @Test
   @Category(MaintainedByDiffblue.class)
   @MethodsUnderTest({"boolean ArchiveManifest.checkManifest(String)"})
   public void testArchiveManifestCheckManifest() throws IOException {
-    // Arrange, Act and Assert
-    assertFalse((new ArchiveManifest("Src", "Name", 3, 3)).checkManifest("Dir"));
+    // Arrange
+    ArchiveManifest archiveManifest = new ArchiveManifest("Src", "Name", 3, 3);
+
+    // Act and Assert
+    assertFalse(archiveManifest.checkManifest("Dir"));
   }
 
   /**
    * Test ArchiveManifest {@link ArchiveManifest#ArchiveManifest(String, String, int, int)}.
+   *
    * <ul>
-   *   <li>When minus one.</li>
+   *   <li>When minus one.
    * </ul>
-   * <p>
-   * Method under test: {@link ArchiveManifest#ArchiveManifest(String, String, int, int)}
+   *
+   * <p>Method under test: {@link ArchiveManifest#ArchiveManifest(String, String, int, int)}
    */
   @Test
   @Category(MaintainedByDiffblue.class)
   @MethodsUnderTest({"void ArchiveManifest.<init>(String, String, int, int)"})
   public void testArchiveManifestNewArchiveManifest_whenMinusOne() throws IOException {
-    // Arrange, Act and Assert
-    assertFalse((new ArchiveManifest("Src", "Name", -1, 0)).checkManifest("Dir"));
+    // Arrange and Act
+    ArchiveManifest actualArchiveManifest = new ArchiveManifest("Src", "Name", -1, 0);
+
+    // Assert
+    assertFalse(actualArchiveManifest.checkManifest("Dir"));
   }
 
   /**
    * Test ArchiveManifest {@link ArchiveManifest#ArchiveManifest(String, String, int, int)}.
+   *
    * <ul>
-   *   <li>When three.</li>
+   *   <li>When three.
    * </ul>
-   * <p>
-   * Method under test: {@link ArchiveManifest#ArchiveManifest(String, String, int, int)}
+   *
+   * <p>Method under test: {@link ArchiveManifest#ArchiveManifest(String, String, int, int)}
    */
   @Test
   @Category(MaintainedByDiffblue.class)
   @MethodsUnderTest({"void ArchiveManifest.<init>(String, String, int, int)"})
   public void testArchiveManifestNewArchiveManifest_whenThree() throws IOException {
-    // Arrange, Act and Assert
-    assertFalse((new ArchiveManifest("Src", "Name", 3, 3)).checkManifest("Dir"));
+    // Arrange and Act
+    ArchiveManifest actualArchiveManifest = new ArchiveManifest("Src", "Name", 3, 3);
+
+    // Assert
+    assertFalse(actualArchiveManifest.checkManifest("Dir"));
   }
 
   /**
    * Test ArchiveManifest {@link ArchiveManifest#ArchiveManifest(String, String, int, int)}.
+   *
    * <ul>
-   *   <li>When zero.</li>
+   *   <li>When zero.
    * </ul>
-   * <p>
-   * Method under test: {@link ArchiveManifest#ArchiveManifest(String, String, int, int)}
+   *
+   * <p>Method under test: {@link ArchiveManifest#ArchiveManifest(String, String, int, int)}
    */
   @Test
   @Category(MaintainedByDiffblue.class)
   @MethodsUnderTest({"void ArchiveManifest.<init>(String, String, int, int)"})
   public void testArchiveManifestNewArchiveManifest_whenZero() throws IOException {
-    // Arrange, Act and Assert
-    assertFalse((new ArchiveManifest("Src", "Name", 0, -1)).checkManifest("Dir"));
+    // Arrange and Act
+    ArchiveManifest actualArchiveManifest = new ArchiveManifest("Src", "Name", 0, -1);
+
+    // Assert
+    assertFalse(actualArchiveManifest.checkManifest("Dir"));
   }
 
   /**
    * Test ArchiveManifest {@link ArchiveManifest#newDefaultLevelDbOptions()}.
-   * <p>
-   * Method under test: {@link ArchiveManifest#newDefaultLevelDbOptions()}
+   *
+   * <p>Method under test: {@link ArchiveManifest#newDefaultLevelDbOptions()}
    */
   @Test
   @Category(MaintainedByDiffblue.class)
@@ -106,14 +121,14 @@ public class DbArchiveDiffblueTest {
 
   /**
    * Test new {@link DbArchive} (default constructor).
-   * <p>
-   * Method under test: default or parameterless constructor of {@link DbArchive}
+   *
+   * <p>Method under test: default or parameterless constructor of {@link DbArchive}
    */
   @Test
   @Category(MaintainedByDiffblue.class)
   @MethodsUnderTest({"void DbArchive.<init>()"})
   public void testNewDbArchive() {
     // Arrange, Act and Assert
-    assertNull((new DbArchive()).spec);
+    assertNull(new DbArchive().spec);
   }
 }

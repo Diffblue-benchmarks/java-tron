@@ -15,8 +15,9 @@ import org.junit.experimental.categories.Category;
 public class GenesisBlockDiffblueTest {
   /**
    * Test getters and setters.
-   * <p>
-   * Methods under test:
+   *
+   * <p>Methods under test:
+   *
    * <ul>
    *   <li>default or parameterless constructor of {@link GenesisBlock}
    *   <li>{@link GenesisBlock#setNumber(String)}
@@ -29,9 +30,15 @@ public class GenesisBlockDiffblueTest {
    */
   @Test
   @Category(MaintainedByDiffblue.class)
-  @MethodsUnderTest({"void GenesisBlock.<init>()", "List GenesisBlock.getAssets()", "String GenesisBlock.getNumber()",
-      "String GenesisBlock.getParentHash()", "String GenesisBlock.getTimestamp()", "List GenesisBlock.getWitnesses()",
-      "void GenesisBlock.setNumber(String)"})
+  @MethodsUnderTest({
+    "void GenesisBlock.<init>()",
+    "List GenesisBlock.getAssets()",
+    "String GenesisBlock.getNumber()",
+    "String GenesisBlock.getParentHash()",
+    "String GenesisBlock.getTimestamp()",
+    "List GenesisBlock.getWitnesses()",
+    "void GenesisBlock.setNumber(String)"
+  })
   public void testGettersAndSetters() {
     // Arrange and Act
     GenesisBlock actualGenesisBlock = new GenesisBlock();
@@ -51,8 +58,8 @@ public class GenesisBlockDiffblueTest {
 
   /**
    * Test {@link GenesisBlock#getDefault()}.
-   * <p>
-   * Method under test: {@link GenesisBlock#getDefault()}
+   *
+   * <p>Method under test: {@link GenesisBlock#getDefault()}
    */
   @Test
   @Category(MaintainedByDiffblue.class)
@@ -72,13 +79,48 @@ public class GenesisBlockDiffblueTest {
 
   /**
    * Test {@link GenesisBlock#setAssets(List)}.
-   * <p>
-   * Method under test: {@link GenesisBlock#setAssets(List)}
+   *
+   * <ul>
+   *   <li>Given {@link GenesisBlock} (default constructor) Assets is {@link ArrayList#ArrayList()}.
+   *   <li>Then {@link GenesisBlock} (default constructor) Assets Empty.
+   * </ul>
+   *
+   * <p>Method under test: {@link GenesisBlock#setAssets(List)}
    */
   @Test
   @Category(MaintainedByDiffblue.class)
   @MethodsUnderTest({"void GenesisBlock.setAssets(List)"})
-  public void testSetAssets() {
+  public void testSetAssets_givenGenesisBlockAssetsIsArrayList_thenGenesisBlockAssetsEmpty() {
+    // Arrange
+    GenesisBlock genesisBlock = new GenesisBlock();
+    genesisBlock.setAssets(new ArrayList<>());
+    genesisBlock.setNumber("42");
+    genesisBlock.setParentHash("Parent Hash");
+    genesisBlock.setTimestamp(GenesisBlock.DEFAULT_NUMBER);
+    genesisBlock.setWitnesses(new ArrayList<>());
+
+    // Act
+    genesisBlock.setAssets(null);
+
+    // Assert that nothing has changed
+    assertTrue(genesisBlock.getAssets().isEmpty());
+  }
+
+  /**
+   * Test {@link GenesisBlock#setAssets(List)}.
+   *
+   * <ul>
+   *   <li>Given {@link GenesisBlock} (default constructor).
+   *   <li>When {@link ArrayList#ArrayList()}.
+   *   <li>Then {@link GenesisBlock} (default constructor) Assets is {@link ArrayList#ArrayList()}.
+   * </ul>
+   *
+   * <p>Method under test: {@link GenesisBlock#setAssets(List)}
+   */
+  @Test
+  @Category(MaintainedByDiffblue.class)
+  @MethodsUnderTest({"void GenesisBlock.setAssets(List)"})
+  public void testSetAssets_givenGenesisBlock_whenArrayList_thenGenesisBlockAssetsIsArrayList() {
     // Arrange
     GenesisBlock genesisBlock = new GenesisBlock();
     ArrayList<Account> assets = new ArrayList<>();
@@ -92,12 +134,14 @@ public class GenesisBlockDiffblueTest {
 
   /**
    * Test {@link GenesisBlock#setTimestamp(String)}.
+   *
    * <ul>
-   *   <li>When {@code null}.</li>
-   *   <li>Then {@link GenesisBlock} (default constructor) Timestamp is {@link GenesisBlock#DEFAULT_NUMBER}.</li>
+   *   <li>When {@code null}.
+   *   <li>Then {@link GenesisBlock} (default constructor) Timestamp is {@link
+   *       GenesisBlock#DEFAULT_NUMBER}.
    * </ul>
-   * <p>
-   * Method under test: {@link GenesisBlock#setTimestamp(String)}
+   *
+   * <p>Method under test: {@link GenesisBlock#setTimestamp(String)}
    */
   @Test
   @Category(MaintainedByDiffblue.class)
@@ -115,29 +159,33 @@ public class GenesisBlockDiffblueTest {
 
   /**
    * Test {@link GenesisBlock#setTimestamp(String)}.
+   *
    * <ul>
-   *   <li>When {@code Timestamp}.</li>
-   *   <li>Then throw {@link IllegalArgumentException}.</li>
+   *   <li>When {@code Timestamp}.
+   *   <li>Then throw {@link IllegalArgumentException}.
    * </ul>
-   * <p>
-   * Method under test: {@link GenesisBlock#setTimestamp(String)}
+   *
+   * <p>Method under test: {@link GenesisBlock#setTimestamp(String)}
    */
   @Test
   @Category(MaintainedByDiffblue.class)
   @MethodsUnderTest({"void GenesisBlock.setTimestamp(String)"})
   public void testSetTimestamp_whenTimestamp_thenThrowIllegalArgumentException() {
     // Arrange, Act and Assert
-    assertThrows(IllegalArgumentException.class, () -> (new GenesisBlock()).setTimestamp("Timestamp"));
+    assertThrows(
+        IllegalArgumentException.class, () -> new GenesisBlock().setTimestamp("Timestamp"));
   }
 
   /**
    * Test {@link GenesisBlock#setParentHash(String)}.
+   *
    * <ul>
-   *   <li>When {@code null}.</li>
-   *   <li>Then {@link GenesisBlock} (default constructor) ParentHash is {@link GenesisBlock#DEFAULT_NUMBER}.</li>
+   *   <li>When {@code null}.
+   *   <li>Then {@link GenesisBlock} (default constructor) ParentHash is {@link
+   *       GenesisBlock#DEFAULT_NUMBER}.
    * </ul>
-   * <p>
-   * Method under test: {@link GenesisBlock#setParentHash(String)}
+   *
+   * <p>Method under test: {@link GenesisBlock#setParentHash(String)}
    */
   @Test
   @Category(MaintainedByDiffblue.class)
@@ -155,12 +203,13 @@ public class GenesisBlockDiffblueTest {
 
   /**
    * Test {@link GenesisBlock#setParentHash(String)}.
+   *
    * <ul>
-   *   <li>When {@code Parent Hash}.</li>
-   *   <li>Then {@link GenesisBlock} (default constructor) ParentHash is {@code Parent Hash}.</li>
+   *   <li>When {@code Parent Hash}.
+   *   <li>Then {@link GenesisBlock} (default constructor) ParentHash is {@code Parent Hash}.
    * </ul>
-   * <p>
-   * Method under test: {@link GenesisBlock#setParentHash(String)}
+   *
+   * <p>Method under test: {@link GenesisBlock#setParentHash(String)}
    */
   @Test
   @Category(MaintainedByDiffblue.class)
@@ -178,12 +227,14 @@ public class GenesisBlockDiffblueTest {
 
   /**
    * Test {@link GenesisBlock#setWitnesses(List)}.
+   *
    * <ul>
-   *   <li>Given {@link GenesisBlock} (default constructor).</li>
-   *   <li>Then {@link GenesisBlock} (default constructor) Witnesses is {@link ArrayList#ArrayList()}.</li>
+   *   <li>Given {@link GenesisBlock} (default constructor).
+   *   <li>Then {@link GenesisBlock} (default constructor) Witnesses is {@link
+   *       ArrayList#ArrayList()}.
    * </ul>
-   * <p>
-   * Method under test: {@link GenesisBlock#setWitnesses(List)}
+   *
+   * <p>Method under test: {@link GenesisBlock#setWitnesses(List)}
    */
   @Test
   @Category(MaintainedByDiffblue.class)
@@ -202,11 +253,12 @@ public class GenesisBlockDiffblueTest {
 
   /**
    * Test {@link GenesisBlock#setWitnesses(List)}.
+   *
    * <ul>
-   *   <li>Then {@link GenesisBlock} (default constructor) Witnesses Empty.</li>
+   *   <li>Then {@link GenesisBlock} (default constructor) Witnesses Empty.
    * </ul>
-   * <p>
-   * Method under test: {@link GenesisBlock#setWitnesses(List)}
+   *
+   * <p>Method under test: {@link GenesisBlock#setWitnesses(List)}
    */
   @Test
   @Category(MaintainedByDiffblue.class)

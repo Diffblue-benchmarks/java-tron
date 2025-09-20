@@ -4,9 +4,11 @@ import static org.junit.Assert.assertArrayEquals;
 import static org.junit.Assert.assertEquals;
 import static org.junit.Assert.assertNotEquals;
 import static org.junit.Assert.assertSame;
+import static org.junit.Assert.assertThrows;
 import static org.junit.Assert.assertTrue;
 import com.diffblue.cover.annotations.MaintainedByDiffblue;
 import com.diffblue.cover.annotations.MethodsUnderTest;
+import java.util.EmptyStackException;
 import org.junit.Test;
 import org.junit.experimental.categories.Category;
 import org.tron.common.runtime.vm.DataWord;
@@ -16,12 +18,13 @@ import org.tron.core.vm.program.listener.ProgramListener;
 public class StackDiffblueTest {
   /**
    * Test {@link Stack#pop()}.
+   *
    * <ul>
-   *   <li>Given {@link Stack} (default constructor) add ZERO.</li>
-   *   <li>Then {@link Stack} (default constructor) Empty.</li>
+   *   <li>Given {@link Stack} (default constructor) add ZERO.
+   *   <li>Then {@link Stack} (default constructor) Empty.
    * </ul>
-   * <p>
-   * Method under test: {@link Stack#pop()}
+   *
+   * <p>Method under test: {@link Stack#pop()}
    */
   @Test
   @Category(MaintainedByDiffblue.class)
@@ -41,12 +44,52 @@ public class StackDiffblueTest {
   }
 
   /**
-   * Test {@link Stack#push(DataWord)} with {@code DataWord}.
+   * Test {@link Stack#pop()}.
+   *
    * <ul>
-   *   <li>Given {@link Stack} (default constructor).</li>
+   *   <li>Given {@link Stack} (default constructor).
+   *   <li>Then throw {@link EmptyStackException}.
    * </ul>
-   * <p>
-   * Method under test: {@link Stack#push(DataWord)}
+   *
+   * <p>Method under test: {@link Stack#pop()}
+   */
+  @Test
+  @Category(MaintainedByDiffblue.class)
+  @MethodsUnderTest({"DataWord Stack.pop()"})
+  public void testPop_givenStack_thenThrowEmptyStackException() {
+    // Arrange, Act and Assert
+    assertThrows(EmptyStackException.class, () -> new Stack().pop());
+  }
+
+  /**
+   * Test {@link Stack#pop()}.
+   *
+   * <ul>
+   *   <li>Then throw {@link EmptyStackException}.
+   * </ul>
+   *
+   * <p>Method under test: {@link Stack#pop()}
+   */
+  @Test
+  @Category(MaintainedByDiffblue.class)
+  @MethodsUnderTest({"DataWord Stack.pop()"})
+  public void testPop_thenThrowEmptyStackException() {
+    // Arrange
+    Stack stack = new Stack();
+    stack.setProgramListener(new CompositeProgramListener());
+
+    // Act and Assert
+    assertThrows(EmptyStackException.class, () -> stack.pop());
+  }
+
+  /**
+   * Test {@link Stack#push(DataWord)} with {@code DataWord}.
+   *
+   * <ul>
+   *   <li>Given {@link Stack} (default constructor).
+   * </ul>
+   *
+   * <p>Method under test: {@link Stack#push(DataWord)}
    */
   @Test
   @Category(MaintainedByDiffblue.class)
@@ -59,25 +102,34 @@ public class StackDiffblueTest {
     DataWord actualPushResult = stack.push(DataWord.ZERO());
 
     // Assert
-    assertArrayEquals(new byte[]{0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0},
+    assertArrayEquals(
+        new byte[] {0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0},
         actualPushResult.getLast20Bytes());
-    assertArrayEquals(new byte[]{'A', 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0},
+    assertArrayEquals(
+        new byte[] {'A', 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0},
         actualPushResult.toTronAddress());
     assertArrayEquals(
-        new byte[]{0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0},
+        new byte[] {
+          0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0,
+          0, 0
+        },
         actualPushResult.getClonedData());
     assertArrayEquals(
-        new byte[]{0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0},
+        new byte[] {
+          0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0,
+          0, 0
+        },
         actualPushResult.getData());
   }
 
   /**
    * Test {@link Stack#push(DataWord)} with {@code DataWord}.
+   *
    * <ul>
-   *   <li>Then return Last20Bytes is array of {@code byte} with zero and zero.</li>
+   *   <li>Then return Last20Bytes is array of {@code byte} with zero and zero.
    * </ul>
-   * <p>
-   * Method under test: {@link Stack#push(DataWord)}
+   *
+   * <p>Method under test: {@link Stack#push(DataWord)}
    */
   @Test
   @Category(MaintainedByDiffblue.class)
@@ -91,27 +143,36 @@ public class StackDiffblueTest {
     DataWord actualPushResult = stack.push(DataWord.ZERO());
 
     // Assert
-    assertArrayEquals(new byte[]{0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0},
+    assertArrayEquals(
+        new byte[] {0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0},
         actualPushResult.getLast20Bytes());
-    assertArrayEquals(new byte[]{'A', 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0},
+    assertArrayEquals(
+        new byte[] {'A', 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0},
         actualPushResult.toTronAddress());
     assertArrayEquals(
-        new byte[]{0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0},
+        new byte[] {
+          0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0,
+          0, 0
+        },
         actualPushResult.getClonedData());
     assertArrayEquals(
-        new byte[]{0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0},
+        new byte[] {
+          0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0,
+          0, 0
+        },
         actualPushResult.getData());
   }
 
   /**
    * Test {@link Stack#swap(int, int)}.
+   *
    * <ul>
-   *   <li>Given {@link Stack} (default constructor) add ZERO.</li>
-   *   <li>When one.</li>
-   *   <li>Then {@link Stack} (default constructor) size is two.</li>
+   *   <li>Given {@link Stack} (default constructor) add ZERO.
+   *   <li>When one.
+   *   <li>Then {@link Stack} (default constructor) size is two.
    * </ul>
-   * <p>
-   * Method under test: {@link Stack#swap(int, int)}
+   *
+   * <p>Method under test: {@link Stack#swap(int, int)}
    */
   @Test
   @Category(MaintainedByDiffblue.class)
@@ -133,13 +194,14 @@ public class StackDiffblueTest {
 
   /**
    * Test {@link Stack#swap(int, int)}.
+   *
    * <ul>
-   *   <li>Given {@link Stack} (default constructor) add ZERO.</li>
-   *   <li>When two.</li>
-   *   <li>Then {@link Stack} (default constructor) size is two.</li>
+   *   <li>Given {@link Stack} (default constructor) add ZERO.
+   *   <li>When two.
+   *   <li>Then {@link Stack} (default constructor) size is two.
    * </ul>
-   * <p>
-   * Method under test: {@link Stack#swap(int, int)}
+   *
+   * <p>Method under test: {@link Stack#swap(int, int)}
    */
   @Test
   @Category(MaintainedByDiffblue.class)
@@ -161,13 +223,14 @@ public class StackDiffblueTest {
 
   /**
    * Test {@link Stack#swap(int, int)}.
+   *
    * <ul>
-   *   <li>Given {@link Stack} (default constructor) add ZERO.</li>
-   *   <li>When zero.</li>
-   *   <li>Then {@link Stack} (default constructor) size is two.</li>
+   *   <li>Given {@link Stack} (default constructor) add ZERO.
+   *   <li>When zero.
+   *   <li>Then {@link Stack} (default constructor) size is two.
    * </ul>
-   * <p>
-   * Method under test: {@link Stack#swap(int, int)}
+   *
+   * <p>Method under test: {@link Stack#swap(int, int)}
    */
   @Test
   @Category(MaintainedByDiffblue.class)
@@ -189,12 +252,14 @@ public class StackDiffblueTest {
 
   /**
    * Test {@link Stack#equals(Object)}, and {@link Stack#hashCode()}.
+   *
    * <ul>
-   *   <li>When other is equal.</li>
-   *   <li>Then return equal.</li>
+   *   <li>When other is equal.
+   *   <li>Then return equal.
    * </ul>
-   * <p>
-   * Methods under test:
+   *
+   * <p>Methods under test:
+   *
    * <ul>
    *   <li>{@link Stack#equals(Object)}
    *   <li>{@link Stack#hashCode()}
@@ -210,18 +275,19 @@ public class StackDiffblueTest {
 
     // Act and Assert
     assertEquals(stack, stack2);
-    int expectedHashCodeResult = stack.hashCode();
-    assertEquals(expectedHashCodeResult, stack2.hashCode());
+    assertEquals(stack.hashCode(), stack2.hashCode());
   }
 
   /**
    * Test {@link Stack#equals(Object)}, and {@link Stack#hashCode()}.
+   *
    * <ul>
-   *   <li>When other is same.</li>
-   *   <li>Then return equal.</li>
+   *   <li>When other is same.
+   *   <li>Then return equal.
    * </ul>
-   * <p>
-   * Methods under test:
+   *
+   * <p>Methods under test:
+   *
    * <ul>
    *   <li>{@link Stack#equals(Object)}
    *   <li>{@link Stack#hashCode()}
@@ -242,12 +308,13 @@ public class StackDiffblueTest {
 
   /**
    * Test {@link Stack#equals(Object)}.
+   *
    * <ul>
-   *   <li>When other is different.</li>
-   *   <li>Then return not equal.</li>
+   *   <li>When other is different.
+   *   <li>Then return not equal.
    * </ul>
-   * <p>
-   * Method under test: {@link Stack#equals(Object)}
+   *
+   * <p>Method under test: {@link Stack#equals(Object)}
    */
   @Test
   @Category(MaintainedByDiffblue.class)
@@ -263,12 +330,13 @@ public class StackDiffblueTest {
 
   /**
    * Test {@link Stack#equals(Object)}.
+   *
    * <ul>
-   *   <li>When other is {@code null}.</li>
-   *   <li>Then return not equal.</li>
+   *   <li>When other is {@code null}.
+   *   <li>Then return not equal.
    * </ul>
-   * <p>
-   * Method under test: {@link Stack#equals(Object)}
+   *
+   * <p>Method under test: {@link Stack#equals(Object)}
    */
   @Test
   @Category(MaintainedByDiffblue.class)
@@ -280,12 +348,13 @@ public class StackDiffblueTest {
 
   /**
    * Test {@link Stack#equals(Object)}.
+   *
    * <ul>
-   *   <li>When other is wrong type.</li>
-   *   <li>Then return not equal.</li>
+   *   <li>When other is wrong type.
+   *   <li>Then return not equal.
    * </ul>
-   * <p>
-   * Method under test: {@link Stack#equals(Object)}
+   *
+   * <p>Method under test: {@link Stack#equals(Object)}
    */
   @Test
   @Category(MaintainedByDiffblue.class)
@@ -297,8 +366,9 @@ public class StackDiffblueTest {
 
   /**
    * Test getters and setters.
-   * <p>
-   * Methods under test:
+   *
+   * <p>Methods under test:
+   *
    * <ul>
    *   <li>default or parameterless constructor of {@link Stack}
    *   <li>{@link Stack#setProgramListener(ProgramListener)}

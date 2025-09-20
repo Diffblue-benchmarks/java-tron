@@ -12,21 +12,21 @@ import org.junit.experimental.categories.Category;
 public class FilterResultDiffblueTest {
   /**
    * Test {@link FilterResult#isExpire()}.
-   * <p>
-   * Method under test: {@link FilterResult#isExpire()}
+   *
+   * <p>Method under test: {@link FilterResult#isExpire()}
    */
   @Test
   @Category(MaintainedByDiffblue.class)
   @MethodsUnderTest({"boolean FilterResult.isExpire()"})
   public void testIsExpire() {
     // Arrange, Act and Assert
-    assertFalse((new BlockFilterAndResult()).isExpire());
+    assertFalse(new BlockFilterAndResult().isExpire());
   }
 
   /**
    * Test {@link FilterResult#getResult()}.
-   * <p>
-   * Method under test: {@link FilterResult#getResult()}
+   *
+   * <p>Method under test: {@link FilterResult#getResult()}
    */
   @Test
   @Category(MaintainedByDiffblue.class)

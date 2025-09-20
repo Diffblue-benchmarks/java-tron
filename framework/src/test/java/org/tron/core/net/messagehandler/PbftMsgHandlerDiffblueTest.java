@@ -16,25 +16,25 @@ import org.tron.core.net.peer.PeerConnection;
 
 @RunWith(MockitoJUnitRunner.class)
 public class PbftMsgHandlerDiffblueTest {
-  @InjectMocks
-  private PbftMsgHandler pbftMsgHandler;
+  @InjectMocks private PbftMsgHandler pbftMsgHandler;
 
-  @Mock
-  private TronNetDelegate tronNetDelegate;
+  @Mock private TronNetDelegate tronNetDelegate;
 
   /**
    * Test {@link PbftMsgHandler#processMessage(PeerConnection, PbftMessage)}.
+   *
    * <ul>
-   *   <li>Given {@link TronNetDelegate} {@link TronNetDelegate#allowPBFT()} return {@code false}.</li>
-   *   <li>Then calls {@link TronNetDelegate#allowPBFT()}.</li>
+   *   <li>Given {@link TronNetDelegate} {@link TronNetDelegate#allowPBFT()} return {@code false}.
+   *   <li>Then calls {@link TronNetDelegate#allowPBFT()}.
    * </ul>
-   * <p>
-   * Method under test: {@link PbftMsgHandler#processMessage(PeerConnection, PbftMessage)}
+   *
+   * <p>Method under test: {@link PbftMsgHandler#processMessage(PeerConnection, PbftMessage)}
    */
   @Test
   @Category(MaintainedByDiffblue.class)
   @MethodsUnderTest({"void PbftMsgHandler.processMessage(PeerConnection, PbftMessage)"})
-  public void testProcessMessage_givenTronNetDelegateAllowPBFTReturnFalse_thenCallsAllowPBFT() throws Exception {
+  public void testProcessMessage_givenTronNetDelegateAllowPBFTReturnFalse_thenCallsAllowPBFT()
+      throws Exception {
     // Arrange
     when(tronNetDelegate.allowPBFT()).thenReturn(false);
     PeerConnection peer = new PeerConnection();

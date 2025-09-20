@@ -6,15 +6,14 @@ import static org.junit.Assert.assertNotEquals;
 import static org.junit.Assert.assertTrue;
 import com.diffblue.cover.annotations.MaintainedByDiffblue;
 import com.diffblue.cover.annotations.MethodsUnderTest;
-import java.io.UnsupportedEncodingException;
 import org.junit.Test;
 import org.junit.experimental.categories.Category;
 
 public class Fp6DiffblueTest {
   /**
    * Test {@link Fp6#Fp6(Fp2, Fp2, Fp2)}.
-   * <p>
-   * Method under test: {@link Fp6#Fp6(Fp2, Fp2, Fp2)}
+   *
+   * <p>Method under test: {@link Fp6#Fp6(Fp2, Fp2, Fp2)}
    */
   @Test
   @Category(MaintainedByDiffblue.class)
@@ -37,340 +36,311 @@ public class Fp6DiffblueTest {
 
   /**
    * Test {@link Fp6#squared()}.
+   *
    * <ul>
-   *   <li>Given {@link Fp6#ZERO}.</li>
-   *   <li>Then return {@link Fp6#ZERO}.</li>
+   *   <li>Given {@link Fp6#ZERO}.
+   *   <li>Then return {@link Fp6#ZERO}.
    * </ul>
-   * <p>
-   * Method under test: {@link Fp6#squared()}
+   *
+   * <p>Method under test: {@link Fp6#squared()}
    */
   @Test
   @Category(MaintainedByDiffblue.class)
   @MethodsUnderTest({"Fp6 Fp6.squared()"})
   public void testSquared_givenZero_thenReturnZero() {
-    // Arrange and Act
-    Fp6 actualSquaredResult = Fp6.ZERO.squared();
-
-    // Assert
-    assertEquals(actualSquaredResult.ZERO, actualSquaredResult);
+    // Arrange, Act and Assert
+    assertEquals(Fp6.ZERO, Fp6.ZERO.squared());
   }
 
   /**
    * Test {@link Fp6#dbl()}.
+   *
    * <ul>
-   *   <li>Given {@link Fp6#ZERO}.</li>
-   *   <li>Then return {@link Fp6#ZERO}.</li>
+   *   <li>Given {@link Fp6#ZERO}.
+   *   <li>Then return {@link Fp6#ZERO}.
    * </ul>
-   * <p>
-   * Method under test: {@link Fp6#dbl()}
+   *
+   * <p>Method under test: {@link Fp6#dbl()}
    */
   @Test
   @Category(MaintainedByDiffblue.class)
   @MethodsUnderTest({"Fp6 Fp6.dbl()"})
   public void testDbl_givenZero_thenReturnZero() {
-    // Arrange and Act
-    Fp6 actualDblResult = Fp6.ZERO.dbl();
-
-    // Assert
-    assertEquals(actualDblResult.ZERO, actualDblResult);
+    // Arrange, Act and Assert
+    assertEquals(Fp6.ZERO, Fp6.ZERO.dbl());
   }
 
   /**
    * Test {@link Fp6#mul(Fp2)} with {@code Fp2}.
+   *
    * <ul>
-   *   <li>Given {@link Fp6#ZERO}.</li>
-   *   <li>When {@link Fp6#NON_RESIDUE}.</li>
-   *   <li>Then return {@link Fp6#ZERO}.</li>
+   *   <li>Given {@link Fp6#ZERO}.
+   *   <li>When {@link Fp6#NON_RESIDUE}.
+   *   <li>Then return {@link Fp6#ZERO}.
    * </ul>
-   * <p>
-   * Method under test: {@link Fp6#mul(Fp2)}
+   *
+   * <p>Method under test: {@link Fp6#mul(Fp2)}
    */
   @Test
   @Category(MaintainedByDiffblue.class)
   @MethodsUnderTest({"Fp6 Fp6.mul(Fp2)"})
   public void testMulWithFp2_givenZero_whenNon_residue_thenReturnZero() {
-    // Arrange and Act
-    Fp6 actualMulResult = Fp6.ZERO.mul(Fp6.NON_RESIDUE);
-
-    // Assert
-    assertEquals(actualMulResult.ZERO, actualMulResult);
+    // Arrange, Act and Assert
+    assertEquals(Fp6.ZERO, Fp6.ZERO.mul(Fp6.NON_RESIDUE));
   }
 
   /**
    * Test {@link Fp6#mul(Fp6)} with {@code Fp6}.
+   *
    * <ul>
-   *   <li>Given {@link Fp6#ZERO}.</li>
-   *   <li>When {@link Fp6#ZERO}.</li>
-   *   <li>Then return {@link Fp6#ZERO}.</li>
+   *   <li>Given {@link Fp6#ZERO}.
+   *   <li>When {@link Fp6#ZERO}.
+   *   <li>Then return {@link Fp6#ZERO}.
    * </ul>
-   * <p>
-   * Method under test: {@link Fp6#mul(Fp6)}
+   *
+   * <p>Method under test: {@link Fp6#mul(Fp6)}
    */
   @Test
   @Category(MaintainedByDiffblue.class)
   @MethodsUnderTest({"Fp6 Fp6.mul(Fp6)"})
   public void testMulWithFp6_givenZero_whenZero_thenReturnZero() {
-    // Arrange and Act
-    Fp6 actualMulResult = Fp6.ZERO.mul(Fp6.ZERO);
-
-    // Assert
-    assertEquals(actualMulResult.ZERO, actualMulResult);
+    // Arrange, Act and Assert
+    assertEquals(Fp6.ZERO, Fp6.ZERO.mul(Fp6.ZERO));
   }
 
   /**
    * Test {@link Fp6#mulByNonResidue()}.
+   *
    * <ul>
-   *   <li>Given {@link Fp6#ZERO}.</li>
-   *   <li>Then return {@link Fp6#ZERO}.</li>
+   *   <li>Given {@link Fp6#ZERO}.
+   *   <li>Then return {@link Fp6#ZERO}.
    * </ul>
-   * <p>
-   * Method under test: {@link Fp6#mulByNonResidue()}
+   *
+   * <p>Method under test: {@link Fp6#mulByNonResidue()}
    */
   @Test
   @Category(MaintainedByDiffblue.class)
   @MethodsUnderTest({"Fp6 Fp6.mulByNonResidue()"})
   public void testMulByNonResidue_givenZero_thenReturnZero() {
-    // Arrange and Act
-    Fp6 actualMulByNonResidueResult = Fp6.ZERO.mulByNonResidue();
-
-    // Assert
-    assertEquals(actualMulByNonResidueResult.ZERO, actualMulByNonResidueResult);
+    // Arrange, Act and Assert
+    assertEquals(Fp6.ZERO, Fp6.ZERO.mulByNonResidue());
   }
 
   /**
    * Test {@link Fp6#add(Fp6)} with {@code Fp6}.
+   *
    * <ul>
-   *   <li>Given {@link Fp6#ZERO}.</li>
-   *   <li>When {@link Fp6#ZERO}.</li>
-   *   <li>Then return {@link Fp6#ZERO}.</li>
+   *   <li>Given {@link Fp6#ZERO}.
+   *   <li>When {@link Fp6#ZERO}.
+   *   <li>Then return {@link Fp6#ZERO}.
    * </ul>
-   * <p>
-   * Method under test: {@link Fp6#add(Fp6)}
+   *
+   * <p>Method under test: {@link Fp6#add(Fp6)}
    */
   @Test
   @Category(MaintainedByDiffblue.class)
   @MethodsUnderTest({"Fp6 Fp6.add(Fp6)"})
   public void testAddWithFp6_givenZero_whenZero_thenReturnZero() {
-    // Arrange and Act
-    Fp6 actualAddResult = Fp6.ZERO.add(Fp6.ZERO);
-
-    // Assert
-    assertEquals(actualAddResult.ZERO, actualAddResult);
+    // Arrange, Act and Assert
+    assertEquals(Fp6.ZERO, Fp6.ZERO.add(Fp6.ZERO));
   }
 
   /**
    * Test {@link Fp6#sub(Fp6)} with {@code Fp6}.
+   *
    * <ul>
-   *   <li>Given {@link Fp6#ZERO}.</li>
-   *   <li>When {@link Fp6#ZERO}.</li>
-   *   <li>Then return {@link Fp6#ZERO}.</li>
+   *   <li>Given {@link Fp6#ZERO}.
+   *   <li>When {@link Fp6#ZERO}.
+   *   <li>Then return {@link Fp6#ZERO}.
    * </ul>
-   * <p>
-   * Method under test: {@link Fp6#sub(Fp6)}
+   *
+   * <p>Method under test: {@link Fp6#sub(Fp6)}
    */
   @Test
   @Category(MaintainedByDiffblue.class)
   @MethodsUnderTest({"Fp6 Fp6.sub(Fp6)"})
   public void testSubWithFp6_givenZero_whenZero_thenReturnZero() {
-    // Arrange and Act
-    Fp6 actualSubResult = Fp6.ZERO.sub(Fp6.ZERO);
-
-    // Assert
-    assertEquals(actualSubResult.ZERO, actualSubResult);
+    // Arrange, Act and Assert
+    assertEquals(Fp6.ZERO, Fp6.ZERO.sub(Fp6.ZERO));
   }
 
   /**
    * Test {@link Fp6#inverse()}.
+   *
    * <ul>
-   *   <li>Given {@link Fp6#_1}.</li>
-   *   <li>Then return {@link Fp6#_1}.</li>
+   *   <li>Given {@link Fp6#_1}.
+   *   <li>Then return {@link Fp6#_1}.
    * </ul>
-   * <p>
-   * Method under test: {@link Fp6#inverse()}
+   *
+   * <p>Method under test: {@link Fp6#inverse()}
    */
   @Test
   @Category(MaintainedByDiffblue.class)
   @MethodsUnderTest({"Fp6 Fp6.inverse()"})
   public void testInverse_given_1_thenReturn_1() {
-    // Arrange and Act
-    Fp6 actualInverseResult = Fp6._1.inverse();
-
-    // Assert
-    assertEquals(actualInverseResult._1, actualInverseResult);
+    // Arrange, Act and Assert
+    assertEquals(Fp6._1, Fp6._1.inverse());
   }
 
   /**
    * Test {@link Fp6#negate()}.
+   *
    * <ul>
-   *   <li>Given {@link Fp6#ZERO}.</li>
-   *   <li>Then return {@link Fp6#ZERO}.</li>
+   *   <li>Given {@link Fp6#ZERO}.
+   *   <li>Then return {@link Fp6#ZERO}.
    * </ul>
-   * <p>
-   * Method under test: {@link Fp6#negate()}
+   *
+   * <p>Method under test: {@link Fp6#negate()}
    */
   @Test
   @Category(MaintainedByDiffblue.class)
   @MethodsUnderTest({"Fp6 Fp6.negate()"})
   public void testNegate_givenZero_thenReturnZero() {
-    // Arrange and Act
-    Fp6 actualNegateResult = Fp6.ZERO.negate();
-
-    // Assert
-    assertEquals(actualNegateResult.ZERO, actualNegateResult);
-  }
-
-  /**
-   * Test {@link Fp6#isZero()}.
-   * <p>
-   * Method under test: {@link Fp6#isZero()}
-   */
-  @Test
-  @Category(MaintainedByDiffblue.class)
-  @MethodsUnderTest({"boolean Fp6.isZero()"})
-  public void testIsZero() throws UnsupportedEncodingException {
     // Arrange, Act and Assert
-    assertFalse((new Fp6(Fp2.ZERO, Fp2.create(new byte[]{}, "AXAXAXAX".getBytes("UTF-8")), Fp6.NON_RESIDUE)).isZero());
+    assertEquals(Fp6.ZERO, Fp6.ZERO.negate());
   }
 
   /**
    * Test {@link Fp6#isZero()}.
-   * <p>
-   * Method under test: {@link Fp6#isZero()}
-   */
-  @Test
-  @Category(MaintainedByDiffblue.class)
-  @MethodsUnderTest({"boolean Fp6.isZero()"})
-  public void testIsZero2() {
-    // Arrange, Act and Assert
-    assertFalse((new Fp6(Fp2.ZERO, Fp2.create(new byte[]{}, new byte[]{}), Fp6.NON_RESIDUE)).isZero());
-  }
-
-  /**
-   * Test {@link Fp6#isZero()}.
+   *
    * <ul>
-   *   <li>Given {@link Fp6#Fp6(Fp2, Fp2, Fp2)} with a is {@code null} and b is {@link Fp2#ZERO} and c is {@link Fp6#NON_RESIDUE}.</li>
-   *   <li>Then return {@code false}.</li>
+   *   <li>Given {@link Fp6#Fp6(Fp2, Fp2, Fp2)} with a is {@code null} and b is {@link Fp2#ZERO} and
+   *       c is {@link Fp6#NON_RESIDUE}.
+   *   <li>Then return {@code false}.
    * </ul>
-   * <p>
-   * Method under test: {@link Fp6#isZero()}
+   *
+   * <p>Method under test: {@link Fp6#isZero()}
    */
   @Test
   @Category(MaintainedByDiffblue.class)
   @MethodsUnderTest({"boolean Fp6.isZero()"})
   public void testIsZero_givenFp6WithAIsNullAndBIsZeroAndCIsNon_residue_thenReturnFalse() {
-    // Arrange, Act and Assert
-    assertFalse((new Fp6(null, Fp2.ZERO, Fp6.NON_RESIDUE)).isZero());
+    // Arrange
+    Fp6 fp6 = new Fp6(null, Fp2.ZERO, Fp6.NON_RESIDUE);
+
+    // Act and Assert
+    assertFalse(fp6.isZero());
   }
 
   /**
    * Test {@link Fp6#isZero()}.
+   *
    * <ul>
-   *   <li>Given {@link Fp6#Fp6(Fp2, Fp2, Fp2)} with a is {@link Fp2#ZERO} and b is create {@code null} and {@link BN128G2#FR_NEG_ONE} and c is {@link Fp6#NON_RESIDUE}.</li>
+   *   <li>Given {@link Fp6#Fp6(Fp2, Fp2, Fp2)} with a is {@link Fp2#ZERO} and b is {@link
+   *       Fp6#NON_RESIDUE} and c is {@link Fp6#NON_RESIDUE}.
+   *   <li>Then return {@code false}.
    * </ul>
-   * <p>
-   * Method under test: {@link Fp6#isZero()}
-   */
-  @Test
-  @Category(MaintainedByDiffblue.class)
-  @MethodsUnderTest({"boolean Fp6.isZero()"})
-  public void testIsZero_givenFp6WithAIsZeroAndBIsCreateNullAndFr_neg_oneAndCIsNon_residue() {
-    // Arrange, Act and Assert
-    assertFalse((new Fp6(Fp2.ZERO, Fp2.create(null, BN128G2.FR_NEG_ONE), Fp6.NON_RESIDUE)).isZero());
-  }
-
-  /**
-   * Test {@link Fp6#isZero()}.
-   * <ul>
-   *   <li>Given {@link Fp6#Fp6(Fp2, Fp2, Fp2)} with a is {@link Fp2#ZERO} and b is {@link Fp6#NON_RESIDUE} and c is {@link Fp6#NON_RESIDUE}.</li>
-   *   <li>Then return {@code false}.</li>
-   * </ul>
-   * <p>
-   * Method under test: {@link Fp6#isZero()}
+   *
+   * <p>Method under test: {@link Fp6#isZero()}
    */
   @Test
   @Category(MaintainedByDiffblue.class)
   @MethodsUnderTest({"boolean Fp6.isZero()"})
   public void testIsZero_givenFp6WithAIsZeroAndBIsNon_residueAndCIsNon_residue_thenReturnFalse() {
-    // Arrange, Act and Assert
-    assertFalse((new Fp6(Fp2.ZERO, Fp6.NON_RESIDUE, Fp6.NON_RESIDUE)).isZero());
+    // Arrange
+    Fp6 fp6 = new Fp6(Fp2.ZERO, Fp6.NON_RESIDUE, Fp6.NON_RESIDUE);
+
+    // Act and Assert
+    assertFalse(fp6.isZero());
   }
 
   /**
    * Test {@link Fp6#isZero()}.
+   *
    * <ul>
-   *   <li>Given {@link Fp6#Fp6(Fp2, Fp2, Fp2)} with a is {@link Fp2#ZERO} and b is {@code null} and c is {@link Fp6#NON_RESIDUE}.</li>
-   *   <li>Then return {@code false}.</li>
+   *   <li>Given {@link Fp6#Fp6(Fp2, Fp2, Fp2)} with a is {@link Fp2#ZERO} and b is {@code null} and
+   *       c is {@link Fp6#NON_RESIDUE}.
+   *   <li>Then return {@code false}.
    * </ul>
-   * <p>
-   * Method under test: {@link Fp6#isZero()}
+   *
+   * <p>Method under test: {@link Fp6#isZero()}
    */
   @Test
   @Category(MaintainedByDiffblue.class)
   @MethodsUnderTest({"boolean Fp6.isZero()"})
   public void testIsZero_givenFp6WithAIsZeroAndBIsNullAndCIsNon_residue_thenReturnFalse() {
-    // Arrange, Act and Assert
-    assertFalse((new Fp6(Fp2.ZERO, null, Fp6.NON_RESIDUE)).isZero());
+    // Arrange
+    Fp6 fp6 = new Fp6(Fp2.ZERO, null, Fp6.NON_RESIDUE);
+
+    // Act and Assert
+    assertFalse(fp6.isZero());
   }
 
   /**
    * Test {@link Fp6#isZero()}.
+   *
    * <ul>
-   *   <li>Given {@link Fp6#Fp6(Fp2, Fp2, Fp2)} with a is {@link Fp2#ZERO} and b is {@link Fp2#ZERO} and c is {@link Fp6#NON_RESIDUE}.</li>
-   *   <li>Then return {@code false}.</li>
+   *   <li>Given {@link Fp6#Fp6(Fp2, Fp2, Fp2)} with a is {@link Fp2#ZERO} and b is {@link Fp2#ZERO}
+   *       and c is {@link Fp6#NON_RESIDUE}.
+   *   <li>Then return {@code false}.
    * </ul>
-   * <p>
-   * Method under test: {@link Fp6#isZero()}
+   *
+   * <p>Method under test: {@link Fp6#isZero()}
    */
   @Test
   @Category(MaintainedByDiffblue.class)
   @MethodsUnderTest({"boolean Fp6.isZero()"})
   public void testIsZero_givenFp6WithAIsZeroAndBIsZeroAndCIsNon_residue_thenReturnFalse() {
-    // Arrange, Act and Assert
-    assertFalse((new Fp6(Fp2.ZERO, Fp2.ZERO, Fp6.NON_RESIDUE)).isZero());
+    // Arrange
+    Fp6 fp6 = new Fp6(Fp2.ZERO, Fp2.ZERO, Fp6.NON_RESIDUE);
+
+    // Act and Assert
+    assertFalse(fp6.isZero());
   }
 
   /**
    * Test {@link Fp6#isZero()}.
+   *
    * <ul>
-   *   <li>Given {@link Fp6#Fp6(Fp2, Fp2, Fp2)} with a is {@link Fp2#ZERO} and b is {@link Fp2#ZERO} and c is {@code null}.</li>
-   *   <li>Then return {@code false}.</li>
+   *   <li>Given {@link Fp6#Fp6(Fp2, Fp2, Fp2)} with a is {@link Fp2#ZERO} and b is {@link Fp2#ZERO}
+   *       and c is {@code null}.
+   *   <li>Then return {@code false}.
    * </ul>
-   * <p>
-   * Method under test: {@link Fp6#isZero()}
+   *
+   * <p>Method under test: {@link Fp6#isZero()}
    */
   @Test
   @Category(MaintainedByDiffblue.class)
   @MethodsUnderTest({"boolean Fp6.isZero()"})
   public void testIsZero_givenFp6WithAIsZeroAndBIsZeroAndCIsNull_thenReturnFalse() {
-    // Arrange, Act and Assert
-    assertFalse((new Fp6(Fp2.ZERO, Fp2.ZERO, null)).isZero());
+    // Arrange
+    Fp6 fp6 = new Fp6(Fp2.ZERO, Fp2.ZERO, null);
+
+    // Act and Assert
+    assertFalse(fp6.isZero());
   }
 
   /**
    * Test {@link Fp6#isZero()}.
+   *
    * <ul>
-   *   <li>Given {@link Fp6#Fp6(Fp2, Fp2, Fp2)} with a is {@link Fp2#ZERO} and b is {@link Fp2#ZERO} and c is {@link Fp2#ZERO}.</li>
-   *   <li>Then return {@code true}.</li>
+   *   <li>Given {@link Fp6#Fp6(Fp2, Fp2, Fp2)} with a is {@link Fp2#ZERO} and b is {@link Fp2#ZERO}
+   *       and c is {@link Fp2#ZERO}.
+   *   <li>Then return {@code true}.
    * </ul>
-   * <p>
-   * Method under test: {@link Fp6#isZero()}
+   *
+   * <p>Method under test: {@link Fp6#isZero()}
    */
   @Test
   @Category(MaintainedByDiffblue.class)
   @MethodsUnderTest({"boolean Fp6.isZero()"})
   public void testIsZero_givenFp6WithAIsZeroAndBIsZeroAndCIsZero_thenReturnTrue() {
-    // Arrange, Act and Assert
-    assertTrue((new Fp6(Fp2.ZERO, Fp2.ZERO, Fp2.ZERO)).isZero());
+    // Arrange
+    Fp6 fp6 = new Fp6(Fp2.ZERO, Fp2.ZERO, Fp2.ZERO);
+
+    // Act and Assert
+    assertTrue(fp6.isZero());
   }
 
   /**
    * Test {@link Fp6#isZero()}.
+   *
    * <ul>
-   *   <li>Given {@link Fp6#ZERO}.</li>
-   *   <li>Then return {@code true}.</li>
+   *   <li>Given {@link Fp6#ZERO}.
+   *   <li>Then return {@code true}.
    * </ul>
-   * <p>
-   * Method under test: {@link Fp6#isZero()}
+   *
+   * <p>Method under test: {@link Fp6#isZero()}
    */
   @Test
   @Category(MaintainedByDiffblue.class)
@@ -382,12 +352,13 @@ public class Fp6DiffblueTest {
 
   /**
    * Test {@link Fp6#isZero()}.
+   *
    * <ul>
-   *   <li>Given {@link Fp6#_1}.</li>
-   *   <li>Then return {@code false}.</li>
+   *   <li>Given {@link Fp6#_1}.
+   *   <li>Then return {@code false}.
    * </ul>
-   * <p>
-   * Method under test: {@link Fp6#isZero()}
+   *
+   * <p>Method under test: {@link Fp6#isZero()}
    */
   @Test
   @Category(MaintainedByDiffblue.class)
@@ -399,12 +370,13 @@ public class Fp6DiffblueTest {
 
   /**
    * Test {@link Fp6#isValid()}.
+   *
    * <ul>
-   *   <li>Given {@link Fp6#ZERO}.</li>
-   *   <li>Then return {@code true}.</li>
+   *   <li>Given {@link Fp6#ZERO}.
+   *   <li>Then return {@code true}.
    * </ul>
-   * <p>
-   * Method under test: {@link Fp6#isValid()}
+   *
+   * <p>Method under test: {@link Fp6#isValid()}
    */
   @Test
   @Category(MaintainedByDiffblue.class)
@@ -416,33 +388,33 @@ public class Fp6DiffblueTest {
 
   /**
    * Test {@link Fp6#frobeniusMap(int)}.
+   *
    * <ul>
-   *   <li>Given {@link Fp6#ZERO}.</li>
-   *   <li>When one.</li>
-   *   <li>Then return {@link Fp6#ZERO}.</li>
+   *   <li>Given {@link Fp6#ZERO}.
+   *   <li>When one.
+   *   <li>Then return {@link Fp6#ZERO}.
    * </ul>
-   * <p>
-   * Method under test: {@link Fp6#frobeniusMap(int)}
+   *
+   * <p>Method under test: {@link Fp6#frobeniusMap(int)}
    */
   @Test
   @Category(MaintainedByDiffblue.class)
   @MethodsUnderTest({"Fp6 Fp6.frobeniusMap(int)"})
   public void testFrobeniusMap_givenZero_whenOne_thenReturnZero() {
-    // Arrange and Act
-    Fp6 actualFrobeniusMapResult = Fp6.ZERO.frobeniusMap(1);
-
-    // Assert
-    assertEquals(actualFrobeniusMapResult.ZERO, actualFrobeniusMapResult);
+    // Arrange, Act and Assert
+    assertEquals(Fp6.ZERO, Fp6.ZERO.frobeniusMap(1));
   }
 
   /**
    * Test {@link Fp6#equals(Object)}, and {@link Fp6#hashCode()}.
+   *
    * <ul>
-   *   <li>When other is equal.</li>
-   *   <li>Then return equal.</li>
+   *   <li>When other is equal.
+   *   <li>Then return equal.
    * </ul>
-   * <p>
-   * Methods under test:
+   *
+   * <p>Methods under test:
+   *
    * <ul>
    *   <li>{@link Fp6#equals(Object)}
    *   <li>{@link Fp6#hashCode()}
@@ -458,18 +430,19 @@ public class Fp6DiffblueTest {
 
     // Act and Assert
     assertEquals(fp6, fp62);
-    int expectedHashCodeResult = fp6.hashCode();
-    assertEquals(expectedHashCodeResult, fp62.hashCode());
+    assertEquals(fp6.hashCode(), fp62.hashCode());
   }
 
   /**
    * Test {@link Fp6#equals(Object)}, and {@link Fp6#hashCode()}.
+   *
    * <ul>
-   *   <li>When other is equal.</li>
-   *   <li>Then return equal.</li>
+   *   <li>When other is equal.
+   *   <li>Then return equal.
    * </ul>
-   * <p>
-   * Methods under test:
+   *
+   * <p>Methods under test:
+   *
    * <ul>
    *   <li>{@link Fp6#equals(Object)}
    *   <li>{@link Fp6#hashCode()}
@@ -485,18 +458,19 @@ public class Fp6DiffblueTest {
 
     // Act and Assert
     assertEquals(fp6, fp62);
-    int expectedHashCodeResult = fp6.hashCode();
-    assertEquals(expectedHashCodeResult, fp62.hashCode());
+    assertEquals(fp6.hashCode(), fp62.hashCode());
   }
 
   /**
    * Test {@link Fp6#equals(Object)}, and {@link Fp6#hashCode()}.
+   *
    * <ul>
-   *   <li>When other is same.</li>
-   *   <li>Then return equal.</li>
+   *   <li>When other is same.
+   *   <li>Then return equal.
    * </ul>
-   * <p>
-   * Methods under test:
+   *
+   * <p>Methods under test:
+   *
    * <ul>
    *   <li>{@link Fp6#equals(Object)}
    *   <li>{@link Fp6#hashCode()}
@@ -517,12 +491,13 @@ public class Fp6DiffblueTest {
 
   /**
    * Test {@link Fp6#equals(Object)}.
+   *
    * <ul>
-   *   <li>When other is different.</li>
-   *   <li>Then return not equal.</li>
+   *   <li>When other is different.
+   *   <li>Then return not equal.
    * </ul>
-   * <p>
-   * Method under test: {@link Fp6#equals(Object)}
+   *
+   * <p>Method under test: {@link Fp6#equals(Object)}
    */
   @Test
   @Category(MaintainedByDiffblue.class)
@@ -534,12 +509,13 @@ public class Fp6DiffblueTest {
 
   /**
    * Test {@link Fp6#equals(Object)}.
+   *
    * <ul>
-   *   <li>When other is different.</li>
-   *   <li>Then return not equal.</li>
+   *   <li>When other is different.
+   *   <li>Then return not equal.
    * </ul>
-   * <p>
-   * Method under test: {@link Fp6#equals(Object)}
+   *
+   * <p>Method under test: {@link Fp6#equals(Object)}
    */
   @Test
   @Category(MaintainedByDiffblue.class)
@@ -551,12 +527,13 @@ public class Fp6DiffblueTest {
 
   /**
    * Test {@link Fp6#equals(Object)}.
+   *
    * <ul>
-   *   <li>When other is different.</li>
-   *   <li>Then return not equal.</li>
+   *   <li>When other is different.
+   *   <li>Then return not equal.
    * </ul>
-   * <p>
-   * Method under test: {@link Fp6#equals(Object)}
+   *
+   * <p>Method under test: {@link Fp6#equals(Object)}
    */
   @Test
   @Category(MaintainedByDiffblue.class)
@@ -568,12 +545,13 @@ public class Fp6DiffblueTest {
 
   /**
    * Test {@link Fp6#equals(Object)}.
+   *
    * <ul>
-   *   <li>When other is different.</li>
-   *   <li>Then return not equal.</li>
+   *   <li>When other is different.
+   *   <li>Then return not equal.
    * </ul>
-   * <p>
-   * Method under test: {@link Fp6#equals(Object)}
+   *
+   * <p>Method under test: {@link Fp6#equals(Object)}
    */
   @Test
   @Category(MaintainedByDiffblue.class)
@@ -585,12 +563,13 @@ public class Fp6DiffblueTest {
 
   /**
    * Test {@link Fp6#equals(Object)}.
+   *
    * <ul>
-   *   <li>When other is different.</li>
-   *   <li>Then return not equal.</li>
+   *   <li>When other is different.
+   *   <li>Then return not equal.
    * </ul>
-   * <p>
-   * Method under test: {@link Fp6#equals(Object)}
+   *
+   * <p>Method under test: {@link Fp6#equals(Object)}
    */
   @Test
   @Category(MaintainedByDiffblue.class)
@@ -602,12 +581,13 @@ public class Fp6DiffblueTest {
 
   /**
    * Test {@link Fp6#equals(Object)}.
+   *
    * <ul>
-   *   <li>When other is different.</li>
-   *   <li>Then return not equal.</li>
+   *   <li>When other is different.
+   *   <li>Then return not equal.
    * </ul>
-   * <p>
-   * Method under test: {@link Fp6#equals(Object)}
+   *
+   * <p>Method under test: {@link Fp6#equals(Object)}
    */
   @Test
   @Category(MaintainedByDiffblue.class)
@@ -619,12 +599,13 @@ public class Fp6DiffblueTest {
 
   /**
    * Test {@link Fp6#equals(Object)}.
+   *
    * <ul>
-   *   <li>When other is {@code null}.</li>
-   *   <li>Then return not equal.</li>
+   *   <li>When other is {@code null}.
+   *   <li>Then return not equal.
    * </ul>
-   * <p>
-   * Method under test: {@link Fp6#equals(Object)}
+   *
+   * <p>Method under test: {@link Fp6#equals(Object)}
    */
   @Test
   @Category(MaintainedByDiffblue.class)
@@ -636,12 +617,13 @@ public class Fp6DiffblueTest {
 
   /**
    * Test {@link Fp6#equals(Object)}.
+   *
    * <ul>
-   *   <li>When other is wrong type.</li>
-   *   <li>Then return not equal.</li>
+   *   <li>When other is wrong type.
+   *   <li>Then return not equal.
    * </ul>
-   * <p>
-   * Method under test: {@link Fp6#equals(Object)}
+   *
+   * <p>Method under test: {@link Fp6#equals(Object)}
    */
   @Test
   @Category(MaintainedByDiffblue.class)

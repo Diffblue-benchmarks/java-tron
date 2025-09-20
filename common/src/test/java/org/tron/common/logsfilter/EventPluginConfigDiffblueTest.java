@@ -13,8 +13,9 @@ import org.junit.experimental.categories.Category;
 public class EventPluginConfigDiffblueTest {
   /**
    * Test getters and setters.
-   * <p>
-   * Methods under test:
+   *
+   * <p>Methods under test:
+   *
    * <ul>
    *   <li>default or parameterless constructor of {@link EventPluginConfig}
    *   <li>{@link EventPluginConfig#setBindPort(int)}
@@ -35,14 +36,23 @@ public class EventPluginConfigDiffblueTest {
    */
   @Test
   @Category(MaintainedByDiffblue.class)
-  @MethodsUnderTest({"void EventPluginConfig.<init>()", "int EventPluginConfig.getBindPort()",
-      "String EventPluginConfig.getDbConfig()", "String EventPluginConfig.getPluginPath()",
-      "int EventPluginConfig.getSendQueueLength()", "String EventPluginConfig.getServerAddress()",
-      "List EventPluginConfig.getTriggerConfigList()", "boolean EventPluginConfig.isUseNativeQueue()",
-      "void EventPluginConfig.setBindPort(int)", "void EventPluginConfig.setDbConfig(String)",
-      "void EventPluginConfig.setPluginPath(String)", "void EventPluginConfig.setSendQueueLength(int)",
-      "void EventPluginConfig.setServerAddress(String)", "void EventPluginConfig.setTriggerConfigList(List)",
-      "void EventPluginConfig.setUseNativeQueue(boolean)"})
+  @MethodsUnderTest({
+    "void EventPluginConfig.<init>()",
+    "int EventPluginConfig.getBindPort()",
+    "String EventPluginConfig.getDbConfig()",
+    "String EventPluginConfig.getPluginPath()",
+    "int EventPluginConfig.getSendQueueLength()",
+    "String EventPluginConfig.getServerAddress()",
+    "List EventPluginConfig.getTriggerConfigList()",
+    "boolean EventPluginConfig.isUseNativeQueue()",
+    "void EventPluginConfig.setBindPort(int)",
+    "void EventPluginConfig.setDbConfig(String)",
+    "void EventPluginConfig.setPluginPath(String)",
+    "void EventPluginConfig.setSendQueueLength(int)",
+    "void EventPluginConfig.setServerAddress(String)",
+    "void EventPluginConfig.setTriggerConfigList(List)",
+    "void EventPluginConfig.setUseNativeQueue(boolean)"
+  })
   public void testGettersAndSetters() {
     // Arrange and Act
     EventPluginConfig actualEventPluginConfig = new EventPluginConfig();

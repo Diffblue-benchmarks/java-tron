@@ -16,8 +16,8 @@ import org.tron.consensus.base.Param.Miner;
 public class ParamDiffblueTest {
   /**
    * Test {@link Param#getMiner()}.
-   * <p>
-   * Method under test: {@link Param#getMiner()}
+   *
+   * <p>Method under test: {@link Param#getMiner()}
    */
   @Test
   @Category(MaintainedByDiffblue.class)
@@ -25,26 +25,27 @@ public class ParamDiffblueTest {
   public void testGetMiner() throws UnsupportedEncodingException {
     // Arrange
     ArrayList<Miner> miners = new ArrayList<>();
-    Param instance = Param.getInstance();
-    Miner miner = instance.new Miner("AXAXAXAX".getBytes("UTF-8"), mock(ByteString.class), mock(ByteString.class));
-
+    Miner miner =
+        Param.getInstance()
+        .new Miner("AXAXAXAX".getBytes("UTF-8"), mock(ByteString.class), mock(ByteString.class));
     miners.add(miner);
-    Param instance2 = Param.getInstance();
-    instance2.setMiners(miners);
+
+    Param instance = Param.getInstance();
+    instance.setMiners(miners);
 
     // Act
-    Miner actualMiner = instance2.getMiner();
+    Miner actualMiner = instance.getMiner();
 
     // Assert
     assertSame(miner, actualMiner);
-    byte[] expectedPrivateKey = "AXAXAXAX".getBytes("UTF-8");
-    assertArrayEquals(expectedPrivateKey, actualMiner.getPrivateKey());
+    assertArrayEquals("AXAXAXAX".getBytes("UTF-8"), actualMiner.getPrivateKey());
   }
 
   /**
    * Test Miner getters and setters.
-   * <p>
-   * Methods under test:
+   *
+   * <p>Methods under test:
+   *
    * <ul>
    *   <li>{@link Miner#Miner(Param, byte[], ByteString, ByteString)}
    *   <li>{@link Miner#setPrivateKey(byte[])}
@@ -57,16 +58,18 @@ public class ParamDiffblueTest {
    */
   @Test
   @Category(MaintainedByDiffblue.class)
-  @MethodsUnderTest({"void Miner.<init>(Param, byte[], ByteString, ByteString)", "byte[] Miner.getPrivateKey()",
-      "ByteString Miner.getPrivateKeyAddress()", "ByteString Miner.getWitnessAddress()",
-      "void Miner.setPrivateKey(byte[])", "void Miner.setPrivateKeyAddress(ByteString)",
-      "void Miner.setWitnessAddress(ByteString)"})
+  @MethodsUnderTest({
+    "void Miner.<init>(Param, byte[], ByteString, ByteString)",
+    "byte[] Miner.getPrivateKey()",
+    "ByteString Miner.getPrivateKeyAddress()",
+    "ByteString Miner.getWitnessAddress()",
+    "void Miner.setPrivateKey(byte[])",
+    "void Miner.setPrivateKeyAddress(ByteString)",
+    "void Miner.setWitnessAddress(ByteString)"
+  })
   public void testMinerGettersAndSetters() throws UnsupportedEncodingException {
-    // Arrange
-    Param instance = Param.getInstance();
-
-    // Act
-    Miner actualMiner = instance.new Miner("AXAXAXAX".getBytes("UTF-8"), null, null);
+    // Arrange and Act
+    Miner actualMiner = Param.getInstance().new Miner("AXAXAXAX".getBytes("UTF-8"), null, null);
     byte[] privateKey = "AXAXAXAX".getBytes("UTF-8");
     actualMiner.setPrivateKey(privateKey);
     actualMiner.setPrivateKeyAddress(null);

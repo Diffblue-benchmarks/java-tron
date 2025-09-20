@@ -5,7 +5,6 @@ import static org.junit.Assert.assertFalse;
 import static org.junit.Assert.assertNull;
 import static org.junit.Assert.assertSame;
 import static org.junit.Assert.assertTrue;
-import static org.mockito.ArgumentMatchers.eq;
 import static org.mockito.Mockito.doNothing;
 import static org.mockito.Mockito.mock;
 import static org.mockito.Mockito.verify;
@@ -34,8 +33,8 @@ import org.tron.core.vm.trace.Serializers.OpCodeSerializer;
 public class SerializersDiffblueTest {
   /**
    * Test ByteArraySerializer new {@link ByteArraySerializer} (default constructor).
-   * <p>
-   * Method under test: default or parameterless constructor of {@link ByteArraySerializer}
+   *
+   * <p>Method under test: default or parameterless constructor of {@link ByteArraySerializer}
    */
   @Test
   @Category(MaintainedByDiffblue.class)
@@ -50,32 +49,39 @@ public class SerializersDiffblueTest {
   }
 
   /**
-   * Test ByteArraySerializer {@link ByteArraySerializer#serialize(byte[], JsonGenerator, SerializerProvider)} with {@code byte[]}, {@code JsonGenerator}, {@code SerializerProvider}.
-   * <p>
-   * Method under test: {@link ByteArraySerializer#serialize(byte[], JsonGenerator, SerializerProvider)}
+   * Test ByteArraySerializer {@link ByteArraySerializer#serialize(byte[], JsonGenerator,
+   * SerializerProvider)} with {@code byte[]}, {@code JsonGenerator}, {@code SerializerProvider}.
+   *
+   * <p>Method under test: {@link ByteArraySerializer#serialize(byte[], JsonGenerator,
+   * SerializerProvider)}
    */
   @Test
   @Category(MaintainedByDiffblue.class)
-  @MethodsUnderTest({"void ByteArraySerializer.serialize(byte[], JsonGenerator, SerializerProvider)"})
-  public void testByteArraySerializerSerializeWithByteJsonGeneratorSerializerProvider() throws IOException {
+  @MethodsUnderTest({
+    "void ByteArraySerializer.serialize(byte[], JsonGenerator, SerializerProvider)"
+  })
+  public void testByteArraySerializerSerializeWithByteJsonGeneratorSerializerProvider()
+      throws IOException {
     // Arrange
     ByteArraySerializer byteArraySerializer = new ByteArraySerializer();
     byte[] memory = "AXAXAXAX".getBytes("UTF-8");
+
     JsonGenerator d = mock(JsonGenerator.class);
     doNothing().when(d).writeString(Mockito.<String>any());
-    JsonGeneratorDelegate jgen = new JsonGeneratorDelegate(new JsonGeneratorDelegate(d), true);
+    JsonGeneratorDelegate d2 = new JsonGeneratorDelegate(d);
+    JsonGeneratorDelegate jgen = new JsonGeneratorDelegate(d2, true);
 
     // Act
     byteArraySerializer.serialize(memory, jgen, new Impl());
 
     // Assert
-    verify(d).writeString(eq("4158415841584158"));
+    verify(d).writeString("4158415841584158");
   }
 
   /**
    * Test DataWordSerializer new {@link DataWordSerializer} (default constructor).
-   * <p>
-   * Method under test: default or parameterless constructor of {@link DataWordSerializer}
+   *
+   * <p>Method under test: default or parameterless constructor of {@link DataWordSerializer}
    */
   @Test
   @Category(MaintainedByDiffblue.class)
@@ -90,32 +96,39 @@ public class SerializersDiffblueTest {
   }
 
   /**
-   * Test DataWordSerializer {@link DataWordSerializer#serialize(DataWord, JsonGenerator, SerializerProvider)} with {@code DataWord}, {@code JsonGenerator}, {@code SerializerProvider}.
-   * <p>
-   * Method under test: {@link DataWordSerializer#serialize(DataWord, JsonGenerator, SerializerProvider)}
+   * Test DataWordSerializer {@link DataWordSerializer#serialize(DataWord, JsonGenerator,
+   * SerializerProvider)} with {@code DataWord}, {@code JsonGenerator}, {@code SerializerProvider}.
+   *
+   * <p>Method under test: {@link DataWordSerializer#serialize(DataWord, JsonGenerator,
+   * SerializerProvider)}
    */
   @Test
   @Category(MaintainedByDiffblue.class)
-  @MethodsUnderTest({"void DataWordSerializer.serialize(DataWord, JsonGenerator, SerializerProvider)"})
-  public void testDataWordSerializerSerializeWithDataWordJsonGeneratorSerializerProvider() throws IOException {
+  @MethodsUnderTest({
+    "void DataWordSerializer.serialize(DataWord, JsonGenerator, SerializerProvider)"
+  })
+  public void testDataWordSerializerSerializeWithDataWordJsonGeneratorSerializerProvider()
+      throws IOException {
     // Arrange
     DataWordSerializer dataWordSerializer = new DataWordSerializer();
     DataWord energy = DataWord.ZERO();
+
     JsonGenerator d = mock(JsonGenerator.class);
     doNothing().when(d).writeString(Mockito.<String>any());
-    JsonGeneratorDelegate jgen = new JsonGeneratorDelegate(new JsonGeneratorDelegate(d), true);
+    JsonGeneratorDelegate d2 = new JsonGeneratorDelegate(d);
+    JsonGeneratorDelegate jgen = new JsonGeneratorDelegate(d2, true);
 
     // Act
     dataWordSerializer.serialize(energy, jgen, new Impl());
 
     // Assert
-    verify(d).writeString(eq("0"));
+    verify(d).writeString("0");
   }
 
   /**
    * Test OpCodeSerializer new {@link OpCodeSerializer} (default constructor).
-   * <p>
-   * Method under test: default or parameterless constructor of {@link OpCodeSerializer}
+   *
+   * <p>Method under test: default or parameterless constructor of {@link OpCodeSerializer}
    */
   @Test
   @Category(MaintainedByDiffblue.class)
@@ -130,49 +143,56 @@ public class SerializersDiffblueTest {
   }
 
   /**
-   * Test OpCodeSerializer {@link OpCodeSerializer#serialize(Byte, JsonGenerator, SerializerProvider)} with {@code Byte}, {@code JsonGenerator}, {@code SerializerProvider}.
-   * <p>
-   * Method under test: {@link OpCodeSerializer#serialize(Byte, JsonGenerator, SerializerProvider)}
+   * Test OpCodeSerializer {@link OpCodeSerializer#serialize(Byte, JsonGenerator,
+   * SerializerProvider)} with {@code Byte}, {@code JsonGenerator}, {@code SerializerProvider}.
+   *
+   * <p>Method under test: {@link OpCodeSerializer#serialize(Byte, JsonGenerator,
+   * SerializerProvider)}
    */
   @Test
   @Category(MaintainedByDiffblue.class)
   @MethodsUnderTest({"void OpCodeSerializer.serialize(Byte, JsonGenerator, SerializerProvider)"})
-  public void testOpCodeSerializerSerializeWithByteJsonGeneratorSerializerProvider() throws IOException {
+  public void testOpCodeSerializerSerializeWithByteJsonGeneratorSerializerProvider()
+      throws IOException {
     // Arrange
     OpCodeSerializer opCodeSerializer = new OpCodeSerializer();
+
     JsonGenerator d = mock(JsonGenerator.class);
     doNothing().when(d).writeString(Mockito.<String>any());
-    JsonGeneratorDelegate jgen = new JsonGeneratorDelegate(new JsonGeneratorDelegate(d), true);
+    JsonGeneratorDelegate d2 = new JsonGeneratorDelegate(d);
+    JsonGeneratorDelegate jgen = new JsonGeneratorDelegate(d2, true);
 
     // Act
     opCodeSerializer.serialize((byte) 'A', jgen, new Impl());
 
     // Assert
-    verify(d).writeString(eq("COINBASE"));
+    verify(d).writeString("COINBASE");
   }
 
   /**
    * Test {@link Serializers#serializeFieldsOnly(Object, boolean)}.
-   * <p>
-   * Method under test: {@link Serializers#serializeFieldsOnly(Object, boolean)}
+   *
+   * <p>Method under test: {@link Serializers#serializeFieldsOnly(Object, boolean)}
    */
   @Test
   @Category(MaintainedByDiffblue.class)
   @MethodsUnderTest({"String Serializers.serializeFieldsOnly(Object, boolean)"})
   public void testSerializeFieldsOnly() {
     // Arrange, Act and Assert
-    assertEquals("\"0000000000000000000000000000000000000000000000000000000000000000\"",
+    assertEquals(
+        "\"0000000000000000000000000000000000000000000000000000000000000000\"",
         Serializers.serializeFieldsOnly(DataWord.ZERO(), false));
   }
 
   /**
    * Test {@link Serializers#serializeFieldsOnly(Object, boolean)}.
+   *
    * <ul>
-   *   <li>Given {@link HashMap#HashMap()} {@code foo} is {@code 42}.</li>
-   *   <li>Then return {@code {"name":"pop","params":{"foo":"42"}}}.</li>
+   *   <li>Given {@link HashMap#HashMap()} {@code foo} is {@code 42}.
+   *   <li>Then return {@code {"name":"pop","params":{"foo":"42"}}}.
    * </ul>
-   * <p>
-   * Method under test: {@link Serializers#serializeFieldsOnly(Object, boolean)}
+   *
+   * <p>Method under test: {@link Serializers#serializeFieldsOnly(Object, boolean)}
    */
   @Test
   @Category(MaintainedByDiffblue.class)
@@ -187,18 +207,21 @@ public class SerializersDiffblueTest {
     action.setParams(params);
 
     // Act and Assert
-    assertEquals("{\"name\":\"pop\",\"params\":{\"foo\":\"42\"}}", Serializers.serializeFieldsOnly(action, false));
+    assertEquals(
+        "{\"name\":\"pop\",\"params\":{\"foo\":\"42\"}}",
+        Serializers.serializeFieldsOnly(action, false));
   }
 
   /**
    * Test {@link Serializers#serializeFieldsOnly(Object, boolean)}.
+   *
    * <ul>
-   *   <li>Given {@link HashMap#HashMap()}.</li>
-   *   <li>When {@link Action} (default constructor) Name is {@code pop}.</li>
-   *   <li>Then return {@code {"name":"pop","params":{}}}.</li>
+   *   <li>Given {@link HashMap#HashMap()}.
+   *   <li>When {@link Action} (default constructor) Name is {@code pop}.
+   *   <li>Then return {@code {"name":"pop","params":{}}}.
    * </ul>
-   * <p>
-   * Method under test: {@link Serializers#serializeFieldsOnly(Object, boolean)}
+   *
+   * <p>Method under test: {@link Serializers#serializeFieldsOnly(Object, boolean)}
    */
   @Test
   @Category(MaintainedByDiffblue.class)
@@ -210,17 +233,19 @@ public class SerializersDiffblueTest {
     action.setParams(new HashMap<>());
 
     // Act and Assert
-    assertEquals("{\"name\":\"pop\",\"params\":{}}", Serializers.serializeFieldsOnly(action, false));
+    assertEquals(
+        "{\"name\":\"pop\",\"params\":{}}", Serializers.serializeFieldsOnly(action, false));
   }
 
   /**
    * Test {@link Serializers#serializeFieldsOnly(Object, boolean)}.
+   *
    * <ul>
-   *   <li>When {@code null}.</li>
-   *   <li>Then return {@code null}.</li>
+   *   <li>When {@code null}.
+   *   <li>Then return {@code null}.
    * </ul>
-   * <p>
-   * Method under test: {@link Serializers#serializeFieldsOnly(Object, boolean)}
+   *
+   * <p>Method under test: {@link Serializers#serializeFieldsOnly(Object, boolean)}
    */
   @Test
   @Category(MaintainedByDiffblue.class)
@@ -232,28 +257,31 @@ public class SerializersDiffblueTest {
 
   /**
    * Test {@link Serializers#serializeFieldsOnly(Object, boolean)}.
+   *
    * <ul>
-   *   <li>When {@code true}.</li>
+   *   <li>When {@code true}.
    * </ul>
-   * <p>
-   * Method under test: {@link Serializers#serializeFieldsOnly(Object, boolean)}
+   *
+   * <p>Method under test: {@link Serializers#serializeFieldsOnly(Object, boolean)}
    */
   @Test
   @Category(MaintainedByDiffblue.class)
   @MethodsUnderTest({"String Serializers.serializeFieldsOnly(Object, boolean)"})
   public void testSerializeFieldsOnly_whenTrue() {
     // Arrange, Act and Assert
-    assertEquals("\"0000000000000000000000000000000000000000000000000000000000000000\"",
+    assertEquals(
+        "\"0000000000000000000000000000000000000000000000000000000000000000\"",
         Serializers.serializeFieldsOnly(DataWord.ZERO(), true));
   }
 
   /**
    * Test {@link Serializers#createMapper(boolean)}.
+   *
    * <ul>
-   *   <li>When {@code false}.</li>
+   *   <li>When {@code false}.
    * </ul>
-   * <p>
-   * Method under test: {@link Serializers#createMapper(boolean)}
+   *
+   * <p>Method under test: {@link Serializers#createMapper(boolean)}
    */
   @Test
   @Category(MaintainedByDiffblue.class)
@@ -271,11 +299,12 @@ public class SerializersDiffblueTest {
 
   /**
    * Test {@link Serializers#createMapper(boolean)}.
+   *
    * <ul>
-   *   <li>When {@code true}.</li>
+   *   <li>When {@code true}.
    * </ul>
-   * <p>
-   * Method under test: {@link Serializers#createMapper(boolean)}
+   *
+   * <p>Method under test: {@link Serializers#createMapper(boolean)}
    */
   @Test
   @Category(MaintainedByDiffblue.class)

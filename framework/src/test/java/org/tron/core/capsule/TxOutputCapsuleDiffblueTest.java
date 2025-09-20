@@ -15,11 +15,12 @@ import org.tron.protos.Protocol.TXOutput;
 public class TxOutputCapsuleDiffblueTest {
   /**
    * Test {@link TxOutputCapsule#TxOutputCapsule(long, String)}.
+   *
    * <ul>
-   *   <li>When {@code 0x}.</li>
+   *   <li>When {@code 0x}.
    * </ul>
-   * <p>
-   * Method under test: {@link TxOutputCapsule#TxOutputCapsule(long, String)}
+   *
+   * <p>Method under test: {@link TxOutputCapsule#TxOutputCapsule(long, String)}
    */
   @Test
   @Category(MaintainedByDiffblue.class)
@@ -33,19 +34,23 @@ public class TxOutputCapsuleDiffblueTest {
     UnknownFieldSet unknownFields = instance.getUnknownFields();
     TXOutput defaultInstanceForType = instance.getDefaultInstanceForType();
     assertSame(unknownFields, defaultInstanceForType.getUnknownFields());
-    assertSame(unknownFields, unknownFields.getDefaultInstanceForType());
+    UnknownFieldSet actualDefaultInstanceForType = unknownFields.getDefaultInstanceForType();
+    assertSame(unknownFields, actualDefaultInstanceForType);
     assertSame(instance, actualTxOutputCapsule.getTxOutput());
-    assertSame(defaultInstanceForType.getDefaultInstanceForType(), defaultInstanceForType.getDefaultInstanceForType());
-    assertArrayEquals(new byte[]{}, actualTxOutputCapsule.getData());
+    assertSame(
+        defaultInstanceForType.getDefaultInstanceForType(),
+        defaultInstanceForType.getDefaultInstanceForType());
+    assertArrayEquals(new byte[] {}, actualTxOutputCapsule.getData());
   }
 
   /**
    * Test {@link TxOutputCapsule#TxOutputCapsule(long, String)}.
+   *
    * <ul>
-   *   <li>When {@code null}.</li>
+   *   <li>When {@code null}.
    * </ul>
-   * <p>
-   * Method under test: {@link TxOutputCapsule#TxOutputCapsule(long, String)}
+   *
+   * <p>Method under test: {@link TxOutputCapsule#TxOutputCapsule(long, String)}
    */
   @Test
   @Category(MaintainedByDiffblue.class)
@@ -59,58 +64,64 @@ public class TxOutputCapsuleDiffblueTest {
     UnknownFieldSet unknownFields = instance.getUnknownFields();
     TXOutput defaultInstanceForType = instance.getDefaultInstanceForType();
     assertSame(unknownFields, defaultInstanceForType.getUnknownFields());
-    assertSame(unknownFields, unknownFields.getDefaultInstanceForType());
+    UnknownFieldSet actualDefaultInstanceForType = unknownFields.getDefaultInstanceForType();
+    assertSame(unknownFields, actualDefaultInstanceForType);
     assertSame(instance, actualTxOutputCapsule.getTxOutput());
-    assertSame(defaultInstanceForType.getDefaultInstanceForType(), defaultInstanceForType.getDefaultInstanceForType());
-    assertArrayEquals(new byte[]{}, actualTxOutputCapsule.getData());
+    assertSame(
+        defaultInstanceForType.getDefaultInstanceForType(),
+        defaultInstanceForType.getDefaultInstanceForType());
+    assertArrayEquals(new byte[] {}, actualTxOutputCapsule.getData());
   }
 
   /**
    * Test {@link TxOutputCapsule#validate()}.
+   *
    * <ul>
-   *   <li>Then return {@code true}.</li>
+   *   <li>Then return {@code true}.
    * </ul>
-   * <p>
-   * Method under test: {@link TxOutputCapsule#validate()}
+   *
+   * <p>Method under test: {@link TxOutputCapsule#validate()}
    */
   @Test
   @Category(MaintainedByDiffblue.class)
   @MethodsUnderTest({"boolean TxOutputCapsule.validate()"})
   public void testValidate_thenReturnTrue() {
     // Arrange, Act and Assert
-    assertTrue((new TxOutputCapsule(42L, "42")).validate());
+    assertTrue(new TxOutputCapsule(42L, "42").validate());
   }
 
   /**
    * Test {@link TxOutputCapsule#getData()}.
+   *
    * <ul>
-   *   <li>Then return empty array of {@code byte}.</li>
+   *   <li>Then return empty array of {@code byte}.
    * </ul>
-   * <p>
-   * Method under test: {@link TxOutputCapsule#getData()}
+   *
+   * <p>Method under test: {@link TxOutputCapsule#getData()}
    */
   @Test
   @Category(MaintainedByDiffblue.class)
   @MethodsUnderTest({"byte[] TxOutputCapsule.getData()"})
   public void testGetData_thenReturnEmptyArrayOfByte() {
     // Arrange, Act and Assert
-    assertArrayEquals(new byte[]{}, (new TxOutputCapsule(42L, "42")).getData());
+    assertArrayEquals(new byte[] {}, new TxOutputCapsule(42L, "42").getData());
   }
 
   /**
    * Test {@link TxOutputCapsule#getInstance()}.
+   *
    * <ul>
-   *   <li>Then return InitializationErrorString is empty string.</li>
+   *   <li>Then return InitializationErrorString is empty string.
    * </ul>
-   * <p>
-   * Method under test: {@link TxOutputCapsule#getInstance()}
+   *
+   * <p>Method under test: {@link TxOutputCapsule#getInstance()}
    */
   @Test
   @Category(MaintainedByDiffblue.class)
   @MethodsUnderTest({"TXOutput TxOutputCapsule.getInstance()"})
   public void testGetInstance_thenReturnInitializationErrorStringIsEmptyString() {
     // Arrange and Act
-    TXOutput actualInstance = (new TxOutputCapsule(42L, "42")).getInstance();
+    TXOutput actualInstance = new TxOutputCapsule(42L, "42").getInstance();
 
     // Assert
     assertEquals("", actualInstance.getInitializationErrorString());

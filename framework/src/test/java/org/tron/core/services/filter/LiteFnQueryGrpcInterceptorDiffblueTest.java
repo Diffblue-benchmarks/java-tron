@@ -26,23 +26,21 @@ import org.tron.core.ChainBaseManager;
 
 @RunWith(MockitoJUnitRunner.class)
 public class LiteFnQueryGrpcInterceptorDiffblueTest {
-  @Mock
-  private ChainBaseManager chainBaseManager;
+  @Mock private ChainBaseManager chainBaseManager;
 
-  @InjectMocks
-  private LiteFnQueryGrpcInterceptor liteFnQueryGrpcInterceptor;
+  @InjectMocks private LiteFnQueryGrpcInterceptor liteFnQueryGrpcInterceptor;
 
   /**
    * Test {@link LiteFnQueryGrpcInterceptor#getFilterMethods()}.
-   * <p>
-   * Method under test: {@link LiteFnQueryGrpcInterceptor#getFilterMethods()}
+   *
+   * <p>Method under test: {@link LiteFnQueryGrpcInterceptor#getFilterMethods()}
    */
   @Test
   @Category(MaintainedByDiffblue.class)
   @MethodsUnderTest({"Set LiteFnQueryGrpcInterceptor.getFilterMethods()"})
   public void testGetFilterMethods() {
     // Arrange and Act
-    Set<String> actualFilterMethods = (new LiteFnQueryGrpcInterceptor()).getFilterMethods();
+    Set<String> actualFilterMethods = new LiteFnQueryGrpcInterceptor().getFilterMethods();
 
     // Assert
     assertEquals(43, actualFilterMethods.size());
@@ -53,7 +51,8 @@ public class LiteFnQueryGrpcInterceptorDiffblueTest {
     assertTrue(actualFilterMethods.contains("protocol.Wallet/ScanNoteByOvk"));
     assertTrue(actualFilterMethods.contains("protocol.WalletSolidity/GetBlockByNum2"));
     assertTrue(actualFilterMethods.contains("protocol.WalletSolidity/GetMarketOrderListByPair"));
-    assertTrue(actualFilterMethods.contains("protocol.WalletSolidity/IsShieldedTRC20ContractNoteSpent"));
+    assertTrue(
+        actualFilterMethods.contains("protocol.WalletSolidity/IsShieldedTRC20ContractNoteSpent"));
     assertTrue(actualFilterMethods.contains("protocol.WalletSolidity/ScanAndMarkNoteByIvk"));
     assertTrue(actualFilterMethods.contains("protocol.WalletSolidity/ScanShieldedTRC20NotesByIvk"));
     assertTrue(actualFilterMethods.contains("protocol.WalletSolidity/ScanShieldedTRC20NotesByOvk"));
@@ -61,24 +60,33 @@ public class LiteFnQueryGrpcInterceptorDiffblueTest {
 
   /**
    * Test {@link LiteFnQueryGrpcInterceptor#interceptCall(ServerCall, Metadata, ServerCallHandler)}.
+   *
    * <ul>
-   *   <li>Given {@link ChainBaseManager} {@link ChainBaseManager#isLiteNode()} return {@code false}.</li>
+   *   <li>Given {@link ChainBaseManager} {@link ChainBaseManager#isLiteNode()} return {@code
+   *       false}.
+   *   <li>Then return {@code null}.
    * </ul>
-   * <p>
-   * Method under test: {@link LiteFnQueryGrpcInterceptor#interceptCall(ServerCall, Metadata, ServerCallHandler)}
+   *
+   * <p>Method under test: {@link LiteFnQueryGrpcInterceptor#interceptCall(ServerCall, Metadata,
+   * ServerCallHandler)}
    */
   @Test
   @Category(MaintainedByDiffblue.class)
-  @MethodsUnderTest({"Listener LiteFnQueryGrpcInterceptor.interceptCall(ServerCall, Metadata, ServerCallHandler)"})
-  public void testInterceptCall_givenChainBaseManagerIsLiteNodeReturnFalse() {
+  @MethodsUnderTest({
+    "Listener LiteFnQueryGrpcInterceptor.interceptCall(ServerCall, Metadata, ServerCallHandler)"
+  })
+  public void testInterceptCall_givenChainBaseManagerIsLiteNodeReturnFalse_thenReturnNull() {
     // Arrange
     when(chainBaseManager.isLiteNode()).thenReturn(false);
     Metadata headers = new Metadata();
+
     ServerCallHandler<Object, Object> next = mock(ServerCallHandler.class);
-    when(next.startCall(Mockito.<ServerCall<Object, Object>>any(), Mockito.<Metadata>any())).thenReturn(null);
+    when(next.startCall(Mockito.<ServerCall<Object, Object>>any(), Mockito.<Metadata>any()))
+        .thenReturn(null);
 
     // Act
-    Listener<Object> actualInterceptCallResult = liteFnQueryGrpcInterceptor.interceptCall(null, headers, next);
+    Listener<Object> actualInterceptCallResult =
+        liteFnQueryGrpcInterceptor.interceptCall(null, headers, next);
 
     // Assert
     verify(next).startCall(isNull(), isA(Metadata.class));

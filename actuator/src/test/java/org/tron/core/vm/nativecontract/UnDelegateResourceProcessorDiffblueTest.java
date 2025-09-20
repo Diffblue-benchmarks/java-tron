@@ -14,27 +14,33 @@ import org.tron.protos.contract.Common.ResourceCode;
 public class UnDelegateResourceProcessorDiffblueTest {
   /**
    * Test {@link UnDelegateResourceProcessor#validate(UnDelegateResourceParam, Repository)}.
+   *
    * <ul>
-   *   <li>Given zero.</li>
-   *   <li>Then throw {@link ContractValidateException}.</li>
+   *   <li>Given zero.
+   *   <li>Then throw {@link ContractValidateException}.
    * </ul>
-   * <p>
-   * Method under test: {@link UnDelegateResourceProcessor#validate(UnDelegateResourceParam, Repository)}
+   *
+   * <p>Method under test: {@link UnDelegateResourceProcessor#validate(UnDelegateResourceParam,
+   * Repository)}
    */
   @Test
   @Category(MaintainedByDiffblue.class)
-  @MethodsUnderTest({"void UnDelegateResourceProcessor.validate(UnDelegateResourceParam, Repository)"})
-  public void testValidate_givenZero_thenThrowContractValidateException() throws ContractValidateException {
+  @MethodsUnderTest({
+    "void UnDelegateResourceProcessor.validate(UnDelegateResourceParam, Repository)"
+  })
+  public void testValidate_givenZero_thenThrowContractValidateException()
+      throws ContractValidateException {
     // Arrange
     UnDelegateResourceProcessor unDelegateResourceProcessor = new UnDelegateResourceProcessor();
 
     UnDelegateResourceParam param = new UnDelegateResourceParam();
     param.setUnDelegateBalance(0L);
     param.setResourceType(ResourceCode.BANDWIDTH);
-    param.setReceiverAddress(null);
     param.setOwnerAddress(null);
+    param.setReceiverAddress(null);
 
     // Act and Assert
-    assertThrows(ContractValidateException.class, () -> unDelegateResourceProcessor.validate(param, null));
+    assertThrows(
+        ContractValidateException.class, () -> unDelegateResourceProcessor.validate(param, null));
   }
 }

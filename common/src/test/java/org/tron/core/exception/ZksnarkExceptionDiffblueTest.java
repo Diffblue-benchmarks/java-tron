@@ -10,8 +10,8 @@ import org.junit.experimental.categories.Category;
 public class ZksnarkExceptionDiffblueTest {
   /**
    * Test {@link ZksnarkException#ZksnarkException()}.
-   * <p>
-   * Method under test: {@link ZksnarkException#ZksnarkException()}
+   *
+   * <p>Method under test: {@link ZksnarkException#ZksnarkException()}
    */
   @Test
   @Category(MaintainedByDiffblue.class)
@@ -29,8 +29,8 @@ public class ZksnarkExceptionDiffblueTest {
 
   /**
    * Test {@link ZksnarkException#ZksnarkException(String)}.
-   * <p>
-   * Method under test: {@link ZksnarkException#ZksnarkException(String)}
+   *
+   * <p>Method under test: {@link ZksnarkException#ZksnarkException(String)}
    */
   @Test
   @Category(MaintainedByDiffblue.class)

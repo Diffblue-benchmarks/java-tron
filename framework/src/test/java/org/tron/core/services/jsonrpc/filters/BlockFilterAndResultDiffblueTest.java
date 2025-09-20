@@ -10,21 +10,21 @@ import org.junit.experimental.categories.Category;
 public class BlockFilterAndResultDiffblueTest {
   /**
    * Test new {@link BlockFilterAndResult} (default constructor).
-   * <p>
-   * Method under test: default or parameterless constructor of {@link BlockFilterAndResult}
+   *
+   * <p>Method under test: default or parameterless constructor of {@link BlockFilterAndResult}
    */
   @Test
   @Category(MaintainedByDiffblue.class)
   @MethodsUnderTest({"void BlockFilterAndResult.<init>()"})
   public void testNewBlockFilterAndResult() {
     // Arrange, Act and Assert
-    assertTrue((new BlockFilterAndResult()).getResult().isEmpty());
+    assertTrue(new BlockFilterAndResult().getResult().isEmpty());
   }
 
   /**
    * Test {@link BlockFilterAndResult#add(String)} with {@code String}.
-   * <p>
-   * Method under test: {@link BlockFilterAndResult#add(String)}
+   *
+   * <p>Method under test: {@link BlockFilterAndResult#add(String)}
    */
   @Test
   @Category(MaintainedByDiffblue.class)
@@ -42,14 +42,14 @@ public class BlockFilterAndResultDiffblueTest {
 
   /**
    * Test {@link BlockFilterAndResult#popAll()}.
-   * <p>
-   * Method under test: {@link BlockFilterAndResult#popAll()}
+   *
+   * <p>Method under test: {@link BlockFilterAndResult#popAll()}
    */
   @Test
   @Category(MaintainedByDiffblue.class)
   @MethodsUnderTest({"java.util.List BlockFilterAndResult.popAll()"})
   public void testPopAll() {
     // Arrange, Act and Assert
-    assertTrue((new BlockFilterAndResult()).popAll().isEmpty());
+    assertTrue(new BlockFilterAndResult().popAll().isEmpty());
   }
 }

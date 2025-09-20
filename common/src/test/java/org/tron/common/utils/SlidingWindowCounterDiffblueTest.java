@@ -9,40 +9,42 @@ import org.junit.experimental.categories.Category;
 public class SlidingWindowCounterDiffblueTest {
   /**
    * Test {@link SlidingWindowCounter#SlidingWindowCounter(int)}.
+   *
    * <ul>
-   *   <li>When three.</li>
+   *   <li>When three.
    * </ul>
-   * <p>
-   * Method under test: {@link SlidingWindowCounter#SlidingWindowCounter(int)}
+   *
+   * <p>Method under test: {@link SlidingWindowCounter#SlidingWindowCounter(int)}
    */
   @Test
   @Category(MaintainedByDiffblue.class)
   @MethodsUnderTest({"void SlidingWindowCounter.<init>(int)"})
   public void testNewSlidingWindowCounter_whenThree() {
     // Arrange, Act and Assert
-    assertEquals(0, (new SlidingWindowCounter(3)).totalCount());
+    assertEquals(0, new SlidingWindowCounter(3).totalCount());
   }
 
   /**
    * Test {@link SlidingWindowCounter#SlidingWindowCounter(int)}.
+   *
    * <ul>
-   *   <li>When zero.</li>
+   *   <li>When zero.
    * </ul>
-   * <p>
-   * Method under test: {@link SlidingWindowCounter#SlidingWindowCounter(int)}
+   *
+   * <p>Method under test: {@link SlidingWindowCounter#SlidingWindowCounter(int)}
    */
   @Test
   @Category(MaintainedByDiffblue.class)
   @MethodsUnderTest({"void SlidingWindowCounter.<init>(int)"})
   public void testNewSlidingWindowCounter_whenZero() {
     // Arrange, Act and Assert
-    assertEquals(0, (new SlidingWindowCounter(0)).totalCount());
+    assertEquals(0, new SlidingWindowCounter(0).totalCount());
   }
 
   /**
    * Test {@link SlidingWindowCounter#increase()}.
-   * <p>
-   * Method under test: {@link SlidingWindowCounter#increase()}
+   *
+   * <p>Method under test: {@link SlidingWindowCounter#increase()}
    */
   @Test
   @Category(MaintainedByDiffblue.class)
@@ -60,43 +62,44 @@ public class SlidingWindowCounterDiffblueTest {
 
   /**
    * Test {@link SlidingWindowCounter#totalAndAdvance()}.
+   *
    * <ul>
-   *   <li>Then return zero.</li>
+   *   <li>Then return zero.
    * </ul>
-   * <p>
-   * Method under test: {@link SlidingWindowCounter#totalAndAdvance()}
+   *
+   * <p>Method under test: {@link SlidingWindowCounter#totalAndAdvance()}
    */
   @Test
   @Category(MaintainedByDiffblue.class)
   @MethodsUnderTest({"int SlidingWindowCounter.totalAndAdvance()"})
   public void testTotalAndAdvance_thenReturnZero() {
     // Arrange, Act and Assert
-    assertEquals(0, (new SlidingWindowCounter(3)).totalAndAdvance());
+    assertEquals(0, new SlidingWindowCounter(3).totalAndAdvance());
   }
 
   /**
    * Test {@link SlidingWindowCounter#totalCount()}.
-   * <p>
-   * Method under test: {@link SlidingWindowCounter#totalCount()}
+   *
+   * <p>Method under test: {@link SlidingWindowCounter#totalCount()}
    */
   @Test
   @Category(MaintainedByDiffblue.class)
   @MethodsUnderTest({"int SlidingWindowCounter.totalCount()"})
   public void testTotalCount() {
     // Arrange, Act and Assert
-    assertEquals(0, (new SlidingWindowCounter(3)).totalCount());
+    assertEquals(0, new SlidingWindowCounter(3).totalCount());
   }
 
   /**
    * Test {@link SlidingWindowCounter#toString()}.
-   * <p>
-   * Method under test: {@link SlidingWindowCounter#toString()}
+   *
+   * <p>Method under test: {@link SlidingWindowCounter#toString()}
    */
   @Test
   @Category(MaintainedByDiffblue.class)
   @MethodsUnderTest({"java.lang.String SlidingWindowCounter.toString()"})
   public void testToString() {
     // Arrange, Act and Assert
-    assertEquals("total = 0 head = 0 >> [0, 0, 0]", (new SlidingWindowCounter(3)).toString());
+    assertEquals("total = 0 head = 0 >> [0, 0, 0]", new SlidingWindowCounter(3).toString());
   }
 }

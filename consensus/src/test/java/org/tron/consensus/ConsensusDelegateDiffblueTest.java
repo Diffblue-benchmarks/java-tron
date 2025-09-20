@@ -3,9 +3,7 @@ package org.tron.consensus;
 import static org.junit.Assert.assertEquals;
 import static org.junit.Assert.assertFalse;
 import static org.junit.Assert.assertNull;
-import static org.junit.Assert.assertSame;
 import static org.junit.Assert.assertTrue;
-import static org.mockito.ArgumentMatchers.eq;
 import static org.mockito.ArgumentMatchers.isA;
 import static org.mockito.Mockito.anyBoolean;
 import static org.mockito.Mockito.anyInt;
@@ -37,25 +35,21 @@ import org.tron.core.store.WitnessStore;
 
 @RunWith(MockitoJUnitRunner.class)
 public class ConsensusDelegateDiffblueTest {
-  @InjectMocks
-  private ConsensusDelegate consensusDelegate;
+  @Mock private AccountStore accountStore;
 
-  @Mock
-  private DynamicPropertiesStore dynamicPropertiesStore;
+  @InjectMocks private ConsensusDelegate consensusDelegate;
 
-  @Mock
-  private AccountStore accountStore;
+  @Mock private DynamicPropertiesStore dynamicPropertiesStore;
 
-  @Mock
-  private WitnessScheduleStore witnessScheduleStore;
+  @Mock private WitnessScheduleStore witnessScheduleStore;
 
-  @Mock
-  private WitnessStore witnessStore;
+  @Mock private WitnessStore witnessStore;
 
   /**
    * Test getters and setters.
-   * <p>
-   * Methods under test:
+   *
+   * <p>Methods under test:
+   *
    * <ul>
    *   <li>{@link ConsensusDelegate#getDelegationStore()}
    *   <li>{@link ConsensusDelegate#getDynamicPropertiesStore()}
@@ -64,16 +58,19 @@ public class ConsensusDelegateDiffblueTest {
    */
   @Test
   @Category(MaintainedByDiffblue.class)
-  @MethodsUnderTest({"DelegationStore ConsensusDelegate.getDelegationStore()",
-      "DynamicPropertiesStore ConsensusDelegate.getDynamicPropertiesStore()",
-      "org.tron.core.store.VotesStore ConsensusDelegate.getVotesStore()"})
+  @MethodsUnderTest({
+    "DelegationStore ConsensusDelegate.getDelegationStore()",
+    "DynamicPropertiesStore ConsensusDelegate.getDynamicPropertiesStore()",
+    "org.tron.core.store.VotesStore ConsensusDelegate.getVotesStore()"
+  })
   public void testGettersAndSetters() {
     // Arrange
     ConsensusDelegate consensusDelegate = new ConsensusDelegate();
 
     // Act
     DelegationStore actualDelegationStore = consensusDelegate.getDelegationStore();
-    DynamicPropertiesStore actualDynamicPropertiesStore = consensusDelegate.getDynamicPropertiesStore();
+    DynamicPropertiesStore actualDynamicPropertiesStore =
+        consensusDelegate.getDynamicPropertiesStore();
 
     // Assert
     assertNull(actualDelegationStore);
@@ -83,8 +80,8 @@ public class ConsensusDelegateDiffblueTest {
 
   /**
    * Test {@link ConsensusDelegate#calculateFilledSlotsCount()}.
-   * <p>
-   * Method under test: {@link ConsensusDelegate#calculateFilledSlotsCount()}
+   *
+   * <p>Method under test: {@link ConsensusDelegate#calculateFilledSlotsCount()}
    */
   @Test
   @Category(MaintainedByDiffblue.class)
@@ -103,8 +100,8 @@ public class ConsensusDelegateDiffblueTest {
 
   /**
    * Test {@link ConsensusDelegate#saveRemoveThePowerOfTheGr(long)}.
-   * <p>
-   * Method under test: {@link ConsensusDelegate#saveRemoveThePowerOfTheGr(long)}
+   *
+   * <p>Method under test: {@link ConsensusDelegate#saveRemoveThePowerOfTheGr(long)}
    */
   @Test
   @Category(MaintainedByDiffblue.class)
@@ -117,13 +114,13 @@ public class ConsensusDelegateDiffblueTest {
     consensusDelegate.saveRemoveThePowerOfTheGr(1L);
 
     // Assert
-    verify(dynamicPropertiesStore).saveRemoveThePowerOfTheGr(eq(1L));
+    verify(dynamicPropertiesStore).saveRemoveThePowerOfTheGr(1L);
   }
 
   /**
    * Test {@link ConsensusDelegate#getRemoveThePowerOfTheGr()}.
-   * <p>
-   * Method under test: {@link ConsensusDelegate#getRemoveThePowerOfTheGr()}
+   *
+   * <p>Method under test: {@link ConsensusDelegate#getRemoveThePowerOfTheGr()}
    */
   @Test
   @Category(MaintainedByDiffblue.class)
@@ -142,8 +139,8 @@ public class ConsensusDelegateDiffblueTest {
 
   /**
    * Test {@link ConsensusDelegate#getWitnessStandbyAllowance()}.
-   * <p>
-   * Method under test: {@link ConsensusDelegate#getWitnessStandbyAllowance()}
+   *
+   * <p>Method under test: {@link ConsensusDelegate#getWitnessStandbyAllowance()}
    */
   @Test
   @Category(MaintainedByDiffblue.class)
@@ -162,8 +159,8 @@ public class ConsensusDelegateDiffblueTest {
 
   /**
    * Test {@link ConsensusDelegate#getLatestBlockHeaderTimestamp()}.
-   * <p>
-   * Method under test: {@link ConsensusDelegate#getLatestBlockHeaderTimestamp()}
+   *
+   * <p>Method under test: {@link ConsensusDelegate#getLatestBlockHeaderTimestamp()}
    */
   @Test
   @Category(MaintainedByDiffblue.class)
@@ -182,8 +179,8 @@ public class ConsensusDelegateDiffblueTest {
 
   /**
    * Test {@link ConsensusDelegate#getLatestBlockHeaderNumber()}.
-   * <p>
-   * Method under test: {@link ConsensusDelegate#getLatestBlockHeaderNumber()}
+   *
+   * <p>Method under test: {@link ConsensusDelegate#getLatestBlockHeaderNumber()}
    */
   @Test
   @Category(MaintainedByDiffblue.class)
@@ -202,11 +199,12 @@ public class ConsensusDelegateDiffblueTest {
 
   /**
    * Test {@link ConsensusDelegate#lastHeadBlockIsMaintenance()}.
+   *
    * <ul>
-   *   <li>Then return {@code false}.</li>
+   *   <li>Then return {@code false}.
    * </ul>
-   * <p>
-   * Method under test: {@link ConsensusDelegate#lastHeadBlockIsMaintenance()}
+   *
+   * <p>Method under test: {@link ConsensusDelegate#lastHeadBlockIsMaintenance()}
    */
   @Test
   @Category(MaintainedByDiffblue.class)
@@ -225,11 +223,12 @@ public class ConsensusDelegateDiffblueTest {
 
   /**
    * Test {@link ConsensusDelegate#lastHeadBlockIsMaintenance()}.
+   *
    * <ul>
-   *   <li>Then return {@code true}.</li>
+   *   <li>Then return {@code true}.
    * </ul>
-   * <p>
-   * Method under test: {@link ConsensusDelegate#lastHeadBlockIsMaintenance()}
+   *
+   * <p>Method under test: {@link ConsensusDelegate#lastHeadBlockIsMaintenance()}
    */
   @Test
   @Category(MaintainedByDiffblue.class)
@@ -248,8 +247,8 @@ public class ConsensusDelegateDiffblueTest {
 
   /**
    * Test {@link ConsensusDelegate#getMaintenanceSkipSlots()}.
-   * <p>
-   * Method under test: {@link ConsensusDelegate#getMaintenanceSkipSlots()}
+   *
+   * <p>Method under test: {@link ConsensusDelegate#getMaintenanceSkipSlots()}
    */
   @Test
   @Category(MaintainedByDiffblue.class)
@@ -268,12 +267,13 @@ public class ConsensusDelegateDiffblueTest {
 
   /**
    * Test {@link ConsensusDelegate#saveActiveWitnesses(List)}.
+   *
    * <ul>
-   *   <li>Given {@link ByteString}.</li>
-   *   <li>When {@link ArrayList#ArrayList()} add {@link ByteString}.</li>
+   *   <li>Given {@link ByteString}.
+   *   <li>When {@link ArrayList#ArrayList()} add {@link ByteString}.
    * </ul>
-   * <p>
-   * Method under test: {@link ConsensusDelegate#saveActiveWitnesses(List)}
+   *
+   * <p>Method under test: {@link ConsensusDelegate#saveActiveWitnesses(List)}
    */
   @Test
   @Category(MaintainedByDiffblue.class)
@@ -294,12 +294,13 @@ public class ConsensusDelegateDiffblueTest {
 
   /**
    * Test {@link ConsensusDelegate#saveActiveWitnesses(List)}.
+   *
    * <ul>
-   *   <li>Given {@link ByteString}.</li>
-   *   <li>When {@link ArrayList#ArrayList()} add {@link ByteString}.</li>
+   *   <li>Given {@link ByteString}.
+   *   <li>When {@link ArrayList#ArrayList()} add {@link ByteString}.
    * </ul>
-   * <p>
-   * Method under test: {@link ConsensusDelegate#saveActiveWitnesses(List)}
+   *
+   * <p>Method under test: {@link ConsensusDelegate#saveActiveWitnesses(List)}
    */
   @Test
   @Category(MaintainedByDiffblue.class)
@@ -321,11 +322,12 @@ public class ConsensusDelegateDiffblueTest {
 
   /**
    * Test {@link ConsensusDelegate#saveActiveWitnesses(List)}.
+   *
    * <ul>
-   *   <li>When {@link ArrayList#ArrayList()}.</li>
+   *   <li>When {@link ArrayList#ArrayList()}.
    * </ul>
-   * <p>
-   * Method under test: {@link ConsensusDelegate#saveActiveWitnesses(List)}
+   *
+   * <p>Method under test: {@link ConsensusDelegate#saveActiveWitnesses(List)}
    */
   @Test
   @Category(MaintainedByDiffblue.class)
@@ -343,8 +345,8 @@ public class ConsensusDelegateDiffblueTest {
 
   /**
    * Test {@link ConsensusDelegate#getActiveWitnesses()}.
-   * <p>
-   * Method under test: {@link ConsensusDelegate#getActiveWitnesses()}
+   *
+   * <p>Method under test: {@link ConsensusDelegate#getActiveWitnesses()}
    */
   @Test
   @Category(MaintainedByDiffblue.class)
@@ -363,8 +365,8 @@ public class ConsensusDelegateDiffblueTest {
 
   /**
    * Test {@link ConsensusDelegate#getAccount(byte[])}.
-   * <p>
-   * Method under test: {@link ConsensusDelegate#getAccount(byte[])}
+   *
+   * <p>Method under test: {@link ConsensusDelegate#getAccount(byte[])}
    */
   @Test
   @Category(MaintainedByDiffblue.class)
@@ -383,12 +385,13 @@ public class ConsensusDelegateDiffblueTest {
 
   /**
    * Test {@link ConsensusDelegate#saveAccount(AccountCapsule)}.
+   *
    * <ul>
-   *   <li>Given {@link AccountStore} {@link AccountStore#put(byte[], AccountCapsule)} does nothing.</li>
-   *   <li>Then calls {@link AccountCapsule#createDbKey()}.</li>
+   *   <li>Given {@link AccountStore} {@link AccountStore#put(byte[], AccountCapsule)} does nothing.
+   *   <li>Then calls {@link AccountCapsule#createDbKey()}.
    * </ul>
-   * <p>
-   * Method under test: {@link ConsensusDelegate#saveAccount(AccountCapsule)}
+   *
+   * <p>Method under test: {@link ConsensusDelegate#saveAccount(AccountCapsule)}
    */
   @Test
   @Category(MaintainedByDiffblue.class)
@@ -397,6 +400,7 @@ public class ConsensusDelegateDiffblueTest {
       throws UnsupportedEncodingException {
     // Arrange
     doNothing().when(accountStore).put(Mockito.<byte[]>any(), Mockito.<AccountCapsule>any());
+
     AccountCapsule accountCapsule = mock(AccountCapsule.class);
     when(accountCapsule.createDbKey()).thenReturn("AXAXAXAX".getBytes("UTF-8"));
 
@@ -410,39 +414,42 @@ public class ConsensusDelegateDiffblueTest {
 
   /**
    * Test {@link ConsensusDelegate#getWitness(byte[])}.
-   * <p>
-   * Method under test: {@link ConsensusDelegate#getWitness(byte[])}
+   *
+   * <p>Method under test: {@link ConsensusDelegate#getWitness(byte[])}
    */
   @Test
   @Category(MaintainedByDiffblue.class)
   @MethodsUnderTest({"WitnessCapsule ConsensusDelegate.getWitness(byte[])"})
   public void testGetWitness() throws UnsupportedEncodingException {
     // Arrange
-    WitnessCapsule witnessCapsule = new WitnessCapsule(mock(ByteString.class));
-    when(witnessStore.get(Mockito.<byte[]>any())).thenReturn(witnessCapsule);
+    when(witnessStore.get(Mockito.<byte[]>any())).thenReturn(null);
 
     // Act
     WitnessCapsule actualWitness = consensusDelegate.getWitness("AXAXAXAX".getBytes("UTF-8"));
 
     // Assert
     verify(witnessStore).get(isA(byte[].class));
-    assertSame(witnessCapsule, actualWitness);
+    assertNull(actualWitness);
   }
 
   /**
    * Test {@link ConsensusDelegate#saveWitness(WitnessCapsule)}.
+   *
    * <ul>
-   *   <li>Then calls {@link WitnessCapsule#createDbKey()}.</li>
+   *   <li>Given {@link WitnessStore} {@link WitnessStore#put(byte[], ProtoCapsule)} does nothing.
+   *   <li>Then calls {@link WitnessCapsule#createDbKey()}.
    * </ul>
-   * <p>
-   * Method under test: {@link ConsensusDelegate#saveWitness(WitnessCapsule)}
+   *
+   * <p>Method under test: {@link ConsensusDelegate#saveWitness(WitnessCapsule)}
    */
   @Test
   @Category(MaintainedByDiffblue.class)
   @MethodsUnderTest({"void ConsensusDelegate.saveWitness(WitnessCapsule)"})
-  public void testSaveWitness_thenCallsCreateDbKey() throws UnsupportedEncodingException {
+  public void testSaveWitness_givenWitnessStorePutDoesNothing_thenCallsCreateDbKey()
+      throws UnsupportedEncodingException {
     // Arrange
     doNothing().when(witnessStore).put(Mockito.<byte[]>any(), Mockito.<WitnessCapsule>any());
+
     WitnessCapsule witnessCapsule = mock(WitnessCapsule.class);
     when(witnessCapsule.createDbKey()).thenReturn("AXAXAXAX".getBytes("UTF-8"));
 
@@ -455,34 +462,9 @@ public class ConsensusDelegateDiffblueTest {
   }
 
   /**
-   * Test {@link ConsensusDelegate#saveWitness(WitnessCapsule)}.
-   * <ul>
-   *   <li>Then calls {@link ByteString#toByteArray()}.</li>
-   * </ul>
-   * <p>
-   * Method under test: {@link ConsensusDelegate#saveWitness(WitnessCapsule)}
-   */
-  @Test
-  @Category(MaintainedByDiffblue.class)
-  @MethodsUnderTest({"void ConsensusDelegate.saveWitness(WitnessCapsule)"})
-  public void testSaveWitness_thenCallsToByteArray() throws UnsupportedEncodingException {
-    // Arrange
-    doNothing().when(witnessStore).put(Mockito.<byte[]>any(), Mockito.<WitnessCapsule>any());
-    ByteString address = mock(ByteString.class);
-    when(address.toByteArray()).thenReturn("AXAXAXAX".getBytes("UTF-8"));
-
-    // Act
-    consensusDelegate.saveWitness(new WitnessCapsule(address));
-
-    // Assert
-    verify(address).toByteArray();
-    verify(witnessStore).put(isA(byte[].class), isA(WitnessCapsule.class));
-  }
-
-  /**
    * Test {@link ConsensusDelegate#getAllWitnesses()}.
-   * <p>
-   * Method under test: {@link ConsensusDelegate#getAllWitnesses()}
+   *
+   * <p>Method under test: {@link ConsensusDelegate#getAllWitnesses()}
    */
   @Test
   @Category(MaintainedByDiffblue.class)
@@ -501,8 +483,8 @@ public class ConsensusDelegateDiffblueTest {
 
   /**
    * Test {@link ConsensusDelegate#saveStateFlag(int)}.
-   * <p>
-   * Method under test: {@link ConsensusDelegate#saveStateFlag(int)}
+   *
+   * <p>Method under test: {@link ConsensusDelegate#saveStateFlag(int)}
    */
   @Test
   @Category(MaintainedByDiffblue.class)
@@ -515,13 +497,13 @@ public class ConsensusDelegateDiffblueTest {
     consensusDelegate.saveStateFlag(1);
 
     // Assert
-    verify(dynamicPropertiesStore).saveStateFlag(eq(1));
+    verify(dynamicPropertiesStore).saveStateFlag(1);
   }
 
   /**
    * Test {@link ConsensusDelegate#updateNextMaintenanceTime(long)}.
-   * <p>
-   * Method under test: {@link ConsensusDelegate#updateNextMaintenanceTime(long)}
+   *
+   * <p>Method under test: {@link ConsensusDelegate#updateNextMaintenanceTime(long)}
    */
   @Test
   @Category(MaintainedByDiffblue.class)
@@ -534,13 +516,13 @@ public class ConsensusDelegateDiffblueTest {
     consensusDelegate.updateNextMaintenanceTime(10L);
 
     // Assert
-    verify(dynamicPropertiesStore).updateNextMaintenanceTime(eq(10L));
+    verify(dynamicPropertiesStore).updateNextMaintenanceTime(10L);
   }
 
   /**
    * Test {@link ConsensusDelegate#getNextMaintenanceTime()}.
-   * <p>
-   * Method under test: {@link ConsensusDelegate#getNextMaintenanceTime()}
+   *
+   * <p>Method under test: {@link ConsensusDelegate#getNextMaintenanceTime()}
    */
   @Test
   @Category(MaintainedByDiffblue.class)
@@ -559,8 +541,8 @@ public class ConsensusDelegateDiffblueTest {
 
   /**
    * Test {@link ConsensusDelegate#getLatestSolidifiedBlockNum()}.
-   * <p>
-   * Method under test: {@link ConsensusDelegate#getLatestSolidifiedBlockNum()}
+   *
+   * <p>Method under test: {@link ConsensusDelegate#getLatestSolidifiedBlockNum()}
    */
   @Test
   @Category(MaintainedByDiffblue.class)
@@ -579,8 +561,8 @@ public class ConsensusDelegateDiffblueTest {
 
   /**
    * Test {@link ConsensusDelegate#saveLatestSolidifiedBlockNum(long)}.
-   * <p>
-   * Method under test: {@link ConsensusDelegate#saveLatestSolidifiedBlockNum(long)}
+   *
+   * <p>Method under test: {@link ConsensusDelegate#saveLatestSolidifiedBlockNum(long)}
    */
   @Test
   @Category(MaintainedByDiffblue.class)
@@ -593,13 +575,13 @@ public class ConsensusDelegateDiffblueTest {
     consensusDelegate.saveLatestSolidifiedBlockNum(1L);
 
     // Assert
-    verify(dynamicPropertiesStore).saveLatestSolidifiedBlockNum(eq(1L));
+    verify(dynamicPropertiesStore).saveLatestSolidifiedBlockNum(1L);
   }
 
   /**
    * Test {@link ConsensusDelegate#applyBlock(boolean)}.
-   * <p>
-   * Method under test: {@link ConsensusDelegate#applyBlock(boolean)}
+   *
+   * <p>Method under test: {@link ConsensusDelegate#applyBlock(boolean)}
    */
   @Test
   @Category(MaintainedByDiffblue.class)
@@ -612,16 +594,17 @@ public class ConsensusDelegateDiffblueTest {
     consensusDelegate.applyBlock(true);
 
     // Assert
-    verify(dynamicPropertiesStore).applyBlock(eq(true));
+    verify(dynamicPropertiesStore).applyBlock(true);
   }
 
   /**
    * Test {@link ConsensusDelegate#allowChangeDelegation()}.
+   *
    * <ul>
-   *   <li>Then return {@code false}.</li>
+   *   <li>Then return {@code false}.
    * </ul>
-   * <p>
-   * Method under test: {@link ConsensusDelegate#allowChangeDelegation()}
+   *
+   * <p>Method under test: {@link ConsensusDelegate#allowChangeDelegation()}
    */
   @Test
   @Category(MaintainedByDiffblue.class)
@@ -640,11 +623,12 @@ public class ConsensusDelegateDiffblueTest {
 
   /**
    * Test {@link ConsensusDelegate#allowChangeDelegation()}.
+   *
    * <ul>
-   *   <li>Then return {@code true}.</li>
+   *   <li>Then return {@code true}.
    * </ul>
-   * <p>
-   * Method under test: {@link ConsensusDelegate#allowChangeDelegation()}
+   *
+   * <p>Method under test: {@link ConsensusDelegate#allowChangeDelegation()}
    */
   @Test
   @Category(MaintainedByDiffblue.class)

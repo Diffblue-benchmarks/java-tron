@@ -15,12 +15,14 @@ import org.junit.experimental.categories.Category;
 public class BlockDiffblueTest {
   /**
    * Test {@link Block#equals(Object)}, and {@link Block#hashCode()}.
+   *
    * <ul>
-   *   <li>When other is equal.</li>
-   *   <li>Then return equal.</li>
+   *   <li>When other is equal.
+   *   <li>Then return equal.
    * </ul>
-   * <p>
-   * Methods under test:
+   *
+   * <p>Methods under test:
+   *
    * <ul>
    *   <li>{@link Block#equals(Object)}
    *   <li>{@link Block#hashCode()}
@@ -36,18 +38,19 @@ public class BlockDiffblueTest {
 
     // Act and Assert
     assertEquals(ofResult, ofResult2);
-    int expectedHashCodeResult = ofResult.hashCode();
-    assertEquals(expectedHashCodeResult, ofResult2.hashCode());
+    assertEquals(ofResult.hashCode(), ofResult2.hashCode());
   }
 
   /**
    * Test {@link Block#equals(Object)}, and {@link Block#hashCode()}.
+   *
    * <ul>
-   *   <li>When other is equal.</li>
-   *   <li>Then return equal.</li>
+   *   <li>When other is equal.
+   *   <li>Then return equal.
    * </ul>
-   * <p>
-   * Methods under test:
+   *
+   * <p>Methods under test:
+   *
    * <ul>
    *   <li>{@link Block#equals(Object)}
    *   <li>{@link Block#hashCode()}
@@ -60,23 +63,25 @@ public class BlockDiffblueTest {
     // Arrange
     Block ofResult = Block.of();
     ofResult.setId("42");
+
     Block ofResult2 = Block.of();
     ofResult2.setId("42");
 
     // Act and Assert
     assertEquals(ofResult, ofResult2);
-    int expectedHashCodeResult = ofResult.hashCode();
-    assertEquals(expectedHashCodeResult, ofResult2.hashCode());
+    assertEquals(ofResult.hashCode(), ofResult2.hashCode());
   }
 
   /**
    * Test {@link Block#equals(Object)}, and {@link Block#hashCode()}.
+   *
    * <ul>
-   *   <li>When other is equal.</li>
-   *   <li>Then return equal.</li>
+   *   <li>When other is equal.
+   *   <li>Then return equal.
    * </ul>
-   * <p>
-   * Methods under test:
+   *
+   * <p>Methods under test:
+   *
    * <ul>
    *   <li>{@link Block#equals(Object)}
    *   <li>{@link Block#hashCode()}
@@ -89,23 +94,25 @@ public class BlockDiffblueTest {
     // Arrange
     Block ofResult = Block.of();
     ofResult.setTransactionIds(new ArrayList<>());
+
     Block ofResult2 = Block.of();
     ofResult2.setTransactionIds(new ArrayList<>());
 
     // Act and Assert
     assertEquals(ofResult, ofResult2);
-    int expectedHashCodeResult = ofResult.hashCode();
-    assertEquals(expectedHashCodeResult, ofResult2.hashCode());
+    assertEquals(ofResult.hashCode(), ofResult2.hashCode());
   }
 
   /**
    * Test {@link Block#equals(Object)}, and {@link Block#hashCode()}.
+   *
    * <ul>
-   *   <li>When other is same.</li>
-   *   <li>Then return equal.</li>
+   *   <li>When other is same.
+   *   <li>Then return equal.
    * </ul>
-   * <p>
-   * Methods under test:
+   *
+   * <p>Methods under test:
+   *
    * <ul>
    *   <li>{@link Block#equals(Object)}
    *   <li>{@link Block#hashCode()}
@@ -126,12 +133,13 @@ public class BlockDiffblueTest {
 
   /**
    * Test {@link Block#equals(Object)}.
+   *
    * <ul>
-   *   <li>When other is different.</li>
-   *   <li>Then return not equal.</li>
+   *   <li>When other is different.
+   *   <li>Then return not equal.
    * </ul>
-   * <p>
-   * Method under test: {@link Block#equals(Object)}
+   *
+   * <p>Method under test: {@link Block#equals(Object)}
    */
   @Test
   @Category(MaintainedByDiffblue.class)
@@ -143,12 +151,13 @@ public class BlockDiffblueTest {
 
   /**
    * Test {@link Block#equals(Object)}.
+   *
    * <ul>
-   *   <li>When other is different.</li>
-   *   <li>Then return not equal.</li>
+   *   <li>When other is different.
+   *   <li>Then return not equal.
    * </ul>
-   * <p>
-   * Method under test: {@link Block#equals(Object)}
+   *
+   * <p>Method under test: {@link Block#equals(Object)}
    */
   @Test
   @Category(MaintainedByDiffblue.class)
@@ -164,12 +173,13 @@ public class BlockDiffblueTest {
 
   /**
    * Test {@link Block#equals(Object)}.
+   *
    * <ul>
-   *   <li>When other is different.</li>
-   *   <li>Then return not equal.</li>
+   *   <li>When other is different.
+   *   <li>Then return not equal.
    * </ul>
-   * <p>
-   * Method under test: {@link Block#equals(Object)}
+   *
+   * <p>Method under test: {@link Block#equals(Object)}
    */
   @Test
   @Category(MaintainedByDiffblue.class)
@@ -185,12 +195,13 @@ public class BlockDiffblueTest {
 
   /**
    * Test {@link Block#equals(Object)}.
+   *
    * <ul>
-   *   <li>When other is different.</li>
-   *   <li>Then return not equal.</li>
+   *   <li>When other is different.
+   *   <li>Then return not equal.
    * </ul>
-   * <p>
-   * Method under test: {@link Block#equals(Object)}
+   *
+   * <p>Method under test: {@link Block#equals(Object)}
    */
   @Test
   @Category(MaintainedByDiffblue.class)
@@ -206,12 +217,13 @@ public class BlockDiffblueTest {
 
   /**
    * Test {@link Block#equals(Object)}.
+   *
    * <ul>
-   *   <li>When other is different.</li>
-   *   <li>Then return not equal.</li>
+   *   <li>When other is different.
+   *   <li>Then return not equal.
    * </ul>
-   * <p>
-   * Method under test: {@link Block#equals(Object)}
+   *
+   * <p>Method under test: {@link Block#equals(Object)}
    */
   @Test
   @Category(MaintainedByDiffblue.class)
@@ -219,6 +231,7 @@ public class BlockDiffblueTest {
   public void testEquals_whenOtherIsDifferent_thenReturnNotEqual5() {
     // Arrange
     Block ofResult = Block.of();
+
     Block ofResult2 = Block.of();
     ofResult2.setId("42");
 
@@ -228,12 +241,13 @@ public class BlockDiffblueTest {
 
   /**
    * Test {@link Block#equals(Object)}.
+   *
    * <ul>
-   *   <li>When other is different.</li>
-   *   <li>Then return not equal.</li>
+   *   <li>When other is different.
+   *   <li>Then return not equal.
    * </ul>
-   * <p>
-   * Method under test: {@link Block#equals(Object)}
+   *
+   * <p>Method under test: {@link Block#equals(Object)}
    */
   @Test
   @Category(MaintainedByDiffblue.class)
@@ -241,6 +255,7 @@ public class BlockDiffblueTest {
   public void testEquals_whenOtherIsDifferent_thenReturnNotEqual6() {
     // Arrange
     Block ofResult = Block.of();
+
     Block ofResult2 = Block.of();
     ofResult2.setTransactionIds(new ArrayList<>());
 
@@ -250,12 +265,13 @@ public class BlockDiffblueTest {
 
   /**
    * Test {@link Block#equals(Object)}.
+   *
    * <ul>
-   *   <li>When other is {@code null}.</li>
-   *   <li>Then return not equal.</li>
+   *   <li>When other is {@code null}.
+   *   <li>Then return not equal.
    * </ul>
-   * <p>
-   * Method under test: {@link Block#equals(Object)}
+   *
+   * <p>Method under test: {@link Block#equals(Object)}
    */
   @Test
   @Category(MaintainedByDiffblue.class)
@@ -267,12 +283,13 @@ public class BlockDiffblueTest {
 
   /**
    * Test {@link Block#equals(Object)}.
+   *
    * <ul>
-   *   <li>When other is wrong type.</li>
-   *   <li>Then return not equal.</li>
+   *   <li>When other is wrong type.
+   *   <li>Then return not equal.
    * </ul>
-   * <p>
-   * Method under test: {@link Block#equals(Object)}
+   *
+   * <p>Method under test: {@link Block#equals(Object)}
    */
   @Test
   @Category(MaintainedByDiffblue.class)
@@ -284,8 +301,9 @@ public class BlockDiffblueTest {
 
   /**
    * Test getters and setters.
-   * <p>
-   * Methods under test:
+   *
+   * <p>Methods under test:
+   *
    * <ul>
    *   <li>{@link Block#setId(String)}
    *   <li>{@link Block#setNumber(long)}
@@ -298,9 +316,15 @@ public class BlockDiffblueTest {
    */
   @Test
   @Category(MaintainedByDiffblue.class)
-  @MethodsUnderTest({"String Block.getId()", "long Block.getNumber()", "List Block.getTransactionIds()",
-      "void Block.setId(String)", "void Block.setNumber(long)", "void Block.setTransactionIds(List)",
-      "String Block.toString()"})
+  @MethodsUnderTest({
+    "String Block.getId()",
+    "long Block.getNumber()",
+    "List Block.getTransactionIds()",
+    "void Block.setId(String)",
+    "void Block.setNumber(long)",
+    "void Block.setTransactionIds(List)",
+    "String Block.toString()"
+  })
   public void testGettersAndSetters() {
     // Arrange
     Block ofResult = Block.of();
@@ -325,8 +349,8 @@ public class BlockDiffblueTest {
 
   /**
    * Test {@link Block#of()}.
-   * <p>
-   * Method under test: {@link Block#of()}
+   *
+   * <p>Method under test: {@link Block#of()}
    */
   @Test
   @Category(MaintainedByDiffblue.class)

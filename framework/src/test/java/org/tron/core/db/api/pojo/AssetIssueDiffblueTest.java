@@ -11,12 +11,14 @@ import org.junit.experimental.categories.Category;
 public class AssetIssueDiffblueTest {
   /**
    * Test {@link AssetIssue#equals(Object)}, and {@link AssetIssue#hashCode()}.
+   *
    * <ul>
-   *   <li>When other is equal.</li>
-   *   <li>Then return equal.</li>
+   *   <li>When other is equal.
+   *   <li>Then return equal.
    * </ul>
-   * <p>
-   * Methods under test:
+   *
+   * <p>Methods under test:
+   *
    * <ul>
    *   <li>{@link AssetIssue#equals(Object)}
    *   <li>{@link AssetIssue#hashCode()}
@@ -32,18 +34,19 @@ public class AssetIssueDiffblueTest {
 
     // Act and Assert
     assertEquals(ofResult, ofResult2);
-    int expectedHashCodeResult = ofResult.hashCode();
-    assertEquals(expectedHashCodeResult, ofResult2.hashCode());
+    assertEquals(ofResult.hashCode(), ofResult2.hashCode());
   }
 
   /**
    * Test {@link AssetIssue#equals(Object)}, and {@link AssetIssue#hashCode()}.
+   *
    * <ul>
-   *   <li>When other is equal.</li>
-   *   <li>Then return equal.</li>
+   *   <li>When other is equal.
+   *   <li>Then return equal.
    * </ul>
-   * <p>
-   * Methods under test:
+   *
+   * <p>Methods under test:
+   *
    * <ul>
    *   <li>{@link AssetIssue#equals(Object)}
    *   <li>{@link AssetIssue#hashCode()}
@@ -56,23 +59,25 @@ public class AssetIssueDiffblueTest {
     // Arrange
     AssetIssue ofResult = AssetIssue.of();
     ofResult.setName("Name");
+
     AssetIssue ofResult2 = AssetIssue.of();
     ofResult2.setName("Name");
 
     // Act and Assert
     assertEquals(ofResult, ofResult2);
-    int expectedHashCodeResult = ofResult.hashCode();
-    assertEquals(expectedHashCodeResult, ofResult2.hashCode());
+    assertEquals(ofResult.hashCode(), ofResult2.hashCode());
   }
 
   /**
    * Test {@link AssetIssue#equals(Object)}, and {@link AssetIssue#hashCode()}.
+   *
    * <ul>
-   *   <li>When other is equal.</li>
-   *   <li>Then return equal.</li>
+   *   <li>When other is equal.
+   *   <li>Then return equal.
    * </ul>
-   * <p>
-   * Methods under test:
+   *
+   * <p>Methods under test:
+   *
    * <ul>
    *   <li>{@link AssetIssue#equals(Object)}
    *   <li>{@link AssetIssue#hashCode()}
@@ -85,23 +90,25 @@ public class AssetIssueDiffblueTest {
     // Arrange
     AssetIssue ofResult = AssetIssue.of();
     ofResult.setAddress("42 Main St");
+
     AssetIssue ofResult2 = AssetIssue.of();
     ofResult2.setAddress("42 Main St");
 
     // Act and Assert
     assertEquals(ofResult, ofResult2);
-    int expectedHashCodeResult = ofResult.hashCode();
-    assertEquals(expectedHashCodeResult, ofResult2.hashCode());
+    assertEquals(ofResult.hashCode(), ofResult2.hashCode());
   }
 
   /**
    * Test {@link AssetIssue#equals(Object)}, and {@link AssetIssue#hashCode()}.
+   *
    * <ul>
-   *   <li>When other is same.</li>
-   *   <li>Then return equal.</li>
+   *   <li>When other is same.
+   *   <li>Then return equal.
    * </ul>
-   * <p>
-   * Methods under test:
+   *
+   * <p>Methods under test:
+   *
    * <ul>
    *   <li>{@link AssetIssue#equals(Object)}
    *   <li>{@link AssetIssue#hashCode()}
@@ -122,12 +129,13 @@ public class AssetIssueDiffblueTest {
 
   /**
    * Test {@link AssetIssue#equals(Object)}.
+   *
    * <ul>
-   *   <li>When other is different.</li>
-   *   <li>Then return not equal.</li>
+   *   <li>When other is different.
+   *   <li>Then return not equal.
    * </ul>
-   * <p>
-   * Method under test: {@link AssetIssue#equals(Object)}
+   *
+   * <p>Method under test: {@link AssetIssue#equals(Object)}
    */
   @Test
   @Category(MaintainedByDiffblue.class)
@@ -139,12 +147,13 @@ public class AssetIssueDiffblueTest {
 
   /**
    * Test {@link AssetIssue#equals(Object)}.
+   *
    * <ul>
-   *   <li>When other is different.</li>
-   *   <li>Then return not equal.</li>
+   *   <li>When other is different.
+   *   <li>Then return not equal.
    * </ul>
-   * <p>
-   * Method under test: {@link AssetIssue#equals(Object)}
+   *
+   * <p>Method under test: {@link AssetIssue#equals(Object)}
    */
   @Test
   @Category(MaintainedByDiffblue.class)
@@ -160,12 +169,13 @@ public class AssetIssueDiffblueTest {
 
   /**
    * Test {@link AssetIssue#equals(Object)}.
+   *
    * <ul>
-   *   <li>When other is different.</li>
-   *   <li>Then return not equal.</li>
+   *   <li>When other is different.
+   *   <li>Then return not equal.
    * </ul>
-   * <p>
-   * Method under test: {@link AssetIssue#equals(Object)}
+   *
+   * <p>Method under test: {@link AssetIssue#equals(Object)}
    */
   @Test
   @Category(MaintainedByDiffblue.class)
@@ -181,12 +191,13 @@ public class AssetIssueDiffblueTest {
 
   /**
    * Test {@link AssetIssue#equals(Object)}.
+   *
    * <ul>
-   *   <li>When other is different.</li>
-   *   <li>Then return not equal.</li>
+   *   <li>When other is different.
+   *   <li>Then return not equal.
    * </ul>
-   * <p>
-   * Method under test: {@link AssetIssue#equals(Object)}
+   *
+   * <p>Method under test: {@link AssetIssue#equals(Object)}
    */
   @Test
   @Category(MaintainedByDiffblue.class)
@@ -202,12 +213,13 @@ public class AssetIssueDiffblueTest {
 
   /**
    * Test {@link AssetIssue#equals(Object)}.
+   *
    * <ul>
-   *   <li>When other is different.</li>
-   *   <li>Then return not equal.</li>
+   *   <li>When other is different.
+   *   <li>Then return not equal.
    * </ul>
-   * <p>
-   * Method under test: {@link AssetIssue#equals(Object)}
+   *
+   * <p>Method under test: {@link AssetIssue#equals(Object)}
    */
   @Test
   @Category(MaintainedByDiffblue.class)
@@ -223,12 +235,13 @@ public class AssetIssueDiffblueTest {
 
   /**
    * Test {@link AssetIssue#equals(Object)}.
+   *
    * <ul>
-   *   <li>When other is different.</li>
-   *   <li>Then return not equal.</li>
+   *   <li>When other is different.
+   *   <li>Then return not equal.
    * </ul>
-   * <p>
-   * Method under test: {@link AssetIssue#equals(Object)}
+   *
+   * <p>Method under test: {@link AssetIssue#equals(Object)}
    */
   @Test
   @Category(MaintainedByDiffblue.class)
@@ -236,6 +249,7 @@ public class AssetIssueDiffblueTest {
   public void testEquals_whenOtherIsDifferent_thenReturnNotEqual6() {
     // Arrange
     AssetIssue ofResult = AssetIssue.of();
+
     AssetIssue ofResult2 = AssetIssue.of();
     ofResult2.setName("Name");
 
@@ -245,12 +259,13 @@ public class AssetIssueDiffblueTest {
 
   /**
    * Test {@link AssetIssue#equals(Object)}.
+   *
    * <ul>
-   *   <li>When other is different.</li>
-   *   <li>Then return not equal.</li>
+   *   <li>When other is different.
+   *   <li>Then return not equal.
    * </ul>
-   * <p>
-   * Method under test: {@link AssetIssue#equals(Object)}
+   *
+   * <p>Method under test: {@link AssetIssue#equals(Object)}
    */
   @Test
   @Category(MaintainedByDiffblue.class)
@@ -258,6 +273,7 @@ public class AssetIssueDiffblueTest {
   public void testEquals_whenOtherIsDifferent_thenReturnNotEqual7() {
     // Arrange
     AssetIssue ofResult = AssetIssue.of();
+
     AssetIssue ofResult2 = AssetIssue.of();
     ofResult2.setAddress("42 Main St");
 
@@ -267,12 +283,13 @@ public class AssetIssueDiffblueTest {
 
   /**
    * Test {@link AssetIssue#equals(Object)}.
+   *
    * <ul>
-   *   <li>When other is {@code null}.</li>
-   *   <li>Then return not equal.</li>
+   *   <li>When other is {@code null}.
+   *   <li>Then return not equal.
    * </ul>
-   * <p>
-   * Method under test: {@link AssetIssue#equals(Object)}
+   *
+   * <p>Method under test: {@link AssetIssue#equals(Object)}
    */
   @Test
   @Category(MaintainedByDiffblue.class)
@@ -284,12 +301,13 @@ public class AssetIssueDiffblueTest {
 
   /**
    * Test {@link AssetIssue#equals(Object)}.
+   *
    * <ul>
-   *   <li>When other is wrong type.</li>
-   *   <li>Then return not equal.</li>
+   *   <li>When other is wrong type.
+   *   <li>Then return not equal.
    * </ul>
-   * <p>
-   * Method under test: {@link AssetIssue#equals(Object)}
+   *
+   * <p>Method under test: {@link AssetIssue#equals(Object)}
    */
   @Test
   @Category(MaintainedByDiffblue.class)
@@ -301,8 +319,9 @@ public class AssetIssueDiffblueTest {
 
   /**
    * Test getters and setters.
-   * <p>
-   * Methods under test:
+   *
+   * <p>Methods under test:
+   *
    * <ul>
    *   <li>{@link AssetIssue#setAddress(String)}
    *   <li>{@link AssetIssue#setEnd(long)}
@@ -317,9 +336,17 @@ public class AssetIssueDiffblueTest {
    */
   @Test
   @Category(MaintainedByDiffblue.class)
-  @MethodsUnderTest({"String AssetIssue.getAddress()", "long AssetIssue.getEnd()", "String AssetIssue.getName()",
-      "long AssetIssue.getStart()", "void AssetIssue.setAddress(String)", "void AssetIssue.setEnd(long)",
-      "void AssetIssue.setName(String)", "void AssetIssue.setStart(long)", "String AssetIssue.toString()"})
+  @MethodsUnderTest({
+    "String AssetIssue.getAddress()",
+    "long AssetIssue.getEnd()",
+    "String AssetIssue.getName()",
+    "long AssetIssue.getStart()",
+    "void AssetIssue.setAddress(String)",
+    "void AssetIssue.setEnd(long)",
+    "void AssetIssue.setName(String)",
+    "void AssetIssue.setStart(long)",
+    "String AssetIssue.toString()"
+  })
   public void testGettersAndSetters() {
     // Arrange
     AssetIssue ofResult = AssetIssue.of();
@@ -344,8 +371,8 @@ public class AssetIssueDiffblueTest {
 
   /**
    * Test {@link AssetIssue#of()}.
-   * <p>
-   * Method under test: {@link AssetIssue#of()}
+   *
+   * <p>Method under test: {@link AssetIssue#of()}
    */
   @Test
   @Category(MaintainedByDiffblue.class)

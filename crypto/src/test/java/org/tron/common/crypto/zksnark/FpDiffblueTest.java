@@ -15,8 +15,9 @@ import org.junit.experimental.categories.Category;
 public class FpDiffblueTest {
   /**
    * Test getters and setters.
-   * <p>
-   * Methods under test:
+   *
+   * <p>Methods under test:
+   *
    * <ul>
    *   <li>{@link Fp#Fp(BigInteger)}
    *   <li>{@link Fp#toString()}
@@ -32,19 +33,26 @@ public class FpDiffblueTest {
 
     // Assert
     BigInteger bigInteger = actualFp.v;
-    assertEquals("21888242871839275222246405745257275088548364400416034343698204186575808495616",
+    assertEquals(
+        "21888242871839275222246405745257275088548364400416034343698204186575808495616",
         bigInteger.toString());
-    assertEquals("21888242871839275222246405745257275088548364400416034343698204186575808495616", actualToStringResult);
+    assertEquals(
+        "21888242871839275222246405745257275088548364400416034343698204186575808495616",
+        actualToStringResult);
     assertEquals(1, bigInteger.signum());
     assertEquals(28, bigInteger.getLowestSetBit());
-    assertArrayEquals(new byte[]{'0', 'd', 'N', 'r', -31, '1', -96, ')', -72, 'P', 'E', -74, -127, -127, 'X', ']', '(',
-        '3', -24, 'H', 'y', -71, 'p', -111, 'C', -31, -11, -109, -16, 0, 0, 0}, bigInteger.toByteArray());
+    assertArrayEquals(
+        new byte[] {
+          '0', 'd', 'N', 'r', -31, '1', -96, ')', -72, 'P', 'E', -74, -127, -127, 'X', ']', '(',
+          '3', -24, 'H', 'y', -71, 'p', -111, 'C', -31, -11, -109, -16, 0, 0, 0
+        },
+        bigInteger.toByteArray());
   }
 
   /**
    * Test {@link Fp#create(BigInteger)} with {@code BigInteger}.
-   * <p>
-   * Method under test: {@link Fp#create(BigInteger)}
+   *
+   * <p>Method under test: {@link Fp#create(BigInteger)}
    */
   @Test
   @Category(MaintainedByDiffblue.class)
@@ -55,20 +63,29 @@ public class FpDiffblueTest {
 
     // Assert
     BigInteger bigInteger = actualCreateResult.v;
-    assertEquals("21888242871839275222246405745257275088548364400416034343698204186575808495616",
+    assertEquals(
+        "21888242871839275222246405745257275088548364400416034343698204186575808495616",
         bigInteger.toString());
     assertEquals(1, bigInteger.signum());
     assertEquals(28, bigInteger.getLowestSetBit());
-    assertArrayEquals(new byte[]{'0', 'd', 'N', 'r', -31, '1', -96, ')', -72, 'P', 'E', -74, -127, -127, 'X', ']', '(',
-        '3', -24, 'H', 'y', -71, 'p', -111, 'C', -31, -11, -109, -16, 0, 0, 0}, bigInteger.toByteArray());
-    assertArrayEquals(new byte[]{'0', 'd', 'N', 'r', -31, '1', -96, ')', -72, 'P', 'E', -74, -127, -127, 'X', ']', '(',
-        '3', -24, 'H', 'y', -71, 'p', -111, 'C', -31, -11, -109, -16, 0, 0, 0}, actualCreateResult.bytes());
+    assertArrayEquals(
+        new byte[] {
+          '0', 'd', 'N', 'r', -31, '1', -96, ')', -72, 'P', 'E', -74, -127, -127, 'X', ']', '(',
+          '3', -24, 'H', 'y', -71, 'p', -111, 'C', -31, -11, -109, -16, 0, 0, 0
+        },
+        bigInteger.toByteArray());
+    assertArrayEquals(
+        new byte[] {
+          '0', 'd', 'N', 'r', -31, '1', -96, ')', -72, 'P', 'E', -74, -127, -127, 'X', ']', '(',
+          '3', -24, 'H', 'y', -71, 'p', -111, 'C', -31, -11, -109, -16, 0, 0, 0
+        },
+        actualCreateResult.bytes());
   }
 
   /**
    * Test {@link Fp#create(byte[])} with {@code byte[]}.
-   * <p>
-   * Method under test: {@link Fp#create(byte[])}
+   *
+   * <p>Method under test: {@link Fp#create(byte[])}
    */
   @Test
   @Category(MaintainedByDiffblue.class)
@@ -90,8 +107,8 @@ public class FpDiffblueTest {
 
   /**
    * Test {@link Fp#add(Fp)} with {@code Fp}.
-   * <p>
-   * Method under test: {@link Fp#add(Fp)}
+   *
+   * <p>Method under test: {@link Fp#add(Fp)}
    */
   @Test
   @Category(MaintainedByDiffblue.class)
@@ -102,113 +119,122 @@ public class FpDiffblueTest {
 
     // Assert
     BigInteger bigInteger = actualAddResult.v;
-    assertEquals("21888242871839275222246405745257275088696311157297823662689037894645226208581",
+    assertEquals(
+        "21888242871839275222246405745257275088696311157297823662689037894645226208581",
         bigInteger.toString());
     assertEquals(0, bigInteger.getLowestSetBit());
     assertEquals(1, bigInteger.signum());
-    assertArrayEquals(new byte[]{'0', 'd', 'N', 'r', -31, '1', -96, ')', -72, 'P', 'E', -74, -127, -127, 'X', ']', -105,
-        -127, 'j', -111, 'h', 'q', -54, -115, '<', ' ', -116, 22, -40, '|', -3, 'E'}, bigInteger.toByteArray());
-    assertArrayEquals(new byte[]{'0', 'd', 'N', 'r', -31, '1', -96, ')', -72, 'P', 'E', -74, -127, -127, 'X', ']', -105,
-        -127, 'j', -111, 'h', 'q', -54, -115, '<', ' ', -116, 22, -40, '|', -3, 'E'}, actualAddResult.bytes());
+    assertArrayEquals(
+        new byte[] {
+          '0', 'd', 'N', 'r', -31, '1', -96, ')', -72, 'P', 'E', -74, -127, -127, 'X', ']', -105,
+          -127, 'j', -111, 'h', 'q', -54, -115, '<', ' ', -116, 22, -40, '|', -3, 'E'
+        },
+        bigInteger.toByteArray());
+    assertArrayEquals(
+        new byte[] {
+          '0', 'd', 'N', 'r', -31, '1', -96, ')', -72, 'P', 'E', -74, -127, -127, 'X', ']', -105,
+          -127, 'j', -111, 'h', 'q', -54, -115, '<', ' ', -116, 22, -40, '|', -3, 'E'
+        },
+        actualAddResult.bytes());
   }
 
   /**
    * Test {@link Fp#mul(Fp2)} with {@code Fp2}.
-   * <p>
-   * Method under test: {@link Fp#mul(Fp2)}
+   *
+   * <p>Method under test: {@link Fp#mul(Fp2)}
    */
   @Test
   @Category(MaintainedByDiffblue.class)
   @MethodsUnderTest({"Fp2 Fp.mul(Fp2)"})
   public void testMulWithFp2() {
-    // Arrange
-    Fp fp = Fp.NON_RESIDUE;
-
-    // Act
-    Fp2 actualMulResult = fp.mul(Fp2.NON_RESIDUE);
+    // Arrange and Act
+    Fp2 actualMulResult = Fp.NON_RESIDUE.mul(Fp2.NON_RESIDUE);
 
     // Assert
-    Fp fp2 = actualMulResult.a;
-    BigInteger bigInteger = fp2.v;
-    assertEquals("21888242871839275222246405745257275088696311157297823662689037894645226208574",
+    Fp fp = actualMulResult.a;
+    BigInteger bigInteger = fp.v;
+    assertEquals(
+        "21888242871839275222246405745257275088696311157297823662689037894645226208574",
         bigInteger.toString());
     assertEquals(1, bigInteger.getLowestSetBit());
     assertEquals(1, bigInteger.signum());
     assertFalse(actualMulResult.isZero());
     assertTrue(actualMulResult.isValid());
-    assertEquals(fp.NON_RESIDUE, actualMulResult.b);
-    assertArrayEquals(new byte[]{'0', 'd', 'N', 'r', -31, '1', -96, ')', -72, 'P', 'E', -74, -127, -127, 'X', ']', -105,
-        -127, 'j', -111, 'h', 'q', -54, -115, '<', ' ', -116, 22, -40, '|', -3, '>'}, bigInteger.toByteArray());
-    assertArrayEquals(new byte[]{'0', 'd', 'N', 'r', -31, '1', -96, ')', -72, 'P', 'E', -74, -127, -127, 'X', ']', -105,
-        -127, 'j', -111, 'h', 'q', -54, -115, '<', ' ', -116, 22, -40, '|', -3, '>'}, fp2.bytes());
+    assertEquals(Fp.NON_RESIDUE, actualMulResult.b);
+    assertArrayEquals(
+        new byte[] {
+          '0', 'd', 'N', 'r', -31, '1', -96, ')', -72, 'P', 'E', -74, -127, -127, 'X', ']', -105,
+          -127, 'j', -111, 'h', 'q', -54, -115, '<', ' ', -116, 22, -40, '|', -3, '>'
+        },
+        bigInteger.toByteArray());
+    assertArrayEquals(
+        new byte[] {
+          '0', 'd', 'N', 'r', -31, '1', -96, ')', -72, 'P', 'E', -74, -127, -127, 'X', ']', -105,
+          -127, 'j', -111, 'h', 'q', -54, -115, '<', ' ', -116, 22, -40, '|', -3, '>'
+        },
+        fp.bytes());
   }
 
   /**
    * Test {@link Fp#mul(Fp)} with {@code Fp}.
+   *
    * <ul>
-   *   <li>Given {@link Fp#NON_RESIDUE}.</li>
-   *   <li>When {@link Fp#NON_RESIDUE}.</li>
-   *   <li>Then return {@link Fp#_1}.</li>
+   *   <li>Given {@link Fp#NON_RESIDUE}.
+   *   <li>When {@link Fp#NON_RESIDUE}.
+   *   <li>Then return {@link Fp#_1}.
    * </ul>
-   * <p>
-   * Method under test: {@link Fp#mul(Fp)}
+   *
+   * <p>Method under test: {@link Fp#mul(Fp)}
    */
   @Test
   @Category(MaintainedByDiffblue.class)
   @MethodsUnderTest({"Fp Fp.mul(Fp)"})
   public void testMulWithFp_givenNon_residue_whenNon_residue_thenReturn_1() {
-    // Arrange and Act
-    Fp actualMulResult = Fp.NON_RESIDUE.mul(Fp.NON_RESIDUE);
-
-    // Assert
-    assertEquals(actualMulResult._1, actualMulResult);
+    // Arrange, Act and Assert
+    assertEquals(Fp._1, Fp.NON_RESIDUE.mul(Fp.NON_RESIDUE));
   }
 
   /**
    * Test {@link Fp#sub(Fp)} with {@code Fp}.
+   *
    * <ul>
-   *   <li>Given {@link Fp#NON_RESIDUE}.</li>
-   *   <li>When {@link Fp#NON_RESIDUE}.</li>
-   *   <li>Then return {@link Fp#ZERO}.</li>
+   *   <li>Given {@link Fp#NON_RESIDUE}.
+   *   <li>When {@link Fp#NON_RESIDUE}.
+   *   <li>Then return {@link Fp#ZERO}.
    * </ul>
-   * <p>
-   * Method under test: {@link Fp#sub(Fp)}
+   *
+   * <p>Method under test: {@link Fp#sub(Fp)}
    */
   @Test
   @Category(MaintainedByDiffblue.class)
   @MethodsUnderTest({"Fp Fp.sub(Fp)"})
   public void testSubWithFp_givenNon_residue_whenNon_residue_thenReturnZero() {
-    // Arrange and Act
-    Fp actualSubResult = Fp.NON_RESIDUE.sub(Fp.NON_RESIDUE);
-
-    // Assert
-    assertEquals(actualSubResult.ZERO, actualSubResult);
+    // Arrange, Act and Assert
+    assertEquals(Fp.ZERO, Fp.NON_RESIDUE.sub(Fp.NON_RESIDUE));
   }
 
   /**
    * Test {@link Fp#squared()}.
+   *
    * <ul>
-   *   <li>Given {@link Fp#NON_RESIDUE}.</li>
-   *   <li>Then return {@link Fp#_1}.</li>
+   *   <li>Given {@link Fp#NON_RESIDUE}.
+   *   <li>Then return {@link Fp#_1}.
    * </ul>
-   * <p>
-   * Method under test: {@link Fp#squared()}
+   *
+   * <p>Method under test: {@link Fp#squared()}
    */
   @Test
   @Category(MaintainedByDiffblue.class)
   @MethodsUnderTest({"Fp Fp.squared()"})
   public void testSquared_givenNon_residue_thenReturn_1() {
-    // Arrange and Act
-    Fp actualSquaredResult = Fp.NON_RESIDUE.squared();
-
-    // Assert
-    assertEquals(actualSquaredResult._1, actualSquaredResult);
+    // Arrange, Act and Assert
+    assertEquals(Fp._1, Fp.NON_RESIDUE.squared());
   }
 
   /**
    * Test {@link Fp#dbl()}.
-   * <p>
-   * Method under test: {@link Fp#dbl()}
+   *
+   * <p>Method under test: {@link Fp#dbl()}
    */
   @Test
   @Category(MaintainedByDiffblue.class)
@@ -219,64 +245,70 @@ public class FpDiffblueTest {
 
     // Assert
     BigInteger bigInteger = actualDblResult.v;
-    assertEquals("21888242871839275222246405745257275088696311157297823662689037894645226208581",
+    assertEquals(
+        "21888242871839275222246405745257275088696311157297823662689037894645226208581",
         bigInteger.toString());
     assertEquals(0, bigInteger.getLowestSetBit());
     assertEquals(1, bigInteger.signum());
-    assertArrayEquals(new byte[]{'0', 'd', 'N', 'r', -31, '1', -96, ')', -72, 'P', 'E', -74, -127, -127, 'X', ']', -105,
-        -127, 'j', -111, 'h', 'q', -54, -115, '<', ' ', -116, 22, -40, '|', -3, 'E'}, bigInteger.toByteArray());
-    assertArrayEquals(new byte[]{'0', 'd', 'N', 'r', -31, '1', -96, ')', -72, 'P', 'E', -74, -127, -127, 'X', ']', -105,
-        -127, 'j', -111, 'h', 'q', -54, -115, '<', ' ', -116, 22, -40, '|', -3, 'E'}, actualDblResult.bytes());
+    assertArrayEquals(
+        new byte[] {
+          '0', 'd', 'N', 'r', -31, '1', -96, ')', -72, 'P', 'E', -74, -127, -127, 'X', ']', -105,
+          -127, 'j', -111, 'h', 'q', -54, -115, '<', ' ', -116, 22, -40, '|', -3, 'E'
+        },
+        bigInteger.toByteArray());
+    assertArrayEquals(
+        new byte[] {
+          '0', 'd', 'N', 'r', -31, '1', -96, ')', -72, 'P', 'E', -74, -127, -127, 'X', ']', -105,
+          -127, 'j', -111, 'h', 'q', -54, -115, '<', ' ', -116, 22, -40, '|', -3, 'E'
+        },
+        actualDblResult.bytes());
   }
 
   /**
    * Test {@link Fp#inverse()}.
+   *
    * <ul>
-   *   <li>Given {@link Fp#NON_RESIDUE}.</li>
-   *   <li>Then return {@link Fp#NON_RESIDUE}.</li>
+   *   <li>Given {@link Fp#NON_RESIDUE}.
+   *   <li>Then return {@link Fp#NON_RESIDUE}.
    * </ul>
-   * <p>
-   * Method under test: {@link Fp#inverse()}
+   *
+   * <p>Method under test: {@link Fp#inverse()}
    */
   @Test
   @Category(MaintainedByDiffblue.class)
   @MethodsUnderTest({"Fp Fp.inverse()"})
   public void testInverse_givenNon_residue_thenReturnNon_residue() {
-    // Arrange and Act
-    Fp actualInverseResult = Fp.NON_RESIDUE.inverse();
-
-    // Assert
-    assertEquals(actualInverseResult.NON_RESIDUE, actualInverseResult);
+    // Arrange, Act and Assert
+    assertEquals(Fp.NON_RESIDUE, Fp.NON_RESIDUE.inverse());
   }
 
   /**
    * Test {@link Fp#negate()}.
+   *
    * <ul>
-   *   <li>Given {@link Fp#NON_RESIDUE}.</li>
-   *   <li>Then return {@link Fp#_1}.</li>
+   *   <li>Given {@link Fp#NON_RESIDUE}.
+   *   <li>Then return {@link Fp#_1}.
    * </ul>
-   * <p>
-   * Method under test: {@link Fp#negate()}
+   *
+   * <p>Method under test: {@link Fp#negate()}
    */
   @Test
   @Category(MaintainedByDiffblue.class)
   @MethodsUnderTest({"Fp Fp.negate()"})
   public void testNegate_givenNon_residue_thenReturn_1() {
-    // Arrange and Act
-    Fp actualNegateResult = Fp.NON_RESIDUE.negate();
-
-    // Assert
-    assertEquals(actualNegateResult._1, actualNegateResult);
+    // Arrange, Act and Assert
+    assertEquals(Fp._1, Fp.NON_RESIDUE.negate());
   }
 
   /**
    * Test {@link Fp#isZero()}.
+   *
    * <ul>
-   *   <li>Given {@link Fp#NON_RESIDUE}.</li>
-   *   <li>Then return {@code false}.</li>
+   *   <li>Given {@link Fp#NON_RESIDUE}.
+   *   <li>Then return {@code false}.
    * </ul>
-   * <p>
-   * Method under test: {@link Fp#isZero()}
+   *
+   * <p>Method under test: {@link Fp#isZero()}
    */
   @Test
   @Category(MaintainedByDiffblue.class)
@@ -288,12 +320,13 @@ public class FpDiffblueTest {
 
   /**
    * Test {@link Fp#isZero()}.
+   *
    * <ul>
-   *   <li>Given {@link Fp#ZERO}.</li>
-   *   <li>Then return {@code true}.</li>
+   *   <li>Given {@link Fp#ZERO}.
+   *   <li>Then return {@code true}.
    * </ul>
-   * <p>
-   * Method under test: {@link Fp#isZero()}
+   *
+   * <p>Method under test: {@link Fp#isZero()}
    */
   @Test
   @Category(MaintainedByDiffblue.class)
@@ -305,29 +338,31 @@ public class FpDiffblueTest {
 
   /**
    * Test {@link Fp#isValid()}.
+   *
    * <ul>
-   *   <li>Given create {@link Params#P}.</li>
-   *   <li>Then return {@code false}.</li>
+   *   <li>Given {@link Fp#Fp(BigInteger)} with v is {@link Params#P}.
+   *   <li>Then return {@code false}.
    * </ul>
-   * <p>
-   * Method under test: {@link Fp#isValid()}
+   *
+   * <p>Method under test: {@link Fp#isValid()}
    */
   @Test
   @Category(MaintainedByDiffblue.class)
   @MethodsUnderTest({"boolean Fp.isValid()"})
-  public void testIsValid_givenCreateP_thenReturnFalse() {
+  public void testIsValid_givenFpWithVIsP_thenReturnFalse() {
     // Arrange, Act and Assert
-    assertFalse(Fp.create(Params.P).isValid());
+    assertFalse(new Fp(Params.P).isValid());
   }
 
   /**
    * Test {@link Fp#isValid()}.
+   *
    * <ul>
-   *   <li>Given {@link Fp#NON_RESIDUE}.</li>
-   *   <li>Then return {@code true}.</li>
+   *   <li>Given {@link Fp#NON_RESIDUE}.
+   *   <li>Then return {@code true}.
    * </ul>
-   * <p>
-   * Method under test: {@link Fp#isValid()}
+   *
+   * <p>Method under test: {@link Fp#isValid()}
    */
   @Test
   @Category(MaintainedByDiffblue.class)
@@ -339,30 +374,37 @@ public class FpDiffblueTest {
 
   /**
    * Test {@link Fp#bytes()}.
+   *
    * <ul>
-   *   <li>Given {@link Fp#NON_RESIDUE}.</li>
-   *   <li>Then return array of {@code byte} with {@code 0} and {@code d}.</li>
+   *   <li>Given {@link Fp#NON_RESIDUE}.
+   *   <li>Then return array of {@code byte} with {@code 0} and {@code d}.
    * </ul>
-   * <p>
-   * Method under test: {@link Fp#bytes()}
+   *
+   * <p>Method under test: {@link Fp#bytes()}
    */
   @Test
   @Category(MaintainedByDiffblue.class)
   @MethodsUnderTest({"byte[] Fp.bytes()"})
   public void testBytes_givenNon_residue_thenReturnArrayOfByteWith0AndD() {
     // Arrange, Act and Assert
-    assertArrayEquals(new byte[]{'0', 'd', 'N', 'r', -31, '1', -96, ')', -72, 'P', 'E', -74, -127, -127, 'X', ']', -105,
-        -127, 'j', -111, 'h', 'q', -54, -115, '<', ' ', -116, 22, -40, '|', -3, 'F'}, Fp.NON_RESIDUE.bytes());
+    assertArrayEquals(
+        new byte[] {
+          '0', 'd', 'N', 'r', -31, '1', -96, ')', -72, 'P', 'E', -74, -127, -127, 'X', ']', -105,
+          -127, 'j', -111, 'h', 'q', -54, -115, '<', ' ', -116, 22, -40, '|', -3, 'F'
+        },
+        Fp.NON_RESIDUE.bytes());
   }
 
   /**
    * Test {@link Fp#equals(Object)}, and {@link Fp#hashCode()}.
+   *
    * <ul>
-   *   <li>When other is equal.</li>
-   *   <li>Then return equal.</li>
+   *   <li>When other is equal.
+   *   <li>Then return equal.
    * </ul>
-   * <p>
-   * Methods under test:
+   *
+   * <p>Methods under test:
+   *
    * <ul>
    *   <li>{@link Fp#equals(Object)}
    *   <li>{@link Fp#hashCode()}
@@ -378,18 +420,19 @@ public class FpDiffblueTest {
 
     // Act and Assert
     assertEquals(fp, fp2);
-    int expectedHashCodeResult = fp.hashCode();
-    assertEquals(expectedHashCodeResult, fp2.hashCode());
+    assertEquals(fp.hashCode(), fp2.hashCode());
   }
 
   /**
    * Test {@link Fp#equals(Object)}, and {@link Fp#hashCode()}.
+   *
    * <ul>
-   *   <li>When other is equal.</li>
-   *   <li>Then return equal.</li>
+   *   <li>When other is equal.
+   *   <li>Then return equal.
    * </ul>
-   * <p>
-   * Methods under test:
+   *
+   * <p>Methods under test:
+   *
    * <ul>
    *   <li>{@link Fp#equals(Object)}
    *   <li>{@link Fp#hashCode()}
@@ -405,18 +448,19 @@ public class FpDiffblueTest {
 
     // Act and Assert
     assertEquals(createResult, createResult2);
-    int expectedHashCodeResult = createResult.hashCode();
-    assertEquals(expectedHashCodeResult, createResult2.hashCode());
+    assertEquals(createResult.hashCode(), createResult2.hashCode());
   }
 
   /**
    * Test {@link Fp#equals(Object)}, and {@link Fp#hashCode()}.
+   *
    * <ul>
-   *   <li>When other is same.</li>
-   *   <li>Then return equal.</li>
+   *   <li>When other is same.
+   *   <li>Then return equal.
    * </ul>
-   * <p>
-   * Methods under test:
+   *
+   * <p>Methods under test:
+   *
    * <ul>
    *   <li>{@link Fp#equals(Object)}
    *   <li>{@link Fp#hashCode()}
@@ -437,12 +481,13 @@ public class FpDiffblueTest {
 
   /**
    * Test {@link Fp#equals(Object)}.
+   *
    * <ul>
-   *   <li>When other is different.</li>
-   *   <li>Then return not equal.</li>
+   *   <li>When other is different.
+   *   <li>Then return not equal.
    * </ul>
-   * <p>
-   * Method under test: {@link Fp#equals(Object)}
+   *
+   * <p>Method under test: {@link Fp#equals(Object)}
    */
   @Test
   @Category(MaintainedByDiffblue.class)
@@ -454,29 +499,31 @@ public class FpDiffblueTest {
 
   /**
    * Test {@link Fp#equals(Object)}.
+   *
    * <ul>
-   *   <li>When other is different.</li>
-   *   <li>Then return not equal.</li>
+   *   <li>When other is different.
+   *   <li>Then return not equal.
    * </ul>
-   * <p>
-   * Method under test: {@link Fp#equals(Object)}
+   *
+   * <p>Method under test: {@link Fp#equals(Object)}
    */
   @Test
   @Category(MaintainedByDiffblue.class)
   @MethodsUnderTest({"boolean Fp.equals(Object)", "int Fp.hashCode()"})
   public void testEquals_whenOtherIsDifferent_thenReturnNotEqual2() {
     // Arrange, Act and Assert
-    assertNotEquals(Fp.create((BigInteger) null), Fp.NON_RESIDUE);
+    assertNotEquals(new Fp(null), Fp.NON_RESIDUE);
   }
 
   /**
    * Test {@link Fp#equals(Object)}.
+   *
    * <ul>
-   *   <li>When other is equal.</li>
-   *   <li>Then return equal.</li>
+   *   <li>When other is equal.
+   *   <li>Then return equal.
    * </ul>
-   * <p>
-   * Method under test: {@link Fp#equals(Object)}
+   *
+   * <p>Method under test: {@link Fp#equals(Object)}
    */
   @Test
   @Category(MaintainedByDiffblue.class)
@@ -491,12 +538,13 @@ public class FpDiffblueTest {
 
   /**
    * Test {@link Fp#equals(Object)}.
+   *
    * <ul>
-   *   <li>When other is {@code null}.</li>
-   *   <li>Then return not equal.</li>
+   *   <li>When other is {@code null}.
+   *   <li>Then return not equal.
    * </ul>
-   * <p>
-   * Method under test: {@link Fp#equals(Object)}
+   *
+   * <p>Method under test: {@link Fp#equals(Object)}
    */
   @Test
   @Category(MaintainedByDiffblue.class)
@@ -508,12 +556,13 @@ public class FpDiffblueTest {
 
   /**
    * Test {@link Fp#equals(Object)}.
+   *
    * <ul>
-   *   <li>When other is wrong type.</li>
-   *   <li>Then return not equal.</li>
+   *   <li>When other is wrong type.
+   *   <li>Then return not equal.
    * </ul>
-   * <p>
-   * Method under test: {@link Fp#equals(Object)}
+   *
+   * <p>Method under test: {@link Fp#equals(Object)}
    */
   @Test
   @Category(MaintainedByDiffblue.class)

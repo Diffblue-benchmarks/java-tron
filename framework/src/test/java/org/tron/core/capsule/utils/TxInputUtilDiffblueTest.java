@@ -13,19 +13,20 @@ import org.tron.protos.Protocol.TXInput;
 public class TxInputUtilDiffblueTest {
   /**
    * Test {@link TxInputUtil#newTxInput(byte[], long, byte[], byte[])}.
-   * <p>
-   * Method under test: {@link TxInputUtil#newTxInput(byte[], long, byte[], byte[])}
+   *
+   * <p>Method under test: {@link TxInputUtil#newTxInput(byte[], long, byte[], byte[])}
    */
   @Test
   @Category(MaintainedByDiffblue.class)
   @MethodsUnderTest({"TXInput TxInputUtil.newTxInput(byte[], long, byte[], byte[])"})
   public void testNewTxInput() throws UnsupportedEncodingException {
-    // Arrange
-    byte[] txId = "AXAXAXAX".getBytes("UTF-8");
-    byte[] signature = "AXAXAXAX".getBytes("UTF-8");
-
-    // Act
-    TXInput actualNewTxInputResult = TxInputUtil.newTxInput(txId, 1L, signature, "AXAXAXAX".getBytes("UTF-8"));
+    // Arrange and Act
+    TXInput actualNewTxInputResult =
+        TxInputUtil.newTxInput(
+            "AXAXAXAX".getBytes("UTF-8"),
+            1L,
+            "AXAXAXAX".getBytes("UTF-8"),
+            "AXAXAXAX".getBytes("UTF-8"));
 
     // Assert
     assertEquals("", actualNewTxInputResult.getInitializationErrorString());

@@ -9,8 +9,8 @@ import org.junit.experimental.categories.Category;
 public class StorageUtilsDiffblueTest {
   /**
    * Test {@link StorageUtils#getOutputDirectory()}.
-   * <p>
-   * Method under test: {@link StorageUtils#getOutputDirectory()}
+   *
+   * <p>Method under test: {@link StorageUtils#getOutputDirectory()}
    */
   @Test
   @Category(MaintainedByDiffblue.class)

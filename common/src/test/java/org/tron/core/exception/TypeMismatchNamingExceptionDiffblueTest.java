@@ -11,8 +11,9 @@ import org.junit.experimental.categories.Category;
 public class TypeMismatchNamingExceptionDiffblueTest {
   /**
    * Test getters and setters.
-   * <p>
-   * Methods under test:
+   *
+   * <p>Methods under test:
+   *
    * <ul>
    *   <li>{@link TypeMismatchNamingException#TypeMismatchNamingException(String)}
    *   <li>{@link TypeMismatchNamingException#getActualType()}
@@ -21,17 +22,22 @@ public class TypeMismatchNamingExceptionDiffblueTest {
    */
   @Test
   @Category(MaintainedByDiffblue.class)
-  @MethodsUnderTest({"void TypeMismatchNamingException.<init>(String)",
-      "Class TypeMismatchNamingException.getActualType()", "Class TypeMismatchNamingException.getRequiredType()"})
+  @MethodsUnderTest({
+    "void TypeMismatchNamingException.<init>(String)",
+    "Class TypeMismatchNamingException.getActualType()",
+    "Class TypeMismatchNamingException.getRequiredType()"
+  })
   public void testGettersAndSetters() {
     // Arrange and Act
-    TypeMismatchNamingException actualTypeMismatchNamingException = new TypeMismatchNamingException("Explanation");
+    TypeMismatchNamingException actualTypeMismatchNamingException =
+        new TypeMismatchNamingException("Explanation");
     Class<?> actualActualType = actualTypeMismatchNamingException.getActualType();
+    Class<?> actualRequiredType = actualTypeMismatchNamingException.getRequiredType();
 
     // Assert
     assertEquals("Explanation", actualTypeMismatchNamingException.getMessage());
     assertNull(actualActualType);
-    assertNull(actualTypeMismatchNamingException.getRequiredType());
+    assertNull(actualRequiredType);
     assertNull(actualTypeMismatchNamingException.getResolvedObj());
     assertNull(actualTypeMismatchNamingException.getCause());
     assertNull(actualTypeMismatchNamingException.getRootCause());
@@ -42,8 +48,9 @@ public class TypeMismatchNamingExceptionDiffblueTest {
 
   /**
    * Test {@link TypeMismatchNamingException#TypeMismatchNamingException(String, Class, Class)}.
-   * <p>
-   * Method under test: {@link TypeMismatchNamingException#TypeMismatchNamingException(String, Class, Class)}
+   *
+   * <p>Method under test: {@link TypeMismatchNamingException#TypeMismatchNamingException(String,
+   * Class, Class)}
    */
   @Test
   @Category(MaintainedByDiffblue.class)
@@ -54,16 +61,22 @@ public class TypeMismatchNamingExceptionDiffblueTest {
     Class<Object> actualType = Object.class;
 
     // Act
-    TypeMismatchNamingException actualTypeMismatchNamingException = new TypeMismatchNamingException("Name",
-        requiredType, actualType);
+    TypeMismatchNamingException actualTypeMismatchNamingException =
+        new TypeMismatchNamingException("Name", requiredType, actualType);
 
     // Assert
-    assertEquals("Object of type [class java.lang.Object] available at store location [Name] is not assignable to"
-        + " [java.lang.Object]", actualTypeMismatchNamingException.getLocalizedMessage());
-    assertEquals("Object of type [class java.lang.Object] available at store location [Name] is not assignable to"
-        + " [java.lang.Object]", actualTypeMismatchNamingException.getMessage());
-    assertEquals("Object of type [class java.lang.Object] available at store location [Name] is not assignable to"
-        + " [java.lang.Object]", actualTypeMismatchNamingException.getExplanation());
+    assertEquals(
+        "Object of type [class java.lang.Object] available at store location [Name] is not assignable to"
+            + " [java.lang.Object]",
+        actualTypeMismatchNamingException.getLocalizedMessage());
+    assertEquals(
+        "Object of type [class java.lang.Object] available at store location [Name] is not assignable to"
+            + " [java.lang.Object]",
+        actualTypeMismatchNamingException.getMessage());
+    assertEquals(
+        "Object of type [class java.lang.Object] available at store location [Name] is not assignable to"
+            + " [java.lang.Object]",
+        actualTypeMismatchNamingException.getExplanation());
     assertNull(actualTypeMismatchNamingException.getResolvedObj());
     assertNull(actualTypeMismatchNamingException.getCause());
     assertNull(actualTypeMismatchNamingException.getRootCause());

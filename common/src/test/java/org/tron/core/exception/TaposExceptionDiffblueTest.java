@@ -11,8 +11,8 @@ import org.junit.experimental.categories.Category;
 public class TaposExceptionDiffblueTest {
   /**
    * Test {@link TaposException#TaposException()}.
-   * <p>
-   * Method under test: {@link TaposException#TaposException()}
+   *
+   * <p>Method under test: {@link TaposException#TaposException()}
    */
   @Test
   @Category(MaintainedByDiffblue.class)
@@ -30,8 +30,8 @@ public class TaposExceptionDiffblueTest {
 
   /**
    * Test {@link TaposException#TaposException(String)}.
-   * <p>
-   * Method under test: {@link TaposException#TaposException(String)}
+   *
+   * <p>Method under test: {@link TaposException#TaposException(String)}
    */
   @Test
   @Category(MaintainedByDiffblue.class)
@@ -49,8 +49,8 @@ public class TaposExceptionDiffblueTest {
 
   /**
    * Test {@link TaposException#TaposException(String, Throwable)}.
-   * <p>
-   * Method under test: {@link TaposException#TaposException(String, Throwable)}
+   *
+   * <p>Method under test: {@link TaposException#TaposException(String, Throwable)}
    */
   @Test
   @Category(MaintainedByDiffblue.class)

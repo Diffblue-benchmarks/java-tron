@@ -8,6 +8,7 @@ import com.diffblue.cover.annotations.MethodsUnderTest;
 import java.io.IOException;
 import javax.servlet.http.HttpServletRequest;
 import javax.servlet.http.HttpServletResponse;
+import javax.servlet.http.HttpServletResponseWrapper;
 import org.junit.Test;
 import org.junit.experimental.categories.Category;
 import org.junit.runner.RunWith;
@@ -17,52 +18,63 @@ import org.mockito.Mockito;
 import org.mockito.junit.MockitoJUnitRunner;
 import org.springframework.mock.web.MockHttpServletRequest;
 import org.springframework.mock.web.MockHttpServletResponse;
+import org.tron.common.utils.client.utils.HttpMethed;
 import org.tron.core.services.filter.CharResponseWrapper;
 import org.tron.core.services.interfaceOnPBFT.WalletOnPBFT;
 
 @RunWith(MockitoJUnitRunner.class)
 public class GetDelegatedResourceV2OnPBFTServletDiffblueTest {
-  @InjectMocks
-  private GetDelegatedResourceV2OnPBFTServlet getDelegatedResourceV2OnPBFTServlet;
+  @InjectMocks private GetDelegatedResourceV2OnPBFTServlet getDelegatedResourceV2OnPBFTServlet;
 
-  @Mock
-  private WalletOnPBFT walletOnPBFT;
+  @Mock private WalletOnPBFT walletOnPBFT;
 
   /**
-   * Test {@link GetDelegatedResourceV2OnPBFTServlet#doGet(HttpServletRequest, HttpServletResponse)}.
-   * <p>
-   * Method under test: {@link GetDelegatedResourceV2OnPBFTServlet#doGet(HttpServletRequest, HttpServletResponse)}
+   * Test {@link GetDelegatedResourceV2OnPBFTServlet#doGet(HttpServletRequest,
+   * HttpServletResponse)}.
+   *
+   * <p>Method under test: {@link GetDelegatedResourceV2OnPBFTServlet#doGet(HttpServletRequest,
+   * HttpServletResponse)}
    */
   @Test
   @Category(MaintainedByDiffblue.class)
-  @MethodsUnderTest({"void GetDelegatedResourceV2OnPBFTServlet.doGet(HttpServletRequest, HttpServletResponse)"})
+  @MethodsUnderTest({
+    "void GetDelegatedResourceV2OnPBFTServlet.doGet(HttpServletRequest, HttpServletResponse)"
+  })
   public void testDoGet() throws IOException {
     // Arrange
     doNothing().when(walletOnPBFT).futureGet(Mockito.<Runnable>any());
-    MockHttpServletRequest request = new MockHttpServletRequest();
+    MockHttpServletRequest request = HttpMethed.createRequest("https://example.org/example");
 
     // Act
-    getDelegatedResourceV2OnPBFTServlet.doGet(request, new CharResponseWrapper(new MockHttpServletResponse()));
+    getDelegatedResourceV2OnPBFTServlet.doGet(
+        request,
+        new HttpServletResponseWrapper(new CharResponseWrapper(new MockHttpServletResponse())));
 
     // Assert
     verify(walletOnPBFT).futureGet(isA(Runnable.class));
   }
 
   /**
-   * Test {@link GetDelegatedResourceV2OnPBFTServlet#doPost(HttpServletRequest, HttpServletResponse)}.
-   * <p>
-   * Method under test: {@link GetDelegatedResourceV2OnPBFTServlet#doPost(HttpServletRequest, HttpServletResponse)}
+   * Test {@link GetDelegatedResourceV2OnPBFTServlet#doPost(HttpServletRequest,
+   * HttpServletResponse)}.
+   *
+   * <p>Method under test: {@link GetDelegatedResourceV2OnPBFTServlet#doPost(HttpServletRequest,
+   * HttpServletResponse)}
    */
   @Test
   @Category(MaintainedByDiffblue.class)
-  @MethodsUnderTest({"void GetDelegatedResourceV2OnPBFTServlet.doPost(HttpServletRequest, HttpServletResponse)"})
+  @MethodsUnderTest({
+    "void GetDelegatedResourceV2OnPBFTServlet.doPost(HttpServletRequest, HttpServletResponse)"
+  })
   public void testDoPost() throws IOException {
     // Arrange
     doNothing().when(walletOnPBFT).futureGet(Mockito.<Runnable>any());
-    MockHttpServletRequest request = new MockHttpServletRequest();
+    MockHttpServletRequest request = HttpMethed.createRequest("https://example.org/example");
 
     // Act
-    getDelegatedResourceV2OnPBFTServlet.doPost(request, new CharResponseWrapper(new MockHttpServletResponse()));
+    getDelegatedResourceV2OnPBFTServlet.doPost(
+        request,
+        new HttpServletResponseWrapper(new CharResponseWrapper(new MockHttpServletResponse())));
 
     // Assert
     verify(walletOnPBFT).futureGet(isA(Runnable.class));

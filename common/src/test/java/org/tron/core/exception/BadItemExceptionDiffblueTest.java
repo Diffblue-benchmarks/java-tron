@@ -11,16 +11,20 @@ import org.junit.experimental.categories.Category;
 public class BadItemExceptionDiffblueTest {
   /**
    * Test {@link BadItemException#BadItemException()}.
+   *
    * <ul>
-   *   <li>Then return Message is {@code null}.</li>
+   *   <li>Then return Message is {@code null}.
    * </ul>
-   * <p>
-   * Method under test: {@link BadItemException#BadItemException()}
+   *
+   * <p>Method under test: {@link BadItemException#BadItemException()}
    */
   @Test
   @Category(MaintainedByDiffblue.class)
-  @MethodsUnderTest({"void BadItemException.<init>()", "void BadItemException.<init>(String)",
-      "void BadItemException.<init>(String, Throwable)"})
+  @MethodsUnderTest({
+    "void BadItemException.<init>()",
+    "void BadItemException.<init>(String)",
+    "void BadItemException.<init>(String, Throwable)"
+  })
   public void testNewBadItemException_thenReturnMessageIsNull() {
     // Arrange and Act
     BadItemException actualBadItemException = new BadItemException();
@@ -33,17 +37,21 @@ public class BadItemExceptionDiffblueTest {
 
   /**
    * Test {@link BadItemException#BadItemException(String)}.
+   *
    * <ul>
-   *   <li>When {@code An error occurred}.</li>
-   *   <li>Then return Message is {@code An error occurred}.</li>
+   *   <li>When {@code An error occurred}.
+   *   <li>Then return Message is {@code An error occurred}.
    * </ul>
-   * <p>
-   * Method under test: {@link BadItemException#BadItemException(String)}
+   *
+   * <p>Method under test: {@link BadItemException#BadItemException(String)}
    */
   @Test
   @Category(MaintainedByDiffblue.class)
-  @MethodsUnderTest({"void BadItemException.<init>()", "void BadItemException.<init>(String)",
-      "void BadItemException.<init>(String, Throwable)"})
+  @MethodsUnderTest({
+    "void BadItemException.<init>()",
+    "void BadItemException.<init>(String)",
+    "void BadItemException.<init>(String, Throwable)"
+  })
   public void testNewBadItemException_whenAnErrorOccurred_thenReturnMessageIsAnErrorOccurred() {
     // Arrange and Act
     BadItemException actualBadItemException = new BadItemException("An error occurred");
@@ -56,17 +64,21 @@ public class BadItemExceptionDiffblueTest {
 
   /**
    * Test {@link BadItemException#BadItemException(String, Throwable)}.
+   *
    * <ul>
-   *   <li>When {@link Throwable#Throwable()}.</li>
-   *   <li>Then return Cause is {@link Throwable#Throwable()}.</li>
+   *   <li>When {@link Throwable#Throwable()}.
+   *   <li>Then return Cause is {@link Throwable#Throwable()}.
    * </ul>
-   * <p>
-   * Method under test: {@link BadItemException#BadItemException(String, Throwable)}
+   *
+   * <p>Method under test: {@link BadItemException#BadItemException(String, Throwable)}
    */
   @Test
   @Category(MaintainedByDiffblue.class)
-  @MethodsUnderTest({"void BadItemException.<init>()", "void BadItemException.<init>(String)",
-      "void BadItemException.<init>(String, Throwable)"})
+  @MethodsUnderTest({
+    "void BadItemException.<init>()",
+    "void BadItemException.<init>(String)",
+    "void BadItemException.<init>(String, Throwable)"
+  })
   public void testNewBadItemException_whenThrowable_thenReturnCauseIsThrowable() {
     // Arrange
     Throwable cause = new Throwable();

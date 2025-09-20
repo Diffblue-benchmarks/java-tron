@@ -21,19 +21,19 @@ import org.tron.core.db.CommonStore;
 
 @RunWith(MockitoJUnitRunner.class)
 public class NodePersistServiceDiffblueTest {
-  @Mock
-  private CommonStore commonStore;
+  @Mock private CommonStore commonStore;
 
-  @InjectMocks
-  private NodePersistService nodePersistService;
+  @InjectMocks private NodePersistService nodePersistService;
 
   /**
    * Test {@link NodePersistService#dbRead()}.
+   *
    * <ul>
-   *   <li>Given {@link CommonStore} {@link CommonStore#get(byte[])} return {@link BytesCapsule#BytesCapsule(byte[])} with bytes is {@code AXAXAXAX} Bytes is {@code UTF-8}.</li>
+   *   <li>Given {@link CommonStore} {@link CommonStore#get(byte[])} return {@link
+   *       BytesCapsule#BytesCapsule(byte[])} with bytes is {@code AXAXAXAX} Bytes is {@code UTF-8}.
    * </ul>
-   * <p>
-   * Method under test: {@link NodePersistService#dbRead()}
+   *
+   * <p>Method under test: {@link NodePersistService#dbRead()}
    */
   @Test
   @Category(MaintainedByDiffblue.class)
@@ -41,7 +41,8 @@ public class NodePersistServiceDiffblueTest {
   public void testDbRead_givenCommonStoreGetReturnBytesCapsuleWithBytesIsAxaxaxaxBytesIsUtf8()
       throws UnsupportedEncodingException {
     // Arrange
-    when(commonStore.get(Mockito.<byte[]>any())).thenReturn(new BytesCapsule("AXAXAXAX".getBytes("UTF-8")));
+    when(commonStore.get(Mockito.<byte[]>any()))
+        .thenReturn(new BytesCapsule("AXAXAXAX".getBytes("UTF-8")));
 
     // Act
     List<InetSocketAddress> actualDbReadResult = nodePersistService.dbRead();
@@ -53,18 +54,21 @@ public class NodePersistServiceDiffblueTest {
 
   /**
    * Test {@link NodePersistService#dbRead()}.
+   *
    * <ul>
-   *   <li>Given {@link CommonStore} {@link CommonStore#get(byte[])} return {@link BytesCapsule#BytesCapsule(byte[])} with bytes is empty array of {@code byte}.</li>
+   *   <li>Given {@link CommonStore} {@link CommonStore#get(byte[])} return {@link
+   *       BytesCapsule#BytesCapsule(byte[])} with bytes is empty array of {@code byte}.
    * </ul>
-   * <p>
-   * Method under test: {@link NodePersistService#dbRead()}
+   *
+   * <p>Method under test: {@link NodePersistService#dbRead()}
    */
   @Test
   @Category(MaintainedByDiffblue.class)
   @MethodsUnderTest({"List NodePersistService.dbRead()"})
   public void testDbRead_givenCommonStoreGetReturnBytesCapsuleWithBytesIsEmptyArrayOfByte() {
     // Arrange
-    when(commonStore.get(Mockito.<byte[]>any())).thenReturn(new BytesCapsule(new byte[]{}));
+    BytesCapsule bytesCapsule = new BytesCapsule(new byte[] {});
+    when(commonStore.get(Mockito.<byte[]>any())).thenReturn(bytesCapsule);
 
     // Act
     List<InetSocketAddress> actualDbReadResult = nodePersistService.dbRead();
@@ -76,11 +80,12 @@ public class NodePersistServiceDiffblueTest {
 
   /**
    * Test {@link NodePersistService#dbRead()}.
+   *
    * <ul>
-   *   <li>Given {@link CommonStore} {@link CommonStore#get(byte[])} return {@code null}.</li>
+   *   <li>Given {@link CommonStore} {@link CommonStore#get(byte[])} return {@code null}.
    * </ul>
-   * <p>
-   * Method under test: {@link NodePersistService#dbRead()}
+   *
+   * <p>Method under test: {@link NodePersistService#dbRead()}
    */
   @Test
   @Category(MaintainedByDiffblue.class)
@@ -88,6 +93,31 @@ public class NodePersistServiceDiffblueTest {
   public void testDbRead_givenCommonStoreGetReturnNull() {
     // Arrange
     when(commonStore.get(Mockito.<byte[]>any())).thenReturn(null);
+
+    // Act
+    List<InetSocketAddress> actualDbReadResult = nodePersistService.dbRead();
+
+    // Assert
+    verify(commonStore).get(isA(byte[].class));
+    assertTrue(actualDbReadResult.isEmpty());
+  }
+
+  /**
+   * Test {@link NodePersistService#dbRead()}.
+   *
+   * <ul>
+   *   <li>Given {@link CommonStore} {@link CommonStore#get(byte[])} throw {@link
+   *       RuntimeException#RuntimeException()}.
+   * </ul>
+   *
+   * <p>Method under test: {@link NodePersistService#dbRead()}
+   */
+  @Test
+  @Category(MaintainedByDiffblue.class)
+  @MethodsUnderTest({"List NodePersistService.dbRead()"})
+  public void testDbRead_givenCommonStoreGetThrowRuntimeException() {
+    // Arrange
+    when(commonStore.get(Mockito.<byte[]>any())).thenThrow(new RuntimeException());
 
     // Act
     List<InetSocketAddress> actualDbReadResult = nodePersistService.dbRead();

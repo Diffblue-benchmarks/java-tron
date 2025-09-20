@@ -6,7 +6,6 @@ import static org.junit.Assert.assertNull;
 import static org.junit.Assert.assertTrue;
 import com.diffblue.cover.annotations.MaintainedByDiffblue;
 import com.diffblue.cover.annotations.MethodsUnderTest;
-import java.io.IOException;
 import org.iq80.leveldb.CompressionType;
 import org.iq80.leveldb.Options;
 import org.junit.Test;
@@ -14,85 +13,9 @@ import org.junit.experimental.categories.Category;
 
 public class ArchiveManifestDiffblueTest {
   /**
-   * Test {@link ArchiveManifest#ArchiveManifest(String, String, int, int)}.
-   * <ul>
-   *   <li>When minus one.</li>
-   * </ul>
-   * <p>
-   * Method under test: {@link ArchiveManifest#ArchiveManifest(String, String, int, int)}
-   */
-  @Test
-  @Category(MaintainedByDiffblue.class)
-  @MethodsUnderTest({"void ArchiveManifest.<init>(String, String, int, int)"})
-  public void testNewArchiveManifest_whenMinusOne() throws Exception {
-    // Arrange and Act
-    ArchiveManifest actualArchiveManifest = new ArchiveManifest("Src", "Name", -1, 0);
-
-    // Assert
-    assertFalse(actualArchiveManifest.checkEngine());
-    assertTrue(actualArchiveManifest.call());
-    assertTrue(actualArchiveManifest.doArchive());
-  }
-
-  /**
-   * Test {@link ArchiveManifest#ArchiveManifest(String, String, int, int)}.
-   * <ul>
-   *   <li>When three.</li>
-   * </ul>
-   * <p>
-   * Method under test: {@link ArchiveManifest#ArchiveManifest(String, String, int, int)}
-   */
-  @Test
-  @Category(MaintainedByDiffblue.class)
-  @MethodsUnderTest({"void ArchiveManifest.<init>(String, String, int, int)"})
-  public void testNewArchiveManifest_whenThree() throws Exception {
-    // Arrange and Act
-    ArchiveManifest actualArchiveManifest = new ArchiveManifest("Src", "Name", 3, 3);
-
-    // Assert
-    assertFalse(actualArchiveManifest.checkEngine());
-    assertTrue(actualArchiveManifest.call());
-    assertTrue(actualArchiveManifest.doArchive());
-  }
-
-  /**
-   * Test {@link ArchiveManifest#ArchiveManifest(String, String, int, int)}.
-   * <ul>
-   *   <li>When zero.</li>
-   * </ul>
-   * <p>
-   * Method under test: {@link ArchiveManifest#ArchiveManifest(String, String, int, int)}
-   */
-  @Test
-  @Category(MaintainedByDiffblue.class)
-  @MethodsUnderTest({"void ArchiveManifest.<init>(String, String, int, int)"})
-  public void testNewArchiveManifest_whenZero() throws Exception {
-    // Arrange and Act
-    ArchiveManifest actualArchiveManifest = new ArchiveManifest("Src", "Name", 0, -1);
-
-    // Assert
-    assertFalse(actualArchiveManifest.checkEngine());
-    assertTrue(actualArchiveManifest.call());
-    assertTrue(actualArchiveManifest.doArchive());
-  }
-
-  /**
-   * Test {@link ArchiveManifest#call()}.
-   * <p>
-   * Method under test: {@link ArchiveManifest#call()}
-   */
-  @Test
-  @Category(MaintainedByDiffblue.class)
-  @MethodsUnderTest({"java.lang.Boolean ArchiveManifest.call()"})
-  public void testCall() throws Exception {
-    // Arrange, Act and Assert
-    assertTrue((new ArchiveManifest("Src", "Name", 3, 3)).call());
-  }
-
-  /**
    * Test {@link ArchiveManifest#newDefaultLevelDbOptions()}.
-   * <p>
-   * Method under test: {@link ArchiveManifest#newDefaultLevelDbOptions()}
+   *
+   * <p>Method under test: {@link ArchiveManifest#newDefaultLevelDbOptions()}
    */
   @Test
   @Category(MaintainedByDiffblue.class)
@@ -119,54 +42,38 @@ public class ArchiveManifestDiffblueTest {
   }
 
   /**
-   * Test {@link ArchiveManifest#checkManifest(String)}.
-   * <p>
-   * Method under test: {@link ArchiveManifest#checkManifest(String)}
-   */
-  @Test
-  @Category(MaintainedByDiffblue.class)
-  @MethodsUnderTest({"boolean ArchiveManifest.checkManifest(String)"})
-  public void testCheckManifest() throws IOException {
-    // Arrange, Act and Assert
-    assertFalse((new ArchiveManifest("Src", "Name", 3, 3)).checkManifest("Dir"));
-  }
-
-  /**
-   * Test {@link ArchiveManifest#doArchive()}.
-   * <p>
-   * Method under test: {@link ArchiveManifest#doArchive()}
-   */
-  @Test
-  @Category(MaintainedByDiffblue.class)
-  @MethodsUnderTest({"boolean ArchiveManifest.doArchive()"})
-  public void testDoArchive() throws IOException {
-    // Arrange, Act and Assert
-    assertTrue((new ArchiveManifest("Src", "Name", 3, 3)).doArchive());
-  }
-
-  /**
-   * Test {@link ArchiveManifest#checkEngine()}.
-   * <p>
-   * Method under test: {@link ArchiveManifest#checkEngine()}
-   */
-  @Test
-  @Category(MaintainedByDiffblue.class)
-  @MethodsUnderTest({"boolean ArchiveManifest.checkEngine()"})
-  public void testCheckEngine() {
-    // Arrange, Act and Assert
-    assertFalse((new ArchiveManifest("Src", "Name", 3, 3)).checkEngine());
-  }
-
-  /**
    * Test {@link ArchiveManifest#readProperty(String, String)}.
-   * <p>
-   * Method under test: {@link ArchiveManifest#readProperty(String, String)}
+   *
+   * <ul>
+   *   <li>When empty string.
+   *   <li>Then return empty string.
+   * </ul>
+   *
+   * <p>Method under test: {@link ArchiveManifest#readProperty(String, String)}
    */
   @Test
   @Category(MaintainedByDiffblue.class)
   @MethodsUnderTest({"String ArchiveManifest.readProperty(String, String)"})
-  public void testReadProperty() {
+  public void testReadProperty_whenEmptyString_thenReturnEmptyString() {
     // Arrange, Act and Assert
-    assertEquals("", ArchiveManifest.readProperty("File", "Key"));
+    assertEquals("", ArchiveManifest.readProperty("", "Key"));
+  }
+
+  /**
+   * Test {@link ArchiveManifest#readProperty(String, String)}.
+   *
+   * <ul>
+   *   <li>When {@code null}.
+   *   <li>Then return empty string.
+   * </ul>
+   *
+   * <p>Method under test: {@link ArchiveManifest#readProperty(String, String)}
+   */
+  @Test
+  @Category(MaintainedByDiffblue.class)
+  @MethodsUnderTest({"String ArchiveManifest.readProperty(String, String)"})
+  public void testReadProperty_whenNull_thenReturnEmptyString() {
+    // Arrange, Act and Assert
+    assertEquals("", ArchiveManifest.readProperty("File", null));
   }
 }

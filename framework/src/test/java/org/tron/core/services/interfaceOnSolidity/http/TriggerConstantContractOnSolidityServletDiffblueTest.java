@@ -8,6 +8,7 @@ import com.diffblue.cover.annotations.MethodsUnderTest;
 import java.io.IOException;
 import javax.servlet.http.HttpServletRequest;
 import javax.servlet.http.HttpServletResponse;
+import javax.servlet.http.HttpServletResponseWrapper;
 import org.junit.Test;
 import org.junit.experimental.categories.Category;
 import org.junit.runner.RunWith;
@@ -17,6 +18,7 @@ import org.mockito.Mockito;
 import org.mockito.junit.MockitoJUnitRunner;
 import org.springframework.mock.web.MockHttpServletRequest;
 import org.springframework.mock.web.MockHttpServletResponse;
+import org.tron.common.utils.client.utils.HttpMethed;
 import org.tron.core.services.filter.CharResponseWrapper;
 import org.tron.core.services.interfaceOnSolidity.WalletOnSolidity;
 
@@ -25,44 +27,55 @@ public class TriggerConstantContractOnSolidityServletDiffblueTest {
   @InjectMocks
   private TriggerConstantContractOnSolidityServlet triggerConstantContractOnSolidityServlet;
 
-  @Mock
-  private WalletOnSolidity walletOnSolidity;
+  @Mock private WalletOnSolidity walletOnSolidity;
 
   /**
-   * Test {@link TriggerConstantContractOnSolidityServlet#doGet(HttpServletRequest, HttpServletResponse)}.
-   * <p>
-   * Method under test: {@link TriggerConstantContractOnSolidityServlet#doGet(HttpServletRequest, HttpServletResponse)}
+   * Test {@link TriggerConstantContractOnSolidityServlet#doGet(HttpServletRequest,
+   * HttpServletResponse)}.
+   *
+   * <p>Method under test: {@link TriggerConstantContractOnSolidityServlet#doGet(HttpServletRequest,
+   * HttpServletResponse)}
    */
   @Test
   @Category(MaintainedByDiffblue.class)
-  @MethodsUnderTest({"void TriggerConstantContractOnSolidityServlet.doGet(HttpServletRequest, HttpServletResponse)"})
+  @MethodsUnderTest({
+    "void TriggerConstantContractOnSolidityServlet.doGet(HttpServletRequest, HttpServletResponse)"
+  })
   public void testDoGet() throws IOException {
     // Arrange
     doNothing().when(walletOnSolidity).futureGet(Mockito.<Runnable>any());
-    MockHttpServletRequest request = new MockHttpServletRequest();
+    MockHttpServletRequest request = HttpMethed.createRequest("https://example.org/example");
 
     // Act
-    triggerConstantContractOnSolidityServlet.doGet(request, new CharResponseWrapper(new MockHttpServletResponse()));
+    triggerConstantContractOnSolidityServlet.doGet(
+        request,
+        new HttpServletResponseWrapper(new CharResponseWrapper(new MockHttpServletResponse())));
 
     // Assert
     verify(walletOnSolidity).futureGet(isA(Runnable.class));
   }
 
   /**
-   * Test {@link TriggerConstantContractOnSolidityServlet#doPost(HttpServletRequest, HttpServletResponse)}.
-   * <p>
-   * Method under test: {@link TriggerConstantContractOnSolidityServlet#doPost(HttpServletRequest, HttpServletResponse)}
+   * Test {@link TriggerConstantContractOnSolidityServlet#doPost(HttpServletRequest,
+   * HttpServletResponse)}.
+   *
+   * <p>Method under test: {@link
+   * TriggerConstantContractOnSolidityServlet#doPost(HttpServletRequest, HttpServletResponse)}
    */
   @Test
   @Category(MaintainedByDiffblue.class)
-  @MethodsUnderTest({"void TriggerConstantContractOnSolidityServlet.doPost(HttpServletRequest, HttpServletResponse)"})
+  @MethodsUnderTest({
+    "void TriggerConstantContractOnSolidityServlet.doPost(HttpServletRequest, HttpServletResponse)"
+  })
   public void testDoPost() throws IOException {
     // Arrange
     doNothing().when(walletOnSolidity).futureGet(Mockito.<Runnable>any());
-    MockHttpServletRequest request = new MockHttpServletRequest();
+    MockHttpServletRequest request = HttpMethed.createRequest("https://example.org/example");
 
     // Act
-    triggerConstantContractOnSolidityServlet.doPost(request, new CharResponseWrapper(new MockHttpServletResponse()));
+    triggerConstantContractOnSolidityServlet.doPost(
+        request,
+        new HttpServletResponseWrapper(new CharResponseWrapper(new MockHttpServletResponse())));
 
     // Assert
     verify(walletOnSolidity).futureGet(isA(Runnable.class));

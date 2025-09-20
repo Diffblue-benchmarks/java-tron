@@ -9,12 +9,13 @@ import org.junit.experimental.categories.Category;
 public class StrictMathWrapperDiffblueTest {
   /**
    * Test {@link StrictMathWrapper#pow(double, double)}.
+   *
    * <ul>
-   *   <li>When {@code 0.5}.</li>
-   *   <li>Then return {@code 9.765625E-4}.</li>
+   *   <li>When {@code 0.5}.
+   *   <li>Then return {@code 9.765625E-4}.
    * </ul>
-   * <p>
-   * Method under test: {@link StrictMathWrapper#pow(double, double)}
+   *
+   * <p>Method under test: {@link StrictMathWrapper#pow(double, double)}
    */
   @Test
   @Category(MaintainedByDiffblue.class)
@@ -26,12 +27,13 @@ public class StrictMathWrapperDiffblueTest {
 
   /**
    * Test {@link StrictMathWrapper#pow(double, double)}.
+   *
    * <ul>
-   *   <li>When {@code -0.5}.</li>
-   *   <li>Then return {@code 9.765625E-4}.</li>
+   *   <li>When {@code -0.5}.
+   *   <li>Then return {@code 9.765625E-4}.
    * </ul>
-   * <p>
-   * Method under test: {@link StrictMathWrapper#pow(double, double)}
+   *
+   * <p>Method under test: {@link StrictMathWrapper#pow(double, double)}
    */
   @Test
   @Category(MaintainedByDiffblue.class)
@@ -43,12 +45,13 @@ public class StrictMathWrapperDiffblueTest {
 
   /**
    * Test {@link StrictMathWrapper#pow(double, double)}.
+   *
    * <ul>
-   *   <li>When {@link Double#NaN}.</li>
-   *   <li>Then return {@link Double#NaN}.</li>
+   *   <li>When {@link Double#NaN}.
+   *   <li>Then return {@link Double#NaN}.
    * </ul>
-   * <p>
-   * Method under test: {@link StrictMathWrapper#pow(double, double)}
+   *
+   * <p>Method under test: {@link StrictMathWrapper#pow(double, double)}
    */
   @Test
   @Category(MaintainedByDiffblue.class)
@@ -60,12 +63,13 @@ public class StrictMathWrapperDiffblueTest {
 
   /**
    * Test {@link StrictMathWrapper#pow(double, double)}.
+   *
    * <ul>
-   *   <li>When ten.</li>
-   *   <li>Then return {@code 1.0E10}.</li>
+   *   <li>When ten.
+   *   <li>Then return {@code 1.0E10}.
    * </ul>
-   * <p>
-   * Method under test: {@link StrictMathWrapper#pow(double, double)}
+   *
+   * <p>Method under test: {@link StrictMathWrapper#pow(double, double)}
    */
   @Test
   @Category(MaintainedByDiffblue.class)

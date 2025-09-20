@@ -11,8 +11,8 @@ import org.junit.experimental.categories.Category;
 public class NonUniqueObjectExceptionDiffblueTest {
   /**
    * Test {@link NonUniqueObjectException#NonUniqueObjectException()}.
-   * <p>
-   * Method under test: {@link NonUniqueObjectException#NonUniqueObjectException()}
+   *
+   * <p>Method under test: {@link NonUniqueObjectException#NonUniqueObjectException()}
    */
   @Test
   @Category(MaintainedByDiffblue.class)
@@ -30,8 +30,8 @@ public class NonUniqueObjectExceptionDiffblueTest {
 
   /**
    * Test {@link NonUniqueObjectException#NonUniqueObjectException(String)}.
-   * <p>
-   * Method under test: {@link NonUniqueObjectException#NonUniqueObjectException(String)}
+   *
+   * <p>Method under test: {@link NonUniqueObjectException#NonUniqueObjectException(String)}
    */
   @Test
   @Category(MaintainedByDiffblue.class)
@@ -49,8 +49,9 @@ public class NonUniqueObjectExceptionDiffblueTest {
 
   /**
    * Test {@link NonUniqueObjectException#NonUniqueObjectException(String, Throwable)}.
-   * <p>
-   * Method under test: {@link NonUniqueObjectException#NonUniqueObjectException(String, Throwable)}
+   *
+   * <p>Method under test: {@link NonUniqueObjectException#NonUniqueObjectException(String,
+   * Throwable)}
    */
   @Test
   @Category(MaintainedByDiffblue.class)
@@ -60,7 +61,8 @@ public class NonUniqueObjectExceptionDiffblueTest {
     Throwable cause = new Throwable();
 
     // Act
-    NonUniqueObjectException actualNonUniqueObjectException = new NonUniqueObjectException("An error occurred", cause);
+    NonUniqueObjectException actualNonUniqueObjectException =
+        new NonUniqueObjectException("An error occurred", cause);
 
     // Assert
     assertEquals("An error occurred", actualNonUniqueObjectException.getLocalizedMessage());
@@ -71,8 +73,8 @@ public class NonUniqueObjectExceptionDiffblueTest {
 
   /**
    * Test {@link NonUniqueObjectException#NonUniqueObjectException(Throwable)}.
-   * <p>
-   * Method under test: {@link NonUniqueObjectException#NonUniqueObjectException(Throwable)}
+   *
+   * <p>Method under test: {@link NonUniqueObjectException#NonUniqueObjectException(Throwable)}
    */
   @Test
   @Category(MaintainedByDiffblue.class)

@@ -19,29 +19,50 @@ import org.tron.core.exception.JsonRpcInvalidParamsException;
 public class ByteArrayDiffblueTest {
   /**
    * Test {@link ByteArray#toHexString(byte[])}.
+   *
    * <ul>
-   *   <li>When {@code AXAXAXAX} Bytes is {@code UTF-8}.</li>
-   *   <li>Then return {@code 4158415841584158}.</li>
+   *   <li>When {@code AXAXAXAX} Bytes is {@code UTF-8}.
+   *   <li>Then return {@code 4158415841584158}.
    * </ul>
-   * <p>
-   * Method under test: {@link ByteArray#toHexString(byte[])}
+   *
+   * <p>Method under test: {@link ByteArray#toHexString(byte[])}
    */
   @Test
   @Category(MaintainedByDiffblue.class)
   @MethodsUnderTest({"String ByteArray.toHexString(byte[])"})
-  public void testToHexString_whenAxaxaxaxBytesIsUtf8_thenReturn4158415841584158() throws UnsupportedEncodingException {
+  public void testToHexString_whenAxaxaxaxBytesIsUtf8_thenReturn4158415841584158()
+      throws UnsupportedEncodingException {
     // Arrange, Act and Assert
     assertEquals("4158415841584158", ByteArray.toHexString("AXAXAXAX".getBytes("UTF-8")));
   }
 
   /**
    * Test {@link ByteArray#toHexString(byte[])}.
+   *
    * <ul>
-   *   <li>When {@code null}.</li>
-   *   <li>Then return empty string.</li>
+   *   <li>When empty array of {@code byte}.
+   *   <li>Then return empty string.
    * </ul>
-   * <p>
-   * Method under test: {@link ByteArray#toHexString(byte[])}
+   *
+   * <p>Method under test: {@link ByteArray#toHexString(byte[])}
+   */
+  @Test
+  @Category(MaintainedByDiffblue.class)
+  @MethodsUnderTest({"String ByteArray.toHexString(byte[])"})
+  public void testToHexString_whenEmptyArrayOfByte_thenReturnEmptyString() {
+    // Arrange, Act and Assert
+    assertEquals("", ByteArray.toHexString(new byte[] {}));
+  }
+
+  /**
+   * Test {@link ByteArray#toHexString(byte[])}.
+   *
+   * <ul>
+   *   <li>When {@code null}.
+   *   <li>Then return empty string.
+   * </ul>
+   *
+   * <p>Method under test: {@link ByteArray#toHexString(byte[])}
    */
   @Test
   @Category(MaintainedByDiffblue.class)
@@ -52,115 +73,107 @@ public class ByteArrayDiffblueTest {
   }
 
   /**
-   * Test {@link ByteArray#toHexString(byte[])}.
-   * <ul>
-   *   <li>When {@code XXAXAXAX} Bytes is {@code UTF-8}.</li>
-   *   <li>Then return {@code 5858415841584158}.</li>
-   * </ul>
-   * <p>
-   * Method under test: {@link ByteArray#toHexString(byte[])}
-   */
-  @Test
-  @Category(MaintainedByDiffblue.class)
-  @MethodsUnderTest({"String ByteArray.toHexString(byte[])"})
-  public void testToHexString_whenXxaxaxaxBytesIsUtf8_thenReturn5858415841584158() throws UnsupportedEncodingException {
-    // Arrange, Act and Assert
-    assertEquals("5858415841584158", ByteArray.toHexString("XXAXAXAX".getBytes("UTF-8")));
-  }
-
-  /**
    * Test {@link ByteArray#fromHexString(String)}.
+   *
    * <ul>
-   *   <li>When {@code 0x}.</li>
-   *   <li>Then return empty array of {@code byte}.</li>
+   *   <li>When {@code 0x}.
+   *   <li>Then return empty array of {@code byte}.
    * </ul>
-   * <p>
-   * Method under test: {@link ByteArray#fromHexString(String)}
+   *
+   * <p>Method under test: {@link ByteArray#fromHexString(String)}
    */
   @Test
   @Category(MaintainedByDiffblue.class)
   @MethodsUnderTest({"byte[] ByteArray.fromHexString(String)"})
   public void testFromHexString_when0x_thenReturnEmptyArrayOfByte() {
     // Arrange, Act and Assert
-    assertArrayEquals(new byte[]{}, ByteArray.fromHexString("0x"));
+    assertArrayEquals(new byte[] {}, ByteArray.fromHexString("0x"));
   }
 
   /**
    * Test {@link ByteArray#fromHexString(String)}.
+   *
    * <ul>
-   *   <li>When {@code 0123456789ABCDEF}.</li>
-   *   <li>Then return array of {@code byte} with one and {@code #}.</li>
+   *   <li>When {@code 0123456789ABCDEF}.
+   *   <li>Then return array of {@code byte} with one and {@code #}.
    * </ul>
-   * <p>
-   * Method under test: {@link ByteArray#fromHexString(String)}
+   *
+   * <p>Method under test: {@link ByteArray#fromHexString(String)}
    */
   @Test
   @Category(MaintainedByDiffblue.class)
   @MethodsUnderTest({"byte[] ByteArray.fromHexString(String)"})
   public void testFromHexString_when0123456789abcdef_thenReturnArrayOfByteWithOneAndNumberSign() {
     // Arrange, Act and Assert
-    assertArrayEquals(new byte[]{1, '#', 'E', 'g', -119, -85, -51, -17}, ByteArray.fromHexString("0123456789ABCDEF"));
+    assertArrayEquals(
+        new byte[] {1, '#', 'E', 'g', -119, -85, -51, -17},
+        ByteArray.fromHexString("0123456789ABCDEF"));
   }
 
   /**
    * Test {@link ByteArray#fromHexString(String)}.
+   *
    * <ul>
-   *   <li>When {@code null}.</li>
-   *   <li>Then return empty array of {@code byte}.</li>
+   *   <li>When {@code null}.
+   *   <li>Then return empty array of {@code byte}.
    * </ul>
-   * <p>
-   * Method under test: {@link ByteArray#fromHexString(String)}
+   *
+   * <p>Method under test: {@link ByteArray#fromHexString(String)}
    */
   @Test
   @Category(MaintainedByDiffblue.class)
   @MethodsUnderTest({"byte[] ByteArray.fromHexString(String)"})
   public void testFromHexString_whenNull_thenReturnEmptyArrayOfByte() {
     // Arrange, Act and Assert
-    assertArrayEquals(new byte[]{}, ByteArray.fromHexString(null));
+    assertArrayEquals(new byte[] {}, ByteArray.fromHexString(null));
   }
 
   /**
    * Test {@link ByteArray#toLong(byte[])}.
+   *
    * <ul>
-   *   <li>When {@code AXAXAXAX} Bytes is {@code UTF-8}.</li>
-   *   <li>Then return {@code 4708585257725083992}.</li>
+   *   <li>When {@code AXAXAXAX} Bytes is {@code UTF-8}.
+   *   <li>Then return {@code 4708585257725083992}.
    * </ul>
-   * <p>
-   * Method under test: {@link ByteArray#toLong(byte[])}
+   *
+   * <p>Method under test: {@link ByteArray#toLong(byte[])}
    */
   @Test
   @Category(MaintainedByDiffblue.class)
   @MethodsUnderTest({"long ByteArray.toLong(byte[])"})
-  public void testToLong_whenAxaxaxaxBytesIsUtf8_thenReturn4708585257725083992() throws UnsupportedEncodingException {
+  public void testToLong_whenAxaxaxaxBytesIsUtf8_thenReturn4708585257725083992()
+      throws UnsupportedEncodingException {
     // Arrange, Act and Assert
     assertEquals(4708585257725083992L, ByteArray.toLong("AXAXAXAX".getBytes("UTF-8")));
   }
 
   /**
    * Test {@link ByteArray#toLong(byte[])}.
+   *
    * <ul>
-   *   <li>When empty array of {@code byte}.</li>
-   *   <li>Then return zero.</li>
+   *   <li>When empty array of {@code byte}.
+   *   <li>Then return zero.
    * </ul>
-   * <p>
-   * Method under test: {@link ByteArray#toLong(byte[])}
+   *
+   * <p>Method under test: {@link ByteArray#toLong(byte[])}
    */
   @Test
   @Category(MaintainedByDiffblue.class)
   @MethodsUnderTest({"long ByteArray.toLong(byte[])"})
   public void testToLong_whenEmptyArrayOfByte_thenReturnZero() {
     // Arrange, Act and Assert
-    assertEquals(0L, ByteArray.toLong(new byte[]{}));
+    assertEquals(0L, ByteArray.toLong(new byte[] {}));
   }
 
   /**
    * Test {@link ByteArray#toLong(byte[])}.
+   *
    * <ul>
-   *   <li>When {@code null}.</li>
-   *   <li>Then return zero.</li>
+   *   <li>When {@code null}.
+   *   <li>Then return zero.
    * </ul>
-   * <p>
-   * Method under test: {@link ByteArray#toLong(byte[])}
+   *
+   * <p>Method under test: {@link ByteArray#toLong(byte[])}
    */
   @Test
   @Category(MaintainedByDiffblue.class)
@@ -172,46 +185,50 @@ public class ByteArrayDiffblueTest {
 
   /**
    * Test {@link ByteArray#toInt(byte[])}.
+   *
    * <ul>
-   *   <li>When {@code AXAXAXAX} Bytes is {@code UTF-8}.</li>
-   *   <li>Then return {@code 1096302936}.</li>
+   *   <li>When {@code AXAXAXAX} Bytes is {@code UTF-8}.
+   *   <li>Then return {@code 1096302936}.
    * </ul>
-   * <p>
-   * Method under test: {@link ByteArray#toInt(byte[])}
+   *
+   * <p>Method under test: {@link ByteArray#toInt(byte[])}
    */
   @Test
   @Category(MaintainedByDiffblue.class)
   @MethodsUnderTest({"int ByteArray.toInt(byte[])"})
-  public void testToInt_whenAxaxaxaxBytesIsUtf8_thenReturn1096302936() throws UnsupportedEncodingException {
+  public void testToInt_whenAxaxaxaxBytesIsUtf8_thenReturn1096302936()
+      throws UnsupportedEncodingException {
     // Arrange, Act and Assert
     assertEquals(1096302936, ByteArray.toInt("AXAXAXAX".getBytes("UTF-8")));
   }
 
   /**
    * Test {@link ByteArray#toInt(byte[])}.
+   *
    * <ul>
-   *   <li>When empty array of {@code byte}.</li>
-   *   <li>Then return zero.</li>
+   *   <li>When empty array of {@code byte}.
+   *   <li>Then return zero.
    * </ul>
-   * <p>
-   * Method under test: {@link ByteArray#toInt(byte[])}
+   *
+   * <p>Method under test: {@link ByteArray#toInt(byte[])}
    */
   @Test
   @Category(MaintainedByDiffblue.class)
   @MethodsUnderTest({"int ByteArray.toInt(byte[])"})
   public void testToInt_whenEmptyArrayOfByte_thenReturnZero() {
     // Arrange, Act and Assert
-    assertEquals(0, ByteArray.toInt(new byte[]{}));
+    assertEquals(0, ByteArray.toInt(new byte[] {}));
   }
 
   /**
    * Test {@link ByteArray#toInt(byte[])}.
+   *
    * <ul>
-   *   <li>When {@code null}.</li>
-   *   <li>Then return zero.</li>
+   *   <li>When {@code null}.
+   *   <li>Then return zero.
    * </ul>
-   * <p>
-   * Method under test: {@link ByteArray#toInt(byte[])}
+   *
+   * <p>Method under test: {@link ByteArray#toInt(byte[])}
    */
   @Test
   @Category(MaintainedByDiffblue.class)
@@ -223,12 +240,13 @@ public class ByteArrayDiffblueTest {
 
   /**
    * Test {@link ByteArray#fromString(String)}.
+   *
    * <ul>
-   *   <li>When empty string.</li>
-   *   <li>Then return {@code null}.</li>
+   *   <li>When empty string.
+   *   <li>Then return {@code null}.
    * </ul>
-   * <p>
-   * Method under test: {@link ByteArray#fromString(String)}
+   *
+   * <p>Method under test: {@link ByteArray#fromString(String)}
    */
   @Test
   @Category(MaintainedByDiffblue.class)
@@ -240,32 +258,32 @@ public class ByteArrayDiffblueTest {
 
   /**
    * Test {@link ByteArray#fromString(String)}.
+   *
    * <ul>
-   *   <li>When {@code foo}.</li>
-   *   <li>Then return {@code foo} Bytes is {@code UTF-8}.</li>
+   *   <li>When {@code foo}.
+   *   <li>Then return {@code foo} Bytes is {@code UTF-8}.
    * </ul>
-   * <p>
-   * Method under test: {@link ByteArray#fromString(String)}
+   *
+   * <p>Method under test: {@link ByteArray#fromString(String)}
    */
   @Test
   @Category(MaintainedByDiffblue.class)
   @MethodsUnderTest({"byte[] ByteArray.fromString(String)"})
-  public void testFromString_whenFoo_thenReturnFooBytesIsUtf8() throws UnsupportedEncodingException {
-    // Arrange and Act
-    byte[] actualFromStringResult = ByteArray.fromString("foo");
-
-    // Assert
-    assertArrayEquals("foo".getBytes("UTF-8"), actualFromStringResult);
+  public void testFromString_whenFoo_thenReturnFooBytesIsUtf8()
+      throws UnsupportedEncodingException {
+    // Arrange, Act and Assert
+    assertArrayEquals("foo".getBytes("UTF-8"), ByteArray.fromString("foo"));
   }
 
   /**
    * Test {@link ByteArray#fromString(String)}.
+   *
    * <ul>
-   *   <li>When {@code null}.</li>
-   *   <li>Then return {@code null}.</li>
+   *   <li>When {@code null}.
+   *   <li>Then return {@code null}.
    * </ul>
-   * <p>
-   * Method under test: {@link ByteArray#fromString(String)}
+   *
+   * <p>Method under test: {@link ByteArray#fromString(String)}
    */
   @Test
   @Category(MaintainedByDiffblue.class)
@@ -277,12 +295,13 @@ public class ByteArrayDiffblueTest {
 
   /**
    * Test {@link ByteArray#fromString(String)}.
+   *
    * <ul>
-   *   <li>When space.</li>
-   *   <li>Then return {@code null}.</li>
+   *   <li>When space.
+   *   <li>Then return {@code null}.
    * </ul>
-   * <p>
-   * Method under test: {@link ByteArray#fromString(String)}
+   *
+   * <p>Method under test: {@link ByteArray#fromString(String)}
    */
   @Test
   @Category(MaintainedByDiffblue.class)
@@ -294,46 +313,50 @@ public class ByteArrayDiffblueTest {
 
   /**
    * Test {@link ByteArray#toStr(byte[])}.
+   *
    * <ul>
-   *   <li>When {@code AXAXAXAX} Bytes is {@code UTF-8}.</li>
-   *   <li>Then return {@code AXAXAXAX}.</li>
+   *   <li>When {@code AXAXAXAX} Bytes is {@code UTF-8}.
+   *   <li>Then return {@code AXAXAXAX}.
    * </ul>
-   * <p>
-   * Method under test: {@link ByteArray#toStr(byte[])}
+   *
+   * <p>Method under test: {@link ByteArray#toStr(byte[])}
    */
   @Test
   @Category(MaintainedByDiffblue.class)
   @MethodsUnderTest({"String ByteArray.toStr(byte[])"})
-  public void testToStr_whenAxaxaxaxBytesIsUtf8_thenReturnAxaxaxax() throws UnsupportedEncodingException {
+  public void testToStr_whenAxaxaxaxBytesIsUtf8_thenReturnAxaxaxax()
+      throws UnsupportedEncodingException {
     // Arrange, Act and Assert
     assertEquals("AXAXAXAX", ByteArray.toStr("AXAXAXAX".getBytes("UTF-8")));
   }
 
   /**
    * Test {@link ByteArray#toStr(byte[])}.
+   *
    * <ul>
-   *   <li>When empty array of {@code byte}.</li>
-   *   <li>Then return {@code null}.</li>
+   *   <li>When empty array of {@code byte}.
+   *   <li>Then return {@code null}.
    * </ul>
-   * <p>
-   * Method under test: {@link ByteArray#toStr(byte[])}
+   *
+   * <p>Method under test: {@link ByteArray#toStr(byte[])}
    */
   @Test
   @Category(MaintainedByDiffblue.class)
   @MethodsUnderTest({"String ByteArray.toStr(byte[])"})
   public void testToStr_whenEmptyArrayOfByte_thenReturnNull() {
     // Arrange, Act and Assert
-    assertNull(ByteArray.toStr(new byte[]{}));
+    assertNull(ByteArray.toStr(new byte[] {}));
   }
 
   /**
    * Test {@link ByteArray#toStr(byte[])}.
+   *
    * <ul>
-   *   <li>When {@code null}.</li>
-   *   <li>Then return {@code null}.</li>
+   *   <li>When {@code null}.
+   *   <li>Then return {@code null}.
    * </ul>
-   * <p>
-   * Method under test: {@link ByteArray#toStr(byte[])}
+   *
+   * <p>Method under test: {@link ByteArray#toStr(byte[])}
    */
   @Test
   @Category(MaintainedByDiffblue.class)
@@ -345,51 +368,53 @@ public class ByteArrayDiffblueTest {
 
   /**
    * Test {@link ByteArray#fromLong(long)}.
-   * <p>
-   * Method under test: {@link ByteArray#fromLong(long)}
+   *
+   * <p>Method under test: {@link ByteArray#fromLong(long)}
    */
   @Test
   @Category(MaintainedByDiffblue.class)
   @MethodsUnderTest({"byte[] ByteArray.fromLong(long)"})
   public void testFromLong() {
     // Arrange, Act and Assert
-    assertArrayEquals(new byte[]{0, 0, 0, 0, 0, 0, 0, '*'}, ByteArray.fromLong(42L));
+    assertArrayEquals(new byte[] {0, 0, 0, 0, 0, 0, 0, '*'}, ByteArray.fromLong(42L));
   }
 
   /**
    * Test {@link ByteArray#fromInt(int)}.
-   * <p>
-   * Method under test: {@link ByteArray#fromInt(int)}
+   *
+   * <p>Method under test: {@link ByteArray#fromInt(int)}
    */
   @Test
   @Category(MaintainedByDiffblue.class)
   @MethodsUnderTest({"byte[] ByteArray.fromInt(int)"})
   public void testFromInt() {
     // Arrange, Act and Assert
-    assertArrayEquals(new byte[]{0, 0, 0, '*'}, ByteArray.fromInt(DecodeUtil.ADDRESS_SIZE));
+    assertArrayEquals(new byte[] {0, 0, 0, '*'}, ByteArray.fromInt(DecodeUtil.ADDRESS_SIZE));
   }
 
   /**
    * Test {@link ByteArray#fromObject(Object)}.
-   * <p>
-   * Method under test: {@link ByteArray#fromObject(Object)}
+   *
+   * <p>Method under test: {@link ByteArray#fromObject(Object)}
    */
   @Test
   @Category(MaintainedByDiffblue.class)
   @MethodsUnderTest({"byte[] ByteArray.fromObject(Object)"})
   public void testFromObject() {
     // Arrange, Act and Assert
-    assertArrayEquals(new byte[]{-84, -19, 0, 5, 't', 0, 3, 'O', 'b', 'j'}, ByteArray.fromObject("Obj"));
+    assertArrayEquals(
+        new byte[] {-84, -19, 0, 5, 't', 0, 3, 'O', 'b', 'j'}, ByteArray.fromObject("Obj"));
   }
 
   /**
    * Test {@link ByteArray#toJsonHex(byte[])} with {@code byte[]}.
+   *
    * <ul>
-   *   <li>When {@code AXAXAXAX} Bytes is {@code UTF-8}.</li>
-   *   <li>Then return {@code 0x4158415841584158}.</li>
+   *   <li>When {@code AXAXAXAX} Bytes is {@code UTF-8}.
+   *   <li>Then return {@code 0x4158415841584158}.
    * </ul>
-   * <p>
-   * Method under test: {@link ByteArray#toJsonHex(byte[])}
+   *
+   * <p>Method under test: {@link ByteArray#toJsonHex(byte[])}
    */
   @Test
   @Category(MaintainedByDiffblue.class)
@@ -402,29 +427,31 @@ public class ByteArrayDiffblueTest {
 
   /**
    * Test {@link ByteArray#toJsonHex(byte[])} with {@code byte[]}.
+   *
    * <ul>
-   *   <li>When empty array of {@code byte}.</li>
-   *   <li>Then return {@code 0x}.</li>
+   *   <li>When empty array of {@code byte}.
+   *   <li>Then return {@code 0x}.
    * </ul>
-   * <p>
-   * Method under test: {@link ByteArray#toJsonHex(byte[])}
+   *
+   * <p>Method under test: {@link ByteArray#toJsonHex(byte[])}
    */
   @Test
   @Category(MaintainedByDiffblue.class)
   @MethodsUnderTest({"String ByteArray.toJsonHex(byte[])"})
   public void testToJsonHexWithByte_whenEmptyArrayOfByte_thenReturn0x() {
     // Arrange, Act and Assert
-    assertEquals("0x", ByteArray.toJsonHex(new byte[]{}));
+    assertEquals("0x", ByteArray.toJsonHex(new byte[] {}));
   }
 
   /**
    * Test {@link ByteArray#toJsonHex(byte[])} with {@code byte[]}.
+   *
    * <ul>
-   *   <li>When {@code null}.</li>
-   *   <li>Then return {@code 0x}.</li>
+   *   <li>When {@code null}.
+   *   <li>Then return {@code 0x}.
    * </ul>
-   * <p>
-   * Method under test: {@link ByteArray#toJsonHex(byte[])}
+   *
+   * <p>Method under test: {@link ByteArray#toJsonHex(byte[])}
    */
   @Test
   @Category(MaintainedByDiffblue.class)
@@ -436,8 +463,8 @@ public class ByteArrayDiffblueTest {
 
   /**
    * Test {@link ByteArray#toJsonHex(int)} with {@code int}.
-   * <p>
-   * Method under test: {@link ByteArray#toJsonHex(int)}
+   *
+   * <p>Method under test: {@link ByteArray#toJsonHex(int)}
    */
   @Test
   @Category(MaintainedByDiffblue.class)
@@ -449,12 +476,13 @@ public class ByteArrayDiffblueTest {
 
   /**
    * Test {@link ByteArray#toJsonHex(Long)} with {@code Long}.
+   *
    * <ul>
-   *   <li>When {@code null}.</li>
-   *   <li>Then return {@code null}.</li>
+   *   <li>When {@code null}.
+   *   <li>Then return {@code null}.
    * </ul>
-   * <p>
-   * Method under test: {@link ByteArray#toJsonHex(Long)}
+   *
+   * <p>Method under test: {@link ByteArray#toJsonHex(Long)}
    */
   @Test
   @Category(MaintainedByDiffblue.class)
@@ -466,12 +494,13 @@ public class ByteArrayDiffblueTest {
 
   /**
    * Test {@link ByteArray#toJsonHex(Long)} with {@code Long}.
+   *
    * <ul>
-   *   <li>When one.</li>
-   *   <li>Then return {@code 0x1}.</li>
+   *   <li>When one.
+   *   <li>Then return {@code 0x1}.
    * </ul>
-   * <p>
-   * Method under test: {@link ByteArray#toJsonHex(Long)}
+   *
+   * <p>Method under test: {@link ByteArray#toJsonHex(Long)}
    */
   @Test
   @Category(MaintainedByDiffblue.class)
@@ -483,8 +512,8 @@ public class ByteArrayDiffblueTest {
 
   /**
    * Test {@link ByteArray#toJsonHex(String)} with {@code String}.
-   * <p>
-   * Method under test: {@link ByteArray#toJsonHex(String)}
+   *
+   * <p>Method under test: {@link ByteArray#toJsonHex(String)}
    */
   @Test
   @Category(MaintainedByDiffblue.class)
@@ -496,12 +525,13 @@ public class ByteArrayDiffblueTest {
 
   /**
    * Test {@link ByteArray#toJsonHexAddress(byte[])}.
+   *
    * <ul>
-   *   <li>When {@code AXAXAXAX} Bytes is {@code UTF-8}.</li>
-   *   <li>Then return {@code 0x58415841584158}.</li>
+   *   <li>When {@code AXAXAXAX} Bytes is {@code UTF-8}.
+   *   <li>Then return {@code 0x58415841584158}.
    * </ul>
-   * <p>
-   * Method under test: {@link ByteArray#toJsonHexAddress(byte[])}
+   *
+   * <p>Method under test: {@link ByteArray#toJsonHexAddress(byte[])}
    */
   @Test
   @Category(MaintainedByDiffblue.class)
@@ -514,29 +544,31 @@ public class ByteArrayDiffblueTest {
 
   /**
    * Test {@link ByteArray#toJsonHexAddress(byte[])}.
+   *
    * <ul>
-   *   <li>When empty array of {@code byte}.</li>
-   *   <li>Then return {@code null}.</li>
+   *   <li>When empty array of {@code byte}.
+   *   <li>Then return {@code null}.
    * </ul>
-   * <p>
-   * Method under test: {@link ByteArray#toJsonHexAddress(byte[])}
+   *
+   * <p>Method under test: {@link ByteArray#toJsonHexAddress(byte[])}
    */
   @Test
   @Category(MaintainedByDiffblue.class)
   @MethodsUnderTest({"String ByteArray.toJsonHexAddress(byte[])"})
   public void testToJsonHexAddress_whenEmptyArrayOfByte_thenReturnNull() {
     // Arrange, Act and Assert
-    assertNull(ByteArray.toJsonHexAddress(new byte[]{}));
+    assertNull(ByteArray.toJsonHexAddress(new byte[] {}));
   }
 
   /**
    * Test {@link ByteArray#toJsonHexAddress(byte[])}.
+   *
    * <ul>
-   *   <li>When {@code null}.</li>
-   *   <li>Then return {@code null}.</li>
+   *   <li>When {@code null}.
+   *   <li>Then return {@code null}.
    * </ul>
-   * <p>
-   * Method under test: {@link ByteArray#toJsonHexAddress(byte[])}
+   *
+   * <p>Method under test: {@link ByteArray#toJsonHexAddress(byte[])}
    */
   @Test
   @Category(MaintainedByDiffblue.class)
@@ -548,12 +580,13 @@ public class ByteArrayDiffblueTest {
 
   /**
    * Test {@link ByteArray#toJsonHexAddress(byte[])}.
+   *
    * <ul>
-   *   <li>When {@code XAXAXAX} Bytes is {@code UTF-8}.</li>
-   *   <li>Then return {@code 0x0858415841584158}.</li>
+   *   <li>When {@code XAXAXAX} Bytes is {@code UTF-8}.
+   *   <li>Then return {@code 0x0858415841584158}.
    * </ul>
-   * <p>
-   * Method under test: {@link ByteArray#toJsonHexAddress(byte[])}
+   *
+   * <p>Method under test: {@link ByteArray#toJsonHexAddress(byte[])}
    */
   @Test
   @Category(MaintainedByDiffblue.class)
@@ -566,12 +599,13 @@ public class ByteArrayDiffblueTest {
 
   /**
    * Test {@link ByteArray#hexToBigInteger(String)}.
+   *
    * <ul>
-   *   <li>When {@code 0x0123456789ABCDEF}.</li>
-   *   <li>Then return toString is {@code 81985529216486895}.</li>
+   *   <li>When {@code 0x0123456789ABCDEF}.
+   *   <li>Then return toString is {@code 81985529216486895}.
    * </ul>
-   * <p>
-   * Method under test: {@link ByteArray#hexToBigInteger(String)}
+   *
+   * <p>Method under test: {@link ByteArray#hexToBigInteger(String)}
    */
   @Test
   @Category(MaintainedByDiffblue.class)
@@ -584,17 +618,20 @@ public class ByteArrayDiffblueTest {
     assertEquals("81985529216486895", actualHexToBigIntegerResult.toString());
     assertEquals(0, actualHexToBigIntegerResult.getLowestSetBit());
     assertEquals(1, actualHexToBigIntegerResult.signum());
-    assertArrayEquals(new byte[]{1, '#', 'E', 'g', -119, -85, -51, -17}, actualHexToBigIntegerResult.toByteArray());
+    assertArrayEquals(
+        new byte[] {1, '#', 'E', 'g', -119, -85, -51, -17},
+        actualHexToBigIntegerResult.toByteArray());
   }
 
   /**
    * Test {@link ByteArray#hexToBigInteger(String)}.
+   *
    * <ul>
-   *   <li>When {@code 42}.</li>
-   *   <li>Then return toString is {@code 42}.</li>
+   *   <li>When {@code 42}.
+   *   <li>Then return toString is {@code 42}.
    * </ul>
-   * <p>
-   * Method under test: {@link ByteArray#hexToBigInteger(String)}
+   *
+   * <p>Method under test: {@link ByteArray#hexToBigInteger(String)}
    */
   @Test
   @Category(MaintainedByDiffblue.class)
@@ -607,17 +644,18 @@ public class ByteArrayDiffblueTest {
     assertEquals("42", actualHexToBigIntegerResult.toString());
     assertEquals(1, actualHexToBigIntegerResult.getLowestSetBit());
     assertEquals(1, actualHexToBigIntegerResult.signum());
-    assertArrayEquals(new byte[]{'*'}, actualHexToBigIntegerResult.toByteArray());
+    assertArrayEquals(new byte[] {'*'}, actualHexToBigIntegerResult.toByteArray());
   }
 
   /**
    * Test {@link ByteArray#jsonHexToLong(String)}.
+   *
    * <ul>
-   *   <li>When {@code 0x0123456789ABCDEF}.</li>
-   *   <li>Then return {@code 81985529216486895}.</li>
+   *   <li>When {@code 0x0123456789ABCDEF}.
+   *   <li>Then return {@code 81985529216486895}.
    * </ul>
-   * <p>
-   * Method under test: {@link ByteArray#jsonHexToLong(String)}
+   *
+   * <p>Method under test: {@link ByteArray#jsonHexToLong(String)}
    */
   @Test
   @Category(MaintainedByDiffblue.class)
@@ -630,12 +668,13 @@ public class ByteArrayDiffblueTest {
 
   /**
    * Test {@link ByteArray#jsonHexToLong(String)}.
+   *
    * <ul>
-   *   <li>When {@code 0123456789ABCDEF}.</li>
-   *   <li>Then throw {@link JsonRpcInvalidParamsException}.</li>
+   *   <li>When {@code 0123456789ABCDEF}.
+   *   <li>Then throw {@link JsonRpcInvalidParamsException}.
    * </ul>
-   * <p>
-   * Method under test: {@link ByteArray#jsonHexToLong(String)}
+   *
+   * <p>Method under test: {@link ByteArray#jsonHexToLong(String)}
    */
   @Test
   @Category(MaintainedByDiffblue.class)
@@ -643,17 +682,19 @@ public class ByteArrayDiffblueTest {
   public void testJsonHexToLong_when0123456789abcdef_thenThrowJsonRpcInvalidParamsException()
       throws JsonRpcInvalidParamsException {
     // Arrange, Act and Assert
-    assertThrows(JsonRpcInvalidParamsException.class, () -> ByteArray.jsonHexToLong("0123456789ABCDEF"));
+    assertThrows(
+        JsonRpcInvalidParamsException.class, () -> ByteArray.jsonHexToLong("0123456789ABCDEF"));
   }
 
   /**
    * Test {@link ByteArray#jsonHexToInt(String)}.
+   *
    * <ul>
-   *   <li>When {@code 0x42}.</li>
-   *   <li>Then return sixty-six.</li>
+   *   <li>When {@code 0x42}.
+   *   <li>Then return sixty-six.
    * </ul>
-   * <p>
-   * Method under test: {@link ByteArray#jsonHexToInt(String)}
+   *
+   * <p>Method under test: {@link ByteArray#jsonHexToInt(String)}
    */
   @Test
   @Category(MaintainedByDiffblue.class)
@@ -665,12 +706,13 @@ public class ByteArrayDiffblueTest {
 
   /**
    * Test {@link ByteArray#jsonHexToInt(String)}.
+   *
    * <ul>
-   *   <li>When {@code 0123456789ABCDEF}.</li>
-   *   <li>Then throw {@link Exception}.</li>
+   *   <li>When {@code 0123456789ABCDEF}.
+   *   <li>Then throw {@link Exception}.
    * </ul>
-   * <p>
-   * Method under test: {@link ByteArray#jsonHexToInt(String)}
+   *
+   * <p>Method under test: {@link ByteArray#jsonHexToInt(String)}
    */
   @Test
   @Category(MaintainedByDiffblue.class)
@@ -682,12 +724,13 @@ public class ByteArrayDiffblueTest {
 
   /**
    * Test {@link ByteArray#subArray(byte[], int, int)}.
+   *
    * <ul>
-   *   <li>When {@code AXAXAXAX} Bytes is {@code UTF-8}.</li>
-   *   <li>Then return array of {@code byte} with {@code X} and {@code A}.</li>
+   *   <li>When {@code AXAXAXAX} Bytes is {@code UTF-8}.
+   *   <li>Then return array of {@code byte} with {@code X} and {@code A}.
    * </ul>
-   * <p>
-   * Method under test: {@link ByteArray#subArray(byte[], int, int)}
+   *
+   * <p>Method under test: {@link ByteArray#subArray(byte[], int, int)}
    */
   @Test
   @Category(MaintainedByDiffblue.class)
@@ -695,51 +738,56 @@ public class ByteArrayDiffblueTest {
   public void testSubArray_whenAxaxaxaxBytesIsUtf8_thenReturnArrayOfByteWithXAndA()
       throws UnsupportedEncodingException {
     // Arrange, Act and Assert
-    assertArrayEquals(new byte[]{'X', 'A'}, ByteArray.subArray("AXAXAXAX".getBytes("UTF-8"), 1, 3));
+    assertArrayEquals(
+        new byte[] {'X', 'A'}, ByteArray.subArray("AXAXAXAX".getBytes("UTF-8"), 1, 3));
   }
 
   /**
    * Test {@link ByteArray#isEmpty(byte[])}.
+   *
    * <ul>
-   *   <li>When {@code AXAXAXAX} Bytes is {@code UTF-8}.</li>
-   *   <li>Then return {@code false}.</li>
+   *   <li>When {@code AXAXAXAX} Bytes is {@code UTF-8}.
+   *   <li>Then return {@code false}.
    * </ul>
-   * <p>
-   * Method under test: {@link ByteArray#isEmpty(byte[])}
+   *
+   * <p>Method under test: {@link ByteArray#isEmpty(byte[])}
    */
   @Test
   @Category(MaintainedByDiffblue.class)
   @MethodsUnderTest({"boolean ByteArray.isEmpty(byte[])"})
-  public void testIsEmpty_whenAxaxaxaxBytesIsUtf8_thenReturnFalse() throws UnsupportedEncodingException {
+  public void testIsEmpty_whenAxaxaxaxBytesIsUtf8_thenReturnFalse()
+      throws UnsupportedEncodingException {
     // Arrange, Act and Assert
     assertFalse(ByteArray.isEmpty("AXAXAXAX".getBytes("UTF-8")));
   }
 
   /**
    * Test {@link ByteArray#isEmpty(byte[])}.
+   *
    * <ul>
-   *   <li>When empty array of {@code byte}.</li>
-   *   <li>Then return {@code true}.</li>
+   *   <li>When empty array of {@code byte}.
+   *   <li>Then return {@code true}.
    * </ul>
-   * <p>
-   * Method under test: {@link ByteArray#isEmpty(byte[])}
+   *
+   * <p>Method under test: {@link ByteArray#isEmpty(byte[])}
    */
   @Test
   @Category(MaintainedByDiffblue.class)
   @MethodsUnderTest({"boolean ByteArray.isEmpty(byte[])"})
   public void testIsEmpty_whenEmptyArrayOfByte_thenReturnTrue() {
     // Arrange, Act and Assert
-    assertTrue(ByteArray.isEmpty(new byte[]{}));
+    assertTrue(ByteArray.isEmpty(new byte[] {}));
   }
 
   /**
    * Test {@link ByteArray#isEmpty(byte[])}.
+   *
    * <ul>
-   *   <li>When {@code null}.</li>
-   *   <li>Then return {@code true}.</li>
+   *   <li>When {@code null}.
+   *   <li>Then return {@code true}.
    * </ul>
-   * <p>
-   * Method under test: {@link ByteArray#isEmpty(byte[])}
+   *
+   * <p>Method under test: {@link ByteArray#isEmpty(byte[])}
    */
   @Test
   @Category(MaintainedByDiffblue.class)
@@ -751,13 +799,14 @@ public class ByteArrayDiffblueTest {
 
   /**
    * Test {@link ByteArray#matrixContains(List, byte[])}.
+   *
    * <ul>
-   *   <li>Given {@code A}.</li>
-   *   <li>When {@link ArrayList#ArrayList()} add array of {@code byte} with {@code A} and one.</li>
-   *   <li>Then return {@code true}.</li>
+   *   <li>Given {@code A}.
+   *   <li>When {@link ArrayList#ArrayList()} add array of {@code byte} with {@code A} and one.
+   *   <li>Then return {@code true}.
    * </ul>
-   * <p>
-   * Method under test: {@link ByteArray#matrixContains(List, byte[])}
+   *
+   * <p>Method under test: {@link ByteArray#matrixContains(List, byte[])}
    */
   @Test
   @Category(MaintainedByDiffblue.class)
@@ -766,62 +815,76 @@ public class ByteArrayDiffblueTest {
       throws UnsupportedEncodingException {
     // Arrange
     ArrayList<byte[]> source = new ArrayList<>();
-    source.add(new byte[]{'A', 1, 'A', 1, 'A', 1, 'A', 1});
+    source.add(new byte[] {'A', 1, 'A', 1, 'A', 1, 'A', 1});
     source.add("AXAXAXAX".getBytes("UTF-8"));
 
-    // Act and Assert
-    assertTrue(ByteArray.matrixContains(source, "AXAXAXAX".getBytes("UTF-8")));
+    // Act
+    boolean actualMatrixContainsResult =
+        ByteArray.matrixContains(source, "AXAXAXAX".getBytes("UTF-8"));
+
+    // Assert
+    assertTrue(actualMatrixContainsResult);
   }
 
   /**
    * Test {@link ByteArray#matrixContains(List, byte[])}.
+   *
    * <ul>
-   *   <li>Given {@code AXAXAXAX} Bytes is {@code UTF-8}.</li>
-   *   <li>Then return {@code true}.</li>
+   *   <li>Given {@code AXAXAXAX} Bytes is {@code UTF-8}.
+   *   <li>Then return {@code true}.
    * </ul>
-   * <p>
-   * Method under test: {@link ByteArray#matrixContains(List, byte[])}
+   *
+   * <p>Method under test: {@link ByteArray#matrixContains(List, byte[])}
    */
   @Test
   @Category(MaintainedByDiffblue.class)
   @MethodsUnderTest({"boolean ByteArray.matrixContains(List, byte[])"})
-  public void testMatrixContains_givenAxaxaxaxBytesIsUtf8_thenReturnTrue() throws UnsupportedEncodingException {
+  public void testMatrixContains_givenAxaxaxaxBytesIsUtf8_thenReturnTrue()
+      throws UnsupportedEncodingException {
     // Arrange
     ArrayList<byte[]> source = new ArrayList<>();
     source.add("AXAXAXAX".getBytes("UTF-8"));
 
-    // Act and Assert
-    assertTrue(ByteArray.matrixContains(source, "AXAXAXAX".getBytes("UTF-8")));
+    // Act
+    boolean actualMatrixContainsResult =
+        ByteArray.matrixContains(source, "AXAXAXAX".getBytes("UTF-8"));
+
+    // Assert
+    assertTrue(actualMatrixContainsResult);
   }
 
   /**
    * Test {@link ByteArray#matrixContains(List, byte[])}.
+   *
    * <ul>
-   *   <li>When {@link ArrayList#ArrayList()}.</li>
-   *   <li>Then return {@code false}.</li>
+   *   <li>When {@link ArrayList#ArrayList()}.
+   *   <li>Then return {@code false}.
    * </ul>
-   * <p>
-   * Method under test: {@link ByteArray#matrixContains(List, byte[])}
+   *
+   * <p>Method under test: {@link ByteArray#matrixContains(List, byte[])}
    */
   @Test
   @Category(MaintainedByDiffblue.class)
   @MethodsUnderTest({"boolean ByteArray.matrixContains(List, byte[])"})
-  public void testMatrixContains_whenArrayList_thenReturnFalse() throws UnsupportedEncodingException {
-    // Arrange
-    ArrayList<byte[]> source = new ArrayList<>();
+  public void testMatrixContains_whenArrayList_thenReturnFalse()
+      throws UnsupportedEncodingException {
+    // Arrange and Act
+    boolean actualMatrixContainsResult =
+        ByteArray.matrixContains(new ArrayList<>(), "AXAXAXAX".getBytes("UTF-8"));
 
-    // Act and Assert
-    assertFalse(ByteArray.matrixContains(source, "AXAXAXAX".getBytes("UTF-8")));
+    // Assert
+    assertFalse(actualMatrixContainsResult);
   }
 
   /**
    * Test {@link ByteArray#fromHex(String)}.
+   *
    * <ul>
-   *   <li>When {@code 0x}.</li>
-   *   <li>Then return empty string.</li>
+   *   <li>When {@code 0x}.
+   *   <li>Then return empty string.
    * </ul>
-   * <p>
-   * Method under test: {@link ByteArray#fromHex(String)}
+   *
+   * <p>Method under test: {@link ByteArray#fromHex(String)}
    */
   @Test
   @Category(MaintainedByDiffblue.class)
@@ -833,12 +896,13 @@ public class ByteArrayDiffblueTest {
 
   /**
    * Test {@link ByteArray#fromHex(String)}.
+   *
    * <ul>
-   *   <li>When {@code 0123456789ABCDEF}.</li>
-   *   <li>Then return {@code 0123456789ABCDEF}.</li>
+   *   <li>When {@code 0123456789ABCDEF}.
+   *   <li>Then return {@code 0123456789ABCDEF}.
    * </ul>
-   * <p>
-   * Method under test: {@link ByteArray#fromHex(String)}
+   *
+   * <p>Method under test: {@link ByteArray#fromHex(String)}
    */
   @Test
   @Category(MaintainedByDiffblue.class)
@@ -850,12 +914,13 @@ public class ByteArrayDiffblueTest {
 
   /**
    * Test {@link ByteArray#fromHex(String)}.
+   *
    * <ul>
-   *   <li>When {@code foo}.</li>
-   *   <li>Then return {@code 0foo}.</li>
+   *   <li>When {@code foo}.
+   *   <li>Then return {@code 0foo}.
    * </ul>
-   * <p>
-   * Method under test: {@link ByteArray#fromHex(String)}
+   *
+   * <p>Method under test: {@link ByteArray#fromHex(String)}
    */
   @Test
   @Category(MaintainedByDiffblue.class)

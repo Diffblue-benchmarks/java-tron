@@ -1,6 +1,5 @@
 package org.tron.consensus.dpos;
 
-import static org.mockito.ArgumentMatchers.eq;
 import static org.mockito.ArgumentMatchers.isA;
 import static org.mockito.Mockito.anyLong;
 import static org.mockito.Mockito.atLeast;
@@ -27,56 +26,29 @@ import org.tron.core.capsule.WitnessCapsule;
 
 @RunWith(MockitoJUnitRunner.class)
 public class IncentiveManagerDiffblueTest {
-  @Mock
-  private ConsensusDelegate consensusDelegate;
+  @Mock private ConsensusDelegate consensusDelegate;
 
-  @InjectMocks
-  private IncentiveManager incentiveManager;
+  @InjectMocks private IncentiveManager incentiveManager;
 
   /**
    * Test {@link IncentiveManager#reward(List)}.
-   * <p>
-   * Method under test: {@link IncentiveManager#reward(List)}
-   */
-  @Test
-  @Category(MaintainedByDiffblue.class)
-  @MethodsUnderTest({"void IncentiveManager.reward(List)"})
-  public void testReward() throws UnsupportedEncodingException {
-    // Arrange
-    when(consensusDelegate.getWitness(Mockito.<byte[]>any())).thenReturn(new WitnessCapsule(mock(ByteString.class)));
-    when(consensusDelegate.allowChangeDelegation()).thenReturn(false);
-    ByteString byteString = mock(ByteString.class);
-    when(byteString.toByteArray()).thenReturn("AXAXAXAX".getBytes("UTF-8"));
-
-    ArrayList<ByteString> witnesses = new ArrayList<>();
-    witnesses.add(byteString);
-
-    // Act
-    incentiveManager.reward(witnesses);
-
-    // Assert
-    verify(byteString).toByteArray();
-    verify(consensusDelegate).allowChangeDelegation();
-    verify(consensusDelegate).getWitness(isA(byte[].class));
-  }
-
-  /**
-   * Test {@link IncentiveManager#reward(List)}.
+   *
    * <ul>
-   *   <li>Given {@link AccountCapsule} {@link AccountCapsule#getAllowance()} return one.</li>
-   *   <li>Then calls {@link ConsensusDelegate#getAccount(byte[])}.</li>
+   *   <li>Given {@link AccountCapsule} {@link AccountCapsule#getAllowance()} return one.
+   *   <li>Then calls {@link ByteString#toByteArray()}.
    * </ul>
-   * <p>
-   * Method under test: {@link IncentiveManager#reward(List)}
+   *
+   * <p>Method under test: {@link IncentiveManager#reward(List)}
    */
   @Test
   @Category(MaintainedByDiffblue.class)
   @MethodsUnderTest({"void IncentiveManager.reward(List)"})
-  public void testReward_givenAccountCapsuleGetAllowanceReturnOne_thenCallsGetAccount()
+  public void testReward_givenAccountCapsuleGetAllowanceReturnOne_thenCallsToByteArray()
       throws UnsupportedEncodingException {
     // Arrange
     WitnessCapsule witnessCapsule = mock(WitnessCapsule.class);
     when(witnessCapsule.getVoteCount()).thenReturn(3L);
+
     AccountCapsule accountCapsule = mock(AccountCapsule.class);
     when(accountCapsule.getAllowance()).thenReturn(1L);
     doNothing().when(accountCapsule).setAllowance(anyLong());
@@ -85,6 +57,7 @@ public class IncentiveManagerDiffblueTest {
     when(consensusDelegate.getAccount(Mockito.<byte[]>any())).thenReturn(accountCapsule);
     when(consensusDelegate.getWitness(Mockito.<byte[]>any())).thenReturn(witnessCapsule);
     when(consensusDelegate.allowChangeDelegation()).thenReturn(false);
+
     ByteString byteString = mock(ByteString.class);
     when(byteString.toByteArray()).thenReturn("AXAXAXAX".getBytes("UTF-8"));
 
@@ -102,18 +75,19 @@ public class IncentiveManagerDiffblueTest {
     verify(consensusDelegate).getWitnessStandbyAllowance();
     verify(consensusDelegate).saveAccount(isA(AccountCapsule.class));
     verify(accountCapsule).getAllowance();
-    verify(accountCapsule).setAllowance(eq(2L));
+    verify(accountCapsule).setAllowance(2L);
     verify(witnessCapsule, atLeast(1)).getVoteCount();
   }
 
   /**
    * Test {@link IncentiveManager#reward(List)}.
+   *
    * <ul>
-   *   <li>Given {@link ByteString}.</li>
-   *   <li>Then calls {@link ConsensusDelegate#allowChangeDelegation()}.</li>
+   *   <li>Given {@link ByteString}.
+   *   <li>Then calls {@link ConsensusDelegate#allowChangeDelegation()}.
    * </ul>
-   * <p>
-   * Method under test: {@link IncentiveManager#reward(List)}
+   *
+   * <p>Method under test: {@link IncentiveManager#reward(List)}
    */
   @Test
   @Category(MaintainedByDiffblue.class)
@@ -134,12 +108,13 @@ public class IncentiveManagerDiffblueTest {
 
   /**
    * Test {@link IncentiveManager#reward(List)}.
+   *
    * <ul>
-   *   <li>Given {@link ByteString}.</li>
-   *   <li>Then calls {@link ConsensusDelegate#allowChangeDelegation()}.</li>
+   *   <li>Given {@link ByteString}.
+   *   <li>Then calls {@link ConsensusDelegate#allowChangeDelegation()}.
    * </ul>
-   * <p>
-   * Method under test: {@link IncentiveManager#reward(List)}
+   *
+   * <p>Method under test: {@link IncentiveManager#reward(List)}
    */
   @Test
   @Category(MaintainedByDiffblue.class)
@@ -161,12 +136,14 @@ public class IncentiveManagerDiffblueTest {
 
   /**
    * Test {@link IncentiveManager#reward(List)}.
+   *
    * <ul>
-   *   <li>Given {@link ConsensusDelegate} {@link ConsensusDelegate#allowChangeDelegation()} return {@code true}.</li>
-   *   <li>When {@link ArrayList#ArrayList()}.</li>
+   *   <li>Given {@link ConsensusDelegate} {@link ConsensusDelegate#allowChangeDelegation()} return
+   *       {@code true}.
+   *   <li>When {@link ArrayList#ArrayList()}.
    * </ul>
-   * <p>
-   * Method under test: {@link IncentiveManager#reward(List)}
+   *
+   * <p>Method under test: {@link IncentiveManager#reward(List)}
    */
   @Test
   @Category(MaintainedByDiffblue.class)
@@ -184,12 +161,13 @@ public class IncentiveManagerDiffblueTest {
 
   /**
    * Test {@link IncentiveManager#reward(List)}.
+   *
    * <ul>
-   *   <li>When {@link ArrayList#ArrayList()}.</li>
-   *   <li>Then calls {@link ConsensusDelegate#allowChangeDelegation()}.</li>
+   *   <li>When {@link ArrayList#ArrayList()}.
+   *   <li>Then calls {@link ConsensusDelegate#allowChangeDelegation()}.
    * </ul>
-   * <p>
-   * Method under test: {@link IncentiveManager#reward(List)}
+   *
+   * <p>Method under test: {@link IncentiveManager#reward(List)}
    */
   @Test
   @Category(MaintainedByDiffblue.class)

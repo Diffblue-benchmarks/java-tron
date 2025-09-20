@@ -14,8 +14,9 @@ import org.tron.protos.contract.Common.ResourceCode;
 public class DelegateResourceParamDiffblueTest {
   /**
    * Test getters and setters.
-   * <p>
-   * Methods under test:
+   *
+   * <p>Methods under test:
+   *
    * <ul>
    *   <li>default or parameterless constructor of {@link DelegateResourceParam}
    *   <li>{@link DelegateResourceParam#setDelegateBalance(long)}
@@ -30,11 +31,17 @@ public class DelegateResourceParamDiffblueTest {
    */
   @Test
   @Category(MaintainedByDiffblue.class)
-  @MethodsUnderTest({"void DelegateResourceParam.<init>()", "long DelegateResourceParam.getDelegateBalance()",
-      "byte[] DelegateResourceParam.getOwnerAddress()", "byte[] DelegateResourceParam.getReceiverAddress()",
-      "ResourceCode DelegateResourceParam.getResourceType()", "void DelegateResourceParam.setDelegateBalance(long)",
-      "void DelegateResourceParam.setOwnerAddress(byte[])", "void DelegateResourceParam.setReceiverAddress(byte[])",
-      "void DelegateResourceParam.setResourceType(ResourceCode)"})
+  @MethodsUnderTest({
+    "void DelegateResourceParam.<init>()",
+    "long DelegateResourceParam.getDelegateBalance()",
+    "byte[] DelegateResourceParam.getOwnerAddress()",
+    "byte[] DelegateResourceParam.getReceiverAddress()",
+    "ResourceCode DelegateResourceParam.getResourceType()",
+    "void DelegateResourceParam.setDelegateBalance(long)",
+    "void DelegateResourceParam.setOwnerAddress(byte[])",
+    "void DelegateResourceParam.setReceiverAddress(byte[])",
+    "void DelegateResourceParam.setResourceType(ResourceCode)"
+  })
   public void testGettersAndSetters() throws UnsupportedEncodingException {
     // Arrange and Act
     DelegateResourceParam actualDelegateResourceParam = new DelegateResourceParam();

@@ -13,12 +13,13 @@ import org.tron.core.store.StoreFactory;
 public class ConfigLoaderDiffblueTest {
   /**
    * Test {@link ConfigLoader#load(StoreFactory)}.
+   *
    * <ul>
-   *   <li>Given {@link ChainBaseManager} (default constructor).</li>
-   *   <li>Then calls {@link StoreFactory#getChainBaseManager()}.</li>
+   *   <li>Given {@link ChainBaseManager} (default constructor).
+   *   <li>Then calls {@link StoreFactory#getChainBaseManager()}.
    * </ul>
-   * <p>
-   * Method under test: {@link ConfigLoader#load(StoreFactory)}
+   *
+   * <p>Method under test: {@link ConfigLoader#load(StoreFactory)}
    */
   @Test
   @Category(MaintainedByDiffblue.class)

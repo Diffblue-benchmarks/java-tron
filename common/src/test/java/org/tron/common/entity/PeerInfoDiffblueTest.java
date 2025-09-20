@@ -11,8 +11,9 @@ import org.junit.experimental.categories.Category;
 public class PeerInfoDiffblueTest {
   /**
    * Test getters and setters.
-   * <p>
-   * Methods under test:
+   *
+   * <p>Methods under test:
+   *
    * <ul>
    *   <li>default or parameterless constructor of {@link PeerInfo}
    *   <li>{@link PeerInfo#setActive(boolean)}
@@ -69,28 +70,59 @@ public class PeerInfoDiffblueTest {
    */
   @Test
   @Category(MaintainedByDiffblue.class)
-  @MethodsUnderTest({"void PeerInfo.<init>()", "double PeerInfo.getAvgLatency()", "int PeerInfo.getBlockInPorcSize()",
-      "long PeerInfo.getConnectTime()", "int PeerInfo.getDisconnectTimes()",
-      "long PeerInfo.getHeadBlockTimeWeBothHave()", "String PeerInfo.getHeadBlockWeBothHave()",
-      "String PeerInfo.getHost()", "long PeerInfo.getInFlow()", "long PeerInfo.getLastBlockUpdateTime()",
-      "String PeerInfo.getLastSyncBlock()", "String PeerInfo.getLocalDisconnectReason()", "int PeerInfo.getNodeCount()",
-      "String PeerInfo.getNodeId()", "int PeerInfo.getPort()", "long PeerInfo.getRemainNum()",
-      "String PeerInfo.getRemoteDisconnectReason()", "int PeerInfo.getScore()",
-      "int PeerInfo.getSyncBlockRequestedSize()", "int PeerInfo.getSyncToFetchSize()",
-      "long PeerInfo.getSyncToFetchSizePeekNum()", "long PeerInfo.getUnFetchSynNum()", "boolean PeerInfo.isActive()",
-      "boolean PeerInfo.isNeedSyncFromPeer()", "boolean PeerInfo.isNeedSyncFromUs()", "boolean PeerInfo.isSyncFlag()",
-      "PeerInfo PeerInfo.setActive(boolean)", "PeerInfo PeerInfo.setAvgLatency(double)",
-      "PeerInfo PeerInfo.setBlockInPorcSize(int)", "PeerInfo PeerInfo.setConnectTime(long)",
-      "PeerInfo PeerInfo.setDisconnectTimes(int)", "PeerInfo PeerInfo.setHeadBlockTimeWeBothHave(long)",
-      "PeerInfo PeerInfo.setHeadBlockWeBothHave(String)", "PeerInfo PeerInfo.setHost(String)",
-      "PeerInfo PeerInfo.setInFlow(long)", "PeerInfo PeerInfo.setLastBlockUpdateTime(long)",
-      "PeerInfo PeerInfo.setLastSyncBlock(String)", "PeerInfo PeerInfo.setLocalDisconnectReason(String)",
-      "PeerInfo PeerInfo.setNeedSyncFromPeer(boolean)", "PeerInfo PeerInfo.setNeedSyncFromUs(boolean)",
-      "PeerInfo PeerInfo.setNodeCount(int)", "PeerInfo PeerInfo.setNodeId(String)", "PeerInfo PeerInfo.setPort(int)",
-      "PeerInfo PeerInfo.setRemainNum(long)", "PeerInfo PeerInfo.setRemoteDisconnectReason(String)",
-      "PeerInfo PeerInfo.setScore(int)", "PeerInfo PeerInfo.setSyncBlockRequestedSize(int)",
-      "PeerInfo PeerInfo.setSyncFlag(boolean)", "PeerInfo PeerInfo.setSyncToFetchSize(int)",
-      "PeerInfo PeerInfo.setSyncToFetchSizePeekNum(long)", "PeerInfo PeerInfo.setUnFetchSynNum(long)"})
+  @MethodsUnderTest({
+    "void PeerInfo.<init>()",
+    "double PeerInfo.getAvgLatency()",
+    "int PeerInfo.getBlockInPorcSize()",
+    "long PeerInfo.getConnectTime()",
+    "int PeerInfo.getDisconnectTimes()",
+    "long PeerInfo.getHeadBlockTimeWeBothHave()",
+    "String PeerInfo.getHeadBlockWeBothHave()",
+    "String PeerInfo.getHost()",
+    "long PeerInfo.getInFlow()",
+    "long PeerInfo.getLastBlockUpdateTime()",
+    "String PeerInfo.getLastSyncBlock()",
+    "String PeerInfo.getLocalDisconnectReason()",
+    "int PeerInfo.getNodeCount()",
+    "String PeerInfo.getNodeId()",
+    "int PeerInfo.getPort()",
+    "long PeerInfo.getRemainNum()",
+    "String PeerInfo.getRemoteDisconnectReason()",
+    "int PeerInfo.getScore()",
+    "int PeerInfo.getSyncBlockRequestedSize()",
+    "int PeerInfo.getSyncToFetchSize()",
+    "long PeerInfo.getSyncToFetchSizePeekNum()",
+    "long PeerInfo.getUnFetchSynNum()",
+    "boolean PeerInfo.isActive()",
+    "boolean PeerInfo.isNeedSyncFromPeer()",
+    "boolean PeerInfo.isNeedSyncFromUs()",
+    "boolean PeerInfo.isSyncFlag()",
+    "PeerInfo PeerInfo.setActive(boolean)",
+    "PeerInfo PeerInfo.setAvgLatency(double)",
+    "PeerInfo PeerInfo.setBlockInPorcSize(int)",
+    "PeerInfo PeerInfo.setConnectTime(long)",
+    "PeerInfo PeerInfo.setDisconnectTimes(int)",
+    "PeerInfo PeerInfo.setHeadBlockTimeWeBothHave(long)",
+    "PeerInfo PeerInfo.setHeadBlockWeBothHave(String)",
+    "PeerInfo PeerInfo.setHost(String)",
+    "PeerInfo PeerInfo.setInFlow(long)",
+    "PeerInfo PeerInfo.setLastBlockUpdateTime(long)",
+    "PeerInfo PeerInfo.setLastSyncBlock(String)",
+    "PeerInfo PeerInfo.setLocalDisconnectReason(String)",
+    "PeerInfo PeerInfo.setNeedSyncFromPeer(boolean)",
+    "PeerInfo PeerInfo.setNeedSyncFromUs(boolean)",
+    "PeerInfo PeerInfo.setNodeCount(int)",
+    "PeerInfo PeerInfo.setNodeId(String)",
+    "PeerInfo PeerInfo.setPort(int)",
+    "PeerInfo PeerInfo.setRemainNum(long)",
+    "PeerInfo PeerInfo.setRemoteDisconnectReason(String)",
+    "PeerInfo PeerInfo.setScore(int)",
+    "PeerInfo PeerInfo.setSyncBlockRequestedSize(int)",
+    "PeerInfo PeerInfo.setSyncFlag(boolean)",
+    "PeerInfo PeerInfo.setSyncToFetchSize(int)",
+    "PeerInfo PeerInfo.setSyncToFetchSizePeekNum(long)",
+    "PeerInfo PeerInfo.setUnFetchSynNum(long)"
+  })
   public void testGettersAndSetters() {
     // Arrange and Act
     PeerInfo actualPeerInfo = new PeerInfo();
@@ -100,19 +132,22 @@ public class PeerInfoDiffblueTest {
     PeerInfo actualSetConnectTimeResult = actualPeerInfo.setConnectTime(1L);
     PeerInfo actualSetDisconnectTimesResult = actualPeerInfo.setDisconnectTimes(1);
     PeerInfo actualSetHeadBlockTimeWeBothHaveResult = actualPeerInfo.setHeadBlockTimeWeBothHave(1L);
-    PeerInfo actualSetHeadBlockWeBothHaveResult = actualPeerInfo.setHeadBlockWeBothHave("Head Block We Both Have");
+    PeerInfo actualSetHeadBlockWeBothHaveResult =
+        actualPeerInfo.setHeadBlockWeBothHave("Head Block We Both Have");
     PeerInfo actualSetHostResult = actualPeerInfo.setHost("localhost");
     PeerInfo actualSetInFlowResult = actualPeerInfo.setInFlow(1L);
     PeerInfo actualSetLastBlockUpdateTimeResult = actualPeerInfo.setLastBlockUpdateTime(1L);
     PeerInfo actualSetLastSyncBlockResult = actualPeerInfo.setLastSyncBlock("Last Sync Block");
-    PeerInfo actualSetLocalDisconnectReasonResult = actualPeerInfo.setLocalDisconnectReason("Just cause");
+    PeerInfo actualSetLocalDisconnectReasonResult =
+        actualPeerInfo.setLocalDisconnectReason("Just cause");
     PeerInfo actualSetNeedSyncFromPeerResult = actualPeerInfo.setNeedSyncFromPeer(true);
     PeerInfo actualSetNeedSyncFromUsResult = actualPeerInfo.setNeedSyncFromUs(true);
     PeerInfo actualSetNodeCountResult = actualPeerInfo.setNodeCount(3);
     PeerInfo actualSetNodeIdResult = actualPeerInfo.setNodeId("42");
     PeerInfo actualSetPortResult = actualPeerInfo.setPort(8080);
     PeerInfo actualSetRemainNumResult = actualPeerInfo.setRemainNum(1L);
-    PeerInfo actualSetRemoteDisconnectReasonResult = actualPeerInfo.setRemoteDisconnectReason("Just cause");
+    PeerInfo actualSetRemoteDisconnectReasonResult =
+        actualPeerInfo.setRemoteDisconnectReason("Just cause");
     PeerInfo actualSetScoreResult = actualPeerInfo.setScore(3);
     PeerInfo actualSetSyncBlockRequestedSizeResult = actualPeerInfo.setSyncBlockRequestedSize(3);
     PeerInfo actualSetSyncFlagResult = actualPeerInfo.setSyncFlag(true);

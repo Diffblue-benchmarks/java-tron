@@ -6,10 +6,6 @@ import static org.junit.Assert.assertNull;
 import static org.junit.Assert.assertSame;
 import static org.junit.Assert.assertThrows;
 import static org.junit.Assert.assertTrue;
-import static org.mockito.Mockito.mock;
-import static org.mockito.Mockito.verify;
-import static org.mockito.Mockito.when;
-import ch.qos.logback.core.util.COWArrayList;
 import com.diffblue.cover.annotations.MaintainedByDiffblue;
 import com.diffblue.cover.annotations.MethodsUnderTest;
 import java.io.UnsupportedEncodingException;
@@ -21,8 +17,8 @@ import org.junit.experimental.categories.Category;
 public class LocalWitnessesDiffblueTest {
   /**
    * Test {@link LocalWitnesses#LocalWitnesses()}.
-   * <p>
-   * Method under test: {@link LocalWitnesses#LocalWitnesses()}
+   *
+   * <p>Method under test: {@link LocalWitnesses#LocalWitnesses()}
    */
   @Test
   @Category(MaintainedByDiffblue.class)
@@ -39,34 +35,37 @@ public class LocalWitnessesDiffblueTest {
 
   /**
    * Test {@link LocalWitnesses#LocalWitnesses(String)}.
-   * <p>
-   * Method under test: {@link LocalWitnesses#LocalWitnesses(String)}
+   *
+   * <p>Method under test: {@link LocalWitnesses#LocalWitnesses(String)}
    */
   @Test
   @Category(MaintainedByDiffblue.class)
   @MethodsUnderTest({"void LocalWitnesses.<init>(String)"})
   public void testNewLocalWitnesses2() {
     // Arrange and Act
-    LocalWitnesses actualLocalWitnesses = new LocalWitnesses(
-        "private key must be %d-bits hex string, actual: %dPrivate Keyapp");
+    LocalWitnesses actualLocalWitnesses =
+        new LocalWitnesses("private key must be %d-bits hex string, actual: %dPrivate Keyapp");
 
     // Assert
     List<String> privateKeys = actualLocalWitnesses.getPrivateKeys();
     assertEquals(1, privateKeys.size());
-    assertEquals("private key must be %d-bits hex string, actual: %dPrivate Keyapp", privateKeys.get(0));
-    assertEquals("private key must be %d-bits hex string, actual: %dPrivate Keyapp",
+    assertEquals(
+        "private key must be %d-bits hex string, actual: %dPrivate Keyapp", privateKeys.get(0));
+    assertEquals(
+        "private key must be %d-bits hex string, actual: %dPrivate Keyapp",
         actualLocalWitnesses.getPrivateKey());
   }
 
   /**
    * Test {@link LocalWitnesses#LocalWitnesses(List)}.
+   *
    * <ul>
-   *   <li>Given {@code 0X}.</li>
-   *   <li>When {@link ArrayList#ArrayList()} add {@code 0X}.</li>
-   *   <li>Then return PrivateKey is {@code 0X}.</li>
+   *   <li>Given {@code 0X}.
+   *   <li>When {@link ArrayList#ArrayList()} add {@code 0X}.
+   *   <li>Then return PrivateKey is {@code 0X}.
    * </ul>
-   * <p>
-   * Method under test: {@link LocalWitnesses#LocalWitnesses(List)}
+   *
+   * <p>Method under test: {@link LocalWitnesses#LocalWitnesses(List)}
    */
   @Test
   @Category(MaintainedByDiffblue.class)
@@ -87,12 +86,13 @@ public class LocalWitnessesDiffblueTest {
 
   /**
    * Test {@link LocalWitnesses#LocalWitnesses(List)}.
+   *
    * <ul>
-   *   <li>Given {@code foo}.</li>
-   *   <li>When {@link ArrayList#ArrayList()} add {@code foo}.</li>
+   *   <li>Given {@code foo}.
+   *   <li>When {@link ArrayList#ArrayList()} add {@code foo}.
    * </ul>
-   * <p>
-   * Method under test: {@link LocalWitnesses#LocalWitnesses(List)}
+   *
+   * <p>Method under test: {@link LocalWitnesses#LocalWitnesses(List)}
    */
   @Test
   @Category(MaintainedByDiffblue.class)
@@ -109,34 +109,13 @@ public class LocalWitnessesDiffblueTest {
 
   /**
    * Test {@link LocalWitnesses#LocalWitnesses(List)}.
+   *
    * <ul>
-   *   <li>Given {@link IllegalArgumentException#IllegalArgumentException(String)} with {@code foo}.</li>
-   *   <li>Then calls {@link COWArrayList#isEmpty()}.</li>
+   *   <li>Given {@code not blank}.
+   *   <li>When {@link ArrayList#ArrayList()} add {@code not blank}.
    * </ul>
-   * <p>
-   * Method under test: {@link LocalWitnesses#LocalWitnesses(List)}
-   */
-  @Test
-  @Category(MaintainedByDiffblue.class)
-  @MethodsUnderTest({"void LocalWitnesses.<init>(List)"})
-  public void testNewLocalWitnesses_givenIllegalArgumentExceptionWithFoo_thenCallsIsEmpty() {
-    // Arrange
-    COWArrayList<String> privateKeys = mock(COWArrayList.class);
-    when(privateKeys.isEmpty()).thenThrow(new IllegalArgumentException("foo"));
-
-    // Act and Assert
-    assertThrows(IllegalArgumentException.class, () -> new LocalWitnesses(privateKeys));
-    verify(privateKeys).isEmpty();
-  }
-
-  /**
-   * Test {@link LocalWitnesses#LocalWitnesses(List)}.
-   * <ul>
-   *   <li>Given {@code not blank}.</li>
-   *   <li>When {@link ArrayList#ArrayList()} add {@code not blank}.</li>
-   * </ul>
-   * <p>
-   * Method under test: {@link LocalWitnesses#LocalWitnesses(List)}
+   *
+   * <p>Method under test: {@link LocalWitnesses#LocalWitnesses(List)}
    */
   @Test
   @Category(MaintainedByDiffblue.class)
@@ -152,12 +131,13 @@ public class LocalWitnessesDiffblueTest {
 
   /**
    * Test {@link LocalWitnesses#LocalWitnesses(List)}.
+   *
    * <ul>
-   *   <li>Given space.</li>
-   *   <li>Then return PrivateKey is space.</li>
+   *   <li>Given space.
+   *   <li>Then return PrivateKey is space.
    * </ul>
-   * <p>
-   * Method under test: {@link LocalWitnesses#LocalWitnesses(List)}
+   *
+   * <p>Method under test: {@link LocalWitnesses#LocalWitnesses(List)}
    */
   @Test
   @Category(MaintainedByDiffblue.class)
@@ -177,12 +157,13 @@ public class LocalWitnessesDiffblueTest {
 
   /**
    * Test {@link LocalWitnesses#LocalWitnesses(String)}.
+   *
    * <ul>
-   *   <li>When {@code 0X}.</li>
-   *   <li>Then return PrivateKeys first is {@code 0X}.</li>
+   *   <li>When {@code 0X}.
+   *   <li>Then return PrivateKeys first is {@code 0X}.
    * </ul>
-   * <p>
-   * Method under test: {@link LocalWitnesses#LocalWitnesses(String)}
+   *
+   * <p>Method under test: {@link LocalWitnesses#LocalWitnesses(String)}
    */
   @Test
   @Category(MaintainedByDiffblue.class)
@@ -200,12 +181,13 @@ public class LocalWitnessesDiffblueTest {
 
   /**
    * Test {@link LocalWitnesses#LocalWitnesses(List)}.
+   *
    * <ul>
-   *   <li>When {@link ArrayList#ArrayList()}.</li>
-   *   <li>Then return PublicKey is {@code null}.</li>
+   *   <li>When {@link ArrayList#ArrayList()}.
+   *   <li>Then return PublicKey is {@code null}.
    * </ul>
-   * <p>
-   * Method under test: {@link LocalWitnesses#LocalWitnesses(List)}
+   *
+   * <p>Method under test: {@link LocalWitnesses#LocalWitnesses(List)}
    */
   @Test
   @Category(MaintainedByDiffblue.class)
@@ -222,12 +204,13 @@ public class LocalWitnessesDiffblueTest {
 
   /**
    * Test {@link LocalWitnesses#LocalWitnesses(List)}.
+   *
    * <ul>
-   *   <li>When {@code null}.</li>
-   *   <li>Then return PublicKey is {@code null}.</li>
+   *   <li>When {@code null}.
+   *   <li>Then return PublicKey is {@code null}.
    * </ul>
-   * <p>
-   * Method under test: {@link LocalWitnesses#LocalWitnesses(List)}
+   *
+   * <p>Method under test: {@link LocalWitnesses#LocalWitnesses(List)}
    */
   @Test
   @Category(MaintainedByDiffblue.class)
@@ -244,12 +227,13 @@ public class LocalWitnessesDiffblueTest {
 
   /**
    * Test {@link LocalWitnesses#LocalWitnesses(String)}.
+   *
    * <ul>
-   *   <li>When {@code Private Key}.</li>
-   *   <li>Then throw {@link IllegalArgumentException}.</li>
+   *   <li>When {@code Private Key}.
+   *   <li>Then throw {@link IllegalArgumentException}.
    * </ul>
-   * <p>
-   * Method under test: {@link LocalWitnesses#LocalWitnesses(String)}
+   *
+   * <p>Method under test: {@link LocalWitnesses#LocalWitnesses(String)}
    */
   @Test
   @Category(MaintainedByDiffblue.class)
@@ -261,12 +245,13 @@ public class LocalWitnessesDiffblueTest {
 
   /**
    * Test {@link LocalWitnesses#LocalWitnesses(String)}.
+   *
    * <ul>
-   *   <li>When space.</li>
-   *   <li>Then return PrivateKeys first is space.</li>
+   *   <li>When space.
+   *   <li>Then return PrivateKeys first is space.
    * </ul>
-   * <p>
-   * Method under test: {@link LocalWitnesses#LocalWitnesses(String)}
+   *
+   * <p>Method under test: {@link LocalWitnesses#LocalWitnesses(String)}
    */
   @Test
   @Category(MaintainedByDiffblue.class)
@@ -284,13 +269,14 @@ public class LocalWitnessesDiffblueTest {
 
   /**
    * Test {@link LocalWitnesses#getWitnessAccountAddress(boolean)}.
+   *
    * <ul>
-   *   <li>Given {@code A}.</li>
-   *   <li>When {@code true}.</li>
-   *   <li>Then return array of {@code byte} with {@code A} and one.</li>
+   *   <li>Given {@code A}.
+   *   <li>When {@code true}.
+   *   <li>Then return array of {@code byte} with {@code A} and one.
    * </ul>
-   * <p>
-   * Method under test: {@link LocalWitnesses#getWitnessAccountAddress(boolean)}
+   *
+   * <p>Method under test: {@link LocalWitnesses#getWitnessAccountAddress(boolean)}
    */
   @Test
   @Category(MaintainedByDiffblue.class)
@@ -298,21 +284,23 @@ public class LocalWitnessesDiffblueTest {
   public void testGetWitnessAccountAddress_givenA_whenTrue_thenReturnArrayOfByteWithAAndOne() {
     // Arrange
     LocalWitnesses localWitnesses = new LocalWitnesses();
-    localWitnesses.setWitnessAccountAddress(new byte[]{'A', 1, 'A', 1, 'A', 1, 'A', 1});
+    localWitnesses.setWitnessAccountAddress(new byte[] {'A', 1, 'A', 1, 'A', 1, 'A', 1});
 
     // Act and Assert
-    assertArrayEquals(new byte[]{'A', 1, 'A', 1, 'A', 1, 'A', 1}, localWitnesses.getWitnessAccountAddress(true));
+    assertArrayEquals(
+        new byte[] {'A', 1, 'A', 1, 'A', 1, 'A', 1}, localWitnesses.getWitnessAccountAddress(true));
   }
 
   /**
    * Test {@link LocalWitnesses#setPrivateKeys(List)}.
+   *
    * <ul>
-   *   <li>Given {@code 0X}.</li>
-   *   <li>When {@link ArrayList#ArrayList()} add {@code 0X}.</li>
-   *   <li>Then {@link LocalWitnesses#LocalWitnesses()} PrivateKey is {@code 0X}.</li>
+   *   <li>Given {@code 0X}.
+   *   <li>When {@link ArrayList#ArrayList()} add {@code 0X}.
+   *   <li>Then {@link LocalWitnesses#LocalWitnesses()} PrivateKey is {@code 0X}.
    * </ul>
-   * <p>
-   * Method under test: {@link LocalWitnesses#setPrivateKeys(List)}
+   *
+   * <p>Method under test: {@link LocalWitnesses#setPrivateKeys(List)}
    */
   @Test
   @Category(MaintainedByDiffblue.class)
@@ -335,12 +323,13 @@ public class LocalWitnessesDiffblueTest {
 
   /**
    * Test {@link LocalWitnesses#setPrivateKeys(List)}.
+   *
    * <ul>
-   *   <li>Given {@code foo}.</li>
-   *   <li>When {@link ArrayList#ArrayList()} add {@code foo}.</li>
+   *   <li>Given {@code foo}.
+   *   <li>When {@link ArrayList#ArrayList()} add {@code foo}.
    * </ul>
-   * <p>
-   * Method under test: {@link LocalWitnesses#setPrivateKeys(List)}
+   *
+   * <p>Method under test: {@link LocalWitnesses#setPrivateKeys(List)}
    */
   @Test
   @Category(MaintainedByDiffblue.class)
@@ -359,35 +348,13 @@ public class LocalWitnessesDiffblueTest {
 
   /**
    * Test {@link LocalWitnesses#setPrivateKeys(List)}.
+   *
    * <ul>
-   *   <li>Given {@link IllegalArgumentException#IllegalArgumentException(String)} with {@code foo}.</li>
-   *   <li>Then calls {@link COWArrayList#isEmpty()}.</li>
+   *   <li>Given {@code not blank}.
+   *   <li>When {@link ArrayList#ArrayList()} add {@code not blank}.
    * </ul>
-   * <p>
-   * Method under test: {@link LocalWitnesses#setPrivateKeys(List)}
-   */
-  @Test
-  @Category(MaintainedByDiffblue.class)
-  @MethodsUnderTest({"void LocalWitnesses.setPrivateKeys(List)"})
-  public void testSetPrivateKeys_givenIllegalArgumentExceptionWithFoo_thenCallsIsEmpty() {
-    // Arrange
-    LocalWitnesses localWitnesses = new LocalWitnesses();
-    COWArrayList<String> privateKeys = mock(COWArrayList.class);
-    when(privateKeys.isEmpty()).thenThrow(new IllegalArgumentException("foo"));
-
-    // Act and Assert
-    assertThrows(IllegalArgumentException.class, () -> localWitnesses.setPrivateKeys(privateKeys));
-    verify(privateKeys).isEmpty();
-  }
-
-  /**
-   * Test {@link LocalWitnesses#setPrivateKeys(List)}.
-   * <ul>
-   *   <li>Given {@code not blank}.</li>
-   *   <li>When {@link ArrayList#ArrayList()} add {@code not blank}.</li>
-   * </ul>
-   * <p>
-   * Method under test: {@link LocalWitnesses#setPrivateKeys(List)}
+   *
+   * <p>Method under test: {@link LocalWitnesses#setPrivateKeys(List)}
    */
   @Test
   @Category(MaintainedByDiffblue.class)
@@ -405,12 +372,13 @@ public class LocalWitnessesDiffblueTest {
 
   /**
    * Test {@link LocalWitnesses#setPrivateKeys(List)}.
+   *
    * <ul>
-   *   <li>Given space.</li>
-   *   <li>Then {@link LocalWitnesses#LocalWitnesses()} PrivateKey is space.</li>
+   *   <li>Given space.
+   *   <li>Then {@link LocalWitnesses#LocalWitnesses()} PrivateKey is space.
    * </ul>
-   * <p>
-   * Method under test: {@link LocalWitnesses#setPrivateKeys(List)}
+   *
+   * <p>Method under test: {@link LocalWitnesses#setPrivateKeys(List)}
    */
   @Test
   @Category(MaintainedByDiffblue.class)
@@ -432,12 +400,13 @@ public class LocalWitnessesDiffblueTest {
 
   /**
    * Test {@link LocalWitnesses#setPrivateKeys(List)}.
+   *
    * <ul>
-   *   <li>When {@link ArrayList#ArrayList()}.</li>
-   *   <li>Then {@link LocalWitnesses#LocalWitnesses()} PrivateKeys Empty.</li>
+   *   <li>When {@link ArrayList#ArrayList()}.
+   *   <li>Then {@link LocalWitnesses#LocalWitnesses()} PrivateKeys Empty.
    * </ul>
-   * <p>
-   * Method under test: {@link LocalWitnesses#setPrivateKeys(List)}
+   *
+   * <p>Method under test: {@link LocalWitnesses#setPrivateKeys(List)}
    */
   @Test
   @Category(MaintainedByDiffblue.class)
@@ -455,12 +424,13 @@ public class LocalWitnessesDiffblueTest {
 
   /**
    * Test {@link LocalWitnesses#setPrivateKeys(List)}.
+   *
    * <ul>
-   *   <li>When {@code null}.</li>
-   *   <li>Then {@link LocalWitnesses#LocalWitnesses()} PrivateKeys Empty.</li>
+   *   <li>When {@code null}.
+   *   <li>Then {@link LocalWitnesses#LocalWitnesses()} PrivateKeys Empty.
    * </ul>
-   * <p>
-   * Method under test: {@link LocalWitnesses#setPrivateKeys(List)}
+   *
+   * <p>Method under test: {@link LocalWitnesses#setPrivateKeys(List)}
    */
   @Test
   @Category(MaintainedByDiffblue.class)
@@ -478,12 +448,13 @@ public class LocalWitnessesDiffblueTest {
 
   /**
    * Test {@link LocalWitnesses#addPrivateKeys(String)}.
+   *
    * <ul>
-   *   <li>When {@code 0X}.</li>
-   *   <li>Then {@link LocalWitnesses#LocalWitnesses()} PrivateKeys first is {@code 0X}.</li>
+   *   <li>When {@code 0X}.
+   *   <li>Then {@link LocalWitnesses#LocalWitnesses()} PrivateKeys first is {@code 0X}.
    * </ul>
-   * <p>
-   * Method under test: {@link LocalWitnesses#addPrivateKeys(String)}
+   *
+   * <p>Method under test: {@link LocalWitnesses#addPrivateKeys(String)}
    */
   @Test
   @Category(MaintainedByDiffblue.class)
@@ -504,29 +475,32 @@ public class LocalWitnessesDiffblueTest {
 
   /**
    * Test {@link LocalWitnesses#addPrivateKeys(String)}.
+   *
    * <ul>
-   *   <li>When {@code Private Key}.</li>
-   *   <li>Then throw {@link IllegalArgumentException}.</li>
+   *   <li>When {@code Private Key}.
+   *   <li>Then throw {@link IllegalArgumentException}.
    * </ul>
-   * <p>
-   * Method under test: {@link LocalWitnesses#addPrivateKeys(String)}
+   *
+   * <p>Method under test: {@link LocalWitnesses#addPrivateKeys(String)}
    */
   @Test
   @Category(MaintainedByDiffblue.class)
   @MethodsUnderTest({"void LocalWitnesses.addPrivateKeys(String)"})
   public void testAddPrivateKeys_whenPrivateKey_thenThrowIllegalArgumentException() {
     // Arrange, Act and Assert
-    assertThrows(IllegalArgumentException.class, () -> (new LocalWitnesses()).addPrivateKeys("Private Key"));
+    assertThrows(
+        IllegalArgumentException.class, () -> new LocalWitnesses().addPrivateKeys("Private Key"));
   }
 
   /**
    * Test {@link LocalWitnesses#addPrivateKeys(String)}.
+   *
    * <ul>
-   *   <li>When space.</li>
-   *   <li>Then {@link LocalWitnesses#LocalWitnesses()} PrivateKeys first is space.</li>
+   *   <li>When space.
+   *   <li>Then {@link LocalWitnesses#LocalWitnesses()} PrivateKeys first is space.
    * </ul>
-   * <p>
-   * Method under test: {@link LocalWitnesses#addPrivateKeys(String)}
+   *
+   * <p>Method under test: {@link LocalWitnesses#addPrivateKeys(String)}
    */
   @Test
   @Category(MaintainedByDiffblue.class)
@@ -547,12 +521,13 @@ public class LocalWitnessesDiffblueTest {
 
   /**
    * Test {@link LocalWitnesses#getPrivateKey()}.
+   *
    * <ul>
-   *   <li>Given {@link LocalWitnesses#LocalWitnesses()} addPrivateKeys {@code 0X}.</li>
-   *   <li>Then return {@code 0X}.</li>
+   *   <li>Given {@link LocalWitnesses#LocalWitnesses()} addPrivateKeys {@code 0X}.
+   *   <li>Then return {@code 0X}.
    * </ul>
-   * <p>
-   * Method under test: {@link LocalWitnesses#getPrivateKey()}
+   *
+   * <p>Method under test: {@link LocalWitnesses#getPrivateKey()}
    */
   @Test
   @Category(MaintainedByDiffblue.class)
@@ -568,42 +543,45 @@ public class LocalWitnessesDiffblueTest {
 
   /**
    * Test {@link LocalWitnesses#getPrivateKey()}.
+   *
    * <ul>
-   *   <li>Given {@link LocalWitnesses#LocalWitnesses()}.</li>
-   *   <li>Then return {@code null}.</li>
+   *   <li>Given {@link LocalWitnesses#LocalWitnesses()}.
+   *   <li>Then return {@code null}.
    * </ul>
-   * <p>
-   * Method under test: {@link LocalWitnesses#getPrivateKey()}
+   *
+   * <p>Method under test: {@link LocalWitnesses#getPrivateKey()}
    */
   @Test
   @Category(MaintainedByDiffblue.class)
   @MethodsUnderTest({"String LocalWitnesses.getPrivateKey()"})
   public void testGetPrivateKey_givenLocalWitnesses_thenReturnNull() {
     // Arrange, Act and Assert
-    assertNull((new LocalWitnesses()).getPrivateKey());
+    assertNull(new LocalWitnesses().getPrivateKey());
   }
 
   /**
    * Test {@link LocalWitnesses#getPublicKey()}.
+   *
    * <ul>
-   *   <li>Given {@link LocalWitnesses#LocalWitnesses()}.</li>
-   *   <li>Then return {@code null}.</li>
+   *   <li>Given {@link LocalWitnesses#LocalWitnesses()}.
+   *   <li>Then return {@code null}.
    * </ul>
-   * <p>
-   * Method under test: {@link LocalWitnesses#getPublicKey()}
+   *
+   * <p>Method under test: {@link LocalWitnesses#getPublicKey()}
    */
   @Test
   @Category(MaintainedByDiffblue.class)
   @MethodsUnderTest({"byte[] LocalWitnesses.getPublicKey()"})
   public void testGetPublicKey_givenLocalWitnesses_thenReturnNull() {
     // Arrange, Act and Assert
-    assertNull((new LocalWitnesses()).getPublicKey());
+    assertNull(new LocalWitnesses().getPublicKey());
   }
 
   /**
    * Test getters and setters.
-   * <p>
-   * Methods under test:
+   *
+   * <p>Methods under test:
+   *
    * <ul>
    *   <li>{@link LocalWitnesses#setWitnessAccountAddress(byte[])}
    *   <li>{@link LocalWitnesses#getPrivateKeys()}
@@ -611,7 +589,10 @@ public class LocalWitnessesDiffblueTest {
    */
   @Test
   @Category(MaintainedByDiffblue.class)
-  @MethodsUnderTest({"List LocalWitnesses.getPrivateKeys()", "void LocalWitnesses.setWitnessAccountAddress(byte[])"})
+  @MethodsUnderTest({
+    "List LocalWitnesses.getPrivateKeys()",
+    "void LocalWitnesses.setWitnessAccountAddress(byte[])"
+  })
   public void testGettersAndSetters() throws UnsupportedEncodingException {
     // Arrange
     LocalWitnesses localWitnesses = new LocalWitnesses();

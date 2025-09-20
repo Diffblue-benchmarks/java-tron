@@ -16,8 +16,8 @@ import org.tron.protos.Protocol.Vote;
 public class VoteWitnessParamDiffblueTest {
   /**
    * Test {@link VoteWitnessParam#addVote(byte[], long)}.
-   * <p>
-   * Method under test: {@link VoteWitnessParam#addVote(byte[], long)}
+   *
+   * <p>Method under test: {@link VoteWitnessParam#addVote(byte[], long)}
    */
   @Test
   @Category(MaintainedByDiffblue.class)
@@ -43,28 +43,55 @@ public class VoteWitnessParamDiffblueTest {
 
   /**
    * Test {@link VoteWitnessParam#toJsonStr()}.
+   *
    * <ul>
-   *   <li>Given {@link VoteWitnessParam} (default constructor).</li>
-   *   <li>Then return {@code {"votes":[]}}.</li>
+   *   <li>Given {@link VoteWitnessParam} (default constructor).
+   *   <li>Then return {@code {"votes":[]}}.
    * </ul>
-   * <p>
-   * Method under test: {@link VoteWitnessParam#toJsonStr()}
+   *
+   * <p>Method under test: {@link VoteWitnessParam#toJsonStr()}
    */
   @Test
   @Category(MaintainedByDiffblue.class)
   @MethodsUnderTest({"java.lang.String VoteWitnessParam.toJsonStr()"})
   public void testToJsonStr_givenVoteWitnessParam_thenReturnVotes() {
     // Arrange, Act and Assert
-    assertEquals("{\"votes\":[]}", (new VoteWitnessParam()).toJsonStr());
+    assertEquals("{\"votes\":[]}", new VoteWitnessParam().toJsonStr());
   }
 
   /**
    * Test {@link VoteWitnessParam#toJsonStr()}.
+   *
    * <ul>
-   *   <li>Then return {@code {"votes":[{"vote_address":"1K31XJSKv6Zgi64","vote_count":1}]}}.</li>
+   *   <li>Then return a string.
    * </ul>
-   * <p>
-   * Method under test: {@link VoteWitnessParam#toJsonStr()}
+   *
+   * <p>Method under test: {@link VoteWitnessParam#toJsonStr()}
+   */
+  @Test
+  @Category(MaintainedByDiffblue.class)
+  @MethodsUnderTest({"java.lang.String VoteWitnessParam.toJsonStr()"})
+  public void testToJsonStr_thenReturnAString() {
+    // Arrange
+    VoteWitnessParam voteWitnessParam = new VoteWitnessParam();
+    voteWitnessParam.addVote(new byte[] {'A', 1, 'A', 1, 'A', 1, 'A', 1}, 2L);
+    voteWitnessParam.addVote(new byte[] {'A', 1, 'A', 1, 'A', 1, 'A', 1}, 1L);
+
+    // Act and Assert
+    assertEquals(
+        "{\"votes\":[{\"vote_address\":\"2E9cagwdNSMutUg26\",\"vote_count\":2},{\"vote_address\":\"2E9cagwdNSMutUg26\","
+            + "\"vote_count\":1}]}",
+        voteWitnessParam.toJsonStr());
+  }
+
+  /**
+   * Test {@link VoteWitnessParam#toJsonStr()}.
+   *
+   * <ul>
+   *   <li>Then return {@code {"votes":[{"vote_address":"1K31XJSKv6Zgi64","vote_count":1}]}}.
+   * </ul>
+   *
+   * <p>Method under test: {@link VoteWitnessParam#toJsonStr()}
    */
   @Test
   @Category(MaintainedByDiffblue.class)
@@ -72,19 +99,22 @@ public class VoteWitnessParamDiffblueTest {
   public void testToJsonStr_thenReturnVotesVoteAddress1K31XJSKv6Zgi64VoteCount1() {
     // Arrange
     VoteWitnessParam voteWitnessParam = new VoteWitnessParam();
-    voteWitnessParam.addVote(new byte[]{0, 1, 'A', 1, 'A', 1, 'A', 1}, 1L);
+    voteWitnessParam.addVote(new byte[] {0, 1, 'A', 1, 'A', 1, 'A', 1}, 1L);
 
     // Act and Assert
-    assertEquals("{\"votes\":[{\"vote_address\":\"1K31XJSKv6Zgi64\",\"vote_count\":1}]}", voteWitnessParam.toJsonStr());
+    assertEquals(
+        "{\"votes\":[{\"vote_address\":\"1K31XJSKv6Zgi64\",\"vote_count\":1}]}",
+        voteWitnessParam.toJsonStr());
   }
 
   /**
    * Test {@link VoteWitnessParam#toJsonStr()}.
+   *
    * <ul>
-   *   <li>Then return {@code {"votes":[{"vote_address":"2E9cagwdNSMutUg26","vote_count":1}]}}.</li>
+   *   <li>Then return {@code {"votes":[{"vote_address":"2E9cagwdNSMutUg26","vote_count":1}]}}.
    * </ul>
-   * <p>
-   * Method under test: {@link VoteWitnessParam#toJsonStr()}
+   *
+   * <p>Method under test: {@link VoteWitnessParam#toJsonStr()}
    */
   @Test
   @Category(MaintainedByDiffblue.class)
@@ -92,20 +122,22 @@ public class VoteWitnessParamDiffblueTest {
   public void testToJsonStr_thenReturnVotesVoteAddress2E9cagwdNSMutUg26VoteCount1() {
     // Arrange
     VoteWitnessParam voteWitnessParam = new VoteWitnessParam();
-    voteWitnessParam.addVote(new byte[]{'A', 1, 'A', 1, 'A', 1, 'A', 1}, 1L);
+    voteWitnessParam.addVote(new byte[] {'A', 1, 'A', 1, 'A', 1, 'A', 1}, 1L);
 
     // Act and Assert
-    assertEquals("{\"votes\":[{\"vote_address\":\"2E9cagwdNSMutUg26\",\"vote_count\":1}]}",
+    assertEquals(
+        "{\"votes\":[{\"vote_address\":\"2E9cagwdNSMutUg26\",\"vote_count\":1}]}",
         voteWitnessParam.toJsonStr());
   }
 
   /**
    * Test {@link VoteWitnessParam#toJsonStr()}.
+   *
    * <ul>
-   *   <li>Then return {@code {"votes":[{"vote_address":"3QJmnh","vote_count":1}]}}.</li>
+   *   <li>Then return {@code {"votes":[{"vote_address":"3QJmnh","vote_count":1}]}}.
    * </ul>
-   * <p>
-   * Method under test: {@link VoteWitnessParam#toJsonStr()}
+   *
+   * <p>Method under test: {@link VoteWitnessParam#toJsonStr()}
    */
   @Test
   @Category(MaintainedByDiffblue.class)
@@ -113,16 +145,19 @@ public class VoteWitnessParamDiffblueTest {
   public void testToJsonStr_thenReturnVotesVoteAddress3QJmnhVoteCount1() {
     // Arrange
     VoteWitnessParam voteWitnessParam = new VoteWitnessParam();
-    voteWitnessParam.addVote(new byte[]{}, 1L);
+    voteWitnessParam.addVote(new byte[] {}, 1L);
 
     // Act and Assert
-    assertEquals("{\"votes\":[{\"vote_address\":\"3QJmnh\",\"vote_count\":1}]}", voteWitnessParam.toJsonStr());
+    assertEquals(
+        "{\"votes\":[{\"vote_address\":\"3QJmnh\",\"vote_count\":1}]}",
+        voteWitnessParam.toJsonStr());
   }
 
   /**
    * Test getters and setters.
-   * <p>
-   * Methods under test:
+   *
+   * <p>Methods under test:
+   *
    * <ul>
    *   <li>default or parameterless constructor of {@link VoteWitnessParam}
    *   <li>{@link VoteWitnessParam#setVoterAddress(byte[])}
@@ -132,8 +167,12 @@ public class VoteWitnessParamDiffblueTest {
    */
   @Test
   @Category(MaintainedByDiffblue.class)
-  @MethodsUnderTest({"void VoteWitnessParam.<init>()", "byte[] VoteWitnessParam.getVoterAddress()",
-      "List VoteWitnessParam.getVotes()", "void VoteWitnessParam.setVoterAddress(byte[])"})
+  @MethodsUnderTest({
+    "void VoteWitnessParam.<init>()",
+    "byte[] VoteWitnessParam.getVoterAddress()",
+    "List VoteWitnessParam.getVotes()",
+    "void VoteWitnessParam.setVoterAddress(byte[])"
+  })
   public void testGettersAndSetters() throws UnsupportedEncodingException {
     // Arrange and Act
     VoteWitnessParam actualVoteWitnessParam = new VoteWitnessParam();

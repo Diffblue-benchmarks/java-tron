@@ -23,12 +23,13 @@ import org.tron.protos.Protocol.TransactionInfo;
 public class LogMatchDiffblueTest {
   /**
    * Test {@link LogMatch#matchBlock(LogFilter, long, String, List, boolean)}.
+   *
    * <ul>
-   *   <li>Given DefaultInstance.</li>
-   *   <li>When {@link ArrayList#ArrayList()} add DefaultInstance.</li>
+   *   <li>Given DefaultInstance.
+   *   <li>When {@link ArrayList#ArrayList()} add DefaultInstance.
    * </ul>
-   * <p>
-   * Method under test: {@link LogMatch#matchBlock(LogFilter, long, String, List, boolean)}
+   *
+   * <p>Method under test: {@link LogMatch#matchBlock(LogFilter, long, String, List, boolean)}
    */
   @Test
   @Category(MaintainedByDiffblue.class)
@@ -41,8 +42,8 @@ public class LogMatchDiffblueTest {
     transactionInfoList.add(TransactionInfo.getDefaultInstance());
 
     // Act
-    List<LogFilterElement> actualMatchBlockResult = LogMatch.matchBlock(logFilter, 1L, "Block Hash",
-        transactionInfoList, true);
+    List<LogFilterElement> actualMatchBlockResult =
+        LogMatch.matchBlock(logFilter, 1L, "Block Hash", transactionInfoList, true);
 
     // Assert
     assertTrue(actualMatchBlockResult.isEmpty());
@@ -50,12 +51,13 @@ public class LogMatchDiffblueTest {
 
   /**
    * Test {@link LogMatch#matchBlock(LogFilter, long, String, List, boolean)}.
+   *
    * <ul>
-   *   <li>Given DefaultInstance.</li>
-   *   <li>When {@link ArrayList#ArrayList()} add DefaultInstance.</li>
+   *   <li>Given DefaultInstance.
+   *   <li>When {@link ArrayList#ArrayList()} add DefaultInstance.
    * </ul>
-   * <p>
-   * Method under test: {@link LogMatch#matchBlock(LogFilter, long, String, List, boolean)}
+   *
+   * <p>Method under test: {@link LogMatch#matchBlock(LogFilter, long, String, List, boolean)}
    */
   @Test
   @Category(MaintainedByDiffblue.class)
@@ -69,8 +71,8 @@ public class LogMatchDiffblueTest {
     transactionInfoList.add(TransactionInfo.getDefaultInstance());
 
     // Act
-    List<LogFilterElement> actualMatchBlockResult = LogMatch.matchBlock(logFilter, 1L, "Block Hash",
-        transactionInfoList, true);
+    List<LogFilterElement> actualMatchBlockResult =
+        LogMatch.matchBlock(logFilter, 1L, "Block Hash", transactionInfoList, true);
 
     // Assert
     assertTrue(actualMatchBlockResult.isEmpty());
@@ -78,23 +80,23 @@ public class LogMatchDiffblueTest {
 
   /**
    * Test {@link LogMatch#matchBlock(LogFilter, long, String, List, boolean)}.
+   *
    * <ul>
-   *   <li>When {@link ArrayList#ArrayList()}.</li>
-   *   <li>Then return Empty.</li>
+   *   <li>When {@link ArrayList#ArrayList()}.
    * </ul>
-   * <p>
-   * Method under test: {@link LogMatch#matchBlock(LogFilter, long, String, List, boolean)}
+   *
+   * <p>Method under test: {@link LogMatch#matchBlock(LogFilter, long, String, List, boolean)}
    */
   @Test
   @Category(MaintainedByDiffblue.class)
   @MethodsUnderTest({"List LogMatch.matchBlock(LogFilter, long, String, List, boolean)"})
-  public void testMatchBlock_whenArrayList_thenReturnEmpty() {
+  public void testMatchBlock_whenArrayList() {
     // Arrange
     LogFilter logFilter = new LogFilter();
 
     // Act
-    List<LogFilterElement> actualMatchBlockResult = LogMatch.matchBlock(logFilter, 1L, "Block Hash", new ArrayList<>(),
-        true);
+    List<LogFilterElement> actualMatchBlockResult =
+        LogMatch.matchBlock(logFilter, 1L, "Block Hash", new ArrayList<>(), true);
 
     // Assert
     assertTrue(actualMatchBlockResult.isEmpty());
@@ -102,24 +104,27 @@ public class LogMatchDiffblueTest {
 
   /**
    * Test {@link LogMatch#matchBlockOneByOne()}.
+   *
    * <ul>
-   *   <li>Then return array length is zero.</li>
+   *   <li>Then return array length is zero.
    * </ul>
-   * <p>
-   * Method under test: {@link LogMatch#matchBlockOneByOne()}
+   *
+   * <p>Method under test: {@link LogMatch#matchBlockOneByOne()}
    */
   @Test
   @Category(MaintainedByDiffblue.class)
   @MethodsUnderTest({"LogFilterElement[] LogMatch.matchBlockOneByOne()"})
   public void testMatchBlockOneByOne_thenReturnArrayLengthIsZero()
-      throws BadItemException, ItemNotFoundException, JsonRpcInvalidParamsException, JsonRpcTooManyResultException {
+      throws BadItemException, ItemNotFoundException, JsonRpcInvalidParamsException,
+          JsonRpcTooManyResultException {
     // Arrange
     FilterRequest fr = new FilterRequest();
     LogFilterWrapper logFilterWrapper = new LogFilterWrapper(fr, 1L, new Wallet());
-
     ArrayList<Long> blockNumList = new ArrayList<>();
 
+    LogMatch logMatch = new LogMatch(logFilterWrapper, blockNumList, new Manager());
+
     // Act and Assert
-    assertEquals(0, (new LogMatch(logFilterWrapper, blockNumList, new Manager())).matchBlockOneByOne().length);
+    assertEquals(0, logMatch.matchBlockOneByOne().length);
   }
 }

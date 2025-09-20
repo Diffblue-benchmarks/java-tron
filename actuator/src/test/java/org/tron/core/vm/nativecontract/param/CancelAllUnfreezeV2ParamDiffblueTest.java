@@ -11,8 +11,9 @@ import org.junit.experimental.categories.Category;
 public class CancelAllUnfreezeV2ParamDiffblueTest {
   /**
    * Test getters and setters.
-   * <p>
-   * Methods under test:
+   *
+   * <p>Methods under test:
+   *
    * <ul>
    *   <li>default or parameterless constructor of {@link CancelAllUnfreezeV2Param}
    *   <li>{@link CancelAllUnfreezeV2Param#setOwnerAddress(byte[])}
@@ -21,8 +22,11 @@ public class CancelAllUnfreezeV2ParamDiffblueTest {
    */
   @Test
   @Category(MaintainedByDiffblue.class)
-  @MethodsUnderTest({"void CancelAllUnfreezeV2Param.<init>()", "byte[] CancelAllUnfreezeV2Param.getOwnerAddress()",
-      "void CancelAllUnfreezeV2Param.setOwnerAddress(byte[])"})
+  @MethodsUnderTest({
+    "void CancelAllUnfreezeV2Param.<init>()",
+    "byte[] CancelAllUnfreezeV2Param.getOwnerAddress()",
+    "void CancelAllUnfreezeV2Param.setOwnerAddress(byte[])"
+  })
   public void testGettersAndSetters() throws UnsupportedEncodingException {
     // Arrange and Act
     CancelAllUnfreezeV2Param actualCancelAllUnfreezeV2Param = new CancelAllUnfreezeV2Param();

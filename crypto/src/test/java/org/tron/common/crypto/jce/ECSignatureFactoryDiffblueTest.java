@@ -14,8 +14,8 @@ import org.junit.experimental.categories.Category;
 public class ECSignatureFactoryDiffblueTest {
   /**
    * Test {@link ECSignatureFactory#getRawInstance()}.
-   * <p>
-   * Method under test: {@link ECSignatureFactory#getRawInstance()}
+   *
+   * <p>Method under test: {@link ECSignatureFactory#getRawInstance()}
    */
   @Test
   @Category(MaintainedByDiffblue.class)
@@ -30,9 +30,11 @@ public class ECSignatureFactoryDiffblueTest {
     assertEquals("Software", provider.get("Signature.SHA224withECDSA ImplementedIn"));
     assertEquals("Software", provider.get("Signature.SHA256withECDSA ImplementedIn"));
     assertEquals("SunEC", provider.get("Provider.id name"));
-    assertEquals("java.security.interfaces.ECPublicKey|java.security.interfaces.ECPrivateKey",
+    assertEquals(
+        "java.security.interfaces.ECPublicKey|java.security.interfaces.ECPrivateKey",
         provider.get("KeyAgreement.ECDH SupportedKeyClasses"));
-    assertEquals("java.security.interfaces.ECPublicKey|java.security.interfaces.ECPrivateKey",
+    assertEquals(
+        "java.security.interfaces.ECPublicKey|java.security.interfaces.ECPrivateKey",
         provider.get("Signature.NONEwithECDSA SupportedKeyClasses"));
     assertEquals("sun.security.util.ECParameters", provider.get("AlgorithmParameters.EC"));
     assertNull(actualRawInstance.getParameters());
@@ -41,8 +43,8 @@ public class ECSignatureFactoryDiffblueTest {
 
   /**
    * Test {@link ECSignatureFactory#getRawInstance(Provider)} with {@code Provider}.
-   * <p>
-   * Method under test: {@link ECSignatureFactory#getRawInstance(Provider)}
+   *
+   * <p>Method under test: {@link ECSignatureFactory#getRawInstance(Provider)}
    */
   @Test
   @Category(MaintainedByDiffblue.class)

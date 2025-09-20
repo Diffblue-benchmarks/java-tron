@@ -11,8 +11,8 @@ import org.junit.experimental.categories.Category;
 public class ContractValidateExceptionDiffblueTest {
   /**
    * Test {@link ContractValidateException#ContractValidateException()}.
-   * <p>
-   * Method under test: {@link ContractValidateException#ContractValidateException()}
+   *
+   * <p>Method under test: {@link ContractValidateException#ContractValidateException()}
    */
   @Test
   @Category(MaintainedByDiffblue.class)
@@ -30,15 +30,16 @@ public class ContractValidateExceptionDiffblueTest {
 
   /**
    * Test {@link ContractValidateException#ContractValidateException(String)}.
-   * <p>
-   * Method under test: {@link ContractValidateException#ContractValidateException(String)}
+   *
+   * <p>Method under test: {@link ContractValidateException#ContractValidateException(String)}
    */
   @Test
   @Category(MaintainedByDiffblue.class)
   @MethodsUnderTest({"void ContractValidateException.<init>(String)"})
   public void testNewContractValidateException2() {
     // Arrange and Act
-    ContractValidateException actualContractValidateException = new ContractValidateException("An error occurred");
+    ContractValidateException actualContractValidateException =
+        new ContractValidateException("An error occurred");
 
     // Assert
     assertEquals("An error occurred", actualContractValidateException.getLocalizedMessage());
@@ -49,8 +50,9 @@ public class ContractValidateExceptionDiffblueTest {
 
   /**
    * Test {@link ContractValidateException#ContractValidateException(String, Throwable)}.
-   * <p>
-   * Method under test: {@link ContractValidateException#ContractValidateException(String, Throwable)}
+   *
+   * <p>Method under test: {@link ContractValidateException#ContractValidateException(String,
+   * Throwable)}
    */
   @Test
   @Category(MaintainedByDiffblue.class)
@@ -60,8 +62,8 @@ public class ContractValidateExceptionDiffblueTest {
     Throwable throwable = new Throwable();
 
     // Act
-    ContractValidateException actualContractValidateException = new ContractValidateException("An error occurred",
-        throwable);
+    ContractValidateException actualContractValidateException =
+        new ContractValidateException("An error occurred", throwable);
 
     // Assert
     assertEquals("An error occurred", actualContractValidateException.getLocalizedMessage());

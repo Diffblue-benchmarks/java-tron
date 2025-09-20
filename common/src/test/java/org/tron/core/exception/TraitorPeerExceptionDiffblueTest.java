@@ -11,8 +11,8 @@ import org.junit.experimental.categories.Category;
 public class TraitorPeerExceptionDiffblueTest {
   /**
    * Test {@link TraitorPeerException#TraitorPeerException()}.
-   * <p>
-   * Method under test: {@link TraitorPeerException#TraitorPeerException()}
+   *
+   * <p>Method under test: {@link TraitorPeerException#TraitorPeerException()}
    */
   @Test
   @Category(MaintainedByDiffblue.class)
@@ -30,8 +30,8 @@ public class TraitorPeerExceptionDiffblueTest {
 
   /**
    * Test {@link TraitorPeerException#TraitorPeerException(String)}.
-   * <p>
-   * Method under test: {@link TraitorPeerException#TraitorPeerException(String)}
+   *
+   * <p>Method under test: {@link TraitorPeerException#TraitorPeerException(String)}
    */
   @Test
   @Category(MaintainedByDiffblue.class)
@@ -49,8 +49,8 @@ public class TraitorPeerExceptionDiffblueTest {
 
   /**
    * Test {@link TraitorPeerException#TraitorPeerException(String, Throwable)}.
-   * <p>
-   * Method under test: {@link TraitorPeerException#TraitorPeerException(String, Throwable)}
+   *
+   * <p>Method under test: {@link TraitorPeerException#TraitorPeerException(String, Throwable)}
    */
   @Test
   @Category(MaintainedByDiffblue.class)
@@ -60,7 +60,8 @@ public class TraitorPeerExceptionDiffblueTest {
     Throwable cause = new Throwable();
 
     // Act
-    TraitorPeerException actualTraitorPeerException = new TraitorPeerException("An error occurred", cause);
+    TraitorPeerException actualTraitorPeerException =
+        new TraitorPeerException("An error occurred", cause);
 
     // Assert
     assertEquals("An error occurred", actualTraitorPeerException.getLocalizedMessage());

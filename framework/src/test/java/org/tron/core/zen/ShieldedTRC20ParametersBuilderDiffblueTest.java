@@ -48,25 +48,24 @@ import java.util.List;
 import org.junit.Test;
 import org.junit.experimental.categories.Category;
 import org.tron.api.GrpcAPI;
-import org.tron.api.GrpcAPI.BytesMessage;
 import org.tron.api.GrpcAPI.ShieldedTRC20Parameters;
 import org.tron.api.GrpcAPI.ShieldedTRC20Parameters.Builder;
 import org.tron.core.exception.ZksnarkException;
 import org.tron.core.zen.ShieldedTRC20ParametersBuilder.ShieldedTRC20ParametersType;
-import org.tron.core.zen.address.DiversifierT;
 
 public class ShieldedTRC20ParametersBuilderDiffblueTest {
   /**
    * Test {@link ShieldedTRC20ParametersBuilder#ShieldedTRC20ParametersBuilder()}.
-   * <p>
-   * Method under test: {@link ShieldedTRC20ParametersBuilder#ShieldedTRC20ParametersBuilder()}
+   *
+   * <p>Method under test: {@link ShieldedTRC20ParametersBuilder#ShieldedTRC20ParametersBuilder()}
    */
   @Test
   @Category(MaintainedByDiffblue.class)
   @MethodsUnderTest({"void ShieldedTRC20ParametersBuilder.<init>()"})
   public void testNewShieldedTRC20ParametersBuilder2() {
     // Arrange and Act
-    ShieldedTRC20ParametersBuilder actualShieldedTRC20ParametersBuilder = new ShieldedTRC20ParametersBuilder();
+    ShieldedTRC20ParametersBuilder actualShieldedTRC20ParametersBuilder =
+        new ShieldedTRC20ParametersBuilder();
 
     // Assert
     Builder builder = actualShieldedTRC20ParametersBuilder.getBuilder();
@@ -90,95 +89,116 @@ public class ShieldedTRC20ParametersBuilderDiffblueTest {
 
   /**
    * Test {@link ShieldedTRC20ParametersBuilder#ShieldedTRC20ParametersBuilder(String)}.
-   * <p>
-   * Method under test: {@link ShieldedTRC20ParametersBuilder#ShieldedTRC20ParametersBuilder(String)}
+   *
+   * <p>Method under test: {@link
+   * ShieldedTRC20ParametersBuilder#ShieldedTRC20ParametersBuilder(String)}
    */
   @Test
   @Category(MaintainedByDiffblue.class)
   @MethodsUnderTest({"void ShieldedTRC20ParametersBuilder.<init>(String)"})
   public void testNewShieldedTRC20ParametersBuilder3() throws ZksnarkException {
     // Arrange and Act
-    ShieldedTRC20ParametersBuilder actualShieldedTRC20ParametersBuilder = new ShieldedTRC20ParametersBuilder("mint");
+    ShieldedTRC20ParametersBuilder actualShieldedTRC20ParametersBuilder =
+        new ShieldedTRC20ParametersBuilder("mint");
 
     // Assert
-    assertEquals(ShieldedTRC20ParametersType.MINT,
+    assertEquals(
+        ShieldedTRC20ParametersType.MINT,
         actualShieldedTRC20ParametersBuilder.getShieldedTRC20ParametersType());
     Builder builder = actualShieldedTRC20ParametersBuilder.getBuilder();
     UnknownFieldSet unknownFields = builder.getUnknownFields();
     ShieldedTRC20Parameters defaultInstanceForType = builder.getDefaultInstanceForType();
     assertSame(unknownFields, defaultInstanceForType.getUnknownFields());
-    assertSame(unknownFields, unknownFields.getDefaultInstanceForType());
-    assertSame(defaultInstanceForType, defaultInstanceForType.getDefaultInstanceForType());
+    UnknownFieldSet actualDefaultInstanceForType = unknownFields.getDefaultInstanceForType();
+    assertSame(unknownFields, actualDefaultInstanceForType);
+    ShieldedTRC20Parameters actualDefaultInstanceForType2 =
+        defaultInstanceForType.getDefaultInstanceForType();
+    assertSame(defaultInstanceForType, actualDefaultInstanceForType2);
   }
 
   /**
    * Test {@link ShieldedTRC20ParametersBuilder#ShieldedTRC20ParametersBuilder(String)}.
-   * <p>
-   * Method under test: {@link ShieldedTRC20ParametersBuilder#ShieldedTRC20ParametersBuilder(String)}
+   *
+   * <p>Method under test: {@link
+   * ShieldedTRC20ParametersBuilder#ShieldedTRC20ParametersBuilder(String)}
    */
   @Test
   @Category(MaintainedByDiffblue.class)
   @MethodsUnderTest({"void ShieldedTRC20ParametersBuilder.<init>(String)"})
   public void testNewShieldedTRC20ParametersBuilder4() throws ZksnarkException {
     // Arrange and Act
-    ShieldedTRC20ParametersBuilder actualShieldedTRC20ParametersBuilder = new ShieldedTRC20ParametersBuilder(
-        "transfer");
+    ShieldedTRC20ParametersBuilder actualShieldedTRC20ParametersBuilder =
+        new ShieldedTRC20ParametersBuilder("transfer");
 
     // Assert
-    assertEquals(ShieldedTRC20ParametersType.TRANSFER,
+    assertEquals(
+        ShieldedTRC20ParametersType.TRANSFER,
         actualShieldedTRC20ParametersBuilder.getShieldedTRC20ParametersType());
     Builder builder = actualShieldedTRC20ParametersBuilder.getBuilder();
     UnknownFieldSet unknownFields = builder.getUnknownFields();
     ShieldedTRC20Parameters defaultInstanceForType = builder.getDefaultInstanceForType();
     assertSame(unknownFields, defaultInstanceForType.getUnknownFields());
-    assertSame(unknownFields, unknownFields.getDefaultInstanceForType());
-    assertSame(defaultInstanceForType, defaultInstanceForType.getDefaultInstanceForType());
+    UnknownFieldSet actualDefaultInstanceForType = unknownFields.getDefaultInstanceForType();
+    assertSame(unknownFields, actualDefaultInstanceForType);
+    ShieldedTRC20Parameters actualDefaultInstanceForType2 =
+        defaultInstanceForType.getDefaultInstanceForType();
+    assertSame(defaultInstanceForType, actualDefaultInstanceForType2);
   }
 
   /**
    * Test {@link ShieldedTRC20ParametersBuilder#ShieldedTRC20ParametersBuilder(String)}.
-   * <p>
-   * Method under test: {@link ShieldedTRC20ParametersBuilder#ShieldedTRC20ParametersBuilder(String)}
+   *
+   * <p>Method under test: {@link
+   * ShieldedTRC20ParametersBuilder#ShieldedTRC20ParametersBuilder(String)}
    */
   @Test
   @Category(MaintainedByDiffblue.class)
   @MethodsUnderTest({"void ShieldedTRC20ParametersBuilder.<init>(String)"})
   public void testNewShieldedTRC20ParametersBuilder5() throws ZksnarkException {
     // Arrange and Act
-    ShieldedTRC20ParametersBuilder actualShieldedTRC20ParametersBuilder = new ShieldedTRC20ParametersBuilder("burn");
+    ShieldedTRC20ParametersBuilder actualShieldedTRC20ParametersBuilder =
+        new ShieldedTRC20ParametersBuilder("burn");
 
     // Assert
-    assertEquals(ShieldedTRC20ParametersType.BURN,
+    assertEquals(
+        ShieldedTRC20ParametersType.BURN,
         actualShieldedTRC20ParametersBuilder.getShieldedTRC20ParametersType());
     Builder builder = actualShieldedTRC20ParametersBuilder.getBuilder();
     UnknownFieldSet unknownFields = builder.getUnknownFields();
     ShieldedTRC20Parameters defaultInstanceForType = builder.getDefaultInstanceForType();
     assertSame(unknownFields, defaultInstanceForType.getUnknownFields());
-    assertSame(unknownFields, unknownFields.getDefaultInstanceForType());
-    assertSame(defaultInstanceForType, defaultInstanceForType.getDefaultInstanceForType());
+    UnknownFieldSet actualDefaultInstanceForType = unknownFields.getDefaultInstanceForType();
+    assertSame(unknownFields, actualDefaultInstanceForType);
+    ShieldedTRC20Parameters actualDefaultInstanceForType2 =
+        defaultInstanceForType.getDefaultInstanceForType();
+    assertSame(defaultInstanceForType, actualDefaultInstanceForType2);
   }
 
   /**
    * Test {@link ShieldedTRC20ParametersBuilder#ShieldedTRC20ParametersBuilder(String)}.
+   *
    * <ul>
-   *   <li>When {@code Type}.</li>
-   *   <li>Then throw {@link ZksnarkException}.</li>
+   *   <li>When {@code Type}.
+   *   <li>Then throw {@link ZksnarkException}.
    * </ul>
-   * <p>
-   * Method under test: {@link ShieldedTRC20ParametersBuilder#ShieldedTRC20ParametersBuilder(String)}
+   *
+   * <p>Method under test: {@link
+   * ShieldedTRC20ParametersBuilder#ShieldedTRC20ParametersBuilder(String)}
    */
   @Test
   @Category(MaintainedByDiffblue.class)
   @MethodsUnderTest({"void ShieldedTRC20ParametersBuilder.<init>(String)"})
-  public void testNewShieldedTRC20ParametersBuilder_whenType_thenThrowZksnarkException() throws ZksnarkException {
+  public void testNewShieldedTRC20ParametersBuilder_whenType_thenThrowZksnarkException()
+      throws ZksnarkException {
     // Arrange, Act and Assert
     assertThrows(ZksnarkException.class, () -> new ShieldedTRC20ParametersBuilder("Type"));
   }
 
   /**
    * Test {@link ShieldedTRC20ParametersBuilder#ShieldedTRC20ParametersBuilder()}.
-   * <p>
-   * Methods under test:
+   *
+   * <p>Methods under test:
+   *
    * <ul>
    *   <li>{@link ShieldedTRC20ParametersBuilder#ShieldedTRC20ParametersBuilder()}
    *   <li>{@link ShieldedTRC20ParametersBuilder#getBuilder()}
@@ -188,21 +208,24 @@ public class ShieldedTRC20ParametersBuilderDiffblueTest {
    */
   @Test
   @Category(MaintainedByDiffblue.class)
-  @MethodsUnderTest({"ShieldedTRC20Parameters ShieldedTRC20ParametersBuilder.build(boolean)",
-      "Builder ShieldedTRC20ParametersBuilder.getBuilder()",
-      "ShieldedTRC20ParametersType ShieldedTRC20ParametersBuilder.getShieldedTRC20ParametersType()",
-      "long ShieldedTRC20ParametersBuilder.getValueBalance()",
-      "void ShieldedTRC20ParametersBuilder.setBurnCiphertext(byte[])",
-      "void ShieldedTRC20ParametersBuilder.setReceives(List)",
-      "void ShieldedTRC20ParametersBuilder.setShieldedTRC20Address(byte[])",
-      "void ShieldedTRC20ParametersBuilder.setShieldedTRC20ParametersType(ShieldedTRC20ParametersType)",
-      "void ShieldedTRC20ParametersBuilder.setSpends(List)",
-      "void ShieldedTRC20ParametersBuilder.setTransparentFromAmount(BigInteger)",
-      "void ShieldedTRC20ParametersBuilder.setTransparentToAddress(byte[])",
-      "void ShieldedTRC20ParametersBuilder.setTransparentToAmount(BigInteger)"})
+  @MethodsUnderTest({
+    "ShieldedTRC20Parameters ShieldedTRC20ParametersBuilder.build(boolean)",
+    "Builder ShieldedTRC20ParametersBuilder.getBuilder()",
+    "ShieldedTRC20ParametersType ShieldedTRC20ParametersBuilder.getShieldedTRC20ParametersType()",
+    "long ShieldedTRC20ParametersBuilder.getValueBalance()",
+    "void ShieldedTRC20ParametersBuilder.setBurnCiphertext(byte[])",
+    "void ShieldedTRC20ParametersBuilder.setReceives(List)",
+    "void ShieldedTRC20ParametersBuilder.setShieldedTRC20Address(byte[])",
+    "void ShieldedTRC20ParametersBuilder.setShieldedTRC20ParametersType(ShieldedTRC20ParametersType)",
+    "void ShieldedTRC20ParametersBuilder.setSpends(List)",
+    "void ShieldedTRC20ParametersBuilder.setTransparentFromAmount(BigInteger)",
+    "void ShieldedTRC20ParametersBuilder.setTransparentToAddress(byte[])",
+    "void ShieldedTRC20ParametersBuilder.setTransparentToAmount(BigInteger)"
+  })
   public void testNewShieldedTRC20ParametersBuilder() {
     // Arrange and Act
-    ShieldedTRC20ParametersBuilder actualShieldedTRC20ParametersBuilder = new ShieldedTRC20ParametersBuilder();
+    ShieldedTRC20ParametersBuilder actualShieldedTRC20ParametersBuilder =
+        new ShieldedTRC20ParametersBuilder();
 
     // Assert
     Builder builder = actualShieldedTRC20ParametersBuilder.getBuilder();
@@ -375,7 +398,8 @@ public class ShieldedTRC20ParametersBuilderDiffblueTest {
     assertEquals("protocol.ShieldedTRC20Parameters.parameter_type", getResult4.getFullName());
     assertEquals("protocol.ShieldedTRC20Parameters.receive_description", getResult2.getFullName());
     assertEquals("protocol.ShieldedTRC20Parameters.spend_description", getResult.getFullName());
-    assertEquals("protocol.ShieldedTRC20Parameters.trigger_contract_input", getResult3.getFullName());
+    assertEquals(
+        "protocol.ShieldedTRC20Parameters.trigger_contract_input", getResult3.getFullName());
     assertEquals("protocol.ShieldedTRC20TriggerContractParameters", getResult14.getFullName());
     assertEquals("protocol.SpendDescription", messageType2.getFullName());
     assertEquals("protocol.Wallet", getResult15.getFullName());
@@ -509,7 +533,8 @@ public class ShieldedTRC20ParametersBuilderDiffblueTest {
     assertEquals(FieldPresence.FIELD_PRESENCE_UNKNOWN, features.getFieldPresence());
     assertEquals(JsonFormat.JSON_FORMAT_UNKNOWN, features.getJsonFormat());
     assertEquals(MessageEncoding.MESSAGE_ENCODING_UNKNOWN, features.getMessageEncoding());
-    assertEquals(RepeatedFieldEncoding.REPEATED_FIELD_ENCODING_UNKNOWN, features.getRepeatedFieldEncoding());
+    assertEquals(
+        RepeatedFieldEncoding.REPEATED_FIELD_ENCODING_UNKNOWN, features.getRepeatedFieldEncoding());
     assertEquals(Utf8Validation.UTF8_VALIDATION_UNKNOWN, features.getUtf8Validation());
     assertEquals(Label.LABEL_OPTIONAL, toProtoResult5.getLabel());
     assertEquals(Label.LABEL_OPTIONAL, toProtoResult6.getLabel());
@@ -809,106 +834,40 @@ public class ShieldedTRC20ParametersBuilderDiffblueTest {
   }
 
   /**
-   * Test {@link ShieldedTRC20ParametersBuilder#getTriggerContractInput(ShieldedTRC20Parameters, List, BigInteger, boolean, byte[])}.
-   * <p>
-   * Method under test: {@link ShieldedTRC20ParametersBuilder#getTriggerContractInput(ShieldedTRC20Parameters, List, BigInteger, boolean, byte[])}
-   */
-  @Test
-  @Category(MaintainedByDiffblue.class)
-  @MethodsUnderTest({
-      "String ShieldedTRC20ParametersBuilder.getTriggerContractInput(ShieldedTRC20Parameters, List, BigInteger, boolean, byte[])"})
-  public void testGetTriggerContractInput() throws UnsupportedEncodingException {
-    // Arrange
-    ShieldedTRC20ParametersBuilder shieldedTRC20ParametersBuilder = new ShieldedTRC20ParametersBuilder();
-    shieldedTRC20ParametersBuilder.setShieldedTRC20ParametersType(ShieldedTRC20ParametersType.TRANSFER);
-    ShieldedTRC20Parameters shieldedTRC20Parameters = ShieldedTRC20Parameters.getDefaultInstance();
-    ArrayList<BytesMessage> spendAuthoritySignature = new ArrayList<>();
-    BigInteger value = BigInteger.valueOf(1L);
-
-    // Act and Assert
-    assertThrows(IllegalArgumentException.class,
-        () -> shieldedTRC20ParametersBuilder.getTriggerContractInput(shieldedTRC20Parameters, spendAuthoritySignature,
-            value, true, "AXAXAXAX".getBytes("UTF-8")));
-  }
-
-  /**
-   * Test {@link ShieldedTRC20ParametersBuilder#getTriggerContractInput(ShieldedTRC20Parameters, List, BigInteger, boolean, byte[])}.
+   * Test {@link ShieldedTRC20ParametersBuilder#getTriggerContractInput(ShieldedTRC20Parameters,
+   * List, BigInteger, boolean, byte[])}.
+   *
    * <ul>
-   *   <li>When valueOf zero.</li>
-   *   <li>Then throw {@link IllegalArgumentException}.</li>
+   *   <li>Then throw {@link IllegalArgumentException}.
    * </ul>
-   * <p>
-   * Method under test: {@link ShieldedTRC20ParametersBuilder#getTriggerContractInput(ShieldedTRC20Parameters, List, BigInteger, boolean, byte[])}
+   *
+   * <p>Method under test: {@link
+   * ShieldedTRC20ParametersBuilder#getTriggerContractInput(ShieldedTRC20Parameters, List,
+   * BigInteger, boolean, byte[])}
    */
   @Test
   @Category(MaintainedByDiffblue.class)
   @MethodsUnderTest({
-      "String ShieldedTRC20ParametersBuilder.getTriggerContractInput(ShieldedTRC20Parameters, List, BigInteger, boolean, byte[])"})
-  public void testGetTriggerContractInput_whenValueOfZero_thenThrowIllegalArgumentException()
+    "String ShieldedTRC20ParametersBuilder.getTriggerContractInput(ShieldedTRC20Parameters, List, BigInteger, boolean, byte[])"
+  })
+  public void testGetTriggerContractInput_thenThrowIllegalArgumentException()
       throws UnsupportedEncodingException {
     // Arrange
-    ShieldedTRC20ParametersBuilder shieldedTRC20ParametersBuilder = new ShieldedTRC20ParametersBuilder();
-    shieldedTRC20ParametersBuilder.setShieldedTRC20ParametersType(ShieldedTRC20ParametersType.MINT);
+    ShieldedTRC20ParametersBuilder shieldedTRC20ParametersBuilder =
+        new ShieldedTRC20ParametersBuilder();
+    shieldedTRC20ParametersBuilder.setShieldedTRC20ParametersType(
+        ShieldedTRC20ParametersType.TRANSFER);
     ShieldedTRC20Parameters shieldedTRC20Parameters = ShieldedTRC20Parameters.getDefaultInstance();
-    ArrayList<BytesMessage> spendAuthoritySignature = new ArrayList<>();
-    BigInteger value = BigInteger.valueOf(0L);
 
     // Act and Assert
-    assertThrows(IllegalArgumentException.class,
-        () -> shieldedTRC20ParametersBuilder.getTriggerContractInput(shieldedTRC20Parameters, spendAuthoritySignature,
-            value, true, "AXAXAXAX".getBytes("UTF-8")));
-  }
-
-  /**
-   * Test {@link ShieldedTRC20ParametersBuilder#addOutput(byte[], DiversifierT, byte[], long, byte[], byte[])} with {@code ovk}, {@code d}, {@code pkD}, {@code value}, {@code r}, {@code memo}.
-   * <ul>
-   *   <li>When {@code A}.</li>
-   * </ul>
-   * <p>
-   * Method under test: {@link ShieldedTRC20ParametersBuilder#addOutput(byte[], DiversifierT, byte[], long, byte[], byte[])}
-   */
-  @Test
-  @Category(MaintainedByDiffblue.class)
-  @MethodsUnderTest({
-      "void ShieldedTRC20ParametersBuilder.addOutput(byte[], DiversifierT, byte[], long, byte[], byte[])"})
-  public void testAddOutputWithOvkDPkDValueRMemo_whenA() throws ZksnarkException {
-    // Arrange
-    ShieldedTRC20ParametersBuilder shieldedTRC20ParametersBuilder = new ShieldedTRC20ParametersBuilder();
-
-    // Act
-    shieldedTRC20ParametersBuilder.addOutput(new byte[]{'A', 'X', 'A', 'X', 'A', 'X', 'A', 'X'}, DiversifierT.random(),
-        new byte[]{'A', 'X', 'A', 'X', 'A', 'X', 'A', 'X'}, 42L, new byte[]{'A', 'X', 'A', 'X', 'A', 'X', 'A', 'X'},
-        null);
-
-    // Assert
-    assertEquals(-42L, shieldedTRC20ParametersBuilder.getValueBalance());
-  }
-
-  /**
-   * Test {@link ShieldedTRC20ParametersBuilder#addOutput(byte[], DiversifierT, byte[], long, byte[], byte[])} with {@code ovk}, {@code d}, {@code pkD}, {@code value}, {@code r}, {@code memo}.
-   * <ul>
-   *   <li>When {@code AXAXAXAX} Bytes is {@code UTF-8}.</li>
-   * </ul>
-   * <p>
-   * Method under test: {@link ShieldedTRC20ParametersBuilder#addOutput(byte[], DiversifierT, byte[], long, byte[], byte[])}
-   */
-  @Test
-  @Category(MaintainedByDiffblue.class)
-  @MethodsUnderTest({
-      "void ShieldedTRC20ParametersBuilder.addOutput(byte[], DiversifierT, byte[], long, byte[], byte[])"})
-  public void testAddOutputWithOvkDPkDValueRMemo_whenAxaxaxaxBytesIsUtf8()
-      throws UnsupportedEncodingException, ZksnarkException {
-    // Arrange
-    ShieldedTRC20ParametersBuilder shieldedTRC20ParametersBuilder = new ShieldedTRC20ParametersBuilder();
-    byte[] ovk = "AXAXAXAX".getBytes("UTF-8");
-    DiversifierT d = DiversifierT.random();
-    byte[] pkD = "AXAXAXAX".getBytes("UTF-8");
-    byte[] r = "AXAXAXAX".getBytes("UTF-8");
-
-    // Act
-    shieldedTRC20ParametersBuilder.addOutput(ovk, d, pkD, 42L, r, "AXAXAXAX".getBytes("UTF-8"));
-
-    // Assert
-    assertEquals(-42L, shieldedTRC20ParametersBuilder.getValueBalance());
+    assertThrows(
+        IllegalArgumentException.class,
+        () ->
+            shieldedTRC20ParametersBuilder.getTriggerContractInput(
+                shieldedTRC20Parameters,
+                new ArrayList<>(),
+                BigInteger.valueOf(1L),
+                true,
+                "AXAXAXAX".getBytes("UTF-8")));
   }
 }

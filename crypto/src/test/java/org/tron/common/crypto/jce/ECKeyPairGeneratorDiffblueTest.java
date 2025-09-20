@@ -18,8 +18,8 @@ import org.junit.experimental.categories.Category;
 public class ECKeyPairGeneratorDiffblueTest {
   /**
    * Test {@link ECKeyPairGenerator#generateKeyPair()}.
-   * <p>
-   * Method under test: {@link ECKeyPairGenerator#generateKeyPair()}
+   *
+   * <p>Method under test: {@link ECKeyPairGenerator#generateKeyPair()}
    */
   @Test
   @Category(MaintainedByDiffblue.class)
@@ -30,18 +30,15 @@ public class ECKeyPairGeneratorDiffblueTest {
   }
 
   /**
-   * Test {@link ECKeyPairGenerator#getInstance(Provider, SecureRandom)} with {@code Provider}, {@code SecureRandom}.
-   * <ul>
-   *   <li>When {@link SecureRandom#SecureRandom()}.</li>
-   *   <li>Then return {@link KeyPairGeneratorSpi.EC}.</li>
-   * </ul>
-   * <p>
-   * Method under test: {@link ECKeyPairGenerator#getInstance(Provider, SecureRandom)}
+   * Test {@link ECKeyPairGenerator#getInstance(Provider, SecureRandom)} with {@code Provider},
+   * {@code SecureRandom}.
+   *
+   * <p>Method under test: {@link ECKeyPairGenerator#getInstance(Provider, SecureRandom)}
    */
   @Test
   @Category(MaintainedByDiffblue.class)
   @MethodsUnderTest({"KeyPairGenerator ECKeyPairGenerator.getInstance(Provider, SecureRandom)"})
-  public void testGetInstanceWithProviderSecureRandom_whenSecureRandom_thenReturnEc() {
+  public void testGetInstanceWithProviderSecureRandom() {
     // Arrange
     BouncyCastleProvider provider = new BouncyCastleProvider();
 

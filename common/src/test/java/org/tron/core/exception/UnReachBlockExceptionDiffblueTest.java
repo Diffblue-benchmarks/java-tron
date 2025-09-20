@@ -11,8 +11,8 @@ import org.junit.experimental.categories.Category;
 public class UnReachBlockExceptionDiffblueTest {
   /**
    * Test {@link UnReachBlockException#UnReachBlockException()}.
-   * <p>
-   * Method under test: {@link UnReachBlockException#UnReachBlockException()}
+   *
+   * <p>Method under test: {@link UnReachBlockException#UnReachBlockException()}
    */
   @Test
   @Category(MaintainedByDiffblue.class)
@@ -30,15 +30,16 @@ public class UnReachBlockExceptionDiffblueTest {
 
   /**
    * Test {@link UnReachBlockException#UnReachBlockException(String)}.
-   * <p>
-   * Method under test: {@link UnReachBlockException#UnReachBlockException(String)}
+   *
+   * <p>Method under test: {@link UnReachBlockException#UnReachBlockException(String)}
    */
   @Test
   @Category(MaintainedByDiffblue.class)
   @MethodsUnderTest({"void UnReachBlockException.<init>(String)"})
   public void testNewUnReachBlockException2() {
     // Arrange and Act
-    UnReachBlockException actualUnReachBlockException = new UnReachBlockException("An error occurred");
+    UnReachBlockException actualUnReachBlockException =
+        new UnReachBlockException("An error occurred");
 
     // Assert
     assertEquals("An error occurred", actualUnReachBlockException.getLocalizedMessage());
@@ -49,8 +50,8 @@ public class UnReachBlockExceptionDiffblueTest {
 
   /**
    * Test {@link UnReachBlockException#UnReachBlockException(String, Throwable)}.
-   * <p>
-   * Method under test: {@link UnReachBlockException#UnReachBlockException(String, Throwable)}
+   *
+   * <p>Method under test: {@link UnReachBlockException#UnReachBlockException(String, Throwable)}
    */
   @Test
   @Category(MaintainedByDiffblue.class)
@@ -60,7 +61,8 @@ public class UnReachBlockExceptionDiffblueTest {
     Throwable cause = new Throwable();
 
     // Act
-    UnReachBlockException actualUnReachBlockException = new UnReachBlockException("An error occurred", cause);
+    UnReachBlockException actualUnReachBlockException =
+        new UnReachBlockException("An error occurred", cause);
 
     // Assert
     assertEquals("An error occurred", actualUnReachBlockException.getLocalizedMessage());

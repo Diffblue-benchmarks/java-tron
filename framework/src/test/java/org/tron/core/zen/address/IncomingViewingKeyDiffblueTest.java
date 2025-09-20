@@ -11,8 +11,9 @@ import org.junit.experimental.categories.Category;
 public class IncomingViewingKeyDiffblueTest {
   /**
    * Test getters and setters.
-   * <p>
-   * Methods under test:
+   *
+   * <p>Methods under test:
+   *
    * <ul>
    *   <li>{@link IncomingViewingKey#IncomingViewingKey(byte[])}
    *   <li>{@link IncomingViewingKey#setValue(byte[])}
@@ -21,11 +22,15 @@ public class IncomingViewingKeyDiffblueTest {
    */
   @Test
   @Category(MaintainedByDiffblue.class)
-  @MethodsUnderTest({"void IncomingViewingKey.<init>(byte[])", "byte[] IncomingViewingKey.getValue()",
-      "void IncomingViewingKey.setValue(byte[])"})
+  @MethodsUnderTest({
+    "void IncomingViewingKey.<init>(byte[])",
+    "byte[] IncomingViewingKey.getValue()",
+    "void IncomingViewingKey.setValue(byte[])"
+  })
   public void testGettersAndSetters() throws UnsupportedEncodingException {
     // Arrange and Act
-    IncomingViewingKey actualIncomingViewingKey = new IncomingViewingKey("AXAXAXAX".getBytes("UTF-8"));
+    IncomingViewingKey actualIncomingViewingKey =
+        new IncomingViewingKey("AXAXAXAX".getBytes("UTF-8"));
     byte[] value = "AXAXAXAX".getBytes("UTF-8");
     actualIncomingViewingKey.setValue(value);
     byte[] actualValue = actualIncomingViewingKey.getValue();

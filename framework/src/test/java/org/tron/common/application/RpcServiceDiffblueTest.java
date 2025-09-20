@@ -11,12 +11,14 @@ import org.tron.core.services.RpcApiService;
 public class RpcServiceDiffblueTest {
   /**
    * Test {@link RpcService#equals(Object)}, and {@link RpcService#hashCode()}.
+   *
    * <ul>
-   *   <li>When other is equal.</li>
-   *   <li>Then return equal.</li>
+   *   <li>When other is equal.
+   *   <li>Then return equal.
    * </ul>
-   * <p>
-   * Methods under test:
+   *
+   * <p>Methods under test:
+   *
    * <ul>
    *   <li>{@link RpcService#equals(Object)}
    *   <li>{@link RpcService#hashCode()}
@@ -32,18 +34,19 @@ public class RpcServiceDiffblueTest {
 
     // Act and Assert
     assertEquals(rpcApiService, rpcApiService2);
-    int expectedHashCodeResult = rpcApiService.hashCode();
-    assertEquals(expectedHashCodeResult, rpcApiService2.hashCode());
+    assertEquals(rpcApiService.hashCode(), rpcApiService2.hashCode());
   }
 
   /**
    * Test {@link RpcService#equals(Object)}, and {@link RpcService#hashCode()}.
+   *
    * <ul>
-   *   <li>When other is same.</li>
-   *   <li>Then return equal.</li>
+   *   <li>When other is same.
+   *   <li>Then return equal.
    * </ul>
-   * <p>
-   * Methods under test:
+   *
+   * <p>Methods under test:
+   *
    * <ul>
    *   <li>{@link RpcService#equals(Object)}
    *   <li>{@link RpcService#hashCode()}
@@ -64,12 +67,13 @@ public class RpcServiceDiffblueTest {
 
   /**
    * Test {@link RpcService#equals(Object)}.
+   *
    * <ul>
-   *   <li>When other is different.</li>
-   *   <li>Then return not equal.</li>
+   *   <li>When other is different.
+   *   <li>Then return not equal.
    * </ul>
-   * <p>
-   * Method under test: {@link RpcService#equals(Object)}
+   *
+   * <p>Method under test: {@link RpcService#equals(Object)}
    */
   @Test
   @Category(MaintainedByDiffblue.class)
@@ -81,12 +85,13 @@ public class RpcServiceDiffblueTest {
 
   /**
    * Test {@link RpcService#equals(Object)}.
+   *
    * <ul>
-   *   <li>When other is {@code null}.</li>
-   *   <li>Then return not equal.</li>
+   *   <li>When other is {@code null}.
+   *   <li>Then return not equal.
    * </ul>
-   * <p>
-   * Method under test: {@link RpcService#equals(Object)}
+   *
+   * <p>Method under test: {@link RpcService#equals(Object)}
    */
   @Test
   @Category(MaintainedByDiffblue.class)
@@ -98,12 +103,13 @@ public class RpcServiceDiffblueTest {
 
   /**
    * Test {@link RpcService#equals(Object)}.
+   *
    * <ul>
-   *   <li>When other is wrong type.</li>
-   *   <li>Then return not equal.</li>
+   *   <li>When other is wrong type.
+   *   <li>Then return not equal.
    * </ul>
-   * <p>
-   * Method under test: {@link RpcService#equals(Object)}
+   *
+   * <p>Method under test: {@link RpcService#equals(Object)}
    */
   @Test
   @Category(MaintainedByDiffblue.class)

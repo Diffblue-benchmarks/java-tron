@@ -14,12 +14,13 @@ import org.tron.protos.Protocol.Inventory.InventoryType;
 public class ItemDiffblueTest {
   /**
    * Test {@link Item#Item(Sha256Hash, InventoryType)}.
+   *
    * <ul>
-   *   <li>When {@code null}.</li>
-   *   <li>Then return Hash is {@code null}.</li>
+   *   <li>When {@code null}.
+   *   <li>Then return Hash is {@code null}.
    * </ul>
-   * <p>
-   * Method under test: {@link Item#Item(Sha256Hash, InventoryType)}
+   *
+   * <p>Method under test: {@link Item#Item(Sha256Hash, InventoryType)}
    */
   @Test
   @Category(MaintainedByDiffblue.class)

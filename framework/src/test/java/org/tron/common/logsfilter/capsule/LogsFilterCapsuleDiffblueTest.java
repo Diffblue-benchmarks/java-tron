@@ -16,12 +16,14 @@ import org.tron.protos.Protocol.TransactionInfo;
 public class LogsFilterCapsuleDiffblueTest {
   /**
    * Test {@link LogsFilterCapsule#LogsFilterCapsule(long, String, Bloom, List, boolean, boolean)}.
+   *
    * <ul>
-   *   <li>Given DefaultInstance.</li>
-   *   <li>Then return TxInfoList is {@link ArrayList#ArrayList()}.</li>
+   *   <li>Given DefaultInstance.
+   *   <li>Then return TxInfoList is {@link ArrayList#ArrayList()}.
    * </ul>
-   * <p>
-   * Method under test: {@link LogsFilterCapsule#LogsFilterCapsule(long, String, Bloom, List, boolean, boolean)}
+   *
+   * <p>Method under test: {@link LogsFilterCapsule#LogsFilterCapsule(long, String, Bloom, List,
+   * boolean, boolean)}
    */
   @Test
   @Category(MaintainedByDiffblue.class)
@@ -34,18 +36,24 @@ public class LogsFilterCapsuleDiffblueTest {
     txInfoList.add(TransactionInfo.getDefaultInstance());
     txInfoList.add(TransactionInfo.getDefaultInstance());
 
-    // Act and Assert
-    assertSame(txInfoList, (new LogsFilterCapsule(1L, "Block Hash", bloom, txInfoList, true, true)).getTxInfoList());
+    // Act
+    LogsFilterCapsule actualLogsFilterCapsule =
+        new LogsFilterCapsule(1L, "Block Hash", bloom, txInfoList, true, true);
+
+    // Assert
+    assertSame(txInfoList, actualLogsFilterCapsule.getTxInfoList());
   }
 
   /**
    * Test {@link LogsFilterCapsule#LogsFilterCapsule(long, String, Bloom, List, boolean, boolean)}.
+   *
    * <ul>
-   *   <li>Given DefaultInstance.</li>
-   *   <li>Then return TxInfoList size is one.</li>
+   *   <li>Given DefaultInstance.
+   *   <li>Then return TxInfoList size is one.
    * </ul>
-   * <p>
-   * Method under test: {@link LogsFilterCapsule#LogsFilterCapsule(long, String, Bloom, List, boolean, boolean)}
+   *
+   * <p>Method under test: {@link LogsFilterCapsule#LogsFilterCapsule(long, String, Bloom, List,
+   * boolean, boolean)}
    */
   @Test
   @Category(MaintainedByDiffblue.class)
@@ -58,9 +66,12 @@ public class LogsFilterCapsuleDiffblueTest {
     TransactionInfo defaultInstance = TransactionInfo.getDefaultInstance();
     txInfoList.add(defaultInstance);
 
-    // Act and Assert
-    List<TransactionInfo> txInfoList2 = (new LogsFilterCapsule(1L, "Block Hash", bloom, txInfoList, true, true))
-        .getTxInfoList();
+    // Act
+    LogsFilterCapsule actualLogsFilterCapsule =
+        new LogsFilterCapsule(1L, "Block Hash", bloom, txInfoList, true, true);
+
+    // Assert
+    List<TransactionInfo> txInfoList2 = actualLogsFilterCapsule.getTxInfoList();
     assertEquals(1, txInfoList2.size());
     assertSame(txInfoList, txInfoList2);
     assertSame(defaultInstance, txInfoList2.get(0));
@@ -68,12 +79,14 @@ public class LogsFilterCapsuleDiffblueTest {
 
   /**
    * Test {@link LogsFilterCapsule#LogsFilterCapsule(long, String, Bloom, List, boolean, boolean)}.
+   *
    * <ul>
-   *   <li>When {@link ArrayList#ArrayList()}.</li>
-   *   <li>Then return {@code Block Hash}.</li>
+   *   <li>When {@link ArrayList#ArrayList()}.
+   *   <li>Then return {@code Block Hash}.
    * </ul>
-   * <p>
-   * Method under test: {@link LogsFilterCapsule#LogsFilterCapsule(long, String, Bloom, List, boolean, boolean)}
+   *
+   * <p>Method under test: {@link LogsFilterCapsule#LogsFilterCapsule(long, String, Bloom, List,
+   * boolean, boolean)}
    */
   @Test
   @Category(MaintainedByDiffblue.class)
@@ -83,8 +96,8 @@ public class LogsFilterCapsuleDiffblueTest {
     Bloom bloom = new Bloom();
 
     // Act
-    LogsFilterCapsule actualLogsFilterCapsule = new LogsFilterCapsule(1L, "Block Hash", bloom, new ArrayList<>(), true,
-        true);
+    LogsFilterCapsule actualLogsFilterCapsule =
+        new LogsFilterCapsule(1L, "Block Hash", bloom, new ArrayList<>(), true, true);
 
     // Assert
     assertEquals("Block Hash", actualLogsFilterCapsule.getBlockHash());
@@ -97,8 +110,9 @@ public class LogsFilterCapsuleDiffblueTest {
 
   /**
    * Test getters and setters.
-   * <p>
-   * Methods under test:
+   *
+   * <p>Methods under test:
+   *
    * <ul>
    *   <li>{@link LogsFilterCapsule#setBlockHash(String)}
    *   <li>{@link LogsFilterCapsule#setBlockNumber(long)}
@@ -117,17 +131,26 @@ public class LogsFilterCapsuleDiffblueTest {
    */
   @Test
   @Category(MaintainedByDiffblue.class)
-  @MethodsUnderTest({"String LogsFilterCapsule.getBlockHash()", "long LogsFilterCapsule.getBlockNumber()",
-      "Bloom LogsFilterCapsule.getBloom()", "List LogsFilterCapsule.getTxInfoList()",
-      "boolean LogsFilterCapsule.isRemoved()", "boolean LogsFilterCapsule.isSolidified()",
-      "void LogsFilterCapsule.setBlockHash(String)", "void LogsFilterCapsule.setBlockNumber(long)",
-      "void LogsFilterCapsule.setBloom(Bloom)", "void LogsFilterCapsule.setRemoved(boolean)",
-      "void LogsFilterCapsule.setSolidified(boolean)", "void LogsFilterCapsule.setTxInfoList(List)",
-      "String LogsFilterCapsule.toString()"})
+  @MethodsUnderTest({
+    "String LogsFilterCapsule.getBlockHash()",
+    "long LogsFilterCapsule.getBlockNumber()",
+    "Bloom LogsFilterCapsule.getBloom()",
+    "List LogsFilterCapsule.getTxInfoList()",
+    "boolean LogsFilterCapsule.isRemoved()",
+    "boolean LogsFilterCapsule.isSolidified()",
+    "void LogsFilterCapsule.setBlockHash(String)",
+    "void LogsFilterCapsule.setBlockNumber(long)",
+    "void LogsFilterCapsule.setBloom(Bloom)",
+    "void LogsFilterCapsule.setRemoved(boolean)",
+    "void LogsFilterCapsule.setSolidified(boolean)",
+    "void LogsFilterCapsule.setTxInfoList(List)",
+    "String LogsFilterCapsule.toString()"
+  })
   public void testGettersAndSetters() {
     // Arrange
     Bloom bloom = new Bloom();
-    LogsFilterCapsule logsFilterCapsule = new LogsFilterCapsule(1L, "Block Hash", bloom, new ArrayList<>(), true, true);
+    LogsFilterCapsule logsFilterCapsule =
+        new LogsFilterCapsule(1L, "Block Hash", bloom, new ArrayList<>(), true, true);
 
     // Act
     logsFilterCapsule.setBlockHash("Block Hash");
@@ -148,13 +171,15 @@ public class LogsFilterCapsuleDiffblueTest {
 
     // Assert
     assertEquals("Block Hash", actualBlockHash);
-    assertEquals("LogsFilterCapsule(blockNumber=1, blockHash=Block Hash, bloom=000000000000000000000000000000000000000"
-        + "0000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000"
-        + "0000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000"
-        + "0000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000"
-        + "0000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000"
-        + "0000000000000000000000000000000000000000000000000000000000000000000000000, txInfoList=[], solidified=true,"
-        + " removed=true)", actualToStringResult);
+    assertEquals(
+        "LogsFilterCapsule(blockNumber=1, blockHash=Block Hash, bloom=000000000000000000000000000000000000000"
+            + "0000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000"
+            + "0000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000"
+            + "0000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000"
+            + "0000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000"
+            + "0000000000000000000000000000000000000000000000000000000000000000000000000, txInfoList=[], solidified=true,"
+            + " removed=true)",
+        actualToStringResult);
     assertEquals(1L, actualBlockNumber);
     assertTrue(actualTxInfoList.isEmpty());
     assertTrue(actualIsRemovedResult);

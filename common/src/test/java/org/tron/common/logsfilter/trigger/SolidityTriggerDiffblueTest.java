@@ -9,8 +9,8 @@ import org.junit.experimental.categories.Category;
 public class SolidityTriggerDiffblueTest {
   /**
    * Test new {@link SolidityTrigger} (default constructor).
-   * <p>
-   * Method under test: default or parameterless constructor of {@link SolidityTrigger}
+   *
+   * <p>Method under test: default or parameterless constructor of {@link SolidityTrigger}
    */
   @Test
   @Category(MaintainedByDiffblue.class)
@@ -27,8 +27,9 @@ public class SolidityTriggerDiffblueTest {
 
   /**
    * Test getters and setters.
-   * <p>
-   * Methods under test:
+   *
+   * <p>Methods under test:
+   *
    * <ul>
    *   <li>{@link SolidityTrigger#setLatestSolidifiedBlockNumber(long)}
    *   <li>{@link SolidityTrigger#toString()}
@@ -37,8 +38,11 @@ public class SolidityTriggerDiffblueTest {
    */
   @Test
   @Category(MaintainedByDiffblue.class)
-  @MethodsUnderTest({"long SolidityTrigger.getLatestSolidifiedBlockNumber()",
-      "void SolidityTrigger.setLatestSolidifiedBlockNumber(long)", "String SolidityTrigger.toString()"})
+  @MethodsUnderTest({
+    "long SolidityTrigger.getLatestSolidifiedBlockNumber()",
+    "void SolidityTrigger.setLatestSolidifiedBlockNumber(long)",
+    "String SolidityTrigger.toString()"
+  })
   public void testGettersAndSetters() {
     // Arrange
     SolidityTrigger solidityTrigger = new SolidityTrigger();
@@ -48,7 +52,9 @@ public class SolidityTriggerDiffblueTest {
     String actualToStringResult = solidityTrigger.toString();
 
     // Assert
-    assertEquals("triggerName: solidityTriggertimestamp: 0, latestSolidifiedBlockNumber: 1", actualToStringResult);
+    assertEquals(
+        "triggerName: solidityTriggertimestamp: 0, latestSolidifiedBlockNumber: 1",
+        actualToStringResult);
     assertEquals(1L, solidityTrigger.getLatestSolidifiedBlockNumber());
   }
 }

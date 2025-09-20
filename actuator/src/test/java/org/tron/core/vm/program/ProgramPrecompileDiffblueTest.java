@@ -12,27 +12,31 @@ import org.junit.experimental.categories.Category;
 public class ProgramPrecompileDiffblueTest {
   /**
    * Test {@link ProgramPrecompile#compile(byte[])}.
+   *
    * <ul>
-   *   <li>When {@code A}.</li>
+   *   <li>When {@code A}.
    * </ul>
-   * <p>
-   * Method under test: {@link ProgramPrecompile#compile(byte[])}
+   *
+   * <p>Method under test: {@link ProgramPrecompile#compile(byte[])}
    */
   @Test
   @Category(MaintainedByDiffblue.class)
   @MethodsUnderTest({"ProgramPrecompile ProgramPrecompile.compile(byte[])"})
   public void testCompile_whenA() {
     // Arrange, Act and Assert
-    assertFalse(ProgramPrecompile.compile(new byte[]{-1, 'X', 'A', 'X', 'A', 'X', 'A', 'X'}).hasJumpDest(1));
+    assertFalse(
+        ProgramPrecompile.compile(new byte[] {-1, 'X', 'A', 'X', 'A', 'X', 'A', 'X'})
+            .hasJumpDest(1));
   }
 
   /**
    * Test {@link ProgramPrecompile#compile(byte[])}.
+   *
    * <ul>
-   *   <li>When {@code AXAXAXAX} Bytes is {@code UTF-8}.</li>
+   *   <li>When {@code AXAXAXAX} Bytes is {@code UTF-8}.
    * </ul>
-   * <p>
-   * Method under test: {@link ProgramPrecompile#compile(byte[])}
+   *
+   * <p>Method under test: {@link ProgramPrecompile#compile(byte[])}
    */
   @Test
   @Category(MaintainedByDiffblue.class)
@@ -44,11 +48,12 @@ public class ProgramPrecompileDiffblueTest {
 
   /**
    * Test {@link ProgramPrecompile#compile(byte[])}.
+   *
    * <ul>
-   *   <li>When {@code [XAXAXAX} Bytes is {@code UTF-8}.</li>
+   *   <li>When {@code [XAXAXAX} Bytes is {@code UTF-8}.
    * </ul>
-   * <p>
-   * Method under test: {@link ProgramPrecompile#compile(byte[])}
+   *
+   * <p>Method under test: {@link ProgramPrecompile#compile(byte[])}
    */
   @Test
   @Category(MaintainedByDiffblue.class)
@@ -60,11 +65,12 @@ public class ProgramPrecompileDiffblueTest {
 
   /**
    * Test {@link ProgramPrecompile#compile(byte[])}.
+   *
    * <ul>
-   *   <li>When {@code `XAXAXAX} Bytes is {@code UTF-8}.</li>
+   *   <li>When {@code `XAXAXAX} Bytes is {@code UTF-8}.
    * </ul>
-   * <p>
-   * Method under test: {@link ProgramPrecompile#compile(byte[])}
+   *
+   * <p>Method under test: {@link ProgramPrecompile#compile(byte[])}
    */
   @Test
   @Category(MaintainedByDiffblue.class)
@@ -76,152 +82,59 @@ public class ProgramPrecompileDiffblueTest {
 
   /**
    * Test {@link ProgramPrecompile#getCode(byte[])}.
+   *
    * <ul>
-   *   <li>When array of {@code byte} with {@code A} and {@code X}.</li>
-   *   <li>Then return array of {@code byte} with zero and zero.</li>
+   *   <li>When array of {@code byte} with minus thirteen and zero.
+   *   <li>Then return {@code AXAXAX} Bytes is {@code UTF-8}.
    * </ul>
-   * <p>
-   * Method under test: {@link ProgramPrecompile#getCode(byte[])}
-   */
-  @Test
-  @Category(MaintainedByDiffblue.class)
-  @MethodsUnderTest({"byte[] ProgramPrecompile.getCode(byte[])"})
-  public void testGetCode_whenArrayOfByteWithAAndX_thenReturnArrayOfByteWithZeroAndZero() {
-    // Arrange, Act and Assert
-    assertArrayEquals(
-        new byte[]{0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0},
-        ProgramPrecompile.getCode(new byte[]{'A', 'X', 'A', 'X', 'A', 'X', 'A', -13}));
-  }
-
-  /**
-   * Test {@link ProgramPrecompile#getCode(byte[])}.
-   * <ul>
-   *   <li>When array of {@code byte} with minus one and {@code X}.</li>
-   *   <li>Then return array of {@code byte} with zero and zero.</li>
-   * </ul>
-   * <p>
-   * Method under test: {@link ProgramPrecompile#getCode(byte[])}
-   */
-  @Test
-  @Category(MaintainedByDiffblue.class)
-  @MethodsUnderTest({"byte[] ProgramPrecompile.getCode(byte[])"})
-  public void testGetCode_whenArrayOfByteWithMinusOneAndX_thenReturnArrayOfByteWithZeroAndZero() {
-    // Arrange, Act and Assert
-    assertArrayEquals(
-        new byte[]{0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0},
-        ProgramPrecompile.getCode(new byte[]{-1, 'X', 'A', 'X', 'A', 'X', 'A', 'X'}));
-  }
-
-  /**
-   * Test {@link ProgramPrecompile#getCode(byte[])}.
-   * <ul>
-   *   <li>When array of {@code byte} with minus thirteen and {@code X}.</li>
-   * </ul>
-   * <p>
-   * Method under test: {@link ProgramPrecompile#getCode(byte[])}
-   */
-  @Test
-  @Category(MaintainedByDiffblue.class)
-  @MethodsUnderTest({"byte[] ProgramPrecompile.getCode(byte[])"})
-  public void testGetCode_whenArrayOfByteWithMinusThirteenAndX() {
-    // Arrange, Act and Assert
-    assertArrayEquals(
-        new byte[]{0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0},
-        ProgramPrecompile.getCode(new byte[]{-13, 'X', 'A', 'X', 'A', 'X', 'A', 'X'}));
-  }
-
-  /**
-   * Test {@link ProgramPrecompile#getCode(byte[])}.
-   * <ul>
-   *   <li>When array of {@code byte} with minus thirteen and zero.</li>
-   *   <li>Then return {@code AXAXAX} Bytes is {@code UTF-8}.</li>
-   * </ul>
-   * <p>
-   * Method under test: {@link ProgramPrecompile#getCode(byte[])}
+   *
+   * <p>Method under test: {@link ProgramPrecompile#getCode(byte[])}
    */
   @Test
   @Category(MaintainedByDiffblue.class)
   @MethodsUnderTest({"byte[] ProgramPrecompile.getCode(byte[])"})
   public void testGetCode_whenArrayOfByteWithMinusThirteenAndZero_thenReturnAxaxaxBytesIsUtf8()
       throws UnsupportedEncodingException {
-    // Arrange and Act
-    byte[] actualCode = ProgramPrecompile.getCode(new byte[]{-13, 0, 'A', 'X', 'A', 'X', 'A', 'X'});
-
-    // Assert
-    assertArrayEquals("AXAXAX".getBytes("UTF-8"), actualCode);
-  }
-
-  /**
-   * Test {@link ProgramPrecompile#getCode(byte[])}.
-   * <ul>
-   *   <li>When {@code AXAXAXAX} Bytes is {@code UTF-8}.</li>
-   *   <li>Then return array of {@code byte} with zero and zero.</li>
-   * </ul>
-   * <p>
-   * Method under test: {@link ProgramPrecompile#getCode(byte[])}
-   */
-  @Test
-  @Category(MaintainedByDiffblue.class)
-  @MethodsUnderTest({"byte[] ProgramPrecompile.getCode(byte[])"})
-  public void testGetCode_whenAxaxaxaxBytesIsUtf8_thenReturnArrayOfByteWithZeroAndZero()
-      throws UnsupportedEncodingException {
     // Arrange, Act and Assert
     assertArrayEquals(
-        new byte[]{0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0},
-        ProgramPrecompile.getCode("AXAXAXAX".getBytes("UTF-8")));
-  }
-
-  /**
-   * Test {@link ProgramPrecompile#getCode(byte[])}.
-   * <ul>
-   *   <li>When {@code `XAXAXAX} Bytes is {@code UTF-8}.</li>
-   *   <li>Then return array of {@code byte} with zero and zero.</li>
-   * </ul>
-   * <p>
-   * Method under test: {@link ProgramPrecompile#getCode(byte[])}
-   */
-  @Test
-  @Category(MaintainedByDiffblue.class)
-  @MethodsUnderTest({"byte[] ProgramPrecompile.getCode(byte[])"})
-  public void testGetCode_whenXaxaxaxBytesIsUtf8_thenReturnArrayOfByteWithZeroAndZero()
-      throws UnsupportedEncodingException {
-    // Arrange, Act and Assert
-    assertArrayEquals(
-        new byte[]{0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0},
-        ProgramPrecompile.getCode("`XAXAXAX".getBytes("UTF-8")));
+        "AXAXAX".getBytes("UTF-8"),
+        ProgramPrecompile.getCode(new byte[] {-13, 0, 'A', 'X', 'A', 'X', 'A', 'X'}));
   }
 
   /**
    * Test {@link ProgramPrecompile#hasJumpDest(int)}.
+   *
    * <ul>
-   *   <li>Given {@code A}.</li>
-   *   <li>Then return {@code true}.</li>
+   *   <li>Given {@code A}.
+   *   <li>Then return {@code true}.
    * </ul>
-   * <p>
-   * Method under test: {@link ProgramPrecompile#hasJumpDest(int)}
+   *
+   * <p>Method under test: {@link ProgramPrecompile#hasJumpDest(int)}
    */
   @Test
   @Category(MaintainedByDiffblue.class)
   @MethodsUnderTest({"boolean ProgramPrecompile.hasJumpDest(int)"})
   public void testHasJumpDest_givenA_thenReturnTrue() {
     // Arrange, Act and Assert
-    assertTrue(ProgramPrecompile.compile(new byte[]{'A', '[', 'A', 6, 'A', 6, 'A', 6}).hasJumpDest(1));
+    assertTrue(
+        ProgramPrecompile.compile(new byte[] {'A', '[', 'A', 6, 'A', 6, 'A', 6}).hasJumpDest(1));
   }
 
   /**
    * Test {@link ProgramPrecompile#hasJumpDest(int)}.
+   *
    * <ul>
-   *   <li>Given {@link ProgramPrecompile} (default constructor).</li>
-   *   <li>Then return {@code false}.</li>
+   *   <li>Given {@link ProgramPrecompile} (default constructor).
+   *   <li>Then return {@code false}.
    * </ul>
-   * <p>
-   * Method under test: {@link ProgramPrecompile#hasJumpDest(int)}
+   *
+   * <p>Method under test: {@link ProgramPrecompile#hasJumpDest(int)}
    */
   @Test
   @Category(MaintainedByDiffblue.class)
   @MethodsUnderTest({"boolean ProgramPrecompile.hasJumpDest(int)"})
   public void testHasJumpDest_givenProgramPrecompile_thenReturnFalse() {
     // Arrange, Act and Assert
-    assertFalse((new ProgramPrecompile()).hasJumpDest(1));
+    assertFalse(new ProgramPrecompile().hasJumpDest(1));
   }
 }

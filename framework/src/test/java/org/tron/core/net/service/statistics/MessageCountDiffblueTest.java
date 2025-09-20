@@ -9,8 +9,8 @@ import org.junit.experimental.categories.Category;
 public class MessageCountDiffblueTest {
   /**
    * Test {@link MessageCount#add()}.
-   * <p>
-   * Method under test: {@link MessageCount#add()}
+   *
+   * <p>Method under test: {@link MessageCount#add()}
    */
   @Test
   @Category(MaintainedByDiffblue.class)
@@ -28,8 +28,8 @@ public class MessageCountDiffblueTest {
 
   /**
    * Test {@link MessageCount#add(int)} with {@code int}.
-   * <p>
-   * Method under test: {@link MessageCount#add(int)}
+   *
+   * <p>Method under test: {@link MessageCount#add(int)}
    */
   @Test
   @Category(MaintainedByDiffblue.class)
@@ -47,40 +47,43 @@ public class MessageCountDiffblueTest {
 
   /**
    * Test {@link MessageCount#getCount(int)}.
+   *
    * <ul>
-   *   <li>When forty-two.</li>
+   *   <li>When forty-two.
    * </ul>
-   * <p>
-   * Method under test: {@link MessageCount#getCount(int)}
+   *
+   * <p>Method under test: {@link MessageCount#getCount(int)}
    */
   @Test
   @Category(MaintainedByDiffblue.class)
   @MethodsUnderTest({"int MessageCount.getCount(int)"})
   public void testGetCount_whenFortyTwo() {
     // Arrange, Act and Assert
-    assertEquals(0, (new MessageCount()).getCount(42));
+    assertEquals(0, new MessageCount().getCount(42));
   }
 
   /**
    * Test {@link MessageCount#getCount(int)}.
+   *
    * <ul>
-   *   <li>When one thousand.</li>
+   *   <li>When one thousand.
    * </ul>
-   * <p>
-   * Method under test: {@link MessageCount#getCount(int)}
+   *
+   * <p>Method under test: {@link MessageCount#getCount(int)}
    */
   @Test
   @Category(MaintainedByDiffblue.class)
   @MethodsUnderTest({"int MessageCount.getCount(int)"})
   public void testGetCount_whenOneThousand() {
     // Arrange, Act and Assert
-    assertEquals(0, (new MessageCount()).getCount(1000));
+    assertEquals(0, new MessageCount().getCount(1000));
   }
 
   /**
    * Test getters and setters.
-   * <p>
-   * Methods under test:
+   *
+   * <p>Methods under test:
+   *
    * <ul>
    *   <li>{@link MessageCount#reset()}
    *   <li>{@link MessageCount#toString()}
@@ -89,8 +92,11 @@ public class MessageCountDiffblueTest {
    */
   @Test
   @Category(MaintainedByDiffblue.class)
-  @MethodsUnderTest({"long MessageCount.getTotalCount()", "void MessageCount.reset()",
-      "String MessageCount.toString()"})
+  @MethodsUnderTest({
+    "long MessageCount.getTotalCount()",
+    "void MessageCount.reset()",
+    "String MessageCount.toString()"
+  })
   public void testGettersAndSetters() {
     // Arrange
     MessageCount messageCount = new MessageCount();
@@ -106,14 +112,14 @@ public class MessageCountDiffblueTest {
 
   /**
    * Test new {@link MessageCount} (default constructor).
-   * <p>
-   * Method under test: default or parameterless constructor of {@link MessageCount}
+   *
+   * <p>Method under test: default or parameterless constructor of {@link MessageCount}
    */
   @Test
   @Category(MaintainedByDiffblue.class)
   @MethodsUnderTest({"void MessageCount.<init>()"})
   public void testNewMessageCount() {
     // Arrange, Act and Assert
-    assertEquals(0L, (new MessageCount()).getTotalCount());
+    assertEquals(0L, new MessageCount().getTotalCount());
   }
 }

@@ -9,11 +9,12 @@ import org.junit.experimental.categories.Category;
 public class UdpMessageTypeEnumDiffblueTest {
   /**
    * Test {@link UdpMessageTypeEnum#fromByte(byte)}.
+   *
    * <ul>
-   *   <li>When {@code A}.</li>
+   *   <li>When {@code A}.
    * </ul>
-   * <p>
-   * Method under test: {@link UdpMessageTypeEnum#fromByte(byte)}
+   *
+   * <p>Method under test: {@link UdpMessageTypeEnum#fromByte(byte)}
    */
   @Test
   @Category(MaintainedByDiffblue.class)
@@ -25,11 +26,12 @@ public class UdpMessageTypeEnumDiffblueTest {
 
   /**
    * Test {@link UdpMessageTypeEnum#fromByte(byte)}.
+   *
    * <ul>
-   *   <li>When minus one.</li>
+   *   <li>When minus one.
    * </ul>
-   * <p>
-   * Method under test: {@link UdpMessageTypeEnum#fromByte(byte)}
+   *
+   * <p>Method under test: {@link UdpMessageTypeEnum#fromByte(byte)}
    */
   @Test
   @Category(MaintainedByDiffblue.class)
@@ -41,8 +43,8 @@ public class UdpMessageTypeEnumDiffblueTest {
 
   /**
    * Test {@link UdpMessageTypeEnum#getType()}.
-   * <p>
-   * Method under test: {@link UdpMessageTypeEnum#getType()}
+   *
+   * <p>Method under test: {@link UdpMessageTypeEnum#getType()}
    */
   @Test
   @Category(MaintainedByDiffblue.class)

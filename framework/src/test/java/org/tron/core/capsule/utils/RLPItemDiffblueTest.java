@@ -12,8 +12,8 @@ import org.junit.experimental.categories.Category;
 public class RLPItemDiffblueTest {
   /**
    * Test {@link RLPItem#RLPItem(byte[])}.
-   * <p>
-   * Method under test: {@link RLPItem#RLPItem(byte[])}
+   *
+   * <p>Method under test: {@link RLPItem#RLPItem(byte[])}
    */
   @Test
   @Category(MaintainedByDiffblue.class)
@@ -23,44 +23,47 @@ public class RLPItemDiffblueTest {
     byte[] rlpData = "AXAXAXAX".getBytes("UTF-8");
 
     // Act and Assert
-    byte[] rLPData = (new RLPItem(rlpData)).getRLPData();
+    byte[] rLPData = new RLPItem(rlpData).getRLPData();
     assertSame(rlpData, rLPData);
     assertArrayEquals("AXAXAXAX".getBytes("UTF-8"), rLPData);
   }
 
   /**
    * Test {@link RLPItem#getRLPData()}.
+   *
    * <ul>
-   *   <li>Given {@link RLPItem#RLPItem(byte[])} with rlpData is empty array of {@code byte}.</li>
-   *   <li>Then return {@code null}.</li>
+   *   <li>Given {@link RLPItem#RLPItem(byte[])} with rlpData is empty array of {@code byte}.
+   *   <li>Then return {@code null}.
    * </ul>
-   * <p>
-   * Method under test: {@link RLPItem#getRLPData()}
+   *
+   * <p>Method under test: {@link RLPItem#getRLPData()}
    */
   @Test
   @Category(MaintainedByDiffblue.class)
   @MethodsUnderTest({"byte[] RLPItem.getRLPData()"})
   public void testGetRLPData_givenRLPItemWithRlpDataIsEmptyArrayOfByte_thenReturnNull() {
-    // Arrange, Act and Assert
-    assertNull((new RLPItem(new byte[]{})).getRLPData());
+    // Arrange
+    RLPItem rlpItem = new RLPItem(new byte[] {});
+
+    // Act and Assert
+    assertNull(rlpItem.getRLPData());
   }
 
   /**
    * Test {@link RLPItem#getRLPData()}.
+   *
    * <ul>
-   *   <li>Then return {@code AXAXAXAX} Bytes is {@code UTF-8}.</li>
+   *   <li>Then return {@code AXAXAXAX} Bytes is {@code UTF-8}.
    * </ul>
-   * <p>
-   * Method under test: {@link RLPItem#getRLPData()}
+   *
+   * <p>Method under test: {@link RLPItem#getRLPData()}
    */
   @Test
   @Category(MaintainedByDiffblue.class)
   @MethodsUnderTest({"byte[] RLPItem.getRLPData()"})
   public void testGetRLPData_thenReturnAxaxaxaxBytesIsUtf8() throws UnsupportedEncodingException {
-    // Arrange and Act
-    byte[] actualRLPData = (new RLPItem("AXAXAXAX".getBytes("UTF-8"))).getRLPData();
-
-    // Assert
-    assertArrayEquals("AXAXAXAX".getBytes("UTF-8"), actualRLPData);
+    // Arrange, Act and Assert
+    assertArrayEquals(
+        "AXAXAXAX".getBytes("UTF-8"), new RLPItem("AXAXAXAX".getBytes("UTF-8")).getRLPData());
   }
 }

@@ -13,8 +13,9 @@ import org.junit.experimental.categories.Category;
 public class InternalTransactionPojoDiffblueTest {
   /**
    * Test getters and setters.
-   * <p>
-   * Methods under test:
+   *
+   * <p>Methods under test:
+   *
    * <ul>
    *   <li>default or parameterless constructor of {@link InternalTransactionPojo}
    *   <li>{@link InternalTransactionPojo#setCallValue(long)}
@@ -39,16 +40,27 @@ public class InternalTransactionPojoDiffblueTest {
    */
   @Test
   @Category(MaintainedByDiffblue.class)
-  @MethodsUnderTest({"void InternalTransactionPojo.<init>()", "long InternalTransactionPojo.getCallValue()",
-      "String InternalTransactionPojo.getCaller_address()", "String InternalTransactionPojo.getData()",
-      "String InternalTransactionPojo.getExtra()", "String InternalTransactionPojo.getHash()",
-      "String InternalTransactionPojo.getNote()", "Map InternalTransactionPojo.getTokenInfo()",
-      "String InternalTransactionPojo.getTransferTo_address()", "boolean InternalTransactionPojo.isRejected()",
-      "void InternalTransactionPojo.setCallValue(long)", "void InternalTransactionPojo.setCaller_address(String)",
-      "void InternalTransactionPojo.setData(String)", "void InternalTransactionPojo.setExtra(String)",
-      "void InternalTransactionPojo.setHash(String)", "void InternalTransactionPojo.setNote(String)",
-      "void InternalTransactionPojo.setRejected(boolean)", "void InternalTransactionPojo.setTokenInfo(Map)",
-      "void InternalTransactionPojo.setTransferTo_address(String)"})
+  @MethodsUnderTest({
+    "void InternalTransactionPojo.<init>()",
+    "long InternalTransactionPojo.getCallValue()",
+    "String InternalTransactionPojo.getCaller_address()",
+    "String InternalTransactionPojo.getData()",
+    "String InternalTransactionPojo.getExtra()",
+    "String InternalTransactionPojo.getHash()",
+    "String InternalTransactionPojo.getNote()",
+    "Map InternalTransactionPojo.getTokenInfo()",
+    "String InternalTransactionPojo.getTransferTo_address()",
+    "boolean InternalTransactionPojo.isRejected()",
+    "void InternalTransactionPojo.setCallValue(long)",
+    "void InternalTransactionPojo.setCaller_address(String)",
+    "void InternalTransactionPojo.setData(String)",
+    "void InternalTransactionPojo.setExtra(String)",
+    "void InternalTransactionPojo.setHash(String)",
+    "void InternalTransactionPojo.setNote(String)",
+    "void InternalTransactionPojo.setRejected(boolean)",
+    "void InternalTransactionPojo.setTokenInfo(Map)",
+    "void InternalTransactionPojo.setTransferTo_address(String)"
+  })
   public void testGettersAndSetters() {
     // Arrange and Act
     InternalTransactionPojo actualInternalTransactionPojo = new InternalTransactionPojo();

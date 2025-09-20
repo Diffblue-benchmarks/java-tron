@@ -13,13 +13,16 @@ import org.tron.common.runtime.vm.DataWord;
 public class MessageCallDiffblueTest {
   /**
    * Test getters and setters.
+   *
    * <ul>
-   *   <li>Then return OutDataOffs is {@code null}.</li>
+   *   <li>Then return OutDataOffs is {@code null}.
    * </ul>
-   * <p>
-   * Methods under test:
+   *
+   * <p>Methods under test:
+   *
    * <ul>
-   *   <li>{@link MessageCall#MessageCall(int, DataWord, DataWord, DataWord, DataWord, DataWord, DataWord, boolean)}
+   *   <li>{@link MessageCall#MessageCall(int, DataWord, DataWord, DataWord, DataWord, DataWord,
+   *       DataWord, boolean)}
    *   <li>{@link MessageCall#getCodeAddress()}
    *   <li>{@link MessageCall#getEndowment()}
    *   <li>{@link MessageCall#getEnergy()}
@@ -35,13 +38,19 @@ public class MessageCallDiffblueTest {
   @Test
   @Category(MaintainedByDiffblue.class)
   @MethodsUnderTest({
-      "void MessageCall.<init>(int, DataWord, DataWord, DataWord, DataWord, DataWord, DataWord, DataWord, DataWord, boolean)",
-      "void MessageCall.<init>(int, DataWord, DataWord, DataWord, DataWord, DataWord, DataWord, boolean)",
-      "DataWord MessageCall.getCodeAddress()", "DataWord MessageCall.getEndowment()",
-      "DataWord MessageCall.getEnergy()", "DataWord MessageCall.getInDataOffs()",
-      "DataWord MessageCall.getInDataSize()", "int MessageCall.getOpCode()", "DataWord MessageCall.getOutDataOffs()",
-      "DataWord MessageCall.getOutDataSize()", "DataWord MessageCall.getTokenId()",
-      "boolean MessageCall.isTokenTransferMsg()"})
+    "void MessageCall.<init>(int, DataWord, DataWord, DataWord, DataWord, DataWord, DataWord, DataWord, DataWord, boolean)",
+    "void MessageCall.<init>(int, DataWord, DataWord, DataWord, DataWord, DataWord, DataWord, boolean)",
+    "DataWord MessageCall.getCodeAddress()",
+    "DataWord MessageCall.getEndowment()",
+    "DataWord MessageCall.getEnergy()",
+    "DataWord MessageCall.getInDataOffs()",
+    "DataWord MessageCall.getInDataSize()",
+    "int MessageCall.getOpCode()",
+    "DataWord MessageCall.getOutDataOffs()",
+    "DataWord MessageCall.getOutDataSize()",
+    "DataWord MessageCall.getTokenId()",
+    "boolean MessageCall.isTokenTransferMsg()"
+  })
   public void testGettersAndSetters_thenReturnOutDataOffsIsNull() {
     // Arrange
     DataWord energy = DataWord.ZERO();
@@ -52,8 +61,8 @@ public class MessageCallDiffblueTest {
     DataWord tokenId = DataWord.ZERO();
 
     // Act
-    MessageCall actualMessageCall = new MessageCall(1, energy, codeAddress, endowment, inDataOffs, inDataSize, tokenId,
-        true);
+    MessageCall actualMessageCall =
+        new MessageCall(1, energy, codeAddress, endowment, inDataOffs, inDataSize, tokenId, true);
     DataWord actualCodeAddress = actualMessageCall.getCodeAddress();
     DataWord actualEndowment = actualMessageCall.getEndowment();
     DataWord actualEnergy = actualMessageCall.getEnergy();
@@ -79,14 +88,16 @@ public class MessageCallDiffblueTest {
 
   /**
    * Test getters and setters.
+   *
    * <ul>
-   *   <li>Then return OutDataOffs is ZERO.</li>
+   *   <li>Then return OutDataOffs is ZERO.
    * </ul>
-   * <p>
-   * Methods under test:
+   *
+   * <p>Methods under test:
+   *
    * <ul>
-   *   <li>{@link MessageCall#MessageCall(int, DataWord, DataWord, DataWord, DataWord, DataWord, DataWord, DataWord, DataWord, boolean)}
-   *   <li>{@link MessageCall#getCodeAddress()}
+   *   <li>{@link MessageCall#MessageCall(int, DataWord, DataWord, DataWord, DataWord, DataWord,
+   *       DataWord, DataWord, DataWord, boolean)}
    *   <li>{@link MessageCall#getEndowment()}
    *   <li>{@link MessageCall#getEnergy()}
    *   <li>{@link MessageCall#getInDataOffs()}
@@ -96,18 +107,25 @@ public class MessageCallDiffblueTest {
    *   <li>{@link MessageCall#getOutDataSize()}
    *   <li>{@link MessageCall#getTokenId()}
    *   <li>{@link MessageCall#isTokenTransferMsg()}
+   *   <li>{@link MessageCall#getCodeAddress()}
    * </ul>
    */
   @Test
   @Category(MaintainedByDiffblue.class)
   @MethodsUnderTest({
-      "void MessageCall.<init>(int, DataWord, DataWord, DataWord, DataWord, DataWord, DataWord, DataWord, DataWord, boolean)",
-      "void MessageCall.<init>(int, DataWord, DataWord, DataWord, DataWord, DataWord, DataWord, boolean)",
-      "DataWord MessageCall.getCodeAddress()", "DataWord MessageCall.getEndowment()",
-      "DataWord MessageCall.getEnergy()", "DataWord MessageCall.getInDataOffs()",
-      "DataWord MessageCall.getInDataSize()", "int MessageCall.getOpCode()", "DataWord MessageCall.getOutDataOffs()",
-      "DataWord MessageCall.getOutDataSize()", "DataWord MessageCall.getTokenId()",
-      "boolean MessageCall.isTokenTransferMsg()"})
+    "void MessageCall.<init>(int, DataWord, DataWord, DataWord, DataWord, DataWord, DataWord, DataWord, DataWord, boolean)",
+    "void MessageCall.<init>(int, DataWord, DataWord, DataWord, DataWord, DataWord, DataWord, boolean)",
+    "DataWord MessageCall.getCodeAddress()",
+    "DataWord MessageCall.getEndowment()",
+    "DataWord MessageCall.getEnergy()",
+    "DataWord MessageCall.getInDataOffs()",
+    "DataWord MessageCall.getInDataSize()",
+    "int MessageCall.getOpCode()",
+    "DataWord MessageCall.getOutDataOffs()",
+    "DataWord MessageCall.getOutDataSize()",
+    "DataWord MessageCall.getTokenId()",
+    "boolean MessageCall.isTokenTransferMsg()"
+  })
   public void testGettersAndSetters_thenReturnOutDataOffsIsZero() {
     // Arrange
     DataWord energy = DataWord.ZERO();
@@ -120,9 +138,18 @@ public class MessageCallDiffblueTest {
     DataWord tokenId = DataWord.ZERO();
 
     // Act
-    MessageCall actualMessageCall = new MessageCall(1, energy, codeAddress, endowment, inDataOffs, inDataSize,
-        outDataOffs, outDataSize, tokenId, true);
-    DataWord actualCodeAddress = actualMessageCall.getCodeAddress();
+    MessageCall actualMessageCall =
+        new MessageCall(
+            1,
+            energy,
+            codeAddress,
+            endowment,
+            inDataOffs,
+            inDataSize,
+            outDataOffs,
+            outDataSize,
+            tokenId,
+            true);
     DataWord actualEndowment = actualMessageCall.getEndowment();
     DataWord actualEnergy = actualMessageCall.getEnergy();
     DataWord actualInDataOffs = actualMessageCall.getInDataOffs();
@@ -135,7 +162,7 @@ public class MessageCallDiffblueTest {
     // Assert
     assertEquals(1, actualOpCode);
     assertTrue(actualMessageCall.isTokenTransferMsg());
-    assertSame(codeAddress, actualCodeAddress);
+    assertSame(codeAddress, actualMessageCall.getCodeAddress());
     assertSame(endowment, actualEndowment);
     assertSame(energy, actualEnergy);
     assertSame(inDataOffs, actualInDataOffs);

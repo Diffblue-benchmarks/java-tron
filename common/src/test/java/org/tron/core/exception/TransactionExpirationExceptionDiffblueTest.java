@@ -10,15 +10,16 @@ import org.junit.experimental.categories.Category;
 public class TransactionExpirationExceptionDiffblueTest {
   /**
    * Test {@link TransactionExpirationException#TransactionExpirationException()}.
-   * <p>
-   * Method under test: {@link TransactionExpirationException#TransactionExpirationException()}
+   *
+   * <p>Method under test: {@link TransactionExpirationException#TransactionExpirationException()}
    */
   @Test
   @Category(MaintainedByDiffblue.class)
   @MethodsUnderTest({"void TransactionExpirationException.<init>()"})
   public void testNewTransactionExpirationException() {
     // Arrange and Act
-    TransactionExpirationException actualTransactionExpirationException = new TransactionExpirationException();
+    TransactionExpirationException actualTransactionExpirationException =
+        new TransactionExpirationException();
 
     // Assert
     assertNull(actualTransactionExpirationException.getLocalizedMessage());
@@ -29,16 +30,17 @@ public class TransactionExpirationExceptionDiffblueTest {
 
   /**
    * Test {@link TransactionExpirationException#TransactionExpirationException(String)}.
-   * <p>
-   * Method under test: {@link TransactionExpirationException#TransactionExpirationException(String)}
+   *
+   * <p>Method under test: {@link
+   * TransactionExpirationException#TransactionExpirationException(String)}
    */
   @Test
   @Category(MaintainedByDiffblue.class)
   @MethodsUnderTest({"void TransactionExpirationException.<init>(String)"})
   public void testNewTransactionExpirationException2() {
     // Arrange and Act
-    TransactionExpirationException actualTransactionExpirationException = new TransactionExpirationException(
-        "An error occurred");
+    TransactionExpirationException actualTransactionExpirationException =
+        new TransactionExpirationException("An error occurred");
 
     // Assert
     assertEquals("An error occurred", actualTransactionExpirationException.getLocalizedMessage());

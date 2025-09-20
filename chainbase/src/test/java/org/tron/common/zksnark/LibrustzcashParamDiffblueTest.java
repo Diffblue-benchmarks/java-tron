@@ -18,8 +18,9 @@ import org.tron.core.exception.ZksnarkException;
 public class LibrustzcashParamDiffblueTest {
   /**
    * Test InitZksnarkParams getters and setters.
-   * <p>
-   * Methods under test:
+   *
+   * <p>Methods under test:
+   *
    * <ul>
    *   <li>{@link InitZksnarkParams#setOutput_hash(String)}
    *   <li>{@link InitZksnarkParams#setOutput_path(String)}
@@ -34,15 +35,21 @@ public class LibrustzcashParamDiffblueTest {
    */
   @Test
   @Category(MaintainedByDiffblue.class)
-  @MethodsUnderTest({"String InitZksnarkParams.getOutput_hash()", "String InitZksnarkParams.getOutput_path()",
-      "String InitZksnarkParams.getSpend_hash()", "String InitZksnarkParams.getSpend_path()",
-      "void InitZksnarkParams.setOutput_hash(String)", "void InitZksnarkParams.setOutput_path(String)",
-      "void InitZksnarkParams.setSpend_hash(String)", "void InitZksnarkParams.setSpend_path(String)",
-      "void InitZksnarkParams.valid()"})
+  @MethodsUnderTest({
+    "String InitZksnarkParams.getOutput_hash()",
+    "String InitZksnarkParams.getOutput_path()",
+    "String InitZksnarkParams.getSpend_hash()",
+    "String InitZksnarkParams.getSpend_path()",
+    "void InitZksnarkParams.setOutput_hash(String)",
+    "void InitZksnarkParams.setOutput_path(String)",
+    "void InitZksnarkParams.setSpend_hash(String)",
+    "void InitZksnarkParams.setSpend_path(String)",
+    "void InitZksnarkParams.valid()"
+  })
   public void testInitZksnarkParamsGettersAndSetters() throws ZksnarkException {
     // Arrange
-    InitZksnarkParams initZksnarkParams = new InitZksnarkParams("Spend path", "Spend hash", "Output path",
-        "Output hash");
+    InitZksnarkParams initZksnarkParams =
+        new InitZksnarkParams("Spend path", "Spend hash", "Output path", "Output hash");
 
     // Act
     initZksnarkParams.setOutput_hash("Output hash");
@@ -62,17 +69,19 @@ public class LibrustzcashParamDiffblueTest {
   }
 
   /**
-   * Test InitZksnarkParams {@link InitZksnarkParams#InitZksnarkParams(String, String, String, String)}.
-   * <p>
-   * Method under test: {@link InitZksnarkParams#InitZksnarkParams(String, String, String, String)}
+   * Test InitZksnarkParams {@link InitZksnarkParams#InitZksnarkParams(String, String, String,
+   * String)}.
+   *
+   * <p>Method under test: {@link InitZksnarkParams#InitZksnarkParams(String, String, String,
+   * String)}
    */
   @Test
   @Category(MaintainedByDiffblue.class)
   @MethodsUnderTest({"void InitZksnarkParams.<init>(String, String, String, String)"})
   public void testInitZksnarkParamsNewInitZksnarkParams() throws ZksnarkException {
     // Arrange and Act
-    InitZksnarkParams actualInitZksnarkParams = new InitZksnarkParams("Spend path", "Spend hash", "Output path",
-        "Output hash");
+    InitZksnarkParams actualInitZksnarkParams =
+        new InitZksnarkParams("Spend path", "Spend hash", "Output path", "Output hash");
 
     // Assert
     assertEquals("Output hash", actualInitZksnarkParams.getOutput_hash());
@@ -83,75 +92,84 @@ public class LibrustzcashParamDiffblueTest {
 
   /**
    * Test MerkleHashParams {@link MerkleHashParams#MerkleHashParams(int, byte[], byte[], byte[])}.
+   *
    * <ul>
-   *   <li>When minus one.</li>
-   *   <li>Then throw {@link ZksnarkException}.</li>
+   *   <li>When minus one.
+   *   <li>Then throw {@link ZksnarkException}.
    * </ul>
-   * <p>
-   * Method under test: {@link MerkleHashParams#MerkleHashParams(int, byte[], byte[], byte[])}
+   *
+   * <p>Method under test: {@link MerkleHashParams#MerkleHashParams(int, byte[], byte[], byte[])}
    */
   @Test
   @Category(MaintainedByDiffblue.class)
   @MethodsUnderTest({"void MerkleHashParams.<init>(int, byte[], byte[], byte[])"})
   public void testMerkleHashParamsNewMerkleHashParams_whenMinusOne_thenThrowZksnarkException()
       throws UnsupportedEncodingException, ZksnarkException {
-    // Arrange
-    byte[] a = "AXAXAXAX".getBytes("UTF-8");
-    byte[] b = "AXAXAXAX".getBytes("UTF-8");
-
-    // Act and Assert
-    assertThrows(ZksnarkException.class, () -> new MerkleHashParams(-1, a, b, "AXAXAXAX".getBytes("UTF-8")));
-
+    // Arrange, Act and Assert
+    assertThrows(
+        ZksnarkException.class,
+        () ->
+            new MerkleHashParams(
+                -1,
+                "AXAXAXAX".getBytes("UTF-8"),
+                "AXAXAXAX".getBytes("UTF-8"),
+                "AXAXAXAX".getBytes("UTF-8")));
   }
 
   /**
    * Test MerkleHashParams {@link MerkleHashParams#MerkleHashParams(int, byte[], byte[], byte[])}.
+   *
    * <ul>
-   *   <li>When sixty-three.</li>
-   *   <li>Then throw {@link ZksnarkException}.</li>
+   *   <li>When sixty-three.
+   *   <li>Then throw {@link ZksnarkException}.
    * </ul>
-   * <p>
-   * Method under test: {@link MerkleHashParams#MerkleHashParams(int, byte[], byte[], byte[])}
+   *
+   * <p>Method under test: {@link MerkleHashParams#MerkleHashParams(int, byte[], byte[], byte[])}
    */
   @Test
   @Category(MaintainedByDiffblue.class)
   @MethodsUnderTest({"void MerkleHashParams.<init>(int, byte[], byte[], byte[])"})
   public void testMerkleHashParamsNewMerkleHashParams_whenSixtyThree_thenThrowZksnarkException()
       throws UnsupportedEncodingException, ZksnarkException {
-    // Arrange
-    byte[] a = "AXAXAXAX".getBytes("UTF-8");
-    byte[] b = "AXAXAXAX".getBytes("UTF-8");
-
-    // Act and Assert
-    assertThrows(ZksnarkException.class, () -> new MerkleHashParams(63, a, b, "AXAXAXAX".getBytes("UTF-8")));
-
+    // Arrange, Act and Assert
+    assertThrows(
+        ZksnarkException.class,
+        () ->
+            new MerkleHashParams(
+                63,
+                "AXAXAXAX".getBytes("UTF-8"),
+                "AXAXAXAX".getBytes("UTF-8"),
+                "AXAXAXAX".getBytes("UTF-8")));
   }
 
   /**
    * Test {@link LibrustzcashParam#validNull(byte[])}.
+   *
    * <ul>
-   *   <li>When empty array of {@code byte}.</li>
-   *   <li>Then throw {@link ZksnarkException}.</li>
+   *   <li>When empty array of {@code byte}.
+   *   <li>Then throw {@link ZksnarkException}.
    * </ul>
-   * <p>
-   * Method under test: {@link LibrustzcashParam#validNull(byte[])}
+   *
+   * <p>Method under test: {@link LibrustzcashParam#validNull(byte[])}
    */
   @Test
   @Category(MaintainedByDiffblue.class)
   @MethodsUnderTest({"void LibrustzcashParam.validNull(byte[])"})
-  public void testValidNull_whenEmptyArrayOfByte_thenThrowZksnarkException() throws ZksnarkException {
+  public void testValidNull_whenEmptyArrayOfByte_thenThrowZksnarkException()
+      throws ZksnarkException {
     // Arrange, Act and Assert
-    assertThrows(ZksnarkException.class, () -> LibrustzcashParam.validNull(new byte[]{}));
+    assertThrows(ZksnarkException.class, () -> LibrustzcashParam.validNull(new byte[] {}));
   }
 
   /**
    * Test {@link LibrustzcashParam#validNull(byte[])}.
+   *
    * <ul>
-   *   <li>When {@code null}.</li>
-   *   <li>Then throw {@link ZksnarkException}.</li>
+   *   <li>When {@code null}.
+   *   <li>Then throw {@link ZksnarkException}.
    * </ul>
-   * <p>
-   * Method under test: {@link LibrustzcashParam#validNull(byte[])}
+   *
+   * <p>Method under test: {@link LibrustzcashParam#validNull(byte[])}
    */
   @Test
   @Category(MaintainedByDiffblue.class)
@@ -163,12 +181,13 @@ public class LibrustzcashParamDiffblueTest {
 
   /**
    * Test {@link LibrustzcashParam#validObjectNull(Object)}.
+   *
    * <ul>
-   *   <li>When {@code null}.</li>
-   *   <li>Then throw {@link ZksnarkException}.</li>
+   *   <li>When {@code null}.
+   *   <li>Then throw {@link ZksnarkException}.
    * </ul>
-   * <p>
-   * Method under test: {@link LibrustzcashParam#validObjectNull(Object)}
+   *
+   * <p>Method under test: {@link LibrustzcashParam#validObjectNull(Object)}
    */
   @Test
   @Category(MaintainedByDiffblue.class)
@@ -180,29 +199,32 @@ public class LibrustzcashParamDiffblueTest {
 
   /**
    * Test {@link LibrustzcashParam#validByteValue(byte, byte)}.
+   *
    * <ul>
-   *   <li>When {@code X}.</li>
-   *   <li>Then throw {@link ZksnarkException}.</li>
+   *   <li>When {@code X}.
+   *   <li>Then throw {@link ZksnarkException}.
    * </ul>
-   * <p>
-   * Method under test: {@link LibrustzcashParam#validByteValue(byte, byte)}
+   *
+   * <p>Method under test: {@link LibrustzcashParam#validByteValue(byte, byte)}
    */
   @Test
   @Category(MaintainedByDiffblue.class)
   @MethodsUnderTest({"void LibrustzcashParam.validByteValue(byte, byte)"})
   public void testValidByteValue_whenX_thenThrowZksnarkException() throws ZksnarkException {
     // Arrange, Act and Assert
-    assertThrows(ZksnarkException.class, () -> LibrustzcashParam.validByteValue((byte) 'X', (byte) 'A'));
+    assertThrows(
+        ZksnarkException.class, () -> LibrustzcashParam.validByteValue((byte) 'X', (byte) 'A'));
   }
 
   /**
    * Test {@link LibrustzcashParam#validParamLength(byte[], int)}.
+   *
    * <ul>
-   *   <li>When {@code AXAXAXAX} Bytes is {@code UTF-8}.</li>
-   *   <li>Then throw {@link ZksnarkException}.</li>
+   *   <li>When {@code AXAXAXAX} Bytes is {@code UTF-8}.
+   *   <li>Then throw {@link ZksnarkException}.
    * </ul>
-   * <p>
-   * Method under test: {@link LibrustzcashParam#validParamLength(byte[], int)}
+   *
+   * <p>Method under test: {@link LibrustzcashParam#validParamLength(byte[], int)}
    */
   @Test
   @Category(MaintainedByDiffblue.class)
@@ -210,34 +232,40 @@ public class LibrustzcashParamDiffblueTest {
   public void testValidParamLength_whenAxaxaxaxBytesIsUtf8_thenThrowZksnarkException()
       throws UnsupportedEncodingException, ZksnarkException {
     // Arrange, Act and Assert
-    assertThrows(ZksnarkException.class, () -> LibrustzcashParam.validParamLength("AXAXAXAX".getBytes("UTF-8"), 3));
+    assertThrows(
+        ZksnarkException.class,
+        () -> LibrustzcashParam.validParamLength("AXAXAXAX".getBytes("UTF-8"), 3));
   }
 
   /**
    * Test {@link LibrustzcashParam#validParamLength(byte[], int)}.
+   *
    * <ul>
-   *   <li>When empty array of {@code byte}.</li>
-   *   <li>Then throw {@link ZksnarkException}.</li>
+   *   <li>When empty array of {@code byte}.
+   *   <li>Then throw {@link ZksnarkException}.
    * </ul>
-   * <p>
-   * Method under test: {@link LibrustzcashParam#validParamLength(byte[], int)}
+   *
+   * <p>Method under test: {@link LibrustzcashParam#validParamLength(byte[], int)}
    */
   @Test
   @Category(MaintainedByDiffblue.class)
   @MethodsUnderTest({"void LibrustzcashParam.validParamLength(byte[], int)"})
-  public void testValidParamLength_whenEmptyArrayOfByte_thenThrowZksnarkException() throws ZksnarkException {
+  public void testValidParamLength_whenEmptyArrayOfByte_thenThrowZksnarkException()
+      throws ZksnarkException {
     // Arrange, Act and Assert
-    assertThrows(ZksnarkException.class, () -> LibrustzcashParam.validParamLength(new byte[]{}, 3));
+    assertThrows(
+        ZksnarkException.class, () -> LibrustzcashParam.validParamLength(new byte[] {}, 3));
   }
 
   /**
    * Test {@link LibrustzcashParam#validParamLength(byte[], int)}.
+   *
    * <ul>
-   *   <li>When {@code null}.</li>
-   *   <li>Then throw {@link ZksnarkException}.</li>
+   *   <li>When {@code null}.
+   *   <li>Then throw {@link ZksnarkException}.
    * </ul>
-   * <p>
-   * Method under test: {@link LibrustzcashParam#validParamLength(byte[], int)}
+   *
+   * <p>Method under test: {@link LibrustzcashParam#validParamLength(byte[], int)}
    */
   @Test
   @Category(MaintainedByDiffblue.class)
@@ -249,43 +277,49 @@ public class LibrustzcashParamDiffblueTest {
 
   /**
    * Test {@link LibrustzcashParam#valid11Params(byte[])}.
+   *
    * <ul>
-   *   <li>When {@code AXAXAXAX} Bytes is {@code UTF-8}.</li>
+   *   <li>When {@code AXAXAXAX} Bytes is {@code UTF-8}.
    * </ul>
-   * <p>
-   * Method under test: {@link LibrustzcashParam#valid11Params(byte[])}
+   *
+   * <p>Method under test: {@link LibrustzcashParam#valid11Params(byte[])}
    */
   @Test
   @Category(MaintainedByDiffblue.class)
   @MethodsUnderTest({"void LibrustzcashParam.valid11Params(byte[])"})
-  public void testValid11Params_whenAxaxaxaxBytesIsUtf8() throws UnsupportedEncodingException, ZksnarkException {
+  public void testValid11Params_whenAxaxaxaxBytesIsUtf8()
+      throws UnsupportedEncodingException, ZksnarkException {
     // Arrange, Act and Assert
-    assertThrows(ZksnarkException.class, () -> LibrustzcashParam.valid11Params("AXAXAXAX".getBytes("UTF-8")));
+    assertThrows(
+        ZksnarkException.class,
+        () -> LibrustzcashParam.valid11Params("AXAXAXAX".getBytes("UTF-8")));
   }
 
   /**
    * Test {@link LibrustzcashParam#valid11Params(byte[])}.
+   *
    * <ul>
-   *   <li>When empty array of {@code byte}.</li>
+   *   <li>When empty array of {@code byte}.
    * </ul>
-   * <p>
-   * Method under test: {@link LibrustzcashParam#valid11Params(byte[])}
+   *
+   * <p>Method under test: {@link LibrustzcashParam#valid11Params(byte[])}
    */
   @Test
   @Category(MaintainedByDiffblue.class)
   @MethodsUnderTest({"void LibrustzcashParam.valid11Params(byte[])"})
   public void testValid11Params_whenEmptyArrayOfByte() throws ZksnarkException {
     // Arrange, Act and Assert
-    assertThrows(ZksnarkException.class, () -> LibrustzcashParam.valid11Params(new byte[]{}));
+    assertThrows(ZksnarkException.class, () -> LibrustzcashParam.valid11Params(new byte[] {}));
   }
 
   /**
    * Test {@link LibrustzcashParam#valid11Params(byte[])}.
+   *
    * <ul>
-   *   <li>When {@code null}.</li>
+   *   <li>When {@code null}.
    * </ul>
-   * <p>
-   * Method under test: {@link LibrustzcashParam#valid11Params(byte[])}
+   *
+   * <p>Method under test: {@link LibrustzcashParam#valid11Params(byte[])}
    */
   @Test
   @Category(MaintainedByDiffblue.class)
@@ -297,43 +331,49 @@ public class LibrustzcashParamDiffblueTest {
 
   /**
    * Test {@link LibrustzcashParam#valid32Params(byte[])}.
+   *
    * <ul>
-   *   <li>When {@code AXAXAXAX} Bytes is {@code UTF-8}.</li>
+   *   <li>When {@code AXAXAXAX} Bytes is {@code UTF-8}.
    * </ul>
-   * <p>
-   * Method under test: {@link LibrustzcashParam#valid32Params(byte[])}
+   *
+   * <p>Method under test: {@link LibrustzcashParam#valid32Params(byte[])}
    */
   @Test
   @Category(MaintainedByDiffblue.class)
   @MethodsUnderTest({"void LibrustzcashParam.valid32Params(byte[])"})
-  public void testValid32Params_whenAxaxaxaxBytesIsUtf8() throws UnsupportedEncodingException, ZksnarkException {
+  public void testValid32Params_whenAxaxaxaxBytesIsUtf8()
+      throws UnsupportedEncodingException, ZksnarkException {
     // Arrange, Act and Assert
-    assertThrows(ZksnarkException.class, () -> LibrustzcashParam.valid32Params("AXAXAXAX".getBytes("UTF-8")));
+    assertThrows(
+        ZksnarkException.class,
+        () -> LibrustzcashParam.valid32Params("AXAXAXAX".getBytes("UTF-8")));
   }
 
   /**
    * Test {@link LibrustzcashParam#valid32Params(byte[])}.
+   *
    * <ul>
-   *   <li>When empty array of {@code byte}.</li>
+   *   <li>When empty array of {@code byte}.
    * </ul>
-   * <p>
-   * Method under test: {@link LibrustzcashParam#valid32Params(byte[])}
+   *
+   * <p>Method under test: {@link LibrustzcashParam#valid32Params(byte[])}
    */
   @Test
   @Category(MaintainedByDiffblue.class)
   @MethodsUnderTest({"void LibrustzcashParam.valid32Params(byte[])"})
   public void testValid32Params_whenEmptyArrayOfByte() throws ZksnarkException {
     // Arrange, Act and Assert
-    assertThrows(ZksnarkException.class, () -> LibrustzcashParam.valid32Params(new byte[]{}));
+    assertThrows(ZksnarkException.class, () -> LibrustzcashParam.valid32Params(new byte[] {}));
   }
 
   /**
    * Test {@link LibrustzcashParam#valid32Params(byte[])}.
+   *
    * <ul>
-   *   <li>When {@code null}.</li>
+   *   <li>When {@code null}.
    * </ul>
-   * <p>
-   * Method under test: {@link LibrustzcashParam#valid32Params(byte[])}
+   *
+   * <p>Method under test: {@link LibrustzcashParam#valid32Params(byte[])}
    */
   @Test
   @Category(MaintainedByDiffblue.class)
@@ -345,74 +385,84 @@ public class LibrustzcashParamDiffblueTest {
 
   /**
    * Test {@link LibrustzcashParam#validVoucherPath(byte[])}.
+   *
    * <ul>
-   *   <li>When {@code AXAXAXAX} Bytes is {@code UTF-8}.</li>
+   *   <li>When {@code AXAXAXAX} Bytes is {@code UTF-8}.
    * </ul>
-   * <p>
-   * Method under test: {@link LibrustzcashParam#validVoucherPath(byte[])}
+   *
+   * <p>Method under test: {@link LibrustzcashParam#validVoucherPath(byte[])}
    */
   @Test
   @Category(MaintainedByDiffblue.class)
   @MethodsUnderTest({"void LibrustzcashParam.validVoucherPath(byte[])"})
-  public void testValidVoucherPath_whenAxaxaxaxBytesIsUtf8() throws UnsupportedEncodingException, ZksnarkException {
+  public void testValidVoucherPath_whenAxaxaxaxBytesIsUtf8()
+      throws UnsupportedEncodingException, ZksnarkException {
     // Arrange, Act and Assert
-    assertThrows(ZksnarkException.class, () -> LibrustzcashParam.validVoucherPath("AXAXAXAX".getBytes("UTF-8")));
+    assertThrows(
+        ZksnarkException.class,
+        () -> LibrustzcashParam.validVoucherPath("AXAXAXAX".getBytes("UTF-8")));
   }
 
   /**
    * Test {@link LibrustzcashParam#validVoucherPath(byte[])}.
+   *
    * <ul>
-   *   <li>When empty array of {@code byte}.</li>
+   *   <li>When empty array of {@code byte}.
    * </ul>
-   * <p>
-   * Method under test: {@link LibrustzcashParam#validVoucherPath(byte[])}
+   *
+   * <p>Method under test: {@link LibrustzcashParam#validVoucherPath(byte[])}
    */
   @Test
   @Category(MaintainedByDiffblue.class)
   @MethodsUnderTest({"void LibrustzcashParam.validVoucherPath(byte[])"})
   public void testValidVoucherPath_whenEmptyArrayOfByte() throws ZksnarkException {
     // Arrange, Act and Assert
-    assertThrows(ZksnarkException.class, () -> LibrustzcashParam.validVoucherPath(new byte[]{}));
+    assertThrows(ZksnarkException.class, () -> LibrustzcashParam.validVoucherPath(new byte[] {}));
   }
 
   /**
    * Test {@link LibrustzcashParam#validValueParams(long)}.
+   *
    * <ul>
-   *   <li>When minus one.</li>
-   *   <li>Then throw {@link ZksnarkException}.</li>
+   *   <li>When minus one.
+   *   <li>Then throw {@link ZksnarkException}.
    * </ul>
-   * <p>
-   * Method under test: {@link LibrustzcashParam#validValueParams(long)}
+   *
+   * <p>Method under test: {@link LibrustzcashParam#validValueParams(long)}
    */
   @Test
   @Category(MaintainedByDiffblue.class)
   @MethodsUnderTest({"void LibrustzcashParam.validValueParams(long)"})
-  public void testValidValueParams_whenMinusOne_thenThrowZksnarkException() throws ZksnarkException {
+  public void testValidValueParams_whenMinusOne_thenThrowZksnarkException()
+      throws ZksnarkException {
     // Arrange, Act and Assert
     assertThrows(ZksnarkException.class, () -> LibrustzcashParam.validValueParams(-1L));
   }
 
   /**
    * Test {@link LibrustzcashParam#validPositionParams(long)}.
+   *
    * <ul>
-   *   <li>When minus one.</li>
-   *   <li>Then throw {@link ZksnarkException}.</li>
+   *   <li>When minus one.
+   *   <li>Then throw {@link ZksnarkException}.
    * </ul>
-   * <p>
-   * Method under test: {@link LibrustzcashParam#validPositionParams(long)}
+   *
+   * <p>Method under test: {@link LibrustzcashParam#validPositionParams(long)}
    */
   @Test
   @Category(MaintainedByDiffblue.class)
   @MethodsUnderTest({"void LibrustzcashParam.validPositionParams(long)"})
-  public void testValidPositionParams_whenMinusOne_thenThrowZksnarkException() throws ZksnarkException {
+  public void testValidPositionParams_whenMinusOne_thenThrowZksnarkException()
+      throws ZksnarkException {
     // Arrange, Act and Assert
     assertThrows(ZksnarkException.class, () -> LibrustzcashParam.validPositionParams(-1L));
   }
 
   /**
    * Test Zip32XfvkAddressParams getters and setters.
-   * <p>
-   * Methods under test:
+   *
+   * <p>Methods under test:
+   *
    * <ul>
    *   <li>{@link Zip32XfvkAddressParams#setAddr_ret(byte[])}
    *   <li>{@link Zip32XfvkAddressParams#setJ(byte[])}
@@ -427,28 +477,36 @@ public class LibrustzcashParamDiffblueTest {
    */
   @Test
   @Category(MaintainedByDiffblue.class)
-  @MethodsUnderTest({"byte[] Zip32XfvkAddressParams.getAddr_ret()", "byte[] Zip32XfvkAddressParams.getJ()",
-      "byte[] Zip32XfvkAddressParams.getJ_ret()", "byte[] Zip32XfvkAddressParams.getXfvk()",
-      "void Zip32XfvkAddressParams.setAddr_ret(byte[])", "void Zip32XfvkAddressParams.setJ(byte[])",
-      "void Zip32XfvkAddressParams.setJ_ret(byte[])", "void Zip32XfvkAddressParams.setXfvk(byte[])",
-      "void Zip32XfvkAddressParams.valid()"})
-  public void testZip32XfvkAddressParamsGettersAndSetters() throws UnsupportedEncodingException, ZksnarkException {
+  @MethodsUnderTest({
+    "byte[] Zip32XfvkAddressParams.getAddr_ret()",
+    "byte[] Zip32XfvkAddressParams.getJ()",
+    "byte[] Zip32XfvkAddressParams.getJ_ret()",
+    "byte[] Zip32XfvkAddressParams.getXfvk()",
+    "void Zip32XfvkAddressParams.setAddr_ret(byte[])",
+    "void Zip32XfvkAddressParams.setJ(byte[])",
+    "void Zip32XfvkAddressParams.setJ_ret(byte[])",
+    "void Zip32XfvkAddressParams.setXfvk(byte[])",
+    "void Zip32XfvkAddressParams.valid()"
+  })
+  public void testZip32XfvkAddressParamsGettersAndSetters()
+      throws UnsupportedEncodingException, ZksnarkException {
     // Arrange
-    byte[] xfvk = "AXAXAXAX".getBytes("UTF-8");
-    byte[] j = "AXAXAXAX".getBytes("UTF-8");
-    byte[] j_ret = "AXAXAXAX".getBytes("UTF-8");
-    Zip32XfvkAddressParams zip32XfvkAddressParams = new Zip32XfvkAddressParams(xfvk, j, j_ret,
-        "AXAXAXAX".getBytes("UTF-8"));
+    Zip32XfvkAddressParams zip32XfvkAddressParams =
+        new Zip32XfvkAddressParams(
+            "AXAXAXAX".getBytes("UTF-8"),
+            "AXAXAXAX".getBytes("UTF-8"),
+            "AXAXAXAX".getBytes("UTF-8"),
+            "AXAXAXAX".getBytes("UTF-8"));
     byte[] addr_ret = "AXAXAXAX".getBytes("UTF-8");
 
     // Act
     zip32XfvkAddressParams.setAddr_ret(addr_ret);
-    byte[] j2 = "AXAXAXAX".getBytes("UTF-8");
-    zip32XfvkAddressParams.setJ(j2);
-    byte[] j_ret2 = "AXAXAXAX".getBytes("UTF-8");
-    zip32XfvkAddressParams.setJ_ret(j_ret2);
-    byte[] xfvk2 = "AXAXAXAX".getBytes("UTF-8");
-    zip32XfvkAddressParams.setXfvk(xfvk2);
+    byte[] j = "AXAXAXAX".getBytes("UTF-8");
+    zip32XfvkAddressParams.setJ(j);
+    byte[] j_ret = "AXAXAXAX".getBytes("UTF-8");
+    zip32XfvkAddressParams.setJ_ret(j_ret);
+    byte[] xfvk = "AXAXAXAX".getBytes("UTF-8");
+    zip32XfvkAddressParams.setXfvk(xfvk);
     zip32XfvkAddressParams.valid();
     byte[] actualAddr_ret = zip32XfvkAddressParams.getAddr_ret();
     byte[] actualJ = zip32XfvkAddressParams.getJ();
@@ -457,9 +515,9 @@ public class LibrustzcashParamDiffblueTest {
 
     // Assert
     assertSame(addr_ret, actualAddr_ret);
-    assertSame(j2, actualJ);
-    assertSame(j_ret2, actualJ_ret);
-    assertSame(xfvk2, actualXfvk);
+    assertSame(j, actualJ);
+    assertSame(j_ret, actualJ_ret);
+    assertSame(xfvk, actualXfvk);
     assertArrayEquals("AXAXAXAX".getBytes("UTF-8"), actualAddr_ret);
     assertArrayEquals("AXAXAXAX".getBytes("UTF-8"), actualJ);
     assertArrayEquals("AXAXAXAX".getBytes("UTF-8"), actualJ_ret);
@@ -467,55 +525,50 @@ public class LibrustzcashParamDiffblueTest {
   }
 
   /**
-   * Test Zip32XfvkAddressParams {@link Zip32XfvkAddressParams#Zip32XfvkAddressParams(byte[], byte[], byte[], byte[])}.
-   * <p>
-   * Method under test: {@link Zip32XfvkAddressParams#Zip32XfvkAddressParams(byte[], byte[], byte[], byte[])}
+   * Test Zip32XfvkAddressParams {@link Zip32XfvkAddressParams#Zip32XfvkAddressParams(byte[],
+   * byte[], byte[], byte[])}.
+   *
+   * <p>Method under test: {@link Zip32XfvkAddressParams#Zip32XfvkAddressParams(byte[], byte[],
+   * byte[], byte[])}
    */
   @Test
   @Category(MaintainedByDiffblue.class)
   @MethodsUnderTest({"void Zip32XfvkAddressParams.<init>(byte[], byte[], byte[], byte[])"})
   public void testZip32XfvkAddressParamsNewZip32XfvkAddressParams()
       throws UnsupportedEncodingException, ZksnarkException {
-    // Arrange
-    byte[] xfvk = "AXAXAXAX".getBytes("UTF-8");
-    byte[] j = "AXAXAXAX".getBytes("UTF-8");
-    byte[] j_ret = "AXAXAXAX".getBytes("UTF-8");
-
-    // Act
-    Zip32XfvkAddressParams actualZip32XfvkAddressParams = new Zip32XfvkAddressParams(xfvk, j, j_ret,
-        "AXAXAXAX".getBytes("UTF-8"));
+    // Arrange and Act
+    Zip32XfvkAddressParams actualZip32XfvkAddressParams =
+        new Zip32XfvkAddressParams(
+            "AXAXAXAX".getBytes("UTF-8"),
+            "AXAXAXAX".getBytes("UTF-8"),
+            "AXAXAXAX".getBytes("UTF-8"),
+            "AXAXAXAX".getBytes("UTF-8"));
 
     // Assert
-    byte[] expectedAddr_ret = "AXAXAXAX".getBytes("UTF-8");
-    assertArrayEquals(expectedAddr_ret, actualZip32XfvkAddressParams.getAddr_ret());
-    byte[] expectedJ = "AXAXAXAX".getBytes("UTF-8");
-    assertArrayEquals(expectedJ, actualZip32XfvkAddressParams.getJ());
-    byte[] expectedJ_ret = "AXAXAXAX".getBytes("UTF-8");
-    assertArrayEquals(expectedJ_ret, actualZip32XfvkAddressParams.getJ_ret());
-    byte[] expectedXfvk = "AXAXAXAX".getBytes("UTF-8");
-    assertArrayEquals(expectedXfvk, actualZip32XfvkAddressParams.getXfvk());
+    assertArrayEquals("AXAXAXAX".getBytes("UTF-8"), actualZip32XfvkAddressParams.getAddr_ret());
+    assertArrayEquals("AXAXAXAX".getBytes("UTF-8"), actualZip32XfvkAddressParams.getJ());
+    assertArrayEquals("AXAXAXAX".getBytes("UTF-8"), actualZip32XfvkAddressParams.getJ_ret());
+    assertArrayEquals("AXAXAXAX".getBytes("UTF-8"), actualZip32XfvkAddressParams.getXfvk());
   }
 
   /**
-   * Test Zip32XskDeriveParams {@link Zip32XskDeriveParams#Zip32XskDeriveParams(byte[], int, byte[])}.
-   * <p>
-   * Method under test: {@link Zip32XskDeriveParams#Zip32XskDeriveParams(byte[], int, byte[])}
+   * Test Zip32XskDeriveParams {@link Zip32XskDeriveParams#Zip32XskDeriveParams(byte[], int,
+   * byte[])}.
+   *
+   * <p>Method under test: {@link Zip32XskDeriveParams#Zip32XskDeriveParams(byte[], int, byte[])}
    */
   @Test
   @Category(MaintainedByDiffblue.class)
   @MethodsUnderTest({"void Zip32XskDeriveParams.<init>(byte[], int, byte[])"})
-  public void testZip32XskDeriveParamsNewZip32XskDeriveParams() throws UnsupportedEncodingException, ZksnarkException {
-    // Arrange
-    byte[] data = "AXAXAXAX".getBytes("UTF-8");
-
-    // Act
-    Zip32XskDeriveParams actualZip32XskDeriveParams = new Zip32XskDeriveParams(data, 3, "AXAXAXAX".getBytes("UTF-8"));
+  public void testZip32XskDeriveParamsNewZip32XskDeriveParams()
+      throws UnsupportedEncodingException, ZksnarkException {
+    // Arrange and Act
+    Zip32XskDeriveParams actualZip32XskDeriveParams =
+        new Zip32XskDeriveParams("AXAXAXAX".getBytes("UTF-8"), 3, "AXAXAXAX".getBytes("UTF-8"));
 
     // Assert
     assertEquals(3, actualZip32XskDeriveParams.getSize());
-    byte[] expectedData = "AXAXAXAX".getBytes("UTF-8");
-    assertArrayEquals(expectedData, actualZip32XskDeriveParams.getData());
-    byte[] expectedM_bytes = "AXAXAXAX".getBytes("UTF-8");
-    assertArrayEquals(expectedM_bytes, actualZip32XskDeriveParams.getM_bytes());
+    assertArrayEquals("AXAXAXAX".getBytes("UTF-8"), actualZip32XskDeriveParams.getData());
+    assertArrayEquals("AXAXAXAX".getBytes("UTF-8"), actualZip32XskDeriveParams.getM_bytes());
   }
 }

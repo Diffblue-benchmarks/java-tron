@@ -11,8 +11,8 @@ import org.junit.experimental.categories.Category;
 public class TronExceptionDiffblueTest {
   /**
    * Test {@link TronException#TronException()}.
-   * <p>
-   * Method under test: {@link TronException#TronException()}
+   *
+   * <p>Method under test: {@link TronException#TronException()}
    */
   @Test
   @Category(MaintainedByDiffblue.class)
@@ -30,8 +30,8 @@ public class TronExceptionDiffblueTest {
 
   /**
    * Test {@link TronException#TronException(String)}.
-   * <p>
-   * Method under test: {@link TronException#TronException(String)}
+   *
+   * <p>Method under test: {@link TronException#TronException(String)}
    */
   @Test
   @Category(MaintainedByDiffblue.class)
@@ -49,8 +49,8 @@ public class TronExceptionDiffblueTest {
 
   /**
    * Test {@link TronException#TronException(String, Throwable)}.
-   * <p>
-   * Method under test: {@link TronException#TronException(String, Throwable)}
+   *
+   * <p>Method under test: {@link TronException#TronException(String, Throwable)}
    */
   @Test
   @Category(MaintainedByDiffblue.class)

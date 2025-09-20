@@ -1,64 +1,73 @@
 package org.tron.core;
 
-import static org.junit.Assert.assertSame;
+import static org.junit.Assert.assertThrows;
 import com.diffblue.cover.annotations.MaintainedByDiffblue;
 import com.diffblue.cover.annotations.MethodsUnderTest;
-import com.google.protobuf.UnknownFieldSet;
 import org.junit.Test;
 import org.junit.experimental.categories.Category;
 import org.tron.api.GrpcAPI;
-import org.tron.api.GrpcAPI.Return;
-import org.tron.common.crypto.ECKey;
-import org.tron.protos.Protocol;
-import org.tron.protos.Protocol.Transaction;
+import org.tron.api.GrpcAPI.SpendAuthSigParameters;
+import org.tron.core.exception.ZksnarkException;
+import org.tron.protos.contract.BalanceContract;
+import org.tron.protos.contract.BalanceContract.AccountIdentifier;
+import org.tron.protos.contract.BalanceContract.BlockBalanceTrace;
+import org.tron.protos.contract.BalanceContract.BlockBalanceTrace.BlockIdentifier;
 
 public class WalletDiffblueTest {
   /**
-   * Test {@link Wallet#broadcastTransaction(Transaction)}.
-   * <p>
-   * Method under test: {@link Wallet#broadcastTransaction(Transaction)}
+   * Test {@link Wallet#createSpendAuthSig(SpendAuthSigParameters)}.
+   *
+   * <p>Method under test: {@link Wallet#createSpendAuthSig(GrpcAPI.SpendAuthSigParameters)}
    */
   @Test
   @Category(MaintainedByDiffblue.class)
-  @MethodsUnderTest({"Return Wallet.broadcastTransaction(Transaction)"})
-  public void testBroadcastTransaction() {
-    // Arrange
-    Wallet wallet = new Wallet();
-
-    // Act
-    Return actualBroadcastTransactionResult = wallet.broadcastTransaction(Transaction.getDefaultInstance());
-
-    // Assert
-    UnknownFieldSet unknownFields = actualBroadcastTransactionResult.getUnknownFields();
-    Return defaultInstanceForType = actualBroadcastTransactionResult.getDefaultInstanceForType();
-    assertSame(unknownFields, defaultInstanceForType.getUnknownFields());
-    assertSame(unknownFields, unknownFields.getDefaultInstanceForType());
-    assertSame(defaultInstanceForType.getDefaultInstanceForType(), defaultInstanceForType.getDefaultInstanceForType());
+  @MethodsUnderTest({
+    "GrpcAPI.BytesMessage Wallet.createSpendAuthSig(GrpcAPI.SpendAuthSigParameters)"
+  })
+  public void testCreateSpendAuthSig() throws ZksnarkException {
+    // Arrange, Act and Assert
+    assertThrows(
+        ZksnarkException.class,
+        () -> new Wallet().createSpendAuthSig(SpendAuthSigParameters.getDefaultInstance()));
   }
 
   /**
-   * Test {@link Wallet#broadcastTransaction(Transaction)}.
+   * Test {@link Wallet#checkBlockIdentifier(BlockIdentifier)}.
+   *
    * <ul>
-   *   <li>Given {@link Wallet#Wallet(SignInterface)} with cryptoEngine is {@link ECKey#ECKey()}.</li>
+   *   <li>When DefaultInstance.
+   *   <li>Then throw {@link IllegalArgumentException}.
    * </ul>
-   * <p>
-   * Method under test: {@link Wallet#broadcastTransaction(Transaction)}
+   *
+   * <p>Method under test: {@link Wallet#checkBlockIdentifier(BlockIdentifier)}
    */
   @Test
   @Category(MaintainedByDiffblue.class)
-  @MethodsUnderTest({"Return Wallet.broadcastTransaction(Transaction)"})
-  public void testBroadcastTransaction_givenWalletWithCryptoEngineIsECKey() {
-    // Arrange
-    Wallet wallet = new Wallet(new ECKey());
+  @MethodsUnderTest({"void Wallet.checkBlockIdentifier(BlockIdentifier)"})
+  public void testCheckBlockIdentifier_whenDefaultInstance_thenThrowIllegalArgumentException() {
+    // Arrange, Act and Assert
+    assertThrows(
+        IllegalArgumentException.class,
+        () -> new Wallet().checkBlockIdentifier(BlockIdentifier.getDefaultInstance()));
+  }
 
-    // Act
-    Return actualBroadcastTransactionResult = wallet.broadcastTransaction(Transaction.getDefaultInstance());
-
-    // Assert
-    UnknownFieldSet unknownFields = actualBroadcastTransactionResult.getUnknownFields();
-    Return defaultInstanceForType = actualBroadcastTransactionResult.getDefaultInstanceForType();
-    assertSame(unknownFields, defaultInstanceForType.getUnknownFields());
-    assertSame(unknownFields, unknownFields.getDefaultInstanceForType());
-    assertSame(defaultInstanceForType.getDefaultInstanceForType(), defaultInstanceForType.getDefaultInstanceForType());
+  /**
+   * Test {@link Wallet#checkAccountIdentifier(AccountIdentifier)}.
+   *
+   * <ul>
+   *   <li>When DefaultInstance.
+   *   <li>Then throw {@link IllegalArgumentException}.
+   * </ul>
+   *
+   * <p>Method under test: {@link Wallet#checkAccountIdentifier(BalanceContract.AccountIdentifier)}
+   */
+  @Test
+  @Category(MaintainedByDiffblue.class)
+  @MethodsUnderTest({"void Wallet.checkAccountIdentifier(BalanceContract.AccountIdentifier)"})
+  public void testCheckAccountIdentifier_whenDefaultInstance_thenThrowIllegalArgumentException() {
+    // Arrange, Act and Assert
+    assertThrows(
+        IllegalArgumentException.class,
+        () -> new Wallet().checkAccountIdentifier(AccountIdentifier.getDefaultInstance()));
   }
 }

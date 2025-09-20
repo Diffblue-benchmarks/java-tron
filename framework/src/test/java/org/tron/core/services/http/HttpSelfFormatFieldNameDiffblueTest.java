@@ -10,25 +10,31 @@ import org.junit.experimental.categories.Category;
 public class HttpSelfFormatFieldNameDiffblueTest {
   /**
    * Test {@link HttpSelfFormatFieldName#isAddressFormat(String)}.
-   * <p>
-   * Method under test: {@link HttpSelfFormatFieldName#isAddressFormat(String)}
+   *
+   * <ul>
+   *   <li>When {@code Name}.
+   *   <li>Then return {@code false}.
+   * </ul>
+   *
+   * <p>Method under test: {@link HttpSelfFormatFieldName#isAddressFormat(String)}
    */
   @Test
   @Category(MaintainedByDiffblue.class)
   @MethodsUnderTest({"boolean HttpSelfFormatFieldName.isAddressFormat(String)"})
-  public void testIsAddressFormat() {
+  public void testIsAddressFormat_whenName_thenReturnFalse() {
     // Arrange, Act and Assert
-    assertFalse(HttpSelfFormatFieldName.isAddressFormat("https://example.org/example"));
+    assertFalse(HttpSelfFormatFieldName.isAddressFormat("Name"));
   }
 
   /**
    * Test {@link HttpSelfFormatFieldName#isNameStringFormat(String)}.
+   *
    * <ul>
-   *   <li>When {@code https://example.org/example}.</li>
-   *   <li>Then return {@code false}.</li>
+   *   <li>When {@code https://example.org/example}.
+   *   <li>Then return {@code false}.
    * </ul>
-   * <p>
-   * Method under test: {@link HttpSelfFormatFieldName#isNameStringFormat(String)}
+   *
+   * <p>Method under test: {@link HttpSelfFormatFieldName#isNameStringFormat(String)}
    */
   @Test
   @Category(MaintainedByDiffblue.class)
@@ -40,12 +46,13 @@ public class HttpSelfFormatFieldNameDiffblueTest {
 
   /**
    * Test {@link HttpSelfFormatFieldName#isNameStringFormat(String)}.
+   *
    * <ul>
-   *   <li>When {@code protocol.MarketPriceList.buy_token_id}.</li>
-   *   <li>Then return {@code true}.</li>
+   *   <li>When {@code protocol.MarketPriceList.buy_token_id}.
+   *   <li>Then return {@code true}.
    * </ul>
-   * <p>
-   * Method under test: {@link HttpSelfFormatFieldName#isNameStringFormat(String)}
+   *
+   * <p>Method under test: {@link HttpSelfFormatFieldName#isNameStringFormat(String)}
    */
   @Test
   @Category(MaintainedByDiffblue.class)

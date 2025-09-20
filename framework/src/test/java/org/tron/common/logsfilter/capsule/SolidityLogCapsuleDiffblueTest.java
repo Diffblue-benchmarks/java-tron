@@ -10,8 +10,9 @@ import org.tron.common.logsfilter.trigger.ContractLogTrigger;
 public class SolidityLogCapsuleDiffblueTest {
   /**
    * Test getters and setters.
-   * <p>
-   * Methods under test:
+   *
+   * <p>Methods under test:
+   *
    * <ul>
    *   <li>{@link SolidityLogCapsule#SolidityLogCapsule(ContractLogTrigger)}
    *   <li>{@link SolidityLogCapsule#setSolidityLogTrigger(ContractLogTrigger)}
@@ -20,9 +21,11 @@ public class SolidityLogCapsuleDiffblueTest {
    */
   @Test
   @Category(MaintainedByDiffblue.class)
-  @MethodsUnderTest({"void SolidityLogCapsule.<init>(ContractLogTrigger)",
-      "ContractLogTrigger SolidityLogCapsule.getSolidityLogTrigger()",
-      "void SolidityLogCapsule.setSolidityLogTrigger(ContractLogTrigger)"})
+  @MethodsUnderTest({
+    "void SolidityLogCapsule.<init>(ContractLogTrigger)",
+    "ContractLogTrigger SolidityLogCapsule.getSolidityLogTrigger()",
+    "void SolidityLogCapsule.setSolidityLogTrigger(ContractLogTrigger)"
+  })
   public void testGettersAndSetters() {
     // Arrange and Act
     SolidityLogCapsule actualSolidityLogCapsule = new SolidityLogCapsule(new ContractLogTrigger());

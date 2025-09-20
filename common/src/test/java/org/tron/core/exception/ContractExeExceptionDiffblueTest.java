@@ -10,8 +10,8 @@ import org.junit.experimental.categories.Category;
 public class ContractExeExceptionDiffblueTest {
   /**
    * Test {@link ContractExeException#ContractExeException()}.
-   * <p>
-   * Method under test: {@link ContractExeException#ContractExeException()}
+   *
+   * <p>Method under test: {@link ContractExeException#ContractExeException()}
    */
   @Test
   @Category(MaintainedByDiffblue.class)
@@ -29,8 +29,8 @@ public class ContractExeExceptionDiffblueTest {
 
   /**
    * Test {@link ContractExeException#ContractExeException(String)}.
-   * <p>
-   * Method under test: {@link ContractExeException#ContractExeException(String)}
+   *
+   * <p>Method under test: {@link ContractExeException#ContractExeException(String)}
    */
   @Test
   @Category(MaintainedByDiffblue.class)

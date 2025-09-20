@@ -14,19 +14,20 @@ import org.tron.core.db2.common.Value.Operator;
 public class ValueDiffblueTest {
   /**
    * Test {@link Value#decode(byte[])}.
+   *
    * <ul>
-   *   <li>When array of {@code byte} with one.</li>
-   *   <li>Then return Operator is {@code MODIFY}.</li>
+   *   <li>When array of {@code byte} with one.
+   *   <li>Then return Operator is {@code MODIFY}.
    * </ul>
-   * <p>
-   * Method under test: {@link Value#decode(byte[])}
+   *
+   * <p>Method under test: {@link Value#decode(byte[])}
    */
   @Test
   @Category(MaintainedByDiffblue.class)
   @MethodsUnderTest({"Value Value.decode(byte[])"})
   public void testDecode_whenArrayOfByteWithOne_thenReturnOperatorIsModify() {
     // Arrange and Act
-    Value actualDecodeResult = Value.decode(new byte[]{1});
+    Value actualDecodeResult = Value.decode(new byte[] {1});
 
     // Assert
     assertNull(actualDecodeResult.getBytes());
@@ -35,19 +36,20 @@ public class ValueDiffblueTest {
 
   /**
    * Test {@link Value#decode(byte[])}.
+   *
    * <ul>
-   *   <li>When array of {@code byte} with three.</li>
-   *   <li>Then return Operator is {@code PUT}.</li>
+   *   <li>When array of {@code byte} with three.
+   *   <li>Then return Operator is {@code PUT}.
    * </ul>
-   * <p>
-   * Method under test: {@link Value#decode(byte[])}
+   *
+   * <p>Method under test: {@link Value#decode(byte[])}
    */
   @Test
   @Category(MaintainedByDiffblue.class)
   @MethodsUnderTest({"Value Value.decode(byte[])"})
   public void testDecode_whenArrayOfByteWithThree_thenReturnOperatorIsPut() {
     // Arrange and Act
-    Value actualDecodeResult = Value.decode(new byte[]{3});
+    Value actualDecodeResult = Value.decode(new byte[] {3});
 
     // Assert
     assertNull(actualDecodeResult.getBytes());
@@ -56,19 +58,20 @@ public class ValueDiffblueTest {
 
   /**
    * Test {@link Value#decode(byte[])}.
+   *
    * <ul>
-   *   <li>When array of {@code byte} with two.</li>
-   *   <li>Then return Operator is {@code DELETE}.</li>
+   *   <li>When array of {@code byte} with two.
+   *   <li>Then return Operator is {@code DELETE}.
    * </ul>
-   * <p>
-   * Method under test: {@link Value#decode(byte[])}
+   *
+   * <p>Method under test: {@link Value#decode(byte[])}
    */
   @Test
   @Category(MaintainedByDiffblue.class)
   @MethodsUnderTest({"Value Value.decode(byte[])"})
   public void testDecode_whenArrayOfByteWithTwo_thenReturnOperatorIsDelete() {
     // Arrange and Act
-    Value actualDecodeResult = Value.decode(new byte[]{2});
+    Value actualDecodeResult = Value.decode(new byte[] {2});
 
     // Assert
     assertNull(actualDecodeResult.getBytes());
@@ -77,19 +80,20 @@ public class ValueDiffblueTest {
 
   /**
    * Test {@link Value#decode(byte[])}.
+   *
    * <ul>
-   *   <li>When array of {@code byte} with zero.</li>
-   *   <li>Then return Operator is {@code CREATE}.</li>
+   *   <li>When array of {@code byte} with zero.
+   *   <li>Then return Operator is {@code CREATE}.
    * </ul>
-   * <p>
-   * Method under test: {@link Value#decode(byte[])}
+   *
+   * <p>Method under test: {@link Value#decode(byte[])}
    */
   @Test
   @Category(MaintainedByDiffblue.class)
   @MethodsUnderTest({"Value Value.decode(byte[])"})
   public void testDecode_whenArrayOfByteWithZero_thenReturnOperatorIsCreate() {
     // Arrange and Act
-    Value actualDecodeResult = Value.decode(new byte[]{0});
+    Value actualDecodeResult = Value.decode(new byte[] {0});
 
     // Assert
     assertNull(actualDecodeResult.getBytes());
@@ -98,34 +102,36 @@ public class ValueDiffblueTest {
 
   /**
    * Test {@link Value#decode(byte[])}.
+   *
    * <ul>
-   *   <li>When {@code AXAXAXAX} Bytes is {@code UTF-8}.</li>
-   *   <li>Then return Operator is {@code null}.</li>
+   *   <li>When {@code AXAXAXAX} Bytes is {@code UTF-8}.
+   *   <li>Then return Operator is {@code null}.
    * </ul>
-   * <p>
-   * Method under test: {@link Value#decode(byte[])}
+   *
+   * <p>Method under test: {@link Value#decode(byte[])}
    */
   @Test
   @Category(MaintainedByDiffblue.class)
   @MethodsUnderTest({"Value Value.decode(byte[])"})
-  public void testDecode_whenAxaxaxaxBytesIsUtf8_thenReturnOperatorIsNull() throws UnsupportedEncodingException {
+  public void testDecode_whenAxaxaxaxBytesIsUtf8_thenReturnOperatorIsNull()
+      throws UnsupportedEncodingException {
     // Arrange and Act
     Value actualDecodeResult = Value.decode("AXAXAXAX".getBytes("UTF-8"));
 
     // Assert
     assertNull(actualDecodeResult.getOperator());
-    byte[] expectedBytes = "XAXAXAX".getBytes("UTF-8");
-    assertArrayEquals(expectedBytes, actualDecodeResult.getBytes());
+    assertArrayEquals("XAXAXAX".getBytes("UTF-8"), actualDecodeResult.getBytes());
   }
 
   /**
    * Test {@link Value#copyOf(Operator, byte[])}.
+   *
    * <ul>
-   *   <li>When {@code AXAXAXAX} Bytes is {@code UTF-8}.</li>
-   *   <li>Then return Bytes is {@code AXAXAXAX} Bytes is {@code UTF-8}.</li>
+   *   <li>When {@code AXAXAXAX} Bytes is {@code UTF-8}.
+   *   <li>Then return Bytes is {@code AXAXAXAX} Bytes is {@code UTF-8}.
    * </ul>
-   * <p>
-   * Method under test: {@link Value#copyOf(Operator, byte[])}
+   *
+   * <p>Method under test: {@link Value#copyOf(Operator, byte[])}
    */
   @Test
   @Category(MaintainedByDiffblue.class)
@@ -137,18 +143,18 @@ public class ValueDiffblueTest {
 
     // Assert
     assertEquals(Operator.CREATE, actualCopyOfResult.getOperator());
-    byte[] expectedBytes = "AXAXAXAX".getBytes("UTF-8");
-    assertArrayEquals(expectedBytes, actualCopyOfResult.getBytes());
+    assertArrayEquals("AXAXAXAX".getBytes("UTF-8"), actualCopyOfResult.getBytes());
   }
 
   /**
    * Test {@link Value#copyOf(Operator, byte[])}.
+   *
    * <ul>
-   *   <li>When {@code null}.</li>
-   *   <li>Then return Bytes is {@code null}.</li>
+   *   <li>When {@code null}.
+   *   <li>Then return Bytes is {@code null}.
    * </ul>
-   * <p>
-   * Method under test: {@link Value#copyOf(Operator, byte[])}
+   *
+   * <p>Method under test: {@link Value#copyOf(Operator, byte[])}
    */
   @Test
   @Category(MaintainedByDiffblue.class)
@@ -164,8 +170,8 @@ public class ValueDiffblueTest {
 
   /**
    * Test {@link Value#of(Operator, byte[])}.
-   * <p>
-   * Method under test: {@link Value#of(Operator, byte[])}
+   *
+   * <p>Method under test: {@link Value#of(Operator, byte[])}
    */
   @Test
   @Category(MaintainedByDiffblue.class)
@@ -176,88 +182,99 @@ public class ValueDiffblueTest {
 
     // Assert
     assertEquals(Operator.CREATE, actualOfResult.getOperator());
-    byte[] expectedBytes = "AXAXAXAX".getBytes("UTF-8");
-    assertArrayEquals(expectedBytes, actualOfResult.getBytes());
+    assertArrayEquals("AXAXAXAX".getBytes("UTF-8"), actualOfResult.getBytes());
   }
 
   /**
    * Test {@link Value#encode()}.
+   *
    * <ul>
-   *   <li>Given copyOf {@code CREATE} and {@code null}.</li>
-   *   <li>Then return array of {@code byte} with zero.</li>
+   *   <li>Given copyOf {@code CREATE} and {@code null}.
+   *   <li>Then return array of {@code byte} with zero.
    * </ul>
-   * <p>
-   * Method under test: {@link Value#encode()}
+   *
+   * <p>Method under test: {@link Value#encode()}
    */
   @Test
   @Category(MaintainedByDiffblue.class)
   @MethodsUnderTest({"byte[] Value.encode()"})
   public void testEncode_givenCopyOfCreateAndNull_thenReturnArrayOfByteWithZero() {
-    // Arrange, Act and Assert
-    assertArrayEquals(new byte[]{0}, Value.copyOf(Operator.CREATE, null).encode());
+    // Arrange
+    Value copyOfResult = Value.copyOf(Operator.CREATE, null);
+
+    // Act and Assert
+    assertArrayEquals(new byte[] {0}, copyOfResult.encode());
   }
 
   /**
    * Test {@link Value#encode()}.
+   *
    * <ul>
-   *   <li>Then return array of {@code byte} with zero and {@code A}.</li>
+   *   <li>Then return array of {@code byte} with zero and {@code A}.
    * </ul>
-   * <p>
-   * Method under test: {@link Value#encode()}
+   *
+   * <p>Method under test: {@link Value#encode()}
    */
   @Test
   @Category(MaintainedByDiffblue.class)
   @MethodsUnderTest({"byte[] Value.encode()"})
   public void testEncode_thenReturnArrayOfByteWithZeroAndA() throws UnsupportedEncodingException {
     // Arrange, Act and Assert
-    assertArrayEquals(new byte[]{0, 'A', 'X', 'A', 'X', 'A', 'X', 'A', 'X'},
+    assertArrayEquals(
+        new byte[] {0, 'A', 'X', 'A', 'X', 'A', 'X', 'A', 'X'},
         Value.copyOf(Operator.CREATE, "AXAXAXAX".getBytes("UTF-8")).encode());
   }
 
   /**
    * Test {@link Value#getBytes()}.
+   *
    * <ul>
-   *   <li>Given copyOf {@code CREATE} and {@code null}.</li>
-   *   <li>Then return {@code null}.</li>
+   *   <li>Given copyOf {@code CREATE} and {@code null}.
+   *   <li>Then return {@code null}.
    * </ul>
-   * <p>
-   * Method under test: {@link Value#getBytes()}
+   *
+   * <p>Method under test: {@link Value#getBytes()}
    */
   @Test
   @Category(MaintainedByDiffblue.class)
   @MethodsUnderTest({"byte[] Value.getBytes()"})
   public void testGetBytes_givenCopyOfCreateAndNull_thenReturnNull() {
-    // Arrange, Act and Assert
-    assertNull(Value.copyOf(Operator.CREATE, null).getBytes());
+    // Arrange
+    Value copyOfResult = Value.copyOf(Operator.CREATE, null);
+
+    // Act and Assert
+    assertNull(copyOfResult.getBytes());
   }
 
   /**
    * Test {@link Value#getBytes()}.
+   *
    * <ul>
-   *   <li>Then return {@code AXAXAXAX} Bytes is {@code UTF-8}.</li>
+   *   <li>Then return {@code AXAXAXAX} Bytes is {@code UTF-8}.
    * </ul>
-   * <p>
-   * Method under test: {@link Value#getBytes()}
+   *
+   * <p>Method under test: {@link Value#getBytes()}
    */
   @Test
   @Category(MaintainedByDiffblue.class)
   @MethodsUnderTest({"byte[] Value.getBytes()"})
   public void testGetBytes_thenReturnAxaxaxaxBytesIsUtf8() throws UnsupportedEncodingException {
-    // Arrange and Act
-    byte[] actualBytes = Value.copyOf(Operator.CREATE, "AXAXAXAX".getBytes("UTF-8")).getBytes();
-
-    // Assert
-    assertArrayEquals("AXAXAXAX".getBytes("UTF-8"), actualBytes);
+    // Arrange, Act and Assert
+    assertArrayEquals(
+        "AXAXAXAX".getBytes("UTF-8"),
+        Value.copyOf(Operator.CREATE, "AXAXAXAX".getBytes("UTF-8")).getBytes());
   }
 
   /**
    * Test {@link Value#equals(Object)}, and {@link Value#hashCode()}.
+   *
    * <ul>
-   *   <li>When other is equal.</li>
-   *   <li>Then return equal.</li>
+   *   <li>When other is equal.
+   *   <li>Then return equal.
    * </ul>
-   * <p>
-   * Methods under test:
+   *
+   * <p>Methods under test:
+   *
    * <ul>
    *   <li>{@link Value#equals(Object)}
    *   <li>{@link Value#hashCode()}
@@ -266,25 +283,27 @@ public class ValueDiffblueTest {
   @Test
   @Category(MaintainedByDiffblue.class)
   @MethodsUnderTest({"boolean Value.equals(Object)", "int Value.hashCode()"})
-  public void testEqualsAndHashCode_whenOtherIsEqual_thenReturnEqual() throws UnsupportedEncodingException {
+  public void testEqualsAndHashCode_whenOtherIsEqual_thenReturnEqual()
+      throws UnsupportedEncodingException {
     // Arrange
     Value copyOfResult = Value.copyOf(Operator.CREATE, "AXAXAXAX".getBytes("UTF-8"));
     Value copyOfResult2 = Value.copyOf(Operator.CREATE, "AXAXAXAX".getBytes("UTF-8"));
 
     // Act and Assert
     assertEquals(copyOfResult, copyOfResult2);
-    int expectedHashCodeResult = copyOfResult.hashCode();
-    assertEquals(expectedHashCodeResult, copyOfResult2.hashCode());
+    assertEquals(copyOfResult.hashCode(), copyOfResult2.hashCode());
   }
 
   /**
    * Test {@link Value#equals(Object)}, and {@link Value#hashCode()}.
+   *
    * <ul>
-   *   <li>When other is same.</li>
-   *   <li>Then return equal.</li>
+   *   <li>When other is same.
+   *   <li>Then return equal.
    * </ul>
-   * <p>
-   * Methods under test:
+   *
+   * <p>Methods under test:
+   *
    * <ul>
    *   <li>{@link Value#equals(Object)}
    *   <li>{@link Value#hashCode()}
@@ -293,7 +312,8 @@ public class ValueDiffblueTest {
   @Test
   @Category(MaintainedByDiffblue.class)
   @MethodsUnderTest({"boolean Value.equals(Object)", "int Value.hashCode()"})
-  public void testEqualsAndHashCode_whenOtherIsSame_thenReturnEqual() throws UnsupportedEncodingException {
+  public void testEqualsAndHashCode_whenOtherIsSame_thenReturnEqual()
+      throws UnsupportedEncodingException {
     // Arrange
     Value copyOfResult = Value.copyOf(Operator.CREATE, "AXAXAXAX".getBytes("UTF-8"));
 
@@ -305,32 +325,35 @@ public class ValueDiffblueTest {
 
   /**
    * Test {@link Value#equals(Object)}.
+   *
    * <ul>
-   *   <li>When other is different.</li>
-   *   <li>Then return not equal.</li>
+   *   <li>When other is different.
+   *   <li>Then return not equal.
    * </ul>
-   * <p>
-   * Method under test: {@link Value#equals(Object)}
+   *
+   * <p>Method under test: {@link Value#equals(Object)}
    */
   @Test
   @Category(MaintainedByDiffblue.class)
   @MethodsUnderTest({"boolean Value.equals(Object)", "int Value.hashCode()"})
-  public void testEquals_whenOtherIsDifferent_thenReturnNotEqual() throws UnsupportedEncodingException {
+  public void testEquals_whenOtherIsDifferent_thenReturnNotEqual()
+      throws UnsupportedEncodingException {
     // Arrange
-    Value copyOfResult = Value.copyOf(Operator.CREATE, new byte[]{1, 'X', 'A', 'X', 'A', 'X', 'A', 'X'});
+    Value ofResult = Value.of(Operator.CREATE, new byte[] {'A', 1, 'A', 1, 'A', 1, 'A', 1});
 
     // Act and Assert
-    assertNotEquals(copyOfResult, Value.copyOf(Operator.CREATE, "AXAXAXAX".getBytes("UTF-8")));
+    assertNotEquals(ofResult, Value.copyOf(Operator.CREATE, "AXAXAXAX".getBytes("UTF-8")));
   }
 
   /**
    * Test {@link Value#equals(Object)}.
+   *
    * <ul>
-   *   <li>When other is {@code null}.</li>
-   *   <li>Then return not equal.</li>
+   *   <li>When other is {@code null}.
+   *   <li>Then return not equal.
    * </ul>
-   * <p>
-   * Method under test: {@link Value#equals(Object)}
+   *
+   * <p>Method under test: {@link Value#equals(Object)}
    */
   @Test
   @Category(MaintainedByDiffblue.class)
@@ -342,38 +365,42 @@ public class ValueDiffblueTest {
 
   /**
    * Test {@link Value#equals(Object)}.
+   *
    * <ul>
-   *   <li>When other is wrong type.</li>
-   *   <li>Then return not equal.</li>
+   *   <li>When other is wrong type.
+   *   <li>Then return not equal.
    * </ul>
-   * <p>
-   * Method under test: {@link Value#equals(Object)}
+   *
+   * <p>Method under test: {@link Value#equals(Object)}
    */
   @Test
   @Category(MaintainedByDiffblue.class)
   @MethodsUnderTest({"boolean Value.equals(Object)", "int Value.hashCode()"})
-  public void testEquals_whenOtherIsWrongType_thenReturnNotEqual() throws UnsupportedEncodingException {
+  public void testEquals_whenOtherIsWrongType_thenReturnNotEqual()
+      throws UnsupportedEncodingException {
     // Arrange, Act and Assert
-    assertNotEquals(Value.copyOf(Operator.CREATE, "AXAXAXAX".getBytes("UTF-8")), "Different type to Value");
+    assertNotEquals(
+        Value.copyOf(Operator.CREATE, "AXAXAXAX".getBytes("UTF-8")), "Different type to Value");
   }
 
   /**
    * Test {@link Value#getOperator()}.
-   * <p>
-   * Method under test: {@link Value#getOperator()}
+   *
+   * <p>Method under test: {@link Value#getOperator()}
    */
   @Test
   @Category(MaintainedByDiffblue.class)
   @MethodsUnderTest({"Operator Value.getOperator()"})
   public void testGetOperator() throws UnsupportedEncodingException {
     // Arrange, Act and Assert
-    assertEquals(Operator.CREATE, Value.copyOf(Operator.CREATE, "AXAXAXAX".getBytes("UTF-8")).getOperator());
+    assertEquals(
+        Operator.CREATE, Value.copyOf(Operator.CREATE, "AXAXAXAX".getBytes("UTF-8")).getOperator());
   }
 
   /**
    * Test Operator {@link Operator#getValue()}.
-   * <p>
-   * Method under test: {@link Operator#getValue()}
+   *
+   * <p>Method under test: {@link Operator#getValue()}
    */
   @Test
   @Category(MaintainedByDiffblue.class)
@@ -385,12 +412,13 @@ public class ValueDiffblueTest {
 
   /**
    * Test Operator {@link Operator#valueOf(byte)} with {@code b}.
+   *
    * <ul>
-   *   <li>When {@code A}.</li>
-   *   <li>Then return {@code null}.</li>
+   *   <li>When {@code A}.
+   *   <li>Then return {@code null}.
    * </ul>
-   * <p>
-   * Method under test: {@link Operator#valueOf(byte)}
+   *
+   * <p>Method under test: {@link Operator#valueOf(byte)}
    */
   @Test
   @Category(MaintainedByDiffblue.class)
@@ -402,12 +430,13 @@ public class ValueDiffblueTest {
 
   /**
    * Test Operator {@link Operator#valueOf(byte)} with {@code b}.
+   *
    * <ul>
-   *   <li>When one.</li>
-   *   <li>Then return {@code MODIFY}.</li>
+   *   <li>When one.
+   *   <li>Then return {@code MODIFY}.
    * </ul>
-   * <p>
-   * Method under test: {@link Operator#valueOf(byte)}
+   *
+   * <p>Method under test: {@link Operator#valueOf(byte)}
    */
   @Test
   @Category(MaintainedByDiffblue.class)
@@ -419,12 +448,13 @@ public class ValueDiffblueTest {
 
   /**
    * Test Operator {@link Operator#valueOf(byte)} with {@code b}.
+   *
    * <ul>
-   *   <li>When three.</li>
-   *   <li>Then return {@code PUT}.</li>
+   *   <li>When three.
+   *   <li>Then return {@code PUT}.
    * </ul>
-   * <p>
-   * Method under test: {@link Operator#valueOf(byte)}
+   *
+   * <p>Method under test: {@link Operator#valueOf(byte)}
    */
   @Test
   @Category(MaintainedByDiffblue.class)
@@ -436,12 +466,13 @@ public class ValueDiffblueTest {
 
   /**
    * Test Operator {@link Operator#valueOf(byte)} with {@code b}.
+   *
    * <ul>
-   *   <li>When two.</li>
-   *   <li>Then return {@code DELETE}.</li>
+   *   <li>When two.
+   *   <li>Then return {@code DELETE}.
    * </ul>
-   * <p>
-   * Method under test: {@link Operator#valueOf(byte)}
+   *
+   * <p>Method under test: {@link Operator#valueOf(byte)}
    */
   @Test
   @Category(MaintainedByDiffblue.class)
@@ -453,12 +484,13 @@ public class ValueDiffblueTest {
 
   /**
    * Test Operator {@link Operator#valueOf(byte)} with {@code b}.
+   *
    * <ul>
-   *   <li>When zero.</li>
-   *   <li>Then return {@code CREATE}.</li>
+   *   <li>When zero.
+   *   <li>Then return {@code CREATE}.
    * </ul>
-   * <p>
-   * Method under test: {@link Operator#valueOf(byte)}
+   *
+   * <p>Method under test: {@link Operator#valueOf(byte)}
    */
   @Test
   @Category(MaintainedByDiffblue.class)

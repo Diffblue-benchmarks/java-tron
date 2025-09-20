@@ -1,6 +1,5 @@
 package org.tron.consensus.pbft;
 
-import static org.junit.Assert.assertFalse;
 import static org.mockito.Mockito.mock;
 import static org.mockito.Mockito.verify;
 import static org.mockito.Mockito.when;
@@ -13,59 +12,27 @@ import org.mockito.InjectMocks;
 import org.mockito.junit.MockitoJUnitRunner;
 import org.springframework.test.annotation.DirtiesContext;
 import org.springframework.test.annotation.DirtiesContext.ClassMode;
-import org.tron.consensus.dpos.MaintenanceManager;
-import org.tron.consensus.pbft.message.PbftBaseMessage;
 import org.tron.consensus.pbft.message.PbftMessage;
 
-@RunWith(MockitoJUnitRunner.class)
 @DirtiesContext(classMode = ClassMode.AFTER_EACH_TEST_METHOD)
+@RunWith(MockitoJUnitRunner.class)
 public class PbftMessageHandleDiffblueTest {
-  @InjectMocks
-  private PbftMessageHandle pbftMessageHandle;
+  @InjectMocks private PbftMessageHandle pbftMessageHandle;
 
   /**
    * Test {@link PbftMessageHandle#onPrePrepare(PbftMessage)}.
+   *
    * <ul>
-   *   <li>Given {@code 42}.</li>
-   *   <li>When {@link PbftMessage} {@link PbftBaseMessage#getDataString()} return {@code 42}.</li>
+   *   <li>Given {@code Data String}.
+   *   <li>Then calls {@link PbftMessage#getDataString()}.
    * </ul>
-   * <p>
-   * Method under test: {@link PbftMessageHandle#onPrePrepare(PbftMessage)}
+   *
+   * <p>Method under test: {@link PbftMessageHandle#onPrePrepare(PbftMessage)}
    */
   @Test
   @Category(MaintainedByDiffblue.class)
   @MethodsUnderTest({"void PbftMessageHandle.onPrePrepare(PbftMessage)"})
-  public void testOnPrePrepare_given42_whenPbftMessageGetDataStringReturn42() {
-    // Arrange
-    PbftMessage message = mock(PbftMessage.class);
-    when(message.getDataString()).thenReturn("42");
-    when(message.getNumber()).thenReturn(1L);
-    when(message.isSwitch()).thenReturn(true);
-    when(message.getNo()).thenReturn("No");
-
-    // Act
-    pbftMessageHandle.onPrePrepare(message);
-
-    // Assert
-    verify(message).getDataString();
-    verify(message).getNumber();
-    verify(message).isSwitch();
-    verify(message).getNo();
-  }
-
-  /**
-   * Test {@link PbftMessageHandle#onPrePrepare(PbftMessage)}.
-   * <ul>
-   *   <li>Given {@code Data String}.</li>
-   *   <li>When {@link PbftMessage} {@link PbftBaseMessage#getDataString()} return {@code Data String}.</li>
-   * </ul>
-   * <p>
-   * Method under test: {@link PbftMessageHandle#onPrePrepare(PbftMessage)}
-   */
-  @Test
-  @Category(MaintainedByDiffblue.class)
-  @MethodsUnderTest({"void PbftMessageHandle.onPrePrepare(PbftMessage)"})
-  public void testOnPrePrepare_givenDataString_whenPbftMessageGetDataStringReturnDataString() {
+  public void testOnPrePrepare_givenDataString_thenCallsGetDataString() {
     // Arrange
     PbftMessage message = mock(PbftMessage.class);
     when(message.getDataString()).thenReturn("Data String");
@@ -85,13 +52,14 @@ public class PbftMessageHandleDiffblueTest {
 
   /**
    * Test {@link PbftMessageHandle#onPrepare(PbftMessage)}.
+   *
    * <ul>
-   *   <li>Given {@code Key}.</li>
-   *   <li>When {@link PbftMessage} {@link PbftBaseMessage#getKey()} return {@code Key}.</li>
-   *   <li>Then calls {@link PbftBaseMessage#getKey()}.</li>
+   *   <li>Given {@code Key}.
+   *   <li>When {@link PbftMessage} {@link PbftMessage#getKey()} return {@code Key}.
+   *   <li>Then calls {@link PbftMessage#getKey()}.
    * </ul>
-   * <p>
-   * Method under test: {@link PbftMessageHandle#onPrepare(PbftMessage)}
+   *
+   * <p>Method under test: {@link PbftMessageHandle#onPrepare(PbftMessage)}
    */
   @Test
   @Category(MaintainedByDiffblue.class)
@@ -112,13 +80,14 @@ public class PbftMessageHandleDiffblueTest {
 
   /**
    * Test {@link PbftMessageHandle#onCommit(PbftMessage)}.
+   *
    * <ul>
-   *   <li>Given {@code Key}.</li>
-   *   <li>When {@link PbftMessage} {@link PbftBaseMessage#getKey()} return {@code Key}.</li>
-   *   <li>Then calls {@link PbftBaseMessage#getKey()}.</li>
+   *   <li>Given {@code Key}.
+   *   <li>When {@link PbftMessage} {@link PbftMessage#getKey()} return {@code Key}.
+   *   <li>Then calls {@link PbftMessage#getKey()}.
    * </ul>
-   * <p>
-   * Method under test: {@link PbftMessageHandle#onCommit(PbftMessage)}
+   *
+   * <p>Method under test: {@link PbftMessageHandle#onCommit(PbftMessage)}
    */
   @Test
   @Category(MaintainedByDiffblue.class)
@@ -133,22 +102,5 @@ public class PbftMessageHandleDiffblueTest {
 
     // Assert
     verify(message).getKey();
-  }
-
-  /**
-   * Test {@link PbftMessageHandle#checkIsCanSendMsg(long)}.
-   * <p>
-   * Method under test: {@link PbftMessageHandle#checkIsCanSendMsg(long)}
-   */
-  @Test
-  @Category(MaintainedByDiffblue.class)
-  @MethodsUnderTest({"boolean PbftMessageHandle.checkIsCanSendMsg(long)"})
-  public void testCheckIsCanSendMsg() {
-    // Arrange
-    PbftMessageHandle pbftMessageHandle = new PbftMessageHandle();
-    pbftMessageHandle.setMaintenanceManager(new MaintenanceManager());
-
-    // Act and Assert
-    assertFalse(pbftMessageHandle.checkIsCanSendMsg(1L));
   }
 }

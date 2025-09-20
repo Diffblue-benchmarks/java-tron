@@ -8,6 +8,7 @@ import com.diffblue.cover.annotations.MethodsUnderTest;
 import java.io.IOException;
 import javax.servlet.http.HttpServletRequest;
 import javax.servlet.http.HttpServletResponse;
+import javax.servlet.http.HttpServletResponseWrapper;
 import org.junit.Test;
 import org.junit.experimental.categories.Category;
 import org.junit.runner.RunWith;
@@ -17,32 +18,36 @@ import org.mockito.Mockito;
 import org.mockito.junit.MockitoJUnitRunner;
 import org.springframework.mock.web.MockHttpServletRequest;
 import org.springframework.mock.web.MockHttpServletResponse;
+import org.tron.common.utils.client.utils.HttpMethed;
 import org.tron.core.services.filter.CharResponseWrapper;
 import org.tron.core.services.interfaceOnSolidity.WalletOnSolidity;
 
 @RunWith(MockitoJUnitRunner.class)
 public class ListExchangesOnSolidityServletDiffblueTest {
-  @InjectMocks
-  private ListExchangesOnSolidityServlet listExchangesOnSolidityServlet;
+  @InjectMocks private ListExchangesOnSolidityServlet listExchangesOnSolidityServlet;
 
-  @Mock
-  private WalletOnSolidity walletOnSolidity;
+  @Mock private WalletOnSolidity walletOnSolidity;
 
   /**
    * Test {@link ListExchangesOnSolidityServlet#doGet(HttpServletRequest, HttpServletResponse)}.
-   * <p>
-   * Method under test: {@link ListExchangesOnSolidityServlet#doGet(HttpServletRequest, HttpServletResponse)}
+   *
+   * <p>Method under test: {@link ListExchangesOnSolidityServlet#doGet(HttpServletRequest,
+   * HttpServletResponse)}
    */
   @Test
   @Category(MaintainedByDiffblue.class)
-  @MethodsUnderTest({"void ListExchangesOnSolidityServlet.doGet(HttpServletRequest, HttpServletResponse)"})
+  @MethodsUnderTest({
+    "void ListExchangesOnSolidityServlet.doGet(HttpServletRequest, HttpServletResponse)"
+  })
   public void testDoGet() throws IOException {
     // Arrange
     doNothing().when(walletOnSolidity).futureGet(Mockito.<Runnable>any());
-    MockHttpServletRequest request = new MockHttpServletRequest();
+    MockHttpServletRequest request = HttpMethed.createRequest("https://example.org/example");
 
     // Act
-    listExchangesOnSolidityServlet.doGet(request, new CharResponseWrapper(new MockHttpServletResponse()));
+    listExchangesOnSolidityServlet.doGet(
+        request,
+        new HttpServletResponseWrapper(new CharResponseWrapper(new MockHttpServletResponse())));
 
     // Assert
     verify(walletOnSolidity).futureGet(isA(Runnable.class));
@@ -50,19 +55,24 @@ public class ListExchangesOnSolidityServletDiffblueTest {
 
   /**
    * Test {@link ListExchangesOnSolidityServlet#doPost(HttpServletRequest, HttpServletResponse)}.
-   * <p>
-   * Method under test: {@link ListExchangesOnSolidityServlet#doPost(HttpServletRequest, HttpServletResponse)}
+   *
+   * <p>Method under test: {@link ListExchangesOnSolidityServlet#doPost(HttpServletRequest,
+   * HttpServletResponse)}
    */
   @Test
   @Category(MaintainedByDiffblue.class)
-  @MethodsUnderTest({"void ListExchangesOnSolidityServlet.doPost(HttpServletRequest, HttpServletResponse)"})
+  @MethodsUnderTest({
+    "void ListExchangesOnSolidityServlet.doPost(HttpServletRequest, HttpServletResponse)"
+  })
   public void testDoPost() throws IOException {
     // Arrange
     doNothing().when(walletOnSolidity).futureGet(Mockito.<Runnable>any());
-    MockHttpServletRequest request = new MockHttpServletRequest();
+    MockHttpServletRequest request = HttpMethed.createRequest("https://example.org/example");
 
     // Act
-    listExchangesOnSolidityServlet.doPost(request, new CharResponseWrapper(new MockHttpServletResponse()));
+    listExchangesOnSolidityServlet.doPost(
+        request,
+        new HttpServletResponseWrapper(new CharResponseWrapper(new MockHttpServletResponse())));
 
     // Assert
     verify(walletOnSolidity).futureGet(isA(Runnable.class));

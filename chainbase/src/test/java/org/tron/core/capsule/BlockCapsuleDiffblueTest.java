@@ -34,17 +34,19 @@ import org.tron.protos.Protocol.Transaction;
 public class BlockCapsuleDiffblueTest {
   /**
    * Test BlockId {@link BlockId#compareTo(Sha256Hash)} with {@code Sha256Hash}.
+   *
    * <ul>
-   *   <li>When {@link BlockId#BlockId()}.</li>
-   *   <li>Then return zero.</li>
+   *   <li>Given {@link BlockId#BlockId()}.
+   *   <li>When {@link BlockId#BlockId()}.
+   *   <li>Then return zero.
    * </ul>
-   * <p>
-   * Method under test: {@link BlockId#compareTo(Sha256Hash)}
+   *
+   * <p>Method under test: {@link BlockId#compareTo(Sha256Hash)}
    */
   @Test
   @Category(MaintainedByDiffblue.class)
   @MethodsUnderTest({"int BlockId.compareTo(Sha256Hash)"})
-  public void testBlockIdCompareToWithSha256Hash_whenBlockId_thenReturnZero() {
+  public void testBlockIdCompareToWithSha256Hash_givenBlockId_whenBlockId_thenReturnZero() {
     // Arrange
     BlockId blockId = new BlockId();
 
@@ -53,13 +55,74 @@ public class BlockCapsuleDiffblueTest {
   }
 
   /**
-   * Test BlockId {@link BlockId#equals(Object)}, and {@link BlockId#hashCode()}.
+   * Test BlockId {@link BlockId#compareTo(Sha256Hash)} with {@code Sha256Hash}.
+   *
    * <ul>
-   *   <li>When other is equal.</li>
-   *   <li>Then return equal.</li>
+   *   <li>Given {@link BlockId#BlockId()}.
+   *   <li>When {@link Sha256Hash#ZERO_HASH}.
+   *   <li>Then return zero.
    * </ul>
-   * <p>
-   * Methods under test:
+   *
+   * <p>Method under test: {@link BlockId#compareTo(Sha256Hash)}
+   */
+  @Test
+  @Category(MaintainedByDiffblue.class)
+  @MethodsUnderTest({"int BlockId.compareTo(Sha256Hash)"})
+  public void testBlockIdCompareToWithSha256Hash_givenBlockId_whenZero_hash_thenReturnZero() {
+    // Arrange, Act and Assert
+    assertEquals(0, new BlockId().compareTo(Sha256Hash.ZERO_HASH));
+  }
+
+  /**
+   * Test BlockId {@link BlockId#compareTo(Sha256Hash)} with {@code Sha256Hash}.
+   *
+   * <ul>
+   *   <li>Then return minus one.
+   * </ul>
+   *
+   * <p>Method under test: {@link BlockId#compareTo(Sha256Hash)}
+   */
+  @Test
+  @Category(MaintainedByDiffblue.class)
+  @MethodsUnderTest({"int BlockId.compareTo(Sha256Hash)"})
+  public void testBlockIdCompareToWithSha256Hash_thenReturnMinusOne() {
+    // Arrange
+    BlockId blockId = new BlockId();
+
+    // Act
+    int actualCompareToResult = blockId.compareTo(new Sha256Hash(31L, Sha256Hash.ZERO_HASH));
+
+    // Assert
+    assertEquals(-1, actualCompareToResult);
+  }
+
+  /**
+   * Test BlockId {@link BlockId#compareTo(Sha256Hash)} with {@code Sha256Hash}.
+   *
+   * <ul>
+   *   <li>Then return one.
+   * </ul>
+   *
+   * <p>Method under test: {@link BlockId#compareTo(Sha256Hash)}
+   */
+  @Test
+  @Category(MaintainedByDiffblue.class)
+  @MethodsUnderTest({"int BlockId.compareTo(Sha256Hash)"})
+  public void testBlockIdCompareToWithSha256Hash_thenReturnOne() {
+    // Arrange, Act and Assert
+    assertEquals(1, new BlockId(Sha256Hash.ZERO_HASH, 31L).compareTo(Sha256Hash.ZERO_HASH));
+  }
+
+  /**
+   * Test BlockId {@link BlockId#equals(Object)}, and {@link BlockId#hashCode()}.
+   *
+   * <ul>
+   *   <li>When other is equal.
+   *   <li>Then return equal.
+   * </ul>
+   *
+   * <p>Methods under test:
+   *
    * <ul>
    *   <li>{@link BlockId#equals(Object)}
    *   <li>{@link BlockId#hashCode()}
@@ -75,18 +138,19 @@ public class BlockCapsuleDiffblueTest {
 
     // Act and Assert
     assertEquals(blockId, blockId2);
-    int expectedHashCodeResult = blockId.hashCode();
-    assertEquals(expectedHashCodeResult, blockId2.hashCode());
+    assertEquals(blockId.hashCode(), blockId2.hashCode());
   }
 
   /**
    * Test BlockId {@link BlockId#equals(Object)}, and {@link BlockId#hashCode()}.
+   *
    * <ul>
-   *   <li>When other is same.</li>
-   *   <li>Then return equal.</li>
+   *   <li>When other is same.
+   *   <li>Then return equal.
    * </ul>
-   * <p>
-   * Methods under test:
+   *
+   * <p>Methods under test:
+   *
    * <ul>
    *   <li>{@link BlockId#equals(Object)}
    *   <li>{@link BlockId#hashCode()}
@@ -107,51 +171,52 @@ public class BlockCapsuleDiffblueTest {
 
   /**
    * Test BlockId {@link BlockId#equals(Object)}.
+   *
    * <ul>
-   *   <li>When other is different.</li>
-   *   <li>Then return not equal.</li>
+   *   <li>When other is different.
+   *   <li>Then return not equal.
    * </ul>
-   * <p>
-   * Method under test: {@link BlockId#equals(Object)}
+   *
+   * <p>Method under test: {@link BlockId#equals(Object)}
    */
   @Test
   @Category(MaintainedByDiffblue.class)
   @MethodsUnderTest({"boolean BlockId.equals(Object)", "int BlockId.hashCode()"})
   public void testBlockIdEquals_whenOtherIsDifferent_thenReturnNotEqual() {
-    // Arrange, Act and Assert
-    assertNotEquals(new BlockId(), null);
+    // Arrange
+    BlockId blockId = new BlockId(Sha256Hash.ZERO_HASH, 1L);
+
+    // Act and Assert
+    assertNotEquals(blockId, new BlockId());
   }
 
   /**
    * Test BlockId {@link BlockId#equals(Object)}.
+   *
    * <ul>
-   *   <li>When other is different.</li>
-   *   <li>Then return not equal.</li>
+   *   <li>When other is equal.
+   *   <li>Then return equal.
    * </ul>
-   * <p>
-   * Method under test: {@link BlockId#equals(Object)}
+   *
+   * <p>Method under test: {@link BlockId#equals(Object)}
    */
   @Test
   @Category(MaintainedByDiffblue.class)
   @MethodsUnderTest({"boolean BlockId.equals(Object)", "int BlockId.hashCode()"})
-  public void testBlockIdEquals_whenOtherIsDifferent_thenReturnNotEqual2() throws UnsupportedEncodingException {
-    // Arrange
-    BlockId blockId = new BlockId();
-    Sha256Hash sha256Hash = mock(Sha256Hash.class);
-    when(sha256Hash.getBytes()).thenReturn("AXAXAXAX".getBytes("UTF-8"));
-
-    // Act and Assert
-    assertNotEquals(blockId, sha256Hash);
+  public void testBlockIdEquals_whenOtherIsEqual_thenReturnEqual() {
+    // Arrange, Act and Assert
+    assertEquals(new BlockId(), Sha256Hash.ZERO_HASH);
   }
 
   /**
    * Test BlockId {@link BlockId#equals(Object)}.
+   *
    * <ul>
-   *   <li>When other is {@code null}.</li>
-   *   <li>Then return not equal.</li>
+   *   <li>When other is {@code null}.
+   *   <li>Then return not equal.
    * </ul>
-   * <p>
-   * Method under test: {@link BlockId#equals(Object)}
+   *
+   * <p>Method under test: {@link BlockId#equals(Object)}
    */
   @Test
   @Category(MaintainedByDiffblue.class)
@@ -163,12 +228,13 @@ public class BlockCapsuleDiffblueTest {
 
   /**
    * Test BlockId {@link BlockId#equals(Object)}.
+   *
    * <ul>
-   *   <li>When other is wrong type.</li>
-   *   <li>Then return not equal.</li>
+   *   <li>When other is wrong type.
+   *   <li>Then return not equal.
    * </ul>
-   * <p>
-   * Method under test: {@link BlockId#equals(Object)}
+   *
+   * <p>Method under test: {@link BlockId#equals(Object)}
    */
   @Test
   @Category(MaintainedByDiffblue.class)
@@ -179,47 +245,37 @@ public class BlockCapsuleDiffblueTest {
   }
 
   /**
-   * Test BlockId {@link BlockId#getString()}.
-   * <p>
-   * Method under test: {@link BlockId#getString()}
+   * Test BlockId {@link BlockId#getNum()}.
+   *
+   * <p>Method under test: {@link BlockId#getNum()}
    */
   @Test
   @Category(MaintainedByDiffblue.class)
-  @MethodsUnderTest({"String BlockId.getString()"})
-  public void testBlockIdGetString() {
+  @MethodsUnderTest({"long BlockId.getNum()", "java.lang.String BlockId.toString()"})
+  public void testBlockIdGetNum() {
     // Arrange, Act and Assert
-    assertEquals("Num:0,ID:0000000000000000000000000000000000000000000000000000000000000000",
-        (new BlockId()).getString());
+    assertEquals(0L, new BlockId().getNum());
   }
 
   /**
-   * Test BlockId getters and setters.
-   * <p>
-   * Methods under test:
-   * <ul>
-   *   <li>{@link BlockId#toString()}
-   *   <li>{@link BlockId#getNum()}
-   * </ul>
+   * Test BlockId {@link BlockId#getString()}.
+   *
+   * <p>Method under test: {@link BlockId#getString()}
    */
   @Test
   @Category(MaintainedByDiffblue.class)
-  @MethodsUnderTest({"long BlockId.getNum()", "String BlockId.toString()"})
-  public void testBlockIdGettersAndSetters() {
-    // Arrange
-    BlockId blockId = new BlockId();
-
-    // Act
-    String actualToStringResult = blockId.toString();
-
-    // Assert
-    assertEquals("0000000000000000000000000000000000000000000000000000000000000000", actualToStringResult);
-    assertEquals(0L, blockId.getNum());
+  @MethodsUnderTest({"java.lang.String BlockId.getString()"})
+  public void testBlockIdGetString() {
+    // Arrange, Act and Assert
+    assertEquals(
+        "Num:0,ID:0000000000000000000000000000000000000000000000000000000000000000",
+        new BlockId().getString());
   }
 
   /**
    * Test BlockId {@link BlockId#BlockId()}.
-   * <p>
-   * Method under test: {@link BlockId#BlockId()}
+   *
+   * <p>Method under test: {@link BlockId#BlockId()}
    */
   @Test
   @Category(MaintainedByDiffblue.class)
@@ -231,7 +287,8 @@ public class BlockCapsuleDiffblueTest {
     // Assert
     BigInteger toBigIntegerResult = actualBlockId.toBigInteger();
     assertEquals("0", toBigIntegerResult.toString());
-    assertEquals("Num:0,ID:0000000000000000000000000000000000000000000000000000000000000000",
+    assertEquals(
+        "Num:0,ID:0000000000000000000000000000000000000000000000000000000000000000",
         actualBlockId.getString());
     ByteString byteString = actualBlockId.getByteString();
     assertEquals(
@@ -246,36 +303,32 @@ public class BlockCapsuleDiffblueTest {
     assertEquals((byte) 0, iteratorResult.next().byteValue());
     assertFalse(byteString.isEmpty());
     assertTrue(iteratorResult.hasNext());
-    assertArrayEquals(new byte[]{0}, toBigIntegerResult.toByteArray());
+    assertArrayEquals(new byte[] {0}, toBigIntegerResult.toByteArray());
     assertArrayEquals(
-        new byte[]{0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0},
+        new byte[] {
+          0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0,
+          0, 0
+        },
         actualBlockId.getBytes());
   }
 
   /**
    * Test BlockId {@link BlockId#BlockId(Sha256Hash)}.
-   * <ul>
-   *   <li>When {@link BlockId#BlockId()}.</li>
-   *   <li>Then return {@link BlockId#BlockId()}.</li>
-   * </ul>
-   * <p>
-   * Method under test: {@link BlockId#BlockId(Sha256Hash)}
+   *
+   * <p>Method under test: {@link BlockId#BlockId(Sha256Hash)}
    */
   @Test
   @Category(MaintainedByDiffblue.class)
   @MethodsUnderTest({"void BlockId.<init>(Sha256Hash)"})
-  public void testBlockIdNewBlockId_whenBlockId_thenReturnBlockId() {
-    // Arrange
-    BlockId blockId = new BlockId();
-
-    // Act and Assert
-    assertEquals(blockId, new BlockId(blockId));
+  public void testBlockIdNewBlockId2() {
+    // Arrange, Act and Assert
+    assertEquals(Sha256Hash.ZERO_HASH, new BlockId(Sha256Hash.ZERO_HASH));
   }
 
   /**
    * Test {@link BlockCapsule#BlockCapsule(CodedInputStream)}.
-   * <p>
-   * Method under test: {@link BlockCapsule#BlockCapsule(CodedInputStream)}
+   *
+   * <p>Method under test: {@link BlockCapsule#BlockCapsule(CodedInputStream)}
    */
   @Test
   @Category(MaintainedByDiffblue.class)
@@ -283,8 +336,29 @@ public class BlockCapsuleDiffblueTest {
   public void testNewBlockCapsule() throws IOException, BadItemException {
     // Arrange
     CodedInputStream codedInputStream = mock(CodedInputStream.class);
+    when(codedInputStream.readTag())
+        .thenThrow(
+            new InvalidProtocolBufferException("The characteristics of someone or something"));
+
+    // Act and Assert
+    assertThrows(BadItemException.class, () -> new BlockCapsule(codedInputStream));
+    verify(codedInputStream).readTag();
+  }
+
+  /**
+   * Test {@link BlockCapsule#BlockCapsule(CodedInputStream)}.
+   *
+   * <p>Method under test: {@link BlockCapsule#BlockCapsule(CodedInputStream)}
+   */
+  @Test
+  @Category(MaintainedByDiffblue.class)
+  @MethodsUnderTest({"void BlockCapsule.<init>(CodedInputStream)"})
+  public void testNewBlockCapsule2() throws IOException, BadItemException {
+    // Arrange
+    CodedInputStream codedInputStream = mock(CodedInputStream.class);
     when(codedInputStream.readFixed64())
-        .thenThrow(new InvalidProtocolBufferException("The characteristics of someone or something"));
+        .thenThrow(
+            new InvalidProtocolBufferException("The characteristics of someone or something"));
     when(codedInputStream.readTag()).thenReturn(1);
 
     // Act and Assert
@@ -294,13 +368,89 @@ public class BlockCapsuleDiffblueTest {
   }
 
   /**
+   * Test {@link BlockCapsule#BlockCapsule(byte[])}.
+   *
+   * <p>Method under test: {@link BlockCapsule#BlockCapsule(byte[])}
+   */
+  @Test
+  @Category(MaintainedByDiffblue.class)
+  @MethodsUnderTest({"void BlockCapsule.<init>(byte[])"})
+  public void testNewBlockCapsule3() throws UnsupportedEncodingException, BadItemException {
+    // Arrange, Act and Assert
+    assertThrows(
+        BadItemException.class,
+        () -> new BlockCapsule("A\bA\bA\bA\bA\bA\bA\bA\b".getBytes("UTF-8")));
+  }
+
+  /**
+   * Test {@link BlockCapsule#BlockCapsule(byte[])}.
+   *
+   * <p>Method under test: {@link BlockCapsule#BlockCapsule(byte[])}
+   */
+  @Test
+  @Category(MaintainedByDiffblue.class)
+  @MethodsUnderTest({"void BlockCapsule.<init>(byte[])"})
+  public void testNewBlockCapsule4() throws UnsupportedEncodingException, BadItemException {
+    // Arrange, Act and Assert
+    assertThrows(
+        BadItemException.class,
+        () -> new BlockCapsule("\n\bA\bA\bA\bA\bA\bA\bA\b".getBytes("UTF-8")));
+  }
+
+  /**
+   * Test {@link BlockCapsule#BlockCapsule(byte[])}.
+   *
+   * <p>Method under test: {@link BlockCapsule#BlockCapsule(byte[])}
+   */
+  @Test
+  @Category(MaintainedByDiffblue.class)
+  @MethodsUnderTest({"void BlockCapsule.<init>(byte[])"})
+  public void testNewBlockCapsule5() throws UnsupportedEncodingException, BadItemException {
+    // Arrange, Act and Assert
+    assertThrows(
+        BadItemException.class,
+        () -> new BlockCapsule("A\bA\bA\bA\bA\bA\bA\bA\n".getBytes("UTF-8")));
+  }
+
+  /**
+   * Test {@link BlockCapsule#BlockCapsule(byte[])}.
+   *
+   * <p>Method under test: {@link BlockCapsule#BlockCapsule(byte[])}
+   */
+  @Test
+  @Category(MaintainedByDiffblue.class)
+  @MethodsUnderTest({"void BlockCapsule.<init>(byte[])"})
+  public void testNewBlockCapsule6() throws UnsupportedEncodingException, BadItemException {
+    // Arrange, Act and Assert
+    assertThrows(
+        BadItemException.class,
+        () -> new BlockCapsule("\n\nA\bA\bA\bA\bA\bA\bA\b".getBytes("UTF-8")));
+  }
+
+  /**
+   * Test {@link BlockCapsule#BlockCapsule(byte[])}.
+   *
+   * <p>Method under test: {@link BlockCapsule#BlockCapsule(byte[])}
+   */
+  @Test
+  @Category(MaintainedByDiffblue.class)
+  @MethodsUnderTest({"void BlockCapsule.<init>(byte[])"})
+  public void testNewBlockCapsule7() throws UnsupportedEncodingException, BadItemException {
+    // Arrange, Act and Assert
+    assertThrows(
+        BadItemException.class,
+        () -> new BlockCapsule("\n\b\n\bA\bA\bA\bA\bA\bA\b".getBytes("UTF-8")));
+  }
+
+  /**
    * Test {@link BlockCapsule#BlockCapsule(long, ByteString, long, List)}.
+   *
    * <ul>
-   *   <li>Given DefaultInstance.</li>
-   *   <li>Then return Transactions size is one.</li>
+   *   <li>Given DefaultInstance.
+   *   <li>Then return Transactions size is one.
    * </ul>
-   * <p>
-   * Method under test: {@link BlockCapsule#BlockCapsule(long, ByteString, long, List)}
+   *
+   * <p>Method under test: {@link BlockCapsule#BlockCapsule(long, ByteString, long, List)}
    */
   @Test
   @Category(MaintainedByDiffblue.class)
@@ -325,29 +475,69 @@ public class BlockCapsuleDiffblueTest {
     assertEquals(12L, actualBlockCapsule.getSerializedSize());
     assertEquals(45, instance.getDescriptorForType().getFile().getMessageTypes().size());
     TransactionCapsule getResult = transactions.get(0);
-    assertArrayEquals(new byte[]{}, getResult.getData());
-    assertArrayEquals(new byte[]{0}, actualBlockCapsule.getAccountRoot().toBigInteger().toByteArray());
-    assertArrayEquals(new byte[]{'\n', 0, 18, '\b', '\n', 6, '\b', '\n', 26, 0, '8', 1}, actualBlockCapsule.getData());
+    assertArrayEquals(new byte[] {}, getResult.getData());
+    assertArrayEquals(
+        new byte[] {0}, actualBlockCapsule.getAccountRoot().toBigInteger().toByteArray());
+    assertArrayEquals(
+        new byte[] {'\n', 0, 18, '\b', '\n', 6, '\b', '\n', 26, 0, '8', 1},
+        actualBlockCapsule.getData());
     BlockId blockId = actualBlockCapsule.getBlockId();
-    assertArrayEquals(new byte[]{1, 17, 'a', -104, -1, '-', '1', 'v', -101, '>', 'W', 26, -54, -2, '\t', 'y', -29, 'Z',
-        -46, '4', '^', 't', '!', -35, -38}, blockId.toBigInteger().toByteArray());
-    assertArrayEquals(new byte[]{-29, -80, -60, 'B', -104, -4, 28, 20, -102, -5, -12, -56, -103, 'o', -71, '$', '\'',
-        -82, 'A', -28, 'd', -101, -109, 'L', -92, -107, -103, 27, 'x', 'R', -72, 'U'},
+    assertArrayEquals(
+        new byte[] {
+          1, 17, 'a', -104, -1, '-', '1', 'v', -101, '>', 'W', 26, -54, -2, '\t', 'y', -29, 'Z',
+          -46, '4', '^', 't', '!', -35, -38
+        },
+        blockId.toBigInteger().toByteArray());
+    assertArrayEquals(
+        new byte[] {
+          -29, -80, -60, 'B', -104, -4, 28, 20, -102, -5, -12, -56, -103, 'o', -71, '$', '\'', -82,
+          'A', -28, 'd', -101, -109, 'L', -92, -107, -103, 27, 'x', 'R', -72, 'U'
+        },
         getResult.getMerkleHash().getBytes());
-    assertArrayEquals(new byte[]{-29, -80, -60, 'B', -104, -4, 28, 20, -102, -5, -12, -56, -103, 'o', -71, '$', '\'',
-        -82, 'A', -28, 'd', -101, -109, 'L', -92, -107, -103, 27, 'x', 'R', -72, 'U'},
+    assertArrayEquals(
+        new byte[] {
+          -29, -80, -60, 'B', -104, -4, 28, 20, -102, -5, -12, -56, -103, 'o', -71, '$', '\'', -82,
+          'A', -28, 'd', -101, -109, 'L', -92, -107, -103, 27, 'x', 'R', -72, 'U'
+        },
         getResult.getTransactionId().getBytes());
-    assertArrayEquals(new byte[]{0, 0, 0, 0, 0, 0, 0, 1, 17, 'a', -104, -1, '-', '1', 'v', -101, '>', 'W', 26, -54, -2,
-        '\t', 'y', -29, 'Z', -46, '4', '^', 't', '!', -35, -38}, blockId.getBytes());
+    assertArrayEquals(
+        new byte[] {
+          0, 0, 0, 0, 0, 0, 0, 1, 17, 'a', -104, -1, '-', '1', 'v', -101, '>', 'W', 26, -54, -2,
+          '\t', 'y', -29, 'Z', -46, '4', '^', 't', '!', -35, -38
+        },
+        blockId.getBytes());
+  }
+
+  /**
+   * Test {@link BlockCapsule#BlockCapsule(CodedInputStream)}.
+   *
+   * <ul>
+   *   <li>Given {@link RuntimeException#RuntimeException()}.
+   * </ul>
+   *
+   * <p>Method under test: {@link BlockCapsule#BlockCapsule(CodedInputStream)}
+   */
+  @Test
+  @Category(MaintainedByDiffblue.class)
+  @MethodsUnderTest({"void BlockCapsule.<init>(CodedInputStream)"})
+  public void testNewBlockCapsule_givenRuntimeException() throws IOException, BadItemException {
+    // Arrange
+    CodedInputStream codedInputStream = mock(CodedInputStream.class);
+    when(codedInputStream.readTag()).thenThrow(new RuntimeException());
+
+    // Act and Assert
+    assertThrows(BadItemException.class, () -> new BlockCapsule(codedInputStream));
+    verify(codedInputStream).readTag();
   }
 
   /**
    * Test {@link BlockCapsule#BlockCapsule(long, ByteString, long, List)}.
+   *
    * <ul>
-   *   <li>Then return Instance SerializedSize is fourteen.</li>
+   *   <li>Then return Instance SerializedSize is fourteen.
    * </ul>
-   * <p>
-   * Method under test: {@link BlockCapsule#BlockCapsule(long, ByteString, long, List)}
+   *
+   * <p>Method under test: {@link BlockCapsule#BlockCapsule(long, ByteString, long, List)}
    */
   @Test
   @Category(MaintainedByDiffblue.class)
@@ -370,20 +560,26 @@ public class BlockCapsuleDiffblueTest {
     assertEquals(2, actualBlockCapsule.getTransactions().size());
     assertEquals(2, instance.getTransactionsList().size());
     assertEquals(2, instance.getTransactionsCount());
-    assertArrayEquals(new byte[]{'\n', 0, '\n', 0, 18, '\b', '\n', 6, '\b', '\n', 26, 0, '8', 1},
+    assertArrayEquals(
+        new byte[] {'\n', 0, '\n', 0, 18, '\b', '\n', 6, '\b', '\n', 26, 0, '8', 1},
         actualBlockCapsule.getData());
-    assertArrayEquals(new byte[]{0, 0, 0, 0, 0, 0, 0, 1, 17, 'a', -104, -1, '-', '1', 'v', -101, '>', 'W', 26, -54, -2,
-        '\t', 'y', -29, 'Z', -46, '4', '^', 't', '!', -35, -38}, actualBlockCapsule.getBlockId().getBytes());
+    assertArrayEquals(
+        new byte[] {
+          0, 0, 0, 0, 0, 0, 0, 1, 17, 'a', -104, -1, '-', '1', 'v', -101, '>', 'W', 26, -54, -2,
+          '\t', 'y', -29, 'Z', -46, '4', '^', 't', '!', -35, -38
+        },
+        actualBlockCapsule.getBlockId().getBytes());
   }
 
   /**
    * Test {@link BlockCapsule#BlockCapsule(long, ByteString, long, List)}.
+   *
    * <ul>
-   *   <li>When {@link ArrayList#ArrayList()}.</li>
-   *   <li>Then return Instance TransactionsCount is zero.</li>
+   *   <li>When {@link ArrayList#ArrayList()}.
+   *   <li>Then return Instance TransactionsCount is zero.
    * </ul>
-   * <p>
-   * Method under test: {@link BlockCapsule#BlockCapsule(long, ByteString, long, List)}
+   *
+   * <p>Method under test: {@link BlockCapsule#BlockCapsule(long, ByteString, long, List)}
    */
   @Test
   @Category(MaintainedByDiffblue.class)
@@ -408,112 +604,208 @@ public class BlockCapsuleDiffblueTest {
     Block defaultInstanceForType = instance.getDefaultInstanceForType();
     assertSame(transactionsList, defaultInstanceForType.getTransactionsList());
     assertSame(transactionsList, defaultInstanceForType.getTransactionsOrBuilderList());
-    assertArrayEquals(new byte[]{0}, actualBlockCapsule.getAccountRoot().toBigInteger().toByteArray());
-    assertArrayEquals(new byte[]{18, '\b', '\n', 6, '\b', '\n', 26, 0, '8', 1}, actualBlockCapsule.getData());
+    assertArrayEquals(
+        new byte[] {0}, actualBlockCapsule.getAccountRoot().toBigInteger().toByteArray());
+    assertArrayEquals(
+        new byte[] {18, '\b', '\n', 6, '\b', '\n', 26, 0, '8', 1}, actualBlockCapsule.getData());
     BlockId blockId = actualBlockCapsule.getBlockId();
-    assertArrayEquals(new byte[]{1, 17, 'a', -104, -1, '-', '1', 'v', -101, '>', 'W', 26, -54, -2, '\t', 'y', -29, 'Z',
-        -46, '4', '^', 't', '!', -35, -38}, blockId.toBigInteger().toByteArray());
-    assertArrayEquals(new byte[]{0, 0, 0, 0, 0, 0, 0, 1, 17, 'a', -104, -1, '-', '1', 'v', -101, '>', 'W', 26, -54, -2,
-        '\t', 'y', -29, 'Z', -46, '4', '^', 't', '!', -35, -38}, blockId.getBytes());
+    assertArrayEquals(
+        new byte[] {
+          1, 17, 'a', -104, -1, '-', '1', 'v', -101, '>', 'W', 26, -54, -2, '\t', 'y', -29, 'Z',
+          -46, '4', '^', 't', '!', -35, -38
+        },
+        blockId.toBigInteger().toByteArray());
+    assertArrayEquals(
+        new byte[] {
+          0, 0, 0, 0, 0, 0, 0, 1, 17, 'a', -104, -1, '-', '1', 'v', -101, '>', 'W', 26, -54, -2,
+          '\t', 'y', -29, 'Z', -46, '4', '^', 't', '!', -35, -38
+        },
+        blockId.getBytes());
   }
 
   /**
    * Test {@link BlockCapsule#BlockCapsule(byte[])}.
+   *
    * <ul>
-   *   <li>When array of {@code byte} with eighteen and one.</li>
-   *   <li>Then throw {@link BadItemException}.</li>
+   *   <li>When array of {@code byte} with {@code A} and backspace.
+   *   <li>Then throw {@link BadItemException}.
    * </ul>
-   * <p>
-   * Method under test: {@link BlockCapsule#BlockCapsule(byte[])}
+   *
+   * <p>Method under test: {@link BlockCapsule#BlockCapsule(byte[])}
    */
   @Test
   @Category(MaintainedByDiffblue.class)
   @MethodsUnderTest({"void BlockCapsule.<init>(byte[])"})
-  public void testNewBlockCapsule_whenArrayOfByteWithEighteenAndOne_thenThrowBadItemException()
+  public void testNewBlockCapsule_whenArrayOfByteWithAAndBackspace_thenThrowBadItemException()
       throws BadItemException {
     // Arrange, Act and Assert
-    assertThrows(BadItemException.class, () -> new BlockCapsule(new byte[]{18, 1, 'A', 'X', 'A', 'X', 'A', 'X'}));
+    assertThrows(
+        BadItemException.class,
+        () ->
+            new BlockCapsule(
+                new byte[] {
+                  'A', '\b', 'A', '\b', 'A', '\b', 'A', '\b', 'A', '\b', 'A', '\b', 'A', '\b', 'A',
+                  18
+                }));
   }
 
   /**
    * Test {@link BlockCapsule#BlockCapsule(byte[])}.
+   *
    * <ul>
-   *   <li>When array of {@code byte} with eighteen and one.</li>
-   *   <li>Then throw {@link BadItemException}.</li>
+   *   <li>When array of {@code byte} with {@code A} and backspace.
+   *   <li>Then throw {@link BadItemException}.
    * </ul>
-   * <p>
-   * Method under test: {@link BlockCapsule#BlockCapsule(byte[])}
+   *
+   * <p>Method under test: {@link BlockCapsule#BlockCapsule(byte[])}
    */
   @Test
   @Category(MaintainedByDiffblue.class)
   @MethodsUnderTest({"void BlockCapsule.<init>(byte[])"})
-  public void testNewBlockCapsule_whenArrayOfByteWithEighteenAndOne_thenThrowBadItemException2()
+  public void testNewBlockCapsule_whenArrayOfByteWithAAndBackspace_thenThrowBadItemException2()
       throws BadItemException {
     // Arrange, Act and Assert
-    assertThrows(BadItemException.class, () -> new BlockCapsule(new byte[]{18, 1, 1, 'X', 'A', 'X', 'A', 'X'}));
+    assertThrows(
+        BadItemException.class,
+        () ->
+            new BlockCapsule(
+                new byte[] {
+                  'A', '\b', 'A', '\b', 'A', '\b', 'A', '\b', 'A', '\b', 'A', '\b', 'A', '\b', 'A',
+                  -1
+                }));
   }
 
   /**
    * Test {@link BlockCapsule#BlockCapsule(byte[])}.
+   *
    * <ul>
-   *   <li>When array of {@code byte} with eighteen and one.</li>
-   *   <li>Then throw {@link BadItemException}.</li>
+   *   <li>When array of {@code byte} with eighteen and backspace.
    * </ul>
-   * <p>
-   * Method under test: {@link BlockCapsule#BlockCapsule(byte[])}
+   *
+   * <p>Method under test: {@link BlockCapsule#BlockCapsule(byte[])}
    */
   @Test
   @Category(MaintainedByDiffblue.class)
   @MethodsUnderTest({"void BlockCapsule.<init>(byte[])"})
-  public void testNewBlockCapsule_whenArrayOfByteWithEighteenAndOne_thenThrowBadItemException3()
+  public void testNewBlockCapsule_whenArrayOfByteWithEighteenAndBackspace()
       throws BadItemException {
     // Arrange, Act and Assert
-    assertThrows(BadItemException.class, () -> new BlockCapsule(new byte[]{18, 1, 18, 'X', 'A', 'X', 'A', 'X'}));
+    assertThrows(
+        BadItemException.class,
+        () ->
+            new BlockCapsule(
+                new byte[] {
+                  18, '\b', 'A', '\b', 'A', '\b', 'A', '\b', 'A', '\b', 'A', '\b', 'A', '\b', 'A',
+                  '\b'
+                }));
   }
 
   /**
    * Test {@link BlockCapsule#BlockCapsule(byte[])}.
+   *
    * <ul>
-   *   <li>When array of {@code byte} with eighteen and one.</li>
-   *   <li>Then throw {@link BadItemException}.</li>
+   *   <li>When array of {@code byte} with eighteen and backspace.
    * </ul>
-   * <p>
-   * Method under test: {@link BlockCapsule#BlockCapsule(byte[])}
+   *
+   * <p>Method under test: {@link BlockCapsule#BlockCapsule(byte[])}
    */
   @Test
   @Category(MaintainedByDiffblue.class)
   @MethodsUnderTest({"void BlockCapsule.<init>(byte[])"})
-  public void testNewBlockCapsule_whenArrayOfByteWithEighteenAndOne_thenThrowBadItemException4()
+  public void testNewBlockCapsule_whenArrayOfByteWithEighteenAndBackspace2()
       throws BadItemException {
     // Arrange, Act and Assert
-    assertThrows(BadItemException.class, () -> new BlockCapsule(new byte[]{18, 1, -1, 'X', 'A', 'X', 'A', 'X'}));
+    assertThrows(
+        BadItemException.class,
+        () ->
+            new BlockCapsule(
+                new byte[] {
+                  18, '\b', 1, '\b', 'A', '\b', 'A', '\b', 'A', '\b', 'A', '\b', 'A', '\b', 'A',
+                  '\b'
+                }));
   }
 
   /**
    * Test {@link BlockCapsule#BlockCapsule(byte[])}.
+   *
    * <ul>
-   *   <li>When array of {@code byte} with eighteen and {@code X}.</li>
-   *   <li>Then throw {@link BadItemException}.</li>
+   *   <li>When array of {@code byte} with eighteen and backspace.
    * </ul>
-   * <p>
-   * Method under test: {@link BlockCapsule#BlockCapsule(byte[])}
+   *
+   * <p>Method under test: {@link BlockCapsule#BlockCapsule(byte[])}
    */
   @Test
   @Category(MaintainedByDiffblue.class)
   @MethodsUnderTest({"void BlockCapsule.<init>(byte[])"})
-  public void testNewBlockCapsule_whenArrayOfByteWithEighteenAndX_thenThrowBadItemException() throws BadItemException {
+  public void testNewBlockCapsule_whenArrayOfByteWithEighteenAndBackspace3()
+      throws BadItemException {
     // Arrange, Act and Assert
-    assertThrows(BadItemException.class, () -> new BlockCapsule(new byte[]{18, 'X', 'A', 'X', 'A', 'X', 'A', 'X'}));
+    assertThrows(
+        BadItemException.class,
+        () ->
+            new BlockCapsule(
+                new byte[] {
+                  18, '\b', 18, '\b', 'A', '\b', 'A', '\b', 'A', '\b', 'A', '\b', 'A', '\b', 'A',
+                  '\b'
+                }));
   }
 
   /**
    * Test {@link BlockCapsule#BlockCapsule(byte[])}.
+   *
    * <ul>
-   *   <li>When array of {@code byte} with eighteen and zero.</li>
-   *   <li>Then throw {@link BadItemException}.</li>
+   *   <li>When array of {@code byte} with eighteen and lf.
+   *   <li>Then throw {@link BadItemException}.
    * </ul>
-   * <p>
-   * Method under test: {@link BlockCapsule#BlockCapsule(byte[])}
+   *
+   * <p>Method under test: {@link BlockCapsule#BlockCapsule(byte[])}
+   */
+  @Test
+  @Category(MaintainedByDiffblue.class)
+  @MethodsUnderTest({"void BlockCapsule.<init>(byte[])"})
+  public void testNewBlockCapsule_whenArrayOfByteWithEighteenAndLf_thenThrowBadItemException()
+      throws BadItemException {
+    // Arrange, Act and Assert
+    assertThrows(
+        BadItemException.class,
+        () ->
+            new BlockCapsule(
+                new byte[] {
+                  18, '\n', 'A', '\b', 'A', '\b', 'A', '\b', 'A', '\b', 'A', '\b', 'A', '\b', 'A',
+                  '\b'
+                }));
+  }
+
+  /**
+   * Test {@link BlockCapsule#BlockCapsule(byte[])}.
+   *
+   * <ul>
+   *   <li>When array of {@code byte} with eighteen and {@code X}.
+   *   <li>Then throw {@link BadItemException}.
+   * </ul>
+   *
+   * <p>Method under test: {@link BlockCapsule#BlockCapsule(byte[])}
+   */
+  @Test
+  @Category(MaintainedByDiffblue.class)
+  @MethodsUnderTest({"void BlockCapsule.<init>(byte[])"})
+  public void testNewBlockCapsule_whenArrayOfByteWithEighteenAndX_thenThrowBadItemException()
+      throws BadItemException {
+    // Arrange, Act and Assert
+    assertThrows(
+        BadItemException.class,
+        () -> new BlockCapsule(new byte[] {18, 'X', 'A', 'X', 'A', 'X', 'A', 'X'}));
+  }
+
+  /**
+   * Test {@link BlockCapsule#BlockCapsule(byte[])}.
+   *
+   * <ul>
+   *   <li>When array of {@code byte} with eighteen and zero.
+   *   <li>Then throw {@link BadItemException}.
+   * </ul>
+   *
+   * <p>Method under test: {@link BlockCapsule#BlockCapsule(byte[])}
    */
   @Test
   @Category(MaintainedByDiffblue.class)
@@ -521,154 +813,135 @@ public class BlockCapsuleDiffblueTest {
   public void testNewBlockCapsule_whenArrayOfByteWithEighteenAndZero_thenThrowBadItemException()
       throws BadItemException {
     // Arrange, Act and Assert
-    assertThrows(BadItemException.class, () -> new BlockCapsule(new byte[]{18, 0, 'A', 'X', 'A', 'X', 'A', 'X'}));
+    assertThrows(
+        BadItemException.class,
+        () -> new BlockCapsule(new byte[] {18, 0, 'A', 'X', 'A', 'X', 'A', 'X'}));
   }
 
   /**
    * Test {@link BlockCapsule#BlockCapsule(byte[])}.
+   *
    * <ul>
-   *   <li>When array of {@code byte} with eighteen and zero.</li>
-   *   <li>Then throw {@link BadItemException}.</li>
+   *   <li>When array of {@code byte} with lf and backspace.
+   *   <li>Then throw {@link BadItemException}.
    * </ul>
-   * <p>
-   * Method under test: {@link BlockCapsule#BlockCapsule(byte[])}
+   *
+   * <p>Method under test: {@link BlockCapsule#BlockCapsule(byte[])}
    */
   @Test
   @Category(MaintainedByDiffblue.class)
   @MethodsUnderTest({"void BlockCapsule.<init>(byte[])"})
-  public void testNewBlockCapsule_whenArrayOfByteWithEighteenAndZero_thenThrowBadItemException2()
+  public void testNewBlockCapsule_whenArrayOfByteWithLfAndBackspace_thenThrowBadItemException()
       throws BadItemException {
     // Arrange, Act and Assert
-    assertThrows(BadItemException.class, () -> new BlockCapsule(new byte[]{18, 0, 18, 'X', 'A', 'X', 'A', 'X'}));
+    assertThrows(
+        BadItemException.class,
+        () ->
+            new BlockCapsule(
+                new byte[] {
+                  '\n', '\b', 1, '\b', 'A', '\b', 'A', '\b', 'A', '\b', 'A', '\b', 'A', '\b', 'A',
+                  '\b'
+                }));
   }
 
   /**
    * Test {@link BlockCapsule#BlockCapsule(byte[])}.
+   *
    * <ul>
-   *   <li>When array of {@code byte} with lf and one.</li>
-   *   <li>Then throw {@link BadItemException}.</li>
+   *   <li>When array of {@code byte} with lf and backspace.
+   *   <li>Then throw {@link BadItemException}.
    * </ul>
-   * <p>
-   * Method under test: {@link BlockCapsule#BlockCapsule(byte[])}
+   *
+   * <p>Method under test: {@link BlockCapsule#BlockCapsule(byte[])}
    */
   @Test
   @Category(MaintainedByDiffblue.class)
   @MethodsUnderTest({"void BlockCapsule.<init>(byte[])"})
-  public void testNewBlockCapsule_whenArrayOfByteWithLfAndOne_thenThrowBadItemException() throws BadItemException {
+  public void testNewBlockCapsule_whenArrayOfByteWithLfAndBackspace_thenThrowBadItemException2()
+      throws BadItemException {
     // Arrange, Act and Assert
-    assertThrows(BadItemException.class, () -> new BlockCapsule(new byte[]{'\n', 1, 'A', 'X', 'A', 'X', 'A', 'X'}));
+    assertThrows(
+        BadItemException.class,
+        () ->
+            new BlockCapsule(
+                new byte[] {
+                  '\n', '\b', 18, '\b', 'A', '\b', 'A', '\b', 'A', '\b', 'A', '\b', 'A', '\b', 'A',
+                  '\b'
+                }));
   }
 
   /**
    * Test {@link BlockCapsule#BlockCapsule(byte[])}.
+   *
    * <ul>
-   *   <li>When array of {@code byte} with lf and one.</li>
-   *   <li>Then throw {@link BadItemException}.</li>
+   *   <li>When array of {@code byte} with lf and zero.
+   *   <li>Then throw {@link BadItemException}.
    * </ul>
-   * <p>
-   * Method under test: {@link BlockCapsule#BlockCapsule(byte[])}
+   *
+   * <p>Method under test: {@link BlockCapsule#BlockCapsule(byte[])}
    */
   @Test
   @Category(MaintainedByDiffblue.class)
   @MethodsUnderTest({"void BlockCapsule.<init>(byte[])"})
-  public void testNewBlockCapsule_whenArrayOfByteWithLfAndOne_thenThrowBadItemException2() throws BadItemException {
+  public void testNewBlockCapsule_whenArrayOfByteWithLfAndZero_thenThrowBadItemException()
+      throws BadItemException {
     // Arrange, Act and Assert
-    assertThrows(BadItemException.class, () -> new BlockCapsule(new byte[]{'\n', 1, 1, 'X', 'A', 'X', 'A', 'X'}));
+    assertThrows(
+        BadItemException.class,
+        () -> new BlockCapsule(new byte[] {'\n', 0, 'A', 'X', 'A', 'X', 'A', 'X'}));
   }
 
   /**
    * Test {@link BlockCapsule#BlockCapsule(byte[])}.
+   *
    * <ul>
-   *   <li>When array of {@code byte} with lf and one.</li>
-   *   <li>Then throw {@link BadItemException}.</li>
+   *   <li>When array of {@code byte} with minus one and {@code X}.
+   *   <li>Then throw {@link BadItemException}.
    * </ul>
-   * <p>
-   * Method under test: {@link BlockCapsule#BlockCapsule(byte[])}
+   *
+   * <p>Method under test: {@link BlockCapsule#BlockCapsule(byte[])}
    */
   @Test
   @Category(MaintainedByDiffblue.class)
   @MethodsUnderTest({"void BlockCapsule.<init>(byte[])"})
-  public void testNewBlockCapsule_whenArrayOfByteWithLfAndOne_thenThrowBadItemException3() throws BadItemException {
+  public void testNewBlockCapsule_whenArrayOfByteWithMinusOneAndX_thenThrowBadItemException()
+      throws BadItemException {
     // Arrange, Act and Assert
-    assertThrows(BadItemException.class, () -> new BlockCapsule(new byte[]{'\n', 1, 18, 'X', 'A', 'X', 'A', 'X'}));
+    assertThrows(
+        BadItemException.class,
+        () -> new BlockCapsule(new byte[] {-1, 'X', 'A', 'X', 'A', 'X', 'A', 'X'}));
   }
 
   /**
    * Test {@link BlockCapsule#BlockCapsule(byte[])}.
+   *
    * <ul>
-   *   <li>When array of {@code byte} with lf and one.</li>
-   *   <li>Then throw {@link BadItemException}.</li>
+   *   <li>When array of {@code byte} with one and {@code X}.
+   *   <li>Then throw {@link BadItemException}.
    * </ul>
-   * <p>
-   * Method under test: {@link BlockCapsule#BlockCapsule(byte[])}
+   *
+   * <p>Method under test: {@link BlockCapsule#BlockCapsule(byte[])}
    */
   @Test
   @Category(MaintainedByDiffblue.class)
   @MethodsUnderTest({"void BlockCapsule.<init>(byte[])"})
-  public void testNewBlockCapsule_whenArrayOfByteWithLfAndOne_thenThrowBadItemException4() throws BadItemException {
+  public void testNewBlockCapsule_whenArrayOfByteWithOneAndX_thenThrowBadItemException()
+      throws BadItemException {
     // Arrange, Act and Assert
-    assertThrows(BadItemException.class, () -> new BlockCapsule(new byte[]{'\n', 1, -1, 'X', 'A', 'X', 'A', 'X'}));
+    assertThrows(
+        BadItemException.class,
+        () -> new BlockCapsule(new byte[] {1, 'X', 'A', 'X', 'A', 'X', 'A', 'X'}));
   }
 
   /**
    * Test {@link BlockCapsule#BlockCapsule(byte[])}.
+   *
    * <ul>
-   *   <li>When array of {@code byte} with lf and zero.</li>
-   *   <li>Then throw {@link BadItemException}.</li>
+   *   <li>When {@code AXAXAXAX} Bytes is {@code UTF-8}.
+   *   <li>Then throw {@link BadItemException}.
    * </ul>
-   * <p>
-   * Method under test: {@link BlockCapsule#BlockCapsule(byte[])}
-   */
-  @Test
-  @Category(MaintainedByDiffblue.class)
-  @MethodsUnderTest({"void BlockCapsule.<init>(byte[])"})
-  public void testNewBlockCapsule_whenArrayOfByteWithLfAndZero_thenThrowBadItemException() throws BadItemException {
-    // Arrange, Act and Assert
-    assertThrows(BadItemException.class, () -> new BlockCapsule(new byte[]{'\n', 0, 'A', 'X', 'A', 'X', 'A', 'X'}));
-  }
-
-  /**
-   * Test {@link BlockCapsule#BlockCapsule(byte[])}.
-   * <ul>
-   *   <li>When array of {@code byte} with minus one and {@code X}.</li>
-   *   <li>Then throw {@link BadItemException}.</li>
-   * </ul>
-   * <p>
-   * Method under test: {@link BlockCapsule#BlockCapsule(byte[])}
-   */
-  @Test
-  @Category(MaintainedByDiffblue.class)
-  @MethodsUnderTest({"void BlockCapsule.<init>(byte[])"})
-  public void testNewBlockCapsule_whenArrayOfByteWithMinusOneAndX_thenThrowBadItemException() throws BadItemException {
-    // Arrange, Act and Assert
-    assertThrows(BadItemException.class, () -> new BlockCapsule(new byte[]{-1, 'X', 'A', 'X', 'A', 'X', 'A', 'X'}));
-  }
-
-  /**
-   * Test {@link BlockCapsule#BlockCapsule(byte[])}.
-   * <ul>
-   *   <li>When array of {@code byte} with one and {@code X}.</li>
-   *   <li>Then throw {@link BadItemException}.</li>
-   * </ul>
-   * <p>
-   * Method under test: {@link BlockCapsule#BlockCapsule(byte[])}
-   */
-  @Test
-  @Category(MaintainedByDiffblue.class)
-  @MethodsUnderTest({"void BlockCapsule.<init>(byte[])"})
-  public void testNewBlockCapsule_whenArrayOfByteWithOneAndX_thenThrowBadItemException() throws BadItemException {
-    // Arrange, Act and Assert
-    assertThrows(BadItemException.class, () -> new BlockCapsule(new byte[]{1, 'X', 'A', 'X', 'A', 'X', 'A', 'X'}));
-  }
-
-  /**
-   * Test {@link BlockCapsule#BlockCapsule(byte[])}.
-   * <ul>
-   *   <li>When {@code AXAXAXAX} Bytes is {@code UTF-8}.</li>
-   *   <li>Then throw {@link BadItemException}.</li>
-   * </ul>
-   * <p>
-   * Method under test: {@link BlockCapsule#BlockCapsule(byte[])}
+   *
+   * <p>Method under test: {@link BlockCapsule#BlockCapsule(byte[])}
    */
   @Test
   @Category(MaintainedByDiffblue.class)
@@ -680,57 +953,19 @@ public class BlockCapsuleDiffblueTest {
   }
 
   /**
-   * Test {@link BlockCapsule#BlockCapsule(long, Sha256Hash, long, ByteString)}.
-   * <ul>
-   *   <li>When {@link BlockId#BlockId()}.</li>
-   *   <li>Then return Bloom is {@code null}.</li>
-   * </ul>
-   * <p>
-   * Method under test: {@link BlockCapsule#BlockCapsule(long, Sha256Hash, long, ByteString)}
-   */
-  @Test
-  @Category(MaintainedByDiffblue.class)
-  @MethodsUnderTest({"void BlockCapsule.<init>(long, Sha256Hash, long, ByteString)"})
-  public void testNewBlockCapsule_whenBlockId_thenReturnBloomIsNull() {
-    // Arrange
-    BlockId hash = new BlockId();
-    ByteString witnessAddress = mock(ByteString.class);
-
-    // Act
-    BlockCapsule actualBlockCapsule = new BlockCapsule(1L, hash, 1L, witnessAddress);
-
-    // Assert
-    assertNull(actualBlockCapsule.getBloom());
-    assertNull(actualBlockCapsule.getResult());
-    assertEquals(1L, actualBlockCapsule.getNum());
-    assertEquals(1L, actualBlockCapsule.getTimeStamp());
-    assertEquals(46L, actualBlockCapsule.getSerializedSize());
-    assertFalse(actualBlockCapsule.hasWitnessSignature());
-    assertFalse(actualBlockCapsule.isSwitch());
-    assertFalse(actualBlockCapsule.generatedByMyself);
-    assertTrue(actualBlockCapsule.getTransactions().isEmpty());
-    assertTrue(actualBlockCapsule.isMerkleRootEmpty());
-    assertEquals(hash, actualBlockCapsule.getParentBlockId());
-    assertEquals(hash, actualBlockCapsule.getParentHash());
-    Sha256Hash expectedAccountRoot = hash.ZERO_HASH;
-    assertSame(expectedAccountRoot, actualBlockCapsule.getAccountRoot());
-    assertSame(witnessAddress, actualBlockCapsule.getWitnessAddress());
-    assertArrayEquals(new byte[]{18, ',', '\n', '*', '\b', 1, 26, ' ', 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0,
-        0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, '8', 1, 'J', 0, 'P', ' '}, actualBlockCapsule.getData());
-  }
-
-  /**
    * Test {@link BlockCapsule#BlockCapsule(CodedInputStream)}.
+   *
    * <ul>
-   *   <li>When {@link CodedInputStream} {@link CodedInputStream#readFixed64()} return one.</li>
+   *   <li>When {@link CodedInputStream} {@link CodedInputStream#readFixed64()} return one.
    * </ul>
-   * <p>
-   * Method under test: {@link BlockCapsule#BlockCapsule(CodedInputStream)}
+   *
+   * <p>Method under test: {@link BlockCapsule#BlockCapsule(CodedInputStream)}
    */
   @Test
   @Category(MaintainedByDiffblue.class)
   @MethodsUnderTest({"void BlockCapsule.<init>(CodedInputStream)"})
-  public void testNewBlockCapsule_whenCodedInputStreamReadFixed64ReturnOne() throws IOException, BadItemException {
+  public void testNewBlockCapsule_whenCodedInputStreamReadFixed64ReturnOne()
+      throws IOException, BadItemException {
     // Arrange
     CodedInputStream codedInputStream = mock(CodedInputStream.class);
     when(codedInputStream.readFixed64()).thenReturn(1L);
@@ -744,12 +979,13 @@ public class BlockCapsuleDiffblueTest {
 
   /**
    * Test {@link BlockCapsule#BlockCapsule(Block)}.
+   *
    * <ul>
-   *   <li>When DefaultInstance.</li>
-   *   <li>Then return Bloom is {@code null}.</li>
+   *   <li>When DefaultInstance.
+   *   <li>Then return Bloom is {@code null}.
    * </ul>
-   * <p>
-   * Method under test: {@link BlockCapsule#BlockCapsule(Block)}
+   *
+   * <p>Method under test: {@link BlockCapsule#BlockCapsule(Block)}
    */
   @Test
   @Category(MaintainedByDiffblue.class)
@@ -773,24 +1009,26 @@ public class BlockCapsuleDiffblueTest {
     assertTrue(actualBlockCapsule.getTransactions().isEmpty());
     assertTrue(actualBlockCapsule.isMerkleRootEmpty());
     assertSame(block, actualBlockCapsule.getInstance());
-    assertArrayEquals(new byte[]{}, actualBlockCapsule.getData());
+    assertArrayEquals(new byte[] {}, actualBlockCapsule.getData());
   }
 
   /**
    * Test {@link BlockCapsule#BlockCapsule(byte[])}.
+   *
    * <ul>
-   *   <li>When empty array of {@code byte}.</li>
-   *   <li>Then return Bloom is {@code null}.</li>
+   *   <li>When empty array of {@code byte}.
+   *   <li>Then return Bloom is {@code null}.
    * </ul>
-   * <p>
-   * Method under test: {@link BlockCapsule#BlockCapsule(byte[])}
+   *
+   * <p>Method under test: {@link BlockCapsule#BlockCapsule(byte[])}
    */
   @Test
   @Category(MaintainedByDiffblue.class)
   @MethodsUnderTest({"void BlockCapsule.<init>(byte[])"})
-  public void testNewBlockCapsule_whenEmptyArrayOfByte_thenReturnBloomIsNull() throws BadItemException {
+  public void testNewBlockCapsule_whenEmptyArrayOfByte_thenReturnBloomIsNull()
+      throws BadItemException {
     // Arrange and Act
-    BlockCapsule actualBlockCapsule = new BlockCapsule(new byte[]{});
+    BlockCapsule actualBlockCapsule = new BlockCapsule(new byte[] {});
 
     // Assert
     assertNull(actualBlockCapsule.getBloom());
@@ -803,51 +1041,43 @@ public class BlockCapsuleDiffblueTest {
     assertFalse(actualBlockCapsule.generatedByMyself);
     assertTrue(actualBlockCapsule.getTransactions().isEmpty());
     assertTrue(actualBlockCapsule.isMerkleRootEmpty());
-    assertArrayEquals(new byte[]{}, actualBlockCapsule.getData());
+    assertArrayEquals(new byte[] {}, actualBlockCapsule.getData());
   }
 
   /**
    * Test {@link BlockCapsule#BlockCapsule(byte[])}.
+   *
    * <ul>
-   *   <li>When lf.</li>
-   *   <li>Then throw {@link BadItemException}.</li>
+   *   <li>When lf.
+   *   <li>Then throw {@link BadItemException}.
    * </ul>
-   * <p>
-   * Method under test: {@link BlockCapsule#BlockCapsule(byte[])}
+   *
+   * <p>Method under test: {@link BlockCapsule#BlockCapsule(byte[])}
    */
   @Test
   @Category(MaintainedByDiffblue.class)
   @MethodsUnderTest({"void BlockCapsule.<init>(byte[])"})
   public void testNewBlockCapsule_whenLf_thenThrowBadItemException() throws BadItemException {
     // Arrange, Act and Assert
-    assertThrows(BadItemException.class, () -> new BlockCapsule(new byte[]{'\n', 1, '\n', 'X', 'A', 'X', 'A', 'X'}));
+    assertThrows(
+        BadItemException.class,
+        () ->
+            new BlockCapsule(
+                new byte[] {
+                  18, '\b', '\n', '\b', 'A', '\b', 'A', '\b', 'A', '\b', 'A', '\b', 'A', '\b', 'A',
+                  '\b'
+                }));
   }
 
   /**
    * Test {@link BlockCapsule#BlockCapsule(byte[])}.
+   *
    * <ul>
-   *   <li>When lf.</li>
-   *   <li>Then throw {@link BadItemException}.</li>
+   *   <li>When {@code XAXAXAX} Bytes is {@code UTF-8}.
+   *   <li>Then throw {@link BadItemException}.
    * </ul>
-   * <p>
-   * Method under test: {@link BlockCapsule#BlockCapsule(byte[])}
-   */
-  @Test
-  @Category(MaintainedByDiffblue.class)
-  @MethodsUnderTest({"void BlockCapsule.<init>(byte[])"})
-  public void testNewBlockCapsule_whenLf_thenThrowBadItemException2() throws BadItemException {
-    // Arrange, Act and Assert
-    assertThrows(BadItemException.class, () -> new BlockCapsule(new byte[]{18, 1, '\n', 'X', 'A', 'X', 'A', 'X'}));
-  }
-
-  /**
-   * Test {@link BlockCapsule#BlockCapsule(byte[])}.
-   * <ul>
-   *   <li>When {@code XAXAXAX} Bytes is {@code UTF-8}.</li>
-   *   <li>Then throw {@link BadItemException}.</li>
-   * </ul>
-   * <p>
-   * Method under test: {@link BlockCapsule#BlockCapsule(byte[])}
+   *
+   * <p>Method under test: {@link BlockCapsule#BlockCapsule(byte[])}
    */
   @Test
   @Category(MaintainedByDiffblue.class)
@@ -855,24 +1085,48 @@ public class BlockCapsuleDiffblueTest {
   public void testNewBlockCapsule_whenXaxaxaxBytesIsUtf8_thenThrowBadItemException()
       throws UnsupportedEncodingException, BadItemException {
     // Arrange, Act and Assert
-    assertThrows(BadItemException.class, () -> new BlockCapsule("\bXAXAXAX".getBytes("UTF-8")));
+    assertThrows(BadItemException.class, () -> new BlockCapsule("\nXAXAXAX".getBytes("UTF-8")));
   }
 
   /**
-   * Test {@link BlockCapsule#BlockCapsule(byte[])}.
+   * Test {@link BlockCapsule#BlockCapsule(long, Sha256Hash, long, ByteString)}.
+   *
    * <ul>
-   *   <li>When {@code XAXAXAX} Bytes is {@code UTF-8}.</li>
-   *   <li>Then throw {@link BadItemException}.</li>
+   *   <li>When {@link Sha256Hash#ZERO_HASH}.
+   *   <li>Then return Bloom is {@code null}.
    * </ul>
-   * <p>
-   * Method under test: {@link BlockCapsule#BlockCapsule(byte[])}
+   *
+   * <p>Method under test: {@link BlockCapsule#BlockCapsule(long, Sha256Hash, long, ByteString)}
    */
   @Test
   @Category(MaintainedByDiffblue.class)
-  @MethodsUnderTest({"void BlockCapsule.<init>(byte[])"})
-  public void testNewBlockCapsule_whenXaxaxaxBytesIsUtf8_thenThrowBadItemException2()
-      throws UnsupportedEncodingException, BadItemException {
-    // Arrange, Act and Assert
-    assertThrows(BadItemException.class, () -> new BlockCapsule("\nXAXAXAX".getBytes("UTF-8")));
+  @MethodsUnderTest({"void BlockCapsule.<init>(long, Sha256Hash, long, ByteString)"})
+  public void testNewBlockCapsule_whenZero_hash_thenReturnBloomIsNull() {
+    // Arrange
+    ByteString witnessAddress = mock(ByteString.class);
+
+    // Act
+    BlockCapsule actualBlockCapsule =
+        new BlockCapsule(1L, Sha256Hash.ZERO_HASH, 1L, witnessAddress);
+
+    // Assert
+    assertNull(actualBlockCapsule.getBloom());
+    assertNull(actualBlockCapsule.getResult());
+    assertEquals(1L, actualBlockCapsule.getNum());
+    assertEquals(1L, actualBlockCapsule.getTimeStamp());
+    assertEquals(46L, actualBlockCapsule.getSerializedSize());
+    assertFalse(actualBlockCapsule.hasWitnessSignature());
+    assertFalse(actualBlockCapsule.isSwitch());
+    assertFalse(actualBlockCapsule.generatedByMyself);
+    assertTrue(actualBlockCapsule.getTransactions().isEmpty());
+    assertTrue(actualBlockCapsule.isMerkleRootEmpty());
+    assertSame(Sha256Hash.ZERO_HASH, actualBlockCapsule.getAccountRoot());
+    assertSame(witnessAddress, actualBlockCapsule.getWitnessAddress());
+    assertArrayEquals(
+        new byte[] {
+          18, ',', '\n', '*', '\b', 1, 26, ' ', 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0,
+          0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, '8', 1, 'J', 0, 'P', ' '
+        },
+        actualBlockCapsule.getData());
   }
 }

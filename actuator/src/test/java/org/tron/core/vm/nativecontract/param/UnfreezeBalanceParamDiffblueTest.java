@@ -15,8 +15,9 @@ import org.tron.protos.contract.Common.ResourceCode;
 public class UnfreezeBalanceParamDiffblueTest {
   /**
    * Test getters and setters.
-   * <p>
-   * Methods under test:
+   *
+   * <p>Methods under test:
+   *
    * <ul>
    *   <li>default or parameterless constructor of {@link UnfreezeBalanceParam}
    *   <li>{@link UnfreezeBalanceParam#setDelegating(boolean)}
@@ -31,11 +32,17 @@ public class UnfreezeBalanceParamDiffblueTest {
    */
   @Test
   @Category(MaintainedByDiffblue.class)
-  @MethodsUnderTest({"void UnfreezeBalanceParam.<init>()", "byte[] UnfreezeBalanceParam.getOwnerAddress()",
-      "byte[] UnfreezeBalanceParam.getReceiverAddress()", "ResourceCode UnfreezeBalanceParam.getResourceType()",
-      "boolean UnfreezeBalanceParam.isDelegating()", "void UnfreezeBalanceParam.setDelegating(boolean)",
-      "void UnfreezeBalanceParam.setOwnerAddress(byte[])", "void UnfreezeBalanceParam.setReceiverAddress(byte[])",
-      "void UnfreezeBalanceParam.setResourceType(ResourceCode)"})
+  @MethodsUnderTest({
+    "void UnfreezeBalanceParam.<init>()",
+    "byte[] UnfreezeBalanceParam.getOwnerAddress()",
+    "byte[] UnfreezeBalanceParam.getReceiverAddress()",
+    "ResourceCode UnfreezeBalanceParam.getResourceType()",
+    "boolean UnfreezeBalanceParam.isDelegating()",
+    "void UnfreezeBalanceParam.setDelegating(boolean)",
+    "void UnfreezeBalanceParam.setOwnerAddress(byte[])",
+    "void UnfreezeBalanceParam.setReceiverAddress(byte[])",
+    "void UnfreezeBalanceParam.setResourceType(ResourceCode)"
+  })
   public void testGettersAndSetters() throws UnsupportedEncodingException {
     // Arrange and Act
     UnfreezeBalanceParam actualUnfreezeBalanceParam = new UnfreezeBalanceParam();

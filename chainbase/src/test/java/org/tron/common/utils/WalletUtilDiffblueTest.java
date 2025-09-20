@@ -28,70 +28,79 @@ import org.tron.protos.contract.SmartContractOuterClass.TriggerSmartContract;
 public class WalletUtilDiffblueTest {
   /**
    * Test {@link WalletUtil#checkPermissionOperations(Permission, Contract)}.
-   * <ul>
-   *   <li>When DefaultInstance.</li>
-   *   <li>Then throw {@link PermissionException}.</li>
-   * </ul>
-   * <p>
-   * Method under test: {@link WalletUtil#checkPermissionOperations(Permission, Transaction.Contract)}
+   *
+   * <p>Method under test: {@link WalletUtil#checkPermissionOperations(Permission,
+   * Transaction.Contract)}
    */
   @Test
   @Category(MaintainedByDiffblue.class)
-  @MethodsUnderTest({"boolean WalletUtil.checkPermissionOperations(Permission, Transaction.Contract)"})
-  public void testCheckPermissionOperations_whenDefaultInstance_thenThrowPermissionException()
-      throws PermissionException {
-    // Arrange
-    Permission permission = Permission.getDefaultInstance();
-
-    // Act and Assert
-    assertThrows(PermissionException.class,
-        () -> WalletUtil.checkPermissionOperations(permission, Contract.getDefaultInstance()));
+  @MethodsUnderTest({
+    "boolean WalletUtil.checkPermissionOperations(Permission, Transaction.Contract)"
+  })
+  public void testCheckPermissionOperations() throws PermissionException {
+    // Arrange, Act and Assert
+    assertThrows(
+        PermissionException.class,
+        () ->
+            WalletUtil.checkPermissionOperations(
+                Permission.getDefaultInstance(), Contract.getDefaultInstance()));
   }
 
   /**
    * Test {@link WalletUtil#generateContractAddress2(byte[], byte[], byte[])}.
-   * <p>
-   * Method under test: {@link WalletUtil#generateContractAddress2(byte[], byte[], byte[])}
+   *
+   * <p>Method under test: {@link WalletUtil#generateContractAddress2(byte[], byte[], byte[])}
    */
   @Test
   @Category(MaintainedByDiffblue.class)
   @MethodsUnderTest({"byte[] WalletUtil.generateContractAddress2(byte[], byte[], byte[])"})
   public void testGenerateContractAddress2() throws UnsupportedEncodingException {
-    // Arrange
-    byte[] address = "AXAXAXAX".getBytes("UTF-8");
-    byte[] salt = "AXAXAXAX".getBytes("UTF-8");
+    // Arrange and Act
+    byte[] actualGenerateContractAddress2Result =
+        WalletUtil.generateContractAddress2(
+            "AXAXAXAX".getBytes("UTF-8"),
+            "AXAXAXAX".getBytes("UTF-8"),
+            "AXAXAXAX".getBytes("UTF-8"));
 
-    // Act and Assert
-    assertArrayEquals(new byte[]{'A', ',', -42, -53, -77, -98, '3', '/', -107, -80, -113, 'x', -33, -57, -124, 'u', '9',
-        'r', '8', -71, 'p'}, WalletUtil.generateContractAddress2(address, salt, "AXAXAXAX".getBytes("UTF-8")));
+    // Assert
+    assertArrayEquals(
+        new byte[] {
+          'A', ',', -42, -53, -77, -98, '3', '/', -107, -80, -113, 'x', -33, -57, -124, 'u', '9',
+          'r', '8', -71, 'p'
+        },
+        actualGenerateContractAddress2Result);
   }
 
   /**
    * Test {@link WalletUtil#isConstant(ABI, byte[])} with {@code abi}, {@code selector}.
+   *
    * <ul>
-   *   <li>When {@code AXAXAXAX} Bytes is {@code UTF-8}.</li>
+   *   <li>When {@code AXAXAXAX} Bytes is {@code UTF-8}.
    * </ul>
-   * <p>
-   * Method under test: {@link WalletUtil#isConstant(ABI, byte[])}
+   *
+   * <p>Method under test: {@link WalletUtil#isConstant(ABI, byte[])}
    */
   @Test
   @Category(MaintainedByDiffblue.class)
   @MethodsUnderTest({"boolean WalletUtil.isConstant(ABI, byte[])"})
-  public void testIsConstantWithAbiSelector_whenAxaxaxaxBytesIsUtf8() throws UnsupportedEncodingException {
-    // Arrange
-    ABI abi = ABI.getDefaultInstance();
+  public void testIsConstantWithAbiSelector_whenAxaxaxaxBytesIsUtf8()
+      throws UnsupportedEncodingException {
+    // Arrange and Act
+    boolean actualIsConstantResult =
+        WalletUtil.isConstant(ABI.getDefaultInstance(), "AXAXAXAX".getBytes("UTF-8"));
 
-    // Act and Assert
-    assertFalse(WalletUtil.isConstant(abi, "AXAXAXAX".getBytes("UTF-8")));
+    // Assert
+    assertFalse(actualIsConstantResult);
   }
 
   /**
    * Test {@link WalletUtil#isConstant(ABI, byte[])} with {@code abi}, {@code selector}.
+   *
    * <ul>
-   *   <li>When {@code null}.</li>
+   *   <li>When {@code null}.
    * </ul>
-   * <p>
-   * Method under test: {@link WalletUtil#isConstant(ABI, byte[])}
+   *
+   * <p>Method under test: {@link WalletUtil#isConstant(ABI, byte[])}
    */
   @Test
   @Category(MaintainedByDiffblue.class)
@@ -102,44 +111,24 @@ public class WalletUtilDiffblueTest {
   }
 
   /**
-   * Test {@link WalletUtil#isConstant(ABI, TriggerSmartContract)} with {@code abi}, {@code triggerSmartContract}.
-   * <ul>
-   *   <li>When DefaultInstance.</li>
-   * </ul>
-   * <p>
-   * Method under test: {@link WalletUtil#isConstant(ABI, TriggerSmartContract)}
+   * Test {@link WalletUtil#isConstant(ABI, TriggerSmartContract)} with {@code abi}, {@code
+   * triggerSmartContract}.
+   *
+   * <p>Method under test: {@link WalletUtil#isConstant(ABI, TriggerSmartContract)}
    */
   @Test
   @Category(MaintainedByDiffblue.class)
   @MethodsUnderTest({"boolean WalletUtil.isConstant(ABI, TriggerSmartContract)"})
-  public void testIsConstantWithAbiTriggerSmartContract_whenDefaultInstance() throws ContractValidateException {
-    // Arrange
-    ABI abi = ABI.getDefaultInstance();
-
-    // Act and Assert
-    assertFalse(WalletUtil.isConstant(abi, TriggerSmartContract.getDefaultInstance()));
-  }
-
-  /**
-   * Test {@link WalletUtil#isConstant(ABI, TriggerSmartContract)} with {@code abi}, {@code triggerSmartContract}.
-   * <ul>
-   *   <li>When {@code null}.</li>
-   * </ul>
-   * <p>
-   * Method under test: {@link WalletUtil#isConstant(ABI, TriggerSmartContract)}
-   */
-  @Test
-  @Category(MaintainedByDiffblue.class)
-  @MethodsUnderTest({"boolean WalletUtil.isConstant(ABI, TriggerSmartContract)"})
-  public void testIsConstantWithAbiTriggerSmartContract_whenNull() throws ContractValidateException {
+  public void testIsConstantWithAbiTriggerSmartContract() throws ContractValidateException {
     // Arrange, Act and Assert
-    assertFalse(WalletUtil.isConstant(ABI.getDefaultInstance(), (TriggerSmartContract) null));
+    assertFalse(
+        WalletUtil.isConstant(ABI.getDefaultInstance(), TriggerSmartContract.getDefaultInstance()));
   }
 
   /**
    * Test {@link WalletUtil#getAddressStringList(Collection)}.
-   * <p>
-   * Method under test: {@link WalletUtil#getAddressStringList(Collection)}
+   *
+   * <p>Method under test: {@link WalletUtil#getAddressStringList(Collection)}
    */
   @Test
   @Category(MaintainedByDiffblue.class)
@@ -154,49 +143,51 @@ public class WalletUtilDiffblueTest {
 
   /**
    * Test {@link WalletUtil#getSelector(byte[])}.
+   *
    * <ul>
-   *   <li>When {@code AXAXAXAX} Bytes is {@code UTF-8}.</li>
-   *   <li>Then return {@code AXAX} Bytes is {@code UTF-8}.</li>
+   *   <li>When {@code AXAXAXAX} Bytes is {@code UTF-8}.
+   *   <li>Then return {@code AXAX} Bytes is {@code UTF-8}.
    * </ul>
-   * <p>
-   * Method under test: {@link WalletUtil#getSelector(byte[])}
+   *
+   * <p>Method under test: {@link WalletUtil#getSelector(byte[])}
    */
   @Test
   @Category(MaintainedByDiffblue.class)
   @MethodsUnderTest({"byte[] WalletUtil.getSelector(byte[])"})
-  public void testGetSelector_whenAxaxaxaxBytesIsUtf8_thenReturnAxaxBytesIsUtf8() throws UnsupportedEncodingException {
-    // Arrange and Act
-    byte[] actualSelector = WalletUtil.getSelector("AXAXAXAX".getBytes("UTF-8"));
-
-    // Assert
-    assertArrayEquals("AXAX".getBytes("UTF-8"), actualSelector);
+  public void testGetSelector_whenAxaxaxaxBytesIsUtf8_thenReturnAxaxBytesIsUtf8()
+      throws UnsupportedEncodingException {
+    // Arrange, Act and Assert
+    assertArrayEquals(
+        "AXAX".getBytes("UTF-8"), WalletUtil.getSelector("AXAXAXAX".getBytes("UTF-8")));
   }
 
   /**
    * Test {@link WalletUtil#getSelector(byte[])}.
+   *
    * <ul>
-   *   <li>When empty array of {@code byte}.</li>
-   *   <li>Then return {@code null}.</li>
+   *   <li>When empty array of {@code byte}.
+   *   <li>Then return {@code null}.
    * </ul>
-   * <p>
-   * Method under test: {@link WalletUtil#getSelector(byte[])}
+   *
+   * <p>Method under test: {@link WalletUtil#getSelector(byte[])}
    */
   @Test
   @Category(MaintainedByDiffblue.class)
   @MethodsUnderTest({"byte[] WalletUtil.getSelector(byte[])"})
   public void testGetSelector_whenEmptyArrayOfByte_thenReturnNull() {
     // Arrange, Act and Assert
-    assertNull(WalletUtil.getSelector(new byte[]{}));
+    assertNull(WalletUtil.getSelector(new byte[] {}));
   }
 
   /**
    * Test {@link WalletUtil#getSelector(byte[])}.
+   *
    * <ul>
-   *   <li>When {@code null}.</li>
-   *   <li>Then return {@code null}.</li>
+   *   <li>When {@code null}.
+   *   <li>Then return {@code null}.
    * </ul>
-   * <p>
-   * Method under test: {@link WalletUtil#getSelector(byte[])}
+   *
+   * <p>Method under test: {@link WalletUtil#getSelector(byte[])}
    */
   @Test
   @Category(MaintainedByDiffblue.class)
@@ -208,12 +199,13 @@ public class WalletUtilDiffblueTest {
 
   /**
    * Test {@link WalletUtil#isLong(String)}.
+   *
    * <ul>
-   *   <li>When {@code 42}.</li>
-   *   <li>Then return longValue is forty-two.</li>
+   *   <li>When {@code 42}.
+   *   <li>Then return longValue is forty-two.
    * </ul>
-   * <p>
-   * Method under test: {@link WalletUtil#isLong(String)}
+   *
+   * <p>Method under test: {@link WalletUtil#isLong(String)}
    */
   @Test
   @Category(MaintainedByDiffblue.class)
@@ -225,12 +217,13 @@ public class WalletUtilDiffblueTest {
 
   /**
    * Test {@link WalletUtil#isLong(String)}.
+   *
    * <ul>
-   *   <li>When {@code foo}.</li>
-   *   <li>Then return {@code null}.</li>
+   *   <li>When {@code foo}.
+   *   <li>Then return {@code null}.
    * </ul>
-   * <p>
-   * Method under test: {@link WalletUtil#isLong(String)}
+   *
+   * <p>Method under test: {@link WalletUtil#isLong(String)}
    */
   @Test
   @Category(MaintainedByDiffblue.class)

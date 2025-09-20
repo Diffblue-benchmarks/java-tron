@@ -17,19 +17,17 @@ import org.springframework.test.annotation.DirtiesContext.ClassMode;
 import org.tron.consensus.base.Param;
 import org.tron.consensus.dpos.DposService;
 
-@RunWith(MockitoJUnitRunner.class)
 @DirtiesContext(classMode = ClassMode.AFTER_EACH_TEST_METHOD)
+@RunWith(MockitoJUnitRunner.class)
 public class ConsensusDiffblueTest {
-  @InjectMocks
-  private Consensus consensus;
+  @InjectMocks private Consensus consensus;
 
-  @Mock
-  private DposService dposService;
+  @Mock private DposService dposService;
 
   /**
    * Test {@link Consensus#start(Param)}.
-   * <p>
-   * Method under test: {@link Consensus#start(Param)}
+   *
+   * <p>Method under test: {@link Consensus#start(Param)}
    */
   @Test
   @Category(MaintainedByDiffblue.class)
@@ -47,8 +45,8 @@ public class ConsensusDiffblueTest {
 
   /**
    * Test {@link Consensus#stop()}.
-   * <p>
-   * Method under test: {@link Consensus#stop()}
+   *
+   * <p>Method under test: {@link Consensus#stop()}
    */
   @Test
   @Category(MaintainedByDiffblue.class)

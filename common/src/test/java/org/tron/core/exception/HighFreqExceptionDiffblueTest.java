@@ -10,8 +10,8 @@ import org.junit.experimental.categories.Category;
 public class HighFreqExceptionDiffblueTest {
   /**
    * Test {@link HighFreqException#HighFreqException()}.
-   * <p>
-   * Method under test: {@link HighFreqException#HighFreqException()}
+   *
+   * <p>Method under test: {@link HighFreqException#HighFreqException()}
    */
   @Test
   @Category(MaintainedByDiffblue.class)
@@ -29,8 +29,8 @@ public class HighFreqExceptionDiffblueTest {
 
   /**
    * Test {@link HighFreqException#HighFreqException(String)}.
-   * <p>
-   * Method under test: {@link HighFreqException#HighFreqException(String)}
+   *
+   * <p>Method under test: {@link HighFreqException#HighFreqException(String)}
    */
   @Test
   @Category(MaintainedByDiffblue.class)

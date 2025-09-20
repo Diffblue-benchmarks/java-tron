@@ -11,15 +11,16 @@ import org.junit.experimental.categories.Category;
 public class JsonRpcTooManyResultExceptionDiffblueTest {
   /**
    * Test {@link JsonRpcTooManyResultException#JsonRpcTooManyResultException()}.
-   * <p>
-   * Method under test: {@link JsonRpcTooManyResultException#JsonRpcTooManyResultException()}
+   *
+   * <p>Method under test: {@link JsonRpcTooManyResultException#JsonRpcTooManyResultException()}
    */
   @Test
   @Category(MaintainedByDiffblue.class)
   @MethodsUnderTest({"void JsonRpcTooManyResultException.<init>()"})
   public void testNewJsonRpcTooManyResultException() {
     // Arrange and Act
-    JsonRpcTooManyResultException actualJsonRpcTooManyResultException = new JsonRpcTooManyResultException();
+    JsonRpcTooManyResultException actualJsonRpcTooManyResultException =
+        new JsonRpcTooManyResultException();
 
     // Assert
     assertNull(actualJsonRpcTooManyResultException.getLocalizedMessage());
@@ -30,16 +31,17 @@ public class JsonRpcTooManyResultExceptionDiffblueTest {
 
   /**
    * Test {@link JsonRpcTooManyResultException#JsonRpcTooManyResultException(String)}.
-   * <p>
-   * Method under test: {@link JsonRpcTooManyResultException#JsonRpcTooManyResultException(String)}
+   *
+   * <p>Method under test: {@link
+   * JsonRpcTooManyResultException#JsonRpcTooManyResultException(String)}
    */
   @Test
   @Category(MaintainedByDiffblue.class)
   @MethodsUnderTest({"void JsonRpcTooManyResultException.<init>(String)"})
   public void testNewJsonRpcTooManyResultException2() {
     // Arrange and Act
-    JsonRpcTooManyResultException actualJsonRpcTooManyResultException = new JsonRpcTooManyResultException(
-        "An error occurred");
+    JsonRpcTooManyResultException actualJsonRpcTooManyResultException =
+        new JsonRpcTooManyResultException("An error occurred");
 
     // Assert
     assertEquals("An error occurred", actualJsonRpcTooManyResultException.getLocalizedMessage());
@@ -50,8 +52,9 @@ public class JsonRpcTooManyResultExceptionDiffblueTest {
 
   /**
    * Test {@link JsonRpcTooManyResultException#JsonRpcTooManyResultException(String, Throwable)}.
-   * <p>
-   * Method under test: {@link JsonRpcTooManyResultException#JsonRpcTooManyResultException(String, Throwable)}
+   *
+   * <p>Method under test: {@link
+   * JsonRpcTooManyResultException#JsonRpcTooManyResultException(String, Throwable)}
    */
   @Test
   @Category(MaintainedByDiffblue.class)
@@ -61,8 +64,8 @@ public class JsonRpcTooManyResultExceptionDiffblueTest {
     Throwable cause = new Throwable();
 
     // Act
-    JsonRpcTooManyResultException actualJsonRpcTooManyResultException = new JsonRpcTooManyResultException(
-        "An error occurred", cause);
+    JsonRpcTooManyResultException actualJsonRpcTooManyResultException =
+        new JsonRpcTooManyResultException("An error occurred", cause);
 
     // Assert
     assertEquals("An error occurred", actualJsonRpcTooManyResultException.getLocalizedMessage());

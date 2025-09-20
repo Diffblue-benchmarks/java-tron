@@ -22,31 +22,34 @@ import org.springframework.mock.web.MockHttpServletResponse;
 public class CharResponseWrapperDiffblueTest {
   /**
    * Test {@link CharResponseWrapper#CharResponseWrapper(HttpServletResponse)}.
-   * <p>
-   * Method under test: {@link CharResponseWrapper#CharResponseWrapper(HttpServletResponse)}
+   *
+   * <p>Method under test: {@link CharResponseWrapper#CharResponseWrapper(HttpServletResponse)}
    */
   @Test
   @Category(MaintainedByDiffblue.class)
   @MethodsUnderTest({"void CharResponseWrapper.<init>(HttpServletResponse)"})
   public void testNewCharResponseWrapper() throws IOException {
     // Arrange
-    MockHttpServletResponse response = new MockHttpServletResponse();
+    HttpServletResponseWrapper response =
+        new HttpServletResponseWrapper(new MockHttpServletResponse());
 
     // Act and Assert
-    assertSame(response, (new CharResponseWrapper(response)).getResponse());
+    assertSame(response, new CharResponseWrapper(response).getResponse());
   }
 
   /**
    * Test {@link CharResponseWrapper#getOutputStream()}.
-   * <p>
-   * Method under test: {@link CharResponseWrapper#getOutputStream()}
+   *
+   * <p>Method under test: {@link CharResponseWrapper#getOutputStream()}
    */
   @Test
   @Category(MaintainedByDiffblue.class)
   @MethodsUnderTest({"ServletOutputStream CharResponseWrapper.getOutputStream()"})
   public void testGetOutputStream() throws IOException {
     // Arrange and Act
-    ServletOutputStream actualOutputStream = (new CharResponseWrapper(new MockHttpServletResponse())).getOutputStream();
+    ServletOutputStream actualOutputStream =
+        new CharResponseWrapper(new HttpServletResponseWrapper(new MockHttpServletResponse()))
+            .getOutputStream();
 
     // Assert
     assertTrue(actualOutputStream instanceof ServletOutputStreamCopy);
@@ -56,16 +59,20 @@ public class CharResponseWrapperDiffblueTest {
 
   /**
    * Test {@link CharResponseWrapper#getOutputStream()}.
-   * <p>
-   * Method under test: {@link CharResponseWrapper#getOutputStream()}
+   *
+   * <p>Method under test: {@link CharResponseWrapper#getOutputStream()}
    */
   @Test
   @Category(MaintainedByDiffblue.class)
   @MethodsUnderTest({"ServletOutputStream CharResponseWrapper.getOutputStream()"})
   public void testGetOutputStream2() throws IOException {
-    // Arrange and Act
-    ServletOutputStream actualOutputStream = (new CharResponseWrapper(
-        new HttpServletResponseWrapper(new CharResponseWrapper(new MockHttpServletResponse())))).getOutputStream();
+    // Arrange
+    HttpServletResponseWrapper response =
+        new HttpServletResponseWrapper(new CharResponseWrapper(new MockHttpServletResponse()));
+    HttpServletResponseWrapper response2 = new HttpServletResponseWrapper(response);
+
+    // Act
+    ServletOutputStream actualOutputStream = new CharResponseWrapper(response2).getOutputStream();
 
     // Assert
     assertTrue(actualOutputStream instanceof ServletOutputStreamCopy);
@@ -75,63 +82,70 @@ public class CharResponseWrapperDiffblueTest {
 
   /**
    * Test {@link CharResponseWrapper#getWriter()}.
+   *
    * <ul>
-   *   <li>Then throw {@link IOException}.</li>
+   *   <li>Given {@link HttpServletResponseWrapper#HttpServletResponseWrapper(HttpServletResponse)}
+   *       with {@link Response}.
    * </ul>
-   * <p>
-   * Method under test: {@link CharResponseWrapper#getWriter()}
+   *
+   * <p>Method under test: {@link CharResponseWrapper#getWriter()}
    */
   @Test
   @Category(MaintainedByDiffblue.class)
   @MethodsUnderTest({"java.io.PrintWriter CharResponseWrapper.getWriter()"})
-  public void testGetWriter_thenThrowIOException() throws IOException {
+  public void testGetWriter_givenHttpServletResponseWrapperWithResponse() throws IOException {
     // Arrange
     Response response = mock(Response.class);
-    when(response.getOutputStream()).thenThrow(new IOException("foo"));
+    when(response.getOutputStream()).thenThrow(new IllegalStateException());
+    HttpServletResponseWrapper response2 = new HttpServletResponseWrapper(response);
 
     // Act and Assert
-    assertThrows(IOException.class, () -> (new CharResponseWrapper(response)).getWriter());
+    assertThrows(IllegalStateException.class, () -> new CharResponseWrapper(response2).getWriter());
     verify(response).getOutputStream();
   }
 
   /**
    * Test {@link CharResponseWrapper#getWriter()}.
+   *
    * <ul>
-   *   <li>Then throw {@link IOException}.</li>
+   *   <li>Then throw {@link IllegalStateException}.
    * </ul>
-   * <p>
-   * Method under test: {@link CharResponseWrapper#getWriter()}
+   *
+   * <p>Method under test: {@link CharResponseWrapper#getWriter()}
    */
   @Test
   @Category(MaintainedByDiffblue.class)
   @MethodsUnderTest({"java.io.PrintWriter CharResponseWrapper.getWriter()"})
-  public void testGetWriter_thenThrowIOException2() throws IOException {
+  public void testGetWriter_thenThrowIllegalStateException() throws IOException {
     // Arrange
     Response response = mock(Response.class);
-    when(response.getOutputStream()).thenThrow(new IOException("foo"));
-    Response response2 = mock(Response.class);
-    when(response2.getOutputStream()).thenThrow(new IOException("foo"));
-    CharResponseWrapper response3 = new CharResponseWrapper(
-        new HttpServletResponseWrapper(new CharResponseWrapper(response2)));
+    when(response.getOutputStream()).thenThrow(new IllegalStateException());
+    CharResponseWrapper response2 = new CharResponseWrapper(response);
+    HttpServletResponseWrapper response3 = new HttpServletResponseWrapper(response2);
+    CharResponseWrapper response4 = new CharResponseWrapper(response3);
+    HttpServletResponseWrapper response5 = new HttpServletResponseWrapper(response4);
 
-    CharResponseWrapper charResponseWrapper = new CharResponseWrapper(response);
-    charResponseWrapper.setResponse(response3);
+    CharResponseWrapper charResponseWrapper = new CharResponseWrapper(mock(Response.class));
+    charResponseWrapper.setResponse(response5);
 
     // Act and Assert
-    assertThrows(IOException.class, () -> charResponseWrapper.getWriter());
-    verify(response2).getOutputStream();
+    assertThrows(IllegalStateException.class, () -> charResponseWrapper.getWriter());
+    verify(response).getOutputStream();
   }
 
   /**
    * Test {@link CharResponseWrapper#getByteSize()}.
-   * <p>
-   * Method under test: {@link CharResponseWrapper#getByteSize()}
+   *
+   * <p>Method under test: {@link CharResponseWrapper#getByteSize()}
    */
   @Test
   @Category(MaintainedByDiffblue.class)
   @MethodsUnderTest({"int CharResponseWrapper.getByteSize()"})
   public void testGetByteSize() throws IOException {
     // Arrange, Act and Assert
-    assertEquals(0, (new CharResponseWrapper(new MockHttpServletResponse())).getByteSize());
+    assertEquals(
+        0,
+        new CharResponseWrapper(new HttpServletResponseWrapper(new MockHttpServletResponse()))
+            .getByteSize());
   }
 }

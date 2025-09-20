@@ -13,20 +13,22 @@ import org.junit.experimental.categories.Category;
 
 public class CacheManagerDiffblueTest {
   /**
-   * Test {@link CacheManager#allocate(CacheType, String, CacheLoader)} with {@code name}, {@code strategy}, {@code loader}.
+   * Test {@link CacheManager#allocate(CacheType, String, CacheLoader)} with {@code name}, {@code
+   * strategy}, {@code loader}.
+   *
    * <ul>
-   *   <li>Then return stats evictionCount is zero.</li>
+   *   <li>Then return stats evictionCount is zero.
    * </ul>
-   * <p>
-   * Method under test: {@link CacheManager#allocate(CacheType, String, CacheLoader)}
+   *
+   * <p>Method under test: {@link CacheManager#allocate(CacheType, String, CacheLoader)}
    */
   @Test
   @Category(MaintainedByDiffblue.class)
   @MethodsUnderTest({"TronCache CacheManager.allocate(CacheType, String, CacheLoader)"})
   public void testAllocateWithNameStrategyLoader_thenReturnStatsEvictionCountIsZero() {
     // Arrange and Act
-    TronCache<Object, Object> actualAllocateResult = CacheManager.<Object, Object>allocate(CacheType.witnessStandby, "",
-        mock(CacheLoader.class));
+    TronCache<Object, Object> actualAllocateResult =
+        CacheManager.allocate(CacheType.witnessStandby, "", mock(CacheLoader.class));
 
     // Assert
     CacheStats statsResult = actualAllocateResult.stats();
@@ -41,19 +43,21 @@ public class CacheManagerDiffblueTest {
 
   /**
    * Test {@link CacheManager#allocate(CacheType, String)} with {@code name}, {@code strategy}.
+   *
    * <ul>
-   *   <li>When empty string.</li>
-   *   <li>Then return stats evictionCount is zero.</li>
+   *   <li>When empty string.
+   *   <li>Then return stats evictionCount is zero.
    * </ul>
-   * <p>
-   * Method under test: {@link CacheManager#allocate(CacheType, String)}
+   *
+   * <p>Method under test: {@link CacheManager#allocate(CacheType, String)}
    */
   @Test
   @Category(MaintainedByDiffblue.class)
   @MethodsUnderTest({"TronCache CacheManager.allocate(CacheType, String)"})
   public void testAllocateWithNameStrategy_whenEmptyString_thenReturnStatsEvictionCountIsZero() {
     // Arrange and Act
-    TronCache<Object, Object> actualAllocateResult = CacheManager.allocate(CacheType.witnessStandby, "");
+    TronCache<Object, Object> actualAllocateResult =
+        CacheManager.allocate(CacheType.witnessStandby, "");
 
     // Assert
     CacheStats statsResult = actualAllocateResult.stats();
@@ -68,12 +72,13 @@ public class CacheManagerDiffblueTest {
 
   /**
    * Test {@link CacheManager#release(TronCache)}.
+   *
    * <ul>
-   *   <li>When {@link TronCache} {@link TronCache#invalidateAll()} does nothing.</li>
-   *   <li>Then calls {@link TronCache#invalidateAll()}.</li>
+   *   <li>When {@link TronCache} {@link TronCache#invalidateAll()} does nothing.
+   *   <li>Then calls {@link TronCache#invalidateAll()}.
    * </ul>
-   * <p>
-   * Method under test: {@link CacheManager#release(TronCache)}
+   *
+   * <p>Method under test: {@link CacheManager#release(TronCache)}
    */
   @Test
   @Category(MaintainedByDiffblue.class)

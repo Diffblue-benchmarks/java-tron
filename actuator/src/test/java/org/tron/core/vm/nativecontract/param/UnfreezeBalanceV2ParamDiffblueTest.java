@@ -14,8 +14,9 @@ import org.tron.protos.contract.Common.ResourceCode;
 public class UnfreezeBalanceV2ParamDiffblueTest {
   /**
    * Test getters and setters.
-   * <p>
-   * Methods under test:
+   *
+   * <p>Methods under test:
+   *
    * <ul>
    *   <li>default or parameterless constructor of {@link UnfreezeBalanceV2Param}
    *   <li>{@link UnfreezeBalanceV2Param#setOwnerAddress(byte[])}
@@ -28,11 +29,15 @@ public class UnfreezeBalanceV2ParamDiffblueTest {
    */
   @Test
   @Category(MaintainedByDiffblue.class)
-  @MethodsUnderTest({"void UnfreezeBalanceV2Param.<init>()", "byte[] UnfreezeBalanceV2Param.getOwnerAddress()",
-      "ResourceCode UnfreezeBalanceV2Param.getResourceType()", "long UnfreezeBalanceV2Param.getUnfreezeBalance()",
-      "void UnfreezeBalanceV2Param.setOwnerAddress(byte[])",
-      "void UnfreezeBalanceV2Param.setResourceType(ResourceCode)",
-      "void UnfreezeBalanceV2Param.setUnfreezeBalance(long)"})
+  @MethodsUnderTest({
+    "void UnfreezeBalanceV2Param.<init>()",
+    "byte[] UnfreezeBalanceV2Param.getOwnerAddress()",
+    "ResourceCode UnfreezeBalanceV2Param.getResourceType()",
+    "long UnfreezeBalanceV2Param.getUnfreezeBalance()",
+    "void UnfreezeBalanceV2Param.setOwnerAddress(byte[])",
+    "void UnfreezeBalanceV2Param.setResourceType(ResourceCode)",
+    "void UnfreezeBalanceV2Param.setUnfreezeBalance(long)"
+  })
   public void testGettersAndSetters() throws UnsupportedEncodingException {
     // Arrange and Act
     UnfreezeBalanceV2Param actualUnfreezeBalanceV2Param = new UnfreezeBalanceV2Param();

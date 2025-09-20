@@ -10,8 +10,8 @@ import org.junit.experimental.categories.Category;
 public class CancelExceptionDiffblueTest {
   /**
    * Test {@link CancelException#CancelException()}.
-   * <p>
-   * Method under test: {@link CancelException#CancelException()}
+   *
+   * <p>Method under test: {@link CancelException#CancelException()}
    */
   @Test
   @Category(MaintainedByDiffblue.class)
@@ -29,8 +29,8 @@ public class CancelExceptionDiffblueTest {
 
   /**
    * Test {@link CancelException#CancelException(String)}.
-   * <p>
-   * Method under test: {@link CancelException#CancelException(String)}
+   *
+   * <p>Method under test: {@link CancelException#CancelException(String)}
    */
   @Test
   @Category(MaintainedByDiffblue.class)

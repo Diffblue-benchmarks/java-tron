@@ -27,8 +27,8 @@ import org.tron.protos.contract.ShieldContract.PedersenHash;
 public class PedersenHashCapsuleDiffblueTest {
   /**
    * Test {@link PedersenHashCapsule#PedersenHashCapsule()}.
-   * <p>
-   * Method under test: {@link PedersenHashCapsule#PedersenHashCapsule()}
+   *
+   * <p>Method under test: {@link PedersenHashCapsule#PedersenHashCapsule()}
    */
   @Test
   @Category(MaintainedByDiffblue.class)
@@ -50,21 +50,22 @@ public class PedersenHashCapsuleDiffblueTest {
     assertTrue(instance.getAllFields().isEmpty());
     assertTrue(instance.isInitialized());
     assertSame(content, instance.getContent());
-    assertSame(instance, instance.getDefaultInstanceForType());
-    assertArrayEquals(new byte[]{}, actualPedersenHashCapsule.getData());
+    PedersenHash actualDefaultInstanceForType = instance.getDefaultInstanceForType();
+    assertSame(instance, actualDefaultInstanceForType);
+    assertArrayEquals(new byte[] {}, actualPedersenHashCapsule.getData());
   }
 
   /**
    * Test {@link PedersenHashCapsule#PedersenHashCapsule(byte[])}.
-   * <p>
-   * Method under test: {@link PedersenHashCapsule#PedersenHashCapsule(byte[])}
+   *
+   * <p>Method under test: {@link PedersenHashCapsule#PedersenHashCapsule(byte[])}
    */
   @Test
   @Category(MaintainedByDiffblue.class)
   @MethodsUnderTest({"void PedersenHashCapsule.<init>(byte[])"})
   public void testNewPedersenHashCapsule2() {
     // Arrange and Act
-    PedersenHashCapsule actualPedersenHashCapsule = new PedersenHashCapsule(new byte[]{});
+    PedersenHashCapsule actualPedersenHashCapsule = new PedersenHashCapsule(new byte[] {});
 
     // Assert
     PedersenHash instance = actualPedersenHashCapsule.getInstance();
@@ -78,85 +79,103 @@ public class PedersenHashCapsuleDiffblueTest {
     assertTrue(instance.findInitializationErrors().isEmpty());
     assertTrue(instance.getAllFields().isEmpty());
     assertTrue(instance.isInitialized());
-    assertEquals(instance, instance.getDefaultInstanceForType());
+    PedersenHash actualDefaultInstanceForType = instance.getDefaultInstanceForType();
+    assertEquals(instance, actualDefaultInstanceForType);
     assertSame(content, instance.getContent());
-    assertArrayEquals(new byte[]{}, actualPedersenHashCapsule.getData());
+    assertArrayEquals(new byte[] {}, actualPedersenHashCapsule.getData());
   }
 
   /**
    * Test {@link PedersenHashCapsule#PedersenHashCapsule(byte[])}.
+   *
    * <ul>
-   *   <li>When array of {@code byte} with lf and zero.</li>
-   *   <li>Then return Instance is {@code null}.</li>
+   *   <li>When {@code A A A A A A A A} Bytes is {@code UTF-8}.
+   *   <li>Then return Instance is {@code null}.
    * </ul>
-   * <p>
-   * Method under test: {@link PedersenHashCapsule#PedersenHashCapsule(byte[])}
+   *
+   * <p>Method under test: {@link PedersenHashCapsule#PedersenHashCapsule(byte[])}
    */
   @Test
   @Category(MaintainedByDiffblue.class)
   @MethodsUnderTest({"void PedersenHashCapsule.<init>(byte[])"})
-  public void testNewPedersenHashCapsule_whenArrayOfByteWithLfAndZero_thenReturnInstanceIsNull() {
+  public void testNewPedersenHashCapsule_whenAAAAAAAABytesIsUtf8_thenReturnInstanceIsNull()
+      throws UnsupportedEncodingException {
     // Arrange, Act and Assert
-    assertNull((new PedersenHashCapsule(new byte[]{'\n', 0, 'A', 'X', 'A', 'X', 'A', 'X'})).getInstance());
+    assertNull(new PedersenHashCapsule("A\nA\nA\nA\nA\nA\nA\nA\n".getBytes("UTF-8")).getInstance());
   }
 
   /**
    * Test {@link PedersenHashCapsule#PedersenHashCapsule(byte[])}.
+   *
    * <ul>
-   *   <li>When array of {@code byte} with {@link Byte#MIN_VALUE} and {@code X}.</li>
+   *   <li>When {@code A A A A A A A} Bytes is {@code UTF-8}.
+   *   <li>Then return Instance is {@code null}.
    * </ul>
-   * <p>
-   * Method under test: {@link PedersenHashCapsule#PedersenHashCapsule(byte[])}
+   *
+   * <p>Method under test: {@link PedersenHashCapsule#PedersenHashCapsule(byte[])}
    */
   @Test
   @Category(MaintainedByDiffblue.class)
   @MethodsUnderTest({"void PedersenHashCapsule.<init>(byte[])"})
-  public void testNewPedersenHashCapsule_whenArrayOfByteWithMin_valueAndX() {
+  public void testNewPedersenHashCapsule_whenAAAAAAABytesIsUtf8_thenReturnInstanceIsNull()
+      throws UnsupportedEncodingException {
     // Arrange, Act and Assert
-    assertNull((new PedersenHashCapsule(new byte[]{Byte.MIN_VALUE, 'X', 'A', 'X', 'A', 'X', 'A', -1})).getInstance());
+    assertNull(
+        new PedersenHashCapsule("\n\nA\nA\nA\nA\nA\nA\nA\n".getBytes("UTF-8")).getInstance());
   }
 
   /**
    * Test {@link PedersenHashCapsule#PedersenHashCapsule(byte[])}.
+   *
    * <ul>
-   *   <li>When array of {@code byte} with minus one and {@code X}.</li>
+   *   <li>When array of {@code byte} with minus one and {@code X}.
    * </ul>
-   * <p>
-   * Method under test: {@link PedersenHashCapsule#PedersenHashCapsule(byte[])}
+   *
+   * <p>Method under test: {@link PedersenHashCapsule#PedersenHashCapsule(byte[])}
    */
   @Test
   @Category(MaintainedByDiffblue.class)
   @MethodsUnderTest({"void PedersenHashCapsule.<init>(byte[])"})
   public void testNewPedersenHashCapsule_whenArrayOfByteWithMinusOneAndX() {
-    // Arrange, Act and Assert
-    assertNull((new PedersenHashCapsule(new byte[]{-1, 'X', 'A', 'X', 'A', 'X', 'A', 'X'})).getInstance());
+    // Arrange and Act
+    PedersenHashCapsule actualPedersenHashCapsule =
+        new PedersenHashCapsule(new byte[] {-1, 'X', 'A', 'X', 'A', 'X', 'A', 'X'});
+
+    // Assert
+    assertNull(actualPedersenHashCapsule.getInstance());
   }
 
   /**
    * Test {@link PedersenHashCapsule#PedersenHashCapsule(byte[])}.
+   *
    * <ul>
-   *   <li>When array of {@code byte} with zero and {@code X}.</li>
-   *   <li>Then return Instance is {@code null}.</li>
+   *   <li>When array of {@code byte} with zero and {@code X}.
+   *   <li>Then return Instance is {@code null}.
    * </ul>
-   * <p>
-   * Method under test: {@link PedersenHashCapsule#PedersenHashCapsule(byte[])}
+   *
+   * <p>Method under test: {@link PedersenHashCapsule#PedersenHashCapsule(byte[])}
    */
   @Test
   @Category(MaintainedByDiffblue.class)
   @MethodsUnderTest({"void PedersenHashCapsule.<init>(byte[])"})
   public void testNewPedersenHashCapsule_whenArrayOfByteWithZeroAndX_thenReturnInstanceIsNull() {
-    // Arrange, Act and Assert
-    assertNull((new PedersenHashCapsule(new byte[]{0, 'X', 'A', 'X', 'A', 'X', 'A', 'X'})).getInstance());
+    // Arrange and Act
+    PedersenHashCapsule actualPedersenHashCapsule =
+        new PedersenHashCapsule(new byte[] {0, 'X', 'A', 'X', 'A', 'X', 'A', 'X'});
+
+    // Assert
+    assertNull(actualPedersenHashCapsule.getInstance());
   }
 
   /**
    * Test {@link PedersenHashCapsule#PedersenHashCapsule(byte[])}.
+   *
    * <ul>
-   *   <li>When {@code AXAXAXAX} Bytes is {@code UTF-8}.</li>
-   *   <li>Then return Instance is {@code null}.</li>
+   *   <li>When {@code AXAXAXAX} Bytes is {@code UTF-8}.
+   *   <li>Then return Instance is {@code null}.
    * </ul>
-   * <p>
-   * Method under test: {@link PedersenHashCapsule#PedersenHashCapsule(byte[])}
+   *
+   * <p>Method under test: {@link PedersenHashCapsule#PedersenHashCapsule(byte[])}
    */
   @Test
   @Category(MaintainedByDiffblue.class)
@@ -164,35 +183,43 @@ public class PedersenHashCapsuleDiffblueTest {
   public void testNewPedersenHashCapsule_whenAxaxaxaxBytesIsUtf8_thenReturnInstanceIsNull()
       throws UnsupportedEncodingException {
     // Arrange, Act and Assert
-    assertNull((new PedersenHashCapsule("AXAXAXAX".getBytes("UTF-8"))).getInstance());
+    assertNull(new PedersenHashCapsule("AXAXAXAX".getBytes("UTF-8")).getInstance());
   }
 
   /**
    * Test {@link PedersenHashCapsule#PedersenHashCapsule(byte[])}.
+   *
    * <ul>
-   *   <li>When {@code XAXAXAX} Bytes is {@code UTF-8}.</li>
-   *   <li>Then return Instance is {@code null}.</li>
+   *   <li>When lf.
+   *   <li>Then return Instance is {@code null}.
    * </ul>
-   * <p>
-   * Method under test: {@link PedersenHashCapsule#PedersenHashCapsule(byte[])}
+   *
+   * <p>Method under test: {@link PedersenHashCapsule#PedersenHashCapsule(byte[])}
    */
   @Test
   @Category(MaintainedByDiffblue.class)
   @MethodsUnderTest({"void PedersenHashCapsule.<init>(byte[])"})
-  public void testNewPedersenHashCapsule_whenXaxaxaxBytesIsUtf8_thenReturnInstanceIsNull()
-      throws UnsupportedEncodingException {
-    // Arrange, Act and Assert
-    assertNull((new PedersenHashCapsule("\nXAXAXAX".getBytes("UTF-8"))).getInstance());
+  public void testNewPedersenHashCapsule_whenLf_thenReturnInstanceIsNull() {
+    // Arrange and Act
+    PedersenHashCapsule actualPedersenHashCapsule =
+        new PedersenHashCapsule(
+            new byte[] {
+              'A', '\n', 'A', '\n', 'A', '\n', 'A', '\n', 'A', '\n', 0, '\n', 'A', '\n', 'A', '\n'
+            });
+
+    // Assert
+    assertNull(actualPedersenHashCapsule.getInstance());
   }
 
   /**
    * Test {@link PedersenHashCapsule#PedersenHashCapsule(byte[])}.
+   *
    * <ul>
-   *   <li>When {@code XXAXAXAX} Bytes is {@code UTF-8}.</li>
-   *   <li>Then return Instance is {@code null}.</li>
+   *   <li>When {@code XXAXAXAX} Bytes is {@code UTF-8}.
+   *   <li>Then return Instance is {@code null}.
    * </ul>
-   * <p>
-   * Method under test: {@link PedersenHashCapsule#PedersenHashCapsule(byte[])}
+   *
+   * <p>Method under test: {@link PedersenHashCapsule#PedersenHashCapsule(byte[])}
    */
   @Test
   @Category(MaintainedByDiffblue.class)
@@ -200,13 +227,13 @@ public class PedersenHashCapsuleDiffblueTest {
   public void testNewPedersenHashCapsule_whenXxaxaxaxBytesIsUtf8_thenReturnInstanceIsNull()
       throws UnsupportedEncodingException {
     // Arrange, Act and Assert
-    assertNull((new PedersenHashCapsule("XXAXAXAX".getBytes("UTF-8"))).getInstance());
+    assertNull(new PedersenHashCapsule("XXAXAXAX".getBytes("UTF-8")).getInstance());
   }
 
   /**
    * Test {@link PedersenHashCapsule#uncommitted()}.
-   * <p>
-   * Method under test: {@link PedersenHashCapsule#uncommitted()}
+   *
+   * <p>Method under test: {@link PedersenHashCapsule#uncommitted()}
    */
   @Test
   @Category(MaintainedByDiffblue.class)
@@ -230,14 +257,18 @@ public class PedersenHashCapsuleDiffblueTest {
     assertTrue(actualUncommittedResult.isPresent());
     assertTrue(instance.isInitialized());
     assertSame(content, instance.getContent());
-    assertArrayEquals(new byte[]{'\n', ' ', 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0,
-        0, 0, 0, 0, 0, 0, 0}, actualUncommittedResult.getData());
+    assertArrayEquals(
+        new byte[] {
+          '\n', ' ', 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0,
+          0, 0, 0, 0, 0, 0
+        },
+        actualUncommittedResult.getData());
   }
 
   /**
    * Test {@link PedersenHashCapsule#getContent()}.
-   * <p>
-   * Method under test: {@link PedersenHashCapsule#getContent()}
+   *
+   * <p>Method under test: {@link PedersenHashCapsule#getContent()}
    */
   @Test
   @Category(MaintainedByDiffblue.class)
@@ -261,14 +292,14 @@ public class PedersenHashCapsuleDiffblueTest {
     assertEquals((byte) 0, iteratorResult.next().byteValue());
     assertFalse(actualContent.isEmpty());
     assertTrue(iteratorResult.hasNext());
-    ByteString expectedContent = actualContent.EMPTY;
-    assertSame(expectedContent, uncommittedResult.getInstance().getDefaultInstanceForType().getContent());
+    assertSame(
+        ByteString.EMPTY, uncommittedResult.getInstance().getDefaultInstanceForType().getContent());
   }
 
   /**
    * Test {@link PedersenHashCapsule#setContent(ByteString)}.
-   * <p>
-   * Method under test: {@link PedersenHashCapsule#setContent(ByteString)}
+   *
+   * <p>Method under test: {@link PedersenHashCapsule#setContent(ByteString)}
    */
   @Test
   @Category(MaintainedByDiffblue.class)
@@ -289,25 +320,28 @@ public class PedersenHashCapsuleDiffblueTest {
     assertEquals(99, messageTypes.get(1).toProto().getSerializedSize());
     assertSame(content, uncommittedResult.getContent());
     assertSame(content, instance.getContent());
-    assertArrayEquals(new byte[]{'\n', 0}, uncommittedResult.getData());
+    assertArrayEquals(new byte[] {'\n', 0}, uncommittedResult.getData());
   }
 
   /**
    * Test {@link PedersenHashCapsule#getData()}.
+   *
    * <ul>
-   *   <li>Given {@link ByteString} {@link ByteString#isEmpty()} return {@code true}.</li>
-   *   <li>Then calls {@link ByteString#isEmpty()}.</li>
+   *   <li>Given {@link ByteString} {@link ByteString#isEmpty()} return {@code true}.
+   *   <li>Then calls {@link ByteString#isEmpty()}.
    * </ul>
-   * <p>
-   * Method under test: {@link PedersenHashCapsule#getData()}
+   *
+   * <p>Method under test: {@link PedersenHashCapsule#getData()}
    */
   @Test
   @Category(MaintainedByDiffblue.class)
   @MethodsUnderTest({"byte[] PedersenHashCapsule.getData()"})
-  public void testGetData_givenByteStringIsEmptyReturnTrue_thenCallsIsEmpty() throws ZksnarkException {
+  public void testGetData_givenByteStringIsEmptyReturnTrue_thenCallsIsEmpty()
+      throws ZksnarkException {
     // Arrange
     ByteString content = mock(ByteString.class);
     when(content.isEmpty()).thenReturn(true);
+
     PedersenHashCapsule uncommittedResult = PedersenHashCapsule.uncommitted();
     uncommittedResult.setContent(content);
 
@@ -316,48 +350,55 @@ public class PedersenHashCapsuleDiffblueTest {
 
     // Assert
     verify(content, atLeast(1)).isEmpty();
-    assertArrayEquals(new byte[]{}, actualData);
+    assertArrayEquals(new byte[] {}, actualData);
   }
 
   /**
    * Test {@link PedersenHashCapsule#getData()}.
+   *
    * <ul>
-   *   <li>Given {@link PedersenHashCapsule#PedersenHashCapsule()}.</li>
-   *   <li>Then return empty array of {@code byte}.</li>
+   *   <li>Given {@link PedersenHashCapsule#PedersenHashCapsule()}.
+   *   <li>Then return empty array of {@code byte}.
    * </ul>
-   * <p>
-   * Method under test: {@link PedersenHashCapsule#getData()}
+   *
+   * <p>Method under test: {@link PedersenHashCapsule#getData()}
    */
   @Test
   @Category(MaintainedByDiffblue.class)
   @MethodsUnderTest({"byte[] PedersenHashCapsule.getData()"})
   public void testGetData_givenPedersenHashCapsule_thenReturnEmptyArrayOfByte() {
     // Arrange, Act and Assert
-    assertArrayEquals(new byte[]{}, (new PedersenHashCapsule()).getData());
+    assertArrayEquals(new byte[] {}, new PedersenHashCapsule().getData());
   }
 
   /**
    * Test {@link PedersenHashCapsule#getData()}.
+   *
    * <ul>
-   *   <li>Given uncommitted.</li>
-   *   <li>Then return array of {@code byte} with lf and space.</li>
+   *   <li>Given uncommitted.
+   *   <li>Then return array of {@code byte} with lf and space.
    * </ul>
-   * <p>
-   * Method under test: {@link PedersenHashCapsule#getData()}
+   *
+   * <p>Method under test: {@link PedersenHashCapsule#getData()}
    */
   @Test
   @Category(MaintainedByDiffblue.class)
   @MethodsUnderTest({"byte[] PedersenHashCapsule.getData()"})
-  public void testGetData_givenUncommitted_thenReturnArrayOfByteWithLfAndSpace() throws ZksnarkException {
+  public void testGetData_givenUncommitted_thenReturnArrayOfByteWithLfAndSpace()
+      throws ZksnarkException {
     // Arrange, Act and Assert
-    assertArrayEquals(new byte[]{'\n', ' ', 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0,
-        0, 0, 0, 0, 0, 0, 0}, PedersenHashCapsule.uncommitted().getData());
+    assertArrayEquals(
+        new byte[] {
+          '\n', ' ', 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0,
+          0, 0, 0, 0, 0, 0
+        },
+        PedersenHashCapsule.uncommitted().getData());
   }
 
   /**
    * Test {@link PedersenHashCapsule#getInstance()}.
-   * <p>
-   * Method under test: {@link PedersenHashCapsule#getInstance()}
+   *
+   * <p>Method under test: {@link PedersenHashCapsule#getInstance()}
    */
   @Test
   @Category(MaintainedByDiffblue.class)
@@ -376,20 +417,23 @@ public class PedersenHashCapsuleDiffblueTest {
 
   /**
    * Test {@link PedersenHashCapsule#isPresent()}.
+   *
    * <ul>
-   *   <li>Given {@link ByteString} {@link ByteString#isEmpty()} return {@code true}.</li>
-   *   <li>Then calls {@link ByteString#isEmpty()}.</li>
+   *   <li>Given {@link ByteString} {@link ByteString#isEmpty()} return {@code true}.
+   *   <li>Then calls {@link ByteString#isEmpty()}.
    * </ul>
-   * <p>
-   * Method under test: {@link PedersenHashCapsule#isPresent()}
+   *
+   * <p>Method under test: {@link PedersenHashCapsule#isPresent()}
    */
   @Test
   @Category(MaintainedByDiffblue.class)
   @MethodsUnderTest({"boolean PedersenHashCapsule.isPresent()"})
-  public void testIsPresent_givenByteStringIsEmptyReturnTrue_thenCallsIsEmpty() throws ZksnarkException {
+  public void testIsPresent_givenByteStringIsEmptyReturnTrue_thenCallsIsEmpty()
+      throws ZksnarkException {
     // Arrange
     ByteString content = mock(ByteString.class);
     when(content.isEmpty()).thenReturn(true);
+
     PedersenHashCapsule uncommittedResult = PedersenHashCapsule.uncommitted();
     uncommittedResult.setContent(content);
 
@@ -403,29 +447,31 @@ public class PedersenHashCapsuleDiffblueTest {
 
   /**
    * Test {@link PedersenHashCapsule#isPresent()}.
+   *
    * <ul>
-   *   <li>Given {@link PedersenHashCapsule#PedersenHashCapsule()}.</li>
-   *   <li>Then return {@code false}.</li>
+   *   <li>Given {@link PedersenHashCapsule#PedersenHashCapsule()}.
+   *   <li>Then return {@code false}.
    * </ul>
-   * <p>
-   * Method under test: {@link PedersenHashCapsule#isPresent()}
+   *
+   * <p>Method under test: {@link PedersenHashCapsule#isPresent()}
    */
   @Test
   @Category(MaintainedByDiffblue.class)
   @MethodsUnderTest({"boolean PedersenHashCapsule.isPresent()"})
   public void testIsPresent_givenPedersenHashCapsule_thenReturnFalse() {
     // Arrange, Act and Assert
-    assertFalse((new PedersenHashCapsule()).isPresent());
+    assertFalse(new PedersenHashCapsule().isPresent());
   }
 
   /**
    * Test {@link PedersenHashCapsule#isPresent()}.
+   *
    * <ul>
-   *   <li>Given uncommitted.</li>
-   *   <li>Then return {@code true}.</li>
+   *   <li>Given uncommitted.
+   *   <li>Then return {@code true}.
    * </ul>
-   * <p>
-   * Method under test: {@link PedersenHashCapsule#isPresent()}
+   *
+   * <p>Method under test: {@link PedersenHashCapsule#isPresent()}
    */
   @Test
   @Category(MaintainedByDiffblue.class)
