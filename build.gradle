@@ -1,19 +1,6 @@
-plugins {
-    id 'info.solidsoft.pitest' version '1.15.0' apply false
-}
-
-apply plugin: 'info.solidsoft.pitest.aggregator'
-
 allprojects {
     version = "1.0.0"
     apply plugin: "java-library"
-
-    repositories {
-        mavenLocal()
-        mavenCentral()
-        maven { url 'https://repo.spring.io/plugins-release' }
-        maven { url 'https://jitpack.io' }
-    }
 }
 
 subprojects {
@@ -28,46 +15,6 @@ subprojects {
         toolVersion = "0.8.12" // see https://www.jacoco.org/jacoco/trunk/doc/changes.html
     }
 
-    pluginManager.withPlugin('java') {
-        apply plugin: "info.solidsoft.pitest"
-
-        pitest {
-            threads = 4
-            pitestVersion = '1.15.0'
-            outputFormats = ['XML', 'HTML']
-            targetClasses = ['org.tron.*']
-            targetTests = ['*Test']
-            // ignore generated proto files
-            fileExtensionsToFilter.add("proto")
-
-            // Diffblue only
-            // targetTests = ['*DiffblueTest']
-            // Manual only
-            excludedTestClasses = ['*DiffblueTest']
-
-            // This class seems to create files that eventually fill
-            // up /tmp directory
-            excludedClasses = ["org.tron.core.zen.ZksnarkInitService"]
-
-            exportLineCoverage = true
-            timestampedReports = false
-
-            reportAggregator {
-            }
-
-            if (project.name in ["protocol", "example", "example:actuator-example"]) {
-                // set target classes to nothing to avoid weird out of bounds exception
-                targetClasses = ['some-rambled-garbage: this will get no matches']
-                failWhenNoMutations = false
-            }
-
-            // Manual only:
-            if (!(project.name in ["framework", "plugins"])) {
-                failWhenNoMutations = false
-            }
-        }
-    }
-
     buildscript {
         repositories {
             mavenCentral()
@@ -80,6 +27,13 @@ subprojects {
             classpath 'com.google.protobuf:protobuf-gradle-plugin:0.9.1'
             classpath "gradle.plugin.com.github.johnrengelman:shadow:7.1.2"
         }
+    }
+
+    repositories {
+        mavenLocal()
+        mavenCentral()
+        maven { url 'https://repo.spring.io/plugins-release' }
+        maven { url 'https://jitpack.io' }
     }
 
     dependencies {
@@ -127,3 +81,11 @@ task copyToParent(type: Copy) {
 }
 
 build.finalizedBy(copyToParent)
+
+gradle.buildFinished {
+    if (project.hasProperty('cleanSubBuild')) {
+        subprojects {
+            buildDir.deleteDir()
+        }
+    }
+}
