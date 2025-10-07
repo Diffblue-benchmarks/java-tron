@@ -11,7 +11,8 @@ import static org.mockito.Mockito.doNothing;
 import static org.mockito.Mockito.mock;
 import static org.mockito.Mockito.verify;
 import static org.mockito.Mockito.when;
-import com.diffblue.cover.annotations.MaintainedByDiffblue;
+import com.diffblue.cover.annotations.ContributionFromDiffblue;
+import com.diffblue.cover.annotations.ManagedByDiffblue;
 import com.diffblue.cover.annotations.MethodsUnderTest;
 import java.io.BufferedReader;
 import java.io.IOException;
@@ -66,7 +67,8 @@ public class GetDiversifierServletDiffblueTest {
    * HttpServletResponse)}
    */
   @Test
-  @Category(MaintainedByDiffblue.class)
+  @Category(ContributionFromDiffblue.class)
+  @ManagedByDiffblue
   @MethodsUnderTest({"void GetDiversifierServlet.doPost(HttpServletRequest, HttpServletResponse)"})
   public void testDoPost() throws IOException, ZksnarkException {
     // Arrange
@@ -100,7 +102,8 @@ public class GetDiversifierServletDiffblueTest {
    * HttpServletResponse)}
    */
   @Test
-  @Category(MaintainedByDiffblue.class)
+  @Category(ContributionFromDiffblue.class)
+  @ManagedByDiffblue
   @MethodsUnderTest({"void GetDiversifierServlet.doPost(HttpServletRequest, HttpServletResponse)"})
   public void testDoPost2() throws IOException {
     // Arrange
@@ -131,7 +134,8 @@ public class GetDiversifierServletDiffblueTest {
    * HttpServletResponse)}
    */
   @Test
-  @Category(MaintainedByDiffblue.class)
+  @Category(ContributionFromDiffblue.class)
+  @ManagedByDiffblue
   @MethodsUnderTest({"void GetDiversifierServlet.doPost(HttpServletRequest, HttpServletResponse)"})
   public void testDoPost3() throws IOException, ZksnarkException {
     // Arrange
@@ -164,7 +168,8 @@ public class GetDiversifierServletDiffblueTest {
    * HttpServletResponse)}
    */
   @Test
-  @Category(MaintainedByDiffblue.class)
+  @Category(ContributionFromDiffblue.class)
+  @ManagedByDiffblue
   @MethodsUnderTest({"void GetDiversifierServlet.doPost(HttpServletRequest, HttpServletResponse)"})
   public void testDoPost4() throws IOException {
     // Arrange
@@ -217,7 +222,8 @@ public class GetDiversifierServletDiffblueTest {
    * HttpServletResponse)}
    */
   @Test
-  @Category(MaintainedByDiffblue.class)
+  @Category(ContributionFromDiffblue.class)
+  @ManagedByDiffblue
   @MethodsUnderTest({"void GetDiversifierServlet.doPost(HttpServletRequest, HttpServletResponse)"})
   public void testDoPost_givenStringReaderWithFoo_thenCallsSetCookies() throws IOException {
     // Arrange
@@ -251,7 +257,8 @@ public class GetDiversifierServletDiffblueTest {
    * HttpServletResponse)}
    */
   @Test
-  @Category(MaintainedByDiffblue.class)
+  @Category(ContributionFromDiffblue.class)
+  @ManagedByDiffblue
   @MethodsUnderTest({"void GetDiversifierServlet.doPost(HttpServletRequest, HttpServletResponse)"})
   public void testDoPost_thenHttpServletResponseWrapperWithResponseIsResponseResponseResponse()
       throws IOException, ZksnarkException {
@@ -319,7 +326,8 @@ public class GetDiversifierServletDiffblueTest {
    * HttpServletResponse)}
    */
   @Test
-  @Category(MaintainedByDiffblue.class)
+  @Category(ContributionFromDiffblue.class)
+  @ManagedByDiffblue
   @MethodsUnderTest({"void GetDiversifierServlet.doPost(HttpServletRequest, HttpServletResponse)"})
   public void testDoPost_thenRequestWithChannelIsHttpChannelAndInputIsHttpInputInputStateIsTwo()
       throws IOException {
@@ -359,7 +367,8 @@ public class GetDiversifierServletDiffblueTest {
    * HttpServletResponse)}
    */
   @Test
-  @Category(MaintainedByDiffblue.class)
+  @Category(ContributionFromDiffblue.class)
+  @ManagedByDiffblue
   @MethodsUnderTest({"void GetDiversifierServlet.doGet(HttpServletRequest, HttpServletResponse)"})
   public void testDoGet() throws IOException {
     // Arrange
@@ -390,7 +399,8 @@ public class GetDiversifierServletDiffblueTest {
    * HttpServletResponse)}
    */
   @Test
-  @Category(MaintainedByDiffblue.class)
+  @Category(ContributionFromDiffblue.class)
+  @ManagedByDiffblue
   @MethodsUnderTest({"void GetDiversifierServlet.doGet(HttpServletRequest, HttpServletResponse)"})
   public void testDoGet2() throws IOException, ZksnarkException {
     // Arrange
@@ -432,7 +442,8 @@ public class GetDiversifierServletDiffblueTest {
    * HttpServletResponse)}
    */
   @Test
-  @Category(MaintainedByDiffblue.class)
+  @Category(ContributionFromDiffblue.class)
+  @ManagedByDiffblue
   @MethodsUnderTest({"void GetDiversifierServlet.doGet(HttpServletRequest, HttpServletResponse)"})
   public void testDoGet_givenEmptyString_thenCallsGetWriter() throws IOException, ZksnarkException {
     // Arrange
@@ -465,7 +476,8 @@ public class GetDiversifierServletDiffblueTest {
    * HttpServletResponse)}
    */
   @Test
-  @Category(MaintainedByDiffblue.class)
+  @Category(ContributionFromDiffblue.class)
+  @ManagedByDiffblue
   @MethodsUnderTest({"void GetDiversifierServlet.doGet(HttpServletRequest, HttpServletResponse)"})
   public void testDoGet_givenRuntimeException_thenThrowRuntimeException()
       throws IOException, ZksnarkException {
@@ -501,7 +513,8 @@ public class GetDiversifierServletDiffblueTest {
    * HttpServletResponse)}
    */
   @Test
-  @Category(MaintainedByDiffblue.class)
+  @Category(ContributionFromDiffblue.class)
+  @ManagedByDiffblue
   @MethodsUnderTest({"void GetDiversifierServlet.doGet(HttpServletRequest, HttpServletResponse)"})
   public void testDoGet_thenHttpServletResponseWrapperWithResponseIsResponseResponseResponse()
       throws IOException, ZksnarkException {
@@ -570,7 +583,8 @@ public class GetDiversifierServletDiffblueTest {
    * HttpServletResponse)}
    */
   @Test
-  @Category(MaintainedByDiffblue.class)
+  @Category(ContributionFromDiffblue.class)
+  @ManagedByDiffblue
   @MethodsUnderTest({"void GetDiversifierServlet.doGet(HttpServletRequest, HttpServletResponse)"})
   public void testDoGet_whenCreateRequestHttpsExampleOrgExample()
       throws IOException, ZksnarkException {

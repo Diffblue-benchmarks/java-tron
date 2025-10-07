@@ -4,7 +4,8 @@ import static org.junit.Assert.assertArrayEquals;
 import static org.junit.Assert.assertEquals;
 import static org.junit.Assert.assertSame;
 import static org.junit.Assert.assertTrue;
-import com.diffblue.cover.annotations.MaintainedByDiffblue;
+import com.diffblue.cover.annotations.ContributionFromDiffblue;
+import com.diffblue.cover.annotations.ManagedByDiffblue;
 import com.diffblue.cover.annotations.MethodsUnderTest;
 import com.google.protobuf.ByteString;
 import com.google.protobuf.ByteString.ByteIterator;
@@ -21,7 +22,8 @@ public class MerkleRootDiffblueTest {
    * <p>Method under test: {@link MerkleRoot#root(List)}
    */
   @Test
-  @Category(MaintainedByDiffblue.class)
+  @Category(ContributionFromDiffblue.class)
+  @ManagedByDiffblue
   @MethodsUnderTest({"Sha256Hash MerkleRoot.root(List)"})
   public void testRoot() {
     // Arrange
@@ -68,7 +70,8 @@ public class MerkleRootDiffblueTest {
    * <p>Method under test: {@link MerkleRoot#root(List)}
    */
   @Test
-  @Category(MaintainedByDiffblue.class)
+  @Category(ContributionFromDiffblue.class)
+  @ManagedByDiffblue
   @MethodsUnderTest({"Sha256Hash MerkleRoot.root(List)"})
   public void testRoot2() {
     // Arrange
@@ -121,7 +124,8 @@ public class MerkleRootDiffblueTest {
    * <p>Method under test: {@link MerkleRoot#root(List)}
    */
   @Test
-  @Category(MaintainedByDiffblue.class)
+  @Category(ContributionFromDiffblue.class)
+  @ManagedByDiffblue
   @MethodsUnderTest({"Sha256Hash MerkleRoot.root(List)"})
   public void testRoot_givenZero_hash_thenReturnToBigIntegerToStringIs0() {
     // Arrange
@@ -166,7 +170,8 @@ public class MerkleRootDiffblueTest {
    * <p>Method under test: {@link MerkleRoot#root(List)}
    */
   @Test
-  @Category(MaintainedByDiffblue.class)
+  @Category(ContributionFromDiffblue.class)
+  @ManagedByDiffblue
   @MethodsUnderTest({"Sha256Hash MerkleRoot.root(List)"})
   public void testRoot_givenZero_hash_whenArrayListAddZero_hash_thenArrayListSizeIsFive() {
     // Arrange
@@ -226,7 +231,8 @@ public class MerkleRootDiffblueTest {
    * <p>Method under test: {@link MerkleRoot#root(List)}
    */
   @Test
-  @Category(MaintainedByDiffblue.class)
+  @Category(ContributionFromDiffblue.class)
+  @ManagedByDiffblue
   @MethodsUnderTest({"Sha256Hash MerkleRoot.root(List)"})
   public void testRoot_whenArrayList_thenReturnToBigIntegerToStringIs0() {
     // Arrange and Act

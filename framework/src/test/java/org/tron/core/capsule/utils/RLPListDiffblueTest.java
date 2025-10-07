@@ -6,7 +6,8 @@ import static org.junit.Assert.assertThrows;
 import static org.mockito.Mockito.mock;
 import static org.mockito.Mockito.verify;
 import static org.mockito.Mockito.when;
-import com.diffblue.cover.annotations.MaintainedByDiffblue;
+import com.diffblue.cover.annotations.ContributionFromDiffblue;
+import com.diffblue.cover.annotations.ManagedByDiffblue;
 import com.diffblue.cover.annotations.MethodsUnderTest;
 import java.io.UnsupportedEncodingException;
 import org.junit.Test;
@@ -23,7 +24,8 @@ public class RLPListDiffblueTest {
    * <p>Method under test: {@link RLPList#recursivePrint(RLPElement)}
    */
   @Test
-  @Category(MaintainedByDiffblue.class)
+  @Category(ContributionFromDiffblue.class)
+  @ManagedByDiffblue
   @MethodsUnderTest({"void RLPList.recursivePrint(RLPElement)"})
   public void testRecursivePrint_givenRuntimeException() {
     // Arrange
@@ -46,7 +48,8 @@ public class RLPListDiffblueTest {
    * <p>Method under test: {@link RLPList#recursivePrint(RLPElement)}
    */
   @Test
-  @Category(MaintainedByDiffblue.class)
+  @Category(ContributionFromDiffblue.class)
+  @ManagedByDiffblue
   @MethodsUnderTest({"void RLPList.recursivePrint(RLPElement)"})
   public void testRecursivePrint_whenNull_thenThrowRuntimeException() {
     // Arrange, Act and Assert
@@ -64,7 +67,8 @@ public class RLPListDiffblueTest {
    * <p>Method under test: {@link RLPList#recursivePrint(RLPElement)}
    */
   @Test
-  @Category(MaintainedByDiffblue.class)
+  @Category(ContributionFromDiffblue.class)
+  @ManagedByDiffblue
   @MethodsUnderTest({"void RLPList.recursivePrint(RLPElement)"})
   public void testRecursivePrint_whenRLPElementGetRLPDataReturnNull_thenCallsGetRLPData() {
     // Arrange
@@ -90,7 +94,8 @@ public class RLPListDiffblueTest {
    * </ul>
    */
   @Test
-  @Category(MaintainedByDiffblue.class)
+  @Category(ContributionFromDiffblue.class)
+  @ManagedByDiffblue
   @MethodsUnderTest({
     "void RLPList.<init>()",
     "byte[] RLPList.getRLPData()",

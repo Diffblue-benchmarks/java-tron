@@ -13,7 +13,8 @@ import static org.mockito.Mockito.mock;
 import static org.mockito.Mockito.verify;
 import static org.mockito.Mockito.when;
 import com.alibaba.fastjson.serializer.SerializeWriter;
-import com.diffblue.cover.annotations.MaintainedByDiffblue;
+import com.diffblue.cover.annotations.ContributionFromDiffblue;
+import com.diffblue.cover.annotations.ManagedByDiffblue;
 import com.diffblue.cover.annotations.MethodsUnderTest;
 import com.google.protobuf.ByteString;
 import java.io.BufferedReader;
@@ -66,7 +67,8 @@ public class GetAssetIssueByNameServletDiffblueTest {
    * HttpServletResponse)}
    */
   @Test
-  @Category(MaintainedByDiffblue.class)
+  @Category(ContributionFromDiffblue.class)
+  @ManagedByDiffblue
   @MethodsUnderTest({
     "void GetAssetIssueByNameServlet.doGet(HttpServletRequest, HttpServletResponse)"
   })
@@ -103,7 +105,8 @@ public class GetAssetIssueByNameServletDiffblueTest {
    * HttpServletResponse)}
    */
   @Test
-  @Category(MaintainedByDiffblue.class)
+  @Category(ContributionFromDiffblue.class)
+  @ManagedByDiffblue
   @MethodsUnderTest({
     "void GetAssetIssueByNameServlet.doGet(HttpServletRequest, HttpServletResponse)"
   })
@@ -136,7 +139,8 @@ public class GetAssetIssueByNameServletDiffblueTest {
    * HttpServletResponse)}
    */
   @Test
-  @Category(MaintainedByDiffblue.class)
+  @Category(ContributionFromDiffblue.class)
+  @ManagedByDiffblue
   @MethodsUnderTest({
     "void GetAssetIssueByNameServlet.doGet(HttpServletRequest, HttpServletResponse)"
   })
@@ -177,7 +181,8 @@ public class GetAssetIssueByNameServletDiffblueTest {
    * HttpServletResponse)}
    */
   @Test
-  @Category(MaintainedByDiffblue.class)
+  @Category(ContributionFromDiffblue.class)
+  @ManagedByDiffblue
   @MethodsUnderTest({
     "void GetAssetIssueByNameServlet.doGet(HttpServletRequest, HttpServletResponse)"
   })
@@ -212,7 +217,8 @@ public class GetAssetIssueByNameServletDiffblueTest {
    * HttpServletResponse)}
    */
   @Test
-  @Category(MaintainedByDiffblue.class)
+  @Category(ContributionFromDiffblue.class)
+  @ManagedByDiffblue
   @MethodsUnderTest({
     "void GetAssetIssueByNameServlet.doGet(HttpServletRequest, HttpServletResponse)"
   })
@@ -247,7 +253,8 @@ public class GetAssetIssueByNameServletDiffblueTest {
    * HttpServletResponse)}
    */
   @Test
-  @Category(MaintainedByDiffblue.class)
+  @Category(ContributionFromDiffblue.class)
+  @ManagedByDiffblue
   @MethodsUnderTest({
     "void GetAssetIssueByNameServlet.doGet(HttpServletRequest, HttpServletResponse)"
   })
@@ -279,7 +286,8 @@ public class GetAssetIssueByNameServletDiffblueTest {
    * HttpServletResponse)}
    */
   @Test
-  @Category(MaintainedByDiffblue.class)
+  @Category(ContributionFromDiffblue.class)
+  @ManagedByDiffblue
   @MethodsUnderTest({
     "void GetAssetIssueByNameServlet.doGet(HttpServletRequest, HttpServletResponse)"
   })
@@ -313,7 +321,8 @@ public class GetAssetIssueByNameServletDiffblueTest {
    * HttpServletResponse)}
    */
   @Test
-  @Category(MaintainedByDiffblue.class)
+  @Category(ContributionFromDiffblue.class)
+  @ManagedByDiffblue
   @MethodsUnderTest({
     "void GetAssetIssueByNameServlet.doGet(HttpServletRequest, HttpServletResponse)"
   })
@@ -381,7 +390,8 @@ public class GetAssetIssueByNameServletDiffblueTest {
    * HttpServletResponse)}
    */
   @Test
-  @Category(MaintainedByDiffblue.class)
+  @Category(ContributionFromDiffblue.class)
+  @ManagedByDiffblue
   @MethodsUnderTest({
     "void GetAssetIssueByNameServlet.doGet(HttpServletRequest, HttpServletResponse)"
   })
@@ -418,7 +428,8 @@ public class GetAssetIssueByNameServletDiffblueTest {
    * HttpServletResponse)}
    */
   @Test
-  @Category(MaintainedByDiffblue.class)
+  @Category(ContributionFromDiffblue.class)
+  @ManagedByDiffblue
   @MethodsUnderTest({
     "void GetAssetIssueByNameServlet.doPost(HttpServletRequest, HttpServletResponse)"
   })
@@ -453,7 +464,8 @@ public class GetAssetIssueByNameServletDiffblueTest {
    * HttpServletResponse)}
    */
   @Test
-  @Category(MaintainedByDiffblue.class)
+  @Category(ContributionFromDiffblue.class)
+  @ManagedByDiffblue
   @MethodsUnderTest({
     "void GetAssetIssueByNameServlet.doPost(HttpServletRequest, HttpServletResponse)"
   })
@@ -486,7 +498,8 @@ public class GetAssetIssueByNameServletDiffblueTest {
    * HttpServletResponse)}
    */
   @Test
-  @Category(MaintainedByDiffblue.class)
+  @Category(ContributionFromDiffblue.class)
+  @ManagedByDiffblue
   @MethodsUnderTest({
     "void GetAssetIssueByNameServlet.doPost(HttpServletRequest, HttpServletResponse)"
   })
@@ -529,7 +542,8 @@ public class GetAssetIssueByNameServletDiffblueTest {
    * HttpServletResponse)}
    */
   @Test
-  @Category(MaintainedByDiffblue.class)
+  @Category(ContributionFromDiffblue.class)
+  @ManagedByDiffblue
   @MethodsUnderTest({
     "void GetAssetIssueByNameServlet.doPost(HttpServletRequest, HttpServletResponse)"
   })
@@ -577,7 +591,8 @@ public class GetAssetIssueByNameServletDiffblueTest {
    * HttpServletResponse)}
    */
   @Test
-  @Category(MaintainedByDiffblue.class)
+  @Category(ContributionFromDiffblue.class)
+  @ManagedByDiffblue
   @MethodsUnderTest({
     "void GetAssetIssueByNameServlet.doPost(HttpServletRequest, HttpServletResponse)"
   })
@@ -628,7 +643,8 @@ public class GetAssetIssueByNameServletDiffblueTest {
    * HttpServletResponse)}
    */
   @Test
-  @Category(MaintainedByDiffblue.class)
+  @Category(ContributionFromDiffblue.class)
+  @ManagedByDiffblue
   @MethodsUnderTest({
     "void GetAssetIssueByNameServlet.doPost(HttpServletRequest, HttpServletResponse)"
   })

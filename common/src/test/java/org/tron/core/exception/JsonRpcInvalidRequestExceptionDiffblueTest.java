@@ -3,7 +3,8 @@ package org.tron.core.exception;
 import static org.junit.Assert.assertEquals;
 import static org.junit.Assert.assertNull;
 import static org.junit.Assert.assertSame;
-import com.diffblue.cover.annotations.MaintainedByDiffblue;
+import com.diffblue.cover.annotations.ContributionFromDiffblue;
+import com.diffblue.cover.annotations.ManagedByDiffblue;
 import com.diffblue.cover.annotations.MethodsUnderTest;
 import org.junit.Test;
 import org.junit.experimental.categories.Category;
@@ -15,7 +16,8 @@ public class JsonRpcInvalidRequestExceptionDiffblueTest {
    * <p>Method under test: {@link JsonRpcInvalidRequestException#JsonRpcInvalidRequestException()}
    */
   @Test
-  @Category(MaintainedByDiffblue.class)
+  @Category(ContributionFromDiffblue.class)
+  @ManagedByDiffblue
   @MethodsUnderTest({"void JsonRpcInvalidRequestException.<init>()"})
   public void testNewJsonRpcInvalidRequestException() {
     // Arrange and Act
@@ -36,7 +38,8 @@ public class JsonRpcInvalidRequestExceptionDiffblueTest {
    * JsonRpcInvalidRequestException#JsonRpcInvalidRequestException(String)}
    */
   @Test
-  @Category(MaintainedByDiffblue.class)
+  @Category(ContributionFromDiffblue.class)
+  @ManagedByDiffblue
   @MethodsUnderTest({"void JsonRpcInvalidRequestException.<init>(String)"})
   public void testNewJsonRpcInvalidRequestException2() {
     // Arrange and Act
@@ -57,7 +60,8 @@ public class JsonRpcInvalidRequestExceptionDiffblueTest {
    * JsonRpcInvalidRequestException#JsonRpcInvalidRequestException(String, Throwable)}
    */
   @Test
-  @Category(MaintainedByDiffblue.class)
+  @Category(ContributionFromDiffblue.class)
+  @ManagedByDiffblue
   @MethodsUnderTest({"void JsonRpcInvalidRequestException.<init>(String, Throwable)"})
   public void testNewJsonRpcInvalidRequestException3() {
     // Arrange

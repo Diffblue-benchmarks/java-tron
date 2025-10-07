@@ -1,7 +1,8 @@
 package org.tron.core.vm.config;
 
 import static org.junit.Assert.assertFalse;
-import com.diffblue.cover.annotations.MaintainedByDiffblue;
+import com.diffblue.cover.annotations.ContributionFromDiffblue;
+import com.diffblue.cover.annotations.ManagedByDiffblue;
 import com.diffblue.cover.annotations.MethodsUnderTest;
 import org.junit.Test;
 import org.junit.experimental.categories.Category;
@@ -13,7 +14,8 @@ public class VMConfigDiffblueTest {
    * <p>Method under test: {@link VMConfig#vmTrace()}
    */
   @Test
-  @Category(MaintainedByDiffblue.class)
+  @Category(ContributionFromDiffblue.class)
+  @ManagedByDiffblue
   @MethodsUnderTest({"boolean VMConfig.vmTrace()"})
   public void testVmTrace() {
     // Arrange, Act and Assert
@@ -26,7 +28,8 @@ public class VMConfigDiffblueTest {
    * <p>Method under test: {@link VMConfig#vmTraceCompressed()}
    */
   @Test
-  @Category(MaintainedByDiffblue.class)
+  @Category(ContributionFromDiffblue.class)
+  @ManagedByDiffblue
   @MethodsUnderTest({"boolean VMConfig.vmTraceCompressed()"})
   public void testVmTraceCompressed() {
     // Arrange, Act and Assert

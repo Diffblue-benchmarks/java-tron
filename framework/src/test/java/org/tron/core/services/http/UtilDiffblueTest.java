@@ -9,7 +9,8 @@ import static org.junit.Assert.assertThrows;
 import static org.junit.Assert.assertTrue;
 import com.alibaba.fastjson.JSONArray;
 import com.alibaba.fastjson.JSONObject;
-import com.diffblue.cover.annotations.MaintainedByDiffblue;
+import com.diffblue.cover.annotations.ContributionFromDiffblue;
+import com.diffblue.cover.annotations.ManagedByDiffblue;
 import com.diffblue.cover.annotations.MethodsUnderTest;
 import com.google.protobuf.DescriptorProtos;
 import com.google.protobuf.DescriptorProtos.FeatureSet;
@@ -74,7 +75,8 @@ public class UtilDiffblueTest {
    * <p>Method under test: {@link Util#printErrorMsg(Exception)}
    */
   @Test
-  @Category(MaintainedByDiffblue.class)
+  @Category(ContributionFromDiffblue.class)
+  @ManagedByDiffblue
   @MethodsUnderTest({"String Util.printErrorMsg(Exception)"})
   public void testPrintErrorMsg_whenException_thenReturnErrorClassJavaLangExceptionNull() {
     // Arrange, Act and Assert
@@ -93,7 +95,8 @@ public class UtilDiffblueTest {
    * <p>Method under test: {@link Util#printErrorMsg(Exception)}
    */
   @Test
-  @Category(MaintainedByDiffblue.class)
+  @Category(ContributionFromDiffblue.class)
+  @ManagedByDiffblue
   @MethodsUnderTest({"String Util.printErrorMsg(Exception)"})
   public void testPrintErrorMsg_whenIOException_thenReturnErrorClassJavaIoIOExceptionNull() {
     // Arrange, Act and Assert
@@ -112,7 +115,8 @@ public class UtilDiffblueTest {
    * <p>Method under test: {@link Util#printBlockList(BlockList, boolean)}
    */
   @Test
-  @Category(MaintainedByDiffblue.class)
+  @Category(ContributionFromDiffblue.class)
+  @ManagedByDiffblue
   @MethodsUnderTest({"String Util.printBlockList(BlockList, boolean)"})
   public void testPrintBlockList_whenDefaultInstance_thenReturnBlock() {
     // Arrange, Act and Assert
@@ -130,7 +134,8 @@ public class UtilDiffblueTest {
    * <p>Method under test: {@link Util#printBlockList(BlockList, boolean)}
    */
   @Test
-  @Category(MaintainedByDiffblue.class)
+  @Category(ContributionFromDiffblue.class)
+  @ManagedByDiffblue
   @MethodsUnderTest({"String Util.printBlockList(BlockList, boolean)"})
   public void testPrintBlockList_whenFalse_thenReturnBlock() {
     // Arrange, Act and Assert
@@ -143,7 +148,8 @@ public class UtilDiffblueTest {
    * <p>Method under test: {@link Util#printBlock(Block, boolean)}
    */
   @Test
-  @Category(MaintainedByDiffblue.class)
+  @Category(ContributionFromDiffblue.class)
+  @ManagedByDiffblue
   @MethodsUnderTest({"String Util.printBlock(Block, boolean)"})
   public void testPrintBlock() {
     // Arrange, Act and Assert
@@ -162,7 +168,8 @@ public class UtilDiffblueTest {
    * <p>Method under test: {@link Util#printBlock(Block, boolean)}
    */
   @Test
-  @Category(MaintainedByDiffblue.class)
+  @Category(ContributionFromDiffblue.class)
+  @ManagedByDiffblue
   @MethodsUnderTest({"String Util.printBlock(Block, boolean)"})
   public void testPrintBlock_whenFalse() {
     // Arrange, Act and Assert
@@ -182,7 +189,8 @@ public class UtilDiffblueTest {
    * <p>Method under test: {@link Util#printBlockToJSON(Block, boolean)}
    */
   @Test
-  @Category(MaintainedByDiffblue.class)
+  @Category(ContributionFromDiffblue.class)
+  @ManagedByDiffblue
   @MethodsUnderTest({"JSONObject Util.printBlockToJSON(Block, boolean)"})
   public void testPrintBlockToJSON_whenDefaultInstance_thenReturnSizeIsOne() {
     // Arrange and Act
@@ -207,7 +215,8 @@ public class UtilDiffblueTest {
    * <p>Method under test: {@link Util#printTransactionList(TransactionList, boolean)}
    */
   @Test
-  @Category(MaintainedByDiffblue.class)
+  @Category(ContributionFromDiffblue.class)
+  @ManagedByDiffblue
   @MethodsUnderTest({"String Util.printTransactionList(TransactionList, boolean)"})
   public void testPrintTransactionList_whenDefaultInstance_thenReturnTransaction() {
     // Arrange, Act and Assert
@@ -227,7 +236,8 @@ public class UtilDiffblueTest {
    * <p>Method under test: {@link Util#printTransactionList(TransactionList, boolean)}
    */
   @Test
-  @Category(MaintainedByDiffblue.class)
+  @Category(ContributionFromDiffblue.class)
+  @ManagedByDiffblue
   @MethodsUnderTest({"String Util.printTransactionList(TransactionList, boolean)"})
   public void testPrintTransactionList_whenFalse_thenReturnTransaction() {
     // Arrange, Act and Assert
@@ -246,7 +256,8 @@ public class UtilDiffblueTest {
    * <p>Method under test: {@link Util#printTransactionIdList(GrpcAPI.TransactionIdList, boolean)}
    */
   @Test
-  @Category(MaintainedByDiffblue.class)
+  @Category(ContributionFromDiffblue.class)
+  @ManagedByDiffblue
   @MethodsUnderTest({"String Util.printTransactionIdList(GrpcAPI.TransactionIdList, boolean)"})
   public void testPrintTransactionIdList_thenReturnLeftCurlyBracketRightCurlyBracket() {
     // Arrange, Act and Assert
@@ -264,7 +275,8 @@ public class UtilDiffblueTest {
    * <p>Method under test: {@link Util#printTransactionIdList(GrpcAPI.TransactionIdList, boolean)}
    */
   @Test
-  @Category(MaintainedByDiffblue.class)
+  @Category(ContributionFromDiffblue.class)
+  @ManagedByDiffblue
   @MethodsUnderTest({"String Util.printTransactionIdList(GrpcAPI.TransactionIdList, boolean)"})
   public void testPrintTransactionIdList_whenFalse_thenReturnLeftCurlyBracketRightCurlyBracket() {
     // Arrange, Act and Assert
@@ -277,7 +289,8 @@ public class UtilDiffblueTest {
    * <p>Method under test: {@link Util#printTransactionListToJSON(List, boolean)}
    */
   @Test
-  @Category(MaintainedByDiffblue.class)
+  @Category(ContributionFromDiffblue.class)
+  @ManagedByDiffblue
   @MethodsUnderTest({"JSONArray Util.printTransactionListToJSON(List, boolean)"})
   public void testPrintTransactionListToJSON() {
     // Arrange and Act
@@ -298,7 +311,8 @@ public class UtilDiffblueTest {
    * <p>Method under test: {@link Util#printTransactionExtention(TransactionExtention, boolean)}
    */
   @Test
-  @Category(MaintainedByDiffblue.class)
+  @Category(ContributionFromDiffblue.class)
+  @ManagedByDiffblue
   @MethodsUnderTest({"String Util.printTransactionExtention(TransactionExtention, boolean)"})
   public void testPrintTransactionExtention_thenReturnLeftCurlyBracketRightCurlyBracket() {
     // Arrange, Act and Assert
@@ -316,7 +330,8 @@ public class UtilDiffblueTest {
    * <p>Method under test: {@link Util#printTransactionExtention(TransactionExtention, boolean)}
    */
   @Test
-  @Category(MaintainedByDiffblue.class)
+  @Category(ContributionFromDiffblue.class)
+  @ManagedByDiffblue
   @MethodsUnderTest({"String Util.printTransactionExtention(TransactionExtention, boolean)"})
   public void testPrintTransactionExtention_whenFalse() {
     // Arrange, Act and Assert
@@ -335,7 +350,8 @@ public class UtilDiffblueTest {
    * boolean)}
    */
   @Test
-  @Category(MaintainedByDiffblue.class)
+  @Category(ContributionFromDiffblue.class)
+  @ManagedByDiffblue
   @MethodsUnderTest({
     "String Util.printEstimateEnergyMessage(GrpcAPI.EstimateEnergyMessage, boolean)"
   })
@@ -356,7 +372,8 @@ public class UtilDiffblueTest {
    * <p>Method under test: {@link Util#getVisible(HttpServletRequest)}
    */
   @Test
-  @Category(MaintainedByDiffblue.class)
+  @Category(ContributionFromDiffblue.class)
+  @ManagedByDiffblue
   @MethodsUnderTest({"boolean Util.getVisible(HttpServletRequest)"})
   public void testGetVisible_whenCreateRequestHttpsExampleOrgExample_thenReturnFalse() {
     // Arrange, Act and Assert
@@ -374,7 +391,8 @@ public class UtilDiffblueTest {
    * <p>Method under test: {@link Util#existVisible(HttpServletRequest)}
    */
   @Test
-  @Category(MaintainedByDiffblue.class)
+  @Category(ContributionFromDiffblue.class)
+  @ManagedByDiffblue
   @MethodsUnderTest({"boolean Util.existVisible(HttpServletRequest)"})
   public void testExistVisible_whenCreateRequestHttpsExampleOrgExample_thenReturnFalse() {
     // Arrange, Act and Assert
@@ -392,7 +410,8 @@ public class UtilDiffblueTest {
    * <p>Method under test: {@link Util#getVisiblePost(String)}
    */
   @Test
-  @Category(MaintainedByDiffblue.class)
+  @Category(ContributionFromDiffblue.class)
+  @ManagedByDiffblue
   @MethodsUnderTest({"boolean Util.getVisiblePost(String)"})
   public void testGetVisiblePost_whenEmptyString_thenReturnFalse() {
     // Arrange, Act and Assert
@@ -410,7 +429,8 @@ public class UtilDiffblueTest {
    * <p>Method under test: {@link Util#getVisiblePost(String)}
    */
   @Test
-  @Category(MaintainedByDiffblue.class)
+  @Category(ContributionFromDiffblue.class)
+  @ManagedByDiffblue
   @MethodsUnderTest({"boolean Util.getVisiblePost(String)"})
   public void testGetVisiblePost_whenNull_thenReturnFalse() {
     // Arrange, Act and Assert
@@ -428,7 +448,8 @@ public class UtilDiffblueTest {
    * <p>Method under test: {@link Util#getHexAddress(String)}
    */
   @Test
-  @Category(MaintainedByDiffblue.class)
+  @Category(ContributionFromDiffblue.class)
+  @ManagedByDiffblue
   @MethodsUnderTest({"String Util.getHexAddress(String)"})
   public void testGetHexAddress_when42_thenReturnEmptyString() {
     // Arrange, Act and Assert
@@ -446,7 +467,8 @@ public class UtilDiffblueTest {
    * <p>Method under test: {@link Util#getHexAddress(String)}
    */
   @Test
-  @Category(MaintainedByDiffblue.class)
+  @Category(ContributionFromDiffblue.class)
+  @ManagedByDiffblue
   @MethodsUnderTest({"String Util.getHexAddress(String)"})
   public void testGetHexAddress_whenAddress_thenReturnEmptyString() {
     // Arrange, Act and Assert
@@ -464,7 +486,8 @@ public class UtilDiffblueTest {
    * <p>Method under test: {@link Util#getHexAddress(String)}
    */
   @Test
-  @Category(MaintainedByDiffblue.class)
+  @Category(ContributionFromDiffblue.class)
+  @ManagedByDiffblue
   @MethodsUnderTest({"String Util.getHexAddress(String)"})
   public void testGetHexAddress_whenEmptyString_thenReturnEmptyString() {
     // Arrange, Act and Assert
@@ -482,7 +505,8 @@ public class UtilDiffblueTest {
    * <p>Method under test: {@link Util#getHexAddress(String)}
    */
   @Test
-  @Category(MaintainedByDiffblue.class)
+  @Category(ContributionFromDiffblue.class)
+  @ManagedByDiffblue
   @MethodsUnderTest({"String Util.getHexAddress(String)"})
   public void testGetHexAddress_whenNull_thenReturnNull() {
     // Arrange, Act and Assert
@@ -495,7 +519,8 @@ public class UtilDiffblueTest {
    * <p>Method under test: {@link Util#getHexString(String)}
    */
   @Test
-  @Category(MaintainedByDiffblue.class)
+  @Category(ContributionFromDiffblue.class)
+  @ManagedByDiffblue
   @MethodsUnderTest({"String Util.getHexString(String)"})
   public void testGetHexString() {
     // Arrange, Act and Assert
@@ -515,7 +540,8 @@ public class UtilDiffblueTest {
    * <p>Method under test: {@link Util#getHexString(String)}
    */
   @Test
-  @Category(MaintainedByDiffblue.class)
+  @Category(ContributionFromDiffblue.class)
+  @ManagedByDiffblue
   @MethodsUnderTest({"String Util.getHexString(String)"})
   public void testGetHexString_whenEmptyString_thenReturnEmptyString() {
     // Arrange, Act and Assert
@@ -529,7 +555,8 @@ public class UtilDiffblueTest {
    * <p>Method under test: {@link Util#setTransactionPermissionId(JSONObject, Transaction)}
    */
   @Test
-  @Category(MaintainedByDiffblue.class)
+  @Category(ContributionFromDiffblue.class)
+  @ManagedByDiffblue
   @MethodsUnderTest({"Transaction Util.setTransactionPermissionId(JSONObject, Transaction)"})
   public void testSetTransactionPermissionIdWithJsonObjectTransaction() {
     // Arrange
@@ -571,7 +598,8 @@ public class UtilDiffblueTest {
    * <p>Method under test: {@link Util#setTransactionPermissionId(JSONObject, Transaction)}
    */
   @Test
-  @Category(MaintainedByDiffblue.class)
+  @Category(ContributionFromDiffblue.class)
+  @ManagedByDiffblue
   @MethodsUnderTest({"Transaction Util.setTransactionPermissionId(JSONObject, Transaction)"})
   public void testSetTransactionPermissionIdWithJsonObjectTransaction_givenZero() {
     // Arrange
@@ -594,7 +622,8 @@ public class UtilDiffblueTest {
    * <p>Method under test: {@link Util#setTransactionPermissionId(int, Transaction)}
    */
   @Test
-  @Category(MaintainedByDiffblue.class)
+  @Category(ContributionFromDiffblue.class)
+  @ManagedByDiffblue
   @MethodsUnderTest({"Transaction Util.setTransactionPermissionId(int, Transaction)"})
   public void testSetTransactionPermissionIdWithPermissionIdTransaction() {
     // Arrange and Act
@@ -626,7 +655,8 @@ public class UtilDiffblueTest {
    * <p>Method under test: {@link Util#setTransactionExtraData(String, Transaction, boolean)}
    */
   @Test
-  @Category(MaintainedByDiffblue.class)
+  @Category(ContributionFromDiffblue.class)
+  @ManagedByDiffblue
   @MethodsUnderTest({"Transaction Util.setTransactionExtraData(String, Transaction, boolean)"})
   public void testSetTransactionExtraDataWithDataTransactionVisible() {
     // Arrange and Act
@@ -647,7 +677,8 @@ public class UtilDiffblueTest {
    * <p>Method under test: {@link Util#setTransactionExtraData(String, Transaction, boolean)}
    */
   @Test
-  @Category(MaintainedByDiffblue.class)
+  @Category(ContributionFromDiffblue.class)
+  @ManagedByDiffblue
   @MethodsUnderTest({"Transaction Util.setTransactionExtraData(String, Transaction, boolean)"})
   public void testSetTransactionExtraDataWithDataTransactionVisible2() {
     // Arrange and Act
@@ -670,7 +701,8 @@ public class UtilDiffblueTest {
    * <p>Method under test: {@link Util#setTransactionExtraData(JSONObject, Transaction, boolean)}
    */
   @Test
-  @Category(MaintainedByDiffblue.class)
+  @Category(ContributionFromDiffblue.class)
+  @ManagedByDiffblue
   @MethodsUnderTest({"Transaction Util.setTransactionExtraData(JSONObject, Transaction, boolean)"})
   public void testSetTransactionExtraDataWithJsonObjectTransactionVisible() {
     // Arrange and Act
@@ -699,7 +731,8 @@ public class UtilDiffblueTest {
    * <p>Method under test: {@link Util#setTransactionExtraData(JSONObject, Transaction, boolean)}
    */
   @Test
-  @Category(MaintainedByDiffblue.class)
+  @Category(ContributionFromDiffblue.class)
+  @ManagedByDiffblue
   @MethodsUnderTest({"Transaction Util.setTransactionExtraData(JSONObject, Transaction, boolean)"})
   public void testSetTransactionExtraDataWithJsonObjectTransactionVisible2() {
     // Arrange
@@ -727,7 +760,8 @@ public class UtilDiffblueTest {
    * <p>Method under test: {@link Util#getVisibleOnlyForSign(JSONObject)}
    */
   @Test
-  @Category(MaintainedByDiffblue.class)
+  @Category(ContributionFromDiffblue.class)
+  @ManagedByDiffblue
   @MethodsUnderTest({"boolean Util.getVisibleOnlyForSign(JSONObject)"})
   public void testGetVisibleOnlyForSign_givenFortyTwo_thenReturnFalse() {
     // Arrange
@@ -750,7 +784,8 @@ public class UtilDiffblueTest {
    * <p>Method under test: {@link Util#getVisibleOnlyForSign(JSONObject)}
    */
   @Test
-  @Category(MaintainedByDiffblue.class)
+  @Category(ContributionFromDiffblue.class)
+  @ManagedByDiffblue
   @MethodsUnderTest({"boolean Util.getVisibleOnlyForSign(JSONObject)"})
   public void testGetVisibleOnlyForSign_givenOne_whenJSONObjectVisibleIsOne_thenReturnTrue() {
     // Arrange
@@ -771,7 +806,8 @@ public class UtilDiffblueTest {
    * <p>Method under test: {@link Util#parseMethod(String, String)}
    */
   @Test
-  @Category(MaintainedByDiffblue.class)
+  @Category(ContributionFromDiffblue.class)
+  @ManagedByDiffblue
   @MethodsUnderTest({"String Util.parseMethod(String, String)"})
   public void testParseMethod_thenReturn7382265bhttpsExampleOrgExample() {
     // Arrange, Act and Assert
@@ -791,7 +827,8 @@ public class UtilDiffblueTest {
    * <p>Method under test: {@link Util#parseMethod(String, String)}
    */
   @Test
-  @Category(MaintainedByDiffblue.class)
+  @Category(ContributionFromDiffblue.class)
+  @ManagedByDiffblue
   @MethodsUnderTest({"String Util.parseMethod(String, String)"})
   public void testParseMethod_whenEmptyString_thenReturn7382265b() {
     // Arrange, Act and Assert
@@ -809,7 +846,8 @@ public class UtilDiffblueTest {
    * <p>Method under test: {@link Util#parseMethod(String, String)}
    */
   @Test
-  @Category(MaintainedByDiffblue.class)
+  @Category(ContributionFromDiffblue.class)
+  @ManagedByDiffblue
   @MethodsUnderTest({"String Util.parseMethod(String, String)"})
   public void testParseMethod_whenNull_thenReturn7382265b() {
     // Arrange, Act and Assert
@@ -827,7 +865,8 @@ public class UtilDiffblueTest {
    * <p>Method under test: {@link Util#getJsonLongValue(JSONObject, String, boolean)}
    */
   @Test
-  @Category(MaintainedByDiffblue.class)
+  @Category(ContributionFromDiffblue.class)
+  @ManagedByDiffblue
   @MethodsUnderTest({"long Util.getJsonLongValue(JSONObject, String, boolean)"})
   public void testGetJsonLongValueWithJsonObjectKeyRequired_givenEmptyString() {
     // Arrange
@@ -851,7 +890,8 @@ public class UtilDiffblueTest {
    * <p>Method under test: {@link Util#getJsonLongValue(JSONObject, String, boolean)}
    */
   @Test
-  @Category(MaintainedByDiffblue.class)
+  @Category(ContributionFromDiffblue.class)
+  @ManagedByDiffblue
   @MethodsUnderTest({"long Util.getJsonLongValue(JSONObject, String, boolean)"})
   public void testGetJsonLongValueWithJsonObjectKeyRequired_givenFortyTwo_thenReturnFortyTwo() {
     // Arrange
@@ -876,7 +916,8 @@ public class UtilDiffblueTest {
    * <p>Method under test: {@link Util#getJsonLongValue(JSONObject, String, boolean)}
    */
   @Test
-  @Category(MaintainedByDiffblue.class)
+  @Category(ContributionFromDiffblue.class)
+  @ManagedByDiffblue
   @MethodsUnderTest({"long Util.getJsonLongValue(JSONObject, String, boolean)"})
   public void testGetJsonLongValueWithJsonObjectKeyRequired_thenThrowInvalidParameterException() {
     // Arrange, Act and Assert
@@ -897,7 +938,8 @@ public class UtilDiffblueTest {
    * <p>Method under test: {@link Util#getJsonLongValue(JSONObject, String, boolean)}
    */
   @Test
-  @Category(MaintainedByDiffblue.class)
+  @Category(ContributionFromDiffblue.class)
+  @ManagedByDiffblue
   @MethodsUnderTest({"long Util.getJsonLongValue(JSONObject, String, boolean)"})
   public void testGetJsonLongValueWithJsonObjectKeyRequired_whenFalse_thenReturnZero() {
     // Arrange and Act
@@ -918,7 +960,8 @@ public class UtilDiffblueTest {
    * <p>Method under test: {@link Util#getJsonLongValue(JSONObject, String)}
    */
   @Test
-  @Category(MaintainedByDiffblue.class)
+  @Category(ContributionFromDiffblue.class)
+  @ManagedByDiffblue
   @MethodsUnderTest({"long Util.getJsonLongValue(JSONObject, String)"})
   public void testGetJsonLongValueWithJsonObjectKey_givenEmptyString() {
     // Arrange
@@ -940,7 +983,8 @@ public class UtilDiffblueTest {
    * <p>Method under test: {@link Util#getJsonLongValue(JSONObject, String)}
    */
   @Test
-  @Category(MaintainedByDiffblue.class)
+  @Category(ContributionFromDiffblue.class)
+  @ManagedByDiffblue
   @MethodsUnderTest({"long Util.getJsonLongValue(JSONObject, String)"})
   public void testGetJsonLongValueWithJsonObjectKey_givenFortyTwo_thenReturnFortyTwo() {
     // Arrange
@@ -962,7 +1006,8 @@ public class UtilDiffblueTest {
    * <p>Method under test: {@link Util#getJsonLongValue(JSONObject, String)}
    */
   @Test
-  @Category(MaintainedByDiffblue.class)
+  @Category(ContributionFromDiffblue.class)
+  @ManagedByDiffblue
   @MethodsUnderTest({"long Util.getJsonLongValue(JSONObject, String)"})
   public void testGetJsonLongValueWithJsonObjectKey_whenJSONObject_thenReturnZero() {
     // Arrange, Act and Assert
@@ -980,7 +1025,8 @@ public class UtilDiffblueTest {
    * <p>Method under test: {@link Util#getMemo(byte[])}
    */
   @Test
-  @Category(MaintainedByDiffblue.class)
+  @Category(ContributionFromDiffblue.class)
+  @ManagedByDiffblue
   @MethodsUnderTest({"String Util.getMemo(byte[])"})
   public void testGetMemo_whenA_thenReturnAxaxaxa() {
     // Arrange, Act and Assert
@@ -998,7 +1044,8 @@ public class UtilDiffblueTest {
    * <p>Method under test: {@link Util#getMemo(byte[])}
    */
   @Test
-  @Category(MaintainedByDiffblue.class)
+  @Category(ContributionFromDiffblue.class)
+  @ManagedByDiffblue
   @MethodsUnderTest({"String Util.getMemo(byte[])"})
   public void testGetMemo_whenAxaxaxaxBytesIsUtf8_thenReturnAxaxaxax()
       throws UnsupportedEncodingException {
@@ -1017,7 +1064,8 @@ public class UtilDiffblueTest {
    * <p>Method under test: {@link Util#getMemo(byte[])}
    */
   @Test
-  @Category(MaintainedByDiffblue.class)
+  @Category(ContributionFromDiffblue.class)
+  @ManagedByDiffblue
   @MethodsUnderTest({"String Util.getMemo(byte[])"})
   public void testGetMemo_whenEmptyArrayOfByte_thenReturnEmptyString() {
     // Arrange, Act and Assert
@@ -1030,7 +1078,8 @@ public class UtilDiffblueTest {
    * <p>Method under test: {@link Util#processError(Exception, HttpServletResponse)}
    */
   @Test
-  @Category(MaintainedByDiffblue.class)
+  @Category(ContributionFromDiffblue.class)
+  @ManagedByDiffblue
   @MethodsUnderTest({"void Util.processError(Exception, HttpServletResponse)"})
   public void testProcessError() throws IOException {
     // Arrange
@@ -1061,7 +1110,8 @@ public class UtilDiffblueTest {
    * <p>Method under test: {@link Util#processError(Exception, HttpServletResponse)}
    */
   @Test
-  @Category(MaintainedByDiffblue.class)
+  @Category(ContributionFromDiffblue.class)
+  @ManagedByDiffblue
   @MethodsUnderTest({"void Util.processError(Exception, HttpServletResponse)"})
   public void testProcessError2() throws IOException {
     // Arrange
@@ -1098,7 +1148,8 @@ public class UtilDiffblueTest {
    * <p>Method under test: {@link Util#processError(Exception, HttpServletResponse)}
    */
   @Test
-  @Category(MaintainedByDiffblue.class)
+  @Category(ContributionFromDiffblue.class)
+  @ManagedByDiffblue
   @MethodsUnderTest({"void Util.processError(Exception, HttpServletResponse)"})
   public void testProcessError3() throws IOException {
     // Arrange
@@ -1154,7 +1205,8 @@ public class UtilDiffblueTest {
    * <p>Method under test: {@link Util#processError(Exception, HttpServletResponse)}
    */
   @Test
-  @Category(MaintainedByDiffblue.class)
+  @Category(ContributionFromDiffblue.class)
+  @ManagedByDiffblue
   @MethodsUnderTest({"void Util.processError(Exception, HttpServletResponse)"})
   public void testProcessError4() throws IOException {
     // Arrange
@@ -1216,7 +1268,8 @@ public class UtilDiffblueTest {
    * <p>Method under test: {@link Util#convertOutput(Account)}
    */
   @Test
-  @Category(MaintainedByDiffblue.class)
+  @Category(ContributionFromDiffblue.class)
+  @ManagedByDiffblue
   @MethodsUnderTest({"String Util.convertOutput(Account)"})
   public void testConvertOutput_thenReturnLeftCurlyBracketRightCurlyBracket() {
     // Arrange, Act and Assert
@@ -1229,7 +1282,8 @@ public class UtilDiffblueTest {
    * <p>Method under test: {@link Util#printAccount(Account, HttpServletResponse, Boolean)}
    */
   @Test
-  @Category(MaintainedByDiffblue.class)
+  @Category(ContributionFromDiffblue.class)
+  @ManagedByDiffblue
   @MethodsUnderTest({"void Util.printAccount(Account, HttpServletResponse, Boolean)"})
   public void testPrintAccount() throws IOException {
     // Arrange
@@ -1256,7 +1310,8 @@ public class UtilDiffblueTest {
    * <p>Method under test: {@link Util#printAccount(Account, HttpServletResponse, Boolean)}
    */
   @Test
-  @Category(MaintainedByDiffblue.class)
+  @Category(ContributionFromDiffblue.class)
+  @ManagedByDiffblue
   @MethodsUnderTest({"void Util.printAccount(Account, HttpServletResponse, Boolean)"})
   public void testPrintAccount2() throws IOException {
     // Arrange
@@ -1311,7 +1366,8 @@ public class UtilDiffblueTest {
    * <p>Method under test: {@link Util#printAccount(Account, HttpServletResponse, Boolean)}
    */
   @Test
-  @Category(MaintainedByDiffblue.class)
+  @Category(ContributionFromDiffblue.class)
+  @ManagedByDiffblue
   @MethodsUnderTest({"void Util.printAccount(Account, HttpServletResponse, Boolean)"})
   public void testPrintAccount3() throws IOException {
     // Arrange
@@ -1373,7 +1429,8 @@ public class UtilDiffblueTest {
    * <p>Method under test: {@link Util#getAddress(HttpServletRequest)}
    */
   @Test
-  @Category(MaintainedByDiffblue.class)
+  @Category(ContributionFromDiffblue.class)
+  @ManagedByDiffblue
   @MethodsUnderTest({"byte[] Util.getAddress(HttpServletRequest)"})
   public void testGetAddress_whenCreateRequestHttpsExampleOrgExample_thenReturnNull()
       throws Exception {
@@ -1392,7 +1449,8 @@ public class UtilDiffblueTest {
    * <p>Method under test: {@link Util#getAddress(HttpServletRequest)}
    */
   @Test
-  @Category(MaintainedByDiffblue.class)
+  @Category(ContributionFromDiffblue.class)
+  @ManagedByDiffblue
   @MethodsUnderTest({"byte[] Util.getAddress(HttpServletRequest)"})
   public void testGetAddress_whenCreateRequestPost_thenReturnNull() throws Exception {
     // Arrange, Act and Assert
@@ -1410,7 +1468,8 @@ public class UtilDiffblueTest {
    * <p>Method under test: {@link Util#getAddress(HttpServletRequest)}
    */
   @Test
-  @Category(MaintainedByDiffblue.class)
+  @Category(ContributionFromDiffblue.class)
+  @ManagedByDiffblue
   @MethodsUnderTest({"byte[] Util.getAddress(HttpServletRequest)"})
   public void testGetAddress_whenMockMultipartHttpServletRequest_thenReturnNull() throws Exception {
     // Arrange, Act and Assert
@@ -1427,7 +1486,8 @@ public class UtilDiffblueTest {
    * <p>Method under test: {@link Util#getRequestValue(HttpServletRequest)}
    */
   @Test
-  @Category(MaintainedByDiffblue.class)
+  @Category(ContributionFromDiffblue.class)
+  @ManagedByDiffblue
   @MethodsUnderTest({"String Util.getRequestValue(HttpServletRequest)"})
   public void testGetRequestValue_thenReturnEmptyString() throws IOException {
     // Arrange, Act and Assert
@@ -1445,7 +1505,8 @@ public class UtilDiffblueTest {
    * <p>Method under test: {@link Util#convertLogAddressToTronAddress(TransactionInfo)}
    */
   @Test
-  @Category(MaintainedByDiffblue.class)
+  @Category(ContributionFromDiffblue.class)
+  @ManagedByDiffblue
   @MethodsUnderTest({"List Util.convertLogAddressToTronAddress(TransactionInfo)"})
   public void testConvertLogAddressToTronAddress_whenDefaultInstance_thenReturnEmpty() {
     // Arrange and Act
@@ -1466,7 +1527,8 @@ public class UtilDiffblueTest {
    * <p>Method under test: {@link Util#getJsonString(String)}
    */
   @Test
-  @Category(MaintainedByDiffblue.class)
+  @Category(ContributionFromDiffblue.class)
+  @ManagedByDiffblue
   @MethodsUnderTest({"String Util.getJsonString(String)"})
   public void testGetJsonString_thenReturn42httpsExampleOrgExample() {
     // Arrange, Act and Assert
@@ -1486,7 +1548,8 @@ public class UtilDiffblueTest {
    * <p>Method under test: {@link Util#getJsonString(String)}
    */
   @Test
-  @Category(MaintainedByDiffblue.class)
+  @Category(ContributionFromDiffblue.class)
+  @ManagedByDiffblue
   @MethodsUnderTest({"String Util.getJsonString(String)"})
   public void testGetJsonString_when42Error_thenReturn42Error() {
     // Arrange, Act and Assert
@@ -1504,7 +1567,8 @@ public class UtilDiffblueTest {
    * <p>Method under test: {@link Util#getJsonString(String)}
    */
   @Test
-  @Category(MaintainedByDiffblue.class)
+  @Category(ContributionFromDiffblue.class)
+  @ManagedByDiffblue
   @MethodsUnderTest({"String Util.getJsonString(String)"})
   public void testGetJsonString_when42Str_thenReturn42Str() {
     // Arrange, Act and Assert
@@ -1522,7 +1586,8 @@ public class UtilDiffblueTest {
    * <p>Method under test: {@link Util#getJsonString(String)}
    */
   @Test
-  @Category(MaintainedByDiffblue.class)
+  @Category(ContributionFromDiffblue.class)
+  @ManagedByDiffblue
   @MethodsUnderTest({"String Util.getJsonString(String)"})
   public void testGetJsonString_when42_thenReturn42() {
     // Arrange, Act and Assert
@@ -1540,7 +1605,8 @@ public class UtilDiffblueTest {
    * <p>Method under test: {@link Util#getJsonString(String)}
    */
   @Test
-  @Category(MaintainedByDiffblue.class)
+  @Category(ContributionFromDiffblue.class)
+  @ManagedByDiffblue
   @MethodsUnderTest({"String Util.getJsonString(String)"})
   public void testGetJsonString_whenEmptyString_thenReturnEmptyString() {
     // Arrange, Act and Assert
@@ -1558,7 +1624,8 @@ public class UtilDiffblueTest {
    * <p>Method under test: {@link Util#getJsonString(String)}
    */
   @Test
-  @Category(MaintainedByDiffblue.class)
+  @Category(ContributionFromDiffblue.class)
+  @ManagedByDiffblue
   @MethodsUnderTest({"String Util.getJsonString(String)"})
   public void testGetJsonString_whenFunction_selector_thenReturnFunctionSelector() {
     // Arrange, Act and Assert
@@ -1576,7 +1643,8 @@ public class UtilDiffblueTest {
    * <p>Method under test: {@link Util#getJsonString(String)}
    */
   @Test
-  @Category(MaintainedByDiffblue.class)
+  @Category(ContributionFromDiffblue.class)
+  @ManagedByDiffblue
   @MethodsUnderTest({"String Util.getJsonString(String)"})
   public void testGetJsonString_whenHttpsExampleOrgExample_thenReturnHttpsExampleOrgExample() {
     // Arrange, Act and Assert
@@ -1596,7 +1664,8 @@ public class UtilDiffblueTest {
    * <p>Method under test: {@link Util#getJsonString(String)}
    */
   @Test
-  @Category(MaintainedByDiffblue.class)
+  @Category(ContributionFromDiffblue.class)
+  @ManagedByDiffblue
   @MethodsUnderTest({"String Util.getJsonString(String)"})
   public void testGetJsonString_whenNull_thenReturnEmptyString() {
     // Arrange, Act and Assert
@@ -1614,7 +1683,8 @@ public class UtilDiffblueTest {
    * <p>Method under test: {@link Util#getJsonString(String)}
    */
   @Test
-  @Category(MaintainedByDiffblue.class)
+  @Category(ContributionFromDiffblue.class)
+  @ManagedByDiffblue
   @MethodsUnderTest({"String Util.getJsonString(String)"})
   public void testGetJsonString_whenStr_thenReturnStr() {
     // Arrange, Act and Assert
@@ -1632,7 +1702,8 @@ public class UtilDiffblueTest {
    * <p>Method under test: {@link Util#isValidJson(String)}
    */
   @Test
-  @Category(MaintainedByDiffblue.class)
+  @Category(ContributionFromDiffblue.class)
+  @ManagedByDiffblue
   @MethodsUnderTest({"boolean Util.isValidJson(String)"})
   public void testIsValidJson_when42Error_thenReturnFalse() {
     // Arrange, Act and Assert
@@ -1650,7 +1721,8 @@ public class UtilDiffblueTest {
    * <p>Method under test: {@link Util#isValidJson(String)}
    */
   @Test
-  @Category(MaintainedByDiffblue.class)
+  @Category(ContributionFromDiffblue.class)
+  @ManagedByDiffblue
   @MethodsUnderTest({"boolean Util.isValidJson(String)"})
   public void testIsValidJson_when42_thenReturnTrue() {
     // Arrange, Act and Assert
@@ -1668,7 +1740,8 @@ public class UtilDiffblueTest {
    * <p>Method under test: {@link Util#isValidJson(String)}
    */
   @Test
-  @Category(MaintainedByDiffblue.class)
+  @Category(ContributionFromDiffblue.class)
+  @ManagedByDiffblue
   @MethodsUnderTest({"boolean Util.isValidJson(String)"})
   public void testIsValidJson_when42functionSelector_thenReturnFalse() {
     // Arrange, Act and Assert
@@ -1686,7 +1759,8 @@ public class UtilDiffblueTest {
    * <p>Method under test: {@link Util#isValidJson(String)}
    */
   @Test
-  @Category(MaintainedByDiffblue.class)
+  @Category(ContributionFromDiffblue.class)
+  @ManagedByDiffblue
   @MethodsUnderTest({"boolean Util.isValidJson(String)"})
   public void testIsValidJson_when42httpsExampleOrgExample_thenReturnFalse() {
     // Arrange, Act and Assert
@@ -1704,7 +1778,8 @@ public class UtilDiffblueTest {
    * <p>Method under test: {@link Util#isValidJson(String)}
    */
   @Test
-  @Category(MaintainedByDiffblue.class)
+  @Category(ContributionFromDiffblue.class)
+  @ManagedByDiffblue
   @MethodsUnderTest({"boolean Util.isValidJson(String)"})
   public void testIsValidJson_whenEmptyString_thenReturnTrue() {
     // Arrange, Act and Assert
@@ -1722,7 +1797,8 @@ public class UtilDiffblueTest {
    * <p>Method under test: {@link Util#isValidJson(String)}
    */
   @Test
-  @Category(MaintainedByDiffblue.class)
+  @Category(ContributionFromDiffblue.class)
+  @ManagedByDiffblue
   @MethodsUnderTest({"boolean Util.isValidJson(String)"})
   public void testIsValidJson_whenFunction_selector_thenReturnFalse() {
     // Arrange, Act and Assert
@@ -1740,7 +1816,8 @@ public class UtilDiffblueTest {
    * <p>Method under test: {@link Util#isValidJson(String)}
    */
   @Test
-  @Category(MaintainedByDiffblue.class)
+  @Category(ContributionFromDiffblue.class)
+  @ManagedByDiffblue
   @MethodsUnderTest({"boolean Util.isValidJson(String)"})
   public void testIsValidJson_whenHttpsExampleOrgExample_thenReturnFalse() {
     // Arrange, Act and Assert
@@ -1758,7 +1835,8 @@ public class UtilDiffblueTest {
    * <p>Method under test: {@link Util#isValidJson(String)}
    */
   @Test
-  @Category(MaintainedByDiffblue.class)
+  @Category(ContributionFromDiffblue.class)
+  @ManagedByDiffblue
   @MethodsUnderTest({"boolean Util.isValidJson(String)"})
   public void testIsValidJson_whenNull_thenReturnTrue() {
     // Arrange, Act and Assert

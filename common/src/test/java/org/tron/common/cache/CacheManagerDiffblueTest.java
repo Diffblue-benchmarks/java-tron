@@ -4,7 +4,8 @@ import static org.junit.Assert.assertEquals;
 import static org.mockito.Mockito.doNothing;
 import static org.mockito.Mockito.mock;
 import static org.mockito.Mockito.verify;
-import com.diffblue.cover.annotations.MaintainedByDiffblue;
+import com.diffblue.cover.annotations.ContributionFromDiffblue;
+import com.diffblue.cover.annotations.ManagedByDiffblue;
 import com.diffblue.cover.annotations.MethodsUnderTest;
 import com.google.common.cache.CacheLoader;
 import com.google.common.cache.CacheStats;
@@ -23,7 +24,8 @@ public class CacheManagerDiffblueTest {
    * <p>Method under test: {@link CacheManager#allocate(CacheType, String, CacheLoader)}
    */
   @Test
-  @Category(MaintainedByDiffblue.class)
+  @Category(ContributionFromDiffblue.class)
+  @ManagedByDiffblue
   @MethodsUnderTest({"TronCache CacheManager.allocate(CacheType, String, CacheLoader)"})
   public void testAllocateWithNameStrategyLoader_thenReturnStatsEvictionCountIsZero() {
     // Arrange and Act
@@ -52,7 +54,8 @@ public class CacheManagerDiffblueTest {
    * <p>Method under test: {@link CacheManager#allocate(CacheType, String)}
    */
   @Test
-  @Category(MaintainedByDiffblue.class)
+  @Category(ContributionFromDiffblue.class)
+  @ManagedByDiffblue
   @MethodsUnderTest({"TronCache CacheManager.allocate(CacheType, String)"})
   public void testAllocateWithNameStrategy_whenEmptyString_thenReturnStatsEvictionCountIsZero() {
     // Arrange and Act
@@ -81,7 +84,8 @@ public class CacheManagerDiffblueTest {
    * <p>Method under test: {@link CacheManager#release(TronCache)}
    */
   @Test
-  @Category(MaintainedByDiffblue.class)
+  @Category(ContributionFromDiffblue.class)
+  @ManagedByDiffblue
   @MethodsUnderTest({"void CacheManager.release(TronCache)"})
   public void testRelease_whenTronCacheInvalidateAllDoesNothing_thenCallsInvalidateAll() {
     // Arrange

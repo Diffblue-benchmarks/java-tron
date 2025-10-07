@@ -7,7 +7,8 @@ import static org.mockito.Mockito.atLeast;
 import static org.mockito.Mockito.mock;
 import static org.mockito.Mockito.verify;
 import static org.mockito.Mockito.when;
-import com.diffblue.cover.annotations.MaintainedByDiffblue;
+import com.diffblue.cover.annotations.ContributionFromDiffblue;
+import com.diffblue.cover.annotations.ManagedByDiffblue;
 import com.diffblue.cover.annotations.MethodsUnderTest;
 import io.prometheus.client.Collector;
 import io.prometheus.client.Collector.MetricFamilySamples;
@@ -27,7 +28,8 @@ public class OperatingSystemExportsDiffblueTest {
    * <p>Method under test: {@link OperatingSystemExports#OperatingSystemExports()}
    */
   @Test
-  @Category(MaintainedByDiffblue.class)
+  @Category(ContributionFromDiffblue.class)
+  @ManagedByDiffblue
   @MethodsUnderTest({"void OperatingSystemExports.<init>()"})
   public void testNewOperatingSystemExports() {
     // Arrange, Act and Assert
@@ -53,7 +55,8 @@ public class OperatingSystemExportsDiffblueTest {
    * <p>Method under test: {@link OperatingSystemExports#addOperatingSystemMetrics(List, Predicate)}
    */
   @Test
-  @Category(MaintainedByDiffblue.class)
+  @Category(ContributionFromDiffblue.class)
+  @ManagedByDiffblue
   @MethodsUnderTest({"void OperatingSystemExports.addOperatingSystemMetrics(List, Predicate)"})
   public void testAddOperatingSystemMetrics_givenFalse_whenArrayList_thenArrayListEmpty() {
     // Arrange
@@ -82,7 +85,8 @@ public class OperatingSystemExportsDiffblueTest {
    * <p>Method under test: {@link OperatingSystemExports#addOperatingSystemMetrics(List, Predicate)}
    */
   @Test
-  @Category(MaintainedByDiffblue.class)
+  @Category(ContributionFromDiffblue.class)
+  @ManagedByDiffblue
   @MethodsUnderTest({"void OperatingSystemExports.addOperatingSystemMetrics(List, Predicate)"})
   public void testAddOperatingSystemMetrics_givenTrue_thenArrayListSizeIsEight() {
     // Arrange
@@ -118,7 +122,8 @@ public class OperatingSystemExportsDiffblueTest {
    * <p>Method under test: {@link OperatingSystemExports#addOperatingSystemMetrics(List, Predicate)}
    */
   @Test
-  @Category(MaintainedByDiffblue.class)
+  @Category(ContributionFromDiffblue.class)
+  @ManagedByDiffblue
   @MethodsUnderTest({"void OperatingSystemExports.addOperatingSystemMetrics(List, Predicate)"})
   public void testAddOperatingSystemMetrics_thenArrayListSizeIsOne() {
     // Arrange
@@ -152,7 +157,8 @@ public class OperatingSystemExportsDiffblueTest {
    * <p>Method under test: {@link OperatingSystemExports#addOperatingSystemMetrics(List, Predicate)}
    */
   @Test
-  @Category(MaintainedByDiffblue.class)
+  @Category(ContributionFromDiffblue.class)
+  @ManagedByDiffblue
   @MethodsUnderTest({"void OperatingSystemExports.addOperatingSystemMetrics(List, Predicate)"})
   public void testAddOperatingSystemMetrics_thenArrayListSizeIsTwo() {
     // Arrange
@@ -187,7 +193,8 @@ public class OperatingSystemExportsDiffblueTest {
    * <p>Method under test: {@link OperatingSystemExports#collect()}
    */
   @Test
-  @Category(MaintainedByDiffblue.class)
+  @Category(ContributionFromDiffblue.class)
+  @ManagedByDiffblue
   @MethodsUnderTest({"List OperatingSystemExports.collect()"})
   public void testCollect() {
     // Arrange and Act
@@ -217,7 +224,8 @@ public class OperatingSystemExportsDiffblueTest {
    * <p>Method under test: {@link OperatingSystemExports#collect(Predicate)}
    */
   @Test
-  @Category(MaintainedByDiffblue.class)
+  @Category(ContributionFromDiffblue.class)
+  @ManagedByDiffblue
   @MethodsUnderTest({"List OperatingSystemExports.collect(Predicate)"})
   public void testCollectWithPredicate_givenFalse_whenPredicateTestReturnFalse_thenReturnEmpty() {
     // Arrange
@@ -245,7 +253,8 @@ public class OperatingSystemExportsDiffblueTest {
    * <p>Method under test: {@link OperatingSystemExports#collect(Predicate)}
    */
   @Test
-  @Category(MaintainedByDiffblue.class)
+  @Category(ContributionFromDiffblue.class)
+  @ManagedByDiffblue
   @MethodsUnderTest({"List OperatingSystemExports.collect(Predicate)"})
   public void testCollectWithPredicate_whenNull_thenReturnSizeIsEight() {
     // Arrange and Act

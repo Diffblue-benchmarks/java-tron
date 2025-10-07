@@ -4,7 +4,8 @@ import static org.junit.Assert.assertEquals;
 import static org.junit.Assert.assertNull;
 import static org.junit.Assert.assertSame;
 import static org.junit.Assert.assertTrue;
-import com.diffblue.cover.annotations.MaintainedByDiffblue;
+import com.diffblue.cover.annotations.ContributionFromDiffblue;
+import com.diffblue.cover.annotations.ManagedByDiffblue;
 import com.diffblue.cover.annotations.MethodsUnderTest;
 import java.util.ArrayList;
 import java.util.HashMap;
@@ -20,7 +21,8 @@ public class TransactionLogTriggerDiffblueTest {
    * <p>Method under test: default or parameterless constructor of {@link TransactionLogTrigger}
    */
   @Test
-  @Category(MaintainedByDiffblue.class)
+  @Category(ContributionFromDiffblue.class)
+  @ManagedByDiffblue
   @MethodsUnderTest({"void TransactionLogTrigger.<init>()"})
   public void testNewTransactionLogTrigger() {
     // Arrange and Act
@@ -125,7 +127,8 @@ public class TransactionLogTriggerDiffblueTest {
    * </ul>
    */
   @Test
-  @Category(MaintainedByDiffblue.class)
+  @Category(ContributionFromDiffblue.class)
+  @ManagedByDiffblue
   @MethodsUnderTest({
     "long TransactionLogTrigger.getAssetAmount()",
     "String TransactionLogTrigger.getAssetName()",

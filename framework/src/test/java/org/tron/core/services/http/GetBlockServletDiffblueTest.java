@@ -11,7 +11,8 @@ import static org.mockito.Mockito.mock;
 import static org.mockito.Mockito.verify;
 import static org.mockito.Mockito.when;
 import com.alibaba.fastjson.serializer.SerializeWriter;
-import com.diffblue.cover.annotations.MaintainedByDiffblue;
+import com.diffblue.cover.annotations.ContributionFromDiffblue;
+import com.diffblue.cover.annotations.ManagedByDiffblue;
 import com.diffblue.cover.annotations.MethodsUnderTest;
 import java.io.IOException;
 import java.io.PrintWriter;
@@ -62,7 +63,8 @@ public class GetBlockServletDiffblueTest {
    * <p>Method under test: {@link GetBlockServlet#doGet(HttpServletRequest, HttpServletResponse)}
    */
   @Test
-  @Category(MaintainedByDiffblue.class)
+  @Category(ContributionFromDiffblue.class)
+  @ManagedByDiffblue
   @MethodsUnderTest({"void GetBlockServlet.doGet(HttpServletRequest, HttpServletResponse)"})
   public void testDoGet() throws IOException {
     // Arrange
@@ -92,7 +94,8 @@ public class GetBlockServletDiffblueTest {
    * <p>Method under test: {@link GetBlockServlet#doGet(HttpServletRequest, HttpServletResponse)}
    */
   @Test
-  @Category(MaintainedByDiffblue.class)
+  @Category(ContributionFromDiffblue.class)
+  @ManagedByDiffblue
   @MethodsUnderTest({"void GetBlockServlet.doGet(HttpServletRequest, HttpServletResponse)"})
   public void testDoGet2() throws IOException {
     // Arrange
@@ -122,7 +125,8 @@ public class GetBlockServletDiffblueTest {
    * <p>Method under test: {@link GetBlockServlet#doGet(HttpServletRequest, HttpServletResponse)}
    */
   @Test
-  @Category(MaintainedByDiffblue.class)
+  @Category(ContributionFromDiffblue.class)
+  @ManagedByDiffblue
   @MethodsUnderTest({"void GetBlockServlet.doGet(HttpServletRequest, HttpServletResponse)"})
   public void testDoGet3() throws IOException {
     // Arrange
@@ -154,7 +158,8 @@ public class GetBlockServletDiffblueTest {
    * <p>Method under test: {@link GetBlockServlet#doGet(HttpServletRequest, HttpServletResponse)}
    */
   @Test
-  @Category(MaintainedByDiffblue.class)
+  @Category(ContributionFromDiffblue.class)
+  @ManagedByDiffblue
   @MethodsUnderTest({"void GetBlockServlet.doGet(HttpServletRequest, HttpServletResponse)"})
   public void testDoGet4() throws IOException {
     // Arrange
@@ -186,7 +191,8 @@ public class GetBlockServletDiffblueTest {
    * <p>Method under test: {@link GetBlockServlet#doGet(HttpServletRequest, HttpServletResponse)}
    */
   @Test
-  @Category(MaintainedByDiffblue.class)
+  @Category(ContributionFromDiffblue.class)
+  @ManagedByDiffblue
   @MethodsUnderTest({"void GetBlockServlet.doGet(HttpServletRequest, HttpServletResponse)"})
   public void testDoGet5() throws IOException {
     // Arrange
@@ -224,7 +230,8 @@ public class GetBlockServletDiffblueTest {
    * <p>Method under test: {@link GetBlockServlet#doGet(HttpServletRequest, HttpServletResponse)}
    */
   @Test
-  @Category(MaintainedByDiffblue.class)
+  @Category(ContributionFromDiffblue.class)
+  @ManagedByDiffblue
   @MethodsUnderTest({"void GetBlockServlet.doGet(HttpServletRequest, HttpServletResponse)"})
   public void testDoGet_givenPrintWriterWithSerializeWriter_thenCallsGetWriter()
       throws IOException {
@@ -259,7 +266,8 @@ public class GetBlockServletDiffblueTest {
    * <p>Method under test: {@link GetBlockServlet#doGet(HttpServletRequest, HttpServletResponse)}
    */
   @Test
-  @Category(MaintainedByDiffblue.class)
+  @Category(ContributionFromDiffblue.class)
+  @ManagedByDiffblue
   @MethodsUnderTest({"void GetBlockServlet.doGet(HttpServletRequest, HttpServletResponse)"})
   public void testDoGet_givenWalletGetBlockThrowUnsupportedOperationException() throws IOException {
     // Arrange
@@ -298,7 +306,8 @@ public class GetBlockServletDiffblueTest {
    * <p>Method under test: {@link GetBlockServlet#doGet(HttpServletRequest, HttpServletResponse)}
    */
   @Test
-  @Category(MaintainedByDiffblue.class)
+  @Category(ContributionFromDiffblue.class)
+  @ManagedByDiffblue
   @MethodsUnderTest({"void GetBlockServlet.doGet(HttpServletRequest, HttpServletResponse)"})
   public void testDoGet_thenHttpServletResponseWrapperWithResponseIsResponseResponseResponse()
       throws IOException {
@@ -368,7 +377,8 @@ public class GetBlockServletDiffblueTest {
    * <p>Method under test: {@link GetBlockServlet#doGet(HttpServletRequest, HttpServletResponse)}
    */
   @Test
-  @Category(MaintainedByDiffblue.class)
+  @Category(ContributionFromDiffblue.class)
+  @ManagedByDiffblue
   @MethodsUnderTest({"void GetBlockServlet.doGet(HttpServletRequest, HttpServletResponse)"})
   public void testDoGet_whenCreateRequestHttpsExampleOrgExample() throws IOException {
     // Arrange
@@ -401,7 +411,8 @@ public class GetBlockServletDiffblueTest {
    * <p>Method under test: {@link GetBlockServlet#doGet(HttpServletRequest, HttpServletResponse)}
    */
   @Test
-  @Category(MaintainedByDiffblue.class)
+  @Category(ContributionFromDiffblue.class)
+  @ManagedByDiffblue
   @MethodsUnderTest({"void GetBlockServlet.doGet(HttpServletRequest, HttpServletResponse)"})
   public void testDoGet_whenHttpInputWithStateIsNull() throws IOException {
     // Arrange
@@ -447,7 +458,8 @@ public class GetBlockServletDiffblueTest {
    * <p>Method under test: {@link GetBlockServlet#doGet(HttpServletRequest, HttpServletResponse)}
    */
   @Test
-  @Category(MaintainedByDiffblue.class)
+  @Category(ContributionFromDiffblue.class)
+  @ManagedByDiffblue
   @MethodsUnderTest({"void GetBlockServlet.doGet(HttpServletRequest, HttpServletResponse)"})
   public void testDoGet_whenMockHttpServletRequest() throws IOException {
     // Arrange
@@ -476,7 +488,8 @@ public class GetBlockServletDiffblueTest {
    * <p>Method under test: {@link GetBlockServlet#doPost(HttpServletRequest, HttpServletResponse)}
    */
   @Test
-  @Category(MaintainedByDiffblue.class)
+  @Category(ContributionFromDiffblue.class)
+  @ManagedByDiffblue
   @MethodsUnderTest({"void GetBlockServlet.doPost(HttpServletRequest, HttpServletResponse)"})
   public void testDoPost() throws IOException {
     // Arrange
@@ -506,7 +519,8 @@ public class GetBlockServletDiffblueTest {
    * <p>Method under test: {@link GetBlockServlet#doPost(HttpServletRequest, HttpServletResponse)}
    */
   @Test
-  @Category(MaintainedByDiffblue.class)
+  @Category(ContributionFromDiffblue.class)
+  @ManagedByDiffblue
   @MethodsUnderTest({"void GetBlockServlet.doPost(HttpServletRequest, HttpServletResponse)"})
   public void testDoPost2() throws IOException {
     // Arrange
@@ -537,7 +551,8 @@ public class GetBlockServletDiffblueTest {
    * <p>Method under test: {@link GetBlockServlet#doPost(HttpServletRequest, HttpServletResponse)}
    */
   @Test
-  @Category(MaintainedByDiffblue.class)
+  @Category(ContributionFromDiffblue.class)
+  @ManagedByDiffblue
   @MethodsUnderTest({"void GetBlockServlet.doPost(HttpServletRequest, HttpServletResponse)"})
   public void testDoPost3() throws IOException {
     // Arrange
@@ -569,7 +584,8 @@ public class GetBlockServletDiffblueTest {
    * <p>Method under test: {@link GetBlockServlet#doPost(HttpServletRequest, HttpServletResponse)}
    */
   @Test
-  @Category(MaintainedByDiffblue.class)
+  @Category(ContributionFromDiffblue.class)
+  @ManagedByDiffblue
   @MethodsUnderTest({"void GetBlockServlet.doPost(HttpServletRequest, HttpServletResponse)"})
   public void testDoPost4() throws IOException {
     // Arrange
@@ -601,7 +617,8 @@ public class GetBlockServletDiffblueTest {
    * <p>Method under test: {@link GetBlockServlet#doPost(HttpServletRequest, HttpServletResponse)}
    */
   @Test
-  @Category(MaintainedByDiffblue.class)
+  @Category(ContributionFromDiffblue.class)
+  @ManagedByDiffblue
   @MethodsUnderTest({"void GetBlockServlet.doPost(HttpServletRequest, HttpServletResponse)"})
   public void testDoPost5() throws IOException {
     // Arrange
@@ -639,7 +656,8 @@ public class GetBlockServletDiffblueTest {
    * <p>Method under test: {@link GetBlockServlet#doPost(HttpServletRequest, HttpServletResponse)}
    */
   @Test
-  @Category(MaintainedByDiffblue.class)
+  @Category(ContributionFromDiffblue.class)
+  @ManagedByDiffblue
   @MethodsUnderTest({"void GetBlockServlet.doPost(HttpServletRequest, HttpServletResponse)"})
   public void testDoPost_givenPrintWriterWithSerializeWriter_thenCallsGetWriter()
       throws IOException {
@@ -675,7 +693,8 @@ public class GetBlockServletDiffblueTest {
    * <p>Method under test: {@link GetBlockServlet#doPost(HttpServletRequest, HttpServletResponse)}
    */
   @Test
-  @Category(MaintainedByDiffblue.class)
+  @Category(ContributionFromDiffblue.class)
+  @ManagedByDiffblue
   @MethodsUnderTest({"void GetBlockServlet.doPost(HttpServletRequest, HttpServletResponse)"})
   public void testDoPost_thenHttpServletResponseWrapperWithResponseIsResponseResponseResponse()
       throws IOException {
@@ -745,7 +764,8 @@ public class GetBlockServletDiffblueTest {
    * <p>Method under test: {@link GetBlockServlet#doPost(HttpServletRequest, HttpServletResponse)}
    */
   @Test
-  @Category(MaintainedByDiffblue.class)
+  @Category(ContributionFromDiffblue.class)
+  @ManagedByDiffblue
   @MethodsUnderTest({"void GetBlockServlet.doPost(HttpServletRequest, HttpServletResponse)"})
   public void testDoPost_whenCreateRequestHttpsExampleOrgExample() throws IOException {
     // Arrange
@@ -778,7 +798,8 @@ public class GetBlockServletDiffblueTest {
    * <p>Method under test: {@link GetBlockServlet#doPost(HttpServletRequest, HttpServletResponse)}
    */
   @Test
-  @Category(MaintainedByDiffblue.class)
+  @Category(ContributionFromDiffblue.class)
+  @ManagedByDiffblue
   @MethodsUnderTest({"void GetBlockServlet.doPost(HttpServletRequest, HttpServletResponse)"})
   public void testDoPost_whenHttpInputWithStateIsNull() throws IOException {
     // Arrange
@@ -824,7 +845,8 @@ public class GetBlockServletDiffblueTest {
    * <p>Method under test: {@link GetBlockServlet#doPost(HttpServletRequest, HttpServletResponse)}
    */
   @Test
-  @Category(MaintainedByDiffblue.class)
+  @Category(ContributionFromDiffblue.class)
+  @ManagedByDiffblue
   @MethodsUnderTest({"void GetBlockServlet.doPost(HttpServletRequest, HttpServletResponse)"})
   public void testDoPost_whenMockHttpServletRequest() throws IOException {
     // Arrange

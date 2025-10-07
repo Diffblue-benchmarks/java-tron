@@ -1,7 +1,8 @@
 package org.tron.core.net.message;
 
 import static org.junit.Assert.assertThrows;
-import com.diffblue.cover.annotations.MaintainedByDiffblue;
+import com.diffblue.cover.annotations.ContributionFromDiffblue;
+import com.diffblue.cover.annotations.ManagedByDiffblue;
 import com.diffblue.cover.annotations.MethodsUnderTest;
 import org.junit.Test;
 import org.junit.experimental.categories.Category;
@@ -19,7 +20,8 @@ public class TronMessageFactoryDiffblueTest {
    * <p>Method under test: {@link TronMessageFactory#create(byte[])}
    */
   @Test
-  @Category(MaintainedByDiffblue.class)
+  @Category(ContributionFromDiffblue.class)
+  @ManagedByDiffblue
   @MethodsUnderTest({"org.tron.core.net.message.TronMessage TronMessageFactory.create(byte[])"})
   public void testCreateWithData_whenArrayOfByteWithOneAndX_thenThrowP2pException()
       throws Exception {
@@ -40,7 +42,8 @@ public class TronMessageFactoryDiffblueTest {
    * <p>Method under test: {@link TronMessageFactory#create(byte[])}
    */
   @Test
-  @Category(MaintainedByDiffblue.class)
+  @Category(ContributionFromDiffblue.class)
+  @ManagedByDiffblue
   @MethodsUnderTest({"org.tron.core.net.message.TronMessage TronMessageFactory.create(byte[])"})
   public void testCreateWithData_whenArrayOfByteWithThreeAndX_thenThrowP2pException()
       throws Exception {
@@ -61,7 +64,8 @@ public class TronMessageFactoryDiffblueTest {
    * <p>Method under test: {@link TronMessageFactory#create(byte[])}
    */
   @Test
-  @Category(MaintainedByDiffblue.class)
+  @Category(ContributionFromDiffblue.class)
+  @ManagedByDiffblue
   @MethodsUnderTest({"org.tron.core.net.message.TronMessage TronMessageFactory.create(byte[])"})
   public void testCreateWithData_whenArrayOfByteWithZeroAndX_thenThrowP2pException()
       throws Exception {
@@ -82,7 +86,8 @@ public class TronMessageFactoryDiffblueTest {
    * <p>Method under test: {@link TronMessageFactory#create(byte[])}
    */
   @Test
-  @Category(MaintainedByDiffblue.class)
+  @Category(ContributionFromDiffblue.class)
+  @ManagedByDiffblue
   @MethodsUnderTest({"org.tron.core.net.message.TronMessage TronMessageFactory.create(byte[])"})
   public void testCreateWithData_whenAxaxaxaxBytesIsUtf8_thenThrowP2pException() throws Exception {
     // Arrange, Act and Assert

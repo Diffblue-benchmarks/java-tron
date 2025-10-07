@@ -6,7 +6,8 @@ import static org.junit.Assert.assertFalse;
 import static org.junit.Assert.assertNull;
 import static org.junit.Assert.assertSame;
 import static org.junit.Assert.assertTrue;
-import com.diffblue.cover.annotations.MaintainedByDiffblue;
+import com.diffblue.cover.annotations.ContributionFromDiffblue;
+import com.diffblue.cover.annotations.ManagedByDiffblue;
 import com.diffblue.cover.annotations.MethodsUnderTest;
 import com.google.protobuf.ByteString;
 import com.google.protobuf.ByteString.ByteIterator;
@@ -61,7 +62,8 @@ public class TxInputCapsuleDiffblueTest {
    * <p>Method under test: {@link TxInputCapsule#TxInputCapsule(byte[], long, byte[], byte[])}
    */
   @Test
-  @Category(MaintainedByDiffblue.class)
+  @Category(ContributionFromDiffblue.class)
+  @ManagedByDiffblue
   @MethodsUnderTest({"void TxInputCapsule.<init>(byte[], long, byte[], byte[])"})
   public void testNewTxInputCapsule() throws UnsupportedEncodingException {
     // Arrange and Act
@@ -91,7 +93,8 @@ public class TxInputCapsuleDiffblueTest {
    * <p>Method under test: {@link TxInputCapsule#getTxInput()}
    */
   @Test
-  @Category(MaintainedByDiffblue.class)
+  @Category(ContributionFromDiffblue.class)
+  @ManagedByDiffblue
   @MethodsUnderTest({"TXInput TxInputCapsule.getTxInput()"})
   public void testGetTxInput() throws UnsupportedEncodingException {
     // Arrange and Act
@@ -774,7 +777,8 @@ public class TxInputCapsuleDiffblueTest {
    * <p>Method under test: {@link TxInputCapsule#validate()}
    */
   @Test
-  @Category(MaintainedByDiffblue.class)
+  @Category(ContributionFromDiffblue.class)
+  @ManagedByDiffblue
   @MethodsUnderTest({"boolean TxInputCapsule.validate()"})
   public void testValidate() throws UnsupportedEncodingException {
     // Arrange, Act and Assert
@@ -793,7 +797,8 @@ public class TxInputCapsuleDiffblueTest {
    * <p>Method under test: {@link TxInputCapsule#getData()}
    */
   @Test
-  @Category(MaintainedByDiffblue.class)
+  @Category(ContributionFromDiffblue.class)
+  @ManagedByDiffblue
   @MethodsUnderTest({"byte[] TxInputCapsule.getData()"})
   public void testGetData() throws UnsupportedEncodingException {
     // Arrange, Act and Assert
@@ -813,7 +818,8 @@ public class TxInputCapsuleDiffblueTest {
    * <p>Method under test: {@link TxInputCapsule#getInstance()}
    */
   @Test
-  @Category(MaintainedByDiffblue.class)
+  @Category(ContributionFromDiffblue.class)
+  @ManagedByDiffblue
   @MethodsUnderTest({"TXInput TxInputCapsule.getInstance()"})
   public void testGetInstance() throws UnsupportedEncodingException {
     // Arrange and Act

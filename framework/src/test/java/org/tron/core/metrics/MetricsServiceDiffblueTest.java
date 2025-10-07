@@ -10,7 +10,8 @@ import static org.mockito.Mockito.doThrow;
 import static org.mockito.Mockito.mock;
 import static org.mockito.Mockito.verify;
 import static org.mockito.Mockito.when;
-import com.diffblue.cover.annotations.MaintainedByDiffblue;
+import com.diffblue.cover.annotations.ContributionFromDiffblue;
+import com.diffblue.cover.annotations.ManagedByDiffblue;
 import com.diffblue.cover.annotations.MethodsUnderTest;
 import org.junit.Test;
 import org.junit.experimental.categories.Category;
@@ -44,7 +45,8 @@ public class MetricsServiceDiffblueTest {
    * <p>Method under test: {@link MetricsService#applyBlock(BlockCapsule)}
    */
   @Test
-  @Category(MaintainedByDiffblue.class)
+  @Category(ContributionFromDiffblue.class)
+  @ManagedByDiffblue
   @MethodsUnderTest({"void MetricsService.applyBlock(BlockCapsule)"})
   public void testApplyBlock_givenBlockChainMetricManagerApplyBlockDoesNothing_whenNull() {
     // Arrange
@@ -69,7 +71,8 @@ public class MetricsServiceDiffblueTest {
    * <p>Method under test: {@link MetricsService#applyBlock(BlockCapsule)}
    */
   @Test
-  @Category(MaintainedByDiffblue.class)
+  @Category(ContributionFromDiffblue.class)
+  @ManagedByDiffblue
   @MethodsUnderTest({"void MetricsService.applyBlock(BlockCapsule)"})
   public void testApplyBlock_givenBlockId_whenBlockCapsuleGetBlockIdReturnBlockId() {
     // Arrange
@@ -99,7 +102,8 @@ public class MetricsServiceDiffblueTest {
    * <p>Method under test: {@link MetricsService#applyBlock(BlockCapsule)}
    */
   @Test
-  @Category(MaintainedByDiffblue.class)
+  @Category(ContributionFromDiffblue.class)
+  @ManagedByDiffblue
   @MethodsUnderTest({"void MetricsService.applyBlock(BlockCapsule)"})
   public void testApplyBlock_givenBlockId_whenBlockCapsuleGetBlockIdReturnBlockId2() {
     // Arrange
@@ -124,7 +128,8 @@ public class MetricsServiceDiffblueTest {
    * <p>Method under test: {@link MetricsService#failProcessBlock(long, String)}
    */
   @Test
-  @Category(MaintainedByDiffblue.class)
+  @Category(ContributionFromDiffblue.class)
+  @ManagedByDiffblue
   @MethodsUnderTest({"void MetricsService.failProcessBlock(long, String)"})
   public void testFailProcessBlock() {
     // Arrange
@@ -147,7 +152,8 @@ public class MetricsServiceDiffblueTest {
    * <p>Method under test: {@link MetricsService#failProcessBlock(long, String)}
    */
   @Test
-  @Category(MaintainedByDiffblue.class)
+  @Category(ContributionFromDiffblue.class)
+  @ManagedByDiffblue
   @MethodsUnderTest({"void MetricsService.failProcessBlock(long, String)"})
   public void testFailProcessBlock_thenCallsSetFailProcessBlockReason() {
     // Arrange
@@ -168,7 +174,8 @@ public class MetricsServiceDiffblueTest {
    * <p>Method under test: {@link MetricsService#getMetricsInfo()}
    */
   @Test
-  @Category(MaintainedByDiffblue.class)
+  @Category(ContributionFromDiffblue.class)
+  @ManagedByDiffblue
   @MethodsUnderTest({"MetricsInfo MetricsService.getMetricsInfo()"})
   public void testGetMetricsInfo() {
     // Arrange and Act

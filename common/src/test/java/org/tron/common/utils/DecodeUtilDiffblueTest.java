@@ -1,7 +1,8 @@
 package org.tron.common.utils;
 
 import static org.junit.Assert.assertFalse;
-import com.diffblue.cover.annotations.MaintainedByDiffblue;
+import com.diffblue.cover.annotations.ContributionFromDiffblue;
+import com.diffblue.cover.annotations.ManagedByDiffblue;
 import com.diffblue.cover.annotations.MethodsUnderTest;
 import java.io.UnsupportedEncodingException;
 import org.junit.Test;
@@ -18,7 +19,8 @@ public class DecodeUtilDiffblueTest {
    * <p>Method under test: {@link DecodeUtil#addressValid(byte[])}
    */
   @Test
-  @Category(MaintainedByDiffblue.class)
+  @Category(ContributionFromDiffblue.class)
+  @ManagedByDiffblue
   @MethodsUnderTest({"boolean DecodeUtil.addressValid(byte[])"})
   public void testAddressValid_whenAxaxaxaxBytesIsUtf8() throws UnsupportedEncodingException {
     // Arrange, Act and Assert
@@ -35,7 +37,8 @@ public class DecodeUtilDiffblueTest {
    * <p>Method under test: {@link DecodeUtil#addressValid(byte[])}
    */
   @Test
-  @Category(MaintainedByDiffblue.class)
+  @Category(ContributionFromDiffblue.class)
+  @ManagedByDiffblue
   @MethodsUnderTest({"boolean DecodeUtil.addressValid(byte[])"})
   public void testAddressValid_whenEmptyArrayOfByte() {
     // Arrange, Act and Assert
@@ -52,7 +55,8 @@ public class DecodeUtilDiffblueTest {
    * <p>Method under test: {@link DecodeUtil#addressValid(byte[])}
    */
   @Test
-  @Category(MaintainedByDiffblue.class)
+  @Category(ContributionFromDiffblue.class)
+  @ManagedByDiffblue
   @MethodsUnderTest({"boolean DecodeUtil.addressValid(byte[])"})
   public void testAddressValid_whenNull() {
     // Arrange, Act and Assert

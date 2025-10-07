@@ -12,7 +12,8 @@ import static org.mockito.Mockito.doNothing;
 import static org.mockito.Mockito.mock;
 import static org.mockito.Mockito.verify;
 import static org.mockito.Mockito.when;
-import com.diffblue.cover.annotations.MaintainedByDiffblue;
+import com.diffblue.cover.annotations.ContributionFromDiffblue;
+import com.diffblue.cover.annotations.ManagedByDiffblue;
 import com.diffblue.cover.annotations.MethodsUnderTest;
 import java.io.BufferedReader;
 import java.io.IOException;
@@ -62,7 +63,8 @@ public class GetBlockByLatestNumServletDiffblueTest {
    * HttpServletResponse)}
    */
   @Test
-  @Category(MaintainedByDiffblue.class)
+  @Category(ContributionFromDiffblue.class)
+  @ManagedByDiffblue
   @MethodsUnderTest({
     "void GetBlockByLatestNumServlet.doGet(HttpServletRequest, HttpServletResponse)"
   })
@@ -96,7 +98,8 @@ public class GetBlockByLatestNumServletDiffblueTest {
    * HttpServletResponse)}
    */
   @Test
-  @Category(MaintainedByDiffblue.class)
+  @Category(ContributionFromDiffblue.class)
+  @ManagedByDiffblue
   @MethodsUnderTest({
     "void GetBlockByLatestNumServlet.doGet(HttpServletRequest, HttpServletResponse)"
   })
@@ -129,7 +132,8 @@ public class GetBlockByLatestNumServletDiffblueTest {
    * HttpServletResponse)}
    */
   @Test
-  @Category(MaintainedByDiffblue.class)
+  @Category(ContributionFromDiffblue.class)
+  @ManagedByDiffblue
   @MethodsUnderTest({
     "void GetBlockByLatestNumServlet.doGet(HttpServletRequest, HttpServletResponse)"
   })
@@ -164,7 +168,8 @@ public class GetBlockByLatestNumServletDiffblueTest {
    * HttpServletResponse)}
    */
   @Test
-  @Category(MaintainedByDiffblue.class)
+  @Category(ContributionFromDiffblue.class)
+  @ManagedByDiffblue
   @MethodsUnderTest({
     "void GetBlockByLatestNumServlet.doGet(HttpServletRequest, HttpServletResponse)"
   })
@@ -200,7 +205,8 @@ public class GetBlockByLatestNumServletDiffblueTest {
    * HttpServletResponse)}
    */
   @Test
-  @Category(MaintainedByDiffblue.class)
+  @Category(ContributionFromDiffblue.class)
+  @ManagedByDiffblue
   @MethodsUnderTest({
     "void GetBlockByLatestNumServlet.doGet(HttpServletRequest, HttpServletResponse)"
   })
@@ -231,7 +237,8 @@ public class GetBlockByLatestNumServletDiffblueTest {
    * HttpServletResponse)}
    */
   @Test
-  @Category(MaintainedByDiffblue.class)
+  @Category(ContributionFromDiffblue.class)
+  @ManagedByDiffblue
   @MethodsUnderTest({
     "void GetBlockByLatestNumServlet.doGet(HttpServletRequest, HttpServletResponse)"
   })
@@ -263,7 +270,8 @@ public class GetBlockByLatestNumServletDiffblueTest {
    * HttpServletResponse)}
    */
   @Test
-  @Category(MaintainedByDiffblue.class)
+  @Category(ContributionFromDiffblue.class)
+  @ManagedByDiffblue
   @MethodsUnderTest({
     "void GetBlockByLatestNumServlet.doGet(HttpServletRequest, HttpServletResponse)"
   })
@@ -294,7 +302,8 @@ public class GetBlockByLatestNumServletDiffblueTest {
    * HttpServletResponse)}
    */
   @Test
-  @Category(MaintainedByDiffblue.class)
+  @Category(ContributionFromDiffblue.class)
+  @ManagedByDiffblue
   @MethodsUnderTest({
     "void GetBlockByLatestNumServlet.doGet(HttpServletRequest, HttpServletResponse)"
   })
@@ -330,7 +339,8 @@ public class GetBlockByLatestNumServletDiffblueTest {
    * HttpServletResponse)}
    */
   @Test
-  @Category(MaintainedByDiffblue.class)
+  @Category(ContributionFromDiffblue.class)
+  @ManagedByDiffblue
   @MethodsUnderTest({
     "void GetBlockByLatestNumServlet.doGet(HttpServletRequest, HttpServletResponse)"
   })
@@ -394,7 +404,8 @@ public class GetBlockByLatestNumServletDiffblueTest {
    * HttpServletResponse)}
    */
   @Test
-  @Category(MaintainedByDiffblue.class)
+  @Category(ContributionFromDiffblue.class)
+  @ManagedByDiffblue
   @MethodsUnderTest({
     "void GetBlockByLatestNumServlet.doPost(HttpServletRequest, HttpServletResponse)"
   })
@@ -428,7 +439,8 @@ public class GetBlockByLatestNumServletDiffblueTest {
    * HttpServletResponse)}
    */
   @Test
-  @Category(MaintainedByDiffblue.class)
+  @Category(ContributionFromDiffblue.class)
+  @ManagedByDiffblue
   @MethodsUnderTest({
     "void GetBlockByLatestNumServlet.doPost(HttpServletRequest, HttpServletResponse)"
   })
@@ -461,7 +473,8 @@ public class GetBlockByLatestNumServletDiffblueTest {
    * HttpServletResponse)}
    */
   @Test
-  @Category(MaintainedByDiffblue.class)
+  @Category(ContributionFromDiffblue.class)
+  @ManagedByDiffblue
   @MethodsUnderTest({
     "void GetBlockByLatestNumServlet.doPost(HttpServletRequest, HttpServletResponse)"
   })
@@ -504,7 +517,8 @@ public class GetBlockByLatestNumServletDiffblueTest {
    * HttpServletResponse)}
    */
   @Test
-  @Category(MaintainedByDiffblue.class)
+  @Category(ContributionFromDiffblue.class)
+  @ManagedByDiffblue
   @MethodsUnderTest({
     "void GetBlockByLatestNumServlet.doPost(HttpServletRequest, HttpServletResponse)"
   })
@@ -552,7 +566,8 @@ public class GetBlockByLatestNumServletDiffblueTest {
    * HttpServletResponse)}
    */
   @Test
-  @Category(MaintainedByDiffblue.class)
+  @Category(ContributionFromDiffblue.class)
+  @ManagedByDiffblue
   @MethodsUnderTest({
     "void GetBlockByLatestNumServlet.doPost(HttpServletRequest, HttpServletResponse)"
   })
@@ -604,7 +619,8 @@ public class GetBlockByLatestNumServletDiffblueTest {
    * HttpServletResponse)}
    */
   @Test
-  @Category(MaintainedByDiffblue.class)
+  @Category(ContributionFromDiffblue.class)
+  @ManagedByDiffblue
   @MethodsUnderTest({
     "void GetBlockByLatestNumServlet.doPost(HttpServletRequest, HttpServletResponse)"
   })
@@ -676,7 +692,8 @@ public class GetBlockByLatestNumServletDiffblueTest {
    * HttpServletResponse)}
    */
   @Test
-  @Category(MaintainedByDiffblue.class)
+  @Category(ContributionFromDiffblue.class)
+  @ManagedByDiffblue
   @MethodsUnderTest({
     "void GetBlockByLatestNumServlet.doPost(HttpServletRequest, HttpServletResponse)"
   })

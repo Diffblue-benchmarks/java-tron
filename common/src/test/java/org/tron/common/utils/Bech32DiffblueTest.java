@@ -1,7 +1,8 @@
 package org.tron.common.utils;
 
 import static org.junit.Assert.assertEquals;
-import com.diffblue.cover.annotations.MaintainedByDiffblue;
+import com.diffblue.cover.annotations.ContributionFromDiffblue;
+import com.diffblue.cover.annotations.ManagedByDiffblue;
 import com.diffblue.cover.annotations.MethodsUnderTest;
 import org.junit.Test;
 import org.junit.experimental.categories.Category;
@@ -18,7 +19,8 @@ public class Bech32DiffblueTest {
    * <p>Method under test: {@link Bech32#encode(String, byte[])}
    */
   @Test
-  @Category(MaintainedByDiffblue.class)
+  @Category(ContributionFromDiffblue.class)
+  @ManagedByDiffblue
   @MethodsUnderTest({"String Bech32.encode(String, byte[])"})
   public void testEncodeWithHrpValues_whenEmptyArrayOfByte_thenReturnHrp1vhqs52() {
     // Arrange and Act

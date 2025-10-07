@@ -8,7 +8,8 @@ import static org.mockito.Mockito.atLeast;
 import static org.mockito.Mockito.mock;
 import static org.mockito.Mockito.verify;
 import static org.mockito.Mockito.when;
-import com.diffblue.cover.annotations.MaintainedByDiffblue;
+import com.diffblue.cover.annotations.ContributionFromDiffblue;
+import com.diffblue.cover.annotations.ManagedByDiffblue;
 import com.diffblue.cover.annotations.MethodsUnderTest;
 import java.util.ArrayList;
 import java.util.List;
@@ -27,7 +28,8 @@ public class LogFilterWrapperDiffblueTest {
    * Wallet)}
    */
   @Test
-  @Category(MaintainedByDiffblue.class)
+  @Category(ContributionFromDiffblue.class)
+  @ManagedByDiffblue
   @MethodsUnderTest({"void LogFilterWrapper.<init>(TronJsonRpc.FilterRequest, long, Wallet)"})
   public void testNewLogFilterWrapper() throws JsonRpcInvalidParamsException {
     // Arrange
@@ -54,7 +56,8 @@ public class LogFilterWrapperDiffblueTest {
    * Wallet)}
    */
   @Test
-  @Category(MaintainedByDiffblue.class)
+  @Category(ContributionFromDiffblue.class)
+  @ManagedByDiffblue
   @MethodsUnderTest({"void LogFilterWrapper.<init>(TronJsonRpc.FilterRequest, long, Wallet)"})
   public void testNewLogFilterWrapper2() throws JsonRpcInvalidParamsException {
     // Arrange
@@ -85,7 +88,8 @@ public class LogFilterWrapperDiffblueTest {
    * Wallet)}
    */
   @Test
-  @Category(MaintainedByDiffblue.class)
+  @Category(ContributionFromDiffblue.class)
+  @ManagedByDiffblue
   @MethodsUnderTest({"void LogFilterWrapper.<init>(TronJsonRpc.FilterRequest, long, Wallet)"})
   public void testNewLogFilterWrapper_givenArrayList() throws JsonRpcInvalidParamsException {
     // Arrange
@@ -115,7 +119,8 @@ public class LogFilterWrapperDiffblueTest {
    * Wallet)}
    */
   @Test
-  @Category(MaintainedByDiffblue.class)
+  @Category(ContributionFromDiffblue.class)
+  @ManagedByDiffblue
   @MethodsUnderTest({"void LogFilterWrapper.<init>(TronJsonRpc.FilterRequest, long, Wallet)"})
   public void testNewLogFilterWrapper_givenEmptyArrayOfObject()
       throws JsonRpcInvalidParamsException {
@@ -148,7 +153,8 @@ public class LogFilterWrapperDiffblueTest {
    * Wallet)}
    */
   @Test
-  @Category(MaintainedByDiffblue.class)
+  @Category(ContributionFromDiffblue.class)
+  @ManagedByDiffblue
   @MethodsUnderTest({"void LogFilterWrapper.<init>(TronJsonRpc.FilterRequest, long, Wallet)"})
   public void testNewLogFilterWrapper_givenFoo_whenFilterRequestGetBlockHashReturnFoo()
       throws JsonRpcInvalidParamsException {
@@ -179,7 +185,8 @@ public class LogFilterWrapperDiffblueTest {
    * Wallet)}
    */
   @Test
-  @Category(MaintainedByDiffblue.class)
+  @Category(ContributionFromDiffblue.class)
+  @ManagedByDiffblue
   @MethodsUnderTest({"void LogFilterWrapper.<init>(TronJsonRpc.FilterRequest, long, Wallet)"})
   public void testNewLogFilterWrapper_thenCallsGetToBlock() throws JsonRpcInvalidParamsException {
     // Arrange
@@ -211,7 +218,8 @@ public class LogFilterWrapperDiffblueTest {
    * Wallet)}
    */
   @Test
-  @Category(MaintainedByDiffblue.class)
+  @Category(ContributionFromDiffblue.class)
+  @ManagedByDiffblue
   @MethodsUnderTest({"void LogFilterWrapper.<init>(TronJsonRpc.FilterRequest, long, Wallet)"})
   public void testNewLogFilterWrapper_thenReturnLogFilterTopicsFirstIsNull()
       throws JsonRpcInvalidParamsException {
@@ -243,7 +251,8 @@ public class LogFilterWrapperDiffblueTest {
    * Wallet)}
    */
   @Test
-  @Category(MaintainedByDiffblue.class)
+  @Category(ContributionFromDiffblue.class)
+  @ManagedByDiffblue
   @MethodsUnderTest({"void LogFilterWrapper.<init>(TronJsonRpc.FilterRequest, long, Wallet)"})
   public void testNewLogFilterWrapper_thenThrowJsonRpcInvalidParamsException()
       throws JsonRpcInvalidParamsException {
@@ -264,36 +273,6 @@ public class LogFilterWrapperDiffblueTest {
   }
 
   /**
-   * Test {@link LogFilterWrapper#LogFilterWrapper(FilterRequest, long, Wallet)}.
-   *
-   * <ul>
-   *   <li>When {@link TronJsonRpc.FilterRequest#FilterRequest()}.
-   *   <li>Then return FromBlock is one.
-   * </ul>
-   *
-   * <p>Method under test: {@link LogFilterWrapper#LogFilterWrapper(TronJsonRpc.FilterRequest, long,
-   * Wallet)}
-   */
-  @Test
-  @Category(MaintainedByDiffblue.class)
-  @MethodsUnderTest({"void LogFilterWrapper.<init>(TronJsonRpc.FilterRequest, long, Wallet)"})
-  public void testNewLogFilterWrapper_whenFilterRequest_thenReturnFromBlockIsOne()
-      throws JsonRpcInvalidParamsException {
-    // Arrange
-    FilterRequest fr = new FilterRequest();
-
-    // Act
-    LogFilterWrapper actualLogFilterWrapper = new LogFilterWrapper(fr, 1L, new Wallet());
-
-    // Assert
-    LogFilter logFilter = actualLogFilterWrapper.getLogFilter();
-    assertEquals(0, logFilter.getContractAddresses().length);
-    assertEquals(1L, actualLogFilterWrapper.getFromBlock());
-    assertTrue(logFilter.getTopics().isEmpty());
-    assertEquals(Long.MAX_VALUE, actualLogFilterWrapper.getToBlock());
-  }
-
-  /**
    * Test getters and setters.
    *
    * <p>Methods under test:
@@ -305,7 +284,8 @@ public class LogFilterWrapperDiffblueTest {
    * </ul>
    */
   @Test
-  @Category(MaintainedByDiffblue.class)
+  @Category(ContributionFromDiffblue.class)
+  @ManagedByDiffblue
   @MethodsUnderTest({
     "long LogFilterWrapper.getFromBlock()",
     "LogFilter LogFilterWrapper.getLogFilter()",

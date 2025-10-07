@@ -4,7 +4,8 @@ import static org.junit.Assert.assertEquals;
 import static org.junit.Assert.assertFalse;
 import static org.junit.Assert.assertNull;
 import static org.junit.Assert.assertTrue;
-import com.diffblue.cover.annotations.MaintainedByDiffblue;
+import com.diffblue.cover.annotations.ContributionFromDiffblue;
+import com.diffblue.cover.annotations.ManagedByDiffblue;
 import com.diffblue.cover.annotations.MethodsUnderTest;
 import org.iq80.leveldb.CompressionType;
 import org.iq80.leveldb.Options;
@@ -18,7 +19,8 @@ public class ArchiveManifestDiffblueTest {
    * <p>Method under test: {@link ArchiveManifest#newDefaultLevelDbOptions()}
    */
   @Test
-  @Category(MaintainedByDiffblue.class)
+  @Category(ContributionFromDiffblue.class)
+  @ManagedByDiffblue
   @MethodsUnderTest({"Options ArchiveManifest.newDefaultLevelDbOptions()"})
   public void testNewDefaultLevelDbOptions() {
     // Arrange and Act
@@ -52,7 +54,8 @@ public class ArchiveManifestDiffblueTest {
    * <p>Method under test: {@link ArchiveManifest#readProperty(String, String)}
    */
   @Test
-  @Category(MaintainedByDiffblue.class)
+  @Category(ContributionFromDiffblue.class)
+  @ManagedByDiffblue
   @MethodsUnderTest({"String ArchiveManifest.readProperty(String, String)"})
   public void testReadProperty_whenEmptyString_thenReturnEmptyString() {
     // Arrange, Act and Assert
@@ -70,7 +73,8 @@ public class ArchiveManifestDiffblueTest {
    * <p>Method under test: {@link ArchiveManifest#readProperty(String, String)}
    */
   @Test
-  @Category(MaintainedByDiffblue.class)
+  @Category(ContributionFromDiffblue.class)
+  @ManagedByDiffblue
   @MethodsUnderTest({"String ArchiveManifest.readProperty(String, String)"})
   public void testReadProperty_whenNull_thenReturnEmptyString() {
     // Arrange, Act and Assert

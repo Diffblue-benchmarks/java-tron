@@ -6,7 +6,8 @@ import static org.junit.Assert.assertFalse;
 import static org.junit.Assert.assertNotEquals;
 import static org.junit.Assert.assertSame;
 import static org.junit.Assert.assertTrue;
-import com.diffblue.cover.annotations.MaintainedByDiffblue;
+import com.diffblue.cover.annotations.ContributionFromDiffblue;
+import com.diffblue.cover.annotations.ManagedByDiffblue;
 import com.diffblue.cover.annotations.MethodsUnderTest;
 import java.io.UnsupportedEncodingException;
 import java.math.BigInteger;
@@ -21,7 +22,8 @@ public class DataWordDiffblueTest {
    * <p>Method under test: {@link DataWord#DataWord()}
    */
   @Test
-  @Category(MaintainedByDiffblue.class)
+  @Category(ContributionFromDiffblue.class)
+  @ManagedByDiffblue
   @MethodsUnderTest({"void DataWord.<init>()"})
   public void testNewDataWord() {
     // Arrange and Act
@@ -63,7 +65,8 @@ public class DataWordDiffblueTest {
    * <p>Method under test: {@link DataWord#DataWord(int)}
    */
   @Test
-  @Category(MaintainedByDiffblue.class)
+  @Category(ContributionFromDiffblue.class)
+  @ManagedByDiffblue
   @MethodsUnderTest({"void DataWord.<init>(int)"})
   public void testNewDataWord2() {
     // Arrange and Act
@@ -105,7 +108,8 @@ public class DataWordDiffblueTest {
    * <p>Method under test: {@link DataWord#DataWord(long)}
    */
   @Test
-  @Category(MaintainedByDiffblue.class)
+  @Category(ContributionFromDiffblue.class)
+  @ManagedByDiffblue
   @MethodsUnderTest({"void DataWord.<init>(long)"})
   public void testNewDataWord3() {
     // Arrange and Act
@@ -147,7 +151,8 @@ public class DataWordDiffblueTest {
    * <p>Method under test: {@link DataWord#DataWord(String)}
    */
   @Test
-  @Category(MaintainedByDiffblue.class)
+  @Category(ContributionFromDiffblue.class)
+  @ManagedByDiffblue
   @MethodsUnderTest({"void DataWord.<init>(String)"})
   public void testNewDataWord4() {
     // Arrange and Act
@@ -188,7 +193,8 @@ public class DataWordDiffblueTest {
    * <p>Method under test: {@link DataWord#DataWord(ByteArrayWrapper)}
    */
   @Test
-  @Category(MaintainedByDiffblue.class)
+  @Category(ContributionFromDiffblue.class)
+  @ManagedByDiffblue
   @MethodsUnderTest({"void DataWord.<init>(ByteArrayWrapper)"})
   public void testNewDataWord5() throws UnsupportedEncodingException {
     // Arrange and Act
@@ -232,7 +238,8 @@ public class DataWordDiffblueTest {
    * <p>Method under test: {@link DataWord#DataWord(byte[])}
    */
   @Test
-  @Category(MaintainedByDiffblue.class)
+  @Category(ContributionFromDiffblue.class)
+  @ManagedByDiffblue
   @MethodsUnderTest({"void DataWord.<init>(byte[])"})
   public void testNewDataWord6() throws UnsupportedEncodingException {
     // Arrange and Act
@@ -281,7 +288,8 @@ public class DataWordDiffblueTest {
    * <p>Method under test: {@link DataWord#DataWord(String)}
    */
   @Test
-  @Category(MaintainedByDiffblue.class)
+  @Category(ContributionFromDiffblue.class)
+  @ManagedByDiffblue
   @MethodsUnderTest({"void DataWord.<init>(String)"})
   public void testNewDataWord_whenEmptyString_thenReturnToPrefixStringIs00() {
     // Arrange and Act
@@ -327,7 +335,8 @@ public class DataWordDiffblueTest {
    * <p>Method under test: {@link DataWord#DataWord(byte[])}
    */
   @Test
-  @Category(MaintainedByDiffblue.class)
+  @Category(ContributionFromDiffblue.class)
+  @ManagedByDiffblue
   @MethodsUnderTest({"void DataWord.<init>(byte[])"})
   public void testNewDataWord_whenNull_thenReturnToHexStringIsEmptyString() {
     // Arrange and Act
@@ -353,7 +362,8 @@ public class DataWordDiffblueTest {
    * <p>Method under test: {@link DataWord#ONE()}
    */
   @Test
-  @Category(MaintainedByDiffblue.class)
+  @Category(ContributionFromDiffblue.class)
+  @ManagedByDiffblue
   @MethodsUnderTest({"DataWord DataWord.ONE()"})
   public void testOne() {
     // Arrange and Act
@@ -395,7 +405,8 @@ public class DataWordDiffblueTest {
    * <p>Method under test: {@link DataWord#ZERO()}
    */
   @Test
-  @Category(MaintainedByDiffblue.class)
+  @Category(ContributionFromDiffblue.class)
+  @ManagedByDiffblue
   @MethodsUnderTest({"DataWord DataWord.ZERO()"})
   public void testZero() {
     // Arrange and Act
@@ -437,7 +448,8 @@ public class DataWordDiffblueTest {
    * <p>Method under test: {@link DataWord#of(byte)}
    */
   @Test
-  @Category(MaintainedByDiffblue.class)
+  @Category(ContributionFromDiffblue.class)
+  @ManagedByDiffblue
   @MethodsUnderTest({"DataWord DataWord.of(byte)"})
   public void testOf() {
     // Arrange and Act
@@ -479,7 +491,8 @@ public class DataWordDiffblueTest {
    * <p>Method under test: {@link DataWord#bigIntValue()}
    */
   @Test
-  @Category(MaintainedByDiffblue.class)
+  @Category(ContributionFromDiffblue.class)
+  @ManagedByDiffblue
   @MethodsUnderTest({"String DataWord.bigIntValue()"})
   public void testBigIntValue() {
     // Arrange, Act and Assert
@@ -497,7 +510,8 @@ public class DataWordDiffblueTest {
    * <p>Method under test: {@link DataWord#bigIntValue(byte[])}
    */
   @Test
-  @Category(MaintainedByDiffblue.class)
+  @Category(ContributionFromDiffblue.class)
+  @ManagedByDiffblue
   @MethodsUnderTest({"String DataWord.bigIntValue(byte[])"})
   public void testBigIntValueWithByte_whenAxaxaxaxBytesIsUtf8_thenReturn4708585257725083992()
       throws UnsupportedEncodingException {
@@ -516,7 +530,8 @@ public class DataWordDiffblueTest {
    * <p>Method under test: {@link DataWord#isZero(byte[])}
    */
   @Test
-  @Category(MaintainedByDiffblue.class)
+  @Category(ContributionFromDiffblue.class)
+  @ManagedByDiffblue
   @MethodsUnderTest({"boolean DataWord.isZero(byte[])"})
   public void testIsZeroWithByte_whenArrayOfByteWithZeroAndZero_thenReturnTrue() {
     // Arrange, Act and Assert
@@ -534,7 +549,8 @@ public class DataWordDiffblueTest {
    * <p>Method under test: {@link DataWord#isZero(byte[])}
    */
   @Test
-  @Category(MaintainedByDiffblue.class)
+  @Category(ContributionFromDiffblue.class)
+  @ManagedByDiffblue
   @MethodsUnderTest({"boolean DataWord.isZero(byte[])"})
   public void testIsZeroWithByte_whenAxaxaxaxBytesIsUtf8_thenReturnFalse()
       throws UnsupportedEncodingException {
@@ -552,7 +568,8 @@ public class DataWordDiffblueTest {
    * <p>Method under test: {@link DataWord#isZero()}
    */
   @Test
-  @Category(MaintainedByDiffblue.class)
+  @Category(ContributionFromDiffblue.class)
+  @ManagedByDiffblue
   @MethodsUnderTest({"boolean DataWord.isZero()"})
   public void testIsZero_givenZero() {
     // Arrange, Act and Assert
@@ -569,7 +586,8 @@ public class DataWordDiffblueTest {
    * <p>Method under test: {@link DataWord#isZero()}
    */
   @Test
-  @Category(MaintainedByDiffblue.class)
+  @Category(ContributionFromDiffblue.class)
+  @ManagedByDiffblue
   @MethodsUnderTest({"boolean DataWord.isZero()"})
   public void testIsZero_givenZero2() {
     // Arrange, Act and Assert
@@ -582,7 +600,8 @@ public class DataWordDiffblueTest {
    * <p>Method under test: {@link DataWord#shortHex()}
    */
   @Test
-  @Category(MaintainedByDiffblue.class)
+  @Category(ContributionFromDiffblue.class)
+  @ManagedByDiffblue
   @MethodsUnderTest({"String DataWord.shortHex()"})
   public void testShortHex() {
     // Arrange
@@ -604,7 +623,8 @@ public class DataWordDiffblueTest {
    * <p>Method under test: {@link DataWord#shortHex(byte[])}
    */
   @Test
-  @Category(MaintainedByDiffblue.class)
+  @Category(ContributionFromDiffblue.class)
+  @ManagedByDiffblue
   @MethodsUnderTest({"String DataWord.shortHex(byte[])"})
   public void testShortHexWithByte_thenReturn0x7FF415841584158() {
     // Arrange, Act and Assert
@@ -622,7 +642,8 @@ public class DataWordDiffblueTest {
    * <p>Method under test: {@link DataWord#shortHex(byte[])}
    */
   @Test
-  @Category(MaintainedByDiffblue.class)
+  @Category(ContributionFromDiffblue.class)
+  @ManagedByDiffblue
   @MethodsUnderTest({"String DataWord.shortHex(byte[])"})
   public void testShortHexWithByte_thenReturn0x8FF7F5841584158() {
     // Arrange, Act and Assert
@@ -641,7 +662,8 @@ public class DataWordDiffblueTest {
    * <p>Method under test: {@link DataWord#shortHex(byte[])}
    */
   @Test
-  @Category(MaintainedByDiffblue.class)
+  @Category(ContributionFromDiffblue.class)
+  @ManagedByDiffblue
   @MethodsUnderTest({"String DataWord.shortHex(byte[])"})
   public void testShortHexWithByte_thenReturn0x8FF41FF41584158() {
     // Arrange, Act and Assert
@@ -659,7 +681,8 @@ public class DataWordDiffblueTest {
    * <p>Method under test: {@link DataWord#shortHex(byte[])}
    */
   @Test
-  @Category(MaintainedByDiffblue.class)
+  @Category(ContributionFromDiffblue.class)
+  @ManagedByDiffblue
   @MethodsUnderTest({"String DataWord.shortHex(byte[])"})
   public void testShortHexWithByte_thenReturn0x8FF417F41584158() {
     // Arrange, Act and Assert
@@ -678,7 +701,8 @@ public class DataWordDiffblueTest {
    * <p>Method under test: {@link DataWord#shortHex(byte[])}
    */
   @Test
-  @Category(MaintainedByDiffblue.class)
+  @Category(ContributionFromDiffblue.class)
+  @ManagedByDiffblue
   @MethodsUnderTest({"String DataWord.shortHex(byte[])"})
   public void testShortHexWithByte_thenReturn0x8FF4158FF584158() {
     // Arrange, Act and Assert
@@ -696,7 +720,8 @@ public class DataWordDiffblueTest {
    * <p>Method under test: {@link DataWord#shortHex(byte[])}
    */
   @Test
-  @Category(MaintainedByDiffblue.class)
+  @Category(ContributionFromDiffblue.class)
+  @ManagedByDiffblue
   @MethodsUnderTest({"String DataWord.shortHex(byte[])"})
   public void testShortHexWithByte_thenReturn0x8FF41587F584158() {
     // Arrange, Act and Assert
@@ -715,7 +740,8 @@ public class DataWordDiffblueTest {
    * <p>Method under test: {@link DataWord#shortHex(byte[])}
    */
   @Test
-  @Category(MaintainedByDiffblue.class)
+  @Category(ContributionFromDiffblue.class)
+  @ManagedByDiffblue
   @MethodsUnderTest({"String DataWord.shortHex(byte[])"})
   public void testShortHexWithByte_thenReturn0x8FF415841FF4158() {
     // Arrange, Act and Assert
@@ -733,7 +759,8 @@ public class DataWordDiffblueTest {
    * <p>Method under test: {@link DataWord#shortHex(byte[])}
    */
   @Test
-  @Category(MaintainedByDiffblue.class)
+  @Category(ContributionFromDiffblue.class)
+  @ManagedByDiffblue
   @MethodsUnderTest({"String DataWord.shortHex(byte[])"})
   public void testShortHexWithByte_thenReturn0x8FF4158417F4158() {
     // Arrange, Act and Assert
@@ -752,7 +779,8 @@ public class DataWordDiffblueTest {
    * <p>Method under test: {@link DataWord#shortHex(byte[])}
    */
   @Test
-  @Category(MaintainedByDiffblue.class)
+  @Category(ContributionFromDiffblue.class)
+  @ManagedByDiffblue
   @MethodsUnderTest({"String DataWord.shortHex(byte[])"})
   public void testShortHexWithByte_thenReturn0x8FF41584158FF58() {
     // Arrange, Act and Assert
@@ -770,7 +798,8 @@ public class DataWordDiffblueTest {
    * <p>Method under test: {@link DataWord#shortHex(byte[])}
    */
   @Test
-  @Category(MaintainedByDiffblue.class)
+  @Category(ContributionFromDiffblue.class)
+  @ManagedByDiffblue
   @MethodsUnderTest({"String DataWord.shortHex(byte[])"})
   public void testShortHexWithByte_thenReturn0x8FF415841587F58() {
     // Arrange, Act and Assert
@@ -789,7 +818,8 @@ public class DataWordDiffblueTest {
    * <p>Method under test: {@link DataWord#shortHex(byte[])}
    */
   @Test
-  @Category(MaintainedByDiffblue.class)
+  @Category(ContributionFromDiffblue.class)
+  @ManagedByDiffblue
   @MethodsUnderTest({"String DataWord.shortHex(byte[])"})
   public void testShortHexWithByte_thenReturn0x8FF4158415841FF() {
     // Arrange, Act and Assert
@@ -807,7 +837,8 @@ public class DataWordDiffblueTest {
    * <p>Method under test: {@link DataWord#shortHex(byte[])}
    */
   @Test
-  @Category(MaintainedByDiffblue.class)
+  @Category(ContributionFromDiffblue.class)
+  @ManagedByDiffblue
   @MethodsUnderTest({"String DataWord.shortHex(byte[])"})
   public void testShortHexWithByte_thenReturn0x8FF005841584158() {
     // Arrange, Act and Assert
@@ -825,7 +856,8 @@ public class DataWordDiffblueTest {
    * <p>Method under test: {@link DataWord#shortHex(byte[])}
    */
   @Test
-  @Category(MaintainedByDiffblue.class)
+  @Category(ContributionFromDiffblue.class)
+  @ManagedByDiffblue
   @MethodsUnderTest({"String DataWord.shortHex(byte[])"})
   public void testShortHexWithByte_thenReturn0x8FF41584158417F() {
     // Arrange, Act and Assert
@@ -844,7 +876,8 @@ public class DataWordDiffblueTest {
    * <p>Method under test: {@link DataWord#shortHex(byte[])}
    */
   @Test
-  @Category(MaintainedByDiffblue.class)
+  @Category(ContributionFromDiffblue.class)
+  @ManagedByDiffblue
   @MethodsUnderTest({"String DataWord.shortHex(byte[])"})
   public void testShortHexWithByte_thenReturn0x8FF075841584158() {
     // Arrange, Act and Assert
@@ -862,7 +895,8 @@ public class DataWordDiffblueTest {
    * <p>Method under test: {@link DataWord#shortHex(byte[])}
    */
   @Test
-  @Category(MaintainedByDiffblue.class)
+  @Category(ContributionFromDiffblue.class)
+  @ManagedByDiffblue
   @MethodsUnderTest({"String DataWord.shortHex(byte[])"})
   public void testShortHexWithByte_thenReturn0x8FF085841584158() {
     // Arrange, Act and Assert
@@ -881,7 +915,8 @@ public class DataWordDiffblueTest {
    * <p>Method under test: {@link DataWord#shortHex(byte[])}
    */
   @Test
-  @Category(MaintainedByDiffblue.class)
+  @Category(ContributionFromDiffblue.class)
+  @ManagedByDiffblue
   @MethodsUnderTest({"String DataWord.shortHex(byte[])"})
   public void testShortHexWithByte_thenReturn0x8FF410041584158() {
     // Arrange, Act and Assert
@@ -899,7 +934,8 @@ public class DataWordDiffblueTest {
    * <p>Method under test: {@link DataWord#shortHex(byte[])}
    */
   @Test
-  @Category(MaintainedByDiffblue.class)
+  @Category(ContributionFromDiffblue.class)
+  @ManagedByDiffblue
   @MethodsUnderTest({"String DataWord.shortHex(byte[])"})
   public void testShortHexWithByte_thenReturn0x8FF410741584158() {
     // Arrange, Act and Assert
@@ -917,7 +953,8 @@ public class DataWordDiffblueTest {
    * <p>Method under test: {@link DataWord#shortHex(byte[])}
    */
   @Test
-  @Category(MaintainedByDiffblue.class)
+  @Category(ContributionFromDiffblue.class)
+  @ManagedByDiffblue
   @MethodsUnderTest({"String DataWord.shortHex(byte[])"})
   public void testShortHexWithByte_thenReturn0x8FF410841584158() {
     // Arrange, Act and Assert
@@ -936,7 +973,8 @@ public class DataWordDiffblueTest {
    * <p>Method under test: {@link DataWord#shortHex(byte[])}
    */
   @Test
-  @Category(MaintainedByDiffblue.class)
+  @Category(ContributionFromDiffblue.class)
+  @ManagedByDiffblue
   @MethodsUnderTest({"String DataWord.shortHex(byte[])"})
   public void testShortHexWithByte_thenReturn0x8FF414141584158() {
     // Arrange, Act and Assert
@@ -955,7 +993,8 @@ public class DataWordDiffblueTest {
    * <p>Method under test: {@link DataWord#shortHex(byte[])}
    */
   @Test
-  @Category(MaintainedByDiffblue.class)
+  @Category(ContributionFromDiffblue.class)
+  @ManagedByDiffblue
   @MethodsUnderTest({"String DataWord.shortHex(byte[])"})
   public void testShortHexWithByte_thenReturn0x8FF415800584158() {
     // Arrange, Act and Assert
@@ -973,7 +1012,8 @@ public class DataWordDiffblueTest {
    * <p>Method under test: {@link DataWord#shortHex(byte[])}
    */
   @Test
-  @Category(MaintainedByDiffblue.class)
+  @Category(ContributionFromDiffblue.class)
+  @ManagedByDiffblue
   @MethodsUnderTest({"String DataWord.shortHex(byte[])"})
   public void testShortHexWithByte_thenReturn0x8FF415807584158() {
     // Arrange, Act and Assert
@@ -991,7 +1031,8 @@ public class DataWordDiffblueTest {
    * <p>Method under test: {@link DataWord#shortHex(byte[])}
    */
   @Test
-  @Category(MaintainedByDiffblue.class)
+  @Category(ContributionFromDiffblue.class)
+  @ManagedByDiffblue
   @MethodsUnderTest({"String DataWord.shortHex(byte[])"})
   public void testShortHexWithByte_thenReturn0x8FF415808584158() {
     // Arrange, Act and Assert
@@ -1010,7 +1051,8 @@ public class DataWordDiffblueTest {
    * <p>Method under test: {@link DataWord#shortHex(byte[])}
    */
   @Test
-  @Category(MaintainedByDiffblue.class)
+  @Category(ContributionFromDiffblue.class)
+  @ManagedByDiffblue
   @MethodsUnderTest({"String DataWord.shortHex(byte[])"})
   public void testShortHexWithByte_thenReturn0x8FF415841004158() {
     // Arrange, Act and Assert
@@ -1028,7 +1070,8 @@ public class DataWordDiffblueTest {
    * <p>Method under test: {@link DataWord#shortHex(byte[])}
    */
   @Test
-  @Category(MaintainedByDiffblue.class)
+  @Category(ContributionFromDiffblue.class)
+  @ManagedByDiffblue
   @MethodsUnderTest({"String DataWord.shortHex(byte[])"})
   public void testShortHexWithByte_thenReturn0x8FF415841074158() {
     // Arrange, Act and Assert
@@ -1046,7 +1089,8 @@ public class DataWordDiffblueTest {
    * <p>Method under test: {@link DataWord#shortHex(byte[])}
    */
   @Test
-  @Category(MaintainedByDiffblue.class)
+  @Category(ContributionFromDiffblue.class)
+  @ManagedByDiffblue
   @MethodsUnderTest({"String DataWord.shortHex(byte[])"})
   public void testShortHexWithByte_thenReturn0x8FF415841084158() {
     // Arrange, Act and Assert
@@ -1065,7 +1109,8 @@ public class DataWordDiffblueTest {
    * <p>Method under test: {@link DataWord#shortHex(byte[])}
    */
   @Test
-  @Category(MaintainedByDiffblue.class)
+  @Category(ContributionFromDiffblue.class)
+  @ManagedByDiffblue
   @MethodsUnderTest({"String DataWord.shortHex(byte[])"})
   public void testShortHexWithByte_thenReturn0x8FF415841414158() {
     // Arrange, Act and Assert
@@ -1084,7 +1129,8 @@ public class DataWordDiffblueTest {
    * <p>Method under test: {@link DataWord#shortHex(byte[])}
    */
   @Test
-  @Category(MaintainedByDiffblue.class)
+  @Category(ContributionFromDiffblue.class)
+  @ManagedByDiffblue
   @MethodsUnderTest({"String DataWord.shortHex(byte[])"})
   public void testShortHexWithByte_thenReturn0x8FF415841580058() {
     // Arrange, Act and Assert
@@ -1102,7 +1148,8 @@ public class DataWordDiffblueTest {
    * <p>Method under test: {@link DataWord#shortHex(byte[])}
    */
   @Test
-  @Category(MaintainedByDiffblue.class)
+  @Category(ContributionFromDiffblue.class)
+  @ManagedByDiffblue
   @MethodsUnderTest({"String DataWord.shortHex(byte[])"})
   public void testShortHexWithByte_thenReturn0x8FF415841580758() {
     // Arrange, Act and Assert
@@ -1120,7 +1167,8 @@ public class DataWordDiffblueTest {
    * <p>Method under test: {@link DataWord#shortHex(byte[])}
    */
   @Test
-  @Category(MaintainedByDiffblue.class)
+  @Category(ContributionFromDiffblue.class)
+  @ManagedByDiffblue
   @MethodsUnderTest({"String DataWord.shortHex(byte[])"})
   public void testShortHexWithByte_thenReturn0x8FF415841580858() {
     // Arrange, Act and Assert
@@ -1139,7 +1187,8 @@ public class DataWordDiffblueTest {
    * <p>Method under test: {@link DataWord#shortHex(byte[])}
    */
   @Test
-  @Category(MaintainedByDiffblue.class)
+  @Category(ContributionFromDiffblue.class)
+  @ManagedByDiffblue
   @MethodsUnderTest({"String DataWord.shortHex(byte[])"})
   public void testShortHexWithByte_thenReturn0x8FF415841584100() {
     // Arrange, Act and Assert
@@ -1157,7 +1206,8 @@ public class DataWordDiffblueTest {
    * <p>Method under test: {@link DataWord#shortHex(byte[])}
    */
   @Test
-  @Category(MaintainedByDiffblue.class)
+  @Category(ContributionFromDiffblue.class)
+  @ManagedByDiffblue
   @MethodsUnderTest({"String DataWord.shortHex(byte[])"})
   public void testShortHexWithByte_thenReturn0x8FF415841584107() {
     // Arrange, Act and Assert
@@ -1175,7 +1225,8 @@ public class DataWordDiffblueTest {
    * <p>Method under test: {@link DataWord#shortHex(byte[])}
    */
   @Test
-  @Category(MaintainedByDiffblue.class)
+  @Category(ContributionFromDiffblue.class)
+  @ManagedByDiffblue
   @MethodsUnderTest({"String DataWord.shortHex(byte[])"})
   public void testShortHexWithByte_thenReturn0x8FF415841584108() {
     // Arrange, Act and Assert
@@ -1194,7 +1245,8 @@ public class DataWordDiffblueTest {
    * <p>Method under test: {@link DataWord#shortHex(byte[])}
    */
   @Test
-  @Category(MaintainedByDiffblue.class)
+  @Category(ContributionFromDiffblue.class)
+  @ManagedByDiffblue
   @MethodsUnderTest({"String DataWord.shortHex(byte[])"})
   public void testShortHexWithByte_thenReturn0x8FF415841584141() {
     // Arrange, Act and Assert
@@ -1213,7 +1265,8 @@ public class DataWordDiffblueTest {
    * <p>Method under test: {@link DataWord#shortHex(byte[])}
    */
   @Test
-  @Category(MaintainedByDiffblue.class)
+  @Category(ContributionFromDiffblue.class)
+  @ManagedByDiffblue
   @MethodsUnderTest({"String DataWord.shortHex(byte[])"})
   public void testShortHexWithByte_thenReturn0x8FF415841584158() {
     // Arrange, Act and Assert
@@ -1232,7 +1285,8 @@ public class DataWordDiffblueTest {
    * <p>Method under test: {@link DataWord#shortHex(byte[])}
    */
   @Test
-  @Category(MaintainedByDiffblue.class)
+  @Category(ContributionFromDiffblue.class)
+  @ManagedByDiffblue
   @MethodsUnderTest({"String DataWord.shortHex(byte[])"})
   public void testShortHexWithByte_thenReturn0x8FF415841585858() {
     // Arrange, Act and Assert
@@ -1251,7 +1305,8 @@ public class DataWordDiffblueTest {
    * <p>Method under test: {@link DataWord#shortHex(byte[])}
    */
   @Test
-  @Category(MaintainedByDiffblue.class)
+  @Category(ContributionFromDiffblue.class)
+  @ManagedByDiffblue
   @MethodsUnderTest({"String DataWord.shortHex(byte[])"})
   public void testShortHexWithByte_thenReturn0x8FF415858584158() {
     // Arrange, Act and Assert
@@ -1270,7 +1325,8 @@ public class DataWordDiffblueTest {
    * <p>Method under test: {@link DataWord#shortHex(byte[])}
    */
   @Test
-  @Category(MaintainedByDiffblue.class)
+  @Category(ContributionFromDiffblue.class)
+  @ManagedByDiffblue
   @MethodsUnderTest({"String DataWord.shortHex(byte[])"})
   public void testShortHexWithByte_thenReturn0x8FF585841584158() {
     // Arrange, Act and Assert
@@ -1289,7 +1345,8 @@ public class DataWordDiffblueTest {
    * <p>Method under test: {@link DataWord#shortHex(byte[])}
    */
   @Test
-  @Category(MaintainedByDiffblue.class)
+  @Category(ContributionFromDiffblue.class)
+  @ManagedByDiffblue
   @MethodsUnderTest({"String DataWord.shortHex(byte[])"})
   public void testShortHexWithByte_thenReturn0x8FFFF5841584158() {
     // Arrange, Act and Assert
@@ -1307,7 +1364,8 @@ public class DataWordDiffblueTest {
    * <p>Method under test: {@link DataWord#shortHex(byte[])}
    */
   @Test
-  @Category(MaintainedByDiffblue.class)
+  @Category(ContributionFromDiffblue.class)
+  @ManagedByDiffblue
   @MethodsUnderTest({"String DataWord.shortHex(byte[])"})
   public void testShortHexWithByte_thenReturn0x77F415841584158() {
     // Arrange, Act and Assert
@@ -1326,7 +1384,8 @@ public class DataWordDiffblueTest {
    * <p>Method under test: {@link DataWord#shortHex(byte[])}
    */
   @Test
-  @Category(MaintainedByDiffblue.class)
+  @Category(ContributionFromDiffblue.class)
+  @ManagedByDiffblue
   @MethodsUnderTest({"String DataWord.shortHex(byte[])"})
   public void testShortHexWithByte_thenReturn0x87F7F5841584158() {
     // Arrange, Act and Assert
@@ -1346,7 +1405,8 @@ public class DataWordDiffblueTest {
    * <p>Method under test: {@link DataWord#shortHex(byte[])}
    */
   @Test
-  @Category(MaintainedByDiffblue.class)
+  @Category(ContributionFromDiffblue.class)
+  @ManagedByDiffblue
   @MethodsUnderTest({"String DataWord.shortHex(byte[])"})
   public void testShortHexWithByte_thenReturn0x87F41FF41584158() {
     // Arrange, Act and Assert
@@ -1365,7 +1425,8 @@ public class DataWordDiffblueTest {
    * <p>Method under test: {@link DataWord#shortHex(byte[])}
    */
   @Test
-  @Category(MaintainedByDiffblue.class)
+  @Category(ContributionFromDiffblue.class)
+  @ManagedByDiffblue
   @MethodsUnderTest({"String DataWord.shortHex(byte[])"})
   public void testShortHexWithByte_thenReturn0x87F417F41584158() {
     // Arrange, Act and Assert
@@ -1385,7 +1446,8 @@ public class DataWordDiffblueTest {
    * <p>Method under test: {@link DataWord#shortHex(byte[])}
    */
   @Test
-  @Category(MaintainedByDiffblue.class)
+  @Category(ContributionFromDiffblue.class)
+  @ManagedByDiffblue
   @MethodsUnderTest({"String DataWord.shortHex(byte[])"})
   public void testShortHexWithByte_thenReturn0x87F4158FF584158() {
     // Arrange, Act and Assert
@@ -1404,7 +1466,8 @@ public class DataWordDiffblueTest {
    * <p>Method under test: {@link DataWord#shortHex(byte[])}
    */
   @Test
-  @Category(MaintainedByDiffblue.class)
+  @Category(ContributionFromDiffblue.class)
+  @ManagedByDiffblue
   @MethodsUnderTest({"String DataWord.shortHex(byte[])"})
   public void testShortHexWithByte_thenReturn0x87F41587F584158() {
     // Arrange, Act and Assert
@@ -1424,7 +1487,8 @@ public class DataWordDiffblueTest {
    * <p>Method under test: {@link DataWord#shortHex(byte[])}
    */
   @Test
-  @Category(MaintainedByDiffblue.class)
+  @Category(ContributionFromDiffblue.class)
+  @ManagedByDiffblue
   @MethodsUnderTest({"String DataWord.shortHex(byte[])"})
   public void testShortHexWithByte_thenReturn0x87F415841FF4158() {
     // Arrange, Act and Assert
@@ -1443,7 +1507,8 @@ public class DataWordDiffblueTest {
    * <p>Method under test: {@link DataWord#shortHex(byte[])}
    */
   @Test
-  @Category(MaintainedByDiffblue.class)
+  @Category(ContributionFromDiffblue.class)
+  @ManagedByDiffblue
   @MethodsUnderTest({"String DataWord.shortHex(byte[])"})
   public void testShortHexWithByte_thenReturn0x87F4158417F4158() {
     // Arrange, Act and Assert
@@ -1463,7 +1528,8 @@ public class DataWordDiffblueTest {
    * <p>Method under test: {@link DataWord#shortHex(byte[])}
    */
   @Test
-  @Category(MaintainedByDiffblue.class)
+  @Category(ContributionFromDiffblue.class)
+  @ManagedByDiffblue
   @MethodsUnderTest({"String DataWord.shortHex(byte[])"})
   public void testShortHexWithByte_thenReturn0x87F41584158FF58() {
     // Arrange, Act and Assert
@@ -1482,7 +1548,8 @@ public class DataWordDiffblueTest {
    * <p>Method under test: {@link DataWord#shortHex(byte[])}
    */
   @Test
-  @Category(MaintainedByDiffblue.class)
+  @Category(ContributionFromDiffblue.class)
+  @ManagedByDiffblue
   @MethodsUnderTest({"String DataWord.shortHex(byte[])"})
   public void testShortHexWithByte_thenReturn0x87F415841587F58() {
     // Arrange, Act and Assert
@@ -1502,7 +1569,8 @@ public class DataWordDiffblueTest {
    * <p>Method under test: {@link DataWord#shortHex(byte[])}
    */
   @Test
-  @Category(MaintainedByDiffblue.class)
+  @Category(ContributionFromDiffblue.class)
+  @ManagedByDiffblue
   @MethodsUnderTest({"String DataWord.shortHex(byte[])"})
   public void testShortHexWithByte_thenReturn0x87F4158415841FF() {
     // Arrange, Act and Assert
@@ -1521,7 +1589,8 @@ public class DataWordDiffblueTest {
    * <p>Method under test: {@link DataWord#shortHex(byte[])}
    */
   @Test
-  @Category(MaintainedByDiffblue.class)
+  @Category(ContributionFromDiffblue.class)
+  @ManagedByDiffblue
   @MethodsUnderTest({"String DataWord.shortHex(byte[])"})
   public void testShortHexWithByte_thenReturn0x87F005841584158() {
     // Arrange, Act and Assert
@@ -1540,7 +1609,8 @@ public class DataWordDiffblueTest {
    * <p>Method under test: {@link DataWord#shortHex(byte[])}
    */
   @Test
-  @Category(MaintainedByDiffblue.class)
+  @Category(ContributionFromDiffblue.class)
+  @ManagedByDiffblue
   @MethodsUnderTest({"String DataWord.shortHex(byte[])"})
   public void testShortHexWithByte_thenReturn0x87F41584158417F() {
     // Arrange, Act and Assert
@@ -1560,7 +1630,8 @@ public class DataWordDiffblueTest {
    * <p>Method under test: {@link DataWord#shortHex(byte[])}
    */
   @Test
-  @Category(MaintainedByDiffblue.class)
+  @Category(ContributionFromDiffblue.class)
+  @ManagedByDiffblue
   @MethodsUnderTest({"String DataWord.shortHex(byte[])"})
   public void testShortHexWithByte_thenReturn0x87F075841584158() {
     // Arrange, Act and Assert
@@ -1579,7 +1650,8 @@ public class DataWordDiffblueTest {
    * <p>Method under test: {@link DataWord#shortHex(byte[])}
    */
   @Test
-  @Category(MaintainedByDiffblue.class)
+  @Category(ContributionFromDiffblue.class)
+  @ManagedByDiffblue
   @MethodsUnderTest({"String DataWord.shortHex(byte[])"})
   public void testShortHexWithByte_thenReturn0x87F085841584158() {
     // Arrange, Act and Assert
@@ -1598,7 +1670,8 @@ public class DataWordDiffblueTest {
    * <p>Method under test: {@link DataWord#shortHex(byte[])}
    */
   @Test
-  @Category(MaintainedByDiffblue.class)
+  @Category(ContributionFromDiffblue.class)
+  @ManagedByDiffblue
   @MethodsUnderTest({"String DataWord.shortHex(byte[])"})
   public void testShortHexWithByte_thenReturn0x87F410041584158() {
     // Arrange, Act and Assert
@@ -1617,7 +1690,8 @@ public class DataWordDiffblueTest {
    * <p>Method under test: {@link DataWord#shortHex(byte[])}
    */
   @Test
-  @Category(MaintainedByDiffblue.class)
+  @Category(ContributionFromDiffblue.class)
+  @ManagedByDiffblue
   @MethodsUnderTest({"String DataWord.shortHex(byte[])"})
   public void testShortHexWithByte_thenReturn0x87F410741584158() {
     // Arrange, Act and Assert
@@ -1636,7 +1710,8 @@ public class DataWordDiffblueTest {
    * <p>Method under test: {@link DataWord#shortHex(byte[])}
    */
   @Test
-  @Category(MaintainedByDiffblue.class)
+  @Category(ContributionFromDiffblue.class)
+  @ManagedByDiffblue
   @MethodsUnderTest({"String DataWord.shortHex(byte[])"})
   public void testShortHexWithByte_thenReturn0x87F410841584158() {
     // Arrange, Act and Assert
@@ -1655,7 +1730,8 @@ public class DataWordDiffblueTest {
    * <p>Method under test: {@link DataWord#shortHex(byte[])}
    */
   @Test
-  @Category(MaintainedByDiffblue.class)
+  @Category(ContributionFromDiffblue.class)
+  @ManagedByDiffblue
   @MethodsUnderTest({"String DataWord.shortHex(byte[])"})
   public void testShortHexWithByte_thenReturn0x87F414141584158() {
     // Arrange, Act and Assert
@@ -1674,7 +1750,8 @@ public class DataWordDiffblueTest {
    * <p>Method under test: {@link DataWord#shortHex(byte[])}
    */
   @Test
-  @Category(MaintainedByDiffblue.class)
+  @Category(ContributionFromDiffblue.class)
+  @ManagedByDiffblue
   @MethodsUnderTest({"String DataWord.shortHex(byte[])"})
   public void testShortHexWithByte_thenReturn0x87F415800584158() {
     // Arrange, Act and Assert
@@ -1693,7 +1770,8 @@ public class DataWordDiffblueTest {
    * <p>Method under test: {@link DataWord#shortHex(byte[])}
    */
   @Test
-  @Category(MaintainedByDiffblue.class)
+  @Category(ContributionFromDiffblue.class)
+  @ManagedByDiffblue
   @MethodsUnderTest({"String DataWord.shortHex(byte[])"})
   public void testShortHexWithByte_thenReturn0x87F415807584158() {
     // Arrange, Act and Assert
@@ -1712,7 +1790,8 @@ public class DataWordDiffblueTest {
    * <p>Method under test: {@link DataWord#shortHex(byte[])}
    */
   @Test
-  @Category(MaintainedByDiffblue.class)
+  @Category(ContributionFromDiffblue.class)
+  @ManagedByDiffblue
   @MethodsUnderTest({"String DataWord.shortHex(byte[])"})
   public void testShortHexWithByte_thenReturn0x87F415808584158() {
     // Arrange, Act and Assert
@@ -1731,7 +1810,8 @@ public class DataWordDiffblueTest {
    * <p>Method under test: {@link DataWord#shortHex(byte[])}
    */
   @Test
-  @Category(MaintainedByDiffblue.class)
+  @Category(ContributionFromDiffblue.class)
+  @ManagedByDiffblue
   @MethodsUnderTest({"String DataWord.shortHex(byte[])"})
   public void testShortHexWithByte_thenReturn0x87F415841004158() {
     // Arrange, Act and Assert
@@ -1750,7 +1830,8 @@ public class DataWordDiffblueTest {
    * <p>Method under test: {@link DataWord#shortHex(byte[])}
    */
   @Test
-  @Category(MaintainedByDiffblue.class)
+  @Category(ContributionFromDiffblue.class)
+  @ManagedByDiffblue
   @MethodsUnderTest({"String DataWord.shortHex(byte[])"})
   public void testShortHexWithByte_thenReturn0x87F415841074158() {
     // Arrange, Act and Assert
@@ -1769,7 +1850,8 @@ public class DataWordDiffblueTest {
    * <p>Method under test: {@link DataWord#shortHex(byte[])}
    */
   @Test
-  @Category(MaintainedByDiffblue.class)
+  @Category(ContributionFromDiffblue.class)
+  @ManagedByDiffblue
   @MethodsUnderTest({"String DataWord.shortHex(byte[])"})
   public void testShortHexWithByte_thenReturn0x87F415841084158() {
     // Arrange, Act and Assert
@@ -1788,7 +1870,8 @@ public class DataWordDiffblueTest {
    * <p>Method under test: {@link DataWord#shortHex(byte[])}
    */
   @Test
-  @Category(MaintainedByDiffblue.class)
+  @Category(ContributionFromDiffblue.class)
+  @ManagedByDiffblue
   @MethodsUnderTest({"String DataWord.shortHex(byte[])"})
   public void testShortHexWithByte_thenReturn0x87F415841414158() {
     // Arrange, Act and Assert
@@ -1807,7 +1890,8 @@ public class DataWordDiffblueTest {
    * <p>Method under test: {@link DataWord#shortHex(byte[])}
    */
   @Test
-  @Category(MaintainedByDiffblue.class)
+  @Category(ContributionFromDiffblue.class)
+  @ManagedByDiffblue
   @MethodsUnderTest({"String DataWord.shortHex(byte[])"})
   public void testShortHexWithByte_thenReturn0x87F415841580058() {
     // Arrange, Act and Assert
@@ -1826,7 +1910,8 @@ public class DataWordDiffblueTest {
    * <p>Method under test: {@link DataWord#shortHex(byte[])}
    */
   @Test
-  @Category(MaintainedByDiffblue.class)
+  @Category(ContributionFromDiffblue.class)
+  @ManagedByDiffblue
   @MethodsUnderTest({"String DataWord.shortHex(byte[])"})
   public void testShortHexWithByte_thenReturn0x87F415841580758() {
     // Arrange, Act and Assert
@@ -1845,7 +1930,8 @@ public class DataWordDiffblueTest {
    * <p>Method under test: {@link DataWord#shortHex(byte[])}
    */
   @Test
-  @Category(MaintainedByDiffblue.class)
+  @Category(ContributionFromDiffblue.class)
+  @ManagedByDiffblue
   @MethodsUnderTest({"String DataWord.shortHex(byte[])"})
   public void testShortHexWithByte_thenReturn0x87F415841580858() {
     // Arrange, Act and Assert
@@ -1864,7 +1950,8 @@ public class DataWordDiffblueTest {
    * <p>Method under test: {@link DataWord#shortHex(byte[])}
    */
   @Test
-  @Category(MaintainedByDiffblue.class)
+  @Category(ContributionFromDiffblue.class)
+  @ManagedByDiffblue
   @MethodsUnderTest({"String DataWord.shortHex(byte[])"})
   public void testShortHexWithByte_thenReturn0x87F415841584100() {
     // Arrange, Act and Assert
@@ -1883,7 +1970,8 @@ public class DataWordDiffblueTest {
    * <p>Method under test: {@link DataWord#shortHex(byte[])}
    */
   @Test
-  @Category(MaintainedByDiffblue.class)
+  @Category(ContributionFromDiffblue.class)
+  @ManagedByDiffblue
   @MethodsUnderTest({"String DataWord.shortHex(byte[])"})
   public void testShortHexWithByte_thenReturn0x87F415841584107() {
     // Arrange, Act and Assert
@@ -1902,7 +1990,8 @@ public class DataWordDiffblueTest {
    * <p>Method under test: {@link DataWord#shortHex(byte[])}
    */
   @Test
-  @Category(MaintainedByDiffblue.class)
+  @Category(ContributionFromDiffblue.class)
+  @ManagedByDiffblue
   @MethodsUnderTest({"String DataWord.shortHex(byte[])"})
   public void testShortHexWithByte_thenReturn0x87F415841584108() {
     // Arrange, Act and Assert
@@ -1921,7 +2010,8 @@ public class DataWordDiffblueTest {
    * <p>Method under test: {@link DataWord#shortHex(byte[])}
    */
   @Test
-  @Category(MaintainedByDiffblue.class)
+  @Category(ContributionFromDiffblue.class)
+  @ManagedByDiffblue
   @MethodsUnderTest({"String DataWord.shortHex(byte[])"})
   public void testShortHexWithByte_thenReturn0x87F415841584141() {
     // Arrange, Act and Assert
@@ -1940,7 +2030,8 @@ public class DataWordDiffblueTest {
    * <p>Method under test: {@link DataWord#shortHex(byte[])}
    */
   @Test
-  @Category(MaintainedByDiffblue.class)
+  @Category(ContributionFromDiffblue.class)
+  @ManagedByDiffblue
   @MethodsUnderTest({"String DataWord.shortHex(byte[])"})
   public void testShortHexWithByte_thenReturn0x87F415841584158() {
     // Arrange, Act and Assert
@@ -1959,7 +2050,8 @@ public class DataWordDiffblueTest {
    * <p>Method under test: {@link DataWord#shortHex(byte[])}
    */
   @Test
-  @Category(MaintainedByDiffblue.class)
+  @Category(ContributionFromDiffblue.class)
+  @ManagedByDiffblue
   @MethodsUnderTest({"String DataWord.shortHex(byte[])"})
   public void testShortHexWithByte_thenReturn0x87F415841585858() {
     // Arrange, Act and Assert
@@ -1978,7 +2070,8 @@ public class DataWordDiffblueTest {
    * <p>Method under test: {@link DataWord#shortHex(byte[])}
    */
   @Test
-  @Category(MaintainedByDiffblue.class)
+  @Category(ContributionFromDiffblue.class)
+  @ManagedByDiffblue
   @MethodsUnderTest({"String DataWord.shortHex(byte[])"})
   public void testShortHexWithByte_thenReturn0x87F415858584158() {
     // Arrange, Act and Assert
@@ -1997,7 +2090,8 @@ public class DataWordDiffblueTest {
    * <p>Method under test: {@link DataWord#shortHex(byte[])}
    */
   @Test
-  @Category(MaintainedByDiffblue.class)
+  @Category(ContributionFromDiffblue.class)
+  @ManagedByDiffblue
   @MethodsUnderTest({"String DataWord.shortHex(byte[])"})
   public void testShortHexWithByte_thenReturn0x87F585841584158() {
     // Arrange, Act and Assert
@@ -2016,7 +2110,8 @@ public class DataWordDiffblueTest {
    * <p>Method under test: {@link DataWord#shortHex(byte[])}
    */
   @Test
-  @Category(MaintainedByDiffblue.class)
+  @Category(ContributionFromDiffblue.class)
+  @ManagedByDiffblue
   @MethodsUnderTest({"String DataWord.shortHex(byte[])"})
   public void testShortHexWithByte_thenReturn0x87FFF5841584158() {
     // Arrange, Act and Assert
@@ -2035,7 +2130,8 @@ public class DataWordDiffblueTest {
    * <p>Method under test: {@link DataWord#shortHex(byte[])}
    */
   @Test
-  @Category(MaintainedByDiffblue.class)
+  @Category(ContributionFromDiffblue.class)
+  @ManagedByDiffblue
   @MethodsUnderTest({"String DataWord.shortHex(byte[])"})
   public void testShortHexWithByte_thenReturn0x800FF5841584158() {
     // Arrange, Act and Assert
@@ -2053,7 +2149,8 @@ public class DataWordDiffblueTest {
    * <p>Method under test: {@link DataWord#shortHex(byte[])}
    */
   @Test
-  @Category(MaintainedByDiffblue.class)
+  @Category(ContributionFromDiffblue.class)
+  @ManagedByDiffblue
   @MethodsUnderTest({"String DataWord.shortHex(byte[])"})
   public void testShortHexWithByte_thenReturn0x807FF5841584158() {
     // Arrange, Act and Assert
@@ -2071,7 +2168,8 @@ public class DataWordDiffblueTest {
    * <p>Method under test: {@link DataWord#shortHex(byte[])}
    */
   @Test
-  @Category(MaintainedByDiffblue.class)
+  @Category(ContributionFromDiffblue.class)
+  @ManagedByDiffblue
   @MethodsUnderTest({"String DataWord.shortHex(byte[])"})
   public void testShortHexWithByte_thenReturn0x808FF5841584158() {
     // Arrange, Act and Assert
@@ -2090,7 +2188,8 @@ public class DataWordDiffblueTest {
    * <p>Method under test: {@link DataWord#shortHex(byte[])}
    */
   @Test
-  @Category(MaintainedByDiffblue.class)
+  @Category(ContributionFromDiffblue.class)
+  @ManagedByDiffblue
   @MethodsUnderTest({"String DataWord.shortHex(byte[])"})
   public void testShortHexWithByte_thenReturn0x841FF5841584158() {
     // Arrange, Act and Assert
@@ -2109,7 +2208,8 @@ public class DataWordDiffblueTest {
    * <p>Method under test: {@link DataWord#shortHex(byte[])}
    */
   @Test
-  @Category(MaintainedByDiffblue.class)
+  @Category(ContributionFromDiffblue.class)
+  @ManagedByDiffblue
   @MethodsUnderTest({"String DataWord.shortHex(byte[])"})
   public void testShortHexWithByte_thenReturn0x858FF7F41584158() {
     // Arrange, Act and Assert
@@ -2128,7 +2228,8 @@ public class DataWordDiffblueTest {
    * <p>Method under test: {@link DataWord#shortHex(byte[])}
    */
   @Test
-  @Category(MaintainedByDiffblue.class)
+  @Category(ContributionFromDiffblue.class)
+  @ManagedByDiffblue
   @MethodsUnderTest({"String DataWord.shortHex(byte[])"})
   public void testShortHexWithByte_thenReturn0x858FF58FF584158() {
     // Arrange, Act and Assert
@@ -2146,7 +2247,8 @@ public class DataWordDiffblueTest {
    * <p>Method under test: {@link DataWord#shortHex(byte[])}
    */
   @Test
-  @Category(MaintainedByDiffblue.class)
+  @Category(ContributionFromDiffblue.class)
+  @ManagedByDiffblue
   @MethodsUnderTest({"String DataWord.shortHex(byte[])"})
   public void testShortHexWithByte_thenReturn0x858FF587F584158() {
     // Arrange, Act and Assert
@@ -2165,7 +2267,8 @@ public class DataWordDiffblueTest {
    * <p>Method under test: {@link DataWord#shortHex(byte[])}
    */
   @Test
-  @Category(MaintainedByDiffblue.class)
+  @Category(ContributionFromDiffblue.class)
+  @ManagedByDiffblue
   @MethodsUnderTest({"String DataWord.shortHex(byte[])"})
   public void testShortHexWithByte_thenReturn0x858FF5841FF4158() {
     // Arrange, Act and Assert
@@ -2183,7 +2286,8 @@ public class DataWordDiffblueTest {
    * <p>Method under test: {@link DataWord#shortHex(byte[])}
    */
   @Test
-  @Category(MaintainedByDiffblue.class)
+  @Category(ContributionFromDiffblue.class)
+  @ManagedByDiffblue
   @MethodsUnderTest({"String DataWord.shortHex(byte[])"})
   public void testShortHexWithByte_thenReturn0x858FF58417F4158() {
     // Arrange, Act and Assert
@@ -2202,7 +2306,8 @@ public class DataWordDiffblueTest {
    * <p>Method under test: {@link DataWord#shortHex(byte[])}
    */
   @Test
-  @Category(MaintainedByDiffblue.class)
+  @Category(ContributionFromDiffblue.class)
+  @ManagedByDiffblue
   @MethodsUnderTest({"String DataWord.shortHex(byte[])"})
   public void testShortHexWithByte_thenReturn0x858FF584158FF58() {
     // Arrange, Act and Assert
@@ -2220,7 +2325,8 @@ public class DataWordDiffblueTest {
    * <p>Method under test: {@link DataWord#shortHex(byte[])}
    */
   @Test
-  @Category(MaintainedByDiffblue.class)
+  @Category(ContributionFromDiffblue.class)
+  @ManagedByDiffblue
   @MethodsUnderTest({"String DataWord.shortHex(byte[])"})
   public void testShortHexWithByte_thenReturn0x858FF5841587F58() {
     // Arrange, Act and Assert
@@ -2239,7 +2345,8 @@ public class DataWordDiffblueTest {
    * <p>Method under test: {@link DataWord#shortHex(byte[])}
    */
   @Test
-  @Category(MaintainedByDiffblue.class)
+  @Category(ContributionFromDiffblue.class)
+  @ManagedByDiffblue
   @MethodsUnderTest({"String DataWord.shortHex(byte[])"})
   public void testShortHexWithByte_thenReturn0x858FF0041584158() {
     // Arrange, Act and Assert
@@ -2257,7 +2364,8 @@ public class DataWordDiffblueTest {
    * <p>Method under test: {@link DataWord#shortHex(byte[])}
    */
   @Test
-  @Category(MaintainedByDiffblue.class)
+  @Category(ContributionFromDiffblue.class)
+  @ManagedByDiffblue
   @MethodsUnderTest({"String DataWord.shortHex(byte[])"})
   public void testShortHexWithByte_thenReturn0x858FF58415841FF() {
     // Arrange, Act and Assert
@@ -2275,7 +2383,8 @@ public class DataWordDiffblueTest {
    * <p>Method under test: {@link DataWord#shortHex(byte[])}
    */
   @Test
-  @Category(MaintainedByDiffblue.class)
+  @Category(ContributionFromDiffblue.class)
+  @ManagedByDiffblue
   @MethodsUnderTest({"String DataWord.shortHex(byte[])"})
   public void testShortHexWithByte_thenReturn0x858FF584158417F() {
     // Arrange, Act and Assert
@@ -2294,7 +2403,8 @@ public class DataWordDiffblueTest {
    * <p>Method under test: {@link DataWord#shortHex(byte[])}
    */
   @Test
-  @Category(MaintainedByDiffblue.class)
+  @Category(ContributionFromDiffblue.class)
+  @ManagedByDiffblue
   @MethodsUnderTest({"String DataWord.shortHex(byte[])"})
   public void testShortHexWithByte_thenReturn0x858FF0741584158() {
     // Arrange, Act and Assert
@@ -2312,7 +2422,8 @@ public class DataWordDiffblueTest {
    * <p>Method under test: {@link DataWord#shortHex(byte[])}
    */
   @Test
-  @Category(MaintainedByDiffblue.class)
+  @Category(ContributionFromDiffblue.class)
+  @ManagedByDiffblue
   @MethodsUnderTest({"String DataWord.shortHex(byte[])"})
   public void testShortHexWithByte_thenReturn0x858FF4141584158() {
     // Arrange, Act and Assert
@@ -2331,7 +2442,8 @@ public class DataWordDiffblueTest {
    * <p>Method under test: {@link DataWord#shortHex(byte[])}
    */
   @Test
-  @Category(MaintainedByDiffblue.class)
+  @Category(ContributionFromDiffblue.class)
+  @ManagedByDiffblue
   @MethodsUnderTest({"String DataWord.shortHex(byte[])"})
   public void testShortHexWithByte_thenReturn0x858FF5800584158() {
     // Arrange, Act and Assert
@@ -2349,7 +2461,8 @@ public class DataWordDiffblueTest {
    * <p>Method under test: {@link DataWord#shortHex(byte[])}
    */
   @Test
-  @Category(MaintainedByDiffblue.class)
+  @Category(ContributionFromDiffblue.class)
+  @ManagedByDiffblue
   @MethodsUnderTest({"String DataWord.shortHex(byte[])"})
   public void testShortHexWithByte_thenReturn0x858FF5807584158() {
     // Arrange, Act and Assert
@@ -2367,7 +2480,8 @@ public class DataWordDiffblueTest {
    * <p>Method under test: {@link DataWord#shortHex(byte[])}
    */
   @Test
-  @Category(MaintainedByDiffblue.class)
+  @Category(ContributionFromDiffblue.class)
+  @ManagedByDiffblue
   @MethodsUnderTest({"String DataWord.shortHex(byte[])"})
   public void testShortHexWithByte_thenReturn0x858FF5841004158() {
     // Arrange, Act and Assert
@@ -2385,7 +2499,8 @@ public class DataWordDiffblueTest {
    * <p>Method under test: {@link DataWord#shortHex(byte[])}
    */
   @Test
-  @Category(MaintainedByDiffblue.class)
+  @Category(ContributionFromDiffblue.class)
+  @ManagedByDiffblue
   @MethodsUnderTest({"String DataWord.shortHex(byte[])"})
   public void testShortHexWithByte_thenReturn0x858FF5841074158() {
     // Arrange, Act and Assert
@@ -2403,7 +2518,8 @@ public class DataWordDiffblueTest {
    * <p>Method under test: {@link DataWord#shortHex(byte[])}
    */
   @Test
-  @Category(MaintainedByDiffblue.class)
+  @Category(ContributionFromDiffblue.class)
+  @ManagedByDiffblue
   @MethodsUnderTest({"String DataWord.shortHex(byte[])"})
   public void testShortHexWithByte_thenReturn0x858FF5841414158() {
     // Arrange, Act and Assert
@@ -2422,7 +2538,8 @@ public class DataWordDiffblueTest {
    * <p>Method under test: {@link DataWord#shortHex(byte[])}
    */
   @Test
-  @Category(MaintainedByDiffblue.class)
+  @Category(ContributionFromDiffblue.class)
+  @ManagedByDiffblue
   @MethodsUnderTest({"String DataWord.shortHex(byte[])"})
   public void testShortHexWithByte_thenReturn0x858FF5841580058() {
     // Arrange, Act and Assert
@@ -2440,7 +2557,8 @@ public class DataWordDiffblueTest {
    * <p>Method under test: {@link DataWord#shortHex(byte[])}
    */
   @Test
-  @Category(MaintainedByDiffblue.class)
+  @Category(ContributionFromDiffblue.class)
+  @ManagedByDiffblue
   @MethodsUnderTest({"String DataWord.shortHex(byte[])"})
   public void testShortHexWithByte_thenReturn0x858FF5841580758() {
     // Arrange, Act and Assert
@@ -2458,7 +2576,8 @@ public class DataWordDiffblueTest {
    * <p>Method under test: {@link DataWord#shortHex(byte[])}
    */
   @Test
-  @Category(MaintainedByDiffblue.class)
+  @Category(ContributionFromDiffblue.class)
+  @ManagedByDiffblue
   @MethodsUnderTest({"String DataWord.shortHex(byte[])"})
   public void testShortHexWithByte_thenReturn0x858FF5841584100() {
     // Arrange, Act and Assert
@@ -2476,7 +2595,8 @@ public class DataWordDiffblueTest {
    * <p>Method under test: {@link DataWord#shortHex(byte[])}
    */
   @Test
-  @Category(MaintainedByDiffblue.class)
+  @Category(ContributionFromDiffblue.class)
+  @ManagedByDiffblue
   @MethodsUnderTest({"String DataWord.shortHex(byte[])"})
   public void testShortHexWithByte_thenReturn0x858FF5841584107() {
     // Arrange, Act and Assert
@@ -2494,7 +2614,8 @@ public class DataWordDiffblueTest {
    * <p>Method under test: {@link DataWord#shortHex(byte[])}
    */
   @Test
-  @Category(MaintainedByDiffblue.class)
+  @Category(ContributionFromDiffblue.class)
+  @ManagedByDiffblue
   @MethodsUnderTest({"String DataWord.shortHex(byte[])"})
   public void testShortHexWithByte_thenReturn0x858FF5841584141() {
     // Arrange, Act and Assert
@@ -2513,7 +2634,8 @@ public class DataWordDiffblueTest {
    * <p>Method under test: {@link DataWord#shortHex(byte[])}
    */
   @Test
-  @Category(MaintainedByDiffblue.class)
+  @Category(ContributionFromDiffblue.class)
+  @ManagedByDiffblue
   @MethodsUnderTest({"String DataWord.shortHex(byte[])"})
   public void testShortHexWithByte_thenReturn0x858FF5841584158() {
     // Arrange, Act and Assert
@@ -2532,7 +2654,8 @@ public class DataWordDiffblueTest {
    * <p>Method under test: {@link DataWord#shortHex(byte[])}
    */
   @Test
-  @Category(MaintainedByDiffblue.class)
+  @Category(ContributionFromDiffblue.class)
+  @ManagedByDiffblue
   @MethodsUnderTest({"String DataWord.shortHex(byte[])"})
   public void testShortHexWithByte_thenReturn0x858FF5841585858() {
     // Arrange, Act and Assert
@@ -2551,7 +2674,8 @@ public class DataWordDiffblueTest {
    * <p>Method under test: {@link DataWord#shortHex(byte[])}
    */
   @Test
-  @Category(MaintainedByDiffblue.class)
+  @Category(ContributionFromDiffblue.class)
+  @ManagedByDiffblue
   @MethodsUnderTest({"String DataWord.shortHex(byte[])"})
   public void testShortHexWithByte_thenReturn0x858FF5858584158() {
     // Arrange, Act and Assert
@@ -2570,7 +2694,8 @@ public class DataWordDiffblueTest {
    * <p>Method under test: {@link DataWord#shortHex(byte[])}
    */
   @Test
-  @Category(MaintainedByDiffblue.class)
+  @Category(ContributionFromDiffblue.class)
+  @ManagedByDiffblue
   @MethodsUnderTest({"String DataWord.shortHex(byte[])"})
   public void testShortHexWithByte_thenReturn0x858FFFF41584158() {
     // Arrange, Act and Assert
@@ -2588,7 +2713,8 @@ public class DataWordDiffblueTest {
    * <p>Method under test: {@link DataWord#shortHex(byte[])}
    */
   @Test
-  @Category(MaintainedByDiffblue.class)
+  @Category(ContributionFromDiffblue.class)
+  @ManagedByDiffblue
   @MethodsUnderTest({"String DataWord.shortHex(byte[])"})
   public void testShortHexWithByte_thenReturn0x8007F5841584158() {
     // Arrange, Act and Assert
@@ -2607,7 +2733,8 @@ public class DataWordDiffblueTest {
    * <p>Method under test: {@link DataWord#shortHex(byte[])}
    */
   @Test
-  @Category(MaintainedByDiffblue.class)
+  @Category(ContributionFromDiffblue.class)
+  @ManagedByDiffblue
   @MethodsUnderTest({"String DataWord.shortHex(byte[])"})
   public void testShortHexWithByte_thenReturn0x8077F5841584158() {
     // Arrange, Act and Assert
@@ -2626,7 +2753,8 @@ public class DataWordDiffblueTest {
    * <p>Method under test: {@link DataWord#shortHex(byte[])}
    */
   @Test
-  @Category(MaintainedByDiffblue.class)
+  @Category(ContributionFromDiffblue.class)
+  @ManagedByDiffblue
   @MethodsUnderTest({"String DataWord.shortHex(byte[])"})
   public void testShortHexWithByte_thenReturn0x8087F5841584158() {
     // Arrange, Act and Assert
@@ -2645,7 +2773,8 @@ public class DataWordDiffblueTest {
    * <p>Method under test: {@link DataWord#shortHex(byte[])}
    */
   @Test
-  @Category(MaintainedByDiffblue.class)
+  @Category(ContributionFromDiffblue.class)
+  @ManagedByDiffblue
   @MethodsUnderTest({"String DataWord.shortHex(byte[])"})
   public void testShortHexWithByte_thenReturn0x8417F5841584158() {
     // Arrange, Act and Assert
@@ -2664,7 +2793,8 @@ public class DataWordDiffblueTest {
    * <p>Method under test: {@link DataWord#shortHex(byte[])}
    */
   @Test
-  @Category(MaintainedByDiffblue.class)
+  @Category(ContributionFromDiffblue.class)
+  @ManagedByDiffblue
   @MethodsUnderTest({"String DataWord.shortHex(byte[])"})
   public void testShortHexWithByte_thenReturn0x8587F5841584158() {
     // Arrange, Act and Assert
@@ -2683,7 +2813,8 @@ public class DataWordDiffblueTest {
    * <p>Method under test: {@link DataWord#shortHex(byte[])}
    */
   @Test
-  @Category(MaintainedByDiffblue.class)
+  @Category(ContributionFromDiffblue.class)
+  @ManagedByDiffblue
   @MethodsUnderTest({"String DataWord.shortHex(byte[])"})
   public void testShortHexWithByte_thenReturn0x80041FF41584158() {
     // Arrange, Act and Assert
@@ -2701,7 +2832,8 @@ public class DataWordDiffblueTest {
    * <p>Method under test: {@link DataWord#shortHex(byte[])}
    */
   @Test
-  @Category(MaintainedByDiffblue.class)
+  @Category(ContributionFromDiffblue.class)
+  @ManagedByDiffblue
   @MethodsUnderTest({"String DataWord.shortHex(byte[])"})
   public void testShortHexWithByte_thenReturn0x80741FF41584158() {
     // Arrange, Act and Assert
@@ -2719,7 +2851,8 @@ public class DataWordDiffblueTest {
    * <p>Method under test: {@link DataWord#shortHex(byte[])}
    */
   @Test
-  @Category(MaintainedByDiffblue.class)
+  @Category(ContributionFromDiffblue.class)
+  @ManagedByDiffblue
   @MethodsUnderTest({"String DataWord.shortHex(byte[])"})
   public void testShortHexWithByte_thenReturn0x80841FF41584158() {
     // Arrange, Act and Assert
@@ -2738,7 +2871,8 @@ public class DataWordDiffblueTest {
    * <p>Method under test: {@link DataWord#shortHex(byte[])}
    */
   @Test
-  @Category(MaintainedByDiffblue.class)
+  @Category(ContributionFromDiffblue.class)
+  @ManagedByDiffblue
   @MethodsUnderTest({"String DataWord.shortHex(byte[])"})
   public void testShortHexWithByte_thenReturn0x84141FF41584158() {
     // Arrange, Act and Assert
@@ -2757,7 +2891,8 @@ public class DataWordDiffblueTest {
    * <p>Method under test: {@link DataWord#shortHex(byte[])}
    */
   @Test
-  @Category(MaintainedByDiffblue.class)
+  @Category(ContributionFromDiffblue.class)
+  @ManagedByDiffblue
   @MethodsUnderTest({"String DataWord.shortHex(byte[])"})
   public void testShortHexWithByte_thenReturn0x85841FF41584158() {
     // Arrange, Act and Assert
@@ -2776,7 +2911,8 @@ public class DataWordDiffblueTest {
    * <p>Method under test: {@link DataWord#shortHex(byte[])}
    */
   @Test
-  @Category(MaintainedByDiffblue.class)
+  @Category(ContributionFromDiffblue.class)
+  @ManagedByDiffblue
   @MethodsUnderTest({"String DataWord.shortHex(byte[])"})
   public void testShortHexWithByte_thenReturn0x85858FF41584158() {
     // Arrange, Act and Assert
@@ -2795,7 +2931,8 @@ public class DataWordDiffblueTest {
    * <p>Method under test: {@link DataWord#shortHex(byte[])}
    */
   @Test
-  @Category(MaintainedByDiffblue.class)
+  @Category(ContributionFromDiffblue.class)
+  @ManagedByDiffblue
   @MethodsUnderTest({"String DataWord.shortHex(byte[])"})
   public void testShortHexWithByte_thenReturn0x800417F41584158() {
     // Arrange, Act and Assert
@@ -2814,7 +2951,8 @@ public class DataWordDiffblueTest {
    * <p>Method under test: {@link DataWord#shortHex(byte[])}
    */
   @Test
-  @Category(MaintainedByDiffblue.class)
+  @Category(ContributionFromDiffblue.class)
+  @ManagedByDiffblue
   @MethodsUnderTest({"String DataWord.shortHex(byte[])"})
   public void testShortHexWithByte_thenReturn0x807417F41584158() {
     // Arrange, Act and Assert
@@ -2833,7 +2971,8 @@ public class DataWordDiffblueTest {
    * <p>Method under test: {@link DataWord#shortHex(byte[])}
    */
   @Test
-  @Category(MaintainedByDiffblue.class)
+  @Category(ContributionFromDiffblue.class)
+  @ManagedByDiffblue
   @MethodsUnderTest({"String DataWord.shortHex(byte[])"})
   public void testShortHexWithByte_thenReturn0x808417F41584158() {
     // Arrange, Act and Assert
@@ -2852,7 +2991,8 @@ public class DataWordDiffblueTest {
    * <p>Method under test: {@link DataWord#shortHex(byte[])}
    */
   @Test
-  @Category(MaintainedByDiffblue.class)
+  @Category(ContributionFromDiffblue.class)
+  @ManagedByDiffblue
   @MethodsUnderTest({"String DataWord.shortHex(byte[])"})
   public void testShortHexWithByte_thenReturn0x841417F41584158() {
     // Arrange, Act and Assert
@@ -2871,7 +3011,8 @@ public class DataWordDiffblueTest {
    * <p>Method under test: {@link DataWord#shortHex(byte[])}
    */
   @Test
-  @Category(MaintainedByDiffblue.class)
+  @Category(ContributionFromDiffblue.class)
+  @ManagedByDiffblue
   @MethodsUnderTest({"String DataWord.shortHex(byte[])"})
   public void testShortHexWithByte_thenReturn0x858417F41584158() {
     // Arrange, Act and Assert
@@ -2890,7 +3031,8 @@ public class DataWordDiffblueTest {
    * <p>Method under test: {@link DataWord#shortHex(byte[])}
    */
   @Test
-  @Category(MaintainedByDiffblue.class)
+  @Category(ContributionFromDiffblue.class)
+  @ManagedByDiffblue
   @MethodsUnderTest({"String DataWord.shortHex(byte[])"})
   public void testShortHexWithByte_thenReturn0x858587F41584158() {
     // Arrange, Act and Assert
@@ -2909,7 +3051,8 @@ public class DataWordDiffblueTest {
    * <p>Method under test: {@link DataWord#shortHex(byte[])}
    */
   @Test
-  @Category(MaintainedByDiffblue.class)
+  @Category(ContributionFromDiffblue.class)
+  @ManagedByDiffblue
   @MethodsUnderTest({"String DataWord.shortHex(byte[])"})
   public void testShortHexWithByte_thenReturn0x8004158FF584158() {
     // Arrange, Act and Assert
@@ -2927,7 +3070,8 @@ public class DataWordDiffblueTest {
    * <p>Method under test: {@link DataWord#shortHex(byte[])}
    */
   @Test
-  @Category(MaintainedByDiffblue.class)
+  @Category(ContributionFromDiffblue.class)
+  @ManagedByDiffblue
   @MethodsUnderTest({"String DataWord.shortHex(byte[])"})
   public void testShortHexWithByte_thenReturn0x8074158FF584158() {
     // Arrange, Act and Assert
@@ -2945,7 +3089,8 @@ public class DataWordDiffblueTest {
    * <p>Method under test: {@link DataWord#shortHex(byte[])}
    */
   @Test
-  @Category(MaintainedByDiffblue.class)
+  @Category(ContributionFromDiffblue.class)
+  @ManagedByDiffblue
   @MethodsUnderTest({"String DataWord.shortHex(byte[])"})
   public void testShortHexWithByte_thenReturn0x8084158FF584158() {
     // Arrange, Act and Assert
@@ -2964,7 +3109,8 @@ public class DataWordDiffblueTest {
    * <p>Method under test: {@link DataWord#shortHex(byte[])}
    */
   @Test
-  @Category(MaintainedByDiffblue.class)
+  @Category(ContributionFromDiffblue.class)
+  @ManagedByDiffblue
   @MethodsUnderTest({"String DataWord.shortHex(byte[])"})
   public void testShortHexWithByte_thenReturn0x8414158FF584158() {
     // Arrange, Act and Assert
@@ -2983,7 +3129,8 @@ public class DataWordDiffblueTest {
    * <p>Method under test: {@link DataWord#shortHex(byte[])}
    */
   @Test
-  @Category(MaintainedByDiffblue.class)
+  @Category(ContributionFromDiffblue.class)
+  @ManagedByDiffblue
   @MethodsUnderTest({"String DataWord.shortHex(byte[])"})
   public void testShortHexWithByte_thenReturn0x8584158FF584158() {
     // Arrange, Act and Assert
@@ -3002,7 +3149,8 @@ public class DataWordDiffblueTest {
    * <p>Method under test: {@link DataWord#shortHex(byte[])}
    */
   @Test
-  @Category(MaintainedByDiffblue.class)
+  @Category(ContributionFromDiffblue.class)
+  @ManagedByDiffblue
   @MethodsUnderTest({"String DataWord.shortHex(byte[])"})
   public void testShortHexWithByte_thenReturn0x8585858FF584158() {
     // Arrange, Act and Assert
@@ -3021,7 +3169,8 @@ public class DataWordDiffblueTest {
    * <p>Method under test: {@link DataWord#shortHex(byte[])}
    */
   @Test
-  @Category(MaintainedByDiffblue.class)
+  @Category(ContributionFromDiffblue.class)
+  @ManagedByDiffblue
   @MethodsUnderTest({"String DataWord.shortHex(byte[])"})
   public void testShortHexWithByte_thenReturn0x80041587F584158() {
     // Arrange, Act and Assert
@@ -3040,7 +3189,8 @@ public class DataWordDiffblueTest {
    * <p>Method under test: {@link DataWord#shortHex(byte[])}
    */
   @Test
-  @Category(MaintainedByDiffblue.class)
+  @Category(ContributionFromDiffblue.class)
+  @ManagedByDiffblue
   @MethodsUnderTest({"String DataWord.shortHex(byte[])"})
   public void testShortHexWithByte_thenReturn0x80741587F584158() {
     // Arrange, Act and Assert
@@ -3059,7 +3209,8 @@ public class DataWordDiffblueTest {
    * <p>Method under test: {@link DataWord#shortHex(byte[])}
    */
   @Test
-  @Category(MaintainedByDiffblue.class)
+  @Category(ContributionFromDiffblue.class)
+  @ManagedByDiffblue
   @MethodsUnderTest({"String DataWord.shortHex(byte[])"})
   public void testShortHexWithByte_thenReturn0x80841587F584158() {
     // Arrange, Act and Assert
@@ -3078,7 +3229,8 @@ public class DataWordDiffblueTest {
    * <p>Method under test: {@link DataWord#shortHex(byte[])}
    */
   @Test
-  @Category(MaintainedByDiffblue.class)
+  @Category(ContributionFromDiffblue.class)
+  @ManagedByDiffblue
   @MethodsUnderTest({"String DataWord.shortHex(byte[])"})
   public void testShortHexWithByte_thenReturn0x84141587F584158() {
     // Arrange, Act and Assert
@@ -3097,7 +3249,8 @@ public class DataWordDiffblueTest {
    * <p>Method under test: {@link DataWord#shortHex(byte[])}
    */
   @Test
-  @Category(MaintainedByDiffblue.class)
+  @Category(ContributionFromDiffblue.class)
+  @ManagedByDiffblue
   @MethodsUnderTest({"String DataWord.shortHex(byte[])"})
   public void testShortHexWithByte_thenReturn0x85841587F584158() {
     // Arrange, Act and Assert
@@ -3116,7 +3269,8 @@ public class DataWordDiffblueTest {
    * <p>Method under test: {@link DataWord#shortHex(byte[])}
    */
   @Test
-  @Category(MaintainedByDiffblue.class)
+  @Category(ContributionFromDiffblue.class)
+  @ManagedByDiffblue
   @MethodsUnderTest({"String DataWord.shortHex(byte[])"})
   public void testShortHexWithByte_thenReturn0x85858587F584158() {
     // Arrange, Act and Assert
@@ -3135,7 +3289,8 @@ public class DataWordDiffblueTest {
    * <p>Method under test: {@link DataWord#shortHex(byte[])}
    */
   @Test
-  @Category(MaintainedByDiffblue.class)
+  @Category(ContributionFromDiffblue.class)
+  @ManagedByDiffblue
   @MethodsUnderTest({"String DataWord.shortHex(byte[])"})
   public void testShortHexWithByte_thenReturn0x800415841FF4158() {
     // Arrange, Act and Assert
@@ -3153,7 +3308,8 @@ public class DataWordDiffblueTest {
    * <p>Method under test: {@link DataWord#shortHex(byte[])}
    */
   @Test
-  @Category(MaintainedByDiffblue.class)
+  @Category(ContributionFromDiffblue.class)
+  @ManagedByDiffblue
   @MethodsUnderTest({"String DataWord.shortHex(byte[])"})
   public void testShortHexWithByte_thenReturn0x807415841FF4158() {
     // Arrange, Act and Assert
@@ -3171,7 +3327,8 @@ public class DataWordDiffblueTest {
    * <p>Method under test: {@link DataWord#shortHex(byte[])}
    */
   @Test
-  @Category(MaintainedByDiffblue.class)
+  @Category(ContributionFromDiffblue.class)
+  @ManagedByDiffblue
   @MethodsUnderTest({"String DataWord.shortHex(byte[])"})
   public void testShortHexWithByte_thenReturn0x808415841FF4158() {
     // Arrange, Act and Assert
@@ -3190,7 +3347,8 @@ public class DataWordDiffblueTest {
    * <p>Method under test: {@link DataWord#shortHex(byte[])}
    */
   @Test
-  @Category(MaintainedByDiffblue.class)
+  @Category(ContributionFromDiffblue.class)
+  @ManagedByDiffblue
   @MethodsUnderTest({"String DataWord.shortHex(byte[])"})
   public void testShortHexWithByte_thenReturn0x841415841FF4158() {
     // Arrange, Act and Assert
@@ -3209,7 +3367,8 @@ public class DataWordDiffblueTest {
    * <p>Method under test: {@link DataWord#shortHex(byte[])}
    */
   @Test
-  @Category(MaintainedByDiffblue.class)
+  @Category(ContributionFromDiffblue.class)
+  @ManagedByDiffblue
   @MethodsUnderTest({"String DataWord.shortHex(byte[])"})
   public void testShortHexWithByte_thenReturn0x858415841FF4158() {
     // Arrange, Act and Assert
@@ -3228,7 +3387,8 @@ public class DataWordDiffblueTest {
    * <p>Method under test: {@link DataWord#shortHex(byte[])}
    */
   @Test
-  @Category(MaintainedByDiffblue.class)
+  @Category(ContributionFromDiffblue.class)
+  @ManagedByDiffblue
   @MethodsUnderTest({"String DataWord.shortHex(byte[])"})
   public void testShortHexWithByte_thenReturn0x858585841FF4158() {
     // Arrange, Act and Assert
@@ -3247,7 +3407,8 @@ public class DataWordDiffblueTest {
    * <p>Method under test: {@link DataWord#shortHex(byte[])}
    */
   @Test
-  @Category(MaintainedByDiffblue.class)
+  @Category(ContributionFromDiffblue.class)
+  @ManagedByDiffblue
   @MethodsUnderTest({"String DataWord.shortHex(byte[])"})
   public void testShortHexWithByte_thenReturn0x8004158417F4158() {
     // Arrange, Act and Assert
@@ -3266,7 +3427,8 @@ public class DataWordDiffblueTest {
    * <p>Method under test: {@link DataWord#shortHex(byte[])}
    */
   @Test
-  @Category(MaintainedByDiffblue.class)
+  @Category(ContributionFromDiffblue.class)
+  @ManagedByDiffblue
   @MethodsUnderTest({"String DataWord.shortHex(byte[])"})
   public void testShortHexWithByte_thenReturn0x8074158417F4158() {
     // Arrange, Act and Assert
@@ -3285,7 +3447,8 @@ public class DataWordDiffblueTest {
    * <p>Method under test: {@link DataWord#shortHex(byte[])}
    */
   @Test
-  @Category(MaintainedByDiffblue.class)
+  @Category(ContributionFromDiffblue.class)
+  @ManagedByDiffblue
   @MethodsUnderTest({"String DataWord.shortHex(byte[])"})
   public void testShortHexWithByte_thenReturn0x8084158417F4158() {
     // Arrange, Act and Assert
@@ -3304,7 +3467,8 @@ public class DataWordDiffblueTest {
    * <p>Method under test: {@link DataWord#shortHex(byte[])}
    */
   @Test
-  @Category(MaintainedByDiffblue.class)
+  @Category(ContributionFromDiffblue.class)
+  @ManagedByDiffblue
   @MethodsUnderTest({"String DataWord.shortHex(byte[])"})
   public void testShortHexWithByte_thenReturn0x8414158417F4158() {
     // Arrange, Act and Assert
@@ -3323,7 +3487,8 @@ public class DataWordDiffblueTest {
    * <p>Method under test: {@link DataWord#shortHex(byte[])}
    */
   @Test
-  @Category(MaintainedByDiffblue.class)
+  @Category(ContributionFromDiffblue.class)
+  @ManagedByDiffblue
   @MethodsUnderTest({"String DataWord.shortHex(byte[])"})
   public void testShortHexWithByte_thenReturn0x8584158417F4158() {
     // Arrange, Act and Assert
@@ -3342,7 +3507,8 @@ public class DataWordDiffblueTest {
    * <p>Method under test: {@link DataWord#shortHex(byte[])}
    */
   @Test
-  @Category(MaintainedByDiffblue.class)
+  @Category(ContributionFromDiffblue.class)
+  @ManagedByDiffblue
   @MethodsUnderTest({"String DataWord.shortHex(byte[])"})
   public void testShortHexWithByte_thenReturn0x8585858417F4158() {
     // Arrange, Act and Assert
@@ -3361,7 +3527,8 @@ public class DataWordDiffblueTest {
    * <p>Method under test: {@link DataWord#shortHex(byte[])}
    */
   @Test
-  @Category(MaintainedByDiffblue.class)
+  @Category(ContributionFromDiffblue.class)
+  @ManagedByDiffblue
   @MethodsUnderTest({"String DataWord.shortHex(byte[])"})
   public void testShortHexWithByte_thenReturn0x80041584158FF58() {
     // Arrange, Act and Assert
@@ -3379,7 +3546,8 @@ public class DataWordDiffblueTest {
    * <p>Method under test: {@link DataWord#shortHex(byte[])}
    */
   @Test
-  @Category(MaintainedByDiffblue.class)
+  @Category(ContributionFromDiffblue.class)
+  @ManagedByDiffblue
   @MethodsUnderTest({"String DataWord.shortHex(byte[])"})
   public void testShortHexWithByte_thenReturn0x80741584158FF58() {
     // Arrange, Act and Assert
@@ -3397,7 +3565,8 @@ public class DataWordDiffblueTest {
    * <p>Method under test: {@link DataWord#shortHex(byte[])}
    */
   @Test
-  @Category(MaintainedByDiffblue.class)
+  @Category(ContributionFromDiffblue.class)
+  @ManagedByDiffblue
   @MethodsUnderTest({"String DataWord.shortHex(byte[])"})
   public void testShortHexWithByte_thenReturn0x80841584158FF58() {
     // Arrange, Act and Assert
@@ -3416,7 +3585,8 @@ public class DataWordDiffblueTest {
    * <p>Method under test: {@link DataWord#shortHex(byte[])}
    */
   @Test
-  @Category(MaintainedByDiffblue.class)
+  @Category(ContributionFromDiffblue.class)
+  @ManagedByDiffblue
   @MethodsUnderTest({"String DataWord.shortHex(byte[])"})
   public void testShortHexWithByte_thenReturn0x84141584158FF58() {
     // Arrange, Act and Assert
@@ -3435,7 +3605,8 @@ public class DataWordDiffblueTest {
    * <p>Method under test: {@link DataWord#shortHex(byte[])}
    */
   @Test
-  @Category(MaintainedByDiffblue.class)
+  @Category(ContributionFromDiffblue.class)
+  @ManagedByDiffblue
   @MethodsUnderTest({"String DataWord.shortHex(byte[])"})
   public void testShortHexWithByte_thenReturn0x85841584158FF58() {
     // Arrange, Act and Assert
@@ -3454,7 +3625,8 @@ public class DataWordDiffblueTest {
    * <p>Method under test: {@link DataWord#shortHex(byte[])}
    */
   @Test
-  @Category(MaintainedByDiffblue.class)
+  @Category(ContributionFromDiffblue.class)
+  @ManagedByDiffblue
   @MethodsUnderTest({"String DataWord.shortHex(byte[])"})
   public void testShortHexWithByte_thenReturn0x800415841587F58() {
     // Arrange, Act and Assert
@@ -3473,7 +3645,8 @@ public class DataWordDiffblueTest {
    * <p>Method under test: {@link DataWord#shortHex(byte[])}
    */
   @Test
-  @Category(MaintainedByDiffblue.class)
+  @Category(ContributionFromDiffblue.class)
+  @ManagedByDiffblue
   @MethodsUnderTest({"String DataWord.shortHex(byte[])"})
   public void testShortHexWithByte_thenReturn0x807415841587F58() {
     // Arrange, Act and Assert
@@ -3492,7 +3665,8 @@ public class DataWordDiffblueTest {
    * <p>Method under test: {@link DataWord#shortHex(byte[])}
    */
   @Test
-  @Category(MaintainedByDiffblue.class)
+  @Category(ContributionFromDiffblue.class)
+  @ManagedByDiffblue
   @MethodsUnderTest({"String DataWord.shortHex(byte[])"})
   public void testShortHexWithByte_thenReturn0x808415841587F58() {
     // Arrange, Act and Assert
@@ -3511,7 +3685,8 @@ public class DataWordDiffblueTest {
    * <p>Method under test: {@link DataWord#shortHex(byte[])}
    */
   @Test
-  @Category(MaintainedByDiffblue.class)
+  @Category(ContributionFromDiffblue.class)
+  @ManagedByDiffblue
   @MethodsUnderTest({"String DataWord.shortHex(byte[])"})
   public void testShortHexWithByte_thenReturn0x841415841587F58() {
     // Arrange, Act and Assert
@@ -3530,7 +3705,8 @@ public class DataWordDiffblueTest {
    * <p>Method under test: {@link DataWord#shortHex(byte[])}
    */
   @Test
-  @Category(MaintainedByDiffblue.class)
+  @Category(ContributionFromDiffblue.class)
+  @ManagedByDiffblue
   @MethodsUnderTest({"String DataWord.shortHex(byte[])"})
   public void testShortHexWithByte_thenReturn0x858415841587F58() {
     // Arrange, Act and Assert
@@ -3549,7 +3725,8 @@ public class DataWordDiffblueTest {
    * <p>Method under test: {@link DataWord#shortHex(byte[])}
    */
   @Test
-  @Category(MaintainedByDiffblue.class)
+  @Category(ContributionFromDiffblue.class)
+  @ManagedByDiffblue
   @MethodsUnderTest({"String DataWord.shortHex(byte[])"})
   public void testShortHexWithByte_thenReturn0x8004158415841FF() {
     // Arrange, Act and Assert
@@ -3567,7 +3744,8 @@ public class DataWordDiffblueTest {
    * <p>Method under test: {@link DataWord#shortHex(byte[])}
    */
   @Test
-  @Category(MaintainedByDiffblue.class)
+  @Category(ContributionFromDiffblue.class)
+  @ManagedByDiffblue
   @MethodsUnderTest({"String DataWord.shortHex(byte[])"})
   public void testShortHexWithByte_thenReturn0x8074158415841FF() {
     // Arrange, Act and Assert
@@ -3585,7 +3763,8 @@ public class DataWordDiffblueTest {
    * <p>Method under test: {@link DataWord#shortHex(byte[])}
    */
   @Test
-  @Category(MaintainedByDiffblue.class)
+  @Category(ContributionFromDiffblue.class)
+  @ManagedByDiffblue
   @MethodsUnderTest({"String DataWord.shortHex(byte[])"})
   public void testShortHexWithByte_thenReturn0x8084158415841FF() {
     // Arrange, Act and Assert
@@ -3604,7 +3783,8 @@ public class DataWordDiffblueTest {
    * <p>Method under test: {@link DataWord#shortHex(byte[])}
    */
   @Test
-  @Category(MaintainedByDiffblue.class)
+  @Category(ContributionFromDiffblue.class)
+  @ManagedByDiffblue
   @MethodsUnderTest({"String DataWord.shortHex(byte[])"})
   public void testShortHexWithByte_thenReturn0x8414158415841FF() {
     // Arrange, Act and Assert
@@ -3623,7 +3803,8 @@ public class DataWordDiffblueTest {
    * <p>Method under test: {@link DataWord#shortHex(byte[])}
    */
   @Test
-  @Category(MaintainedByDiffblue.class)
+  @Category(ContributionFromDiffblue.class)
+  @ManagedByDiffblue
   @MethodsUnderTest({"String DataWord.shortHex(byte[])"})
   public void testShortHexWithByte_thenReturn0x8415841584158() {
     // Arrange, Act and Assert
@@ -3641,7 +3822,8 @@ public class DataWordDiffblueTest {
    * <p>Method under test: {@link DataWord#shortHex(byte[])}
    */
   @Test
-  @Category(MaintainedByDiffblue.class)
+  @Category(ContributionFromDiffblue.class)
+  @ManagedByDiffblue
   @MethodsUnderTest({"String DataWord.shortHex(byte[])"})
   public void testShortHexWithByte_thenReturn0x8584158415841FF() {
     // Arrange, Act and Assert
@@ -3660,7 +3842,8 @@ public class DataWordDiffblueTest {
    * <p>Method under test: {@link DataWord#shortHex(byte[])}
    */
   @Test
-  @Category(MaintainedByDiffblue.class)
+  @Category(ContributionFromDiffblue.class)
+  @ManagedByDiffblue
   @MethodsUnderTest({"String DataWord.shortHex(byte[])"})
   public void testShortHexWithByte_thenReturn0x80041584158417F() {
     // Arrange, Act and Assert
@@ -3679,7 +3862,8 @@ public class DataWordDiffblueTest {
    * <p>Method under test: {@link DataWord#shortHex(byte[])}
    */
   @Test
-  @Category(MaintainedByDiffblue.class)
+  @Category(ContributionFromDiffblue.class)
+  @ManagedByDiffblue
   @MethodsUnderTest({"String DataWord.shortHex(byte[])"})
   public void testShortHexWithByte_thenReturn0x80741584158417F() {
     // Arrange, Act and Assert
@@ -3698,7 +3882,8 @@ public class DataWordDiffblueTest {
    * <p>Method under test: {@link DataWord#shortHex(byte[])}
    */
   @Test
-  @Category(MaintainedByDiffblue.class)
+  @Category(ContributionFromDiffblue.class)
+  @ManagedByDiffblue
   @MethodsUnderTest({"String DataWord.shortHex(byte[])"})
   public void testShortHexWithByte_thenReturn0x80841584158417F() {
     // Arrange, Act and Assert
@@ -3717,7 +3902,8 @@ public class DataWordDiffblueTest {
    * <p>Method under test: {@link DataWord#shortHex(byte[])}
    */
   @Test
-  @Category(MaintainedByDiffblue.class)
+  @Category(ContributionFromDiffblue.class)
+  @ManagedByDiffblue
   @MethodsUnderTest({"String DataWord.shortHex(byte[])"})
   public void testShortHexWithByte_thenReturn0x84141584158417F() {
     // Arrange, Act and Assert
@@ -3736,7 +3922,8 @@ public class DataWordDiffblueTest {
    * <p>Method under test: {@link DataWord#shortHex(byte[])}
    */
   @Test
-  @Category(MaintainedByDiffblue.class)
+  @Category(ContributionFromDiffblue.class)
+  @ManagedByDiffblue
   @MethodsUnderTest({"String DataWord.shortHex(byte[])"})
   public void testShortHexWithByte_thenReturn0x85841584158417F() {
     // Arrange, Act and Assert
@@ -3755,7 +3942,8 @@ public class DataWordDiffblueTest {
    * <p>Method under test: {@link DataWord#shortHex(byte[])}
    */
   @Test
-  @Category(MaintainedByDiffblue.class)
+  @Category(ContributionFromDiffblue.class)
+  @ManagedByDiffblue
   @MethodsUnderTest({"String DataWord.shortHex(byte[])"})
   public void testShortHexWithByte_thenReturn0x707415841584158() {
     // Arrange, Act and Assert
@@ -3773,7 +3961,8 @@ public class DataWordDiffblueTest {
    * <p>Method under test: {@link DataWord#shortHex(byte[])}
    */
   @Test
-  @Category(MaintainedByDiffblue.class)
+  @Category(ContributionFromDiffblue.class)
+  @ManagedByDiffblue
   @MethodsUnderTest({"String DataWord.shortHex(byte[])"})
   public void testShortHexWithByte_thenReturn0x708415841584158() {
     // Arrange, Act and Assert
@@ -3791,7 +3980,8 @@ public class DataWordDiffblueTest {
    * <p>Method under test: {@link DataWord#shortHex(byte[])}
    */
   @Test
-  @Category(MaintainedByDiffblue.class)
+  @Category(ContributionFromDiffblue.class)
+  @ManagedByDiffblue
   @MethodsUnderTest({"String DataWord.shortHex(byte[])"})
   public void testShortHexWithByte_thenReturn0x800005841584158() {
     // Arrange, Act and Assert
@@ -3809,7 +3999,8 @@ public class DataWordDiffblueTest {
    * <p>Method under test: {@link DataWord#shortHex(byte[])}
    */
   @Test
-  @Category(MaintainedByDiffblue.class)
+  @Category(ContributionFromDiffblue.class)
+  @ManagedByDiffblue
   @MethodsUnderTest({"String DataWord.shortHex(byte[])"})
   public void testShortHexWithByte_thenReturn0x800075841584158() {
     // Arrange, Act and Assert
@@ -3827,7 +4018,8 @@ public class DataWordDiffblueTest {
    * <p>Method under test: {@link DataWord#shortHex(byte[])}
    */
   @Test
-  @Category(MaintainedByDiffblue.class)
+  @Category(ContributionFromDiffblue.class)
+  @ManagedByDiffblue
   @MethodsUnderTest({"String DataWord.shortHex(byte[])"})
   public void testShortHexWithByte_thenReturn0x800085841584158() {
     // Arrange, Act and Assert
@@ -3846,7 +4038,8 @@ public class DataWordDiffblueTest {
    * <p>Method under test: {@link DataWord#shortHex(byte[])}
    */
   @Test
-  @Category(MaintainedByDiffblue.class)
+  @Category(ContributionFromDiffblue.class)
+  @ManagedByDiffblue
   @MethodsUnderTest({"String DataWord.shortHex(byte[])"})
   public void testShortHexWithByte_thenReturn0x800410041584158() {
     // Arrange, Act and Assert
@@ -3864,7 +4057,8 @@ public class DataWordDiffblueTest {
    * <p>Method under test: {@link DataWord#shortHex(byte[])}
    */
   @Test
-  @Category(MaintainedByDiffblue.class)
+  @Category(ContributionFromDiffblue.class)
+  @ManagedByDiffblue
   @MethodsUnderTest({"String DataWord.shortHex(byte[])"})
   public void testShortHexWithByte_thenReturn0x800410741584158() {
     // Arrange, Act and Assert
@@ -3882,7 +4076,8 @@ public class DataWordDiffblueTest {
    * <p>Method under test: {@link DataWord#shortHex(byte[])}
    */
   @Test
-  @Category(MaintainedByDiffblue.class)
+  @Category(ContributionFromDiffblue.class)
+  @ManagedByDiffblue
   @MethodsUnderTest({"String DataWord.shortHex(byte[])"})
   public void testShortHexWithByte_thenReturn0x800410841584158() {
     // Arrange, Act and Assert
@@ -3901,7 +4096,8 @@ public class DataWordDiffblueTest {
    * <p>Method under test: {@link DataWord#shortHex(byte[])}
    */
   @Test
-  @Category(MaintainedByDiffblue.class)
+  @Category(ContributionFromDiffblue.class)
+  @ManagedByDiffblue
   @MethodsUnderTest({"String DataWord.shortHex(byte[])"})
   public void testShortHexWithByte_thenReturn0x800414141584158() {
     // Arrange, Act and Assert
@@ -3919,7 +4115,8 @@ public class DataWordDiffblueTest {
    * <p>Method under test: {@link DataWord#shortHex(byte[])}
    */
   @Test
-  @Category(MaintainedByDiffblue.class)
+  @Category(ContributionFromDiffblue.class)
+  @ManagedByDiffblue
   @MethodsUnderTest({"String DataWord.shortHex(byte[])"})
   public void testShortHexWithByte_thenReturn0x800415800584158() {
     // Arrange, Act and Assert
@@ -3937,7 +4134,8 @@ public class DataWordDiffblueTest {
    * <p>Method under test: {@link DataWord#shortHex(byte[])}
    */
   @Test
-  @Category(MaintainedByDiffblue.class)
+  @Category(ContributionFromDiffblue.class)
+  @ManagedByDiffblue
   @MethodsUnderTest({"String DataWord.shortHex(byte[])"})
   public void testShortHexWithByte_thenReturn0x800415807584158() {
     // Arrange, Act and Assert
@@ -3955,7 +4153,8 @@ public class DataWordDiffblueTest {
    * <p>Method under test: {@link DataWord#shortHex(byte[])}
    */
   @Test
-  @Category(MaintainedByDiffblue.class)
+  @Category(ContributionFromDiffblue.class)
+  @ManagedByDiffblue
   @MethodsUnderTest({"String DataWord.shortHex(byte[])"})
   public void testShortHexWithByte_thenReturn0x800415808584158() {
     // Arrange, Act and Assert
@@ -3974,7 +4173,8 @@ public class DataWordDiffblueTest {
    * <p>Method under test: {@link DataWord#shortHex(byte[])}
    */
   @Test
-  @Category(MaintainedByDiffblue.class)
+  @Category(ContributionFromDiffblue.class)
+  @ManagedByDiffblue
   @MethodsUnderTest({"String DataWord.shortHex(byte[])"})
   public void testShortHexWithByte_thenReturn0x800415841004158() {
     // Arrange, Act and Assert
@@ -3992,7 +4192,8 @@ public class DataWordDiffblueTest {
    * <p>Method under test: {@link DataWord#shortHex(byte[])}
    */
   @Test
-  @Category(MaintainedByDiffblue.class)
+  @Category(ContributionFromDiffblue.class)
+  @ManagedByDiffblue
   @MethodsUnderTest({"String DataWord.shortHex(byte[])"})
   public void testShortHexWithByte_thenReturn0x800415841074158() {
     // Arrange, Act and Assert
@@ -4010,7 +4211,8 @@ public class DataWordDiffblueTest {
    * <p>Method under test: {@link DataWord#shortHex(byte[])}
    */
   @Test
-  @Category(MaintainedByDiffblue.class)
+  @Category(ContributionFromDiffblue.class)
+  @ManagedByDiffblue
   @MethodsUnderTest({"String DataWord.shortHex(byte[])"})
   public void testShortHexWithByte_thenReturn0x800415841084158() {
     // Arrange, Act and Assert
@@ -4029,7 +4231,8 @@ public class DataWordDiffblueTest {
    * <p>Method under test: {@link DataWord#shortHex(byte[])}
    */
   @Test
-  @Category(MaintainedByDiffblue.class)
+  @Category(ContributionFromDiffblue.class)
+  @ManagedByDiffblue
   @MethodsUnderTest({"String DataWord.shortHex(byte[])"})
   public void testShortHexWithByte_thenReturn0x800415841414158() {
     // Arrange, Act and Assert
@@ -4047,7 +4250,8 @@ public class DataWordDiffblueTest {
    * <p>Method under test: {@link DataWord#shortHex(byte[])}
    */
   @Test
-  @Category(MaintainedByDiffblue.class)
+  @Category(ContributionFromDiffblue.class)
+  @ManagedByDiffblue
   @MethodsUnderTest({"String DataWord.shortHex(byte[])"})
   public void testShortHexWithByte_thenReturn0x800415841580058() {
     // Arrange, Act and Assert
@@ -4065,7 +4269,8 @@ public class DataWordDiffblueTest {
    * <p>Method under test: {@link DataWord#shortHex(byte[])}
    */
   @Test
-  @Category(MaintainedByDiffblue.class)
+  @Category(ContributionFromDiffblue.class)
+  @ManagedByDiffblue
   @MethodsUnderTest({"String DataWord.shortHex(byte[])"})
   public void testShortHexWithByte_thenReturn0x800415841580758() {
     // Arrange, Act and Assert
@@ -4083,7 +4288,8 @@ public class DataWordDiffblueTest {
    * <p>Method under test: {@link DataWord#shortHex(byte[])}
    */
   @Test
-  @Category(MaintainedByDiffblue.class)
+  @Category(ContributionFromDiffblue.class)
+  @ManagedByDiffblue
   @MethodsUnderTest({"String DataWord.shortHex(byte[])"})
   public void testShortHexWithByte_thenReturn0x800415841580858() {
     // Arrange, Act and Assert
@@ -4102,7 +4308,8 @@ public class DataWordDiffblueTest {
    * <p>Method under test: {@link DataWord#shortHex(byte[])}
    */
   @Test
-  @Category(MaintainedByDiffblue.class)
+  @Category(ContributionFromDiffblue.class)
+  @ManagedByDiffblue
   @MethodsUnderTest({"String DataWord.shortHex(byte[])"})
   public void testShortHexWithByte_thenReturn0x800415841584100() {
     // Arrange, Act and Assert
@@ -4120,7 +4327,8 @@ public class DataWordDiffblueTest {
    * <p>Method under test: {@link DataWord#shortHex(byte[])}
    */
   @Test
-  @Category(MaintainedByDiffblue.class)
+  @Category(ContributionFromDiffblue.class)
+  @ManagedByDiffblue
   @MethodsUnderTest({"String DataWord.shortHex(byte[])"})
   public void testShortHexWithByte_thenReturn0x800415841584107() {
     // Arrange, Act and Assert
@@ -4138,7 +4346,8 @@ public class DataWordDiffblueTest {
    * <p>Method under test: {@link DataWord#shortHex(byte[])}
    */
   @Test
-  @Category(MaintainedByDiffblue.class)
+  @Category(ContributionFromDiffblue.class)
+  @ManagedByDiffblue
   @MethodsUnderTest({"String DataWord.shortHex(byte[])"})
   public void testShortHexWithByte_thenReturn0x800415841584108() {
     // Arrange, Act and Assert
@@ -4157,7 +4366,8 @@ public class DataWordDiffblueTest {
    * <p>Method under test: {@link DataWord#shortHex(byte[])}
    */
   @Test
-  @Category(MaintainedByDiffblue.class)
+  @Category(ContributionFromDiffblue.class)
+  @ManagedByDiffblue
   @MethodsUnderTest({"String DataWord.shortHex(byte[])"})
   public void testShortHexWithByte_thenReturn0x800415841584141() {
     // Arrange, Act and Assert
@@ -4175,7 +4385,8 @@ public class DataWordDiffblueTest {
    * <p>Method under test: {@link DataWord#shortHex(byte[])}
    */
   @Test
-  @Category(MaintainedByDiffblue.class)
+  @Category(ContributionFromDiffblue.class)
+  @ManagedByDiffblue
   @MethodsUnderTest({"String DataWord.shortHex(byte[])"})
   public void testShortHexWithByte_thenReturn0x800415841584158() {
     // Arrange, Act and Assert
@@ -4193,7 +4404,8 @@ public class DataWordDiffblueTest {
    * <p>Method under test: {@link DataWord#shortHex(byte[])}
    */
   @Test
-  @Category(MaintainedByDiffblue.class)
+  @Category(ContributionFromDiffblue.class)
+  @ManagedByDiffblue
   @MethodsUnderTest({"String DataWord.shortHex(byte[])"})
   public void testShortHexWithByte_thenReturn0x800415841585858() {
     // Arrange, Act and Assert
@@ -4211,7 +4423,8 @@ public class DataWordDiffblueTest {
    * <p>Method under test: {@link DataWord#shortHex(byte[])}
    */
   @Test
-  @Category(MaintainedByDiffblue.class)
+  @Category(ContributionFromDiffblue.class)
+  @ManagedByDiffblue
   @MethodsUnderTest({"String DataWord.shortHex(byte[])"})
   public void testShortHexWithByte_thenReturn0x800415858584158() {
     // Arrange, Act and Assert
@@ -4229,7 +4442,8 @@ public class DataWordDiffblueTest {
    * <p>Method under test: {@link DataWord#shortHex(byte[])}
    */
   @Test
-  @Category(MaintainedByDiffblue.class)
+  @Category(ContributionFromDiffblue.class)
+  @ManagedByDiffblue
   @MethodsUnderTest({"String DataWord.shortHex(byte[])"})
   public void testShortHexWithByte_thenReturn0x800585841584158() {
     // Arrange, Act and Assert
@@ -4247,7 +4461,8 @@ public class DataWordDiffblueTest {
    * <p>Method under test: {@link DataWord#shortHex(byte[])}
    */
   @Test
-  @Category(MaintainedByDiffblue.class)
+  @Category(ContributionFromDiffblue.class)
+  @ManagedByDiffblue
   @MethodsUnderTest({"String DataWord.shortHex(byte[])"})
   public void testShortHexWithByte_thenReturn0x807005841584158() {
     // Arrange, Act and Assert
@@ -4265,7 +4480,8 @@ public class DataWordDiffblueTest {
    * <p>Method under test: {@link DataWord#shortHex(byte[])}
    */
   @Test
-  @Category(MaintainedByDiffblue.class)
+  @Category(ContributionFromDiffblue.class)
+  @ManagedByDiffblue
   @MethodsUnderTest({"String DataWord.shortHex(byte[])"})
   public void testShortHexWithByte_thenReturn0x807075841584158() {
     // Arrange, Act and Assert
@@ -4283,7 +4499,8 @@ public class DataWordDiffblueTest {
    * <p>Method under test: {@link DataWord#shortHex(byte[])}
    */
   @Test
-  @Category(MaintainedByDiffblue.class)
+  @Category(ContributionFromDiffblue.class)
+  @ManagedByDiffblue
   @MethodsUnderTest({"String DataWord.shortHex(byte[])"})
   public void testShortHexWithByte_thenReturn0x807085841584158() {
     // Arrange, Act and Assert
@@ -4302,7 +4519,8 @@ public class DataWordDiffblueTest {
    * <p>Method under test: {@link DataWord#shortHex(byte[])}
    */
   @Test
-  @Category(MaintainedByDiffblue.class)
+  @Category(ContributionFromDiffblue.class)
+  @ManagedByDiffblue
   @MethodsUnderTest({"String DataWord.shortHex(byte[])"})
   public void testShortHexWithByte_thenReturn0x807410041584158() {
     // Arrange, Act and Assert
@@ -4320,7 +4538,8 @@ public class DataWordDiffblueTest {
    * <p>Method under test: {@link DataWord#shortHex(byte[])}
    */
   @Test
-  @Category(MaintainedByDiffblue.class)
+  @Category(ContributionFromDiffblue.class)
+  @ManagedByDiffblue
   @MethodsUnderTest({"String DataWord.shortHex(byte[])"})
   public void testShortHexWithByte_thenReturn0x807410741584158() {
     // Arrange, Act and Assert
@@ -4338,7 +4557,8 @@ public class DataWordDiffblueTest {
    * <p>Method under test: {@link DataWord#shortHex(byte[])}
    */
   @Test
-  @Category(MaintainedByDiffblue.class)
+  @Category(ContributionFromDiffblue.class)
+  @ManagedByDiffblue
   @MethodsUnderTest({"String DataWord.shortHex(byte[])"})
   public void testShortHexWithByte_thenReturn0x807410841584158() {
     // Arrange, Act and Assert
@@ -4357,7 +4577,8 @@ public class DataWordDiffblueTest {
    * <p>Method under test: {@link DataWord#shortHex(byte[])}
    */
   @Test
-  @Category(MaintainedByDiffblue.class)
+  @Category(ContributionFromDiffblue.class)
+  @ManagedByDiffblue
   @MethodsUnderTest({"String DataWord.shortHex(byte[])"})
   public void testShortHexWithByte_thenReturn0x807414141584158() {
     // Arrange, Act and Assert
@@ -4375,7 +4596,8 @@ public class DataWordDiffblueTest {
    * <p>Method under test: {@link DataWord#shortHex(byte[])}
    */
   @Test
-  @Category(MaintainedByDiffblue.class)
+  @Category(ContributionFromDiffblue.class)
+  @ManagedByDiffblue
   @MethodsUnderTest({"String DataWord.shortHex(byte[])"})
   public void testShortHexWithByte_thenReturn0x807415800584158() {
     // Arrange, Act and Assert
@@ -4393,7 +4615,8 @@ public class DataWordDiffblueTest {
    * <p>Method under test: {@link DataWord#shortHex(byte[])}
    */
   @Test
-  @Category(MaintainedByDiffblue.class)
+  @Category(ContributionFromDiffblue.class)
+  @ManagedByDiffblue
   @MethodsUnderTest({"String DataWord.shortHex(byte[])"})
   public void testShortHexWithByte_thenReturn0x807415807584158() {
     // Arrange, Act and Assert
@@ -4411,7 +4634,8 @@ public class DataWordDiffblueTest {
    * <p>Method under test: {@link DataWord#shortHex(byte[])}
    */
   @Test
-  @Category(MaintainedByDiffblue.class)
+  @Category(ContributionFromDiffblue.class)
+  @ManagedByDiffblue
   @MethodsUnderTest({"String DataWord.shortHex(byte[])"})
   public void testShortHexWithByte_thenReturn0x807415808584158() {
     // Arrange, Act and Assert
@@ -4430,7 +4654,8 @@ public class DataWordDiffblueTest {
    * <p>Method under test: {@link DataWord#shortHex(byte[])}
    */
   @Test
-  @Category(MaintainedByDiffblue.class)
+  @Category(ContributionFromDiffblue.class)
+  @ManagedByDiffblue
   @MethodsUnderTest({"String DataWord.shortHex(byte[])"})
   public void testShortHexWithByte_thenReturn0x807415841004158() {
     // Arrange, Act and Assert
@@ -4448,7 +4673,8 @@ public class DataWordDiffblueTest {
    * <p>Method under test: {@link DataWord#shortHex(byte[])}
    */
   @Test
-  @Category(MaintainedByDiffblue.class)
+  @Category(ContributionFromDiffblue.class)
+  @ManagedByDiffblue
   @MethodsUnderTest({"String DataWord.shortHex(byte[])"})
   public void testShortHexWithByte_thenReturn0x807415841074158() {
     // Arrange, Act and Assert
@@ -4466,7 +4692,8 @@ public class DataWordDiffblueTest {
    * <p>Method under test: {@link DataWord#shortHex(byte[])}
    */
   @Test
-  @Category(MaintainedByDiffblue.class)
+  @Category(ContributionFromDiffblue.class)
+  @ManagedByDiffblue
   @MethodsUnderTest({"String DataWord.shortHex(byte[])"})
   public void testShortHexWithByte_thenReturn0x807415841084158() {
     // Arrange, Act and Assert
@@ -4485,7 +4712,8 @@ public class DataWordDiffblueTest {
    * <p>Method under test: {@link DataWord#shortHex(byte[])}
    */
   @Test
-  @Category(MaintainedByDiffblue.class)
+  @Category(ContributionFromDiffblue.class)
+  @ManagedByDiffblue
   @MethodsUnderTest({"String DataWord.shortHex(byte[])"})
   public void testShortHexWithByte_thenReturn0x807415841414158() {
     // Arrange, Act and Assert
@@ -4503,7 +4731,8 @@ public class DataWordDiffblueTest {
    * <p>Method under test: {@link DataWord#shortHex(byte[])}
    */
   @Test
-  @Category(MaintainedByDiffblue.class)
+  @Category(ContributionFromDiffblue.class)
+  @ManagedByDiffblue
   @MethodsUnderTest({"String DataWord.shortHex(byte[])"})
   public void testShortHexWithByte_thenReturn0x807415841580058() {
     // Arrange, Act and Assert
@@ -4521,7 +4750,8 @@ public class DataWordDiffblueTest {
    * <p>Method under test: {@link DataWord#shortHex(byte[])}
    */
   @Test
-  @Category(MaintainedByDiffblue.class)
+  @Category(ContributionFromDiffblue.class)
+  @ManagedByDiffblue
   @MethodsUnderTest({"String DataWord.shortHex(byte[])"})
   public void testShortHexWithByte_thenReturn0x807415841580758() {
     // Arrange, Act and Assert
@@ -4539,7 +4769,8 @@ public class DataWordDiffblueTest {
    * <p>Method under test: {@link DataWord#shortHex(byte[])}
    */
   @Test
-  @Category(MaintainedByDiffblue.class)
+  @Category(ContributionFromDiffblue.class)
+  @ManagedByDiffblue
   @MethodsUnderTest({"String DataWord.shortHex(byte[])"})
   public void testShortHexWithByte_thenReturn0x807415841580858() {
     // Arrange, Act and Assert
@@ -4558,7 +4789,8 @@ public class DataWordDiffblueTest {
    * <p>Method under test: {@link DataWord#shortHex(byte[])}
    */
   @Test
-  @Category(MaintainedByDiffblue.class)
+  @Category(ContributionFromDiffblue.class)
+  @ManagedByDiffblue
   @MethodsUnderTest({"String DataWord.shortHex(byte[])"})
   public void testShortHexWithByte_thenReturn0x807415841584100() {
     // Arrange, Act and Assert
@@ -4576,7 +4808,8 @@ public class DataWordDiffblueTest {
    * <p>Method under test: {@link DataWord#shortHex(byte[])}
    */
   @Test
-  @Category(MaintainedByDiffblue.class)
+  @Category(ContributionFromDiffblue.class)
+  @ManagedByDiffblue
   @MethodsUnderTest({"String DataWord.shortHex(byte[])"})
   public void testShortHexWithByte_thenReturn0x807415841584107() {
     // Arrange, Act and Assert
@@ -4594,7 +4827,8 @@ public class DataWordDiffblueTest {
    * <p>Method under test: {@link DataWord#shortHex(byte[])}
    */
   @Test
-  @Category(MaintainedByDiffblue.class)
+  @Category(ContributionFromDiffblue.class)
+  @ManagedByDiffblue
   @MethodsUnderTest({"String DataWord.shortHex(byte[])"})
   public void testShortHexWithByte_thenReturn0x807415841584108() {
     // Arrange, Act and Assert
@@ -4613,7 +4847,8 @@ public class DataWordDiffblueTest {
    * <p>Method under test: {@link DataWord#shortHex(byte[])}
    */
   @Test
-  @Category(MaintainedByDiffblue.class)
+  @Category(ContributionFromDiffblue.class)
+  @ManagedByDiffblue
   @MethodsUnderTest({"String DataWord.shortHex(byte[])"})
   public void testShortHexWithByte_thenReturn0x807415841584141() {
     // Arrange, Act and Assert
@@ -4631,7 +4866,8 @@ public class DataWordDiffblueTest {
    * <p>Method under test: {@link DataWord#shortHex(byte[])}
    */
   @Test
-  @Category(MaintainedByDiffblue.class)
+  @Category(ContributionFromDiffblue.class)
+  @ManagedByDiffblue
   @MethodsUnderTest({"String DataWord.shortHex(byte[])"})
   public void testShortHexWithByte_thenReturn0x807415841584158() {
     // Arrange, Act and Assert
@@ -4649,7 +4885,8 @@ public class DataWordDiffblueTest {
    * <p>Method under test: {@link DataWord#shortHex(byte[])}
    */
   @Test
-  @Category(MaintainedByDiffblue.class)
+  @Category(ContributionFromDiffblue.class)
+  @ManagedByDiffblue
   @MethodsUnderTest({"String DataWord.shortHex(byte[])"})
   public void testShortHexWithByte_thenReturn0x807415841585858() {
     // Arrange, Act and Assert
@@ -4667,7 +4904,8 @@ public class DataWordDiffblueTest {
    * <p>Method under test: {@link DataWord#shortHex(byte[])}
    */
   @Test
-  @Category(MaintainedByDiffblue.class)
+  @Category(ContributionFromDiffblue.class)
+  @ManagedByDiffblue
   @MethodsUnderTest({"String DataWord.shortHex(byte[])"})
   public void testShortHexWithByte_thenReturn0x807415858584158() {
     // Arrange, Act and Assert
@@ -4685,7 +4923,8 @@ public class DataWordDiffblueTest {
    * <p>Method under test: {@link DataWord#shortHex(byte[])}
    */
   @Test
-  @Category(MaintainedByDiffblue.class)
+  @Category(ContributionFromDiffblue.class)
+  @ManagedByDiffblue
   @MethodsUnderTest({"String DataWord.shortHex(byte[])"})
   public void testShortHexWithByte_thenReturn0x807585841584158() {
     // Arrange, Act and Assert
@@ -4703,7 +4942,8 @@ public class DataWordDiffblueTest {
    * <p>Method under test: {@link DataWord#shortHex(byte[])}
    */
   @Test
-  @Category(MaintainedByDiffblue.class)
+  @Category(ContributionFromDiffblue.class)
+  @ManagedByDiffblue
   @MethodsUnderTest({"String DataWord.shortHex(byte[])"})
   public void testShortHexWithByte_thenReturn0x808005841584158() {
     // Arrange, Act and Assert
@@ -4722,7 +4962,8 @@ public class DataWordDiffblueTest {
    * <p>Method under test: {@link DataWord#shortHex(byte[])}
    */
   @Test
-  @Category(MaintainedByDiffblue.class)
+  @Category(ContributionFromDiffblue.class)
+  @ManagedByDiffblue
   @MethodsUnderTest({"String DataWord.shortHex(byte[])"})
   public void testShortHexWithByte_thenReturn0x808075841584158() {
     // Arrange, Act and Assert
@@ -4741,7 +4982,8 @@ public class DataWordDiffblueTest {
    * <p>Method under test: {@link DataWord#shortHex(byte[])}
    */
   @Test
-  @Category(MaintainedByDiffblue.class)
+  @Category(ContributionFromDiffblue.class)
+  @ManagedByDiffblue
   @MethodsUnderTest({"String DataWord.shortHex(byte[])"})
   public void testShortHexWithByte_thenReturn0x808410041584158() {
     // Arrange, Act and Assert
@@ -4760,7 +5002,8 @@ public class DataWordDiffblueTest {
    * <p>Method under test: {@link DataWord#shortHex(byte[])}
    */
   @Test
-  @Category(MaintainedByDiffblue.class)
+  @Category(ContributionFromDiffblue.class)
+  @ManagedByDiffblue
   @MethodsUnderTest({"String DataWord.shortHex(byte[])"})
   public void testShortHexWithByte_thenReturn0x808410741584158() {
     // Arrange, Act and Assert
@@ -4779,7 +5022,8 @@ public class DataWordDiffblueTest {
    * <p>Method under test: {@link DataWord#shortHex(byte[])}
    */
   @Test
-  @Category(MaintainedByDiffblue.class)
+  @Category(ContributionFromDiffblue.class)
+  @ManagedByDiffblue
   @MethodsUnderTest({"String DataWord.shortHex(byte[])"})
   public void testShortHexWithByte_thenReturn0x808415800584158() {
     // Arrange, Act and Assert
@@ -4798,7 +5042,8 @@ public class DataWordDiffblueTest {
    * <p>Method under test: {@link DataWord#shortHex(byte[])}
    */
   @Test
-  @Category(MaintainedByDiffblue.class)
+  @Category(ContributionFromDiffblue.class)
+  @ManagedByDiffblue
   @MethodsUnderTest({"String DataWord.shortHex(byte[])"})
   public void testShortHexWithByte_thenReturn0x808415807584158() {
     // Arrange, Act and Assert
@@ -4817,7 +5062,8 @@ public class DataWordDiffblueTest {
    * <p>Method under test: {@link DataWord#shortHex(byte[])}
    */
   @Test
-  @Category(MaintainedByDiffblue.class)
+  @Category(ContributionFromDiffblue.class)
+  @ManagedByDiffblue
   @MethodsUnderTest({"String DataWord.shortHex(byte[])"})
   public void testShortHexWithByte_thenReturn0x808415841004158() {
     // Arrange, Act and Assert
@@ -4836,7 +5082,8 @@ public class DataWordDiffblueTest {
    * <p>Method under test: {@link DataWord#shortHex(byte[])}
    */
   @Test
-  @Category(MaintainedByDiffblue.class)
+  @Category(ContributionFromDiffblue.class)
+  @ManagedByDiffblue
   @MethodsUnderTest({"String DataWord.shortHex(byte[])"})
   public void testShortHexWithByte_thenReturn0x808415841074158() {
     // Arrange, Act and Assert
@@ -4855,7 +5102,8 @@ public class DataWordDiffblueTest {
    * <p>Method under test: {@link DataWord#shortHex(byte[])}
    */
   @Test
-  @Category(MaintainedByDiffblue.class)
+  @Category(ContributionFromDiffblue.class)
+  @ManagedByDiffblue
   @MethodsUnderTest({"String DataWord.shortHex(byte[])"})
   public void testShortHexWithByte_thenReturn0x808415841580058() {
     // Arrange, Act and Assert
@@ -4874,7 +5122,8 @@ public class DataWordDiffblueTest {
    * <p>Method under test: {@link DataWord#shortHex(byte[])}
    */
   @Test
-  @Category(MaintainedByDiffblue.class)
+  @Category(ContributionFromDiffblue.class)
+  @ManagedByDiffblue
   @MethodsUnderTest({"String DataWord.shortHex(byte[])"})
   public void testShortHexWithByte_thenReturn0x808415841580758() {
     // Arrange, Act and Assert
@@ -4893,7 +5142,8 @@ public class DataWordDiffblueTest {
    * <p>Method under test: {@link DataWord#shortHex(byte[])}
    */
   @Test
-  @Category(MaintainedByDiffblue.class)
+  @Category(ContributionFromDiffblue.class)
+  @ManagedByDiffblue
   @MethodsUnderTest({"String DataWord.shortHex(byte[])"})
   public void testShortHexWithByte_thenReturn0x808415841584100() {
     // Arrange, Act and Assert
@@ -4912,7 +5162,8 @@ public class DataWordDiffblueTest {
    * <p>Method under test: {@link DataWord#shortHex(byte[])}
    */
   @Test
-  @Category(MaintainedByDiffblue.class)
+  @Category(ContributionFromDiffblue.class)
+  @ManagedByDiffblue
   @MethodsUnderTest({"String DataWord.shortHex(byte[])"})
   public void testShortHexWithByte_thenReturn0x808415841584107() {
     // Arrange, Act and Assert
@@ -4931,7 +5182,8 @@ public class DataWordDiffblueTest {
    * <p>Method under test: {@link DataWord#shortHex(byte[])}
    */
   @Test
-  @Category(MaintainedByDiffblue.class)
+  @Category(ContributionFromDiffblue.class)
+  @ManagedByDiffblue
   @MethodsUnderTest({"String DataWord.shortHex(byte[])"})
   public void testShortHexWithByte_thenReturn0x814415841584158() {
     // Arrange, Act and Assert
@@ -4950,7 +5202,8 @@ public class DataWordDiffblueTest {
    * <p>Method under test: {@link DataWord#shortHex(byte[])}
    */
   @Test
-  @Category(MaintainedByDiffblue.class)
+  @Category(ContributionFromDiffblue.class)
+  @ManagedByDiffblue
   @MethodsUnderTest({"String DataWord.shortHex(byte[])"})
   public void testShortHexWithByte_thenReturn0x841005841584158() {
     // Arrange, Act and Assert
@@ -4968,7 +5221,8 @@ public class DataWordDiffblueTest {
    * <p>Method under test: {@link DataWord#shortHex(byte[])}
    */
   @Test
-  @Category(MaintainedByDiffblue.class)
+  @Category(ContributionFromDiffblue.class)
+  @ManagedByDiffblue
   @MethodsUnderTest({"String DataWord.shortHex(byte[])"})
   public void testShortHexWithByte_thenReturn0x841075841584158() {
     // Arrange, Act and Assert
@@ -4986,7 +5240,8 @@ public class DataWordDiffblueTest {
    * <p>Method under test: {@link DataWord#shortHex(byte[])}
    */
   @Test
-  @Category(MaintainedByDiffblue.class)
+  @Category(ContributionFromDiffblue.class)
+  @ManagedByDiffblue
   @MethodsUnderTest({"String DataWord.shortHex(byte[])"})
   public void testShortHexWithByte_thenReturn0x841410041584158() {
     // Arrange, Act and Assert
@@ -5004,7 +5259,8 @@ public class DataWordDiffblueTest {
    * <p>Method under test: {@link DataWord#shortHex(byte[])}
    */
   @Test
-  @Category(MaintainedByDiffblue.class)
+  @Category(ContributionFromDiffblue.class)
+  @ManagedByDiffblue
   @MethodsUnderTest({"String DataWord.shortHex(byte[])"})
   public void testShortHexWithByte_thenReturn0x841410741584158() {
     // Arrange, Act and Assert
@@ -5022,7 +5278,8 @@ public class DataWordDiffblueTest {
    * <p>Method under test: {@link DataWord#shortHex(byte[])}
    */
   @Test
-  @Category(MaintainedByDiffblue.class)
+  @Category(ContributionFromDiffblue.class)
+  @ManagedByDiffblue
   @MethodsUnderTest({"String DataWord.shortHex(byte[])"})
   public void testShortHexWithByte_thenReturn0x841415800584158() {
     // Arrange, Act and Assert
@@ -5040,7 +5297,8 @@ public class DataWordDiffblueTest {
    * <p>Method under test: {@link DataWord#shortHex(byte[])}
    */
   @Test
-  @Category(MaintainedByDiffblue.class)
+  @Category(ContributionFromDiffblue.class)
+  @ManagedByDiffblue
   @MethodsUnderTest({"String DataWord.shortHex(byte[])"})
   public void testShortHexWithByte_thenReturn0x841415807584158() {
     // Arrange, Act and Assert
@@ -5058,7 +5316,8 @@ public class DataWordDiffblueTest {
    * <p>Method under test: {@link DataWord#shortHex(byte[])}
    */
   @Test
-  @Category(MaintainedByDiffblue.class)
+  @Category(ContributionFromDiffblue.class)
+  @ManagedByDiffblue
   @MethodsUnderTest({"String DataWord.shortHex(byte[])"})
   public void testShortHexWithByte_thenReturn0x841415841004158() {
     // Arrange, Act and Assert
@@ -5076,7 +5335,8 @@ public class DataWordDiffblueTest {
    * <p>Method under test: {@link DataWord#shortHex(byte[])}
    */
   @Test
-  @Category(MaintainedByDiffblue.class)
+  @Category(ContributionFromDiffblue.class)
+  @ManagedByDiffblue
   @MethodsUnderTest({"String DataWord.shortHex(byte[])"})
   public void testShortHexWithByte_thenReturn0x841415841074158() {
     // Arrange, Act and Assert
@@ -5094,7 +5354,8 @@ public class DataWordDiffblueTest {
    * <p>Method under test: {@link DataWord#shortHex(byte[])}
    */
   @Test
-  @Category(MaintainedByDiffblue.class)
+  @Category(ContributionFromDiffblue.class)
+  @ManagedByDiffblue
   @MethodsUnderTest({"String DataWord.shortHex(byte[])"})
   public void testShortHexWithByte_thenReturn0x841415841580058() {
     // Arrange, Act and Assert
@@ -5112,7 +5373,8 @@ public class DataWordDiffblueTest {
    * <p>Method under test: {@link DataWord#shortHex(byte[])}
    */
   @Test
-  @Category(MaintainedByDiffblue.class)
+  @Category(ContributionFromDiffblue.class)
+  @ManagedByDiffblue
   @MethodsUnderTest({"String DataWord.shortHex(byte[])"})
   public void testShortHexWithByte_thenReturn0x841415841580758() {
     // Arrange, Act and Assert
@@ -5130,7 +5392,8 @@ public class DataWordDiffblueTest {
    * <p>Method under test: {@link DataWord#shortHex(byte[])}
    */
   @Test
-  @Category(MaintainedByDiffblue.class)
+  @Category(ContributionFromDiffblue.class)
+  @ManagedByDiffblue
   @MethodsUnderTest({"String DataWord.shortHex(byte[])"})
   public void testShortHexWithByte_thenReturn0x841415841584100() {
     // Arrange, Act and Assert
@@ -5148,7 +5411,8 @@ public class DataWordDiffblueTest {
    * <p>Method under test: {@link DataWord#shortHex(byte[])}
    */
   @Test
-  @Category(MaintainedByDiffblue.class)
+  @Category(ContributionFromDiffblue.class)
+  @ManagedByDiffblue
   @MethodsUnderTest({"String DataWord.shortHex(byte[])"})
   public void testShortHexWithByte_thenReturn0x841415841584107() {
     // Arrange, Act and Assert
@@ -5166,7 +5430,8 @@ public class DataWordDiffblueTest {
    * <p>Method under test: {@link DataWord#shortHex(byte[])}
    */
   @Test
-  @Category(MaintainedByDiffblue.class)
+  @Category(ContributionFromDiffblue.class)
+  @ManagedByDiffblue
   @MethodsUnderTest({"String DataWord.shortHex(byte[])"})
   public void testShortHexWithByte_thenReturn0x858005841584158() {
     // Arrange, Act and Assert
@@ -5184,7 +5449,8 @@ public class DataWordDiffblueTest {
    * <p>Method under test: {@link DataWord#shortHex(byte[])}
    */
   @Test
-  @Category(MaintainedByDiffblue.class)
+  @Category(ContributionFromDiffblue.class)
+  @ManagedByDiffblue
   @MethodsUnderTest({"String DataWord.shortHex(byte[])"})
   public void testShortHexWithByte_thenReturn0x858075841584158() {
     // Arrange, Act and Assert
@@ -5202,7 +5468,8 @@ public class DataWordDiffblueTest {
    * <p>Method under test: {@link DataWord#shortHex(byte[])}
    */
   @Test
-  @Category(MaintainedByDiffblue.class)
+  @Category(ContributionFromDiffblue.class)
+  @ManagedByDiffblue
   @MethodsUnderTest({"String DataWord.shortHex(byte[])"})
   public void testShortHexWithByte_thenReturn0x858080841584158()
       throws UnsupportedEncodingException {
@@ -5220,7 +5487,8 @@ public class DataWordDiffblueTest {
    * <p>Method under test: {@link DataWord#shortHex(byte[])}
    */
   @Test
-  @Category(MaintainedByDiffblue.class)
+  @Category(ContributionFromDiffblue.class)
+  @ManagedByDiffblue
   @MethodsUnderTest({"String DataWord.shortHex(byte[])"})
   public void testShortHexWithByte_thenReturn0x858085808584158()
       throws UnsupportedEncodingException {
@@ -5238,7 +5506,8 @@ public class DataWordDiffblueTest {
    * <p>Method under test: {@link DataWord#shortHex(byte[])}
    */
   @Test
-  @Category(MaintainedByDiffblue.class)
+  @Category(ContributionFromDiffblue.class)
+  @ManagedByDiffblue
   @MethodsUnderTest({"String DataWord.shortHex(byte[])"})
   public void testShortHexWithByte_thenReturn0x858085841084158()
       throws UnsupportedEncodingException {
@@ -5256,7 +5525,8 @@ public class DataWordDiffblueTest {
    * <p>Method under test: {@link DataWord#shortHex(byte[])}
    */
   @Test
-  @Category(MaintainedByDiffblue.class)
+  @Category(ContributionFromDiffblue.class)
+  @ManagedByDiffblue
   @MethodsUnderTest({"String DataWord.shortHex(byte[])"})
   public void testShortHexWithByte_thenReturn0x858085841580858()
       throws UnsupportedEncodingException {
@@ -5274,7 +5544,8 @@ public class DataWordDiffblueTest {
    * <p>Method under test: {@link DataWord#shortHex(byte[])}
    */
   @Test
-  @Category(MaintainedByDiffblue.class)
+  @Category(ContributionFromDiffblue.class)
+  @ManagedByDiffblue
   @MethodsUnderTest({"String DataWord.shortHex(byte[])"})
   public void testShortHexWithByte_thenReturn0x858145841584158() {
     // Arrange, Act and Assert
@@ -5293,7 +5564,8 @@ public class DataWordDiffblueTest {
    * <p>Method under test: {@link DataWord#shortHex(byte[])}
    */
   @Test
-  @Category(MaintainedByDiffblue.class)
+  @Category(ContributionFromDiffblue.class)
+  @ManagedByDiffblue
   @MethodsUnderTest({"String DataWord.shortHex(byte[])"})
   public void testShortHexWithByte_thenReturn0x858410041584158() {
     // Arrange, Act and Assert
@@ -5311,7 +5583,8 @@ public class DataWordDiffblueTest {
    * <p>Method under test: {@link DataWord#shortHex(byte[])}
    */
   @Test
-  @Category(MaintainedByDiffblue.class)
+  @Category(ContributionFromDiffblue.class)
+  @ManagedByDiffblue
   @MethodsUnderTest({"String DataWord.shortHex(byte[])"})
   public void testShortHexWithByte_thenReturn0x858410741584158() {
     // Arrange, Act and Assert
@@ -5329,7 +5602,8 @@ public class DataWordDiffblueTest {
    * <p>Method under test: {@link DataWord#shortHex(byte[])}
    */
   @Test
-  @Category(MaintainedByDiffblue.class)
+  @Category(ContributionFromDiffblue.class)
+  @ManagedByDiffblue
   @MethodsUnderTest({"String DataWord.shortHex(byte[])"})
   public void testShortHexWithByte_thenReturn0x858415800584158() {
     // Arrange, Act and Assert
@@ -5347,7 +5621,8 @@ public class DataWordDiffblueTest {
    * <p>Method under test: {@link DataWord#shortHex(byte[])}
    */
   @Test
-  @Category(MaintainedByDiffblue.class)
+  @Category(ContributionFromDiffblue.class)
+  @ManagedByDiffblue
   @MethodsUnderTest({"String DataWord.shortHex(byte[])"})
   public void testShortHexWithByte_thenReturn0x858415807584158() {
     // Arrange, Act and Assert
@@ -5365,7 +5640,8 @@ public class DataWordDiffblueTest {
    * <p>Method under test: {@link DataWord#shortHex(byte[])}
    */
   @Test
-  @Category(MaintainedByDiffblue.class)
+  @Category(ContributionFromDiffblue.class)
+  @ManagedByDiffblue
   @MethodsUnderTest({"String DataWord.shortHex(byte[])"})
   public void testShortHexWithByte_thenReturn0x858415841004158() {
     // Arrange, Act and Assert
@@ -5383,7 +5659,8 @@ public class DataWordDiffblueTest {
    * <p>Method under test: {@link DataWord#shortHex(byte[])}
    */
   @Test
-  @Category(MaintainedByDiffblue.class)
+  @Category(ContributionFromDiffblue.class)
+  @ManagedByDiffblue
   @MethodsUnderTest({"String DataWord.shortHex(byte[])"})
   public void testShortHexWithByte_thenReturn0x858415841074158() {
     // Arrange, Act and Assert
@@ -5401,7 +5678,8 @@ public class DataWordDiffblueTest {
    * <p>Method under test: {@link DataWord#shortHex(byte[])}
    */
   @Test
-  @Category(MaintainedByDiffblue.class)
+  @Category(ContributionFromDiffblue.class)
+  @ManagedByDiffblue
   @MethodsUnderTest({"String DataWord.shortHex(byte[])"})
   public void testShortHexWithByte_thenReturn0x858415841580058() {
     // Arrange, Act and Assert
@@ -5419,7 +5697,8 @@ public class DataWordDiffblueTest {
    * <p>Method under test: {@link DataWord#shortHex(byte[])}
    */
   @Test
-  @Category(MaintainedByDiffblue.class)
+  @Category(ContributionFromDiffblue.class)
+  @ManagedByDiffblue
   @MethodsUnderTest({"String DataWord.shortHex(byte[])"})
   public void testShortHexWithByte_thenReturn0x858415841580758() {
     // Arrange, Act and Assert
@@ -5437,7 +5716,8 @@ public class DataWordDiffblueTest {
    * <p>Method under test: {@link DataWord#shortHex(byte[])}
    */
   @Test
-  @Category(MaintainedByDiffblue.class)
+  @Category(ContributionFromDiffblue.class)
+  @ManagedByDiffblue
   @MethodsUnderTest({"String DataWord.shortHex(byte[])"})
   public void testShortHexWithByte_thenReturn0x858415841584100() {
     // Arrange, Act and Assert
@@ -5455,7 +5735,8 @@ public class DataWordDiffblueTest {
    * <p>Method under test: {@link DataWord#shortHex(byte[])}
    */
   @Test
-  @Category(MaintainedByDiffblue.class)
+  @Category(ContributionFromDiffblue.class)
+  @ManagedByDiffblue
   @MethodsUnderTest({"String DataWord.shortHex(byte[])"})
   public void testShortHexWithByte_thenReturn0x858415841584107() {
     // Arrange, Act and Assert
@@ -5473,7 +5754,8 @@ public class DataWordDiffblueTest {
    * <p>Method under test: {@link DataWord#shortHex(byte[])}
    */
   @Test
-  @Category(MaintainedByDiffblue.class)
+  @Category(ContributionFromDiffblue.class)
+  @ManagedByDiffblue
   @MethodsUnderTest({"String DataWord.shortHex(byte[])"})
   public void testShortHexWithByte_thenReturn0x858580041584158() {
     // Arrange, Act and Assert
@@ -5491,7 +5773,8 @@ public class DataWordDiffblueTest {
    * <p>Method under test: {@link DataWord#shortHex(byte[])}
    */
   @Test
-  @Category(MaintainedByDiffblue.class)
+  @Category(ContributionFromDiffblue.class)
+  @ManagedByDiffblue
   @MethodsUnderTest({"String DataWord.shortHex(byte[])"})
   public void testShortHexWithByte_thenReturn0x858580741584158() {
     // Arrange, Act and Assert
@@ -5509,7 +5792,8 @@ public class DataWordDiffblueTest {
    * <p>Method under test: {@link DataWord#shortHex(byte[])}
    */
   @Test
-  @Category(MaintainedByDiffblue.class)
+  @Category(ContributionFromDiffblue.class)
+  @ManagedByDiffblue
   @MethodsUnderTest({"String DataWord.shortHex(byte[])"})
   public void testShortHexWithByte_thenReturn0x858585800584158() {
     // Arrange, Act and Assert
@@ -5527,7 +5811,8 @@ public class DataWordDiffblueTest {
    * <p>Method under test: {@link DataWord#shortHex(byte[])}
    */
   @Test
-  @Category(MaintainedByDiffblue.class)
+  @Category(ContributionFromDiffblue.class)
+  @ManagedByDiffblue
   @MethodsUnderTest({"String DataWord.shortHex(byte[])"})
   public void testShortHexWithByte_thenReturn0x858585807584158() {
     // Arrange, Act and Assert
@@ -5545,7 +5830,8 @@ public class DataWordDiffblueTest {
    * <p>Method under test: {@link DataWord#shortHex(byte[])}
    */
   @Test
-  @Category(MaintainedByDiffblue.class)
+  @Category(ContributionFromDiffblue.class)
+  @ManagedByDiffblue
   @MethodsUnderTest({"String DataWord.shortHex(byte[])"})
   public void testShortHexWithByte_thenReturn0x858585841004158() {
     // Arrange, Act and Assert
@@ -5563,7 +5849,8 @@ public class DataWordDiffblueTest {
    * <p>Method under test: {@link DataWord#shortHex(byte[])}
    */
   @Test
-  @Category(MaintainedByDiffblue.class)
+  @Category(ContributionFromDiffblue.class)
+  @ManagedByDiffblue
   @MethodsUnderTest({"String DataWord.shortHex(byte[])"})
   public void testShortHexWithByte_thenReturn0x858585841074158() {
     // Arrange, Act and Assert
@@ -5581,7 +5868,8 @@ public class DataWordDiffblueTest {
    * <p>Method under test: {@link DataWord#shortHex(byte[])}
    */
   @Test
-  @Category(MaintainedByDiffblue.class)
+  @Category(ContributionFromDiffblue.class)
+  @ManagedByDiffblue
   @MethodsUnderTest({"String DataWord.shortHex(byte[])"})
   public void testShortHexWithByte_thenReturn0x858805841584158() {
     // Arrange, Act and Assert
@@ -5600,7 +5888,8 @@ public class DataWordDiffblueTest {
    * <p>Method under test: {@link DataWord#shortHex(byte[])}
    */
   @Test
-  @Category(MaintainedByDiffblue.class)
+  @Category(ContributionFromDiffblue.class)
+  @ManagedByDiffblue
   @MethodsUnderTest({"String DataWord.shortHex(byte[])"})
   public void testShortHexWithByte_thenReturn0x880415841584158() {
     // Arrange, Act and Assert
@@ -5620,7 +5909,8 @@ public class DataWordDiffblueTest {
    * <p>Method under test: {@link DataWord#shortHex(byte[])}
    */
   @Test
-  @Category(MaintainedByDiffblue.class)
+  @Category(ContributionFromDiffblue.class)
+  @ManagedByDiffblue
   @MethodsUnderTest({"String DataWord.shortHex(byte[])"})
   public void testShortHexWithByte_whenABackspaceAxaxBytesIsUtf8_thenReturn0x808410841584158()
       throws UnsupportedEncodingException {
@@ -5639,7 +5929,8 @@ public class DataWordDiffblueTest {
    * <p>Method under test: {@link DataWord#shortHex(byte[])}
    */
   @Test
-  @Category(MaintainedByDiffblue.class)
+  @Category(ContributionFromDiffblue.class)
+  @ManagedByDiffblue
   @MethodsUnderTest({"String DataWord.shortHex(byte[])"})
   public void testShortHexWithByte_whenABackspaceXaxaxBytesIsUtf8_thenReturn0x841085841584158()
       throws UnsupportedEncodingException {
@@ -5658,7 +5949,8 @@ public class DataWordDiffblueTest {
    * <p>Method under test: {@link DataWord#shortHex(byte[])}
    */
   @Test
-  @Category(MaintainedByDiffblue.class)
+  @Category(ContributionFromDiffblue.class)
+  @ManagedByDiffblue
   @MethodsUnderTest({"String DataWord.shortHex(byte[])"})
   public void testShortHexWithByte_whenAaBackspaceAxaxBytesIsUtf8_thenReturn0x841410841584158()
       throws UnsupportedEncodingException {
@@ -5677,7 +5969,8 @@ public class DataWordDiffblueTest {
    * <p>Method under test: {@link DataWord#shortHex(byte[])}
    */
   @Test
-  @Category(MaintainedByDiffblue.class)
+  @Category(ContributionFromDiffblue.class)
+  @ManagedByDiffblue
   @MethodsUnderTest({"String DataWord.shortHex(byte[])"})
   public void testShortHexWithByte_whenAaaaxaxBytesIsUtf8_thenReturn0x841414141584158()
       throws UnsupportedEncodingException {
@@ -5696,7 +5989,8 @@ public class DataWordDiffblueTest {
    * <p>Method under test: {@link DataWord#shortHex(byte[])}
    */
   @Test
-  @Category(MaintainedByDiffblue.class)
+  @Category(ContributionFromDiffblue.class)
+  @ManagedByDiffblue
   @MethodsUnderTest({"String DataWord.shortHex(byte[])"})
   public void testShortHexWithByte_whenAaaxaxBytesIsUtf8_thenReturn0x808414141584158()
       throws UnsupportedEncodingException {
@@ -5715,7 +6009,8 @@ public class DataWordDiffblueTest {
    * <p>Method under test: {@link DataWord#shortHex(byte[])}
    */
   @Test
-  @Category(MaintainedByDiffblue.class)
+  @Category(ContributionFromDiffblue.class)
+  @ManagedByDiffblue
   @MethodsUnderTest({"String DataWord.shortHex(byte[])"})
   public void testShortHexWithByte_whenAaxBackspaceXaxBytesIsUtf8_thenReturn0x841415808584158()
       throws UnsupportedEncodingException {
@@ -5734,7 +6029,8 @@ public class DataWordDiffblueTest {
    * <p>Method under test: {@link DataWord#shortHex(byte[])}
    */
   @Test
-  @Category(MaintainedByDiffblue.class)
+  @Category(ContributionFromDiffblue.class)
+  @ManagedByDiffblue
   @MethodsUnderTest({"String DataWord.shortHex(byte[])"})
   public void testShortHexWithByte_whenAaxaBackspaceAxBytesIsUtf8_thenReturn0x841415841084158()
       throws UnsupportedEncodingException {
@@ -5753,7 +6049,8 @@ public class DataWordDiffblueTest {
    * <p>Method under test: {@link DataWord#shortHex(byte[])}
    */
   @Test
-  @Category(MaintainedByDiffblue.class)
+  @Category(ContributionFromDiffblue.class)
+  @ManagedByDiffblue
   @MethodsUnderTest({"String DataWord.shortHex(byte[])"})
   public void testShortHexWithByte_whenAaxaaaxBytesIsUtf8_thenReturn0x841415841414158()
       throws UnsupportedEncodingException {
@@ -5772,7 +6069,8 @@ public class DataWordDiffblueTest {
    * <p>Method under test: {@link DataWord#shortHex(byte[])}
    */
   @Test
-  @Category(MaintainedByDiffblue.class)
+  @Category(ContributionFromDiffblue.class)
+  @ManagedByDiffblue
   @MethodsUnderTest({"String DataWord.shortHex(byte[])"})
   public void testShortHexWithByte_whenAaxaxBackspaceXBytesIsUtf8_thenReturn0x841415841580858()
       throws UnsupportedEncodingException {
@@ -5791,7 +6089,8 @@ public class DataWordDiffblueTest {
    * <p>Method under test: {@link DataWord#shortHex(byte[])}
    */
   @Test
-  @Category(MaintainedByDiffblue.class)
+  @Category(ContributionFromDiffblue.class)
+  @ManagedByDiffblue
   @MethodsUnderTest({"String DataWord.shortHex(byte[])"})
   public void testShortHexWithByte_whenAaxaxaBytesIsUtf8_thenReturn0x841415841584108()
       throws UnsupportedEncodingException {
@@ -5810,7 +6109,8 @@ public class DataWordDiffblueTest {
    * <p>Method under test: {@link DataWord#shortHex(byte[])}
    */
   @Test
-  @Category(MaintainedByDiffblue.class)
+  @Category(ContributionFromDiffblue.class)
+  @ManagedByDiffblue
   @MethodsUnderTest({"String DataWord.shortHex(byte[])"})
   public void testShortHexWithByte_whenAaxaxaaBytesIsUtf8_thenReturn0x841415841584141()
       throws UnsupportedEncodingException {
@@ -5829,7 +6129,8 @@ public class DataWordDiffblueTest {
    * <p>Method under test: {@link DataWord#shortHex(byte[])}
    */
   @Test
-  @Category(MaintainedByDiffblue.class)
+  @Category(ContributionFromDiffblue.class)
+  @ManagedByDiffblue
   @MethodsUnderTest({"String DataWord.shortHex(byte[])"})
   public void testShortHexWithByte_whenAaxaxaxBytesIsUtf8_thenReturn0x841415841584158()
       throws UnsupportedEncodingException {
@@ -5848,7 +6149,8 @@ public class DataWordDiffblueTest {
    * <p>Method under test: {@link DataWord#shortHex(byte[])}
    */
   @Test
-  @Category(MaintainedByDiffblue.class)
+  @Category(ContributionFromDiffblue.class)
+  @ManagedByDiffblue
   @MethodsUnderTest({"String DataWord.shortHex(byte[])"})
   public void testShortHexWithByte_whenAaxaxxxBytesIsUtf8_thenReturn0x841415841585858()
       throws UnsupportedEncodingException {
@@ -5867,7 +6169,8 @@ public class DataWordDiffblueTest {
    * <p>Method under test: {@link DataWord#shortHex(byte[])}
    */
   @Test
-  @Category(MaintainedByDiffblue.class)
+  @Category(ContributionFromDiffblue.class)
+  @ManagedByDiffblue
   @MethodsUnderTest({"String DataWord.shortHex(byte[])"})
   public void testShortHexWithByte_whenAaxxxaxBytesIsUtf8_thenReturn0x841415858584158()
       throws UnsupportedEncodingException {
@@ -5886,7 +6189,8 @@ public class DataWordDiffblueTest {
    * <p>Method under test: {@link DataWord#shortHex(byte[])}
    */
   @Test
-  @Category(MaintainedByDiffblue.class)
+  @Category(ContributionFromDiffblue.class)
+  @ManagedByDiffblue
   @MethodsUnderTest({"String DataWord.shortHex(byte[])"})
   public void testShortHexWithByte_whenArrayOfByteWithSevenAndA_thenReturn0x741415841584158() {
     // Arrange, Act and Assert
@@ -5905,7 +6209,8 @@ public class DataWordDiffblueTest {
    * <p>Method under test: {@link DataWord#shortHex(byte[])}
    */
   @Test
-  @Category(MaintainedByDiffblue.class)
+  @Category(ContributionFromDiffblue.class)
+  @ManagedByDiffblue
   @MethodsUnderTest({"String DataWord.shortHex(byte[])"})
   public void testShortHexWithByte_whenArrayOfByteWithSevenAndX_thenReturn0x758FF5841584158() {
     // Arrange, Act and Assert
@@ -5924,7 +6229,8 @@ public class DataWordDiffblueTest {
    * <p>Method under test: {@link DataWord#shortHex(byte[])}
    */
   @Test
-  @Category(MaintainedByDiffblue.class)
+  @Category(ContributionFromDiffblue.class)
+  @ManagedByDiffblue
   @MethodsUnderTest({"String DataWord.shortHex(byte[])"})
   public void testShortHexWithByte_whenArrayOfByteWithSevenAndX_thenReturn0x7587F5841584158() {
     // Arrange, Act and Assert
@@ -5944,7 +6250,8 @@ public class DataWordDiffblueTest {
    * <p>Method under test: {@link DataWord#shortHex(byte[])}
    */
   @Test
-  @Category(MaintainedByDiffblue.class)
+  @Category(ContributionFromDiffblue.class)
+  @ManagedByDiffblue
   @MethodsUnderTest({"String DataWord.shortHex(byte[])"})
   public void testShortHexWithByte_whenArrayOfByteWithSevenAndX_thenReturn0x75841FF41584158() {
     // Arrange, Act and Assert
@@ -5963,7 +6270,8 @@ public class DataWordDiffblueTest {
    * <p>Method under test: {@link DataWord#shortHex(byte[])}
    */
   @Test
-  @Category(MaintainedByDiffblue.class)
+  @Category(ContributionFromDiffblue.class)
+  @ManagedByDiffblue
   @MethodsUnderTest({"String DataWord.shortHex(byte[])"})
   public void testShortHexWithByte_whenArrayOfByteWithSevenAndX_thenReturn0x758417F41584158() {
     // Arrange, Act and Assert
@@ -5983,7 +6291,8 @@ public class DataWordDiffblueTest {
    * <p>Method under test: {@link DataWord#shortHex(byte[])}
    */
   @Test
-  @Category(MaintainedByDiffblue.class)
+  @Category(ContributionFromDiffblue.class)
+  @ManagedByDiffblue
   @MethodsUnderTest({"String DataWord.shortHex(byte[])"})
   public void testShortHexWithByte_whenArrayOfByteWithSevenAndX_thenReturn0x7584158FF584158() {
     // Arrange, Act and Assert
@@ -6002,7 +6311,8 @@ public class DataWordDiffblueTest {
    * <p>Method under test: {@link DataWord#shortHex(byte[])}
    */
   @Test
-  @Category(MaintainedByDiffblue.class)
+  @Category(ContributionFromDiffblue.class)
+  @ManagedByDiffblue
   @MethodsUnderTest({"String DataWord.shortHex(byte[])"})
   public void testShortHexWithByte_whenArrayOfByteWithSevenAndX_thenReturn0x75841587F584158() {
     // Arrange, Act and Assert
@@ -6022,7 +6332,8 @@ public class DataWordDiffblueTest {
    * <p>Method under test: {@link DataWord#shortHex(byte[])}
    */
   @Test
-  @Category(MaintainedByDiffblue.class)
+  @Category(ContributionFromDiffblue.class)
+  @ManagedByDiffblue
   @MethodsUnderTest({"String DataWord.shortHex(byte[])"})
   public void testShortHexWithByte_whenArrayOfByteWithSevenAndX_thenReturn0x758415841FF4158() {
     // Arrange, Act and Assert
@@ -6041,7 +6352,8 @@ public class DataWordDiffblueTest {
    * <p>Method under test: {@link DataWord#shortHex(byte[])}
    */
   @Test
-  @Category(MaintainedByDiffblue.class)
+  @Category(ContributionFromDiffblue.class)
+  @ManagedByDiffblue
   @MethodsUnderTest({"String DataWord.shortHex(byte[])"})
   public void testShortHexWithByte_whenArrayOfByteWithSevenAndX_thenReturn0x7584158417F4158() {
     // Arrange, Act and Assert
@@ -6061,7 +6373,8 @@ public class DataWordDiffblueTest {
    * <p>Method under test: {@link DataWord#shortHex(byte[])}
    */
   @Test
-  @Category(MaintainedByDiffblue.class)
+  @Category(ContributionFromDiffblue.class)
+  @ManagedByDiffblue
   @MethodsUnderTest({"String DataWord.shortHex(byte[])"})
   public void testShortHexWithByte_whenArrayOfByteWithSevenAndX_thenReturn0x75841584158FF58() {
     // Arrange, Act and Assert
@@ -6080,7 +6393,8 @@ public class DataWordDiffblueTest {
    * <p>Method under test: {@link DataWord#shortHex(byte[])}
    */
   @Test
-  @Category(MaintainedByDiffblue.class)
+  @Category(ContributionFromDiffblue.class)
+  @ManagedByDiffblue
   @MethodsUnderTest({"String DataWord.shortHex(byte[])"})
   public void testShortHexWithByte_whenArrayOfByteWithSevenAndX_thenReturn0x758415841587F58() {
     // Arrange, Act and Assert
@@ -6100,7 +6414,8 @@ public class DataWordDiffblueTest {
    * <p>Method under test: {@link DataWord#shortHex(byte[])}
    */
   @Test
-  @Category(MaintainedByDiffblue.class)
+  @Category(ContributionFromDiffblue.class)
+  @ManagedByDiffblue
   @MethodsUnderTest({"String DataWord.shortHex(byte[])"})
   public void testShortHexWithByte_whenArrayOfByteWithSevenAndX_thenReturn0x7584158415841FF() {
     // Arrange, Act and Assert
@@ -6119,7 +6434,8 @@ public class DataWordDiffblueTest {
    * <p>Method under test: {@link DataWord#shortHex(byte[])}
    */
   @Test
-  @Category(MaintainedByDiffblue.class)
+  @Category(ContributionFromDiffblue.class)
+  @ManagedByDiffblue
   @MethodsUnderTest({"String DataWord.shortHex(byte[])"})
   public void testShortHexWithByte_whenArrayOfByteWithSevenAndX_thenReturn0x75841584158417F() {
     // Arrange, Act and Assert
@@ -6139,7 +6455,8 @@ public class DataWordDiffblueTest {
    * <p>Method under test: {@link DataWord#shortHex(byte[])}
    */
   @Test
-  @Category(MaintainedByDiffblue.class)
+  @Category(ContributionFromDiffblue.class)
+  @ManagedByDiffblue
   @MethodsUnderTest({"String DataWord.shortHex(byte[])"})
   public void testShortHexWithByte_whenArrayOfByteWithSevenAndX_thenReturn0x758005841584158() {
     // Arrange, Act and Assert
@@ -6158,7 +6475,8 @@ public class DataWordDiffblueTest {
    * <p>Method under test: {@link DataWord#shortHex(byte[])}
    */
   @Test
-  @Category(MaintainedByDiffblue.class)
+  @Category(ContributionFromDiffblue.class)
+  @ManagedByDiffblue
   @MethodsUnderTest({"String DataWord.shortHex(byte[])"})
   public void testShortHexWithByte_whenArrayOfByteWithSevenAndX_thenReturn0x758075841584158() {
     // Arrange, Act and Assert
@@ -6177,7 +6495,8 @@ public class DataWordDiffblueTest {
    * <p>Method under test: {@link DataWord#shortHex(byte[])}
    */
   @Test
-  @Category(MaintainedByDiffblue.class)
+  @Category(ContributionFromDiffblue.class)
+  @ManagedByDiffblue
   @MethodsUnderTest({"String DataWord.shortHex(byte[])"})
   public void testShortHexWithByte_whenArrayOfByteWithSevenAndX_thenReturn0x758085841584158() {
     // Arrange, Act and Assert
@@ -6196,7 +6515,8 @@ public class DataWordDiffblueTest {
    * <p>Method under test: {@link DataWord#shortHex(byte[])}
    */
   @Test
-  @Category(MaintainedByDiffblue.class)
+  @Category(ContributionFromDiffblue.class)
+  @ManagedByDiffblue
   @MethodsUnderTest({"String DataWord.shortHex(byte[])"})
   public void testShortHexWithByte_whenArrayOfByteWithSevenAndX_thenReturn0x758410041584158() {
     // Arrange, Act and Assert
@@ -6215,7 +6535,8 @@ public class DataWordDiffblueTest {
    * <p>Method under test: {@link DataWord#shortHex(byte[])}
    */
   @Test
-  @Category(MaintainedByDiffblue.class)
+  @Category(ContributionFromDiffblue.class)
+  @ManagedByDiffblue
   @MethodsUnderTest({"String DataWord.shortHex(byte[])"})
   public void testShortHexWithByte_whenArrayOfByteWithSevenAndX_thenReturn0x758410741584158() {
     // Arrange, Act and Assert
@@ -6234,7 +6555,8 @@ public class DataWordDiffblueTest {
    * <p>Method under test: {@link DataWord#shortHex(byte[])}
    */
   @Test
-  @Category(MaintainedByDiffblue.class)
+  @Category(ContributionFromDiffblue.class)
+  @ManagedByDiffblue
   @MethodsUnderTest({"String DataWord.shortHex(byte[])"})
   public void testShortHexWithByte_whenArrayOfByteWithSevenAndX_thenReturn0x758410841584158() {
     // Arrange, Act and Assert
@@ -6253,7 +6575,8 @@ public class DataWordDiffblueTest {
    * <p>Method under test: {@link DataWord#shortHex(byte[])}
    */
   @Test
-  @Category(MaintainedByDiffblue.class)
+  @Category(ContributionFromDiffblue.class)
+  @ManagedByDiffblue
   @MethodsUnderTest({"String DataWord.shortHex(byte[])"})
   public void testShortHexWithByte_whenArrayOfByteWithSevenAndX_thenReturn0x758414141584158() {
     // Arrange, Act and Assert
@@ -6272,7 +6595,8 @@ public class DataWordDiffblueTest {
    * <p>Method under test: {@link DataWord#shortHex(byte[])}
    */
   @Test
-  @Category(MaintainedByDiffblue.class)
+  @Category(ContributionFromDiffblue.class)
+  @ManagedByDiffblue
   @MethodsUnderTest({"String DataWord.shortHex(byte[])"})
   public void testShortHexWithByte_whenArrayOfByteWithSevenAndX_thenReturn0x758415800584158() {
     // Arrange, Act and Assert
@@ -6291,7 +6615,8 @@ public class DataWordDiffblueTest {
    * <p>Method under test: {@link DataWord#shortHex(byte[])}
    */
   @Test
-  @Category(MaintainedByDiffblue.class)
+  @Category(ContributionFromDiffblue.class)
+  @ManagedByDiffblue
   @MethodsUnderTest({"String DataWord.shortHex(byte[])"})
   public void testShortHexWithByte_whenArrayOfByteWithSevenAndX_thenReturn0x758415807584158() {
     // Arrange, Act and Assert
@@ -6310,7 +6635,8 @@ public class DataWordDiffblueTest {
    * <p>Method under test: {@link DataWord#shortHex(byte[])}
    */
   @Test
-  @Category(MaintainedByDiffblue.class)
+  @Category(ContributionFromDiffblue.class)
+  @ManagedByDiffblue
   @MethodsUnderTest({"String DataWord.shortHex(byte[])"})
   public void testShortHexWithByte_whenArrayOfByteWithSevenAndX_thenReturn0x758415808584158() {
     // Arrange, Act and Assert
@@ -6329,7 +6655,8 @@ public class DataWordDiffblueTest {
    * <p>Method under test: {@link DataWord#shortHex(byte[])}
    */
   @Test
-  @Category(MaintainedByDiffblue.class)
+  @Category(ContributionFromDiffblue.class)
+  @ManagedByDiffblue
   @MethodsUnderTest({"String DataWord.shortHex(byte[])"})
   public void testShortHexWithByte_whenArrayOfByteWithSevenAndX_thenReturn0x758415841004158() {
     // Arrange, Act and Assert
@@ -6348,7 +6675,8 @@ public class DataWordDiffblueTest {
    * <p>Method under test: {@link DataWord#shortHex(byte[])}
    */
   @Test
-  @Category(MaintainedByDiffblue.class)
+  @Category(ContributionFromDiffblue.class)
+  @ManagedByDiffblue
   @MethodsUnderTest({"String DataWord.shortHex(byte[])"})
   public void testShortHexWithByte_whenArrayOfByteWithSevenAndX_thenReturn0x758415841074158() {
     // Arrange, Act and Assert
@@ -6367,7 +6695,8 @@ public class DataWordDiffblueTest {
    * <p>Method under test: {@link DataWord#shortHex(byte[])}
    */
   @Test
-  @Category(MaintainedByDiffblue.class)
+  @Category(ContributionFromDiffblue.class)
+  @ManagedByDiffblue
   @MethodsUnderTest({"String DataWord.shortHex(byte[])"})
   public void testShortHexWithByte_whenArrayOfByteWithSevenAndX_thenReturn0x758415841084158() {
     // Arrange, Act and Assert
@@ -6386,7 +6715,8 @@ public class DataWordDiffblueTest {
    * <p>Method under test: {@link DataWord#shortHex(byte[])}
    */
   @Test
-  @Category(MaintainedByDiffblue.class)
+  @Category(ContributionFromDiffblue.class)
+  @ManagedByDiffblue
   @MethodsUnderTest({"String DataWord.shortHex(byte[])"})
   public void testShortHexWithByte_whenArrayOfByteWithSevenAndX_thenReturn0x758415841414158() {
     // Arrange, Act and Assert
@@ -6405,7 +6735,8 @@ public class DataWordDiffblueTest {
    * <p>Method under test: {@link DataWord#shortHex(byte[])}
    */
   @Test
-  @Category(MaintainedByDiffblue.class)
+  @Category(ContributionFromDiffblue.class)
+  @ManagedByDiffblue
   @MethodsUnderTest({"String DataWord.shortHex(byte[])"})
   public void testShortHexWithByte_whenArrayOfByteWithSevenAndX_thenReturn0x758415841580058() {
     // Arrange, Act and Assert
@@ -6424,7 +6755,8 @@ public class DataWordDiffblueTest {
    * <p>Method under test: {@link DataWord#shortHex(byte[])}
    */
   @Test
-  @Category(MaintainedByDiffblue.class)
+  @Category(ContributionFromDiffblue.class)
+  @ManagedByDiffblue
   @MethodsUnderTest({"String DataWord.shortHex(byte[])"})
   public void testShortHexWithByte_whenArrayOfByteWithSevenAndX_thenReturn0x758415841580758() {
     // Arrange, Act and Assert
@@ -6443,7 +6775,8 @@ public class DataWordDiffblueTest {
    * <p>Method under test: {@link DataWord#shortHex(byte[])}
    */
   @Test
-  @Category(MaintainedByDiffblue.class)
+  @Category(ContributionFromDiffblue.class)
+  @ManagedByDiffblue
   @MethodsUnderTest({"String DataWord.shortHex(byte[])"})
   public void testShortHexWithByte_whenArrayOfByteWithSevenAndX_thenReturn0x758415841580858() {
     // Arrange, Act and Assert
@@ -6462,7 +6795,8 @@ public class DataWordDiffblueTest {
    * <p>Method under test: {@link DataWord#shortHex(byte[])}
    */
   @Test
-  @Category(MaintainedByDiffblue.class)
+  @Category(ContributionFromDiffblue.class)
+  @ManagedByDiffblue
   @MethodsUnderTest({"String DataWord.shortHex(byte[])"})
   public void testShortHexWithByte_whenArrayOfByteWithSevenAndX_thenReturn0x758415841584100() {
     // Arrange, Act and Assert
@@ -6481,7 +6815,8 @@ public class DataWordDiffblueTest {
    * <p>Method under test: {@link DataWord#shortHex(byte[])}
    */
   @Test
-  @Category(MaintainedByDiffblue.class)
+  @Category(ContributionFromDiffblue.class)
+  @ManagedByDiffblue
   @MethodsUnderTest({"String DataWord.shortHex(byte[])"})
   public void testShortHexWithByte_whenArrayOfByteWithSevenAndX_thenReturn0x758415841584107() {
     // Arrange, Act and Assert
@@ -6500,7 +6835,8 @@ public class DataWordDiffblueTest {
    * <p>Method under test: {@link DataWord#shortHex(byte[])}
    */
   @Test
-  @Category(MaintainedByDiffblue.class)
+  @Category(ContributionFromDiffblue.class)
+  @ManagedByDiffblue
   @MethodsUnderTest({"String DataWord.shortHex(byte[])"})
   public void testShortHexWithByte_whenArrayOfByteWithSevenAndX_thenReturn0x758415841584108() {
     // Arrange, Act and Assert
@@ -6519,7 +6855,8 @@ public class DataWordDiffblueTest {
    * <p>Method under test: {@link DataWord#shortHex(byte[])}
    */
   @Test
-  @Category(MaintainedByDiffblue.class)
+  @Category(ContributionFromDiffblue.class)
+  @ManagedByDiffblue
   @MethodsUnderTest({"String DataWord.shortHex(byte[])"})
   public void testShortHexWithByte_whenArrayOfByteWithSevenAndX_thenReturn0x758415841584141() {
     // Arrange, Act and Assert
@@ -6538,7 +6875,8 @@ public class DataWordDiffblueTest {
    * <p>Method under test: {@link DataWord#shortHex(byte[])}
    */
   @Test
-  @Category(MaintainedByDiffblue.class)
+  @Category(ContributionFromDiffblue.class)
+  @ManagedByDiffblue
   @MethodsUnderTest({"String DataWord.shortHex(byte[])"})
   public void testShortHexWithByte_whenArrayOfByteWithSevenAndX_thenReturn0x758415841584158() {
     // Arrange, Act and Assert
@@ -6557,7 +6895,8 @@ public class DataWordDiffblueTest {
    * <p>Method under test: {@link DataWord#shortHex(byte[])}
    */
   @Test
-  @Category(MaintainedByDiffblue.class)
+  @Category(ContributionFromDiffblue.class)
+  @ManagedByDiffblue
   @MethodsUnderTest({"String DataWord.shortHex(byte[])"})
   public void testShortHexWithByte_whenArrayOfByteWithSevenAndX_thenReturn0x758415841585858() {
     // Arrange, Act and Assert
@@ -6576,7 +6915,8 @@ public class DataWordDiffblueTest {
    * <p>Method under test: {@link DataWord#shortHex(byte[])}
    */
   @Test
-  @Category(MaintainedByDiffblue.class)
+  @Category(ContributionFromDiffblue.class)
+  @ManagedByDiffblue
   @MethodsUnderTest({"String DataWord.shortHex(byte[])"})
   public void testShortHexWithByte_whenArrayOfByteWithSevenAndX_thenReturn0x758415858584158() {
     // Arrange, Act and Assert
@@ -6595,7 +6935,8 @@ public class DataWordDiffblueTest {
    * <p>Method under test: {@link DataWord#shortHex(byte[])}
    */
   @Test
-  @Category(MaintainedByDiffblue.class)
+  @Category(ContributionFromDiffblue.class)
+  @ManagedByDiffblue
   @MethodsUnderTest({"String DataWord.shortHex(byte[])"})
   public void testShortHexWithByte_whenArrayOfByteWithSevenAndX_thenReturn0x758585841584158() {
     // Arrange, Act and Assert
@@ -6614,7 +6955,8 @@ public class DataWordDiffblueTest {
    * <p>Method under test: {@link DataWord#shortHex(byte[])}
    */
   @Test
-  @Category(MaintainedByDiffblue.class)
+  @Category(ContributionFromDiffblue.class)
+  @ManagedByDiffblue
   @MethodsUnderTest({"String DataWord.shortHex(byte[])"})
   public void testShortHexWithByte_whenArrayOfByteWithSevenAndZero_thenReturn0x700415841584158() {
     // Arrange, Act and Assert
@@ -6633,7 +6975,8 @@ public class DataWordDiffblueTest {
    * <p>Method under test: {@link DataWord#shortHex(byte[])}
    */
   @Test
-  @Category(MaintainedByDiffblue.class)
+  @Category(ContributionFromDiffblue.class)
+  @ManagedByDiffblue
   @MethodsUnderTest({"String DataWord.shortHex(byte[])"})
   public void testShortHexWithByte_whenArrayOfByteWithZeroAndOne_thenReturn0x1415841584158() {
     // Arrange, Act and Assert
@@ -6652,7 +6995,8 @@ public class DataWordDiffblueTest {
    * <p>Method under test: {@link DataWord#shortHex(byte[])}
    */
   @Test
-  @Category(MaintainedByDiffblue.class)
+  @Category(ContributionFromDiffblue.class)
+  @ManagedByDiffblue
   @MethodsUnderTest({"String DataWord.shortHex(byte[])"})
   public void testShortHexWithByte_whenArrayOfByteWithZeroAndSeven_thenReturn0x7415841584158() {
     // Arrange, Act and Assert
@@ -6671,7 +7015,8 @@ public class DataWordDiffblueTest {
    * <p>Method under test: {@link DataWord#shortHex(byte[])}
    */
   @Test
-  @Category(MaintainedByDiffblue.class)
+  @Category(ContributionFromDiffblue.class)
+  @ManagedByDiffblue
   @MethodsUnderTest({"String DataWord.shortHex(byte[])"})
   public void testShortHexWithByte_whenArrayOfByteWithZeroAndX_thenReturn0x58415841584158() {
     // Arrange, Act and Assert
@@ -6690,7 +7035,8 @@ public class DataWordDiffblueTest {
    * <p>Method under test: {@link DataWord#shortHex(byte[])}
    */
   @Test
-  @Category(MaintainedByDiffblue.class)
+  @Category(ContributionFromDiffblue.class)
+  @ManagedByDiffblue
   @MethodsUnderTest({"String DataWord.shortHex(byte[])"})
   public void testShortHexWithByte_whenArrayOfByteWithZeroAndZero_thenReturn0x0() {
     // Arrange, Act and Assert
@@ -6710,7 +7056,8 @@ public class DataWordDiffblueTest {
    * <p>Method under test: {@link DataWord#shortHex(byte[])}
    */
   @Test
-  @Category(MaintainedByDiffblue.class)
+  @Category(ContributionFromDiffblue.class)
+  @ManagedByDiffblue
   @MethodsUnderTest({"String DataWord.shortHex(byte[])"})
   public void testShortHexWithByte_whenAxBackspaceXaxBytesIsUtf8_thenReturn0x808415808584158()
       throws UnsupportedEncodingException {
@@ -6729,7 +7076,8 @@ public class DataWordDiffblueTest {
    * <p>Method under test: {@link DataWord#shortHex(byte[])}
    */
   @Test
-  @Category(MaintainedByDiffblue.class)
+  @Category(ContributionFromDiffblue.class)
+  @ManagedByDiffblue
   @MethodsUnderTest({"String DataWord.shortHex(byte[])"})
   public void testShortHexWithByte_whenAxaBackspaceAxBytesIsUtf8_thenReturn0x808415841084158()
       throws UnsupportedEncodingException {
@@ -6748,7 +7096,8 @@ public class DataWordDiffblueTest {
    * <p>Method under test: {@link DataWord#shortHex(byte[])}
    */
   @Test
-  @Category(MaintainedByDiffblue.class)
+  @Category(ContributionFromDiffblue.class)
+  @ManagedByDiffblue
   @MethodsUnderTest({"String DataWord.shortHex(byte[])"})
   public void testShortHexWithByte_whenAxaaaxBytesIsUtf8_thenReturn0x808415841414158()
       throws UnsupportedEncodingException {
@@ -6767,7 +7116,8 @@ public class DataWordDiffblueTest {
    * <p>Method under test: {@link DataWord#shortHex(byte[])}
    */
   @Test
-  @Category(MaintainedByDiffblue.class)
+  @Category(ContributionFromDiffblue.class)
+  @ManagedByDiffblue
   @MethodsUnderTest({"String DataWord.shortHex(byte[])"})
   public void testShortHexWithByte_whenAxaxBackspaceXBytesIsUtf8_thenReturn0x808415841580858()
       throws UnsupportedEncodingException {
@@ -6786,7 +7136,8 @@ public class DataWordDiffblueTest {
    * <p>Method under test: {@link DataWord#shortHex(byte[])}
    */
   @Test
-  @Category(MaintainedByDiffblue.class)
+  @Category(ContributionFromDiffblue.class)
+  @ManagedByDiffblue
   @MethodsUnderTest({"String DataWord.shortHex(byte[])"})
   public void testShortHexWithByte_whenAxaxaBytesIsUtf8_thenReturn0x808415841584108()
       throws UnsupportedEncodingException {
@@ -6805,7 +7156,8 @@ public class DataWordDiffblueTest {
    * <p>Method under test: {@link DataWord#shortHex(byte[])}
    */
   @Test
-  @Category(MaintainedByDiffblue.class)
+  @Category(ContributionFromDiffblue.class)
+  @ManagedByDiffblue
   @MethodsUnderTest({"String DataWord.shortHex(byte[])"})
   public void testShortHexWithByte_whenAxaxaaBytesIsUtf8_thenReturn0x808415841584141()
       throws UnsupportedEncodingException {
@@ -6824,7 +7176,8 @@ public class DataWordDiffblueTest {
    * <p>Method under test: {@link DataWord#shortHex(byte[])}
    */
   @Test
-  @Category(MaintainedByDiffblue.class)
+  @Category(ContributionFromDiffblue.class)
+  @ManagedByDiffblue
   @MethodsUnderTest({"String DataWord.shortHex(byte[])"})
   public void testShortHexWithByte_whenAxaxaxBytesIsUtf8_thenReturn0x808415841584158()
       throws UnsupportedEncodingException {
@@ -6843,7 +7196,8 @@ public class DataWordDiffblueTest {
    * <p>Method under test: {@link DataWord#shortHex(byte[])}
    */
   @Test
-  @Category(MaintainedByDiffblue.class)
+  @Category(ContributionFromDiffblue.class)
+  @ManagedByDiffblue
   @MethodsUnderTest({"String DataWord.shortHex(byte[])"})
   public void testShortHexWithByte_whenAxaxaxaxBytesIsUtf8_thenReturn0x4158415841584158()
       throws UnsupportedEncodingException {
@@ -6862,7 +7216,8 @@ public class DataWordDiffblueTest {
    * <p>Method under test: {@link DataWord#shortHex(byte[])}
    */
   @Test
-  @Category(MaintainedByDiffblue.class)
+  @Category(ContributionFromDiffblue.class)
+  @ManagedByDiffblue
   @MethodsUnderTest({"String DataWord.shortHex(byte[])"})
   public void testShortHexWithByte_whenAxaxxxBytesIsUtf8_thenReturn0x808415841585858()
       throws UnsupportedEncodingException {
@@ -6881,7 +7236,8 @@ public class DataWordDiffblueTest {
    * <p>Method under test: {@link DataWord#shortHex(byte[])}
    */
   @Test
-  @Category(MaintainedByDiffblue.class)
+  @Category(ContributionFromDiffblue.class)
+  @ManagedByDiffblue
   @MethodsUnderTest({"String DataWord.shortHex(byte[])"})
   public void testShortHexWithByte_whenAxxaxaxBytesIsUtf8_thenReturn0x841585841584158()
       throws UnsupportedEncodingException {
@@ -6900,7 +7256,8 @@ public class DataWordDiffblueTest {
    * <p>Method under test: {@link DataWord#shortHex(byte[])}
    */
   @Test
-  @Category(MaintainedByDiffblue.class)
+  @Category(ContributionFromDiffblue.class)
+  @ManagedByDiffblue
   @MethodsUnderTest({"String DataWord.shortHex(byte[])"})
   public void testShortHexWithByte_whenAxxxaxBytesIsUtf8_thenReturn0x808415858584158()
       throws UnsupportedEncodingException {
@@ -6919,7 +7276,8 @@ public class DataWordDiffblueTest {
    * <p>Method under test: {@link DataWord#shortHex(byte[])}
    */
   @Test
-  @Category(MaintainedByDiffblue.class)
+  @Category(ContributionFromDiffblue.class)
+  @ManagedByDiffblue
   @MethodsUnderTest({"String DataWord.shortHex(byte[])"})
   public void testShortHexWithByte_whenBackspace_thenReturn0x858FF0841584158() {
     // Arrange, Act and Assert
@@ -6939,7 +7297,8 @@ public class DataWordDiffblueTest {
    * <p>Method under test: {@link DataWord#shortHex(byte[])}
    */
   @Test
-  @Category(MaintainedByDiffblue.class)
+  @Category(ContributionFromDiffblue.class)
+  @ManagedByDiffblue
   @MethodsUnderTest({"String DataWord.shortHex(byte[])"})
   public void testShortHexWithByte_whenBackspace_thenReturn0x858FF5808584158() {
     // Arrange, Act and Assert
@@ -6959,7 +7318,8 @@ public class DataWordDiffblueTest {
    * <p>Method under test: {@link DataWord#shortHex(byte[])}
    */
   @Test
-  @Category(MaintainedByDiffblue.class)
+  @Category(ContributionFromDiffblue.class)
+  @ManagedByDiffblue
   @MethodsUnderTest({"String DataWord.shortHex(byte[])"})
   public void testShortHexWithByte_whenBackspace_thenReturn0x858FF5841084158() {
     // Arrange, Act and Assert
@@ -6979,7 +7339,8 @@ public class DataWordDiffblueTest {
    * <p>Method under test: {@link DataWord#shortHex(byte[])}
    */
   @Test
-  @Category(MaintainedByDiffblue.class)
+  @Category(ContributionFromDiffblue.class)
+  @ManagedByDiffblue
   @MethodsUnderTest({"String DataWord.shortHex(byte[])"})
   public void testShortHexWithByte_whenBackspace_thenReturn0x858FF5841580858() {
     // Arrange, Act and Assert
@@ -6999,7 +7360,8 @@ public class DataWordDiffblueTest {
    * <p>Method under test: {@link DataWord#shortHex(byte[])}
    */
   @Test
-  @Category(MaintainedByDiffblue.class)
+  @Category(ContributionFromDiffblue.class)
+  @ManagedByDiffblue
   @MethodsUnderTest({"String DataWord.shortHex(byte[])"})
   public void testShortHexWithByte_whenBackspace_thenReturn0x858FF5841584108() {
     // Arrange, Act and Assert
@@ -7019,7 +7381,8 @@ public class DataWordDiffblueTest {
    * <p>Method under test: {@link DataWord#shortHex(byte[])}
    */
   @Test
-  @Category(MaintainedByDiffblue.class)
+  @Category(ContributionFromDiffblue.class)
+  @ManagedByDiffblue
   @MethodsUnderTest({"String DataWord.shortHex(byte[])"})
   public void testShortHexWithByte_whenBackspace_thenReturn0x85808FF41584158() {
     // Arrange, Act and Assert
@@ -7039,7 +7402,8 @@ public class DataWordDiffblueTest {
    * <p>Method under test: {@link DataWord#shortHex(byte[])}
    */
   @Test
-  @Category(MaintainedByDiffblue.class)
+  @Category(ContributionFromDiffblue.class)
+  @ManagedByDiffblue
   @MethodsUnderTest({"String DataWord.shortHex(byte[])"})
   public void testShortHexWithByte_whenBackspace_thenReturn0x858087F41584158() {
     // Arrange, Act and Assert
@@ -7059,7 +7423,8 @@ public class DataWordDiffblueTest {
    * <p>Method under test: {@link DataWord#shortHex(byte[])}
    */
   @Test
-  @Category(MaintainedByDiffblue.class)
+  @Category(ContributionFromDiffblue.class)
+  @ManagedByDiffblue
   @MethodsUnderTest({"String DataWord.shortHex(byte[])"})
   public void testShortHexWithByte_whenBackspace_thenReturn0x8580858FF584158() {
     // Arrange, Act and Assert
@@ -7079,7 +7444,8 @@ public class DataWordDiffblueTest {
    * <p>Method under test: {@link DataWord#shortHex(byte[])}
    */
   @Test
-  @Category(MaintainedByDiffblue.class)
+  @Category(ContributionFromDiffblue.class)
+  @ManagedByDiffblue
   @MethodsUnderTest({"String DataWord.shortHex(byte[])"})
   public void testShortHexWithByte_whenBackspace_thenReturn0x85808587F584158() {
     // Arrange, Act and Assert
@@ -7099,7 +7465,8 @@ public class DataWordDiffblueTest {
    * <p>Method under test: {@link DataWord#shortHex(byte[])}
    */
   @Test
-  @Category(MaintainedByDiffblue.class)
+  @Category(ContributionFromDiffblue.class)
+  @ManagedByDiffblue
   @MethodsUnderTest({"String DataWord.shortHex(byte[])"})
   public void testShortHexWithByte_whenBackspace_thenReturn0x858085841FF4158() {
     // Arrange, Act and Assert
@@ -7119,7 +7486,8 @@ public class DataWordDiffblueTest {
    * <p>Method under test: {@link DataWord#shortHex(byte[])}
    */
   @Test
-  @Category(MaintainedByDiffblue.class)
+  @Category(ContributionFromDiffblue.class)
+  @ManagedByDiffblue
   @MethodsUnderTest({"String DataWord.shortHex(byte[])"})
   public void testShortHexWithByte_whenBackspace_thenReturn0x8580858417F4158() {
     // Arrange, Act and Assert
@@ -7139,7 +7507,8 @@ public class DataWordDiffblueTest {
    * <p>Method under test: {@link DataWord#shortHex(byte[])}
    */
   @Test
-  @Category(MaintainedByDiffblue.class)
+  @Category(ContributionFromDiffblue.class)
+  @ManagedByDiffblue
   @MethodsUnderTest({"String DataWord.shortHex(byte[])"})
   public void testShortHexWithByte_whenBackspace_thenReturn0x85808584158FF58() {
     // Arrange, Act and Assert
@@ -7159,7 +7528,8 @@ public class DataWordDiffblueTest {
    * <p>Method under test: {@link DataWord#shortHex(byte[])}
    */
   @Test
-  @Category(MaintainedByDiffblue.class)
+  @Category(ContributionFromDiffblue.class)
+  @ManagedByDiffblue
   @MethodsUnderTest({"String DataWord.shortHex(byte[])"})
   public void testShortHexWithByte_whenBackspace_thenReturn0x858085841587F58() {
     // Arrange, Act and Assert
@@ -7179,7 +7549,8 @@ public class DataWordDiffblueTest {
    * <p>Method under test: {@link DataWord#shortHex(byte[])}
    */
   @Test
-  @Category(MaintainedByDiffblue.class)
+  @Category(ContributionFromDiffblue.class)
+  @ManagedByDiffblue
   @MethodsUnderTest({"String DataWord.shortHex(byte[])"})
   public void testShortHexWithByte_whenBackspace_thenReturn0x8580858415841FF() {
     // Arrange, Act and Assert
@@ -7199,7 +7570,8 @@ public class DataWordDiffblueTest {
    * <p>Method under test: {@link DataWord#shortHex(byte[])}
    */
   @Test
-  @Category(MaintainedByDiffblue.class)
+  @Category(ContributionFromDiffblue.class)
+  @ManagedByDiffblue
   @MethodsUnderTest({"String DataWord.shortHex(byte[])"})
   public void testShortHexWithByte_whenBackspace_thenReturn0x85808584158417F() {
     // Arrange, Act and Assert
@@ -7219,7 +7591,8 @@ public class DataWordDiffblueTest {
    * <p>Method under test: {@link DataWord#shortHex(byte[])}
    */
   @Test
-  @Category(MaintainedByDiffblue.class)
+  @Category(ContributionFromDiffblue.class)
+  @ManagedByDiffblue
   @MethodsUnderTest({"String DataWord.shortHex(byte[])"})
   public void testShortHexWithByte_whenBackspace_thenReturn0x858080041584158() {
     // Arrange, Act and Assert
@@ -7239,7 +7612,8 @@ public class DataWordDiffblueTest {
    * <p>Method under test: {@link DataWord#shortHex(byte[])}
    */
   @Test
-  @Category(MaintainedByDiffblue.class)
+  @Category(ContributionFromDiffblue.class)
+  @ManagedByDiffblue
   @MethodsUnderTest({"String DataWord.shortHex(byte[])"})
   public void testShortHexWithByte_whenBackspace_thenReturn0x858080741584158() {
     // Arrange, Act and Assert
@@ -7259,7 +7633,8 @@ public class DataWordDiffblueTest {
    * <p>Method under test: {@link DataWord#shortHex(byte[])}
    */
   @Test
-  @Category(MaintainedByDiffblue.class)
+  @Category(ContributionFromDiffblue.class)
+  @ManagedByDiffblue
   @MethodsUnderTest({"String DataWord.shortHex(byte[])"})
   public void testShortHexWithByte_whenBackspace_thenReturn0x858085800584158() {
     // Arrange, Act and Assert
@@ -7279,7 +7654,8 @@ public class DataWordDiffblueTest {
    * <p>Method under test: {@link DataWord#shortHex(byte[])}
    */
   @Test
-  @Category(MaintainedByDiffblue.class)
+  @Category(ContributionFromDiffblue.class)
+  @ManagedByDiffblue
   @MethodsUnderTest({"String DataWord.shortHex(byte[])"})
   public void testShortHexWithByte_whenBackspace_thenReturn0x858085807584158() {
     // Arrange, Act and Assert
@@ -7299,7 +7675,8 @@ public class DataWordDiffblueTest {
    * <p>Method under test: {@link DataWord#shortHex(byte[])}
    */
   @Test
-  @Category(MaintainedByDiffblue.class)
+  @Category(ContributionFromDiffblue.class)
+  @ManagedByDiffblue
   @MethodsUnderTest({"String DataWord.shortHex(byte[])"})
   public void testShortHexWithByte_whenBackspace_thenReturn0x858085841004158() {
     // Arrange, Act and Assert
@@ -7319,7 +7696,8 @@ public class DataWordDiffblueTest {
    * <p>Method under test: {@link DataWord#shortHex(byte[])}
    */
   @Test
-  @Category(MaintainedByDiffblue.class)
+  @Category(ContributionFromDiffblue.class)
+  @ManagedByDiffblue
   @MethodsUnderTest({"String DataWord.shortHex(byte[])"})
   public void testShortHexWithByte_whenBackspace_thenReturn0x858085841074158() {
     // Arrange, Act and Assert
@@ -7339,7 +7717,8 @@ public class DataWordDiffblueTest {
    * <p>Method under test: {@link DataWord#shortHex(byte[])}
    */
   @Test
-  @Category(MaintainedByDiffblue.class)
+  @Category(ContributionFromDiffblue.class)
+  @ManagedByDiffblue
   @MethodsUnderTest({"String DataWord.shortHex(byte[])"})
   public void testShortHexWithByte_whenBackspace_thenReturn0x858085841580058() {
     // Arrange, Act and Assert
@@ -7359,7 +7738,8 @@ public class DataWordDiffblueTest {
    * <p>Method under test: {@link DataWord#shortHex(byte[])}
    */
   @Test
-  @Category(MaintainedByDiffblue.class)
+  @Category(ContributionFromDiffblue.class)
+  @ManagedByDiffblue
   @MethodsUnderTest({"String DataWord.shortHex(byte[])"})
   public void testShortHexWithByte_whenBackspace_thenReturn0x858085841580758() {
     // Arrange, Act and Assert
@@ -7379,7 +7759,8 @@ public class DataWordDiffblueTest {
    * <p>Method under test: {@link DataWord#shortHex(byte[])}
    */
   @Test
-  @Category(MaintainedByDiffblue.class)
+  @Category(ContributionFromDiffblue.class)
+  @ManagedByDiffblue
   @MethodsUnderTest({"String DataWord.shortHex(byte[])"})
   public void testShortHexWithByte_whenBackspace_thenReturn0x858085841584100() {
     // Arrange, Act and Assert
@@ -7399,7 +7780,8 @@ public class DataWordDiffblueTest {
    * <p>Method under test: {@link DataWord#shortHex(byte[])}
    */
   @Test
-  @Category(MaintainedByDiffblue.class)
+  @Category(ContributionFromDiffblue.class)
+  @ManagedByDiffblue
   @MethodsUnderTest({"String DataWord.shortHex(byte[])"})
   public void testShortHexWithByte_whenBackspace_thenReturn0x858085841584107() {
     // Arrange, Act and Assert
@@ -7419,7 +7801,8 @@ public class DataWordDiffblueTest {
    * <p>Method under test: {@link DataWord#shortHex(byte[])}
    */
   @Test
-  @Category(MaintainedByDiffblue.class)
+  @Category(ContributionFromDiffblue.class)
+  @ManagedByDiffblue
   @MethodsUnderTest({"String DataWord.shortHex(byte[])"})
   public void testShortHexWithByte_whenXBackspaceAaxaxBytesIsUtf8_thenReturn0x858084141584158()
       throws UnsupportedEncodingException {
@@ -7438,7 +7821,8 @@ public class DataWordDiffblueTest {
    * <p>Method under test: {@link DataWord#shortHex(byte[])}
    */
   @Test
-  @Category(MaintainedByDiffblue.class)
+  @Category(ContributionFromDiffblue.class)
+  @ManagedByDiffblue
   @MethodsUnderTest({"String DataWord.shortHex(byte[])"})
   public void testShortHexWithByte_whenXBackspaceXaaaxBytesIsUtf8_thenReturn0x858085841414158()
       throws UnsupportedEncodingException {
@@ -7457,7 +7841,8 @@ public class DataWordDiffblueTest {
    * <p>Method under test: {@link DataWord#shortHex(byte[])}
    */
   @Test
-  @Category(MaintainedByDiffblue.class)
+  @Category(ContributionFromDiffblue.class)
+  @ManagedByDiffblue
   @MethodsUnderTest({"String DataWord.shortHex(byte[])"})
   public void testShortHexWithByte_whenXBackspaceXaxaBytesIsUtf8_thenReturn0x858085841584108()
       throws UnsupportedEncodingException {
@@ -7476,7 +7861,8 @@ public class DataWordDiffblueTest {
    * <p>Method under test: {@link DataWord#shortHex(byte[])}
    */
   @Test
-  @Category(MaintainedByDiffblue.class)
+  @Category(ContributionFromDiffblue.class)
+  @ManagedByDiffblue
   @MethodsUnderTest({"String DataWord.shortHex(byte[])"})
   public void testShortHexWithByte_whenXBackspaceXaxaaBytesIsUtf8_thenReturn0x858085841584141()
       throws UnsupportedEncodingException {
@@ -7495,7 +7881,8 @@ public class DataWordDiffblueTest {
    * <p>Method under test: {@link DataWord#shortHex(byte[])}
    */
   @Test
-  @Category(MaintainedByDiffblue.class)
+  @Category(ContributionFromDiffblue.class)
+  @ManagedByDiffblue
   @MethodsUnderTest({"String DataWord.shortHex(byte[])"})
   public void testShortHexWithByte_whenXBackspaceXaxaxBytesIsUtf8_thenReturn0x858085841584158()
       throws UnsupportedEncodingException {
@@ -7514,7 +7901,8 @@ public class DataWordDiffblueTest {
    * <p>Method under test: {@link DataWord#shortHex(byte[])}
    */
   @Test
-  @Category(MaintainedByDiffblue.class)
+  @Category(ContributionFromDiffblue.class)
+  @ManagedByDiffblue
   @MethodsUnderTest({"String DataWord.shortHex(byte[])"})
   public void testShortHexWithByte_whenXBackspaceXaxxxBytesIsUtf8_thenReturn0x858085841585858()
       throws UnsupportedEncodingException {
@@ -7533,7 +7921,8 @@ public class DataWordDiffblueTest {
    * <p>Method under test: {@link DataWord#shortHex(byte[])}
    */
   @Test
-  @Category(MaintainedByDiffblue.class)
+  @Category(ContributionFromDiffblue.class)
+  @ManagedByDiffblue
   @MethodsUnderTest({"String DataWord.shortHex(byte[])"})
   public void testShortHexWithByte_whenXBackspaceXxxaxBytesIsUtf8_thenReturn0x858085858584158()
       throws UnsupportedEncodingException {
@@ -7552,7 +7941,8 @@ public class DataWordDiffblueTest {
    * <p>Method under test: {@link DataWord#shortHex(byte[])}
    */
   @Test
-  @Category(MaintainedByDiffblue.class)
+  @Category(ContributionFromDiffblue.class)
+  @ManagedByDiffblue
   @MethodsUnderTest({"String DataWord.shortHex(byte[])"})
   public void testShortHexWithByte_whenXaBackspaceAxaxBytesIsUtf8_thenReturn0x858410841584158()
       throws UnsupportedEncodingException {
@@ -7571,7 +7961,8 @@ public class DataWordDiffblueTest {
    * <p>Method under test: {@link DataWord#shortHex(byte[])}
    */
   @Test
-  @Category(MaintainedByDiffblue.class)
+  @Category(ContributionFromDiffblue.class)
+  @ManagedByDiffblue
   @MethodsUnderTest({"String DataWord.shortHex(byte[])"})
   public void testShortHexWithByte_whenXaaaxaxBytesIsUtf8_thenReturn0x858414141584158()
       throws UnsupportedEncodingException {
@@ -7590,7 +7981,8 @@ public class DataWordDiffblueTest {
    * <p>Method under test: {@link DataWord#shortHex(byte[])}
    */
   @Test
-  @Category(MaintainedByDiffblue.class)
+  @Category(ContributionFromDiffblue.class)
+  @ManagedByDiffblue
   @MethodsUnderTest({"String DataWord.shortHex(byte[])"})
   public void testShortHexWithByte_whenXaxBackspaceXaxBytesIsUtf8_thenReturn0x858415808584158()
       throws UnsupportedEncodingException {
@@ -7609,7 +8001,8 @@ public class DataWordDiffblueTest {
    * <p>Method under test: {@link DataWord#shortHex(byte[])}
    */
   @Test
-  @Category(MaintainedByDiffblue.class)
+  @Category(ContributionFromDiffblue.class)
+  @ManagedByDiffblue
   @MethodsUnderTest({"String DataWord.shortHex(byte[])"})
   public void testShortHexWithByte_whenXaxaBackspaceAxBytesIsUtf8_thenReturn0x858415841084158()
       throws UnsupportedEncodingException {
@@ -7628,7 +8021,8 @@ public class DataWordDiffblueTest {
    * <p>Method under test: {@link DataWord#shortHex(byte[])}
    */
   @Test
-  @Category(MaintainedByDiffblue.class)
+  @Category(ContributionFromDiffblue.class)
+  @ManagedByDiffblue
   @MethodsUnderTest({"String DataWord.shortHex(byte[])"})
   public void testShortHexWithByte_whenXaxaaaxBytesIsUtf8_thenReturn0x858415841414158()
       throws UnsupportedEncodingException {
@@ -7647,7 +8041,8 @@ public class DataWordDiffblueTest {
    * <p>Method under test: {@link DataWord#shortHex(byte[])}
    */
   @Test
-  @Category(MaintainedByDiffblue.class)
+  @Category(ContributionFromDiffblue.class)
+  @ManagedByDiffblue
   @MethodsUnderTest({"String DataWord.shortHex(byte[])"})
   public void testShortHexWithByte_whenXaxaxBackspaceXBytesIsUtf8_thenReturn0x858415841580858()
       throws UnsupportedEncodingException {
@@ -7666,7 +8061,8 @@ public class DataWordDiffblueTest {
    * <p>Method under test: {@link DataWord#shortHex(byte[])}
    */
   @Test
-  @Category(MaintainedByDiffblue.class)
+  @Category(ContributionFromDiffblue.class)
+  @ManagedByDiffblue
   @MethodsUnderTest({"String DataWord.shortHex(byte[])"})
   public void testShortHexWithByte_whenXaxaxBytesIsUtf8_thenReturn0x808085841584158()
       throws UnsupportedEncodingException {
@@ -7685,7 +8081,8 @@ public class DataWordDiffblueTest {
    * <p>Method under test: {@link DataWord#shortHex(byte[])}
    */
   @Test
-  @Category(MaintainedByDiffblue.class)
+  @Category(ContributionFromDiffblue.class)
+  @ManagedByDiffblue
   @MethodsUnderTest({"String DataWord.shortHex(byte[])"})
   public void testShortHexWithByte_whenXaxaxaBytesIsUtf8_thenReturn0x858415841584108()
       throws UnsupportedEncodingException {
@@ -7704,7 +8101,8 @@ public class DataWordDiffblueTest {
    * <p>Method under test: {@link DataWord#shortHex(byte[])}
    */
   @Test
-  @Category(MaintainedByDiffblue.class)
+  @Category(ContributionFromDiffblue.class)
+  @ManagedByDiffblue
   @MethodsUnderTest({"String DataWord.shortHex(byte[])"})
   public void testShortHexWithByte_whenXaxaxaaBytesIsUtf8_thenReturn0x858415841584141()
       throws UnsupportedEncodingException {
@@ -7723,7 +8121,8 @@ public class DataWordDiffblueTest {
    * <p>Method under test: {@link DataWord#shortHex(byte[])}
    */
   @Test
-  @Category(MaintainedByDiffblue.class)
+  @Category(ContributionFromDiffblue.class)
+  @ManagedByDiffblue
   @MethodsUnderTest({"String DataWord.shortHex(byte[])"})
   public void testShortHexWithByte_whenXaxaxaxBytesIsUtf8_thenReturn0x858415841584158()
       throws UnsupportedEncodingException {
@@ -7742,7 +8141,8 @@ public class DataWordDiffblueTest {
    * <p>Method under test: {@link DataWord#shortHex(byte[])}
    */
   @Test
-  @Category(MaintainedByDiffblue.class)
+  @Category(ContributionFromDiffblue.class)
+  @ManagedByDiffblue
   @MethodsUnderTest({"String DataWord.shortHex(byte[])"})
   public void testShortHexWithByte_whenXaxaxxxBytesIsUtf8_thenReturn0x858415841585858()
       throws UnsupportedEncodingException {
@@ -7761,7 +8161,8 @@ public class DataWordDiffblueTest {
    * <p>Method under test: {@link DataWord#shortHex(byte[])}
    */
   @Test
-  @Category(MaintainedByDiffblue.class)
+  @Category(ContributionFromDiffblue.class)
+  @ManagedByDiffblue
   @MethodsUnderTest({"String DataWord.shortHex(byte[])"})
   public void testShortHexWithByte_whenXaxxxaxBytesIsUtf8_thenReturn0x858415858584158()
       throws UnsupportedEncodingException {
@@ -7780,7 +8181,8 @@ public class DataWordDiffblueTest {
    * <p>Method under test: {@link DataWord#shortHex(byte[])}
    */
   @Test
-  @Category(MaintainedByDiffblue.class)
+  @Category(ContributionFromDiffblue.class)
+  @ManagedByDiffblue
   @MethodsUnderTest({"String DataWord.shortHex(byte[])"})
   public void testShortHexWithByte_whenXxBackspaceAxaxBytesIsUtf8_thenReturn0x858580841584158()
       throws UnsupportedEncodingException {
@@ -7799,7 +8201,8 @@ public class DataWordDiffblueTest {
    * <p>Method under test: {@link DataWord#shortHex(byte[])}
    */
   @Test
-  @Category(MaintainedByDiffblue.class)
+  @Category(ContributionFromDiffblue.class)
+  @ManagedByDiffblue
   @MethodsUnderTest({"String DataWord.shortHex(byte[])"})
   public void testShortHexWithByte_whenXxaaxaxBytesIsUtf8_thenReturn0x858584141584158()
       throws UnsupportedEncodingException {
@@ -7818,7 +8221,8 @@ public class DataWordDiffblueTest {
    * <p>Method under test: {@link DataWord#shortHex(byte[])}
    */
   @Test
-  @Category(MaintainedByDiffblue.class)
+  @Category(ContributionFromDiffblue.class)
+  @ManagedByDiffblue
   @MethodsUnderTest({"String DataWord.shortHex(byte[])"})
   public void testShortHexWithByte_whenXxaxaxBytesIsUtf8_thenReturn0x808585841584158()
       throws UnsupportedEncodingException {
@@ -7837,7 +8241,8 @@ public class DataWordDiffblueTest {
    * <p>Method under test: {@link DataWord#shortHex(byte[])}
    */
   @Test
-  @Category(MaintainedByDiffblue.class)
+  @Category(ContributionFromDiffblue.class)
+  @ManagedByDiffblue
   @MethodsUnderTest({"String DataWord.shortHex(byte[])"})
   public void testShortHexWithByte_whenXxxBackspaceXaxBytesIsUtf8_thenReturn0x858585808584158()
       throws UnsupportedEncodingException {
@@ -7856,7 +8261,8 @@ public class DataWordDiffblueTest {
    * <p>Method under test: {@link DataWord#shortHex(byte[])}
    */
   @Test
-  @Category(MaintainedByDiffblue.class)
+  @Category(ContributionFromDiffblue.class)
+  @ManagedByDiffblue
   @MethodsUnderTest({"String DataWord.shortHex(byte[])"})
   public void testShortHexWithByte_whenXxxaBackspaceAxBytesIsUtf8_thenReturn0x858585841084158()
       throws UnsupportedEncodingException {
@@ -7875,7 +8281,8 @@ public class DataWordDiffblueTest {
    * <p>Method under test: {@link DataWord#shortHex(byte[])}
    */
   @Test
-  @Category(MaintainedByDiffblue.class)
+  @Category(ContributionFromDiffblue.class)
+  @ManagedByDiffblue
   @MethodsUnderTest({"String DataWord.shortHex(byte[])"})
   public void testShortHexWithByte_whenXxxaaaxBytesIsUtf8_thenReturn0x858585841414158()
       throws UnsupportedEncodingException {
@@ -7894,7 +8301,8 @@ public class DataWordDiffblueTest {
    * <p>Method under test: {@link DataWord#shortHex(byte[])}
    */
   @Test
-  @Category(MaintainedByDiffblue.class)
+  @Category(ContributionFromDiffblue.class)
+  @ManagedByDiffblue
   @MethodsUnderTest({"String DataWord.shortHex(byte[])"})
   public void testShortHexWithByte_whenXxxaxaxBytesIsUtf8_thenReturn0x858585841584158()
       throws UnsupportedEncodingException {
@@ -7913,7 +8321,8 @@ public class DataWordDiffblueTest {
    * <p>Method under test: {@link DataWord#shortHex(byte[])}
    */
   @Test
-  @Category(MaintainedByDiffblue.class)
+  @Category(ContributionFromDiffblue.class)
+  @ManagedByDiffblue
   @MethodsUnderTest({"String DataWord.shortHex(byte[])"})
   public void testShortHexWithByte_whenXxxxxaxBytesIsUtf8_thenReturn0x858585858584158()
       throws UnsupportedEncodingException {
@@ -7932,7 +8341,8 @@ public class DataWordDiffblueTest {
    * <p>Method under test: {@link DataWord#shortHex()}
    */
   @Test
-  @Category(MaintainedByDiffblue.class)
+  @Category(ContributionFromDiffblue.class)
+  @ManagedByDiffblue
   @MethodsUnderTest({"String DataWord.shortHex()"})
   public void testShortHex_givenDataWordWithNumIsAExpDataWordWithNumIsThree_thenReturn0x430C1() {
     // Arrange
@@ -7954,7 +8364,8 @@ public class DataWordDiffblueTest {
    * <p>Method under test: {@link DataWord#shortHex()}
    */
   @Test
-  @Category(MaintainedByDiffblue.class)
+  @Category(ContributionFromDiffblue.class)
+  @ManagedByDiffblue
   @MethodsUnderTest({"String DataWord.shortHex()"})
   public void testShortHex_givenDataWordWithNumIsAExpZero_thenReturn0x1() {
     // Arrange
@@ -7976,7 +8387,8 @@ public class DataWordDiffblueTest {
    * <p>Method under test: {@link DataWord#shortHex()}
    */
   @Test
-  @Category(MaintainedByDiffblue.class)
+  @Category(ContributionFromDiffblue.class)
+  @ManagedByDiffblue
   @MethodsUnderTest({"String DataWord.shortHex()"})
   public void testShortHex_givenDataWordWithNumIsA_thenReturn0x41() {
     // Arrange
@@ -7997,7 +8409,8 @@ public class DataWordDiffblueTest {
    * <p>Method under test: {@link DataWord#shortHex()}
    */
   @Test
-  @Category(MaintainedByDiffblue.class)
+  @Category(ContributionFromDiffblue.class)
+  @ManagedByDiffblue
   @MethodsUnderTest({"String DataWord.shortHex()"})
   public void testShortHex_givenDataWordWithNumIsBackspace_thenReturn0x8() {
     // Arrange
@@ -8018,7 +8431,8 @@ public class DataWordDiffblueTest {
    * <p>Method under test: {@link DataWord#shortHex()}
    */
   @Test
-  @Category(MaintainedByDiffblue.class)
+  @Category(ContributionFromDiffblue.class)
+  @ManagedByDiffblue
   @MethodsUnderTest({"String DataWord.shortHex()"})
   public void testShortHex_givenDataWordWithNumIsFive_thenReturn0x5() {
     // Arrange
@@ -8039,7 +8453,8 @@ public class DataWordDiffblueTest {
    * <p>Method under test: {@link DataWord#shortHex()}
    */
   @Test
-  @Category(MaintainedByDiffblue.class)
+  @Category(ContributionFromDiffblue.class)
+  @ManagedByDiffblue
   @MethodsUnderTest({"String DataWord.shortHex()"})
   public void testShortHex_givenDataWordWithNumIsFour_thenReturn0x4() {
     // Arrange
@@ -8060,7 +8475,8 @@ public class DataWordDiffblueTest {
    * <p>Method under test: {@link DataWord#shortHex()}
    */
   @Test
-  @Category(MaintainedByDiffblue.class)
+  @Category(ContributionFromDiffblue.class)
+  @ManagedByDiffblue
   @MethodsUnderTest({"String DataWord.shortHex()"})
   public void testShortHex_givenDataWordWithNumIsSeven_thenReturn0x7() {
     // Arrange
@@ -8081,7 +8497,8 @@ public class DataWordDiffblueTest {
    * <p>Method under test: {@link DataWord#shortHex()}
    */
   @Test
-  @Category(MaintainedByDiffblue.class)
+  @Category(ContributionFromDiffblue.class)
+  @ManagedByDiffblue
   @MethodsUnderTest({"String DataWord.shortHex()"})
   public void testShortHex_givenDataWordWithNumIsSix_thenReturn0x6() {
     // Arrange
@@ -8102,7 +8519,8 @@ public class DataWordDiffblueTest {
    * <p>Method under test: {@link DataWord#shortHex()}
    */
   @Test
-  @Category(MaintainedByDiffblue.class)
+  @Category(ContributionFromDiffblue.class)
+  @ManagedByDiffblue
   @MethodsUnderTest({"String DataWord.shortHex()"})
   public void testShortHex_givenDataWordWithNumIsThree_thenReturn0x3() {
     // Arrange
@@ -8123,7 +8541,8 @@ public class DataWordDiffblueTest {
    * <p>Method under test: {@link DataWord#shortHex()}
    */
   @Test
-  @Category(MaintainedByDiffblue.class)
+  @Category(ContributionFromDiffblue.class)
+  @ManagedByDiffblue
   @MethodsUnderTest({"String DataWord.shortHex()"})
   public void testShortHex_givenDataWordWithNumIsTwo_thenReturn0x2() {
     // Arrange
@@ -8144,7 +8563,8 @@ public class DataWordDiffblueTest {
    * <p>Method under test: {@link DataWord#shortHex()}
    */
   @Test
-  @Category(MaintainedByDiffblue.class)
+  @Category(ContributionFromDiffblue.class)
+  @ManagedByDiffblue
   @MethodsUnderTest({"String DataWord.shortHex()"})
   public void testShortHex_givenDataWordWithNumIsXExpDataWordWithNumIsThree_thenReturn0xA6600() {
     // Arrange
@@ -8166,7 +8586,8 @@ public class DataWordDiffblueTest {
    * <p>Method under test: {@link DataWord#shortHex()}
    */
   @Test
-  @Category(MaintainedByDiffblue.class)
+  @Category(ContributionFromDiffblue.class)
+  @ManagedByDiffblue
   @MethodsUnderTest({"String DataWord.shortHex()"})
   public void testShortHex_givenZero_thenReturn0x0() {
     // Arrange, Act and Assert
@@ -8183,7 +8604,8 @@ public class DataWordDiffblueTest {
    * <p>Method under test: {@link DataWord#shortHex()}
    */
   @Test
-  @Category(MaintainedByDiffblue.class)
+  @Category(ContributionFromDiffblue.class)
+  @ManagedByDiffblue
   @MethodsUnderTest({"String DataWord.shortHex()"})
   public void testShortHex_thenReturn0x1A471AD3B6692896773810212C95C412FB5698234C59F0801() {
     // Arrange
@@ -8204,7 +8626,8 @@ public class DataWordDiffblueTest {
    * <p>Method under test: {@link DataWord#shortHex()}
    */
   @Test
-  @Category(MaintainedByDiffblue.class)
+  @Category(ContributionFromDiffblue.class)
+  @ManagedByDiffblue
   @MethodsUnderTest({"String DataWord.shortHex()"})
   public void testShortHex_thenReturn0x1E4A5D45AC37F() {
     // Arrange
@@ -8225,7 +8648,8 @@ public class DataWordDiffblueTest {
    * <p>Method under test: {@link DataWord#shortHex()}
    */
   @Test
-  @Category(MaintainedByDiffblue.class)
+  @Category(ContributionFromDiffblue.class)
+  @ManagedByDiffblue
   @MethodsUnderTest({"String DataWord.shortHex()"})
   public void testShortHex_thenReturn0x4EE2D6D415B85ACEF81() {
     // Arrange
@@ -8246,7 +8670,8 @@ public class DataWordDiffblueTest {
    * <p>Method under test: {@link DataWord#shortHex()}
    */
   @Test
-  @Category(MaintainedByDiffblue.class)
+  @Category(ContributionFromDiffblue.class)
+  @ManagedByDiffblue
   @MethodsUnderTest({"String DataWord.shortHex()"})
   public void testShortHex_thenReturn0x5F5E1() {
     // Arrange
@@ -8267,7 +8692,8 @@ public class DataWordDiffblueTest {
    * <p>Method under test: {@link DataWord#shortHex()}
    */
   @Test
-  @Category(MaintainedByDiffblue.class)
+  @Category(ContributionFromDiffblue.class)
+  @ManagedByDiffblue
   @MethodsUnderTest({"String DataWord.shortHex()"})
   public void testShortHex_thenReturn0x15D10E9042A802136D6C5B6FEDBE501() {
     // Arrange
@@ -8288,7 +8714,8 @@ public class DataWordDiffblueTest {
    * <p>Method under test: {@link DataWord#shortHex()}
    */
   @Test
-  @Category(MaintainedByDiffblue.class)
+  @Category(ContributionFromDiffblue.class)
+  @ManagedByDiffblue
   @MethodsUnderTest({"String DataWord.shortHex()"})
   public void testShortHex_thenReturn0x88B() {
     // Arrange
@@ -8309,7 +8736,8 @@ public class DataWordDiffblueTest {
    * <p>Method under test: {@link DataWord#shortHex()}
    */
   @Test
-  @Category(MaintainedByDiffblue.class)
+  @Category(ContributionFromDiffblue.class)
+  @ManagedByDiffblue
   @MethodsUnderTest({"String DataWord.shortHex()"})
   public void testShortHex_thenReturn0x100() {
     // Arrange
@@ -8330,7 +8758,8 @@ public class DataWordDiffblueTest {
    * <p>Method under test: {@link DataWord#shortHex()}
    */
   @Test
-  @Category(MaintainedByDiffblue.class)
+  @Category(ContributionFromDiffblue.class)
+  @ManagedByDiffblue
   @MethodsUnderTest({"String DataWord.shortHex()"})
   public void testShortHex_thenReturn0x121CE46E1C201() {
     // Arrange
@@ -8351,7 +8780,8 @@ public class DataWordDiffblueTest {
    * <p>Method under test: {@link DataWord#shortHex()}
    */
   @Test
-  @Category(MaintainedByDiffblue.class)
+  @Category(ContributionFromDiffblue.class)
+  @ManagedByDiffblue
   @MethodsUnderTest({"String DataWord.shortHex()"})
   public void testShortHex_thenReturn0x157() {
     // Arrange
@@ -8372,7 +8802,8 @@ public class DataWordDiffblueTest {
    * <p>Method under test: {@link DataWord#shortHex()}
    */
   @Test
-  @Category(MaintainedByDiffblue.class)
+  @Category(ContributionFromDiffblue.class)
+  @ManagedByDiffblue
   @MethodsUnderTest({"String DataWord.shortHex()"})
   public void testShortHex_thenReturn0x200() {
     // Arrange
@@ -8393,7 +8824,8 @@ public class DataWordDiffblueTest {
    * <p>Method under test: {@link DataWord#shortHex()}
    */
   @Test
-  @Category(MaintainedByDiffblue.class)
+  @Category(ContributionFromDiffblue.class)
+  @ManagedByDiffblue
   @MethodsUnderTest({"String DataWord.shortHex()"})
   public void testShortHex_thenReturn0x1312D() {
     // Arrange
@@ -8414,7 +8846,8 @@ public class DataWordDiffblueTest {
    * <p>Method under test: {@link DataWord#shortHex()}
    */
   @Test
-  @Category(MaintainedByDiffblue.class)
+  @Category(ContributionFromDiffblue.class)
+  @ManagedByDiffblue
   @MethodsUnderTest({"String DataWord.shortHex()"})
   public void testShortHex_thenReturn0x3918FA8303C33586E913B01() {
     // Arrange
@@ -8435,7 +8868,8 @@ public class DataWordDiffblueTest {
    * <p>Method under test: {@link DataWord#shortHex()}
    */
   @Test
-  @Category(MaintainedByDiffblue.class)
+  @Category(ContributionFromDiffblue.class)
+  @ManagedByDiffblue
   @MethodsUnderTest({"String DataWord.shortHex()"})
   public void testShortHex_thenReturn0x6954FE21E3E81() {
     // Arrange
@@ -8456,7 +8890,8 @@ public class DataWordDiffblueTest {
    * <p>Method under test: {@link DataWord#shortHex()}
    */
   @Test
-  @Category(MaintainedByDiffblue.class)
+  @Category(ContributionFromDiffblue.class)
+  @ManagedByDiffblue
   @MethodsUnderTest({"String DataWord.shortHex()"})
   public void testShortHex_thenReturn0x10000() {
     // Arrange
@@ -8477,7 +8912,8 @@ public class DataWordDiffblueTest {
    * <p>Method under test: {@link DataWord#shortHex()}
    */
   @Test
-  @Category(MaintainedByDiffblue.class)
+  @Category(ContributionFromDiffblue.class)
+  @ManagedByDiffblue
   @MethodsUnderTest({"String DataWord.shortHex()"})
   public void testShortHex_thenReturn0x40000() {
     // Arrange
@@ -8498,7 +8934,8 @@ public class DataWordDiffblueTest {
    * <p>Method under test: {@link DataWord#shortHex()}
    */
   @Test
-  @Category(MaintainedByDiffblue.class)
+  @Category(ContributionFromDiffblue.class)
+  @ManagedByDiffblue
   @MethodsUnderTest({"String DataWord.shortHex()"})
   public void testShortHex_thenReturn0x44580() {
     // Arrange
@@ -8519,7 +8956,8 @@ public class DataWordDiffblueTest {
    * <p>Method under test: {@link DataWord#shortHex()}
    */
   @Test
-  @Category(MaintainedByDiffblue.class)
+  @Category(ContributionFromDiffblue.class)
+  @ManagedByDiffblue
   @MethodsUnderTest({"String DataWord.shortHex()"})
   public void testShortHex_thenReturn0x475638D51C1() {
     // Arrange
@@ -8540,7 +8978,8 @@ public class DataWordDiffblueTest {
    * <p>Method under test: {@link DataWord#shortHex()}
    */
   @Test
-  @Category(MaintainedByDiffblue.class)
+  @Category(ContributionFromDiffblue.class)
+  @ManagedByDiffblue
   @MethodsUnderTest({"String DataWord.shortHex()"})
   public void testShortHex_thenReturn0x1000000() {
     // Arrange
@@ -8561,7 +9000,8 @@ public class DataWordDiffblueTest {
    * <p>Method under test: {@link DataWord#shortHex()}
    */
   @Test
-  @Category(MaintainedByDiffblue.class)
+  @Category(ContributionFromDiffblue.class)
+  @ManagedByDiffblue
   @MethodsUnderTest({"String DataWord.shortHex()"})
   public void testShortHex_thenReturn0x800000000() {
     // Arrange
@@ -8582,7 +9022,8 @@ public class DataWordDiffblueTest {
    * <p>Method under test: {@link DataWord#shortHex()}
    */
   @Test
-  @Category(MaintainedByDiffblue.class)
+  @Category(ContributionFromDiffblue.class)
+  @ManagedByDiffblue
   @MethodsUnderTest({"String DataWord.shortHex()"})
   public void testShortHex_thenReturn0x8000000000000000000000000000000000000000000000000() {
     // Arrange
@@ -8603,7 +9044,8 @@ public class DataWordDiffblueTest {
    * <p>Method under test: {@link DataWord#shortHex()}
    */
   @Test
-  @Category(MaintainedByDiffblue.class)
+  @Category(ContributionFromDiffblue.class)
+  @ManagedByDiffblue
   @MethodsUnderTest({"String DataWord.shortHex()"})
   public void testShortHex_thenReturn0xC90F7() {
     // Arrange
@@ -8624,7 +9066,8 @@ public class DataWordDiffblueTest {
    * <p>Method under test: {@link DataWord#shortHex()}
    */
   @Test
-  @Category(MaintainedByDiffblue.class)
+  @Category(ContributionFromDiffblue.class)
+  @ManagedByDiffblue
   @MethodsUnderTest({"String DataWord.shortHex()"})
   public void testShortHex_thenReturn0xCC6DB61000000() {
     // Arrange
@@ -8646,7 +9089,8 @@ public class DataWordDiffblueTest {
    * <p>Method under test: {@link DataWord#sizeInWords(long)}
    */
   @Test
-  @Category(MaintainedByDiffblue.class)
+  @Category(ContributionFromDiffblue.class)
+  @ManagedByDiffblue
   @MethodsUnderTest({"long DataWord.sizeInWords(long)"})
   public void testSizeInWords_whenThree_thenReturnOne() {
     // Arrange, Act and Assert
@@ -8664,7 +9108,8 @@ public class DataWordDiffblueTest {
    * <p>Method under test: {@link DataWord#sizeInWords(long)}
    */
   @Test
-  @Category(MaintainedByDiffblue.class)
+  @Category(ContributionFromDiffblue.class)
+  @ManagedByDiffblue
   @MethodsUnderTest({"long DataWord.sizeInWords(long)"})
   public void testSizeInWords_whenZero_thenReturnZero() {
     // Arrange, Act and Assert
@@ -8677,7 +9122,8 @@ public class DataWordDiffblueTest {
    * <p>Method under test: {@link DataWord#parseArray(byte[])}
    */
   @Test
-  @Category(MaintainedByDiffblue.class)
+  @Category(ContributionFromDiffblue.class)
+  @ManagedByDiffblue
   @MethodsUnderTest({"DataWord[] DataWord.parseArray(byte[])"})
   public void testParseArray() throws UnsupportedEncodingException {
     // Arrange, Act and Assert
@@ -8695,7 +9141,8 @@ public class DataWordDiffblueTest {
    * <p>Method under test: {@link DataWord#isNegative()}
    */
   @Test
-  @Category(MaintainedByDiffblue.class)
+  @Category(ContributionFromDiffblue.class)
+  @ManagedByDiffblue
   @MethodsUnderTest({"boolean DataWord.isNegative()"})
   public void testIsNegative_givenZeroSubZero_thenReturnFalse() {
     // Arrange
@@ -8717,7 +9164,8 @@ public class DataWordDiffblueTest {
    * <p>Method under test: {@link DataWord#equalAddressByteArray(byte[], byte[])}
    */
   @Test
-  @Category(MaintainedByDiffblue.class)
+  @Category(ContributionFromDiffblue.class)
+  @ManagedByDiffblue
   @MethodsUnderTest({"boolean DataWord.equalAddressByteArray(byte[], byte[])"})
   public void testEqualAddressByteArray_whenArrayOfByteWithAAndTwenty_thenReturnFalse()
       throws UnsupportedEncodingException {
@@ -8745,7 +9193,8 @@ public class DataWordDiffblueTest {
    * <p>Method under test: {@link DataWord#equalAddressByteArray(byte[], byte[])}
    */
   @Test
-  @Category(MaintainedByDiffblue.class)
+  @Category(ContributionFromDiffblue.class)
+  @ManagedByDiffblue
   @MethodsUnderTest({"boolean DataWord.equalAddressByteArray(byte[], byte[])"})
   public void testEqualAddressByteArray_whenAxaxaxaxBytesIsUtf8_thenReturnFalse()
       throws UnsupportedEncodingException {
@@ -8768,7 +9217,8 @@ public class DataWordDiffblueTest {
    * <p>Method under test: {@link DataWord#equalAddressByteArray(byte[], byte[])}
    */
   @Test
-  @Category(MaintainedByDiffblue.class)
+  @Category(ContributionFromDiffblue.class)
+  @ManagedByDiffblue
   @MethodsUnderTest({"boolean DataWord.equalAddressByteArray(byte[], byte[])"})
   public void testEqualAddressByteArray_whenNull_thenReturnTrue() {
     // Arrange, Act and Assert
@@ -8786,7 +9236,8 @@ public class DataWordDiffblueTest {
    * <p>Method under test: {@link DataWord#equalAddressByteArray(byte[], byte[])}
    */
   @Test
-  @Category(MaintainedByDiffblue.class)
+  @Category(ContributionFromDiffblue.class)
+  @ManagedByDiffblue
   @MethodsUnderTest({"boolean DataWord.equalAddressByteArray(byte[], byte[])"})
   public void testEqualAddressByteArray_whenX_thenReturnFalse() {
     // Arrange and Act
@@ -8808,7 +9259,8 @@ public class DataWordDiffblueTest {
    * <p>Method under test: {@link DataWord#equalAddressByteArray(byte[], byte[])}
    */
   @Test
-  @Category(MaintainedByDiffblue.class)
+  @Category(ContributionFromDiffblue.class)
+  @ManagedByDiffblue
   @MethodsUnderTest({"boolean DataWord.equalAddressByteArray(byte[], byte[])"})
   public void testEqualAddressByteArray_whenX_thenReturnFalse2() {
     // Arrange, Act and Assert
@@ -8827,7 +9279,8 @@ public class DataWordDiffblueTest {
    * </ul>
    */
   @Test
-  @Category(MaintainedByDiffblue.class)
+  @Category(ContributionFromDiffblue.class)
+  @ManagedByDiffblue
   @MethodsUnderTest({"byte[] DataWord.getData()", "String DataWord.toString()"})
   public void testGettersAndSetters() {
     // Arrange
@@ -8853,7 +9306,8 @@ public class DataWordDiffblueTest {
    * <p>Method under test: {@link DataWord#getClonedData()}
    */
   @Test
-  @Category(MaintainedByDiffblue.class)
+  @Category(ContributionFromDiffblue.class)
+  @ManagedByDiffblue
   @MethodsUnderTest({"byte[] DataWord.getClonedData()"})
   public void testGetClonedData() {
     // Arrange, Act and Assert
@@ -8876,7 +9330,8 @@ public class DataWordDiffblueTest {
    * <p>Method under test: {@link DataWord#getNoLeadZeroesData()}
    */
   @Test
-  @Category(MaintainedByDiffblue.class)
+  @Category(ContributionFromDiffblue.class)
+  @ManagedByDiffblue
   @MethodsUnderTest({"byte[] DataWord.getNoLeadZeroesData()"})
   public void testGetNoLeadZeroesData_givenDataWordWithNumIsA_thenReturnArrayOfByteWithA() {
     // Arrange
@@ -8897,7 +9352,8 @@ public class DataWordDiffblueTest {
    * <p>Method under test: {@link DataWord#getNoLeadZeroesData()}
    */
   @Test
-  @Category(MaintainedByDiffblue.class)
+  @Category(ContributionFromDiffblue.class)
+  @ManagedByDiffblue
   @MethodsUnderTest({"byte[] DataWord.getNoLeadZeroesData()"})
   public void testGetNoLeadZeroesData_givenZero_thenReturnArrayOfByteWithZero() {
     // Arrange, Act and Assert
@@ -8914,7 +9370,8 @@ public class DataWordDiffblueTest {
    * <p>Method under test: {@link DataWord#getNoLeadZeroesData()}
    */
   @Test
-  @Category(MaintainedByDiffblue.class)
+  @Category(ContributionFromDiffblue.class)
+  @ManagedByDiffblue
   @MethodsUnderTest({"byte[] DataWord.getNoLeadZeroesData()"})
   public void testGetNoLeadZeroesData_thenReturnArrayOfByteWithAsteriskAndI() {
     // Arrange
@@ -8941,7 +9398,8 @@ public class DataWordDiffblueTest {
    * <p>Method under test: {@link DataWord#getNoEndZeroesData()}
    */
   @Test
-  @Category(MaintainedByDiffblue.class)
+  @Category(ContributionFromDiffblue.class)
+  @ManagedByDiffblue
   @MethodsUnderTest({"byte[] DataWord.getNoEndZeroesData()"})
   public void testGetNoEndZeroesData_givenZero_thenReturnArrayOfByteWithZero() {
     // Arrange, Act and Assert
@@ -8958,7 +9416,8 @@ public class DataWordDiffblueTest {
    * <p>Method under test: {@link DataWord#getNoEndZeroesData()}
    */
   @Test
-  @Category(MaintainedByDiffblue.class)
+  @Category(ContributionFromDiffblue.class)
+  @ManagedByDiffblue
   @MethodsUnderTest({"byte[] DataWord.getNoEndZeroesData()"})
   public void testGetNoEndZeroesData_thenReturnArrayOfByteWithZeroAndZero() {
     // Arrange
@@ -8979,7 +9438,8 @@ public class DataWordDiffblueTest {
    * <p>Method under test: {@link DataWord#getLast20Bytes()}
    */
   @Test
-  @Category(MaintainedByDiffblue.class)
+  @Category(ContributionFromDiffblue.class)
+  @ManagedByDiffblue
   @MethodsUnderTest({"byte[] DataWord.getLast20Bytes()"})
   public void testGetLast20Bytes() {
     // Arrange, Act and Assert
@@ -8994,7 +9454,8 @@ public class DataWordDiffblueTest {
    * <p>Method under test: {@link DataWord#toTronAddress()}
    */
   @Test
-  @Category(MaintainedByDiffblue.class)
+  @Category(ContributionFromDiffblue.class)
+  @ManagedByDiffblue
   @MethodsUnderTest({"byte[] DataWord.toTronAddress()"})
   public void testToTronAddress() {
     // Arrange, Act and Assert
@@ -9009,7 +9470,8 @@ public class DataWordDiffblueTest {
    * <p>Method under test: {@link DataWord#value()}
    */
   @Test
-  @Category(MaintainedByDiffblue.class)
+  @Category(ContributionFromDiffblue.class)
+  @ManagedByDiffblue
   @MethodsUnderTest({"BigInteger DataWord.value()"})
   public void testValue() {
     // Arrange, Act and Assert
@@ -9022,7 +9484,8 @@ public class DataWordDiffblueTest {
    * <p>Method under test: {@link DataWord#intValue()}
    */
   @Test
-  @Category(MaintainedByDiffblue.class)
+  @Category(ContributionFromDiffblue.class)
+  @ManagedByDiffblue
   @MethodsUnderTest({"int DataWord.intValue()"})
   public void testIntValue() {
     // Arrange, Act and Assert
@@ -9040,7 +9503,8 @@ public class DataWordDiffblueTest {
    * <p>Method under test: {@link DataWord#intValueSafe()}
    */
   @Test
-  @Category(MaintainedByDiffblue.class)
+  @Category(ContributionFromDiffblue.class)
+  @ManagedByDiffblue
   @MethodsUnderTest({"int DataWord.intValueSafe()"})
   public void testIntValueSafe_givenDataWordWithNumIsA_thenReturnSixtyFive() {
     // Arrange
@@ -9060,7 +9524,8 @@ public class DataWordDiffblueTest {
    * <p>Method under test: {@link DataWord#intValueSafe()}
    */
   @Test
-  @Category(MaintainedByDiffblue.class)
+  @Category(ContributionFromDiffblue.class)
+  @ManagedByDiffblue
   @MethodsUnderTest({"int DataWord.intValueSafe()"})
   public void testIntValueSafe_thenReturnMax_value() {
     // Arrange
@@ -9077,7 +9542,8 @@ public class DataWordDiffblueTest {
    * <p>Method under test: {@link DataWord#longValue()}
    */
   @Test
-  @Category(MaintainedByDiffblue.class)
+  @Category(ContributionFromDiffblue.class)
+  @ManagedByDiffblue
   @MethodsUnderTest({"long DataWord.longValue()"})
   public void testLongValue() {
     // Arrange, Act and Assert
@@ -9095,7 +9561,8 @@ public class DataWordDiffblueTest {
    * <p>Method under test: {@link DataWord#longValueSafe()}
    */
   @Test
-  @Category(MaintainedByDiffblue.class)
+  @Category(ContributionFromDiffblue.class)
+  @ManagedByDiffblue
   @MethodsUnderTest({"long DataWord.longValueSafe()"})
   public void testLongValueSafe_givenDataWordWithNumIsA_thenReturnSixtyFive() {
     // Arrange
@@ -9115,7 +9582,8 @@ public class DataWordDiffblueTest {
    * <p>Method under test: {@link DataWord#longValueSafe()}
    */
   @Test
-  @Category(MaintainedByDiffblue.class)
+  @Category(ContributionFromDiffblue.class)
+  @ManagedByDiffblue
   @MethodsUnderTest({"long DataWord.longValueSafe()"})
   public void testLongValueSafe_thenReturnMax_value() {
     // Arrange
@@ -9132,7 +9600,8 @@ public class DataWordDiffblueTest {
    * <p>Method under test: {@link DataWord#sValue()}
    */
   @Test
-  @Category(MaintainedByDiffblue.class)
+  @Category(ContributionFromDiffblue.class)
+  @ManagedByDiffblue
   @MethodsUnderTest({"BigInteger DataWord.sValue()"})
   public void testSValue() {
     // Arrange, Act and Assert
@@ -9150,7 +9619,8 @@ public class DataWordDiffblueTest {
    * <p>Method under test: {@link DataWord#and(DataWord)}
    */
   @Test
-  @Category(MaintainedByDiffblue.class)
+  @Category(ContributionFromDiffblue.class)
+  @ManagedByDiffblue
   @MethodsUnderTest({"DataWord DataWord.and(DataWord)"})
   public void testAnd_whenZero_thenReturnZero() {
     // Arrange, Act and Assert
@@ -9168,7 +9638,8 @@ public class DataWordDiffblueTest {
    * <p>Method under test: {@link DataWord#or(DataWord)}
    */
   @Test
-  @Category(MaintainedByDiffblue.class)
+  @Category(ContributionFromDiffblue.class)
+  @ManagedByDiffblue
   @MethodsUnderTest({"DataWord DataWord.or(DataWord)"})
   public void testOr_whenZero_thenReturnZero() {
     // Arrange, Act and Assert
@@ -9186,7 +9657,8 @@ public class DataWordDiffblueTest {
    * <p>Method under test: {@link DataWord#xor(DataWord)}
    */
   @Test
-  @Category(MaintainedByDiffblue.class)
+  @Category(ContributionFromDiffblue.class)
+  @ManagedByDiffblue
   @MethodsUnderTest({"DataWord DataWord.xor(DataWord)"})
   public void testXor_whenZero_thenReturnZero() {
     // Arrange, Act and Assert
@@ -9204,7 +9676,8 @@ public class DataWordDiffblueTest {
    * <p>Method under test: {@link DataWord#negate()}
    */
   @Test
-  @Category(MaintainedByDiffblue.class)
+  @Category(ContributionFromDiffblue.class)
+  @ManagedByDiffblue
   @MethodsUnderTest({"void DataWord.negate()"})
   public void testNegate_givenDataWordWithNumIsA_thenDataWordWithNumIsAToPrefixStringIsFfffff() {
     // Arrange
@@ -9255,7 +9728,8 @@ public class DataWordDiffblueTest {
    * <p>Method under test: {@link DataWord#negate()}
    */
   @Test
-  @Category(MaintainedByDiffblue.class)
+  @Category(ContributionFromDiffblue.class)
+  @ManagedByDiffblue
   @MethodsUnderTest({"void DataWord.negate()"})
   public void testNegate_givenZero_thenZeroToPrefixStringIs00() {
     // Arrange
@@ -9300,7 +9774,8 @@ public class DataWordDiffblueTest {
    * <p>Method under test: {@link DataWord#bnot()}
    */
   @Test
-  @Category(MaintainedByDiffblue.class)
+  @Category(ContributionFromDiffblue.class)
+  @ManagedByDiffblue
   @MethodsUnderTest({"void DataWord.bnot()"})
   public void testBnot_givenDataWordWithNumIsA_thenDataWordWithNumIsAToPrefixStringIsFfffff() {
     // Arrange
@@ -9346,7 +9821,8 @@ public class DataWordDiffblueTest {
    * <p>Method under test: {@link DataWord#mul(DataWord)}
    */
   @Test
-  @Category(MaintainedByDiffblue.class)
+  @Category(ContributionFromDiffblue.class)
+  @ManagedByDiffblue
   @MethodsUnderTest({"void DataWord.mul(DataWord)"})
   public void testMul() {
     // Arrange
@@ -9387,7 +9863,8 @@ public class DataWordDiffblueTest {
    * <p>Method under test: {@link DataWord#mul(DataWord)}
    */
   @Test
-  @Category(MaintainedByDiffblue.class)
+  @Category(ContributionFromDiffblue.class)
+  @ManagedByDiffblue
   @MethodsUnderTest({"void DataWord.mul(DataWord)"})
   public void testMul2() {
     // Arrange
@@ -9433,7 +9910,8 @@ public class DataWordDiffblueTest {
    * <p>Method under test: {@link DataWord#mul(DataWord)}
    */
   @Test
-  @Category(MaintainedByDiffblue.class)
+  @Category(ContributionFromDiffblue.class)
+  @ManagedByDiffblue
   @MethodsUnderTest({"void DataWord.mul(DataWord)"})
   public void testMul_givenZero_whenZero_thenZeroToPrefixStringIs00() {
     // Arrange
@@ -9472,7 +9950,8 @@ public class DataWordDiffblueTest {
    * <p>Method under test: {@link DataWord#mulmod(DataWord, DataWord)}
    */
   @Test
-  @Category(MaintainedByDiffblue.class)
+  @Category(ContributionFromDiffblue.class)
+  @ManagedByDiffblue
   @MethodsUnderTest({"void DataWord.mulmod(DataWord, DataWord)"})
   public void testMulmod() {
     // Arrange
@@ -9522,7 +10001,8 @@ public class DataWordDiffblueTest {
    * <p>Method under test: {@link DataWord#mulmod(DataWord, DataWord)}
    */
   @Test
-  @Category(MaintainedByDiffblue.class)
+  @Category(ContributionFromDiffblue.class)
+  @ManagedByDiffblue
   @MethodsUnderTest({"void DataWord.mulmod(DataWord, DataWord)"})
   public void testMulmod_givenZero_whenZero_thenZeroToPrefixStringIs00() {
     // Arrange
@@ -9570,7 +10050,8 @@ public class DataWordDiffblueTest {
    * <p>Method under test: {@link DataWord#mulmod(DataWord, DataWord)}
    */
   @Test
-  @Category(MaintainedByDiffblue.class)
+  @Category(ContributionFromDiffblue.class)
+  @ManagedByDiffblue
   @MethodsUnderTest({"void DataWord.mulmod(DataWord, DataWord)"})
   public void testMulmod_whenDataWordWithNumIsA_thenZeroIsDataWordWithNumIsA() {
     // Arrange
@@ -9620,7 +10101,8 @@ public class DataWordDiffblueTest {
    * <p>Method under test: {@link DataWord#mulmod(DataWord, DataWord)}
    */
   @Test
-  @Category(MaintainedByDiffblue.class)
+  @Category(ContributionFromDiffblue.class)
+  @ManagedByDiffblue
   @MethodsUnderTest({"void DataWord.mulmod(DataWord, DataWord)"})
   public void testMulmod_whenDataWordWithNumIsMinusOne() {
     // Arrange
@@ -9669,7 +10151,8 @@ public class DataWordDiffblueTest {
    * <p>Method under test: {@link DataWord#mulmod(DataWord, DataWord)}
    */
   @Test
-  @Category(MaintainedByDiffblue.class)
+  @Category(ContributionFromDiffblue.class)
+  @ManagedByDiffblue
   @MethodsUnderTest({"void DataWord.mulmod(DataWord, DataWord)"})
   public void testMulmod_whenZero_thenDataWordWithNumIsAToPrefixStringIs00() {
     // Arrange
@@ -9715,7 +10198,8 @@ public class DataWordDiffblueTest {
    * <p>Method under test: {@link DataWord#toPrefixString()}
    */
   @Test
-  @Category(MaintainedByDiffblue.class)
+  @Category(ContributionFromDiffblue.class)
+  @ManagedByDiffblue
   @MethodsUnderTest({"String DataWord.toPrefixString()"})
   public void testToPrefixString_givenZero() {
     // Arrange, Act and Assert
@@ -9732,7 +10216,8 @@ public class DataWordDiffblueTest {
    * <p>Method under test: {@link DataWord#toPrefixString()}
    */
   @Test
-  @Category(MaintainedByDiffblue.class)
+  @Category(ContributionFromDiffblue.class)
+  @ManagedByDiffblue
   @MethodsUnderTest({"String DataWord.toPrefixString()"})
   public void testToPrefixString_givenZero2() {
     // Arrange, Act and Assert
@@ -9749,7 +10234,8 @@ public class DataWordDiffblueTest {
    * <p>Method under test: {@link DataWord#toPrefixString()}
    */
   @Test
-  @Category(MaintainedByDiffblue.class)
+  @Category(ContributionFromDiffblue.class)
+  @ManagedByDiffblue
   @MethodsUnderTest({"String DataWord.toPrefixString()"})
   public void testToPrefixString_givenZeroSubZero() {
     // Arrange
@@ -9766,7 +10252,8 @@ public class DataWordDiffblueTest {
    * <p>Method under test: {@link DataWord#clone()}
    */
   @Test
-  @Category(MaintainedByDiffblue.class)
+  @Category(ContributionFromDiffblue.class)
+  @ManagedByDiffblue
   @MethodsUnderTest({"DataWord DataWord.clone()"})
   public void testClone() {
     // Arrange, Act and Assert
@@ -9789,7 +10276,8 @@ public class DataWordDiffblueTest {
    * </ul>
    */
   @Test
-  @Category(MaintainedByDiffblue.class)
+  @Category(ContributionFromDiffblue.class)
+  @ManagedByDiffblue
   @MethodsUnderTest({"boolean DataWord.equals(Object)", "int DataWord.hashCode()"})
   public void testEqualsAndHashCode_whenOtherIsEqual_thenReturnEqual() {
     // Arrange
@@ -9817,7 +10305,8 @@ public class DataWordDiffblueTest {
    * </ul>
    */
   @Test
-  @Category(MaintainedByDiffblue.class)
+  @Category(ContributionFromDiffblue.class)
+  @ManagedByDiffblue
   @MethodsUnderTest({"boolean DataWord.equals(Object)", "int DataWord.hashCode()"})
   public void testEqualsAndHashCode_whenOtherIsEqual_thenReturnEqual2() {
     // Arrange
@@ -9845,7 +10334,8 @@ public class DataWordDiffblueTest {
    * </ul>
    */
   @Test
-  @Category(MaintainedByDiffblue.class)
+  @Category(ContributionFromDiffblue.class)
+  @ManagedByDiffblue
   @MethodsUnderTest({"boolean DataWord.equals(Object)", "int DataWord.hashCode()"})
   public void testEqualsAndHashCode_whenOtherIsSame_thenReturnEqual() {
     // Arrange
@@ -9868,7 +10358,8 @@ public class DataWordDiffblueTest {
    * <p>Method under test: {@link DataWord#equals(Object)}
    */
   @Test
-  @Category(MaintainedByDiffblue.class)
+  @Category(ContributionFromDiffblue.class)
+  @ManagedByDiffblue
   @MethodsUnderTest({"boolean DataWord.equals(Object)", "int DataWord.hashCode()"})
   public void testEquals_whenOtherIsDifferent_thenReturnNotEqual() {
     // Arrange
@@ -9889,7 +10380,8 @@ public class DataWordDiffblueTest {
    * <p>Method under test: {@link DataWord#equals(Object)}
    */
   @Test
-  @Category(MaintainedByDiffblue.class)
+  @Category(ContributionFromDiffblue.class)
+  @ManagedByDiffblue
   @MethodsUnderTest({"boolean DataWord.equals(Object)", "int DataWord.hashCode()"})
   public void testEquals_whenOtherIsNull_thenReturnNotEqual() {
     // Arrange, Act and Assert
@@ -9907,7 +10399,8 @@ public class DataWordDiffblueTest {
    * <p>Method under test: {@link DataWord#equals(Object)}
    */
   @Test
-  @Category(MaintainedByDiffblue.class)
+  @Category(ContributionFromDiffblue.class)
+  @ManagedByDiffblue
   @MethodsUnderTest({"boolean DataWord.equals(Object)", "int DataWord.hashCode()"})
   public void testEquals_whenOtherIsWrongType_thenReturnNotEqual() {
     // Arrange, Act and Assert
@@ -9925,7 +10418,8 @@ public class DataWordDiffblueTest {
    * <p>Method under test: {@link DataWord#compareTo(DataWord)}
    */
   @Test
-  @Category(MaintainedByDiffblue.class)
+  @Category(ContributionFromDiffblue.class)
+  @ManagedByDiffblue
   @MethodsUnderTest({"int DataWord.compareTo(DataWord)"})
   public void testCompareToWithDataWord_whenNull_thenReturnMinusOne() {
     // Arrange, Act and Assert
@@ -9943,7 +10437,8 @@ public class DataWordDiffblueTest {
    * <p>Method under test: {@link DataWord#compareTo(DataWord)}
    */
   @Test
-  @Category(MaintainedByDiffblue.class)
+  @Category(ContributionFromDiffblue.class)
+  @ManagedByDiffblue
   @MethodsUnderTest({"int DataWord.compareTo(DataWord)"})
   public void testCompareToWithDataWord_whenZeroMulZero_thenReturnZero() {
     // Arrange
@@ -9965,7 +10460,8 @@ public class DataWordDiffblueTest {
    * <p>Method under test: {@link DataWord#compareTo(DataWord)}
    */
   @Test
-  @Category(MaintainedByDiffblue.class)
+  @Category(ContributionFromDiffblue.class)
+  @ManagedByDiffblue
   @MethodsUnderTest({"int DataWord.compareTo(DataWord)"})
   public void testCompareToWithDataWord_whenZero_thenReturnZero() {
     // Arrange, Act and Assert
@@ -9984,7 +10480,8 @@ public class DataWordDiffblueTest {
    * <p>Method under test: {@link DataWord#signExtend(byte)}
    */
   @Test
-  @Category(MaintainedByDiffblue.class)
+  @Category(ContributionFromDiffblue.class)
+  @ManagedByDiffblue
   @MethodsUnderTest({"void DataWord.signExtend(byte)"})
   public void testSignExtend_givenZero_whenZero_thenZeroToPrefixStringIs00() {
     // Arrange
@@ -10028,7 +10525,8 @@ public class DataWordDiffblueTest {
    * <p>Method under test: {@link DataWord#signExtend(byte)}
    */
   @Test
-  @Category(MaintainedByDiffblue.class)
+  @Category(ContributionFromDiffblue.class)
+  @ManagedByDiffblue
   @MethodsUnderTest({"void DataWord.signExtend(byte)"})
   public void testSignExtend_thenDataWordWithNumIsMinusOneToPrefixStringIsFfffff() {
     // Arrange
@@ -10076,7 +10574,8 @@ public class DataWordDiffblueTest {
    * <p>Method under test: {@link DataWord#bytesOccupied()}
    */
   @Test
-  @Category(MaintainedByDiffblue.class)
+  @Category(ContributionFromDiffblue.class)
+  @ManagedByDiffblue
   @MethodsUnderTest({"int DataWord.bytesOccupied()"})
   public void testBytesOccupied_givenZero() {
     // Arrange, Act and Assert
@@ -10093,7 +10592,8 @@ public class DataWordDiffblueTest {
    * <p>Method under test: {@link DataWord#bytesOccupied()}
    */
   @Test
-  @Category(MaintainedByDiffblue.class)
+  @Category(ContributionFromDiffblue.class)
+  @ManagedByDiffblue
   @MethodsUnderTest({"int DataWord.bytesOccupied()"})
   public void testBytesOccupied_givenZero2() {
     // Arrange, Act and Assert
@@ -10111,7 +10611,8 @@ public class DataWordDiffblueTest {
    * <p>Method under test: {@link DataWord#isHex(String)}
    */
   @Test
-  @Category(MaintainedByDiffblue.class)
+  @Category(ContributionFromDiffblue.class)
+  @ManagedByDiffblue
   @MethodsUnderTest({"boolean DataWord.isHex(String)"})
   public void testIsHex_when0123456789abcdef_thenReturnFalse() {
     // Arrange, Act and Assert
@@ -10129,7 +10630,8 @@ public class DataWordDiffblueTest {
    * <p>Method under test: {@link DataWord#asString()}
    */
   @Test
-  @Category(MaintainedByDiffblue.class)
+  @Category(ContributionFromDiffblue.class)
+  @ManagedByDiffblue
   @MethodsUnderTest({"String DataWord.asString()"})
   public void testAsString_givenDataWordWithNumIsAExpDataWordWithNumIsA_thenReturnAString() {
     // Arrange
@@ -10151,7 +10653,8 @@ public class DataWordDiffblueTest {
    * <p>Method under test: {@link DataWord#asString()}
    */
   @Test
-  @Category(MaintainedByDiffblue.class)
+  @Category(ContributionFromDiffblue.class)
+  @ManagedByDiffblue
   @MethodsUnderTest({"String DataWord.asString()"})
   public void testAsString_givenDataWordWithNumIsA_thenReturnA() {
     // Arrange
@@ -10172,7 +10675,8 @@ public class DataWordDiffblueTest {
    * <p>Method under test: {@link DataWord#asString()}
    */
   @Test
-  @Category(MaintainedByDiffblue.class)
+  @Category(ContributionFromDiffblue.class)
+  @ManagedByDiffblue
   @MethodsUnderTest({"String DataWord.asString()"})
   public void testAsString_givenZero_thenReturnNull() {
     // Arrange, Act and Assert
@@ -10189,7 +10693,8 @@ public class DataWordDiffblueTest {
    * <p>Method under test: {@link DataWord#shiftLeft(DataWord)}
    */
   @Test
-  @Category(MaintainedByDiffblue.class)
+  @Category(ContributionFromDiffblue.class)
+  @ManagedByDiffblue
   @MethodsUnderTest({"DataWord DataWord.shiftLeft(DataWord)"})
   public void testShiftLeft_givenDataWordWithNumIsA() {
     // Arrange
@@ -10234,7 +10739,8 @@ public class DataWordDiffblueTest {
    * <p>Method under test: {@link DataWord#shiftRight(DataWord)}
    */
   @Test
-  @Category(MaintainedByDiffblue.class)
+  @Category(ContributionFromDiffblue.class)
+  @ManagedByDiffblue
   @MethodsUnderTest({"DataWord DataWord.shiftRight(DataWord)"})
   public void testShiftRight_givenDataWordWithNumIsA() {
     // Arrange
@@ -10275,7 +10781,8 @@ public class DataWordDiffblueTest {
    * <p>Method under test: {@link DataWord#shiftRight(DataWord)}
    */
   @Test
-  @Category(MaintainedByDiffblue.class)
+  @Category(ContributionFromDiffblue.class)
+  @ManagedByDiffblue
   @MethodsUnderTest({"DataWord DataWord.shiftRight(DataWord)"})
   public void testShiftRight_whenDataWordWithNumIsASubZero() {
     // Arrange
@@ -10317,7 +10824,8 @@ public class DataWordDiffblueTest {
    * <p>Method under test: {@link DataWord#shiftRight(DataWord)}
    */
   @Test
-  @Category(MaintainedByDiffblue.class)
+  @Category(ContributionFromDiffblue.class)
+  @ManagedByDiffblue
   @MethodsUnderTest({"DataWord DataWord.shiftRight(DataWord)"})
   public void testShiftRight_whenZeroSubZero_thenReturnLast20BytesIsArrayOfByteWithZeroAndZero() {
     // Arrange
@@ -10359,7 +10867,8 @@ public class DataWordDiffblueTest {
    * <p>Method under test: {@link DataWord#shiftRight(DataWord)}
    */
   @Test
-  @Category(MaintainedByDiffblue.class)
+  @Category(ContributionFromDiffblue.class)
+  @ManagedByDiffblue
   @MethodsUnderTest({"DataWord DataWord.shiftRight(DataWord)"})
   public void testShiftRight_whenZero_thenReturnLast20BytesIsArrayOfByteWithZeroAndZero() {
     // Arrange and Act
@@ -10397,7 +10906,8 @@ public class DataWordDiffblueTest {
    * <p>Method under test: {@link DataWord#shiftRight(DataWord)}
    */
   @Test
-  @Category(MaintainedByDiffblue.class)
+  @Category(ContributionFromDiffblue.class)
+  @ManagedByDiffblue
   @MethodsUnderTest({"DataWord DataWord.shiftRight(DataWord)"})
   public void testShiftRight_whenZero_thenReturnLast20BytesIsArrayOfByteWithZeroAndZero2() {
     // Arrange and Act
@@ -10434,7 +10944,8 @@ public class DataWordDiffblueTest {
    * <p>Method under test: {@link DataWord#shiftRightSigned(DataWord)}
    */
   @Test
-  @Category(MaintainedByDiffblue.class)
+  @Category(ContributionFromDiffblue.class)
+  @ManagedByDiffblue
   @MethodsUnderTest({"DataWord DataWord.shiftRightSigned(DataWord)"})
   public void testShiftRightSigned_givenDataWordWithNumIsA() {
     // Arrange
@@ -10475,7 +10986,8 @@ public class DataWordDiffblueTest {
    * <p>Method under test: {@link DataWord#shiftRightSigned(DataWord)}
    */
   @Test
-  @Category(MaintainedByDiffblue.class)
+  @Category(ContributionFromDiffblue.class)
+  @ManagedByDiffblue
   @MethodsUnderTest({"DataWord DataWord.shiftRightSigned(DataWord)"})
   public void testShiftRightSigned_whenDataWordWithNumIsA() {
     // Arrange and Act
@@ -10513,7 +11025,8 @@ public class DataWordDiffblueTest {
    * <p>Method under test: {@link DataWord#shiftRightSigned(DataWord)}
    */
   @Test
-  @Category(MaintainedByDiffblue.class)
+  @Category(ContributionFromDiffblue.class)
+  @ManagedByDiffblue
   @MethodsUnderTest({"DataWord DataWord.shiftRightSigned(DataWord)"})
   public void testShiftRightSigned_whenZero_thenReturnLast20BytesIsArrayOfByteWithZeroAndZero() {
     // Arrange and Act

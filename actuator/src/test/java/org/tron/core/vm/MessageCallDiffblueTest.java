@@ -4,7 +4,8 @@ import static org.junit.Assert.assertEquals;
 import static org.junit.Assert.assertNull;
 import static org.junit.Assert.assertSame;
 import static org.junit.Assert.assertTrue;
-import com.diffblue.cover.annotations.MaintainedByDiffblue;
+import com.diffblue.cover.annotations.ContributionFromDiffblue;
+import com.diffblue.cover.annotations.ManagedByDiffblue;
 import com.diffblue.cover.annotations.MethodsUnderTest;
 import org.junit.Test;
 import org.junit.experimental.categories.Category;
@@ -36,7 +37,8 @@ public class MessageCallDiffblueTest {
    * </ul>
    */
   @Test
-  @Category(MaintainedByDiffblue.class)
+  @Category(ContributionFromDiffblue.class)
+  @ManagedByDiffblue
   @MethodsUnderTest({
     "void MessageCall.<init>(int, DataWord, DataWord, DataWord, DataWord, DataWord, DataWord, DataWord, DataWord, boolean)",
     "void MessageCall.<init>(int, DataWord, DataWord, DataWord, DataWord, DataWord, DataWord, boolean)",
@@ -111,7 +113,8 @@ public class MessageCallDiffblueTest {
    * </ul>
    */
   @Test
-  @Category(MaintainedByDiffblue.class)
+  @Category(ContributionFromDiffblue.class)
+  @ManagedByDiffblue
   @MethodsUnderTest({
     "void MessageCall.<init>(int, DataWord, DataWord, DataWord, DataWord, DataWord, DataWord, DataWord, DataWord, boolean)",
     "void MessageCall.<init>(int, DataWord, DataWord, DataWord, DataWord, DataWord, DataWord, boolean)",

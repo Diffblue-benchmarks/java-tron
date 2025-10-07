@@ -1,7 +1,8 @@
 package org.tron.core.db;
 
 import static org.junit.Assert.assertEquals;
-import com.diffblue.cover.annotations.MaintainedByDiffblue;
+import com.diffblue.cover.annotations.ContributionFromDiffblue;
+import com.diffblue.cover.annotations.ManagedByDiffblue;
 import com.diffblue.cover.annotations.MethodsUnderTest;
 import org.junit.Test;
 import org.junit.experimental.categories.Category;
@@ -19,7 +20,8 @@ public class ResourceProcessorDiffblueTest {
    * <p>Method under test: {@link ResourceProcessor#increase(long, long, long, long, long)}
    */
   @Test
-  @Category(MaintainedByDiffblue.class)
+  @Category(ContributionFromDiffblue.class)
+  @ManagedByDiffblue
   @MethodsUnderTest({"long ResourceProcessor.increase(long, long, long, long, long)"})
   public void testIncreaseWithLastUsageUsageLastTimeNowWindowSize_thenReturnTen() {
     // Arrange, Act and Assert
@@ -38,7 +40,8 @@ public class ResourceProcessorDiffblueTest {
    * <p>Method under test: {@link ResourceProcessor#increase(long, long, long, long, long)}
    */
   @Test
-  @Category(MaintainedByDiffblue.class)
+  @Category(ContributionFromDiffblue.class)
+  @ManagedByDiffblue
   @MethodsUnderTest({"long ResourceProcessor.increase(long, long, long, long, long)"})
   public void testIncreaseWithLastUsageUsageLastTimeNowWindowSize_whenOne_thenReturnSix() {
     // Arrange, Act and Assert
@@ -57,7 +60,8 @@ public class ResourceProcessorDiffblueTest {
    * <p>Method under test: {@link ResourceProcessor#increase(long, long, long, long, long)}
    */
   @Test
-  @Category(MaintainedByDiffblue.class)
+  @Category(ContributionFromDiffblue.class)
+  @ManagedByDiffblue
   @MethodsUnderTest({"long ResourceProcessor.increase(long, long, long, long, long)"})
   public void testIncreaseWithLastUsageUsageLastTimeNowWindowSize_whenTwo_thenReturnFive() {
     // Arrange, Act and Assert
@@ -76,7 +80,8 @@ public class ResourceProcessorDiffblueTest {
    * <p>Method under test: {@link ResourceProcessor#increase(long, long, long, long, long)}
    */
   @Test
-  @Category(MaintainedByDiffblue.class)
+  @Category(ContributionFromDiffblue.class)
+  @ManagedByDiffblue
   @MethodsUnderTest({"long ResourceProcessor.increase(long, long, long, long, long)"})
   public void testIncreaseWithLastUsageUsageLastTimeNowWindowSize_whenTwo_thenReturnSeven() {
     // Arrange, Act and Assert
@@ -95,7 +100,8 @@ public class ResourceProcessorDiffblueTest {
    * <p>Method under test: {@link ResourceProcessor#increase(long, long, long, long, long)}
    */
   @Test
-  @Category(MaintainedByDiffblue.class)
+  @Category(ContributionFromDiffblue.class)
+  @ManagedByDiffblue
   @MethodsUnderTest({"long ResourceProcessor.increase(long, long, long, long, long)"})
   public void testIncreaseWithLastUsageUsageLastTimeNowWindowSize_whenZero_thenReturnFive() {
     // Arrange, Act and Assert
@@ -113,7 +119,8 @@ public class ResourceProcessorDiffblueTest {
    * <p>Method under test: {@link ResourceProcessor#increase(long, long, long, long)}
    */
   @Test
-  @Category(MaintainedByDiffblue.class)
+  @Category(ContributionFromDiffblue.class)
+  @ManagedByDiffblue
   @MethodsUnderTest({"long ResourceProcessor.increase(long, long, long, long)"})
   public void testIncreaseWithLastUsageUsageLastTimeNow_thenReturnTen() {
     // Arrange, Act and Assert
@@ -132,7 +139,8 @@ public class ResourceProcessorDiffblueTest {
    * <p>Method under test: {@link ResourceProcessor#increase(long, long, long, long)}
    */
   @Test
-  @Category(MaintainedByDiffblue.class)
+  @Category(ContributionFromDiffblue.class)
+  @ManagedByDiffblue
   @MethodsUnderTest({"long ResourceProcessor.increase(long, long, long, long)"})
   public void testIncreaseWithLastUsageUsageLastTimeNow_when17600_thenReturn17605() {
     // Arrange, Act and Assert
@@ -152,7 +160,8 @@ public class ResourceProcessorDiffblueTest {
    * <p>Method under test: {@link ResourceProcessor#increase(long, long, long, long)}
    */
   @Test
-  @Category(MaintainedByDiffblue.class)
+  @Category(ContributionFromDiffblue.class)
+  @ManagedByDiffblue
   @MethodsUnderTest({"long ResourceProcessor.increase(long, long, long, long)"})
   public void testIncreaseWithLastUsageUsageLastTimeNow_whenMax_value_thenReturnFive() {
     // Arrange, Act and Assert
@@ -173,7 +182,8 @@ public class ResourceProcessorDiffblueTest {
    * <p>Method under test: {@link ResourceProcessor#increase(long, long, long, long)}
    */
   @Test
-  @Category(MaintainedByDiffblue.class)
+  @Category(ContributionFromDiffblue.class)
+  @ManagedByDiffblue
   @MethodsUnderTest({"long ResourceProcessor.increase(long, long, long, long)"})
   public void testIncreaseWithLastUsageUsageLastTimeNow_whenOne_thenReturnSix() {
     // Arrange, Act and Assert
@@ -192,7 +202,8 @@ public class ResourceProcessorDiffblueTest {
    * <p>Method under test: {@link ResourceProcessor#increase(long, long, long, long)}
    */
   @Test
-  @Category(MaintainedByDiffblue.class)
+  @Category(ContributionFromDiffblue.class)
+  @ManagedByDiffblue
   @MethodsUnderTest({"long ResourceProcessor.increase(long, long, long, long)"})
   public void testIncreaseWithLastUsageUsageLastTimeNow_whenOne_thenReturnTen() {
     // Arrange, Act and Assert
@@ -211,7 +222,8 @@ public class ResourceProcessorDiffblueTest {
    * <p>Method under test: {@link ResourceProcessor#increase(long, long, long, long)}
    */
   @Test
-  @Category(MaintainedByDiffblue.class)
+  @Category(ContributionFromDiffblue.class)
+  @ManagedByDiffblue
   @MethodsUnderTest({"long ResourceProcessor.increase(long, long, long, long)"})
   public void testIncreaseWithLastUsageUsageLastTimeNow_whenZero_thenReturnFive() {
     // Arrange, Act and Assert

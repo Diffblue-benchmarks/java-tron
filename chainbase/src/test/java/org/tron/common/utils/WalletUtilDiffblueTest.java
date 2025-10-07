@@ -6,7 +6,8 @@ import static org.junit.Assert.assertFalse;
 import static org.junit.Assert.assertNull;
 import static org.junit.Assert.assertThrows;
 import static org.junit.Assert.assertTrue;
-import com.diffblue.cover.annotations.MaintainedByDiffblue;
+import com.diffblue.cover.annotations.ContributionFromDiffblue;
+import com.diffblue.cover.annotations.ManagedByDiffblue;
 import com.diffblue.cover.annotations.MethodsUnderTest;
 import java.io.UnsupportedEncodingException;
 import java.util.ArrayList;
@@ -33,7 +34,8 @@ public class WalletUtilDiffblueTest {
    * Transaction.Contract)}
    */
   @Test
-  @Category(MaintainedByDiffblue.class)
+  @Category(ContributionFromDiffblue.class)
+  @ManagedByDiffblue
   @MethodsUnderTest({
     "boolean WalletUtil.checkPermissionOperations(Permission, Transaction.Contract)"
   })
@@ -52,7 +54,8 @@ public class WalletUtilDiffblueTest {
    * <p>Method under test: {@link WalletUtil#generateContractAddress2(byte[], byte[], byte[])}
    */
   @Test
-  @Category(MaintainedByDiffblue.class)
+  @Category(ContributionFromDiffblue.class)
+  @ManagedByDiffblue
   @MethodsUnderTest({"byte[] WalletUtil.generateContractAddress2(byte[], byte[], byte[])"})
   public void testGenerateContractAddress2() throws UnsupportedEncodingException {
     // Arrange and Act
@@ -81,7 +84,8 @@ public class WalletUtilDiffblueTest {
    * <p>Method under test: {@link WalletUtil#isConstant(ABI, byte[])}
    */
   @Test
-  @Category(MaintainedByDiffblue.class)
+  @Category(ContributionFromDiffblue.class)
+  @ManagedByDiffblue
   @MethodsUnderTest({"boolean WalletUtil.isConstant(ABI, byte[])"})
   public void testIsConstantWithAbiSelector_whenAxaxaxaxBytesIsUtf8()
       throws UnsupportedEncodingException {
@@ -103,7 +107,8 @@ public class WalletUtilDiffblueTest {
    * <p>Method under test: {@link WalletUtil#isConstant(ABI, byte[])}
    */
   @Test
-  @Category(MaintainedByDiffblue.class)
+  @Category(ContributionFromDiffblue.class)
+  @ManagedByDiffblue
   @MethodsUnderTest({"boolean WalletUtil.isConstant(ABI, byte[])"})
   public void testIsConstantWithAbiSelector_whenNull() {
     // Arrange, Act and Assert
@@ -117,7 +122,8 @@ public class WalletUtilDiffblueTest {
    * <p>Method under test: {@link WalletUtil#isConstant(ABI, TriggerSmartContract)}
    */
   @Test
-  @Category(MaintainedByDiffblue.class)
+  @Category(ContributionFromDiffblue.class)
+  @ManagedByDiffblue
   @MethodsUnderTest({"boolean WalletUtil.isConstant(ABI, TriggerSmartContract)"})
   public void testIsConstantWithAbiTriggerSmartContract() throws ContractValidateException {
     // Arrange, Act and Assert
@@ -131,7 +137,8 @@ public class WalletUtilDiffblueTest {
    * <p>Method under test: {@link WalletUtil#getAddressStringList(Collection)}
    */
   @Test
-  @Category(MaintainedByDiffblue.class)
+  @Category(ContributionFromDiffblue.class)
+  @ManagedByDiffblue
   @MethodsUnderTest({"List WalletUtil.getAddressStringList(Collection)"})
   public void testGetAddressStringList() {
     // Arrange and Act
@@ -152,7 +159,8 @@ public class WalletUtilDiffblueTest {
    * <p>Method under test: {@link WalletUtil#getSelector(byte[])}
    */
   @Test
-  @Category(MaintainedByDiffblue.class)
+  @Category(ContributionFromDiffblue.class)
+  @ManagedByDiffblue
   @MethodsUnderTest({"byte[] WalletUtil.getSelector(byte[])"})
   public void testGetSelector_whenAxaxaxaxBytesIsUtf8_thenReturnAxaxBytesIsUtf8()
       throws UnsupportedEncodingException {
@@ -172,7 +180,8 @@ public class WalletUtilDiffblueTest {
    * <p>Method under test: {@link WalletUtil#getSelector(byte[])}
    */
   @Test
-  @Category(MaintainedByDiffblue.class)
+  @Category(ContributionFromDiffblue.class)
+  @ManagedByDiffblue
   @MethodsUnderTest({"byte[] WalletUtil.getSelector(byte[])"})
   public void testGetSelector_whenEmptyArrayOfByte_thenReturnNull() {
     // Arrange, Act and Assert
@@ -190,7 +199,8 @@ public class WalletUtilDiffblueTest {
    * <p>Method under test: {@link WalletUtil#getSelector(byte[])}
    */
   @Test
-  @Category(MaintainedByDiffblue.class)
+  @Category(ContributionFromDiffblue.class)
+  @ManagedByDiffblue
   @MethodsUnderTest({"byte[] WalletUtil.getSelector(byte[])"})
   public void testGetSelector_whenNull_thenReturnNull() {
     // Arrange, Act and Assert
@@ -208,7 +218,8 @@ public class WalletUtilDiffblueTest {
    * <p>Method under test: {@link WalletUtil#isLong(String)}
    */
   @Test
-  @Category(MaintainedByDiffblue.class)
+  @Category(ContributionFromDiffblue.class)
+  @ManagedByDiffblue
   @MethodsUnderTest({"java.lang.Long WalletUtil.isLong(String)"})
   public void testIsLong_when42_thenReturnLongValueIsFortyTwo() {
     // Arrange, Act and Assert
@@ -226,7 +237,8 @@ public class WalletUtilDiffblueTest {
    * <p>Method under test: {@link WalletUtil#isLong(String)}
    */
   @Test
-  @Category(MaintainedByDiffblue.class)
+  @Category(ContributionFromDiffblue.class)
+  @ManagedByDiffblue
   @MethodsUnderTest({"java.lang.Long WalletUtil.isLong(String)"})
   public void testIsLong_whenFoo_thenReturnNull() {
     // Arrange, Act and Assert

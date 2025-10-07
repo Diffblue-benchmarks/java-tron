@@ -5,7 +5,8 @@ import static org.junit.Assert.assertEquals;
 import static org.junit.Assert.assertFalse;
 import static org.junit.Assert.assertNotEquals;
 import static org.junit.Assert.assertTrue;
-import com.diffblue.cover.annotations.MaintainedByDiffblue;
+import com.diffblue.cover.annotations.ContributionFromDiffblue;
+import com.diffblue.cover.annotations.ManagedByDiffblue;
 import com.diffblue.cover.annotations.MethodsUnderTest;
 import java.io.UnsupportedEncodingException;
 import java.math.BigInteger;
@@ -24,7 +25,8 @@ public class FpDiffblueTest {
    * </ul>
    */
   @Test
-  @Category(MaintainedByDiffblue.class)
+  @Category(ContributionFromDiffblue.class)
+  @ManagedByDiffblue
   @MethodsUnderTest({"void Fp.<init>(BigInteger)", "String Fp.toString()"})
   public void testGettersAndSetters() {
     // Arrange and Act
@@ -55,7 +57,8 @@ public class FpDiffblueTest {
    * <p>Method under test: {@link Fp#create(BigInteger)}
    */
   @Test
-  @Category(MaintainedByDiffblue.class)
+  @Category(ContributionFromDiffblue.class)
+  @ManagedByDiffblue
   @MethodsUnderTest({"Fp Fp.create(BigInteger)"})
   public void testCreateWithBigInteger() {
     // Arrange and Act
@@ -88,7 +91,8 @@ public class FpDiffblueTest {
    * <p>Method under test: {@link Fp#create(byte[])}
    */
   @Test
-  @Category(MaintainedByDiffblue.class)
+  @Category(ContributionFromDiffblue.class)
+  @ManagedByDiffblue
   @MethodsUnderTest({"Fp Fp.create(byte[])"})
   public void testCreateWithByte() throws UnsupportedEncodingException {
     // Arrange and Act
@@ -111,7 +115,8 @@ public class FpDiffblueTest {
    * <p>Method under test: {@link Fp#add(Fp)}
    */
   @Test
-  @Category(MaintainedByDiffblue.class)
+  @Category(ContributionFromDiffblue.class)
+  @ManagedByDiffblue
   @MethodsUnderTest({"Fp Fp.add(Fp)"})
   public void testAddWithFp() {
     // Arrange and Act
@@ -144,7 +149,8 @@ public class FpDiffblueTest {
    * <p>Method under test: {@link Fp#mul(Fp2)}
    */
   @Test
-  @Category(MaintainedByDiffblue.class)
+  @Category(ContributionFromDiffblue.class)
+  @ManagedByDiffblue
   @MethodsUnderTest({"Fp2 Fp.mul(Fp2)"})
   public void testMulWithFp2() {
     // Arrange and Act
@@ -187,7 +193,8 @@ public class FpDiffblueTest {
    * <p>Method under test: {@link Fp#mul(Fp)}
    */
   @Test
-  @Category(MaintainedByDiffblue.class)
+  @Category(ContributionFromDiffblue.class)
+  @ManagedByDiffblue
   @MethodsUnderTest({"Fp Fp.mul(Fp)"})
   public void testMulWithFp_givenNon_residue_whenNon_residue_thenReturn_1() {
     // Arrange, Act and Assert
@@ -206,7 +213,8 @@ public class FpDiffblueTest {
    * <p>Method under test: {@link Fp#sub(Fp)}
    */
   @Test
-  @Category(MaintainedByDiffblue.class)
+  @Category(ContributionFromDiffblue.class)
+  @ManagedByDiffblue
   @MethodsUnderTest({"Fp Fp.sub(Fp)"})
   public void testSubWithFp_givenNon_residue_whenNon_residue_thenReturnZero() {
     // Arrange, Act and Assert
@@ -224,7 +232,8 @@ public class FpDiffblueTest {
    * <p>Method under test: {@link Fp#squared()}
    */
   @Test
-  @Category(MaintainedByDiffblue.class)
+  @Category(ContributionFromDiffblue.class)
+  @ManagedByDiffblue
   @MethodsUnderTest({"Fp Fp.squared()"})
   public void testSquared_givenNon_residue_thenReturn_1() {
     // Arrange, Act and Assert
@@ -237,7 +246,8 @@ public class FpDiffblueTest {
    * <p>Method under test: {@link Fp#dbl()}
    */
   @Test
-  @Category(MaintainedByDiffblue.class)
+  @Category(ContributionFromDiffblue.class)
+  @ManagedByDiffblue
   @MethodsUnderTest({"Fp Fp.dbl()"})
   public void testDbl() {
     // Arrange and Act
@@ -275,7 +285,8 @@ public class FpDiffblueTest {
    * <p>Method under test: {@link Fp#inverse()}
    */
   @Test
-  @Category(MaintainedByDiffblue.class)
+  @Category(ContributionFromDiffblue.class)
+  @ManagedByDiffblue
   @MethodsUnderTest({"Fp Fp.inverse()"})
   public void testInverse_givenNon_residue_thenReturnNon_residue() {
     // Arrange, Act and Assert
@@ -293,7 +304,8 @@ public class FpDiffblueTest {
    * <p>Method under test: {@link Fp#negate()}
    */
   @Test
-  @Category(MaintainedByDiffblue.class)
+  @Category(ContributionFromDiffblue.class)
+  @ManagedByDiffblue
   @MethodsUnderTest({"Fp Fp.negate()"})
   public void testNegate_givenNon_residue_thenReturn_1() {
     // Arrange, Act and Assert
@@ -311,7 +323,8 @@ public class FpDiffblueTest {
    * <p>Method under test: {@link Fp#isZero()}
    */
   @Test
-  @Category(MaintainedByDiffblue.class)
+  @Category(ContributionFromDiffblue.class)
+  @ManagedByDiffblue
   @MethodsUnderTest({"boolean Fp.isZero()"})
   public void testIsZero_givenNon_residue_thenReturnFalse() {
     // Arrange, Act and Assert
@@ -329,7 +342,8 @@ public class FpDiffblueTest {
    * <p>Method under test: {@link Fp#isZero()}
    */
   @Test
-  @Category(MaintainedByDiffblue.class)
+  @Category(ContributionFromDiffblue.class)
+  @ManagedByDiffblue
   @MethodsUnderTest({"boolean Fp.isZero()"})
   public void testIsZero_givenZero_thenReturnTrue() {
     // Arrange, Act and Assert
@@ -347,7 +361,8 @@ public class FpDiffblueTest {
    * <p>Method under test: {@link Fp#isValid()}
    */
   @Test
-  @Category(MaintainedByDiffblue.class)
+  @Category(ContributionFromDiffblue.class)
+  @ManagedByDiffblue
   @MethodsUnderTest({"boolean Fp.isValid()"})
   public void testIsValid_givenFpWithVIsP_thenReturnFalse() {
     // Arrange, Act and Assert
@@ -365,7 +380,8 @@ public class FpDiffblueTest {
    * <p>Method under test: {@link Fp#isValid()}
    */
   @Test
-  @Category(MaintainedByDiffblue.class)
+  @Category(ContributionFromDiffblue.class)
+  @ManagedByDiffblue
   @MethodsUnderTest({"boolean Fp.isValid()"})
   public void testIsValid_givenNon_residue_thenReturnTrue() {
     // Arrange, Act and Assert
@@ -383,7 +399,8 @@ public class FpDiffblueTest {
    * <p>Method under test: {@link Fp#bytes()}
    */
   @Test
-  @Category(MaintainedByDiffblue.class)
+  @Category(ContributionFromDiffblue.class)
+  @ManagedByDiffblue
   @MethodsUnderTest({"byte[] Fp.bytes()"})
   public void testBytes_givenNon_residue_thenReturnArrayOfByteWith0AndD() {
     // Arrange, Act and Assert
@@ -411,7 +428,8 @@ public class FpDiffblueTest {
    * </ul>
    */
   @Test
-  @Category(MaintainedByDiffblue.class)
+  @Category(ContributionFromDiffblue.class)
+  @ManagedByDiffblue
   @MethodsUnderTest({"boolean Fp.equals(Object)", "int Fp.hashCode()"})
   public void testEqualsAndHashCode_whenOtherIsEqual_thenReturnEqual() {
     // Arrange
@@ -439,7 +457,8 @@ public class FpDiffblueTest {
    * </ul>
    */
   @Test
-  @Category(MaintainedByDiffblue.class)
+  @Category(ContributionFromDiffblue.class)
+  @ManagedByDiffblue
   @MethodsUnderTest({"boolean Fp.equals(Object)", "int Fp.hashCode()"})
   public void testEqualsAndHashCode_whenOtherIsEqual_thenReturnEqual2() {
     // Arrange
@@ -467,7 +486,8 @@ public class FpDiffblueTest {
    * </ul>
    */
   @Test
-  @Category(MaintainedByDiffblue.class)
+  @Category(ContributionFromDiffblue.class)
+  @ManagedByDiffblue
   @MethodsUnderTest({"boolean Fp.equals(Object)", "int Fp.hashCode()"})
   public void testEqualsAndHashCode_whenOtherIsSame_thenReturnEqual() {
     // Arrange
@@ -490,7 +510,8 @@ public class FpDiffblueTest {
    * <p>Method under test: {@link Fp#equals(Object)}
    */
   @Test
-  @Category(MaintainedByDiffblue.class)
+  @Category(ContributionFromDiffblue.class)
+  @ManagedByDiffblue
   @MethodsUnderTest({"boolean Fp.equals(Object)", "int Fp.hashCode()"})
   public void testEquals_whenOtherIsDifferent_thenReturnNotEqual() {
     // Arrange, Act and Assert
@@ -508,7 +529,8 @@ public class FpDiffblueTest {
    * <p>Method under test: {@link Fp#equals(Object)}
    */
   @Test
-  @Category(MaintainedByDiffblue.class)
+  @Category(ContributionFromDiffblue.class)
+  @ManagedByDiffblue
   @MethodsUnderTest({"boolean Fp.equals(Object)", "int Fp.hashCode()"})
   public void testEquals_whenOtherIsDifferent_thenReturnNotEqual2() {
     // Arrange, Act and Assert
@@ -526,7 +548,8 @@ public class FpDiffblueTest {
    * <p>Method under test: {@link Fp#equals(Object)}
    */
   @Test
-  @Category(MaintainedByDiffblue.class)
+  @Category(ContributionFromDiffblue.class)
+  @ManagedByDiffblue
   @MethodsUnderTest({"boolean Fp.equals(Object)", "int Fp.hashCode()"})
   public void testEquals_whenOtherIsEqual_thenReturnEqual() {
     // Arrange
@@ -547,7 +570,8 @@ public class FpDiffblueTest {
    * <p>Method under test: {@link Fp#equals(Object)}
    */
   @Test
-  @Category(MaintainedByDiffblue.class)
+  @Category(ContributionFromDiffblue.class)
+  @ManagedByDiffblue
   @MethodsUnderTest({"boolean Fp.equals(Object)", "int Fp.hashCode()"})
   public void testEquals_whenOtherIsNull_thenReturnNotEqual() {
     // Arrange, Act and Assert
@@ -565,7 +589,8 @@ public class FpDiffblueTest {
    * <p>Method under test: {@link Fp#equals(Object)}
    */
   @Test
-  @Category(MaintainedByDiffblue.class)
+  @Category(ContributionFromDiffblue.class)
+  @ManagedByDiffblue
   @MethodsUnderTest({"boolean Fp.equals(Object)", "int Fp.hashCode()"})
   public void testEquals_whenOtherIsWrongType_thenReturnNotEqual() {
     // Arrange, Act and Assert

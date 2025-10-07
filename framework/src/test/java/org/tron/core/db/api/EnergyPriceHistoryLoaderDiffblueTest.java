@@ -7,7 +7,8 @@ import static org.mockito.Mockito.doNothing;
 import static org.mockito.Mockito.mock;
 import static org.mockito.Mockito.verify;
 import static org.mockito.Mockito.when;
-import com.diffblue.cover.annotations.MaintainedByDiffblue;
+import com.diffblue.cover.annotations.ContributionFromDiffblue;
+import com.diffblue.cover.annotations.ManagedByDiffblue;
 import com.diffblue.cover.annotations.MethodsUnderTest;
 import java.util.ArrayList;
 import java.util.HashMap;
@@ -29,7 +30,8 @@ public class EnergyPriceHistoryLoaderDiffblueTest {
    * <p>Method under test: {@link EnergyPriceHistoryLoader#doWork()}
    */
   @Test
-  @Category(MaintainedByDiffblue.class)
+  @Category(ContributionFromDiffblue.class)
+  @ManagedByDiffblue
   @MethodsUnderTest({"void EnergyPriceHistoryLoader.doWork()"})
   public void testDoWork() {
     // Arrange
@@ -78,7 +80,8 @@ public class EnergyPriceHistoryLoaderDiffblueTest {
    * <p>Method under test: {@link EnergyPriceHistoryLoader#getEnergyProposals()}
    */
   @Test
-  @Category(MaintainedByDiffblue.class)
+  @Category(ContributionFromDiffblue.class)
+  @ManagedByDiffblue
   @MethodsUnderTest({"void EnergyPriceHistoryLoader.getEnergyProposals()"})
   public void testGetEnergyProposals_thenCallsGetProposalStore() {
     // Arrange
@@ -103,7 +106,8 @@ public class EnergyPriceHistoryLoaderDiffblueTest {
    * <p>Method under test: {@link EnergyPriceHistoryLoader#parseProposalsToStr()}
    */
   @Test
-  @Category(MaintainedByDiffblue.class)
+  @Category(ContributionFromDiffblue.class)
+  @ManagedByDiffblue
   @MethodsUnderTest({"String EnergyPriceHistoryLoader.parseProposalsToStr()"})
   public void testParseProposalsToStr() {
     // Arrange, Act and Assert
@@ -122,7 +126,8 @@ public class EnergyPriceHistoryLoaderDiffblueTest {
    * <p>Method under test: {@link EnergyPriceHistoryLoader#finish()}
    */
   @Test
-  @Category(MaintainedByDiffblue.class)
+  @Category(ContributionFromDiffblue.class)
+  @ManagedByDiffblue
   @MethodsUnderTest({"void EnergyPriceHistoryLoader.finish()"})
   public void testFinish_thenCallsGetDynamicPropertiesStore() {
     // Arrange

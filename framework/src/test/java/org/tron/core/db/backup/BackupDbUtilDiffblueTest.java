@@ -2,7 +2,8 @@ package org.tron.core.db.backup;
 
 import static org.junit.Assert.assertEquals;
 import static org.junit.Assert.assertNull;
-import com.diffblue.cover.annotations.MaintainedByDiffblue;
+import com.diffblue.cover.annotations.ContributionFromDiffblue;
+import com.diffblue.cover.annotations.ManagedByDiffblue;
 import com.diffblue.cover.annotations.MethodsUnderTest;
 import org.junit.Test;
 import org.junit.experimental.categories.Category;
@@ -15,7 +16,8 @@ public class BackupDbUtilDiffblueTest {
    * <p>Method under test: {@link BackupDbUtil#getDB_BACKUP_STATE_DEFAULT()}
    */
   @Test
-  @Category(MaintainedByDiffblue.class)
+  @Category(ContributionFromDiffblue.class)
+  @ManagedByDiffblue
   @MethodsUnderTest({"int BackupDbUtil.getDB_BACKUP_STATE_DEFAULT()"})
   public void testGetDB_BACKUP_STATE_DEFAULT() {
     // Arrange, Act and Assert
@@ -33,7 +35,8 @@ public class BackupDbUtilDiffblueTest {
    * </ul>
    */
   @Test
-  @Category(MaintainedByDiffblue.class)
+  @Category(ContributionFromDiffblue.class)
+  @ManagedByDiffblue
   @MethodsUnderTest({
     "String BackupDbUtil.getDB_BACKUP_STATE()",
     "org.tron.core.db.RevokingDatabase BackupDbUtil.getDb()"
@@ -56,7 +59,8 @@ public class BackupDbUtilDiffblueTest {
    * <p>Method under test: {@link State#getStatus()}
    */
   @Test
-  @Category(MaintainedByDiffblue.class)
+  @Category(ContributionFromDiffblue.class)
+  @ManagedByDiffblue
   @MethodsUnderTest({"int State.getStatus()"})
   public void testStateGetStatus() {
     // Arrange, Act and Assert
@@ -74,7 +78,8 @@ public class BackupDbUtilDiffblueTest {
    * <p>Method under test: {@link State#valueOf(int)}
    */
   @Test
-  @Category(MaintainedByDiffblue.class)
+  @Category(ContributionFromDiffblue.class)
+  @ManagedByDiffblue
   @MethodsUnderTest({"State State.valueOf(int)"})
   public void testStateValueOfWithValue_whenEleven_thenReturnBakedone() {
     // Arrange, Act and Assert
@@ -92,7 +97,8 @@ public class BackupDbUtilDiffblueTest {
    * <p>Method under test: {@link State#valueOf(int)}
    */
   @Test
-  @Category(MaintainedByDiffblue.class)
+  @Category(ContributionFromDiffblue.class)
+  @ManagedByDiffblue
   @MethodsUnderTest({"State State.valueOf(int)"})
   public void testStateValueOfWithValue_whenFortyTwo_thenReturnBakedone() {
     // Arrange, Act and Assert
@@ -110,7 +116,8 @@ public class BackupDbUtilDiffblueTest {
    * <p>Method under test: {@link State#valueOf(int)}
    */
   @Test
-  @Category(MaintainedByDiffblue.class)
+  @Category(ContributionFromDiffblue.class)
+  @ManagedByDiffblue
   @MethodsUnderTest({"State State.valueOf(int)"})
   public void testStateValueOfWithValue_whenOne_thenReturnBakingone() {
     // Arrange, Act and Assert
@@ -128,7 +135,8 @@ public class BackupDbUtilDiffblueTest {
    * <p>Method under test: {@link State#valueOf(int)}
    */
   @Test
-  @Category(MaintainedByDiffblue.class)
+  @Category(ContributionFromDiffblue.class)
+  @ManagedByDiffblue
   @MethodsUnderTest({"State State.valueOf(int)"})
   public void testStateValueOfWithValue_whenTwentyTwo_thenReturnBakedtwo() {
     // Arrange, Act and Assert
@@ -146,7 +154,8 @@ public class BackupDbUtilDiffblueTest {
    * <p>Method under test: {@link State#valueOf(int)}
    */
   @Test
-  @Category(MaintainedByDiffblue.class)
+  @Category(ContributionFromDiffblue.class)
+  @ManagedByDiffblue
   @MethodsUnderTest({"State State.valueOf(int)"})
   public void testStateValueOfWithValue_whenTwo_thenReturnBakingtwo() {
     // Arrange, Act and Assert

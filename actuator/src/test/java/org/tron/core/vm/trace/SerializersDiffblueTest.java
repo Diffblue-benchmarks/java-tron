@@ -8,7 +8,8 @@ import static org.junit.Assert.assertTrue;
 import static org.mockito.Mockito.doNothing;
 import static org.mockito.Mockito.mock;
 import static org.mockito.Mockito.verify;
-import com.diffblue.cover.annotations.MaintainedByDiffblue;
+import com.diffblue.cover.annotations.ContributionFromDiffblue;
+import com.diffblue.cover.annotations.ManagedByDiffblue;
 import com.diffblue.cover.annotations.MethodsUnderTest;
 import com.fasterxml.jackson.core.JsonFactory;
 import com.fasterxml.jackson.core.JsonGenerator;
@@ -37,7 +38,8 @@ public class SerializersDiffblueTest {
    * <p>Method under test: default or parameterless constructor of {@link ByteArraySerializer}
    */
   @Test
-  @Category(MaintainedByDiffblue.class)
+  @Category(ContributionFromDiffblue.class)
+  @ManagedByDiffblue
   @MethodsUnderTest({"void ByteArraySerializer.<init>()"})
   public void testByteArraySerializerNewByteArraySerializer() {
     // Arrange and Act
@@ -56,7 +58,8 @@ public class SerializersDiffblueTest {
    * SerializerProvider)}
    */
   @Test
-  @Category(MaintainedByDiffblue.class)
+  @Category(ContributionFromDiffblue.class)
+  @ManagedByDiffblue
   @MethodsUnderTest({
     "void ByteArraySerializer.serialize(byte[], JsonGenerator, SerializerProvider)"
   })
@@ -84,7 +87,8 @@ public class SerializersDiffblueTest {
    * <p>Method under test: default or parameterless constructor of {@link DataWordSerializer}
    */
   @Test
-  @Category(MaintainedByDiffblue.class)
+  @Category(ContributionFromDiffblue.class)
+  @ManagedByDiffblue
   @MethodsUnderTest({"void DataWordSerializer.<init>()"})
   public void testDataWordSerializerNewDataWordSerializer() {
     // Arrange and Act
@@ -103,7 +107,8 @@ public class SerializersDiffblueTest {
    * SerializerProvider)}
    */
   @Test
-  @Category(MaintainedByDiffblue.class)
+  @Category(ContributionFromDiffblue.class)
+  @ManagedByDiffblue
   @MethodsUnderTest({
     "void DataWordSerializer.serialize(DataWord, JsonGenerator, SerializerProvider)"
   })
@@ -131,7 +136,8 @@ public class SerializersDiffblueTest {
    * <p>Method under test: default or parameterless constructor of {@link OpCodeSerializer}
    */
   @Test
-  @Category(MaintainedByDiffblue.class)
+  @Category(ContributionFromDiffblue.class)
+  @ManagedByDiffblue
   @MethodsUnderTest({"void OpCodeSerializer.<init>()"})
   public void testOpCodeSerializerNewOpCodeSerializer() {
     // Arrange and Act
@@ -150,7 +156,8 @@ public class SerializersDiffblueTest {
    * SerializerProvider)}
    */
   @Test
-  @Category(MaintainedByDiffblue.class)
+  @Category(ContributionFromDiffblue.class)
+  @ManagedByDiffblue
   @MethodsUnderTest({"void OpCodeSerializer.serialize(Byte, JsonGenerator, SerializerProvider)"})
   public void testOpCodeSerializerSerializeWithByteJsonGeneratorSerializerProvider()
       throws IOException {
@@ -175,7 +182,8 @@ public class SerializersDiffblueTest {
    * <p>Method under test: {@link Serializers#serializeFieldsOnly(Object, boolean)}
    */
   @Test
-  @Category(MaintainedByDiffblue.class)
+  @Category(ContributionFromDiffblue.class)
+  @ManagedByDiffblue
   @MethodsUnderTest({"String Serializers.serializeFieldsOnly(Object, boolean)"})
   public void testSerializeFieldsOnly() {
     // Arrange, Act and Assert
@@ -195,7 +203,8 @@ public class SerializersDiffblueTest {
    * <p>Method under test: {@link Serializers#serializeFieldsOnly(Object, boolean)}
    */
   @Test
-  @Category(MaintainedByDiffblue.class)
+  @Category(ContributionFromDiffblue.class)
+  @ManagedByDiffblue
   @MethodsUnderTest({"String Serializers.serializeFieldsOnly(Object, boolean)"})
   public void testSerializeFieldsOnly_givenHashMapFooIs42_thenReturnNamePopParamsFoo42() {
     // Arrange
@@ -224,7 +233,8 @@ public class SerializersDiffblueTest {
    * <p>Method under test: {@link Serializers#serializeFieldsOnly(Object, boolean)}
    */
   @Test
-  @Category(MaintainedByDiffblue.class)
+  @Category(ContributionFromDiffblue.class)
+  @ManagedByDiffblue
   @MethodsUnderTest({"String Serializers.serializeFieldsOnly(Object, boolean)"})
   public void testSerializeFieldsOnly_givenHashMap_whenActionNameIsPop_thenReturnNamePopParams() {
     // Arrange
@@ -248,7 +258,8 @@ public class SerializersDiffblueTest {
    * <p>Method under test: {@link Serializers#serializeFieldsOnly(Object, boolean)}
    */
   @Test
-  @Category(MaintainedByDiffblue.class)
+  @Category(ContributionFromDiffblue.class)
+  @ManagedByDiffblue
   @MethodsUnderTest({"String Serializers.serializeFieldsOnly(Object, boolean)"})
   public void testSerializeFieldsOnly_whenNull_thenReturnNull() {
     // Arrange, Act and Assert
@@ -265,7 +276,8 @@ public class SerializersDiffblueTest {
    * <p>Method under test: {@link Serializers#serializeFieldsOnly(Object, boolean)}
    */
   @Test
-  @Category(MaintainedByDiffblue.class)
+  @Category(ContributionFromDiffblue.class)
+  @ManagedByDiffblue
   @MethodsUnderTest({"String Serializers.serializeFieldsOnly(Object, boolean)"})
   public void testSerializeFieldsOnly_whenTrue() {
     // Arrange, Act and Assert
@@ -284,7 +296,8 @@ public class SerializersDiffblueTest {
    * <p>Method under test: {@link Serializers#createMapper(boolean)}
    */
   @Test
-  @Category(MaintainedByDiffblue.class)
+  @Category(ContributionFromDiffblue.class)
+  @ManagedByDiffblue
   @MethodsUnderTest({"ObjectMapper Serializers.createMapper(boolean)"})
   public void testCreateMapper_whenFalse() {
     // Arrange and Act
@@ -307,7 +320,8 @@ public class SerializersDiffblueTest {
    * <p>Method under test: {@link Serializers#createMapper(boolean)}
    */
   @Test
-  @Category(MaintainedByDiffblue.class)
+  @Category(ContributionFromDiffblue.class)
+  @ManagedByDiffblue
   @MethodsUnderTest({"ObjectMapper Serializers.createMapper(boolean)"})
   public void testCreateMapper_whenTrue() {
     // Arrange and Act

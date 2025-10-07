@@ -3,7 +3,8 @@ package org.tron.common.logsfilter;
 import static org.junit.Assert.assertEquals;
 import static org.junit.Assert.assertSame;
 import static org.junit.Assert.assertTrue;
-import com.diffblue.cover.annotations.MaintainedByDiffblue;
+import com.diffblue.cover.annotations.ContributionFromDiffblue;
+import com.diffblue.cover.annotations.ManagedByDiffblue;
 import com.diffblue.cover.annotations.MethodsUnderTest;
 import java.util.ArrayList;
 import java.util.List;
@@ -22,7 +23,8 @@ public class FilterQueryDiffblueTest {
    * <p>Method under test: {@link FilterQuery#parseFromBlockNumber(String)}
    */
   @Test
-  @Category(MaintainedByDiffblue.class)
+  @Category(ContributionFromDiffblue.class)
+  @ManagedByDiffblue
   @MethodsUnderTest({"long FilterQuery.parseFromBlockNumber(String)"})
   public void testParseFromBlockNumber_when42_thenReturnFortyTwo() {
     // Arrange, Act and Assert
@@ -40,7 +42,8 @@ public class FilterQueryDiffblueTest {
    * <p>Method under test: {@link FilterQuery#parseFromBlockNumber(String)}
    */
   @Test
-  @Category(MaintainedByDiffblue.class)
+  @Category(ContributionFromDiffblue.class)
+  @ManagedByDiffblue
   @MethodsUnderTest({"long FilterQuery.parseFromBlockNumber(String)"})
   public void testParseFromBlockNumber_whenEarliest_thenReturnZero() {
     // Arrange, Act and Assert
@@ -58,7 +61,8 @@ public class FilterQueryDiffblueTest {
    * <p>Method under test: {@link FilterQuery#parseFromBlockNumber(String)}
    */
   @Test
-  @Category(MaintainedByDiffblue.class)
+  @Category(ContributionFromDiffblue.class)
+  @ManagedByDiffblue
   @MethodsUnderTest({"long FilterQuery.parseFromBlockNumber(String)"})
   public void testParseFromBlockNumber_whenEmptyString_thenReturnZero() {
     // Arrange, Act and Assert
@@ -76,7 +80,8 @@ public class FilterQueryDiffblueTest {
    * <p>Method under test: {@link FilterQuery#parseFromBlockNumber(String)}
    */
   @Test
-  @Category(MaintainedByDiffblue.class)
+  @Category(ContributionFromDiffblue.class)
+  @ManagedByDiffblue
   @MethodsUnderTest({"long FilterQuery.parseFromBlockNumber(String)"})
   public void testParseFromBlockNumber_whenNull_thenReturnZero() {
     // Arrange, Act and Assert
@@ -94,7 +99,8 @@ public class FilterQueryDiffblueTest {
    * <p>Method under test: {@link FilterQuery#parseToBlockNumber(String)}
    */
   @Test
-  @Category(MaintainedByDiffblue.class)
+  @Category(ContributionFromDiffblue.class)
+  @ManagedByDiffblue
   @MethodsUnderTest({"long FilterQuery.parseToBlockNumber(String)"})
   public void testParseToBlockNumber_when42_thenReturnFortyTwo() {
     // Arrange, Act and Assert
@@ -112,7 +118,8 @@ public class FilterQueryDiffblueTest {
    * <p>Method under test: {@link FilterQuery#parseToBlockNumber(String)}
    */
   @Test
-  @Category(MaintainedByDiffblue.class)
+  @Category(ContributionFromDiffblue.class)
+  @ManagedByDiffblue
   @MethodsUnderTest({"long FilterQuery.parseToBlockNumber(String)"})
   public void testParseToBlockNumber_whenEmptyString_thenReturnMinusOne() {
     // Arrange, Act and Assert
@@ -130,7 +137,8 @@ public class FilterQueryDiffblueTest {
    * <p>Method under test: {@link FilterQuery#parseToBlockNumber(String)}
    */
   @Test
-  @Category(MaintainedByDiffblue.class)
+  @Category(ContributionFromDiffblue.class)
+  @ManagedByDiffblue
   @MethodsUnderTest({"long FilterQuery.parseToBlockNumber(String)"})
   public void testParseToBlockNumber_whenLatest_thenReturnMinusOne() {
     // Arrange, Act and Assert
@@ -148,7 +156,8 @@ public class FilterQueryDiffblueTest {
    * <p>Method under test: {@link FilterQuery#parseToBlockNumber(String)}
    */
   @Test
-  @Category(MaintainedByDiffblue.class)
+  @Category(ContributionFromDiffblue.class)
+  @ManagedByDiffblue
   @MethodsUnderTest({"long FilterQuery.parseToBlockNumber(String)"})
   public void testParseToBlockNumber_whenNull_thenReturnMinusOne() {
     // Arrange, Act and Assert
@@ -174,7 +183,8 @@ public class FilterQueryDiffblueTest {
    * </ul>
    */
   @Test
-  @Category(MaintainedByDiffblue.class)
+  @Category(ContributionFromDiffblue.class)
+  @ManagedByDiffblue
   @MethodsUnderTest({
     "void FilterQuery.<init>()",
     "List FilterQuery.getContractAddressList()",

@@ -3,7 +3,8 @@ package org.tron.core.vm.program;
 import static org.junit.Assert.assertArrayEquals;
 import static org.junit.Assert.assertEquals;
 import static org.junit.Assert.assertTrue;
-import com.diffblue.cover.annotations.MaintainedByDiffblue;
+import com.diffblue.cover.annotations.ContributionFromDiffblue;
+import com.diffblue.cover.annotations.ManagedByDiffblue;
 import com.diffblue.cover.annotations.MethodsUnderTest;
 import java.io.UnsupportedEncodingException;
 import java.util.List;
@@ -26,7 +27,8 @@ public class MemoryDiffblueTest {
    * <p>Method under test: {@link Memory#read(int, int)}
    */
   @Test
-  @Category(MaintainedByDiffblue.class)
+  @Category(ContributionFromDiffblue.class)
+  @ManagedByDiffblue
   @MethodsUnderTest({"byte[] Memory.read(int, int)"})
   public void testRead_givenMemoryExtendThreeAndThree_thenReturnArrayOfByteWithZeroAndZero() {
     // Arrange
@@ -56,7 +58,8 @@ public class MemoryDiffblueTest {
    * <p>Method under test: {@link Memory#read(int, int)}
    */
   @Test
-  @Category(MaintainedByDiffblue.class)
+  @Category(ContributionFromDiffblue.class)
+  @ManagedByDiffblue
   @MethodsUnderTest({"byte[] Memory.read(int, int)"})
   public void testRead_givenMemoryProgramListenerIsNull_whenZero_thenMemorySizeIsZero() {
     // Arrange
@@ -84,7 +87,8 @@ public class MemoryDiffblueTest {
    * <p>Method under test: {@link Memory#read(int, int)}
    */
   @Test
-  @Category(MaintainedByDiffblue.class)
+  @Category(ContributionFromDiffblue.class)
+  @ManagedByDiffblue
   @MethodsUnderTest({"byte[] Memory.read(int, int)"})
   public void testRead_givenMemory_whenOne_thenReturnArrayOfByteWithZeroAndZero() {
     // Arrange
@@ -111,7 +115,8 @@ public class MemoryDiffblueTest {
    * <p>Method under test: {@link Memory#read(int, int)}
    */
   @Test
-  @Category(MaintainedByDiffblue.class)
+  @Category(ContributionFromDiffblue.class)
+  @ManagedByDiffblue
   @MethodsUnderTest({"byte[] Memory.read(int, int)"})
   public void testRead_thenReturnArrayOfByteWithZero() {
     // Arrange
@@ -140,7 +145,8 @@ public class MemoryDiffblueTest {
    * <p>Method under test: {@link Memory#write(int, byte[], int, boolean)}
    */
   @Test
-  @Category(MaintainedByDiffblue.class)
+  @Category(ContributionFromDiffblue.class)
+  @ManagedByDiffblue
   @MethodsUnderTest({"void Memory.write(int, byte[], int, boolean)"})
   public void testWrite_givenMemoryExtendThreeAndThree_thenMemoryChunksSizeIsOne()
       throws UnsupportedEncodingException {
@@ -169,7 +175,8 @@ public class MemoryDiffblueTest {
    * <p>Method under test: {@link Memory#write(int, byte[], int, boolean)}
    */
   @Test
-  @Category(MaintainedByDiffblue.class)
+  @Category(ContributionFromDiffblue.class)
+  @ManagedByDiffblue
   @MethodsUnderTest({"void Memory.write(int, byte[], int, boolean)"})
   public void testWrite_givenMemoryProgramListenerIsCompositeProgramListener()
       throws UnsupportedEncodingException {
@@ -199,7 +206,8 @@ public class MemoryDiffblueTest {
    * <p>Method under test: {@link Memory#write(int, byte[], int, boolean)}
    */
   @Test
-  @Category(MaintainedByDiffblue.class)
+  @Category(ContributionFromDiffblue.class)
+  @ManagedByDiffblue
   @MethodsUnderTest({"void Memory.write(int, byte[], int, boolean)"})
   public void testWrite_givenMemoryProgramListenerIsCompositeProgramListener_whenZero() {
     // Arrange
@@ -226,7 +234,8 @@ public class MemoryDiffblueTest {
    * <p>Method under test: {@link Memory#write(int, byte[], int, boolean)}
    */
   @Test
-  @Category(MaintainedByDiffblue.class)
+  @Category(ContributionFromDiffblue.class)
+  @ManagedByDiffblue
   @MethodsUnderTest({"void Memory.write(int, byte[], int, boolean)"})
   public void testWrite_givenMemoryProgramListenerIsNull_whenZero_thenMemorySizeIsZero() {
     // Arrange
@@ -252,7 +261,8 @@ public class MemoryDiffblueTest {
    * <p>Method under test: {@link Memory#write(int, byte[], int, boolean)}
    */
   @Test
-  @Category(MaintainedByDiffblue.class)
+  @Category(ContributionFromDiffblue.class)
+  @ManagedByDiffblue
   @MethodsUnderTest({"void Memory.write(int, byte[], int, boolean)"})
   public void testWrite_givenMemoryProgramListenerIsProgramTraceListenerWithEnabledIsTrue() {
     // Arrange
@@ -279,7 +289,8 @@ public class MemoryDiffblueTest {
    * <p>Method under test: {@link Memory#write(int, byte[], int, boolean)}
    */
   @Test
-  @Category(MaintainedByDiffblue.class)
+  @Category(ContributionFromDiffblue.class)
+  @ManagedByDiffblue
   @MethodsUnderTest({"void Memory.write(int, byte[], int, boolean)"})
   public void testWrite_givenMemory_when19088743_thenMemorySizeIsZero()
       throws UnsupportedEncodingException {
@@ -306,7 +317,8 @@ public class MemoryDiffblueTest {
    * <p>Method under test: {@link Memory#write(int, byte[], int, boolean)}
    */
   @Test
-  @Category(MaintainedByDiffblue.class)
+  @Category(ContributionFromDiffblue.class)
+  @ManagedByDiffblue
   @MethodsUnderTest({"void Memory.write(int, byte[], int, boolean)"})
   public void testWrite_givenMemory_whenAxaxaxaxBytesIsUtf8_thenMemoryChunksSizeIsOne()
       throws UnsupportedEncodingException {
@@ -335,7 +347,8 @@ public class MemoryDiffblueTest {
    * <p>Method under test: {@link Memory#write(int, byte[], int, boolean)}
    */
   @Test
-  @Category(MaintainedByDiffblue.class)
+  @Category(ContributionFromDiffblue.class)
+  @ManagedByDiffblue
   @MethodsUnderTest({"void Memory.write(int, byte[], int, boolean)"})
   public void testWrite_givenMemory_whenEmptyArrayOfByte_thenMemorySizeIsZero() {
     // Arrange
@@ -361,7 +374,8 @@ public class MemoryDiffblueTest {
    * <p>Method under test: {@link Memory#write(int, byte[], int, boolean)}
    */
   @Test
-  @Category(MaintainedByDiffblue.class)
+  @Category(ContributionFromDiffblue.class)
+  @ManagedByDiffblue
   @MethodsUnderTest({"void Memory.write(int, byte[], int, boolean)"})
   public void testWrite_givenMemory_whenTrue_thenMemorySizeIsZero()
       throws UnsupportedEncodingException {
@@ -387,7 +401,8 @@ public class MemoryDiffblueTest {
    * <p>Method under test: {@link Memory#extendAndWrite(int, int, byte[])}
    */
   @Test
-  @Category(MaintainedByDiffblue.class)
+  @Category(ContributionFromDiffblue.class)
+  @ManagedByDiffblue
   @MethodsUnderTest({"void Memory.extendAndWrite(int, int, byte[])"})
   public void testExtendAndWrite_givenMemoryProgramListenerIsCompositeProgramListener()
       throws UnsupportedEncodingException {
@@ -425,7 +440,8 @@ public class MemoryDiffblueTest {
    * <p>Method under test: {@link Memory#extendAndWrite(int, int, byte[])}
    */
   @Test
-  @Category(MaintainedByDiffblue.class)
+  @Category(ContributionFromDiffblue.class)
+  @ManagedByDiffblue
   @MethodsUnderTest({"void Memory.extendAndWrite(int, int, byte[])"})
   public void testExtendAndWrite_givenMemory_whenAxaxaxaxBytesIsUtf8_thenFourthElementIsA()
       throws UnsupportedEncodingException {
@@ -462,7 +478,8 @@ public class MemoryDiffblueTest {
    * <p>Method under test: {@link Memory#extendAndWrite(int, int, byte[])}
    */
   @Test
-  @Category(MaintainedByDiffblue.class)
+  @Category(ContributionFromDiffblue.class)
+  @ManagedByDiffblue
   @MethodsUnderTest({"void Memory.extendAndWrite(int, int, byte[])"})
   public void testExtendAndWrite_givenMemory_whenEmptyArrayOfByte_thenEleventhElementIsZero() {
     // Arrange
@@ -498,7 +515,8 @@ public class MemoryDiffblueTest {
    * <p>Method under test: {@link Memory#extend(int, int)}
    */
   @Test
-  @Category(MaintainedByDiffblue.class)
+  @Category(ContributionFromDiffblue.class)
+  @ManagedByDiffblue
   @MethodsUnderTest({"void Memory.extend(int, int)"})
   public void testExtend_givenMemoryProgramListenerIsNull_whenZero_thenMemorySizeIsZero() {
     // Arrange
@@ -525,7 +543,8 @@ public class MemoryDiffblueTest {
    * <p>Method under test: {@link Memory#extend(int, int)}
    */
   @Test
-  @Category(MaintainedByDiffblue.class)
+  @Category(ContributionFromDiffblue.class)
+  @ManagedByDiffblue
   @MethodsUnderTest({"void Memory.extend(int, int)"})
   public void testExtend_givenMemory_whenMin_value_thenMemorySizeIsZero() {
     // Arrange
@@ -551,7 +570,8 @@ public class MemoryDiffblueTest {
    * <p>Method under test: {@link Memory#extend(int, int)}
    */
   @Test
-  @Category(MaintainedByDiffblue.class)
+  @Category(ContributionFromDiffblue.class)
+  @ManagedByDiffblue
   @MethodsUnderTest({"void Memory.extend(int, int)"})
   public void testExtend_givenMemory_whenThree_thenMemoryChunksSizeIsOne() {
     // Arrange
@@ -577,7 +597,8 @@ public class MemoryDiffblueTest {
    * <p>Method under test: {@link Memory#extend(int, int)}
    */
   @Test
-  @Category(MaintainedByDiffblue.class)
+  @Category(ContributionFromDiffblue.class)
+  @ManagedByDiffblue
   @MethodsUnderTest({"void Memory.extend(int, int)"})
   public void testExtend_thenMemoryChunksSizeIsOne() {
     // Arrange
@@ -604,7 +625,8 @@ public class MemoryDiffblueTest {
    * <p>Method under test: {@link Memory#readWord(int)}
    */
   @Test
-  @Category(MaintainedByDiffblue.class)
+  @Category(ContributionFromDiffblue.class)
+  @ManagedByDiffblue
   @MethodsUnderTest({"DataWord Memory.readWord(int)"})
   public void testReadWord_givenMemoryExtendSizeAndThree() {
     // Arrange
@@ -646,7 +668,8 @@ public class MemoryDiffblueTest {
    * <p>Method under test: {@link Memory#readWord(int)}
    */
   @Test
-  @Category(MaintainedByDiffblue.class)
+  @Category(ContributionFromDiffblue.class)
+  @ManagedByDiffblue
   @MethodsUnderTest({"DataWord Memory.readWord(int)"})
   public void testReadWord_givenMemoryProgramListenerIsCompositeProgramListener() {
     // Arrange
@@ -688,7 +711,8 @@ public class MemoryDiffblueTest {
    * <p>Method under test: {@link Memory#readWord(int)}
    */
   @Test
-  @Category(MaintainedByDiffblue.class)
+  @Category(ContributionFromDiffblue.class)
+  @ManagedByDiffblue
   @MethodsUnderTest({"DataWord Memory.readWord(int)"})
   public void testReadWord_givenMemory_thenReturnLast20BytesIsArrayOfByteWithZeroAndZero() {
     // Arrange and Act
@@ -727,7 +751,8 @@ public class MemoryDiffblueTest {
    * <p>Method under test: {@link Memory#readByte(int)}
    */
   @Test
-  @Category(MaintainedByDiffblue.class)
+  @Category(ContributionFromDiffblue.class)
+  @ManagedByDiffblue
   @MethodsUnderTest({"byte Memory.readByte(int)"})
   public void testReadByte_givenMemoryExtend1024AndThree_whenOne_thenReturnZero() {
     // Arrange
@@ -749,7 +774,8 @@ public class MemoryDiffblueTest {
    * <p>Method under test: {@link Memory#toString()}
    */
   @Test
-  @Category(MaintainedByDiffblue.class)
+  @Category(ContributionFromDiffblue.class)
+  @ManagedByDiffblue
   @MethodsUnderTest({"java.lang.String Memory.toString()"})
   public void testToString_givenMemoryExtendOneAndThree_thenReturnAString() {
     // Arrange
@@ -776,7 +802,8 @@ public class MemoryDiffblueTest {
    * <p>Method under test: {@link Memory#toString()}
    */
   @Test
-  @Category(MaintainedByDiffblue.class)
+  @Category(ContributionFromDiffblue.class)
+  @ManagedByDiffblue
   @MethodsUnderTest({"java.lang.String Memory.toString()"})
   public void testToString_givenMemory_thenReturnEmptyString() {
     // Arrange, Act and Assert
@@ -789,7 +816,8 @@ public class MemoryDiffblueTest {
    * <p>Method under test: {@link Memory#internalSize()}
    */
   @Test
-  @Category(MaintainedByDiffblue.class)
+  @Category(ContributionFromDiffblue.class)
+  @ManagedByDiffblue
   @MethodsUnderTest({"int Memory.internalSize()"})
   public void testInternalSize() {
     // Arrange, Act and Assert
@@ -802,7 +830,8 @@ public class MemoryDiffblueTest {
    * <p>Method under test: {@link Memory#getChunks()}
    */
   @Test
-  @Category(MaintainedByDiffblue.class)
+  @Category(ContributionFromDiffblue.class)
+  @ManagedByDiffblue
   @MethodsUnderTest({"List Memory.getChunks()"})
   public void testGetChunks() {
     // Arrange, Act and Assert
@@ -821,7 +850,8 @@ public class MemoryDiffblueTest {
    * </ul>
    */
   @Test
-  @Category(MaintainedByDiffblue.class)
+  @Category(ContributionFromDiffblue.class)
+  @ManagedByDiffblue
   @MethodsUnderTest({
     "void Memory.<init>()",
     "void Memory.setProgramListener(ProgramListener)",

@@ -5,7 +5,8 @@ import static org.mockito.Mockito.doNothing;
 import static org.mockito.Mockito.mock;
 import static org.mockito.Mockito.verify;
 import static org.mockito.Mockito.when;
-import com.diffblue.cover.annotations.MaintainedByDiffblue;
+import com.diffblue.cover.annotations.ContributionFromDiffblue;
+import com.diffblue.cover.annotations.ManagedByDiffblue;
 import com.diffblue.cover.annotations.MethodsUnderTest;
 import org.junit.Test;
 import org.junit.experimental.categories.Category;
@@ -29,7 +30,8 @@ public class KeepAliveServiceDiffblueTest {
    * <p>Method under test: {@link KeepAliveService#processMessage(PeerConnection, TronMessage)}
    */
   @Test
-  @Category(MaintainedByDiffblue.class)
+  @Category(ContributionFromDiffblue.class)
+  @ManagedByDiffblue
   @MethodsUnderTest({"void KeepAliveService.processMessage(PeerConnection, TronMessage)"})
   public void testProcessMessage_givenFirst_whenPingMessageGetTypeReturnFirst_thenCallsGetType() {
     // Arrange
@@ -57,7 +59,8 @@ public class KeepAliveServiceDiffblueTest {
    * <p>Method under test: {@link KeepAliveService#processMessage(PeerConnection, TronMessage)}
    */
   @Test
-  @Category(MaintainedByDiffblue.class)
+  @Category(ContributionFromDiffblue.class)
+  @ManagedByDiffblue
   @MethodsUnderTest({"void KeepAliveService.processMessage(PeerConnection, TronMessage)"})
   public void testProcessMessage_givenP2pPing_thenCallsSendMessage() {
     // Arrange

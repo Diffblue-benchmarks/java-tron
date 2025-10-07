@@ -10,7 +10,8 @@ import static org.mockito.Mockito.doNothing;
 import static org.mockito.Mockito.mock;
 import static org.mockito.Mockito.verify;
 import static org.mockito.Mockito.when;
-import com.diffblue.cover.annotations.MaintainedByDiffblue;
+import com.diffblue.cover.annotations.ContributionFromDiffblue;
+import com.diffblue.cover.annotations.ManagedByDiffblue;
 import com.diffblue.cover.annotations.MethodsUnderTest;
 import java.io.UnsupportedEncodingException;
 import org.junit.Test;
@@ -75,7 +76,8 @@ public class BlockHandleImplDiffblueTest {
    * <p>Method under test: {@link BlockHandleImpl#getState()}
    */
   @Test
-  @Category(MaintainedByDiffblue.class)
+  @Category(ContributionFromDiffblue.class)
+  @ManagedByDiffblue
   @MethodsUnderTest({"State BlockHandleImpl.getState()"})
   public void testGetState_givenBackupManagerGetStatusReturnInit_thenReturnBackupIsNotMaster() {
     // Arrange
@@ -100,7 +102,8 @@ public class BlockHandleImplDiffblueTest {
    * <p>Method under test: {@link BlockHandleImpl#getState()}
    */
   @Test
-  @Category(MaintainedByDiffblue.class)
+  @Category(ContributionFromDiffblue.class)
+  @ManagedByDiffblue
   @MethodsUnderTest({"State BlockHandleImpl.getState()"})
   public void testGetState_givenBackupManagerGetStatusReturnMaster_thenReturnOk() {
     // Arrange
@@ -120,7 +123,8 @@ public class BlockHandleImplDiffblueTest {
    * <p>Method under test: {@link BlockHandleImpl#getLock()}
    */
   @Test
-  @Category(MaintainedByDiffblue.class)
+  @Category(ContributionFromDiffblue.class)
+  @ManagedByDiffblue
   @MethodsUnderTest({"java.lang.Object BlockHandleImpl.getLock()"})
   public void testGetLock() {
     // Arrange, Act and Assert
@@ -138,7 +142,8 @@ public class BlockHandleImplDiffblueTest {
    * <p>Method under test: {@link BlockHandleImpl#produce(Miner, long, long)}
    */
   @Test
-  @Category(MaintainedByDiffblue.class)
+  @Category(ContributionFromDiffblue.class)
+  @ManagedByDiffblue
   @MethodsUnderTest({"BlockCapsule BlockHandleImpl.produce(Miner, long, long)"})
   public void testProduce_givenConsensusReceiveBlockDoesNothing_thenCallsReceiveBlock()
       throws UnsupportedEncodingException, AccountResourceInsufficientException, BadBlockException,
@@ -182,7 +187,8 @@ public class BlockHandleImplDiffblueTest {
    * <p>Method under test: {@link BlockHandleImpl#produce(Miner, long, long)}
    */
   @Test
-  @Category(MaintainedByDiffblue.class)
+  @Category(ContributionFromDiffblue.class)
+  @ManagedByDiffblue
   @MethodsUnderTest({"BlockCapsule BlockHandleImpl.produce(Miner, long, long)"})
   public void testProduce_givenManagerGenerateBlockReturnNull_thenReturnNull()
       throws UnsupportedEncodingException {
@@ -204,7 +210,8 @@ public class BlockHandleImplDiffblueTest {
    * <p>Method under test: {@link BlockHandleImpl#setBlockWaitLock(boolean)}
    */
   @Test
-  @Category(MaintainedByDiffblue.class)
+  @Category(ContributionFromDiffblue.class)
+  @ManagedByDiffblue
   @MethodsUnderTest({"void BlockHandleImpl.setBlockWaitLock(boolean)"})
   public void testSetBlockWaitLock() {
     // Arrange

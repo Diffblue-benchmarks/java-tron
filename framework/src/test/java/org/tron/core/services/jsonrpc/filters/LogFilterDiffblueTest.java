@@ -6,7 +6,8 @@ import static org.junit.Assert.assertFalse;
 import static org.junit.Assert.assertSame;
 import static org.junit.Assert.assertThrows;
 import static org.junit.Assert.assertTrue;
-import com.diffblue.cover.annotations.MaintainedByDiffblue;
+import com.diffblue.cover.annotations.ContributionFromDiffblue;
+import com.diffblue.cover.annotations.ManagedByDiffblue;
 import com.diffblue.cover.annotations.MethodsUnderTest;
 import java.io.UnsupportedEncodingException;
 import java.util.ArrayList;
@@ -29,7 +30,8 @@ public class LogFilterDiffblueTest {
    * <p>Method under test: {@link LogFilter#LogFilter()}
    */
   @Test
-  @Category(MaintainedByDiffblue.class)
+  @Category(ContributionFromDiffblue.class)
+  @ManagedByDiffblue
   @MethodsUnderTest({"void LogFilter.<init>()"})
   public void testNewLogFilter() {
     // Arrange and Act
@@ -46,7 +48,8 @@ public class LogFilterDiffblueTest {
    * <p>Method under test: {@link LogFilter#LogFilter(TronJsonRpc.FilterRequest)}
    */
   @Test
-  @Category(MaintainedByDiffblue.class)
+  @Category(ContributionFromDiffblue.class)
+  @ManagedByDiffblue
   @MethodsUnderTest({"void LogFilter.<init>(TronJsonRpc.FilterRequest)"})
   public void testNewLogFilter2() throws JsonRpcInvalidParamsException {
     // Arrange
@@ -67,7 +70,8 @@ public class LogFilterDiffblueTest {
    * <p>Method under test: {@link LogFilter#LogFilter(TronJsonRpc.FilterRequest)}
    */
   @Test
-  @Category(MaintainedByDiffblue.class)
+  @Category(ContributionFromDiffblue.class)
+  @ManagedByDiffblue
   @MethodsUnderTest({"void LogFilter.<init>(TronJsonRpc.FilterRequest)"})
   public void testNewLogFilter3() throws JsonRpcInvalidParamsException {
     // Arrange
@@ -94,7 +98,8 @@ public class LogFilterDiffblueTest {
    * <p>Method under test: {@link LogFilter#LogFilter(TronJsonRpc.FilterRequest)}
    */
   @Test
-  @Category(MaintainedByDiffblue.class)
+  @Category(ContributionFromDiffblue.class)
+  @ManagedByDiffblue
   @MethodsUnderTest({"void LogFilter.<init>(TronJsonRpc.FilterRequest)"})
   public void testNewLogFilter_given42MainSt_whenLinkedHashSetAdd42MainSt()
       throws JsonRpcInvalidParamsException {
@@ -119,7 +124,8 @@ public class LogFilterDiffblueTest {
    * <p>Method under test: {@link LogFilter#LogFilter(TronJsonRpc.FilterRequest)}
    */
   @Test
-  @Category(MaintainedByDiffblue.class)
+  @Category(ContributionFromDiffblue.class)
+  @ManagedByDiffblue
   @MethodsUnderTest({"void LogFilter.<init>(TronJsonRpc.FilterRequest)"})
   public void testNewLogFilter_given42_whenArrayListAdd42() throws JsonRpcInvalidParamsException {
     // Arrange
@@ -145,7 +151,8 @@ public class LogFilterDiffblueTest {
    * <p>Method under test: {@link LogFilter#LogFilter(TronJsonRpc.FilterRequest)}
    */
   @Test
-  @Category(MaintainedByDiffblue.class)
+  @Category(ContributionFromDiffblue.class)
+  @ManagedByDiffblue
   @MethodsUnderTest({"void LogFilter.<init>(TronJsonRpc.FilterRequest)"})
   public void testNewLogFilter_givenNull_whenArrayListAddNull()
       throws JsonRpcInvalidParamsException {
@@ -172,7 +179,8 @@ public class LogFilterDiffblueTest {
    * <p>Method under test: {@link LogFilter#LogFilter(TronJsonRpc.FilterRequest)}
    */
   @Test
-  @Category(MaintainedByDiffblue.class)
+  @Category(ContributionFromDiffblue.class)
+  @ManagedByDiffblue
   @MethodsUnderTest({"void LogFilter.<init>(TronJsonRpc.FilterRequest)"})
   public void testNewLogFilter_whenFilterRequest_thenReturnArrayLengthIsZero()
       throws JsonRpcInvalidParamsException {
@@ -196,7 +204,8 @@ public class LogFilterDiffblueTest {
    * <p>Method under test: {@link LogFilter#matchBloom(Bloom)}
    */
   @Test
-  @Category(MaintainedByDiffblue.class)
+  @Category(ContributionFromDiffblue.class)
+  @ManagedByDiffblue
   @MethodsUnderTest({"boolean LogFilter.matchBloom(Bloom)"})
   public void testMatchBloom_givenA_whenBloom_thenReturnFalse() {
     // Arrange
@@ -219,7 +228,8 @@ public class LogFilterDiffblueTest {
    * <p>Method under test: {@link LogFilter#matchBloom(Bloom)}
    */
   @Test
-  @Category(MaintainedByDiffblue.class)
+  @Category(ContributionFromDiffblue.class)
+  @ManagedByDiffblue
   @MethodsUnderTest({"boolean LogFilter.matchBloom(Bloom)"})
   public void testMatchBloom_givenArrayOfBloomWithBloom_whenBloom_thenReturnTrue() {
     // Arrange
@@ -242,7 +252,8 @@ public class LogFilterDiffblueTest {
    * <p>Method under test: {@link LogFilter#matchBloom(Bloom)}
    */
   @Test
-  @Category(MaintainedByDiffblue.class)
+  @Category(ContributionFromDiffblue.class)
+  @ManagedByDiffblue
   @MethodsUnderTest({"boolean LogFilter.matchBloom(Bloom)"})
   public void testMatchBloom_givenLogFilterContractAddressesIsNull_whenBloom_thenReturnTrue() {
     // Arrange
@@ -265,7 +276,8 @@ public class LogFilterDiffblueTest {
    * <p>Method under test: {@link LogFilter#matchBloom(Bloom)}
    */
   @Test
-  @Category(MaintainedByDiffblue.class)
+  @Category(ContributionFromDiffblue.class)
+  @ManagedByDiffblue
   @MethodsUnderTest({"boolean LogFilter.matchBloom(Bloom)"})
   public void testMatchBloom_givenLogFilter_whenBloom_thenReturnTrue() {
     // Arrange
@@ -281,7 +293,8 @@ public class LogFilterDiffblueTest {
    * <p>Method under test: {@link LogFilter#matchesExactly(Log)}
    */
   @Test
-  @Category(MaintainedByDiffblue.class)
+  @Category(ContributionFromDiffblue.class)
+  @ManagedByDiffblue
   @MethodsUnderTest({"boolean LogFilter.matchesExactly(Log)"})
   public void testMatchesExactly() {
     // Arrange, Act and Assert
@@ -302,7 +315,8 @@ public class LogFilterDiffblueTest {
    * </ul>
    */
   @Test
-  @Category(MaintainedByDiffblue.class)
+  @Category(ContributionFromDiffblue.class)
+  @ManagedByDiffblue
   @MethodsUnderTest({
     "byte[][] LogFilter.getContractAddresses()",
     "List LogFilter.getTopics()",

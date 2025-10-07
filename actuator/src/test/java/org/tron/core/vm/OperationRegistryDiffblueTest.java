@@ -2,7 +2,8 @@ package org.tron.core.vm;
 
 import static org.junit.Assert.assertEquals;
 import static org.junit.Assert.assertTrue;
-import com.diffblue.cover.annotations.MaintainedByDiffblue;
+import com.diffblue.cover.annotations.ContributionFromDiffblue;
+import com.diffblue.cover.annotations.ManagedByDiffblue;
 import com.diffblue.cover.annotations.MethodsUnderTest;
 import org.junit.Test;
 import org.junit.experimental.categories.Category;
@@ -14,7 +15,8 @@ public class OperationRegistryDiffblueTest {
    * <p>Method under test: {@link OperationRegistry#newTronV10OperationSet()}
    */
   @Test
-  @Category(MaintainedByDiffblue.class)
+  @Category(ContributionFromDiffblue.class)
+  @ManagedByDiffblue
   @MethodsUnderTest({"org.tron.core.vm.JumpTable OperationRegistry.newTronV10OperationSet()"})
   public void testNewTronV10OperationSet() {
     // Arrange, Act and Assert
@@ -31,7 +33,8 @@ public class OperationRegistryDiffblueTest {
    * <p>Method under test: {@link OperationRegistry#newTronV11OperationSet()}
    */
   @Test
-  @Category(MaintainedByDiffblue.class)
+  @Category(ContributionFromDiffblue.class)
+  @ManagedByDiffblue
   @MethodsUnderTest({"org.tron.core.vm.JumpTable OperationRegistry.newTronV11OperationSet()"})
   public void testNewTronV11OperationSet() {
     // Arrange, Act and Assert
@@ -48,7 +51,8 @@ public class OperationRegistryDiffblueTest {
    * <p>Method under test: {@link OperationRegistry#newTronV12OperationSet()}
    */
   @Test
-  @Category(MaintainedByDiffblue.class)
+  @Category(ContributionFromDiffblue.class)
+  @ManagedByDiffblue
   @MethodsUnderTest({"org.tron.core.vm.JumpTable OperationRegistry.newTronV12OperationSet()"})
   public void testNewTronV12OperationSet() {
     // Arrange, Act and Assert
@@ -65,7 +69,8 @@ public class OperationRegistryDiffblueTest {
    * <p>Method under test: {@link OperationRegistry#newTronV13OperationSet()}
    */
   @Test
-  @Category(MaintainedByDiffblue.class)
+  @Category(ContributionFromDiffblue.class)
+  @ManagedByDiffblue
   @MethodsUnderTest({"org.tron.core.vm.JumpTable OperationRegistry.newTronV13OperationSet()"})
   public void testNewTronV13OperationSet() {
     // Arrange, Act and Assert
@@ -82,7 +87,8 @@ public class OperationRegistryDiffblueTest {
    * <p>Method under test: {@link OperationRegistry#getTable()}
    */
   @Test
-  @Category(MaintainedByDiffblue.class)
+  @Category(ContributionFromDiffblue.class)
+  @ManagedByDiffblue
   @MethodsUnderTest({"org.tron.core.vm.JumpTable OperationRegistry.getTable()"})
   public void testGetTable() {
     // Arrange, Act and Assert
@@ -99,7 +105,8 @@ public class OperationRegistryDiffblueTest {
    * <p>Method under test: {@link OperationRegistry#newBaseOperationSet()}
    */
   @Test
-  @Category(MaintainedByDiffblue.class)
+  @Category(ContributionFromDiffblue.class)
+  @ManagedByDiffblue
   @MethodsUnderTest({"org.tron.core.vm.JumpTable OperationRegistry.newBaseOperationSet()"})
   public void testNewBaseOperationSet() {
     // Arrange, Act and Assert

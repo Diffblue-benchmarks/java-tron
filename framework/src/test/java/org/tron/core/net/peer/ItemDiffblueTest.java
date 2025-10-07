@@ -2,7 +2,8 @@ package org.tron.core.net.peer;
 
 import static org.junit.Assert.assertEquals;
 import static org.junit.Assert.assertNull;
-import com.diffblue.cover.annotations.MaintainedByDiffblue;
+import com.diffblue.cover.annotations.ContributionFromDiffblue;
+import com.diffblue.cover.annotations.ManagedByDiffblue;
 import com.diffblue.cover.annotations.MethodsUnderTest;
 import org.junit.Test;
 import org.junit.experimental.categories.Category;
@@ -23,7 +24,8 @@ public class ItemDiffblueTest {
    * <p>Method under test: {@link Item#Item(Sha256Hash, InventoryType)}
    */
   @Test
-  @Category(MaintainedByDiffblue.class)
+  @Category(ContributionFromDiffblue.class)
+  @ManagedByDiffblue
   @MethodsUnderTest({"void Item.<init>(Sha256Hash, InventoryType)"})
   public void testNewItem_whenNull_thenReturnHashIsNull() {
     // Arrange and Act

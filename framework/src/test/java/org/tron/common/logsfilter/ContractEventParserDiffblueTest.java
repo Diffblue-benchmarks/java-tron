@@ -3,7 +3,8 @@ package org.tron.common.logsfilter;
 import static org.junit.Assert.assertArrayEquals;
 import static org.junit.Assert.assertEquals;
 import static org.junit.Assert.assertThrows;
-import com.diffblue.cover.annotations.MaintainedByDiffblue;
+import com.diffblue.cover.annotations.ContributionFromDiffblue;
+import com.diffblue.cover.annotations.ManagedByDiffblue;
 import com.diffblue.cover.annotations.MethodsUnderTest;
 import java.io.UnsupportedEncodingException;
 import org.bouncycastle.crypto.OutputLengthException;
@@ -22,7 +23,8 @@ public class ContractEventParserDiffblueTest {
    * <p>Method under test: {@link ContractEventParser#parseDataBytes(byte[], String, int)}
    */
   @Test
-  @Category(MaintainedByDiffblue.class)
+  @Category(ContributionFromDiffblue.class)
+  @ManagedByDiffblue
   @MethodsUnderTest({"String ContractEventParser.parseDataBytes(byte[], String, int)"})
   public void testParseDataBytes_whenAAAAAAAABytesIsUtf8_thenReturnTrueToString()
       throws UnsupportedEncodingException {
@@ -45,7 +47,8 @@ public class ContractEventParserDiffblueTest {
    * <p>Method under test: {@link ContractEventParser#parseDataBytes(byte[], String, int)}
    */
   @Test
-  @Category(MaintainedByDiffblue.class)
+  @Category(ContributionFromDiffblue.class)
+  @ManagedByDiffblue
   @MethodsUnderTest({"String ContractEventParser.parseDataBytes(byte[], String, int)"})
   public void testParseDataBytes_whenA_thenReturnTrueToString() {
     // Arrange and Act
@@ -68,7 +71,8 @@ public class ContractEventParserDiffblueTest {
    * <p>Method under test: {@link ContractEventParser#parseDataBytes(byte[], String, int)}
    */
   @Test
-  @Category(MaintainedByDiffblue.class)
+  @Category(ContributionFromDiffblue.class)
+  @ManagedByDiffblue
   @MethodsUnderTest({"String ContractEventParser.parseDataBytes(byte[], String, int)"})
   public void testParseDataBytes_whenBool_thenReturnTrueToString()
       throws UnsupportedEncodingException {
@@ -91,7 +95,8 @@ public class ContractEventParserDiffblueTest {
    * <p>Method under test: {@link ContractEventParser#parseDataBytes(byte[], String, int)}
    */
   @Test
-  @Category(MaintainedByDiffblue.class)
+  @Category(ContributionFromDiffblue.class)
+  @ManagedByDiffblue
   @MethodsUnderTest({"String ContractEventParser.parseDataBytes(byte[], String, int)"})
   public void testParseDataBytes_whenBytes_thenThrowUnsupportedOperationException()
       throws UnsupportedEncodingException {
@@ -112,7 +117,8 @@ public class ContractEventParserDiffblueTest {
    * <p>Method under test: {@link ContractEventParser#parseDataBytes(byte[], String, int)}
    */
   @Test
-  @Category(MaintainedByDiffblue.class)
+  @Category(ContributionFromDiffblue.class)
+  @ManagedByDiffblue
   @MethodsUnderTest({"String ContractEventParser.parseDataBytes(byte[], String, int)"})
   public void testParseDataBytes_whenEmptyArrayOfByte_thenThrowUnsupportedOperationException() {
     // Arrange, Act and Assert
@@ -131,7 +137,8 @@ public class ContractEventParserDiffblueTest {
    * <p>Method under test: {@link ContractEventParser#parseDataBytes(byte[], String, int)}
    */
   @Test
-  @Category(MaintainedByDiffblue.class)
+  @Category(ContributionFromDiffblue.class)
+  @ManagedByDiffblue
   @MethodsUnderTest({"String ContractEventParser.parseDataBytes(byte[], String, int)"})
   public void testParseDataBytes_whenInt() throws UnsupportedEncodingException {
     // Arrange and Act
@@ -155,7 +162,8 @@ public class ContractEventParserDiffblueTest {
    * <p>Method under test: {@link ContractEventParser#parseDataBytes(byte[], String, int)}
    */
   @Test
-  @Category(MaintainedByDiffblue.class)
+  @Category(ContributionFromDiffblue.class)
+  @ManagedByDiffblue
   @MethodsUnderTest({"String ContractEventParser.parseDataBytes(byte[], String, int)"})
   public void testParseDataBytes_whenNull_thenThrowUnsupportedOperationException() {
     // Arrange, Act and Assert
@@ -175,7 +183,8 @@ public class ContractEventParserDiffblueTest {
    * <p>Method under test: {@link ContractEventParser#parseDataBytes(byte[], String, int)}
    */
   @Test
-  @Category(MaintainedByDiffblue.class)
+  @Category(ContributionFromDiffblue.class)
+  @ManagedByDiffblue
   @MethodsUnderTest({"String ContractEventParser.parseDataBytes(byte[], String, int)"})
   public void testParseDataBytes_whenOne_thenThrowUnsupportedOperationException()
       throws UnsupportedEncodingException {
@@ -196,7 +205,8 @@ public class ContractEventParserDiffblueTest {
    * <p>Method under test: {@link ContractEventParser#parseDataBytes(byte[], String, int)}
    */
   @Test
-  @Category(MaintainedByDiffblue.class)
+  @Category(ContributionFromDiffblue.class)
+  @ManagedByDiffblue
   @MethodsUnderTest({"String ContractEventParser.parseDataBytes(byte[], String, int)"})
   public void testParseDataBytes_whenString_thenThrowUnsupportedOperationException()
       throws UnsupportedEncodingException {
@@ -216,7 +226,8 @@ public class ContractEventParserDiffblueTest {
    * <p>Method under test: {@link ContractEventParser#parseDataBytes(byte[], String, int)}
    */
   @Test
-  @Category(MaintainedByDiffblue.class)
+  @Category(ContributionFromDiffblue.class)
+  @ManagedByDiffblue
   @MethodsUnderTest({"String ContractEventParser.parseDataBytes(byte[], String, int)"})
   public void testParseDataBytes_whenTrcToken() throws UnsupportedEncodingException {
     // Arrange and Act
@@ -240,7 +251,8 @@ public class ContractEventParserDiffblueTest {
    * <p>Method under test: {@link ContractEventParser#parseDataBytes(byte[], String, int)}
    */
   @Test
-  @Category(MaintainedByDiffblue.class)
+  @Category(ContributionFromDiffblue.class)
+  @ManagedByDiffblue
   @MethodsUnderTest({"String ContractEventParser.parseDataBytes(byte[], String, int)"})
   public void testParseDataBytes_whenTypeStr_thenThrowUnsupportedOperationException()
       throws UnsupportedEncodingException {
@@ -260,7 +272,8 @@ public class ContractEventParserDiffblueTest {
    * <p>Method under test: {@link ContractEventParser#parseDataBytes(byte[], String, int)}
    */
   @Test
-  @Category(MaintainedByDiffblue.class)
+  @Category(ContributionFromDiffblue.class)
+  @ManagedByDiffblue
   @MethodsUnderTest({"String ContractEventParser.parseDataBytes(byte[], String, int)"})
   public void testParseDataBytes_whenUint() throws UnsupportedEncodingException {
     // Arrange and Act
@@ -284,7 +297,8 @@ public class ContractEventParserDiffblueTest {
    * <p>Method under test: {@link ContractEventParser#subBytes(byte[], int, int)}
    */
   @Test
-  @Category(MaintainedByDiffblue.class)
+  @Category(ContributionFromDiffblue.class)
+  @ManagedByDiffblue
   @MethodsUnderTest({"byte[] ContractEventParser.subBytes(byte[], int, int)"})
   public void testSubBytes_whenA_thenThrowOutputLengthException() {
     // Arrange, Act and Assert
@@ -308,7 +322,8 @@ public class ContractEventParserDiffblueTest {
    * <p>Method under test: {@link ContractEventParser#subBytes(byte[], int, int)}
    */
   @Test
-  @Category(MaintainedByDiffblue.class)
+  @Category(ContributionFromDiffblue.class)
+  @ManagedByDiffblue
   @MethodsUnderTest({"byte[] ContractEventParser.subBytes(byte[], int, int)"})
   public void testSubBytes_whenAxaxaxaxBytesIsUtf8_thenReturnXaxBytesIsUtf8()
       throws UnsupportedEncodingException {
@@ -328,7 +343,8 @@ public class ContractEventParserDiffblueTest {
    * <p>Method under test: {@link ContractEventParser#subBytes(byte[], int, int)}
    */
   @Test
-  @Category(MaintainedByDiffblue.class)
+  @Category(ContributionFromDiffblue.class)
+  @ManagedByDiffblue
   @MethodsUnderTest({"byte[] ContractEventParser.subBytes(byte[], int, int)"})
   public void testSubBytes_whenEight_thenThrowOutputLengthException()
       throws UnsupportedEncodingException {
@@ -349,7 +365,8 @@ public class ContractEventParserDiffblueTest {
    * <p>Method under test: {@link ContractEventParser#subBytes(byte[], int, int)}
    */
   @Test
-  @Category(MaintainedByDiffblue.class)
+  @Category(ContributionFromDiffblue.class)
+  @ManagedByDiffblue
   @MethodsUnderTest({"byte[] ContractEventParser.subBytes(byte[], int, int)"})
   public void testSubBytes_whenEmptyArrayOfByte_thenThrowOutputLengthException() {
     // Arrange, Act and Assert
@@ -368,7 +385,8 @@ public class ContractEventParserDiffblueTest {
    * <p>Method under test: {@link ContractEventParser#subBytes(byte[], int, int)}
    */
   @Test
-  @Category(MaintainedByDiffblue.class)
+  @Category(ContributionFromDiffblue.class)
+  @ManagedByDiffblue
   @MethodsUnderTest({"byte[] ContractEventParser.subBytes(byte[], int, int)"})
   public void testSubBytes_whenNull_thenThrowOutputLengthException() {
     // Arrange, Act and Assert
@@ -386,7 +404,8 @@ public class ContractEventParserDiffblueTest {
    * <p>Method under test: {@link ContractEventParser#parseTopic(byte[], String)}
    */
   @Test
-  @Category(MaintainedByDiffblue.class)
+  @Category(ContributionFromDiffblue.class)
+  @ManagedByDiffblue
   @MethodsUnderTest({"String ContractEventParser.parseTopic(byte[], String)"})
   public void testParseTopic_whenArrayOfByteWithZeroAndZero_thenReturn1111113HK8zu() {
     // Arrange, Act and Assert
@@ -407,7 +426,8 @@ public class ContractEventParserDiffblueTest {
    * <p>Method under test: {@link ContractEventParser#parseTopic(byte[], String)}
    */
   @Test
-  @Category(MaintainedByDiffblue.class)
+  @Category(ContributionFromDiffblue.class)
+  @ManagedByDiffblue
   @MethodsUnderTest({"String ContractEventParser.parseTopic(byte[], String)"})
   public void testParseTopic_whenArrayOfByteWithZeroAndZero_thenReturnFalseToString() {
     // Arrange, Act and Assert
@@ -428,7 +448,8 @@ public class ContractEventParserDiffblueTest {
    * <p>Method under test: {@link ContractEventParser#parseTopic(byte[], String)}
    */
   @Test
-  @Category(MaintainedByDiffblue.class)
+  @Category(ContributionFromDiffblue.class)
+  @ManagedByDiffblue
   @MethodsUnderTest({"String ContractEventParser.parseTopic(byte[], String)"})
   public void testParseTopic_whenAxaxaxaxBytesIsUtf8_thenReturn4158415841584158()
       throws UnsupportedEncodingException {
@@ -449,7 +470,8 @@ public class ContractEventParserDiffblueTest {
    * <p>Method under test: {@link ContractEventParser#parseTopic(byte[], String)}
    */
   @Test
-  @Category(MaintainedByDiffblue.class)
+  @Category(ContributionFromDiffblue.class)
+  @ManagedByDiffblue
   @MethodsUnderTest({"String ContractEventParser.parseTopic(byte[], String)"})
   public void testParseTopic_whenBool_thenReturnTrueToString() {
     // Arrange, Act and Assert
@@ -470,7 +492,8 @@ public class ContractEventParserDiffblueTest {
    * <p>Method under test: {@link ContractEventParser#parseTopic(byte[], String)}
    */
   @Test
-  @Category(MaintainedByDiffblue.class)
+  @Category(ContributionFromDiffblue.class)
+  @ManagedByDiffblue
   @MethodsUnderTest({"String ContractEventParser.parseTopic(byte[], String)"})
   public void testParseTopic_whenBytes_thenReturn4158415841584158() {
     // Arrange, Act and Assert
@@ -491,7 +514,8 @@ public class ContractEventParserDiffblueTest {
    * <p>Method under test: {@link ContractEventParser#parseTopic(byte[], String)}
    */
   @Test
-  @Category(MaintainedByDiffblue.class)
+  @Category(ContributionFromDiffblue.class)
+  @ManagedByDiffblue
   @MethodsUnderTest({"String ContractEventParser.parseTopic(byte[], String)"})
   public void testParseTopic_whenEmptyArrayOfByte_thenReturnEmptyString() {
     // Arrange, Act and Assert
@@ -509,7 +533,8 @@ public class ContractEventParserDiffblueTest {
    * <p>Method under test: {@link ContractEventParser#parseTopic(byte[], String)}
    */
   @Test
-  @Category(MaintainedByDiffblue.class)
+  @Category(ContributionFromDiffblue.class)
+  @ManagedByDiffblue
   @MethodsUnderTest({"String ContractEventParser.parseTopic(byte[], String)"})
   public void testParseTopic_whenEmptyString_thenReturnEmptyString() {
     // Arrange, Act and Assert
@@ -529,7 +554,8 @@ public class ContractEventParserDiffblueTest {
    * <p>Method under test: {@link ContractEventParser#parseTopic(byte[], String)}
    */
   @Test
-  @Category(MaintainedByDiffblue.class)
+  @Category(ContributionFromDiffblue.class)
+  @ManagedByDiffblue
   @MethodsUnderTest({"String ContractEventParser.parseTopic(byte[], String)"})
   public void testParseTopic_whenInt_thenReturn4708585257725083992() {
     // Arrange, Act and Assert
@@ -549,7 +575,8 @@ public class ContractEventParserDiffblueTest {
    * <p>Method under test: {@link ContractEventParser#parseTopic(byte[], String)}
    */
   @Test
-  @Category(MaintainedByDiffblue.class)
+  @Category(ContributionFromDiffblue.class)
+  @ManagedByDiffblue
   @MethodsUnderTest({"String ContractEventParser.parseTopic(byte[], String)"})
   public void testParseTopic_whenNull_thenReturnEmptyString() {
     // Arrange, Act and Assert
@@ -567,7 +594,8 @@ public class ContractEventParserDiffblueTest {
    * <p>Method under test: {@link ContractEventParser#parseTopic(byte[], String)}
    */
   @Test
-  @Category(MaintainedByDiffblue.class)
+  @Category(ContributionFromDiffblue.class)
+  @ManagedByDiffblue
   @MethodsUnderTest({"String ContractEventParser.parseTopic(byte[], String)"})
   public void testParseTopic_whenNull_thenReturnEmptyString2() {
     // Arrange, Act and Assert
@@ -587,7 +615,8 @@ public class ContractEventParserDiffblueTest {
    * <p>Method under test: {@link ContractEventParser#parseTopic(byte[], String)}
    */
   @Test
-  @Category(MaintainedByDiffblue.class)
+  @Category(ContributionFromDiffblue.class)
+  @ManagedByDiffblue
   @MethodsUnderTest({"String ContractEventParser.parseTopic(byte[], String)"})
   public void testParseTopic_whenString_thenReturn4158415841584158() {
     // Arrange, Act and Assert
@@ -608,7 +637,8 @@ public class ContractEventParserDiffblueTest {
    * <p>Method under test: {@link ContractEventParser#parseTopic(byte[], String)}
    */
   @Test
-  @Category(MaintainedByDiffblue.class)
+  @Category(ContributionFromDiffblue.class)
+  @ManagedByDiffblue
   @MethodsUnderTest({"String ContractEventParser.parseTopic(byte[], String)"})
   public void testParseTopic_whenTrcToken_thenReturn4708585257725083992() {
     // Arrange, Act and Assert
@@ -629,7 +659,8 @@ public class ContractEventParserDiffblueTest {
    * <p>Method under test: {@link ContractEventParser#parseTopic(byte[], String)}
    */
   @Test
-  @Category(MaintainedByDiffblue.class)
+  @Category(ContributionFromDiffblue.class)
+  @ManagedByDiffblue
   @MethodsUnderTest({"String ContractEventParser.parseTopic(byte[], String)"})
   public void testParseTopic_whenUint_thenReturn4708585257725083992() {
     // Arrange, Act and Assert

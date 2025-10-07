@@ -1,7 +1,8 @@
 package org.tron.core.vm;
 
 import static org.junit.Assert.assertEquals;
-import com.diffblue.cover.annotations.MaintainedByDiffblue;
+import com.diffblue.cover.annotations.ContributionFromDiffblue;
+import com.diffblue.cover.annotations.ManagedByDiffblue;
 import com.diffblue.cover.annotations.MethodsUnderTest;
 import org.junit.Test;
 import org.junit.experimental.categories.Category;
@@ -18,7 +19,8 @@ public class ChainParameterEnumDiffblueTest {
    * <p>Method under test: {@link ChainParameterEnum#fromCode(long)}
    */
   @Test
-  @Category(MaintainedByDiffblue.class)
+  @Category(ContributionFromDiffblue.class)
+  @ManagedByDiffblue
   @MethodsUnderTest({"ChainParameterEnum ChainParameterEnum.fromCode(long)"})
   public void testFromCode_whenOne_thenReturnTotalNetLimit() {
     // Arrange, Act and Assert
@@ -36,7 +38,8 @@ public class ChainParameterEnumDiffblueTest {
    * <p>Method under test: {@link ChainParameterEnum#fromCode(long)}
    */
   @Test
-  @Category(MaintainedByDiffblue.class)
+  @Category(ContributionFromDiffblue.class)
+  @ManagedByDiffblue
   @MethodsUnderTest({"ChainParameterEnum ChainParameterEnum.fromCode(long)"})
   public void testFromCode_whenSix_thenReturnInvalidParameterKey() {
     // Arrange, Act and Assert
@@ -54,7 +57,8 @@ public class ChainParameterEnumDiffblueTest {
    * </ul>
    */
   @Test
-  @Category(MaintainedByDiffblue.class)
+  @Category(ContributionFromDiffblue.class)
+  @ManagedByDiffblue
   @MethodsUnderTest({
     "java.util.function.Function ChainParameterEnum.getAction()",
     "long ChainParameterEnum.getCode()"

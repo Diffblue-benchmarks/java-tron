@@ -10,7 +10,8 @@ import static org.junit.Assert.assertTrue;
 import static org.mockito.Mockito.mock;
 import static org.mockito.Mockito.verify;
 import static org.mockito.Mockito.when;
-import com.diffblue.cover.annotations.MaintainedByDiffblue;
+import com.diffblue.cover.annotations.ContributionFromDiffblue;
+import com.diffblue.cover.annotations.ManagedByDiffblue;
 import com.diffblue.cover.annotations.MethodsUnderTest;
 import com.google.common.cache.Cache;
 import com.google.protobuf.ByteString;
@@ -59,7 +60,8 @@ public class PeerConnectionDiffblueTest {
    * <p>Method under test: {@link PeerConnection#setBlockBothHave(BlockId)}
    */
   @Test
-  @Category(MaintainedByDiffblue.class)
+  @Category(ContributionFromDiffblue.class)
+  @ManagedByDiffblue
   @MethodsUnderTest({"void PeerConnection.setBlockBothHave(BlockId)"})
   public void testSetBlockBothHave() {
     // Arrange
@@ -78,7 +80,8 @@ public class PeerConnectionDiffblueTest {
    * <p>Method under test: {@link PeerConnection#isIdle()}
    */
   @Test
-  @Category(MaintainedByDiffblue.class)
+  @Category(ContributionFromDiffblue.class)
+  @ManagedByDiffblue
   @MethodsUnderTest({"boolean PeerConnection.isIdle()"})
   public void testIsIdle() {
     // Arrange
@@ -99,7 +102,8 @@ public class PeerConnectionDiffblueTest {
    * <p>Method under test: {@link PeerConnection#isIdle()}
    */
   @Test
-  @Category(MaintainedByDiffblue.class)
+  @Category(ContributionFromDiffblue.class)
+  @ManagedByDiffblue
   @MethodsUnderTest({"boolean PeerConnection.isIdle()"})
   public void testIsIdle_givenHashMapBlockIdIsOne_thenReturnFalse() {
     // Arrange
@@ -124,7 +128,8 @@ public class PeerConnectionDiffblueTest {
    * <p>Method under test: {@link PeerConnection#isIdle()}
    */
   @Test
-  @Category(MaintainedByDiffblue.class)
+  @Category(ContributionFromDiffblue.class)
+  @ManagedByDiffblue
   @MethodsUnderTest({"boolean PeerConnection.isIdle()"})
   public void testIsIdle_givenPeerConnection_thenReturnTrue() {
     // Arrange, Act and Assert
@@ -137,7 +142,8 @@ public class PeerConnectionDiffblueTest {
    * <p>Method under test: {@link PeerConnection#isSyncIdle()}
    */
   @Test
-  @Category(MaintainedByDiffblue.class)
+  @Category(ContributionFromDiffblue.class)
+  @ManagedByDiffblue
   @MethodsUnderTest({"boolean PeerConnection.isSyncIdle()"})
   public void testIsSyncIdle() {
     // Arrange
@@ -158,7 +164,8 @@ public class PeerConnectionDiffblueTest {
    * <p>Method under test: {@link PeerConnection#isSyncIdle()}
    */
   @Test
-  @Category(MaintainedByDiffblue.class)
+  @Category(ContributionFromDiffblue.class)
+  @ManagedByDiffblue
   @MethodsUnderTest({"boolean PeerConnection.isSyncIdle()"})
   public void testIsSyncIdle_givenHashMapBlockIdIsOne_thenReturnFalse() {
     // Arrange
@@ -183,7 +190,8 @@ public class PeerConnectionDiffblueTest {
    * <p>Method under test: {@link PeerConnection#isSyncIdle()}
    */
   @Test
-  @Category(MaintainedByDiffblue.class)
+  @Category(ContributionFromDiffblue.class)
+  @ManagedByDiffblue
   @MethodsUnderTest({"boolean PeerConnection.isSyncIdle()"})
   public void testIsSyncIdle_givenPeerConnection_thenReturnTrue() {
     // Arrange, Act and Assert
@@ -200,7 +208,8 @@ public class PeerConnectionDiffblueTest {
    * <p>Method under test: {@link PeerConnection#onConnect()}
    */
   @Test
-  @Category(MaintainedByDiffblue.class)
+  @Category(ContributionFromDiffblue.class)
+  @ManagedByDiffblue
   @MethodsUnderTest({"void PeerConnection.onConnect()"})
   public void testOnConnect_thenNotPeerConnectionNeedSyncFromUs() {
     // Arrange
@@ -244,7 +253,8 @@ public class PeerConnectionDiffblueTest {
    * <p>Method under test: {@link PeerConnection#onConnect()}
    */
   @Test
-  @Category(MaintainedByDiffblue.class)
+  @Category(ContributionFromDiffblue.class)
+  @ManagedByDiffblue
   @MethodsUnderTest({"void PeerConnection.onConnect()"})
   public void testOnConnect_thenNotPeerConnectionSyncFinish() {
     // Arrange
@@ -285,7 +295,8 @@ public class PeerConnectionDiffblueTest {
    * <p>Method under test: {@link PeerConnection#isSyncFinish()}
    */
   @Test
-  @Category(MaintainedByDiffblue.class)
+  @Category(ContributionFromDiffblue.class)
+  @ManagedByDiffblue
   @MethodsUnderTest({"boolean PeerConnection.isSyncFinish()"})
   public void testIsSyncFinish_givenPeerConnectionNeedSyncFromUsIsFalse_thenReturnTrue() {
     // Arrange
@@ -307,7 +318,8 @@ public class PeerConnectionDiffblueTest {
    * <p>Method under test: {@link PeerConnection#isSyncFinish()}
    */
   @Test
-  @Category(MaintainedByDiffblue.class)
+  @Category(ContributionFromDiffblue.class)
+  @ManagedByDiffblue
   @MethodsUnderTest({"boolean PeerConnection.isSyncFinish()"})
   public void testIsSyncFinish_givenPeerConnectionNeedSyncFromUsIsTrue_thenReturnFalse() {
     // Arrange
@@ -329,7 +341,8 @@ public class PeerConnectionDiffblueTest {
    * <p>Method under test: {@link PeerConnection#isSyncFinish()}
    */
   @Test
-  @Category(MaintainedByDiffblue.class)
+  @Category(ContributionFromDiffblue.class)
+  @ManagedByDiffblue
   @MethodsUnderTest({"boolean PeerConnection.isSyncFinish()"})
   public void testIsSyncFinish_givenPeerConnection_thenReturnFalse() {
     // Arrange, Act and Assert
@@ -348,7 +361,8 @@ public class PeerConnectionDiffblueTest {
    * <p>Method under test: {@link PeerConnection#needToLog(Message)}
    */
   @Test
-  @Category(MaintainedByDiffblue.class)
+  @Category(ContributionFromDiffblue.class)
+  @ManagedByDiffblue
   @MethodsUnderTest({"boolean PeerConnection.needToLog(Message)"})
   public void testNeedToLog_givenBlock_whenFetchInvDataMessageGetInventoryTypeReturnBlock() {
     // Arrange
@@ -375,7 +389,8 @@ public class PeerConnectionDiffblueTest {
    * <p>Method under test: {@link PeerConnection#needToLog(Message)}
    */
   @Test
-  @Category(MaintainedByDiffblue.class)
+  @Category(ContributionFromDiffblue.class)
+  @ManagedByDiffblue
   @MethodsUnderTest({"boolean PeerConnection.needToLog(Message)"})
   public void testNeedToLog_givenTrx_whenFetchInvDataMessageGetInventoryTypeReturnTrx() {
     // Arrange
@@ -401,7 +416,8 @@ public class PeerConnectionDiffblueTest {
    * <p>Method under test: {@link PeerConnection#needToLog(Message)}
    */
   @Test
-  @Category(MaintainedByDiffblue.class)
+  @Category(ContributionFromDiffblue.class)
+  @ManagedByDiffblue
   @MethodsUnderTest({"boolean PeerConnection.needToLog(Message)"})
   public void testNeedToLog_whenFetchInvDataMessageWithHashListIsArrayListAndTypeIsTrx() {
     // Arrange, Act and Assert
@@ -420,7 +436,8 @@ public class PeerConnectionDiffblueTest {
    * <p>Method under test: {@link PeerConnection#needToLog(Message)}
    */
   @Test
-  @Category(MaintainedByDiffblue.class)
+  @Category(ContributionFromDiffblue.class)
+  @ManagedByDiffblue
   @MethodsUnderTest({"boolean PeerConnection.needToLog(Message)"})
   public void testNeedToLog_whenNull_thenReturnTrue() {
     // Arrange, Act and Assert
@@ -438,7 +455,8 @@ public class PeerConnectionDiffblueTest {
    * <p>Method under test: {@link PeerConnection#needToLog(Message)}
    */
   @Test
-  @Category(MaintainedByDiffblue.class)
+  @Category(ContributionFromDiffblue.class)
+  @ManagedByDiffblue
   @MethodsUnderTest({"boolean PeerConnection.needToLog(Message)"})
   public void testNeedToLog_whenPbftMessage_thenReturnFalse() {
     // Arrange, Act and Assert
@@ -456,7 +474,8 @@ public class PeerConnectionDiffblueTest {
    * <p>Method under test: {@link PeerConnection#needToLog(Message)}
    */
   @Test
-  @Category(MaintainedByDiffblue.class)
+  @Category(ContributionFromDiffblue.class)
+  @ManagedByDiffblue
   @MethodsUnderTest({"boolean PeerConnection.needToLog(Message)"})
   public void testNeedToLog_whenPingMessage_thenReturnFalse() {
     // Arrange, Act and Assert
@@ -474,7 +493,8 @@ public class PeerConnectionDiffblueTest {
    * <p>Method under test: {@link PeerConnection#needToLog(Message)}
    */
   @Test
-  @Category(MaintainedByDiffblue.class)
+  @Category(ContributionFromDiffblue.class)
+  @ManagedByDiffblue
   @MethodsUnderTest({"boolean PeerConnection.needToLog(Message)"})
   public void testNeedToLog_whenPongMessage_thenReturnFalse() {
     // Arrange, Act and Assert
@@ -493,7 +513,8 @@ public class PeerConnectionDiffblueTest {
    * <p>Method under test: {@link PeerConnection#needToLog(Message)}
    */
   @Test
-  @Category(MaintainedByDiffblue.class)
+  @Category(ContributionFromDiffblue.class)
+  @ManagedByDiffblue
   @MethodsUnderTest({"boolean PeerConnection.needToLog(Message)"})
   public void testNeedToLog_whenTransactionsMessageWithTrxsIsArrayList_thenReturnFalse() {
     // Arrange, Act and Assert
@@ -511,7 +532,8 @@ public class PeerConnectionDiffblueTest {
    * <p>Method under test: {@link PeerConnection#checkAndPutAdvInvRequest(Item, Long)}
    */
   @Test
-  @Category(MaintainedByDiffblue.class)
+  @Category(ContributionFromDiffblue.class)
+  @ManagedByDiffblue
   @MethodsUnderTest({"boolean PeerConnection.checkAndPutAdvInvRequest(Item, Long)"})
   public void testCheckAndPutAdvInvRequest_whenItemWithHashIsBlockIdAndTypeIsTrx() {
     // Arrange and Act
@@ -535,7 +557,8 @@ public class PeerConnectionDiffblueTest {
    * <p>Method under test: {@link PeerConnection#checkAndPutAdvInvRequest(Item, Long)}
    */
   @Test
-  @Category(MaintainedByDiffblue.class)
+  @Category(ContributionFromDiffblue.class)
+  @ManagedByDiffblue
   @MethodsUnderTest({"boolean PeerConnection.checkAndPutAdvInvRequest(Item, Long)"})
   public void testCheckAndPutAdvInvRequest_whenItemWithHashIsSha256HashAndTypeIsTrx() {
     // Arrange and Act
@@ -560,7 +583,8 @@ public class PeerConnectionDiffblueTest {
    * <p>Method under test: {@link PeerConnection#checkAndPutAdvInvRequest(Item, Long)}
    */
   @Test
-  @Category(MaintainedByDiffblue.class)
+  @Category(ContributionFromDiffblue.class)
+  @ManagedByDiffblue
   @MethodsUnderTest({"boolean PeerConnection.checkAndPutAdvInvRequest(Item, Long)"})
   public void testCheckAndPutAdvInvRequest_whenItem_thenPeerConnectionAdvInvRequestSizeIsOne() {
     // Arrange and Act
@@ -584,7 +608,8 @@ public class PeerConnectionDiffblueTest {
    * <p>Method under test: {@link PeerConnection#equals(Object)}
    */
   @Test
-  @Category(MaintainedByDiffblue.class)
+  @Category(ContributionFromDiffblue.class)
+  @ManagedByDiffblue
   @MethodsUnderTest({"boolean PeerConnection.equals(Object)", "int PeerConnection.hashCode()"})
   public void testEquals_whenOtherIsDifferent_thenReturnNotEqual() {
     // Arrange, Act and Assert
@@ -602,7 +627,8 @@ public class PeerConnectionDiffblueTest {
    * <p>Method under test: {@link PeerConnection#equals(Object)}
    */
   @Test
-  @Category(MaintainedByDiffblue.class)
+  @Category(ContributionFromDiffblue.class)
+  @ManagedByDiffblue
   @MethodsUnderTest({"boolean PeerConnection.equals(Object)", "int PeerConnection.hashCode()"})
   public void testEquals_whenOtherIsNull_thenReturnNotEqual() {
     // Arrange, Act and Assert
@@ -620,7 +646,8 @@ public class PeerConnectionDiffblueTest {
    * <p>Method under test: {@link PeerConnection#equals(Object)}
    */
   @Test
-  @Category(MaintainedByDiffblue.class)
+  @Category(ContributionFromDiffblue.class)
+  @ManagedByDiffblue
   @MethodsUnderTest({"boolean PeerConnection.equals(Object)", "int PeerConnection.hashCode()"})
   public void testEquals_whenOtherIsSame_thenThrowException() {
     // Arrange, Act and Assert
@@ -639,7 +666,8 @@ public class PeerConnectionDiffblueTest {
    * <p>Method under test: {@link PeerConnection#equals(Object)}
    */
   @Test
-  @Category(MaintainedByDiffblue.class)
+  @Category(ContributionFromDiffblue.class)
+  @ManagedByDiffblue
   @MethodsUnderTest({"boolean PeerConnection.equals(Object)", "int PeerConnection.hashCode()"})
   public void testEquals_whenOtherIsWrongType_thenReturnNotEqual() {
     // Arrange, Act and Assert
@@ -698,7 +726,8 @@ public class PeerConnectionDiffblueTest {
    * </ul>
    */
   @Test
-  @Category(MaintainedByDiffblue.class)
+  @Category(ContributionFromDiffblue.class)
+  @ManagedByDiffblue
   @MethodsUnderTest({
     "ByteString PeerConnection.getAddress()",
     "Cache PeerConnection.getAdvInvReceive()",

@@ -4,7 +4,8 @@ import static org.junit.Assert.assertEquals;
 import static org.junit.Assert.assertFalse;
 import static org.junit.Assert.assertThrows;
 import static org.junit.Assert.assertTrue;
-import com.diffblue.cover.annotations.MaintainedByDiffblue;
+import com.diffblue.cover.annotations.ContributionFromDiffblue;
+import com.diffblue.cover.annotations.ManagedByDiffblue;
 import com.diffblue.cover.annotations.MethodsUnderTest;
 import org.junit.Test;
 import org.junit.experimental.categories.Category;
@@ -13,6 +14,10 @@ import org.springframework.test.annotation.DirtiesContext.ClassMode;
 import org.tron.core.Wallet;
 import org.tron.core.exception.JsonRpcInvalidParamsException;
 import org.tron.core.exception.JsonRpcInvalidRequestException;
+import org.tron.protos.Protocol;
+import org.tron.protos.Protocol.Transaction;
+import org.tron.protos.Protocol.Transaction.Contract;
+import org.tron.protos.Protocol.Transaction.Contract.ContractType;
 
 @DirtiesContext(classMode = ClassMode.AFTER_EACH_TEST_METHOD)
 public class BuildArgumentsDiffblueTest {
@@ -59,7 +64,8 @@ public class BuildArgumentsDiffblueTest {
    * </ul>
    */
   @Test
-  @Category(MaintainedByDiffblue.class)
+  @Category(ContributionFromDiffblue.class)
+  @ManagedByDiffblue
   @MethodsUnderTest({
     "void BuildArguments.<init>()",
     "void BuildArguments.<init>(String, String, String, String, String, String, String, Long, Long, String, Long, Long, String, Integer, String, boolean)",
@@ -206,7 +212,8 @@ public class BuildArgumentsDiffblueTest {
    * </ul>
    */
   @Test
-  @Category(MaintainedByDiffblue.class)
+  @Category(ContributionFromDiffblue.class)
+  @ManagedByDiffblue
   @MethodsUnderTest({
     "void BuildArguments.<init>()",
     "void BuildArguments.<init>(String, String, String, String, String, String, String, Long, Long, String, Long, Long, String, Integer, String, boolean)",
@@ -332,7 +339,8 @@ public class BuildArgumentsDiffblueTest {
    * <p>Method under test: {@link BuildArguments#BuildArguments(CallArguments)}
    */
   @Test
-  @Category(MaintainedByDiffblue.class)
+  @Category(ContributionFromDiffblue.class)
+  @ManagedByDiffblue
   @MethodsUnderTest({"void BuildArguments.<init>(CallArguments)"})
   public void testNewBuildArguments_thenReturnAbiIsEmptyString() {
     // Arrange
@@ -380,10 +388,9 @@ public class BuildArgumentsDiffblueTest {
    * <p>Method under test: {@link BuildArguments#getContractType(Wallet)}
    */
   @Test
-  @Category(MaintainedByDiffblue.class)
-  @MethodsUnderTest({
-    "org.tron.protos.Protocol.Transaction.Contract.ContractType BuildArguments.getContractType(Wallet)"
-  })
+  @Category(ContributionFromDiffblue.class)
+  @ManagedByDiffblue
+  @MethodsUnderTest({"Transaction.Contract.ContractType BuildArguments.getContractType(Wallet)"})
   public void testGetContractType_givenBuildArgumentsWithArgsIsCallArgumentsDataIs0x()
       throws JsonRpcInvalidParamsException, JsonRpcInvalidRequestException {
     // Arrange
@@ -420,10 +427,9 @@ public class BuildArgumentsDiffblueTest {
    * <p>Method under test: {@link BuildArguments#getContractType(Wallet)}
    */
   @Test
-  @Category(MaintainedByDiffblue.class)
-  @MethodsUnderTest({
-    "org.tron.protos.Protocol.Transaction.Contract.ContractType BuildArguments.getContractType(Wallet)"
-  })
+  @Category(ContributionFromDiffblue.class)
+  @ManagedByDiffblue
+  @MethodsUnderTest({"Transaction.Contract.ContractType BuildArguments.getContractType(Wallet)"})
   public void testGetContractType_givenBuildArguments_thenThrowJsonRpcInvalidRequestException()
       throws JsonRpcInvalidParamsException, JsonRpcInvalidRequestException {
     // Arrange
@@ -438,16 +444,52 @@ public class BuildArgumentsDiffblueTest {
    * Test {@link BuildArguments#getContractType(Wallet)}.
    *
    * <ul>
+   *   <li>Then return {@code CreateSmartContract}.
+   * </ul>
+   *
+   * <p>Method under test: {@link BuildArguments#getContractType(Wallet)}
+   */
+  @Test
+  @Category(ContributionFromDiffblue.class)
+  @ManagedByDiffblue
+  @MethodsUnderTest({"Transaction.Contract.ContractType BuildArguments.getContractType(Wallet)"})
+  public void testGetContractType_thenReturnCreateSmartContract()
+      throws JsonRpcInvalidParamsException, JsonRpcInvalidRequestException {
+    // Arrange
+    CallArguments args =
+        new CallArguments(
+            "jane.doe@example.org",
+            "alice.liddell@example.org",
+            "Gas",
+            "Gas Price",
+            "42",
+            "Data",
+            "Nonce");
+
+    BuildArguments buildArguments = new BuildArguments(args);
+    buildArguments.setValue("not empty");
+    buildArguments.setTo("");
+    buildArguments.setData("foo");
+    buildArguments.setTokenId(0L);
+    buildArguments.setTokenValue(0L);
+
+    // Act and Assert
+    assertEquals(ContractType.CreateSmartContract, buildArguments.getContractType(new Wallet()));
+  }
+
+  /**
+   * Test {@link BuildArguments#getContractType(Wallet)}.
+   *
+   * <ul>
    *   <li>Then throw {@link JsonRpcInvalidRequestException}.
    * </ul>
    *
    * <p>Method under test: {@link BuildArguments#getContractType(Wallet)}
    */
   @Test
-  @Category(MaintainedByDiffblue.class)
-  @MethodsUnderTest({
-    "org.tron.protos.Protocol.Transaction.Contract.ContractType BuildArguments.getContractType(Wallet)"
-  })
+  @Category(ContributionFromDiffblue.class)
+  @ManagedByDiffblue
+  @MethodsUnderTest({"Transaction.Contract.ContractType BuildArguments.getContractType(Wallet)"})
   public void testGetContractType_thenThrowJsonRpcInvalidRequestException()
       throws JsonRpcInvalidParamsException, JsonRpcInvalidRequestException {
     // Arrange
@@ -485,7 +527,8 @@ public class BuildArgumentsDiffblueTest {
    * <p>Method under test: {@link BuildArguments#parseValue()}
    */
   @Test
-  @Category(MaintainedByDiffblue.class)
+  @Category(ContributionFromDiffblue.class)
+  @ManagedByDiffblue
   @MethodsUnderTest({"long BuildArguments.parseValue()"})
   public void testParseValue_givenBuildArgumentsWithArgsIsCallArgumentsValueIs0x0()
       throws JsonRpcInvalidParamsException {
@@ -519,7 +562,8 @@ public class BuildArgumentsDiffblueTest {
    * <p>Method under test: {@link BuildArguments#parseValue()}
    */
   @Test
-  @Category(MaintainedByDiffblue.class)
+  @Category(ContributionFromDiffblue.class)
+  @ManagedByDiffblue
   @MethodsUnderTest({"long BuildArguments.parseValue()"})
   public void testParseValue_givenBuildArgumentsWithArgsIsCallArgumentsValueIsEmptyString()
       throws JsonRpcInvalidParamsException {
@@ -552,7 +596,8 @@ public class BuildArgumentsDiffblueTest {
    * <p>Method under test: {@link BuildArguments#parseValue()}
    */
   @Test
-  @Category(MaintainedByDiffblue.class)
+  @Category(ContributionFromDiffblue.class)
+  @ManagedByDiffblue
   @MethodsUnderTest({"long BuildArguments.parseValue()"})
   public void testParseValue_givenBuildArguments_thenReturnZero()
       throws JsonRpcInvalidParamsException {
@@ -572,7 +617,8 @@ public class BuildArgumentsDiffblueTest {
    * <p>Method under test: {@link BuildArguments#parseGas()}
    */
   @Test
-  @Category(MaintainedByDiffblue.class)
+  @Category(ContributionFromDiffblue.class)
+  @ManagedByDiffblue
   @MethodsUnderTest({"long BuildArguments.parseGas()"})
   public void testParseGas_givenBuildArgumentsWithArgsIsCallArgumentsGasIsEmptyString()
       throws JsonRpcInvalidParamsException {
@@ -607,7 +653,8 @@ public class BuildArgumentsDiffblueTest {
    * <p>Method under test: {@link BuildArguments#parseGas()}
    */
   @Test
-  @Category(MaintainedByDiffblue.class)
+  @Category(ContributionFromDiffblue.class)
+  @ManagedByDiffblue
   @MethodsUnderTest({"long BuildArguments.parseGas()"})
   public void testParseGas_givenBuildArgumentsWithArgsIsCallArgumentsGasIsNull_thenReturnZero()
       throws JsonRpcInvalidParamsException {
@@ -640,7 +687,8 @@ public class BuildArgumentsDiffblueTest {
    * <p>Method under test: {@link BuildArguments#parseGas()}
    */
   @Test
-  @Category(MaintainedByDiffblue.class)
+  @Category(ContributionFromDiffblue.class)
+  @ManagedByDiffblue
   @MethodsUnderTest({"long BuildArguments.parseGas()"})
   public void testParseGas_givenBuildArguments_thenReturnZero()
       throws JsonRpcInvalidParamsException {

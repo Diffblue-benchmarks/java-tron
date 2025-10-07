@@ -4,7 +4,8 @@ import static org.junit.Assert.assertArrayEquals;
 import static org.junit.Assert.assertEquals;
 import static org.junit.Assert.assertNull;
 import static org.junit.Assert.assertTrue;
-import com.diffblue.cover.annotations.MaintainedByDiffblue;
+import com.diffblue.cover.annotations.ContributionFromDiffblue;
+import com.diffblue.cover.annotations.ManagedByDiffblue;
 import com.diffblue.cover.annotations.MethodsUnderTest;
 import com.google.protobuf.ByteString;
 import io.netty.buffer.ByteBuf;
@@ -28,7 +29,8 @@ public class ChainInventoryMessageDiffblueTest {
    * <p>Method under test: {@link ChainInventoryMessage#ChainInventoryMessage(List, Long)}
    */
   @Test
-  @Category(MaintainedByDiffblue.class)
+  @Category(ContributionFromDiffblue.class)
+  @ManagedByDiffblue
   @MethodsUnderTest({"void ChainInventoryMessage.<init>(List, Long)"})
   public void testNewChainInventoryMessage() {
     // Arrange
@@ -158,7 +160,8 @@ public class ChainInventoryMessageDiffblueTest {
    * <p>Method under test: {@link ChainInventoryMessage#ChainInventoryMessage(List, Long)}
    */
   @Test
-  @Category(MaintainedByDiffblue.class)
+  @Category(ContributionFromDiffblue.class)
+  @ManagedByDiffblue
   @MethodsUnderTest({"void ChainInventoryMessage.<init>(List, Long)"})
   public void testNewChainInventoryMessage_givenBlockId_thenReturnBlockIdsSizeIsTwo() {
     // Arrange
@@ -186,7 +189,8 @@ public class ChainInventoryMessageDiffblueTest {
    * <p>Method under test: {@link ChainInventoryMessage#ChainInventoryMessage(List, Long)}
    */
   @Test
-  @Category(MaintainedByDiffblue.class)
+  @Category(ContributionFromDiffblue.class)
+  @ManagedByDiffblue
   @MethodsUnderTest({"void ChainInventoryMessage.<init>(List, Long)"})
   public void testNewChainInventoryMessage_thenReturnChainInventoryIdsListSizeIsOne() {
     // Arrange
@@ -269,7 +273,8 @@ public class ChainInventoryMessageDiffblueTest {
    * <p>Method under test: {@link ChainInventoryMessage#ChainInventoryMessage(List, Long)}
    */
   @Test
-  @Category(MaintainedByDiffblue.class)
+  @Category(ContributionFromDiffblue.class)
+  @ManagedByDiffblue
   @MethodsUnderTest({"void ChainInventoryMessage.<init>(List, Long)"})
   public void testNewChainInventoryMessage_thenReturnChainInventorySerializedSizeIsTen() {
     // Arrange and Act
@@ -310,7 +315,8 @@ public class ChainInventoryMessageDiffblueTest {
    * <p>Method under test: {@link ChainInventoryMessage#ChainInventoryMessage(List, Long)}
    */
   @Test
-  @Category(MaintainedByDiffblue.class)
+  @Category(ContributionFromDiffblue.class)
+  @ManagedByDiffblue
   @MethodsUnderTest({"void ChainInventoryMessage.<init>(List, Long)"})
   public void testNewChainInventoryMessage_thenReturnChainInventorySerializedSizeIsTwo() {
     // Arrange and Act
@@ -344,7 +350,8 @@ public class ChainInventoryMessageDiffblueTest {
    * <p>Method under test: {@link ChainInventoryMessage#ChainInventoryMessage(List, Long)}
    */
   @Test
-  @Category(MaintainedByDiffblue.class)
+  @Category(ContributionFromDiffblue.class)
+  @ManagedByDiffblue
   @MethodsUnderTest({"void ChainInventoryMessage.<init>(List, Long)"})
   public void testNewChainInventoryMessage_thenReturnChainInventorySerializedSizeIsZero() {
     // Arrange and Act
@@ -384,7 +391,8 @@ public class ChainInventoryMessageDiffblueTest {
    * <p>Method under test: {@link ChainInventoryMessage#ChainInventoryMessage(byte[])}
    */
   @Test
-  @Category(MaintainedByDiffblue.class)
+  @Category(ContributionFromDiffblue.class)
+  @ManagedByDiffblue
   @MethodsUnderTest({"void ChainInventoryMessage.<init>(byte[])"})
   public void testNewChainInventoryMessage_thenSendDataReturnUnpooledHeapByteBuf()
       throws Exception {
@@ -412,7 +420,8 @@ public class ChainInventoryMessageDiffblueTest {
    * <p>Method under test: {@link ChainInventoryMessage#ChainInventoryMessage(List, Long)}
    */
   @Test
-  @Category(MaintainedByDiffblue.class)
+  @Category(ContributionFromDiffblue.class)
+  @ManagedByDiffblue
   @MethodsUnderTest({"void ChainInventoryMessage.<init>(List, Long)"})
   public void testNewChainInventoryMessage_whenMinusOne_thenReturnRemainNumLongValueIsMinusOne() {
     // Arrange and Act
@@ -453,7 +462,8 @@ public class ChainInventoryMessageDiffblueTest {
    * <p>Method under test: {@link ChainInventoryMessage#getBlockIds()}
    */
   @Test
-  @Category(MaintainedByDiffblue.class)
+  @Category(ContributionFromDiffblue.class)
+  @ManagedByDiffblue
   @MethodsUnderTest({"List ChainInventoryMessage.getBlockIds()"})
   public void testGetBlockIds_thenReturnEmpty() throws Exception {
     // Arrange
@@ -473,7 +483,8 @@ public class ChainInventoryMessageDiffblueTest {
    * <p>Method under test: {@link ChainInventoryMessage#getRemainNum()}
    */
   @Test
-  @Category(MaintainedByDiffblue.class)
+  @Category(ContributionFromDiffblue.class)
+  @ManagedByDiffblue
   @MethodsUnderTest({"Long ChainInventoryMessage.getRemainNum()"})
   public void testGetRemainNum_thenReturnLongValueIsZero() throws Exception {
     // Arrange
@@ -493,7 +504,8 @@ public class ChainInventoryMessageDiffblueTest {
    * <p>Method under test: {@link ChainInventoryMessage#toString()}
    */
   @Test
-  @Category(MaintainedByDiffblue.class)
+  @Category(ContributionFromDiffblue.class)
+  @ManagedByDiffblue
   @MethodsUnderTest({"java.lang.String ChainInventoryMessage.toString()"})
   public void testToString_thenReturnTypeBlockChainInventorySize0RemainNum0() throws Exception {
     // Arrange

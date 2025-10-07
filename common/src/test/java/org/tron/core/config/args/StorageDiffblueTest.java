@@ -10,7 +10,8 @@ import static org.mockito.Mockito.atLeast;
 import static org.mockito.Mockito.mock;
 import static org.mockito.Mockito.verify;
 import static org.mockito.Mockito.when;
-import com.diffblue.cover.annotations.MaintainedByDiffblue;
+import com.diffblue.cover.annotations.ContributionFromDiffblue;
+import com.diffblue.cover.annotations.ManagedByDiffblue;
 import com.diffblue.cover.annotations.MethodsUnderTest;
 import com.typesafe.config.Config;
 import com.typesafe.config.ConfigObject;
@@ -37,7 +38,8 @@ public class StorageDiffblueTest {
    * <p>Method under test: {@link Storage#getDbEngineFromConfig(Config)}
    */
   @Test
-  @Category(MaintainedByDiffblue.class)
+  @Category(ContributionFromDiffblue.class)
+  @ManagedByDiffblue
   @MethodsUnderTest({"String Storage.getDbEngineFromConfig(Config)"})
   public void testGetDbEngineFromConfig_givenFalse_thenReturnLeveldb() {
     // Arrange
@@ -63,7 +65,8 @@ public class StorageDiffblueTest {
    * <p>Method under test: {@link Storage#getDbEngineFromConfig(Config)}
    */
   @Test
-  @Category(MaintainedByDiffblue.class)
+  @Category(ContributionFromDiffblue.class)
+  @ManagedByDiffblue
   @MethodsUnderTest({"String Storage.getDbEngineFromConfig(Config)"})
   public void testGetDbEngineFromConfig_givenString_thenReturnString() {
     // Arrange
@@ -91,7 +94,8 @@ public class StorageDiffblueTest {
    * <p>Method under test: {@link Storage#getDbEngineFromConfig(Config)}
    */
   @Test
-  @Category(MaintainedByDiffblue.class)
+  @Category(ContributionFromDiffblue.class)
+  @ManagedByDiffblue
   @MethodsUnderTest({"String Storage.getDbEngineFromConfig(Config)"})
   public void testGetDbEngineFromConfig_whenConfigGetStringThrowIllegalArgumentException() {
     // Arrange
@@ -116,7 +120,8 @@ public class StorageDiffblueTest {
    * <p>Method under test: {@link Storage#getDbEngineFromConfig(Config)}
    */
   @Test
-  @Category(MaintainedByDiffblue.class)
+  @Category(ContributionFromDiffblue.class)
+  @ManagedByDiffblue
   @MethodsUnderTest({"String Storage.getDbEngineFromConfig(Config)"})
   public void testGetDbEngineFromConfig_whenConfigHasPathThrowIllegalArgumentException() {
     // Arrange
@@ -139,7 +144,8 @@ public class StorageDiffblueTest {
    * <p>Method under test: {@link Storage#getDbVersionSyncFromConfig(Config)}
    */
   @Test
-  @Category(MaintainedByDiffblue.class)
+  @Category(ContributionFromDiffblue.class)
+  @ManagedByDiffblue
   @MethodsUnderTest({"Boolean Storage.getDbVersionSyncFromConfig(Config)"})
   public void testGetDbVersionSyncFromConfig_givenFalse_thenReturnFalse() {
     // Arrange
@@ -165,7 +171,8 @@ public class StorageDiffblueTest {
    * <p>Method under test: {@link Storage#getDbVersionSyncFromConfig(Config)}
    */
   @Test
-  @Category(MaintainedByDiffblue.class)
+  @Category(ContributionFromDiffblue.class)
+  @ManagedByDiffblue
   @MethodsUnderTest({"Boolean Storage.getDbVersionSyncFromConfig(Config)"})
   public void testGetDbVersionSyncFromConfig_whenConfigGetBooleanReturnTrue_thenReturnTrue() {
     // Arrange
@@ -193,7 +200,8 @@ public class StorageDiffblueTest {
    * <p>Method under test: {@link Storage#getDbVersionSyncFromConfig(Config)}
    */
   @Test
-  @Category(MaintainedByDiffblue.class)
+  @Category(ContributionFromDiffblue.class)
+  @ManagedByDiffblue
   @MethodsUnderTest({"Boolean Storage.getDbVersionSyncFromConfig(Config)"})
   public void testGetDbVersionSyncFromConfig_whenConfigGetBooleanThrowIllegalArgumentException() {
     // Arrange
@@ -218,7 +226,8 @@ public class StorageDiffblueTest {
    * <p>Method under test: {@link Storage#getDbVersionSyncFromConfig(Config)}
    */
   @Test
-  @Category(MaintainedByDiffblue.class)
+  @Category(ContributionFromDiffblue.class)
+  @ManagedByDiffblue
   @MethodsUnderTest({"Boolean Storage.getDbVersionSyncFromConfig(Config)"})
   public void testGetDbVersionSyncFromConfig_whenConfigHasPathThrowIllegalArgumentException() {
     // Arrange
@@ -236,7 +245,8 @@ public class StorageDiffblueTest {
    * <p>Method under test: {@link Storage#getSnapshotMaxFlushCountFromConfig(Config)}
    */
   @Test
-  @Category(MaintainedByDiffblue.class)
+  @Category(ContributionFromDiffblue.class)
+  @ManagedByDiffblue
   @MethodsUnderTest({"int Storage.getSnapshotMaxFlushCountFromConfig(Config)"})
   public void testGetSnapshotMaxFlushCountFromConfig() {
     // Arrange
@@ -255,7 +265,8 @@ public class StorageDiffblueTest {
    * <p>Method under test: {@link Storage#getSnapshotMaxFlushCountFromConfig(Config)}
    */
   @Test
-  @Category(MaintainedByDiffblue.class)
+  @Category(ContributionFromDiffblue.class)
+  @ManagedByDiffblue
   @MethodsUnderTest({"int Storage.getSnapshotMaxFlushCountFromConfig(Config)"})
   public void testGetSnapshotMaxFlushCountFromConfig2() {
     // Arrange
@@ -281,7 +292,8 @@ public class StorageDiffblueTest {
    * <p>Method under test: {@link Storage#getSnapshotMaxFlushCountFromConfig(Config)}
    */
   @Test
-  @Category(MaintainedByDiffblue.class)
+  @Category(ContributionFromDiffblue.class)
+  @ManagedByDiffblue
   @MethodsUnderTest({"int Storage.getSnapshotMaxFlushCountFromConfig(Config)"})
   public void testGetSnapshotMaxFlushCountFromConfig_givenFalse_whenConfigHasPathReturnFalse() {
     // Arrange
@@ -306,7 +318,8 @@ public class StorageDiffblueTest {
    * <p>Method under test: {@link Storage#getSnapshotMaxFlushCountFromConfig(Config)}
    */
   @Test
-  @Category(MaintainedByDiffblue.class)
+  @Category(ContributionFromDiffblue.class)
+  @ManagedByDiffblue
   @MethodsUnderTest({"int Storage.getSnapshotMaxFlushCountFromConfig(Config)"})
   public void testGetSnapshotMaxFlushCountFromConfig_givenFiveHundredOne() {
     // Arrange
@@ -332,7 +345,8 @@ public class StorageDiffblueTest {
    * <p>Method under test: {@link Storage#getSnapshotMaxFlushCountFromConfig(Config)}
    */
   @Test
-  @Category(MaintainedByDiffblue.class)
+  @Category(ContributionFromDiffblue.class)
+  @ManagedByDiffblue
   @MethodsUnderTest({"int Storage.getSnapshotMaxFlushCountFromConfig(Config)"})
   public void testGetSnapshotMaxFlushCountFromConfig_givenOne_whenConfigGetIntReturnOne() {
     // Arrange
@@ -360,7 +374,8 @@ public class StorageDiffblueTest {
    * <p>Method under test: {@link Storage#getSnapshotMaxFlushCountFromConfig(Config)}
    */
   @Test
-  @Category(MaintainedByDiffblue.class)
+  @Category(ContributionFromDiffblue.class)
+  @ManagedByDiffblue
   @MethodsUnderTest({"int Storage.getSnapshotMaxFlushCountFromConfig(Config)"})
   public void testGetSnapshotMaxFlushCountFromConfig_givenZero_whenConfigGetIntReturnZero() {
     // Arrange
@@ -381,7 +396,8 @@ public class StorageDiffblueTest {
    * <p>Method under test: {@link Storage#getContractParseSwitchFromConfig(Config)}
    */
   @Test
-  @Category(MaintainedByDiffblue.class)
+  @Category(ContributionFromDiffblue.class)
+  @ManagedByDiffblue
   @MethodsUnderTest({"Boolean Storage.getContractParseSwitchFromConfig(Config)"})
   public void testGetContractParseSwitchFromConfig() {
     // Arrange
@@ -400,7 +416,8 @@ public class StorageDiffblueTest {
    * <p>Method under test: {@link Storage#getContractParseSwitchFromConfig(Config)}
    */
   @Test
-  @Category(MaintainedByDiffblue.class)
+  @Category(ContributionFromDiffblue.class)
+  @ManagedByDiffblue
   @MethodsUnderTest({"Boolean Storage.getContractParseSwitchFromConfig(Config)"})
   public void testGetContractParseSwitchFromConfig2() {
     // Arrange
@@ -425,7 +442,8 @@ public class StorageDiffblueTest {
    * <p>Method under test: {@link Storage#getContractParseSwitchFromConfig(Config)}
    */
   @Test
-  @Category(MaintainedByDiffblue.class)
+  @Category(ContributionFromDiffblue.class)
+  @ManagedByDiffblue
   @MethodsUnderTest({"Boolean Storage.getContractParseSwitchFromConfig(Config)"})
   public void testGetContractParseSwitchFromConfig_thenReturnFalse() {
     // Arrange
@@ -452,7 +470,8 @@ public class StorageDiffblueTest {
    * <p>Method under test: {@link Storage#getContractParseSwitchFromConfig(Config)}
    */
   @Test
-  @Category(MaintainedByDiffblue.class)
+  @Category(ContributionFromDiffblue.class)
+  @ManagedByDiffblue
   @MethodsUnderTest({"Boolean Storage.getContractParseSwitchFromConfig(Config)"})
   public void testGetContractParseSwitchFromConfig_whenConfigGetBooleanReturnTrue() {
     // Arrange
@@ -480,7 +499,8 @@ public class StorageDiffblueTest {
    * <p>Method under test: {@link Storage#getContractParseSwitchFromConfig(Config)}
    */
   @Test
-  @Category(MaintainedByDiffblue.class)
+  @Category(ContributionFromDiffblue.class)
+  @ManagedByDiffblue
   @MethodsUnderTest({"Boolean Storage.getContractParseSwitchFromConfig(Config)"})
   public void testGetContractParseSwitchFromConfig_whenConfigHasPathReturnFalse_thenReturnTrue() {
     // Arrange
@@ -506,7 +526,8 @@ public class StorageDiffblueTest {
    * <p>Method under test: {@link Storage#getDbDirectoryFromConfig(Config)}
    */
   @Test
-  @Category(MaintainedByDiffblue.class)
+  @Category(ContributionFromDiffblue.class)
+  @ManagedByDiffblue
   @MethodsUnderTest({"String Storage.getDbDirectoryFromConfig(Config)"})
   public void testGetDbDirectoryFromConfig_givenFalse_thenReturnDatabase() {
     // Arrange
@@ -532,7 +553,8 @@ public class StorageDiffblueTest {
    * <p>Method under test: {@link Storage#getDbDirectoryFromConfig(Config)}
    */
   @Test
-  @Category(MaintainedByDiffblue.class)
+  @Category(ContributionFromDiffblue.class)
+  @ManagedByDiffblue
   @MethodsUnderTest({"String Storage.getDbDirectoryFromConfig(Config)"})
   public void testGetDbDirectoryFromConfig_givenString_thenReturnString() {
     // Arrange
@@ -560,7 +582,8 @@ public class StorageDiffblueTest {
    * <p>Method under test: {@link Storage#getDbDirectoryFromConfig(Config)}
    */
   @Test
-  @Category(MaintainedByDiffblue.class)
+  @Category(ContributionFromDiffblue.class)
+  @ManagedByDiffblue
   @MethodsUnderTest({"String Storage.getDbDirectoryFromConfig(Config)"})
   public void testGetDbDirectoryFromConfig_whenConfigGetStringThrowIllegalArgumentException() {
     // Arrange
@@ -585,7 +608,8 @@ public class StorageDiffblueTest {
    * <p>Method under test: {@link Storage#getDbDirectoryFromConfig(Config)}
    */
   @Test
-  @Category(MaintainedByDiffblue.class)
+  @Category(ContributionFromDiffblue.class)
+  @ManagedByDiffblue
   @MethodsUnderTest({"String Storage.getDbDirectoryFromConfig(Config)"})
   public void testGetDbDirectoryFromConfig_whenConfigHasPathThrowIllegalArgumentException() {
     // Arrange
@@ -608,7 +632,8 @@ public class StorageDiffblueTest {
    * <p>Method under test: {@link Storage#getIndexDirectoryFromConfig(Config)}
    */
   @Test
-  @Category(MaintainedByDiffblue.class)
+  @Category(ContributionFromDiffblue.class)
+  @ManagedByDiffblue
   @MethodsUnderTest({"String Storage.getIndexDirectoryFromConfig(Config)"})
   public void testGetIndexDirectoryFromConfig_givenFalse_thenReturnIndex() {
     // Arrange
@@ -634,7 +659,8 @@ public class StorageDiffblueTest {
    * <p>Method under test: {@link Storage#getIndexDirectoryFromConfig(Config)}
    */
   @Test
-  @Category(MaintainedByDiffblue.class)
+  @Category(ContributionFromDiffblue.class)
+  @ManagedByDiffblue
   @MethodsUnderTest({"String Storage.getIndexDirectoryFromConfig(Config)"})
   public void testGetIndexDirectoryFromConfig_givenString_thenReturnString() {
     // Arrange
@@ -662,7 +688,8 @@ public class StorageDiffblueTest {
    * <p>Method under test: {@link Storage#getIndexDirectoryFromConfig(Config)}
    */
   @Test
-  @Category(MaintainedByDiffblue.class)
+  @Category(ContributionFromDiffblue.class)
+  @ManagedByDiffblue
   @MethodsUnderTest({"String Storage.getIndexDirectoryFromConfig(Config)"})
   public void testGetIndexDirectoryFromConfig_whenConfigGetStringThrowIllegalArgumentException() {
     // Arrange
@@ -687,7 +714,8 @@ public class StorageDiffblueTest {
    * <p>Method under test: {@link Storage#getIndexDirectoryFromConfig(Config)}
    */
   @Test
-  @Category(MaintainedByDiffblue.class)
+  @Category(ContributionFromDiffblue.class)
+  @ManagedByDiffblue
   @MethodsUnderTest({"String Storage.getIndexDirectoryFromConfig(Config)"})
   public void testGetIndexDirectoryFromConfig_whenConfigHasPathThrowIllegalArgumentException() {
     // Arrange
@@ -709,7 +737,8 @@ public class StorageDiffblueTest {
    * <p>Method under test: {@link Storage#getIndexSwitchFromConfig(Config)}
    */
   @Test
-  @Category(MaintainedByDiffblue.class)
+  @Category(ContributionFromDiffblue.class)
+  @ManagedByDiffblue
   @MethodsUnderTest({"String Storage.getIndexSwitchFromConfig(Config)"})
   public void testGetIndexSwitchFromConfig_givenEmptyString() {
     // Arrange
@@ -737,7 +766,8 @@ public class StorageDiffblueTest {
    * <p>Method under test: {@link Storage#getIndexSwitchFromConfig(Config)}
    */
   @Test
-  @Category(MaintainedByDiffblue.class)
+  @Category(ContributionFromDiffblue.class)
+  @ManagedByDiffblue
   @MethodsUnderTest({"String Storage.getIndexSwitchFromConfig(Config)"})
   public void testGetIndexSwitchFromConfig_givenFalse_whenConfigHasPathReturnFalse() {
     // Arrange
@@ -763,7 +793,8 @@ public class StorageDiffblueTest {
    * <p>Method under test: {@link Storage#getIndexSwitchFromConfig(Config)}
    */
   @Test
-  @Category(MaintainedByDiffblue.class)
+  @Category(ContributionFromDiffblue.class)
+  @ManagedByDiffblue
   @MethodsUnderTest({"String Storage.getIndexSwitchFromConfig(Config)"})
   public void testGetIndexSwitchFromConfig_givenNotEmpty_thenReturnNotEmpty() {
     // Arrange
@@ -791,7 +822,8 @@ public class StorageDiffblueTest {
    * <p>Method under test: {@link Storage#getIndexSwitchFromConfig(Config)}
    */
   @Test
-  @Category(MaintainedByDiffblue.class)
+  @Category(ContributionFromDiffblue.class)
+  @ManagedByDiffblue
   @MethodsUnderTest({"String Storage.getIndexSwitchFromConfig(Config)"})
   public void testGetIndexSwitchFromConfig_givenNull_whenConfigGetStringReturnNull() {
     // Arrange
@@ -819,7 +851,8 @@ public class StorageDiffblueTest {
    * <p>Method under test: {@link Storage#getIndexSwitchFromConfig(Config)}
    */
   @Test
-  @Category(MaintainedByDiffblue.class)
+  @Category(ContributionFromDiffblue.class)
+  @ManagedByDiffblue
   @MethodsUnderTest({"String Storage.getIndexSwitchFromConfig(Config)"})
   public void testGetIndexSwitchFromConfig_whenConfigGetStringThrowIllegalArgumentException() {
     // Arrange
@@ -844,7 +877,8 @@ public class StorageDiffblueTest {
    * <p>Method under test: {@link Storage#getIndexSwitchFromConfig(Config)}
    */
   @Test
-  @Category(MaintainedByDiffblue.class)
+  @Category(ContributionFromDiffblue.class)
+  @ManagedByDiffblue
   @MethodsUnderTest({"String Storage.getIndexSwitchFromConfig(Config)"})
   public void testGetIndexSwitchFromConfig_whenConfigHasPathThrowIllegalArgumentException() {
     // Arrange
@@ -862,7 +896,8 @@ public class StorageDiffblueTest {
    * <p>Method under test: {@link Storage#getTransactionHistorySwitchFromConfig(Config)}
    */
   @Test
-  @Category(MaintainedByDiffblue.class)
+  @Category(ContributionFromDiffblue.class)
+  @ManagedByDiffblue
   @MethodsUnderTest({"String Storage.getTransactionHistorySwitchFromConfig(Config)"})
   public void testGetTransactionHistorySwitchFromConfig() {
     // Arrange
@@ -882,7 +917,8 @@ public class StorageDiffblueTest {
    * <p>Method under test: {@link Storage#getTransactionHistorySwitchFromConfig(Config)}
    */
   @Test
-  @Category(MaintainedByDiffblue.class)
+  @Category(ContributionFromDiffblue.class)
+  @ManagedByDiffblue
   @MethodsUnderTest({"String Storage.getTransactionHistorySwitchFromConfig(Config)"})
   public void testGetTransactionHistorySwitchFromConfig2() {
     // Arrange
@@ -909,7 +945,8 @@ public class StorageDiffblueTest {
    * <p>Method under test: {@link Storage#getTransactionHistorySwitchFromConfig(Config)}
    */
   @Test
-  @Category(MaintainedByDiffblue.class)
+  @Category(ContributionFromDiffblue.class)
+  @ManagedByDiffblue
   @MethodsUnderTest({"String Storage.getTransactionHistorySwitchFromConfig(Config)"})
   public void testGetTransactionHistorySwitchFromConfig_givenFalse_thenReturnOn() {
     // Arrange
@@ -936,7 +973,8 @@ public class StorageDiffblueTest {
    * <p>Method under test: {@link Storage#getTransactionHistorySwitchFromConfig(Config)}
    */
   @Test
-  @Category(MaintainedByDiffblue.class)
+  @Category(ContributionFromDiffblue.class)
+  @ManagedByDiffblue
   @MethodsUnderTest({"String Storage.getTransactionHistorySwitchFromConfig(Config)"})
   public void testGetTransactionHistorySwitchFromConfig_givenString_thenReturnString() {
     // Arrange
@@ -960,7 +998,8 @@ public class StorageDiffblueTest {
    * <p>Method under test: {@link Storage#getCheckpointVersionFromConfig(Config)}
    */
   @Test
-  @Category(MaintainedByDiffblue.class)
+  @Category(ContributionFromDiffblue.class)
+  @ManagedByDiffblue
   @MethodsUnderTest({"int Storage.getCheckpointVersionFromConfig(Config)"})
   public void testGetCheckpointVersionFromConfig() {
     // Arrange
@@ -984,7 +1023,8 @@ public class StorageDiffblueTest {
    * <p>Method under test: {@link Storage#getCheckpointVersionFromConfig(Config)}
    */
   @Test
-  @Category(MaintainedByDiffblue.class)
+  @Category(ContributionFromDiffblue.class)
+  @ManagedByDiffblue
   @MethodsUnderTest({"int Storage.getCheckpointVersionFromConfig(Config)"})
   public void testGetCheckpointVersionFromConfig_givenFalse_whenConfigHasPathReturnFalse() {
     // Arrange
@@ -1010,7 +1050,8 @@ public class StorageDiffblueTest {
    * <p>Method under test: {@link Storage#getCheckpointVersionFromConfig(Config)}
    */
   @Test
-  @Category(MaintainedByDiffblue.class)
+  @Category(ContributionFromDiffblue.class)
+  @ManagedByDiffblue
   @MethodsUnderTest({"int Storage.getCheckpointVersionFromConfig(Config)"})
   public void testGetCheckpointVersionFromConfig_givenOne_whenConfigGetIntReturnOne() {
     // Arrange
@@ -1038,7 +1079,8 @@ public class StorageDiffblueTest {
    * <p>Method under test: {@link Storage#getCheckpointVersionFromConfig(Config)}
    */
   @Test
-  @Category(MaintainedByDiffblue.class)
+  @Category(ContributionFromDiffblue.class)
+  @ManagedByDiffblue
   @MethodsUnderTest({"int Storage.getCheckpointVersionFromConfig(Config)"})
   public void testGetCheckpointVersionFromConfig_whenConfigGetIntThrowIllegalArgumentException() {
     // Arrange
@@ -1059,7 +1101,8 @@ public class StorageDiffblueTest {
    * <p>Method under test: {@link Storage#getCheckpointSyncFromConfig(Config)}
    */
   @Test
-  @Category(MaintainedByDiffblue.class)
+  @Category(ContributionFromDiffblue.class)
+  @ManagedByDiffblue
   @MethodsUnderTest({"boolean Storage.getCheckpointSyncFromConfig(Config)"})
   public void testGetCheckpointSyncFromConfig() {
     // Arrange
@@ -1084,7 +1127,8 @@ public class StorageDiffblueTest {
    * <p>Method under test: {@link Storage#getCheckpointSyncFromConfig(Config)}
    */
   @Test
-  @Category(MaintainedByDiffblue.class)
+  @Category(ContributionFromDiffblue.class)
+  @ManagedByDiffblue
   @MethodsUnderTest({"boolean Storage.getCheckpointSyncFromConfig(Config)"})
   public void testGetCheckpointSyncFromConfig_whenConfigGetBooleanReturnFalse_thenReturnFalse() {
     // Arrange
@@ -1112,7 +1156,8 @@ public class StorageDiffblueTest {
    * <p>Method under test: {@link Storage#getCheckpointSyncFromConfig(Config)}
    */
   @Test
-  @Category(MaintainedByDiffblue.class)
+  @Category(ContributionFromDiffblue.class)
+  @ManagedByDiffblue
   @MethodsUnderTest({"boolean Storage.getCheckpointSyncFromConfig(Config)"})
   public void testGetCheckpointSyncFromConfig_whenConfigGetBooleanReturnTrue_thenReturnTrue() {
     // Arrange
@@ -1140,7 +1185,8 @@ public class StorageDiffblueTest {
    * <p>Method under test: {@link Storage#getCheckpointSyncFromConfig(Config)}
    */
   @Test
-  @Category(MaintainedByDiffblue.class)
+  @Category(ContributionFromDiffblue.class)
+  @ManagedByDiffblue
   @MethodsUnderTest({"boolean Storage.getCheckpointSyncFromConfig(Config)"})
   public void testGetCheckpointSyncFromConfig_whenConfigHasPathReturnFalse_thenReturnTrue() {
     // Arrange
@@ -1166,7 +1212,8 @@ public class StorageDiffblueTest {
    * <p>Method under test: {@link Storage#getCheckpointSyncFromConfig(Config)}
    */
   @Test
-  @Category(MaintainedByDiffblue.class)
+  @Category(ContributionFromDiffblue.class)
+  @ManagedByDiffblue
   @MethodsUnderTest({"boolean Storage.getCheckpointSyncFromConfig(Config)"})
   public void testGetCheckpointSyncFromConfig_whenConfigHasPathThrowIllegalArgumentException() {
     // Arrange
@@ -1184,7 +1231,8 @@ public class StorageDiffblueTest {
    * <p>Method under test: {@link Storage#getEstimatedTransactionsFromConfig(Config)}
    */
   @Test
-  @Category(MaintainedByDiffblue.class)
+  @Category(ContributionFromDiffblue.class)
+  @ManagedByDiffblue
   @MethodsUnderTest({"int Storage.getEstimatedTransactionsFromConfig(Config)"})
   public void testGetEstimatedTransactionsFromConfig() {
     // Arrange
@@ -1203,7 +1251,8 @@ public class StorageDiffblueTest {
    * <p>Method under test: {@link Storage#getEstimatedTransactionsFromConfig(Config)}
    */
   @Test
-  @Category(MaintainedByDiffblue.class)
+  @Category(ContributionFromDiffblue.class)
+  @ManagedByDiffblue
   @MethodsUnderTest({"int Storage.getEstimatedTransactionsFromConfig(Config)"})
   public void testGetEstimatedTransactionsFromConfig2() {
     // Arrange
@@ -1229,7 +1278,8 @@ public class StorageDiffblueTest {
    * <p>Method under test: {@link Storage#getEstimatedTransactionsFromConfig(Config)}
    */
   @Test
-  @Category(MaintainedByDiffblue.class)
+  @Category(ContributionFromDiffblue.class)
+  @ManagedByDiffblue
   @MethodsUnderTest({"int Storage.getEstimatedTransactionsFromConfig(Config)"})
   public void testGetEstimatedTransactionsFromConfig_given10000_whenConfigGetIntReturn10000() {
     // Arrange
@@ -1257,7 +1307,8 @@ public class StorageDiffblueTest {
    * <p>Method under test: {@link Storage#getEstimatedTransactionsFromConfig(Config)}
    */
   @Test
-  @Category(MaintainedByDiffblue.class)
+  @Category(ContributionFromDiffblue.class)
+  @ManagedByDiffblue
   @MethodsUnderTest({"int Storage.getEstimatedTransactionsFromConfig(Config)"})
   public void testGetEstimatedTransactionsFromConfig_given10001_whenConfigGetIntReturn10001() {
     // Arrange
@@ -1285,7 +1336,8 @@ public class StorageDiffblueTest {
    * <p>Method under test: {@link Storage#getEstimatedTransactionsFromConfig(Config)}
    */
   @Test
-  @Category(MaintainedByDiffblue.class)
+  @Category(ContributionFromDiffblue.class)
+  @ManagedByDiffblue
   @MethodsUnderTest({"int Storage.getEstimatedTransactionsFromConfig(Config)"})
   public void testGetEstimatedTransactionsFromConfig_givenFalse_thenReturnOneThousand() {
     // Arrange
@@ -1311,7 +1363,8 @@ public class StorageDiffblueTest {
    * <p>Method under test: {@link Storage#getEstimatedTransactionsFromConfig(Config)}
    */
   @Test
-  @Category(MaintainedByDiffblue.class)
+  @Category(ContributionFromDiffblue.class)
+  @ManagedByDiffblue
   @MethodsUnderTest({"int Storage.getEstimatedTransactionsFromConfig(Config)"})
   public void testGetEstimatedTransactionsFromConfig_givenNinetyNine_thenReturnOneHundred() {
     // Arrange
@@ -1334,7 +1387,8 @@ public class StorageDiffblueTest {
    * <p>Method under test: {@link Storage#getTxCacheInitOptimizationFromConfig(Config)}
    */
   @Test
-  @Category(MaintainedByDiffblue.class)
+  @Category(ContributionFromDiffblue.class)
+  @ManagedByDiffblue
   @MethodsUnderTest({"boolean Storage.getTxCacheInitOptimizationFromConfig(Config)"})
   public void testGetTxCacheInitOptimizationFromConfig() {
     // Arrange
@@ -1353,7 +1407,8 @@ public class StorageDiffblueTest {
    * <p>Method under test: {@link Storage#getTxCacheInitOptimizationFromConfig(Config)}
    */
   @Test
-  @Category(MaintainedByDiffblue.class)
+  @Category(ContributionFromDiffblue.class)
+  @ManagedByDiffblue
   @MethodsUnderTest({"boolean Storage.getTxCacheInitOptimizationFromConfig(Config)"})
   public void testGetTxCacheInitOptimizationFromConfig2() {
     // Arrange
@@ -1378,7 +1433,8 @@ public class StorageDiffblueTest {
    * <p>Method under test: {@link Storage#getTxCacheInitOptimizationFromConfig(Config)}
    */
   @Test
-  @Category(MaintainedByDiffblue.class)
+  @Category(ContributionFromDiffblue.class)
+  @ManagedByDiffblue
   @MethodsUnderTest({"boolean Storage.getTxCacheInitOptimizationFromConfig(Config)"})
   public void testGetTxCacheInitOptimizationFromConfig_thenReturnTrue() {
     // Arrange
@@ -1406,7 +1462,8 @@ public class StorageDiffblueTest {
    * <p>Method under test: {@link Storage#getTxCacheInitOptimizationFromConfig(Config)}
    */
   @Test
-  @Category(MaintainedByDiffblue.class)
+  @Category(ContributionFromDiffblue.class)
+  @ManagedByDiffblue
   @MethodsUnderTest({"boolean Storage.getTxCacheInitOptimizationFromConfig(Config)"})
   public void testGetTxCacheInitOptimizationFromConfig_whenConfigGetBooleanReturnFalse() {
     // Arrange
@@ -1434,7 +1491,8 @@ public class StorageDiffblueTest {
    * <p>Method under test: {@link Storage#getTxCacheInitOptimizationFromConfig(Config)}
    */
   @Test
-  @Category(MaintainedByDiffblue.class)
+  @Category(ContributionFromDiffblue.class)
+  @ManagedByDiffblue
   @MethodsUnderTest({"boolean Storage.getTxCacheInitOptimizationFromConfig(Config)"})
   public void testGetTxCacheInitOptimizationFromConfig_whenConfigHasPathReturnFalse() {
     // Arrange
@@ -1461,7 +1519,8 @@ public class StorageDiffblueTest {
    * <p>Method under test: {@link Storage#setCacheStrategies(Config)}
    */
   @Test
-  @Category(MaintainedByDiffblue.class)
+  @Category(ContributionFromDiffblue.class)
+  @ManagedByDiffblue
   @MethodsUnderTest({"void Storage.setCacheStrategies(Config)"})
   public void testSetCacheStrategies_givenConfigEntrySetReturnHashSet_thenCallsEntrySet() {
     // Arrange
@@ -1498,7 +1557,8 @@ public class StorageDiffblueTest {
    * <p>Method under test: {@link Storage#setCacheStrategies(Config)}
    */
   @Test
-  @Category(MaintainedByDiffblue.class)
+  @Category(ContributionFromDiffblue.class)
+  @ManagedByDiffblue
   @MethodsUnderTest({"void Storage.setCacheStrategies(Config)"})
   public void testSetCacheStrategies_givenConfigEntrySetThrowIllegalArgumentException() {
     // Arrange
@@ -1533,7 +1593,8 @@ public class StorageDiffblueTest {
    * <p>Method under test: {@link Storage#setCacheStrategies(Config)}
    */
   @Test
-  @Category(MaintainedByDiffblue.class)
+  @Category(ContributionFromDiffblue.class)
+  @ManagedByDiffblue
   @MethodsUnderTest({"void Storage.setCacheStrategies(Config)"})
   public void testSetCacheStrategies_givenConfigResolveThrowIllegalArgumentException() {
     // Arrange
@@ -1565,7 +1626,8 @@ public class StorageDiffblueTest {
    * <p>Method under test: {@link Storage#setCacheStrategies(Config)}
    */
   @Test
-  @Category(MaintainedByDiffblue.class)
+  @Category(ContributionFromDiffblue.class)
+  @ManagedByDiffblue
   @MethodsUnderTest({"void Storage.setCacheStrategies(Config)"})
   public void testSetCacheStrategies_givenFalse_whenConfigHasPathReturnFalse_thenCallsHasPath() {
     // Arrange
@@ -1592,7 +1654,8 @@ public class StorageDiffblueTest {
    * <p>Method under test: {@link Storage#setCacheStrategies(Config)}
    */
   @Test
-  @Category(MaintainedByDiffblue.class)
+  @Category(ContributionFromDiffblue.class)
+  @ManagedByDiffblue
   @MethodsUnderTest({"void Storage.setCacheStrategies(Config)"})
   public void testSetCacheStrategies_whenConfigGetConfigThrowIllegalArgumentException() {
     // Arrange
@@ -1619,7 +1682,8 @@ public class StorageDiffblueTest {
    * <p>Method under test: {@link Storage#setCacheStrategies(Config)}
    */
   @Test
-  @Category(MaintainedByDiffblue.class)
+  @Category(ContributionFromDiffblue.class)
+  @ManagedByDiffblue
   @MethodsUnderTest({"void Storage.setCacheStrategies(Config)"})
   public void testSetCacheStrategies_whenConfigHasPathThrowIllegalArgumentException() {
     // Arrange
@@ -1639,7 +1703,8 @@ public class StorageDiffblueTest {
    * <p>Method under test: {@link Storage#getCacheStrategy(CacheType)}
    */
   @Test
-  @Category(MaintainedByDiffblue.class)
+  @Category(ContributionFromDiffblue.class)
+  @ManagedByDiffblue
   @MethodsUnderTest({"String Storage.getCacheStrategy(CacheType)"})
   public void testGetCacheStrategy() {
     // Arrange, Act and Assert
@@ -1654,7 +1719,8 @@ public class StorageDiffblueTest {
    * <p>Method under test: {@link Storage#getCacheStrategy(CacheType)}
    */
   @Test
-  @Category(MaintainedByDiffblue.class)
+  @Category(ContributionFromDiffblue.class)
+  @ManagedByDiffblue
   @MethodsUnderTest({"String Storage.getCacheStrategy(CacheType)"})
   public void testGetCacheStrategy2() {
     // Arrange, Act and Assert
@@ -1669,7 +1735,8 @@ public class StorageDiffblueTest {
    * <p>Method under test: {@link Storage#getCacheStrategy(CacheType)}
    */
   @Test
-  @Category(MaintainedByDiffblue.class)
+  @Category(ContributionFromDiffblue.class)
+  @ManagedByDiffblue
   @MethodsUnderTest({"String Storage.getCacheStrategy(CacheType)"})
   public void testGetCacheStrategy3() {
     // Arrange, Act and Assert
@@ -1684,7 +1751,8 @@ public class StorageDiffblueTest {
    * <p>Method under test: {@link Storage#getCacheStrategy(CacheType)}
    */
   @Test
-  @Category(MaintainedByDiffblue.class)
+  @Category(ContributionFromDiffblue.class)
+  @ManagedByDiffblue
   @MethodsUnderTest({"String Storage.getCacheStrategy(CacheType)"})
   public void testGetCacheStrategy4() {
     // Arrange, Act and Assert
@@ -1699,7 +1767,8 @@ public class StorageDiffblueTest {
    * <p>Method under test: {@link Storage#getDbRoot(String, Sha256Hash)}
    */
   @Test
-  @Category(MaintainedByDiffblue.class)
+  @Category(ContributionFromDiffblue.class)
+  @ManagedByDiffblue
   @MethodsUnderTest({"Sha256Hash Storage.getDbRoot(String, Sha256Hash)"})
   public void testGetDbRoot() {
     // Arrange, Act and Assert
@@ -1717,7 +1786,8 @@ public class StorageDiffblueTest {
    * <p>Method under test: {@link Storage#setDbRoots(Config)}
    */
   @Test
-  @Category(MaintainedByDiffblue.class)
+  @Category(ContributionFromDiffblue.class)
+  @ManagedByDiffblue
   @MethodsUnderTest({"void Storage.setDbRoots(Config)"})
   public void testSetDbRoots_givenConfigEntrySetReturnHashSet_thenCallsEntrySet() {
     // Arrange
@@ -1754,7 +1824,8 @@ public class StorageDiffblueTest {
    * <p>Method under test: {@link Storage#setDbRoots(Config)}
    */
   @Test
-  @Category(MaintainedByDiffblue.class)
+  @Category(ContributionFromDiffblue.class)
+  @ManagedByDiffblue
   @MethodsUnderTest({"void Storage.setDbRoots(Config)"})
   public void testSetDbRoots_givenConfigEntrySetThrowIllegalArgumentException() {
     // Arrange
@@ -1790,7 +1861,8 @@ public class StorageDiffblueTest {
    * <p>Method under test: {@link Storage#setDbRoots(Config)}
    */
   @Test
-  @Category(MaintainedByDiffblue.class)
+  @Category(ContributionFromDiffblue.class)
+  @ManagedByDiffblue
   @MethodsUnderTest({"void Storage.setDbRoots(Config)"})
   public void testSetDbRoots_givenConfigResolveThrowIllegalArgumentException_thenCallsResolve() {
     // Arrange
@@ -1822,7 +1894,8 @@ public class StorageDiffblueTest {
    * <p>Method under test: {@link Storage#setDbRoots(Config)}
    */
   @Test
-  @Category(MaintainedByDiffblue.class)
+  @Category(ContributionFromDiffblue.class)
+  @ManagedByDiffblue
   @MethodsUnderTest({"void Storage.setDbRoots(Config)"})
   public void testSetDbRoots_givenFalse_whenConfigHasPathReturnFalse_thenCallsHasPath() {
     // Arrange
@@ -1849,7 +1922,8 @@ public class StorageDiffblueTest {
    * <p>Method under test: {@link Storage#setDbRoots(Config)}
    */
   @Test
-  @Category(MaintainedByDiffblue.class)
+  @Category(ContributionFromDiffblue.class)
+  @ManagedByDiffblue
   @MethodsUnderTest({"void Storage.setDbRoots(Config)"})
   public void testSetDbRoots_whenConfigGetConfigThrowIllegalArgumentException() {
     // Arrange
@@ -1876,7 +1950,8 @@ public class StorageDiffblueTest {
    * <p>Method under test: {@link Storage#setDbRoots(Config)}
    */
   @Test
-  @Category(MaintainedByDiffblue.class)
+  @Category(ContributionFromDiffblue.class)
+  @ManagedByDiffblue
   @MethodsUnderTest({"void Storage.setDbRoots(Config)"})
   public void testSetDbRoots_whenConfigHasPathThrowIllegalArgumentException() {
     // Arrange
@@ -1896,7 +1971,8 @@ public class StorageDiffblueTest {
    * <p>Method under test: {@link Storage#setPropertyMapFromConfig(Config)}
    */
   @Test
-  @Category(MaintainedByDiffblue.class)
+  @Category(ContributionFromDiffblue.class)
+  @ManagedByDiffblue
   @MethodsUnderTest({"void Storage.setPropertyMapFromConfig(Config)"})
   public void testSetPropertyMapFromConfig() {
     // Arrange
@@ -1924,7 +2000,8 @@ public class StorageDiffblueTest {
    * <p>Method under test: {@link Storage#setPropertyMapFromConfig(Config)}
    */
   @Test
-  @Category(MaintainedByDiffblue.class)
+  @Category(ContributionFromDiffblue.class)
+  @ManagedByDiffblue
   @MethodsUnderTest({"void Storage.setPropertyMapFromConfig(Config)"})
   public void testSetPropertyMapFromConfig_givenArrayList_thenStoragePropertyMapEmpty() {
     // Arrange
@@ -1955,7 +2032,8 @@ public class StorageDiffblueTest {
    * <p>Method under test: {@link Storage#setPropertyMapFromConfig(Config)}
    */
   @Test
-  @Category(MaintainedByDiffblue.class)
+  @Category(ContributionFromDiffblue.class)
+  @ManagedByDiffblue
   @MethodsUnderTest({"void Storage.setPropertyMapFromConfig(Config)"})
   public void testSetPropertyMapFromConfig_givenFalse_whenConfigHasPathReturnFalse() {
     // Arrange
@@ -1982,7 +2060,8 @@ public class StorageDiffblueTest {
    * <p>Method under test: {@link Storage#setPropertyMapFromConfig(Config)}
    */
   @Test
-  @Category(MaintainedByDiffblue.class)
+  @Category(ContributionFromDiffblue.class)
+  @ManagedByDiffblue
   @MethodsUnderTest({"void Storage.setPropertyMapFromConfig(Config)"})
   public void testSetPropertyMapFromConfig_whenConfigHasPathThrowIllegalArgumentException() {
     // Arrange
@@ -2006,7 +2085,8 @@ public class StorageDiffblueTest {
    * <p>Method under test: {@link Storage#deleteAllStoragePaths()}
    */
   @Test
-  @Category(MaintainedByDiffblue.class)
+  @Category(ContributionFromDiffblue.class)
+  @ManagedByDiffblue
   @MethodsUnderTest({"void Storage.deleteAllStoragePaths()"})
   public void testDeleteAllStoragePaths_thenCallsGetObjectList() {
     // Arrange
@@ -2037,7 +2117,8 @@ public class StorageDiffblueTest {
    * <p>Method under test: {@link Storage#setDefaultDbOptions(Config)}
    */
   @Test
-  @Category(MaintainedByDiffblue.class)
+  @Category(ContributionFromDiffblue.class)
+  @ManagedByDiffblue
   @MethodsUnderTest({"void Storage.setDefaultDbOptions(Config)"})
   public void testSetDefaultDbOptions_givenConfig_whenConfigGetConfigReturnConfig() {
     // Arrange
@@ -2063,7 +2144,8 @@ public class StorageDiffblueTest {
    * <p>Method under test: {@link Storage#setDefaultDbOptions(Config)}
    */
   @Test
-  @Category(MaintainedByDiffblue.class)
+  @Category(ContributionFromDiffblue.class)
+  @ManagedByDiffblue
   @MethodsUnderTest({"void Storage.setDefaultDbOptions(Config)"})
   public void testSetDefaultDbOptions_thenThrowIllegalArgumentException() {
     // Arrange
@@ -2112,7 +2194,8 @@ public class StorageDiffblueTest {
    * </ul>
    */
   @Test
-  @Category(MaintainedByDiffblue.class)
+  @Category(ContributionFromDiffblue.class)
+  @ManagedByDiffblue
   @MethodsUnderTest({
     "List Storage.getCacheDbs()",
     "int Storage.getCheckpointVersion()",
@@ -2207,7 +2290,8 @@ public class StorageDiffblueTest {
    * <p>Method under test: default or parameterless constructor of {@link Storage}
    */
   @Test
-  @Category(MaintainedByDiffblue.class)
+  @Category(ContributionFromDiffblue.class)
+  @ManagedByDiffblue
   @MethodsUnderTest({"void Storage.<init>()"})
   public void testNewStorage() {
     // Arrange and Act

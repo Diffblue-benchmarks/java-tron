@@ -2,7 +2,8 @@ package org.tron.common.utils;
 
 import static org.junit.Assert.assertEquals;
 import static org.junit.Assert.assertFalse;
-import com.diffblue.cover.annotations.MaintainedByDiffblue;
+import com.diffblue.cover.annotations.ContributionFromDiffblue;
+import com.diffblue.cover.annotations.ManagedByDiffblue;
 import com.diffblue.cover.annotations.MethodsUnderTest;
 import org.junit.Test;
 import org.junit.experimental.categories.Category;
@@ -19,7 +20,8 @@ public class PropUtilDiffblueTest {
    * <p>Method under test: {@link PropUtil#readProperty(String, String)}
    */
   @Test
-  @Category(MaintainedByDiffblue.class)
+  @Category(ContributionFromDiffblue.class)
+  @ManagedByDiffblue
   @MethodsUnderTest({"String PropUtil.readProperty(String, String)"})
   public void testReadProperty_whenIso88591_thenReturnEmptyString() {
     // Arrange, Act and Assert
@@ -37,7 +39,8 @@ public class PropUtilDiffblueTest {
    * <p>Method under test: {@link PropUtil#readProperty(String, String)}
    */
   @Test
-  @Category(MaintainedByDiffblue.class)
+  @Category(ContributionFromDiffblue.class)
+  @ManagedByDiffblue
   @MethodsUnderTest({"String PropUtil.readProperty(String, String)"})
   public void testReadProperty_whenNull_thenReturnEmptyString() {
     // Arrange, Act and Assert
@@ -55,7 +58,8 @@ public class PropUtilDiffblueTest {
    * <p>Method under test: {@link PropUtil#writeProperty(String, String, String)}
    */
   @Test
-  @Category(MaintainedByDiffblue.class)
+  @Category(ContributionFromDiffblue.class)
+  @ManagedByDiffblue
   @MethodsUnderTest({"boolean PropUtil.writeProperty(String, String, String)"})
   public void testWriteProperty_whenUtf8_thenReturnFalse() {
     // Arrange and Act

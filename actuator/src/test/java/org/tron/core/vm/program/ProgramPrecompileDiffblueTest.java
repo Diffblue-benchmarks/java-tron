@@ -3,7 +3,8 @@ package org.tron.core.vm.program;
 import static org.junit.Assert.assertArrayEquals;
 import static org.junit.Assert.assertFalse;
 import static org.junit.Assert.assertTrue;
-import com.diffblue.cover.annotations.MaintainedByDiffblue;
+import com.diffblue.cover.annotations.ContributionFromDiffblue;
+import com.diffblue.cover.annotations.ManagedByDiffblue;
 import com.diffblue.cover.annotations.MethodsUnderTest;
 import java.io.UnsupportedEncodingException;
 import org.junit.Test;
@@ -20,7 +21,8 @@ public class ProgramPrecompileDiffblueTest {
    * <p>Method under test: {@link ProgramPrecompile#compile(byte[])}
    */
   @Test
-  @Category(MaintainedByDiffblue.class)
+  @Category(ContributionFromDiffblue.class)
+  @ManagedByDiffblue
   @MethodsUnderTest({"ProgramPrecompile ProgramPrecompile.compile(byte[])"})
   public void testCompile_whenA() {
     // Arrange, Act and Assert
@@ -39,7 +41,8 @@ public class ProgramPrecompileDiffblueTest {
    * <p>Method under test: {@link ProgramPrecompile#compile(byte[])}
    */
   @Test
-  @Category(MaintainedByDiffblue.class)
+  @Category(ContributionFromDiffblue.class)
+  @ManagedByDiffblue
   @MethodsUnderTest({"ProgramPrecompile ProgramPrecompile.compile(byte[])"})
   public void testCompile_whenAxaxaxaxBytesIsUtf8() throws UnsupportedEncodingException {
     // Arrange, Act and Assert
@@ -56,7 +59,8 @@ public class ProgramPrecompileDiffblueTest {
    * <p>Method under test: {@link ProgramPrecompile#compile(byte[])}
    */
   @Test
-  @Category(MaintainedByDiffblue.class)
+  @Category(ContributionFromDiffblue.class)
+  @ManagedByDiffblue
   @MethodsUnderTest({"ProgramPrecompile ProgramPrecompile.compile(byte[])"})
   public void testCompile_whenXaxaxaxBytesIsUtf8() throws UnsupportedEncodingException {
     // Arrange, Act and Assert
@@ -73,7 +77,8 @@ public class ProgramPrecompileDiffblueTest {
    * <p>Method under test: {@link ProgramPrecompile#compile(byte[])}
    */
   @Test
-  @Category(MaintainedByDiffblue.class)
+  @Category(ContributionFromDiffblue.class)
+  @ManagedByDiffblue
   @MethodsUnderTest({"ProgramPrecompile ProgramPrecompile.compile(byte[])"})
   public void testCompile_whenXaxaxaxBytesIsUtf82() throws UnsupportedEncodingException {
     // Arrange, Act and Assert
@@ -91,7 +96,8 @@ public class ProgramPrecompileDiffblueTest {
    * <p>Method under test: {@link ProgramPrecompile#getCode(byte[])}
    */
   @Test
-  @Category(MaintainedByDiffblue.class)
+  @Category(ContributionFromDiffblue.class)
+  @ManagedByDiffblue
   @MethodsUnderTest({"byte[] ProgramPrecompile.getCode(byte[])"})
   public void testGetCode_whenArrayOfByteWithMinusThirteenAndZero_thenReturnAxaxaxBytesIsUtf8()
       throws UnsupportedEncodingException {
@@ -112,7 +118,8 @@ public class ProgramPrecompileDiffblueTest {
    * <p>Method under test: {@link ProgramPrecompile#hasJumpDest(int)}
    */
   @Test
-  @Category(MaintainedByDiffblue.class)
+  @Category(ContributionFromDiffblue.class)
+  @ManagedByDiffblue
   @MethodsUnderTest({"boolean ProgramPrecompile.hasJumpDest(int)"})
   public void testHasJumpDest_givenA_thenReturnTrue() {
     // Arrange, Act and Assert
@@ -131,7 +138,8 @@ public class ProgramPrecompileDiffblueTest {
    * <p>Method under test: {@link ProgramPrecompile#hasJumpDest(int)}
    */
   @Test
-  @Category(MaintainedByDiffblue.class)
+  @Category(ContributionFromDiffblue.class)
+  @ManagedByDiffblue
   @MethodsUnderTest({"boolean ProgramPrecompile.hasJumpDest(int)"})
   public void testHasJumpDest_givenProgramPrecompile_thenReturnFalse() {
     // Arrange, Act and Assert

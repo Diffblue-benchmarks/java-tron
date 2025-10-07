@@ -6,7 +6,8 @@ import static org.junit.Assert.assertFalse;
 import static org.junit.Assert.assertNull;
 import static org.junit.Assert.assertSame;
 import static org.junit.Assert.assertTrue;
-import com.diffblue.cover.annotations.MaintainedByDiffblue;
+import com.diffblue.cover.annotations.ContributionFromDiffblue;
+import com.diffblue.cover.annotations.ManagedByDiffblue;
 import com.diffblue.cover.annotations.MethodsUnderTest;
 import com.google.protobuf.DescriptorProtos;
 import com.google.protobuf.DescriptorProtos.FieldDescriptorProto;
@@ -37,7 +38,8 @@ public class ProgramResultDiffblueTest {
    * <p>Method under test: {@link ProgramResult#createEmpty()}
    */
   @Test
-  @Category(MaintainedByDiffblue.class)
+  @Category(ContributionFromDiffblue.class)
+  @ManagedByDiffblue
   @MethodsUnderTest({"ProgramResult ProgramResult.createEmpty()"})
   public void testCreateEmpty() {
     // Arrange and Act
@@ -65,7 +67,8 @@ public class ProgramResultDiffblueTest {
    * <p>Method under test: {@link ProgramResult#spendEnergyWithPenalty(long, long)}
    */
   @Test
-  @Category(MaintainedByDiffblue.class)
+  @Category(ContributionFromDiffblue.class)
+  @ManagedByDiffblue
   @MethodsUnderTest({"void ProgramResult.spendEnergyWithPenalty(long, long)"})
   public void testSpendEnergyWithPenalty() {
     // Arrange
@@ -106,7 +109,8 @@ public class ProgramResultDiffblueTest {
    * </ul>
    */
   @Test
-  @Category(MaintainedByDiffblue.class)
+  @Category(ContributionFromDiffblue.class)
+  @ManagedByDiffblue
   @MethodsUnderTest({
     "void ProgramResult.addTotalPenalty(long)",
     "long ProgramResult.getEnergyPenaltyTotal()",
@@ -171,7 +175,8 @@ public class ProgramResultDiffblueTest {
    * <p>Method under test: {@link ProgramResult#getContractAddress()}
    */
   @Test
-  @Category(MaintainedByDiffblue.class)
+  @Category(ContributionFromDiffblue.class)
+  @ManagedByDiffblue
   @MethodsUnderTest({"byte[] ProgramResult.getContractAddress()"})
   public void testGetContractAddress() {
     // Arrange, Act and Assert
@@ -184,7 +189,8 @@ public class ProgramResultDiffblueTest {
    * <p>Method under test: {@link ProgramResult#setContractAddress(byte[])}
    */
   @Test
-  @Category(MaintainedByDiffblue.class)
+  @Category(ContributionFromDiffblue.class)
+  @ManagedByDiffblue
   @MethodsUnderTest({"void ProgramResult.setContractAddress(byte[])"})
   public void testSetContractAddress() throws UnsupportedEncodingException {
     // Arrange
@@ -207,7 +213,8 @@ public class ProgramResultDiffblueTest {
    * <p>Method under test: {@link ProgramResult#getTriggerList()}
    */
   @Test
-  @Category(MaintainedByDiffblue.class)
+  @Category(ContributionFromDiffblue.class)
+  @ManagedByDiffblue
   @MethodsUnderTest({"List ProgramResult.getTriggerList()"})
   public void testGetTriggerList_givenCreateEmpty() {
     // Arrange, Act and Assert
@@ -224,7 +231,8 @@ public class ProgramResultDiffblueTest {
    * <p>Method under test: {@link ProgramResult#getTriggerList()}
    */
   @Test
-  @Category(MaintainedByDiffblue.class)
+  @Category(ContributionFromDiffblue.class)
+  @ManagedByDiffblue
   @MethodsUnderTest({"List ProgramResult.getTriggerList()"})
   public void testGetTriggerList_givenCreateEmptyTriggerListIsArrayList() {
     // Arrange
@@ -246,7 +254,8 @@ public class ProgramResultDiffblueTest {
    * <p>Method under test: {@link ProgramResult#getDeleteAccounts()}
    */
   @Test
-  @Category(MaintainedByDiffblue.class)
+  @Category(ContributionFromDiffblue.class)
+  @ManagedByDiffblue
   @MethodsUnderTest({"Set ProgramResult.getDeleteAccounts()"})
   public void testGetDeleteAccounts_givenCreateEmptyAddDeleteAccountZero_thenReturnSizeIsOne() {
     // Arrange
@@ -268,7 +277,8 @@ public class ProgramResultDiffblueTest {
    * <p>Method under test: {@link ProgramResult#getDeleteAccounts()}
    */
   @Test
-  @Category(MaintainedByDiffblue.class)
+  @Category(ContributionFromDiffblue.class)
+  @ManagedByDiffblue
   @MethodsUnderTest({"Set ProgramResult.getDeleteAccounts()"})
   public void testGetDeleteAccounts_givenCreateEmpty_thenReturnEmpty() {
     // Arrange, Act and Assert
@@ -285,7 +295,8 @@ public class ProgramResultDiffblueTest {
    * <p>Method under test: {@link ProgramResult#addDeleteAccount(DataWord)}
    */
   @Test
-  @Category(MaintainedByDiffblue.class)
+  @Category(ContributionFromDiffblue.class)
+  @ManagedByDiffblue
   @MethodsUnderTest({"void ProgramResult.addDeleteAccount(DataWord)"})
   public void testAddDeleteAccount_givenCreateEmpty() {
     // Arrange
@@ -308,7 +319,8 @@ public class ProgramResultDiffblueTest {
    * <p>Method under test: {@link ProgramResult#addDeleteAccount(DataWord)}
    */
   @Test
-  @Category(MaintainedByDiffblue.class)
+  @Category(ContributionFromDiffblue.class)
+  @ManagedByDiffblue
   @MethodsUnderTest({"void ProgramResult.addDeleteAccount(DataWord)"})
   public void testAddDeleteAccount_givenCreateEmptyAddDeleteAccountZero() {
     // Arrange
@@ -332,7 +344,8 @@ public class ProgramResultDiffblueTest {
    * <p>Method under test: {@link ProgramResult#addDeleteAccounts(Set)}
    */
   @Test
-  @Category(MaintainedByDiffblue.class)
+  @Category(ContributionFromDiffblue.class)
+  @ManagedByDiffblue
   @MethodsUnderTest({"void ProgramResult.addDeleteAccounts(Set)"})
   public void testAddDeleteAccounts_givenCreateEmptyAddDeleteAccountZero() {
     // Arrange
@@ -360,7 +373,8 @@ public class ProgramResultDiffblueTest {
    * <p>Method under test: {@link ProgramResult#addDeleteAccounts(Set)}
    */
   @Test
-  @Category(MaintainedByDiffblue.class)
+  @Category(ContributionFromDiffblue.class)
+  @ManagedByDiffblue
   @MethodsUnderTest({"void ProgramResult.addDeleteAccounts(Set)"})
   public void testAddDeleteAccounts_givenZero_thenCreateEmptyDeleteAccountsIsHashSet() {
     // Arrange
@@ -387,7 +401,8 @@ public class ProgramResultDiffblueTest {
    * <p>Method under test: {@link ProgramResult#addDeleteAccounts(Set)}
    */
   @Test
-  @Category(MaintainedByDiffblue.class)
+  @Category(ContributionFromDiffblue.class)
+  @ManagedByDiffblue
   @MethodsUnderTest({"void ProgramResult.addDeleteAccounts(Set)"})
   public void testAddDeleteAccounts_whenHashSet_thenCreateEmptyDeleteAccountsEmpty() {
     // Arrange
@@ -411,7 +426,8 @@ public class ProgramResultDiffblueTest {
    * <p>Method under test: {@link ProgramResult#addDeleteAccounts(Set)}
    */
   @Test
-  @Category(MaintainedByDiffblue.class)
+  @Category(ContributionFromDiffblue.class)
+  @ManagedByDiffblue
   @MethodsUnderTest({"void ProgramResult.addDeleteAccounts(Set)"})
   public void testAddDeleteAccounts_whenNull_thenCreateEmptyDeleteAccountsEmpty() {
     // Arrange
@@ -435,7 +451,8 @@ public class ProgramResultDiffblueTest {
    * <p>Method under test: {@link ProgramResult#getLogInfoList()}
    */
   @Test
-  @Category(MaintainedByDiffblue.class)
+  @Category(ContributionFromDiffblue.class)
+  @ManagedByDiffblue
   @MethodsUnderTest({"List ProgramResult.getLogInfoList()"})
   public void testGetLogInfoList_givenCreateEmpty_thenReturnEmpty() {
     // Arrange, Act and Assert
@@ -452,7 +469,8 @@ public class ProgramResultDiffblueTest {
    * <p>Method under test: {@link ProgramResult#getLogInfoList()}
    */
   @Test
-  @Category(MaintainedByDiffblue.class)
+  @Category(ContributionFromDiffblue.class)
+  @ManagedByDiffblue
   @MethodsUnderTest({"List ProgramResult.getLogInfoList()"})
   public void testGetLogInfoList_thenReturnSizeIsOne() throws UnsupportedEncodingException {
     // Arrange
@@ -480,7 +498,8 @@ public class ProgramResultDiffblueTest {
    * <p>Method under test: {@link ProgramResult#addLogInfo(LogInfo)}
    */
   @Test
-  @Category(MaintainedByDiffblue.class)
+  @Category(ContributionFromDiffblue.class)
+  @ManagedByDiffblue
   @MethodsUnderTest({"void ProgramResult.addLogInfo(LogInfo)"})
   public void testAddLogInfo_givenCreateEmpty_thenCreateEmptyLogInfoListSizeIsOne()
       throws UnsupportedEncodingException {
@@ -508,7 +527,8 @@ public class ProgramResultDiffblueTest {
    * <p>Method under test: {@link ProgramResult#addLogInfo(LogInfo)}
    */
   @Test
-  @Category(MaintainedByDiffblue.class)
+  @Category(ContributionFromDiffblue.class)
+  @ManagedByDiffblue
   @MethodsUnderTest({"void ProgramResult.addLogInfo(LogInfo)"})
   public void testAddLogInfo_thenCreateEmptyLogInfoListSizeIsTwo()
       throws UnsupportedEncodingException {
@@ -541,7 +561,8 @@ public class ProgramResultDiffblueTest {
    * <p>Method under test: {@link ProgramResult#addLogInfos(List)}
    */
   @Test
-  @Category(MaintainedByDiffblue.class)
+  @Category(ContributionFromDiffblue.class)
+  @ManagedByDiffblue
   @MethodsUnderTest({"void ProgramResult.addLogInfos(List)"})
   public void testAddLogInfos_givenA_thenCreateEmptyLogInfoListIsArrayList() {
     // Arrange
@@ -579,7 +600,8 @@ public class ProgramResultDiffblueTest {
    * <p>Method under test: {@link ProgramResult#addLogInfos(List)}
    */
   @Test
-  @Category(MaintainedByDiffblue.class)
+  @Category(ContributionFromDiffblue.class)
+  @ManagedByDiffblue
   @MethodsUnderTest({"void ProgramResult.addLogInfos(List)"})
   public void testAddLogInfos_givenA_thenCreateEmptyLogInfoListSizeIsOne() {
     // Arrange
@@ -614,7 +636,8 @@ public class ProgramResultDiffblueTest {
    * <p>Method under test: {@link ProgramResult#addLogInfos(List)}
    */
   @Test
-  @Category(MaintainedByDiffblue.class)
+  @Category(ContributionFromDiffblue.class)
+  @ManagedByDiffblue
   @MethodsUnderTest({"void ProgramResult.addLogInfos(List)"})
   public void testAddLogInfos_givenCreateEmpty_whenArrayList_thenCreateEmptyLogInfoListEmpty() {
     // Arrange
@@ -639,7 +662,8 @@ public class ProgramResultDiffblueTest {
    * <p>Method under test: {@link ProgramResult#addLogInfos(List)}
    */
   @Test
-  @Category(MaintainedByDiffblue.class)
+  @Category(ContributionFromDiffblue.class)
+  @ManagedByDiffblue
   @MethodsUnderTest({"void ProgramResult.addLogInfos(List)"})
   public void testAddLogInfos_givenCreateEmpty_whenNull_thenCreateEmptyLogInfoListEmpty() {
     // Arrange
@@ -662,7 +686,8 @@ public class ProgramResultDiffblueTest {
    * <p>Method under test: {@link ProgramResult#addLogInfos(List)}
    */
   @Test
-  @Category(MaintainedByDiffblue.class)
+  @Category(ContributionFromDiffblue.class)
+  @ManagedByDiffblue
   @MethodsUnderTest({"void ProgramResult.addLogInfos(List)"})
   public void testAddLogInfos_thenCreateEmptyLogInfoListSizeIsTwo()
       throws UnsupportedEncodingException {
@@ -700,7 +725,8 @@ public class ProgramResultDiffblueTest {
    * <p>Method under test: {@link ProgramResult#getCallCreateList()}
    */
   @Test
-  @Category(MaintainedByDiffblue.class)
+  @Category(ContributionFromDiffblue.class)
+  @ManagedByDiffblue
   @MethodsUnderTest({"List ProgramResult.getCallCreateList()"})
   public void testGetCallCreateList_thenReturnEmpty() {
     // Arrange, Act and Assert
@@ -717,7 +743,8 @@ public class ProgramResultDiffblueTest {
    * <p>Method under test: {@link ProgramResult#getCallCreateList()}
    */
   @Test
-  @Category(MaintainedByDiffblue.class)
+  @Category(ContributionFromDiffblue.class)
+  @ManagedByDiffblue
   @MethodsUnderTest({"List ProgramResult.getCallCreateList()"})
   public void testGetCallCreateList_thenReturnSizeIsOne() throws UnsupportedEncodingException {
     // Arrange
@@ -750,7 +777,8 @@ public class ProgramResultDiffblueTest {
    * <p>Method under test: {@link ProgramResult#addCallCreate(byte[], byte[], byte[], byte[])}
    */
   @Test
-  @Category(MaintainedByDiffblue.class)
+  @Category(ContributionFromDiffblue.class)
+  @ManagedByDiffblue
   @MethodsUnderTest({"void ProgramResult.addCallCreate(byte[], byte[], byte[], byte[])"})
   public void testAddCallCreate_thenCreateEmptyCallCreateListSizeIsOne()
       throws UnsupportedEncodingException {
@@ -793,7 +821,8 @@ public class ProgramResultDiffblueTest {
    * <p>Method under test: {@link ProgramResult#addCallCreate(byte[], byte[], byte[], byte[])}
    */
   @Test
-  @Category(MaintainedByDiffblue.class)
+  @Category(ContributionFromDiffblue.class)
+  @ManagedByDiffblue
   @MethodsUnderTest({"void ProgramResult.addCallCreate(byte[], byte[], byte[], byte[])"})
   public void testAddCallCreate_thenCreateEmptyCallCreateListSizeIsTwo()
       throws UnsupportedEncodingException {
@@ -838,7 +867,8 @@ public class ProgramResultDiffblueTest {
    * <p>Method under test: {@link ProgramResult#getInternalTransactions()}
    */
   @Test
-  @Category(MaintainedByDiffblue.class)
+  @Category(ContributionFromDiffblue.class)
+  @ManagedByDiffblue
   @MethodsUnderTest({"List ProgramResult.getInternalTransactions()"})
   public void testGetInternalTransactions_thenReturnEmpty() {
     // Arrange, Act and Assert
@@ -855,7 +885,8 @@ public class ProgramResultDiffblueTest {
    * <p>Method under test: {@link ProgramResult#getInternalTransactions()}
    */
   @Test
-  @Category(MaintainedByDiffblue.class)
+  @Category(ContributionFromDiffblue.class)
+  @ManagedByDiffblue
   @MethodsUnderTest({"List ProgramResult.getInternalTransactions()"})
   public void testGetInternalTransactions_thenReturnSizeIsOne()
       throws UnsupportedEncodingException {
@@ -911,7 +942,8 @@ public class ProgramResultDiffblueTest {
    * <p>Method under test: {@link ProgramResult#addInternalTransaction(InternalTransaction)}
    */
   @Test
-  @Category(MaintainedByDiffblue.class)
+  @Category(ContributionFromDiffblue.class)
+  @ManagedByDiffblue
   @MethodsUnderTest({"void ProgramResult.addInternalTransaction(InternalTransaction)"})
   public void testAddInternalTransactionWithInternalTransaction() {
     // Arrange
@@ -933,7 +965,8 @@ public class ProgramResultDiffblueTest {
    * <p>Method under test: {@link ProgramResult#addInternalTransaction(InternalTransaction)}
    */
   @Test
-  @Category(MaintainedByDiffblue.class)
+  @Category(ContributionFromDiffblue.class)
+  @ManagedByDiffblue
   @MethodsUnderTest({"void ProgramResult.addInternalTransaction(InternalTransaction)"})
   public void testAddInternalTransactionWithInternalTransaction2()
       throws UnsupportedEncodingException {
@@ -965,7 +998,8 @@ public class ProgramResultDiffblueTest {
    * long, byte[], String, long, Map)}
    */
   @Test
-  @Category(MaintainedByDiffblue.class)
+  @Category(ContributionFromDiffblue.class)
+  @ManagedByDiffblue
   @MethodsUnderTest({
     "InternalTransaction ProgramResult.addInternalTransaction(byte[], int, byte[], byte[], long, byte[], String, long, Map)"
   })
@@ -1016,7 +1050,8 @@ public class ProgramResultDiffblueTest {
    * long, byte[], String, long, Map)}
    */
   @Test
-  @Category(MaintainedByDiffblue.class)
+  @Category(ContributionFromDiffblue.class)
+  @ManagedByDiffblue
   @MethodsUnderTest({
     "InternalTransaction ProgramResult.addInternalTransaction(byte[], int, byte[], byte[], long, byte[], String, long, Map)"
   })
@@ -1094,7 +1129,8 @@ public class ProgramResultDiffblueTest {
    * long, byte[], String, long, Map)}
    */
   @Test
-  @Category(MaintainedByDiffblue.class)
+  @Category(ContributionFromDiffblue.class)
+  @ManagedByDiffblue
   @MethodsUnderTest({
     "InternalTransaction ProgramResult.addInternalTransaction(byte[], int, byte[], byte[], long, byte[], String, long, Map)"
   })
@@ -1157,7 +1193,8 @@ public class ProgramResultDiffblueTest {
    * long, byte[], String, long, Map)}
    */
   @Test
-  @Category(MaintainedByDiffblue.class)
+  @Category(ContributionFromDiffblue.class)
+  @ManagedByDiffblue
   @MethodsUnderTest({
     "InternalTransaction ProgramResult.addInternalTransaction(byte[], int, byte[], byte[], long, byte[], String, long, Map)"
   })
@@ -1236,7 +1273,8 @@ public class ProgramResultDiffblueTest {
    * <p>Method under test: {@link ProgramResult#rejectInternalTransactions()}
    */
   @Test
-  @Category(MaintainedByDiffblue.class)
+  @Category(ContributionFromDiffblue.class)
+  @ManagedByDiffblue
   @MethodsUnderTest({"void ProgramResult.rejectInternalTransactions()"})
   public void testRejectInternalTransactions_thenCreateEmptyInternalTransactionsSizeIsOne()
       throws UnsupportedEncodingException {
@@ -1265,7 +1303,8 @@ public class ProgramResultDiffblueTest {
    * <p>Method under test: {@link ProgramResult#reset()}
    */
   @Test
-  @Category(MaintainedByDiffblue.class)
+  @Category(ContributionFromDiffblue.class)
+  @ManagedByDiffblue
   @MethodsUnderTest({"void ProgramResult.reset()"})
   public void testReset() throws UnsupportedEncodingException {
     // Arrange
@@ -1301,7 +1340,8 @@ public class ProgramResultDiffblueTest {
    * <p>Method under test: {@link ProgramResult#reset()}
    */
   @Test
-  @Category(MaintainedByDiffblue.class)
+  @Category(ContributionFromDiffblue.class)
+  @ManagedByDiffblue
   @MethodsUnderTest({"void ProgramResult.reset()"})
   public void testReset_givenCreateEmptyAddDeleteAccountZero() {
     // Arrange
@@ -1337,7 +1377,8 @@ public class ProgramResultDiffblueTest {
    * <p>Method under test: {@link ProgramResult#reset()}
    */
   @Test
-  @Category(MaintainedByDiffblue.class)
+  @Category(ContributionFromDiffblue.class)
+  @ManagedByDiffblue
   @MethodsUnderTest({"void ProgramResult.reset()"})
   public void testReset_givenCreateEmpty_thenCreateEmptyDeleteAccountsEmpty() {
     // Arrange
@@ -1367,7 +1408,8 @@ public class ProgramResultDiffblueTest {
    * <p>Method under test: default or parameterless constructor of {@link ProgramResult}
    */
   @Test
-  @Category(MaintainedByDiffblue.class)
+  @Category(ContributionFromDiffblue.class)
+  @ManagedByDiffblue
   @MethodsUnderTest({"void ProgramResult.<init>()"})
   public void testNewProgramResult() {
     // Arrange and Act

@@ -1,7 +1,8 @@
 package org.tron.core.vm.nativecontract;
 
 import static org.junit.Assert.assertThrows;
-import com.diffblue.cover.annotations.MaintainedByDiffblue;
+import com.diffblue.cover.annotations.ContributionFromDiffblue;
+import com.diffblue.cover.annotations.ManagedByDiffblue;
 import com.diffblue.cover.annotations.MethodsUnderTest;
 import java.io.UnsupportedEncodingException;
 import org.junit.Test;
@@ -26,7 +27,8 @@ public class FreezeBalanceV2ProcessorDiffblueTest {
    * Repository)}
    */
   @Test
-  @Category(MaintainedByDiffblue.class)
+  @Category(ContributionFromDiffblue.class)
+  @ManagedByDiffblue
   @MethodsUnderTest({"void FreezeBalanceV2Processor.validate(FreezeBalanceV2Param, Repository)"})
   public void testValidate_givenAxaxaxaxBytesIsUtf8()
       throws UnsupportedEncodingException, ContractValidateException {
@@ -55,7 +57,8 @@ public class FreezeBalanceV2ProcessorDiffblueTest {
    * Repository)}
    */
   @Test
-  @Category(MaintainedByDiffblue.class)
+  @Category(ContributionFromDiffblue.class)
+  @ManagedByDiffblue
   @MethodsUnderTest({"void FreezeBalanceV2Processor.validate(FreezeBalanceV2Param, Repository)"})
   public void testValidate_givenEmptyArrayOfByte() throws ContractValidateException {
     // Arrange
@@ -84,7 +87,8 @@ public class FreezeBalanceV2ProcessorDiffblueTest {
    * Repository)}
    */
   @Test
-  @Category(MaintainedByDiffblue.class)
+  @Category(ContributionFromDiffblue.class)
+  @ManagedByDiffblue
   @MethodsUnderTest({"void FreezeBalanceV2Processor.validate(FreezeBalanceV2Param, Repository)"})
   public void testValidate_givenZero_whenFreezeBalanceV2ParamFrozenBalanceIsZero()
       throws ContractValidateException {
@@ -114,7 +118,8 @@ public class FreezeBalanceV2ProcessorDiffblueTest {
    * Repository)}
    */
   @Test
-  @Category(MaintainedByDiffblue.class)
+  @Category(ContributionFromDiffblue.class)
+  @ManagedByDiffblue
   @MethodsUnderTest({"void FreezeBalanceV2Processor.validate(FreezeBalanceV2Param, Repository)"})
   public void testValidate_givenZero_whenNull() throws ContractValidateException {
     // Arrange

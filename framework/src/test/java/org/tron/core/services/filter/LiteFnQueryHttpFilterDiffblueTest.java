@@ -9,7 +9,8 @@ import static org.mockito.Mockito.doThrow;
 import static org.mockito.Mockito.mock;
 import static org.mockito.Mockito.verify;
 import static org.mockito.Mockito.when;
-import com.diffblue.cover.annotations.MaintainedByDiffblue;
+import com.diffblue.cover.annotations.ContributionFromDiffblue;
+import com.diffblue.cover.annotations.ManagedByDiffblue;
 import com.diffblue.cover.annotations.MethodsUnderTest;
 import java.io.IOException;
 import java.util.Set;
@@ -51,7 +52,8 @@ public class LiteFnQueryHttpFilterDiffblueTest {
    * FilterChain)}
    */
   @Test
-  @Category(MaintainedByDiffblue.class)
+  @Category(ContributionFromDiffblue.class)
+  @ManagedByDiffblue
   @MethodsUnderTest({
     "void LiteFnQueryHttpFilter.doFilter(ServletRequest, ServletResponse, FilterChain)"
   })
@@ -88,7 +90,8 @@ public class LiteFnQueryHttpFilterDiffblueTest {
    * FilterChain)}
    */
   @Test
-  @Category(MaintainedByDiffblue.class)
+  @Category(ContributionFromDiffblue.class)
+  @ManagedByDiffblue
   @MethodsUnderTest({
     "void LiteFnQueryHttpFilter.doFilter(ServletRequest, ServletResponse, FilterChain)"
   })
@@ -124,7 +127,8 @@ public class LiteFnQueryHttpFilterDiffblueTest {
    * FilterChain)}
    */
   @Test
-  @Category(MaintainedByDiffblue.class)
+  @Category(ContributionFromDiffblue.class)
+  @ManagedByDiffblue
   @MethodsUnderTest({
     "void LiteFnQueryHttpFilter.doFilter(ServletRequest, ServletResponse, FilterChain)"
   })
@@ -160,7 +164,8 @@ public class LiteFnQueryHttpFilterDiffblueTest {
    * </ul>
    */
   @Test
-  @Category(MaintainedByDiffblue.class)
+  @Category(ContributionFromDiffblue.class)
+  @ManagedByDiffblue
   @MethodsUnderTest({
     "void LiteFnQueryHttpFilter.destroy()",
     "Set LiteFnQueryHttpFilter.getFilterPaths()",

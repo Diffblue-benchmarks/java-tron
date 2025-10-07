@@ -2,7 +2,8 @@ package org.tron.plugins.utils;
 
 import static org.junit.Assert.assertArrayEquals;
 import static org.junit.Assert.assertEquals;
-import com.diffblue.cover.annotations.MaintainedByDiffblue;
+import com.diffblue.cover.annotations.ContributionFromDiffblue;
+import com.diffblue.cover.annotations.ManagedByDiffblue;
 import com.diffblue.cover.annotations.MethodsUnderTest;
 import java.io.UnsupportedEncodingException;
 import org.junit.Test;
@@ -19,7 +20,8 @@ public class MarketUtilsDiffblueTest {
    * <p>Method under test: {@link MarketUtils#createPairPriceKey(byte[], byte[], long, long)}
    */
   @Test
-  @Category(MaintainedByDiffblue.class)
+  @Category(ContributionFromDiffblue.class)
+  @ManagedByDiffblue
   @MethodsUnderTest({"byte[] MarketUtils.createPairPriceKey(byte[], byte[], long, long)"})
   public void testCreatePairPriceKey_whenA() {
     // Arrange and Act
@@ -50,7 +52,8 @@ public class MarketUtilsDiffblueTest {
    * <p>Method under test: {@link MarketUtils#createPairPriceKey(byte[], byte[], long, long)}
    */
   @Test
-  @Category(MaintainedByDiffblue.class)
+  @Category(ContributionFromDiffblue.class)
+  @ManagedByDiffblue
   @MethodsUnderTest({"byte[] MarketUtils.createPairPriceKey(byte[], byte[], long, long)"})
   public void testCreatePairPriceKey_whenAxaxaxaxBytesIsUtf8() throws UnsupportedEncodingException {
     // Arrange and Act
@@ -78,7 +81,8 @@ public class MarketUtilsDiffblueTest {
    * <p>Method under test: {@link MarketUtils#createPairPriceKey(byte[], byte[], long, long)}
    */
   @Test
-  @Category(MaintainedByDiffblue.class)
+  @Category(ContributionFromDiffblue.class)
+  @ManagedByDiffblue
   @MethodsUnderTest({"byte[] MarketUtils.createPairPriceKey(byte[], byte[], long, long)"})
   public void testCreatePairPriceKey_whenAxaxaxaxBytesIsUtf82()
       throws UnsupportedEncodingException {
@@ -108,7 +112,8 @@ public class MarketUtilsDiffblueTest {
    * <p>Method under test: {@link MarketUtils#findGCD(long, long)}
    */
   @Test
-  @Category(MaintainedByDiffblue.class)
+  @Category(ContributionFromDiffblue.class)
+  @ManagedByDiffblue
   @MethodsUnderTest({"long MarketUtils.findGCD(long, long)"})
   public void testFindGCD_whenFive_thenReturnFive() {
     // Arrange, Act and Assert
@@ -126,7 +131,8 @@ public class MarketUtilsDiffblueTest {
    * <p>Method under test: {@link MarketUtils#findGCD(long, long)}
    */
   @Test
-  @Category(MaintainedByDiffblue.class)
+  @Category(ContributionFromDiffblue.class)
+  @ManagedByDiffblue
   @MethodsUnderTest({"long MarketUtils.findGCD(long, long)"})
   public void testFindGCD_whenOne_thenReturnOne() {
     // Arrange, Act and Assert
@@ -144,7 +150,8 @@ public class MarketUtilsDiffblueTest {
    * <p>Method under test: {@link MarketUtils#findGCD(long, long)}
    */
   @Test
-  @Category(MaintainedByDiffblue.class)
+  @Category(ContributionFromDiffblue.class)
+  @ManagedByDiffblue
   @MethodsUnderTest({"long MarketUtils.findGCD(long, long)"})
   public void testFindGCD_whenZero_thenReturnZero() {
     // Arrange, Act and Assert
@@ -162,7 +169,8 @@ public class MarketUtilsDiffblueTest {
    * <p>Method under test: {@link MarketUtils#findGCD(long, long)}
    */
   @Test
-  @Category(MaintainedByDiffblue.class)
+  @Category(ContributionFromDiffblue.class)
+  @ManagedByDiffblue
   @MethodsUnderTest({"long MarketUtils.findGCD(long, long)"})
   public void testFindGCD_whenZero_thenReturnZero2() {
     // Arrange, Act and Assert
@@ -180,7 +188,8 @@ public class MarketUtilsDiffblueTest {
    * <p>Method under test: {@link MarketUtils#findGCD(long, long)}
    */
   @Test
-  @Category(MaintainedByDiffblue.class)
+  @Category(ContributionFromDiffblue.class)
+  @ManagedByDiffblue
   @MethodsUnderTest({"long MarketUtils.findGCD(long, long)"})
   public void testFindGCD_whenZero_thenReturnZero3() {
     // Arrange, Act and Assert
@@ -198,7 +207,8 @@ public class MarketUtilsDiffblueTest {
    * <p>Method under test: {@link MarketUtils#comparePrice(long, long, long, long)}
    */
   @Test
-  @Category(MaintainedByDiffblue.class)
+  @Category(ContributionFromDiffblue.class)
+  @ManagedByDiffblue
   @MethodsUnderTest({"int MarketUtils.comparePrice(long, long, long, long)"})
   public void testComparePrice_whenFive_thenReturnZero() {
     // Arrange and Act
@@ -219,7 +229,8 @@ public class MarketUtilsDiffblueTest {
    * <p>Method under test: {@link MarketUtils#comparePrice(long, long, long, long)}
    */
   @Test
-  @Category(MaintainedByDiffblue.class)
+  @Category(ContributionFromDiffblue.class)
+  @ManagedByDiffblue
   @MethodsUnderTest({"int MarketUtils.comparePrice(long, long, long, long)"})
   public void testComparePrice_whenMax_value_thenReturnMinusOne() {
     // Arrange and Act
@@ -240,7 +251,8 @@ public class MarketUtilsDiffblueTest {
    * <p>Method under test: {@link MarketUtils#comparePrice(long, long, long, long)}
    */
   @Test
-  @Category(MaintainedByDiffblue.class)
+  @Category(ContributionFromDiffblue.class)
+  @ManagedByDiffblue
   @MethodsUnderTest({"int MarketUtils.comparePrice(long, long, long, long)"})
   public void testComparePrice_whenMax_value_thenReturnOne() {
     // Arrange and Act
@@ -261,7 +273,8 @@ public class MarketUtilsDiffblueTest {
    * <p>Method under test: {@link MarketUtils#comparePrice(long, long, long, long)}
    */
   @Test
-  @Category(MaintainedByDiffblue.class)
+  @Category(ContributionFromDiffblue.class)
+  @ManagedByDiffblue
   @MethodsUnderTest({"int MarketUtils.comparePrice(long, long, long, long)"})
   public void testComparePrice_whenMinusOne_thenReturnOne() {
     // Arrange and Act
@@ -282,7 +295,8 @@ public class MarketUtilsDiffblueTest {
    * <p>Method under test: {@link MarketUtils#comparePrice(long, long, long, long)}
    */
   @Test
-  @Category(MaintainedByDiffblue.class)
+  @Category(ContributionFromDiffblue.class)
+  @ManagedByDiffblue
   @MethodsUnderTest({"int MarketUtils.comparePrice(long, long, long, long)"})
   public void testComparePrice_whenOne_thenReturnOne() {
     // Arrange and Act
@@ -303,7 +317,8 @@ public class MarketUtilsDiffblueTest {
    * <p>Method under test: {@link MarketUtils#comparePrice(long, long, long, long)}
    */
   @Test
-  @Category(MaintainedByDiffblue.class)
+  @Category(ContributionFromDiffblue.class)
+  @ManagedByDiffblue
   @MethodsUnderTest({"int MarketUtils.comparePrice(long, long, long, long)"})
   public void testComparePrice_whenZero_thenReturnOne() {
     // Arrange and Act

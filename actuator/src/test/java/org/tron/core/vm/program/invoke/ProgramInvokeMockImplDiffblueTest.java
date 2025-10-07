@@ -9,7 +9,8 @@ import static org.junit.Assert.assertTrue;
 import static org.mockito.Mockito.mock;
 import static org.mockito.Mockito.verify;
 import static org.mockito.Mockito.when;
-import com.diffblue.cover.annotations.MaintainedByDiffblue;
+import com.diffblue.cover.annotations.ContributionFromDiffblue;
+import com.diffblue.cover.annotations.ManagedByDiffblue;
 import com.diffblue.cover.annotations.MethodsUnderTest;
 import java.io.UnsupportedEncodingException;
 import org.junit.Test;
@@ -27,7 +28,8 @@ public class ProgramInvokeMockImplDiffblueTest {
    * <p>Method under test: {@link ProgramInvokeMockImpl#ProgramInvokeMockImpl()}
    */
   @Test
-  @Category(MaintainedByDiffblue.class)
+  @Category(ContributionFromDiffblue.class)
+  @ManagedByDiffblue
   @MethodsUnderTest({"void ProgramInvokeMockImpl.<init>()"})
   public void testNewProgramInvokeMockImpl() {
     // Arrange and Act
@@ -51,7 +53,8 @@ public class ProgramInvokeMockImplDiffblueTest {
    * <p>Method under test: {@link ProgramInvokeMockImpl#ProgramInvokeMockImpl(boolean)}
    */
   @Test
-  @Category(MaintainedByDiffblue.class)
+  @Category(ContributionFromDiffblue.class)
+  @ManagedByDiffblue
   @MethodsUnderTest({"void ProgramInvokeMockImpl.<init>(boolean)"})
   public void testNewProgramInvokeMockImpl2() {
     // Arrange and Act
@@ -81,7 +84,8 @@ public class ProgramInvokeMockImplDiffblueTest {
    * byte[])}
    */
   @Test
-  @Category(MaintainedByDiffblue.class)
+  @Category(ContributionFromDiffblue.class)
+  @ManagedByDiffblue
   @MethodsUnderTest({"void ProgramInvokeMockImpl.<init>(StoreFactory, byte[], byte[])"})
   public void testNewProgramInvokeMockImpl_givenChainBaseManager_thenCallsGetChainBaseManager()
       throws UnsupportedEncodingException {
@@ -103,7 +107,8 @@ public class ProgramInvokeMockImplDiffblueTest {
    * <p>Method under test: {@link ProgramInvokeMockImpl#getContractAddress()}
    */
   @Test
-  @Category(MaintainedByDiffblue.class)
+  @Category(ContributionFromDiffblue.class)
+  @ManagedByDiffblue
   @MethodsUnderTest({"DataWord ProgramInvokeMockImpl.getContractAddress()"})
   public void testGetContractAddress() {
     // Arrange
@@ -160,7 +165,8 @@ public class ProgramInvokeMockImplDiffblueTest {
    * <p>Method under test: {@link ProgramInvokeMockImpl#getBalance()}
    */
   @Test
-  @Category(MaintainedByDiffblue.class)
+  @Category(ContributionFromDiffblue.class)
+  @ManagedByDiffblue
   @MethodsUnderTest({"DataWord ProgramInvokeMockImpl.getBalance()"})
   public void testGetBalance() {
     // Arrange
@@ -211,7 +217,8 @@ public class ProgramInvokeMockImplDiffblueTest {
    * <p>Method under test: {@link ProgramInvokeMockImpl#getOriginAddress()}
    */
   @Test
-  @Category(MaintainedByDiffblue.class)
+  @Category(ContributionFromDiffblue.class)
+  @ManagedByDiffblue
   @MethodsUnderTest({"DataWord ProgramInvokeMockImpl.getOriginAddress()"})
   public void testGetOriginAddress() {
     // Arrange
@@ -268,7 +275,8 @@ public class ProgramInvokeMockImplDiffblueTest {
    * <p>Method under test: {@link ProgramInvokeMockImpl#getCallerAddress()}
    */
   @Test
-  @Category(MaintainedByDiffblue.class)
+  @Category(ContributionFromDiffblue.class)
+  @ManagedByDiffblue
   @MethodsUnderTest({"DataWord ProgramInvokeMockImpl.getCallerAddress()"})
   public void testGetCallerAddress() {
     // Arrange
@@ -325,7 +333,8 @@ public class ProgramInvokeMockImplDiffblueTest {
    * <p>Method under test: {@link ProgramInvokeMockImpl#getMinEnergyPrice()}
    */
   @Test
-  @Category(MaintainedByDiffblue.class)
+  @Category(ContributionFromDiffblue.class)
+  @ManagedByDiffblue
   @MethodsUnderTest({"DataWord ProgramInvokeMockImpl.getMinEnergyPrice()"})
   public void testGetMinEnergyPrice() {
     // Arrange
@@ -376,7 +385,8 @@ public class ProgramInvokeMockImplDiffblueTest {
    * <p>Method under test: {@link ProgramInvokeMockImpl#getCallValue()}
    */
   @Test
-  @Category(MaintainedByDiffblue.class)
+  @Category(ContributionFromDiffblue.class)
+  @ManagedByDiffblue
   @MethodsUnderTest({"DataWord ProgramInvokeMockImpl.getCallValue()"})
   public void testGetCallValue() {
     // Arrange
@@ -433,7 +443,8 @@ public class ProgramInvokeMockImplDiffblueTest {
    * <p>Method under test: {@link ProgramInvokeMockImpl#getDataValue(DataWord)}
    */
   @Test
-  @Category(MaintainedByDiffblue.class)
+  @Category(ContributionFromDiffblue.class)
+  @ManagedByDiffblue
   @MethodsUnderTest({"DataWord ProgramInvokeMockImpl.getDataValue(DataWord)"})
   public void testGetDataValue_givenProgramInvokeMockImpl_whenZero_thenReturnZero() {
     // Arrange
@@ -457,7 +468,8 @@ public class ProgramInvokeMockImplDiffblueTest {
    * <p>Method under test: {@link ProgramInvokeMockImpl#getDataValue(DataWord)}
    */
   @Test
-  @Category(MaintainedByDiffblue.class)
+  @Category(ContributionFromDiffblue.class)
+  @ManagedByDiffblue
   @MethodsUnderTest({"DataWord ProgramInvokeMockImpl.getDataValue(DataWord)"})
   public void testGetDataValue_thenReturnToPrefixStringIs412041()
       throws UnsupportedEncodingException {
@@ -508,7 +520,8 @@ public class ProgramInvokeMockImplDiffblueTest {
    * <p>Method under test: {@link ProgramInvokeMockImpl#getDataValue(DataWord)}
    */
   @Test
-  @Category(MaintainedByDiffblue.class)
+  @Category(ContributionFromDiffblue.class)
+  @ManagedByDiffblue
   @MethodsUnderTest({"DataWord ProgramInvokeMockImpl.getDataValue(DataWord)"})
   public void testGetDataValue_whenDataWordWithNumIsA_thenReturnZero()
       throws UnsupportedEncodingException {
@@ -526,7 +539,8 @@ public class ProgramInvokeMockImplDiffblueTest {
    * <p>Method under test: {@link ProgramInvokeMockImpl#getDataSize()}
    */
   @Test
-  @Category(MaintainedByDiffblue.class)
+  @Category(ContributionFromDiffblue.class)
+  @ManagedByDiffblue
   @MethodsUnderTest({"DataWord ProgramInvokeMockImpl.getDataSize()"})
   public void testGetDataSize() throws UnsupportedEncodingException {
     // Arrange and Act
@@ -571,7 +585,8 @@ public class ProgramInvokeMockImplDiffblueTest {
    * <p>Method under test: {@link ProgramInvokeMockImpl#getDataSize()}
    */
   @Test
-  @Category(MaintainedByDiffblue.class)
+  @Category(ContributionFromDiffblue.class)
+  @ManagedByDiffblue
   @MethodsUnderTest({"DataWord ProgramInvokeMockImpl.getDataSize()"})
   public void testGetDataSize_givenProgramInvokeMockImpl() {
     // Arrange and Act
@@ -609,7 +624,8 @@ public class ProgramInvokeMockImplDiffblueTest {
    * <p>Method under test: {@link ProgramInvokeMockImpl#getDataSize()}
    */
   @Test
-  @Category(MaintainedByDiffblue.class)
+  @Category(ContributionFromDiffblue.class)
+  @ManagedByDiffblue
   @MethodsUnderTest({"DataWord ProgramInvokeMockImpl.getDataSize()"})
   public void testGetDataSize_givenProgramInvokeMockImplWithMsgDataRawIsEmptyArrayOfByte() {
     // Arrange
@@ -651,7 +667,8 @@ public class ProgramInvokeMockImplDiffblueTest {
    * <p>Method under test: {@link ProgramInvokeMockImpl#getDataCopy(DataWord, DataWord)}
    */
   @Test
-  @Category(MaintainedByDiffblue.class)
+  @Category(ContributionFromDiffblue.class)
+  @ManagedByDiffblue
   @MethodsUnderTest({"byte[] ProgramInvokeMockImpl.getDataCopy(DataWord, DataWord)"})
   public void testGetDataCopy_givenA_whenDataWordWithNumIsA_thenReturnEleventhElementIsZero() {
     // Arrange
@@ -728,7 +745,8 @@ public class ProgramInvokeMockImplDiffblueTest {
    * <p>Method under test: {@link ProgramInvokeMockImpl#getDataCopy(DataWord, DataWord)}
    */
   @Test
-  @Category(MaintainedByDiffblue.class)
+  @Category(ContributionFromDiffblue.class)
+  @ManagedByDiffblue
   @MethodsUnderTest({"byte[] ProgramInvokeMockImpl.getDataCopy(DataWord, DataWord)"})
   public void testGetDataCopy_givenA_whenDataWordWithNumIsA_thenReturnEmptyArrayOfByte() {
     // Arrange
@@ -753,7 +771,8 @@ public class ProgramInvokeMockImplDiffblueTest {
    * <p>Method under test: {@link ProgramInvokeMockImpl#getDataCopy(DataWord, DataWord)}
    */
   @Test
-  @Category(MaintainedByDiffblue.class)
+  @Category(ContributionFromDiffblue.class)
+  @ManagedByDiffblue
   @MethodsUnderTest({"byte[] ProgramInvokeMockImpl.getDataCopy(DataWord, DataWord)"})
   public void testGetDataCopy_givenA_whenZero_thenReturnEmptyArrayOfByte() {
     // Arrange
@@ -778,7 +797,8 @@ public class ProgramInvokeMockImplDiffblueTest {
    * <p>Method under test: {@link ProgramInvokeMockImpl#getDataCopy(DataWord, DataWord)}
    */
   @Test
-  @Category(MaintainedByDiffblue.class)
+  @Category(ContributionFromDiffblue.class)
+  @ManagedByDiffblue
   @MethodsUnderTest({"byte[] ProgramInvokeMockImpl.getDataCopy(DataWord, DataWord)"})
   public void testGetDataCopy_givenProgramInvokeMockImpl_whenZero_thenReturnEmptyArrayOfByte() {
     // Arrange
@@ -796,7 +816,8 @@ public class ProgramInvokeMockImplDiffblueTest {
    * <p>Method under test: {@link ProgramInvokeMockImpl#getPrevHash()}
    */
   @Test
-  @Category(MaintainedByDiffblue.class)
+  @Category(ContributionFromDiffblue.class)
+  @ManagedByDiffblue
   @MethodsUnderTest({"DataWord ProgramInvokeMockImpl.getPrevHash()"})
   public void testGetPrevHash() {
     // Arrange
@@ -848,7 +869,8 @@ public class ProgramInvokeMockImplDiffblueTest {
    * <p>Method under test: {@link ProgramInvokeMockImpl#getCoinbase()}
    */
   @Test
-  @Category(MaintainedByDiffblue.class)
+  @Category(ContributionFromDiffblue.class)
+  @ManagedByDiffblue
   @MethodsUnderTest({"DataWord ProgramInvokeMockImpl.getCoinbase()"})
   public void testGetCoinbase() {
     // Arrange
@@ -905,7 +927,8 @@ public class ProgramInvokeMockImplDiffblueTest {
    * <p>Method under test: {@link ProgramInvokeMockImpl#getTimestamp()}
    */
   @Test
-  @Category(MaintainedByDiffblue.class)
+  @Category(ContributionFromDiffblue.class)
+  @ManagedByDiffblue
   @MethodsUnderTest({"DataWord ProgramInvokeMockImpl.getTimestamp()"})
   public void testGetTimestamp() {
     // Arrange
@@ -951,7 +974,8 @@ public class ProgramInvokeMockImplDiffblueTest {
    * <p>Method under test: {@link ProgramInvokeMockImpl#getNumber()}
    */
   @Test
-  @Category(MaintainedByDiffblue.class)
+  @Category(ContributionFromDiffblue.class)
+  @ManagedByDiffblue
   @MethodsUnderTest({"DataWord ProgramInvokeMockImpl.getNumber()"})
   public void testGetNumber() {
     // Arrange
@@ -997,7 +1021,8 @@ public class ProgramInvokeMockImplDiffblueTest {
    * <p>Method under test: {@link ProgramInvokeMockImpl#getDifficulty()}
    */
   @Test
-  @Category(MaintainedByDiffblue.class)
+  @Category(ContributionFromDiffblue.class)
+  @ManagedByDiffblue
   @MethodsUnderTest({"DataWord ProgramInvokeMockImpl.getDifficulty()"})
   public void testGetDifficulty() {
     // Arrange
@@ -1043,7 +1068,8 @@ public class ProgramInvokeMockImplDiffblueTest {
    * <p>Method under test: {@link ProgramInvokeMockImpl#byTestingSuite()}
    */
   @Test
-  @Category(MaintainedByDiffblue.class)
+  @Category(ContributionFromDiffblue.class)
+  @ManagedByDiffblue
   @MethodsUnderTest({"boolean ProgramInvokeMockImpl.byTestingSuite()"})
   public void testByTestingSuite() {
     // Arrange, Act and Assert
@@ -1070,7 +1096,8 @@ public class ProgramInvokeMockImplDiffblueTest {
    * </ul>
    */
   @Test
-  @Category(MaintainedByDiffblue.class)
+  @Category(ContributionFromDiffblue.class)
+  @ManagedByDiffblue
   @MethodsUnderTest({
     "int ProgramInvokeMockImpl.getCallDeep()",
     "Repository ProgramInvokeMockImpl.getDeposit()",

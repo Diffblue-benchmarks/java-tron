@@ -1,7 +1,8 @@
 package org.tron.common.logsfilter.capsule;
 
 import static org.junit.Assert.assertThrows;
-import com.diffblue.cover.annotations.MaintainedByDiffblue;
+import com.diffblue.cover.annotations.ContributionFromDiffblue;
+import com.diffblue.cover.annotations.ManagedByDiffblue;
 import com.diffblue.cover.annotations.MethodsUnderTest;
 import org.junit.Test;
 import org.junit.experimental.categories.Category;
@@ -13,7 +14,8 @@ public class FilterTriggerCapsuleDiffblueTest {
    * <p>Method under test: {@link FilterTriggerCapsule#processFilterTrigger()}
    */
   @Test
-  @Category(MaintainedByDiffblue.class)
+  @Category(ContributionFromDiffblue.class)
+  @ManagedByDiffblue
   @MethodsUnderTest({"void FilterTriggerCapsule.processFilterTrigger()"})
   public void testProcessFilterTrigger() {
     // Arrange, Act and Assert

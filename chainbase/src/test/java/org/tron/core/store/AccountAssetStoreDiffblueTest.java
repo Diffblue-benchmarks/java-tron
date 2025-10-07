@@ -5,7 +5,8 @@ import static org.junit.Assert.assertTrue;
 import static org.mockito.Mockito.mock;
 import static org.mockito.Mockito.verify;
 import static org.mockito.Mockito.when;
-import com.diffblue.cover.annotations.MaintainedByDiffblue;
+import com.diffblue.cover.annotations.ContributionFromDiffblue;
+import com.diffblue.cover.annotations.ManagedByDiffblue;
 import com.diffblue.cover.annotations.MethodsUnderTest;
 import java.io.UnsupportedEncodingException;
 import java.util.HashMap;
@@ -25,7 +26,8 @@ public class AccountAssetStoreDiffblueTest {
    * <p>Method under test: {@link AccountAssetStore#convert(Map)}
    */
   @Test
-  @Category(MaintainedByDiffblue.class)
+  @Category(ContributionFromDiffblue.class)
+  @ManagedByDiffblue
   @MethodsUnderTest({"Map AccountAssetStore.convert(Map)"})
   public void testConvert_thenReturnSizeIsOne() throws UnsupportedEncodingException {
     // Arrange
@@ -58,7 +60,8 @@ public class AccountAssetStoreDiffblueTest {
    * <p>Method under test: {@link AccountAssetStore#convert(Map)}
    */
   @Test
-  @Category(MaintainedByDiffblue.class)
+  @Category(ContributionFromDiffblue.class)
+  @ManagedByDiffblue
   @MethodsUnderTest({"Map AccountAssetStore.convert(Map)"})
   public void testConvert_thenReturnSizeIsTwo() throws UnsupportedEncodingException {
     // Arrange
@@ -102,7 +105,8 @@ public class AccountAssetStoreDiffblueTest {
    * <p>Method under test: {@link AccountAssetStore#convert(Map)}
    */
   @Test
-  @Category(MaintainedByDiffblue.class)
+  @Category(ContributionFromDiffblue.class)
+  @ManagedByDiffblue
   @MethodsUnderTest({"Map AccountAssetStore.convert(Map)"})
   public void testConvert_whenHashMap_thenReturnEmpty() {
     // Arrange and Act

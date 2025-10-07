@@ -7,7 +7,8 @@ import static org.mockito.Mockito.atLeast;
 import static org.mockito.Mockito.mock;
 import static org.mockito.Mockito.verify;
 import static org.mockito.Mockito.when;
-import com.diffblue.cover.annotations.MaintainedByDiffblue;
+import com.diffblue.cover.annotations.ContributionFromDiffblue;
+import com.diffblue.cover.annotations.ManagedByDiffblue;
 import com.diffblue.cover.annotations.MethodsUnderTest;
 import java.util.ArrayList;
 import java.util.Collection;
@@ -32,7 +33,8 @@ public class CollectionUtilsDiffblueTest {
    * <p>Method under test: {@link CollectionUtils#collectList(Collection, Function)}
    */
   @Test
-  @Category(MaintainedByDiffblue.class)
+  @Category(ContributionFromDiffblue.class)
+  @ManagedByDiffblue
   @MethodsUnderTest({"List CollectionUtils.collectList(Collection, Function)"})
   public void testCollectList_given42_whenArrayListAdd42_thenReturnSizeIsOne() {
     // Arrange
@@ -63,7 +65,8 @@ public class CollectionUtilsDiffblueTest {
    * <p>Method under test: {@link CollectionUtils#collectList(Collection, Function)}
    */
   @Test
-  @Category(MaintainedByDiffblue.class)
+  @Category(ContributionFromDiffblue.class)
+  @ManagedByDiffblue
   @MethodsUnderTest({"List CollectionUtils.collectList(Collection, Function)"})
   public void testCollectList_given42_whenArrayListAdd42_thenReturnSizeIsTwo() {
     // Arrange
@@ -95,7 +98,8 @@ public class CollectionUtilsDiffblueTest {
    * <p>Method under test: {@link CollectionUtils#collectList(Collection, Function)}
    */
   @Test
-  @Category(MaintainedByDiffblue.class)
+  @Category(ContributionFromDiffblue.class)
+  @ManagedByDiffblue
   @MethodsUnderTest({"List CollectionUtils.collectList(Collection, Function)"})
   public void testCollectList_whenArrayList_thenReturnEmpty() {
     // Arrange and Act
@@ -118,7 +122,8 @@ public class CollectionUtilsDiffblueTest {
    * <p>Method under test: {@link CollectionUtils#collectSet(Collection, Function)}
    */
   @Test
-  @Category(MaintainedByDiffblue.class)
+  @Category(ContributionFromDiffblue.class)
+  @ManagedByDiffblue
   @MethodsUnderTest({"Set CollectionUtils.collectSet(Collection, Function)"})
   public void testCollectSet_given42_whenArrayListAdd42_thenReturnSizeIsOne() {
     // Arrange
@@ -148,7 +153,8 @@ public class CollectionUtilsDiffblueTest {
    * <p>Method under test: {@link CollectionUtils#collectSet(Collection, Function)}
    */
   @Test
-  @Category(MaintainedByDiffblue.class)
+  @Category(ContributionFromDiffblue.class)
+  @ManagedByDiffblue
   @MethodsUnderTest({"Set CollectionUtils.collectSet(Collection, Function)"})
   public void testCollectSet_given42_whenArrayListAdd42_thenReturnSizeIsOne2() {
     // Arrange
@@ -178,7 +184,8 @@ public class CollectionUtilsDiffblueTest {
    * <p>Method under test: {@link CollectionUtils#collectSet(Collection, Function)}
    */
   @Test
-  @Category(MaintainedByDiffblue.class)
+  @Category(ContributionFromDiffblue.class)
+  @ManagedByDiffblue
   @MethodsUnderTest({"Set CollectionUtils.collectSet(Collection, Function)"})
   public void testCollectSet_whenArrayList_thenReturnEmpty() {
     // Arrange and Act
@@ -201,7 +208,8 @@ public class CollectionUtilsDiffblueTest {
    * <p>Method under test: {@link CollectionUtils#truncate(List, int)}
    */
   @Test
-  @Category(MaintainedByDiffblue.class)
+  @Category(ContributionFromDiffblue.class)
+  @ManagedByDiffblue
   @MethodsUnderTest({"List CollectionUtils.truncate(List, int)"})
   public void testTruncate_given42_whenArrayListAdd42_thenReturnArrayList() {
     // Arrange
@@ -227,7 +235,8 @@ public class CollectionUtilsDiffblueTest {
    * <p>Method under test: {@link CollectionUtils#truncate(List, int)}
    */
   @Test
-  @Category(MaintainedByDiffblue.class)
+  @Category(ContributionFromDiffblue.class)
+  @ManagedByDiffblue
   @MethodsUnderTest({"List CollectionUtils.truncate(List, int)"})
   public void testTruncate_given42_whenArrayListAdd42_thenReturnSizeIsOne() {
     // Arrange
@@ -255,7 +264,8 @@ public class CollectionUtilsDiffblueTest {
    * <p>Method under test: {@link CollectionUtils#truncate(List, int)}
    */
   @Test
-  @Category(MaintainedByDiffblue.class)
+  @Category(ContributionFromDiffblue.class)
+  @ManagedByDiffblue
   @MethodsUnderTest({"List CollectionUtils.truncate(List, int)"})
   public void testTruncate_given42_whenZero_thenReturnArrayList() {
     // Arrange
@@ -280,7 +290,8 @@ public class CollectionUtilsDiffblueTest {
    * <p>Method under test: {@link CollectionUtils#truncate(List, int)}
    */
   @Test
-  @Category(MaintainedByDiffblue.class)
+  @Category(ContributionFromDiffblue.class)
+  @ManagedByDiffblue
   @MethodsUnderTest({"List CollectionUtils.truncate(List, int)"})
   public void testTruncate_whenArrayList_thenReturnEmpty() {
     // Arrange and Act
@@ -301,7 +312,8 @@ public class CollectionUtilsDiffblueTest {
    * <p>Method under test: {@link CollectionUtils#truncate(List, int)}
    */
   @Test
-  @Category(MaintainedByDiffblue.class)
+  @Category(ContributionFromDiffblue.class)
+  @ManagedByDiffblue
   @MethodsUnderTest({"List CollectionUtils.truncate(List, int)"})
   public void testTruncate_whenZero_thenReturnEmpty() {
     // Arrange and Act
@@ -323,7 +335,8 @@ public class CollectionUtilsDiffblueTest {
    * <p>Method under test: {@link CollectionUtils#truncateRandom(List, int, int)}
    */
   @Test
-  @Category(MaintainedByDiffblue.class)
+  @Category(ContributionFromDiffblue.class)
+  @ManagedByDiffblue
   @MethodsUnderTest({"List CollectionUtils.truncateRandom(List, int, int)"})
   public void testTruncateRandom_given42_whenArrayListAdd42_thenReturnArrayList() {
     // Arrange
@@ -349,7 +362,8 @@ public class CollectionUtilsDiffblueTest {
    * <p>Method under test: {@link CollectionUtils#truncateRandom(List, int, int)}
    */
   @Test
-  @Category(MaintainedByDiffblue.class)
+  @Category(ContributionFromDiffblue.class)
+  @ManagedByDiffblue
   @MethodsUnderTest({"List CollectionUtils.truncateRandom(List, int, int)"})
   public void testTruncateRandom_given42_whenArrayListAdd42_thenReturnSizeIsOne() {
     // Arrange
@@ -377,7 +391,8 @@ public class CollectionUtilsDiffblueTest {
    * <p>Method under test: {@link CollectionUtils#truncateRandom(List, int, int)}
    */
   @Test
-  @Category(MaintainedByDiffblue.class)
+  @Category(ContributionFromDiffblue.class)
+  @ManagedByDiffblue
   @MethodsUnderTest({"List CollectionUtils.truncateRandom(List, int, int)"})
   public void testTruncateRandom_given42_whenTwo_thenReturnArrayList() {
     // Arrange
@@ -404,7 +419,8 @@ public class CollectionUtilsDiffblueTest {
    * <p>Method under test: {@link CollectionUtils#truncateRandom(List, int, int)}
    */
   @Test
-  @Category(MaintainedByDiffblue.class)
+  @Category(ContributionFromDiffblue.class)
+  @ManagedByDiffblue
   @MethodsUnderTest({"List CollectionUtils.truncateRandom(List, int, int)"})
   public void testTruncateRandom_given42_whenZero_thenReturnArrayList() {
     // Arrange
@@ -430,7 +446,8 @@ public class CollectionUtilsDiffblueTest {
    * <p>Method under test: {@link CollectionUtils#truncateRandom(List, int, int)}
    */
   @Test
-  @Category(MaintainedByDiffblue.class)
+  @Category(ContributionFromDiffblue.class)
+  @ManagedByDiffblue
   @MethodsUnderTest({"List CollectionUtils.truncateRandom(List, int, int)"})
   public void testTruncateRandom_given42_whenZero_thenReturnArrayList2() {
     // Arrange
@@ -455,7 +472,8 @@ public class CollectionUtilsDiffblueTest {
    * <p>Method under test: {@link CollectionUtils#truncateRandom(List, int, int)}
    */
   @Test
-  @Category(MaintainedByDiffblue.class)
+  @Category(ContributionFromDiffblue.class)
+  @ManagedByDiffblue
   @MethodsUnderTest({"List CollectionUtils.truncateRandom(List, int, int)"})
   public void testTruncateRandom_whenArrayList_thenReturnEmpty() {
     // Arrange and Act
@@ -477,7 +495,8 @@ public class CollectionUtilsDiffblueTest {
    * <p>Method under test: {@link CollectionUtils#truncateRandom(List, int, int)}
    */
   @Test
-  @Category(MaintainedByDiffblue.class)
+  @Category(ContributionFromDiffblue.class)
+  @ManagedByDiffblue
   @MethodsUnderTest({"List CollectionUtils.truncateRandom(List, int, int)"})
   public void testTruncateRandom_whenArrayList_thenReturnEmpty2() {
     // Arrange and Act
@@ -500,7 +519,8 @@ public class CollectionUtilsDiffblueTest {
    * <p>Method under test: {@link CollectionUtils#selectList(Collection, Predicate)}
    */
   @Test
-  @Category(MaintainedByDiffblue.class)
+  @Category(ContributionFromDiffblue.class)
+  @ManagedByDiffblue
   @MethodsUnderTest({"List CollectionUtils.selectList(Collection, Predicate)"})
   public void testSelectList_givenFalse_whenPredicateTestReturnFalse_thenReturnEmpty() {
     // Arrange
@@ -530,7 +550,8 @@ public class CollectionUtilsDiffblueTest {
    * <p>Method under test: {@link CollectionUtils#selectList(Collection, Predicate)}
    */
   @Test
-  @Category(MaintainedByDiffblue.class)
+  @Category(ContributionFromDiffblue.class)
+  @ManagedByDiffblue
   @MethodsUnderTest({"List CollectionUtils.selectList(Collection, Predicate)"})
   public void testSelectList_givenFalse_whenPredicateTestReturnFalse_thenReturnEmpty2() {
     // Arrange
@@ -561,7 +582,8 @@ public class CollectionUtilsDiffblueTest {
    * <p>Method under test: {@link CollectionUtils#selectList(Collection, Predicate)}
    */
   @Test
-  @Category(MaintainedByDiffblue.class)
+  @Category(ContributionFromDiffblue.class)
+  @ManagedByDiffblue
   @MethodsUnderTest({"List CollectionUtils.selectList(Collection, Predicate)"})
   public void testSelectList_givenTrue_whenPredicateTestReturnTrue_thenReturnArrayList() {
     // Arrange
@@ -590,7 +612,8 @@ public class CollectionUtilsDiffblueTest {
    * <p>Method under test: {@link CollectionUtils#selectList(Collection, Predicate)}
    */
   @Test
-  @Category(MaintainedByDiffblue.class)
+  @Category(ContributionFromDiffblue.class)
+  @ManagedByDiffblue
   @MethodsUnderTest({"List CollectionUtils.selectList(Collection, Predicate)"})
   public void testSelectList_whenArrayList_thenReturnEmpty() {
     // Arrange and Act
@@ -613,7 +636,8 @@ public class CollectionUtilsDiffblueTest {
    * <p>Method under test: {@link CollectionUtils#selectSet(Collection, Predicate)}
    */
   @Test
-  @Category(MaintainedByDiffblue.class)
+  @Category(ContributionFromDiffblue.class)
+  @ManagedByDiffblue
   @MethodsUnderTest({"Set CollectionUtils.selectSet(Collection, Predicate)"})
   public void testSelectSet_givenFalse_whenPredicateTestReturnFalse_thenReturnEmpty() {
     // Arrange
@@ -643,7 +667,8 @@ public class CollectionUtilsDiffblueTest {
    * <p>Method under test: {@link CollectionUtils#selectSet(Collection, Predicate)}
    */
   @Test
-  @Category(MaintainedByDiffblue.class)
+  @Category(ContributionFromDiffblue.class)
+  @ManagedByDiffblue
   @MethodsUnderTest({"Set CollectionUtils.selectSet(Collection, Predicate)"})
   public void testSelectSet_givenFalse_whenPredicateTestReturnFalse_thenReturnEmpty2() {
     // Arrange
@@ -674,7 +699,8 @@ public class CollectionUtilsDiffblueTest {
    * <p>Method under test: {@link CollectionUtils#selectSet(Collection, Predicate)}
    */
   @Test
-  @Category(MaintainedByDiffblue.class)
+  @Category(ContributionFromDiffblue.class)
+  @ManagedByDiffblue
   @MethodsUnderTest({"Set CollectionUtils.selectSet(Collection, Predicate)"})
   public void testSelectSet_givenTrue_whenPredicateTestReturnTrue_thenReturnSizeIsOne() {
     // Arrange
@@ -703,7 +729,8 @@ public class CollectionUtilsDiffblueTest {
    * <p>Method under test: {@link CollectionUtils#selectSet(Collection, Predicate)}
    */
   @Test
-  @Category(MaintainedByDiffblue.class)
+  @Category(ContributionFromDiffblue.class)
+  @ManagedByDiffblue
   @MethodsUnderTest({"Set CollectionUtils.selectSet(Collection, Predicate)"})
   public void testSelectSet_whenArrayList_thenReturnEmpty() {
     // Arrange and Act

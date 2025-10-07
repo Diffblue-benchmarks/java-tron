@@ -3,7 +3,8 @@ package org.tron.common.utils;
 import static org.junit.Assert.assertArrayEquals;
 import static org.junit.Assert.assertFalse;
 import static org.junit.Assert.assertTrue;
-import com.diffblue.cover.annotations.MaintainedByDiffblue;
+import com.diffblue.cover.annotations.ContributionFromDiffblue;
+import com.diffblue.cover.annotations.ManagedByDiffblue;
 import com.diffblue.cover.annotations.MethodsUnderTest;
 import java.io.UnsupportedEncodingException;
 import org.junit.Test;
@@ -21,7 +22,8 @@ public class CompactEncoderDiffblueTest {
    * <p>Method under test: {@link CompactEncoder#packNibbles(byte[])}
    */
   @Test
-  @Category(MaintainedByDiffblue.class)
+  @Category(ContributionFromDiffblue.class)
+  @ManagedByDiffblue
   @MethodsUnderTest({"byte[] CompactEncoder.packNibbles(byte[])"})
   public void testPackNibbles_whenA_thenReturnArrayOfByteWithQAndMinusSixtyThree() {
     // Arrange, Act and Assert
@@ -41,7 +43,8 @@ public class CompactEncoderDiffblueTest {
    * <p>Method under test: {@link CompactEncoder#packNibbles(byte[])}
    */
   @Test
-  @Category(MaintainedByDiffblue.class)
+  @Category(ContributionFromDiffblue.class)
+  @ManagedByDiffblue
   @MethodsUnderTest({"byte[] CompactEncoder.packNibbles(byte[])"})
   public void testPackNibbles_whenAxaxaxaxBytesIsUtf8_thenReturnArrayOfByteWithZeroAndH()
       throws UnsupportedEncodingException {
@@ -62,7 +65,8 @@ public class CompactEncoderDiffblueTest {
    * <p>Method under test: {@link CompactEncoder#hasTerminator(byte[])}
    */
   @Test
-  @Category(MaintainedByDiffblue.class)
+  @Category(ContributionFromDiffblue.class)
+  @ManagedByDiffblue
   @MethodsUnderTest({"boolean CompactEncoder.hasTerminator(byte[])"})
   public void testHasTerminator_whenA_thenReturnTrue() {
     // Arrange, Act and Assert
@@ -80,7 +84,8 @@ public class CompactEncoderDiffblueTest {
    * <p>Method under test: {@link CompactEncoder#hasTerminator(byte[])}
    */
   @Test
-  @Category(MaintainedByDiffblue.class)
+  @Category(ContributionFromDiffblue.class)
+  @ManagedByDiffblue
   @MethodsUnderTest({"boolean CompactEncoder.hasTerminator(byte[])"})
   public void testHasTerminator_whenAxaxaxaxBytesIsUtf8_thenReturnFalse()
       throws UnsupportedEncodingException {
@@ -98,7 +103,8 @@ public class CompactEncoderDiffblueTest {
    * <p>Method under test: {@link CompactEncoder#unpackToNibbles(byte[])}
    */
   @Test
-  @Category(MaintainedByDiffblue.class)
+  @Category(ContributionFromDiffblue.class)
+  @ManagedByDiffblue
   @MethodsUnderTest({"byte[] CompactEncoder.unpackToNibbles(byte[])"})
   public void testUnpackToNibbles_thenReturnArrayOfByteWithZeroAndFive() {
     // Arrange, Act and Assert
@@ -117,7 +123,8 @@ public class CompactEncoderDiffblueTest {
    * <p>Method under test: {@link CompactEncoder#unpackToNibbles(byte[])}
    */
   @Test
-  @Category(MaintainedByDiffblue.class)
+  @Category(ContributionFromDiffblue.class)
+  @ManagedByDiffblue
   @MethodsUnderTest({"byte[] CompactEncoder.unpackToNibbles(byte[])"})
   public void testUnpackToNibbles_whenArrayOfByteWithOneAndX() {
     // Arrange, Act and Assert
@@ -136,7 +143,8 @@ public class CompactEncoderDiffblueTest {
    * <p>Method under test: {@link CompactEncoder#unpackToNibbles(byte[])}
    */
   @Test
-  @Category(MaintainedByDiffblue.class)
+  @Category(ContributionFromDiffblue.class)
+  @ManagedByDiffblue
   @MethodsUnderTest({"byte[] CompactEncoder.unpackToNibbles(byte[])"})
   public void testUnpackToNibbles_whenAxaxaxaxBytesIsUtf8() throws UnsupportedEncodingException {
     // Arrange, Act and Assert
@@ -151,7 +159,8 @@ public class CompactEncoderDiffblueTest {
    * <p>Method under test: {@link CompactEncoder#binToNibbles(byte[])}
    */
   @Test
-  @Category(MaintainedByDiffblue.class)
+  @Category(ContributionFromDiffblue.class)
+  @ManagedByDiffblue
   @MethodsUnderTest({"byte[] CompactEncoder.binToNibbles(byte[])"})
   public void testBinToNibbles() throws UnsupportedEncodingException {
     // Arrange, Act and Assert
@@ -166,7 +175,8 @@ public class CompactEncoderDiffblueTest {
    * <p>Method under test: {@link CompactEncoder#binToNibblesNoTerminator(byte[])}
    */
   @Test
-  @Category(MaintainedByDiffblue.class)
+  @Category(ContributionFromDiffblue.class)
+  @ManagedByDiffblue
   @MethodsUnderTest({"byte[] CompactEncoder.binToNibblesNoTerminator(byte[])"})
   public void testBinToNibblesNoTerminator() throws UnsupportedEncodingException {
     // Arrange, Act and Assert

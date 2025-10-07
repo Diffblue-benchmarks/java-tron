@@ -6,7 +6,8 @@ import static org.junit.Assert.assertNull;
 import static org.junit.Assert.assertSame;
 import static org.junit.Assert.assertThrows;
 import static org.junit.Assert.assertTrue;
-import com.diffblue.cover.annotations.MaintainedByDiffblue;
+import com.diffblue.cover.annotations.ContributionFromDiffblue;
+import com.diffblue.cover.annotations.ManagedByDiffblue;
 import com.diffblue.cover.annotations.MethodsUnderTest;
 import com.google.protobuf.ByteString;
 import com.google.protobuf.ByteString.ByteIterator;
@@ -60,7 +61,8 @@ public class ShieldedTRC20ParametersBuilderDiffblueTest {
    * <p>Method under test: {@link ShieldedTRC20ParametersBuilder#ShieldedTRC20ParametersBuilder()}
    */
   @Test
-  @Category(MaintainedByDiffblue.class)
+  @Category(ContributionFromDiffblue.class)
+  @ManagedByDiffblue
   @MethodsUnderTest({"void ShieldedTRC20ParametersBuilder.<init>()"})
   public void testNewShieldedTRC20ParametersBuilder2() {
     // Arrange and Act
@@ -94,7 +96,8 @@ public class ShieldedTRC20ParametersBuilderDiffblueTest {
    * ShieldedTRC20ParametersBuilder#ShieldedTRC20ParametersBuilder(String)}
    */
   @Test
-  @Category(MaintainedByDiffblue.class)
+  @Category(ContributionFromDiffblue.class)
+  @ManagedByDiffblue
   @MethodsUnderTest({"void ShieldedTRC20ParametersBuilder.<init>(String)"})
   public void testNewShieldedTRC20ParametersBuilder3() throws ZksnarkException {
     // Arrange and Act
@@ -123,7 +126,8 @@ public class ShieldedTRC20ParametersBuilderDiffblueTest {
    * ShieldedTRC20ParametersBuilder#ShieldedTRC20ParametersBuilder(String)}
    */
   @Test
-  @Category(MaintainedByDiffblue.class)
+  @Category(ContributionFromDiffblue.class)
+  @ManagedByDiffblue
   @MethodsUnderTest({"void ShieldedTRC20ParametersBuilder.<init>(String)"})
   public void testNewShieldedTRC20ParametersBuilder4() throws ZksnarkException {
     // Arrange and Act
@@ -152,7 +156,8 @@ public class ShieldedTRC20ParametersBuilderDiffblueTest {
    * ShieldedTRC20ParametersBuilder#ShieldedTRC20ParametersBuilder(String)}
    */
   @Test
-  @Category(MaintainedByDiffblue.class)
+  @Category(ContributionFromDiffblue.class)
+  @ManagedByDiffblue
   @MethodsUnderTest({"void ShieldedTRC20ParametersBuilder.<init>(String)"})
   public void testNewShieldedTRC20ParametersBuilder5() throws ZksnarkException {
     // Arrange and Act
@@ -186,7 +191,8 @@ public class ShieldedTRC20ParametersBuilderDiffblueTest {
    * ShieldedTRC20ParametersBuilder#ShieldedTRC20ParametersBuilder(String)}
    */
   @Test
-  @Category(MaintainedByDiffblue.class)
+  @Category(ContributionFromDiffblue.class)
+  @ManagedByDiffblue
   @MethodsUnderTest({"void ShieldedTRC20ParametersBuilder.<init>(String)"})
   public void testNewShieldedTRC20ParametersBuilder_whenType_thenThrowZksnarkException()
       throws ZksnarkException {
@@ -207,7 +213,8 @@ public class ShieldedTRC20ParametersBuilderDiffblueTest {
    * </ul>
    */
   @Test
-  @Category(MaintainedByDiffblue.class)
+  @Category(ContributionFromDiffblue.class)
+  @ManagedByDiffblue
   @MethodsUnderTest({
     "ShieldedTRC20Parameters ShieldedTRC20ParametersBuilder.build(boolean)",
     "Builder ShieldedTRC20ParametersBuilder.getBuilder()",
@@ -846,7 +853,8 @@ public class ShieldedTRC20ParametersBuilderDiffblueTest {
    * BigInteger, boolean, byte[])}
    */
   @Test
-  @Category(MaintainedByDiffblue.class)
+  @Category(ContributionFromDiffblue.class)
+  @ManagedByDiffblue
   @MethodsUnderTest({
     "String ShieldedTRC20ParametersBuilder.getTriggerContractInput(ShieldedTRC20Parameters, List, BigInteger, boolean, byte[])"
   })

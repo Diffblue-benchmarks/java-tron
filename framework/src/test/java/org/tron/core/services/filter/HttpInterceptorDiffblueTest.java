@@ -6,7 +6,8 @@ import static org.mockito.Mockito.doNothing;
 import static org.mockito.Mockito.doThrow;
 import static org.mockito.Mockito.mock;
 import static org.mockito.Mockito.verify;
-import com.diffblue.cover.annotations.MaintainedByDiffblue;
+import com.diffblue.cover.annotations.ContributionFromDiffblue;
+import com.diffblue.cover.annotations.ManagedByDiffblue;
 import com.diffblue.cover.annotations.MethodsUnderTest;
 import java.io.IOException;
 import javax.servlet.FilterChain;
@@ -30,7 +31,8 @@ public class HttpInterceptorDiffblueTest {
    * FilterChain)}
    */
   @Test
-  @Category(MaintainedByDiffblue.class)
+  @Category(ContributionFromDiffblue.class)
+  @ManagedByDiffblue
   @MethodsUnderTest({"void HttpInterceptor.doFilter(ServletRequest, ServletResponse, FilterChain)"})
   public void testDoFilter() throws IOException, ServletException {
     // Arrange
@@ -65,7 +67,8 @@ public class HttpInterceptorDiffblueTest {
    * FilterChain)}
    */
   @Test
-  @Category(MaintainedByDiffblue.class)
+  @Category(ContributionFromDiffblue.class)
+  @ManagedByDiffblue
   @MethodsUnderTest({"void HttpInterceptor.doFilter(ServletRequest, ServletResponse, FilterChain)"})
   public void testDoFilter_givenRuntimeException_whenFilterChainDoFilterThrowRuntimeException()
       throws IOException, ServletException {
@@ -100,7 +103,8 @@ public class HttpInterceptorDiffblueTest {
    * FilterChain)}
    */
   @Test
-  @Category(MaintainedByDiffblue.class)
+  @Category(ContributionFromDiffblue.class)
+  @ManagedByDiffblue
   @MethodsUnderTest({"void HttpInterceptor.doFilter(ServletRequest, ServletResponse, FilterChain)"})
   public void testDoFilter_givenRuntimeException_whenFilterChainDoFilterThrowRuntimeException2()
       throws IOException, ServletException {
@@ -133,7 +137,8 @@ public class HttpInterceptorDiffblueTest {
    * FilterChain)}
    */
   @Test
-  @Category(MaintainedByDiffblue.class)
+  @Category(ContributionFromDiffblue.class)
+  @ManagedByDiffblue
   @MethodsUnderTest({"void HttpInterceptor.doFilter(ServletRequest, ServletResponse, FilterChain)"})
   public void testDoFilter_whenCreateRequestHttpsExampleOrgExample_thenCallsDoFilter()
       throws IOException, ServletException {
@@ -165,7 +170,8 @@ public class HttpInterceptorDiffblueTest {
    * FilterChain)}
    */
   @Test
-  @Category(MaintainedByDiffblue.class)
+  @Category(ContributionFromDiffblue.class)
+  @ManagedByDiffblue
   @MethodsUnderTest({"void HttpInterceptor.doFilter(ServletRequest, ServletResponse, FilterChain)"})
   public void testDoFilter_whenNull_thenCallsDoFilter() throws IOException, ServletException {
     // Arrange

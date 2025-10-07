@@ -3,7 +3,8 @@ package org.tron.common.zksnark;
 import static org.junit.Assert.assertArrayEquals;
 import static org.junit.Assert.assertEquals;
 import static org.junit.Assert.assertThrows;
-import com.diffblue.cover.annotations.MaintainedByDiffblue;
+import com.diffblue.cover.annotations.ContributionFromDiffblue;
+import com.diffblue.cover.annotations.ManagedByDiffblue;
 import com.diffblue.cover.annotations.MethodsUnderTest;
 import java.io.UnsupportedEncodingException;
 import org.junit.Test;
@@ -24,7 +25,8 @@ public class JLibsodiumParamDiffblueTest {
    * byte[], long, byte[], int, byte[], byte[])}
    */
   @Test
-  @Category(MaintainedByDiffblue.class)
+  @Category(ContributionFromDiffblue.class)
+  @ManagedByDiffblue
   @MethodsUnderTest({
     "void Black2bSaltPersonalParams.<init>(byte[], int, byte[], long, byte[], int, byte[], byte[])"
   })
@@ -54,7 +56,8 @@ public class JLibsodiumParamDiffblueTest {
    * byte[], long, byte[], int, byte[], byte[])}
    */
   @Test
-  @Category(MaintainedByDiffblue.class)
+  @Category(ContributionFromDiffblue.class)
+  @ManagedByDiffblue
   @MethodsUnderTest({
     "void Black2bSaltPersonalParams.<init>(byte[], int, byte[], long, byte[], int, byte[], byte[])"
   })
@@ -86,7 +89,8 @@ public class JLibsodiumParamDiffblueTest {
    * <p>Method under test: {@link Blake2bFinalParams#Blake2bFinalParams(long, byte[], int)}
    */
   @Test
-  @Category(MaintainedByDiffblue.class)
+  @Category(ContributionFromDiffblue.class)
+  @ManagedByDiffblue
   @MethodsUnderTest({"void Blake2bFinalParams.<init>(long, byte[], int)"})
   public void testBlake2bFinalParamsNewBlake2bFinalParams_whenEight_thenThrowZksnarkException()
       throws UnsupportedEncodingException, ZksnarkException {
@@ -106,7 +110,8 @@ public class JLibsodiumParamDiffblueTest {
    * <p>Method under test: {@link Blake2bFinalParams#Blake2bFinalParams(long, byte[], int)}
    */
   @Test
-  @Category(MaintainedByDiffblue.class)
+  @Category(ContributionFromDiffblue.class)
+  @ManagedByDiffblue
   @MethodsUnderTest({"void Blake2bFinalParams.<init>(long, byte[], int)"})
   public void testBlake2bFinalParamsNewBlake2bFinalParams_whenOne_thenThrowZksnarkException()
       throws UnsupportedEncodingException, ZksnarkException {
@@ -124,7 +129,8 @@ public class JLibsodiumParamDiffblueTest {
    * byte[], int, int, byte[], byte[])}
    */
   @Test
-  @Category(MaintainedByDiffblue.class)
+  @Category(ContributionFromDiffblue.class)
+  @ManagedByDiffblue
   @MethodsUnderTest({
     "void Blake2bInitSaltPersonalParams.<init>(long, byte[], int, int, byte[], byte[])"
   })
@@ -161,7 +167,8 @@ public class JLibsodiumParamDiffblueTest {
    * <p>Method under test: {@link Blake2bUpdateParams#Blake2bUpdateParams(long, byte[], long)}
    */
   @Test
-  @Category(MaintainedByDiffblue.class)
+  @Category(ContributionFromDiffblue.class)
+  @ManagedByDiffblue
   @MethodsUnderTest({"void Blake2bUpdateParams.<init>(long, byte[], long)"})
   public void testBlake2bUpdateParamsNewBlake2bUpdateParams_whenEight()
       throws UnsupportedEncodingException, ZksnarkException {
@@ -182,7 +189,8 @@ public class JLibsodiumParamDiffblueTest {
    * <p>Method under test: {@link Blake2bUpdateParams#Blake2bUpdateParams(long, byte[], long)}
    */
   @Test
-  @Category(MaintainedByDiffblue.class)
+  @Category(ContributionFromDiffblue.class)
+  @ManagedByDiffblue
   @MethodsUnderTest({"void Blake2bUpdateParams.<init>(long, byte[], long)"})
   public void testBlake2bUpdateParamsNewBlake2bUpdateParams_whenOne_thenThrowZksnarkException()
       throws UnsupportedEncodingException, ZksnarkException {
@@ -203,7 +211,8 @@ public class JLibsodiumParamDiffblueTest {
    * <p>Method under test: {@link JLibsodiumParam#validNull(byte[])}
    */
   @Test
-  @Category(MaintainedByDiffblue.class)
+  @Category(ContributionFromDiffblue.class)
+  @ManagedByDiffblue
   @MethodsUnderTest({"void JLibsodiumParam.validNull(byte[])"})
   public void testValidNull_whenEmptyArrayOfByte_thenThrowZksnarkException()
       throws ZksnarkException {
@@ -222,7 +231,8 @@ public class JLibsodiumParamDiffblueTest {
    * <p>Method under test: {@link JLibsodiumParam#validNull(byte[])}
    */
   @Test
-  @Category(MaintainedByDiffblue.class)
+  @Category(ContributionFromDiffblue.class)
+  @ManagedByDiffblue
   @MethodsUnderTest({"void JLibsodiumParam.validNull(byte[])"})
   public void testValidNull_whenNull_thenThrowZksnarkException() throws ZksnarkException {
     // Arrange, Act and Assert
@@ -240,7 +250,8 @@ public class JLibsodiumParamDiffblueTest {
    * <p>Method under test: {@link JLibsodiumParam#validValueParams(long)}
    */
   @Test
-  @Category(MaintainedByDiffblue.class)
+  @Category(ContributionFromDiffblue.class)
+  @ManagedByDiffblue
   @MethodsUnderTest({"void JLibsodiumParam.validValueParams(long)"})
   public void testValidValueParams_whenMinusOne_thenThrowZksnarkException()
       throws ZksnarkException {
@@ -259,7 +270,8 @@ public class JLibsodiumParamDiffblueTest {
    * <p>Method under test: {@link JLibsodiumParam#validParamLength(byte[], int)}
    */
   @Test
-  @Category(MaintainedByDiffblue.class)
+  @Category(ContributionFromDiffblue.class)
+  @ManagedByDiffblue
   @MethodsUnderTest({"void JLibsodiumParam.validParamLength(byte[], int)"})
   public void testValidParamLength_whenAxaxaxaxBytesIsUtf8_thenThrowZksnarkException()
       throws UnsupportedEncodingException, ZksnarkException {
@@ -280,7 +292,8 @@ public class JLibsodiumParamDiffblueTest {
    * <p>Method under test: {@link JLibsodiumParam#validParamLength(byte[], int)}
    */
   @Test
-  @Category(MaintainedByDiffblue.class)
+  @Category(ContributionFromDiffblue.class)
+  @ManagedByDiffblue
   @MethodsUnderTest({"void JLibsodiumParam.validParamLength(byte[], int)"})
   public void testValidParamLength_whenEmptyArrayOfByte_thenThrowZksnarkException()
       throws ZksnarkException {
@@ -299,7 +312,8 @@ public class JLibsodiumParamDiffblueTest {
    * <p>Method under test: {@link JLibsodiumParam#validParamLength(byte[], int)}
    */
   @Test
-  @Category(MaintainedByDiffblue.class)
+  @Category(ContributionFromDiffblue.class)
+  @ManagedByDiffblue
   @MethodsUnderTest({"void JLibsodiumParam.validParamLength(byte[], int)"})
   public void testValidParamLength_whenNull_thenThrowZksnarkException() throws ZksnarkException {
     // Arrange, Act and Assert

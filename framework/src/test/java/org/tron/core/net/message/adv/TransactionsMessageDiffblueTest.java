@@ -6,7 +6,8 @@ import static org.junit.Assert.assertFalse;
 import static org.junit.Assert.assertNull;
 import static org.junit.Assert.assertSame;
 import static org.junit.Assert.assertTrue;
-import com.diffblue.cover.annotations.MaintainedByDiffblue;
+import com.diffblue.cover.annotations.ContributionFromDiffblue;
+import com.diffblue.cover.annotations.ManagedByDiffblue;
 import com.diffblue.cover.annotations.MethodsUnderTest;
 import com.google.protobuf.ByteString;
 import com.google.protobuf.ByteString.ByteIterator;
@@ -63,7 +64,8 @@ public class TransactionsMessageDiffblueTest {
    * <p>Method under test: {@link TransactionsMessage#TransactionsMessage(List)}
    */
   @Test
-  @Category(MaintainedByDiffblue.class)
+  @Category(ContributionFromDiffblue.class)
+  @ManagedByDiffblue
   @MethodsUnderTest({"void TransactionsMessage.<init>(List)"})
   public void testNewTransactionsMessage_thenReturnTransactionsSerializedSizeIsZero() {
     // Arrange and Act
@@ -102,7 +104,8 @@ public class TransactionsMessageDiffblueTest {
    * <p>Method under test: {@link TransactionsMessage#TransactionsMessage(List)}
    */
   @Test
-  @Category(MaintainedByDiffblue.class)
+  @Category(ContributionFromDiffblue.class)
+  @ManagedByDiffblue
   @MethodsUnderTest({"void TransactionsMessage.<init>(List)"})
   public void testNewTransactionsMessage_thenReturnTransactionsTransactionsListSizeIsOne() {
     // Arrange
@@ -142,7 +145,8 @@ public class TransactionsMessageDiffblueTest {
    * <p>Method under test: {@link TransactionsMessage#TransactionsMessage(List)}
    */
   @Test
-  @Category(MaintainedByDiffblue.class)
+  @Category(ContributionFromDiffblue.class)
+  @ManagedByDiffblue
   @MethodsUnderTest({"void TransactionsMessage.<init>(List)"})
   public void testNewTransactionsMessage_thenReturnTransactionsTransactionsListSizeIsTwo() {
     // Arrange
@@ -185,10 +189,11 @@ public class TransactionsMessageDiffblueTest {
    * </ul>
    */
   @Test
-  @Category(MaintainedByDiffblue.class)
+  @Category(ContributionFromDiffblue.class)
+  @ManagedByDiffblue
   @MethodsUnderTest({
     "Class TransactionsMessage.getAnswerMessage()",
-    "Protocol.Transactions TransactionsMessage.getTransactions()",
+    "Transactions TransactionsMessage.getTransactions()",
     "String TransactionsMessage.toString()"
   })
   public void testGettersAndSetters() {

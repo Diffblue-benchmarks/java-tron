@@ -10,7 +10,8 @@ import static org.mockito.ArgumentMatchers.isA;
 import static org.mockito.Mockito.mock;
 import static org.mockito.Mockito.verify;
 import static org.mockito.Mockito.when;
-import com.diffblue.cover.annotations.MaintainedByDiffblue;
+import com.diffblue.cover.annotations.ContributionFromDiffblue;
+import com.diffblue.cover.annotations.ManagedByDiffblue;
 import com.diffblue.cover.annotations.MethodsUnderTest;
 import com.google.protobuf.ByteString;
 import com.google.protobuf.ByteString.ByteIterator;
@@ -39,7 +40,8 @@ public class MarketOrderCapsuleDiffblueTest {
    * MarketSellAssetContract)}
    */
   @Test
-  @Category(MaintainedByDiffblue.class)
+  @Category(ContributionFromDiffblue.class)
+  @ManagedByDiffblue
   @MethodsUnderTest({"void MarketOrderCapsule.<init>(byte[], MarketSellAssetContract)"})
   public void testNewMarketOrderCapsule() throws UnsupportedEncodingException {
     // Arrange and Act
@@ -76,7 +78,8 @@ public class MarketOrderCapsuleDiffblueTest {
    * <p>Method under test: {@link MarketOrderCapsule#MarketOrderCapsule(byte[])}
    */
   @Test
-  @Category(MaintainedByDiffblue.class)
+  @Category(ContributionFromDiffblue.class)
+  @ManagedByDiffblue
   @MethodsUnderTest({"void MarketOrderCapsule.<init>(byte[])"})
   public void testNewMarketOrderCapsule_when2xaxaxaxBytesIsUtf8_thenReturnInstanceIsNull()
       throws UnsupportedEncodingException {
@@ -95,7 +98,8 @@ public class MarketOrderCapsuleDiffblueTest {
    * <p>Method under test: {@link MarketOrderCapsule#MarketOrderCapsule(byte[])}
    */
   @Test
-  @Category(MaintainedByDiffblue.class)
+  @Category(ContributionFromDiffblue.class)
+  @ManagedByDiffblue
   @MethodsUnderTest({"void MarketOrderCapsule.<init>(byte[])"})
   public void testNewMarketOrderCapsule_whenArrayOfByteWith2AndZero_thenReturnInstanceIsNull() {
     // Arrange and Act
@@ -116,7 +120,8 @@ public class MarketOrderCapsuleDiffblueTest {
    * <p>Method under test: {@link MarketOrderCapsule#MarketOrderCapsule(byte[])}
    */
   @Test
-  @Category(MaintainedByDiffblue.class)
+  @Category(ContributionFromDiffblue.class)
+  @ManagedByDiffblue
   @MethodsUnderTest({"void MarketOrderCapsule.<init>(byte[])"})
   public void testNewMarketOrderCapsule_whenArrayOfByteWith8AndMinusOne() {
     // Arrange and Act
@@ -138,7 +143,8 @@ public class MarketOrderCapsuleDiffblueTest {
    * <p>Method under test: {@link MarketOrderCapsule#MarketOrderCapsule(byte[])}
    */
   @Test
-  @Category(MaintainedByDiffblue.class)
+  @Category(ContributionFromDiffblue.class)
+  @ManagedByDiffblue
   @MethodsUnderTest({"void MarketOrderCapsule.<init>(byte[])"})
   public void testNewMarketOrderCapsule_whenArrayOfByteWithAAndMinusOne() {
     // Arrange and Act
@@ -160,7 +166,8 @@ public class MarketOrderCapsuleDiffblueTest {
    * <p>Method under test: {@link MarketOrderCapsule#MarketOrderCapsule(byte[])}
    */
   @Test
-  @Category(MaintainedByDiffblue.class)
+  @Category(ContributionFromDiffblue.class)
+  @ManagedByDiffblue
   @MethodsUnderTest({"void MarketOrderCapsule.<init>(byte[])"})
   public void testNewMarketOrderCapsule_whenArrayOfByteWithEighteenAndX() {
     // Arrange and Act
@@ -181,7 +188,8 @@ public class MarketOrderCapsuleDiffblueTest {
    * <p>Method under test: {@link MarketOrderCapsule#MarketOrderCapsule(byte[])}
    */
   @Test
-  @Category(MaintainedByDiffblue.class)
+  @Category(ContributionFromDiffblue.class)
+  @ManagedByDiffblue
   @MethodsUnderTest({"void MarketOrderCapsule.<init>(byte[])"})
   public void testNewMarketOrderCapsule_whenArrayOfByteWithEighteenAndZero() {
     // Arrange and Act
@@ -203,7 +211,8 @@ public class MarketOrderCapsuleDiffblueTest {
    * <p>Method under test: {@link MarketOrderCapsule#MarketOrderCapsule(byte[])}
    */
   @Test
-  @Category(MaintainedByDiffblue.class)
+  @Category(ContributionFromDiffblue.class)
+  @ManagedByDiffblue
   @MethodsUnderTest({"void MarketOrderCapsule.<init>(byte[])"})
   public void testNewMarketOrderCapsule_whenArrayOfByteWithLfAndZero_thenReturnInstanceIsNull() {
     // Arrange and Act
@@ -224,7 +233,8 @@ public class MarketOrderCapsuleDiffblueTest {
    * <p>Method under test: {@link MarketOrderCapsule#MarketOrderCapsule(byte[])}
    */
   @Test
-  @Category(MaintainedByDiffblue.class)
+  @Category(ContributionFromDiffblue.class)
+  @ManagedByDiffblue
   @MethodsUnderTest({"void MarketOrderCapsule.<init>(byte[])"})
   public void testNewMarketOrderCapsule_whenArrayOfByteWithMin_valueAndX() {
     // Arrange and Act
@@ -245,7 +255,8 @@ public class MarketOrderCapsuleDiffblueTest {
    * <p>Method under test: {@link MarketOrderCapsule#MarketOrderCapsule(byte[])}
    */
   @Test
-  @Category(MaintainedByDiffblue.class)
+  @Category(ContributionFromDiffblue.class)
+  @ManagedByDiffblue
   @MethodsUnderTest({"void MarketOrderCapsule.<init>(byte[])"})
   public void testNewMarketOrderCapsule_whenArrayOfByteWithMinusOneAndX() {
     // Arrange and Act
@@ -266,7 +277,8 @@ public class MarketOrderCapsuleDiffblueTest {
    * <p>Method under test: {@link MarketOrderCapsule#MarketOrderCapsule(byte[])}
    */
   @Test
-  @Category(MaintainedByDiffblue.class)
+  @Category(ContributionFromDiffblue.class)
+  @ManagedByDiffblue
   @MethodsUnderTest({"void MarketOrderCapsule.<init>(byte[])"})
   public void testNewMarketOrderCapsule_whenArrayOfByteWithQuotationMarkAndZero() {
     // Arrange and Act
@@ -287,7 +299,8 @@ public class MarketOrderCapsuleDiffblueTest {
    * <p>Method under test: {@link MarketOrderCapsule#MarketOrderCapsule(byte[])}
    */
   @Test
-  @Category(MaintainedByDiffblue.class)
+  @Category(ContributionFromDiffblue.class)
+  @ManagedByDiffblue
   @MethodsUnderTest({"void MarketOrderCapsule.<init>(byte[])"})
   public void testNewMarketOrderCapsule_whenArrayOfByteWithTwentyFourAndX() {
     // Arrange and Act
@@ -309,7 +322,8 @@ public class MarketOrderCapsuleDiffblueTest {
    * <p>Method under test: {@link MarketOrderCapsule#MarketOrderCapsule(byte[])}
    */
   @Test
-  @Category(MaintainedByDiffblue.class)
+  @Category(ContributionFromDiffblue.class)
+  @ManagedByDiffblue
   @MethodsUnderTest({"void MarketOrderCapsule.<init>(byte[])"})
   public void testNewMarketOrderCapsule_whenArrayOfByteWithZeroAndX_thenReturnInstanceIsNull() {
     // Arrange and Act
@@ -331,7 +345,8 @@ public class MarketOrderCapsuleDiffblueTest {
    * <p>Method under test: {@link MarketOrderCapsule#MarketOrderCapsule(byte[])}
    */
   @Test
-  @Category(MaintainedByDiffblue.class)
+  @Category(ContributionFromDiffblue.class)
+  @ManagedByDiffblue
   @MethodsUnderTest({"void MarketOrderCapsule.<init>(byte[])"})
   public void testNewMarketOrderCapsule_whenAxaxaxaxBytesIsUtf8_thenReturnInstanceIsNull()
       throws UnsupportedEncodingException {
@@ -350,7 +365,8 @@ public class MarketOrderCapsuleDiffblueTest {
    * <p>Method under test: {@link MarketOrderCapsule#MarketOrderCapsule(byte[])}
    */
   @Test
-  @Category(MaintainedByDiffblue.class)
+  @Category(ContributionFromDiffblue.class)
+  @ManagedByDiffblue
   @MethodsUnderTest({"void MarketOrderCapsule.<init>(byte[])"})
   public void testNewMarketOrderCapsule_whenEmptyArrayOfByte_thenReturnBuyTokenQuantityIsZero() {
     // Arrange and Act
@@ -385,7 +401,8 @@ public class MarketOrderCapsuleDiffblueTest {
    * <p>Method under test: {@link MarketOrderCapsule#MarketOrderCapsule(byte[])}
    */
   @Test
-  @Category(MaintainedByDiffblue.class)
+  @Category(ContributionFromDiffblue.class)
+  @ManagedByDiffblue
   @MethodsUnderTest({"void MarketOrderCapsule.<init>(byte[])"})
   public void testNewMarketOrderCapsule_whenXaxaxaxBytesIsUtf8_thenReturnInstanceIsNull()
       throws UnsupportedEncodingException {
@@ -404,7 +421,8 @@ public class MarketOrderCapsuleDiffblueTest {
    * <p>Method under test: {@link MarketOrderCapsule#MarketOrderCapsule(byte[])}
    */
   @Test
-  @Category(MaintainedByDiffblue.class)
+  @Category(ContributionFromDiffblue.class)
+  @ManagedByDiffblue
   @MethodsUnderTest({"void MarketOrderCapsule.<init>(byte[])"})
   public void testNewMarketOrderCapsule_whenXaxaxaxBytesIsUtf8_thenReturnInstanceIsNull2()
       throws UnsupportedEncodingException {
@@ -423,7 +441,8 @@ public class MarketOrderCapsuleDiffblueTest {
    * <p>Method under test: {@link MarketOrderCapsule#MarketOrderCapsule(byte[])}
    */
   @Test
-  @Category(MaintainedByDiffblue.class)
+  @Category(ContributionFromDiffblue.class)
+  @ManagedByDiffblue
   @MethodsUnderTest({"void MarketOrderCapsule.<init>(byte[])"})
   public void testNewMarketOrderCapsule_whenXaxaxaxBytesIsUtf8_thenReturnInstanceIsNull3()
       throws UnsupportedEncodingException {
@@ -442,7 +461,8 @@ public class MarketOrderCapsuleDiffblueTest {
    * <p>Method under test: {@link MarketOrderCapsule#MarketOrderCapsule(byte[])}
    */
   @Test
-  @Category(MaintainedByDiffblue.class)
+  @Category(ContributionFromDiffblue.class)
+  @ManagedByDiffblue
   @MethodsUnderTest({"void MarketOrderCapsule.<init>(byte[])"})
   public void testNewMarketOrderCapsule_whenXxaxaxaxBytesIsUtf8_thenReturnInstanceIsNull()
       throws UnsupportedEncodingException {
@@ -462,7 +482,8 @@ public class MarketOrderCapsuleDiffblueTest {
    * <p>Method under test: {@link MarketOrderCapsule#getID()}
    */
   @Test
-  @Category(MaintainedByDiffblue.class)
+  @Category(ContributionFromDiffblue.class)
+  @ManagedByDiffblue
   @MethodsUnderTest({"ByteString MarketOrderCapsule.getID()"})
   public void testGetID_givenMarketOrderCapsuleWithDataIsEmptyArrayOfByte_thenReturnEmpty() {
     // Arrange
@@ -492,7 +513,8 @@ public class MarketOrderCapsuleDiffblueTest {
    * <p>Method under test: {@link MarketOrderCapsule#getOwnerAddress()}
    */
   @Test
-  @Category(MaintainedByDiffblue.class)
+  @Category(ContributionFromDiffblue.class)
+  @ManagedByDiffblue
   @MethodsUnderTest({"ByteString MarketOrderCapsule.getOwnerAddress()"})
   public void testGetOwnerAddress_thenMarketOrderCapsuleWithDataIsEmptyArrayOfByteIdIsEmpty() {
     // Arrange
@@ -524,7 +546,8 @@ public class MarketOrderCapsuleDiffblueTest {
    * <p>Method under test: {@link MarketOrderCapsule#getCreateTime()}
    */
   @Test
-  @Category(MaintainedByDiffblue.class)
+  @Category(ContributionFromDiffblue.class)
+  @ManagedByDiffblue
   @MethodsUnderTest({"long MarketOrderCapsule.getCreateTime()"})
   public void testGetCreateTime_thenReturnZero() {
     // Arrange
@@ -540,7 +563,8 @@ public class MarketOrderCapsuleDiffblueTest {
    * <p>Method under test: {@link MarketOrderCapsule#setCreateTime(long)}
    */
   @Test
-  @Category(MaintainedByDiffblue.class)
+  @Category(ContributionFromDiffblue.class)
+  @ManagedByDiffblue
   @MethodsUnderTest({"void MarketOrderCapsule.setCreateTime(long)"})
   public void testSetCreateTime() {
     // Arrange
@@ -565,7 +589,8 @@ public class MarketOrderCapsuleDiffblueTest {
    * <p>Method under test: {@link MarketOrderCapsule#setCreateTime(long)}
    */
   @Test
-  @Category(MaintainedByDiffblue.class)
+  @Category(ContributionFromDiffblue.class)
+  @ManagedByDiffblue
   @MethodsUnderTest({"void MarketOrderCapsule.setCreateTime(long)"})
   public void testSetCreateTime2() throws UnsupportedEncodingException {
     // Arrange
@@ -593,7 +618,8 @@ public class MarketOrderCapsuleDiffblueTest {
    * <p>Method under test: {@link MarketOrderCapsule#setCreateTime(long)}
    */
   @Test
-  @Category(MaintainedByDiffblue.class)
+  @Category(ContributionFromDiffblue.class)
+  @ManagedByDiffblue
   @MethodsUnderTest({"void MarketOrderCapsule.setCreateTime(long)"})
   public void testSetCreateTime3() {
     // Arrange
@@ -619,7 +645,8 @@ public class MarketOrderCapsuleDiffblueTest {
    * <p>Method under test: {@link MarketOrderCapsule#setCreateTime(long)}
    */
   @Test
-  @Category(MaintainedByDiffblue.class)
+  @Category(ContributionFromDiffblue.class)
+  @ManagedByDiffblue
   @MethodsUnderTest({"void MarketOrderCapsule.setCreateTime(long)"})
   public void testSetCreateTime4() {
     // Arrange
@@ -645,7 +672,8 @@ public class MarketOrderCapsuleDiffblueTest {
    * <p>Method under test: {@link MarketOrderCapsule#setCreateTime(long)}
    */
   @Test
-  @Category(MaintainedByDiffblue.class)
+  @Category(ContributionFromDiffblue.class)
+  @ManagedByDiffblue
   @MethodsUnderTest({"void MarketOrderCapsule.setCreateTime(long)"})
   public void testSetCreateTime5() {
     // Arrange
@@ -671,7 +699,8 @@ public class MarketOrderCapsuleDiffblueTest {
    * <p>Method under test: {@link MarketOrderCapsule#setCreateTime(long)}
    */
   @Test
-  @Category(MaintainedByDiffblue.class)
+  @Category(ContributionFromDiffblue.class)
+  @ManagedByDiffblue
   @MethodsUnderTest({"void MarketOrderCapsule.setCreateTime(long)"})
   public void testSetCreateTime6() throws UnsupportedEncodingException {
     // Arrange
@@ -699,7 +728,8 @@ public class MarketOrderCapsuleDiffblueTest {
    * <p>Method under test: {@link MarketOrderCapsule#setCreateTime(long)}
    */
   @Test
-  @Category(MaintainedByDiffblue.class)
+  @Category(ContributionFromDiffblue.class)
+  @ManagedByDiffblue
   @MethodsUnderTest({"void MarketOrderCapsule.setCreateTime(long)"})
   public void testSetCreateTime7() {
     // Arrange
@@ -725,7 +755,8 @@ public class MarketOrderCapsuleDiffblueTest {
    * <p>Method under test: {@link MarketOrderCapsule#setCreateTime(long)}
    */
   @Test
-  @Category(MaintainedByDiffblue.class)
+  @Category(ContributionFromDiffblue.class)
+  @ManagedByDiffblue
   @MethodsUnderTest({"void MarketOrderCapsule.setCreateTime(long)"})
   public void testSetCreateTime8() throws UnsupportedEncodingException {
     // Arrange
@@ -753,7 +784,8 @@ public class MarketOrderCapsuleDiffblueTest {
    * <p>Method under test: {@link MarketOrderCapsule#setCreateTime(long)}
    */
   @Test
-  @Category(MaintainedByDiffblue.class)
+  @Category(ContributionFromDiffblue.class)
+  @ManagedByDiffblue
   @MethodsUnderTest({"void MarketOrderCapsule.setCreateTime(long)"})
   public void testSetCreateTime9() throws UnsupportedEncodingException {
     // Arrange
@@ -785,7 +817,8 @@ public class MarketOrderCapsuleDiffblueTest {
    * <p>Method under test: {@link MarketOrderCapsule#getSellTokenId()}
    */
   @Test
-  @Category(MaintainedByDiffblue.class)
+  @Category(ContributionFromDiffblue.class)
+  @ManagedByDiffblue
   @MethodsUnderTest({"byte[] MarketOrderCapsule.getSellTokenId()"})
   public void testGetSellTokenId_thenReturnAxaxaxaxBytesIsUtf8()
       throws UnsupportedEncodingException {
@@ -807,7 +840,8 @@ public class MarketOrderCapsuleDiffblueTest {
    * <p>Method under test: {@link MarketOrderCapsule#getSellTokenId()}
    */
   @Test
-  @Category(MaintainedByDiffblue.class)
+  @Category(ContributionFromDiffblue.class)
+  @ManagedByDiffblue
   @MethodsUnderTest({"byte[] MarketOrderCapsule.getSellTokenId()"})
   public void testGetSellTokenId_thenReturnEmptyArrayOfByte() {
     // Arrange
@@ -823,7 +857,8 @@ public class MarketOrderCapsuleDiffblueTest {
    * <p>Method under test: {@link MarketOrderCapsule#setSellTokenId(byte[])}
    */
   @Test
-  @Category(MaintainedByDiffblue.class)
+  @Category(ContributionFromDiffblue.class)
+  @ManagedByDiffblue
   @MethodsUnderTest({"void MarketOrderCapsule.setSellTokenId(byte[])"})
   public void testSetSellTokenId() throws UnsupportedEncodingException {
     // Arrange
@@ -846,7 +881,8 @@ public class MarketOrderCapsuleDiffblueTest {
    * <p>Method under test: {@link MarketOrderCapsule#setSellTokenId(byte[])}
    */
   @Test
-  @Category(MaintainedByDiffblue.class)
+  @Category(ContributionFromDiffblue.class)
+  @ManagedByDiffblue
   @MethodsUnderTest({"void MarketOrderCapsule.setSellTokenId(byte[])"})
   public void testSetSellTokenId2() throws UnsupportedEncodingException {
     // Arrange
@@ -878,7 +914,8 @@ public class MarketOrderCapsuleDiffblueTest {
    * <p>Method under test: {@link MarketOrderCapsule#setSellTokenId(byte[])}
    */
   @Test
-  @Category(MaintainedByDiffblue.class)
+  @Category(ContributionFromDiffblue.class)
+  @ManagedByDiffblue
   @MethodsUnderTest({"void MarketOrderCapsule.setSellTokenId(byte[])"})
   public void testSetSellTokenId3() throws UnsupportedEncodingException {
     // Arrange
@@ -908,7 +945,8 @@ public class MarketOrderCapsuleDiffblueTest {
    * <p>Method under test: {@link MarketOrderCapsule#setSellTokenId(byte[])}
    */
   @Test
-  @Category(MaintainedByDiffblue.class)
+  @Category(ContributionFromDiffblue.class)
+  @ManagedByDiffblue
   @MethodsUnderTest({"void MarketOrderCapsule.setSellTokenId(byte[])"})
   public void testSetSellTokenId4() throws UnsupportedEncodingException {
     // Arrange
@@ -938,7 +976,8 @@ public class MarketOrderCapsuleDiffblueTest {
    * <p>Method under test: {@link MarketOrderCapsule#setSellTokenId(byte[])}
    */
   @Test
-  @Category(MaintainedByDiffblue.class)
+  @Category(ContributionFromDiffblue.class)
+  @ManagedByDiffblue
   @MethodsUnderTest({"void MarketOrderCapsule.setSellTokenId(byte[])"})
   public void testSetSellTokenId5() throws UnsupportedEncodingException {
     // Arrange
@@ -968,7 +1007,8 @@ public class MarketOrderCapsuleDiffblueTest {
    * <p>Method under test: {@link MarketOrderCapsule#setSellTokenId(byte[])}
    */
   @Test
-  @Category(MaintainedByDiffblue.class)
+  @Category(ContributionFromDiffblue.class)
+  @ManagedByDiffblue
   @MethodsUnderTest({"void MarketOrderCapsule.setSellTokenId(byte[])"})
   public void testSetSellTokenId6() throws UnsupportedEncodingException {
     // Arrange
@@ -990,7 +1030,8 @@ public class MarketOrderCapsuleDiffblueTest {
    * <p>Method under test: {@link MarketOrderCapsule#setSellTokenId(byte[])}
    */
   @Test
-  @Category(MaintainedByDiffblue.class)
+  @Category(ContributionFromDiffblue.class)
+  @ManagedByDiffblue
   @MethodsUnderTest({"void MarketOrderCapsule.setSellTokenId(byte[])"})
   public void testSetSellTokenId7() throws UnsupportedEncodingException {
     // Arrange
@@ -1020,7 +1061,8 @@ public class MarketOrderCapsuleDiffblueTest {
    * <p>Method under test: {@link MarketOrderCapsule#setSellTokenId(byte[])}
    */
   @Test
-  @Category(MaintainedByDiffblue.class)
+  @Category(ContributionFromDiffblue.class)
+  @ManagedByDiffblue
   @MethodsUnderTest({"void MarketOrderCapsule.setSellTokenId(byte[])"})
   public void testSetSellTokenId8() throws UnsupportedEncodingException {
     // Arrange
@@ -1042,7 +1084,8 @@ public class MarketOrderCapsuleDiffblueTest {
    * <p>Method under test: {@link MarketOrderCapsule#setSellTokenId(byte[])}
    */
   @Test
-  @Category(MaintainedByDiffblue.class)
+  @Category(ContributionFromDiffblue.class)
+  @ManagedByDiffblue
   @MethodsUnderTest({"void MarketOrderCapsule.setSellTokenId(byte[])"})
   public void testSetSellTokenId9() throws UnsupportedEncodingException {
     // Arrange
@@ -1068,7 +1111,8 @@ public class MarketOrderCapsuleDiffblueTest {
    * <p>Method under test: {@link MarketOrderCapsule#getSellTokenQuantity()}
    */
   @Test
-  @Category(MaintainedByDiffblue.class)
+  @Category(ContributionFromDiffblue.class)
+  @ManagedByDiffblue
   @MethodsUnderTest({"long MarketOrderCapsule.getSellTokenQuantity()"})
   public void testGetSellTokenQuantity_thenReturnZero() {
     // Arrange
@@ -1084,7 +1128,8 @@ public class MarketOrderCapsuleDiffblueTest {
    * <p>Method under test: {@link MarketOrderCapsule#setSellTokenQuantity(long)}
    */
   @Test
-  @Category(MaintainedByDiffblue.class)
+  @Category(ContributionFromDiffblue.class)
+  @ManagedByDiffblue
   @MethodsUnderTest({"void MarketOrderCapsule.setSellTokenQuantity(long)"})
   public void testSetSellTokenQuantity() {
     // Arrange
@@ -1109,7 +1154,8 @@ public class MarketOrderCapsuleDiffblueTest {
    * <p>Method under test: {@link MarketOrderCapsule#setSellTokenQuantity(long)}
    */
   @Test
-  @Category(MaintainedByDiffblue.class)
+  @Category(ContributionFromDiffblue.class)
+  @ManagedByDiffblue
   @MethodsUnderTest({"void MarketOrderCapsule.setSellTokenQuantity(long)"})
   public void testSetSellTokenQuantity2() {
     // Arrange
@@ -1135,7 +1181,8 @@ public class MarketOrderCapsuleDiffblueTest {
    * <p>Method under test: {@link MarketOrderCapsule#setSellTokenQuantity(long)}
    */
   @Test
-  @Category(MaintainedByDiffblue.class)
+  @Category(ContributionFromDiffblue.class)
+  @ManagedByDiffblue
   @MethodsUnderTest({"void MarketOrderCapsule.setSellTokenQuantity(long)"})
   public void testSetSellTokenQuantity3() throws UnsupportedEncodingException {
     // Arrange
@@ -1163,7 +1210,8 @@ public class MarketOrderCapsuleDiffblueTest {
    * <p>Method under test: {@link MarketOrderCapsule#setSellTokenQuantity(long)}
    */
   @Test
-  @Category(MaintainedByDiffblue.class)
+  @Category(ContributionFromDiffblue.class)
+  @ManagedByDiffblue
   @MethodsUnderTest({"void MarketOrderCapsule.setSellTokenQuantity(long)"})
   public void testSetSellTokenQuantity4() {
     // Arrange
@@ -1189,7 +1237,8 @@ public class MarketOrderCapsuleDiffblueTest {
    * <p>Method under test: {@link MarketOrderCapsule#setSellTokenQuantity(long)}
    */
   @Test
-  @Category(MaintainedByDiffblue.class)
+  @Category(ContributionFromDiffblue.class)
+  @ManagedByDiffblue
   @MethodsUnderTest({"void MarketOrderCapsule.setSellTokenQuantity(long)"})
   public void testSetSellTokenQuantity5() {
     // Arrange
@@ -1215,7 +1264,8 @@ public class MarketOrderCapsuleDiffblueTest {
    * <p>Method under test: {@link MarketOrderCapsule#setSellTokenQuantity(long)}
    */
   @Test
-  @Category(MaintainedByDiffblue.class)
+  @Category(ContributionFromDiffblue.class)
+  @ManagedByDiffblue
   @MethodsUnderTest({"void MarketOrderCapsule.setSellTokenQuantity(long)"})
   public void testSetSellTokenQuantity6() throws UnsupportedEncodingException {
     // Arrange
@@ -1243,7 +1293,8 @@ public class MarketOrderCapsuleDiffblueTest {
    * <p>Method under test: {@link MarketOrderCapsule#setSellTokenQuantity(long)}
    */
   @Test
-  @Category(MaintainedByDiffblue.class)
+  @Category(ContributionFromDiffblue.class)
+  @ManagedByDiffblue
   @MethodsUnderTest({"void MarketOrderCapsule.setSellTokenQuantity(long)"})
   public void testSetSellTokenQuantity7() {
     // Arrange
@@ -1269,7 +1320,8 @@ public class MarketOrderCapsuleDiffblueTest {
    * <p>Method under test: {@link MarketOrderCapsule#setSellTokenQuantity(long)}
    */
   @Test
-  @Category(MaintainedByDiffblue.class)
+  @Category(ContributionFromDiffblue.class)
+  @ManagedByDiffblue
   @MethodsUnderTest({"void MarketOrderCapsule.setSellTokenQuantity(long)"})
   public void testSetSellTokenQuantity8() throws UnsupportedEncodingException {
     // Arrange
@@ -1297,7 +1349,8 @@ public class MarketOrderCapsuleDiffblueTest {
    * <p>Method under test: {@link MarketOrderCapsule#setSellTokenQuantity(long)}
    */
   @Test
-  @Category(MaintainedByDiffblue.class)
+  @Category(ContributionFromDiffblue.class)
+  @ManagedByDiffblue
   @MethodsUnderTest({"void MarketOrderCapsule.setSellTokenQuantity(long)"})
   public void testSetSellTokenQuantity9() throws UnsupportedEncodingException {
     // Arrange
@@ -1329,7 +1382,8 @@ public class MarketOrderCapsuleDiffblueTest {
    * <p>Method under test: {@link MarketOrderCapsule#getSellTokenQuantityRemain()}
    */
   @Test
-  @Category(MaintainedByDiffblue.class)
+  @Category(ContributionFromDiffblue.class)
+  @ManagedByDiffblue
   @MethodsUnderTest({"long MarketOrderCapsule.getSellTokenQuantityRemain()"})
   public void testGetSellTokenQuantityRemain_thenReturnZero() {
     // Arrange
@@ -1345,7 +1399,8 @@ public class MarketOrderCapsuleDiffblueTest {
    * <p>Method under test: {@link MarketOrderCapsule#setSellTokenQuantityRemain(long)}
    */
   @Test
-  @Category(MaintainedByDiffblue.class)
+  @Category(ContributionFromDiffblue.class)
+  @ManagedByDiffblue
   @MethodsUnderTest({"void MarketOrderCapsule.setSellTokenQuantityRemain(long)"})
   public void testSetSellTokenQuantityRemain() {
     // Arrange
@@ -1370,7 +1425,8 @@ public class MarketOrderCapsuleDiffblueTest {
    * <p>Method under test: {@link MarketOrderCapsule#setSellTokenQuantityRemain(long)}
    */
   @Test
-  @Category(MaintainedByDiffblue.class)
+  @Category(ContributionFromDiffblue.class)
+  @ManagedByDiffblue
   @MethodsUnderTest({"void MarketOrderCapsule.setSellTokenQuantityRemain(long)"})
   public void testSetSellTokenQuantityRemain2() {
     // Arrange
@@ -1396,7 +1452,8 @@ public class MarketOrderCapsuleDiffblueTest {
    * <p>Method under test: {@link MarketOrderCapsule#setSellTokenQuantityRemain(long)}
    */
   @Test
-  @Category(MaintainedByDiffblue.class)
+  @Category(ContributionFromDiffblue.class)
+  @ManagedByDiffblue
   @MethodsUnderTest({"void MarketOrderCapsule.setSellTokenQuantityRemain(long)"})
   public void testSetSellTokenQuantityRemain3() throws UnsupportedEncodingException {
     // Arrange
@@ -1424,7 +1481,8 @@ public class MarketOrderCapsuleDiffblueTest {
    * <p>Method under test: {@link MarketOrderCapsule#setSellTokenQuantityRemain(long)}
    */
   @Test
-  @Category(MaintainedByDiffblue.class)
+  @Category(ContributionFromDiffblue.class)
+  @ManagedByDiffblue
   @MethodsUnderTest({"void MarketOrderCapsule.setSellTokenQuantityRemain(long)"})
   public void testSetSellTokenQuantityRemain4() {
     // Arrange
@@ -1450,7 +1508,8 @@ public class MarketOrderCapsuleDiffblueTest {
    * <p>Method under test: {@link MarketOrderCapsule#setSellTokenQuantityRemain(long)}
    */
   @Test
-  @Category(MaintainedByDiffblue.class)
+  @Category(ContributionFromDiffblue.class)
+  @ManagedByDiffblue
   @MethodsUnderTest({"void MarketOrderCapsule.setSellTokenQuantityRemain(long)"})
   public void testSetSellTokenQuantityRemain5() {
     // Arrange
@@ -1476,7 +1535,8 @@ public class MarketOrderCapsuleDiffblueTest {
    * <p>Method under test: {@link MarketOrderCapsule#setSellTokenQuantityRemain(long)}
    */
   @Test
-  @Category(MaintainedByDiffblue.class)
+  @Category(ContributionFromDiffblue.class)
+  @ManagedByDiffblue
   @MethodsUnderTest({"void MarketOrderCapsule.setSellTokenQuantityRemain(long)"})
   public void testSetSellTokenQuantityRemain6() throws UnsupportedEncodingException {
     // Arrange
@@ -1504,7 +1564,8 @@ public class MarketOrderCapsuleDiffblueTest {
    * <p>Method under test: {@link MarketOrderCapsule#setSellTokenQuantityRemain(long)}
    */
   @Test
-  @Category(MaintainedByDiffblue.class)
+  @Category(ContributionFromDiffblue.class)
+  @ManagedByDiffblue
   @MethodsUnderTest({"void MarketOrderCapsule.setSellTokenQuantityRemain(long)"})
   public void testSetSellTokenQuantityRemain7() {
     // Arrange
@@ -1530,7 +1591,8 @@ public class MarketOrderCapsuleDiffblueTest {
    * <p>Method under test: {@link MarketOrderCapsule#setSellTokenQuantityRemain(long)}
    */
   @Test
-  @Category(MaintainedByDiffblue.class)
+  @Category(ContributionFromDiffblue.class)
+  @ManagedByDiffblue
   @MethodsUnderTest({"void MarketOrderCapsule.setSellTokenQuantityRemain(long)"})
   public void testSetSellTokenQuantityRemain8() throws UnsupportedEncodingException {
     // Arrange
@@ -1558,7 +1620,8 @@ public class MarketOrderCapsuleDiffblueTest {
    * <p>Method under test: {@link MarketOrderCapsule#setSellTokenQuantityRemain(long)}
    */
   @Test
-  @Category(MaintainedByDiffblue.class)
+  @Category(ContributionFromDiffblue.class)
+  @ManagedByDiffblue
   @MethodsUnderTest({"void MarketOrderCapsule.setSellTokenQuantityRemain(long)"})
   public void testSetSellTokenQuantityRemain9() throws UnsupportedEncodingException {
     // Arrange
@@ -1586,7 +1649,8 @@ public class MarketOrderCapsuleDiffblueTest {
    * <p>Method under test: {@link MarketOrderCapsule#setSellTokenQuantityRemain(long)}
    */
   @Test
-  @Category(MaintainedByDiffblue.class)
+  @Category(ContributionFromDiffblue.class)
+  @ManagedByDiffblue
   @MethodsUnderTest({"void MarketOrderCapsule.setSellTokenQuantityRemain(long)"})
   public void testSetSellTokenQuantityRemain10() {
     // Arrange
@@ -1616,7 +1680,8 @@ public class MarketOrderCapsuleDiffblueTest {
    * <p>Method under test: {@link MarketOrderCapsule#getSellTokenQuantityReturn()}
    */
   @Test
-  @Category(MaintainedByDiffblue.class)
+  @Category(ContributionFromDiffblue.class)
+  @ManagedByDiffblue
   @MethodsUnderTest({"long MarketOrderCapsule.getSellTokenQuantityReturn()"})
   public void testGetSellTokenQuantityReturn_thenReturnZero() {
     // Arrange
@@ -1632,7 +1697,8 @@ public class MarketOrderCapsuleDiffblueTest {
    * <p>Method under test: {@link MarketOrderCapsule#setSellTokenQuantityReturn()}
    */
   @Test
-  @Category(MaintainedByDiffblue.class)
+  @Category(ContributionFromDiffblue.class)
+  @ManagedByDiffblue
   @MethodsUnderTest({"void MarketOrderCapsule.setSellTokenQuantityReturn()"})
   public void testSetSellTokenQuantityReturn() {
     // Arrange
@@ -1656,7 +1722,8 @@ public class MarketOrderCapsuleDiffblueTest {
    * <p>Method under test: {@link MarketOrderCapsule#setSellTokenQuantityReturn()}
    */
   @Test
-  @Category(MaintainedByDiffblue.class)
+  @Category(ContributionFromDiffblue.class)
+  @ManagedByDiffblue
   @MethodsUnderTest({"void MarketOrderCapsule.setSellTokenQuantityReturn()"})
   public void testSetSellTokenQuantityReturn2() {
     // Arrange
@@ -1681,7 +1748,8 @@ public class MarketOrderCapsuleDiffblueTest {
    * <p>Method under test: {@link MarketOrderCapsule#setSellTokenQuantityReturn()}
    */
   @Test
-  @Category(MaintainedByDiffblue.class)
+  @Category(ContributionFromDiffblue.class)
+  @ManagedByDiffblue
   @MethodsUnderTest({"void MarketOrderCapsule.setSellTokenQuantityReturn()"})
   public void testSetSellTokenQuantityReturn3() throws UnsupportedEncodingException {
     // Arrange
@@ -1706,7 +1774,8 @@ public class MarketOrderCapsuleDiffblueTest {
    * <p>Method under test: {@link MarketOrderCapsule#setSellTokenQuantityReturn()}
    */
   @Test
-  @Category(MaintainedByDiffblue.class)
+  @Category(ContributionFromDiffblue.class)
+  @ManagedByDiffblue
   @MethodsUnderTest({"void MarketOrderCapsule.setSellTokenQuantityReturn()"})
   public void testSetSellTokenQuantityReturn4() {
     // Arrange
@@ -1731,7 +1800,8 @@ public class MarketOrderCapsuleDiffblueTest {
    * <p>Method under test: {@link MarketOrderCapsule#setSellTokenQuantityReturn()}
    */
   @Test
-  @Category(MaintainedByDiffblue.class)
+  @Category(ContributionFromDiffblue.class)
+  @ManagedByDiffblue
   @MethodsUnderTest({"void MarketOrderCapsule.setSellTokenQuantityReturn()"})
   public void testSetSellTokenQuantityReturn5() {
     // Arrange
@@ -1757,7 +1827,8 @@ public class MarketOrderCapsuleDiffblueTest {
    * <p>Method under test: {@link MarketOrderCapsule#setSellTokenQuantityReturn()}
    */
   @Test
-  @Category(MaintainedByDiffblue.class)
+  @Category(ContributionFromDiffblue.class)
+  @ManagedByDiffblue
   @MethodsUnderTest({"void MarketOrderCapsule.setSellTokenQuantityReturn()"})
   public void testSetSellTokenQuantityReturn6() throws UnsupportedEncodingException {
     // Arrange
@@ -1782,7 +1853,8 @@ public class MarketOrderCapsuleDiffblueTest {
    * <p>Method under test: {@link MarketOrderCapsule#setSellTokenQuantityReturn()}
    */
   @Test
-  @Category(MaintainedByDiffblue.class)
+  @Category(ContributionFromDiffblue.class)
+  @ManagedByDiffblue
   @MethodsUnderTest({"void MarketOrderCapsule.setSellTokenQuantityReturn()"})
   public void testSetSellTokenQuantityReturn7() {
     // Arrange
@@ -1807,7 +1879,8 @@ public class MarketOrderCapsuleDiffblueTest {
    * <p>Method under test: {@link MarketOrderCapsule#setSellTokenQuantityReturn()}
    */
   @Test
-  @Category(MaintainedByDiffblue.class)
+  @Category(ContributionFromDiffblue.class)
+  @ManagedByDiffblue
   @MethodsUnderTest({"void MarketOrderCapsule.setSellTokenQuantityReturn()"})
   public void testSetSellTokenQuantityReturn8() throws UnsupportedEncodingException {
     // Arrange
@@ -1832,7 +1905,8 @@ public class MarketOrderCapsuleDiffblueTest {
    * <p>Method under test: {@link MarketOrderCapsule#setSellTokenQuantityReturn()}
    */
   @Test
-  @Category(MaintainedByDiffblue.class)
+  @Category(ContributionFromDiffblue.class)
+  @ManagedByDiffblue
   @MethodsUnderTest({"void MarketOrderCapsule.setSellTokenQuantityReturn()"})
   public void testSetSellTokenQuantityReturn9() throws UnsupportedEncodingException {
     // Arrange
@@ -1857,7 +1931,8 @@ public class MarketOrderCapsuleDiffblueTest {
    * <p>Method under test: {@link MarketOrderCapsule#setSellTokenQuantityReturn()}
    */
   @Test
-  @Category(MaintainedByDiffblue.class)
+  @Category(ContributionFromDiffblue.class)
+  @ManagedByDiffblue
   @MethodsUnderTest({"void MarketOrderCapsule.setSellTokenQuantityReturn()"})
   public void testSetSellTokenQuantityReturn10() {
     // Arrange
@@ -1882,7 +1957,8 @@ public class MarketOrderCapsuleDiffblueTest {
    * <p>Method under test: {@link MarketOrderCapsule#setSellTokenQuantityReturn(long)}
    */
   @Test
-  @Category(MaintainedByDiffblue.class)
+  @Category(ContributionFromDiffblue.class)
+  @ManagedByDiffblue
   @MethodsUnderTest({"void MarketOrderCapsule.setSellTokenQuantityReturn(long)"})
   public void testSetSellTokenQuantityReturnWithLong() {
     // Arrange
@@ -1907,7 +1983,8 @@ public class MarketOrderCapsuleDiffblueTest {
    * <p>Method under test: {@link MarketOrderCapsule#setSellTokenQuantityReturn(long)}
    */
   @Test
-  @Category(MaintainedByDiffblue.class)
+  @Category(ContributionFromDiffblue.class)
+  @ManagedByDiffblue
   @MethodsUnderTest({"void MarketOrderCapsule.setSellTokenQuantityReturn(long)"})
   public void testSetSellTokenQuantityReturnWithLong2() {
     // Arrange
@@ -1933,7 +2010,8 @@ public class MarketOrderCapsuleDiffblueTest {
    * <p>Method under test: {@link MarketOrderCapsule#setSellTokenQuantityReturn(long)}
    */
   @Test
-  @Category(MaintainedByDiffblue.class)
+  @Category(ContributionFromDiffblue.class)
+  @ManagedByDiffblue
   @MethodsUnderTest({"void MarketOrderCapsule.setSellTokenQuantityReturn(long)"})
   public void testSetSellTokenQuantityReturnWithLong3() throws UnsupportedEncodingException {
     // Arrange
@@ -1961,7 +2039,8 @@ public class MarketOrderCapsuleDiffblueTest {
    * <p>Method under test: {@link MarketOrderCapsule#setSellTokenQuantityReturn(long)}
    */
   @Test
-  @Category(MaintainedByDiffblue.class)
+  @Category(ContributionFromDiffblue.class)
+  @ManagedByDiffblue
   @MethodsUnderTest({"void MarketOrderCapsule.setSellTokenQuantityReturn(long)"})
   public void testSetSellTokenQuantityReturnWithLong4() {
     // Arrange
@@ -1987,7 +2066,8 @@ public class MarketOrderCapsuleDiffblueTest {
    * <p>Method under test: {@link MarketOrderCapsule#setSellTokenQuantityReturn(long)}
    */
   @Test
-  @Category(MaintainedByDiffblue.class)
+  @Category(ContributionFromDiffblue.class)
+  @ManagedByDiffblue
   @MethodsUnderTest({"void MarketOrderCapsule.setSellTokenQuantityReturn(long)"})
   public void testSetSellTokenQuantityReturnWithLong5() {
     // Arrange
@@ -2013,7 +2093,8 @@ public class MarketOrderCapsuleDiffblueTest {
    * <p>Method under test: {@link MarketOrderCapsule#setSellTokenQuantityReturn(long)}
    */
   @Test
-  @Category(MaintainedByDiffblue.class)
+  @Category(ContributionFromDiffblue.class)
+  @ManagedByDiffblue
   @MethodsUnderTest({"void MarketOrderCapsule.setSellTokenQuantityReturn(long)"})
   public void testSetSellTokenQuantityReturnWithLong6() throws UnsupportedEncodingException {
     // Arrange
@@ -2041,7 +2122,8 @@ public class MarketOrderCapsuleDiffblueTest {
    * <p>Method under test: {@link MarketOrderCapsule#setSellTokenQuantityReturn(long)}
    */
   @Test
-  @Category(MaintainedByDiffblue.class)
+  @Category(ContributionFromDiffblue.class)
+  @ManagedByDiffblue
   @MethodsUnderTest({"void MarketOrderCapsule.setSellTokenQuantityReturn(long)"})
   public void testSetSellTokenQuantityReturnWithLong7() {
     // Arrange
@@ -2067,7 +2149,8 @@ public class MarketOrderCapsuleDiffblueTest {
    * <p>Method under test: {@link MarketOrderCapsule#setSellTokenQuantityReturn(long)}
    */
   @Test
-  @Category(MaintainedByDiffblue.class)
+  @Category(ContributionFromDiffblue.class)
+  @ManagedByDiffblue
   @MethodsUnderTest({"void MarketOrderCapsule.setSellTokenQuantityReturn(long)"})
   public void testSetSellTokenQuantityReturnWithLong8() throws UnsupportedEncodingException {
     // Arrange
@@ -2095,7 +2178,8 @@ public class MarketOrderCapsuleDiffblueTest {
    * <p>Method under test: {@link MarketOrderCapsule#setSellTokenQuantityReturn(long)}
    */
   @Test
-  @Category(MaintainedByDiffblue.class)
+  @Category(ContributionFromDiffblue.class)
+  @ManagedByDiffblue
   @MethodsUnderTest({"void MarketOrderCapsule.setSellTokenQuantityReturn(long)"})
   public void testSetSellTokenQuantityReturnWithLong9() throws UnsupportedEncodingException {
     // Arrange
@@ -2123,7 +2207,8 @@ public class MarketOrderCapsuleDiffblueTest {
    * <p>Method under test: {@link MarketOrderCapsule#setSellTokenQuantityReturn(long)}
    */
   @Test
-  @Category(MaintainedByDiffblue.class)
+  @Category(ContributionFromDiffblue.class)
+  @ManagedByDiffblue
   @MethodsUnderTest({"void MarketOrderCapsule.setSellTokenQuantityReturn(long)"})
   public void testSetSellTokenQuantityReturnWithLong10() {
     // Arrange
@@ -2153,7 +2238,8 @@ public class MarketOrderCapsuleDiffblueTest {
    * <p>Method under test: {@link MarketOrderCapsule#getBuyTokenId()}
    */
   @Test
-  @Category(MaintainedByDiffblue.class)
+  @Category(ContributionFromDiffblue.class)
+  @ManagedByDiffblue
   @MethodsUnderTest({"byte[] MarketOrderCapsule.getBuyTokenId()"})
   public void testGetBuyTokenId_thenReturnAxaxaxaxBytesIsUtf8()
       throws UnsupportedEncodingException {
@@ -2175,7 +2261,8 @@ public class MarketOrderCapsuleDiffblueTest {
    * <p>Method under test: {@link MarketOrderCapsule#getBuyTokenId()}
    */
   @Test
-  @Category(MaintainedByDiffblue.class)
+  @Category(ContributionFromDiffblue.class)
+  @ManagedByDiffblue
   @MethodsUnderTest({"byte[] MarketOrderCapsule.getBuyTokenId()"})
   public void testGetBuyTokenId_thenReturnEmptyArrayOfByte() {
     // Arrange
@@ -2191,7 +2278,8 @@ public class MarketOrderCapsuleDiffblueTest {
    * <p>Method under test: {@link MarketOrderCapsule#setBuyTokenId(byte[])}
    */
   @Test
-  @Category(MaintainedByDiffblue.class)
+  @Category(ContributionFromDiffblue.class)
+  @ManagedByDiffblue
   @MethodsUnderTest({"void MarketOrderCapsule.setBuyTokenId(byte[])"})
   public void testSetBuyTokenId() throws UnsupportedEncodingException {
     // Arrange
@@ -2214,7 +2302,8 @@ public class MarketOrderCapsuleDiffblueTest {
    * <p>Method under test: {@link MarketOrderCapsule#setBuyTokenId(byte[])}
    */
   @Test
-  @Category(MaintainedByDiffblue.class)
+  @Category(ContributionFromDiffblue.class)
+  @ManagedByDiffblue
   @MethodsUnderTest({"void MarketOrderCapsule.setBuyTokenId(byte[])"})
   public void testSetBuyTokenId2() throws UnsupportedEncodingException {
     // Arrange
@@ -2238,7 +2327,8 @@ public class MarketOrderCapsuleDiffblueTest {
    * <p>Method under test: {@link MarketOrderCapsule#setBuyTokenId(byte[])}
    */
   @Test
-  @Category(MaintainedByDiffblue.class)
+  @Category(ContributionFromDiffblue.class)
+  @ManagedByDiffblue
   @MethodsUnderTest({"void MarketOrderCapsule.setBuyTokenId(byte[])"})
   public void testSetBuyTokenId3() throws UnsupportedEncodingException {
     // Arrange
@@ -2260,7 +2350,8 @@ public class MarketOrderCapsuleDiffblueTest {
    * <p>Method under test: {@link MarketOrderCapsule#setBuyTokenId(byte[])}
    */
   @Test
-  @Category(MaintainedByDiffblue.class)
+  @Category(ContributionFromDiffblue.class)
+  @ManagedByDiffblue
   @MethodsUnderTest({"void MarketOrderCapsule.setBuyTokenId(byte[])"})
   public void testSetBuyTokenId4() throws UnsupportedEncodingException {
     // Arrange
@@ -2282,7 +2373,8 @@ public class MarketOrderCapsuleDiffblueTest {
    * <p>Method under test: {@link MarketOrderCapsule#setBuyTokenId(byte[])}
    */
   @Test
-  @Category(MaintainedByDiffblue.class)
+  @Category(ContributionFromDiffblue.class)
+  @ManagedByDiffblue
   @MethodsUnderTest({"void MarketOrderCapsule.setBuyTokenId(byte[])"})
   public void testSetBuyTokenId5() throws UnsupportedEncodingException {
     // Arrange
@@ -2304,7 +2396,8 @@ public class MarketOrderCapsuleDiffblueTest {
    * <p>Method under test: {@link MarketOrderCapsule#setBuyTokenId(byte[])}
    */
   @Test
-  @Category(MaintainedByDiffblue.class)
+  @Category(ContributionFromDiffblue.class)
+  @ManagedByDiffblue
   @MethodsUnderTest({"void MarketOrderCapsule.setBuyTokenId(byte[])"})
   public void testSetBuyTokenId6() throws UnsupportedEncodingException {
     // Arrange
@@ -2326,7 +2419,8 @@ public class MarketOrderCapsuleDiffblueTest {
    * <p>Method under test: {@link MarketOrderCapsule#setBuyTokenId(byte[])}
    */
   @Test
-  @Category(MaintainedByDiffblue.class)
+  @Category(ContributionFromDiffblue.class)
+  @ManagedByDiffblue
   @MethodsUnderTest({"void MarketOrderCapsule.setBuyTokenId(byte[])"})
   public void testSetBuyTokenId7() throws UnsupportedEncodingException {
     // Arrange
@@ -2348,7 +2442,8 @@ public class MarketOrderCapsuleDiffblueTest {
    * <p>Method under test: {@link MarketOrderCapsule#setBuyTokenId(byte[])}
    */
   @Test
-  @Category(MaintainedByDiffblue.class)
+  @Category(ContributionFromDiffblue.class)
+  @ManagedByDiffblue
   @MethodsUnderTest({"void MarketOrderCapsule.setBuyTokenId(byte[])"})
   public void testSetBuyTokenId8() throws UnsupportedEncodingException {
     // Arrange
@@ -2372,7 +2467,8 @@ public class MarketOrderCapsuleDiffblueTest {
    * <p>Method under test: {@link MarketOrderCapsule#setBuyTokenId(byte[])}
    */
   @Test
-  @Category(MaintainedByDiffblue.class)
+  @Category(ContributionFromDiffblue.class)
+  @ManagedByDiffblue
   @MethodsUnderTest({"void MarketOrderCapsule.setBuyTokenId(byte[])"})
   public void testSetBuyTokenId9() throws UnsupportedEncodingException {
     // Arrange
@@ -2398,7 +2494,8 @@ public class MarketOrderCapsuleDiffblueTest {
    * <p>Method under test: {@link MarketOrderCapsule#getBuyTokenQuantity()}
    */
   @Test
-  @Category(MaintainedByDiffblue.class)
+  @Category(ContributionFromDiffblue.class)
+  @ManagedByDiffblue
   @MethodsUnderTest({"long MarketOrderCapsule.getBuyTokenQuantity()"})
   public void testGetBuyTokenQuantity_thenReturnZero() {
     // Arrange
@@ -2414,7 +2511,8 @@ public class MarketOrderCapsuleDiffblueTest {
    * <p>Method under test: {@link MarketOrderCapsule#setBuyTokenQuantity(long)}
    */
   @Test
-  @Category(MaintainedByDiffblue.class)
+  @Category(ContributionFromDiffblue.class)
+  @ManagedByDiffblue
   @MethodsUnderTest({"void MarketOrderCapsule.setBuyTokenQuantity(long)"})
   public void testSetBuyTokenQuantity() {
     // Arrange
@@ -2439,7 +2537,8 @@ public class MarketOrderCapsuleDiffblueTest {
    * <p>Method under test: {@link MarketOrderCapsule#setBuyTokenQuantity(long)}
    */
   @Test
-  @Category(MaintainedByDiffblue.class)
+  @Category(ContributionFromDiffblue.class)
+  @ManagedByDiffblue
   @MethodsUnderTest({"void MarketOrderCapsule.setBuyTokenQuantity(long)"})
   public void testSetBuyTokenQuantity2() {
     // Arrange
@@ -2465,7 +2564,8 @@ public class MarketOrderCapsuleDiffblueTest {
    * <p>Method under test: {@link MarketOrderCapsule#setBuyTokenQuantity(long)}
    */
   @Test
-  @Category(MaintainedByDiffblue.class)
+  @Category(ContributionFromDiffblue.class)
+  @ManagedByDiffblue
   @MethodsUnderTest({"void MarketOrderCapsule.setBuyTokenQuantity(long)"})
   public void testSetBuyTokenQuantity3() throws UnsupportedEncodingException {
     // Arrange
@@ -2491,7 +2591,8 @@ public class MarketOrderCapsuleDiffblueTest {
    * <p>Method under test: {@link MarketOrderCapsule#setBuyTokenQuantity(long)}
    */
   @Test
-  @Category(MaintainedByDiffblue.class)
+  @Category(ContributionFromDiffblue.class)
+  @ManagedByDiffblue
   @MethodsUnderTest({"void MarketOrderCapsule.setBuyTokenQuantity(long)"})
   public void testSetBuyTokenQuantity4() throws UnsupportedEncodingException {
     // Arrange
@@ -2517,7 +2618,8 @@ public class MarketOrderCapsuleDiffblueTest {
    * <p>Method under test: {@link MarketOrderCapsule#setBuyTokenQuantity(long)}
    */
   @Test
-  @Category(MaintainedByDiffblue.class)
+  @Category(ContributionFromDiffblue.class)
+  @ManagedByDiffblue
   @MethodsUnderTest({"void MarketOrderCapsule.setBuyTokenQuantity(long)"})
   public void testSetBuyTokenQuantity5() throws UnsupportedEncodingException {
     // Arrange
@@ -2543,7 +2645,8 @@ public class MarketOrderCapsuleDiffblueTest {
    * <p>Method under test: {@link MarketOrderCapsule#setBuyTokenQuantity(long)}
    */
   @Test
-  @Category(MaintainedByDiffblue.class)
+  @Category(ContributionFromDiffblue.class)
+  @ManagedByDiffblue
   @MethodsUnderTest({"void MarketOrderCapsule.setBuyTokenQuantity(long)"})
   public void testSetBuyTokenQuantity6() throws UnsupportedEncodingException {
     // Arrange
@@ -2569,7 +2672,8 @@ public class MarketOrderCapsuleDiffblueTest {
    * <p>Method under test: {@link MarketOrderCapsule#setBuyTokenQuantity(long)}
    */
   @Test
-  @Category(MaintainedByDiffblue.class)
+  @Category(ContributionFromDiffblue.class)
+  @ManagedByDiffblue
   @MethodsUnderTest({"void MarketOrderCapsule.setBuyTokenQuantity(long)"})
   public void testSetBuyTokenQuantity7() throws UnsupportedEncodingException {
     // Arrange
@@ -2595,7 +2699,8 @@ public class MarketOrderCapsuleDiffblueTest {
    * <p>Method under test: {@link MarketOrderCapsule#setBuyTokenQuantity(long)}
    */
   @Test
-  @Category(MaintainedByDiffblue.class)
+  @Category(ContributionFromDiffblue.class)
+  @ManagedByDiffblue
   @MethodsUnderTest({"void MarketOrderCapsule.setBuyTokenQuantity(long)"})
   public void testSetBuyTokenQuantity8() throws UnsupportedEncodingException {
     // Arrange
@@ -2621,7 +2726,8 @@ public class MarketOrderCapsuleDiffblueTest {
    * <p>Method under test: {@link MarketOrderCapsule#setBuyTokenQuantity(long)}
    */
   @Test
-  @Category(MaintainedByDiffblue.class)
+  @Category(ContributionFromDiffblue.class)
+  @ManagedByDiffblue
   @MethodsUnderTest({"void MarketOrderCapsule.setBuyTokenQuantity(long)"})
   public void testSetBuyTokenQuantity9() throws UnsupportedEncodingException {
     // Arrange
@@ -2653,7 +2759,8 @@ public class MarketOrderCapsuleDiffblueTest {
    * <p>Method under test: {@link MarketOrderCapsule#getSt()}
    */
   @Test
-  @Category(MaintainedByDiffblue.class)
+  @Category(ContributionFromDiffblue.class)
+  @ManagedByDiffblue
   @MethodsUnderTest({"State MarketOrderCapsule.getSt()"})
   public void testGetSt_givenMarketOrderCapsuleWithDataIsEmptyArrayOfByte_thenReturnActive() {
     // Arrange
@@ -2673,7 +2780,8 @@ public class MarketOrderCapsuleDiffblueTest {
    * <p>Method under test: {@link MarketOrderCapsule#getSt()}
    */
   @Test
-  @Category(MaintainedByDiffblue.class)
+  @Category(ContributionFromDiffblue.class)
+  @ManagedByDiffblue
   @MethodsUnderTest({"State MarketOrderCapsule.getSt()"})
   public void testGetSt_thenReturnCanceled() {
     // Arrange
@@ -2694,7 +2802,8 @@ public class MarketOrderCapsuleDiffblueTest {
    * <p>Method under test: {@link MarketOrderCapsule#getSt()}
    */
   @Test
-  @Category(MaintainedByDiffblue.class)
+  @Category(ContributionFromDiffblue.class)
+  @ManagedByDiffblue
   @MethodsUnderTest({"State MarketOrderCapsule.getSt()"})
   public void testGetSt_thenReturnInactive() {
     // Arrange
@@ -2716,7 +2825,8 @@ public class MarketOrderCapsuleDiffblueTest {
    * <p>Method under test: {@link MarketOrderCapsule#isActive()}
    */
   @Test
-  @Category(MaintainedByDiffblue.class)
+  @Category(ContributionFromDiffblue.class)
+  @ManagedByDiffblue
   @MethodsUnderTest({"boolean MarketOrderCapsule.isActive()"})
   public void testIsActive_givenMarketOrderCapsuleWithDataIsEmptyArrayOfByteStateIsCanceled() {
     // Arrange
@@ -2738,7 +2848,8 @@ public class MarketOrderCapsuleDiffblueTest {
    * <p>Method under test: {@link MarketOrderCapsule#isActive()}
    */
   @Test
-  @Category(MaintainedByDiffblue.class)
+  @Category(ContributionFromDiffblue.class)
+  @ManagedByDiffblue
   @MethodsUnderTest({"boolean MarketOrderCapsule.isActive()"})
   public void testIsActive_givenMarketOrderCapsuleWithDataIsEmptyArrayOfByteStateIsInactive() {
     // Arrange
@@ -2761,7 +2872,8 @@ public class MarketOrderCapsuleDiffblueTest {
    * <p>Method under test: {@link MarketOrderCapsule#isActive()}
    */
   @Test
-  @Category(MaintainedByDiffblue.class)
+  @Category(ContributionFromDiffblue.class)
+  @ManagedByDiffblue
   @MethodsUnderTest({"boolean MarketOrderCapsule.isActive()"})
   public void testIsActive_givenMarketOrderCapsuleWithDataIsEmptyArrayOfByte_thenReturnTrue() {
     // Arrange
@@ -2781,7 +2893,8 @@ public class MarketOrderCapsuleDiffblueTest {
    * <p>Method under test: {@link MarketOrderCapsule#getNext()}
    */
   @Test
-  @Category(MaintainedByDiffblue.class)
+  @Category(ContributionFromDiffblue.class)
+  @ManagedByDiffblue
   @MethodsUnderTest({"byte[] MarketOrderCapsule.getNext()"})
   public void testGetNext_thenReturnAxaxaxaxBytesIsUtf8() throws UnsupportedEncodingException {
     // Arrange
@@ -2802,7 +2915,8 @@ public class MarketOrderCapsuleDiffblueTest {
    * <p>Method under test: {@link MarketOrderCapsule#getNext()}
    */
   @Test
-  @Category(MaintainedByDiffblue.class)
+  @Category(ContributionFromDiffblue.class)
+  @ManagedByDiffblue
   @MethodsUnderTest({"byte[] MarketOrderCapsule.getNext()"})
   public void testGetNext_thenReturnEmptyArrayOfByte() {
     // Arrange
@@ -2818,7 +2932,8 @@ public class MarketOrderCapsuleDiffblueTest {
    * <p>Method under test: {@link MarketOrderCapsule#setNext(byte[])}
    */
   @Test
-  @Category(MaintainedByDiffblue.class)
+  @Category(ContributionFromDiffblue.class)
+  @ManagedByDiffblue
   @MethodsUnderTest({"void MarketOrderCapsule.setNext(byte[])"})
   public void testSetNext() throws UnsupportedEncodingException {
     // Arrange
@@ -2841,7 +2956,8 @@ public class MarketOrderCapsuleDiffblueTest {
    * <p>Method under test: {@link MarketOrderCapsule#setNext(byte[])}
    */
   @Test
-  @Category(MaintainedByDiffblue.class)
+  @Category(ContributionFromDiffblue.class)
+  @ManagedByDiffblue
   @MethodsUnderTest({"void MarketOrderCapsule.setNext(byte[])"})
   public void testSetNext2() throws UnsupportedEncodingException {
     // Arrange
@@ -2871,7 +2987,8 @@ public class MarketOrderCapsuleDiffblueTest {
    * <p>Method under test: {@link MarketOrderCapsule#setNext(byte[])}
    */
   @Test
-  @Category(MaintainedByDiffblue.class)
+  @Category(ContributionFromDiffblue.class)
+  @ManagedByDiffblue
   @MethodsUnderTest({"void MarketOrderCapsule.setNext(byte[])"})
   public void testSetNext3() throws UnsupportedEncodingException {
     // Arrange
@@ -2893,7 +3010,8 @@ public class MarketOrderCapsuleDiffblueTest {
    * <p>Method under test: {@link MarketOrderCapsule#setNext(byte[])}
    */
   @Test
-  @Category(MaintainedByDiffblue.class)
+  @Category(ContributionFromDiffblue.class)
+  @ManagedByDiffblue
   @MethodsUnderTest({"void MarketOrderCapsule.setNext(byte[])"})
   public void testSetNext4() throws UnsupportedEncodingException {
     // Arrange
@@ -2923,7 +3041,8 @@ public class MarketOrderCapsuleDiffblueTest {
    * <p>Method under test: {@link MarketOrderCapsule#setNext(byte[])}
    */
   @Test
-  @Category(MaintainedByDiffblue.class)
+  @Category(ContributionFromDiffblue.class)
+  @ManagedByDiffblue
   @MethodsUnderTest({"void MarketOrderCapsule.setNext(byte[])"})
   public void testSetNext5() throws UnsupportedEncodingException {
     // Arrange
@@ -2953,7 +3072,8 @@ public class MarketOrderCapsuleDiffblueTest {
    * <p>Method under test: {@link MarketOrderCapsule#setNext(byte[])}
    */
   @Test
-  @Category(MaintainedByDiffblue.class)
+  @Category(ContributionFromDiffblue.class)
+  @ManagedByDiffblue
   @MethodsUnderTest({"void MarketOrderCapsule.setNext(byte[])"})
   public void testSetNext6() throws UnsupportedEncodingException {
     // Arrange
@@ -2983,7 +3103,8 @@ public class MarketOrderCapsuleDiffblueTest {
    * <p>Method under test: {@link MarketOrderCapsule#setNext(byte[])}
    */
   @Test
-  @Category(MaintainedByDiffblue.class)
+  @Category(ContributionFromDiffblue.class)
+  @ManagedByDiffblue
   @MethodsUnderTest({"void MarketOrderCapsule.setNext(byte[])"})
   public void testSetNext7() throws UnsupportedEncodingException {
     // Arrange
@@ -3007,7 +3128,8 @@ public class MarketOrderCapsuleDiffblueTest {
    * <p>Method under test: {@link MarketOrderCapsule#setNext(byte[])}
    */
   @Test
-  @Category(MaintainedByDiffblue.class)
+  @Category(ContributionFromDiffblue.class)
+  @ManagedByDiffblue
   @MethodsUnderTest({"void MarketOrderCapsule.setNext(byte[])"})
   public void testSetNext8() throws UnsupportedEncodingException {
     // Arrange
@@ -3035,7 +3157,8 @@ public class MarketOrderCapsuleDiffblueTest {
    * <p>Method under test: {@link MarketOrderCapsule#setNext(byte[])}
    */
   @Test
-  @Category(MaintainedByDiffblue.class)
+  @Category(ContributionFromDiffblue.class)
+  @ManagedByDiffblue
   @MethodsUnderTest({"void MarketOrderCapsule.setNext(byte[])"})
   public void testSetNext9() throws UnsupportedEncodingException {
     // Arrange
@@ -3061,7 +3184,8 @@ public class MarketOrderCapsuleDiffblueTest {
    * <p>Method under test: {@link MarketOrderCapsule#getPrev()}
    */
   @Test
-  @Category(MaintainedByDiffblue.class)
+  @Category(ContributionFromDiffblue.class)
+  @ManagedByDiffblue
   @MethodsUnderTest({"byte[] MarketOrderCapsule.getPrev()"})
   public void testGetPrev_thenReturnAxaxaxaxBytesIsUtf8() throws UnsupportedEncodingException {
     // Arrange
@@ -3082,7 +3206,8 @@ public class MarketOrderCapsuleDiffblueTest {
    * <p>Method under test: {@link MarketOrderCapsule#getPrev()}
    */
   @Test
-  @Category(MaintainedByDiffblue.class)
+  @Category(ContributionFromDiffblue.class)
+  @ManagedByDiffblue
   @MethodsUnderTest({"byte[] MarketOrderCapsule.getPrev()"})
   public void testGetPrev_thenReturnEmptyArrayOfByte() {
     // Arrange
@@ -3098,7 +3223,8 @@ public class MarketOrderCapsuleDiffblueTest {
    * <p>Method under test: {@link MarketOrderCapsule#setPrev(byte[])}
    */
   @Test
-  @Category(MaintainedByDiffblue.class)
+  @Category(ContributionFromDiffblue.class)
+  @ManagedByDiffblue
   @MethodsUnderTest({"void MarketOrderCapsule.setPrev(byte[])"})
   public void testSetPrev() throws UnsupportedEncodingException {
     // Arrange
@@ -3121,7 +3247,8 @@ public class MarketOrderCapsuleDiffblueTest {
    * <p>Method under test: {@link MarketOrderCapsule#setPrev(byte[])}
    */
   @Test
-  @Category(MaintainedByDiffblue.class)
+  @Category(ContributionFromDiffblue.class)
+  @ManagedByDiffblue
   @MethodsUnderTest({"void MarketOrderCapsule.setPrev(byte[])"})
   public void testSetPrev2() throws UnsupportedEncodingException {
     // Arrange
@@ -3153,7 +3280,8 @@ public class MarketOrderCapsuleDiffblueTest {
    * <p>Method under test: {@link MarketOrderCapsule#setPrev(byte[])}
    */
   @Test
-  @Category(MaintainedByDiffblue.class)
+  @Category(ContributionFromDiffblue.class)
+  @ManagedByDiffblue
   @MethodsUnderTest({"void MarketOrderCapsule.setPrev(byte[])"})
   public void testSetPrev3() throws UnsupportedEncodingException {
     // Arrange
@@ -3175,7 +3303,8 @@ public class MarketOrderCapsuleDiffblueTest {
    * <p>Method under test: {@link MarketOrderCapsule#setPrev(byte[])}
    */
   @Test
-  @Category(MaintainedByDiffblue.class)
+  @Category(ContributionFromDiffblue.class)
+  @ManagedByDiffblue
   @MethodsUnderTest({"void MarketOrderCapsule.setPrev(byte[])"})
   public void testSetPrev4() throws UnsupportedEncodingException {
     // Arrange
@@ -3207,7 +3336,8 @@ public class MarketOrderCapsuleDiffblueTest {
    * <p>Method under test: {@link MarketOrderCapsule#setPrev(byte[])}
    */
   @Test
-  @Category(MaintainedByDiffblue.class)
+  @Category(ContributionFromDiffblue.class)
+  @ManagedByDiffblue
   @MethodsUnderTest({"void MarketOrderCapsule.setPrev(byte[])"})
   public void testSetPrev5() throws UnsupportedEncodingException {
     // Arrange
@@ -3239,7 +3369,8 @@ public class MarketOrderCapsuleDiffblueTest {
    * <p>Method under test: {@link MarketOrderCapsule#setPrev(byte[])}
    */
   @Test
-  @Category(MaintainedByDiffblue.class)
+  @Category(ContributionFromDiffblue.class)
+  @ManagedByDiffblue
   @MethodsUnderTest({"void MarketOrderCapsule.setPrev(byte[])"})
   public void testSetPrev6() throws UnsupportedEncodingException {
     // Arrange
@@ -3271,7 +3402,8 @@ public class MarketOrderCapsuleDiffblueTest {
    * <p>Method under test: {@link MarketOrderCapsule#setPrev(byte[])}
    */
   @Test
-  @Category(MaintainedByDiffblue.class)
+  @Category(ContributionFromDiffblue.class)
+  @ManagedByDiffblue
   @MethodsUnderTest({"void MarketOrderCapsule.setPrev(byte[])"})
   public void testSetPrev7() throws UnsupportedEncodingException {
     // Arrange
@@ -3293,7 +3425,8 @@ public class MarketOrderCapsuleDiffblueTest {
    * <p>Method under test: {@link MarketOrderCapsule#setPrev(byte[])}
    */
   @Test
-  @Category(MaintainedByDiffblue.class)
+  @Category(ContributionFromDiffblue.class)
+  @ManagedByDiffblue
   @MethodsUnderTest({"void MarketOrderCapsule.setPrev(byte[])"})
   public void testSetPrev8() throws UnsupportedEncodingException {
     // Arrange
@@ -3323,7 +3456,8 @@ public class MarketOrderCapsuleDiffblueTest {
    * <p>Method under test: {@link MarketOrderCapsule#setPrev(byte[])}
    */
   @Test
-  @Category(MaintainedByDiffblue.class)
+  @Category(ContributionFromDiffblue.class)
+  @ManagedByDiffblue
   @MethodsUnderTest({"void MarketOrderCapsule.setPrev(byte[])"})
   public void testSetPrev9() throws UnsupportedEncodingException {
     // Arrange
@@ -3351,7 +3485,8 @@ public class MarketOrderCapsuleDiffblueTest {
    * <p>Method under test: {@link MarketOrderCapsule#isPreNull()}
    */
   @Test
-  @Category(MaintainedByDiffblue.class)
+  @Category(ContributionFromDiffblue.class)
+  @ManagedByDiffblue
   @MethodsUnderTest({"boolean MarketOrderCapsule.isPreNull()"})
   public void testIsPreNull_givenMarketOrderCapsuleWithDataIsEmptyArrayOfByte_thenReturnTrue() {
     // Arrange
@@ -3371,7 +3506,8 @@ public class MarketOrderCapsuleDiffblueTest {
    * <p>Method under test: {@link MarketOrderCapsule#isPreNull()}
    */
   @Test
-  @Category(MaintainedByDiffblue.class)
+  @Category(ContributionFromDiffblue.class)
+  @ManagedByDiffblue
   @MethodsUnderTest({"boolean MarketOrderCapsule.isPreNull()"})
   public void testIsPreNull_thenReturnFalse() throws UnsupportedEncodingException {
     // Arrange
@@ -3394,7 +3530,8 @@ public class MarketOrderCapsuleDiffblueTest {
    * <p>Method under test: {@link MarketOrderCapsule#isNextNull()}
    */
   @Test
-  @Category(MaintainedByDiffblue.class)
+  @Category(ContributionFromDiffblue.class)
+  @ManagedByDiffblue
   @MethodsUnderTest({"boolean MarketOrderCapsule.isNextNull()"})
   public void testIsNextNull_givenMarketOrderCapsuleWithDataIsEmptyArrayOfByte_thenReturnTrue() {
     // Arrange
@@ -3414,7 +3551,8 @@ public class MarketOrderCapsuleDiffblueTest {
    * <p>Method under test: {@link MarketOrderCapsule#isNextNull()}
    */
   @Test
-  @Category(MaintainedByDiffblue.class)
+  @Category(ContributionFromDiffblue.class)
+  @ManagedByDiffblue
   @MethodsUnderTest({"boolean MarketOrderCapsule.isNextNull()"})
   public void testIsNextNull_thenReturnFalse() throws UnsupportedEncodingException {
     // Arrange
@@ -3436,7 +3574,8 @@ public class MarketOrderCapsuleDiffblueTest {
    * <p>Method under test: {@link MarketOrderCapsule#getPrevCapsule(MarketOrderStore)}
    */
   @Test
-  @Category(MaintainedByDiffblue.class)
+  @Category(ContributionFromDiffblue.class)
+  @ManagedByDiffblue
   @MethodsUnderTest({"MarketOrderCapsule MarketOrderCapsule.getPrevCapsule(MarketOrderStore)"})
   public void testGetPrevCapsule_givenMarketOrderCapsuleWithDataIsEmptyArrayOfByte()
       throws ItemNotFoundException {
@@ -3459,7 +3598,8 @@ public class MarketOrderCapsuleDiffblueTest {
    * <p>Method under test: {@link MarketOrderCapsule#getPrevCapsule(MarketOrderStore)}
    */
   @Test
-  @Category(MaintainedByDiffblue.class)
+  @Category(ContributionFromDiffblue.class)
+  @ManagedByDiffblue
   @MethodsUnderTest({"MarketOrderCapsule MarketOrderCapsule.getPrevCapsule(MarketOrderStore)"})
   public void testGetPrevCapsule_givenNull_whenMarketOrderStoreGetReturnNull_thenCallsGet()
       throws UnsupportedEncodingException, ItemNotFoundException {
@@ -3489,7 +3629,8 @@ public class MarketOrderCapsuleDiffblueTest {
    * <p>Method under test: {@link MarketOrderCapsule#getNextCapsule(MarketOrderStore)}
    */
   @Test
-  @Category(MaintainedByDiffblue.class)
+  @Category(ContributionFromDiffblue.class)
+  @ManagedByDiffblue
   @MethodsUnderTest({"MarketOrderCapsule MarketOrderCapsule.getNextCapsule(MarketOrderStore)"})
   public void testGetNextCapsule_givenMarketOrderCapsuleWithDataIsEmptyArrayOfByte()
       throws ItemNotFoundException {
@@ -3512,7 +3653,8 @@ public class MarketOrderCapsuleDiffblueTest {
    * <p>Method under test: {@link MarketOrderCapsule#getNextCapsule(MarketOrderStore)}
    */
   @Test
-  @Category(MaintainedByDiffblue.class)
+  @Category(ContributionFromDiffblue.class)
+  @ManagedByDiffblue
   @MethodsUnderTest({"MarketOrderCapsule MarketOrderCapsule.getNextCapsule(MarketOrderStore)"})
   public void testGetNextCapsule_givenNull_whenMarketOrderStoreGetReturnNull_thenCallsGet()
       throws UnsupportedEncodingException, ItemNotFoundException {
@@ -3541,7 +3683,8 @@ public class MarketOrderCapsuleDiffblueTest {
    * <p>Method under test: {@link MarketOrderCapsule#getData()}
    */
   @Test
-  @Category(MaintainedByDiffblue.class)
+  @Category(ContributionFromDiffblue.class)
+  @ManagedByDiffblue
   @MethodsUnderTest({"byte[] MarketOrderCapsule.getData()"})
   public void testGetData_thenReturn2BackspaceAxaxaxaxBytesIsUtf8()
       throws UnsupportedEncodingException {
@@ -3563,7 +3706,8 @@ public class MarketOrderCapsuleDiffblueTest {
    * <p>Method under test: {@link MarketOrderCapsule#getData()}
    */
   @Test
-  @Category(MaintainedByDiffblue.class)
+  @Category(ContributionFromDiffblue.class)
+  @ManagedByDiffblue
   @MethodsUnderTest({"byte[] MarketOrderCapsule.getData()"})
   public void testGetData_thenReturnArrayOfByteWith8AndAsterisk() {
     // Arrange
@@ -3584,7 +3728,8 @@ public class MarketOrderCapsuleDiffblueTest {
    * <p>Method under test: {@link MarketOrderCapsule#getData()}
    */
   @Test
-  @Category(MaintainedByDiffblue.class)
+  @Category(ContributionFromDiffblue.class)
+  @ManagedByDiffblue
   @MethodsUnderTest({"byte[] MarketOrderCapsule.getData()"})
   public void testGetData_thenReturnArrayOfByteWithHAndMinusOne() {
     // Arrange
@@ -3606,7 +3751,8 @@ public class MarketOrderCapsuleDiffblueTest {
    * <p>Method under test: {@link MarketOrderCapsule#getData()}
    */
   @Test
-  @Category(MaintainedByDiffblue.class)
+  @Category(ContributionFromDiffblue.class)
+  @ManagedByDiffblue
   @MethodsUnderTest({"byte[] MarketOrderCapsule.getData()"})
   public void testGetData_thenReturnArrayOfByteWithLeftParenthesisAndMinusOne() {
     // Arrange
@@ -3628,7 +3774,8 @@ public class MarketOrderCapsuleDiffblueTest {
    * <p>Method under test: {@link MarketOrderCapsule#getData()}
    */
   @Test
-  @Category(MaintainedByDiffblue.class)
+  @Category(ContributionFromDiffblue.class)
+  @ManagedByDiffblue
   @MethodsUnderTest({"byte[] MarketOrderCapsule.getData()"})
   public void testGetData_thenReturnArrayOfByteWithPAndMinusOne() {
     // Arrange
@@ -3650,7 +3797,8 @@ public class MarketOrderCapsuleDiffblueTest {
    * <p>Method under test: {@link MarketOrderCapsule#getData()}
    */
   @Test
-  @Category(MaintainedByDiffblue.class)
+  @Category(ContributionFromDiffblue.class)
+  @ManagedByDiffblue
   @MethodsUnderTest({"byte[] MarketOrderCapsule.getData()"})
   public void testGetData_thenReturnArrayOfByteWithTwentyFourAndLf() {
     // Arrange
@@ -3671,7 +3819,8 @@ public class MarketOrderCapsuleDiffblueTest {
    * <p>Method under test: {@link MarketOrderCapsule#getData()}
    */
   @Test
-  @Category(MaintainedByDiffblue.class)
+  @Category(ContributionFromDiffblue.class)
+  @ManagedByDiffblue
   @MethodsUnderTest({"byte[] MarketOrderCapsule.getData()"})
   public void testGetData_thenReturnArrayOfByteWithTwentyFourAndMinusOne() {
     // Arrange
@@ -3694,7 +3843,8 @@ public class MarketOrderCapsuleDiffblueTest {
    * <p>Method under test: {@link MarketOrderCapsule#getData()}
    */
   @Test
-  @Category(MaintainedByDiffblue.class)
+  @Category(ContributionFromDiffblue.class)
+  @ManagedByDiffblue
   @MethodsUnderTest({"byte[] MarketOrderCapsule.getData()"})
   public void testGetData_thenReturnArrayOfByteWithXAndOne() {
     // Arrange
@@ -3715,7 +3865,8 @@ public class MarketOrderCapsuleDiffblueTest {
    * <p>Method under test: {@link MarketOrderCapsule#getData()}
    */
   @Test
-  @Category(MaintainedByDiffblue.class)
+  @Category(ContributionFromDiffblue.class)
+  @ManagedByDiffblue
   @MethodsUnderTest({"byte[] MarketOrderCapsule.getData()"})
   public void testGetData_thenReturnBBackspaceAxaxaxaxBytesIsUtf8()
       throws UnsupportedEncodingException {
@@ -3737,7 +3888,8 @@ public class MarketOrderCapsuleDiffblueTest {
    * <p>Method under test: {@link MarketOrderCapsule#getData()}
    */
   @Test
-  @Category(MaintainedByDiffblue.class)
+  @Category(ContributionFromDiffblue.class)
+  @ManagedByDiffblue
   @MethodsUnderTest({"byte[] MarketOrderCapsule.getData()"})
   public void testGetData_thenReturnBackspaceAxaxaxaxBytesIsUtf8()
       throws UnsupportedEncodingException {
@@ -3759,7 +3911,8 @@ public class MarketOrderCapsuleDiffblueTest {
    * <p>Method under test: {@link MarketOrderCapsule#getData()}
    */
   @Test
-  @Category(MaintainedByDiffblue.class)
+  @Category(ContributionFromDiffblue.class)
+  @ManagedByDiffblue
   @MethodsUnderTest({"byte[] MarketOrderCapsule.getData()"})
   public void testGetData_thenReturnEmptyArrayOfByte() {
     // Arrange
@@ -3779,7 +3932,8 @@ public class MarketOrderCapsuleDiffblueTest {
    * <p>Method under test: {@link MarketOrderCapsule#getData()}
    */
   @Test
-  @Category(MaintainedByDiffblue.class)
+  @Category(ContributionFromDiffblue.class)
+  @ManagedByDiffblue
   @MethodsUnderTest({"byte[] MarketOrderCapsule.getData()"})
   public void testGetData_thenReturnJBackspaceAxaxaxaxBytesIsUtf8()
       throws UnsupportedEncodingException {
@@ -3801,7 +3955,8 @@ public class MarketOrderCapsuleDiffblueTest {
    * <p>Method under test: {@link MarketOrderCapsule#getInstance()}
    */
   @Test
-  @Category(MaintainedByDiffblue.class)
+  @Category(ContributionFromDiffblue.class)
+  @ManagedByDiffblue
   @MethodsUnderTest({"MarketOrder MarketOrderCapsule.getInstance()"})
   public void testGetInstance_thenReturnNull() throws UnsupportedEncodingException {
     // Arrange, Act and Assert

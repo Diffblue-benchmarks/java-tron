@@ -3,7 +3,8 @@ package org.tron.core.exception;
 import static org.junit.Assert.assertEquals;
 import static org.junit.Assert.assertNull;
 import static org.junit.Assert.assertSame;
-import com.diffblue.cover.annotations.MaintainedByDiffblue;
+import com.diffblue.cover.annotations.ContributionFromDiffblue;
+import com.diffblue.cover.annotations.ManagedByDiffblue;
 import com.diffblue.cover.annotations.MethodsUnderTest;
 import org.junit.Test;
 import org.junit.experimental.categories.Category;
@@ -19,7 +20,8 @@ public class TronRuntimeExceptionDiffblueTest {
    * <p>Method under test: {@link TronRuntimeException#TronRuntimeException(String, Throwable)}
    */
   @Test
-  @Category(MaintainedByDiffblue.class)
+  @Category(ContributionFromDiffblue.class)
+  @ManagedByDiffblue
   @MethodsUnderTest({
     "void TronRuntimeException.<init>()",
     "void TronRuntimeException.<init>(String)",
@@ -51,7 +53,8 @@ public class TronRuntimeExceptionDiffblueTest {
    * <p>Method under test: {@link TronRuntimeException#TronRuntimeException()}
    */
   @Test
-  @Category(MaintainedByDiffblue.class)
+  @Category(ContributionFromDiffblue.class)
+  @ManagedByDiffblue
   @MethodsUnderTest({
     "void TronRuntimeException.<init>()",
     "void TronRuntimeException.<init>(String)",
@@ -80,7 +83,8 @@ public class TronRuntimeExceptionDiffblueTest {
    * <p>Method under test: {@link TronRuntimeException#TronRuntimeException(String)}
    */
   @Test
-  @Category(MaintainedByDiffblue.class)
+  @Category(ContributionFromDiffblue.class)
+  @ManagedByDiffblue
   @MethodsUnderTest({
     "void TronRuntimeException.<init>()",
     "void TronRuntimeException.<init>(String)",
@@ -109,7 +113,8 @@ public class TronRuntimeExceptionDiffblueTest {
    * <p>Method under test: {@link TronRuntimeException#TronRuntimeException(Throwable)}
    */
   @Test
-  @Category(MaintainedByDiffblue.class)
+  @Category(ContributionFromDiffblue.class)
+  @ManagedByDiffblue
   @MethodsUnderTest({
     "void TronRuntimeException.<init>()",
     "void TronRuntimeException.<init>(String)",
@@ -142,7 +147,8 @@ public class TronRuntimeExceptionDiffblueTest {
    * boolean, boolean)}
    */
   @Test
-  @Category(MaintainedByDiffblue.class)
+  @Category(ContributionFromDiffblue.class)
+  @ManagedByDiffblue
   @MethodsUnderTest({
     "void TronRuntimeException.<init>()",
     "void TronRuntimeException.<init>(String)",

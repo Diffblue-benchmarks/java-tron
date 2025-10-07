@@ -5,7 +5,8 @@ import static org.junit.Assert.assertTrue;
 import static org.mockito.Mockito.mock;
 import static org.mockito.Mockito.verify;
 import static org.mockito.Mockito.when;
-import com.diffblue.cover.annotations.MaintainedByDiffblue;
+import com.diffblue.cover.annotations.ContributionFromDiffblue;
+import com.diffblue.cover.annotations.ManagedByDiffblue;
 import com.diffblue.cover.annotations.MethodsUnderTest;
 import java.util.HashMap;
 import java.util.Map;
@@ -38,7 +39,8 @@ public class NodeInfoServiceDiffblueTest {
    * <p>Method under test: {@link NodeInfoService#setBlockInfo(NodeInfo)}
    */
   @Test
-  @Category(MaintainedByDiffblue.class)
+  @Category(ContributionFromDiffblue.class)
+  @ManagedByDiffblue
   @MethodsUnderTest({"void NodeInfoService.setBlockInfo(NodeInfo)"})
   public void testSetBlockInfo() {
     // Arrange
@@ -69,7 +71,8 @@ public class NodeInfoServiceDiffblueTest {
    * <p>Method under test: {@link NodeInfoService#setBlockInfo(NodeInfo)}
    */
   @Test
-  @Category(MaintainedByDiffblue.class)
+  @Category(ContributionFromDiffblue.class)
+  @ManagedByDiffblue
   @MethodsUnderTest({"void NodeInfoService.setBlockInfo(NodeInfo)"})
   public void testSetBlockInfo2() {
     // Arrange
@@ -105,7 +108,8 @@ public class NodeInfoServiceDiffblueTest {
    * <p>Method under test: {@link NodeInfoService#setBlockInfo(NodeInfo)}
    */
   @Test
-  @Category(MaintainedByDiffblue.class)
+  @Category(ContributionFromDiffblue.class)
+  @ManagedByDiffblue
   @MethodsUnderTest({"void NodeInfoService.setBlockInfo(NodeInfo)"})
   public void testSetBlockInfo_thenNodeInfoBlockIsString() {
     // Arrange
@@ -139,7 +143,8 @@ public class NodeInfoServiceDiffblueTest {
    * <p>Method under test: {@link NodeInfoService#setCheatWitnessInfo(NodeInfo)}
    */
   @Test
-  @Category(MaintainedByDiffblue.class)
+  @Category(ContributionFromDiffblue.class)
+  @ManagedByDiffblue
   @MethodsUnderTest({"void NodeInfoService.setCheatWitnessInfo(NodeInfo)"})
   public void testSetCheatWitnessInfo() {
     // Arrange
@@ -169,7 +174,8 @@ public class NodeInfoServiceDiffblueTest {
    * <p>Method under test: {@link NodeInfoService#setCheatWitnessInfo(NodeInfo)}
    */
   @Test
-  @Category(MaintainedByDiffblue.class)
+  @Category(ContributionFromDiffblue.class)
+  @ManagedByDiffblue
   @MethodsUnderTest({"void NodeInfoService.setCheatWitnessInfo(NodeInfo)"})
   public void testSetCheatWitnessInfo_thenNodeInfoCheatWitnessInfoMapContainsKeyFoo() {
     // Arrange
@@ -199,7 +205,8 @@ public class NodeInfoServiceDiffblueTest {
    * <p>Method under test: {@link NodeInfoService#setCheatWitnessInfo(NodeInfo)}
    */
   @Test
-  @Category(MaintainedByDiffblue.class)
+  @Category(ContributionFromDiffblue.class)
+  @ManagedByDiffblue
   @MethodsUnderTest({"void NodeInfoService.setCheatWitnessInfo(NodeInfo)"})
   public void testSetCheatWitnessInfo_whenNodeInfo_thenNodeInfoCheatWitnessInfoMapEmpty() {
     // Arrange

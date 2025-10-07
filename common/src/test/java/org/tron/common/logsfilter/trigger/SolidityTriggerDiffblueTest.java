@@ -1,7 +1,8 @@
 package org.tron.common.logsfilter.trigger;
 
 import static org.junit.Assert.assertEquals;
-import com.diffblue.cover.annotations.MaintainedByDiffblue;
+import com.diffblue.cover.annotations.ContributionFromDiffblue;
+import com.diffblue.cover.annotations.ManagedByDiffblue;
 import com.diffblue.cover.annotations.MethodsUnderTest;
 import org.junit.Test;
 import org.junit.experimental.categories.Category;
@@ -13,7 +14,8 @@ public class SolidityTriggerDiffblueTest {
    * <p>Method under test: default or parameterless constructor of {@link SolidityTrigger}
    */
   @Test
-  @Category(MaintainedByDiffblue.class)
+  @Category(ContributionFromDiffblue.class)
+  @ManagedByDiffblue
   @MethodsUnderTest({"void SolidityTrigger.<init>()"})
   public void testNewSolidityTrigger() {
     // Arrange and Act
@@ -37,7 +39,8 @@ public class SolidityTriggerDiffblueTest {
    * </ul>
    */
   @Test
-  @Category(MaintainedByDiffblue.class)
+  @Category(ContributionFromDiffblue.class)
+  @ManagedByDiffblue
   @MethodsUnderTest({
     "long SolidityTrigger.getLatestSolidifiedBlockNumber()",
     "void SolidityTrigger.setLatestSolidifiedBlockNumber(long)",

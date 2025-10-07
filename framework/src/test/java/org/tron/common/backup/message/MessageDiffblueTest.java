@@ -7,7 +7,8 @@ import static org.junit.Assert.assertNotEquals;
 import static org.junit.Assert.assertNull;
 import static org.junit.Assert.assertThrows;
 import static org.junit.Assert.assertTrue;
-import com.diffblue.cover.annotations.MaintainedByDiffblue;
+import com.diffblue.cover.annotations.ContributionFromDiffblue;
+import com.diffblue.cover.annotations.ManagedByDiffblue;
 import com.diffblue.cover.annotations.MethodsUnderTest;
 import com.google.protobuf.ByteString;
 import com.google.protobuf.ByteString.ByteIterator;
@@ -32,7 +33,8 @@ public class MessageDiffblueTest {
    * <p>Method under test: {@link Message#getNode(Discover.Endpoint)}
    */
   @Test
-  @Category(MaintainedByDiffblue.class)
+  @Category(ContributionFromDiffblue.class)
+  @ManagedByDiffblue
   @MethodsUnderTest({"Node Message.getNode(Discover.Endpoint)"})
   public void testGetNode_whenDefaultInstance_thenReturnHexIdIsEmptyString() {
     // Arrange and Act
@@ -62,7 +64,8 @@ public class MessageDiffblueTest {
    * <p>Method under test: {@link Message#parse(byte[])}
    */
   @Test
-  @Category(MaintainedByDiffblue.class)
+  @Category(ContributionFromDiffblue.class)
+  @ManagedByDiffblue
   @MethodsUnderTest({"Message Message.parse(byte[])"})
   public void testParse_whenArrayOfByteWithAAndOne_thenThrowP2pException() throws Exception {
     // Arrange, Act and Assert
@@ -84,7 +87,8 @@ public class MessageDiffblueTest {
    * <p>Method under test: {@link Message#parse(byte[])}
    */
   @Test
-  @Category(MaintainedByDiffblue.class)
+  @Category(ContributionFromDiffblue.class)
+  @ManagedByDiffblue
   @MethodsUnderTest({"Message Message.parse(byte[])"})
   public void testParse_whenAxaxaxaxBytesIsUtf8_thenThrowP2pException() throws Exception {
     // Arrange, Act and Assert
@@ -102,7 +106,8 @@ public class MessageDiffblueTest {
    * <p>Method under test: {@link Message#parse(byte[])}
    */
   @Test
-  @Category(MaintainedByDiffblue.class)
+  @Category(ContributionFromDiffblue.class)
+  @ManagedByDiffblue
   @MethodsUnderTest({"Message Message.parse(byte[])"})
   public void testParse_whenX_thenThrowP2pException() throws Exception {
     // Arrange, Act and Assert
@@ -117,7 +122,8 @@ public class MessageDiffblueTest {
    * <p>Method under test: {@link Message#getType()}
    */
   @Test
-  @Category(MaintainedByDiffblue.class)
+  @Category(ContributionFromDiffblue.class)
+  @ManagedByDiffblue
   @MethodsUnderTest({"UdpMessageTypeEnum Message.getType()"})
   public void testGetType() {
     // Arrange, Act and Assert
@@ -130,7 +136,8 @@ public class MessageDiffblueTest {
    * <p>Method under test: {@link Message#getData()}
    */
   @Test
-  @Category(MaintainedByDiffblue.class)
+  @Category(ContributionFromDiffblue.class)
+  @ManagedByDiffblue
   @MethodsUnderTest({"byte[] Message.getData()"})
   public void testGetData() {
     // Arrange, Act and Assert
@@ -147,7 +154,8 @@ public class MessageDiffblueTest {
    * <p>Method under test: {@link Message#getSendData()}
    */
   @Test
-  @Category(MaintainedByDiffblue.class)
+  @Category(ContributionFromDiffblue.class)
+  @ManagedByDiffblue
   @MethodsUnderTest({"byte[] Message.getSendData()"})
   public void testGetSendData_thenReturnArrayOfByteWithFive() {
     // Arrange, Act and Assert
@@ -164,7 +172,8 @@ public class MessageDiffblueTest {
    * <p>Method under test: {@link Message#getSendData()}
    */
   @Test
-  @Category(MaintainedByDiffblue.class)
+  @Category(ContributionFromDiffblue.class)
+  @ManagedByDiffblue
   @MethodsUnderTest({"byte[] Message.getSendData()"})
   public void testGetSendData_thenReturnArrayOfByteWithFiveAndBackspace() {
     // Arrange, Act and Assert
@@ -177,7 +186,8 @@ public class MessageDiffblueTest {
    * <p>Method under test: {@link Message#getMessageId()}
    */
   @Test
-  @Category(MaintainedByDiffblue.class)
+  @Category(ContributionFromDiffblue.class)
+  @ManagedByDiffblue
   @MethodsUnderTest({"Sha256Hash Message.getMessageId()"})
   public void testGetMessageId() {
     // Arrange and Act
@@ -219,7 +229,8 @@ public class MessageDiffblueTest {
    * <p>Method under test: {@link Message#toString()}
    */
   @Test
-  @Category(MaintainedByDiffblue.class)
+  @Category(ContributionFromDiffblue.class)
+  @ManagedByDiffblue
   @MethodsUnderTest({"java.lang.String Message.toString()"})
   public void testToString() {
     // Arrange, Act and Assert
@@ -243,7 +254,8 @@ public class MessageDiffblueTest {
    * </ul>
    */
   @Test
-  @Category(MaintainedByDiffblue.class)
+  @Category(ContributionFromDiffblue.class)
+  @ManagedByDiffblue
   @MethodsUnderTest({"boolean Message.equals(Object)", "int Message.hashCode()"})
   public void testEqualsAndHashCode_whenOtherIsSame_thenReturnEqual() {
     // Arrange
@@ -266,7 +278,8 @@ public class MessageDiffblueTest {
    * <p>Method under test: {@link Message#equals(Object)}
    */
   @Test
-  @Category(MaintainedByDiffblue.class)
+  @Category(ContributionFromDiffblue.class)
+  @ManagedByDiffblue
   @MethodsUnderTest({"boolean Message.equals(Object)", "int Message.hashCode()"})
   public void testEquals_whenOtherIsDifferent_thenReturnNotEqual() {
     // Arrange
@@ -287,7 +300,8 @@ public class MessageDiffblueTest {
    * <p>Method under test: {@link Message#equals(Object)}
    */
   @Test
-  @Category(MaintainedByDiffblue.class)
+  @Category(ContributionFromDiffblue.class)
+  @ManagedByDiffblue
   @MethodsUnderTest({"boolean Message.equals(Object)", "int Message.hashCode()"})
   public void testEquals_whenOtherIsNull_thenReturnNotEqual() {
     // Arrange, Act and Assert
@@ -305,7 +319,8 @@ public class MessageDiffblueTest {
    * <p>Method under test: {@link Message#equals(Object)}
    */
   @Test
-  @Category(MaintainedByDiffblue.class)
+  @Category(ContributionFromDiffblue.class)
+  @ManagedByDiffblue
   @MethodsUnderTest({"boolean Message.equals(Object)", "int Message.hashCode()"})
   public void testEquals_whenOtherIsWrongType_thenReturnNotEqual() {
     // Arrange, Act and Assert

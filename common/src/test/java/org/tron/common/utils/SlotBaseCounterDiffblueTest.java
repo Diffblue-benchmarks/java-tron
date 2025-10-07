@@ -1,7 +1,8 @@
 package org.tron.common.utils;
 
 import static org.junit.Assert.assertEquals;
-import com.diffblue.cover.annotations.MaintainedByDiffblue;
+import com.diffblue.cover.annotations.ContributionFromDiffblue;
+import com.diffblue.cover.annotations.ManagedByDiffblue;
 import com.diffblue.cover.annotations.MethodsUnderTest;
 import org.junit.Test;
 import org.junit.experimental.categories.Category;
@@ -17,7 +18,8 @@ public class SlotBaseCounterDiffblueTest {
    * <p>Method under test: {@link SlotBaseCounter#SlotBaseCounter(int)}
    */
   @Test
-  @Category(MaintainedByDiffblue.class)
+  @Category(ContributionFromDiffblue.class)
+  @ManagedByDiffblue
   @MethodsUnderTest({"void SlotBaseCounter.<init>(int)"})
   public void testNewSlotBaseCounter_whenThree() {
     // Arrange, Act and Assert
@@ -34,7 +36,8 @@ public class SlotBaseCounterDiffblueTest {
    * <p>Method under test: {@link SlotBaseCounter#SlotBaseCounter(int)}
    */
   @Test
-  @Category(MaintainedByDiffblue.class)
+  @Category(ContributionFromDiffblue.class)
+  @ManagedByDiffblue
   @MethodsUnderTest({"void SlotBaseCounter.<init>(int)"})
   public void testNewSlotBaseCounter_whenZero() {
     // Arrange, Act and Assert
@@ -53,7 +56,8 @@ public class SlotBaseCounterDiffblueTest {
    * <p>Method under test: {@link SlotBaseCounter#increaseSlot(int)}
    */
   @Test
-  @Category(MaintainedByDiffblue.class)
+  @Category(ContributionFromDiffblue.class)
+  @ManagedByDiffblue
   @MethodsUnderTest({"void SlotBaseCounter.increaseSlot(int)"})
   public void testIncreaseSlot_whenOne_thenSlotBaseCounterWithSlotSizeIsThreeTotalCountIsOne() {
     // Arrange
@@ -72,7 +76,8 @@ public class SlotBaseCounterDiffblueTest {
    * <p>Method under test: {@link SlotBaseCounter#totalCount()}
    */
   @Test
-  @Category(MaintainedByDiffblue.class)
+  @Category(ContributionFromDiffblue.class)
+  @ManagedByDiffblue
   @MethodsUnderTest({"int SlotBaseCounter.totalCount()"})
   public void testTotalCount() {
     // Arrange, Act and Assert
@@ -85,7 +90,8 @@ public class SlotBaseCounterDiffblueTest {
    * <p>Method under test: {@link SlotBaseCounter#toString()}
    */
   @Test
-  @Category(MaintainedByDiffblue.class)
+  @Category(ContributionFromDiffblue.class)
+  @ManagedByDiffblue
   @MethodsUnderTest({"java.lang.String SlotBaseCounter.toString()"})
   public void testToString() {
     // Arrange, Act and Assert

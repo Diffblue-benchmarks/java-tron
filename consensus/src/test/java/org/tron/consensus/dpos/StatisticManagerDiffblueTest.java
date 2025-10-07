@@ -7,7 +7,8 @@ import static org.mockito.Mockito.doNothing;
 import static org.mockito.Mockito.mock;
 import static org.mockito.Mockito.verify;
 import static org.mockito.Mockito.when;
-import com.diffblue.cover.annotations.MaintainedByDiffblue;
+import com.diffblue.cover.annotations.ContributionFromDiffblue;
+import com.diffblue.cover.annotations.ManagedByDiffblue;
 import com.diffblue.cover.annotations.MethodsUnderTest;
 import com.google.protobuf.ByteString;
 import java.io.UnsupportedEncodingException;
@@ -41,7 +42,8 @@ public class StatisticManagerDiffblueTest {
    * <p>Method under test: {@link StatisticManager#applyBlock(BlockCapsule)}
    */
   @Test
-  @Category(MaintainedByDiffblue.class)
+  @Category(ContributionFromDiffblue.class)
+  @ManagedByDiffblue
   @MethodsUnderTest({"void StatisticManager.applyBlock(BlockCapsule)"})
   public void testApplyBlock_givenDposSlotGetSlotReturnOne_thenCallsGetSlot()
       throws UnsupportedEncodingException {
@@ -95,7 +97,8 @@ public class StatisticManagerDiffblueTest {
    * <p>Method under test: {@link StatisticManager#applyBlock(BlockCapsule)}
    */
   @Test
-  @Category(MaintainedByDiffblue.class)
+  @Category(ContributionFromDiffblue.class)
+  @ManagedByDiffblue
   @MethodsUnderTest({"void StatisticManager.applyBlock(BlockCapsule)"})
   public void testApplyBlock_givenWitnessCapsuleGetTotalProducedReturnOne_thenCallsToByteArray()
       throws UnsupportedEncodingException {

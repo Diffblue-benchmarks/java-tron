@@ -4,7 +4,8 @@ import static org.junit.Assert.assertArrayEquals;
 import static org.junit.Assert.assertNull;
 import static org.junit.Assert.assertSame;
 import static org.mockito.Mockito.mock;
-import com.diffblue.cover.annotations.MaintainedByDiffblue;
+import com.diffblue.cover.annotations.ContributionFromDiffblue;
+import com.diffblue.cover.annotations.ManagedByDiffblue;
 import com.diffblue.cover.annotations.MethodsUnderTest;
 import com.google.protobuf.ByteString;
 import java.io.UnsupportedEncodingException;
@@ -20,7 +21,8 @@ public class ParamDiffblueTest {
    * <p>Method under test: {@link Param#getMiner()}
    */
   @Test
-  @Category(MaintainedByDiffblue.class)
+  @Category(ContributionFromDiffblue.class)
+  @ManagedByDiffblue
   @MethodsUnderTest({"Miner Param.getMiner()"})
   public void testGetMiner() throws UnsupportedEncodingException {
     // Arrange
@@ -57,7 +59,8 @@ public class ParamDiffblueTest {
    * </ul>
    */
   @Test
-  @Category(MaintainedByDiffblue.class)
+  @Category(ContributionFromDiffblue.class)
+  @ManagedByDiffblue
   @MethodsUnderTest({
     "void Miner.<init>(Param, byte[], ByteString, ByteString)",
     "byte[] Miner.getPrivateKey()",

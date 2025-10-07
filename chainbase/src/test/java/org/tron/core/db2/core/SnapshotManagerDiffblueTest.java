@@ -5,7 +5,8 @@ import static org.junit.Assert.assertFalse;
 import static org.junit.Assert.assertNull;
 import static org.junit.Assert.assertSame;
 import static org.junit.Assert.assertTrue;
-import com.diffblue.cover.annotations.MaintainedByDiffblue;
+import com.diffblue.cover.annotations.ContributionFromDiffblue;
+import com.diffblue.cover.annotations.ManagedByDiffblue;
 import com.diffblue.cover.annotations.MethodsUnderTest;
 import java.util.List;
 import org.junit.Test;
@@ -20,7 +21,8 @@ public class SnapshotManagerDiffblueTest {
    * <p>Method under test: {@link SnapshotManager#SnapshotManager(String)}
    */
   @Test
-  @Category(MaintainedByDiffblue.class)
+  @Category(ContributionFromDiffblue.class)
+  @ManagedByDiffblue
   @MethodsUnderTest({"void SnapshotManager.<init>(String)"})
   public void testNewSnapshotManager() {
     // Arrange and Act
@@ -53,7 +55,8 @@ public class SnapshotManagerDiffblueTest {
    * </ul>
    */
   @Test
-  @Category(MaintainedByDiffblue.class)
+  @Category(ContributionFromDiffblue.class)
+  @ManagedByDiffblue
   @MethodsUnderTest({
     "void SnapshotManager.disable()",
     "void SnapshotManager.enable()",
@@ -105,7 +108,8 @@ public class SnapshotManagerDiffblueTest {
    * </ul>
    */
   @Test
-  @Category(MaintainedByDiffblue.class)
+  @Category(ContributionFromDiffblue.class)
+  @ManagedByDiffblue
   @MethodsUnderTest({
     "void Session.<init>(SnapshotManager)",
     "void Session.<init>(SnapshotManager, boolean)",
@@ -146,7 +150,8 @@ public class SnapshotManagerDiffblueTest {
    * </ul>
    */
   @Test
-  @Category(MaintainedByDiffblue.class)
+  @Category(ContributionFromDiffblue.class)
+  @ManagedByDiffblue
   @MethodsUnderTest({
     "void Session.<init>(SnapshotManager)",
     "void Session.<init>(SnapshotManager, boolean)",

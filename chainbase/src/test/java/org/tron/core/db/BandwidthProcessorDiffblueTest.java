@@ -8,7 +8,8 @@ import static org.mockito.Mockito.doNothing;
 import static org.mockito.Mockito.mock;
 import static org.mockito.Mockito.verify;
 import static org.mockito.Mockito.when;
-import com.diffblue.cover.annotations.MaintainedByDiffblue;
+import com.diffblue.cover.annotations.ContributionFromDiffblue;
+import com.diffblue.cover.annotations.ManagedByDiffblue;
 import com.diffblue.cover.annotations.MethodsUnderTest;
 import java.io.UnsupportedEncodingException;
 import org.junit.Test;
@@ -32,7 +33,8 @@ public class BandwidthProcessorDiffblueTest {
    * <p>Method under test: {@link BandwidthProcessor#BandwidthProcessor(ChainBaseManager)}
    */
   @Test
-  @Category(MaintainedByDiffblue.class)
+  @Category(ContributionFromDiffblue.class)
+  @ManagedByDiffblue
   @MethodsUnderTest({"void BandwidthProcessor.<init>(ChainBaseManager)"})
   public void testNewBandwidthProcessor() {
     // Arrange
@@ -58,7 +60,8 @@ public class BandwidthProcessorDiffblueTest {
    * <p>Method under test: {@link BandwidthProcessor#updateUsage(AssetIssueCapsule)}
    */
   @Test
-  @Category(MaintainedByDiffblue.class)
+  @Category(ContributionFromDiffblue.class)
+  @ManagedByDiffblue
   @MethodsUnderTest({"void BandwidthProcessor.updateUsage(AssetIssueCapsule)"})
   public void testUpdateUsageWithAssetIssueCapsule() {
     // Arrange
@@ -84,7 +87,8 @@ public class BandwidthProcessorDiffblueTest {
    * <p>Method under test: {@link BandwidthProcessor#updateUsage(AssetIssueCapsule)}
    */
   @Test
-  @Category(MaintainedByDiffblue.class)
+  @Category(ContributionFromDiffblue.class)
+  @ManagedByDiffblue
   @MethodsUnderTest({"void BandwidthProcessor.updateUsage(AssetIssueCapsule)"})
   public void testUpdateUsageWithAssetIssueCapsule2() throws UnsupportedEncodingException {
     // Arrange
@@ -111,7 +115,8 @@ public class BandwidthProcessorDiffblueTest {
    * <p>Method under test: {@link BandwidthProcessor#updateUsage(AssetIssueCapsule)}
    */
   @Test
-  @Category(MaintainedByDiffblue.class)
+  @Category(ContributionFromDiffblue.class)
+  @ManagedByDiffblue
   @MethodsUnderTest({"void BandwidthProcessor.updateUsage(AssetIssueCapsule)"})
   public void testUpdateUsageWithAssetIssueCapsule3() {
     // Arrange
@@ -139,7 +144,8 @@ public class BandwidthProcessorDiffblueTest {
    * <p>Method under test: {@link BandwidthProcessor#updateUsage(AssetIssueCapsule)}
    */
   @Test
-  @Category(MaintainedByDiffblue.class)
+  @Category(ContributionFromDiffblue.class)
+  @ManagedByDiffblue
   @MethodsUnderTest({"void BandwidthProcessor.updateUsage(AssetIssueCapsule)"})
   public void testUpdateUsageWithAssetIssueCapsule4() {
     // Arrange
@@ -167,7 +173,8 @@ public class BandwidthProcessorDiffblueTest {
    * <p>Method under test: {@link BandwidthProcessor#updateUsage(AssetIssueCapsule)}
    */
   @Test
-  @Category(MaintainedByDiffblue.class)
+  @Category(ContributionFromDiffblue.class)
+  @ManagedByDiffblue
   @MethodsUnderTest({"void BandwidthProcessor.updateUsage(AssetIssueCapsule)"})
   public void testUpdateUsageWithAssetIssueCapsule5() {
     // Arrange
@@ -195,7 +202,8 @@ public class BandwidthProcessorDiffblueTest {
    * <p>Method under test: {@link BandwidthProcessor#updateUsage(AssetIssueCapsule)}
    */
   @Test
-  @Category(MaintainedByDiffblue.class)
+  @Category(ContributionFromDiffblue.class)
+  @ManagedByDiffblue
   @MethodsUnderTest({"void BandwidthProcessor.updateUsage(AssetIssueCapsule)"})
   public void testUpdateUsageWithAssetIssueCapsule6() {
     // Arrange
@@ -228,7 +236,8 @@ public class BandwidthProcessorDiffblueTest {
    * <p>Method under test: {@link BandwidthProcessor#updateUsage(AssetIssueCapsule, long)}
    */
   @Test
-  @Category(MaintainedByDiffblue.class)
+  @Category(ContributionFromDiffblue.class)
+  @ManagedByDiffblue
   @MethodsUnderTest({"void BandwidthProcessor.updateUsage(AssetIssueCapsule, long)"})
   public void testUpdateUsageWithAssetIssueCapsuleNow_thenCallsGetPublicFreeAssetNetUsage() {
     // Arrange
@@ -261,7 +270,8 @@ public class BandwidthProcessorDiffblueTest {
    * <p>Method under test: {@link BandwidthProcessor#updateUsage(AssetIssueCapsule)}
    */
   @Test
-  @Category(MaintainedByDiffblue.class)
+  @Category(ContributionFromDiffblue.class)
+  @ManagedByDiffblue
   @MethodsUnderTest({"void BandwidthProcessor.updateUsage(AssetIssueCapsule)"})
   public void testUpdateUsageWithAssetIssueCapsule_givenFortyTwo() {
     // Arrange
@@ -293,7 +303,8 @@ public class BandwidthProcessorDiffblueTest {
    * <p>Method under test: {@link BandwidthProcessor#updateUsage(AssetIssueCapsule)}
    */
   @Test
-  @Category(MaintainedByDiffblue.class)
+  @Category(ContributionFromDiffblue.class)
+  @ManagedByDiffblue
   @MethodsUnderTest({"void BandwidthProcessor.updateUsage(AssetIssueCapsule)"})
   public void testUpdateUsageWithAssetIssueCapsule_givenMin_value() {
     // Arrange
@@ -325,7 +336,8 @@ public class BandwidthProcessorDiffblueTest {
    * <p>Method under test: {@link BandwidthProcessor#updateUsage(AssetIssueCapsule)}
    */
   @Test
-  @Category(MaintainedByDiffblue.class)
+  @Category(ContributionFromDiffblue.class)
+  @ManagedByDiffblue
   @MethodsUnderTest({"void BandwidthProcessor.updateUsage(AssetIssueCapsule)"})
   public void testUpdateUsageWithAssetIssueCapsule_thenCallsGetPublicFreeAssetNetUsage() {
     // Arrange
@@ -365,7 +377,8 @@ public class BandwidthProcessorDiffblueTest {
    * <p>Method under test: {@link BandwidthProcessor#contractCreateNewAccount(Transaction.Contract)}
    */
   @Test
-  @Category(MaintainedByDiffblue.class)
+  @Category(ContributionFromDiffblue.class)
+  @ManagedByDiffblue
   @MethodsUnderTest({"boolean BandwidthProcessor.contractCreateNewAccount(Transaction.Contract)"})
   public void testContractCreateNewAccount_thenReturnTrue() {
     // Arrange, Act and Assert

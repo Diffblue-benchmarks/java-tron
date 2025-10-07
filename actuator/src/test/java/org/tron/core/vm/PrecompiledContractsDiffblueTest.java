@@ -6,7 +6,8 @@ import static org.junit.Assert.assertFalse;
 import static org.junit.Assert.assertNull;
 import static org.junit.Assert.assertSame;
 import static org.junit.Assert.assertTrue;
-import com.diffblue.cover.annotations.MaintainedByDiffblue;
+import com.diffblue.cover.annotations.ContributionFromDiffblue;
+import com.diffblue.cover.annotations.ManagedByDiffblue;
 import com.diffblue.cover.annotations.MethodsUnderTest;
 import java.io.UnsupportedEncodingException;
 import org.apache.commons.lang3.tuple.ImmutablePair;
@@ -64,7 +65,8 @@ public class PrecompiledContractsDiffblueTest {
    * <p>Method under test: {@link AvailableUnfreezeV2Size#execute(byte[])}
    */
   @Test
-  @Category(MaintainedByDiffblue.class)
+  @Category(ContributionFromDiffblue.class)
+  @ManagedByDiffblue
   @MethodsUnderTest({"Pair AvailableUnfreezeV2Size.execute(byte[])"})
   public void testAvailableUnfreezeV2SizeExecute_whenAxaxaxaxBytesIsUtf8()
       throws UnsupportedEncodingException {
@@ -96,7 +98,8 @@ public class PrecompiledContractsDiffblueTest {
    * <p>Method under test: {@link AvailableUnfreezeV2Size#execute(byte[])}
    */
   @Test
-  @Category(MaintainedByDiffblue.class)
+  @Category(ContributionFromDiffblue.class)
+  @ManagedByDiffblue
   @MethodsUnderTest({"Pair AvailableUnfreezeV2Size.execute(byte[])"})
   public void testAvailableUnfreezeV2SizeExecute_whenNull() {
     // Arrange and Act
@@ -122,7 +125,8 @@ public class PrecompiledContractsDiffblueTest {
    * <p>Method under test: {@link AvailableUnfreezeV2Size#getEnergyForData(byte[])}
    */
   @Test
-  @Category(MaintainedByDiffblue.class)
+  @Category(ContributionFromDiffblue.class)
+  @ManagedByDiffblue
   @MethodsUnderTest({"long AvailableUnfreezeV2Size.getEnergyForData(byte[])"})
   public void testAvailableUnfreezeV2SizeGetEnergyForData() throws UnsupportedEncodingException {
     // Arrange and Act
@@ -139,7 +143,8 @@ public class PrecompiledContractsDiffblueTest {
    * <p>Method under test: default or parameterless constructor of {@link AvailableUnfreezeV2Size}
    */
   @Test
-  @Category(MaintainedByDiffblue.class)
+  @Category(ContributionFromDiffblue.class)
+  @ManagedByDiffblue
   @MethodsUnderTest({"void AvailableUnfreezeV2Size.<init>()"})
   public void testAvailableUnfreezeV2SizeNewAvailableUnfreezeV2Size() {
     // Arrange and Act
@@ -163,7 +168,8 @@ public class PrecompiledContractsDiffblueTest {
    * <p>Method under test: {@link BN128Addition#execute(byte[])}
    */
   @Test
-  @Category(MaintainedByDiffblue.class)
+  @Category(ContributionFromDiffblue.class)
+  @ManagedByDiffblue
   @MethodsUnderTest({"Pair BN128Addition.execute(byte[])"})
   public void testBN128AdditionExecute_whenAxaxaxaxBytesIsUtf8_thenReturnNotKey()
       throws UnsupportedEncodingException {
@@ -191,7 +197,8 @@ public class PrecompiledContractsDiffblueTest {
    * <p>Method under test: {@link BN128Addition#execute(byte[])}
    */
   @Test
-  @Category(MaintainedByDiffblue.class)
+  @Category(ContributionFromDiffblue.class)
+  @ManagedByDiffblue
   @MethodsUnderTest({"Pair BN128Addition.execute(byte[])"})
   public void testBN128AdditionExecute_whenNull_thenReturnKey() {
     // Arrange and Act
@@ -223,7 +230,8 @@ public class PrecompiledContractsDiffblueTest {
    * <p>Method under test: {@link BN128Addition#execute(byte[])}
    */
   @Test
-  @Category(MaintainedByDiffblue.class)
+  @Category(ContributionFromDiffblue.class)
+  @ManagedByDiffblue
   @MethodsUnderTest({"Pair BN128Addition.execute(byte[])"})
   public void testBN128AdditionExecute_whenXaxaxaxBytesIsUtf8_thenReturnNotKey()
       throws UnsupportedEncodingException {
@@ -246,7 +254,8 @@ public class PrecompiledContractsDiffblueTest {
    * <p>Method under test: default or parameterless constructor of {@link BN128Addition}
    */
   @Test
-  @Category(MaintainedByDiffblue.class)
+  @Category(ContributionFromDiffblue.class)
+  @ManagedByDiffblue
   @MethodsUnderTest({"void BN128Addition.<init>()"})
   public void testBN128AdditionNewBN128Addition() {
     // Arrange and Act
@@ -270,7 +279,8 @@ public class PrecompiledContractsDiffblueTest {
    * <p>Method under test: {@link BN128Multiplication#execute(byte[])}
    */
   @Test
-  @Category(MaintainedByDiffblue.class)
+  @Category(ContributionFromDiffblue.class)
+  @ManagedByDiffblue
   @MethodsUnderTest({"Pair BN128Multiplication.execute(byte[])"})
   public void testBN128MultiplicationExecute_whenAxaxaxaxBytesIsUtf8_thenReturnNotKey()
       throws UnsupportedEncodingException {
@@ -298,7 +308,8 @@ public class PrecompiledContractsDiffblueTest {
    * <p>Method under test: {@link BN128Multiplication#execute(byte[])}
    */
   @Test
-  @Category(MaintainedByDiffblue.class)
+  @Category(ContributionFromDiffblue.class)
+  @ManagedByDiffblue
   @MethodsUnderTest({"Pair BN128Multiplication.execute(byte[])"})
   public void testBN128MultiplicationExecute_whenNull_thenReturnKey() {
     // Arrange and Act
@@ -330,7 +341,8 @@ public class PrecompiledContractsDiffblueTest {
    * <p>Method under test: {@link BN128Multiplication#execute(byte[])}
    */
   @Test
-  @Category(MaintainedByDiffblue.class)
+  @Category(ContributionFromDiffblue.class)
+  @ManagedByDiffblue
   @MethodsUnderTest({"Pair BN128Multiplication.execute(byte[])"})
   public void testBN128MultiplicationExecute_whenXaxaxaxBytesIsUtf8_thenReturnNotKey()
       throws UnsupportedEncodingException {
@@ -353,7 +365,8 @@ public class PrecompiledContractsDiffblueTest {
    * <p>Method under test: default or parameterless constructor of {@link BN128Multiplication}
    */
   @Test
-  @Category(MaintainedByDiffblue.class)
+  @Category(ContributionFromDiffblue.class)
+  @ManagedByDiffblue
   @MethodsUnderTest({"void BN128Multiplication.<init>()"})
   public void testBN128MultiplicationNewBN128Multiplication() {
     // Arrange and Act
@@ -377,7 +390,8 @@ public class PrecompiledContractsDiffblueTest {
    * <p>Method under test: {@link BN128Pairing#execute(byte[])}
    */
   @Test
-  @Category(MaintainedByDiffblue.class)
+  @Category(ContributionFromDiffblue.class)
+  @ManagedByDiffblue
   @MethodsUnderTest({"Pair BN128Pairing.execute(byte[])"})
   public void testBN128PairingExecute_whenAxaxaxaxBytesIsUtf8_thenReturnNotKey()
       throws UnsupportedEncodingException {
@@ -405,7 +419,8 @@ public class PrecompiledContractsDiffblueTest {
    * <p>Method under test: {@link BN128Pairing#execute(byte[])}
    */
   @Test
-  @Category(MaintainedByDiffblue.class)
+  @Category(ContributionFromDiffblue.class)
+  @ManagedByDiffblue
   @MethodsUnderTest({"Pair BN128Pairing.execute(byte[])"})
   public void testBN128PairingExecute_whenEmptyArrayOfByte_thenReturnKey() {
     // Arrange and Act
@@ -436,7 +451,8 @@ public class PrecompiledContractsDiffblueTest {
    * <p>Method under test: {@link BN128Pairing#execute(byte[])}
    */
   @Test
-  @Category(MaintainedByDiffblue.class)
+  @Category(ContributionFromDiffblue.class)
+  @ManagedByDiffblue
   @MethodsUnderTest({"Pair BN128Pairing.execute(byte[])"})
   public void testBN128PairingExecute_whenNull_thenReturnKey() {
     // Arrange and Act
@@ -462,7 +478,8 @@ public class PrecompiledContractsDiffblueTest {
    * <p>Method under test: default or parameterless constructor of {@link BN128Pairing}
    */
   @Test
-  @Category(MaintainedByDiffblue.class)
+  @Category(ContributionFromDiffblue.class)
+  @ManagedByDiffblue
   @MethodsUnderTest({"void BN128Pairing.<init>()"})
   public void testBN128PairingNewBN128Pairing() {
     // Arrange and Act
@@ -481,7 +498,8 @@ public class PrecompiledContractsDiffblueTest {
    * <p>Method under test: {@link BatchValidateSign#execute(byte[])}
    */
   @Test
-  @Category(MaintainedByDiffblue.class)
+  @Category(ContributionFromDiffblue.class)
+  @ManagedByDiffblue
   @MethodsUnderTest({"Pair BatchValidateSign.execute(byte[])"})
   public void testBatchValidateSignExecute() throws UnsupportedEncodingException {
     // Arrange and Act
@@ -508,7 +526,8 @@ public class PrecompiledContractsDiffblueTest {
    * <p>Method under test: {@link BatchValidateSign#getEnergyForData(byte[])}
    */
   @Test
-  @Category(MaintainedByDiffblue.class)
+  @Category(ContributionFromDiffblue.class)
+  @ManagedByDiffblue
   @MethodsUnderTest({"long BatchValidateSign.getEnergyForData(byte[])"})
   public void testBatchValidateSignGetEnergyForData() throws UnsupportedEncodingException {
     // Arrange and Act
@@ -525,7 +544,8 @@ public class PrecompiledContractsDiffblueTest {
    * <p>Method under test: default or parameterless constructor of {@link BatchValidateSign}
    */
   @Test
-  @Category(MaintainedByDiffblue.class)
+  @Category(ContributionFromDiffblue.class)
+  @ManagedByDiffblue
   @MethodsUnderTest({"void BatchValidateSign.<init>()"})
   public void testBatchValidateSignNewBatchValidateSign() {
     // Arrange and Act
@@ -544,7 +564,8 @@ public class PrecompiledContractsDiffblueTest {
    * <p>Method under test: {@link Blake2F#execute(byte[])}
    */
   @Test
-  @Category(MaintainedByDiffblue.class)
+  @Category(ContributionFromDiffblue.class)
+  @ManagedByDiffblue
   @MethodsUnderTest({"Pair Blake2F.execute(byte[])"})
   public void testBlake2FExecute() throws UnsupportedEncodingException {
     // Arrange and Act
@@ -570,7 +591,8 @@ public class PrecompiledContractsDiffblueTest {
    * <p>Method under test: {@link Blake2F#getEnergyForData(byte[])}
    */
   @Test
-  @Category(MaintainedByDiffblue.class)
+  @Category(ContributionFromDiffblue.class)
+  @ManagedByDiffblue
   @MethodsUnderTest({"long Blake2F.getEnergyForData(byte[])"})
   public void testBlake2FGetEnergyForData() throws UnsupportedEncodingException {
     // Arrange and Act
@@ -586,7 +608,8 @@ public class PrecompiledContractsDiffblueTest {
    * <p>Method under test: default or parameterless constructor of {@link Blake2F}
    */
   @Test
-  @Category(MaintainedByDiffblue.class)
+  @Category(ContributionFromDiffblue.class)
+  @ManagedByDiffblue
   @MethodsUnderTest({"void Blake2F.<init>()"})
   public void testBlake2FNewBlake2F() {
     // Arrange and Act
@@ -609,7 +632,8 @@ public class PrecompiledContractsDiffblueTest {
    * <p>Method under test: {@link CheckUnDelegateResource#execute(byte[])}
    */
   @Test
-  @Category(MaintainedByDiffblue.class)
+  @Category(ContributionFromDiffblue.class)
+  @ManagedByDiffblue
   @MethodsUnderTest({"Pair CheckUnDelegateResource.execute(byte[])"})
   public void testCheckUnDelegateResourceExecute_whenAxaxaxaxBytesIsUtf8()
       throws UnsupportedEncodingException {
@@ -636,7 +660,8 @@ public class PrecompiledContractsDiffblueTest {
    * <p>Method under test: {@link CheckUnDelegateResource#execute(byte[])}
    */
   @Test
-  @Category(MaintainedByDiffblue.class)
+  @Category(ContributionFromDiffblue.class)
+  @ManagedByDiffblue
   @MethodsUnderTest({"Pair CheckUnDelegateResource.execute(byte[])"})
   public void testCheckUnDelegateResourceExecute_whenNull() {
     // Arrange and Act
@@ -657,7 +682,8 @@ public class PrecompiledContractsDiffblueTest {
    * <p>Method under test: {@link CheckUnDelegateResource#getEnergyForData(byte[])}
    */
   @Test
-  @Category(MaintainedByDiffblue.class)
+  @Category(ContributionFromDiffblue.class)
+  @ManagedByDiffblue
   @MethodsUnderTest({"long CheckUnDelegateResource.getEnergyForData(byte[])"})
   public void testCheckUnDelegateResourceGetEnergyForData() throws UnsupportedEncodingException {
     // Arrange and Act
@@ -674,7 +700,8 @@ public class PrecompiledContractsDiffblueTest {
    * <p>Method under test: default or parameterless constructor of {@link CheckUnDelegateResource}
    */
   @Test
-  @Category(MaintainedByDiffblue.class)
+  @Category(ContributionFromDiffblue.class)
+  @ManagedByDiffblue
   @MethodsUnderTest({"void CheckUnDelegateResource.<init>()"})
   public void testCheckUnDelegateResourceNewCheckUnDelegateResource() {
     // Arrange and Act
@@ -697,7 +724,8 @@ public class PrecompiledContractsDiffblueTest {
    * <p>Method under test: {@link DelegatableResource#execute(byte[])}
    */
   @Test
-  @Category(MaintainedByDiffblue.class)
+  @Category(ContributionFromDiffblue.class)
+  @ManagedByDiffblue
   @MethodsUnderTest({"Pair DelegatableResource.execute(byte[])"})
   public void testDelegatableResourceExecute_whenAxaxaxaxBytesIsUtf8()
       throws UnsupportedEncodingException {
@@ -729,7 +757,8 @@ public class PrecompiledContractsDiffblueTest {
    * <p>Method under test: {@link DelegatableResource#execute(byte[])}
    */
   @Test
-  @Category(MaintainedByDiffblue.class)
+  @Category(ContributionFromDiffblue.class)
+  @ManagedByDiffblue
   @MethodsUnderTest({"Pair DelegatableResource.execute(byte[])"})
   public void testDelegatableResourceExecute_whenNull() {
     // Arrange and Act
@@ -755,7 +784,8 @@ public class PrecompiledContractsDiffblueTest {
    * <p>Method under test: {@link DelegatableResource#getEnergyForData(byte[])}
    */
   @Test
-  @Category(MaintainedByDiffblue.class)
+  @Category(ContributionFromDiffblue.class)
+  @ManagedByDiffblue
   @MethodsUnderTest({"long DelegatableResource.getEnergyForData(byte[])"})
   public void testDelegatableResourceGetEnergyForData() throws UnsupportedEncodingException {
     // Arrange and Act
@@ -772,7 +802,8 @@ public class PrecompiledContractsDiffblueTest {
    * <p>Method under test: default or parameterless constructor of {@link DelegatableResource}
    */
   @Test
-  @Category(MaintainedByDiffblue.class)
+  @Category(ContributionFromDiffblue.class)
+  @ManagedByDiffblue
   @MethodsUnderTest({"void DelegatableResource.<init>()"})
   public void testDelegatableResourceNewDelegatableResource() {
     // Arrange and Act
@@ -791,7 +822,8 @@ public class PrecompiledContractsDiffblueTest {
    * <p>Method under test: {@link ECRecover#execute(byte[])}
    */
   @Test
-  @Category(MaintainedByDiffblue.class)
+  @Category(ContributionFromDiffblue.class)
+  @ManagedByDiffblue
   @MethodsUnderTest({"Pair ECRecover.execute(byte[])"})
   public void testECRecoverExecute() throws UnsupportedEncodingException {
     // Arrange and Act
@@ -813,7 +845,8 @@ public class PrecompiledContractsDiffblueTest {
    * <p>Method under test: {@link ECRecover#getEnergyForData(byte[])}
    */
   @Test
-  @Category(MaintainedByDiffblue.class)
+  @Category(ContributionFromDiffblue.class)
+  @ManagedByDiffblue
   @MethodsUnderTest({"long ECRecover.getEnergyForData(byte[])"})
   public void testECRecoverGetEnergyForData() throws UnsupportedEncodingException {
     // Arrange and Act
@@ -829,7 +862,8 @@ public class PrecompiledContractsDiffblueTest {
    * <p>Method under test: default or parameterless constructor of {@link ECRecover}
    */
   @Test
-  @Category(MaintainedByDiffblue.class)
+  @Category(ContributionFromDiffblue.class)
+  @ManagedByDiffblue
   @MethodsUnderTest({"void ECRecover.<init>()"})
   public void testECRecoverNewECRecover() {
     // Arrange and Act
@@ -852,7 +886,8 @@ public class PrecompiledContractsDiffblueTest {
    * <p>Method under test: {@link EthRipemd160#execute(byte[])}
    */
   @Test
-  @Category(MaintainedByDiffblue.class)
+  @Category(ContributionFromDiffblue.class)
+  @ManagedByDiffblue
   @MethodsUnderTest({"Pair EthRipemd160.execute(byte[])"})
   public void testEthRipemd160Execute_whenAxaxaxaxBytesIsUtf8()
       throws UnsupportedEncodingException {
@@ -884,7 +919,8 @@ public class PrecompiledContractsDiffblueTest {
    * <p>Method under test: {@link EthRipemd160#execute(byte[])}
    */
   @Test
-  @Category(MaintainedByDiffblue.class)
+  @Category(ContributionFromDiffblue.class)
+  @ManagedByDiffblue
   @MethodsUnderTest({"Pair EthRipemd160.execute(byte[])"})
   public void testEthRipemd160Execute_whenNull() {
     // Arrange and Act
@@ -914,7 +950,8 @@ public class PrecompiledContractsDiffblueTest {
    * <p>Method under test: {@link EthRipemd160#getEnergyForData(byte[])}
    */
   @Test
-  @Category(MaintainedByDiffblue.class)
+  @Category(ContributionFromDiffblue.class)
+  @ManagedByDiffblue
   @MethodsUnderTest({"long EthRipemd160.getEnergyForData(byte[])"})
   public void testEthRipemd160GetEnergyForData_thenReturnSevenHundredTwenty()
       throws UnsupportedEncodingException {
@@ -936,7 +973,8 @@ public class PrecompiledContractsDiffblueTest {
    * <p>Method under test: {@link EthRipemd160#getEnergyForData(byte[])}
    */
   @Test
-  @Category(MaintainedByDiffblue.class)
+  @Category(ContributionFromDiffblue.class)
+  @ManagedByDiffblue
   @MethodsUnderTest({"long EthRipemd160.getEnergyForData(byte[])"})
   public void testEthRipemd160GetEnergyForData_whenNull_thenReturnSixHundred() {
     // Arrange, Act and Assert
@@ -949,7 +987,8 @@ public class PrecompiledContractsDiffblueTest {
    * <p>Method under test: default or parameterless constructor of {@link EthRipemd160}
    */
   @Test
-  @Category(MaintainedByDiffblue.class)
+  @Category(ContributionFromDiffblue.class)
+  @ManagedByDiffblue
   @MethodsUnderTest({"void EthRipemd160.<init>()"})
   public void testEthRipemd160NewEthRipemd160() {
     // Arrange and Act
@@ -972,7 +1011,8 @@ public class PrecompiledContractsDiffblueTest {
    * <p>Method under test: {@link ExpireUnfreezeBalanceV2#execute(byte[])}
    */
   @Test
-  @Category(MaintainedByDiffblue.class)
+  @Category(ContributionFromDiffblue.class)
+  @ManagedByDiffblue
   @MethodsUnderTest({"Pair ExpireUnfreezeBalanceV2.execute(byte[])"})
   public void testExpireUnfreezeBalanceV2Execute_whenAxaxaxaxBytesIsUtf8()
       throws UnsupportedEncodingException {
@@ -1004,7 +1044,8 @@ public class PrecompiledContractsDiffblueTest {
    * <p>Method under test: {@link ExpireUnfreezeBalanceV2#execute(byte[])}
    */
   @Test
-  @Category(MaintainedByDiffblue.class)
+  @Category(ContributionFromDiffblue.class)
+  @ManagedByDiffblue
   @MethodsUnderTest({"Pair ExpireUnfreezeBalanceV2.execute(byte[])"})
   public void testExpireUnfreezeBalanceV2Execute_whenNull() {
     // Arrange and Act
@@ -1030,7 +1071,8 @@ public class PrecompiledContractsDiffblueTest {
    * <p>Method under test: {@link ExpireUnfreezeBalanceV2#getEnergyForData(byte[])}
    */
   @Test
-  @Category(MaintainedByDiffblue.class)
+  @Category(ContributionFromDiffblue.class)
+  @ManagedByDiffblue
   @MethodsUnderTest({"long ExpireUnfreezeBalanceV2.getEnergyForData(byte[])"})
   public void testExpireUnfreezeBalanceV2GetEnergyForData() throws UnsupportedEncodingException {
     // Arrange and Act
@@ -1047,7 +1089,8 @@ public class PrecompiledContractsDiffblueTest {
    * <p>Method under test: default or parameterless constructor of {@link ExpireUnfreezeBalanceV2}
    */
   @Test
-  @Category(MaintainedByDiffblue.class)
+  @Category(ContributionFromDiffblue.class)
+  @ManagedByDiffblue
   @MethodsUnderTest({"void ExpireUnfreezeBalanceV2.<init>()"})
   public void testExpireUnfreezeBalanceV2NewExpireUnfreezeBalanceV2() {
     // Arrange and Act
@@ -1070,7 +1113,8 @@ public class PrecompiledContractsDiffblueTest {
    * <p>Method under test: {@link GetChainParameter#execute(byte[])}
    */
   @Test
-  @Category(MaintainedByDiffblue.class)
+  @Category(ContributionFromDiffblue.class)
+  @ManagedByDiffblue
   @MethodsUnderTest({"Pair GetChainParameter.execute(byte[])"})
   public void testGetChainParameterExecute_whenAxaxaxaxBytesIsUtf8()
       throws UnsupportedEncodingException {
@@ -1102,7 +1146,8 @@ public class PrecompiledContractsDiffblueTest {
    * <p>Method under test: {@link GetChainParameter#execute(byte[])}
    */
   @Test
-  @Category(MaintainedByDiffblue.class)
+  @Category(ContributionFromDiffblue.class)
+  @ManagedByDiffblue
   @MethodsUnderTest({"Pair GetChainParameter.execute(byte[])"})
   public void testGetChainParameterExecute_whenNull() {
     // Arrange and Act
@@ -1128,7 +1173,8 @@ public class PrecompiledContractsDiffblueTest {
    * <p>Method under test: {@link GetChainParameter#getEnergyForData(byte[])}
    */
   @Test
-  @Category(MaintainedByDiffblue.class)
+  @Category(ContributionFromDiffblue.class)
+  @ManagedByDiffblue
   @MethodsUnderTest({"long GetChainParameter.getEnergyForData(byte[])"})
   public void testGetChainParameterGetEnergyForData() throws UnsupportedEncodingException {
     // Arrange and Act
@@ -1145,7 +1191,8 @@ public class PrecompiledContractsDiffblueTest {
    * <p>Method under test: default or parameterless constructor of {@link GetChainParameter}
    */
   @Test
-  @Category(MaintainedByDiffblue.class)
+  @Category(ContributionFromDiffblue.class)
+  @ManagedByDiffblue
   @MethodsUnderTest({"void GetChainParameter.<init>()"})
   public void testGetChainParameterNewGetChainParameter() {
     // Arrange and Act
@@ -1169,7 +1216,8 @@ public class PrecompiledContractsDiffblueTest {
    * PrecompiledContracts#getOptimizedContractForConstant(PrecompiledContract)}
    */
   @Test
-  @Category(MaintainedByDiffblue.class)
+  @Category(ContributionFromDiffblue.class)
+  @ManagedByDiffblue
   @MethodsUnderTest({
     "PrecompiledContract PrecompiledContracts.getOptimizedContractForConstant(PrecompiledContract)"
   })
@@ -1198,7 +1246,8 @@ public class PrecompiledContractsDiffblueTest {
    * <p>Method under test: {@link PrecompiledContracts#getContractForAddress(DataWord)}
    */
   @Test
-  @Category(MaintainedByDiffblue.class)
+  @Category(ContributionFromDiffblue.class)
+  @ManagedByDiffblue
   @MethodsUnderTest({"PrecompiledContract PrecompiledContracts.getContractForAddress(DataWord)"})
   public void testGetContractForAddress_givenZero_whenZeroExpZero_thenReturnECRecover() {
     // Arrange
@@ -1228,7 +1277,8 @@ public class PrecompiledContractsDiffblueTest {
    * <p>Method under test: {@link PrecompiledContracts#getContractForAddress(DataWord)}
    */
   @Test
-  @Category(MaintainedByDiffblue.class)
+  @Category(ContributionFromDiffblue.class)
+  @ManagedByDiffblue
   @MethodsUnderTest({"PrecompiledContract PrecompiledContracts.getContractForAddress(DataWord)"})
   public void testGetContractForAddress_whenNull_thenReturnIdentity() {
     // Arrange and Act
@@ -1253,7 +1303,8 @@ public class PrecompiledContractsDiffblueTest {
    * <p>Method under test: {@link PrecompiledContracts#getContractForAddress(DataWord)}
    */
   @Test
-  @Category(MaintainedByDiffblue.class)
+  @Category(ContributionFromDiffblue.class)
+  @ManagedByDiffblue
   @MethodsUnderTest({"PrecompiledContract PrecompiledContracts.getContractForAddress(DataWord)"})
   public void testGetContractForAddress_whenZero_thenReturnNull() {
     // Arrange, Act and Assert
@@ -1266,7 +1317,8 @@ public class PrecompiledContractsDiffblueTest {
    * <p>Method under test: {@link Identity#execute(byte[])}
    */
   @Test
-  @Category(MaintainedByDiffblue.class)
+  @Category(ContributionFromDiffblue.class)
+  @ManagedByDiffblue
   @MethodsUnderTest({"Pair Identity.execute(byte[])"})
   public void testIdentityExecute() throws UnsupportedEncodingException {
     // Arrange
@@ -1294,7 +1346,8 @@ public class PrecompiledContractsDiffblueTest {
    * <p>Method under test: {@link Identity#getEnergyForData(byte[])}
    */
   @Test
-  @Category(MaintainedByDiffblue.class)
+  @Category(ContributionFromDiffblue.class)
+  @ManagedByDiffblue
   @MethodsUnderTest({"long Identity.getEnergyForData(byte[])"})
   public void testIdentityGetEnergyForData_whenAxaxaxaxBytesIsUtf8_thenReturnEighteen()
       throws UnsupportedEncodingException {
@@ -1316,7 +1369,8 @@ public class PrecompiledContractsDiffblueTest {
    * <p>Method under test: {@link Identity#getEnergyForData(byte[])}
    */
   @Test
-  @Category(MaintainedByDiffblue.class)
+  @Category(ContributionFromDiffblue.class)
+  @ManagedByDiffblue
   @MethodsUnderTest({"long Identity.getEnergyForData(byte[])"})
   public void testIdentityGetEnergyForData_whenNull_thenReturnFifteen() {
     // Arrange, Act and Assert
@@ -1329,7 +1383,8 @@ public class PrecompiledContractsDiffblueTest {
    * <p>Method under test: default or parameterless constructor of {@link Identity}
    */
   @Test
-  @Category(MaintainedByDiffblue.class)
+  @Category(ContributionFromDiffblue.class)
+  @ManagedByDiffblue
   @MethodsUnderTest({"void Identity.<init>()"})
   public void testIdentityNewIdentity() {
     // Arrange and Act
@@ -1352,7 +1407,8 @@ public class PrecompiledContractsDiffblueTest {
    * <p>Method under test: {@link IsSrCandidate#execute(byte[])}
    */
   @Test
-  @Category(MaintainedByDiffblue.class)
+  @Category(ContributionFromDiffblue.class)
+  @ManagedByDiffblue
   @MethodsUnderTest({"Pair IsSrCandidate.execute(byte[])"})
   public void testIsSrCandidateExecute_whenAxaxaxaxBytesIsUtf8()
       throws UnsupportedEncodingException {
@@ -1384,7 +1440,8 @@ public class PrecompiledContractsDiffblueTest {
    * <p>Method under test: {@link IsSrCandidate#execute(byte[])}
    */
   @Test
-  @Category(MaintainedByDiffblue.class)
+  @Category(ContributionFromDiffblue.class)
+  @ManagedByDiffblue
   @MethodsUnderTest({"Pair IsSrCandidate.execute(byte[])"})
   public void testIsSrCandidateExecute_whenNull() {
     // Arrange and Act
@@ -1410,7 +1467,8 @@ public class PrecompiledContractsDiffblueTest {
    * <p>Method under test: {@link IsSrCandidate#getEnergyForData(byte[])}
    */
   @Test
-  @Category(MaintainedByDiffblue.class)
+  @Category(ContributionFromDiffblue.class)
+  @ManagedByDiffblue
   @MethodsUnderTest({"long IsSrCandidate.getEnergyForData(byte[])"})
   public void testIsSrCandidateGetEnergyForData() throws UnsupportedEncodingException {
     // Arrange and Act
@@ -1426,7 +1484,8 @@ public class PrecompiledContractsDiffblueTest {
    * <p>Method under test: default or parameterless constructor of {@link IsSrCandidate}
    */
   @Test
-  @Category(MaintainedByDiffblue.class)
+  @Category(ContributionFromDiffblue.class)
+  @ManagedByDiffblue
   @MethodsUnderTest({"void IsSrCandidate.<init>()"})
   public void testIsSrCandidateNewIsSrCandidate() {
     // Arrange and Act
@@ -1449,7 +1508,8 @@ public class PrecompiledContractsDiffblueTest {
    * <p>Method under test: {@link MerkleHash#execute(byte[])}
    */
   @Test
-  @Category(MaintainedByDiffblue.class)
+  @Category(ContributionFromDiffblue.class)
+  @ManagedByDiffblue
   @MethodsUnderTest({"Pair MerkleHash.execute(byte[])"})
   public void testMerkleHashExecute_whenAxaxaxaxBytesIsUtf8() throws UnsupportedEncodingException {
     // Arrange and Act
@@ -1475,7 +1535,8 @@ public class PrecompiledContractsDiffblueTest {
    * <p>Method under test: {@link MerkleHash#execute(byte[])}
    */
   @Test
-  @Category(MaintainedByDiffblue.class)
+  @Category(ContributionFromDiffblue.class)
+  @ManagedByDiffblue
   @MethodsUnderTest({"Pair MerkleHash.execute(byte[])"})
   public void testMerkleHashExecute_whenEmptyArrayOfByte() {
     // Arrange and Act
@@ -1496,7 +1557,8 @@ public class PrecompiledContractsDiffblueTest {
    * <p>Method under test: {@link MerkleHash#getEnergyForData(byte[])}
    */
   @Test
-  @Category(MaintainedByDiffblue.class)
+  @Category(ContributionFromDiffblue.class)
+  @ManagedByDiffblue
   @MethodsUnderTest({"long MerkleHash.getEnergyForData(byte[])"})
   public void testMerkleHashGetEnergyForData() throws UnsupportedEncodingException {
     // Arrange and Act
@@ -1512,7 +1574,8 @@ public class PrecompiledContractsDiffblueTest {
    * <p>Method under test: default or parameterless constructor of {@link MerkleHash}
    */
   @Test
-  @Category(MaintainedByDiffblue.class)
+  @Category(ContributionFromDiffblue.class)
+  @ManagedByDiffblue
   @MethodsUnderTest({"void MerkleHash.<init>()"})
   public void testMerkleHashNewMerkleHash() {
     // Arrange and Act
@@ -1535,7 +1598,8 @@ public class PrecompiledContractsDiffblueTest {
    * <p>Method under test: {@link ModExp#execute(byte[])}
    */
   @Test
-  @Category(MaintainedByDiffblue.class)
+  @Category(ContributionFromDiffblue.class)
+  @ManagedByDiffblue
   @MethodsUnderTest({"Pair ModExp.execute(byte[])"})
   public void testModExpExecute_whenAxaxaxaxBytesIsUtf8() throws UnsupportedEncodingException {
     // Arrange and Act
@@ -1560,7 +1624,8 @@ public class PrecompiledContractsDiffblueTest {
    * <p>Method under test: {@link ModExp#execute(byte[])}
    */
   @Test
-  @Category(MaintainedByDiffblue.class)
+  @Category(ContributionFromDiffblue.class)
+  @ManagedByDiffblue
   @MethodsUnderTest({"Pair ModExp.execute(byte[])"})
   public void testModExpExecute_whenNull() {
     // Arrange and Act
@@ -1586,7 +1651,8 @@ public class PrecompiledContractsDiffblueTest {
    * <p>Method under test: {@link ModExp#getEnergyForData(byte[])}
    */
   @Test
-  @Category(MaintainedByDiffblue.class)
+  @Category(ContributionFromDiffblue.class)
+  @ManagedByDiffblue
   @MethodsUnderTest({"long ModExp.getEnergyForData(byte[])"})
   public void testModExpGetEnergyForData_whenAxaxaxaxBytesIsUtf8_thenReturn14411570333761358()
       throws UnsupportedEncodingException {
@@ -1608,7 +1674,8 @@ public class PrecompiledContractsDiffblueTest {
    * <p>Method under test: {@link ModExp#getEnergyForData(byte[])}
    */
   @Test
-  @Category(MaintainedByDiffblue.class)
+  @Category(ContributionFromDiffblue.class)
+  @ManagedByDiffblue
   @MethodsUnderTest({"long ModExp.getEnergyForData(byte[])"})
   public void testModExpGetEnergyForData_whenNull_thenReturnZero() {
     // Arrange, Act and Assert
@@ -1621,7 +1688,8 @@ public class PrecompiledContractsDiffblueTest {
    * <p>Method under test: default or parameterless constructor of {@link ModExp}
    */
   @Test
-  @Category(MaintainedByDiffblue.class)
+  @Category(ContributionFromDiffblue.class)
+  @ManagedByDiffblue
   @MethodsUnderTest({"void ModExp.<init>()"})
   public void testModExpNewModExp() {
     // Arrange and Act
@@ -1644,7 +1712,8 @@ public class PrecompiledContractsDiffblueTest {
    * <p>Method under test: {@link PrecompiledContract#dataBoolean(boolean)}
    */
   @Test
-  @Category(MaintainedByDiffblue.class)
+  @Category(ContributionFromDiffblue.class)
+  @ManagedByDiffblue
   @MethodsUnderTest({"byte[] PrecompiledContract.dataBoolean(boolean)"})
   public void testPrecompiledContractDataBoolean_whenFalse() {
     // Arrange, Act and Assert
@@ -1666,7 +1735,8 @@ public class PrecompiledContractsDiffblueTest {
    * <p>Method under test: {@link PrecompiledContract#dataBoolean(boolean)}
    */
   @Test
-  @Category(MaintainedByDiffblue.class)
+  @Category(ContributionFromDiffblue.class)
+  @ManagedByDiffblue
   @MethodsUnderTest({"byte[] PrecompiledContract.dataBoolean(boolean)"})
   public void testPrecompiledContractDataBoolean_whenTrue() {
     // Arrange, Act and Assert
@@ -1684,7 +1754,8 @@ public class PrecompiledContractsDiffblueTest {
    * <p>Method under test: {@link PrecompiledContract#dataOne()}
    */
   @Test
-  @Category(MaintainedByDiffblue.class)
+  @Category(ContributionFromDiffblue.class)
+  @ManagedByDiffblue
   @MethodsUnderTest({"byte[] PrecompiledContract.dataOne()"})
   public void testPrecompiledContractDataOne() {
     // Arrange, Act and Assert
@@ -1706,7 +1777,8 @@ public class PrecompiledContractsDiffblueTest {
    * <p>Method under test: {@link PrecompiledContract#getCallerAddress()}
    */
   @Test
-  @Category(MaintainedByDiffblue.class)
+  @Category(ContributionFromDiffblue.class)
+  @ManagedByDiffblue
   @MethodsUnderTest({"byte[] PrecompiledContract.getCallerAddress()"})
   public void testPrecompiledContractGetCallerAddress_thenReturnAxaxaxaxBytesIsUtf8()
       throws UnsupportedEncodingException {
@@ -1724,7 +1796,8 @@ public class PrecompiledContractsDiffblueTest {
    * <p>Method under test: {@link PrecompiledContract#getDeposit()}
    */
   @Test
-  @Category(MaintainedByDiffblue.class)
+  @Category(ContributionFromDiffblue.class)
+  @ManagedByDiffblue
   @MethodsUnderTest({"Repository PrecompiledContract.getDeposit()"})
   public void testPrecompiledContractGetDeposit() {
     // Arrange, Act and Assert
@@ -1737,7 +1810,8 @@ public class PrecompiledContractsDiffblueTest {
    * <p>Method under test: {@link PrecompiledContract#getResult()}
    */
   @Test
-  @Category(MaintainedByDiffblue.class)
+  @Category(ContributionFromDiffblue.class)
+  @ManagedByDiffblue
   @MethodsUnderTest({"org.tron.common.runtime.ProgramResult PrecompiledContract.getResult()"})
   public void testPrecompiledContractGetResult() {
     // Arrange, Act and Assert
@@ -1750,7 +1824,8 @@ public class PrecompiledContractsDiffblueTest {
    * <p>Method under test: {@link PrecompiledContract#getVmShouldEndInUs()}
    */
   @Test
-  @Category(MaintainedByDiffblue.class)
+  @Category(ContributionFromDiffblue.class)
+  @ManagedByDiffblue
   @MethodsUnderTest({"long PrecompiledContract.getVmShouldEndInUs()"})
   public void testPrecompiledContractGetVmShouldEndInUs() {
     // Arrange, Act and Assert
@@ -1767,7 +1842,8 @@ public class PrecompiledContractsDiffblueTest {
    * <p>Method under test: {@link PrecompiledContract#isConstantCall()}
    */
   @Test
-  @Category(MaintainedByDiffblue.class)
+  @Category(ContributionFromDiffblue.class)
+  @ManagedByDiffblue
   @MethodsUnderTest({"boolean PrecompiledContract.isConstantCall()"})
   public void testPrecompiledContractIsConstantCall_thenReturnFalse() {
     // Arrange, Act and Assert
@@ -1784,7 +1860,8 @@ public class PrecompiledContractsDiffblueTest {
    * <p>Method under test: {@link PrecompiledContract#isConstantCall()}
    */
   @Test
-  @Category(MaintainedByDiffblue.class)
+  @Category(ContributionFromDiffblue.class)
+  @ManagedByDiffblue
   @MethodsUnderTest({"boolean PrecompiledContract.isConstantCall()"})
   public void testPrecompiledContractIsConstantCall_thenReturnTrue() {
     // Arrange
@@ -1801,7 +1878,8 @@ public class PrecompiledContractsDiffblueTest {
    * <p>Method under test: {@link PrecompiledContract#setCallerAddress(byte[])}
    */
   @Test
-  @Category(MaintainedByDiffblue.class)
+  @Category(ContributionFromDiffblue.class)
+  @ManagedByDiffblue
   @MethodsUnderTest({"void PrecompiledContract.setCallerAddress(byte[])"})
   public void testPrecompiledContractSetCallerAddress() throws UnsupportedEncodingException {
     // Arrange
@@ -1820,7 +1898,8 @@ public class PrecompiledContractsDiffblueTest {
    * <p>Method under test: {@link PrecompiledContract#setConstantCall(boolean)}
    */
   @Test
-  @Category(MaintainedByDiffblue.class)
+  @Category(ContributionFromDiffblue.class)
+  @ManagedByDiffblue
   @MethodsUnderTest({"void PrecompiledContract.setConstantCall(boolean)"})
   public void testPrecompiledContractSetConstantCall() {
     // Arrange
@@ -1839,7 +1918,8 @@ public class PrecompiledContractsDiffblueTest {
    * <p>Method under test: {@link PrecompiledContract#setRepository(Repository)}
    */
   @Test
-  @Category(MaintainedByDiffblue.class)
+  @Category(ContributionFromDiffblue.class)
+  @ManagedByDiffblue
   @MethodsUnderTest({"void PrecompiledContract.setRepository(Repository)"})
   public void testPrecompiledContractSetRepository() {
     // Arrange
@@ -1859,7 +1939,8 @@ public class PrecompiledContractsDiffblueTest {
    * <p>Method under test: {@link PrecompiledContract#setVmShouldEndInUs(long)}
    */
   @Test
-  @Category(MaintainedByDiffblue.class)
+  @Category(ContributionFromDiffblue.class)
+  @ManagedByDiffblue
   @MethodsUnderTest({"void PrecompiledContract.setVmShouldEndInUs(long)"})
   public void testPrecompiledContractSetVmShouldEndInUs() {
     // Arrange
@@ -1882,7 +1963,8 @@ public class PrecompiledContractsDiffblueTest {
    * <p>Method under test: {@link ReceivedVoteCount#execute(byte[])}
    */
   @Test
-  @Category(MaintainedByDiffblue.class)
+  @Category(ContributionFromDiffblue.class)
+  @ManagedByDiffblue
   @MethodsUnderTest({"Pair ReceivedVoteCount.execute(byte[])"})
   public void testReceivedVoteCountExecute_whenAxaxaxaxBytesIsUtf8()
       throws UnsupportedEncodingException {
@@ -1914,7 +1996,8 @@ public class PrecompiledContractsDiffblueTest {
    * <p>Method under test: {@link ReceivedVoteCount#execute(byte[])}
    */
   @Test
-  @Category(MaintainedByDiffblue.class)
+  @Category(ContributionFromDiffblue.class)
+  @ManagedByDiffblue
   @MethodsUnderTest({"Pair ReceivedVoteCount.execute(byte[])"})
   public void testReceivedVoteCountExecute_whenNull() {
     // Arrange and Act
@@ -1940,7 +2023,8 @@ public class PrecompiledContractsDiffblueTest {
    * <p>Method under test: {@link ReceivedVoteCount#getEnergyForData(byte[])}
    */
   @Test
-  @Category(MaintainedByDiffblue.class)
+  @Category(ContributionFromDiffblue.class)
+  @ManagedByDiffblue
   @MethodsUnderTest({"long ReceivedVoteCount.getEnergyForData(byte[])"})
   public void testReceivedVoteCountGetEnergyForData() throws UnsupportedEncodingException {
     // Arrange and Act
@@ -1957,7 +2041,8 @@ public class PrecompiledContractsDiffblueTest {
    * <p>Method under test: default or parameterless constructor of {@link ReceivedVoteCount}
    */
   @Test
-  @Category(MaintainedByDiffblue.class)
+  @Category(ContributionFromDiffblue.class)
+  @ManagedByDiffblue
   @MethodsUnderTest({"void ReceivedVoteCount.<init>()"})
   public void testReceivedVoteCountNewReceivedVoteCount() {
     // Arrange and Act
@@ -1980,7 +2065,8 @@ public class PrecompiledContractsDiffblueTest {
    * <p>Method under test: {@link ResourceUsage#execute(byte[])}
    */
   @Test
-  @Category(MaintainedByDiffblue.class)
+  @Category(ContributionFromDiffblue.class)
+  @ManagedByDiffblue
   @MethodsUnderTest({"Pair ResourceUsage.execute(byte[])"})
   public void testResourceUsageExecute_whenAxaxaxaxBytesIsUtf8()
       throws UnsupportedEncodingException {
@@ -2013,7 +2099,8 @@ public class PrecompiledContractsDiffblueTest {
    * <p>Method under test: {@link ResourceUsage#execute(byte[])}
    */
   @Test
-  @Category(MaintainedByDiffblue.class)
+  @Category(ContributionFromDiffblue.class)
+  @ManagedByDiffblue
   @MethodsUnderTest({"Pair ResourceUsage.execute(byte[])"})
   public void testResourceUsageExecute_whenNull() {
     // Arrange and Act
@@ -2040,7 +2127,8 @@ public class PrecompiledContractsDiffblueTest {
    * <p>Method under test: {@link ResourceUsage#getEnergyForData(byte[])}
    */
   @Test
-  @Category(MaintainedByDiffblue.class)
+  @Category(ContributionFromDiffblue.class)
+  @ManagedByDiffblue
   @MethodsUnderTest({"long ResourceUsage.getEnergyForData(byte[])"})
   public void testResourceUsageGetEnergyForData() throws UnsupportedEncodingException {
     // Arrange and Act
@@ -2056,7 +2144,8 @@ public class PrecompiledContractsDiffblueTest {
    * <p>Method under test: default or parameterless constructor of {@link ResourceUsage}
    */
   @Test
-  @Category(MaintainedByDiffblue.class)
+  @Category(ContributionFromDiffblue.class)
+  @ManagedByDiffblue
   @MethodsUnderTest({"void ResourceUsage.<init>()"})
   public void testResourceUsageNewResourceUsage() {
     // Arrange and Act
@@ -2079,7 +2168,8 @@ public class PrecompiledContractsDiffblueTest {
    * <p>Method under test: {@link ResourceV2#execute(byte[])}
    */
   @Test
-  @Category(MaintainedByDiffblue.class)
+  @Category(ContributionFromDiffblue.class)
+  @ManagedByDiffblue
   @MethodsUnderTest({"Pair ResourceV2.execute(byte[])"})
   public void testResourceV2Execute_whenAxaxaxaxBytesIsUtf8() throws UnsupportedEncodingException {
     // Arrange and Act
@@ -2110,7 +2200,8 @@ public class PrecompiledContractsDiffblueTest {
    * <p>Method under test: {@link ResourceV2#execute(byte[])}
    */
   @Test
-  @Category(MaintainedByDiffblue.class)
+  @Category(ContributionFromDiffblue.class)
+  @ManagedByDiffblue
   @MethodsUnderTest({"Pair ResourceV2.execute(byte[])"})
   public void testResourceV2Execute_whenNull() {
     // Arrange and Act
@@ -2136,7 +2227,8 @@ public class PrecompiledContractsDiffblueTest {
    * <p>Method under test: {@link ResourceV2#getEnergyForData(byte[])}
    */
   @Test
-  @Category(MaintainedByDiffblue.class)
+  @Category(ContributionFromDiffblue.class)
+  @ManagedByDiffblue
   @MethodsUnderTest({"long ResourceV2.getEnergyForData(byte[])"})
   public void testResourceV2GetEnergyForData() throws UnsupportedEncodingException {
     // Arrange and Act
@@ -2152,7 +2244,8 @@ public class PrecompiledContractsDiffblueTest {
    * <p>Method under test: default or parameterless constructor of {@link ResourceV2}
    */
   @Test
-  @Category(MaintainedByDiffblue.class)
+  @Category(ContributionFromDiffblue.class)
+  @ManagedByDiffblue
   @MethodsUnderTest({"void ResourceV2.<init>()"})
   public void testResourceV2NewResourceV2() {
     // Arrange and Act
@@ -2171,7 +2264,8 @@ public class PrecompiledContractsDiffblueTest {
    * <p>Method under test: {@link RewardBalance#getEnergyForData(byte[])}
    */
   @Test
-  @Category(MaintainedByDiffblue.class)
+  @Category(ContributionFromDiffblue.class)
+  @ManagedByDiffblue
   @MethodsUnderTest({"long RewardBalance.getEnergyForData(byte[])"})
   public void testRewardBalanceGetEnergyForData() throws UnsupportedEncodingException {
     // Arrange and Act
@@ -2187,7 +2281,8 @@ public class PrecompiledContractsDiffblueTest {
    * <p>Method under test: default or parameterless constructor of {@link RewardBalance}
    */
   @Test
-  @Category(MaintainedByDiffblue.class)
+  @Category(ContributionFromDiffblue.class)
+  @ManagedByDiffblue
   @MethodsUnderTest({"void RewardBalance.<init>()"})
   public void testRewardBalanceNewRewardBalance() {
     // Arrange and Act
@@ -2210,7 +2305,8 @@ public class PrecompiledContractsDiffblueTest {
    * <p>Method under test: {@link Ripempd160#execute(byte[])}
    */
   @Test
-  @Category(MaintainedByDiffblue.class)
+  @Category(ContributionFromDiffblue.class)
+  @ManagedByDiffblue
   @MethodsUnderTest({"Pair Ripempd160.execute(byte[])"})
   public void testRipempd160Execute_thenReturnRightIsArrayOfByteWithMinusFourteenAndBacktick()
       throws UnsupportedEncodingException {
@@ -2242,7 +2338,8 @@ public class PrecompiledContractsDiffblueTest {
    * <p>Method under test: {@link Ripempd160#execute(byte[])}
    */
   @Test
-  @Category(MaintainedByDiffblue.class)
+  @Category(ContributionFromDiffblue.class)
+  @ManagedByDiffblue
   @MethodsUnderTest({"Pair Ripempd160.execute(byte[])"})
   public void testRipempd160Execute_thenReturnRightIsArrayOfByteWithTwoAndMinusThirtyNine() {
     // Arrange and Act
@@ -2272,7 +2369,8 @@ public class PrecompiledContractsDiffblueTest {
    * <p>Method under test: {@link Ripempd160#getEnergyForData(byte[])}
    */
   @Test
-  @Category(MaintainedByDiffblue.class)
+  @Category(ContributionFromDiffblue.class)
+  @ManagedByDiffblue
   @MethodsUnderTest({"long Ripempd160.getEnergyForData(byte[])"})
   public void testRipempd160GetEnergyForData_thenReturnSevenHundredTwenty()
       throws UnsupportedEncodingException {
@@ -2294,7 +2392,8 @@ public class PrecompiledContractsDiffblueTest {
    * <p>Method under test: {@link Ripempd160#getEnergyForData(byte[])}
    */
   @Test
-  @Category(MaintainedByDiffblue.class)
+  @Category(ContributionFromDiffblue.class)
+  @ManagedByDiffblue
   @MethodsUnderTest({"long Ripempd160.getEnergyForData(byte[])"})
   public void testRipempd160GetEnergyForData_whenNull_thenReturnSixHundred() {
     // Arrange, Act and Assert
@@ -2307,7 +2406,8 @@ public class PrecompiledContractsDiffblueTest {
    * <p>Method under test: default or parameterless constructor of {@link Ripempd160}
    */
   @Test
-  @Category(MaintainedByDiffblue.class)
+  @Category(ContributionFromDiffblue.class)
+  @ManagedByDiffblue
   @MethodsUnderTest({"void Ripempd160.<init>()"})
   public void testRipempd160NewRipempd160() {
     // Arrange and Act
@@ -2330,7 +2430,8 @@ public class PrecompiledContractsDiffblueTest {
    * <p>Method under test: {@link Sha256#execute(byte[])}
    */
   @Test
-  @Category(MaintainedByDiffblue.class)
+  @Category(ContributionFromDiffblue.class)
+  @ManagedByDiffblue
   @MethodsUnderTest({"Pair Sha256.execute(byte[])"})
   public void testSha256Execute_thenReturnRightIsArrayOfByteWithBackslashAndLeftSquareBracket()
       throws UnsupportedEncodingException {
@@ -2361,7 +2462,8 @@ public class PrecompiledContractsDiffblueTest {
    * <p>Method under test: {@link Sha256#execute(byte[])}
    */
   @Test
-  @Category(MaintainedByDiffblue.class)
+  @Category(ContributionFromDiffblue.class)
+  @ManagedByDiffblue
   @MethodsUnderTest({"Pair Sha256.execute(byte[])"})
   public void testSha256Execute_thenReturnRightIsArrayOfByteWithMinusTwentyNineAndMinusEighty() {
     // Arrange and Act
@@ -2392,7 +2494,8 @@ public class PrecompiledContractsDiffblueTest {
    * <p>Method under test: {@link Sha256#getEnergyForData(byte[])}
    */
   @Test
-  @Category(MaintainedByDiffblue.class)
+  @Category(ContributionFromDiffblue.class)
+  @ManagedByDiffblue
   @MethodsUnderTest({"long Sha256.getEnergyForData(byte[])"})
   public void testSha256GetEnergyForData_whenAxaxaxaxBytesIsUtf8_thenReturnSeventyTwo()
       throws UnsupportedEncodingException {
@@ -2414,7 +2517,8 @@ public class PrecompiledContractsDiffblueTest {
    * <p>Method under test: {@link Sha256#getEnergyForData(byte[])}
    */
   @Test
-  @Category(MaintainedByDiffblue.class)
+  @Category(ContributionFromDiffblue.class)
+  @ManagedByDiffblue
   @MethodsUnderTest({"long Sha256.getEnergyForData(byte[])"})
   public void testSha256GetEnergyForData_whenNull_thenReturnSixty() {
     // Arrange, Act and Assert
@@ -2427,7 +2531,8 @@ public class PrecompiledContractsDiffblueTest {
    * <p>Method under test: default or parameterless constructor of {@link Sha256}
    */
   @Test
-  @Category(MaintainedByDiffblue.class)
+  @Category(ContributionFromDiffblue.class)
+  @ManagedByDiffblue
   @MethodsUnderTest({"void Sha256.<init>()"})
   public void testSha256NewSha256() {
     // Arrange and Act
@@ -2450,7 +2555,8 @@ public class PrecompiledContractsDiffblueTest {
    * <p>Method under test: {@link TotalAcquiredResource#execute(byte[])}
    */
   @Test
-  @Category(MaintainedByDiffblue.class)
+  @Category(ContributionFromDiffblue.class)
+  @ManagedByDiffblue
   @MethodsUnderTest({"Pair TotalAcquiredResource.execute(byte[])"})
   public void testTotalAcquiredResourceExecute_whenAxaxaxaxBytesIsUtf8()
       throws UnsupportedEncodingException {
@@ -2482,7 +2588,8 @@ public class PrecompiledContractsDiffblueTest {
    * <p>Method under test: {@link TotalAcquiredResource#execute(byte[])}
    */
   @Test
-  @Category(MaintainedByDiffblue.class)
+  @Category(ContributionFromDiffblue.class)
+  @ManagedByDiffblue
   @MethodsUnderTest({"Pair TotalAcquiredResource.execute(byte[])"})
   public void testTotalAcquiredResourceExecute_whenNull() {
     // Arrange and Act
@@ -2508,7 +2615,8 @@ public class PrecompiledContractsDiffblueTest {
    * <p>Method under test: {@link TotalAcquiredResource#getEnergyForData(byte[])}
    */
   @Test
-  @Category(MaintainedByDiffblue.class)
+  @Category(ContributionFromDiffblue.class)
+  @ManagedByDiffblue
   @MethodsUnderTest({"long TotalAcquiredResource.getEnergyForData(byte[])"})
   public void testTotalAcquiredResourceGetEnergyForData() throws UnsupportedEncodingException {
     // Arrange and Act
@@ -2525,7 +2633,8 @@ public class PrecompiledContractsDiffblueTest {
    * <p>Method under test: default or parameterless constructor of {@link TotalAcquiredResource}
    */
   @Test
-  @Category(MaintainedByDiffblue.class)
+  @Category(ContributionFromDiffblue.class)
+  @ManagedByDiffblue
   @MethodsUnderTest({"void TotalAcquiredResource.<init>()"})
   public void testTotalAcquiredResourceNewTotalAcquiredResource() {
     // Arrange and Act
@@ -2548,7 +2657,8 @@ public class PrecompiledContractsDiffblueTest {
    * <p>Method under test: {@link TotalDelegatedResource#execute(byte[])}
    */
   @Test
-  @Category(MaintainedByDiffblue.class)
+  @Category(ContributionFromDiffblue.class)
+  @ManagedByDiffblue
   @MethodsUnderTest({"Pair TotalDelegatedResource.execute(byte[])"})
   public void testTotalDelegatedResourceExecute_whenAxaxaxaxBytesIsUtf8()
       throws UnsupportedEncodingException {
@@ -2580,7 +2690,8 @@ public class PrecompiledContractsDiffblueTest {
    * <p>Method under test: {@link TotalDelegatedResource#execute(byte[])}
    */
   @Test
-  @Category(MaintainedByDiffblue.class)
+  @Category(ContributionFromDiffblue.class)
+  @ManagedByDiffblue
   @MethodsUnderTest({"Pair TotalDelegatedResource.execute(byte[])"})
   public void testTotalDelegatedResourceExecute_whenNull() {
     // Arrange and Act
@@ -2606,7 +2717,8 @@ public class PrecompiledContractsDiffblueTest {
    * <p>Method under test: {@link TotalDelegatedResource#getEnergyForData(byte[])}
    */
   @Test
-  @Category(MaintainedByDiffblue.class)
+  @Category(ContributionFromDiffblue.class)
+  @ManagedByDiffblue
   @MethodsUnderTest({"long TotalDelegatedResource.getEnergyForData(byte[])"})
   public void testTotalDelegatedResourceGetEnergyForData() throws UnsupportedEncodingException {
     // Arrange and Act
@@ -2623,7 +2735,8 @@ public class PrecompiledContractsDiffblueTest {
    * <p>Method under test: default or parameterless constructor of {@link TotalDelegatedResource}
    */
   @Test
-  @Category(MaintainedByDiffblue.class)
+  @Category(ContributionFromDiffblue.class)
+  @ManagedByDiffblue
   @MethodsUnderTest({"void TotalDelegatedResource.<init>()"})
   public void testTotalDelegatedResourceNewTotalDelegatedResource() {
     // Arrange and Act
@@ -2646,7 +2759,8 @@ public class PrecompiledContractsDiffblueTest {
    * <p>Method under test: {@link TotalResource#execute(byte[])}
    */
   @Test
-  @Category(MaintainedByDiffblue.class)
+  @Category(ContributionFromDiffblue.class)
+  @ManagedByDiffblue
   @MethodsUnderTest({"Pair TotalResource.execute(byte[])"})
   public void testTotalResourceExecute_whenAxaxaxaxBytesIsUtf8()
       throws UnsupportedEncodingException {
@@ -2678,7 +2792,8 @@ public class PrecompiledContractsDiffblueTest {
    * <p>Method under test: {@link TotalResource#execute(byte[])}
    */
   @Test
-  @Category(MaintainedByDiffblue.class)
+  @Category(ContributionFromDiffblue.class)
+  @ManagedByDiffblue
   @MethodsUnderTest({"Pair TotalResource.execute(byte[])"})
   public void testTotalResourceExecute_whenNull() {
     // Arrange and Act
@@ -2704,7 +2819,8 @@ public class PrecompiledContractsDiffblueTest {
    * <p>Method under test: {@link TotalResource#getEnergyForData(byte[])}
    */
   @Test
-  @Category(MaintainedByDiffblue.class)
+  @Category(ContributionFromDiffblue.class)
+  @ManagedByDiffblue
   @MethodsUnderTest({"long TotalResource.getEnergyForData(byte[])"})
   public void testTotalResourceGetEnergyForData() throws UnsupportedEncodingException {
     // Arrange and Act
@@ -2720,7 +2836,8 @@ public class PrecompiledContractsDiffblueTest {
    * <p>Method under test: default or parameterless constructor of {@link TotalResource}
    */
   @Test
-  @Category(MaintainedByDiffblue.class)
+  @Category(ContributionFromDiffblue.class)
+  @ManagedByDiffblue
   @MethodsUnderTest({"void TotalResource.<init>()"})
   public void testTotalResourceNewTotalResource() {
     // Arrange and Act
@@ -2743,7 +2860,8 @@ public class PrecompiledContractsDiffblueTest {
    * <p>Method under test: {@link TotalVoteCount#execute(byte[])}
    */
   @Test
-  @Category(MaintainedByDiffblue.class)
+  @Category(ContributionFromDiffblue.class)
+  @ManagedByDiffblue
   @MethodsUnderTest({"Pair TotalVoteCount.execute(byte[])"})
   public void testTotalVoteCountExecute_whenAxaxaxaxBytesIsUtf8()
       throws UnsupportedEncodingException {
@@ -2775,7 +2893,8 @@ public class PrecompiledContractsDiffblueTest {
    * <p>Method under test: {@link TotalVoteCount#execute(byte[])}
    */
   @Test
-  @Category(MaintainedByDiffblue.class)
+  @Category(ContributionFromDiffblue.class)
+  @ManagedByDiffblue
   @MethodsUnderTest({"Pair TotalVoteCount.execute(byte[])"})
   public void testTotalVoteCountExecute_whenNull() {
     // Arrange and Act
@@ -2801,7 +2920,8 @@ public class PrecompiledContractsDiffblueTest {
    * <p>Method under test: {@link TotalVoteCount#getEnergyForData(byte[])}
    */
   @Test
-  @Category(MaintainedByDiffblue.class)
+  @Category(ContributionFromDiffblue.class)
+  @ManagedByDiffblue
   @MethodsUnderTest({"long TotalVoteCount.getEnergyForData(byte[])"})
   public void testTotalVoteCountGetEnergyForData() throws UnsupportedEncodingException {
     // Arrange and Act
@@ -2817,7 +2937,8 @@ public class PrecompiledContractsDiffblueTest {
    * <p>Method under test: default or parameterless constructor of {@link TotalVoteCount}
    */
   @Test
-  @Category(MaintainedByDiffblue.class)
+  @Category(ContributionFromDiffblue.class)
+  @ManagedByDiffblue
   @MethodsUnderTest({"void TotalVoteCount.<init>()"})
   public void testTotalVoteCountNewTotalVoteCount() {
     // Arrange and Act
@@ -2840,7 +2961,8 @@ public class PrecompiledContractsDiffblueTest {
    * <p>Method under test: {@link UnfreezableBalanceV2#execute(byte[])}
    */
   @Test
-  @Category(MaintainedByDiffblue.class)
+  @Category(ContributionFromDiffblue.class)
+  @ManagedByDiffblue
   @MethodsUnderTest({"Pair UnfreezableBalanceV2.execute(byte[])"})
   public void testUnfreezableBalanceV2Execute_whenAxaxaxaxBytesIsUtf8()
       throws UnsupportedEncodingException {
@@ -2872,7 +2994,8 @@ public class PrecompiledContractsDiffblueTest {
    * <p>Method under test: {@link UnfreezableBalanceV2#execute(byte[])}
    */
   @Test
-  @Category(MaintainedByDiffblue.class)
+  @Category(ContributionFromDiffblue.class)
+  @ManagedByDiffblue
   @MethodsUnderTest({"Pair UnfreezableBalanceV2.execute(byte[])"})
   public void testUnfreezableBalanceV2Execute_whenNull() {
     // Arrange and Act
@@ -2898,7 +3021,8 @@ public class PrecompiledContractsDiffblueTest {
    * <p>Method under test: {@link UnfreezableBalanceV2#getEnergyForData(byte[])}
    */
   @Test
-  @Category(MaintainedByDiffblue.class)
+  @Category(ContributionFromDiffblue.class)
+  @ManagedByDiffblue
   @MethodsUnderTest({"long UnfreezableBalanceV2.getEnergyForData(byte[])"})
   public void testUnfreezableBalanceV2GetEnergyForData() throws UnsupportedEncodingException {
     // Arrange and Act
@@ -2915,7 +3039,8 @@ public class PrecompiledContractsDiffblueTest {
    * <p>Method under test: default or parameterless constructor of {@link UnfreezableBalanceV2}
    */
   @Test
-  @Category(MaintainedByDiffblue.class)
+  @Category(ContributionFromDiffblue.class)
+  @ManagedByDiffblue
   @MethodsUnderTest({"void UnfreezableBalanceV2.<init>()"})
   public void testUnfreezableBalanceV2NewUnfreezableBalanceV2() {
     // Arrange and Act
@@ -2938,7 +3063,8 @@ public class PrecompiledContractsDiffblueTest {
    * <p>Method under test: {@link UsedVoteCount#execute(byte[])}
    */
   @Test
-  @Category(MaintainedByDiffblue.class)
+  @Category(ContributionFromDiffblue.class)
+  @ManagedByDiffblue
   @MethodsUnderTest({"Pair UsedVoteCount.execute(byte[])"})
   public void testUsedVoteCountExecute_whenAxaxaxaxBytesIsUtf8()
       throws UnsupportedEncodingException {
@@ -2970,7 +3096,8 @@ public class PrecompiledContractsDiffblueTest {
    * <p>Method under test: {@link UsedVoteCount#execute(byte[])}
    */
   @Test
-  @Category(MaintainedByDiffblue.class)
+  @Category(ContributionFromDiffblue.class)
+  @ManagedByDiffblue
   @MethodsUnderTest({"Pair UsedVoteCount.execute(byte[])"})
   public void testUsedVoteCountExecute_whenNull() {
     // Arrange and Act
@@ -2996,7 +3123,8 @@ public class PrecompiledContractsDiffblueTest {
    * <p>Method under test: {@link UsedVoteCount#getEnergyForData(byte[])}
    */
   @Test
-  @Category(MaintainedByDiffblue.class)
+  @Category(ContributionFromDiffblue.class)
+  @ManagedByDiffblue
   @MethodsUnderTest({"long UsedVoteCount.getEnergyForData(byte[])"})
   public void testUsedVoteCountGetEnergyForData() throws UnsupportedEncodingException {
     // Arrange and Act
@@ -3012,7 +3140,8 @@ public class PrecompiledContractsDiffblueTest {
    * <p>Method under test: default or parameterless constructor of {@link UsedVoteCount}
    */
   @Test
-  @Category(MaintainedByDiffblue.class)
+  @Category(ContributionFromDiffblue.class)
+  @ManagedByDiffblue
   @MethodsUnderTest({"void UsedVoteCount.<init>()"})
   public void testUsedVoteCountNewUsedVoteCount() {
     // Arrange and Act
@@ -3031,7 +3160,8 @@ public class PrecompiledContractsDiffblueTest {
    * <p>Method under test: {@link ValidateMultiSign#getEnergyForData(byte[])}
    */
   @Test
-  @Category(MaintainedByDiffblue.class)
+  @Category(ContributionFromDiffblue.class)
+  @ManagedByDiffblue
   @MethodsUnderTest({"long ValidateMultiSign.getEnergyForData(byte[])"})
   public void testValidateMultiSignGetEnergyForData() throws UnsupportedEncodingException {
     // Arrange and Act
@@ -3048,7 +3178,8 @@ public class PrecompiledContractsDiffblueTest {
    * <p>Method under test: default or parameterless constructor of {@link ValidateMultiSign}
    */
   @Test
-  @Category(MaintainedByDiffblue.class)
+  @Category(ContributionFromDiffblue.class)
+  @ManagedByDiffblue
   @MethodsUnderTest({"void ValidateMultiSign.<init>()"})
   public void testValidateMultiSignNewValidateMultiSign() {
     // Arrange and Act
@@ -3071,7 +3202,8 @@ public class PrecompiledContractsDiffblueTest {
    * <p>Method under test: {@link VerifyBurnProof#execute(byte[])}
    */
   @Test
-  @Category(MaintainedByDiffblue.class)
+  @Category(ContributionFromDiffblue.class)
+  @ManagedByDiffblue
   @MethodsUnderTest({"Pair VerifyBurnProof.execute(byte[])"})
   public void testVerifyBurnProofExecute_whenAxaxaxaxBytesIsUtf8()
       throws UnsupportedEncodingException {
@@ -3103,7 +3235,8 @@ public class PrecompiledContractsDiffblueTest {
    * <p>Method under test: {@link VerifyBurnProof#execute(byte[])}
    */
   @Test
-  @Category(MaintainedByDiffblue.class)
+  @Category(ContributionFromDiffblue.class)
+  @ManagedByDiffblue
   @MethodsUnderTest({"Pair VerifyBurnProof.execute(byte[])"})
   public void testVerifyBurnProofExecute_whenNull() {
     // Arrange and Act
@@ -3129,7 +3262,8 @@ public class PrecompiledContractsDiffblueTest {
    * <p>Method under test: {@link VerifyBurnProof#getEnergyForData(byte[])}
    */
   @Test
-  @Category(MaintainedByDiffblue.class)
+  @Category(ContributionFromDiffblue.class)
+  @ManagedByDiffblue
   @MethodsUnderTest({"long VerifyBurnProof.getEnergyForData(byte[])"})
   public void testVerifyBurnProofGetEnergyForData() throws UnsupportedEncodingException {
     // Arrange and Act
@@ -3145,7 +3279,8 @@ public class PrecompiledContractsDiffblueTest {
    * <p>Method under test: default or parameterless constructor of {@link VerifyBurnProof}
    */
   @Test
-  @Category(MaintainedByDiffblue.class)
+  @Category(ContributionFromDiffblue.class)
+  @ManagedByDiffblue
   @MethodsUnderTest({"void VerifyBurnProof.<init>()"})
   public void testVerifyBurnProofNewVerifyBurnProof() {
     // Arrange and Act
@@ -3168,7 +3303,8 @@ public class PrecompiledContractsDiffblueTest {
    * <p>Method under test: {@link VerifyMintProof#execute(byte[])}
    */
   @Test
-  @Category(MaintainedByDiffblue.class)
+  @Category(ContributionFromDiffblue.class)
+  @ManagedByDiffblue
   @MethodsUnderTest({"Pair VerifyMintProof.execute(byte[])"})
   public void testVerifyMintProofExecute_whenAxaxaxaxBytesIsUtf8()
       throws UnsupportedEncodingException {
@@ -3200,7 +3336,8 @@ public class PrecompiledContractsDiffblueTest {
    * <p>Method under test: {@link VerifyMintProof#execute(byte[])}
    */
   @Test
-  @Category(MaintainedByDiffblue.class)
+  @Category(ContributionFromDiffblue.class)
+  @ManagedByDiffblue
   @MethodsUnderTest({"Pair VerifyMintProof.execute(byte[])"})
   public void testVerifyMintProofExecute_whenNull() {
     // Arrange and Act
@@ -3226,7 +3363,8 @@ public class PrecompiledContractsDiffblueTest {
    * <p>Method under test: {@link VerifyMintProof#getEnergyForData(byte[])}
    */
   @Test
-  @Category(MaintainedByDiffblue.class)
+  @Category(ContributionFromDiffblue.class)
+  @ManagedByDiffblue
   @MethodsUnderTest({"long VerifyMintProof.getEnergyForData(byte[])"})
   public void testVerifyMintProofGetEnergyForData() throws UnsupportedEncodingException {
     // Arrange and Act
@@ -3242,7 +3380,8 @@ public class PrecompiledContractsDiffblueTest {
    * <p>Method under test: default or parameterless constructor of {@link VerifyMintProof}
    */
   @Test
-  @Category(MaintainedByDiffblue.class)
+  @Category(ContributionFromDiffblue.class)
+  @ManagedByDiffblue
   @MethodsUnderTest({"void VerifyMintProof.<init>()"})
   public void testVerifyMintProofNewVerifyMintProof() {
     // Arrange and Act
@@ -3266,7 +3405,8 @@ public class PrecompiledContractsDiffblueTest {
    * <p>Method under test: {@link VerifyProof#insertLeaves(byte[][], long, byte[][])}
    */
   @Test
-  @Category(MaintainedByDiffblue.class)
+  @Category(ContributionFromDiffblue.class)
+  @ManagedByDiffblue
   @MethodsUnderTest({"Pair VerifyProof.insertLeaves(byte[][], long, byte[][])"})
   public void testVerifyProofInsertLeaves_whenA_thenReturnImmutablePair()
       throws UnsupportedEncodingException {
@@ -3306,7 +3446,8 @@ public class PrecompiledContractsDiffblueTest {
    * <p>Method under test: {@link VerifyProof#insertLeaves(byte[][], long, byte[][])}
    */
   @Test
-  @Category(MaintainedByDiffblue.class)
+  @Category(ContributionFromDiffblue.class)
+  @ManagedByDiffblue
   @MethodsUnderTest({"Pair VerifyProof.insertLeaves(byte[][], long, byte[][])"})
   public void testVerifyProofInsertLeaves_whenEmpty2dArrayOfByte_thenReturnImmutablePair()
       throws UnsupportedEncodingException {
@@ -3340,7 +3481,8 @@ public class PrecompiledContractsDiffblueTest {
    * <p>Method under test: {@link VerifyProof#insertLeaves(byte[][], long, byte[][])}
    */
   @Test
-  @Category(MaintainedByDiffblue.class)
+  @Category(ContributionFromDiffblue.class)
+  @ManagedByDiffblue
   @MethodsUnderTest({"Pair VerifyProof.insertLeaves(byte[][], long, byte[][])"})
   public void testVerifyProofInsertLeaves_whenThree_thenReturnImmutablePair()
       throws UnsupportedEncodingException {
@@ -3377,7 +3519,8 @@ public class PrecompiledContractsDiffblueTest {
    * <p>Method under test: {@link VerifyProof#parseInt(byte[], int)}
    */
   @Test
-  @Category(MaintainedByDiffblue.class)
+  @Category(ContributionFromDiffblue.class)
+  @ManagedByDiffblue
   @MethodsUnderTest({"int VerifyProof.parseInt(byte[], int)"})
   public void testVerifyProofParseInt_whenAxaxaxaxBytesIsUtf8_thenReturnMax_value()
       throws UnsupportedEncodingException {
@@ -3397,7 +3540,8 @@ public class PrecompiledContractsDiffblueTest {
    * <p>Method under test: {@link VerifyProof#parseInt(byte[], int)}
    */
   @Test
-  @Category(MaintainedByDiffblue.class)
+  @Category(ContributionFromDiffblue.class)
+  @ManagedByDiffblue
   @MethodsUnderTest({"int VerifyProof.parseInt(byte[], int)"})
   public void testVerifyProofParseInt_whenEmptyArrayOfByte_thenReturnZero() {
     // Arrange, Act and Assert
@@ -3415,7 +3559,8 @@ public class PrecompiledContractsDiffblueTest {
    * <p>Method under test: {@link VerifyProof#parseLong(byte[], int)}
    */
   @Test
-  @Category(MaintainedByDiffblue.class)
+  @Category(ContributionFromDiffblue.class)
+  @ManagedByDiffblue
   @MethodsUnderTest({"long VerifyProof.parseLong(byte[], int)"})
   public void testVerifyProofParseLong_whenAxaxaxaxBytesIsUtf8_thenReturnMax_value()
       throws UnsupportedEncodingException {
@@ -3434,7 +3579,8 @@ public class PrecompiledContractsDiffblueTest {
    * <p>Method under test: {@link VerifyProof#parseLong(byte[], int)}
    */
   @Test
-  @Category(MaintainedByDiffblue.class)
+  @Category(ContributionFromDiffblue.class)
+  @ManagedByDiffblue
   @MethodsUnderTest({"long VerifyProof.parseLong(byte[], int)"})
   public void testVerifyProofParseLong_whenEmptyArrayOfByte_thenReturnZero() {
     // Arrange, Act and Assert
@@ -3451,7 +3597,8 @@ public class PrecompiledContractsDiffblueTest {
    * <p>Method under test: {@link VerifyTransferProof#execute(byte[])}
    */
   @Test
-  @Category(MaintainedByDiffblue.class)
+  @Category(ContributionFromDiffblue.class)
+  @ManagedByDiffblue
   @MethodsUnderTest({"Pair VerifyTransferProof.execute(byte[])"})
   public void testVerifyTransferProofExecute_whenAxaxaxaxBytesIsUtf8()
       throws UnsupportedEncodingException {
@@ -3483,7 +3630,8 @@ public class PrecompiledContractsDiffblueTest {
    * <p>Method under test: {@link VerifyTransferProof#execute(byte[])}
    */
   @Test
-  @Category(MaintainedByDiffblue.class)
+  @Category(ContributionFromDiffblue.class)
+  @ManagedByDiffblue
   @MethodsUnderTest({"Pair VerifyTransferProof.execute(byte[])"})
   public void testVerifyTransferProofExecute_whenNull() {
     // Arrange and Act
@@ -3509,7 +3657,8 @@ public class PrecompiledContractsDiffblueTest {
    * <p>Method under test: {@link VerifyTransferProof#getEnergyForData(byte[])}
    */
   @Test
-  @Category(MaintainedByDiffblue.class)
+  @Category(ContributionFromDiffblue.class)
+  @ManagedByDiffblue
   @MethodsUnderTest({"long VerifyTransferProof.getEnergyForData(byte[])"})
   public void testVerifyTransferProofGetEnergyForData() throws UnsupportedEncodingException {
     // Arrange and Act
@@ -3526,7 +3675,8 @@ public class PrecompiledContractsDiffblueTest {
    * <p>Method under test: default or parameterless constructor of {@link VerifyTransferProof}
    */
   @Test
-  @Category(MaintainedByDiffblue.class)
+  @Category(ContributionFromDiffblue.class)
+  @ManagedByDiffblue
   @MethodsUnderTest({"void VerifyTransferProof.<init>()"})
   public void testVerifyTransferProofNewVerifyTransferProof() {
     // Arrange and Act
@@ -3549,7 +3699,8 @@ public class PrecompiledContractsDiffblueTest {
    * <p>Method under test: {@link VoteCount#execute(byte[])}
    */
   @Test
-  @Category(MaintainedByDiffblue.class)
+  @Category(ContributionFromDiffblue.class)
+  @ManagedByDiffblue
   @MethodsUnderTest({"Pair VoteCount.execute(byte[])"})
   public void testVoteCountExecute_whenAxaxaxaxBytesIsUtf8() throws UnsupportedEncodingException {
     // Arrange and Act
@@ -3580,7 +3731,8 @@ public class PrecompiledContractsDiffblueTest {
    * <p>Method under test: {@link VoteCount#execute(byte[])}
    */
   @Test
-  @Category(MaintainedByDiffblue.class)
+  @Category(ContributionFromDiffblue.class)
+  @ManagedByDiffblue
   @MethodsUnderTest({"Pair VoteCount.execute(byte[])"})
   public void testVoteCountExecute_whenNull() {
     // Arrange and Act
@@ -3606,7 +3758,8 @@ public class PrecompiledContractsDiffblueTest {
    * <p>Method under test: {@link VoteCount#getEnergyForData(byte[])}
    */
   @Test
-  @Category(MaintainedByDiffblue.class)
+  @Category(ContributionFromDiffblue.class)
+  @ManagedByDiffblue
   @MethodsUnderTest({"long VoteCount.getEnergyForData(byte[])"})
   public void testVoteCountGetEnergyForData() throws UnsupportedEncodingException {
     // Arrange and Act
@@ -3622,7 +3775,8 @@ public class PrecompiledContractsDiffblueTest {
    * <p>Method under test: default or parameterless constructor of {@link VoteCount}
    */
   @Test
-  @Category(MaintainedByDiffblue.class)
+  @Category(ContributionFromDiffblue.class)
+  @ManagedByDiffblue
   @MethodsUnderTest({"void VoteCount.<init>()"})
   public void testVoteCountNewVoteCount() {
     // Arrange and Act

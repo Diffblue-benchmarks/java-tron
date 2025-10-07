@@ -3,7 +3,8 @@ package org.tron.core.exception;
 import static org.junit.Assert.assertEquals;
 import static org.junit.Assert.assertNull;
 import static org.junit.Assert.assertSame;
-import com.diffblue.cover.annotations.MaintainedByDiffblue;
+import com.diffblue.cover.annotations.ContributionFromDiffblue;
+import com.diffblue.cover.annotations.ManagedByDiffblue;
 import com.diffblue.cover.annotations.MethodsUnderTest;
 import org.junit.Test;
 import org.junit.experimental.categories.Category;
@@ -15,7 +16,8 @@ public class EventBloomExceptionDiffblueTest {
    * <p>Method under test: {@link EventBloomException#EventBloomException()}
    */
   @Test
-  @Category(MaintainedByDiffblue.class)
+  @Category(ContributionFromDiffblue.class)
+  @ManagedByDiffblue
   @MethodsUnderTest({"void EventBloomException.<init>()"})
   public void testNewEventBloomException() {
     // Arrange and Act
@@ -34,7 +36,8 @@ public class EventBloomExceptionDiffblueTest {
    * <p>Method under test: {@link EventBloomException#EventBloomException(String)}
    */
   @Test
-  @Category(MaintainedByDiffblue.class)
+  @Category(ContributionFromDiffblue.class)
+  @ManagedByDiffblue
   @MethodsUnderTest({"void EventBloomException.<init>(String)"})
   public void testNewEventBloomException2() {
     // Arrange and Act
@@ -53,7 +56,8 @@ public class EventBloomExceptionDiffblueTest {
    * <p>Method under test: {@link EventBloomException#EventBloomException(String, Throwable)}
    */
   @Test
-  @Category(MaintainedByDiffblue.class)
+  @Category(ContributionFromDiffblue.class)
+  @ManagedByDiffblue
   @MethodsUnderTest({"void EventBloomException.<init>(String, Throwable)"})
   public void testNewEventBloomException3() {
     // Arrange

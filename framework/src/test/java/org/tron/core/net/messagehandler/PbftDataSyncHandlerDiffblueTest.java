@@ -4,7 +4,8 @@ import static org.mockito.Mockito.atLeast;
 import static org.mockito.Mockito.mock;
 import static org.mockito.Mockito.verify;
 import static org.mockito.Mockito.when;
-import com.diffblue.cover.annotations.MaintainedByDiffblue;
+import com.diffblue.cover.annotations.ContributionFromDiffblue;
+import com.diffblue.cover.annotations.ManagedByDiffblue;
 import com.diffblue.cover.annotations.MethodsUnderTest;
 import org.junit.Test;
 import org.junit.experimental.categories.Category;
@@ -28,7 +29,8 @@ public class PbftDataSyncHandlerDiffblueTest {
    * <p>Method under test: {@link PbftDataSyncHandler#processPBFTCommitData(BlockCapsule)}
    */
   @Test
-  @Category(MaintainedByDiffblue.class)
+  @Category(ContributionFromDiffblue.class)
+  @ManagedByDiffblue
   @MethodsUnderTest({"void PbftDataSyncHandler.processPBFTCommitData(BlockCapsule)"})
   public void testProcessPBFTCommitData() {
     // Arrange
@@ -47,7 +49,8 @@ public class PbftDataSyncHandlerDiffblueTest {
    * <p>Method under test: {@link PbftDataSyncHandler#processPBFTCommitData(BlockCapsule)}
    */
   @Test
-  @Category(MaintainedByDiffblue.class)
+  @Category(ContributionFromDiffblue.class)
+  @ManagedByDiffblue
   @MethodsUnderTest({"void PbftDataSyncHandler.processPBFTCommitData(BlockCapsule)"})
   public void testProcessPBFTCommitData2() {
     // Arrange
@@ -77,7 +80,8 @@ public class PbftDataSyncHandlerDiffblueTest {
    * <p>Method under test: {@link PbftDataSyncHandler#processPBFTCommitData(BlockCapsule)}
    */
   @Test
-  @Category(MaintainedByDiffblue.class)
+  @Category(ContributionFromDiffblue.class)
+  @ManagedByDiffblue
   @MethodsUnderTest({"void PbftDataSyncHandler.processPBFTCommitData(BlockCapsule)"})
   public void testProcessPBFTCommitData3() {
     // Arrange
@@ -112,7 +116,8 @@ public class PbftDataSyncHandlerDiffblueTest {
    * <p>Method under test: {@link PbftDataSyncHandler#processPBFTCommitData(BlockCapsule)}
    */
   @Test
-  @Category(MaintainedByDiffblue.class)
+  @Category(ContributionFromDiffblue.class)
+  @ManagedByDiffblue
   @MethodsUnderTest({"void PbftDataSyncHandler.processPBFTCommitData(BlockCapsule)"})
   public void testProcessPBFTCommitData_givenDynamicPropertiesStoreAllowPBFTReturnFalse() {
     // Arrange
@@ -139,7 +144,8 @@ public class PbftDataSyncHandlerDiffblueTest {
    * <p>Method under test: {@link PbftDataSyncHandler#processPBFTCommitData(BlockCapsule)}
    */
   @Test
-  @Category(MaintainedByDiffblue.class)
+  @Category(ContributionFromDiffblue.class)
+  @ManagedByDiffblue
   @MethodsUnderTest({"void PbftDataSyncHandler.processPBFTCommitData(BlockCapsule)"})
   public void testProcessPBFTCommitData_givenDynamicPropertiesStoreAllowPBFTReturnTrue() {
     // Arrange

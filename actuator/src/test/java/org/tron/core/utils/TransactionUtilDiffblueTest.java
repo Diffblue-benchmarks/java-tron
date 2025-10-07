@@ -10,7 +10,8 @@ import static org.mockito.Mockito.anyInt;
 import static org.mockito.Mockito.mock;
 import static org.mockito.Mockito.verify;
 import static org.mockito.Mockito.when;
-import com.diffblue.cover.annotations.MaintainedByDiffblue;
+import com.diffblue.cover.annotations.ContributionFromDiffblue;
+import com.diffblue.cover.annotations.ManagedByDiffblue;
 import com.diffblue.cover.annotations.MethodsUnderTest;
 import com.google.protobuf.ByteString;
 import com.google.protobuf.ByteString.ByteIterator;
@@ -47,7 +48,8 @@ public class TransactionUtilDiffblueTest {
    * <p>Method under test: {@link TransactionUtil#validAccountName(byte[])}
    */
   @Test
-  @Category(MaintainedByDiffblue.class)
+  @Category(ContributionFromDiffblue.class)
+  @ManagedByDiffblue
   @MethodsUnderTest({"boolean TransactionUtil.validAccountName(byte[])"})
   public void testValidAccountName_whenAxaxaxaxBytesIsUtf8() throws UnsupportedEncodingException {
     // Arrange, Act and Assert
@@ -64,7 +66,8 @@ public class TransactionUtilDiffblueTest {
    * <p>Method under test: {@link TransactionUtil#validAccountName(byte[])}
    */
   @Test
-  @Category(MaintainedByDiffblue.class)
+  @Category(ContributionFromDiffblue.class)
+  @ManagedByDiffblue
   @MethodsUnderTest({"boolean TransactionUtil.validAccountName(byte[])"})
   public void testValidAccountName_whenEmptyArrayOfByte() {
     // Arrange, Act and Assert
@@ -81,7 +84,8 @@ public class TransactionUtilDiffblueTest {
    * <p>Method under test: {@link TransactionUtil#validAccountName(byte[])}
    */
   @Test
-  @Category(MaintainedByDiffblue.class)
+  @Category(ContributionFromDiffblue.class)
+  @ManagedByDiffblue
   @MethodsUnderTest({"boolean TransactionUtil.validAccountName(byte[])"})
   public void testValidAccountName_whenNull() {
     // Arrange, Act and Assert
@@ -98,7 +102,8 @@ public class TransactionUtilDiffblueTest {
    * <p>Method under test: {@link TransactionUtil#validAssetDescription(byte[])}
    */
   @Test
-  @Category(MaintainedByDiffblue.class)
+  @Category(ContributionFromDiffblue.class)
+  @ManagedByDiffblue
   @MethodsUnderTest({"boolean TransactionUtil.validAssetDescription(byte[])"})
   public void testValidAssetDescription_whenAxaxaxaxBytesIsUtf8()
       throws UnsupportedEncodingException {
@@ -116,7 +121,8 @@ public class TransactionUtilDiffblueTest {
    * <p>Method under test: {@link TransactionUtil#validAssetDescription(byte[])}
    */
   @Test
-  @Category(MaintainedByDiffblue.class)
+  @Category(ContributionFromDiffblue.class)
+  @ManagedByDiffblue
   @MethodsUnderTest({"boolean TransactionUtil.validAssetDescription(byte[])"})
   public void testValidAssetDescription_whenEmptyArrayOfByte() {
     // Arrange, Act and Assert
@@ -133,7 +139,8 @@ public class TransactionUtilDiffblueTest {
    * <p>Method under test: {@link TransactionUtil#validAssetDescription(byte[])}
    */
   @Test
-  @Category(MaintainedByDiffblue.class)
+  @Category(ContributionFromDiffblue.class)
+  @ManagedByDiffblue
   @MethodsUnderTest({"boolean TransactionUtil.validAssetDescription(byte[])"})
   public void testValidAssetDescription_whenNull() {
     // Arrange, Act and Assert
@@ -151,7 +158,8 @@ public class TransactionUtilDiffblueTest {
    * <p>Method under test: {@link TransactionUtil#validUrl(byte[])}
    */
   @Test
-  @Category(MaintainedByDiffblue.class)
+  @Category(ContributionFromDiffblue.class)
+  @ManagedByDiffblue
   @MethodsUnderTest({"boolean TransactionUtil.validUrl(byte[])"})
   public void testValidUrl_whenAxaxaxaxBytesIsUtf8_thenReturnTrue()
       throws UnsupportedEncodingException {
@@ -170,7 +178,8 @@ public class TransactionUtilDiffblueTest {
    * <p>Method under test: {@link TransactionUtil#validUrl(byte[])}
    */
   @Test
-  @Category(MaintainedByDiffblue.class)
+  @Category(ContributionFromDiffblue.class)
+  @ManagedByDiffblue
   @MethodsUnderTest({"boolean TransactionUtil.validUrl(byte[])"})
   public void testValidUrl_whenEmptyArrayOfByte_thenReturnFalse() {
     // Arrange, Act and Assert
@@ -188,7 +197,8 @@ public class TransactionUtilDiffblueTest {
    * <p>Method under test: {@link TransactionUtil#validUrl(byte[])}
    */
   @Test
-  @Category(MaintainedByDiffblue.class)
+  @Category(ContributionFromDiffblue.class)
+  @ManagedByDiffblue
   @MethodsUnderTest({"boolean TransactionUtil.validUrl(byte[])"})
   public void testValidUrl_whenNull_thenReturnFalse() {
     // Arrange, Act and Assert
@@ -206,7 +216,8 @@ public class TransactionUtilDiffblueTest {
    * <p>Method under test: {@link TransactionUtil#validAccountId(byte[])}
    */
   @Test
-  @Category(MaintainedByDiffblue.class)
+  @Category(ContributionFromDiffblue.class)
+  @ManagedByDiffblue
   @MethodsUnderTest({"boolean TransactionUtil.validAccountId(byte[])"})
   public void testValidAccountId_whenAAAAAAAABytesIsUtf8_thenReturnFalse()
       throws UnsupportedEncodingException {
@@ -225,7 +236,8 @@ public class TransactionUtilDiffblueTest {
    * <p>Method under test: {@link TransactionUtil#validAccountId(byte[])}
    */
   @Test
-  @Category(MaintainedByDiffblue.class)
+  @Category(ContributionFromDiffblue.class)
+  @ManagedByDiffblue
   @MethodsUnderTest({"boolean TransactionUtil.validAccountId(byte[])"})
   public void testValidAccountId_whenA_thenReturnFalse() {
     // Arrange, Act and Assert
@@ -245,7 +257,8 @@ public class TransactionUtilDiffblueTest {
    * <p>Method under test: {@link TransactionUtil#validAccountId(byte[])}
    */
   @Test
-  @Category(MaintainedByDiffblue.class)
+  @Category(ContributionFromDiffblue.class)
+  @ManagedByDiffblue
   @MethodsUnderTest({"boolean TransactionUtil.validAccountId(byte[])"})
   public void testValidAccountId_whenAxaxaxaxBytesIsUtf8_thenReturnTrue()
       throws UnsupportedEncodingException {
@@ -264,7 +277,8 @@ public class TransactionUtilDiffblueTest {
    * <p>Method under test: {@link TransactionUtil#validAccountId(byte[])}
    */
   @Test
-  @Category(MaintainedByDiffblue.class)
+  @Category(ContributionFromDiffblue.class)
+  @ManagedByDiffblue
   @MethodsUnderTest({"boolean TransactionUtil.validAccountId(byte[])"})
   public void testValidAccountId_whenEmptyArrayOfByte_thenReturnFalse() {
     // Arrange, Act and Assert
@@ -282,7 +296,8 @@ public class TransactionUtilDiffblueTest {
    * <p>Method under test: {@link TransactionUtil#validAssetName(byte[])}
    */
   @Test
-  @Category(MaintainedByDiffblue.class)
+  @Category(ContributionFromDiffblue.class)
+  @ManagedByDiffblue
   @MethodsUnderTest({"boolean TransactionUtil.validAssetName(byte[])"})
   public void testValidAssetName_whenAAAAAAAABytesIsUtf8_thenReturnFalse()
       throws UnsupportedEncodingException {
@@ -301,7 +316,8 @@ public class TransactionUtilDiffblueTest {
    * <p>Method under test: {@link TransactionUtil#validAssetName(byte[])}
    */
   @Test
-  @Category(MaintainedByDiffblue.class)
+  @Category(ContributionFromDiffblue.class)
+  @ManagedByDiffblue
   @MethodsUnderTest({"boolean TransactionUtil.validAssetName(byte[])"})
   public void testValidAssetName_whenA_thenReturnFalse() {
     // Arrange, Act and Assert
@@ -321,7 +337,8 @@ public class TransactionUtilDiffblueTest {
    * <p>Method under test: {@link TransactionUtil#validAssetName(byte[])}
    */
   @Test
-  @Category(MaintainedByDiffblue.class)
+  @Category(ContributionFromDiffblue.class)
+  @ManagedByDiffblue
   @MethodsUnderTest({"boolean TransactionUtil.validAssetName(byte[])"})
   public void testValidAssetName_whenAxaxaxaxBytesIsUtf8_thenReturnTrue()
       throws UnsupportedEncodingException {
@@ -340,7 +357,8 @@ public class TransactionUtilDiffblueTest {
    * <p>Method under test: {@link TransactionUtil#validAssetName(byte[])}
    */
   @Test
-  @Category(MaintainedByDiffblue.class)
+  @Category(ContributionFromDiffblue.class)
+  @ManagedByDiffblue
   @MethodsUnderTest({"boolean TransactionUtil.validAssetName(byte[])"})
   public void testValidAssetName_whenEmptyArrayOfByte_thenReturnFalse() {
     // Arrange, Act and Assert
@@ -357,7 +375,8 @@ public class TransactionUtilDiffblueTest {
    * <p>Method under test: {@link TransactionUtil#validTokenAbbrName(byte[])}
    */
   @Test
-  @Category(MaintainedByDiffblue.class)
+  @Category(ContributionFromDiffblue.class)
+  @ManagedByDiffblue
   @MethodsUnderTest({"boolean TransactionUtil.validTokenAbbrName(byte[])"})
   public void testValidTokenAbbrName_whenAxaxaxaxBytesIsUtf8() throws UnsupportedEncodingException {
     // Arrange, Act and Assert
@@ -374,7 +393,8 @@ public class TransactionUtilDiffblueTest {
    * <p>Method under test: {@link TransactionUtil#validTokenAbbrName(byte[])}
    */
   @Test
-  @Category(MaintainedByDiffblue.class)
+  @Category(ContributionFromDiffblue.class)
+  @ManagedByDiffblue
   @MethodsUnderTest({"boolean TransactionUtil.validTokenAbbrName(byte[])"})
   public void testValidTokenAbbrName_whenEmptyArrayOfByte() {
     // Arrange, Act and Assert
@@ -392,7 +412,8 @@ public class TransactionUtilDiffblueTest {
    * <p>Method under test: {@link TransactionUtil#getTransactionId(Protocol.Transaction)}
    */
   @Test
-  @Category(MaintainedByDiffblue.class)
+  @Category(ContributionFromDiffblue.class)
+  @ManagedByDiffblue
   @MethodsUnderTest({"Sha256Hash TransactionUtil.getTransactionId(Protocol.Transaction)"})
   public void testGetTransactionId_whenDefaultInstance_thenReturnNotByteStringEmpty() {
     // Arrange and Act
@@ -439,7 +460,8 @@ public class TransactionUtilDiffblueTest {
    * <p>Method under test: {@link TransactionUtil#getContractRet(Protocol.Transaction)}
    */
   @Test
-  @Category(MaintainedByDiffblue.class)
+  @Category(ContributionFromDiffblue.class)
+  @ManagedByDiffblue
   @MethodsUnderTest({"contractResult TransactionUtil.getContractRet(Protocol.Transaction)"})
   public void testGetContractRet_givenZero_thenCallsGetRetCount() {
     // Arrange
@@ -465,7 +487,8 @@ public class TransactionUtilDiffblueTest {
    * <p>Method under test: {@link TransactionUtil#getContractRet(Protocol.Transaction)}
    */
   @Test
-  @Category(MaintainedByDiffblue.class)
+  @Category(ContributionFromDiffblue.class)
+  @ManagedByDiffblue
   @MethodsUnderTest({"contractResult TransactionUtil.getContractRet(Protocol.Transaction)"})
   public void testGetContractRet_whenDefaultInstance_thenReturnNull() {
     // Arrange, Act and Assert
@@ -482,7 +505,8 @@ public class TransactionUtilDiffblueTest {
    * <p>Method under test: {@link TransactionUtil#getCallTokenValue(Protocol.Transaction.Contract)}
    */
   @Test
-  @Category(MaintainedByDiffblue.class)
+  @Category(ContributionFromDiffblue.class)
+  @ManagedByDiffblue
   @MethodsUnderTest({"long TransactionUtil.getCallTokenValue(Protocol.Transaction.Contract)"})
   public void testGetCallTokenValue_whenDefaultInstance() {
     // Arrange, Act and Assert
@@ -499,7 +523,8 @@ public class TransactionUtilDiffblueTest {
    * <p>Method under test: {@link TransactionUtil#getCallTokenValue(Protocol.Transaction.Contract)}
    */
   @Test
-  @Category(MaintainedByDiffblue.class)
+  @Category(ContributionFromDiffblue.class)
+  @ManagedByDiffblue
   @MethodsUnderTest({"long TransactionUtil.getCallTokenValue(Protocol.Transaction.Contract)"})
   public void testGetCallTokenValue_whenNull() {
     // Arrange, Act and Assert
@@ -513,7 +538,8 @@ public class TransactionUtilDiffblueTest {
    * <p>Method under test: {@link TransactionUtil#generateContractAddress(byte[], byte[])}
    */
   @Test
-  @Category(MaintainedByDiffblue.class)
+  @Category(ContributionFromDiffblue.class)
+  @ManagedByDiffblue
   @MethodsUnderTest({"byte[] TransactionUtil.generateContractAddress(byte[], byte[])"})
   public void testGenerateContractAddressWithOwnerAddressTxRawDataHash()
       throws UnsupportedEncodingException {
@@ -538,7 +564,8 @@ public class TransactionUtilDiffblueTest {
    * <p>Method under test: {@link TransactionUtil#generateContractAddress(byte[], long)}
    */
   @Test
-  @Category(MaintainedByDiffblue.class)
+  @Category(ContributionFromDiffblue.class)
+  @ManagedByDiffblue
   @MethodsUnderTest({"byte[] TransactionUtil.generateContractAddress(byte[], long)"})
   public void testGenerateContractAddressWithTransactionRootIdNonce()
       throws UnsupportedEncodingException {
@@ -558,7 +585,8 @@ public class TransactionUtilDiffblueTest {
    * <p>Method under test: {@link TransactionUtil#generateContractAddress(byte[], long)}
    */
   @Test
-  @Category(MaintainedByDiffblue.class)
+  @Category(ContributionFromDiffblue.class)
+  @ManagedByDiffblue
   @MethodsUnderTest({"byte[] TransactionUtil.generateContractAddress(byte[], long)"})
   public void testGenerateContractAddressWithTransactionRootIdNonce2() {
     // Arrange, Act and Assert
@@ -582,7 +610,8 @@ public class TransactionUtilDiffblueTest {
    * Protocol.Transaction.Contract)}
    */
   @Test
-  @Category(MaintainedByDiffblue.class)
+  @Category(ContributionFromDiffblue.class)
+  @ManagedByDiffblue
   @MethodsUnderTest({
     "boolean TransactionUtil.checkPermissionOperations(Permission, Protocol.Transaction.Contract)"
   })
@@ -619,7 +648,8 @@ public class TransactionUtilDiffblueTest {
    * Protocol.Transaction.Contract)}
    */
   @Test
-  @Category(MaintainedByDiffblue.class)
+  @Category(ContributionFromDiffblue.class)
+  @ManagedByDiffblue
   @MethodsUnderTest({
     "boolean TransactionUtil.checkPermissionOperations(Permission, Protocol.Transaction.Contract)"
   })
@@ -660,7 +690,8 @@ public class TransactionUtilDiffblueTest {
    * Protocol.Transaction.Contract)}
    */
   @Test
-  @Category(MaintainedByDiffblue.class)
+  @Category(ContributionFromDiffblue.class)
+  @ManagedByDiffblue
   @MethodsUnderTest({
     "boolean TransactionUtil.checkPermissionOperations(Permission, Protocol.Transaction.Contract)"
   })
@@ -685,7 +716,8 @@ public class TransactionUtilDiffblueTest {
    * <p>Method under test: {@link TransactionUtil#makeUpperCamelMethod(String)}
    */
   @Test
-  @Category(MaintainedByDiffblue.class)
+  @Category(ContributionFromDiffblue.class)
+  @ManagedByDiffblue
   @MethodsUnderTest({"String TransactionUtil.makeUpperCamelMethod(String)"})
   public void testMakeUpperCamelMethod_whenGet_thenReturnGetGet() {
     // Arrange, Act and Assert
@@ -703,7 +735,8 @@ public class TransactionUtilDiffblueTest {
    * <p>Method under test: {@link TransactionUtil#makeUpperCamelMethod(String)}
    */
   @Test
-  @Category(MaintainedByDiffblue.class)
+  @Category(ContributionFromDiffblue.class)
+  @ManagedByDiffblue
   @MethodsUnderTest({"String TransactionUtil.makeUpperCamelMethod(String)"})
   public void testMakeUpperCamelMethod_whenOriginName_thenReturnGetOriginName() {
     // Arrange, Act and Assert
@@ -721,7 +754,8 @@ public class TransactionUtilDiffblueTest {
    * <p>Method under test: {@link TransactionUtil#makeUpperCamelMethod(String)}
    */
   @Test
-  @Category(MaintainedByDiffblue.class)
+  @Category(ContributionFromDiffblue.class)
+  @ManagedByDiffblue
   @MethodsUnderTest({"String TransactionUtil.makeUpperCamelMethod(String)"})
   public void testMakeUpperCamelMethod_whenUnderscoreUnderscore_thenReturnGet() {
     // Arrange, Act and Assert
@@ -739,7 +773,8 @@ public class TransactionUtilDiffblueTest {
    * <p>Method under test: {@link TransactionUtil#makeUpperCamelMethod(String)}
    */
   @Test
-  @Category(MaintainedByDiffblue.class)
+  @Category(ContributionFromDiffblue.class)
+  @ManagedByDiffblue
   @MethodsUnderTest({"String TransactionUtil.makeUpperCamelMethod(String)"})
   public void testMakeUpperCamelMethod_whenUnderscore_thenReturnGet() {
     // Arrange, Act and Assert
@@ -756,7 +791,8 @@ public class TransactionUtilDiffblueTest {
    * <p>Method under test: {@link TransactionUtil#getTransactionSignWeight(Protocol.Transaction)}
    */
   @Test
-  @Category(MaintainedByDiffblue.class)
+  @Category(ContributionFromDiffblue.class)
+  @ManagedByDiffblue
   @MethodsUnderTest({
     "GrpcAPI.TransactionSignWeight TransactionUtil.getTransactionSignWeight(Protocol.Transaction)"
   })
@@ -790,7 +826,8 @@ public class TransactionUtilDiffblueTest {
    * TransactionUtil#estimateConsumeBandWidthSize(DynamicPropertiesStore, long)}
    */
   @Test
-  @Category(MaintainedByDiffblue.class)
+  @Category(ContributionFromDiffblue.class)
+  @ManagedByDiffblue
   @MethodsUnderTest({
     "long TransactionUtil.estimateConsumeBandWidthSize(DynamicPropertiesStore, long)"
   })
@@ -820,7 +857,8 @@ public class TransactionUtilDiffblueTest {
    * TransactionUtil#estimateConsumeBandWidthSize(DynamicPropertiesStore, long)}
    */
   @Test
-  @Category(MaintainedByDiffblue.class)
+  @Category(ContributionFromDiffblue.class)
+  @ManagedByDiffblue
   @MethodsUnderTest({
     "long TransactionUtil.estimateConsumeBandWidthSize(DynamicPropertiesStore, long)"
   })
@@ -852,7 +890,8 @@ public class TransactionUtilDiffblueTest {
    * TransactionUtil#estimateConsumeBandWidthSize(DynamicPropertiesStore, long)}
    */
   @Test
-  @Category(MaintainedByDiffblue.class)
+  @Category(ContributionFromDiffblue.class)
+  @ManagedByDiffblue
   @MethodsUnderTest({
     "long TransactionUtil.estimateConsumeBandWidthSize(DynamicPropertiesStore, long)"
   })
@@ -884,7 +923,8 @@ public class TransactionUtilDiffblueTest {
    * TransactionUtil#estimateConsumeBandWidthSize(DynamicPropertiesStore, long)}
    */
   @Test
-  @Category(MaintainedByDiffblue.class)
+  @Category(ContributionFromDiffblue.class)
+  @ManagedByDiffblue
   @MethodsUnderTest({
     "long TransactionUtil.estimateConsumeBandWidthSize(DynamicPropertiesStore, long)"
   })
@@ -916,7 +956,8 @@ public class TransactionUtilDiffblueTest {
    * TransactionUtil#estimateConsumeBandWidthSize(DynamicPropertiesStore, long)}
    */
   @Test
-  @Category(MaintainedByDiffblue.class)
+  @Category(ContributionFromDiffblue.class)
+  @ManagedByDiffblue
   @MethodsUnderTest({
     "long TransactionUtil.estimateConsumeBandWidthSize(DynamicPropertiesStore, long)"
   })

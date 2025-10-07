@@ -5,7 +5,8 @@ import static org.junit.Assert.assertFalse;
 import static org.junit.Assert.assertNull;
 import static org.junit.Assert.assertSame;
 import static org.junit.Assert.assertTrue;
-import com.diffblue.cover.annotations.MaintainedByDiffblue;
+import com.diffblue.cover.annotations.ContributionFromDiffblue;
+import com.diffblue.cover.annotations.ManagedByDiffblue;
 import com.diffblue.cover.annotations.MethodsUnderTest;
 import java.io.UnsupportedEncodingException;
 import org.junit.Test;
@@ -18,7 +19,8 @@ public class BN128G1DiffblueTest {
    * <p>Method under test: {@link BN128G1#BN128G1(BN128)}
    */
   @Test
-  @Category(MaintainedByDiffblue.class)
+  @Category(ContributionFromDiffblue.class)
+  @ManagedByDiffblue
   @MethodsUnderTest({"void BN128G1.<init>(BN128)"})
   public void testNewBn128g1() {
     // Arrange
@@ -54,7 +56,8 @@ public class BN128G1DiffblueTest {
    * <p>Method under test: {@link BN128G1#create(byte[], byte[])}
    */
   @Test
-  @Category(MaintainedByDiffblue.class)
+  @Category(ContributionFromDiffblue.class)
+  @ManagedByDiffblue
   @MethodsUnderTest({"BN128G1 BN128G1.create(byte[], byte[])"})
   public void testCreate_whenAxaxaxaxBytesIsUtf8_thenReturnNull()
       throws UnsupportedEncodingException {
@@ -77,7 +80,8 @@ public class BN128G1DiffblueTest {
    * <p>Method under test: {@link BN128G1#create(byte[], byte[])}
    */
   @Test
-  @Category(MaintainedByDiffblue.class)
+  @Category(ContributionFromDiffblue.class)
+  @ManagedByDiffblue
   @MethodsUnderTest({"BN128G1 BN128G1.create(byte[], byte[])"})
   public void testCreate_whenEmptyArrayOfByte_thenReturnNull() throws UnsupportedEncodingException {
     // Arrange and Act
@@ -98,7 +102,8 @@ public class BN128G1DiffblueTest {
    * <p>Method under test: {@link BN128G1#create(byte[], byte[])}
    */
   @Test
-  @Category(MaintainedByDiffblue.class)
+  @Category(ContributionFromDiffblue.class)
+  @ManagedByDiffblue
   @MethodsUnderTest({"BN128G1 BN128G1.create(byte[], byte[])"})
   public void testCreate_whenEmptyArrayOfByte_thenToEthNotationReturnBN128Fp() {
     // Arrange and Act
@@ -128,7 +133,8 @@ public class BN128G1DiffblueTest {
    * <p>Method under test: {@link BN128G1#toAffine()}
    */
   @Test
-  @Category(MaintainedByDiffblue.class)
+  @Category(ContributionFromDiffblue.class)
+  @ManagedByDiffblue
   @MethodsUnderTest({"BN128G1 BN128G1.toAffine()"})
   public void testToAffine_givenBn128g1WithPIsZero_thenToEthNotationReturnBN128Fp() {
     // Arrange
@@ -164,7 +170,8 @@ public class BN128G1DiffblueTest {
    * <p>Method under test: {@link BN128G1#toAffine()}
    */
   @Test
-  @Category(MaintainedByDiffblue.class)
+  @Category(ContributionFromDiffblue.class)
+  @ManagedByDiffblue
   @MethodsUnderTest({"BN128G1 BN128G1.toAffine()"})
   public void testToAffine_thenZeroReturnBN128Fp() {
     // Arrange

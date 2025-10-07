@@ -9,7 +9,8 @@ import static org.mockito.Mockito.doNothing;
 import static org.mockito.Mockito.mock;
 import static org.mockito.Mockito.verify;
 import static org.mockito.Mockito.when;
-import com.diffblue.cover.annotations.MaintainedByDiffblue;
+import com.diffblue.cover.annotations.ContributionFromDiffblue;
+import com.diffblue.cover.annotations.ManagedByDiffblue;
 import com.diffblue.cover.annotations.MethodsUnderTest;
 import java.io.BufferedReader;
 import java.io.IOException;
@@ -52,7 +53,8 @@ public class IsSpendServletDiffblueTest {
    * <p>Method under test: {@link IsSpendServlet#doPost(HttpServletRequest, HttpServletResponse)}
    */
   @Test
-  @Category(MaintainedByDiffblue.class)
+  @Category(ContributionFromDiffblue.class)
+  @ManagedByDiffblue
   @MethodsUnderTest({"void IsSpendServlet.doPost(HttpServletRequest, HttpServletResponse)"})
   public void testDoPost() throws IOException {
     // Arrange
@@ -83,7 +85,8 @@ public class IsSpendServletDiffblueTest {
    * <p>Method under test: {@link IsSpendServlet#doPost(HttpServletRequest, HttpServletResponse)}
    */
   @Test
-  @Category(MaintainedByDiffblue.class)
+  @Category(ContributionFromDiffblue.class)
+  @ManagedByDiffblue
   @MethodsUnderTest({"void IsSpendServlet.doPost(HttpServletRequest, HttpServletResponse)"})
   public void testDoPost2() throws IOException {
     // Arrange
@@ -113,7 +116,8 @@ public class IsSpendServletDiffblueTest {
    * <p>Method under test: {@link IsSpendServlet#doPost(HttpServletRequest, HttpServletResponse)}
    */
   @Test
-  @Category(MaintainedByDiffblue.class)
+  @Category(ContributionFromDiffblue.class)
+  @ManagedByDiffblue
   @MethodsUnderTest({"void IsSpendServlet.doPost(HttpServletRequest, HttpServletResponse)"})
   public void testDoPost3() throws IOException {
     // Arrange
@@ -153,7 +157,8 @@ public class IsSpendServletDiffblueTest {
    * <p>Method under test: {@link IsSpendServlet#doPost(HttpServletRequest, HttpServletResponse)}
    */
   @Test
-  @Category(MaintainedByDiffblue.class)
+  @Category(ContributionFromDiffblue.class)
+  @ManagedByDiffblue
   @MethodsUnderTest({"void IsSpendServlet.doPost(HttpServletRequest, HttpServletResponse)"})
   public void testDoPost4() throws IOException {
     // Arrange
@@ -198,7 +203,8 @@ public class IsSpendServletDiffblueTest {
    * <p>Method under test: {@link IsSpendServlet#doPost(HttpServletRequest, HttpServletResponse)}
    */
   @Test
-  @Category(MaintainedByDiffblue.class)
+  @Category(ContributionFromDiffblue.class)
+  @ManagedByDiffblue
   @MethodsUnderTest({"void IsSpendServlet.doPost(HttpServletRequest, HttpServletResponse)"})
   public void testDoPost5() throws IOException {
     // Arrange
@@ -247,7 +253,8 @@ public class IsSpendServletDiffblueTest {
    * <p>Method under test: {@link IsSpendServlet#doPost(HttpServletRequest, HttpServletResponse)}
    */
   @Test
-  @Category(MaintainedByDiffblue.class)
+  @Category(ContributionFromDiffblue.class)
+  @ManagedByDiffblue
   @MethodsUnderTest({"void IsSpendServlet.doPost(HttpServletRequest, HttpServletResponse)"})
   public void testDoPost_thenHttpServletResponseWrapperWithResponseIsResponseResponseResponse()
       throws IOException {
@@ -316,7 +323,8 @@ public class IsSpendServletDiffblueTest {
    * <p>Method under test: {@link IsSpendServlet#doPost(HttpServletRequest, HttpServletResponse)}
    */
   @Test
-  @Category(MaintainedByDiffblue.class)
+  @Category(ContributionFromDiffblue.class)
+  @ManagedByDiffblue
   @MethodsUnderTest({"void IsSpendServlet.doPost(HttpServletRequest, HttpServletResponse)"})
   public void testDoPost_thenMockHttpServletRequestReaderLinesCollectJoiningLfIsEmptyString()
       throws IOException {

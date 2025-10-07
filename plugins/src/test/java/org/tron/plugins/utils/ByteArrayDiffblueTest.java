@@ -3,7 +3,8 @@ package org.tron.plugins.utils;
 import static org.junit.Assert.assertArrayEquals;
 import static org.junit.Assert.assertEquals;
 import static org.junit.Assert.assertNull;
-import com.diffblue.cover.annotations.MaintainedByDiffblue;
+import com.diffblue.cover.annotations.ContributionFromDiffblue;
+import com.diffblue.cover.annotations.ManagedByDiffblue;
 import com.diffblue.cover.annotations.MethodsUnderTest;
 import java.io.UnsupportedEncodingException;
 import org.junit.Test;
@@ -21,7 +22,8 @@ public class ByteArrayDiffblueTest {
    * <p>Method under test: {@link ByteArray#fromString(String)}
    */
   @Test
-  @Category(MaintainedByDiffblue.class)
+  @Category(ContributionFromDiffblue.class)
+  @ManagedByDiffblue
   @MethodsUnderTest({"byte[] ByteArray.fromString(String)"})
   public void testFromString_whenEmptyString_thenReturnNull() {
     // Arrange, Act and Assert
@@ -39,7 +41,8 @@ public class ByteArrayDiffblueTest {
    * <p>Method under test: {@link ByteArray#fromString(String)}
    */
   @Test
-  @Category(MaintainedByDiffblue.class)
+  @Category(ContributionFromDiffblue.class)
+  @ManagedByDiffblue
   @MethodsUnderTest({"byte[] ByteArray.fromString(String)"})
   public void testFromString_whenFoo_thenReturnFooBytesIsUtf8()
       throws UnsupportedEncodingException {
@@ -58,7 +61,8 @@ public class ByteArrayDiffblueTest {
    * <p>Method under test: {@link ByteArray#fromString(String)}
    */
   @Test
-  @Category(MaintainedByDiffblue.class)
+  @Category(ContributionFromDiffblue.class)
+  @ManagedByDiffblue
   @MethodsUnderTest({"byte[] ByteArray.fromString(String)"})
   public void testFromString_whenNull_thenReturnNull() {
     // Arrange, Act and Assert
@@ -76,7 +80,8 @@ public class ByteArrayDiffblueTest {
    * <p>Method under test: {@link ByteArray#fromString(String)}
    */
   @Test
-  @Category(MaintainedByDiffblue.class)
+  @Category(ContributionFromDiffblue.class)
+  @ManagedByDiffblue
   @MethodsUnderTest({"byte[] ByteArray.fromString(String)"})
   public void testFromString_whenSpace_thenReturnNull() {
     // Arrange, Act and Assert
@@ -94,7 +99,8 @@ public class ByteArrayDiffblueTest {
    * <p>Method under test: {@link ByteArray#toStr(byte[])}
    */
   @Test
-  @Category(MaintainedByDiffblue.class)
+  @Category(ContributionFromDiffblue.class)
+  @ManagedByDiffblue
   @MethodsUnderTest({"String ByteArray.toStr(byte[])"})
   public void testToStr_whenAxaxaxaxBytesIsUtf8_thenReturnAxaxaxax()
       throws UnsupportedEncodingException {
@@ -113,7 +119,8 @@ public class ByteArrayDiffblueTest {
    * <p>Method under test: {@link ByteArray#toStr(byte[])}
    */
   @Test
-  @Category(MaintainedByDiffblue.class)
+  @Category(ContributionFromDiffblue.class)
+  @ManagedByDiffblue
   @MethodsUnderTest({"String ByteArray.toStr(byte[])"})
   public void testToStr_whenEmptyArrayOfByte_thenReturnNull() {
     // Arrange, Act and Assert
@@ -131,7 +138,8 @@ public class ByteArrayDiffblueTest {
    * <p>Method under test: {@link ByteArray#toStr(byte[])}
    */
   @Test
-  @Category(MaintainedByDiffblue.class)
+  @Category(ContributionFromDiffblue.class)
+  @ManagedByDiffblue
   @MethodsUnderTest({"String ByteArray.toStr(byte[])"})
   public void testToStr_whenNull_thenReturnNull() {
     // Arrange, Act and Assert
@@ -144,7 +152,8 @@ public class ByteArrayDiffblueTest {
    * <p>Method under test: {@link ByteArray#fromLong(long)}
    */
   @Test
-  @Category(MaintainedByDiffblue.class)
+  @Category(ContributionFromDiffblue.class)
+  @ManagedByDiffblue
   @MethodsUnderTest({"byte[] ByteArray.fromLong(long)"})
   public void testFromLong() {
     // Arrange, Act and Assert
@@ -162,7 +171,8 @@ public class ByteArrayDiffblueTest {
    * <p>Method under test: {@link ByteArray#toLong(byte[])}
    */
   @Test
-  @Category(MaintainedByDiffblue.class)
+  @Category(ContributionFromDiffblue.class)
+  @ManagedByDiffblue
   @MethodsUnderTest({"long ByteArray.toLong(byte[])"})
   public void testToLong_whenAxaxaxaxBytesIsUtf8_thenReturn4708585257725083992()
       throws UnsupportedEncodingException {
@@ -181,7 +191,8 @@ public class ByteArrayDiffblueTest {
    * <p>Method under test: {@link ByteArray#toLong(byte[])}
    */
   @Test
-  @Category(MaintainedByDiffblue.class)
+  @Category(ContributionFromDiffblue.class)
+  @ManagedByDiffblue
   @MethodsUnderTest({"long ByteArray.toLong(byte[])"})
   public void testToLong_whenEmptyArrayOfByte_thenReturnZero() {
     // Arrange, Act and Assert
@@ -199,7 +210,8 @@ public class ByteArrayDiffblueTest {
    * <p>Method under test: {@link ByteArray#toLong(byte[])}
    */
   @Test
-  @Category(MaintainedByDiffblue.class)
+  @Category(ContributionFromDiffblue.class)
+  @ManagedByDiffblue
   @MethodsUnderTest({"long ByteArray.toLong(byte[])"})
   public void testToLong_whenNull_thenReturnZero() {
     // Arrange, Act and Assert
@@ -212,7 +224,8 @@ public class ByteArrayDiffblueTest {
    * <p>Method under test: {@link ByteArray#fromInt(int)}
    */
   @Test
-  @Category(MaintainedByDiffblue.class)
+  @Category(ContributionFromDiffblue.class)
+  @ManagedByDiffblue
   @MethodsUnderTest({"byte[] ByteArray.fromInt(int)"})
   public void testFromInt() {
     // Arrange, Act and Assert
@@ -230,7 +243,8 @@ public class ByteArrayDiffblueTest {
    * <p>Method under test: {@link ByteArray#toInt(byte[])}
    */
   @Test
-  @Category(MaintainedByDiffblue.class)
+  @Category(ContributionFromDiffblue.class)
+  @ManagedByDiffblue
   @MethodsUnderTest({"int ByteArray.toInt(byte[])"})
   public void testToInt_whenAxaxaxaxBytesIsUtf8_thenReturn1096302936()
       throws UnsupportedEncodingException {
@@ -249,7 +263,8 @@ public class ByteArrayDiffblueTest {
    * <p>Method under test: {@link ByteArray#toInt(byte[])}
    */
   @Test
-  @Category(MaintainedByDiffblue.class)
+  @Category(ContributionFromDiffblue.class)
+  @ManagedByDiffblue
   @MethodsUnderTest({"int ByteArray.toInt(byte[])"})
   public void testToInt_whenEmptyArrayOfByte_thenReturnZero() {
     // Arrange, Act and Assert
@@ -267,7 +282,8 @@ public class ByteArrayDiffblueTest {
    * <p>Method under test: {@link ByteArray#toInt(byte[])}
    */
   @Test
-  @Category(MaintainedByDiffblue.class)
+  @Category(ContributionFromDiffblue.class)
+  @ManagedByDiffblue
   @MethodsUnderTest({"int ByteArray.toInt(byte[])"})
   public void testToInt_whenNull_thenReturnZero() {
     // Arrange, Act and Assert
@@ -280,7 +296,8 @@ public class ByteArrayDiffblueTest {
    * <p>Method under test: {@link ByteArray#compareUnsigned(byte[], byte[])}
    */
   @Test
-  @Category(MaintainedByDiffblue.class)
+  @Category(ContributionFromDiffblue.class)
+  @ManagedByDiffblue
   @MethodsUnderTest({"int ByteArray.compareUnsigned(byte[], byte[])"})
   public void testCompareUnsigned() throws UnsupportedEncodingException {
     // Arrange and Act
@@ -298,7 +315,8 @@ public class ByteArrayDiffblueTest {
    * <p>Method under test: {@link ByteArray#compareUnsigned(byte[], byte[])}
    */
   @Test
-  @Category(MaintainedByDiffblue.class)
+  @Category(ContributionFromDiffblue.class)
+  @ManagedByDiffblue
   @MethodsUnderTest({"int ByteArray.compareUnsigned(byte[], byte[])"})
   public void testCompareUnsigned2() throws UnsupportedEncodingException {
     // Arrange and Act
@@ -321,7 +339,8 @@ public class ByteArrayDiffblueTest {
    * <p>Method under test: {@link ByteArray#compareUnsigned(byte[], byte[])}
    */
   @Test
-  @Category(MaintainedByDiffblue.class)
+  @Category(ContributionFromDiffblue.class)
+  @ManagedByDiffblue
   @MethodsUnderTest({"int ByteArray.compareUnsigned(byte[], byte[])"})
   public void testCompareUnsigned_whenA_thenReturnMinusOne() {
     // Arrange and Act
@@ -343,7 +362,8 @@ public class ByteArrayDiffblueTest {
    * <p>Method under test: {@link ByteArray#compareUnsigned(byte[], byte[])}
    */
   @Test
-  @Category(MaintainedByDiffblue.class)
+  @Category(ContributionFromDiffblue.class)
+  @ManagedByDiffblue
   @MethodsUnderTest({"int ByteArray.compareUnsigned(byte[], byte[])"})
   public void testCompareUnsigned_whenA_thenReturnOne() {
     // Arrange, Act and Assert
@@ -362,7 +382,8 @@ public class ByteArrayDiffblueTest {
    * <p>Method under test: {@link ByteArray#compareUnsigned(byte[], byte[])}
    */
   @Test
-  @Category(MaintainedByDiffblue.class)
+  @Category(ContributionFromDiffblue.class)
+  @ManagedByDiffblue
   @MethodsUnderTest({"int ByteArray.compareUnsigned(byte[], byte[])"})
   public void testCompareUnsigned_whenAxaxaxaxBytesIsUtf8_thenReturnZero()
       throws UnsupportedEncodingException {
@@ -385,7 +406,8 @@ public class ByteArrayDiffblueTest {
    * <p>Method under test: {@link ByteArray#compareUnsigned(byte[], byte[])}
    */
   @Test
-  @Category(MaintainedByDiffblue.class)
+  @Category(ContributionFromDiffblue.class)
+  @ManagedByDiffblue
   @MethodsUnderTest({"int ByteArray.compareUnsigned(byte[], byte[])"})
   public void testCompareUnsigned_whenEmptyArrayOfByte_thenReturnMinusOne()
       throws UnsupportedEncodingException {
@@ -408,7 +430,8 @@ public class ByteArrayDiffblueTest {
    * <p>Method under test: {@link ByteArray#compareUnsigned(byte[], byte[])}
    */
   @Test
-  @Category(MaintainedByDiffblue.class)
+  @Category(ContributionFromDiffblue.class)
+  @ManagedByDiffblue
   @MethodsUnderTest({"int ByteArray.compareUnsigned(byte[], byte[])"})
   public void testCompareUnsigned_whenEmptyArrayOfByte_thenReturnOne()
       throws UnsupportedEncodingException {
@@ -431,7 +454,8 @@ public class ByteArrayDiffblueTest {
    * <p>Method under test: {@link ByteArray#compareUnsigned(byte[], byte[])}
    */
   @Test
-  @Category(MaintainedByDiffblue.class)
+  @Category(ContributionFromDiffblue.class)
+  @ManagedByDiffblue
   @MethodsUnderTest({"int ByteArray.compareUnsigned(byte[], byte[])"})
   public void testCompareUnsigned_whenNull_thenReturnZero() {
     // Arrange, Act and Assert
@@ -449,7 +473,8 @@ public class ByteArrayDiffblueTest {
    * <p>Method under test: {@link ByteArray#toHexString(byte[])}
    */
   @Test
-  @Category(MaintainedByDiffblue.class)
+  @Category(ContributionFromDiffblue.class)
+  @ManagedByDiffblue
   @MethodsUnderTest({"String ByteArray.toHexString(byte[])"})
   public void testToHexString_whenAxaxaxaxBytesIsUtf8_thenReturn4158415841584158()
       throws UnsupportedEncodingException {
@@ -468,7 +493,8 @@ public class ByteArrayDiffblueTest {
    * <p>Method under test: {@link ByteArray#toHexString(byte[])}
    */
   @Test
-  @Category(MaintainedByDiffblue.class)
+  @Category(ContributionFromDiffblue.class)
+  @ManagedByDiffblue
   @MethodsUnderTest({"String ByteArray.toHexString(byte[])"})
   public void testToHexString_whenEmptyArrayOfByte_thenReturnEmptyString() {
     // Arrange, Act and Assert
@@ -486,7 +512,8 @@ public class ByteArrayDiffblueTest {
    * <p>Method under test: {@link ByteArray#toHexString(byte[])}
    */
   @Test
-  @Category(MaintainedByDiffblue.class)
+  @Category(ContributionFromDiffblue.class)
+  @ManagedByDiffblue
   @MethodsUnderTest({"String ByteArray.toHexString(byte[])"})
   public void testToHexString_whenNull_thenReturnEmptyString() {
     // Arrange, Act and Assert
@@ -504,7 +531,8 @@ public class ByteArrayDiffblueTest {
    * <p>Method under test: {@link ByteArray#fromHexString(String)}
    */
   @Test
-  @Category(MaintainedByDiffblue.class)
+  @Category(ContributionFromDiffblue.class)
+  @ManagedByDiffblue
   @MethodsUnderTest({"byte[] ByteArray.fromHexString(String)"})
   public void testFromHexString_when0x_thenReturnEmptyArrayOfByte() {
     // Arrange, Act and Assert
@@ -522,7 +550,8 @@ public class ByteArrayDiffblueTest {
    * <p>Method under test: {@link ByteArray#fromHexString(String)}
    */
   @Test
-  @Category(MaintainedByDiffblue.class)
+  @Category(ContributionFromDiffblue.class)
+  @ManagedByDiffblue
   @MethodsUnderTest({"byte[] ByteArray.fromHexString(String)"})
   public void testFromHexString_when0123456789abcdef_thenReturnArrayOfByteWithOneAndNumberSign() {
     // Arrange, Act and Assert
@@ -542,7 +571,8 @@ public class ByteArrayDiffblueTest {
    * <p>Method under test: {@link ByteArray#fromHexString(String)}
    */
   @Test
-  @Category(MaintainedByDiffblue.class)
+  @Category(ContributionFromDiffblue.class)
+  @ManagedByDiffblue
   @MethodsUnderTest({"byte[] ByteArray.fromHexString(String)"})
   public void testFromHexString_whenNull_thenReturnEmptyArrayOfByte() {
     // Arrange, Act and Assert

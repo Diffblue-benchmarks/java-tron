@@ -6,7 +6,8 @@ import static org.junit.Assert.assertNull;
 import static org.junit.Assert.assertSame;
 import static org.junit.Assert.assertThrows;
 import static org.junit.Assert.assertTrue;
-import com.diffblue.cover.annotations.MaintainedByDiffblue;
+import com.diffblue.cover.annotations.ContributionFromDiffblue;
+import com.diffblue.cover.annotations.ManagedByDiffblue;
 import com.diffblue.cover.annotations.MethodsUnderTest;
 import java.io.UnsupportedEncodingException;
 import java.util.ArrayList;
@@ -21,7 +22,8 @@ public class LocalWitnessesDiffblueTest {
    * <p>Method under test: {@link LocalWitnesses#LocalWitnesses()}
    */
   @Test
-  @Category(MaintainedByDiffblue.class)
+  @Category(ContributionFromDiffblue.class)
+  @ManagedByDiffblue
   @MethodsUnderTest({"void LocalWitnesses.<init>()"})
   public void testNewLocalWitnesses() {
     // Arrange and Act
@@ -39,7 +41,8 @@ public class LocalWitnessesDiffblueTest {
    * <p>Method under test: {@link LocalWitnesses#LocalWitnesses(String)}
    */
   @Test
-  @Category(MaintainedByDiffblue.class)
+  @Category(ContributionFromDiffblue.class)
+  @ManagedByDiffblue
   @MethodsUnderTest({"void LocalWitnesses.<init>(String)"})
   public void testNewLocalWitnesses2() {
     // Arrange and Act
@@ -68,7 +71,8 @@ public class LocalWitnessesDiffblueTest {
    * <p>Method under test: {@link LocalWitnesses#LocalWitnesses(List)}
    */
   @Test
-  @Category(MaintainedByDiffblue.class)
+  @Category(ContributionFromDiffblue.class)
+  @ManagedByDiffblue
   @MethodsUnderTest({"void LocalWitnesses.<init>(List)"})
   public void testNewLocalWitnesses_given0x_whenArrayListAdd0x_thenReturnPrivateKeyIs0x() {
     // Arrange
@@ -95,7 +99,8 @@ public class LocalWitnessesDiffblueTest {
    * <p>Method under test: {@link LocalWitnesses#LocalWitnesses(List)}
    */
   @Test
-  @Category(MaintainedByDiffblue.class)
+  @Category(ContributionFromDiffblue.class)
+  @ManagedByDiffblue
   @MethodsUnderTest({"void LocalWitnesses.<init>(List)"})
   public void testNewLocalWitnesses_givenFoo_whenArrayListAddFoo() {
     // Arrange
@@ -118,7 +123,8 @@ public class LocalWitnessesDiffblueTest {
    * <p>Method under test: {@link LocalWitnesses#LocalWitnesses(List)}
    */
   @Test
-  @Category(MaintainedByDiffblue.class)
+  @Category(ContributionFromDiffblue.class)
+  @ManagedByDiffblue
   @MethodsUnderTest({"void LocalWitnesses.<init>(List)"})
   public void testNewLocalWitnesses_givenNotBlank_whenArrayListAddNotBlank() {
     // Arrange
@@ -140,7 +146,8 @@ public class LocalWitnessesDiffblueTest {
    * <p>Method under test: {@link LocalWitnesses#LocalWitnesses(List)}
    */
   @Test
-  @Category(MaintainedByDiffblue.class)
+  @Category(ContributionFromDiffblue.class)
+  @ManagedByDiffblue
   @MethodsUnderTest({"void LocalWitnesses.<init>(List)"})
   public void testNewLocalWitnesses_givenSpace_thenReturnPrivateKeyIsSpace() {
     // Arrange
@@ -166,7 +173,8 @@ public class LocalWitnessesDiffblueTest {
    * <p>Method under test: {@link LocalWitnesses#LocalWitnesses(String)}
    */
   @Test
-  @Category(MaintainedByDiffblue.class)
+  @Category(ContributionFromDiffblue.class)
+  @ManagedByDiffblue
   @MethodsUnderTest({"void LocalWitnesses.<init>(String)"})
   public void testNewLocalWitnesses_when0x_thenReturnPrivateKeysFirstIs0x() {
     // Arrange and Act
@@ -190,7 +198,8 @@ public class LocalWitnessesDiffblueTest {
    * <p>Method under test: {@link LocalWitnesses#LocalWitnesses(List)}
    */
   @Test
-  @Category(MaintainedByDiffblue.class)
+  @Category(ContributionFromDiffblue.class)
+  @ManagedByDiffblue
   @MethodsUnderTest({"void LocalWitnesses.<init>(List)"})
   public void testNewLocalWitnesses_whenArrayList_thenReturnPublicKeyIsNull() {
     // Arrange and Act
@@ -213,7 +222,8 @@ public class LocalWitnessesDiffblueTest {
    * <p>Method under test: {@link LocalWitnesses#LocalWitnesses(List)}
    */
   @Test
-  @Category(MaintainedByDiffblue.class)
+  @Category(ContributionFromDiffblue.class)
+  @ManagedByDiffblue
   @MethodsUnderTest({"void LocalWitnesses.<init>(List)"})
   public void testNewLocalWitnesses_whenNull_thenReturnPublicKeyIsNull() {
     // Arrange and Act
@@ -236,7 +246,8 @@ public class LocalWitnessesDiffblueTest {
    * <p>Method under test: {@link LocalWitnesses#LocalWitnesses(String)}
    */
   @Test
-  @Category(MaintainedByDiffblue.class)
+  @Category(ContributionFromDiffblue.class)
+  @ManagedByDiffblue
   @MethodsUnderTest({"void LocalWitnesses.<init>(String)"})
   public void testNewLocalWitnesses_whenPrivateKey_thenThrowIllegalArgumentException() {
     // Arrange, Act and Assert
@@ -254,7 +265,8 @@ public class LocalWitnessesDiffblueTest {
    * <p>Method under test: {@link LocalWitnesses#LocalWitnesses(String)}
    */
   @Test
-  @Category(MaintainedByDiffblue.class)
+  @Category(ContributionFromDiffblue.class)
+  @ManagedByDiffblue
   @MethodsUnderTest({"void LocalWitnesses.<init>(String)"})
   public void testNewLocalWitnesses_whenSpace_thenReturnPrivateKeysFirstIsSpace() {
     // Arrange and Act
@@ -279,7 +291,8 @@ public class LocalWitnessesDiffblueTest {
    * <p>Method under test: {@link LocalWitnesses#getWitnessAccountAddress(boolean)}
    */
   @Test
-  @Category(MaintainedByDiffblue.class)
+  @Category(ContributionFromDiffblue.class)
+  @ManagedByDiffblue
   @MethodsUnderTest({"byte[] LocalWitnesses.getWitnessAccountAddress(boolean)"})
   public void testGetWitnessAccountAddress_givenA_whenTrue_thenReturnArrayOfByteWithAAndOne() {
     // Arrange
@@ -303,7 +316,8 @@ public class LocalWitnessesDiffblueTest {
    * <p>Method under test: {@link LocalWitnesses#setPrivateKeys(List)}
    */
   @Test
-  @Category(MaintainedByDiffblue.class)
+  @Category(ContributionFromDiffblue.class)
+  @ManagedByDiffblue
   @MethodsUnderTest({"void LocalWitnesses.setPrivateKeys(List)"})
   public void testSetPrivateKeys_given0x_whenArrayListAdd0x_thenLocalWitnessesPrivateKeyIs0x() {
     // Arrange
@@ -332,7 +346,8 @@ public class LocalWitnessesDiffblueTest {
    * <p>Method under test: {@link LocalWitnesses#setPrivateKeys(List)}
    */
   @Test
-  @Category(MaintainedByDiffblue.class)
+  @Category(ContributionFromDiffblue.class)
+  @ManagedByDiffblue
   @MethodsUnderTest({"void LocalWitnesses.setPrivateKeys(List)"})
   public void testSetPrivateKeys_givenFoo_whenArrayListAddFoo() {
     // Arrange
@@ -357,7 +372,8 @@ public class LocalWitnessesDiffblueTest {
    * <p>Method under test: {@link LocalWitnesses#setPrivateKeys(List)}
    */
   @Test
-  @Category(MaintainedByDiffblue.class)
+  @Category(ContributionFromDiffblue.class)
+  @ManagedByDiffblue
   @MethodsUnderTest({"void LocalWitnesses.setPrivateKeys(List)"})
   public void testSetPrivateKeys_givenNotBlank_whenArrayListAddNotBlank() {
     // Arrange
@@ -381,7 +397,8 @@ public class LocalWitnessesDiffblueTest {
    * <p>Method under test: {@link LocalWitnesses#setPrivateKeys(List)}
    */
   @Test
-  @Category(MaintainedByDiffblue.class)
+  @Category(ContributionFromDiffblue.class)
+  @ManagedByDiffblue
   @MethodsUnderTest({"void LocalWitnesses.setPrivateKeys(List)"})
   public void testSetPrivateKeys_givenSpace_thenLocalWitnessesPrivateKeyIsSpace() {
     // Arrange
@@ -409,7 +426,8 @@ public class LocalWitnessesDiffblueTest {
    * <p>Method under test: {@link LocalWitnesses#setPrivateKeys(List)}
    */
   @Test
-  @Category(MaintainedByDiffblue.class)
+  @Category(ContributionFromDiffblue.class)
+  @ManagedByDiffblue
   @MethodsUnderTest({"void LocalWitnesses.setPrivateKeys(List)"})
   public void testSetPrivateKeys_whenArrayList_thenLocalWitnessesPrivateKeysEmpty() {
     // Arrange
@@ -433,7 +451,8 @@ public class LocalWitnessesDiffblueTest {
    * <p>Method under test: {@link LocalWitnesses#setPrivateKeys(List)}
    */
   @Test
-  @Category(MaintainedByDiffblue.class)
+  @Category(ContributionFromDiffblue.class)
+  @ManagedByDiffblue
   @MethodsUnderTest({"void LocalWitnesses.setPrivateKeys(List)"})
   public void testSetPrivateKeys_whenNull_thenLocalWitnessesPrivateKeysEmpty() {
     // Arrange
@@ -457,7 +476,8 @@ public class LocalWitnessesDiffblueTest {
    * <p>Method under test: {@link LocalWitnesses#addPrivateKeys(String)}
    */
   @Test
-  @Category(MaintainedByDiffblue.class)
+  @Category(ContributionFromDiffblue.class)
+  @ManagedByDiffblue
   @MethodsUnderTest({"void LocalWitnesses.addPrivateKeys(String)"})
   public void testAddPrivateKeys_when0x_thenLocalWitnessesPrivateKeysFirstIs0x() {
     // Arrange
@@ -484,7 +504,8 @@ public class LocalWitnessesDiffblueTest {
    * <p>Method under test: {@link LocalWitnesses#addPrivateKeys(String)}
    */
   @Test
-  @Category(MaintainedByDiffblue.class)
+  @Category(ContributionFromDiffblue.class)
+  @ManagedByDiffblue
   @MethodsUnderTest({"void LocalWitnesses.addPrivateKeys(String)"})
   public void testAddPrivateKeys_whenPrivateKey_thenThrowIllegalArgumentException() {
     // Arrange, Act and Assert
@@ -503,7 +524,8 @@ public class LocalWitnessesDiffblueTest {
    * <p>Method under test: {@link LocalWitnesses#addPrivateKeys(String)}
    */
   @Test
-  @Category(MaintainedByDiffblue.class)
+  @Category(ContributionFromDiffblue.class)
+  @ManagedByDiffblue
   @MethodsUnderTest({"void LocalWitnesses.addPrivateKeys(String)"})
   public void testAddPrivateKeys_whenSpace_thenLocalWitnessesPrivateKeysFirstIsSpace() {
     // Arrange
@@ -530,7 +552,8 @@ public class LocalWitnessesDiffblueTest {
    * <p>Method under test: {@link LocalWitnesses#getPrivateKey()}
    */
   @Test
-  @Category(MaintainedByDiffblue.class)
+  @Category(ContributionFromDiffblue.class)
+  @ManagedByDiffblue
   @MethodsUnderTest({"String LocalWitnesses.getPrivateKey()"})
   public void testGetPrivateKey_givenLocalWitnessesAddPrivateKeys0x_thenReturn0x() {
     // Arrange
@@ -552,7 +575,8 @@ public class LocalWitnessesDiffblueTest {
    * <p>Method under test: {@link LocalWitnesses#getPrivateKey()}
    */
   @Test
-  @Category(MaintainedByDiffblue.class)
+  @Category(ContributionFromDiffblue.class)
+  @ManagedByDiffblue
   @MethodsUnderTest({"String LocalWitnesses.getPrivateKey()"})
   public void testGetPrivateKey_givenLocalWitnesses_thenReturnNull() {
     // Arrange, Act and Assert
@@ -570,7 +594,8 @@ public class LocalWitnessesDiffblueTest {
    * <p>Method under test: {@link LocalWitnesses#getPublicKey()}
    */
   @Test
-  @Category(MaintainedByDiffblue.class)
+  @Category(ContributionFromDiffblue.class)
+  @ManagedByDiffblue
   @MethodsUnderTest({"byte[] LocalWitnesses.getPublicKey()"})
   public void testGetPublicKey_givenLocalWitnesses_thenReturnNull() {
     // Arrange, Act and Assert
@@ -588,7 +613,8 @@ public class LocalWitnessesDiffblueTest {
    * </ul>
    */
   @Test
-  @Category(MaintainedByDiffblue.class)
+  @Category(ContributionFromDiffblue.class)
+  @ManagedByDiffblue
   @MethodsUnderTest({
     "List LocalWitnesses.getPrivateKeys()",
     "void LocalWitnesses.setWitnessAccountAddress(byte[])"

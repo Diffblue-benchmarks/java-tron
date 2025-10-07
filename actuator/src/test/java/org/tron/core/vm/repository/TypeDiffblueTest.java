@@ -5,7 +5,8 @@ import static org.junit.Assert.assertFalse;
 import static org.junit.Assert.assertNotEquals;
 import static org.junit.Assert.assertSame;
 import static org.junit.Assert.assertTrue;
-import com.diffblue.cover.annotations.MaintainedByDiffblue;
+import com.diffblue.cover.annotations.ContributionFromDiffblue;
+import com.diffblue.cover.annotations.ManagedByDiffblue;
 import com.diffblue.cover.annotations.MethodsUnderTest;
 import org.junit.Test;
 import org.junit.experimental.categories.Category;
@@ -22,7 +23,8 @@ public class TypeDiffblueTest {
    * </ul>
    */
   @Test
-  @Category(MaintainedByDiffblue.class)
+  @Category(ContributionFromDiffblue.class)
+  @ManagedByDiffblue
   @MethodsUnderTest({"void Type.<init>()", "java.lang.String Type.toString()"})
   public void testGettersAndSetters() {
     // Arrange, Act and Assert
@@ -35,7 +37,8 @@ public class TypeDiffblueTest {
    * <p>Method under test: {@link Type#Type(int)}
    */
   @Test
-  @Category(MaintainedByDiffblue.class)
+  @Category(ContributionFromDiffblue.class)
+  @ManagedByDiffblue
   @MethodsUnderTest({"void Type.<init>(int)"})
   public void testNewType() {
     // Arrange and Act
@@ -54,7 +57,8 @@ public class TypeDiffblueTest {
    * <p>Method under test: {@link Type#clone()}
    */
   @Test
-  @Category(MaintainedByDiffblue.class)
+  @Category(ContributionFromDiffblue.class)
+  @ManagedByDiffblue
   @MethodsUnderTest({"Type Type.clone()"})
   public void testClone() {
     // Arrange
@@ -78,7 +82,8 @@ public class TypeDiffblueTest {
    * <p>Method under test: {@link Type#isDirty()}
    */
   @Test
-  @Category(MaintainedByDiffblue.class)
+  @Category(ContributionFromDiffblue.class)
+  @ManagedByDiffblue
   @MethodsUnderTest({"boolean Type.isDirty()"})
   public void testIsDirty_givenTypeWithTypeIsOne_thenReturnTrue() {
     // Arrange, Act and Assert
@@ -96,7 +101,8 @@ public class TypeDiffblueTest {
    * <p>Method under test: {@link Type#isDirty()}
    */
   @Test
-  @Category(MaintainedByDiffblue.class)
+  @Category(ContributionFromDiffblue.class)
+  @ManagedByDiffblue
   @MethodsUnderTest({"boolean Type.isDirty()"})
   public void testIsDirty_givenType_thenReturnFalse() {
     // Arrange, Act and Assert
@@ -114,7 +120,8 @@ public class TypeDiffblueTest {
    * <p>Method under test: {@link Type#isNormal()}
    */
   @Test
-  @Category(MaintainedByDiffblue.class)
+  @Category(ContributionFromDiffblue.class)
+  @ManagedByDiffblue
   @MethodsUnderTest({"boolean Type.isNormal()"})
   public void testIsNormal_givenTypeWithTypeIsOneTypeIsZero_thenReturnTrue() {
     // Arrange
@@ -136,7 +143,8 @@ public class TypeDiffblueTest {
    * <p>Method under test: {@link Type#isNormal()}
    */
   @Test
-  @Category(MaintainedByDiffblue.class)
+  @Category(ContributionFromDiffblue.class)
+  @ManagedByDiffblue
   @MethodsUnderTest({"boolean Type.isNormal()"})
   public void testIsNormal_givenTypeWithTypeIsOne_thenReturnFalse() {
     // Arrange, Act and Assert
@@ -154,7 +162,8 @@ public class TypeDiffblueTest {
    * <p>Method under test: {@link Type#isCreate()}
    */
   @Test
-  @Category(MaintainedByDiffblue.class)
+  @Category(ContributionFromDiffblue.class)
+  @ManagedByDiffblue
   @MethodsUnderTest({"boolean Type.isCreate()"})
   public void testIsCreate_givenTypeWithTypeIsOneAddTypeTwo_thenReturnTrue() {
     // Arrange
@@ -176,7 +185,8 @@ public class TypeDiffblueTest {
    * <p>Method under test: {@link Type#isCreate()}
    */
   @Test
-  @Category(MaintainedByDiffblue.class)
+  @Category(ContributionFromDiffblue.class)
+  @ManagedByDiffblue
   @MethodsUnderTest({"boolean Type.isCreate()"})
   public void testIsCreate_givenTypeWithTypeIsOne_thenReturnFalse() {
     // Arrange, Act and Assert
@@ -194,7 +204,8 @@ public class TypeDiffblueTest {
    * <p>Method under test: {@link Type#shouldCommit()}
    */
   @Test
-  @Category(MaintainedByDiffblue.class)
+  @Category(ContributionFromDiffblue.class)
+  @ManagedByDiffblue
   @MethodsUnderTest({"boolean Type.shouldCommit()"})
   public void testShouldCommit_givenTypeWithTypeIsOneTypeIsZero_thenReturnFalse() {
     // Arrange
@@ -216,7 +227,8 @@ public class TypeDiffblueTest {
    * <p>Method under test: {@link Type#shouldCommit()}
    */
   @Test
-  @Category(MaintainedByDiffblue.class)
+  @Category(ContributionFromDiffblue.class)
+  @ManagedByDiffblue
   @MethodsUnderTest({"boolean Type.shouldCommit()"})
   public void testShouldCommit_givenTypeWithTypeIsOne_thenReturnTrue() {
     // Arrange, Act and Assert
@@ -233,7 +245,8 @@ public class TypeDiffblueTest {
    * <p>Method under test: {@link Type#setType(int)}
    */
   @Test
-  @Category(MaintainedByDiffblue.class)
+  @Category(ContributionFromDiffblue.class)
+  @ManagedByDiffblue
   @MethodsUnderTest({"Type Type.setType(int)"})
   public void testSetType_whenOne() {
     // Arrange
@@ -256,7 +269,8 @@ public class TypeDiffblueTest {
    * <p>Method under test: {@link Type#setType(int)}
    */
   @Test
-  @Category(MaintainedByDiffblue.class)
+  @Category(ContributionFromDiffblue.class)
+  @ManagedByDiffblue
   @MethodsUnderTest({"Type Type.setType(int)"})
   public void testSetType_whenUnknown() {
     // Arrange
@@ -280,7 +294,8 @@ public class TypeDiffblueTest {
    * <p>Method under test: {@link Type#isValidType(int)}
    */
   @Test
-  @Category(MaintainedByDiffblue.class)
+  @Category(ContributionFromDiffblue.class)
+  @ManagedByDiffblue
   @MethodsUnderTest({"boolean Type.isValidType(int)"})
   public void testIsValidType_whenOne_thenReturnTrue() {
     // Arrange, Act and Assert
@@ -298,7 +313,8 @@ public class TypeDiffblueTest {
    * <p>Method under test: {@link Type#isValidType(int)}
    */
   @Test
-  @Category(MaintainedByDiffblue.class)
+  @Category(ContributionFromDiffblue.class)
+  @ManagedByDiffblue
   @MethodsUnderTest({"boolean Type.isValidType(int)"})
   public void testIsValidType_whenUnknown_thenReturnFalse() {
     // Arrange, Act and Assert
@@ -316,7 +332,8 @@ public class TypeDiffblueTest {
    * <p>Method under test: {@link Type#addType(int)}
    */
   @Test
-  @Category(MaintainedByDiffblue.class)
+  @Category(ContributionFromDiffblue.class)
+  @ManagedByDiffblue
   @MethodsUnderTest({"int Type.addType(int)"})
   public void testAddType_whenTwo_thenReturnThree() {
     // Arrange
@@ -339,7 +356,8 @@ public class TypeDiffblueTest {
    * <p>Method under test: {@link Type#addType(int)}
    */
   @Test
-  @Category(MaintainedByDiffblue.class)
+  @Category(ContributionFromDiffblue.class)
+  @ManagedByDiffblue
   @MethodsUnderTest({"int Type.addType(int)"})
   public void testAddType_whenUnknown_thenReturnOne() {
     // Arrange
@@ -367,7 +385,8 @@ public class TypeDiffblueTest {
    * </ul>
    */
   @Test
-  @Category(MaintainedByDiffblue.class)
+  @Category(ContributionFromDiffblue.class)
+  @ManagedByDiffblue
   @MethodsUnderTest({"boolean Type.equals(Object)", "int Type.hashCode()"})
   public void testEqualsAndHashCode_whenOtherIsEqual_thenReturnEqual() {
     // Arrange
@@ -395,7 +414,8 @@ public class TypeDiffblueTest {
    * </ul>
    */
   @Test
-  @Category(MaintainedByDiffblue.class)
+  @Category(ContributionFromDiffblue.class)
+  @ManagedByDiffblue
   @MethodsUnderTest({"boolean Type.equals(Object)", "int Type.hashCode()"})
   public void testEqualsAndHashCode_whenOtherIsSame_thenReturnEqual() {
     // Arrange
@@ -418,7 +438,8 @@ public class TypeDiffblueTest {
    * <p>Method under test: {@link Type#equals(Object)}
    */
   @Test
-  @Category(MaintainedByDiffblue.class)
+  @Category(ContributionFromDiffblue.class)
+  @ManagedByDiffblue
   @MethodsUnderTest({"boolean Type.equals(Object)", "int Type.hashCode()"})
   public void testEquals_whenOtherIsDifferent_thenReturnNotEqual() {
     // Arrange
@@ -439,7 +460,8 @@ public class TypeDiffblueTest {
    * <p>Method under test: {@link Type#equals(Object)}
    */
   @Test
-  @Category(MaintainedByDiffblue.class)
+  @Category(ContributionFromDiffblue.class)
+  @ManagedByDiffblue
   @MethodsUnderTest({"boolean Type.equals(Object)", "int Type.hashCode()"})
   public void testEquals_whenOtherIsNull_thenReturnNotEqual() {
     // Arrange, Act and Assert
@@ -457,7 +479,8 @@ public class TypeDiffblueTest {
    * <p>Method under test: {@link Type#equals(Object)}
    */
   @Test
-  @Category(MaintainedByDiffblue.class)
+  @Category(ContributionFromDiffblue.class)
+  @ManagedByDiffblue
   @MethodsUnderTest({"boolean Type.equals(Object)", "int Type.hashCode()"})
   public void testEquals_whenOtherIsWrongType_thenReturnNotEqual() {
     // Arrange, Act and Assert

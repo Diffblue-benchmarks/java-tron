@@ -8,7 +8,8 @@ import static org.mockito.Mockito.doNothing;
 import static org.mockito.Mockito.mock;
 import static org.mockito.Mockito.verify;
 import static org.mockito.Mockito.when;
-import com.diffblue.cover.annotations.MaintainedByDiffblue;
+import com.diffblue.cover.annotations.ContributionFromDiffblue;
+import com.diffblue.cover.annotations.ManagedByDiffblue;
 import com.diffblue.cover.annotations.MethodsUnderTest;
 import com.google.protobuf.ByteString;
 import java.io.UnsupportedEncodingException;
@@ -38,7 +39,8 @@ public class MortgageServiceDiffblueTest {
    * <p>Method under test: {@link MortgageService#payStandbyWitness()}
    */
   @Test
-  @Category(MaintainedByDiffblue.class)
+  @Category(ContributionFromDiffblue.class)
+  @ManagedByDiffblue
   @MethodsUnderTest({"void MortgageService.payStandbyWitness()"})
   public void testPayStandbyWitness_givenArrayListAddWitnessCapsuleWithDataIsEmptyArrayOfByte() {
     // Arrange
@@ -69,7 +71,8 @@ public class MortgageServiceDiffblueTest {
    * <p>Method under test: {@link MortgageService#payStandbyWitness()}
    */
   @Test
-  @Category(MaintainedByDiffblue.class)
+  @Category(ContributionFromDiffblue.class)
+  @ManagedByDiffblue
   @MethodsUnderTest({"void MortgageService.payStandbyWitness()"})
   public void testPayStandbyWitness_thenCallsGetWitnessStandby() {
     // Arrange
@@ -98,7 +101,8 @@ public class MortgageServiceDiffblueTest {
    * <p>Method under test: {@link MortgageService#payBlockReward(byte[], long)}
    */
   @Test
-  @Category(MaintainedByDiffblue.class)
+  @Category(ContributionFromDiffblue.class)
+  @ManagedByDiffblue
   @MethodsUnderTest({"void MortgageService.payBlockReward(byte[], long)"})
   public void testPayBlockReward_givenDelegationStoreGetBrokerageReturnOne_thenCallsAddReward()
       throws UnsupportedEncodingException {
@@ -133,7 +137,8 @@ public class MortgageServiceDiffblueTest {
    * <p>Method under test: {@link MortgageService#payTransactionFeeReward(byte[], long)}
    */
   @Test
-  @Category(MaintainedByDiffblue.class)
+  @Category(ContributionFromDiffblue.class)
+  @ManagedByDiffblue
   @MethodsUnderTest({"void MortgageService.payTransactionFeeReward(byte[], long)"})
   public void testPayTransactionFeeReward_thenCallsAddReward() throws UnsupportedEncodingException {
     // Arrange
@@ -168,7 +173,8 @@ public class MortgageServiceDiffblueTest {
    * <p>Method under test: {@link MortgageService#getWitnessByAddress(ByteString)}
    */
   @Test
-  @Category(MaintainedByDiffblue.class)
+  @Category(ContributionFromDiffblue.class)
+  @ManagedByDiffblue
   @MethodsUnderTest({"WitnessCapsule MortgageService.getWitnessByAddress(ByteString)"})
   public void testGetWitnessByAddress_givenWitnessStoreGetReturnNull_thenReturnNull()
       throws UnsupportedEncodingException {
@@ -202,7 +208,8 @@ public class MortgageServiceDiffblueTest {
    * <p>Method under test: {@link MortgageService#adjustAllowance(byte[], long)}
    */
   @Test
-  @Category(MaintainedByDiffblue.class)
+  @Category(ContributionFromDiffblue.class)
+  @ManagedByDiffblue
   @MethodsUnderTest({"void MortgageService.adjustAllowance(byte[], long)"})
   public void testAdjustAllowanceWithAddressAmount_thenCallsCreateDbKey()
       throws UnsupportedEncodingException {
@@ -243,7 +250,8 @@ public class MortgageServiceDiffblueTest {
    * </ul>
    */
   @Test
-  @Category(MaintainedByDiffblue.class)
+  @Category(ContributionFromDiffblue.class)
+  @ManagedByDiffblue
   @MethodsUnderTest({
     "DelegationStore MortgageService.getDelegationStore()",
     "void MortgageService.setAccountStore(AccountStore)",

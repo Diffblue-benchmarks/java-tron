@@ -4,7 +4,8 @@ import static org.junit.Assert.assertArrayEquals;
 import static org.junit.Assert.assertEquals;
 import static org.junit.Assert.assertThrows;
 import static org.junit.Assert.assertTrue;
-import com.diffblue.cover.annotations.MaintainedByDiffblue;
+import com.diffblue.cover.annotations.ContributionFromDiffblue;
+import com.diffblue.cover.annotations.ManagedByDiffblue;
 import com.diffblue.cover.annotations.MethodsUnderTest;
 import java.io.UnsupportedEncodingException;
 import java.math.BigInteger;
@@ -23,7 +24,8 @@ public class SignUtilsDiffblueTest {
    * <p>Method under test: {@link SignUtils#signatureToAddress(byte[], String, boolean)}
    */
   @Test
-  @Category(MaintainedByDiffblue.class)
+  @Category(ContributionFromDiffblue.class)
+  @ManagedByDiffblue
   @MethodsUnderTest({"byte[] SignUtils.signatureToAddress(byte[], String, boolean)"})
   public void testSignatureToAddressWithMessageHashSignatureBase64IsECKeyCryptoEngine()
       throws UnsupportedEncodingException, SignatureException {
@@ -42,7 +44,8 @@ public class SignUtilsDiffblueTest {
    * <p>Method under test: {@link SignUtils#signatureToAddress(byte[], String, boolean)}
    */
   @Test
-  @Category(MaintainedByDiffblue.class)
+  @Category(ContributionFromDiffblue.class)
+  @ManagedByDiffblue
   @MethodsUnderTest({"byte[] SignUtils.signatureToAddress(byte[], String, boolean)"})
   public void testSignatureToAddressWithMessageHashSignatureBase64IsECKeyCryptoEngine2()
       throws UnsupportedEncodingException, SignatureException {
@@ -66,7 +69,8 @@ public class SignUtilsDiffblueTest {
    * <p>Method under test: {@link SignUtils#fromComponents(byte[], byte[], byte, boolean)}
    */
   @Test
-  @Category(MaintainedByDiffblue.class)
+  @Category(ContributionFromDiffblue.class)
+  @ManagedByDiffblue
   @MethodsUnderTest({"SignatureInterface SignUtils.fromComponents(byte[], byte[], byte, boolean)"})
   public void testFromComponents_whenA_thenReturnRToByteArrayIsAxaxaxaxBytesIsUtf8()
       throws UnsupportedEncodingException {
@@ -101,7 +105,8 @@ public class SignUtilsDiffblueTest {
    * <p>Method under test: {@link SignUtils#fromComponents(byte[], byte[], byte, boolean)}
    */
   @Test
-  @Category(MaintainedByDiffblue.class)
+  @Category(ContributionFromDiffblue.class)
+  @ManagedByDiffblue
   @MethodsUnderTest({"SignatureInterface SignUtils.fromComponents(byte[], byte[], byte, boolean)"})
   public void testFromComponents_whenEmptyArrayOfByte_thenReturnRToStringIs0()
       throws UnsupportedEncodingException {
@@ -137,7 +142,8 @@ public class SignUtilsDiffblueTest {
    * <p>Method under test: {@link SignUtils#fromComponents(byte[], byte[], byte, boolean)}
    */
   @Test
-  @Category(MaintainedByDiffblue.class)
+  @Category(ContributionFromDiffblue.class)
+  @ManagedByDiffblue
   @MethodsUnderTest({"SignatureInterface SignUtils.fromComponents(byte[], byte[], byte, boolean)"})
   public void testFromComponents_whenEmptyArrayOfByte_thenReturnRToStringIs02()
       throws UnsupportedEncodingException {
@@ -173,7 +179,8 @@ public class SignUtilsDiffblueTest {
    * <p>Method under test: {@link SignUtils#fromComponents(byte[], byte[], byte, boolean)}
    */
   @Test
-  @Category(MaintainedByDiffblue.class)
+  @Category(ContributionFromDiffblue.class)
+  @ManagedByDiffblue
   @MethodsUnderTest({"SignatureInterface SignUtils.fromComponents(byte[], byte[], byte, boolean)"})
   public void testFromComponents_whenEmptyArrayOfByte_thenReturnSToStringIs0()
       throws UnsupportedEncodingException {
@@ -209,7 +216,8 @@ public class SignUtilsDiffblueTest {
    * <p>Method under test: {@link SignUtils#fromComponents(byte[], byte[], byte, boolean)}
    */
   @Test
-  @Category(MaintainedByDiffblue.class)
+  @Category(ContributionFromDiffblue.class)
+  @ManagedByDiffblue
   @MethodsUnderTest({"SignatureInterface SignUtils.fromComponents(byte[], byte[], byte, boolean)"})
   public void testFromComponents_whenEmptyArrayOfByte_thenReturnSToStringIs02()
       throws UnsupportedEncodingException {
@@ -246,7 +254,8 @@ public class SignUtilsDiffblueTest {
    * <p>Method under test: {@link SignUtils#fromComponents(byte[], byte[], byte, boolean)}
    */
   @Test
-  @Category(MaintainedByDiffblue.class)
+  @Category(ContributionFromDiffblue.class)
+  @ManagedByDiffblue
   @MethodsUnderTest({"SignatureInterface SignUtils.fromComponents(byte[], byte[], byte, boolean)"})
   public void testFromComponents_whenFalse_thenReturnRToByteArrayIsAxaxaxaxBytesIsUtf8()
       throws UnsupportedEncodingException {
@@ -282,7 +291,8 @@ public class SignUtilsDiffblueTest {
    * <p>Method under test: {@link SignUtils#fromComponents(byte[], byte[], byte, boolean)}
    */
   @Test
-  @Category(MaintainedByDiffblue.class)
+  @Category(ContributionFromDiffblue.class)
+  @ManagedByDiffblue
   @MethodsUnderTest({"SignatureInterface SignUtils.fromComponents(byte[], byte[], byte, boolean)"})
   public void testFromComponents_whenTrue_thenReturnRToByteArrayIsAxaxaxaxBytesIsUtf8()
       throws UnsupportedEncodingException {
@@ -318,7 +328,8 @@ public class SignUtilsDiffblueTest {
    * <p>Method under test: {@link SignUtils#fromComponents(byte[], byte[], byte, boolean)}
    */
   @Test
-  @Category(MaintainedByDiffblue.class)
+  @Category(ContributionFromDiffblue.class)
+  @ManagedByDiffblue
   @MethodsUnderTest({"SignatureInterface SignUtils.fromComponents(byte[], byte[], byte, boolean)"})
   public void testFromComponents_whenTwentyEight_thenReturnRToByteArrayIsAxaxaxaxBytesIsUtf8()
       throws UnsupportedEncodingException {
@@ -354,7 +365,8 @@ public class SignUtilsDiffblueTest {
    * <p>Method under test: {@link SignUtils#fromComponents(byte[], byte[], byte, boolean)}
    */
   @Test
-  @Category(MaintainedByDiffblue.class)
+  @Category(ContributionFromDiffblue.class)
+  @ManagedByDiffblue
   @MethodsUnderTest({"SignatureInterface SignUtils.fromComponents(byte[], byte[], byte, boolean)"})
   public void testFromComponents_whenTwentyEight_thenReturnRToByteArrayIsAxaxaxaxBytesIsUtf82()
       throws UnsupportedEncodingException {
@@ -390,7 +402,8 @@ public class SignUtilsDiffblueTest {
    * <p>Method under test: {@link SignUtils#fromComponents(byte[], byte[], byte, boolean)}
    */
   @Test
-  @Category(MaintainedByDiffblue.class)
+  @Category(ContributionFromDiffblue.class)
+  @ManagedByDiffblue
   @MethodsUnderTest({"SignatureInterface SignUtils.fromComponents(byte[], byte[], byte, boolean)"})
   public void testFromComponents_whenX_thenReturnRToByteArrayIsAxaxaxaxBytesIsUtf8()
       throws UnsupportedEncodingException {

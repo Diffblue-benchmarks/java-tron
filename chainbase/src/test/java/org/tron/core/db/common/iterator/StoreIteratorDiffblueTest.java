@@ -11,7 +11,8 @@ import static org.mockito.Mockito.doThrow;
 import static org.mockito.Mockito.mock;
 import static org.mockito.Mockito.verify;
 import static org.mockito.Mockito.when;
-import com.diffblue.cover.annotations.MaintainedByDiffblue;
+import com.diffblue.cover.annotations.ContributionFromDiffblue;
+import com.diffblue.cover.annotations.ManagedByDiffblue;
 import com.diffblue.cover.annotations.MethodsUnderTest;
 import java.io.IOException;
 import java.io.UnsupportedEncodingException;
@@ -32,7 +33,8 @@ public class StoreIteratorDiffblueTest {
    * <p>Method under test: {@link StoreIterator#StoreIterator(DBIterator)}
    */
   @Test
-  @Category(MaintainedByDiffblue.class)
+  @Category(ContributionFromDiffblue.class)
+  @ManagedByDiffblue
   @MethodsUnderTest({"void StoreIterator.<init>(DBIterator)"})
   public void testNewStoreIterator() {
     // Arrange, Act and Assert
@@ -49,7 +51,8 @@ public class StoreIteratorDiffblueTest {
    * <p>Method under test: {@link StoreIterator#close()}
    */
   @Test
-  @Category(MaintainedByDiffblue.class)
+  @Category(ContributionFromDiffblue.class)
+  @ManagedByDiffblue
   @MethodsUnderTest({"void StoreIterator.close()"})
   public void testClose_givenDBIteratorCloseDoesNothing() throws IOException {
     // Arrange
@@ -72,7 +75,8 @@ public class StoreIteratorDiffblueTest {
    * <p>Method under test: {@link StoreIterator#hasNext()}
    */
   @Test
-  @Category(MaintainedByDiffblue.class)
+  @Category(ContributionFromDiffblue.class)
+  @ManagedByDiffblue
   @MethodsUnderTest({"boolean StoreIterator.hasNext()"})
   public void testHasNext_givenDBIteratorHasNextReturnFalse_thenCallsClose() throws IOException {
     // Arrange
@@ -105,7 +109,8 @@ public class StoreIteratorDiffblueTest {
    * <p>Method under test: {@link StoreIterator#hasNext()}
    */
   @Test
-  @Category(MaintainedByDiffblue.class)
+  @Category(ContributionFromDiffblue.class)
+  @ManagedByDiffblue
   @MethodsUnderTest({"boolean StoreIterator.hasNext()"})
   public void testHasNext_givenDBIteratorSeekDoesNothing_thenReturnTrue() {
     // Arrange
@@ -136,7 +141,8 @@ public class StoreIteratorDiffblueTest {
    * <p>Method under test: {@link StoreIterator#hasNext()}
    */
   @Test
-  @Category(MaintainedByDiffblue.class)
+  @Category(ContributionFromDiffblue.class)
+  @ManagedByDiffblue
   @MethodsUnderTest({"boolean StoreIterator.hasNext()"})
   public void testHasNext_givenDBIteratorSeekToFirstDoesNothing_thenReturnTrue() {
     // Arrange
@@ -164,7 +170,8 @@ public class StoreIteratorDiffblueTest {
    * <p>Method under test: {@link StoreIterator#hasNext()}
    */
   @Test
-  @Category(MaintainedByDiffblue.class)
+  @Category(ContributionFromDiffblue.class)
+  @ManagedByDiffblue
   @MethodsUnderTest({"boolean StoreIterator.hasNext()"})
   public void testHasNext_givenDBIteratorSeekToFirstThrowNoSuchElementException() {
     // Arrange
@@ -190,7 +197,8 @@ public class StoreIteratorDiffblueTest {
    * <p>Method under test: {@link StoreIterator#next()}
    */
   @Test
-  @Category(MaintainedByDiffblue.class)
+  @Category(ContributionFromDiffblue.class)
+  @ManagedByDiffblue
   @MethodsUnderTest({"Entry StoreIterator.next()"})
   public void testNext_thenReturnSimpleEntryWithAxaxaxaxBytesIsUtf8AndAxaxaxaxBytesIsUtf8()
       throws UnsupportedEncodingException {
@@ -218,7 +226,8 @@ public class StoreIteratorDiffblueTest {
    * <p>Method under test: {@link StoreIterator#next()}
    */
   @Test
-  @Category(MaintainedByDiffblue.class)
+  @Category(ContributionFromDiffblue.class)
+  @ManagedByDiffblue
   @MethodsUnderTest({"Entry StoreIterator.next()"})
   public void testNext_thenThrowNoSuchElementException() {
     // Arrange
@@ -236,7 +245,8 @@ public class StoreIteratorDiffblueTest {
    * <p>Method under test: {@link StoreIterator#remove()}
    */
   @Test
-  @Category(MaintainedByDiffblue.class)
+  @Category(ContributionFromDiffblue.class)
+  @ManagedByDiffblue
   @MethodsUnderTest({"void StoreIterator.remove()"})
   public void testRemove() {
     // Arrange, Act and Assert
@@ -255,7 +265,8 @@ public class StoreIteratorDiffblueTest {
    * <p>Method under test: {@link StoreIterator#seek(byte[])}
    */
   @Test
-  @Category(MaintainedByDiffblue.class)
+  @Category(ContributionFromDiffblue.class)
+  @ManagedByDiffblue
   @MethodsUnderTest({"void StoreIterator.seek(byte[])"})
   public void testSeek_givenDBIteratorSeekDoesNothing() throws UnsupportedEncodingException {
     // Arrange
@@ -279,7 +290,8 @@ public class StoreIteratorDiffblueTest {
    * <p>Method under test: {@link StoreIterator#seek(byte[])}
    */
   @Test
-  @Category(MaintainedByDiffblue.class)
+  @Category(ContributionFromDiffblue.class)
+  @ManagedByDiffblue
   @MethodsUnderTest({"void StoreIterator.seek(byte[])"})
   public void testSeek_thenThrowNoSuchElementException() throws UnsupportedEncodingException {
     // Arrange
@@ -303,7 +315,8 @@ public class StoreIteratorDiffblueTest {
    * <p>Method under test: {@link StoreIterator#seekToFirst()}
    */
   @Test
-  @Category(MaintainedByDiffblue.class)
+  @Category(ContributionFromDiffblue.class)
+  @ManagedByDiffblue
   @MethodsUnderTest({"void StoreIterator.seekToFirst()"})
   public void testSeekToFirst_givenDBIteratorSeekToFirstDoesNothing() {
     // Arrange
@@ -327,7 +340,8 @@ public class StoreIteratorDiffblueTest {
    * <p>Method under test: {@link StoreIterator#seekToFirst()}
    */
   @Test
-  @Category(MaintainedByDiffblue.class)
+  @Category(ContributionFromDiffblue.class)
+  @ManagedByDiffblue
   @MethodsUnderTest({"void StoreIterator.seekToFirst()"})
   public void testSeekToFirst_thenThrowNoSuchElementException() {
     // Arrange
@@ -349,7 +363,8 @@ public class StoreIteratorDiffblueTest {
    * <p>Method under test: {@link StoreIterator#seekToLast()}
    */
   @Test
-  @Category(MaintainedByDiffblue.class)
+  @Category(ContributionFromDiffblue.class)
+  @ManagedByDiffblue
   @MethodsUnderTest({"void StoreIterator.seekToLast()"})
   public void testSeekToLast_givenDBIteratorSeekToLastDoesNothing() {
     // Arrange
@@ -373,7 +388,8 @@ public class StoreIteratorDiffblueTest {
    * <p>Method under test: {@link StoreIterator#seekToLast()}
    */
   @Test
-  @Category(MaintainedByDiffblue.class)
+  @Category(ContributionFromDiffblue.class)
+  @ManagedByDiffblue
   @MethodsUnderTest({"void StoreIterator.seekToLast()"})
   public void testSeekToLast_thenThrowNoSuchElementException() {
     // Arrange
@@ -396,7 +412,8 @@ public class StoreIteratorDiffblueTest {
    * <p>Method under test: {@link StoreIterator#valid()}
    */
   @Test
-  @Category(MaintainedByDiffblue.class)
+  @Category(ContributionFromDiffblue.class)
+  @ManagedByDiffblue
   @MethodsUnderTest({"boolean StoreIterator.valid()"})
   public void testValid_givenDBIteratorHasNextReturnFalse_thenReturnFalse() {
     // Arrange
@@ -422,7 +439,8 @@ public class StoreIteratorDiffblueTest {
    * <p>Method under test: {@link StoreIterator#valid()}
    */
   @Test
-  @Category(MaintainedByDiffblue.class)
+  @Category(ContributionFromDiffblue.class)
+  @ManagedByDiffblue
   @MethodsUnderTest({"boolean StoreIterator.valid()"})
   public void testValid_givenDBIteratorHasNextReturnTrue_thenReturnTrue() {
     // Arrange
@@ -447,7 +465,8 @@ public class StoreIteratorDiffblueTest {
    * <p>Method under test: {@link StoreIterator#valid()}
    */
   @Test
-  @Category(MaintainedByDiffblue.class)
+  @Category(ContributionFromDiffblue.class)
+  @ManagedByDiffblue
   @MethodsUnderTest({"boolean StoreIterator.valid()"})
   public void testValid_thenThrowNoSuchElementException() {
     // Arrange
@@ -469,7 +488,8 @@ public class StoreIteratorDiffblueTest {
    * <p>Method under test: {@link StoreIterator#getKey()}
    */
   @Test
-  @Category(MaintainedByDiffblue.class)
+  @Category(ContributionFromDiffblue.class)
+  @ManagedByDiffblue
   @MethodsUnderTest({"byte[] StoreIterator.getKey()"})
   public void testGetKey_thenReturnAxaxaxaxBytesIsUtf8() throws UnsupportedEncodingException {
     // Arrange
@@ -498,7 +518,8 @@ public class StoreIteratorDiffblueTest {
    * <p>Method under test: {@link StoreIterator#getKey()}
    */
   @Test
-  @Category(MaintainedByDiffblue.class)
+  @Category(ContributionFromDiffblue.class)
+  @ManagedByDiffblue
   @MethodsUnderTest({"byte[] StoreIterator.getKey()"})
   public void testGetKey_thenThrowNoSuchElementException() {
     // Arrange
@@ -520,7 +541,8 @@ public class StoreIteratorDiffblueTest {
    * <p>Method under test: {@link StoreIterator#getValue()}
    */
   @Test
-  @Category(MaintainedByDiffblue.class)
+  @Category(ContributionFromDiffblue.class)
+  @ManagedByDiffblue
   @MethodsUnderTest({"byte[] StoreIterator.getValue()"})
   public void testGetValue_thenReturnAxaxaxaxBytesIsUtf8() throws UnsupportedEncodingException {
     // Arrange
@@ -549,7 +571,8 @@ public class StoreIteratorDiffblueTest {
    * <p>Method under test: {@link StoreIterator#getValue()}
    */
   @Test
-  @Category(MaintainedByDiffblue.class)
+  @Category(ContributionFromDiffblue.class)
+  @ManagedByDiffblue
   @MethodsUnderTest({"byte[] StoreIterator.getValue()"})
   public void testGetValue_thenThrowNoSuchElementException() {
     // Arrange

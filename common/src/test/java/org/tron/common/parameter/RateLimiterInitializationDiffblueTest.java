@@ -5,7 +5,8 @@ import static org.junit.Assert.assertFalse;
 import static org.junit.Assert.assertNull;
 import static org.junit.Assert.assertTrue;
 import static org.mockito.Mockito.mock;
-import com.diffblue.cover.annotations.MaintainedByDiffblue;
+import com.diffblue.cover.annotations.ContributionFromDiffblue;
+import com.diffblue.cover.annotations.ManagedByDiffblue;
 import com.diffblue.cover.annotations.MethodsUnderTest;
 import com.typesafe.config.ConfigObject;
 import java.util.ArrayList;
@@ -23,7 +24,8 @@ public class RateLimiterInitializationDiffblueTest {
    * <p>Method under test: {@link RateLimiterInitialization#createHttpItem(ConfigObject)}
    */
   @Test
-  @Category(MaintainedByDiffblue.class)
+  @Category(ContributionFromDiffblue.class)
+  @ManagedByDiffblue
   @MethodsUnderTest({"HttpRateLimiterItem RateLimiterInitialization.createHttpItem(ConfigObject)"})
   public void testCreateHttpItem() {
     // Arrange, Act and Assert
@@ -36,7 +38,8 @@ public class RateLimiterInitializationDiffblueTest {
    * <p>Method under test: {@link RateLimiterInitialization#createRpcItem(ConfigObject)}
    */
   @Test
-  @Category(MaintainedByDiffblue.class)
+  @Category(ContributionFromDiffblue.class)
+  @ManagedByDiffblue
   @MethodsUnderTest({"RpcRateLimiterItem RateLimiterInitialization.createRpcItem(ConfigObject)"})
   public void testCreateRpcItem() {
     // Arrange, Act and Assert
@@ -54,7 +57,8 @@ public class RateLimiterInitializationDiffblueTest {
    * <p>Method under test: {@link RateLimiterInitialization#setHttpMap(List)}
    */
   @Test
-  @Category(MaintainedByDiffblue.class)
+  @Category(ContributionFromDiffblue.class)
+  @ManagedByDiffblue
   @MethodsUnderTest({"void RateLimiterInitialization.setHttpMap(List)"})
   public void testSetHttpMap_givenNull_whenArrayListAddNull() {
     // Arrange
@@ -84,7 +88,8 @@ public class RateLimiterInitializationDiffblueTest {
    * <p>Method under test: {@link RateLimiterInitialization#setHttpMap(List)}
    */
   @Test
-  @Category(MaintainedByDiffblue.class)
+  @Category(ContributionFromDiffblue.class)
+  @ManagedByDiffblue
   @MethodsUnderTest({"void RateLimiterInitialization.setHttpMap(List)"})
   public void testSetHttpMap_givenRateLimiterInitialization_whenArrayList() {
     // Arrange
@@ -108,7 +113,8 @@ public class RateLimiterInitializationDiffblueTest {
    * <p>Method under test: {@link RateLimiterInitialization#setHttpMap(List)}
    */
   @Test
-  @Category(MaintainedByDiffblue.class)
+  @Category(ContributionFromDiffblue.class)
+  @ManagedByDiffblue
   @MethodsUnderTest({"void RateLimiterInitialization.setHttpMap(List)"})
   public void testSetHttpMap_thenRateLimiterInitializationHttpMapSizeIsOne() {
     // Arrange
@@ -138,7 +144,8 @@ public class RateLimiterInitializationDiffblueTest {
    * <p>Method under test: {@link RateLimiterInitialization#setRpcMap(List)}
    */
   @Test
-  @Category(MaintainedByDiffblue.class)
+  @Category(ContributionFromDiffblue.class)
+  @ManagedByDiffblue
   @MethodsUnderTest({"void RateLimiterInitialization.setRpcMap(List)"})
   public void testSetRpcMap_givenNull_whenArrayListAddNull() {
     // Arrange
@@ -168,7 +175,8 @@ public class RateLimiterInitializationDiffblueTest {
    * <p>Method under test: {@link RateLimiterInitialization#setRpcMap(List)}
    */
   @Test
-  @Category(MaintainedByDiffblue.class)
+  @Category(ContributionFromDiffblue.class)
+  @ManagedByDiffblue
   @MethodsUnderTest({"void RateLimiterInitialization.setRpcMap(List)"})
   public void testSetRpcMap_givenRateLimiterInitialization_whenArrayList() {
     // Arrange
@@ -192,7 +200,8 @@ public class RateLimiterInitializationDiffblueTest {
    * <p>Method under test: {@link RateLimiterInitialization#setRpcMap(List)}
    */
   @Test
-  @Category(MaintainedByDiffblue.class)
+  @Category(ContributionFromDiffblue.class)
+  @ManagedByDiffblue
   @MethodsUnderTest({"void RateLimiterInitialization.setRpcMap(List)"})
   public void testSetRpcMap_thenRateLimiterInitializationRpcMapSizeIsOne() {
     // Arrange
@@ -225,7 +234,8 @@ public class RateLimiterInitializationDiffblueTest {
    * </ul>
    */
   @Test
-  @Category(MaintainedByDiffblue.class)
+  @Category(ContributionFromDiffblue.class)
+  @ManagedByDiffblue
   @MethodsUnderTest({
     "void RateLimiterInitialization.<init>()",
     "Map RateLimiterInitialization.getHttpMap()",

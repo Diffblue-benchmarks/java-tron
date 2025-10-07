@@ -2,7 +2,8 @@ package org.tron.core.config.args;
 
 import static org.junit.Assert.assertEquals;
 import static org.junit.Assert.assertThrows;
-import com.diffblue.cover.annotations.MaintainedByDiffblue;
+import com.diffblue.cover.annotations.ContributionFromDiffblue;
+import com.diffblue.cover.annotations.ManagedByDiffblue;
 import com.diffblue.cover.annotations.MethodsUnderTest;
 import org.junit.Test;
 import org.junit.experimental.categories.Category;
@@ -19,7 +20,8 @@ public class OverlayDiffblueTest {
    * <p>Method under test: {@link Overlay#setPort(int)}
    */
   @Test
-  @Category(MaintainedByDiffblue.class)
+  @Category(ContributionFromDiffblue.class)
+  @ManagedByDiffblue
   @MethodsUnderTest({"void Overlay.setPort(int)"})
   public void testSetPort_when8080_thenOverlayPortIs8080() {
     // Arrange
@@ -43,7 +45,8 @@ public class OverlayDiffblueTest {
    * <p>Method under test: {@link Overlay#setPort(int)}
    */
   @Test
-  @Category(MaintainedByDiffblue.class)
+  @Category(ContributionFromDiffblue.class)
+  @ManagedByDiffblue
   @MethodsUnderTest({"void Overlay.setPort(int)"})
   public void testSetPort_whenMinusOne_thenThrowIllegalArgumentException() {
     // Arrange, Act and Assert
@@ -61,7 +64,8 @@ public class OverlayDiffblueTest {
    * </ul>
    */
   @Test
-  @Category(MaintainedByDiffblue.class)
+  @Category(ContributionFromDiffblue.class)
+  @ManagedByDiffblue
   @MethodsUnderTest({"void Overlay.<init>()", "int Overlay.getPort()"})
   public void testGettersAndSetters() {
     // Arrange, Act and Assert

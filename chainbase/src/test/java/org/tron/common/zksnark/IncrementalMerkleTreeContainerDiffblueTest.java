@@ -6,7 +6,8 @@ import static org.junit.Assert.assertFalse;
 import static org.junit.Assert.assertSame;
 import static org.junit.Assert.assertThrows;
 import static org.junit.Assert.assertTrue;
-import com.diffblue.cover.annotations.MaintainedByDiffblue;
+import com.diffblue.cover.annotations.ContributionFromDiffblue;
+import com.diffblue.cover.annotations.ManagedByDiffblue;
 import com.diffblue.cover.annotations.MethodsUnderTest;
 import com.google.protobuf.ByteString;
 import com.google.protobuf.UnknownFieldSet;
@@ -33,7 +34,8 @@ public class IncrementalMerkleTreeContainerDiffblueTest {
    * <p>Method under test: {@link EmptyMerkleRoots#emptyRoot(int)}
    */
   @Test
-  @Category(MaintainedByDiffblue.class)
+  @Category(ContributionFromDiffblue.class)
+  @ManagedByDiffblue
   @MethodsUnderTest({"PedersenHash EmptyMerkleRoots.emptyRoot(int)"})
   public void testEmptyMerkleRootsEmptyRoot_thenReturnInitializationErrorStringIsEmptyString() {
     // Arrange and Act
@@ -59,7 +61,8 @@ public class IncrementalMerkleTreeContainerDiffblueTest {
    * </ul>
    */
   @Test
-  @Category(MaintainedByDiffblue.class)
+  @Category(ContributionFromDiffblue.class)
+  @ManagedByDiffblue
   @MethodsUnderTest({
     "EmptyMerkleRoots EmptyMerkleRoots.getEmptyMerkleRootsInstance()",
     "void EmptyMerkleRoots.setEmptyMerkleRootsInstance(EmptyMerkleRoots)"
@@ -83,7 +86,8 @@ public class IncrementalMerkleTreeContainerDiffblueTest {
    * <p>Method under test: {@link IncrementalMerkleTreeContainer#emptyRoot()}
    */
   @Test
-  @Category(MaintainedByDiffblue.class)
+  @Category(ContributionFromDiffblue.class)
+  @ManagedByDiffblue
   @MethodsUnderTest({"PedersenHash IncrementalMerkleTreeContainer.emptyRoot()"})
   public void testEmptyRoot() {
     // Arrange and Act
@@ -103,7 +107,8 @@ public class IncrementalMerkleTreeContainerDiffblueTest {
    * <p>Method under test: {@link PathFiller#next(int)}
    */
   @Test
-  @Category(MaintainedByDiffblue.class)
+  @Category(ContributionFromDiffblue.class)
+  @ManagedByDiffblue
   @MethodsUnderTest({"PedersenHash PathFiller.next(int)"})
   public void testPathFillerNext() {
     // Arrange and Act
@@ -144,7 +149,8 @@ public class IncrementalMerkleTreeContainerDiffblueTest {
    * <p>Method under test: {@link PathFiller#next(int)}
    */
   @Test
-  @Category(MaintainedByDiffblue.class)
+  @Category(ContributionFromDiffblue.class)
+  @ManagedByDiffblue
   @MethodsUnderTest({"PedersenHash PathFiller.next(int)"})
   public void testPathFillerNext_givenLinkedListAddDefaultInstance_thenReturnDefaultInstance() {
     // Arrange
@@ -166,7 +172,8 @@ public class IncrementalMerkleTreeContainerDiffblueTest {
    * <p>Method under test: {@link IncrementalMerkleTreeContainer#wfcheck()}
    */
   @Test
-  @Category(MaintainedByDiffblue.class)
+  @Category(ContributionFromDiffblue.class)
+  @ManagedByDiffblue
   @MethodsUnderTest({"void IncrementalMerkleTreeContainer.wfcheck()"})
   public void testWfcheck_thenThrowZksnarkException() throws ZksnarkException {
     // Arrange
@@ -184,7 +191,8 @@ public class IncrementalMerkleTreeContainerDiffblueTest {
    * <p>Method under test: {@link IncrementalMerkleTreeContainer#last()}
    */
   @Test
-  @Category(MaintainedByDiffblue.class)
+  @Category(ContributionFromDiffblue.class)
+  @ManagedByDiffblue
   @MethodsUnderTest({"PedersenHash IncrementalMerkleTreeContainer.last()"})
   public void testLast() throws ZksnarkException {
     // Arrange, Act and Assert
@@ -199,7 +207,8 @@ public class IncrementalMerkleTreeContainerDiffblueTest {
    * <p>Method under test: {@link IncrementalMerkleTreeContainer#last()}
    */
   @Test
-  @Category(MaintainedByDiffblue.class)
+  @Category(ContributionFromDiffblue.class)
+  @ManagedByDiffblue
   @MethodsUnderTest({"PedersenHash IncrementalMerkleTreeContainer.last()"})
   public void testLast2() throws ZksnarkException {
     // Arrange
@@ -217,7 +226,8 @@ public class IncrementalMerkleTreeContainerDiffblueTest {
    * <p>Method under test: {@link IncrementalMerkleTreeContainer#size()}
    */
   @Test
-  @Category(MaintainedByDiffblue.class)
+  @Category(ContributionFromDiffblue.class)
+  @ManagedByDiffblue
   @MethodsUnderTest({"int IncrementalMerkleTreeContainer.size()"})
   public void testSize() {
     // Arrange, Act and Assert
@@ -230,7 +240,8 @@ public class IncrementalMerkleTreeContainerDiffblueTest {
    * <p>Method under test: {@link IncrementalMerkleTreeContainer#size()}
    */
   @Test
-  @Category(MaintainedByDiffblue.class)
+  @Category(ContributionFromDiffblue.class)
+  @ManagedByDiffblue
   @MethodsUnderTest({"int IncrementalMerkleTreeContainer.size()"})
   public void testSize2() throws ZksnarkException {
     // Arrange
@@ -253,7 +264,8 @@ public class IncrementalMerkleTreeContainerDiffblueTest {
    * <p>Method under test: {@link IncrementalMerkleTreeContainer#size()}
    */
   @Test
-  @Category(MaintainedByDiffblue.class)
+  @Category(ContributionFromDiffblue.class)
+  @ManagedByDiffblue
   @MethodsUnderTest({"int IncrementalMerkleTreeContainer.size()"})
   public void testSize_givenIncrementalMerkleTreeCapsuleAddParentsDefaultInstance() {
     // Arrange
@@ -270,7 +282,8 @@ public class IncrementalMerkleTreeContainerDiffblueTest {
    * <p>Method under test: {@link IncrementalMerkleTreeContainer#isComplete()}
    */
   @Test
-  @Category(MaintainedByDiffblue.class)
+  @Category(ContributionFromDiffblue.class)
+  @ManagedByDiffblue
   @MethodsUnderTest({"boolean IncrementalMerkleTreeContainer.isComplete()"})
   public void testIsComplete() {
     // Arrange, Act and Assert
@@ -284,7 +297,8 @@ public class IncrementalMerkleTreeContainerDiffblueTest {
    * <p>Method under test: {@link IncrementalMerkleTreeContainer#isComplete()}
    */
   @Test
-  @Category(MaintainedByDiffblue.class)
+  @Category(ContributionFromDiffblue.class)
+  @ManagedByDiffblue
   @MethodsUnderTest({"boolean IncrementalMerkleTreeContainer.isComplete()"})
   public void testIsComplete2() throws ZksnarkException {
     // Arrange
@@ -302,7 +316,8 @@ public class IncrementalMerkleTreeContainerDiffblueTest {
    * <p>Method under test: {@link IncrementalMerkleTreeContainer#isComplete(long)}
    */
   @Test
-  @Category(MaintainedByDiffblue.class)
+  @Category(ContributionFromDiffblue.class)
+  @ManagedByDiffblue
   @MethodsUnderTest({"boolean IncrementalMerkleTreeContainer.isComplete(long)"})
   public void testIsCompleteWithLong() {
     // Arrange, Act and Assert
@@ -316,7 +331,8 @@ public class IncrementalMerkleTreeContainerDiffblueTest {
    * <p>Method under test: {@link IncrementalMerkleTreeContainer#isComplete(long)}
    */
   @Test
-  @Category(MaintainedByDiffblue.class)
+  @Category(ContributionFromDiffblue.class)
+  @ManagedByDiffblue
   @MethodsUnderTest({"boolean IncrementalMerkleTreeContainer.isComplete(long)"})
   public void testIsCompleteWithLong2() throws ZksnarkException {
     // Arrange
@@ -334,7 +350,8 @@ public class IncrementalMerkleTreeContainerDiffblueTest {
    * <p>Method under test: {@link IncrementalMerkleTreeContainer#nextDepth(int)}
    */
   @Test
-  @Category(MaintainedByDiffblue.class)
+  @Category(ContributionFromDiffblue.class)
+  @ManagedByDiffblue
   @MethodsUnderTest({"int IncrementalMerkleTreeContainer.nextDepth(int)"})
   public void testNextDepth() throws ZksnarkException {
     // Arrange
@@ -357,7 +374,8 @@ public class IncrementalMerkleTreeContainerDiffblueTest {
    * <p>Method under test: {@link IncrementalMerkleTreeContainer#nextDepth(int)}
    */
   @Test
-  @Category(MaintainedByDiffblue.class)
+  @Category(ContributionFromDiffblue.class)
+  @ManagedByDiffblue
   @MethodsUnderTest({"int IncrementalMerkleTreeContainer.nextDepth(int)"})
   public void testNextDepth_givenIncrementalMerkleTreeCapsuleAddParentsDefaultInstance() {
     // Arrange
@@ -379,7 +397,8 @@ public class IncrementalMerkleTreeContainerDiffblueTest {
    * <p>Method under test: {@link IncrementalMerkleTreeContainer#nextDepth(int)}
    */
   @Test
-  @Category(MaintainedByDiffblue.class)
+  @Category(ContributionFromDiffblue.class)
+  @ManagedByDiffblue
   @MethodsUnderTest({"int IncrementalMerkleTreeContainer.nextDepth(int)"})
   public void testNextDepth_whenMinusOne_thenReturnMinusTwo() {
     // Arrange, Act and Assert
@@ -398,7 +417,8 @@ public class IncrementalMerkleTreeContainerDiffblueTest {
    * <p>Method under test: {@link IncrementalMerkleTreeContainer#nextDepth(int)}
    */
   @Test
-  @Category(MaintainedByDiffblue.class)
+  @Category(ContributionFromDiffblue.class)
+  @ManagedByDiffblue
   @MethodsUnderTest({"int IncrementalMerkleTreeContainer.nextDepth(int)"})
   public void testNextDepth_whenOne_thenReturnZero() {
     // Arrange, Act and Assert
@@ -417,7 +437,8 @@ public class IncrementalMerkleTreeContainerDiffblueTest {
    * <p>Method under test: {@link IncrementalMerkleTreeContainer#nextDepth(int)}
    */
   @Test
-  @Category(MaintainedByDiffblue.class)
+  @Category(ContributionFromDiffblue.class)
+  @ManagedByDiffblue
   @MethodsUnderTest({"int IncrementalMerkleTreeContainer.nextDepth(int)"})
   public void testNextDepth_whenZero_thenReturnZero() {
     // Arrange, Act and Assert
@@ -431,7 +452,8 @@ public class IncrementalMerkleTreeContainerDiffblueTest {
    * <p>Method under test: {@link IncrementalMerkleTreeContainer#root()}
    */
   @Test
-  @Category(MaintainedByDiffblue.class)
+  @Category(ContributionFromDiffblue.class)
+  @ManagedByDiffblue
   @MethodsUnderTest({"PedersenHash IncrementalMerkleTreeContainer.root()"})
   public void testRoot() throws ZksnarkException {
     // Arrange
@@ -458,7 +480,8 @@ public class IncrementalMerkleTreeContainerDiffblueTest {
    * <p>Method under test: {@link IncrementalMerkleTreeContainer#root(long)}
    */
   @Test
-  @Category(MaintainedByDiffblue.class)
+  @Category(ContributionFromDiffblue.class)
+  @ManagedByDiffblue
   @MethodsUnderTest({"PedersenHash IncrementalMerkleTreeContainer.root(long)"})
   public void testRootWithDepth() throws ZksnarkException {
     // Arrange
@@ -484,7 +507,8 @@ public class IncrementalMerkleTreeContainerDiffblueTest {
    * <p>Method under test: {@link IncrementalMerkleTreeContainer#root(long, Deque)}
    */
   @Test
-  @Category(MaintainedByDiffblue.class)
+  @Category(ContributionFromDiffblue.class)
+  @ManagedByDiffblue
   @MethodsUnderTest({"PedersenHash IncrementalMerkleTreeContainer.root(long, Deque)"})
   public void testRootWithDepthFillerHashes() throws ZksnarkException {
     // Arrange
@@ -512,7 +536,8 @@ public class IncrementalMerkleTreeContainerDiffblueTest {
    * <p>Method under test: {@link IncrementalMerkleTreeContainer#root(long, Deque)}
    */
   @Test
-  @Category(MaintainedByDiffblue.class)
+  @Category(ContributionFromDiffblue.class)
+  @ManagedByDiffblue
   @MethodsUnderTest({"PedersenHash IncrementalMerkleTreeContainer.root(long, Deque)"})
   public void testRootWithDepthFillerHashes2() throws ZksnarkException {
     // Arrange
@@ -542,7 +567,8 @@ public class IncrementalMerkleTreeContainerDiffblueTest {
    * <p>Method under test: {@link IncrementalMerkleTreeContainer#root(long, Deque)}
    */
   @Test
-  @Category(MaintainedByDiffblue.class)
+  @Category(ContributionFromDiffblue.class)
+  @ManagedByDiffblue
   @MethodsUnderTest({"PedersenHash IncrementalMerkleTreeContainer.root(long, Deque)"})
   public void testRootWithDepthFillerHashes_thenReturnDefaultInstanceForTypeIsDefaultInstance()
       throws ZksnarkException {
@@ -574,7 +600,8 @@ public class IncrementalMerkleTreeContainerDiffblueTest {
    * <p>Method under test: {@link IncrementalMerkleTreeContainer#root(long, Deque)}
    */
   @Test
-  @Category(MaintainedByDiffblue.class)
+  @Category(ContributionFromDiffblue.class)
+  @ManagedByDiffblue
   @MethodsUnderTest({"PedersenHash IncrementalMerkleTreeContainer.root(long, Deque)"})
   public void testRootWithDepthFillerHashes_whenTwo() throws ZksnarkException {
     // Arrange
@@ -605,7 +632,8 @@ public class IncrementalMerkleTreeContainerDiffblueTest {
    * <p>Method under test: {@link IncrementalMerkleTreeContainer#root(long)}
    */
   @Test
-  @Category(MaintainedByDiffblue.class)
+  @Category(ContributionFromDiffblue.class)
+  @ManagedByDiffblue
   @MethodsUnderTest({"PedersenHash IncrementalMerkleTreeContainer.root(long)"})
   public void testRootWithDepth_thenReturnDefaultInstanceForTypeIsDefaultInstance()
       throws ZksnarkException {
@@ -634,7 +662,8 @@ public class IncrementalMerkleTreeContainerDiffblueTest {
    * <p>Method under test: {@link IncrementalMerkleTreeContainer#root(long)}
    */
   @Test
-  @Category(MaintainedByDiffblue.class)
+  @Category(ContributionFromDiffblue.class)
+  @ManagedByDiffblue
   @MethodsUnderTest({"PedersenHash IncrementalMerkleTreeContainer.root(long)"})
   public void testRootWithDepth_thenReturnDefaultInstanceForTypeUnknownFieldsIsUnknownFields()
       throws ZksnarkException {
@@ -663,7 +692,8 @@ public class IncrementalMerkleTreeContainerDiffblueTest {
    * <p>Method under test: {@link IncrementalMerkleTreeContainer#root(long)}
    */
   @Test
-  @Category(MaintainedByDiffblue.class)
+  @Category(ContributionFromDiffblue.class)
+  @ManagedByDiffblue
   @MethodsUnderTest({"PedersenHash IncrementalMerkleTreeContainer.root(long)"})
   public void testRootWithDepth_whenTwo() throws ZksnarkException {
     // Arrange and Act
@@ -691,7 +721,8 @@ public class IncrementalMerkleTreeContainerDiffblueTest {
    * <p>Method under test: {@link IncrementalMerkleTreeContainer#root()}
    */
   @Test
-  @Category(MaintainedByDiffblue.class)
+  @Category(ContributionFromDiffblue.class)
+  @ManagedByDiffblue
   @MethodsUnderTest({"PedersenHash IncrementalMerkleTreeContainer.root()"})
   public void testRoot_thenReturnDefaultInstanceForTypeIsDefaultInstance() throws ZksnarkException {
     // Arrange
@@ -721,7 +752,8 @@ public class IncrementalMerkleTreeContainerDiffblueTest {
    * <p>Method under test: {@link IncrementalMerkleTreeContainer#root()}
    */
   @Test
-  @Category(MaintainedByDiffblue.class)
+  @Category(ContributionFromDiffblue.class)
+  @ManagedByDiffblue
   @MethodsUnderTest({"PedersenHash IncrementalMerkleTreeContainer.root()"})
   public void testRoot_thenReturnInitializationErrorStringIsEmptyString() throws ZksnarkException {
     // Arrange and Act
@@ -742,7 +774,8 @@ public class IncrementalMerkleTreeContainerDiffblueTest {
    * <p>Method under test: {@link IncrementalMerkleTreeContainer#path()}
    */
   @Test
-  @Category(MaintainedByDiffblue.class)
+  @Category(ContributionFromDiffblue.class)
+  @ManagedByDiffblue
   @MethodsUnderTest({"org.tron.common.zksnark.MerklePath IncrementalMerkleTreeContainer.path()"})
   public void testPath() throws ZksnarkException {
     // Arrange, Act and Assert
@@ -757,7 +790,8 @@ public class IncrementalMerkleTreeContainerDiffblueTest {
    * <p>Method under test: {@link IncrementalMerkleTreeContainer#path()}
    */
   @Test
-  @Category(MaintainedByDiffblue.class)
+  @Category(ContributionFromDiffblue.class)
+  @ManagedByDiffblue
   @MethodsUnderTest({"org.tron.common.zksnark.MerklePath IncrementalMerkleTreeContainer.path()"})
   public void testPath2() throws ZksnarkException {
     // Arrange
@@ -775,7 +809,8 @@ public class IncrementalMerkleTreeContainerDiffblueTest {
    * <p>Method under test: {@link IncrementalMerkleTreeContainer#path(Deque)}
    */
   @Test
-  @Category(MaintainedByDiffblue.class)
+  @Category(ContributionFromDiffblue.class)
+  @ManagedByDiffblue
   @MethodsUnderTest({
     "org.tron.common.zksnark.MerklePath IncrementalMerkleTreeContainer.path(Deque)"
   })
@@ -795,7 +830,8 @@ public class IncrementalMerkleTreeContainerDiffblueTest {
    * <p>Method under test: {@link IncrementalMerkleTreeContainer#path(Deque)}
    */
   @Test
-  @Category(MaintainedByDiffblue.class)
+  @Category(ContributionFromDiffblue.class)
+  @ManagedByDiffblue
   @MethodsUnderTest({
     "org.tron.common.zksnark.MerklePath IncrementalMerkleTreeContainer.path(Deque)"
   })
@@ -821,7 +857,8 @@ public class IncrementalMerkleTreeContainerDiffblueTest {
    * <p>Method under test: {@link IncrementalMerkleTreeContainer#path(Deque)}
    */
   @Test
-  @Category(MaintainedByDiffblue.class)
+  @Category(ContributionFromDiffblue.class)
+  @ManagedByDiffblue
   @MethodsUnderTest({
     "org.tron.common.zksnark.MerklePath IncrementalMerkleTreeContainer.path(Deque)"
   })
@@ -849,7 +886,8 @@ public class IncrementalMerkleTreeContainerDiffblueTest {
    * <p>Method under test: {@link IncrementalMerkleTreeContainer#path(Deque)}
    */
   @Test
-  @Category(MaintainedByDiffblue.class)
+  @Category(ContributionFromDiffblue.class)
+  @ManagedByDiffblue
   @MethodsUnderTest({
     "org.tron.common.zksnark.MerklePath IncrementalMerkleTreeContainer.path(Deque)"
   })
@@ -873,7 +911,8 @@ public class IncrementalMerkleTreeContainerDiffblueTest {
    * <p>Method under test: {@link IncrementalMerkleTreeContainer#getMerkleTreeKey()}
    */
   @Test
-  @Category(MaintainedByDiffblue.class)
+  @Category(ContributionFromDiffblue.class)
+  @ManagedByDiffblue
   @MethodsUnderTest({"byte[] IncrementalMerkleTreeContainer.getMerkleTreeKey()"})
   public void testGetMerkleTreeKey() throws ZksnarkException {
     // Arrange
@@ -901,7 +940,8 @@ public class IncrementalMerkleTreeContainerDiffblueTest {
    * <p>Method under test: {@link IncrementalMerkleTreeContainer#getMerkleTreeKey()}
    */
   @Test
-  @Category(MaintainedByDiffblue.class)
+  @Category(ContributionFromDiffblue.class)
+  @ManagedByDiffblue
   @MethodsUnderTest({"byte[] IncrementalMerkleTreeContainer.getMerkleTreeKey()"})
   public void testGetMerkleTreeKey_givenIncrementalMerkleTreeCapsuleAddParentsDefaultInstance()
       throws ZksnarkException {
@@ -928,7 +968,8 @@ public class IncrementalMerkleTreeContainerDiffblueTest {
    * <p>Method under test: {@link IncrementalMerkleTreeContainer#getMerkleTreeKey()}
    */
   @Test
-  @Category(MaintainedByDiffblue.class)
+  @Category(ContributionFromDiffblue.class)
+  @ManagedByDiffblue
   @MethodsUnderTest({"byte[] IncrementalMerkleTreeContainer.getMerkleTreeKey()"})
   public void testGetMerkleTreeKey_thenReturnArrayOfByteWithZeroAndZero() throws ZksnarkException {
     // Arrange, Act and Assert
@@ -946,7 +987,8 @@ public class IncrementalMerkleTreeContainerDiffblueTest {
    * <p>Method under test: {@link IncrementalMerkleTreeContainer#getRootArray()}
    */
   @Test
-  @Category(MaintainedByDiffblue.class)
+  @Category(ContributionFromDiffblue.class)
+  @ManagedByDiffblue
   @MethodsUnderTest({"byte[] IncrementalMerkleTreeContainer.getRootArray()"})
   public void testGetRootArray() throws ZksnarkException {
     // Arrange
@@ -974,7 +1016,8 @@ public class IncrementalMerkleTreeContainerDiffblueTest {
    * <p>Method under test: {@link IncrementalMerkleTreeContainer#getRootArray()}
    */
   @Test
-  @Category(MaintainedByDiffblue.class)
+  @Category(ContributionFromDiffblue.class)
+  @ManagedByDiffblue
   @MethodsUnderTest({"byte[] IncrementalMerkleTreeContainer.getRootArray()"})
   public void testGetRootArray_givenIncrementalMerkleTreeCapsuleAddParentsDefaultInstance()
       throws ZksnarkException {
@@ -1001,7 +1044,8 @@ public class IncrementalMerkleTreeContainerDiffblueTest {
    * <p>Method under test: {@link IncrementalMerkleTreeContainer#getRootArray()}
    */
   @Test
-  @Category(MaintainedByDiffblue.class)
+  @Category(ContributionFromDiffblue.class)
+  @ManagedByDiffblue
   @MethodsUnderTest({"byte[] IncrementalMerkleTreeContainer.getRootArray()"})
   public void testGetRootArray_thenReturnArrayOfByteWithZeroAndZero() throws ZksnarkException {
     // Arrange, Act and Assert
@@ -1023,7 +1067,8 @@ public class IncrementalMerkleTreeContainerDiffblueTest {
    * <p>Method under test: {@link IncrementalMerkleTreeContainer#toVoucher()}
    */
   @Test
-  @Category(MaintainedByDiffblue.class)
+  @Category(ContributionFromDiffblue.class)
+  @ManagedByDiffblue
   @MethodsUnderTest({
     "IncrementalMerkleVoucherContainer IncrementalMerkleTreeContainer.toVoucher()"
   })

@@ -4,7 +4,8 @@ import static org.junit.Assert.assertTrue;
 import static org.mockito.ArgumentMatchers.isA;
 import static org.mockito.Mockito.verify;
 import static org.mockito.Mockito.when;
-import com.diffblue.cover.annotations.MaintainedByDiffblue;
+import com.diffblue.cover.annotations.ContributionFromDiffblue;
+import com.diffblue.cover.annotations.ManagedByDiffblue;
 import com.diffblue.cover.annotations.MethodsUnderTest;
 import java.io.UnsupportedEncodingException;
 import java.net.InetSocketAddress;
@@ -36,7 +37,8 @@ public class NodePersistServiceDiffblueTest {
    * <p>Method under test: {@link NodePersistService#dbRead()}
    */
   @Test
-  @Category(MaintainedByDiffblue.class)
+  @Category(ContributionFromDiffblue.class)
+  @ManagedByDiffblue
   @MethodsUnderTest({"List NodePersistService.dbRead()"})
   public void testDbRead_givenCommonStoreGetReturnBytesCapsuleWithBytesIsAxaxaxaxBytesIsUtf8()
       throws UnsupportedEncodingException {
@@ -63,7 +65,8 @@ public class NodePersistServiceDiffblueTest {
    * <p>Method under test: {@link NodePersistService#dbRead()}
    */
   @Test
-  @Category(MaintainedByDiffblue.class)
+  @Category(ContributionFromDiffblue.class)
+  @ManagedByDiffblue
   @MethodsUnderTest({"List NodePersistService.dbRead()"})
   public void testDbRead_givenCommonStoreGetReturnBytesCapsuleWithBytesIsEmptyArrayOfByte() {
     // Arrange
@@ -88,7 +91,8 @@ public class NodePersistServiceDiffblueTest {
    * <p>Method under test: {@link NodePersistService#dbRead()}
    */
   @Test
-  @Category(MaintainedByDiffblue.class)
+  @Category(ContributionFromDiffblue.class)
+  @ManagedByDiffblue
   @MethodsUnderTest({"List NodePersistService.dbRead()"})
   public void testDbRead_givenCommonStoreGetReturnNull() {
     // Arrange
@@ -113,7 +117,8 @@ public class NodePersistServiceDiffblueTest {
    * <p>Method under test: {@link NodePersistService#dbRead()}
    */
   @Test
-  @Category(MaintainedByDiffblue.class)
+  @Category(ContributionFromDiffblue.class)
+  @ManagedByDiffblue
   @MethodsUnderTest({"List NodePersistService.dbRead()"})
   public void testDbRead_givenCommonStoreGetThrowRuntimeException() {
     // Arrange

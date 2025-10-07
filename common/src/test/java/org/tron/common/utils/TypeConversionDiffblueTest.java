@@ -4,7 +4,8 @@ import static org.junit.Assert.assertArrayEquals;
 import static org.junit.Assert.assertEquals;
 import static org.junit.Assert.assertNull;
 import static org.junit.Assert.assertTrue;
-import com.diffblue.cover.annotations.MaintainedByDiffblue;
+import com.diffblue.cover.annotations.ContributionFromDiffblue;
+import com.diffblue.cover.annotations.ManagedByDiffblue;
 import com.diffblue.cover.annotations.MethodsUnderTest;
 import java.io.UnsupportedEncodingException;
 import org.junit.Test;
@@ -17,7 +18,8 @@ public class TypeConversionDiffblueTest {
    * <p>Method under test: {@link TypeConversion#longToBytes(long)}
    */
   @Test
-  @Category(MaintainedByDiffblue.class)
+  @Category(ContributionFromDiffblue.class)
+  @ManagedByDiffblue
   @MethodsUnderTest({"byte[] TypeConversion.longToBytes(long)"})
   public void testLongToBytes() {
     // Arrange, Act and Assert
@@ -35,7 +37,8 @@ public class TypeConversionDiffblueTest {
    * <p>Method under test: {@link TypeConversion#bytesToLong(byte[])}
    */
   @Test
-  @Category(MaintainedByDiffblue.class)
+  @Category(ContributionFromDiffblue.class)
+  @ManagedByDiffblue
   @MethodsUnderTest({"long TypeConversion.bytesToLong(byte[])"})
   public void testBytesToLong_whenAxaxaxaxBytesIsUtf8_thenReturn4708585257725083992()
       throws UnsupportedEncodingException {
@@ -49,7 +52,8 @@ public class TypeConversionDiffblueTest {
    * <p>Method under test: {@link TypeConversion#bytesToHexString(byte[])}
    */
   @Test
-  @Category(MaintainedByDiffblue.class)
+  @Category(ContributionFromDiffblue.class)
+  @ManagedByDiffblue
   @MethodsUnderTest({"String TypeConversion.bytesToHexString(byte[])"})
   public void testBytesToHexString() throws UnsupportedEncodingException {
     // Arrange, Act and Assert
@@ -66,7 +70,8 @@ public class TypeConversionDiffblueTest {
    * <p>Method under test: {@link TypeConversion#hexStringToBytes(String)}
    */
   @Test
-  @Category(MaintainedByDiffblue.class)
+  @Category(ContributionFromDiffblue.class)
+  @ManagedByDiffblue
   @MethodsUnderTest({"byte[] TypeConversion.hexStringToBytes(String)"})
   public void testHexStringToBytes_thenReturnArrayOfByteWithOneAndNumberSign() {
     // Arrange, Act and Assert
@@ -86,7 +91,8 @@ public class TypeConversionDiffblueTest {
    * <p>Method under test: {@link TypeConversion#hexStringToBytes(String)}
    */
   @Test
-  @Category(MaintainedByDiffblue.class)
+  @Category(ContributionFromDiffblue.class)
+  @ManagedByDiffblue
   @MethodsUnderTest({"byte[] TypeConversion.hexStringToBytes(String)"})
   public void testHexStringToBytes_whenHexString_thenReturnNull() {
     // Arrange, Act and Assert
@@ -104,7 +110,8 @@ public class TypeConversionDiffblueTest {
    * <p>Method under test: {@link TypeConversion#hexStringToBytes(String)}
    */
   @Test
-  @Category(MaintainedByDiffblue.class)
+  @Category(ContributionFromDiffblue.class)
+  @ManagedByDiffblue
   @MethodsUnderTest({"byte[] TypeConversion.hexStringToBytes(String)"})
   public void testHexStringToBytes_whenUtils_thenReturnNull() {
     // Arrange, Act and Assert
@@ -121,7 +128,8 @@ public class TypeConversionDiffblueTest {
    * <p>Method under test: {@link TypeConversion#increment(byte[])}
    */
   @Test
-  @Category(MaintainedByDiffblue.class)
+  @Category(ContributionFromDiffblue.class)
+  @ManagedByDiffblue
   @MethodsUnderTest({"boolean TypeConversion.increment(byte[])"})
   public void testIncrement_thenAxaxaxaxBytesIsUtf8IsAxaxaxayBytesIsUtf8()
       throws UnsupportedEncodingException {
@@ -144,7 +152,8 @@ public class TypeConversionDiffblueTest {
    * <p>Method under test: {@link TypeConversion#increment(byte[])}
    */
   @Test
-  @Category(MaintainedByDiffblue.class)
+  @Category(ContributionFromDiffblue.class)
+  @ManagedByDiffblue
   @MethodsUnderTest({"boolean TypeConversion.increment(byte[])"})
   public void testIncrement_whenA_thenArrayOfByteWithAAndX() {
     // Arrange

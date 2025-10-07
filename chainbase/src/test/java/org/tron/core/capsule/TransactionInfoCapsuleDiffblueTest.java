@@ -6,7 +6,8 @@ import static org.junit.Assert.assertFalse;
 import static org.junit.Assert.assertSame;
 import static org.junit.Assert.assertThrows;
 import static org.junit.Assert.assertTrue;
-import com.diffblue.cover.annotations.MaintainedByDiffblue;
+import com.diffblue.cover.annotations.ContributionFromDiffblue;
+import com.diffblue.cover.annotations.ManagedByDiffblue;
 import com.diffblue.cover.annotations.MethodsUnderTest;
 import com.google.protobuf.ByteString;
 import com.google.protobuf.ByteString.ByteIterator;
@@ -29,7 +30,8 @@ public class TransactionInfoCapsuleDiffblueTest {
    * <p>Method under test: {@link TransactionInfoCapsule#TransactionInfoCapsule()}
    */
   @Test
-  @Category(MaintainedByDiffblue.class)
+  @Category(ContributionFromDiffblue.class)
+  @ManagedByDiffblue
   @MethodsUnderTest({"void TransactionInfoCapsule.<init>()"})
   public void testNewTransactionInfoCapsule() {
     // Arrange and Act
@@ -57,7 +59,8 @@ public class TransactionInfoCapsuleDiffblueTest {
    * <p>Method under test: {@link TransactionInfoCapsule#TransactionInfoCapsule(byte[])}
    */
   @Test
-  @Category(MaintainedByDiffblue.class)
+  @Category(ContributionFromDiffblue.class)
+  @ManagedByDiffblue
   @MethodsUnderTest({"void TransactionInfoCapsule.<init>(byte[])"})
   public void testNewTransactionInfoCapsule_when2xaxaxaxBytesIsUtf8_thenThrowBadItemException()
       throws UnsupportedEncodingException, BadItemException {
@@ -76,7 +79,8 @@ public class TransactionInfoCapsuleDiffblueTest {
    * <p>Method under test: {@link TransactionInfoCapsule#TransactionInfoCapsule(byte[])}
    */
   @Test
-  @Category(MaintainedByDiffblue.class)
+  @Category(ContributionFromDiffblue.class)
+  @ManagedByDiffblue
   @MethodsUnderTest({"void TransactionInfoCapsule.<init>(byte[])"})
   public void testNewTransactionInfoCapsule_whenArrayOfByteWith2AndTwo() throws BadItemException {
     // Arrange, Act and Assert
@@ -97,7 +101,8 @@ public class TransactionInfoCapsuleDiffblueTest {
    * <p>Method under test: {@link TransactionInfoCapsule#TransactionInfoCapsule(byte[])}
    */
   @Test
-  @Category(MaintainedByDiffblue.class)
+  @Category(ContributionFromDiffblue.class)
+  @ManagedByDiffblue
   @MethodsUnderTest({"void TransactionInfoCapsule.<init>(byte[])"})
   public void testNewTransactionInfoCapsule_whenArrayOfByteWith2AndZero() throws BadItemException {
     // Arrange, Act and Assert
@@ -116,7 +121,8 @@ public class TransactionInfoCapsuleDiffblueTest {
    * <p>Method under test: {@link TransactionInfoCapsule#TransactionInfoCapsule(byte[])}
    */
   @Test
-  @Category(MaintainedByDiffblue.class)
+  @Category(ContributionFromDiffblue.class)
+  @ManagedByDiffblue
   @MethodsUnderTest({"void TransactionInfoCapsule.<init>(byte[])"})
   public void testNewTransactionInfoCapsule_whenArrayOfByteWithAAndTwo() throws BadItemException {
     // Arrange, Act and Assert
@@ -137,7 +143,8 @@ public class TransactionInfoCapsuleDiffblueTest {
    * <p>Method under test: {@link TransactionInfoCapsule#TransactionInfoCapsule(byte[])}
    */
   @Test
-  @Category(MaintainedByDiffblue.class)
+  @Category(ContributionFromDiffblue.class)
+  @ManagedByDiffblue
   @MethodsUnderTest({"void TransactionInfoCapsule.<init>(byte[])"})
   public void testNewTransactionInfoCapsule_whenArrayOfByteWithAsteriskAndTwo()
       throws BadItemException {
@@ -159,7 +166,8 @@ public class TransactionInfoCapsuleDiffblueTest {
    * <p>Method under test: {@link TransactionInfoCapsule#TransactionInfoCapsule(byte[])}
    */
   @Test
-  @Category(MaintainedByDiffblue.class)
+  @Category(ContributionFromDiffblue.class)
+  @ManagedByDiffblue
   @MethodsUnderTest({"void TransactionInfoCapsule.<init>(byte[])"})
   public void testNewTransactionInfoCapsule_whenArrayOfByteWithAsteriskAndZero()
       throws BadItemException {
@@ -179,7 +187,8 @@ public class TransactionInfoCapsuleDiffblueTest {
    * <p>Method under test: {@link TransactionInfoCapsule#TransactionInfoCapsule(byte[])}
    */
   @Test
-  @Category(MaintainedByDiffblue.class)
+  @Category(ContributionFromDiffblue.class)
+  @ManagedByDiffblue
   @MethodsUnderTest({"void TransactionInfoCapsule.<init>(byte[])"})
   public void testNewTransactionInfoCapsule_whenArrayOfByteWithColonAndTwo()
       throws BadItemException {
@@ -201,7 +210,8 @@ public class TransactionInfoCapsuleDiffblueTest {
    * <p>Method under test: {@link TransactionInfoCapsule#TransactionInfoCapsule(byte[])}
    */
   @Test
-  @Category(MaintainedByDiffblue.class)
+  @Category(ContributionFromDiffblue.class)
+  @ManagedByDiffblue
   @MethodsUnderTest({"void TransactionInfoCapsule.<init>(byte[])"})
   public void testNewTransactionInfoCapsule_whenArrayOfByteWithLfAndTwo() throws BadItemException {
     // Arrange, Act and Assert
@@ -222,7 +232,8 @@ public class TransactionInfoCapsuleDiffblueTest {
    * <p>Method under test: {@link TransactionInfoCapsule#TransactionInfoCapsule(byte[])}
    */
   @Test
-  @Category(MaintainedByDiffblue.class)
+  @Category(ContributionFromDiffblue.class)
+  @ManagedByDiffblue
   @MethodsUnderTest({"void TransactionInfoCapsule.<init>(byte[])"})
   public void testNewTransactionInfoCapsule_whenArrayOfByteWithLfAndZero() throws BadItemException {
     // Arrange, Act and Assert
@@ -241,7 +252,8 @@ public class TransactionInfoCapsuleDiffblueTest {
    * <p>Method under test: {@link TransactionInfoCapsule#TransactionInfoCapsule(byte[])}
    */
   @Test
-  @Category(MaintainedByDiffblue.class)
+  @Category(ContributionFromDiffblue.class)
+  @ManagedByDiffblue
   @MethodsUnderTest({"void TransactionInfoCapsule.<init>(byte[])"})
   public void testNewTransactionInfoCapsule_whenArrayOfByteWithMinusOneAndX()
       throws BadItemException {
@@ -261,7 +273,8 @@ public class TransactionInfoCapsuleDiffblueTest {
    * <p>Method under test: {@link TransactionInfoCapsule#TransactionInfoCapsule(byte[])}
    */
   @Test
-  @Category(MaintainedByDiffblue.class)
+  @Category(ContributionFromDiffblue.class)
+  @ManagedByDiffblue
   @MethodsUnderTest({"void TransactionInfoCapsule.<init>(byte[])"})
   public void testNewTransactionInfoCapsule_whenArrayOfByteWithSixteenAndX()
       throws BadItemException {
@@ -281,7 +294,8 @@ public class TransactionInfoCapsuleDiffblueTest {
    * <p>Method under test: {@link TransactionInfoCapsule#TransactionInfoCapsule(byte[])}
    */
   @Test
-  @Category(MaintainedByDiffblue.class)
+  @Category(ContributionFromDiffblue.class)
+  @ManagedByDiffblue
   @MethodsUnderTest({"void TransactionInfoCapsule.<init>(byte[])"})
   public void testNewTransactionInfoCapsule_whenArrayOfByteWithTwentyFourAndX()
       throws BadItemException {
@@ -302,7 +316,8 @@ public class TransactionInfoCapsuleDiffblueTest {
    * <p>Method under test: {@link TransactionInfoCapsule#TransactionInfoCapsule(byte[])}
    */
   @Test
-  @Category(MaintainedByDiffblue.class)
+  @Category(ContributionFromDiffblue.class)
+  @ManagedByDiffblue
   @MethodsUnderTest({"void TransactionInfoCapsule.<init>(byte[])"})
   public void testNewTransactionInfoCapsule_whenAxaxaxaxBytesIsUtf8_thenThrowBadItemException()
       throws UnsupportedEncodingException, BadItemException {
@@ -322,7 +337,8 @@ public class TransactionInfoCapsuleDiffblueTest {
    * <p>Method under test: {@link TransactionInfoCapsule#TransactionInfoCapsule(byte[])}
    */
   @Test
-  @Category(MaintainedByDiffblue.class)
+  @Category(ContributionFromDiffblue.class)
+  @ManagedByDiffblue
   @MethodsUnderTest({"void TransactionInfoCapsule.<init>(byte[])"})
   public void testNewTransactionInfoCapsule_whenEmptyArrayOfByte_thenReturnBlockNumberIsZero()
       throws BadItemException {
@@ -351,7 +367,8 @@ public class TransactionInfoCapsuleDiffblueTest {
    * <p>Method under test: {@link TransactionInfoCapsule#TransactionInfoCapsule(byte[])}
    */
   @Test
-  @Category(MaintainedByDiffblue.class)
+  @Category(ContributionFromDiffblue.class)
+  @ManagedByDiffblue
   @MethodsUnderTest({"void TransactionInfoCapsule.<init>(byte[])"})
   public void testNewTransactionInfoCapsule_whenXaxaxaxBytesIsUtf8_thenThrowBadItemException()
       throws UnsupportedEncodingException, BadItemException {
@@ -371,7 +388,8 @@ public class TransactionInfoCapsuleDiffblueTest {
    * <p>Method under test: {@link TransactionInfoCapsule#TransactionInfoCapsule(byte[])}
    */
   @Test
-  @Category(MaintainedByDiffblue.class)
+  @Category(ContributionFromDiffblue.class)
+  @ManagedByDiffblue
   @MethodsUnderTest({"void TransactionInfoCapsule.<init>(byte[])"})
   public void testNewTransactionInfoCapsule_whenXaxaxaxBytesIsUtf8_thenThrowBadItemException2()
       throws UnsupportedEncodingException, BadItemException {
@@ -391,7 +409,8 @@ public class TransactionInfoCapsuleDiffblueTest {
    * <p>Method under test: {@link TransactionInfoCapsule#TransactionInfoCapsule(byte[])}
    */
   @Test
-  @Category(MaintainedByDiffblue.class)
+  @Category(ContributionFromDiffblue.class)
+  @ManagedByDiffblue
   @MethodsUnderTest({"void TransactionInfoCapsule.<init>(byte[])"})
   public void testNewTransactionInfoCapsule_whenXaxaxaxBytesIsUtf8_thenThrowBadItemException3()
       throws UnsupportedEncodingException, BadItemException {
@@ -411,7 +430,8 @@ public class TransactionInfoCapsuleDiffblueTest {
    * <p>Method under test: {@link TransactionInfoCapsule#TransactionInfoCapsule(byte[])}
    */
   @Test
-  @Category(MaintainedByDiffblue.class)
+  @Category(ContributionFromDiffblue.class)
+  @ManagedByDiffblue
   @MethodsUnderTest({"void TransactionInfoCapsule.<init>(byte[])"})
   public void testNewTransactionInfoCapsule_whenXaxaxaxBytesIsUtf8_thenThrowBadItemException4()
       throws UnsupportedEncodingException, BadItemException {
@@ -431,7 +451,8 @@ public class TransactionInfoCapsuleDiffblueTest {
    * <p>Method under test: {@link TransactionInfoCapsule#TransactionInfoCapsule(byte[])}
    */
   @Test
-  @Category(MaintainedByDiffblue.class)
+  @Category(ContributionFromDiffblue.class)
+  @ManagedByDiffblue
   @MethodsUnderTest({"void TransactionInfoCapsule.<init>(byte[])"})
   public void testNewTransactionInfoCapsule_whenXxaxaxaxBytesIsUtf8_thenThrowBadItemException()
       throws UnsupportedEncodingException, BadItemException {
@@ -446,7 +467,8 @@ public class TransactionInfoCapsuleDiffblueTest {
    * <p>Method under test: {@link TransactionInfoCapsule#getPackingFee()}
    */
   @Test
-  @Category(MaintainedByDiffblue.class)
+  @Category(ContributionFromDiffblue.class)
+  @ManagedByDiffblue
   @MethodsUnderTest({"long TransactionInfoCapsule.getPackingFee()"})
   public void testGetPackingFee() {
     // Arrange, Act and Assert
@@ -459,7 +481,8 @@ public class TransactionInfoCapsuleDiffblueTest {
    * <p>Method under test: {@link TransactionInfoCapsule#getFee()}
    */
   @Test
-  @Category(MaintainedByDiffblue.class)
+  @Category(ContributionFromDiffblue.class)
+  @ManagedByDiffblue
   @MethodsUnderTest({"long TransactionInfoCapsule.getFee()"})
   public void testGetFee() {
     // Arrange, Act and Assert
@@ -472,7 +495,8 @@ public class TransactionInfoCapsuleDiffblueTest {
    * <p>Method under test: {@link TransactionInfoCapsule#setFee(long)}
    */
   @Test
-  @Category(MaintainedByDiffblue.class)
+  @Category(ContributionFromDiffblue.class)
+  @ManagedByDiffblue
   @MethodsUnderTest({"void TransactionInfoCapsule.setFee(long)"})
   public void testSetFee() {
     // Arrange
@@ -496,7 +520,8 @@ public class TransactionInfoCapsuleDiffblueTest {
    * <p>Method under test: {@link TransactionInfoCapsule#getId()}
    */
   @Test
-  @Category(MaintainedByDiffblue.class)
+  @Category(ContributionFromDiffblue.class)
+  @ManagedByDiffblue
   @MethodsUnderTest({"byte[] TransactionInfoCapsule.getId()"})
   public void testGetId() {
     // Arrange, Act and Assert
@@ -509,7 +534,8 @@ public class TransactionInfoCapsuleDiffblueTest {
    * <p>Method under test: {@link TransactionInfoCapsule#setId(byte[])}
    */
   @Test
-  @Category(MaintainedByDiffblue.class)
+  @Category(ContributionFromDiffblue.class)
+  @ManagedByDiffblue
   @MethodsUnderTest({"void TransactionInfoCapsule.setId(byte[])"})
   public void testSetId() throws UnsupportedEncodingException {
     // Arrange
@@ -539,7 +565,8 @@ public class TransactionInfoCapsuleDiffblueTest {
    * <p>Method under test: {@link TransactionInfoCapsule#getUnfreezeAmount()}
    */
   @Test
-  @Category(MaintainedByDiffblue.class)
+  @Category(ContributionFromDiffblue.class)
+  @ManagedByDiffblue
   @MethodsUnderTest({"long TransactionInfoCapsule.getUnfreezeAmount()"})
   public void testGetUnfreezeAmount() {
     // Arrange, Act and Assert
@@ -552,7 +579,8 @@ public class TransactionInfoCapsuleDiffblueTest {
    * <p>Method under test: {@link TransactionInfoCapsule#setUnfreezeAmount(long)}
    */
   @Test
-  @Category(MaintainedByDiffblue.class)
+  @Category(ContributionFromDiffblue.class)
+  @ManagedByDiffblue
   @MethodsUnderTest({"void TransactionInfoCapsule.setUnfreezeAmount(long)"})
   public void testSetUnfreezeAmount() {
     // Arrange
@@ -576,7 +604,8 @@ public class TransactionInfoCapsuleDiffblueTest {
    * <p>Method under test: {@link TransactionInfoCapsule#getWithdrawAmount()}
    */
   @Test
-  @Category(MaintainedByDiffblue.class)
+  @Category(ContributionFromDiffblue.class)
+  @ManagedByDiffblue
   @MethodsUnderTest({"long TransactionInfoCapsule.getWithdrawAmount()"})
   public void testGetWithdrawAmount() {
     // Arrange, Act and Assert
@@ -589,7 +618,8 @@ public class TransactionInfoCapsuleDiffblueTest {
    * <p>Method under test: {@link TransactionInfoCapsule#setWithdrawAmount(long)}
    */
   @Test
-  @Category(MaintainedByDiffblue.class)
+  @Category(ContributionFromDiffblue.class)
+  @ManagedByDiffblue
   @MethodsUnderTest({"void TransactionInfoCapsule.setWithdrawAmount(long)"})
   public void testSetWithdrawAmount() {
     // Arrange
@@ -613,7 +643,8 @@ public class TransactionInfoCapsuleDiffblueTest {
    * <p>Method under test: {@link TransactionInfoCapsule#setResMessage(String)}
    */
   @Test
-  @Category(MaintainedByDiffblue.class)
+  @Category(ContributionFromDiffblue.class)
+  @ManagedByDiffblue
   @MethodsUnderTest({"void TransactionInfoCapsule.setResMessage(String)"})
   public void testSetResMessage() {
     // Arrange
@@ -647,7 +678,8 @@ public class TransactionInfoCapsuleDiffblueTest {
    * <p>Method under test: {@link TransactionInfoCapsule#addFee(long)}
    */
   @Test
-  @Category(MaintainedByDiffblue.class)
+  @Category(ContributionFromDiffblue.class)
+  @ManagedByDiffblue
   @MethodsUnderTest({"void TransactionInfoCapsule.addFee(long)"})
   public void testAddFee() {
     // Arrange
@@ -671,7 +703,8 @@ public class TransactionInfoCapsuleDiffblueTest {
    * <p>Method under test: {@link TransactionInfoCapsule#getBlockNumber()}
    */
   @Test
-  @Category(MaintainedByDiffblue.class)
+  @Category(ContributionFromDiffblue.class)
+  @ManagedByDiffblue
   @MethodsUnderTest({"long TransactionInfoCapsule.getBlockNumber()"})
   public void testGetBlockNumber() {
     // Arrange, Act and Assert
@@ -684,7 +717,8 @@ public class TransactionInfoCapsuleDiffblueTest {
    * <p>Method under test: {@link TransactionInfoCapsule#setBlockNumber(long)}
    */
   @Test
-  @Category(MaintainedByDiffblue.class)
+  @Category(ContributionFromDiffblue.class)
+  @ManagedByDiffblue
   @MethodsUnderTest({"void TransactionInfoCapsule.setBlockNumber(long)"})
   public void testSetBlockNumber() {
     // Arrange
@@ -708,7 +742,8 @@ public class TransactionInfoCapsuleDiffblueTest {
    * <p>Method under test: {@link TransactionInfoCapsule#getBlockTimeStamp()}
    */
   @Test
-  @Category(MaintainedByDiffblue.class)
+  @Category(ContributionFromDiffblue.class)
+  @ManagedByDiffblue
   @MethodsUnderTest({"long TransactionInfoCapsule.getBlockTimeStamp()"})
   public void testGetBlockTimeStamp() {
     // Arrange, Act and Assert
@@ -721,7 +756,8 @@ public class TransactionInfoCapsuleDiffblueTest {
    * <p>Method under test: {@link TransactionInfoCapsule#setBlockTimeStamp(long)}
    */
   @Test
-  @Category(MaintainedByDiffblue.class)
+  @Category(ContributionFromDiffblue.class)
+  @ManagedByDiffblue
   @MethodsUnderTest({"void TransactionInfoCapsule.setBlockTimeStamp(long)"})
   public void testSetBlockTimeStamp() {
     // Arrange
@@ -745,7 +781,8 @@ public class TransactionInfoCapsuleDiffblueTest {
    * <p>Method under test: {@link TransactionInfoCapsule#setContractResult(byte[])}
    */
   @Test
-  @Category(MaintainedByDiffblue.class)
+  @Category(ContributionFromDiffblue.class)
+  @ManagedByDiffblue
   @MethodsUnderTest({"void TransactionInfoCapsule.setContractResult(byte[])"})
   public void testSetContractResult() throws UnsupportedEncodingException {
     // Arrange
@@ -775,7 +812,8 @@ public class TransactionInfoCapsuleDiffblueTest {
    * <p>Method under test: {@link TransactionInfoCapsule#setContractAddress(byte[])}
    */
   @Test
-  @Category(MaintainedByDiffblue.class)
+  @Category(ContributionFromDiffblue.class)
+  @ManagedByDiffblue
   @MethodsUnderTest({"void TransactionInfoCapsule.setContractAddress(byte[])"})
   public void testSetContractAddress() throws UnsupportedEncodingException {
     // Arrange
@@ -809,7 +847,8 @@ public class TransactionInfoCapsuleDiffblueTest {
    * <p>Method under test: {@link TransactionInfoCapsule#addAllLog(List)}
    */
   @Test
-  @Category(MaintainedByDiffblue.class)
+  @Category(ContributionFromDiffblue.class)
+  @ManagedByDiffblue
   @MethodsUnderTest({"void TransactionInfoCapsule.addAllLog(List)"})
   public void testAddAllLog() {
     // Arrange
@@ -831,7 +870,8 @@ public class TransactionInfoCapsuleDiffblueTest {
    * <p>Method under test: {@link TransactionInfoCapsule#getData()}
    */
   @Test
-  @Category(MaintainedByDiffblue.class)
+  @Category(ContributionFromDiffblue.class)
+  @ManagedByDiffblue
   @MethodsUnderTest({"byte[] TransactionInfoCapsule.getData()"})
   public void testGetData() {
     // Arrange, Act and Assert
@@ -844,7 +884,8 @@ public class TransactionInfoCapsuleDiffblueTest {
    * <p>Method under test: {@link TransactionInfoCapsule#getInstance()}
    */
   @Test
-  @Category(MaintainedByDiffblue.class)
+  @Category(ContributionFromDiffblue.class)
+  @ManagedByDiffblue
   @MethodsUnderTest({"TransactionInfo TransactionInfoCapsule.getInstance()"})
   public void testGetInstance() {
     // Arrange and Act

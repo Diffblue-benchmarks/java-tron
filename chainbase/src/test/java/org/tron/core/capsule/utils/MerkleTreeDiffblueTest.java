@@ -5,7 +5,8 @@ import static org.junit.Assert.assertEquals;
 import static org.junit.Assert.assertNull;
 import static org.junit.Assert.assertSame;
 import static org.junit.Assert.assertTrue;
-import com.diffblue.cover.annotations.MaintainedByDiffblue;
+import com.diffblue.cover.annotations.ContributionFromDiffblue;
+import com.diffblue.cover.annotations.ManagedByDiffblue;
 import com.diffblue.cover.annotations.MethodsUnderTest;
 import com.google.protobuf.ByteString;
 import java.math.BigInteger;
@@ -23,7 +24,8 @@ public class MerkleTreeDiffblueTest {
    * <p>Method under test: {@link MerkleTree#createTree(List)}
    */
   @Test
-  @Category(MaintainedByDiffblue.class)
+  @Category(ContributionFromDiffblue.class)
+  @ManagedByDiffblue
   @MethodsUnderTest({"MerkleTree MerkleTree.createTree(List)"})
   public void testCreateTree() {
     // Arrange
@@ -79,7 +81,8 @@ public class MerkleTreeDiffblueTest {
    * <p>Method under test: {@link MerkleTree#createTree(List)}
    */
   @Test
-  @Category(MaintainedByDiffblue.class)
+  @Category(ContributionFromDiffblue.class)
+  @ManagedByDiffblue
   @MethodsUnderTest({"MerkleTree MerkleTree.createTree(List)"})
   public void testCreateTree_givenZero_hash_thenReturnLeavesSizeIsEleven() {
     // Arrange
@@ -132,7 +135,8 @@ public class MerkleTreeDiffblueTest {
    * <p>Method under test: {@link MerkleTree#createTree(List)}
    */
   @Test
-  @Category(MaintainedByDiffblue.class)
+  @Category(ContributionFromDiffblue.class)
+  @ManagedByDiffblue
   @MethodsUnderTest({"MerkleTree MerkleTree.createTree(List)"})
   public void testCreateTree_givenZero_hash_thenReturnLeavesSizeIsSix() {
     // Arrange
@@ -183,7 +187,8 @@ public class MerkleTreeDiffblueTest {
    * <p>Method under test: {@link MerkleTree#createTree(List)}
    */
   @Test
-  @Category(MaintainedByDiffblue.class)
+  @Category(ContributionFromDiffblue.class)
+  @ManagedByDiffblue
   @MethodsUnderTest({"MerkleTree MerkleTree.createTree(List)"})
   public void testCreateTree_givenZero_hash_thenReturnRootRightIsNull() {
     // Arrange
@@ -222,7 +227,8 @@ public class MerkleTreeDiffblueTest {
    * </ul>
    */
   @Test
-  @Category(MaintainedByDiffblue.class)
+  @Category(ContributionFromDiffblue.class)
+  @ManagedByDiffblue
   @MethodsUnderTest({
     "void MerkleTree.<init>()",
     "List MerkleTree.getHashList()",
@@ -254,7 +260,8 @@ public class MerkleTreeDiffblueTest {
    * </ul>
    */
   @Test
-  @Category(MaintainedByDiffblue.class)
+  @Category(ContributionFromDiffblue.class)
+  @ManagedByDiffblue
   @MethodsUnderTest({
     "void Leaf.<init>(MerkleTree)",
     "Sha256Hash Leaf.getHash()",

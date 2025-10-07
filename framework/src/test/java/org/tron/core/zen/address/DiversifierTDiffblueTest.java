@@ -2,7 +2,8 @@ package org.tron.core.zen.address;
 
 import static org.junit.Assert.assertArrayEquals;
 import static org.junit.Assert.assertSame;
-import com.diffblue.cover.annotations.MaintainedByDiffblue;
+import com.diffblue.cover.annotations.ContributionFromDiffblue;
+import com.diffblue.cover.annotations.ManagedByDiffblue;
 import com.diffblue.cover.annotations.MethodsUnderTest;
 import java.io.UnsupportedEncodingException;
 import org.junit.Test;
@@ -16,7 +17,8 @@ public class DiversifierTDiffblueTest {
    * <p>Method under test: {@link DiversifierT#DiversifierT()}
    */
   @Test
-  @Category(MaintainedByDiffblue.class)
+  @Category(ContributionFromDiffblue.class)
+  @ManagedByDiffblue
   @MethodsUnderTest({"void DiversifierT.<init>()"})
   public void testNewDiversifierT() {
     // Arrange, Act and Assert
@@ -29,7 +31,8 @@ public class DiversifierTDiffblueTest {
    * <p>Method under test: {@link DiversifierT#DiversifierT(byte[])}
    */
   @Test
-  @Category(MaintainedByDiffblue.class)
+  @Category(ContributionFromDiffblue.class)
+  @ManagedByDiffblue
   @MethodsUnderTest({"void DiversifierT.<init>(byte[])"})
   public void testNewDiversifierT2() throws UnsupportedEncodingException {
     // Arrange, Act and Assert
@@ -48,7 +51,8 @@ public class DiversifierTDiffblueTest {
    * </ul>
    */
   @Test
-  @Category(MaintainedByDiffblue.class)
+  @Category(ContributionFromDiffblue.class)
+  @ManagedByDiffblue
   @MethodsUnderTest({"byte[] DiversifierT.getData()", "void DiversifierT.setData(byte[])"})
   public void testGettersAndSetters() throws UnsupportedEncodingException, ZksnarkException {
     // Arrange

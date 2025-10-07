@@ -6,7 +6,8 @@ import static org.junit.Assert.assertNull;
 import static org.junit.Assert.assertSame;
 import static org.junit.Assert.assertTrue;
 import static org.mockito.Mockito.mock;
-import com.diffblue.cover.annotations.MaintainedByDiffblue;
+import com.diffblue.cover.annotations.ContributionFromDiffblue;
+import com.diffblue.cover.annotations.ManagedByDiffblue;
 import com.diffblue.cover.annotations.MethodsUnderTest;
 import java.util.ArrayList;
 import java.util.List;
@@ -31,7 +32,8 @@ public class BlockChainInfoDiffblueTest {
    * </ul>
    */
   @Test
-  @Category(MaintainedByDiffblue.class)
+  @Category(ContributionFromDiffblue.class)
+  @ManagedByDiffblue
   @MethodsUnderTest({"boolean BlockChainInfo.equals(Object)", "int BlockChainInfo.hashCode()"})
   public void testEqualsAndHashCode_whenOtherIsEqual_thenReturnEqual() {
     // Arrange
@@ -86,7 +88,8 @@ public class BlockChainInfoDiffblueTest {
    * </ul>
    */
   @Test
-  @Category(MaintainedByDiffblue.class)
+  @Category(ContributionFromDiffblue.class)
+  @ManagedByDiffblue
   @MethodsUnderTest({"boolean BlockChainInfo.equals(Object)", "int BlockChainInfo.hashCode()"})
   public void testEqualsAndHashCode_whenOtherIsEqual_thenReturnEqual2() {
     // Arrange
@@ -141,7 +144,8 @@ public class BlockChainInfoDiffblueTest {
    * </ul>
    */
   @Test
-  @Category(MaintainedByDiffblue.class)
+  @Category(ContributionFromDiffblue.class)
+  @ManagedByDiffblue
   @MethodsUnderTest({"boolean BlockChainInfo.equals(Object)", "int BlockChainInfo.hashCode()"})
   public void testEqualsAndHashCode_whenOtherIsSame_thenReturnEqual() {
     // Arrange
@@ -177,7 +181,8 @@ public class BlockChainInfoDiffblueTest {
    * <p>Method under test: {@link BlockChainInfo#equals(Object)}
    */
   @Test
-  @Category(MaintainedByDiffblue.class)
+  @Category(ContributionFromDiffblue.class)
+  @ManagedByDiffblue
   @MethodsUnderTest({"boolean BlockChainInfo.equals(Object)", "int BlockChainInfo.hashCode()"})
   public void testEquals_whenOtherIsDifferent_thenReturnNotEqual() {
     // Arrange
@@ -226,7 +231,8 @@ public class BlockChainInfoDiffblueTest {
    * <p>Method under test: {@link BlockChainInfo#equals(Object)}
    */
   @Test
-  @Category(MaintainedByDiffblue.class)
+  @Category(ContributionFromDiffblue.class)
+  @ManagedByDiffblue
   @MethodsUnderTest({"boolean BlockChainInfo.equals(Object)", "int BlockChainInfo.hashCode()"})
   public void testEquals_whenOtherIsDifferent_thenReturnNotEqual2() {
     // Arrange
@@ -275,7 +281,8 @@ public class BlockChainInfoDiffblueTest {
    * <p>Method under test: {@link BlockChainInfo#equals(Object)}
    */
   @Test
-  @Category(MaintainedByDiffblue.class)
+  @Category(ContributionFromDiffblue.class)
+  @ManagedByDiffblue
   @MethodsUnderTest({"boolean BlockChainInfo.equals(Object)", "int BlockChainInfo.hashCode()"})
   public void testEquals_whenOtherIsDifferent_thenReturnNotEqual3() {
     // Arrange
@@ -332,7 +339,8 @@ public class BlockChainInfoDiffblueTest {
    * <p>Method under test: {@link BlockChainInfo#equals(Object)}
    */
   @Test
-  @Category(MaintainedByDiffblue.class)
+  @Category(ContributionFromDiffblue.class)
+  @ManagedByDiffblue
   @MethodsUnderTest({"boolean BlockChainInfo.equals(Object)", "int BlockChainInfo.hashCode()"})
   public void testEquals_whenOtherIsDifferent_thenReturnNotEqual4() {
     // Arrange
@@ -381,7 +389,8 @@ public class BlockChainInfoDiffblueTest {
    * <p>Method under test: {@link BlockChainInfo#equals(Object)}
    */
   @Test
-  @Category(MaintainedByDiffblue.class)
+  @Category(ContributionFromDiffblue.class)
+  @ManagedByDiffblue
   @MethodsUnderTest({"boolean BlockChainInfo.equals(Object)", "int BlockChainInfo.hashCode()"})
   public void testEquals_whenOtherIsDifferent_thenReturnNotEqual5() {
     // Arrange
@@ -430,7 +439,8 @@ public class BlockChainInfoDiffblueTest {
    * <p>Method under test: {@link BlockChainInfo#equals(Object)}
    */
   @Test
-  @Category(MaintainedByDiffblue.class)
+  @Category(ContributionFromDiffblue.class)
+  @ManagedByDiffblue
   @MethodsUnderTest({"boolean BlockChainInfo.equals(Object)", "int BlockChainInfo.hashCode()"})
   public void testEquals_whenOtherIsDifferent_thenReturnNotEqual6() {
     // Arrange
@@ -479,7 +489,8 @@ public class BlockChainInfoDiffblueTest {
    * <p>Method under test: {@link BlockChainInfo#equals(Object)}
    */
   @Test
-  @Category(MaintainedByDiffblue.class)
+  @Category(ContributionFromDiffblue.class)
+  @ManagedByDiffblue
   @MethodsUnderTest({"boolean BlockChainInfo.equals(Object)", "int BlockChainInfo.hashCode()"})
   public void testEquals_whenOtherIsDifferent_thenReturnNotEqual7() {
     // Arrange
@@ -528,7 +539,8 @@ public class BlockChainInfoDiffblueTest {
    * <p>Method under test: {@link BlockChainInfo#equals(Object)}
    */
   @Test
-  @Category(MaintainedByDiffblue.class)
+  @Category(ContributionFromDiffblue.class)
+  @ManagedByDiffblue
   @MethodsUnderTest({"boolean BlockChainInfo.equals(Object)", "int BlockChainInfo.hashCode()"})
   public void testEquals_whenOtherIsDifferent_thenReturnNotEqual8() {
     // Arrange
@@ -577,7 +589,8 @@ public class BlockChainInfoDiffblueTest {
    * <p>Method under test: {@link BlockChainInfo#equals(Object)}
    */
   @Test
-  @Category(MaintainedByDiffblue.class)
+  @Category(ContributionFromDiffblue.class)
+  @ManagedByDiffblue
   @MethodsUnderTest({"boolean BlockChainInfo.equals(Object)", "int BlockChainInfo.hashCode()"})
   public void testEquals_whenOtherIsDifferent_thenReturnNotEqual9() {
     // Arrange
@@ -626,7 +639,8 @@ public class BlockChainInfoDiffblueTest {
    * <p>Method under test: {@link BlockChainInfo#equals(Object)}
    */
   @Test
-  @Category(MaintainedByDiffblue.class)
+  @Category(ContributionFromDiffblue.class)
+  @ManagedByDiffblue
   @MethodsUnderTest({"boolean BlockChainInfo.equals(Object)", "int BlockChainInfo.hashCode()"})
   public void testEquals_whenOtherIsDifferent_thenReturnNotEqual10() {
     // Arrange
@@ -675,7 +689,8 @@ public class BlockChainInfoDiffblueTest {
    * <p>Method under test: {@link BlockChainInfo#equals(Object)}
    */
   @Test
-  @Category(MaintainedByDiffblue.class)
+  @Category(ContributionFromDiffblue.class)
+  @ManagedByDiffblue
   @MethodsUnderTest({"boolean BlockChainInfo.equals(Object)", "int BlockChainInfo.hashCode()"})
   public void testEquals_whenOtherIsDifferent_thenReturnNotEqual11() {
     // Arrange
@@ -724,7 +739,8 @@ public class BlockChainInfoDiffblueTest {
    * <p>Method under test: {@link BlockChainInfo#equals(Object)}
    */
   @Test
-  @Category(MaintainedByDiffblue.class)
+  @Category(ContributionFromDiffblue.class)
+  @ManagedByDiffblue
   @MethodsUnderTest({"boolean BlockChainInfo.equals(Object)", "int BlockChainInfo.hashCode()"})
   public void testEquals_whenOtherIsDifferent_thenReturnNotEqual12() {
     // Arrange
@@ -773,7 +789,8 @@ public class BlockChainInfoDiffblueTest {
    * <p>Method under test: {@link BlockChainInfo#equals(Object)}
    */
   @Test
-  @Category(MaintainedByDiffblue.class)
+  @Category(ContributionFromDiffblue.class)
+  @ManagedByDiffblue
   @MethodsUnderTest({"boolean BlockChainInfo.equals(Object)", "int BlockChainInfo.hashCode()"})
   public void testEquals_whenOtherIsDifferent_thenReturnNotEqual13() {
     // Arrange
@@ -822,7 +839,8 @@ public class BlockChainInfoDiffblueTest {
    * <p>Method under test: {@link BlockChainInfo#equals(Object)}
    */
   @Test
-  @Category(MaintainedByDiffblue.class)
+  @Category(ContributionFromDiffblue.class)
+  @ManagedByDiffblue
   @MethodsUnderTest({"boolean BlockChainInfo.equals(Object)", "int BlockChainInfo.hashCode()"})
   public void testEquals_whenOtherIsDifferent_thenReturnNotEqual14() {
     // Arrange
@@ -871,7 +889,8 @@ public class BlockChainInfoDiffblueTest {
    * <p>Method under test: {@link BlockChainInfo#equals(Object)}
    */
   @Test
-  @Category(MaintainedByDiffblue.class)
+  @Category(ContributionFromDiffblue.class)
+  @ManagedByDiffblue
   @MethodsUnderTest({"boolean BlockChainInfo.equals(Object)", "int BlockChainInfo.hashCode()"})
   public void testEquals_whenOtherIsDifferent_thenReturnNotEqual15() {
     // Arrange
@@ -920,7 +939,8 @@ public class BlockChainInfoDiffblueTest {
    * <p>Method under test: {@link BlockChainInfo#equals(Object)}
    */
   @Test
-  @Category(MaintainedByDiffblue.class)
+  @Category(ContributionFromDiffblue.class)
+  @ManagedByDiffblue
   @MethodsUnderTest({"boolean BlockChainInfo.equals(Object)", "int BlockChainInfo.hashCode()"})
   public void testEquals_whenOtherIsDifferent_thenReturnNotEqual16() {
     // Arrange
@@ -969,7 +989,8 @@ public class BlockChainInfoDiffblueTest {
    * <p>Method under test: {@link BlockChainInfo#equals(Object)}
    */
   @Test
-  @Category(MaintainedByDiffblue.class)
+  @Category(ContributionFromDiffblue.class)
+  @ManagedByDiffblue
   @MethodsUnderTest({"boolean BlockChainInfo.equals(Object)", "int BlockChainInfo.hashCode()"})
   public void testEquals_whenOtherIsDifferent_thenReturnNotEqual17() {
     // Arrange
@@ -1018,7 +1039,8 @@ public class BlockChainInfoDiffblueTest {
    * <p>Method under test: {@link BlockChainInfo#equals(Object)}
    */
   @Test
-  @Category(MaintainedByDiffblue.class)
+  @Category(ContributionFromDiffblue.class)
+  @ManagedByDiffblue
   @MethodsUnderTest({"boolean BlockChainInfo.equals(Object)", "int BlockChainInfo.hashCode()"})
   public void testEquals_whenOtherIsDifferent_thenReturnNotEqual18() {
     // Arrange
@@ -1070,7 +1092,8 @@ public class BlockChainInfoDiffblueTest {
    * <p>Method under test: {@link BlockChainInfo#equals(Object)}
    */
   @Test
-  @Category(MaintainedByDiffblue.class)
+  @Category(ContributionFromDiffblue.class)
+  @ManagedByDiffblue
   @MethodsUnderTest({"boolean BlockChainInfo.equals(Object)", "int BlockChainInfo.hashCode()"})
   public void testEquals_whenOtherIsNull_thenReturnNotEqual() {
     // Arrange
@@ -1104,7 +1127,8 @@ public class BlockChainInfoDiffblueTest {
    * <p>Method under test: {@link BlockChainInfo#equals(Object)}
    */
   @Test
-  @Category(MaintainedByDiffblue.class)
+  @Category(ContributionFromDiffblue.class)
+  @ManagedByDiffblue
   @MethodsUnderTest({"boolean BlockChainInfo.equals(Object)", "int BlockChainInfo.hashCode()"})
   public void testEquals_whenOtherIsWrongType_thenReturnNotEqual() {
     // Arrange
@@ -1163,7 +1187,8 @@ public class BlockChainInfoDiffblueTest {
    * </ul>
    */
   @Test
-  @Category(MaintainedByDiffblue.class)
+  @Category(ContributionFromDiffblue.class)
+  @ManagedByDiffblue
   @MethodsUnderTest({
     "void BlockChainInfo.<init>()",
     "RateInfo BlockChainInfo.getBlockProcessTime()",

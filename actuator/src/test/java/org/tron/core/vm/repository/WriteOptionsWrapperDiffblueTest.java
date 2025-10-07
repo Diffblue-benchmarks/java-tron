@@ -1,7 +1,8 @@
 package org.tron.core.vm.repository;
 
 import static org.junit.Assert.assertNull;
-import com.diffblue.cover.annotations.MaintainedByDiffblue;
+import com.diffblue.cover.annotations.ContributionFromDiffblue;
+import com.diffblue.cover.annotations.ManagedByDiffblue;
 import com.diffblue.cover.annotations.MethodsUnderTest;
 import org.iq80.leveldb.WriteOptions;
 import org.junit.Test;
@@ -20,7 +21,8 @@ public class WriteOptionsWrapperDiffblueTest {
    * </ul>
    */
   @Test
-  @Category(MaintainedByDiffblue.class)
+  @Category(ContributionFromDiffblue.class)
+  @ManagedByDiffblue
   @MethodsUnderTest({
     "void WriteOptionsWrapper.<init>()",
     "WriteOptions WriteOptionsWrapper.getLevel()",

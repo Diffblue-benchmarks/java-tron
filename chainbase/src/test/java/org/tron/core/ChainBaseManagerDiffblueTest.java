@@ -12,7 +12,8 @@ import static org.mockito.Mockito.doNothing;
 import static org.mockito.Mockito.mock;
 import static org.mockito.Mockito.verify;
 import static org.mockito.Mockito.when;
-import com.diffblue.cover.annotations.MaintainedByDiffblue;
+import com.diffblue.cover.annotations.ContributionFromDiffblue;
+import com.diffblue.cover.annotations.ManagedByDiffblue;
 import com.diffblue.cover.annotations.MethodsUnderTest;
 import com.google.protobuf.ByteString;
 import java.io.UnsupportedEncodingException;
@@ -61,7 +62,8 @@ public class ChainBaseManagerDiffblueTest {
    * <p>Method under test: {@link ChainBaseManager#getWitnesses()}
    */
   @Test
-  @Category(MaintainedByDiffblue.class)
+  @Category(ContributionFromDiffblue.class)
+  @ManagedByDiffblue
   @MethodsUnderTest({"List ChainBaseManager.getWitnesses()"})
   public void testGetWitnesses() {
     // Arrange
@@ -81,7 +83,8 @@ public class ChainBaseManagerDiffblueTest {
    * <p>Method under test: {@link ChainBaseManager#getWitnesses()}
    */
   @Test
-  @Category(MaintainedByDiffblue.class)
+  @Category(ContributionFromDiffblue.class)
+  @ManagedByDiffblue
   @MethodsUnderTest({"List ChainBaseManager.getWitnesses()"})
   public void testGetWitnesses2() {
     // Arrange
@@ -101,7 +104,8 @@ public class ChainBaseManagerDiffblueTest {
    * <p>Method under test: {@link ChainBaseManager#addWitness(ByteString)}
    */
   @Test
-  @Category(MaintainedByDiffblue.class)
+  @Category(ContributionFromDiffblue.class)
+  @ManagedByDiffblue
   @MethodsUnderTest({"void ChainBaseManager.addWitness(ByteString)"})
   public void testAddWitness() {
     // Arrange
@@ -127,7 +131,8 @@ public class ChainBaseManagerDiffblueTest {
    * <p>Method under test: {@link ChainBaseManager#addWitness(ByteString)}
    */
   @Test
-  @Category(MaintainedByDiffblue.class)
+  @Category(ContributionFromDiffblue.class)
+  @ManagedByDiffblue
   @MethodsUnderTest({"void ChainBaseManager.addWitness(ByteString)"})
   public void testAddWitness2() {
     // Arrange
@@ -158,7 +163,8 @@ public class ChainBaseManagerDiffblueTest {
    * <p>Method under test: {@link ChainBaseManager#getHead()}
    */
   @Test
-  @Category(MaintainedByDiffblue.class)
+  @Category(ContributionFromDiffblue.class)
+  @ManagedByDiffblue
   @MethodsUnderTest({"BlockCapsule ChainBaseManager.getHead()"})
   public void testGetHead_givenArrayListAddNull_thenReturnNull() throws HeaderNotFound {
     // Arrange
@@ -185,7 +191,8 @@ public class ChainBaseManagerDiffblueTest {
    * <p>Method under test: {@link ChainBaseManager#getHead()}
    */
   @Test
-  @Category(MaintainedByDiffblue.class)
+  @Category(ContributionFromDiffblue.class)
+  @ManagedByDiffblue
   @MethodsUnderTest({"BlockCapsule ChainBaseManager.getHead()"})
   public void testGetHead_givenArrayListAddNull_thenReturnNull2() throws HeaderNotFound {
     // Arrange
@@ -211,7 +218,8 @@ public class ChainBaseManagerDiffblueTest {
    * <p>Method under test: {@link ChainBaseManager#getHead()}
    */
   @Test
-  @Category(MaintainedByDiffblue.class)
+  @Category(ContributionFromDiffblue.class)
+  @ManagedByDiffblue
   @MethodsUnderTest({"BlockCapsule ChainBaseManager.getHead()"})
   public void testGetHead_thenThrowHeaderNotFound() throws HeaderNotFound {
     // Arrange
@@ -232,7 +240,8 @@ public class ChainBaseManagerDiffblueTest {
    * <p>Method under test: {@link ChainBaseManager#getHead()}
    */
   @Test
-  @Category(MaintainedByDiffblue.class)
+  @Category(ContributionFromDiffblue.class)
+  @ManagedByDiffblue
   @MethodsUnderTest({"BlockCapsule ChainBaseManager.getHead()"})
   public void testGetHead_thenThrowHeaderNotFound2() throws HeaderNotFound {
     // Arrange
@@ -253,7 +262,8 @@ public class ChainBaseManagerDiffblueTest {
    * <p>Method under test: {@link ChainBaseManager#getHeadBlockId()}
    */
   @Test
-  @Category(MaintainedByDiffblue.class)
+  @Category(ContributionFromDiffblue.class)
+  @ManagedByDiffblue
   @MethodsUnderTest({"BlockId ChainBaseManager.getHeadBlockId()"})
   public void testGetHeadBlockId_thenReturnZero_hash() {
     // Arrange
@@ -277,7 +287,8 @@ public class ChainBaseManagerDiffblueTest {
    * <p>Method under test: {@link ChainBaseManager#getHeadBlockId()}
    */
   @Test
-  @Category(MaintainedByDiffblue.class)
+  @Category(ContributionFromDiffblue.class)
+  @ManagedByDiffblue
   @MethodsUnderTest({"BlockId ChainBaseManager.getHeadBlockId()"})
   public void testGetHeadBlockId_thenReturnZero_hash2() {
     // Arrange
@@ -297,7 +308,8 @@ public class ChainBaseManagerDiffblueTest {
    * <p>Method under test: {@link ChainBaseManager#getHeadBlockNum()}
    */
   @Test
-  @Category(MaintainedByDiffblue.class)
+  @Category(ContributionFromDiffblue.class)
+  @ManagedByDiffblue
   @MethodsUnderTest({"long ChainBaseManager.getHeadBlockNum()"})
   public void testGetHeadBlockNum() {
     // Arrange
@@ -318,7 +330,8 @@ public class ChainBaseManagerDiffblueTest {
    * <p>Method under test: {@link ChainBaseManager#getHeadBlockNum()}
    */
   @Test
-  @Category(MaintainedByDiffblue.class)
+  @Category(ContributionFromDiffblue.class)
+  @ManagedByDiffblue
   @MethodsUnderTest({"long ChainBaseManager.getHeadBlockNum()"})
   public void testGetHeadBlockNum2() {
     // Arrange
@@ -339,7 +352,8 @@ public class ChainBaseManagerDiffblueTest {
    * <p>Method under test: {@link ChainBaseManager#getHeadBlockTimeStamp()}
    */
   @Test
-  @Category(MaintainedByDiffblue.class)
+  @Category(ContributionFromDiffblue.class)
+  @ManagedByDiffblue
   @MethodsUnderTest({"long ChainBaseManager.getHeadBlockTimeStamp()"})
   public void testGetHeadBlockTimeStamp() {
     // Arrange
@@ -360,7 +374,8 @@ public class ChainBaseManagerDiffblueTest {
    * <p>Method under test: {@link ChainBaseManager#getHeadBlockTimeStamp()}
    */
   @Test
-  @Category(MaintainedByDiffblue.class)
+  @Category(ContributionFromDiffblue.class)
+  @ManagedByDiffblue
   @MethodsUnderTest({"long ChainBaseManager.getHeadBlockTimeStamp()"})
   public void testGetHeadBlockTimeStamp2() {
     // Arrange
@@ -386,7 +401,8 @@ public class ChainBaseManagerDiffblueTest {
    * <p>Method under test: {@link ChainBaseManager#containBlock(Sha256Hash)}
    */
   @Test
-  @Category(MaintainedByDiffblue.class)
+  @Category(ContributionFromDiffblue.class)
+  @ManagedByDiffblue
   @MethodsUnderTest({"boolean ChainBaseManager.containBlock(Sha256Hash)"})
   public void testContainBlock_givenAxaxaxaxBytesIsUtf8_thenCallsGetBytes()
       throws UnsupportedEncodingException, BadItemException, ItemNotFoundException {
@@ -419,7 +435,8 @@ public class ChainBaseManagerDiffblueTest {
    * <p>Method under test: {@link ChainBaseManager#containBlock(Sha256Hash)}
    */
   @Test
-  @Category(MaintainedByDiffblue.class)
+  @Category(ContributionFromDiffblue.class)
+  @ManagedByDiffblue
   @MethodsUnderTest({"boolean ChainBaseManager.containBlock(Sha256Hash)"})
   public void testContainBlock_givenAxaxaxaxBytesIsUtf8_thenCallsGetBytes2()
       throws UnsupportedEncodingException, BadItemException, ItemNotFoundException {
@@ -451,7 +468,8 @@ public class ChainBaseManagerDiffblueTest {
    * <p>Method under test: {@link ChainBaseManager#containBlock(Sha256Hash)}
    */
   @Test
-  @Category(MaintainedByDiffblue.class)
+  @Category(ContributionFromDiffblue.class)
+  @ManagedByDiffblue
   @MethodsUnderTest({"boolean ChainBaseManager.containBlock(Sha256Hash)"})
   public void testContainBlock_thenReturnTrue() {
     // Arrange
@@ -475,7 +493,8 @@ public class ChainBaseManagerDiffblueTest {
    * <p>Method under test: {@link ChainBaseManager#containBlock(Sha256Hash)}
    */
   @Test
-  @Category(MaintainedByDiffblue.class)
+  @Category(ContributionFromDiffblue.class)
+  @ManagedByDiffblue
   @MethodsUnderTest({"boolean ChainBaseManager.containBlock(Sha256Hash)"})
   public void testContainBlock_thenReturnTrue2() {
     // Arrange
@@ -500,7 +519,8 @@ public class ChainBaseManagerDiffblueTest {
    * <p>Method under test: {@link ChainBaseManager#containBlock(Sha256Hash)}
    */
   @Test
-  @Category(MaintainedByDiffblue.class)
+  @Category(ContributionFromDiffblue.class)
+  @ManagedByDiffblue
   @MethodsUnderTest({"boolean ChainBaseManager.containBlock(Sha256Hash)"})
   public void testContainBlock_whenZero_hash_thenReturnFalse()
       throws BadItemException, ItemNotFoundException {
@@ -529,7 +549,8 @@ public class ChainBaseManagerDiffblueTest {
    * <p>Method under test: {@link ChainBaseManager#containBlock(Sha256Hash)}
    */
   @Test
-  @Category(MaintainedByDiffblue.class)
+  @Category(ContributionFromDiffblue.class)
+  @ManagedByDiffblue
   @MethodsUnderTest({"boolean ChainBaseManager.containBlock(Sha256Hash)"})
   public void testContainBlock_whenZero_hash_thenReturnFalse2()
       throws BadItemException, ItemNotFoundException {
@@ -558,7 +579,8 @@ public class ChainBaseManagerDiffblueTest {
    * <p>Method under test: {@link ChainBaseManager#containBlockInMainChain(BlockId)}
    */
   @Test
-  @Category(MaintainedByDiffblue.class)
+  @Category(ContributionFromDiffblue.class)
+  @ManagedByDiffblue
   @MethodsUnderTest({"boolean ChainBaseManager.containBlockInMainChain(BlockId)"})
   public void testContainBlockInMainChain_givenAxaxaxaxBytesIsUtf8_thenCallsGetBytes()
       throws UnsupportedEncodingException, BadItemException, ItemNotFoundException {
@@ -589,7 +611,8 @@ public class ChainBaseManagerDiffblueTest {
    * <p>Method under test: {@link ChainBaseManager#containBlockInMainChain(BlockId)}
    */
   @Test
-  @Category(MaintainedByDiffblue.class)
+  @Category(ContributionFromDiffblue.class)
+  @ManagedByDiffblue
   @MethodsUnderTest({"boolean ChainBaseManager.containBlockInMainChain(BlockId)"})
   public void testContainBlockInMainChain_givenAxaxaxaxBytesIsUtf8_thenCallsGetBytes2()
       throws UnsupportedEncodingException, BadItemException, ItemNotFoundException {
@@ -620,7 +643,8 @@ public class ChainBaseManagerDiffblueTest {
    * <p>Method under test: {@link ChainBaseManager#containBlockInMainChain(BlockId)}
    */
   @Test
-  @Category(MaintainedByDiffblue.class)
+  @Category(ContributionFromDiffblue.class)
+  @ManagedByDiffblue
   @MethodsUnderTest({"boolean ChainBaseManager.containBlockInMainChain(BlockId)"})
   public void testContainBlockInMainChain_whenBlockId_thenReturnFalse()
       throws BadItemException, ItemNotFoundException {
@@ -648,7 +672,8 @@ public class ChainBaseManagerDiffblueTest {
    * <p>Method under test: {@link ChainBaseManager#containBlockInMainChain(BlockId)}
    */
   @Test
-  @Category(MaintainedByDiffblue.class)
+  @Category(ContributionFromDiffblue.class)
+  @ManagedByDiffblue
   @MethodsUnderTest({"boolean ChainBaseManager.containBlockInMainChain(BlockId)"})
   public void testContainBlockInMainChain_whenBlockId_thenReturnFalse2()
       throws BadItemException, ItemNotFoundException {
@@ -671,7 +696,8 @@ public class ChainBaseManagerDiffblueTest {
    * <p>Method under test: {@link ChainBaseManager#getKhaosDbHead()}
    */
   @Test
-  @Category(MaintainedByDiffblue.class)
+  @Category(ContributionFromDiffblue.class)
+  @ManagedByDiffblue
   @MethodsUnderTest({"BlockCapsule ChainBaseManager.getKhaosDbHead()"})
   public void testGetKhaosDbHead() {
     // Arrange
@@ -691,7 +717,8 @@ public class ChainBaseManagerDiffblueTest {
    * <p>Method under test: {@link ChainBaseManager#getKhaosDbHead()}
    */
   @Test
-  @Category(MaintainedByDiffblue.class)
+  @Category(ContributionFromDiffblue.class)
+  @ManagedByDiffblue
   @MethodsUnderTest({"BlockCapsule ChainBaseManager.getKhaosDbHead()"})
   public void testGetKhaosDbHead2() {
     // Arrange
@@ -716,7 +743,8 @@ public class ChainBaseManagerDiffblueTest {
    * <p>Method under test: {@link ChainBaseManager#getBlockById(Sha256Hash)}
    */
   @Test
-  @Category(MaintainedByDiffblue.class)
+  @Category(ContributionFromDiffblue.class)
+  @ManagedByDiffblue
   @MethodsUnderTest({"BlockCapsule ChainBaseManager.getBlockById(Sha256Hash)"})
   public void testGetBlockById_givenAxaxaxaxBytesIsUtf8_thenCallsGetBytes()
       throws UnsupportedEncodingException, BadItemException, ItemNotFoundException {
@@ -746,7 +774,8 @@ public class ChainBaseManagerDiffblueTest {
    * <p>Method under test: {@link ChainBaseManager#getBlockById(Sha256Hash)}
    */
   @Test
-  @Category(MaintainedByDiffblue.class)
+  @Category(ContributionFromDiffblue.class)
+  @ManagedByDiffblue
   @MethodsUnderTest({"BlockCapsule ChainBaseManager.getBlockById(Sha256Hash)"})
   public void testGetBlockById_givenAxaxaxaxBytesIsUtf8_thenCallsGetBytes2()
       throws UnsupportedEncodingException, BadItemException, ItemNotFoundException {
@@ -777,7 +806,8 @@ public class ChainBaseManagerDiffblueTest {
    * <p>Method under test: {@link ChainBaseManager#getBlockById(Sha256Hash)}
    */
   @Test
-  @Category(MaintainedByDiffblue.class)
+  @Category(ContributionFromDiffblue.class)
+  @ManagedByDiffblue
   @MethodsUnderTest({"BlockCapsule ChainBaseManager.getBlockById(Sha256Hash)"})
   public void testGetBlockById_givenKhaosDatabaseGetBlockReturnBlockCapsule_whenZero_hash()
       throws BadItemException, ItemNotFoundException {
@@ -803,7 +833,8 @@ public class ChainBaseManagerDiffblueTest {
    * <p>Method under test: {@link ChainBaseManager#getBlockById(Sha256Hash)}
    */
   @Test
-  @Category(MaintainedByDiffblue.class)
+  @Category(ContributionFromDiffblue.class)
+  @ManagedByDiffblue
   @MethodsUnderTest({"BlockCapsule ChainBaseManager.getBlockById(Sha256Hash)"})
   public void testGetBlockById_givenKhaosDatabaseGetBlockReturnBlockCapsule_whenZero_hash2()
       throws BadItemException, ItemNotFoundException {
@@ -828,7 +859,8 @@ public class ChainBaseManagerDiffblueTest {
    * <p>Method under test: {@link ChainBaseManager#getBlockById(Sha256Hash)}
    */
   @Test
-  @Category(MaintainedByDiffblue.class)
+  @Category(ContributionFromDiffblue.class)
+  @ManagedByDiffblue
   @MethodsUnderTest({"BlockCapsule ChainBaseManager.getBlockById(Sha256Hash)"})
   public void testGetBlockById_whenZero_hash_thenThrowItemNotFoundException()
       throws BadItemException, ItemNotFoundException {
@@ -855,7 +887,8 @@ public class ChainBaseManagerDiffblueTest {
    * <p>Method under test: {@link ChainBaseManager#getBlockById(Sha256Hash)}
    */
   @Test
-  @Category(MaintainedByDiffblue.class)
+  @Category(ContributionFromDiffblue.class)
+  @ManagedByDiffblue
   @MethodsUnderTest({"BlockCapsule ChainBaseManager.getBlockById(Sha256Hash)"})
   public void testGetBlockById_whenZero_hash_thenThrowItemNotFoundException2()
       throws BadItemException, ItemNotFoundException {
@@ -882,7 +915,8 @@ public class ChainBaseManagerDiffblueTest {
    * </ul>
    */
   @Test
-  @Category(MaintainedByDiffblue.class)
+  @Category(ContributionFromDiffblue.class)
+  @ManagedByDiffblue
   @MethodsUnderTest({
     "org.tron.core.store.AbiStore ChainBaseManager.getAbiStore()",
     "org.tron.core.store.AccountAssetStore ChainBaseManager.getAccountAssetStore()",
@@ -965,7 +999,8 @@ public class ChainBaseManagerDiffblueTest {
    * <p>Method under test: {@link ChainBaseManager#hasBlocks()}
    */
   @Test
-  @Category(MaintainedByDiffblue.class)
+  @Category(ContributionFromDiffblue.class)
+  @ManagedByDiffblue
   @MethodsUnderTest({"boolean ChainBaseManager.hasBlocks()"})
   public void testHasBlocks_givenBlockStoreIsNotEmptyReturnTrue_thenReturnTrue() {
     // Arrange
@@ -990,7 +1025,8 @@ public class ChainBaseManagerDiffblueTest {
    * <p>Method under test: {@link ChainBaseManager#hasBlocks()}
    */
   @Test
-  @Category(MaintainedByDiffblue.class)
+  @Category(ContributionFromDiffblue.class)
+  @ManagedByDiffblue
   @MethodsUnderTest({"boolean ChainBaseManager.hasBlocks()"})
   public void testHasBlocks_givenBlockStoreIsNotEmptyReturnTrue_thenReturnTrue2() {
     // Arrange
@@ -1015,7 +1051,8 @@ public class ChainBaseManagerDiffblueTest {
    * <p>Method under test: {@link ChainBaseManager#hasBlocks()}
    */
   @Test
-  @Category(MaintainedByDiffblue.class)
+  @Category(ContributionFromDiffblue.class)
+  @ManagedByDiffblue
   @MethodsUnderTest({"boolean ChainBaseManager.hasBlocks()"})
   public void testHasBlocks_givenKhaosDatabaseHasDataReturnFalse_thenReturnFalse() {
     // Arrange
@@ -1042,7 +1079,8 @@ public class ChainBaseManagerDiffblueTest {
    * <p>Method under test: {@link ChainBaseManager#hasBlocks()}
    */
   @Test
-  @Category(MaintainedByDiffblue.class)
+  @Category(ContributionFromDiffblue.class)
+  @ManagedByDiffblue
   @MethodsUnderTest({"boolean ChainBaseManager.hasBlocks()"})
   public void testHasBlocks_givenKhaosDatabaseHasDataReturnFalse_thenReturnFalse2() {
     // Arrange
@@ -1069,7 +1107,8 @@ public class ChainBaseManagerDiffblueTest {
    * <p>Method under test: {@link ChainBaseManager#hasBlocks()}
    */
   @Test
-  @Category(MaintainedByDiffblue.class)
+  @Category(ContributionFromDiffblue.class)
+  @ManagedByDiffblue
   @MethodsUnderTest({"boolean ChainBaseManager.hasBlocks()"})
   public void testHasBlocks_givenKhaosDatabaseHasDataReturnTrue_thenReturnTrue() {
     // Arrange
@@ -1096,7 +1135,8 @@ public class ChainBaseManagerDiffblueTest {
    * <p>Method under test: {@link ChainBaseManager#hasBlocks()}
    */
   @Test
-  @Category(MaintainedByDiffblue.class)
+  @Category(ContributionFromDiffblue.class)
+  @ManagedByDiffblue
   @MethodsUnderTest({"boolean ChainBaseManager.hasBlocks()"})
   public void testHasBlocks_givenKhaosDatabaseHasDataReturnTrue_thenReturnTrue2() {
     // Arrange
@@ -1124,7 +1164,8 @@ public class ChainBaseManagerDiffblueTest {
    * <p>Method under test: {@link ChainBaseManager#getSolidBlockId()}
    */
   @Test
-  @Category(MaintainedByDiffblue.class)
+  @Category(ContributionFromDiffblue.class)
+  @ManagedByDiffblue
   @MethodsUnderTest({"BlockId ChainBaseManager.getSolidBlockId()"})
   public void testGetSolidBlockId_givenBlockCapsuleGetBlockIdReturnBlockId_thenCallsGetBlockId() {
     // Arrange
@@ -1155,7 +1196,8 @@ public class ChainBaseManagerDiffblueTest {
    * <p>Method under test: {@link ChainBaseManager#getSolidBlockId()}
    */
   @Test
-  @Category(MaintainedByDiffblue.class)
+  @Category(ContributionFromDiffblue.class)
+  @ManagedByDiffblue
   @MethodsUnderTest({"BlockId ChainBaseManager.getSolidBlockId()"})
   public void testGetSolidBlockId_givenBlockCapsuleGetBlockIdReturnBlockId_thenCallsGetBlockId2() {
     // Arrange
@@ -1186,7 +1228,8 @@ public class ChainBaseManagerDiffblueTest {
    * <p>Method under test: {@link ChainBaseManager#getSolidBlockId()}
    */
   @Test
-  @Category(MaintainedByDiffblue.class)
+  @Category(ContributionFromDiffblue.class)
+  @ManagedByDiffblue
   @MethodsUnderTest({"BlockId ChainBaseManager.getSolidBlockId()"})
   public void testGetSolidBlockId_givenBlockIndexStoreGetReturnBlockId_thenCallsGet()
       throws ItemNotFoundException {
@@ -1217,7 +1260,8 @@ public class ChainBaseManagerDiffblueTest {
    * <p>Method under test: {@link ChainBaseManager#getSolidBlockId()}
    */
   @Test
-  @Category(MaintainedByDiffblue.class)
+  @Category(ContributionFromDiffblue.class)
+  @ManagedByDiffblue
   @MethodsUnderTest({"BlockId ChainBaseManager.getSolidBlockId()"})
   public void testGetSolidBlockId_givenBlockIndexStoreGetReturnBlockId_thenCallsGet2()
       throws ItemNotFoundException {
@@ -1248,7 +1292,8 @@ public class ChainBaseManagerDiffblueTest {
    * <p>Method under test: {@link ChainBaseManager#getGenesisBlockId()}
    */
   @Test
-  @Category(MaintainedByDiffblue.class)
+  @Category(ContributionFromDiffblue.class)
+  @ManagedByDiffblue
   @MethodsUnderTest({"BlockId ChainBaseManager.getGenesisBlockId()"})
   public void testGetGenesisBlockId_givenBlockCapsuleGetBlockIdReturnBlockId_thenReturnBlockId() {
     // Arrange
@@ -1279,7 +1324,8 @@ public class ChainBaseManagerDiffblueTest {
    * <p>Method under test: {@link ChainBaseManager#getGenesisBlockId()}
    */
   @Test
-  @Category(MaintainedByDiffblue.class)
+  @Category(ContributionFromDiffblue.class)
+  @ManagedByDiffblue
   @MethodsUnderTest({"BlockId ChainBaseManager.getGenesisBlockId()"})
   public void testGetGenesisBlockId_givenBlockCapsuleGetBlockIdReturnBlockId_thenReturnBlockId2() {
     // Arrange
@@ -1310,7 +1356,8 @@ public class ChainBaseManagerDiffblueTest {
    * <p>Method under test: {@link ChainBaseManager#getBlockIdByNum(long)}
    */
   @Test
-  @Category(MaintainedByDiffblue.class)
+  @Category(ContributionFromDiffblue.class)
+  @ManagedByDiffblue
   @MethodsUnderTest({"BlockId ChainBaseManager.getBlockIdByNum(long)"})
   public void testGetBlockIdByNum_givenBlockIndexStoreGetReturnBlockId_thenReturnBlockId()
       throws ItemNotFoundException {
@@ -1339,7 +1386,8 @@ public class ChainBaseManagerDiffblueTest {
    * <p>Method under test: {@link ChainBaseManager#getBlockIdByNum(long)}
    */
   @Test
-  @Category(MaintainedByDiffblue.class)
+  @Category(ContributionFromDiffblue.class)
+  @ManagedByDiffblue
   @MethodsUnderTest({"BlockId ChainBaseManager.getBlockIdByNum(long)"})
   public void testGetBlockIdByNum_givenBlockIndexStoreGetReturnBlockId_thenReturnBlockId2()
       throws ItemNotFoundException {
@@ -1366,7 +1414,8 @@ public class ChainBaseManagerDiffblueTest {
    * <p>Method under test: {@link ChainBaseManager#getBlockIdByNum(long)}
    */
   @Test
-  @Category(MaintainedByDiffblue.class)
+  @Category(ContributionFromDiffblue.class)
+  @ManagedByDiffblue
   @MethodsUnderTest({"BlockId ChainBaseManager.getBlockIdByNum(long)"})
   public void testGetBlockIdByNum_thenThrowItemNotFoundException() throws ItemNotFoundException {
     // Arrange
@@ -1390,7 +1439,8 @@ public class ChainBaseManagerDiffblueTest {
    * <p>Method under test: {@link ChainBaseManager#getBlockIdByNum(long)}
    */
   @Test
-  @Category(MaintainedByDiffblue.class)
+  @Category(ContributionFromDiffblue.class)
+  @ManagedByDiffblue
   @MethodsUnderTest({"BlockId ChainBaseManager.getBlockIdByNum(long)"})
   public void testGetBlockIdByNum_thenThrowItemNotFoundException2() throws ItemNotFoundException {
     // Arrange
@@ -1410,7 +1460,8 @@ public class ChainBaseManagerDiffblueTest {
    * <p>Method under test: {@link ChainBaseManager#getBlockByNum(long)}
    */
   @Test
-  @Category(MaintainedByDiffblue.class)
+  @Category(ContributionFromDiffblue.class)
+  @ManagedByDiffblue
   @MethodsUnderTest({"BlockCapsule ChainBaseManager.getBlockByNum(long)"})
   public void testGetBlockByNum() throws BadItemException, ItemNotFoundException {
     // Arrange
@@ -1430,7 +1481,8 @@ public class ChainBaseManagerDiffblueTest {
    * <p>Method under test: {@link ChainBaseManager#getBlockByNum(long)}
    */
   @Test
-  @Category(MaintainedByDiffblue.class)
+  @Category(ContributionFromDiffblue.class)
+  @ManagedByDiffblue
   @MethodsUnderTest({"BlockCapsule ChainBaseManager.getBlockByNum(long)"})
   public void testGetBlockByNum2() throws BadItemException, ItemNotFoundException {
     // Arrange
@@ -1456,7 +1508,8 @@ public class ChainBaseManagerDiffblueTest {
    * <p>Method under test: {@link ChainBaseManager#getBlockByNum(long)}
    */
   @Test
-  @Category(MaintainedByDiffblue.class)
+  @Category(ContributionFromDiffblue.class)
+  @ManagedByDiffblue
   @MethodsUnderTest({"BlockCapsule ChainBaseManager.getBlockByNum(long)"})
   public void testGetBlockByNum_givenBlockIndexStoreGetReturnBlockId_thenCallsGet()
       throws BadItemException, ItemNotFoundException {
@@ -1487,7 +1540,8 @@ public class ChainBaseManagerDiffblueTest {
    * <p>Method under test: {@link ChainBaseManager#getBlockByNum(long)}
    */
   @Test
-  @Category(MaintainedByDiffblue.class)
+  @Category(ContributionFromDiffblue.class)
+  @ManagedByDiffblue
   @MethodsUnderTest({"BlockCapsule ChainBaseManager.getBlockByNum(long)"})
   public void testGetBlockByNum_givenBlockIndexStoreGetReturnBlockId_thenCallsGet2()
       throws BadItemException, ItemNotFoundException {
@@ -1518,7 +1572,8 @@ public class ChainBaseManagerDiffblueTest {
    * <p>Method under test: {@link ChainBaseManager#getBlockByNum(long)}
    */
   @Test
-  @Category(MaintainedByDiffblue.class)
+  @Category(ContributionFromDiffblue.class)
+  @ManagedByDiffblue
   @MethodsUnderTest({"BlockCapsule ChainBaseManager.getBlockByNum(long)"})
   public void testGetBlockByNum_givenKhaosDatabaseGetBlockReturnBlockCapsule_thenCallsGetBlock()
       throws BadItemException, ItemNotFoundException {
@@ -1546,7 +1601,8 @@ public class ChainBaseManagerDiffblueTest {
    * <p>Method under test: {@link ChainBaseManager#getBlockByNum(long)}
    */
   @Test
-  @Category(MaintainedByDiffblue.class)
+  @Category(ContributionFromDiffblue.class)
+  @ManagedByDiffblue
   @MethodsUnderTest({"BlockCapsule ChainBaseManager.getBlockByNum(long)"})
   public void testGetBlockByNum_givenKhaosDatabaseGetBlockReturnBlockCapsule_thenCallsGetBlock2()
       throws BadItemException, ItemNotFoundException {
@@ -1572,7 +1628,8 @@ public class ChainBaseManagerDiffblueTest {
    * <p>Method under test: {@link ChainBaseManager#getBlockByNum(long)}
    */
   @Test
-  @Category(MaintainedByDiffblue.class)
+  @Category(ContributionFromDiffblue.class)
+  @ManagedByDiffblue
   @MethodsUnderTest({"BlockCapsule ChainBaseManager.getBlockByNum(long)"})
   public void testGetBlockByNum_thenCallsGetBytes()
       throws UnsupportedEncodingException, BadItemException, ItemNotFoundException {
@@ -1604,7 +1661,8 @@ public class ChainBaseManagerDiffblueTest {
    * <p>Method under test: {@link ChainBaseManager#getBlockByNum(long)}
    */
   @Test
-  @Category(MaintainedByDiffblue.class)
+  @Category(ContributionFromDiffblue.class)
+  @ManagedByDiffblue
   @MethodsUnderTest({"BlockCapsule ChainBaseManager.getBlockByNum(long)"})
   public void testGetBlockByNum_thenCallsGetBytes2()
       throws UnsupportedEncodingException, BadItemException, ItemNotFoundException {
@@ -1637,7 +1695,8 @@ public class ChainBaseManagerDiffblueTest {
    * <p>Method under test: {@link ChainBaseManager#isLiteNode()}
    */
   @Test
-  @Category(MaintainedByDiffblue.class)
+  @Category(ContributionFromDiffblue.class)
+  @ManagedByDiffblue
   @MethodsUnderTest({"boolean ChainBaseManager.isLiteNode()"})
   public void testIsLiteNode_givenChainBaseManagerNodeTypeIsLite_thenReturnTrue() {
     // Arrange
@@ -1658,7 +1717,8 @@ public class ChainBaseManagerDiffblueTest {
    * <p>Method under test: {@link ChainBaseManager#isLiteNode()}
    */
   @Test
-  @Category(MaintainedByDiffblue.class)
+  @Category(ContributionFromDiffblue.class)
+  @ManagedByDiffblue
   @MethodsUnderTest({"boolean ChainBaseManager.isLiteNode()"})
   public void testIsLiteNode_givenChainBaseManagerNodeTypeIsLite_thenReturnTrue2() {
     // Arrange
@@ -1679,7 +1739,8 @@ public class ChainBaseManagerDiffblueTest {
    * <p>Method under test: {@link ChainBaseManager#isLiteNode()}
    */
   @Test
-  @Category(MaintainedByDiffblue.class)
+  @Category(ContributionFromDiffblue.class)
+  @ManagedByDiffblue
   @MethodsUnderTest({"boolean ChainBaseManager.isLiteNode()"})
   public void testIsLiteNode_givenChainBaseManager_thenReturnFalse() {
     // Arrange, Act and Assert
@@ -1697,7 +1758,8 @@ public class ChainBaseManagerDiffblueTest {
    * <p>Method under test: {@link ChainBaseManager#isLiteNode()}
    */
   @Test
-  @Category(MaintainedByDiffblue.class)
+  @Category(ContributionFromDiffblue.class)
+  @ManagedByDiffblue
   @MethodsUnderTest({"boolean ChainBaseManager.isLiteNode()"})
   public void testIsLiteNode_givenChainBaseManager_thenReturnFalse2() {
     // Arrange, Act and Assert
@@ -1715,7 +1777,8 @@ public class ChainBaseManagerDiffblueTest {
    * </ul>
    */
   @Test
-  @Category(MaintainedByDiffblue.class)
+  @Category(ContributionFromDiffblue.class)
+  @ManagedByDiffblue
   @MethodsUnderTest({
     "org.tron.core.store.AbiStore ChainBaseManager.getAbiStore()",
     "org.tron.core.store.AccountAssetStore ChainBaseManager.getAccountAssetStore()",

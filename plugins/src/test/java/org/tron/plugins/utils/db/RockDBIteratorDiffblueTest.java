@@ -8,7 +8,8 @@ import static org.mockito.Mockito.doNothing;
 import static org.mockito.Mockito.mock;
 import static org.mockito.Mockito.verify;
 import static org.mockito.Mockito.when;
-import com.diffblue.cover.annotations.MaintainedByDiffblue;
+import com.diffblue.cover.annotations.ContributionFromDiffblue;
+import com.diffblue.cover.annotations.ManagedByDiffblue;
 import com.diffblue.cover.annotations.MethodsUnderTest;
 import java.io.IOException;
 import java.io.UnsupportedEncodingException;
@@ -29,7 +30,8 @@ public class RockDBIteratorDiffblueTest {
    * <p>Method under test: {@link RockDBIterator#valid()}
    */
   @Test
-  @Category(MaintainedByDiffblue.class)
+  @Category(ContributionFromDiffblue.class)
+  @ManagedByDiffblue
   @MethodsUnderTest({"boolean RockDBIterator.valid()"})
   public void testValid_givenRocksIteratorIsValidReturnFalse_thenReturnFalse() {
     // Arrange
@@ -55,7 +57,8 @@ public class RockDBIteratorDiffblueTest {
    * <p>Method under test: {@link RockDBIterator#valid()}
    */
   @Test
-  @Category(MaintainedByDiffblue.class)
+  @Category(ContributionFromDiffblue.class)
+  @ManagedByDiffblue
   @MethodsUnderTest({"boolean RockDBIterator.valid()"})
   public void testValid_givenRocksIteratorIsValidReturnTrue_thenReturnTrue() {
     // Arrange
@@ -76,7 +79,8 @@ public class RockDBIteratorDiffblueTest {
    * <p>Method under test: {@link RockDBIterator#seek(byte[])}
    */
   @Test
-  @Category(MaintainedByDiffblue.class)
+  @Category(ContributionFromDiffblue.class)
+  @ManagedByDiffblue
   @MethodsUnderTest({"void RockDBIterator.seek(byte[])"})
   public void testSeek() throws UnsupportedEncodingException {
     // Arrange
@@ -96,7 +100,8 @@ public class RockDBIteratorDiffblueTest {
    * <p>Method under test: {@link RockDBIterator#seekToFirst()}
    */
   @Test
-  @Category(MaintainedByDiffblue.class)
+  @Category(ContributionFromDiffblue.class)
+  @ManagedByDiffblue
   @MethodsUnderTest({"void RockDBIterator.seekToFirst()"})
   public void testSeekToFirst() {
     // Arrange
@@ -116,7 +121,8 @@ public class RockDBIteratorDiffblueTest {
    * <p>Method under test: {@link RockDBIterator#seekToLast()}
    */
   @Test
-  @Category(MaintainedByDiffblue.class)
+  @Category(ContributionFromDiffblue.class)
+  @ManagedByDiffblue
   @MethodsUnderTest({"void RockDBIterator.seekToLast()"})
   public void testSeekToLast() {
     // Arrange
@@ -141,7 +147,8 @@ public class RockDBIteratorDiffblueTest {
    * <p>Method under test: {@link RockDBIterator#hasNext()}
    */
   @Test
-  @Category(MaintainedByDiffblue.class)
+  @Category(ContributionFromDiffblue.class)
+  @ManagedByDiffblue
   @MethodsUnderTest({"boolean RockDBIterator.hasNext()"})
   public void testHasNext_givenRocksIteratorIsValidReturnFalse_thenReturnFalse() {
     // Arrange
@@ -167,7 +174,8 @@ public class RockDBIteratorDiffblueTest {
    * <p>Method under test: {@link RockDBIterator#hasNext()}
    */
   @Test
-  @Category(MaintainedByDiffblue.class)
+  @Category(ContributionFromDiffblue.class)
+  @ManagedByDiffblue
   @MethodsUnderTest({"boolean RockDBIterator.hasNext()"})
   public void testHasNext_givenRocksIteratorIsValidReturnTrue_thenReturnTrue() {
     // Arrange
@@ -188,7 +196,8 @@ public class RockDBIteratorDiffblueTest {
    * <p>Method under test: {@link RockDBIterator#getKey()}
    */
   @Test
-  @Category(MaintainedByDiffblue.class)
+  @Category(ContributionFromDiffblue.class)
+  @ManagedByDiffblue
   @MethodsUnderTest({"byte[] RockDBIterator.getKey()"})
   public void testGetKey() throws UnsupportedEncodingException {
     // Arrange
@@ -209,7 +218,8 @@ public class RockDBIteratorDiffblueTest {
    * <p>Method under test: {@link RockDBIterator#getValue()}
    */
   @Test
-  @Category(MaintainedByDiffblue.class)
+  @Category(ContributionFromDiffblue.class)
+  @ManagedByDiffblue
   @MethodsUnderTest({"byte[] RockDBIterator.getValue()"})
   public void testGetValue() throws UnsupportedEncodingException {
     // Arrange
@@ -230,7 +240,8 @@ public class RockDBIteratorDiffblueTest {
    * <p>Method under test: {@link RockDBIterator#next()}
    */
   @Test
-  @Category(MaintainedByDiffblue.class)
+  @Category(ContributionFromDiffblue.class)
+  @ManagedByDiffblue
   @MethodsUnderTest({"java.util.Map.Entry RockDBIterator.next()"})
   public void testNext() throws UnsupportedEncodingException {
     // Arrange
@@ -254,7 +265,8 @@ public class RockDBIteratorDiffblueTest {
    * <p>Method under test: {@link RockDBIterator#close()}
    */
   @Test
-  @Category(MaintainedByDiffblue.class)
+  @Category(ContributionFromDiffblue.class)
+  @ManagedByDiffblue
   @MethodsUnderTest({"void RockDBIterator.close()"})
   public void testClose() throws IOException {
     // Arrange

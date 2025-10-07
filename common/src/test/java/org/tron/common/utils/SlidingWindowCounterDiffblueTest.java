@@ -1,7 +1,8 @@
 package org.tron.common.utils;
 
 import static org.junit.Assert.assertEquals;
-import com.diffblue.cover.annotations.MaintainedByDiffblue;
+import com.diffblue.cover.annotations.ContributionFromDiffblue;
+import com.diffblue.cover.annotations.ManagedByDiffblue;
 import com.diffblue.cover.annotations.MethodsUnderTest;
 import org.junit.Test;
 import org.junit.experimental.categories.Category;
@@ -17,7 +18,8 @@ public class SlidingWindowCounterDiffblueTest {
    * <p>Method under test: {@link SlidingWindowCounter#SlidingWindowCounter(int)}
    */
   @Test
-  @Category(MaintainedByDiffblue.class)
+  @Category(ContributionFromDiffblue.class)
+  @ManagedByDiffblue
   @MethodsUnderTest({"void SlidingWindowCounter.<init>(int)"})
   public void testNewSlidingWindowCounter_whenThree() {
     // Arrange, Act and Assert
@@ -34,7 +36,8 @@ public class SlidingWindowCounterDiffblueTest {
    * <p>Method under test: {@link SlidingWindowCounter#SlidingWindowCounter(int)}
    */
   @Test
-  @Category(MaintainedByDiffblue.class)
+  @Category(ContributionFromDiffblue.class)
+  @ManagedByDiffblue
   @MethodsUnderTest({"void SlidingWindowCounter.<init>(int)"})
   public void testNewSlidingWindowCounter_whenZero() {
     // Arrange, Act and Assert
@@ -47,7 +50,8 @@ public class SlidingWindowCounterDiffblueTest {
    * <p>Method under test: {@link SlidingWindowCounter#increase()}
    */
   @Test
-  @Category(MaintainedByDiffblue.class)
+  @Category(ContributionFromDiffblue.class)
+  @ManagedByDiffblue
   @MethodsUnderTest({"void SlidingWindowCounter.increase()"})
   public void testIncrease() {
     // Arrange
@@ -70,7 +74,8 @@ public class SlidingWindowCounterDiffblueTest {
    * <p>Method under test: {@link SlidingWindowCounter#totalAndAdvance()}
    */
   @Test
-  @Category(MaintainedByDiffblue.class)
+  @Category(ContributionFromDiffblue.class)
+  @ManagedByDiffblue
   @MethodsUnderTest({"int SlidingWindowCounter.totalAndAdvance()"})
   public void testTotalAndAdvance_thenReturnZero() {
     // Arrange, Act and Assert
@@ -83,7 +88,8 @@ public class SlidingWindowCounterDiffblueTest {
    * <p>Method under test: {@link SlidingWindowCounter#totalCount()}
    */
   @Test
-  @Category(MaintainedByDiffblue.class)
+  @Category(ContributionFromDiffblue.class)
+  @ManagedByDiffblue
   @MethodsUnderTest({"int SlidingWindowCounter.totalCount()"})
   public void testTotalCount() {
     // Arrange, Act and Assert
@@ -96,7 +102,8 @@ public class SlidingWindowCounterDiffblueTest {
    * <p>Method under test: {@link SlidingWindowCounter#toString()}
    */
   @Test
-  @Category(MaintainedByDiffblue.class)
+  @Category(ContributionFromDiffblue.class)
+  @ManagedByDiffblue
   @MethodsUnderTest({"java.lang.String SlidingWindowCounter.toString()"})
   public void testToString() {
     // Arrange, Act and Assert

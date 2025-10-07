@@ -5,7 +5,8 @@ import static org.junit.Assert.assertEquals;
 import static org.junit.Assert.assertFalse;
 import static org.junit.Assert.assertNull;
 import static org.junit.Assert.assertTrue;
-import com.diffblue.cover.annotations.MaintainedByDiffblue;
+import com.diffblue.cover.annotations.ContributionFromDiffblue;
+import com.diffblue.cover.annotations.ManagedByDiffblue;
 import com.diffblue.cover.annotations.MethodsUnderTest;
 import java.io.UnsupportedEncodingException;
 import org.junit.Test;
@@ -23,7 +24,8 @@ public class ValueDiffblueTest {
    * </ul>
    */
   @Test
-  @Category(MaintainedByDiffblue.class)
+  @Category(ContributionFromDiffblue.class)
+  @ManagedByDiffblue
   @MethodsUnderTest({"void Value.<init>()", "void Value.init(byte[])"})
   public void testGettersAndSetters() throws UnsupportedEncodingException {
     // Arrange and Act
@@ -51,7 +53,8 @@ public class ValueDiffblueTest {
    * <p>Method under test: {@link Value#Value(Object)}
    */
   @Test
-  @Category(MaintainedByDiffblue.class)
+  @Category(ContributionFromDiffblue.class)
+  @ManagedByDiffblue
   @MethodsUnderTest({"void Value.<init>(Object)"})
   public void testNewValue_whenNull_thenReturnNotString() {
     // Arrange and Act
@@ -78,7 +81,8 @@ public class ValueDiffblueTest {
    * <p>Method under test: {@link Value#Value(Object)}
    */
   @Test
-  @Category(MaintainedByDiffblue.class)
+  @Category(ContributionFromDiffblue.class)
+  @ManagedByDiffblue
   @MethodsUnderTest({"void Value.<init>(Object)"})
   public void testNewValue_whenObj_thenReturnNotNull() {
     // Arrange and Act
@@ -105,7 +109,8 @@ public class ValueDiffblueTest {
    * <p>Method under test: {@link Value#Value(Object)}
    */
   @Test
-  @Category(MaintainedByDiffblue.class)
+  @Category(ContributionFromDiffblue.class)
+  @ManagedByDiffblue
   @MethodsUnderTest({"void Value.<init>(Object)"})
   public void testNewValue_whenValue_thenReturnNotString() {
     // Arrange and Act
@@ -127,7 +132,8 @@ public class ValueDiffblueTest {
    * <p>Method under test: {@link Value#asObj()}
    */
   @Test
-  @Category(MaintainedByDiffblue.class)
+  @Category(ContributionFromDiffblue.class)
+  @ManagedByDiffblue
   @MethodsUnderTest({"Object Value.asObj()"})
   public void testAsObj() {
     // Arrange, Act and Assert
@@ -145,7 +151,8 @@ public class ValueDiffblueTest {
    * <p>Method under test: {@link Value#asInt()}
    */
   @Test
-  @Category(MaintainedByDiffblue.class)
+  @Category(ContributionFromDiffblue.class)
+  @ManagedByDiffblue
   @MethodsUnderTest({"int Value.asInt()"})
   public void testAsInt_givenValueWithObjIsAddress_size_thenReturnAddress_size() {
     // Arrange, Act and Assert
@@ -163,7 +170,8 @@ public class ValueDiffblueTest {
    * <p>Method under test: {@link Value#asInt()}
    */
   @Test
-  @Category(MaintainedByDiffblue.class)
+  @Category(ContributionFromDiffblue.class)
+  @ManagedByDiffblue
   @MethodsUnderTest({"int Value.asInt()"})
   public void testAsInt_givenValue_thenReturnZero() {
     // Arrange, Act and Assert
@@ -176,7 +184,8 @@ public class ValueDiffblueTest {
    * <p>Method under test: {@link Value#asLong()}
    */
   @Test
-  @Category(MaintainedByDiffblue.class)
+  @Category(ContributionFromDiffblue.class)
+  @ManagedByDiffblue
   @MethodsUnderTest({"long Value.asLong()"})
   public void testAsLong() {
     // Arrange, Act and Assert
@@ -189,7 +198,8 @@ public class ValueDiffblueTest {
    * <p>Method under test: {@link Value#asBigInt()}
    */
   @Test
-  @Category(MaintainedByDiffblue.class)
+  @Category(ContributionFromDiffblue.class)
+  @ManagedByDiffblue
   @MethodsUnderTest({"java.math.BigInteger Value.asBigInt()"})
   public void testAsBigInt() {
     // Arrange, Act and Assert
@@ -207,7 +217,8 @@ public class ValueDiffblueTest {
    * <p>Method under test: {@link Value#asString()}
    */
   @Test
-  @Category(MaintainedByDiffblue.class)
+  @Category(ContributionFromDiffblue.class)
+  @ManagedByDiffblue
   @MethodsUnderTest({"java.lang.String Value.asString()"})
   public void testAsString_givenValueWithObj_thenReturnObj() {
     // Arrange, Act and Assert
@@ -225,7 +236,8 @@ public class ValueDiffblueTest {
    * <p>Method under test: {@link Value#asString()}
    */
   @Test
-  @Category(MaintainedByDiffblue.class)
+  @Category(ContributionFromDiffblue.class)
+  @ManagedByDiffblue
   @MethodsUnderTest({"java.lang.String Value.asString()"})
   public void testAsString_givenValue_thenReturnEmptyString() {
     // Arrange, Act and Assert
@@ -243,7 +255,8 @@ public class ValueDiffblueTest {
    * <p>Method under test: {@link Value#asBytes()}
    */
   @Test
-  @Category(MaintainedByDiffblue.class)
+  @Category(ContributionFromDiffblue.class)
+  @ManagedByDiffblue
   @MethodsUnderTest({"byte[] Value.asBytes()"})
   public void testAsBytes_givenValueWithObj_thenReturnObjBytesIsUtf8()
       throws UnsupportedEncodingException {
@@ -262,7 +275,8 @@ public class ValueDiffblueTest {
    * <p>Method under test: {@link Value#asBytes()}
    */
   @Test
-  @Category(MaintainedByDiffblue.class)
+  @Category(ContributionFromDiffblue.class)
+  @ManagedByDiffblue
   @MethodsUnderTest({"byte[] Value.asBytes()"})
   public void testAsBytes_givenValue_thenReturnEmptyArrayOfByte() {
     // Arrange, Act and Assert
@@ -279,7 +293,8 @@ public class ValueDiffblueTest {
    * <p>Method under test: {@link Value#get(int)}
    */
   @Test
-  @Category(MaintainedByDiffblue.class)
+  @Category(ContributionFromDiffblue.class)
+  @ManagedByDiffblue
   @MethodsUnderTest({"Value Value.get(int)"})
   public void testGet_givenValue() {
     // Arrange and Act
@@ -305,7 +320,8 @@ public class ValueDiffblueTest {
    * <p>Method under test: {@link Value#get(int)}
    */
   @Test
-  @Category(MaintainedByDiffblue.class)
+  @Category(ContributionFromDiffblue.class)
+  @ManagedByDiffblue
   @MethodsUnderTest({"Value Value.get(int)"})
   public void testGet_givenValueWithObj() {
     // Arrange and Act
@@ -332,7 +348,8 @@ public class ValueDiffblueTest {
    * <p>Method under test: {@link Value#cmp(Value)}
    */
   @Test
-  @Category(MaintainedByDiffblue.class)
+  @Category(ContributionFromDiffblue.class)
+  @ManagedByDiffblue
   @MethodsUnderTest({"boolean Value.cmp(Value)"})
   public void testCmp_givenValueInitArrayOfByteWithAAndFour_thenReturnTrue() {
     // Arrange
@@ -357,7 +374,8 @@ public class ValueDiffblueTest {
    * <p>Method under test: {@link Value#cmp(Value)}
    */
   @Test
-  @Category(MaintainedByDiffblue.class)
+  @Category(ContributionFromDiffblue.class)
+  @ManagedByDiffblue
   @MethodsUnderTest({"boolean Value.cmp(Value)"})
   public void testCmp_givenValueInitEmptyArrayOfByte_whenValueInitArrayOfByteWithAAndFour() {
     // Arrange
@@ -383,7 +401,8 @@ public class ValueDiffblueTest {
    * <p>Method under test: {@link Value#cmp(Value)}
    */
   @Test
-  @Category(MaintainedByDiffblue.class)
+  @Category(ContributionFromDiffblue.class)
+  @ManagedByDiffblue
   @MethodsUnderTest({"boolean Value.cmp(Value)"})
   public void testCmp_givenValueWithObjIsFour_whenValueWithObj_thenReturnFalse() {
     // Arrange
@@ -408,7 +427,8 @@ public class ValueDiffblueTest {
    * <p>Method under test: {@link Value#cmp(Value)}
    */
   @Test
-  @Category(MaintainedByDiffblue.class)
+  @Category(ContributionFromDiffblue.class)
+  @ManagedByDiffblue
   @MethodsUnderTest({"boolean Value.cmp(Value)"})
   public void testCmp_givenValueWithObj_whenValue_thenReturnFalse() {
     // Arrange
@@ -430,7 +450,8 @@ public class ValueDiffblueTest {
    * <p>Method under test: {@link Value#cmp(Value)}
    */
   @Test
-  @Category(MaintainedByDiffblue.class)
+  @Category(ContributionFromDiffblue.class)
+  @ManagedByDiffblue
   @MethodsUnderTest({"boolean Value.cmp(Value)"})
   public void testCmp_givenValue_whenNull_thenReturnFalse() {
     // Arrange, Act and Assert
@@ -449,7 +470,8 @@ public class ValueDiffblueTest {
    * <p>Method under test: {@link Value#cmp(Value)}
    */
   @Test
-  @Category(MaintainedByDiffblue.class)
+  @Category(ContributionFromDiffblue.class)
+  @ManagedByDiffblue
   @MethodsUnderTest({"boolean Value.cmp(Value)"})
   public void testCmp_givenValue_whenValueInitArrayOfByteWithAAndFour_thenReturnFalse() {
     // Arrange
@@ -474,7 +496,8 @@ public class ValueDiffblueTest {
    * <p>Method under test: {@link Value#cmp(Value)}
    */
   @Test
-  @Category(MaintainedByDiffblue.class)
+  @Category(ContributionFromDiffblue.class)
+  @ManagedByDiffblue
   @MethodsUnderTest({"boolean Value.cmp(Value)"})
   public void testCmp_givenValue_whenValue_thenReturnTrue() {
     // Arrange
@@ -494,7 +517,8 @@ public class ValueDiffblueTest {
    * <p>Method under test: {@link Value#isList()}
    */
   @Test
-  @Category(MaintainedByDiffblue.class)
+  @Category(ContributionFromDiffblue.class)
+  @ManagedByDiffblue
   @MethodsUnderTest({"boolean Value.isList()"})
   public void testIsList_givenValue() {
     // Arrange, Act and Assert
@@ -511,7 +535,8 @@ public class ValueDiffblueTest {
    * <p>Method under test: {@link Value#isList()}
    */
   @Test
-  @Category(MaintainedByDiffblue.class)
+  @Category(ContributionFromDiffblue.class)
+  @ManagedByDiffblue
   @MethodsUnderTest({"boolean Value.isList()"})
   public void testIsList_givenValueWithObj() {
     // Arrange, Act and Assert
@@ -529,7 +554,8 @@ public class ValueDiffblueTest {
    * <p>Method under test: {@link Value#isString()}
    */
   @Test
-  @Category(MaintainedByDiffblue.class)
+  @Category(ContributionFromDiffblue.class)
+  @ManagedByDiffblue
   @MethodsUnderTest({"boolean Value.isString()"})
   public void testIsString_givenValueWithObj_thenReturnTrue() {
     // Arrange, Act and Assert
@@ -547,7 +573,8 @@ public class ValueDiffblueTest {
    * <p>Method under test: {@link Value#isString()}
    */
   @Test
-  @Category(MaintainedByDiffblue.class)
+  @Category(ContributionFromDiffblue.class)
+  @ManagedByDiffblue
   @MethodsUnderTest({"boolean Value.isString()"})
   public void testIsString_givenValue_thenReturnFalse() {
     // Arrange, Act and Assert
@@ -565,7 +592,8 @@ public class ValueDiffblueTest {
    * <p>Method under test: {@link Value#isInt()}
    */
   @Test
-  @Category(MaintainedByDiffblue.class)
+  @Category(ContributionFromDiffblue.class)
+  @ManagedByDiffblue
   @MethodsUnderTest({"boolean Value.isInt()"})
   public void testIsInt_givenValueWithObjIsAddress_size_thenReturnTrue() {
     // Arrange, Act and Assert
@@ -583,7 +611,8 @@ public class ValueDiffblueTest {
    * <p>Method under test: {@link Value#isInt()}
    */
   @Test
-  @Category(MaintainedByDiffblue.class)
+  @Category(ContributionFromDiffblue.class)
+  @ManagedByDiffblue
   @MethodsUnderTest({"boolean Value.isInt()"})
   public void testIsInt_givenValue_thenReturnFalse() {
     // Arrange, Act and Assert
@@ -596,7 +625,8 @@ public class ValueDiffblueTest {
    * <p>Method under test: {@link Value#isLong()}
    */
   @Test
-  @Category(MaintainedByDiffblue.class)
+  @Category(ContributionFromDiffblue.class)
+  @ManagedByDiffblue
   @MethodsUnderTest({"boolean Value.isLong()"})
   public void testIsLong() {
     // Arrange, Act and Assert
@@ -609,7 +639,8 @@ public class ValueDiffblueTest {
    * <p>Method under test: {@link Value#isBigInt()}
    */
   @Test
-  @Category(MaintainedByDiffblue.class)
+  @Category(ContributionFromDiffblue.class)
+  @ManagedByDiffblue
   @MethodsUnderTest({"boolean Value.isBigInt()"})
   public void testIsBigInt() {
     // Arrange, Act and Assert
@@ -622,7 +653,8 @@ public class ValueDiffblueTest {
    * <p>Method under test: {@link Value#isBytes()}
    */
   @Test
-  @Category(MaintainedByDiffblue.class)
+  @Category(ContributionFromDiffblue.class)
+  @ManagedByDiffblue
   @MethodsUnderTest({"boolean Value.isBytes()"})
   public void testIsBytes() {
     // Arrange, Act and Assert
@@ -639,7 +671,8 @@ public class ValueDiffblueTest {
    * <p>Method under test: {@link Value#isHashCode()}
    */
   @Test
-  @Category(MaintainedByDiffblue.class)
+  @Category(ContributionFromDiffblue.class)
+  @ManagedByDiffblue
   @MethodsUnderTest({"boolean Value.isHashCode()"})
   public void testIsHashCode_givenValue() {
     // Arrange, Act and Assert
@@ -656,7 +689,8 @@ public class ValueDiffblueTest {
    * <p>Method under test: {@link Value#isHashCode()}
    */
   @Test
-  @Category(MaintainedByDiffblue.class)
+  @Category(ContributionFromDiffblue.class)
+  @ManagedByDiffblue
   @MethodsUnderTest({"boolean Value.isHashCode()"})
   public void testIsHashCode_givenValueWithObj() {
     // Arrange, Act and Assert
@@ -674,7 +708,8 @@ public class ValueDiffblueTest {
    * <p>Method under test: {@link Value#isNull()}
    */
   @Test
-  @Category(MaintainedByDiffblue.class)
+  @Category(ContributionFromDiffblue.class)
+  @ManagedByDiffblue
   @MethodsUnderTest({"boolean Value.isNull()"})
   public void testIsNull_givenValueWithObj_thenReturnFalse() {
     // Arrange, Act and Assert
@@ -692,7 +727,8 @@ public class ValueDiffblueTest {
    * <p>Method under test: {@link Value#isNull()}
    */
   @Test
-  @Category(MaintainedByDiffblue.class)
+  @Category(ContributionFromDiffblue.class)
+  @ManagedByDiffblue
   @MethodsUnderTest({"boolean Value.isNull()"})
   public void testIsNull_givenValue_thenReturnTrue() {
     // Arrange, Act and Assert
@@ -710,7 +746,8 @@ public class ValueDiffblueTest {
    * <p>Method under test: {@link Value#isEmpty()}
    */
   @Test
-  @Category(MaintainedByDiffblue.class)
+  @Category(ContributionFromDiffblue.class)
+  @ManagedByDiffblue
   @MethodsUnderTest({"boolean Value.isEmpty()"})
   public void testIsEmpty_givenValueWithObjIsEmptyString_thenReturnTrue() {
     // Arrange, Act and Assert
@@ -728,7 +765,8 @@ public class ValueDiffblueTest {
    * <p>Method under test: {@link Value#isEmpty()}
    */
   @Test
-  @Category(MaintainedByDiffblue.class)
+  @Category(ContributionFromDiffblue.class)
+  @ManagedByDiffblue
   @MethodsUnderTest({"boolean Value.isEmpty()"})
   public void testIsEmpty_givenValueWithObjIsFour_thenReturnFalse() {
     // Arrange, Act and Assert
@@ -746,7 +784,8 @@ public class ValueDiffblueTest {
    * <p>Method under test: {@link Value#isEmpty()}
    */
   @Test
-  @Category(MaintainedByDiffblue.class)
+  @Category(ContributionFromDiffblue.class)
+  @ManagedByDiffblue
   @MethodsUnderTest({"boolean Value.isEmpty()"})
   public void testIsEmpty_givenValueWithObj_thenReturnFalse() {
     // Arrange, Act and Assert
@@ -764,7 +803,8 @@ public class ValueDiffblueTest {
    * <p>Method under test: {@link Value#isEmpty()}
    */
   @Test
-  @Category(MaintainedByDiffblue.class)
+  @Category(ContributionFromDiffblue.class)
+  @ManagedByDiffblue
   @MethodsUnderTest({"boolean Value.isEmpty()"})
   public void testIsEmpty_givenValue_thenReturnTrue() {
     // Arrange, Act and Assert
@@ -782,7 +822,8 @@ public class ValueDiffblueTest {
    * <p>Method under test: {@link Value#length()}
    */
   @Test
-  @Category(MaintainedByDiffblue.class)
+  @Category(ContributionFromDiffblue.class)
+  @ManagedByDiffblue
   @MethodsUnderTest({"int Value.length()"})
   public void testLength_givenValueWithObj_thenReturnThree() {
     // Arrange, Act and Assert
@@ -800,7 +841,8 @@ public class ValueDiffblueTest {
    * <p>Method under test: {@link Value#length()}
    */
   @Test
-  @Category(MaintainedByDiffblue.class)
+  @Category(ContributionFromDiffblue.class)
+  @ManagedByDiffblue
   @MethodsUnderTest({"int Value.length()"})
   public void testLength_givenValue_thenReturnZero() {
     // Arrange, Act and Assert
@@ -818,7 +860,8 @@ public class ValueDiffblueTest {
    * <p>Method under test: {@link Value#toString()}
    */
   @Test
-  @Category(MaintainedByDiffblue.class)
+  @Category(ContributionFromDiffblue.class)
+  @ManagedByDiffblue
   @MethodsUnderTest({"java.lang.String Value.toString()"})
   public void testToString_givenValueWithObjIsEmptyString_thenReturnEmptyString() {
     // Arrange, Act and Assert
@@ -836,7 +879,8 @@ public class ValueDiffblueTest {
    * <p>Method under test: {@link Value#toString()}
    */
   @Test
-  @Category(MaintainedByDiffblue.class)
+  @Category(ContributionFromDiffblue.class)
+  @ManagedByDiffblue
   @MethodsUnderTest({"java.lang.String Value.toString()"})
   public void testToString_givenValueWithObjIsFour_thenReturnUnexpectedType() {
     // Arrange, Act and Assert
@@ -854,7 +898,8 @@ public class ValueDiffblueTest {
    * <p>Method under test: {@link Value#toString()}
    */
   @Test
-  @Category(MaintainedByDiffblue.class)
+  @Category(ContributionFromDiffblue.class)
+  @ManagedByDiffblue
   @MethodsUnderTest({"java.lang.String Value.toString()"})
   public void testToString_givenValueWithObj_thenReturnObj() {
     // Arrange, Act and Assert
@@ -872,7 +917,8 @@ public class ValueDiffblueTest {
    * <p>Method under test: {@link Value#toString()}
    */
   @Test
-  @Category(MaintainedByDiffblue.class)
+  @Category(ContributionFromDiffblue.class)
+  @ManagedByDiffblue
   @MethodsUnderTest({"java.lang.String Value.toString()"})
   public void testToString_givenValue_thenReturnEmptyString() {
     // Arrange, Act and Assert
@@ -889,7 +935,8 @@ public class ValueDiffblueTest {
    * <p>Method under test: {@link Value#countBranchNodes()}
    */
   @Test
-  @Category(MaintainedByDiffblue.class)
+  @Category(ContributionFromDiffblue.class)
+  @ManagedByDiffblue
   @MethodsUnderTest({"int Value.countBranchNodes()"})
   public void testCountBranchNodes_givenValue() {
     // Arrange, Act and Assert
@@ -906,7 +953,8 @@ public class ValueDiffblueTest {
    * <p>Method under test: {@link Value#countBranchNodes()}
    */
   @Test
-  @Category(MaintainedByDiffblue.class)
+  @Category(ContributionFromDiffblue.class)
+  @ManagedByDiffblue
   @MethodsUnderTest({"int Value.countBranchNodes()"})
   public void testCountBranchNodes_givenValueWithObj() {
     // Arrange, Act and Assert

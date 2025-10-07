@@ -6,7 +6,8 @@ import static org.junit.Assert.assertFalse;
 import static org.junit.Assert.assertNull;
 import static org.junit.Assert.assertThrows;
 import static org.junit.Assert.assertTrue;
-import com.diffblue.cover.annotations.MaintainedByDiffblue;
+import com.diffblue.cover.annotations.ContributionFromDiffblue;
+import com.diffblue.cover.annotations.ManagedByDiffblue;
 import com.diffblue.cover.annotations.MethodsUnderTest;
 import java.io.UnsupportedEncodingException;
 import java.math.BigInteger;
@@ -28,7 +29,8 @@ public class ByteUtilDiffblueTest {
    * <p>Method under test: {@link ByteUtil#cloneBytes(byte[])}
    */
   @Test
-  @Category(MaintainedByDiffblue.class)
+  @Category(ContributionFromDiffblue.class)
+  @ManagedByDiffblue
   @MethodsUnderTest({"byte[] ByteUtil.cloneBytes(byte[])"})
   public void testCloneBytes_whenAxaxaxaxBytesIsUtf8_thenReturnAxaxaxaxBytesIsUtf8()
       throws UnsupportedEncodingException {
@@ -48,7 +50,8 @@ public class ByteUtilDiffblueTest {
    * <p>Method under test: {@link ByteUtil#cloneBytes(byte[])}
    */
   @Test
-  @Category(MaintainedByDiffblue.class)
+  @Category(ContributionFromDiffblue.class)
+  @ManagedByDiffblue
   @MethodsUnderTest({"byte[] ByteUtil.cloneBytes(byte[])"})
   public void testCloneBytes_whenEmptyArrayOfByte_thenReturnEmptyArrayOfByte() {
     // Arrange, Act and Assert
@@ -66,7 +69,8 @@ public class ByteUtilDiffblueTest {
    * <p>Method under test: {@link ByteUtil#cloneBytes(byte[])}
    */
   @Test
-  @Category(MaintainedByDiffblue.class)
+  @Category(ContributionFromDiffblue.class)
+  @ManagedByDiffblue
   @MethodsUnderTest({"byte[] ByteUtil.cloneBytes(byte[])"})
   public void testCloneBytes_whenNull_thenReturnNull() {
     // Arrange, Act and Assert
@@ -83,7 +87,8 @@ public class ByteUtilDiffblueTest {
    * <p>Method under test: {@link ByteUtil#bigIntegerToBytes(BigInteger, int)}
    */
   @Test
-  @Category(MaintainedByDiffblue.class)
+  @Category(ContributionFromDiffblue.class)
+  @ManagedByDiffblue
   @MethodsUnderTest({"byte[] ByteUtil.bigIntegerToBytes(BigInteger, int)"})
   public void testBigIntegerToBytesWithBNumBytes_thenReturnArrayOfByteWithMinusOneAndMinusOne() {
     // Arrange, Act and Assert
@@ -105,7 +110,8 @@ public class ByteUtilDiffblueTest {
    * <p>Method under test: {@link ByteUtil#bigIntegerToBytes(BigInteger, int)}
    */
   @Test
-  @Category(MaintainedByDiffblue.class)
+  @Category(ContributionFromDiffblue.class)
+  @ManagedByDiffblue
   @MethodsUnderTest({"byte[] ByteUtil.bigIntegerToBytes(BigInteger, int)"})
   public void testBigIntegerToBytesWithBNumBytes_thenReturnArrayOfByteWithZeroAndMinusOne() {
     // Arrange, Act and Assert
@@ -125,7 +131,8 @@ public class ByteUtilDiffblueTest {
    * <p>Method under test: {@link ByteUtil#bigIntegerToBytes(BigInteger, int)}
    */
   @Test
-  @Category(MaintainedByDiffblue.class)
+  @Category(ContributionFromDiffblue.class)
+  @ManagedByDiffblue
   @MethodsUnderTest({"byte[] ByteUtil.bigIntegerToBytes(BigInteger, int)"})
   public void testBigIntegerToBytesWithBNumBytes_whenNull_thenReturnNull() {
     // Arrange, Act and Assert
@@ -142,7 +149,8 @@ public class ByteUtilDiffblueTest {
    * <p>Method under test: {@link ByteUtil#bigIntegerToBytes(BigInteger)}
    */
   @Test
-  @Category(MaintainedByDiffblue.class)
+  @Category(ContributionFromDiffblue.class)
+  @ManagedByDiffblue
   @MethodsUnderTest({"byte[] ByteUtil.bigIntegerToBytes(BigInteger)"})
   public void testBigIntegerToBytesWithValue_thenReturnArrayOfByteWithMinusOneAndMinusOne() {
     // Arrange, Act and Assert
@@ -165,7 +173,8 @@ public class ByteUtilDiffblueTest {
    * <p>Method under test: {@link ByteUtil#bigIntegerToBytes(BigInteger)}
    */
   @Test
-  @Category(MaintainedByDiffblue.class)
+  @Category(ContributionFromDiffblue.class)
+  @ManagedByDiffblue
   @MethodsUnderTest({"byte[] ByteUtil.bigIntegerToBytes(BigInteger)"})
   public void testBigIntegerToBytesWithValue_whenNull_thenReturnNull() {
     // Arrange, Act and Assert
@@ -183,7 +192,8 @@ public class ByteUtilDiffblueTest {
    * <p>Method under test: {@link ByteUtil#bigIntegerToBytes(BigInteger)}
    */
   @Test
-  @Category(MaintainedByDiffblue.class)
+  @Category(ContributionFromDiffblue.class)
+  @ManagedByDiffblue
   @MethodsUnderTest({"byte[] ByteUtil.bigIntegerToBytes(BigInteger)"})
   public void testBigIntegerToBytesWithValue_whenValueOfOne_thenReturnArrayOfByteWithOne() {
     // Arrange, Act and Assert
@@ -201,7 +211,8 @@ public class ByteUtilDiffblueTest {
    * <p>Method under test: {@link ByteUtil#bigIntegerToBytes(BigInteger)}
    */
   @Test
-  @Category(MaintainedByDiffblue.class)
+  @Category(ContributionFromDiffblue.class)
+  @ManagedByDiffblue
   @MethodsUnderTest({"byte[] ByteUtil.bigIntegerToBytes(BigInteger)"})
   public void testBigIntegerToBytesWithValue_when_2_256_thenReturnArrayOfByteWithOneAndZero() {
     // Arrange, Act and Assert
@@ -219,7 +230,8 @@ public class ByteUtilDiffblueTest {
    * <p>Method under test: {@link ByteUtil#merge(byte[][])}
    */
   @Test
-  @Category(MaintainedByDiffblue.class)
+  @Category(ContributionFromDiffblue.class)
+  @ManagedByDiffblue
   @MethodsUnderTest({"byte[] ByteUtil.merge(byte[][])"})
   public void testMerge() throws UnsupportedEncodingException {
     // Arrange, Act and Assert
@@ -232,7 +244,8 @@ public class ByteUtilDiffblueTest {
    * <p>Method under test: {@link ByteUtil#appendByte(byte[], byte)}
    */
   @Test
-  @Category(MaintainedByDiffblue.class)
+  @Category(ContributionFromDiffblue.class)
+  @ManagedByDiffblue
   @MethodsUnderTest({"byte[] ByteUtil.appendByte(byte[], byte)"})
   public void testAppendByte() throws UnsupportedEncodingException {
     // Arrange, Act and Assert
@@ -247,7 +260,8 @@ public class ByteUtilDiffblueTest {
    * <p>Method under test: {@link ByteUtil#nibblesToPrettyString(byte[])}
    */
   @Test
-  @Category(MaintainedByDiffblue.class)
+  @Category(ContributionFromDiffblue.class)
+  @ManagedByDiffblue
   @MethodsUnderTest({"String ByteUtil.nibblesToPrettyString(byte[])"})
   public void testNibblesToPrettyString() throws UnsupportedEncodingException {
     // Arrange, Act and Assert
@@ -266,7 +280,8 @@ public class ByteUtilDiffblueTest {
    * <p>Method under test: {@link ByteUtil#nibblesToPrettyString(byte[])}
    */
   @Test
-  @Category(MaintainedByDiffblue.class)
+  @Category(ContributionFromDiffblue.class)
+  @ManagedByDiffblue
   @MethodsUnderTest({"String ByteUtil.nibblesToPrettyString(byte[])"})
   public void testNibblesToPrettyString_thenReturnX41X58X41X58X41X58X41X58()
       throws UnsupportedEncodingException {
@@ -287,7 +302,8 @@ public class ByteUtilDiffblueTest {
    * <p>Method under test: {@link ByteUtil#oneByteToHexString(byte)}
    */
   @Test
-  @Category(MaintainedByDiffblue.class)
+  @Category(ContributionFromDiffblue.class)
+  @ManagedByDiffblue
   @MethodsUnderTest({"String ByteUtil.oneByteToHexString(byte)"})
   public void testOneByteToHexString_whenA_thenReturn41() {
     // Arrange, Act and Assert
@@ -305,7 +321,8 @@ public class ByteUtilDiffblueTest {
    * <p>Method under test: {@link ByteUtil#oneByteToHexString(byte)}
    */
   @Test
-  @Category(MaintainedByDiffblue.class)
+  @Category(ContributionFromDiffblue.class)
+  @ManagedByDiffblue
   @MethodsUnderTest({"String ByteUtil.oneByteToHexString(byte)"})
   public void testOneByteToHexString_whenOne_thenReturn01() {
     // Arrange, Act and Assert
@@ -323,7 +340,8 @@ public class ByteUtilDiffblueTest {
    * <p>Method under test: {@link ByteUtil#byteArrayToInt(byte[])}
    */
   @Test
-  @Category(MaintainedByDiffblue.class)
+  @Category(ContributionFromDiffblue.class)
+  @ManagedByDiffblue
   @MethodsUnderTest({"int ByteUtil.byteArrayToInt(byte[])"})
   public void testByteArrayToInt_whenAxaxaxaxBytesIsUtf8_thenReturn1096302936()
       throws UnsupportedEncodingException {
@@ -342,7 +360,8 @@ public class ByteUtilDiffblueTest {
    * <p>Method under test: {@link ByteUtil#byteArrayToInt(byte[])}
    */
   @Test
-  @Category(MaintainedByDiffblue.class)
+  @Category(ContributionFromDiffblue.class)
+  @ManagedByDiffblue
   @MethodsUnderTest({"int ByteUtil.byteArrayToInt(byte[])"})
   public void testByteArrayToInt_whenEmptyArrayOfByte_thenReturnZero() {
     // Arrange, Act and Assert
@@ -360,7 +379,8 @@ public class ByteUtilDiffblueTest {
    * <p>Method under test: {@link ByteUtil#byteArrayToInt(byte[])}
    */
   @Test
-  @Category(MaintainedByDiffblue.class)
+  @Category(ContributionFromDiffblue.class)
+  @ManagedByDiffblue
   @MethodsUnderTest({"int ByteUtil.byteArrayToInt(byte[])"})
   public void testByteArrayToInt_whenNull_thenReturnZero() {
     // Arrange, Act and Assert
@@ -378,7 +398,8 @@ public class ByteUtilDiffblueTest {
    * <p>Method under test: {@link ByteUtil#isSingleZero(byte[])}
    */
   @Test
-  @Category(MaintainedByDiffblue.class)
+  @Category(ContributionFromDiffblue.class)
+  @ManagedByDiffblue
   @MethodsUnderTest({"boolean ByteUtil.isSingleZero(byte[])"})
   public void testIsSingleZero_whenArrayOfByteWithA_thenReturnFalse() {
     // Arrange, Act and Assert
@@ -396,7 +417,8 @@ public class ByteUtilDiffblueTest {
    * <p>Method under test: {@link ByteUtil#isSingleZero(byte[])}
    */
   @Test
-  @Category(MaintainedByDiffblue.class)
+  @Category(ContributionFromDiffblue.class)
+  @ManagedByDiffblue
   @MethodsUnderTest({"boolean ByteUtil.isSingleZero(byte[])"})
   public void testIsSingleZero_whenArrayOfByteWithZero_thenReturnTrue() {
     // Arrange, Act and Assert
@@ -414,7 +436,8 @@ public class ByteUtilDiffblueTest {
    * <p>Method under test: {@link ByteUtil#isSingleZero(byte[])}
    */
   @Test
-  @Category(MaintainedByDiffblue.class)
+  @Category(ContributionFromDiffblue.class)
+  @ManagedByDiffblue
   @MethodsUnderTest({"boolean ByteUtil.isSingleZero(byte[])"})
   public void testIsSingleZero_whenAxaxaxaxBytesIsUtf8_thenReturnFalse()
       throws UnsupportedEncodingException {
@@ -433,7 +456,8 @@ public class ByteUtilDiffblueTest {
    * <p>Method under test: {@link ByteUtil#intToBytesNoLeadZeroes(int)}
    */
   @Test
-  @Category(MaintainedByDiffblue.class)
+  @Category(ContributionFromDiffblue.class)
+  @ManagedByDiffblue
   @MethodsUnderTest({"byte[] ByteUtil.intToBytesNoLeadZeroes(int)"})
   public void testIntToBytesNoLeadZeroes_whenAddress_size_thenReturnArrayOfByteWithAsterisk() {
     // Arrange, Act and Assert
@@ -451,7 +475,8 @@ public class ByteUtilDiffblueTest {
    * <p>Method under test: {@link ByteUtil#intToBytesNoLeadZeroes(int)}
    */
   @Test
-  @Category(MaintainedByDiffblue.class)
+  @Category(ContributionFromDiffblue.class)
+  @ManagedByDiffblue
   @MethodsUnderTest({"byte[] ByteUtil.intToBytesNoLeadZeroes(int)"})
   public void testIntToBytesNoLeadZeroes_whenZero_thenReturnEmptyArrayOfByte() {
     // Arrange, Act and Assert
@@ -464,7 +489,8 @@ public class ByteUtilDiffblueTest {
    * <p>Method under test: {@link ByteUtil#intToBytes(int)}
    */
   @Test
-  @Category(MaintainedByDiffblue.class)
+  @Category(ContributionFromDiffblue.class)
+  @ManagedByDiffblue
   @MethodsUnderTest({"byte[] ByteUtil.intToBytes(int)"})
   public void testIntToBytes() {
     // Arrange, Act and Assert
@@ -481,7 +507,8 @@ public class ByteUtilDiffblueTest {
    * <p>Method under test: {@link ByteUtil#bytesToBigInteger(byte[])}
    */
   @Test
-  @Category(MaintainedByDiffblue.class)
+  @Category(ContributionFromDiffblue.class)
+  @ManagedByDiffblue
   @MethodsUnderTest({"BigInteger ByteUtil.bytesToBigInteger(byte[])"})
   public void testBytesToBigInteger_thenReturnToStringIs4708585257725083992()
       throws UnsupportedEncodingException {
@@ -508,7 +535,8 @@ public class ByteUtilDiffblueTest {
    * <p>Method under test: {@link ByteUtil#bytesToBigInteger(byte[])}
    */
   @Test
-  @Category(MaintainedByDiffblue.class)
+  @Category(ContributionFromDiffblue.class)
+  @ManagedByDiffblue
   @MethodsUnderTest({"BigInteger ByteUtil.bytesToBigInteger(byte[])"})
   public void testBytesToBigInteger_whenEmptyArrayOfByte_thenReturnToStringIs0() {
     // Arrange and Act
@@ -532,7 +560,8 @@ public class ByteUtilDiffblueTest {
    * <p>Method under test: {@link ByteUtil#bytesToBigInteger(byte[])}
    */
   @Test
-  @Category(MaintainedByDiffblue.class)
+  @Category(ContributionFromDiffblue.class)
+  @ManagedByDiffblue
   @MethodsUnderTest({"BigInteger ByteUtil.bytesToBigInteger(byte[])"})
   public void testBytesToBigInteger_whenNull_thenReturnToStringIs0() {
     // Arrange and Act
@@ -556,7 +585,8 @@ public class ByteUtilDiffblueTest {
    * <p>Method under test: {@link ByteUtil#byteArrayToLong(byte[])}
    */
   @Test
-  @Category(MaintainedByDiffblue.class)
+  @Category(ContributionFromDiffblue.class)
+  @ManagedByDiffblue
   @MethodsUnderTest({"long ByteUtil.byteArrayToLong(byte[])"})
   public void testByteArrayToLong_whenAxaxaxaxBytesIsUtf8_thenReturn4708585257725083992()
       throws UnsupportedEncodingException {
@@ -575,7 +605,8 @@ public class ByteUtilDiffblueTest {
    * <p>Method under test: {@link ByteUtil#byteArrayToLong(byte[])}
    */
   @Test
-  @Category(MaintainedByDiffblue.class)
+  @Category(ContributionFromDiffblue.class)
+  @ManagedByDiffblue
   @MethodsUnderTest({"long ByteUtil.byteArrayToLong(byte[])"})
   public void testByteArrayToLong_whenEmptyArrayOfByte_thenReturnZero() {
     // Arrange, Act and Assert
@@ -593,7 +624,8 @@ public class ByteUtilDiffblueTest {
    * <p>Method under test: {@link ByteUtil#byteArrayToLong(byte[])}
    */
   @Test
-  @Category(MaintainedByDiffblue.class)
+  @Category(ContributionFromDiffblue.class)
+  @ManagedByDiffblue
   @MethodsUnderTest({"long ByteUtil.byteArrayToLong(byte[])"})
   public void testByteArrayToLong_whenNull_thenReturnZero() {
     // Arrange, Act and Assert
@@ -611,7 +643,8 @@ public class ByteUtilDiffblueTest {
    * <p>Method under test: {@link ByteUtil#firstNonZeroByte(byte[])}
    */
   @Test
-  @Category(MaintainedByDiffblue.class)
+  @Category(ContributionFromDiffblue.class)
+  @ManagedByDiffblue
   @MethodsUnderTest({"int ByteUtil.firstNonZeroByte(byte[])"})
   public void testFirstNonZeroByte_whenArrayOfByteWithZeroAndZero_thenReturnMinusOne() {
     // Arrange, Act and Assert
@@ -632,7 +665,8 @@ public class ByteUtilDiffblueTest {
    * <p>Method under test: {@link ByteUtil#firstNonZeroByte(byte[])}
    */
   @Test
-  @Category(MaintainedByDiffblue.class)
+  @Category(ContributionFromDiffblue.class)
+  @ManagedByDiffblue
   @MethodsUnderTest({"int ByteUtil.firstNonZeroByte(byte[])"})
   public void testFirstNonZeroByte_whenAxaxaxaxBytesIsUtf8_thenReturnZero()
       throws UnsupportedEncodingException {
@@ -651,7 +685,8 @@ public class ByteUtilDiffblueTest {
    * <p>Method under test: {@link ByteUtil#lastNonZeroByte(byte[])}
    */
   @Test
-  @Category(MaintainedByDiffblue.class)
+  @Category(ContributionFromDiffblue.class)
+  @ManagedByDiffblue
   @MethodsUnderTest({"int ByteUtil.lastNonZeroByte(byte[])"})
   public void testLastNonZeroByte_whenA_thenReturnSix() {
     // Arrange, Act and Assert
@@ -669,7 +704,8 @@ public class ByteUtilDiffblueTest {
    * <p>Method under test: {@link ByteUtil#lastNonZeroByte(byte[])}
    */
   @Test
-  @Category(MaintainedByDiffblue.class)
+  @Category(ContributionFromDiffblue.class)
+  @ManagedByDiffblue
   @MethodsUnderTest({"int ByteUtil.lastNonZeroByte(byte[])"})
   public void testLastNonZeroByte_whenAxaxaxaxBytesIsUtf8_thenReturnSeven()
       throws UnsupportedEncodingException {
@@ -688,7 +724,8 @@ public class ByteUtilDiffblueTest {
    * <p>Method under test: {@link ByteUtil#lastNonZeroByte(byte[])}
    */
   @Test
-  @Category(MaintainedByDiffblue.class)
+  @Category(ContributionFromDiffblue.class)
+  @ManagedByDiffblue
   @MethodsUnderTest({"int ByteUtil.lastNonZeroByte(byte[])"})
   public void testLastNonZeroByte_whenEmptyArrayOfByte_thenReturnMinusOne() {
     // Arrange, Act and Assert
@@ -705,7 +742,8 @@ public class ByteUtilDiffblueTest {
    * <p>Method under test: {@link ByteUtil#stripLeadingZeroes(byte[])}
    */
   @Test
-  @Category(MaintainedByDiffblue.class)
+  @Category(ContributionFromDiffblue.class)
+  @ManagedByDiffblue
   @MethodsUnderTest({"byte[] ByteUtil.stripLeadingZeroes(byte[])"})
   public void testStripLeadingZeroes_thenReturnArrayOfByteWithZero() {
     // Arrange, Act and Assert
@@ -726,7 +764,8 @@ public class ByteUtilDiffblueTest {
    * <p>Method under test: {@link ByteUtil#stripLeadingZeroes(byte[])}
    */
   @Test
-  @Category(MaintainedByDiffblue.class)
+  @Category(ContributionFromDiffblue.class)
+  @ManagedByDiffblue
   @MethodsUnderTest({"byte[] ByteUtil.stripLeadingZeroes(byte[])"})
   public void testStripLeadingZeroes_whenA_thenReturnXaxaxaxBytesIsUtf8()
       throws UnsupportedEncodingException {
@@ -747,7 +786,8 @@ public class ByteUtilDiffblueTest {
    * <p>Method under test: {@link ByteUtil#stripLeadingZeroes(byte[])}
    */
   @Test
-  @Category(MaintainedByDiffblue.class)
+  @Category(ContributionFromDiffblue.class)
+  @ManagedByDiffblue
   @MethodsUnderTest({"byte[] ByteUtil.stripLeadingZeroes(byte[])"})
   public void testStripLeadingZeroes_whenAxaxaxaxBytesIsUtf8_thenReturnAxaxaxaxBytesIsUtf8()
       throws UnsupportedEncodingException {
@@ -767,7 +807,8 @@ public class ByteUtilDiffblueTest {
    * <p>Method under test: {@link ByteUtil#stripLeadingZeroes(byte[])}
    */
   @Test
-  @Category(MaintainedByDiffblue.class)
+  @Category(ContributionFromDiffblue.class)
+  @ManagedByDiffblue
   @MethodsUnderTest({"byte[] ByteUtil.stripLeadingZeroes(byte[])"})
   public void testStripLeadingZeroes_whenNull_thenReturnNull() {
     // Arrange, Act and Assert
@@ -785,7 +826,8 @@ public class ByteUtilDiffblueTest {
    * <p>Method under test: {@link ByteUtil#stripEndingZeroes(byte[])}
    */
   @Test
-  @Category(MaintainedByDiffblue.class)
+  @Category(ContributionFromDiffblue.class)
+  @ManagedByDiffblue
   @MethodsUnderTest({"byte[] ByteUtil.stripEndingZeroes(byte[])"})
   public void testStripEndingZeroes_whenA_thenReturnAxaxaxaBytesIsUtf8()
       throws UnsupportedEncodingException {
@@ -806,7 +848,8 @@ public class ByteUtilDiffblueTest {
    * <p>Method under test: {@link ByteUtil#stripEndingZeroes(byte[])}
    */
   @Test
-  @Category(MaintainedByDiffblue.class)
+  @Category(ContributionFromDiffblue.class)
+  @ManagedByDiffblue
   @MethodsUnderTest({"byte[] ByteUtil.stripEndingZeroes(byte[])"})
   public void testStripEndingZeroes_whenAxaxaxaxBytesIsUtf8_thenReturnAxaxaxaxBytesIsUtf8()
       throws UnsupportedEncodingException {
@@ -826,7 +869,8 @@ public class ByteUtilDiffblueTest {
    * <p>Method under test: {@link ByteUtil#stripEndingZeroes(byte[])}
    */
   @Test
-  @Category(MaintainedByDiffblue.class)
+  @Category(ContributionFromDiffblue.class)
+  @ManagedByDiffblue
   @MethodsUnderTest({"byte[] ByteUtil.stripEndingZeroes(byte[])"})
   public void testStripEndingZeroes_whenNull_thenReturnNull() {
     // Arrange, Act and Assert
@@ -844,7 +888,8 @@ public class ByteUtilDiffblueTest {
    * <p>Method under test: {@link ByteUtil#copyToArray(BigInteger)}
    */
   @Test
-  @Category(MaintainedByDiffblue.class)
+  @Category(ContributionFromDiffblue.class)
+  @ManagedByDiffblue
   @MethodsUnderTest({"byte[] ByteUtil.copyToArray(BigInteger)"})
   public void testCopyToArray_whenMax_value_thenReturnArrayOfByteWithMinusOneAndMinusOne() {
     // Arrange, Act and Assert
@@ -867,7 +912,8 @@ public class ByteUtilDiffblueTest {
    * <p>Method under test: {@link ByteUtil#copyToArray(BigInteger)}
    */
   @Test
-  @Category(MaintainedByDiffblue.class)
+  @Category(ContributionFromDiffblue.class)
+  @ManagedByDiffblue
   @MethodsUnderTest({"byte[] ByteUtil.copyToArray(BigInteger)"})
   public void testCopyToArray_whenNull_thenReturnArrayOfByteWithZeroAndZero() {
     // Arrange, Act and Assert
@@ -890,7 +936,8 @@ public class ByteUtilDiffblueTest {
    * <p>Method under test: {@link ByteUtil#copyToArray(BigInteger)}
    */
   @Test
-  @Category(MaintainedByDiffblue.class)
+  @Category(ContributionFromDiffblue.class)
+  @ManagedByDiffblue
   @MethodsUnderTest({"byte[] ByteUtil.copyToArray(BigInteger)"})
   public void testCopyToArray_whenValueOfMax_value_thenReturnArrayOfByteWithZeroAndZero() {
     // Arrange, Act and Assert
@@ -943,7 +990,8 @@ public class ByteUtilDiffblueTest {
    * <p>Method under test: {@link ByteUtil#copyToArray(BigInteger)}
    */
   @Test
-  @Category(MaintainedByDiffblue.class)
+  @Category(ContributionFromDiffblue.class)
+  @ManagedByDiffblue
   @MethodsUnderTest({"byte[] ByteUtil.copyToArray(BigInteger)"})
   public void testCopyToArray_whenValueOfThirtyTwo_thenReturnArrayOfByteWithZeroAndZero() {
     // Arrange, Act and Assert
@@ -965,7 +1013,8 @@ public class ByteUtilDiffblueTest {
    * <p>Method under test: {@link ByteUtil#numberOfLeadingZeros(byte[])}
    */
   @Test
-  @Category(MaintainedByDiffblue.class)
+  @Category(ContributionFromDiffblue.class)
+  @ManagedByDiffblue
   @MethodsUnderTest({"int ByteUtil.numberOfLeadingZeros(byte[])"})
   public void testNumberOfLeadingZeros_thenReturnOneHundredFortyFour() {
     // Arrange, Act and Assert
@@ -986,7 +1035,8 @@ public class ByteUtilDiffblueTest {
    * <p>Method under test: {@link ByteUtil#numberOfLeadingZeros(byte[])}
    */
   @Test
-  @Category(MaintainedByDiffblue.class)
+  @Category(ContributionFromDiffblue.class)
+  @ManagedByDiffblue
   @MethodsUnderTest({"int ByteUtil.numberOfLeadingZeros(byte[])"})
   public void testNumberOfLeadingZeros_whenAxaxaxaxBytesIsUtf8_thenReturnOne()
       throws UnsupportedEncodingException {
@@ -1005,7 +1055,8 @@ public class ByteUtilDiffblueTest {
    * <p>Method under test: {@link ByteUtil#parseBytes(byte[], int, int)}
    */
   @Test
-  @Category(MaintainedByDiffblue.class)
+  @Category(ContributionFromDiffblue.class)
+  @ManagedByDiffblue
   @MethodsUnderTest({"byte[] ByteUtil.parseBytes(byte[], int, int)"})
   public void testParseBytes_whenA_thenReturnEmptyArrayOfByte() {
     // Arrange, Act and Assert
@@ -1025,7 +1076,8 @@ public class ByteUtilDiffblueTest {
    * <p>Method under test: {@link ByteUtil#parseBytes(byte[], int, int)}
    */
   @Test
-  @Category(MaintainedByDiffblue.class)
+  @Category(ContributionFromDiffblue.class)
+  @ManagedByDiffblue
   @MethodsUnderTest({"byte[] ByteUtil.parseBytes(byte[], int, int)"})
   public void testParseBytes_whenAxaxaxaxBytesIsUtf8_thenReturnAxaBytesIsUtf8()
       throws UnsupportedEncodingException {
@@ -1045,7 +1097,8 @@ public class ByteUtilDiffblueTest {
    * <p>Method under test: {@link ByteUtil#parseBytes(byte[], int, int)}
    */
   @Test
-  @Category(MaintainedByDiffblue.class)
+  @Category(ContributionFromDiffblue.class)
+  @ManagedByDiffblue
   @MethodsUnderTest({"byte[] ByteUtil.parseBytes(byte[], int, int)"})
   public void testParseBytes_whenEmptyArrayOfByte_thenReturnEmptyArrayOfByte() {
     // Arrange, Act and Assert
@@ -1063,7 +1116,8 @@ public class ByteUtilDiffblueTest {
    * <p>Method under test: {@link ByteUtil#parseWord(byte[], int)}
    */
   @Test
-  @Category(MaintainedByDiffblue.class)
+  @Category(ContributionFromDiffblue.class)
+  @ManagedByDiffblue
   @MethodsUnderTest({"byte[] ByteUtil.parseWord(byte[], int)"})
   public void testParseWordWithInputIdx_whenOne_thenReturnEmptyArrayOfByte()
       throws UnsupportedEncodingException {
@@ -1082,7 +1136,8 @@ public class ByteUtilDiffblueTest {
    * <p>Method under test: {@link ByteUtil#parseWord(byte[], int)}
    */
   @Test
-  @Category(MaintainedByDiffblue.class)
+  @Category(ContributionFromDiffblue.class)
+  @ManagedByDiffblue
   @MethodsUnderTest({"byte[] ByteUtil.parseWord(byte[], int)"})
   public void testParseWordWithInputIdx_whenZero_thenReturnArrayOfByteWithAAndX()
       throws UnsupportedEncodingException {
@@ -1107,7 +1162,8 @@ public class ByteUtilDiffblueTest {
    * <p>Method under test: {@link ByteUtil#parseWord(byte[], int, int)}
    */
   @Test
-  @Category(MaintainedByDiffblue.class)
+  @Category(ContributionFromDiffblue.class)
+  @ManagedByDiffblue
   @MethodsUnderTest({"byte[] ByteUtil.parseWord(byte[], int, int)"})
   public void testParseWordWithInputOffsetIdx_whenTwo_thenReturnEmptyArrayOfByte()
       throws UnsupportedEncodingException {
@@ -1127,7 +1183,8 @@ public class ByteUtilDiffblueTest {
    * <p>Method under test: {@link ByteUtil#parseWord(byte[], int, int)}
    */
   @Test
-  @Category(MaintainedByDiffblue.class)
+  @Category(ContributionFromDiffblue.class)
+  @ManagedByDiffblue
   @MethodsUnderTest({"byte[] ByteUtil.parseWord(byte[], int, int)"})
   public void testParseWordWithInputOffsetIdx_whenZero_thenReturnArrayOfByteWithAAndX()
       throws UnsupportedEncodingException {
@@ -1151,7 +1208,8 @@ public class ByteUtilDiffblueTest {
    * <p>Method under test: {@link ByteUtil#greater(byte[], byte[])}
    */
   @Test
-  @Category(MaintainedByDiffblue.class)
+  @Category(ContributionFromDiffblue.class)
+  @ManagedByDiffblue
   @MethodsUnderTest({"boolean ByteUtil.greater(byte[], byte[])"})
   public void testGreater_whenAxaxaxaxBytesIsUtf8_thenReturnFalse()
       throws UnsupportedEncodingException {
@@ -1174,7 +1232,8 @@ public class ByteUtilDiffblueTest {
    * <p>Method under test: {@link ByteUtil#greater(byte[], byte[])}
    */
   @Test
-  @Category(MaintainedByDiffblue.class)
+  @Category(ContributionFromDiffblue.class)
+  @ManagedByDiffblue
   @MethodsUnderTest({"boolean ByteUtil.greater(byte[], byte[])"})
   public void testGreater_whenXaxaxaxBytesIsUtf8_thenReturnFalse()
       throws UnsupportedEncodingException {
@@ -1197,7 +1256,8 @@ public class ByteUtilDiffblueTest {
    * <p>Method under test: {@link ByteUtil#greater(byte[], byte[])}
    */
   @Test
-  @Category(MaintainedByDiffblue.class)
+  @Category(ContributionFromDiffblue.class)
+  @ManagedByDiffblue
   @MethodsUnderTest({"boolean ByteUtil.greater(byte[], byte[])"})
   public void testGreater_whenXxaxaxaxBytesIsUtf8_thenReturnTrue()
       throws UnsupportedEncodingException {
@@ -1220,7 +1280,8 @@ public class ByteUtilDiffblueTest {
    * <p>Method under test: {@link ByteUtil#greaterOrEquals(byte[], byte[])}
    */
   @Test
-  @Category(MaintainedByDiffblue.class)
+  @Category(ContributionFromDiffblue.class)
+  @ManagedByDiffblue
   @MethodsUnderTest({"boolean ByteUtil.greaterOrEquals(byte[], byte[])"})
   public void testGreaterOrEquals_whenAxaxaxaxBytesIsUtf8_thenReturnTrue()
       throws UnsupportedEncodingException {
@@ -1243,7 +1304,8 @@ public class ByteUtilDiffblueTest {
    * <p>Method under test: {@link ByteUtil#greaterOrEquals(byte[], byte[])}
    */
   @Test
-  @Category(MaintainedByDiffblue.class)
+  @Category(ContributionFromDiffblue.class)
+  @ManagedByDiffblue
   @MethodsUnderTest({"boolean ByteUtil.greaterOrEquals(byte[], byte[])"})
   public void testGreaterOrEquals_whenXaxaxaxBytesIsUtf8_thenReturnFalse()
       throws UnsupportedEncodingException {
@@ -1266,7 +1328,8 @@ public class ByteUtilDiffblueTest {
    * <p>Method under test: {@link ByteUtil#less(byte[], byte[])}
    */
   @Test
-  @Category(MaintainedByDiffblue.class)
+  @Category(ContributionFromDiffblue.class)
+  @ManagedByDiffblue
   @MethodsUnderTest({"boolean ByteUtil.less(byte[], byte[])"})
   public void testLess_whenAxaxaxaxBytesIsUtf8_thenReturnFalse()
       throws UnsupportedEncodingException {
@@ -1289,7 +1352,8 @@ public class ByteUtilDiffblueTest {
    * <p>Method under test: {@link ByteUtil#less(byte[], byte[])}
    */
   @Test
-  @Category(MaintainedByDiffblue.class)
+  @Category(ContributionFromDiffblue.class)
+  @ManagedByDiffblue
   @MethodsUnderTest({"boolean ByteUtil.less(byte[], byte[])"})
   public void testLess_whenXaxaxaxBytesIsUtf8_thenReturnTrue() throws UnsupportedEncodingException {
     // Arrange and Act
@@ -1311,7 +1375,8 @@ public class ByteUtilDiffblueTest {
    * <p>Method under test: {@link ByteUtil#lessOrEquals(byte[], byte[])}
    */
   @Test
-  @Category(MaintainedByDiffblue.class)
+  @Category(ContributionFromDiffblue.class)
+  @ManagedByDiffblue
   @MethodsUnderTest({"boolean ByteUtil.lessOrEquals(byte[], byte[])"})
   public void testLessOrEquals_whenAxaxaxaxBytesIsUtf8_thenReturnTrue()
       throws UnsupportedEncodingException {
@@ -1334,7 +1399,8 @@ public class ByteUtilDiffblueTest {
    * <p>Method under test: {@link ByteUtil#lessOrEquals(byte[], byte[])}
    */
   @Test
-  @Category(MaintainedByDiffblue.class)
+  @Category(ContributionFromDiffblue.class)
+  @ManagedByDiffblue
   @MethodsUnderTest({"boolean ByteUtil.lessOrEquals(byte[], byte[])"})
   public void testLessOrEquals_whenXaxaxaxBytesIsUtf8_thenReturnTrue()
       throws UnsupportedEncodingException {
@@ -1357,7 +1423,8 @@ public class ByteUtilDiffblueTest {
    * <p>Method under test: {@link ByteUtil#lessOrEquals(byte[], byte[])}
    */
   @Test
-  @Category(MaintainedByDiffblue.class)
+  @Category(ContributionFromDiffblue.class)
+  @ManagedByDiffblue
   @MethodsUnderTest({"boolean ByteUtil.lessOrEquals(byte[], byte[])"})
   public void testLessOrEquals_whenXxaxaxaxBytesIsUtf8_thenReturnFalse()
       throws UnsupportedEncodingException {
@@ -1380,7 +1447,8 @@ public class ByteUtilDiffblueTest {
    * <p>Method under test: {@link ByteUtil#equals(byte[], byte[])}
    */
   @Test
-  @Category(MaintainedByDiffblue.class)
+  @Category(ContributionFromDiffblue.class)
+  @ManagedByDiffblue
   @MethodsUnderTest({"boolean ByteUtil.equals(byte[], byte[])"})
   public void testEqualsWithByteByte_whenAxaxaxaxBytesIsUtf8_thenReturnTrue()
       throws UnsupportedEncodingException {
@@ -1403,7 +1471,8 @@ public class ByteUtilDiffblueTest {
    * <p>Method under test: {@link ByteUtil#equals(byte[], byte[])}
    */
   @Test
-  @Category(MaintainedByDiffblue.class)
+  @Category(ContributionFromDiffblue.class)
+  @ManagedByDiffblue
   @MethodsUnderTest({"boolean ByteUtil.equals(byte[], byte[])"})
   public void testEqualsWithByteByte_whenXaxaxaxBytesIsUtf8_thenReturnFalse()
       throws UnsupportedEncodingException {
@@ -1426,7 +1495,8 @@ public class ByteUtilDiffblueTest {
    * <p>Method under test: {@link ByteUtil#isNullOrZeroArray(byte[])}
    */
   @Test
-  @Category(MaintainedByDiffblue.class)
+  @Category(ContributionFromDiffblue.class)
+  @ManagedByDiffblue
   @MethodsUnderTest({"boolean ByteUtil.isNullOrZeroArray(byte[])"})
   public void testIsNullOrZeroArray_whenAxaxaxaxBytesIsUtf8_thenReturnFalse()
       throws UnsupportedEncodingException {
@@ -1445,7 +1515,8 @@ public class ByteUtilDiffblueTest {
    * <p>Method under test: {@link ByteUtil#isNullOrZeroArray(byte[])}
    */
   @Test
-  @Category(MaintainedByDiffblue.class)
+  @Category(ContributionFromDiffblue.class)
+  @ManagedByDiffblue
   @MethodsUnderTest({"boolean ByteUtil.isNullOrZeroArray(byte[])"})
   public void testIsNullOrZeroArray_whenEmptyArrayOfByte_thenReturnTrue() {
     // Arrange, Act and Assert
@@ -1463,7 +1534,8 @@ public class ByteUtilDiffblueTest {
    * <p>Method under test: {@link ByteUtil#isNullOrZeroArray(byte[])}
    */
   @Test
-  @Category(MaintainedByDiffblue.class)
+  @Category(ContributionFromDiffblue.class)
+  @ManagedByDiffblue
   @MethodsUnderTest({"boolean ByteUtil.isNullOrZeroArray(byte[])"})
   public void testIsNullOrZeroArray_whenNull_thenReturnTrue() {
     // Arrange, Act and Assert
@@ -1481,7 +1553,8 @@ public class ByteUtilDiffblueTest {
    * <p>Method under test: {@link ByteUtil#compare(byte[], byte[])}
    */
   @Test
-  @Category(MaintainedByDiffblue.class)
+  @Category(ContributionFromDiffblue.class)
+  @ManagedByDiffblue
   @MethodsUnderTest({"int ByteUtil.compare(byte[], byte[])"})
   public void testCompare_whenAxaxaxaxBytesIsUtf8_thenReturnZero()
       throws UnsupportedEncodingException {
@@ -1504,7 +1577,8 @@ public class ByteUtilDiffblueTest {
    * <p>Method under test: {@link ByteUtil#compare(byte[], byte[])}
    */
   @Test
-  @Category(MaintainedByDiffblue.class)
+  @Category(ContributionFromDiffblue.class)
+  @ManagedByDiffblue
   @MethodsUnderTest({"int ByteUtil.compare(byte[], byte[])"})
   public void testCompare_whenXaxaxaxBytesIsUtf8_thenReturnMinusFiftySeven()
       throws UnsupportedEncodingException {
@@ -1527,7 +1601,8 @@ public class ByteUtilDiffblueTest {
    * <p>Method under test: {@link ByteUtil#hexToBytes(String)}
    */
   @Test
-  @Category(MaintainedByDiffblue.class)
+  @Category(ContributionFromDiffblue.class)
+  @ManagedByDiffblue
   @MethodsUnderTest({"byte[] ByteUtil.hexToBytes(String)"})
   public void testHexToBytes_when0123456789abcdef_thenReturnArrayOfByteWithOneAndNumberSign() {
     // Arrange, Act and Assert
@@ -1542,7 +1617,8 @@ public class ByteUtilDiffblueTest {
    * <p>Method under test: {@link ByteUtil#convertBytesVectorToVector(byte[])}
    */
   @Test
-  @Category(MaintainedByDiffblue.class)
+  @Category(ContributionFromDiffblue.class)
+  @ManagedByDiffblue
   @MethodsUnderTest({"List ByteUtil.convertBytesVectorToVector(byte[])"})
   public void testConvertBytesVectorToVector() throws UnsupportedEncodingException {
     // Arrange and Act
@@ -1571,7 +1647,8 @@ public class ByteUtilDiffblueTest {
    * <p>Method under test: {@link ByteUtil#reverse(byte[])}
    */
   @Test
-  @Category(MaintainedByDiffblue.class)
+  @Category(ContributionFromDiffblue.class)
+  @ManagedByDiffblue
   @MethodsUnderTest({"void ByteUtil.reverse(byte[])"})
   public void testReverse() throws UnsupportedEncodingException {
     // Arrange
@@ -1594,7 +1671,8 @@ public class ByteUtilDiffblueTest {
    * <p>Method under test: {@link ByteUtil#longTo32Bytes(long)}
    */
   @Test
-  @Category(MaintainedByDiffblue.class)
+  @Category(ContributionFromDiffblue.class)
+  @ManagedByDiffblue
   @MethodsUnderTest({"byte[] ByteUtil.longTo32Bytes(long)"})
   public void testLongTo32Bytes_whenFortyTwo() {
     // Arrange, Act and Assert
@@ -1616,7 +1694,8 @@ public class ByteUtilDiffblueTest {
    * <p>Method under test: {@link ByteUtil#longTo32Bytes(long)}
    */
   @Test
-  @Category(MaintainedByDiffblue.class)
+  @Category(ContributionFromDiffblue.class)
+  @ManagedByDiffblue
   @MethodsUnderTest({"byte[] ByteUtil.longTo32Bytes(long)"})
   public void testLongTo32Bytes_whenZero() {
     // Arrange, Act and Assert
@@ -1639,7 +1718,8 @@ public class ByteUtilDiffblueTest {
    * <p>Method under test: {@link ByteUtil#setBit(byte[], int, int)}
    */
   @Test
-  @Category(MaintainedByDiffblue.class)
+  @Category(ContributionFromDiffblue.class)
+  @ManagedByDiffblue
   @MethodsUnderTest({"byte[] ByteUtil.setBit(byte[], int, int)"})
   public void testSetBit_whenA_thenReturnAxaxaxazBytesIsUtf8() throws UnsupportedEncodingException {
     // Arrange
@@ -1661,7 +1741,8 @@ public class ByteUtilDiffblueTest {
    * <p>Method under test: {@link ByteUtil#setBit(byte[], int, int)}
    */
   @Test
-  @Category(MaintainedByDiffblue.class)
+  @Category(ContributionFromDiffblue.class)
+  @ManagedByDiffblue
   @MethodsUnderTest({"byte[] ByteUtil.setBit(byte[], int, int)"})
   public void testSetBit_whenAxaxaxaxBytesIsUtf8_thenAxaxaxaxBytesIsUtf8()
       throws UnsupportedEncodingException {
@@ -1687,7 +1768,8 @@ public class ByteUtilDiffblueTest {
    * <p>Method under test: {@link ByteUtil#setBit(byte[], int, int)}
    */
   @Test
-  @Category(MaintainedByDiffblue.class)
+  @Category(ContributionFromDiffblue.class)
+  @ManagedByDiffblue
   @MethodsUnderTest({"byte[] ByteUtil.setBit(byte[], int, int)"})
   public void testSetBit_whenEmptyArrayOfByte_thenThrowError() {
     // Arrange, Act and Assert
@@ -1700,7 +1782,8 @@ public class ByteUtilDiffblueTest {
    * <p>Method under test: {@link ByteUtil#compress(byte[])}
    */
   @Test
-  @Category(MaintainedByDiffblue.class)
+  @Category(ContributionFromDiffblue.class)
+  @ManagedByDiffblue
   @MethodsUnderTest({"byte[] ByteUtil.compress(byte[])"})
   public void testCompress() throws UnsupportedEncodingException, EventBloomException {
     // Arrange, Act and Assert

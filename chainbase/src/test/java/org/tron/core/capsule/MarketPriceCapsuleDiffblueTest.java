@@ -5,7 +5,8 @@ import static org.junit.Assert.assertEquals;
 import static org.junit.Assert.assertFalse;
 import static org.junit.Assert.assertNull;
 import static org.junit.Assert.assertTrue;
-import com.diffblue.cover.annotations.MaintainedByDiffblue;
+import com.diffblue.cover.annotations.ContributionFromDiffblue;
+import com.diffblue.cover.annotations.ManagedByDiffblue;
 import com.diffblue.cover.annotations.MethodsUnderTest;
 import java.io.UnsupportedEncodingException;
 import org.junit.Test;
@@ -20,7 +21,8 @@ public class MarketPriceCapsuleDiffblueTest {
    * <p>Method under test: {@link MarketPriceCapsule#MarketPriceCapsule()}
    */
   @Test
-  @Category(MaintainedByDiffblue.class)
+  @Category(ContributionFromDiffblue.class)
+  @ManagedByDiffblue
   @MethodsUnderTest({"void MarketPriceCapsule.<init>()"})
   public void testNewMarketPriceCapsule() {
     // Arrange and Act
@@ -49,7 +51,8 @@ public class MarketPriceCapsuleDiffblueTest {
    * <p>Method under test: {@link MarketPriceCapsule#MarketPriceCapsule(long, long)}
    */
   @Test
-  @Category(MaintainedByDiffblue.class)
+  @Category(ContributionFromDiffblue.class)
+  @ManagedByDiffblue
   @MethodsUnderTest({"void MarketPriceCapsule.<init>(long, long)"})
   public void testNewMarketPriceCapsule2() {
     // Arrange and Act
@@ -76,7 +79,8 @@ public class MarketPriceCapsuleDiffblueTest {
    * <p>Method under test: {@link MarketPriceCapsule#MarketPriceCapsule(byte[])}
    */
   @Test
-  @Category(MaintainedByDiffblue.class)
+  @Category(ContributionFromDiffblue.class)
+  @ManagedByDiffblue
   @MethodsUnderTest({"void MarketPriceCapsule.<init>(byte[])"})
   public void testNewMarketPriceCapsule3() {
     // Arrange and Act
@@ -105,7 +109,8 @@ public class MarketPriceCapsuleDiffblueTest {
    * <p>Method under test: {@link MarketPriceCapsule#MarketPriceCapsule(byte[])}
    */
   @Test
-  @Category(MaintainedByDiffblue.class)
+  @Category(ContributionFromDiffblue.class)
+  @ManagedByDiffblue
   @MethodsUnderTest({"void MarketPriceCapsule.<init>(byte[])"})
   public void testNewMarketPriceCapsule4() throws UnsupportedEncodingException {
     // Arrange, Act and Assert
@@ -122,7 +127,8 @@ public class MarketPriceCapsuleDiffblueTest {
    * <p>Method under test: {@link MarketPriceCapsule#MarketPriceCapsule(byte[])}
    */
   @Test
-  @Category(MaintainedByDiffblue.class)
+  @Category(ContributionFromDiffblue.class)
+  @ManagedByDiffblue
   @MethodsUnderTest({"void MarketPriceCapsule.<init>(byte[])"})
   public void testNewMarketPriceCapsule_whenArrayOfByteWithMinusOneAndX() {
     // Arrange and Act
@@ -143,7 +149,8 @@ public class MarketPriceCapsuleDiffblueTest {
    * <p>Method under test: {@link MarketPriceCapsule#MarketPriceCapsule(byte[])}
    */
   @Test
-  @Category(MaintainedByDiffblue.class)
+  @Category(ContributionFromDiffblue.class)
+  @ManagedByDiffblue
   @MethodsUnderTest({"void MarketPriceCapsule.<init>(byte[])"})
   public void testNewMarketPriceCapsule_whenArrayOfByteWithSixteenAndX() {
     // Arrange and Act
@@ -165,7 +172,8 @@ public class MarketPriceCapsuleDiffblueTest {
    * <p>Method under test: {@link MarketPriceCapsule#MarketPriceCapsule(byte[])}
    */
   @Test
-  @Category(MaintainedByDiffblue.class)
+  @Category(ContributionFromDiffblue.class)
+  @ManagedByDiffblue
   @MethodsUnderTest({"void MarketPriceCapsule.<init>(byte[])"})
   public void testNewMarketPriceCapsule_whenArrayOfByteWithZeroAndX_thenReturnInstanceIsNull() {
     // Arrange and Act
@@ -187,7 +195,8 @@ public class MarketPriceCapsuleDiffblueTest {
    * <p>Method under test: {@link MarketPriceCapsule#MarketPriceCapsule(byte[])}
    */
   @Test
-  @Category(MaintainedByDiffblue.class)
+  @Category(ContributionFromDiffblue.class)
+  @ManagedByDiffblue
   @MethodsUnderTest({"void MarketPriceCapsule.<init>(byte[])"})
   public void testNewMarketPriceCapsule_whenAxaxaxaxBytesIsUtf8_thenReturnInstanceIsNull()
       throws UnsupportedEncodingException {
@@ -206,7 +215,8 @@ public class MarketPriceCapsuleDiffblueTest {
    * <p>Method under test: {@link MarketPriceCapsule#MarketPriceCapsule(byte[])}
    */
   @Test
-  @Category(MaintainedByDiffblue.class)
+  @Category(ContributionFromDiffblue.class)
+  @ManagedByDiffblue
   @MethodsUnderTest({"void MarketPriceCapsule.<init>(byte[])"})
   public void testNewMarketPriceCapsule_whenBackspace_thenReturnInstanceIsNull() {
     // Arrange and Act
@@ -231,7 +241,8 @@ public class MarketPriceCapsuleDiffblueTest {
    * <p>Method under test: {@link MarketPriceCapsule#MarketPriceCapsule(byte[])}
    */
   @Test
-  @Category(MaintainedByDiffblue.class)
+  @Category(ContributionFromDiffblue.class)
+  @ManagedByDiffblue
   @MethodsUnderTest({"void MarketPriceCapsule.<init>(byte[])"})
   public void testNewMarketPriceCapsule_whenBackspace_thenReturnInstanceIsNull2() {
     // Arrange and Act
@@ -256,7 +267,8 @@ public class MarketPriceCapsuleDiffblueTest {
    * <p>Method under test: {@link MarketPriceCapsule#MarketPriceCapsule(byte[])}
    */
   @Test
-  @Category(MaintainedByDiffblue.class)
+  @Category(ContributionFromDiffblue.class)
+  @ManagedByDiffblue
   @MethodsUnderTest({"void MarketPriceCapsule.<init>(byte[])"})
   public void testNewMarketPriceCapsule_whenXxaxaxaxBytesIsUtf8_thenReturnInstanceIsNull()
       throws UnsupportedEncodingException {
@@ -270,7 +282,8 @@ public class MarketPriceCapsuleDiffblueTest {
    * <p>Method under test: {@link MarketPriceCapsule#getSellTokenQuantity()}
    */
   @Test
-  @Category(MaintainedByDiffblue.class)
+  @Category(ContributionFromDiffblue.class)
+  @ManagedByDiffblue
   @MethodsUnderTest({"long MarketPriceCapsule.getSellTokenQuantity()"})
   public void testGetSellTokenQuantity() {
     // Arrange, Act and Assert
@@ -283,7 +296,8 @@ public class MarketPriceCapsuleDiffblueTest {
    * <p>Method under test: {@link MarketPriceCapsule#setSellTokenQuantity(long)}
    */
   @Test
-  @Category(MaintainedByDiffblue.class)
+  @Category(ContributionFromDiffblue.class)
+  @ManagedByDiffblue
   @MethodsUnderTest({"void MarketPriceCapsule.setSellTokenQuantity(long)"})
   public void testSetSellTokenQuantity() {
     // Arrange
@@ -313,7 +327,8 @@ public class MarketPriceCapsuleDiffblueTest {
    * <p>Method under test: {@link MarketPriceCapsule#setSellTokenQuantity(long)}
    */
   @Test
-  @Category(MaintainedByDiffblue.class)
+  @Category(ContributionFromDiffblue.class)
+  @ManagedByDiffblue
   @MethodsUnderTest({"void MarketPriceCapsule.setSellTokenQuantity(long)"})
   public void testSetSellTokenQuantity_thenMarketPriceCapsuleInstanceAllFieldsSizeIsOne() {
     // Arrange
@@ -339,7 +354,8 @@ public class MarketPriceCapsuleDiffblueTest {
    * <p>Method under test: {@link MarketPriceCapsule#getBuyTokenQuantity()}
    */
   @Test
-  @Category(MaintainedByDiffblue.class)
+  @Category(ContributionFromDiffblue.class)
+  @ManagedByDiffblue
   @MethodsUnderTest({"long MarketPriceCapsule.getBuyTokenQuantity()"})
   public void testGetBuyTokenQuantity() {
     // Arrange, Act and Assert
@@ -352,7 +368,8 @@ public class MarketPriceCapsuleDiffblueTest {
    * <p>Method under test: {@link MarketPriceCapsule#setBuyTokenQuantity(long)}
    */
   @Test
-  @Category(MaintainedByDiffblue.class)
+  @Category(ContributionFromDiffblue.class)
+  @ManagedByDiffblue
   @MethodsUnderTest({"void MarketPriceCapsule.setBuyTokenQuantity(long)"})
   public void testSetBuyTokenQuantity() {
     // Arrange
@@ -380,7 +397,8 @@ public class MarketPriceCapsuleDiffblueTest {
    * <p>Method under test: {@link MarketPriceCapsule#setBuyTokenQuantity(long)}
    */
   @Test
-  @Category(MaintainedByDiffblue.class)
+  @Category(ContributionFromDiffblue.class)
+  @ManagedByDiffblue
   @MethodsUnderTest({"void MarketPriceCapsule.setBuyTokenQuantity(long)"})
   public void testSetBuyTokenQuantity_thenMarketPriceCapsuleInstanceAllFieldsSizeIsOne() {
     // Arrange
@@ -409,7 +427,8 @@ public class MarketPriceCapsuleDiffblueTest {
    * <p>Method under test: {@link MarketPriceCapsule#getKey(byte[], byte[])}
    */
   @Test
-  @Category(MaintainedByDiffblue.class)
+  @Category(ContributionFromDiffblue.class)
+  @ManagedByDiffblue
   @MethodsUnderTest({"byte[] MarketPriceCapsule.getKey(byte[], byte[])"})
   public void testGetKey_givenMarketPriceCapsule_thenReturnEmptyArrayOfByte()
       throws UnsupportedEncodingException {
@@ -430,7 +449,8 @@ public class MarketPriceCapsuleDiffblueTest {
    * <p>Method under test: {@link MarketPriceCapsule#getKey(byte[], byte[])}
    */
   @Test
-  @Category(MaintainedByDiffblue.class)
+  @Category(ContributionFromDiffblue.class)
+  @ManagedByDiffblue
   @MethodsUnderTest({"byte[] MarketPriceCapsule.getKey(byte[], byte[])"})
   public void testGetKey_thenReturnArrayOfByteWithAAndX() throws UnsupportedEncodingException {
     // Arrange, Act and Assert
@@ -455,7 +475,8 @@ public class MarketPriceCapsuleDiffblueTest {
    * <p>Method under test: {@link MarketPriceCapsule#isNull()}
    */
   @Test
-  @Category(MaintainedByDiffblue.class)
+  @Category(ContributionFromDiffblue.class)
+  @ManagedByDiffblue
   @MethodsUnderTest({"boolean MarketPriceCapsule.isNull()"})
   public void testIsNull_givenMarketPriceCapsule_thenReturnTrue() {
     // Arrange, Act and Assert
@@ -472,7 +493,8 @@ public class MarketPriceCapsuleDiffblueTest {
    * <p>Method under test: {@link MarketPriceCapsule#isNull()}
    */
   @Test
-  @Category(MaintainedByDiffblue.class)
+  @Category(ContributionFromDiffblue.class)
+  @ManagedByDiffblue
   @MethodsUnderTest({"boolean MarketPriceCapsule.isNull()"})
   public void testIsNull_thenReturnFalse() {
     // Arrange, Act and Assert
@@ -490,7 +512,8 @@ public class MarketPriceCapsuleDiffblueTest {
    * <p>Method under test: {@link MarketPriceCapsule#getData()}
    */
   @Test
-  @Category(MaintainedByDiffblue.class)
+  @Category(ContributionFromDiffblue.class)
+  @ManagedByDiffblue
   @MethodsUnderTest({"byte[] MarketPriceCapsule.getData()"})
   public void testGetData_givenMarketPriceCapsule_thenReturnEmptyArrayOfByte() {
     // Arrange, Act and Assert
@@ -507,7 +530,8 @@ public class MarketPriceCapsuleDiffblueTest {
    * <p>Method under test: {@link MarketPriceCapsule#getData()}
    */
   @Test
-  @Category(MaintainedByDiffblue.class)
+  @Category(ContributionFromDiffblue.class)
+  @ManagedByDiffblue
   @MethodsUnderTest({"byte[] MarketPriceCapsule.getData()"})
   public void testGetData_thenReturnArrayOfByteWithBackspaceAndMinusOne() {
     // Arrange, Act and Assert
@@ -524,7 +548,8 @@ public class MarketPriceCapsuleDiffblueTest {
    * <p>Method under test: {@link MarketPriceCapsule#getInstance()}
    */
   @Test
-  @Category(MaintainedByDiffblue.class)
+  @Category(ContributionFromDiffblue.class)
+  @ManagedByDiffblue
   @MethodsUnderTest({"MarketPrice MarketPriceCapsule.getInstance()"})
   public void testGetInstance() {
     // Arrange and Act

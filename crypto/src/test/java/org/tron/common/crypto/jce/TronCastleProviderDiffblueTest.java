@@ -1,7 +1,8 @@
 package org.tron.common.crypto.jce;
 
 import static org.junit.Assert.assertEquals;
-import com.diffblue.cover.annotations.MaintainedByDiffblue;
+import com.diffblue.cover.annotations.ContributionFromDiffblue;
+import com.diffblue.cover.annotations.ManagedByDiffblue;
 import com.diffblue.cover.annotations.MethodsUnderTest;
 import java.security.Provider;
 import org.junit.Test;
@@ -14,7 +15,8 @@ public class TronCastleProviderDiffblueTest {
    * <p>Method under test: {@link TronCastleProvider#getInstance()}
    */
   @Test
-  @Category(MaintainedByDiffblue.class)
+  @Category(ContributionFromDiffblue.class)
+  @ManagedByDiffblue
   @MethodsUnderTest({"Provider TronCastleProvider.getInstance()"})
   public void testGetInstance() {
     // Arrange and Act

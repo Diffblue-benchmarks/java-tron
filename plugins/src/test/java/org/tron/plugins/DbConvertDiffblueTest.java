@@ -1,7 +1,8 @@
 package org.tron.plugins;
 
 import static org.junit.Assert.assertEquals;
-import com.diffblue.cover.annotations.MaintainedByDiffblue;
+import com.diffblue.cover.annotations.ContributionFromDiffblue;
+import com.diffblue.cover.annotations.ManagedByDiffblue;
 import com.diffblue.cover.annotations.MethodsUnderTest;
 import org.junit.Test;
 import org.junit.experimental.categories.Category;
@@ -14,7 +15,8 @@ public class DbConvertDiffblueTest {
    * <p>Method under test: {@link DbConverter#name()}
    */
   @Test
-  @Category(MaintainedByDiffblue.class)
+  @Category(ContributionFromDiffblue.class)
+  @ManagedByDiffblue
   @MethodsUnderTest({"String DbConverter.name()"})
   public void testDbConverterName() {
     // Arrange
@@ -35,7 +37,8 @@ public class DbConvertDiffblueTest {
    * <p>Method under test: {@link DbConverter#DbConverter(String, String, String, boolean)}
    */
   @Test
-  @Category(MaintainedByDiffblue.class)
+  @Category(ContributionFromDiffblue.class)
+  @ManagedByDiffblue
   @MethodsUnderTest({"void DbConverter.<init>(String, String, String, boolean)"})
   public void testDbConverterNewDbConverter_whenIncomplete_thenReturnName() {
     // Arrange and Act

@@ -3,7 +3,8 @@ package org.tron.core.services.interfaceOnSolidity.http;
 import static org.mockito.ArgumentMatchers.isA;
 import static org.mockito.Mockito.doNothing;
 import static org.mockito.Mockito.verify;
-import com.diffblue.cover.annotations.MaintainedByDiffblue;
+import com.diffblue.cover.annotations.ContributionFromDiffblue;
+import com.diffblue.cover.annotations.ManagedByDiffblue;
 import com.diffblue.cover.annotations.MethodsUnderTest;
 import java.io.IOException;
 import javax.servlet.http.HttpServletRequest;
@@ -36,7 +37,8 @@ public class GetBlockByLatestNumOnSolidityServletDiffblueTest {
    * HttpServletResponse)}
    */
   @Test
-  @Category(MaintainedByDiffblue.class)
+  @Category(ContributionFromDiffblue.class)
+  @ManagedByDiffblue
   @MethodsUnderTest({
     "void GetBlockByLatestNumOnSolidityServlet.doGet(HttpServletRequest, HttpServletResponse)"
   })
@@ -62,7 +64,8 @@ public class GetBlockByLatestNumOnSolidityServletDiffblueTest {
    * HttpServletResponse)}
    */
   @Test
-  @Category(MaintainedByDiffblue.class)
+  @Category(ContributionFromDiffblue.class)
+  @ManagedByDiffblue
   @MethodsUnderTest({
     "void GetBlockByLatestNumOnSolidityServlet.doPost(HttpServletRequest, HttpServletResponse)"
   })

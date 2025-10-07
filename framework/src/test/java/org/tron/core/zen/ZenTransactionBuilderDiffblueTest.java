@@ -5,7 +5,8 @@ import static org.junit.Assert.assertFalse;
 import static org.junit.Assert.assertNull;
 import static org.junit.Assert.assertSame;
 import static org.junit.Assert.assertTrue;
-import com.diffblue.cover.annotations.MaintainedByDiffblue;
+import com.diffblue.cover.annotations.ContributionFromDiffblue;
+import com.diffblue.cover.annotations.ManagedByDiffblue;
 import com.diffblue.cover.annotations.MethodsUnderTest;
 import com.google.protobuf.ByteString;
 import com.google.protobuf.ByteString.ByteIterator;
@@ -56,7 +57,8 @@ public class ZenTransactionBuilderDiffblueTest {
    * <p>Method under test: {@link ZenTransactionBuilder#ZenTransactionBuilder()}
    */
   @Test
-  @Category(MaintainedByDiffblue.class)
+  @Category(ContributionFromDiffblue.class)
+  @ManagedByDiffblue
   @MethodsUnderTest({"void ZenTransactionBuilder.<init>()"})
   public void testNewZenTransactionBuilder2() {
     // Arrange and Act
@@ -76,7 +78,8 @@ public class ZenTransactionBuilderDiffblueTest {
    * <p>Method under test: {@link ZenTransactionBuilder#ZenTransactionBuilder(Wallet)}
    */
   @Test
-  @Category(MaintainedByDiffblue.class)
+  @Category(ContributionFromDiffblue.class)
+  @ManagedByDiffblue
   @MethodsUnderTest({"void ZenTransactionBuilder.<init>(Wallet)"})
   public void testNewZenTransactionBuilder3() {
     // Arrange and Act
@@ -96,7 +99,8 @@ public class ZenTransactionBuilderDiffblueTest {
    * <p>Method under test: {@link ZenTransactionBuilder#setTransparentInput(byte[], long)}
    */
   @Test
-  @Category(MaintainedByDiffblue.class)
+  @Category(ContributionFromDiffblue.class)
+  @ManagedByDiffblue
   @MethodsUnderTest({"void ZenTransactionBuilder.setTransparentInput(byte[], long)"})
   public void testSetTransparentInput() throws UnsupportedEncodingException {
     // Arrange
@@ -125,7 +129,8 @@ public class ZenTransactionBuilderDiffblueTest {
    * <p>Method under test: {@link ZenTransactionBuilder#setTransparentOutput(byte[], long)}
    */
   @Test
-  @Category(MaintainedByDiffblue.class)
+  @Category(ContributionFromDiffblue.class)
+  @ManagedByDiffblue
   @MethodsUnderTest({"void ZenTransactionBuilder.setTransparentOutput(byte[], long)"})
   public void testSetTransparentOutput() throws UnsupportedEncodingException {
     // Arrange
@@ -164,7 +169,8 @@ public class ZenTransactionBuilderDiffblueTest {
    * </ul>
    */
   @Test
-  @Category(MaintainedByDiffblue.class)
+  @Category(ContributionFromDiffblue.class)
+  @ManagedByDiffblue
   @MethodsUnderTest({
     "org.tron.core.capsule.TransactionCapsule ZenTransactionBuilder.build()",
     "org.tron.core.capsule.TransactionCapsule ZenTransactionBuilder.build(boolean)",

@@ -4,7 +4,8 @@ import static org.junit.Assert.assertEquals;
 import static org.junit.Assert.assertFalse;
 import static org.junit.Assert.assertSame;
 import static org.junit.Assert.assertTrue;
-import com.diffblue.cover.annotations.MaintainedByDiffblue;
+import com.diffblue.cover.annotations.ContributionFromDiffblue;
+import com.diffblue.cover.annotations.ManagedByDiffblue;
 import com.diffblue.cover.annotations.MethodsUnderTest;
 import com.google.protobuf.DescriptorProtos;
 import com.google.protobuf.DescriptorProtos.FeatureSet;
@@ -75,7 +76,8 @@ public class NodeInfoDiffblueTest {
    * </ul>
    */
   @Test
-  @Category(MaintainedByDiffblue.class)
+  @Category(ContributionFromDiffblue.class)
+  @ManagedByDiffblue
   @MethodsUnderTest({
     "void ConfigNodeInfo.<init>()",
     "int ConfigNodeInfo.getActiveNodeSize()",
@@ -214,7 +216,8 @@ public class NodeInfoDiffblueTest {
    * <p>Method under test: {@link NodeInfo#getPeerList()}
    */
   @Test
-  @Category(MaintainedByDiffblue.class)
+  @Category(ContributionFromDiffblue.class)
+  @ManagedByDiffblue
   @MethodsUnderTest({"List NodeInfo.getPeerList()"})
   public void testGetPeerList() {
     // Arrange, Act and Assert
@@ -227,7 +230,8 @@ public class NodeInfoDiffblueTest {
    * <p>Method under test: {@link MachineInfo#getDeadLockThreadInfoList()}
    */
   @Test
-  @Category(MaintainedByDiffblue.class)
+  @Category(ContributionFromDiffblue.class)
+  @ManagedByDiffblue
   @MethodsUnderTest({"List MachineInfo.getDeadLockThreadInfoList()"})
   public void testMachineInfoGetDeadLockThreadInfoList() {
     // Arrange, Act and Assert
@@ -240,7 +244,8 @@ public class NodeInfoDiffblueTest {
    * <p>Method under test: {@link MachineInfo#getMemoryDescInfoList()}
    */
   @Test
-  @Category(MaintainedByDiffblue.class)
+  @Category(ContributionFromDiffblue.class)
+  @ManagedByDiffblue
   @MethodsUnderTest({"List MachineInfo.getMemoryDescInfoList()"})
   public void testMachineInfoGetMemoryDescInfoList() {
     // Arrange, Act and Assert
@@ -279,7 +284,8 @@ public class NodeInfoDiffblueTest {
    * </ul>
    */
   @Test
-  @Category(MaintainedByDiffblue.class)
+  @Category(ContributionFromDiffblue.class)
+  @ManagedByDiffblue
   @MethodsUnderTest({
     "void MachineInfo.<init>()",
     "int MachineInfo.getCpuCount()",
@@ -361,7 +367,8 @@ public class NodeInfoDiffblueTest {
    * <p>Method under test: {@link MachineInfo#setDeadLockThreadInfoList(List)}
    */
   @Test
-  @Category(MaintainedByDiffblue.class)
+  @Category(ContributionFromDiffblue.class)
+  @ManagedByDiffblue
   @MethodsUnderTest({"MachineInfo MachineInfo.setDeadLockThreadInfoList(List)"})
   public void testMachineInfoSetDeadLockThreadInfoList() {
     // Arrange
@@ -399,7 +406,8 @@ public class NodeInfoDiffblueTest {
    * <p>Method under test: {@link MachineInfo#setDeadLockThreadInfoList(List)}
    */
   @Test
-  @Category(MaintainedByDiffblue.class)
+  @Category(ContributionFromDiffblue.class)
+  @ManagedByDiffblue
   @MethodsUnderTest({"MachineInfo MachineInfo.setDeadLockThreadInfoList(List)"})
   public void testMachineInfoSetDeadLockThreadInfoList2() {
     // Arrange
@@ -453,7 +461,8 @@ public class NodeInfoDiffblueTest {
    * <p>Method under test: {@link MachineInfo#setDeadLockThreadInfoList(List)}
    */
   @Test
-  @Category(MaintainedByDiffblue.class)
+  @Category(ContributionFromDiffblue.class)
+  @ManagedByDiffblue
   @MethodsUnderTest({"MachineInfo MachineInfo.setDeadLockThreadInfoList(List)"})
   public void testMachineInfoSetDeadLockThreadInfoList_whenArrayList_thenReturnMachineInfo() {
     // Arrange
@@ -477,7 +486,8 @@ public class NodeInfoDiffblueTest {
    * <p>Method under test: {@link MachineInfo#setMemoryDescInfoList(List)}
    */
   @Test
-  @Category(MaintainedByDiffblue.class)
+  @Category(ContributionFromDiffblue.class)
+  @ManagedByDiffblue
   @MethodsUnderTest({"MachineInfo MachineInfo.setMemoryDescInfoList(List)"})
   public void testMachineInfoSetMemoryDescInfoList_thenReturnMemoryDescInfoListSizeIsOne() {
     // Arrange
@@ -515,7 +525,8 @@ public class NodeInfoDiffblueTest {
    * <p>Method under test: {@link MachineInfo#setMemoryDescInfoList(List)}
    */
   @Test
-  @Category(MaintainedByDiffblue.class)
+  @Category(ContributionFromDiffblue.class)
+  @ManagedByDiffblue
   @MethodsUnderTest({"MachineInfo MachineInfo.setMemoryDescInfoList(List)"})
   public void testMachineInfoSetMemoryDescInfoList_thenReturnMemoryDescInfoListSizeIsTwo() {
     // Arrange
@@ -563,7 +574,8 @@ public class NodeInfoDiffblueTest {
    * <p>Method under test: {@link MachineInfo#setMemoryDescInfoList(List)}
    */
   @Test
-  @Category(MaintainedByDiffblue.class)
+  @Category(ContributionFromDiffblue.class)
+  @ManagedByDiffblue
   @MethodsUnderTest({"MachineInfo MachineInfo.setMemoryDescInfoList(List)"})
   public void testMachineInfoSetMemoryDescInfoList_whenArrayList_thenReturnMachineInfo() {
     // Arrange
@@ -601,7 +613,8 @@ public class NodeInfoDiffblueTest {
    * </ul>
    */
   @Test
-  @Category(MaintainedByDiffblue.class)
+  @Category(ContributionFromDiffblue.class)
+  @ManagedByDiffblue
   @MethodsUnderTest({
     "void MachineInfo.DeadLockThreadInfo.<init>()",
     "long MachineInfo.DeadLockThreadInfo.getBlockTime()",
@@ -675,7 +688,8 @@ public class NodeInfoDiffblueTest {
    * </ul>
    */
   @Test
-  @Category(MaintainedByDiffblue.class)
+  @Category(ContributionFromDiffblue.class)
+  @ManagedByDiffblue
   @MethodsUnderTest({
     "void MachineInfo.MemoryDescInfo.<init>()",
     "long MachineInfo.MemoryDescInfo.getInitSize()",
@@ -726,7 +740,8 @@ public class NodeInfoDiffblueTest {
    * <p>Method under test: {@link NodeInfo#setPeerList(List)}
    */
   @Test
-  @Category(MaintainedByDiffblue.class)
+  @Category(ContributionFromDiffblue.class)
+  @ManagedByDiffblue
   @MethodsUnderTest({"NodeInfo NodeInfo.setPeerList(List)"})
   public void testSetPeerList_givenPeerInfoActiveIsFalse_thenReturnPeerListSizeIsTwo() {
     // Arrange
@@ -807,7 +822,8 @@ public class NodeInfoDiffblueTest {
    * <p>Method under test: {@link NodeInfo#setPeerList(List)}
    */
   @Test
-  @Category(MaintainedByDiffblue.class)
+  @Category(ContributionFromDiffblue.class)
+  @ManagedByDiffblue
   @MethodsUnderTest({"NodeInfo NodeInfo.setPeerList(List)"})
   public void testSetPeerList_givenPeerInfoActiveIsTrue_thenReturnPeerListSizeIsOne() {
     // Arrange
@@ -858,7 +874,8 @@ public class NodeInfoDiffblueTest {
    * <p>Method under test: {@link NodeInfo#setPeerList(List)}
    */
   @Test
-  @Category(MaintainedByDiffblue.class)
+  @Category(ContributionFromDiffblue.class)
+  @ManagedByDiffblue
   @MethodsUnderTest({"NodeInfo NodeInfo.setPeerList(List)"})
   public void testSetPeerList_whenArrayList_thenReturnNodeInfo() {
     // Arrange
@@ -877,7 +894,8 @@ public class NodeInfoDiffblueTest {
    * <p>Method under test: {@link NodeInfo#transferToProtoEntity()}
    */
   @Test
-  @Category(MaintainedByDiffblue.class)
+  @Category(ContributionFromDiffblue.class)
+  @ManagedByDiffblue
   @MethodsUnderTest({"Protocol.NodeInfo NodeInfo.transferToProtoEntity()"})
   public void testTransferToProtoEntity() {
     // Arrange
@@ -941,7 +959,8 @@ public class NodeInfoDiffblueTest {
    * <p>Method under test: {@link NodeInfo#transferToProtoEntity()}
    */
   @Test
-  @Category(MaintainedByDiffblue.class)
+  @Category(ContributionFromDiffblue.class)
+  @ManagedByDiffblue
   @MethodsUnderTest({"Protocol.NodeInfo NodeInfo.transferToProtoEntity()"})
   public void testTransferToProtoEntity2() {
     // Arrange
@@ -1008,7 +1027,8 @@ public class NodeInfoDiffblueTest {
    * <p>Method under test: {@link NodeInfo#transferToProtoEntity()}
    */
   @Test
-  @Category(MaintainedByDiffblue.class)
+  @Category(ContributionFromDiffblue.class)
+  @ManagedByDiffblue
   @MethodsUnderTest({"Protocol.NodeInfo NodeInfo.transferToProtoEntity()"})
   public void testTransferToProtoEntity_givenConfigNodeInfoActiveNodeSizeIsTwo() {
     // Arrange
@@ -1057,7 +1077,8 @@ public class NodeInfoDiffblueTest {
    * <p>Method under test: {@link NodeInfo#transferToProtoEntity()}
    */
   @Test
-  @Category(MaintainedByDiffblue.class)
+  @Category(ContributionFromDiffblue.class)
+  @ManagedByDiffblue
   @MethodsUnderTest({"Protocol.NodeInfo NodeInfo.transferToProtoEntity()"})
   public void testTransferToProtoEntity_thenReturnDescriptorForTypeFieldsSizeIsEleven() {
     // Arrange
@@ -1107,7 +1128,8 @@ public class NodeInfoDiffblueTest {
    * <p>Method under test: {@link NodeInfo#transferToProtoEntity()}
    */
   @Test
-  @Category(MaintainedByDiffblue.class)
+  @Category(ContributionFromDiffblue.class)
+  @ManagedByDiffblue
   @MethodsUnderTest({"Protocol.NodeInfo NodeInfo.transferToProtoEntity()"})
   public void testTransferToProtoEntity_thenReturnMachineInfoCpuCountIsTwo() {
     // Arrange
@@ -1152,7 +1174,8 @@ public class NodeInfoDiffblueTest {
    * <p>Method under test: {@link NodeInfo#transferToProtoEntity()}
    */
   @Test
-  @Category(MaintainedByDiffblue.class)
+  @Category(ContributionFromDiffblue.class)
+  @ManagedByDiffblue
   @MethodsUnderTest({"Protocol.NodeInfo NodeInfo.transferToProtoEntity()"})
   public void testTransferToProtoEntity_thenReturnMachineInfoMemoryDescInfoListListSizeIsOne() {
     // Arrange
@@ -1216,7 +1239,8 @@ public class NodeInfoDiffblueTest {
    * <p>Method under test: {@link NodeInfo#transferToProtoEntity()}
    */
   @Test
-  @Category(MaintainedByDiffblue.class)
+  @Category(ContributionFromDiffblue.class)
+  @ManagedByDiffblue
   @MethodsUnderTest({"Protocol.NodeInfo NodeInfo.transferToProtoEntity()"})
   public void testTransferToProtoEntity_thenReturnMachineInfoMemoryDescInfoListListSizeIsTwo() {
     // Arrange
@@ -1279,7 +1303,8 @@ public class NodeInfoDiffblueTest {
    * <p>Method under test: {@link NodeInfo#transferToProtoEntity()}
    */
   @Test
-  @Category(MaintainedByDiffblue.class)
+  @Category(ContributionFromDiffblue.class)
+  @ManagedByDiffblue
   @MethodsUnderTest({"Protocol.NodeInfo NodeInfo.transferToProtoEntity()"})
   public void testTransferToProtoEntity_thenReturnSerializedSizeIsSeventy() {
     // Arrange
@@ -1328,7 +1353,8 @@ public class NodeInfoDiffblueTest {
    * <p>Method under test: {@link NodeInfo#transferToProtoEntity()}
    */
   @Test
-  @Category(MaintainedByDiffblue.class)
+  @Category(ContributionFromDiffblue.class)
+  @ManagedByDiffblue
   @MethodsUnderTest({"Protocol.NodeInfo NodeInfo.transferToProtoEntity()"})
   public void testTransferToProtoEntity_thenReturnSerializedSizeIsZero() {
     // Arrange
@@ -1383,7 +1409,8 @@ public class NodeInfoDiffblueTest {
    * </ul>
    */
   @Test
-  @Category(MaintainedByDiffblue.class)
+  @Category(ContributionFromDiffblue.class)
+  @ManagedByDiffblue
   @MethodsUnderTest({
     "void NodeInfo.<init>()",
     "int NodeInfo.getActiveConnectCount()",

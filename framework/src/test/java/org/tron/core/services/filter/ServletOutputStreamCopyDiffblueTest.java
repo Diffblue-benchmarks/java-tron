@@ -2,7 +2,8 @@ package org.tron.core.services.filter;
 
 import static org.junit.Assert.assertEquals;
 import static org.junit.Assert.assertFalse;
-import com.diffblue.cover.annotations.MaintainedByDiffblue;
+import com.diffblue.cover.annotations.ContributionFromDiffblue;
+import com.diffblue.cover.annotations.ManagedByDiffblue;
 import com.diffblue.cover.annotations.MethodsUnderTest;
 import java.io.ByteArrayOutputStream;
 import java.io.IOException;
@@ -18,7 +19,8 @@ public class ServletOutputStreamCopyDiffblueTest {
    * <p>Method under test: {@link ServletOutputStreamCopy#ServletOutputStreamCopy(OutputStream)}
    */
   @Test
-  @Category(MaintainedByDiffblue.class)
+  @Category(ContributionFromDiffblue.class)
+  @ManagedByDiffblue
   @MethodsUnderTest({"void ServletOutputStreamCopy.<init>(OutputStream)"})
   public void testNewServletOutputStreamCopy() {
     // Arrange and Act
@@ -36,7 +38,8 @@ public class ServletOutputStreamCopyDiffblueTest {
    * <p>Method under test: {@link ServletOutputStreamCopy#write(int)}
    */
   @Test
-  @Category(MaintainedByDiffblue.class)
+  @Category(ContributionFromDiffblue.class)
+  @ManagedByDiffblue
   @MethodsUnderTest({"void ServletOutputStreamCopy.write(int)"})
   public void testWriteWithInt() throws IOException {
     // Arrange
@@ -56,7 +59,8 @@ public class ServletOutputStreamCopyDiffblueTest {
    * <p>Method under test: {@link ServletOutputStreamCopy#write(int)}
    */
   @Test
-  @Category(MaintainedByDiffblue.class)
+  @Category(ContributionFromDiffblue.class)
+  @ManagedByDiffblue
   @MethodsUnderTest({"void ServletOutputStreamCopy.write(int)"})
   public void testWriteWithInt2() throws IOException {
     // Arrange
@@ -76,7 +80,8 @@ public class ServletOutputStreamCopyDiffblueTest {
    * <p>Method under test: {@link ServletOutputStreamCopy#getStreamByteSize()}
    */
   @Test
-  @Category(MaintainedByDiffblue.class)
+  @Category(ContributionFromDiffblue.class)
+  @ManagedByDiffblue
   @MethodsUnderTest({"int ServletOutputStreamCopy.getStreamByteSize()"})
   public void testGetStreamByteSize() {
     // Arrange, Act and Assert
@@ -94,7 +99,8 @@ public class ServletOutputStreamCopyDiffblueTest {
    * </ul>
    */
   @Test
-  @Category(MaintainedByDiffblue.class)
+  @Category(ContributionFromDiffblue.class)
+  @ManagedByDiffblue
   @MethodsUnderTest({
     "boolean ServletOutputStreamCopy.isReady()",
     "void ServletOutputStreamCopy.setWriteListener(WriteListener)"

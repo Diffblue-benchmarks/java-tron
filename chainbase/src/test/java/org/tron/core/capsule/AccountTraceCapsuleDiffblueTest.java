@@ -4,7 +4,8 @@ import static org.junit.Assert.assertArrayEquals;
 import static org.junit.Assert.assertEquals;
 import static org.junit.Assert.assertThrows;
 import static org.junit.Assert.assertTrue;
-import com.diffblue.cover.annotations.MaintainedByDiffblue;
+import com.diffblue.cover.annotations.ContributionFromDiffblue;
+import com.diffblue.cover.annotations.ManagedByDiffblue;
 import com.diffblue.cover.annotations.MethodsUnderTest;
 import java.io.UnsupportedEncodingException;
 import org.junit.Test;
@@ -20,7 +21,8 @@ public class AccountTraceCapsuleDiffblueTest {
    * <p>Method under test: {@link AccountTraceCapsule#AccountTraceCapsule()}
    */
   @Test
-  @Category(MaintainedByDiffblue.class)
+  @Category(ContributionFromDiffblue.class)
+  @ManagedByDiffblue
   @MethodsUnderTest({"void AccountTraceCapsule.<init>()"})
   public void testNewAccountTraceCapsule() {
     // Arrange and Act
@@ -45,7 +47,8 @@ public class AccountTraceCapsuleDiffblueTest {
    * <p>Method under test: {@link AccountTraceCapsule#AccountTraceCapsule(long)}
    */
   @Test
-  @Category(MaintainedByDiffblue.class)
+  @Category(ContributionFromDiffblue.class)
+  @ManagedByDiffblue
   @MethodsUnderTest({"void AccountTraceCapsule.<init>(long)"})
   public void testNewAccountTraceCapsule2() {
     // Arrange and Act
@@ -70,7 +73,8 @@ public class AccountTraceCapsuleDiffblueTest {
    * <p>Method under test: {@link AccountTraceCapsule#AccountTraceCapsule(byte[])}
    */
   @Test
-  @Category(MaintainedByDiffblue.class)
+  @Category(ContributionFromDiffblue.class)
+  @ManagedByDiffblue
   @MethodsUnderTest({"void AccountTraceCapsule.<init>(byte[])"})
   public void testNewAccountTraceCapsule3() throws UnsupportedEncodingException, BadItemException {
     // Arrange, Act and Assert
@@ -89,7 +93,8 @@ public class AccountTraceCapsuleDiffblueTest {
    * <p>Method under test: {@link AccountTraceCapsule#AccountTraceCapsule(byte[])}
    */
   @Test
-  @Category(MaintainedByDiffblue.class)
+  @Category(ContributionFromDiffblue.class)
+  @ManagedByDiffblue
   @MethodsUnderTest({"void AccountTraceCapsule.<init>(byte[])"})
   public void testNewAccountTraceCapsule_whenArrayOfByteWithMinusOneAndX() throws BadItemException {
     // Arrange, Act and Assert
@@ -108,7 +113,8 @@ public class AccountTraceCapsuleDiffblueTest {
    * <p>Method under test: {@link AccountTraceCapsule#AccountTraceCapsule(byte[])}
    */
   @Test
-  @Category(MaintainedByDiffblue.class)
+  @Category(ContributionFromDiffblue.class)
+  @ManagedByDiffblue
   @MethodsUnderTest({"void AccountTraceCapsule.<init>(byte[])"})
   public void testNewAccountTraceCapsule_whenArrayOfByteWithTwentyFourAndX()
       throws BadItemException {
@@ -129,7 +135,8 @@ public class AccountTraceCapsuleDiffblueTest {
    * <p>Method under test: {@link AccountTraceCapsule#AccountTraceCapsule(byte[])}
    */
   @Test
-  @Category(MaintainedByDiffblue.class)
+  @Category(ContributionFromDiffblue.class)
+  @ManagedByDiffblue
   @MethodsUnderTest({"void AccountTraceCapsule.<init>(byte[])"})
   public void testNewAccountTraceCapsule_whenArrayOfByteWithZeroAndX_thenThrowBadItemException()
       throws BadItemException {
@@ -150,7 +157,8 @@ public class AccountTraceCapsuleDiffblueTest {
    * <p>Method under test: {@link AccountTraceCapsule#AccountTraceCapsule(byte[])}
    */
   @Test
-  @Category(MaintainedByDiffblue.class)
+  @Category(ContributionFromDiffblue.class)
+  @ManagedByDiffblue
   @MethodsUnderTest({"void AccountTraceCapsule.<init>(byte[])"})
   public void testNewAccountTraceCapsule_whenAxaxaxaxBytesIsUtf8_thenThrowBadItemException()
       throws UnsupportedEncodingException, BadItemException {
@@ -170,7 +178,8 @@ public class AccountTraceCapsuleDiffblueTest {
    * <p>Method under test: {@link AccountTraceCapsule#AccountTraceCapsule(byte[])}
    */
   @Test
-  @Category(MaintainedByDiffblue.class)
+  @Category(ContributionFromDiffblue.class)
+  @ManagedByDiffblue
   @MethodsUnderTest({"void AccountTraceCapsule.<init>(byte[])"})
   public void testNewAccountTraceCapsule_whenBackspace_thenThrowBadItemException()
       throws BadItemException {
@@ -196,7 +205,8 @@ public class AccountTraceCapsuleDiffblueTest {
    * <p>Method under test: {@link AccountTraceCapsule#AccountTraceCapsule(byte[])}
    */
   @Test
-  @Category(MaintainedByDiffblue.class)
+  @Category(ContributionFromDiffblue.class)
+  @ManagedByDiffblue
   @MethodsUnderTest({"void AccountTraceCapsule.<init>(byte[])"})
   public void testNewAccountTraceCapsule_whenEmptyArrayOfByte_thenReturnBalanceLongValueIsZero()
       throws BadItemException {
@@ -222,7 +232,8 @@ public class AccountTraceCapsuleDiffblueTest {
    * <p>Method under test: {@link AccountTraceCapsule#getBalance()}
    */
   @Test
-  @Category(MaintainedByDiffblue.class)
+  @Category(ContributionFromDiffblue.class)
+  @ManagedByDiffblue
   @MethodsUnderTest({"java.lang.Long AccountTraceCapsule.getBalance()"})
   public void testGetBalance() {
     // Arrange, Act and Assert
@@ -239,7 +250,8 @@ public class AccountTraceCapsuleDiffblueTest {
    * <p>Method under test: {@link AccountTraceCapsule#getData()}
    */
   @Test
-  @Category(MaintainedByDiffblue.class)
+  @Category(ContributionFromDiffblue.class)
+  @ManagedByDiffblue
   @MethodsUnderTest({"byte[] AccountTraceCapsule.getData()"})
   public void testGetData_thenReturnArrayOfByteWithBackspaceAndAsterisk() {
     // Arrange, Act and Assert
@@ -256,7 +268,8 @@ public class AccountTraceCapsuleDiffblueTest {
    * <p>Method under test: {@link AccountTraceCapsule#getData()}
    */
   @Test
-  @Category(MaintainedByDiffblue.class)
+  @Category(ContributionFromDiffblue.class)
+  @ManagedByDiffblue
   @MethodsUnderTest({"byte[] AccountTraceCapsule.getData()"})
   public void testGetData_thenReturnArrayOfByteWithMinusOneHundredFourAndSix() {
     // Arrange, Act and Assert
@@ -269,7 +282,8 @@ public class AccountTraceCapsuleDiffblueTest {
    * <p>Method under test: {@link AccountTraceCapsule#getInstance()}
    */
   @Test
-  @Category(MaintainedByDiffblue.class)
+  @Category(ContributionFromDiffblue.class)
+  @ManagedByDiffblue
   @MethodsUnderTest({"AccountTrace AccountTraceCapsule.getInstance()"})
   public void testGetInstance() {
     // Arrange and Act

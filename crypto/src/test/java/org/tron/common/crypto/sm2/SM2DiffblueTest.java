@@ -12,7 +12,8 @@ import static org.mockito.Mockito.atLeast;
 import static org.mockito.Mockito.mock;
 import static org.mockito.Mockito.verify;
 import static org.mockito.Mockito.when;
-import com.diffblue.cover.annotations.MaintainedByDiffblue;
+import com.diffblue.cover.annotations.ContributionFromDiffblue;
+import com.diffblue.cover.annotations.ManagedByDiffblue;
 import com.diffblue.cover.annotations.MethodsUnderTest;
 import io.netty.handler.ssl.PemPrivateKey;
 import java.io.UnsupportedEncodingException;
@@ -46,7 +47,8 @@ public class SM2DiffblueTest {
    * <p>Method under test: {@link SM2#SM2(PrivateKey, ECPoint)}
    */
   @Test
-  @Category(MaintainedByDiffblue.class)
+  @Category(ContributionFromDiffblue.class)
+  @ManagedByDiffblue
   @MethodsUnderTest({"void SM2.<init>(PrivateKey, ECPoint)"})
   public void testNewSm2_givenAlgorithm_whenPemPrivateKeyGetAlgorithmReturnAlgorithm() {
     // Arrange
@@ -69,7 +71,8 @@ public class SM2DiffblueTest {
    * <p>Method under test: {@link SM2#SM2(PrivateKey, ECPoint)}
    */
   @Test
-  @Category(MaintainedByDiffblue.class)
+  @Category(ContributionFromDiffblue.class)
+  @ManagedByDiffblue
   @MethodsUnderTest({"void SM2.<init>(PrivateKey, ECPoint)"})
   public void testNewSm2_givenEc_whenPemPrivateKeyGetAlgorithmReturnEc() {
     // Arrange
@@ -100,7 +103,8 @@ public class SM2DiffblueTest {
    * <p>Method under test: {@link SM2#SM2(PrivateKey, ECPoint)}
    */
   @Test
-  @Category(MaintainedByDiffblue.class)
+  @Category(ContributionFromDiffblue.class)
+  @ManagedByDiffblue
   @MethodsUnderTest({"void SM2.<init>(PrivateKey, ECPoint)"})
   public void testNewSm2_givenIllegalArgumentException() {
     // Arrange
@@ -123,7 +127,8 @@ public class SM2DiffblueTest {
    * <p>Method under test: {@link SM2#SM2(byte[], boolean)}
    */
   @Test
-  @Category(MaintainedByDiffblue.class)
+  @Category(ContributionFromDiffblue.class)
+  @ManagedByDiffblue
   @MethodsUnderTest({"void SM2.<init>(byte[], boolean)"})
   public void testNewSm2_whenArrayOfByteWithZero_thenReturnToStringWithPrivateIsPub00() {
     // Arrange
@@ -159,7 +164,8 @@ public class SM2DiffblueTest {
    * <p>Method under test: {@link SM2#SM2(PrivateKey, ECPoint)}
    */
   @Test
-  @Category(MaintainedByDiffblue.class)
+  @Category(ContributionFromDiffblue.class)
+  @ManagedByDiffblue
   @MethodsUnderTest({"void SM2.<init>(PrivateKey, ECPoint)"})
   public void testNewSm2_whenEllipticCurveWithECFieldAndEightAndEight() {
     // Arrange
@@ -197,7 +203,8 @@ public class SM2DiffblueTest {
    * <p>Method under test: {@link SM2#SM2(BigInteger, ECPoint)}
    */
   @Test
-  @Category(MaintainedByDiffblue.class)
+  @Category(ContributionFromDiffblue.class)
+  @ManagedByDiffblue
   @MethodsUnderTest({"void SM2.<init>(BigInteger, ECPoint)"})
   public void testNewSm2_whenNull_thenThrowIllegalArgumentException() {
     // Arrange, Act and Assert
@@ -215,7 +222,8 @@ public class SM2DiffblueTest {
    * <p>Method under test: {@link SM2#SM2(PrivateKey, ECPoint)}
    */
   @Test
-  @Category(MaintainedByDiffblue.class)
+  @Category(ContributionFromDiffblue.class)
+  @ManagedByDiffblue
   @MethodsUnderTest({"void SM2.<init>(PrivateKey, ECPoint)"})
   public void testNewSm2_whenNull_thenThrowIllegalArgumentException2() {
     // Arrange, Act and Assert
@@ -232,7 +240,8 @@ public class SM2DiffblueTest {
    * <p>Method under test: {@link SM2#compressPoint(ECPoint)}
    */
   @Test
-  @Category(MaintainedByDiffblue.class)
+  @Category(ContributionFromDiffblue.class)
+  @ManagedByDiffblue
   @MethodsUnderTest({"ECPoint SM2.compressPoint(ECPoint)"})
   public void testCompressPoint_thenThrowIllegalArgumentException() {
     // Arrange
@@ -254,7 +263,8 @@ public class SM2DiffblueTest {
    * <p>Method under test: {@link SM2#decompressPoint(ECPoint)}
    */
   @Test
-  @Category(MaintainedByDiffblue.class)
+  @Category(ContributionFromDiffblue.class)
+  @ManagedByDiffblue
   @MethodsUnderTest({"ECPoint SM2.decompressPoint(ECPoint)"})
   public void testDecompressPoint_thenThrowIllegalArgumentException() {
     // Arrange
@@ -277,7 +287,8 @@ public class SM2DiffblueTest {
    * <p>Method under test: {@link SM2#fromPrivate(byte[])}
    */
   @Test
-  @Category(MaintainedByDiffblue.class)
+  @Category(ContributionFromDiffblue.class)
+  @ManagedByDiffblue
   @MethodsUnderTest({"SM2 SM2.fromPrivate(byte[])"})
   public void testFromPrivateWithPrivKeyBytes_whenNull_thenReturnNull() {
     // Arrange, Act and Assert
@@ -291,7 +302,8 @@ public class SM2DiffblueTest {
    * <p>Method under test: {@link SM2#fromPrivateAndPrecalculatedPublic(BigInteger, ECPoint)}
    */
   @Test
-  @Category(MaintainedByDiffblue.class)
+  @Category(ContributionFromDiffblue.class)
+  @ManagedByDiffblue
   @MethodsUnderTest({"SM2 SM2.fromPrivateAndPrecalculatedPublic(BigInteger, ECPoint)"})
   public void testFromPrivateAndPrecalculatedPublicWithBigIntegerECPoint() {
     // Arrange, Act and Assert
@@ -307,7 +319,8 @@ public class SM2DiffblueTest {
    * <p>Method under test: {@link SM2#fromPrivateAndPrecalculatedPublic(byte[], byte[])}
    */
   @Test
-  @Category(MaintainedByDiffblue.class)
+  @Category(ContributionFromDiffblue.class)
+  @ManagedByDiffblue
   @MethodsUnderTest({"SM2 SM2.fromPrivateAndPrecalculatedPublic(byte[], byte[])"})
   public void testFromPrivateAndPrecalculatedPublicWithByteByte() {
     // Arrange, Act and Assert
@@ -323,7 +336,8 @@ public class SM2DiffblueTest {
    * <p>Method under test: {@link SM2#fromPrivateAndPrecalculatedPublic(byte[], byte[])}
    */
   @Test
-  @Category(MaintainedByDiffblue.class)
+  @Category(ContributionFromDiffblue.class)
+  @ManagedByDiffblue
   @MethodsUnderTest({"SM2 SM2.fromPrivateAndPrecalculatedPublic(byte[], byte[])"})
   public void testFromPrivateAndPrecalculatedPublicWithByteByte2() {
     // Arrange, Act and Assert
@@ -345,7 +359,8 @@ public class SM2DiffblueTest {
    * <p>Method under test: {@link SM2#fromPublicOnly(byte[])}
    */
   @Test
-  @Category(MaintainedByDiffblue.class)
+  @Category(ContributionFromDiffblue.class)
+  @ManagedByDiffblue
   @MethodsUnderTest({"SM2 SM2.fromPublicOnly(byte[])"})
   public void testFromPublicOnlyWithByte_whenArrayOfByteWithZero_thenPubKeyPointReturnFp() {
     // Arrange and Act
@@ -380,7 +395,8 @@ public class SM2DiffblueTest {
    * <p>Method under test: {@link SM2#fromPublicOnly(ECPoint)}
    */
   @Test
-  @Category(MaintainedByDiffblue.class)
+  @Category(ContributionFromDiffblue.class)
+  @ManagedByDiffblue
   @MethodsUnderTest({"SM2 SM2.fromPublicOnly(ECPoint)"})
   public void testFromPublicOnlyWithECPoint_whenECPoint_thenReturnPrivKeyBytesIsNull() {
     // Arrange
@@ -409,7 +425,8 @@ public class SM2DiffblueTest {
    * <p>Method under test: {@link SM2#fromPublicOnly(ECPoint)}
    */
   @Test
-  @Category(MaintainedByDiffblue.class)
+  @Category(ContributionFromDiffblue.class)
+  @ManagedByDiffblue
   @MethodsUnderTest({"SM2 SM2.fromPublicOnly(ECPoint)"})
   public void testFromPublicOnlyWithECPoint_whenNull_thenThrowIllegalArgumentException() {
     // Arrange, Act and Assert
@@ -426,7 +443,8 @@ public class SM2DiffblueTest {
    * <p>Method under test: {@link SM2#publicKeyFromPrivate(BigInteger, boolean)}
    */
   @Test
-  @Category(MaintainedByDiffblue.class)
+  @Category(ContributionFromDiffblue.class)
+  @ManagedByDiffblue
   @MethodsUnderTest({"byte[] SM2.publicKeyFromPrivate(BigInteger, boolean)"})
   public void testPublicKeyFromPrivate_thenReturnArrayOfByteWithTwoAndCircumflexAccent() {
     // Arrange, Act and Assert
@@ -448,7 +466,8 @@ public class SM2DiffblueTest {
    * <p>Method under test: {@link SM2#publicKeyFromPrivate(BigInteger, boolean)}
    */
   @Test
-  @Category(MaintainedByDiffblue.class)
+  @Category(ContributionFromDiffblue.class)
+  @ManagedByDiffblue
   @MethodsUnderTest({"byte[] SM2.publicKeyFromPrivate(BigInteger, boolean)"})
   public void testPublicKeyFromPrivate_thenReturnArrayOfByteWithTwoAndMinusSeventyOne() {
     // Arrange, Act and Assert
@@ -471,7 +490,8 @@ public class SM2DiffblueTest {
    * <p>Method under test: {@link SM2#publicKeyFromPrivate(BigInteger, boolean)}
    */
   @Test
-  @Category(MaintainedByDiffblue.class)
+  @Category(ContributionFromDiffblue.class)
+  @ManagedByDiffblue
   @MethodsUnderTest({"byte[] SM2.publicKeyFromPrivate(BigInteger, boolean)"})
   public void testPublicKeyFromPrivate_whenFalse_thenReturnFortyFirstElementIsMinusOneHundred() {
     // Arrange and Act
@@ -542,7 +562,8 @@ public class SM2DiffblueTest {
    * <p>Method under test: {@link SM2#publicKeyFromPrivate(BigInteger, boolean)}
    */
   @Test
-  @Category(MaintainedByDiffblue.class)
+  @Category(ContributionFromDiffblue.class)
+  @ManagedByDiffblue
   @MethodsUnderTest({"byte[] SM2.publicKeyFromPrivate(BigInteger, boolean)"})
   public void testPublicKeyFromPrivate_whenFour_thenReturnArrayOfByteWithThreeAndMinusSixtyTwo() {
     // Arrange, Act and Assert
@@ -565,7 +586,8 @@ public class SM2DiffblueTest {
    * <p>Method under test: {@link SM2#publicKeyFromPrivate(BigInteger, boolean)}
    */
   @Test
-  @Category(MaintainedByDiffblue.class)
+  @Category(ContributionFromDiffblue.class)
+  @ManagedByDiffblue
   @MethodsUnderTest({"byte[] SM2.publicKeyFromPrivate(BigInteger, boolean)"})
   public void testPublicKeyFromPrivate_whenOne_thenReturnArrayOfByteWithTwoAnd2() {
     // Arrange, Act and Assert
@@ -588,7 +610,8 @@ public class SM2DiffblueTest {
    * <p>Method under test: {@link SM2#publicKeyFromPrivate(BigInteger, boolean)}
    */
   @Test
-  @Category(MaintainedByDiffblue.class)
+  @Category(ContributionFromDiffblue.class)
+  @ManagedByDiffblue
   @MethodsUnderTest({"byte[] SM2.publicKeyFromPrivate(BigInteger, boolean)"})
   public void testPublicKeyFromPrivate_whenZero_thenReturnArrayOfByteWithZero() {
     // Arrange, Act and Assert
@@ -606,7 +629,8 @@ public class SM2DiffblueTest {
    * <p>Method under test: {@link SM2#pubBytesWithoutFormat(ECPoint)}
    */
   @Test
-  @Category(MaintainedByDiffblue.class)
+  @Category(ContributionFromDiffblue.class)
+  @ManagedByDiffblue
   @MethodsUnderTest({"byte[] SM2.pubBytesWithoutFormat(ECPoint)"})
   public void testPubBytesWithoutFormat_givenAxaxaxaxBytesIsUtf8_thenReturnXaxaxaxBytesIsUtf8()
       throws UnsupportedEncodingException {
@@ -632,7 +656,8 @@ public class SM2DiffblueTest {
    * <p>Method under test: {@link SM2#pubBytesWithoutFormat(ECPoint)}
    */
   @Test
-  @Category(MaintainedByDiffblue.class)
+  @Category(ContributionFromDiffblue.class)
+  @ManagedByDiffblue
   @MethodsUnderTest({"byte[] SM2.pubBytesWithoutFormat(ECPoint)"})
   public void testPubBytesWithoutFormat_thenThrowIllegalArgumentException() {
     // Arrange
@@ -650,7 +675,8 @@ public class SM2DiffblueTest {
    * <p>Method under test: {@link SM2#fromNodeId(byte[])}
    */
   @Test
-  @Category(MaintainedByDiffblue.class)
+  @Category(ContributionFromDiffblue.class)
+  @ManagedByDiffblue
   @MethodsUnderTest({"SM2 SM2.fromNodeId(byte[])"})
   public void testFromNodeId() throws UnsupportedEncodingException {
     // Arrange, Act and Assert
@@ -668,7 +694,8 @@ public class SM2DiffblueTest {
    * <p>Method under test: {@link SM2Signature#decodeFromDER(byte[])}
    */
   @Test
-  @Category(MaintainedByDiffblue.class)
+  @Category(ContributionFromDiffblue.class)
+  @ManagedByDiffblue
   @MethodsUnderTest({"SM2Signature SM2Signature.decodeFromDER(byte[])"})
   public void testSM2SignatureDecodeFromDER_whenArrayOfByteWithAAndMin_value() {
     // Arrange, Act and Assert
@@ -689,7 +716,8 @@ public class SM2DiffblueTest {
    * <p>Method under test: {@link SM2Signature#decodeFromDER(byte[])}
    */
   @Test
-  @Category(MaintainedByDiffblue.class)
+  @Category(ContributionFromDiffblue.class)
+  @ManagedByDiffblue
   @MethodsUnderTest({"SM2Signature SM2Signature.decodeFromDER(byte[])"})
   public void testSM2SignatureDecodeFromDER_whenArrayOfByteWithAAndMinusOne() {
     // Arrange, Act and Assert
@@ -708,7 +736,8 @@ public class SM2DiffblueTest {
    * <p>Method under test: {@link SM2Signature#decodeFromDER(byte[])}
    */
   @Test
-  @Category(MaintainedByDiffblue.class)
+  @Category(ContributionFromDiffblue.class)
+  @ManagedByDiffblue
   @MethodsUnderTest({"SM2Signature SM2Signature.decodeFromDER(byte[])"})
   public void testSM2SignatureDecodeFromDER_whenArrayOfByteWithMax_valueAndX() {
     // Arrange, Act and Assert
@@ -729,7 +758,8 @@ public class SM2DiffblueTest {
    * <p>Method under test: {@link SM2Signature#decodeFromDER(byte[])}
    */
   @Test
-  @Category(MaintainedByDiffblue.class)
+  @Category(ContributionFromDiffblue.class)
+  @ManagedByDiffblue
   @MethodsUnderTest({"SM2Signature SM2Signature.decodeFromDER(byte[])"})
   public void testSM2SignatureDecodeFromDER_whenArrayOfByteWithMin_valueAndX() {
     // Arrange, Act and Assert
@@ -750,7 +780,8 @@ public class SM2DiffblueTest {
    * <p>Method under test: {@link SM2Signature#decodeFromDER(byte[])}
    */
   @Test
-  @Category(MaintainedByDiffblue.class)
+  @Category(ContributionFromDiffblue.class)
+  @ManagedByDiffblue
   @MethodsUnderTest({"SM2Signature SM2Signature.decodeFromDER(byte[])"})
   public void testSM2SignatureDecodeFromDER_whenArrayOfByteWithMinusOneAndMinusOne() {
     // Arrange, Act and Assert
@@ -769,7 +800,8 @@ public class SM2DiffblueTest {
    * <p>Method under test: {@link SM2Signature#decodeFromDER(byte[])}
    */
   @Test
-  @Category(MaintainedByDiffblue.class)
+  @Category(ContributionFromDiffblue.class)
+  @ManagedByDiffblue
   @MethodsUnderTest({"SM2Signature SM2Signature.decodeFromDER(byte[])"})
   public void testSM2SignatureDecodeFromDER_whenArrayOfByteWithMinusOneAndX() {
     // Arrange, Act and Assert
@@ -788,7 +820,8 @@ public class SM2DiffblueTest {
    * <p>Method under test: {@link SM2Signature#decodeFromDER(byte[])}
    */
   @Test
-  @Category(MaintainedByDiffblue.class)
+  @Category(ContributionFromDiffblue.class)
+  @ManagedByDiffblue
   @MethodsUnderTest({"SM2Signature SM2Signature.decodeFromDER(byte[])"})
   public void testSM2SignatureDecodeFromDER_whenArrayOfByteWithMinusOneAndX2() {
     // Arrange, Act and Assert
@@ -809,7 +842,8 @@ public class SM2DiffblueTest {
    * <p>Method under test: {@link SM2Signature#decodeFromDER(byte[])}
    */
   @Test
-  @Category(MaintainedByDiffblue.class)
+  @Category(ContributionFromDiffblue.class)
+  @ManagedByDiffblue
   @MethodsUnderTest({"SM2Signature SM2Signature.decodeFromDER(byte[])"})
   public void testSM2SignatureDecodeFromDER_whenArrayOfByteWithMinusOneAndX3() {
     // Arrange, Act and Assert
@@ -830,7 +864,8 @@ public class SM2DiffblueTest {
    * <p>Method under test: {@link SM2Signature#decodeFromDER(byte[])}
    */
   @Test
-  @Category(MaintainedByDiffblue.class)
+  @Category(ContributionFromDiffblue.class)
+  @ManagedByDiffblue
   @MethodsUnderTest({"SM2Signature SM2Signature.decodeFromDER(byte[])"})
   public void testSM2SignatureDecodeFromDER_whenArrayOfByteWithMinusOneAndX4() {
     // Arrange, Act and Assert
@@ -851,7 +886,8 @@ public class SM2DiffblueTest {
    * <p>Method under test: {@link SM2Signature#decodeFromDER(byte[])}
    */
   @Test
-  @Category(MaintainedByDiffblue.class)
+  @Category(ContributionFromDiffblue.class)
+  @ManagedByDiffblue
   @MethodsUnderTest({"SM2Signature SM2Signature.decodeFromDER(byte[])"})
   public void testSM2SignatureDecodeFromDER_whenArrayOfByteWithMinusOneAndX5() {
     // Arrange, Act and Assert
@@ -872,7 +908,8 @@ public class SM2DiffblueTest {
    * <p>Method under test: {@link SM2Signature#decodeFromDER(byte[])}
    */
   @Test
-  @Category(MaintainedByDiffblue.class)
+  @Category(ContributionFromDiffblue.class)
+  @ManagedByDiffblue
   @MethodsUnderTest({"SM2Signature SM2Signature.decodeFromDER(byte[])"})
   public void testSM2SignatureDecodeFromDER_whenArrayOfByteWithMinusOneAndX6() {
     // Arrange, Act and Assert
@@ -893,7 +930,8 @@ public class SM2DiffblueTest {
    * <p>Method under test: {@link SM2Signature#decodeFromDER(byte[])}
    */
   @Test
-  @Category(MaintainedByDiffblue.class)
+  @Category(ContributionFromDiffblue.class)
+  @ManagedByDiffblue
   @MethodsUnderTest({"SM2Signature SM2Signature.decodeFromDER(byte[])"})
   public void testSM2SignatureDecodeFromDER_whenArrayOfByteWithMinusOneAndX7() {
     // Arrange, Act and Assert
@@ -913,7 +951,8 @@ public class SM2DiffblueTest {
    * <p>Method under test: {@link SM2Signature#decodeFromDER(byte[])}
    */
   @Test
-  @Category(MaintainedByDiffblue.class)
+  @Category(ContributionFromDiffblue.class)
+  @ManagedByDiffblue
   @MethodsUnderTest({"SM2Signature SM2Signature.decodeFromDER(byte[])"})
   public void testSM2SignatureDecodeFromDER_whenArrayOfByteWithMinusOneAndX8() {
     // Arrange, Act and Assert
@@ -933,7 +972,8 @@ public class SM2DiffblueTest {
    * <p>Method under test: {@link SM2Signature#decodeFromDER(byte[])}
    */
   @Test
-  @Category(MaintainedByDiffblue.class)
+  @Category(ContributionFromDiffblue.class)
+  @ManagedByDiffblue
   @MethodsUnderTest({"SM2Signature SM2Signature.decodeFromDER(byte[])"})
   public void testSM2SignatureDecodeFromDER_whenArrayOfByteWithMinusOneAndX9() {
     // Arrange, Act and Assert
@@ -954,7 +994,8 @@ public class SM2DiffblueTest {
    * <p>Method under test: {@link SM2Signature#decodeFromDER(byte[])}
    */
   @Test
-  @Category(MaintainedByDiffblue.class)
+  @Category(ContributionFromDiffblue.class)
+  @ManagedByDiffblue
   @MethodsUnderTest({"SM2Signature SM2Signature.decodeFromDER(byte[])"})
   public void testSM2SignatureDecodeFromDER_whenArrayOfByteWithMinusOneAndX10() {
     // Arrange, Act and Assert
@@ -974,7 +1015,8 @@ public class SM2DiffblueTest {
    * <p>Method under test: {@link SM2Signature#decodeFromDER(byte[])}
    */
   @Test
-  @Category(MaintainedByDiffblue.class)
+  @Category(ContributionFromDiffblue.class)
+  @ManagedByDiffblue
   @MethodsUnderTest({"SM2Signature SM2Signature.decodeFromDER(byte[])"})
   public void testSM2SignatureDecodeFromDER_whenArrayOfByteWithMinusOneAndX11() {
     // Arrange, Act and Assert
@@ -994,7 +1036,8 @@ public class SM2DiffblueTest {
    * <p>Method under test: {@link SM2Signature#decodeFromDER(byte[])}
    */
   @Test
-  @Category(MaintainedByDiffblue.class)
+  @Category(ContributionFromDiffblue.class)
+  @ManagedByDiffblue
   @MethodsUnderTest({"SM2Signature SM2Signature.decodeFromDER(byte[])"})
   public void testSM2SignatureDecodeFromDER_whenArrayOfByteWithMinusOneAndX12() {
     // Arrange, Act and Assert
@@ -1014,7 +1057,8 @@ public class SM2DiffblueTest {
    * <p>Method under test: {@link SM2Signature#decodeFromDER(byte[])}
    */
   @Test
-  @Category(MaintainedByDiffblue.class)
+  @Category(ContributionFromDiffblue.class)
+  @ManagedByDiffblue
   @MethodsUnderTest({"SM2Signature SM2Signature.decodeFromDER(byte[])"})
   public void testSM2SignatureDecodeFromDER_whenArrayOfByteWithMinusOneAndZero() {
     // Arrange, Act and Assert
@@ -1033,7 +1077,8 @@ public class SM2DiffblueTest {
    * <p>Method under test: {@link SM2Signature#decodeFromDER(byte[])}
    */
   @Test
-  @Category(MaintainedByDiffblue.class)
+  @Category(ContributionFromDiffblue.class)
+  @ManagedByDiffblue
   @MethodsUnderTest({"SM2Signature SM2Signature.decodeFromDER(byte[])"})
   public void testSM2SignatureDecodeFromDER_whenArrayOfByteWithSpaceAndMin_value() {
     // Arrange, Act and Assert
@@ -1054,7 +1099,8 @@ public class SM2DiffblueTest {
    * <p>Method under test: {@link SM2Signature#decodeFromDER(byte[])}
    */
   @Test
-  @Category(MaintainedByDiffblue.class)
+  @Category(ContributionFromDiffblue.class)
+  @ManagedByDiffblue
   @MethodsUnderTest({"SM2Signature SM2Signature.decodeFromDER(byte[])"})
   public void testSM2SignatureDecodeFromDER_whenArrayOfByteWithTwentyEightAndX() {
     // Arrange, Act and Assert
@@ -1073,7 +1119,8 @@ public class SM2DiffblueTest {
    * <p>Method under test: {@link SM2Signature#decodeFromDER(byte[])}
    */
   @Test
-  @Category(MaintainedByDiffblue.class)
+  @Category(ContributionFromDiffblue.class)
+  @ManagedByDiffblue
   @MethodsUnderTest({"SM2Signature SM2Signature.decodeFromDER(byte[])"})
   public void testSM2SignatureDecodeFromDER_whenArrayOfByteWithTwentySevenAndX() {
     // Arrange, Act and Assert
@@ -1092,7 +1139,8 @@ public class SM2DiffblueTest {
    * <p>Method under test: {@link SM2Signature#decodeFromDER(byte[])}
    */
   @Test
-  @Category(MaintainedByDiffblue.class)
+  @Category(ContributionFromDiffblue.class)
+  @ManagedByDiffblue
   @MethodsUnderTest({"SM2Signature SM2Signature.decodeFromDER(byte[])"})
   public void testSM2SignatureDecodeFromDER_whenArrayOfByteWithZeroAndX() {
     // Arrange, Act and Assert
@@ -1112,7 +1160,8 @@ public class SM2DiffblueTest {
    * <p>Method under test: {@link SM2Signature#decodeFromDER(byte[])}
    */
   @Test
-  @Category(MaintainedByDiffblue.class)
+  @Category(ContributionFromDiffblue.class)
+  @ManagedByDiffblue
   @MethodsUnderTest({"SM2Signature SM2Signature.decodeFromDER(byte[])"})
   public void testSM2SignatureDecodeFromDER_whenAxaxaxaxBytesIsUtf8_thenThrowRuntimeException()
       throws UnsupportedEncodingException {
@@ -1132,7 +1181,8 @@ public class SM2DiffblueTest {
    * <p>Method under test: {@link SM2Signature#decodeFromDER(byte[])}
    */
   @Test
-  @Category(MaintainedByDiffblue.class)
+  @Category(ContributionFromDiffblue.class)
+  @ManagedByDiffblue
   @MethodsUnderTest({"SM2Signature SM2Signature.decodeFromDER(byte[])"})
   public void testSM2SignatureDecodeFromDER_whenEmptyArrayOfByte_thenThrowRuntimeException() {
     // Arrange, Act and Assert
@@ -1150,7 +1200,8 @@ public class SM2DiffblueTest {
    * <p>Method under test: {@link SM2Signature#decodeFromDER(byte[])}
    */
   @Test
-  @Category(MaintainedByDiffblue.class)
+  @Category(ContributionFromDiffblue.class)
+  @ManagedByDiffblue
   @MethodsUnderTest({"SM2Signature SM2Signature.decodeFromDER(byte[])"})
   public void testSM2SignatureDecodeFromDER_whenSpace_thenThrowRuntimeException() {
     // Arrange, Act and Assert
@@ -1172,7 +1223,8 @@ public class SM2DiffblueTest {
    * <p>Method under test: {@link SM2Signature#decodeFromDER(byte[])}
    */
   @Test
-  @Category(MaintainedByDiffblue.class)
+  @Category(ContributionFromDiffblue.class)
+  @ManagedByDiffblue
   @MethodsUnderTest({"SM2Signature SM2Signature.decodeFromDER(byte[])"})
   public void testSM2SignatureDecodeFromDER_whenXaxaxaxBytesIsUtf8_thenThrowRuntimeException()
       throws UnsupportedEncodingException {
@@ -1188,7 +1240,8 @@ public class SM2DiffblueTest {
    * <p>Method under test: {@link SM2Signature#fromComponents(byte[], byte[], byte)}
    */
   @Test
-  @Category(MaintainedByDiffblue.class)
+  @Category(ContributionFromDiffblue.class)
+  @ManagedByDiffblue
   @MethodsUnderTest({"SM2Signature SM2Signature.fromComponents(byte[], byte[], byte)"})
   public void testSM2SignatureFromComponentsWithRSV() throws UnsupportedEncodingException {
     // Arrange and Act
@@ -1218,7 +1271,8 @@ public class SM2DiffblueTest {
    * <p>Method under test: {@link SM2Signature#SM2Signature(BigInteger, BigInteger)}
    */
   @Test
-  @Category(MaintainedByDiffblue.class)
+  @Category(ContributionFromDiffblue.class)
+  @ManagedByDiffblue
   @MethodsUnderTest({"void SM2Signature.<init>(BigInteger, BigInteger)"})
   public void testSM2SignatureNewSM2Signature() {
     // Arrange and Act
@@ -1243,7 +1297,8 @@ public class SM2DiffblueTest {
    * <p>Method under test: {@link SM2Signature#SM2Signature(byte[], byte[], byte)}
    */
   @Test
-  @Category(MaintainedByDiffblue.class)
+  @Category(ContributionFromDiffblue.class)
+  @ManagedByDiffblue
   @MethodsUnderTest({"void SM2Signature.<init>(byte[], byte[], byte)"})
   public void testSM2SignatureNewSM2Signature2() throws UnsupportedEncodingException {
     // Arrange and Act
@@ -1272,7 +1327,8 @@ public class SM2DiffblueTest {
    * <p>Method under test: {@link SM2Signature#toBase64()}
    */
   @Test
-  @Category(MaintainedByDiffblue.class)
+  @Category(ContributionFromDiffblue.class)
+  @ManagedByDiffblue
   @MethodsUnderTest({"String SM2Signature.toBase64()"})
   public void testSM2SignatureToBase64() {
     // Arrange, Act and Assert
@@ -1287,7 +1343,8 @@ public class SM2DiffblueTest {
    * <p>Method under test: {@link SM2Signature#toByteArray()}
    */
   @Test
-  @Category(MaintainedByDiffblue.class)
+  @Category(ContributionFromDiffblue.class)
+  @ManagedByDiffblue
   @MethodsUnderTest({"byte[] SM2Signature.toByteArray()"})
   public void testSM2SignatureToByteArray() {
     // Arrange
@@ -1361,7 +1418,8 @@ public class SM2DiffblueTest {
    * <p>Method under test: {@link SM2Signature#toByteArray()}
    */
   @Test
-  @Category(MaintainedByDiffblue.class)
+  @Category(ContributionFromDiffblue.class)
+  @ManagedByDiffblue
   @MethodsUnderTest({"byte[] SM2Signature.toByteArray()"})
   public void testSM2SignatureToByteArray_thenReturnTwentySix() {
     // Arrange
@@ -1437,7 +1495,8 @@ public class SM2DiffblueTest {
    * <p>Method under test: {@link SM2Signature#toHex()}
    */
   @Test
-  @Category(MaintainedByDiffblue.class)
+  @Category(ContributionFromDiffblue.class)
+  @ManagedByDiffblue
   @MethodsUnderTest({"String SM2Signature.toHex()"})
   public void testSM2SignatureToHex_givenSM2SignatureWithRIsEightAndSIsEightVIsTwentySeven() {
     // Arrange
@@ -1463,7 +1522,8 @@ public class SM2DiffblueTest {
    * <p>Method under test: {@link SM2Signature#toHex()}
    */
   @Test
-  @Category(MaintainedByDiffblue.class)
+  @Category(ContributionFromDiffblue.class)
+  @ManagedByDiffblue
   @MethodsUnderTest({"String SM2Signature.toHex()"})
   public void testSM2SignatureToHex_givenSM2SignatureWithRIsEightAndSIsEightVIsTwentySix() {
     // Arrange
@@ -1483,7 +1543,8 @@ public class SM2DiffblueTest {
    * <p>Method under test: {@link SM2Signature#validateComponents()}
    */
   @Test
-  @Category(MaintainedByDiffblue.class)
+  @Category(ContributionFromDiffblue.class)
+  @ManagedByDiffblue
   @MethodsUnderTest({"boolean SM2Signature.validateComponents()"})
   public void testSM2SignatureValidateComponents() {
     // Arrange
@@ -1500,7 +1561,8 @@ public class SM2DiffblueTest {
    * <p>Method under test: {@link SM2Signature#validateComponents()}
    */
   @Test
-  @Category(MaintainedByDiffblue.class)
+  @Category(ContributionFromDiffblue.class)
+  @ManagedByDiffblue
   @MethodsUnderTest({"boolean SM2Signature.validateComponents()"})
   public void testSM2SignatureValidateComponents2() {
     // Arrange
@@ -1517,7 +1579,8 @@ public class SM2DiffblueTest {
    * <p>Method under test: {@link SM2Signature#validateComponents()}
    */
   @Test
-  @Category(MaintainedByDiffblue.class)
+  @Category(ContributionFromDiffblue.class)
+  @ManagedByDiffblue
   @MethodsUnderTest({"boolean SM2Signature.validateComponents()"})
   public void testSM2SignatureValidateComponents3() {
     // Arrange
@@ -1534,7 +1597,8 @@ public class SM2DiffblueTest {
    * <p>Method under test: {@link SM2Signature#validateComponents()}
    */
   @Test
-  @Category(MaintainedByDiffblue.class)
+  @Category(ContributionFromDiffblue.class)
+  @ManagedByDiffblue
   @MethodsUnderTest({"boolean SM2Signature.validateComponents()"})
   public void testSM2SignatureValidateComponents4() {
     // Arrange
@@ -1556,7 +1620,8 @@ public class SM2DiffblueTest {
    * <p>Method under test: {@link SM2Signature#validateComponents(BigInteger, BigInteger, byte)}
    */
   @Test
-  @Category(MaintainedByDiffblue.class)
+  @Category(ContributionFromDiffblue.class)
+  @ManagedByDiffblue
   @MethodsUnderTest({"boolean SM2Signature.validateComponents(BigInteger, BigInteger, byte)"})
   public void testSM2SignatureValidateComponentsWithBigIntegerBigIntegerByte_thenReturnTrue() {
     // Arrange and Act
@@ -1578,7 +1643,8 @@ public class SM2DiffblueTest {
    * <p>Method under test: {@link SM2Signature#validateComponents(BigInteger, BigInteger, byte)}
    */
   @Test
-  @Category(MaintainedByDiffblue.class)
+  @Category(ContributionFromDiffblue.class)
+  @ManagedByDiffblue
   @MethodsUnderTest({"boolean SM2Signature.validateComponents(BigInteger, BigInteger, byte)"})
   public void testSM2SignatureValidateComponentsWithBigIntegerBigIntegerByte_whenA() {
     // Arrange and Act
@@ -1600,7 +1666,8 @@ public class SM2DiffblueTest {
    * <p>Method under test: {@link SM2Signature#validateComponents(BigInteger, BigInteger, byte)}
    */
   @Test
-  @Category(MaintainedByDiffblue.class)
+  @Category(ContributionFromDiffblue.class)
+  @ManagedByDiffblue
   @MethodsUnderTest({"boolean SM2Signature.validateComponents(BigInteger, BigInteger, byte)"})
   public void testSM2SignatureValidateComponentsWithBigIntegerBigIntegerByte_whenTwentyEight() {
     // Arrange and Act
@@ -1622,7 +1689,8 @@ public class SM2DiffblueTest {
    * <p>Method under test: {@link SM2Signature#validateComponents(BigInteger, BigInteger, byte)}
    */
   @Test
-  @Category(MaintainedByDiffblue.class)
+  @Category(ContributionFromDiffblue.class)
+  @ManagedByDiffblue
   @MethodsUnderTest({"boolean SM2Signature.validateComponents(BigInteger, BigInteger, byte)"})
   public void testSM2SignatureValidateComponentsWithBigIntegerBigIntegerByte_whenZero() {
     // Arrange and Act
@@ -1644,7 +1712,8 @@ public class SM2DiffblueTest {
    * <p>Method under test: {@link SM2Signature#validateComponents(BigInteger, BigInteger, byte)}
    */
   @Test
-  @Category(MaintainedByDiffblue.class)
+  @Category(ContributionFromDiffblue.class)
+  @ManagedByDiffblue
   @MethodsUnderTest({"boolean SM2Signature.validateComponents(BigInteger, BigInteger, byte)"})
   public void testSM2SignatureValidateComponentsWithBigIntegerBigIntegerByte_whenZero2() {
     // Arrange and Act
@@ -1666,7 +1735,8 @@ public class SM2DiffblueTest {
    * <p>Method under test: {@link SM2Signature#validateComponents()}
    */
   @Test
-  @Category(MaintainedByDiffblue.class)
+  @Category(ContributionFromDiffblue.class)
+  @ManagedByDiffblue
   @MethodsUnderTest({"boolean SM2Signature.validateComponents()"})
   public void testSM2SignatureValidateComponents_givenSM2SignatureWithRIsEightAndSIsEight() {
     // Arrange, Act and Assert
@@ -1684,7 +1754,8 @@ public class SM2DiffblueTest {
    * <p>Method under test: {@link SM2#signatureToKeyBytes(byte[], SM2Signature)}
    */
   @Test
-  @Category(MaintainedByDiffblue.class)
+  @Category(ContributionFromDiffblue.class)
+  @ManagedByDiffblue
   @MethodsUnderTest({"byte[] SM2.signatureToKeyBytes(byte[], SM2Signature)"})
   public void testSignatureToKeyBytesWithMessageHashSig_thenThrowIllegalArgumentException()
       throws UnsupportedEncodingException, SignatureException {
@@ -1705,7 +1776,8 @@ public class SM2DiffblueTest {
    * <p>Method under test: {@link SM2#signatureToKeyBytes(byte[], String)}
    */
   @Test
-  @Category(MaintainedByDiffblue.class)
+  @Category(ContributionFromDiffblue.class)
+  @ManagedByDiffblue
   @MethodsUnderTest({"byte[] SM2.signatureToKeyBytes(byte[], String)"})
   public void testSignatureToKeyBytesWithMessageHashSignatureBase64_whenCouldNotDecodeBase64()
       throws UnsupportedEncodingException, SignatureException {
@@ -1726,7 +1798,8 @@ public class SM2DiffblueTest {
    * <p>Method under test: {@link SM2#signatureToKeyBytes(byte[], String)}
    */
   @Test
-  @Category(MaintainedByDiffblue.class)
+  @Category(ContributionFromDiffblue.class)
+  @ManagedByDiffblue
   @MethodsUnderTest({"byte[] SM2.signatureToKeyBytes(byte[], String)"})
   public void testSignatureToKeyBytesWithMessageHashSignatureBase64_whenEmptyString()
       throws UnsupportedEncodingException, SignatureException {
@@ -1746,7 +1819,8 @@ public class SM2DiffblueTest {
    * <p>Method under test: {@link SM2#signatureToKeyBytes(byte[], String)}
    */
   @Test
-  @Category(MaintainedByDiffblue.class)
+  @Category(ContributionFromDiffblue.class)
+  @ManagedByDiffblue
   @MethodsUnderTest({"byte[] SM2.signatureToKeyBytes(byte[], String)"})
   public void testSignatureToKeyBytesWithMessageHashSignatureBase64_whenJavaSecurityPrivateKey()
       throws UnsupportedEncodingException, SignatureException {
@@ -1767,7 +1841,8 @@ public class SM2DiffblueTest {
    * <p>Method under test: {@link SM2#hash(byte[])}
    */
   @Test
-  @Category(MaintainedByDiffblue.class)
+  @Category(ContributionFromDiffblue.class)
+  @ManagedByDiffblue
   @MethodsUnderTest({"byte[] SM2.hash(byte[])"})
   public void testHash_givenECPointGetCurveThrowIllegalArgumentException()
       throws UnsupportedEncodingException {
@@ -1794,7 +1869,8 @@ public class SM2DiffblueTest {
    * <p>Method under test: {@link SM2#hash(byte[])}
    */
   @Test
-  @Category(MaintainedByDiffblue.class)
+  @Category(ContributionFromDiffblue.class)
+  @ManagedByDiffblue
   @MethodsUnderTest({"byte[] SM2.hash(byte[])"})
   public void testHash_givenECPointGetXCoordThrowIllegalArgumentException_thenCallsGetXCoord()
       throws UnsupportedEncodingException {
@@ -1829,7 +1905,8 @@ public class SM2DiffblueTest {
    * <p>Method under test: {@link SM2#hash(byte[])}
    */
   @Test
-  @Category(MaintainedByDiffblue.class)
+  @Category(ContributionFromDiffblue.class)
+  @ManagedByDiffblue
   @MethodsUnderTest({"byte[] SM2.hash(byte[])"})
   public void testHash_givenECPointIsInfinityThrowIllegalArgumentException_thenCallsIsInfinity()
       throws UnsupportedEncodingException {
@@ -1857,7 +1934,8 @@ public class SM2DiffblueTest {
    * <p>Method under test: {@link SM2#getPrivateKey()}
    */
   @Test
-  @Category(MaintainedByDiffblue.class)
+  @Category(ContributionFromDiffblue.class)
+  @ManagedByDiffblue
   @MethodsUnderTest({"byte[] SM2.getPrivateKey()"})
   public void testGetPrivateKey_givenFromPublicOnlyECPoint_thenReturnNull() {
     // Arrange, Act and Assert
@@ -1874,7 +1952,8 @@ public class SM2DiffblueTest {
    * <p>Method under test: {@link SM2#getPubKey()}
    */
   @Test
-  @Category(MaintainedByDiffblue.class)
+  @Category(ContributionFromDiffblue.class)
+  @ManagedByDiffblue
   @MethodsUnderTest({"byte[] SM2.getPubKey()"})
   public void testGetPubKey_thenReturnAxaxaxaxBytesIsUtf8() throws UnsupportedEncodingException {
     // Arrange
@@ -1899,7 +1978,8 @@ public class SM2DiffblueTest {
    * <p>Method under test: {@link SM2#getPubKey()}
    */
   @Test
-  @Category(MaintainedByDiffblue.class)
+  @Category(ContributionFromDiffblue.class)
+  @ManagedByDiffblue
   @MethodsUnderTest({"byte[] SM2.getPubKey()"})
   public void testGetPubKey_thenThrowIllegalArgumentException() {
     // Arrange
@@ -1921,7 +2001,8 @@ public class SM2DiffblueTest {
    * <p>Method under test: {@link SM2#getAddress()}
    */
   @Test
-  @Category(MaintainedByDiffblue.class)
+  @Category(ContributionFromDiffblue.class)
+  @ManagedByDiffblue
   @MethodsUnderTest({"byte[] SM2.getAddress()"})
   public void testGetAddress_thenReturnArrayOfByteWithAAndNineteen()
       throws UnsupportedEncodingException {
@@ -1952,7 +2033,8 @@ public class SM2DiffblueTest {
    * <p>Method under test: {@link SM2#getAddress()}
    */
   @Test
-  @Category(MaintainedByDiffblue.class)
+  @Category(ContributionFromDiffblue.class)
+  @ManagedByDiffblue
   @MethodsUnderTest({"byte[] SM2.getAddress()"})
   public void testGetAddress_thenThrowIllegalArgumentException() {
     // Arrange
@@ -1975,7 +2057,8 @@ public class SM2DiffblueTest {
    * <p>Method under test: {@link SM2#signatureToAddress(byte[], SM2Signature)}
    */
   @Test
-  @Category(MaintainedByDiffblue.class)
+  @Category(ContributionFromDiffblue.class)
+  @ManagedByDiffblue
   @MethodsUnderTest({"byte[] SM2.signatureToAddress(byte[], SM2Signature)"})
   public void testSignatureToAddressWithMessageHashSig_thenThrowIllegalArgumentException()
       throws UnsupportedEncodingException, SignatureException {
@@ -1996,7 +2079,8 @@ public class SM2DiffblueTest {
    * <p>Method under test: {@link SM2#signatureToAddress(byte[], String)}
    */
   @Test
-  @Category(MaintainedByDiffblue.class)
+  @Category(ContributionFromDiffblue.class)
+  @ManagedByDiffblue
   @MethodsUnderTest({"byte[] SM2.signatureToAddress(byte[], String)"})
   public void testSignatureToAddressWithMessageHashSignatureBase64_whenCouldNotDecodeBase64()
       throws UnsupportedEncodingException, SignatureException {
@@ -2017,7 +2101,8 @@ public class SM2DiffblueTest {
    * <p>Method under test: {@link SM2#signatureToAddress(byte[], String)}
    */
   @Test
-  @Category(MaintainedByDiffblue.class)
+  @Category(ContributionFromDiffblue.class)
+  @ManagedByDiffblue
   @MethodsUnderTest({"byte[] SM2.signatureToAddress(byte[], String)"})
   public void testSignatureToAddressWithMessageHashSignatureBase64_whenEmptyString()
       throws UnsupportedEncodingException, SignatureException {
@@ -2037,7 +2122,8 @@ public class SM2DiffblueTest {
    * <p>Method under test: {@link SM2#signatureToAddress(byte[], String)}
    */
   @Test
-  @Category(MaintainedByDiffblue.class)
+  @Category(ContributionFromDiffblue.class)
+  @ManagedByDiffblue
   @MethodsUnderTest({"byte[] SM2.signatureToAddress(byte[], String)"})
   public void testSignatureToAddressWithMessageHashSignatureBase64_whenJavaSecurityPrivateKey()
       throws UnsupportedEncodingException, SignatureException {
@@ -2058,7 +2144,8 @@ public class SM2DiffblueTest {
    * <p>Method under test: {@link SM2#signatureToKey(byte[], SM2Signature)}
    */
   @Test
-  @Category(MaintainedByDiffblue.class)
+  @Category(ContributionFromDiffblue.class)
+  @ManagedByDiffblue
   @MethodsUnderTest({"SM2 SM2.signatureToKey(byte[], SM2Signature)"})
   public void testSignatureToKeyWithMessageHashSig_whenNull_thenThrowIllegalArgumentException()
       throws UnsupportedEncodingException, SignatureException {
@@ -2079,7 +2166,8 @@ public class SM2DiffblueTest {
    * <p>Method under test: {@link SM2#signatureToKey(byte[], String)}
    */
   @Test
-  @Category(MaintainedByDiffblue.class)
+  @Category(ContributionFromDiffblue.class)
+  @ManagedByDiffblue
   @MethodsUnderTest({"SM2 SM2.signatureToKey(byte[], String)"})
   public void testSignatureToKeyWithMessageHashSignatureBase64_whenCouldNotDecodeBase64()
       throws UnsupportedEncodingException, SignatureException {
@@ -2100,7 +2188,8 @@ public class SM2DiffblueTest {
    * <p>Method under test: {@link SM2#signatureToKey(byte[], String)}
    */
   @Test
-  @Category(MaintainedByDiffblue.class)
+  @Category(ContributionFromDiffblue.class)
+  @ManagedByDiffblue
   @MethodsUnderTest({"SM2 SM2.signatureToKey(byte[], String)"})
   public void testSignatureToKeyWithMessageHashSignatureBase64_whenEmptyString()
       throws UnsupportedEncodingException, SignatureException {
@@ -2120,7 +2209,8 @@ public class SM2DiffblueTest {
    * <p>Method under test: {@link SM2#signatureToKey(byte[], String)}
    */
   @Test
-  @Category(MaintainedByDiffblue.class)
+  @Category(ContributionFromDiffblue.class)
+  @ManagedByDiffblue
   @MethodsUnderTest({"SM2 SM2.signatureToKey(byte[], String)"})
   public void testSignatureToKeyWithMessageHashSignatureBase64_whenJavaSecurityPrivateKey()
       throws UnsupportedEncodingException, SignatureException {
@@ -2141,7 +2231,8 @@ public class SM2DiffblueTest {
    * <p>Method under test: {@link SM2#signMessage(byte[], String)}
    */
   @Test
-  @Category(MaintainedByDiffblue.class)
+  @Category(ContributionFromDiffblue.class)
+  @ManagedByDiffblue
   @MethodsUnderTest({"SM2Signature SM2.signMessage(byte[], String)"})
   public void testSignMessage_givenFromPublicOnlyECPoint_thenThrowMissingPrivateKeyException()
       throws UnsupportedEncodingException {
@@ -2164,7 +2255,8 @@ public class SM2DiffblueTest {
    * <p>Method under test: {@link SM2#signMsg(byte[], String)}
    */
   @Test
-  @Category(MaintainedByDiffblue.class)
+  @Category(ContributionFromDiffblue.class)
+  @ManagedByDiffblue
   @MethodsUnderTest({"SM2Signature SM2.signMsg(byte[], String)"})
   public void testSignMsg_givenFromPublicOnlyECPoint_thenThrowMissingPrivateKeyException()
       throws UnsupportedEncodingException {
@@ -2187,7 +2279,8 @@ public class SM2DiffblueTest {
    * <p>Method under test: {@link SM2#getSM2SignerForHash()}
    */
   @Test
-  @Category(MaintainedByDiffblue.class)
+  @Category(ContributionFromDiffblue.class)
+  @ManagedByDiffblue
   @MethodsUnderTest({"SM2Signer SM2.getSM2SignerForHash()"})
   public void testGetSM2SignerForHash_givenECPointGetCurveThrowIllegalArgumentException() {
     // Arrange
@@ -2211,7 +2304,8 @@ public class SM2DiffblueTest {
    * <p>Method under test: {@link SM2#getSM2SignerForHash()}
    */
   @Test
-  @Category(MaintainedByDiffblue.class)
+  @Category(ContributionFromDiffblue.class)
+  @ManagedByDiffblue
   @MethodsUnderTest({"SM2Signer SM2.getSM2SignerForHash()"})
   public void testGetSM2SignerForHash_givenECPointIsInfinityThrowIllegalArgumentException() {
     // Arrange
@@ -2236,7 +2330,8 @@ public class SM2DiffblueTest {
    * <p>Method under test: {@link SM2#getSM2SignerForHash()}
    */
   @Test
-  @Category(MaintainedByDiffblue.class)
+  @Category(ContributionFromDiffblue.class)
+  @ManagedByDiffblue
   @MethodsUnderTest({"SM2Signer SM2.getSM2SignerForHash()"})
   public void testGetSM2SignerForHash_thenCallsGetXCoord() {
     // Arrange
@@ -2263,7 +2358,8 @@ public class SM2DiffblueTest {
    * <p>Method under test: {@link SM2#recoverPubBytesFromSignature(int, SM2Signature, byte[])}
    */
   @Test
-  @Category(MaintainedByDiffblue.class)
+  @Category(ContributionFromDiffblue.class)
+  @ManagedByDiffblue
   @MethodsUnderTest({"byte[] SM2.recoverPubBytesFromSignature(int, SM2Signature, byte[])"})
   public void testRecoverPubBytesFromSignature() throws UnsupportedEncodingException {
     // Arrange and Act
@@ -2332,7 +2428,8 @@ public class SM2DiffblueTest {
    * <p>Method under test: {@link SM2#recoverPubBytesFromSignature(int, SM2Signature, byte[])}
    */
   @Test
-  @Category(MaintainedByDiffblue.class)
+  @Category(ContributionFromDiffblue.class)
+  @ManagedByDiffblue
   @MethodsUnderTest({"byte[] SM2.recoverPubBytesFromSignature(int, SM2Signature, byte[])"})
   public void testRecoverPubBytesFromSignature2() throws UnsupportedEncodingException {
     // Arrange
@@ -2402,7 +2499,8 @@ public class SM2DiffblueTest {
    * <p>Method under test: {@link SM2#recoverPubBytesFromSignature(int, SM2Signature, byte[])}
    */
   @Test
-  @Category(MaintainedByDiffblue.class)
+  @Category(ContributionFromDiffblue.class)
+  @ManagedByDiffblue
   @MethodsUnderTest({"byte[] SM2.recoverPubBytesFromSignature(int, SM2Signature, byte[])"})
   public void testRecoverPubBytesFromSignature3() throws UnsupportedEncodingException {
     // Arrange and Act
@@ -2475,7 +2573,8 @@ public class SM2DiffblueTest {
    * <p>Method under test: {@link SM2#recoverPubBytesFromSignature(int, SM2Signature, byte[])}
    */
   @Test
-  @Category(MaintainedByDiffblue.class)
+  @Category(ContributionFromDiffblue.class)
+  @ManagedByDiffblue
   @MethodsUnderTest({"byte[] SM2.recoverPubBytesFromSignature(int, SM2Signature, byte[])"})
   public void testRecoverPubBytesFromSignature_thenReturnFiftySixthElementIsMinusOneHundred()
       throws UnsupportedEncodingException {
@@ -2547,7 +2646,8 @@ public class SM2DiffblueTest {
    * <p>Method under test: {@link SM2#recoverPubBytesFromSignature(int, SM2Signature, byte[])}
    */
   @Test
-  @Category(MaintainedByDiffblue.class)
+  @Category(ContributionFromDiffblue.class)
+  @ManagedByDiffblue
   @MethodsUnderTest({"byte[] SM2.recoverPubBytesFromSignature(int, SM2Signature, byte[])"})
   public void testRecoverPubBytesFromSignature_thenReturnFortySecondElementIsMinusOneHundred()
       throws UnsupportedEncodingException {
@@ -2618,7 +2718,8 @@ public class SM2DiffblueTest {
    * <p>Method under test: {@link SM2#recoverPubBytesFromSignature(int, SM2Signature, byte[])}
    */
   @Test
-  @Category(MaintainedByDiffblue.class)
+  @Category(ContributionFromDiffblue.class)
+  @ManagedByDiffblue
   @MethodsUnderTest({"byte[] SM2.recoverPubBytesFromSignature(int, SM2Signature, byte[])"})
   public void testRecoverPubBytesFromSignature_thenReturnNinthElementIsMinusOneHundredOne() {
     // Arrange and Act
@@ -2691,7 +2792,8 @@ public class SM2DiffblueTest {
    * <p>Method under test: {@link SM2#recoverPubBytesFromSignature(int, SM2Signature, byte[])}
    */
   @Test
-  @Category(MaintainedByDiffblue.class)
+  @Category(ContributionFromDiffblue.class)
+  @ManagedByDiffblue
   @MethodsUnderTest({"byte[] SM2.recoverPubBytesFromSignature(int, SM2Signature, byte[])"})
   public void testRecoverPubBytesFromSignature_whenMinusOne_thenThrowIllegalArgumentException()
       throws UnsupportedEncodingException {
@@ -2716,7 +2818,8 @@ public class SM2DiffblueTest {
    * <p>Method under test: {@link SM2#recoverPubBytesFromSignature(int, SM2Signature, byte[])}
    */
   @Test
-  @Category(MaintainedByDiffblue.class)
+  @Category(ContributionFromDiffblue.class)
+  @ManagedByDiffblue
   @MethodsUnderTest({"byte[] SM2.recoverPubBytesFromSignature(int, SM2Signature, byte[])"})
   public void testRecoverPubBytesFromSignature_whenNull_thenThrowIllegalArgumentException() {
     // Arrange, Act and Assert
@@ -2738,7 +2841,8 @@ public class SM2DiffblueTest {
    * <p>Method under test: {@link SM2#recoverPubBytesFromSignature(int, SM2Signature, byte[])}
    */
   @Test
-  @Category(MaintainedByDiffblue.class)
+  @Category(ContributionFromDiffblue.class)
+  @ManagedByDiffblue
   @MethodsUnderTest({"byte[] SM2.recoverPubBytesFromSignature(int, SM2Signature, byte[])"})
   public void testRecoverPubBytesFromSignature_whenTwo_thenReturnNull()
       throws UnsupportedEncodingException {
@@ -2763,7 +2867,8 @@ public class SM2DiffblueTest {
    * <p>Method under test: {@link SM2#verify(byte[], byte[])}
    */
   @Test
-  @Category(MaintainedByDiffblue.class)
+  @Category(ContributionFromDiffblue.class)
+  @ManagedByDiffblue
   @MethodsUnderTest({"boolean SM2.verify(byte[], byte[])"})
   public void testVerifyWithByteByte_thenThrowIllegalArgumentException()
       throws UnsupportedEncodingException {
@@ -2790,7 +2895,8 @@ public class SM2DiffblueTest {
    * <p>Method under test: {@link SM2#verify(byte[], SM2Signature)}
    */
   @Test
-  @Category(MaintainedByDiffblue.class)
+  @Category(ContributionFromDiffblue.class)
+  @ManagedByDiffblue
   @MethodsUnderTest({"boolean SM2.verify(byte[], SM2Signature)"})
   public void testVerifyWithByteSM2Signature_thenThrowIllegalArgumentException()
       throws UnsupportedEncodingException {
@@ -2816,7 +2922,8 @@ public class SM2DiffblueTest {
    * <p>Method under test: {@link SM2#isPubKeyCanonical(byte[])}
    */
   @Test
-  @Category(MaintainedByDiffblue.class)
+  @Category(ContributionFromDiffblue.class)
+  @ManagedByDiffblue
   @MethodsUnderTest({"boolean SM2.isPubKeyCanonical(byte[])"})
   public void testIsPubKeyCanonicalWithByte_whenArrayOfByteWithFour_thenReturnFalse() {
     // Arrange, Act and Assert
@@ -2834,7 +2941,8 @@ public class SM2DiffblueTest {
    * <p>Method under test: {@link SM2#isPubKeyCanonical(byte[])}
    */
   @Test
-  @Category(MaintainedByDiffblue.class)
+  @Category(ContributionFromDiffblue.class)
+  @ManagedByDiffblue
   @MethodsUnderTest({"boolean SM2.isPubKeyCanonical(byte[])"})
   public void testIsPubKeyCanonicalWithByte_whenArrayOfByteWithThree_thenReturnFalse() {
     // Arrange, Act and Assert
@@ -2852,7 +2960,8 @@ public class SM2DiffblueTest {
    * <p>Method under test: {@link SM2#isPubKeyCanonical(byte[])}
    */
   @Test
-  @Category(MaintainedByDiffblue.class)
+  @Category(ContributionFromDiffblue.class)
+  @ManagedByDiffblue
   @MethodsUnderTest({"boolean SM2.isPubKeyCanonical(byte[])"})
   public void testIsPubKeyCanonicalWithByte_whenArrayOfByteWithTwo_thenReturnFalse() {
     // Arrange, Act and Assert
@@ -2870,7 +2979,8 @@ public class SM2DiffblueTest {
    * <p>Method under test: {@link SM2#isPubKeyCanonical(byte[])}
    */
   @Test
-  @Category(MaintainedByDiffblue.class)
+  @Category(ContributionFromDiffblue.class)
+  @ManagedByDiffblue
   @MethodsUnderTest({"boolean SM2.isPubKeyCanonical(byte[])"})
   public void testIsPubKeyCanonicalWithByte_whenAxaxaxaxBytesIsUtf8_thenReturnFalse()
       throws UnsupportedEncodingException {
@@ -2889,7 +2999,8 @@ public class SM2DiffblueTest {
    * <p>Method under test: {@link SM2#isPubKeyCanonical()}
    */
   @Test
-  @Category(MaintainedByDiffblue.class)
+  @Category(ContributionFromDiffblue.class)
+  @ManagedByDiffblue
   @MethodsUnderTest({"boolean SM2.isPubKeyCanonical()"})
   public void testIsPubKeyCanonical_givenECPointGetEncodedReturnArrayOfByteWithFourAndX() {
     // Arrange
@@ -2916,7 +3027,8 @@ public class SM2DiffblueTest {
    * <p>Method under test: {@link SM2#isPubKeyCanonical()}
    */
   @Test
-  @Category(MaintainedByDiffblue.class)
+  @Category(ContributionFromDiffblue.class)
+  @ManagedByDiffblue
   @MethodsUnderTest({"boolean SM2.isPubKeyCanonical()"})
   public void testIsPubKeyCanonical_givenECPointGetEncodedReturnArrayOfByteWithThreeAndX() {
     // Arrange
@@ -2943,7 +3055,8 @@ public class SM2DiffblueTest {
    * <p>Method under test: {@link SM2#isPubKeyCanonical()}
    */
   @Test
-  @Category(MaintainedByDiffblue.class)
+  @Category(ContributionFromDiffblue.class)
+  @ManagedByDiffblue
   @MethodsUnderTest({"boolean SM2.isPubKeyCanonical()"})
   public void testIsPubKeyCanonical_givenECPointGetEncodedReturnArrayOfByteWithTwoAndX() {
     // Arrange
@@ -2970,7 +3083,8 @@ public class SM2DiffblueTest {
    * <p>Method under test: {@link SM2#isPubKeyCanonical()}
    */
   @Test
-  @Category(MaintainedByDiffblue.class)
+  @Category(ContributionFromDiffblue.class)
+  @ManagedByDiffblue
   @MethodsUnderTest({"boolean SM2.isPubKeyCanonical()"})
   public void testIsPubKeyCanonical_givenECPointGetEncodedReturnAxaxaxaxBytesIsUtf8()
       throws UnsupportedEncodingException {
@@ -2996,7 +3110,8 @@ public class SM2DiffblueTest {
    * <p>Method under test: {@link SM2#isPubKeyCanonical()}
    */
   @Test
-  @Category(MaintainedByDiffblue.class)
+  @Category(ContributionFromDiffblue.class)
+  @ManagedByDiffblue
   @MethodsUnderTest({"boolean SM2.isPubKeyCanonical()"})
   public void testIsPubKeyCanonical_thenThrowIllegalArgumentException() {
     // Arrange
@@ -3018,7 +3133,8 @@ public class SM2DiffblueTest {
    * <p>Method under test: {@link SM2#recoverAddressFromSignature(int, SM2Signature, byte[])}
    */
   @Test
-  @Category(MaintainedByDiffblue.class)
+  @Category(ContributionFromDiffblue.class)
+  @ManagedByDiffblue
   @MethodsUnderTest({"byte[] SM2.recoverAddressFromSignature(int, SM2Signature, byte[])"})
   public void testRecoverAddressFromSignature_thenReturnArrayOfByteWithAAnd9()
       throws UnsupportedEncodingException {
@@ -3046,7 +3162,8 @@ public class SM2DiffblueTest {
    * <p>Method under test: {@link SM2#recoverAddressFromSignature(int, SM2Signature, byte[])}
    */
   @Test
-  @Category(MaintainedByDiffblue.class)
+  @Category(ContributionFromDiffblue.class)
+  @ManagedByDiffblue
   @MethodsUnderTest({"byte[] SM2.recoverAddressFromSignature(int, SM2Signature, byte[])"})
   public void testRecoverAddressFromSignature_thenReturnArrayOfByteWithAAndComma()
       throws UnsupportedEncodingException {
@@ -3076,7 +3193,8 @@ public class SM2DiffblueTest {
    * <p>Method under test: {@link SM2#recoverAddressFromSignature(int, SM2Signature, byte[])}
    */
   @Test
-  @Category(MaintainedByDiffblue.class)
+  @Category(ContributionFromDiffblue.class)
+  @ManagedByDiffblue
   @MethodsUnderTest({"byte[] SM2.recoverAddressFromSignature(int, SM2Signature, byte[])"})
   public void testRecoverAddressFromSignature_thenReturnArrayOfByteWithAAndMinusFortyNine()
       throws UnsupportedEncodingException {
@@ -3104,7 +3222,8 @@ public class SM2DiffblueTest {
    * <p>Method under test: {@link SM2#recoverAddressFromSignature(int, SM2Signature, byte[])}
    */
   @Test
-  @Category(MaintainedByDiffblue.class)
+  @Category(ContributionFromDiffblue.class)
+  @ManagedByDiffblue
   @MethodsUnderTest({"byte[] SM2.recoverAddressFromSignature(int, SM2Signature, byte[])"})
   public void testRecoverAddressFromSignature_thenReturnArrayOfByteWithAAndMinusNinetyTwo()
       throws UnsupportedEncodingException {
@@ -3153,7 +3272,8 @@ public class SM2DiffblueTest {
    * <p>Method under test: {@link SM2#recoverAddressFromSignature(int, SM2Signature, byte[])}
    */
   @Test
-  @Category(MaintainedByDiffblue.class)
+  @Category(ContributionFromDiffblue.class)
+  @ManagedByDiffblue
   @MethodsUnderTest({"byte[] SM2.recoverAddressFromSignature(int, SM2Signature, byte[])"})
   public void testRecoverAddressFromSignature_thenReturnArrayOfByteWithAAndMinusSeventyOne()
       throws UnsupportedEncodingException {
@@ -3185,7 +3305,8 @@ public class SM2DiffblueTest {
    * <p>Method under test: {@link SM2#recoverAddressFromSignature(int, SM2Signature, byte[])}
    */
   @Test
-  @Category(MaintainedByDiffblue.class)
+  @Category(ContributionFromDiffblue.class)
+  @ManagedByDiffblue
   @MethodsUnderTest({"byte[] SM2.recoverAddressFromSignature(int, SM2Signature, byte[])"})
   public void testRecoverAddressFromSignature_whenMinusOne_thenThrowIllegalArgumentException()
       throws UnsupportedEncodingException {
@@ -3210,7 +3331,8 @@ public class SM2DiffblueTest {
    * <p>Method under test: {@link SM2#recoverAddressFromSignature(int, SM2Signature, byte[])}
    */
   @Test
-  @Category(MaintainedByDiffblue.class)
+  @Category(ContributionFromDiffblue.class)
+  @ManagedByDiffblue
   @MethodsUnderTest({"byte[] SM2.recoverAddressFromSignature(int, SM2Signature, byte[])"})
   public void testRecoverAddressFromSignature_whenNull_thenThrowIllegalArgumentException() {
     // Arrange, Act and Assert
@@ -3232,7 +3354,8 @@ public class SM2DiffblueTest {
    * <p>Method under test: {@link SM2#recoverAddressFromSignature(int, SM2Signature, byte[])}
    */
   @Test
-  @Category(MaintainedByDiffblue.class)
+  @Category(ContributionFromDiffblue.class)
+  @ManagedByDiffblue
   @MethodsUnderTest({"byte[] SM2.recoverAddressFromSignature(int, SM2Signature, byte[])"})
   public void testRecoverAddressFromSignature_whenTwo_thenReturnNull()
       throws UnsupportedEncodingException {
@@ -3258,7 +3381,8 @@ public class SM2DiffblueTest {
    * <p>Method under test: {@link SM2#recoverAddressFromSignature(int, SM2Signature, byte[])}
    */
   @Test
-  @Category(MaintainedByDiffblue.class)
+  @Category(ContributionFromDiffblue.class)
+  @ManagedByDiffblue
   @MethodsUnderTest({"byte[] SM2.recoverAddressFromSignature(int, SM2Signature, byte[])"})
   public void testRecoverAddressFromSignature_whenX_thenReturnArrayOfByteWithAAndMinusEighty() {
     // Arrange and Act
@@ -3287,7 +3411,8 @@ public class SM2DiffblueTest {
    * <p>Method under test: {@link SM2#recoverFromSignature(int, SM2Signature, byte[])}
    */
   @Test
-  @Category(MaintainedByDiffblue.class)
+  @Category(ContributionFromDiffblue.class)
+  @ManagedByDiffblue
   @MethodsUnderTest({"SM2 SM2.recoverFromSignature(int, SM2Signature, byte[])"})
   public void testRecoverFromSignature_thenReturnAddressIsArrayOfByteWithAAnd9()
       throws UnsupportedEncodingException {
@@ -3329,7 +3454,8 @@ public class SM2DiffblueTest {
    * <p>Method under test: {@link SM2#recoverFromSignature(int, SM2Signature, byte[])}
    */
   @Test
-  @Category(MaintainedByDiffblue.class)
+  @Category(ContributionFromDiffblue.class)
+  @ManagedByDiffblue
   @MethodsUnderTest({"SM2 SM2.recoverFromSignature(int, SM2Signature, byte[])"})
   public void testRecoverFromSignature_thenReturnAddressIsArrayOfByteWithAAndComma()
       throws UnsupportedEncodingException {
@@ -3433,7 +3559,8 @@ public class SM2DiffblueTest {
    * <p>Method under test: {@link SM2#recoverFromSignature(int, SM2Signature, byte[])}
    */
   @Test
-  @Category(MaintainedByDiffblue.class)
+  @Category(ContributionFromDiffblue.class)
+  @ManagedByDiffblue
   @MethodsUnderTest({"SM2 SM2.recoverFromSignature(int, SM2Signature, byte[])"})
   public void testRecoverFromSignature_thenReturnAddressIsArrayOfByteWithAAndMinusFortyNine()
       throws UnsupportedEncodingException {
@@ -3475,7 +3602,8 @@ public class SM2DiffblueTest {
    * <p>Method under test: {@link SM2#recoverFromSignature(int, SM2Signature, byte[])}
    */
   @Test
-  @Category(MaintainedByDiffblue.class)
+  @Category(ContributionFromDiffblue.class)
+  @ManagedByDiffblue
   @MethodsUnderTest({"SM2 SM2.recoverFromSignature(int, SM2Signature, byte[])"})
   public void testRecoverFromSignature_thenReturnAddressIsArrayOfByteWithAAndMinusNinetyTwo()
       throws UnsupportedEncodingException {
@@ -3538,7 +3666,8 @@ public class SM2DiffblueTest {
    * <p>Method under test: {@link SM2#recoverFromSignature(int, SM2Signature, byte[])}
    */
   @Test
-  @Category(MaintainedByDiffblue.class)
+  @Category(ContributionFromDiffblue.class)
+  @ManagedByDiffblue
   @MethodsUnderTest({"SM2 SM2.recoverFromSignature(int, SM2Signature, byte[])"})
   public void testRecoverFromSignature_thenReturnAddressIsArrayOfByteWithAAndMinusSeventyOne()
       throws UnsupportedEncodingException {
@@ -3644,7 +3773,8 @@ public class SM2DiffblueTest {
    * <p>Method under test: {@link SM2#recoverFromSignature(int, SM2Signature, byte[])}
    */
   @Test
-  @Category(MaintainedByDiffblue.class)
+  @Category(ContributionFromDiffblue.class)
+  @ManagedByDiffblue
   @MethodsUnderTest({"SM2 SM2.recoverFromSignature(int, SM2Signature, byte[])"})
   public void testRecoverFromSignature_whenMinusOne_thenThrowIllegalArgumentException()
       throws UnsupportedEncodingException {
@@ -3669,7 +3799,8 @@ public class SM2DiffblueTest {
    * <p>Method under test: {@link SM2#recoverFromSignature(int, SM2Signature, byte[])}
    */
   @Test
-  @Category(MaintainedByDiffblue.class)
+  @Category(ContributionFromDiffblue.class)
+  @ManagedByDiffblue
   @MethodsUnderTest({"SM2 SM2.recoverFromSignature(int, SM2Signature, byte[])"})
   public void testRecoverFromSignature_whenNull_thenThrowIllegalArgumentException() {
     // Arrange, Act and Assert
@@ -3691,7 +3822,8 @@ public class SM2DiffblueTest {
    * <p>Method under test: {@link SM2#recoverFromSignature(int, SM2Signature, byte[])}
    */
   @Test
-  @Category(MaintainedByDiffblue.class)
+  @Category(ContributionFromDiffblue.class)
+  @ManagedByDiffblue
   @MethodsUnderTest({"SM2 SM2.recoverFromSignature(int, SM2Signature, byte[])"})
   public void testRecoverFromSignature_whenTwo_thenReturnNull()
       throws UnsupportedEncodingException {
@@ -3717,7 +3849,8 @@ public class SM2DiffblueTest {
    * <p>Method under test: {@link SM2#recoverFromSignature(int, SM2Signature, byte[])}
    */
   @Test
-  @Category(MaintainedByDiffblue.class)
+  @Category(ContributionFromDiffblue.class)
+  @ManagedByDiffblue
   @MethodsUnderTest({"SM2 SM2.recoverFromSignature(int, SM2Signature, byte[])"})
   public void testRecoverFromSignature_whenX_thenReturnAddressIsArrayOfByteWithAAndMinusEighty() {
     // Arrange and Act
@@ -3821,7 +3954,8 @@ public class SM2DiffblueTest {
    * <p>Method under test: {@link SM2#isPubKeyOnly()}
    */
   @Test
-  @Category(MaintainedByDiffblue.class)
+  @Category(ContributionFromDiffblue.class)
+  @ManagedByDiffblue
   @MethodsUnderTest({"boolean SM2.isPubKeyOnly()"})
   public void testIsPubKeyOnly_givenFromPublicOnlyECPoint_thenReturnTrue() {
     // Arrange, Act and Assert
@@ -3839,7 +3973,8 @@ public class SM2DiffblueTest {
    * <p>Method under test: {@link SM2#hasPrivKey()}
    */
   @Test
-  @Category(MaintainedByDiffblue.class)
+  @Category(ContributionFromDiffblue.class)
+  @ManagedByDiffblue
   @MethodsUnderTest({"boolean SM2.hasPrivKey()"})
   public void testHasPrivKey_givenFromPublicOnlyECPoint_thenReturnFalse() {
     // Arrange, Act and Assert
@@ -3856,7 +3991,8 @@ public class SM2DiffblueTest {
    * <p>Method under test: {@link SM2#getNodeId()}
    */
   @Test
-  @Category(MaintainedByDiffblue.class)
+  @Category(ContributionFromDiffblue.class)
+  @ManagedByDiffblue
   @MethodsUnderTest({"byte[] SM2.getNodeId()"})
   public void testGetNodeId_thenReturnXaxaxaxBytesIsUtf8() throws UnsupportedEncodingException {
     // Arrange
@@ -3881,7 +4017,8 @@ public class SM2DiffblueTest {
    * <p>Method under test: {@link SM2#getNodeId()}
    */
   @Test
-  @Category(MaintainedByDiffblue.class)
+  @Category(ContributionFromDiffblue.class)
+  @ManagedByDiffblue
   @MethodsUnderTest({"byte[] SM2.getNodeId()"})
   public void testGetNodeId_thenThrowIllegalArgumentException() {
     // Arrange
@@ -3904,7 +4041,8 @@ public class SM2DiffblueTest {
    * <p>Method under test: {@link SM2#getPrivKey()}
    */
   @Test
-  @Category(MaintainedByDiffblue.class)
+  @Category(ContributionFromDiffblue.class)
+  @ManagedByDiffblue
   @MethodsUnderTest({"BigInteger SM2.getPrivKey()"})
   public void testGetPrivKey_givenFromPublicOnlyECPoint_thenThrowMissingPrivateKeyException() {
     // Arrange, Act and Assert
@@ -3923,7 +4061,8 @@ public class SM2DiffblueTest {
    * <p>Method under test: {@link SM2#toStringWithPrivate()}
    */
   @Test
-  @Category(MaintainedByDiffblue.class)
+  @Category(ContributionFromDiffblue.class)
+  @ManagedByDiffblue
   @MethodsUnderTest({"String SM2.toStringWithPrivate()"})
   public void testToStringWithPrivate_thenReturnPub4158415841584158()
       throws UnsupportedEncodingException {
@@ -3949,7 +4088,8 @@ public class SM2DiffblueTest {
    * <p>Method under test: {@link SM2#toStringWithPrivate()}
    */
   @Test
-  @Category(MaintainedByDiffblue.class)
+  @Category(ContributionFromDiffblue.class)
+  @ManagedByDiffblue
   @MethodsUnderTest({"String SM2.toStringWithPrivate()"})
   public void testToStringWithPrivate_thenThrowIllegalArgumentException() {
     // Arrange
@@ -3973,7 +4113,8 @@ public class SM2DiffblueTest {
    * <p>Method under test: {@link SM2#getPrivKeyBytes()}
    */
   @Test
-  @Category(MaintainedByDiffblue.class)
+  @Category(ContributionFromDiffblue.class)
+  @ManagedByDiffblue
   @MethodsUnderTest({"byte[] SM2.getPrivKeyBytes()"})
   public void testGetPrivKeyBytes_givenFromPublicOnlyECPoint_thenReturnNull() {
     // Arrange, Act and Assert

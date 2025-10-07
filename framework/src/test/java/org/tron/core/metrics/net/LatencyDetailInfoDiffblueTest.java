@@ -2,7 +2,8 @@ package org.tron.core.metrics.net;
 
 import static org.junit.Assert.assertEquals;
 import static org.junit.Assert.assertNotEquals;
-import com.diffblue.cover.annotations.MaintainedByDiffblue;
+import com.diffblue.cover.annotations.ContributionFromDiffblue;
+import com.diffblue.cover.annotations.ManagedByDiffblue;
 import com.diffblue.cover.annotations.MethodsUnderTest;
 import org.junit.Test;
 import org.junit.experimental.categories.Category;
@@ -24,7 +25,8 @@ public class LatencyDetailInfoDiffblueTest {
    * </ul>
    */
   @Test
-  @Category(MaintainedByDiffblue.class)
+  @Category(ContributionFromDiffblue.class)
+  @ManagedByDiffblue
   @MethodsUnderTest({
     "boolean LatencyDetailInfo.equals(Object)",
     "int LatencyDetailInfo.hashCode()"
@@ -72,7 +74,8 @@ public class LatencyDetailInfoDiffblueTest {
    * </ul>
    */
   @Test
-  @Category(MaintainedByDiffblue.class)
+  @Category(ContributionFromDiffblue.class)
+  @ManagedByDiffblue
   @MethodsUnderTest({
     "boolean LatencyDetailInfo.equals(Object)",
     "int LatencyDetailInfo.hashCode()"
@@ -120,7 +123,8 @@ public class LatencyDetailInfoDiffblueTest {
    * </ul>
    */
   @Test
-  @Category(MaintainedByDiffblue.class)
+  @Category(ContributionFromDiffblue.class)
+  @ManagedByDiffblue
   @MethodsUnderTest({
     "boolean LatencyDetailInfo.equals(Object)",
     "int LatencyDetailInfo.hashCode()"
@@ -154,7 +158,8 @@ public class LatencyDetailInfoDiffblueTest {
    * <p>Method under test: {@link LatencyDetailInfo#equals(Object)}
    */
   @Test
-  @Category(MaintainedByDiffblue.class)
+  @Category(ContributionFromDiffblue.class)
+  @ManagedByDiffblue
   @MethodsUnderTest({
     "boolean LatencyDetailInfo.equals(Object)",
     "int LatencyDetailInfo.hashCode()"
@@ -196,7 +201,8 @@ public class LatencyDetailInfoDiffblueTest {
    * <p>Method under test: {@link LatencyDetailInfo#equals(Object)}
    */
   @Test
-  @Category(MaintainedByDiffblue.class)
+  @Category(ContributionFromDiffblue.class)
+  @ManagedByDiffblue
   @MethodsUnderTest({
     "boolean LatencyDetailInfo.equals(Object)",
     "int LatencyDetailInfo.hashCode()"
@@ -238,7 +244,8 @@ public class LatencyDetailInfoDiffblueTest {
    * <p>Method under test: {@link LatencyDetailInfo#equals(Object)}
    */
   @Test
-  @Category(MaintainedByDiffblue.class)
+  @Category(ContributionFromDiffblue.class)
+  @ManagedByDiffblue
   @MethodsUnderTest({
     "boolean LatencyDetailInfo.equals(Object)",
     "int LatencyDetailInfo.hashCode()"
@@ -280,7 +287,8 @@ public class LatencyDetailInfoDiffblueTest {
    * <p>Method under test: {@link LatencyDetailInfo#equals(Object)}
    */
   @Test
-  @Category(MaintainedByDiffblue.class)
+  @Category(ContributionFromDiffblue.class)
+  @ManagedByDiffblue
   @MethodsUnderTest({
     "boolean LatencyDetailInfo.equals(Object)",
     "int LatencyDetailInfo.hashCode()"
@@ -322,7 +330,8 @@ public class LatencyDetailInfoDiffblueTest {
    * <p>Method under test: {@link LatencyDetailInfo#equals(Object)}
    */
   @Test
-  @Category(MaintainedByDiffblue.class)
+  @Category(ContributionFromDiffblue.class)
+  @ManagedByDiffblue
   @MethodsUnderTest({
     "boolean LatencyDetailInfo.equals(Object)",
     "int LatencyDetailInfo.hashCode()"
@@ -364,7 +373,8 @@ public class LatencyDetailInfoDiffblueTest {
    * <p>Method under test: {@link LatencyDetailInfo#equals(Object)}
    */
   @Test
-  @Category(MaintainedByDiffblue.class)
+  @Category(ContributionFromDiffblue.class)
+  @ManagedByDiffblue
   @MethodsUnderTest({
     "boolean LatencyDetailInfo.equals(Object)",
     "int LatencyDetailInfo.hashCode()"
@@ -406,7 +416,8 @@ public class LatencyDetailInfoDiffblueTest {
    * <p>Method under test: {@link LatencyDetailInfo#equals(Object)}
    */
   @Test
-  @Category(MaintainedByDiffblue.class)
+  @Category(ContributionFromDiffblue.class)
+  @ManagedByDiffblue
   @MethodsUnderTest({
     "boolean LatencyDetailInfo.equals(Object)",
     "int LatencyDetailInfo.hashCode()"
@@ -448,7 +459,8 @@ public class LatencyDetailInfoDiffblueTest {
    * <p>Method under test: {@link LatencyDetailInfo#equals(Object)}
    */
   @Test
-  @Category(MaintainedByDiffblue.class)
+  @Category(ContributionFromDiffblue.class)
+  @ManagedByDiffblue
   @MethodsUnderTest({
     "boolean LatencyDetailInfo.equals(Object)",
     "int LatencyDetailInfo.hashCode()"
@@ -490,7 +502,8 @@ public class LatencyDetailInfoDiffblueTest {
    * <p>Method under test: {@link LatencyDetailInfo#equals(Object)}
    */
   @Test
-  @Category(MaintainedByDiffblue.class)
+  @Category(ContributionFromDiffblue.class)
+  @ManagedByDiffblue
   @MethodsUnderTest({
     "boolean LatencyDetailInfo.equals(Object)",
     "int LatencyDetailInfo.hashCode()"
@@ -532,7 +545,8 @@ public class LatencyDetailInfoDiffblueTest {
    * <p>Method under test: {@link LatencyDetailInfo#equals(Object)}
    */
   @Test
-  @Category(MaintainedByDiffblue.class)
+  @Category(ContributionFromDiffblue.class)
+  @ManagedByDiffblue
   @MethodsUnderTest({
     "boolean LatencyDetailInfo.equals(Object)",
     "int LatencyDetailInfo.hashCode()"
@@ -564,7 +578,8 @@ public class LatencyDetailInfoDiffblueTest {
    * <p>Method under test: {@link LatencyDetailInfo#equals(Object)}
    */
   @Test
-  @Category(MaintainedByDiffblue.class)
+  @Category(ContributionFromDiffblue.class)
+  @ManagedByDiffblue
   @MethodsUnderTest({
     "boolean LatencyDetailInfo.equals(Object)",
     "int LatencyDetailInfo.hashCode()"
@@ -612,7 +627,8 @@ public class LatencyDetailInfoDiffblueTest {
    * </ul>
    */
   @Test
-  @Category(MaintainedByDiffblue.class)
+  @Category(ContributionFromDiffblue.class)
+  @ManagedByDiffblue
   @MethodsUnderTest({
     "void LatencyDetailInfo.<init>()",
     "int LatencyDetailInfo.getCount()",

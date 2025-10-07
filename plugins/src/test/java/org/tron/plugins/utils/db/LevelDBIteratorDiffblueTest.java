@@ -9,7 +9,8 @@ import static org.mockito.Mockito.doNothing;
 import static org.mockito.Mockito.mock;
 import static org.mockito.Mockito.verify;
 import static org.mockito.Mockito.when;
-import com.diffblue.cover.annotations.MaintainedByDiffblue;
+import com.diffblue.cover.annotations.ContributionFromDiffblue;
+import com.diffblue.cover.annotations.ManagedByDiffblue;
 import com.diffblue.cover.annotations.MethodsUnderTest;
 import java.io.IOException;
 import java.io.UnsupportedEncodingException;
@@ -36,7 +37,8 @@ public class LevelDBIteratorDiffblueTest {
    * <p>Method under test: {@link LevelDBIterator#valid()}
    */
   @Test
-  @Category(MaintainedByDiffblue.class)
+  @Category(ContributionFromDiffblue.class)
+  @ManagedByDiffblue
   @MethodsUnderTest({"boolean LevelDBIterator.valid()"})
   public void testValid_givenSeekingIteratorAdapterHasNextReturnFalse_thenReturnFalse() {
     // Arrange
@@ -63,7 +65,8 @@ public class LevelDBIteratorDiffblueTest {
    * <p>Method under test: {@link LevelDBIterator#valid()}
    */
   @Test
-  @Category(MaintainedByDiffblue.class)
+  @Category(ContributionFromDiffblue.class)
+  @ManagedByDiffblue
   @MethodsUnderTest({"boolean LevelDBIterator.valid()"})
   public void testValid_givenSeekingIteratorAdapterHasNextReturnTrue_thenReturnTrue() {
     // Arrange
@@ -90,7 +93,8 @@ public class LevelDBIteratorDiffblueTest {
    * <p>Method under test: {@link LevelDBIterator#seek(byte[])}
    */
   @Test
-  @Category(MaintainedByDiffblue.class)
+  @Category(ContributionFromDiffblue.class)
+  @ManagedByDiffblue
   @MethodsUnderTest({"void LevelDBIterator.seek(byte[])"})
   public void testSeek_givenSeekingIteratorAdapterSeekDoesNothing_thenCallsSeek()
       throws UnsupportedEncodingException {
@@ -115,7 +119,8 @@ public class LevelDBIteratorDiffblueTest {
    * <p>Method under test: {@link LevelDBIterator#seekToFirst()}
    */
   @Test
-  @Category(MaintainedByDiffblue.class)
+  @Category(ContributionFromDiffblue.class)
+  @ManagedByDiffblue
   @MethodsUnderTest({"void LevelDBIterator.seekToFirst()"})
   public void testSeekToFirst_thenCallsSeekToFirst() {
     // Arrange
@@ -139,7 +144,8 @@ public class LevelDBIteratorDiffblueTest {
    * <p>Method under test: {@link LevelDBIterator#seekToLast()}
    */
   @Test
-  @Category(MaintainedByDiffblue.class)
+  @Category(ContributionFromDiffblue.class)
+  @ManagedByDiffblue
   @MethodsUnderTest({"void LevelDBIterator.seekToLast()"})
   public void testSeekToLast_thenCallsSeekToLast() {
     // Arrange
@@ -165,7 +171,8 @@ public class LevelDBIteratorDiffblueTest {
    * <p>Method under test: {@link LevelDBIterator#hasNext()}
    */
   @Test
-  @Category(MaintainedByDiffblue.class)
+  @Category(ContributionFromDiffblue.class)
+  @ManagedByDiffblue
   @MethodsUnderTest({"boolean LevelDBIterator.hasNext()"})
   public void testHasNext_givenSeekingIteratorAdapterHasNextReturnFalse_thenReturnFalse() {
     // Arrange
@@ -192,7 +199,8 @@ public class LevelDBIteratorDiffblueTest {
    * <p>Method under test: {@link LevelDBIterator#hasNext()}
    */
   @Test
-  @Category(MaintainedByDiffblue.class)
+  @Category(ContributionFromDiffblue.class)
+  @ManagedByDiffblue
   @MethodsUnderTest({"boolean LevelDBIterator.hasNext()"})
   public void testHasNext_givenSeekingIteratorAdapterHasNextReturnTrue_thenReturnTrue() {
     // Arrange
@@ -217,7 +225,8 @@ public class LevelDBIteratorDiffblueTest {
    * <p>Method under test: {@link LevelDBIterator#getKey()}
    */
   @Test
-  @Category(MaintainedByDiffblue.class)
+  @Category(ContributionFromDiffblue.class)
+  @ManagedByDiffblue
   @MethodsUnderTest({"byte[] LevelDBIterator.getKey()"})
   public void testGetKey_thenReturnArrayOfByteWithZeroAndZero() {
     // Arrange
@@ -244,7 +253,8 @@ public class LevelDBIteratorDiffblueTest {
    * <p>Method under test: {@link LevelDBIterator#getValue()}
    */
   @Test
-  @Category(MaintainedByDiffblue.class)
+  @Category(ContributionFromDiffblue.class)
+  @ManagedByDiffblue
   @MethodsUnderTest({"byte[] LevelDBIterator.getValue()"})
   public void testGetValue_thenReturnArrayOfByteWithZeroAndZero() {
     // Arrange
@@ -272,7 +282,8 @@ public class LevelDBIteratorDiffblueTest {
    * <p>Method under test: {@link LevelDBIterator#next()}
    */
   @Test
-  @Category(MaintainedByDiffblue.class)
+  @Category(ContributionFromDiffblue.class)
+  @ManagedByDiffblue
   @MethodsUnderTest({"Entry LevelDBIterator.next()"})
   public void testNext_thenReturnDbEntryWithKeyIsAllocateThreeAndValueIsAllocateThree() {
     // Arrange
@@ -300,7 +311,8 @@ public class LevelDBIteratorDiffblueTest {
    * <p>Method under test: {@link LevelDBIterator#close()}
    */
   @Test
-  @Category(MaintainedByDiffblue.class)
+  @Category(ContributionFromDiffblue.class)
+  @ManagedByDiffblue
   @MethodsUnderTest({"void LevelDBIterator.close()"})
   public void testClose_givenSeekingIteratorAdapterCloseDoesNothing_thenCallsClose()
       throws IOException {

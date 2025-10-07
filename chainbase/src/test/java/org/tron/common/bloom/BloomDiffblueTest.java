@@ -9,7 +9,8 @@ import static org.junit.Assert.assertTrue;
 import static org.mockito.Mockito.mock;
 import static org.mockito.Mockito.verify;
 import static org.mockito.Mockito.when;
-import com.diffblue.cover.annotations.MaintainedByDiffblue;
+import com.diffblue.cover.annotations.ContributionFromDiffblue;
+import com.diffblue.cover.annotations.ManagedByDiffblue;
 import com.diffblue.cover.annotations.MethodsUnderTest;
 import java.io.UnsupportedEncodingException;
 import org.junit.Test;
@@ -23,7 +24,8 @@ public class BloomDiffblueTest {
    * <p>Method under test: {@link Bloom#Bloom()}
    */
   @Test
-  @Category(MaintainedByDiffblue.class)
+  @Category(ContributionFromDiffblue.class)
+  @ManagedByDiffblue
   @MethodsUnderTest({"void Bloom.<init>()"})
   public void testNewBloom() {
     // Arrange, Act and Assert
@@ -36,7 +38,8 @@ public class BloomDiffblueTest {
    * <p>Method under test: {@link Bloom#Bloom(byte[])}
    */
   @Test
-  @Category(MaintainedByDiffblue.class)
+  @Category(ContributionFromDiffblue.class)
+  @ManagedByDiffblue
   @MethodsUnderTest({"void Bloom.<init>(byte[])"})
   public void testNewBloom2() throws UnsupportedEncodingException {
     // Arrange, Act and Assert
@@ -49,7 +52,8 @@ public class BloomDiffblueTest {
    * <p>Method under test: {@link Bloom#getLowBits(int)}
    */
   @Test
-  @Category(MaintainedByDiffblue.class)
+  @Category(ContributionFromDiffblue.class)
+  @ManagedByDiffblue
   @MethodsUnderTest({"int Bloom.getLowBits(int)"})
   public void testGetLowBits() {
     // Arrange, Act and Assert
@@ -67,7 +71,8 @@ public class BloomDiffblueTest {
    * <p>Method under test: {@link Bloom#create(byte[])}
    */
   @Test
-  @Category(MaintainedByDiffblue.class)
+  @Category(ContributionFromDiffblue.class)
+  @ManagedByDiffblue
   @MethodsUnderTest({"Bloom Bloom.create(byte[])"})
   public void testCreate_whenAxaxaxaxBytesIsUtf8_thenReturnArrayLengthIsBloom_byte_size()
       throws UnsupportedEncodingException {
@@ -87,7 +92,8 @@ public class BloomDiffblueTest {
    * <p>Method under test: {@link Bloom#createBloom(TransactionRetCapsule)}
    */
   @Test
-  @Category(MaintainedByDiffblue.class)
+  @Category(ContributionFromDiffblue.class)
+  @ManagedByDiffblue
   @MethodsUnderTest({"Bloom Bloom.createBloom(TransactionRetCapsule)"})
   public void testCreateBloom_givenRuntimeException_thenThrowRuntimeException() {
     // Arrange
@@ -110,7 +116,8 @@ public class BloomDiffblueTest {
    * <p>Method under test: {@link Bloom#createBloom(TransactionRetCapsule)}
    */
   @Test
-  @Category(MaintainedByDiffblue.class)
+  @Category(ContributionFromDiffblue.class)
+  @ManagedByDiffblue
   @MethodsUnderTest({"Bloom Bloom.createBloom(TransactionRetCapsule)"})
   public void testCreateBloom_whenNull_thenReturnNull() {
     // Arrange, Act and Assert
@@ -128,7 +135,8 @@ public class BloomDiffblueTest {
    * <p>Method under test: {@link Bloom#createBloom(TransactionRetCapsule)}
    */
   @Test
-  @Category(MaintainedByDiffblue.class)
+  @Category(ContributionFromDiffblue.class)
+  @ManagedByDiffblue
   @MethodsUnderTest({"Bloom Bloom.createBloom(TransactionRetCapsule)"})
   public void testCreateBloom_whenTransactionRetCapsule_thenReturnNull() {
     // Arrange, Act and Assert
@@ -146,7 +154,8 @@ public class BloomDiffblueTest {
    * <p>Method under test: {@link Bloom#matches(Bloom)}
    */
   @Test
-  @Category(MaintainedByDiffblue.class)
+  @Category(ContributionFromDiffblue.class)
+  @ManagedByDiffblue
   @MethodsUnderTest({"boolean Bloom.matches(Bloom)"})
   public void testMatches_whenA_thenReturnFalse() {
     // Arrange
@@ -167,7 +176,8 @@ public class BloomDiffblueTest {
    * <p>Method under test: {@link Bloom#matches(Bloom)}
    */
   @Test
-  @Category(MaintainedByDiffblue.class)
+  @Category(ContributionFromDiffblue.class)
+  @ManagedByDiffblue
   @MethodsUnderTest({"boolean Bloom.matches(Bloom)"})
   public void testMatches_whenBloom_thenReturnTrue() {
     // Arrange
@@ -183,7 +193,8 @@ public class BloomDiffblueTest {
    * <p>Method under test: {@link Bloom#getData()}
    */
   @Test
-  @Category(MaintainedByDiffblue.class)
+  @Category(ContributionFromDiffblue.class)
+  @ManagedByDiffblue
   @MethodsUnderTest({"byte[] Bloom.getData()", "java.lang.String Bloom.toString()"})
   public void testGetData() {
     // Arrange and Act
@@ -249,7 +260,8 @@ public class BloomDiffblueTest {
    * <p>Method under test: {@link Bloom#copy()}
    */
   @Test
-  @Category(MaintainedByDiffblue.class)
+  @Category(ContributionFromDiffblue.class)
+  @ManagedByDiffblue
   @MethodsUnderTest({"Bloom Bloom.copy()"})
   public void testCopy() {
     // Arrange
@@ -278,7 +290,8 @@ public class BloomDiffblueTest {
    * </ul>
    */
   @Test
-  @Category(MaintainedByDiffblue.class)
+  @Category(ContributionFromDiffblue.class)
+  @ManagedByDiffblue
   @MethodsUnderTest({"boolean Bloom.equals(Object)", "int Bloom.hashCode()"})
   public void testEqualsAndHashCode_whenOtherIsEqual_thenReturnEqual() {
     // Arrange
@@ -306,7 +319,8 @@ public class BloomDiffblueTest {
    * </ul>
    */
   @Test
-  @Category(MaintainedByDiffblue.class)
+  @Category(ContributionFromDiffblue.class)
+  @ManagedByDiffblue
   @MethodsUnderTest({"boolean Bloom.equals(Object)", "int Bloom.hashCode()"})
   public void testEqualsAndHashCode_whenOtherIsSame_thenReturnEqual() {
     // Arrange
@@ -329,7 +343,8 @@ public class BloomDiffblueTest {
    * <p>Method under test: {@link Bloom#equals(Object)}
    */
   @Test
-  @Category(MaintainedByDiffblue.class)
+  @Category(ContributionFromDiffblue.class)
+  @ManagedByDiffblue
   @MethodsUnderTest({"boolean Bloom.equals(Object)", "int Bloom.hashCode()"})
   public void testEquals_whenOtherIsDifferent_thenReturnNotEqual()
       throws UnsupportedEncodingException {
@@ -351,7 +366,8 @@ public class BloomDiffblueTest {
    * <p>Method under test: {@link Bloom#equals(Object)}
    */
   @Test
-  @Category(MaintainedByDiffblue.class)
+  @Category(ContributionFromDiffblue.class)
+  @ManagedByDiffblue
   @MethodsUnderTest({"boolean Bloom.equals(Object)", "int Bloom.hashCode()"})
   public void testEquals_whenOtherIsNull_thenReturnNotEqual() {
     // Arrange, Act and Assert
@@ -369,7 +385,8 @@ public class BloomDiffblueTest {
    * <p>Method under test: {@link Bloom#equals(Object)}
    */
   @Test
-  @Category(MaintainedByDiffblue.class)
+  @Category(ContributionFromDiffblue.class)
+  @ManagedByDiffblue
   @MethodsUnderTest({"boolean Bloom.equals(Object)", "int Bloom.hashCode()"})
   public void testEquals_whenOtherIsWrongType_thenReturnNotEqual() {
     // Arrange, Act and Assert

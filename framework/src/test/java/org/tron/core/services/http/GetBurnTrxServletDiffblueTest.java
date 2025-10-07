@@ -9,7 +9,8 @@ import static org.junit.Assert.assertTrue;
 import static org.mockito.Mockito.mock;
 import static org.mockito.Mockito.verify;
 import static org.mockito.Mockito.when;
-import com.diffblue.cover.annotations.MaintainedByDiffblue;
+import com.diffblue.cover.annotations.ContributionFromDiffblue;
+import com.diffblue.cover.annotations.ManagedByDiffblue;
 import com.diffblue.cover.annotations.MethodsUnderTest;
 import java.io.IOException;
 import java.io.PrintWriter;
@@ -51,7 +52,8 @@ public class GetBurnTrxServletDiffblueTest {
    * <p>Method under test: {@link GetBurnTrxServlet#doGet(HttpServletRequest, HttpServletResponse)}
    */
   @Test
-  @Category(MaintainedByDiffblue.class)
+  @Category(ContributionFromDiffblue.class)
+  @ManagedByDiffblue
   @MethodsUnderTest({"void GetBurnTrxServlet.doGet(HttpServletRequest, HttpServletResponse)"})
   public void testDoGet() throws IOException {
     // Arrange
@@ -84,7 +86,8 @@ public class GetBurnTrxServletDiffblueTest {
    * <p>Method under test: {@link GetBurnTrxServlet#doGet(HttpServletRequest, HttpServletResponse)}
    */
   @Test
-  @Category(MaintainedByDiffblue.class)
+  @Category(ContributionFromDiffblue.class)
+  @ManagedByDiffblue
   @MethodsUnderTest({"void GetBurnTrxServlet.doGet(HttpServletRequest, HttpServletResponse)"})
   public void testDoGet2() throws IOException {
     // Arrange
@@ -117,7 +120,8 @@ public class GetBurnTrxServletDiffblueTest {
    * <p>Method under test: {@link GetBurnTrxServlet#doGet(HttpServletRequest, HttpServletResponse)}
    */
   @Test
-  @Category(MaintainedByDiffblue.class)
+  @Category(ContributionFromDiffblue.class)
+  @ManagedByDiffblue
   @MethodsUnderTest({"void GetBurnTrxServlet.doGet(HttpServletRequest, HttpServletResponse)"})
   public void testDoGet3() throws IOException {
     // Arrange
@@ -151,7 +155,8 @@ public class GetBurnTrxServletDiffblueTest {
    * <p>Method under test: {@link GetBurnTrxServlet#doGet(HttpServletRequest, HttpServletResponse)}
    */
   @Test
-  @Category(MaintainedByDiffblue.class)
+  @Category(ContributionFromDiffblue.class)
+  @ManagedByDiffblue
   @MethodsUnderTest({"void GetBurnTrxServlet.doGet(HttpServletRequest, HttpServletResponse)"})
   public void testDoGet_givenRuntimeException_thenThrowRuntimeException() throws IOException {
     // Arrange
@@ -181,7 +186,8 @@ public class GetBurnTrxServletDiffblueTest {
    * <p>Method under test: {@link GetBurnTrxServlet#doGet(HttpServletRequest, HttpServletResponse)}
    */
   @Test
-  @Category(MaintainedByDiffblue.class)
+  @Category(ContributionFromDiffblue.class)
+  @ManagedByDiffblue
   @MethodsUnderTest({"void GetBurnTrxServlet.doGet(HttpServletRequest, HttpServletResponse)"})
   public void testDoGet_thenHttpServletResponseWrapperWithResponseIsResponseResponseResponse()
       throws IOException {
@@ -242,7 +248,8 @@ public class GetBurnTrxServletDiffblueTest {
    * <p>Method under test: {@link GetBurnTrxServlet#doPost(HttpServletRequest, HttpServletResponse)}
    */
   @Test
-  @Category(MaintainedByDiffblue.class)
+  @Category(ContributionFromDiffblue.class)
+  @ManagedByDiffblue
   @MethodsUnderTest({"void GetBurnTrxServlet.doPost(HttpServletRequest, HttpServletResponse)"})
   public void testDoPost() throws IOException {
     // Arrange
@@ -275,7 +282,8 @@ public class GetBurnTrxServletDiffblueTest {
    * <p>Method under test: {@link GetBurnTrxServlet#doPost(HttpServletRequest, HttpServletResponse)}
    */
   @Test
-  @Category(MaintainedByDiffblue.class)
+  @Category(ContributionFromDiffblue.class)
+  @ManagedByDiffblue
   @MethodsUnderTest({"void GetBurnTrxServlet.doPost(HttpServletRequest, HttpServletResponse)"})
   public void testDoPost2() throws IOException {
     // Arrange
@@ -308,7 +316,8 @@ public class GetBurnTrxServletDiffblueTest {
    * <p>Method under test: {@link GetBurnTrxServlet#doPost(HttpServletRequest, HttpServletResponse)}
    */
   @Test
-  @Category(MaintainedByDiffblue.class)
+  @Category(ContributionFromDiffblue.class)
+  @ManagedByDiffblue
   @MethodsUnderTest({"void GetBurnTrxServlet.doPost(HttpServletRequest, HttpServletResponse)"})
   public void testDoPost_givenGetBurnTrxServlet() throws IOException {
     // Arrange
@@ -346,7 +355,8 @@ public class GetBurnTrxServletDiffblueTest {
    * <p>Method under test: {@link GetBurnTrxServlet#doPost(HttpServletRequest, HttpServletResponse)}
    */
   @Test
-  @Category(MaintainedByDiffblue.class)
+  @Category(ContributionFromDiffblue.class)
+  @ManagedByDiffblue
   @MethodsUnderTest({"void GetBurnTrxServlet.doPost(HttpServletRequest, HttpServletResponse)"})
   public void testDoPost_thenHttpServletResponseWrapperWithResponseIsResponseResponseResponse()
       throws IOException {

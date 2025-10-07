@@ -8,7 +8,8 @@ import static org.mockito.Mockito.atLeast;
 import static org.mockito.Mockito.mock;
 import static org.mockito.Mockito.verify;
 import static org.mockito.Mockito.when;
-import com.diffblue.cover.annotations.MaintainedByDiffblue;
+import com.diffblue.cover.annotations.ContributionFromDiffblue;
+import com.diffblue.cover.annotations.ManagedByDiffblue;
 import com.diffblue.cover.annotations.MethodsUnderTest;
 import com.google.protobuf.ByteString;
 import com.google.protobuf.ByteString.ByteIterator;
@@ -31,7 +32,8 @@ public class PbftCommitMessageDiffblueTest {
    * <p>Method under test: {@link PbftCommitMessage#PbftCommitMessage(PbftSignCapsule)}
    */
   @Test
-  @Category(MaintainedByDiffblue.class)
+  @Category(ContributionFromDiffblue.class)
+  @ManagedByDiffblue
   @MethodsUnderTest({"void PbftCommitMessage.<init>(PbftSignCapsule)"})
   public void testNewPbftCommitMessage() {
     // Arrange
@@ -82,7 +84,8 @@ public class PbftCommitMessageDiffblueTest {
    * <p>Method under test: {@link PbftCommitMessage#PbftCommitMessage(PbftSignCapsule)}
    */
   @Test
-  @Category(MaintainedByDiffblue.class)
+  @Category(ContributionFromDiffblue.class)
+  @ManagedByDiffblue
   @MethodsUnderTest({"void PbftCommitMessage.<init>(PbftSignCapsule)"})
   public void testNewPbftCommitMessage2() {
     // Arrange
@@ -135,7 +138,8 @@ public class PbftCommitMessageDiffblueTest {
    * <p>Method under test: {@link PbftCommitMessage#PbftCommitMessage(byte[])}
    */
   @Test
-  @Category(MaintainedByDiffblue.class)
+  @Category(ContributionFromDiffblue.class)
+  @ManagedByDiffblue
   @MethodsUnderTest({"void PbftCommitMessage.<init>(byte[])"})
   public void testNewPbftCommitMessage3() throws UnsupportedEncodingException {
     // Arrange and Act
@@ -181,7 +185,8 @@ public class PbftCommitMessageDiffblueTest {
    * <p>Method under test: {@link PbftCommitMessage#PbftCommitMessage(byte[])}
    */
   @Test
-  @Category(MaintainedByDiffblue.class)
+  @Category(ContributionFromDiffblue.class)
+  @ManagedByDiffblue
   @MethodsUnderTest({"void PbftCommitMessage.<init>(byte[])"})
   public void testNewPbftCommitMessage4() {
     // Arrange and Act
@@ -228,7 +233,8 @@ public class PbftCommitMessageDiffblueTest {
    * <p>Method under test: {@link PbftCommitMessage#PbftCommitMessage(byte[])}
    */
   @Test
-  @Category(MaintainedByDiffblue.class)
+  @Category(ContributionFromDiffblue.class)
+  @ManagedByDiffblue
   @MethodsUnderTest({"void PbftCommitMessage.<init>(byte[])"})
   public void testNewPbftCommitMessage5() {
     // Arrange and Act
@@ -273,7 +279,8 @@ public class PbftCommitMessageDiffblueTest {
    * <p>Method under test: {@link PbftCommitMessage#PbftCommitMessage(byte[])}
    */
   @Test
-  @Category(MaintainedByDiffblue.class)
+  @Category(ContributionFromDiffblue.class)
+  @ManagedByDiffblue
   @MethodsUnderTest({"void PbftCommitMessage.<init>(byte[])"})
   public void testNewPbftCommitMessage6() throws UnsupportedEncodingException {
     // Arrange and Act
@@ -324,7 +331,8 @@ public class PbftCommitMessageDiffblueTest {
    * <p>Method under test: {@link PbftCommitMessage#PbftCommitMessage(byte[])}
    */
   @Test
-  @Category(MaintainedByDiffblue.class)
+  @Category(ContributionFromDiffblue.class)
+  @ManagedByDiffblue
   @MethodsUnderTest({"void PbftCommitMessage.<init>(byte[])"})
   public void testNewPbftCommitMessage_thenReturnDataIsAxaxaxaxBytesIsUtf8()
       throws UnsupportedEncodingException {
@@ -371,7 +379,8 @@ public class PbftCommitMessageDiffblueTest {
    * <p>Method under test: {@link PbftCommitMessage#PbftCommitMessage(byte[])}
    */
   @Test
-  @Category(MaintainedByDiffblue.class)
+  @Category(ContributionFromDiffblue.class)
+  @ManagedByDiffblue
   @MethodsUnderTest({"void PbftCommitMessage.<init>(byte[])"})
   public void testNewPbftCommitMessage_thenSendDataReturnUnpooledHeapByteBuf() {
     // Arrange and Act
@@ -418,7 +427,8 @@ public class PbftCommitMessageDiffblueTest {
    * <p>Method under test: {@link PbftCommitMessage#PbftCommitMessage(byte[])}
    */
   @Test
-  @Category(MaintainedByDiffblue.class)
+  @Category(ContributionFromDiffblue.class)
+  @ManagedByDiffblue
   @MethodsUnderTest({"void PbftCommitMessage.<init>(byte[])"})
   public void testNewPbftCommitMessage_whenLf_thenReturnDataIsArrayOfByteWithEighteenAndLf() {
     // Arrange and Act
@@ -474,7 +484,8 @@ public class PbftCommitMessageDiffblueTest {
    * <p>Method under test: {@link PbftCommitMessage#getPBFTCommitResult()}
    */
   @Test
-  @Category(MaintainedByDiffblue.class)
+  @Category(ContributionFromDiffblue.class)
+  @ManagedByDiffblue
   @MethodsUnderTest({"PBFTCommitResult PbftCommitMessage.getPBFTCommitResult()"})
   public void testGetPBFTCommitResult_thenReturnInitializationErrorStringIsEmptyString() {
     // Arrange

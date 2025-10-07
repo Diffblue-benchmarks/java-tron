@@ -1,7 +1,8 @@
 package org.tron.core;
 
 import static org.junit.Assert.assertThrows;
-import com.diffblue.cover.annotations.MaintainedByDiffblue;
+import com.diffblue.cover.annotations.ContributionFromDiffblue;
+import com.diffblue.cover.annotations.ManagedByDiffblue;
 import com.diffblue.cover.annotations.MethodsUnderTest;
 import org.junit.Test;
 import org.junit.experimental.categories.Category;
@@ -20,7 +21,8 @@ public class WalletDiffblueTest {
    * <p>Method under test: {@link Wallet#createSpendAuthSig(GrpcAPI.SpendAuthSigParameters)}
    */
   @Test
-  @Category(MaintainedByDiffblue.class)
+  @Category(ContributionFromDiffblue.class)
+  @ManagedByDiffblue
   @MethodsUnderTest({
     "GrpcAPI.BytesMessage Wallet.createSpendAuthSig(GrpcAPI.SpendAuthSigParameters)"
   })
@@ -42,7 +44,8 @@ public class WalletDiffblueTest {
    * <p>Method under test: {@link Wallet#checkBlockIdentifier(BlockIdentifier)}
    */
   @Test
-  @Category(MaintainedByDiffblue.class)
+  @Category(ContributionFromDiffblue.class)
+  @ManagedByDiffblue
   @MethodsUnderTest({"void Wallet.checkBlockIdentifier(BlockIdentifier)"})
   public void testCheckBlockIdentifier_whenDefaultInstance_thenThrowIllegalArgumentException() {
     // Arrange, Act and Assert
@@ -62,7 +65,8 @@ public class WalletDiffblueTest {
    * <p>Method under test: {@link Wallet#checkAccountIdentifier(BalanceContract.AccountIdentifier)}
    */
   @Test
-  @Category(MaintainedByDiffblue.class)
+  @Category(ContributionFromDiffblue.class)
+  @ManagedByDiffblue
   @MethodsUnderTest({"void Wallet.checkAccountIdentifier(BalanceContract.AccountIdentifier)"})
   public void testCheckAccountIdentifier_whenDefaultInstance_thenThrowIllegalArgumentException() {
     // Arrange, Act and Assert

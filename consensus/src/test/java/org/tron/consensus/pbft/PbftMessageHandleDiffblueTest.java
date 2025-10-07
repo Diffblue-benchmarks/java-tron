@@ -3,7 +3,8 @@ package org.tron.consensus.pbft;
 import static org.mockito.Mockito.mock;
 import static org.mockito.Mockito.verify;
 import static org.mockito.Mockito.when;
-import com.diffblue.cover.annotations.MaintainedByDiffblue;
+import com.diffblue.cover.annotations.ContributionFromDiffblue;
+import com.diffblue.cover.annotations.ManagedByDiffblue;
 import com.diffblue.cover.annotations.MethodsUnderTest;
 import org.junit.Test;
 import org.junit.experimental.categories.Category;
@@ -30,7 +31,8 @@ public class PbftMessageHandleDiffblueTest {
    * <p>Method under test: {@link PbftMessageHandle#onPrePrepare(PbftMessage)}
    */
   @Test
-  @Category(MaintainedByDiffblue.class)
+  @Category(ContributionFromDiffblue.class)
+  @ManagedByDiffblue
   @MethodsUnderTest({"void PbftMessageHandle.onPrePrepare(PbftMessage)"})
   public void testOnPrePrepare_givenDataString_thenCallsGetDataString() {
     // Arrange
@@ -62,7 +64,8 @@ public class PbftMessageHandleDiffblueTest {
    * <p>Method under test: {@link PbftMessageHandle#onPrepare(PbftMessage)}
    */
   @Test
-  @Category(MaintainedByDiffblue.class)
+  @Category(ContributionFromDiffblue.class)
+  @ManagedByDiffblue
   @MethodsUnderTest({"void PbftMessageHandle.onPrepare(PbftMessage)"})
   public void testOnPrepare_givenKey_whenPbftMessageGetKeyReturnKey_thenCallsGetKey() {
     // Arrange
@@ -90,7 +93,8 @@ public class PbftMessageHandleDiffblueTest {
    * <p>Method under test: {@link PbftMessageHandle#onCommit(PbftMessage)}
    */
   @Test
-  @Category(MaintainedByDiffblue.class)
+  @Category(ContributionFromDiffblue.class)
+  @ManagedByDiffblue
   @MethodsUnderTest({"void PbftMessageHandle.onCommit(PbftMessage)"})
   public void testOnCommit_givenKey_whenPbftMessageGetKeyReturnKey_thenCallsGetKey() {
     // Arrange

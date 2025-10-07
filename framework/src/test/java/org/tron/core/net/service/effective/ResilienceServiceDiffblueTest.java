@@ -5,7 +5,8 @@ import static org.mockito.Mockito.atLeast;
 import static org.mockito.Mockito.mock;
 import static org.mockito.Mockito.verify;
 import static org.mockito.Mockito.when;
-import com.diffblue.cover.annotations.MaintainedByDiffblue;
+import com.diffblue.cover.annotations.ContributionFromDiffblue;
+import com.diffblue.cover.annotations.ManagedByDiffblue;
 import com.diffblue.cover.annotations.MethodsUnderTest;
 import java.util.HashMap;
 import java.util.function.BiFunction;
@@ -26,7 +27,8 @@ public class ResilienceServiceDiffblueTest {
    * <p>Method under test: {@link WeightedRandom#next()}
    */
   @Test
-  @Category(MaintainedByDiffblue.class)
+  @Category(ContributionFromDiffblue.class)
+  @ManagedByDiffblue
   @MethodsUnderTest({"Object WeightedRandom.next()"})
   public void testWeightedRandomNext_givenBiFunctionApplyReturnOne_thenCallsApply() {
     // Arrange
@@ -34,7 +36,7 @@ public class ResilienceServiceDiffblueTest {
     when(biFunction.apply(Mockito.<Object>any(), Mockito.<Integer>any())).thenReturn(1);
 
     HashMap<Object, Integer> weights = new HashMap<>();
-    weights.put(42, -1);
+    weights.put(1, -1);
     weights.put("42", Integer.MIN_VALUE);
     weights.replaceAll(biFunction);
 
@@ -56,7 +58,8 @@ public class ResilienceServiceDiffblueTest {
    * <p>Method under test: {@link WeightedRandom#next()}
    */
   @Test
-  @Category(MaintainedByDiffblue.class)
+  @Category(ContributionFromDiffblue.class)
+  @ManagedByDiffblue
   @MethodsUnderTest({"Object WeightedRandom.next()"})
   public void testWeightedRandomNext_givenHashMap42IsOne_thenReturn42() {
     // Arrange

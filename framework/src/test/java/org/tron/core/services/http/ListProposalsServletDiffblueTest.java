@@ -10,7 +10,8 @@ import static org.mockito.Mockito.atLeast;
 import static org.mockito.Mockito.mock;
 import static org.mockito.Mockito.verify;
 import static org.mockito.Mockito.when;
-import com.diffblue.cover.annotations.MaintainedByDiffblue;
+import com.diffblue.cover.annotations.ContributionFromDiffblue;
+import com.diffblue.cover.annotations.ManagedByDiffblue;
 import com.diffblue.cover.annotations.MethodsUnderTest;
 import java.io.IOException;
 import java.io.PrintWriter;
@@ -56,7 +57,8 @@ public class ListProposalsServletDiffblueTest {
    * HttpServletResponse)}
    */
   @Test
-  @Category(MaintainedByDiffblue.class)
+  @Category(ContributionFromDiffblue.class)
+  @ManagedByDiffblue
   @MethodsUnderTest({"void ListProposalsServlet.doGet(HttpServletRequest, HttpServletResponse)"})
   public void testDoGet() throws IOException {
     // Arrange
@@ -87,7 +89,8 @@ public class ListProposalsServletDiffblueTest {
    * HttpServletResponse)}
    */
   @Test
-  @Category(MaintainedByDiffblue.class)
+  @Category(ContributionFromDiffblue.class)
+  @ManagedByDiffblue
   @MethodsUnderTest({"void ListProposalsServlet.doGet(HttpServletRequest, HttpServletResponse)"})
   public void testDoGet2() throws IOException {
     // Arrange
@@ -129,7 +132,8 @@ public class ListProposalsServletDiffblueTest {
    * HttpServletResponse)}
    */
   @Test
-  @Category(MaintainedByDiffblue.class)
+  @Category(ContributionFromDiffblue.class)
+  @ManagedByDiffblue
   @MethodsUnderTest({"void ListProposalsServlet.doGet(HttpServletRequest, HttpServletResponse)"})
   public void testDoGet_givenEmptyString_thenCallsGetWriter() throws IOException {
     // Arrange
@@ -162,7 +166,8 @@ public class ListProposalsServletDiffblueTest {
    * HttpServletResponse)}
    */
   @Test
-  @Category(MaintainedByDiffblue.class)
+  @Category(ContributionFromDiffblue.class)
+  @ManagedByDiffblue
   @MethodsUnderTest({"void ListProposalsServlet.doGet(HttpServletRequest, HttpServletResponse)"})
   public void testDoGet_givenRuntimeException_thenThrowRuntimeException() throws IOException {
     // Arrange
@@ -197,7 +202,8 @@ public class ListProposalsServletDiffblueTest {
    * HttpServletResponse)}
    */
   @Test
-  @Category(MaintainedByDiffblue.class)
+  @Category(ContributionFromDiffblue.class)
+  @ManagedByDiffblue
   @MethodsUnderTest({"void ListProposalsServlet.doGet(HttpServletRequest, HttpServletResponse)"})
   public void testDoGet_thenHttpServletResponseWrapperWithResponseIsResponseResponseResponse()
       throws IOException {
@@ -266,7 +272,8 @@ public class ListProposalsServletDiffblueTest {
    * HttpServletResponse)}
    */
   @Test
-  @Category(MaintainedByDiffblue.class)
+  @Category(ContributionFromDiffblue.class)
+  @ManagedByDiffblue
   @MethodsUnderTest({"void ListProposalsServlet.doGet(HttpServletRequest, HttpServletResponse)"})
   public void testDoGet_whenCreateRequestHttpsExampleOrgExample() throws IOException {
     // Arrange
@@ -304,7 +311,8 @@ public class ListProposalsServletDiffblueTest {
    * HttpServletResponse)}
    */
   @Test
-  @Category(MaintainedByDiffblue.class)
+  @Category(ContributionFromDiffblue.class)
+  @ManagedByDiffblue
   @MethodsUnderTest({"void ListProposalsServlet.doPost(HttpServletRequest, HttpServletResponse)"})
   public void testDoPost_thenCallsGetParameter() throws IOException {
     // Arrange
@@ -346,7 +354,8 @@ public class ListProposalsServletDiffblueTest {
    * HttpServletResponse)}
    */
   @Test
-  @Category(MaintainedByDiffblue.class)
+  @Category(ContributionFromDiffblue.class)
+  @ManagedByDiffblue
   @MethodsUnderTest({"void ListProposalsServlet.doPost(HttpServletRequest, HttpServletResponse)"})
   public void testDoPost_thenHttpServletResponseWrapperWithResponseIsResponseResponseResponse()
       throws IOException {
@@ -414,7 +423,8 @@ public class ListProposalsServletDiffblueTest {
    * HttpServletResponse)}
    */
   @Test
-  @Category(MaintainedByDiffblue.class)
+  @Category(ContributionFromDiffblue.class)
+  @ManagedByDiffblue
   @MethodsUnderTest({"void ListProposalsServlet.doPost(HttpServletRequest, HttpServletResponse)"})
   public void testDoPost_whenCreateRequestHttpsExampleOrgExample() throws IOException {
     // Arrange
@@ -451,7 +461,8 @@ public class ListProposalsServletDiffblueTest {
    * HttpServletResponse)}
    */
   @Test
-  @Category(MaintainedByDiffblue.class)
+  @Category(ContributionFromDiffblue.class)
+  @ManagedByDiffblue
   @MethodsUnderTest({"void ListProposalsServlet.doPost(HttpServletRequest, HttpServletResponse)"})
   public void testDoPost_whenNull() throws IOException {
     // Arrange

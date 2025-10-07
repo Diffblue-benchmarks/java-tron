@@ -9,7 +9,8 @@ import static org.junit.Assert.assertTrue;
 import static org.mockito.Mockito.mock;
 import static org.mockito.Mockito.verify;
 import static org.mockito.Mockito.when;
-import com.diffblue.cover.annotations.MaintainedByDiffblue;
+import com.diffblue.cover.annotations.ContributionFromDiffblue;
+import com.diffblue.cover.annotations.ManagedByDiffblue;
 import com.diffblue.cover.annotations.MethodsUnderTest;
 import java.io.IOException;
 import java.io.PrintWriter;
@@ -55,7 +56,8 @@ public class GetBrokerageServletDiffblueTest {
    * HttpServletResponse)}
    */
   @Test
-  @Category(MaintainedByDiffblue.class)
+  @Category(ContributionFromDiffblue.class)
+  @ManagedByDiffblue
   @MethodsUnderTest({"void GetBrokerageServlet.doGet(HttpServletRequest, HttpServletResponse)"})
   public void testDoGet() throws IOException {
     // Arrange
@@ -89,7 +91,8 @@ public class GetBrokerageServletDiffblueTest {
    * HttpServletResponse)}
    */
   @Test
-  @Category(MaintainedByDiffblue.class)
+  @Category(ContributionFromDiffblue.class)
+  @ManagedByDiffblue
   @MethodsUnderTest({"void GetBrokerageServlet.doGet(HttpServletRequest, HttpServletResponse)"})
   public void testDoGet2() throws IOException {
     // Arrange
@@ -127,7 +130,8 @@ public class GetBrokerageServletDiffblueTest {
    * HttpServletResponse)}
    */
   @Test
-  @Category(MaintainedByDiffblue.class)
+  @Category(ContributionFromDiffblue.class)
+  @ManagedByDiffblue
   @MethodsUnderTest({"void GetBrokerageServlet.doGet(HttpServletRequest, HttpServletResponse)"})
   public void testDoGet_givenManagerGetDynamicPropertiesStoreReturnNull() throws IOException {
     // Arrange
@@ -166,7 +170,8 @@ public class GetBrokerageServletDiffblueTest {
    * HttpServletResponse)}
    */
   @Test
-  @Category(MaintainedByDiffblue.class)
+  @Category(ContributionFromDiffblue.class)
+  @ManagedByDiffblue
   @MethodsUnderTest({"void GetBrokerageServlet.doGet(HttpServletRequest, HttpServletResponse)"})
   public void testDoGet_givenManagerGetDynamicPropertiesStoreThrowIllegalArgumentException()
       throws IOException {
@@ -205,7 +210,8 @@ public class GetBrokerageServletDiffblueTest {
    * HttpServletResponse)}
    */
   @Test
-  @Category(MaintainedByDiffblue.class)
+  @Category(ContributionFromDiffblue.class)
+  @ManagedByDiffblue
   @MethodsUnderTest({"void GetBrokerageServlet.doGet(HttpServletRequest, HttpServletResponse)"})
   public void testDoGet_thenCallsGetMessage() throws IOException {
     // Arrange
@@ -237,7 +243,8 @@ public class GetBrokerageServletDiffblueTest {
    * HttpServletResponse)}
    */
   @Test
-  @Category(MaintainedByDiffblue.class)
+  @Category(ContributionFromDiffblue.class)
+  @ManagedByDiffblue
   @MethodsUnderTest({"void GetBrokerageServlet.doGet(HttpServletRequest, HttpServletResponse)"})
   public void testDoGet_thenCallsGetOutputStream() throws IOException {
     // Arrange
@@ -269,7 +276,8 @@ public class GetBrokerageServletDiffblueTest {
    * HttpServletResponse)}
    */
   @Test
-  @Category(MaintainedByDiffblue.class)
+  @Category(ContributionFromDiffblue.class)
+  @ManagedByDiffblue
   @MethodsUnderTest({"void GetBrokerageServlet.doGet(HttpServletRequest, HttpServletResponse)"})
   public void testDoGet_thenHttpServletResponseWrapperWithResponseIsResponseResponseResponse()
       throws IOException {
@@ -336,7 +344,8 @@ public class GetBrokerageServletDiffblueTest {
    * HttpServletResponse)}
    */
   @Test
-  @Category(MaintainedByDiffblue.class)
+  @Category(ContributionFromDiffblue.class)
+  @ManagedByDiffblue
   @MethodsUnderTest({"void GetBrokerageServlet.doGet(HttpServletRequest, HttpServletResponse)"})
   public void testDoGet_whenMockMultipartHttpServletRequest_thenCallsGetMessage()
       throws IOException {
@@ -369,7 +378,8 @@ public class GetBrokerageServletDiffblueTest {
    * HttpServletResponse)}
    */
   @Test
-  @Category(MaintainedByDiffblue.class)
+  @Category(ContributionFromDiffblue.class)
+  @ManagedByDiffblue
   @MethodsUnderTest({"void GetBrokerageServlet.doGet(HttpServletRequest, HttpServletResponse)"})
   public void testDoGet_whenNull() throws IOException {
     // Arrange
@@ -400,7 +410,8 @@ public class GetBrokerageServletDiffblueTest {
    * HttpServletResponse)}
    */
   @Test
-  @Category(MaintainedByDiffblue.class)
+  @Category(ContributionFromDiffblue.class)
+  @ManagedByDiffblue
   @MethodsUnderTest({"void GetBrokerageServlet.doPost(HttpServletRequest, HttpServletResponse)"})
   public void testDoPost() throws IOException {
     // Arrange
@@ -434,7 +445,8 @@ public class GetBrokerageServletDiffblueTest {
    * HttpServletResponse)}
    */
   @Test
-  @Category(MaintainedByDiffblue.class)
+  @Category(ContributionFromDiffblue.class)
+  @ManagedByDiffblue
   @MethodsUnderTest({"void GetBrokerageServlet.doPost(HttpServletRequest, HttpServletResponse)"})
   public void testDoPost2() throws IOException {
     // Arrange
@@ -468,7 +480,8 @@ public class GetBrokerageServletDiffblueTest {
    * HttpServletResponse)}
    */
   @Test
-  @Category(MaintainedByDiffblue.class)
+  @Category(ContributionFromDiffblue.class)
+  @ManagedByDiffblue
   @MethodsUnderTest({"void GetBrokerageServlet.doPost(HttpServletRequest, HttpServletResponse)"})
   public void testDoPost3() throws IOException {
     // Arrange
@@ -507,7 +520,8 @@ public class GetBrokerageServletDiffblueTest {
    * HttpServletResponse)}
    */
   @Test
-  @Category(MaintainedByDiffblue.class)
+  @Category(ContributionFromDiffblue.class)
+  @ManagedByDiffblue
   @MethodsUnderTest({"void GetBrokerageServlet.doPost(HttpServletRequest, HttpServletResponse)"})
   public void testDoPost_givenManagerGetDynamicPropertiesStoreThrowIllegalArgumentException()
       throws IOException {
@@ -548,7 +562,8 @@ public class GetBrokerageServletDiffblueTest {
    * HttpServletResponse)}
    */
   @Test
-  @Category(MaintainedByDiffblue.class)
+  @Category(ContributionFromDiffblue.class)
+  @ManagedByDiffblue
   @MethodsUnderTest({"void GetBrokerageServlet.doPost(HttpServletRequest, HttpServletResponse)"})
   public void testDoPost_thenHttpServletResponseWrapperWithResponseIsResponseResponseResponse()
       throws IOException {
@@ -614,7 +629,8 @@ public class GetBrokerageServletDiffblueTest {
    * HttpServletResponse)}
    */
   @Test
-  @Category(MaintainedByDiffblue.class)
+  @Category(ContributionFromDiffblue.class)
+  @ManagedByDiffblue
   @MethodsUnderTest({"void GetBrokerageServlet.doPost(HttpServletRequest, HttpServletResponse)"})
   public void testDoPost_thenThrowIllegalArgumentException() throws IOException {
     // Arrange
@@ -644,7 +660,8 @@ public class GetBrokerageServletDiffblueTest {
    * HttpServletResponse)}
    */
   @Test
-  @Category(MaintainedByDiffblue.class)
+  @Category(ContributionFromDiffblue.class)
+  @ManagedByDiffblue
   @MethodsUnderTest({"void GetBrokerageServlet.doPost(HttpServletRequest, HttpServletResponse)"})
   public void testDoPost_whenMockMultipartHttpServletRequest() throws IOException {
     // Arrange
@@ -682,7 +699,8 @@ public class GetBrokerageServletDiffblueTest {
    * HttpServletResponse)}
    */
   @Test
-  @Category(MaintainedByDiffblue.class)
+  @Category(ContributionFromDiffblue.class)
+  @ManagedByDiffblue
   @MethodsUnderTest({"void GetBrokerageServlet.doPost(HttpServletRequest, HttpServletResponse)"})
   public void testDoPost_whenNull() throws IOException {
     // Arrange

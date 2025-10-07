@@ -5,7 +5,8 @@ import static org.junit.Assert.assertFalse;
 import static org.junit.Assert.assertNull;
 import static org.junit.Assert.assertSame;
 import static org.junit.Assert.assertTrue;
-import com.diffblue.cover.annotations.MaintainedByDiffblue;
+import com.diffblue.cover.annotations.ContributionFromDiffblue;
+import com.diffblue.cover.annotations.ManagedByDiffblue;
 import com.diffblue.cover.annotations.MethodsUnderTest;
 import java.io.UnsupportedEncodingException;
 import java.util.ArrayList;
@@ -26,7 +27,8 @@ public class ContractLogTriggerDiffblueTest {
    * <p>Method under test: {@link ContractLogTrigger#ContractLogTrigger()}
    */
   @Test
-  @Category(MaintainedByDiffblue.class)
+  @Category(ContributionFromDiffblue.class)
+  @ManagedByDiffblue
   @MethodsUnderTest({"void ContractLogTrigger.<init>()"})
   public void testNewContractLogTrigger() {
     // Arrange and Act
@@ -58,7 +60,8 @@ public class ContractLogTriggerDiffblueTest {
    * <p>Method under test: {@link ContractLogTrigger#ContractLogTrigger(ContractEventTrigger)}
    */
   @Test
-  @Category(MaintainedByDiffblue.class)
+  @Category(ContributionFromDiffblue.class)
+  @ManagedByDiffblue
   @MethodsUnderTest({"void ContractLogTrigger.<init>(ContractEventTrigger)"})
   public void testNewContractLogTrigger2() throws UnsupportedEncodingException {
     // Arrange
@@ -124,7 +127,8 @@ public class ContractLogTriggerDiffblueTest {
    * </ul>
    */
   @Test
-  @Category(MaintainedByDiffblue.class)
+  @Category(ContributionFromDiffblue.class)
+  @ManagedByDiffblue
   @MethodsUnderTest({
     "String ContractLogTrigger.getData()",
     "List ContractLogTrigger.getTopicList()",

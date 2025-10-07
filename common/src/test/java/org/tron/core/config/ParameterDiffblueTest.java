@@ -2,7 +2,8 @@ package org.tron.core.config;
 
 import static org.junit.Assert.assertEquals;
 import static org.junit.Assert.assertNull;
-import com.diffblue.cover.annotations.MaintainedByDiffblue;
+import com.diffblue.cover.annotations.ContributionFromDiffblue;
+import com.diffblue.cover.annotations.ManagedByDiffblue;
 import com.diffblue.cover.annotations.MethodsUnderTest;
 import org.junit.Test;
 import org.junit.experimental.categories.Category;
@@ -20,7 +21,8 @@ public class ParameterDiffblueTest {
    * <p>Method under test: {@link ForkBlockVersionEnum#getForkBlockVersionEnum(int)}
    */
   @Test
-  @Category(MaintainedByDiffblue.class)
+  @Category(ContributionFromDiffblue.class)
+  @ManagedByDiffblue
   @MethodsUnderTest({"ForkBlockVersionEnum ForkBlockVersionEnum.getForkBlockVersionEnum(int)"})
   public void testForkBlockVersionEnumGetForkBlockVersionEnum_thenReturnVersion43() {
     // Arrange, Act and Assert
@@ -39,7 +41,8 @@ public class ParameterDiffblueTest {
    * <p>Method under test: {@link ForkBlockVersionEnum#getForkBlockVersionEnum(int)}
    */
   @Test
-  @Category(MaintainedByDiffblue.class)
+  @Category(ContributionFromDiffblue.class)
+  @ManagedByDiffblue
   @MethodsUnderTest({"ForkBlockVersionEnum ForkBlockVersionEnum.getForkBlockVersionEnum(int)"})
   public void testForkBlockVersionEnumGetForkBlockVersionEnum_whenFortyTwo_thenReturnNull() {
     // Arrange, Act and Assert
@@ -58,7 +61,8 @@ public class ParameterDiffblueTest {
    * </ul>
    */
   @Test
-  @Category(MaintainedByDiffblue.class)
+  @Category(ContributionFromDiffblue.class)
+  @ManagedByDiffblue
   @MethodsUnderTest({
     "int ForkBlockVersionEnum.getHardForkRate()",
     "long ForkBlockVersionEnum.getHardForkTime()",

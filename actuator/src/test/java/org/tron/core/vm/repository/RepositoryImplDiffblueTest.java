@@ -7,7 +7,8 @@ import static org.junit.Assert.assertTrue;
 import static org.mockito.Mockito.mock;
 import static org.mockito.Mockito.verify;
 import static org.mockito.Mockito.when;
-import com.diffblue.cover.annotations.MaintainedByDiffblue;
+import com.diffblue.cover.annotations.ContributionFromDiffblue;
+import com.diffblue.cover.annotations.ManagedByDiffblue;
 import com.diffblue.cover.annotations.MethodsUnderTest;
 import java.io.UnsupportedEncodingException;
 import org.junit.Test;
@@ -43,7 +44,8 @@ public class RepositoryImplDiffblueTest {
    * <p>Method under test: {@link RepositoryImpl#RepositoryImpl(StoreFactory, RepositoryImpl)}
    */
   @Test
-  @Category(MaintainedByDiffblue.class)
+  @Category(ContributionFromDiffblue.class)
+  @ManagedByDiffblue
   @MethodsUnderTest({"void RepositoryImpl.<init>(StoreFactory, RepositoryImpl)"})
   public void testNewRepositoryImpl() {
     // Arrange
@@ -79,7 +81,8 @@ public class RepositoryImplDiffblueTest {
    * <p>Method under test: {@link RepositoryImpl#createRoot(StoreFactory)}
    */
   @Test
-  @Category(MaintainedByDiffblue.class)
+  @Category(ContributionFromDiffblue.class)
+  @ManagedByDiffblue
   @MethodsUnderTest({"RepositoryImpl RepositoryImpl.createRoot(StoreFactory)"})
   public void testCreateRoot() {
     // Arrange and Act
@@ -111,7 +114,8 @@ public class RepositoryImplDiffblueTest {
    * <p>Method under test: {@link RepositoryImpl#newRepositoryChild()}
    */
   @Test
-  @Category(MaintainedByDiffblue.class)
+  @Category(ContributionFromDiffblue.class)
+  @ManagedByDiffblue
   @MethodsUnderTest({"Repository RepositoryImpl.newRepositoryChild()"})
   public void testNewRepositoryChild() {
     // Arrange and Act
@@ -148,7 +152,8 @@ public class RepositoryImplDiffblueTest {
    * Protocol.AccountType)}
    */
   @Test
-  @Category(MaintainedByDiffblue.class)
+  @Category(ContributionFromDiffblue.class)
+  @ManagedByDiffblue
   @MethodsUnderTest({
     "AccountCapsule RepositoryImpl.createAccount(byte[], String, Protocol.AccountType)"
   })
@@ -177,7 +182,8 @@ public class RepositoryImplDiffblueTest {
    * Protocol.AccountType)}
    */
   @Test
-  @Category(MaintainedByDiffblue.class)
+  @Category(ContributionFromDiffblue.class)
+  @ManagedByDiffblue
   @MethodsUnderTest({
     "AccountCapsule RepositoryImpl.createAccount(byte[], String, Protocol.AccountType)"
   })
@@ -201,7 +207,8 @@ public class RepositoryImplDiffblueTest {
    * <p>Method under test: {@link RepositoryImpl#createAccount(byte[], Protocol.AccountType)}
    */
   @Test
-  @Category(MaintainedByDiffblue.class)
+  @Category(ContributionFromDiffblue.class)
+  @ManagedByDiffblue
   @MethodsUnderTest({"AccountCapsule RepositoryImpl.createAccount(byte[], Protocol.AccountType)"})
   public void testCreateAccountWithAddressType() throws UnsupportedEncodingException {
     // Arrange and Act
@@ -228,7 +235,8 @@ public class RepositoryImplDiffblueTest {
    * <p>Method under test: {@link RepositoryImpl#createAccount(byte[], Protocol.AccountType)}
    */
   @Test
-  @Category(MaintainedByDiffblue.class)
+  @Category(ContributionFromDiffblue.class)
+  @ManagedByDiffblue
   @MethodsUnderTest({"AccountCapsule RepositoryImpl.createAccount(byte[], Protocol.AccountType)"})
   public void testCreateAccountWithAddressType_thenReturnDataIsEmptyArrayOfByte() {
     // Arrange and Act
@@ -253,7 +261,8 @@ public class RepositoryImplDiffblueTest {
    * <p>Method under test: {@link RepositoryImpl#getDelegation(Key)}
    */
   @Test
-  @Category(MaintainedByDiffblue.class)
+  @Category(ContributionFromDiffblue.class)
+  @ManagedByDiffblue
   @MethodsUnderTest({"BytesCapsule RepositoryImpl.getDelegation(Key)"})
   public void testGetDelegation_givenA_whenCreateAxaxaxaxBytesIsUtf8_thenReturnInstanceIsNull()
       throws UnsupportedEncodingException {
@@ -417,7 +426,8 @@ public class RepositoryImplDiffblueTest {
    * <p>Method under test: {@link RepositoryImpl#commit()}
    */
   @Test
-  @Category(MaintainedByDiffblue.class)
+  @Category(ContributionFromDiffblue.class)
+  @ManagedByDiffblue
   @MethodsUnderTest({"void RepositoryImpl.commit()"})
   public void testCommit() throws UnsupportedEncodingException {
     // Arrange
@@ -450,7 +460,8 @@ public class RepositoryImplDiffblueTest {
    * <p>Method under test: {@link RepositoryImpl#commit()}
    */
   @Test
-  @Category(MaintainedByDiffblue.class)
+  @Category(ContributionFromDiffblue.class)
+  @ManagedByDiffblue
   @MethodsUnderTest({"void RepositoryImpl.commit()"})
   public void testCommit2() throws UnsupportedEncodingException {
     // Arrange
@@ -489,7 +500,8 @@ public class RepositoryImplDiffblueTest {
    * <p>Method under test: {@link RepositoryImpl#commit()}
    */
   @Test
-  @Category(MaintainedByDiffblue.class)
+  @Category(ContributionFromDiffblue.class)
+  @ManagedByDiffblue
   @MethodsUnderTest({"void RepositoryImpl.commit()"})
   public void testCommit3() throws UnsupportedEncodingException {
     // Arrange
@@ -534,7 +546,8 @@ public class RepositoryImplDiffblueTest {
    * <p>Method under test: {@link RepositoryImpl#commit()}
    */
   @Test
-  @Category(MaintainedByDiffblue.class)
+  @Category(ContributionFromDiffblue.class)
+  @ManagedByDiffblue
   @MethodsUnderTest({"void RepositoryImpl.commit()"})
   public void testCommit4() throws UnsupportedEncodingException {
     // Arrange
@@ -587,7 +600,8 @@ public class RepositoryImplDiffblueTest {
    * <p>Method under test: {@link RepositoryImpl#commit()}
    */
   @Test
-  @Category(MaintainedByDiffblue.class)
+  @Category(ContributionFromDiffblue.class)
+  @ManagedByDiffblue
   @MethodsUnderTest({"void RepositoryImpl.commit()"})
   public void testCommit_thenCallsGetInstance() throws UnsupportedEncodingException {
     // Arrange
@@ -618,7 +632,8 @@ public class RepositoryImplDiffblueTest {
    * <p>Method under test: {@link RepositoryImpl#putAccount(Key, Value)}
    */
   @Test
-  @Category(MaintainedByDiffblue.class)
+  @Category(ContributionFromDiffblue.class)
+  @ManagedByDiffblue
   @MethodsUnderTest({"void RepositoryImpl.putAccount(Key, Value)"})
   public void testPutAccount_givenCreateRootInstance_whenCreateAxaxaxaxBytesIsUtf8()
       throws UnsupportedEncodingException {
@@ -647,7 +662,8 @@ public class RepositoryImplDiffblueTest {
    * <p>Method under test: {@link RepositoryImpl#putAccount(Key, Value)}
    */
   @Test
-  @Category(MaintainedByDiffblue.class)
+  @Category(ContributionFromDiffblue.class)
+  @ManagedByDiffblue
   @MethodsUnderTest({"void RepositoryImpl.putAccount(Key, Value)"})
   public void testPutAccount_givenProtoCapsuleGetInstanceReturnInstance()
       throws UnsupportedEncodingException {
@@ -683,7 +699,8 @@ public class RepositoryImplDiffblueTest {
    * <p>Method under test: {@link RepositoryImpl#putAccount(Key, Value)}
    */
   @Test
-  @Category(MaintainedByDiffblue.class)
+  @Category(ContributionFromDiffblue.class)
+  @ManagedByDiffblue
   @MethodsUnderTest({"void RepositoryImpl.putAccount(Key, Value)"})
   public void testPutAccount_givenProtoCapsuleGetInstanceReturnInstance_whenNull()
       throws UnsupportedEncodingException {
@@ -718,7 +735,8 @@ public class RepositoryImplDiffblueTest {
    * <p>Method under test: {@link RepositoryImpl#putCode(Key, Value)}
    */
   @Test
-  @Category(MaintainedByDiffblue.class)
+  @Category(ContributionFromDiffblue.class)
+  @ManagedByDiffblue
   @MethodsUnderTest({"void RepositoryImpl.putCode(Key, Value)"})
   public void testPutCode_givenCreateRootInstance_whenCreateAxaxaxaxBytesIsUtf8()
       throws UnsupportedEncodingException {
@@ -747,7 +765,8 @@ public class RepositoryImplDiffblueTest {
    * <p>Method under test: {@link RepositoryImpl#putCode(Key, Value)}
    */
   @Test
-  @Category(MaintainedByDiffblue.class)
+  @Category(ContributionFromDiffblue.class)
+  @ManagedByDiffblue
   @MethodsUnderTest({"void RepositoryImpl.putCode(Key, Value)"})
   public void testPutCode_givenProtoCapsuleGetInstanceReturnInstance()
       throws UnsupportedEncodingException {
@@ -783,7 +802,8 @@ public class RepositoryImplDiffblueTest {
    * <p>Method under test: {@link RepositoryImpl#putCode(Key, Value)}
    */
   @Test
-  @Category(MaintainedByDiffblue.class)
+  @Category(ContributionFromDiffblue.class)
+  @ManagedByDiffblue
   @MethodsUnderTest({"void RepositoryImpl.putCode(Key, Value)"})
   public void testPutCode_givenProtoCapsuleGetInstanceReturnInstance_whenNull()
       throws UnsupportedEncodingException {
@@ -818,7 +838,8 @@ public class RepositoryImplDiffblueTest {
    * <p>Method under test: {@link RepositoryImpl#putContract(Key, Value)}
    */
   @Test
-  @Category(MaintainedByDiffblue.class)
+  @Category(ContributionFromDiffblue.class)
+  @ManagedByDiffblue
   @MethodsUnderTest({"void RepositoryImpl.putContract(Key, Value)"})
   public void testPutContract_givenCreateRootInstance_whenCreateAxaxaxaxBytesIsUtf8()
       throws UnsupportedEncodingException {
@@ -847,7 +868,8 @@ public class RepositoryImplDiffblueTest {
    * <p>Method under test: {@link RepositoryImpl#putContract(Key, Value)}
    */
   @Test
-  @Category(MaintainedByDiffblue.class)
+  @Category(ContributionFromDiffblue.class)
+  @ManagedByDiffblue
   @MethodsUnderTest({"void RepositoryImpl.putContract(Key, Value)"})
   public void testPutContract_givenProtoCapsuleGetInstanceReturnInstance()
       throws UnsupportedEncodingException {
@@ -883,7 +905,8 @@ public class RepositoryImplDiffblueTest {
    * <p>Method under test: {@link RepositoryImpl#putContract(Key, Value)}
    */
   @Test
-  @Category(MaintainedByDiffblue.class)
+  @Category(ContributionFromDiffblue.class)
+  @ManagedByDiffblue
   @MethodsUnderTest({"void RepositoryImpl.putContract(Key, Value)"})
   public void testPutContract_givenProtoCapsuleGetInstanceReturnInstance_whenNull()
       throws UnsupportedEncodingException {
@@ -918,7 +941,8 @@ public class RepositoryImplDiffblueTest {
    * <p>Method under test: {@link RepositoryImpl#putContractState(Key, Value)}
    */
   @Test
-  @Category(MaintainedByDiffblue.class)
+  @Category(ContributionFromDiffblue.class)
+  @ManagedByDiffblue
   @MethodsUnderTest({"void RepositoryImpl.putContractState(Key, Value)"})
   public void testPutContractState_givenCreateRootInstance_whenCreateAxaxaxaxBytesIsUtf8()
       throws UnsupportedEncodingException {
@@ -947,7 +971,8 @@ public class RepositoryImplDiffblueTest {
    * <p>Method under test: {@link RepositoryImpl#putContractState(Key, Value)}
    */
   @Test
-  @Category(MaintainedByDiffblue.class)
+  @Category(ContributionFromDiffblue.class)
+  @ManagedByDiffblue
   @MethodsUnderTest({"void RepositoryImpl.putContractState(Key, Value)"})
   public void testPutContractState_givenProtoCapsuleGetInstanceReturnInstance()
       throws UnsupportedEncodingException {
@@ -983,7 +1008,8 @@ public class RepositoryImplDiffblueTest {
    * <p>Method under test: {@link RepositoryImpl#putContractState(Key, Value)}
    */
   @Test
-  @Category(MaintainedByDiffblue.class)
+  @Category(ContributionFromDiffblue.class)
+  @ManagedByDiffblue
   @MethodsUnderTest({"void RepositoryImpl.putContractState(Key, Value)"})
   public void testPutContractState_givenProtoCapsuleGetInstanceReturnInstance_whenNull()
       throws UnsupportedEncodingException {
@@ -1018,7 +1044,8 @@ public class RepositoryImplDiffblueTest {
    * <p>Method under test: {@link RepositoryImpl#putDynamicProperty(Key, Value)}
    */
   @Test
-  @Category(MaintainedByDiffblue.class)
+  @Category(ContributionFromDiffblue.class)
+  @ManagedByDiffblue
   @MethodsUnderTest({"void RepositoryImpl.putDynamicProperty(Key, Value)"})
   public void testPutDynamicProperty_givenCreateRootInstance_whenCreateAxaxaxaxBytesIsUtf8()
       throws UnsupportedEncodingException {
@@ -1047,7 +1074,8 @@ public class RepositoryImplDiffblueTest {
    * <p>Method under test: {@link RepositoryImpl#putDynamicProperty(Key, Value)}
    */
   @Test
-  @Category(MaintainedByDiffblue.class)
+  @Category(ContributionFromDiffblue.class)
+  @ManagedByDiffblue
   @MethodsUnderTest({"void RepositoryImpl.putDynamicProperty(Key, Value)"})
   public void testPutDynamicProperty_givenProtoCapsuleGetInstanceReturnInstance()
       throws UnsupportedEncodingException {
@@ -1083,7 +1111,8 @@ public class RepositoryImplDiffblueTest {
    * <p>Method under test: {@link RepositoryImpl#putDynamicProperty(Key, Value)}
    */
   @Test
-  @Category(MaintainedByDiffblue.class)
+  @Category(ContributionFromDiffblue.class)
+  @ManagedByDiffblue
   @MethodsUnderTest({"void RepositoryImpl.putDynamicProperty(Key, Value)"})
   public void testPutDynamicProperty_givenProtoCapsuleGetInstanceReturnInstance_whenNull()
       throws UnsupportedEncodingException {
@@ -1118,7 +1147,8 @@ public class RepositoryImplDiffblueTest {
    * <p>Method under test: {@link RepositoryImpl#putDelegatedResource(Key, Value)}
    */
   @Test
-  @Category(MaintainedByDiffblue.class)
+  @Category(ContributionFromDiffblue.class)
+  @ManagedByDiffblue
   @MethodsUnderTest({"void RepositoryImpl.putDelegatedResource(Key, Value)"})
   public void testPutDelegatedResource_givenCreateRootInstance_whenCreateAxaxaxaxBytesIsUtf8()
       throws UnsupportedEncodingException {
@@ -1147,7 +1177,8 @@ public class RepositoryImplDiffblueTest {
    * <p>Method under test: {@link RepositoryImpl#putDelegatedResource(Key, Value)}
    */
   @Test
-  @Category(MaintainedByDiffblue.class)
+  @Category(ContributionFromDiffblue.class)
+  @ManagedByDiffblue
   @MethodsUnderTest({"void RepositoryImpl.putDelegatedResource(Key, Value)"})
   public void testPutDelegatedResource_givenProtoCapsuleGetInstanceReturnInstance()
       throws UnsupportedEncodingException {
@@ -1183,7 +1214,8 @@ public class RepositoryImplDiffblueTest {
    * <p>Method under test: {@link RepositoryImpl#putDelegatedResource(Key, Value)}
    */
   @Test
-  @Category(MaintainedByDiffblue.class)
+  @Category(ContributionFromDiffblue.class)
+  @ManagedByDiffblue
   @MethodsUnderTest({"void RepositoryImpl.putDelegatedResource(Key, Value)"})
   public void testPutDelegatedResource_givenProtoCapsuleGetInstanceReturnInstance_whenNull()
       throws UnsupportedEncodingException {
@@ -1218,7 +1250,8 @@ public class RepositoryImplDiffblueTest {
    * <p>Method under test: {@link RepositoryImpl#putVotes(Key, Value)}
    */
   @Test
-  @Category(MaintainedByDiffblue.class)
+  @Category(ContributionFromDiffblue.class)
+  @ManagedByDiffblue
   @MethodsUnderTest({"void RepositoryImpl.putVotes(Key, Value)"})
   public void testPutVotes_givenCreateRootInstance_whenCreateAxaxaxaxBytesIsUtf8()
       throws UnsupportedEncodingException {
@@ -1247,7 +1280,8 @@ public class RepositoryImplDiffblueTest {
    * <p>Method under test: {@link RepositoryImpl#putVotes(Key, Value)}
    */
   @Test
-  @Category(MaintainedByDiffblue.class)
+  @Category(ContributionFromDiffblue.class)
+  @ManagedByDiffblue
   @MethodsUnderTest({"void RepositoryImpl.putVotes(Key, Value)"})
   public void testPutVotes_givenProtoCapsuleGetInstanceReturnInstance()
       throws UnsupportedEncodingException {
@@ -1283,7 +1317,8 @@ public class RepositoryImplDiffblueTest {
    * <p>Method under test: {@link RepositoryImpl#putVotes(Key, Value)}
    */
   @Test
-  @Category(MaintainedByDiffblue.class)
+  @Category(ContributionFromDiffblue.class)
+  @ManagedByDiffblue
   @MethodsUnderTest({"void RepositoryImpl.putVotes(Key, Value)"})
   public void testPutVotes_givenProtoCapsuleGetInstanceReturnInstance_whenNull()
       throws UnsupportedEncodingException {
@@ -1318,7 +1353,8 @@ public class RepositoryImplDiffblueTest {
    * <p>Method under test: {@link RepositoryImpl#putDelegation(Key, Value)}
    */
   @Test
-  @Category(MaintainedByDiffblue.class)
+  @Category(ContributionFromDiffblue.class)
+  @ManagedByDiffblue
   @MethodsUnderTest({"void RepositoryImpl.putDelegation(Key, Value)"})
   public void testPutDelegation_givenCreateRootInstance_whenCreateAxaxaxaxBytesIsUtf8()
       throws UnsupportedEncodingException {
@@ -1347,7 +1383,8 @@ public class RepositoryImplDiffblueTest {
    * <p>Method under test: {@link RepositoryImpl#putDelegation(Key, Value)}
    */
   @Test
-  @Category(MaintainedByDiffblue.class)
+  @Category(ContributionFromDiffblue.class)
+  @ManagedByDiffblue
   @MethodsUnderTest({"void RepositoryImpl.putDelegation(Key, Value)"})
   public void testPutDelegation_givenProtoCapsuleGetInstanceReturnInstance()
       throws UnsupportedEncodingException {
@@ -1383,7 +1420,8 @@ public class RepositoryImplDiffblueTest {
    * <p>Method under test: {@link RepositoryImpl#putDelegation(Key, Value)}
    */
   @Test
-  @Category(MaintainedByDiffblue.class)
+  @Category(ContributionFromDiffblue.class)
+  @ManagedByDiffblue
   @MethodsUnderTest({"void RepositoryImpl.putDelegation(Key, Value)"})
   public void testPutDelegation_givenProtoCapsuleGetInstanceReturnInstance_whenNull()
       throws UnsupportedEncodingException {
@@ -1417,7 +1455,8 @@ public class RepositoryImplDiffblueTest {
    * <p>Method under test: {@link RepositoryImpl#putDelegatedResourceAccountIndex(Key, Value)}
    */
   @Test
-  @Category(MaintainedByDiffblue.class)
+  @Category(ContributionFromDiffblue.class)
+  @ManagedByDiffblue
   @MethodsUnderTest({"void RepositoryImpl.putDelegatedResourceAccountIndex(Key, Value)"})
   public void testPutDelegatedResourceAccountIndex_givenCreateRootInstance()
       throws UnsupportedEncodingException {
@@ -1446,7 +1485,8 @@ public class RepositoryImplDiffblueTest {
    * <p>Method under test: {@link RepositoryImpl#putDelegatedResourceAccountIndex(Key, Value)}
    */
   @Test
-  @Category(MaintainedByDiffblue.class)
+  @Category(ContributionFromDiffblue.class)
+  @ManagedByDiffblue
   @MethodsUnderTest({"void RepositoryImpl.putDelegatedResourceAccountIndex(Key, Value)"})
   public void testPutDelegatedResourceAccountIndex_givenProtoCapsuleGetInstanceReturnInstance()
       throws UnsupportedEncodingException {
@@ -1482,7 +1522,8 @@ public class RepositoryImplDiffblueTest {
    * <p>Method under test: {@link RepositoryImpl#putDelegatedResourceAccountIndex(Key, Value)}
    */
   @Test
-  @Category(MaintainedByDiffblue.class)
+  @Category(ContributionFromDiffblue.class)
+  @ManagedByDiffblue
   @MethodsUnderTest({"void RepositoryImpl.putDelegatedResourceAccountIndex(Key, Value)"})
   public void testPutDelegatedResourceAccountIndex_whenNull() throws UnsupportedEncodingException {
     // Arrange
@@ -1512,7 +1553,8 @@ public class RepositoryImplDiffblueTest {
    * <p>Method under test: {@link RepositoryImpl#saveTotalNetWeight(long)}
    */
   @Test
-  @Category(MaintainedByDiffblue.class)
+  @Category(ContributionFromDiffblue.class)
+  @ManagedByDiffblue
   @MethodsUnderTest({"void RepositoryImpl.saveTotalNetWeight(long)"})
   public void testSaveTotalNetWeight() {
     // Arrange
@@ -1531,7 +1573,8 @@ public class RepositoryImplDiffblueTest {
    * <p>Method under test: {@link RepositoryImpl#saveTotalEnergyWeight(long)}
    */
   @Test
-  @Category(MaintainedByDiffblue.class)
+  @Category(ContributionFromDiffblue.class)
+  @ManagedByDiffblue
   @MethodsUnderTest({"void RepositoryImpl.saveTotalEnergyWeight(long)"})
   public void testSaveTotalEnergyWeight() {
     // Arrange
@@ -1550,7 +1593,8 @@ public class RepositoryImplDiffblueTest {
    * <p>Method under test: {@link RepositoryImpl#saveTotalTronPowerWeight(long)}
    */
   @Test
-  @Category(MaintainedByDiffblue.class)
+  @Category(ContributionFromDiffblue.class)
+  @ManagedByDiffblue
   @MethodsUnderTest({"void RepositoryImpl.saveTotalTronPowerWeight(long)"})
   public void testSaveTotalTronPowerWeight() {
     // Arrange
@@ -1591,7 +1635,8 @@ public class RepositoryImplDiffblueTest {
    * </ul>
    */
   @Test
-  @Category(MaintainedByDiffblue.class)
+  @Category(ContributionFromDiffblue.class)
+  @ManagedByDiffblue
   @MethodsUnderTest({
     "AbiStore RepositoryImpl.getAbiStore()",
     "AccountStore RepositoryImpl.getAccountStore()",

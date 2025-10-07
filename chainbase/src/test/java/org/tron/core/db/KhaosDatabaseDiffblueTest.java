@@ -8,7 +8,8 @@ import static org.junit.Assert.assertTrue;
 import static org.mockito.Mockito.mock;
 import static org.mockito.Mockito.verify;
 import static org.mockito.Mockito.when;
-import com.diffblue.cover.annotations.MaintainedByDiffblue;
+import com.diffblue.cover.annotations.ContributionFromDiffblue;
+import com.diffblue.cover.annotations.ManagedByDiffblue;
 import com.diffblue.cover.annotations.MethodsUnderTest;
 import org.junit.Test;
 import org.junit.experimental.categories.Category;
@@ -41,7 +42,8 @@ public class KhaosDatabaseDiffblueTest {
    * </ul>
    */
   @Test
-  @Category(MaintainedByDiffblue.class)
+  @Category(ContributionFromDiffblue.class)
+  @ManagedByDiffblue
   @MethodsUnderTest({"boolean KhaosBlock.equals(Object)", "int KhaosBlock.hashCode()"})
   public void testKhaosBlockEqualsAndHashCode_whenOtherIsEqual_thenReturnEqual() {
     // Arrange
@@ -71,7 +73,8 @@ public class KhaosDatabaseDiffblueTest {
    * <p>Method under test: {@link KhaosBlock#equals(Object)}
    */
   @Test
-  @Category(MaintainedByDiffblue.class)
+  @Category(ContributionFromDiffblue.class)
+  @ManagedByDiffblue
   @MethodsUnderTest({"boolean KhaosBlock.equals(Object)", "int KhaosBlock.hashCode()"})
   public void testKhaosBlockEquals_whenOtherIsDifferent_thenReturnNotEqual() {
     // Arrange
@@ -99,7 +102,8 @@ public class KhaosDatabaseDiffblueTest {
    * <p>Method under test: {@link KhaosBlock#equals(Object)}
    */
   @Test
-  @Category(MaintainedByDiffblue.class)
+  @Category(ContributionFromDiffblue.class)
+  @ManagedByDiffblue
   @MethodsUnderTest({"boolean KhaosBlock.equals(Object)", "int KhaosBlock.hashCode()"})
   public void testKhaosBlockEquals_whenOtherIsDifferent_thenReturnNotEqual2() {
     // Arrange
@@ -122,7 +126,8 @@ public class KhaosDatabaseDiffblueTest {
    * <p>Method under test: {@link KhaosBlock#equals(Object)}
    */
   @Test
-  @Category(MaintainedByDiffblue.class)
+  @Category(ContributionFromDiffblue.class)
+  @ManagedByDiffblue
   @MethodsUnderTest({"boolean KhaosBlock.equals(Object)", "int KhaosBlock.hashCode()"})
   public void testKhaosBlockEquals_whenOtherIsDifferent_thenReturnNotEqual3() {
     // Arrange
@@ -145,7 +150,8 @@ public class KhaosDatabaseDiffblueTest {
    * <p>Method under test: {@link KhaosBlock#getParentHash()}
    */
   @Test
-  @Category(MaintainedByDiffblue.class)
+  @Category(ContributionFromDiffblue.class)
+  @ManagedByDiffblue
   @MethodsUnderTest({"Sha256Hash KhaosBlock.getParentHash()"})
   public void testKhaosBlockGetParentHash_givenBlockCapsuleGetNumReturnOne_thenReturnZero_hash() {
     // Arrange
@@ -175,7 +181,8 @@ public class KhaosDatabaseDiffblueTest {
    * <p>Method under test: {@link KhaosBlock#getParent()}
    */
   @Test
-  @Category(MaintainedByDiffblue.class)
+  @Category(ContributionFromDiffblue.class)
+  @ManagedByDiffblue
   @MethodsUnderTest({"KhaosBlock KhaosBlock.getParent()"})
   public void testKhaosBlockGetParent_givenBlockCapsuleGetNumReturnOne_thenReturnNull() {
     // Arrange
@@ -203,7 +210,8 @@ public class KhaosDatabaseDiffblueTest {
    * <p>Method under test: {@link KhaosBlock#KhaosBlock(BlockCapsule)}
    */
   @Test
-  @Category(MaintainedByDiffblue.class)
+  @Category(ContributionFromDiffblue.class)
+  @ManagedByDiffblue
   @MethodsUnderTest({"void KhaosBlock.<init>(BlockCapsule)"})
   public void testKhaosBlockNewKhaosBlock_givenOne_thenReturnParentHashIsNull() {
     // Arrange
@@ -233,7 +241,8 @@ public class KhaosDatabaseDiffblueTest {
    * <p>Method under test: {@link KhaosBlock#setParent(KhaosBlock)}
    */
   @Test
-  @Category(MaintainedByDiffblue.class)
+  @Category(ContributionFromDiffblue.class)
+  @ManagedByDiffblue
   @MethodsUnderTest({"void KhaosBlock.setParent(KhaosBlock)"})
   public void testKhaosBlockSetParent_givenBlockCapsuleGetNumReturnOne_thenCallsGetBlockId() {
     // Arrange
@@ -262,7 +271,8 @@ public class KhaosDatabaseDiffblueTest {
    * <p>Method under test: {@link KhaosBlock#toString()}
    */
   @Test
-  @Category(MaintainedByDiffblue.class)
+  @Category(ContributionFromDiffblue.class)
+  @ManagedByDiffblue
   @MethodsUnderTest({"java.lang.String KhaosBlock.toString()"})
   public void testKhaosBlockToString() {
     // Arrange
@@ -299,7 +309,8 @@ public class KhaosDatabaseDiffblueTest {
    * <p>Method under test: {@link KhaosBlock#toString()}
    */
   @Test
-  @Category(MaintainedByDiffblue.class)
+  @Category(ContributionFromDiffblue.class)
+  @ManagedByDiffblue
   @MethodsUnderTest({"java.lang.String KhaosBlock.toString()"})
   public void testKhaosBlockToString_givenKhaosBlockWithBlkIsBlockCapsule_thenCallsGetBlockId() {
     // Arrange
@@ -321,7 +332,8 @@ public class KhaosDatabaseDiffblueTest {
    * <p>Method under test: {@link KhaosStore#KhaosStore(KhaosDatabase)}
    */
   @Test
-  @Category(MaintainedByDiffblue.class)
+  @Category(ContributionFromDiffblue.class)
+  @ManagedByDiffblue
   @MethodsUnderTest({"void KhaosStore.<init>(KhaosDatabase)"})
   public void testKhaosStoreNewKhaosStore() {
     // Arrange and Act

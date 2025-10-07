@@ -2,7 +2,8 @@ package org.tron.core.consensus;
 
 import static org.mockito.Mockito.doNothing;
 import static org.mockito.Mockito.verify;
-import com.diffblue.cover.annotations.MaintainedByDiffblue;
+import com.diffblue.cover.annotations.ContributionFromDiffblue;
+import com.diffblue.cover.annotations.ManagedByDiffblue;
 import com.diffblue.cover.annotations.MethodsUnderTest;
 import org.junit.Test;
 import org.junit.experimental.categories.Category;
@@ -24,7 +25,8 @@ public class ConsensusServiceDiffblueTest {
    * <p>Method under test: {@link ConsensusService#stop()}
    */
   @Test
-  @Category(MaintainedByDiffblue.class)
+  @Category(ContributionFromDiffblue.class)
+  @ManagedByDiffblue
   @MethodsUnderTest({"void ConsensusService.stop()"})
   public void testStop() {
     // Arrange

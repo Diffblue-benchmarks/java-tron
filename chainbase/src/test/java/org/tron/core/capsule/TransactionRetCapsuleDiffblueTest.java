@@ -5,7 +5,8 @@ import static org.junit.Assert.assertEquals;
 import static org.junit.Assert.assertSame;
 import static org.junit.Assert.assertThrows;
 import static org.junit.Assert.assertTrue;
-import com.diffblue.cover.annotations.MaintainedByDiffblue;
+import com.diffblue.cover.annotations.ContributionFromDiffblue;
+import com.diffblue.cover.annotations.ManagedByDiffblue;
 import com.diffblue.cover.annotations.MethodsUnderTest;
 import java.io.UnsupportedEncodingException;
 import java.util.List;
@@ -23,7 +24,8 @@ public class TransactionRetCapsuleDiffblueTest {
    * <p>Method under test: {@link TransactionRetCapsule#TransactionRetCapsule()}
    */
   @Test
-  @Category(MaintainedByDiffblue.class)
+  @Category(ContributionFromDiffblue.class)
+  @ManagedByDiffblue
   @MethodsUnderTest({"void TransactionRetCapsule.<init>()"})
   public void testNewTransactionRetCapsule() {
     // Arrange and Act
@@ -53,7 +55,8 @@ public class TransactionRetCapsuleDiffblueTest {
    * <p>Method under test: {@link TransactionRetCapsule#TransactionRetCapsule(BlockCapsule)}
    */
   @Test
-  @Category(MaintainedByDiffblue.class)
+  @Category(ContributionFromDiffblue.class)
+  @ManagedByDiffblue
   @MethodsUnderTest({"void TransactionRetCapsule.<init>(BlockCapsule)"})
   public void testNewTransactionRetCapsule2() {
     // Arrange and Act
@@ -84,7 +87,8 @@ public class TransactionRetCapsuleDiffblueTest {
    * <p>Method under test: {@link TransactionRetCapsule#TransactionRetCapsule(byte[])}
    */
   @Test
-  @Category(MaintainedByDiffblue.class)
+  @Category(ContributionFromDiffblue.class)
+  @ManagedByDiffblue
   @MethodsUnderTest({"void TransactionRetCapsule.<init>(byte[])"})
   public void testNewTransactionRetCapsule3() throws BadItemException {
     // Arrange and Act
@@ -114,7 +118,8 @@ public class TransactionRetCapsuleDiffblueTest {
    * <p>Method under test: {@link TransactionRetCapsule#TransactionRetCapsule(byte[])}
    */
   @Test
-  @Category(MaintainedByDiffblue.class)
+  @Category(ContributionFromDiffblue.class)
+  @ManagedByDiffblue
   @MethodsUnderTest({"void TransactionRetCapsule.<init>(byte[])"})
   public void testNewTransactionRetCapsule4()
       throws UnsupportedEncodingException, BadItemException {
@@ -134,7 +139,8 @@ public class TransactionRetCapsuleDiffblueTest {
    * <p>Method under test: {@link TransactionRetCapsule#TransactionRetCapsule(byte[])}
    */
   @Test
-  @Category(MaintainedByDiffblue.class)
+  @Category(ContributionFromDiffblue.class)
+  @ManagedByDiffblue
   @MethodsUnderTest({"void TransactionRetCapsule.<init>(byte[])"})
   public void testNewTransactionRetCapsule_whenArrayOfByteWithAAndBackspace()
       throws BadItemException {
@@ -159,7 +165,8 @@ public class TransactionRetCapsuleDiffblueTest {
    * <p>Method under test: {@link TransactionRetCapsule#TransactionRetCapsule(byte[])}
    */
   @Test
-  @Category(MaintainedByDiffblue.class)
+  @Category(ContributionFromDiffblue.class)
+  @ManagedByDiffblue
   @MethodsUnderTest({"void TransactionRetCapsule.<init>(byte[])"})
   public void testNewTransactionRetCapsule_whenArrayOfByteWithAAndBackspace2()
       throws BadItemException {
@@ -184,7 +191,8 @@ public class TransactionRetCapsuleDiffblueTest {
    * <p>Method under test: {@link TransactionRetCapsule#TransactionRetCapsule(byte[])}
    */
   @Test
-  @Category(MaintainedByDiffblue.class)
+  @Category(ContributionFromDiffblue.class)
+  @ManagedByDiffblue
   @MethodsUnderTest({"void TransactionRetCapsule.<init>(byte[])"})
   public void testNewTransactionRetCapsule_whenArrayOfByteWithAAndBackspace3()
       throws BadItemException {
@@ -209,7 +217,8 @@ public class TransactionRetCapsuleDiffblueTest {
    * <p>Method under test: {@link TransactionRetCapsule#TransactionRetCapsule(byte[])}
    */
   @Test
-  @Category(MaintainedByDiffblue.class)
+  @Category(ContributionFromDiffblue.class)
+  @ManagedByDiffblue
   @MethodsUnderTest({"void TransactionRetCapsule.<init>(byte[])"})
   public void testNewTransactionRetCapsule_whenArrayOfByteWithFourAndX() throws BadItemException {
     // Arrange, Act and Assert
@@ -228,7 +237,8 @@ public class TransactionRetCapsuleDiffblueTest {
    * <p>Method under test: {@link TransactionRetCapsule#TransactionRetCapsule(byte[])}
    */
   @Test
-  @Category(MaintainedByDiffblue.class)
+  @Category(ContributionFromDiffblue.class)
+  @ManagedByDiffblue
   @MethodsUnderTest({"void TransactionRetCapsule.<init>(byte[])"})
   public void testNewTransactionRetCapsule_whenArrayOfByteWithMinusOneAndX()
       throws BadItemException {
@@ -248,7 +258,8 @@ public class TransactionRetCapsuleDiffblueTest {
    * <p>Method under test: {@link TransactionRetCapsule#TransactionRetCapsule(byte[])}
    */
   @Test
-  @Category(MaintainedByDiffblue.class)
+  @Category(ContributionFromDiffblue.class)
+  @ManagedByDiffblue
   @MethodsUnderTest({"void TransactionRetCapsule.<init>(byte[])"})
   public void testNewTransactionRetCapsule_whenArrayOfByteWithSixteenAndX()
       throws BadItemException {
@@ -268,7 +279,8 @@ public class TransactionRetCapsuleDiffblueTest {
    * <p>Method under test: {@link TransactionRetCapsule#TransactionRetCapsule(byte[])}
    */
   @Test
-  @Category(MaintainedByDiffblue.class)
+  @Category(ContributionFromDiffblue.class)
+  @ManagedByDiffblue
   @MethodsUnderTest({"void TransactionRetCapsule.<init>(byte[])"})
   public void testNewTransactionRetCapsule_whenArrayOfByteWithTwentySixAndBackspace()
       throws BadItemException {
@@ -293,7 +305,8 @@ public class TransactionRetCapsuleDiffblueTest {
    * <p>Method under test: {@link TransactionRetCapsule#TransactionRetCapsule(byte[])}
    */
   @Test
-  @Category(MaintainedByDiffblue.class)
+  @Category(ContributionFromDiffblue.class)
+  @ManagedByDiffblue
   @MethodsUnderTest({"void TransactionRetCapsule.<init>(byte[])"})
   public void testNewTransactionRetCapsule_whenArrayOfByteWithTwentySixAndBackspace2()
       throws BadItemException {
@@ -318,7 +331,8 @@ public class TransactionRetCapsuleDiffblueTest {
    * <p>Method under test: {@link TransactionRetCapsule#TransactionRetCapsule(byte[])}
    */
   @Test
-  @Category(MaintainedByDiffblue.class)
+  @Category(ContributionFromDiffblue.class)
+  @ManagedByDiffblue
   @MethodsUnderTest({"void TransactionRetCapsule.<init>(byte[])"})
   public void testNewTransactionRetCapsule_whenArrayOfByteWithTwentySixAndBackspace3()
       throws BadItemException {
@@ -343,7 +357,8 @@ public class TransactionRetCapsuleDiffblueTest {
    * <p>Method under test: {@link TransactionRetCapsule#TransactionRetCapsule(byte[])}
    */
   @Test
-  @Category(MaintainedByDiffblue.class)
+  @Category(ContributionFromDiffblue.class)
+  @ManagedByDiffblue
   @MethodsUnderTest({"void TransactionRetCapsule.<init>(byte[])"})
   public void testNewTransactionRetCapsule_whenArrayOfByteWithTwentySixAndBackspace4()
       throws BadItemException {
@@ -368,7 +383,8 @@ public class TransactionRetCapsuleDiffblueTest {
    * <p>Method under test: {@link TransactionRetCapsule#TransactionRetCapsule(byte[])}
    */
   @Test
-  @Category(MaintainedByDiffblue.class)
+  @Category(ContributionFromDiffblue.class)
+  @ManagedByDiffblue
   @MethodsUnderTest({"void TransactionRetCapsule.<init>(byte[])"})
   public void testNewTransactionRetCapsule_whenArrayOfByteWithTwentySixAndLf()
       throws BadItemException {
@@ -393,7 +409,8 @@ public class TransactionRetCapsuleDiffblueTest {
    * <p>Method under test: {@link TransactionRetCapsule#TransactionRetCapsule(byte[])}
    */
   @Test
-  @Category(MaintainedByDiffblue.class)
+  @Category(ContributionFromDiffblue.class)
+  @ManagedByDiffblue
   @MethodsUnderTest({"void TransactionRetCapsule.<init>(byte[])"})
   public void testNewTransactionRetCapsule_whenArrayOfByteWithTwentySixAndX()
       throws BadItemException {
@@ -413,7 +430,8 @@ public class TransactionRetCapsuleDiffblueTest {
    * <p>Method under test: {@link TransactionRetCapsule#TransactionRetCapsule(byte[])}
    */
   @Test
-  @Category(MaintainedByDiffblue.class)
+  @Category(ContributionFromDiffblue.class)
+  @ManagedByDiffblue
   @MethodsUnderTest({"void TransactionRetCapsule.<init>(byte[])"})
   public void testNewTransactionRetCapsule_whenArrayOfByteWithTwentySixAndZero()
       throws BadItemException {
@@ -434,7 +452,8 @@ public class TransactionRetCapsuleDiffblueTest {
    * <p>Method under test: {@link TransactionRetCapsule#TransactionRetCapsule(byte[])}
    */
   @Test
-  @Category(MaintainedByDiffblue.class)
+  @Category(ContributionFromDiffblue.class)
+  @ManagedByDiffblue
   @MethodsUnderTest({"void TransactionRetCapsule.<init>(byte[])"})
   public void testNewTransactionRetCapsule_whenAxaxaxaxBytesIsUtf8_thenThrowBadItemException()
       throws UnsupportedEncodingException, BadItemException {
@@ -454,7 +473,8 @@ public class TransactionRetCapsuleDiffblueTest {
    * <p>Method under test: {@link TransactionRetCapsule#TransactionRetCapsule(byte[])}
    */
   @Test
-  @Category(MaintainedByDiffblue.class)
+  @Category(ContributionFromDiffblue.class)
+  @ManagedByDiffblue
   @MethodsUnderTest({"void TransactionRetCapsule.<init>(byte[])"})
   public void testNewTransactionRetCapsule_whenLf_thenThrowBadItemException()
       throws BadItemException {
@@ -480,7 +500,8 @@ public class TransactionRetCapsuleDiffblueTest {
    * <p>Method under test: {@link TransactionRetCapsule#TransactionRetCapsule(byte[])}
    */
   @Test
-  @Category(MaintainedByDiffblue.class)
+  @Category(ContributionFromDiffblue.class)
+  @ManagedByDiffblue
   @MethodsUnderTest({"void TransactionRetCapsule.<init>(byte[])"})
   public void testNewTransactionRetCapsule_whenSpace_thenThrowBadItemException()
       throws BadItemException {
@@ -506,7 +527,8 @@ public class TransactionRetCapsuleDiffblueTest {
    * <p>Method under test: {@link TransactionRetCapsule#TransactionRetCapsule(byte[])}
    */
   @Test
-  @Category(MaintainedByDiffblue.class)
+  @Category(ContributionFromDiffblue.class)
+  @ManagedByDiffblue
   @MethodsUnderTest({"void TransactionRetCapsule.<init>(byte[])"})
   public void testNewTransactionRetCapsule_whenXxaxaxaxBytesIsUtf8_thenThrowBadItemException()
       throws UnsupportedEncodingException, BadItemException {

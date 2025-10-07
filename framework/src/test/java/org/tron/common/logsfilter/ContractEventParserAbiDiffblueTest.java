@@ -2,7 +2,8 @@ package org.tron.common.logsfilter;
 
 import static org.junit.Assert.assertEquals;
 import static org.junit.Assert.assertTrue;
-import com.diffblue.cover.annotations.MaintainedByDiffblue;
+import com.diffblue.cover.annotations.ContributionFromDiffblue;
+import com.diffblue.cover.annotations.ManagedByDiffblue;
 import com.diffblue.cover.annotations.MethodsUnderTest;
 import java.io.UnsupportedEncodingException;
 import java.util.ArrayList;
@@ -27,7 +28,8 @@ public class ContractEventParserAbiDiffblueTest {
    * <p>Method under test: {@link ContractEventParserAbi#parseEventData(byte[], List, ABI.Entry)}
    */
   @Test
-  @Category(MaintainedByDiffblue.class)
+  @Category(ContributionFromDiffblue.class)
+  @ManagedByDiffblue
   @MethodsUnderTest({"Map ContractEventParserAbi.parseEventData(byte[], List, ABI.Entry)"})
   public void testParseEventData_givenA_thenReturn0Is4158415841584158()
       throws UnsupportedEncodingException {
@@ -57,7 +59,8 @@ public class ContractEventParserAbiDiffblueTest {
    * <p>Method under test: {@link ContractEventParserAbi#parseEventData(byte[], List, ABI.Entry)}
    */
   @Test
-  @Category(MaintainedByDiffblue.class)
+  @Category(ContributionFromDiffblue.class)
+  @ManagedByDiffblue
   @MethodsUnderTest({"Map ContractEventParserAbi.parseEventData(byte[], List, ABI.Entry)"})
   public void testParseEventData_givenA_thenReturn1Is4158415841584158()
       throws UnsupportedEncodingException {
@@ -88,7 +91,8 @@ public class ContractEventParserAbiDiffblueTest {
    * <p>Method under test: {@link ContractEventParserAbi#parseEventData(byte[], List, ABI.Entry)}
    */
   @Test
-  @Category(MaintainedByDiffblue.class)
+  @Category(ContributionFromDiffblue.class)
+  @ManagedByDiffblue
   @MethodsUnderTest({"Map ContractEventParserAbi.parseEventData(byte[], List, ABI.Entry)"})
   public void testParseEventData_whenAxaxaxaxBytesIsUtf8_thenReturn0Is4158415841584158()
       throws UnsupportedEncodingException {
@@ -115,7 +119,8 @@ public class ContractEventParserAbiDiffblueTest {
    * <p>Method under test: {@link ContractEventParserAbi#parseEventData(byte[], List, ABI.Entry)}
    */
   @Test
-  @Category(MaintainedByDiffblue.class)
+  @Category(ContributionFromDiffblue.class)
+  @ManagedByDiffblue
   @MethodsUnderTest({"Map ContractEventParserAbi.parseEventData(byte[], List, ABI.Entry)"})
   public void testParseEventData_whenEmptyArrayOfByte_thenReturnEmpty() {
     // Arrange and Act
@@ -138,7 +143,8 @@ public class ContractEventParserAbiDiffblueTest {
    * <p>Method under test: {@link ContractEventParserAbi#parseEventData(byte[], List, ABI.Entry)}
    */
   @Test
-  @Category(MaintainedByDiffblue.class)
+  @Category(ContributionFromDiffblue.class)
+  @ManagedByDiffblue
   @MethodsUnderTest({"Map ContractEventParserAbi.parseEventData(byte[], List, ABI.Entry)"})
   public void testParseEventData_whenNull_thenReturnEmpty() {
     // Arrange and Act

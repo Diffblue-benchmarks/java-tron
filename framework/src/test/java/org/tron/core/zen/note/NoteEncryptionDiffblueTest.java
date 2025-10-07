@@ -4,7 +4,8 @@ import static org.junit.Assert.assertArrayEquals;
 import static org.junit.Assert.assertEquals;
 import static org.junit.Assert.assertSame;
 import static org.junit.Assert.assertThrows;
-import com.diffblue.cover.annotations.MaintainedByDiffblue;
+import com.diffblue.cover.annotations.ContributionFromDiffblue;
+import com.diffblue.cover.annotations.ManagedByDiffblue;
 import com.diffblue.cover.annotations.MethodsUnderTest;
 import java.io.UnsupportedEncodingException;
 import org.junit.Test;
@@ -23,13 +24,17 @@ public class NoteEncryptionDiffblueTest {
    * <p>Methods under test:
    *
    * <ul>
-   *   <li>{@link EncCiphertext#setData(byte[])}
-   *   <li>{@link EncCiphertext#getData()}
+   *   <li>{@link Encryption.EncCiphertext#setData(byte[])}
+   *   <li>{@link Encryption.EncCiphertext#getData()}
    * </ul>
    */
   @Test
-  @Category(MaintainedByDiffblue.class)
-  @MethodsUnderTest({"byte[] EncCiphertext.getData()", "void EncCiphertext.setData(byte[])"})
+  @Category(ContributionFromDiffblue.class)
+  @ManagedByDiffblue
+  @MethodsUnderTest({
+    "byte[] Encryption.EncCiphertext.getData()",
+    "void Encryption.EncCiphertext.setData(byte[])"
+  })
   public void testEncryption_EncCiphertextGettersAndSetters() throws UnsupportedEncodingException {
     // Arrange
     EncCiphertext encCiphertext = new EncCiphertext();
@@ -45,13 +50,14 @@ public class NoteEncryptionDiffblueTest {
   }
 
   /**
-   * Test Encryption_EncCiphertext new {@link EncCiphertext} (default constructor).
+   * Test Encryption_EncCiphertext new {@link Encryption.EncCiphertext} (default constructor).
    *
-   * <p>Method under test: default or parameterless constructor of {@link EncCiphertext}
+   * <p>Method under test: default or parameterless constructor of {@link Encryption.EncCiphertext}
    */
   @Test
-  @Category(MaintainedByDiffblue.class)
-  @MethodsUnderTest({"void EncCiphertext.<init>()"})
+  @Category(ContributionFromDiffblue.class)
+  @ManagedByDiffblue
+  @MethodsUnderTest({"void Encryption.EncCiphertext.<init>()"})
   public void testEncryption_EncCiphertextNewEncCiphertext() {
     // Arrange, Act and Assert
     assertEquals(580, new EncCiphertext().getData().length);
@@ -68,7 +74,8 @@ public class NoteEncryptionDiffblueTest {
    * </ul>
    */
   @Test
-  @Category(MaintainedByDiffblue.class)
+  @Category(ContributionFromDiffblue.class)
+  @ManagedByDiffblue
   @MethodsUnderTest({"byte[] EncPlaintext.getData()", "void EncPlaintext.setData(byte[])"})
   public void testEncryption_EncPlaintextGettersAndSetters() throws UnsupportedEncodingException {
     // Arrange
@@ -90,7 +97,8 @@ public class NoteEncryptionDiffblueTest {
    * <p>Method under test: default or parameterless constructor of {@link EncPlaintext}
    */
   @Test
-  @Category(MaintainedByDiffblue.class)
+  @Category(ContributionFromDiffblue.class)
+  @ManagedByDiffblue
   @MethodsUnderTest({"void EncPlaintext.<init>()"})
   public void testEncryption_EncPlaintextNewEncPlaintext() {
     // Arrange, Act and Assert
@@ -108,7 +116,8 @@ public class NoteEncryptionDiffblueTest {
    * </ul>
    */
   @Test
-  @Category(MaintainedByDiffblue.class)
+  @Category(ContributionFromDiffblue.class)
+  @ManagedByDiffblue
   @MethodsUnderTest({"byte[] OutCiphertext.getData()", "void OutCiphertext.setData(byte[])"})
   public void testEncryption_OutCiphertextGettersAndSetters() throws UnsupportedEncodingException {
     // Arrange
@@ -130,7 +139,8 @@ public class NoteEncryptionDiffblueTest {
    * <p>Method under test: default or parameterless constructor of {@link OutCiphertext}
    */
   @Test
-  @Category(MaintainedByDiffblue.class)
+  @Category(ContributionFromDiffblue.class)
+  @ManagedByDiffblue
   @MethodsUnderTest({"void OutCiphertext.<init>()"})
   public void testEncryption_OutCiphertextNewOutCiphertext() {
     // Arrange, Act and Assert
@@ -148,7 +158,8 @@ public class NoteEncryptionDiffblueTest {
    * </ul>
    */
   @Test
-  @Category(MaintainedByDiffblue.class)
+  @Category(ContributionFromDiffblue.class)
+  @ManagedByDiffblue
   @MethodsUnderTest({"byte[] OutPlaintext.getData()", "void OutPlaintext.setData(byte[])"})
   public void testEncryption_OutPlaintextGettersAndSetters() throws UnsupportedEncodingException {
     // Arrange
@@ -170,7 +181,8 @@ public class NoteEncryptionDiffblueTest {
    * <p>Method under test: default or parameterless constructor of {@link OutPlaintext}
    */
   @Test
-  @Category(MaintainedByDiffblue.class)
+  @Category(ContributionFromDiffblue.class)
+  @ManagedByDiffblue
   @MethodsUnderTest({"void OutPlaintext.<init>()"})
   public void testEncryption_OutPlaintextNewOutPlaintext() {
     // Arrange, Act and Assert
@@ -199,7 +211,8 @@ public class NoteEncryptionDiffblueTest {
    * </ul>
    */
   @Test
-  @Category(MaintainedByDiffblue.class)
+  @Category(ContributionFromDiffblue.class)
+  @ManagedByDiffblue
   @MethodsUnderTest({
     "void NoteEncryption.<init>(byte[], byte[])",
     "void NoteEncryption.<init>(byte[], byte[], boolean, boolean)",
@@ -239,7 +252,8 @@ public class NoteEncryptionDiffblueTest {
    * </ul>
    */
   @Test
-  @Category(MaintainedByDiffblue.class)
+  @Category(ContributionFromDiffblue.class)
+  @ManagedByDiffblue
   @MethodsUnderTest({
     "void NoteEncryption.<init>(byte[], byte[])",
     "void NoteEncryption.<init>(byte[], byte[], boolean, boolean)",
@@ -273,7 +287,8 @@ public class NoteEncryptionDiffblueTest {
    * <p>Method under test: {@link NoteEncryption#encryptToRecipient(byte[], EncPlaintext)}
    */
   @Test
-  @Category(MaintainedByDiffblue.class)
+  @Category(ContributionFromDiffblue.class)
+  @ManagedByDiffblue
   @MethodsUnderTest({"java.util.Optional NoteEncryption.encryptToRecipient(byte[], EncPlaintext)"})
   public void testEncryptToRecipient_thenThrowZksnarkException()
       throws UnsupportedEncodingException, ZksnarkException {
@@ -300,7 +315,8 @@ public class NoteEncryptionDiffblueTest {
    * OutPlaintext)}
    */
   @Test
-  @Category(MaintainedByDiffblue.class)
+  @Category(ContributionFromDiffblue.class)
+  @ManagedByDiffblue
   @MethodsUnderTest({
     "OutCiphertext NoteEncryption.encryptToOurselves(byte[], byte[], byte[], OutPlaintext)"
   })

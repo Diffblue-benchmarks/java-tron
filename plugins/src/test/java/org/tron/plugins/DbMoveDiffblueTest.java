@@ -2,7 +2,8 @@ package org.tron.plugins;
 
 import static org.junit.Assert.assertNull;
 import static org.junit.Assert.assertThrows;
-import com.diffblue.cover.annotations.MaintainedByDiffblue;
+import com.diffblue.cover.annotations.ContributionFromDiffblue;
+import com.diffblue.cover.annotations.ManagedByDiffblue;
 import com.diffblue.cover.annotations.MethodsUnderTest;
 import java.io.IOException;
 import java.nio.file.Path;
@@ -25,7 +26,8 @@ public class DbMoveDiffblueTest {
    * <p>Method under test: {@link ConfigConverter#convert(String)}
    */
   @Test
-  @Category(MaintainedByDiffblue.class)
+  @Category(ContributionFromDiffblue.class)
+  @ManagedByDiffblue
   @MethodsUnderTest({"com.typesafe.config.Config ConfigConverter.convert(String)"})
   public void testConfigConverterConvert_whenStorageProperties_thenThrowIOException()
       throws Exception {
@@ -39,7 +41,8 @@ public class DbMoveDiffblueTest {
    * <p>Method under test: default or parameterless constructor of {@link DbMove}
    */
   @Test
-  @Category(MaintainedByDiffblue.class)
+  @Category(ContributionFromDiffblue.class)
+  @ManagedByDiffblue
   @MethodsUnderTest({"void DbMove.<init>()"})
   public void testNewDbMove() {
     // Arrange and Act
@@ -60,7 +63,8 @@ public class DbMoveDiffblueTest {
    * <p>Method under test: {@link PathConverter#convert(String)}
    */
   @Test
-  @Category(MaintainedByDiffblue.class)
+  @Category(ContributionFromDiffblue.class)
+  @ManagedByDiffblue
   @MethodsUnderTest({"Path PathConverter.convert(String)"})
   public void testPathConverterConvert_whenDbPath() throws IOException {
     // Arrange, Act and Assert
@@ -77,7 +81,8 @@ public class DbMoveDiffblueTest {
    * <p>Method under test: {@link Property#Property(String, Path, Path)}
    */
   @Test
-  @Category(MaintainedByDiffblue.class)
+  @Category(ContributionFromDiffblue.class)
+  @ManagedByDiffblue
   @MethodsUnderTest({"void Property.<init>(String, Path, Path)"})
   public void testPropertyNewProperty_thenThrowIOException() throws IOException {
     // Arrange
@@ -99,7 +104,8 @@ public class DbMoveDiffblueTest {
    * <p>Method under test: {@link Property#Property(String, Path, Path)}
    */
   @Test
-  @Category(MaintainedByDiffblue.class)
+  @Category(ContributionFromDiffblue.class)
+  @ManagedByDiffblue
   @MethodsUnderTest({"void Property.<init>(String, Path, Path)"})
   public void testPropertyNewProperty_whenPropertyIsJavaIoTmpdirIsTestTxt_thenThrowIOException()
       throws IOException {

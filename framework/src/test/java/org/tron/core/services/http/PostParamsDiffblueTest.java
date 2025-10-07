@@ -3,7 +3,8 @@ package org.tron.core.services.http;
 import static org.junit.Assert.assertEquals;
 import static org.junit.Assert.assertFalse;
 import static org.junit.Assert.assertTrue;
-import com.diffblue.cover.annotations.MaintainedByDiffblue;
+import com.diffblue.cover.annotations.ContributionFromDiffblue;
+import com.diffblue.cover.annotations.ManagedByDiffblue;
 import com.diffblue.cover.annotations.MethodsUnderTest;
 import java.util.stream.Collectors;
 import java.util.stream.Stream;
@@ -26,7 +27,8 @@ public class PostParamsDiffblueTest {
    * </ul>
    */
   @Test
-  @Category(MaintainedByDiffblue.class)
+  @Category(ContributionFromDiffblue.class)
+  @ManagedByDiffblue
   @MethodsUnderTest({
     "void PostParams.<init>(String, boolean)",
     "String PostParams.getParams()",
@@ -48,7 +50,8 @@ public class PostParamsDiffblueTest {
    * <p>Method under test: {@link PostParams#getPostParams(HttpServletRequest)}
    */
   @Test
-  @Category(MaintainedByDiffblue.class)
+  @Category(ContributionFromDiffblue.class)
+  @ManagedByDiffblue
   @MethodsUnderTest({"PostParams PostParams.getPostParams(HttpServletRequest)"})
   public void testGetPostParams() throws Exception {
     // Arrange

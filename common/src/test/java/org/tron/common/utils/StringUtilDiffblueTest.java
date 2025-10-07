@@ -7,7 +7,8 @@ import static org.junit.Assert.assertTrue;
 import static org.mockito.Mockito.mock;
 import static org.mockito.Mockito.verify;
 import static org.mockito.Mockito.when;
-import com.diffblue.cover.annotations.MaintainedByDiffblue;
+import com.diffblue.cover.annotations.ContributionFromDiffblue;
+import com.diffblue.cover.annotations.ManagedByDiffblue;
 import com.diffblue.cover.annotations.MethodsUnderTest;
 import com.google.protobuf.ByteString;
 import com.google.protobuf.ByteString.ByteIterator;
@@ -22,7 +23,8 @@ public class StringUtilDiffblueTest {
    * <p>Method under test: {@link StringUtil#createDbKey(ByteString)}
    */
   @Test
-  @Category(MaintainedByDiffblue.class)
+  @Category(ContributionFromDiffblue.class)
+  @ManagedByDiffblue
   @MethodsUnderTest({"byte[] StringUtil.createDbKey(ByteString)"})
   public void testCreateDbKey() throws UnsupportedEncodingException {
     // Arrange
@@ -47,7 +49,8 @@ public class StringUtilDiffblueTest {
    * <p>Method under test: {@link StringUtil#createReadableString(byte[])}
    */
   @Test
-  @Category(MaintainedByDiffblue.class)
+  @Category(ContributionFromDiffblue.class)
+  @ManagedByDiffblue
   @MethodsUnderTest({"String StringUtil.createReadableString(byte[])"})
   public void testCreateReadableStringWithBytes_thenReturn4158415841584158()
       throws UnsupportedEncodingException {
@@ -66,7 +69,8 @@ public class StringUtilDiffblueTest {
    * <p>Method under test: {@link StringUtil#createReadableString(byte[])}
    */
   @Test
-  @Category(MaintainedByDiffblue.class)
+  @Category(ContributionFromDiffblue.class)
+  @ManagedByDiffblue
   @MethodsUnderTest({"String StringUtil.createReadableString(byte[])"})
   public void testCreateReadableStringWithBytes_whenNull_thenReturnEmptyString() {
     // Arrange, Act and Assert
@@ -79,7 +83,8 @@ public class StringUtilDiffblueTest {
    * <p>Method under test: {@link StringUtil#createReadableString(ByteString)}
    */
   @Test
-  @Category(MaintainedByDiffblue.class)
+  @Category(ContributionFromDiffblue.class)
+  @ManagedByDiffblue
   @MethodsUnderTest({"String StringUtil.createReadableString(ByteString)"})
   public void testCreateReadableStringWithString() throws UnsupportedEncodingException {
     // Arrange
@@ -105,7 +110,8 @@ public class StringUtilDiffblueTest {
    * <p>Method under test: {@link StringUtil#hexString2ByteString(String)}
    */
   @Test
-  @Category(MaintainedByDiffblue.class)
+  @Category(ContributionFromDiffblue.class)
+  @ManagedByDiffblue
   @MethodsUnderTest({"ByteString StringUtil.hexString2ByteString(String)"})
   public void testHexString2ByteString_when0x_thenReturnToStringUtf8IsEmptyString() {
     // Arrange and Act
@@ -128,7 +134,8 @@ public class StringUtilDiffblueTest {
    * <p>Method under test: {@link StringUtil#hexString2ByteString(String)}
    */
   @Test
-  @Category(MaintainedByDiffblue.class)
+  @Category(ContributionFromDiffblue.class)
+  @ManagedByDiffblue
   @MethodsUnderTest({"ByteString StringUtil.hexString2ByteString(String)"})
   public void testHexString2ByteString_when0123456789abcdef_thenReturnNotEmpty() {
     // Arrange and Act

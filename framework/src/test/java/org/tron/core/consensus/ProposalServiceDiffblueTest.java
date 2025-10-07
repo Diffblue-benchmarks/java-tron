@@ -3,7 +3,8 @@ package org.tron.core.consensus;
 import static org.junit.Assert.assertFalse;
 import static org.junit.Assert.assertTrue;
 import static org.mockito.Mockito.mock;
-import com.diffblue.cover.annotations.MaintainedByDiffblue;
+import com.diffblue.cover.annotations.ContributionFromDiffblue;
+import com.diffblue.cover.annotations.ManagedByDiffblue;
 import com.diffblue.cover.annotations.MethodsUnderTest;
 import java.util.HashMap;
 import org.junit.Test;
@@ -24,7 +25,8 @@ public class ProposalServiceDiffblueTest {
    * <p>Method under test: {@link ProposalService#process(Manager, ProposalCapsule)}
    */
   @Test
-  @Category(MaintainedByDiffblue.class)
+  @Category(ContributionFromDiffblue.class)
+  @ManagedByDiffblue
   @MethodsUnderTest({"boolean ProposalService.process(Manager, ProposalCapsule)"})
   public void testProcess_givenHashMapMinusOneIsOne_whenManager_thenReturnFalse() {
     // Arrange
@@ -55,7 +57,8 @@ public class ProposalServiceDiffblueTest {
    * <p>Method under test: {@link ProposalService#process(Manager, ProposalCapsule)}
    */
   @Test
-  @Category(MaintainedByDiffblue.class)
+  @Category(ContributionFromDiffblue.class)
+  @ManagedByDiffblue
   @MethodsUnderTest({"boolean ProposalService.process(Manager, ProposalCapsule)"})
   public void testProcess_whenProposalCapsuleWithDataIsEmptyArrayOfByte_thenReturnTrue() {
     // Arrange

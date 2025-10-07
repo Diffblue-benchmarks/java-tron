@@ -11,7 +11,8 @@ import static org.junit.Assert.assertTrue;
 import static org.mockito.Mockito.mock;
 import static org.mockito.Mockito.verify;
 import static org.mockito.Mockito.when;
-import com.diffblue.cover.annotations.MaintainedByDiffblue;
+import com.diffblue.cover.annotations.ContributionFromDiffblue;
+import com.diffblue.cover.annotations.ManagedByDiffblue;
 import com.diffblue.cover.annotations.MethodsUnderTest;
 import com.google.protobuf.ByteString;
 import com.google.protobuf.ByteString.ByteIterator;
@@ -44,7 +45,8 @@ public class BlockCapsuleDiffblueTest {
    * <p>Method under test: {@link BlockId#compareTo(Sha256Hash)}
    */
   @Test
-  @Category(MaintainedByDiffblue.class)
+  @Category(ContributionFromDiffblue.class)
+  @ManagedByDiffblue
   @MethodsUnderTest({"int BlockId.compareTo(Sha256Hash)"})
   public void testBlockIdCompareToWithSha256Hash_givenBlockId_whenBlockId_thenReturnZero() {
     // Arrange
@@ -66,7 +68,8 @@ public class BlockCapsuleDiffblueTest {
    * <p>Method under test: {@link BlockId#compareTo(Sha256Hash)}
    */
   @Test
-  @Category(MaintainedByDiffblue.class)
+  @Category(ContributionFromDiffblue.class)
+  @ManagedByDiffblue
   @MethodsUnderTest({"int BlockId.compareTo(Sha256Hash)"})
   public void testBlockIdCompareToWithSha256Hash_givenBlockId_whenZero_hash_thenReturnZero() {
     // Arrange, Act and Assert
@@ -83,7 +86,8 @@ public class BlockCapsuleDiffblueTest {
    * <p>Method under test: {@link BlockId#compareTo(Sha256Hash)}
    */
   @Test
-  @Category(MaintainedByDiffblue.class)
+  @Category(ContributionFromDiffblue.class)
+  @ManagedByDiffblue
   @MethodsUnderTest({"int BlockId.compareTo(Sha256Hash)"})
   public void testBlockIdCompareToWithSha256Hash_thenReturnMinusOne() {
     // Arrange
@@ -106,7 +110,8 @@ public class BlockCapsuleDiffblueTest {
    * <p>Method under test: {@link BlockId#compareTo(Sha256Hash)}
    */
   @Test
-  @Category(MaintainedByDiffblue.class)
+  @Category(ContributionFromDiffblue.class)
+  @ManagedByDiffblue
   @MethodsUnderTest({"int BlockId.compareTo(Sha256Hash)"})
   public void testBlockIdCompareToWithSha256Hash_thenReturnOne() {
     // Arrange, Act and Assert
@@ -129,7 +134,8 @@ public class BlockCapsuleDiffblueTest {
    * </ul>
    */
   @Test
-  @Category(MaintainedByDiffblue.class)
+  @Category(ContributionFromDiffblue.class)
+  @ManagedByDiffblue
   @MethodsUnderTest({"boolean BlockId.equals(Object)", "int BlockId.hashCode()"})
   public void testBlockIdEqualsAndHashCode_whenOtherIsEqual_thenReturnEqual() {
     // Arrange
@@ -157,7 +163,8 @@ public class BlockCapsuleDiffblueTest {
    * </ul>
    */
   @Test
-  @Category(MaintainedByDiffblue.class)
+  @Category(ContributionFromDiffblue.class)
+  @ManagedByDiffblue
   @MethodsUnderTest({"boolean BlockId.equals(Object)", "int BlockId.hashCode()"})
   public void testBlockIdEqualsAndHashCode_whenOtherIsSame_thenReturnEqual() {
     // Arrange
@@ -180,7 +187,8 @@ public class BlockCapsuleDiffblueTest {
    * <p>Method under test: {@link BlockId#equals(Object)}
    */
   @Test
-  @Category(MaintainedByDiffblue.class)
+  @Category(ContributionFromDiffblue.class)
+  @ManagedByDiffblue
   @MethodsUnderTest({"boolean BlockId.equals(Object)", "int BlockId.hashCode()"})
   public void testBlockIdEquals_whenOtherIsDifferent_thenReturnNotEqual() {
     // Arrange
@@ -201,7 +209,8 @@ public class BlockCapsuleDiffblueTest {
    * <p>Method under test: {@link BlockId#equals(Object)}
    */
   @Test
-  @Category(MaintainedByDiffblue.class)
+  @Category(ContributionFromDiffblue.class)
+  @ManagedByDiffblue
   @MethodsUnderTest({"boolean BlockId.equals(Object)", "int BlockId.hashCode()"})
   public void testBlockIdEquals_whenOtherIsEqual_thenReturnEqual() {
     // Arrange, Act and Assert
@@ -219,7 +228,8 @@ public class BlockCapsuleDiffblueTest {
    * <p>Method under test: {@link BlockId#equals(Object)}
    */
   @Test
-  @Category(MaintainedByDiffblue.class)
+  @Category(ContributionFromDiffblue.class)
+  @ManagedByDiffblue
   @MethodsUnderTest({"boolean BlockId.equals(Object)", "int BlockId.hashCode()"})
   public void testBlockIdEquals_whenOtherIsNull_thenReturnNotEqual() {
     // Arrange, Act and Assert
@@ -237,7 +247,8 @@ public class BlockCapsuleDiffblueTest {
    * <p>Method under test: {@link BlockId#equals(Object)}
    */
   @Test
-  @Category(MaintainedByDiffblue.class)
+  @Category(ContributionFromDiffblue.class)
+  @ManagedByDiffblue
   @MethodsUnderTest({"boolean BlockId.equals(Object)", "int BlockId.hashCode()"})
   public void testBlockIdEquals_whenOtherIsWrongType_thenReturnNotEqual() {
     // Arrange, Act and Assert
@@ -250,7 +261,8 @@ public class BlockCapsuleDiffblueTest {
    * <p>Method under test: {@link BlockId#getNum()}
    */
   @Test
-  @Category(MaintainedByDiffblue.class)
+  @Category(ContributionFromDiffblue.class)
+  @ManagedByDiffblue
   @MethodsUnderTest({"long BlockId.getNum()", "java.lang.String BlockId.toString()"})
   public void testBlockIdGetNum() {
     // Arrange, Act and Assert
@@ -263,7 +275,8 @@ public class BlockCapsuleDiffblueTest {
    * <p>Method under test: {@link BlockId#getString()}
    */
   @Test
-  @Category(MaintainedByDiffblue.class)
+  @Category(ContributionFromDiffblue.class)
+  @ManagedByDiffblue
   @MethodsUnderTest({"java.lang.String BlockId.getString()"})
   public void testBlockIdGetString() {
     // Arrange, Act and Assert
@@ -278,7 +291,8 @@ public class BlockCapsuleDiffblueTest {
    * <p>Method under test: {@link BlockId#BlockId()}
    */
   @Test
-  @Category(MaintainedByDiffblue.class)
+  @Category(ContributionFromDiffblue.class)
+  @ManagedByDiffblue
   @MethodsUnderTest({"void BlockId.<init>()"})
   public void testBlockIdNewBlockId() {
     // Arrange and Act
@@ -318,7 +332,8 @@ public class BlockCapsuleDiffblueTest {
    * <p>Method under test: {@link BlockId#BlockId(Sha256Hash)}
    */
   @Test
-  @Category(MaintainedByDiffblue.class)
+  @Category(ContributionFromDiffblue.class)
+  @ManagedByDiffblue
   @MethodsUnderTest({"void BlockId.<init>(Sha256Hash)"})
   public void testBlockIdNewBlockId2() {
     // Arrange, Act and Assert
@@ -331,7 +346,8 @@ public class BlockCapsuleDiffblueTest {
    * <p>Method under test: {@link BlockCapsule#BlockCapsule(CodedInputStream)}
    */
   @Test
-  @Category(MaintainedByDiffblue.class)
+  @Category(ContributionFromDiffblue.class)
+  @ManagedByDiffblue
   @MethodsUnderTest({"void BlockCapsule.<init>(CodedInputStream)"})
   public void testNewBlockCapsule() throws IOException, BadItemException {
     // Arrange
@@ -351,7 +367,8 @@ public class BlockCapsuleDiffblueTest {
    * <p>Method under test: {@link BlockCapsule#BlockCapsule(CodedInputStream)}
    */
   @Test
-  @Category(MaintainedByDiffblue.class)
+  @Category(ContributionFromDiffblue.class)
+  @ManagedByDiffblue
   @MethodsUnderTest({"void BlockCapsule.<init>(CodedInputStream)"})
   public void testNewBlockCapsule2() throws IOException, BadItemException {
     // Arrange
@@ -373,7 +390,8 @@ public class BlockCapsuleDiffblueTest {
    * <p>Method under test: {@link BlockCapsule#BlockCapsule(byte[])}
    */
   @Test
-  @Category(MaintainedByDiffblue.class)
+  @Category(ContributionFromDiffblue.class)
+  @ManagedByDiffblue
   @MethodsUnderTest({"void BlockCapsule.<init>(byte[])"})
   public void testNewBlockCapsule3() throws UnsupportedEncodingException, BadItemException {
     // Arrange, Act and Assert
@@ -388,7 +406,8 @@ public class BlockCapsuleDiffblueTest {
    * <p>Method under test: {@link BlockCapsule#BlockCapsule(byte[])}
    */
   @Test
-  @Category(MaintainedByDiffblue.class)
+  @Category(ContributionFromDiffblue.class)
+  @ManagedByDiffblue
   @MethodsUnderTest({"void BlockCapsule.<init>(byte[])"})
   public void testNewBlockCapsule4() throws UnsupportedEncodingException, BadItemException {
     // Arrange, Act and Assert
@@ -403,7 +422,8 @@ public class BlockCapsuleDiffblueTest {
    * <p>Method under test: {@link BlockCapsule#BlockCapsule(byte[])}
    */
   @Test
-  @Category(MaintainedByDiffblue.class)
+  @Category(ContributionFromDiffblue.class)
+  @ManagedByDiffblue
   @MethodsUnderTest({"void BlockCapsule.<init>(byte[])"})
   public void testNewBlockCapsule5() throws UnsupportedEncodingException, BadItemException {
     // Arrange, Act and Assert
@@ -418,7 +438,8 @@ public class BlockCapsuleDiffblueTest {
    * <p>Method under test: {@link BlockCapsule#BlockCapsule(byte[])}
    */
   @Test
-  @Category(MaintainedByDiffblue.class)
+  @Category(ContributionFromDiffblue.class)
+  @ManagedByDiffblue
   @MethodsUnderTest({"void BlockCapsule.<init>(byte[])"})
   public void testNewBlockCapsule6() throws UnsupportedEncodingException, BadItemException {
     // Arrange, Act and Assert
@@ -433,7 +454,8 @@ public class BlockCapsuleDiffblueTest {
    * <p>Method under test: {@link BlockCapsule#BlockCapsule(byte[])}
    */
   @Test
-  @Category(MaintainedByDiffblue.class)
+  @Category(ContributionFromDiffblue.class)
+  @ManagedByDiffblue
   @MethodsUnderTest({"void BlockCapsule.<init>(byte[])"})
   public void testNewBlockCapsule7() throws UnsupportedEncodingException, BadItemException {
     // Arrange, Act and Assert
@@ -453,7 +475,8 @@ public class BlockCapsuleDiffblueTest {
    * <p>Method under test: {@link BlockCapsule#BlockCapsule(long, ByteString, long, List)}
    */
   @Test
-  @Category(MaintainedByDiffblue.class)
+  @Category(ContributionFromDiffblue.class)
+  @ManagedByDiffblue
   @MethodsUnderTest({"void BlockCapsule.<init>(long, ByteString, long, List)"})
   public void testNewBlockCapsule_givenDefaultInstance_thenReturnTransactionsSizeIsOne() {
     // Arrange
@@ -518,7 +541,8 @@ public class BlockCapsuleDiffblueTest {
    * <p>Method under test: {@link BlockCapsule#BlockCapsule(CodedInputStream)}
    */
   @Test
-  @Category(MaintainedByDiffblue.class)
+  @Category(ContributionFromDiffblue.class)
+  @ManagedByDiffblue
   @MethodsUnderTest({"void BlockCapsule.<init>(CodedInputStream)"})
   public void testNewBlockCapsule_givenRuntimeException() throws IOException, BadItemException {
     // Arrange
@@ -540,7 +564,8 @@ public class BlockCapsuleDiffblueTest {
    * <p>Method under test: {@link BlockCapsule#BlockCapsule(long, ByteString, long, List)}
    */
   @Test
-  @Category(MaintainedByDiffblue.class)
+  @Category(ContributionFromDiffblue.class)
+  @ManagedByDiffblue
   @MethodsUnderTest({"void BlockCapsule.<init>(long, ByteString, long, List)"})
   public void testNewBlockCapsule_thenReturnInstanceSerializedSizeIsFourteen() {
     // Arrange
@@ -582,7 +607,8 @@ public class BlockCapsuleDiffblueTest {
    * <p>Method under test: {@link BlockCapsule#BlockCapsule(long, ByteString, long, List)}
    */
   @Test
-  @Category(MaintainedByDiffblue.class)
+  @Category(ContributionFromDiffblue.class)
+  @ManagedByDiffblue
   @MethodsUnderTest({"void BlockCapsule.<init>(long, ByteString, long, List)"})
   public void testNewBlockCapsule_whenArrayList_thenReturnInstanceTransactionsCountIsZero() {
     // Arrange
@@ -634,7 +660,8 @@ public class BlockCapsuleDiffblueTest {
    * <p>Method under test: {@link BlockCapsule#BlockCapsule(byte[])}
    */
   @Test
-  @Category(MaintainedByDiffblue.class)
+  @Category(ContributionFromDiffblue.class)
+  @ManagedByDiffblue
   @MethodsUnderTest({"void BlockCapsule.<init>(byte[])"})
   public void testNewBlockCapsule_whenArrayOfByteWithAAndBackspace_thenThrowBadItemException()
       throws BadItemException {
@@ -660,7 +687,8 @@ public class BlockCapsuleDiffblueTest {
    * <p>Method under test: {@link BlockCapsule#BlockCapsule(byte[])}
    */
   @Test
-  @Category(MaintainedByDiffblue.class)
+  @Category(ContributionFromDiffblue.class)
+  @ManagedByDiffblue
   @MethodsUnderTest({"void BlockCapsule.<init>(byte[])"})
   public void testNewBlockCapsule_whenArrayOfByteWithAAndBackspace_thenThrowBadItemException2()
       throws BadItemException {
@@ -685,7 +713,8 @@ public class BlockCapsuleDiffblueTest {
    * <p>Method under test: {@link BlockCapsule#BlockCapsule(byte[])}
    */
   @Test
-  @Category(MaintainedByDiffblue.class)
+  @Category(ContributionFromDiffblue.class)
+  @ManagedByDiffblue
   @MethodsUnderTest({"void BlockCapsule.<init>(byte[])"})
   public void testNewBlockCapsule_whenArrayOfByteWithEighteenAndBackspace()
       throws BadItemException {
@@ -710,7 +739,8 @@ public class BlockCapsuleDiffblueTest {
    * <p>Method under test: {@link BlockCapsule#BlockCapsule(byte[])}
    */
   @Test
-  @Category(MaintainedByDiffblue.class)
+  @Category(ContributionFromDiffblue.class)
+  @ManagedByDiffblue
   @MethodsUnderTest({"void BlockCapsule.<init>(byte[])"})
   public void testNewBlockCapsule_whenArrayOfByteWithEighteenAndBackspace2()
       throws BadItemException {
@@ -735,7 +765,8 @@ public class BlockCapsuleDiffblueTest {
    * <p>Method under test: {@link BlockCapsule#BlockCapsule(byte[])}
    */
   @Test
-  @Category(MaintainedByDiffblue.class)
+  @Category(ContributionFromDiffblue.class)
+  @ManagedByDiffblue
   @MethodsUnderTest({"void BlockCapsule.<init>(byte[])"})
   public void testNewBlockCapsule_whenArrayOfByteWithEighteenAndBackspace3()
       throws BadItemException {
@@ -761,7 +792,8 @@ public class BlockCapsuleDiffblueTest {
    * <p>Method under test: {@link BlockCapsule#BlockCapsule(byte[])}
    */
   @Test
-  @Category(MaintainedByDiffblue.class)
+  @Category(ContributionFromDiffblue.class)
+  @ManagedByDiffblue
   @MethodsUnderTest({"void BlockCapsule.<init>(byte[])"})
   public void testNewBlockCapsule_whenArrayOfByteWithEighteenAndLf_thenThrowBadItemException()
       throws BadItemException {
@@ -787,7 +819,8 @@ public class BlockCapsuleDiffblueTest {
    * <p>Method under test: {@link BlockCapsule#BlockCapsule(byte[])}
    */
   @Test
-  @Category(MaintainedByDiffblue.class)
+  @Category(ContributionFromDiffblue.class)
+  @ManagedByDiffblue
   @MethodsUnderTest({"void BlockCapsule.<init>(byte[])"})
   public void testNewBlockCapsule_whenArrayOfByteWithEighteenAndX_thenThrowBadItemException()
       throws BadItemException {
@@ -808,7 +841,8 @@ public class BlockCapsuleDiffblueTest {
    * <p>Method under test: {@link BlockCapsule#BlockCapsule(byte[])}
    */
   @Test
-  @Category(MaintainedByDiffblue.class)
+  @Category(ContributionFromDiffblue.class)
+  @ManagedByDiffblue
   @MethodsUnderTest({"void BlockCapsule.<init>(byte[])"})
   public void testNewBlockCapsule_whenArrayOfByteWithEighteenAndZero_thenThrowBadItemException()
       throws BadItemException {
@@ -829,7 +863,8 @@ public class BlockCapsuleDiffblueTest {
    * <p>Method under test: {@link BlockCapsule#BlockCapsule(byte[])}
    */
   @Test
-  @Category(MaintainedByDiffblue.class)
+  @Category(ContributionFromDiffblue.class)
+  @ManagedByDiffblue
   @MethodsUnderTest({"void BlockCapsule.<init>(byte[])"})
   public void testNewBlockCapsule_whenArrayOfByteWithLfAndBackspace_thenThrowBadItemException()
       throws BadItemException {
@@ -855,7 +890,8 @@ public class BlockCapsuleDiffblueTest {
    * <p>Method under test: {@link BlockCapsule#BlockCapsule(byte[])}
    */
   @Test
-  @Category(MaintainedByDiffblue.class)
+  @Category(ContributionFromDiffblue.class)
+  @ManagedByDiffblue
   @MethodsUnderTest({"void BlockCapsule.<init>(byte[])"})
   public void testNewBlockCapsule_whenArrayOfByteWithLfAndBackspace_thenThrowBadItemException2()
       throws BadItemException {
@@ -881,7 +917,8 @@ public class BlockCapsuleDiffblueTest {
    * <p>Method under test: {@link BlockCapsule#BlockCapsule(byte[])}
    */
   @Test
-  @Category(MaintainedByDiffblue.class)
+  @Category(ContributionFromDiffblue.class)
+  @ManagedByDiffblue
   @MethodsUnderTest({"void BlockCapsule.<init>(byte[])"})
   public void testNewBlockCapsule_whenArrayOfByteWithLfAndZero_thenThrowBadItemException()
       throws BadItemException {
@@ -902,7 +939,8 @@ public class BlockCapsuleDiffblueTest {
    * <p>Method under test: {@link BlockCapsule#BlockCapsule(byte[])}
    */
   @Test
-  @Category(MaintainedByDiffblue.class)
+  @Category(ContributionFromDiffblue.class)
+  @ManagedByDiffblue
   @MethodsUnderTest({"void BlockCapsule.<init>(byte[])"})
   public void testNewBlockCapsule_whenArrayOfByteWithMinusOneAndX_thenThrowBadItemException()
       throws BadItemException {
@@ -923,7 +961,8 @@ public class BlockCapsuleDiffblueTest {
    * <p>Method under test: {@link BlockCapsule#BlockCapsule(byte[])}
    */
   @Test
-  @Category(MaintainedByDiffblue.class)
+  @Category(ContributionFromDiffblue.class)
+  @ManagedByDiffblue
   @MethodsUnderTest({"void BlockCapsule.<init>(byte[])"})
   public void testNewBlockCapsule_whenArrayOfByteWithOneAndX_thenThrowBadItemException()
       throws BadItemException {
@@ -944,7 +983,8 @@ public class BlockCapsuleDiffblueTest {
    * <p>Method under test: {@link BlockCapsule#BlockCapsule(byte[])}
    */
   @Test
-  @Category(MaintainedByDiffblue.class)
+  @Category(ContributionFromDiffblue.class)
+  @ManagedByDiffblue
   @MethodsUnderTest({"void BlockCapsule.<init>(byte[])"})
   public void testNewBlockCapsule_whenAxaxaxaxBytesIsUtf8_thenThrowBadItemException()
       throws UnsupportedEncodingException, BadItemException {
@@ -962,7 +1002,8 @@ public class BlockCapsuleDiffblueTest {
    * <p>Method under test: {@link BlockCapsule#BlockCapsule(CodedInputStream)}
    */
   @Test
-  @Category(MaintainedByDiffblue.class)
+  @Category(ContributionFromDiffblue.class)
+  @ManagedByDiffblue
   @MethodsUnderTest({"void BlockCapsule.<init>(CodedInputStream)"})
   public void testNewBlockCapsule_whenCodedInputStreamReadFixed64ReturnOne()
       throws IOException, BadItemException {
@@ -985,11 +1026,12 @@ public class BlockCapsuleDiffblueTest {
    *   <li>Then return Bloom is {@code null}.
    * </ul>
    *
-   * <p>Method under test: {@link BlockCapsule#BlockCapsule(Block)}
+   * <p>Method under test: {@link BlockCapsule#BlockCapsule(Protocol.Block)}
    */
   @Test
-  @Category(MaintainedByDiffblue.class)
-  @MethodsUnderTest({"void BlockCapsule.<init>(Block)"})
+  @Category(ContributionFromDiffblue.class)
+  @ManagedByDiffblue
+  @MethodsUnderTest({"void BlockCapsule.<init>(Protocol.Block)"})
   public void testNewBlockCapsule_whenDefaultInstance_thenReturnBloomIsNull() {
     // Arrange
     Block block = Block.getDefaultInstance();
@@ -1023,7 +1065,8 @@ public class BlockCapsuleDiffblueTest {
    * <p>Method under test: {@link BlockCapsule#BlockCapsule(byte[])}
    */
   @Test
-  @Category(MaintainedByDiffblue.class)
+  @Category(ContributionFromDiffblue.class)
+  @ManagedByDiffblue
   @MethodsUnderTest({"void BlockCapsule.<init>(byte[])"})
   public void testNewBlockCapsule_whenEmptyArrayOfByte_thenReturnBloomIsNull()
       throws BadItemException {
@@ -1055,7 +1098,8 @@ public class BlockCapsuleDiffblueTest {
    * <p>Method under test: {@link BlockCapsule#BlockCapsule(byte[])}
    */
   @Test
-  @Category(MaintainedByDiffblue.class)
+  @Category(ContributionFromDiffblue.class)
+  @ManagedByDiffblue
   @MethodsUnderTest({"void BlockCapsule.<init>(byte[])"})
   public void testNewBlockCapsule_whenLf_thenThrowBadItemException() throws BadItemException {
     // Arrange, Act and Assert
@@ -1080,7 +1124,8 @@ public class BlockCapsuleDiffblueTest {
    * <p>Method under test: {@link BlockCapsule#BlockCapsule(byte[])}
    */
   @Test
-  @Category(MaintainedByDiffblue.class)
+  @Category(ContributionFromDiffblue.class)
+  @ManagedByDiffblue
   @MethodsUnderTest({"void BlockCapsule.<init>(byte[])"})
   public void testNewBlockCapsule_whenXaxaxaxBytesIsUtf8_thenThrowBadItemException()
       throws UnsupportedEncodingException, BadItemException {
@@ -1099,7 +1144,8 @@ public class BlockCapsuleDiffblueTest {
    * <p>Method under test: {@link BlockCapsule#BlockCapsule(long, Sha256Hash, long, ByteString)}
    */
   @Test
-  @Category(MaintainedByDiffblue.class)
+  @Category(ContributionFromDiffblue.class)
+  @ManagedByDiffblue
   @MethodsUnderTest({"void BlockCapsule.<init>(long, Sha256Hash, long, ByteString)"})
   public void testNewBlockCapsule_whenZero_hash_thenReturnBloomIsNull() {
     // Arrange

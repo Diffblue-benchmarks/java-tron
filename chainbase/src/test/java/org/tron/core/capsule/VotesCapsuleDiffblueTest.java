@@ -6,7 +6,8 @@ import static org.junit.Assert.assertFalse;
 import static org.junit.Assert.assertNull;
 import static org.junit.Assert.assertSame;
 import static org.junit.Assert.assertTrue;
-import com.diffblue.cover.annotations.MaintainedByDiffblue;
+import com.diffblue.cover.annotations.ContributionFromDiffblue;
+import com.diffblue.cover.annotations.ManagedByDiffblue;
 import com.diffblue.cover.annotations.MethodsUnderTest;
 import com.google.protobuf.ByteString;
 import java.io.UnsupportedEncodingException;
@@ -28,7 +29,8 @@ public class VotesCapsuleDiffblueTest {
    * <p>Method under test: {@link VotesCapsule#VotesCapsule(byte[])}
    */
   @Test
-  @Category(MaintainedByDiffblue.class)
+  @Category(ContributionFromDiffblue.class)
+  @ManagedByDiffblue
   @MethodsUnderTest({"void VotesCapsule.<init>(byte[])"})
   public void testNewVotesCapsule_thenReturnInstanceInitializationErrorStringIsEmptyString() {
     // Arrange and Act
@@ -71,7 +73,8 @@ public class VotesCapsuleDiffblueTest {
    * <p>Method under test: {@link VotesCapsule#VotesCapsule(byte[])}
    */
   @Test
-  @Category(MaintainedByDiffblue.class)
+  @Category(ContributionFromDiffblue.class)
+  @ManagedByDiffblue
   @MethodsUnderTest({"void VotesCapsule.<init>(byte[])"})
   public void testNewVotesCapsule_whenArrayOfByteWithAAndMinusOne_thenReturnInstanceIsNull() {
     // Arrange and Act
@@ -94,7 +97,8 @@ public class VotesCapsuleDiffblueTest {
    * <p>Method under test: {@link VotesCapsule#VotesCapsule(byte[])}
    */
   @Test
-  @Category(MaintainedByDiffblue.class)
+  @Category(ContributionFromDiffblue.class)
+  @ManagedByDiffblue
   @MethodsUnderTest({"void VotesCapsule.<init>(byte[])"})
   public void testNewVotesCapsule_whenArrayOfByteWithEighteenAndLf_thenReturnInstanceIsNull() {
     // Arrange and Act
@@ -116,7 +120,8 @@ public class VotesCapsuleDiffblueTest {
    * <p>Method under test: {@link VotesCapsule#VotesCapsule(byte[])}
    */
   @Test
-  @Category(MaintainedByDiffblue.class)
+  @Category(ContributionFromDiffblue.class)
+  @ManagedByDiffblue
   @MethodsUnderTest({"void VotesCapsule.<init>(byte[])"})
   public void testNewVotesCapsule_whenArrayOfByteWithEighteenAndMinusOne() {
     // Arrange and Act
@@ -139,7 +144,8 @@ public class VotesCapsuleDiffblueTest {
    * <p>Method under test: {@link VotesCapsule#VotesCapsule(byte[])}
    */
   @Test
-  @Category(MaintainedByDiffblue.class)
+  @Category(ContributionFromDiffblue.class)
+  @ManagedByDiffblue
   @MethodsUnderTest({"void VotesCapsule.<init>(byte[])"})
   public void testNewVotesCapsule_whenArrayOfByteWithEighteenAndTwo_thenReturnInstanceIsNull() {
     // Arrange and Act
@@ -161,7 +167,8 @@ public class VotesCapsuleDiffblueTest {
    * <p>Method under test: {@link VotesCapsule#VotesCapsule(byte[])}
    */
   @Test
-  @Category(MaintainedByDiffblue.class)
+  @Category(ContributionFromDiffblue.class)
+  @ManagedByDiffblue
   @MethodsUnderTest({"void VotesCapsule.<init>(byte[])"})
   public void testNewVotesCapsule_whenArrayOfByteWithEighteenAndTwo_thenReturnInstanceIsNull2() {
     // Arrange and Act
@@ -183,7 +190,8 @@ public class VotesCapsuleDiffblueTest {
    * <p>Method under test: {@link VotesCapsule#VotesCapsule(byte[])}
    */
   @Test
-  @Category(MaintainedByDiffblue.class)
+  @Category(ContributionFromDiffblue.class)
+  @ManagedByDiffblue
   @MethodsUnderTest({"void VotesCapsule.<init>(byte[])"})
   public void testNewVotesCapsule_whenArrayOfByteWithEighteenAndTwo_thenReturnInstanceIsNull3() {
     // Arrange and Act
@@ -205,7 +213,8 @@ public class VotesCapsuleDiffblueTest {
    * <p>Method under test: {@link VotesCapsule#VotesCapsule(byte[])}
    */
   @Test
-  @Category(MaintainedByDiffblue.class)
+  @Category(ContributionFromDiffblue.class)
+  @ManagedByDiffblue
   @MethodsUnderTest({"void VotesCapsule.<init>(byte[])"})
   public void testNewVotesCapsule_whenArrayOfByteWithEighteenAndX_thenReturnInstanceIsNull() {
     // Arrange and Act
@@ -227,7 +236,8 @@ public class VotesCapsuleDiffblueTest {
    * <p>Method under test: {@link VotesCapsule#VotesCapsule(byte[])}
    */
   @Test
-  @Category(MaintainedByDiffblue.class)
+  @Category(ContributionFromDiffblue.class)
+  @ManagedByDiffblue
   @MethodsUnderTest({"void VotesCapsule.<init>(byte[])"})
   public void testNewVotesCapsule_whenArrayOfByteWithEighteenAndZero_thenReturnInstanceIsNull() {
     // Arrange and Act
@@ -249,7 +259,8 @@ public class VotesCapsuleDiffblueTest {
    * <p>Method under test: {@link VotesCapsule#VotesCapsule(byte[])}
    */
   @Test
-  @Category(MaintainedByDiffblue.class)
+  @Category(ContributionFromDiffblue.class)
+  @ManagedByDiffblue
   @MethodsUnderTest({"void VotesCapsule.<init>(byte[])"})
   public void testNewVotesCapsule_whenArrayOfByteWithLfAndTwo_thenReturnInstanceIsNull() {
     // Arrange and Act
@@ -271,7 +282,8 @@ public class VotesCapsuleDiffblueTest {
    * <p>Method under test: {@link VotesCapsule#VotesCapsule(byte[])}
    */
   @Test
-  @Category(MaintainedByDiffblue.class)
+  @Category(ContributionFromDiffblue.class)
+  @ManagedByDiffblue
   @MethodsUnderTest({"void VotesCapsule.<init>(byte[])"})
   public void testNewVotesCapsule_whenArrayOfByteWithLfAndZero_thenReturnInstanceIsNull() {
     // Arrange and Act
@@ -293,7 +305,8 @@ public class VotesCapsuleDiffblueTest {
    * <p>Method under test: {@link VotesCapsule#VotesCapsule(byte[])}
    */
   @Test
-  @Category(MaintainedByDiffblue.class)
+  @Category(ContributionFromDiffblue.class)
+  @ManagedByDiffblue
   @MethodsUnderTest({"void VotesCapsule.<init>(byte[])"})
   public void testNewVotesCapsule_whenArrayOfByteWithMinusOneAndX_thenReturnInstanceIsNull() {
     // Arrange and Act
@@ -315,7 +328,8 @@ public class VotesCapsuleDiffblueTest {
    * <p>Method under test: {@link VotesCapsule#VotesCapsule(byte[])}
    */
   @Test
-  @Category(MaintainedByDiffblue.class)
+  @Category(ContributionFromDiffblue.class)
+  @ManagedByDiffblue
   @MethodsUnderTest({"void VotesCapsule.<init>(byte[])"})
   public void testNewVotesCapsule_whenArrayOfByteWithTwentySixAndX_thenReturnInstanceIsNull() {
     // Arrange and Act
@@ -337,7 +351,8 @@ public class VotesCapsuleDiffblueTest {
    * <p>Method under test: {@link VotesCapsule#VotesCapsule(byte[])}
    */
   @Test
-  @Category(MaintainedByDiffblue.class)
+  @Category(ContributionFromDiffblue.class)
+  @ManagedByDiffblue
   @MethodsUnderTest({"void VotesCapsule.<init>(byte[])"})
   public void testNewVotesCapsule_whenArrayOfByteWithTwentySixAndZero_thenReturnInstanceIsNull() {
     // Arrange and Act
@@ -359,7 +374,8 @@ public class VotesCapsuleDiffblueTest {
    * <p>Method under test: {@link VotesCapsule#VotesCapsule(byte[])}
    */
   @Test
-  @Category(MaintainedByDiffblue.class)
+  @Category(ContributionFromDiffblue.class)
+  @ManagedByDiffblue
   @MethodsUnderTest({"void VotesCapsule.<init>(byte[])"})
   public void testNewVotesCapsule_whenArrayOfByteWithTwoAndX_thenReturnInstanceIsNull() {
     // Arrange and Act
@@ -381,7 +397,8 @@ public class VotesCapsuleDiffblueTest {
    * <p>Method under test: {@link VotesCapsule#VotesCapsule(byte[])}
    */
   @Test
-  @Category(MaintainedByDiffblue.class)
+  @Category(ContributionFromDiffblue.class)
+  @ManagedByDiffblue
   @MethodsUnderTest({"void VotesCapsule.<init>(byte[])"})
   public void testNewVotesCapsule_whenAxaxaxaxBytesIsUtf8_thenReturnInstanceIsNull()
       throws UnsupportedEncodingException {
@@ -400,7 +417,8 @@ public class VotesCapsuleDiffblueTest {
    * <p>Method under test: {@link VotesCapsule#VotesCapsule(byte[])}
    */
   @Test
-  @Category(MaintainedByDiffblue.class)
+  @Category(ContributionFromDiffblue.class)
+  @ManagedByDiffblue
   @MethodsUnderTest({"void VotesCapsule.<init>(byte[])"})
   public void testNewVotesCapsule_whenLf_thenReturnInstanceIsNull() {
     // Arrange and Act
@@ -422,7 +440,8 @@ public class VotesCapsuleDiffblueTest {
    * <p>Method under test: {@link VotesCapsule#VotesCapsule(byte[])}
    */
   @Test
-  @Category(MaintainedByDiffblue.class)
+  @Category(ContributionFromDiffblue.class)
+  @ManagedByDiffblue
   @MethodsUnderTest({"void VotesCapsule.<init>(byte[])"})
   public void testNewVotesCapsule_whenXaxaxaxBytesIsUtf8_thenReturnInstanceIsNull()
       throws UnsupportedEncodingException {

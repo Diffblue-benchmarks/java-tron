@@ -3,7 +3,8 @@ package org.tron.core.exception;
 import static org.junit.Assert.assertEquals;
 import static org.junit.Assert.assertNull;
 import static org.junit.Assert.assertSame;
-import com.diffblue.cover.annotations.MaintainedByDiffblue;
+import com.diffblue.cover.annotations.ContributionFromDiffblue;
+import com.diffblue.cover.annotations.ManagedByDiffblue;
 import com.diffblue.cover.annotations.MethodsUnderTest;
 import org.junit.Test;
 import org.junit.experimental.categories.Category;
@@ -16,7 +17,8 @@ public class P2pExceptionDiffblueTest {
    * <p>Method under test: {@link P2pException#P2pException(TypeEnum, String)}
    */
   @Test
-  @Category(MaintainedByDiffblue.class)
+  @Category(ContributionFromDiffblue.class)
+  @ManagedByDiffblue
   @MethodsUnderTest({"void P2pException.<init>(TypeEnum, String)"})
   public void testNewP2pException() {
     // Arrange and Act
@@ -36,7 +38,8 @@ public class P2pExceptionDiffblueTest {
    * <p>Method under test: {@link P2pException#P2pException(TypeEnum, String, Throwable)}
    */
   @Test
-  @Category(MaintainedByDiffblue.class)
+  @Category(ContributionFromDiffblue.class)
+  @ManagedByDiffblue
   @MethodsUnderTest({"void P2pException.<init>(TypeEnum, String, Throwable)"})
   public void testNewP2pException2() {
     // Arrange
@@ -60,7 +63,8 @@ public class P2pExceptionDiffblueTest {
    * <p>Method under test: {@link P2pException#P2pException(TypeEnum, Throwable)}
    */
   @Test
-  @Category(MaintainedByDiffblue.class)
+  @Category(ContributionFromDiffblue.class)
+  @ManagedByDiffblue
   @MethodsUnderTest({"void P2pException.<init>(TypeEnum, Throwable)"})
   public void testNewP2pException3() {
     // Arrange
@@ -83,7 +87,8 @@ public class P2pExceptionDiffblueTest {
    * <p>Method under test: {@link P2pException#getType()}
    */
   @Test
-  @Category(MaintainedByDiffblue.class)
+  @Category(ContributionFromDiffblue.class)
+  @ManagedByDiffblue
   @MethodsUnderTest({"TypeEnum P2pException.getType()"})
   public void testGetType() {
     // Arrange, Act and Assert
@@ -103,7 +108,8 @@ public class P2pExceptionDiffblueTest {
    * </ul>
    */
   @Test
-  @Category(MaintainedByDiffblue.class)
+  @Category(ContributionFromDiffblue.class)
+  @ManagedByDiffblue
   @MethodsUnderTest({
     "String TypeEnum.getDesc()",
     "java.lang.Integer TypeEnum.getValue()",

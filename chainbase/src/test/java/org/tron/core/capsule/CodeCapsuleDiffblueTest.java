@@ -5,7 +5,8 @@ import static org.junit.Assert.assertEquals;
 import static org.junit.Assert.assertFalse;
 import static org.junit.Assert.assertSame;
 import static org.junit.Assert.assertTrue;
-import com.diffblue.cover.annotations.MaintainedByDiffblue;
+import com.diffblue.cover.annotations.ContributionFromDiffblue;
+import com.diffblue.cover.annotations.ManagedByDiffblue;
 import com.diffblue.cover.annotations.MethodsUnderTest;
 import com.google.protobuf.ByteString;
 import com.google.protobuf.ByteString.ByteIterator;
@@ -28,7 +29,8 @@ public class CodeCapsuleDiffblueTest {
    * </ul>
    */
   @Test
-  @Category(MaintainedByDiffblue.class)
+  @Category(ContributionFromDiffblue.class)
+  @ManagedByDiffblue
   @MethodsUnderTest({
     "void CodeCapsule.<init>(byte[])",
     "byte[] CodeCapsule.getData()",
@@ -56,7 +58,8 @@ public class CodeCapsuleDiffblueTest {
    * <p>Method under test: {@link CodeCapsule#getCodeHash()}
    */
   @Test
-  @Category(MaintainedByDiffblue.class)
+  @Category(ContributionFromDiffblue.class)
+  @ManagedByDiffblue
   @MethodsUnderTest({"Sha256Hash CodeCapsule.getCodeHash()"})
   public void testGetCodeHash() throws UnsupportedEncodingException {
     // Arrange and Act
@@ -97,7 +100,8 @@ public class CodeCapsuleDiffblueTest {
    * <p>Method under test: {@link CodeCapsule#getInstance()}
    */
   @Test
-  @Category(MaintainedByDiffblue.class)
+  @Category(ContributionFromDiffblue.class)
+  @ManagedByDiffblue
   @MethodsUnderTest({"byte[] CodeCapsule.getInstance()"})
   public void testGetInstance() throws UnsupportedEncodingException {
     // Arrange, Act and Assert

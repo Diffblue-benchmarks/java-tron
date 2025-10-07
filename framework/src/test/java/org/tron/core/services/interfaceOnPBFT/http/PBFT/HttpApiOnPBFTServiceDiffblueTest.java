@@ -4,7 +4,8 @@ import static org.mockito.ArgumentMatchers.isA;
 import static org.mockito.Mockito.doNothing;
 import static org.mockito.Mockito.doThrow;
 import static org.mockito.Mockito.verify;
-import com.diffblue.cover.annotations.MaintainedByDiffblue;
+import com.diffblue.cover.annotations.ContributionFromDiffblue;
+import com.diffblue.cover.annotations.ManagedByDiffblue;
 import com.diffblue.cover.annotations.MethodsUnderTest;
 import javax.servlet.FilterConfig;
 import javax.servlet.ServletConfig;
@@ -180,16 +181,16 @@ public class HttpApiOnPBFTServiceDiffblueTest {
    *
    * <ul>
    *   <li>Given {@link ScanShieldedTRC20NotesByOvkOnPBFTServlet} {@link
-   *       ScanShieldedTRC20NotesByOvkOnPBFTServlet#init(ServletConfig)} throw {@link
-   *       RuntimeException#RuntimeException()}.
+   *       ScanShieldedTRC20NotesByOvkOnPBFTServlet#init(ServletConfig)} does nothing.
    * </ul>
    *
    * <p>Method under test: {@link HttpApiOnPBFTService#start()}
    */
   @Test
-  @Category(MaintainedByDiffblue.class)
+  @Category(ContributionFromDiffblue.class)
+  @ManagedByDiffblue
   @MethodsUnderTest({"void HttpApiOnPBFTService.start()"})
-  public void testStart_givenScanShieldedTRC20NotesByOvkOnPBFTServletInitThrowRuntimeException()
+  public void testStart_givenScanShieldedTRC20NotesByOvkOnPBFTServletInitDoesNothing()
       throws ServletException {
     // Arrange
     doNothing().when(getAccountOnPBFTServlet).init(Mockito.<ServletConfig>any());
@@ -245,9 +246,7 @@ public class HttpApiOnPBFTServiceDiffblueTest {
     doNothing().when(scanNoteByIvkOnPBFTServlet).init(Mockito.<ServletConfig>any());
     doNothing().when(scanNoteByOvkOnPBFTServlet).init(Mockito.<ServletConfig>any());
     doNothing().when(scanShieldedTRC20NotesByIvkOnPBFTServlet).init(Mockito.<ServletConfig>any());
-    doThrow(new RuntimeException())
-        .when(scanShieldedTRC20NotesByOvkOnPBFTServlet)
-        .init(Mockito.<ServletConfig>any());
+    doNothing().when(scanShieldedTRC20NotesByOvkOnPBFTServlet).init(Mockito.<ServletConfig>any());
     doThrow(new RuntimeException())
         .when(triggerConstantContractOnPBFTServlet)
         .init(Mockito.<ServletConfig>any());
@@ -311,15 +310,19 @@ public class HttpApiOnPBFTServiceDiffblueTest {
    * Test {@link HttpApiOnPBFTService#start()}.
    *
    * <ul>
-   *   <li>Then calls {@link EstimateEnergyOnPBFTServlet#init(ServletConfig)}.
+   *   <li>Given {@link ScanShieldedTRC20NotesByOvkOnPBFTServlet} {@link
+   *       ScanShieldedTRC20NotesByOvkOnPBFTServlet#init(ServletConfig)} throw {@link
+   *       RuntimeException#RuntimeException()}.
    * </ul>
    *
    * <p>Method under test: {@link HttpApiOnPBFTService#start()}
    */
   @Test
-  @Category(MaintainedByDiffblue.class)
+  @Category(ContributionFromDiffblue.class)
+  @ManagedByDiffblue
   @MethodsUnderTest({"void HttpApiOnPBFTService.start()"})
-  public void testStart_thenCallsInit() throws ServletException {
+  public void testStart_givenScanShieldedTRC20NotesByOvkOnPBFTServletInitThrowRuntimeException()
+      throws ServletException {
     // Arrange
     doNothing().when(getAccountOnPBFTServlet).init(Mockito.<ServletConfig>any());
     doNothing().when(estimateEnergyOnPBFTServlet).init(Mockito.<ServletConfig>any());
@@ -374,7 +377,140 @@ public class HttpApiOnPBFTServiceDiffblueTest {
     doNothing().when(scanNoteByIvkOnPBFTServlet).init(Mockito.<ServletConfig>any());
     doNothing().when(scanNoteByOvkOnPBFTServlet).init(Mockito.<ServletConfig>any());
     doNothing().when(scanShieldedTRC20NotesByIvkOnPBFTServlet).init(Mockito.<ServletConfig>any());
-    doNothing().when(scanShieldedTRC20NotesByOvkOnPBFTServlet).init(Mockito.<ServletConfig>any());
+    doThrow(new RuntimeException())
+        .when(scanShieldedTRC20NotesByOvkOnPBFTServlet)
+        .init(Mockito.<ServletConfig>any());
+    doNothing().when(triggerConstantContractOnPBFTServlet).init(Mockito.<ServletConfig>any());
+
+    // Act
+    httpApiOnPBFTService.start();
+
+    // Assert
+    verify(estimateEnergyOnPBFTServlet).init(isA(ServletConfig.class));
+    verify(getAccountByIdOnPBFTServlet).init(isA(ServletConfig.class));
+    verify(getAccountOnPBFTServlet).init(isA(ServletConfig.class));
+    verify(getAssetIssueByIdOnPBFTServlet).init(isA(ServletConfig.class));
+    verify(getAssetIssueByNameOnPBFTServlet).init(isA(ServletConfig.class));
+    verify(getAssetIssueListByNameOnPBFTServlet).init(isA(ServletConfig.class));
+    verify(getAssetIssueListOnPBFTServlet).init(isA(ServletConfig.class));
+    verify(getAvailableUnfreezeCountOnPBFTServlet).init(isA(ServletConfig.class));
+    verify(getBandwidthPricesOnPBFTServlet).init(isA(ServletConfig.class));
+    verify(getBlockByIdOnPBFTServlet).init(isA(ServletConfig.class));
+    verify(getBlockByLatestNumOnPBFTServlet).init(isA(ServletConfig.class));
+    verify(getBlockByLimitNextOnPBFTServlet).init(isA(ServletConfig.class));
+    verify(getBlockByNumOnPBFTServlet).init(isA(ServletConfig.class));
+    verify(getBrokerageOnPBFTServlet).init(isA(ServletConfig.class));
+    verify(getBurnTrxOnPBFTServlet).init(isA(ServletConfig.class));
+    verify(getCanDelegatedMaxSizeOnPBFTServlet).init(isA(ServletConfig.class));
+    verify(getCanWithdrawUnfreezeAmountOnPBFTServlet).init(isA(ServletConfig.class));
+    verify(getDelegatedResourceAccountIndexOnPBFTServlet).init(isA(ServletConfig.class));
+    verify(getDelegatedResourceAccountIndexV2OnPBFTServlet).init(isA(ServletConfig.class));
+    verify(getDelegatedResourceOnPBFTServlet).init(isA(ServletConfig.class));
+    verify(getDelegatedResourceV2OnPBFTServlet).init(isA(ServletConfig.class));
+    verify(getEnergyPricesOnPBFTServlet).init(isA(ServletConfig.class));
+    verify(getExchangeByIdOnPBFTServlet).init(isA(ServletConfig.class));
+    verify(getMarketOrderByAccountOnPBFTServlet).init(isA(ServletConfig.class));
+    verify(getMarketOrderByIdOnPBFTServlet).init(isA(ServletConfig.class));
+    verify(getMarketOrderListByPairOnPBFTServlet).init(isA(ServletConfig.class));
+    verify(getMarketPairListOnPBFTServlet).init(isA(ServletConfig.class));
+    verify(getMarketPriceByPairOnPBFTServlet).init(isA(ServletConfig.class));
+    verify(getMerkleTreeVoucherInfoOnPBFTServlet).init(isA(ServletConfig.class));
+    verify(getNodeInfoOnPBFTServlet).init(isA(ServletConfig.class));
+    verify(getNowBlockOnPBFTServlet).init(isA(ServletConfig.class));
+    verify(getPaginatedAssetIssueListOnPBFTServlet).init(isA(ServletConfig.class));
+    verify(getRewardOnPBFTServlet).init(isA(ServletConfig.class));
+    verify(getTransactionCountByBlockNumOnPBFTServlet).init(isA(ServletConfig.class));
+    verify(isShieldedTRC20ContractNoteSpentOnPBFTServlet).init(isA(ServletConfig.class));
+    verify(isSpendOnPBFTServlet).init(isA(ServletConfig.class));
+    verify(listExchangesOnPBFTServlet).init(isA(ServletConfig.class));
+    verify(listWitnessesOnPBFTServlet).init(isA(ServletConfig.class));
+    verify(getBlockOnPBFTServlet).init(isA(ServletConfig.class));
+    verify(getTransactionByIdOnPBFTServlet).init(isA(ServletConfig.class));
+    verify(getTransactionInfoByIdOnPBFTServlet).init(isA(ServletConfig.class));
+    verify(scanAndMarkNoteByIvkOnPBFTServlet).init(isA(ServletConfig.class));
+    verify(scanNoteByIvkOnPBFTServlet).init(isA(ServletConfig.class));
+    verify(scanNoteByOvkOnPBFTServlet).init(isA(ServletConfig.class));
+    verify(scanShieldedTRC20NotesByIvkOnPBFTServlet).init(isA(ServletConfig.class));
+    verify(scanShieldedTRC20NotesByOvkOnPBFTServlet).init(isA(ServletConfig.class));
+    verify(triggerConstantContractOnPBFTServlet).init(isA(ServletConfig.class));
+    verify(httpApiAccessFilter).init(isA(FilterConfig.class));
+    verify(liteFnQueryHttpFilter).init(isA(FilterConfig.class));
+  }
+
+  /**
+   * Test {@link HttpApiOnPBFTService#start()}.
+   *
+   * <ul>
+   *   <li>Given {@link ScanShieldedTRC20NotesByOvkOnPBFTServlet} {@link
+   *       ScanShieldedTRC20NotesByOvkOnPBFTServlet#init(ServletConfig)} throw {@link
+   *       RuntimeException#RuntimeException()}.
+   * </ul>
+   *
+   * <p>Method under test: {@link HttpApiOnPBFTService#start()}
+   */
+  @Test
+  @Category(ContributionFromDiffblue.class)
+  @ManagedByDiffblue
+  @MethodsUnderTest({"void HttpApiOnPBFTService.start()"})
+  public void testStart_givenScanShieldedTRC20NotesByOvkOnPBFTServletInitThrowRuntimeException2()
+      throws ServletException {
+    // Arrange
+    doNothing().when(getAccountOnPBFTServlet).init(Mockito.<ServletConfig>any());
+    doNothing().when(estimateEnergyOnPBFTServlet).init(Mockito.<ServletConfig>any());
+    doNothing().when(getAccountByIdOnPBFTServlet).init(Mockito.<ServletConfig>any());
+    doNothing().when(getAssetIssueByIdOnPBFTServlet).init(Mockito.<ServletConfig>any());
+    doNothing().when(getAssetIssueByNameOnPBFTServlet).init(Mockito.<ServletConfig>any());
+    doNothing().when(getAssetIssueListByNameOnPBFTServlet).init(Mockito.<ServletConfig>any());
+    doNothing().when(getAssetIssueListOnPBFTServlet).init(Mockito.<ServletConfig>any());
+    doNothing().when(getAvailableUnfreezeCountOnPBFTServlet).init(Mockito.<ServletConfig>any());
+    doNothing().when(getBandwidthPricesOnPBFTServlet).init(Mockito.<ServletConfig>any());
+    doNothing().when(getBlockByIdOnPBFTServlet).init(Mockito.<ServletConfig>any());
+    doNothing().when(getBlockByLatestNumOnPBFTServlet).init(Mockito.<ServletConfig>any());
+    doNothing().when(getBlockByLimitNextOnPBFTServlet).init(Mockito.<ServletConfig>any());
+    doNothing().when(getBlockByNumOnPBFTServlet).init(Mockito.<ServletConfig>any());
+    doNothing().when(getBlockOnPBFTServlet).init(Mockito.<ServletConfig>any());
+    doNothing().when(getBrokerageOnPBFTServlet).init(Mockito.<ServletConfig>any());
+    doNothing().when(getBurnTrxOnPBFTServlet).init(Mockito.<ServletConfig>any());
+    doNothing().when(getCanDelegatedMaxSizeOnPBFTServlet).init(Mockito.<ServletConfig>any());
+    doNothing().when(getCanWithdrawUnfreezeAmountOnPBFTServlet).init(Mockito.<ServletConfig>any());
+    doNothing()
+        .when(getDelegatedResourceAccountIndexOnPBFTServlet)
+        .init(Mockito.<ServletConfig>any());
+    doNothing()
+        .when(getDelegatedResourceAccountIndexV2OnPBFTServlet)
+        .init(Mockito.<ServletConfig>any());
+    doNothing().when(getDelegatedResourceOnPBFTServlet).init(Mockito.<ServletConfig>any());
+    doNothing().when(getDelegatedResourceV2OnPBFTServlet).init(Mockito.<ServletConfig>any());
+    doNothing().when(getEnergyPricesOnPBFTServlet).init(Mockito.<ServletConfig>any());
+    doNothing().when(getExchangeByIdOnPBFTServlet).init(Mockito.<ServletConfig>any());
+    doNothing().when(getMarketOrderByAccountOnPBFTServlet).init(Mockito.<ServletConfig>any());
+    doNothing().when(getMarketOrderByIdOnPBFTServlet).init(Mockito.<ServletConfig>any());
+    doNothing().when(getMarketOrderListByPairOnPBFTServlet).init(Mockito.<ServletConfig>any());
+    doNothing().when(getMarketPairListOnPBFTServlet).init(Mockito.<ServletConfig>any());
+    doNothing().when(getMarketPriceByPairOnPBFTServlet).init(Mockito.<ServletConfig>any());
+    doNothing().when(getMerkleTreeVoucherInfoOnPBFTServlet).init(Mockito.<ServletConfig>any());
+    doNothing().when(getNodeInfoOnPBFTServlet).init(Mockito.<ServletConfig>any());
+    doNothing().when(getNowBlockOnPBFTServlet).init(Mockito.<ServletConfig>any());
+    doNothing().when(getPaginatedAssetIssueListOnPBFTServlet).init(Mockito.<ServletConfig>any());
+    doNothing().when(getRewardOnPBFTServlet).init(Mockito.<ServletConfig>any());
+    doNothing().when(getTransactionByIdOnPBFTServlet).init(Mockito.<ServletConfig>any());
+    doNothing().when(getTransactionCountByBlockNumOnPBFTServlet).init(Mockito.<ServletConfig>any());
+    doNothing().when(getTransactionInfoByIdOnPBFTServlet).init(Mockito.<ServletConfig>any());
+    doNothing().when(httpApiAccessFilter).init(Mockito.<FilterConfig>any());
+    doNothing()
+        .when(isShieldedTRC20ContractNoteSpentOnPBFTServlet)
+        .init(Mockito.<ServletConfig>any());
+    doNothing().when(isSpendOnPBFTServlet).init(Mockito.<ServletConfig>any());
+    doNothing().when(listExchangesOnPBFTServlet).init(Mockito.<ServletConfig>any());
+    doNothing().when(listWitnessesOnPBFTServlet).init(Mockito.<ServletConfig>any());
+    doNothing().when(liteFnQueryHttpFilter).init(Mockito.<FilterConfig>any());
+    doNothing().when(scanAndMarkNoteByIvkOnPBFTServlet).init(Mockito.<ServletConfig>any());
+    doNothing().when(scanNoteByIvkOnPBFTServlet).init(Mockito.<ServletConfig>any());
+    doNothing().when(scanNoteByOvkOnPBFTServlet).init(Mockito.<ServletConfig>any());
+    doNothing().when(scanShieldedTRC20NotesByIvkOnPBFTServlet).init(Mockito.<ServletConfig>any());
+    doThrow(new RuntimeException())
+        .when(scanShieldedTRC20NotesByOvkOnPBFTServlet)
+        .init(Mockito.<ServletConfig>any());
     doThrow(new RuntimeException())
         .when(triggerConstantContractOnPBFTServlet)
         .init(Mockito.<ServletConfig>any());

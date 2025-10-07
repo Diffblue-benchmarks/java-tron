@@ -6,7 +6,8 @@ import static org.mockito.Mockito.atLeast;
 import static org.mockito.Mockito.mock;
 import static org.mockito.Mockito.verify;
 import static org.mockito.Mockito.when;
-import com.diffblue.cover.annotations.MaintainedByDiffblue;
+import com.diffblue.cover.annotations.ContributionFromDiffblue;
+import com.diffblue.cover.annotations.ManagedByDiffblue;
 import com.diffblue.cover.annotations.MethodsUnderTest;
 import org.aspectj.lang.ProceedingJoinPoint;
 import org.aspectj.lang.Signature;
@@ -26,7 +27,8 @@ public class MetricAspectDiffblueTest {
    * MetricTime)}
    */
   @Test
-  @Category(MaintainedByDiffblue.class)
+  @Category(ContributionFromDiffblue.class)
+  @ManagedByDiffblue
   @MethodsUnderTest({"Object MetricAspect.aroundAdviceMetricTime(ProceedingJoinPoint, MetricTime)"})
   public void testAroundAdviceMetricTime_givenProceed_thenReturnProceed() throws Throwable {
     // Arrange
@@ -67,7 +69,8 @@ public class MetricAspectDiffblueTest {
    * MetricTime)}
    */
   @Test
-  @Category(MaintainedByDiffblue.class)
+  @Category(ContributionFromDiffblue.class)
+  @ManagedByDiffblue
   @MethodsUnderTest({"Object MetricAspect.aroundAdviceMetricTime(ProceedingJoinPoint, MetricTime)"})
   public void testAroundAdviceMetricTime_givenSignatureGetNameReturnName_thenReturnProceed()
       throws Throwable {
@@ -111,7 +114,8 @@ public class MetricAspectDiffblueTest {
    * MetricTime)}
    */
   @Test
-  @Category(MaintainedByDiffblue.class)
+  @Category(ContributionFromDiffblue.class)
+  @ManagedByDiffblue
   @MethodsUnderTest({"Object MetricAspect.aroundAdviceMetricTime(ProceedingJoinPoint, MetricTime)"})
   public void testAroundAdviceMetricTime_givenSignatureGetNameReturnName_thenThrowThrowable()
       throws Throwable {
@@ -151,7 +155,8 @@ public class MetricAspectDiffblueTest {
    * MetricTime)}
    */
   @Test
-  @Category(MaintainedByDiffblue.class)
+  @Category(ContributionFromDiffblue.class)
+  @ManagedByDiffblue
   @MethodsUnderTest({"Object MetricAspect.aroundAdviceMetricTime(ProceedingJoinPoint, MetricTime)"})
   public void testAroundAdviceMetricTime_givenThrowable_thenThrowThrowable() throws Throwable {
     // Arrange
@@ -187,7 +192,8 @@ public class MetricAspectDiffblueTest {
    * <p>Method under test: {@link MetricAspect#walletAroundAdvice(ProceedingJoinPoint)}
    */
   @Test
-  @Category(MaintainedByDiffblue.class)
+  @Category(ContributionFromDiffblue.class)
+  @ManagedByDiffblue
   @MethodsUnderTest({"Object MetricAspect.walletAroundAdvice(ProceedingJoinPoint)"})
   public void testWalletAroundAdvice_givenJavaLangObject_thenReturnProceed() throws Throwable {
     // Arrange
@@ -224,7 +230,8 @@ public class MetricAspectDiffblueTest {
    * <p>Method under test: {@link MetricAspect#walletAroundAdvice(ProceedingJoinPoint)}
    */
   @Test
-  @Category(MaintainedByDiffblue.class)
+  @Category(ContributionFromDiffblue.class)
+  @ManagedByDiffblue
   @MethodsUnderTest({"Object MetricAspect.walletAroundAdvice(ProceedingJoinPoint)"})
   public void testWalletAroundAdvice_givenThrowable_thenThrowThrowable() throws Throwable {
     // Arrange

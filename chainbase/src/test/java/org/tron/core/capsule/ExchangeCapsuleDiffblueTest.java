@@ -7,7 +7,8 @@ import static org.junit.Assert.assertSame;
 import static org.mockito.Mockito.mock;
 import static org.mockito.Mockito.verify;
 import static org.mockito.Mockito.when;
-import com.diffblue.cover.annotations.MaintainedByDiffblue;
+import com.diffblue.cover.annotations.ContributionFromDiffblue;
+import com.diffblue.cover.annotations.ManagedByDiffblue;
 import com.diffblue.cover.annotations.MethodsUnderTest;
 import com.google.protobuf.ByteString;
 import java.io.UnsupportedEncodingException;
@@ -28,7 +29,8 @@ public class ExchangeCapsuleDiffblueTest {
    * <p>Method under test: {@link ExchangeCapsule#ExchangeCapsule(byte[])}
    */
   @Test
-  @Category(MaintainedByDiffblue.class)
+  @Category(ContributionFromDiffblue.class)
+  @ManagedByDiffblue
   @MethodsUnderTest({"void ExchangeCapsule.<init>(byte[])"})
   public void testNewExchangeCapsule() throws UnsupportedEncodingException {
     // Arrange, Act and Assert
@@ -41,7 +43,8 @@ public class ExchangeCapsuleDiffblueTest {
    * <p>Method under test: {@link ExchangeCapsule#ExchangeCapsule(byte[])}
    */
   @Test
-  @Category(MaintainedByDiffblue.class)
+  @Category(ContributionFromDiffblue.class)
+  @ManagedByDiffblue
   @MethodsUnderTest({"void ExchangeCapsule.<init>(byte[])"})
   public void testNewExchangeCapsule2() throws UnsupportedEncodingException {
     // Arrange, Act and Assert
@@ -54,7 +57,8 @@ public class ExchangeCapsuleDiffblueTest {
    * <p>Method under test: {@link ExchangeCapsule#ExchangeCapsule(byte[])}
    */
   @Test
-  @Category(MaintainedByDiffblue.class)
+  @Category(ContributionFromDiffblue.class)
+  @ManagedByDiffblue
   @MethodsUnderTest({"void ExchangeCapsule.<init>(byte[])"})
   public void testNewExchangeCapsule3() throws UnsupportedEncodingException {
     // Arrange, Act and Assert
@@ -67,7 +71,8 @@ public class ExchangeCapsuleDiffblueTest {
    * <p>Method under test: {@link ExchangeCapsule#ExchangeCapsule(byte[])}
    */
   @Test
-  @Category(MaintainedByDiffblue.class)
+  @Category(ContributionFromDiffblue.class)
+  @ManagedByDiffblue
   @MethodsUnderTest({"void ExchangeCapsule.<init>(byte[])"})
   public void testNewExchangeCapsule4() throws UnsupportedEncodingException {
     // Arrange, Act and Assert
@@ -80,7 +85,8 @@ public class ExchangeCapsuleDiffblueTest {
    * <p>Method under test: {@link ExchangeCapsule#ExchangeCapsule(byte[])}
    */
   @Test
-  @Category(MaintainedByDiffblue.class)
+  @Category(ContributionFromDiffblue.class)
+  @ManagedByDiffblue
   @MethodsUnderTest({"void ExchangeCapsule.<init>(byte[])"})
   public void testNewExchangeCapsule5() throws UnsupportedEncodingException {
     // Arrange, Act and Assert
@@ -98,7 +104,8 @@ public class ExchangeCapsuleDiffblueTest {
    * byte[])}
    */
   @Test
-  @Category(MaintainedByDiffblue.class)
+  @Category(ContributionFromDiffblue.class)
+  @ManagedByDiffblue
   @MethodsUnderTest({"void ExchangeCapsule.<init>(ByteString, long, long, byte[], byte[])"})
   public void testNewExchangeCapsule_thenReturnInstanceAllFieldsSizeIsFour()
       throws UnsupportedEncodingException {
@@ -130,7 +137,8 @@ public class ExchangeCapsuleDiffblueTest {
    * byte[])}
    */
   @Test
-  @Category(MaintainedByDiffblue.class)
+  @Category(ContributionFromDiffblue.class)
+  @ManagedByDiffblue
   @MethodsUnderTest({"void ExchangeCapsule.<init>(ByteString, long, long, byte[], byte[])"})
   public void testNewExchangeCapsule_thenReturnInstanceSerializedSizeIsTwentySix()
       throws UnsupportedEncodingException {
@@ -168,7 +176,8 @@ public class ExchangeCapsuleDiffblueTest {
    * <p>Method under test: {@link ExchangeCapsule#ExchangeCapsule(byte[])}
    */
   @Test
-  @Category(MaintainedByDiffblue.class)
+  @Category(ContributionFromDiffblue.class)
+  @ManagedByDiffblue
   @MethodsUnderTest({"void ExchangeCapsule.<init>(byte[])"})
   public void testNewExchangeCapsule_when2xaxaxaxBytesIsUtf8_thenReturnInstanceIsNull()
       throws UnsupportedEncodingException {
@@ -187,7 +196,8 @@ public class ExchangeCapsuleDiffblueTest {
    * <p>Method under test: {@link ExchangeCapsule#ExchangeCapsule(byte[])}
    */
   @Test
-  @Category(MaintainedByDiffblue.class)
+  @Category(ContributionFromDiffblue.class)
+  @ManagedByDiffblue
   @MethodsUnderTest({"void ExchangeCapsule.<init>(byte[])"})
   public void testNewExchangeCapsule_when8xaxaxaxBytesIsUtf8_thenReturnInstanceIsNull()
       throws UnsupportedEncodingException {
@@ -206,7 +216,8 @@ public class ExchangeCapsuleDiffblueTest {
    * <p>Method under test: {@link ExchangeCapsule#ExchangeCapsule(byte[])}
    */
   @Test
-  @Category(MaintainedByDiffblue.class)
+  @Category(ContributionFromDiffblue.class)
+  @ManagedByDiffblue
   @MethodsUnderTest({"void ExchangeCapsule.<init>(byte[])"})
   public void testNewExchangeCapsule_whenArrayOfByteWith2AndZero_thenReturnInstanceIsNull() {
     // Arrange and Act
@@ -228,7 +239,8 @@ public class ExchangeCapsuleDiffblueTest {
    * <p>Method under test: {@link ExchangeCapsule#ExchangeCapsule(byte[])}
    */
   @Test
-  @Category(MaintainedByDiffblue.class)
+  @Category(ContributionFromDiffblue.class)
+  @ManagedByDiffblue
   @MethodsUnderTest({"void ExchangeCapsule.<init>(byte[])"})
   public void testNewExchangeCapsule_whenArrayOfByteWithAAndBackspace_thenReturnInstanceIsNull() {
     // Arrange and Act
@@ -253,7 +265,8 @@ public class ExchangeCapsuleDiffblueTest {
    * <p>Method under test: {@link ExchangeCapsule#ExchangeCapsule(byte[])}
    */
   @Test
-  @Category(MaintainedByDiffblue.class)
+  @Category(ContributionFromDiffblue.class)
+  @ManagedByDiffblue
   @MethodsUnderTest({"void ExchangeCapsule.<init>(byte[])"})
   public void testNewExchangeCapsule_whenArrayOfByteWithAAndBackspace_thenReturnInstanceIsNull2() {
     // Arrange and Act
@@ -278,7 +291,8 @@ public class ExchangeCapsuleDiffblueTest {
    * <p>Method under test: {@link ExchangeCapsule#ExchangeCapsule(byte[])}
    */
   @Test
-  @Category(MaintainedByDiffblue.class)
+  @Category(ContributionFromDiffblue.class)
+  @ManagedByDiffblue
   @MethodsUnderTest({"void ExchangeCapsule.<init>(byte[])"})
   public void testNewExchangeCapsule_whenArrayOfByteWithBAndZero_thenReturnInstanceIsNull() {
     // Arrange and Act
@@ -299,7 +313,8 @@ public class ExchangeCapsuleDiffblueTest {
    * <p>Method under test: {@link ExchangeCapsule#ExchangeCapsule(byte[])}
    */
   @Test
-  @Category(MaintainedByDiffblue.class)
+  @Category(ContributionFromDiffblue.class)
+  @ManagedByDiffblue
   @MethodsUnderTest({"void ExchangeCapsule.<init>(byte[])"})
   public void testNewExchangeCapsule_whenArrayOfByteWithEighteenAndBackspace() {
     // Arrange and Act
@@ -324,7 +339,8 @@ public class ExchangeCapsuleDiffblueTest {
    * <p>Method under test: {@link ExchangeCapsule#ExchangeCapsule(byte[])}
    */
   @Test
-  @Category(MaintainedByDiffblue.class)
+  @Category(ContributionFromDiffblue.class)
+  @ManagedByDiffblue
   @MethodsUnderTest({"void ExchangeCapsule.<init>(byte[])"})
   public void testNewExchangeCapsule_whenArrayOfByteWithEighteenAndX_thenReturnInstanceIsNull() {
     // Arrange and Act
@@ -345,7 +361,8 @@ public class ExchangeCapsuleDiffblueTest {
    * <p>Method under test: {@link ExchangeCapsule#ExchangeCapsule(byte[])}
    */
   @Test
-  @Category(MaintainedByDiffblue.class)
+  @Category(ContributionFromDiffblue.class)
+  @ManagedByDiffblue
   @MethodsUnderTest({"void ExchangeCapsule.<init>(byte[])"})
   public void testNewExchangeCapsule_whenArrayOfByteWithEighteenAndZero() {
     // Arrange and Act
@@ -367,7 +384,8 @@ public class ExchangeCapsuleDiffblueTest {
    * <p>Method under test: {@link ExchangeCapsule#ExchangeCapsule(byte[])}
    */
   @Test
-  @Category(MaintainedByDiffblue.class)
+  @Category(ContributionFromDiffblue.class)
+  @ManagedByDiffblue
   @MethodsUnderTest({"void ExchangeCapsule.<init>(byte[])"})
   public void testNewExchangeCapsule_whenArrayOfByteWithMinusOneAndX_thenReturnInstanceIsNull() {
     // Arrange and Act
@@ -388,7 +406,8 @@ public class ExchangeCapsuleDiffblueTest {
    * <p>Method under test: {@link ExchangeCapsule#ExchangeCapsule(byte[])}
    */
   @Test
-  @Category(MaintainedByDiffblue.class)
+  @Category(ContributionFromDiffblue.class)
+  @ManagedByDiffblue
   @MethodsUnderTest({"void ExchangeCapsule.<init>(byte[])"})
   public void testNewExchangeCapsule_whenArrayOfByteWithTwentyFourAndX() {
     // Arrange and Act
@@ -410,7 +429,8 @@ public class ExchangeCapsuleDiffblueTest {
    * <p>Method under test: {@link ExchangeCapsule#ExchangeCapsule(byte[])}
    */
   @Test
-  @Category(MaintainedByDiffblue.class)
+  @Category(ContributionFromDiffblue.class)
+  @ManagedByDiffblue
   @MethodsUnderTest({"void ExchangeCapsule.<init>(byte[])"})
   public void testNewExchangeCapsule_whenArrayOfByteWithZeroAndX_thenReturnInstanceIsNull() {
     // Arrange and Act
@@ -432,7 +452,8 @@ public class ExchangeCapsuleDiffblueTest {
    * <p>Method under test: {@link ExchangeCapsule#ExchangeCapsule(byte[])}
    */
   @Test
-  @Category(MaintainedByDiffblue.class)
+  @Category(ContributionFromDiffblue.class)
+  @ManagedByDiffblue
   @MethodsUnderTest({"void ExchangeCapsule.<init>(byte[])"})
   public void testNewExchangeCapsule_whenAxaxaxaxBytesIsUtf8_thenReturnInstanceIsNull()
       throws UnsupportedEncodingException {
@@ -451,7 +472,8 @@ public class ExchangeCapsuleDiffblueTest {
    * <p>Method under test: {@link ExchangeCapsule#ExchangeCapsule(byte[])}
    */
   @Test
-  @Category(MaintainedByDiffblue.class)
+  @Category(ContributionFromDiffblue.class)
+  @ManagedByDiffblue
   @MethodsUnderTest({"void ExchangeCapsule.<init>(byte[])"})
   public void testNewExchangeCapsule_whenBxaxaxaxBytesIsUtf8_thenReturnInstanceIsNull()
       throws UnsupportedEncodingException {
@@ -470,7 +492,8 @@ public class ExchangeCapsuleDiffblueTest {
    * <p>Method under test: {@link ExchangeCapsule#ExchangeCapsule(byte[])}
    */
   @Test
-  @Category(MaintainedByDiffblue.class)
+  @Category(ContributionFromDiffblue.class)
+  @ManagedByDiffblue
   @MethodsUnderTest({"void ExchangeCapsule.<init>(byte[])"})
   public void testNewExchangeCapsule_whenEmptyArrayOfByte_thenReturnCreateTimeIsZero() {
     // Arrange and Act
@@ -498,7 +521,8 @@ public class ExchangeCapsuleDiffblueTest {
    * <p>Method under test: {@link ExchangeCapsule#ExchangeCapsule(byte[])}
    */
   @Test
-  @Category(MaintainedByDiffblue.class)
+  @Category(ContributionFromDiffblue.class)
+  @ManagedByDiffblue
   @MethodsUnderTest({"void ExchangeCapsule.<init>(byte[])"})
   public void testNewExchangeCapsule_whenHxaxaxaxBytesIsUtf8_thenReturnInstanceIsNull()
       throws UnsupportedEncodingException {
@@ -517,7 +541,8 @@ public class ExchangeCapsuleDiffblueTest {
    * <p>Method under test: {@link ExchangeCapsule#ExchangeCapsule(byte[])}
    */
   @Test
-  @Category(MaintainedByDiffblue.class)
+  @Category(ContributionFromDiffblue.class)
+  @ManagedByDiffblue
   @MethodsUnderTest({"void ExchangeCapsule.<init>(byte[])"})
   public void testNewExchangeCapsule_whenXxaxaxaxBytesIsUtf8_thenReturnInstanceIsNull()
       throws UnsupportedEncodingException {
@@ -531,7 +556,8 @@ public class ExchangeCapsuleDiffblueTest {
    * <p>Method under test: {@link ExchangeCapsule#calculateDbKey(long)}
    */
   @Test
-  @Category(MaintainedByDiffblue.class)
+  @Category(ContributionFromDiffblue.class)
+  @ManagedByDiffblue
   @MethodsUnderTest({"byte[] ExchangeCapsule.calculateDbKey(long)"})
   public void testCalculateDbKey() {
     // Arrange, Act and Assert
@@ -550,7 +576,8 @@ public class ExchangeCapsuleDiffblueTest {
    * <p>Method under test: {@link ExchangeCapsule#getID()}
    */
   @Test
-  @Category(MaintainedByDiffblue.class)
+  @Category(ContributionFromDiffblue.class)
+  @ManagedByDiffblue
   @MethodsUnderTest({"long ExchangeCapsule.getID()"})
   public void testGetID_givenExchangeCapsuleWithDataIsEmptyArrayOfByte_thenReturnZero() {
     // Arrange
@@ -566,7 +593,8 @@ public class ExchangeCapsuleDiffblueTest {
    * <p>Method under test: {@link ExchangeCapsule#setID(long)}
    */
   @Test
-  @Category(MaintainedByDiffblue.class)
+  @Category(ContributionFromDiffblue.class)
+  @ManagedByDiffblue
   @MethodsUnderTest({"void ExchangeCapsule.setID(long)"})
   public void testSetID() {
     // Arrange
@@ -589,7 +617,8 @@ public class ExchangeCapsuleDiffblueTest {
    * <p>Method under test: {@link ExchangeCapsule#setID(long)}
    */
   @Test
-  @Category(MaintainedByDiffblue.class)
+  @Category(ContributionFromDiffblue.class)
+  @ManagedByDiffblue
   @MethodsUnderTest({"void ExchangeCapsule.setID(long)"})
   public void testSetID2() {
     // Arrange
@@ -613,7 +642,8 @@ public class ExchangeCapsuleDiffblueTest {
    * <p>Method under test: {@link ExchangeCapsule#setID(long)}
    */
   @Test
-  @Category(MaintainedByDiffblue.class)
+  @Category(ContributionFromDiffblue.class)
+  @ManagedByDiffblue
   @MethodsUnderTest({"void ExchangeCapsule.setID(long)"})
   public void testSetID3() {
     // Arrange
@@ -637,7 +667,8 @@ public class ExchangeCapsuleDiffblueTest {
    * <p>Method under test: {@link ExchangeCapsule#setID(long)}
    */
   @Test
-  @Category(MaintainedByDiffblue.class)
+  @Category(ContributionFromDiffblue.class)
+  @ManagedByDiffblue
   @MethodsUnderTest({"void ExchangeCapsule.setID(long)"})
   public void testSetID4() throws UnsupportedEncodingException {
     // Arrange
@@ -663,7 +694,8 @@ public class ExchangeCapsuleDiffblueTest {
    * <p>Method under test: {@link ExchangeCapsule#setID(long)}
    */
   @Test
-  @Category(MaintainedByDiffblue.class)
+  @Category(ContributionFromDiffblue.class)
+  @ManagedByDiffblue
   @MethodsUnderTest({"void ExchangeCapsule.setID(long)"})
   public void testSetID5() throws UnsupportedEncodingException {
     // Arrange
@@ -693,7 +725,8 @@ public class ExchangeCapsuleDiffblueTest {
    * <p>Method under test: {@link ExchangeCapsule#getCreatorAddress()}
    */
   @Test
-  @Category(MaintainedByDiffblue.class)
+  @Category(ContributionFromDiffblue.class)
+  @ManagedByDiffblue
   @MethodsUnderTest({"ByteString ExchangeCapsule.getCreatorAddress()"})
   public void testGetCreatorAddress_thenReturnEmpty() {
     // Arrange
@@ -724,7 +757,8 @@ public class ExchangeCapsuleDiffblueTest {
    * <p>Method under test: {@link ExchangeCapsule#getCreateTime()}
    */
   @Test
-  @Category(MaintainedByDiffblue.class)
+  @Category(ContributionFromDiffblue.class)
+  @ManagedByDiffblue
   @MethodsUnderTest({"long ExchangeCapsule.getCreateTime()"})
   public void testGetCreateTime_givenExchangeCapsuleWithDataIsEmptyArrayOfByte_thenReturnZero() {
     // Arrange
@@ -740,7 +774,8 @@ public class ExchangeCapsuleDiffblueTest {
    * <p>Method under test: {@link ExchangeCapsule#setCreateTime(long)}
    */
   @Test
-  @Category(MaintainedByDiffblue.class)
+  @Category(ContributionFromDiffblue.class)
+  @ManagedByDiffblue
   @MethodsUnderTest({"void ExchangeCapsule.setCreateTime(long)"})
   public void testSetCreateTime() {
     // Arrange
@@ -763,7 +798,8 @@ public class ExchangeCapsuleDiffblueTest {
    * <p>Method under test: {@link ExchangeCapsule#setCreateTime(long)}
    */
   @Test
-  @Category(MaintainedByDiffblue.class)
+  @Category(ContributionFromDiffblue.class)
+  @ManagedByDiffblue
   @MethodsUnderTest({"void ExchangeCapsule.setCreateTime(long)"})
   public void testSetCreateTime2() {
     // Arrange
@@ -787,7 +823,8 @@ public class ExchangeCapsuleDiffblueTest {
    * <p>Method under test: {@link ExchangeCapsule#setCreateTime(long)}
    */
   @Test
-  @Category(MaintainedByDiffblue.class)
+  @Category(ContributionFromDiffblue.class)
+  @ManagedByDiffblue
   @MethodsUnderTest({"void ExchangeCapsule.setCreateTime(long)"})
   public void testSetCreateTime3() {
     // Arrange
@@ -811,7 +848,8 @@ public class ExchangeCapsuleDiffblueTest {
    * <p>Method under test: {@link ExchangeCapsule#setCreateTime(long)}
    */
   @Test
-  @Category(MaintainedByDiffblue.class)
+  @Category(ContributionFromDiffblue.class)
+  @ManagedByDiffblue
   @MethodsUnderTest({"void ExchangeCapsule.setCreateTime(long)"})
   public void testSetCreateTime4() throws UnsupportedEncodingException {
     // Arrange
@@ -837,7 +875,8 @@ public class ExchangeCapsuleDiffblueTest {
    * <p>Method under test: {@link ExchangeCapsule#setCreateTime(long)}
    */
   @Test
-  @Category(MaintainedByDiffblue.class)
+  @Category(ContributionFromDiffblue.class)
+  @ManagedByDiffblue
   @MethodsUnderTest({"void ExchangeCapsule.setCreateTime(long)"})
   public void testSetCreateTime5() throws UnsupportedEncodingException {
     // Arrange
@@ -867,7 +906,8 @@ public class ExchangeCapsuleDiffblueTest {
    * <p>Method under test: {@link ExchangeCapsule#getFirstTokenId()}
    */
   @Test
-  @Category(MaintainedByDiffblue.class)
+  @Category(ContributionFromDiffblue.class)
+  @ManagedByDiffblue
   @MethodsUnderTest({"byte[] ExchangeCapsule.getFirstTokenId()"})
   public void testGetFirstTokenId_thenReturnAxaxaxaxBytesIsUtf8()
       throws UnsupportedEncodingException {
@@ -889,7 +929,8 @@ public class ExchangeCapsuleDiffblueTest {
    * <p>Method under test: {@link ExchangeCapsule#getFirstTokenId()}
    */
   @Test
-  @Category(MaintainedByDiffblue.class)
+  @Category(ContributionFromDiffblue.class)
+  @ManagedByDiffblue
   @MethodsUnderTest({"byte[] ExchangeCapsule.getFirstTokenId()"})
   public void testGetFirstTokenId_thenReturnEmptyArrayOfByte() {
     // Arrange
@@ -909,7 +950,8 @@ public class ExchangeCapsuleDiffblueTest {
    * <p>Method under test: {@link ExchangeCapsule#getSecondTokenId()}
    */
   @Test
-  @Category(MaintainedByDiffblue.class)
+  @Category(ContributionFromDiffblue.class)
+  @ManagedByDiffblue
   @MethodsUnderTest({"byte[] ExchangeCapsule.getSecondTokenId()"})
   public void testGetSecondTokenId_thenReturnAxaxaxaxBytesIsUtf8()
       throws UnsupportedEncodingException {
@@ -931,7 +973,8 @@ public class ExchangeCapsuleDiffblueTest {
    * <p>Method under test: {@link ExchangeCapsule#getSecondTokenId()}
    */
   @Test
-  @Category(MaintainedByDiffblue.class)
+  @Category(ContributionFromDiffblue.class)
+  @ManagedByDiffblue
   @MethodsUnderTest({"byte[] ExchangeCapsule.getSecondTokenId()"})
   public void testGetSecondTokenId_thenReturnEmptyArrayOfByte() {
     // Arrange
@@ -951,7 +994,8 @@ public class ExchangeCapsuleDiffblueTest {
    * <p>Method under test: {@link ExchangeCapsule#getFirstTokenBalance()}
    */
   @Test
-  @Category(MaintainedByDiffblue.class)
+  @Category(ContributionFromDiffblue.class)
+  @ManagedByDiffblue
   @MethodsUnderTest({"long ExchangeCapsule.getFirstTokenBalance()"})
   public void testGetFirstTokenBalance_thenReturnZero() {
     // Arrange
@@ -971,7 +1015,8 @@ public class ExchangeCapsuleDiffblueTest {
    * <p>Method under test: {@link ExchangeCapsule#getSecondTokenBalance()}
    */
   @Test
-  @Category(MaintainedByDiffblue.class)
+  @Category(ContributionFromDiffblue.class)
+  @ManagedByDiffblue
   @MethodsUnderTest({"long ExchangeCapsule.getSecondTokenBalance()"})
   public void testGetSecondTokenBalance_thenReturnZero() {
     // Arrange
@@ -991,7 +1036,8 @@ public class ExchangeCapsuleDiffblueTest {
    * <p>Method under test: {@link ExchangeCapsule#createDbKey()}
    */
   @Test
-  @Category(MaintainedByDiffblue.class)
+  @Category(ContributionFromDiffblue.class)
+  @ManagedByDiffblue
   @MethodsUnderTest({"byte[] ExchangeCapsule.createDbKey()"})
   public void testCreateDbKey_thenReturnArrayOfByteWithZeroAndZero() {
     // Arrange
@@ -1007,7 +1053,8 @@ public class ExchangeCapsuleDiffblueTest {
    * <p>Method under test: {@link ExchangeCapsule#transaction(byte[], long, boolean)}
    */
   @Test
-  @Category(MaintainedByDiffblue.class)
+  @Category(ContributionFromDiffblue.class)
+  @ManagedByDiffblue
   @MethodsUnderTest({"long ExchangeCapsule.transaction(byte[], long, boolean)"})
   public void testTransaction() throws UnsupportedEncodingException {
     // Arrange
@@ -1030,7 +1077,8 @@ public class ExchangeCapsuleDiffblueTest {
    * <p>Method under test: {@link ExchangeCapsule#transaction(byte[], long, boolean)}
    */
   @Test
-  @Category(MaintainedByDiffblue.class)
+  @Category(ContributionFromDiffblue.class)
+  @ManagedByDiffblue
   @MethodsUnderTest({"long ExchangeCapsule.transaction(byte[], long, boolean)"})
   public void testTransaction2() {
     // Arrange
@@ -1054,7 +1102,8 @@ public class ExchangeCapsuleDiffblueTest {
    * <p>Method under test: {@link ExchangeCapsule#transaction(byte[], long, boolean)}
    */
   @Test
-  @Category(MaintainedByDiffblue.class)
+  @Category(ContributionFromDiffblue.class)
+  @ManagedByDiffblue
   @MethodsUnderTest({"long ExchangeCapsule.transaction(byte[], long, boolean)"})
   public void testTransaction3() throws UnsupportedEncodingException {
     // Arrange
@@ -1079,7 +1128,8 @@ public class ExchangeCapsuleDiffblueTest {
    * <p>Method under test: {@link ExchangeCapsule#transaction(byte[], long, boolean)}
    */
   @Test
-  @Category(MaintainedByDiffblue.class)
+  @Category(ContributionFromDiffblue.class)
+  @ManagedByDiffblue
   @MethodsUnderTest({"long ExchangeCapsule.transaction(byte[], long, boolean)"})
   public void testTransaction4() throws UnsupportedEncodingException {
     // Arrange
@@ -1104,7 +1154,8 @@ public class ExchangeCapsuleDiffblueTest {
    * <p>Method under test: {@link ExchangeCapsule#transaction(byte[], long, boolean)}
    */
   @Test
-  @Category(MaintainedByDiffblue.class)
+  @Category(ContributionFromDiffblue.class)
+  @ManagedByDiffblue
   @MethodsUnderTest({"long ExchangeCapsule.transaction(byte[], long, boolean)"})
   public void testTransaction5() throws UnsupportedEncodingException {
     // Arrange
@@ -1129,7 +1180,8 @@ public class ExchangeCapsuleDiffblueTest {
    * <p>Method under test: {@link ExchangeCapsule#transaction(byte[], long, boolean)}
    */
   @Test
-  @Category(MaintainedByDiffblue.class)
+  @Category(ContributionFromDiffblue.class)
+  @ManagedByDiffblue
   @MethodsUnderTest({"long ExchangeCapsule.transaction(byte[], long, boolean)"})
   public void testTransaction6() throws UnsupportedEncodingException {
     // Arrange
@@ -1157,7 +1209,8 @@ public class ExchangeCapsuleDiffblueTest {
    * <p>Method under test: {@link ExchangeCapsule#transaction(byte[], long, boolean)}
    */
   @Test
-  @Category(MaintainedByDiffblue.class)
+  @Category(ContributionFromDiffblue.class)
+  @ManagedByDiffblue
   @MethodsUnderTest({"long ExchangeCapsule.transaction(byte[], long, boolean)"})
   public void testTransaction7() throws UnsupportedEncodingException {
     // Arrange
@@ -1188,7 +1241,8 @@ public class ExchangeCapsuleDiffblueTest {
    * <p>Method under test: {@link ExchangeCapsule#transaction(byte[], long, boolean)}
    */
   @Test
-  @Category(MaintainedByDiffblue.class)
+  @Category(ContributionFromDiffblue.class)
+  @ManagedByDiffblue
   @MethodsUnderTest({"long ExchangeCapsule.transaction(byte[], long, boolean)"})
   public void testTransaction_whenFalse() throws UnsupportedEncodingException {
     // Arrange
@@ -1217,7 +1271,8 @@ public class ExchangeCapsuleDiffblueTest {
    * DynamicPropertiesStore)}
    */
   @Test
-  @Category(MaintainedByDiffblue.class)
+  @Category(ContributionFromDiffblue.class)
+  @ManagedByDiffblue
   @MethodsUnderTest({
     "void ExchangeCapsule.resetTokenWithID(AssetIssueStore, DynamicPropertiesStore)"
   })
@@ -1246,7 +1301,8 @@ public class ExchangeCapsuleDiffblueTest {
    * <p>Method under test: {@link ExchangeCapsule#getData()}
    */
   @Test
-  @Category(MaintainedByDiffblue.class)
+  @Category(ContributionFromDiffblue.class)
+  @ManagedByDiffblue
   @MethodsUnderTest({"byte[] ExchangeCapsule.getData()"})
   public void testGetData_thenReturn2BackspaceAxaxaxaxBytesIsUtf8()
       throws UnsupportedEncodingException {
@@ -1268,7 +1324,8 @@ public class ExchangeCapsuleDiffblueTest {
    * <p>Method under test: {@link ExchangeCapsule#getData()}
    */
   @Test
-  @Category(MaintainedByDiffblue.class)
+  @Category(ContributionFromDiffblue.class)
+  @ManagedByDiffblue
   @MethodsUnderTest({"byte[] ExchangeCapsule.getData()"})
   public void testGetData_thenReturn8HBytesIsUtf8() throws UnsupportedEncodingException {
     // Arrange
@@ -1289,7 +1346,8 @@ public class ExchangeCapsuleDiffblueTest {
    * <p>Method under test: {@link ExchangeCapsule#getData()}
    */
   @Test
-  @Category(MaintainedByDiffblue.class)
+  @Category(ContributionFromDiffblue.class)
+  @ManagedByDiffblue
   @MethodsUnderTest({"byte[] ExchangeCapsule.getData()"})
   public void testGetData_thenReturnArrayOfByteWithBackspaceAndMin_value() {
     // Arrange
@@ -1312,7 +1370,8 @@ public class ExchangeCapsuleDiffblueTest {
    * <p>Method under test: {@link ExchangeCapsule#getData()}
    */
   @Test
-  @Category(MaintainedByDiffblue.class)
+  @Category(ContributionFromDiffblue.class)
+  @ManagedByDiffblue
   @MethodsUnderTest({"byte[] ExchangeCapsule.getData()"})
   public void testGetData_thenReturnArrayOfByteWithBackspaceAndOne() {
     // Arrange
@@ -1333,7 +1392,8 @@ public class ExchangeCapsuleDiffblueTest {
    * <p>Method under test: {@link ExchangeCapsule#getData()}
    */
   @Test
-  @Category(MaintainedByDiffblue.class)
+  @Category(ContributionFromDiffblue.class)
+  @ManagedByDiffblue
   @MethodsUnderTest({"byte[] ExchangeCapsule.getData()"})
   public void testGetData_thenReturnArrayOfByteWithHAndMinusOne()
       throws UnsupportedEncodingException {
@@ -1356,7 +1416,8 @@ public class ExchangeCapsuleDiffblueTest {
    * <p>Method under test: {@link ExchangeCapsule#getData()}
    */
   @Test
-  @Category(MaintainedByDiffblue.class)
+  @Category(ContributionFromDiffblue.class)
+  @ManagedByDiffblue
   @MethodsUnderTest({"byte[] ExchangeCapsule.getData()"})
   public void testGetData_thenReturnArrayOfByteWithTwentyFourAndLf() {
     // Arrange
@@ -1377,7 +1438,8 @@ public class ExchangeCapsuleDiffblueTest {
    * <p>Method under test: {@link ExchangeCapsule#getData()}
    */
   @Test
-  @Category(MaintainedByDiffblue.class)
+  @Category(ContributionFromDiffblue.class)
+  @ManagedByDiffblue
   @MethodsUnderTest({"byte[] ExchangeCapsule.getData()"})
   public void testGetData_thenReturnBBackspaceAxaxaxaxBytesIsUtf8()
       throws UnsupportedEncodingException {
@@ -1399,7 +1461,8 @@ public class ExchangeCapsuleDiffblueTest {
    * <p>Method under test: {@link ExchangeCapsule#getData()}
    */
   @Test
-  @Category(MaintainedByDiffblue.class)
+  @Category(ContributionFromDiffblue.class)
+  @ManagedByDiffblue
   @MethodsUnderTest({"byte[] ExchangeCapsule.getData()"})
   public void testGetData_thenReturnEmptyArrayOfByte() {
     // Arrange
@@ -1421,7 +1484,8 @@ public class ExchangeCapsuleDiffblueTest {
    * <p>Method under test: {@link ExchangeCapsule#getInstance()}
    */
   @Test
-  @Category(MaintainedByDiffblue.class)
+  @Category(ContributionFromDiffblue.class)
+  @ManagedByDiffblue
   @MethodsUnderTest({"Exchange ExchangeCapsule.getInstance()"})
   public void testGetInstance_givenExchangeCapsuleWithDataIsAxaxaxaxBytesIsUtf8_thenReturnNull()
       throws UnsupportedEncodingException {

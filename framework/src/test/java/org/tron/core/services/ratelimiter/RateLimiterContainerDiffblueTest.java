@@ -9,7 +9,8 @@ import static org.mockito.ArgumentMatchers.isA;
 import static org.mockito.Mockito.mock;
 import static org.mockito.Mockito.verify;
 import static org.mockito.Mockito.when;
-import com.diffblue.cover.annotations.MaintainedByDiffblue;
+import com.diffblue.cover.annotations.ContributionFromDiffblue;
+import com.diffblue.cover.annotations.ManagedByDiffblue;
 import com.diffblue.cover.annotations.MethodsUnderTest;
 import java.util.Map;
 import org.junit.Test;
@@ -24,7 +25,8 @@ public class RateLimiterContainerDiffblueTest {
    * <p>Method under test: {@link RateLimiterContainer#add(String, String, IRateLimiter)}
    */
   @Test
-  @Category(MaintainedByDiffblue.class)
+  @Category(ContributionFromDiffblue.class)
+  @ManagedByDiffblue
   @MethodsUnderTest({"void RateLimiterContainer.add(String, String, IRateLimiter)"})
   public void testAdd() {
     // Arrange
@@ -51,7 +53,8 @@ public class RateLimiterContainerDiffblueTest {
    * <p>Method under test: {@link RateLimiterContainer#get(String, String)}
    */
   @Test
-  @Category(MaintainedByDiffblue.class)
+  @Category(ContributionFromDiffblue.class)
+  @ManagedByDiffblue
   @MethodsUnderTest({"IRateLimiter RateLimiterContainer.get(String, String)"})
   public void testGet_givenIRateLimiterAcquireReturnTrue_thenReturnAcquireRuntimeDataWithOIs42() {
     // Arrange
@@ -87,7 +90,8 @@ public class RateLimiterContainerDiffblueTest {
    * <p>Method under test: {@link RateLimiterContainer#get(String, String)}
    */
   @Test
-  @Category(MaintainedByDiffblue.class)
+  @Category(ContributionFromDiffblue.class)
+  @ManagedByDiffblue
   @MethodsUnderTest({"IRateLimiter RateLimiterContainer.get(String, String)"})
   public void testGet_thenReturnNotAcquireRuntimeDataWithOIs42() {
     // Arrange
@@ -123,7 +127,8 @@ public class RateLimiterContainerDiffblueTest {
    * <p>Method under test: {@link RateLimiterContainer#get(String, String)}
    */
   @Test
-  @Category(MaintainedByDiffblue.class)
+  @Category(ContributionFromDiffblue.class)
+  @ManagedByDiffblue
   @MethodsUnderTest({"IRateLimiter RateLimiterContainer.get(String, String)"})
   public void testGet_thenReturnNull() {
     // Arrange
@@ -140,7 +145,8 @@ public class RateLimiterContainerDiffblueTest {
    * <p>Method under test: {@link RateLimiterContainer#getMap()}
    */
   @Test
-  @Category(MaintainedByDiffblue.class)
+  @Category(ContributionFromDiffblue.class)
+  @ManagedByDiffblue
   @MethodsUnderTest({"Map RateLimiterContainer.getMap()"})
   public void testGetMap() {
     // Arrange, Act and Assert

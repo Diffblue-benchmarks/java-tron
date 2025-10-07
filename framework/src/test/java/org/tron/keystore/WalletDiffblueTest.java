@@ -1,7 +1,8 @@
 package org.tron.keystore;
 
 import static org.junit.Assert.assertThrows;
-import com.diffblue.cover.annotations.MaintainedByDiffblue;
+import com.diffblue.cover.annotations.ContributionFromDiffblue;
+import com.diffblue.cover.annotations.ManagedByDiffblue;
 import com.diffblue.cover.annotations.MethodsUnderTest;
 import org.junit.Test;
 import org.junit.experimental.categories.Category;
@@ -22,7 +23,8 @@ public class WalletDiffblueTest {
    * <p>Method under test: {@link Wallet#decrypt(String, WalletFile)}
    */
   @Test
-  @Category(MaintainedByDiffblue.class)
+  @Category(ContributionFromDiffblue.class)
+  @ManagedByDiffblue
   @MethodsUnderTest({"org.tron.common.crypto.SignInterface Wallet.decrypt(String, WalletFile)"})
   public void testDecrypt_givenAes128CtrKdfParamsCIsOne_thenThrowCipherException()
       throws CipherException {
@@ -65,7 +67,8 @@ public class WalletDiffblueTest {
    * <p>Method under test: {@link Wallet#decrypt(String, WalletFile)}
    */
   @Test
-  @Category(MaintainedByDiffblue.class)
+  @Category(ContributionFromDiffblue.class)
+  @ManagedByDiffblue
   @MethodsUnderTest({"org.tron.common.crypto.SignInterface Wallet.decrypt(String, WalletFile)"})
   public void testDecrypt_givenAes128CtrKdfParamsCIsThree_thenThrowCipherException()
       throws CipherException {
@@ -108,7 +111,8 @@ public class WalletDiffblueTest {
    * <p>Method under test: {@link Wallet#decrypt(String, WalletFile)}
    */
   @Test
-  @Category(MaintainedByDiffblue.class)
+  @Category(ContributionFromDiffblue.class)
+  @ManagedByDiffblue
   @MethodsUnderTest({"org.tron.common.crypto.SignInterface Wallet.decrypt(String, WalletFile)"})
   public void testDecrypt_givenAes128CtrKdfParamsPrfIsAes128Ctr_thenThrowCipherException()
       throws CipherException {
@@ -151,7 +155,8 @@ public class WalletDiffblueTest {
    * <p>Method under test: {@link Wallet#decrypt(String, WalletFile)}
    */
   @Test
-  @Category(MaintainedByDiffblue.class)
+  @Category(ContributionFromDiffblue.class)
+  @ManagedByDiffblue
   @MethodsUnderTest({"org.tron.common.crypto.SignInterface Wallet.decrypt(String, WalletFile)"})
   public void testDecrypt_givenAes128CtrKdfParamsSaltIs42_thenThrowCipherException()
       throws CipherException {
@@ -194,7 +199,8 @@ public class WalletDiffblueTest {
    * <p>Method under test: {@link Wallet#decrypt(String, WalletFile)}
    */
   @Test
-  @Category(MaintainedByDiffblue.class)
+  @Category(ContributionFromDiffblue.class)
+  @ManagedByDiffblue
   @MethodsUnderTest({"org.tron.common.crypto.SignInterface Wallet.decrypt(String, WalletFile)"})
   public void testDecrypt_givenCryptoCipherIsCipher_thenThrowCipherException()
       throws CipherException {
@@ -231,7 +237,8 @@ public class WalletDiffblueTest {
    * <p>Method under test: {@link Wallet#decrypt(String, WalletFile)}
    */
   @Test
-  @Category(MaintainedByDiffblue.class)
+  @Category(ContributionFromDiffblue.class)
+  @ManagedByDiffblue
   @MethodsUnderTest({"org.tron.common.crypto.SignInterface Wallet.decrypt(String, WalletFile)"})
   public void testDecrypt_givenCryptoCiphertextIs0x_thenThrowCipherException()
       throws CipherException {
@@ -274,7 +281,8 @@ public class WalletDiffblueTest {
    * <p>Method under test: {@link Wallet#decrypt(String, WalletFile)}
    */
   @Test
-  @Category(MaintainedByDiffblue.class)
+  @Category(ContributionFromDiffblue.class)
+  @ManagedByDiffblue
   @MethodsUnderTest({"org.tron.common.crypto.SignInterface Wallet.decrypt(String, WalletFile)"})
   public void testDecrypt_givenCryptoKdfIsKdf_thenThrowCipherException() throws CipherException {
     // Arrange
@@ -310,7 +318,8 @@ public class WalletDiffblueTest {
    * <p>Method under test: {@link Wallet#decrypt(String, WalletFile)}
    */
   @Test
-  @Category(MaintainedByDiffblue.class)
+  @Category(ContributionFromDiffblue.class)
+  @ManagedByDiffblue
   @MethodsUnderTest({"org.tron.common.crypto.SignInterface Wallet.decrypt(String, WalletFile)"})
   public void testDecrypt_givenCryptoKdfIsScrypt_thenThrowCipherException() throws CipherException {
     // Arrange
@@ -353,7 +362,8 @@ public class WalletDiffblueTest {
    * <p>Method under test: {@link Wallet#decrypt(String, WalletFile)}
    */
   @Test
-  @Category(MaintainedByDiffblue.class)
+  @Category(ContributionFromDiffblue.class)
+  @ManagedByDiffblue
   @MethodsUnderTest({"org.tron.common.crypto.SignInterface Wallet.decrypt(String, WalletFile)"})
   public void testDecrypt_givenOne_whenWalletFileVersionIsOne_thenThrowCipherException()
       throws CipherException {
@@ -390,7 +400,8 @@ public class WalletDiffblueTest {
    * <p>Method under test: {@link Wallet#validate(WalletFile)}
    */
   @Test
-  @Category(MaintainedByDiffblue.class)
+  @Category(ContributionFromDiffblue.class)
+  @ManagedByDiffblue
   @MethodsUnderTest({"void Wallet.validate(WalletFile)"})
   public void testValidate_givenCryptoCipherIsAes128Ctr_thenThrowCipherException()
       throws CipherException {
@@ -427,7 +438,8 @@ public class WalletDiffblueTest {
    * <p>Method under test: {@link Wallet#validate(WalletFile)}
    */
   @Test
-  @Category(MaintainedByDiffblue.class)
+  @Category(ContributionFromDiffblue.class)
+  @ManagedByDiffblue
   @MethodsUnderTest({"void Wallet.validate(WalletFile)"})
   public void testValidate_givenCryptoCipherIsCipher_thenThrowCipherException()
       throws CipherException {
@@ -464,7 +476,8 @@ public class WalletDiffblueTest {
    * <p>Method under test: {@link Wallet#validate(WalletFile)}
    */
   @Test
-  @Category(MaintainedByDiffblue.class)
+  @Category(ContributionFromDiffblue.class)
+  @ManagedByDiffblue
   @MethodsUnderTest({"void Wallet.validate(WalletFile)"})
   public void testValidate_givenCryptoKdfIsPbkdf2_thenDoesNotThrow() throws CipherException {
     // Arrange
@@ -500,7 +513,8 @@ public class WalletDiffblueTest {
    * <p>Method under test: {@link Wallet#validate(WalletFile)}
    */
   @Test
-  @Category(MaintainedByDiffblue.class)
+  @Category(ContributionFromDiffblue.class)
+  @ManagedByDiffblue
   @MethodsUnderTest({"void Wallet.validate(WalletFile)"})
   public void testValidate_givenCryptoKdfIsScrypt_thenDoesNotThrow() throws CipherException {
     // Arrange
@@ -537,7 +551,8 @@ public class WalletDiffblueTest {
    * <p>Method under test: {@link Wallet#validate(WalletFile)}
    */
   @Test
-  @Category(MaintainedByDiffblue.class)
+  @Category(ContributionFromDiffblue.class)
+  @ManagedByDiffblue
   @MethodsUnderTest({"void Wallet.validate(WalletFile)"})
   public void testValidate_givenOne_whenWalletFileVersionIsOne_thenThrowCipherException()
       throws CipherException {

@@ -8,7 +8,8 @@ import static org.mockito.Mockito.doNothing;
 import static org.mockito.Mockito.doThrow;
 import static org.mockito.Mockito.mock;
 import static org.mockito.Mockito.verify;
-import com.diffblue.cover.annotations.MaintainedByDiffblue;
+import com.diffblue.cover.annotations.ContributionFromDiffblue;
+import com.diffblue.cover.annotations.ManagedByDiffblue;
 import com.diffblue.cover.annotations.MethodsUnderTest;
 import java.io.Closeable;
 import java.io.IOException;
@@ -32,7 +33,8 @@ public class VMUtilsDiffblueTest {
    * <p>Method under test: {@link VMUtils#closeQuietly(Closeable)}
    */
   @Test
-  @Category(MaintainedByDiffblue.class)
+  @Category(ContributionFromDiffblue.class)
+  @ManagedByDiffblue
   @MethodsUnderTest({"void VMUtils.closeQuietly(Closeable)"})
   public void testCloseQuietly_givenIOException_whenCloseableCloseThrowIOException()
       throws IOException {
@@ -58,7 +60,8 @@ public class VMUtilsDiffblueTest {
    * <p>Method under test: {@link VMUtils#closeQuietly(Closeable)}
    */
   @Test
-  @Category(MaintainedByDiffblue.class)
+  @Category(ContributionFromDiffblue.class)
+  @ManagedByDiffblue
   @MethodsUnderTest({"void VMUtils.closeQuietly(Closeable)"})
   public void testCloseQuietly_whenCloseableCloseDoesNothing_thenCallsClose() throws IOException {
     // Arrange
@@ -82,7 +85,8 @@ public class VMUtilsDiffblueTest {
    * <p>Method under test: {@link VMUtils#compress(byte[])}
    */
   @Test
-  @Category(MaintainedByDiffblue.class)
+  @Category(ContributionFromDiffblue.class)
+  @ManagedByDiffblue
   @MethodsUnderTest({"byte[] VMUtils.compress(byte[])"})
   public void testCompressWithBytes_thenReturnArrayOfByteWithXAndMinusOneHundred()
       throws IOException {
@@ -102,7 +106,8 @@ public class VMUtilsDiffblueTest {
    * <p>Method under test: {@link VMUtils#compress(String)}
    */
   @Test
-  @Category(MaintainedByDiffblue.class)
+  @Category(ContributionFromDiffblue.class)
+  @ManagedByDiffblue
   @MethodsUnderTest({"byte[] VMUtils.compress(String)"})
   public void testCompressWithContent_thenReturnArrayOfByteWithXAndMinusOneHundred()
       throws IOException {
@@ -125,7 +130,8 @@ public class VMUtilsDiffblueTest {
    * <p>Method under test: {@link VMUtils#zipAndEncode(String)}
    */
   @Test
-  @Category(MaintainedByDiffblue.class)
+  @Category(ContributionFromDiffblue.class)
+  @ManagedByDiffblue
   @MethodsUnderTest({"String VMUtils.zipAndEncode(String)"})
   public void testZipAndEncode_thenReturnEJzzyy9RSMzJUSjPyFcoT8xLSS1SSCxKVcjJLy4BAIbBCdQ() {
     // Arrange, Act and Assert
@@ -145,7 +151,8 @@ public class VMUtilsDiffblueTest {
    * <p>Method under test: {@link VMUtils#zipAndEncode(String)}
    */
   @Test
-  @Category(MaintainedByDiffblue.class)
+  @Category(ContributionFromDiffblue.class)
+  @ManagedByDiffblue
   @MethodsUnderTest({"String VMUtils.zipAndEncode(String)"})
   public void testZipAndEncode_whenContent_thenReturnEJxzzs8rSc0rAQAK6wLc() {
     // Arrange, Act and Assert
@@ -163,7 +170,8 @@ public class VMUtilsDiffblueTest {
    * <p>Method under test: {@link VMUtils#zipAndEncode(String)}
    */
   @Test
-  @Category(MaintainedByDiffblue.class)
+  @Category(ContributionFromDiffblue.class)
+  @ManagedByDiffblue
   @MethodsUnderTest({"String VMUtils.zipAndEncode(String)"})
   public void testZipAndEncode_whenNull_thenReturnNull() {
     // Arrange, Act and Assert
@@ -181,7 +189,8 @@ public class VMUtilsDiffblueTest {
    * <p>Method under test: {@link VMUtils#zipAndEncode(String)}
    */
   @Test
-  @Category(MaintainedByDiffblue.class)
+  @Category(ContributionFromDiffblue.class)
+  @ManagedByDiffblue
   @MethodsUnderTest({"String VMUtils.zipAndEncode(String)"})
   public void testZipAndEncode_whenUtf8_thenReturnEJwLDXHTtQAABGIBVQ() {
     // Arrange, Act and Assert
@@ -196,7 +205,8 @@ public class VMUtilsDiffblueTest {
    * long)}
    */
   @Test
-  @Category(MaintainedByDiffblue.class)
+  @Category(ContributionFromDiffblue.class)
+  @ManagedByDiffblue
   @MethodsUnderTest({"boolean VMUtils.validateForSmartContract(Repository, byte[], byte[], long)"})
   public void testValidateForSmartContractWithDepositOwnerAddressToAddressAmount()
       throws UnsupportedEncodingException, ContractValidateException {
@@ -219,7 +229,8 @@ public class VMUtilsDiffblueTest {
    * long)}
    */
   @Test
-  @Category(MaintainedByDiffblue.class)
+  @Category(ContributionFromDiffblue.class)
+  @ManagedByDiffblue
   @MethodsUnderTest({"boolean VMUtils.validateForSmartContract(Repository, byte[], byte[], long)"})
   public void testValidateForSmartContractWithDepositOwnerAddressToAddressAmount2()
       throws ContractValidateException {
@@ -243,7 +254,8 @@ public class VMUtilsDiffblueTest {
    * long)}
    */
   @Test
-  @Category(MaintainedByDiffblue.class)
+  @Category(ContributionFromDiffblue.class)
+  @ManagedByDiffblue
   @MethodsUnderTest({"boolean VMUtils.validateForSmartContract(Repository, byte[], byte[], long)"})
   public void testValidateForSmartContractWithDepositOwnerAddressToAddressAmount_whenNull()
       throws ContractValidateException {
@@ -263,7 +275,8 @@ public class VMUtilsDiffblueTest {
    * byte[], long)}
    */
   @Test
-  @Category(MaintainedByDiffblue.class)
+  @Category(ContributionFromDiffblue.class)
+  @ManagedByDiffblue
   @MethodsUnderTest({
     "boolean VMUtils.validateForSmartContract(Repository, byte[], byte[], byte[], long)"
   })
@@ -289,7 +302,8 @@ public class VMUtilsDiffblueTest {
    * byte[], long)}
    */
   @Test
-  @Category(MaintainedByDiffblue.class)
+  @Category(ContributionFromDiffblue.class)
+  @ManagedByDiffblue
   @MethodsUnderTest({
     "boolean VMUtils.validateForSmartContract(Repository, byte[], byte[], byte[], long)"
   })
@@ -309,7 +323,8 @@ public class VMUtilsDiffblueTest {
    * byte[], long)}
    */
   @Test
-  @Category(MaintainedByDiffblue.class)
+  @Category(ContributionFromDiffblue.class)
+  @ManagedByDiffblue
   @MethodsUnderTest({
     "boolean VMUtils.validateForSmartContract(Repository, byte[], byte[], byte[], long)"
   })
@@ -335,7 +350,8 @@ public class VMUtilsDiffblueTest {
    * byte[], long)}
    */
   @Test
-  @Category(MaintainedByDiffblue.class)
+  @Category(ContributionFromDiffblue.class)
+  @ManagedByDiffblue
   @MethodsUnderTest({
     "boolean VMUtils.validateForSmartContract(Repository, byte[], byte[], byte[], long)"
   })
@@ -361,7 +377,8 @@ public class VMUtilsDiffblueTest {
    * byte[], long)}
    */
   @Test
-  @Category(MaintainedByDiffblue.class)
+  @Category(ContributionFromDiffblue.class)
+  @ManagedByDiffblue
   @MethodsUnderTest({
     "boolean VMUtils.validateForSmartContract(Repository, byte[], byte[], byte[], long)"
   })
@@ -387,7 +404,8 @@ public class VMUtilsDiffblueTest {
    * byte[], long)}
    */
   @Test
-  @Category(MaintainedByDiffblue.class)
+  @Category(ContributionFromDiffblue.class)
+  @ManagedByDiffblue
   @MethodsUnderTest({
     "boolean VMUtils.validateForSmartContract(Repository, byte[], byte[], byte[], long)"
   })

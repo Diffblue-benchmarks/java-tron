@@ -7,7 +7,8 @@ import static org.junit.Assert.assertTrue;
 import static org.mockito.Mockito.mock;
 import static org.mockito.Mockito.verify;
 import static org.mockito.Mockito.when;
-import com.diffblue.cover.annotations.MaintainedByDiffblue;
+import com.diffblue.cover.annotations.ContributionFromDiffblue;
+import com.diffblue.cover.annotations.ManagedByDiffblue;
 import com.diffblue.cover.annotations.MethodsUnderTest;
 import com.google.protobuf.UnknownFieldSet;
 import java.util.ArrayList;
@@ -32,7 +33,8 @@ public class IncrementalMerkleVoucherContainerDiffblueTest {
    * IncrementalMerkleVoucherContainer#IncrementalMerkleVoucherContainer(IncrementalMerkleTreeContainer)}
    */
   @Test
-  @Category(MaintainedByDiffblue.class)
+  @Category(ContributionFromDiffblue.class)
+  @ManagedByDiffblue
   @MethodsUnderTest({
     "void IncrementalMerkleVoucherContainer.<init>(IncrementalMerkleTreeContainer)"
   })
@@ -57,7 +59,8 @@ public class IncrementalMerkleVoucherContainerDiffblueTest {
    * <p>Method under test: {@link IncrementalMerkleVoucherContainer#position()}
    */
   @Test
-  @Category(MaintainedByDiffblue.class)
+  @Category(ContributionFromDiffblue.class)
+  @ManagedByDiffblue
   @MethodsUnderTest({"long IncrementalMerkleVoucherContainer.position()"})
   public void testPosition() {
     // Arrange, Act and Assert
@@ -74,7 +77,8 @@ public class IncrementalMerkleVoucherContainerDiffblueTest {
    * <p>Method under test: {@link IncrementalMerkleVoucherContainer#position()}
    */
   @Test
-  @Category(MaintainedByDiffblue.class)
+  @Category(ContributionFromDiffblue.class)
+  @ManagedByDiffblue
   @MethodsUnderTest({"long IncrementalMerkleVoucherContainer.position()"})
   public void testPosition2() {
     // Arrange, Act and Assert
@@ -89,7 +93,8 @@ public class IncrementalMerkleVoucherContainerDiffblueTest {
    * <p>Method under test: {@link IncrementalMerkleVoucherContainer#root()}
    */
   @Test
-  @Category(MaintainedByDiffblue.class)
+  @Category(ContributionFromDiffblue.class)
+  @ManagedByDiffblue
   @MethodsUnderTest({"PedersenHash IncrementalMerkleVoucherContainer.root()"})
   public void testRoot() throws ZksnarkException {
     // Arrange and Act
@@ -115,7 +120,8 @@ public class IncrementalMerkleVoucherContainerDiffblueTest {
    * <p>Method under test: {@link IncrementalMerkleVoucherContainer#root()}
    */
   @Test
-  @Category(MaintainedByDiffblue.class)
+  @Category(ContributionFromDiffblue.class)
+  @ManagedByDiffblue
   @MethodsUnderTest({"PedersenHash IncrementalMerkleVoucherContainer.root()"})
   public void testRoot2() throws ZksnarkException {
     // Arrange and Act
@@ -139,7 +145,8 @@ public class IncrementalMerkleVoucherContainerDiffblueTest {
    * <p>Method under test: {@link IncrementalMerkleVoucherContainer#size()}
    */
   @Test
-  @Category(MaintainedByDiffblue.class)
+  @Category(ContributionFromDiffblue.class)
+  @ManagedByDiffblue
   @MethodsUnderTest({"int IncrementalMerkleVoucherContainer.size()"})
   public void testSize() {
     // Arrange, Act and Assert
@@ -156,7 +163,8 @@ public class IncrementalMerkleVoucherContainerDiffblueTest {
    * <p>Method under test: {@link IncrementalMerkleVoucherContainer#size()}
    */
   @Test
-  @Category(MaintainedByDiffblue.class)
+  @Category(ContributionFromDiffblue.class)
+  @ManagedByDiffblue
   @MethodsUnderTest({"int IncrementalMerkleVoucherContainer.size()"})
   public void testSize2() {
     // Arrange, Act and Assert
@@ -170,7 +178,8 @@ public class IncrementalMerkleVoucherContainerDiffblueTest {
    * <p>Method under test: {@link IncrementalMerkleVoucherContainer#printSize()}
    */
   @Test
-  @Category(MaintainedByDiffblue.class)
+  @Category(ContributionFromDiffblue.class)
+  @ManagedByDiffblue
   @MethodsUnderTest({"void IncrementalMerkleVoucherContainer.printSize()"})
   public void testPrintSize() {
     // Arrange
@@ -198,7 +207,8 @@ public class IncrementalMerkleVoucherContainerDiffblueTest {
    * <p>Method under test: {@link IncrementalMerkleVoucherContainer#printSize()}
    */
   @Test
-  @Category(MaintainedByDiffblue.class)
+  @Category(ContributionFromDiffblue.class)
+  @ManagedByDiffblue
   @MethodsUnderTest({"void IncrementalMerkleVoucherContainer.printSize()"})
   public void testPrintSize_thenCallsToMerkleTreeContainer() {
     // Arrange

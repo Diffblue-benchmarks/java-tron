@@ -1,7 +1,8 @@
 package org.tron.common.backup;
 
 import static org.junit.Assert.assertEquals;
-import com.diffblue.cover.annotations.MaintainedByDiffblue;
+import com.diffblue.cover.annotations.ContributionFromDiffblue;
+import com.diffblue.cover.annotations.ManagedByDiffblue;
 import com.diffblue.cover.annotations.MethodsUnderTest;
 import org.junit.Test;
 import org.junit.experimental.categories.Category;
@@ -14,7 +15,8 @@ public class BackupManagerDiffblueTest {
    * <p>Method under test: {@link BackupManager#getStatus()}
    */
   @Test
-  @Category(MaintainedByDiffblue.class)
+  @Category(ContributionFromDiffblue.class)
+  @ManagedByDiffblue
   @MethodsUnderTest({
     "BackupStatusEnum BackupManager.getStatus()",
     "void BackupManager.setMessageHandler(org.tron.common.backup.socket.MessageHandler)"
@@ -30,7 +32,8 @@ public class BackupManagerDiffblueTest {
    * <p>Method under test: {@link BackupManager#getStatus()}
    */
   @Test
-  @Category(MaintainedByDiffblue.class)
+  @Category(ContributionFromDiffblue.class)
+  @ManagedByDiffblue
   @MethodsUnderTest({
     "BackupStatusEnum BackupManager.getStatus()",
     "void BackupManager.setMessageHandler(org.tron.common.backup.socket.MessageHandler)"

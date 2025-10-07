@@ -4,7 +4,8 @@ import static org.junit.Assert.assertThrows;
 import static org.mockito.Mockito.mock;
 import static org.mockito.Mockito.verify;
 import static org.mockito.Mockito.when;
-import com.diffblue.cover.annotations.MaintainedByDiffblue;
+import com.diffblue.cover.annotations.ContributionFromDiffblue;
+import com.diffblue.cover.annotations.ManagedByDiffblue;
 import com.diffblue.cover.annotations.MethodsUnderTest;
 import com.google.protobuf.ByteString;
 import java.util.ArrayList;
@@ -39,7 +40,8 @@ public class PbftMessageActionDiffblueTest {
    * <p>Method under test: {@link PbftMessageAction#action(PbftMessage, List)}
    */
   @Test
-  @Category(MaintainedByDiffblue.class)
+  @Category(ContributionFromDiffblue.class)
+  @ManagedByDiffblue
   @MethodsUnderTest({"void PbftMessageAction.action(PbftMessage, List)"})
   public void testAction_givenByteString_whenArrayListAddByteString_thenCallsGetPbftMessage() {
     // Arrange
@@ -70,7 +72,8 @@ public class PbftMessageActionDiffblueTest {
    * <p>Method under test: {@link PbftMessageAction#action(PbftMessage, List)}
    */
   @Test
-  @Category(MaintainedByDiffblue.class)
+  @Category(ContributionFromDiffblue.class)
+  @ManagedByDiffblue
   @MethodsUnderTest({"void PbftMessageAction.action(PbftMessage, List)"})
   public void testAction_givenByteString_whenArrayListAddByteString_thenCallsGetPbftMessage2() {
     // Arrange
@@ -101,7 +104,8 @@ public class PbftMessageActionDiffblueTest {
    * <p>Method under test: {@link PbftMessageAction#action(PbftMessage, List)}
    */
   @Test
-  @Category(MaintainedByDiffblue.class)
+  @Category(ContributionFromDiffblue.class)
+  @ManagedByDiffblue
   @MethodsUnderTest({"void PbftMessageAction.action(PbftMessage, List)"})
   public void testAction_givenSrl_thenCallsGetPbftMessage() {
     // Arrange
@@ -128,7 +132,8 @@ public class PbftMessageActionDiffblueTest {
    * <p>Method under test: {@link PbftMessageAction#action(PbftMessage, List)}
    */
   @Test
-  @Category(MaintainedByDiffblue.class)
+  @Category(ContributionFromDiffblue.class)
+  @ManagedByDiffblue
   @MethodsUnderTest({"void PbftMessageAction.action(PbftMessage, List)"})
   public void testAction_givenUnrecognized_whenPbftMessageGetDataTypeReturnUnrecognized() {
     // Arrange
@@ -152,7 +157,8 @@ public class PbftMessageActionDiffblueTest {
    * <p>Method under test: {@link PbftMessageAction#action(PbftMessage, List)}
    */
   @Test
-  @Category(MaintainedByDiffblue.class)
+  @Category(ContributionFromDiffblue.class)
+  @ManagedByDiffblue
   @MethodsUnderTest({"void PbftMessageAction.action(PbftMessage, List)"})
   public void testAction_thenCallsGetCommonDataBase() {
     // Arrange
@@ -181,7 +187,8 @@ public class PbftMessageActionDiffblueTest {
    * <p>Method under test: {@link PbftMessageAction#action(PbftMessage, List)}
    */
   @Test
-  @Category(MaintainedByDiffblue.class)
+  @Category(ContributionFromDiffblue.class)
+  @ManagedByDiffblue
   @MethodsUnderTest({"void PbftMessageAction.action(PbftMessage, List)"})
   public void testAction_whenPbftMessageGetNumberThrowRuntimeException() {
     // Arrange

@@ -9,7 +9,8 @@ import static org.mockito.Mockito.doThrow;
 import static org.mockito.Mockito.mock;
 import static org.mockito.Mockito.verify;
 import static org.mockito.Mockito.when;
-import com.diffblue.cover.annotations.MaintainedByDiffblue;
+import com.diffblue.cover.annotations.ContributionFromDiffblue;
+import com.diffblue.cover.annotations.ManagedByDiffblue;
 import com.diffblue.cover.annotations.MethodsUnderTest;
 import com.google.protobuf.ByteString;
 import io.grpc.stub.StreamObserver;
@@ -62,7 +63,8 @@ public class RpcApiServiceDiffblueTest {
    * StreamObserver)}
    */
   @Test
-  @Category(MaintainedByDiffblue.class)
+  @Category(ContributionFromDiffblue.class)
+  @ManagedByDiffblue
   @MethodsUnderTest({
     "void RpcApiService.getRewardInfoCommon(GrpcAPI.BytesMessage, StreamObserver)"
   })
@@ -95,7 +97,8 @@ public class RpcApiServiceDiffblueTest {
    * StreamObserver)}
    */
   @Test
-  @Category(MaintainedByDiffblue.class)
+  @Category(ContributionFromDiffblue.class)
+  @ManagedByDiffblue
   @MethodsUnderTest({
     "void RpcApiService.getRewardInfoCommon(GrpcAPI.BytesMessage, StreamObserver)"
   })
@@ -129,7 +132,8 @@ public class RpcApiServiceDiffblueTest {
    * StreamObserver)}
    */
   @Test
-  @Category(MaintainedByDiffblue.class)
+  @Category(ContributionFromDiffblue.class)
+  @ManagedByDiffblue
   @MethodsUnderTest({
     "void RpcApiService.getRewardInfoCommon(GrpcAPI.BytesMessage, StreamObserver)"
   })
@@ -163,7 +167,8 @@ public class RpcApiServiceDiffblueTest {
    * StreamObserver)}
    */
   @Test
-  @Category(MaintainedByDiffblue.class)
+  @Category(ContributionFromDiffblue.class)
+  @ManagedByDiffblue
   @MethodsUnderTest({
     "void RpcApiService.getRewardInfoCommon(GrpcAPI.BytesMessage, StreamObserver)"
   })
@@ -201,7 +206,8 @@ public class RpcApiServiceDiffblueTest {
    * StreamObserver)}
    */
   @Test
-  @Category(MaintainedByDiffblue.class)
+  @Category(ContributionFromDiffblue.class)
+  @ManagedByDiffblue
   @MethodsUnderTest({
     "void RpcApiService.getRewardInfoCommon(GrpcAPI.BytesMessage, StreamObserver)"
   })
@@ -238,7 +244,8 @@ public class RpcApiServiceDiffblueTest {
    * StreamObserver)}
    */
   @Test
-  @Category(MaintainedByDiffblue.class)
+  @Category(ContributionFromDiffblue.class)
+  @ManagedByDiffblue
   @MethodsUnderTest({
     "void RpcApiService.getRewardInfoCommon(GrpcAPI.BytesMessage, StreamObserver)"
   })
@@ -267,7 +274,8 @@ public class RpcApiServiceDiffblueTest {
    * StreamObserver)}
    */
   @Test
-  @Category(MaintainedByDiffblue.class)
+  @Category(ContributionFromDiffblue.class)
+  @ManagedByDiffblue
   @MethodsUnderTest({
     "void RpcApiService.getRewardInfoCommon(GrpcAPI.BytesMessage, StreamObserver)"
   })
@@ -310,7 +318,8 @@ public class RpcApiServiceDiffblueTest {
    * StreamObserver)}
    */
   @Test
-  @Category(MaintainedByDiffblue.class)
+  @Category(ContributionFromDiffblue.class)
+  @ManagedByDiffblue
   @MethodsUnderTest({
     "void RpcApiService.getRewardInfoCommon(GrpcAPI.BytesMessage, StreamObserver)"
   })
@@ -342,7 +351,8 @@ public class RpcApiServiceDiffblueTest {
    * StreamObserver)}
    */
   @Test
-  @Category(MaintainedByDiffblue.class)
+  @Category(ContributionFromDiffblue.class)
+  @ManagedByDiffblue
   @MethodsUnderTest({"void RpcApiService.getBurnTrxCommon(GrpcAPI.EmptyMessage, StreamObserver)"})
   public void testGetBurnTrxCommon_givenManagerGetDynamicPropertiesStoreReturnNull() {
     // Arrange
@@ -374,7 +384,8 @@ public class RpcApiServiceDiffblueTest {
    * StreamObserver)}
    */
   @Test
-  @Category(MaintainedByDiffblue.class)
+  @Category(ContributionFromDiffblue.class)
+  @ManagedByDiffblue
   @MethodsUnderTest({"void RpcApiService.getBurnTrxCommon(GrpcAPI.EmptyMessage, StreamObserver)"})
   public void testGetBurnTrxCommon_givenManagerGetDynamicPropertiesStoreThrowRuntimeException() {
     // Arrange
@@ -406,7 +417,8 @@ public class RpcApiServiceDiffblueTest {
    * StreamObserver)}
    */
   @Test
-  @Category(MaintainedByDiffblue.class)
+  @Category(ContributionFromDiffblue.class)
+  @ManagedByDiffblue
   @MethodsUnderTest({"void RpcApiService.getBurnTrxCommon(GrpcAPI.EmptyMessage, StreamObserver)"})
   public void testGetBurnTrxCommon_whenStreamObserverOnCompletedThrowRuntimeException() {
     // Arrange
@@ -440,7 +452,8 @@ public class RpcApiServiceDiffblueTest {
    * StreamObserver)}
    */
   @Test
-  @Category(MaintainedByDiffblue.class)
+  @Category(ContributionFromDiffblue.class)
+  @ManagedByDiffblue
   @MethodsUnderTest({"void RpcApiService.getBurnTrxCommon(GrpcAPI.EmptyMessage, StreamObserver)"})
   public void testGetBurnTrxCommon_whenStreamObserverOnErrorThrowRuntimeException() {
     // Arrange
@@ -469,7 +482,8 @@ public class RpcApiServiceDiffblueTest {
    * StreamObserver)}
    */
   @Test
-  @Category(MaintainedByDiffblue.class)
+  @Category(ContributionFromDiffblue.class)
+  @ManagedByDiffblue
   @MethodsUnderTest({"void RpcApiService.getBurnTrxCommon(GrpcAPI.EmptyMessage, StreamObserver)"})
   public void testGetBurnTrxCommon_whenStreamObserverOnNextDoesNothing_thenCallsOnNext() {
     // Arrange
@@ -504,7 +518,8 @@ public class RpcApiServiceDiffblueTest {
    * StreamObserver)}
    */
   @Test
-  @Category(MaintainedByDiffblue.class)
+  @Category(ContributionFromDiffblue.class)
+  @ManagedByDiffblue
   @MethodsUnderTest({"void RpcApiService.getBurnTrxCommon(GrpcAPI.EmptyMessage, StreamObserver)"})
   public void testGetBurnTrxCommon_whenStreamObserverOnNextThrowRuntimeException() {
     // Arrange
@@ -536,7 +551,8 @@ public class RpcApiServiceDiffblueTest {
    * StreamObserver)}
    */
   @Test
-  @Category(MaintainedByDiffblue.class)
+  @Category(ContributionFromDiffblue.class)
+  @ManagedByDiffblue
   @MethodsUnderTest({
     "void RpcApiService.getBrokerageInfoCommon(GrpcAPI.BytesMessage, StreamObserver)"
   })
@@ -569,7 +585,8 @@ public class RpcApiServiceDiffblueTest {
    * StreamObserver)}
    */
   @Test
-  @Category(MaintainedByDiffblue.class)
+  @Category(ContributionFromDiffblue.class)
+  @ManagedByDiffblue
   @MethodsUnderTest({
     "void RpcApiService.getBrokerageInfoCommon(GrpcAPI.BytesMessage, StreamObserver)"
   })
@@ -608,7 +625,8 @@ public class RpcApiServiceDiffblueTest {
    * StreamObserver)}
    */
   @Test
-  @Category(MaintainedByDiffblue.class)
+  @Category(ContributionFromDiffblue.class)
+  @ManagedByDiffblue
   @MethodsUnderTest({
     "void RpcApiService.getBrokerageInfoCommon(GrpcAPI.BytesMessage, StreamObserver)"
   })
@@ -646,7 +664,8 @@ public class RpcApiServiceDiffblueTest {
    * StreamObserver)}
    */
   @Test
-  @Category(MaintainedByDiffblue.class)
+  @Category(ContributionFromDiffblue.class)
+  @ManagedByDiffblue
   @MethodsUnderTest({
     "void RpcApiService.getBrokerageInfoCommon(GrpcAPI.BytesMessage, StreamObserver)"
   })
@@ -684,7 +703,8 @@ public class RpcApiServiceDiffblueTest {
    * StreamObserver)}
    */
   @Test
-  @Category(MaintainedByDiffblue.class)
+  @Category(ContributionFromDiffblue.class)
+  @ManagedByDiffblue
   @MethodsUnderTest({
     "void RpcApiService.getBrokerageInfoCommon(GrpcAPI.BytesMessage, StreamObserver)"
   })
@@ -719,7 +739,8 @@ public class RpcApiServiceDiffblueTest {
    * StreamObserver)}
    */
   @Test
-  @Category(MaintainedByDiffblue.class)
+  @Category(ContributionFromDiffblue.class)
+  @ManagedByDiffblue
   @MethodsUnderTest({
     "void RpcApiService.getBrokerageInfoCommon(GrpcAPI.BytesMessage, StreamObserver)"
   })
@@ -760,7 +781,8 @@ public class RpcApiServiceDiffblueTest {
    * StreamObserver)}
    */
   @Test
-  @Category(MaintainedByDiffblue.class)
+  @Category(ContributionFromDiffblue.class)
+  @ManagedByDiffblue
   @MethodsUnderTest({
     "void RpcApiService.getBrokerageInfoCommon(GrpcAPI.BytesMessage, StreamObserver)"
   })
@@ -806,7 +828,8 @@ public class RpcApiServiceDiffblueTest {
    * StreamObserver)}
    */
   @Test
-  @Category(MaintainedByDiffblue.class)
+  @Category(ContributionFromDiffblue.class)
+  @ManagedByDiffblue
   @MethodsUnderTest({
     "void RpcApiService.getBrokerageInfoCommon(GrpcAPI.BytesMessage, StreamObserver)"
   })
@@ -838,7 +861,8 @@ public class RpcApiServiceDiffblueTest {
    * StreamObserver)}
    */
   @Test
-  @Category(MaintainedByDiffblue.class)
+  @Category(ContributionFromDiffblue.class)
+  @ManagedByDiffblue
   @MethodsUnderTest({
     "void RpcApiService.getBrokerageInfoCommon(GrpcAPI.BytesMessage, StreamObserver)"
   })
@@ -889,7 +913,8 @@ public class RpcApiServiceDiffblueTest {
    * StreamObserver)}
    */
   @Test
-  @Category(MaintainedByDiffblue.class)
+  @Category(ContributionFromDiffblue.class)
+  @ManagedByDiffblue
   @MethodsUnderTest({
     "void RpcApiService.getBrokerageInfoCommon(GrpcAPI.BytesMessage, StreamObserver)"
   })
@@ -942,7 +967,8 @@ public class RpcApiServiceDiffblueTest {
    * RpcApiService#getTransactionCountByBlockNumCommon(GrpcAPI.NumberMessage, StreamObserver)}
    */
   @Test
-  @Category(MaintainedByDiffblue.class)
+  @Category(ContributionFromDiffblue.class)
+  @ManagedByDiffblue
   @MethodsUnderTest({
     "void RpcApiService.getTransactionCountByBlockNumCommon(GrpcAPI.NumberMessage, StreamObserver)"
   })
@@ -974,7 +1000,8 @@ public class RpcApiServiceDiffblueTest {
    * RpcApiService#getTransactionCountByBlockNumCommon(GrpcAPI.NumberMessage, StreamObserver)}
    */
   @Test
-  @Category(MaintainedByDiffblue.class)
+  @Category(ContributionFromDiffblue.class)
+  @ManagedByDiffblue
   @MethodsUnderTest({
     "void RpcApiService.getTransactionCountByBlockNumCommon(GrpcAPI.NumberMessage, StreamObserver)"
   })
@@ -999,7 +1026,8 @@ public class RpcApiServiceDiffblueTest {
    * RpcApiService#getTransactionFromPendingCommon(GrpcAPI.BytesMessage, StreamObserver)}
    */
   @Test
-  @Category(MaintainedByDiffblue.class)
+  @Category(ContributionFromDiffblue.class)
+  @ManagedByDiffblue
   @MethodsUnderTest({
     "void RpcApiService.getTransactionFromPendingCommon(GrpcAPI.BytesMessage, StreamObserver)"
   })
@@ -1031,7 +1059,8 @@ public class RpcApiServiceDiffblueTest {
    * RpcApiService#getTransactionFromPendingCommon(GrpcAPI.BytesMessage, StreamObserver)}
    */
   @Test
-  @Category(MaintainedByDiffblue.class)
+  @Category(ContributionFromDiffblue.class)
+  @ManagedByDiffblue
   @MethodsUnderTest({
     "void RpcApiService.getTransactionFromPendingCommon(GrpcAPI.BytesMessage, StreamObserver)"
   })
@@ -1065,7 +1094,8 @@ public class RpcApiServiceDiffblueTest {
    * RpcApiService#getTransactionFromPendingCommon(GrpcAPI.BytesMessage, StreamObserver)}
    */
   @Test
-  @Category(MaintainedByDiffblue.class)
+  @Category(ContributionFromDiffblue.class)
+  @ManagedByDiffblue
   @MethodsUnderTest({
     "void RpcApiService.getTransactionFromPendingCommon(GrpcAPI.BytesMessage, StreamObserver)"
   })
@@ -1094,7 +1124,8 @@ public class RpcApiServiceDiffblueTest {
    * RpcApiService#getTransactionFromPendingCommon(GrpcAPI.BytesMessage, StreamObserver)}
    */
   @Test
-  @Category(MaintainedByDiffblue.class)
+  @Category(ContributionFromDiffblue.class)
+  @ManagedByDiffblue
   @MethodsUnderTest({
     "void RpcApiService.getTransactionFromPendingCommon(GrpcAPI.BytesMessage, StreamObserver)"
   })
@@ -1127,7 +1158,8 @@ public class RpcApiServiceDiffblueTest {
    * RpcApiService#getTransactionFromPendingCommon(GrpcAPI.BytesMessage, StreamObserver)}
    */
   @Test
-  @Category(MaintainedByDiffblue.class)
+  @Category(ContributionFromDiffblue.class)
+  @ManagedByDiffblue
   @MethodsUnderTest({
     "void RpcApiService.getTransactionFromPendingCommon(GrpcAPI.BytesMessage, StreamObserver)"
   })
@@ -1168,7 +1200,8 @@ public class RpcApiServiceDiffblueTest {
    * RpcApiService#getTransactionFromPendingCommon(GrpcAPI.BytesMessage, StreamObserver)}
    */
   @Test
-  @Category(MaintainedByDiffblue.class)
+  @Category(ContributionFromDiffblue.class)
+  @ManagedByDiffblue
   @MethodsUnderTest({
     "void RpcApiService.getTransactionFromPendingCommon(GrpcAPI.BytesMessage, StreamObserver)"
   })
@@ -1196,7 +1229,8 @@ public class RpcApiServiceDiffblueTest {
    * RpcApiService#getTransactionListFromPendingCommon(GrpcAPI.EmptyMessage, StreamObserver)}
    */
   @Test
-  @Category(MaintainedByDiffblue.class)
+  @Category(ContributionFromDiffblue.class)
+  @ManagedByDiffblue
   @MethodsUnderTest({
     "void RpcApiService.getTransactionListFromPendingCommon(GrpcAPI.EmptyMessage, StreamObserver)"
   })
@@ -1225,7 +1259,8 @@ public class RpcApiServiceDiffblueTest {
    * RpcApiService#getTransactionListFromPendingCommon(GrpcAPI.EmptyMessage, StreamObserver)}
    */
   @Test
-  @Category(MaintainedByDiffblue.class)
+  @Category(ContributionFromDiffblue.class)
+  @ManagedByDiffblue
   @MethodsUnderTest({
     "void RpcApiService.getTransactionListFromPendingCommon(GrpcAPI.EmptyMessage, StreamObserver)"
   })
@@ -1258,7 +1293,8 @@ public class RpcApiServiceDiffblueTest {
    * RpcApiService#getTransactionListFromPendingCommon(GrpcAPI.EmptyMessage, StreamObserver)}
    */
   @Test
-  @Category(MaintainedByDiffblue.class)
+  @Category(ContributionFromDiffblue.class)
+  @ManagedByDiffblue
   @MethodsUnderTest({
     "void RpcApiService.getTransactionListFromPendingCommon(GrpcAPI.EmptyMessage, StreamObserver)"
   })
@@ -1295,7 +1331,8 @@ public class RpcApiServiceDiffblueTest {
    * RpcApiService#getTransactionListFromPendingCommon(GrpcAPI.EmptyMessage, StreamObserver)}
    */
   @Test
-  @Category(MaintainedByDiffblue.class)
+  @Category(ContributionFromDiffblue.class)
+  @ManagedByDiffblue
   @MethodsUnderTest({
     "void RpcApiService.getTransactionListFromPendingCommon(GrpcAPI.EmptyMessage, StreamObserver)"
   })
@@ -1328,7 +1365,8 @@ public class RpcApiServiceDiffblueTest {
    * RpcApiService#getTransactionListFromPendingCommon(GrpcAPI.EmptyMessage, StreamObserver)}
    */
   @Test
-  @Category(MaintainedByDiffblue.class)
+  @Category(ContributionFromDiffblue.class)
+  @ManagedByDiffblue
   @MethodsUnderTest({
     "void RpcApiService.getTransactionListFromPendingCommon(GrpcAPI.EmptyMessage, StreamObserver)"
   })
@@ -1364,7 +1402,8 @@ public class RpcApiServiceDiffblueTest {
    * StreamObserver)}
    */
   @Test
-  @Category(MaintainedByDiffblue.class)
+  @Category(ContributionFromDiffblue.class)
+  @ManagedByDiffblue
   @MethodsUnderTest({
     "void RpcApiService.getPendingSizeCommon(GrpcAPI.EmptyMessage, StreamObserver)"
   })
@@ -1397,7 +1436,8 @@ public class RpcApiServiceDiffblueTest {
    * StreamObserver)}
    */
   @Test
-  @Category(MaintainedByDiffblue.class)
+  @Category(ContributionFromDiffblue.class)
+  @ManagedByDiffblue
   @MethodsUnderTest({
     "void RpcApiService.getPendingSizeCommon(GrpcAPI.EmptyMessage, StreamObserver)"
   })
@@ -1430,7 +1470,8 @@ public class RpcApiServiceDiffblueTest {
    * StreamObserver)}
    */
   @Test
-  @Category(MaintainedByDiffblue.class)
+  @Category(ContributionFromDiffblue.class)
+  @ManagedByDiffblue
   @MethodsUnderTest({
     "void RpcApiService.getPendingSizeCommon(GrpcAPI.EmptyMessage, StreamObserver)"
   })
@@ -1466,7 +1507,8 @@ public class RpcApiServiceDiffblueTest {
    * StreamObserver)}
    */
   @Test
-  @Category(MaintainedByDiffblue.class)
+  @Category(ContributionFromDiffblue.class)
+  @ManagedByDiffblue
   @MethodsUnderTest({
     "void RpcApiService.getPendingSizeCommon(GrpcAPI.EmptyMessage, StreamObserver)"
   })
@@ -1499,7 +1541,8 @@ public class RpcApiServiceDiffblueTest {
    * <p>Method under test: {@link RpcApiService#getBlockCommon(GrpcAPI.BlockReq, StreamObserver)}
    */
   @Test
-  @Category(MaintainedByDiffblue.class)
+  @Category(ContributionFromDiffblue.class)
+  @ManagedByDiffblue
   @MethodsUnderTest({"void RpcApiService.getBlockCommon(GrpcAPI.BlockReq, StreamObserver)"})
   public void testGetBlockCommon_givenRpcApiService_whenStreamObserverOnCompletedDoesNothing() {
     // Arrange
@@ -1529,7 +1572,8 @@ public class RpcApiServiceDiffblueTest {
    * <p>Method under test: {@link RpcApiService#getBlockCommon(GrpcAPI.BlockReq, StreamObserver)}
    */
   @Test
-  @Category(MaintainedByDiffblue.class)
+  @Category(ContributionFromDiffblue.class)
+  @ManagedByDiffblue
   @MethodsUnderTest({"void RpcApiService.getBlockCommon(GrpcAPI.BlockReq, StreamObserver)"})
   public void testGetBlockCommon_givenWalletGetBlockThrowIllegalArgumentException() {
     // Arrange
@@ -1559,7 +1603,8 @@ public class RpcApiServiceDiffblueTest {
    * <p>Method under test: {@link RpcApiService#getBlockCommon(GrpcAPI.BlockReq, StreamObserver)}
    */
   @Test
-  @Category(MaintainedByDiffblue.class)
+  @Category(ContributionFromDiffblue.class)
+  @ManagedByDiffblue
   @MethodsUnderTest({"void RpcApiService.getBlockCommon(GrpcAPI.BlockReq, StreamObserver)"})
   public void testGetBlockCommon_givenWalletGetBlockThrowIllegalArgumentException2() {
     // Arrange
@@ -1587,7 +1632,8 @@ public class RpcApiServiceDiffblueTest {
    * <p>Method under test: {@link RpcApiService#getBlockCommon(GrpcAPI.BlockReq, StreamObserver)}
    */
   @Test
-  @Category(MaintainedByDiffblue.class)
+  @Category(ContributionFromDiffblue.class)
+  @ManagedByDiffblue
   @MethodsUnderTest({"void RpcApiService.getBlockCommon(GrpcAPI.BlockReq, StreamObserver)"})
   public void testGetBlockCommon_givenWalletGetBlockThrowRuntimeException() {
     // Arrange
@@ -1617,7 +1663,8 @@ public class RpcApiServiceDiffblueTest {
    * <p>Method under test: {@link RpcApiService#getBlockCommon(GrpcAPI.BlockReq, StreamObserver)}
    */
   @Test
-  @Category(MaintainedByDiffblue.class)
+  @Category(ContributionFromDiffblue.class)
+  @ManagedByDiffblue
   @MethodsUnderTest({"void RpcApiService.getBlockCommon(GrpcAPI.BlockReq, StreamObserver)"})
   public void testGetBlockCommon_givenWalletGetBlockThrowRuntimeException2() {
     // Arrange

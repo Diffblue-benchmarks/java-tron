@@ -5,7 +5,8 @@ import static org.junit.Assert.assertEquals;
 import static org.junit.Assert.assertNull;
 import static org.junit.Assert.assertSame;
 import static org.junit.Assert.assertThrows;
-import com.diffblue.cover.annotations.MaintainedByDiffblue;
+import com.diffblue.cover.annotations.ContributionFromDiffblue;
+import com.diffblue.cover.annotations.ManagedByDiffblue;
 import com.diffblue.cover.annotations.MethodsUnderTest;
 import java.io.UnsupportedEncodingException;
 import org.junit.Test;
@@ -22,7 +23,8 @@ public class NoteDiffblueTest {
    * <p>Method under test: {@link Note#Note()}
    */
   @Test
-  @Category(MaintainedByDiffblue.class)
+  @Category(ContributionFromDiffblue.class)
+  @ManagedByDiffblue
   @MethodsUnderTest({"void Note.<init>()"})
   public void testNewNote() {
     // Arrange and Act
@@ -46,7 +48,8 @@ public class NoteDiffblueTest {
    * <p>Method under test: {@link Note#Note(DiversifierT, byte[], long, byte[])}
    */
   @Test
-  @Category(MaintainedByDiffblue.class)
+  @Category(ContributionFromDiffblue.class)
+  @ManagedByDiffblue
   @MethodsUnderTest({"void Note.<init>(DiversifierT, byte[], long, byte[])"})
   public void testNewNote2() throws UnsupportedEncodingException, ZksnarkException {
     // Arrange
@@ -74,7 +77,8 @@ public class NoteDiffblueTest {
    * <p>Method under test: {@link Note#Note(DiversifierT, byte[], long, byte[], byte[])}
    */
   @Test
-  @Category(MaintainedByDiffblue.class)
+  @Category(ContributionFromDiffblue.class)
+  @ManagedByDiffblue
   @MethodsUnderTest({"void Note.<init>(DiversifierT, byte[], long, byte[], byte[])"})
   public void testNewNote_whenA_thenReturnFirstElementIsZero()
       throws UnsupportedEncodingException, ZksnarkException {
@@ -113,7 +117,8 @@ public class NoteDiffblueTest {
    * <p>Method under test: {@link Note#Note(DiversifierT, byte[], long, byte[], byte[])}
    */
   @Test
-  @Category(MaintainedByDiffblue.class)
+  @Category(ContributionFromDiffblue.class)
+  @ManagedByDiffblue
   @MethodsUnderTest({"void Note.<init>(DiversifierT, byte[], long, byte[], byte[])"})
   public void testNewNote_whenAxaxaxaxBytesIsUtf8_thenReturnFirstElementIsA()
       throws UnsupportedEncodingException, ZksnarkException {
@@ -152,7 +157,8 @@ public class NoteDiffblueTest {
    * <p>Method under test: {@link Note#Note(DiversifierT, byte[], long, byte[], byte[])}
    */
   @Test
-  @Category(MaintainedByDiffblue.class)
+  @Category(ContributionFromDiffblue.class)
+  @ManagedByDiffblue
   @MethodsUnderTest({"void Note.<init>(DiversifierT, byte[], long, byte[], byte[])"})
   public void testNewNote_whenEmptyArrayOfByte_thenReturnFirstElementIsZero()
       throws UnsupportedEncodingException, ZksnarkException {
@@ -191,7 +197,8 @@ public class NoteDiffblueTest {
    * <p>Method under test: {@link Note#decode(EncPlaintext)}
    */
   @Test
-  @Category(MaintainedByDiffblue.class)
+  @Category(ContributionFromDiffblue.class)
+  @ManagedByDiffblue
   @MethodsUnderTest({"Note Note.decode(EncPlaintext)"})
   public void testDecode_givenAxaxaxaxBytesIsUtf8_thenThrowZksnarkException()
       throws UnsupportedEncodingException, ZksnarkException {
@@ -215,7 +222,8 @@ public class NoteDiffblueTest {
    * <p>Method under test: {@link Note#setMemo(byte[])}
    */
   @Test
-  @Category(MaintainedByDiffblue.class)
+  @Category(ContributionFromDiffblue.class)
+  @ManagedByDiffblue
   @MethodsUnderTest({"void Note.setMemo(byte[])"})
   public void testSetMemo_givenNote_whenAxaxaxaxBytesIsUtf8_thenFirstElementIsA()
       throws UnsupportedEncodingException {
@@ -250,7 +258,8 @@ public class NoteDiffblueTest {
    * <p>Method under test: {@link Note#setMemo(byte[])}
    */
   @Test
-  @Category(MaintainedByDiffblue.class)
+  @Category(ContributionFromDiffblue.class)
+  @ManagedByDiffblue
   @MethodsUnderTest({"void Note.setMemo(byte[])"})
   public void testSetMemo_givenNote_whenEmptyArrayOfByte_thenFirstElementIsZero() {
     // Arrange
@@ -284,7 +293,8 @@ public class NoteDiffblueTest {
    * <p>Method under test: {@link Note#setMemo(byte[])}
    */
   @Test
-  @Category(MaintainedByDiffblue.class)
+  @Category(ContributionFromDiffblue.class)
+  @ManagedByDiffblue
   @MethodsUnderTest({"void Note.setMemo(byte[])"})
   public void testSetMemo_givenNote_whenNull_thenFirstElementIsZero() {
     // Arrange
@@ -317,7 +327,8 @@ public class NoteDiffblueTest {
    * <p>Method under test: {@link Note#encode()}
    */
   @Test
-  @Category(MaintainedByDiffblue.class)
+  @Category(ContributionFromDiffblue.class)
+  @ManagedByDiffblue
   @MethodsUnderTest({"EncPlaintext Note.encode()"})
   public void testEncode_givenNote_thenReturnArrayLengthIsFiveHundredSixtyFour() {
     // Arrange, Act and Assert

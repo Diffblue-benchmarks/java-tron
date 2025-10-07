@@ -2,7 +2,8 @@ package org.tron.common.utils;
 
 import static org.junit.Assert.assertSame;
 import static org.junit.Assert.assertTrue;
-import com.diffblue.cover.annotations.MaintainedByDiffblue;
+import com.diffblue.cover.annotations.ContributionFromDiffblue;
+import com.diffblue.cover.annotations.ManagedByDiffblue;
 import com.diffblue.cover.annotations.MethodsUnderTest;
 import java.util.ArrayList;
 import java.util.List;
@@ -22,7 +23,8 @@ public class RandomGeneratorDiffblueTest {
    * <p>Method under test: {@link RandomGenerator#shuffle(List, long)}
    */
   @Test
-  @Category(MaintainedByDiffblue.class)
+  @Category(ContributionFromDiffblue.class)
+  @ManagedByDiffblue
   @MethodsUnderTest({"List RandomGenerator.shuffle(List, long)"})
   public void testShuffle_given42_whenArrayListAdd42_thenReturnArrayList() {
     // Arrange
@@ -50,7 +52,8 @@ public class RandomGeneratorDiffblueTest {
    * <p>Method under test: {@link RandomGenerator#shuffle(List, long)}
    */
   @Test
-  @Category(MaintainedByDiffblue.class)
+  @Category(ContributionFromDiffblue.class)
+  @ManagedByDiffblue
   @MethodsUnderTest({"List RandomGenerator.shuffle(List, long)"})
   public void testShuffle_given42_whenArrayListAdd42_thenReturnArrayList2() {
     // Arrange
@@ -79,7 +82,8 @@ public class RandomGeneratorDiffblueTest {
    * <p>Method under test: {@link RandomGenerator#shuffle(List, long)}
    */
   @Test
-  @Category(MaintainedByDiffblue.class)
+  @Category(ContributionFromDiffblue.class)
+  @ManagedByDiffblue
   @MethodsUnderTest({"List RandomGenerator.shuffle(List, long)"})
   public void testShuffle_given42_whenMinusOne_thenReturnArrayList() {
     // Arrange
@@ -107,7 +111,8 @@ public class RandomGeneratorDiffblueTest {
    * <p>Method under test: {@link RandomGenerator#shuffle(List, long)}
    */
   @Test
-  @Category(MaintainedByDiffblue.class)
+  @Category(ContributionFromDiffblue.class)
+  @ManagedByDiffblue
   @MethodsUnderTest({"List RandomGenerator.shuffle(List, long)"})
   public void testShuffle_whenArrayList_thenReturnEmpty() {
     // Arrange

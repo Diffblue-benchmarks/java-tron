@@ -10,7 +10,8 @@ import static org.mockito.Mockito.atLeast;
 import static org.mockito.Mockito.mock;
 import static org.mockito.Mockito.verify;
 import static org.mockito.Mockito.when;
-import com.diffblue.cover.annotations.MaintainedByDiffblue;
+import com.diffblue.cover.annotations.ContributionFromDiffblue;
+import com.diffblue.cover.annotations.ManagedByDiffblue;
 import com.diffblue.cover.annotations.MethodsUnderTest;
 import com.google.protobuf.ByteString;
 import com.google.protobuf.ByteString.ByteIterator;
@@ -31,7 +32,8 @@ public class PedersenHashCapsuleDiffblueTest {
    * <p>Method under test: {@link PedersenHashCapsule#PedersenHashCapsule()}
    */
   @Test
-  @Category(MaintainedByDiffblue.class)
+  @Category(ContributionFromDiffblue.class)
+  @ManagedByDiffblue
   @MethodsUnderTest({"void PedersenHashCapsule.<init>()"})
   public void testNewPedersenHashCapsule() {
     // Arrange and Act
@@ -61,7 +63,8 @@ public class PedersenHashCapsuleDiffblueTest {
    * <p>Method under test: {@link PedersenHashCapsule#PedersenHashCapsule(byte[])}
    */
   @Test
-  @Category(MaintainedByDiffblue.class)
+  @Category(ContributionFromDiffblue.class)
+  @ManagedByDiffblue
   @MethodsUnderTest({"void PedersenHashCapsule.<init>(byte[])"})
   public void testNewPedersenHashCapsule2() {
     // Arrange and Act
@@ -96,7 +99,8 @@ public class PedersenHashCapsuleDiffblueTest {
    * <p>Method under test: {@link PedersenHashCapsule#PedersenHashCapsule(byte[])}
    */
   @Test
-  @Category(MaintainedByDiffblue.class)
+  @Category(ContributionFromDiffblue.class)
+  @ManagedByDiffblue
   @MethodsUnderTest({"void PedersenHashCapsule.<init>(byte[])"})
   public void testNewPedersenHashCapsule_whenAAAAAAAABytesIsUtf8_thenReturnInstanceIsNull()
       throws UnsupportedEncodingException {
@@ -115,7 +119,8 @@ public class PedersenHashCapsuleDiffblueTest {
    * <p>Method under test: {@link PedersenHashCapsule#PedersenHashCapsule(byte[])}
    */
   @Test
-  @Category(MaintainedByDiffblue.class)
+  @Category(ContributionFromDiffblue.class)
+  @ManagedByDiffblue
   @MethodsUnderTest({"void PedersenHashCapsule.<init>(byte[])"})
   public void testNewPedersenHashCapsule_whenAAAAAAABytesIsUtf8_thenReturnInstanceIsNull()
       throws UnsupportedEncodingException {
@@ -134,7 +139,8 @@ public class PedersenHashCapsuleDiffblueTest {
    * <p>Method under test: {@link PedersenHashCapsule#PedersenHashCapsule(byte[])}
    */
   @Test
-  @Category(MaintainedByDiffblue.class)
+  @Category(ContributionFromDiffblue.class)
+  @ManagedByDiffblue
   @MethodsUnderTest({"void PedersenHashCapsule.<init>(byte[])"})
   public void testNewPedersenHashCapsule_whenArrayOfByteWithMinusOneAndX() {
     // Arrange and Act
@@ -156,7 +162,8 @@ public class PedersenHashCapsuleDiffblueTest {
    * <p>Method under test: {@link PedersenHashCapsule#PedersenHashCapsule(byte[])}
    */
   @Test
-  @Category(MaintainedByDiffblue.class)
+  @Category(ContributionFromDiffblue.class)
+  @ManagedByDiffblue
   @MethodsUnderTest({"void PedersenHashCapsule.<init>(byte[])"})
   public void testNewPedersenHashCapsule_whenArrayOfByteWithZeroAndX_thenReturnInstanceIsNull() {
     // Arrange and Act
@@ -178,7 +185,8 @@ public class PedersenHashCapsuleDiffblueTest {
    * <p>Method under test: {@link PedersenHashCapsule#PedersenHashCapsule(byte[])}
    */
   @Test
-  @Category(MaintainedByDiffblue.class)
+  @Category(ContributionFromDiffblue.class)
+  @ManagedByDiffblue
   @MethodsUnderTest({"void PedersenHashCapsule.<init>(byte[])"})
   public void testNewPedersenHashCapsule_whenAxaxaxaxBytesIsUtf8_thenReturnInstanceIsNull()
       throws UnsupportedEncodingException {
@@ -197,7 +205,8 @@ public class PedersenHashCapsuleDiffblueTest {
    * <p>Method under test: {@link PedersenHashCapsule#PedersenHashCapsule(byte[])}
    */
   @Test
-  @Category(MaintainedByDiffblue.class)
+  @Category(ContributionFromDiffblue.class)
+  @ManagedByDiffblue
   @MethodsUnderTest({"void PedersenHashCapsule.<init>(byte[])"})
   public void testNewPedersenHashCapsule_whenLf_thenReturnInstanceIsNull() {
     // Arrange and Act
@@ -222,7 +231,8 @@ public class PedersenHashCapsuleDiffblueTest {
    * <p>Method under test: {@link PedersenHashCapsule#PedersenHashCapsule(byte[])}
    */
   @Test
-  @Category(MaintainedByDiffblue.class)
+  @Category(ContributionFromDiffblue.class)
+  @ManagedByDiffblue
   @MethodsUnderTest({"void PedersenHashCapsule.<init>(byte[])"})
   public void testNewPedersenHashCapsule_whenXxaxaxaxBytesIsUtf8_thenReturnInstanceIsNull()
       throws UnsupportedEncodingException {
@@ -236,7 +246,8 @@ public class PedersenHashCapsuleDiffblueTest {
    * <p>Method under test: {@link PedersenHashCapsule#uncommitted()}
    */
   @Test
-  @Category(MaintainedByDiffblue.class)
+  @Category(ContributionFromDiffblue.class)
+  @ManagedByDiffblue
   @MethodsUnderTest({"PedersenHashCapsule PedersenHashCapsule.uncommitted()"})
   public void testUncommitted() throws ZksnarkException {
     // Arrange and Act
@@ -271,7 +282,8 @@ public class PedersenHashCapsuleDiffblueTest {
    * <p>Method under test: {@link PedersenHashCapsule#getContent()}
    */
   @Test
-  @Category(MaintainedByDiffblue.class)
+  @Category(ContributionFromDiffblue.class)
+  @ManagedByDiffblue
   @MethodsUnderTest({"ByteString PedersenHashCapsule.getContent()"})
   public void testGetContent() throws ZksnarkException {
     // Arrange
@@ -302,7 +314,8 @@ public class PedersenHashCapsuleDiffblueTest {
    * <p>Method under test: {@link PedersenHashCapsule#setContent(ByteString)}
    */
   @Test
-  @Category(MaintainedByDiffblue.class)
+  @Category(ContributionFromDiffblue.class)
+  @ManagedByDiffblue
   @MethodsUnderTest({"void PedersenHashCapsule.setContent(ByteString)"})
   public void testSetContent() throws ZksnarkException {
     // Arrange
@@ -334,7 +347,8 @@ public class PedersenHashCapsuleDiffblueTest {
    * <p>Method under test: {@link PedersenHashCapsule#getData()}
    */
   @Test
-  @Category(MaintainedByDiffblue.class)
+  @Category(ContributionFromDiffblue.class)
+  @ManagedByDiffblue
   @MethodsUnderTest({"byte[] PedersenHashCapsule.getData()"})
   public void testGetData_givenByteStringIsEmptyReturnTrue_thenCallsIsEmpty()
       throws ZksnarkException {
@@ -364,7 +378,8 @@ public class PedersenHashCapsuleDiffblueTest {
    * <p>Method under test: {@link PedersenHashCapsule#getData()}
    */
   @Test
-  @Category(MaintainedByDiffblue.class)
+  @Category(ContributionFromDiffblue.class)
+  @ManagedByDiffblue
   @MethodsUnderTest({"byte[] PedersenHashCapsule.getData()"})
   public void testGetData_givenPedersenHashCapsule_thenReturnEmptyArrayOfByte() {
     // Arrange, Act and Assert
@@ -382,7 +397,8 @@ public class PedersenHashCapsuleDiffblueTest {
    * <p>Method under test: {@link PedersenHashCapsule#getData()}
    */
   @Test
-  @Category(MaintainedByDiffblue.class)
+  @Category(ContributionFromDiffblue.class)
+  @ManagedByDiffblue
   @MethodsUnderTest({"byte[] PedersenHashCapsule.getData()"})
   public void testGetData_givenUncommitted_thenReturnArrayOfByteWithLfAndSpace()
       throws ZksnarkException {
@@ -401,7 +417,8 @@ public class PedersenHashCapsuleDiffblueTest {
    * <p>Method under test: {@link PedersenHashCapsule#getInstance()}
    */
   @Test
-  @Category(MaintainedByDiffblue.class)
+  @Category(ContributionFromDiffblue.class)
+  @ManagedByDiffblue
   @MethodsUnderTest({"PedersenHash PedersenHashCapsule.getInstance()"})
   public void testGetInstance() throws ZksnarkException {
     // Arrange and Act
@@ -426,7 +443,8 @@ public class PedersenHashCapsuleDiffblueTest {
    * <p>Method under test: {@link PedersenHashCapsule#isPresent()}
    */
   @Test
-  @Category(MaintainedByDiffblue.class)
+  @Category(ContributionFromDiffblue.class)
+  @ManagedByDiffblue
   @MethodsUnderTest({"boolean PedersenHashCapsule.isPresent()"})
   public void testIsPresent_givenByteStringIsEmptyReturnTrue_thenCallsIsEmpty()
       throws ZksnarkException {
@@ -456,7 +474,8 @@ public class PedersenHashCapsuleDiffblueTest {
    * <p>Method under test: {@link PedersenHashCapsule#isPresent()}
    */
   @Test
-  @Category(MaintainedByDiffblue.class)
+  @Category(ContributionFromDiffblue.class)
+  @ManagedByDiffblue
   @MethodsUnderTest({"boolean PedersenHashCapsule.isPresent()"})
   public void testIsPresent_givenPedersenHashCapsule_thenReturnFalse() {
     // Arrange, Act and Assert
@@ -474,7 +493,8 @@ public class PedersenHashCapsuleDiffblueTest {
    * <p>Method under test: {@link PedersenHashCapsule#isPresent()}
    */
   @Test
-  @Category(MaintainedByDiffblue.class)
+  @Category(ContributionFromDiffblue.class)
+  @ManagedByDiffblue
   @MethodsUnderTest({"boolean PedersenHashCapsule.isPresent()"})
   public void testIsPresent_givenUncommitted_thenReturnTrue() throws ZksnarkException {
     // Arrange, Act and Assert

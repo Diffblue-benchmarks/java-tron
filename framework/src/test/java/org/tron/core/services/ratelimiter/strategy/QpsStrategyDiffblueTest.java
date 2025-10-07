@@ -2,7 +2,8 @@ package org.tron.core.services.ratelimiter.strategy;
 
 import static org.junit.Assert.assertEquals;
 import static org.junit.Assert.assertTrue;
-import com.diffblue.cover.annotations.MaintainedByDiffblue;
+import com.diffblue.cover.annotations.ContributionFromDiffblue;
+import com.diffblue.cover.annotations.ManagedByDiffblue;
 import com.diffblue.cover.annotations.MethodsUnderTest;
 import java.util.Map;
 import org.junit.Test;
@@ -16,7 +17,8 @@ public class QpsStrategyDiffblueTest {
    * <p>Method under test: {@link QpsStrategy#QpsStrategy(String)}
    */
   @Test
-  @Category(MaintainedByDiffblue.class)
+  @Category(ContributionFromDiffblue.class)
+  @ManagedByDiffblue
   @MethodsUnderTest({"void QpsStrategy.<init>(String)"})
   public void testNewQpsStrategy() {
     // Arrange, Act and Assert
@@ -34,7 +36,8 @@ public class QpsStrategyDiffblueTest {
    * <p>Method under test: {@link QpsStrategy#acquire()}
    */
   @Test
-  @Category(MaintainedByDiffblue.class)
+  @Category(ContributionFromDiffblue.class)
+  @ManagedByDiffblue
   @MethodsUnderTest({"boolean QpsStrategy.acquire()"})
   public void testAcquire() {
     // Arrange, Act and Assert

@@ -7,7 +7,8 @@ import static org.junit.Assert.assertTrue;
 import static org.mockito.Mockito.mock;
 import static org.mockito.Mockito.verify;
 import static org.mockito.Mockito.when;
-import com.diffblue.cover.annotations.MaintainedByDiffblue;
+import com.diffblue.cover.annotations.ContributionFromDiffblue;
+import com.diffblue.cover.annotations.ManagedByDiffblue;
 import com.diffblue.cover.annotations.MethodsUnderTest;
 import java.io.UnsupportedEncodingException;
 import java.math.BigInteger;
@@ -31,7 +32,8 @@ public class SM2SignerDiffblueTest {
    * <p>Method under test: {@link SM2Signer#init(boolean, CipherParameters)}
    */
   @Test
-  @Category(MaintainedByDiffblue.class)
+  @Category(ContributionFromDiffblue.class)
+  @ManagedByDiffblue
   @MethodsUnderTest({"void SM2Signer.init(boolean, CipherParameters)"})
   public void testInit_givenIllegalArgumentException_thenThrowIllegalArgumentException() {
     // Arrange
@@ -59,7 +61,8 @@ public class SM2SignerDiffblueTest {
    * <p>Method under test: {@link SM2Signer#init(boolean, CipherParameters)}
    */
   @Test
-  @Category(MaintainedByDiffblue.class)
+  @Category(ContributionFromDiffblue.class)
+  @ManagedByDiffblue
   @MethodsUnderTest({"void SM2Signer.init(boolean, CipherParameters)"})
   public void testInit_whenParametersWithIDWithParametersWithRandomAndAxaxaxaxBytesIsUtf8()
       throws UnsupportedEncodingException {
@@ -83,7 +86,8 @@ public class SM2SignerDiffblueTest {
    * <p>Method under test: {@link SM2Signer#generateHashSignature(byte[])}
    */
   @Test
-  @Category(MaintainedByDiffblue.class)
+  @Category(ContributionFromDiffblue.class)
+  @ManagedByDiffblue
   @MethodsUnderTest({"BigInteger[] SM2Signer.generateHashSignature(byte[])"})
   public void testGenerateHashSignature() throws UnsupportedEncodingException {
     // Arrange, Act and Assert
@@ -98,7 +102,8 @@ public class SM2SignerDiffblueTest {
    * <p>Method under test: {@link SM2Signer#createBasePointMultiplier()}
    */
   @Test
-  @Category(MaintainedByDiffblue.class)
+  @Category(ContributionFromDiffblue.class)
+  @ManagedByDiffblue
   @MethodsUnderTest({"org.bouncycastle.math.ec.ECMultiplier SM2Signer.createBasePointMultiplier()"})
   public void testCreateBasePointMultiplier() {
     // Arrange, Act and Assert
@@ -111,7 +116,8 @@ public class SM2SignerDiffblueTest {
    * <p>Method under test: {@link SM2Signer#calculateE(byte[])}
    */
   @Test
-  @Category(MaintainedByDiffblue.class)
+  @Category(ContributionFromDiffblue.class)
+  @ManagedByDiffblue
   @MethodsUnderTest({"BigInteger SM2Signer.calculateE(byte[])"})
   public void testCalculateE() throws UnsupportedEncodingException {
     // Arrange and Act
@@ -131,7 +137,8 @@ public class SM2SignerDiffblueTest {
    * <p>Method under test: default or parameterless constructor of {@link SM2Signer}
    */
   @Test
-  @Category(MaintainedByDiffblue.class)
+  @Category(ContributionFromDiffblue.class)
+  @ManagedByDiffblue
   @MethodsUnderTest({"void SM2Signer.<init>()"})
   public void testNewSM2Signer() {
     // Arrange, Act and Assert

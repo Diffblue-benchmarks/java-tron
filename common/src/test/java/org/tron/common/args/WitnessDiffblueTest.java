@@ -3,7 +3,8 @@ package org.tron.common.args;
 import static org.junit.Assert.assertEquals;
 import static org.junit.Assert.assertNull;
 import static org.junit.Assert.assertThrows;
-import com.diffblue.cover.annotations.MaintainedByDiffblue;
+import com.diffblue.cover.annotations.ContributionFromDiffblue;
+import com.diffblue.cover.annotations.ManagedByDiffblue;
 import com.diffblue.cover.annotations.MethodsUnderTest;
 import java.io.UnsupportedEncodingException;
 import org.junit.Test;
@@ -20,7 +21,8 @@ public class WitnessDiffblueTest {
    * <p>Method under test: {@link Witness#setAddress(byte[])}
    */
   @Test
-  @Category(MaintainedByDiffblue.class)
+  @Category(ContributionFromDiffblue.class)
+  @ManagedByDiffblue
   @MethodsUnderTest({"void Witness.setAddress(byte[])"})
   public void testSetAddress_whenAxaxaxaxBytesIsUtf8() throws UnsupportedEncodingException {
     // Arrange, Act and Assert
@@ -39,7 +41,8 @@ public class WitnessDiffblueTest {
    * <p>Method under test: {@link Witness#setAddress(byte[])}
    */
   @Test
-  @Category(MaintainedByDiffblue.class)
+  @Category(ContributionFromDiffblue.class)
+  @ManagedByDiffblue
   @MethodsUnderTest({"void Witness.setAddress(byte[])"})
   public void testSetAddress_whenEmptyArrayOfByte() {
     // Arrange, Act and Assert
@@ -57,7 +60,8 @@ public class WitnessDiffblueTest {
    * <p>Method under test: {@link Witness#setUrl(String)}
    */
   @Test
-  @Category(MaintainedByDiffblue.class)
+  @Category(ContributionFromDiffblue.class)
+  @ManagedByDiffblue
   @MethodsUnderTest({"void Witness.setUrl(String)"})
   public void testSetUrl_whenEmptyString_thenThrowIllegalArgumentException() {
     // Arrange, Act and Assert
@@ -75,7 +79,8 @@ public class WitnessDiffblueTest {
    * <p>Method under test: {@link Witness#setUrl(String)}
    */
   @Test
-  @Category(MaintainedByDiffblue.class)
+  @Category(ContributionFromDiffblue.class)
+  @ManagedByDiffblue
   @MethodsUnderTest({"void Witness.setUrl(String)"})
   public void testSetUrl_whenHttpsExampleOrgExample_thenWitnessUrlIsHttpsExampleOrgExample() {
     // Arrange
@@ -99,7 +104,8 @@ public class WitnessDiffblueTest {
    * <p>Method under test: {@link Witness#setUrl(String)}
    */
   @Test
-  @Category(MaintainedByDiffblue.class)
+  @Category(ContributionFromDiffblue.class)
+  @ManagedByDiffblue
   @MethodsUnderTest({"void Witness.setUrl(String)"})
   public void testSetUrl_whenNull_thenThrowIllegalArgumentException() {
     // Arrange, Act and Assert
@@ -117,7 +123,8 @@ public class WitnessDiffblueTest {
    * <p>Method under test: {@link Witness#setUrl(String)}
    */
   @Test
-  @Category(MaintainedByDiffblue.class)
+  @Category(ContributionFromDiffblue.class)
+  @ManagedByDiffblue
   @MethodsUnderTest({"void Witness.setUrl(String)"})
   public void testSetUrl_whenSpace_thenThrowIllegalArgumentException() {
     // Arrange, Act and Assert
@@ -138,7 +145,8 @@ public class WitnessDiffblueTest {
    * </ul>
    */
   @Test
-  @Category(MaintainedByDiffblue.class)
+  @Category(ContributionFromDiffblue.class)
+  @ManagedByDiffblue
   @MethodsUnderTest({
     "void Witness.<init>()",
     "byte[] Witness.getAddress()",

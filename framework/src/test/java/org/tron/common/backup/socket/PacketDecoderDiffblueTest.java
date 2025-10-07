@@ -5,7 +5,8 @@ import static org.junit.Assert.assertThrows;
 import static org.mockito.Mockito.mock;
 import static org.mockito.Mockito.verify;
 import static org.mockito.Mockito.when;
-import com.diffblue.cover.annotations.MaintainedByDiffblue;
+import com.diffblue.cover.annotations.ContributionFromDiffblue;
+import com.diffblue.cover.annotations.ManagedByDiffblue;
 import com.diffblue.cover.annotations.MethodsUnderTest;
 import io.netty.buffer.DuplicatedByteBuf;
 import io.netty.buffer.EmptyByteBuf;
@@ -32,7 +33,8 @@ public class PacketDecoderDiffblueTest {
    * <p>Method under test: {@link PacketDecoder#decode(ChannelHandlerContext, DatagramPacket, List)}
    */
   @Test
-  @Category(MaintainedByDiffblue.class)
+  @Category(ContributionFromDiffblue.class)
+  @ManagedByDiffblue
   @MethodsUnderTest({"void PacketDecoder.decode(ChannelHandlerContext, DatagramPacket, List)"})
   public void testDecodeWithChannelHandlerContextDatagramPacketList_given42_whenArrayListAdd42()
       throws Exception {
@@ -67,7 +69,8 @@ public class PacketDecoderDiffblueTest {
    * <p>Method under test: {@link PacketDecoder#decode(ChannelHandlerContext, DatagramPacket, List)}
    */
   @Test
-  @Category(MaintainedByDiffblue.class)
+  @Category(ContributionFromDiffblue.class)
+  @ManagedByDiffblue
   @MethodsUnderTest({"void PacketDecoder.decode(ChannelHandlerContext, DatagramPacket, List)"})
   public void testDecodeWithChannelHandlerContextDatagramPacketList_given42_whenArrayListAdd422()
       throws Exception {
@@ -102,7 +105,8 @@ public class PacketDecoderDiffblueTest {
    * <p>Method under test: {@link PacketDecoder#decode(ChannelHandlerContext, DatagramPacket, List)}
    */
   @Test
-  @Category(MaintainedByDiffblue.class)
+  @Category(ContributionFromDiffblue.class)
+  @ManagedByDiffblue
   @MethodsUnderTest({"void PacketDecoder.decode(ChannelHandlerContext, DatagramPacket, List)"})
   public void testDecodeWithChannelHandlerContextDatagramPacketList_thenCallsChannel()
       throws Exception {
@@ -133,7 +137,8 @@ public class PacketDecoderDiffblueTest {
    * <p>Method under test: {@link PacketDecoder#decode(ChannelHandlerContext, DatagramPacket, List)}
    */
   @Test
-  @Category(MaintainedByDiffblue.class)
+  @Category(ContributionFromDiffblue.class)
+  @ManagedByDiffblue
   @MethodsUnderTest({"void PacketDecoder.decode(ChannelHandlerContext, DatagramPacket, List)"})
   public void testDecodeWithChannelHandlerContextDatagramPacketList_thenThrowRuntimeException()
       throws Exception {
@@ -158,7 +163,8 @@ public class PacketDecoderDiffblueTest {
    * <p>Method under test: default or parameterless constructor of {@link PacketDecoder}
    */
   @Test
-  @Category(MaintainedByDiffblue.class)
+  @Category(ContributionFromDiffblue.class)
+  @ManagedByDiffblue
   @MethodsUnderTest({"void PacketDecoder.<init>()"})
   public void testNewPacketDecoder() {
     // Arrange, Act and Assert

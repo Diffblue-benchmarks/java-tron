@@ -4,7 +4,8 @@ import static org.junit.Assert.assertArrayEquals;
 import static org.junit.Assert.assertEquals;
 import static org.junit.Assert.assertNull;
 import static org.junit.Assert.assertTrue;
-import com.diffblue.cover.annotations.MaintainedByDiffblue;
+import com.diffblue.cover.annotations.ContributionFromDiffblue;
+import com.diffblue.cover.annotations.ManagedByDiffblue;
 import com.diffblue.cover.annotations.MethodsUnderTest;
 import io.netty.buffer.UnpooledHeapByteBuf;
 import java.io.UnsupportedEncodingException;
@@ -26,7 +27,8 @@ public class PongMessageDiffblueTest {
    * </ul>
    */
   @Test
-  @Category(MaintainedByDiffblue.class)
+  @Category(ContributionFromDiffblue.class)
+  @ManagedByDiffblue
   @MethodsUnderTest({
     "void PongMessage.<init>(byte, byte[])",
     "Class PongMessage.getAnswerMessage()",
@@ -51,7 +53,8 @@ public class PongMessageDiffblueTest {
    * <p>Method under test: {@link PongMessage#PongMessage()}
    */
   @Test
-  @Category(MaintainedByDiffblue.class)
+  @Category(ContributionFromDiffblue.class)
+  @ManagedByDiffblue
   @MethodsUnderTest({"void PongMessage.<init>()"})
   public void testNewPongMessage() {
     // Arrange and Act
@@ -71,7 +74,8 @@ public class PongMessageDiffblueTest {
    * <p>Method under test: {@link PongMessage#PongMessage(byte[])}
    */
   @Test
-  @Category(MaintainedByDiffblue.class)
+  @Category(ContributionFromDiffblue.class)
+  @ManagedByDiffblue
   @MethodsUnderTest({"void PongMessage.<init>(byte[])"})
   public void testNewPongMessage2() throws UnsupportedEncodingException {
     // Arrange and Act
@@ -91,7 +95,8 @@ public class PongMessageDiffblueTest {
    * <p>Method under test: {@link PongMessage#getType()}
    */
   @Test
-  @Category(MaintainedByDiffblue.class)
+  @Category(ContributionFromDiffblue.class)
+  @ManagedByDiffblue
   @MethodsUnderTest({"MessageTypes PongMessage.getType()"})
   public void testGetType() {
     // Arrange, Act and Assert

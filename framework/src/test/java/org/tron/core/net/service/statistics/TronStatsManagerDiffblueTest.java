@@ -3,7 +3,8 @@ package org.tron.core.net.service.statistics;
 import static org.junit.Assert.assertEquals;
 import static org.junit.Assert.assertNull;
 import static org.mockito.Mockito.mock;
-import com.diffblue.cover.annotations.MaintainedByDiffblue;
+import com.diffblue.cover.annotations.ContributionFromDiffblue;
+import com.diffblue.cover.annotations.ManagedByDiffblue;
 import com.diffblue.cover.annotations.MethodsUnderTest;
 import java.net.InetAddress;
 import org.junit.Test;
@@ -23,7 +24,8 @@ public class TronStatsManagerDiffblueTest {
    * <p>Method under test: {@link TronStatsManager#getNodeStatistics(InetAddress)}
    */
   @Test
-  @Category(MaintainedByDiffblue.class)
+  @Category(ContributionFromDiffblue.class)
+  @ManagedByDiffblue
   @MethodsUnderTest({"NodeStatistics TronStatsManager.getNodeStatistics(InetAddress)"})
   public void testGetNodeStatistics_whenInetAddress_thenReturnLocalDisconnectReasonIsNull() {
     // Arrange and Act

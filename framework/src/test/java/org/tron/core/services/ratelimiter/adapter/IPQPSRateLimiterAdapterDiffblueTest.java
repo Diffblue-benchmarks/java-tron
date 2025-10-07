@@ -1,7 +1,8 @@
 package org.tron.core.services.ratelimiter.adapter;
 
 import static org.junit.Assert.assertTrue;
-import com.diffblue.cover.annotations.MaintainedByDiffblue;
+import com.diffblue.cover.annotations.ContributionFromDiffblue;
+import com.diffblue.cover.annotations.ManagedByDiffblue;
 import com.diffblue.cover.annotations.MethodsUnderTest;
 import org.junit.Test;
 import org.junit.experimental.categories.Category;
@@ -18,7 +19,8 @@ public class IPQPSRateLimiterAdapterDiffblueTest {
    * <p>Method under test: {@link IPQPSRateLimiterAdapter#IPQPSRateLimiterAdapter(String)}
    */
   @Test
-  @Category(MaintainedByDiffblue.class)
+  @Category(ContributionFromDiffblue.class)
+  @ManagedByDiffblue
   @MethodsUnderTest({"void IPQPSRateLimiterAdapter.<init>(String)"})
   public void testNewIPQPSRateLimiterAdapter_thenReturnAcquireRuntimeDataWithOIs42() {
     // Arrange and Act
@@ -40,7 +42,8 @@ public class IPQPSRateLimiterAdapterDiffblueTest {
    * <p>Method under test: {@link IPQPSRateLimiterAdapter#IPQPSRateLimiterAdapter(String)}
    */
   @Test
-  @Category(MaintainedByDiffblue.class)
+  @Category(ContributionFromDiffblue.class)
+  @ManagedByDiffblue
   @MethodsUnderTest({"void IPQPSRateLimiterAdapter.<init>(String)"})
   public void testNewIPQPSRateLimiterAdapter_whenEmptyString() {
     // Arrange and Act
@@ -62,7 +65,8 @@ public class IPQPSRateLimiterAdapterDiffblueTest {
    * <p>Method under test: {@link IPQPSRateLimiterAdapter#acquire(RuntimeData)}
    */
   @Test
-  @Category(MaintainedByDiffblue.class)
+  @Category(ContributionFromDiffblue.class)
+  @ManagedByDiffblue
   @MethodsUnderTest({"boolean IPQPSRateLimiterAdapter.acquire(RuntimeData)"})
   public void testAcquire_whenRuntimeDataWithOIs42_thenReturnTrue() {
     // Arrange

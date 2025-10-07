@@ -6,7 +6,8 @@ import static org.junit.Assert.assertFalse;
 import static org.junit.Assert.assertNull;
 import static org.junit.Assert.assertSame;
 import static org.junit.Assert.assertTrue;
-import com.diffblue.cover.annotations.MaintainedByDiffblue;
+import com.diffblue.cover.annotations.ContributionFromDiffblue;
+import com.diffblue.cover.annotations.ManagedByDiffblue;
 import com.diffblue.cover.annotations.MethodsUnderTest;
 import com.google.protobuf.ByteString;
 import com.google.protobuf.ByteString.ByteIterator;
@@ -29,7 +30,8 @@ public class ContractCapsuleDiffblueTest {
    * <p>Method under test: {@link ContractCapsule#ContractCapsule(byte[])}
    */
   @Test
-  @Category(MaintainedByDiffblue.class)
+  @Category(ContributionFromDiffblue.class)
+  @ManagedByDiffblue
   @MethodsUnderTest({"void ContractCapsule.<init>(byte[])"})
   public void testNewContractCapsule_when0xaxaxaxBytesIsUtf8_thenReturnInstanceIsNull()
       throws UnsupportedEncodingException {
@@ -48,7 +50,8 @@ public class ContractCapsuleDiffblueTest {
    * <p>Method under test: {@link ContractCapsule#ContractCapsule(byte[])}
    */
   @Test
-  @Category(MaintainedByDiffblue.class)
+  @Category(ContributionFromDiffblue.class)
+  @ManagedByDiffblue
   @MethodsUnderTest({"void ContractCapsule.<init>(byte[])"})
   public void testNewContractCapsule_whenArrayOfByteWithAAndTwo_thenReturnInstanceIsNull() {
     // Arrange and Act
@@ -71,7 +74,8 @@ public class ContractCapsuleDiffblueTest {
    * <p>Method under test: {@link ContractCapsule#ContractCapsule(byte[])}
    */
   @Test
-  @Category(MaintainedByDiffblue.class)
+  @Category(ContributionFromDiffblue.class)
+  @ManagedByDiffblue
   @MethodsUnderTest({"void ContractCapsule.<init>(byte[])"})
   public void testNewContractCapsule_whenArrayOfByteWithAAndTwo_thenReturnInstanceIsNull2() {
     // Arrange and Act
@@ -93,7 +97,8 @@ public class ContractCapsuleDiffblueTest {
    * <p>Method under test: {@link ContractCapsule#ContractCapsule(byte[])}
    */
   @Test
-  @Category(MaintainedByDiffblue.class)
+  @Category(ContributionFromDiffblue.class)
+  @ManagedByDiffblue
   @MethodsUnderTest({"void ContractCapsule.<init>(byte[])"})
   public void testNewContractCapsule_whenArrayOfByteWithEighteenAndTwo() {
     // Arrange and Act
@@ -116,7 +121,8 @@ public class ContractCapsuleDiffblueTest {
    * <p>Method under test: {@link ContractCapsule#ContractCapsule(byte[])}
    */
   @Test
-  @Category(MaintainedByDiffblue.class)
+  @Category(ContributionFromDiffblue.class)
+  @ManagedByDiffblue
   @MethodsUnderTest({"void ContractCapsule.<init>(byte[])"})
   public void testNewContractCapsule_whenArrayOfByteWithEighteenAndX_thenReturnInstanceIsNull() {
     // Arrange and Act
@@ -137,7 +143,8 @@ public class ContractCapsuleDiffblueTest {
    * <p>Method under test: {@link ContractCapsule#ContractCapsule(byte[])}
    */
   @Test
-  @Category(MaintainedByDiffblue.class)
+  @Category(ContributionFromDiffblue.class)
+  @ManagedByDiffblue
   @MethodsUnderTest({"void ContractCapsule.<init>(byte[])"})
   public void testNewContractCapsule_whenArrayOfByteWithEighteenAndZero() {
     // Arrange and Act
@@ -159,7 +166,8 @@ public class ContractCapsuleDiffblueTest {
    * <p>Method under test: {@link ContractCapsule#ContractCapsule(byte[])}
    */
   @Test
-  @Category(MaintainedByDiffblue.class)
+  @Category(ContributionFromDiffblue.class)
+  @ManagedByDiffblue
   @MethodsUnderTest({"void ContractCapsule.<init>(byte[])"})
   public void testNewContractCapsule_whenArrayOfByteWithLfAndTwo_thenReturnInstanceIsNull() {
     // Arrange and Act
@@ -182,7 +190,8 @@ public class ContractCapsuleDiffblueTest {
    * <p>Method under test: {@link ContractCapsule#ContractCapsule(byte[])}
    */
   @Test
-  @Category(MaintainedByDiffblue.class)
+  @Category(ContributionFromDiffblue.class)
+  @ManagedByDiffblue
   @MethodsUnderTest({"void ContractCapsule.<init>(byte[])"})
   public void testNewContractCapsule_whenArrayOfByteWithLfAndZero_thenReturnInstanceIsNull() {
     // Arrange and Act
@@ -204,7 +213,8 @@ public class ContractCapsuleDiffblueTest {
    * <p>Method under test: {@link ContractCapsule#ContractCapsule(byte[])}
    */
   @Test
-  @Category(MaintainedByDiffblue.class)
+  @Category(ContributionFromDiffblue.class)
+  @ManagedByDiffblue
   @MethodsUnderTest({"void ContractCapsule.<init>(byte[])"})
   public void testNewContractCapsule_whenArrayOfByteWithMin_valueAndX_thenReturnInstanceIsNull() {
     // Arrange and Act
@@ -226,7 +236,8 @@ public class ContractCapsuleDiffblueTest {
    * <p>Method under test: {@link ContractCapsule#ContractCapsule(byte[])}
    */
   @Test
-  @Category(MaintainedByDiffblue.class)
+  @Category(ContributionFromDiffblue.class)
+  @ManagedByDiffblue
   @MethodsUnderTest({"void ContractCapsule.<init>(byte[])"})
   public void testNewContractCapsule_whenArrayOfByteWithMinusOneAndX_thenReturnInstanceIsNull() {
     // Arrange and Act
@@ -247,7 +258,8 @@ public class ContractCapsuleDiffblueTest {
    * <p>Method under test: {@link ContractCapsule#ContractCapsule(byte[])}
    */
   @Test
-  @Category(MaintainedByDiffblue.class)
+  @Category(ContributionFromDiffblue.class)
+  @ManagedByDiffblue
   @MethodsUnderTest({"void ContractCapsule.<init>(byte[])"})
   public void testNewContractCapsule_whenArrayOfByteWithQuotationMarkAndTwo() {
     // Arrange and Act
@@ -269,7 +281,8 @@ public class ContractCapsuleDiffblueTest {
    * <p>Method under test: {@link ContractCapsule#ContractCapsule(byte[])}
    */
   @Test
-  @Category(MaintainedByDiffblue.class)
+  @Category(ContributionFromDiffblue.class)
+  @ManagedByDiffblue
   @MethodsUnderTest({"void ContractCapsule.<init>(byte[])"})
   public void testNewContractCapsule_whenArrayOfByteWithQuotationMarkAndZero() {
     // Arrange and Act
@@ -290,7 +303,8 @@ public class ContractCapsuleDiffblueTest {
    * <p>Method under test: {@link ContractCapsule#ContractCapsule(byte[])}
    */
   @Test
-  @Category(MaintainedByDiffblue.class)
+  @Category(ContributionFromDiffblue.class)
+  @ManagedByDiffblue
   @MethodsUnderTest({"void ContractCapsule.<init>(byte[])"})
   public void testNewContractCapsule_whenArrayOfByteWithTwentySixAndTwo() {
     // Arrange and Act
@@ -313,7 +327,8 @@ public class ContractCapsuleDiffblueTest {
    * <p>Method under test: {@link ContractCapsule#ContractCapsule(byte[])}
    */
   @Test
-  @Category(MaintainedByDiffblue.class)
+  @Category(ContributionFromDiffblue.class)
+  @ManagedByDiffblue
   @MethodsUnderTest({"void ContractCapsule.<init>(byte[])"})
   public void testNewContractCapsule_whenArrayOfByteWithTwentySixAndX_thenReturnInstanceIsNull() {
     // Arrange and Act
@@ -334,7 +349,8 @@ public class ContractCapsuleDiffblueTest {
    * <p>Method under test: {@link ContractCapsule#ContractCapsule(byte[])}
    */
   @Test
-  @Category(MaintainedByDiffblue.class)
+  @Category(ContributionFromDiffblue.class)
+  @ManagedByDiffblue
   @MethodsUnderTest({"void ContractCapsule.<init>(byte[])"})
   public void testNewContractCapsule_whenArrayOfByteWithTwentySixAndZero() {
     // Arrange and Act
@@ -356,7 +372,8 @@ public class ContractCapsuleDiffblueTest {
    * <p>Method under test: {@link ContractCapsule#ContractCapsule(byte[])}
    */
   @Test
-  @Category(MaintainedByDiffblue.class)
+  @Category(ContributionFromDiffblue.class)
+  @ManagedByDiffblue
   @MethodsUnderTest({"void ContractCapsule.<init>(byte[])"})
   public void testNewContractCapsule_whenAxaxaxaxBytesIsUtf8_thenReturnInstanceIsNull()
       throws UnsupportedEncodingException {
@@ -375,7 +392,8 @@ public class ContractCapsuleDiffblueTest {
    * <p>Method under test: {@link ContractCapsule#ContractCapsule(byte[])}
    */
   @Test
-  @Category(MaintainedByDiffblue.class)
+  @Category(ContributionFromDiffblue.class)
+  @ManagedByDiffblue
   @MethodsUnderTest({"void ContractCapsule.<init>(byte[])"})
   public void testNewContractCapsule_whenEmptyArrayOfByte_thenReturnContractVersionIsZero() {
     // Arrange and Act
@@ -403,7 +421,8 @@ public class ContractCapsuleDiffblueTest {
    * <p>Method under test: {@link ContractCapsule#ContractCapsule(byte[])}
    */
   @Test
-  @Category(MaintainedByDiffblue.class)
+  @Category(ContributionFromDiffblue.class)
+  @ManagedByDiffblue
   @MethodsUnderTest({"void ContractCapsule.<init>(byte[])"})
   public void testNewContractCapsule_whenXaxaxaxBytesIsUtf8_thenReturnInstanceIsNull()
       throws UnsupportedEncodingException {
@@ -422,7 +441,8 @@ public class ContractCapsuleDiffblueTest {
    * <p>Method under test: {@link ContractCapsule#ContractCapsule(byte[])}
    */
   @Test
-  @Category(MaintainedByDiffblue.class)
+  @Category(ContributionFromDiffblue.class)
+  @ManagedByDiffblue
   @MethodsUnderTest({"void ContractCapsule.<init>(byte[])"})
   public void testNewContractCapsule_whenXaxaxaxBytesIsUtf8_thenReturnInstanceIsNull2()
       throws UnsupportedEncodingException {
@@ -441,7 +461,8 @@ public class ContractCapsuleDiffblueTest {
    * <p>Method under test: {@link ContractCapsule#ContractCapsule(byte[])}
    */
   @Test
-  @Category(MaintainedByDiffblue.class)
+  @Category(ContributionFromDiffblue.class)
+  @ManagedByDiffblue
   @MethodsUnderTest({"void ContractCapsule.<init>(byte[])"})
   public void testNewContractCapsule_whenXaxaxaxBytesIsUtf8_thenReturnInstanceIsNull3()
       throws UnsupportedEncodingException {
@@ -460,7 +481,8 @@ public class ContractCapsuleDiffblueTest {
    * <p>Method under test: {@link ContractCapsule#ContractCapsule(byte[])}
    */
   @Test
-  @Category(MaintainedByDiffblue.class)
+  @Category(ContributionFromDiffblue.class)
+  @ManagedByDiffblue
   @MethodsUnderTest({"void ContractCapsule.<init>(byte[])"})
   public void testNewContractCapsule_whenXaxaxaxBytesIsUtf8_thenReturnInstanceIsNull4()
       throws UnsupportedEncodingException {
@@ -479,7 +501,8 @@ public class ContractCapsuleDiffblueTest {
    * <p>Method under test: {@link ContractCapsule#ContractCapsule(byte[])}
    */
   @Test
-  @Category(MaintainedByDiffblue.class)
+  @Category(ContributionFromDiffblue.class)
+  @ManagedByDiffblue
   @MethodsUnderTest({"void ContractCapsule.<init>(byte[])"})
   public void testNewContractCapsule_whenXxaxaxaxBytesIsUtf8_thenReturnInstanceIsNull()
       throws UnsupportedEncodingException {
@@ -497,7 +520,8 @@ public class ContractCapsuleDiffblueTest {
    * <p>Method under test: {@link ContractCapsule#getCodeHash()}
    */
   @Test
-  @Category(MaintainedByDiffblue.class)
+  @Category(ContributionFromDiffblue.class)
+  @ManagedByDiffblue
   @MethodsUnderTest({"byte[] ContractCapsule.getCodeHash()"})
   public void testGetCodeHash_thenReturnAxaxaxaxBytesIsUtf8() throws UnsupportedEncodingException {
     // Arrange
@@ -518,7 +542,8 @@ public class ContractCapsuleDiffblueTest {
    * <p>Method under test: {@link ContractCapsule#getCodeHash()}
    */
   @Test
-  @Category(MaintainedByDiffblue.class)
+  @Category(ContributionFromDiffblue.class)
+  @ManagedByDiffblue
   @MethodsUnderTest({"byte[] ContractCapsule.getCodeHash()"})
   public void testGetCodeHash_thenReturnEmptyArrayOfByte() {
     // Arrange
@@ -534,7 +559,8 @@ public class ContractCapsuleDiffblueTest {
    * <p>Method under test: {@link ContractCapsule#setCodeHash(byte[])}
    */
   @Test
-  @Category(MaintainedByDiffblue.class)
+  @Category(ContributionFromDiffblue.class)
+  @ManagedByDiffblue
   @MethodsUnderTest({"void ContractCapsule.setCodeHash(byte[])"})
   public void testSetCodeHash() throws UnsupportedEncodingException {
     // Arrange
@@ -571,7 +597,8 @@ public class ContractCapsuleDiffblueTest {
    * <p>Method under test: {@link ContractCapsule#generateWrapper()}
    */
   @Test
-  @Category(MaintainedByDiffblue.class)
+  @Category(ContributionFromDiffblue.class)
+  @ManagedByDiffblue
   @MethodsUnderTest({"SmartContractDataWrapper ContractCapsule.generateWrapper()"})
   public void testGenerateWrapper_thenReturnInitializationErrorStringIsEmptyString()
       throws UnsupportedEncodingException {
@@ -606,7 +633,8 @@ public class ContractCapsuleDiffblueTest {
    * <p>Method under test: {@link ContractCapsule#getData()}
    */
   @Test
-  @Category(MaintainedByDiffblue.class)
+  @Category(ContributionFromDiffblue.class)
+  @ManagedByDiffblue
   @MethodsUnderTest({"byte[] ContractCapsule.getData()"})
   public void testGetData_thenReturnEmptyArrayOfByte() {
     // Arrange
@@ -626,7 +654,8 @@ public class ContractCapsuleDiffblueTest {
    * <p>Method under test: {@link ContractCapsule#getData()}
    */
   @Test
-  @Category(MaintainedByDiffblue.class)
+  @Category(ContributionFromDiffblue.class)
+  @ManagedByDiffblue
   @MethodsUnderTest({"byte[] ContractCapsule.getData()"})
   public void testGetData_thenReturnJBackspaceAxaxaxaxBytesIsUtf8()
       throws UnsupportedEncodingException {
@@ -650,7 +679,8 @@ public class ContractCapsuleDiffblueTest {
    * <p>Method under test: {@link ContractCapsule#getInstance()}
    */
   @Test
-  @Category(MaintainedByDiffblue.class)
+  @Category(ContributionFromDiffblue.class)
+  @ManagedByDiffblue
   @MethodsUnderTest({"SmartContract ContractCapsule.getInstance()"})
   public void testGetInstance_givenContractCapsuleWithDataIsAxaxaxaxBytesIsUtf8_thenReturnNull()
       throws UnsupportedEncodingException {
@@ -668,7 +698,8 @@ public class ContractCapsuleDiffblueTest {
    * <p>Method under test: {@link ContractCapsule#getOriginAddress()}
    */
   @Test
-  @Category(MaintainedByDiffblue.class)
+  @Category(ContributionFromDiffblue.class)
+  @ManagedByDiffblue
   @MethodsUnderTest({"byte[] ContractCapsule.getOriginAddress()"})
   public void testGetOriginAddress_thenReturnEmptyArrayOfByte() {
     // Arrange
@@ -688,7 +719,8 @@ public class ContractCapsuleDiffblueTest {
    * <p>Method under test: {@link ContractCapsule#getConsumeUserResourcePercent()}
    */
   @Test
-  @Category(MaintainedByDiffblue.class)
+  @Category(ContributionFromDiffblue.class)
+  @ManagedByDiffblue
   @MethodsUnderTest({"long ContractCapsule.getConsumeUserResourcePercent()"})
   public void testGetConsumeUserResourcePercent_thenReturnZero() {
     // Arrange
@@ -708,7 +740,8 @@ public class ContractCapsuleDiffblueTest {
    * <p>Method under test: {@link ContractCapsule#getOriginEnergyLimit()}
    */
   @Test
-  @Category(MaintainedByDiffblue.class)
+  @Category(ContributionFromDiffblue.class)
+  @ManagedByDiffblue
   @MethodsUnderTest({"long ContractCapsule.getOriginEnergyLimit()"})
   public void testGetOriginEnergyLimit_thenReturn10000000() {
     // Arrange
@@ -724,7 +757,8 @@ public class ContractCapsuleDiffblueTest {
    * <p>Method under test: {@link ContractCapsule#clearABI()}
    */
   @Test
-  @Category(MaintainedByDiffblue.class)
+  @Category(ContributionFromDiffblue.class)
+  @ManagedByDiffblue
   @MethodsUnderTest({"void ContractCapsule.clearABI()"})
   public void testClearABI() {
     // Arrange
@@ -747,7 +781,8 @@ public class ContractCapsuleDiffblueTest {
    * <p>Method under test: {@link ContractCapsule#clearABI()}
    */
   @Test
-  @Category(MaintainedByDiffblue.class)
+  @Category(ContributionFromDiffblue.class)
+  @ManagedByDiffblue
   @MethodsUnderTest({"void ContractCapsule.clearABI()"})
   public void testClearABI2() throws UnsupportedEncodingException {
     // Arrange
@@ -777,7 +812,8 @@ public class ContractCapsuleDiffblueTest {
    * <p>Method under test: {@link ContractCapsule#getTrxHash()}
    */
   @Test
-  @Category(MaintainedByDiffblue.class)
+  @Category(ContributionFromDiffblue.class)
+  @ManagedByDiffblue
   @MethodsUnderTest({"byte[] ContractCapsule.getTrxHash()"})
   public void testGetTrxHash_thenReturnEmptyArrayOfByte() {
     // Arrange
@@ -797,7 +833,8 @@ public class ContractCapsuleDiffblueTest {
    * <p>Method under test: {@link ContractCapsule#getContractVersion()}
    */
   @Test
-  @Category(MaintainedByDiffblue.class)
+  @Category(ContributionFromDiffblue.class)
+  @ManagedByDiffblue
   @MethodsUnderTest({"int ContractCapsule.getContractVersion()"})
   public void testGetContractVersion_thenReturnZero() {
     // Arrange

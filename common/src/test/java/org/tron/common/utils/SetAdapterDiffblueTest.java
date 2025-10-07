@@ -3,7 +3,8 @@ package org.tron.common.utils;
 import static org.junit.Assert.assertEquals;
 import static org.junit.Assert.assertFalse;
 import static org.junit.Assert.assertTrue;
-import com.diffblue.cover.annotations.MaintainedByDiffblue;
+import com.diffblue.cover.annotations.ContributionFromDiffblue;
+import com.diffblue.cover.annotations.ManagedByDiffblue;
 import com.diffblue.cover.annotations.MethodsUnderTest;
 import java.util.ArrayList;
 import java.util.Collection;
@@ -19,7 +20,8 @@ public class SetAdapterDiffblueTest {
    * <p>Method under test: {@link SetAdapter#SetAdapter(Map)}
    */
   @Test
-  @Category(MaintainedByDiffblue.class)
+  @Category(ContributionFromDiffblue.class)
+  @ManagedByDiffblue
   @MethodsUnderTest({"void SetAdapter.<init>(Map)"})
   public void testNewSetAdapter() {
     // Arrange and Act
@@ -40,7 +42,8 @@ public class SetAdapterDiffblueTest {
    * <p>Method under test: {@link SetAdapter#contains(Object)}
    */
   @Test
-  @Category(MaintainedByDiffblue.class)
+  @Category(ContributionFromDiffblue.class)
+  @ManagedByDiffblue
   @MethodsUnderTest({"boolean SetAdapter.contains(Object)"})
   public void testContains_givenHashMap42Is42_thenReturnTrue() {
     // Arrange
@@ -62,7 +65,8 @@ public class SetAdapterDiffblueTest {
    * <p>Method under test: {@link SetAdapter#contains(Object)}
    */
   @Test
-  @Category(MaintainedByDiffblue.class)
+  @Category(ContributionFromDiffblue.class)
+  @ManagedByDiffblue
   @MethodsUnderTest({"boolean SetAdapter.contains(Object)"})
   public void testContains_thenReturnFalse() {
     // Arrange
@@ -83,7 +87,8 @@ public class SetAdapterDiffblueTest {
    * <p>Method under test: {@link SetAdapter#add(Object)}
    */
   @Test
-  @Category(MaintainedByDiffblue.class)
+  @Category(ContributionFromDiffblue.class)
+  @ManagedByDiffblue
   @MethodsUnderTest({"boolean SetAdapter.add(Object)"})
   public void testAdd_givenHashMap42Is42_thenReturnFalse() {
     // Arrange
@@ -109,7 +114,8 @@ public class SetAdapterDiffblueTest {
    * <p>Method under test: {@link SetAdapter#add(Object)}
    */
   @Test
-  @Category(MaintainedByDiffblue.class)
+  @Category(ContributionFromDiffblue.class)
+  @ManagedByDiffblue
   @MethodsUnderTest({"boolean SetAdapter.add(Object)"})
   public void testAdd_thenReturnTrue() {
     // Arrange
@@ -134,7 +140,8 @@ public class SetAdapterDiffblueTest {
    * <p>Method under test: {@link SetAdapter#remove(Object)}
    */
   @Test
-  @Category(MaintainedByDiffblue.class)
+  @Category(ContributionFromDiffblue.class)
+  @ManagedByDiffblue
   @MethodsUnderTest({"boolean SetAdapter.remove(Object)"})
   public void testRemove_givenHashMap42Is42_thenReturnTrue() {
     // Arrange
@@ -160,7 +167,8 @@ public class SetAdapterDiffblueTest {
    * <p>Method under test: {@link SetAdapter#remove(Object)}
    */
   @Test
-  @Category(MaintainedByDiffblue.class)
+  @Category(ContributionFromDiffblue.class)
+  @ManagedByDiffblue
   @MethodsUnderTest({"boolean SetAdapter.remove(Object)"})
   public void testRemove_thenReturnFalse() {
     // Arrange
@@ -177,7 +185,8 @@ public class SetAdapterDiffblueTest {
    * <p>Method under test: {@link SetAdapter#addAll(Collection)}
    */
   @Test
-  @Category(MaintainedByDiffblue.class)
+  @Category(ContributionFromDiffblue.class)
+  @ManagedByDiffblue
   @MethodsUnderTest({"boolean SetAdapter.addAll(Collection)"})
   public void testAddAll() {
     // Arrange
@@ -193,7 +202,8 @@ public class SetAdapterDiffblueTest {
    * <p>Method under test: {@link SetAdapter#removeAll(Collection)}
    */
   @Test
-  @Category(MaintainedByDiffblue.class)
+  @Category(ContributionFromDiffblue.class)
+  @ManagedByDiffblue
   @MethodsUnderTest({"boolean SetAdapter.removeAll(Collection)"})
   public void testRemoveAll() {
     // Arrange

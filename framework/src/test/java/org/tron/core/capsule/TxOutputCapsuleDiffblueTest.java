@@ -4,7 +4,8 @@ import static org.junit.Assert.assertArrayEquals;
 import static org.junit.Assert.assertEquals;
 import static org.junit.Assert.assertSame;
 import static org.junit.Assert.assertTrue;
-import com.diffblue.cover.annotations.MaintainedByDiffblue;
+import com.diffblue.cover.annotations.ContributionFromDiffblue;
+import com.diffblue.cover.annotations.ManagedByDiffblue;
 import com.diffblue.cover.annotations.MethodsUnderTest;
 import com.google.protobuf.UnknownFieldSet;
 import org.junit.Test;
@@ -23,7 +24,8 @@ public class TxOutputCapsuleDiffblueTest {
    * <p>Method under test: {@link TxOutputCapsule#TxOutputCapsule(long, String)}
    */
   @Test
-  @Category(MaintainedByDiffblue.class)
+  @Category(ContributionFromDiffblue.class)
+  @ManagedByDiffblue
   @MethodsUnderTest({"void TxOutputCapsule.<init>(long, String)"})
   public void testNewTxOutputCapsule_when0x() {
     // Arrange and Act
@@ -53,7 +55,8 @@ public class TxOutputCapsuleDiffblueTest {
    * <p>Method under test: {@link TxOutputCapsule#TxOutputCapsule(long, String)}
    */
   @Test
-  @Category(MaintainedByDiffblue.class)
+  @Category(ContributionFromDiffblue.class)
+  @ManagedByDiffblue
   @MethodsUnderTest({"void TxOutputCapsule.<init>(long, String)"})
   public void testNewTxOutputCapsule_whenNull() {
     // Arrange and Act
@@ -83,7 +86,8 @@ public class TxOutputCapsuleDiffblueTest {
    * <p>Method under test: {@link TxOutputCapsule#validate()}
    */
   @Test
-  @Category(MaintainedByDiffblue.class)
+  @Category(ContributionFromDiffblue.class)
+  @ManagedByDiffblue
   @MethodsUnderTest({"boolean TxOutputCapsule.validate()"})
   public void testValidate_thenReturnTrue() {
     // Arrange, Act and Assert
@@ -100,7 +104,8 @@ public class TxOutputCapsuleDiffblueTest {
    * <p>Method under test: {@link TxOutputCapsule#getData()}
    */
   @Test
-  @Category(MaintainedByDiffblue.class)
+  @Category(ContributionFromDiffblue.class)
+  @ManagedByDiffblue
   @MethodsUnderTest({"byte[] TxOutputCapsule.getData()"})
   public void testGetData_thenReturnEmptyArrayOfByte() {
     // Arrange, Act and Assert
@@ -117,7 +122,8 @@ public class TxOutputCapsuleDiffblueTest {
    * <p>Method under test: {@link TxOutputCapsule#getInstance()}
    */
   @Test
-  @Category(MaintainedByDiffblue.class)
+  @Category(ContributionFromDiffblue.class)
+  @ManagedByDiffblue
   @MethodsUnderTest({"TXOutput TxOutputCapsule.getInstance()"})
   public void testGetInstance_thenReturnInitializationErrorStringIsEmptyString() {
     // Arrange and Act

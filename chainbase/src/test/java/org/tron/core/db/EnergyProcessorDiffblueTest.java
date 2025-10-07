@@ -8,7 +8,8 @@ import static org.mockito.Mockito.doNothing;
 import static org.mockito.Mockito.mock;
 import static org.mockito.Mockito.verify;
 import static org.mockito.Mockito.when;
-import com.diffblue.cover.annotations.MaintainedByDiffblue;
+import com.diffblue.cover.annotations.ContributionFromDiffblue;
+import com.diffblue.cover.annotations.ManagedByDiffblue;
 import com.diffblue.cover.annotations.MethodsUnderTest;
 import org.junit.Test;
 import org.junit.experimental.categories.Category;
@@ -33,7 +34,8 @@ public class EnergyProcessorDiffblueTest {
    * AccountStore)}
    */
   @Test
-  @Category(MaintainedByDiffblue.class)
+  @Category(ContributionFromDiffblue.class)
+  @ManagedByDiffblue
   @MethodsUnderTest({"void EnergyProcessor.<init>(DynamicPropertiesStore, AccountStore)"})
   public void testNewEnergyProcessor() {
     // Arrange and Act
@@ -58,7 +60,8 @@ public class EnergyProcessorDiffblueTest {
    * <p>Method under test: {@link EnergyProcessor#getHeadSlot(DynamicPropertiesStore)}
    */
   @Test
-  @Category(MaintainedByDiffblue.class)
+  @Category(ContributionFromDiffblue.class)
+  @ManagedByDiffblue
   @MethodsUnderTest({"long EnergyProcessor.getHeadSlot(DynamicPropertiesStore)"})
   public void testGetHeadSlotWithDynamicPropertiesStore_thenThrowRuntimeException() {
     // Arrange
@@ -75,7 +78,8 @@ public class EnergyProcessorDiffblueTest {
    * <p>Method under test: {@link EnergyProcessor#updateAdaptiveTotalEnergyLimit()}
    */
   @Test
-  @Category(MaintainedByDiffblue.class)
+  @Category(ContributionFromDiffblue.class)
+  @ManagedByDiffblue
   @MethodsUnderTest({"void EnergyProcessor.updateAdaptiveTotalEnergyLimit()"})
   public void testUpdateAdaptiveTotalEnergyLimit() {
     // Arrange
@@ -107,7 +111,8 @@ public class EnergyProcessorDiffblueTest {
    * <p>Method under test: {@link EnergyProcessor#updateAdaptiveTotalEnergyLimit()}
    */
   @Test
-  @Category(MaintainedByDiffblue.class)
+  @Category(ContributionFromDiffblue.class)
+  @ManagedByDiffblue
   @MethodsUnderTest({"void EnergyProcessor.updateAdaptiveTotalEnergyLimit()"})
   public void testUpdateAdaptiveTotalEnergyLimit2() {
     // Arrange
@@ -143,7 +148,8 @@ public class EnergyProcessorDiffblueTest {
    * <p>Method under test: {@link EnergyProcessor#updateAdaptiveTotalEnergyLimit()}
    */
   @Test
-  @Category(MaintainedByDiffblue.class)
+  @Category(ContributionFromDiffblue.class)
+  @ManagedByDiffblue
   @MethodsUnderTest({"void EnergyProcessor.updateAdaptiveTotalEnergyLimit()"})
   public void testUpdateAdaptiveTotalEnergyLimit_thenThrowRuntimeException() {
     // Arrange
@@ -168,7 +174,8 @@ public class EnergyProcessorDiffblueTest {
    * <p>Method under test: {@link EnergyProcessor#consume(TransactionCapsule, TransactionTrace)}
    */
   @Test
-  @Category(MaintainedByDiffblue.class)
+  @Category(ContributionFromDiffblue.class)
+  @ManagedByDiffblue
   @MethodsUnderTest({"void EnergyProcessor.consume(TransactionCapsule, TransactionTrace)"})
   public void testConsume_whenNull_thenThrowRuntimeException()
       throws AccountResourceInsufficientException, ContractValidateException {
@@ -185,7 +192,8 @@ public class EnergyProcessorDiffblueTest {
    * <p>Method under test: {@link EnergyProcessor#calculateGlobalEnergyLimit(AccountCapsule)}
    */
   @Test
-  @Category(MaintainedByDiffblue.class)
+  @Category(ContributionFromDiffblue.class)
+  @ManagedByDiffblue
   @MethodsUnderTest({"long EnergyProcessor.calculateGlobalEnergyLimit(AccountCapsule)"})
   public void testCalculateGlobalEnergyLimit() {
     // Arrange
@@ -216,7 +224,8 @@ public class EnergyProcessorDiffblueTest {
    * <p>Method under test: {@link EnergyProcessor#calculateGlobalEnergyLimit(AccountCapsule)}
    */
   @Test
-  @Category(MaintainedByDiffblue.class)
+  @Category(ContributionFromDiffblue.class)
+  @ManagedByDiffblue
   @MethodsUnderTest({"long EnergyProcessor.calculateGlobalEnergyLimit(AccountCapsule)"})
   public void testCalculateGlobalEnergyLimit2() {
     // Arrange
@@ -242,7 +251,8 @@ public class EnergyProcessorDiffblueTest {
    * <p>Method under test: {@link EnergyProcessor#calculateGlobalEnergyLimit(AccountCapsule)}
    */
   @Test
-  @Category(MaintainedByDiffblue.class)
+  @Category(ContributionFromDiffblue.class)
+  @ManagedByDiffblue
   @MethodsUnderTest({"long EnergyProcessor.calculateGlobalEnergyLimit(AccountCapsule)"})
   public void testCalculateGlobalEnergyLimit3() {
     // Arrange
@@ -273,7 +283,8 @@ public class EnergyProcessorDiffblueTest {
    * <p>Method under test: {@link EnergyProcessor#calculateGlobalEnergyLimit(AccountCapsule)}
    */
   @Test
-  @Category(MaintainedByDiffblue.class)
+  @Category(ContributionFromDiffblue.class)
+  @ManagedByDiffblue
   @MethodsUnderTest({"long EnergyProcessor.calculateGlobalEnergyLimit(AccountCapsule)"})
   public void testCalculateGlobalEnergyLimit4() {
     // Arrange
@@ -303,7 +314,8 @@ public class EnergyProcessorDiffblueTest {
    * <p>Method under test: {@link EnergyProcessor#calculateGlobalEnergyLimit(AccountCapsule)}
    */
   @Test
-  @Category(MaintainedByDiffblue.class)
+  @Category(ContributionFromDiffblue.class)
+  @ManagedByDiffblue
   @MethodsUnderTest({"long EnergyProcessor.calculateGlobalEnergyLimit(AccountCapsule)"})
   public void testCalculateGlobalEnergyLimit5() {
     // Arrange
@@ -336,7 +348,8 @@ public class EnergyProcessorDiffblueTest {
    * <p>Method under test: {@link EnergyProcessor#calculateGlobalEnergyLimit(AccountCapsule)}
    */
   @Test
-  @Category(MaintainedByDiffblue.class)
+  @Category(ContributionFromDiffblue.class)
+  @ManagedByDiffblue
   @MethodsUnderTest({"long EnergyProcessor.calculateGlobalEnergyLimit(AccountCapsule)"})
   public void testCalculateGlobalEnergyLimit6() {
     // Arrange
@@ -373,7 +386,8 @@ public class EnergyProcessorDiffblueTest {
    * <p>Method under test: {@link EnergyProcessor#calculateGlobalEnergyLimit(AccountCapsule)}
    */
   @Test
-  @Category(MaintainedByDiffblue.class)
+  @Category(ContributionFromDiffblue.class)
+  @ManagedByDiffblue
   @MethodsUnderTest({"long EnergyProcessor.calculateGlobalEnergyLimit(AccountCapsule)"})
   public void testCalculateGlobalEnergyLimit_thenReturnOne() {
     // Arrange
@@ -410,7 +424,8 @@ public class EnergyProcessorDiffblueTest {
    * <p>Method under test: {@link EnergyProcessor#calculateGlobalEnergyLimit(AccountCapsule)}
    */
   @Test
-  @Category(MaintainedByDiffblue.class)
+  @Category(ContributionFromDiffblue.class)
+  @ManagedByDiffblue
   @MethodsUnderTest({"long EnergyProcessor.calculateGlobalEnergyLimit(AccountCapsule)"})
   public void testCalculateGlobalEnergyLimit_thenReturnZero() {
     // Arrange
@@ -437,7 +452,8 @@ public class EnergyProcessorDiffblueTest {
    * <p>Method under test: {@link EnergyProcessor#calculateGlobalEnergyLimitV2(long)}
    */
   @Test
-  @Category(MaintainedByDiffblue.class)
+  @Category(ContributionFromDiffblue.class)
+  @ManagedByDiffblue
   @MethodsUnderTest({"long EnergyProcessor.calculateGlobalEnergyLimitV2(long)"})
   public void testCalculateGlobalEnergyLimitV2() {
     // Arrange
@@ -467,7 +483,8 @@ public class EnergyProcessorDiffblueTest {
    * <p>Method under test: {@link EnergyProcessor#calculateGlobalEnergyLimitV2(long)}
    */
   @Test
-  @Category(MaintainedByDiffblue.class)
+  @Category(ContributionFromDiffblue.class)
+  @ManagedByDiffblue
   @MethodsUnderTest({"long EnergyProcessor.calculateGlobalEnergyLimitV2(long)"})
   public void testCalculateGlobalEnergyLimitV2_thenThrowRuntimeException() {
     // Arrange
@@ -487,7 +504,8 @@ public class EnergyProcessorDiffblueTest {
    * <p>Method under test: {@link EnergyProcessor#calculateGlobalEnergyLimitV2(long)}
    */
   @Test
-  @Category(MaintainedByDiffblue.class)
+  @Category(ContributionFromDiffblue.class)
+  @ManagedByDiffblue
   @MethodsUnderTest({"long EnergyProcessor.calculateGlobalEnergyLimitV2(long)"})
   public void testCalculateGlobalEnergyLimitV22() {
     // Arrange

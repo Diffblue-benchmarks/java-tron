@@ -6,7 +6,8 @@ import static org.mockito.ArgumentMatchers.isA;
 import static org.mockito.Mockito.mock;
 import static org.mockito.Mockito.verify;
 import static org.mockito.Mockito.when;
-import com.diffblue.cover.annotations.MaintainedByDiffblue;
+import com.diffblue.cover.annotations.ContributionFromDiffblue;
+import com.diffblue.cover.annotations.ManagedByDiffblue;
 import com.diffblue.cover.annotations.MethodsUnderTest;
 import org.junit.Test;
 import org.junit.experimental.categories.Category;
@@ -21,7 +22,8 @@ public class ApplicationFactoryDiffblueTest {
    * <p>Method under test: {@link ApplicationFactory#create(ApplicationContext)}
    */
   @Test
-  @Category(MaintainedByDiffblue.class)
+  @Category(ContributionFromDiffblue.class)
+  @ManagedByDiffblue
   @MethodsUnderTest({"Application ApplicationFactory.create(ApplicationContext)"})
   public void testCreate() throws BeansException {
     // Arrange
@@ -44,7 +46,8 @@ public class ApplicationFactoryDiffblueTest {
    * <p>Method under test: {@link ApplicationFactory#createApplication()}
    */
   @Test
-  @Category(MaintainedByDiffblue.class)
+  @Category(ContributionFromDiffblue.class)
+  @ManagedByDiffblue
   @MethodsUnderTest({"Application ApplicationFactory.createApplication()"})
   public void testCreateApplication() {
     // Arrange and Act

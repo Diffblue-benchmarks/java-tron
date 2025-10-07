@@ -3,7 +3,8 @@ package org.tron.core.zen.address;
 import static org.junit.Assert.assertArrayEquals;
 import static org.junit.Assert.assertEquals;
 import static org.junit.Assert.assertSame;
-import com.diffblue.cover.annotations.MaintainedByDiffblue;
+import com.diffblue.cover.annotations.ContributionFromDiffblue;
+import com.diffblue.cover.annotations.ManagedByDiffblue;
 import com.diffblue.cover.annotations.MethodsUnderTest;
 import java.io.UnsupportedEncodingException;
 import org.junit.Test;
@@ -21,7 +22,8 @@ public class SpendingKeyDiffblueTest {
    * <p>Method under test: {@link SpendingKey#decode(String)}
    */
   @Test
-  @Category(MaintainedByDiffblue.class)
+  @Category(ContributionFromDiffblue.class)
+  @ManagedByDiffblue
   @MethodsUnderTest({"SpendingKey SpendingKey.decode(String)"})
   public void testDecode_when0_thenReturnValueIsArrayOfByteWithZero() {
     // Arrange, Act and Assert
@@ -39,7 +41,8 @@ public class SpendingKeyDiffblueTest {
    * <p>Method under test: {@link SpendingKey#decode(String)}
    */
   @Test
-  @Category(MaintainedByDiffblue.class)
+  @Category(ContributionFromDiffblue.class)
+  @ManagedByDiffblue
   @MethodsUnderTest({"SpendingKey SpendingKey.decode(String)"})
   public void testDecode_when0x_thenReturnValueIsEmptyArrayOfByte() {
     // Arrange, Act and Assert
@@ -57,7 +60,8 @@ public class SpendingKeyDiffblueTest {
    * <p>Method under test: {@link SpendingKey#encode()}
    */
   @Test
-  @Category(MaintainedByDiffblue.class)
+  @Category(ContributionFromDiffblue.class)
+  @ManagedByDiffblue
   @MethodsUnderTest({"String SpendingKey.encode()"})
   public void testEncode_givenSpendingKeyWithValueIsNull_thenReturnEmptyString() {
     // Arrange, Act and Assert
@@ -74,7 +78,8 @@ public class SpendingKeyDiffblueTest {
    * <p>Method under test: {@link SpendingKey#encode()}
    */
   @Test
-  @Category(MaintainedByDiffblue.class)
+  @Category(ContributionFromDiffblue.class)
+  @ManagedByDiffblue
   @MethodsUnderTest({"String SpendingKey.encode()"})
   public void testEncode_thenReturn4158415841584158() throws UnsupportedEncodingException {
     // Arrange, Act and Assert
@@ -93,7 +98,8 @@ public class SpendingKeyDiffblueTest {
    * </ul>
    */
   @Test
-  @Category(MaintainedByDiffblue.class)
+  @Category(ContributionFromDiffblue.class)
+  @ManagedByDiffblue
   @MethodsUnderTest({
     "void SpendingKey.<init>(byte[])",
     "byte[] SpendingKey.getValue()",

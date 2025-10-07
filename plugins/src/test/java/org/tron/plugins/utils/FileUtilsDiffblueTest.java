@@ -3,7 +3,8 @@ package org.tron.plugins.utils;
 import static org.junit.Assert.assertEquals;
 import static org.junit.Assert.assertFalse;
 import static org.junit.Assert.assertTrue;
-import com.diffblue.cover.annotations.MaintainedByDiffblue;
+import com.diffblue.cover.annotations.ContributionFromDiffblue;
+import com.diffblue.cover.annotations.ManagedByDiffblue;
 import com.diffblue.cover.annotations.MethodsUnderTest;
 import java.io.File;
 import java.io.IOException;
@@ -23,7 +24,8 @@ public class FileUtilsDiffblueTest {
    * <p>Method under test: {@link FileUtils#readProperty(String, String)}
    */
   @Test
-  @Category(MaintainedByDiffblue.class)
+  @Category(ContributionFromDiffblue.class)
+  @ManagedByDiffblue
   @MethodsUnderTest({"String FileUtils.readProperty(String, String)"})
   public void testReadProperty_whenEmptyString_thenReturnEmptyString() {
     // Arrange, Act and Assert
@@ -41,7 +43,8 @@ public class FileUtilsDiffblueTest {
    * <p>Method under test: {@link FileUtils#readProperty(String, String)}
    */
   @Test
-  @Category(MaintainedByDiffblue.class)
+  @Category(ContributionFromDiffblue.class)
+  @ManagedByDiffblue
   @MethodsUnderTest({"String FileUtils.readProperty(String, String)"})
   public void testReadProperty_whenNull_thenReturnEmptyString() {
     // Arrange, Act and Assert
@@ -59,7 +62,8 @@ public class FileUtilsDiffblueTest {
    * <p>Method under test: {@link FileUtils#createFileIfNotExists(String)}
    */
   @Test
-  @Category(MaintainedByDiffblue.class)
+  @Category(ContributionFromDiffblue.class)
+  @ManagedByDiffblue
   @MethodsUnderTest({"boolean FileUtils.createFileIfNotExists(String)"})
   public void testCreateFileIfNotExists_when42_thenReturnTrue() {
     // Arrange, Act and Assert
@@ -77,7 +81,8 @@ public class FileUtilsDiffblueTest {
    * <p>Method under test: {@link FileUtils#createDirIfNotExists(String)}
    */
   @Test
-  @Category(MaintainedByDiffblue.class)
+  @Category(ContributionFromDiffblue.class)
+  @ManagedByDiffblue
   @MethodsUnderTest({"boolean FileUtils.createDirIfNotExists(String)"})
   public void testCreateDirIfNotExists_when42_thenReturnTrue() {
     // Arrange, Act and Assert
@@ -95,7 +100,8 @@ public class FileUtilsDiffblueTest {
    * <p>Method under test: {@link FileUtils#isExists(String)}
    */
   @Test
-  @Category(MaintainedByDiffblue.class)
+  @Category(ContributionFromDiffblue.class)
+  @ManagedByDiffblue
   @MethodsUnderTest({"boolean FileUtils.isExists(String)"})
   public void testIsExists_when42_thenReturnTrue() {
     // Arrange, Act and Assert
@@ -113,7 +119,8 @@ public class FileUtilsDiffblueTest {
    * <p>Method under test: {@link FileUtils#isExists(String)}
    */
   @Test
-  @Category(MaintainedByDiffblue.class)
+  @Category(ContributionFromDiffblue.class)
+  @ManagedByDiffblue
   @MethodsUnderTest({"boolean FileUtils.isExists(String)"})
   public void testIsExists_whenPath_thenReturnFalse() {
     // Arrange, Act and Assert
@@ -131,7 +138,8 @@ public class FileUtilsDiffblueTest {
    * <p>Method under test: {@link FileUtils#isSymbolicLink(File)}
    */
   @Test
-  @Category(MaintainedByDiffblue.class)
+  @Category(ContributionFromDiffblue.class)
+  @ManagedByDiffblue
   @MethodsUnderTest({"boolean FileUtils.isSymbolicLink(File)"})
   public void testIsSymbolicLink_whenPropertyIsJavaIoTmpdirIsTestTxtToFile_thenReturnFalse()
       throws IOException {

@@ -1,7 +1,8 @@
 package org.tron.core.services.ratelimiter.adapter;
 
 import static org.junit.Assert.assertTrue;
-import com.diffblue.cover.annotations.MaintainedByDiffblue;
+import com.diffblue.cover.annotations.ContributionFromDiffblue;
+import com.diffblue.cover.annotations.ManagedByDiffblue;
 import com.diffblue.cover.annotations.MethodsUnderTest;
 import org.junit.Test;
 import org.junit.experimental.categories.Category;
@@ -18,7 +19,8 @@ public class GlobalPreemptibleAdapterDiffblueTest {
    * <p>Method under test: {@link GlobalPreemptibleAdapter#GlobalPreemptibleAdapter(String)}
    */
   @Test
-  @Category(MaintainedByDiffblue.class)
+  @Category(ContributionFromDiffblue.class)
+  @ManagedByDiffblue
   @MethodsUnderTest({"void GlobalPreemptibleAdapter.<init>(String)"})
   public void testNewGlobalPreemptibleAdapter_whenEmptyString() {
     // Arrange, Act and Assert
@@ -35,7 +37,8 @@ public class GlobalPreemptibleAdapterDiffblueTest {
    * <p>Method under test: {@link GlobalPreemptibleAdapter#GlobalPreemptibleAdapter(String)}
    */
   @Test
-  @Category(MaintainedByDiffblue.class)
+  @Category(ContributionFromDiffblue.class)
+  @ManagedByDiffblue
   @MethodsUnderTest({"void GlobalPreemptibleAdapter.<init>(String)"})
   public void testNewGlobalPreemptibleAdapter_whenParamString() {
     // Arrange, Act and Assert
@@ -52,7 +55,8 @@ public class GlobalPreemptibleAdapterDiffblueTest {
    * <p>Method under test: {@link GlobalPreemptibleAdapter#GlobalPreemptibleAdapter(String)}
    */
   @Test
-  @Category(MaintainedByDiffblue.class)
+  @Category(ContributionFromDiffblue.class)
+  @ManagedByDiffblue
   @MethodsUnderTest({"void GlobalPreemptibleAdapter.<init>(String)"})
   public void testNewGlobalPreemptibleAdapter_whenUuuUuu() {
     // Arrange, Act and Assert
@@ -65,7 +69,8 @@ public class GlobalPreemptibleAdapterDiffblueTest {
    * <p>Method under test: {@link GlobalPreemptibleAdapter#acquire(RuntimeData)}
    */
   @Test
-  @Category(MaintainedByDiffblue.class)
+  @Category(ContributionFromDiffblue.class)
+  @ManagedByDiffblue
   @MethodsUnderTest({"boolean GlobalPreemptibleAdapter.acquire(RuntimeData)"})
   public void testAcquire() {
     // Arrange

@@ -6,7 +6,8 @@ import static org.junit.Assert.assertFalse;
 import static org.junit.Assert.assertNull;
 import static org.junit.Assert.assertSame;
 import static org.junit.Assert.assertTrue;
-import com.diffblue.cover.annotations.MaintainedByDiffblue;
+import com.diffblue.cover.annotations.ContributionFromDiffblue;
+import com.diffblue.cover.annotations.ManagedByDiffblue;
 import com.diffblue.cover.annotations.MethodsUnderTest;
 import java.io.UnsupportedEncodingException;
 import java.math.BigInteger;
@@ -48,7 +49,8 @@ public class ProgramDiffblueTest {
    * <p>Method under test: {@link AssetIssueException#AssetIssueException(String, Object[])}
    */
   @Test
-  @Category(MaintainedByDiffblue.class)
+  @Category(ContributionFromDiffblue.class)
+  @ManagedByDiffblue
   @MethodsUnderTest({"void AssetIssueException.<init>(String, Object[])"})
   public void testAssetIssueExceptionNewAssetIssueException() {
     // Arrange and Act
@@ -70,7 +72,8 @@ public class ProgramDiffblueTest {
    * Object[])}
    */
   @Test
-  @Category(MaintainedByDiffblue.class)
+  @Category(ContributionFromDiffblue.class)
+  @ManagedByDiffblue
   @MethodsUnderTest({"void BadJumpDestinationException.<init>(String, Object[])"})
   public void testBadJumpDestinationExceptionNewBadJumpDestinationException() {
     // Arrange and Act
@@ -96,7 +99,8 @@ public class ProgramDiffblueTest {
    * </ul>
    */
   @Test
-  @Category(MaintainedByDiffblue.class)
+  @Category(ContributionFromDiffblue.class)
+  @ManagedByDiffblue
   @MethodsUnderTest({
     "void ByteCodeIterator.<init>(byte[])",
     "int ByteCodeIterator.getPC()",
@@ -118,7 +122,8 @@ public class ProgramDiffblueTest {
    * <p>Method under test: {@link BytecodeExecutionException#BytecodeExecutionException(String)}
    */
   @Test
-  @Category(MaintainedByDiffblue.class)
+  @Category(ContributionFromDiffblue.class)
+  @ManagedByDiffblue
   @MethodsUnderTest({"void BytecodeExecutionException.<init>(String)"})
   public void testBytecodeExecutionExceptionNewBytecodeExecutionException() {
     // Arrange and Act
@@ -139,7 +144,8 @@ public class ProgramDiffblueTest {
    * Object[])}
    */
   @Test
-  @Category(MaintainedByDiffblue.class)
+  @Category(ContributionFromDiffblue.class)
+  @ManagedByDiffblue
   @MethodsUnderTest({"void BytecodeExecutionException.<init>(String, Object[])"})
   public void testBytecodeExecutionExceptionNewBytecodeExecutionException2() {
     // Arrange and Act
@@ -159,7 +165,8 @@ public class ProgramDiffblueTest {
    * <p>Method under test: {@link Exception#alreadyTimeOut()}
    */
   @Test
-  @Category(MaintainedByDiffblue.class)
+  @Category(ContributionFromDiffblue.class)
+  @ManagedByDiffblue
   @MethodsUnderTest({"OutOfTimeException Exception.alreadyTimeOut()"})
   public void testExceptionAlreadyTimeOut() {
     // Arrange and Act
@@ -178,7 +185,8 @@ public class ProgramDiffblueTest {
    * <p>Method under test: {@link Exception#badJumpDestination(int)}
    */
   @Test
-  @Category(MaintainedByDiffblue.class)
+  @Category(ContributionFromDiffblue.class)
+  @ManagedByDiffblue
   @MethodsUnderTest({"BadJumpDestinationException Exception.badJumpDestination(int)"})
   public void testExceptionBadJumpDestination() {
     // Arrange and Act
@@ -200,7 +208,8 @@ public class ProgramDiffblueTest {
    * <p>Method under test: {@link Exception#contractExecuteException(TronException)}
    */
   @Test
-  @Category(MaintainedByDiffblue.class)
+  @Category(ContributionFromDiffblue.class)
+  @ManagedByDiffblue
   @MethodsUnderTest({
     "PrecompiledContractException Exception.contractExecuteException(TronException)"
   })
@@ -223,7 +232,8 @@ public class ProgramDiffblueTest {
    * <p>Method under test: {@link Exception#contractValidateException(TronException)}
    */
   @Test
-  @Category(MaintainedByDiffblue.class)
+  @Category(ContributionFromDiffblue.class)
+  @ManagedByDiffblue
   @MethodsUnderTest({
     "PrecompiledContractException Exception.contractValidateException(TronException)"
   })
@@ -246,7 +256,8 @@ public class ProgramDiffblueTest {
    * <p>Method under test: {@link Exception#energyOverflow(BigInteger, BigInteger)}
    */
   @Test
-  @Category(MaintainedByDiffblue.class)
+  @Category(ContributionFromDiffblue.class)
+  @ManagedByDiffblue
   @MethodsUnderTest({"OutOfEnergyException Exception.energyOverflow(BigInteger, BigInteger)"})
   public void testExceptionEnergyOverflow() {
     // Arrange and Act
@@ -270,7 +281,8 @@ public class ProgramDiffblueTest {
    * <p>Method under test: {@link Exception#invalidCodeException()}
    */
   @Test
-  @Category(MaintainedByDiffblue.class)
+  @Category(ContributionFromDiffblue.class)
+  @ManagedByDiffblue
   @MethodsUnderTest({"InvalidCodeException Exception.invalidCodeException()"})
   public void testExceptionInvalidCodeException() {
     // Arrange and Act
@@ -292,7 +304,8 @@ public class ProgramDiffblueTest {
    * <p>Method under test: {@link Exception#invalidOpCode(byte[])}
    */
   @Test
-  @Category(MaintainedByDiffblue.class)
+  @Category(ContributionFromDiffblue.class)
+  @ManagedByDiffblue
   @MethodsUnderTest({"IllegalOperationException Exception.invalidOpCode(byte[])"})
   public void testExceptionInvalidOpCode() throws UnsupportedEncodingException {
     // Arrange and Act
@@ -313,7 +326,8 @@ public class ProgramDiffblueTest {
    * <p>Method under test: {@link Exception#memoryOverflow(int)}
    */
   @Test
-  @Category(MaintainedByDiffblue.class)
+  @Category(ContributionFromDiffblue.class)
+  @ManagedByDiffblue
   @MethodsUnderTest({"OutOfMemoryException Exception.memoryOverflow(int)"})
   public void testExceptionMemoryOverflow() {
     // Arrange and Act
@@ -335,7 +349,8 @@ public class ProgramDiffblueTest {
    * <p>Method under test: {@link Exception#notEnoughSpendEnergy(String, long, long)}
    */
   @Test
-  @Category(MaintainedByDiffblue.class)
+  @Category(ContributionFromDiffblue.class)
+  @ManagedByDiffblue
   @MethodsUnderTest({"OutOfEnergyException Exception.notEnoughSpendEnergy(String, long, long)"})
   public void testExceptionNotEnoughSpendEnergy() {
     // Arrange and Act
@@ -359,7 +374,8 @@ public class ProgramDiffblueTest {
    * <p>Method under test: {@link Exception#notEnoughStorage()}
    */
   @Test
-  @Category(MaintainedByDiffblue.class)
+  @Category(ContributionFromDiffblue.class)
+  @ManagedByDiffblue
   @MethodsUnderTest({"OutOfStorageException Exception.notEnoughStorage()"})
   public void testExceptionNotEnoughStorage() {
     // Arrange and Act
@@ -379,7 +395,8 @@ public class ProgramDiffblueTest {
    * <p>Method under test: {@link Exception#notEnoughTime(String)}
    */
   @Test
-  @Category(MaintainedByDiffblue.class)
+  @Category(ContributionFromDiffblue.class)
+  @ManagedByDiffblue
   @MethodsUnderTest({"OutOfTimeException Exception.notEnoughTime(String)"})
   public void testExceptionNotEnoughTime() {
     // Arrange and Act
@@ -401,7 +418,8 @@ public class ProgramDiffblueTest {
    * <p>Method under test: {@link Exception#tooSmallStack(int, int)}
    */
   @Test
-  @Category(MaintainedByDiffblue.class)
+  @Category(ContributionFromDiffblue.class)
+  @ManagedByDiffblue
   @MethodsUnderTest({"StackTooSmallException Exception.tooSmallStack(int, int)"})
   public void testExceptionTooSmallStack() {
     // Arrange and Act
@@ -423,7 +441,8 @@ public class ProgramDiffblueTest {
    * Object[])}
    */
   @Test
-  @Category(MaintainedByDiffblue.class)
+  @Category(ContributionFromDiffblue.class)
+  @ManagedByDiffblue
   @MethodsUnderTest({"void IllegalOperationException.<init>(String, Object[])"})
   public void testIllegalOperationExceptionNewIllegalOperationException() {
     // Arrange and Act
@@ -443,7 +462,8 @@ public class ProgramDiffblueTest {
    * <p>Method under test: {@link InvalidCodeException#InvalidCodeException(String)}
    */
   @Test
-  @Category(MaintainedByDiffblue.class)
+  @Category(ContributionFromDiffblue.class)
+  @ManagedByDiffblue
   @MethodsUnderTest({"void InvalidCodeException.<init>(String)"})
   public void testInvalidCodeExceptionNewInvalidCodeException() {
     // Arrange and Act
@@ -461,7 +481,8 @@ public class ProgramDiffblueTest {
    * <p>Method under test: default or parameterless constructor of {@link JVMStackOverFlowException}
    */
   @Test
-  @Category(MaintainedByDiffblue.class)
+  @Category(ContributionFromDiffblue.class)
+  @ManagedByDiffblue
   @MethodsUnderTest({"void JVMStackOverFlowException.<init>()"})
   public void testJVMStackOverFlowExceptionNewJVMStackOverFlowException() {
     // Arrange and Act
@@ -486,7 +507,8 @@ public class ProgramDiffblueTest {
    * InternalTransaction)}
    */
   @Test
-  @Category(MaintainedByDiffblue.class)
+  @Category(ContributionFromDiffblue.class)
+  @ManagedByDiffblue
   @MethodsUnderTest({"void Program.<init>(byte[], byte[], ProgramInvoke, InternalTransaction)"})
   public void testNewProgram_thenContractStateReturnContractState()
       throws UnsupportedEncodingException {
@@ -560,7 +582,8 @@ public class ProgramDiffblueTest {
    * <p>Method under test: {@link Program#formatBinData(byte[], int)}
    */
   @Test
-  @Category(MaintainedByDiffblue.class)
+  @Category(ContributionFromDiffblue.class)
+  @ManagedByDiffblue
   @MethodsUnderTest({"String Program.formatBinData(byte[], int)"})
   public void testFormatBinData_whenMinusSeventeen_thenReturnFfffffef4158415841584158()
       throws UnsupportedEncodingException {
@@ -580,7 +603,8 @@ public class ProgramDiffblueTest {
    * <p>Method under test: {@link Program#formatBinData(byte[], int)}
    */
   @Test
-  @Category(MaintainedByDiffblue.class)
+  @Category(ContributionFromDiffblue.class)
+  @ManagedByDiffblue
   @MethodsUnderTest({"String Program.formatBinData(byte[], int)"})
   public void testFormatBinData_whenOne_thenReturn14158415841584158()
       throws UnsupportedEncodingException {
@@ -595,7 +619,8 @@ public class ProgramDiffblueTest {
    * <p>Method under test: {@link OutOfEnergyException#OutOfEnergyException(String, Object[])}
    */
   @Test
-  @Category(MaintainedByDiffblue.class)
+  @Category(ContributionFromDiffblue.class)
+  @ManagedByDiffblue
   @MethodsUnderTest({"void OutOfEnergyException.<init>(String, Object[])"})
   public void testOutOfEnergyExceptionNewOutOfEnergyException() {
     // Arrange and Act
@@ -615,7 +640,8 @@ public class ProgramDiffblueTest {
    * <p>Method under test: {@link OutOfMemoryException#OutOfMemoryException(String, Object[])}
    */
   @Test
-  @Category(MaintainedByDiffblue.class)
+  @Category(ContributionFromDiffblue.class)
+  @ManagedByDiffblue
   @MethodsUnderTest({"void OutOfMemoryException.<init>(String, Object[])"})
   public void testOutOfMemoryExceptionNewOutOfMemoryException() {
     // Arrange and Act
@@ -636,7 +662,8 @@ public class ProgramDiffblueTest {
    * <p>Method under test: {@link OutOfStorageException#OutOfStorageException(String, Object[])}
    */
   @Test
-  @Category(MaintainedByDiffblue.class)
+  @Category(ContributionFromDiffblue.class)
+  @ManagedByDiffblue
   @MethodsUnderTest({"void OutOfStorageException.<init>(String, Object[])"})
   public void testOutOfStorageExceptionNewOutOfStorageException() {
     // Arrange and Act
@@ -656,7 +683,8 @@ public class ProgramDiffblueTest {
    * <p>Method under test: {@link OutOfTimeException#OutOfTimeException(String, Object[])}
    */
   @Test
-  @Category(MaintainedByDiffblue.class)
+  @Category(ContributionFromDiffblue.class)
+  @ManagedByDiffblue
   @MethodsUnderTest({"void OutOfTimeException.<init>(String, Object[])"})
   public void testOutOfTimeExceptionNewOutOfTimeException() {
     // Arrange and Act
@@ -678,7 +706,8 @@ public class ProgramDiffblueTest {
    * Object[])}
    */
   @Test
-  @Category(MaintainedByDiffblue.class)
+  @Category(ContributionFromDiffblue.class)
+  @ManagedByDiffblue
   @MethodsUnderTest({"void PrecompiledContractException.<init>(String, Object[])"})
   public void testPrecompiledContractExceptionNewPrecompiledContractException() {
     // Arrange and Act
@@ -702,7 +731,8 @@ public class ProgramDiffblueTest {
    * long)}
    */
   @Test
-  @Category(MaintainedByDiffblue.class)
+  @Category(ContributionFromDiffblue.class)
+  @ManagedByDiffblue
   @MethodsUnderTest({"void ReturnDataCopyIllegalBoundsException.<init>(DataWord, DataWord, long)"})
   public void testReturnDataCopyIllegalBoundsExceptionNewReturnDataCopyIllegalBoundsException() {
     // Arrange
@@ -733,7 +763,8 @@ public class ProgramDiffblueTest {
    * <p>Method under test: {@link Program#setRootTransactionId(byte[])}
    */
   @Test
-  @Category(MaintainedByDiffblue.class)
+  @Category(ContributionFromDiffblue.class)
+  @ManagedByDiffblue
   @MethodsUnderTest({"void Program.setRootTransactionId(byte[])"})
   public void testSetRootTransactionId() throws UnsupportedEncodingException {
     // Arrange
@@ -779,7 +810,8 @@ public class ProgramDiffblueTest {
    * <p>Method under test: {@link Program#getCallDeep()}
    */
   @Test
-  @Category(MaintainedByDiffblue.class)
+  @Category(ContributionFromDiffblue.class)
+  @ManagedByDiffblue
   @MethodsUnderTest({"int Program.getCallDeep()"})
   public void testGetCallDeep_thenReturnZero() throws UnsupportedEncodingException {
     // Arrange
@@ -822,7 +854,8 @@ public class ProgramDiffblueTest {
    * <p>Method under test: {@link Program#getStorageDiff()}
    */
   @Test
-  @Category(MaintainedByDiffblue.class)
+  @Category(ContributionFromDiffblue.class)
+  @ManagedByDiffblue
   @MethodsUnderTest({"java.util.Map Program.getStorageDiff()"})
   public void testGetStorageDiff_thenReturnEmpty() throws UnsupportedEncodingException {
     // Arrange
@@ -865,7 +898,8 @@ public class ProgramDiffblueTest {
    * <p>Method under test: {@link Program#getOp(int)}
    */
   @Test
-  @Category(MaintainedByDiffblue.class)
+  @Category(ContributionFromDiffblue.class)
+  @ManagedByDiffblue
   @MethodsUnderTest({"byte Program.getOp(int)"})
   public void testGetOp_thenReturnX() throws UnsupportedEncodingException {
     // Arrange
@@ -908,7 +942,8 @@ public class ProgramDiffblueTest {
    * <p>Method under test: {@link Program#getCurrentOp()}
    */
   @Test
-  @Category(MaintainedByDiffblue.class)
+  @Category(ContributionFromDiffblue.class)
+  @ManagedByDiffblue
   @MethodsUnderTest({"byte Program.getCurrentOp()"})
   public void testGetCurrentOp_thenReturnA() throws UnsupportedEncodingException {
     // Arrange
@@ -951,7 +986,8 @@ public class ProgramDiffblueTest {
    * <p>Method under test: {@link Program#getCurrentOpIntValue()}
    */
   @Test
-  @Category(MaintainedByDiffblue.class)
+  @Category(ContributionFromDiffblue.class)
+  @ManagedByDiffblue
   @MethodsUnderTest({"int Program.getCurrentOpIntValue()"})
   public void testGetCurrentOpIntValue_thenReturnSixtyFive() throws UnsupportedEncodingException {
     // Arrange
@@ -990,7 +1026,8 @@ public class ProgramDiffblueTest {
    * <p>Method under test: {@link Program#stackPush(byte[])}
    */
   @Test
-  @Category(MaintainedByDiffblue.class)
+  @Category(ContributionFromDiffblue.class)
+  @ManagedByDiffblue
   @MethodsUnderTest({"void Program.stackPush(byte[])"})
   public void testStackPushWithData() throws UnsupportedEncodingException {
     // Arrange
@@ -1063,7 +1100,8 @@ public class ProgramDiffblueTest {
    * <p>Method under test: {@link Program#stackPush(DataWord)}
    */
   @Test
-  @Category(MaintainedByDiffblue.class)
+  @Category(ContributionFromDiffblue.class)
+  @ManagedByDiffblue
   @MethodsUnderTest({"void Program.stackPush(DataWord)"})
   public void testStackPushWithStackWord() throws UnsupportedEncodingException {
     // Arrange
@@ -1108,7 +1146,8 @@ public class ProgramDiffblueTest {
    * <p>Method under test: {@link Program#stackPushZero()}
    */
   @Test
-  @Category(MaintainedByDiffblue.class)
+  @Category(ContributionFromDiffblue.class)
+  @ManagedByDiffblue
   @MethodsUnderTest({"void Program.stackPushZero()"})
   public void testStackPushZero() throws UnsupportedEncodingException {
     // Arrange
@@ -1150,7 +1189,8 @@ public class ProgramDiffblueTest {
    * <p>Method under test: {@link Program#stackPushOne()}
    */
   @Test
-  @Category(MaintainedByDiffblue.class)
+  @Category(ContributionFromDiffblue.class)
+  @ManagedByDiffblue
   @MethodsUnderTest({"void Program.stackPushOne()"})
   public void testStackPushOne() throws UnsupportedEncodingException {
     // Arrange
@@ -1221,7 +1261,8 @@ public class ProgramDiffblueTest {
    * <p>Method under test: {@link Program#setPC(int)}
    */
   @Test
-  @Category(MaintainedByDiffblue.class)
+  @Category(ContributionFromDiffblue.class)
+  @ManagedByDiffblue
   @MethodsUnderTest({"void Program.setPC(int)"})
   public void testSetPCWithInt() throws UnsupportedEncodingException {
     // Arrange
@@ -1265,7 +1306,8 @@ public class ProgramDiffblueTest {
    * <p>Method under test: {@link Program#setHReturn(byte[])}
    */
   @Test
-  @Category(MaintainedByDiffblue.class)
+  @Category(ContributionFromDiffblue.class)
+  @ManagedByDiffblue
   @MethodsUnderTest({"void Program.setHReturn(byte[])"})
   public void testSetHReturn() throws UnsupportedEncodingException {
     // Arrange
@@ -1309,7 +1351,8 @@ public class ProgramDiffblueTest {
    * <p>Method under test: {@link StackTooSmallException#StackTooSmallException(String, Object[])}
    */
   @Test
-  @Category(MaintainedByDiffblue.class)
+  @Category(ContributionFromDiffblue.class)
+  @ManagedByDiffblue
   @MethodsUnderTest({"void StackTooSmallException.<init>(String, Object[])"})
   public void testStackTooSmallExceptionNewStackTooSmallException() {
     // Arrange and Act
@@ -1331,7 +1374,8 @@ public class ProgramDiffblueTest {
    * StaticCallModificationException}
    */
   @Test
-  @Category(MaintainedByDiffblue.class)
+  @Category(ContributionFromDiffblue.class)
+  @ManagedByDiffblue
   @MethodsUnderTest({"void StaticCallModificationException.<init>()"})
   public void testStaticCallModificationExceptionNewStaticCallModificationException() {
     // Arrange and Act
@@ -1352,7 +1396,8 @@ public class ProgramDiffblueTest {
    * <p>Method under test: {@link Program#step()}
    */
   @Test
-  @Category(MaintainedByDiffblue.class)
+  @Category(ContributionFromDiffblue.class)
+  @ManagedByDiffblue
   @MethodsUnderTest({"void Program.step()"})
   public void testStep() throws UnsupportedEncodingException {
     // Arrange
@@ -1396,7 +1441,8 @@ public class ProgramDiffblueTest {
    * <p>Method under test: {@link Program#sweep(int)}
    */
   @Test
-  @Category(MaintainedByDiffblue.class)
+  @Category(ContributionFromDiffblue.class)
+  @ManagedByDiffblue
   @MethodsUnderTest({"byte[] Program.sweep(int)"})
   public void testSweep() throws UnsupportedEncodingException {
     // Arrange
@@ -1445,7 +1491,8 @@ public class ProgramDiffblueTest {
    * <p>Method under test: {@link Program#getMemSize()}
    */
   @Test
-  @Category(MaintainedByDiffblue.class)
+  @Category(ContributionFromDiffblue.class)
+  @ManagedByDiffblue
   @MethodsUnderTest({"int Program.getMemSize()"})
   public void testGetMemSize_thenReturnZero() throws UnsupportedEncodingException {
     // Arrange
@@ -1485,7 +1532,8 @@ public class ProgramDiffblueTest {
    * <p>Method under test: {@link Program#memorySave(int, int, byte[])}
    */
   @Test
-  @Category(MaintainedByDiffblue.class)
+  @Category(ContributionFromDiffblue.class)
+  @ManagedByDiffblue
   @MethodsUnderTest({"void Program.memorySave(int, int, byte[])"})
   public void testMemorySaveWithAddrAllocSizeValue() throws UnsupportedEncodingException {
     // Arrange
@@ -1534,7 +1582,8 @@ public class ProgramDiffblueTest {
    * <p>Method under test: {@link Program#memorySave(DataWord, DataWord)}
    */
   @Test
-  @Category(MaintainedByDiffblue.class)
+  @Category(ContributionFromDiffblue.class)
+  @ManagedByDiffblue
   @MethodsUnderTest({"void Program.memorySave(DataWord, DataWord)"})
   public void testMemorySaveWithAddrBValue() throws UnsupportedEncodingException {
     // Arrange
@@ -1584,7 +1633,8 @@ public class ProgramDiffblueTest {
    * <p>Method under test: {@link Program#memorySave(int, byte[])}
    */
   @Test
-  @Category(MaintainedByDiffblue.class)
+  @Category(ContributionFromDiffblue.class)
+  @ManagedByDiffblue
   @MethodsUnderTest({"void Program.memorySave(int, byte[])"})
   public void testMemorySaveWithAddrValue() throws UnsupportedEncodingException {
     // Arrange
@@ -1637,7 +1687,8 @@ public class ProgramDiffblueTest {
    * <p>Method under test: {@link Program#memoryLoad(DataWord)}
    */
   @Test
-  @Category(MaintainedByDiffblue.class)
+  @Category(ContributionFromDiffblue.class)
+  @ManagedByDiffblue
   @MethodsUnderTest({"DataWord Program.memoryLoad(DataWord)"})
   public void testMemoryLoadWithAddr_thenReturnZero() throws UnsupportedEncodingException {
     // Arrange
@@ -1687,7 +1738,8 @@ public class ProgramDiffblueTest {
    * <p>Method under test: {@link Program#memoryLoad(int)}
    */
   @Test
-  @Category(MaintainedByDiffblue.class)
+  @Category(ContributionFromDiffblue.class)
+  @ManagedByDiffblue
   @MethodsUnderTest({"DataWord Program.memoryLoad(int)"})
   public void testMemoryLoadWithAddress() throws UnsupportedEncodingException {
     // Arrange
@@ -1740,7 +1792,8 @@ public class ProgramDiffblueTest {
    * <p>Method under test: {@link Program#memoryChunk(int, int)}
    */
   @Test
-  @Category(MaintainedByDiffblue.class)
+  @Category(ContributionFromDiffblue.class)
+  @ManagedByDiffblue
   @MethodsUnderTest({"byte[] Program.memoryChunk(int, int)"})
   public void testMemoryChunk() throws UnsupportedEncodingException {
     // Arrange
@@ -1790,7 +1843,8 @@ public class ProgramDiffblueTest {
    * <p>Method under test: {@link Program#allocateMemory(int, int)}
    */
   @Test
-  @Category(MaintainedByDiffblue.class)
+  @Category(ContributionFromDiffblue.class)
+  @ManagedByDiffblue
   @MethodsUnderTest({"void Program.allocateMemory(int, int)"})
   public void testAllocateMemory() throws UnsupportedEncodingException {
     // Arrange
@@ -1839,7 +1893,8 @@ public class ProgramDiffblueTest {
    * <p>Method under test: {@link Program#spendEnergy(long, String)}
    */
   @Test
-  @Category(MaintainedByDiffblue.class)
+  @Category(ContributionFromDiffblue.class)
+  @ManagedByDiffblue
   @MethodsUnderTest({"void Program.spendEnergy(long, String)"})
   public void testSpendEnergy() throws UnsupportedEncodingException {
     // Arrange
@@ -1906,7 +1961,8 @@ public class ProgramDiffblueTest {
    * <p>Method under test: {@link Program#spendEnergyWithPenalty(long, long, String)}
    */
   @Test
-  @Category(MaintainedByDiffblue.class)
+  @Category(ContributionFromDiffblue.class)
+  @ManagedByDiffblue
   @MethodsUnderTest({"void Program.spendEnergyWithPenalty(long, long, String)"})
   public void testSpendEnergyWithPenalty() throws UnsupportedEncodingException {
     // Arrange
@@ -1975,7 +2031,8 @@ public class ProgramDiffblueTest {
    * <p>Method under test: {@link Program#spendAllEnergy()}
    */
   @Test
-  @Category(MaintainedByDiffblue.class)
+  @Category(ContributionFromDiffblue.class)
+  @ManagedByDiffblue
   @MethodsUnderTest({"void Program.spendAllEnergy()"})
   public void testSpendAllEnergy() throws UnsupportedEncodingException {
     // Arrange
@@ -2018,7 +2075,8 @@ public class ProgramDiffblueTest {
    * <p>Method under test: {@link Program#refundEnergy(long, String)}
    */
   @Test
-  @Category(MaintainedByDiffblue.class)
+  @Category(ContributionFromDiffblue.class)
+  @ManagedByDiffblue
   @MethodsUnderTest({"void Program.refundEnergy(long, String)"})
   public void testRefundEnergy() throws UnsupportedEncodingException {
     // Arrange
@@ -2085,7 +2143,8 @@ public class ProgramDiffblueTest {
    * <p>Method under test: {@link Program#storageSave(DataWord, DataWord)}
    */
   @Test
-  @Category(MaintainedByDiffblue.class)
+  @Category(ContributionFromDiffblue.class)
+  @ManagedByDiffblue
   @MethodsUnderTest({"void Program.storageSave(DataWord, DataWord)"})
   public void testStorageSave() throws UnsupportedEncodingException {
     // Arrange
@@ -2132,7 +2191,8 @@ public class ProgramDiffblueTest {
    * <p>Method under test: {@link Program#getCode()}
    */
   @Test
-  @Category(MaintainedByDiffblue.class)
+  @Category(ContributionFromDiffblue.class)
+  @ManagedByDiffblue
   @MethodsUnderTest({"byte[] Program.getCode()"})
   public void testGetCode_thenReturnAxaxaxaxBytesIsUtf8() throws UnsupportedEncodingException {
     // Arrange
@@ -2175,7 +2235,8 @@ public class ProgramDiffblueTest {
    * <p>Method under test: {@link Program#getContextAddress()}
    */
   @Test
-  @Category(MaintainedByDiffblue.class)
+  @Category(ContributionFromDiffblue.class)
+  @ManagedByDiffblue
   @MethodsUnderTest({"byte[] Program.getContextAddress()"})
   public void testGetContextAddress_thenReturnArrayOfByteWithAAndG()
       throws UnsupportedEncodingException {
@@ -2220,7 +2281,8 @@ public class ProgramDiffblueTest {
    * <p>Method under test: {@link Program#getContractAddress()}
    */
   @Test
-  @Category(MaintainedByDiffblue.class)
+  @Category(ContributionFromDiffblue.class)
+  @ManagedByDiffblue
   @MethodsUnderTest({"DataWord Program.getContractAddress()"})
   public void testGetContractAddress() throws UnsupportedEncodingException {
     // Arrange
@@ -2302,7 +2364,8 @@ public class ProgramDiffblueTest {
    * <p>Method under test: {@link Program#getOriginAddress()}
    */
   @Test
-  @Category(MaintainedByDiffblue.class)
+  @Category(ContributionFromDiffblue.class)
+  @ManagedByDiffblue
   @MethodsUnderTest({"DataWord Program.getOriginAddress()"})
   public void testGetOriginAddress() throws UnsupportedEncodingException {
     // Arrange
@@ -2384,7 +2447,8 @@ public class ProgramDiffblueTest {
    * <p>Method under test: {@link Program#getCallerAddress()}
    */
   @Test
-  @Category(MaintainedByDiffblue.class)
+  @Category(ContributionFromDiffblue.class)
+  @ManagedByDiffblue
   @MethodsUnderTest({"DataWord Program.getCallerAddress()"})
   public void testGetCallerAddress() throws UnsupportedEncodingException {
     // Arrange
@@ -2470,7 +2534,8 @@ public class ProgramDiffblueTest {
    * <p>Method under test: {@link Program#getEnergylimitLeftLong()}
    */
   @Test
-  @Category(MaintainedByDiffblue.class)
+  @Category(ContributionFromDiffblue.class)
+  @ManagedByDiffblue
   @MethodsUnderTest({"long Program.getEnergylimitLeftLong()"})
   public void testGetEnergylimitLeftLong_thenReturnFifty() throws UnsupportedEncodingException {
     // Arrange
@@ -2509,7 +2574,8 @@ public class ProgramDiffblueTest {
    * <p>Method under test: {@link Program#getEnergyLimitLeft()}
    */
   @Test
-  @Category(MaintainedByDiffblue.class)
+  @Category(ContributionFromDiffblue.class)
+  @ManagedByDiffblue
   @MethodsUnderTest({"DataWord Program.getEnergyLimitLeft()"})
   public void testGetEnergyLimitLeft() throws UnsupportedEncodingException {
     // Arrange
@@ -2584,7 +2650,8 @@ public class ProgramDiffblueTest {
    * <p>Method under test: {@link Program#getVmShouldEndInUs()}
    */
   @Test
-  @Category(MaintainedByDiffblue.class)
+  @Category(ContributionFromDiffblue.class)
+  @ManagedByDiffblue
   @MethodsUnderTest({"long Program.getVmShouldEndInUs()"})
   public void testGetVmShouldEndInUs_thenReturnZero() throws UnsupportedEncodingException {
     // Arrange
@@ -2623,7 +2690,8 @@ public class ProgramDiffblueTest {
    * <p>Method under test: {@link Program#getCallValue()}
    */
   @Test
-  @Category(MaintainedByDiffblue.class)
+  @Category(ContributionFromDiffblue.class)
+  @ManagedByDiffblue
   @MethodsUnderTest({"DataWord Program.getCallValue()"})
   public void testGetCallValue() throws UnsupportedEncodingException {
     // Arrange
@@ -2703,7 +2771,8 @@ public class ProgramDiffblueTest {
    * <p>Method under test: {@link Program#getDataSize()}
    */
   @Test
-  @Category(MaintainedByDiffblue.class)
+  @Category(ContributionFromDiffblue.class)
+  @ManagedByDiffblue
   @MethodsUnderTest({"DataWord Program.getDataSize()"})
   public void testGetDataSize_thenReturnZero() throws UnsupportedEncodingException {
     // Arrange
@@ -2748,7 +2817,8 @@ public class ProgramDiffblueTest {
    * <p>Method under test: {@link Program#getDataValue(DataWord)}
    */
   @Test
-  @Category(MaintainedByDiffblue.class)
+  @Category(ContributionFromDiffblue.class)
+  @ManagedByDiffblue
   @MethodsUnderTest({"DataWord Program.getDataValue(DataWord)"})
   public void testGetDataValue_thenReturnZero() throws UnsupportedEncodingException {
     // Arrange
@@ -2795,7 +2865,8 @@ public class ProgramDiffblueTest {
    * <p>Method under test: {@link Program#getDataCopy(DataWord, DataWord)}
    */
   @Test
-  @Category(MaintainedByDiffblue.class)
+  @Category(ContributionFromDiffblue.class)
+  @ManagedByDiffblue
   @MethodsUnderTest({"byte[] Program.getDataCopy(DataWord, DataWord)"})
   public void testGetDataCopy_thenReturnEmptyArrayOfByte() throws UnsupportedEncodingException {
     // Arrange
@@ -2835,7 +2906,8 @@ public class ProgramDiffblueTest {
    * <p>Method under test: {@link Program#getReturnDataBufferSize()}
    */
   @Test
-  @Category(MaintainedByDiffblue.class)
+  @Category(ContributionFromDiffblue.class)
+  @ManagedByDiffblue
   @MethodsUnderTest({"DataWord Program.getReturnDataBufferSize()"})
   public void testGetReturnDataBufferSize() throws UnsupportedEncodingException {
     // Arrange
@@ -2883,7 +2955,8 @@ public class ProgramDiffblueTest {
    * <p>Method under test: {@link Program#getReturnDataBufferData(DataWord, DataWord)}
    */
   @Test
-  @Category(MaintainedByDiffblue.class)
+  @Category(ContributionFromDiffblue.class)
+  @ManagedByDiffblue
   @MethodsUnderTest({"byte[] Program.getReturnDataBufferData(DataWord, DataWord)"})
   public void testGetReturnDataBufferData_thenReturnEmptyArrayOfByte()
       throws UnsupportedEncodingException {
@@ -2928,7 +3001,8 @@ public class ProgramDiffblueTest {
    * <p>Method under test: {@link Program#getPrevHash()}
    */
   @Test
-  @Category(MaintainedByDiffblue.class)
+  @Category(ContributionFromDiffblue.class)
+  @ManagedByDiffblue
   @MethodsUnderTest({"DataWord Program.getPrevHash()"})
   public void testGetPrevHash_thenReturnToPrefixStringIs961cb1()
       throws UnsupportedEncodingException {
@@ -3006,7 +3080,8 @@ public class ProgramDiffblueTest {
    * <p>Method under test: {@link Program#getCoinbase()}
    */
   @Test
-  @Category(MaintainedByDiffblue.class)
+  @Category(ContributionFromDiffblue.class)
+  @ManagedByDiffblue
   @MethodsUnderTest({"DataWord Program.getCoinbase()"})
   public void testGetCoinbase() throws UnsupportedEncodingException {
     // Arrange
@@ -3088,7 +3163,8 @@ public class ProgramDiffblueTest {
    * <p>Method under test: {@link Program#getTimestamp()}
    */
   @Test
-  @Category(MaintainedByDiffblue.class)
+  @Category(ContributionFromDiffblue.class)
+  @ManagedByDiffblue
   @MethodsUnderTest({"DataWord Program.getTimestamp()"})
   public void testGetTimestamp() throws UnsupportedEncodingException {
     // Arrange
@@ -3159,7 +3235,8 @@ public class ProgramDiffblueTest {
    * <p>Method under test: {@link Program#getNumber()}
    */
   @Test
-  @Category(MaintainedByDiffblue.class)
+  @Category(ContributionFromDiffblue.class)
+  @ManagedByDiffblue
   @MethodsUnderTest({"DataWord Program.getNumber()"})
   public void testGetNumber() throws UnsupportedEncodingException {
     // Arrange
@@ -3230,7 +3307,8 @@ public class ProgramDiffblueTest {
    * <p>Method under test: {@link Program#getDifficulty()}
    */
   @Test
-  @Category(MaintainedByDiffblue.class)
+  @Category(ContributionFromDiffblue.class)
+  @ManagedByDiffblue
   @MethodsUnderTest({"DataWord Program.getDifficulty()"})
   public void testGetDifficulty() throws UnsupportedEncodingException {
     // Arrange
@@ -3305,7 +3383,8 @@ public class ProgramDiffblueTest {
    * <p>Method under test: {@link Program#isStaticCall()}
    */
   @Test
-  @Category(MaintainedByDiffblue.class)
+  @Category(ContributionFromDiffblue.class)
+  @ManagedByDiffblue
   @MethodsUnderTest({"boolean Program.isStaticCall()"})
   public void testIsStaticCall_thenReturnFalse() throws UnsupportedEncodingException {
     // Arrange
@@ -3348,7 +3427,8 @@ public class ProgramDiffblueTest {
    * <p>Method under test: {@link Program#isConstantCall()}
    */
   @Test
-  @Category(MaintainedByDiffblue.class)
+  @Category(ContributionFromDiffblue.class)
+  @ManagedByDiffblue
   @MethodsUnderTest({"boolean Program.isConstantCall()"})
   public void testIsConstantCall_thenReturnFalse() throws UnsupportedEncodingException {
     // Arrange
@@ -3387,7 +3467,8 @@ public class ProgramDiffblueTest {
    * <p>Method under test: {@link Program#setRuntimeFailure(RuntimeException)}
    */
   @Test
-  @Category(MaintainedByDiffblue.class)
+  @Category(ContributionFromDiffblue.class)
+  @ManagedByDiffblue
   @MethodsUnderTest({"void Program.setRuntimeFailure(RuntimeException)"})
   public void testSetRuntimeFailure() throws UnsupportedEncodingException {
     // Arrange
@@ -3434,7 +3515,8 @@ public class ProgramDiffblueTest {
    * <p>Method under test: {@link Program#memoryToString()}
    */
   @Test
-  @Category(MaintainedByDiffblue.class)
+  @Category(ContributionFromDiffblue.class)
+  @ManagedByDiffblue
   @MethodsUnderTest({"String Program.memoryToString()"})
   public void testMemoryToString_thenReturnEmptyString() throws UnsupportedEncodingException {
     // Arrange
@@ -3473,7 +3555,8 @@ public class ProgramDiffblueTest {
    * <p>Method under test: {@link Program#saveOpTrace()}
    */
   @Test
-  @Category(MaintainedByDiffblue.class)
+  @Category(ContributionFromDiffblue.class)
+  @ManagedByDiffblue
   @MethodsUnderTest({"void Program.saveOpTrace()"})
   public void testSaveOpTrace() throws UnsupportedEncodingException {
     // Arrange
@@ -3533,7 +3616,8 @@ public class ProgramDiffblueTest {
    * <p>Method under test: {@link Program#byTestingSuite()}
    */
   @Test
-  @Category(MaintainedByDiffblue.class)
+  @Category(ContributionFromDiffblue.class)
+  @ManagedByDiffblue
   @MethodsUnderTest({"boolean Program.byTestingSuite()"})
   public void testByTestingSuite_thenReturnFalse() throws UnsupportedEncodingException {
     // Arrange
@@ -3572,7 +3656,8 @@ public class ProgramDiffblueTest {
    * <p>Method under test: {@link Program#getCallEnergy(DataWord, DataWord)}
    */
   @Test
-  @Category(MaintainedByDiffblue.class)
+  @Category(ContributionFromDiffblue.class)
+  @ManagedByDiffblue
   @MethodsUnderTest({"DataWord Program.getCallEnergy(DataWord, DataWord)"})
   public void testGetCallEnergy() throws UnsupportedEncodingException {
     // Arrange
@@ -3636,7 +3721,8 @@ public class ProgramDiffblueTest {
    * <p>Method under test: {@link Program#getCreateEnergy(DataWord)}
    */
   @Test
-  @Category(MaintainedByDiffblue.class)
+  @Category(ContributionFromDiffblue.class)
+  @ManagedByDiffblue
   @MethodsUnderTest({"DataWord Program.getCreateEnergy(DataWord)"})
   public void testGetCreateEnergy_thenReturnZero() throws UnsupportedEncodingException {
     // Arrange
@@ -3683,7 +3769,8 @@ public class ProgramDiffblueTest {
    * <p>Method under test: {@link Program#getMemory()}
    */
   @Test
-  @Category(MaintainedByDiffblue.class)
+  @Category(ContributionFromDiffblue.class)
+  @ManagedByDiffblue
   @MethodsUnderTest({"byte[] Program.getMemory()"})
   public void testGetMemory_thenReturnEmptyArrayOfByte() throws UnsupportedEncodingException {
     // Arrange
@@ -3722,7 +3809,8 @@ public class ProgramDiffblueTest {
    * <p>Method under test: {@link Program#initMem(byte[])}
    */
   @Test
-  @Category(MaintainedByDiffblue.class)
+  @Category(ContributionFromDiffblue.class)
+  @ManagedByDiffblue
   @MethodsUnderTest({"void Program.initMem(byte[])"})
   public void testInitMem() throws UnsupportedEncodingException {
     // Arrange
@@ -3775,7 +3863,8 @@ public class ProgramDiffblueTest {
    * <p>Method under test: {@link Program#getVmStartInUs()}
    */
   @Test
-  @Category(MaintainedByDiffblue.class)
+  @Category(ContributionFromDiffblue.class)
+  @ManagedByDiffblue
   @MethodsUnderTest({"long Program.getVmStartInUs()"})
   public void testGetVmStartInUs_thenReturnZero() throws UnsupportedEncodingException {
     // Arrange
@@ -3814,7 +3903,8 @@ public class ProgramDiffblueTest {
    * <p>Method under test: {@link Program#freeze(DataWord, DataWord, DataWord)}
    */
   @Test
-  @Category(MaintainedByDiffblue.class)
+  @Category(ContributionFromDiffblue.class)
+  @ManagedByDiffblue
   @MethodsUnderTest({"boolean Program.freeze(DataWord, DataWord, DataWord)"})
   public void testFreeze() throws UnsupportedEncodingException {
     // Arrange
@@ -3903,7 +3993,8 @@ public class ProgramDiffblueTest {
    * <p>Method under test: {@link Program#freezeBalanceV2(DataWord, DataWord)}
    */
   @Test
-  @Category(MaintainedByDiffblue.class)
+  @Category(ContributionFromDiffblue.class)
+  @ManagedByDiffblue
   @MethodsUnderTest({"boolean Program.freezeBalanceV2(DataWord, DataWord)"})
   public void testFreezeBalanceV2() throws UnsupportedEncodingException {
     // Arrange
@@ -3998,7 +4089,8 @@ public class ProgramDiffblueTest {
    * <p>Method under test: {@link TransferException#TransferException(String, Object[])}
    */
   @Test
-  @Category(MaintainedByDiffblue.class)
+  @Category(ContributionFromDiffblue.class)
+  @ManagedByDiffblue
   @MethodsUnderTest({"void TransferException.<init>(String, Object[])"})
   public void testTransferExceptionNewTransferException() {
     // Arrange and Act

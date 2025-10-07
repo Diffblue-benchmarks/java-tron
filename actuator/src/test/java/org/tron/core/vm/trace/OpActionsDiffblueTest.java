@@ -4,7 +4,8 @@ import static org.junit.Assert.assertEquals;
 import static org.junit.Assert.assertNull;
 import static org.junit.Assert.assertSame;
 import static org.junit.Assert.assertTrue;
-import com.diffblue.cover.annotations.MaintainedByDiffblue;
+import com.diffblue.cover.annotations.ContributionFromDiffblue;
+import com.diffblue.cover.annotations.ManagedByDiffblue;
 import com.diffblue.cover.annotations.MethodsUnderTest;
 import java.io.UnsupportedEncodingException;
 import java.util.ArrayList;
@@ -30,7 +31,8 @@ public class OpActionsDiffblueTest {
    * <p>Method under test: {@link Action#addParam(String, Object)}
    */
   @Test
-  @Category(MaintainedByDiffblue.class)
+  @Category(ContributionFromDiffblue.class)
+  @ManagedByDiffblue
   @MethodsUnderTest({"Action Action.addParam(String, Object)"})
   public void testActionAddParam_givenActionParamsIsHashMap_whenValue_thenReturnNameIsPop() {
     // Arrange
@@ -62,7 +64,8 @@ public class OpActionsDiffblueTest {
    * <p>Method under test: {@link Action#addParam(String, Object)}
    */
   @Test
-  @Category(MaintainedByDiffblue.class)
+  @Category(ContributionFromDiffblue.class)
+  @ManagedByDiffblue
   @MethodsUnderTest({"Action Action.addParam(String, Object)"})
   public void testActionAddParam_givenActionParamsIsNull_whenNull_thenReturnAction() {
     // Arrange
@@ -89,7 +92,8 @@ public class OpActionsDiffblueTest {
    * <p>Method under test: {@link Action#addParam(String, Object)}
    */
   @Test
-  @Category(MaintainedByDiffblue.class)
+  @Category(ContributionFromDiffblue.class)
+  @ManagedByDiffblue
   @MethodsUnderTest({"Action Action.addParam(String, Object)"})
   public void testActionAddParam_givenAction_whenValue_thenReturnNameIsNull() {
     // Arrange and Act
@@ -116,7 +120,8 @@ public class OpActionsDiffblueTest {
    * </ul>
    */
   @Test
-  @Category(MaintainedByDiffblue.class)
+  @Category(ContributionFromDiffblue.class)
+  @ManagedByDiffblue
   @MethodsUnderTest({
     "void Action.<init>()",
     "Action.Name Action.getName()",
@@ -145,7 +150,8 @@ public class OpActionsDiffblueTest {
    * <p>Method under test: {@link OpActions#addStackPop()}
    */
   @Test
-  @Category(MaintainedByDiffblue.class)
+  @Category(ContributionFromDiffblue.class)
+  @ManagedByDiffblue
   @MethodsUnderTest({"Action OpActions.addStackPop()"})
   public void testAddStackPop() {
     // Arrange
@@ -171,7 +177,8 @@ public class OpActionsDiffblueTest {
    * <p>Method under test: {@link OpActions#addStackPush(DataWord)}
    */
   @Test
-  @Category(MaintainedByDiffblue.class)
+  @Category(ContributionFromDiffblue.class)
+  @ManagedByDiffblue
   @MethodsUnderTest({"Action OpActions.addStackPush(DataWord)"})
   public void testAddStackPush_whenNull_thenReturnParamsIsNull() {
     // Arrange
@@ -197,7 +204,8 @@ public class OpActionsDiffblueTest {
    * <p>Method under test: {@link OpActions#addStackPush(DataWord)}
    */
   @Test
-  @Category(MaintainedByDiffblue.class)
+  @Category(ContributionFromDiffblue.class)
+  @ManagedByDiffblue
   @MethodsUnderTest({"Action OpActions.addStackPush(DataWord)"})
   public void testAddStackPush_whenZero_thenReturnParamsSizeIsOne() {
     // Arrange
@@ -221,7 +229,8 @@ public class OpActionsDiffblueTest {
    * <p>Method under test: {@link OpActions#addStackSwap(int, int)}
    */
   @Test
-  @Category(MaintainedByDiffblue.class)
+  @Category(ContributionFromDiffblue.class)
+  @ManagedByDiffblue
   @MethodsUnderTest({"Action OpActions.addStackSwap(int, int)"})
   public void testAddStackSwap() {
     // Arrange
@@ -245,7 +254,8 @@ public class OpActionsDiffblueTest {
    * <p>Method under test: {@link OpActions#addMemoryExtend(long)}
    */
   @Test
-  @Category(MaintainedByDiffblue.class)
+  @Category(ContributionFromDiffblue.class)
+  @ManagedByDiffblue
   @MethodsUnderTest({"Action OpActions.addMemoryExtend(long)"})
   public void testAddMemoryExtend() {
     // Arrange
@@ -273,7 +283,8 @@ public class OpActionsDiffblueTest {
    * <p>Method under test: {@link OpActions#addMemoryWrite(int, byte[], int)}
    */
   @Test
-  @Category(MaintainedByDiffblue.class)
+  @Category(ContributionFromDiffblue.class)
+  @ManagedByDiffblue
   @MethodsUnderTest({"Action OpActions.addMemoryWrite(int, byte[], int)"})
   public void testAddMemoryWrite_whenAxaxaxaxBytesIsUtf8_thenReturnParamsDataIs415()
       throws UnsupportedEncodingException {
@@ -304,7 +315,8 @@ public class OpActionsDiffblueTest {
    * <p>Method under test: {@link OpActions#addMemoryWrite(int, byte[], int)}
    */
   @Test
-  @Category(MaintainedByDiffblue.class)
+  @Category(ContributionFromDiffblue.class)
+  @ManagedByDiffblue
   @MethodsUnderTest({"Action OpActions.addMemoryWrite(int, byte[], int)"})
   public void testAddMemoryWrite_whenZero_thenReturnParamsDataIsEmptyString() {
     // Arrange
@@ -333,7 +345,8 @@ public class OpActionsDiffblueTest {
    * <p>Method under test: {@link OpActions#addStoragePut(DataWord, DataWord)}
    */
   @Test
-  @Category(MaintainedByDiffblue.class)
+  @Category(ContributionFromDiffblue.class)
+  @ManagedByDiffblue
   @MethodsUnderTest({"Action OpActions.addStoragePut(DataWord, DataWord)"})
   public void testAddStoragePut_whenNull_thenReturnParamsIsNull() {
     // Arrange
@@ -359,7 +372,8 @@ public class OpActionsDiffblueTest {
    * <p>Method under test: {@link OpActions#addStoragePut(DataWord, DataWord)}
    */
   @Test
-  @Category(MaintainedByDiffblue.class)
+  @Category(ContributionFromDiffblue.class)
+  @ManagedByDiffblue
   @MethodsUnderTest({"Action OpActions.addStoragePut(DataWord, DataWord)"})
   public void testAddStoragePut_whenZero_thenReturnParamsSizeIsTwo() {
     // Arrange
@@ -386,7 +400,8 @@ public class OpActionsDiffblueTest {
    * <p>Method under test: {@link OpActions#addStorageRemove(DataWord)}
    */
   @Test
-  @Category(MaintainedByDiffblue.class)
+  @Category(ContributionFromDiffblue.class)
+  @ManagedByDiffblue
   @MethodsUnderTest({"Action OpActions.addStorageRemove(DataWord)"})
   public void testAddStorageRemove_whenNull_thenReturnParamsIsNull() {
     // Arrange
@@ -412,7 +427,8 @@ public class OpActionsDiffblueTest {
    * <p>Method under test: {@link OpActions#addStorageRemove(DataWord)}
    */
   @Test
-  @Category(MaintainedByDiffblue.class)
+  @Category(ContributionFromDiffblue.class)
+  @ManagedByDiffblue
   @MethodsUnderTest({"Action OpActions.addStorageRemove(DataWord)"})
   public void testAddStorageRemove_whenZero_thenReturnParamsSizeIsOne() {
     // Arrange
@@ -436,7 +452,8 @@ public class OpActionsDiffblueTest {
    * <p>Method under test: {@link OpActions#addStorageClear()}
    */
   @Test
-  @Category(MaintainedByDiffblue.class)
+  @Category(ContributionFromDiffblue.class)
+  @ManagedByDiffblue
   @MethodsUnderTest({"Action OpActions.addStorageClear()"})
   public void testAddStorageClear() {
     // Arrange
@@ -467,7 +484,8 @@ public class OpActionsDiffblueTest {
    * </ul>
    */
   @Test
-  @Category(MaintainedByDiffblue.class)
+  @Category(ContributionFromDiffblue.class)
+  @ManagedByDiffblue
   @MethodsUnderTest({
     "void OpActions.<init>()",
     "List OpActions.getMemory()",

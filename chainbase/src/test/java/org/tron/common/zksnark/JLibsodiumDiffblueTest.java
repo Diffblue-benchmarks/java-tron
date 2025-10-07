@@ -1,7 +1,8 @@
 package org.tron.common.zksnark;
 
 import static org.junit.Assert.assertEquals;
-import com.diffblue.cover.annotations.MaintainedByDiffblue;
+import com.diffblue.cover.annotations.ContributionFromDiffblue;
+import com.diffblue.cover.annotations.ManagedByDiffblue;
 import com.diffblue.cover.annotations.MethodsUnderTest;
 import java.io.UnsupportedEncodingException;
 import org.junit.Test;
@@ -27,7 +28,8 @@ public class JLibsodiumDiffblueTest {
    * JLibsodium#cryptoGenerichashBlake2bInitSaltPersonal(Blake2bInitSaltPersonalParams)}
    */
   @Test
-  @Category(MaintainedByDiffblue.class)
+  @Category(ContributionFromDiffblue.class)
+  @ManagedByDiffblue
   @MethodsUnderTest({
     "int JLibsodium.cryptoGenerichashBlake2bInitSaltPersonal(Blake2bInitSaltPersonalParams)"
   })
@@ -58,7 +60,8 @@ public class JLibsodiumDiffblueTest {
    * <p>Method under test: {@link JLibsodium#cryptoGenerichashBlake2bUpdate(Blake2bUpdateParams)}
    */
   @Test
-  @Category(MaintainedByDiffblue.class)
+  @Category(ContributionFromDiffblue.class)
+  @ManagedByDiffblue
   @MethodsUnderTest({"int JLibsodium.cryptoGenerichashBlake2bUpdate(Blake2bUpdateParams)"})
   public void testCryptoGenerichashBlake2bUpdate_whenNull_thenReturnZero() {
     // Arrange, Act and Assert
@@ -76,7 +79,8 @@ public class JLibsodiumDiffblueTest {
    * <p>Method under test: {@link JLibsodium#cryptoGenerichashBlake2bFinal(Blake2bFinalParams)}
    */
   @Test
-  @Category(MaintainedByDiffblue.class)
+  @Category(ContributionFromDiffblue.class)
+  @ManagedByDiffblue
   @MethodsUnderTest({"int JLibsodium.cryptoGenerichashBlake2bFinal(Blake2bFinalParams)"})
   public void testCryptoGenerichashBlake2bFinal_whenNull_thenReturnZero() {
     // Arrange, Act and Assert
@@ -95,7 +99,8 @@ public class JLibsodiumDiffblueTest {
    * JLibsodium#cryptoGenerichashBlack2bSaltPersonal(Black2bSaltPersonalParams)}
    */
   @Test
-  @Category(MaintainedByDiffblue.class)
+  @Category(ContributionFromDiffblue.class)
+  @ManagedByDiffblue
   @MethodsUnderTest({
     "int JLibsodium.cryptoGenerichashBlack2bSaltPersonal(Black2bSaltPersonalParams)"
   })
@@ -117,7 +122,8 @@ public class JLibsodiumDiffblueTest {
    * JLibsodium#cryptoAeadChacha20poly1305IetfDecrypt(Chacha20poly1305IetfDecryptParams)}
    */
   @Test
-  @Category(MaintainedByDiffblue.class)
+  @Category(ContributionFromDiffblue.class)
+  @ManagedByDiffblue
   @MethodsUnderTest({
     "int JLibsodium.cryptoAeadChacha20poly1305IetfDecrypt(Chacha20poly1305IetfDecryptParams)"
   })
@@ -139,7 +145,8 @@ public class JLibsodiumDiffblueTest {
    * JLibsodium#cryptoAeadChacha20Poly1305IetfEncrypt(Chacha20Poly1305IetfEncryptParams)}
    */
   @Test
-  @Category(MaintainedByDiffblue.class)
+  @Category(ContributionFromDiffblue.class)
+  @ManagedByDiffblue
   @MethodsUnderTest({
     "int JLibsodium.cryptoAeadChacha20Poly1305IetfEncrypt(Chacha20Poly1305IetfEncryptParams)"
   })
@@ -154,7 +161,8 @@ public class JLibsodiumDiffblueTest {
    * <p>Method under test: {@link JLibsodium#initState()}
    */
   @Test
-  @Category(MaintainedByDiffblue.class)
+  @Category(ContributionFromDiffblue.class)
+  @ManagedByDiffblue
   @MethodsUnderTest({"long JLibsodium.initState()"})
   public void testInitState() {
     // Arrange, Act and Assert

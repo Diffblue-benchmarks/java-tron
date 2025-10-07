@@ -3,7 +3,8 @@ package org.tron.core.services.interfaceOnPBFT.http;
 import static org.mockito.ArgumentMatchers.isA;
 import static org.mockito.Mockito.doNothing;
 import static org.mockito.Mockito.verify;
-import com.diffblue.cover.annotations.MaintainedByDiffblue;
+import com.diffblue.cover.annotations.ContributionFromDiffblue;
+import com.diffblue.cover.annotations.ManagedByDiffblue;
 import com.diffblue.cover.annotations.MethodsUnderTest;
 import java.io.IOException;
 import javax.servlet.http.HttpServletRequest;
@@ -38,7 +39,8 @@ public class GetDelegatedResourceAccountIndexV2OnPBFTServletDiffblueTest {
    * GetDelegatedResourceAccountIndexV2OnPBFTServlet#doGet(HttpServletRequest, HttpServletResponse)}
    */
   @Test
-  @Category(MaintainedByDiffblue.class)
+  @Category(ContributionFromDiffblue.class)
+  @ManagedByDiffblue
   @MethodsUnderTest({
     "void GetDelegatedResourceAccountIndexV2OnPBFTServlet.doGet(HttpServletRequest, HttpServletResponse)"
   })
@@ -65,7 +67,8 @@ public class GetDelegatedResourceAccountIndexV2OnPBFTServletDiffblueTest {
    * HttpServletResponse)}
    */
   @Test
-  @Category(MaintainedByDiffblue.class)
+  @Category(ContributionFromDiffblue.class)
+  @ManagedByDiffblue
   @MethodsUnderTest({
     "void GetDelegatedResourceAccountIndexV2OnPBFTServlet.doPost(HttpServletRequest, HttpServletResponse)"
   })

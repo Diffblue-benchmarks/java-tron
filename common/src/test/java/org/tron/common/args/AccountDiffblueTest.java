@@ -6,7 +6,8 @@ import static org.junit.Assert.assertNull;
 import static org.junit.Assert.assertSame;
 import static org.junit.Assert.assertThrows;
 import static org.junit.Assert.assertTrue;
-import com.diffblue.cover.annotations.MaintainedByDiffblue;
+import com.diffblue.cover.annotations.ContributionFromDiffblue;
+import com.diffblue.cover.annotations.ManagedByDiffblue;
 import com.diffblue.cover.annotations.MethodsUnderTest;
 import com.google.protobuf.ByteString;
 import com.google.protobuf.ByteString.ByteIterator;
@@ -27,7 +28,8 @@ public class AccountDiffblueTest {
    * <p>Method under test: {@link Account#setAddress(byte[])}
    */
   @Test
-  @Category(MaintainedByDiffblue.class)
+  @Category(ContributionFromDiffblue.class)
+  @ManagedByDiffblue
   @MethodsUnderTest({"void Account.setAddress(byte[])"})
   public void testSetAddress_whenAxaxaxaxBytesIsUtf8() throws UnsupportedEncodingException {
     // Arrange, Act and Assert
@@ -46,7 +48,8 @@ public class AccountDiffblueTest {
    * <p>Method under test: {@link Account#setAddress(byte[])}
    */
   @Test
-  @Category(MaintainedByDiffblue.class)
+  @Category(ContributionFromDiffblue.class)
+  @ManagedByDiffblue
   @MethodsUnderTest({"void Account.setAddress(byte[])"})
   public void testSetAddress_whenEmptyArrayOfByte() {
     // Arrange, Act and Assert
@@ -64,7 +67,8 @@ public class AccountDiffblueTest {
    * <p>Method under test: {@link Account#getBalance()}
    */
   @Test
-  @Category(MaintainedByDiffblue.class)
+  @Category(ContributionFromDiffblue.class)
+  @ManagedByDiffblue
   @MethodsUnderTest({"long Account.getBalance()"})
   public void testGetBalance_givenAccountBalanceIs42_thenReturnFortyTwo() {
     // Arrange
@@ -86,7 +90,8 @@ public class AccountDiffblueTest {
    * <p>Method under test: {@link Account#setBalance(String)}
    */
   @Test
-  @Category(MaintainedByDiffblue.class)
+  @Category(ContributionFromDiffblue.class)
+  @ManagedByDiffblue
   @MethodsUnderTest({"void Account.setBalance(String)"})
   public void testSetBalance_when42_thenAccountBalanceIsFortyTwo() {
     // Arrange
@@ -110,7 +115,8 @@ public class AccountDiffblueTest {
    * <p>Method under test: {@link Account#setBalance(String)}
    */
   @Test
-  @Category(MaintainedByDiffblue.class)
+  @Category(ContributionFromDiffblue.class)
+  @ManagedByDiffblue
   @MethodsUnderTest({"void Account.setBalance(String)"})
   public void testSetBalance_whenBalance_thenThrowIllegalArgumentException() {
     // Arrange, Act and Assert
@@ -128,7 +134,8 @@ public class AccountDiffblueTest {
    * <p>Method under test: {@link Account#getAccountName()}
    */
   @Test
-  @Category(MaintainedByDiffblue.class)
+  @Category(ContributionFromDiffblue.class)
+  @ManagedByDiffblue
   @MethodsUnderTest({"ByteString Account.getAccountName()"})
   public void testGetAccountName_givenAccountAccountNameIsDrJaneDoe_thenReturnNotEmpty() {
     // Arrange
@@ -161,7 +168,8 @@ public class AccountDiffblueTest {
    * <p>Method under test: {@link Account#getAccountName()}
    */
   @Test
-  @Category(MaintainedByDiffblue.class)
+  @Category(ContributionFromDiffblue.class)
+  @ManagedByDiffblue
   @MethodsUnderTest({"ByteString Account.getAccountName()"})
   public void testGetAccountName_givenAccount_thenReturnEmpty() {
     // Arrange, Act and Assert
@@ -179,7 +187,8 @@ public class AccountDiffblueTest {
    * <p>Method under test: {@link Account#setAccountName(String)}
    */
   @Test
-  @Category(MaintainedByDiffblue.class)
+  @Category(ContributionFromDiffblue.class)
+  @ManagedByDiffblue
   @MethodsUnderTest({"void Account.setAccountName(String)"})
   public void testSetAccountName_whenDrJaneDoe_thenNotAccountAccountNameEmpty() {
     // Arrange
@@ -210,7 +219,8 @@ public class AccountDiffblueTest {
    * <p>Method under test: {@link Account#setAccountName(String)}
    */
   @Test
-  @Category(MaintainedByDiffblue.class)
+  @Category(ContributionFromDiffblue.class)
+  @ManagedByDiffblue
   @MethodsUnderTest({"void Account.setAccountName(String)"})
   public void testSetAccountName_whenEmptyString_thenThrowIllegalArgumentException() {
     // Arrange, Act and Assert
@@ -228,7 +238,8 @@ public class AccountDiffblueTest {
    * <p>Method under test: {@link Account#setAccountName(String)}
    */
   @Test
-  @Category(MaintainedByDiffblue.class)
+  @Category(ContributionFromDiffblue.class)
+  @ManagedByDiffblue
   @MethodsUnderTest({"void Account.setAccountName(String)"})
   public void testSetAccountName_whenNull_thenThrowIllegalArgumentException() {
     // Arrange, Act and Assert
@@ -246,7 +257,8 @@ public class AccountDiffblueTest {
    * <p>Method under test: {@link Account#setAccountName(String)}
    */
   @Test
-  @Category(MaintainedByDiffblue.class)
+  @Category(ContributionFromDiffblue.class)
+  @ManagedByDiffblue
   @MethodsUnderTest({"void Account.setAccountName(String)"})
   public void testSetAccountName_whenSpace_thenThrowIllegalArgumentException() {
     // Arrange, Act and Assert
@@ -264,8 +276,9 @@ public class AccountDiffblueTest {
    * <p>Method under test: {@link Account#getAccountType()}
    */
   @Test
-  @Category(MaintainedByDiffblue.class)
-  @MethodsUnderTest({"Protocol.AccountType Account.getAccountType()"})
+  @Category(ContributionFromDiffblue.class)
+  @ManagedByDiffblue
+  @MethodsUnderTest({"AccountType Account.getAccountType()"})
   public void testGetAccountType_givenAccountAccountTypeIsAssetissue_thenReturnAssetIssue() {
     // Arrange
     Account account = new Account();
@@ -286,8 +299,9 @@ public class AccountDiffblueTest {
    * <p>Method under test: {@link Account#getAccountType()}
    */
   @Test
-  @Category(MaintainedByDiffblue.class)
-  @MethodsUnderTest({"Protocol.AccountType Account.getAccountType()"})
+  @Category(ContributionFromDiffblue.class)
+  @ManagedByDiffblue
+  @MethodsUnderTest({"AccountType Account.getAccountType()"})
   public void testGetAccountType_givenAccountAccountTypeIsContract_thenReturnContract() {
     // Arrange
     Account account = new Account();
@@ -309,8 +323,9 @@ public class AccountDiffblueTest {
    * <p>Method under test: {@link Account#getAccountType()}
    */
   @Test
-  @Category(MaintainedByDiffblue.class)
-  @MethodsUnderTest({"Protocol.AccountType Account.getAccountType()"})
+  @Category(ContributionFromDiffblue.class)
+  @ManagedByDiffblue
+  @MethodsUnderTest({"AccountType Account.getAccountType()"})
   public void testGetAccountType_givenAccountAccountTypeIsNormal_thenReturnNormal() {
     // Arrange
     Account account = new Account();
@@ -332,8 +347,9 @@ public class AccountDiffblueTest {
    * <p>Method under test: {@link Account#getAccountType()}
    */
   @Test
-  @Category(MaintainedByDiffblue.class)
-  @MethodsUnderTest({"Protocol.AccountType Account.getAccountType()"})
+  @Category(ContributionFromDiffblue.class)
+  @ManagedByDiffblue
+  @MethodsUnderTest({"AccountType Account.getAccountType()"})
   public void testGetAccountType_givenAccount_thenThrowIllegalArgumentException() {
     // Arrange, Act and Assert
     assertThrows(IllegalArgumentException.class, () -> new Account().getAccountType());
@@ -350,7 +366,8 @@ public class AccountDiffblueTest {
    * <p>Method under test: {@link Account#setAccountType(String)}
    */
   @Test
-  @Category(MaintainedByDiffblue.class)
+  @Category(ContributionFromDiffblue.class)
+  @ManagedByDiffblue
   @MethodsUnderTest({"void Account.setAccountType(String)"})
   public void testSetAccountType_when3_thenThrowIllegalArgumentException() {
     // Arrange, Act and Assert
@@ -368,7 +385,8 @@ public class AccountDiffblueTest {
    * <p>Method under test: {@link Account#setAccountType(String)}
    */
   @Test
-  @Category(MaintainedByDiffblue.class)
+  @Category(ContributionFromDiffblue.class)
+  @ManagedByDiffblue
   @MethodsUnderTest({"void Account.setAccountType(String)"})
   public void testSetAccountType_whenAssetissue_thenAccountAccountTypeIsAssetIssue() {
     // Arrange
@@ -392,7 +410,8 @@ public class AccountDiffblueTest {
    * <p>Method under test: {@link Account#setAccountType(String)}
    */
   @Test
-  @Category(MaintainedByDiffblue.class)
+  @Category(ContributionFromDiffblue.class)
+  @ManagedByDiffblue
   @MethodsUnderTest({"void Account.setAccountType(String)"})
   public void testSetAccountType_whenContract_thenAccountAccountTypeIsContract() {
     // Arrange
@@ -416,7 +435,8 @@ public class AccountDiffblueTest {
    * <p>Method under test: {@link Account#setAccountType(String)}
    */
   @Test
-  @Category(MaintainedByDiffblue.class)
+  @Category(ContributionFromDiffblue.class)
+  @ManagedByDiffblue
   @MethodsUnderTest({"void Account.setAccountType(String)"})
   public void testSetAccountType_whenNormal_thenAccountAccountTypeIsNormal() {
     // Arrange
@@ -440,7 +460,8 @@ public class AccountDiffblueTest {
    * <p>Method under test: {@link Account#setAccountType(String)}
    */
   @Test
-  @Category(MaintainedByDiffblue.class)
+  @Category(ContributionFromDiffblue.class)
+  @ManagedByDiffblue
   @MethodsUnderTest({"void Account.setAccountType(String)"})
   public void testSetAccountType_whenNull_thenThrowIllegalArgumentException() {
     // Arrange, Act and Assert
@@ -458,7 +479,8 @@ public class AccountDiffblueTest {
    * <p>Method under test: {@link Account#isAccountType(String)}
    */
   @Test
-  @Category(MaintainedByDiffblue.class)
+  @Category(ContributionFromDiffblue.class)
+  @ManagedByDiffblue
   @MethodsUnderTest({"boolean Account.isAccountType(String)"})
   public void testIsAccountType_when3_thenReturnFalse() {
     // Arrange, Act and Assert
@@ -476,7 +498,8 @@ public class AccountDiffblueTest {
    * <p>Method under test: {@link Account#isAccountType(String)}
    */
   @Test
-  @Category(MaintainedByDiffblue.class)
+  @Category(ContributionFromDiffblue.class)
+  @ManagedByDiffblue
   @MethodsUnderTest({"boolean Account.isAccountType(String)"})
   public void testIsAccountType_whenAssetissue_thenReturnTrue() {
     // Arrange, Act and Assert
@@ -494,7 +517,8 @@ public class AccountDiffblueTest {
    * <p>Method under test: {@link Account#isAccountType(String)}
    */
   @Test
-  @Category(MaintainedByDiffblue.class)
+  @Category(ContributionFromDiffblue.class)
+  @ManagedByDiffblue
   @MethodsUnderTest({"boolean Account.isAccountType(String)"})
   public void testIsAccountType_whenContract_thenReturnTrue() {
     // Arrange, Act and Assert
@@ -512,7 +536,8 @@ public class AccountDiffblueTest {
    * <p>Method under test: {@link Account#isAccountType(String)}
    */
   @Test
-  @Category(MaintainedByDiffblue.class)
+  @Category(ContributionFromDiffblue.class)
+  @ManagedByDiffblue
   @MethodsUnderTest({"boolean Account.isAccountType(String)"})
   public void testIsAccountType_whenNormal_thenReturnTrue() {
     // Arrange, Act and Assert
@@ -530,7 +555,8 @@ public class AccountDiffblueTest {
    * <p>Method under test: {@link Account#isAccountType(String)}
    */
   @Test
-  @Category(MaintainedByDiffblue.class)
+  @Category(ContributionFromDiffblue.class)
+  @ManagedByDiffblue
   @MethodsUnderTest({"boolean Account.isAccountType(String)"})
   public void testIsAccountType_whenNull_thenReturnFalse() {
     // Arrange, Act and Assert
@@ -548,8 +574,9 @@ public class AccountDiffblueTest {
    * <p>Method under test: {@link Account#getAccountTypeByString(String)}
    */
   @Test
-  @Category(MaintainedByDiffblue.class)
-  @MethodsUnderTest({"Protocol.AccountType Account.getAccountTypeByString(String)"})
+  @Category(ContributionFromDiffblue.class)
+  @ManagedByDiffblue
+  @MethodsUnderTest({"AccountType Account.getAccountTypeByString(String)"})
   public void testGetAccountTypeByString_when3_thenThrowIllegalArgumentException() {
     // Arrange, Act and Assert
     assertThrows(IllegalArgumentException.class, () -> new Account().getAccountTypeByString("3"));
@@ -566,8 +593,9 @@ public class AccountDiffblueTest {
    * <p>Method under test: {@link Account#getAccountTypeByString(String)}
    */
   @Test
-  @Category(MaintainedByDiffblue.class)
-  @MethodsUnderTest({"Protocol.AccountType Account.getAccountTypeByString(String)"})
+  @Category(ContributionFromDiffblue.class)
+  @ManagedByDiffblue
+  @MethodsUnderTest({"AccountType Account.getAccountTypeByString(String)"})
   public void testGetAccountTypeByString_whenAssetissue_thenReturnAssetIssue() {
     // Arrange, Act and Assert
     assertEquals(AccountType.AssetIssue, new Account().getAccountTypeByString("ASSETISSUE"));
@@ -584,8 +612,9 @@ public class AccountDiffblueTest {
    * <p>Method under test: {@link Account#getAccountTypeByString(String)}
    */
   @Test
-  @Category(MaintainedByDiffblue.class)
-  @MethodsUnderTest({"Protocol.AccountType Account.getAccountTypeByString(String)"})
+  @Category(ContributionFromDiffblue.class)
+  @ManagedByDiffblue
+  @MethodsUnderTest({"AccountType Account.getAccountTypeByString(String)"})
   public void testGetAccountTypeByString_whenContract_thenReturnContract() {
     // Arrange, Act and Assert
     assertEquals(AccountType.Contract, new Account().getAccountTypeByString("CONTRACT"));
@@ -602,8 +631,9 @@ public class AccountDiffblueTest {
    * <p>Method under test: {@link Account#getAccountTypeByString(String)}
    */
   @Test
-  @Category(MaintainedByDiffblue.class)
-  @MethodsUnderTest({"Protocol.AccountType Account.getAccountTypeByString(String)"})
+  @Category(ContributionFromDiffblue.class)
+  @ManagedByDiffblue
+  @MethodsUnderTest({"AccountType Account.getAccountTypeByString(String)"})
   public void testGetAccountTypeByString_whenNormal_thenReturnNormal() {
     // Arrange, Act and Assert
     assertEquals(AccountType.Normal, new Account().getAccountTypeByString("NORMAL"));
@@ -620,8 +650,9 @@ public class AccountDiffblueTest {
    * <p>Method under test: {@link Account#getAccountTypeByString(String)}
    */
   @Test
-  @Category(MaintainedByDiffblue.class)
-  @MethodsUnderTest({"Protocol.AccountType Account.getAccountTypeByString(String)"})
+  @Category(ContributionFromDiffblue.class)
+  @ManagedByDiffblue
+  @MethodsUnderTest({"AccountType Account.getAccountTypeByString(String)"})
   public void testGetAccountTypeByString_whenNull_thenThrowIllegalArgumentException() {
     // Arrange, Act and Assert
     assertThrows(IllegalArgumentException.class, () -> new Account().getAccountTypeByString(null));
@@ -638,7 +669,8 @@ public class AccountDiffblueTest {
    * </ul>
    */
   @Test
-  @Category(MaintainedByDiffblue.class)
+  @Category(ContributionFromDiffblue.class)
+  @ManagedByDiffblue
   @MethodsUnderTest({"void Account.<init>()", "byte[] Account.getAddress()"})
   public void testNewAccount() {
     // Arrange, Act and Assert

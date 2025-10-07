@@ -4,7 +4,8 @@ import static org.junit.Assert.assertEquals;
 import static org.junit.Assert.assertFalse;
 import static org.junit.Assert.assertSame;
 import static org.mockito.Mockito.mock;
-import com.diffblue.cover.annotations.MaintainedByDiffblue;
+import com.diffblue.cover.annotations.ContributionFromDiffblue;
+import com.diffblue.cover.annotations.ManagedByDiffblue;
 import com.diffblue.cover.annotations.MethodsUnderTest;
 import java.util.function.Consumer;
 import java.util.function.Function;
@@ -18,7 +19,8 @@ public class JumpTableDiffblueTest {
    * <p>Method under test: default or parameterless constructor of {@link JumpTable}
    */
   @Test
-  @Category(MaintainedByDiffblue.class)
+  @Category(ContributionFromDiffblue.class)
+  @ManagedByDiffblue
   @MethodsUnderTest({"void JumpTable.<init>()"})
   public void testNewJumpTable() {
     // Arrange, Act and Assert
@@ -40,7 +42,8 @@ public class JumpTableDiffblueTest {
    * <p>Method under test: {@link JumpTable#get(int)}
    */
   @Test
-  @Category(MaintainedByDiffblue.class)
+  @Category(ContributionFromDiffblue.class)
+  @ManagedByDiffblue
   @MethodsUnderTest({"Operation JumpTable.get(int)"})
   public void testGet_whenOne_thenReturnOpcodeIsMinusOne() {
     // Arrange and Act
@@ -59,7 +62,8 @@ public class JumpTableDiffblueTest {
    * <p>Method under test: {@link JumpTable#set(Operation)}
    */
   @Test
-  @Category(MaintainedByDiffblue.class)
+  @Category(ContributionFromDiffblue.class)
+  @ManagedByDiffblue
   @MethodsUnderTest({"void JumpTable.set(Operation)"})
   public void testSet() {
     // Arrange

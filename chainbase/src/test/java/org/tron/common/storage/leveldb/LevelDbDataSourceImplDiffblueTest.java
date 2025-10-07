@@ -5,7 +5,8 @@ import static org.junit.Assert.assertFalse;
 import static org.junit.Assert.assertNull;
 import static org.junit.Assert.assertThrows;
 import static org.junit.Assert.assertTrue;
-import com.diffblue.cover.annotations.MaintainedByDiffblue;
+import com.diffblue.cover.annotations.ContributionFromDiffblue;
+import com.diffblue.cover.annotations.ManagedByDiffblue;
 import com.diffblue.cover.annotations.MethodsUnderTest;
 import java.io.File;
 import org.junit.Test;
@@ -18,7 +19,8 @@ public class LevelDbDataSourceImplDiffblueTest {
    * <p>Method under test: {@link LevelDbDataSourceImpl#LevelDbDataSourceImpl()}
    */
   @Test
-  @Category(MaintainedByDiffblue.class)
+  @Category(ContributionFromDiffblue.class)
+  @ManagedByDiffblue
   @MethodsUnderTest({"void LevelDbDataSourceImpl.<init>()"})
   public void testNewLevelDbDataSourceImpl() throws Exception {
     // Arrange and Act
@@ -44,7 +46,8 @@ public class LevelDbDataSourceImplDiffblueTest {
    * <p>Method under test: {@link LevelDbDataSourceImpl#initDB()}
    */
   @Test
-  @Category(MaintainedByDiffblue.class)
+  @Category(ContributionFromDiffblue.class)
+  @ManagedByDiffblue
   @MethodsUnderTest({"void LevelDbDataSourceImpl.initDB()"})
   public void testInitDB_givenLevelDbDataSourceImpl_thenThrowIllegalArgumentException() {
     // Arrange, Act and Assert
@@ -61,7 +64,8 @@ public class LevelDbDataSourceImplDiffblueTest {
    * <p>Method under test: {@link LevelDbDataSourceImpl#initDB()}
    */
   @Test
-  @Category(MaintainedByDiffblue.class)
+  @Category(ContributionFromDiffblue.class)
+  @ManagedByDiffblue
   @MethodsUnderTest({"void LevelDbDataSourceImpl.initDB()"})
   public void testInitDB_thenLevelDbDataSourceImplAlive() {
     // Arrange
@@ -86,7 +90,8 @@ public class LevelDbDataSourceImplDiffblueTest {
    * <p>Method under test: {@link LevelDbDataSourceImpl#getDbPath()}
    */
   @Test
-  @Category(MaintainedByDiffblue.class)
+  @Category(ContributionFromDiffblue.class)
+  @ManagedByDiffblue
   @MethodsUnderTest({"java.nio.file.Path LevelDbDataSourceImpl.getDbPath()"})
   public void testGetDbPath_givenLevelDbDataSourceImplDBNameIsName_thenReturnToFileNameIsName() {
     // Arrange
@@ -109,7 +114,8 @@ public class LevelDbDataSourceImplDiffblueTest {
    * <p>Method under test: {@link LevelDbDataSourceImpl#resetDb()}
    */
   @Test
-  @Category(MaintainedByDiffblue.class)
+  @Category(ContributionFromDiffblue.class)
+  @ManagedByDiffblue
   @MethodsUnderTest({"void LevelDbDataSourceImpl.resetDb()"})
   public void testResetDb_thenLevelDbDataSourceImplAlive() {
     // Arrange
@@ -137,7 +143,8 @@ public class LevelDbDataSourceImplDiffblueTest {
    * </ul>
    */
   @Test
-  @Category(MaintainedByDiffblue.class)
+  @Category(ContributionFromDiffblue.class)
+  @ManagedByDiffblue
   @MethodsUnderTest({
     "String LevelDbDataSourceImpl.getDBName()",
     "String LevelDbDataSourceImpl.getEngine()",
@@ -173,7 +180,8 @@ public class LevelDbDataSourceImplDiffblueTest {
    * <p>Method under test: {@link LevelDbDataSourceImpl#getlatestValues(long)}
    */
   @Test
-  @Category(MaintainedByDiffblue.class)
+  @Category(ContributionFromDiffblue.class)
+  @ManagedByDiffblue
   @MethodsUnderTest({"java.util.Set LevelDbDataSourceImpl.getlatestValues(long)"})
   public void testGetlatestValues_whenZero_thenReturnEmpty() {
     // Arrange, Act and Assert
@@ -191,7 +199,8 @@ public class LevelDbDataSourceImplDiffblueTest {
    * <p>Method under test: {@link LevelDbDataSourceImpl#getValuesNext(byte[], long)}
    */
   @Test
-  @Category(MaintainedByDiffblue.class)
+  @Category(ContributionFromDiffblue.class)
+  @ManagedByDiffblue
   @MethodsUnderTest({"java.util.Set LevelDbDataSourceImpl.getValuesNext(byte[], long)"})
   public void testGetValuesNext_whenA_thenReturnEmpty() {
     // Arrange, Act and Assert
@@ -212,7 +221,8 @@ public class LevelDbDataSourceImplDiffblueTest {
    * <p>Method under test: {@link LevelDbDataSourceImpl#getKeysNext(byte[], long)}
    */
   @Test
-  @Category(MaintainedByDiffblue.class)
+  @Category(ContributionFromDiffblue.class)
+  @ManagedByDiffblue
   @MethodsUnderTest({"java.util.List LevelDbDataSourceImpl.getKeysNext(byte[], long)"})
   public void testGetKeysNext_whenA_thenReturnEmpty() {
     // Arrange, Act and Assert
@@ -233,7 +243,8 @@ public class LevelDbDataSourceImplDiffblueTest {
    * <p>Method under test: {@link LevelDbDataSourceImpl#getNext(byte[], long)}
    */
   @Test
-  @Category(MaintainedByDiffblue.class)
+  @Category(ContributionFromDiffblue.class)
+  @ManagedByDiffblue
   @MethodsUnderTest({"java.util.Map LevelDbDataSourceImpl.getNext(byte[], long)"})
   public void testGetNext_whenA_thenReturnEmpty() {
     // Arrange, Act and Assert
@@ -249,7 +260,8 @@ public class LevelDbDataSourceImplDiffblueTest {
    * <p>Method under test: {@link LevelDbDataSourceImpl#flush()}
    */
   @Test
-  @Category(MaintainedByDiffblue.class)
+  @Category(ContributionFromDiffblue.class)
+  @ManagedByDiffblue
   @MethodsUnderTest({"boolean LevelDbDataSourceImpl.flush()"})
   public void testFlush() {
     // Arrange, Act and Assert
@@ -262,7 +274,8 @@ public class LevelDbDataSourceImplDiffblueTest {
    * <p>Method under test: {@link LevelDbDataSourceImpl#getStats()}
    */
   @Test
-  @Category(MaintainedByDiffblue.class)
+  @Category(ContributionFromDiffblue.class)
+  @ManagedByDiffblue
   @MethodsUnderTest({"java.util.List LevelDbDataSourceImpl.getStats()"})
   public void testGetStats() throws Exception {
     // Arrange, Act and Assert

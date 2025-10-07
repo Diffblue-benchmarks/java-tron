@@ -4,7 +4,8 @@ import static org.junit.Assert.assertArrayEquals;
 import static org.junit.Assert.assertFalse;
 import static org.junit.Assert.assertSame;
 import static org.junit.Assert.assertTrue;
-import com.diffblue.cover.annotations.MaintainedByDiffblue;
+import com.diffblue.cover.annotations.ContributionFromDiffblue;
+import com.diffblue.cover.annotations.ManagedByDiffblue;
 import com.diffblue.cover.annotations.MethodsUnderTest;
 import java.io.UnsupportedEncodingException;
 import org.junit.Test;
@@ -18,7 +19,8 @@ public class AccountStateCallBackUtilsDiffblueTest {
    * <p>Method under test: {@link AccountStateCallBackUtils#exe()}
    */
   @Test
-  @Category(MaintainedByDiffblue.class)
+  @Category(ContributionFromDiffblue.class)
+  @ManagedByDiffblue
   @MethodsUnderTest({"boolean AccountStateCallBackUtils.exe()"})
   public void testExe() {
     // Arrange, Act and Assert
@@ -31,7 +33,8 @@ public class AccountStateCallBackUtilsDiffblueTest {
    * <p>Method under test: default or parameterless constructor of {@link AccountStateCallBackUtils}
    */
   @Test
-  @Category(MaintainedByDiffblue.class)
+  @Category(ContributionFromDiffblue.class)
+  @ManagedByDiffblue
   @MethodsUnderTest({"void AccountStateCallBackUtils.<init>()"})
   public void testNewAccountStateCallBackUtils() {
     // Arrange, Act and Assert
@@ -53,7 +56,8 @@ public class AccountStateCallBackUtilsDiffblueTest {
    * </ul>
    */
   @Test
-  @Category(MaintainedByDiffblue.class)
+  @Category(ContributionFromDiffblue.class)
+  @ManagedByDiffblue
   @MethodsUnderTest({
     "void TrieEntry.<init>()",
     "TrieEntry TrieEntry.build(byte[], byte[])",

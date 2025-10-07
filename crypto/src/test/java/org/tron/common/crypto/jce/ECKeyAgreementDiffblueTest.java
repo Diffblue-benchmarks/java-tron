@@ -2,7 +2,8 @@ package org.tron.common.crypto.jce;
 
 import static org.junit.Assert.assertEquals;
 import static org.junit.Assert.assertSame;
-import com.diffblue.cover.annotations.MaintainedByDiffblue;
+import com.diffblue.cover.annotations.ContributionFromDiffblue;
+import com.diffblue.cover.annotations.ManagedByDiffblue;
 import com.diffblue.cover.annotations.MethodsUnderTest;
 import java.security.Provider;
 import javax.crypto.KeyAgreement;
@@ -17,7 +18,8 @@ public class ECKeyAgreementDiffblueTest {
    * <p>Method under test: {@link ECKeyAgreement#getInstance()}
    */
   @Test
-  @Category(MaintainedByDiffblue.class)
+  @Category(ContributionFromDiffblue.class)
+  @ManagedByDiffblue
   @MethodsUnderTest({"KeyAgreement ECKeyAgreement.getInstance()"})
   public void testGetInstance() {
     // Arrange and Act
@@ -45,7 +47,8 @@ public class ECKeyAgreementDiffblueTest {
    * <p>Method under test: {@link ECKeyAgreement#getInstance(Provider)}
    */
   @Test
-  @Category(MaintainedByDiffblue.class)
+  @Category(ContributionFromDiffblue.class)
+  @ManagedByDiffblue
   @MethodsUnderTest({"KeyAgreement ECKeyAgreement.getInstance(Provider)"})
   public void testGetInstanceWithProvider() {
     // Arrange

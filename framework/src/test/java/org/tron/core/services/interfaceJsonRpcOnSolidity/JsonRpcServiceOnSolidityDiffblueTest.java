@@ -3,7 +3,8 @@ package org.tron.core.services.interfaceJsonRpcOnSolidity;
 import static org.mockito.ArgumentMatchers.isA;
 import static org.mockito.Mockito.doThrow;
 import static org.mockito.Mockito.verify;
-import com.diffblue.cover.annotations.MaintainedByDiffblue;
+import com.diffblue.cover.annotations.ContributionFromDiffblue;
+import com.diffblue.cover.annotations.ManagedByDiffblue;
 import com.diffblue.cover.annotations.MethodsUnderTest;
 import javax.servlet.ServletConfig;
 import javax.servlet.ServletException;
@@ -37,7 +38,8 @@ public class JsonRpcServiceOnSolidityDiffblueTest {
    * <p>Method under test: {@link JsonRpcServiceOnSolidity#start()}
    */
   @Test
-  @Category(MaintainedByDiffblue.class)
+  @Category(ContributionFromDiffblue.class)
+  @ManagedByDiffblue
   @MethodsUnderTest({"void JsonRpcServiceOnSolidity.start()"})
   public void testStart_givenJsonRpcOnSolidityServletInitThrowRuntimeException_thenCallsInit()
       throws ServletException {

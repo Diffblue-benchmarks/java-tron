@@ -3,7 +3,8 @@ package org.tron.core.exception;
 import static org.junit.Assert.assertEquals;
 import static org.junit.Assert.assertNull;
 import static org.junit.Assert.assertSame;
-import com.diffblue.cover.annotations.MaintainedByDiffblue;
+import com.diffblue.cover.annotations.ContributionFromDiffblue;
+import com.diffblue.cover.annotations.ManagedByDiffblue;
 import com.diffblue.cover.annotations.MethodsUnderTest;
 import org.junit.Test;
 import org.junit.experimental.categories.Category;
@@ -16,7 +17,8 @@ public class RevokingStoreIllegalStateExceptionDiffblueTest {
    * RevokingStoreIllegalStateException#RevokingStoreIllegalStateException(int)}
    */
   @Test
-  @Category(MaintainedByDiffblue.class)
+  @Category(ContributionFromDiffblue.class)
+  @ManagedByDiffblue
   @MethodsUnderTest({"void RevokingStoreIllegalStateException.<init>(int)"})
   public void testNewRevokingStoreIllegalStateException() {
     // Arrange and Act
@@ -46,7 +48,8 @@ public class RevokingStoreIllegalStateExceptionDiffblueTest {
    * RevokingStoreIllegalStateException#RevokingStoreIllegalStateException(String, Throwable)}
    */
   @Test
-  @Category(MaintainedByDiffblue.class)
+  @Category(ContributionFromDiffblue.class)
+  @ManagedByDiffblue
   @MethodsUnderTest({
     "void RevokingStoreIllegalStateException.<init>()",
     "void RevokingStoreIllegalStateException.<init>(String)",
@@ -78,7 +81,8 @@ public class RevokingStoreIllegalStateExceptionDiffblueTest {
    * RevokingStoreIllegalStateException#RevokingStoreIllegalStateException(Throwable)}
    */
   @Test
-  @Category(MaintainedByDiffblue.class)
+  @Category(ContributionFromDiffblue.class)
+  @ManagedByDiffblue
   @MethodsUnderTest({
     "void RevokingStoreIllegalStateException.<init>()",
     "void RevokingStoreIllegalStateException.<init>(String)",
@@ -110,7 +114,8 @@ public class RevokingStoreIllegalStateExceptionDiffblueTest {
    * RevokingStoreIllegalStateException#RevokingStoreIllegalStateException()}
    */
   @Test
-  @Category(MaintainedByDiffblue.class)
+  @Category(ContributionFromDiffblue.class)
+  @ManagedByDiffblue
   @MethodsUnderTest({
     "void RevokingStoreIllegalStateException.<init>()",
     "void RevokingStoreIllegalStateException.<init>(String)",
@@ -140,7 +145,8 @@ public class RevokingStoreIllegalStateExceptionDiffblueTest {
    * RevokingStoreIllegalStateException#RevokingStoreIllegalStateException(String)}
    */
   @Test
-  @Category(MaintainedByDiffblue.class)
+  @Category(ContributionFromDiffblue.class)
+  @ManagedByDiffblue
   @MethodsUnderTest({
     "void RevokingStoreIllegalStateException.<init>()",
     "void RevokingStoreIllegalStateException.<init>(String)",

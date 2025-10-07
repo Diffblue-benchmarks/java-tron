@@ -9,7 +9,8 @@ import static org.mockito.Mockito.atLeast;
 import static org.mockito.Mockito.mock;
 import static org.mockito.Mockito.verify;
 import static org.mockito.Mockito.when;
-import com.diffblue.cover.annotations.MaintainedByDiffblue;
+import com.diffblue.cover.annotations.ContributionFromDiffblue;
+import com.diffblue.cover.annotations.ManagedByDiffblue;
 import com.diffblue.cover.annotations.MethodsUnderTest;
 import com.google.protobuf.ByteString;
 import java.io.UnsupportedEncodingException;
@@ -31,7 +32,8 @@ public class PbftSignCapsuleDiffblueTest {
    * <p>Method under test: {@link PbftSignCapsule#PbftSignCapsule(ByteString, List)}
    */
   @Test
-  @Category(MaintainedByDiffblue.class)
+  @Category(ContributionFromDiffblue.class)
+  @ManagedByDiffblue
   @MethodsUnderTest({"void PbftSignCapsule.<init>(ByteString, List)"})
   public void testNewPbftSignCapsule_thenReturnInstanceInitializationErrorStringIsEmptyString() {
     // Arrange
@@ -64,7 +66,8 @@ public class PbftSignCapsuleDiffblueTest {
    * <p>Method under test: {@link PbftSignCapsule#PbftSignCapsule(byte[])}
    */
   @Test
-  @Category(MaintainedByDiffblue.class)
+  @Category(ContributionFromDiffblue.class)
+  @ManagedByDiffblue
   @MethodsUnderTest({"void PbftSignCapsule.<init>(byte[])"})
   public void testNewPbftSignCapsule_thenReturnInstanceInitializationErrorStringIsEmptyString2() {
     // Arrange and Act
@@ -96,7 +99,8 @@ public class PbftSignCapsuleDiffblueTest {
    * <p>Method under test: {@link PbftSignCapsule#PbftSignCapsule(byte[])}
    */
   @Test
-  @Category(MaintainedByDiffblue.class)
+  @Category(ContributionFromDiffblue.class)
+  @ManagedByDiffblue
   @MethodsUnderTest({"void PbftSignCapsule.<init>(byte[])"})
   public void testNewPbftSignCapsule_whenAAAAAAAABytesIsUtf8_thenReturnInstanceIsNull()
       throws UnsupportedEncodingException {
@@ -120,7 +124,8 @@ public class PbftSignCapsuleDiffblueTest {
    * <p>Method under test: {@link PbftSignCapsule#PbftSignCapsule(byte[])}
    */
   @Test
-  @Category(MaintainedByDiffblue.class)
+  @Category(ContributionFromDiffblue.class)
+  @ManagedByDiffblue
   @MethodsUnderTest({"void PbftSignCapsule.<init>(byte[])"})
   public void testNewPbftSignCapsule_whenAAAAAAABytesIsUtf8_thenReturnInstanceIsNull()
       throws UnsupportedEncodingException {
@@ -144,7 +149,8 @@ public class PbftSignCapsuleDiffblueTest {
    * <p>Method under test: {@link PbftSignCapsule#PbftSignCapsule(byte[])}
    */
   @Test
-  @Category(MaintainedByDiffblue.class)
+  @Category(ContributionFromDiffblue.class)
+  @ManagedByDiffblue
   @MethodsUnderTest({"void PbftSignCapsule.<init>(byte[])"})
   public void testNewPbftSignCapsule_whenArrayOfByteWithAAndLf_thenReturnInstanceIsNull() {
     // Arrange and Act
@@ -170,7 +176,8 @@ public class PbftSignCapsuleDiffblueTest {
    * <p>Method under test: {@link PbftSignCapsule#PbftSignCapsule(byte[])}
    */
   @Test
-  @Category(MaintainedByDiffblue.class)
+  @Category(ContributionFromDiffblue.class)
+  @ManagedByDiffblue
   @MethodsUnderTest({"void PbftSignCapsule.<init>(byte[])"})
   public void testNewPbftSignCapsule_whenArrayOfByteWithEighteenAndLf_thenReturnInstanceIsNull() {
     // Arrange and Act
@@ -196,7 +203,8 @@ public class PbftSignCapsuleDiffblueTest {
    * <p>Method under test: {@link PbftSignCapsule#PbftSignCapsule(byte[])}
    */
   @Test
-  @Category(MaintainedByDiffblue.class)
+  @Category(ContributionFromDiffblue.class)
+  @ManagedByDiffblue
   @MethodsUnderTest({"void PbftSignCapsule.<init>(byte[])"})
   public void testNewPbftSignCapsule_whenArrayOfByteWithEighteenAndX_thenReturnInstanceIsNull() {
     // Arrange and Act
@@ -218,7 +226,8 @@ public class PbftSignCapsuleDiffblueTest {
    * <p>Method under test: {@link PbftSignCapsule#PbftSignCapsule(byte[])}
    */
   @Test
-  @Category(MaintainedByDiffblue.class)
+  @Category(ContributionFromDiffblue.class)
+  @ManagedByDiffblue
   @MethodsUnderTest({"void PbftSignCapsule.<init>(byte[])"})
   public void testNewPbftSignCapsule_whenArrayOfByteWithEighteenAndZero() {
     // Arrange and Act
@@ -241,7 +250,8 @@ public class PbftSignCapsuleDiffblueTest {
    * <p>Method under test: {@link PbftSignCapsule#PbftSignCapsule(byte[])}
    */
   @Test
-  @Category(MaintainedByDiffblue.class)
+  @Category(ContributionFromDiffblue.class)
+  @ManagedByDiffblue
   @MethodsUnderTest({"void PbftSignCapsule.<init>(byte[])"})
   public void testNewPbftSignCapsule_whenArrayOfByteWithMinusOneAndX_thenReturnInstanceIsNull() {
     // Arrange and Act
@@ -264,7 +274,8 @@ public class PbftSignCapsuleDiffblueTest {
    * <p>Method under test: {@link PbftSignCapsule#PbftSignCapsule(byte[])}
    */
   @Test
-  @Category(MaintainedByDiffblue.class)
+  @Category(ContributionFromDiffblue.class)
+  @ManagedByDiffblue
   @MethodsUnderTest({"void PbftSignCapsule.<init>(byte[])"})
   public void testNewPbftSignCapsule_whenArrayOfByteWithZeroAndX_thenReturnInstanceIsNull() {
     // Arrange and Act
@@ -287,7 +298,8 @@ public class PbftSignCapsuleDiffblueTest {
    * <p>Method under test: {@link PbftSignCapsule#PbftSignCapsule(byte[])}
    */
   @Test
-  @Category(MaintainedByDiffblue.class)
+  @Category(ContributionFromDiffblue.class)
+  @ManagedByDiffblue
   @MethodsUnderTest({"void PbftSignCapsule.<init>(byte[])"})
   public void testNewPbftSignCapsule_whenAxaxaxaxBytesIsUtf8_thenReturnInstanceIsNull()
       throws UnsupportedEncodingException {
@@ -310,7 +322,8 @@ public class PbftSignCapsuleDiffblueTest {
    * <p>Method under test: {@link PbftSignCapsule#PbftSignCapsule(byte[])}
    */
   @Test
-  @Category(MaintainedByDiffblue.class)
+  @Category(ContributionFromDiffblue.class)
+  @ManagedByDiffblue
   @MethodsUnderTest({"void PbftSignCapsule.<init>(byte[])"})
   public void testNewPbftSignCapsule_whenXxaxaxaxBytesIsUtf8_thenReturnInstanceIsNull()
       throws UnsupportedEncodingException {
@@ -333,7 +346,8 @@ public class PbftSignCapsuleDiffblueTest {
    * <p>Method under test: {@link PbftSignCapsule#getData()}
    */
   @Test
-  @Category(MaintainedByDiffblue.class)
+  @Category(ContributionFromDiffblue.class)
+  @ManagedByDiffblue
   @MethodsUnderTest({"byte[] PbftSignCapsule.getData()"})
   public void testGetData_givenByteStringIsEmptyReturnTrue_thenReturnEmptyArrayOfByte() {
     // Arrange
@@ -360,7 +374,8 @@ public class PbftSignCapsuleDiffblueTest {
    * <p>Method under test: {@link PbftSignCapsule#getData()}
    */
   @Test
-  @Category(MaintainedByDiffblue.class)
+  @Category(ContributionFromDiffblue.class)
+  @ManagedByDiffblue
   @MethodsUnderTest({"byte[] PbftSignCapsule.getData()"})
   public void testGetData_givenByteStringSizeReturnZero_thenReturnArrayOfByteWithLfAndZero() {
     // Arrange
@@ -389,7 +404,8 @@ public class PbftSignCapsuleDiffblueTest {
    * <p>Method under test: {@link PbftSignCapsule#getData()}
    */
   @Test
-  @Category(MaintainedByDiffblue.class)
+  @Category(ContributionFromDiffblue.class)
+  @ManagedByDiffblue
   @MethodsUnderTest({"byte[] PbftSignCapsule.getData()"})
   public void testGetData_givenPbftSignCapsuleWithDataIsArrayOfByteWithAAndX() {
     // Arrange
@@ -416,7 +432,8 @@ public class PbftSignCapsuleDiffblueTest {
    * <p>Method under test: {@link PbftSignCapsule#getData()}
    */
   @Test
-  @Category(MaintainedByDiffblue.class)
+  @Category(ContributionFromDiffblue.class)
+  @ManagedByDiffblue
   @MethodsUnderTest({"byte[] PbftSignCapsule.getData()"})
   public void testGetData_givenPbftSignCapsuleWithDataIsArrayOfByteWithMin_valueAndMinusOne() {
     // Arrange
@@ -460,7 +477,8 @@ public class PbftSignCapsuleDiffblueTest {
    * <p>Method under test: {@link PbftSignCapsule#getData()}
    */
   @Test
-  @Category(MaintainedByDiffblue.class)
+  @Category(ContributionFromDiffblue.class)
+  @ManagedByDiffblue
   @MethodsUnderTest({"byte[] PbftSignCapsule.getData()"})
   public void testGetData_givenPbftSignCapsuleWithDataIsArrayOfByteWithMin_valueAndX() {
     // Arrange
@@ -504,7 +522,8 @@ public class PbftSignCapsuleDiffblueTest {
    * <p>Method under test: {@link PbftSignCapsule#getData()}
    */
   @Test
-  @Category(MaintainedByDiffblue.class)
+  @Category(ContributionFromDiffblue.class)
+  @ManagedByDiffblue
   @MethodsUnderTest({"byte[] PbftSignCapsule.getData()"})
   public void testGetData_givenPbftSignCapsuleWithDataIsArrayOfByteWithXAndMinusOne() {
     // Arrange
@@ -531,7 +550,8 @@ public class PbftSignCapsuleDiffblueTest {
    * <p>Method under test: {@link PbftSignCapsule#getData()}
    */
   @Test
-  @Category(MaintainedByDiffblue.class)
+  @Category(ContributionFromDiffblue.class)
+  @ManagedByDiffblue
   @MethodsUnderTest({"byte[] PbftSignCapsule.getData()"})
   public void testGetData_givenPbftSignCapsuleWithDataIsEmptyArrayOfByte() {
     // Arrange
@@ -551,7 +571,8 @@ public class PbftSignCapsuleDiffblueTest {
    * <p>Method under test: {@link PbftSignCapsule#getData()}
    */
   @Test
-  @Category(MaintainedByDiffblue.class)
+  @Category(ContributionFromDiffblue.class)
+  @ManagedByDiffblue
   @MethodsUnderTest({"byte[] PbftSignCapsule.getData()"})
   public void testGetData_thenReturnArrayOfByteWithXAndA() {
     // Arrange
@@ -579,7 +600,8 @@ public class PbftSignCapsuleDiffblueTest {
    * <p>Method under test: {@link PbftSignCapsule#getData()}
    */
   @Test
-  @Category(MaintainedByDiffblue.class)
+  @Category(ContributionFromDiffblue.class)
+  @ManagedByDiffblue
   @MethodsUnderTest({"byte[] PbftSignCapsule.getData()"})
   public void testGetData_thenReturnArrayOfByteWithXAndMinusOne() {
     // Arrange
@@ -601,7 +623,8 @@ public class PbftSignCapsuleDiffblueTest {
    * <p>Method under test: {@link PbftSignCapsule#getInstance()}
    */
   @Test
-  @Category(MaintainedByDiffblue.class)
+  @Category(ContributionFromDiffblue.class)
+  @ManagedByDiffblue
   @MethodsUnderTest({"PBFTCommitResult PbftSignCapsule.getInstance()"})
   public void testGetInstance() throws UnsupportedEncodingException {
     // Arrange, Act and Assert
@@ -614,7 +637,8 @@ public class PbftSignCapsuleDiffblueTest {
    * <p>Method under test: {@link PbftSignCapsule#getPbftCommitResult()}
    */
   @Test
-  @Category(MaintainedByDiffblue.class)
+  @Category(ContributionFromDiffblue.class)
+  @ManagedByDiffblue
   @MethodsUnderTest({"PBFTCommitResult PbftSignCapsule.getPbftCommitResult()"})
   public void testGetPbftCommitResult() throws UnsupportedEncodingException {
     // Arrange, Act and Assert

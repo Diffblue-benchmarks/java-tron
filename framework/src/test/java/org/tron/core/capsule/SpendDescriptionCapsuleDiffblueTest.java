@@ -7,7 +7,8 @@ import static org.junit.Assert.assertNull;
 import static org.junit.Assert.assertSame;
 import static org.junit.Assert.assertTrue;
 import static org.mockito.Mockito.mock;
-import com.diffblue.cover.annotations.MaintainedByDiffblue;
+import com.diffblue.cover.annotations.ContributionFromDiffblue;
+import com.diffblue.cover.annotations.ManagedByDiffblue;
 import com.diffblue.cover.annotations.MethodsUnderTest;
 import com.google.protobuf.ByteString;
 import com.google.protobuf.ByteString.ByteIterator;
@@ -24,7 +25,8 @@ public class SpendDescriptionCapsuleDiffblueTest {
    * <p>Method under test: {@link SpendDescriptionCapsule#SpendDescriptionCapsule()}
    */
   @Test
-  @Category(MaintainedByDiffblue.class)
+  @Category(ContributionFromDiffblue.class)
+  @ManagedByDiffblue
   @MethodsUnderTest({"void SpendDescriptionCapsule.<init>()"})
   public void testNewSpendDescriptionCapsule() {
     // Arrange, Act and Assert
@@ -41,7 +43,8 @@ public class SpendDescriptionCapsuleDiffblueTest {
    * <p>Method under test: {@link SpendDescriptionCapsule#SpendDescriptionCapsule(byte[])}
    */
   @Test
-  @Category(MaintainedByDiffblue.class)
+  @Category(ContributionFromDiffblue.class)
+  @ManagedByDiffblue
   @MethodsUnderTest({"void SpendDescriptionCapsule.<init>(byte[])"})
   public void testNewSpendDescriptionCapsule_thenReturnDataIsEmptyArrayOfByte() {
     // Arrange and Act
@@ -63,7 +66,8 @@ public class SpendDescriptionCapsuleDiffblueTest {
    * <p>Method under test: {@link SpendDescriptionCapsule#SpendDescriptionCapsule(byte[])}
    */
   @Test
-  @Category(MaintainedByDiffblue.class)
+  @Category(ContributionFromDiffblue.class)
+  @ManagedByDiffblue
   @MethodsUnderTest({"void SpendDescriptionCapsule.<init>(byte[])"})
   public void testNewSpendDescriptionCapsule_when2AAAAAAABytesIsUtf8_thenReturnInstanceIsNull()
       throws UnsupportedEncodingException {
@@ -83,7 +87,8 @@ public class SpendDescriptionCapsuleDiffblueTest {
    * <p>Method under test: {@link SpendDescriptionCapsule#SpendDescriptionCapsule(byte[])}
    */
   @Test
-  @Category(MaintainedByDiffblue.class)
+  @Category(ContributionFromDiffblue.class)
+  @ManagedByDiffblue
   @MethodsUnderTest({"void SpendDescriptionCapsule.<init>(byte[])"})
   public void testNewSpendDescriptionCapsule_when2xaxaxaxBytesIsUtf8_thenReturnInstanceIsNull()
       throws UnsupportedEncodingException {
@@ -102,7 +107,8 @@ public class SpendDescriptionCapsuleDiffblueTest {
    * <p>Method under test: {@link SpendDescriptionCapsule#SpendDescriptionCapsule(byte[])}
    */
   @Test
-  @Category(MaintainedByDiffblue.class)
+  @Category(ContributionFromDiffblue.class)
+  @ManagedByDiffblue
   @MethodsUnderTest({"void SpendDescriptionCapsule.<init>(byte[])"})
   public void testNewSpendDescriptionCapsule_whenAAAAAAAABytesIsUtf8_thenReturnInstanceIsNull()
       throws UnsupportedEncodingException {
@@ -122,7 +128,8 @@ public class SpendDescriptionCapsuleDiffblueTest {
    * <p>Method under test: {@link SpendDescriptionCapsule#SpendDescriptionCapsule(byte[])}
    */
   @Test
-  @Category(MaintainedByDiffblue.class)
+  @Category(ContributionFromDiffblue.class)
+  @ManagedByDiffblue
   @MethodsUnderTest({"void SpendDescriptionCapsule.<init>(byte[])"})
   public void testNewSpendDescriptionCapsule_whenAAAAAAABytesIsUtf8_thenReturnInstanceIsNull()
       throws UnsupportedEncodingException {
@@ -142,7 +149,8 @@ public class SpendDescriptionCapsuleDiffblueTest {
    * <p>Method under test: {@link SpendDescriptionCapsule#SpendDescriptionCapsule(byte[])}
    */
   @Test
-  @Category(MaintainedByDiffblue.class)
+  @Category(ContributionFromDiffblue.class)
+  @ManagedByDiffblue
   @MethodsUnderTest({"void SpendDescriptionCapsule.<init>(byte[])"})
   public void testNewSpendDescriptionCapsule_whenAAAAAAABytesIsUtf8_thenReturnInstanceIsNull2()
       throws UnsupportedEncodingException {
@@ -162,7 +170,8 @@ public class SpendDescriptionCapsuleDiffblueTest {
    * <p>Method under test: {@link SpendDescriptionCapsule#SpendDescriptionCapsule(byte[])}
    */
   @Test
-  @Category(MaintainedByDiffblue.class)
+  @Category(ContributionFromDiffblue.class)
+  @ManagedByDiffblue
   @MethodsUnderTest({"void SpendDescriptionCapsule.<init>(byte[])"})
   public void testNewSpendDescriptionCapsule_whenAAAAAAABytesIsUtf8_thenReturnInstanceIsNull3()
       throws UnsupportedEncodingException {
@@ -181,7 +190,8 @@ public class SpendDescriptionCapsuleDiffblueTest {
    * <p>Method under test: {@link SpendDescriptionCapsule#SpendDescriptionCapsule(byte[])}
    */
   @Test
-  @Category(MaintainedByDiffblue.class)
+  @Category(ContributionFromDiffblue.class)
+  @ManagedByDiffblue
   @MethodsUnderTest({"void SpendDescriptionCapsule.<init>(byte[])"})
   public void testNewSpendDescriptionCapsule_whenArrayOfByteWith2AndZero() {
     // Arrange and Act
@@ -202,7 +212,8 @@ public class SpendDescriptionCapsuleDiffblueTest {
    * <p>Method under test: {@link SpendDescriptionCapsule#SpendDescriptionCapsule(byte[])}
    */
   @Test
-  @Category(MaintainedByDiffblue.class)
+  @Category(ContributionFromDiffblue.class)
+  @ManagedByDiffblue
   @MethodsUnderTest({"void SpendDescriptionCapsule.<init>(byte[])"})
   public void testNewSpendDescriptionCapsule_whenArrayOfByteWithAAndLf() {
     // Arrange and Act
@@ -226,7 +237,8 @@ public class SpendDescriptionCapsuleDiffblueTest {
    * <p>Method under test: {@link SpendDescriptionCapsule#SpendDescriptionCapsule(byte[])}
    */
   @Test
-  @Category(MaintainedByDiffblue.class)
+  @Category(ContributionFromDiffblue.class)
+  @ManagedByDiffblue
   @MethodsUnderTest({"void SpendDescriptionCapsule.<init>(byte[])"})
   public void testNewSpendDescriptionCapsule_whenArrayOfByteWithAsteriskAndZero() {
     // Arrange and Act
@@ -247,7 +259,8 @@ public class SpendDescriptionCapsuleDiffblueTest {
    * <p>Method under test: {@link SpendDescriptionCapsule#SpendDescriptionCapsule(byte[])}
    */
   @Test
-  @Category(MaintainedByDiffblue.class)
+  @Category(ContributionFromDiffblue.class)
+  @ManagedByDiffblue
   @MethodsUnderTest({"void SpendDescriptionCapsule.<init>(byte[])"})
   public void testNewSpendDescriptionCapsule_whenArrayOfByteWithEighteenAndLf() {
     // Arrange and Act
@@ -271,7 +284,8 @@ public class SpendDescriptionCapsuleDiffblueTest {
    * <p>Method under test: {@link SpendDescriptionCapsule#SpendDescriptionCapsule(byte[])}
    */
   @Test
-  @Category(MaintainedByDiffblue.class)
+  @Category(ContributionFromDiffblue.class)
+  @ManagedByDiffblue
   @MethodsUnderTest({"void SpendDescriptionCapsule.<init>(byte[])"})
   public void testNewSpendDescriptionCapsule_whenArrayOfByteWithEighteenAndX() {
     // Arrange and Act
@@ -292,7 +306,8 @@ public class SpendDescriptionCapsuleDiffblueTest {
    * <p>Method under test: {@link SpendDescriptionCapsule#SpendDescriptionCapsule(byte[])}
    */
   @Test
-  @Category(MaintainedByDiffblue.class)
+  @Category(ContributionFromDiffblue.class)
+  @ManagedByDiffblue
   @MethodsUnderTest({"void SpendDescriptionCapsule.<init>(byte[])"})
   public void testNewSpendDescriptionCapsule_whenArrayOfByteWithEighteenAndZero() {
     // Arrange and Act
@@ -313,7 +328,8 @@ public class SpendDescriptionCapsuleDiffblueTest {
    * <p>Method under test: {@link SpendDescriptionCapsule#SpendDescriptionCapsule(byte[])}
    */
   @Test
-  @Category(MaintainedByDiffblue.class)
+  @Category(ContributionFromDiffblue.class)
+  @ManagedByDiffblue
   @MethodsUnderTest({"void SpendDescriptionCapsule.<init>(byte[])"})
   public void testNewSpendDescriptionCapsule_whenArrayOfByteWithMinusOneAndX() {
     // Arrange and Act
@@ -334,7 +350,8 @@ public class SpendDescriptionCapsuleDiffblueTest {
    * <p>Method under test: {@link SpendDescriptionCapsule#SpendDescriptionCapsule(byte[])}
    */
   @Test
-  @Category(MaintainedByDiffblue.class)
+  @Category(ContributionFromDiffblue.class)
+  @ManagedByDiffblue
   @MethodsUnderTest({"void SpendDescriptionCapsule.<init>(byte[])"})
   public void testNewSpendDescriptionCapsule_whenArrayOfByteWithQuotationMarkAndZero() {
     // Arrange and Act
@@ -355,7 +372,8 @@ public class SpendDescriptionCapsuleDiffblueTest {
    * <p>Method under test: {@link SpendDescriptionCapsule#SpendDescriptionCapsule(byte[])}
    */
   @Test
-  @Category(MaintainedByDiffblue.class)
+  @Category(ContributionFromDiffblue.class)
+  @ManagedByDiffblue
   @MethodsUnderTest({"void SpendDescriptionCapsule.<init>(byte[])"})
   public void testNewSpendDescriptionCapsule_whenArrayOfByteWithTwentySixAndLf() {
     // Arrange and Act
@@ -379,7 +397,8 @@ public class SpendDescriptionCapsuleDiffblueTest {
    * <p>Method under test: {@link SpendDescriptionCapsule#SpendDescriptionCapsule(byte[])}
    */
   @Test
-  @Category(MaintainedByDiffblue.class)
+  @Category(ContributionFromDiffblue.class)
+  @ManagedByDiffblue
   @MethodsUnderTest({"void SpendDescriptionCapsule.<init>(byte[])"})
   public void testNewSpendDescriptionCapsule_whenArrayOfByteWithTwentySixAndX() {
     // Arrange and Act
@@ -400,7 +419,8 @@ public class SpendDescriptionCapsuleDiffblueTest {
    * <p>Method under test: {@link SpendDescriptionCapsule#SpendDescriptionCapsule(byte[])}
    */
   @Test
-  @Category(MaintainedByDiffblue.class)
+  @Category(ContributionFromDiffblue.class)
+  @ManagedByDiffblue
   @MethodsUnderTest({"void SpendDescriptionCapsule.<init>(byte[])"})
   public void testNewSpendDescriptionCapsule_whenArrayOfByteWithTwentySixAndZero() {
     // Arrange and Act
@@ -421,7 +441,8 @@ public class SpendDescriptionCapsuleDiffblueTest {
    * <p>Method under test: {@link SpendDescriptionCapsule#SpendDescriptionCapsule(byte[])}
    */
   @Test
-  @Category(MaintainedByDiffblue.class)
+  @Category(ContributionFromDiffblue.class)
+  @ManagedByDiffblue
   @MethodsUnderTest({"void SpendDescriptionCapsule.<init>(byte[])"})
   public void testNewSpendDescriptionCapsule_whenArrayOfByteWithZeroAndX() {
     // Arrange and Act
@@ -443,7 +464,8 @@ public class SpendDescriptionCapsuleDiffblueTest {
    * <p>Method under test: {@link SpendDescriptionCapsule#SpendDescriptionCapsule(byte[])}
    */
   @Test
-  @Category(MaintainedByDiffblue.class)
+  @Category(ContributionFromDiffblue.class)
+  @ManagedByDiffblue
   @MethodsUnderTest({"void SpendDescriptionCapsule.<init>(byte[])"})
   public void testNewSpendDescriptionCapsule_whenAxaxaxaxBytesIsUtf8_thenReturnInstanceIsNull()
       throws UnsupportedEncodingException {
@@ -464,7 +486,8 @@ public class SpendDescriptionCapsuleDiffblueTest {
    * ByteString, ByteString, ByteString, ByteString, ByteString)}
    */
   @Test
-  @Category(MaintainedByDiffblue.class)
+  @Category(ContributionFromDiffblue.class)
+  @ManagedByDiffblue
   @MethodsUnderTest({
     "void SpendDescriptionCapsule.<init>(ByteString, ByteString, ByteString, ByteString, ByteString, ByteString)"
   })
@@ -504,7 +527,8 @@ public class SpendDescriptionCapsuleDiffblueTest {
    * <p>Method under test: {@link SpendDescriptionCapsule#SpendDescriptionCapsule(byte[])}
    */
   @Test
-  @Category(MaintainedByDiffblue.class)
+  @Category(ContributionFromDiffblue.class)
+  @ManagedByDiffblue
   @MethodsUnderTest({"void SpendDescriptionCapsule.<init>(byte[])"})
   public void testNewSpendDescriptionCapsule_whenXaxaxaxBytesIsUtf8_thenReturnInstanceIsNull()
       throws UnsupportedEncodingException {
@@ -523,7 +547,8 @@ public class SpendDescriptionCapsuleDiffblueTest {
    * <p>Method under test: {@link SpendDescriptionCapsule#SpendDescriptionCapsule(byte[])}
    */
   @Test
-  @Category(MaintainedByDiffblue.class)
+  @Category(ContributionFromDiffblue.class)
+  @ManagedByDiffblue
   @MethodsUnderTest({"void SpendDescriptionCapsule.<init>(byte[])"})
   public void testNewSpendDescriptionCapsule_whenXaxaxaxBytesIsUtf8_thenReturnInstanceIsNull2()
       throws UnsupportedEncodingException {
@@ -542,7 +567,8 @@ public class SpendDescriptionCapsuleDiffblueTest {
    * <p>Method under test: {@link SpendDescriptionCapsule#SpendDescriptionCapsule(byte[])}
    */
   @Test
-  @Category(MaintainedByDiffblue.class)
+  @Category(ContributionFromDiffblue.class)
+  @ManagedByDiffblue
   @MethodsUnderTest({"void SpendDescriptionCapsule.<init>(byte[])"})
   public void testNewSpendDescriptionCapsule_whenXxaxaxaxBytesIsUtf8_thenReturnInstanceIsNull()
       throws UnsupportedEncodingException {
@@ -556,7 +582,8 @@ public class SpendDescriptionCapsuleDiffblueTest {
    * <p>Method under test: {@link SpendDescriptionCapsule#getValueCommitment()}
    */
   @Test
-  @Category(MaintainedByDiffblue.class)
+  @Category(ContributionFromDiffblue.class)
+  @ManagedByDiffblue
   @MethodsUnderTest({"ByteString SpendDescriptionCapsule.getValueCommitment()"})
   public void testGetValueCommitment() {
     // Arrange
@@ -581,7 +608,8 @@ public class SpendDescriptionCapsuleDiffblueTest {
    * <p>Method under test: {@link SpendDescriptionCapsule#setValueCommitment(byte[])}
    */
   @Test
-  @Category(MaintainedByDiffblue.class)
+  @Category(ContributionFromDiffblue.class)
+  @ManagedByDiffblue
   @MethodsUnderTest({"void SpendDescriptionCapsule.setValueCommitment(byte[])"})
   public void testSetValueCommitmentWithByte() throws UnsupportedEncodingException {
     // Arrange
@@ -612,7 +640,8 @@ public class SpendDescriptionCapsuleDiffblueTest {
    * <p>Method under test: {@link SpendDescriptionCapsule#setValueCommitment(ByteString)}
    */
   @Test
-  @Category(MaintainedByDiffblue.class)
+  @Category(ContributionFromDiffblue.class)
+  @ManagedByDiffblue
   @MethodsUnderTest({"void SpendDescriptionCapsule.setValueCommitment(ByteString)"})
   public void testSetValueCommitmentWithByteString() {
     // Arrange
@@ -638,7 +667,8 @@ public class SpendDescriptionCapsuleDiffblueTest {
    * <p>Method under test: {@link SpendDescriptionCapsule#getAnchor()}
    */
   @Test
-  @Category(MaintainedByDiffblue.class)
+  @Category(ContributionFromDiffblue.class)
+  @ManagedByDiffblue
   @MethodsUnderTest({"ByteString SpendDescriptionCapsule.getAnchor()"})
   public void testGetAnchor() {
     // Arrange
@@ -660,7 +690,8 @@ public class SpendDescriptionCapsuleDiffblueTest {
    * <p>Method under test: {@link SpendDescriptionCapsule#setAnchor(byte[])}
    */
   @Test
-  @Category(MaintainedByDiffblue.class)
+  @Category(ContributionFromDiffblue.class)
+  @ManagedByDiffblue
   @MethodsUnderTest({"void SpendDescriptionCapsule.setAnchor(byte[])"})
   public void testSetAnchorWithByte() throws UnsupportedEncodingException {
     // Arrange
@@ -701,7 +732,8 @@ public class SpendDescriptionCapsuleDiffblueTest {
    * <p>Method under test: {@link SpendDescriptionCapsule#setAnchor(ByteString)}
    */
   @Test
-  @Category(MaintainedByDiffblue.class)
+  @Category(ContributionFromDiffblue.class)
+  @ManagedByDiffblue
   @MethodsUnderTest({"void SpendDescriptionCapsule.setAnchor(ByteString)"})
   public void testSetAnchorWithByteString() {
     // Arrange
@@ -740,7 +772,8 @@ public class SpendDescriptionCapsuleDiffblueTest {
    * <p>Method under test: {@link SpendDescriptionCapsule#getNullifier()}
    */
   @Test
-  @Category(MaintainedByDiffblue.class)
+  @Category(ContributionFromDiffblue.class)
+  @ManagedByDiffblue
   @MethodsUnderTest({"ByteString SpendDescriptionCapsule.getNullifier()"})
   public void testGetNullifier() {
     // Arrange
@@ -765,7 +798,8 @@ public class SpendDescriptionCapsuleDiffblueTest {
    * <p>Method under test: {@link SpendDescriptionCapsule#setNullifier(byte[])}
    */
   @Test
-  @Category(MaintainedByDiffblue.class)
+  @Category(ContributionFromDiffblue.class)
+  @ManagedByDiffblue
   @MethodsUnderTest({"void SpendDescriptionCapsule.setNullifier(byte[])"})
   public void testSetNullifierWithByte() throws UnsupportedEncodingException {
     // Arrange
@@ -798,7 +832,8 @@ public class SpendDescriptionCapsuleDiffblueTest {
    * <p>Method under test: {@link SpendDescriptionCapsule#setNullifier(ByteString)}
    */
   @Test
-  @Category(MaintainedByDiffblue.class)
+  @Category(ContributionFromDiffblue.class)
+  @ManagedByDiffblue
   @MethodsUnderTest({"void SpendDescriptionCapsule.setNullifier(ByteString)"})
   public void testSetNullifierWithByteString() {
     // Arrange
@@ -824,7 +859,8 @@ public class SpendDescriptionCapsuleDiffblueTest {
    * <p>Method under test: {@link SpendDescriptionCapsule#getRk()}
    */
   @Test
-  @Category(MaintainedByDiffblue.class)
+  @Category(ContributionFromDiffblue.class)
+  @ManagedByDiffblue
   @MethodsUnderTest({"ByteString SpendDescriptionCapsule.getRk()"})
   public void testGetRk() {
     // Arrange
@@ -849,7 +885,8 @@ public class SpendDescriptionCapsuleDiffblueTest {
    * <p>Method under test: {@link SpendDescriptionCapsule#setRk(byte[])}
    */
   @Test
-  @Category(MaintainedByDiffblue.class)
+  @Category(ContributionFromDiffblue.class)
+  @ManagedByDiffblue
   @MethodsUnderTest({"void SpendDescriptionCapsule.setRk(byte[])"})
   public void testSetRkWithByte() throws UnsupportedEncodingException {
     // Arrange
@@ -885,7 +922,8 @@ public class SpendDescriptionCapsuleDiffblueTest {
    * <p>Method under test: {@link SpendDescriptionCapsule#setRk(ByteString)}
    */
   @Test
-  @Category(MaintainedByDiffblue.class)
+  @Category(ContributionFromDiffblue.class)
+  @ManagedByDiffblue
   @MethodsUnderTest({"void SpendDescriptionCapsule.setRk(ByteString)"})
   public void testSetRkWithByteString_thenSpendDescriptionCapsuleInstanceAllFieldsSizeIsOne() {
     // Arrange
@@ -911,7 +949,8 @@ public class SpendDescriptionCapsuleDiffblueTest {
    * <p>Method under test: {@link SpendDescriptionCapsule#getZkproof()}
    */
   @Test
-  @Category(MaintainedByDiffblue.class)
+  @Category(ContributionFromDiffblue.class)
+  @ManagedByDiffblue
   @MethodsUnderTest({"ByteString SpendDescriptionCapsule.getZkproof()"})
   public void testGetZkproof() {
     // Arrange
@@ -936,7 +975,8 @@ public class SpendDescriptionCapsuleDiffblueTest {
    * <p>Method under test: {@link SpendDescriptionCapsule#setZkproof(byte[])}
    */
   @Test
-  @Category(MaintainedByDiffblue.class)
+  @Category(ContributionFromDiffblue.class)
+  @ManagedByDiffblue
   @MethodsUnderTest({"void SpendDescriptionCapsule.setZkproof(byte[])"})
   public void testSetZkproofWithByte() throws UnsupportedEncodingException {
     // Arrange
@@ -967,7 +1007,8 @@ public class SpendDescriptionCapsuleDiffblueTest {
    * <p>Method under test: {@link SpendDescriptionCapsule#setZkproof(ByteString)}
    */
   @Test
-  @Category(MaintainedByDiffblue.class)
+  @Category(ContributionFromDiffblue.class)
+  @ManagedByDiffblue
   @MethodsUnderTest({"void SpendDescriptionCapsule.setZkproof(ByteString)"})
   public void testSetZkproofWithByteString() {
     // Arrange
@@ -993,7 +1034,8 @@ public class SpendDescriptionCapsuleDiffblueTest {
    * <p>Method under test: {@link SpendDescriptionCapsule#getSpendAuthoritySignature()}
    */
   @Test
-  @Category(MaintainedByDiffblue.class)
+  @Category(ContributionFromDiffblue.class)
+  @ManagedByDiffblue
   @MethodsUnderTest({"ByteString SpendDescriptionCapsule.getSpendAuthoritySignature()"})
   public void testGetSpendAuthoritySignature() {
     // Arrange
@@ -1018,7 +1060,8 @@ public class SpendDescriptionCapsuleDiffblueTest {
    * <p>Method under test: {@link SpendDescriptionCapsule#setSpendAuthoritySignature(ByteString)}
    */
   @Test
-  @Category(MaintainedByDiffblue.class)
+  @Category(ContributionFromDiffblue.class)
+  @ManagedByDiffblue
   @MethodsUnderTest({"void SpendDescriptionCapsule.setSpendAuthoritySignature(ByteString)"})
   public void testSetSpendAuthoritySignature() {
     // Arrange
@@ -1044,7 +1087,8 @@ public class SpendDescriptionCapsuleDiffblueTest {
    * <p>Method under test: {@link SpendDescriptionCapsule#getData()}
    */
   @Test
-  @Category(MaintainedByDiffblue.class)
+  @Category(ContributionFromDiffblue.class)
+  @ManagedByDiffblue
   @MethodsUnderTest({"byte[] SpendDescriptionCapsule.getData()"})
   public void testGetData() {
     // Arrange, Act and Assert
@@ -1057,7 +1101,8 @@ public class SpendDescriptionCapsuleDiffblueTest {
    * <p>Method under test: {@link SpendDescriptionCapsule#getInstance()}
    */
   @Test
-  @Category(MaintainedByDiffblue.class)
+  @Category(ContributionFromDiffblue.class)
+  @ManagedByDiffblue
   @MethodsUnderTest({"SpendDescription SpendDescriptionCapsule.getInstance()"})
   public void testGetInstance() {
     // Arrange and Act

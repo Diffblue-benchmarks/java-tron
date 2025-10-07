@@ -3,7 +3,8 @@ package org.tron.common.crypto.cryptohash;
 import static org.junit.Assert.assertArrayEquals;
 import static org.junit.Assert.assertEquals;
 import static org.junit.Assert.assertSame;
-import com.diffblue.cover.annotations.MaintainedByDiffblue;
+import com.diffblue.cover.annotations.ContributionFromDiffblue;
+import com.diffblue.cover.annotations.ManagedByDiffblue;
 import com.diffblue.cover.annotations.MethodsUnderTest;
 import java.io.UnsupportedEncodingException;
 import org.junit.Test;
@@ -16,7 +17,8 @@ public class DigestEngineDiffblueTest {
    * <p>Method under test: {@link DigestEngine#digest()}
    */
   @Test
-  @Category(MaintainedByDiffblue.class)
+  @Category(ContributionFromDiffblue.class)
+  @ManagedByDiffblue
   @MethodsUnderTest({"byte[] DigestEngine.digest()"})
   public void testDigest() {
     // Arrange
@@ -49,7 +51,8 @@ public class DigestEngineDiffblueTest {
    * <p>Method under test: {@link DigestEngine#digest(byte[], int, int)}
    */
   @Test
-  @Category(MaintainedByDiffblue.class)
+  @Category(ContributionFromDiffblue.class)
+  @ManagedByDiffblue
   @MethodsUnderTest({"int DigestEngine.digest(byte[], int, int)"})
   public void testDigestWithBufOffsetLen_thenArrayLengthIsOneHundredThirtySix()
       throws UnsupportedEncodingException {
@@ -75,7 +78,8 @@ public class DigestEngineDiffblueTest {
    * <p>Method under test: {@link DigestEngine#digest(byte[])}
    */
   @Test
-  @Category(MaintainedByDiffblue.class)
+  @Category(ContributionFromDiffblue.class)
+  @ManagedByDiffblue
   @MethodsUnderTest({"byte[] DigestEngine.digest(byte[])"})
   public void testDigestWithInput() throws UnsupportedEncodingException {
     // Arrange
@@ -111,7 +115,8 @@ public class DigestEngineDiffblueTest {
    * <p>Method under test: {@link DigestEngine#update(byte)}
    */
   @Test
-  @Category(MaintainedByDiffblue.class)
+  @Category(ContributionFromDiffblue.class)
+  @ManagedByDiffblue
   @MethodsUnderTest({"void DigestEngine.update(byte)"})
   public void testUpdateWithByte() {
     // Arrange
@@ -133,7 +138,8 @@ public class DigestEngineDiffblueTest {
    * <p>Method under test: {@link DigestEngine#update(byte[])}
    */
   @Test
-  @Category(MaintainedByDiffblue.class)
+  @Category(ContributionFromDiffblue.class)
+  @ManagedByDiffblue
   @MethodsUnderTest({"void DigestEngine.update(byte[])"})
   public void testUpdateWithByte2() throws UnsupportedEncodingException {
     // Arrange
@@ -167,7 +173,8 @@ public class DigestEngineDiffblueTest {
    * <p>Method under test: {@link DigestEngine#update(byte[], int, int)}
    */
   @Test
-  @Category(MaintainedByDiffblue.class)
+  @Category(ContributionFromDiffblue.class)
+  @ManagedByDiffblue
   @MethodsUnderTest({"void DigestEngine.update(byte[], int, int)"})
   public void testUpdateWithByteIntInt_thenArrayLengthIsOneHundredThirtySix()
       throws UnsupportedEncodingException {
@@ -192,7 +199,8 @@ public class DigestEngineDiffblueTest {
    * <p>Method under test: {@link DigestEngine#getInternalBlockLength()}
    */
   @Test
-  @Category(MaintainedByDiffblue.class)
+  @Category(ContributionFromDiffblue.class)
+  @ManagedByDiffblue
   @MethodsUnderTest({"int DigestEngine.getInternalBlockLength()"})
   public void testGetInternalBlockLength() {
     // Arrange, Act and Assert
@@ -205,7 +213,8 @@ public class DigestEngineDiffblueTest {
    * <p>Method under test: {@link DigestEngine#flush()}
    */
   @Test
-  @Category(MaintainedByDiffblue.class)
+  @Category(ContributionFromDiffblue.class)
+  @ManagedByDiffblue
   @MethodsUnderTest({"int DigestEngine.flush()"})
   public void testFlush() {
     // Arrange, Act and Assert
@@ -218,7 +227,8 @@ public class DigestEngineDiffblueTest {
    * <p>Method under test: {@link DigestEngine#getBlockBuffer()}
    */
   @Test
-  @Category(MaintainedByDiffblue.class)
+  @Category(ContributionFromDiffblue.class)
+  @ManagedByDiffblue
   @MethodsUnderTest({"byte[] DigestEngine.getBlockBuffer()"})
   public void testGetBlockBuffer() {
     // Arrange and Act
@@ -284,7 +294,8 @@ public class DigestEngineDiffblueTest {
    * <p>Method under test: {@link DigestEngine#getBlockCount()}
    */
   @Test
-  @Category(MaintainedByDiffblue.class)
+  @Category(ContributionFromDiffblue.class)
+  @ManagedByDiffblue
   @MethodsUnderTest({"long DigestEngine.getBlockCount()"})
   public void testGetBlockCount() {
     // Arrange, Act and Assert
@@ -303,7 +314,8 @@ public class DigestEngineDiffblueTest {
    * <p>Method under test: {@link DigestEngine#copyState(DigestEngine)}
    */
   @Test
-  @Category(MaintainedByDiffblue.class)
+  @Category(ContributionFromDiffblue.class)
+  @ManagedByDiffblue
   @MethodsUnderTest({"Digest DigestEngine.copyState(DigestEngine)"})
   public void testCopyState_givenKeccak256_whenKeccak256_thenReturnKeccak256() {
     // Arrange

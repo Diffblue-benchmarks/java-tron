@@ -12,7 +12,8 @@ import static org.mockito.Mockito.mock;
 import static org.mockito.Mockito.verify;
 import static org.mockito.Mockito.when;
 import com.alibaba.fastjson.serializer.SerializeWriter;
-import com.diffblue.cover.annotations.MaintainedByDiffblue;
+import com.diffblue.cover.annotations.ContributionFromDiffblue;
+import com.diffblue.cover.annotations.ManagedByDiffblue;
 import com.diffblue.cover.annotations.MethodsUnderTest;
 import java.io.IOException;
 import java.io.PrintWriter;
@@ -63,7 +64,8 @@ public class MetricsServletDiffblueTest {
    * <p>Method under test: {@link MetricsServlet#doGet(HttpServletRequest, HttpServletResponse)}
    */
   @Test
-  @Category(MaintainedByDiffblue.class)
+  @Category(ContributionFromDiffblue.class)
+  @ManagedByDiffblue
   @MethodsUnderTest({"void MetricsServlet.doGet(HttpServletRequest, HttpServletResponse)"})
   public void testDoGet() throws IOException {
     // Arrange
@@ -145,7 +147,8 @@ public class MetricsServletDiffblueTest {
    * <p>Method under test: {@link MetricsServlet#doGet(HttpServletRequest, HttpServletResponse)}
    */
   @Test
-  @Category(MaintainedByDiffblue.class)
+  @Category(ContributionFromDiffblue.class)
+  @ManagedByDiffblue
   @MethodsUnderTest({"void MetricsServlet.doGet(HttpServletRequest, HttpServletResponse)"})
   public void testDoGet2() throws IOException {
     // Arrange
@@ -178,7 +181,8 @@ public class MetricsServletDiffblueTest {
    * <p>Method under test: {@link MetricsServlet#doGet(HttpServletRequest, HttpServletResponse)}
    */
   @Test
-  @Category(MaintainedByDiffblue.class)
+  @Category(ContributionFromDiffblue.class)
+  @ManagedByDiffblue
   @MethodsUnderTest({"void MetricsServlet.doGet(HttpServletRequest, HttpServletResponse)"})
   public void testDoGet3() throws IOException {
     // Arrange
@@ -260,7 +264,8 @@ public class MetricsServletDiffblueTest {
    * <p>Method under test: {@link MetricsServlet#doGet(HttpServletRequest, HttpServletResponse)}
    */
   @Test
-  @Category(MaintainedByDiffblue.class)
+  @Category(ContributionFromDiffblue.class)
+  @ManagedByDiffblue
   @MethodsUnderTest({"void MetricsServlet.doGet(HttpServletRequest, HttpServletResponse)"})
   public void testDoGet4() throws IOException {
     // Arrange
@@ -352,7 +357,8 @@ public class MetricsServletDiffblueTest {
    * <p>Method under test: {@link MetricsServlet#doGet(HttpServletRequest, HttpServletResponse)}
    */
   @Test
-  @Category(MaintainedByDiffblue.class)
+  @Category(ContributionFromDiffblue.class)
+  @ManagedByDiffblue
   @MethodsUnderTest({"void MetricsServlet.doGet(HttpServletRequest, HttpServletResponse)"})
   public void testDoGet5() throws IOException {
     // Arrange
@@ -470,7 +476,8 @@ public class MetricsServletDiffblueTest {
    * <p>Method under test: {@link MetricsServlet#doGet(HttpServletRequest, HttpServletResponse)}
    */
   @Test
-  @Category(MaintainedByDiffblue.class)
+  @Category(ContributionFromDiffblue.class)
+  @ManagedByDiffblue
   @MethodsUnderTest({"void MetricsServlet.doGet(HttpServletRequest, HttpServletResponse)"})
   public void testDoGet6() throws IOException {
     // Arrange
@@ -539,7 +546,8 @@ public class MetricsServletDiffblueTest {
    * <p>Method under test: {@link MetricsServlet#doGet(HttpServletRequest, HttpServletResponse)}
    */
   @Test
-  @Category(MaintainedByDiffblue.class)
+  @Category(ContributionFromDiffblue.class)
+  @ManagedByDiffblue
   @MethodsUnderTest({"void MetricsServlet.doGet(HttpServletRequest, HttpServletResponse)"})
   public void testDoGet_givenPrintWriterWithSerializeWriter_thenCallsGetWriter()
       throws IOException {
@@ -627,7 +635,8 @@ public class MetricsServletDiffblueTest {
    * <p>Method under test: {@link MetricsServlet#doGet(HttpServletRequest, HttpServletResponse)}
    */
   @Test
-  @Category(MaintainedByDiffblue.class)
+  @Category(ContributionFromDiffblue.class)
+  @ManagedByDiffblue
   @MethodsUnderTest({"void MetricsServlet.doGet(HttpServletRequest, HttpServletResponse)"})
   public void testDoGet_givenRuntimeException_thenThrowRuntimeException() throws IOException {
     // Arrange

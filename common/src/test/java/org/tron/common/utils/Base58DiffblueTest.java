@@ -1,7 +1,8 @@
 package org.tron.common.utils;
 
 import static org.junit.Assert.assertArrayEquals;
-import com.diffblue.cover.annotations.MaintainedByDiffblue;
+import com.diffblue.cover.annotations.ContributionFromDiffblue;
+import com.diffblue.cover.annotations.ManagedByDiffblue;
 import com.diffblue.cover.annotations.MethodsUnderTest;
 import java.io.UnsupportedEncodingException;
 import org.junit.Test;
@@ -23,7 +24,8 @@ public class Base58DiffblueTest {
    * </ul>
    */
   @Test
-  @Category(MaintainedByDiffblue.class)
+  @Category(ContributionFromDiffblue.class)
+  @ManagedByDiffblue
   @MethodsUnderTest({"String Base58.encode(byte[])", "byte[] Base58.decode(String)"})
   public void testEncodeAndDecode_thenReturnDecodeIsAxaxaxaxBytesIsUtf8()
       throws UnsupportedEncodingException, IllegalArgumentException {
@@ -50,7 +52,8 @@ public class Base58DiffblueTest {
    * </ul>
    */
   @Test
-  @Category(MaintainedByDiffblue.class)
+  @Category(ContributionFromDiffblue.class)
+  @ManagedByDiffblue
   @MethodsUnderTest({"String Base58.encode(byte[])", "byte[] Base58.decode(String)"})
   public void testEncodeAndDecode_whenA_thenReturnDecodeIsArrayOfByteWithZeroAndX()
       throws IllegalArgumentException {
@@ -77,7 +80,8 @@ public class Base58DiffblueTest {
    * </ul>
    */
   @Test
-  @Category(MaintainedByDiffblue.class)
+  @Category(ContributionFromDiffblue.class)
+  @ManagedByDiffblue
   @MethodsUnderTest({"String Base58.encode(byte[])", "byte[] Base58.decode(String)"})
   public void testEncodeAndDecode_whenEmptyArrayOfByte_thenReturnDecodeIsEmptyArrayOfByte()
       throws IllegalArgumentException {

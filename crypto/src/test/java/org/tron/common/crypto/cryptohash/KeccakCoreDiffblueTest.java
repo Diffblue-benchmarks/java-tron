@@ -2,7 +2,8 @@ package org.tron.common.crypto.cryptohash;
 
 import static org.junit.Assert.assertEquals;
 import static org.junit.Assert.assertSame;
-import com.diffblue.cover.annotations.MaintainedByDiffblue;
+import com.diffblue.cover.annotations.ContributionFromDiffblue;
+import com.diffblue.cover.annotations.ManagedByDiffblue;
 import com.diffblue.cover.annotations.MethodsUnderTest;
 import java.security.MessageDigest;
 import java.security.NoSuchAlgorithmException;
@@ -16,7 +17,8 @@ public class KeccakCoreDiffblueTest {
    * <p>Method under test: {@link KeccakCore#getBlockLength()}
    */
   @Test
-  @Category(MaintainedByDiffblue.class)
+  @Category(ContributionFromDiffblue.class)
+  @ManagedByDiffblue
   @MethodsUnderTest({"int KeccakCore.getBlockLength()"})
   public void testGetBlockLength() {
     // Arrange, Act and Assert
@@ -35,7 +37,8 @@ public class KeccakCoreDiffblueTest {
    * <p>Method under test: {@link KeccakCore#copyState(KeccakCore)}
    */
   @Test
-  @Category(MaintainedByDiffblue.class)
+  @Category(ContributionFromDiffblue.class)
+  @ManagedByDiffblue
   @MethodsUnderTest({"Digest KeccakCore.copyState(KeccakCore)"})
   public void testCopyStateWithDst_givenKeccak256_whenKeccak256_thenReturnKeccak256() {
     // Arrange
@@ -60,7 +63,8 @@ public class KeccakCoreDiffblueTest {
    * <p>Method under test: {@link KeccakCore#toString()}
    */
   @Test
-  @Category(MaintainedByDiffblue.class)
+  @Category(ContributionFromDiffblue.class)
+  @ManagedByDiffblue
   @MethodsUnderTest({"java.lang.String KeccakCore.toString()"})
   public void testToString_givenInstanceIsSha1_thenReturnSha1MessageDigestFromSunInitialized()
       throws NoSuchAlgorithmException {
@@ -81,7 +85,8 @@ public class KeccakCoreDiffblueTest {
    * <p>Method under test: {@link KeccakCore#toString()}
    */
   @Test
-  @Category(MaintainedByDiffblue.class)
+  @Category(ContributionFromDiffblue.class)
+  @ManagedByDiffblue
   @MethodsUnderTest({"java.lang.String KeccakCore.toString()"})
   public void testToString_givenKeccak256_thenReturnKeccak256() {
     // Arrange, Act and Assert

@@ -4,7 +4,8 @@ import static org.junit.Assert.assertEquals;
 import static org.junit.Assert.assertFalse;
 import static org.junit.Assert.assertNull;
 import static org.junit.Assert.assertTrue;
-import com.diffblue.cover.annotations.MaintainedByDiffblue;
+import com.diffblue.cover.annotations.ContributionFromDiffblue;
+import com.diffblue.cover.annotations.ManagedByDiffblue;
 import com.diffblue.cover.annotations.MethodsUnderTest;
 import java.io.File;
 import java.io.UnsupportedEncodingException;
@@ -36,7 +37,8 @@ public class RocksDbDataSourceImplDiffblueTest {
    * </ul>
    */
   @Test
-  @Category(MaintainedByDiffblue.class)
+  @Category(ContributionFromDiffblue.class)
+  @ManagedByDiffblue
   @MethodsUnderTest({
     "void RocksDbDataSourceImpl.<init>()",
     "void RocksDbDataSourceImpl.<init>(String, String)",
@@ -89,7 +91,8 @@ public class RocksDbDataSourceImplDiffblueTest {
    * </ul>
    */
   @Test
-  @Category(MaintainedByDiffblue.class)
+  @Category(ContributionFromDiffblue.class)
+  @ManagedByDiffblue
   @MethodsUnderTest({
     "void RocksDbDataSourceImpl.<init>()",
     "void RocksDbDataSourceImpl.<init>(String, String)",
@@ -132,7 +135,8 @@ public class RocksDbDataSourceImplDiffblueTest {
    * <p>Method under test: {@link RocksDbDataSourceImpl#getDbPath()}
    */
   @Test
-  @Category(MaintainedByDiffblue.class)
+  @Category(ContributionFromDiffblue.class)
+  @ManagedByDiffblue
   @MethodsUnderTest({"java.nio.file.Path RocksDbDataSourceImpl.getDbPath()"})
   public void testGetDbPath_thenReturnToFileNameIsName() {
     // Arrange, Act and Assert
@@ -147,7 +151,8 @@ public class RocksDbDataSourceImplDiffblueTest {
    * <p>Method under test: {@link RocksDbDataSourceImpl#getData(byte[])}
    */
   @Test
-  @Category(MaintainedByDiffblue.class)
+  @Category(ContributionFromDiffblue.class)
+  @ManagedByDiffblue
   @MethodsUnderTest({"byte[] RocksDbDataSourceImpl.getData(byte[])"})
   public void testGetDataWithByte() throws UnsupportedEncodingException {
     // Arrange and Act
@@ -164,7 +169,8 @@ public class RocksDbDataSourceImplDiffblueTest {
    * <p>Method under test: {@link RocksDbDataSourceImpl#flush()}
    */
   @Test
-  @Category(MaintainedByDiffblue.class)
+  @Category(ContributionFromDiffblue.class)
+  @ManagedByDiffblue
   @MethodsUnderTest({"boolean RocksDbDataSourceImpl.flush()"})
   public void testFlush() {
     // Arrange, Act and Assert
@@ -177,7 +183,8 @@ public class RocksDbDataSourceImplDiffblueTest {
    * <p>Method under test: {@link RocksDbDataSourceImpl#getKeysNext(byte[], long)}
    */
   @Test
-  @Category(MaintainedByDiffblue.class)
+  @Category(ContributionFromDiffblue.class)
+  @ManagedByDiffblue
   @MethodsUnderTest({"java.util.List RocksDbDataSourceImpl.getKeysNext(byte[], long)"})
   public void testGetKeysNext() throws UnsupportedEncodingException {
     // Arrange, Act and Assert
@@ -193,7 +200,8 @@ public class RocksDbDataSourceImplDiffblueTest {
    * <p>Method under test: {@link RocksDbDataSourceImpl#getNext(byte[], long)}
    */
   @Test
-  @Category(MaintainedByDiffblue.class)
+  @Category(ContributionFromDiffblue.class)
+  @ManagedByDiffblue
   @MethodsUnderTest({"Map RocksDbDataSourceImpl.getNext(byte[], long)"})
   public void testGetNext() throws UnsupportedEncodingException {
     // Arrange, Act and Assert
@@ -207,7 +215,8 @@ public class RocksDbDataSourceImplDiffblueTest {
    * <p>Method under test: {@link RocksDbDataSourceImpl#prefixQuery(byte[])}
    */
   @Test
-  @Category(MaintainedByDiffblue.class)
+  @Category(ContributionFromDiffblue.class)
+  @ManagedByDiffblue
   @MethodsUnderTest({"Map RocksDbDataSourceImpl.prefixQuery(byte[])"})
   public void testPrefixQuery() throws UnsupportedEncodingException {
     // Arrange and Act
@@ -224,7 +233,8 @@ public class RocksDbDataSourceImplDiffblueTest {
    * <p>Method under test: {@link RocksDbDataSourceImpl#getlatestValues(long)}
    */
   @Test
-  @Category(MaintainedByDiffblue.class)
+  @Category(ContributionFromDiffblue.class)
+  @ManagedByDiffblue
   @MethodsUnderTest({"java.util.Set RocksDbDataSourceImpl.getlatestValues(long)"})
   public void testGetlatestValues() {
     // Arrange, Act and Assert
@@ -237,7 +247,8 @@ public class RocksDbDataSourceImplDiffblueTest {
    * <p>Method under test: {@link RocksDbDataSourceImpl#getValuesNext(byte[], long)}
    */
   @Test
-  @Category(MaintainedByDiffblue.class)
+  @Category(ContributionFromDiffblue.class)
+  @ManagedByDiffblue
   @MethodsUnderTest({"java.util.Set RocksDbDataSourceImpl.getValuesNext(byte[], long)"})
   public void testGetValuesNext() throws UnsupportedEncodingException {
     // Arrange, Act and Assert
@@ -252,7 +263,8 @@ public class RocksDbDataSourceImplDiffblueTest {
    * <p>Method under test: {@link RocksDbDataSourceImpl#getStats()}
    */
   @Test
-  @Category(MaintainedByDiffblue.class)
+  @Category(ContributionFromDiffblue.class)
+  @ManagedByDiffblue
   @MethodsUnderTest({"java.util.List RocksDbDataSourceImpl.getStats()"})
   public void testGetStats() throws Exception {
     // Arrange, Act and Assert

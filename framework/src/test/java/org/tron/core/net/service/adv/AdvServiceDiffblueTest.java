@@ -9,7 +9,8 @@ import static org.mockito.Mockito.doNothing;
 import static org.mockito.Mockito.mock;
 import static org.mockito.Mockito.verify;
 import static org.mockito.Mockito.when;
-import com.diffblue.cover.annotations.MaintainedByDiffblue;
+import com.diffblue.cover.annotations.ContributionFromDiffblue;
+import com.diffblue.cover.annotations.ManagedByDiffblue;
 import com.diffblue.cover.annotations.MethodsUnderTest;
 import com.google.common.cache.Cache;
 import java.util.AbstractMap;
@@ -62,7 +63,8 @@ public class AdvServiceDiffblueTest {
    * <p>Method under test: {@link AdvService#addInv(Item)}
    */
   @Test
-  @Category(MaintainedByDiffblue.class)
+  @Category(ContributionFromDiffblue.class)
+  @ManagedByDiffblue
   @MethodsUnderTest({"boolean AdvService.addInv(Item)"})
   public void testAddInv_givenArrayListAddPeerConnection_thenCallsGetActivePeer() {
     // Arrange
@@ -93,7 +95,8 @@ public class AdvServiceDiffblueTest {
    * <p>Method under test: {@link AdvService#addInv(Item)}
    */
   @Test
-  @Category(MaintainedByDiffblue.class)
+  @Category(ContributionFromDiffblue.class)
+  @ManagedByDiffblue
   @MethodsUnderTest({"boolean AdvService.addInv(Item)"})
   public void testAddInv_givenArrayListAddPeerConnection_thenCallsGetActivePeer2() {
     // Arrange
@@ -125,7 +128,8 @@ public class AdvServiceDiffblueTest {
    * <p>Method under test: {@link AdvService#addInv(Item)}
    */
   @Test
-  @Category(MaintainedByDiffblue.class)
+  @Category(ContributionFromDiffblue.class)
+  @ManagedByDiffblue
   @MethodsUnderTest({"boolean AdvService.addInv(Item)"})
   public void testAddInv_givenCacheGetIfPresentReturnOne_thenCallsGetIfPresent() {
     // Arrange
@@ -166,7 +170,8 @@ public class AdvServiceDiffblueTest {
    * <p>Method under test: {@link AdvService#addInv(Item)}
    */
   @Test
-  @Category(MaintainedByDiffblue.class)
+  @Category(ContributionFromDiffblue.class)
+  @ManagedByDiffblue
   @MethodsUnderTest({"boolean AdvService.addInv(Item)"})
   public void testAddInv_givenCacheGetIfPresentReturnOne_thenCallsSetSyncBlockRequested() {
     // Arrange
@@ -237,7 +242,8 @@ public class AdvServiceDiffblueTest {
    * <p>Method under test: {@link AdvService#addInv(Item)}
    */
   @Test
-  @Category(MaintainedByDiffblue.class)
+  @Category(ContributionFromDiffblue.class)
+  @ManagedByDiffblue
   @MethodsUnderTest({"boolean AdvService.addInv(Item)"})
   public void testAddInv_givenTrx_whenItemGetTypeReturnTrx_thenCallsGetType() {
     // Arrange
@@ -262,7 +268,8 @@ public class AdvServiceDiffblueTest {
    * <p>Method under test: {@link AdvService#addInv(Item)}
    */
   @Test
-  @Category(MaintainedByDiffblue.class)
+  @Category(ContributionFromDiffblue.class)
+  @ManagedByDiffblue
   @MethodsUnderTest({"boolean AdvService.addInv(Item)"})
   public void testAddInv_thenCallsGetActivePeer() {
     // Arrange
@@ -292,7 +299,8 @@ public class AdvServiceDiffblueTest {
    * <p>Method under test: {@link AdvService#addInv(Item)}
    */
   @Test
-  @Category(MaintainedByDiffblue.class)
+  @Category(ContributionFromDiffblue.class)
+  @ManagedByDiffblue
   @MethodsUnderTest({"boolean AdvService.addInv(Item)"})
   public void testAddInv_whenItemWithHashIsBlockIdAndTypeIsTrx_thenReturnTrue() {
     // Arrange, Act and Assert
@@ -311,7 +319,8 @@ public class AdvServiceDiffblueTest {
    * <p>Method under test: {@link AdvService#addInv(Item)}
    */
   @Test
-  @Category(MaintainedByDiffblue.class)
+  @Category(ContributionFromDiffblue.class)
+  @ManagedByDiffblue
   @MethodsUnderTest({"boolean AdvService.addInv(Item)"})
   public void testAddInv_whenItemWithHashIsSha256HashAndTypeIsTrx_thenReturnTrue() {
     // Arrange, Act and Assert
@@ -330,7 +339,8 @@ public class AdvServiceDiffblueTest {
    * <p>Method under test: {@link AdvService#getMessage(Item)}
    */
   @Test
-  @Category(MaintainedByDiffblue.class)
+  @Category(ContributionFromDiffblue.class)
+  @ManagedByDiffblue
   @MethodsUnderTest({"Message AdvService.getMessage(Item)"})
   public void testGetMessage_givenBlock_whenItemGetTypeReturnBlock_thenCallsGetType() {
     // Arrange
@@ -358,7 +368,8 @@ public class AdvServiceDiffblueTest {
    * <p>Method under test: {@link AdvService#getMessage(Item)}
    */
   @Test
-  @Category(MaintainedByDiffblue.class)
+  @Category(ContributionFromDiffblue.class)
+  @ManagedByDiffblue
   @MethodsUnderTest({"Message AdvService.getMessage(Item)"})
   public void testGetMessage_givenTrx_whenItemGetTypeReturnTrx_thenCallsGetType() {
     // Arrange
@@ -385,7 +396,8 @@ public class AdvServiceDiffblueTest {
    * <p>Method under test: {@link AdvService#getMessage(Item)}
    */
   @Test
-  @Category(MaintainedByDiffblue.class)
+  @Category(ContributionFromDiffblue.class)
+  @ManagedByDiffblue
   @MethodsUnderTest({"Message AdvService.getMessage(Item)"})
   public void testGetMessage_whenItemWithHashIsBlockIdAndTypeIsTrx_thenReturnNull() {
     // Arrange, Act and Assert
@@ -404,7 +416,8 @@ public class AdvServiceDiffblueTest {
    * <p>Method under test: {@link AdvService#getMessage(Item)}
    */
   @Test
-  @Category(MaintainedByDiffblue.class)
+  @Category(ContributionFromDiffblue.class)
+  @ManagedByDiffblue
   @MethodsUnderTest({"Message AdvService.getMessage(Item)"})
   public void testGetMessage_whenItemWithHashIsSha256HashAndTypeIsTrx_thenReturnNull() {
     // Arrange, Act and Assert
@@ -423,7 +436,8 @@ public class AdvServiceDiffblueTest {
    * <p>Method under test: {@link AdvService#getMessage(Item)}
    */
   @Test
-  @Category(MaintainedByDiffblue.class)
+  @Category(ContributionFromDiffblue.class)
+  @ManagedByDiffblue
   @MethodsUnderTest({"Message AdvService.getMessage(Item)"})
   public void testGetMessage_whenSha256HashWithNumIsOneAndHashIsBlockId_thenReturnNull() {
     // Arrange
@@ -440,7 +454,8 @@ public class AdvServiceDiffblueTest {
    * <p>Method under test: {@link InvSender#add(Entry, PeerConnection)}
    */
   @Test
-  @Category(MaintainedByDiffblue.class)
+  @Category(ContributionFromDiffblue.class)
+  @ManagedByDiffblue
   @MethodsUnderTest({"void InvSender.add(Entry, PeerConnection)"})
   public void testInvSenderAddWithEntryPeerConnection() {
     // Arrange
@@ -465,7 +480,8 @@ public class AdvServiceDiffblueTest {
    * <p>Method under test: {@link InvSender#add(Item, PeerConnection)}
    */
   @Test
-  @Category(MaintainedByDiffblue.class)
+  @Category(ContributionFromDiffblue.class)
+  @ManagedByDiffblue
   @MethodsUnderTest({"void InvSender.add(Item, PeerConnection)"})
   public void testInvSenderAddWithItemPeerConnection_givenNull_thenCallsGetHash() {
     // Arrange
@@ -494,7 +510,8 @@ public class AdvServiceDiffblueTest {
    * <p>Method under test: {@link InvSender#getSize(PeerConnection)}
    */
   @Test
-  @Category(MaintainedByDiffblue.class)
+  @Category(ContributionFromDiffblue.class)
+  @ManagedByDiffblue
   @MethodsUnderTest({"int InvSender.getSize(PeerConnection)"})
   public void testInvSenderGetSize_whenNull_thenReturnZero() {
     // Arrange, Act and Assert
@@ -512,7 +529,8 @@ public class AdvServiceDiffblueTest {
    * <p>Method under test: {@link AdvService#onDisconnect(PeerConnection)}
    */
   @Test
-  @Category(MaintainedByDiffblue.class)
+  @Category(ContributionFromDiffblue.class)
+  @ManagedByDiffblue
   @MethodsUnderTest({"void AdvService.onDisconnect(PeerConnection)"})
   public void testOnDisconnect_givenCacheGetIfPresentReturnNull_thenCallsGetIfPresent() {
     // Arrange
@@ -553,7 +571,8 @@ public class AdvServiceDiffblueTest {
    * <p>Method under test: {@link AdvService#onDisconnect(PeerConnection)}
    */
   @Test
-  @Category(MaintainedByDiffblue.class)
+  @Category(ContributionFromDiffblue.class)
+  @ManagedByDiffblue
   @MethodsUnderTest({"void AdvService.onDisconnect(PeerConnection)"})
   public void testOnDisconnect_givenCacheGetIfPresentReturnOne_thenCallsIsIdle() {
     // Arrange
@@ -596,7 +615,8 @@ public class AdvServiceDiffblueTest {
    * <p>Method under test: {@link AdvService#onDisconnect(PeerConnection)}
    */
   @Test
-  @Category(MaintainedByDiffblue.class)
+  @Category(ContributionFromDiffblue.class)
+  @ManagedByDiffblue
   @MethodsUnderTest({"void AdvService.onDisconnect(PeerConnection)"})
   public void testOnDisconnect_givenHashMapItemIsOne_thenCallsIsIdle() {
     // Arrange
@@ -639,7 +659,8 @@ public class AdvServiceDiffblueTest {
    * <p>Method under test: {@link AdvService#onDisconnect(PeerConnection)}
    */
   @Test
-  @Category(MaintainedByDiffblue.class)
+  @Category(ContributionFromDiffblue.class)
+  @ManagedByDiffblue
   @MethodsUnderTest({"void AdvService.onDisconnect(PeerConnection)"})
   public void testOnDisconnect_givenHashMapItemWithHashIsBlockIdAndTypeIsTrxIsOne() {
     // Arrange
@@ -670,7 +691,8 @@ public class AdvServiceDiffblueTest {
    * <p>Method under test: {@link AdvService#onDisconnect(PeerConnection)}
    */
   @Test
-  @Category(MaintainedByDiffblue.class)
+  @Category(ContributionFromDiffblue.class)
+  @ManagedByDiffblue
   @MethodsUnderTest({"void AdvService.onDisconnect(PeerConnection)"})
   public void testOnDisconnect_givenHashMapItemWithHashIsSha256HashAndTypeIsTrxIsOne() {
     // Arrange
@@ -713,7 +735,8 @@ public class AdvServiceDiffblueTest {
    * <p>Method under test: {@link AdvService#onDisconnect(PeerConnection)}
    */
   @Test
-  @Category(MaintainedByDiffblue.class)
+  @Category(ContributionFromDiffblue.class)
+  @ManagedByDiffblue
   @MethodsUnderTest({"void AdvService.onDisconnect(PeerConnection)"})
   public void testOnDisconnect_givenHashMap_thenCallsGetAdvInvRequest() {
     // Arrange
@@ -738,7 +761,8 @@ public class AdvServiceDiffblueTest {
    * <p>Method under test: {@link AdvService#onDisconnect(PeerConnection)}
    */
   @Test
-  @Category(MaintainedByDiffblue.class)
+  @Category(ContributionFromDiffblue.class)
+  @ManagedByDiffblue
   @MethodsUnderTest({"void AdvService.onDisconnect(PeerConnection)"})
   public void testOnDisconnect_givenPeerConnectionIsIdleReturnFalse_thenCallsIsIdle() {
     // Arrange
@@ -776,7 +800,8 @@ public class AdvServiceDiffblueTest {
    * <p>Method under test: {@link AdvService#getTrxCount()}
    */
   @Test
-  @Category(MaintainedByDiffblue.class)
+  @Category(ContributionFromDiffblue.class)
+  @ManagedByDiffblue
   @MethodsUnderTest({"org.tron.core.net.service.statistics.MessageCount AdvService.getTrxCount()"})
   public void testGetTrxCount() {
     // Arrange, Act and Assert

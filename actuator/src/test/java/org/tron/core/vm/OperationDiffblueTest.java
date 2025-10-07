@@ -7,7 +7,8 @@ import static org.mockito.ArgumentMatchers.isA;
 import static org.mockito.Mockito.mock;
 import static org.mockito.Mockito.verify;
 import static org.mockito.Mockito.when;
-import com.diffblue.cover.annotations.MaintainedByDiffblue;
+import com.diffblue.cover.annotations.ContributionFromDiffblue;
+import com.diffblue.cover.annotations.ManagedByDiffblue;
 import com.diffblue.cover.annotations.MethodsUnderTest;
 import java.io.UnsupportedEncodingException;
 import java.util.HashMap;
@@ -35,7 +36,8 @@ public class OperationDiffblueTest {
    * </ul>
    */
   @Test
-  @Category(MaintainedByDiffblue.class)
+  @Category(ContributionFromDiffblue.class)
+  @ManagedByDiffblue
   @MethodsUnderTest({
     "void Operation.<init>(int, int, int, Function, Consumer, BooleanSupplier)",
     "int Operation.getOpcode()",
@@ -62,7 +64,8 @@ public class OperationDiffblueTest {
    * <p>Method under test: {@link Operation#Operation(int, int, int, Function, Consumer)}
    */
   @Test
-  @Category(MaintainedByDiffblue.class)
+  @Category(ContributionFromDiffblue.class)
+  @ManagedByDiffblue
   @MethodsUnderTest({"void Operation.<init>(int, int, int, Function, Consumer)"})
   public void testNewOperation() {
     // Arrange and Act
@@ -86,7 +89,8 @@ public class OperationDiffblueTest {
    * <p>Method under test: {@link Operation#getEnergyCost(Program)}
    */
   @Test
-  @Category(MaintainedByDiffblue.class)
+  @Category(ContributionFromDiffblue.class)
+  @ManagedByDiffblue
   @MethodsUnderTest({"long Operation.getEnergyCost(Program)"})
   public void testGetEnergyCost_givenFunctionApplyReturnOne_thenReturnOne()
       throws UnsupportedEncodingException {
@@ -133,7 +137,8 @@ public class OperationDiffblueTest {
    * <p>Method under test: {@link Operation#isEnabled()}
    */
   @Test
-  @Category(MaintainedByDiffblue.class)
+  @Category(ContributionFromDiffblue.class)
+  @ManagedByDiffblue
   @MethodsUnderTest({"boolean Operation.isEnabled()"})
   public void testIsEnabled() {
     // Arrange, Act and Assert
@@ -152,7 +157,8 @@ public class OperationDiffblueTest {
    * <p>Method under test: {@link Operation#isEnabled()}
    */
   @Test
-  @Category(MaintainedByDiffblue.class)
+  @Category(ContributionFromDiffblue.class)
+  @ManagedByDiffblue
   @MethodsUnderTest({"boolean Operation.isEnabled()"})
   public void testIsEnabled_givenBooleanSupplierGetAsBooleanReturnFalse_thenReturnFalse() {
     // Arrange
@@ -179,7 +185,8 @@ public class OperationDiffblueTest {
    * <p>Method under test: {@link Operation#isEnabled()}
    */
   @Test
-  @Category(MaintainedByDiffblue.class)
+  @Category(ContributionFromDiffblue.class)
+  @ManagedByDiffblue
   @MethodsUnderTest({"boolean Operation.isEnabled()"})
   public void testIsEnabled_givenBooleanSupplierGetAsBooleanReturnTrue_thenReturnTrue() {
     // Arrange

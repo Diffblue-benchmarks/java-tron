@@ -4,7 +4,8 @@ import static org.junit.Assert.assertArrayEquals;
 import static org.junit.Assert.assertEquals;
 import static org.junit.Assert.assertFalse;
 import static org.junit.Assert.assertTrue;
-import com.diffblue.cover.annotations.MaintainedByDiffblue;
+import com.diffblue.cover.annotations.ContributionFromDiffblue;
+import com.diffblue.cover.annotations.ManagedByDiffblue;
 import com.diffblue.cover.annotations.MethodsUnderTest;
 import com.google.protobuf.ByteString;
 import com.google.protobuf.ByteString.ByteIterator;
@@ -20,7 +21,8 @@ public class KeepAliveMessageDiffblueTest {
    * <p>Method under test: {@link KeepAliveMessage#KeepAliveMessage(boolean, int)}
    */
   @Test
-  @Category(MaintainedByDiffblue.class)
+  @Category(ContributionFromDiffblue.class)
+  @ManagedByDiffblue
   @MethodsUnderTest({"void KeepAliveMessage.<init>(boolean, int)"})
   public void testNewKeepAliveMessage() {
     // Arrange and Act
@@ -62,7 +64,8 @@ public class KeepAliveMessageDiffblueTest {
    * <p>Method under test: {@link KeepAliveMessage#KeepAliveMessage(boolean, int)}
    */
   @Test
-  @Category(MaintainedByDiffblue.class)
+  @Category(ContributionFromDiffblue.class)
+  @ManagedByDiffblue
   @MethodsUnderTest({"void KeepAliveMessage.<init>(boolean, int)"})
   public void testNewKeepAliveMessage2() {
     // Arrange and Act
@@ -104,7 +107,8 @@ public class KeepAliveMessageDiffblueTest {
    * <p>Method under test: {@link KeepAliveMessage#KeepAliveMessage(byte[])}
    */
   @Test
-  @Category(MaintainedByDiffblue.class)
+  @Category(ContributionFromDiffblue.class)
+  @ManagedByDiffblue
   @MethodsUnderTest({"void KeepAliveMessage.<init>(byte[])"})
   public void testNewKeepAliveMessage3() throws Exception {
     // Arrange and Act
@@ -145,7 +149,8 @@ public class KeepAliveMessageDiffblueTest {
    * <p>Method under test: {@link KeepAliveMessage#KeepAliveMessage(byte[])}
    */
   @Test
-  @Category(MaintainedByDiffblue.class)
+  @Category(ContributionFromDiffblue.class)
+  @ManagedByDiffblue
   @MethodsUnderTest({"void KeepAliveMessage.<init>(byte[])"})
   public void testNewKeepAliveMessage4() throws Exception {
     // Arrange and Act
@@ -197,7 +202,8 @@ public class KeepAliveMessageDiffblueTest {
    * <p>Method under test: {@link KeepAliveMessage#KeepAliveMessage(byte[])}
    */
   @Test
-  @Category(MaintainedByDiffblue.class)
+  @Category(ContributionFromDiffblue.class)
+  @ManagedByDiffblue
   @MethodsUnderTest({"void KeepAliveMessage.<init>(byte[])"})
   public void testNewKeepAliveMessage5() throws Exception {
     // Arrange and Act
@@ -257,7 +263,8 @@ public class KeepAliveMessageDiffblueTest {
    * <p>Method under test: {@link KeepAliveMessage#KeepAliveMessage(boolean, int)}
    */
   @Test
-  @Category(MaintainedByDiffblue.class)
+  @Category(ContributionFromDiffblue.class)
+  @ManagedByDiffblue
   @MethodsUnderTest({"void KeepAliveMessage.<init>(boolean, int)"})
   public void testNewKeepAliveMessage_thenReturnMessageIdByteStringIteratorNextByteValueIsS() {
     // Arrange and Act
@@ -306,7 +313,8 @@ public class KeepAliveMessageDiffblueTest {
    * <p>Method under test: {@link KeepAliveMessage#KeepAliveMessage(byte[])}
    */
   @Test
-  @Category(MaintainedByDiffblue.class)
+  @Category(ContributionFromDiffblue.class)
+  @ManagedByDiffblue
   @MethodsUnderTest({"void KeepAliveMessage.<init>(byte[])"})
   public void testNewKeepAliveMessage_thenReturnMessageIdByteStringIteratorNextByteValueIsW()
       throws Exception {
@@ -412,7 +420,8 @@ public class KeepAliveMessageDiffblueTest {
    * <p>Method under test: {@link KeepAliveMessage#KeepAliveMessage(boolean, int)}
    */
   @Test
-  @Category(MaintainedByDiffblue.class)
+  @Category(ContributionFromDiffblue.class)
+  @ManagedByDiffblue
   @MethodsUnderTest({"void KeepAliveMessage.<init>(boolean, int)"})
   public void testNewKeepAliveMessage_whenFalse_thenReturnDataIsArrayOfByteWithSixteenAndOne() {
     // Arrange and Act
@@ -460,7 +469,8 @@ public class KeepAliveMessageDiffblueTest {
    * <p>Method under test: {@link KeepAliveMessage#getFlag()}
    */
   @Test
-  @Category(MaintainedByDiffblue.class)
+  @Category(ContributionFromDiffblue.class)
+  @ManagedByDiffblue
   @MethodsUnderTest({"boolean KeepAliveMessage.getFlag()"})
   public void testGetFlag_givenKeepAliveMessageWithFlagIsFalseAndPriorityIsOne_thenReturnFalse() {
     // Arrange, Act and Assert
@@ -479,7 +489,8 @@ public class KeepAliveMessageDiffblueTest {
    * <p>Method under test: {@link KeepAliveMessage#getFlag()}
    */
   @Test
-  @Category(MaintainedByDiffblue.class)
+  @Category(ContributionFromDiffblue.class)
+  @ManagedByDiffblue
   @MethodsUnderTest({"boolean KeepAliveMessage.getFlag()"})
   public void testGetFlag_givenKeepAliveMessageWithFlagIsTrueAndPriorityIsOne_thenReturnTrue() {
     // Arrange, Act and Assert
@@ -492,7 +503,8 @@ public class KeepAliveMessageDiffblueTest {
    * <p>Method under test: {@link KeepAliveMessage#getPriority()}
    */
   @Test
-  @Category(MaintainedByDiffblue.class)
+  @Category(ContributionFromDiffblue.class)
+  @ManagedByDiffblue
   @MethodsUnderTest({"int KeepAliveMessage.getPriority()"})
   public void testGetPriority() {
     // Arrange, Act and Assert

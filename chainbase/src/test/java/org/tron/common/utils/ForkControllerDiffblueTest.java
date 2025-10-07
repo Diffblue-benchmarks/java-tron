@@ -2,7 +2,8 @@ package org.tron.common.utils;
 
 import static org.junit.Assert.assertNull;
 import static org.junit.Assert.assertThrows;
-import com.diffblue.cover.annotations.MaintainedByDiffblue;
+import com.diffblue.cover.annotations.ContributionFromDiffblue;
+import com.diffblue.cover.annotations.ManagedByDiffblue;
 import com.diffblue.cover.annotations.MethodsUnderTest;
 import org.junit.Test;
 import org.junit.experimental.categories.Category;
@@ -21,7 +22,8 @@ public class ForkControllerDiffblueTest {
    * <p>Method under test: {@link ForkController#pass(ForkBlockVersionEnum)}
    */
   @Test
-  @Category(MaintainedByDiffblue.class)
+  @Category(ContributionFromDiffblue.class)
+  @ManagedByDiffblue
   @MethodsUnderTest({"boolean ForkController.pass(ForkBlockVersionEnum)"})
   public void testPassWithForkBlockVersionEnum_whenEnergyLimit_thenThrowIllegalStateException() {
     // Arrange, Act and Assert
@@ -36,7 +38,8 @@ public class ForkControllerDiffblueTest {
    * <p>Method under test: {@link ForkController#pass(int)}
    */
   @Test
-  @Category(MaintainedByDiffblue.class)
+  @Category(ContributionFromDiffblue.class)
+  @ManagedByDiffblue
   @MethodsUnderTest({"boolean ForkController.pass(int)"})
   public void testPassWithVersion() {
     // Arrange, Act and Assert
@@ -49,7 +52,8 @@ public class ForkControllerDiffblueTest {
    * <p>Method under test: {@link ForkController#instance()}
    */
   @Test
-  @Category(MaintainedByDiffblue.class)
+  @Category(ContributionFromDiffblue.class)
+  @ManagedByDiffblue
   @MethodsUnderTest({"ForkController ForkController.instance()"})
   public void testInstance() {
     // Arrange, Act and Assert
@@ -67,7 +71,8 @@ public class ForkControllerDiffblueTest {
    * </ul>
    */
   @Test
-  @Category(MaintainedByDiffblue.class)
+  @Category(ContributionFromDiffblue.class)
+  @ManagedByDiffblue
   @MethodsUnderTest({
     "void ForkController.<init>()",
     "org.tron.core.ChainBaseManager ForkController.getManager()"

@@ -4,7 +4,8 @@ import static org.junit.Assert.assertEquals;
 import static org.mockito.Mockito.mock;
 import static org.mockito.Mockito.verify;
 import static org.mockito.Mockito.when;
-import com.diffblue.cover.annotations.MaintainedByDiffblue;
+import com.diffblue.cover.annotations.ContributionFromDiffblue;
+import com.diffblue.cover.annotations.ManagedByDiffblue;
 import com.diffblue.cover.annotations.MethodsUnderTest;
 import java.io.UnsupportedEncodingException;
 import org.junit.Test;
@@ -24,7 +25,8 @@ public class TransactionResultDiffblueTest {
    * Transaction, long, long, Wallet)}
    */
   @Test
-  @Category(MaintainedByDiffblue.class)
+  @Category(ContributionFromDiffblue.class)
+  @ManagedByDiffblue
   @MethodsUnderTest({
     "void TransactionResult.<init>(BlockCapsule, int, Transaction, long, long, Wallet)"
   })
@@ -79,7 +81,8 @@ public class TransactionResultDiffblueTest {
    * Transaction, long, long, Wallet)}
    */
   @Test
-  @Category(MaintainedByDiffblue.class)
+  @Category(ContributionFromDiffblue.class)
+  @ManagedByDiffblue
   @MethodsUnderTest({
     "void TransactionResult.<init>(BlockCapsule, int, Transaction, long, long, Wallet)"
   })
@@ -136,7 +139,8 @@ public class TransactionResultDiffblueTest {
    * Transaction, long, long, Wallet)}
    */
   @Test
-  @Category(MaintainedByDiffblue.class)
+  @Category(ContributionFromDiffblue.class)
+  @ManagedByDiffblue
   @MethodsUnderTest({
     "void TransactionResult.<init>(BlockCapsule, int, Transaction, long, long, Wallet)"
   })
@@ -193,7 +197,8 @@ public class TransactionResultDiffblueTest {
    * <p>Method under test: {@link TransactionResult#TransactionResult(Transaction, Wallet)}
    */
   @Test
-  @Category(MaintainedByDiffblue.class)
+  @Category(ContributionFromDiffblue.class)
+  @ManagedByDiffblue
   @MethodsUnderTest({"void TransactionResult.<init>(Transaction, Wallet)"})
   public void testNewTransactionResult_whenDefaultInstance_thenReturnBlockHashIs0x() {
     // Arrange

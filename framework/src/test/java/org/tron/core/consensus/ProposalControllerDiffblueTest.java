@@ -12,7 +12,8 @@ import static org.mockito.Mockito.doNothing;
 import static org.mockito.Mockito.mock;
 import static org.mockito.Mockito.verify;
 import static org.mockito.Mockito.when;
-import com.diffblue.cover.annotations.MaintainedByDiffblue;
+import com.diffblue.cover.annotations.ContributionFromDiffblue;
+import com.diffblue.cover.annotations.ManagedByDiffblue;
 import com.diffblue.cover.annotations.MethodsUnderTest;
 import com.google.protobuf.ByteString;
 import java.io.UnsupportedEncodingException;
@@ -38,7 +39,8 @@ public class ProposalControllerDiffblueTest {
    * <p>Method under test: {@link ProposalController#createInstance(Manager)}
    */
   @Test
-  @Category(MaintainedByDiffblue.class)
+  @Category(ContributionFromDiffblue.class)
+  @ManagedByDiffblue
   @MethodsUnderTest({"ProposalController ProposalController.createInstance(Manager)"})
   public void testCreateInstance() {
     // Arrange
@@ -62,7 +64,8 @@ public class ProposalControllerDiffblueTest {
    * <p>Method under test: {@link ProposalController#processProposals()}
    */
   @Test
-  @Category(MaintainedByDiffblue.class)
+  @Category(ContributionFromDiffblue.class)
+  @ManagedByDiffblue
   @MethodsUnderTest({"void ProposalController.processProposals()"})
   public void testProcessProposals_givenDynamicPropertiesStoreGetLatestProposalNumReturnZero() {
     // Arrange
@@ -93,7 +96,8 @@ public class ProposalControllerDiffblueTest {
    * <p>Method under test: {@link ProposalController#processProposals()}
    */
   @Test
-  @Category(MaintainedByDiffblue.class)
+  @Category(ContributionFromDiffblue.class)
+  @ManagedByDiffblue
   @MethodsUnderTest({"void ProposalController.processProposals()"})
   public void testProcessProposals_givenManagerGetProposalStoreReturnNull() {
     // Arrange
@@ -127,7 +131,8 @@ public class ProposalControllerDiffblueTest {
    * <p>Method under test: {@link ProposalController#processProposals()}
    */
   @Test
-  @Category(MaintainedByDiffblue.class)
+  @Category(ContributionFromDiffblue.class)
+  @ManagedByDiffblue
   @MethodsUnderTest({"void ProposalController.processProposals()"})
   public void testProcessProposals_givenManagerGetProposalStoreThrowRuntimeException() {
     // Arrange
@@ -161,7 +166,8 @@ public class ProposalControllerDiffblueTest {
    * <p>Method under test: {@link ProposalController#processProposals()}
    */
   @Test
-  @Category(MaintainedByDiffblue.class)
+  @Category(ContributionFromDiffblue.class)
+  @ManagedByDiffblue
   @MethodsUnderTest({"void ProposalController.processProposals()"})
   public void testProcessProposals_givenProposalCapsuleGetIDThrowRuntimeException()
       throws ItemNotFoundException {
@@ -204,7 +210,8 @@ public class ProposalControllerDiffblueTest {
    * <p>Method under test: {@link ProposalController#processProposals()}
    */
   @Test
-  @Category(MaintainedByDiffblue.class)
+  @Category(ContributionFromDiffblue.class)
+  @ManagedByDiffblue
   @MethodsUnderTest({"void ProposalController.processProposals()"})
   public void testProcessProposals_givenProposalCapsuleGetIDThrowRuntimeException2()
       throws ItemNotFoundException {
@@ -248,7 +255,8 @@ public class ProposalControllerDiffblueTest {
    * <p>Method under test: {@link ProposalController#processProposals()}
    */
   @Test
-  @Category(MaintainedByDiffblue.class)
+  @Category(ContributionFromDiffblue.class)
+  @ManagedByDiffblue
   @MethodsUnderTest({"void ProposalController.processProposals()"})
   public void testProcessProposals_givenProposalCapsuleHasCanceledReturnTrue()
       throws ItemNotFoundException {
@@ -295,7 +303,8 @@ public class ProposalControllerDiffblueTest {
    * <p>Method under test: {@link ProposalController#processProposals()}
    */
   @Test
-  @Category(MaintainedByDiffblue.class)
+  @Category(ContributionFromDiffblue.class)
+  @ManagedByDiffblue
   @MethodsUnderTest({"void ProposalController.processProposals()"})
   public void testProcessProposals_givenProposalCapsuleHasProcessedReturnTrue_thenCallsGetID()
       throws ItemNotFoundException {
@@ -339,7 +348,8 @@ public class ProposalControllerDiffblueTest {
    * <p>Method under test: {@link ProposalController#processProposals()}
    */
   @Test
-  @Category(MaintainedByDiffblue.class)
+  @Category(ContributionFromDiffblue.class)
+  @ManagedByDiffblue
   @MethodsUnderTest({"void ProposalController.processProposals()"})
   public void testProcessProposals_thenCallsGetNextMaintenanceTime() throws ItemNotFoundException {
     // Arrange
@@ -378,7 +388,8 @@ public class ProposalControllerDiffblueTest {
    * <p>Method under test: {@link ProposalController#processProposal(ProposalCapsule)}
    */
   @Test
-  @Category(MaintainedByDiffblue.class)
+  @Category(ContributionFromDiffblue.class)
+  @ManagedByDiffblue
   @MethodsUnderTest({"void ProposalController.processProposal(ProposalCapsule)"})
   public void testProcessProposal() {
     // Arrange
@@ -420,7 +431,8 @@ public class ProposalControllerDiffblueTest {
    * <p>Method under test: {@link ProposalController#processProposal(ProposalCapsule)}
    */
   @Test
-  @Category(MaintainedByDiffblue.class)
+  @Category(ContributionFromDiffblue.class)
+  @ManagedByDiffblue
   @MethodsUnderTest({"void ProposalController.processProposal(ProposalCapsule)"})
   public void testProcessProposal2() throws UnsupportedEncodingException {
     // Arrange
@@ -468,7 +480,8 @@ public class ProposalControllerDiffblueTest {
    * <p>Method under test: {@link ProposalController#processProposal(ProposalCapsule)}
    */
   @Test
-  @Category(MaintainedByDiffblue.class)
+  @Category(ContributionFromDiffblue.class)
+  @ManagedByDiffblue
   @MethodsUnderTest({"void ProposalController.processProposal(ProposalCapsule)"})
   public void testProcessProposal3() throws UnsupportedEncodingException {
     // Arrange
@@ -526,7 +539,8 @@ public class ProposalControllerDiffblueTest {
    * <p>Method under test: {@link ProposalController#processProposal(ProposalCapsule)}
    */
   @Test
-  @Category(MaintainedByDiffblue.class)
+  @Category(ContributionFromDiffblue.class)
+  @ManagedByDiffblue
   @MethodsUnderTest({"void ProposalController.processProposal(ProposalCapsule)"})
   public void testProcessProposal_givenFalse_thenCallsAddApproval()
       throws UnsupportedEncodingException {
@@ -580,7 +594,8 @@ public class ProposalControllerDiffblueTest {
    * </ul>
    */
   @Test
-  @Category(MaintainedByDiffblue.class)
+  @Category(ContributionFromDiffblue.class)
+  @ManagedByDiffblue
   @MethodsUnderTest({
     "void ProposalController.<init>()",
     "Manager ProposalController.getManager()",

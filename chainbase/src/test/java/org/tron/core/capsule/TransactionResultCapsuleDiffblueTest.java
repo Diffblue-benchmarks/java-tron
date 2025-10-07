@@ -9,7 +9,8 @@ import static org.mockito.Mockito.atLeast;
 import static org.mockito.Mockito.mock;
 import static org.mockito.Mockito.verify;
 import static org.mockito.Mockito.when;
-import com.diffblue.cover.annotations.MaintainedByDiffblue;
+import com.diffblue.cover.annotations.ContributionFromDiffblue;
+import com.diffblue.cover.annotations.ManagedByDiffblue;
 import com.diffblue.cover.annotations.MethodsUnderTest;
 import com.google.protobuf.ByteString;
 import com.google.protobuf.DescriptorProtos;
@@ -37,7 +38,8 @@ public class TransactionResultCapsuleDiffblueTest {
    * <p>Method under test: {@link TransactionResultCapsule#TransactionResultCapsule()}
    */
   @Test
-  @Category(MaintainedByDiffblue.class)
+  @Category(ContributionFromDiffblue.class)
+  @ManagedByDiffblue
   @MethodsUnderTest({"void TransactionResultCapsule.<init>()"})
   public void testNewTransactionResultCapsule() {
     // Arrange and Act
@@ -65,7 +67,8 @@ public class TransactionResultCapsuleDiffblueTest {
    * <p>Method under test: {@link TransactionResultCapsule#TransactionResultCapsule(byte[])}
    */
   @Test
-  @Category(MaintainedByDiffblue.class)
+  @Category(ContributionFromDiffblue.class)
+  @ManagedByDiffblue
   @MethodsUnderTest({"void TransactionResultCapsule.<init>(byte[])"})
   public void testNewTransactionResultCapsule2()
       throws UnsupportedEncodingException, BadItemException {
@@ -81,7 +84,8 @@ public class TransactionResultCapsuleDiffblueTest {
    * <p>Method under test: {@link TransactionResultCapsule#TransactionResultCapsule(byte[])}
    */
   @Test
-  @Category(MaintainedByDiffblue.class)
+  @Category(ContributionFromDiffblue.class)
+  @ManagedByDiffblue
   @MethodsUnderTest({"void TransactionResultCapsule.<init>(byte[])"})
   public void testNewTransactionResultCapsule3()
       throws UnsupportedEncodingException, BadItemException {
@@ -97,7 +101,8 @@ public class TransactionResultCapsuleDiffblueTest {
    * <p>Method under test: {@link TransactionResultCapsule#TransactionResultCapsule(byte[])}
    */
   @Test
-  @Category(MaintainedByDiffblue.class)
+  @Category(ContributionFromDiffblue.class)
+  @ManagedByDiffblue
   @MethodsUnderTest({"void TransactionResultCapsule.<init>(byte[])"})
   public void testNewTransactionResultCapsule4()
       throws UnsupportedEncodingException, BadItemException {
@@ -117,7 +122,8 @@ public class TransactionResultCapsuleDiffblueTest {
    * <p>Method under test: {@link TransactionResultCapsule#TransactionResultCapsule(byte[])}
    */
   @Test
-  @Category(MaintainedByDiffblue.class)
+  @Category(ContributionFromDiffblue.class)
+  @ManagedByDiffblue
   @MethodsUnderTest({"void TransactionResultCapsule.<init>(byte[])"})
   public void testNewTransactionResultCapsule_thenReturnAssetIssueIDIsEmptyString()
       throws BadItemException {
@@ -151,7 +157,8 @@ public class TransactionResultCapsuleDiffblueTest {
    * <p>Method under test: {@link TransactionResultCapsule#TransactionResultCapsule(byte[])}
    */
   @Test
-  @Category(MaintainedByDiffblue.class)
+  @Category(ContributionFromDiffblue.class)
+  @ManagedByDiffblue
   @MethodsUnderTest({"void TransactionResultCapsule.<init>(byte[])"})
   public void testNewTransactionResultCapsule_whenArrayOfByteWithMinusOneAndX()
       throws BadItemException {
@@ -171,7 +178,8 @@ public class TransactionResultCapsuleDiffblueTest {
    * <p>Method under test: {@link TransactionResultCapsule#TransactionResultCapsule(byte[])}
    */
   @Test
-  @Category(MaintainedByDiffblue.class)
+  @Category(ContributionFromDiffblue.class)
+  @ManagedByDiffblue
   @MethodsUnderTest({"void TransactionResultCapsule.<init>(byte[])"})
   public void testNewTransactionResultCapsule_whenArrayOfByteWithSixteenAndX()
       throws BadItemException {
@@ -191,7 +199,8 @@ public class TransactionResultCapsuleDiffblueTest {
    * <p>Method under test: {@link TransactionResultCapsule#TransactionResultCapsule(byte[])}
    */
   @Test
-  @Category(MaintainedByDiffblue.class)
+  @Category(ContributionFromDiffblue.class)
+  @ManagedByDiffblue
   @MethodsUnderTest({"void TransactionResultCapsule.<init>(byte[])"})
   public void testNewTransactionResultCapsule_whenArrayOfByteWithTwentyFourAndX()
       throws BadItemException {
@@ -211,7 +220,8 @@ public class TransactionResultCapsuleDiffblueTest {
    * <p>Method under test: {@link TransactionResultCapsule#TransactionResultCapsule(byte[])}
    */
   @Test
-  @Category(MaintainedByDiffblue.class)
+  @Category(ContributionFromDiffblue.class)
+  @ManagedByDiffblue
   @MethodsUnderTest({"void TransactionResultCapsule.<init>(byte[])"})
   public void testNewTransactionResultCapsule_whenArrayOfByteWithZeroAndX()
       throws BadItemException {
@@ -231,7 +241,8 @@ public class TransactionResultCapsuleDiffblueTest {
    * <p>Method under test: {@link TransactionResultCapsule#TransactionResultCapsule(byte[])}
    */
   @Test
-  @Category(MaintainedByDiffblue.class)
+  @Category(ContributionFromDiffblue.class)
+  @ManagedByDiffblue
   @MethodsUnderTest({"void TransactionResultCapsule.<init>(byte[])"})
   public void testNewTransactionResultCapsule_whenAxaxaxaxBytesIsUtf8()
       throws UnsupportedEncodingException, BadItemException {
@@ -251,7 +262,8 @@ public class TransactionResultCapsuleDiffblueTest {
    * <p>Method under test: {@link TransactionResultCapsule#TransactionResultCapsule(byte[])}
    */
   @Test
-  @Category(MaintainedByDiffblue.class)
+  @Category(ContributionFromDiffblue.class)
+  @ManagedByDiffblue
   @MethodsUnderTest({"void TransactionResultCapsule.<init>(byte[])"})
   public void testNewTransactionResultCapsule_whenBackspace_thenThrowBadItemException()
       throws BadItemException {
@@ -277,7 +289,8 @@ public class TransactionResultCapsuleDiffblueTest {
    * <p>Method under test: {@link TransactionResultCapsule#TransactionResultCapsule(byte[])}
    */
   @Test
-  @Category(MaintainedByDiffblue.class)
+  @Category(ContributionFromDiffblue.class)
+  @ManagedByDiffblue
   @MethodsUnderTest({"void TransactionResultCapsule.<init>(byte[])"})
   public void testNewTransactionResultCapsule_whenBackspace_thenThrowBadItemException2()
       throws BadItemException {
@@ -303,7 +316,8 @@ public class TransactionResultCapsuleDiffblueTest {
    * <p>Method under test: {@link TransactionResultCapsule#TransactionResultCapsule(byte[])}
    */
   @Test
-  @Category(MaintainedByDiffblue.class)
+  @Category(ContributionFromDiffblue.class)
+  @ManagedByDiffblue
   @MethodsUnderTest({"void TransactionResultCapsule.<init>(byte[])"})
   public void testNewTransactionResultCapsule_whenBackspace_thenThrowBadItemException3()
       throws BadItemException {
@@ -343,7 +357,8 @@ public class TransactionResultCapsuleDiffblueTest {
    * <p>Method under test: {@link TransactionResultCapsule#TransactionResultCapsule(contractResult)}
    */
   @Test
-  @Category(MaintainedByDiffblue.class)
+  @Category(ContributionFromDiffblue.class)
+  @ManagedByDiffblue
   @MethodsUnderTest({"void TransactionResultCapsule.<init>(contractResult)"})
   public void testNewTransactionResultCapsule_whenDefault_thenReturnAssetIssueIDIsEmptyString() {
     // Arrange and Act
@@ -376,7 +391,8 @@ public class TransactionResultCapsuleDiffblueTest {
    * <p>Method under test: {@link TransactionResultCapsule#TransactionResultCapsule(byte[])}
    */
   @Test
-  @Category(MaintainedByDiffblue.class)
+  @Category(ContributionFromDiffblue.class)
+  @ManagedByDiffblue
   @MethodsUnderTest({"void TransactionResultCapsule.<init>(byte[])"})
   public void testNewTransactionResultCapsule_whenRXAXAXAXBytesIsUtf8()
       throws UnsupportedEncodingException, BadItemException {
@@ -396,7 +412,8 @@ public class TransactionResultCapsuleDiffblueTest {
    * <p>Method under test: {@link TransactionResultCapsule#TransactionResultCapsule(code, long)}
    */
   @Test
-  @Category(MaintainedByDiffblue.class)
+  @Category(ContributionFromDiffblue.class)
+  @ManagedByDiffblue
   @MethodsUnderTest({"void TransactionResultCapsule.<init>(code, long)"})
   public void testNewTransactionResultCapsule_whenSucess_thenReturnAssetIssueIDIsEmptyString() {
     // Arrange and Act
@@ -429,7 +446,8 @@ public class TransactionResultCapsuleDiffblueTest {
    * <p>Method under test: {@link TransactionResultCapsule#TransactionResultCapsule(byte[])}
    */
   @Test
-  @Category(MaintainedByDiffblue.class)
+  @Category(ContributionFromDiffblue.class)
+  @ManagedByDiffblue
   @MethodsUnderTest({"void TransactionResultCapsule.<init>(byte[])"})
   public void testNewTransactionResultCapsule_whenXXAXAXAXBytesIsUtf8()
       throws UnsupportedEncodingException, BadItemException {
@@ -448,7 +466,8 @@ public class TransactionResultCapsuleDiffblueTest {
    * <p>Method under test: {@link TransactionResultCapsule#TransactionResultCapsule(byte[])}
    */
   @Test
-  @Category(MaintainedByDiffblue.class)
+  @Category(ContributionFromDiffblue.class)
+  @ManagedByDiffblue
   @MethodsUnderTest({"void TransactionResultCapsule.<init>(byte[])"})
   public void testNewTransactionResultCapsule_whenXxaxaxaxBytesIsUtf8()
       throws UnsupportedEncodingException, BadItemException {
@@ -463,7 +482,8 @@ public class TransactionResultCapsuleDiffblueTest {
    * <p>Method under test: {@link TransactionResultCapsule#setStatus(long, code)}
    */
   @Test
-  @Category(MaintainedByDiffblue.class)
+  @Category(ContributionFromDiffblue.class)
+  @ManagedByDiffblue
   @MethodsUnderTest({"void TransactionResultCapsule.setStatus(long, code)"})
   public void testSetStatus() {
     // Arrange
@@ -488,7 +508,8 @@ public class TransactionResultCapsuleDiffblueTest {
    * <p>Method under test: {@link TransactionResultCapsule#setStatus(long, code)}
    */
   @Test
-  @Category(MaintainedByDiffblue.class)
+  @Category(ContributionFromDiffblue.class)
+  @ManagedByDiffblue
   @MethodsUnderTest({"void TransactionResultCapsule.setStatus(long, code)"})
   public void testSetStatus2() {
     // Arrange
@@ -518,7 +539,8 @@ public class TransactionResultCapsuleDiffblueTest {
    * <p>Method under test: {@link TransactionResultCapsule#setStatus(long, code)}
    */
   @Test
-  @Category(MaintainedByDiffblue.class)
+  @Category(ContributionFromDiffblue.class)
+  @ManagedByDiffblue
   @MethodsUnderTest({"void TransactionResultCapsule.setStatus(long, code)"})
   public void testSetStatus_givenTransactionResultCapsuleAddOrderDetailsDefaultInstance() {
     // Arrange
@@ -548,7 +570,8 @@ public class TransactionResultCapsuleDiffblueTest {
    * <p>Method under test: {@link TransactionResultCapsule#setStatus(long, code)}
    */
   @Test
-  @Category(MaintainedByDiffblue.class)
+  @Category(ContributionFromDiffblue.class)
+  @ManagedByDiffblue
   @MethodsUnderTest({"void TransactionResultCapsule.setStatus(long, code)"})
   public void testSetStatus_givenTransactionResultCapsuleExchangeIdIsOne() {
     // Arrange
@@ -579,7 +602,8 @@ public class TransactionResultCapsuleDiffblueTest {
    * <p>Method under test: {@link TransactionResultCapsule#setStatus(long, code)}
    */
   @Test
-  @Category(MaintainedByDiffblue.class)
+  @Category(ContributionFromDiffblue.class)
+  @ManagedByDiffblue
   @MethodsUnderTest({"void TransactionResultCapsule.setStatus(long, code)"})
   public void testSetStatus_givenTransactionResultCapsuleExchangeInjectAnotherAmountIsTen() {
     // Arrange
@@ -610,7 +634,8 @@ public class TransactionResultCapsuleDiffblueTest {
    * <p>Method under test: {@link TransactionResultCapsule#setStatus(long, code)}
    */
   @Test
-  @Category(MaintainedByDiffblue.class)
+  @Category(ContributionFromDiffblue.class)
+  @ManagedByDiffblue
   @MethodsUnderTest({"void TransactionResultCapsule.setStatus(long, code)"})
   public void testSetStatus_givenTransactionResultCapsuleExchangeReceivedAmountIsTen() {
     // Arrange
@@ -641,7 +666,8 @@ public class TransactionResultCapsuleDiffblueTest {
    * <p>Method under test: {@link TransactionResultCapsule#setStatus(long, code)}
    */
   @Test
-  @Category(MaintainedByDiffblue.class)
+  @Category(ContributionFromDiffblue.class)
+  @ManagedByDiffblue
   @MethodsUnderTest({"void TransactionResultCapsule.setStatus(long, code)"})
   public void testSetStatus_givenTransactionResultCapsuleExchangeWithdrawAnotherAmountIsTen() {
     // Arrange
@@ -672,7 +698,8 @@ public class TransactionResultCapsuleDiffblueTest {
    * <p>Method under test: {@link TransactionResultCapsule#setStatus(long, code)}
    */
   @Test
-  @Category(MaintainedByDiffblue.class)
+  @Category(ContributionFromDiffblue.class)
+  @ManagedByDiffblue
   @MethodsUnderTest({"void TransactionResultCapsule.setStatus(long, code)"})
   public void testSetStatus_givenTransactionResultCapsuleOrderIdIsByteString() {
     // Arrange
@@ -703,7 +730,8 @@ public class TransactionResultCapsuleDiffblueTest {
    * <p>Method under test: {@link TransactionResultCapsule#setStatus(long, code)}
    */
   @Test
-  @Category(MaintainedByDiffblue.class)
+  @Category(ContributionFromDiffblue.class)
+  @ManagedByDiffblue
   @MethodsUnderTest({"void TransactionResultCapsule.setStatus(long, code)"})
   public void testSetStatus_givenTransactionResultCapsuleShieldedTransactionFeeIsOne() {
     // Arrange
@@ -733,7 +761,8 @@ public class TransactionResultCapsuleDiffblueTest {
    * <p>Method under test: {@link TransactionResultCapsule#setStatus(long, code)}
    */
   @Test
-  @Category(MaintainedByDiffblue.class)
+  @Category(ContributionFromDiffblue.class)
+  @ManagedByDiffblue
   @MethodsUnderTest({"void TransactionResultCapsule.setStatus(long, code)"})
   public void testSetStatus_givenTransactionResultCapsuleUnfreezeAmountIsTen() {
     // Arrange
@@ -765,7 +794,8 @@ public class TransactionResultCapsuleDiffblueTest {
    * <p>Method under test: {@link TransactionResultCapsule#setStatus(long, code)}
    */
   @Test
-  @Category(MaintainedByDiffblue.class)
+  @Category(ContributionFromDiffblue.class)
+  @ManagedByDiffblue
   @MethodsUnderTest({"void TransactionResultCapsule.setStatus(long, code)"})
   public void testSetStatus_givenTransactionResultCapsuleWithdrawExpireAmountIsTen() {
     // Arrange
@@ -796,7 +826,8 @@ public class TransactionResultCapsuleDiffblueTest {
    * <p>Method under test: {@link TransactionResultCapsule#setStatus(long, code)}
    */
   @Test
-  @Category(MaintainedByDiffblue.class)
+  @Category(ContributionFromDiffblue.class)
+  @ManagedByDiffblue
   @MethodsUnderTest({"void TransactionResultCapsule.setStatus(long, code)"})
   public void testSetStatus_thenTransactionResultCapsuleInstanceAllFieldsSizeIsOne() {
     // Arrange
@@ -825,7 +856,8 @@ public class TransactionResultCapsuleDiffblueTest {
    * <p>Method under test: {@link TransactionResultCapsule#setStatus(long, code)}
    */
   @Test
-  @Category(MaintainedByDiffblue.class)
+  @Category(ContributionFromDiffblue.class)
+  @ManagedByDiffblue
   @MethodsUnderTest({"void TransactionResultCapsule.setStatus(long, code)"})
   public void testSetStatus_thenTransactionResultCapsuleInstanceAllFieldsSizeIsOne2() {
     // Arrange
@@ -855,7 +887,8 @@ public class TransactionResultCapsuleDiffblueTest {
    * <p>Method under test: {@link TransactionResultCapsule#setStatus(long, code)}
    */
   @Test
-  @Category(MaintainedByDiffblue.class)
+  @Category(ContributionFromDiffblue.class)
+  @ManagedByDiffblue
   @MethodsUnderTest({"void TransactionResultCapsule.setStatus(long, code)"})
   public void testSetStatus_thenTransactionResultCapsuleInstanceSerializedSizeIsFour() {
     // Arrange
@@ -886,7 +919,8 @@ public class TransactionResultCapsuleDiffblueTest {
    * <p>Method under test: {@link TransactionResultCapsule#setStatus(long, code)}
    */
   @Test
-  @Category(MaintainedByDiffblue.class)
+  @Category(ContributionFromDiffblue.class)
+  @ManagedByDiffblue
   @MethodsUnderTest({"void TransactionResultCapsule.setStatus(long, code)"})
   public void testSetStatus_thenTransactionResultCapsuleInstanceSerializedSizeIsSix() {
     // Arrange
@@ -917,7 +951,8 @@ public class TransactionResultCapsuleDiffblueTest {
    * <p>Method under test: {@link TransactionResultCapsule#setStatus(long, code)}
    */
   @Test
-  @Category(MaintainedByDiffblue.class)
+  @Category(ContributionFromDiffblue.class)
+  @ManagedByDiffblue
   @MethodsUnderTest({"void TransactionResultCapsule.setStatus(long, code)"})
   public void testSetStatus_thenTransactionResultCapsuleInstanceSerializedSizeIsTwelve() {
     // Arrange
@@ -947,7 +982,8 @@ public class TransactionResultCapsuleDiffblueTest {
    * <p>Method under test: {@link TransactionResultCapsule#getFee()}
    */
   @Test
-  @Category(MaintainedByDiffblue.class)
+  @Category(ContributionFromDiffblue.class)
+  @ManagedByDiffblue
   @MethodsUnderTest({"long TransactionResultCapsule.getFee()"})
   public void testGetFee() {
     // Arrange, Act and Assert
@@ -960,7 +996,8 @@ public class TransactionResultCapsuleDiffblueTest {
    * <p>Method under test: {@link TransactionResultCapsule#setFee(long)}
    */
   @Test
-  @Category(MaintainedByDiffblue.class)
+  @Category(ContributionFromDiffblue.class)
+  @ManagedByDiffblue
   @MethodsUnderTest({"void TransactionResultCapsule.setFee(long)"})
   public void testSetFee() {
     // Arrange
@@ -989,7 +1026,8 @@ public class TransactionResultCapsuleDiffblueTest {
    * <p>Method under test: {@link TransactionResultCapsule#setFee(long)}
    */
   @Test
-  @Category(MaintainedByDiffblue.class)
+  @Category(ContributionFromDiffblue.class)
+  @ManagedByDiffblue
   @MethodsUnderTest({"void TransactionResultCapsule.setFee(long)"})
   public void testSetFee_givenTransactionResultCapsule() {
     // Arrange
@@ -1018,7 +1056,8 @@ public class TransactionResultCapsuleDiffblueTest {
    * <p>Method under test: {@link TransactionResultCapsule#setFee(long)}
    */
   @Test
-  @Category(MaintainedByDiffblue.class)
+  @Category(ContributionFromDiffblue.class)
+  @ManagedByDiffblue
   @MethodsUnderTest({"void TransactionResultCapsule.setFee(long)"})
   public void testSetFee_givenTransactionResultCapsuleAddOrderDetailsDefaultInstance() {
     // Arrange
@@ -1048,7 +1087,8 @@ public class TransactionResultCapsuleDiffblueTest {
    * <p>Method under test: {@link TransactionResultCapsule#setFee(long)}
    */
   @Test
-  @Category(MaintainedByDiffblue.class)
+  @Category(ContributionFromDiffblue.class)
+  @ManagedByDiffblue
   @MethodsUnderTest({"void TransactionResultCapsule.setFee(long)"})
   public void testSetFee_givenTransactionResultCapsuleExchangeIdIsOne() {
     // Arrange
@@ -1079,7 +1119,8 @@ public class TransactionResultCapsuleDiffblueTest {
    * <p>Method under test: {@link TransactionResultCapsule#setFee(long)}
    */
   @Test
-  @Category(MaintainedByDiffblue.class)
+  @Category(ContributionFromDiffblue.class)
+  @ManagedByDiffblue
   @MethodsUnderTest({"void TransactionResultCapsule.setFee(long)"})
   public void testSetFee_givenTransactionResultCapsuleExchangeInjectAnotherAmountIsTen() {
     // Arrange
@@ -1110,7 +1151,8 @@ public class TransactionResultCapsuleDiffblueTest {
    * <p>Method under test: {@link TransactionResultCapsule#setFee(long)}
    */
   @Test
-  @Category(MaintainedByDiffblue.class)
+  @Category(ContributionFromDiffblue.class)
+  @ManagedByDiffblue
   @MethodsUnderTest({"void TransactionResultCapsule.setFee(long)"})
   public void testSetFee_givenTransactionResultCapsuleExchangeReceivedAmountIsTen() {
     // Arrange
@@ -1141,7 +1183,8 @@ public class TransactionResultCapsuleDiffblueTest {
    * <p>Method under test: {@link TransactionResultCapsule#setFee(long)}
    */
   @Test
-  @Category(MaintainedByDiffblue.class)
+  @Category(ContributionFromDiffblue.class)
+  @ManagedByDiffblue
   @MethodsUnderTest({"void TransactionResultCapsule.setFee(long)"})
   public void testSetFee_givenTransactionResultCapsuleExchangeWithdrawAnotherAmountIsTen() {
     // Arrange
@@ -1172,7 +1215,8 @@ public class TransactionResultCapsuleDiffblueTest {
    * <p>Method under test: {@link TransactionResultCapsule#setFee(long)}
    */
   @Test
-  @Category(MaintainedByDiffblue.class)
+  @Category(ContributionFromDiffblue.class)
+  @ManagedByDiffblue
   @MethodsUnderTest({"void TransactionResultCapsule.setFee(long)"})
   public void testSetFee_givenTransactionResultCapsuleOrderIdIsByteString() {
     // Arrange
@@ -1203,7 +1247,8 @@ public class TransactionResultCapsuleDiffblueTest {
    * <p>Method under test: {@link TransactionResultCapsule#setFee(long)}
    */
   @Test
-  @Category(MaintainedByDiffblue.class)
+  @Category(ContributionFromDiffblue.class)
+  @ManagedByDiffblue
   @MethodsUnderTest({"void TransactionResultCapsule.setFee(long)"})
   public void testSetFee_givenTransactionResultCapsuleShieldedTransactionFeeIsOne() {
     // Arrange
@@ -1233,7 +1278,8 @@ public class TransactionResultCapsuleDiffblueTest {
    * <p>Method under test: {@link TransactionResultCapsule#setFee(long)}
    */
   @Test
-  @Category(MaintainedByDiffblue.class)
+  @Category(ContributionFromDiffblue.class)
+  @ManagedByDiffblue
   @MethodsUnderTest({"void TransactionResultCapsule.setFee(long)"})
   public void testSetFee_givenTransactionResultCapsuleUnfreezeAmountIsTen() {
     // Arrange
@@ -1265,7 +1311,8 @@ public class TransactionResultCapsuleDiffblueTest {
    * <p>Method under test: {@link TransactionResultCapsule#setFee(long)}
    */
   @Test
-  @Category(MaintainedByDiffblue.class)
+  @Category(ContributionFromDiffblue.class)
+  @ManagedByDiffblue
   @MethodsUnderTest({"void TransactionResultCapsule.setFee(long)"})
   public void testSetFee_givenTransactionResultCapsuleWithdrawExpireAmountIsTen() {
     // Arrange
@@ -1296,7 +1343,8 @@ public class TransactionResultCapsuleDiffblueTest {
    * <p>Method under test: {@link TransactionResultCapsule#setFee(long)}
    */
   @Test
-  @Category(MaintainedByDiffblue.class)
+  @Category(ContributionFromDiffblue.class)
+  @ManagedByDiffblue
   @MethodsUnderTest({"void TransactionResultCapsule.setFee(long)"})
   public void testSetFee_thenTransactionResultCapsuleInstanceAllFieldsSizeIsOne() {
     // Arrange
@@ -1326,7 +1374,8 @@ public class TransactionResultCapsuleDiffblueTest {
    * <p>Method under test: {@link TransactionResultCapsule#setFee(long)}
    */
   @Test
-  @Category(MaintainedByDiffblue.class)
+  @Category(ContributionFromDiffblue.class)
+  @ManagedByDiffblue
   @MethodsUnderTest({"void TransactionResultCapsule.setFee(long)"})
   public void testSetFee_thenTransactionResultCapsuleInstanceSerializedSizeIsFour() {
     // Arrange
@@ -1357,7 +1406,8 @@ public class TransactionResultCapsuleDiffblueTest {
    * <p>Method under test: {@link TransactionResultCapsule#setFee(long)}
    */
   @Test
-  @Category(MaintainedByDiffblue.class)
+  @Category(ContributionFromDiffblue.class)
+  @ManagedByDiffblue
   @MethodsUnderTest({"void TransactionResultCapsule.setFee(long)"})
   public void testSetFee_thenTransactionResultCapsuleInstanceSerializedSizeIsSix() {
     // Arrange
@@ -1388,7 +1438,8 @@ public class TransactionResultCapsuleDiffblueTest {
    * <p>Method under test: {@link TransactionResultCapsule#setFee(long)}
    */
   @Test
-  @Category(MaintainedByDiffblue.class)
+  @Category(ContributionFromDiffblue.class)
+  @ManagedByDiffblue
   @MethodsUnderTest({"void TransactionResultCapsule.setFee(long)"})
   public void testSetFee_thenTransactionResultCapsuleInstanceSerializedSizeIsTwelve() {
     // Arrange
@@ -1423,7 +1474,8 @@ public class TransactionResultCapsuleDiffblueTest {
    * <p>Method under test: {@link TransactionResultCapsule#setFee(long)}
    */
   @Test
-  @Category(MaintainedByDiffblue.class)
+  @Category(ContributionFromDiffblue.class)
+  @ManagedByDiffblue
   @MethodsUnderTest({"void TransactionResultCapsule.setFee(long)"})
   public void testSetFee_thenTransactionResultCapsuleWithCodeIsFailedAndFeeIsOneFeeIsOne() {
     // Arrange
@@ -1448,7 +1500,8 @@ public class TransactionResultCapsuleDiffblueTest {
    * <p>Method under test: {@link TransactionResultCapsule#getUnfreezeAmount()}
    */
   @Test
-  @Category(MaintainedByDiffblue.class)
+  @Category(ContributionFromDiffblue.class)
+  @ManagedByDiffblue
   @MethodsUnderTest({"long TransactionResultCapsule.getUnfreezeAmount()"})
   public void testGetUnfreezeAmount() {
     // Arrange, Act and Assert
@@ -1461,7 +1514,8 @@ public class TransactionResultCapsuleDiffblueTest {
    * <p>Method under test: {@link TransactionResultCapsule#setUnfreezeAmount(long)}
    */
   @Test
-  @Category(MaintainedByDiffblue.class)
+  @Category(ContributionFromDiffblue.class)
+  @ManagedByDiffblue
   @MethodsUnderTest({"void TransactionResultCapsule.setUnfreezeAmount(long)"})
   public void testSetUnfreezeAmount() {
     // Arrange
@@ -1487,7 +1541,8 @@ public class TransactionResultCapsuleDiffblueTest {
    * <p>Method under test: {@link TransactionResultCapsule#setUnfreezeAmount(long)}
    */
   @Test
-  @Category(MaintainedByDiffblue.class)
+  @Category(ContributionFromDiffblue.class)
+  @ManagedByDiffblue
   @MethodsUnderTest({"void TransactionResultCapsule.setUnfreezeAmount(long)"})
   public void testSetUnfreezeAmount2() {
     // Arrange
@@ -1514,7 +1569,8 @@ public class TransactionResultCapsuleDiffblueTest {
    * <p>Method under test: {@link TransactionResultCapsule#setUnfreezeAmount(long)}
    */
   @Test
-  @Category(MaintainedByDiffblue.class)
+  @Category(ContributionFromDiffblue.class)
+  @ManagedByDiffblue
   @MethodsUnderTest({"void TransactionResultCapsule.setUnfreezeAmount(long)"})
   public void testSetUnfreezeAmount3() {
     // Arrange
@@ -1541,7 +1597,8 @@ public class TransactionResultCapsuleDiffblueTest {
    * <p>Method under test: {@link TransactionResultCapsule#setUnfreezeAmount(long)}
    */
   @Test
-  @Category(MaintainedByDiffblue.class)
+  @Category(ContributionFromDiffblue.class)
+  @ManagedByDiffblue
   @MethodsUnderTest({"void TransactionResultCapsule.setUnfreezeAmount(long)"})
   public void testSetUnfreezeAmount4() {
     // Arrange
@@ -1568,7 +1625,8 @@ public class TransactionResultCapsuleDiffblueTest {
    * <p>Method under test: {@link TransactionResultCapsule#setUnfreezeAmount(long)}
    */
   @Test
-  @Category(MaintainedByDiffblue.class)
+  @Category(ContributionFromDiffblue.class)
+  @ManagedByDiffblue
   @MethodsUnderTest({"void TransactionResultCapsule.setUnfreezeAmount(long)"})
   public void testSetUnfreezeAmount5() {
     // Arrange
@@ -1594,7 +1652,8 @@ public class TransactionResultCapsuleDiffblueTest {
    * <p>Method under test: {@link TransactionResultCapsule#setUnfreezeAmount(long)}
    */
   @Test
-  @Category(MaintainedByDiffblue.class)
+  @Category(ContributionFromDiffblue.class)
+  @ManagedByDiffblue
   @MethodsUnderTest({"void TransactionResultCapsule.setUnfreezeAmount(long)"})
   public void testSetUnfreezeAmount6() {
     // Arrange
@@ -1628,7 +1687,8 @@ public class TransactionResultCapsuleDiffblueTest {
    * <p>Method under test: {@link TransactionResultCapsule#setUnfreezeAmount(long)}
    */
   @Test
-  @Category(MaintainedByDiffblue.class)
+  @Category(ContributionFromDiffblue.class)
+  @ManagedByDiffblue
   @MethodsUnderTest({"void TransactionResultCapsule.setUnfreezeAmount(long)"})
   public void testSetUnfreezeAmount_givenTransactionResultCapsule() {
     // Arrange
@@ -1656,7 +1716,8 @@ public class TransactionResultCapsuleDiffblueTest {
    * <p>Method under test: {@link TransactionResultCapsule#setUnfreezeAmount(long)}
    */
   @Test
-  @Category(MaintainedByDiffblue.class)
+  @Category(ContributionFromDiffblue.class)
+  @ManagedByDiffblue
   @MethodsUnderTest({"void TransactionResultCapsule.setUnfreezeAmount(long)"})
   public void testSetUnfreezeAmount_givenTransactionResultCapsuleExchangeIdIsOne() {
     // Arrange
@@ -1688,7 +1749,8 @@ public class TransactionResultCapsuleDiffblueTest {
    * <p>Method under test: {@link TransactionResultCapsule#setUnfreezeAmount(long)}
    */
   @Test
-  @Category(MaintainedByDiffblue.class)
+  @Category(ContributionFromDiffblue.class)
+  @ManagedByDiffblue
   @MethodsUnderTest({"void TransactionResultCapsule.setUnfreezeAmount(long)"})
   public void testSetUnfreezeAmount_givenTransactionResultCapsuleExchangeReceivedAmountIsTen() {
     // Arrange
@@ -1720,7 +1782,8 @@ public class TransactionResultCapsuleDiffblueTest {
    * <p>Method under test: {@link TransactionResultCapsule#setUnfreezeAmount(long)}
    */
   @Test
-  @Category(MaintainedByDiffblue.class)
+  @Category(ContributionFromDiffblue.class)
+  @ManagedByDiffblue
   @MethodsUnderTest({"void TransactionResultCapsule.setUnfreezeAmount(long)"})
   public void testSetUnfreezeAmount_givenTransactionResultCapsuleOrderIdIsByteString() {
     // Arrange
@@ -1752,7 +1815,8 @@ public class TransactionResultCapsuleDiffblueTest {
    * <p>Method under test: {@link TransactionResultCapsule#setUnfreezeAmount(long)}
    */
   @Test
-  @Category(MaintainedByDiffblue.class)
+  @Category(ContributionFromDiffblue.class)
+  @ManagedByDiffblue
   @MethodsUnderTest({"void TransactionResultCapsule.setUnfreezeAmount(long)"})
   public void testSetUnfreezeAmount_givenTransactionResultCapsuleShieldedTransactionFeeIsOne() {
     // Arrange
@@ -1784,7 +1848,8 @@ public class TransactionResultCapsuleDiffblueTest {
    * <p>Method under test: {@link TransactionResultCapsule#setUnfreezeAmount(long)}
    */
   @Test
-  @Category(MaintainedByDiffblue.class)
+  @Category(ContributionFromDiffblue.class)
+  @ManagedByDiffblue
   @MethodsUnderTest({"void TransactionResultCapsule.setUnfreezeAmount(long)"})
   public void testSetUnfreezeAmount_givenTransactionResultCapsuleWithdrawExpireAmountIsTen() {
     // Arrange
@@ -1816,7 +1881,8 @@ public class TransactionResultCapsuleDiffblueTest {
    * <p>Method under test: {@link TransactionResultCapsule#setUnfreezeAmount(long)}
    */
   @Test
-  @Category(MaintainedByDiffblue.class)
+  @Category(ContributionFromDiffblue.class)
+  @ManagedByDiffblue
   @MethodsUnderTest({"void TransactionResultCapsule.setUnfreezeAmount(long)"})
   public void testSetUnfreezeAmount_thenTransactionResultCapsuleInstanceAllFieldsSizeIsOne() {
     // Arrange
@@ -1846,7 +1912,8 @@ public class TransactionResultCapsuleDiffblueTest {
    * <p>Method under test: {@link TransactionResultCapsule#setUnfreezeAmount(long)}
    */
   @Test
-  @Category(MaintainedByDiffblue.class)
+  @Category(ContributionFromDiffblue.class)
+  @ManagedByDiffblue
   @MethodsUnderTest({"void TransactionResultCapsule.setUnfreezeAmount(long)"})
   public void testSetUnfreezeAmount_thenTransactionResultCapsuleInstanceSerializedSizeIsFive() {
     // Arrange
@@ -1878,7 +1945,8 @@ public class TransactionResultCapsuleDiffblueTest {
    * <p>Method under test: {@link TransactionResultCapsule#setUnfreezeAmount(long)}
    */
   @Test
-  @Category(MaintainedByDiffblue.class)
+  @Category(ContributionFromDiffblue.class)
+  @ManagedByDiffblue
   @MethodsUnderTest({"void TransactionResultCapsule.setUnfreezeAmount(long)"})
   public void testSetUnfreezeAmount_thenTransactionResultCapsuleInstanceSerializedSizeIsSeven() {
     // Arrange
@@ -1905,7 +1973,8 @@ public class TransactionResultCapsuleDiffblueTest {
    * <p>Method under test: {@link TransactionResultCapsule#getAssetIssueID()}
    */
   @Test
-  @Category(MaintainedByDiffblue.class)
+  @Category(ContributionFromDiffblue.class)
+  @ManagedByDiffblue
   @MethodsUnderTest({"String TransactionResultCapsule.getAssetIssueID()"})
   public void testGetAssetIssueID() {
     // Arrange, Act and Assert
@@ -1918,7 +1987,8 @@ public class TransactionResultCapsuleDiffblueTest {
    * <p>Method under test: {@link TransactionResultCapsule#setAssetIssueID(String)}
    */
   @Test
-  @Category(MaintainedByDiffblue.class)
+  @Category(ContributionFromDiffblue.class)
+  @ManagedByDiffblue
   @MethodsUnderTest({"void TransactionResultCapsule.setAssetIssueID(String)"})
   public void testSetAssetIssueID() {
     // Arrange
@@ -1941,7 +2011,8 @@ public class TransactionResultCapsuleDiffblueTest {
    * <p>Method under test: {@link TransactionResultCapsule#setAssetIssueID(String)}
    */
   @Test
-  @Category(MaintainedByDiffblue.class)
+  @Category(ContributionFromDiffblue.class)
+  @ManagedByDiffblue
   @MethodsUnderTest({"void TransactionResultCapsule.setAssetIssueID(String)"})
   public void testSetAssetIssueID2() {
     // Arrange
@@ -1966,7 +2037,8 @@ public class TransactionResultCapsuleDiffblueTest {
    * <p>Method under test: {@link TransactionResultCapsule#setAssetIssueID(String)}
    */
   @Test
-  @Category(MaintainedByDiffblue.class)
+  @Category(ContributionFromDiffblue.class)
+  @ManagedByDiffblue
   @MethodsUnderTest({"void TransactionResultCapsule.setAssetIssueID(String)"})
   public void testSetAssetIssueID3() {
     // Arrange
@@ -1991,7 +2063,8 @@ public class TransactionResultCapsuleDiffblueTest {
    * <p>Method under test: {@link TransactionResultCapsule#setAssetIssueID(String)}
    */
   @Test
-  @Category(MaintainedByDiffblue.class)
+  @Category(ContributionFromDiffblue.class)
+  @ManagedByDiffblue
   @MethodsUnderTest({"void TransactionResultCapsule.setAssetIssueID(String)"})
   public void testSetAssetIssueID4() {
     // Arrange
@@ -2020,7 +2093,8 @@ public class TransactionResultCapsuleDiffblueTest {
    * <p>Method under test: {@link TransactionResultCapsule#setAssetIssueID(String)}
    */
   @Test
-  @Category(MaintainedByDiffblue.class)
+  @Category(ContributionFromDiffblue.class)
+  @ManagedByDiffblue
   @MethodsUnderTest({"void TransactionResultCapsule.setAssetIssueID(String)"})
   public void testSetAssetIssueID_givenTransactionResultCapsuleAddOrderDetailsDefaultInstance() {
     // Arrange
@@ -2048,7 +2122,8 @@ public class TransactionResultCapsuleDiffblueTest {
    * <p>Method under test: {@link TransactionResultCapsule#setAssetIssueID(String)}
    */
   @Test
-  @Category(MaintainedByDiffblue.class)
+  @Category(ContributionFromDiffblue.class)
+  @ManagedByDiffblue
   @MethodsUnderTest({"void TransactionResultCapsule.setAssetIssueID(String)"})
   public void testSetAssetIssueID_givenTransactionResultCapsuleExchangeIdIsOne() {
     // Arrange
@@ -2077,7 +2152,8 @@ public class TransactionResultCapsuleDiffblueTest {
    * <p>Method under test: {@link TransactionResultCapsule#setAssetIssueID(String)}
    */
   @Test
-  @Category(MaintainedByDiffblue.class)
+  @Category(ContributionFromDiffblue.class)
+  @ManagedByDiffblue
   @MethodsUnderTest({"void TransactionResultCapsule.setAssetIssueID(String)"})
   public void testSetAssetIssueID_givenTransactionResultCapsuleExchangeReceivedAmountIsTen() {
     // Arrange
@@ -2107,7 +2183,8 @@ public class TransactionResultCapsuleDiffblueTest {
    * <p>Method under test: {@link TransactionResultCapsule#setAssetIssueID(String)}
    */
   @Test
-  @Category(MaintainedByDiffblue.class)
+  @Category(ContributionFromDiffblue.class)
+  @ManagedByDiffblue
   @MethodsUnderTest({"void TransactionResultCapsule.setAssetIssueID(String)"})
   public void testSetAssetIssueID_givenTransactionResultCapsuleOrderIdIsByteString() {
     // Arrange
@@ -2133,7 +2210,8 @@ public class TransactionResultCapsuleDiffblueTest {
    * <p>Method under test: {@link TransactionResultCapsule#setAssetIssueID(String)}
    */
   @Test
-  @Category(MaintainedByDiffblue.class)
+  @Category(ContributionFromDiffblue.class)
+  @ManagedByDiffblue
   @MethodsUnderTest({"void TransactionResultCapsule.setAssetIssueID(String)"})
   public void testSetAssetIssueID_givenTransactionResultCapsuleShieldedTransactionFeeIsOne() {
     // Arrange
@@ -2161,7 +2239,8 @@ public class TransactionResultCapsuleDiffblueTest {
    * <p>Method under test: {@link TransactionResultCapsule#setAssetIssueID(String)}
    */
   @Test
-  @Category(MaintainedByDiffblue.class)
+  @Category(ContributionFromDiffblue.class)
+  @ManagedByDiffblue
   @MethodsUnderTest({"void TransactionResultCapsule.setAssetIssueID(String)"})
   public void testSetAssetIssueID_givenTransactionResultCapsuleUnfreezeAmountIsTen() {
     // Arrange
@@ -2191,7 +2270,8 @@ public class TransactionResultCapsuleDiffblueTest {
    * <p>Method under test: {@link TransactionResultCapsule#setAssetIssueID(String)}
    */
   @Test
-  @Category(MaintainedByDiffblue.class)
+  @Category(ContributionFromDiffblue.class)
+  @ManagedByDiffblue
   @MethodsUnderTest({"void TransactionResultCapsule.setAssetIssueID(String)"})
   public void testSetAssetIssueID_givenTransactionResultCapsuleWithdrawExpireAmountIsTen() {
     // Arrange
@@ -2221,7 +2301,8 @@ public class TransactionResultCapsuleDiffblueTest {
    * <p>Method under test: {@link TransactionResultCapsule#setAssetIssueID(String)}
    */
   @Test
-  @Category(MaintainedByDiffblue.class)
+  @Category(ContributionFromDiffblue.class)
+  @ManagedByDiffblue
   @MethodsUnderTest({"void TransactionResultCapsule.setAssetIssueID(String)"})
   public void testSetAssetIssueID_thenTransactionResultCapsuleInstanceAllFieldsSizeIsOne() {
     // Arrange
@@ -2248,7 +2329,8 @@ public class TransactionResultCapsuleDiffblueTest {
    * <p>Method under test: {@link TransactionResultCapsule#setAssetIssueID(String)}
    */
   @Test
-  @Category(MaintainedByDiffblue.class)
+  @Category(ContributionFromDiffblue.class)
+  @ManagedByDiffblue
   @MethodsUnderTest({"void TransactionResultCapsule.setAssetIssueID(String)"})
   public void testSetAssetIssueID_thenTransactionResultCapsuleInstanceAllFieldsSizeIsOne2() {
     // Arrange
@@ -2276,7 +2358,8 @@ public class TransactionResultCapsuleDiffblueTest {
    * <p>Method under test: {@link TransactionResultCapsule#setAssetIssueID(String)}
    */
   @Test
-  @Category(MaintainedByDiffblue.class)
+  @Category(ContributionFromDiffblue.class)
+  @ManagedByDiffblue
   @MethodsUnderTest({"void TransactionResultCapsule.setAssetIssueID(String)"})
   public void testSetAssetIssueID_thenTransactionResultCapsuleInstanceSerializedSizeIsFourteen() {
     // Arrange
@@ -2309,7 +2392,8 @@ public class TransactionResultCapsuleDiffblueTest {
    * <p>Method under test: {@link TransactionResultCapsule#setAssetIssueID(String)}
    */
   @Test
-  @Category(MaintainedByDiffblue.class)
+  @Category(ContributionFromDiffblue.class)
+  @ManagedByDiffblue
   @MethodsUnderTest({"void TransactionResultCapsule.setAssetIssueID(String)"})
   public void testSetAssetIssueID_thenTransactionResultCapsuleInstanceSerializedSizeIsSix() {
     // Arrange
@@ -2333,7 +2417,8 @@ public class TransactionResultCapsuleDiffblueTest {
    * <p>Method under test: {@link TransactionResultCapsule#getWithdrawAmount()}
    */
   @Test
-  @Category(MaintainedByDiffblue.class)
+  @Category(ContributionFromDiffblue.class)
+  @ManagedByDiffblue
   @MethodsUnderTest({"long TransactionResultCapsule.getWithdrawAmount()"})
   public void testGetWithdrawAmount() {
     // Arrange, Act and Assert
@@ -2346,7 +2431,8 @@ public class TransactionResultCapsuleDiffblueTest {
    * <p>Method under test: {@link TransactionResultCapsule#setWithdrawAmount(long)}
    */
   @Test
-  @Category(MaintainedByDiffblue.class)
+  @Category(ContributionFromDiffblue.class)
+  @ManagedByDiffblue
   @MethodsUnderTest({"void TransactionResultCapsule.setWithdrawAmount(long)"})
   public void testSetWithdrawAmount() {
     // Arrange
@@ -2371,7 +2457,8 @@ public class TransactionResultCapsuleDiffblueTest {
    * <p>Method under test: {@link TransactionResultCapsule#setWithdrawAmount(long)}
    */
   @Test
-  @Category(MaintainedByDiffblue.class)
+  @Category(ContributionFromDiffblue.class)
+  @ManagedByDiffblue
   @MethodsUnderTest({"void TransactionResultCapsule.setWithdrawAmount(long)"})
   public void testSetWithdrawAmount2() {
     // Arrange
@@ -2397,7 +2484,8 @@ public class TransactionResultCapsuleDiffblueTest {
    * <p>Method under test: {@link TransactionResultCapsule#setWithdrawAmount(long)}
    */
   @Test
-  @Category(MaintainedByDiffblue.class)
+  @Category(ContributionFromDiffblue.class)
+  @ManagedByDiffblue
   @MethodsUnderTest({"void TransactionResultCapsule.setWithdrawAmount(long)"})
   public void testSetWithdrawAmount3() {
     // Arrange
@@ -2423,7 +2511,8 @@ public class TransactionResultCapsuleDiffblueTest {
    * <p>Method under test: {@link TransactionResultCapsule#setWithdrawAmount(long)}
    */
   @Test
-  @Category(MaintainedByDiffblue.class)
+  @Category(ContributionFromDiffblue.class)
+  @ManagedByDiffblue
   @MethodsUnderTest({"void TransactionResultCapsule.setWithdrawAmount(long)"})
   public void testSetWithdrawAmount4() {
     // Arrange
@@ -2449,7 +2538,8 @@ public class TransactionResultCapsuleDiffblueTest {
    * <p>Method under test: {@link TransactionResultCapsule#setWithdrawAmount(long)}
    */
   @Test
-  @Category(MaintainedByDiffblue.class)
+  @Category(ContributionFromDiffblue.class)
+  @ManagedByDiffblue
   @MethodsUnderTest({"void TransactionResultCapsule.setWithdrawAmount(long)"})
   public void testSetWithdrawAmount5() {
     // Arrange
@@ -2478,7 +2568,8 @@ public class TransactionResultCapsuleDiffblueTest {
    * <p>Method under test: {@link TransactionResultCapsule#setWithdrawAmount(long)}
    */
   @Test
-  @Category(MaintainedByDiffblue.class)
+  @Category(ContributionFromDiffblue.class)
+  @ManagedByDiffblue
   @MethodsUnderTest({"void TransactionResultCapsule.setWithdrawAmount(long)"})
   public void testSetWithdrawAmount_givenTransactionResultCapsule() {
     // Arrange
@@ -2506,7 +2597,8 @@ public class TransactionResultCapsuleDiffblueTest {
    * <p>Method under test: {@link TransactionResultCapsule#setWithdrawAmount(long)}
    */
   @Test
-  @Category(MaintainedByDiffblue.class)
+  @Category(ContributionFromDiffblue.class)
+  @ManagedByDiffblue
   @MethodsUnderTest({"void TransactionResultCapsule.setWithdrawAmount(long)"})
   public void testSetWithdrawAmount_givenTransactionResultCapsuleExchangeIdIsOne() {
     // Arrange
@@ -2537,7 +2629,8 @@ public class TransactionResultCapsuleDiffblueTest {
    * <p>Method under test: {@link TransactionResultCapsule#setWithdrawAmount(long)}
    */
   @Test
-  @Category(MaintainedByDiffblue.class)
+  @Category(ContributionFromDiffblue.class)
+  @ManagedByDiffblue
   @MethodsUnderTest({"void TransactionResultCapsule.setWithdrawAmount(long)"})
   public void testSetWithdrawAmount_givenTransactionResultCapsuleExchangeReceivedAmountIsTen() {
     // Arrange
@@ -2568,7 +2661,8 @@ public class TransactionResultCapsuleDiffblueTest {
    * <p>Method under test: {@link TransactionResultCapsule#setWithdrawAmount(long)}
    */
   @Test
-  @Category(MaintainedByDiffblue.class)
+  @Category(ContributionFromDiffblue.class)
+  @ManagedByDiffblue
   @MethodsUnderTest({"void TransactionResultCapsule.setWithdrawAmount(long)"})
   public void testSetWithdrawAmount_givenTransactionResultCapsuleOrderIdIsByteString() {
     // Arrange
@@ -2599,7 +2693,8 @@ public class TransactionResultCapsuleDiffblueTest {
    * <p>Method under test: {@link TransactionResultCapsule#setWithdrawAmount(long)}
    */
   @Test
-  @Category(MaintainedByDiffblue.class)
+  @Category(ContributionFromDiffblue.class)
+  @ManagedByDiffblue
   @MethodsUnderTest({"void TransactionResultCapsule.setWithdrawAmount(long)"})
   public void testSetWithdrawAmount_givenTransactionResultCapsuleShieldedTransactionFeeIsOne() {
     // Arrange
@@ -2629,7 +2724,8 @@ public class TransactionResultCapsuleDiffblueTest {
    * <p>Method under test: {@link TransactionResultCapsule#setWithdrawAmount(long)}
    */
   @Test
-  @Category(MaintainedByDiffblue.class)
+  @Category(ContributionFromDiffblue.class)
+  @ManagedByDiffblue
   @MethodsUnderTest({"void TransactionResultCapsule.setWithdrawAmount(long)"})
   public void testSetWithdrawAmount_givenTransactionResultCapsuleUnfreezeAmountIsTen() {
     // Arrange
@@ -2661,7 +2757,8 @@ public class TransactionResultCapsuleDiffblueTest {
    * <p>Method under test: {@link TransactionResultCapsule#setWithdrawAmount(long)}
    */
   @Test
-  @Category(MaintainedByDiffblue.class)
+  @Category(ContributionFromDiffblue.class)
+  @ManagedByDiffblue
   @MethodsUnderTest({"void TransactionResultCapsule.setWithdrawAmount(long)"})
   public void testSetWithdrawAmount_givenTransactionResultCapsuleWithdrawExpireAmountIsTen() {
     // Arrange
@@ -2692,7 +2789,8 @@ public class TransactionResultCapsuleDiffblueTest {
    * <p>Method under test: {@link TransactionResultCapsule#setWithdrawAmount(long)}
    */
   @Test
-  @Category(MaintainedByDiffblue.class)
+  @Category(ContributionFromDiffblue.class)
+  @ManagedByDiffblue
   @MethodsUnderTest({"void TransactionResultCapsule.setWithdrawAmount(long)"})
   public void testSetWithdrawAmount_thenTransactionResultCapsuleInstanceAllFieldsSizeIsOne() {
     // Arrange
@@ -2722,7 +2820,8 @@ public class TransactionResultCapsuleDiffblueTest {
    * <p>Method under test: {@link TransactionResultCapsule#setWithdrawAmount(long)}
    */
   @Test
-  @Category(MaintainedByDiffblue.class)
+  @Category(ContributionFromDiffblue.class)
+  @ManagedByDiffblue
   @MethodsUnderTest({"void TransactionResultCapsule.setWithdrawAmount(long)"})
   public void testSetWithdrawAmount_thenTransactionResultCapsuleInstanceSerializedSizeIsSix() {
     // Arrange
@@ -2753,7 +2852,8 @@ public class TransactionResultCapsuleDiffblueTest {
    * <p>Method under test: {@link TransactionResultCapsule#setWithdrawAmount(long)}
    */
   @Test
-  @Category(MaintainedByDiffblue.class)
+  @Category(ContributionFromDiffblue.class)
+  @ManagedByDiffblue
   @MethodsUnderTest({"void TransactionResultCapsule.setWithdrawAmount(long)"})
   public void testSetWithdrawAmount_thenTransactionResultCapsuleInstanceSerializedSizeIsTwelve() {
     // Arrange
@@ -2783,7 +2883,8 @@ public class TransactionResultCapsuleDiffblueTest {
    * <p>Method under test: {@link TransactionResultCapsule#getWithdrawExpireAmount()}
    */
   @Test
-  @Category(MaintainedByDiffblue.class)
+  @Category(ContributionFromDiffblue.class)
+  @ManagedByDiffblue
   @MethodsUnderTest({"long TransactionResultCapsule.getWithdrawExpireAmount()"})
   public void testGetWithdrawExpireAmount() {
     // Arrange, Act and Assert
@@ -2796,7 +2897,8 @@ public class TransactionResultCapsuleDiffblueTest {
    * <p>Method under test: {@link TransactionResultCapsule#setWithdrawExpireAmount(long)}
    */
   @Test
-  @Category(MaintainedByDiffblue.class)
+  @Category(ContributionFromDiffblue.class)
+  @ManagedByDiffblue
   @MethodsUnderTest({"void TransactionResultCapsule.setWithdrawExpireAmount(long)"})
   public void testSetWithdrawExpireAmount() {
     // Arrange
@@ -2821,7 +2923,8 @@ public class TransactionResultCapsuleDiffblueTest {
    * <p>Method under test: {@link TransactionResultCapsule#setWithdrawExpireAmount(long)}
    */
   @Test
-  @Category(MaintainedByDiffblue.class)
+  @Category(ContributionFromDiffblue.class)
+  @ManagedByDiffblue
   @MethodsUnderTest({"void TransactionResultCapsule.setWithdrawExpireAmount(long)"})
   public void testSetWithdrawExpireAmount2() {
     // Arrange
@@ -2846,7 +2949,8 @@ public class TransactionResultCapsuleDiffblueTest {
    * <p>Method under test: {@link TransactionResultCapsule#setWithdrawExpireAmount(long)}
    */
   @Test
-  @Category(MaintainedByDiffblue.class)
+  @Category(ContributionFromDiffblue.class)
+  @ManagedByDiffblue
   @MethodsUnderTest({"void TransactionResultCapsule.setWithdrawExpireAmount(long)"})
   public void testSetWithdrawExpireAmount3() {
     // Arrange
@@ -2872,7 +2976,8 @@ public class TransactionResultCapsuleDiffblueTest {
    * <p>Method under test: {@link TransactionResultCapsule#setWithdrawExpireAmount(long)}
    */
   @Test
-  @Category(MaintainedByDiffblue.class)
+  @Category(ContributionFromDiffblue.class)
+  @ManagedByDiffblue
   @MethodsUnderTest({"void TransactionResultCapsule.setWithdrawExpireAmount(long)"})
   public void testSetWithdrawExpireAmount4() {
     // Arrange
@@ -2899,7 +3004,8 @@ public class TransactionResultCapsuleDiffblueTest {
    * <p>Method under test: {@link TransactionResultCapsule#setWithdrawExpireAmount(long)}
    */
   @Test
-  @Category(MaintainedByDiffblue.class)
+  @Category(ContributionFromDiffblue.class)
+  @ManagedByDiffblue
   @MethodsUnderTest({"void TransactionResultCapsule.setWithdrawExpireAmount(long)"})
   public void testSetWithdrawExpireAmount5() {
     // Arrange
@@ -2926,7 +3032,8 @@ public class TransactionResultCapsuleDiffblueTest {
    * <p>Method under test: {@link TransactionResultCapsule#setWithdrawExpireAmount(long)}
    */
   @Test
-  @Category(MaintainedByDiffblue.class)
+  @Category(ContributionFromDiffblue.class)
+  @ManagedByDiffblue
   @MethodsUnderTest({"void TransactionResultCapsule.setWithdrawExpireAmount(long)"})
   public void testSetWithdrawExpireAmount6() {
     // Arrange
@@ -2952,7 +3059,8 @@ public class TransactionResultCapsuleDiffblueTest {
    * <p>Method under test: {@link TransactionResultCapsule#setWithdrawExpireAmount(long)}
    */
   @Test
-  @Category(MaintainedByDiffblue.class)
+  @Category(ContributionFromDiffblue.class)
+  @ManagedByDiffblue
   @MethodsUnderTest({"void TransactionResultCapsule.setWithdrawExpireAmount(long)"})
   public void testSetWithdrawExpireAmount7() {
     // Arrange
@@ -2978,7 +3086,8 @@ public class TransactionResultCapsuleDiffblueTest {
    * <p>Method under test: {@link TransactionResultCapsule#setWithdrawExpireAmount(long)}
    */
   @Test
-  @Category(MaintainedByDiffblue.class)
+  @Category(ContributionFromDiffblue.class)
+  @ManagedByDiffblue
   @MethodsUnderTest({"void TransactionResultCapsule.setWithdrawExpireAmount(long)"})
   public void testSetWithdrawExpireAmount8() {
     // Arrange
@@ -3004,7 +3113,8 @@ public class TransactionResultCapsuleDiffblueTest {
    * <p>Method under test: {@link TransactionResultCapsule#setWithdrawExpireAmount(long)}
    */
   @Test
-  @Category(MaintainedByDiffblue.class)
+  @Category(ContributionFromDiffblue.class)
+  @ManagedByDiffblue
   @MethodsUnderTest({"void TransactionResultCapsule.setWithdrawExpireAmount(long)"})
   public void testSetWithdrawExpireAmount9() {
     // Arrange
@@ -3030,7 +3140,8 @@ public class TransactionResultCapsuleDiffblueTest {
    * <p>Method under test: {@link TransactionResultCapsule#setWithdrawExpireAmount(long)}
    */
   @Test
-  @Category(MaintainedByDiffblue.class)
+  @Category(ContributionFromDiffblue.class)
+  @ManagedByDiffblue
   @MethodsUnderTest({"void TransactionResultCapsule.setWithdrawExpireAmount(long)"})
   public void testSetWithdrawExpireAmount10() {
     // Arrange
@@ -3056,7 +3167,8 @@ public class TransactionResultCapsuleDiffblueTest {
    * <p>Method under test: {@link TransactionResultCapsule#setWithdrawExpireAmount(long)}
    */
   @Test
-  @Category(MaintainedByDiffblue.class)
+  @Category(ContributionFromDiffblue.class)
+  @ManagedByDiffblue
   @MethodsUnderTest({"void TransactionResultCapsule.setWithdrawExpireAmount(long)"})
   public void testSetWithdrawExpireAmount11() {
     // Arrange
@@ -3082,7 +3194,8 @@ public class TransactionResultCapsuleDiffblueTest {
    * <p>Method under test: {@link TransactionResultCapsule#setWithdrawExpireAmount(long)}
    */
   @Test
-  @Category(MaintainedByDiffblue.class)
+  @Category(ContributionFromDiffblue.class)
+  @ManagedByDiffblue
   @MethodsUnderTest({"void TransactionResultCapsule.setWithdrawExpireAmount(long)"})
   public void testSetWithdrawExpireAmount12() {
     // Arrange
@@ -3108,7 +3221,8 @@ public class TransactionResultCapsuleDiffblueTest {
    * <p>Method under test: {@link TransactionResultCapsule#setWithdrawExpireAmount(long)}
    */
   @Test
-  @Category(MaintainedByDiffblue.class)
+  @Category(ContributionFromDiffblue.class)
+  @ManagedByDiffblue
   @MethodsUnderTest({"void TransactionResultCapsule.setWithdrawExpireAmount(long)"})
   public void testSetWithdrawExpireAmount13() {
     // Arrange
@@ -3134,7 +3248,8 @@ public class TransactionResultCapsuleDiffblueTest {
    * <p>Method under test: {@link TransactionResultCapsule#setWithdrawExpireAmount(long)}
    */
   @Test
-  @Category(MaintainedByDiffblue.class)
+  @Category(ContributionFromDiffblue.class)
+  @ManagedByDiffblue
   @MethodsUnderTest({"void TransactionResultCapsule.setWithdrawExpireAmount(long)"})
   public void testSetWithdrawExpireAmount14() {
     // Arrange
@@ -3168,7 +3283,8 @@ public class TransactionResultCapsuleDiffblueTest {
    * <p>Method under test: {@link TransactionResultCapsule#setWithdrawExpireAmount(long)}
    */
   @Test
-  @Category(MaintainedByDiffblue.class)
+  @Category(ContributionFromDiffblue.class)
+  @ManagedByDiffblue
   @MethodsUnderTest({"void TransactionResultCapsule.setWithdrawExpireAmount(long)"})
   public void testSetWithdrawExpireAmount_givenTransactionResultCapsule() {
     // Arrange
@@ -3192,7 +3308,8 @@ public class TransactionResultCapsuleDiffblueTest {
    * <p>Method under test: {@link TransactionResultCapsule#getCancelUnfreezeV2AmountMap()}
    */
   @Test
-  @Category(MaintainedByDiffblue.class)
+  @Category(ContributionFromDiffblue.class)
+  @ManagedByDiffblue
   @MethodsUnderTest({"Map TransactionResultCapsule.getCancelUnfreezeV2AmountMap()"})
   public void testGetCancelUnfreezeV2AmountMap() {
     // Arrange
@@ -3213,7 +3330,8 @@ public class TransactionResultCapsuleDiffblueTest {
    * <p>Method under test: {@link TransactionResultCapsule#getCancelUnfreezeV2AmountMap()}
    */
   @Test
-  @Category(MaintainedByDiffblue.class)
+  @Category(ContributionFromDiffblue.class)
+  @ManagedByDiffblue
   @MethodsUnderTest({"Map TransactionResultCapsule.getCancelUnfreezeV2AmountMap()"})
   public void testGetCancelUnfreezeV2AmountMap_givenTransactionResultCapsule() {
     // Arrange, Act and Assert
@@ -3226,7 +3344,8 @@ public class TransactionResultCapsuleDiffblueTest {
    * <p>Method under test: {@link TransactionResultCapsule#putAllCancelUnfreezeV2AmountMap(Map)}
    */
   @Test
-  @Category(MaintainedByDiffblue.class)
+  @Category(ContributionFromDiffblue.class)
+  @ManagedByDiffblue
   @MethodsUnderTest({"void TransactionResultCapsule.putAllCancelUnfreezeV2AmountMap(Map)"})
   public void testPutAllCancelUnfreezeV2AmountMap() {
     // Arrange
@@ -3258,7 +3377,8 @@ public class TransactionResultCapsuleDiffblueTest {
    * <p>Method under test: {@link TransactionResultCapsule#putAllCancelUnfreezeV2AmountMap(Map)}
    */
   @Test
-  @Category(MaintainedByDiffblue.class)
+  @Category(ContributionFromDiffblue.class)
+  @ManagedByDiffblue
   @MethodsUnderTest({"void TransactionResultCapsule.putAllCancelUnfreezeV2AmountMap(Map)"})
   public void testPutAllCancelUnfreezeV2AmountMap2() {
     // Arrange
@@ -3291,7 +3411,8 @@ public class TransactionResultCapsuleDiffblueTest {
    * <p>Method under test: {@link TransactionResultCapsule#putAllCancelUnfreezeV2AmountMap(Map)}
    */
   @Test
-  @Category(MaintainedByDiffblue.class)
+  @Category(ContributionFromDiffblue.class)
+  @ManagedByDiffblue
   @MethodsUnderTest({"void TransactionResultCapsule.putAllCancelUnfreezeV2AmountMap(Map)"})
   public void testPutAllCancelUnfreezeV2AmountMap3() {
     // Arrange
@@ -3324,7 +3445,8 @@ public class TransactionResultCapsuleDiffblueTest {
    * <p>Method under test: {@link TransactionResultCapsule#putAllCancelUnfreezeV2AmountMap(Map)}
    */
   @Test
-  @Category(MaintainedByDiffblue.class)
+  @Category(ContributionFromDiffblue.class)
+  @ManagedByDiffblue
   @MethodsUnderTest({"void TransactionResultCapsule.putAllCancelUnfreezeV2AmountMap(Map)"})
   public void testPutAllCancelUnfreezeV2AmountMap4() {
     // Arrange
@@ -3358,7 +3480,8 @@ public class TransactionResultCapsuleDiffblueTest {
    * <p>Method under test: {@link TransactionResultCapsule#putAllCancelUnfreezeV2AmountMap(Map)}
    */
   @Test
-  @Category(MaintainedByDiffblue.class)
+  @Category(ContributionFromDiffblue.class)
+  @ManagedByDiffblue
   @MethodsUnderTest({"void TransactionResultCapsule.putAllCancelUnfreezeV2AmountMap(Map)"})
   public void testPutAllCancelUnfreezeV2AmountMap5() {
     // Arrange
@@ -3392,7 +3515,8 @@ public class TransactionResultCapsuleDiffblueTest {
    * <p>Method under test: {@link TransactionResultCapsule#putAllCancelUnfreezeV2AmountMap(Map)}
    */
   @Test
-  @Category(MaintainedByDiffblue.class)
+  @Category(ContributionFromDiffblue.class)
+  @ManagedByDiffblue
   @MethodsUnderTest({"void TransactionResultCapsule.putAllCancelUnfreezeV2AmountMap(Map)"})
   public void testPutAllCancelUnfreezeV2AmountMap6() {
     // Arrange
@@ -3426,7 +3550,8 @@ public class TransactionResultCapsuleDiffblueTest {
    * <p>Method under test: {@link TransactionResultCapsule#putAllCancelUnfreezeV2AmountMap(Map)}
    */
   @Test
-  @Category(MaintainedByDiffblue.class)
+  @Category(ContributionFromDiffblue.class)
+  @ManagedByDiffblue
   @MethodsUnderTest({"void TransactionResultCapsule.putAllCancelUnfreezeV2AmountMap(Map)"})
   public void testPutAllCancelUnfreezeV2AmountMap7() {
     // Arrange
@@ -3460,7 +3585,8 @@ public class TransactionResultCapsuleDiffblueTest {
    * <p>Method under test: {@link TransactionResultCapsule#putAllCancelUnfreezeV2AmountMap(Map)}
    */
   @Test
-  @Category(MaintainedByDiffblue.class)
+  @Category(ContributionFromDiffblue.class)
+  @ManagedByDiffblue
   @MethodsUnderTest({"void TransactionResultCapsule.putAllCancelUnfreezeV2AmountMap(Map)"})
   public void testPutAllCancelUnfreezeV2AmountMap8() {
     // Arrange
@@ -3494,7 +3620,8 @@ public class TransactionResultCapsuleDiffblueTest {
    * <p>Method under test: {@link TransactionResultCapsule#putAllCancelUnfreezeV2AmountMap(Map)}
    */
   @Test
-  @Category(MaintainedByDiffblue.class)
+  @Category(ContributionFromDiffblue.class)
+  @ManagedByDiffblue
   @MethodsUnderTest({"void TransactionResultCapsule.putAllCancelUnfreezeV2AmountMap(Map)"})
   public void testPutAllCancelUnfreezeV2AmountMap9() {
     // Arrange
@@ -3528,7 +3655,8 @@ public class TransactionResultCapsuleDiffblueTest {
    * <p>Method under test: {@link TransactionResultCapsule#putAllCancelUnfreezeV2AmountMap(Map)}
    */
   @Test
-  @Category(MaintainedByDiffblue.class)
+  @Category(ContributionFromDiffblue.class)
+  @ManagedByDiffblue
   @MethodsUnderTest({"void TransactionResultCapsule.putAllCancelUnfreezeV2AmountMap(Map)"})
   public void testPutAllCancelUnfreezeV2AmountMap10() {
     // Arrange
@@ -3562,7 +3690,8 @@ public class TransactionResultCapsuleDiffblueTest {
    * <p>Method under test: {@link TransactionResultCapsule#putAllCancelUnfreezeV2AmountMap(Map)}
    */
   @Test
-  @Category(MaintainedByDiffblue.class)
+  @Category(ContributionFromDiffblue.class)
+  @ManagedByDiffblue
   @MethodsUnderTest({"void TransactionResultCapsule.putAllCancelUnfreezeV2AmountMap(Map)"})
   public void testPutAllCancelUnfreezeV2AmountMap11() {
     // Arrange
@@ -3596,7 +3725,8 @@ public class TransactionResultCapsuleDiffblueTest {
    * <p>Method under test: {@link TransactionResultCapsule#putAllCancelUnfreezeV2AmountMap(Map)}
    */
   @Test
-  @Category(MaintainedByDiffblue.class)
+  @Category(ContributionFromDiffblue.class)
+  @ManagedByDiffblue
   @MethodsUnderTest({"void TransactionResultCapsule.putAllCancelUnfreezeV2AmountMap(Map)"})
   public void testPutAllCancelUnfreezeV2AmountMap12() {
     // Arrange
@@ -3630,7 +3760,8 @@ public class TransactionResultCapsuleDiffblueTest {
    * <p>Method under test: {@link TransactionResultCapsule#putAllCancelUnfreezeV2AmountMap(Map)}
    */
   @Test
-  @Category(MaintainedByDiffblue.class)
+  @Category(ContributionFromDiffblue.class)
+  @ManagedByDiffblue
   @MethodsUnderTest({"void TransactionResultCapsule.putAllCancelUnfreezeV2AmountMap(Map)"})
   public void testPutAllCancelUnfreezeV2AmountMap13() {
     // Arrange
@@ -3664,7 +3795,8 @@ public class TransactionResultCapsuleDiffblueTest {
    * <p>Method under test: {@link TransactionResultCapsule#putAllCancelUnfreezeV2AmountMap(Map)}
    */
   @Test
-  @Category(MaintainedByDiffblue.class)
+  @Category(ContributionFromDiffblue.class)
+  @ManagedByDiffblue
   @MethodsUnderTest({"void TransactionResultCapsule.putAllCancelUnfreezeV2AmountMap(Map)"})
   public void testPutAllCancelUnfreezeV2AmountMap14() {
     // Arrange
@@ -3698,7 +3830,8 @@ public class TransactionResultCapsuleDiffblueTest {
    * <p>Method under test: {@link TransactionResultCapsule#putAllCancelUnfreezeV2AmountMap(Map)}
    */
   @Test
-  @Category(MaintainedByDiffblue.class)
+  @Category(ContributionFromDiffblue.class)
+  @ManagedByDiffblue
   @MethodsUnderTest({"void TransactionResultCapsule.putAllCancelUnfreezeV2AmountMap(Map)"})
   public void testPutAllCancelUnfreezeV2AmountMap15() {
     // Arrange
@@ -3728,7 +3861,8 @@ public class TransactionResultCapsuleDiffblueTest {
    * <p>Method under test: {@link TransactionResultCapsule#putAllCancelUnfreezeV2AmountMap(Map)}
    */
   @Test
-  @Category(MaintainedByDiffblue.class)
+  @Category(ContributionFromDiffblue.class)
+  @ManagedByDiffblue
   @MethodsUnderTest({"void TransactionResultCapsule.putAllCancelUnfreezeV2AmountMap(Map)"})
   public void testPutAllCancelUnfreezeV2AmountMap16() {
     // Arrange
@@ -3761,7 +3895,8 @@ public class TransactionResultCapsuleDiffblueTest {
    * <p>Method under test: {@link TransactionResultCapsule#getExchangeReceivedAmount()}
    */
   @Test
-  @Category(MaintainedByDiffblue.class)
+  @Category(ContributionFromDiffblue.class)
+  @ManagedByDiffblue
   @MethodsUnderTest({"long TransactionResultCapsule.getExchangeReceivedAmount()"})
   public void testGetExchangeReceivedAmount() {
     // Arrange, Act and Assert
@@ -3774,7 +3909,8 @@ public class TransactionResultCapsuleDiffblueTest {
    * <p>Method under test: {@link TransactionResultCapsule#setExchangeReceivedAmount(long)}
    */
   @Test
-  @Category(MaintainedByDiffblue.class)
+  @Category(ContributionFromDiffblue.class)
+  @ManagedByDiffblue
   @MethodsUnderTest({"void TransactionResultCapsule.setExchangeReceivedAmount(long)"})
   public void testSetExchangeReceivedAmount() {
     // Arrange
@@ -3799,7 +3935,8 @@ public class TransactionResultCapsuleDiffblueTest {
    * <p>Method under test: {@link TransactionResultCapsule#setExchangeReceivedAmount(long)}
    */
   @Test
-  @Category(MaintainedByDiffblue.class)
+  @Category(ContributionFromDiffblue.class)
+  @ManagedByDiffblue
   @MethodsUnderTest({"void TransactionResultCapsule.setExchangeReceivedAmount(long)"})
   public void testSetExchangeReceivedAmount2() {
     // Arrange
@@ -3824,7 +3961,8 @@ public class TransactionResultCapsuleDiffblueTest {
    * <p>Method under test: {@link TransactionResultCapsule#setExchangeReceivedAmount(long)}
    */
   @Test
-  @Category(MaintainedByDiffblue.class)
+  @Category(ContributionFromDiffblue.class)
+  @ManagedByDiffblue
   @MethodsUnderTest({"void TransactionResultCapsule.setExchangeReceivedAmount(long)"})
   public void testSetExchangeReceivedAmount3() {
     // Arrange
@@ -3850,7 +3988,8 @@ public class TransactionResultCapsuleDiffblueTest {
    * <p>Method under test: {@link TransactionResultCapsule#setExchangeReceivedAmount(long)}
    */
   @Test
-  @Category(MaintainedByDiffblue.class)
+  @Category(ContributionFromDiffblue.class)
+  @ManagedByDiffblue
   @MethodsUnderTest({"void TransactionResultCapsule.setExchangeReceivedAmount(long)"})
   public void testSetExchangeReceivedAmount4() {
     // Arrange
@@ -3877,7 +4016,8 @@ public class TransactionResultCapsuleDiffblueTest {
    * <p>Method under test: {@link TransactionResultCapsule#setExchangeReceivedAmount(long)}
    */
   @Test
-  @Category(MaintainedByDiffblue.class)
+  @Category(ContributionFromDiffblue.class)
+  @ManagedByDiffblue
   @MethodsUnderTest({"void TransactionResultCapsule.setExchangeReceivedAmount(long)"})
   public void testSetExchangeReceivedAmount5() {
     // Arrange
@@ -3904,7 +4044,8 @@ public class TransactionResultCapsuleDiffblueTest {
    * <p>Method under test: {@link TransactionResultCapsule#setExchangeReceivedAmount(long)}
    */
   @Test
-  @Category(MaintainedByDiffblue.class)
+  @Category(ContributionFromDiffblue.class)
+  @ManagedByDiffblue
   @MethodsUnderTest({"void TransactionResultCapsule.setExchangeReceivedAmount(long)"})
   public void testSetExchangeReceivedAmount6() {
     // Arrange
@@ -3930,7 +4071,8 @@ public class TransactionResultCapsuleDiffblueTest {
    * <p>Method under test: {@link TransactionResultCapsule#setExchangeReceivedAmount(long)}
    */
   @Test
-  @Category(MaintainedByDiffblue.class)
+  @Category(ContributionFromDiffblue.class)
+  @ManagedByDiffblue
   @MethodsUnderTest({"void TransactionResultCapsule.setExchangeReceivedAmount(long)"})
   public void testSetExchangeReceivedAmount7() {
     // Arrange
@@ -3956,7 +4098,8 @@ public class TransactionResultCapsuleDiffblueTest {
    * <p>Method under test: {@link TransactionResultCapsule#setExchangeReceivedAmount(long)}
    */
   @Test
-  @Category(MaintainedByDiffblue.class)
+  @Category(ContributionFromDiffblue.class)
+  @ManagedByDiffblue
   @MethodsUnderTest({"void TransactionResultCapsule.setExchangeReceivedAmount(long)"})
   public void testSetExchangeReceivedAmount8() {
     // Arrange
@@ -3982,7 +4125,8 @@ public class TransactionResultCapsuleDiffblueTest {
    * <p>Method under test: {@link TransactionResultCapsule#setExchangeReceivedAmount(long)}
    */
   @Test
-  @Category(MaintainedByDiffblue.class)
+  @Category(ContributionFromDiffblue.class)
+  @ManagedByDiffblue
   @MethodsUnderTest({"void TransactionResultCapsule.setExchangeReceivedAmount(long)"})
   public void testSetExchangeReceivedAmount9() {
     // Arrange
@@ -4009,7 +4153,8 @@ public class TransactionResultCapsuleDiffblueTest {
    * <p>Method under test: {@link TransactionResultCapsule#setExchangeReceivedAmount(long)}
    */
   @Test
-  @Category(MaintainedByDiffblue.class)
+  @Category(ContributionFromDiffblue.class)
+  @ManagedByDiffblue
   @MethodsUnderTest({"void TransactionResultCapsule.setExchangeReceivedAmount(long)"})
   public void testSetExchangeReceivedAmount10() {
     // Arrange
@@ -4035,7 +4180,8 @@ public class TransactionResultCapsuleDiffblueTest {
    * <p>Method under test: {@link TransactionResultCapsule#setExchangeReceivedAmount(long)}
    */
   @Test
-  @Category(MaintainedByDiffblue.class)
+  @Category(ContributionFromDiffblue.class)
+  @ManagedByDiffblue
   @MethodsUnderTest({"void TransactionResultCapsule.setExchangeReceivedAmount(long)"})
   public void testSetExchangeReceivedAmount11() {
     // Arrange
@@ -4061,7 +4207,8 @@ public class TransactionResultCapsuleDiffblueTest {
    * <p>Method under test: {@link TransactionResultCapsule#setExchangeReceivedAmount(long)}
    */
   @Test
-  @Category(MaintainedByDiffblue.class)
+  @Category(ContributionFromDiffblue.class)
+  @ManagedByDiffblue
   @MethodsUnderTest({"void TransactionResultCapsule.setExchangeReceivedAmount(long)"})
   public void testSetExchangeReceivedAmount12() {
     // Arrange
@@ -4095,7 +4242,8 @@ public class TransactionResultCapsuleDiffblueTest {
    * <p>Method under test: {@link TransactionResultCapsule#setExchangeReceivedAmount(long)}
    */
   @Test
-  @Category(MaintainedByDiffblue.class)
+  @Category(ContributionFromDiffblue.class)
+  @ManagedByDiffblue
   @MethodsUnderTest({"void TransactionResultCapsule.setExchangeReceivedAmount(long)"})
   public void testSetExchangeReceivedAmount_givenTransactionResultCapsule() {
     // Arrange
@@ -4123,7 +4271,8 @@ public class TransactionResultCapsuleDiffblueTest {
    * <p>Method under test: {@link TransactionResultCapsule#setExchangeReceivedAmount(long)}
    */
   @Test
-  @Category(MaintainedByDiffblue.class)
+  @Category(ContributionFromDiffblue.class)
+  @ManagedByDiffblue
   @MethodsUnderTest({"void TransactionResultCapsule.setExchangeReceivedAmount(long)"})
   public void testSetExchangeReceivedAmount_givenTransactionResultCapsuleExchangeIdIsOne() {
     // Arrange
@@ -4154,7 +4303,8 @@ public class TransactionResultCapsuleDiffblueTest {
    * <p>Method under test: {@link TransactionResultCapsule#setExchangeReceivedAmount(long)}
    */
   @Test
-  @Category(MaintainedByDiffblue.class)
+  @Category(ContributionFromDiffblue.class)
+  @ManagedByDiffblue
   @MethodsUnderTest({"void TransactionResultCapsule.setExchangeReceivedAmount(long)"})
   public void testSetExchangeReceivedAmount_givenTransactionResultCapsuleOrderIdIsByteString() {
     // Arrange
@@ -4180,7 +4330,8 @@ public class TransactionResultCapsuleDiffblueTest {
    * <p>Method under test: {@link TransactionResultCapsule#getExchangeWithdrawAnotherAmount()}
    */
   @Test
-  @Category(MaintainedByDiffblue.class)
+  @Category(ContributionFromDiffblue.class)
+  @ManagedByDiffblue
   @MethodsUnderTest({"long TransactionResultCapsule.getExchangeWithdrawAnotherAmount()"})
   public void testGetExchangeWithdrawAnotherAmount() {
     // Arrange, Act and Assert
@@ -4193,7 +4344,8 @@ public class TransactionResultCapsuleDiffblueTest {
    * <p>Method under test: {@link TransactionResultCapsule#setExchangeWithdrawAnotherAmount(long)}
    */
   @Test
-  @Category(MaintainedByDiffblue.class)
+  @Category(ContributionFromDiffblue.class)
+  @ManagedByDiffblue
   @MethodsUnderTest({"void TransactionResultCapsule.setExchangeWithdrawAnotherAmount(long)"})
   public void testSetExchangeWithdrawAnotherAmount() {
     // Arrange
@@ -4218,7 +4370,8 @@ public class TransactionResultCapsuleDiffblueTest {
    * <p>Method under test: {@link TransactionResultCapsule#setExchangeWithdrawAnotherAmount(long)}
    */
   @Test
-  @Category(MaintainedByDiffblue.class)
+  @Category(ContributionFromDiffblue.class)
+  @ManagedByDiffblue
   @MethodsUnderTest({"void TransactionResultCapsule.setExchangeWithdrawAnotherAmount(long)"})
   public void testSetExchangeWithdrawAnotherAmount2() {
     // Arrange
@@ -4243,7 +4396,8 @@ public class TransactionResultCapsuleDiffblueTest {
    * <p>Method under test: {@link TransactionResultCapsule#setExchangeWithdrawAnotherAmount(long)}
    */
   @Test
-  @Category(MaintainedByDiffblue.class)
+  @Category(ContributionFromDiffblue.class)
+  @ManagedByDiffblue
   @MethodsUnderTest({"void TransactionResultCapsule.setExchangeWithdrawAnotherAmount(long)"})
   public void testSetExchangeWithdrawAnotherAmount3() {
     // Arrange
@@ -4269,7 +4423,8 @@ public class TransactionResultCapsuleDiffblueTest {
    * <p>Method under test: {@link TransactionResultCapsule#setExchangeWithdrawAnotherAmount(long)}
    */
   @Test
-  @Category(MaintainedByDiffblue.class)
+  @Category(ContributionFromDiffblue.class)
+  @ManagedByDiffblue
   @MethodsUnderTest({"void TransactionResultCapsule.setExchangeWithdrawAnotherAmount(long)"})
   public void testSetExchangeWithdrawAnotherAmount4() {
     // Arrange
@@ -4296,7 +4451,8 @@ public class TransactionResultCapsuleDiffblueTest {
    * <p>Method under test: {@link TransactionResultCapsule#setExchangeWithdrawAnotherAmount(long)}
    */
   @Test
-  @Category(MaintainedByDiffblue.class)
+  @Category(ContributionFromDiffblue.class)
+  @ManagedByDiffblue
   @MethodsUnderTest({"void TransactionResultCapsule.setExchangeWithdrawAnotherAmount(long)"})
   public void testSetExchangeWithdrawAnotherAmount5() {
     // Arrange
@@ -4323,7 +4479,8 @@ public class TransactionResultCapsuleDiffblueTest {
    * <p>Method under test: {@link TransactionResultCapsule#setExchangeWithdrawAnotherAmount(long)}
    */
   @Test
-  @Category(MaintainedByDiffblue.class)
+  @Category(ContributionFromDiffblue.class)
+  @ManagedByDiffblue
   @MethodsUnderTest({"void TransactionResultCapsule.setExchangeWithdrawAnotherAmount(long)"})
   public void testSetExchangeWithdrawAnotherAmount6() {
     // Arrange
@@ -4349,7 +4506,8 @@ public class TransactionResultCapsuleDiffblueTest {
    * <p>Method under test: {@link TransactionResultCapsule#setExchangeWithdrawAnotherAmount(long)}
    */
   @Test
-  @Category(MaintainedByDiffblue.class)
+  @Category(ContributionFromDiffblue.class)
+  @ManagedByDiffblue
   @MethodsUnderTest({"void TransactionResultCapsule.setExchangeWithdrawAnotherAmount(long)"})
   public void testSetExchangeWithdrawAnotherAmount7() {
     // Arrange
@@ -4375,7 +4533,8 @@ public class TransactionResultCapsuleDiffblueTest {
    * <p>Method under test: {@link TransactionResultCapsule#setExchangeWithdrawAnotherAmount(long)}
    */
   @Test
-  @Category(MaintainedByDiffblue.class)
+  @Category(ContributionFromDiffblue.class)
+  @ManagedByDiffblue
   @MethodsUnderTest({"void TransactionResultCapsule.setExchangeWithdrawAnotherAmount(long)"})
   public void testSetExchangeWithdrawAnotherAmount8() {
     // Arrange
@@ -4401,7 +4560,8 @@ public class TransactionResultCapsuleDiffblueTest {
    * <p>Method under test: {@link TransactionResultCapsule#setExchangeWithdrawAnotherAmount(long)}
    */
   @Test
-  @Category(MaintainedByDiffblue.class)
+  @Category(ContributionFromDiffblue.class)
+  @ManagedByDiffblue
   @MethodsUnderTest({"void TransactionResultCapsule.setExchangeWithdrawAnotherAmount(long)"})
   public void testSetExchangeWithdrawAnotherAmount9() {
     // Arrange
@@ -4427,7 +4587,8 @@ public class TransactionResultCapsuleDiffblueTest {
    * <p>Method under test: {@link TransactionResultCapsule#setExchangeWithdrawAnotherAmount(long)}
    */
   @Test
-  @Category(MaintainedByDiffblue.class)
+  @Category(ContributionFromDiffblue.class)
+  @ManagedByDiffblue
   @MethodsUnderTest({"void TransactionResultCapsule.setExchangeWithdrawAnotherAmount(long)"})
   public void testSetExchangeWithdrawAnotherAmount10() {
     // Arrange
@@ -4453,7 +4614,8 @@ public class TransactionResultCapsuleDiffblueTest {
    * <p>Method under test: {@link TransactionResultCapsule#setExchangeWithdrawAnotherAmount(long)}
    */
   @Test
-  @Category(MaintainedByDiffblue.class)
+  @Category(ContributionFromDiffblue.class)
+  @ManagedByDiffblue
   @MethodsUnderTest({"void TransactionResultCapsule.setExchangeWithdrawAnotherAmount(long)"})
   public void testSetExchangeWithdrawAnotherAmount11() {
     // Arrange
@@ -4479,7 +4641,8 @@ public class TransactionResultCapsuleDiffblueTest {
    * <p>Method under test: {@link TransactionResultCapsule#setExchangeWithdrawAnotherAmount(long)}
    */
   @Test
-  @Category(MaintainedByDiffblue.class)
+  @Category(ContributionFromDiffblue.class)
+  @ManagedByDiffblue
   @MethodsUnderTest({"void TransactionResultCapsule.setExchangeWithdrawAnotherAmount(long)"})
   public void testSetExchangeWithdrawAnotherAmount12() {
     // Arrange
@@ -4505,7 +4668,8 @@ public class TransactionResultCapsuleDiffblueTest {
    * <p>Method under test: {@link TransactionResultCapsule#setExchangeWithdrawAnotherAmount(long)}
    */
   @Test
-  @Category(MaintainedByDiffblue.class)
+  @Category(ContributionFromDiffblue.class)
+  @ManagedByDiffblue
   @MethodsUnderTest({"void TransactionResultCapsule.setExchangeWithdrawAnotherAmount(long)"})
   public void testSetExchangeWithdrawAnotherAmount13() {
     // Arrange
@@ -4531,7 +4695,8 @@ public class TransactionResultCapsuleDiffblueTest {
    * <p>Method under test: {@link TransactionResultCapsule#setExchangeWithdrawAnotherAmount(long)}
    */
   @Test
-  @Category(MaintainedByDiffblue.class)
+  @Category(ContributionFromDiffblue.class)
+  @ManagedByDiffblue
   @MethodsUnderTest({"void TransactionResultCapsule.setExchangeWithdrawAnotherAmount(long)"})
   public void testSetExchangeWithdrawAnotherAmount14() {
     // Arrange
@@ -4565,7 +4730,8 @@ public class TransactionResultCapsuleDiffblueTest {
    * <p>Method under test: {@link TransactionResultCapsule#setExchangeWithdrawAnotherAmount(long)}
    */
   @Test
-  @Category(MaintainedByDiffblue.class)
+  @Category(ContributionFromDiffblue.class)
+  @ManagedByDiffblue
   @MethodsUnderTest({"void TransactionResultCapsule.setExchangeWithdrawAnotherAmount(long)"})
   public void testSetExchangeWithdrawAnotherAmount_givenTransactionResultCapsule() {
     // Arrange
@@ -4589,7 +4755,8 @@ public class TransactionResultCapsuleDiffblueTest {
    * <p>Method under test: {@link TransactionResultCapsule#getExchangeId()}
    */
   @Test
-  @Category(MaintainedByDiffblue.class)
+  @Category(ContributionFromDiffblue.class)
+  @ManagedByDiffblue
   @MethodsUnderTest({"long TransactionResultCapsule.getExchangeId()"})
   public void testGetExchangeId() {
     // Arrange, Act and Assert
@@ -4602,7 +4769,8 @@ public class TransactionResultCapsuleDiffblueTest {
    * <p>Method under test: {@link TransactionResultCapsule#setExchangeId(long)}
    */
   @Test
-  @Category(MaintainedByDiffblue.class)
+  @Category(ContributionFromDiffblue.class)
+  @ManagedByDiffblue
   @MethodsUnderTest({"void TransactionResultCapsule.setExchangeId(long)"})
   public void testSetExchangeId() {
     // Arrange
@@ -4627,7 +4795,8 @@ public class TransactionResultCapsuleDiffblueTest {
    * <p>Method under test: {@link TransactionResultCapsule#setExchangeId(long)}
    */
   @Test
-  @Category(MaintainedByDiffblue.class)
+  @Category(ContributionFromDiffblue.class)
+  @ManagedByDiffblue
   @MethodsUnderTest({"void TransactionResultCapsule.setExchangeId(long)"})
   public void testSetExchangeId2() {
     // Arrange
@@ -4654,7 +4823,8 @@ public class TransactionResultCapsuleDiffblueTest {
    * <p>Method under test: {@link TransactionResultCapsule#setExchangeId(long)}
    */
   @Test
-  @Category(MaintainedByDiffblue.class)
+  @Category(ContributionFromDiffblue.class)
+  @ManagedByDiffblue
   @MethodsUnderTest({"void TransactionResultCapsule.setExchangeId(long)"})
   public void testSetExchangeId3() {
     // Arrange
@@ -4680,7 +4850,8 @@ public class TransactionResultCapsuleDiffblueTest {
    * <p>Method under test: {@link TransactionResultCapsule#setExchangeId(long)}
    */
   @Test
-  @Category(MaintainedByDiffblue.class)
+  @Category(ContributionFromDiffblue.class)
+  @ManagedByDiffblue
   @MethodsUnderTest({"void TransactionResultCapsule.setExchangeId(long)"})
   public void testSetExchangeId4() {
     // Arrange
@@ -4706,7 +4877,8 @@ public class TransactionResultCapsuleDiffblueTest {
    * <p>Method under test: {@link TransactionResultCapsule#setExchangeId(long)}
    */
   @Test
-  @Category(MaintainedByDiffblue.class)
+  @Category(ContributionFromDiffblue.class)
+  @ManagedByDiffblue
   @MethodsUnderTest({"void TransactionResultCapsule.setExchangeId(long)"})
   public void testSetExchangeId5() {
     // Arrange
@@ -4732,7 +4904,8 @@ public class TransactionResultCapsuleDiffblueTest {
    * <p>Method under test: {@link TransactionResultCapsule#setExchangeId(long)}
    */
   @Test
-  @Category(MaintainedByDiffblue.class)
+  @Category(ContributionFromDiffblue.class)
+  @ManagedByDiffblue
   @MethodsUnderTest({"void TransactionResultCapsule.setExchangeId(long)"})
   public void testSetExchangeId6() {
     // Arrange
@@ -4761,7 +4934,8 @@ public class TransactionResultCapsuleDiffblueTest {
    * <p>Method under test: {@link TransactionResultCapsule#setExchangeId(long)}
    */
   @Test
-  @Category(MaintainedByDiffblue.class)
+  @Category(ContributionFromDiffblue.class)
+  @ManagedByDiffblue
   @MethodsUnderTest({"void TransactionResultCapsule.setExchangeId(long)"})
   public void testSetExchangeId_givenTransactionResultCapsule() {
     // Arrange
@@ -4790,7 +4964,8 @@ public class TransactionResultCapsuleDiffblueTest {
    * <p>Method under test: {@link TransactionResultCapsule#setExchangeId(long)}
    */
   @Test
-  @Category(MaintainedByDiffblue.class)
+  @Category(ContributionFromDiffblue.class)
+  @ManagedByDiffblue
   @MethodsUnderTest({"void TransactionResultCapsule.setExchangeId(long)"})
   public void testSetExchangeId_givenTransactionResultCapsuleAddOrderDetailsDefaultInstance() {
     // Arrange
@@ -4821,7 +4996,8 @@ public class TransactionResultCapsuleDiffblueTest {
    * <p>Method under test: {@link TransactionResultCapsule#setExchangeId(long)}
    */
   @Test
-  @Category(MaintainedByDiffblue.class)
+  @Category(ContributionFromDiffblue.class)
+  @ManagedByDiffblue
   @MethodsUnderTest({"void TransactionResultCapsule.setExchangeId(long)"})
   public void testSetExchangeId_givenTransactionResultCapsuleOrderIdIsByteString() {
     // Arrange
@@ -4852,7 +5028,8 @@ public class TransactionResultCapsuleDiffblueTest {
    * <p>Method under test: {@link TransactionResultCapsule#setExchangeId(long)}
    */
   @Test
-  @Category(MaintainedByDiffblue.class)
+  @Category(ContributionFromDiffblue.class)
+  @ManagedByDiffblue
   @MethodsUnderTest({"void TransactionResultCapsule.setExchangeId(long)"})
   public void testSetExchangeId_givenTransactionResultCapsuleShieldedTransactionFeeIsOne() {
     // Arrange
@@ -4883,7 +5060,8 @@ public class TransactionResultCapsuleDiffblueTest {
    * <p>Method under test: {@link TransactionResultCapsule#setExchangeId(long)}
    */
   @Test
-  @Category(MaintainedByDiffblue.class)
+  @Category(ContributionFromDiffblue.class)
+  @ManagedByDiffblue
   @MethodsUnderTest({"void TransactionResultCapsule.setExchangeId(long)"})
   public void testSetExchangeId_givenTransactionResultCapsuleWithdrawExpireAmountIsTen() {
     // Arrange
@@ -4914,7 +5092,8 @@ public class TransactionResultCapsuleDiffblueTest {
    * <p>Method under test: {@link TransactionResultCapsule#setExchangeId(long)}
    */
   @Test
-  @Category(MaintainedByDiffblue.class)
+  @Category(ContributionFromDiffblue.class)
+  @ManagedByDiffblue
   @MethodsUnderTest({"void TransactionResultCapsule.setExchangeId(long)"})
   public void testSetExchangeId_thenTransactionResultCapsuleInstanceAllFieldsSizeIsOne() {
     // Arrange
@@ -4944,7 +5123,8 @@ public class TransactionResultCapsuleDiffblueTest {
    * <p>Method under test: {@link TransactionResultCapsule#setExchangeId(long)}
    */
   @Test
-  @Category(MaintainedByDiffblue.class)
+  @Category(ContributionFromDiffblue.class)
+  @ManagedByDiffblue
   @MethodsUnderTest({"void TransactionResultCapsule.setExchangeId(long)"})
   public void testSetExchangeId_thenTransactionResultCapsuleInstanceSerializedSizeIsFive() {
     // Arrange
@@ -4975,7 +5155,8 @@ public class TransactionResultCapsuleDiffblueTest {
    * <p>Method under test: {@link TransactionResultCapsule#setExchangeId(long)}
    */
   @Test
-  @Category(MaintainedByDiffblue.class)
+  @Category(ContributionFromDiffblue.class)
+  @ManagedByDiffblue
   @MethodsUnderTest({"void TransactionResultCapsule.setExchangeId(long)"})
   public void testSetExchangeId_thenTransactionResultCapsuleInstanceSerializedSizeIsSeven() {
     // Arrange
@@ -5006,7 +5187,8 @@ public class TransactionResultCapsuleDiffblueTest {
    * <p>Method under test: {@link TransactionResultCapsule#setExchangeId(long)}
    */
   @Test
-  @Category(MaintainedByDiffblue.class)
+  @Category(ContributionFromDiffblue.class)
+  @ManagedByDiffblue
   @MethodsUnderTest({"void TransactionResultCapsule.setExchangeId(long)"})
   public void testSetExchangeId_thenTransactionResultCapsuleInstanceSerializedSizeIsThirteen() {
     // Arrange
@@ -5036,7 +5218,8 @@ public class TransactionResultCapsuleDiffblueTest {
    * <p>Method under test: {@link TransactionResultCapsule#getExchangeInjectAnotherAmount()}
    */
   @Test
-  @Category(MaintainedByDiffblue.class)
+  @Category(ContributionFromDiffblue.class)
+  @ManagedByDiffblue
   @MethodsUnderTest({"long TransactionResultCapsule.getExchangeInjectAnotherAmount()"})
   public void testGetExchangeInjectAnotherAmount() {
     // Arrange, Act and Assert
@@ -5049,7 +5232,8 @@ public class TransactionResultCapsuleDiffblueTest {
    * <p>Method under test: {@link TransactionResultCapsule#setExchangeInjectAnotherAmount(long)}
    */
   @Test
-  @Category(MaintainedByDiffblue.class)
+  @Category(ContributionFromDiffblue.class)
+  @ManagedByDiffblue
   @MethodsUnderTest({"void TransactionResultCapsule.setExchangeInjectAnotherAmount(long)"})
   public void testSetExchangeInjectAnotherAmount() {
     // Arrange
@@ -5074,7 +5258,8 @@ public class TransactionResultCapsuleDiffblueTest {
    * <p>Method under test: {@link TransactionResultCapsule#setExchangeInjectAnotherAmount(long)}
    */
   @Test
-  @Category(MaintainedByDiffblue.class)
+  @Category(ContributionFromDiffblue.class)
+  @ManagedByDiffblue
   @MethodsUnderTest({"void TransactionResultCapsule.setExchangeInjectAnotherAmount(long)"})
   public void testSetExchangeInjectAnotherAmount2() {
     // Arrange
@@ -5099,7 +5284,8 @@ public class TransactionResultCapsuleDiffblueTest {
    * <p>Method under test: {@link TransactionResultCapsule#setExchangeInjectAnotherAmount(long)}
    */
   @Test
-  @Category(MaintainedByDiffblue.class)
+  @Category(ContributionFromDiffblue.class)
+  @ManagedByDiffblue
   @MethodsUnderTest({"void TransactionResultCapsule.setExchangeInjectAnotherAmount(long)"})
   public void testSetExchangeInjectAnotherAmount3() {
     // Arrange
@@ -5125,7 +5311,8 @@ public class TransactionResultCapsuleDiffblueTest {
    * <p>Method under test: {@link TransactionResultCapsule#setExchangeInjectAnotherAmount(long)}
    */
   @Test
-  @Category(MaintainedByDiffblue.class)
+  @Category(ContributionFromDiffblue.class)
+  @ManagedByDiffblue
   @MethodsUnderTest({"void TransactionResultCapsule.setExchangeInjectAnotherAmount(long)"})
   public void testSetExchangeInjectAnotherAmount4() {
     // Arrange
@@ -5152,7 +5339,8 @@ public class TransactionResultCapsuleDiffblueTest {
    * <p>Method under test: {@link TransactionResultCapsule#setExchangeInjectAnotherAmount(long)}
    */
   @Test
-  @Category(MaintainedByDiffblue.class)
+  @Category(ContributionFromDiffblue.class)
+  @ManagedByDiffblue
   @MethodsUnderTest({"void TransactionResultCapsule.setExchangeInjectAnotherAmount(long)"})
   public void testSetExchangeInjectAnotherAmount5() {
     // Arrange
@@ -5179,7 +5367,8 @@ public class TransactionResultCapsuleDiffblueTest {
    * <p>Method under test: {@link TransactionResultCapsule#setExchangeInjectAnotherAmount(long)}
    */
   @Test
-  @Category(MaintainedByDiffblue.class)
+  @Category(ContributionFromDiffblue.class)
+  @ManagedByDiffblue
   @MethodsUnderTest({"void TransactionResultCapsule.setExchangeInjectAnotherAmount(long)"})
   public void testSetExchangeInjectAnotherAmount6() {
     // Arrange
@@ -5205,7 +5394,8 @@ public class TransactionResultCapsuleDiffblueTest {
    * <p>Method under test: {@link TransactionResultCapsule#setExchangeInjectAnotherAmount(long)}
    */
   @Test
-  @Category(MaintainedByDiffblue.class)
+  @Category(ContributionFromDiffblue.class)
+  @ManagedByDiffblue
   @MethodsUnderTest({"void TransactionResultCapsule.setExchangeInjectAnotherAmount(long)"})
   public void testSetExchangeInjectAnotherAmount7() {
     // Arrange
@@ -5231,7 +5421,8 @@ public class TransactionResultCapsuleDiffblueTest {
    * <p>Method under test: {@link TransactionResultCapsule#setExchangeInjectAnotherAmount(long)}
    */
   @Test
-  @Category(MaintainedByDiffblue.class)
+  @Category(ContributionFromDiffblue.class)
+  @ManagedByDiffblue
   @MethodsUnderTest({"void TransactionResultCapsule.setExchangeInjectAnotherAmount(long)"})
   public void testSetExchangeInjectAnotherAmount8() {
     // Arrange
@@ -5258,7 +5449,8 @@ public class TransactionResultCapsuleDiffblueTest {
    * <p>Method under test: {@link TransactionResultCapsule#setExchangeInjectAnotherAmount(long)}
    */
   @Test
-  @Category(MaintainedByDiffblue.class)
+  @Category(ContributionFromDiffblue.class)
+  @ManagedByDiffblue
   @MethodsUnderTest({"void TransactionResultCapsule.setExchangeInjectAnotherAmount(long)"})
   public void testSetExchangeInjectAnotherAmount9() {
     // Arrange
@@ -5284,7 +5476,8 @@ public class TransactionResultCapsuleDiffblueTest {
    * <p>Method under test: {@link TransactionResultCapsule#setExchangeInjectAnotherAmount(long)}
    */
   @Test
-  @Category(MaintainedByDiffblue.class)
+  @Category(ContributionFromDiffblue.class)
+  @ManagedByDiffblue
   @MethodsUnderTest({"void TransactionResultCapsule.setExchangeInjectAnotherAmount(long)"})
   public void testSetExchangeInjectAnotherAmount10() {
     // Arrange
@@ -5310,7 +5503,8 @@ public class TransactionResultCapsuleDiffblueTest {
    * <p>Method under test: {@link TransactionResultCapsule#setExchangeInjectAnotherAmount(long)}
    */
   @Test
-  @Category(MaintainedByDiffblue.class)
+  @Category(ContributionFromDiffblue.class)
+  @ManagedByDiffblue
   @MethodsUnderTest({"void TransactionResultCapsule.setExchangeInjectAnotherAmount(long)"})
   public void testSetExchangeInjectAnotherAmount11() {
     // Arrange
@@ -5336,7 +5530,8 @@ public class TransactionResultCapsuleDiffblueTest {
    * <p>Method under test: {@link TransactionResultCapsule#setExchangeInjectAnotherAmount(long)}
    */
   @Test
-  @Category(MaintainedByDiffblue.class)
+  @Category(ContributionFromDiffblue.class)
+  @ManagedByDiffblue
   @MethodsUnderTest({"void TransactionResultCapsule.setExchangeInjectAnotherAmount(long)"})
   public void testSetExchangeInjectAnotherAmount12() {
     // Arrange
@@ -5362,7 +5557,8 @@ public class TransactionResultCapsuleDiffblueTest {
    * <p>Method under test: {@link TransactionResultCapsule#setExchangeInjectAnotherAmount(long)}
    */
   @Test
-  @Category(MaintainedByDiffblue.class)
+  @Category(ContributionFromDiffblue.class)
+  @ManagedByDiffblue
   @MethodsUnderTest({"void TransactionResultCapsule.setExchangeInjectAnotherAmount(long)"})
   public void testSetExchangeInjectAnotherAmount13() {
     // Arrange
@@ -5396,7 +5592,8 @@ public class TransactionResultCapsuleDiffblueTest {
    * <p>Method under test: {@link TransactionResultCapsule#setExchangeInjectAnotherAmount(long)}
    */
   @Test
-  @Category(MaintainedByDiffblue.class)
+  @Category(ContributionFromDiffblue.class)
+  @ManagedByDiffblue
   @MethodsUnderTest({"void TransactionResultCapsule.setExchangeInjectAnotherAmount(long)"})
   public void testSetExchangeInjectAnotherAmount_givenTransactionResultCapsule() {
     // Arrange
@@ -5424,7 +5621,8 @@ public class TransactionResultCapsuleDiffblueTest {
    * <p>Method under test: {@link TransactionResultCapsule#setExchangeInjectAnotherAmount(long)}
    */
   @Test
-  @Category(MaintainedByDiffblue.class)
+  @Category(ContributionFromDiffblue.class)
+  @ManagedByDiffblue
   @MethodsUnderTest({"void TransactionResultCapsule.setExchangeInjectAnotherAmount(long)"})
   public void testSetExchangeInjectAnotherAmount_givenTransactionResultCapsuleExchangeIdIsOne() {
     // Arrange
@@ -5450,7 +5648,8 @@ public class TransactionResultCapsuleDiffblueTest {
    * <p>Method under test: {@link TransactionResultCapsule#addFee(long)}
    */
   @Test
-  @Category(MaintainedByDiffblue.class)
+  @Category(ContributionFromDiffblue.class)
+  @ManagedByDiffblue
   @MethodsUnderTest({"void TransactionResultCapsule.addFee(long)"})
   public void testAddFee() {
     // Arrange
@@ -5475,7 +5674,8 @@ public class TransactionResultCapsuleDiffblueTest {
    * <p>Method under test: {@link TransactionResultCapsule#addFee(long)}
    */
   @Test
-  @Category(MaintainedByDiffblue.class)
+  @Category(ContributionFromDiffblue.class)
+  @ManagedByDiffblue
   @MethodsUnderTest({"void TransactionResultCapsule.addFee(long)"})
   public void testAddFee2() {
     // Arrange
@@ -5504,7 +5704,8 @@ public class TransactionResultCapsuleDiffblueTest {
    * <p>Method under test: {@link TransactionResultCapsule#addFee(long)}
    */
   @Test
-  @Category(MaintainedByDiffblue.class)
+  @Category(ContributionFromDiffblue.class)
+  @ManagedByDiffblue
   @MethodsUnderTest({"void TransactionResultCapsule.addFee(long)"})
   public void testAddFee_givenTransactionResultCapsule() {
     // Arrange
@@ -5533,7 +5734,8 @@ public class TransactionResultCapsuleDiffblueTest {
    * <p>Method under test: {@link TransactionResultCapsule#addFee(long)}
    */
   @Test
-  @Category(MaintainedByDiffblue.class)
+  @Category(ContributionFromDiffblue.class)
+  @ManagedByDiffblue
   @MethodsUnderTest({"void TransactionResultCapsule.addFee(long)"})
   public void testAddFee_givenTransactionResultCapsuleAddOrderDetailsDefaultInstance() {
     // Arrange
@@ -5563,7 +5765,8 @@ public class TransactionResultCapsuleDiffblueTest {
    * <p>Method under test: {@link TransactionResultCapsule#addFee(long)}
    */
   @Test
-  @Category(MaintainedByDiffblue.class)
+  @Category(ContributionFromDiffblue.class)
+  @ManagedByDiffblue
   @MethodsUnderTest({"void TransactionResultCapsule.addFee(long)"})
   public void testAddFee_givenTransactionResultCapsuleExchangeIdIsOne() {
     // Arrange
@@ -5594,7 +5797,8 @@ public class TransactionResultCapsuleDiffblueTest {
    * <p>Method under test: {@link TransactionResultCapsule#addFee(long)}
    */
   @Test
-  @Category(MaintainedByDiffblue.class)
+  @Category(ContributionFromDiffblue.class)
+  @ManagedByDiffblue
   @MethodsUnderTest({"void TransactionResultCapsule.addFee(long)"})
   public void testAddFee_givenTransactionResultCapsuleExchangeInjectAnotherAmountIsTen() {
     // Arrange
@@ -5625,7 +5829,8 @@ public class TransactionResultCapsuleDiffblueTest {
    * <p>Method under test: {@link TransactionResultCapsule#addFee(long)}
    */
   @Test
-  @Category(MaintainedByDiffblue.class)
+  @Category(ContributionFromDiffblue.class)
+  @ManagedByDiffblue
   @MethodsUnderTest({"void TransactionResultCapsule.addFee(long)"})
   public void testAddFee_givenTransactionResultCapsuleExchangeReceivedAmountIsTen() {
     // Arrange
@@ -5656,7 +5861,8 @@ public class TransactionResultCapsuleDiffblueTest {
    * <p>Method under test: {@link TransactionResultCapsule#addFee(long)}
    */
   @Test
-  @Category(MaintainedByDiffblue.class)
+  @Category(ContributionFromDiffblue.class)
+  @ManagedByDiffblue
   @MethodsUnderTest({"void TransactionResultCapsule.addFee(long)"})
   public void testAddFee_givenTransactionResultCapsuleExchangeWithdrawAnotherAmountIsTen() {
     // Arrange
@@ -5687,7 +5893,8 @@ public class TransactionResultCapsuleDiffblueTest {
    * <p>Method under test: {@link TransactionResultCapsule#addFee(long)}
    */
   @Test
-  @Category(MaintainedByDiffblue.class)
+  @Category(ContributionFromDiffblue.class)
+  @ManagedByDiffblue
   @MethodsUnderTest({"void TransactionResultCapsule.addFee(long)"})
   public void testAddFee_givenTransactionResultCapsuleOrderIdIsByteString() {
     // Arrange
@@ -5718,7 +5925,8 @@ public class TransactionResultCapsuleDiffblueTest {
    * <p>Method under test: {@link TransactionResultCapsule#addFee(long)}
    */
   @Test
-  @Category(MaintainedByDiffblue.class)
+  @Category(ContributionFromDiffblue.class)
+  @ManagedByDiffblue
   @MethodsUnderTest({"void TransactionResultCapsule.addFee(long)"})
   public void testAddFee_givenTransactionResultCapsuleShieldedTransactionFeeIsOne() {
     // Arrange
@@ -5748,7 +5956,8 @@ public class TransactionResultCapsuleDiffblueTest {
    * <p>Method under test: {@link TransactionResultCapsule#addFee(long)}
    */
   @Test
-  @Category(MaintainedByDiffblue.class)
+  @Category(ContributionFromDiffblue.class)
+  @ManagedByDiffblue
   @MethodsUnderTest({"void TransactionResultCapsule.addFee(long)"})
   public void testAddFee_givenTransactionResultCapsuleUnfreezeAmountIsTen() {
     // Arrange
@@ -5780,7 +5989,8 @@ public class TransactionResultCapsuleDiffblueTest {
    * <p>Method under test: {@link TransactionResultCapsule#addFee(long)}
    */
   @Test
-  @Category(MaintainedByDiffblue.class)
+  @Category(ContributionFromDiffblue.class)
+  @ManagedByDiffblue
   @MethodsUnderTest({"void TransactionResultCapsule.addFee(long)"})
   public void testAddFee_givenTransactionResultCapsuleWithdrawExpireAmountIsTen() {
     // Arrange
@@ -5811,7 +6021,8 @@ public class TransactionResultCapsuleDiffblueTest {
    * <p>Method under test: {@link TransactionResultCapsule#addFee(long)}
    */
   @Test
-  @Category(MaintainedByDiffblue.class)
+  @Category(ContributionFromDiffblue.class)
+  @ManagedByDiffblue
   @MethodsUnderTest({"void TransactionResultCapsule.addFee(long)"})
   public void testAddFee_thenTransactionResultCapsuleInstanceAllFieldsSizeIsOne() {
     // Arrange
@@ -5841,7 +6052,8 @@ public class TransactionResultCapsuleDiffblueTest {
    * <p>Method under test: {@link TransactionResultCapsule#addFee(long)}
    */
   @Test
-  @Category(MaintainedByDiffblue.class)
+  @Category(ContributionFromDiffblue.class)
+  @ManagedByDiffblue
   @MethodsUnderTest({"void TransactionResultCapsule.addFee(long)"})
   public void testAddFee_thenTransactionResultCapsuleInstanceSerializedSizeIsFour() {
     // Arrange
@@ -5872,7 +6084,8 @@ public class TransactionResultCapsuleDiffblueTest {
    * <p>Method under test: {@link TransactionResultCapsule#addFee(long)}
    */
   @Test
-  @Category(MaintainedByDiffblue.class)
+  @Category(ContributionFromDiffblue.class)
+  @ManagedByDiffblue
   @MethodsUnderTest({"void TransactionResultCapsule.addFee(long)"})
   public void testAddFee_thenTransactionResultCapsuleInstanceSerializedSizeIsSix() {
     // Arrange
@@ -5903,7 +6116,8 @@ public class TransactionResultCapsuleDiffblueTest {
    * <p>Method under test: {@link TransactionResultCapsule#addFee(long)}
    */
   @Test
-  @Category(MaintainedByDiffblue.class)
+  @Category(ContributionFromDiffblue.class)
+  @ManagedByDiffblue
   @MethodsUnderTest({"void TransactionResultCapsule.addFee(long)"})
   public void testAddFee_thenTransactionResultCapsuleInstanceSerializedSizeIsTwelve() {
     // Arrange
@@ -5933,7 +6147,8 @@ public class TransactionResultCapsuleDiffblueTest {
    * <p>Method under test: {@link TransactionResultCapsule#setErrorCode(code)}
    */
   @Test
-  @Category(MaintainedByDiffblue.class)
+  @Category(ContributionFromDiffblue.class)
+  @ManagedByDiffblue
   @MethodsUnderTest({"void TransactionResultCapsule.setErrorCode(code)"})
   public void testSetErrorCode() {
     // Arrange
@@ -5958,7 +6173,8 @@ public class TransactionResultCapsuleDiffblueTest {
    * <p>Method under test: {@link TransactionResultCapsule#setErrorCode(code)}
    */
   @Test
-  @Category(MaintainedByDiffblue.class)
+  @Category(ContributionFromDiffblue.class)
+  @ManagedByDiffblue
   @MethodsUnderTest({"void TransactionResultCapsule.setErrorCode(code)"})
   public void testSetErrorCode2() {
     // Arrange
@@ -5984,7 +6200,8 @@ public class TransactionResultCapsuleDiffblueTest {
    * <p>Method under test: {@link TransactionResultCapsule#setErrorCode(code)}
    */
   @Test
-  @Category(MaintainedByDiffblue.class)
+  @Category(ContributionFromDiffblue.class)
+  @ManagedByDiffblue
   @MethodsUnderTest({"void TransactionResultCapsule.setErrorCode(code)"})
   public void testSetErrorCode3() {
     // Arrange
@@ -6010,7 +6227,8 @@ public class TransactionResultCapsuleDiffblueTest {
    * <p>Method under test: {@link TransactionResultCapsule#setErrorCode(code)}
    */
   @Test
-  @Category(MaintainedByDiffblue.class)
+  @Category(ContributionFromDiffblue.class)
+  @ManagedByDiffblue
   @MethodsUnderTest({"void TransactionResultCapsule.setErrorCode(code)"})
   public void testSetErrorCode4() {
     // Arrange
@@ -6036,7 +6254,8 @@ public class TransactionResultCapsuleDiffblueTest {
    * <p>Method under test: {@link TransactionResultCapsule#setErrorCode(code)}
    */
   @Test
-  @Category(MaintainedByDiffblue.class)
+  @Category(ContributionFromDiffblue.class)
+  @ManagedByDiffblue
   @MethodsUnderTest({"void TransactionResultCapsule.setErrorCode(code)"})
   public void testSetErrorCode5() {
     // Arrange
@@ -6062,7 +6281,8 @@ public class TransactionResultCapsuleDiffblueTest {
    * <p>Method under test: {@link TransactionResultCapsule#setErrorCode(code)}
    */
   @Test
-  @Category(MaintainedByDiffblue.class)
+  @Category(ContributionFromDiffblue.class)
+  @ManagedByDiffblue
   @MethodsUnderTest({"void TransactionResultCapsule.setErrorCode(code)"})
   public void testSetErrorCode6() {
     // Arrange
@@ -6088,7 +6308,8 @@ public class TransactionResultCapsuleDiffblueTest {
    * <p>Method under test: {@link TransactionResultCapsule#setErrorCode(code)}
    */
   @Test
-  @Category(MaintainedByDiffblue.class)
+  @Category(ContributionFromDiffblue.class)
+  @ManagedByDiffblue
   @MethodsUnderTest({"void TransactionResultCapsule.setErrorCode(code)"})
   public void testSetErrorCode7() {
     // Arrange
@@ -6114,7 +6335,8 @@ public class TransactionResultCapsuleDiffblueTest {
    * <p>Method under test: {@link TransactionResultCapsule#setErrorCode(code)}
    */
   @Test
-  @Category(MaintainedByDiffblue.class)
+  @Category(ContributionFromDiffblue.class)
+  @ManagedByDiffblue
   @MethodsUnderTest({"void TransactionResultCapsule.setErrorCode(code)"})
   public void testSetErrorCode8() {
     // Arrange
@@ -6140,7 +6362,8 @@ public class TransactionResultCapsuleDiffblueTest {
    * <p>Method under test: {@link TransactionResultCapsule#setErrorCode(code)}
    */
   @Test
-  @Category(MaintainedByDiffblue.class)
+  @Category(ContributionFromDiffblue.class)
+  @ManagedByDiffblue
   @MethodsUnderTest({"void TransactionResultCapsule.setErrorCode(code)"})
   public void testSetErrorCode9() {
     // Arrange
@@ -6166,7 +6389,8 @@ public class TransactionResultCapsuleDiffblueTest {
    * <p>Method under test: {@link TransactionResultCapsule#setErrorCode(code)}
    */
   @Test
-  @Category(MaintainedByDiffblue.class)
+  @Category(ContributionFromDiffblue.class)
+  @ManagedByDiffblue
   @MethodsUnderTest({"void TransactionResultCapsule.setErrorCode(code)"})
   public void testSetErrorCode10() {
     // Arrange
@@ -6192,7 +6416,8 @@ public class TransactionResultCapsuleDiffblueTest {
    * <p>Method under test: {@link TransactionResultCapsule#setErrorCode(code)}
    */
   @Test
-  @Category(MaintainedByDiffblue.class)
+  @Category(ContributionFromDiffblue.class)
+  @ManagedByDiffblue
   @MethodsUnderTest({"void TransactionResultCapsule.setErrorCode(code)"})
   public void testSetErrorCode11() {
     // Arrange
@@ -6222,7 +6447,8 @@ public class TransactionResultCapsuleDiffblueTest {
    * <p>Method under test: {@link TransactionResultCapsule#setErrorCode(code)}
    */
   @Test
-  @Category(MaintainedByDiffblue.class)
+  @Category(ContributionFromDiffblue.class)
+  @ManagedByDiffblue
   @MethodsUnderTest({"void TransactionResultCapsule.setErrorCode(code)"})
   public void testSetErrorCode_thenTransactionResultCapsuleInstanceSerializedSizeIsFour() {
     // Arrange
@@ -6253,7 +6479,8 @@ public class TransactionResultCapsuleDiffblueTest {
    * <p>Method under test: {@link TransactionResultCapsule#setErrorCode(code)}
    */
   @Test
-  @Category(MaintainedByDiffblue.class)
+  @Category(ContributionFromDiffblue.class)
+  @ManagedByDiffblue
   @MethodsUnderTest({"void TransactionResultCapsule.setErrorCode(code)"})
   public void testSetErrorCode_thenTransactionResultCapsuleInstanceSerializedSizeIsTen() {
     // Arrange
@@ -6287,7 +6514,8 @@ public class TransactionResultCapsuleDiffblueTest {
    * <p>Method under test: {@link TransactionResultCapsule#setErrorCode(code)}
    */
   @Test
-  @Category(MaintainedByDiffblue.class)
+  @Category(ContributionFromDiffblue.class)
+  @ManagedByDiffblue
   @MethodsUnderTest({"void TransactionResultCapsule.setErrorCode(code)"})
   public void testSetErrorCode_thenTransactionResultCapsuleInstanceSerializedSizeIsTwo() {
     // Arrange
@@ -6318,7 +6546,8 @@ public class TransactionResultCapsuleDiffblueTest {
    * <p>Method under test: {@link TransactionResultCapsule#setErrorCode(code)}
    */
   @Test
-  @Category(MaintainedByDiffblue.class)
+  @Category(ContributionFromDiffblue.class)
+  @ManagedByDiffblue
   @MethodsUnderTest({"void TransactionResultCapsule.setErrorCode(code)"})
   public void testSetErrorCode_thenTransactionResultCapsuleInstanceSerializedSizeIsZero() {
     // Arrange
@@ -6347,7 +6576,8 @@ public class TransactionResultCapsuleDiffblueTest {
    * <p>Method under test: {@link TransactionResultCapsule#setErrorCode(code)}
    */
   @Test
-  @Category(MaintainedByDiffblue.class)
+  @Category(ContributionFromDiffblue.class)
+  @ManagedByDiffblue
   @MethodsUnderTest({"void TransactionResultCapsule.setErrorCode(code)"})
   public void testSetErrorCode_thenTransactionResultCapsuleInstanceSerializedSizeIsZero2() {
     // Arrange
@@ -6372,7 +6602,8 @@ public class TransactionResultCapsuleDiffblueTest {
    * <p>Method under test: {@link TransactionResultCapsule#getShieldedTransactionFee()}
    */
   @Test
-  @Category(MaintainedByDiffblue.class)
+  @Category(ContributionFromDiffblue.class)
+  @ManagedByDiffblue
   @MethodsUnderTest({"long TransactionResultCapsule.getShieldedTransactionFee()"})
   public void testGetShieldedTransactionFee() {
     // Arrange, Act and Assert
@@ -6385,7 +6616,8 @@ public class TransactionResultCapsuleDiffblueTest {
    * <p>Method under test: {@link TransactionResultCapsule#setShieldedTransactionFee(long)}
    */
   @Test
-  @Category(MaintainedByDiffblue.class)
+  @Category(ContributionFromDiffblue.class)
+  @ManagedByDiffblue
   @MethodsUnderTest({"void TransactionResultCapsule.setShieldedTransactionFee(long)"})
   public void testSetShieldedTransactionFee() {
     // Arrange
@@ -6410,7 +6642,8 @@ public class TransactionResultCapsuleDiffblueTest {
    * <p>Method under test: {@link TransactionResultCapsule#setShieldedTransactionFee(long)}
    */
   @Test
-  @Category(MaintainedByDiffblue.class)
+  @Category(ContributionFromDiffblue.class)
+  @ManagedByDiffblue
   @MethodsUnderTest({"void TransactionResultCapsule.setShieldedTransactionFee(long)"})
   public void testSetShieldedTransactionFee2() {
     // Arrange
@@ -6435,7 +6668,8 @@ public class TransactionResultCapsuleDiffblueTest {
    * <p>Method under test: {@link TransactionResultCapsule#setShieldedTransactionFee(long)}
    */
   @Test
-  @Category(MaintainedByDiffblue.class)
+  @Category(ContributionFromDiffblue.class)
+  @ManagedByDiffblue
   @MethodsUnderTest({"void TransactionResultCapsule.setShieldedTransactionFee(long)"})
   public void testSetShieldedTransactionFee3() {
     // Arrange
@@ -6461,7 +6695,8 @@ public class TransactionResultCapsuleDiffblueTest {
    * <p>Method under test: {@link TransactionResultCapsule#setShieldedTransactionFee(long)}
    */
   @Test
-  @Category(MaintainedByDiffblue.class)
+  @Category(ContributionFromDiffblue.class)
+  @ManagedByDiffblue
   @MethodsUnderTest({"void TransactionResultCapsule.setShieldedTransactionFee(long)"})
   public void testSetShieldedTransactionFee4() {
     // Arrange
@@ -6488,7 +6723,8 @@ public class TransactionResultCapsuleDiffblueTest {
    * <p>Method under test: {@link TransactionResultCapsule#setShieldedTransactionFee(long)}
    */
   @Test
-  @Category(MaintainedByDiffblue.class)
+  @Category(ContributionFromDiffblue.class)
+  @ManagedByDiffblue
   @MethodsUnderTest({"void TransactionResultCapsule.setShieldedTransactionFee(long)"})
   public void testSetShieldedTransactionFee5() {
     // Arrange
@@ -6514,7 +6750,8 @@ public class TransactionResultCapsuleDiffblueTest {
    * <p>Method under test: {@link TransactionResultCapsule#setShieldedTransactionFee(long)}
    */
   @Test
-  @Category(MaintainedByDiffblue.class)
+  @Category(ContributionFromDiffblue.class)
+  @ManagedByDiffblue
   @MethodsUnderTest({"void TransactionResultCapsule.setShieldedTransactionFee(long)"})
   public void testSetShieldedTransactionFee6() {
     // Arrange
@@ -6540,7 +6777,8 @@ public class TransactionResultCapsuleDiffblueTest {
    * <p>Method under test: {@link TransactionResultCapsule#setShieldedTransactionFee(long)}
    */
   @Test
-  @Category(MaintainedByDiffblue.class)
+  @Category(ContributionFromDiffblue.class)
+  @ManagedByDiffblue
   @MethodsUnderTest({"void TransactionResultCapsule.setShieldedTransactionFee(long)"})
   public void testSetShieldedTransactionFee7() {
     // Arrange
@@ -6566,7 +6804,8 @@ public class TransactionResultCapsuleDiffblueTest {
    * <p>Method under test: {@link TransactionResultCapsule#setShieldedTransactionFee(long)}
    */
   @Test
-  @Category(MaintainedByDiffblue.class)
+  @Category(ContributionFromDiffblue.class)
+  @ManagedByDiffblue
   @MethodsUnderTest({"void TransactionResultCapsule.setShieldedTransactionFee(long)"})
   public void testSetShieldedTransactionFee8() {
     // Arrange
@@ -6592,7 +6831,8 @@ public class TransactionResultCapsuleDiffblueTest {
    * <p>Method under test: {@link TransactionResultCapsule#setShieldedTransactionFee(long)}
    */
   @Test
-  @Category(MaintainedByDiffblue.class)
+  @Category(ContributionFromDiffblue.class)
+  @ManagedByDiffblue
   @MethodsUnderTest({"void TransactionResultCapsule.setShieldedTransactionFee(long)"})
   public void testSetShieldedTransactionFee9() {
     // Arrange
@@ -6618,7 +6858,8 @@ public class TransactionResultCapsuleDiffblueTest {
    * <p>Method under test: {@link TransactionResultCapsule#setShieldedTransactionFee(long)}
    */
   @Test
-  @Category(MaintainedByDiffblue.class)
+  @Category(ContributionFromDiffblue.class)
+  @ManagedByDiffblue
   @MethodsUnderTest({"void TransactionResultCapsule.setShieldedTransactionFee(long)"})
   public void testSetShieldedTransactionFee10() {
     // Arrange
@@ -6644,7 +6885,8 @@ public class TransactionResultCapsuleDiffblueTest {
    * <p>Method under test: {@link TransactionResultCapsule#setShieldedTransactionFee(long)}
    */
   @Test
-  @Category(MaintainedByDiffblue.class)
+  @Category(ContributionFromDiffblue.class)
+  @ManagedByDiffblue
   @MethodsUnderTest({"void TransactionResultCapsule.setShieldedTransactionFee(long)"})
   public void testSetShieldedTransactionFee11() {
     // Arrange
@@ -6670,7 +6912,8 @@ public class TransactionResultCapsuleDiffblueTest {
    * <p>Method under test: {@link TransactionResultCapsule#setShieldedTransactionFee(long)}
    */
   @Test
-  @Category(MaintainedByDiffblue.class)
+  @Category(ContributionFromDiffblue.class)
+  @ManagedByDiffblue
   @MethodsUnderTest({"void TransactionResultCapsule.setShieldedTransactionFee(long)"})
   public void testSetShieldedTransactionFee12() {
     // Arrange
@@ -6695,7 +6938,8 @@ public class TransactionResultCapsuleDiffblueTest {
    * <p>Method under test: {@link TransactionResultCapsule#setShieldedTransactionFee(long)}
    */
   @Test
-  @Category(MaintainedByDiffblue.class)
+  @Category(ContributionFromDiffblue.class)
+  @ManagedByDiffblue
   @MethodsUnderTest({"void TransactionResultCapsule.setShieldedTransactionFee(long)"})
   public void testSetShieldedTransactionFee13() {
     // Arrange
@@ -6729,7 +6973,8 @@ public class TransactionResultCapsuleDiffblueTest {
    * <p>Method under test: {@link TransactionResultCapsule#setShieldedTransactionFee(long)}
    */
   @Test
-  @Category(MaintainedByDiffblue.class)
+  @Category(ContributionFromDiffblue.class)
+  @ManagedByDiffblue
   @MethodsUnderTest({"void TransactionResultCapsule.setShieldedTransactionFee(long)"})
   public void testSetShieldedTransactionFee_givenTransactionResultCapsule() {
     // Arrange
@@ -6758,7 +7003,8 @@ public class TransactionResultCapsuleDiffblueTest {
    * <p>Method under test: {@link TransactionResultCapsule#setShieldedTransactionFee(long)}
    */
   @Test
-  @Category(MaintainedByDiffblue.class)
+  @Category(ContributionFromDiffblue.class)
+  @ManagedByDiffblue
   @MethodsUnderTest({"void TransactionResultCapsule.setShieldedTransactionFee(long)"})
   public void testSetShieldedTransactionFee_givenTransactionResultCapsuleOrderIdIsByteString() {
     // Arrange
@@ -6784,7 +7030,8 @@ public class TransactionResultCapsuleDiffblueTest {
    * <p>Method under test: {@link TransactionResultCapsule#getOrderId()}
    */
   @Test
-  @Category(MaintainedByDiffblue.class)
+  @Category(ContributionFromDiffblue.class)
+  @ManagedByDiffblue
   @MethodsUnderTest({"ByteString TransactionResultCapsule.getOrderId()"})
   public void testGetOrderId() {
     // Arrange
@@ -6810,7 +7057,8 @@ public class TransactionResultCapsuleDiffblueTest {
    * <p>Method under test: {@link TransactionResultCapsule#setOrderId(ByteString)}
    */
   @Test
-  @Category(MaintainedByDiffblue.class)
+  @Category(ContributionFromDiffblue.class)
+  @ManagedByDiffblue
   @MethodsUnderTest({"void TransactionResultCapsule.setOrderId(ByteString)"})
   public void testSetOrderId() {
     // Arrange
@@ -6830,7 +7078,8 @@ public class TransactionResultCapsuleDiffblueTest {
    * <p>Method under test: {@link TransactionResultCapsule#setOrderId(ByteString)}
    */
   @Test
-  @Category(MaintainedByDiffblue.class)
+  @Category(ContributionFromDiffblue.class)
+  @ManagedByDiffblue
   @MethodsUnderTest({"void TransactionResultCapsule.setOrderId(ByteString)"})
   public void testSetOrderId2() {
     // Arrange
@@ -6855,7 +7104,8 @@ public class TransactionResultCapsuleDiffblueTest {
    * <p>Method under test: {@link TransactionResultCapsule#setOrderId(ByteString)}
    */
   @Test
-  @Category(MaintainedByDiffblue.class)
+  @Category(ContributionFromDiffblue.class)
+  @ManagedByDiffblue
   @MethodsUnderTest({"void TransactionResultCapsule.setOrderId(ByteString)"})
   public void testSetOrderId3() {
     // Arrange
@@ -6880,7 +7130,8 @@ public class TransactionResultCapsuleDiffblueTest {
    * <p>Method under test: {@link TransactionResultCapsule#setOrderId(ByteString)}
    */
   @Test
-  @Category(MaintainedByDiffblue.class)
+  @Category(ContributionFromDiffblue.class)
+  @ManagedByDiffblue
   @MethodsUnderTest({"void TransactionResultCapsule.setOrderId(ByteString)"})
   public void testSetOrderId4() {
     // Arrange
@@ -6905,7 +7156,8 @@ public class TransactionResultCapsuleDiffblueTest {
    * <p>Method under test: {@link TransactionResultCapsule#setOrderId(ByteString)}
    */
   @Test
-  @Category(MaintainedByDiffblue.class)
+  @Category(ContributionFromDiffblue.class)
+  @ManagedByDiffblue
   @MethodsUnderTest({"void TransactionResultCapsule.setOrderId(ByteString)"})
   public void testSetOrderId5() {
     // Arrange
@@ -6930,7 +7182,8 @@ public class TransactionResultCapsuleDiffblueTest {
    * <p>Method under test: {@link TransactionResultCapsule#setOrderId(ByteString)}
    */
   @Test
-  @Category(MaintainedByDiffblue.class)
+  @Category(ContributionFromDiffblue.class)
+  @ManagedByDiffblue
   @MethodsUnderTest({"void TransactionResultCapsule.setOrderId(ByteString)"})
   public void testSetOrderId6() {
     // Arrange
@@ -6955,7 +7208,8 @@ public class TransactionResultCapsuleDiffblueTest {
    * <p>Method under test: {@link TransactionResultCapsule#setOrderId(ByteString)}
    */
   @Test
-  @Category(MaintainedByDiffblue.class)
+  @Category(ContributionFromDiffblue.class)
+  @ManagedByDiffblue
   @MethodsUnderTest({"void TransactionResultCapsule.setOrderId(ByteString)"})
   public void testSetOrderId7() {
     // Arrange
@@ -6981,7 +7235,8 @@ public class TransactionResultCapsuleDiffblueTest {
    * <p>Method under test: {@link TransactionResultCapsule#setOrderId(ByteString)}
    */
   @Test
-  @Category(MaintainedByDiffblue.class)
+  @Category(ContributionFromDiffblue.class)
+  @ManagedByDiffblue
   @MethodsUnderTest({"void TransactionResultCapsule.setOrderId(ByteString)"})
   public void testSetOrderId_givenTransactionResultCapsuleWithdrawExpireAmountIsTen() {
     // Arrange
@@ -7011,7 +7266,8 @@ public class TransactionResultCapsuleDiffblueTest {
    * <p>Method under test: {@link TransactionResultCapsule#setOrderId(ByteString)}
    */
   @Test
-  @Category(MaintainedByDiffblue.class)
+  @Category(ContributionFromDiffblue.class)
+  @ManagedByDiffblue
   @MethodsUnderTest({"void TransactionResultCapsule.setOrderId(ByteString)"})
   public void testSetOrderId_thenTransactionResultCapsuleDataIsArrayOfByteWithMin_valueAndOne() {
     // Arrange
@@ -7042,7 +7298,8 @@ public class TransactionResultCapsuleDiffblueTest {
    * <p>Method under test: {@link TransactionResultCapsule#setOrderId(ByteString)}
    */
   @Test
-  @Category(MaintainedByDiffblue.class)
+  @Category(ContributionFromDiffblue.class)
+  @ManagedByDiffblue
   @MethodsUnderTest({"void TransactionResultCapsule.setOrderId(ByteString)"})
   public void testSetOrderId_thenTransactionResultCapsuleInstanceAllFieldsSizeIsOne() {
     // Arrange
@@ -7070,7 +7327,8 @@ public class TransactionResultCapsuleDiffblueTest {
    * <p>Method under test: {@link TransactionResultCapsule#setOrderId(ByteString)}
    */
   @Test
-  @Category(MaintainedByDiffblue.class)
+  @Category(ContributionFromDiffblue.class)
+  @ManagedByDiffblue
   @MethodsUnderTest({"void TransactionResultCapsule.setOrderId(ByteString)"})
   public void testSetOrderId_thenTransactionResultCapsuleInstanceAllFieldsSizeIsOne2() {
     // Arrange
@@ -7099,7 +7357,8 @@ public class TransactionResultCapsuleDiffblueTest {
    * <p>Method under test: {@link TransactionResultCapsule#setOrderId(ByteString)}
    */
   @Test
-  @Category(MaintainedByDiffblue.class)
+  @Category(ContributionFromDiffblue.class)
+  @ManagedByDiffblue
   @MethodsUnderTest({"void TransactionResultCapsule.setOrderId(ByteString)"})
   public void testSetOrderId_thenTransactionResultCapsuleInstanceSerializedSizeIsFive() {
     // Arrange
@@ -7129,7 +7388,8 @@ public class TransactionResultCapsuleDiffblueTest {
    * <p>Method under test: {@link TransactionResultCapsule#setOrderId(ByteString)}
    */
   @Test
-  @Category(MaintainedByDiffblue.class)
+  @Category(ContributionFromDiffblue.class)
+  @ManagedByDiffblue
   @MethodsUnderTest({"void TransactionResultCapsule.setOrderId(ByteString)"})
   public void testSetOrderId_thenTransactionResultCapsuleInstanceSerializedSizeIsSeven() {
     // Arrange
@@ -7159,7 +7419,8 @@ public class TransactionResultCapsuleDiffblueTest {
    * <p>Method under test: {@link TransactionResultCapsule#setOrderId(ByteString)}
    */
   @Test
-  @Category(MaintainedByDiffblue.class)
+  @Category(ContributionFromDiffblue.class)
+  @ManagedByDiffblue
   @MethodsUnderTest({"void TransactionResultCapsule.setOrderId(ByteString)"})
   public void testSetOrderId_thenTransactionResultCapsuleInstanceSerializedSizeIsThirteen() {
     // Arrange
@@ -7193,7 +7454,8 @@ public class TransactionResultCapsuleDiffblueTest {
    * <p>Method under test: {@link TransactionResultCapsule#setOrderId(ByteString)}
    */
   @Test
-  @Category(MaintainedByDiffblue.class)
+  @Category(ContributionFromDiffblue.class)
+  @ManagedByDiffblue
   @MethodsUnderTest({"void TransactionResultCapsule.setOrderId(ByteString)"})
   public void testSetOrderId_thenTransactionResultCapsuleOrderDetailsListSizeIsOne() {
     // Arrange
@@ -7220,7 +7482,8 @@ public class TransactionResultCapsuleDiffblueTest {
    * <p>Method under test: {@link TransactionResultCapsule#getOrderDetailsList()}
    */
   @Test
-  @Category(MaintainedByDiffblue.class)
+  @Category(ContributionFromDiffblue.class)
+  @ManagedByDiffblue
   @MethodsUnderTest({"List TransactionResultCapsule.getOrderDetailsList()"})
   public void testGetOrderDetailsList() {
     // Arrange, Act and Assert
@@ -7238,7 +7501,8 @@ public class TransactionResultCapsuleDiffblueTest {
    * <p>Method under test: {@link TransactionResultCapsule#getData()}
    */
   @Test
-  @Category(MaintainedByDiffblue.class)
+  @Category(ContributionFromDiffblue.class)
+  @ManagedByDiffblue
   @MethodsUnderTest({"byte[] TransactionResultCapsule.getData()"})
   public void testGetData_givenByteStringIsEmptyReturnTrue_thenReturnEmptyArrayOfByte() {
     // Arrange
@@ -7268,7 +7532,8 @@ public class TransactionResultCapsuleDiffblueTest {
    * <p>Method under test: {@link TransactionResultCapsule#getData()}
    */
   @Test
-  @Category(MaintainedByDiffblue.class)
+  @Category(ContributionFromDiffblue.class)
+  @ManagedByDiffblue
   @MethodsUnderTest({"byte[] TransactionResultCapsule.getData()"})
   public void testGetData_givenHashMapFooIsMinusOne_thenReturnArrayOfByteWithMinusThirtyAndOne() {
     // Arrange
@@ -7303,7 +7568,8 @@ public class TransactionResultCapsuleDiffblueTest {
    * <p>Method under test: {@link TransactionResultCapsule#getData()}
    */
   @Test
-  @Category(MaintainedByDiffblue.class)
+  @Category(ContributionFromDiffblue.class)
+  @ManagedByDiffblue
   @MethodsUnderTest({"byte[] TransactionResultCapsule.getData()"})
   public void testGetData_givenTransactionResultCapsule_thenReturnEmptyArrayOfByte() {
     // Arrange, Act and Assert
@@ -7320,7 +7586,8 @@ public class TransactionResultCapsuleDiffblueTest {
    * <p>Method under test: {@link TransactionResultCapsule#getData()}
    */
   @Test
-  @Category(MaintainedByDiffblue.class)
+  @Category(ContributionFromDiffblue.class)
+  @ManagedByDiffblue
   @MethodsUnderTest({"byte[] TransactionResultCapsule.getData()"})
   public void testGetData_thenReturnArrayOfByteWithBackspaceAndMinusOne() {
     // Arrange, Act and Assert
@@ -7339,7 +7606,8 @@ public class TransactionResultCapsuleDiffblueTest {
    * <p>Method under test: {@link TransactionResultCapsule#getData()}
    */
   @Test
-  @Category(MaintainedByDiffblue.class)
+  @Category(ContributionFromDiffblue.class)
+  @ManagedByDiffblue
   @MethodsUnderTest({"byte[] TransactionResultCapsule.getData()"})
   public void testGetData_thenReturnArrayOfByteWithBackspaceAndOne() {
     // Arrange
@@ -7361,7 +7629,8 @@ public class TransactionResultCapsuleDiffblueTest {
    * <p>Method under test: {@link TransactionResultCapsule#getData()}
    */
   @Test
-  @Category(MaintainedByDiffblue.class)
+  @Category(ContributionFromDiffblue.class)
+  @ManagedByDiffblue
   @MethodsUnderTest({"byte[] TransactionResultCapsule.getData()"})
   public void testGetData_thenReturnArrayOfByteWithMin_valueAndOne() {
     // Arrange
@@ -7383,7 +7652,8 @@ public class TransactionResultCapsuleDiffblueTest {
    * <p>Method under test: {@link TransactionResultCapsule#getData()}
    */
   @Test
-  @Category(MaintainedByDiffblue.class)
+  @Category(ContributionFromDiffblue.class)
+  @ManagedByDiffblue
   @MethodsUnderTest({"byte[] TransactionResultCapsule.getData()"})
   public void testGetData_thenReturnArrayOfByteWithMinusEightyAndOne() {
     // Arrange
@@ -7407,7 +7677,8 @@ public class TransactionResultCapsuleDiffblueTest {
    * <p>Method under test: {@link TransactionResultCapsule#getData()}
    */
   @Test
-  @Category(MaintainedByDiffblue.class)
+  @Category(ContributionFromDiffblue.class)
+  @ManagedByDiffblue
   @MethodsUnderTest({"byte[] TransactionResultCapsule.getData()"})
   public void testGetData_thenReturnArrayOfByteWithMinusEightyEightAndOne() {
     // Arrange
@@ -7429,7 +7700,8 @@ public class TransactionResultCapsuleDiffblueTest {
    * <p>Method under test: {@link TransactionResultCapsule#getData()}
    */
   @Test
-  @Category(MaintainedByDiffblue.class)
+  @Category(ContributionFromDiffblue.class)
+  @ManagedByDiffblue
   @MethodsUnderTest({"byte[] TransactionResultCapsule.getData()"})
   public void testGetData_thenReturnArrayOfByteWithMinusFiftyFourAndOne() {
     // Arrange
@@ -7460,7 +7732,8 @@ public class TransactionResultCapsuleDiffblueTest {
    * <p>Method under test: {@link TransactionResultCapsule#getData()}
    */
   @Test
-  @Category(MaintainedByDiffblue.class)
+  @Category(ContributionFromDiffblue.class)
+  @ManagedByDiffblue
   @MethodsUnderTest({"byte[] TransactionResultCapsule.getData()"})
   public void testGetData_thenReturnArrayOfByteWithMinusFiftyFourAndOne2() {
     // Arrange
@@ -7495,7 +7768,8 @@ public class TransactionResultCapsuleDiffblueTest {
    * <p>Method under test: {@link TransactionResultCapsule#getData()}
    */
   @Test
-  @Category(MaintainedByDiffblue.class)
+  @Category(ContributionFromDiffblue.class)
+  @ManagedByDiffblue
   @MethodsUnderTest({"byte[] TransactionResultCapsule.getData()"})
   public void testGetData_thenReturnArrayOfByteWithMinusFortyAndOne() {
     // Arrange
@@ -7517,7 +7791,8 @@ public class TransactionResultCapsuleDiffblueTest {
    * <p>Method under test: {@link TransactionResultCapsule#getData()}
    */
   @Test
-  @Category(MaintainedByDiffblue.class)
+  @Category(ContributionFromDiffblue.class)
+  @ManagedByDiffblue
   @MethodsUnderTest({"byte[] TransactionResultCapsule.getData()"})
   public void testGetData_thenReturnArrayOfByteWithMinusFortySixAndOne() {
     // Arrange
@@ -7539,7 +7814,8 @@ public class TransactionResultCapsuleDiffblueTest {
    * <p>Method under test: {@link TransactionResultCapsule#getData()}
    */
   @Test
-  @Category(MaintainedByDiffblue.class)
+  @Category(ContributionFromDiffblue.class)
+  @ManagedByDiffblue
   @MethodsUnderTest({"byte[] TransactionResultCapsule.getData()"})
   public void testGetData_thenReturnArrayOfByteWithMinusNinetySixAndOne() {
     // Arrange
@@ -7561,7 +7837,8 @@ public class TransactionResultCapsuleDiffblueTest {
    * <p>Method under test: {@link TransactionResultCapsule#getData()}
    */
   @Test
-  @Category(MaintainedByDiffblue.class)
+  @Category(ContributionFromDiffblue.class)
+  @ManagedByDiffblue
   @MethodsUnderTest({"byte[] TransactionResultCapsule.getData()"})
   public void testGetData_thenReturnArrayOfByteWithMinusOneHundredFourAndOne() {
     // Arrange
@@ -7583,7 +7860,8 @@ public class TransactionResultCapsuleDiffblueTest {
    * <p>Method under test: {@link TransactionResultCapsule#getData()}
    */
   @Test
-  @Category(MaintainedByDiffblue.class)
+  @Category(ContributionFromDiffblue.class)
+  @ManagedByDiffblue
   @MethodsUnderTest({"byte[] TransactionResultCapsule.getData()"})
   public void testGetData_thenReturnArrayOfByteWithMinusOneHundredTwelveAndOne() {
     // Arrange
@@ -7605,7 +7883,8 @@ public class TransactionResultCapsuleDiffblueTest {
    * <p>Method under test: {@link TransactionResultCapsule#getData()}
    */
   @Test
-  @Category(MaintainedByDiffblue.class)
+  @Category(ContributionFromDiffblue.class)
+  @ManagedByDiffblue
   @MethodsUnderTest({"byte[] TransactionResultCapsule.getData()"})
   public void testGetData_thenReturnArrayOfByteWithRAndTwo() {
     // Arrange
@@ -7627,7 +7906,8 @@ public class TransactionResultCapsuleDiffblueTest {
    * <p>Method under test: {@link TransactionResultCapsule#getData()}
    */
   @Test
-  @Category(MaintainedByDiffblue.class)
+  @Category(ContributionFromDiffblue.class)
+  @ManagedByDiffblue
   @MethodsUnderTest({"byte[] TransactionResultCapsule.getData()"})
   public void testGetData_thenReturnArrayOfByteWithXAndLf() {
     // Arrange
@@ -7649,7 +7929,8 @@ public class TransactionResultCapsuleDiffblueTest {
    * <p>Method under test: {@link TransactionResultCapsule#getData()}
    */
   @Test
-  @Category(MaintainedByDiffblue.class)
+  @Category(ContributionFromDiffblue.class)
+  @ManagedByDiffblue
   @MethodsUnderTest({"byte[] TransactionResultCapsule.getData()"})
   public void testGetData_thenReturnEmptyArrayOfByte() {
     // Arrange
@@ -7666,7 +7947,8 @@ public class TransactionResultCapsuleDiffblueTest {
    * <p>Method under test: {@link TransactionResultCapsule#getInstance()}
    */
   @Test
-  @Category(MaintainedByDiffblue.class)
+  @Category(ContributionFromDiffblue.class)
+  @ManagedByDiffblue
   @MethodsUnderTest({"Result TransactionResultCapsule.getInstance()"})
   public void testGetInstance() {
     // Arrange and Act

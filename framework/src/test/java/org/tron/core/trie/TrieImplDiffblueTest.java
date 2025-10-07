@@ -15,7 +15,8 @@ import static org.mockito.Mockito.doNothing;
 import static org.mockito.Mockito.doThrow;
 import static org.mockito.Mockito.mock;
 import static org.mockito.Mockito.verify;
-import com.diffblue.cover.annotations.MaintainedByDiffblue;
+import com.diffblue.cover.annotations.ContributionFromDiffblue;
+import com.diffblue.cover.annotations.ManagedByDiffblue;
 import com.diffblue.cover.annotations.MethodsUnderTest;
 import java.io.UnsupportedEncodingException;
 import java.util.LinkedHashMap;
@@ -36,7 +37,8 @@ public class TrieImplDiffblueTest {
    * <p>Method under test: {@link TrieImpl#TrieImpl()}
    */
   @Test
-  @Category(MaintainedByDiffblue.class)
+  @Category(ContributionFromDiffblue.class)
+  @ManagedByDiffblue
   @MethodsUnderTest({"void TrieImpl.<init>()"})
   public void testNewTrieImpl() {
     // Arrange and Act
@@ -64,7 +66,8 @@ public class TrieImplDiffblueTest {
    * <p>Method under test: {@link TrieImpl#TrieImpl(DB)}
    */
   @Test
-  @Category(MaintainedByDiffblue.class)
+  @Category(ContributionFromDiffblue.class)
+  @ManagedByDiffblue
   @MethodsUnderTest({"void TrieImpl.<init>(DB)"})
   public void testNewTrieImpl2() {
     // Arrange
@@ -95,7 +98,8 @@ public class TrieImplDiffblueTest {
    * <p>Method under test: {@link TrieImpl#TrieImpl(DB, byte[])}
    */
   @Test
-  @Category(MaintainedByDiffblue.class)
+  @Category(ContributionFromDiffblue.class)
+  @ManagedByDiffblue
   @MethodsUnderTest({"void TrieImpl.<init>(DB, byte[])"})
   public void testNewTrieImpl_whenAxaxaxaxBytesIsUtf8_thenReturnRootHashIsNull()
       throws UnsupportedEncodingException {
@@ -121,7 +125,8 @@ public class TrieImplDiffblueTest {
    * <p>Method under test: {@link TrieImpl#TrieImpl(byte[])}
    */
   @Test
-  @Category(MaintainedByDiffblue.class)
+  @Category(ContributionFromDiffblue.class)
+  @ManagedByDiffblue
   @MethodsUnderTest({"void TrieImpl.<init>(byte[])"})
   public void testNewTrieImpl_whenAxaxaxaxBytesIsUtf8_thenReturnRootHashIsNull2()
       throws UnsupportedEncodingException {
@@ -147,7 +152,8 @@ public class TrieImplDiffblueTest {
    * <p>Method under test: {@link TrieImpl#TrieImpl(byte[])}
    */
   @Test
-  @Category(MaintainedByDiffblue.class)
+  @Category(ContributionFromDiffblue.class)
+  @ManagedByDiffblue
   @MethodsUnderTest({"void TrieImpl.<init>(byte[])"})
   public void testNewTrieImpl_whenNull_thenCacheReturnConcurrentHashDB() {
     // Arrange and Act
@@ -180,7 +186,8 @@ public class TrieImplDiffblueTest {
    * <p>Method under test: {@link TrieImpl#TrieImpl(DB, byte[])}
    */
   @Test
-  @Category(MaintainedByDiffblue.class)
+  @Category(ContributionFromDiffblue.class)
+  @ManagedByDiffblue
   @MethodsUnderTest({"void TrieImpl.<init>(DB, byte[])"})
   public void testNewTrieImpl_whenNull_thenReturnRootIsNull() {
     // Arrange
@@ -212,7 +219,8 @@ public class TrieImplDiffblueTest {
    * </ul>
    */
   @Test
-  @Category(MaintainedByDiffblue.class)
+  @Category(ContributionFromDiffblue.class)
+  @ManagedByDiffblue
   @MethodsUnderTest({
     "DB TrieImpl.getCache()",
     "Node TrieImpl.getRoot()",
@@ -237,7 +245,8 @@ public class TrieImplDiffblueTest {
    * <p>Method under test: {@link TrieImpl#get(byte[])}
    */
   @Test
-  @Category(MaintainedByDiffblue.class)
+  @Category(ContributionFromDiffblue.class)
+  @ManagedByDiffblue
   @MethodsUnderTest({"byte[] TrieImpl.get(byte[])"})
   public void testGetWithKey() throws UnsupportedEncodingException {
     // Arrange
@@ -257,7 +266,8 @@ public class TrieImplDiffblueTest {
    * <p>Method under test: {@link TrieImpl#get(byte[])}
    */
   @Test
-  @Category(MaintainedByDiffblue.class)
+  @Category(ContributionFromDiffblue.class)
+  @ManagedByDiffblue
   @MethodsUnderTest({"byte[] TrieImpl.get(byte[])"})
   public void testGetWithKey2() throws UnsupportedEncodingException {
     // Arrange
@@ -283,7 +293,8 @@ public class TrieImplDiffblueTest {
    * <p>Method under test: {@link TrieImpl#get(byte[])}
    */
   @Test
-  @Category(MaintainedByDiffblue.class)
+  @Category(ContributionFromDiffblue.class)
+  @ManagedByDiffblue
   @MethodsUnderTest({"byte[] TrieImpl.get(byte[])"})
   public void testGetWithKey_givenTrieImplArrayOfByteWithAAndOneIsArrayOfByteWithAAndOne()
       throws UnsupportedEncodingException {
@@ -311,7 +322,8 @@ public class TrieImplDiffblueTest {
    * <p>Method under test: {@link TrieImpl#get(byte[])}
    */
   @Test
-  @Category(MaintainedByDiffblue.class)
+  @Category(ContributionFromDiffblue.class)
+  @ManagedByDiffblue
   @MethodsUnderTest({"byte[] TrieImpl.get(byte[])"})
   public void testGetWithKey_givenTrieImplArrayOfByteWithAAndOneIsAxaxaxaxBytesIsUtf8()
       throws UnsupportedEncodingException {
@@ -339,7 +351,8 @@ public class TrieImplDiffblueTest {
    * <p>Method under test: {@link TrieImpl#get(byte[])}
    */
   @Test
-  @Category(MaintainedByDiffblue.class)
+  @Category(ContributionFromDiffblue.class)
+  @ManagedByDiffblue
   @MethodsUnderTest({"byte[] TrieImpl.get(byte[])"})
   public void testGetWithKey_givenTrieImplAxaxaxaxBytesIsUtf8IsAxaxaxaxBytesIsUtf8()
       throws UnsupportedEncodingException {
@@ -366,7 +379,8 @@ public class TrieImplDiffblueTest {
    * <p>Method under test: {@link TrieImpl#get(byte[])}
    */
   @Test
-  @Category(MaintainedByDiffblue.class)
+  @Category(ContributionFromDiffblue.class)
+  @ManagedByDiffblue
   @MethodsUnderTest({"byte[] TrieImpl.get(byte[])"})
   public void testGetWithKey_givenTrieImplEmptyArrayOfByteIsAxaxaxaxBytesIsUtf8_thenReturnNull()
       throws UnsupportedEncodingException {
@@ -393,7 +407,8 @@ public class TrieImplDiffblueTest {
    * <p>Method under test: {@link TrieImpl#get(byte[])}
    */
   @Test
-  @Category(MaintainedByDiffblue.class)
+  @Category(ContributionFromDiffblue.class)
+  @ManagedByDiffblue
   @MethodsUnderTest({"byte[] TrieImpl.get(byte[])"})
   public void testGetWithKey_givenTrieImplWithRootIsAxaxaxaxBytesIsUtf8_thenReturnNull()
       throws UnsupportedEncodingException {
@@ -417,7 +432,8 @@ public class TrieImplDiffblueTest {
    * <p>Method under test: {@link TrieImpl#get(byte[])}
    */
   @Test
-  @Category(MaintainedByDiffblue.class)
+  @Category(ContributionFromDiffblue.class)
+  @ManagedByDiffblue
   @MethodsUnderTest({"byte[] TrieImpl.get(byte[])"})
   public void testGetWithKey_givenTrieImplWithRootIsAxaxaxaxBytesIsUtf8_whenEmptyArrayOfByte()
       throws UnsupportedEncodingException {
@@ -439,7 +455,8 @@ public class TrieImplDiffblueTest {
    * <p>Method under test: {@link TrieImpl#get(byte[])}
    */
   @Test
-  @Category(MaintainedByDiffblue.class)
+  @Category(ContributionFromDiffblue.class)
+  @ManagedByDiffblue
   @MethodsUnderTest({"byte[] TrieImpl.get(byte[])"})
   public void testGetWithKey_givenTrieImplWithRootIsEmptyArrayOfByte_thenReturnNull()
       throws UnsupportedEncodingException {
@@ -464,7 +481,8 @@ public class TrieImplDiffblueTest {
    * <p>Method under test: {@link TrieImpl#get(byte[])}
    */
   @Test
-  @Category(MaintainedByDiffblue.class)
+  @Category(ContributionFromDiffblue.class)
+  @ManagedByDiffblue
   @MethodsUnderTest({"byte[] TrieImpl.get(byte[])"})
   public void testGetWithKey_givenTrieImplWithRootIsEmptyArrayOfByte_whenEmptyArrayOfByte() {
     // Arrange
@@ -489,7 +507,8 @@ public class TrieImplDiffblueTest {
    * <p>Method under test: {@link TrieImpl#get(byte[])}
    */
   @Test
-  @Category(MaintainedByDiffblue.class)
+  @Category(ContributionFromDiffblue.class)
+  @ManagedByDiffblue
   @MethodsUnderTest({"byte[] TrieImpl.get(byte[])"})
   public void testGetWithKey_givenTrieImpl_whenAxaxaxaxBytesIsUtf8_thenReturnNull()
       throws UnsupportedEncodingException {
@@ -510,7 +529,8 @@ public class TrieImplDiffblueTest {
    * <p>Method under test: {@link Node#branchNodeCanCompact()}
    */
   @Test
-  @Category(MaintainedByDiffblue.class)
+  @Category(ContributionFromDiffblue.class)
+  @ManagedByDiffblue
   @MethodsUnderTest({"boolean Node.branchNodeCanCompact()"})
   public void testNodeBranchNodeCanCompact_givenA() {
     // Arrange
@@ -530,7 +550,8 @@ public class TrieImplDiffblueTest {
    * <p>Method under test: {@link Node#branchNodeCanCompact()}
    */
   @Test
-  @Category(MaintainedByDiffblue.class)
+  @Category(ContributionFromDiffblue.class)
+  @ManagedByDiffblue
   @MethodsUnderTest({"boolean Node.branchNodeCanCompact()"})
   public void testNodeBranchNodeCanCompact_givenNodeWithThis$0IsTrieImpl() {
     // Arrange, Act and Assert
@@ -547,7 +568,8 @@ public class TrieImplDiffblueTest {
    * <p>Method under test: {@link Node#branchNodeCompactIdx()}
    */
   @Test
-  @Category(MaintainedByDiffblue.class)
+  @Category(ContributionFromDiffblue.class)
+  @ManagedByDiffblue
   @MethodsUnderTest({"int Node.branchNodeCompactIdx()"})
   public void testNodeBranchNodeCompactIdx_givenA() {
     // Arrange
@@ -567,7 +589,8 @@ public class TrieImplDiffblueTest {
    * <p>Method under test: {@link Node#branchNodeCompactIdx()}
    */
   @Test
-  @Category(MaintainedByDiffblue.class)
+  @Category(ContributionFromDiffblue.class)
+  @ManagedByDiffblue
   @MethodsUnderTest({"int Node.branchNodeCompactIdx()"})
   public void testNodeBranchNodeCompactIdx_givenNodeWithThis$0IsTrieImpl() {
     // Arrange, Act and Assert
@@ -584,7 +607,8 @@ public class TrieImplDiffblueTest {
    * <p>Method under test: {@link Node#branchNodeGetChild(int)}
    */
   @Test
-  @Category(MaintainedByDiffblue.class)
+  @Category(ContributionFromDiffblue.class)
+  @ManagedByDiffblue
   @MethodsUnderTest({"Node Node.branchNodeGetChild(int)"})
   public void testNodeBranchNodeGetChild_givenA() {
     // Arrange
@@ -604,7 +628,8 @@ public class TrieImplDiffblueTest {
    * <p>Method under test: {@link Node#branchNodeGetChild(int)}
    */
   @Test
-  @Category(MaintainedByDiffblue.class)
+  @Category(ContributionFromDiffblue.class)
+  @ManagedByDiffblue
   @MethodsUnderTest({"Node Node.branchNodeGetChild(int)"})
   public void testNodeBranchNodeGetChild_givenNodeWithThis$0IsTrieImpl() {
     // Arrange, Act and Assert
@@ -621,7 +646,8 @@ public class TrieImplDiffblueTest {
    * <p>Method under test: {@link Node#branchNodeGetValue()}
    */
   @Test
-  @Category(MaintainedByDiffblue.class)
+  @Category(ContributionFromDiffblue.class)
+  @ManagedByDiffblue
   @MethodsUnderTest({"byte[] Node.branchNodeGetValue()"})
   public void testNodeBranchNodeGetValue_givenA() {
     // Arrange
@@ -641,7 +667,8 @@ public class TrieImplDiffblueTest {
    * <p>Method under test: {@link Node#branchNodeGetValue()}
    */
   @Test
-  @Category(MaintainedByDiffblue.class)
+  @Category(ContributionFromDiffblue.class)
+  @ManagedByDiffblue
   @MethodsUnderTest({"byte[] Node.branchNodeGetValue()"})
   public void testNodeBranchNodeGetValue_givenNodeWithThis$0IsTrieImpl() {
     // Arrange, Act and Assert
@@ -654,7 +681,8 @@ public class TrieImplDiffblueTest {
    * <p>Method under test: {@link Node#branchNodeSetChild(int, Node)}
    */
   @Test
-  @Category(MaintainedByDiffblue.class)
+  @Category(ContributionFromDiffblue.class)
+  @ManagedByDiffblue
   @MethodsUnderTest({"Node Node.branchNodeSetChild(int, Node)"})
   public void testNodeBranchNodeSetChild() {
     // Arrange
@@ -677,7 +705,8 @@ public class TrieImplDiffblueTest {
    * <p>Method under test: {@link Node#branchNodeSetChild(int, Node)}
    */
   @Test
-  @Category(MaintainedByDiffblue.class)
+  @Category(ContributionFromDiffblue.class)
+  @ManagedByDiffblue
   @MethodsUnderTest({"Node Node.branchNodeSetChild(int, Node)"})
   public void testNodeBranchNodeSetChild_thenReturnNodeWithThis$0IsTrieImpl() {
     // Arrange
@@ -696,7 +725,8 @@ public class TrieImplDiffblueTest {
    * <p>Method under test: {@link Node#branchNodeSetValue(byte[])}
    */
   @Test
-  @Category(MaintainedByDiffblue.class)
+  @Category(ContributionFromDiffblue.class)
+  @ManagedByDiffblue
   @MethodsUnderTest({"Node Node.branchNodeSetValue(byte[])"})
   public void testNodeBranchNodeSetValue() throws UnsupportedEncodingException {
     // Arrange
@@ -719,7 +749,8 @@ public class TrieImplDiffblueTest {
    * <p>Method under test: {@link Node#branchNodeSetValue(byte[])}
    */
   @Test
-  @Category(MaintainedByDiffblue.class)
+  @Category(ContributionFromDiffblue.class)
+  @ManagedByDiffblue
   @MethodsUnderTest({"Node Node.branchNodeSetValue(byte[])"})
   public void testNodeBranchNodeSetValue_thenReturnNodeWithThis$0IsTrieImpl()
       throws UnsupportedEncodingException {
@@ -744,7 +775,8 @@ public class TrieImplDiffblueTest {
    * <p>Method under test: {@link Node#branchNodeSetValue(byte[])}
    */
   @Test
-  @Category(MaintainedByDiffblue.class)
+  @Category(ContributionFromDiffblue.class)
+  @ManagedByDiffblue
   @MethodsUnderTest({"Node Node.branchNodeSetValue(byte[])"})
   public void testNodeBranchNodeSetValue_whenNull_thenReturnNodeWithThis$0IsTrieImpl() {
     // Arrange
@@ -763,7 +795,8 @@ public class TrieImplDiffblueTest {
    * <p>Method under test: {@link Node#dumpStruct(String, String)}
    */
   @Test
-  @Category(MaintainedByDiffblue.class)
+  @Category(ContributionFromDiffblue.class)
+  @ManagedByDiffblue
   @MethodsUnderTest({"String Node.dumpStruct(String, String)"})
   public void testNodeDumpStruct() {
     // Arrange
@@ -784,7 +817,8 @@ public class TrieImplDiffblueTest {
    * <p>Method under test: {@link Node#dumpStruct(String, String)}
    */
   @Test
-  @Category(MaintainedByDiffblue.class)
+  @Category(ContributionFromDiffblue.class)
+  @ManagedByDiffblue
   @MethodsUnderTest({"String Node.dumpStruct(String, String)"})
   public void testNodeDumpStruct_givenNodeWithThis$0IsTrieImplAndHashOrRlpIsEmptyArrayOfByte() {
     // Arrange
@@ -804,7 +838,8 @@ public class TrieImplDiffblueTest {
    * <p>Method under test: {@link Node#dumpStruct(String, String)}
    */
   @Test
-  @Category(MaintainedByDiffblue.class)
+  @Category(ContributionFromDiffblue.class)
+  @ManagedByDiffblue
   @MethodsUnderTest({"String Node.dumpStruct(String, String)"})
   public void testNodeDumpStruct_thenReturnIndentPrefixBranchNode() {
     // Arrange, Act and Assert
@@ -822,7 +857,8 @@ public class TrieImplDiffblueTest {
    * <p>Method under test: {@link Node#dumpStruct(String, String)}
    */
   @Test
-  @Category(MaintainedByDiffblue.class)
+  @Category(ContributionFromDiffblue.class)
+  @ManagedByDiffblue
   @MethodsUnderTest({"String Node.dumpStruct(String, String)"})
   public void testNodeDumpStruct_thenReturnIndentPrefixBranchNodeT4111411141114111() {
     // Arrange
@@ -844,7 +880,8 @@ public class TrieImplDiffblueTest {
    * <p>Method under test: {@link Node#dumpStruct(String, String)}
    */
   @Test
-  @Category(MaintainedByDiffblue.class)
+  @Category(ContributionFromDiffblue.class)
+  @ManagedByDiffblue
   @MethodsUnderTest({"String Node.dumpStruct(String, String)"})
   public void testNodeDumpStruct_thenReturnIndentPrefixKVNodeNodeNullIndentBranchNode() {
     // Arrange
@@ -867,7 +904,8 @@ public class TrieImplDiffblueTest {
    * <p>Method under test: {@link Node#dumpStruct(String, String)}
    */
   @Test
-  @Category(MaintainedByDiffblue.class)
+  @Category(ContributionFromDiffblue.class)
+  @ManagedByDiffblue
   @MethodsUnderTest({"String Node.dumpStruct(String, String)"})
   public void testNodeDumpStruct_thenReturnIndentPrefixKVNodeValueNull4111411141114111() {
     // Arrange
@@ -886,7 +924,8 @@ public class TrieImplDiffblueTest {
    * <p>Method under test: {@link Node#dumpTrieNode(boolean)}
    */
   @Test
-  @Category(MaintainedByDiffblue.class)
+  @Category(ContributionFromDiffblue.class)
+  @ManagedByDiffblue
   @MethodsUnderTest({"java.util.List Node.dumpTrieNode(boolean)"})
   public void testNodeDumpTrieNode() {
     // Arrange
@@ -902,7 +941,8 @@ public class TrieImplDiffblueTest {
    * <p>Method under test: {@link Node#dumpTrieNode(boolean)}
    */
   @Test
-  @Category(MaintainedByDiffblue.class)
+  @Category(ContributionFromDiffblue.class)
+  @ManagedByDiffblue
   @MethodsUnderTest({"java.util.List Node.dumpTrieNode(boolean)"})
   public void testNodeDumpTrieNode2() {
     // Arrange
@@ -919,7 +959,8 @@ public class TrieImplDiffblueTest {
    * <p>Method under test: {@link Node#dumpTrieNode(boolean)}
    */
   @Test
-  @Category(MaintainedByDiffblue.class)
+  @Category(ContributionFromDiffblue.class)
+  @ManagedByDiffblue
   @MethodsUnderTest({"java.util.List Node.dumpTrieNode(boolean)"})
   public void testNodeDumpTrieNode3() {
     // Arrange
@@ -940,7 +981,8 @@ public class TrieImplDiffblueTest {
    * <p>Method under test: {@link Node#dumpTrieNode(boolean)}
    */
   @Test
-  @Category(MaintainedByDiffblue.class)
+  @Category(ContributionFromDiffblue.class)
+  @ManagedByDiffblue
   @MethodsUnderTest({"java.util.List Node.dumpTrieNode(boolean)"})
   public void testNodeDumpTrieNode_givenNodeWithThis$0IsTrieImplAndHashOrRlpIsEmptyArrayOfByte() {
     // Arrange
@@ -961,7 +1003,8 @@ public class TrieImplDiffblueTest {
    * <p>Method under test: {@link Node#dumpTrieNode(boolean)}
    */
   @Test
-  @Category(MaintainedByDiffblue.class)
+  @Category(ContributionFromDiffblue.class)
+  @ManagedByDiffblue
   @MethodsUnderTest({"java.util.List Node.dumpTrieNode(boolean)"})
   public void testNodeDumpTrieNode_givenNodeWithThis$0IsTrieImplAndLengthIsThree() {
     // Arrange, Act and Assert
@@ -979,7 +1022,8 @@ public class TrieImplDiffblueTest {
    * <p>Method under test: {@link Node#dumpTrieNode(boolean)}
    */
   @Test
-  @Category(MaintainedByDiffblue.class)
+  @Category(ContributionFromDiffblue.class)
+  @ManagedByDiffblue
   @MethodsUnderTest({"java.util.List Node.dumpTrieNode(boolean)"})
   public void testNodeDumpTrieNode_givenNodeWithThis$0IsTrieImpl_thenReturnEmpty() {
     // Arrange, Act and Assert
@@ -992,7 +1036,8 @@ public class TrieImplDiffblueTest {
    * <p>Method under test: {@link Node#encode()}
    */
   @Test
-  @Category(MaintainedByDiffblue.class)
+  @Category(ContributionFromDiffblue.class)
+  @ManagedByDiffblue
   @MethodsUnderTest({"byte[] Node.encode()"})
   public void testNodeEncode() {
     // Arrange
@@ -1023,7 +1068,8 @@ public class TrieImplDiffblueTest {
    * <p>Method under test: {@link Node#encode()}
    */
   @Test
-  @Category(MaintainedByDiffblue.class)
+  @Category(ContributionFromDiffblue.class)
+  @ManagedByDiffblue
   @MethodsUnderTest({"byte[] Node.encode()"})
   public void testNodeEncode2() {
     // Arrange
@@ -1115,7 +1161,8 @@ public class TrieImplDiffblueTest {
    * <p>Method under test: {@link Node#encode()}
    */
   @Test
-  @Category(MaintainedByDiffblue.class)
+  @Category(ContributionFromDiffblue.class)
+  @ManagedByDiffblue
   @MethodsUnderTest({"byte[] Node.encode()"})
   public void testNodeEncode3() {
     // Arrange
@@ -1151,7 +1198,8 @@ public class TrieImplDiffblueTest {
    * <p>Method under test: {@link Node#encode()}
    */
   @Test
-  @Category(MaintainedByDiffblue.class)
+  @Category(ContributionFromDiffblue.class)
+  @ManagedByDiffblue
   @MethodsUnderTest({"byte[] Node.encode()"})
   public void testNodeEncode_givenNodeWithThis$0IsTrieImpl() {
     // Arrange
@@ -1187,7 +1235,8 @@ public class TrieImplDiffblueTest {
    * <p>Method under test: {@link Node#encode()}
    */
   @Test
-  @Category(MaintainedByDiffblue.class)
+  @Category(ContributionFromDiffblue.class)
+  @ManagedByDiffblue
   @MethodsUnderTest({"byte[] Node.encode()"})
   public void testNodeEncode_givenNodeWithThis$0IsTrieImplAndLengthIsThree_thenReturnNull() {
     // Arrange
@@ -1209,7 +1258,8 @@ public class TrieImplDiffblueTest {
    * <p>Method under test: {@link Node#encode()}
    */
   @Test
-  @Category(MaintainedByDiffblue.class)
+  @Category(ContributionFromDiffblue.class)
+  @ManagedByDiffblue
   @MethodsUnderTest({"byte[] Node.encode()"})
   public void testNodeEncode_givenNodeWithThis$0IsTrieImplBranchNodeSetChildOneAndNull() {
     // Arrange
@@ -1245,7 +1295,8 @@ public class TrieImplDiffblueTest {
    * <p>Method under test: {@link Node#encode()}
    */
   @Test
-  @Category(MaintainedByDiffblue.class)
+  @Category(ContributionFromDiffblue.class)
+  @ManagedByDiffblue
   @MethodsUnderTest({"byte[] Node.encode()"})
   public void testNodeEncode_givenNodeWithThis$0IsTrieImplBranchNodeSetValueEmptyArrayOfByte() {
     // Arrange
@@ -1281,7 +1332,8 @@ public class TrieImplDiffblueTest {
    * <p>Method under test: {@link Node#encode()}
    */
   @Test
-  @Category(MaintainedByDiffblue.class)
+  @Category(ContributionFromDiffblue.class)
+  @ManagedByDiffblue
   @MethodsUnderTest({"byte[] Node.encode()"})
   public void testNodeEncode_givenNodeWithThis$0IsTrieImplBranchNodeSetValueNull() {
     // Arrange
@@ -1312,7 +1364,8 @@ public class TrieImplDiffblueTest {
    * <p>Method under test: {@link Node#getType()}
    */
   @Test
-  @Category(MaintainedByDiffblue.class)
+  @Category(ContributionFromDiffblue.class)
+  @ManagedByDiffblue
   @MethodsUnderTest({"NodeType Node.getType()"})
   public void testNodeGetType() {
     // Arrange
@@ -1328,7 +1381,8 @@ public class TrieImplDiffblueTest {
    * <p>Method under test: {@link Node#getType()}
    */
   @Test
-  @Category(MaintainedByDiffblue.class)
+  @Category(ContributionFromDiffblue.class)
+  @ManagedByDiffblue
   @MethodsUnderTest({"NodeType Node.getType()"})
   public void testNodeGetType2() {
     // Arrange
@@ -1349,7 +1403,8 @@ public class TrieImplDiffblueTest {
    * <p>Method under test: {@link Node#getType()}
    */
   @Test
-  @Category(MaintainedByDiffblue.class)
+  @Category(ContributionFromDiffblue.class)
+  @ManagedByDiffblue
   @MethodsUnderTest({"NodeType Node.getType()"})
   public void testNodeGetType_givenNodeWithThis$0IsTrieImplAndHashOrRlpIsEmptyArrayOfByte() {
     // Arrange
@@ -1370,7 +1425,8 @@ public class TrieImplDiffblueTest {
    * <p>Method under test: {@link Node#getType()}
    */
   @Test
-  @Category(MaintainedByDiffblue.class)
+  @Category(ContributionFromDiffblue.class)
+  @ManagedByDiffblue
   @MethodsUnderTest({"NodeType Node.getType()"})
   public void testNodeGetType_givenNodeWithThis$0IsTrieImpl_thenReturnBranchNode() {
     // Arrange, Act and Assert
@@ -1387,7 +1443,8 @@ public class TrieImplDiffblueTest {
    * <p>Method under test: {@link Node#getType()}
    */
   @Test
-  @Category(MaintainedByDiffblue.class)
+  @Category(ContributionFromDiffblue.class)
+  @ManagedByDiffblue
   @MethodsUnderTest({"NodeType Node.getType()"})
   public void testNodeGetType_thenReturnKVNodeValue() {
     // Arrange, Act and Assert
@@ -1406,7 +1463,8 @@ public class TrieImplDiffblueTest {
    * </ul>
    */
   @Test
-  @Category(MaintainedByDiffblue.class)
+  @Category(ContributionFromDiffblue.class)
+  @ManagedByDiffblue
   @MethodsUnderTest({
     "NodeType Node.getNodeType()",
     "Node Node.invalidate()",
@@ -1432,7 +1490,8 @@ public class TrieImplDiffblueTest {
    * <p>Method under test: {@link Node#kvNodeGetKey()}
    */
   @Test
-  @Category(MaintainedByDiffblue.class)
+  @Category(ContributionFromDiffblue.class)
+  @ManagedByDiffblue
   @MethodsUnderTest({"TrieKey Node.kvNodeGetKey()"})
   public void testNodeKvNodeGetKey() {
     // Arrange, Act and Assert
@@ -1445,7 +1504,8 @@ public class TrieImplDiffblueTest {
    * <p>Method under test: {@link Node#kvNodeGetValue()}
    */
   @Test
-  @Category(MaintainedByDiffblue.class)
+  @Category(ContributionFromDiffblue.class)
+  @ManagedByDiffblue
   @MethodsUnderTest({"byte[] Node.kvNodeGetValue()"})
   public void testNodeKvNodeGetValue() {
     // Arrange, Act and Assert
@@ -1458,7 +1518,8 @@ public class TrieImplDiffblueTest {
    * <p>Method under test: {@link Node#kvNodeGetValueOrNode()}
    */
   @Test
-  @Category(MaintainedByDiffblue.class)
+  @Category(ContributionFromDiffblue.class)
+  @ManagedByDiffblue
   @MethodsUnderTest({"Object Node.kvNodeGetValueOrNode()"})
   public void testNodeKvNodeGetValueOrNode() {
     // Arrange, Act and Assert
@@ -1471,7 +1532,8 @@ public class TrieImplDiffblueTest {
    * <p>Method under test: {@link Node#kvNodeSetValue(byte[])}
    */
   @Test
-  @Category(MaintainedByDiffblue.class)
+  @Category(ContributionFromDiffblue.class)
+  @ManagedByDiffblue
   @MethodsUnderTest({"Node Node.kvNodeSetValue(byte[])"})
   public void testNodeKvNodeSetValue() throws UnsupportedEncodingException {
     // Arrange
@@ -1490,7 +1552,8 @@ public class TrieImplDiffblueTest {
    * <p>Method under test: {@link Node#kvNodeSetValueOrNode(Object)}
    */
   @Test
-  @Category(MaintainedByDiffblue.class)
+  @Category(ContributionFromDiffblue.class)
+  @ManagedByDiffblue
   @MethodsUnderTest({"Node Node.kvNodeSetValueOrNode(Object)"})
   public void testNodeKvNodeSetValueOrNode() {
     // Arrange
@@ -1509,7 +1572,8 @@ public class TrieImplDiffblueTest {
    * <p>Method under test: {@link Node#Node(TrieImpl)}
    */
   @Test
-  @Category(MaintainedByDiffblue.class)
+  @Category(ContributionFromDiffblue.class)
+  @ManagedByDiffblue
   @MethodsUnderTest({"void Node.<init>(TrieImpl)"})
   public void testNodeNewNode() {
     // Arrange and Act
@@ -1527,7 +1591,8 @@ public class TrieImplDiffblueTest {
    * <p>Method under test: {@link Node#Node(TrieImpl, TrieKey, Object)}
    */
   @Test
-  @Category(MaintainedByDiffblue.class)
+  @Category(ContributionFromDiffblue.class)
+  @ManagedByDiffblue
   @MethodsUnderTest({"void Node.<init>(TrieImpl, TrieKey, Object)"})
   public void testNodeNewNode2() {
     // Arrange
@@ -1549,7 +1614,8 @@ public class TrieImplDiffblueTest {
    * <p>Method under test: {@link Node#Node(TrieImpl, byte[])}
    */
   @Test
-  @Category(MaintainedByDiffblue.class)
+  @Category(ContributionFromDiffblue.class)
+  @ManagedByDiffblue
   @MethodsUnderTest({"void Node.<init>(TrieImpl, byte[])"})
   public void testNodeNewNode3() throws UnsupportedEncodingException {
     // Arrange and Act
@@ -1572,7 +1638,8 @@ public class TrieImplDiffblueTest {
    * <p>Method under test: {@link Node#Node(TrieImpl, int)}
    */
   @Test
-  @Category(MaintainedByDiffblue.class)
+  @Category(ContributionFromDiffblue.class)
+  @ManagedByDiffblue
   @MethodsUnderTest({"void Node.<init>(TrieImpl, int)"})
   public void testNodeNewNode_whenThree_thenReturnHashIsNull() {
     // Arrange and Act
@@ -1594,7 +1661,8 @@ public class TrieImplDiffblueTest {
    * <p>Method under test: {@link Node#resolveCheck()}
    */
   @Test
-  @Category(MaintainedByDiffblue.class)
+  @Category(ContributionFromDiffblue.class)
+  @ManagedByDiffblue
   @MethodsUnderTest({"boolean Node.resolveCheck()"})
   public void testNodeResolveCheck_givenA() {
     // Arrange
@@ -1614,7 +1682,8 @@ public class TrieImplDiffblueTest {
    * <p>Method under test: {@link Node#resolveCheck()}
    */
   @Test
-  @Category(MaintainedByDiffblue.class)
+  @Category(ContributionFromDiffblue.class)
+  @ManagedByDiffblue
   @MethodsUnderTest({"boolean Node.resolveCheck()"})
   public void testNodeResolveCheck_givenNodeWithThis$0IsTrieImpl() {
     // Arrange, Act and Assert
@@ -1627,7 +1696,8 @@ public class TrieImplDiffblueTest {
    * <p>Method under test: {@link Node#toString()}
    */
   @Test
-  @Category(MaintainedByDiffblue.class)
+  @Category(ContributionFromDiffblue.class)
+  @ManagedByDiffblue
   @MethodsUnderTest({"String Node.toString()"})
   public void testNodeToString() {
     // Arrange
@@ -1643,7 +1713,8 @@ public class TrieImplDiffblueTest {
    * <p>Method under test: {@link Node#toString()}
    */
   @Test
-  @Category(MaintainedByDiffblue.class)
+  @Category(ContributionFromDiffblue.class)
+  @ManagedByDiffblue
   @MethodsUnderTest({"String Node.toString()"})
   public void testNodeToString2() {
     // Arrange
@@ -1664,7 +1735,8 @@ public class TrieImplDiffblueTest {
    * <p>Method under test: {@link Node#toString()}
    */
   @Test
-  @Category(MaintainedByDiffblue.class)
+  @Category(ContributionFromDiffblue.class)
+  @ManagedByDiffblue
   @MethodsUnderTest({"String Node.toString()"})
   public void testNodeToString_givenNodeWithThis$0IsTrieImplAndHashOrRlpIsEmptyArrayOfByte() {
     // Arrange
@@ -1685,7 +1757,8 @@ public class TrieImplDiffblueTest {
    * <p>Method under test: {@link Node#toString()}
    */
   @Test
-  @Category(MaintainedByDiffblue.class)
+  @Category(ContributionFromDiffblue.class)
+  @ManagedByDiffblue
   @MethodsUnderTest({"String Node.toString()"})
   public void testNodeToString_givenNodeWithThis$0IsTrieImpl_thenReturnBranchNode() {
     // Arrange, Act and Assert
@@ -1702,7 +1775,8 @@ public class TrieImplDiffblueTest {
    * <p>Method under test: {@link Node#toString()}
    */
   @Test
-  @Category(MaintainedByDiffblue.class)
+  @Category(ContributionFromDiffblue.class)
+  @ManagedByDiffblue
   @MethodsUnderTest({"String Node.toString()"})
   public void testNodeToString_thenReturnKVNodeValue() {
     // Arrange, Act and Assert
@@ -1720,7 +1794,8 @@ public class TrieImplDiffblueTest {
    * <p>Method under test: {@link TrieImpl#put(byte[], byte[])}
    */
   @Test
-  @Category(MaintainedByDiffblue.class)
+  @Category(ContributionFromDiffblue.class)
+  @ManagedByDiffblue
   @MethodsUnderTest({"void TrieImpl.put(byte[], byte[])"})
   public void testPutWithByteByte_givenTrieImpl_thenTrieImplRootNodeTypeIsNull()
       throws UnsupportedEncodingException {
@@ -1755,7 +1830,8 @@ public class TrieImplDiffblueTest {
    * <p>Method under test: {@link TrieImpl#delete(byte[])}
    */
   @Test
-  @Category(MaintainedByDiffblue.class)
+  @Category(ContributionFromDiffblue.class)
+  @ManagedByDiffblue
   @MethodsUnderTest({"void TrieImpl.delete(byte[])"})
   public void testDeleteWithKey_givenTrieImpl_thenTrieImplCacheSizeIsZero()
       throws UnsupportedEncodingException {
@@ -1788,7 +1864,8 @@ public class TrieImplDiffblueTest {
    * <p>Method under test: {@link TrieImpl#delete(byte[])}
    */
   @Test
-  @Category(MaintainedByDiffblue.class)
+  @Category(ContributionFromDiffblue.class)
+  @ManagedByDiffblue
   @MethodsUnderTest({"void TrieImpl.delete(byte[])"})
   public void testDeleteWithKey_thenTrieImplRootIsNull() {
     // Arrange
@@ -1823,7 +1900,8 @@ public class TrieImplDiffblueTest {
    * <p>Method under test: {@link TrieImpl#delete(byte[])}
    */
   @Test
-  @Category(MaintainedByDiffblue.class)
+  @Category(ContributionFromDiffblue.class)
+  @ManagedByDiffblue
   @MethodsUnderTest({"void TrieImpl.delete(byte[])"})
   public void testDeleteWithKey_thenTrieImplWithRootIsArrayOfByteWithAAndOneCacheSizeIsZero()
       throws UnsupportedEncodingException {
@@ -1852,7 +1930,8 @@ public class TrieImplDiffblueTest {
    * <p>Method under test: {@link TrieImpl#delete(byte[])}
    */
   @Test
-  @Category(MaintainedByDiffblue.class)
+  @Category(ContributionFromDiffblue.class)
+  @ManagedByDiffblue
   @MethodsUnderTest({"void TrieImpl.delete(byte[])"})
   public void testDeleteWithKey_thenTrieImplWithRootIsEmptyArrayOfByteCacheConcurrentHashDB()
       throws UnsupportedEncodingException {
@@ -1882,7 +1961,8 @@ public class TrieImplDiffblueTest {
    * <p>Method under test: {@link TrieImpl#getRootHash()}
    */
   @Test
-  @Category(MaintainedByDiffblue.class)
+  @Category(ContributionFromDiffblue.class)
+  @ManagedByDiffblue
   @MethodsUnderTest({"byte[] TrieImpl.getRootHash()"})
   public void testGetRootHash_givenTrieImplWithRootIsAxaxaxaxBytesIsUtf8_thenReturnNull()
       throws UnsupportedEncodingException {
@@ -1901,7 +1981,8 @@ public class TrieImplDiffblueTest {
    * <p>Method under test: {@link TrieImpl#getRootHash()}
    */
   @Test
-  @Category(MaintainedByDiffblue.class)
+  @Category(ContributionFromDiffblue.class)
+  @ManagedByDiffblue
   @MethodsUnderTest({"byte[] TrieImpl.getRootHash()"})
   public void testGetRootHash_givenTrieImpl_thenReturnArrayOfByteWithVAndMinusTwentyFour() {
     // Arrange, Act and Assert
@@ -1923,7 +2004,8 @@ public class TrieImplDiffblueTest {
    * <p>Method under test: {@link TrieImpl#getRootHash()}
    */
   @Test
-  @Category(MaintainedByDiffblue.class)
+  @Category(ContributionFromDiffblue.class)
+  @ManagedByDiffblue
   @MethodsUnderTest({"byte[] TrieImpl.getRootHash()"})
   public void testGetRootHash_thenReturnArrayOfByteWithHAndDot()
       throws UnsupportedEncodingException {
@@ -1950,7 +2032,8 @@ public class TrieImplDiffblueTest {
    * <p>Method under test: {@link TrieImpl#getRootHash()}
    */
   @Test
-  @Category(MaintainedByDiffblue.class)
+  @Category(ContributionFromDiffblue.class)
+  @ManagedByDiffblue
   @MethodsUnderTest({"byte[] TrieImpl.getRootHash()"})
   public void testGetRootHash_thenReturnArrayOfByteWithMinusFiftyAndSlash()
       throws UnsupportedEncodingException {
@@ -1979,7 +2062,8 @@ public class TrieImplDiffblueTest {
    * <p>Method under test: {@link TrieImpl#getRootHash()}
    */
   @Test
-  @Category(MaintainedByDiffblue.class)
+  @Category(ContributionFromDiffblue.class)
+  @ManagedByDiffblue
   @MethodsUnderTest({"byte[] TrieImpl.getRootHash()"})
   public void testGetRootHash_thenReturnArrayOfByteWithMinusFiftyTwoAndMinusSeventyFour()
       throws UnsupportedEncodingException {
@@ -2006,7 +2090,8 @@ public class TrieImplDiffblueTest {
    * <p>Method under test: {@link TrieImpl#getRootHash()}
    */
   @Test
-  @Category(MaintainedByDiffblue.class)
+  @Category(ContributionFromDiffblue.class)
+  @ManagedByDiffblue
   @MethodsUnderTest({"byte[] TrieImpl.getRootHash()"})
   public void testGetRootHash_thenReturnArrayOfByteWithMinusSixtyAndFormFeed()
       throws UnsupportedEncodingException {
@@ -2035,7 +2120,8 @@ public class TrieImplDiffblueTest {
    * <p>Method under test: {@link TrieImpl#getRootHash()}
    */
   @Test
-  @Category(MaintainedByDiffblue.class)
+  @Category(ContributionFromDiffblue.class)
+  @ManagedByDiffblue
   @MethodsUnderTest({"byte[] TrieImpl.getRootHash()"})
   public void testGetRootHash_thenReturnArrayOfByteWithMinusSixtyAndMinusThirtySix()
       throws UnsupportedEncodingException {
@@ -2062,7 +2148,8 @@ public class TrieImplDiffblueTest {
    * <p>Method under test: {@link TrieImpl#getRootHash()}
    */
   @Test
-  @Category(MaintainedByDiffblue.class)
+  @Category(ContributionFromDiffblue.class)
+  @ManagedByDiffblue
   @MethodsUnderTest({"byte[] TrieImpl.getRootHash()"})
   public void testGetRootHash_thenReturnArrayOfByteWithSAndMinusNinetyTwo()
       throws UnsupportedEncodingException {
@@ -2088,7 +2175,8 @@ public class TrieImplDiffblueTest {
    * <p>Method under test: {@link TrieImpl#clear()}
    */
   @Test
-  @Category(MaintainedByDiffblue.class)
+  @Category(ContributionFromDiffblue.class)
+  @ManagedByDiffblue
   @MethodsUnderTest({"void TrieImpl.clear()"})
   public void testClear() {
     // Arrange, Act and Assert
@@ -2101,7 +2189,8 @@ public class TrieImplDiffblueTest {
    * <p>Method under test: {@link TrieImpl#flush()}
    */
   @Test
-  @Category(MaintainedByDiffblue.class)
+  @Category(ContributionFromDiffblue.class)
+  @ManagedByDiffblue
   @MethodsUnderTest({"boolean TrieImpl.flush()"})
   public void testFlush() throws UnsupportedEncodingException {
     // Arrange
@@ -2118,7 +2207,8 @@ public class TrieImplDiffblueTest {
    * <p>Method under test: {@link TrieImpl#flush()}
    */
   @Test
-  @Category(MaintainedByDiffblue.class)
+  @Category(ContributionFromDiffblue.class)
+  @ManagedByDiffblue
   @MethodsUnderTest({"boolean TrieImpl.flush()"})
   public void testFlush2() throws UnsupportedEncodingException {
     // Arrange
@@ -2137,7 +2227,8 @@ public class TrieImplDiffblueTest {
    * <p>Method under test: {@link TrieImpl#flush()}
    */
   @Test
-  @Category(MaintainedByDiffblue.class)
+  @Category(ContributionFromDiffblue.class)
+  @ManagedByDiffblue
   @MethodsUnderTest({"boolean TrieImpl.flush()"})
   public void testFlush3() throws UnsupportedEncodingException {
     // Arrange
@@ -2159,7 +2250,8 @@ public class TrieImplDiffblueTest {
    * <p>Method under test: {@link TrieImpl#flush()}
    */
   @Test
-  @Category(MaintainedByDiffblue.class)
+  @Category(ContributionFromDiffblue.class)
+  @ManagedByDiffblue
   @MethodsUnderTest({"boolean TrieImpl.flush()"})
   public void testFlush_givenTrieImplArrayOfByteWithAAndThreeIsArrayOfByteWithAAndThree()
       throws UnsupportedEncodingException {
@@ -2184,7 +2276,8 @@ public class TrieImplDiffblueTest {
    * <p>Method under test: {@link TrieImpl#flush()}
    */
   @Test
-  @Category(MaintainedByDiffblue.class)
+  @Category(ContributionFromDiffblue.class)
+  @ManagedByDiffblue
   @MethodsUnderTest({"boolean TrieImpl.flush()"})
   public void testFlush_givenTrieImplArrayOfByteWithAAndThreeIsArrayOfByteWithAAndThree2()
       throws UnsupportedEncodingException {
@@ -2211,7 +2304,8 @@ public class TrieImplDiffblueTest {
    * <p>Method under test: {@link TrieImpl#flush()}
    */
   @Test
-  @Category(MaintainedByDiffblue.class)
+  @Category(ContributionFromDiffblue.class)
+  @ManagedByDiffblue
   @MethodsUnderTest({"boolean TrieImpl.flush()"})
   public void testFlush_givenTrieImplAxaxaxaxBytesIsUtf8IsAxaxaxaxBytesIsUtf8_thenReturnTrue()
       throws UnsupportedEncodingException {
@@ -2235,7 +2329,8 @@ public class TrieImplDiffblueTest {
    * <p>Method under test: {@link TrieImpl#flush()}
    */
   @Test
-  @Category(MaintainedByDiffblue.class)
+  @Category(ContributionFromDiffblue.class)
+  @ManagedByDiffblue
   @MethodsUnderTest({"boolean TrieImpl.flush()"})
   public void testFlush_givenTrieImplWithRootIsAxaxaxaxBytesIsUtf8_thenReturnFalse()
       throws UnsupportedEncodingException {
@@ -2254,7 +2349,8 @@ public class TrieImplDiffblueTest {
    * <p>Method under test: {@link TrieImpl#flush()}
    */
   @Test
-  @Category(MaintainedByDiffblue.class)
+  @Category(ContributionFromDiffblue.class)
+  @ManagedByDiffblue
   @MethodsUnderTest({"boolean TrieImpl.flush()"})
   public void testFlush_givenTrieImpl_thenReturnFalse() {
     // Arrange, Act and Assert
@@ -2277,7 +2373,8 @@ public class TrieImplDiffblueTest {
    * </ul>
    */
   @Test
-  @Category(MaintainedByDiffblue.class)
+  @Category(ContributionFromDiffblue.class)
+  @ManagedByDiffblue
   @MethodsUnderTest({"boolean TrieImpl.equals(Object)", "int TrieImpl.hashCode()"})
   public void testEqualsAndHashCode_whenOtherIsEqual_thenReturnEqual() {
     // Arrange
@@ -2305,7 +2402,8 @@ public class TrieImplDiffblueTest {
    * </ul>
    */
   @Test
-  @Category(MaintainedByDiffblue.class)
+  @Category(ContributionFromDiffblue.class)
+  @ManagedByDiffblue
   @MethodsUnderTest({"boolean TrieImpl.equals(Object)", "int TrieImpl.hashCode()"})
   public void testEqualsAndHashCode_whenOtherIsSame_thenReturnEqual() {
     // Arrange
@@ -2328,7 +2426,8 @@ public class TrieImplDiffblueTest {
    * <p>Method under test: {@link TrieImpl#equals(Object)}
    */
   @Test
-  @Category(MaintainedByDiffblue.class)
+  @Category(ContributionFromDiffblue.class)
+  @ManagedByDiffblue
   @MethodsUnderTest({"boolean TrieImpl.equals(Object)", "int TrieImpl.hashCode()"})
   public void testEquals_whenOtherIsDifferent_thenReturnNotEqual()
       throws UnsupportedEncodingException {
@@ -2351,7 +2450,8 @@ public class TrieImplDiffblueTest {
    * <p>Method under test: {@link TrieImpl#equals(Object)}
    */
   @Test
-  @Category(MaintainedByDiffblue.class)
+  @Category(ContributionFromDiffblue.class)
+  @ManagedByDiffblue
   @MethodsUnderTest({"boolean TrieImpl.equals(Object)", "int TrieImpl.hashCode()"})
   public void testEquals_whenOtherIsDifferent_thenReturnNotEqual2()
       throws UnsupportedEncodingException {
@@ -2374,7 +2474,8 @@ public class TrieImplDiffblueTest {
    * <p>Method under test: {@link TrieImpl#equals(Object)}
    */
   @Test
-  @Category(MaintainedByDiffblue.class)
+  @Category(ContributionFromDiffblue.class)
+  @ManagedByDiffblue
   @MethodsUnderTest({"boolean TrieImpl.equals(Object)", "int TrieImpl.hashCode()"})
   public void testEquals_whenOtherIsDifferent_thenReturnNotEqual3()
       throws UnsupportedEncodingException {
@@ -2399,7 +2500,8 @@ public class TrieImplDiffblueTest {
    * <p>Method under test: {@link TrieImpl#equals(Object)}
    */
   @Test
-  @Category(MaintainedByDiffblue.class)
+  @Category(ContributionFromDiffblue.class)
+  @ManagedByDiffblue
   @MethodsUnderTest({"boolean TrieImpl.equals(Object)", "int TrieImpl.hashCode()"})
   public void testEquals_whenOtherIsNull_thenReturnNotEqual() {
     // Arrange, Act and Assert
@@ -2417,7 +2519,8 @@ public class TrieImplDiffblueTest {
    * <p>Method under test: {@link TrieImpl#equals(Object)}
    */
   @Test
-  @Category(MaintainedByDiffblue.class)
+  @Category(ContributionFromDiffblue.class)
+  @ManagedByDiffblue
   @MethodsUnderTest({"boolean TrieImpl.equals(Object)", "int TrieImpl.hashCode()"})
   public void testEquals_whenOtherIsWrongType_thenReturnNotEqual() {
     // Arrange, Act and Assert
@@ -2430,7 +2533,8 @@ public class TrieImplDiffblueTest {
    * <p>Method under test: {@link TrieImpl#dumpStructure()}
    */
   @Test
-  @Category(MaintainedByDiffblue.class)
+  @Category(ContributionFromDiffblue.class)
+  @ManagedByDiffblue
   @MethodsUnderTest({"String TrieImpl.dumpStructure()"})
   public void testDumpStructure() throws UnsupportedEncodingException {
     // Arrange
@@ -2454,7 +2558,8 @@ public class TrieImplDiffblueTest {
    * <p>Method under test: {@link TrieImpl#dumpStructure()}
    */
   @Test
-  @Category(MaintainedByDiffblue.class)
+  @Category(ContributionFromDiffblue.class)
+  @ManagedByDiffblue
   @MethodsUnderTest({"String TrieImpl.dumpStructure()"})
   public void testDumpStructure_givenA_thenReturnAString() throws UnsupportedEncodingException {
     // Arrange
@@ -2484,7 +2589,8 @@ public class TrieImplDiffblueTest {
    * <p>Method under test: {@link TrieImpl#dumpStructure()}
    */
   @Test
-  @Category(MaintainedByDiffblue.class)
+  @Category(ContributionFromDiffblue.class)
+  @ManagedByDiffblue
   @MethodsUnderTest({"String TrieImpl.dumpStructure()"})
   public void testDumpStructure_givenTrieImplWithRootIsAxaxaxaxBytesIsUtf8()
       throws UnsupportedEncodingException {
@@ -2503,7 +2609,8 @@ public class TrieImplDiffblueTest {
    * <p>Method under test: {@link TrieImpl#dumpStructure()}
    */
   @Test
-  @Category(MaintainedByDiffblue.class)
+  @Category(ContributionFromDiffblue.class)
+  @ManagedByDiffblue
   @MethodsUnderTest({"String TrieImpl.dumpStructure()"})
   public void testDumpStructure_givenTrieImplWithRootIsEmptyArrayOfByte_thenReturnBranchNode() {
     // Arrange
@@ -2524,7 +2631,8 @@ public class TrieImplDiffblueTest {
    * <p>Method under test: {@link TrieImpl#dumpStructure()}
    */
   @Test
-  @Category(MaintainedByDiffblue.class)
+  @Category(ContributionFromDiffblue.class)
+  @ManagedByDiffblue
   @MethodsUnderTest({"String TrieImpl.dumpStructure()"})
   public void testDumpStructure_givenTrieImpl_thenReturnEmpty() {
     // Arrange, Act and Assert
@@ -2541,7 +2649,8 @@ public class TrieImplDiffblueTest {
    * <p>Method under test: {@link TrieImpl#dumpStructure()}
    */
   @Test
-  @Category(MaintainedByDiffblue.class)
+  @Category(ContributionFromDiffblue.class)
+  @ManagedByDiffblue
   @MethodsUnderTest({"String TrieImpl.dumpStructure()"})
   public void testDumpStructure_thenReturnBranchNodeT4158415841584158()
       throws UnsupportedEncodingException {
@@ -2563,7 +2672,8 @@ public class TrieImplDiffblueTest {
    * <p>Method under test: {@link TrieImpl#dumpStructure()}
    */
   @Test
-  @Category(MaintainedByDiffblue.class)
+  @Category(ContributionFromDiffblue.class)
+  @ManagedByDiffblue
   @MethodsUnderTest({"String TrieImpl.dumpStructure()"})
   public void testDumpStructure_thenReturnKVNodeValue4158415841584158t4158415841584158()
       throws UnsupportedEncodingException {
@@ -2586,7 +2696,8 @@ public class TrieImplDiffblueTest {
    * <p>Method under test: {@link TrieImpl#dumpStructure()}
    */
   @Test
-  @Category(MaintainedByDiffblue.class)
+  @Category(ContributionFromDiffblue.class)
+  @ManagedByDiffblue
   @MethodsUnderTest({"String TrieImpl.dumpStructure()"})
   public void testDumpStructure_thenReturnKVNodeValueT4158415841584158()
       throws UnsupportedEncodingException {
@@ -2604,7 +2715,8 @@ public class TrieImplDiffblueTest {
    * <p>Method under test: {@link TrieImpl#dumpTrie()}
    */
   @Test
-  @Category(MaintainedByDiffblue.class)
+  @Category(ContributionFromDiffblue.class)
+  @ManagedByDiffblue
   @MethodsUnderTest({"String TrieImpl.dumpTrie()"})
   public void testDumpTrie() {
     // Arrange
@@ -2630,7 +2742,8 @@ public class TrieImplDiffblueTest {
    * <p>Method under test: {@link TrieImpl#dumpTrie(boolean)}
    */
   @Test
-  @Category(MaintainedByDiffblue.class)
+  @Category(ContributionFromDiffblue.class)
+  @ManagedByDiffblue
   @MethodsUnderTest({"String TrieImpl.dumpTrie(boolean)"})
   public void testDumpTrieWithBoolean() throws UnsupportedEncodingException {
     // Arrange
@@ -2649,7 +2762,8 @@ public class TrieImplDiffblueTest {
    * <p>Method under test: {@link TrieImpl#dumpTrie(boolean)}
    */
   @Test
-  @Category(MaintainedByDiffblue.class)
+  @Category(ContributionFromDiffblue.class)
+  @ManagedByDiffblue
   @MethodsUnderTest({"String TrieImpl.dumpTrie(boolean)"})
   public void testDumpTrieWithBoolean2() throws UnsupportedEncodingException {
     // Arrange
@@ -2668,7 +2782,8 @@ public class TrieImplDiffblueTest {
    * <p>Method under test: {@link TrieImpl#dumpTrie(boolean)}
    */
   @Test
-  @Category(MaintainedByDiffblue.class)
+  @Category(ContributionFromDiffblue.class)
+  @ManagedByDiffblue
   @MethodsUnderTest({"String TrieImpl.dumpTrie(boolean)"})
   public void testDumpTrieWithBoolean3() throws UnsupportedEncodingException {
     // Arrange
@@ -2692,7 +2807,8 @@ public class TrieImplDiffblueTest {
    * <p>Method under test: {@link TrieImpl#dumpTrie(boolean)}
    */
   @Test
-  @Category(MaintainedByDiffblue.class)
+  @Category(ContributionFromDiffblue.class)
+  @ManagedByDiffblue
   @MethodsUnderTest({"String TrieImpl.dumpTrie(boolean)"})
   public void testDumpTrieWithBoolean4() throws UnsupportedEncodingException {
     // Arrange
@@ -2717,7 +2833,8 @@ public class TrieImplDiffblueTest {
    * <p>Method under test: {@link TrieImpl#dumpTrie(boolean)}
    */
   @Test
-  @Category(MaintainedByDiffblue.class)
+  @Category(ContributionFromDiffblue.class)
+  @ManagedByDiffblue
   @MethodsUnderTest({"String TrieImpl.dumpTrie(boolean)"})
   public void testDumpTrieWithBoolean5() throws UnsupportedEncodingException {
     // Arrange
@@ -2741,7 +2858,8 @@ public class TrieImplDiffblueTest {
    * <p>Method under test: {@link TrieImpl#dumpTrie(boolean)}
    */
   @Test
-  @Category(MaintainedByDiffblue.class)
+  @Category(ContributionFromDiffblue.class)
+  @ManagedByDiffblue
   @MethodsUnderTest({"String TrieImpl.dumpTrie(boolean)"})
   public void testDumpTrieWithBoolean6() throws UnsupportedEncodingException {
     // Arrange
@@ -2771,7 +2889,8 @@ public class TrieImplDiffblueTest {
    * <p>Method under test: {@link TrieImpl#dumpTrie(boolean)}
    */
   @Test
-  @Category(MaintainedByDiffblue.class)
+  @Category(ContributionFromDiffblue.class)
+  @ManagedByDiffblue
   @MethodsUnderTest({"String TrieImpl.dumpTrie(boolean)"})
   public void testDumpTrieWithBoolean_givenTrieImpl_thenReturnEmpty() {
     // Arrange, Act and Assert
@@ -2789,7 +2908,8 @@ public class TrieImplDiffblueTest {
    * <p>Method under test: {@link TrieImpl#dumpTrie(boolean)}
    */
   @Test
-  @Category(MaintainedByDiffblue.class)
+  @Category(ContributionFromDiffblue.class)
+  @ManagedByDiffblue
   @MethodsUnderTest({"String TrieImpl.dumpTrie(boolean)"})
   public void testDumpTrieWithBoolean_thenReturnRoot0x682e860b0x682e860b4158415841584158()
       throws UnsupportedEncodingException {
@@ -2814,7 +2934,8 @@ public class TrieImplDiffblueTest {
    * <p>Method under test: {@link TrieImpl#dumpTrie()}
    */
   @Test
-  @Category(MaintainedByDiffblue.class)
+  @Category(ContributionFromDiffblue.class)
+  @ManagedByDiffblue
   @MethodsUnderTest({"String TrieImpl.dumpTrie()"})
   public void testDumpTrie_givenTrieImplArrayOfByteWithAAndAIsArrayOfByteWithAAndOne() {
     // Arrange
@@ -2844,7 +2965,8 @@ public class TrieImplDiffblueTest {
    * <p>Method under test: {@link TrieImpl#dumpTrie()}
    */
   @Test
-  @Category(MaintainedByDiffblue.class)
+  @Category(ContributionFromDiffblue.class)
+  @ManagedByDiffblue
   @MethodsUnderTest({"String TrieImpl.dumpTrie()"})
   public void testDumpTrie_givenTrieImplArrayOfByteWithXAndOneIsArrayOfByteWithAAndOne() {
     // Arrange
@@ -2873,7 +2995,8 @@ public class TrieImplDiffblueTest {
    * <p>Method under test: {@link TrieImpl#dumpTrie()}
    */
   @Test
-  @Category(MaintainedByDiffblue.class)
+  @Category(ContributionFromDiffblue.class)
+  @ManagedByDiffblue
   @MethodsUnderTest({"String TrieImpl.dumpTrie()"})
   public void testDumpTrie_givenTrieImplArrayOfByteWithXAndOneIsArrayOfByteWithAAndOne2() {
     // Arrange
@@ -2903,7 +3026,8 @@ public class TrieImplDiffblueTest {
    * <p>Method under test: {@link TrieImpl#dumpTrie()}
    */
   @Test
-  @Category(MaintainedByDiffblue.class)
+  @Category(ContributionFromDiffblue.class)
+  @ManagedByDiffblue
   @MethodsUnderTest({"String TrieImpl.dumpTrie()"})
   public void testDumpTrie_givenTrieImpl_thenReturnEmpty() {
     // Arrange, Act and Assert
@@ -2921,7 +3045,8 @@ public class TrieImplDiffblueTest {
    * <p>Method under test: {@link TrieImpl#dumpTrie()}
    */
   @Test
-  @Category(MaintainedByDiffblue.class)
+  @Category(ContributionFromDiffblue.class)
+  @ManagedByDiffblue
   @MethodsUnderTest({"String TrieImpl.dumpTrie()"})
   public void testDumpTrie_thenReturnRoot0x53b4ddb60x53b4ddb6101410141014101t4101410141014101() {
     // Arrange
@@ -2946,7 +3071,8 @@ public class TrieImplDiffblueTest {
    * <p>Method under test: {@link TrieImpl#dumpTrie()}
    */
   @Test
-  @Category(MaintainedByDiffblue.class)
+  @Category(ContributionFromDiffblue.class)
+  @ManagedByDiffblue
   @MethodsUnderTest({"String TrieImpl.dumpTrie()"})
   public void testDumpTrie_thenReturnRoot0x6428d4580x6428d4584101410141014101() {
     // Arrange
@@ -2970,7 +3096,8 @@ public class TrieImplDiffblueTest {
    * <p>Method under test: {@link TrieImpl#dumpTrie()}
    */
   @Test
-  @Category(MaintainedByDiffblue.class)
+  @Category(ContributionFromDiffblue.class)
+  @ManagedByDiffblue
   @MethodsUnderTest({"String TrieImpl.dumpTrie()"})
   public void testDumpTrie_thenReturnRoot0x8658671d0x8658671d4101410141014101t4101410141014101() {
     // Arrange
@@ -2994,7 +3121,8 @@ public class TrieImplDiffblueTest {
    * <p>Method under test: {@link TrieImpl#dumpTrie()}
    */
   @Test
-  @Category(MaintainedByDiffblue.class)
+  @Category(ContributionFromDiffblue.class)
+  @ManagedByDiffblue
   @MethodsUnderTest({"String TrieImpl.dumpTrie()"})
   public void testDumpTrie_thenReturnRoot0x785402470x78540247T4101410141014101() {
     // Arrange
@@ -3017,7 +3145,8 @@ public class TrieImplDiffblueTest {
    * <p>Method under test: {@link TrieImpl#dumpTrie()}
    */
   @Test
-  @Category(MaintainedByDiffblue.class)
+  @Category(ContributionFromDiffblue.class)
+  @ManagedByDiffblue
   @MethodsUnderTest({"String TrieImpl.dumpTrie()"})
   public void testDumpTrie_thenReturnRoot0xb105f65e0xb105f65e4101410141014101t4101410141Len24() {
     // Arrange
@@ -3042,7 +3171,8 @@ public class TrieImplDiffblueTest {
    * <p>Method under test: {@link TrieImpl#scanTree(Node, TrieKey, ScanAction)}
    */
   @Test
-  @Category(MaintainedByDiffblue.class)
+  @Category(ContributionFromDiffblue.class)
+  @ManagedByDiffblue
   @MethodsUnderTest({"void TrieImpl.scanTree(Node, TrieKey, ScanAction)"})
   public void testScanTreeWithNodeKScanAction() {
     // Arrange
@@ -3081,7 +3211,8 @@ public class TrieImplDiffblueTest {
    * <p>Method under test: {@link TrieImpl#scanTree(Node, TrieKey, ScanAction)}
    */
   @Test
-  @Category(MaintainedByDiffblue.class)
+  @Category(ContributionFromDiffblue.class)
+  @ManagedByDiffblue
   @MethodsUnderTest({"void TrieImpl.scanTree(Node, TrieKey, ScanAction)"})
   public void testScanTreeWithNodeKScanAction_givenA_whenEmptyFalse_thenCallsDoOnValue() {
     // Arrange
@@ -3119,7 +3250,8 @@ public class TrieImplDiffblueTest {
    * <p>Method under test: {@link TrieImpl#scanTree(Node, TrieKey, ScanAction)}
    */
   @Test
-  @Category(MaintainedByDiffblue.class)
+  @Category(ContributionFromDiffblue.class)
+  @ManagedByDiffblue
   @MethodsUnderTest({"void TrieImpl.scanTree(Node, TrieKey, ScanAction)"})
   public void testScanTreeWithNodeKScanAction_givenRuntimeException_thenThrowRuntimeException() {
     // Arrange
@@ -3149,7 +3281,8 @@ public class TrieImplDiffblueTest {
    * <p>Method under test: {@link TrieImpl#scanTree(ScanAction)}
    */
   @Test
-  @Category(MaintainedByDiffblue.class)
+  @Category(ContributionFromDiffblue.class)
+  @ManagedByDiffblue
   @MethodsUnderTest({"void TrieImpl.scanTree(ScanAction)"})
   public void testScanTreeWithScanAction() throws UnsupportedEncodingException {
     // Arrange
@@ -3178,7 +3311,8 @@ public class TrieImplDiffblueTest {
    * <p>Method under test: {@link TrieImpl#scanTree(ScanAction)}
    */
   @Test
-  @Category(MaintainedByDiffblue.class)
+  @Category(ContributionFromDiffblue.class)
+  @ManagedByDiffblue
   @MethodsUnderTest({"void TrieImpl.scanTree(ScanAction)"})
   public void testScanTreeWithScanAction2() throws UnsupportedEncodingException {
     // Arrange
@@ -3205,7 +3339,8 @@ public class TrieImplDiffblueTest {
    * <p>Method under test: {@link TrieImpl#scanTree(ScanAction)}
    */
   @Test
-  @Category(MaintainedByDiffblue.class)
+  @Category(ContributionFromDiffblue.class)
+  @ManagedByDiffblue
   @MethodsUnderTest({"void TrieImpl.scanTree(ScanAction)"})
   public void testScanTreeWithScanAction3() throws UnsupportedEncodingException {
     // Arrange
@@ -3234,7 +3369,8 @@ public class TrieImplDiffblueTest {
    * <p>Method under test: {@link TrieImpl#scanTree(ScanAction)}
    */
   @Test
-  @Category(MaintainedByDiffblue.class)
+  @Category(ContributionFromDiffblue.class)
+  @ManagedByDiffblue
   @MethodsUnderTest({"void TrieImpl.scanTree(ScanAction)"})
   public void testScanTreeWithScanAction4() throws UnsupportedEncodingException {
     // Arrange
@@ -3266,7 +3402,8 @@ public class TrieImplDiffblueTest {
    * <p>Method under test: {@link TrieImpl#scanTree(ScanAction)}
    */
   @Test
-  @Category(MaintainedByDiffblue.class)
+  @Category(ContributionFromDiffblue.class)
+  @ManagedByDiffblue
   @MethodsUnderTest({"void TrieImpl.scanTree(ScanAction)"})
   public void testScanTreeWithScanAction_givenA_thenThrowRuntimeException()
       throws UnsupportedEncodingException {
@@ -3303,7 +3440,8 @@ public class TrieImplDiffblueTest {
    * <p>Method under test: {@link TrieImpl#scanTree(ScanAction)}
    */
   @Test
-  @Category(MaintainedByDiffblue.class)
+  @Category(ContributionFromDiffblue.class)
+  @ManagedByDiffblue
   @MethodsUnderTest({"void TrieImpl.scanTree(ScanAction)"})
   public void testScanTreeWithScanAction_givenA_whenScanActionDoOnValueDoesNothing()
       throws UnsupportedEncodingException {
@@ -3342,7 +3480,8 @@ public class TrieImplDiffblueTest {
    * <p>Method under test: {@link TrieImpl#scanTree(ScanAction)}
    */
   @Test
-  @Category(MaintainedByDiffblue.class)
+  @Category(ContributionFromDiffblue.class)
+  @ManagedByDiffblue
   @MethodsUnderTest({"void TrieImpl.scanTree(ScanAction)"})
   public void testScanTreeWithScanAction_givenTrieImplAxaxaxaxBytesIsUtf8IsAxaxaxaxBytesIsUtf8()
       throws UnsupportedEncodingException {
@@ -3376,7 +3515,8 @@ public class TrieImplDiffblueTest {
    * <p>Method under test: {@link TrieImpl#scanTree(ScanAction)}
    */
   @Test
-  @Category(MaintainedByDiffblue.class)
+  @Category(ContributionFromDiffblue.class)
+  @ManagedByDiffblue
   @MethodsUnderTest({"void TrieImpl.scanTree(ScanAction)"})
   public void testScanTreeWithScanAction_thenThrowRuntimeException()
       throws UnsupportedEncodingException {
@@ -3404,7 +3544,8 @@ public class TrieImplDiffblueTest {
    * <p>Method under test: {@link TrieImpl#prove(byte[])}
    */
   @Test
-  @Category(MaintainedByDiffblue.class)
+  @Category(ContributionFromDiffblue.class)
+  @ManagedByDiffblue
   @MethodsUnderTest({"LinkedHashMap TrieImpl.prove(byte[])"})
   public void testProve() throws UnsupportedEncodingException {
     // Arrange
@@ -3430,7 +3571,8 @@ public class TrieImplDiffblueTest {
    * <p>Method under test: {@link TrieImpl#prove(byte[])}
    */
   @Test
-  @Category(MaintainedByDiffblue.class)
+  @Category(ContributionFromDiffblue.class)
+  @ManagedByDiffblue
   @MethodsUnderTest({"LinkedHashMap TrieImpl.prove(byte[])"})
   public void testProve_givenTrieImplArrayOfByteWithAAndOneIsAxaxaxaxBytesIsUtf8()
       throws UnsupportedEncodingException {
@@ -3460,7 +3602,8 @@ public class TrieImplDiffblueTest {
    * <p>Method under test: {@link TrieImpl#prove(byte[])}
    */
   @Test
-  @Category(MaintainedByDiffblue.class)
+  @Category(ContributionFromDiffblue.class)
+  @ManagedByDiffblue
   @MethodsUnderTest({"LinkedHashMap TrieImpl.prove(byte[])"})
   public void testProve_givenTrieImplEmptyArrayOfByteIsArrayOfByteWithAAndOne()
       throws UnsupportedEncodingException {
@@ -3485,7 +3628,8 @@ public class TrieImplDiffblueTest {
    * <p>Method under test: {@link TrieImpl#prove(byte[])}
    */
   @Test
-  @Category(MaintainedByDiffblue.class)
+  @Category(ContributionFromDiffblue.class)
+  @ManagedByDiffblue
   @MethodsUnderTest({"LinkedHashMap TrieImpl.prove(byte[])"})
   public void testProve_givenTrieImplEmptyArrayOfByteIsAxaxaxaxBytesIsUtf8_thenReturnNull()
       throws UnsupportedEncodingException {
@@ -3512,7 +3656,8 @@ public class TrieImplDiffblueTest {
    * <p>Method under test: {@link TrieImpl#prove(byte[])}
    */
   @Test
-  @Category(MaintainedByDiffblue.class)
+  @Category(ContributionFromDiffblue.class)
+  @ManagedByDiffblue
   @MethodsUnderTest({"LinkedHashMap TrieImpl.prove(byte[])"})
   public void testProve_givenTrieImplWithRootIsAxaxaxaxBytesIsUtf8_thenReturnNull()
       throws UnsupportedEncodingException {
@@ -3535,7 +3680,8 @@ public class TrieImplDiffblueTest {
    * <p>Method under test: {@link TrieImpl#prove(byte[])}
    */
   @Test
-  @Category(MaintainedByDiffblue.class)
+  @Category(ContributionFromDiffblue.class)
+  @ManagedByDiffblue
   @MethodsUnderTest({"LinkedHashMap TrieImpl.prove(byte[])"})
   public void testProve_givenTrieImplWithRootIsEmptyArrayOfByte_thenReturnNull()
       throws UnsupportedEncodingException {
@@ -3561,7 +3707,8 @@ public class TrieImplDiffblueTest {
    * <p>Method under test: {@link TrieImpl#prove(byte[])}
    */
   @Test
-  @Category(MaintainedByDiffblue.class)
+  @Category(ContributionFromDiffblue.class)
+  @ManagedByDiffblue
   @MethodsUnderTest({"LinkedHashMap TrieImpl.prove(byte[])"})
   public void testProve_givenTrieImpl_whenAxaxaxaxBytesIsUtf8_thenReturnNull()
       throws UnsupportedEncodingException {
@@ -3583,7 +3730,8 @@ public class TrieImplDiffblueTest {
    * <p>Method under test: {@link TrieImpl#prove(byte[])}
    */
   @Test
-  @Category(MaintainedByDiffblue.class)
+  @Category(ContributionFromDiffblue.class)
+  @ManagedByDiffblue
   @MethodsUnderTest({"LinkedHashMap TrieImpl.prove(byte[])"})
   public void testProve_thenReturnSizeIsFour() throws UnsupportedEncodingException {
     // Arrange
@@ -3606,7 +3754,8 @@ public class TrieImplDiffblueTest {
    * <p>Method under test: {@link TrieImpl#prove(byte[])}
    */
   @Test
-  @Category(MaintainedByDiffblue.class)
+  @Category(ContributionFromDiffblue.class)
+  @ManagedByDiffblue
   @MethodsUnderTest({"LinkedHashMap TrieImpl.prove(byte[])"})
   public void testProve_thenReturnSizeIsOne() throws UnsupportedEncodingException {
     // Arrange
@@ -3627,7 +3776,8 @@ public class TrieImplDiffblueTest {
    * <p>Method under test: {@link TrieImpl#prove(byte[])}
    */
   @Test
-  @Category(MaintainedByDiffblue.class)
+  @Category(ContributionFromDiffblue.class)
+  @ManagedByDiffblue
   @MethodsUnderTest({"LinkedHashMap TrieImpl.prove(byte[])"})
   public void testProve_thenReturnSizeIsThree() throws UnsupportedEncodingException {
     // Arrange
@@ -3650,7 +3800,8 @@ public class TrieImplDiffblueTest {
    * <p>Method under test: {@link TrieImpl#prove(byte[])}
    */
   @Test
-  @Category(MaintainedByDiffblue.class)
+  @Category(ContributionFromDiffblue.class)
+  @ManagedByDiffblue
   @MethodsUnderTest({"LinkedHashMap TrieImpl.prove(byte[])"})
   public void testProve_thenReturnSizeIsThree2() throws UnsupportedEncodingException {
     // Arrange
@@ -3674,7 +3825,8 @@ public class TrieImplDiffblueTest {
    * <p>Method under test: {@link TrieImpl#prove(byte[])}
    */
   @Test
-  @Category(MaintainedByDiffblue.class)
+  @Category(ContributionFromDiffblue.class)
+  @ManagedByDiffblue
   @MethodsUnderTest({"LinkedHashMap TrieImpl.prove(byte[])"})
   public void testProve_thenReturnSizeIsTwo() throws UnsupportedEncodingException {
     // Arrange
@@ -3695,7 +3847,8 @@ public class TrieImplDiffblueTest {
    * <p>Method under test: {@link TrieImpl#prove(byte[])}
    */
   @Test
-  @Category(MaintainedByDiffblue.class)
+  @Category(ContributionFromDiffblue.class)
+  @ManagedByDiffblue
   @MethodsUnderTest({"LinkedHashMap TrieImpl.prove(byte[])"})
   public void testProve_whenEmptyArrayOfByte() throws UnsupportedEncodingException {
     // Arrange
@@ -3722,7 +3875,8 @@ public class TrieImplDiffblueTest {
    * <p>Method under test: {@link TrieImpl#prove(byte[])}
    */
   @Test
-  @Category(MaintainedByDiffblue.class)
+  @Category(ContributionFromDiffblue.class)
+  @ManagedByDiffblue
   @MethodsUnderTest({"LinkedHashMap TrieImpl.prove(byte[])"})
   public void testProve_whenEmptyArrayOfByte_thenReturnSizeIsOne()
       throws UnsupportedEncodingException {
@@ -3741,7 +3895,8 @@ public class TrieImplDiffblueTest {
    * <p>Method under test: {@link TrieImpl#verifyProof(byte[], byte[], LinkedHashMap)}
    */
   @Test
-  @Category(MaintainedByDiffblue.class)
+  @Category(ContributionFromDiffblue.class)
+  @ManagedByDiffblue
   @MethodsUnderTest({"boolean TrieImpl.verifyProof(byte[], byte[], LinkedHashMap)"})
   public void testVerifyProof_givenNodeWithThis$0IsTrieImplNodeTypeIsBranchNode()
       throws UnsupportedEncodingException {
@@ -3772,7 +3927,8 @@ public class TrieImplDiffblueTest {
    * <p>Method under test: {@link TrieImpl#verifyProof(byte[], byte[], LinkedHashMap)}
    */
   @Test
-  @Category(MaintainedByDiffblue.class)
+  @Category(ContributionFromDiffblue.class)
+  @ManagedByDiffblue
   @MethodsUnderTest({"boolean TrieImpl.verifyProof(byte[], byte[], LinkedHashMap)"})
   public void testVerifyProof_givenNodeWithThis$0IsTrieImplNodeTypeIsBranchNode_whenNull()
       throws UnsupportedEncodingException {
@@ -3802,7 +3958,8 @@ public class TrieImplDiffblueTest {
    * <p>Method under test: {@link TrieImpl#verifyProof(byte[], byte[], LinkedHashMap)}
    */
   @Test
-  @Category(MaintainedByDiffblue.class)
+  @Category(ContributionFromDiffblue.class)
+  @ManagedByDiffblue
   @MethodsUnderTest({"boolean TrieImpl.verifyProof(byte[], byte[], LinkedHashMap)"})
   public void testVerifyProof_givenNodeWithThis$0IsTrieImplNodeTypeIsBranchNode_whenNull2()
       throws UnsupportedEncodingException {
@@ -3830,7 +3987,8 @@ public class TrieImplDiffblueTest {
    * <p>Method under test: {@link TrieImpl#verifyProof(byte[], byte[], LinkedHashMap)}
    */
   @Test
-  @Category(MaintainedByDiffblue.class)
+  @Category(ContributionFromDiffblue.class)
+  @ManagedByDiffblue
   @MethodsUnderTest({"boolean TrieImpl.verifyProof(byte[], byte[], LinkedHashMap)"})
   public void testVerifyProof_whenEmptyArrayOfByte() throws UnsupportedEncodingException {
     // Arrange
@@ -3857,7 +4015,8 @@ public class TrieImplDiffblueTest {
    * <p>Method under test: {@link TrieImpl#verifyProof(byte[], byte[], LinkedHashMap)}
    */
   @Test
-  @Category(MaintainedByDiffblue.class)
+  @Category(ContributionFromDiffblue.class)
+  @ManagedByDiffblue
   @MethodsUnderTest({"boolean TrieImpl.verifyProof(byte[], byte[], LinkedHashMap)"})
   public void testVerifyProof_whenEmptyArrayOfByte2() throws UnsupportedEncodingException {
     // Arrange
@@ -3888,7 +4047,8 @@ public class TrieImplDiffblueTest {
    * <p>Method under test: {@link TrieImpl#verifyProof(byte[], byte[], LinkedHashMap)}
    */
   @Test
-  @Category(MaintainedByDiffblue.class)
+  @Category(ContributionFromDiffblue.class)
+  @ManagedByDiffblue
   @MethodsUnderTest({"boolean TrieImpl.verifyProof(byte[], byte[], LinkedHashMap)"})
   public void testVerifyProof_whenLinkedHashMap_thenReturnFalse()
       throws UnsupportedEncodingException {
@@ -3912,7 +4072,8 @@ public class TrieImplDiffblueTest {
    * <p>Method under test: {@link TrieImpl#setRoot(byte[])}
    */
   @Test
-  @Category(MaintainedByDiffblue.class)
+  @Category(ContributionFromDiffblue.class)
+  @ManagedByDiffblue
   @MethodsUnderTest({"void TrieImpl.setRoot(byte[])"})
   public void testSetRoot_whenAxaxaxaxBytesIsUtf8_thenTrieImplRootHashIsNull()
       throws UnsupportedEncodingException {
@@ -3942,7 +4103,8 @@ public class TrieImplDiffblueTest {
    * <p>Method under test: {@link TrieImpl#setRoot(byte[])}
    */
   @Test
-  @Category(MaintainedByDiffblue.class)
+  @Category(ContributionFromDiffblue.class)
+  @ManagedByDiffblue
   @MethodsUnderTest({"void TrieImpl.setRoot(byte[])"})
   public void testSetRoot_whenNull_thenTrieImplRootHashIsArrayOfByteWithVAndMinusTwentyFour() {
     // Arrange

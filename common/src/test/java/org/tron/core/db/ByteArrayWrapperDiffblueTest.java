@@ -4,7 +4,8 @@ import static org.junit.Assert.assertArrayEquals;
 import static org.junit.Assert.assertEquals;
 import static org.junit.Assert.assertNotEquals;
 import static org.junit.Assert.assertThrows;
-import com.diffblue.cover.annotations.MaintainedByDiffblue;
+import com.diffblue.cover.annotations.ContributionFromDiffblue;
+import com.diffblue.cover.annotations.ManagedByDiffblue;
 import com.diffblue.cover.annotations.MethodsUnderTest;
 import java.io.UnsupportedEncodingException;
 import org.junit.Test;
@@ -21,7 +22,8 @@ public class ByteArrayWrapperDiffblueTest {
    * <p>Method under test: {@link ByteArrayWrapper#ByteArrayWrapper(byte[])}
    */
   @Test
-  @Category(MaintainedByDiffblue.class)
+  @Category(ContributionFromDiffblue.class)
+  @ManagedByDiffblue
   @MethodsUnderTest({"void ByteArrayWrapper.<init>(byte[])"})
   public void testNewByteArrayWrapper_thenReturnDataIsAxaxaxaxBytesIsUtf8()
       throws UnsupportedEncodingException {
@@ -41,7 +43,8 @@ public class ByteArrayWrapperDiffblueTest {
    * <p>Method under test: {@link ByteArrayWrapper#ByteArrayWrapper(byte[])}
    */
   @Test
-  @Category(MaintainedByDiffblue.class)
+  @Category(ContributionFromDiffblue.class)
+  @ManagedByDiffblue
   @MethodsUnderTest({"void ByteArrayWrapper.<init>(byte[])"})
   public void testNewByteArrayWrapper_whenNull_thenThrowIllegalArgumentException() {
     // Arrange, Act and Assert
@@ -64,7 +67,8 @@ public class ByteArrayWrapperDiffblueTest {
    * </ul>
    */
   @Test
-  @Category(MaintainedByDiffblue.class)
+  @Category(ContributionFromDiffblue.class)
+  @ManagedByDiffblue
   @MethodsUnderTest({"boolean ByteArrayWrapper.equals(Object)", "int ByteArrayWrapper.hashCode()"})
   public void testEqualsAndHashCode_whenOtherIsEqual_thenReturnEqual()
       throws UnsupportedEncodingException {
@@ -93,7 +97,8 @@ public class ByteArrayWrapperDiffblueTest {
    * </ul>
    */
   @Test
-  @Category(MaintainedByDiffblue.class)
+  @Category(ContributionFromDiffblue.class)
+  @ManagedByDiffblue
   @MethodsUnderTest({"boolean ByteArrayWrapper.equals(Object)", "int ByteArrayWrapper.hashCode()"})
   public void testEqualsAndHashCode_whenOtherIsSame_thenReturnEqual()
       throws UnsupportedEncodingException {
@@ -117,7 +122,8 @@ public class ByteArrayWrapperDiffblueTest {
    * <p>Method under test: {@link ByteArrayWrapper#equals(Object)}
    */
   @Test
-  @Category(MaintainedByDiffblue.class)
+  @Category(ContributionFromDiffblue.class)
+  @ManagedByDiffblue
   @MethodsUnderTest({"boolean ByteArrayWrapper.equals(Object)", "int ByteArrayWrapper.hashCode()"})
   public void testEquals_whenOtherIsDifferent_thenReturnNotEqual()
       throws UnsupportedEncodingException {
@@ -139,7 +145,8 @@ public class ByteArrayWrapperDiffblueTest {
    * <p>Method under test: {@link ByteArrayWrapper#equals(Object)}
    */
   @Test
-  @Category(MaintainedByDiffblue.class)
+  @Category(ContributionFromDiffblue.class)
+  @ManagedByDiffblue
   @MethodsUnderTest({"boolean ByteArrayWrapper.equals(Object)", "int ByteArrayWrapper.hashCode()"})
   public void testEquals_whenOtherIsNull_thenReturnNotEqual() throws UnsupportedEncodingException {
     // Arrange, Act and Assert
@@ -157,7 +164,8 @@ public class ByteArrayWrapperDiffblueTest {
    * <p>Method under test: {@link ByteArrayWrapper#equals(Object)}
    */
   @Test
-  @Category(MaintainedByDiffblue.class)
+  @Category(ContributionFromDiffblue.class)
+  @ManagedByDiffblue
   @MethodsUnderTest({"boolean ByteArrayWrapper.equals(Object)", "int ByteArrayWrapper.hashCode()"})
   public void testEquals_whenOtherIsWrongType_thenReturnNotEqual()
       throws UnsupportedEncodingException {
@@ -176,7 +184,8 @@ public class ByteArrayWrapperDiffblueTest {
    * <p>Method under test: {@link ByteArrayWrapper#compareTo(ByteArrayWrapper)}
    */
   @Test
-  @Category(MaintainedByDiffblue.class)
+  @Category(ContributionFromDiffblue.class)
+  @ManagedByDiffblue
   @MethodsUnderTest({"int ByteArrayWrapper.compareTo(ByteArrayWrapper)"})
   public void testCompareToWithByteArrayWrapper_thenReturnZero()
       throws UnsupportedEncodingException {
@@ -202,7 +211,8 @@ public class ByteArrayWrapperDiffblueTest {
    * </ul>
    */
   @Test
-  @Category(MaintainedByDiffblue.class)
+  @Category(ContributionFromDiffblue.class)
+  @ManagedByDiffblue
   @MethodsUnderTest({"byte[] ByteArrayWrapper.getData()", "String ByteArrayWrapper.toString()"})
   public void testGettersAndSetters() throws UnsupportedEncodingException {
     // Arrange

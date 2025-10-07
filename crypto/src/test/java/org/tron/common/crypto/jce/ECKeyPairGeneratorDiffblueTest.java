@@ -4,7 +4,8 @@ import static org.junit.Assert.assertEquals;
 import static org.junit.Assert.assertFalse;
 import static org.junit.Assert.assertSame;
 import static org.junit.Assert.assertTrue;
-import com.diffblue.cover.annotations.MaintainedByDiffblue;
+import com.diffblue.cover.annotations.ContributionFromDiffblue;
+import com.diffblue.cover.annotations.ManagedByDiffblue;
 import com.diffblue.cover.annotations.MethodsUnderTest;
 import java.security.KeyPairGenerator;
 import java.security.Provider;
@@ -22,7 +23,8 @@ public class ECKeyPairGeneratorDiffblueTest {
    * <p>Method under test: {@link ECKeyPairGenerator#generateKeyPair()}
    */
   @Test
-  @Category(MaintainedByDiffblue.class)
+  @Category(ContributionFromDiffblue.class)
+  @ManagedByDiffblue
   @MethodsUnderTest({"java.security.KeyPair ECKeyPairGenerator.generateKeyPair()"})
   public void testGenerateKeyPair() {
     // Arrange, Act and Assert
@@ -36,7 +38,8 @@ public class ECKeyPairGeneratorDiffblueTest {
    * <p>Method under test: {@link ECKeyPairGenerator#getInstance(Provider, SecureRandom)}
    */
   @Test
-  @Category(MaintainedByDiffblue.class)
+  @Category(ContributionFromDiffblue.class)
+  @ManagedByDiffblue
   @MethodsUnderTest({"KeyPairGenerator ECKeyPairGenerator.getInstance(Provider, SecureRandom)"})
   public void testGetInstanceWithProviderSecureRandom() {
     // Arrange

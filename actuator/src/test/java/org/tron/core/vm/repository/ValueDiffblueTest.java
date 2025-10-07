@@ -8,7 +8,8 @@ import static org.junit.Assert.assertTrue;
 import static org.mockito.Mockito.mock;
 import static org.mockito.Mockito.verify;
 import static org.mockito.Mockito.when;
-import com.diffblue.cover.annotations.MaintainedByDiffblue;
+import com.diffblue.cover.annotations.ContributionFromDiffblue;
+import com.diffblue.cover.annotations.ManagedByDiffblue;
 import com.diffblue.cover.annotations.MethodsUnderTest;
 import java.io.UnsupportedEncodingException;
 import org.junit.Test;
@@ -27,7 +28,8 @@ public class ValueDiffblueTest {
    * <p>Method under test: {@link Value#create(ProtoCapsule, int)}
    */
   @Test
-  @Category(MaintainedByDiffblue.class)
+  @Category(ContributionFromDiffblue.class)
+  @ManagedByDiffblue
   @MethodsUnderTest({"Value Value.create(ProtoCapsule, int)"})
   public void testCreateWithCapsuleType_givenInstance_thenReturnValueIsInstance() {
     // Arrange
@@ -58,7 +60,8 @@ public class ValueDiffblueTest {
    * <p>Method under test: {@link Value#create(ProtoCapsule)}
    */
   @Test
-  @Category(MaintainedByDiffblue.class)
+  @Category(ContributionFromDiffblue.class)
+  @ManagedByDiffblue
   @MethodsUnderTest({"Value Value.create(ProtoCapsule)"})
   public void testCreateWithCapsule_givenInstance_thenReturnValueIsInstance() {
     // Arrange
@@ -89,7 +92,8 @@ public class ValueDiffblueTest {
    * <p>Method under test: {@link Value#create(byte[], int)}
    */
   @Test
-  @Category(MaintainedByDiffblue.class)
+  @Category(ContributionFromDiffblue.class)
+  @ManagedByDiffblue
   @MethodsUnderTest({"Value Value.create(byte[], int)"})
   public void testCreateWithValueType_whenAxaxaxaxBytesIsUtf8_thenReturnTypeTypeIsOne()
       throws UnsupportedEncodingException {
@@ -116,7 +120,8 @@ public class ValueDiffblueTest {
    * <p>Method under test: {@link Value#create(byte[])}
    */
   @Test
-  @Category(MaintainedByDiffblue.class)
+  @Category(ContributionFromDiffblue.class)
+  @ManagedByDiffblue
   @MethodsUnderTest({"Value Value.create(byte[])"})
   public void testCreateWithValue_whenAxaxaxaxBytesIsUtf8_thenReturnTypeTypeIsZero()
       throws UnsupportedEncodingException {
@@ -143,7 +148,8 @@ public class ValueDiffblueTest {
    * <p>Method under test: {@link Value#equals(Object)}
    */
   @Test
-  @Category(MaintainedByDiffblue.class)
+  @Category(ContributionFromDiffblue.class)
+  @ManagedByDiffblue
   @MethodsUnderTest({"boolean Value.equals(Object)", "int Value.hashCode()"})
   public void testEquals_whenOtherIsDifferent_thenReturnNotEqual() {
     // Arrange
@@ -166,7 +172,8 @@ public class ValueDiffblueTest {
    * <p>Method under test: {@link Value#equals(Object)}
    */
   @Test
-  @Category(MaintainedByDiffblue.class)
+  @Category(ContributionFromDiffblue.class)
+  @ManagedByDiffblue
   @MethodsUnderTest({"boolean Value.equals(Object)", "int Value.hashCode()"})
   public void testEquals_whenOtherIsDifferent_thenReturnNotEqual2() {
     // Arrange

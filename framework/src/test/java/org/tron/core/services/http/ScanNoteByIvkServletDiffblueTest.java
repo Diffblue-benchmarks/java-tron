@@ -9,7 +9,8 @@ import static org.mockito.Mockito.doNothing;
 import static org.mockito.Mockito.mock;
 import static org.mockito.Mockito.verify;
 import static org.mockito.Mockito.when;
-import com.diffblue.cover.annotations.MaintainedByDiffblue;
+import com.diffblue.cover.annotations.ContributionFromDiffblue;
+import com.diffblue.cover.annotations.ManagedByDiffblue;
 import com.diffblue.cover.annotations.MethodsUnderTest;
 import java.io.BufferedReader;
 import java.io.IOException;
@@ -60,7 +61,8 @@ public class ScanNoteByIvkServletDiffblueTest {
    * <p>Method under test: {@link ScanNoteByIvkServlet#convertOutput(GrpcAPI.DecryptNotes, boolean)}
    */
   @Test
-  @Category(MaintainedByDiffblue.class)
+  @Category(ContributionFromDiffblue.class)
+  @ManagedByDiffblue
   @MethodsUnderTest({"String ScanNoteByIvkServlet.convertOutput(GrpcAPI.DecryptNotes, boolean)"})
   public void testConvertOutput_givenZero_thenCallsGetAllFields() {
     // Arrange
@@ -87,7 +89,8 @@ public class ScanNoteByIvkServletDiffblueTest {
    * <p>Method under test: {@link ScanNoteByIvkServlet#convertOutput(GrpcAPI.DecryptNotes, boolean)}
    */
   @Test
-  @Category(MaintainedByDiffblue.class)
+  @Category(ContributionFromDiffblue.class)
+  @ManagedByDiffblue
   @MethodsUnderTest({"String ScanNoteByIvkServlet.convertOutput(GrpcAPI.DecryptNotes, boolean)"})
   public void testConvertOutput_whenDefaultInstance() {
     // Arrange, Act and Assert
@@ -101,7 +104,8 @@ public class ScanNoteByIvkServletDiffblueTest {
    * HttpServletResponse)}
    */
   @Test
-  @Category(MaintainedByDiffblue.class)
+  @Category(ContributionFromDiffblue.class)
+  @ManagedByDiffblue
   @MethodsUnderTest({"void ScanNoteByIvkServlet.doPost(HttpServletRequest, HttpServletResponse)"})
   public void testDoPost() throws IOException {
     // Arrange
@@ -133,7 +137,8 @@ public class ScanNoteByIvkServletDiffblueTest {
    * HttpServletResponse)}
    */
   @Test
-  @Category(MaintainedByDiffblue.class)
+  @Category(ContributionFromDiffblue.class)
+  @ManagedByDiffblue
   @MethodsUnderTest({"void ScanNoteByIvkServlet.doPost(HttpServletRequest, HttpServletResponse)"})
   public void testDoPost2() throws IOException {
     // Arrange
@@ -164,7 +169,8 @@ public class ScanNoteByIvkServletDiffblueTest {
    * HttpServletResponse)}
    */
   @Test
-  @Category(MaintainedByDiffblue.class)
+  @Category(ContributionFromDiffblue.class)
+  @ManagedByDiffblue
   @MethodsUnderTest({"void ScanNoteByIvkServlet.doPost(HttpServletRequest, HttpServletResponse)"})
   public void testDoPost3() throws IOException {
     // Arrange
@@ -205,7 +211,8 @@ public class ScanNoteByIvkServletDiffblueTest {
    * HttpServletResponse)}
    */
   @Test
-  @Category(MaintainedByDiffblue.class)
+  @Category(ContributionFromDiffblue.class)
+  @ManagedByDiffblue
   @MethodsUnderTest({"void ScanNoteByIvkServlet.doPost(HttpServletRequest, HttpServletResponse)"})
   public void testDoPost4() throws IOException {
     // Arrange
@@ -253,7 +260,8 @@ public class ScanNoteByIvkServletDiffblueTest {
    * HttpServletResponse)}
    */
   @Test
-  @Category(MaintainedByDiffblue.class)
+  @Category(ContributionFromDiffblue.class)
+  @ManagedByDiffblue
   @MethodsUnderTest({"void ScanNoteByIvkServlet.doPost(HttpServletRequest, HttpServletResponse)"})
   public void testDoPost_thenMockHttpServletRequestReaderLinesCollectJoiningLfIsEmptyString()
       throws IOException {
@@ -286,7 +294,8 @@ public class ScanNoteByIvkServletDiffblueTest {
    * HttpServletResponse)}
    */
   @Test
-  @Category(MaintainedByDiffblue.class)
+  @Category(ContributionFromDiffblue.class)
+  @ManagedByDiffblue
   @MethodsUnderTest({"void ScanNoteByIvkServlet.doGet(HttpServletRequest, HttpServletResponse)"})
   public void testDoGet() throws IOException {
     // Arrange
@@ -318,7 +327,8 @@ public class ScanNoteByIvkServletDiffblueTest {
    * HttpServletResponse)}
    */
   @Test
-  @Category(MaintainedByDiffblue.class)
+  @Category(ContributionFromDiffblue.class)
+  @ManagedByDiffblue
   @MethodsUnderTest({"void ScanNoteByIvkServlet.doGet(HttpServletRequest, HttpServletResponse)"})
   public void testDoGet2() throws IOException {
     // Arrange
@@ -355,7 +365,8 @@ public class ScanNoteByIvkServletDiffblueTest {
    * HttpServletResponse)}
    */
   @Test
-  @Category(MaintainedByDiffblue.class)
+  @Category(ContributionFromDiffblue.class)
+  @ManagedByDiffblue
   @MethodsUnderTest({"void ScanNoteByIvkServlet.doGet(HttpServletRequest, HttpServletResponse)"})
   public void testDoGet_thenHttpServletResponseWrapperWithResponseIsResponseResponseResponse()
       throws IOException {

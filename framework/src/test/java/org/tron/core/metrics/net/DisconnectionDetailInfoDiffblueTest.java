@@ -2,7 +2,8 @@ package org.tron.core.metrics.net;
 
 import static org.junit.Assert.assertEquals;
 import static org.junit.Assert.assertNotEquals;
-import com.diffblue.cover.annotations.MaintainedByDiffblue;
+import com.diffblue.cover.annotations.ContributionFromDiffblue;
+import com.diffblue.cover.annotations.ManagedByDiffblue;
 import com.diffblue.cover.annotations.MethodsUnderTest;
 import org.junit.Test;
 import org.junit.experimental.categories.Category;
@@ -25,7 +26,8 @@ public class DisconnectionDetailInfoDiffblueTest {
    * </ul>
    */
   @Test
-  @Category(MaintainedByDiffblue.class)
+  @Category(ContributionFromDiffblue.class)
+  @ManagedByDiffblue
   @MethodsUnderTest({
     "boolean DisconnectionDetailInfo.equals(Object)",
     "int DisconnectionDetailInfo.hashCode()"
@@ -62,7 +64,8 @@ public class DisconnectionDetailInfoDiffblueTest {
    * </ul>
    */
   @Test
-  @Category(MaintainedByDiffblue.class)
+  @Category(ContributionFromDiffblue.class)
+  @ManagedByDiffblue
   @MethodsUnderTest({
     "boolean DisconnectionDetailInfo.equals(Object)",
     "int DisconnectionDetailInfo.hashCode()"
@@ -99,7 +102,8 @@ public class DisconnectionDetailInfoDiffblueTest {
    * </ul>
    */
   @Test
-  @Category(MaintainedByDiffblue.class)
+  @Category(ContributionFromDiffblue.class)
+  @ManagedByDiffblue
   @MethodsUnderTest({
     "boolean DisconnectionDetailInfo.equals(Object)",
     "int DisconnectionDetailInfo.hashCode()"
@@ -127,7 +131,8 @@ public class DisconnectionDetailInfoDiffblueTest {
    * <p>Method under test: {@link DisconnectionDetailInfo#equals(Object)}
    */
   @Test
-  @Category(MaintainedByDiffblue.class)
+  @Category(ContributionFromDiffblue.class)
+  @ManagedByDiffblue
   @MethodsUnderTest({
     "boolean DisconnectionDetailInfo.equals(Object)",
     "int DisconnectionDetailInfo.hashCode()"
@@ -157,7 +162,8 @@ public class DisconnectionDetailInfoDiffblueTest {
    * <p>Method under test: {@link DisconnectionDetailInfo#equals(Object)}
    */
   @Test
-  @Category(MaintainedByDiffblue.class)
+  @Category(ContributionFromDiffblue.class)
+  @ManagedByDiffblue
   @MethodsUnderTest({
     "boolean DisconnectionDetailInfo.equals(Object)",
     "int DisconnectionDetailInfo.hashCode()"
@@ -187,7 +193,8 @@ public class DisconnectionDetailInfoDiffblueTest {
    * <p>Method under test: {@link DisconnectionDetailInfo#equals(Object)}
    */
   @Test
-  @Category(MaintainedByDiffblue.class)
+  @Category(ContributionFromDiffblue.class)
+  @ManagedByDiffblue
   @MethodsUnderTest({
     "boolean DisconnectionDetailInfo.equals(Object)",
     "int DisconnectionDetailInfo.hashCode()"
@@ -217,7 +224,8 @@ public class DisconnectionDetailInfoDiffblueTest {
    * <p>Method under test: {@link DisconnectionDetailInfo#equals(Object)}
    */
   @Test
-  @Category(MaintainedByDiffblue.class)
+  @Category(ContributionFromDiffblue.class)
+  @ManagedByDiffblue
   @MethodsUnderTest({
     "boolean DisconnectionDetailInfo.equals(Object)",
     "int DisconnectionDetailInfo.hashCode()"
@@ -243,7 +251,8 @@ public class DisconnectionDetailInfoDiffblueTest {
    * <p>Method under test: {@link DisconnectionDetailInfo#equals(Object)}
    */
   @Test
-  @Category(MaintainedByDiffblue.class)
+  @Category(ContributionFromDiffblue.class)
+  @ManagedByDiffblue
   @MethodsUnderTest({
     "boolean DisconnectionDetailInfo.equals(Object)",
     "int DisconnectionDetailInfo.hashCode()"
@@ -273,7 +282,8 @@ public class DisconnectionDetailInfoDiffblueTest {
    * </ul>
    */
   @Test
-  @Category(MaintainedByDiffblue.class)
+  @Category(ContributionFromDiffblue.class)
+  @ManagedByDiffblue
   @MethodsUnderTest({
     "void DisconnectionDetailInfo.<init>()",
     "int DisconnectionDetailInfo.getCount()",

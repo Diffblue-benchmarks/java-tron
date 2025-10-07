@@ -9,7 +9,8 @@ import static org.mockito.Mockito.atLeast;
 import static org.mockito.Mockito.mock;
 import static org.mockito.Mockito.verify;
 import static org.mockito.Mockito.when;
-import com.diffblue.cover.annotations.MaintainedByDiffblue;
+import com.diffblue.cover.annotations.ContributionFromDiffblue;
+import com.diffblue.cover.annotations.ManagedByDiffblue;
 import com.diffblue.cover.annotations.MethodsUnderTest;
 import com.google.protobuf.ByteString;
 import io.netty.buffer.ByteBuf;
@@ -32,7 +33,8 @@ public class PbftMessageDiffblueTest {
    * <p>Method under test: {@link PbftMessage#PbftMessage()}
    */
   @Test
-  @Category(MaintainedByDiffblue.class)
+  @Category(ContributionFromDiffblue.class)
+  @ManagedByDiffblue
   @MethodsUnderTest({"void PbftMessage.<init>()"})
   public void testNewPbftMessage() {
     // Arrange and Act
@@ -51,7 +53,8 @@ public class PbftMessageDiffblueTest {
    * <p>Method under test: {@link PbftMessage#fullNodePrePrepareBlockMsg(BlockCapsule, long)}
    */
   @Test
-  @Category(MaintainedByDiffblue.class)
+  @Category(ContributionFromDiffblue.class)
+  @ManagedByDiffblue
   @MethodsUnderTest({"PbftMessage PbftMessage.fullNodePrePrepareBlockMsg(BlockCapsule, long)"})
   public void testFullNodePrePrepareBlockMsg() {
     // Arrange
@@ -106,7 +109,8 @@ public class PbftMessageDiffblueTest {
    * <p>Method under test: {@link PbftMessage#fullNodePrePrepareBlockMsg(BlockCapsule, long)}
    */
   @Test
-  @Category(MaintainedByDiffblue.class)
+  @Category(ContributionFromDiffblue.class)
+  @ManagedByDiffblue
   @MethodsUnderTest({"PbftMessage PbftMessage.fullNodePrePrepareBlockMsg(BlockCapsule, long)"})
   public void testFullNodePrePrepareBlockMsg2() {
     // Arrange
@@ -177,7 +181,8 @@ public class PbftMessageDiffblueTest {
    * <p>Method under test: {@link PbftMessage#fullNodePrePrepareBlockMsg(BlockCapsule, long)}
    */
   @Test
-  @Category(MaintainedByDiffblue.class)
+  @Category(ContributionFromDiffblue.class)
+  @ManagedByDiffblue
   @MethodsUnderTest({"PbftMessage PbftMessage.fullNodePrePrepareBlockMsg(BlockCapsule, long)"})
   public void testFullNodePrePrepareBlockMsg_givenMinusOne_thenReturnNoIs1Block() {
     // Arrange
@@ -235,7 +240,8 @@ public class PbftMessageDiffblueTest {
    * <p>Method under test: {@link PbftMessage#fullNodePrePrepareBlockMsg(BlockCapsule, long)}
    */
   @Test
-  @Category(MaintainedByDiffblue.class)
+  @Category(ContributionFromDiffblue.class)
+  @ManagedByDiffblue
   @MethodsUnderTest({"PbftMessage PbftMessage.fullNodePrePrepareBlockMsg(BlockCapsule, long)"})
   public void testFullNodePrePrepareBlockMsg_givenZero_thenReturnNoIs0Block() {
     // Arrange
@@ -361,7 +367,8 @@ public class PbftMessageDiffblueTest {
    * <p>Method under test: {@link PbftMessage#fullNodePrePrepareBlockMsg(BlockCapsule, long)}
    */
   @Test
-  @Category(MaintainedByDiffblue.class)
+  @Category(ContributionFromDiffblue.class)
+  @ManagedByDiffblue
   @MethodsUnderTest({"PbftMessage PbftMessage.fullNodePrePrepareBlockMsg(BlockCapsule, long)"})
   public void testFullNodePrePrepareBlockMsg_thenReturnNoIs9223372036854775807Block() {
     // Arrange
@@ -422,7 +429,8 @@ public class PbftMessageDiffblueTest {
    * <p>Method under test: {@link PbftMessage#fullNodePrePrepareBlockMsg(BlockCapsule, long)}
    */
   @Test
-  @Category(MaintainedByDiffblue.class)
+  @Category(ContributionFromDiffblue.class)
+  @ManagedByDiffblue
   @MethodsUnderTest({"PbftMessage PbftMessage.fullNodePrePrepareBlockMsg(BlockCapsule, long)"})
   public void testFullNodePrePrepareBlockMsg_whenZero_thenReturnEpochIsZero() {
     // Arrange
@@ -472,7 +480,8 @@ public class PbftMessageDiffblueTest {
    * <p>Method under test: {@link PbftMessage#fullNodePrePrepareSRLMsg(BlockCapsule, List, long)}
    */
   @Test
-  @Category(MaintainedByDiffblue.class)
+  @Category(ContributionFromDiffblue.class)
+  @ManagedByDiffblue
   @MethodsUnderTest({"PbftMessage PbftMessage.fullNodePrePrepareSRLMsg(BlockCapsule, List, long)"})
   public void testFullNodePrePrepareSRLMsg_givenTrue_thenReturnNoIs1Srl() {
     // Arrange
@@ -544,7 +553,8 @@ public class PbftMessageDiffblueTest {
    * <p>Method under test: {@link PbftMessage#fullNodePrePrepareSRLMsg(BlockCapsule, List, long)}
    */
   @Test
-  @Category(MaintainedByDiffblue.class)
+  @Category(ContributionFromDiffblue.class)
+  @ManagedByDiffblue
   @MethodsUnderTest({"PbftMessage PbftMessage.fullNodePrePrepareSRLMsg(BlockCapsule, List, long)"})
   public void testFullNodePrePrepareSRLMsg_givenTrue_whenMinusOne_thenReturnNoIs1Srl() {
     // Arrange
@@ -616,7 +626,8 @@ public class PbftMessageDiffblueTest {
    * <p>Method under test: {@link PbftMessage#fullNodePrePrepareSRLMsg(BlockCapsule, List, long)}
    */
   @Test
-  @Category(MaintainedByDiffblue.class)
+  @Category(ContributionFromDiffblue.class)
+  @ManagedByDiffblue
   @MethodsUnderTest({"PbftMessage PbftMessage.fullNodePrePrepareSRLMsg(BlockCapsule, List, long)"})
   public void testFullNodePrePrepareSRLMsg_givenTrue_whenZero_thenReturnNoIs0Srl() {
     // Arrange
@@ -715,7 +726,8 @@ public class PbftMessageDiffblueTest {
    * <p>Method under test: {@link PbftMessage#fullNodePrePrepareSRLMsg(BlockCapsule, List, long)}
    */
   @Test
-  @Category(MaintainedByDiffblue.class)
+  @Category(ContributionFromDiffblue.class)
+  @ManagedByDiffblue
   @MethodsUnderTest({"PbftMessage PbftMessage.fullNodePrePrepareSRLMsg(BlockCapsule, List, long)"})
   public void testFullNodePrePrepareSRLMsg_whenMax_value_thenReturnNoIs9223372036854775807Srl() {
     // Arrange

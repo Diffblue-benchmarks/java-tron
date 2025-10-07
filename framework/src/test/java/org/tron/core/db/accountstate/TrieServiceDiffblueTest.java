@@ -5,7 +5,8 @@ import static org.mockito.Mockito.anyLong;
 import static org.mockito.Mockito.mock;
 import static org.mockito.Mockito.verify;
 import static org.mockito.Mockito.when;
-import com.diffblue.cover.annotations.MaintainedByDiffblue;
+import com.diffblue.cover.annotations.ContributionFromDiffblue;
+import com.diffblue.cover.annotations.ManagedByDiffblue;
 import com.diffblue.cover.annotations.MethodsUnderTest;
 import org.junit.Test;
 import org.junit.experimental.categories.Category;
@@ -28,7 +29,8 @@ public class TrieServiceDiffblueTest {
    * <p>Method under test: {@link TrieService#getFullAccountStateRootHash()}
    */
   @Test
-  @Category(MaintainedByDiffblue.class)
+  @Category(ContributionFromDiffblue.class)
+  @ManagedByDiffblue
   @MethodsUnderTest({"byte[] TrieService.getFullAccountStateRootHash()"})
   public void testGetFullAccountStateRootHash_thenReturnNull()
       throws BadItemException, ItemNotFoundException {
@@ -63,7 +65,8 @@ public class TrieServiceDiffblueTest {
    * <p>Method under test: {@link TrieService#getSolidityAccountStateRootHash()}
    */
   @Test
-  @Category(MaintainedByDiffblue.class)
+  @Category(ContributionFromDiffblue.class)
+  @ManagedByDiffblue
   @MethodsUnderTest({"byte[] TrieService.getSolidityAccountStateRootHash()"})
   public void testGetSolidityAccountStateRootHash_thenReturnNull()
       throws BadItemException, ItemNotFoundException {

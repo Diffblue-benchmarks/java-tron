@@ -4,18 +4,18 @@
   },
   "run" : {
     "version" : "2025.09.01-44e352d-licensed",
-    "creationTimestamp" : "2025-09-19T11:17:04.238Z",
+    "creationTimestamp" : "2025-10-06T16:14:31.502Z",
     "command" : "dcover create --coverage-reports --upload http://localhost:8080 --project-name java-tron --name with-diffblue-tests",
-    "totalTime" : 40815.371,
-    "environmentDetectionTime" : 11.581,
-    "indexingTime" : 0.318,
-    "entryPointsTime" : 11.572,
-    "generationTime" : 76411.525,
-    "timeToFirstTest" : 73585.669,
-    "timeToLastTest" : 77385.115,
-    "indexQueryTime" : 29.871000000000002,
-    "verificationTime" : 614.287,
-    "validationTime" : 3517.797
+    "totalTime" : 43180.224,
+    "environmentDetectionTime" : 11.568,
+    "indexingTime" : 0.336,
+    "entryPointsTime" : 11.558,
+    "generationTime" : 79181.508,
+    "timeToFirstTest" : 76090.524,
+    "timeToLastTest" : 80138.248,
+    "indexQueryTime" : 29.519000000000002,
+    "verificationTime" : 600.269,
+    "validationTime" : 3390.381
   },
   "codes" : {
     "F009" : "Internal error",
@@ -56,9 +56,9 @@
   "summary" : {
     "classesCount" : 545,
     "methodsCount" : 4734,
-    "cumulativeDiffblueTestCount" : 3576,
+    "cumulativeDiffblueTestCount" : 3562,
     "cumulativeManualTestCount" : 2171,
-    "completeTestCount" : 3726,
+    "completeTestCount" : 3708,
     "incompleteTestCount" : 0,
     "skeletonTestCount" : 0,
     "totalPhysicalLineCount" : 42270,
@@ -81,8 +81,8 @@
     "perMethodOutcome" : {
       "F009" : 1,
       "F019" : 1,
-      "R000" : 1770,
-      "R002" : 100,
+      "R000" : 1769,
+      "R002" : 99,
       "R004" : 58,
       "R005" : 6,
       "R006" : 31,
@@ -91,13 +91,13 @@
       "R012" : 19,
       "R013" : 218,
       "R015" : 3,
-      "R024" : 8,
+      "R024" : 9,
       "R034" : 2,
       "R081" : 121,
       "R083" : 10,
       "T003" : 384,
       "T004" : 12,
-      "T005" : 309,
+      "T005" : 308,
       "T006" : 4,
       "T007" : 17,
       "T008" : 4,
@@ -108,15 +108,15 @@
       "W002" : 26
     },
     "perTestOutcome" : {
-      "R000" : 3726
+      "R000" : 3708
     },
     "perTestValidation" : {
-      "V000" : 3604,
-      "V003" : 122
+      "V000" : 3583,
+      "V003" : 125
     },
     "warnings" : {
       "W001" : 11,
-      "W002" : 42
+      "W002" : 43
     }
   },
   "classes" : {
@@ -3964,7 +3964,7 @@
     },
     "org.tron.core.services.http.FullNodeHttpApiService" : {
       "methodsCount" : 5,
-      "completeTestCount" : 2,
+      "completeTestCount" : 3,
       "incompleteTestCount" : 0,
       "perMethodTestability" : {
         "T000" : 2,
@@ -3980,7 +3980,7 @@
         "T023" : 1
       },
       "perTestOutcome" : {
-        "R000" : 2
+        "R000" : 3
       }
     },
     "org.tron.core.services.http.GetAccountBalanceServlet" : {
@@ -4854,7 +4854,7 @@
     },
     "org.tron.core.services.http.GetNodeInfoServlet" : {
       "methodsCount" : 4,
-      "completeTestCount" : 28,
+      "completeTestCount" : 12,
       "incompleteTestCount" : 0,
       "perMethodTestability" : {
         "T000" : 2,
@@ -4867,7 +4867,7 @@
         "T023" : 1
       },
       "perTestOutcome" : {
-        "R000" : 28
+        "R000" : 12
       }
     },
     "org.tron.core.services.http.GetNowBlockServlet" : {
@@ -5023,8 +5023,8 @@
       }
     },
     "org.tron.core.services.http.GetShieldTransactionHashServlet" : {
-      "methodsCount" : 4,
-      "completeTestCount" : 7,
+      "methodsCount" : 2,
+      "completeTestCount" : 0,
       "incompleteTestCount" : 0,
       "perMethodTestability" : {
         "T000" : 1,
@@ -5033,18 +5033,13 @@
         "T023" : 1
       },
       "perMethodOutcome" : {
-        "R000" : 1,
-        "R002" : 1,
-        "T005" : 1,
+        "R024" : 1,
         "T023" : 1
-      },
-      "perTestOutcome" : {
-        "R000" : 7
       }
     },
     "org.tron.core.services.http.GetSpendingKeyServlet" : {
       "methodsCount" : 4,
-      "completeTestCount" : 14,
+      "completeTestCount" : 15,
       "incompleteTestCount" : 0,
       "perMethodTestability" : {
         "T000" : 2,
@@ -5057,7 +5052,7 @@
         "T023" : 1
       },
       "perTestOutcome" : {
-        "R000" : 14
+        "R000" : 15
       }
     },
     "org.tron.core.services.http.GetTransactionApprovedListServlet" : {
@@ -5082,6 +5077,26 @@
     },
     "org.tron.core.services.http.GetTransactionByIdServlet" : {
       "methodsCount" : 5,
+      "completeTestCount" : 16,
+      "incompleteTestCount" : 0,
+      "perMethodTestability" : {
+        "T000" : 2,
+        "T003" : 1,
+        "T005" : 1,
+        "T023" : 1
+      },
+      "perMethodOutcome" : {
+        "R000" : 2,
+        "T003" : 1,
+        "T005" : 1,
+        "T023" : 1
+      },
+      "perTestOutcome" : {
+        "R000" : 16
+      }
+    },
+    "org.tron.core.services.http.GetTransactionCountByBlockNumServlet" : {
+      "methodsCount" : 5,
       "completeTestCount" : 15,
       "incompleteTestCount" : 0,
       "perMethodTestability" : {
@@ -5098,26 +5113,6 @@
       },
       "perTestOutcome" : {
         "R000" : 15
-      }
-    },
-    "org.tron.core.services.http.GetTransactionCountByBlockNumServlet" : {
-      "methodsCount" : 5,
-      "completeTestCount" : 14,
-      "incompleteTestCount" : 0,
-      "perMethodTestability" : {
-        "T000" : 2,
-        "T003" : 1,
-        "T005" : 1,
-        "T023" : 1
-      },
-      "perMethodOutcome" : {
-        "R000" : 2,
-        "T003" : 1,
-        "T005" : 1,
-        "T023" : 1
-      },
-      "perTestOutcome" : {
-        "R000" : 14
       }
     },
     "org.tron.core.services.http.GetTransactionFromPendingServlet" : {
@@ -5433,7 +5428,7 @@
     },
     "org.tron.core.services.http.ListExchangesServlet" : {
       "methodsCount" : 4,
-      "completeTestCount" : 9,
+      "completeTestCount" : 10,
       "incompleteTestCount" : 0,
       "perMethodTestability" : {
         "T000" : 2,
@@ -5446,7 +5441,7 @@
         "T023" : 1
       },
       "perTestOutcome" : {
-        "R000" : 9
+        "R000" : 10
       }
     },
     "org.tron.core.services.http.ListNodesServlet" : {
@@ -7218,7 +7213,7 @@
     },
     "org.tron.core.services.interfaceOnPBFT.http.PBFT.HttpApiOnPBFTService" : {
       "methodsCount" : 5,
-      "completeTestCount" : 2,
+      "completeTestCount" : 3,
       "incompleteTestCount" : 0,
       "perMethodTestability" : {
         "T000" : 2,
@@ -7233,7 +7228,7 @@
         "T023" : 1
       },
       "perTestOutcome" : {
-        "R000" : 2
+        "R000" : 3
       }
     },
     "org.tron.core.services.interfaceOnPBFT.http.ScanAndMarkNoteByIvkOnPBFTServlet" : {
@@ -8418,7 +8413,7 @@
     },
     "org.tron.core.services.jsonrpc.JsonRpcApiUtil" : {
       "methodsCount" : 27,
-      "completeTestCount" : 67,
+      "completeTestCount" : 66,
       "incompleteTestCount" : 0,
       "perMethodTestability" : {
         "T000" : 24,
@@ -8435,7 +8430,10 @@
         "T023" : 1
       },
       "perTestOutcome" : {
-        "R000" : 67
+        "R000" : 66
+      },
+      "warnings" : {
+        "W002" : 1
       }
     },
     "org.tron.core.services.jsonrpc.JsonRpcApiUtil$1" : {
@@ -8725,7 +8723,7 @@
     },
     "org.tron.core.services.jsonrpc.filters.LogFilterWrapper" : {
       "methodsCount" : 4,
-      "completeTestCount" : 10,
+      "completeTestCount" : 9,
       "incompleteTestCount" : 0,
       "perMethodTestability" : {
         "T000" : 1,
@@ -8735,7 +8733,10 @@
         "R000" : 4
       },
       "perTestOutcome" : {
-        "R000" : 10
+        "R000" : 9
+      },
+      "warnings" : {
+        "W002" : 1
       }
     },
     "org.tron.core.services.jsonrpc.filters.LogMatch" : {
@@ -8791,7 +8792,7 @@
     },
     "org.tron.core.services.jsonrpc.types.BuildArguments" : {
       "methodsCount" : 40,
-      "completeTestCount" : 12,
+      "completeTestCount" : 13,
       "incompleteTestCount" : 0,
       "perMethodTestability" : {
         "T000" : 4,
@@ -8806,10 +8807,7 @@
         "T003" : 1
       },
       "perTestOutcome" : {
-        "R000" : 12
-      },
-      "warnings" : {
-        "W002" : 1
+        "R000" : 13
       }
     },
     "org.tron.core.services.jsonrpc.types.CallArguments" : {
@@ -45278,12 +45276,12 @@
       ]
     },
     "org.tron.core.services.http.FullNodeHttpApiService.start:()V" : {
-      "completeTestCount" : 2,
+      "completeTestCount" : 3,
       "incompleteTestCount" : 0,
       "perMethodTestability" : "T000",
       "perMethodOutcome" : "R000",
       "perTestOutcome" : {
-        "R000" : 2
+        "R000" : 3
       },
       "lineNumbers" : [
         309,
@@ -48326,12 +48324,12 @@
       ]
     },
     "org.tron.core.services.http.GetNodeInfoServlet.doGet:(Ljavax/servlet/http/HttpServletRequest;Ljavax/servlet/http/HttpServletResponse;)V" : {
-      "completeTestCount" : 10,
+      "completeTestCount" : 6,
       "incompleteTestCount" : 0,
       "perMethodTestability" : "T000",
       "perMethodOutcome" : "R000",
       "perTestOutcome" : {
-        "R000" : 10
+        "R000" : 6
       },
       "lineNumbers" : [
         23,
@@ -48347,12 +48345,12 @@
       ]
     },
     "org.tron.core.services.http.GetNodeInfoServlet.doPost:(Ljavax/servlet/http/HttpServletRequest;Ljavax/servlet/http/HttpServletResponse;)V" : {
-      "completeTestCount" : 18,
+      "completeTestCount" : 6,
       "incompleteTestCount" : 0,
       "perMethodTestability" : "T000",
       "perMethodOutcome" : "R000",
       "perTestOutcome" : {
-        "R000" : 18
+        "R000" : 6
       },
       "lineNumbers" : [
         37,
@@ -48842,7 +48840,7 @@
       "completeTestCount" : 0,
       "incompleteTestCount" : 0,
       "perMethodTestability" : "T005",
-      "perMethodOutcome" : "T005",
+      "perMethodOutcome" : "F009",
       "lineNumbers" : [
         16
       ]
@@ -48851,19 +48849,16 @@
       "completeTestCount" : 0,
       "incompleteTestCount" : 0,
       "perMethodTestability" : "T021",
-      "perMethodOutcome" : "R002",
+      "perMethodOutcome" : "R024",
       "lineNumbers" : [
         23
       ]
     },
     "org.tron.core.services.http.GetShieldTransactionHashServlet.doPost:(Ljavax/servlet/http/HttpServletRequest;Ljavax/servlet/http/HttpServletResponse;)V" : {
-      "completeTestCount" : 7,
+      "completeTestCount" : 0,
       "incompleteTestCount" : 0,
       "perMethodTestability" : "T000",
-      "perMethodOutcome" : "R000",
-      "perTestOutcome" : {
-        "R000" : 7
-      },
+      "perMethodOutcome" : "F009",
       "lineNumbers" : [
         27,
         28,
@@ -48894,12 +48889,12 @@
       ]
     },
     "org.tron.core.services.http.GetSpendingKeyServlet.doGet:(Ljavax/servlet/http/HttpServletRequest;Ljavax/servlet/http/HttpServletResponse;)V" : {
-      "completeTestCount" : 6,
+      "completeTestCount" : 7,
       "incompleteTestCount" : 0,
       "perMethodTestability" : "T000",
       "perMethodOutcome" : "R000",
       "perTestOutcome" : {
-        "R000" : 6
+        "R000" : 7
       },
       "lineNumbers" : [
         21,
@@ -49010,12 +49005,12 @@
       ]
     },
     "org.tron.core.services.http.GetTransactionByIdServlet.doPost:(Ljavax/servlet/http/HttpServletRequest;Ljavax/servlet/http/HttpServletResponse;)V" : {
-      "completeTestCount" : 7,
+      "completeTestCount" : 8,
       "incompleteTestCount" : 0,
       "perMethodTestability" : "T000",
       "perMethodOutcome" : "R000",
       "perTestOutcome" : {
-        "R000" : 7
+        "R000" : 8
       },
       "lineNumbers" : [
         36,
@@ -49074,12 +49069,12 @@
       ]
     },
     "org.tron.core.services.http.GetTransactionCountByBlockNumServlet.doPost:(Ljavax/servlet/http/HttpServletRequest;Ljavax/servlet/http/HttpServletResponse;)V" : {
-      "completeTestCount" : 7,
+      "completeTestCount" : 8,
       "incompleteTestCount" : 0,
       "perMethodTestability" : "T000",
       "perMethodOutcome" : "R000",
       "perTestOutcome" : {
-        "R000" : 7
+        "R000" : 8
       },
       "lineNumbers" : [
         32,
@@ -51171,12 +51166,12 @@
       ]
     },
     "org.tron.core.services.http.ListExchangesServlet.doGet:(Ljavax/servlet/http/HttpServletRequest;Ljavax/servlet/http/HttpServletResponse;)V" : {
-      "completeTestCount" : 3,
+      "completeTestCount" : 4,
       "incompleteTestCount" : 0,
       "perMethodTestability" : "T000",
       "perMethodOutcome" : "R000",
       "perTestOutcome" : {
-        "R000" : 3
+        "R000" : 4
       },
       "lineNumbers" : [
         28,
@@ -58168,12 +58163,12 @@
       ]
     },
     "org.tron.core.services.interfaceOnPBFT.http.PBFT.HttpApiOnPBFTService.start:()V" : {
-      "completeTestCount" : 2,
+      "completeTestCount" : 3,
       "incompleteTestCount" : 0,
       "perMethodTestability" : "T000",
       "perMethodOutcome" : "R000",
       "perTestOutcome" : {
-        "R000" : 2
+        "R000" : 3
       },
       "lineNumbers" : [
         188,
@@ -63113,12 +63108,15 @@
       ]
     },
     "org.tron.core.services.jsonrpc.JsonRpcApiUtil.getTransactionAmount:(Lorg/tron/protos/Protocol$Transaction$Contract;Ljava/lang/String;Lorg/tron/core/Wallet;)J" : {
-      "completeTestCount" : 2,
+      "completeTestCount" : 1,
       "incompleteTestCount" : 0,
       "perMethodTestability" : "T000",
       "perMethodOutcome" : "R000",
       "perTestOutcome" : {
-        "R000" : 2
+        "R000" : 1
+      },
+      "warnings" : {
+        "W002" : 1
       },
       "lineNumbers" : [
         212,
@@ -66242,12 +66240,15 @@
       ]
     },
     "org.tron.core.services.jsonrpc.filters.LogFilterWrapper.<init>:(Lorg/tron/core/services/jsonrpc/TronJsonRpc$FilterRequest;JLorg/tron/core/Wallet;)V" : {
-      "completeTestCount" : 9,
+      "completeTestCount" : 8,
       "incompleteTestCount" : 0,
       "perMethodTestability" : "T000",
       "perMethodOutcome" : "R000",
       "perTestOutcome" : {
-        "R000" : 9
+        "R000" : 8
+      },
+      "warnings" : {
+        "W002" : 1
       },
       "lineNumbers" : [
         25,
@@ -67177,15 +67178,12 @@
       ]
     },
     "org.tron.core.services.jsonrpc.types.BuildArguments.getContractType:(Lorg/tron/core/Wallet;)Lorg/tron/protos/Protocol$Transaction$Contract$ContractType;" : {
-      "completeTestCount" : 3,
+      "completeTestCount" : 4,
       "incompleteTestCount" : 0,
       "perMethodTestability" : "T000",
       "perMethodOutcome" : "R000",
       "perTestOutcome" : {
-        "R000" : 3
-      },
-      "warnings" : {
-        "W002" : 1
+        "R000" : 4
       },
       "lineNumbers" : [
         93,

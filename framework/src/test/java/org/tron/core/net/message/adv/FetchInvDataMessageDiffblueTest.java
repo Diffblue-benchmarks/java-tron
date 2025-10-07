@@ -5,7 +5,8 @@ import static org.junit.Assert.assertEquals;
 import static org.junit.Assert.assertNull;
 import static org.junit.Assert.assertSame;
 import static org.junit.Assert.assertTrue;
-import com.diffblue.cover.annotations.MaintainedByDiffblue;
+import com.diffblue.cover.annotations.ContributionFromDiffblue;
+import com.diffblue.cover.annotations.ManagedByDiffblue;
 import com.diffblue.cover.annotations.MethodsUnderTest;
 import io.netty.buffer.ByteBuf;
 import io.netty.buffer.UnpooledHeapByteBuf;
@@ -33,7 +34,8 @@ public class FetchInvDataMessageDiffblueTest {
    * <p>Method under test: {@link FetchInvDataMessage#FetchInvDataMessage(List, InventoryType)}
    */
   @Test
-  @Category(MaintainedByDiffblue.class)
+  @Category(ContributionFromDiffblue.class)
+  @ManagedByDiffblue
   @MethodsUnderTest({"void FetchInvDataMessage.<init>(List, InventoryType)"})
   public void testNewFetchInvDataMessage_givenBlockId_thenReturnHashListSizeIsOne() {
     // Arrange
@@ -86,7 +88,8 @@ public class FetchInvDataMessageDiffblueTest {
    * <p>Method under test: {@link FetchInvDataMessage#FetchInvDataMessage(List, InventoryType)}
    */
   @Test
-  @Category(MaintainedByDiffblue.class)
+  @Category(ContributionFromDiffblue.class)
+  @ManagedByDiffblue
   @MethodsUnderTest({"void FetchInvDataMessage.<init>(List, InventoryType)"})
   public void testNewFetchInvDataMessage_givenBlockId_thenReturnHashListSizeIsTwo() {
     // Arrange
@@ -115,7 +118,8 @@ public class FetchInvDataMessageDiffblueTest {
    * <p>Method under test: {@link FetchInvDataMessage#FetchInvDataMessage(byte[])}
    */
   @Test
-  @Category(MaintainedByDiffblue.class)
+  @Category(ContributionFromDiffblue.class)
+  @ManagedByDiffblue
   @MethodsUnderTest({"void FetchInvDataMessage.<init>(byte[])"})
   public void testNewFetchInvDataMessage_thenReturnInventoryAllFieldsSizeIsOne() throws Exception {
     // Arrange and Act
@@ -165,7 +169,8 @@ public class FetchInvDataMessageDiffblueTest {
    * <p>Method under test: {@link FetchInvDataMessage#FetchInvDataMessage(byte[])}
    */
   @Test
-  @Category(MaintainedByDiffblue.class)
+  @Category(ContributionFromDiffblue.class)
+  @ManagedByDiffblue
   @MethodsUnderTest({"void FetchInvDataMessage.<init>(byte[])"})
   public void testNewFetchInvDataMessage_thenReturnInventorySerializedSizeIsZero()
       throws Exception {
@@ -206,7 +211,8 @@ public class FetchInvDataMessageDiffblueTest {
    * <p>Method under test: {@link FetchInvDataMessage#FetchInvDataMessage(Protocol.Inventory)}
    */
   @Test
-  @Category(MaintainedByDiffblue.class)
+  @Category(ContributionFromDiffblue.class)
+  @ManagedByDiffblue
   @MethodsUnderTest({"void FetchInvDataMessage.<init>(Protocol.Inventory)"})
   public void testNewFetchInvDataMessage_thenSendDataReturnUnpooledHeapByteBuf() {
     // Arrange
@@ -238,7 +244,8 @@ public class FetchInvDataMessageDiffblueTest {
    * <p>Method under test: {@link FetchInvDataMessage#FetchInvDataMessage(List, InventoryType)}
    */
   @Test
-  @Category(MaintainedByDiffblue.class)
+  @Category(ContributionFromDiffblue.class)
+  @ManagedByDiffblue
   @MethodsUnderTest({"void FetchInvDataMessage.<init>(List, InventoryType)"})
   public void testNewFetchInvDataMessage_whenArrayList_thenReturnInventorySerializedSizeIsZero() {
     // Arrange and Act
@@ -277,7 +284,8 @@ public class FetchInvDataMessageDiffblueTest {
    * <p>Method under test: {@link FetchInvDataMessage#FetchInvDataMessage(List, InventoryType)}
    */
   @Test
-  @Category(MaintainedByDiffblue.class)
+  @Category(ContributionFromDiffblue.class)
+  @ManagedByDiffblue
   @MethodsUnderTest({"void FetchInvDataMessage.<init>(List, InventoryType)"})
   public void testNewFetchInvDataMessage_whenBlock_thenReturnInventoryTypeValueIsOne() {
     // Arrange and Act

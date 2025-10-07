@@ -5,7 +5,8 @@ import static org.junit.Assert.assertEquals;
 import static org.junit.Assert.assertNull;
 import static org.junit.Assert.assertSame;
 import static org.junit.Assert.assertTrue;
-import com.diffblue.cover.annotations.MaintainedByDiffblue;
+import com.diffblue.cover.annotations.ContributionFromDiffblue;
+import com.diffblue.cover.annotations.ManagedByDiffblue;
 import com.diffblue.cover.annotations.MethodsUnderTest;
 import java.io.UnsupportedEncodingException;
 import java.math.BigInteger;
@@ -24,7 +25,8 @@ public class ProgramTraceDiffblueTest {
    * <p>Method under test: {@link ProgramTrace#ProgramTrace()}
    */
   @Test
-  @Category(MaintainedByDiffblue.class)
+  @Category(ContributionFromDiffblue.class)
+  @ManagedByDiffblue
   @MethodsUnderTest({"void ProgramTrace.<init>()"})
   public void testNewProgramTrace() {
     // Arrange and Act
@@ -47,7 +49,8 @@ public class ProgramTraceDiffblueTest {
    * <p>Method under test: {@link ProgramTrace#ProgramTrace(ProgramInvoke)}
    */
   @Test
-  @Category(MaintainedByDiffblue.class)
+  @Category(ContributionFromDiffblue.class)
+  @ManagedByDiffblue
   @MethodsUnderTest({"void ProgramTrace.<init>(ProgramInvoke)"})
   public void testNewProgramTrace_whenNull() {
     // Arrange and Act
@@ -70,7 +73,8 @@ public class ProgramTraceDiffblueTest {
    * <p>Method under test: {@link ProgramTrace#ProgramTrace(ProgramInvoke)}
    */
   @Test
-  @Category(MaintainedByDiffblue.class)
+  @Category(ContributionFromDiffblue.class)
+  @ManagedByDiffblue
   @MethodsUnderTest({"void ProgramTrace.<init>(ProgramInvoke)"})
   public void testNewProgramTrace_whenProgramInvokeMockImpl() {
     // Arrange and Act
@@ -101,7 +105,8 @@ public class ProgramTraceDiffblueTest {
    * </ul>
    */
   @Test
-  @Category(MaintainedByDiffblue.class)
+  @Category(ContributionFromDiffblue.class)
+  @ManagedByDiffblue
   @MethodsUnderTest({
     "String ProgramTrace.getContractAddress()",
     "String ProgramTrace.getError()",
@@ -155,7 +160,8 @@ public class ProgramTraceDiffblueTest {
    * <p>Method under test: {@link ProgramTrace#result(byte[])}
    */
   @Test
-  @Category(MaintainedByDiffblue.class)
+  @Category(ContributionFromDiffblue.class)
+  @ManagedByDiffblue
   @MethodsUnderTest({"ProgramTrace ProgramTrace.result(byte[])"})
   public void testResult_whenAxaxaxaxBytesIsUtf8_thenProgramTraceResultIs4158415841584158()
       throws UnsupportedEncodingException {
@@ -181,7 +187,8 @@ public class ProgramTraceDiffblueTest {
    * <p>Method under test: {@link ProgramTrace#result(byte[])}
    */
   @Test
-  @Category(MaintainedByDiffblue.class)
+  @Category(ContributionFromDiffblue.class)
+  @ManagedByDiffblue
   @MethodsUnderTest({"ProgramTrace ProgramTrace.result(byte[])"})
   public void testResult_whenNull_thenProgramTraceResultIsEmptyString() {
     // Arrange
@@ -206,7 +213,8 @@ public class ProgramTraceDiffblueTest {
    * <p>Method under test: {@link ProgramTrace#error(Exception)}
    */
   @Test
-  @Category(MaintainedByDiffblue.class)
+  @Category(ContributionFromDiffblue.class)
+  @ManagedByDiffblue
   @MethodsUnderTest({"ProgramTrace ProgramTrace.error(Exception)"})
   public void testError_whenException_thenProgramTraceErrorIsClassJavaLangExceptionNull() {
     // Arrange
@@ -231,7 +239,8 @@ public class ProgramTraceDiffblueTest {
    * <p>Method under test: {@link ProgramTrace#error(Exception)}
    */
   @Test
-  @Category(MaintainedByDiffblue.class)
+  @Category(ContributionFromDiffblue.class)
+  @ManagedByDiffblue
   @MethodsUnderTest({"ProgramTrace ProgramTrace.error(Exception)"})
   public void testError_whenNull_thenProgramTraceErrorIsEmptyString() {
     // Arrange
@@ -256,7 +265,8 @@ public class ProgramTraceDiffblueTest {
    * <p>Method under test: {@link ProgramTrace#addOp(byte, int, int, DataWord, OpActions)}
    */
   @Test
-  @Category(MaintainedByDiffblue.class)
+  @Category(ContributionFromDiffblue.class)
+  @ManagedByDiffblue
   @MethodsUnderTest({"Op ProgramTrace.addOp(byte, int, int, DataWord, OpActions)"})
   public void testAddOp_whenZero_thenReturnEnergyToStringIs0() {
     // Arrange
@@ -291,7 +301,8 @@ public class ProgramTraceDiffblueTest {
    * <p>Method under test: {@link ProgramTrace#asJsonString(boolean)}
    */
   @Test
-  @Category(MaintainedByDiffblue.class)
+  @Category(ContributionFromDiffblue.class)
+  @ManagedByDiffblue
   @MethodsUnderTest({"String ProgramTrace.asJsonString(boolean)"})
   public void testAsJsonString_whenFalse_thenReturnOpsResultNullErrorNullContractAddressNull() {
     // Arrange, Act and Assert
@@ -312,7 +323,8 @@ public class ProgramTraceDiffblueTest {
    * <p>Method under test: {@link ProgramTrace#asJsonString(boolean)}
    */
   @Test
-  @Category(MaintainedByDiffblue.class)
+  @Category(ContributionFromDiffblue.class)
+  @ManagedByDiffblue
   @MethodsUnderTest({"String ProgramTrace.asJsonString(boolean)"})
   public void testAsJsonString_whenTrue_thenReturnOpsResultNullErrorNullContractAddressNull() {
     // Arrange, Act and Assert

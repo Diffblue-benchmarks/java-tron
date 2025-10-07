@@ -4,7 +4,8 @@ import static org.junit.Assert.assertArrayEquals;
 import static org.junit.Assert.assertEquals;
 import static org.junit.Assert.assertNull;
 import static org.junit.Assert.assertTrue;
-import com.diffblue.cover.annotations.MaintainedByDiffblue;
+import com.diffblue.cover.annotations.ContributionFromDiffblue;
+import com.diffblue.cover.annotations.ManagedByDiffblue;
 import com.diffblue.cover.annotations.MethodsUnderTest;
 import java.math.BigInteger;
 import java.security.spec.ECFieldFp;
@@ -20,7 +21,8 @@ public class ECAlgorithmParametersDiffblueTest {
    * <p>Method under test: {@link ECAlgorithmParameters#getParameterSpec()}
    */
   @Test
-  @Category(MaintainedByDiffblue.class)
+  @Category(ContributionFromDiffblue.class)
+  @ManagedByDiffblue
   @MethodsUnderTest({"ECParameterSpec ECAlgorithmParameters.getParameterSpec()"})
   public void testGetParameterSpec() {
     // Arrange and Act
@@ -51,7 +53,8 @@ public class ECAlgorithmParametersDiffblueTest {
    * <p>Method under test: {@link ECAlgorithmParameters#getASN1Encoding()}
    */
   @Test
-  @Category(MaintainedByDiffblue.class)
+  @Category(ContributionFromDiffblue.class)
+  @ManagedByDiffblue
   @MethodsUnderTest({"byte[] ECAlgorithmParameters.getASN1Encoding()"})
   public void testGetASN1Encoding() {
     // Arrange, Act and Assert

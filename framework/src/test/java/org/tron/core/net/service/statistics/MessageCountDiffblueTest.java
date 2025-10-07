@@ -1,7 +1,8 @@
 package org.tron.core.net.service.statistics;
 
 import static org.junit.Assert.assertEquals;
-import com.diffblue.cover.annotations.MaintainedByDiffblue;
+import com.diffblue.cover.annotations.ContributionFromDiffblue;
+import com.diffblue.cover.annotations.ManagedByDiffblue;
 import com.diffblue.cover.annotations.MethodsUnderTest;
 import org.junit.Test;
 import org.junit.experimental.categories.Category;
@@ -13,7 +14,8 @@ public class MessageCountDiffblueTest {
    * <p>Method under test: {@link MessageCount#add()}
    */
   @Test
-  @Category(MaintainedByDiffblue.class)
+  @Category(ContributionFromDiffblue.class)
+  @ManagedByDiffblue
   @MethodsUnderTest({"void MessageCount.add()"})
   public void testAdd() {
     // Arrange
@@ -32,7 +34,8 @@ public class MessageCountDiffblueTest {
    * <p>Method under test: {@link MessageCount#add(int)}
    */
   @Test
-  @Category(MaintainedByDiffblue.class)
+  @Category(ContributionFromDiffblue.class)
+  @ManagedByDiffblue
   @MethodsUnderTest({"void MessageCount.add(int)"})
   public void testAddWithInt() {
     // Arrange
@@ -55,7 +58,8 @@ public class MessageCountDiffblueTest {
    * <p>Method under test: {@link MessageCount#getCount(int)}
    */
   @Test
-  @Category(MaintainedByDiffblue.class)
+  @Category(ContributionFromDiffblue.class)
+  @ManagedByDiffblue
   @MethodsUnderTest({"int MessageCount.getCount(int)"})
   public void testGetCount_whenFortyTwo() {
     // Arrange, Act and Assert
@@ -72,7 +76,8 @@ public class MessageCountDiffblueTest {
    * <p>Method under test: {@link MessageCount#getCount(int)}
    */
   @Test
-  @Category(MaintainedByDiffblue.class)
+  @Category(ContributionFromDiffblue.class)
+  @ManagedByDiffblue
   @MethodsUnderTest({"int MessageCount.getCount(int)"})
   public void testGetCount_whenOneThousand() {
     // Arrange, Act and Assert
@@ -91,7 +96,8 @@ public class MessageCountDiffblueTest {
    * </ul>
    */
   @Test
-  @Category(MaintainedByDiffblue.class)
+  @Category(ContributionFromDiffblue.class)
+  @ManagedByDiffblue
   @MethodsUnderTest({
     "long MessageCount.getTotalCount()",
     "void MessageCount.reset()",
@@ -116,7 +122,8 @@ public class MessageCountDiffblueTest {
    * <p>Method under test: default or parameterless constructor of {@link MessageCount}
    */
   @Test
-  @Category(MaintainedByDiffblue.class)
+  @Category(ContributionFromDiffblue.class)
+  @ManagedByDiffblue
   @MethodsUnderTest({"void MessageCount.<init>()"})
   public void testNewMessageCount() {
     // Arrange, Act and Assert

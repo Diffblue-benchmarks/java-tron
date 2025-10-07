@@ -8,7 +8,8 @@ import static org.mockito.ArgumentMatchers.isNull;
 import static org.mockito.Mockito.mock;
 import static org.mockito.Mockito.verify;
 import static org.mockito.Mockito.when;
-import com.diffblue.cover.annotations.MaintainedByDiffblue;
+import com.diffblue.cover.annotations.ContributionFromDiffblue;
+import com.diffblue.cover.annotations.ManagedByDiffblue;
 import com.diffblue.cover.annotations.MethodsUnderTest;
 import io.grpc.Metadata;
 import io.grpc.ServerCall;
@@ -36,7 +37,8 @@ public class LiteFnQueryGrpcInterceptorDiffblueTest {
    * <p>Method under test: {@link LiteFnQueryGrpcInterceptor#getFilterMethods()}
    */
   @Test
-  @Category(MaintainedByDiffblue.class)
+  @Category(ContributionFromDiffblue.class)
+  @ManagedByDiffblue
   @MethodsUnderTest({"Set LiteFnQueryGrpcInterceptor.getFilterMethods()"})
   public void testGetFilterMethods() {
     // Arrange and Act
@@ -71,7 +73,8 @@ public class LiteFnQueryGrpcInterceptorDiffblueTest {
    * ServerCallHandler)}
    */
   @Test
-  @Category(MaintainedByDiffblue.class)
+  @Category(ContributionFromDiffblue.class)
+  @ManagedByDiffblue
   @MethodsUnderTest({
     "Listener LiteFnQueryGrpcInterceptor.interceptCall(ServerCall, Metadata, ServerCallHandler)"
   })

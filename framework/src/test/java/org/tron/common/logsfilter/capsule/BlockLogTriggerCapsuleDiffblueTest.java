@@ -6,7 +6,8 @@ import static org.mockito.Mockito.atLeast;
 import static org.mockito.Mockito.mock;
 import static org.mockito.Mockito.verify;
 import static org.mockito.Mockito.when;
-import com.diffblue.cover.annotations.MaintainedByDiffblue;
+import com.diffblue.cover.annotations.ContributionFromDiffblue;
+import com.diffblue.cover.annotations.ManagedByDiffblue;
 import com.diffblue.cover.annotations.MethodsUnderTest;
 import java.util.ArrayList;
 import java.util.List;
@@ -25,7 +26,8 @@ public class BlockLogTriggerCapsuleDiffblueTest {
    * <p>Method under test: {@link BlockLogTriggerCapsule#BlockLogTriggerCapsule(BlockCapsule)}
    */
   @Test
-  @Category(MaintainedByDiffblue.class)
+  @Category(ContributionFromDiffblue.class)
+  @ManagedByDiffblue
   @MethodsUnderTest({"void BlockLogTriggerCapsule.<init>(BlockCapsule)"})
   public void testNewBlockLogTriggerCapsule() {
     // Arrange
@@ -67,7 +69,8 @@ public class BlockLogTriggerCapsuleDiffblueTest {
    * <p>Method under test: {@link BlockLogTriggerCapsule#BlockLogTriggerCapsule(BlockCapsule)}
    */
   @Test
-  @Category(MaintainedByDiffblue.class)
+  @Category(ContributionFromDiffblue.class)
+  @ManagedByDiffblue
   @MethodsUnderTest({"void BlockLogTriggerCapsule.<init>(BlockCapsule)"})
   public void testNewBlockLogTriggerCapsule2() {
     // Arrange
@@ -114,7 +117,8 @@ public class BlockLogTriggerCapsuleDiffblueTest {
    * <p>Method under test: {@link BlockLogTriggerCapsule#BlockLogTriggerCapsule(BlockCapsule)}
    */
   @Test
-  @Category(MaintainedByDiffblue.class)
+  @Category(ContributionFromDiffblue.class)
+  @ManagedByDiffblue
   @MethodsUnderTest({"void BlockLogTriggerCapsule.<init>(BlockCapsule)"})
   public void testNewBlockLogTriggerCapsule_givenBlockId() {
     // Arrange
@@ -151,7 +155,8 @@ public class BlockLogTriggerCapsuleDiffblueTest {
    * <p>Method under test: {@link BlockLogTriggerCapsule#BlockLogTriggerCapsule(BlockCapsule)}
    */
   @Test
-  @Category(MaintainedByDiffblue.class)
+  @Category(ContributionFromDiffblue.class)
+  @ManagedByDiffblue
   @MethodsUnderTest({"void BlockLogTriggerCapsule.<init>(BlockCapsule)"})
   public void testNewBlockLogTriggerCapsule_thenReturnBlockLogTriggerTransactionSizeIsZero() {
     // Arrange
@@ -187,7 +192,8 @@ public class BlockLogTriggerCapsuleDiffblueTest {
    * <p>Method under test: {@link BlockLogTriggerCapsule#setLatestSolidifiedBlockNumber(long)}
    */
   @Test
-  @Category(MaintainedByDiffblue.class)
+  @Category(ContributionFromDiffblue.class)
+  @ManagedByDiffblue
   @MethodsUnderTest({"void BlockLogTriggerCapsule.setLatestSolidifiedBlockNumber(long)"})
   public void testSetLatestSolidifiedBlockNumber() {
     // Arrange

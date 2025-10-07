@@ -3,7 +3,8 @@ package org.tron.core.capsule.utils;
 import static org.junit.Assert.assertArrayEquals;
 import static org.junit.Assert.assertNull;
 import static org.junit.Assert.assertSame;
-import com.diffblue.cover.annotations.MaintainedByDiffblue;
+import com.diffblue.cover.annotations.ContributionFromDiffblue;
+import com.diffblue.cover.annotations.ManagedByDiffblue;
 import com.diffblue.cover.annotations.MethodsUnderTest;
 import java.io.UnsupportedEncodingException;
 import org.junit.Test;
@@ -16,7 +17,8 @@ public class RLPItemDiffblueTest {
    * <p>Method under test: {@link RLPItem#RLPItem(byte[])}
    */
   @Test
-  @Category(MaintainedByDiffblue.class)
+  @Category(ContributionFromDiffblue.class)
+  @ManagedByDiffblue
   @MethodsUnderTest({"void RLPItem.<init>(byte[])"})
   public void testNewRLPItem() throws UnsupportedEncodingException {
     // Arrange
@@ -39,7 +41,8 @@ public class RLPItemDiffblueTest {
    * <p>Method under test: {@link RLPItem#getRLPData()}
    */
   @Test
-  @Category(MaintainedByDiffblue.class)
+  @Category(ContributionFromDiffblue.class)
+  @ManagedByDiffblue
   @MethodsUnderTest({"byte[] RLPItem.getRLPData()"})
   public void testGetRLPData_givenRLPItemWithRlpDataIsEmptyArrayOfByte_thenReturnNull() {
     // Arrange
@@ -59,7 +62,8 @@ public class RLPItemDiffblueTest {
    * <p>Method under test: {@link RLPItem#getRLPData()}
    */
   @Test
-  @Category(MaintainedByDiffblue.class)
+  @Category(ContributionFromDiffblue.class)
+  @ManagedByDiffblue
   @MethodsUnderTest({"byte[] RLPItem.getRLPData()"})
   public void testGetRLPData_thenReturnAxaxaxaxBytesIsUtf8() throws UnsupportedEncodingException {
     // Arrange, Act and Assert

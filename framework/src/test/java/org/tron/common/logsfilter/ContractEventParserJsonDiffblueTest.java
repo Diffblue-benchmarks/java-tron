@@ -3,7 +3,8 @@ package org.tron.common.logsfilter;
 import static org.junit.Assert.assertEquals;
 import static org.junit.Assert.assertTrue;
 import com.alibaba.fastjson.JSONObject;
-import com.diffblue.cover.annotations.MaintainedByDiffblue;
+import com.diffblue.cover.annotations.ContributionFromDiffblue;
+import com.diffblue.cover.annotations.ManagedByDiffblue;
 import com.diffblue.cover.annotations.MethodsUnderTest;
 import java.io.UnsupportedEncodingException;
 import java.util.ArrayList;
@@ -24,7 +25,8 @@ public class ContractEventParserJsonDiffblueTest {
    * <p>Method under test: {@link ContractEventParserJson#parseEventData(byte[], List, JSONObject)}
    */
   @Test
-  @Category(MaintainedByDiffblue.class)
+  @Category(ContributionFromDiffblue.class)
+  @ManagedByDiffblue
   @MethodsUnderTest({"Map ContractEventParserJson.parseEventData(byte[], List, JSONObject)"})
   public void testParseEventData_givenA_thenReturn0Is4158415841584158()
       throws UnsupportedEncodingException {
@@ -54,7 +56,8 @@ public class ContractEventParserJsonDiffblueTest {
    * <p>Method under test: {@link ContractEventParserJson#parseEventData(byte[], List, JSONObject)}
    */
   @Test
-  @Category(MaintainedByDiffblue.class)
+  @Category(ContributionFromDiffblue.class)
+  @ManagedByDiffblue
   @MethodsUnderTest({"Map ContractEventParserJson.parseEventData(byte[], List, JSONObject)"})
   public void testParseEventData_givenA_thenReturn1Is4158415841584158()
       throws UnsupportedEncodingException {
@@ -85,7 +88,8 @@ public class ContractEventParserJsonDiffblueTest {
    * <p>Method under test: {@link ContractEventParserJson#parseEventData(byte[], List, JSONObject)}
    */
   @Test
-  @Category(MaintainedByDiffblue.class)
+  @Category(ContributionFromDiffblue.class)
+  @ManagedByDiffblue
   @MethodsUnderTest({"Map ContractEventParserJson.parseEventData(byte[], List, JSONObject)"})
   public void testParseEventData_whenA_thenReturn0Is41014101410141014101410141014101() {
     // Arrange
@@ -114,7 +118,8 @@ public class ContractEventParserJsonDiffblueTest {
    * <p>Method under test: {@link ContractEventParserJson#parseEventData(byte[], List, JSONObject)}
    */
   @Test
-  @Category(MaintainedByDiffblue.class)
+  @Category(ContributionFromDiffblue.class)
+  @ManagedByDiffblue
   @MethodsUnderTest({"Map ContractEventParserJson.parseEventData(byte[], List, JSONObject)"})
   public void testParseEventData_whenAxaxaxaxBytesIsUtf8_thenReturn0Is4158415841584158()
       throws UnsupportedEncodingException {
@@ -142,7 +147,8 @@ public class ContractEventParserJsonDiffblueTest {
    * <p>Method under test: {@link ContractEventParserJson#parseEventData(byte[], List, JSONObject)}
    */
   @Test
-  @Category(MaintainedByDiffblue.class)
+  @Category(ContributionFromDiffblue.class)
+  @ManagedByDiffblue
   @MethodsUnderTest({"Map ContractEventParserJson.parseEventData(byte[], List, JSONObject)"})
   public void testParseEventData_whenEmptyArrayOfByte_thenReturnEmpty() {
     // Arrange
@@ -167,7 +173,8 @@ public class ContractEventParserJsonDiffblueTest {
    * <p>Method under test: {@link ContractEventParserJson#parseEventData(byte[], List, JSONObject)}
    */
   @Test
-  @Category(MaintainedByDiffblue.class)
+  @Category(ContributionFromDiffblue.class)
+  @ManagedByDiffblue
   @MethodsUnderTest({"Map ContractEventParserJson.parseEventData(byte[], List, JSONObject)"})
   public void testParseEventData_whenNull_thenReturnEmpty() {
     // Arrange

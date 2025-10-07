@@ -9,7 +9,8 @@ import static org.mockito.Mockito.doNothing;
 import static org.mockito.Mockito.mock;
 import static org.mockito.Mockito.verify;
 import static org.mockito.Mockito.when;
-import com.diffblue.cover.annotations.MaintainedByDiffblue;
+import com.diffblue.cover.annotations.ContributionFromDiffblue;
+import com.diffblue.cover.annotations.ManagedByDiffblue;
 import com.diffblue.cover.annotations.MethodsUnderTest;
 import java.io.UnsupportedEncodingException;
 import org.junit.Test;
@@ -37,7 +38,8 @@ public class UnfreezeBalanceProcessorDiffblueTest {
    * Repository)}
    */
   @Test
-  @Category(MaintainedByDiffblue.class)
+  @Category(ContributionFromDiffblue.class)
+  @ManagedByDiffblue
   @MethodsUnderTest({"void UnfreezeBalanceProcessor.validate(UnfreezeBalanceParam, Repository)"})
   public void testValidate_whenNull_thenThrowContractValidateException()
       throws UnsupportedEncodingException, ContractValidateException {
@@ -66,7 +68,8 @@ public class UnfreezeBalanceProcessorDiffblueTest {
    * Repository)}
    */
   @Test
-  @Category(MaintainedByDiffblue.class)
+  @Category(ContributionFromDiffblue.class)
+  @ManagedByDiffblue
   @MethodsUnderTest({"long UnfreezeBalanceProcessor.execute(UnfreezeBalanceParam, Repository)"})
   public void testExecute_thenReturnOne() throws UnsupportedEncodingException {
     // Arrange

@@ -5,7 +5,8 @@ import static org.junit.Assert.assertEquals;
 import static org.junit.Assert.assertFalse;
 import static org.junit.Assert.assertNull;
 import static org.junit.Assert.assertTrue;
-import com.diffblue.cover.annotations.MaintainedByDiffblue;
+import com.diffblue.cover.annotations.ContributionFromDiffblue;
+import com.diffblue.cover.annotations.ManagedByDiffblue;
 import com.diffblue.cover.annotations.MethodsUnderTest;
 import com.google.protobuf.ByteString;
 import com.google.protobuf.ByteString.ByteIterator;
@@ -24,7 +25,8 @@ public class DBUtilsDiffblueTest {
    * <p>Method under test: {@link DBUtils#newDefaultLevelDbOptions()}
    */
   @Test
-  @Category(MaintainedByDiffblue.class)
+  @Category(ContributionFromDiffblue.class)
+  @ManagedByDiffblue
   @MethodsUnderTest({"Options DBUtils.newDefaultLevelDbOptions()"})
   public void testNewDefaultLevelDbOptions() {
     // Arrange and Act
@@ -58,7 +60,8 @@ public class DBUtilsDiffblueTest {
    * <p>Method under test: {@link DBUtils#getTransactionId(Transaction)}
    */
   @Test
-  @Category(MaintainedByDiffblue.class)
+  @Category(ContributionFromDiffblue.class)
+  @ManagedByDiffblue
   @MethodsUnderTest({"Sha256Hash DBUtils.getTransactionId(Transaction)"})
   public void testGetTransactionId_whenDefaultInstance_thenReturnNotByteStringEmpty() {
     // Arrange and Act
@@ -87,7 +90,8 @@ public class DBUtilsDiffblueTest {
    * <p>Method under test: {@link Operator#getValue()}
    */
   @Test
-  @Category(MaintainedByDiffblue.class)
+  @Category(ContributionFromDiffblue.class)
+  @ManagedByDiffblue
   @MethodsUnderTest({"byte Operator.getValue()"})
   public void testOperatorGetValue() {
     // Arrange, Act and Assert
@@ -105,7 +109,8 @@ public class DBUtilsDiffblueTest {
    * <p>Method under test: {@link Operator#valueOf(byte)}
    */
   @Test
-  @Category(MaintainedByDiffblue.class)
+  @Category(ContributionFromDiffblue.class)
+  @ManagedByDiffblue
   @MethodsUnderTest({"Operator Operator.valueOf(byte)"})
   public void testOperatorValueOfWithB_whenA_thenReturnNull() {
     // Arrange, Act and Assert
@@ -123,7 +128,8 @@ public class DBUtilsDiffblueTest {
    * <p>Method under test: {@link Operator#valueOf(byte)}
    */
   @Test
-  @Category(MaintainedByDiffblue.class)
+  @Category(ContributionFromDiffblue.class)
+  @ManagedByDiffblue
   @MethodsUnderTest({"Operator Operator.valueOf(byte)"})
   public void testOperatorValueOfWithB_whenOne_thenReturnModify() {
     // Arrange, Act and Assert
@@ -141,7 +147,8 @@ public class DBUtilsDiffblueTest {
    * <p>Method under test: {@link Operator#valueOf(byte)}
    */
   @Test
-  @Category(MaintainedByDiffblue.class)
+  @Category(ContributionFromDiffblue.class)
+  @ManagedByDiffblue
   @MethodsUnderTest({"Operator Operator.valueOf(byte)"})
   public void testOperatorValueOfWithB_whenThree_thenReturnPut() {
     // Arrange, Act and Assert
@@ -159,7 +166,8 @@ public class DBUtilsDiffblueTest {
    * <p>Method under test: {@link Operator#valueOf(byte)}
    */
   @Test
-  @Category(MaintainedByDiffblue.class)
+  @Category(ContributionFromDiffblue.class)
+  @ManagedByDiffblue
   @MethodsUnderTest({"Operator Operator.valueOf(byte)"})
   public void testOperatorValueOfWithB_whenTwo_thenReturnDelete() {
     // Arrange, Act and Assert
@@ -177,7 +185,8 @@ public class DBUtilsDiffblueTest {
    * <p>Method under test: {@link Operator#valueOf(byte)}
    */
   @Test
-  @Category(MaintainedByDiffblue.class)
+  @Category(ContributionFromDiffblue.class)
+  @ManagedByDiffblue
   @MethodsUnderTest({"Operator Operator.valueOf(byte)"})
   public void testOperatorValueOfWithB_whenZero_thenReturnCreate() {
     // Arrange, Act and Assert

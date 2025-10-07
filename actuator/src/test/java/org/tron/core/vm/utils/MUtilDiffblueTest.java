@@ -7,7 +7,8 @@ import static org.mockito.ArgumentMatchers.isA;
 import static org.mockito.Mockito.mock;
 import static org.mockito.Mockito.verify;
 import static org.mockito.Mockito.when;
-import com.diffblue.cover.annotations.MaintainedByDiffblue;
+import com.diffblue.cover.annotations.ContributionFromDiffblue;
+import com.diffblue.cover.annotations.ManagedByDiffblue;
 import com.diffblue.cover.annotations.MethodsUnderTest;
 import java.io.UnsupportedEncodingException;
 import org.junit.Test;
@@ -27,7 +28,8 @@ public class MUtilDiffblueTest {
    * <p>Method under test: {@link MUtil#transferAllToken(Repository, byte[], byte[])}
    */
   @Test
-  @Category(MaintainedByDiffblue.class)
+  @Category(ContributionFromDiffblue.class)
+  @ManagedByDiffblue
   @MethodsUnderTest({"void MUtil.transferAllToken(Repository, byte[], byte[])"})
   public void testTransferAllToken() throws UnsupportedEncodingException {
     // Arrange
@@ -55,7 +57,8 @@ public class MUtilDiffblueTest {
    * <p>Method under test: {@link MUtil#isNullOrEmpty(String)}
    */
   @Test
-  @Category(MaintainedByDiffblue.class)
+  @Category(ContributionFromDiffblue.class)
+  @ManagedByDiffblue
   @MethodsUnderTest({"boolean MUtil.isNullOrEmpty(String)"})
   public void testIsNullOrEmpty_whenEmptyString_thenReturnTrue() {
     // Arrange, Act and Assert
@@ -73,7 +76,8 @@ public class MUtilDiffblueTest {
    * <p>Method under test: {@link MUtil#isNullOrEmpty(String)}
    */
   @Test
-  @Category(MaintainedByDiffblue.class)
+  @Category(ContributionFromDiffblue.class)
+  @ManagedByDiffblue
   @MethodsUnderTest({"boolean MUtil.isNullOrEmpty(String)"})
   public void testIsNullOrEmpty_whenNull_thenReturnTrue() {
     // Arrange, Act and Assert
@@ -91,7 +95,8 @@ public class MUtilDiffblueTest {
    * <p>Method under test: {@link MUtil#isNullOrEmpty(String)}
    */
   @Test
-  @Category(MaintainedByDiffblue.class)
+  @Category(ContributionFromDiffblue.class)
+  @ManagedByDiffblue
   @MethodsUnderTest({"boolean MUtil.isNullOrEmpty(String)"})
   public void testIsNullOrEmpty_whenStr_thenReturnFalse() {
     // Arrange, Act and Assert
@@ -109,7 +114,8 @@ public class MUtilDiffblueTest {
    * <p>Method under test: {@link MUtil#isNotNullOrEmpty(String)}
    */
   @Test
-  @Category(MaintainedByDiffblue.class)
+  @Category(ContributionFromDiffblue.class)
+  @ManagedByDiffblue
   @MethodsUnderTest({"boolean MUtil.isNotNullOrEmpty(String)"})
   public void testIsNotNullOrEmpty_whenEmptyString_thenReturnFalse() {
     // Arrange, Act and Assert
@@ -127,7 +133,8 @@ public class MUtilDiffblueTest {
    * <p>Method under test: {@link MUtil#isNotNullOrEmpty(String)}
    */
   @Test
-  @Category(MaintainedByDiffblue.class)
+  @Category(ContributionFromDiffblue.class)
+  @ManagedByDiffblue
   @MethodsUnderTest({"boolean MUtil.isNotNullOrEmpty(String)"})
   public void testIsNotNullOrEmpty_whenNull_thenReturnFalse() {
     // Arrange, Act and Assert
@@ -145,7 +152,8 @@ public class MUtilDiffblueTest {
    * <p>Method under test: {@link MUtil#isNotNullOrEmpty(String)}
    */
   @Test
-  @Category(MaintainedByDiffblue.class)
+  @Category(ContributionFromDiffblue.class)
+  @ManagedByDiffblue
   @MethodsUnderTest({"boolean MUtil.isNotNullOrEmpty(String)"})
   public void testIsNotNullOrEmpty_whenStr_thenReturnTrue() {
     // Arrange, Act and Assert

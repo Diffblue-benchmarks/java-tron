@@ -17,7 +17,8 @@ import ch.qos.logback.core.Layout;
 import ch.qos.logback.core.status.ErrorStatus;
 import ch.qos.logback.core.status.Status;
 import ch.qos.logback.core.status.StatusManager;
-import com.diffblue.cover.annotations.MaintainedByDiffblue;
+import com.diffblue.cover.annotations.ContributionFromDiffblue;
+import com.diffblue.cover.annotations.ManagedByDiffblue;
 import com.diffblue.cover.annotations.MethodsUnderTest;
 import java.util.List;
 import org.junit.Test;
@@ -36,7 +37,8 @@ public class MultiLayoutPatternDiffblueTest {
    * <p>Method under test: {@link MultiLayoutPattern#addRule(Rule)}
    */
   @Test
-  @Category(MaintainedByDiffblue.class)
+  @Category(ContributionFromDiffblue.class)
+  @ManagedByDiffblue
   @MethodsUnderTest({"void MultiLayoutPattern.addRule(Rule)"})
   public void testAddRule_thenRulePatternLayoutEncoderContextLoggerContext() {
     // Arrange
@@ -74,7 +76,8 @@ public class MultiLayoutPatternDiffblueTest {
    * <p>Method under test: {@link MultiLayoutPattern#addRule(Rule)}
    */
   @Test
-  @Category(MaintainedByDiffblue.class)
+  @Category(ContributionFromDiffblue.class)
+  @ManagedByDiffblue
   @MethodsUnderTest({"void MultiLayoutPattern.addRule(Rule)"})
   public void testAddRule_whenRule_thenRulePatternLayoutEncoderLayoutPatternLayout() {
     // Arrange
@@ -110,7 +113,8 @@ public class MultiLayoutPatternDiffblueTest {
    * <p>Method under test: {@link MultiLayoutPattern#encode(ILoggingEvent)}
    */
   @Test
-  @Category(MaintainedByDiffblue.class)
+  @Category(ContributionFromDiffblue.class)
+  @ManagedByDiffblue
   @MethodsUnderTest({"byte[] MultiLayoutPattern.encode(ILoggingEvent)"})
   public void testEncodeWithILoggingEvent_whenLoggingEvent_thenThrowIllegalArgumentException() {
     // Arrange
@@ -138,7 +142,8 @@ public class MultiLayoutPatternDiffblueTest {
    * </ul>
    */
   @Test
-  @Category(MaintainedByDiffblue.class)
+  @Category(ContributionFromDiffblue.class)
+  @ManagedByDiffblue
   @MethodsUnderTest({
     "void Rule.<init>()",
     "String Rule.getLogger()",
@@ -178,7 +183,8 @@ public class MultiLayoutPatternDiffblueTest {
    * <p>Method under test: {@link Rule#start(Context)}
    */
   @Test
-  @Category(MaintainedByDiffblue.class)
+  @Category(ContributionFromDiffblue.class)
+  @ManagedByDiffblue
   @MethodsUnderTest({"void Rule.start(Context)"})
   public void testRuleStart_givenRule_thenLoggerContextStatusManagerCopyOfStatusListSizeIsOne() {
     // Arrange
@@ -221,7 +227,8 @@ public class MultiLayoutPatternDiffblueTest {
    * <p>Method under test: {@link Rule#start(Context)}
    */
   @Test
-  @Category(MaintainedByDiffblue.class)
+  @Category(ContributionFromDiffblue.class)
+  @ManagedByDiffblue
   @MethodsUnderTest({"void Rule.start(Context)"})
   public void testRuleStart_thenRulePatternLayoutEncoderLayoutPatternLayout() {
     // Arrange
@@ -254,7 +261,8 @@ public class MultiLayoutPatternDiffblueTest {
    * <p>Method under test: {@link MultiLayoutPattern#start()}
    */
   @Test
-  @Category(MaintainedByDiffblue.class)
+  @Category(ContributionFromDiffblue.class)
+  @ManagedByDiffblue
   @MethodsUnderTest({"void MultiLayoutPattern.start()"})
   public void testStart_givenMultiLayoutPattern_thenMultiLayoutPatternLayoutContextIsNull() {
     // Arrange
@@ -282,7 +290,8 @@ public class MultiLayoutPatternDiffblueTest {
    * <p>Method under test: {@link MultiLayoutPattern#start()}
    */
   @Test
-  @Category(MaintainedByDiffblue.class)
+  @Category(ContributionFromDiffblue.class)
+  @ManagedByDiffblue
   @MethodsUnderTest({"void MultiLayoutPattern.start()"})
   public void testStart_thenMultiLayoutPatternLayoutPatternIsPattern() {
     // Arrange
@@ -308,7 +317,8 @@ public class MultiLayoutPatternDiffblueTest {
    * <p>Method under test: default or parameterless constructor of {@link MultiLayoutPattern}
    */
   @Test
-  @Category(MaintainedByDiffblue.class)
+  @Category(ContributionFromDiffblue.class)
+  @ManagedByDiffblue
   @MethodsUnderTest({"void MultiLayoutPattern.<init>()"})
   public void testNewMultiLayoutPattern() {
     // Arrange and Act

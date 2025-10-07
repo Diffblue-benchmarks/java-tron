@@ -6,7 +6,8 @@ import static org.junit.Assert.assertNotEquals;
 import static org.junit.Assert.assertSame;
 import static org.junit.Assert.assertThrows;
 import static org.junit.Assert.assertTrue;
-import com.diffblue.cover.annotations.MaintainedByDiffblue;
+import com.diffblue.cover.annotations.ContributionFromDiffblue;
+import com.diffblue.cover.annotations.ManagedByDiffblue;
 import com.diffblue.cover.annotations.MethodsUnderTest;
 import java.util.EmptyStackException;
 import org.junit.Test;
@@ -27,7 +28,8 @@ public class StackDiffblueTest {
    * <p>Method under test: {@link Stack#pop()}
    */
   @Test
-  @Category(MaintainedByDiffblue.class)
+  @Category(ContributionFromDiffblue.class)
+  @ManagedByDiffblue
   @MethodsUnderTest({"DataWord Stack.pop()"})
   public void testPop_givenStackAddZero_thenStackEmpty() {
     // Arrange
@@ -54,7 +56,8 @@ public class StackDiffblueTest {
    * <p>Method under test: {@link Stack#pop()}
    */
   @Test
-  @Category(MaintainedByDiffblue.class)
+  @Category(ContributionFromDiffblue.class)
+  @ManagedByDiffblue
   @MethodsUnderTest({"DataWord Stack.pop()"})
   public void testPop_givenStack_thenThrowEmptyStackException() {
     // Arrange, Act and Assert
@@ -71,7 +74,8 @@ public class StackDiffblueTest {
    * <p>Method under test: {@link Stack#pop()}
    */
   @Test
-  @Category(MaintainedByDiffblue.class)
+  @Category(ContributionFromDiffblue.class)
+  @ManagedByDiffblue
   @MethodsUnderTest({"DataWord Stack.pop()"})
   public void testPop_thenThrowEmptyStackException() {
     // Arrange
@@ -92,7 +96,8 @@ public class StackDiffblueTest {
    * <p>Method under test: {@link Stack#push(DataWord)}
    */
   @Test
-  @Category(MaintainedByDiffblue.class)
+  @Category(ContributionFromDiffblue.class)
+  @ManagedByDiffblue
   @MethodsUnderTest({"DataWord Stack.push(DataWord)"})
   public void testPushWithDataWord_givenStack() {
     // Arrange
@@ -132,7 +137,8 @@ public class StackDiffblueTest {
    * <p>Method under test: {@link Stack#push(DataWord)}
    */
   @Test
-  @Category(MaintainedByDiffblue.class)
+  @Category(ContributionFromDiffblue.class)
+  @ManagedByDiffblue
   @MethodsUnderTest({"DataWord Stack.push(DataWord)"})
   public void testPushWithDataWord_thenReturnLast20BytesIsArrayOfByteWithZeroAndZero() {
     // Arrange
@@ -175,7 +181,8 @@ public class StackDiffblueTest {
    * <p>Method under test: {@link Stack#swap(int, int)}
    */
   @Test
-  @Category(MaintainedByDiffblue.class)
+  @Category(ContributionFromDiffblue.class)
+  @ManagedByDiffblue
   @MethodsUnderTest({"void Stack.swap(int, int)"})
   public void testSwap_givenStackAddZero_whenOne_thenStackSizeIsTwo() {
     // Arrange
@@ -204,7 +211,8 @@ public class StackDiffblueTest {
    * <p>Method under test: {@link Stack#swap(int, int)}
    */
   @Test
-  @Category(MaintainedByDiffblue.class)
+  @Category(ContributionFromDiffblue.class)
+  @ManagedByDiffblue
   @MethodsUnderTest({"void Stack.swap(int, int)"})
   public void testSwap_givenStackAddZero_whenTwo_thenStackSizeIsTwo() {
     // Arrange
@@ -233,7 +241,8 @@ public class StackDiffblueTest {
    * <p>Method under test: {@link Stack#swap(int, int)}
    */
   @Test
-  @Category(MaintainedByDiffblue.class)
+  @Category(ContributionFromDiffblue.class)
+  @ManagedByDiffblue
   @MethodsUnderTest({"void Stack.swap(int, int)"})
   public void testSwap_givenStackAddZero_whenZero_thenStackSizeIsTwo() {
     // Arrange
@@ -266,7 +275,8 @@ public class StackDiffblueTest {
    * </ul>
    */
   @Test
-  @Category(MaintainedByDiffblue.class)
+  @Category(ContributionFromDiffblue.class)
+  @ManagedByDiffblue
   @MethodsUnderTest({"boolean Stack.equals(Object)", "int Stack.hashCode()"})
   public void testEqualsAndHashCode_whenOtherIsEqual_thenReturnEqual() {
     // Arrange
@@ -294,7 +304,8 @@ public class StackDiffblueTest {
    * </ul>
    */
   @Test
-  @Category(MaintainedByDiffblue.class)
+  @Category(ContributionFromDiffblue.class)
+  @ManagedByDiffblue
   @MethodsUnderTest({"boolean Stack.equals(Object)", "int Stack.hashCode()"})
   public void testEqualsAndHashCode_whenOtherIsSame_thenReturnEqual() {
     // Arrange
@@ -317,7 +328,8 @@ public class StackDiffblueTest {
    * <p>Method under test: {@link Stack#equals(Object)}
    */
   @Test
-  @Category(MaintainedByDiffblue.class)
+  @Category(ContributionFromDiffblue.class)
+  @ManagedByDiffblue
   @MethodsUnderTest({"boolean Stack.equals(Object)", "int Stack.hashCode()"})
   public void testEquals_whenOtherIsDifferent_thenReturnNotEqual() {
     // Arrange
@@ -339,7 +351,8 @@ public class StackDiffblueTest {
    * <p>Method under test: {@link Stack#equals(Object)}
    */
   @Test
-  @Category(MaintainedByDiffblue.class)
+  @Category(ContributionFromDiffblue.class)
+  @ManagedByDiffblue
   @MethodsUnderTest({"boolean Stack.equals(Object)", "int Stack.hashCode()"})
   public void testEquals_whenOtherIsNull_thenReturnNotEqual() {
     // Arrange, Act and Assert
@@ -357,7 +370,8 @@ public class StackDiffblueTest {
    * <p>Method under test: {@link Stack#equals(Object)}
    */
   @Test
-  @Category(MaintainedByDiffblue.class)
+  @Category(ContributionFromDiffblue.class)
+  @ManagedByDiffblue
   @MethodsUnderTest({"boolean Stack.equals(Object)", "int Stack.hashCode()"})
   public void testEquals_whenOtherIsWrongType_thenReturnNotEqual() {
     // Arrange, Act and Assert
@@ -375,7 +389,8 @@ public class StackDiffblueTest {
    * </ul>
    */
   @Test
-  @Category(MaintainedByDiffblue.class)
+  @Category(ContributionFromDiffblue.class)
+  @ManagedByDiffblue
   @MethodsUnderTest({"void Stack.<init>()", "void Stack.setProgramListener(ProgramListener)"})
   public void testGettersAndSetters() {
     // Arrange and Act

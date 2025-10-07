@@ -9,7 +9,8 @@ import static org.junit.Assert.assertTrue;
 import static org.mockito.Mockito.mock;
 import static org.mockito.Mockito.verify;
 import static org.mockito.Mockito.when;
-import com.diffblue.cover.annotations.MaintainedByDiffblue;
+import com.diffblue.cover.annotations.ContributionFromDiffblue;
+import com.diffblue.cover.annotations.ManagedByDiffblue;
 import com.diffblue.cover.annotations.MethodsUnderTest;
 import com.google.protobuf.ByteString;
 import java.io.UnsupportedEncodingException;
@@ -31,7 +32,8 @@ public class IncrementalMerkleVoucherCapsuleDiffblueTest {
    * <p>Method under test: {@link IncrementalMerkleVoucherCapsule#IncrementalMerkleVoucherCapsule()}
    */
   @Test
-  @Category(MaintainedByDiffblue.class)
+  @Category(ContributionFromDiffblue.class)
+  @ManagedByDiffblue
   @MethodsUnderTest({"void IncrementalMerkleVoucherCapsule.<init>()"})
   public void testNewIncrementalMerkleVoucherCapsule() {
     // Arrange and Act
@@ -55,7 +57,8 @@ public class IncrementalMerkleVoucherCapsuleDiffblueTest {
    * IncrementalMerkleVoucherCapsule#IncrementalMerkleVoucherCapsule(byte[])}
    */
   @Test
-  @Category(MaintainedByDiffblue.class)
+  @Category(ContributionFromDiffblue.class)
+  @ManagedByDiffblue
   @MethodsUnderTest({"void IncrementalMerkleVoucherCapsule.<init>(byte[])"})
   public void testNewIncrementalMerkleVoucherCapsule_thenReturnCursorDepthIsZero() {
     // Arrange and Act
@@ -79,7 +82,8 @@ public class IncrementalMerkleVoucherCapsuleDiffblueTest {
    * IncrementalMerkleVoucherCapsule#IncrementalMerkleVoucherCapsule(byte[])}
    */
   @Test
-  @Category(MaintainedByDiffblue.class)
+  @Category(ContributionFromDiffblue.class)
+  @ManagedByDiffblue
   @MethodsUnderTest({"void IncrementalMerkleVoucherCapsule.<init>(byte[])"})
   public void testNewIncrementalMerkleVoucherCapsule_whenArrayOfByteWithAAndTwo() {
     // Arrange and Act
@@ -105,7 +109,8 @@ public class IncrementalMerkleVoucherCapsuleDiffblueTest {
    * IncrementalMerkleVoucherCapsule#IncrementalMerkleVoucherCapsule(byte[])}
    */
   @Test
-  @Category(MaintainedByDiffblue.class)
+  @Category(ContributionFromDiffblue.class)
+  @ManagedByDiffblue
   @MethodsUnderTest({"void IncrementalMerkleVoucherCapsule.<init>(byte[])"})
   public void testNewIncrementalMerkleVoucherCapsule_whenArrayOfByteWithAsteriskAndTwo() {
     // Arrange and Act
@@ -131,7 +136,8 @@ public class IncrementalMerkleVoucherCapsuleDiffblueTest {
    * IncrementalMerkleVoucherCapsule#IncrementalMerkleVoucherCapsule(byte[])}
    */
   @Test
-  @Category(MaintainedByDiffblue.class)
+  @Category(ContributionFromDiffblue.class)
+  @ManagedByDiffblue
   @MethodsUnderTest({"void IncrementalMerkleVoucherCapsule.<init>(byte[])"})
   public void testNewIncrementalMerkleVoucherCapsule_whenArrayOfByteWithAsteriskAndZero() {
     // Arrange and Act
@@ -156,7 +162,8 @@ public class IncrementalMerkleVoucherCapsuleDiffblueTest {
    * IncrementalMerkleVoucherCapsule#IncrementalMerkleVoucherCapsule(byte[])}
    */
   @Test
-  @Category(MaintainedByDiffblue.class)
+  @Category(ContributionFromDiffblue.class)
+  @ManagedByDiffblue
   @MethodsUnderTest({"void IncrementalMerkleVoucherCapsule.<init>(byte[])"})
   public void testNewIncrementalMerkleVoucherCapsule_whenArrayOfByteWithEighteenAndTwo() {
     // Arrange and Act
@@ -182,7 +189,8 @@ public class IncrementalMerkleVoucherCapsuleDiffblueTest {
    * IncrementalMerkleVoucherCapsule#IncrementalMerkleVoucherCapsule(byte[])}
    */
   @Test
-  @Category(MaintainedByDiffblue.class)
+  @Category(ContributionFromDiffblue.class)
+  @ManagedByDiffblue
   @MethodsUnderTest({"void IncrementalMerkleVoucherCapsule.<init>(byte[])"})
   public void testNewIncrementalMerkleVoucherCapsule_whenArrayOfByteWithEighteenAndX() {
     // Arrange and Act
@@ -207,7 +215,8 @@ public class IncrementalMerkleVoucherCapsuleDiffblueTest {
    * IncrementalMerkleVoucherCapsule#IncrementalMerkleVoucherCapsule(byte[])}
    */
   @Test
-  @Category(MaintainedByDiffblue.class)
+  @Category(ContributionFromDiffblue.class)
+  @ManagedByDiffblue
   @MethodsUnderTest({"void IncrementalMerkleVoucherCapsule.<init>(byte[])"})
   public void testNewIncrementalMerkleVoucherCapsule_whenArrayOfByteWithEighteenAndZero() {
     // Arrange and Act
@@ -232,7 +241,8 @@ public class IncrementalMerkleVoucherCapsuleDiffblueTest {
    * IncrementalMerkleVoucherCapsule#IncrementalMerkleVoucherCapsule(byte[])}
    */
   @Test
-  @Category(MaintainedByDiffblue.class)
+  @Category(ContributionFromDiffblue.class)
+  @ManagedByDiffblue
   @MethodsUnderTest({"void IncrementalMerkleVoucherCapsule.<init>(byte[])"})
   public void testNewIncrementalMerkleVoucherCapsule_whenArrayOfByteWithLfAndTwo() {
     // Arrange and Act
@@ -258,7 +268,8 @@ public class IncrementalMerkleVoucherCapsuleDiffblueTest {
    * IncrementalMerkleVoucherCapsule#IncrementalMerkleVoucherCapsule(byte[])}
    */
   @Test
-  @Category(MaintainedByDiffblue.class)
+  @Category(ContributionFromDiffblue.class)
+  @ManagedByDiffblue
   @MethodsUnderTest({"void IncrementalMerkleVoucherCapsule.<init>(byte[])"})
   public void testNewIncrementalMerkleVoucherCapsule_whenArrayOfByteWithLfAndZero() {
     // Arrange and Act
@@ -283,7 +294,8 @@ public class IncrementalMerkleVoucherCapsuleDiffblueTest {
    * IncrementalMerkleVoucherCapsule#IncrementalMerkleVoucherCapsule(byte[])}
    */
   @Test
-  @Category(MaintainedByDiffblue.class)
+  @Category(ContributionFromDiffblue.class)
+  @ManagedByDiffblue
   @MethodsUnderTest({"void IncrementalMerkleVoucherCapsule.<init>(byte[])"})
   public void testNewIncrementalMerkleVoucherCapsule_whenArrayOfByteWithMinusOneAndX() {
     // Arrange and Act
@@ -308,7 +320,8 @@ public class IncrementalMerkleVoucherCapsuleDiffblueTest {
    * IncrementalMerkleVoucherCapsule#IncrementalMerkleVoucherCapsule(byte[])}
    */
   @Test
-  @Category(MaintainedByDiffblue.class)
+  @Category(ContributionFromDiffblue.class)
+  @ManagedByDiffblue
   @MethodsUnderTest({"void IncrementalMerkleVoucherCapsule.<init>(byte[])"})
   public void testNewIncrementalMerkleVoucherCapsule_whenArrayOfByteWithRAndTwo() {
     // Arrange and Act
@@ -334,7 +347,8 @@ public class IncrementalMerkleVoucherCapsuleDiffblueTest {
    * IncrementalMerkleVoucherCapsule#IncrementalMerkleVoucherCapsule(byte[])}
    */
   @Test
-  @Category(MaintainedByDiffblue.class)
+  @Category(ContributionFromDiffblue.class)
+  @ManagedByDiffblue
   @MethodsUnderTest({"void IncrementalMerkleVoucherCapsule.<init>(byte[])"})
   public void testNewIncrementalMerkleVoucherCapsule_whenArrayOfByteWithRAndZero() {
     // Arrange and Act
@@ -359,7 +373,8 @@ public class IncrementalMerkleVoucherCapsuleDiffblueTest {
    * IncrementalMerkleVoucherCapsule#IncrementalMerkleVoucherCapsule(byte[])}
    */
   @Test
-  @Category(MaintainedByDiffblue.class)
+  @Category(ContributionFromDiffblue.class)
+  @ManagedByDiffblue
   @MethodsUnderTest({"void IncrementalMerkleVoucherCapsule.<init>(byte[])"})
   public void testNewIncrementalMerkleVoucherCapsule_whenArrayOfByteWithTwentySixAndX() {
     // Arrange and Act
@@ -384,7 +399,8 @@ public class IncrementalMerkleVoucherCapsuleDiffblueTest {
    * IncrementalMerkleVoucherCapsule#IncrementalMerkleVoucherCapsule(byte[])}
    */
   @Test
-  @Category(MaintainedByDiffblue.class)
+  @Category(ContributionFromDiffblue.class)
+  @ManagedByDiffblue
   @MethodsUnderTest({"void IncrementalMerkleVoucherCapsule.<init>(byte[])"})
   public void testNewIncrementalMerkleVoucherCapsule_whenArrayOfByteWithTwentySixAndZero() {
     // Arrange and Act
@@ -409,7 +425,8 @@ public class IncrementalMerkleVoucherCapsuleDiffblueTest {
    * IncrementalMerkleVoucherCapsule#IncrementalMerkleVoucherCapsule(byte[])}
    */
   @Test
-  @Category(MaintainedByDiffblue.class)
+  @Category(ContributionFromDiffblue.class)
+  @ManagedByDiffblue
   @MethodsUnderTest({"void IncrementalMerkleVoucherCapsule.<init>(byte[])"})
   public void testNewIncrementalMerkleVoucherCapsule_whenAxaxaxaxBytesIsUtf8()
       throws UnsupportedEncodingException {
@@ -435,7 +452,8 @@ public class IncrementalMerkleVoucherCapsuleDiffblueTest {
    * IncrementalMerkleVoucherCapsule#IncrementalMerkleVoucherCapsule(byte[])}
    */
   @Test
-  @Category(MaintainedByDiffblue.class)
+  @Category(ContributionFromDiffblue.class)
+  @ManagedByDiffblue
   @MethodsUnderTest({"void IncrementalMerkleVoucherCapsule.<init>(byte[])"})
   public void testNewIncrementalMerkleVoucherCapsule_whenRxaxaxaxBytesIsUtf8()
       throws UnsupportedEncodingException {
@@ -461,7 +479,8 @@ public class IncrementalMerkleVoucherCapsuleDiffblueTest {
    * IncrementalMerkleVoucherCapsule#IncrementalMerkleVoucherCapsule(byte[])}
    */
   @Test
-  @Category(MaintainedByDiffblue.class)
+  @Category(ContributionFromDiffblue.class)
+  @ManagedByDiffblue
   @MethodsUnderTest({"void IncrementalMerkleVoucherCapsule.<init>(byte[])"})
   public void testNewIncrementalMerkleVoucherCapsule_whenXaxaxaxBytesIsUtf8()
       throws UnsupportedEncodingException {
@@ -487,7 +506,8 @@ public class IncrementalMerkleVoucherCapsuleDiffblueTest {
    * IncrementalMerkleVoucherCapsule#IncrementalMerkleVoucherCapsule(byte[])}
    */
   @Test
-  @Category(MaintainedByDiffblue.class)
+  @Category(ContributionFromDiffblue.class)
+  @ManagedByDiffblue
   @MethodsUnderTest({"void IncrementalMerkleVoucherCapsule.<init>(byte[])"})
   public void testNewIncrementalMerkleVoucherCapsule_whenXaxaxaxBytesIsUtf82()
       throws UnsupportedEncodingException {
@@ -513,7 +533,8 @@ public class IncrementalMerkleVoucherCapsuleDiffblueTest {
    * IncrementalMerkleVoucherCapsule#IncrementalMerkleVoucherCapsule(byte[])}
    */
   @Test
-  @Category(MaintainedByDiffblue.class)
+  @Category(ContributionFromDiffblue.class)
+  @ManagedByDiffblue
   @MethodsUnderTest({"void IncrementalMerkleVoucherCapsule.<init>(byte[])"})
   public void testNewIncrementalMerkleVoucherCapsule_whenXaxaxaxBytesIsUtf83()
       throws UnsupportedEncodingException {
@@ -539,7 +560,8 @@ public class IncrementalMerkleVoucherCapsuleDiffblueTest {
    * IncrementalMerkleVoucherCapsule#IncrementalMerkleVoucherCapsule(byte[])}
    */
   @Test
-  @Category(MaintainedByDiffblue.class)
+  @Category(ContributionFromDiffblue.class)
+  @ManagedByDiffblue
   @MethodsUnderTest({"void IncrementalMerkleVoucherCapsule.<init>(byte[])"})
   public void testNewIncrementalMerkleVoucherCapsule_whenXxaxaxaxBytesIsUtf8()
       throws UnsupportedEncodingException {
@@ -560,7 +582,8 @@ public class IncrementalMerkleVoucherCapsuleDiffblueTest {
    * <p>Method under test: {@link IncrementalMerkleVoucherCapsule#getTree()}
    */
   @Test
-  @Category(MaintainedByDiffblue.class)
+  @Category(ContributionFromDiffblue.class)
+  @ManagedByDiffblue
   @MethodsUnderTest({"IncrementalMerkleTreeCapsule IncrementalMerkleVoucherCapsule.getTree()"})
   public void testGetTree() {
     // Arrange and Act
@@ -583,7 +606,8 @@ public class IncrementalMerkleVoucherCapsuleDiffblueTest {
    * IncrementalMerkleVoucherCapsule#setTree(IncrementalMerkleTreeCapsule)}
    */
   @Test
-  @Category(MaintainedByDiffblue.class)
+  @Category(ContributionFromDiffblue.class)
+  @ManagedByDiffblue
   @MethodsUnderTest({"void IncrementalMerkleVoucherCapsule.setTree(IncrementalMerkleTreeCapsule)"})
   public void testSetTree_thenIncrementalMerkleVoucherCapsuleInstanceAllFieldsSizeIsOne() {
     // Arrange
@@ -616,7 +640,8 @@ public class IncrementalMerkleVoucherCapsuleDiffblueTest {
    * IncrementalMerkleVoucherCapsule#setTree(IncrementalMerkleTreeCapsule)}
    */
   @Test
-  @Category(MaintainedByDiffblue.class)
+  @Category(ContributionFromDiffblue.class)
+  @ManagedByDiffblue
   @MethodsUnderTest({"void IncrementalMerkleVoucherCapsule.setTree(IncrementalMerkleTreeCapsule)"})
   public void testSetTree_thenIncrementalMerkleVoucherCapsuleInstanceAllFieldsSizeIsTwo() {
     // Arrange
@@ -651,7 +676,8 @@ public class IncrementalMerkleVoucherCapsuleDiffblueTest {
    * IncrementalMerkleVoucherCapsule#setTree(IncrementalMerkleTreeCapsule)}
    */
   @Test
-  @Category(MaintainedByDiffblue.class)
+  @Category(ContributionFromDiffblue.class)
+  @ManagedByDiffblue
   @MethodsUnderTest({"void IncrementalMerkleVoucherCapsule.setTree(IncrementalMerkleTreeCapsule)"})
   public void testSetTree_thenIncrementalMerkleVoucherCapsuleInstanceAllFieldsSizeIsTwo2() {
     // Arrange
@@ -680,7 +706,8 @@ public class IncrementalMerkleVoucherCapsuleDiffblueTest {
    * <p>Method under test: {@link IncrementalMerkleVoucherCapsule#getFilled()}
    */
   @Test
-  @Category(MaintainedByDiffblue.class)
+  @Category(ContributionFromDiffblue.class)
+  @ManagedByDiffblue
   @MethodsUnderTest({"List IncrementalMerkleVoucherCapsule.getFilled()"})
   public void testGetFilled() {
     // Arrange, Act and Assert
@@ -693,7 +720,8 @@ public class IncrementalMerkleVoucherCapsuleDiffblueTest {
    * <p>Method under test: {@link IncrementalMerkleVoucherCapsule#getCursor()}
    */
   @Test
-  @Category(MaintainedByDiffblue.class)
+  @Category(ContributionFromDiffblue.class)
+  @ManagedByDiffblue
   @MethodsUnderTest({"IncrementalMerkleTreeCapsule IncrementalMerkleVoucherCapsule.getCursor()"})
   public void testGetCursor() {
     // Arrange and Act
@@ -716,7 +744,8 @@ public class IncrementalMerkleVoucherCapsuleDiffblueTest {
    * IncrementalMerkleVoucherCapsule#setCursor(IncrementalMerkleTreeCapsule)}
    */
   @Test
-  @Category(MaintainedByDiffblue.class)
+  @Category(ContributionFromDiffblue.class)
+  @ManagedByDiffblue
   @MethodsUnderTest({
     "void IncrementalMerkleVoucherCapsule.setCursor(IncrementalMerkleTreeCapsule)"
   })
@@ -752,7 +781,8 @@ public class IncrementalMerkleVoucherCapsuleDiffblueTest {
    * IncrementalMerkleVoucherCapsule#setCursor(IncrementalMerkleTreeCapsule)}
    */
   @Test
-  @Category(MaintainedByDiffblue.class)
+  @Category(ContributionFromDiffblue.class)
+  @ManagedByDiffblue
   @MethodsUnderTest({
     "void IncrementalMerkleVoucherCapsule.setCursor(IncrementalMerkleTreeCapsule)"
   })
@@ -787,7 +817,8 @@ public class IncrementalMerkleVoucherCapsuleDiffblueTest {
    * IncrementalMerkleVoucherCapsule#setCursor(IncrementalMerkleTreeCapsule)}
    */
   @Test
-  @Category(MaintainedByDiffblue.class)
+  @Category(ContributionFromDiffblue.class)
+  @ManagedByDiffblue
   @MethodsUnderTest({
     "void IncrementalMerkleVoucherCapsule.setCursor(IncrementalMerkleTreeCapsule)"
   })
@@ -818,7 +849,8 @@ public class IncrementalMerkleVoucherCapsuleDiffblueTest {
    * <p>Method under test: {@link IncrementalMerkleVoucherCapsule#clearCursor()}
    */
   @Test
-  @Category(MaintainedByDiffblue.class)
+  @Category(ContributionFromDiffblue.class)
+  @ManagedByDiffblue
   @MethodsUnderTest({"void IncrementalMerkleVoucherCapsule.clearCursor()"})
   public void testClearCursor() {
     // Arrange
@@ -840,7 +872,8 @@ public class IncrementalMerkleVoucherCapsuleDiffblueTest {
    * <p>Method under test: {@link IncrementalMerkleVoucherCapsule#getCursorDepth()}
    */
   @Test
-  @Category(MaintainedByDiffblue.class)
+  @Category(ContributionFromDiffblue.class)
+  @ManagedByDiffblue
   @MethodsUnderTest({"long IncrementalMerkleVoucherCapsule.getCursorDepth()"})
   public void testGetCursorDepth() {
     // Arrange, Act and Assert
@@ -853,7 +886,8 @@ public class IncrementalMerkleVoucherCapsuleDiffblueTest {
    * <p>Method under test: {@link IncrementalMerkleVoucherCapsule#setCursorDepth(long)}
    */
   @Test
-  @Category(MaintainedByDiffblue.class)
+  @Category(ContributionFromDiffblue.class)
+  @ManagedByDiffblue
   @MethodsUnderTest({"void IncrementalMerkleVoucherCapsule.setCursorDepth(long)"})
   public void testSetCursorDepth() {
     // Arrange
@@ -878,7 +912,8 @@ public class IncrementalMerkleVoucherCapsuleDiffblueTest {
    * <p>Method under test: {@link IncrementalMerkleVoucherCapsule#resetRt()}
    */
   @Test
-  @Category(MaintainedByDiffblue.class)
+  @Category(ContributionFromDiffblue.class)
+  @ManagedByDiffblue
   @MethodsUnderTest({"void IncrementalMerkleVoucherCapsule.resetRt()"})
   public void testResetRt() throws ZksnarkException {
     // Arrange
@@ -906,7 +941,8 @@ public class IncrementalMerkleVoucherCapsuleDiffblueTest {
    * <p>Method under test: {@link IncrementalMerkleVoucherCapsule#getOutputPoint()}
    */
   @Test
-  @Category(MaintainedByDiffblue.class)
+  @Category(ContributionFromDiffblue.class)
+  @ManagedByDiffblue
   @MethodsUnderTest({"ShieldContract.OutputPoint IncrementalMerkleVoucherCapsule.getOutputPoint()"})
   public void testGetOutputPoint() {
     // Arrange and Act
@@ -934,7 +970,8 @@ public class IncrementalMerkleVoucherCapsuleDiffblueTest {
    * <p>Method under test: {@link IncrementalMerkleVoucherCapsule#setOutputPoint(ByteString, int)}
    */
   @Test
-  @Category(MaintainedByDiffblue.class)
+  @Category(ContributionFromDiffblue.class)
+  @ManagedByDiffblue
   @MethodsUnderTest({"void IncrementalMerkleVoucherCapsule.setOutputPoint(ByteString, int)"})
   public void testSetOutputPoint_thenIncrementalMerkleVoucherCapsuleInstanceAllFieldsSizeIsOne() {
     // Arrange
@@ -965,7 +1002,8 @@ public class IncrementalMerkleVoucherCapsuleDiffblueTest {
    * <p>Method under test: {@link IncrementalMerkleVoucherCapsule#getData()}
    */
   @Test
-  @Category(MaintainedByDiffblue.class)
+  @Category(ContributionFromDiffblue.class)
+  @ManagedByDiffblue
   @MethodsUnderTest({"byte[] IncrementalMerkleVoucherCapsule.getData()"})
   public void testGetData() {
     // Arrange, Act and Assert
@@ -978,7 +1016,8 @@ public class IncrementalMerkleVoucherCapsuleDiffblueTest {
    * <p>Method under test: {@link IncrementalMerkleVoucherCapsule#getInstance()}
    */
   @Test
-  @Category(MaintainedByDiffblue.class)
+  @Category(ContributionFromDiffblue.class)
+  @ManagedByDiffblue
   @MethodsUnderTest({"IncrementalMerkleVoucher IncrementalMerkleVoucherCapsule.getInstance()"})
   public void testGetInstance() {
     // Arrange and Act
@@ -1009,7 +1048,8 @@ public class IncrementalMerkleVoucherCapsuleDiffblueTest {
    * <p>Method under test: {@link IncrementalMerkleVoucherCapsule#toMerkleVoucherContainer()}
    */
   @Test
-  @Category(MaintainedByDiffblue.class)
+  @Category(ContributionFromDiffblue.class)
+  @ManagedByDiffblue
   @MethodsUnderTest({
     "IncrementalMerkleVoucherContainer IncrementalMerkleVoucherCapsule.toMerkleVoucherContainer()"
   })

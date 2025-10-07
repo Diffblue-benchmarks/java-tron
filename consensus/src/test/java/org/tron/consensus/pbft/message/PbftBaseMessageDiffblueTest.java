@@ -5,7 +5,8 @@ import static org.junit.Assert.assertFalse;
 import static org.junit.Assert.assertNull;
 import static org.junit.Assert.assertSame;
 import static org.junit.Assert.assertTrue;
-import com.diffblue.cover.annotations.MaintainedByDiffblue;
+import com.diffblue.cover.annotations.ContributionFromDiffblue;
+import com.diffblue.cover.annotations.ManagedByDiffblue;
 import com.diffblue.cover.annotations.MethodsUnderTest;
 import java.io.UnsupportedEncodingException;
 import org.junit.Test;
@@ -20,7 +21,8 @@ public class PbftBaseMessageDiffblueTest {
    * <p>Method under test: {@link PbftBaseMessage#getAnswerMessage()}
    */
   @Test
-  @Category(MaintainedByDiffblue.class)
+  @Category(ContributionFromDiffblue.class)
+  @ManagedByDiffblue
   @MethodsUnderTest({"java.lang.Class PbftBaseMessage.getAnswerMessage()"})
   public void testGetAnswerMessage() {
     // Arrange, Act and Assert
@@ -33,7 +35,8 @@ public class PbftBaseMessageDiffblueTest {
    * <p>Method under test: {@link PbftBaseMessage#getPbftMessage()}
    */
   @Test
-  @Category(MaintainedByDiffblue.class)
+  @Category(ContributionFromDiffblue.class)
+  @ManagedByDiffblue
   @MethodsUnderTest({"PBFTMessage PbftBaseMessage.getPbftMessage()"})
   public void testGetPbftMessage() {
     // Arrange, Act and Assert
@@ -46,7 +49,8 @@ public class PbftBaseMessageDiffblueTest {
    * <p>Method under test: {@link PbftBaseMessage#setPbftMessage(PBFTMessage)}
    */
   @Test
-  @Category(MaintainedByDiffblue.class)
+  @Category(ContributionFromDiffblue.class)
+  @ManagedByDiffblue
   @MethodsUnderTest({"PbftBaseMessage PbftBaseMessage.setPbftMessage(PBFTMessage)"})
   public void testSetPbftMessage() {
     // Arrange
@@ -71,7 +75,8 @@ public class PbftBaseMessageDiffblueTest {
    * <p>Method under test: {@link PbftBaseMessage#isSwitch()}
    */
   @Test
-  @Category(MaintainedByDiffblue.class)
+  @Category(ContributionFromDiffblue.class)
+  @ManagedByDiffblue
   @MethodsUnderTest({"boolean PbftBaseMessage.isSwitch()"})
   public void testIsSwitch_givenPbftMessageSwitchIsTrue_thenReturnTrue() {
     // Arrange
@@ -93,7 +98,8 @@ public class PbftBaseMessageDiffblueTest {
    * <p>Method under test: {@link PbftBaseMessage#isSwitch()}
    */
   @Test
-  @Category(MaintainedByDiffblue.class)
+  @Category(ContributionFromDiffblue.class)
+  @ManagedByDiffblue
   @MethodsUnderTest({"boolean PbftBaseMessage.isSwitch()"})
   public void testIsSwitch_givenPbftMessage_thenReturnFalse() {
     // Arrange, Act and Assert
@@ -106,7 +112,8 @@ public class PbftBaseMessageDiffblueTest {
    * <p>Method under test: {@link PbftBaseMessage#setSwitch(boolean)}
    */
   @Test
-  @Category(MaintainedByDiffblue.class)
+  @Category(ContributionFromDiffblue.class)
+  @ManagedByDiffblue
   @MethodsUnderTest({"PbftBaseMessage PbftBaseMessage.setSwitch(boolean)"})
   public void testSetSwitch() {
     // Arrange
@@ -126,7 +133,8 @@ public class PbftBaseMessageDiffblueTest {
    * <p>Method under test: {@link PbftBaseMessage#setData(byte[])}
    */
   @Test
-  @Category(MaintainedByDiffblue.class)
+  @Category(ContributionFromDiffblue.class)
+  @ManagedByDiffblue
   @MethodsUnderTest({"PbftBaseMessage PbftBaseMessage.setData(byte[])"})
   public void testSetData() throws UnsupportedEncodingException {
     // Arrange
@@ -149,7 +157,8 @@ public class PbftBaseMessageDiffblueTest {
    * <p>Method under test: {@link PbftBaseMessage#setType(byte)}
    */
   @Test
-  @Category(MaintainedByDiffblue.class)
+  @Category(ContributionFromDiffblue.class)
+  @ManagedByDiffblue
   @MethodsUnderTest({"PbftBaseMessage PbftBaseMessage.setType(byte)"})
   public void testSetType() {
     // Arrange
@@ -170,7 +179,8 @@ public class PbftBaseMessageDiffblueTest {
    * <p>Method under test: {@link PbftBaseMessage#getPublicKey()}
    */
   @Test
-  @Category(MaintainedByDiffblue.class)
+  @Category(ContributionFromDiffblue.class)
+  @ManagedByDiffblue
   @MethodsUnderTest({"byte[] PbftBaseMessage.getPublicKey()"})
   public void testGetPublicKey() {
     // Arrange, Act and Assert

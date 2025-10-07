@@ -6,7 +6,8 @@ import static org.junit.Assert.assertFalse;
 import static org.junit.Assert.assertNull;
 import static org.junit.Assert.assertSame;
 import static org.junit.Assert.assertTrue;
-import com.diffblue.cover.annotations.MaintainedByDiffblue;
+import com.diffblue.cover.annotations.ContributionFromDiffblue;
+import com.diffblue.cover.annotations.ManagedByDiffblue;
 import com.diffblue.cover.annotations.MethodsUnderTest;
 import java.io.UnsupportedEncodingException;
 import java.math.BigInteger;
@@ -20,7 +21,8 @@ public class BN128G2DiffblueTest {
    * <p>Method under test: {@link BN128G2#BN128G2(Fp2, Fp2, Fp2)}
    */
   @Test
-  @Category(MaintainedByDiffblue.class)
+  @Category(ContributionFromDiffblue.class)
+  @ManagedByDiffblue
   @MethodsUnderTest({"void BN128G2.<init>(Fp2, Fp2, Fp2)"})
   public void testNewBn128g2() {
     // Arrange and Act
@@ -282,7 +284,8 @@ public class BN128G2DiffblueTest {
    * <p>Method under test: {@link BN128G2#BN128G2(BN128)}
    */
   @Test
-  @Category(MaintainedByDiffblue.class)
+  @Category(ContributionFromDiffblue.class)
+  @ManagedByDiffblue
   @MethodsUnderTest({"void BN128G2.<init>(BN128)"})
   public void testNewBn128g22() {
     // Arrange
@@ -318,7 +321,8 @@ public class BN128G2DiffblueTest {
    * <p>Method under test: {@link BN128G2#create(byte[], byte[], byte[], byte[])}
    */
   @Test
-  @Category(MaintainedByDiffblue.class)
+  @Category(ContributionFromDiffblue.class)
+  @ManagedByDiffblue
   @MethodsUnderTest({"BN128G2 BN128G2.create(byte[], byte[], byte[], byte[])"})
   public void testCreate_whenAxaxaxaxBytesIsUtf8_thenReturnNull()
       throws UnsupportedEncodingException {
@@ -345,7 +349,8 @@ public class BN128G2DiffblueTest {
    * <p>Method under test: {@link BN128G2#create(byte[], byte[], byte[], byte[])}
    */
   @Test
-  @Category(MaintainedByDiffblue.class)
+  @Category(ContributionFromDiffblue.class)
+  @ManagedByDiffblue
   @MethodsUnderTest({"BN128G2 BN128G2.create(byte[], byte[], byte[], byte[])"})
   public void testCreate_whenEmptyArrayOfByte_thenReturnNull() throws UnsupportedEncodingException {
     // Arrange and Act
@@ -371,7 +376,8 @@ public class BN128G2DiffblueTest {
    * <p>Method under test: {@link BN128G2#create(byte[], byte[], byte[], byte[])}
    */
   @Test
-  @Category(MaintainedByDiffblue.class)
+  @Category(ContributionFromDiffblue.class)
+  @ManagedByDiffblue
   @MethodsUnderTest({"BN128G2 BN128G2.create(byte[], byte[], byte[], byte[])"})
   public void testCreate_whenEmptyArrayOfByte_thenReturnNull2()
       throws UnsupportedEncodingException {
@@ -397,7 +403,8 @@ public class BN128G2DiffblueTest {
    * <p>Method under test: {@link BN128G2#toAffine()}
    */
   @Test
-  @Category(MaintainedByDiffblue.class)
+  @Category(ContributionFromDiffblue.class)
+  @ManagedByDiffblue
   @MethodsUnderTest({"BN128G2 BN128G2.toAffine()"})
   public void testToAffine_thenToEthNotationReturnBN128Fp2() {
     // Arrange
@@ -431,7 +438,8 @@ public class BN128G2DiffblueTest {
    * <p>Method under test: {@link BN128G2#toAffine()}
    */
   @Test
-  @Category(MaintainedByDiffblue.class)
+  @Category(ContributionFromDiffblue.class)
+  @ManagedByDiffblue
   @MethodsUnderTest({"BN128G2 BN128G2.toAffine()"})
   public void testToAffine_thenZeroReturnBN128Fp2() {
     // Arrange
@@ -464,7 +472,8 @@ public class BN128G2DiffblueTest {
    * <p>Method under test: {@link BN128G2#mulByP()}
    */
   @Test
-  @Category(MaintainedByDiffblue.class)
+  @Category(ContributionFromDiffblue.class)
+  @ManagedByDiffblue
   @MethodsUnderTest({"BN128G2 BN128G2.mulByP()"})
   public void testMulByP_thenZeroReturnBN128Fp2() {
     // Arrange

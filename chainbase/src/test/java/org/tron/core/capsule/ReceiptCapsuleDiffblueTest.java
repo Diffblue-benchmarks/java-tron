@@ -8,7 +8,8 @@ import static org.junit.Assert.assertTrue;
 import static org.mockito.Mockito.mock;
 import static org.mockito.Mockito.verify;
 import static org.mockito.Mockito.when;
-import com.diffblue.cover.annotations.MaintainedByDiffblue;
+import com.diffblue.cover.annotations.ContributionFromDiffblue;
+import com.diffblue.cover.annotations.ManagedByDiffblue;
 import com.diffblue.cover.annotations.MethodsUnderTest;
 import com.google.protobuf.UnknownFieldSet;
 import org.junit.Test;
@@ -33,7 +34,8 @@ public class ReceiptCapsuleDiffblueTest {
    * <p>Method under test: {@link ReceiptCapsule#ReceiptCapsule(Sha256Hash)}
    */
   @Test
-  @Category(MaintainedByDiffblue.class)
+  @Category(ContributionFromDiffblue.class)
+  @ManagedByDiffblue
   @MethodsUnderTest({"void ReceiptCapsule.<init>(Sha256Hash)"})
   public void testNewReceiptCapsule_whenNull_thenReturnReceiptAddressIsNull() {
     // Arrange and Act
@@ -61,7 +63,8 @@ public class ReceiptCapsuleDiffblueTest {
    * <p>Method under test: {@link ReceiptCapsule#ReceiptCapsule(Sha256Hash)}
    */
   @Test
-  @Category(MaintainedByDiffblue.class)
+  @Category(ContributionFromDiffblue.class)
+  @ManagedByDiffblue
   @MethodsUnderTest({"void ReceiptCapsule.<init>(Sha256Hash)"})
   public void testNewReceiptCapsule_whenZero_hash_thenReturnReceiptAddressIsZero_hash() {
     // Arrange and Act
@@ -87,7 +90,8 @@ public class ReceiptCapsuleDiffblueTest {
    * <p>Method under test: {@link ReceiptCapsule#copyReceipt(ReceiptCapsule)}
    */
   @Test
-  @Category(MaintainedByDiffblue.class)
+  @Category(ContributionFromDiffblue.class)
+  @ManagedByDiffblue
   @MethodsUnderTest({"ResourceReceipt ReceiptCapsule.copyReceipt(ReceiptCapsule)"})
   public void testCopyReceipt_thenReturnInitializationErrorStringIsEmptyString() {
     // Arrange and Act
@@ -125,7 +129,8 @@ public class ReceiptCapsuleDiffblueTest {
    * <p>Method under test: {@link ReceiptCapsule#checkForEnergyLimit(DynamicPropertiesStore)}
    */
   @Test
-  @Category(MaintainedByDiffblue.class)
+  @Category(ContributionFromDiffblue.class)
+  @ManagedByDiffblue
   @MethodsUnderTest({"boolean ReceiptCapsule.checkForEnergyLimit(DynamicPropertiesStore)"})
   public void testCheckForEnergyLimit_givenMinusOne_thenReturnFalse() {
     // Arrange
@@ -151,7 +156,8 @@ public class ReceiptCapsuleDiffblueTest {
    * <p>Method under test: {@link ReceiptCapsule#checkForEnergyLimit(DynamicPropertiesStore)}
    */
   @Test
-  @Category(MaintainedByDiffblue.class)
+  @Category(ContributionFromDiffblue.class)
+  @ManagedByDiffblue
   @MethodsUnderTest({"boolean ReceiptCapsule.checkForEnergyLimit(DynamicPropertiesStore)"})
   public void testCheckForEnergyLimit_givenOne_thenReturnTrue() {
     // Arrange
@@ -172,7 +178,8 @@ public class ReceiptCapsuleDiffblueTest {
    * <p>Method under test: {@link ReceiptCapsule#addNetFee(long)}
    */
   @Test
-  @Category(MaintainedByDiffblue.class)
+  @Category(ContributionFromDiffblue.class)
+  @ManagedByDiffblue
   @MethodsUnderTest({"void ReceiptCapsule.addNetFee(long)"})
   public void testAddNetFee() {
     // Arrange
@@ -196,7 +203,8 @@ public class ReceiptCapsuleDiffblueTest {
    * <p>Method under test: {@link ReceiptCapsule#getEnergyUsage()}
    */
   @Test
-  @Category(MaintainedByDiffblue.class)
+  @Category(ContributionFromDiffblue.class)
+  @ManagedByDiffblue
   @MethodsUnderTest({"long ReceiptCapsule.getEnergyUsage()"})
   public void testGetEnergyUsage() {
     // Arrange, Act and Assert
@@ -209,7 +217,8 @@ public class ReceiptCapsuleDiffblueTest {
    * <p>Method under test: {@link ReceiptCapsule#setEnergyUsage(long)}
    */
   @Test
-  @Category(MaintainedByDiffblue.class)
+  @Category(ContributionFromDiffblue.class)
+  @ManagedByDiffblue
   @MethodsUnderTest({"void ReceiptCapsule.setEnergyUsage(long)"})
   public void testSetEnergyUsage() {
     // Arrange
@@ -233,7 +242,8 @@ public class ReceiptCapsuleDiffblueTest {
    * <p>Method under test: {@link ReceiptCapsule#getEnergyFee()}
    */
   @Test
-  @Category(MaintainedByDiffblue.class)
+  @Category(ContributionFromDiffblue.class)
+  @ManagedByDiffblue
   @MethodsUnderTest({"long ReceiptCapsule.getEnergyFee()"})
   public void testGetEnergyFee() {
     // Arrange, Act and Assert
@@ -246,7 +256,8 @@ public class ReceiptCapsuleDiffblueTest {
    * <p>Method under test: {@link ReceiptCapsule#setEnergyFee(long)}
    */
   @Test
-  @Category(MaintainedByDiffblue.class)
+  @Category(ContributionFromDiffblue.class)
+  @ManagedByDiffblue
   @MethodsUnderTest({"void ReceiptCapsule.setEnergyFee(long)"})
   public void testSetEnergyFee() {
     // Arrange
@@ -270,7 +281,8 @@ public class ReceiptCapsuleDiffblueTest {
    * <p>Method under test: {@link ReceiptCapsule#getOriginEnergyUsage()}
    */
   @Test
-  @Category(MaintainedByDiffblue.class)
+  @Category(ContributionFromDiffblue.class)
+  @ManagedByDiffblue
   @MethodsUnderTest({"long ReceiptCapsule.getOriginEnergyUsage()"})
   public void testGetOriginEnergyUsage() {
     // Arrange, Act and Assert
@@ -283,7 +295,8 @@ public class ReceiptCapsuleDiffblueTest {
    * <p>Method under test: {@link ReceiptCapsule#setOriginEnergyUsage(long)}
    */
   @Test
-  @Category(MaintainedByDiffblue.class)
+  @Category(ContributionFromDiffblue.class)
+  @ManagedByDiffblue
   @MethodsUnderTest({"void ReceiptCapsule.setOriginEnergyUsage(long)"})
   public void testSetOriginEnergyUsage() {
     // Arrange
@@ -307,7 +320,8 @@ public class ReceiptCapsuleDiffblueTest {
    * <p>Method under test: {@link ReceiptCapsule#getEnergyUsageTotal()}
    */
   @Test
-  @Category(MaintainedByDiffblue.class)
+  @Category(ContributionFromDiffblue.class)
+  @ManagedByDiffblue
   @MethodsUnderTest({"long ReceiptCapsule.getEnergyUsageTotal()"})
   public void testGetEnergyUsageTotal() {
     // Arrange, Act and Assert
@@ -320,7 +334,8 @@ public class ReceiptCapsuleDiffblueTest {
    * <p>Method under test: {@link ReceiptCapsule#setEnergyUsageTotal(long)}
    */
   @Test
-  @Category(MaintainedByDiffblue.class)
+  @Category(ContributionFromDiffblue.class)
+  @ManagedByDiffblue
   @MethodsUnderTest({"void ReceiptCapsule.setEnergyUsageTotal(long)"})
   public void testSetEnergyUsageTotal() {
     // Arrange
@@ -344,7 +359,8 @@ public class ReceiptCapsuleDiffblueTest {
    * <p>Method under test: {@link ReceiptCapsule#getEnergyPenaltyTotal()}
    */
   @Test
-  @Category(MaintainedByDiffblue.class)
+  @Category(ContributionFromDiffblue.class)
+  @ManagedByDiffblue
   @MethodsUnderTest({"long ReceiptCapsule.getEnergyPenaltyTotal()"})
   public void testGetEnergyPenaltyTotal() {
     // Arrange, Act and Assert
@@ -357,7 +373,8 @@ public class ReceiptCapsuleDiffblueTest {
    * <p>Method under test: {@link ReceiptCapsule#setEnergyPenaltyTotal(long)}
    */
   @Test
-  @Category(MaintainedByDiffblue.class)
+  @Category(ContributionFromDiffblue.class)
+  @ManagedByDiffblue
   @MethodsUnderTest({"void ReceiptCapsule.setEnergyPenaltyTotal(long)"})
   public void testSetEnergyPenaltyTotal() {
     // Arrange
@@ -381,7 +398,8 @@ public class ReceiptCapsuleDiffblueTest {
    * <p>Method under test: {@link ReceiptCapsule#getNetUsage()}
    */
   @Test
-  @Category(MaintainedByDiffblue.class)
+  @Category(ContributionFromDiffblue.class)
+  @ManagedByDiffblue
   @MethodsUnderTest({"long ReceiptCapsule.getNetUsage()"})
   public void testGetNetUsage() {
     // Arrange, Act and Assert
@@ -394,7 +412,8 @@ public class ReceiptCapsuleDiffblueTest {
    * <p>Method under test: {@link ReceiptCapsule#setNetUsage(long)}
    */
   @Test
-  @Category(MaintainedByDiffblue.class)
+  @Category(ContributionFromDiffblue.class)
+  @ManagedByDiffblue
   @MethodsUnderTest({"void ReceiptCapsule.setNetUsage(long)"})
   public void testSetNetUsage() {
     // Arrange
@@ -418,7 +437,8 @@ public class ReceiptCapsuleDiffblueTest {
    * <p>Method under test: {@link ReceiptCapsule#getNetFee()}
    */
   @Test
-  @Category(MaintainedByDiffblue.class)
+  @Category(ContributionFromDiffblue.class)
+  @ManagedByDiffblue
   @MethodsUnderTest({"long ReceiptCapsule.getNetFee()"})
   public void testGetNetFee() {
     // Arrange, Act and Assert
@@ -431,7 +451,8 @@ public class ReceiptCapsuleDiffblueTest {
    * <p>Method under test: {@link ReceiptCapsule#setNetFee(long)}
    */
   @Test
-  @Category(MaintainedByDiffblue.class)
+  @Category(ContributionFromDiffblue.class)
+  @ManagedByDiffblue
   @MethodsUnderTest({"void ReceiptCapsule.setNetFee(long)"})
   public void testSetNetFee() {
     // Arrange
@@ -455,7 +476,8 @@ public class ReceiptCapsuleDiffblueTest {
    * <p>Method under test: {@link ReceiptCapsule#getResult()}
    */
   @Test
-  @Category(MaintainedByDiffblue.class)
+  @Category(ContributionFromDiffblue.class)
+  @ManagedByDiffblue
   @MethodsUnderTest({"contractResult ReceiptCapsule.getResult()"})
   public void testGetResult() {
     // Arrange, Act and Assert

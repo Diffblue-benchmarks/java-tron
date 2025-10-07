@@ -5,7 +5,8 @@ import static org.junit.Assert.assertNull;
 import static org.junit.Assert.assertSame;
 import static org.junit.Assert.assertThrows;
 import static org.junit.Assert.assertTrue;
-import com.diffblue.cover.annotations.MaintainedByDiffblue;
+import com.diffblue.cover.annotations.ContributionFromDiffblue;
+import com.diffblue.cover.annotations.ManagedByDiffblue;
 import com.diffblue.cover.annotations.MethodsUnderTest;
 import java.util.ArrayList;
 import java.util.List;
@@ -29,7 +30,8 @@ public class GenesisBlockDiffblueTest {
    * </ul>
    */
   @Test
-  @Category(MaintainedByDiffblue.class)
+  @Category(ContributionFromDiffblue.class)
+  @ManagedByDiffblue
   @MethodsUnderTest({
     "void GenesisBlock.<init>()",
     "List GenesisBlock.getAssets()",
@@ -62,7 +64,8 @@ public class GenesisBlockDiffblueTest {
    * <p>Method under test: {@link GenesisBlock#getDefault()}
    */
   @Test
-  @Category(MaintainedByDiffblue.class)
+  @Category(ContributionFromDiffblue.class)
+  @ManagedByDiffblue
   @MethodsUnderTest({"GenesisBlock GenesisBlock.getDefault()"})
   public void testGetDefault() {
     // Arrange and Act
@@ -88,7 +91,8 @@ public class GenesisBlockDiffblueTest {
    * <p>Method under test: {@link GenesisBlock#setAssets(List)}
    */
   @Test
-  @Category(MaintainedByDiffblue.class)
+  @Category(ContributionFromDiffblue.class)
+  @ManagedByDiffblue
   @MethodsUnderTest({"void GenesisBlock.setAssets(List)"})
   public void testSetAssets_givenGenesisBlockAssetsIsArrayList_thenGenesisBlockAssetsEmpty() {
     // Arrange
@@ -118,7 +122,8 @@ public class GenesisBlockDiffblueTest {
    * <p>Method under test: {@link GenesisBlock#setAssets(List)}
    */
   @Test
-  @Category(MaintainedByDiffblue.class)
+  @Category(ContributionFromDiffblue.class)
+  @ManagedByDiffblue
   @MethodsUnderTest({"void GenesisBlock.setAssets(List)"})
   public void testSetAssets_givenGenesisBlock_whenArrayList_thenGenesisBlockAssetsIsArrayList() {
     // Arrange
@@ -144,7 +149,8 @@ public class GenesisBlockDiffblueTest {
    * <p>Method under test: {@link GenesisBlock#setTimestamp(String)}
    */
   @Test
-  @Category(MaintainedByDiffblue.class)
+  @Category(ContributionFromDiffblue.class)
+  @ManagedByDiffblue
   @MethodsUnderTest({"void GenesisBlock.setTimestamp(String)"})
   public void testSetTimestamp_whenNull_thenGenesisBlockTimestampIsDefault_number() {
     // Arrange
@@ -168,7 +174,8 @@ public class GenesisBlockDiffblueTest {
    * <p>Method under test: {@link GenesisBlock#setTimestamp(String)}
    */
   @Test
-  @Category(MaintainedByDiffblue.class)
+  @Category(ContributionFromDiffblue.class)
+  @ManagedByDiffblue
   @MethodsUnderTest({"void GenesisBlock.setTimestamp(String)"})
   public void testSetTimestamp_whenTimestamp_thenThrowIllegalArgumentException() {
     // Arrange, Act and Assert
@@ -188,7 +195,8 @@ public class GenesisBlockDiffblueTest {
    * <p>Method under test: {@link GenesisBlock#setParentHash(String)}
    */
   @Test
-  @Category(MaintainedByDiffblue.class)
+  @Category(ContributionFromDiffblue.class)
+  @ManagedByDiffblue
   @MethodsUnderTest({"void GenesisBlock.setParentHash(String)"})
   public void testSetParentHash_whenNull_thenGenesisBlockParentHashIsDefault_number() {
     // Arrange
@@ -212,7 +220,8 @@ public class GenesisBlockDiffblueTest {
    * <p>Method under test: {@link GenesisBlock#setParentHash(String)}
    */
   @Test
-  @Category(MaintainedByDiffblue.class)
+  @Category(ContributionFromDiffblue.class)
+  @ManagedByDiffblue
   @MethodsUnderTest({"void GenesisBlock.setParentHash(String)"})
   public void testSetParentHash_whenParentHash_thenGenesisBlockParentHashIsParentHash() {
     // Arrange
@@ -237,7 +246,8 @@ public class GenesisBlockDiffblueTest {
    * <p>Method under test: {@link GenesisBlock#setWitnesses(List)}
    */
   @Test
-  @Category(MaintainedByDiffblue.class)
+  @Category(ContributionFromDiffblue.class)
+  @ManagedByDiffblue
   @MethodsUnderTest({"void GenesisBlock.setWitnesses(List)"})
   public void testSetWitnesses_givenGenesisBlock_thenGenesisBlockWitnessesIsArrayList() {
     // Arrange
@@ -261,7 +271,8 @@ public class GenesisBlockDiffblueTest {
    * <p>Method under test: {@link GenesisBlock#setWitnesses(List)}
    */
   @Test
-  @Category(MaintainedByDiffblue.class)
+  @Category(ContributionFromDiffblue.class)
+  @ManagedByDiffblue
   @MethodsUnderTest({"void GenesisBlock.setWitnesses(List)"})
   public void testSetWitnesses_thenGenesisBlockWitnessesEmpty() {
     // Arrange

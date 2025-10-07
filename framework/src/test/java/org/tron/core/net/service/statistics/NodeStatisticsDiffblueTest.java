@@ -3,7 +3,8 @@ package org.tron.core.net.service.statistics;
 import static org.junit.Assert.assertEquals;
 import static org.junit.Assert.assertNull;
 import static org.mockito.Mockito.mock;
-import com.diffblue.cover.annotations.MaintainedByDiffblue;
+import com.diffblue.cover.annotations.ContributionFromDiffblue;
+import com.diffblue.cover.annotations.ManagedByDiffblue;
 import com.diffblue.cover.annotations.MethodsUnderTest;
 import java.net.InetAddress;
 import org.junit.Test;
@@ -18,7 +19,8 @@ public class NodeStatisticsDiffblueTest {
    * <p>Method under test: {@link NodeStatistics#getDisconnectReason()}
    */
   @Test
-  @Category(MaintainedByDiffblue.class)
+  @Category(ContributionFromDiffblue.class)
+  @ManagedByDiffblue
   @MethodsUnderTest({"Protocol.ReasonCode NodeStatistics.getDisconnectReason()"})
   public void testGetDisconnectReason() {
     // Arrange
@@ -36,7 +38,8 @@ public class NodeStatisticsDiffblueTest {
    * <p>Method under test: {@link NodeStatistics#getDisconnectReason()}
    */
   @Test
-  @Category(MaintainedByDiffblue.class)
+  @Category(ContributionFromDiffblue.class)
+  @ManagedByDiffblue
   @MethodsUnderTest({"Protocol.ReasonCode NodeStatistics.getDisconnectReason()"})
   public void testGetDisconnectReason2() {
     // Arrange
@@ -59,7 +62,8 @@ public class NodeStatisticsDiffblueTest {
    * <p>Method under test: {@link NodeStatistics#getDisconnectReason()}
    */
   @Test
-  @Category(MaintainedByDiffblue.class)
+  @Category(ContributionFromDiffblue.class)
+  @ManagedByDiffblue
   @MethodsUnderTest({"Protocol.ReasonCode NodeStatistics.getDisconnectReason()"})
   public void testGetDisconnectReason_givenNodeStatistics_thenReturnUnknown() {
     // Arrange, Act and Assert
@@ -72,7 +76,8 @@ public class NodeStatisticsDiffblueTest {
    * <p>Method under test: {@link NodeStatistics#nodeDisconnectedRemote(Protocol.ReasonCode)}
    */
   @Test
-  @Category(MaintainedByDiffblue.class)
+  @Category(ContributionFromDiffblue.class)
+  @ManagedByDiffblue
   @MethodsUnderTest({"void NodeStatistics.nodeDisconnectedRemote(Protocol.ReasonCode)"})
   public void testNodeDisconnectedRemote() {
     // Arrange
@@ -93,7 +98,8 @@ public class NodeStatisticsDiffblueTest {
    * <p>Method under test: {@link NodeStatistics#nodeDisconnectedLocal(Protocol.ReasonCode)}
    */
   @Test
-  @Category(MaintainedByDiffblue.class)
+  @Category(ContributionFromDiffblue.class)
+  @ManagedByDiffblue
   @MethodsUnderTest({"void NodeStatistics.nodeDisconnectedLocal(Protocol.ReasonCode)"})
   public void testNodeDisconnectedLocal() {
     // Arrange
@@ -121,7 +127,8 @@ public class NodeStatisticsDiffblueTest {
    * </ul>
    */
   @Test
-  @Category(MaintainedByDiffblue.class)
+  @Category(ContributionFromDiffblue.class)
+  @ManagedByDiffblue
   @MethodsUnderTest({
     "int NodeStatistics.getDisconnectTimes()",
     "Protocol.ReasonCode NodeStatistics.getLocalDisconnectReason()",
@@ -149,7 +156,8 @@ public class NodeStatisticsDiffblueTest {
    * <p>Method under test: default or parameterless constructor of {@link NodeStatistics}
    */
   @Test
-  @Category(MaintainedByDiffblue.class)
+  @Category(ContributionFromDiffblue.class)
+  @ManagedByDiffblue
   @MethodsUnderTest({"void NodeStatistics.<init>()"})
   public void testNewNodeStatistics() {
     // Arrange and Act

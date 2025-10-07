@@ -3,7 +3,8 @@ package org.tron.common.utils;
 import static org.junit.Assert.assertEquals;
 import static org.junit.Assert.assertFalse;
 import static org.junit.Assert.assertTrue;
-import com.diffblue.cover.annotations.MaintainedByDiffblue;
+import com.diffblue.cover.annotations.ContributionFromDiffblue;
+import com.diffblue.cover.annotations.ManagedByDiffblue;
 import com.diffblue.cover.annotations.MethodsUnderTest;
 import java.io.File;
 import java.io.IOException;
@@ -24,7 +25,8 @@ public class FileUtilDiffblueTest {
    * <p>Method under test: {@link FileUtil#recursiveList(String)}
    */
   @Test
-  @Category(MaintainedByDiffblue.class)
+  @Category(ContributionFromDiffblue.class)
+  @ManagedByDiffblue
   @MethodsUnderTest({"List FileUtil.recursiveList(String)"})
   public void testRecursiveList_whenPath_thenReturnEmpty() throws IOException {
     // Arrange and Act
@@ -40,7 +42,8 @@ public class FileUtilDiffblueTest {
    * <p>Method under test: {@link FileUtil#recursiveDelete(String)}
    */
   @Test
-  @Category(MaintainedByDiffblue.class)
+  @Category(ContributionFromDiffblue.class)
+  @ManagedByDiffblue
   @MethodsUnderTest({"boolean FileUtil.recursiveDelete(String)"})
   public void testRecursiveDelete() {
     // Arrange, Act and Assert
@@ -53,7 +56,8 @@ public class FileUtilDiffblueTest {
    * <p>Method under test: {@link FileUtil#readData(String, char[])}
    */
   @Test
-  @Category(MaintainedByDiffblue.class)
+  @Category(ContributionFromDiffblue.class)
+  @ManagedByDiffblue
   @MethodsUnderTest({"int FileUtil.readData(String, char[])"})
   public void testReadData() {
     // Arrange and Act
@@ -74,7 +78,8 @@ public class FileUtilDiffblueTest {
    * <p>Method under test: {@link FileUtil#deleteDir(File)}
    */
   @Test
-  @Category(MaintainedByDiffblue.class)
+  @Category(ContributionFromDiffblue.class)
+  @ManagedByDiffblue
   @MethodsUnderTest({"boolean FileUtil.deleteDir(File)"})
   public void testDeleteDir_whenPropertyIsJavaIoTmpdirIsTestTxtToFile_thenReturnFalse() {
     // Arrange, Act and Assert
@@ -88,7 +93,8 @@ public class FileUtilDiffblueTest {
    * <p>Method under test: {@link FileUtil#isExists(String)}
    */
   @Test
-  @Category(MaintainedByDiffblue.class)
+  @Category(ContributionFromDiffblue.class)
+  @ManagedByDiffblue
   @MethodsUnderTest({"boolean FileUtil.isExists(String)"})
   public void testIsExists() {
     // Arrange, Act and Assert

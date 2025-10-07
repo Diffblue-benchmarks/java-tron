@@ -2,7 +2,8 @@ package org.tron.core.capsule.utils;
 
 import static org.junit.Assert.assertEquals;
 import static org.junit.Assert.assertTrue;
-import com.diffblue.cover.annotations.MaintainedByDiffblue;
+import com.diffblue.cover.annotations.ContributionFromDiffblue;
+import com.diffblue.cover.annotations.ManagedByDiffblue;
 import com.diffblue.cover.annotations.MethodsUnderTest;
 import java.io.UnsupportedEncodingException;
 import org.junit.Test;
@@ -17,7 +18,8 @@ public class TxInputUtilDiffblueTest {
    * <p>Method under test: {@link TxInputUtil#newTxInput(byte[], long, byte[], byte[])}
    */
   @Test
-  @Category(MaintainedByDiffblue.class)
+  @Category(ContributionFromDiffblue.class)
+  @ManagedByDiffblue
   @MethodsUnderTest({"TXInput TxInputUtil.newTxInput(byte[], long, byte[], byte[])"})
   public void testNewTxInput() throws UnsupportedEncodingException {
     // Arrange and Act

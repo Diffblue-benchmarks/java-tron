@@ -3,7 +3,8 @@ package org.tron.core.services;
 import static org.junit.Assert.assertEquals;
 import static org.junit.Assert.assertSame;
 import static org.junit.Assert.assertTrue;
-import com.diffblue.cover.annotations.MaintainedByDiffblue;
+import com.diffblue.cover.annotations.ContributionFromDiffblue;
+import com.diffblue.cover.annotations.ManagedByDiffblue;
 import com.diffblue.cover.annotations.MethodsUnderTest;
 import java.util.HashSet;
 import java.util.Set;
@@ -25,7 +26,8 @@ public class WitnessProductBlockServiceDiffblueTest {
    * <p>Method under test: {@link CheatWitnessInfo#add(BlockCapsule)}
    */
   @Test
-  @Category(MaintainedByDiffblue.class)
+  @Category(ContributionFromDiffblue.class)
+  @ManagedByDiffblue
   @MethodsUnderTest({"CheatWitnessInfo CheatWitnessInfo.add(BlockCapsule)"})
   public void testCheatWitnessInfoAdd_whenNull_thenCheatWitnessInfoBlockCapsuleSetSizeIsOne() {
     // Arrange
@@ -45,7 +47,8 @@ public class WitnessProductBlockServiceDiffblueTest {
    * <p>Method under test: {@link CheatWitnessInfo#clear()}
    */
   @Test
-  @Category(MaintainedByDiffblue.class)
+  @Category(ContributionFromDiffblue.class)
+  @ManagedByDiffblue
   @MethodsUnderTest({"CheatWitnessInfo CheatWitnessInfo.clear()"})
   public void testCheatWitnessInfoClear() {
     // Arrange
@@ -64,7 +67,8 @@ public class WitnessProductBlockServiceDiffblueTest {
    * <p>Method under test: {@link CheatWitnessInfo#getBlockCapsuleSet()}
    */
   @Test
-  @Category(MaintainedByDiffblue.class)
+  @Category(ContributionFromDiffblue.class)
+  @ManagedByDiffblue
   @MethodsUnderTest({"Set CheatWitnessInfo.getBlockCapsuleSet()"})
   public void testCheatWitnessInfoGetBlockCapsuleSet() {
     // Arrange, Act and Assert
@@ -87,7 +91,8 @@ public class WitnessProductBlockServiceDiffblueTest {
    * </ul>
    */
   @Test
-  @Category(MaintainedByDiffblue.class)
+  @Category(ContributionFromDiffblue.class)
+  @ManagedByDiffblue
   @MethodsUnderTest({
     "long CheatWitnessInfo.getLatestBlockNum()",
     "long CheatWitnessInfo.getTime()",
@@ -133,7 +138,8 @@ public class WitnessProductBlockServiceDiffblueTest {
    * <p>Method under test: {@link CheatWitnessInfo#increment()}
    */
   @Test
-  @Category(MaintainedByDiffblue.class)
+  @Category(ContributionFromDiffblue.class)
+  @ManagedByDiffblue
   @MethodsUnderTest({"CheatWitnessInfo CheatWitnessInfo.increment()"})
   public void testCheatWitnessInfoIncrement_givenCheatWitnessInfo_thenReturnCheatWitnessInfo() {
     // Arrange
@@ -152,7 +158,8 @@ public class WitnessProductBlockServiceDiffblueTest {
    * <p>Method under test: default or parameterless constructor of {@link CheatWitnessInfo}
    */
   @Test
-  @Category(MaintainedByDiffblue.class)
+  @Category(ContributionFromDiffblue.class)
+  @ManagedByDiffblue
   @MethodsUnderTest({"void CheatWitnessInfo.<init>()"})
   public void testCheatWitnessInfoNewCheatWitnessInfo() {
     // Arrange and Act
@@ -171,7 +178,8 @@ public class WitnessProductBlockServiceDiffblueTest {
    * <p>Method under test: {@link CheatWitnessInfo#setBlockCapsuleSet(Set)}
    */
   @Test
-  @Category(MaintainedByDiffblue.class)
+  @Category(ContributionFromDiffblue.class)
+  @ManagedByDiffblue
   @MethodsUnderTest({"CheatWitnessInfo CheatWitnessInfo.setBlockCapsuleSet(Set)"})
   public void testCheatWitnessInfoSetBlockCapsuleSet() {
     // Arrange
@@ -191,7 +199,8 @@ public class WitnessProductBlockServiceDiffblueTest {
    * <p>Method under test: {@link WitnessProductBlockService#queryCheatWitnessInfo()}
    */
   @Test
-  @Category(MaintainedByDiffblue.class)
+  @Category(ContributionFromDiffblue.class)
+  @ManagedByDiffblue
   @MethodsUnderTest({"java.util.Map WitnessProductBlockService.queryCheatWitnessInfo()"})
   public void testQueryCheatWitnessInfo() {
     // Arrange, Act and Assert

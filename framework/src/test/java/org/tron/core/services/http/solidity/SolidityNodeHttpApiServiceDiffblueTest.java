@@ -5,7 +5,8 @@ import static org.mockito.Mockito.atLeast;
 import static org.mockito.Mockito.doNothing;
 import static org.mockito.Mockito.doThrow;
 import static org.mockito.Mockito.verify;
-import com.diffblue.cover.annotations.MaintainedByDiffblue;
+import com.diffblue.cover.annotations.ContributionFromDiffblue;
+import com.diffblue.cover.annotations.ManagedByDiffblue;
 import com.diffblue.cover.annotations.MethodsUnderTest;
 import javax.servlet.FilterConfig;
 import javax.servlet.ServletConfig;
@@ -167,7 +168,8 @@ public class SolidityNodeHttpApiServiceDiffblueTest {
    * <p>Method under test: {@link SolidityNodeHttpApiService#start()}
    */
   @Test
-  @Category(MaintainedByDiffblue.class)
+  @Category(ContributionFromDiffblue.class)
+  @ManagedByDiffblue
   @MethodsUnderTest({"void SolidityNodeHttpApiService.start()"})
   public void testStart_givenScanShieldedTRC20NotesByOvkServletInitDoesNothing_thenCallsInit()
       throws ServletException {
@@ -281,7 +283,8 @@ public class SolidityNodeHttpApiServiceDiffblueTest {
    * <p>Method under test: {@link SolidityNodeHttpApiService#start()}
    */
   @Test
-  @Category(MaintainedByDiffblue.class)
+  @Category(ContributionFromDiffblue.class)
+  @ManagedByDiffblue
   @MethodsUnderTest({"void SolidityNodeHttpApiService.start()"})
   public void testStart_givenScanShieldedTRC20NotesByOvkServletInitThrowRuntimeException()
       throws ServletException {

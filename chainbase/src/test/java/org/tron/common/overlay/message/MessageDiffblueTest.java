@@ -1,7 +1,8 @@
 package org.tron.common.overlay.message;
 
 import static org.junit.Assert.assertThrows;
-import com.diffblue.cover.annotations.MaintainedByDiffblue;
+import com.diffblue.cover.annotations.ContributionFromDiffblue;
+import com.diffblue.cover.annotations.ManagedByDiffblue;
 import com.diffblue.cover.annotations.MethodsUnderTest;
 import java.io.UnsupportedEncodingException;
 import org.junit.Test;
@@ -15,7 +16,8 @@ public class MessageDiffblueTest {
    * <p>Method under test: {@link Message#compareBytes(byte[], byte[])}
    */
   @Test
-  @Category(MaintainedByDiffblue.class)
+  @Category(ContributionFromDiffblue.class)
+  @ManagedByDiffblue
   @MethodsUnderTest({"void Message.compareBytes(byte[], byte[])"})
   public void testCompareBytes() throws UnsupportedEncodingException, P2pException {
     // Arrange, Act and Assert
@@ -37,7 +39,8 @@ public class MessageDiffblueTest {
    * <p>Method under test: {@link Message#compareBytes(byte[], byte[])}
    */
   @Test
-  @Category(MaintainedByDiffblue.class)
+  @Category(ContributionFromDiffblue.class)
+  @ManagedByDiffblue
   @MethodsUnderTest({"void Message.compareBytes(byte[], byte[])"})
   public void testCompareBytes_whenEmptyArrayOfByte_thenThrowP2pException()
       throws UnsupportedEncodingException, P2pException {

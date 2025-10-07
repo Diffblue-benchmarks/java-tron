@@ -2,7 +2,8 @@ package org.tron.core.vm.program.listener;
 
 import static org.junit.Assert.assertFalse;
 import static org.junit.Assert.assertTrue;
-import com.diffblue.cover.annotations.MaintainedByDiffblue;
+import com.diffblue.cover.annotations.ContributionFromDiffblue;
+import com.diffblue.cover.annotations.ManagedByDiffblue;
 import com.diffblue.cover.annotations.MethodsUnderTest;
 import org.junit.Test;
 import org.junit.experimental.categories.Category;
@@ -19,7 +20,8 @@ public class CompositeProgramListenerDiffblueTest {
    * <p>Method under test: {@link CompositeProgramListener#isEmpty()}
    */
   @Test
-  @Category(MaintainedByDiffblue.class)
+  @Category(ContributionFromDiffblue.class)
+  @ManagedByDiffblue
   @MethodsUnderTest({"boolean CompositeProgramListener.isEmpty()"})
   public void testIsEmpty_givenCompositeProgramListener_thenReturnTrue() {
     // Arrange, Act and Assert
@@ -36,7 +38,8 @@ public class CompositeProgramListenerDiffblueTest {
    * <p>Method under test: {@link CompositeProgramListener#isEmpty()}
    */
   @Test
-  @Category(MaintainedByDiffblue.class)
+  @Category(ContributionFromDiffblue.class)
+  @ManagedByDiffblue
   @MethodsUnderTest({"boolean CompositeProgramListener.isEmpty()"})
   public void testIsEmpty_thenReturnFalse() {
     // Arrange
@@ -53,7 +56,8 @@ public class CompositeProgramListenerDiffblueTest {
    * <p>Method under test: default or parameterless constructor of {@link CompositeProgramListener}
    */
   @Test
-  @Category(MaintainedByDiffblue.class)
+  @Category(ContributionFromDiffblue.class)
+  @ManagedByDiffblue
   @MethodsUnderTest({"void CompositeProgramListener.<init>()"})
   public void testNewCompositeProgramListener() {
     // Arrange, Act and Assert

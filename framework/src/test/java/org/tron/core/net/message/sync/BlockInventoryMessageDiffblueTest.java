@@ -4,7 +4,8 @@ import static org.junit.Assert.assertArrayEquals;
 import static org.junit.Assert.assertEquals;
 import static org.junit.Assert.assertNull;
 import static org.junit.Assert.assertTrue;
-import com.diffblue.cover.annotations.MaintainedByDiffblue;
+import com.diffblue.cover.annotations.ContributionFromDiffblue;
+import com.diffblue.cover.annotations.ManagedByDiffblue;
 import com.diffblue.cover.annotations.MethodsUnderTest;
 import com.google.protobuf.ByteString;
 import io.netty.buffer.ByteBuf;
@@ -30,7 +31,8 @@ public class BlockInventoryMessageDiffblueTest {
    * BlockInventory.Type)}
    */
   @Test
-  @Category(MaintainedByDiffblue.class)
+  @Category(ContributionFromDiffblue.class)
+  @ManagedByDiffblue
   @MethodsUnderTest({"void BlockInventoryMessage.<init>(List, BlockInventory.Type)"})
   public void testNewBlockInventoryMessage() {
     // Arrange
@@ -102,7 +104,8 @@ public class BlockInventoryMessageDiffblueTest {
    * BlockInventory.Type)}
    */
   @Test
-  @Category(MaintainedByDiffblue.class)
+  @Category(ContributionFromDiffblue.class)
+  @ManagedByDiffblue
   @MethodsUnderTest({"void BlockInventoryMessage.<init>(List, BlockInventory.Type)"})
   public void testNewBlockInventoryMessage_givenBlockId_thenReturnBlockIdsSizeIsTwo() {
     // Arrange
@@ -132,7 +135,8 @@ public class BlockInventoryMessageDiffblueTest {
    * BlockInventory.Type)}
    */
   @Test
-  @Category(MaintainedByDiffblue.class)
+  @Category(ContributionFromDiffblue.class)
+  @ManagedByDiffblue
   @MethodsUnderTest({"void BlockInventoryMessage.<init>(List, BlockInventory.Type)"})
   public void testNewBlockInventoryMessage_thenReturnBlockInventorySerializedSizeIsFortySeven() {
     // Arrange
@@ -185,7 +189,8 @@ public class BlockInventoryMessageDiffblueTest {
    * BlockInventory.Type)}
    */
   @Test
-  @Category(MaintainedByDiffblue.class)
+  @Category(ContributionFromDiffblue.class)
+  @ManagedByDiffblue
   @MethodsUnderTest({"void BlockInventoryMessage.<init>(List, BlockInventory.Type)"})
   public void testNewBlockInventoryMessage_thenReturnBlockInventorySerializedSizeIsFortySix() {
     // Arrange
@@ -327,7 +332,8 @@ public class BlockInventoryMessageDiffblueTest {
    * BlockInventory.Type)}
    */
   @Test
-  @Category(MaintainedByDiffblue.class)
+  @Category(ContributionFromDiffblue.class)
+  @ManagedByDiffblue
   @MethodsUnderTest({"void BlockInventoryMessage.<init>(List, BlockInventory.Type)"})
   public void testNewBlockInventoryMessage_thenReturnBlockInventorySerializedSizeIsThirtyEight() {
     // Arrange
@@ -380,7 +386,8 @@ public class BlockInventoryMessageDiffblueTest {
    * BlockInventory.Type)}
    */
   @Test
-  @Category(MaintainedByDiffblue.class)
+  @Category(ContributionFromDiffblue.class)
+  @ManagedByDiffblue
   @MethodsUnderTest({"void BlockInventoryMessage.<init>(List, BlockInventory.Type)"})
   public void testNewBlockInventoryMessage_thenReturnBlockInventorySerializedSizeIsZero() {
     // Arrange and Act
@@ -418,7 +425,8 @@ public class BlockInventoryMessageDiffblueTest {
    * <p>Method under test: {@link BlockInventoryMessage#BlockInventoryMessage(byte[])}
    */
   @Test
-  @Category(MaintainedByDiffblue.class)
+  @Category(ContributionFromDiffblue.class)
+  @ManagedByDiffblue
   @MethodsUnderTest({"void BlockInventoryMessage.<init>(byte[])"})
   public void testNewBlockInventoryMessage_thenSendDataReturnUnpooledHeapByteBuf()
       throws Exception {
@@ -446,7 +454,8 @@ public class BlockInventoryMessageDiffblueTest {
    * BlockInventory.Type)}
    */
   @Test
-  @Category(MaintainedByDiffblue.class)
+  @Category(ContributionFromDiffblue.class)
+  @ManagedByDiffblue
   @MethodsUnderTest({"void BlockInventoryMessage.<init>(List, BlockInventory.Type)"})
   public void testNewBlockInventoryMessage_whenAdvtise_thenReturnBlockInventoryTypeValueIsOne() {
     // Arrange and Act
@@ -483,7 +492,8 @@ public class BlockInventoryMessageDiffblueTest {
    * <p>Method under test: {@link BlockInventoryMessage#getBlockIds()}
    */
   @Test
-  @Category(MaintainedByDiffblue.class)
+  @Category(ContributionFromDiffblue.class)
+  @ManagedByDiffblue
   @MethodsUnderTest({"List BlockInventoryMessage.getBlockIds()"})
   public void testGetBlockIds_thenReturnEmpty() throws Exception {
     // Arrange

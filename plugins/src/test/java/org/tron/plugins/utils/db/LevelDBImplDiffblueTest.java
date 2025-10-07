@@ -8,7 +8,8 @@ import static org.mockito.Mockito.doNothing;
 import static org.mockito.Mockito.mock;
 import static org.mockito.Mockito.verify;
 import static org.mockito.Mockito.when;
-import com.diffblue.cover.annotations.MaintainedByDiffblue;
+import com.diffblue.cover.annotations.ContributionFromDiffblue;
+import com.diffblue.cover.annotations.ManagedByDiffblue;
 import com.diffblue.cover.annotations.MethodsUnderTest;
 import java.io.IOException;
 import java.io.UnsupportedEncodingException;
@@ -41,7 +42,8 @@ public class LevelDBImplDiffblueTest {
    * <p>Method under test: {@link LevelDBImpl#get(byte[])}
    */
   @Test
-  @Category(MaintainedByDiffblue.class)
+  @Category(ContributionFromDiffblue.class)
+  @ManagedByDiffblue
   @MethodsUnderTest({"byte[] LevelDBImpl.get(byte[])"})
   public void testGet_givenDbImplGetReturnAxaxaxaxBytesIsUtf8_thenReturnAxaxaxaxBytesIsUtf8()
       throws UnsupportedEncodingException, DBException {
@@ -70,7 +72,8 @@ public class LevelDBImplDiffblueTest {
    * <p>Method under test: {@link LevelDBImpl#put(byte[], byte[])}
    */
   @Test
-  @Category(MaintainedByDiffblue.class)
+  @Category(ContributionFromDiffblue.class)
+  @ManagedByDiffblue
   @MethodsUnderTest({"void LevelDBImpl.put(byte[], byte[])"})
   public void testPut_givenDbImplPutDoesNothing_thenCallsPut()
       throws UnsupportedEncodingException, DBException {
@@ -99,7 +102,8 @@ public class LevelDBImplDiffblueTest {
    * <p>Method under test: {@link LevelDBImpl#delete(byte[])}
    */
   @Test
-  @Category(MaintainedByDiffblue.class)
+  @Category(ContributionFromDiffblue.class)
+  @ManagedByDiffblue
   @MethodsUnderTest({"void LevelDBImpl.delete(byte[])"})
   public void testDelete_givenDbImplDeleteDoesNothing_thenCallsDelete()
       throws UnsupportedEncodingException, DBException {
@@ -126,7 +130,8 @@ public class LevelDBImplDiffblueTest {
    * <p>Method under test: {@link LevelDBImpl#iterator()}
    */
   @Test
-  @Category(MaintainedByDiffblue.class)
+  @Category(ContributionFromDiffblue.class)
+  @ManagedByDiffblue
   @MethodsUnderTest({"DBIterator LevelDBImpl.iterator()"})
   public void testIterator_thenReturnLevelDBIterator() {
     // Arrange
@@ -155,7 +160,8 @@ public class LevelDBImplDiffblueTest {
    * <p>Method under test: {@link LevelDBImpl#size()}
    */
   @Test
-  @Category(MaintainedByDiffblue.class)
+  @Category(ContributionFromDiffblue.class)
+  @ManagedByDiffblue
   @MethodsUnderTest({"long LevelDBImpl.size()"})
   public void testSize_givenSeekingIteratorAdapterForEachRemainingDoesNothing_thenReturnZero() {
     // Arrange
@@ -189,7 +195,8 @@ public class LevelDBImplDiffblueTest {
    * <p>Method under test: {@link LevelDBImpl#close()}
    */
   @Test
-  @Category(MaintainedByDiffblue.class)
+  @Category(ContributionFromDiffblue.class)
+  @ManagedByDiffblue
   @MethodsUnderTest({"void LevelDBImpl.close()"})
   public void testClose_givenNativeDBDeleteDoesNothing_thenCallsDelete() throws IOException {
     // Arrange

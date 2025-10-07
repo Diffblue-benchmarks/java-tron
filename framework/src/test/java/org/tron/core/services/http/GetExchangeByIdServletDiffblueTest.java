@@ -12,7 +12,8 @@ import static org.mockito.Mockito.doNothing;
 import static org.mockito.Mockito.mock;
 import static org.mockito.Mockito.verify;
 import static org.mockito.Mockito.when;
-import com.diffblue.cover.annotations.MaintainedByDiffblue;
+import com.diffblue.cover.annotations.ContributionFromDiffblue;
+import com.diffblue.cover.annotations.ManagedByDiffblue;
 import com.diffblue.cover.annotations.MethodsUnderTest;
 import com.google.protobuf.ByteString;
 import java.io.BufferedReader;
@@ -63,7 +64,8 @@ public class GetExchangeByIdServletDiffblueTest {
    * HttpServletResponse)}
    */
   @Test
-  @Category(MaintainedByDiffblue.class)
+  @Category(ContributionFromDiffblue.class)
+  @ManagedByDiffblue
   @MethodsUnderTest({"void GetExchangeByIdServlet.doPost(HttpServletRequest, HttpServletResponse)"})
   public void testDoPost() throws IOException {
     // Arrange
@@ -97,7 +99,8 @@ public class GetExchangeByIdServletDiffblueTest {
    * HttpServletResponse)}
    */
   @Test
-  @Category(MaintainedByDiffblue.class)
+  @Category(ContributionFromDiffblue.class)
+  @ManagedByDiffblue
   @MethodsUnderTest({"void GetExchangeByIdServlet.doPost(HttpServletRequest, HttpServletResponse)"})
   public void testDoPost2() throws IOException {
     // Arrange
@@ -128,7 +131,8 @@ public class GetExchangeByIdServletDiffblueTest {
    * HttpServletResponse)}
    */
   @Test
-  @Category(MaintainedByDiffblue.class)
+  @Category(ContributionFromDiffblue.class)
+  @ManagedByDiffblue
   @MethodsUnderTest({"void GetExchangeByIdServlet.doPost(HttpServletRequest, HttpServletResponse)"})
   public void testDoPost3() throws IOException {
     // Arrange
@@ -169,7 +173,8 @@ public class GetExchangeByIdServletDiffblueTest {
    * HttpServletResponse)}
    */
   @Test
-  @Category(MaintainedByDiffblue.class)
+  @Category(ContributionFromDiffblue.class)
+  @ManagedByDiffblue
   @MethodsUnderTest({"void GetExchangeByIdServlet.doPost(HttpServletRequest, HttpServletResponse)"})
   public void testDoPost4() throws IOException {
     // Arrange
@@ -221,7 +226,8 @@ public class GetExchangeByIdServletDiffblueTest {
    * HttpServletResponse)}
    */
   @Test
-  @Category(MaintainedByDiffblue.class)
+  @Category(ContributionFromDiffblue.class)
+  @ManagedByDiffblue
   @MethodsUnderTest({"void GetExchangeByIdServlet.doPost(HttpServletRequest, HttpServletResponse)"})
   public void testDoPost_thenHttpServletResponseWrapperWithResponseIsResponseResponseResponse()
       throws IOException {
@@ -288,7 +294,8 @@ public class GetExchangeByIdServletDiffblueTest {
    * HttpServletResponse)}
    */
   @Test
-  @Category(MaintainedByDiffblue.class)
+  @Category(ContributionFromDiffblue.class)
+  @ManagedByDiffblue
   @MethodsUnderTest({"void GetExchangeByIdServlet.doGet(HttpServletRequest, HttpServletResponse)"})
   public void testDoGet() throws IOException {
     // Arrange
@@ -320,7 +327,8 @@ public class GetExchangeByIdServletDiffblueTest {
    * HttpServletResponse)}
    */
   @Test
-  @Category(MaintainedByDiffblue.class)
+  @Category(ContributionFromDiffblue.class)
+  @ManagedByDiffblue
   @MethodsUnderTest({"void GetExchangeByIdServlet.doGet(HttpServletRequest, HttpServletResponse)"})
   public void testDoGet2() throws IOException {
     // Arrange
@@ -351,7 +359,8 @@ public class GetExchangeByIdServletDiffblueTest {
    * HttpServletResponse)}
    */
   @Test
-  @Category(MaintainedByDiffblue.class)
+  @Category(ContributionFromDiffblue.class)
+  @ManagedByDiffblue
   @MethodsUnderTest({"void GetExchangeByIdServlet.doGet(HttpServletRequest, HttpServletResponse)"})
   public void testDoGet3() throws IOException {
     // Arrange
@@ -384,7 +393,8 @@ public class GetExchangeByIdServletDiffblueTest {
    * HttpServletResponse)}
    */
   @Test
-  @Category(MaintainedByDiffblue.class)
+  @Category(ContributionFromDiffblue.class)
+  @ManagedByDiffblue
   @MethodsUnderTest({"void GetExchangeByIdServlet.doGet(HttpServletRequest, HttpServletResponse)"})
   public void testDoGet4() throws IOException {
     // Arrange
@@ -418,7 +428,8 @@ public class GetExchangeByIdServletDiffblueTest {
    * HttpServletResponse)}
    */
   @Test
-  @Category(MaintainedByDiffblue.class)
+  @Category(ContributionFromDiffblue.class)
+  @ManagedByDiffblue
   @MethodsUnderTest({"void GetExchangeByIdServlet.doGet(HttpServletRequest, HttpServletResponse)"})
   public void testDoGet_givenColon() throws IOException {
     // Arrange
@@ -447,7 +458,8 @@ public class GetExchangeByIdServletDiffblueTest {
    * HttpServletResponse)}
    */
   @Test
-  @Category(MaintainedByDiffblue.class)
+  @Category(ContributionFromDiffblue.class)
+  @ManagedByDiffblue
   @MethodsUnderTest({"void GetExchangeByIdServlet.doGet(HttpServletRequest, HttpServletResponse)"})
   public void testDoGet_givenEmptyString() throws IOException {
     // Arrange
@@ -478,7 +490,8 @@ public class GetExchangeByIdServletDiffblueTest {
    * HttpServletResponse)}
    */
   @Test
-  @Category(MaintainedByDiffblue.class)
+  @Category(ContributionFromDiffblue.class)
+  @ManagedByDiffblue
   @MethodsUnderTest({"void GetExchangeByIdServlet.doGet(HttpServletRequest, HttpServletResponse)"})
   public void testDoGet_givenGetExchangeByIdServlet_whenResponseGetWriterThrowIOException()
       throws IOException {
@@ -511,7 +524,8 @@ public class GetExchangeByIdServletDiffblueTest {
    * HttpServletResponse)}
    */
   @Test
-  @Category(MaintainedByDiffblue.class)
+  @Category(ContributionFromDiffblue.class)
+  @ManagedByDiffblue
   @MethodsUnderTest({"void GetExchangeByIdServlet.doGet(HttpServletRequest, HttpServletResponse)"})
   public void testDoGet_givenRuntimeException_thenThrowRuntimeException() throws IOException {
     // Arrange
@@ -540,7 +554,8 @@ public class GetExchangeByIdServletDiffblueTest {
    * HttpServletResponse)}
    */
   @Test
-  @Category(MaintainedByDiffblue.class)
+  @Category(ContributionFromDiffblue.class)
+  @ManagedByDiffblue
   @MethodsUnderTest({"void GetExchangeByIdServlet.doGet(HttpServletRequest, HttpServletResponse)"})
   public void testDoGet_thenCallsGetExchangeById() throws IOException {
     // Arrange
@@ -574,7 +589,8 @@ public class GetExchangeByIdServletDiffblueTest {
    * HttpServletResponse)}
    */
   @Test
-  @Category(MaintainedByDiffblue.class)
+  @Category(ContributionFromDiffblue.class)
+  @ManagedByDiffblue
   @MethodsUnderTest({"void GetExchangeByIdServlet.doGet(HttpServletRequest, HttpServletResponse)"})
   public void testDoGet_thenHttpServletResponseWrapperWithResponseIsResponseResponseResponse()
       throws IOException {

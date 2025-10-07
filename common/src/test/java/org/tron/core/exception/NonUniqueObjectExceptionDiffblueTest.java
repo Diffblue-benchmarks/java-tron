@@ -3,7 +3,8 @@ package org.tron.core.exception;
 import static org.junit.Assert.assertEquals;
 import static org.junit.Assert.assertNull;
 import static org.junit.Assert.assertSame;
-import com.diffblue.cover.annotations.MaintainedByDiffblue;
+import com.diffblue.cover.annotations.ContributionFromDiffblue;
+import com.diffblue.cover.annotations.ManagedByDiffblue;
 import com.diffblue.cover.annotations.MethodsUnderTest;
 import org.junit.Test;
 import org.junit.experimental.categories.Category;
@@ -15,7 +16,8 @@ public class NonUniqueObjectExceptionDiffblueTest {
    * <p>Method under test: {@link NonUniqueObjectException#NonUniqueObjectException()}
    */
   @Test
-  @Category(MaintainedByDiffblue.class)
+  @Category(ContributionFromDiffblue.class)
+  @ManagedByDiffblue
   @MethodsUnderTest({"void NonUniqueObjectException.<init>()"})
   public void testNewNonUniqueObjectException() {
     // Arrange and Act
@@ -34,7 +36,8 @@ public class NonUniqueObjectExceptionDiffblueTest {
    * <p>Method under test: {@link NonUniqueObjectException#NonUniqueObjectException(String)}
    */
   @Test
-  @Category(MaintainedByDiffblue.class)
+  @Category(ContributionFromDiffblue.class)
+  @ManagedByDiffblue
   @MethodsUnderTest({"void NonUniqueObjectException.<init>(String)"})
   public void testNewNonUniqueObjectException2() {
     // Arrange and Act
@@ -54,7 +57,8 @@ public class NonUniqueObjectExceptionDiffblueTest {
    * Throwable)}
    */
   @Test
-  @Category(MaintainedByDiffblue.class)
+  @Category(ContributionFromDiffblue.class)
+  @ManagedByDiffblue
   @MethodsUnderTest({"void NonUniqueObjectException.<init>(String, Throwable)"})
   public void testNewNonUniqueObjectException3() {
     // Arrange
@@ -77,7 +81,8 @@ public class NonUniqueObjectExceptionDiffblueTest {
    * <p>Method under test: {@link NonUniqueObjectException#NonUniqueObjectException(Throwable)}
    */
   @Test
-  @Category(MaintainedByDiffblue.class)
+  @Category(ContributionFromDiffblue.class)
+  @ManagedByDiffblue
   @MethodsUnderTest({"void NonUniqueObjectException.<init>(Throwable)"})
   public void testNewNonUniqueObjectException4() {
     // Arrange

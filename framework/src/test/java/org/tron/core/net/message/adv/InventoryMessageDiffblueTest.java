@@ -5,7 +5,8 @@ import static org.junit.Assert.assertEquals;
 import static org.junit.Assert.assertNull;
 import static org.junit.Assert.assertSame;
 import static org.junit.Assert.assertTrue;
-import com.diffblue.cover.annotations.MaintainedByDiffblue;
+import com.diffblue.cover.annotations.ContributionFromDiffblue;
+import com.diffblue.cover.annotations.ManagedByDiffblue;
 import com.diffblue.cover.annotations.MethodsUnderTest;
 import io.netty.buffer.ByteBuf;
 import io.netty.buffer.UnpooledHeapByteBuf;
@@ -33,7 +34,8 @@ public class InventoryMessageDiffblueTest {
    * <p>Method under test: {@link InventoryMessage#InventoryMessage(List, InventoryType)}
    */
   @Test
-  @Category(MaintainedByDiffblue.class)
+  @Category(ContributionFromDiffblue.class)
+  @ManagedByDiffblue
   @MethodsUnderTest({"void InventoryMessage.<init>(List, InventoryType)"})
   public void testNewInventoryMessage_givenBlockId_thenReturnHashListSizeIsOne() {
     // Arrange
@@ -85,7 +87,8 @@ public class InventoryMessageDiffblueTest {
    * <p>Method under test: {@link InventoryMessage#InventoryMessage(List, InventoryType)}
    */
   @Test
-  @Category(MaintainedByDiffblue.class)
+  @Category(ContributionFromDiffblue.class)
+  @ManagedByDiffblue
   @MethodsUnderTest({"void InventoryMessage.<init>(List, InventoryType)"})
   public void testNewInventoryMessage_givenBlockId_thenReturnHashListSizeIsTwo() {
     // Arrange
@@ -113,7 +116,8 @@ public class InventoryMessageDiffblueTest {
    * <p>Method under test: {@link InventoryMessage#InventoryMessage(byte[])}
    */
   @Test
-  @Category(MaintainedByDiffblue.class)
+  @Category(ContributionFromDiffblue.class)
+  @ManagedByDiffblue
   @MethodsUnderTest({"void InventoryMessage.<init>(byte[])"})
   public void testNewInventoryMessage_thenReturnInventorySerializedSizeIsFourteen()
       throws Exception {
@@ -202,7 +206,8 @@ public class InventoryMessageDiffblueTest {
    * <p>Method under test: {@link InventoryMessage#InventoryMessage(byte[])}
    */
   @Test
-  @Category(MaintainedByDiffblue.class)
+  @Category(ContributionFromDiffblue.class)
+  @ManagedByDiffblue
   @MethodsUnderTest({"void InventoryMessage.<init>(byte[])"})
   public void testNewInventoryMessage_thenReturnInventoryTypeValueIs1151() throws Exception {
     // Arrange and Act
@@ -244,7 +249,8 @@ public class InventoryMessageDiffblueTest {
    * <p>Method under test: {@link InventoryMessage#InventoryMessage(Protocol.Inventory)}
    */
   @Test
-  @Category(MaintainedByDiffblue.class)
+  @Category(ContributionFromDiffblue.class)
+  @ManagedByDiffblue
   @MethodsUnderTest({"void InventoryMessage.<init>(Protocol.Inventory)"})
   public void testNewInventoryMessage_thenSendDataReturnUnpooledHeapByteBuf() {
     // Arrange
@@ -275,7 +281,8 @@ public class InventoryMessageDiffblueTest {
    * <p>Method under test: {@link InventoryMessage#InventoryMessage(byte[])}
    */
   @Test
-  @Category(MaintainedByDiffblue.class)
+  @Category(ContributionFromDiffblue.class)
+  @ManagedByDiffblue
   @MethodsUnderTest({"void InventoryMessage.<init>(byte[])"})
   public void testNewInventoryMessage_thenSendDataReturnUnpooledHeapByteBuf2() throws Exception {
     // Arrange and Act
@@ -316,7 +323,8 @@ public class InventoryMessageDiffblueTest {
    * <p>Method under test: {@link InventoryMessage#InventoryMessage(List, InventoryType)}
    */
   @Test
-  @Category(MaintainedByDiffblue.class)
+  @Category(ContributionFromDiffblue.class)
+  @ManagedByDiffblue
   @MethodsUnderTest({"void InventoryMessage.<init>(List, InventoryType)"})
   public void testNewInventoryMessage_whenArrayList_thenReturnInventorySerializedSizeIsZero() {
     // Arrange and Act
@@ -355,7 +363,8 @@ public class InventoryMessageDiffblueTest {
    * <p>Method under test: {@link InventoryMessage#InventoryMessage(List, InventoryType)}
    */
   @Test
-  @Category(MaintainedByDiffblue.class)
+  @Category(ContributionFromDiffblue.class)
+  @ManagedByDiffblue
   @MethodsUnderTest({"void InventoryMessage.<init>(List, InventoryType)"})
   public void testNewInventoryMessage_whenBlock_thenReturnInventoryTypeValueIsOne() {
     // Arrange and Act
@@ -394,7 +403,8 @@ public class InventoryMessageDiffblueTest {
    * <p>Method under test: {@link InventoryMessage#getInvMessageType()}
    */
   @Test
-  @Category(MaintainedByDiffblue.class)
+  @Category(ContributionFromDiffblue.class)
+  @ManagedByDiffblue
   @MethodsUnderTest({"MessageTypes InventoryMessage.getInvMessageType()"})
   public void testGetInvMessageType_thenReturnBlock() {
     // Arrange, Act and Assert
@@ -413,7 +423,8 @@ public class InventoryMessageDiffblueTest {
    * <p>Method under test: {@link InventoryMessage#getInvMessageType()}
    */
   @Test
-  @Category(MaintainedByDiffblue.class)
+  @Category(ContributionFromDiffblue.class)
+  @ManagedByDiffblue
   @MethodsUnderTest({"MessageTypes InventoryMessage.getInvMessageType()"})
   public void testGetInvMessageType_thenReturnTrx() {
     // Arrange, Act and Assert
@@ -432,7 +443,8 @@ public class InventoryMessageDiffblueTest {
    * <p>Method under test: {@link InventoryMessage#getInventoryType()}
    */
   @Test
-  @Category(MaintainedByDiffblue.class)
+  @Category(ContributionFromDiffblue.class)
+  @ManagedByDiffblue
   @MethodsUnderTest({"InventoryType InventoryMessage.getInventoryType()"})
   public void testGetInventoryType_thenReturnBlock() {
     // Arrange, Act and Assert
@@ -451,7 +463,8 @@ public class InventoryMessageDiffblueTest {
    * <p>Method under test: {@link InventoryMessage#getInventoryType()}
    */
   @Test
-  @Category(MaintainedByDiffblue.class)
+  @Category(ContributionFromDiffblue.class)
+  @ManagedByDiffblue
   @MethodsUnderTest({"InventoryType InventoryMessage.getInventoryType()"})
   public void testGetInventoryType_thenReturnTrx() {
     // Arrange, Act and Assert
@@ -471,7 +484,8 @@ public class InventoryMessageDiffblueTest {
    * <p>Method under test: {@link InventoryMessage#toString()}
    */
   @Test
-  @Category(MaintainedByDiffblue.class)
+  @Category(ContributionFromDiffblue.class)
+  @ManagedByDiffblue
   @MethodsUnderTest({"java.lang.String InventoryMessage.toString()"})
   public void testToString_givenArrayListAddBlockId_thenReturnAString() {
     // Arrange
@@ -496,7 +510,8 @@ public class InventoryMessageDiffblueTest {
    * <p>Method under test: {@link InventoryMessage#toString()}
    */
   @Test
-  @Category(MaintainedByDiffblue.class)
+  @Category(ContributionFromDiffblue.class)
+  @ManagedByDiffblue
   @MethodsUnderTest({"java.lang.String InventoryMessage.toString()"})
   public void testToString_givenArrayListAddBlockId_thenReturnAString2() {
     // Arrange
@@ -522,7 +537,8 @@ public class InventoryMessageDiffblueTest {
    * <p>Method under test: {@link InventoryMessage#toString()}
    */
   @Test
-  @Category(MaintainedByDiffblue.class)
+  @Category(ContributionFromDiffblue.class)
+  @ManagedByDiffblue
   @MethodsUnderTest({"java.lang.String InventoryMessage.toString()"})
   public void testToString_thenReturnTypeFetchInvDataInvTypeBlockSize0FirstHashNull() {
     // Arrange, Act and Assert
@@ -541,7 +557,8 @@ public class InventoryMessageDiffblueTest {
    * <p>Method under test: {@link InventoryMessage#toString()}
    */
   @Test
-  @Category(MaintainedByDiffblue.class)
+  @Category(ContributionFromDiffblue.class)
+  @ManagedByDiffblue
   @MethodsUnderTest({"java.lang.String InventoryMessage.toString()"})
   public void testToString_thenReturnTypeFetchInvDataInvTypeTrxSize0FirstHashNull() {
     // Arrange, Act and Assert
@@ -560,7 +577,8 @@ public class InventoryMessageDiffblueTest {
    * <p>Method under test: {@link InventoryMessage#toString()}
    */
   @Test
-  @Category(MaintainedByDiffblue.class)
+  @Category(ContributionFromDiffblue.class)
+  @ManagedByDiffblue
   @MethodsUnderTest({"java.lang.String InventoryMessage.toString()"})
   public void testToString_thenReturnTypeInventoryInvTypeTrxSize0FirstHashNull() {
     // Arrange, Act and Assert
@@ -580,7 +598,8 @@ public class InventoryMessageDiffblueTest {
    * <p>Method under test: {@link InventoryMessage#getHashList()}
    */
   @Test
-  @Category(MaintainedByDiffblue.class)
+  @Category(ContributionFromDiffblue.class)
+  @ManagedByDiffblue
   @MethodsUnderTest({"List InventoryMessage.getHashList()"})
   public void testGetHashList_givenArrayListAddBlockId_thenReturnArrayList() {
     // Arrange
@@ -602,7 +621,8 @@ public class InventoryMessageDiffblueTest {
    * <p>Method under test: {@link InventoryMessage#getHashList()}
    */
   @Test
-  @Category(MaintainedByDiffblue.class)
+  @Category(ContributionFromDiffblue.class)
+  @ManagedByDiffblue
   @MethodsUnderTest({"List InventoryMessage.getHashList()"})
   public void testGetHashList_givenArrayListAddBlockId_thenReturnSizeIsTwo() {
     // Arrange
@@ -638,7 +658,8 @@ public class InventoryMessageDiffblueTest {
    * <p>Method under test: {@link InventoryMessage#getHashList()}
    */
   @Test
-  @Category(MaintainedByDiffblue.class)
+  @Category(ContributionFromDiffblue.class)
+  @ManagedByDiffblue
   @MethodsUnderTest({"List InventoryMessage.getHashList()"})
   public void testGetHashList_thenReturnEmpty() {
     // Arrange, Act and Assert

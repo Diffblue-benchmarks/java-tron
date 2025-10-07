@@ -3,7 +3,8 @@ package org.tron.plugins;
 import static org.junit.Assert.assertEquals;
 import static org.junit.Assert.assertNull;
 import static org.junit.Assert.assertTrue;
-import com.diffblue.cover.annotations.MaintainedByDiffblue;
+import com.diffblue.cover.annotations.ContributionFromDiffblue;
+import com.diffblue.cover.annotations.ManagedByDiffblue;
 import com.diffblue.cover.annotations.MethodsUnderTest;
 import org.junit.Test;
 import org.junit.experimental.categories.Category;
@@ -22,7 +23,8 @@ public class DbCopyDiffblueTest {
    * <p>Method under test: {@link DbCopier#doCopy()}
    */
   @Test
-  @Category(MaintainedByDiffblue.class)
+  @Category(ContributionFromDiffblue.class)
+  @ManagedByDiffblue
   @MethodsUnderTest({"boolean DbCopier.doCopy()"})
   public void testDbCopierDoCopy_givenDbCopierWithSrcDirAndDstDirAndName_thenReturnTrue() {
     // Arrange
@@ -38,7 +40,8 @@ public class DbCopyDiffblueTest {
    * <p>Method under test: {@link DbCopier#name()}
    */
   @Test
-  @Category(MaintainedByDiffblue.class)
+  @Category(ContributionFromDiffblue.class)
+  @ManagedByDiffblue
   @MethodsUnderTest({"String DbCopier.name()"})
   public void testDbCopierName() {
     // Arrange
@@ -54,7 +57,8 @@ public class DbCopyDiffblueTest {
    * <p>Method under test: {@link DbCopier#DbCopier(String, String, String)}
    */
   @Test
-  @Category(MaintainedByDiffblue.class)
+  @Category(ContributionFromDiffblue.class)
+  @ManagedByDiffblue
   @MethodsUnderTest({"void DbCopier.<init>(String, String, String)"})
   public void testDbCopierNewDbCopier() {
     // Arrange and Act
@@ -71,7 +75,8 @@ public class DbCopyDiffblueTest {
    * <p>Method under test: default or parameterless constructor of {@link DbCopy}
    */
   @Test
-  @Category(MaintainedByDiffblue.class)
+  @Category(ContributionFromDiffblue.class)
+  @ManagedByDiffblue
   @MethodsUnderTest({"void DbCopy.<init>()"})
   public void testNewDbCopy() {
     // Arrange, Act and Assert

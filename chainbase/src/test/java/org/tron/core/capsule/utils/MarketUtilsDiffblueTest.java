@@ -9,7 +9,8 @@ import static org.mockito.Mockito.doNothing;
 import static org.mockito.Mockito.mock;
 import static org.mockito.Mockito.verify;
 import static org.mockito.Mockito.when;
-import com.diffblue.cover.annotations.MaintainedByDiffblue;
+import com.diffblue.cover.annotations.ContributionFromDiffblue;
+import com.diffblue.cover.annotations.ManagedByDiffblue;
 import com.diffblue.cover.annotations.MethodsUnderTest;
 import com.google.protobuf.ByteString;
 import java.io.UnsupportedEncodingException;
@@ -37,7 +38,8 @@ public class MarketUtilsDiffblueTest {
    * <p>Method under test: {@link MarketUtils#calculateOrderId(ByteString, byte[], byte[], long)}
    */
   @Test
-  @Category(MaintainedByDiffblue.class)
+  @Category(ContributionFromDiffblue.class)
+  @ManagedByDiffblue
   @MethodsUnderTest({"byte[] MarketUtils.calculateOrderId(ByteString, byte[], byte[], long)"})
   public void testCalculateOrderId_givenAxaxaxaxBytesIsUtf8_thenReturnArrayOfByteWithQAndD()
       throws UnsupportedEncodingException {
@@ -101,7 +103,8 @@ public class MarketUtilsDiffblueTest {
    * <p>Method under test: {@link MarketUtils#findGCD(long, long)}
    */
   @Test
-  @Category(MaintainedByDiffblue.class)
+  @Category(ContributionFromDiffblue.class)
+  @ManagedByDiffblue
   @MethodsUnderTest({"long MarketUtils.findGCD(long, long)"})
   public void testFindGCD_whenFive_thenReturnFive() {
     // Arrange, Act and Assert
@@ -119,7 +122,8 @@ public class MarketUtilsDiffblueTest {
    * <p>Method under test: {@link MarketUtils#findGCD(long, long)}
    */
   @Test
-  @Category(MaintainedByDiffblue.class)
+  @Category(ContributionFromDiffblue.class)
+  @ManagedByDiffblue
   @MethodsUnderTest({"long MarketUtils.findGCD(long, long)"})
   public void testFindGCD_whenOne_thenReturnOne() {
     // Arrange, Act and Assert
@@ -137,7 +141,8 @@ public class MarketUtilsDiffblueTest {
    * <p>Method under test: {@link MarketUtils#findGCD(long, long)}
    */
   @Test
-  @Category(MaintainedByDiffblue.class)
+  @Category(ContributionFromDiffblue.class)
+  @ManagedByDiffblue
   @MethodsUnderTest({"long MarketUtils.findGCD(long, long)"})
   public void testFindGCD_whenZero_thenReturnZero() {
     // Arrange, Act and Assert
@@ -155,7 +160,8 @@ public class MarketUtilsDiffblueTest {
    * <p>Method under test: {@link MarketUtils#findGCD(long, long)}
    */
   @Test
-  @Category(MaintainedByDiffblue.class)
+  @Category(ContributionFromDiffblue.class)
+  @ManagedByDiffblue
   @MethodsUnderTest({"long MarketUtils.findGCD(long, long)"})
   public void testFindGCD_whenZero_thenReturnZero2() {
     // Arrange, Act and Assert
@@ -173,7 +179,8 @@ public class MarketUtilsDiffblueTest {
    * <p>Method under test: {@link MarketUtils#findGCD(long, long)}
    */
   @Test
-  @Category(MaintainedByDiffblue.class)
+  @Category(ContributionFromDiffblue.class)
+  @ManagedByDiffblue
   @MethodsUnderTest({"long MarketUtils.findGCD(long, long)"})
   public void testFindGCD_whenZero_thenReturnZero3() {
     // Arrange, Act and Assert
@@ -190,7 +197,8 @@ public class MarketUtilsDiffblueTest {
    * <p>Method under test: {@link MarketUtils#createPairPriceKey(byte[], byte[], long, long)}
    */
   @Test
-  @Category(MaintainedByDiffblue.class)
+  @Category(ContributionFromDiffblue.class)
+  @ManagedByDiffblue
   @MethodsUnderTest({"byte[] MarketUtils.createPairPriceKey(byte[], byte[], long, long)"})
   public void testCreatePairPriceKey_whenA() {
     // Arrange and Act
@@ -221,7 +229,8 @@ public class MarketUtilsDiffblueTest {
    * <p>Method under test: {@link MarketUtils#createPairPriceKey(byte[], byte[], long, long)}
    */
   @Test
-  @Category(MaintainedByDiffblue.class)
+  @Category(ContributionFromDiffblue.class)
+  @ManagedByDiffblue
   @MethodsUnderTest({"byte[] MarketUtils.createPairPriceKey(byte[], byte[], long, long)"})
   public void testCreatePairPriceKey_whenAxaxaxaxBytesIsUtf8() throws UnsupportedEncodingException {
     // Arrange and Act
@@ -249,7 +258,8 @@ public class MarketUtilsDiffblueTest {
    * <p>Method under test: {@link MarketUtils#createPairPriceKey(byte[], byte[], long, long)}
    */
   @Test
-  @Category(MaintainedByDiffblue.class)
+  @Category(ContributionFromDiffblue.class)
+  @ManagedByDiffblue
   @MethodsUnderTest({"byte[] MarketUtils.createPairPriceKey(byte[], byte[], long, long)"})
   public void testCreatePairPriceKey_whenAxaxaxaxBytesIsUtf82()
       throws UnsupportedEncodingException {
@@ -274,7 +284,8 @@ public class MarketUtilsDiffblueTest {
    * <p>Method under test: {@link MarketUtils#createPairPriceKeyNoGCD(byte[], byte[], long, long)}
    */
   @Test
-  @Category(MaintainedByDiffblue.class)
+  @Category(ContributionFromDiffblue.class)
+  @ManagedByDiffblue
   @MethodsUnderTest({"byte[] MarketUtils.createPairPriceKeyNoGCD(byte[], byte[], long, long)"})
   public void testCreatePairPriceKeyNoGCD() throws UnsupportedEncodingException {
     // Arrange and Act
@@ -298,7 +309,8 @@ public class MarketUtilsDiffblueTest {
    * <p>Method under test: {@link MarketUtils#getPairPriceHeadKey(byte[], byte[])}
    */
   @Test
-  @Category(MaintainedByDiffblue.class)
+  @Category(ContributionFromDiffblue.class)
+  @ManagedByDiffblue
   @MethodsUnderTest({"byte[] MarketUtils.getPairPriceHeadKey(byte[], byte[])"})
   public void testGetPairPriceHeadKey() throws UnsupportedEncodingException {
     // Arrange and Act
@@ -325,7 +337,8 @@ public class MarketUtilsDiffblueTest {
    * <p>Method under test: {@link MarketUtils#expandTokenIdToPriceArray(byte[])}
    */
   @Test
-  @Category(MaintainedByDiffblue.class)
+  @Category(ContributionFromDiffblue.class)
+  @ManagedByDiffblue
   @MethodsUnderTest({"byte[] MarketUtils.expandTokenIdToPriceArray(byte[])"})
   public void testExpandTokenIdToPriceArray_thenReturnArrayOfByteWithAAndX()
       throws UnsupportedEncodingException {
@@ -346,7 +359,8 @@ public class MarketUtilsDiffblueTest {
    * <p>Method under test: {@link MarketUtils#trim(byte[])}
    */
   @Test
-  @Category(MaintainedByDiffblue.class)
+  @Category(ContributionFromDiffblue.class)
+  @ManagedByDiffblue
   @MethodsUnderTest({"byte[] MarketUtils.trim(byte[])"})
   public void testTrim_whenA_thenReturnAxaxaxaBytesIsUtf8() throws UnsupportedEncodingException {
     // Arrange, Act and Assert
@@ -366,7 +380,8 @@ public class MarketUtilsDiffblueTest {
    * <p>Method under test: {@link MarketUtils#trim(byte[])}
    */
   @Test
-  @Category(MaintainedByDiffblue.class)
+  @Category(ContributionFromDiffblue.class)
+  @ManagedByDiffblue
   @MethodsUnderTest({"byte[] MarketUtils.trim(byte[])"})
   public void testTrim_whenAxaxaxaxBytesIsUtf8_thenReturnAxaxaxaxBytesIsUtf8()
       throws UnsupportedEncodingException {
@@ -385,7 +400,8 @@ public class MarketUtilsDiffblueTest {
    * <p>Method under test: {@link MarketUtils#trim(byte[])}
    */
   @Test
-  @Category(MaintainedByDiffblue.class)
+  @Category(ContributionFromDiffblue.class)
+  @ManagedByDiffblue
   @MethodsUnderTest({"byte[] MarketUtils.trim(byte[])"})
   public void testTrim_whenEmptyArrayOfByte_thenReturnEmptyArrayOfByte() {
     // Arrange, Act and Assert
@@ -403,7 +419,8 @@ public class MarketUtilsDiffblueTest {
    * <p>Method under test: {@link MarketUtils#createPairKey(byte[], byte[])}
    */
   @Test
-  @Category(MaintainedByDiffblue.class)
+  @Category(ContributionFromDiffblue.class)
+  @ManagedByDiffblue
   @MethodsUnderTest({"byte[] MarketUtils.createPairKey(byte[], byte[])"})
   public void testCreatePairKey_whenAxaxaxaxBytesIsUtf8_thenReturnArrayOfByteWithAAndX()
       throws UnsupportedEncodingException {
@@ -427,7 +444,8 @@ public class MarketUtilsDiffblueTest {
    * <p>Method under test: {@link MarketUtils#comparePrice(MarketPrice, MarketPrice)}
    */
   @Test
-  @Category(MaintainedByDiffblue.class)
+  @Category(ContributionFromDiffblue.class)
+  @ManagedByDiffblue
   @MethodsUnderTest({"int MarketUtils.comparePrice(MarketPrice, MarketPrice)"})
   public void testComparePriceWithPrice1Price2() {
     // Arrange, Act and Assert
@@ -444,7 +462,8 @@ public class MarketUtilsDiffblueTest {
    * <p>Method under test: {@link MarketUtils#comparePrice(long, long, long, long)}
    */
   @Test
-  @Category(MaintainedByDiffblue.class)
+  @Category(ContributionFromDiffblue.class)
+  @ManagedByDiffblue
   @MethodsUnderTest({"int MarketUtils.comparePrice(long, long, long, long)"})
   public void
       testComparePriceWithPrice1SellQuantityPrice1BuyQuantityPrice2SellQuantityPrice2BuyQuantity() {
@@ -462,7 +481,8 @@ public class MarketUtilsDiffblueTest {
    * <p>Method under test: {@link MarketUtils#comparePrice(long, long, long, long)}
    */
   @Test
-  @Category(MaintainedByDiffblue.class)
+  @Category(ContributionFromDiffblue.class)
+  @ManagedByDiffblue
   @MethodsUnderTest({"int MarketUtils.comparePrice(long, long, long, long)"})
   public void
       testComparePriceWithPrice1SellQuantityPrice1BuyQuantityPrice2SellQuantityPrice2BuyQuantity2() {
@@ -480,7 +500,8 @@ public class MarketUtilsDiffblueTest {
    * <p>Method under test: {@link MarketUtils#comparePrice(long, long, long, long)}
    */
   @Test
-  @Category(MaintainedByDiffblue.class)
+  @Category(ContributionFromDiffblue.class)
+  @ManagedByDiffblue
   @MethodsUnderTest({"int MarketUtils.comparePrice(long, long, long, long)"})
   public void
       testComparePriceWithPrice1SellQuantityPrice1BuyQuantityPrice2SellQuantityPrice2BuyQuantity3() {
@@ -498,7 +519,8 @@ public class MarketUtilsDiffblueTest {
    * <p>Method under test: {@link MarketUtils#comparePrice(long, long, long, long)}
    */
   @Test
-  @Category(MaintainedByDiffblue.class)
+  @Category(ContributionFromDiffblue.class)
+  @ManagedByDiffblue
   @MethodsUnderTest({"int MarketUtils.comparePrice(long, long, long, long)"})
   public void
       testComparePriceWithPrice1SellQuantityPrice1BuyQuantityPrice2SellQuantityPrice2BuyQuantity4() {
@@ -516,7 +538,8 @@ public class MarketUtilsDiffblueTest {
    * <p>Method under test: {@link MarketUtils#comparePrice(long, long, long, long)}
    */
   @Test
-  @Category(MaintainedByDiffblue.class)
+  @Category(ContributionFromDiffblue.class)
+  @ManagedByDiffblue
   @MethodsUnderTest({"int MarketUtils.comparePrice(long, long, long, long)"})
   public void
       testComparePriceWithPrice1SellQuantityPrice1BuyQuantityPrice2SellQuantityPrice2BuyQuantity5() {
@@ -534,7 +557,8 @@ public class MarketUtilsDiffblueTest {
    * <p>Method under test: {@link MarketUtils#comparePrice(long, long, long, long)}
    */
   @Test
-  @Category(MaintainedByDiffblue.class)
+  @Category(ContributionFromDiffblue.class)
+  @ManagedByDiffblue
   @MethodsUnderTest({"int MarketUtils.comparePrice(long, long, long, long)"})
   public void
       testComparePriceWithPrice1SellQuantityPrice1BuyQuantityPrice2SellQuantityPrice2BuyQuantity6() {
@@ -551,7 +575,8 @@ public class MarketUtilsDiffblueTest {
    * <p>Method under test: {@link MarketUtils#isLowerPrice(MarketPrice, MarketPrice)}
    */
   @Test
-  @Category(MaintainedByDiffblue.class)
+  @Category(ContributionFromDiffblue.class)
+  @ManagedByDiffblue
   @MethodsUnderTest({"boolean MarketUtils.isLowerPrice(MarketPrice, MarketPrice)"})
   public void testIsLowerPrice() {
     // Arrange, Act and Assert
@@ -566,7 +591,8 @@ public class MarketUtilsDiffblueTest {
    * <p>Method under test: {@link MarketUtils#priceMatch(MarketPrice, MarketPrice)}
    */
   @Test
-  @Category(MaintainedByDiffblue.class)
+  @Category(ContributionFromDiffblue.class)
+  @ManagedByDiffblue
   @MethodsUnderTest({"boolean MarketUtils.priceMatch(MarketPrice, MarketPrice)"})
   public void testPriceMatch() {
     // Arrange, Act and Assert
@@ -586,7 +612,8 @@ public class MarketUtilsDiffblueTest {
    * MarketAccountStore)}
    */
   @Test
-  @Category(MaintainedByDiffblue.class)
+  @Category(ContributionFromDiffblue.class)
+  @ManagedByDiffblue
   @MethodsUnderTest({
     "void MarketUtils.updateOrderState(MarketOrderCapsule, State, MarketAccountStore)"
   })
@@ -613,7 +640,8 @@ public class MarketUtilsDiffblueTest {
    * <p>Method under test: {@link MarketUtils#multiplyAndDivide(long, long, long)}
    */
   @Test
-  @Category(MaintainedByDiffblue.class)
+  @Category(ContributionFromDiffblue.class)
+  @ManagedByDiffblue
   @MethodsUnderTest({"long MarketUtils.multiplyAndDivide(long, long, long)"})
   public void testMultiplyAndDivide_whenFive_thenReturnFive() {
     // Arrange, Act and Assert
@@ -631,7 +659,8 @@ public class MarketUtilsDiffblueTest {
    * <p>Method under test: {@link MarketUtils#multiplyAndDivide(long, long, long)}
    */
   @Test
-  @Category(MaintainedByDiffblue.class)
+  @Category(ContributionFromDiffblue.class)
+  @ManagedByDiffblue
   @MethodsUnderTest({"long MarketUtils.multiplyAndDivide(long, long, long)"})
   public void testMultiplyAndDivide_whenMax_value_thenReturnMax_value() {
     // Arrange, Act and Assert
@@ -649,7 +678,8 @@ public class MarketUtilsDiffblueTest {
    * <p>Method under test: {@link MarketUtils#multiplyAndDivide(long, long, long)}
    */
   @Test
-  @Category(MaintainedByDiffblue.class)
+  @Category(ContributionFromDiffblue.class)
+  @ManagedByDiffblue
   @MethodsUnderTest({"long MarketUtils.multiplyAndDivide(long, long, long)"})
   public void testMultiplyAndDivide_whenMinusOne_thenReturnMinusOne() {
     // Arrange, Act and Assert
@@ -667,7 +697,8 @@ public class MarketUtilsDiffblueTest {
    * <p>Method under test: {@link MarketUtils#multiplyAndDivide(long, long, long)}
    */
   @Test
-  @Category(MaintainedByDiffblue.class)
+  @Category(ContributionFromDiffblue.class)
+  @ManagedByDiffblue
   @MethodsUnderTest({"long MarketUtils.multiplyAndDivide(long, long, long)"})
   public void testMultiplyAndDivide_whenOne_thenReturnOne() {
     // Arrange, Act and Assert
@@ -685,7 +716,8 @@ public class MarketUtilsDiffblueTest {
    * <p>Method under test: {@link MarketUtils#multiplyAndDivide(long, long, long)}
    */
   @Test
-  @Category(MaintainedByDiffblue.class)
+  @Category(ContributionFromDiffblue.class)
+  @ManagedByDiffblue
   @MethodsUnderTest({"long MarketUtils.multiplyAndDivide(long, long, long)"})
   public void testMultiplyAndDivide_whenZero_thenReturnZero() {
     // Arrange, Act and Assert
@@ -702,7 +734,8 @@ public class MarketUtilsDiffblueTest {
    * <p>Method under test: {@link MarketUtils#checkTokenValid(byte[])}
    */
   @Test
-  @Category(MaintainedByDiffblue.class)
+  @Category(ContributionFromDiffblue.class)
+  @ManagedByDiffblue
   @MethodsUnderTest({"boolean MarketUtils.checkTokenValid(byte[])"})
   public void testCheckTokenValid_when0xaxaxaxBytesIsUtf8() throws UnsupportedEncodingException {
     // Arrange, Act and Assert
@@ -719,7 +752,8 @@ public class MarketUtilsDiffblueTest {
    * <p>Method under test: {@link MarketUtils#checkTokenValid(byte[])}
    */
   @Test
-  @Category(MaintainedByDiffblue.class)
+  @Category(ContributionFromDiffblue.class)
+  @ManagedByDiffblue
   @MethodsUnderTest({"boolean MarketUtils.checkTokenValid(byte[])"})
   public void testCheckTokenValid_whenAxaxaxaxBytesIsUtf8() throws UnsupportedEncodingException {
     // Arrange, Act and Assert
@@ -736,7 +770,8 @@ public class MarketUtilsDiffblueTest {
    * <p>Method under test: {@link MarketUtils#checkTokenValid(byte[])}
    */
   @Test
-  @Category(MaintainedByDiffblue.class)
+  @Category(ContributionFromDiffblue.class)
+  @ManagedByDiffblue
   @MethodsUnderTest({"boolean MarketUtils.checkTokenValid(byte[])"})
   public void testCheckTokenValid_whenEmptyArrayOfByte() {
     // Arrange, Act and Assert
@@ -753,7 +788,8 @@ public class MarketUtilsDiffblueTest {
    * <p>Method under test: {@link MarketUtils#checkTokenValid(byte[])}
    */
   @Test
-  @Category(MaintainedByDiffblue.class)
+  @Category(ContributionFromDiffblue.class)
+  @ManagedByDiffblue
   @MethodsUnderTest({"boolean MarketUtils.checkTokenValid(byte[])"})
   public void testCheckTokenValid_whenXaxaxaxBytesIsUtf8() throws UnsupportedEncodingException {
     // Arrange, Act and Assert
@@ -770,7 +806,8 @@ public class MarketUtilsDiffblueTest {
    * <p>Method under test: {@link MarketUtils#checkPairValid(byte[], byte[])}
    */
   @Test
-  @Category(MaintainedByDiffblue.class)
+  @Category(ContributionFromDiffblue.class)
+  @ManagedByDiffblue
   @MethodsUnderTest({"void MarketUtils.checkPairValid(byte[], byte[])"})
   public void testCheckPairValid_when0xaxaxaxBytesIsUtf8()
       throws UnsupportedEncodingException, BadItemException {
@@ -791,7 +828,8 @@ public class MarketUtilsDiffblueTest {
    * <p>Method under test: {@link MarketUtils#checkPairValid(byte[], byte[])}
    */
   @Test
-  @Category(MaintainedByDiffblue.class)
+  @Category(ContributionFromDiffblue.class)
+  @ManagedByDiffblue
   @MethodsUnderTest({"void MarketUtils.checkPairValid(byte[], byte[])"})
   public void testCheckPairValid_whenAxaxaxaxBytesIsUtf8()
       throws UnsupportedEncodingException, BadItemException {
@@ -812,7 +850,8 @@ public class MarketUtilsDiffblueTest {
    * <p>Method under test: {@link MarketUtils#checkPairValid(byte[], byte[])}
    */
   @Test
-  @Category(MaintainedByDiffblue.class)
+  @Category(ContributionFromDiffblue.class)
+  @ManagedByDiffblue
   @MethodsUnderTest({"void MarketUtils.checkPairValid(byte[], byte[])"})
   public void testCheckPairValid_whenEmptyArrayOfByte()
       throws UnsupportedEncodingException, BadItemException {
@@ -832,7 +871,8 @@ public class MarketUtilsDiffblueTest {
    * <p>Method under test: {@link MarketUtils#checkPairValid(byte[], byte[])}
    */
   @Test
-  @Category(MaintainedByDiffblue.class)
+  @Category(ContributionFromDiffblue.class)
+  @ManagedByDiffblue
   @MethodsUnderTest({"void MarketUtils.checkPairValid(byte[], byte[])"})
   public void testCheckPairValid_whenXaxaxaxBytesIsUtf8()
       throws UnsupportedEncodingException, BadItemException {

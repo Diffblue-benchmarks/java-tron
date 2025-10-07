@@ -11,7 +11,8 @@ import static org.mockito.Mockito.atLeast;
 import static org.mockito.Mockito.mock;
 import static org.mockito.Mockito.verify;
 import static org.mockito.Mockito.when;
-import com.diffblue.cover.annotations.MaintainedByDiffblue;
+import com.diffblue.cover.annotations.ContributionFromDiffblue;
+import com.diffblue.cover.annotations.ManagedByDiffblue;
 import com.diffblue.cover.annotations.MethodsUnderTest;
 import com.google.protobuf.ByteString;
 import com.google.protobuf.ByteString.ByteIterator;
@@ -35,7 +36,8 @@ public class MarketOrderIdListCapsuleDiffblueTest {
    * <p>Method under test: {@link MarketOrderIdListCapsule#MarketOrderIdListCapsule()}
    */
   @Test
-  @Category(MaintainedByDiffblue.class)
+  @Category(ContributionFromDiffblue.class)
+  @ManagedByDiffblue
   @MethodsUnderTest({"void MarketOrderIdListCapsule.<init>()"})
   public void testNewMarketOrderIdListCapsule() {
     // Arrange and Act
@@ -63,7 +65,8 @@ public class MarketOrderIdListCapsuleDiffblueTest {
    * <p>Method under test: {@link MarketOrderIdListCapsule#MarketOrderIdListCapsule(byte[])}
    */
   @Test
-  @Category(MaintainedByDiffblue.class)
+  @Category(ContributionFromDiffblue.class)
+  @ManagedByDiffblue
   @MethodsUnderTest({"void MarketOrderIdListCapsule.<init>(byte[])"})
   public void testNewMarketOrderIdListCapsule2() {
     // Arrange and Act
@@ -92,7 +95,8 @@ public class MarketOrderIdListCapsuleDiffblueTest {
    * <p>Method under test: {@link MarketOrderIdListCapsule#MarketOrderIdListCapsule(byte[], byte[])}
    */
   @Test
-  @Category(MaintainedByDiffblue.class)
+  @Category(ContributionFromDiffblue.class)
+  @ManagedByDiffblue
   @MethodsUnderTest({"void MarketOrderIdListCapsule.<init>(byte[], byte[])"})
   public void testNewMarketOrderIdListCapsule3() throws UnsupportedEncodingException {
     // Arrange and Act
@@ -128,7 +132,8 @@ public class MarketOrderIdListCapsuleDiffblueTest {
    * <p>Method under test: {@link MarketOrderIdListCapsule#MarketOrderIdListCapsule(byte[])}
    */
   @Test
-  @Category(MaintainedByDiffblue.class)
+  @Category(ContributionFromDiffblue.class)
+  @ManagedByDiffblue
   @MethodsUnderTest({"void MarketOrderIdListCapsule.<init>(byte[])"})
   public void testNewMarketOrderIdListCapsule_whenAAAAAAAABytesIsUtf8_thenReturnInstanceIsNull()
       throws UnsupportedEncodingException {
@@ -148,7 +153,8 @@ public class MarketOrderIdListCapsuleDiffblueTest {
    * <p>Method under test: {@link MarketOrderIdListCapsule#MarketOrderIdListCapsule(byte[])}
    */
   @Test
-  @Category(MaintainedByDiffblue.class)
+  @Category(ContributionFromDiffblue.class)
+  @ManagedByDiffblue
   @MethodsUnderTest({"void MarketOrderIdListCapsule.<init>(byte[])"})
   public void testNewMarketOrderIdListCapsule_whenAAAAAAABytesIsUtf8_thenReturnInstanceIsNull()
       throws UnsupportedEncodingException {
@@ -167,7 +173,8 @@ public class MarketOrderIdListCapsuleDiffblueTest {
    * <p>Method under test: {@link MarketOrderIdListCapsule#MarketOrderIdListCapsule(byte[])}
    */
   @Test
-  @Category(MaintainedByDiffblue.class)
+  @Category(ContributionFromDiffblue.class)
+  @ManagedByDiffblue
   @MethodsUnderTest({"void MarketOrderIdListCapsule.<init>(byte[])"})
   public void testNewMarketOrderIdListCapsule_whenArrayOfByteWithAAndLf() {
     // Arrange and Act
@@ -191,7 +198,8 @@ public class MarketOrderIdListCapsuleDiffblueTest {
    * <p>Method under test: {@link MarketOrderIdListCapsule#MarketOrderIdListCapsule(byte[])}
    */
   @Test
-  @Category(MaintainedByDiffblue.class)
+  @Category(ContributionFromDiffblue.class)
+  @ManagedByDiffblue
   @MethodsUnderTest({"void MarketOrderIdListCapsule.<init>(byte[])"})
   public void testNewMarketOrderIdListCapsule_whenArrayOfByteWithEighteenAndLf() {
     // Arrange and Act
@@ -215,7 +223,8 @@ public class MarketOrderIdListCapsuleDiffblueTest {
    * <p>Method under test: {@link MarketOrderIdListCapsule#MarketOrderIdListCapsule(byte[])}
    */
   @Test
-  @Category(MaintainedByDiffblue.class)
+  @Category(ContributionFromDiffblue.class)
+  @ManagedByDiffblue
   @MethodsUnderTest({"void MarketOrderIdListCapsule.<init>(byte[])"})
   public void testNewMarketOrderIdListCapsule_whenArrayOfByteWithEighteenAndX() {
     // Arrange and Act
@@ -236,7 +245,8 @@ public class MarketOrderIdListCapsuleDiffblueTest {
    * <p>Method under test: {@link MarketOrderIdListCapsule#MarketOrderIdListCapsule(byte[])}
    */
   @Test
-  @Category(MaintainedByDiffblue.class)
+  @Category(ContributionFromDiffblue.class)
+  @ManagedByDiffblue
   @MethodsUnderTest({"void MarketOrderIdListCapsule.<init>(byte[])"})
   public void testNewMarketOrderIdListCapsule_whenArrayOfByteWithEighteenAndZero() {
     // Arrange and Act
@@ -257,7 +267,8 @@ public class MarketOrderIdListCapsuleDiffblueTest {
    * <p>Method under test: {@link MarketOrderIdListCapsule#MarketOrderIdListCapsule(byte[])}
    */
   @Test
-  @Category(MaintainedByDiffblue.class)
+  @Category(ContributionFromDiffblue.class)
+  @ManagedByDiffblue
   @MethodsUnderTest({"void MarketOrderIdListCapsule.<init>(byte[])"})
   public void testNewMarketOrderIdListCapsule_whenArrayOfByteWithMinusOneAndX() {
     // Arrange and Act
@@ -278,7 +289,8 @@ public class MarketOrderIdListCapsuleDiffblueTest {
    * <p>Method under test: {@link MarketOrderIdListCapsule#MarketOrderIdListCapsule(byte[])}
    */
   @Test
-  @Category(MaintainedByDiffblue.class)
+  @Category(ContributionFromDiffblue.class)
+  @ManagedByDiffblue
   @MethodsUnderTest({"void MarketOrderIdListCapsule.<init>(byte[])"})
   public void testNewMarketOrderIdListCapsule_whenArrayOfByteWithZeroAndX() {
     // Arrange and Act
@@ -300,7 +312,8 @@ public class MarketOrderIdListCapsuleDiffblueTest {
    * <p>Method under test: {@link MarketOrderIdListCapsule#MarketOrderIdListCapsule(byte[])}
    */
   @Test
-  @Category(MaintainedByDiffblue.class)
+  @Category(ContributionFromDiffblue.class)
+  @ManagedByDiffblue
   @MethodsUnderTest({"void MarketOrderIdListCapsule.<init>(byte[])"})
   public void testNewMarketOrderIdListCapsule_whenAxaxaxaxBytesIsUtf8_thenReturnInstanceIsNull()
       throws UnsupportedEncodingException {
@@ -319,7 +332,8 @@ public class MarketOrderIdListCapsuleDiffblueTest {
    * <p>Method under test: {@link MarketOrderIdListCapsule#MarketOrderIdListCapsule(byte[])}
    */
   @Test
-  @Category(MaintainedByDiffblue.class)
+  @Category(ContributionFromDiffblue.class)
+  @ManagedByDiffblue
   @MethodsUnderTest({"void MarketOrderIdListCapsule.<init>(byte[])"})
   public void testNewMarketOrderIdListCapsule_whenXxaxaxaxBytesIsUtf8_thenReturnInstanceIsNull()
       throws UnsupportedEncodingException {
@@ -338,7 +352,8 @@ public class MarketOrderIdListCapsuleDiffblueTest {
    * <p>Method under test: {@link MarketOrderIdListCapsule#isOrderExists(byte[], MarketOrderStore)}
    */
   @Test
-  @Category(MaintainedByDiffblue.class)
+  @Category(ContributionFromDiffblue.class)
+  @ManagedByDiffblue
   @MethodsUnderTest({"boolean MarketOrderIdListCapsule.isOrderExists(byte[], MarketOrderStore)"})
   public void testIsOrderExists_givenMarketOrderIdListCapsule_thenReturnFalse()
       throws UnsupportedEncodingException, ItemNotFoundException {
@@ -356,7 +371,8 @@ public class MarketOrderIdListCapsuleDiffblueTest {
    * <p>Method under test: {@link MarketOrderIdListCapsule#isOrderExists(byte[], MarketOrderStore)}
    */
   @Test
-  @Category(MaintainedByDiffblue.class)
+  @Category(ContributionFromDiffblue.class)
+  @ManagedByDiffblue
   @MethodsUnderTest({"boolean MarketOrderIdListCapsule.isOrderExists(byte[], MarketOrderStore)"})
   public void testIsOrderExists_thenReturnTrue()
       throws UnsupportedEncodingException, ItemNotFoundException {
@@ -380,7 +396,8 @@ public class MarketOrderIdListCapsuleDiffblueTest {
    * <p>Method under test: {@link MarketOrderIdListCapsule#isOrderExists(byte[], MarketOrderStore)}
    */
   @Test
-  @Category(MaintainedByDiffblue.class)
+  @Category(ContributionFromDiffblue.class)
+  @ManagedByDiffblue
   @MethodsUnderTest({"boolean MarketOrderIdListCapsule.isOrderExists(byte[], MarketOrderStore)"})
   public void testIsOrderExists_whenEmptyArrayOfByte_thenReturnFalse()
       throws UnsupportedEncodingException, ItemNotFoundException {
@@ -398,7 +415,8 @@ public class MarketOrderIdListCapsuleDiffblueTest {
    * <p>Method under test: {@link MarketOrderIdListCapsule#setHead(byte[])}
    */
   @Test
-  @Category(MaintainedByDiffblue.class)
+  @Category(ContributionFromDiffblue.class)
+  @ManagedByDiffblue
   @MethodsUnderTest({"void MarketOrderIdListCapsule.setHead(byte[])"})
   public void testSetHead() throws UnsupportedEncodingException {
     // Arrange
@@ -427,7 +445,8 @@ public class MarketOrderIdListCapsuleDiffblueTest {
    * <p>Method under test: {@link MarketOrderIdListCapsule#getHead()}
    */
   @Test
-  @Category(MaintainedByDiffblue.class)
+  @Category(ContributionFromDiffblue.class)
+  @ManagedByDiffblue
   @MethodsUnderTest({"byte[] MarketOrderIdListCapsule.getHead()"})
   public void testGetHead() {
     // Arrange, Act and Assert
@@ -440,7 +459,8 @@ public class MarketOrderIdListCapsuleDiffblueTest {
    * <p>Method under test: {@link MarketOrderIdListCapsule#getTail()}
    */
   @Test
-  @Category(MaintainedByDiffblue.class)
+  @Category(ContributionFromDiffblue.class)
+  @ManagedByDiffblue
   @MethodsUnderTest({"byte[] MarketOrderIdListCapsule.getTail()"})
   public void testGetTail() {
     // Arrange, Act and Assert
@@ -453,7 +473,8 @@ public class MarketOrderIdListCapsuleDiffblueTest {
    * <p>Method under test: {@link MarketOrderIdListCapsule#setTail(byte[])}
    */
   @Test
-  @Category(MaintainedByDiffblue.class)
+  @Category(ContributionFromDiffblue.class)
+  @ManagedByDiffblue
   @MethodsUnderTest({"void MarketOrderIdListCapsule.setTail(byte[])"})
   public void testSetTail() throws UnsupportedEncodingException {
     // Arrange
@@ -485,7 +506,8 @@ public class MarketOrderIdListCapsuleDiffblueTest {
    * <p>Method under test: {@link MarketOrderIdListCapsule#isOrderEmpty()}
    */
   @Test
-  @Category(MaintainedByDiffblue.class)
+  @Category(ContributionFromDiffblue.class)
+  @ManagedByDiffblue
   @MethodsUnderTest({"boolean MarketOrderIdListCapsule.isOrderEmpty()"})
   public void testIsOrderEmpty() {
     // Arrange, Act and Assert
@@ -504,7 +526,8 @@ public class MarketOrderIdListCapsuleDiffblueTest {
    * MarketOrderStore)}
    */
   @Test
-  @Category(MaintainedByDiffblue.class)
+  @Category(ContributionFromDiffblue.class)
+  @ManagedByDiffblue
   @MethodsUnderTest({
     "void MarketOrderIdListCapsule.addOrder(MarketOrderCapsule, MarketOrderStore)"
   })
@@ -558,7 +581,8 @@ public class MarketOrderIdListCapsuleDiffblueTest {
    * <p>Method under test: {@link MarketOrderIdListCapsule#getHeadOrder(MarketOrderStore)}
    */
   @Test
-  @Category(MaintainedByDiffblue.class)
+  @Category(ContributionFromDiffblue.class)
+  @ManagedByDiffblue
   @MethodsUnderTest({"MarketOrderCapsule MarketOrderIdListCapsule.getHeadOrder(MarketOrderStore)"})
   public void testGetHeadOrder_givenMarketOrderIdListCapsule_whenNull_thenReturnNull()
       throws ItemNotFoundException {
@@ -578,7 +602,8 @@ public class MarketOrderIdListCapsuleDiffblueTest {
    * <p>Method under test: {@link MarketOrderIdListCapsule#getHeadOrder(MarketOrderStore)}
    */
   @Test
-  @Category(MaintainedByDiffblue.class)
+  @Category(ContributionFromDiffblue.class)
+  @ManagedByDiffblue
   @MethodsUnderTest({"MarketOrderCapsule MarketOrderIdListCapsule.getHeadOrder(MarketOrderStore)"})
   public void testGetHeadOrder_givenNull_whenMarketOrderStoreGetReturnNull_thenCallsGet()
       throws ItemNotFoundException {
@@ -608,7 +633,8 @@ public class MarketOrderIdListCapsuleDiffblueTest {
    * <p>Method under test: {@link MarketOrderIdListCapsule#getOrderByIndex(int, MarketOrderStore)}
    */
   @Test
-  @Category(MaintainedByDiffblue.class)
+  @Category(ContributionFromDiffblue.class)
+  @ManagedByDiffblue
   @MethodsUnderTest({
     "MarketOrderCapsule MarketOrderIdListCapsule.getOrderByIndex(int, MarketOrderStore)"
   })
@@ -646,7 +672,8 @@ public class MarketOrderIdListCapsuleDiffblueTest {
    * <p>Method under test: {@link MarketOrderIdListCapsule#getOrderByIndex(int, MarketOrderStore)}
    */
   @Test
-  @Category(MaintainedByDiffblue.class)
+  @Category(ContributionFromDiffblue.class)
+  @ManagedByDiffblue
   @MethodsUnderTest({
     "MarketOrderCapsule MarketOrderIdListCapsule.getOrderByIndex(int, MarketOrderStore)"
   })
@@ -678,7 +705,8 @@ public class MarketOrderIdListCapsuleDiffblueTest {
    * <p>Method under test: {@link MarketOrderIdListCapsule#getOrderByIndex(int, MarketOrderStore)}
    */
   @Test
-  @Category(MaintainedByDiffblue.class)
+  @Category(ContributionFromDiffblue.class)
+  @ManagedByDiffblue
   @MethodsUnderTest({
     "MarketOrderCapsule MarketOrderIdListCapsule.getOrderByIndex(int, MarketOrderStore)"
   })
@@ -700,7 +728,8 @@ public class MarketOrderIdListCapsuleDiffblueTest {
    * <p>Method under test: {@link MarketOrderIdListCapsule#getOrderByIndex(int, MarketOrderStore)}
    */
   @Test
-  @Category(MaintainedByDiffblue.class)
+  @Category(ContributionFromDiffblue.class)
+  @ManagedByDiffblue
   @MethodsUnderTest({
     "MarketOrderCapsule MarketOrderIdListCapsule.getOrderByIndex(int, MarketOrderStore)"
   })
@@ -732,7 +761,8 @@ public class MarketOrderIdListCapsuleDiffblueTest {
    * <p>Method under test: {@link MarketOrderIdListCapsule#getOrderByIndex(int, MarketOrderStore)}
    */
   @Test
-  @Category(MaintainedByDiffblue.class)
+  @Category(ContributionFromDiffblue.class)
+  @ManagedByDiffblue
   @MethodsUnderTest({
     "MarketOrderCapsule MarketOrderIdListCapsule.getOrderByIndex(int, MarketOrderStore)"
   })
@@ -770,7 +800,8 @@ public class MarketOrderIdListCapsuleDiffblueTest {
    * <p>Method under test: {@link MarketOrderIdListCapsule#getOrderSize(MarketOrderStore)}
    */
   @Test
-  @Category(MaintainedByDiffblue.class)
+  @Category(ContributionFromDiffblue.class)
+  @ManagedByDiffblue
   @MethodsUnderTest({"int MarketOrderIdListCapsule.getOrderSize(MarketOrderStore)"})
   public void testGetOrderSize_givenMarketOrderCapsuleIsNextNullReturnTrue_thenReturnOne()
       throws ItemNotFoundException {
@@ -805,7 +836,8 @@ public class MarketOrderIdListCapsuleDiffblueTest {
    * <p>Method under test: {@link MarketOrderIdListCapsule#getOrderSize(MarketOrderStore)}
    */
   @Test
-  @Category(MaintainedByDiffblue.class)
+  @Category(ContributionFromDiffblue.class)
+  @ManagedByDiffblue
   @MethodsUnderTest({"int MarketOrderIdListCapsule.getOrderSize(MarketOrderStore)"})
   public void testGetOrderSize_givenMarketOrderIdListCapsule_whenNull_thenReturnZero()
       throws ItemNotFoundException {
@@ -819,7 +851,8 @@ public class MarketOrderIdListCapsuleDiffblueTest {
    * <p>Method under test: {@link MarketOrderIdListCapsule#getData()}
    */
   @Test
-  @Category(MaintainedByDiffblue.class)
+  @Category(ContributionFromDiffblue.class)
+  @ManagedByDiffblue
   @MethodsUnderTest({"byte[] MarketOrderIdListCapsule.getData()"})
   public void testGetData() {
     // Arrange, Act and Assert
@@ -832,7 +865,8 @@ public class MarketOrderIdListCapsuleDiffblueTest {
    * <p>Method under test: {@link MarketOrderIdListCapsule#getInstance()}
    */
   @Test
-  @Category(MaintainedByDiffblue.class)
+  @Category(ContributionFromDiffblue.class)
+  @ManagedByDiffblue
   @MethodsUnderTest({"MarketOrderIdList MarketOrderIdListCapsule.getInstance()"})
   public void testGetInstance() {
     // Arrange and Act
@@ -860,7 +894,8 @@ public class MarketOrderIdListCapsuleDiffblueTest {
    * <p>Method under test: {@link MarketOrderIdListCapsule#getAllOrder(MarketOrderStore, long)}
    */
   @Test
-  @Category(MaintainedByDiffblue.class)
+  @Category(ContributionFromDiffblue.class)
+  @ManagedByDiffblue
   @MethodsUnderTest({"List MarketOrderIdListCapsule.getAllOrder(MarketOrderStore, long)"})
   public void testGetAllOrder_givenMarketOrderIdListCapsule_whenNull_thenReturnEmpty()
       throws ItemNotFoundException {
@@ -880,7 +915,8 @@ public class MarketOrderIdListCapsuleDiffblueTest {
    * <p>Method under test: {@link MarketOrderIdListCapsule#getAllOrder(MarketOrderStore, long)}
    */
   @Test
-  @Category(MaintainedByDiffblue.class)
+  @Category(ContributionFromDiffblue.class)
+  @ManagedByDiffblue
   @MethodsUnderTest({"List MarketOrderIdListCapsule.getAllOrder(MarketOrderStore, long)"})
   public void testGetAllOrder_givenNull_whenMarketOrderStoreGetUncheckedReturnNull()
       throws ItemNotFoundException {
@@ -909,7 +945,8 @@ public class MarketOrderIdListCapsuleDiffblueTest {
    * <p>Method under test: {@link MarketOrderIdListCapsule#getAllOrder(MarketOrderStore, long)}
    */
   @Test
-  @Category(MaintainedByDiffblue.class)
+  @Category(ContributionFromDiffblue.class)
+  @ManagedByDiffblue
   @MethodsUnderTest({"List MarketOrderIdListCapsule.getAllOrder(MarketOrderStore, long)"})
   public void testGetAllOrder_thenReturnSizeIsOne() throws ItemNotFoundException {
     // Arrange
@@ -941,7 +978,8 @@ public class MarketOrderIdListCapsuleDiffblueTest {
    * <p>Method under test: {@link MarketOrderIdListCapsule#getAllOrder(MarketOrderStore, long)}
    */
   @Test
-  @Category(MaintainedByDiffblue.class)
+  @Category(ContributionFromDiffblue.class)
+  @ManagedByDiffblue
   @MethodsUnderTest({"List MarketOrderIdListCapsule.getAllOrder(MarketOrderStore, long)"})
   public void testGetAllOrder_thenReturnSizeIsTwo() throws ItemNotFoundException {
     // Arrange

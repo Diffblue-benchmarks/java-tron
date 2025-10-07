@@ -5,7 +5,8 @@ import static org.junit.Assert.assertEquals;
 import static org.junit.Assert.assertFalse;
 import static org.junit.Assert.assertSame;
 import static org.junit.Assert.assertTrue;
-import com.diffblue.cover.annotations.MaintainedByDiffblue;
+import com.diffblue.cover.annotations.ContributionFromDiffblue;
+import com.diffblue.cover.annotations.ManagedByDiffblue;
 import com.diffblue.cover.annotations.MethodsUnderTest;
 import com.google.protobuf.ByteString;
 import com.google.protobuf.ByteString.ByteIterator;
@@ -33,7 +34,8 @@ public class StorageRowCapsuleDiffblueTest {
    * </ul>
    */
   @Test
-  @Category(MaintainedByDiffblue.class)
+  @Category(ContributionFromDiffblue.class)
+  @ManagedByDiffblue
   @MethodsUnderTest({
     "void StorageRowCapsule.<init>(byte[])",
     "byte[] StorageRowCapsule.getData()",
@@ -77,7 +79,8 @@ public class StorageRowCapsuleDiffblueTest {
    * <p>Method under test: {@link StorageRowCapsule#StorageRowCapsule(byte[], byte[])}
    */
   @Test
-  @Category(MaintainedByDiffblue.class)
+  @Category(ContributionFromDiffblue.class)
+  @ManagedByDiffblue
   @MethodsUnderTest({"void StorageRowCapsule.<init>(byte[], byte[])"})
   public void testNewStorageRowCapsule() throws UnsupportedEncodingException {
     // Arrange
@@ -130,7 +133,8 @@ public class StorageRowCapsuleDiffblueTest {
    * <p>Method under test: {@link StorageRowCapsule#StorageRowCapsule(StorageRowCapsule)}
    */
   @Test
-  @Category(MaintainedByDiffblue.class)
+  @Category(ContributionFromDiffblue.class)
+  @ManagedByDiffblue
   @MethodsUnderTest({"void StorageRowCapsule.<init>(StorageRowCapsule)"})
   public void testNewStorageRowCapsule_givenAxaxaxaxBytesIsUtf8_thenReturnNotDirty()
       throws UnsupportedEncodingException {
@@ -174,7 +178,8 @@ public class StorageRowCapsuleDiffblueTest {
    * <p>Method under test: {@link StorageRowCapsule#StorageRowCapsule(StorageRowCapsule)}
    */
   @Test
-  @Category(MaintainedByDiffblue.class)
+  @Category(ContributionFromDiffblue.class)
+  @ManagedByDiffblue
   @MethodsUnderTest({"void StorageRowCapsule.<init>(StorageRowCapsule)"})
   public void testNewStorageRowCapsule_thenReturnDirty() throws UnsupportedEncodingException {
     // Arrange
@@ -213,7 +218,8 @@ public class StorageRowCapsuleDiffblueTest {
    * <p>Method under test: {@link StorageRowCapsule#getHash()}
    */
   @Test
-  @Category(MaintainedByDiffblue.class)
+  @Category(ContributionFromDiffblue.class)
+  @ManagedByDiffblue
   @MethodsUnderTest({"Sha256Hash StorageRowCapsule.getHash()"})
   public void testGetHash() throws UnsupportedEncodingException {
     // Arrange and Act
@@ -254,7 +260,8 @@ public class StorageRowCapsuleDiffblueTest {
    * <p>Method under test: {@link StorageRowCapsule#setValue(byte[])}
    */
   @Test
-  @Category(MaintainedByDiffblue.class)
+  @Category(ContributionFromDiffblue.class)
+  @ManagedByDiffblue
   @MethodsUnderTest({"void StorageRowCapsule.setValue(byte[])"})
   public void testSetValue() throws UnsupportedEncodingException {
     // Arrange
@@ -278,7 +285,8 @@ public class StorageRowCapsuleDiffblueTest {
    * <p>Method under test: {@link StorageRowCapsule#getInstance()}
    */
   @Test
-  @Category(MaintainedByDiffblue.class)
+  @Category(ContributionFromDiffblue.class)
+  @ManagedByDiffblue
   @MethodsUnderTest({"byte[] StorageRowCapsule.getInstance()"})
   public void testGetInstance() throws UnsupportedEncodingException {
     // Arrange, Act and Assert

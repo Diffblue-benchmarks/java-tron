@@ -7,7 +7,8 @@ import static org.mockito.Mockito.doNothing;
 import static org.mockito.Mockito.mock;
 import static org.mockito.Mockito.verify;
 import static org.mockito.Mockito.when;
-import com.diffblue.cover.annotations.MaintainedByDiffblue;
+import com.diffblue.cover.annotations.ContributionFromDiffblue;
+import com.diffblue.cover.annotations.ManagedByDiffblue;
 import com.diffblue.cover.annotations.MethodsUnderTest;
 import java.util.ArrayList;
 import java.util.HashMap;
@@ -29,7 +30,8 @@ public class BandwidthPriceHistoryLoaderDiffblueTest {
    * <p>Method under test: {@link BandwidthPriceHistoryLoader#doWork()}
    */
   @Test
-  @Category(MaintainedByDiffblue.class)
+  @Category(ContributionFromDiffblue.class)
+  @ManagedByDiffblue
   @MethodsUnderTest({"void BandwidthPriceHistoryLoader.doWork()"})
   public void testDoWork() {
     // Arrange
@@ -78,7 +80,8 @@ public class BandwidthPriceHistoryLoaderDiffblueTest {
    * <p>Method under test: {@link BandwidthPriceHistoryLoader#getBandwidthProposals()}
    */
   @Test
-  @Category(MaintainedByDiffblue.class)
+  @Category(ContributionFromDiffblue.class)
+  @ManagedByDiffblue
   @MethodsUnderTest({"void BandwidthPriceHistoryLoader.getBandwidthProposals()"})
   public void testGetBandwidthProposals_thenCallsGetProposalStore() {
     // Arrange
@@ -103,7 +106,8 @@ public class BandwidthPriceHistoryLoaderDiffblueTest {
    * <p>Method under test: {@link BandwidthPriceHistoryLoader#parseProposalsToStr()}
    */
   @Test
-  @Category(MaintainedByDiffblue.class)
+  @Category(ContributionFromDiffblue.class)
+  @ManagedByDiffblue
   @MethodsUnderTest({"String BandwidthPriceHistoryLoader.parseProposalsToStr()"})
   public void testParseProposalsToStr() {
     // Arrange, Act and Assert
@@ -123,7 +127,8 @@ public class BandwidthPriceHistoryLoaderDiffblueTest {
    * <p>Method under test: {@link BandwidthPriceHistoryLoader#finish()}
    */
   @Test
-  @Category(MaintainedByDiffblue.class)
+  @Category(ContributionFromDiffblue.class)
+  @ManagedByDiffblue
   @MethodsUnderTest({"void BandwidthPriceHistoryLoader.finish()"})
   public void testFinish_thenCallsGetDynamicPropertiesStore() {
     // Arrange

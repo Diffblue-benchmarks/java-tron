@@ -13,7 +13,8 @@ import static org.mockito.Mockito.doNothing;
 import static org.mockito.Mockito.mock;
 import static org.mockito.Mockito.verify;
 import static org.mockito.Mockito.when;
-import com.diffblue.cover.annotations.MaintainedByDiffblue;
+import com.diffblue.cover.annotations.ContributionFromDiffblue;
+import com.diffblue.cover.annotations.ManagedByDiffblue;
 import com.diffblue.cover.annotations.MethodsUnderTest;
 import com.google.protobuf.Message;
 import java.io.UnsupportedEncodingException;
@@ -75,7 +76,8 @@ public class TronJsonRpcImplDiffblueTest {
    * <p>Method under test: {@link TronJsonRpcImpl#web3ClientVersion()}
    */
   @Test
-  @Category(MaintainedByDiffblue.class)
+  @Category(ContributionFromDiffblue.class)
+  @ManagedByDiffblue
   @MethodsUnderTest({"String TronJsonRpcImpl.web3ClientVersion()"})
   public void testWeb3ClientVersion() {
     // Arrange, Act and Assert
@@ -88,7 +90,8 @@ public class TronJsonRpcImplDiffblueTest {
    * <p>Method under test: {@link TronJsonRpcImpl#web3Sha3(String)}
    */
   @Test
-  @Category(MaintainedByDiffblue.class)
+  @Category(ContributionFromDiffblue.class)
+  @ManagedByDiffblue
   @MethodsUnderTest({"String TronJsonRpcImpl.web3Sha3(String)"})
   public void testWeb3Sha3() throws JsonRpcInvalidParamsException {
     // Arrange, Act and Assert
@@ -108,7 +111,8 @@ public class TronJsonRpcImplDiffblueTest {
    * <p>Method under test: {@link TronJsonRpcImpl#web3Sha3(String)}
    */
   @Test
-  @Category(MaintainedByDiffblue.class)
+  @Category(ContributionFromDiffblue.class)
+  @ManagedByDiffblue
   @MethodsUnderTest({"String TronJsonRpcImpl.web3Sha3(String)"})
   public void testWeb3Sha3_whenData_thenThrowJsonRpcInvalidParamsException()
       throws JsonRpcInvalidParamsException {
@@ -127,7 +131,8 @@ public class TronJsonRpcImplDiffblueTest {
    * <p>Method under test: {@link TronJsonRpcImpl#web3Sha3(String)}
    */
   @Test
-  @Category(MaintainedByDiffblue.class)
+  @Category(ContributionFromDiffblue.class)
+  @ManagedByDiffblue
   @MethodsUnderTest({"String TronJsonRpcImpl.web3Sha3(String)"})
   public void testWeb3Sha3_whenInvalidInputValue_thenThrowJsonRpcInvalidParamsException()
       throws JsonRpcInvalidParamsException {
@@ -142,7 +147,8 @@ public class TronJsonRpcImplDiffblueTest {
    * <p>Method under test: {@link TronJsonRpcImpl#web3Sha3(String)}
    */
   @Test
-  @Category(MaintainedByDiffblue.class)
+  @Category(ContributionFromDiffblue.class)
+  @ManagedByDiffblue
   @MethodsUnderTest({"String TronJsonRpcImpl.web3Sha3(String)"})
   public void testWeb3Sha32() throws JsonRpcInvalidParamsException {
     // Arrange, Act and Assert
@@ -157,7 +163,8 @@ public class TronJsonRpcImplDiffblueTest {
    * <p>Method under test: {@link TronJsonRpcImpl#ethGetBlockTransactionCountByHash(String)}
    */
   @Test
-  @Category(MaintainedByDiffblue.class)
+  @Category(ContributionFromDiffblue.class)
+  @ManagedByDiffblue
   @MethodsUnderTest({"String TronJsonRpcImpl.ethGetBlockTransactionCountByHash(String)"})
   public void testEthGetBlockTransactionCountByHash() throws JsonRpcInvalidParamsException {
     // Arrange, Act and Assert
@@ -176,7 +183,8 @@ public class TronJsonRpcImplDiffblueTest {
    * <p>Method under test: {@link TronJsonRpcImpl#ethGetBlockTransactionCountByNumber(String)}
    */
   @Test
-  @Category(MaintainedByDiffblue.class)
+  @Category(ContributionFromDiffblue.class)
+  @ManagedByDiffblue
   @MethodsUnderTest({"String TronJsonRpcImpl.ethGetBlockTransactionCountByNumber(String)"})
   public void testEthGetBlockTransactionCountByNumber_thenReturn0x0()
       throws JsonRpcInvalidParamsException {
@@ -202,7 +210,8 @@ public class TronJsonRpcImplDiffblueTest {
    * <p>Method under test: {@link TronJsonRpcImpl#ethGetBlockTransactionCountByNumber(String)}
    */
   @Test
-  @Category(MaintainedByDiffblue.class)
+  @Category(ContributionFromDiffblue.class)
+  @ManagedByDiffblue
   @MethodsUnderTest({"String TronJsonRpcImpl.ethGetBlockTransactionCountByNumber(String)"})
   public void testEthGetBlockTransactionCountByNumber_thenThrowJsonRpcInvalidParamsException()
       throws JsonRpcInvalidParamsException {
@@ -223,7 +232,8 @@ public class TronJsonRpcImplDiffblueTest {
    * <p>Method under test: {@link TronJsonRpcImpl#ethGetBlockByHash(String, Boolean)}
    */
   @Test
-  @Category(MaintainedByDiffblue.class)
+  @Category(ContributionFromDiffblue.class)
+  @ManagedByDiffblue
   @MethodsUnderTest({
     "org.tron.core.services.jsonrpc.types.BlockResult TronJsonRpcImpl.ethGetBlockByHash(String, Boolean)"
   })
@@ -240,7 +250,8 @@ public class TronJsonRpcImplDiffblueTest {
    * <p>Method under test: {@link TronJsonRpcImpl#ethGetBlockByNumber(String, Boolean)}
    */
   @Test
-  @Category(MaintainedByDiffblue.class)
+  @Category(ContributionFromDiffblue.class)
+  @ManagedByDiffblue
   @MethodsUnderTest({
     "org.tron.core.services.jsonrpc.types.BlockResult TronJsonRpcImpl.ethGetBlockByNumber(String, Boolean)"
   })
@@ -262,7 +273,8 @@ public class TronJsonRpcImplDiffblueTest {
    * <p>Method under test: {@link TronJsonRpcImpl#getNetVersion()}
    */
   @Test
-  @Category(MaintainedByDiffblue.class)
+  @Category(ContributionFromDiffblue.class)
+  @ManagedByDiffblue
   @MethodsUnderTest({"String TronJsonRpcImpl.getNetVersion()"})
   public void testGetNetVersion() throws JsonRpcInternalException {
     // Arrange
@@ -287,7 +299,8 @@ public class TronJsonRpcImplDiffblueTest {
    * <p>Method under test: {@link TronJsonRpcImpl#getNetVersion()}
    */
   @Test
-  @Category(MaintainedByDiffblue.class)
+  @Category(ContributionFromDiffblue.class)
+  @ManagedByDiffblue
   @MethodsUnderTest({"String TronJsonRpcImpl.getNetVersion()"})
   public void testGetNetVersion_givenBlockCapsuleGetBlockIdReturnBlockId_thenReturn0x00000000()
       throws JsonRpcInternalException {
@@ -316,7 +329,8 @@ public class TronJsonRpcImplDiffblueTest {
    * <p>Method under test: {@link TronJsonRpcImpl#getNetVersion()}
    */
   @Test
-  @Category(MaintainedByDiffblue.class)
+  @Category(ContributionFromDiffblue.class)
+  @ManagedByDiffblue
   @MethodsUnderTest({"String TronJsonRpcImpl.getNetVersion()"})
   public void testGetNetVersion_givenBlockCapsuleGetBlockIdReturnNull_thenCallsGetBlockId()
       throws JsonRpcInternalException {
@@ -342,7 +356,8 @@ public class TronJsonRpcImplDiffblueTest {
    * <p>Method under test: {@link TronJsonRpcImpl#getNetVersion()}
    */
   @Test
-  @Category(MaintainedByDiffblue.class)
+  @Category(ContributionFromDiffblue.class)
+  @ManagedByDiffblue
   @MethodsUnderTest({"String TronJsonRpcImpl.getNetVersion()"})
   public void testGetNetVersion_givenBlockIdGetBytesReturnEmptyArrayOfByte_thenCallsGetBytes()
       throws JsonRpcInternalException {
@@ -371,7 +386,8 @@ public class TronJsonRpcImplDiffblueTest {
    * <p>Method under test: {@link TronJsonRpcImpl#getNetVersion()}
    */
   @Test
-  @Category(MaintainedByDiffblue.class)
+  @Category(ContributionFromDiffblue.class)
+  @ManagedByDiffblue
   @MethodsUnderTest({"String TronJsonRpcImpl.getNetVersion()"})
   public void testGetNetVersion_givenWalletGetBlockCapsuleByNumReturnNull()
       throws JsonRpcInternalException {
@@ -394,7 +410,8 @@ public class TronJsonRpcImplDiffblueTest {
    * <p>Method under test: {@link TronJsonRpcImpl#getNetVersion()}
    */
   @Test
-  @Category(MaintainedByDiffblue.class)
+  @Category(ContributionFromDiffblue.class)
+  @ManagedByDiffblue
   @MethodsUnderTest({"String TronJsonRpcImpl.getNetVersion()"})
   public void testGetNetVersion_givenWalletGetBlockCapsuleByNumThrowClassCastException()
       throws JsonRpcInternalException {
@@ -416,7 +433,8 @@ public class TronJsonRpcImplDiffblueTest {
    * <p>Method under test: {@link TronJsonRpcImpl#getNetVersion()}
    */
   @Test
-  @Category(MaintainedByDiffblue.class)
+  @Category(ContributionFromDiffblue.class)
+  @ManagedByDiffblue
   @MethodsUnderTest({"String TronJsonRpcImpl.getNetVersion()"})
   public void testGetNetVersion_thenReturn0x41584158()
       throws UnsupportedEncodingException, JsonRpcInternalException {
@@ -444,7 +462,8 @@ public class TronJsonRpcImplDiffblueTest {
    * <p>Method under test: {@link TronJsonRpcImpl#ethChainId()}
    */
   @Test
-  @Category(MaintainedByDiffblue.class)
+  @Category(ContributionFromDiffblue.class)
+  @ManagedByDiffblue
   @MethodsUnderTest({"String TronJsonRpcImpl.ethChainId()"})
   public void testEthChainId() throws JsonRpcInternalException {
     // Arrange
@@ -469,7 +488,8 @@ public class TronJsonRpcImplDiffblueTest {
    * <p>Method under test: {@link TronJsonRpcImpl#ethChainId()}
    */
   @Test
-  @Category(MaintainedByDiffblue.class)
+  @Category(ContributionFromDiffblue.class)
+  @ManagedByDiffblue
   @MethodsUnderTest({"String TronJsonRpcImpl.ethChainId()"})
   public void testEthChainId_givenBlockCapsuleGetBlockIdReturnBlockId_thenReturn0x00000000()
       throws JsonRpcInternalException {
@@ -498,7 +518,8 @@ public class TronJsonRpcImplDiffblueTest {
    * <p>Method under test: {@link TronJsonRpcImpl#ethChainId()}
    */
   @Test
-  @Category(MaintainedByDiffblue.class)
+  @Category(ContributionFromDiffblue.class)
+  @ManagedByDiffblue
   @MethodsUnderTest({"String TronJsonRpcImpl.ethChainId()"})
   public void testEthChainId_givenBlockCapsuleGetBlockIdReturnNull_thenCallsGetBlockId()
       throws JsonRpcInternalException {
@@ -524,7 +545,8 @@ public class TronJsonRpcImplDiffblueTest {
    * <p>Method under test: {@link TronJsonRpcImpl#ethChainId()}
    */
   @Test
-  @Category(MaintainedByDiffblue.class)
+  @Category(ContributionFromDiffblue.class)
+  @ManagedByDiffblue
   @MethodsUnderTest({"String TronJsonRpcImpl.ethChainId()"})
   public void testEthChainId_givenBlockIdGetBytesReturnEmptyArrayOfByte_thenCallsGetBytes()
       throws JsonRpcInternalException {
@@ -553,7 +575,8 @@ public class TronJsonRpcImplDiffblueTest {
    * <p>Method under test: {@link TronJsonRpcImpl#ethChainId()}
    */
   @Test
-  @Category(MaintainedByDiffblue.class)
+  @Category(ContributionFromDiffblue.class)
+  @ManagedByDiffblue
   @MethodsUnderTest({"String TronJsonRpcImpl.ethChainId()"})
   public void testEthChainId_givenWalletGetBlockCapsuleByNumReturnNull()
       throws JsonRpcInternalException {
@@ -576,7 +599,8 @@ public class TronJsonRpcImplDiffblueTest {
    * <p>Method under test: {@link TronJsonRpcImpl#ethChainId()}
    */
   @Test
-  @Category(MaintainedByDiffblue.class)
+  @Category(ContributionFromDiffblue.class)
+  @ManagedByDiffblue
   @MethodsUnderTest({"String TronJsonRpcImpl.ethChainId()"})
   public void testEthChainId_givenWalletGetBlockCapsuleByNumThrowClassCastException()
       throws JsonRpcInternalException {
@@ -598,7 +622,8 @@ public class TronJsonRpcImplDiffblueTest {
    * <p>Method under test: {@link TronJsonRpcImpl#ethChainId()}
    */
   @Test
-  @Category(MaintainedByDiffblue.class)
+  @Category(ContributionFromDiffblue.class)
+  @ManagedByDiffblue
   @MethodsUnderTest({"String TronJsonRpcImpl.ethChainId()"})
   public void testEthChainId_thenReturn0x41584158()
       throws UnsupportedEncodingException, JsonRpcInternalException {
@@ -631,7 +656,8 @@ public class TronJsonRpcImplDiffblueTest {
    * <p>Method under test: {@link TronJsonRpcImpl#isListening()}
    */
   @Test
-  @Category(MaintainedByDiffblue.class)
+  @Category(ContributionFromDiffblue.class)
+  @ManagedByDiffblue
   @MethodsUnderTest({"boolean TronJsonRpcImpl.isListening()"})
   public void testIsListening_givenNodeInfoGetActiveConnectCountReturnThree_thenReturnTrue() {
     // Arrange
@@ -660,7 +686,8 @@ public class TronJsonRpcImplDiffblueTest {
    * <p>Method under test: {@link TronJsonRpcImpl#isListening()}
    */
   @Test
-  @Category(MaintainedByDiffblue.class)
+  @Category(ContributionFromDiffblue.class)
+  @ManagedByDiffblue
   @MethodsUnderTest({"boolean TronJsonRpcImpl.isListening()"})
   public void testIsListening_givenNodeInfoServiceGetNodeInfoReturnNodeInfo_thenReturnFalse() {
     // Arrange
@@ -685,7 +712,8 @@ public class TronJsonRpcImplDiffblueTest {
    * <p>Method under test: {@link TronJsonRpcImpl#getTrxBalance(String, String)}
    */
   @Test
-  @Category(MaintainedByDiffblue.class)
+  @Category(ContributionFromDiffblue.class)
+  @ManagedByDiffblue
   @MethodsUnderTest({"String TronJsonRpcImpl.getTrxBalance(String, String)"})
   public void testGetTrxBalance_when0x0_thenThrowJsonRpcInvalidParamsException()
       throws JsonRpcInvalidParamsException {
@@ -706,7 +734,8 @@ public class TronJsonRpcImplDiffblueTest {
    * <p>Method under test: {@link TronJsonRpcImpl#getTrxBalance(String, String)}
    */
   @Test
-  @Category(MaintainedByDiffblue.class)
+  @Category(ContributionFromDiffblue.class)
+  @ManagedByDiffblue
   @MethodsUnderTest({"String TronJsonRpcImpl.getTrxBalance(String, String)"})
   public void testGetTrxBalance_when42_thenThrowJsonRpcInvalidParamsException()
       throws JsonRpcInvalidParamsException {
@@ -727,7 +756,8 @@ public class TronJsonRpcImplDiffblueTest {
    * <p>Method under test: {@link TronJsonRpcImpl#getTrxBalance(String, String)}
    */
   @Test
-  @Category(MaintainedByDiffblue.class)
+  @Category(ContributionFromDiffblue.class)
+  @ManagedByDiffblue
   @MethodsUnderTest({"String TronJsonRpcImpl.getTrxBalance(String, String)"})
   public void testGetTrxBalance_whenBlockNumOrTag_thenThrowJsonRpcInvalidParamsException()
       throws JsonRpcInvalidParamsException {
@@ -748,7 +778,8 @@ public class TronJsonRpcImplDiffblueTest {
    * <p>Method under test: {@link TronJsonRpcImpl#getTrxBalance(String, String)}
    */
   @Test
-  @Category(MaintainedByDiffblue.class)
+  @Category(ContributionFromDiffblue.class)
+  @ManagedByDiffblue
   @MethodsUnderTest({"String TronJsonRpcImpl.getTrxBalance(String, String)"})
   public void testGetTrxBalance_whenEarliest_str_thenThrowJsonRpcInvalidParamsException()
       throws JsonRpcInvalidParamsException {
@@ -769,7 +800,8 @@ public class TronJsonRpcImplDiffblueTest {
    * <p>Method under test: {@link TronJsonRpcImpl#getTrxBalance(String, String)}
    */
   @Test
-  @Category(MaintainedByDiffblue.class)
+  @Category(ContributionFromDiffblue.class)
+  @ManagedByDiffblue
   @MethodsUnderTest({"String TronJsonRpcImpl.getTrxBalance(String, String)"})
   public void testGetTrxBalance_whenNull_thenThrowJsonRpcInvalidParamsException()
       throws JsonRpcInvalidParamsException {
@@ -789,7 +821,8 @@ public class TronJsonRpcImplDiffblueTest {
    * <p>Method under test: {@link TronJsonRpcImpl#getTrxBalance(String, String)}
    */
   @Test
-  @Category(MaintainedByDiffblue.class)
+  @Category(ContributionFromDiffblue.class)
+  @ManagedByDiffblue
   @MethodsUnderTest({"String TronJsonRpcImpl.getTrxBalance(String, String)"})
   public void testGetTrxBalance_whenPending_str_thenThrowJsonRpcInvalidParamsException()
       throws JsonRpcInvalidParamsException {
@@ -810,7 +843,8 @@ public class TronJsonRpcImplDiffblueTest {
    * <p>Method under test: {@link TronJsonRpcImpl#getStorageAt(String, String, String)}
    */
   @Test
-  @Category(MaintainedByDiffblue.class)
+  @Category(ContributionFromDiffblue.class)
+  @ManagedByDiffblue
   @MethodsUnderTest({"String TronJsonRpcImpl.getStorageAt(String, String, String)"})
   public void testGetStorageAt_when0x0_thenThrowJsonRpcInvalidParamsException()
       throws JsonRpcInvalidParamsException {
@@ -831,7 +865,8 @@ public class TronJsonRpcImplDiffblueTest {
    * <p>Method under test: {@link TronJsonRpcImpl#getStorageAt(String, String, String)}
    */
   @Test
-  @Category(MaintainedByDiffblue.class)
+  @Category(ContributionFromDiffblue.class)
+  @ManagedByDiffblue
   @MethodsUnderTest({"String TronJsonRpcImpl.getStorageAt(String, String, String)"})
   public void testGetStorageAt_when42_thenThrowJsonRpcInvalidParamsException()
       throws JsonRpcInvalidParamsException {
@@ -852,7 +887,8 @@ public class TronJsonRpcImplDiffblueTest {
    * <p>Method under test: {@link TronJsonRpcImpl#getStorageAt(String, String, String)}
    */
   @Test
-  @Category(MaintainedByDiffblue.class)
+  @Category(ContributionFromDiffblue.class)
+  @ManagedByDiffblue
   @MethodsUnderTest({"String TronJsonRpcImpl.getStorageAt(String, String, String)"})
   public void testGetStorageAt_whenBlockNumOrTag_thenThrowJsonRpcInvalidParamsException()
       throws JsonRpcInvalidParamsException {
@@ -873,7 +909,8 @@ public class TronJsonRpcImplDiffblueTest {
    * <p>Method under test: {@link TronJsonRpcImpl#getStorageAt(String, String, String)}
    */
   @Test
-  @Category(MaintainedByDiffblue.class)
+  @Category(ContributionFromDiffblue.class)
+  @ManagedByDiffblue
   @MethodsUnderTest({"String TronJsonRpcImpl.getStorageAt(String, String, String)"})
   public void testGetStorageAt_whenEarliest_str_thenThrowJsonRpcInvalidParamsException()
       throws JsonRpcInvalidParamsException {
@@ -896,7 +933,8 @@ public class TronJsonRpcImplDiffblueTest {
    * <p>Method under test: {@link TronJsonRpcImpl#getStorageAt(String, String, String)}
    */
   @Test
-  @Category(MaintainedByDiffblue.class)
+  @Category(ContributionFromDiffblue.class)
+  @ManagedByDiffblue
   @MethodsUnderTest({"String TronJsonRpcImpl.getStorageAt(String, String, String)"})
   public void testGetStorageAt_whenNull_thenThrowJsonRpcInvalidParamsException()
       throws JsonRpcInvalidParamsException {
@@ -916,7 +954,8 @@ public class TronJsonRpcImplDiffblueTest {
    * <p>Method under test: {@link TronJsonRpcImpl#getStorageAt(String, String, String)}
    */
   @Test
-  @Category(MaintainedByDiffblue.class)
+  @Category(ContributionFromDiffblue.class)
+  @ManagedByDiffblue
   @MethodsUnderTest({"String TronJsonRpcImpl.getStorageAt(String, String, String)"})
   public void testGetStorageAt_whenPending_str_thenThrowJsonRpcInvalidParamsException()
       throws JsonRpcInvalidParamsException {
@@ -938,7 +977,8 @@ public class TronJsonRpcImplDiffblueTest {
    * <p>Method under test: {@link TronJsonRpcImpl#getABIOfSmartContract(String, String)}
    */
   @Test
-  @Category(MaintainedByDiffblue.class)
+  @Category(ContributionFromDiffblue.class)
+  @ManagedByDiffblue
   @MethodsUnderTest({"String TronJsonRpcImpl.getABIOfSmartContract(String, String)"})
   public void testGetABIOfSmartContract_when0x0_thenThrowJsonRpcInvalidParamsException()
       throws JsonRpcInvalidParamsException {
@@ -959,7 +999,8 @@ public class TronJsonRpcImplDiffblueTest {
    * <p>Method under test: {@link TronJsonRpcImpl#getABIOfSmartContract(String, String)}
    */
   @Test
-  @Category(MaintainedByDiffblue.class)
+  @Category(ContributionFromDiffblue.class)
+  @ManagedByDiffblue
   @MethodsUnderTest({"String TronJsonRpcImpl.getABIOfSmartContract(String, String)"})
   public void testGetABIOfSmartContract_when42_thenThrowJsonRpcInvalidParamsException()
       throws JsonRpcInvalidParamsException {
@@ -979,7 +1020,8 @@ public class TronJsonRpcImplDiffblueTest {
    * <p>Method under test: {@link TronJsonRpcImpl#getABIOfSmartContract(String, String)}
    */
   @Test
-  @Category(MaintainedByDiffblue.class)
+  @Category(ContributionFromDiffblue.class)
+  @ManagedByDiffblue
   @MethodsUnderTest({"String TronJsonRpcImpl.getABIOfSmartContract(String, String)"})
   public void testGetABIOfSmartContract_whenBlockNumOrTag() throws JsonRpcInvalidParamsException {
     // Arrange, Act and Assert
@@ -998,7 +1040,8 @@ public class TronJsonRpcImplDiffblueTest {
    * <p>Method under test: {@link TronJsonRpcImpl#getABIOfSmartContract(String, String)}
    */
   @Test
-  @Category(MaintainedByDiffblue.class)
+  @Category(ContributionFromDiffblue.class)
+  @ManagedByDiffblue
   @MethodsUnderTest({"String TronJsonRpcImpl.getABIOfSmartContract(String, String)"})
   public void testGetABIOfSmartContract_whenEarliest_str() throws JsonRpcInvalidParamsException {
     // Arrange, Act and Assert
@@ -1018,7 +1061,8 @@ public class TronJsonRpcImplDiffblueTest {
    * <p>Method under test: {@link TronJsonRpcImpl#getABIOfSmartContract(String, String)}
    */
   @Test
-  @Category(MaintainedByDiffblue.class)
+  @Category(ContributionFromDiffblue.class)
+  @ManagedByDiffblue
   @MethodsUnderTest({"String TronJsonRpcImpl.getABIOfSmartContract(String, String)"})
   public void testGetABIOfSmartContract_whenNull_thenThrowJsonRpcInvalidParamsException()
       throws JsonRpcInvalidParamsException {
@@ -1039,7 +1083,8 @@ public class TronJsonRpcImplDiffblueTest {
    * <p>Method under test: {@link TronJsonRpcImpl#getABIOfSmartContract(String, String)}
    */
   @Test
-  @Category(MaintainedByDiffblue.class)
+  @Category(ContributionFromDiffblue.class)
+  @ManagedByDiffblue
   @MethodsUnderTest({"String TronJsonRpcImpl.getABIOfSmartContract(String, String)"})
   public void testGetABIOfSmartContract_whenPending_str_thenThrowJsonRpcInvalidParamsException()
       throws JsonRpcInvalidParamsException {
@@ -1060,7 +1105,8 @@ public class TronJsonRpcImplDiffblueTest {
    * <p>Method under test: {@link TronJsonRpcImpl#getCoinbase()}
    */
   @Test
-  @Category(MaintainedByDiffblue.class)
+  @Category(ContributionFromDiffblue.class)
+  @ManagedByDiffblue
   @MethodsUnderTest({"String TronJsonRpcImpl.getCoinbase()"})
   public void testGetCoinbase_givenWalletGetCoinbaseReturnCoinbase_thenReturnCoinbase()
       throws JsonRpcInternalException {
@@ -1085,7 +1131,8 @@ public class TronJsonRpcImplDiffblueTest {
    * <p>Method under test: {@link TronJsonRpcImpl#getCoinbase()}
    */
   @Test
-  @Category(MaintainedByDiffblue.class)
+  @Category(ContributionFromDiffblue.class)
+  @ManagedByDiffblue
   @MethodsUnderTest({"String TronJsonRpcImpl.getCoinbase()"})
   public void testGetCoinbase_thenThrowJsonRpcInternalException() throws JsonRpcInternalException {
     // Arrange
@@ -1102,7 +1149,8 @@ public class TronJsonRpcImplDiffblueTest {
    * <p>Method under test: {@link TronJsonRpcImpl#gasPrice()}
    */
   @Test
-  @Category(MaintainedByDiffblue.class)
+  @Category(ContributionFromDiffblue.class)
+  @ManagedByDiffblue
   @MethodsUnderTest({"String TronJsonRpcImpl.gasPrice()"})
   public void testGasPrice() {
     // Arrange
@@ -1122,7 +1170,8 @@ public class TronJsonRpcImplDiffblueTest {
    * <p>Method under test: {@link TronJsonRpcImpl#estimateGas(CallArguments)}
    */
   @Test
-  @Category(MaintainedByDiffblue.class)
+  @Category(ContributionFromDiffblue.class)
+  @ManagedByDiffblue
   @MethodsUnderTest({"String TronJsonRpcImpl.estimateGas(CallArguments)"})
   public void testEstimateGas()
       throws JsonRpcInternalException, JsonRpcInvalidParamsException,
@@ -1155,7 +1204,8 @@ public class TronJsonRpcImplDiffblueTest {
    * <p>Method under test: {@link TronJsonRpcImpl#estimateGas(CallArguments)}
    */
   @Test
-  @Category(MaintainedByDiffblue.class)
+  @Category(ContributionFromDiffblue.class)
+  @ManagedByDiffblue
   @MethodsUnderTest({"String TronJsonRpcImpl.estimateGas(CallArguments)"})
   public void testEstimateGas2()
       throws JsonRpcInternalException, JsonRpcInvalidParamsException,
@@ -1189,7 +1239,8 @@ public class TronJsonRpcImplDiffblueTest {
    * <p>Method under test: {@link TronJsonRpcImpl#estimateGas(CallArguments)}
    */
   @Test
-  @Category(MaintainedByDiffblue.class)
+  @Category(ContributionFromDiffblue.class)
+  @ManagedByDiffblue
   @MethodsUnderTest({"String TronJsonRpcImpl.estimateGas(CallArguments)"})
   public void testEstimateGas_thenThrowJsonRpcInvalidRequestException()
       throws ContractValidateException, JsonRpcInternalException, JsonRpcInvalidParamsException,
@@ -1225,7 +1276,8 @@ public class TronJsonRpcImplDiffblueTest {
    * <p>Method under test: {@link TronJsonRpcImpl#estimateGas(CallArguments)}
    */
   @Test
-  @Category(MaintainedByDiffblue.class)
+  @Category(ContributionFromDiffblue.class)
+  @ManagedByDiffblue
   @MethodsUnderTest({"String TronJsonRpcImpl.estimateGas(CallArguments)"})
   public void testEstimateGas_thenThrowJsonRpcInvalidRequestException2()
       throws ContractValidateException, JsonRpcInternalException, JsonRpcInvalidParamsException,
@@ -1262,7 +1314,8 @@ public class TronJsonRpcImplDiffblueTest {
    * <p>Method under test: {@link TronJsonRpcImpl#estimateGas(CallArguments)}
    */
   @Test
-  @Category(MaintainedByDiffblue.class)
+  @Category(ContributionFromDiffblue.class)
+  @ManagedByDiffblue
   @MethodsUnderTest({"String TronJsonRpcImpl.estimateGas(CallArguments)"})
   public void testEstimateGas_thenThrowRuntimeException()
       throws JsonRpcInternalException, JsonRpcInvalidParamsException,
@@ -1290,7 +1343,8 @@ public class TronJsonRpcImplDiffblueTest {
    * <p>Method under test: {@link TronJsonRpcImpl#getTransactionByHash(String)}
    */
   @Test
-  @Category(MaintainedByDiffblue.class)
+  @Category(ContributionFromDiffblue.class)
+  @ManagedByDiffblue
   @MethodsUnderTest({
     "org.tron.core.services.jsonrpc.types.TransactionResult TronJsonRpcImpl.getTransactionByHash(String)"
   })
@@ -1306,7 +1360,8 @@ public class TronJsonRpcImplDiffblueTest {
    * <p>Method under test: {@link TronJsonRpcImpl#getTransactionByBlockHashAndIndex(String, String)}
    */
   @Test
-  @Category(MaintainedByDiffblue.class)
+  @Category(ContributionFromDiffblue.class)
+  @ManagedByDiffblue
   @MethodsUnderTest({
     "org.tron.core.services.jsonrpc.types.TransactionResult TronJsonRpcImpl.getTransactionByBlockHashAndIndex(String, String)"
   })
@@ -1324,7 +1379,8 @@ public class TronJsonRpcImplDiffblueTest {
    * String)}
    */
   @Test
-  @Category(MaintainedByDiffblue.class)
+  @Category(ContributionFromDiffblue.class)
+  @ManagedByDiffblue
   @MethodsUnderTest({
     "org.tron.core.services.jsonrpc.types.TransactionResult TronJsonRpcImpl.getTransactionByBlockNumberAndIndex(String, String)"
   })
@@ -1346,7 +1402,8 @@ public class TronJsonRpcImplDiffblueTest {
    * <p>Method under test: {@link TronJsonRpcImpl#getTransactionReceipt(String)}
    */
   @Test
-  @Category(MaintainedByDiffblue.class)
+  @Category(ContributionFromDiffblue.class)
+  @ManagedByDiffblue
   @MethodsUnderTest({
     "org.tron.core.services.jsonrpc.types.TransactionReceipt TronJsonRpcImpl.getTransactionReceipt(String)"
   })
@@ -1367,7 +1424,8 @@ public class TronJsonRpcImplDiffblueTest {
    * <p>Method under test: {@link TronJsonRpcImpl#getCall(CallArguments, Object)}
    */
   @Test
-  @Category(MaintainedByDiffblue.class)
+  @Category(ContributionFromDiffblue.class)
+  @ManagedByDiffblue
   @MethodsUnderTest({"String TronJsonRpcImpl.getCall(CallArguments, Object)"})
   public void testGetCall_givenBlockNumber_whenHashMapBlockNumberIs0x()
       throws JsonRpcInternalException, JsonRpcInvalidParamsException,
@@ -1399,7 +1457,8 @@ public class TronJsonRpcImplDiffblueTest {
    * <p>Method under test: {@link TronJsonRpcImpl#getCall(CallArguments, Object)}
    */
   @Test
-  @Category(MaintainedByDiffblue.class)
+  @Category(ContributionFromDiffblue.class)
+  @ManagedByDiffblue
   @MethodsUnderTest({"String TronJsonRpcImpl.getCall(CallArguments, Object)"})
   public void testGetCall_givenNull_thenCallsCreateTransactionCapsule()
       throws ContractValidateException, JsonRpcInternalException, JsonRpcInvalidParamsException,
@@ -1437,7 +1496,8 @@ public class TronJsonRpcImplDiffblueTest {
    * <p>Method under test: {@link TronJsonRpcImpl#getCall(CallArguments, Object)}
    */
   @Test
-  @Category(MaintainedByDiffblue.class)
+  @Category(ContributionFromDiffblue.class)
+  @ManagedByDiffblue
   @MethodsUnderTest({"String TronJsonRpcImpl.getCall(CallArguments, Object)"})
   public void testGetCall_givenRuntimeException_thenThrowRuntimeException()
       throws JsonRpcInternalException, JsonRpcInvalidParamsException,
@@ -1467,7 +1527,8 @@ public class TronJsonRpcImplDiffblueTest {
    * <p>Method under test: {@link TronJsonRpcImpl#getCall(CallArguments, Object)}
    */
   @Test
-  @Category(MaintainedByDiffblue.class)
+  @Category(ContributionFromDiffblue.class)
+  @ManagedByDiffblue
   @MethodsUnderTest({"String TronJsonRpcImpl.getCall(CallArguments, Object)"})
   public void testGetCall_givenTronJsonRpcImpl_when0x0_thenThrowJsonRpcInvalidParamsException()
       throws JsonRpcInternalException, JsonRpcInvalidParamsException,
@@ -1500,7 +1561,8 @@ public class TronJsonRpcImplDiffblueTest {
    * <p>Method under test: {@link TronJsonRpcImpl#getCall(CallArguments, Object)}
    */
   @Test
-  @Category(MaintainedByDiffblue.class)
+  @Category(ContributionFromDiffblue.class)
+  @ManagedByDiffblue
   @MethodsUnderTest({"String TronJsonRpcImpl.getCall(CallArguments, Object)"})
   public void testGetCall_givenTronJsonRpcImpl_when0x_thenThrowJsonRpcInvalidParamsException()
       throws JsonRpcInternalException, JsonRpcInvalidParamsException,
@@ -1526,7 +1588,8 @@ public class TronJsonRpcImplDiffblueTest {
    * <p>Method under test: {@link TronJsonRpcImpl#getCall(CallArguments, Object)}
    */
   @Test
-  @Category(MaintainedByDiffblue.class)
+  @Category(ContributionFromDiffblue.class)
+  @ManagedByDiffblue
   @MethodsUnderTest({"String TronJsonRpcImpl.getCall(CallArguments, Object)"})
   public void testGetCall_givenTronJsonRpcImpl_when42_thenThrowJsonRpcInvalidParamsException()
       throws JsonRpcInternalException, JsonRpcInvalidParamsException,
@@ -1559,7 +1622,8 @@ public class TronJsonRpcImplDiffblueTest {
    * <p>Method under test: {@link TronJsonRpcImpl#getCall(CallArguments, Object)}
    */
   @Test
-  @Category(MaintainedByDiffblue.class)
+  @Category(ContributionFromDiffblue.class)
+  @ManagedByDiffblue
   @MethodsUnderTest({"String TronJsonRpcImpl.getCall(CallArguments, Object)"})
   public void testGetCall_givenTronJsonRpcImpl_whenOne_thenThrowJsonRpcInvalidRequestException()
       throws JsonRpcInternalException, JsonRpcInvalidParamsException,
@@ -1590,7 +1654,8 @@ public class TronJsonRpcImplDiffblueTest {
    * <p>Method under test: {@link TronJsonRpcImpl#getCall(CallArguments, Object)}
    */
   @Test
-  @Category(MaintainedByDiffblue.class)
+  @Category(ContributionFromDiffblue.class)
+  @ManagedByDiffblue
   @MethodsUnderTest({"String TronJsonRpcImpl.getCall(CallArguments, Object)"})
   public void testGetCall_thenThrowJsonRpcInternalException()
       throws JsonRpcInternalException, JsonRpcInvalidParamsException,
@@ -1628,7 +1693,8 @@ public class TronJsonRpcImplDiffblueTest {
    * <p>Method under test: {@link TronJsonRpcImpl#getCall(CallArguments, Object)}
    */
   @Test
-  @Category(MaintainedByDiffblue.class)
+  @Category(ContributionFromDiffblue.class)
+  @ManagedByDiffblue
   @MethodsUnderTest({"String TronJsonRpcImpl.getCall(CallArguments, Object)"})
   public void testGetCall_whenBlockParamObj_thenThrowJsonRpcInvalidParamsException()
       throws JsonRpcInternalException, JsonRpcInvalidParamsException,
@@ -1661,7 +1727,8 @@ public class TronJsonRpcImplDiffblueTest {
    * <p>Method under test: {@link TronJsonRpcImpl#getCall(CallArguments, Object)}
    */
   @Test
-  @Category(MaintainedByDiffblue.class)
+  @Category(ContributionFromDiffblue.class)
+  @ManagedByDiffblue
   @MethodsUnderTest({"String TronJsonRpcImpl.getCall(CallArguments, Object)"})
   public void testGetCall_whenEarliest_str_thenThrowJsonRpcInvalidParamsException()
       throws JsonRpcInternalException, JsonRpcInvalidParamsException,
@@ -1694,7 +1761,8 @@ public class TronJsonRpcImplDiffblueTest {
    * <p>Method under test: {@link TronJsonRpcImpl#getCall(CallArguments, Object)}
    */
   @Test
-  @Category(MaintainedByDiffblue.class)
+  @Category(ContributionFromDiffblue.class)
+  @ManagedByDiffblue
   @MethodsUnderTest({"String TronJsonRpcImpl.getCall(CallArguments, Object)"})
   public void testGetCall_whenHashMap_thenThrowJsonRpcInvalidRequestException()
       throws JsonRpcInternalException, JsonRpcInvalidParamsException,
@@ -1727,7 +1795,8 @@ public class TronJsonRpcImplDiffblueTest {
    * <p>Method under test: {@link TronJsonRpcImpl#getCall(CallArguments, Object)}
    */
   @Test
-  @Category(MaintainedByDiffblue.class)
+  @Category(ContributionFromDiffblue.class)
+  @ManagedByDiffblue
   @MethodsUnderTest({"String TronJsonRpcImpl.getCall(CallArguments, Object)"})
   public void testGetCall_whenPending_str_thenThrowJsonRpcInvalidParamsException()
       throws JsonRpcInternalException, JsonRpcInvalidParamsException,
@@ -1761,7 +1830,8 @@ public class TronJsonRpcImplDiffblueTest {
    * <p>Method under test: {@link TronJsonRpcImpl#getPeerCount()}
    */
   @Test
-  @Category(MaintainedByDiffblue.class)
+  @Category(ContributionFromDiffblue.class)
+  @ManagedByDiffblue
   @MethodsUnderTest({"String TronJsonRpcImpl.getPeerCount()"})
   public void testGetPeerCount_givenNodeInfoServiceGetNodeInfoReturnNodeInfo_thenReturn0x0() {
     // Arrange
@@ -1785,7 +1855,8 @@ public class TronJsonRpcImplDiffblueTest {
    * <p>Method under test: {@link TronJsonRpcImpl#getSyncingStatus()}
    */
   @Test
-  @Category(MaintainedByDiffblue.class)
+  @Category(ContributionFromDiffblue.class)
+  @ManagedByDiffblue
   @MethodsUnderTest({"Object TronJsonRpcImpl.getSyncingStatus()"})
   public void testGetSyncingStatus_thenReturnFalse() {
     // Arrange
@@ -1805,7 +1876,8 @@ public class TronJsonRpcImplDiffblueTest {
    * <p>Method under test: {@link TronJsonRpcImpl#getUncleByBlockHashAndIndex(String, String)}
    */
   @Test
-  @Category(MaintainedByDiffblue.class)
+  @Category(ContributionFromDiffblue.class)
+  @ManagedByDiffblue
   @MethodsUnderTest({
     "org.tron.core.services.jsonrpc.types.BlockResult TronJsonRpcImpl.getUncleByBlockHashAndIndex(String, String)"
   })
@@ -1820,7 +1892,8 @@ public class TronJsonRpcImplDiffblueTest {
    * <p>Method under test: {@link TronJsonRpcImpl#getUncleByBlockNumberAndIndex(String, String)}
    */
   @Test
-  @Category(MaintainedByDiffblue.class)
+  @Category(ContributionFromDiffblue.class)
+  @ManagedByDiffblue
   @MethodsUnderTest({
     "org.tron.core.services.jsonrpc.types.BlockResult TronJsonRpcImpl.getUncleByBlockNumberAndIndex(String, String)"
   })
@@ -1835,7 +1908,8 @@ public class TronJsonRpcImplDiffblueTest {
    * <p>Method under test: {@link TronJsonRpcImpl#getUncleCountByBlockHash(String)}
    */
   @Test
-  @Category(MaintainedByDiffblue.class)
+  @Category(ContributionFromDiffblue.class)
+  @ManagedByDiffblue
   @MethodsUnderTest({"String TronJsonRpcImpl.getUncleCountByBlockHash(String)"})
   public void testGetUncleCountByBlockHash() {
     // Arrange, Act and Assert
@@ -1848,7 +1922,8 @@ public class TronJsonRpcImplDiffblueTest {
    * <p>Method under test: {@link TronJsonRpcImpl#getUncleCountByBlockNumber(String)}
    */
   @Test
-  @Category(MaintainedByDiffblue.class)
+  @Category(ContributionFromDiffblue.class)
+  @ManagedByDiffblue
   @MethodsUnderTest({"String TronJsonRpcImpl.getUncleCountByBlockNumber(String)"})
   public void testGetUncleCountByBlockNumber() {
     // Arrange, Act and Assert
@@ -1866,7 +1941,8 @@ public class TronJsonRpcImplDiffblueTest {
    * <p>Method under test: {@link TronJsonRpcImpl#isMining()}
    */
   @Test
-  @Category(MaintainedByDiffblue.class)
+  @Category(ContributionFromDiffblue.class)
+  @ManagedByDiffblue
   @MethodsUnderTest({"boolean TronJsonRpcImpl.isMining()"})
   public void testIsMining_givenWalletIsMiningReturnFalse_thenReturnFalse() {
     // Arrange
@@ -1891,7 +1967,8 @@ public class TronJsonRpcImplDiffblueTest {
    * <p>Method under test: {@link TronJsonRpcImpl#isMining()}
    */
   @Test
-  @Category(MaintainedByDiffblue.class)
+  @Category(ContributionFromDiffblue.class)
+  @ManagedByDiffblue
   @MethodsUnderTest({"boolean TronJsonRpcImpl.isMining()"})
   public void testIsMining_givenWalletIsMiningReturnTrue_thenReturnTrue() {
     // Arrange
@@ -1911,7 +1988,8 @@ public class TronJsonRpcImplDiffblueTest {
    * <p>Method under test: {@link TronJsonRpcImpl#getAccounts()}
    */
   @Test
-  @Category(MaintainedByDiffblue.class)
+  @Category(ContributionFromDiffblue.class)
+  @ManagedByDiffblue
   @MethodsUnderTest({"String[] TronJsonRpcImpl.getAccounts()"})
   public void testGetAccounts() {
     // Arrange, Act and Assert
@@ -1929,7 +2007,8 @@ public class TronJsonRpcImplDiffblueTest {
    * <p>Method under test: {@link TronJsonRpcImpl#getSource()}
    */
   @Test
-  @Category(MaintainedByDiffblue.class)
+  @Category(ContributionFromDiffblue.class)
+  @ManagedByDiffblue
   @MethodsUnderTest({"RequestSource TronJsonRpcImpl.getSource()"})
   public void testGetSource_givenWalletGetCursorReturnHead_thenReturnFullnode() {
     // Arrange
@@ -1954,7 +2033,8 @@ public class TronJsonRpcImplDiffblueTest {
    * <p>Method under test: {@link TronJsonRpcImpl#getSource()}
    */
   @Test
-  @Category(MaintainedByDiffblue.class)
+  @Category(ContributionFromDiffblue.class)
+  @ManagedByDiffblue
   @MethodsUnderTest({"RequestSource TronJsonRpcImpl.getSource()"})
   public void testGetSource_givenWalletGetCursorReturnPbft_thenReturnPbft() {
     // Arrange
@@ -1979,7 +2059,8 @@ public class TronJsonRpcImplDiffblueTest {
    * <p>Method under test: {@link TronJsonRpcImpl#getSource()}
    */
   @Test
-  @Category(MaintainedByDiffblue.class)
+  @Category(ContributionFromDiffblue.class)
+  @ManagedByDiffblue
   @MethodsUnderTest({"RequestSource TronJsonRpcImpl.getSource()"})
   public void testGetSource_givenWalletGetCursorReturnSolidity_thenReturnSolidity() {
     // Arrange
@@ -2003,7 +2084,8 @@ public class TronJsonRpcImplDiffblueTest {
    * <p>Method under test: {@link TronJsonRpcImpl#disableInPBFT(String)}
    */
   @Test
-  @Category(MaintainedByDiffblue.class)
+  @Category(ContributionFromDiffblue.class)
+  @ManagedByDiffblue
   @MethodsUnderTest({"void TronJsonRpcImpl.disableInPBFT(String)"})
   public void testDisableInPBFT_givenWalletGetCursorReturnHead()
       throws JsonRpcMethodNotFoundException {
@@ -2027,7 +2109,8 @@ public class TronJsonRpcImplDiffblueTest {
    * <p>Method under test: {@link TronJsonRpcImpl#disableInPBFT(String)}
    */
   @Test
-  @Category(MaintainedByDiffblue.class)
+  @Category(ContributionFromDiffblue.class)
+  @ManagedByDiffblue
   @MethodsUnderTest({"void TronJsonRpcImpl.disableInPBFT(String)"})
   public void testDisableInPBFT_givenWalletGetCursorReturnSolidity()
       throws JsonRpcMethodNotFoundException {
@@ -2051,7 +2134,8 @@ public class TronJsonRpcImplDiffblueTest {
    * <p>Method under test: {@link TronJsonRpcImpl#disableInPBFT(String)}
    */
   @Test
-  @Category(MaintainedByDiffblue.class)
+  @Category(ContributionFromDiffblue.class)
+  @ManagedByDiffblue
   @MethodsUnderTest({"void TronJsonRpcImpl.disableInPBFT(String)"})
   public void testDisableInPBFT_thenThrowJsonRpcMethodNotFoundException()
       throws JsonRpcMethodNotFoundException {
@@ -2070,7 +2154,8 @@ public class TronJsonRpcImplDiffblueTest {
    * <p>Method under test: {@link TronJsonRpcImpl#buildTransaction(BuildArguments)}
    */
   @Test
-  @Category(MaintainedByDiffblue.class)
+  @Category(ContributionFromDiffblue.class)
+  @ManagedByDiffblue
   @MethodsUnderTest({
     "TronJsonRpc.TransactionJson TronJsonRpcImpl.buildTransaction(BuildArguments)"
   })
@@ -2108,7 +2193,8 @@ public class TronJsonRpcImplDiffblueTest {
    * <p>Method under test: {@link TronJsonRpcImpl#buildTransaction(BuildArguments)}
    */
   @Test
-  @Category(MaintainedByDiffblue.class)
+  @Category(ContributionFromDiffblue.class)
+  @ManagedByDiffblue
   @MethodsUnderTest({
     "TronJsonRpc.TransactionJson TronJsonRpcImpl.buildTransaction(BuildArguments)"
   })
@@ -2139,7 +2225,8 @@ public class TronJsonRpcImplDiffblueTest {
    * <p>Method under test: {@link TronJsonRpcImpl#buildTransaction(BuildArguments)}
    */
   @Test
-  @Category(MaintainedByDiffblue.class)
+  @Category(ContributionFromDiffblue.class)
+  @ManagedByDiffblue
   @MethodsUnderTest({
     "TronJsonRpc.TransactionJson TronJsonRpcImpl.buildTransaction(BuildArguments)"
   })
@@ -2169,7 +2256,8 @@ public class TronJsonRpcImplDiffblueTest {
    * <p>Method under test: {@link TronJsonRpcImpl#buildTransaction(BuildArguments)}
    */
   @Test
-  @Category(MaintainedByDiffblue.class)
+  @Category(ContributionFromDiffblue.class)
+  @ManagedByDiffblue
   @MethodsUnderTest({
     "TronJsonRpc.TransactionJson TronJsonRpcImpl.buildTransaction(BuildArguments)"
   })
@@ -2199,7 +2287,8 @@ public class TronJsonRpcImplDiffblueTest {
    * <p>Method under test: {@link TronJsonRpcImpl#buildTransaction(BuildArguments)}
    */
   @Test
-  @Category(MaintainedByDiffblue.class)
+  @Category(ContributionFromDiffblue.class)
+  @ManagedByDiffblue
   @MethodsUnderTest({
     "TronJsonRpc.TransactionJson TronJsonRpcImpl.buildTransaction(BuildArguments)"
   })
@@ -2241,7 +2330,8 @@ public class TronJsonRpcImplDiffblueTest {
    * <p>Method under test: {@link TronJsonRpcImpl#buildTransaction(BuildArguments)}
    */
   @Test
-  @Category(MaintainedByDiffblue.class)
+  @Category(ContributionFromDiffblue.class)
+  @ManagedByDiffblue
   @MethodsUnderTest({
     "TronJsonRpc.TransactionJson TronJsonRpcImpl.buildTransaction(BuildArguments)"
   })
@@ -2268,7 +2358,8 @@ public class TronJsonRpcImplDiffblueTest {
    * <p>Method under test: {@link TronJsonRpcImpl#buildTransaction(BuildArguments)}
    */
   @Test
-  @Category(MaintainedByDiffblue.class)
+  @Category(ContributionFromDiffblue.class)
+  @ManagedByDiffblue
   @MethodsUnderTest({
     "TronJsonRpc.TransactionJson TronJsonRpcImpl.buildTransaction(BuildArguments)"
   })
@@ -2296,7 +2387,8 @@ public class TronJsonRpcImplDiffblueTest {
    * <p>Method under test: {@link TronJsonRpcImpl#buildTransaction(BuildArguments)}
    */
   @Test
-  @Category(MaintainedByDiffblue.class)
+  @Category(ContributionFromDiffblue.class)
+  @ManagedByDiffblue
   @MethodsUnderTest({
     "TronJsonRpc.TransactionJson TronJsonRpcImpl.buildTransaction(BuildArguments)"
   })
@@ -2319,7 +2411,8 @@ public class TronJsonRpcImplDiffblueTest {
    * <p>Method under test: {@link TronJsonRpcImpl#ethSubmitWork(String, String, String)}
    */
   @Test
-  @Category(MaintainedByDiffblue.class)
+  @Category(ContributionFromDiffblue.class)
+  @ManagedByDiffblue
   @MethodsUnderTest({"boolean TronJsonRpcImpl.ethSubmitWork(String, String, String)"})
   public void testEthSubmitWork() throws JsonRpcMethodNotFoundException {
     // Arrange, Act and Assert
@@ -2334,7 +2427,8 @@ public class TronJsonRpcImplDiffblueTest {
    * <p>Method under test: {@link TronJsonRpcImpl#ethSendRawTransaction(String)}
    */
   @Test
-  @Category(MaintainedByDiffblue.class)
+  @Category(ContributionFromDiffblue.class)
+  @ManagedByDiffblue
   @MethodsUnderTest({"String TronJsonRpcImpl.ethSendRawTransaction(String)"})
   public void testEthSendRawTransaction() throws JsonRpcMethodNotFoundException {
     // Arrange, Act and Assert
@@ -2349,7 +2443,8 @@ public class TronJsonRpcImplDiffblueTest {
    * <p>Method under test: {@link TronJsonRpcImpl#ethSendTransaction(CallArguments)}
    */
   @Test
-  @Category(MaintainedByDiffblue.class)
+  @Category(ContributionFromDiffblue.class)
+  @ManagedByDiffblue
   @MethodsUnderTest({"String TronJsonRpcImpl.ethSendTransaction(CallArguments)"})
   public void testEthSendTransaction() throws JsonRpcMethodNotFoundException {
     // Arrange
@@ -2374,7 +2469,8 @@ public class TronJsonRpcImplDiffblueTest {
    * <p>Method under test: {@link TronJsonRpcImpl#ethSign(String, String)}
    */
   @Test
-  @Category(MaintainedByDiffblue.class)
+  @Category(ContributionFromDiffblue.class)
+  @ManagedByDiffblue
   @MethodsUnderTest({"String TronJsonRpcImpl.ethSign(String, String)"})
   public void testEthSign() throws JsonRpcMethodNotFoundException {
     // Arrange, Act and Assert
@@ -2388,7 +2484,8 @@ public class TronJsonRpcImplDiffblueTest {
    * <p>Method under test: {@link TronJsonRpcImpl#ethSignTransaction(CallArguments)}
    */
   @Test
-  @Category(MaintainedByDiffblue.class)
+  @Category(ContributionFromDiffblue.class)
+  @ManagedByDiffblue
   @MethodsUnderTest({"String TronJsonRpcImpl.ethSignTransaction(CallArguments)"})
   public void testEthSignTransaction() throws JsonRpcMethodNotFoundException {
     // Arrange
@@ -2414,7 +2511,8 @@ public class TronJsonRpcImplDiffblueTest {
    * <p>Method under test: {@link TronJsonRpcImpl#parityNextNonce(String)}
    */
   @Test
-  @Category(MaintainedByDiffblue.class)
+  @Category(ContributionFromDiffblue.class)
+  @ManagedByDiffblue
   @MethodsUnderTest({"String TronJsonRpcImpl.parityNextNonce(String)"})
   public void testParityNextNonce() throws JsonRpcMethodNotFoundException {
     // Arrange, Act and Assert
@@ -2428,7 +2526,8 @@ public class TronJsonRpcImplDiffblueTest {
    * <p>Method under test: {@link TronJsonRpcImpl#getSendTransactionCountOfAddress(String, String)}
    */
   @Test
-  @Category(MaintainedByDiffblue.class)
+  @Category(ContributionFromDiffblue.class)
+  @ManagedByDiffblue
   @MethodsUnderTest({"String TronJsonRpcImpl.getSendTransactionCountOfAddress(String, String)"})
   public void testGetSendTransactionCountOfAddress() throws JsonRpcMethodNotFoundException {
     // Arrange, Act and Assert
@@ -2443,7 +2542,8 @@ public class TronJsonRpcImplDiffblueTest {
    * <p>Method under test: {@link TronJsonRpcImpl#getCompilers()}
    */
   @Test
-  @Category(MaintainedByDiffblue.class)
+  @Category(ContributionFromDiffblue.class)
+  @ManagedByDiffblue
   @MethodsUnderTest({"String[] TronJsonRpcImpl.getCompilers()"})
   public void testGetCompilers() throws JsonRpcMethodNotFoundException {
     // Arrange, Act and Assert
@@ -2456,7 +2556,8 @@ public class TronJsonRpcImplDiffblueTest {
    * <p>Method under test: {@link TronJsonRpcImpl#ethCompileSolidity(String)}
    */
   @Test
-  @Category(MaintainedByDiffblue.class)
+  @Category(ContributionFromDiffblue.class)
+  @ManagedByDiffblue
   @MethodsUnderTest({"TronJsonRpc.CompilationResult TronJsonRpcImpl.ethCompileSolidity(String)"})
   public void testEthCompileSolidity() throws JsonRpcMethodNotFoundException {
     // Arrange, Act and Assert
@@ -2470,7 +2571,8 @@ public class TronJsonRpcImplDiffblueTest {
    * <p>Method under test: {@link TronJsonRpcImpl#ethCompileLLL(String)}
    */
   @Test
-  @Category(MaintainedByDiffblue.class)
+  @Category(ContributionFromDiffblue.class)
+  @ManagedByDiffblue
   @MethodsUnderTest({"TronJsonRpc.CompilationResult TronJsonRpcImpl.ethCompileLLL(String)"})
   public void testEthCompileLLL() throws JsonRpcMethodNotFoundException {
     // Arrange, Act and Assert
@@ -2484,7 +2586,8 @@ public class TronJsonRpcImplDiffblueTest {
    * <p>Method under test: {@link TronJsonRpcImpl#ethCompileSerpent(String)}
    */
   @Test
-  @Category(MaintainedByDiffblue.class)
+  @Category(ContributionFromDiffblue.class)
+  @ManagedByDiffblue
   @MethodsUnderTest({"TronJsonRpc.CompilationResult TronJsonRpcImpl.ethCompileSerpent(String)"})
   public void testEthCompileSerpent() throws JsonRpcMethodNotFoundException {
     // Arrange, Act and Assert
@@ -2498,7 +2601,8 @@ public class TronJsonRpcImplDiffblueTest {
    * <p>Method under test: {@link TronJsonRpcImpl#ethSubmitHashrate(String, String)}
    */
   @Test
-  @Category(MaintainedByDiffblue.class)
+  @Category(ContributionFromDiffblue.class)
+  @ManagedByDiffblue
   @MethodsUnderTest({
     "TronJsonRpc.CompilationResult TronJsonRpcImpl.ethSubmitHashrate(String, String)"
   })
@@ -2519,7 +2623,8 @@ public class TronJsonRpcImplDiffblueTest {
    * <p>Method under test: {@link TronJsonRpcImpl#newBlockFilter()}
    */
   @Test
-  @Category(MaintainedByDiffblue.class)
+  @Category(ContributionFromDiffblue.class)
+  @ManagedByDiffblue
   @MethodsUnderTest({"String TronJsonRpcImpl.newBlockFilter()"})
   public void testNewBlockFilter_givenWalletGetCursorReturnHead()
       throws JsonRpcMethodNotFoundException {
@@ -2543,7 +2648,8 @@ public class TronJsonRpcImplDiffblueTest {
    * <p>Method under test: {@link TronJsonRpcImpl#newBlockFilter()}
    */
   @Test
-  @Category(MaintainedByDiffblue.class)
+  @Category(ContributionFromDiffblue.class)
+  @ManagedByDiffblue
   @MethodsUnderTest({"String TronJsonRpcImpl.newBlockFilter()"})
   public void testNewBlockFilter_givenWalletGetCursorReturnSolidity()
       throws JsonRpcMethodNotFoundException {
@@ -2567,7 +2673,8 @@ public class TronJsonRpcImplDiffblueTest {
    * <p>Method under test: {@link TronJsonRpcImpl#newBlockFilter()}
    */
   @Test
-  @Category(MaintainedByDiffblue.class)
+  @Category(ContributionFromDiffblue.class)
+  @ManagedByDiffblue
   @MethodsUnderTest({"String TronJsonRpcImpl.newBlockFilter()"})
   public void testNewBlockFilter_thenThrowJsonRpcMethodNotFoundException()
       throws JsonRpcMethodNotFoundException {
@@ -2590,7 +2697,8 @@ public class TronJsonRpcImplDiffblueTest {
    * <p>Method under test: {@link TronJsonRpcImpl#uninstallFilter(String)}
    */
   @Test
-  @Category(MaintainedByDiffblue.class)
+  @Category(ContributionFromDiffblue.class)
+  @ManagedByDiffblue
   @MethodsUnderTest({"boolean TronJsonRpcImpl.uninstallFilter(String)"})
   public void testUninstallFilter_givenWalletGetCursorReturnHead_when0x()
       throws ItemNotFoundException, JsonRpcMethodNotFoundException {
@@ -2613,7 +2721,8 @@ public class TronJsonRpcImplDiffblueTest {
    * <p>Method under test: {@link TronJsonRpcImpl#uninstallFilter(String)}
    */
   @Test
-  @Category(MaintainedByDiffblue.class)
+  @Category(ContributionFromDiffblue.class)
+  @ManagedByDiffblue
   @MethodsUnderTest({"boolean TronJsonRpcImpl.uninstallFilter(String)"})
   public void testUninstallFilter_givenWalletGetCursorReturnHead_when42()
       throws ItemNotFoundException, JsonRpcMethodNotFoundException {
@@ -2636,7 +2745,8 @@ public class TronJsonRpcImplDiffblueTest {
    * <p>Method under test: {@link TronJsonRpcImpl#uninstallFilter(String)}
    */
   @Test
-  @Category(MaintainedByDiffblue.class)
+  @Category(ContributionFromDiffblue.class)
+  @ManagedByDiffblue
   @MethodsUnderTest({"boolean TronJsonRpcImpl.uninstallFilter(String)"})
   public void testUninstallFilter_givenWalletGetCursorReturnHead_whenEthUninstallFilter()
       throws ItemNotFoundException, JsonRpcMethodNotFoundException {
@@ -2660,7 +2770,8 @@ public class TronJsonRpcImplDiffblueTest {
    * <p>Method under test: {@link TronJsonRpcImpl#uninstallFilter(String)}
    */
   @Test
-  @Category(MaintainedByDiffblue.class)
+  @Category(ContributionFromDiffblue.class)
+  @ManagedByDiffblue
   @MethodsUnderTest({"boolean TronJsonRpcImpl.uninstallFilter(String)"})
   public void testUninstallFilter_givenWalletGetCursorReturnSolidity_when42()
       throws ItemNotFoundException, JsonRpcMethodNotFoundException {
@@ -2682,7 +2793,8 @@ public class TronJsonRpcImplDiffblueTest {
    * <p>Method under test: {@link TronJsonRpcImpl#uninstallFilter(String)}
    */
   @Test
-  @Category(MaintainedByDiffblue.class)
+  @Category(ContributionFromDiffblue.class)
+  @ManagedByDiffblue
   @MethodsUnderTest({"boolean TronJsonRpcImpl.uninstallFilter(String)"})
   public void testUninstallFilter_thenThrowJsonRpcMethodNotFoundException()
       throws ItemNotFoundException, JsonRpcMethodNotFoundException {
@@ -2705,7 +2817,8 @@ public class TronJsonRpcImplDiffblueTest {
    * <p>Method under test: {@link TronJsonRpcImpl#getFilterChanges(String)}
    */
   @Test
-  @Category(MaintainedByDiffblue.class)
+  @Category(ContributionFromDiffblue.class)
+  @ManagedByDiffblue
   @MethodsUnderTest({"Object[] TronJsonRpcImpl.getFilterChanges(String)"})
   public void testGetFilterChanges_givenWalletGetCursorReturnHead_when0x()
       throws ItemNotFoundException, JsonRpcMethodNotFoundException {
@@ -2728,7 +2841,8 @@ public class TronJsonRpcImplDiffblueTest {
    * <p>Method under test: {@link TronJsonRpcImpl#getFilterChanges(String)}
    */
   @Test
-  @Category(MaintainedByDiffblue.class)
+  @Category(ContributionFromDiffblue.class)
+  @ManagedByDiffblue
   @MethodsUnderTest({"Object[] TronJsonRpcImpl.getFilterChanges(String)"})
   public void testGetFilterChanges_givenWalletGetCursorReturnHead_when42()
       throws ItemNotFoundException, JsonRpcMethodNotFoundException {
@@ -2751,7 +2865,8 @@ public class TronJsonRpcImplDiffblueTest {
    * <p>Method under test: {@link TronJsonRpcImpl#getFilterChanges(String)}
    */
   @Test
-  @Category(MaintainedByDiffblue.class)
+  @Category(ContributionFromDiffblue.class)
+  @ManagedByDiffblue
   @MethodsUnderTest({"Object[] TronJsonRpcImpl.getFilterChanges(String)"})
   public void testGetFilterChanges_givenWalletGetCursorReturnHead_whenFilterId()
       throws ItemNotFoundException, JsonRpcMethodNotFoundException {
@@ -2774,7 +2889,8 @@ public class TronJsonRpcImplDiffblueTest {
    * <p>Method under test: {@link TronJsonRpcImpl#getFilterChanges(String)}
    */
   @Test
-  @Category(MaintainedByDiffblue.class)
+  @Category(ContributionFromDiffblue.class)
+  @ManagedByDiffblue
   @MethodsUnderTest({"Object[] TronJsonRpcImpl.getFilterChanges(String)"})
   public void testGetFilterChanges_givenWalletGetCursorReturnSolidity_when42()
       throws ItemNotFoundException, JsonRpcMethodNotFoundException {
@@ -2796,7 +2912,8 @@ public class TronJsonRpcImplDiffblueTest {
    * <p>Method under test: {@link TronJsonRpcImpl#getFilterChanges(String)}
    */
   @Test
-  @Category(MaintainedByDiffblue.class)
+  @Category(ContributionFromDiffblue.class)
+  @ManagedByDiffblue
   @MethodsUnderTest({"Object[] TronJsonRpcImpl.getFilterChanges(String)"})
   public void testGetFilterChanges_thenThrowJsonRpcMethodNotFoundException()
       throws ItemNotFoundException, JsonRpcMethodNotFoundException {
@@ -2820,7 +2937,8 @@ public class TronJsonRpcImplDiffblueTest {
    * <p>Method under test: {@link TronJsonRpcImpl#getFilterLogs(String)}
    */
   @Test
-  @Category(MaintainedByDiffblue.class)
+  @Category(ContributionFromDiffblue.class)
+  @ManagedByDiffblue
   @MethodsUnderTest({"LogFilterElement[] TronJsonRpcImpl.getFilterLogs(String)"})
   public void testGetFilterLogs_givenWalletGetCursorReturnHead_when0x()
       throws InterruptedException, ExecutionException, BadItemException, ItemNotFoundException,
@@ -2844,7 +2962,8 @@ public class TronJsonRpcImplDiffblueTest {
    * <p>Method under test: {@link TronJsonRpcImpl#getFilterLogs(String)}
    */
   @Test
-  @Category(MaintainedByDiffblue.class)
+  @Category(ContributionFromDiffblue.class)
+  @ManagedByDiffblue
   @MethodsUnderTest({"LogFilterElement[] TronJsonRpcImpl.getFilterLogs(String)"})
   public void testGetFilterLogs_givenWalletGetCursorReturnHead_when42()
       throws InterruptedException, ExecutionException, BadItemException, ItemNotFoundException,
@@ -2868,7 +2987,8 @@ public class TronJsonRpcImplDiffblueTest {
    * <p>Method under test: {@link TronJsonRpcImpl#getFilterLogs(String)}
    */
   @Test
-  @Category(MaintainedByDiffblue.class)
+  @Category(ContributionFromDiffblue.class)
+  @ManagedByDiffblue
   @MethodsUnderTest({"LogFilterElement[] TronJsonRpcImpl.getFilterLogs(String)"})
   public void testGetFilterLogs_givenWalletGetCursorReturnHead_whenEthGetFilterLogs()
       throws InterruptedException, ExecutionException, BadItemException, ItemNotFoundException,
@@ -2893,7 +3013,8 @@ public class TronJsonRpcImplDiffblueTest {
    * <p>Method under test: {@link TronJsonRpcImpl#getFilterLogs(String)}
    */
   @Test
-  @Category(MaintainedByDiffblue.class)
+  @Category(ContributionFromDiffblue.class)
+  @ManagedByDiffblue
   @MethodsUnderTest({"LogFilterElement[] TronJsonRpcImpl.getFilterLogs(String)"})
   public void testGetFilterLogs_givenWalletGetCursorReturnSolidity_when42()
       throws InterruptedException, ExecutionException, BadItemException, ItemNotFoundException,
@@ -2916,7 +3037,8 @@ public class TronJsonRpcImplDiffblueTest {
    * <p>Method under test: {@link TronJsonRpcImpl#getFilterLogs(String)}
    */
   @Test
-  @Category(MaintainedByDiffblue.class)
+  @Category(ContributionFromDiffblue.class)
+  @ManagedByDiffblue
   @MethodsUnderTest({"LogFilterElement[] TronJsonRpcImpl.getFilterLogs(String)"})
   public void testGetFilterLogs_thenThrowJsonRpcMethodNotFoundException()
       throws InterruptedException, ExecutionException, BadItemException, ItemNotFoundException,
@@ -2939,7 +3061,8 @@ public class TronJsonRpcImplDiffblueTest {
    * <p>Method under test: {@link TronJsonRpcImpl#getFilterResult(String, Map, Map)}
    */
   @Test
-  @Category(MaintainedByDiffblue.class)
+  @Category(ContributionFromDiffblue.class)
+  @ManagedByDiffblue
   @MethodsUnderTest({"Object[] TronJsonRpcImpl.getFilterResult(String, Map, Map)"})
   public void testGetFilterResult_givenBlockFilterAndResult() throws ItemNotFoundException {
     // Arrange
@@ -2965,7 +3088,8 @@ public class TronJsonRpcImplDiffblueTest {
    * <p>Method under test: {@link TronJsonRpcImpl#getFilterResult(String, Map, Map)}
    */
   @Test
-  @Category(MaintainedByDiffblue.class)
+  @Category(ContributionFromDiffblue.class)
+  @ManagedByDiffblue
   @MethodsUnderTest({"Object[] TronJsonRpcImpl.getFilterResult(String, Map, Map)"})
   public void testGetFilterResult_thenCallsPopAll() throws ItemNotFoundException {
     // Arrange
@@ -2997,7 +3121,8 @@ public class TronJsonRpcImplDiffblueTest {
    * <p>Method under test: {@link TronJsonRpcImpl#getFilterResult(String, Map, Map)}
    */
   @Test
-  @Category(MaintainedByDiffblue.class)
+  @Category(ContributionFromDiffblue.class)
+  @ManagedByDiffblue
   @MethodsUnderTest({"Object[] TronJsonRpcImpl.getFilterResult(String, Map, Map)"})
   public void testGetFilterResult_thenReturnLogFilterElement()
       throws ItemNotFoundException, JsonRpcInvalidParamsException {
@@ -3027,7 +3152,8 @@ public class TronJsonRpcImplDiffblueTest {
    * <p>Method under test: {@link TronJsonRpcImpl#getFilterResult(String, Map, Map)}
    */
   @Test
-  @Category(MaintainedByDiffblue.class)
+  @Category(ContributionFromDiffblue.class)
+  @ManagedByDiffblue
   @MethodsUnderTest({"Object[] TronJsonRpcImpl.getFilterResult(String, Map, Map)"})
   public void testGetFilterResult_whenHashMap_thenThrowItemNotFoundException()
       throws ItemNotFoundException {
@@ -3053,7 +3179,8 @@ public class TronJsonRpcImplDiffblueTest {
    * </ul>
    */
   @Test
-  @Category(MaintainedByDiffblue.class)
+  @Category(ContributionFromDiffblue.class)
+  @ManagedByDiffblue
   @MethodsUnderTest({
     "Map TronJsonRpcImpl.getBlockFilter2ResultFull()",
     "Map TronJsonRpcImpl.getBlockFilter2ResultSolidity()",

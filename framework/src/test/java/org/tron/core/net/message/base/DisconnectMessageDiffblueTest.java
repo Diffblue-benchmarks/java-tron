@@ -4,7 +4,8 @@ import static org.junit.Assert.assertArrayEquals;
 import static org.junit.Assert.assertEquals;
 import static org.junit.Assert.assertNull;
 import static org.junit.Assert.assertTrue;
-import com.diffblue.cover.annotations.MaintainedByDiffblue;
+import com.diffblue.cover.annotations.ContributionFromDiffblue;
+import com.diffblue.cover.annotations.ManagedByDiffblue;
 import com.diffblue.cover.annotations.MethodsUnderTest;
 import com.google.protobuf.ByteString;
 import com.google.protobuf.ByteString.ByteIterator;
@@ -24,7 +25,8 @@ public class DisconnectMessageDiffblueTest {
    * <p>Method under test: {@link DisconnectMessage#DisconnectMessage(byte, byte[])}
    */
   @Test
-  @Category(MaintainedByDiffblue.class)
+  @Category(ContributionFromDiffblue.class)
+  @ManagedByDiffblue
   @MethodsUnderTest({"void DisconnectMessage.<init>(byte, byte[])"})
   public void testNewDisconnectMessage() throws Exception {
     // Arrange and Act
@@ -77,7 +79,8 @@ public class DisconnectMessageDiffblueTest {
    * <p>Method under test: {@link DisconnectMessage#DisconnectMessage(ReasonCode)}
    */
   @Test
-  @Category(MaintainedByDiffblue.class)
+  @Category(ContributionFromDiffblue.class)
+  @ManagedByDiffblue
   @MethodsUnderTest({"void DisconnectMessage.<init>(ReasonCode)"})
   public void testNewDisconnectMessage2() {
     // Arrange and Act
@@ -121,7 +124,8 @@ public class DisconnectMessageDiffblueTest {
    * <p>Method under test: {@link DisconnectMessage#DisconnectMessage(ReasonCode)}
    */
   @Test
-  @Category(MaintainedByDiffblue.class)
+  @Category(ContributionFromDiffblue.class)
+  @ManagedByDiffblue
   @MethodsUnderTest({"void DisconnectMessage.<init>(ReasonCode)"})
   public void testNewDisconnectMessage3() {
     // Arrange and Act
@@ -165,7 +169,8 @@ public class DisconnectMessageDiffblueTest {
    * <p>Method under test: {@link DisconnectMessage#DisconnectMessage(byte[])}
    */
   @Test
-  @Category(MaintainedByDiffblue.class)
+  @Category(ContributionFromDiffblue.class)
+  @ManagedByDiffblue
   @MethodsUnderTest({"void DisconnectMessage.<init>(byte[])"})
   public void testNewDisconnectMessage4() throws Exception {
     // Arrange and Act
@@ -221,7 +226,8 @@ public class DisconnectMessageDiffblueTest {
    * <p>Method under test: {@link DisconnectMessage#DisconnectMessage(byte, byte[])}
    */
   @Test
-  @Category(MaintainedByDiffblue.class)
+  @Category(ContributionFromDiffblue.class)
+  @ManagedByDiffblue
   @MethodsUnderTest({"void DisconnectMessage.<init>(byte, byte[])"})
   public void testNewDisconnectMessage_thenReturnMessageIdByteStringIteratorNextByteValueIsW()
       throws Exception {
@@ -327,7 +333,8 @@ public class DisconnectMessageDiffblueTest {
    * <p>Method under test: {@link DisconnectMessage#DisconnectMessage(byte[])}
    */
   @Test
-  @Category(MaintainedByDiffblue.class)
+  @Category(ContributionFromDiffblue.class)
+  @ManagedByDiffblue
   @MethodsUnderTest({"void DisconnectMessage.<init>(byte[])"})
   public void testNewDisconnectMessage_thenReturnMessageIdByteStringIteratorNextByteValueIsW2()
       throws Exception {
@@ -432,7 +439,8 @@ public class DisconnectMessageDiffblueTest {
    * <p>Method under test: {@link DisconnectMessage#DisconnectMessage(byte, byte[])}
    */
   @Test
-  @Category(MaintainedByDiffblue.class)
+  @Category(ContributionFromDiffblue.class)
+  @ManagedByDiffblue
   @MethodsUnderTest({"void DisconnectMessage.<init>(byte, byte[])"})
   public void testNewDisconnectMessage_thenSendDataReturnUnpooledHeapByteBuf() throws Exception {
     // Arrange and Act
@@ -479,7 +487,8 @@ public class DisconnectMessageDiffblueTest {
    * <p>Method under test: {@link DisconnectMessage#DisconnectMessage(byte[])}
    */
   @Test
-  @Category(MaintainedByDiffblue.class)
+  @Category(ContributionFromDiffblue.class)
+  @ManagedByDiffblue
   @MethodsUnderTest({"void DisconnectMessage.<init>(byte[])"})
   public void testNewDisconnectMessage_thenSendDataReturnUnpooledHeapByteBuf2() throws Exception {
     // Arrange and Act
@@ -528,7 +537,8 @@ public class DisconnectMessageDiffblueTest {
    * <p>Method under test: {@link DisconnectMessage#getReason()}
    */
   @Test
-  @Category(MaintainedByDiffblue.class)
+  @Category(ContributionFromDiffblue.class)
+  @ManagedByDiffblue
   @MethodsUnderTest({"ReasonCode DisconnectMessage.getReason()"})
   public void testGetReason_givenDisconnectMessageWithReasonCodeIsBadBlock_thenReturnBadBlock() {
     // Arrange, Act and Assert
@@ -547,7 +557,8 @@ public class DisconnectMessageDiffblueTest {
    * <p>Method under test: {@link DisconnectMessage#getReason()}
    */
   @Test
-  @Category(MaintainedByDiffblue.class)
+  @Category(ContributionFromDiffblue.class)
+  @ManagedByDiffblue
   @MethodsUnderTest({"ReasonCode DisconnectMessage.getReason()"})
   public void testGetReason_givenDisconnectMessageWithReasonCodeIsBadTx_thenReturnBadTx() {
     // Arrange, Act and Assert
@@ -566,7 +577,8 @@ public class DisconnectMessageDiffblueTest {
    * <p>Method under test: {@link DisconnectMessage#getReason()}
    */
   @Test
-  @Category(MaintainedByDiffblue.class)
+  @Category(ContributionFromDiffblue.class)
+  @ManagedByDiffblue
   @MethodsUnderTest({"ReasonCode DisconnectMessage.getReason()"})
   public void testGetReason_givenDisconnectMessageWithReasonCodeIsForked_thenReturnForked() {
     // Arrange, Act and Assert
@@ -585,7 +597,8 @@ public class DisconnectMessageDiffblueTest {
    * <p>Method under test: {@link DisconnectMessage#getReason()}
    */
   @Test
-  @Category(MaintainedByDiffblue.class)
+  @Category(ContributionFromDiffblue.class)
+  @ManagedByDiffblue
   @MethodsUnderTest({"ReasonCode DisconnectMessage.getReason()"})
   public void testGetReason_givenDisconnectMessageWithReasonCodeIsReset_thenReturnReset() {
     // Arrange, Act and Assert
@@ -604,7 +617,8 @@ public class DisconnectMessageDiffblueTest {
    * <p>Method under test: {@link DisconnectMessage#getReason()}
    */
   @Test
-  @Category(MaintainedByDiffblue.class)
+  @Category(ContributionFromDiffblue.class)
+  @ManagedByDiffblue
   @MethodsUnderTest({"ReasonCode DisconnectMessage.getReason()"})
   public void testGetReason_givenDisconnectMessageWithReasonCodeIsSyncFail_thenReturnSyncFail() {
     // Arrange, Act and Assert
@@ -621,7 +635,8 @@ public class DisconnectMessageDiffblueTest {
    * <p>Method under test: {@link DisconnectMessage#getReason()}
    */
   @Test
-  @Category(MaintainedByDiffblue.class)
+  @Category(ContributionFromDiffblue.class)
+  @ManagedByDiffblue
   @MethodsUnderTest({"ReasonCode DisconnectMessage.getReason()"})
   public void testGetReason_thenReturnBadProtocol() {
     // Arrange, Act and Assert
@@ -639,7 +654,8 @@ public class DisconnectMessageDiffblueTest {
    * <p>Method under test: {@link DisconnectMessage#getReason()}
    */
   @Test
-  @Category(MaintainedByDiffblue.class)
+  @Category(ContributionFromDiffblue.class)
+  @ManagedByDiffblue
   @MethodsUnderTest({"ReasonCode DisconnectMessage.getReason()"})
   public void testGetReason_thenReturnDuplicatePeer() {
     // Arrange, Act and Assert
@@ -657,7 +673,8 @@ public class DisconnectMessageDiffblueTest {
    * <p>Method under test: {@link DisconnectMessage#getReason()}
    */
   @Test
-  @Category(MaintainedByDiffblue.class)
+  @Category(ContributionFromDiffblue.class)
+  @ManagedByDiffblue
   @MethodsUnderTest({"ReasonCode DisconnectMessage.getReason()"})
   public void testGetReason_thenReturnFetchFail() {
     // Arrange, Act and Assert
@@ -674,7 +691,8 @@ public class DisconnectMessageDiffblueTest {
    * <p>Method under test: {@link DisconnectMessage#getReason()}
    */
   @Test
-  @Category(MaintainedByDiffblue.class)
+  @Category(ContributionFromDiffblue.class)
+  @ManagedByDiffblue
   @MethodsUnderTest({"ReasonCode DisconnectMessage.getReason()"})
   public void testGetReason_thenReturnIncompatibleProtocol() {
     // Arrange, Act and Assert
@@ -693,7 +711,8 @@ public class DisconnectMessageDiffblueTest {
    * <p>Method under test: {@link DisconnectMessage#getReason()}
    */
   @Test
-  @Category(MaintainedByDiffblue.class)
+  @Category(ContributionFromDiffblue.class)
+  @ManagedByDiffblue
   @MethodsUnderTest({"ReasonCode DisconnectMessage.getReason()"})
   public void testGetReason_thenReturnIncompatibleVersion() {
     // Arrange, Act and Assert
@@ -712,7 +731,8 @@ public class DisconnectMessageDiffblueTest {
    * <p>Method under test: {@link DisconnectMessage#getReason()}
    */
   @Test
-  @Category(MaintainedByDiffblue.class)
+  @Category(ContributionFromDiffblue.class)
+  @ManagedByDiffblue
   @MethodsUnderTest({"ReasonCode DisconnectMessage.getReason()"})
   public void testGetReason_thenReturnLocalIdentity() {
     // Arrange, Act and Assert
@@ -730,7 +750,8 @@ public class DisconnectMessageDiffblueTest {
    * <p>Method under test: {@link DisconnectMessage#getReason()}
    */
   @Test
-  @Category(MaintainedByDiffblue.class)
+  @Category(ContributionFromDiffblue.class)
+  @ManagedByDiffblue
   @MethodsUnderTest({"ReasonCode DisconnectMessage.getReason()"})
   public void testGetReason_thenReturnPeerQuiting() {
     // Arrange, Act and Assert
@@ -748,7 +769,8 @@ public class DisconnectMessageDiffblueTest {
    * <p>Method under test: {@link DisconnectMessage#getReason()}
    */
   @Test
-  @Category(MaintainedByDiffblue.class)
+  @Category(ContributionFromDiffblue.class)
+  @ManagedByDiffblue
   @MethodsUnderTest({"ReasonCode DisconnectMessage.getReason()"})
   public void testGetReason_thenReturnPingTimeout() {
     // Arrange, Act and Assert
@@ -766,7 +788,8 @@ public class DisconnectMessageDiffblueTest {
    * <p>Method under test: {@link DisconnectMessage#getReason()}
    */
   @Test
-  @Category(MaintainedByDiffblue.class)
+  @Category(ContributionFromDiffblue.class)
+  @ManagedByDiffblue
   @MethodsUnderTest({"ReasonCode DisconnectMessage.getReason()"})
   public void testGetReason_thenReturnRandomElimination() {
     // Arrange, Act and Assert
@@ -785,7 +808,8 @@ public class DisconnectMessageDiffblueTest {
    * <p>Method under test: {@link DisconnectMessage#getReason()}
    */
   @Test
-  @Category(MaintainedByDiffblue.class)
+  @Category(ContributionFromDiffblue.class)
+  @ManagedByDiffblue
   @MethodsUnderTest({"ReasonCode DisconnectMessage.getReason()"})
   public void testGetReason_thenReturnRequested() {
     // Arrange, Act and Assert
@@ -802,7 +826,8 @@ public class DisconnectMessageDiffblueTest {
    * <p>Method under test: {@link DisconnectMessage#getReason()}
    */
   @Test
-  @Category(MaintainedByDiffblue.class)
+  @Category(ContributionFromDiffblue.class)
+  @ManagedByDiffblue
   @MethodsUnderTest({"ReasonCode DisconnectMessage.getReason()"})
   public void testGetReason_thenReturnTooManyPeers() {
     // Arrange, Act and Assert
@@ -820,7 +845,8 @@ public class DisconnectMessageDiffblueTest {
    * <p>Method under test: {@link DisconnectMessage#getReason()}
    */
   @Test
-  @Category(MaintainedByDiffblue.class)
+  @Category(ContributionFromDiffblue.class)
+  @ManagedByDiffblue
   @MethodsUnderTest({"ReasonCode DisconnectMessage.getReason()"})
   public void testGetReason_thenReturnUnexpectedIdentity() {
     // Arrange, Act and Assert
@@ -839,7 +865,8 @@ public class DisconnectMessageDiffblueTest {
    * <p>Method under test: {@link DisconnectMessage#getReason()}
    */
   @Test
-  @Category(MaintainedByDiffblue.class)
+  @Category(ContributionFromDiffblue.class)
+  @ManagedByDiffblue
   @MethodsUnderTest({"ReasonCode DisconnectMessage.getReason()"})
   public void testGetReason_thenReturnUnlinkable() {
     // Arrange, Act and Assert
@@ -856,7 +883,8 @@ public class DisconnectMessageDiffblueTest {
    * <p>Method under test: {@link DisconnectMessage#getReason()}
    */
   @Test
-  @Category(MaintainedByDiffblue.class)
+  @Category(ContributionFromDiffblue.class)
+  @ManagedByDiffblue
   @MethodsUnderTest({"ReasonCode DisconnectMessage.getReason()"})
   public void testGetReason_thenReturnUserReason() {
     // Arrange, Act and Assert
@@ -875,7 +903,8 @@ public class DisconnectMessageDiffblueTest {
    * <p>Method under test: {@link DisconnectMessage#getReasonCode()}
    */
   @Test
-  @Category(MaintainedByDiffblue.class)
+  @Category(ContributionFromDiffblue.class)
+  @ManagedByDiffblue
   @MethodsUnderTest({"ReasonCode DisconnectMessage.getReasonCode()"})
   public void testGetReasonCode_givenDisconnectMessageWithReasonCodeIsBadTx_thenReturnBadTx() {
     // Arrange, Act and Assert
@@ -894,7 +923,8 @@ public class DisconnectMessageDiffblueTest {
    * <p>Method under test: {@link DisconnectMessage#getReasonCode()}
    */
   @Test
-  @Category(MaintainedByDiffblue.class)
+  @Category(ContributionFromDiffblue.class)
+  @ManagedByDiffblue
   @MethodsUnderTest({"ReasonCode DisconnectMessage.getReasonCode()"})
   public void testGetReasonCode_givenDisconnectMessageWithReasonCodeIsForked_thenReturnForked() {
     // Arrange, Act and Assert
@@ -913,7 +943,8 @@ public class DisconnectMessageDiffblueTest {
    * <p>Method under test: {@link DisconnectMessage#getReasonCode()}
    */
   @Test
-  @Category(MaintainedByDiffblue.class)
+  @Category(ContributionFromDiffblue.class)
+  @ManagedByDiffblue
   @MethodsUnderTest({"ReasonCode DisconnectMessage.getReasonCode()"})
   public void testGetReasonCode_givenDisconnectMessageWithReasonCodeIsReset_thenReturnReset() {
     // Arrange, Act and Assert
@@ -930,7 +961,8 @@ public class DisconnectMessageDiffblueTest {
    * <p>Method under test: {@link DisconnectMessage#getReasonCode()}
    */
   @Test
-  @Category(MaintainedByDiffblue.class)
+  @Category(ContributionFromDiffblue.class)
+  @ManagedByDiffblue
   @MethodsUnderTest({"ReasonCode DisconnectMessage.getReasonCode()"})
   public void testGetReasonCode_thenReturnBadBlock() {
     // Arrange, Act and Assert
@@ -947,7 +979,8 @@ public class DisconnectMessageDiffblueTest {
    * <p>Method under test: {@link DisconnectMessage#getReasonCode()}
    */
   @Test
-  @Category(MaintainedByDiffblue.class)
+  @Category(ContributionFromDiffblue.class)
+  @ManagedByDiffblue
   @MethodsUnderTest({"ReasonCode DisconnectMessage.getReasonCode()"})
   public void testGetReasonCode_thenReturnBadProtocol() {
     // Arrange, Act and Assert
@@ -965,7 +998,8 @@ public class DisconnectMessageDiffblueTest {
    * <p>Method under test: {@link DisconnectMessage#getReasonCode()}
    */
   @Test
-  @Category(MaintainedByDiffblue.class)
+  @Category(ContributionFromDiffblue.class)
+  @ManagedByDiffblue
   @MethodsUnderTest({"ReasonCode DisconnectMessage.getReasonCode()"})
   public void testGetReasonCode_thenReturnDuplicatePeer() {
     // Arrange, Act and Assert
@@ -984,7 +1018,8 @@ public class DisconnectMessageDiffblueTest {
    * <p>Method under test: {@link DisconnectMessage#getReasonCode()}
    */
   @Test
-  @Category(MaintainedByDiffblue.class)
+  @Category(ContributionFromDiffblue.class)
+  @ManagedByDiffblue
   @MethodsUnderTest({"ReasonCode DisconnectMessage.getReasonCode()"})
   public void testGetReasonCode_thenReturnFetchFail() {
     // Arrange, Act and Assert
@@ -1002,7 +1037,8 @@ public class DisconnectMessageDiffblueTest {
    * <p>Method under test: {@link DisconnectMessage#getReasonCode()}
    */
   @Test
-  @Category(MaintainedByDiffblue.class)
+  @Category(ContributionFromDiffblue.class)
+  @ManagedByDiffblue
   @MethodsUnderTest({"ReasonCode DisconnectMessage.getReasonCode()"})
   public void testGetReasonCode_thenReturnIncompatibleProtocol() {
     // Arrange, Act and Assert
@@ -1021,7 +1057,8 @@ public class DisconnectMessageDiffblueTest {
    * <p>Method under test: {@link DisconnectMessage#getReasonCode()}
    */
   @Test
-  @Category(MaintainedByDiffblue.class)
+  @Category(ContributionFromDiffblue.class)
+  @ManagedByDiffblue
   @MethodsUnderTest({"ReasonCode DisconnectMessage.getReasonCode()"})
   public void testGetReasonCode_thenReturnIncompatibleVersion() {
     // Arrange, Act and Assert
@@ -1040,7 +1077,8 @@ public class DisconnectMessageDiffblueTest {
    * <p>Method under test: {@link DisconnectMessage#getReasonCode()}
    */
   @Test
-  @Category(MaintainedByDiffblue.class)
+  @Category(ContributionFromDiffblue.class)
+  @ManagedByDiffblue
   @MethodsUnderTest({"ReasonCode DisconnectMessage.getReasonCode()"})
   public void testGetReasonCode_thenReturnLocalIdentity() {
     // Arrange, Act and Assert
@@ -1059,7 +1097,8 @@ public class DisconnectMessageDiffblueTest {
    * <p>Method under test: {@link DisconnectMessage#getReasonCode()}
    */
   @Test
-  @Category(MaintainedByDiffblue.class)
+  @Category(ContributionFromDiffblue.class)
+  @ManagedByDiffblue
   @MethodsUnderTest({"ReasonCode DisconnectMessage.getReasonCode()"})
   public void testGetReasonCode_thenReturnPeerQuiting() {
     // Arrange, Act and Assert
@@ -1077,7 +1116,8 @@ public class DisconnectMessageDiffblueTest {
    * <p>Method under test: {@link DisconnectMessage#getReasonCode()}
    */
   @Test
-  @Category(MaintainedByDiffblue.class)
+  @Category(ContributionFromDiffblue.class)
+  @ManagedByDiffblue
   @MethodsUnderTest({"ReasonCode DisconnectMessage.getReasonCode()"})
   public void testGetReasonCode_thenReturnPingTimeout() {
     // Arrange, Act and Assert
@@ -1095,7 +1135,8 @@ public class DisconnectMessageDiffblueTest {
    * <p>Method under test: {@link DisconnectMessage#getReasonCode()}
    */
   @Test
-  @Category(MaintainedByDiffblue.class)
+  @Category(ContributionFromDiffblue.class)
+  @ManagedByDiffblue
   @MethodsUnderTest({"ReasonCode DisconnectMessage.getReasonCode()"})
   public void testGetReasonCode_thenReturnRandomElimination() {
     // Arrange, Act and Assert
@@ -1114,7 +1155,8 @@ public class DisconnectMessageDiffblueTest {
    * <p>Method under test: {@link DisconnectMessage#getReasonCode()}
    */
   @Test
-  @Category(MaintainedByDiffblue.class)
+  @Category(ContributionFromDiffblue.class)
+  @ManagedByDiffblue
   @MethodsUnderTest({"ReasonCode DisconnectMessage.getReasonCode()"})
   public void testGetReasonCode_thenReturnRequested() {
     // Arrange, Act and Assert
@@ -1131,7 +1173,8 @@ public class DisconnectMessageDiffblueTest {
    * <p>Method under test: {@link DisconnectMessage#getReasonCode()}
    */
   @Test
-  @Category(MaintainedByDiffblue.class)
+  @Category(ContributionFromDiffblue.class)
+  @ManagedByDiffblue
   @MethodsUnderTest({"ReasonCode DisconnectMessage.getReasonCode()"})
   public void testGetReasonCode_thenReturnSyncFail() {
     // Arrange, Act and Assert
@@ -1148,7 +1191,8 @@ public class DisconnectMessageDiffblueTest {
    * <p>Method under test: {@link DisconnectMessage#getReasonCode()}
    */
   @Test
-  @Category(MaintainedByDiffblue.class)
+  @Category(ContributionFromDiffblue.class)
+  @ManagedByDiffblue
   @MethodsUnderTest({"ReasonCode DisconnectMessage.getReasonCode()"})
   public void testGetReasonCode_thenReturnTooManyPeers() {
     // Arrange, Act and Assert
@@ -1167,7 +1211,8 @@ public class DisconnectMessageDiffblueTest {
    * <p>Method under test: {@link DisconnectMessage#getReasonCode()}
    */
   @Test
-  @Category(MaintainedByDiffblue.class)
+  @Category(ContributionFromDiffblue.class)
+  @ManagedByDiffblue
   @MethodsUnderTest({"ReasonCode DisconnectMessage.getReasonCode()"})
   public void testGetReasonCode_thenReturnUnexpectedIdentity() {
     // Arrange, Act and Assert
@@ -1186,7 +1231,8 @@ public class DisconnectMessageDiffblueTest {
    * <p>Method under test: {@link DisconnectMessage#getReasonCode()}
    */
   @Test
-  @Category(MaintainedByDiffblue.class)
+  @Category(ContributionFromDiffblue.class)
+  @ManagedByDiffblue
   @MethodsUnderTest({"ReasonCode DisconnectMessage.getReasonCode()"})
   public void testGetReasonCode_thenReturnUnlinkable() {
     // Arrange, Act and Assert
@@ -1204,7 +1250,8 @@ public class DisconnectMessageDiffblueTest {
    * <p>Method under test: {@link DisconnectMessage#getReasonCode()}
    */
   @Test
-  @Category(MaintainedByDiffblue.class)
+  @Category(ContributionFromDiffblue.class)
+  @ManagedByDiffblue
   @MethodsUnderTest({"ReasonCode DisconnectMessage.getReasonCode()"})
   public void testGetReasonCode_thenReturnUserReason() {
     // Arrange, Act and Assert
@@ -1223,7 +1270,8 @@ public class DisconnectMessageDiffblueTest {
    * </ul>
    */
   @Test
-  @Category(MaintainedByDiffblue.class)
+  @Category(ContributionFromDiffblue.class)
+  @ManagedByDiffblue
   @MethodsUnderTest({
     "java.lang.Class DisconnectMessage.getAnswerMessage()",
     "String DisconnectMessage.toString()"

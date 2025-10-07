@@ -4,7 +4,8 @@ import static org.mockito.ArgumentMatchers.isA;
 import static org.mockito.Mockito.mock;
 import static org.mockito.Mockito.verify;
 import static org.mockito.Mockito.when;
-import com.diffblue.cover.annotations.MaintainedByDiffblue;
+import com.diffblue.cover.annotations.ContributionFromDiffblue;
+import com.diffblue.cover.annotations.ManagedByDiffblue;
 import com.diffblue.cover.annotations.MethodsUnderTest;
 import org.junit.Test;
 import org.junit.experimental.categories.Category;
@@ -30,7 +31,8 @@ public class AccountStateCallBackDiffblueTest {
    * <p>Method under test: {@link AccountStateCallBack#preExecute(BlockCapsule)}
    */
   @Test
-  @Category(MaintainedByDiffblue.class)
+  @Category(ContributionFromDiffblue.class)
+  @ManagedByDiffblue
   @MethodsUnderTest({"void AccountStateCallBack.preExecute(BlockCapsule)"})
   public void testPreExecute_givenChainBaseManagerGetBlockByIdReturnNull_thenCallsGetBlockById()
       throws BadItemException, ItemNotFoundException {
@@ -69,7 +71,8 @@ public class AccountStateCallBackDiffblueTest {
    * <p>Method under test: {@link AccountStateCallBack#preExecute(BlockCapsule)}
    */
   @Test
-  @Category(MaintainedByDiffblue.class)
+  @Category(ContributionFromDiffblue.class)
+  @ManagedByDiffblue
   @MethodsUnderTest({"void AccountStateCallBack.preExecute(BlockCapsule)"})
   public void testPreExecute_givenChainBaseManagerGetBlockByIdThrowRuntimeException()
       throws BadItemException, ItemNotFoundException {
@@ -109,7 +112,8 @@ public class AccountStateCallBackDiffblueTest {
    * <p>Method under test: {@link AccountStateCallBack#preExecute(BlockCapsule)}
    */
   @Test
-  @Category(MaintainedByDiffblue.class)
+  @Category(ContributionFromDiffblue.class)
+  @ManagedByDiffblue
   @MethodsUnderTest({"void AccountStateCallBack.preExecute(BlockCapsule)"})
   public void testPreExecute_givenDynamicPropertiesStoreAllowAccountStateRootReturnFalse() {
     // Arrange
@@ -141,7 +145,8 @@ public class AccountStateCallBackDiffblueTest {
    * <p>Method under test: {@link AccountStateCallBack#preExecute(BlockCapsule)}
    */
   @Test
-  @Category(MaintainedByDiffblue.class)
+  @Category(ContributionFromDiffblue.class)
+  @ManagedByDiffblue
   @MethodsUnderTest({"void AccountStateCallBack.preExecute(BlockCapsule)"})
   public void testPreExecute_givenDynamicPropertiesStoreAllowAccountStateRootReturnTrue() {
     // Arrange

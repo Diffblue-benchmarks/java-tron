@@ -5,7 +5,8 @@ import static org.mockito.Mockito.atLeast;
 import static org.mockito.Mockito.mock;
 import static org.mockito.Mockito.verify;
 import static org.mockito.Mockito.when;
-import com.diffblue.cover.annotations.MaintainedByDiffblue;
+import com.diffblue.cover.annotations.ContributionFromDiffblue;
+import com.diffblue.cover.annotations.ManagedByDiffblue;
 import com.diffblue.cover.annotations.MethodsUnderTest;
 import java.net.InetAddress;
 import java.util.ArrayList;
@@ -45,7 +46,8 @@ public class FetchInvDataMsgHandlerDiffblueTest {
    * TronMessage)}
    */
   @Test
-  @Category(MaintainedByDiffblue.class)
+  @Category(ContributionFromDiffblue.class)
+  @ManagedByDiffblue
   @MethodsUnderTest({"void FetchInvDataMsgHandler.processMessage(PeerConnection, TronMessage)"})
   public void testProcessMessage_givenAdvServiceGetTrxCountReturnMessageCount()
       throws P2pException {
@@ -73,7 +75,8 @@ public class FetchInvDataMsgHandlerDiffblueTest {
    * TronMessage)}
    */
   @Test
-  @Category(MaintainedByDiffblue.class)
+  @Category(ContributionFromDiffblue.class)
+  @ManagedByDiffblue
   @MethodsUnderTest({"void FetchInvDataMsgHandler.processMessage(PeerConnection, TronMessage)"})
   public void testProcessMessage_givenAdvServiceGetTrxCountReturnMessageCount2()
       throws P2pException {
@@ -107,7 +110,8 @@ public class FetchInvDataMsgHandlerDiffblueTest {
    * TronMessage)}
    */
   @Test
-  @Category(MaintainedByDiffblue.class)
+  @Category(ContributionFromDiffblue.class)
+  @ManagedByDiffblue
   @MethodsUnderTest({"void FetchInvDataMsgHandler.processMessage(PeerConnection, TronMessage)"})
   public void testProcessMessage_givenFirst() throws P2pException {
     // Arrange
@@ -139,7 +143,8 @@ public class FetchInvDataMsgHandlerDiffblueTest {
    * TronMessage)}
    */
   @Test
-  @Category(MaintainedByDiffblue.class)
+  @Category(ContributionFromDiffblue.class)
+  @ManagedByDiffblue
   @MethodsUnderTest({"void FetchInvDataMsgHandler.processMessage(PeerConnection, TronMessage)"})
   public void testProcessMessage_givenMessageCountGetCountReturnThree_thenCallsGetCount()
       throws P2pException {
@@ -177,7 +182,8 @@ public class FetchInvDataMsgHandlerDiffblueTest {
    * TronMessage)}
    */
   @Test
-  @Category(MaintainedByDiffblue.class)
+  @Category(ContributionFromDiffblue.class)
+  @ManagedByDiffblue
   @MethodsUnderTest({"void FetchInvDataMsgHandler.processMessage(PeerConnection, TronMessage)"})
   public void testProcessMessage_givenPeerStatistics_thenCallsGetPeerStatistics()
       throws P2pException {
@@ -217,7 +223,8 @@ public class FetchInvDataMsgHandlerDiffblueTest {
    * TronMessage)}
    */
   @Test
-  @Category(MaintainedByDiffblue.class)
+  @Category(ContributionFromDiffblue.class)
+  @ManagedByDiffblue
   @MethodsUnderTest({"void FetchInvDataMsgHandler.processMessage(PeerConnection, TronMessage)"})
   public void testProcessMessage_thenCallsGetInetAddress() throws P2pException {
     // Arrange

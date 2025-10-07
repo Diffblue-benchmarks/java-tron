@@ -3,7 +3,8 @@ package org.tron.core.exception;
 import static org.junit.Assert.assertEquals;
 import static org.junit.Assert.assertNull;
 import static org.junit.Assert.assertSame;
-import com.diffblue.cover.annotations.MaintainedByDiffblue;
+import com.diffblue.cover.annotations.ContributionFromDiffblue;
+import com.diffblue.cover.annotations.ManagedByDiffblue;
 import com.diffblue.cover.annotations.MethodsUnderTest;
 import org.junit.Test;
 import org.junit.experimental.categories.Category;
@@ -15,7 +16,8 @@ public class BadTransactionExceptionDiffblueTest {
    * <p>Method under test: {@link BadTransactionException#BadTransactionException()}
    */
   @Test
-  @Category(MaintainedByDiffblue.class)
+  @Category(ContributionFromDiffblue.class)
+  @ManagedByDiffblue
   @MethodsUnderTest({"void BadTransactionException.<init>()"})
   public void testNewBadTransactionException() {
     // Arrange and Act
@@ -34,7 +36,8 @@ public class BadTransactionExceptionDiffblueTest {
    * <p>Method under test: {@link BadTransactionException#BadTransactionException(String)}
    */
   @Test
-  @Category(MaintainedByDiffblue.class)
+  @Category(ContributionFromDiffblue.class)
+  @ManagedByDiffblue
   @MethodsUnderTest({"void BadTransactionException.<init>(String)"})
   public void testNewBadTransactionException2() {
     // Arrange and Act
@@ -55,7 +58,8 @@ public class BadTransactionExceptionDiffblueTest {
    * Throwable)}
    */
   @Test
-  @Category(MaintainedByDiffblue.class)
+  @Category(ContributionFromDiffblue.class)
+  @ManagedByDiffblue
   @MethodsUnderTest({"void BadTransactionException.<init>(String, Throwable)"})
   public void testNewBadTransactionException3() {
     // Arrange

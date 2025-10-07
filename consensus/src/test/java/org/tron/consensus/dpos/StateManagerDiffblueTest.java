@@ -4,7 +4,8 @@ import static org.junit.Assert.assertEquals;
 import static org.mockito.Mockito.mock;
 import static org.mockito.Mockito.verify;
 import static org.mockito.Mockito.when;
-import com.diffblue.cover.annotations.MaintainedByDiffblue;
+import com.diffblue.cover.annotations.ContributionFromDiffblue;
+import com.diffblue.cover.annotations.ManagedByDiffblue;
 import com.diffblue.cover.annotations.MethodsUnderTest;
 import java.io.UnsupportedEncodingException;
 import org.junit.Test;
@@ -37,7 +38,8 @@ public class StateManagerDiffblueTest {
    * <p>Method under test: {@link StateManager#getState()}
    */
   @Test
-  @Category(MaintainedByDiffblue.class)
+  @Category(ContributionFromDiffblue.class)
+  @ManagedByDiffblue
   @MethodsUnderTest({"State StateManager.getState()"})
   public void testGetState_thenReturnClockError() {
     // Arrange
@@ -63,7 +65,8 @@ public class StateManagerDiffblueTest {
    * <p>Method under test: {@link StateManager#receiveBlock(BlockCapsule)}
    */
   @Test
-  @Category(MaintainedByDiffblue.class)
+  @Category(ContributionFromDiffblue.class)
+  @ManagedByDiffblue
   @MethodsUnderTest({"void StateManager.receiveBlock(BlockCapsule)"})
   public void testReceiveBlock_givenBlockIdGetBytesReturnAxaxaxaxBytesIsUtf8_thenCallsGetBytes()
       throws UnsupportedEncodingException {
@@ -101,7 +104,8 @@ public class StateManagerDiffblueTest {
    * <p>Method under test: {@link StateManager#receiveBlock(BlockCapsule)}
    */
   @Test
-  @Category(MaintainedByDiffblue.class)
+  @Category(ContributionFromDiffblue.class)
+  @ManagedByDiffblue
   @MethodsUnderTest({"void StateManager.receiveBlock(BlockCapsule)"})
   public void testReceiveBlock_givenBlockId_whenBlockCapsuleGetBlockIdReturnBlockId() {
     // Arrange
@@ -134,7 +138,8 @@ public class StateManagerDiffblueTest {
    * <p>Method under test: {@link StateManager#receiveBlock(BlockCapsule)}
    */
   @Test
-  @Category(MaintainedByDiffblue.class)
+  @Category(ContributionFromDiffblue.class)
+  @ManagedByDiffblue
   @MethodsUnderTest({"void StateManager.receiveBlock(BlockCapsule)"})
   public void testReceiveBlock_givenStateManagerCurrentBlockIdIsBlockId_thenCallsGetBlockId() {
     // Arrange
@@ -163,7 +168,8 @@ public class StateManagerDiffblueTest {
    * <p>Method under test: {@link StateManager#receiveBlock(BlockCapsule)}
    */
   @Test
-  @Category(MaintainedByDiffblue.class)
+  @Category(ContributionFromDiffblue.class)
+  @ManagedByDiffblue
   @MethodsUnderTest({"void StateManager.receiveBlock(BlockCapsule)"})
   public void testReceiveBlock_givenStateManagerDposServiceIsDposService_thenCallsGetTimeStamp() {
     // Arrange
@@ -192,7 +198,8 @@ public class StateManagerDiffblueTest {
    * <p>Method under test: {@link StateManager#receiveBlock(BlockCapsule)}
    */
   @Test
-  @Category(MaintainedByDiffblue.class)
+  @Category(ContributionFromDiffblue.class)
+  @ManagedByDiffblue
   @MethodsUnderTest({"void StateManager.receiveBlock(BlockCapsule)"})
   public void testReceiveBlock_thenCallsIsNeedSyncCheck() {
     // Arrange

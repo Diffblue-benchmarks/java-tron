@@ -4,7 +4,8 @@ import static org.junit.Assert.assertEquals;
 import static org.junit.Assert.assertFalse;
 import static org.junit.Assert.assertNull;
 import static org.junit.Assert.assertTrue;
-import com.diffblue.cover.annotations.MaintainedByDiffblue;
+import com.diffblue.cover.annotations.ContributionFromDiffblue;
+import com.diffblue.cover.annotations.ManagedByDiffblue;
 import com.diffblue.cover.annotations.MethodsUnderTest;
 import org.junit.Test;
 import org.junit.experimental.categories.Category;
@@ -16,7 +17,8 @@ public class MessageTypesDiffblueTest {
    * <p>Method under test: {@link MessageTypes#fromByte(byte)}
    */
   @Test
-  @Category(MaintainedByDiffblue.class)
+  @Category(ContributionFromDiffblue.class)
+  @ManagedByDiffblue
   @MethodsUnderTest({"MessageTypes MessageTypes.fromByte(byte)"})
   public void testFromByte() {
     // Arrange, Act and Assert
@@ -34,7 +36,8 @@ public class MessageTypesDiffblueTest {
    * <p>Method under test: {@link MessageTypes#inRange(byte)}
    */
   @Test
-  @Category(MaintainedByDiffblue.class)
+  @Category(ContributionFromDiffblue.class)
+  @ManagedByDiffblue
   @MethodsUnderTest({"boolean MessageTypes.inRange(byte)"})
   public void testInRange_whenA_thenReturnFalse() {
     // Arrange, Act and Assert
@@ -52,7 +55,8 @@ public class MessageTypesDiffblueTest {
    * <p>Method under test: {@link MessageTypes#inRange(byte)}
    */
   @Test
-  @Category(MaintainedByDiffblue.class)
+  @Category(ContributionFromDiffblue.class)
+  @ManagedByDiffblue
   @MethodsUnderTest({"boolean MessageTypes.inRange(byte)"})
   public void testInRange_whenMin_value_thenReturnTrue() {
     // Arrange, Act and Assert
@@ -70,7 +74,8 @@ public class MessageTypesDiffblueTest {
    * <p>Method under test: {@link MessageTypes#inP2pRange(byte)}
    */
   @Test
-  @Category(MaintainedByDiffblue.class)
+  @Category(ContributionFromDiffblue.class)
+  @ManagedByDiffblue
   @MethodsUnderTest({"boolean MessageTypes.inP2pRange(byte)"})
   public void testInP2pRange_whenA_thenReturnFalse() {
     // Arrange, Act and Assert
@@ -88,7 +93,8 @@ public class MessageTypesDiffblueTest {
    * <p>Method under test: {@link MessageTypes#inP2pRange(byte)}
    */
   @Test
-  @Category(MaintainedByDiffblue.class)
+  @Category(ContributionFromDiffblue.class)
+  @ManagedByDiffblue
   @MethodsUnderTest({"boolean MessageTypes.inP2pRange(byte)"})
   public void testInP2pRange_whenNumberSign_thenReturnTrue() {
     // Arrange, Act and Assert
@@ -106,7 +112,8 @@ public class MessageTypesDiffblueTest {
    * <p>Method under test: {@link MessageTypes#inP2pRange(byte)}
    */
   @Test
-  @Category(MaintainedByDiffblue.class)
+  @Category(ContributionFromDiffblue.class)
+  @ManagedByDiffblue
   @MethodsUnderTest({"boolean MessageTypes.inP2pRange(byte)"})
   public void testInP2pRange_whenZero_thenReturnFalse() {
     // Arrange, Act and Assert
@@ -124,7 +131,8 @@ public class MessageTypesDiffblueTest {
    * <p>Method under test: {@link MessageTypes#inTronRange(byte)}
    */
   @Test
-  @Category(MaintainedByDiffblue.class)
+  @Category(ContributionFromDiffblue.class)
+  @ManagedByDiffblue
   @MethodsUnderTest({"boolean MessageTypes.inTronRange(byte)"})
   public void testInTronRange_whenA_thenReturnFalse() {
     // Arrange, Act and Assert
@@ -142,7 +150,8 @@ public class MessageTypesDiffblueTest {
    * <p>Method under test: {@link MessageTypes#inTronRange(byte)}
    */
   @Test
-  @Category(MaintainedByDiffblue.class)
+  @Category(ContributionFromDiffblue.class)
+  @ManagedByDiffblue
   @MethodsUnderTest({"boolean MessageTypes.inTronRange(byte)"})
   public void testInTronRange_whenMinusOne_thenReturnFalse() {
     // Arrange, Act and Assert
@@ -160,7 +169,8 @@ public class MessageTypesDiffblueTest {
    * <p>Method under test: {@link MessageTypes#inTronRange(byte)}
    */
   @Test
-  @Category(MaintainedByDiffblue.class)
+  @Category(ContributionFromDiffblue.class)
+  @ManagedByDiffblue
   @MethodsUnderTest({"boolean MessageTypes.inTronRange(byte)"})
   public void testInTronRange_whenTwenty_thenReturnTrue() {
     // Arrange, Act and Assert
@@ -173,7 +183,8 @@ public class MessageTypesDiffblueTest {
    * <p>Method under test: {@link MessageTypes#asByte()}
    */
   @Test
-  @Category(MaintainedByDiffblue.class)
+  @Category(ContributionFromDiffblue.class)
+  @ManagedByDiffblue
   @MethodsUnderTest({"byte MessageTypes.asByte()"})
   public void testAsByte() {
     // Arrange, Act and Assert
@@ -191,7 +202,8 @@ public class MessageTypesDiffblueTest {
    * <p>Method under test: {@link MessageTypes#inPbftRange(byte)}
    */
   @Test
-  @Category(MaintainedByDiffblue.class)
+  @Category(ContributionFromDiffblue.class)
+  @ManagedByDiffblue
   @MethodsUnderTest({"boolean MessageTypes.inPbftRange(byte)"})
   public void testInPbftRange_when4_thenReturnTrue() {
     // Arrange, Act and Assert
@@ -209,7 +221,8 @@ public class MessageTypesDiffblueTest {
    * <p>Method under test: {@link MessageTypes#inPbftRange(byte)}
    */
   @Test
-  @Category(MaintainedByDiffblue.class)
+  @Category(ContributionFromDiffblue.class)
+  @ManagedByDiffblue
   @MethodsUnderTest({"boolean MessageTypes.inPbftRange(byte)"})
   public void testInPbftRange_whenA_thenReturnFalse() {
     // Arrange, Act and Assert
@@ -227,7 +240,8 @@ public class MessageTypesDiffblueTest {
    * <p>Method under test: {@link MessageTypes#toString()}
    */
   @Test
-  @Category(MaintainedByDiffblue.class)
+  @Category(ContributionFromDiffblue.class)
+  @ManagedByDiffblue
   @MethodsUnderTest({"java.lang.String MessageTypes.toString()"})
   public void testToString_givenBlock_thenReturnBlock() {
     // Arrange, Act and Assert
@@ -245,7 +259,8 @@ public class MessageTypesDiffblueTest {
    * <p>Method under test: {@link MessageTypes#toString()}
    */
   @Test
-  @Category(MaintainedByDiffblue.class)
+  @Category(ContributionFromDiffblue.class)
+  @ManagedByDiffblue
   @MethodsUnderTest({"java.lang.String MessageTypes.toString()"})
   public void testToString_givenFetchInvData_thenReturnFetchInvData() {
     // Arrange, Act and Assert
@@ -263,7 +278,8 @@ public class MessageTypesDiffblueTest {
    * <p>Method under test: {@link MessageTypes#toString()}
    */
   @Test
-  @Category(MaintainedByDiffblue.class)
+  @Category(ContributionFromDiffblue.class)
+  @ManagedByDiffblue
   @MethodsUnderTest({"java.lang.String MessageTypes.toString()"})
   public void testToString_givenFirst_thenReturnFirst() {
     // Arrange, Act and Assert
@@ -281,7 +297,8 @@ public class MessageTypesDiffblueTest {
    * <p>Method under test: {@link MessageTypes#toString()}
    */
   @Test
-  @Category(MaintainedByDiffblue.class)
+  @Category(ContributionFromDiffblue.class)
+  @ManagedByDiffblue
   @MethodsUnderTest({"java.lang.String MessageTypes.toString()"})
   public void testToString_givenInventory_thenReturnInventory() {
     // Arrange, Act and Assert
@@ -299,7 +316,8 @@ public class MessageTypesDiffblueTest {
    * <p>Method under test: {@link MessageTypes#toString()}
    */
   @Test
-  @Category(MaintainedByDiffblue.class)
+  @Category(ContributionFromDiffblue.class)
+  @ManagedByDiffblue
   @MethodsUnderTest({"java.lang.String MessageTypes.toString()"})
   public void testToString_givenSyncBlockChain_thenReturnSyncBlockChain() {
     // Arrange, Act and Assert
@@ -317,7 +335,8 @@ public class MessageTypesDiffblueTest {
    * <p>Method under test: {@link MessageTypes#toString()}
    */
   @Test
-  @Category(MaintainedByDiffblue.class)
+  @Category(ContributionFromDiffblue.class)
+  @ManagedByDiffblue
   @MethodsUnderTest({"java.lang.String MessageTypes.toString()"})
   public void testToString_givenTrx_thenReturnTrx() {
     // Arrange, Act and Assert

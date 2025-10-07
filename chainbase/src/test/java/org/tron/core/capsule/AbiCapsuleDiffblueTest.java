@@ -5,7 +5,8 @@ import static org.junit.Assert.assertEquals;
 import static org.junit.Assert.assertNull;
 import static org.junit.Assert.assertSame;
 import static org.junit.Assert.assertTrue;
-import com.diffblue.cover.annotations.MaintainedByDiffblue;
+import com.diffblue.cover.annotations.ContributionFromDiffblue;
+import com.diffblue.cover.annotations.ManagedByDiffblue;
 import com.diffblue.cover.annotations.MethodsUnderTest;
 import java.io.UnsupportedEncodingException;
 import java.util.List;
@@ -27,7 +28,8 @@ public class AbiCapsuleDiffblueTest {
    * <p>Method under test: {@link AbiCapsule#AbiCapsule(byte[])}
    */
   @Test
-  @Category(MaintainedByDiffblue.class)
+  @Category(ContributionFromDiffblue.class)
+  @ManagedByDiffblue
   @MethodsUnderTest({"void AbiCapsule.<init>(byte[])"})
   public void testNewAbiCapsule_thenReturnInstanceInitializationErrorStringIsEmptyString() {
     // Arrange and Act
@@ -60,7 +62,8 @@ public class AbiCapsuleDiffblueTest {
    * <p>Method under test: {@link AbiCapsule#AbiCapsule(byte[])}
    */
   @Test
-  @Category(MaintainedByDiffblue.class)
+  @Category(ContributionFromDiffblue.class)
+  @ManagedByDiffblue
   @MethodsUnderTest({"void AbiCapsule.<init>(byte[])"})
   public void testNewAbiCapsule_when0AAAAAABytesIsUtf8_thenReturnInstanceIsNull()
       throws UnsupportedEncodingException {
@@ -79,7 +82,8 @@ public class AbiCapsuleDiffblueTest {
    * <p>Method under test: {@link AbiCapsule#AbiCapsule(byte[])}
    */
   @Test
-  @Category(MaintainedByDiffblue.class)
+  @Category(ContributionFromDiffblue.class)
+  @ManagedByDiffblue
   @MethodsUnderTest({"void AbiCapsule.<init>(byte[])"})
   public void testNewAbiCapsule_when8AAAAAABytesIsUtf8_thenReturnInstanceIsNull()
       throws UnsupportedEncodingException {
@@ -98,7 +102,8 @@ public class AbiCapsuleDiffblueTest {
    * <p>Method under test: {@link AbiCapsule#AbiCapsule(byte[])}
    */
   @Test
-  @Category(MaintainedByDiffblue.class)
+  @Category(ContributionFromDiffblue.class)
+  @ManagedByDiffblue
   @MethodsUnderTest({"void AbiCapsule.<init>(byte[])"})
   public void testNewAbiCapsule_whenAAAAA0aABytesIsUtf8_thenReturnInstanceIsNull()
       throws UnsupportedEncodingException {
@@ -117,7 +122,8 @@ public class AbiCapsuleDiffblueTest {
    * <p>Method under test: {@link AbiCapsule#AbiCapsule(byte[])}
    */
   @Test
-  @Category(MaintainedByDiffblue.class)
+  @Category(ContributionFromDiffblue.class)
+  @ManagedByDiffblue
   @MethodsUnderTest({"void AbiCapsule.<init>(byte[])"})
   public void testNewAbiCapsule_whenAAAAAAAAAAAABytesIsUtf8_thenReturnInstanceIsNull()
       throws UnsupportedEncodingException {
@@ -137,7 +143,8 @@ public class AbiCapsuleDiffblueTest {
    * <p>Method under test: {@link AbiCapsule#AbiCapsule(byte[])}
    */
   @Test
-  @Category(MaintainedByDiffblue.class)
+  @Category(ContributionFromDiffblue.class)
+  @ManagedByDiffblue
   @MethodsUnderTest({"void AbiCapsule.<init>(byte[])"})
   public void testNewAbiCapsule_whenAAAAAAAABytesIsUtf8_thenReturnInstanceIsNull()
       throws UnsupportedEncodingException {
@@ -156,7 +163,8 @@ public class AbiCapsuleDiffblueTest {
    * <p>Method under test: {@link AbiCapsule#AbiCapsule(byte[])}
    */
   @Test
-  @Category(MaintainedByDiffblue.class)
+  @Category(ContributionFromDiffblue.class)
+  @ManagedByDiffblue
   @MethodsUnderTest({"void AbiCapsule.<init>(byte[])"})
   public void testNewAbiCapsule_whenAAAAAAABytesIsUtf8_thenReturnInstanceIsNull()
       throws UnsupportedEncodingException {
@@ -175,7 +183,8 @@ public class AbiCapsuleDiffblueTest {
    * <p>Method under test: {@link AbiCapsule#AbiCapsule(byte[])}
    */
   @Test
-  @Category(MaintainedByDiffblue.class)
+  @Category(ContributionFromDiffblue.class)
+  @ManagedByDiffblue
   @MethodsUnderTest({"void AbiCapsule.<init>(byte[])"})
   public void testNewAbiCapsule_whenAAAAAAABytesIsUtf8_thenReturnInstanceIsNull2()
       throws UnsupportedEncodingException {
@@ -194,7 +203,8 @@ public class AbiCapsuleDiffblueTest {
    * <p>Method under test: {@link AbiCapsule#AbiCapsule(byte[])}
    */
   @Test
-  @Category(MaintainedByDiffblue.class)
+  @Category(ContributionFromDiffblue.class)
+  @ManagedByDiffblue
   @MethodsUnderTest({"void AbiCapsule.<init>(byte[])"})
   public void testNewAbiCapsule_whenAAAAAAABytesIsUtf8_thenReturnInstanceIsNull3()
       throws UnsupportedEncodingException {
@@ -213,7 +223,8 @@ public class AbiCapsuleDiffblueTest {
    * <p>Method under test: {@link AbiCapsule#AbiCapsule(byte[])}
    */
   @Test
-  @Category(MaintainedByDiffblue.class)
+  @Category(ContributionFromDiffblue.class)
+  @ManagedByDiffblue
   @MethodsUnderTest({"void AbiCapsule.<init>(byte[])"})
   public void testNewAbiCapsule_whenAAAAAABytesIsUtf8_thenReturnInstanceIsNull()
       throws UnsupportedEncodingException {
@@ -232,7 +243,8 @@ public class AbiCapsuleDiffblueTest {
    * <p>Method under test: {@link AbiCapsule#AbiCapsule(byte[])}
    */
   @Test
-  @Category(MaintainedByDiffblue.class)
+  @Category(ContributionFromDiffblue.class)
+  @ManagedByDiffblue
   @MethodsUnderTest({"void AbiCapsule.<init>(byte[])"})
   public void testNewAbiCapsule_whenAAAAAABytesIsUtf8_thenReturnInstanceIsNull2()
       throws UnsupportedEncodingException {
@@ -251,7 +263,8 @@ public class AbiCapsuleDiffblueTest {
    * <p>Method under test: {@link AbiCapsule#AbiCapsule(byte[])}
    */
   @Test
-  @Category(MaintainedByDiffblue.class)
+  @Category(ContributionFromDiffblue.class)
+  @ManagedByDiffblue
   @MethodsUnderTest({"void AbiCapsule.<init>(byte[])"})
   public void testNewAbiCapsule_whenAAAAAABytesIsUtf8_thenReturnInstanceIsNull3()
       throws UnsupportedEncodingException {
@@ -270,7 +283,8 @@ public class AbiCapsuleDiffblueTest {
    * <p>Method under test: {@link AbiCapsule#AbiCapsule(byte[])}
    */
   @Test
-  @Category(MaintainedByDiffblue.class)
+  @Category(ContributionFromDiffblue.class)
+  @ManagedByDiffblue
   @MethodsUnderTest({"void AbiCapsule.<init>(byte[])"})
   public void testNewAbiCapsule_whenAAAAABackspaceAABytesIsUtf8_thenReturnInstanceIsNull()
       throws UnsupportedEncodingException {
@@ -289,7 +303,8 @@ public class AbiCapsuleDiffblueTest {
    * <p>Method under test: {@link AbiCapsule#AbiCapsule(byte[])}
    */
   @Test
-  @Category(MaintainedByDiffblue.class)
+  @Category(ContributionFromDiffblue.class)
+  @ManagedByDiffblue
   @MethodsUnderTest({"void AbiCapsule.<init>(byte[])"})
   public void testNewAbiCapsule_whenArrayOfByteWithAAndLf_thenReturnInstanceIsNull() {
     // Arrange and Act
@@ -314,7 +329,8 @@ public class AbiCapsuleDiffblueTest {
    * <p>Method under test: {@link AbiCapsule#AbiCapsule(byte[])}
    */
   @Test
-  @Category(MaintainedByDiffblue.class)
+  @Category(ContributionFromDiffblue.class)
+  @ManagedByDiffblue
   @MethodsUnderTest({"void AbiCapsule.<init>(byte[])"})
   public void testNewAbiCapsule_whenArrayOfByteWithAAndLf_thenReturnInstanceIsNull2() {
     // Arrange and Act
@@ -339,7 +355,8 @@ public class AbiCapsuleDiffblueTest {
    * <p>Method under test: {@link AbiCapsule#AbiCapsule(byte[])}
    */
   @Test
-  @Category(MaintainedByDiffblue.class)
+  @Category(ContributionFromDiffblue.class)
+  @ManagedByDiffblue
   @MethodsUnderTest({"void AbiCapsule.<init>(byte[])"})
   public void testNewAbiCapsule_whenArrayOfByteWithLfAndLf_thenReturnInstanceIsNull() {
     // Arrange and Act
@@ -364,7 +381,8 @@ public class AbiCapsuleDiffblueTest {
    * <p>Method under test: {@link AbiCapsule#AbiCapsule(byte[])}
    */
   @Test
-  @Category(MaintainedByDiffblue.class)
+  @Category(ContributionFromDiffblue.class)
+  @ManagedByDiffblue
   @MethodsUnderTest({"void AbiCapsule.<init>(byte[])"})
   public void testNewAbiCapsule_whenArrayOfByteWithLfAndLf_thenReturnInstanceIsNull2() {
     // Arrange and Act
@@ -389,7 +407,8 @@ public class AbiCapsuleDiffblueTest {
    * <p>Method under test: {@link AbiCapsule#AbiCapsule(byte[])}
    */
   @Test
-  @Category(MaintainedByDiffblue.class)
+  @Category(ContributionFromDiffblue.class)
+  @ManagedByDiffblue
   @MethodsUnderTest({"void AbiCapsule.<init>(byte[])"})
   public void testNewAbiCapsule_whenArrayOfByteWithLfAndLf_thenReturnInstanceIsNull3() {
     // Arrange and Act
@@ -414,7 +433,8 @@ public class AbiCapsuleDiffblueTest {
    * <p>Method under test: {@link AbiCapsule#AbiCapsule(byte[])}
    */
   @Test
-  @Category(MaintainedByDiffblue.class)
+  @Category(ContributionFromDiffblue.class)
+  @ManagedByDiffblue
   @MethodsUnderTest({"void AbiCapsule.<init>(byte[])"})
   public void testNewAbiCapsule_whenArrayOfByteWithLfAndLf_thenReturnInstanceIsNull4() {
     // Arrange and Act
@@ -439,7 +459,8 @@ public class AbiCapsuleDiffblueTest {
    * <p>Method under test: {@link AbiCapsule#AbiCapsule(byte[])}
    */
   @Test
-  @Category(MaintainedByDiffblue.class)
+  @Category(ContributionFromDiffblue.class)
+  @ManagedByDiffblue
   @MethodsUnderTest({"void AbiCapsule.<init>(byte[])"})
   public void testNewAbiCapsule_whenArrayOfByteWithLfAndLf_thenReturnInstanceIsNull5() {
     // Arrange and Act
@@ -464,7 +485,8 @@ public class AbiCapsuleDiffblueTest {
    * <p>Method under test: {@link AbiCapsule#AbiCapsule(byte[])}
    */
   @Test
-  @Category(MaintainedByDiffblue.class)
+  @Category(ContributionFromDiffblue.class)
+  @ManagedByDiffblue
   @MethodsUnderTest({"void AbiCapsule.<init>(byte[])"})
   public void testNewAbiCapsule_whenArrayOfByteWithMinusOneAndX_thenReturnInstanceIsNull() {
     // Arrange and Act
@@ -486,7 +508,8 @@ public class AbiCapsuleDiffblueTest {
    * <p>Method under test: {@link AbiCapsule#AbiCapsule(byte[])}
    */
   @Test
-  @Category(MaintainedByDiffblue.class)
+  @Category(ContributionFromDiffblue.class)
+  @ManagedByDiffblue
   @MethodsUnderTest({"void AbiCapsule.<init>(byte[])"})
   public void testNewAbiCapsule_whenArrayOfByteWithOneAndX_thenReturnInstanceIsNull() {
     // Arrange and Act
@@ -507,7 +530,8 @@ public class AbiCapsuleDiffblueTest {
    * <p>Method under test: {@link AbiCapsule#AbiCapsule(byte[])}
    */
   @Test
-  @Category(MaintainedByDiffblue.class)
+  @Category(ContributionFromDiffblue.class)
+  @ManagedByDiffblue
   @MethodsUnderTest({"void AbiCapsule.<init>(byte[])"})
   public void testNewAbiCapsule_whenAxaxaxaxBytesIsUtf8_thenReturnInstanceIsNull()
       throws UnsupportedEncodingException {
@@ -523,11 +547,12 @@ public class AbiCapsuleDiffblueTest {
    *   <li>Then return Instance is DefaultInstance.
    * </ul>
    *
-   * <p>Method under test: {@link AbiCapsule#AbiCapsule(SmartContract.ABI)}
+   * <p>Method under test: {@link AbiCapsule#AbiCapsule(ABI)}
    */
   @Test
-  @Category(MaintainedByDiffblue.class)
-  @MethodsUnderTest({"void AbiCapsule.<init>(SmartContract.ABI)"})
+  @Category(ContributionFromDiffblue.class)
+  @ManagedByDiffblue
+  @MethodsUnderTest({"void AbiCapsule.<init>(ABI)"})
   public void testNewAbiCapsule_whenDefaultInstance_thenReturnInstanceIsDefaultInstance() {
     // Arrange
     ABI abi = ABI.getDefaultInstance();
@@ -551,7 +576,8 @@ public class AbiCapsuleDiffblueTest {
    * <p>Method under test: {@link AbiCapsule#AbiCapsule(byte[])}
    */
   @Test
-  @Category(MaintainedByDiffblue.class)
+  @Category(ContributionFromDiffblue.class)
+  @ManagedByDiffblue
   @MethodsUnderTest({"void AbiCapsule.<init>(byte[])"})
   public void testNewAbiCapsule_whenXxaxaxaxBytesIsUtf8_thenReturnInstanceIsNull()
       throws UnsupportedEncodingException {
@@ -570,7 +596,8 @@ public class AbiCapsuleDiffblueTest {
    * <p>Method under test: {@link AbiCapsule#getData()}
    */
   @Test
-  @Category(MaintainedByDiffblue.class)
+  @Category(ContributionFromDiffblue.class)
+  @ManagedByDiffblue
   @MethodsUnderTest({"byte[] AbiCapsule.getData()"})
   public void testGetData_givenAbiCapsuleWithDataIsArrayOfByteWithAAndX() {
     // Arrange
@@ -597,7 +624,8 @@ public class AbiCapsuleDiffblueTest {
    * <p>Method under test: {@link AbiCapsule#getData()}
    */
   @Test
-  @Category(MaintainedByDiffblue.class)
+  @Category(ContributionFromDiffblue.class)
+  @ManagedByDiffblue
   @MethodsUnderTest({"byte[] AbiCapsule.getData()"})
   public void testGetData_givenAbiCapsuleWithDataIsArrayOfByteWithMin_valueAndMinusOne() {
     // Arrange
@@ -641,7 +669,8 @@ public class AbiCapsuleDiffblueTest {
    * <p>Method under test: {@link AbiCapsule#getData()}
    */
   @Test
-  @Category(MaintainedByDiffblue.class)
+  @Category(ContributionFromDiffblue.class)
+  @ManagedByDiffblue
   @MethodsUnderTest({"byte[] AbiCapsule.getData()"})
   public void testGetData_givenAbiCapsuleWithDataIsArrayOfByteWithMin_valueAndX() {
     // Arrange
@@ -685,7 +714,8 @@ public class AbiCapsuleDiffblueTest {
    * <p>Method under test: {@link AbiCapsule#getData()}
    */
   @Test
-  @Category(MaintainedByDiffblue.class)
+  @Category(ContributionFromDiffblue.class)
+  @ManagedByDiffblue
   @MethodsUnderTest({"byte[] AbiCapsule.getData()"})
   public void testGetData_givenAbiCapsuleWithDataIsArrayOfByteWithXAndMinusOne() {
     // Arrange
@@ -712,7 +742,8 @@ public class AbiCapsuleDiffblueTest {
    * <p>Method under test: {@link AbiCapsule#getData()}
    */
   @Test
-  @Category(MaintainedByDiffblue.class)
+  @Category(ContributionFromDiffblue.class)
+  @ManagedByDiffblue
   @MethodsUnderTest({"byte[] AbiCapsule.getData()"})
   public void testGetData_givenAbiCapsuleWithDataIsEmptyArrayOfByte_thenReturnEmptyArrayOfByte() {
     // Arrange
@@ -732,7 +763,8 @@ public class AbiCapsuleDiffblueTest {
    * <p>Method under test: {@link AbiCapsule#getData()}
    */
   @Test
-  @Category(MaintainedByDiffblue.class)
+  @Category(ContributionFromDiffblue.class)
+  @ManagedByDiffblue
   @MethodsUnderTest({"byte[] AbiCapsule.getData()"})
   public void testGetData_thenReturnArrayOfByteWithXAndA() {
     // Arrange
@@ -760,7 +792,8 @@ public class AbiCapsuleDiffblueTest {
    * <p>Method under test: {@link AbiCapsule#getData()}
    */
   @Test
-  @Category(MaintainedByDiffblue.class)
+  @Category(ContributionFromDiffblue.class)
+  @ManagedByDiffblue
   @MethodsUnderTest({"byte[] AbiCapsule.getData()"})
   public void testGetData_thenReturnArrayOfByteWithXAndMinusOne() {
     // Arrange
@@ -788,8 +821,9 @@ public class AbiCapsuleDiffblueTest {
    * <p>Method under test: {@link AbiCapsule#getInstance()}
    */
   @Test
-  @Category(MaintainedByDiffblue.class)
-  @MethodsUnderTest({"SmartContract.ABI AbiCapsule.getInstance()"})
+  @Category(ContributionFromDiffblue.class)
+  @ManagedByDiffblue
+  @MethodsUnderTest({"ABI AbiCapsule.getInstance()"})
   public void testGetInstance_givenAbiCapsuleWithDataIsAxaxaxaxBytesIsUtf8_thenReturnNull()
       throws UnsupportedEncodingException {
     // Arrange, Act and Assert

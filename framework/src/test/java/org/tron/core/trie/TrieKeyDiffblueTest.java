@@ -7,7 +7,8 @@ import static org.junit.Assert.assertNotEquals;
 import static org.junit.Assert.assertNull;
 import static org.junit.Assert.assertThrows;
 import static org.junit.Assert.assertTrue;
-import com.diffblue.cover.annotations.MaintainedByDiffblue;
+import com.diffblue.cover.annotations.ContributionFromDiffblue;
+import com.diffblue.cover.annotations.ManagedByDiffblue;
 import com.diffblue.cover.annotations.MethodsUnderTest;
 import java.io.UnsupportedEncodingException;
 import org.junit.Test;
@@ -25,7 +26,8 @@ public class TrieKeyDiffblueTest {
    * </ul>
    */
   @Test
-  @Category(MaintainedByDiffblue.class)
+  @Category(ContributionFromDiffblue.class)
+  @ManagedByDiffblue
   @MethodsUnderTest({"void TrieKey.<init>(byte[], int, boolean)", "boolean TrieKey.isTerminal()"})
   public void testGettersAndSetters() throws UnsupportedEncodingException {
     // Arrange, Act and Assert
@@ -38,7 +40,8 @@ public class TrieKeyDiffblueTest {
    * <p>Method under test: {@link TrieKey#fromNormal(byte[])}
    */
   @Test
-  @Category(MaintainedByDiffblue.class)
+  @Category(ContributionFromDiffblue.class)
+  @ManagedByDiffblue
   @MethodsUnderTest({"TrieKey TrieKey.fromNormal(byte[])"})
   public void testFromNormal() throws UnsupportedEncodingException {
     // Arrange and Act
@@ -64,7 +67,8 @@ public class TrieKeyDiffblueTest {
    * <p>Method under test: {@link TrieKey#fromPacked(byte[])}
    */
   @Test
-  @Category(MaintainedByDiffblue.class)
+  @Category(ContributionFromDiffblue.class)
+  @ManagedByDiffblue
   @MethodsUnderTest({"TrieKey TrieKey.fromPacked(byte[])"})
   public void testFromPacked_thenReturnToPackedIsArrayOfByteWithTwentyFourAndX()
       throws UnsupportedEncodingException {
@@ -90,7 +94,8 @@ public class TrieKeyDiffblueTest {
    * <p>Method under test: {@link TrieKey#fromPacked(byte[])}
    */
   @Test
-  @Category(MaintainedByDiffblue.class)
+  @Category(ContributionFromDiffblue.class)
+  @ManagedByDiffblue
   @MethodsUnderTest({"TrieKey TrieKey.fromPacked(byte[])"})
   public void testFromPacked_whenA_thenReturnTerminal() throws UnsupportedEncodingException {
     // Arrange and Act
@@ -116,7 +121,8 @@ public class TrieKeyDiffblueTest {
    * <p>Method under test: {@link TrieKey#fromPacked(byte[])}
    */
   @Test
-  @Category(MaintainedByDiffblue.class)
+  @Category(ContributionFromDiffblue.class)
+  @ManagedByDiffblue
   @MethodsUnderTest({"TrieKey TrieKey.fromPacked(byte[])"})
   public void testFromPacked_whenAxaxaxaxBytesIsUtf8_thenReturnLengthIsFourteen()
       throws UnsupportedEncodingException {
@@ -138,7 +144,8 @@ public class TrieKeyDiffblueTest {
    * <p>Method under test: {@link TrieKey#empty(boolean)}
    */
   @Test
-  @Category(MaintainedByDiffblue.class)
+  @Category(ContributionFromDiffblue.class)
+  @ManagedByDiffblue
   @MethodsUnderTest({"TrieKey TrieKey.empty(boolean)"})
   public void testEmpty() {
     // Arrange and Act
@@ -158,7 +165,8 @@ public class TrieKeyDiffblueTest {
    * <p>Method under test: {@link TrieKey#singleHex(int)}
    */
   @Test
-  @Category(MaintainedByDiffblue.class)
+  @Category(ContributionFromDiffblue.class)
+  @ManagedByDiffblue
   @MethodsUnderTest({"TrieKey TrieKey.singleHex(int)"})
   public void testSingleHex() {
     // Arrange and Act
@@ -182,7 +190,8 @@ public class TrieKeyDiffblueTest {
    * <p>Method under test: {@link TrieKey#toPacked()}
    */
   @Test
-  @Category(MaintainedByDiffblue.class)
+  @Category(ContributionFromDiffblue.class)
+  @ManagedByDiffblue
   @MethodsUnderTest({"byte[] TrieKey.toPacked()"})
   public void testToPacked_givenEmptyTrue_thenReturnArrayOfByteWithSpace() {
     // Arrange
@@ -202,7 +211,8 @@ public class TrieKeyDiffblueTest {
    * <p>Method under test: {@link TrieKey#toPacked()}
    */
   @Test
-  @Category(MaintainedByDiffblue.class)
+  @Category(ContributionFromDiffblue.class)
+  @ManagedByDiffblue
   @MethodsUnderTest({"byte[] TrieKey.toPacked()"})
   public void testToPacked_thenReturnArrayOfByteWithSeventeenAndX()
       throws UnsupportedEncodingException {
@@ -223,7 +233,8 @@ public class TrieKeyDiffblueTest {
    * <p>Method under test: {@link TrieKey#toNormal()}
    */
   @Test
-  @Category(MaintainedByDiffblue.class)
+  @Category(ContributionFromDiffblue.class)
+  @ManagedByDiffblue
   @MethodsUnderTest({"byte[] TrieKey.toNormal()"})
   public void testToNormal_givenEmptyTrue_thenReturnEmptyArrayOfByte() {
     // Arrange
@@ -244,7 +255,8 @@ public class TrieKeyDiffblueTest {
    * <p>Method under test: {@link TrieKey#toNormal()}
    */
   @Test
-  @Category(MaintainedByDiffblue.class)
+  @Category(ContributionFromDiffblue.class)
+  @ManagedByDiffblue
   @MethodsUnderTest({"byte[] TrieKey.toNormal()"})
   public void testToNormal_givenSingleHexOne_thenThrowRuntimeException() {
     // Arrange
@@ -265,7 +277,8 @@ public class TrieKeyDiffblueTest {
    * <p>Method under test: {@link TrieKey#isEmpty()}
    */
   @Test
-  @Category(MaintainedByDiffblue.class)
+  @Category(ContributionFromDiffblue.class)
+  @ManagedByDiffblue
   @MethodsUnderTest({"boolean TrieKey.isEmpty()"})
   public void testIsEmpty_givenEmptyTrue_thenReturnTrue() {
     // Arrange
@@ -286,7 +299,8 @@ public class TrieKeyDiffblueTest {
    * <p>Method under test: {@link TrieKey#isEmpty()}
    */
   @Test
-  @Category(MaintainedByDiffblue.class)
+  @Category(ContributionFromDiffblue.class)
+  @ManagedByDiffblue
   @MethodsUnderTest({"boolean TrieKey.isEmpty()"})
   public void testIsEmpty_givenSingleHexOne_thenReturnFalse() {
     // Arrange
@@ -302,7 +316,8 @@ public class TrieKeyDiffblueTest {
    * <p>Method under test: {@link TrieKey#shift(int)}
    */
   @Test
-  @Category(MaintainedByDiffblue.class)
+  @Category(ContributionFromDiffblue.class)
+  @ManagedByDiffblue
   @MethodsUnderTest({"TrieKey TrieKey.shift(int)"})
   public void testShift() {
     // Arrange
@@ -323,7 +338,8 @@ public class TrieKeyDiffblueTest {
    * <p>Method under test: {@link TrieKey#getCommonPrefix(TrieKey)}
    */
   @Test
-  @Category(MaintainedByDiffblue.class)
+  @Category(ContributionFromDiffblue.class)
+  @ManagedByDiffblue
   @MethodsUnderTest({"TrieKey TrieKey.getCommonPrefix(TrieKey)"})
   public void testGetCommonPrefix() throws UnsupportedEncodingException {
     // Arrange
@@ -353,7 +369,8 @@ public class TrieKeyDiffblueTest {
    * <p>Method under test: {@link TrieKey#getCommonPrefix(TrieKey)}
    */
   @Test
-  @Category(MaintainedByDiffblue.class)
+  @Category(ContributionFromDiffblue.class)
+  @ManagedByDiffblue
   @MethodsUnderTest({"TrieKey TrieKey.getCommonPrefix(TrieKey)"})
   public void testGetCommonPrefix_givenEmptyTrue_whenEmptyTrue_thenReturnTerminal() {
     // Arrange
@@ -381,7 +398,8 @@ public class TrieKeyDiffblueTest {
    * <p>Method under test: {@link TrieKey#getCommonPrefix(TrieKey)}
    */
   @Test
-  @Category(MaintainedByDiffblue.class)
+  @Category(ContributionFromDiffblue.class)
+  @ManagedByDiffblue
   @MethodsUnderTest({"TrieKey TrieKey.getCommonPrefix(TrieKey)"})
   public void testGetCommonPrefix_givenSingleHexOne_whenA() {
     // Arrange
@@ -410,7 +428,8 @@ public class TrieKeyDiffblueTest {
    * <p>Method under test: {@link TrieKey#getCommonPrefix(TrieKey)}
    */
   @Test
-  @Category(MaintainedByDiffblue.class)
+  @Category(ContributionFromDiffblue.class)
+  @ManagedByDiffblue
   @MethodsUnderTest({"TrieKey TrieKey.getCommonPrefix(TrieKey)"})
   public void testGetCommonPrefix_givenSingleHexOne_whenEmptyTrue() {
     // Arrange
@@ -436,7 +455,8 @@ public class TrieKeyDiffblueTest {
    * <p>Method under test: {@link TrieKey#getCommonPrefix(TrieKey)}
    */
   @Test
-  @Category(MaintainedByDiffblue.class)
+  @Category(ContributionFromDiffblue.class)
+  @ManagedByDiffblue
   @MethodsUnderTest({"TrieKey TrieKey.getCommonPrefix(TrieKey)"})
   public void testGetCommonPrefix_thenReturnLengthIsFifteen() throws UnsupportedEncodingException {
     // Arrange
@@ -465,7 +485,8 @@ public class TrieKeyDiffblueTest {
    * <p>Method under test: {@link TrieKey#getCommonPrefix(TrieKey)}
    */
   @Test
-  @Category(MaintainedByDiffblue.class)
+  @Category(ContributionFromDiffblue.class)
+  @ManagedByDiffblue
   @MethodsUnderTest({"TrieKey TrieKey.getCommonPrefix(TrieKey)"})
   public void testGetCommonPrefix_whenSingleHexOne_thenReturnToPackedIsArrayOfByteWithZero() {
     // Arrange
@@ -493,7 +514,8 @@ public class TrieKeyDiffblueTest {
    * <p>Method under test: {@link TrieKey#matchAndShift(TrieKey)}
    */
   @Test
-  @Category(MaintainedByDiffblue.class)
+  @Category(ContributionFromDiffblue.class)
+  @ManagedByDiffblue
   @MethodsUnderTest({"TrieKey TrieKey.matchAndShift(TrieKey)"})
   public void testMatchAndShift_givenEmptyTrue_whenSingleHexOne_thenReturnNull() {
     // Arrange
@@ -514,7 +536,8 @@ public class TrieKeyDiffblueTest {
    * <p>Method under test: {@link TrieKey#matchAndShift(TrieKey)}
    */
   @Test
-  @Category(MaintainedByDiffblue.class)
+  @Category(ContributionFromDiffblue.class)
+  @ManagedByDiffblue
   @MethodsUnderTest({"TrieKey TrieKey.matchAndShift(TrieKey)"})
   public void testMatchAndShift_givenFromNormalArrayOfByteWithAAndOne_thenReturnNull() {
     // Arrange
@@ -535,7 +558,8 @@ public class TrieKeyDiffblueTest {
    * <p>Method under test: {@link TrieKey#matchAndShift(TrieKey)}
    */
   @Test
-  @Category(MaintainedByDiffblue.class)
+  @Category(ContributionFromDiffblue.class)
+  @ManagedByDiffblue
   @MethodsUnderTest({"TrieKey TrieKey.matchAndShift(TrieKey)"})
   public void testMatchAndShift_givenFromNormalArrayOfByteWithSixteenAndOne_whenA() {
     // Arrange
@@ -559,7 +583,8 @@ public class TrieKeyDiffblueTest {
    * <p>Method under test: {@link TrieKey#matchAndShift(TrieKey)}
    */
   @Test
-  @Category(MaintainedByDiffblue.class)
+  @Category(ContributionFromDiffblue.class)
+  @ManagedByDiffblue
   @MethodsUnderTest({"TrieKey TrieKey.matchAndShift(TrieKey)"})
   public void testMatchAndShift_givenSingleHexFifteen_whenSingleHexOne_thenReturnNull() {
     // Arrange
@@ -580,7 +605,8 @@ public class TrieKeyDiffblueTest {
    * <p>Method under test: {@link TrieKey#matchAndShift(TrieKey)}
    */
   @Test
-  @Category(MaintainedByDiffblue.class)
+  @Category(ContributionFromDiffblue.class)
+  @ManagedByDiffblue
   @MethodsUnderTest({"TrieKey TrieKey.matchAndShift(TrieKey)"})
   public void testMatchAndShift_givenSingleHexOne_thenReturnToPackedIsArrayOfByteWithZero() {
     // Arrange
@@ -609,7 +635,8 @@ public class TrieKeyDiffblueTest {
    * <p>Method under test: {@link TrieKey#matchAndShift(TrieKey)}
    */
   @Test
-  @Category(MaintainedByDiffblue.class)
+  @Category(ContributionFromDiffblue.class)
+  @ManagedByDiffblue
   @MethodsUnderTest({"TrieKey TrieKey.matchAndShift(TrieKey)"})
   public void testMatchAndShift_givenSingleHexOne_whenEmptyTrue_thenReturnLengthIsOne() {
     // Arrange
@@ -635,7 +662,8 @@ public class TrieKeyDiffblueTest {
    * <p>Method under test: {@link TrieKey#matchAndShift(TrieKey)}
    */
   @Test
-  @Category(MaintainedByDiffblue.class)
+  @Category(ContributionFromDiffblue.class)
+  @ManagedByDiffblue
   @MethodsUnderTest({"TrieKey TrieKey.matchAndShift(TrieKey)"})
   public void testMatchAndShift_thenReturnLengthIsFifteen() {
     // Arrange
@@ -662,7 +690,8 @@ public class TrieKeyDiffblueTest {
    * <p>Method under test: {@link TrieKey#matchAndShift(TrieKey)}
    */
   @Test
-  @Category(MaintainedByDiffblue.class)
+  @Category(ContributionFromDiffblue.class)
+  @ManagedByDiffblue
   @MethodsUnderTest({"TrieKey TrieKey.matchAndShift(TrieKey)"})
   public void testMatchAndShift_thenReturnToPackedIsArrayOfByteWithSpace() {
     // Arrange
@@ -692,7 +721,8 @@ public class TrieKeyDiffblueTest {
    * <p>Method under test: {@link TrieKey#matchAndShift(TrieKey)}
    */
   @Test
-  @Category(MaintainedByDiffblue.class)
+  @Category(ContributionFromDiffblue.class)
+  @ManagedByDiffblue
   @MethodsUnderTest({"TrieKey TrieKey.matchAndShift(TrieKey)"})
   public void testMatchAndShift_whenEmptyTrue_thenReturnToPackedIsArrayOfByteWithSpace() {
     // Arrange
@@ -715,7 +745,8 @@ public class TrieKeyDiffblueTest {
    * <p>Method under test: {@link TrieKey#getLength()}
    */
   @Test
-  @Category(MaintainedByDiffblue.class)
+  @Category(ContributionFromDiffblue.class)
+  @ManagedByDiffblue
   @MethodsUnderTest({"int TrieKey.getLength()"})
   public void testGetLength() {
     // Arrange
@@ -737,7 +768,8 @@ public class TrieKeyDiffblueTest {
    * <p>Method under test: {@link TrieKey#getHex(int)}
    */
   @Test
-  @Category(MaintainedByDiffblue.class)
+  @Category(ContributionFromDiffblue.class)
+  @ManagedByDiffblue
   @MethodsUnderTest({"int TrieKey.getHex(int)"})
   public void testGetHex_givenA_whenOne_thenReturnOne() {
     // Arrange, Act and Assert
@@ -756,7 +788,8 @@ public class TrieKeyDiffblueTest {
    * <p>Method under test: {@link TrieKey#getHex(int)}
    */
   @Test
-  @Category(MaintainedByDiffblue.class)
+  @Category(ContributionFromDiffblue.class)
+  @ManagedByDiffblue
   @MethodsUnderTest({"int TrieKey.getHex(int)"})
   public void testGetHex_givenA_whenTwo_thenReturnZero() {
     // Arrange, Act and Assert
@@ -775,7 +808,8 @@ public class TrieKeyDiffblueTest {
    * <p>Method under test: {@link TrieKey#concat(TrieKey)}
    */
   @Test
-  @Category(MaintainedByDiffblue.class)
+  @Category(ContributionFromDiffblue.class)
+  @ManagedByDiffblue
   @MethodsUnderTest({"TrieKey TrieKey.concat(TrieKey)"})
   public void testConcat_givenEmptyTrue_whenEmptyTrue_thenThrowRuntimeException() {
     // Arrange
@@ -797,7 +831,8 @@ public class TrieKeyDiffblueTest {
    * <p>Method under test: {@link TrieKey#concat(TrieKey)}
    */
   @Test
-  @Category(MaintainedByDiffblue.class)
+  @Category(ContributionFromDiffblue.class)
+  @ManagedByDiffblue
   @MethodsUnderTest({"TrieKey TrieKey.concat(TrieKey)"})
   public void testConcat_givenEmptyTrue_whenNull_thenThrowRuntimeException() {
     // Arrange
@@ -819,7 +854,8 @@ public class TrieKeyDiffblueTest {
    * <p>Method under test: {@link TrieKey#concat(TrieKey)}
    */
   @Test
-  @Category(MaintainedByDiffblue.class)
+  @Category(ContributionFromDiffblue.class)
+  @ManagedByDiffblue
   @MethodsUnderTest({"TrieKey TrieKey.concat(TrieKey)"})
   public void testConcat_givenEmptyTrue_whenSingleHexThree_thenThrowRuntimeException() {
     // Arrange
@@ -841,7 +877,8 @@ public class TrieKeyDiffblueTest {
    * <p>Method under test: {@link TrieKey#concat(TrieKey)}
    */
   @Test
-  @Category(MaintainedByDiffblue.class)
+  @Category(ContributionFromDiffblue.class)
+  @ManagedByDiffblue
   @MethodsUnderTest({"TrieKey TrieKey.concat(TrieKey)"})
   public void testConcat_givenSingleHexThree_whenSingleHexThree_thenReturnLengthIsTwo() {
     // Arrange
@@ -867,7 +904,8 @@ public class TrieKeyDiffblueTest {
    * <p>Method under test: {@link TrieKey#concat(TrieKey)}
    */
   @Test
-  @Category(MaintainedByDiffblue.class)
+  @Category(ContributionFromDiffblue.class)
+  @ManagedByDiffblue
   @MethodsUnderTest({"TrieKey TrieKey.concat(TrieKey)"})
   public void testConcat_thenReturnLengthIsFifteen() throws UnsupportedEncodingException {
     // Arrange
@@ -900,7 +938,8 @@ public class TrieKeyDiffblueTest {
    * </ul>
    */
   @Test
-  @Category(MaintainedByDiffblue.class)
+  @Category(ContributionFromDiffblue.class)
+  @ManagedByDiffblue
   @MethodsUnderTest({"boolean TrieKey.equals(Object)", "int TrieKey.hashCode()"})
   public void testEqualsAndHashCode_whenOtherIsEqual_thenReturnEqual() {
     // Arrange
@@ -928,7 +967,8 @@ public class TrieKeyDiffblueTest {
    * </ul>
    */
   @Test
-  @Category(MaintainedByDiffblue.class)
+  @Category(ContributionFromDiffblue.class)
+  @ManagedByDiffblue
   @MethodsUnderTest({"boolean TrieKey.equals(Object)", "int TrieKey.hashCode()"})
   public void testEqualsAndHashCode_whenOtherIsEqual_thenReturnEqual2() {
     // Arrange
@@ -956,7 +996,8 @@ public class TrieKeyDiffblueTest {
    * </ul>
    */
   @Test
-  @Category(MaintainedByDiffblue.class)
+  @Category(ContributionFromDiffblue.class)
+  @ManagedByDiffblue
   @MethodsUnderTest({"boolean TrieKey.equals(Object)", "int TrieKey.hashCode()"})
   public void testEqualsAndHashCode_whenOtherIsEqual_thenReturnEqual3() {
     // Arrange
@@ -984,7 +1025,8 @@ public class TrieKeyDiffblueTest {
    * </ul>
    */
   @Test
-  @Category(MaintainedByDiffblue.class)
+  @Category(ContributionFromDiffblue.class)
+  @ManagedByDiffblue
   @MethodsUnderTest({"boolean TrieKey.equals(Object)", "int TrieKey.hashCode()"})
   public void testEqualsAndHashCode_whenOtherIsSame_thenReturnEqual() {
     // Arrange
@@ -1007,7 +1049,8 @@ public class TrieKeyDiffblueTest {
    * <p>Method under test: {@link TrieKey#equals(Object)}
    */
   @Test
-  @Category(MaintainedByDiffblue.class)
+  @Category(ContributionFromDiffblue.class)
+  @ManagedByDiffblue
   @MethodsUnderTest({"boolean TrieKey.equals(Object)", "int TrieKey.hashCode()"})
   public void testEquals_whenOtherIsDifferent_thenReturnNotEqual() {
     // Arrange
@@ -1028,7 +1071,8 @@ public class TrieKeyDiffblueTest {
    * <p>Method under test: {@link TrieKey#equals(Object)}
    */
   @Test
-  @Category(MaintainedByDiffblue.class)
+  @Category(ContributionFromDiffblue.class)
+  @ManagedByDiffblue
   @MethodsUnderTest({"boolean TrieKey.equals(Object)", "int TrieKey.hashCode()"})
   public void testEquals_whenOtherIsDifferent_thenReturnNotEqual2() {
     // Arrange
@@ -1049,7 +1093,8 @@ public class TrieKeyDiffblueTest {
    * <p>Method under test: {@link TrieKey#equals(Object)}
    */
   @Test
-  @Category(MaintainedByDiffblue.class)
+  @Category(ContributionFromDiffblue.class)
+  @ManagedByDiffblue
   @MethodsUnderTest({"boolean TrieKey.equals(Object)", "int TrieKey.hashCode()"})
   public void testEquals_whenOtherIsDifferent_thenReturnNotEqual3() {
     // Arrange
@@ -1070,7 +1115,8 @@ public class TrieKeyDiffblueTest {
    * <p>Method under test: {@link TrieKey#equals(Object)}
    */
   @Test
-  @Category(MaintainedByDiffblue.class)
+  @Category(ContributionFromDiffblue.class)
+  @ManagedByDiffblue
   @MethodsUnderTest({"boolean TrieKey.equals(Object)", "int TrieKey.hashCode()"})
   public void testEquals_whenOtherIsNull_thenReturnNotEqual() {
     // Arrange
@@ -1091,7 +1137,8 @@ public class TrieKeyDiffblueTest {
    * <p>Method under test: {@link TrieKey#equals(Object)}
    */
   @Test
-  @Category(MaintainedByDiffblue.class)
+  @Category(ContributionFromDiffblue.class)
+  @ManagedByDiffblue
   @MethodsUnderTest({"boolean TrieKey.equals(Object)", "int TrieKey.hashCode()"})
   public void testEquals_whenOtherIsWrongType_thenReturnNotEqual() {
     // Arrange
@@ -1112,7 +1159,8 @@ public class TrieKeyDiffblueTest {
    * <p>Method under test: {@link TrieKey#toString()}
    */
   @Test
-  @Category(MaintainedByDiffblue.class)
+  @Category(ContributionFromDiffblue.class)
+  @ManagedByDiffblue
   @MethodsUnderTest({"java.lang.String TrieKey.toString()"})
   public void testToString_givenEmptyTrue_thenReturnT() {
     // Arrange
@@ -1132,7 +1180,8 @@ public class TrieKeyDiffblueTest {
    * <p>Method under test: {@link TrieKey#toString()}
    */
   @Test
-  @Category(MaintainedByDiffblue.class)
+  @Category(ContributionFromDiffblue.class)
+  @ManagedByDiffblue
   @MethodsUnderTest({"java.lang.String TrieKey.toString()"})
   public void testToString_thenReturn158415841584158() throws UnsupportedEncodingException {
     // Arrange, Act and Assert
@@ -1149,7 +1198,8 @@ public class TrieKeyDiffblueTest {
    * <p>Method under test: {@link TrieKey#toString()}
    */
   @Test
-  @Category(MaintainedByDiffblue.class)
+  @Category(ContributionFromDiffblue.class)
+  @ManagedByDiffblue
   @MethodsUnderTest({"java.lang.String TrieKey.toString()"})
   public void testToString_thenReturnEmptyString() {
     // Arrange, Act and Assert

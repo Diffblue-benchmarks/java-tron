@@ -2,7 +2,8 @@ package org.tron.core.exception;
 
 import static org.junit.Assert.assertEquals;
 import static org.junit.Assert.assertNull;
-import com.diffblue.cover.annotations.MaintainedByDiffblue;
+import com.diffblue.cover.annotations.ContributionFromDiffblue;
+import com.diffblue.cover.annotations.ManagedByDiffblue;
 import com.diffblue.cover.annotations.MethodsUnderTest;
 import org.junit.Test;
 import org.junit.experimental.categories.Category;
@@ -14,7 +15,8 @@ public class ValidateSignatureExceptionDiffblueTest {
    * <p>Method under test: {@link ValidateSignatureException#ValidateSignatureException()}
    */
   @Test
-  @Category(MaintainedByDiffblue.class)
+  @Category(ContributionFromDiffblue.class)
+  @ManagedByDiffblue
   @MethodsUnderTest({"void ValidateSignatureException.<init>()"})
   public void testNewValidateSignatureException() {
     // Arrange and Act
@@ -33,7 +35,8 @@ public class ValidateSignatureExceptionDiffblueTest {
    * <p>Method under test: {@link ValidateSignatureException#ValidateSignatureException(String)}
    */
   @Test
-  @Category(MaintainedByDiffblue.class)
+  @Category(ContributionFromDiffblue.class)
+  @ManagedByDiffblue
   @MethodsUnderTest({"void ValidateSignatureException.<init>(String)"})
   public void testNewValidateSignatureException2() {
     // Arrange and Act

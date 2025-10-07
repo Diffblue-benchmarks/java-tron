@@ -3,7 +3,8 @@ package org.tron.common.utils;
 import static org.mockito.Mockito.doNothing;
 import static org.mockito.Mockito.mock;
 import static org.mockito.Mockito.verify;
-import com.diffblue.cover.annotations.MaintainedByDiffblue;
+import com.diffblue.cover.annotations.ContributionFromDiffblue;
+import com.diffblue.cover.annotations.ManagedByDiffblue;
 import com.diffblue.cover.annotations.MethodsUnderTest;
 import org.eclipse.osgi.internal.container.EquinoxReentrantLock;
 import org.junit.Test;
@@ -21,7 +22,8 @@ public class ALockDiffblueTest {
    * <p>Method under test: {@link ALock#close()}
    */
   @Test
-  @Category(MaintainedByDiffblue.class)
+  @Category(ContributionFromDiffblue.class)
+  @ManagedByDiffblue
   @MethodsUnderTest({"void ALock.close()"})
   public void testClose_givenEquinoxReentrantLockUnlockDoesNothing_thenCallsUnlock() {
     // Arrange

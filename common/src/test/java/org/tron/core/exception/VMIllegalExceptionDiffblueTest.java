@@ -2,7 +2,8 @@ package org.tron.core.exception;
 
 import static org.junit.Assert.assertEquals;
 import static org.junit.Assert.assertNull;
-import com.diffblue.cover.annotations.MaintainedByDiffblue;
+import com.diffblue.cover.annotations.ContributionFromDiffblue;
+import com.diffblue.cover.annotations.ManagedByDiffblue;
 import com.diffblue.cover.annotations.MethodsUnderTest;
 import org.junit.Test;
 import org.junit.experimental.categories.Category;
@@ -14,7 +15,8 @@ public class VMIllegalExceptionDiffblueTest {
    * <p>Method under test: {@link VMIllegalException#VMIllegalException()}
    */
   @Test
-  @Category(MaintainedByDiffblue.class)
+  @Category(ContributionFromDiffblue.class)
+  @ManagedByDiffblue
   @MethodsUnderTest({"void VMIllegalException.<init>()"})
   public void testNewVMIllegalException() {
     // Arrange and Act
@@ -33,7 +35,8 @@ public class VMIllegalExceptionDiffblueTest {
    * <p>Method under test: {@link VMIllegalException#VMIllegalException(String)}
    */
   @Test
-  @Category(MaintainedByDiffblue.class)
+  @Category(ContributionFromDiffblue.class)
+  @ManagedByDiffblue
   @MethodsUnderTest({"void VMIllegalException.<init>(String)"})
   public void testNewVMIllegalException2() {
     // Arrange and Act

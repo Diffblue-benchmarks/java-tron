@@ -6,7 +6,8 @@ import static org.junit.Assert.assertNull;
 import static org.junit.Assert.assertSame;
 import static org.junit.Assert.assertThrows;
 import static org.junit.Assert.assertTrue;
-import com.diffblue.cover.annotations.MaintainedByDiffblue;
+import com.diffblue.cover.annotations.ContributionFromDiffblue;
+import com.diffblue.cover.annotations.ManagedByDiffblue;
 import com.diffblue.cover.annotations.MethodsUnderTest;
 import java.util.Collection;
 import java.util.Set;
@@ -26,7 +27,8 @@ public class TronApplicationContextDiffblueTest {
    * <p>Method under test: {@link TronApplicationContext#TronApplicationContext()}
    */
   @Test
-  @Category(MaintainedByDiffblue.class)
+  @Category(ContributionFromDiffblue.class)
+  @ManagedByDiffblue
   @MethodsUnderTest({"void TronApplicationContext.<init>()"})
   public void testNewTronApplicationContext() {
     // Arrange and Act
@@ -62,7 +64,8 @@ public class TronApplicationContextDiffblueTest {
    * <p>Method under test: {@link TronApplicationContext#TronApplicationContext(Class[])}
    */
   @Test
-  @Category(MaintainedByDiffblue.class)
+  @Category(ContributionFromDiffblue.class)
+  @ManagedByDiffblue
   @MethodsUnderTest({"void TronApplicationContext.<init>(Class[])"})
   public void testNewTronApplicationContext2() throws IllegalStateException {
     // Arrange
@@ -103,7 +106,8 @@ public class TronApplicationContextDiffblueTest {
    * <p>Method under test: {@link TronApplicationContext#TronApplicationContext(String[])}
    */
   @Test
-  @Category(MaintainedByDiffblue.class)
+  @Category(ContributionFromDiffblue.class)
+  @ManagedByDiffblue
   @MethodsUnderTest({"void TronApplicationContext.<init>(String[])"})
   public void testNewTronApplicationContext3() throws IllegalStateException {
     // Arrange and Act
@@ -141,7 +145,8 @@ public class TronApplicationContextDiffblueTest {
    * <p>Method under test: {@link TronApplicationContext#doClose()}
    */
   @Test
-  @Category(MaintainedByDiffblue.class)
+  @Category(ContributionFromDiffblue.class)
+  @ManagedByDiffblue
   @MethodsUnderTest({"void TronApplicationContext.doClose()"})
   public void testDoClose() {
     // Arrange, Act and Assert

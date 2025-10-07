@@ -1,7 +1,8 @@
 package org.tron.common.zksnark;
 
 import static org.junit.Assert.assertArrayEquals;
-import com.diffblue.cover.annotations.MaintainedByDiffblue;
+import com.diffblue.cover.annotations.ContributionFromDiffblue;
+import com.diffblue.cover.annotations.ManagedByDiffblue;
 import com.diffblue.cover.annotations.MethodsUnderTest;
 import java.io.UnsupportedEncodingException;
 import org.junit.Test;
@@ -14,7 +15,8 @@ public class ZksnarkUtilsDiffblueTest {
    * <p>Method under test: {@link ZksnarkUtils#sort(byte[])}
    */
   @Test
-  @Category(MaintainedByDiffblue.class)
+  @Category(ContributionFromDiffblue.class)
+  @ManagedByDiffblue
   @MethodsUnderTest({"void ZksnarkUtils.sort(byte[])"})
   public void testSort() throws UnsupportedEncodingException {
     // Arrange

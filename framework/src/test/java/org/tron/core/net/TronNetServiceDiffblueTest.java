@@ -8,7 +8,8 @@ import static org.mockito.Mockito.doNothing;
 import static org.mockito.Mockito.mock;
 import static org.mockito.Mockito.mockStatic;
 import static org.mockito.Mockito.verify;
-import com.diffblue.cover.annotations.MaintainedByDiffblue;
+import com.diffblue.cover.annotations.ContributionFromDiffblue;
+import com.diffblue.cover.annotations.ManagedByDiffblue;
 import com.diffblue.cover.annotations.MethodsUnderTest;
 import java.net.InetAddress;
 import java.net.UnknownHostException;
@@ -46,7 +47,8 @@ public class TronNetServiceDiffblueTest {
    * <p>Method under test: {@link TronNetService#broadcast(Message)}
    */
   @Test
-  @Category(MaintainedByDiffblue.class)
+  @Category(ContributionFromDiffblue.class)
+  @ManagedByDiffblue
   @MethodsUnderTest({"void TronNetService.broadcast(Message)"})
   public void testBroadcast_givenAdvServiceBroadcastDoesNothing_whenNull_thenCallsBroadcast() {
     // Arrange
@@ -71,7 +73,8 @@ public class TronNetServiceDiffblueTest {
    * <p>Method under test: {@link TronNetService#hasIpv4Stack(Set)}
    */
   @Test
-  @Category(MaintainedByDiffblue.class)
+  @Category(ContributionFromDiffblue.class)
+  @ManagedByDiffblue
   @MethodsUnderTest({"boolean TronNetService.hasIpv4Stack(Set)"})
   public void testHasIpv4Stack_given42_whenLinkedHashSetAdd42_thenReturnTrue() {
     // Arrange
@@ -94,7 +97,8 @@ public class TronNetServiceDiffblueTest {
    * <p>Method under test: {@link TronNetService#hasIpv4Stack(Set)}
    */
   @Test
-  @Category(MaintainedByDiffblue.class)
+  @Category(ContributionFromDiffblue.class)
+  @ManagedByDiffblue
   @MethodsUnderTest({"boolean TronNetService.hasIpv4Stack(Set)"})
   public void testHasIpv4Stack_givenInetAddressGetByNameReturnInetAddress_thenCallsGetByName()
       throws UnknownHostException {
@@ -127,7 +131,8 @@ public class TronNetServiceDiffblueTest {
    * <p>Method under test: {@link TronNetService#hasIpv4Stack(Set)}
    */
   @Test
-  @Category(MaintainedByDiffblue.class)
+  @Category(ContributionFromDiffblue.class)
+  @ManagedByDiffblue
   @MethodsUnderTest({"boolean TronNetService.hasIpv4Stack(Set)"})
   public void testHasIpv4Stack_givenInetAddressGetByNameThrowUnknownHostException()
       throws UnknownHostException {
@@ -160,7 +165,8 @@ public class TronNetServiceDiffblueTest {
    * <p>Method under test: {@link TronNetService#hasIpv4Stack(Set)}
    */
   @Test
-  @Category(MaintainedByDiffblue.class)
+  @Category(ContributionFromDiffblue.class)
+  @ManagedByDiffblue
   @MethodsUnderTest({"boolean TronNetService.hasIpv4Stack(Set)"})
   public void testHasIpv4Stack_whenHashSet_thenReturnFalse() {
     // Arrange, Act and Assert
@@ -173,7 +179,8 @@ public class TronNetServiceDiffblueTest {
    * <p>Method under test: {@link TronNetService#getP2pService()}
    */
   @Test
-  @Category(MaintainedByDiffblue.class)
+  @Category(ContributionFromDiffblue.class)
+  @ManagedByDiffblue
   @MethodsUnderTest({
     "org.tron.p2p.P2pConfig TronNetService.getP2pConfig()",
     "P2pService TronNetService.getP2pService()"

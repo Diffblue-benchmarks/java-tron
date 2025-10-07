@@ -4,7 +4,8 @@ import static org.junit.Assert.assertEquals;
 import static org.junit.Assert.assertFalse;
 import static org.junit.Assert.assertThrows;
 import static org.junit.Assert.assertTrue;
-import com.diffblue.cover.annotations.MaintainedByDiffblue;
+import com.diffblue.cover.annotations.ContributionFromDiffblue;
+import com.diffblue.cover.annotations.ManagedByDiffblue;
 import com.diffblue.cover.annotations.MethodsUnderTest;
 import java.io.UnsupportedEncodingException;
 import java.util.ArrayList;
@@ -21,7 +22,8 @@ public class ByteArraySetDiffblueTest {
    * <p>Method under test: {@link ByteArraySet#ByteArraySet()}
    */
   @Test
-  @Category(MaintainedByDiffblue.class)
+  @Category(ContributionFromDiffblue.class)
+  @ManagedByDiffblue
   @MethodsUnderTest({"void ByteArraySet.<init>()", "void ByteArraySet.<init>(Set)"})
   public void testNewByteArraySet() {
     // Arrange, Act and Assert
@@ -38,7 +40,8 @@ public class ByteArraySetDiffblueTest {
    * <p>Method under test: {@link ByteArraySet#ByteArraySet(Set)}
    */
   @Test
-  @Category(MaintainedByDiffblue.class)
+  @Category(ContributionFromDiffblue.class)
+  @ManagedByDiffblue
   @MethodsUnderTest({"void ByteArraySet.<init>()", "void ByteArraySet.<init>(Set)"})
   public void testNewByteArraySet_whenHashSet() {
     // Arrange, Act and Assert
@@ -51,7 +54,8 @@ public class ByteArraySetDiffblueTest {
    * <p>Method under test: {@link ByteArraySet#size()}
    */
   @Test
-  @Category(MaintainedByDiffblue.class)
+  @Category(ContributionFromDiffblue.class)
+  @ManagedByDiffblue
   @MethodsUnderTest({"int ByteArraySet.size()"})
   public void testSize() {
     // Arrange, Act and Assert
@@ -69,7 +73,8 @@ public class ByteArraySetDiffblueTest {
    * <p>Method under test: {@link ByteArraySet#isEmpty()}
    */
   @Test
-  @Category(MaintainedByDiffblue.class)
+  @Category(ContributionFromDiffblue.class)
+  @ManagedByDiffblue
   @MethodsUnderTest({"boolean ByteArraySet.isEmpty()"})
   public void testIsEmpty_givenArrayListAddAxaxaxaxBytesIsUtf8_thenReturnFalse()
       throws UnsupportedEncodingException {
@@ -95,7 +100,8 @@ public class ByteArraySetDiffblueTest {
    * <p>Method under test: {@link ByteArraySet#isEmpty()}
    */
   @Test
-  @Category(MaintainedByDiffblue.class)
+  @Category(ContributionFromDiffblue.class)
+  @ManagedByDiffblue
   @MethodsUnderTest({"boolean ByteArraySet.isEmpty()"})
   public void testIsEmpty_givenByteArraySet_thenReturnTrue() {
     // Arrange, Act and Assert
@@ -108,7 +114,8 @@ public class ByteArraySetDiffblueTest {
    * <p>Method under test: {@link ByteArraySet#iterator()}
    */
   @Test
-  @Category(MaintainedByDiffblue.class)
+  @Category(ContributionFromDiffblue.class)
+  @ManagedByDiffblue
   @MethodsUnderTest({"java.util.Iterator ByteArraySet.iterator()"})
   public void testIterator() {
     // Arrange, Act and Assert
@@ -126,7 +133,8 @@ public class ByteArraySetDiffblueTest {
    * <p>Method under test: {@link ByteArraySet#toArray(Object[])}
    */
   @Test
-  @Category(MaintainedByDiffblue.class)
+  @Category(ContributionFromDiffblue.class)
+  @ManagedByDiffblue
   @MethodsUnderTest({"Object[] ByteArraySet.toArray(Object[])"})
   public void testToArrayWithObject_givenByteArraySet_thenReturnArrayLengthIsZero() {
     // Arrange and Act
@@ -148,7 +156,8 @@ public class ByteArraySetDiffblueTest {
    * <p>Method under test: {@link ByteArraySet#toArray()}
    */
   @Test
-  @Category(MaintainedByDiffblue.class)
+  @Category(ContributionFromDiffblue.class)
+  @ManagedByDiffblue
   @MethodsUnderTest({"Object[] ByteArraySet.toArray()"})
   public void testToArray_givenByteArraySet_thenReturnArrayLengthIsZero() {
     // Arrange and Act
@@ -170,7 +179,8 @@ public class ByteArraySetDiffblueTest {
    * <p>Method under test: {@link ByteArraySet#add(byte[])}
    */
   @Test
-  @Category(MaintainedByDiffblue.class)
+  @Category(ContributionFromDiffblue.class)
+  @ManagedByDiffblue
   @MethodsUnderTest({"boolean ByteArraySet.add(byte[])"})
   public void testAddWithByte_whenAxaxaxaxBytesIsUtf8_thenByteArraySetSizeIsOne()
       throws UnsupportedEncodingException {
@@ -196,7 +206,8 @@ public class ByteArraySetDiffblueTest {
    * <p>Method under test: {@link ByteArraySet#containsAll(Collection)}
    */
   @Test
-  @Category(MaintainedByDiffblue.class)
+  @Category(ContributionFromDiffblue.class)
+  @ManagedByDiffblue
   @MethodsUnderTest({"boolean ByteArraySet.containsAll(Collection)"})
   public void testContainsAll_given42_whenArrayListAdd42() {
     // Arrange
@@ -220,7 +231,8 @@ public class ByteArraySetDiffblueTest {
    * <p>Method under test: {@link ByteArraySet#containsAll(Collection)}
    */
   @Test
-  @Category(MaintainedByDiffblue.class)
+  @Category(ContributionFromDiffblue.class)
+  @ManagedByDiffblue
   @MethodsUnderTest({"boolean ByteArraySet.containsAll(Collection)"})
   public void testContainsAll_given42_whenArrayListAdd422() {
     // Arrange
@@ -244,7 +256,8 @@ public class ByteArraySetDiffblueTest {
    * <p>Method under test: {@link ByteArraySet#containsAll(Collection)}
    */
   @Test
-  @Category(MaintainedByDiffblue.class)
+  @Category(ContributionFromDiffblue.class)
+  @ManagedByDiffblue
   @MethodsUnderTest({"boolean ByteArraySet.containsAll(Collection)"})
   public void testContainsAll_whenArrayList() {
     // Arrange
@@ -265,7 +278,8 @@ public class ByteArraySetDiffblueTest {
    * <p>Method under test: {@link ByteArraySet#addAll(Collection)}
    */
   @Test
-  @Category(MaintainedByDiffblue.class)
+  @Category(ContributionFromDiffblue.class)
+  @ManagedByDiffblue
   @MethodsUnderTest({"boolean ByteArraySet.addAll(Collection)"})
   public void testAddAll_whenArrayListAddAxaxaxaxBytesIsUtf8_thenByteArraySetSizeIsOne()
       throws UnsupportedEncodingException {
@@ -295,7 +309,8 @@ public class ByteArraySetDiffblueTest {
    * <p>Method under test: {@link ByteArraySet#addAll(Collection)}
    */
   @Test
-  @Category(MaintainedByDiffblue.class)
+  @Category(ContributionFromDiffblue.class)
+  @ManagedByDiffblue
   @MethodsUnderTest({"boolean ByteArraySet.addAll(Collection)"})
   public void testAddAll_whenArrayList_thenReturnFalse() {
     // Arrange
@@ -317,7 +332,8 @@ public class ByteArraySetDiffblueTest {
    * <p>Method under test: {@link ByteArraySet#retainAll(Collection)}
    */
   @Test
-  @Category(MaintainedByDiffblue.class)
+  @Category(ContributionFromDiffblue.class)
+  @ManagedByDiffblue
   @MethodsUnderTest({"boolean ByteArraySet.retainAll(Collection)"})
   public void testRetainAll_given42_whenArrayListAdd42() {
     // Arrange
@@ -341,7 +357,8 @@ public class ByteArraySetDiffblueTest {
    * <p>Method under test: {@link ByteArraySet#retainAll(Collection)}
    */
   @Test
-  @Category(MaintainedByDiffblue.class)
+  @Category(ContributionFromDiffblue.class)
+  @ManagedByDiffblue
   @MethodsUnderTest({"boolean ByteArraySet.retainAll(Collection)"})
   public void testRetainAll_given42_whenArrayListAdd422() {
     // Arrange
@@ -365,7 +382,8 @@ public class ByteArraySetDiffblueTest {
    * <p>Method under test: {@link ByteArraySet#retainAll(Collection)}
    */
   @Test
-  @Category(MaintainedByDiffblue.class)
+  @Category(ContributionFromDiffblue.class)
+  @ManagedByDiffblue
   @MethodsUnderTest({"boolean ByteArraySet.retainAll(Collection)"})
   public void testRetainAll_whenArrayList() {
     // Arrange
@@ -386,7 +404,8 @@ public class ByteArraySetDiffblueTest {
    * <p>Method under test: {@link ByteArraySet#removeAll(Collection)}
    */
   @Test
-  @Category(MaintainedByDiffblue.class)
+  @Category(ContributionFromDiffblue.class)
+  @ManagedByDiffblue
   @MethodsUnderTest({"boolean ByteArraySet.removeAll(Collection)"})
   public void testRemoveAll_given42_whenArrayListAdd42() {
     // Arrange
@@ -410,7 +429,8 @@ public class ByteArraySetDiffblueTest {
    * <p>Method under test: {@link ByteArraySet#removeAll(Collection)}
    */
   @Test
-  @Category(MaintainedByDiffblue.class)
+  @Category(ContributionFromDiffblue.class)
+  @ManagedByDiffblue
   @MethodsUnderTest({"boolean ByteArraySet.removeAll(Collection)"})
   public void testRemoveAll_given42_whenArrayListAdd422() {
     // Arrange
@@ -434,7 +454,8 @@ public class ByteArraySetDiffblueTest {
    * <p>Method under test: {@link ByteArraySet#removeAll(Collection)}
    */
   @Test
-  @Category(MaintainedByDiffblue.class)
+  @Category(ContributionFromDiffblue.class)
+  @ManagedByDiffblue
   @MethodsUnderTest({"boolean ByteArraySet.removeAll(Collection)"})
   public void testRemoveAll_whenArrayList() {
     // Arrange
@@ -455,7 +476,8 @@ public class ByteArraySetDiffblueTest {
    * <p>Method under test: {@link ByteArraySet#equals(Object)}
    */
   @Test
-  @Category(MaintainedByDiffblue.class)
+  @Category(ContributionFromDiffblue.class)
+  @ManagedByDiffblue
   @MethodsUnderTest({"boolean ByteArraySet.equals(Object)", "int ByteArraySet.hashCode()"})
   public void testEquals_whenOtherIsNull_thenThrowException() {
     // Arrange, Act and Assert
@@ -473,7 +495,8 @@ public class ByteArraySetDiffblueTest {
    * <p>Method under test: {@link ByteArraySet#equals(Object)}
    */
   @Test
-  @Category(MaintainedByDiffblue.class)
+  @Category(ContributionFromDiffblue.class)
+  @ManagedByDiffblue
   @MethodsUnderTest({"boolean ByteArraySet.equals(Object)", "int ByteArraySet.hashCode()"})
   public void testEquals_whenOtherIsSame_thenThrowException() {
     // Arrange, Act and Assert
@@ -491,7 +514,8 @@ public class ByteArraySetDiffblueTest {
    * <p>Method under test: {@link ByteArraySet#equals(Object)}
    */
   @Test
-  @Category(MaintainedByDiffblue.class)
+  @Category(ContributionFromDiffblue.class)
+  @ManagedByDiffblue
   @MethodsUnderTest({"boolean ByteArraySet.equals(Object)", "int ByteArraySet.hashCode()"})
   public void testEquals_whenOtherIsWrongType_thenThrowException() {
     // Arrange, Act and Assert

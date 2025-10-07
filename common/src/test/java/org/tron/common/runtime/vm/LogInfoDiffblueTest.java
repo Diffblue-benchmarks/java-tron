@@ -5,7 +5,8 @@ import static org.junit.Assert.assertEquals;
 import static org.junit.Assert.assertFalse;
 import static org.junit.Assert.assertSame;
 import static org.junit.Assert.assertTrue;
-import com.diffblue.cover.annotations.MaintainedByDiffblue;
+import com.diffblue.cover.annotations.ContributionFromDiffblue;
+import com.diffblue.cover.annotations.ManagedByDiffblue;
 import com.diffblue.cover.annotations.MethodsUnderTest;
 import com.google.protobuf.ByteString;
 import java.io.UnsupportedEncodingException;
@@ -30,7 +31,8 @@ public class LogInfoDiffblueTest {
    * <p>Method under test: {@link LogInfo#LogInfo(byte[], List, byte[])}
    */
   @Test
-  @Category(MaintainedByDiffblue.class)
+  @Category(ContributionFromDiffblue.class)
+  @ManagedByDiffblue
   @MethodsUnderTest({"void LogInfo.<init>(byte[], List, byte[])"})
   public void testNewLogInfo_givenZero_whenArrayListAddZero_thenReturnClonedTopicsSizeIsOne()
       throws UnsupportedEncodingException {
@@ -85,7 +87,8 @@ public class LogInfoDiffblueTest {
    * <p>Method under test: {@link LogInfo#LogInfo(byte[], List, byte[])}
    */
   @Test
-  @Category(MaintainedByDiffblue.class)
+  @Category(ContributionFromDiffblue.class)
+  @ManagedByDiffblue
   @MethodsUnderTest({"void LogInfo.<init>(byte[], List, byte[])"})
   public void testNewLogInfo_givenZero_whenArrayListAddZero_thenReturnHexTopicsSizeIsTwo()
       throws UnsupportedEncodingException {
@@ -150,7 +153,8 @@ public class LogInfoDiffblueTest {
    * <p>Method under test: {@link LogInfo#LogInfo(byte[], List, byte[])}
    */
   @Test
-  @Category(MaintainedByDiffblue.class)
+  @Category(ContributionFromDiffblue.class)
+  @ManagedByDiffblue
   @MethodsUnderTest({"void LogInfo.<init>(byte[], List, byte[])"})
   public void testNewLogInfo_whenArrayList_thenReturnClonedTopicsEmpty()
       throws UnsupportedEncodingException {
@@ -180,7 +184,8 @@ public class LogInfoDiffblueTest {
    * <p>Method under test: {@link LogInfo#LogInfo(byte[], List, byte[])}
    */
   @Test
-  @Category(MaintainedByDiffblue.class)
+  @Category(ContributionFromDiffblue.class)
+  @ManagedByDiffblue
   @MethodsUnderTest({"void LogInfo.<init>(byte[], List, byte[])"})
   public void testNewLogInfo_whenNull_thenReturnHexDataIsEmptyString() {
     // Arrange and Act
@@ -205,7 +210,8 @@ public class LogInfoDiffblueTest {
    * <p>Method under test: {@link LogInfo#buildLog(LogInfo)}
    */
   @Test
-  @Category(MaintainedByDiffblue.class)
+  @Category(ContributionFromDiffblue.class)
+  @ManagedByDiffblue
   @MethodsUnderTest({"Log LogInfo.buildLog(LogInfo)"})
   public void testBuildLog_givenZero_whenArrayListAddZero_thenReturnTopicsListSizeIsOne()
       throws UnsupportedEncodingException {
@@ -244,7 +250,8 @@ public class LogInfoDiffblueTest {
    * <p>Method under test: {@link LogInfo#buildLog(LogInfo)}
    */
   @Test
-  @Category(MaintainedByDiffblue.class)
+  @Category(ContributionFromDiffblue.class)
+  @ManagedByDiffblue
   @MethodsUnderTest({"Log LogInfo.buildLog(LogInfo)"})
   public void testBuildLog_givenZero_whenArrayListAddZero_thenReturnTopicsListSizeIsTwo()
       throws UnsupportedEncodingException {
@@ -277,7 +284,8 @@ public class LogInfoDiffblueTest {
    * <p>Method under test: {@link LogInfo#buildLog(LogInfo)}
    */
   @Test
-  @Category(MaintainedByDiffblue.class)
+  @Category(ContributionFromDiffblue.class)
+  @ManagedByDiffblue
   @MethodsUnderTest({"Log LogInfo.buildLog(LogInfo)"})
   public void testBuildLog_thenReturnTopicsCountIsZero() throws UnsupportedEncodingException {
     // Arrange
@@ -310,7 +318,8 @@ public class LogInfoDiffblueTest {
    * </ul>
    */
   @Test
-  @Category(MaintainedByDiffblue.class)
+  @Category(ContributionFromDiffblue.class)
+  @ManagedByDiffblue
   @MethodsUnderTest({
     "byte[] LogInfo.getAddress()",
     "byte[] LogInfo.getData()",
@@ -346,7 +355,8 @@ public class LogInfoDiffblueTest {
    * <p>Method under test: {@link LogInfo#getHexTopics()}
    */
   @Test
-  @Category(MaintainedByDiffblue.class)
+  @Category(ContributionFromDiffblue.class)
+  @ManagedByDiffblue
   @MethodsUnderTest({"List LogInfo.getHexTopics()"})
   public void testGetHexTopics_givenArrayListAddZero_thenReturnSizeIsOne()
       throws UnsupportedEncodingException {
@@ -375,7 +385,8 @@ public class LogInfoDiffblueTest {
    * <p>Method under test: {@link LogInfo#getHexTopics()}
    */
   @Test
-  @Category(MaintainedByDiffblue.class)
+  @Category(ContributionFromDiffblue.class)
+  @ManagedByDiffblue
   @MethodsUnderTest({"List LogInfo.getHexTopics()"})
   public void testGetHexTopics_thenReturnEmpty() throws UnsupportedEncodingException {
     // Arrange
@@ -397,7 +408,8 @@ public class LogInfoDiffblueTest {
    * <p>Method under test: {@link LogInfo#getClonedTopics()}
    */
   @Test
-  @Category(MaintainedByDiffblue.class)
+  @Category(ContributionFromDiffblue.class)
+  @ManagedByDiffblue
   @MethodsUnderTest({"List LogInfo.getClonedTopics()"})
   public void testGetClonedTopics_givenArrayListAddZero_thenReturnSizeIsOne()
       throws UnsupportedEncodingException {
@@ -430,7 +442,8 @@ public class LogInfoDiffblueTest {
    * <p>Method under test: {@link LogInfo#getClonedTopics()}
    */
   @Test
-  @Category(MaintainedByDiffblue.class)
+  @Category(ContributionFromDiffblue.class)
+  @ManagedByDiffblue
   @MethodsUnderTest({"List LogInfo.getClonedTopics()"})
   public void testGetClonedTopics_thenReturnEmpty() throws UnsupportedEncodingException {
     // Arrange
@@ -447,7 +460,8 @@ public class LogInfoDiffblueTest {
    * <p>Method under test: {@link LogInfo#getHexData()}
    */
   @Test
-  @Category(MaintainedByDiffblue.class)
+  @Category(ContributionFromDiffblue.class)
+  @ManagedByDiffblue
   @MethodsUnderTest({"String LogInfo.getHexData()"})
   public void testGetHexData() throws UnsupportedEncodingException {
     // Arrange
@@ -468,7 +482,8 @@ public class LogInfoDiffblueTest {
    * <p>Method under test: {@link LogInfo#getClonedData()}
    */
   @Test
-  @Category(MaintainedByDiffblue.class)
+  @Category(ContributionFromDiffblue.class)
+  @ManagedByDiffblue
   @MethodsUnderTest({"byte[] LogInfo.getClonedData()"})
   public void testGetClonedData_thenReturnAxaxaxaxBytesIsUtf8()
       throws UnsupportedEncodingException {
@@ -490,7 +505,8 @@ public class LogInfoDiffblueTest {
    * <p>Method under test: {@link LogInfo#getClonedData()}
    */
   @Test
-  @Category(MaintainedByDiffblue.class)
+  @Category(ContributionFromDiffblue.class)
+  @ManagedByDiffblue
   @MethodsUnderTest({"byte[] LogInfo.getClonedData()"})
   public void testGetClonedData_thenReturnEmptyArrayOfByte() throws UnsupportedEncodingException {
     // Arrange
@@ -512,7 +528,8 @@ public class LogInfoDiffblueTest {
    * <p>Method under test: {@link LogInfo#toString()}
    */
   @Test
-  @Category(MaintainedByDiffblue.class)
+  @Category(ContributionFromDiffblue.class)
+  @ManagedByDiffblue
   @MethodsUnderTest({"String LogInfo.toString()"})
   public void testToString_givenArrayListAddZero_thenReturnAString()
       throws UnsupportedEncodingException {
@@ -539,7 +556,8 @@ public class LogInfoDiffblueTest {
    * <p>Method under test: {@link LogInfo#toString()}
    */
   @Test
-  @Category(MaintainedByDiffblue.class)
+  @Category(ContributionFromDiffblue.class)
+  @ManagedByDiffblue
   @MethodsUnderTest({"String LogInfo.toString()"})
   public void testToString_thenReturnLogInfoAddress4158415841584158TopicsData4158415841584158()
       throws UnsupportedEncodingException {

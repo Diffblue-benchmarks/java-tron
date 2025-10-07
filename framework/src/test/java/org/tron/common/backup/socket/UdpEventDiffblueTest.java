@@ -1,7 +1,8 @@
 package org.tron.common.backup.socket;
 
 import static org.junit.Assert.assertSame;
-import com.diffblue.cover.annotations.MaintainedByDiffblue;
+import com.diffblue.cover.annotations.ContributionFromDiffblue;
+import com.diffblue.cover.annotations.ManagedByDiffblue;
 import com.diffblue.cover.annotations.MethodsUnderTest;
 import java.net.InetSocketAddress;
 import org.junit.Test;
@@ -23,7 +24,8 @@ public class UdpEventDiffblueTest {
    * </ul>
    */
   @Test
-  @Category(MaintainedByDiffblue.class)
+  @Category(ContributionFromDiffblue.class)
+  @ManagedByDiffblue
   @MethodsUnderTest({
     "void UdpEvent.<init>(Message, InetSocketAddress)",
     "InetSocketAddress UdpEvent.getAddress()",

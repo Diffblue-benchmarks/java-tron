@@ -2,7 +2,8 @@ package org.tron.core.services.ratelimiter.strategy;
 
 import static org.junit.Assert.assertEquals;
 import static org.junit.Assert.assertSame;
-import com.diffblue.cover.annotations.MaintainedByDiffblue;
+import com.diffblue.cover.annotations.ContributionFromDiffblue;
+import com.diffblue.cover.annotations.ManagedByDiffblue;
 import com.diffblue.cover.annotations.MethodsUnderTest;
 import java.util.Map;
 import org.junit.Test;
@@ -21,7 +22,8 @@ public class StrategyDiffblueTest {
    * </ul>
    */
   @Test
-  @Category(MaintainedByDiffblue.class)
+  @Category(ContributionFromDiffblue.class)
+  @ManagedByDiffblue
   @MethodsUnderTest({
     "void ParamItem.<init>(Strategy, Class, Object)",
     "void ParamItem.setValue(Object)"
@@ -52,7 +54,8 @@ public class StrategyDiffblueTest {
    * <p>Method under test: {@link Strategy#parseStrategyParams(String)}
    */
   @Test
-  @Category(MaintainedByDiffblue.class)
+  @Category(ContributionFromDiffblue.class)
+  @ManagedByDiffblue
   @MethodsUnderTest({"Map Strategy.parseStrategyParams(String)"})
   public void testParseStrategyParams_whenArgString() {
     // Arrange and Act
@@ -78,7 +81,8 @@ public class StrategyDiffblueTest {
    * <p>Method under test: {@link Strategy#parseStrategyParams(String)}
    */
   @Test
-  @Category(MaintainedByDiffblue.class)
+  @Category(ContributionFromDiffblue.class)
+  @ManagedByDiffblue
   @MethodsUnderTest({"Map Strategy.parseStrategyParams(String)"})
   public void testParseStrategyParams_whenEmptyString() {
     // Arrange and Act
@@ -104,7 +108,8 @@ public class StrategyDiffblueTest {
    * <p>Method under test: {@link Strategy#parseStrategyParams(String)}
    */
   @Test
-  @Category(MaintainedByDiffblue.class)
+  @Category(ContributionFromDiffblue.class)
+  @ManagedByDiffblue
   @MethodsUnderTest({"Map Strategy.parseStrategyParams(String)"})
   public void testParseStrategyParams_whenNull() {
     // Arrange and Act
@@ -130,7 +135,8 @@ public class StrategyDiffblueTest {
    * <p>Method under test: {@link Strategy#parseStrategyParams(String)}
    */
   @Test
-  @Category(MaintainedByDiffblue.class)
+  @Category(ContributionFromDiffblue.class)
+  @ManagedByDiffblue
   @MethodsUnderTest({"Map Strategy.parseStrategyParams(String)"})
   public void testParseStrategyParams_whenUuuUuu() {
     // Arrange and Act
@@ -152,7 +158,8 @@ public class StrategyDiffblueTest {
    * <p>Method under test: {@link Strategy#getMapParams()}
    */
   @Test
-  @Category(MaintainedByDiffblue.class)
+  @Category(ContributionFromDiffblue.class)
+  @ManagedByDiffblue
   @MethodsUnderTest({"Map Strategy.getMapParams()"})
   public void testGetMapParams() {
     // Arrange

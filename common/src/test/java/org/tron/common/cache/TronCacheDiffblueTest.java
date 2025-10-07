@@ -5,7 +5,8 @@ import static org.junit.Assert.assertNull;
 import static org.mockito.Mockito.mock;
 import static org.mockito.Mockito.verify;
 import static org.mockito.Mockito.when;
-import com.diffblue.cover.annotations.MaintainedByDiffblue;
+import com.diffblue.cover.annotations.ContributionFromDiffblue;
+import com.diffblue.cover.annotations.ManagedByDiffblue;
 import com.diffblue.cover.annotations.MethodsUnderTest;
 import com.google.common.cache.CacheLoader;
 import com.google.common.cache.CacheStats;
@@ -26,7 +27,8 @@ public class TronCacheDiffblueTest {
    * <p>Method under test: {@link TronCache#TronCache(CacheType, String)}
    */
   @Test
-  @Category(MaintainedByDiffblue.class)
+  @Category(ContributionFromDiffblue.class)
+  @ManagedByDiffblue
   @MethodsUnderTest({"void TronCache.<init>(CacheType, String)"})
   public void testNewTronCache_whenEmptyString_thenReturnStatsEvictionCountIsZero() {
     // Arrange and Act
@@ -54,7 +56,8 @@ public class TronCacheDiffblueTest {
    * <p>Method under test: {@link TronCache#TronCache(CacheType, String, CacheLoader)}
    */
   @Test
-  @Category(MaintainedByDiffblue.class)
+  @Category(ContributionFromDiffblue.class)
+  @ManagedByDiffblue
   @MethodsUnderTest({"void TronCache.<init>(CacheType, String, CacheLoader)"})
   public void testNewTronCache_whenEmptyString_thenReturnStatsEvictionCountIsZero2() {
     // Arrange and Act
@@ -83,7 +86,8 @@ public class TronCacheDiffblueTest {
    * <p>Method under test: {@link TronCache#getIfPresent(Object)}
    */
   @Test
-  @Category(MaintainedByDiffblue.class)
+  @Category(ContributionFromDiffblue.class)
+  @ManagedByDiffblue
   @MethodsUnderTest({"Object TronCache.getIfPresent(Object)"})
   public void testGetIfPresent_givenAllocateWitnessStandbyAndEmptyString42Is42_thenReturn42() {
     // Arrange
@@ -105,7 +109,8 @@ public class TronCacheDiffblueTest {
    * <p>Method under test: {@link TronCache#getIfPresent(Object)}
    */
   @Test
-  @Category(MaintainedByDiffblue.class)
+  @Category(ContributionFromDiffblue.class)
+  @ManagedByDiffblue
   @MethodsUnderTest({"Object TronCache.getIfPresent(Object)"})
   public void testGetIfPresent_givenAllocateWitnessStandbyAndEmptyString_thenReturnNull() {
     // Arrange
@@ -126,7 +131,8 @@ public class TronCacheDiffblueTest {
    * <p>Method under test: {@link TronCache#get(Object, Callable)}
    */
   @Test
-  @Category(MaintainedByDiffblue.class)
+  @Category(ContributionFromDiffblue.class)
+  @ManagedByDiffblue
   @MethodsUnderTest({"Object TronCache.get(Object, Callable)"})
   public void testGet_givenAllocateWitnessStandbyAndEmptyString42Is42_thenReturn42()
       throws ExecutionException {
@@ -150,7 +156,8 @@ public class TronCacheDiffblueTest {
    * <p>Method under test: {@link TronCache#get(Object, Callable)}
    */
   @Test
-  @Category(MaintainedByDiffblue.class)
+  @Category(ContributionFromDiffblue.class)
+  @ManagedByDiffblue
   @MethodsUnderTest({"Object TronCache.get(Object, Callable)"})
   public void testGet_givenCall_whenCallableCallReturnCall_thenReturnCall() throws Exception {
     // Arrange
@@ -177,7 +184,8 @@ public class TronCacheDiffblueTest {
    * <p>Method under test: {@link TronCache#stats()}
    */
   @Test
-  @Category(MaintainedByDiffblue.class)
+  @Category(ContributionFromDiffblue.class)
+  @ManagedByDiffblue
   @MethodsUnderTest({"CacheStats TronCache.stats()"})
   public void testStats_thenReturnEvictionCountIsZero() {
     // Arrange

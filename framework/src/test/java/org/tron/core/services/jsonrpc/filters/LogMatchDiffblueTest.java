@@ -2,7 +2,8 @@ package org.tron.core.services.jsonrpc.filters;
 
 import static org.junit.Assert.assertEquals;
 import static org.junit.Assert.assertTrue;
-import com.diffblue.cover.annotations.MaintainedByDiffblue;
+import com.diffblue.cover.annotations.ContributionFromDiffblue;
+import com.diffblue.cover.annotations.ManagedByDiffblue;
 import com.diffblue.cover.annotations.MethodsUnderTest;
 import java.util.ArrayList;
 import java.util.List;
@@ -32,7 +33,8 @@ public class LogMatchDiffblueTest {
    * <p>Method under test: {@link LogMatch#matchBlock(LogFilter, long, String, List, boolean)}
    */
   @Test
-  @Category(MaintainedByDiffblue.class)
+  @Category(ContributionFromDiffblue.class)
+  @ManagedByDiffblue
   @MethodsUnderTest({"List LogMatch.matchBlock(LogFilter, long, String, List, boolean)"})
   public void testMatchBlock_givenDefaultInstance_whenArrayListAddDefaultInstance() {
     // Arrange
@@ -60,7 +62,8 @@ public class LogMatchDiffblueTest {
    * <p>Method under test: {@link LogMatch#matchBlock(LogFilter, long, String, List, boolean)}
    */
   @Test
-  @Category(MaintainedByDiffblue.class)
+  @Category(ContributionFromDiffblue.class)
+  @ManagedByDiffblue
   @MethodsUnderTest({"List LogMatch.matchBlock(LogFilter, long, String, List, boolean)"})
   public void testMatchBlock_givenDefaultInstance_whenArrayListAddDefaultInstance2() {
     // Arrange
@@ -88,7 +91,8 @@ public class LogMatchDiffblueTest {
    * <p>Method under test: {@link LogMatch#matchBlock(LogFilter, long, String, List, boolean)}
    */
   @Test
-  @Category(MaintainedByDiffblue.class)
+  @Category(ContributionFromDiffblue.class)
+  @ManagedByDiffblue
   @MethodsUnderTest({"List LogMatch.matchBlock(LogFilter, long, String, List, boolean)"})
   public void testMatchBlock_whenArrayList() {
     // Arrange
@@ -112,7 +116,8 @@ public class LogMatchDiffblueTest {
    * <p>Method under test: {@link LogMatch#matchBlockOneByOne()}
    */
   @Test
-  @Category(MaintainedByDiffblue.class)
+  @Category(ContributionFromDiffblue.class)
+  @ManagedByDiffblue
   @MethodsUnderTest({"LogFilterElement[] LogMatch.matchBlockOneByOne()"})
   public void testMatchBlockOneByOne_thenReturnArrayLengthIsZero()
       throws BadItemException, ItemNotFoundException, JsonRpcInvalidParamsException,

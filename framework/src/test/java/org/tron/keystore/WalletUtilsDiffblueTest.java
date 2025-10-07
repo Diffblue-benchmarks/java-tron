@@ -3,7 +3,8 @@ package org.tron.keystore;
 import static org.junit.Assert.assertEquals;
 import static org.junit.Assert.assertFalse;
 import static org.junit.Assert.assertTrue;
-import com.diffblue.cover.annotations.MaintainedByDiffblue;
+import com.diffblue.cover.annotations.ContributionFromDiffblue;
+import com.diffblue.cover.annotations.ManagedByDiffblue;
 import com.diffblue.cover.annotations.MethodsUnderTest;
 import java.nio.file.Path;
 import java.nio.file.Paths;
@@ -17,7 +18,8 @@ public class WalletUtilsDiffblueTest {
    * <p>Method under test: {@link WalletUtils#getDefaultKeyDirectory()}
    */
   @Test
-  @Category(MaintainedByDiffblue.class)
+  @Category(ContributionFromDiffblue.class)
+  @ManagedByDiffblue
   @MethodsUnderTest({"String WalletUtils.getDefaultKeyDirectory()"})
   public void testGetDefaultKeyDirectory() {
     // Arrange, Act and Assert
@@ -32,7 +34,8 @@ public class WalletUtilsDiffblueTest {
    * <p>Method under test: {@link WalletUtils#getDefaultKeyDirectory(String)}
    */
   @Test
-  @Category(MaintainedByDiffblue.class)
+  @Category(ContributionFromDiffblue.class)
+  @ManagedByDiffblue
   @MethodsUnderTest({"String WalletUtils.getDefaultKeyDirectory(String)"})
   public void testGetDefaultKeyDirectoryWithString() {
     // Arrange, Act and Assert
@@ -47,7 +50,8 @@ public class WalletUtilsDiffblueTest {
    * <p>Method under test: {@link WalletUtils#getDefaultKeyDirectory(String)}
    */
   @Test
-  @Category(MaintainedByDiffblue.class)
+  @Category(ContributionFromDiffblue.class)
+  @ManagedByDiffblue
   @MethodsUnderTest({"String WalletUtils.getDefaultKeyDirectory(String)"})
   public void testGetDefaultKeyDirectoryWithString2() {
     // Arrange, Act and Assert
@@ -66,7 +70,8 @@ public class WalletUtilsDiffblueTest {
    * <p>Method under test: {@link WalletUtils#getDefaultKeyDirectory(String)}
    */
   @Test
-  @Category(MaintainedByDiffblue.class)
+  @Category(ContributionFromDiffblue.class)
+  @ManagedByDiffblue
   @MethodsUnderTest({"String WalletUtils.getDefaultKeyDirectory(String)"})
   public void testGetDefaultKeyDirectoryWithString_whenWin_thenReturnNullEthereum() {
     // Arrange, Act and Assert
@@ -79,7 +84,8 @@ public class WalletUtilsDiffblueTest {
    * <p>Method under test: {@link WalletUtils#getTestnetKeyDirectory()}
    */
   @Test
-  @Category(MaintainedByDiffblue.class)
+  @Category(ContributionFromDiffblue.class)
+  @ManagedByDiffblue
   @MethodsUnderTest({"String WalletUtils.getTestnetKeyDirectory()"})
   public void testGetTestnetKeyDirectory() {
     // Arrange, Act and Assert
@@ -93,7 +99,8 @@ public class WalletUtilsDiffblueTest {
    * <p>Method under test: {@link WalletUtils#getMainnetKeyDirectory()}
    */
   @Test
-  @Category(MaintainedByDiffblue.class)
+  @Category(ContributionFromDiffblue.class)
+  @ManagedByDiffblue
   @MethodsUnderTest({"String WalletUtils.getMainnetKeyDirectory()"})
   public void testGetMainnetKeyDirectory() {
     // Arrange, Act and Assert
@@ -112,7 +119,8 @@ public class WalletUtilsDiffblueTest {
    * <p>Method under test: {@link WalletUtils#passwordValid(String)}
    */
   @Test
-  @Category(MaintainedByDiffblue.class)
+  @Category(ContributionFromDiffblue.class)
+  @ManagedByDiffblue
   @MethodsUnderTest({"boolean WalletUtils.passwordValid(String)"})
   public void testPasswordValid_whenEmptyString_thenReturnFalse() {
     // Arrange, Act and Assert
@@ -130,7 +138,8 @@ public class WalletUtilsDiffblueTest {
    * <p>Method under test: {@link WalletUtils#passwordValid(String)}
    */
   @Test
-  @Category(MaintainedByDiffblue.class)
+  @Category(ContributionFromDiffblue.class)
+  @ManagedByDiffblue
   @MethodsUnderTest({"boolean WalletUtils.passwordValid(String)"})
   public void testPasswordValid_whenIloveyou_thenReturnTrue() {
     // Arrange, Act and Assert
@@ -148,7 +157,8 @@ public class WalletUtilsDiffblueTest {
    * <p>Method under test: {@link WalletUtils#passwordValid(String)}
    */
   @Test
-  @Category(MaintainedByDiffblue.class)
+  @Category(ContributionFromDiffblue.class)
+  @ManagedByDiffblue
   @MethodsUnderTest({"boolean WalletUtils.passwordValid(String)"})
   public void testPasswordValid_whenNull_thenReturnFalse() {
     // Arrange, Act and Assert
@@ -166,7 +176,8 @@ public class WalletUtilsDiffblueTest {
    * <p>Method under test: {@link WalletUtils#passwordValid(String)}
    */
   @Test
-  @Category(MaintainedByDiffblue.class)
+  @Category(ContributionFromDiffblue.class)
+  @ManagedByDiffblue
   @MethodsUnderTest({"boolean WalletUtils.passwordValid(String)"})
   public void testPasswordValid_whenS_thenReturnFalse() {
     // Arrange, Act and Assert

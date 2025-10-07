@@ -5,7 +5,8 @@ import static org.junit.Assert.assertEquals;
 import static org.junit.Assert.assertFalse;
 import static org.junit.Assert.assertSame;
 import static org.junit.Assert.assertThrows;
-import com.diffblue.cover.annotations.MaintainedByDiffblue;
+import com.diffblue.cover.annotations.ContributionFromDiffblue;
+import com.diffblue.cover.annotations.ManagedByDiffblue;
 import com.diffblue.cover.annotations.MethodsUnderTest;
 import java.io.UnsupportedEncodingException;
 import java.util.HashMap;
@@ -29,7 +30,8 @@ public class EnergyCostDiffblueTest {
    * <p>Method under test: {@link EnergyCost#getZeroTierCost(Program)}
    */
   @Test
-  @Category(MaintainedByDiffblue.class)
+  @Category(ContributionFromDiffblue.class)
+  @ManagedByDiffblue
   @MethodsUnderTest({"long EnergyCost.getZeroTierCost(Program)"})
   public void testGetZeroTierCost_thenReturnZero() throws UnsupportedEncodingException {
     // Arrange
@@ -72,7 +74,8 @@ public class EnergyCostDiffblueTest {
    * <p>Method under test: {@link EnergyCost#getVeryLowTierCost(Program)}
    */
   @Test
-  @Category(MaintainedByDiffblue.class)
+  @Category(ContributionFromDiffblue.class)
+  @ManagedByDiffblue
   @MethodsUnderTest({"long EnergyCost.getVeryLowTierCost(Program)"})
   public void testGetVeryLowTierCost_thenReturnThree() throws UnsupportedEncodingException {
     // Arrange
@@ -115,7 +118,8 @@ public class EnergyCostDiffblueTest {
    * <p>Method under test: {@link EnergyCost#getLowTierCost(Program)}
    */
   @Test
-  @Category(MaintainedByDiffblue.class)
+  @Category(ContributionFromDiffblue.class)
+  @ManagedByDiffblue
   @MethodsUnderTest({"long EnergyCost.getLowTierCost(Program)"})
   public void testGetLowTierCost_thenReturnFive() throws UnsupportedEncodingException {
     // Arrange
@@ -158,7 +162,8 @@ public class EnergyCostDiffblueTest {
    * <p>Method under test: {@link EnergyCost#getMidTierCost(Program)}
    */
   @Test
-  @Category(MaintainedByDiffblue.class)
+  @Category(ContributionFromDiffblue.class)
+  @ManagedByDiffblue
   @MethodsUnderTest({"long EnergyCost.getMidTierCost(Program)"})
   public void testGetMidTierCost_thenReturnEight() throws UnsupportedEncodingException {
     // Arrange
@@ -201,7 +206,8 @@ public class EnergyCostDiffblueTest {
    * <p>Method under test: {@link EnergyCost#getBaseTierCost(Program)}
    */
   @Test
-  @Category(MaintainedByDiffblue.class)
+  @Category(ContributionFromDiffblue.class)
+  @ManagedByDiffblue
   @MethodsUnderTest({"long EnergyCost.getBaseTierCost(Program)"})
   public void testGetBaseTierCost_thenReturnTwo() throws UnsupportedEncodingException {
     // Arrange
@@ -244,7 +250,8 @@ public class EnergyCostDiffblueTest {
    * <p>Method under test: {@link EnergyCost#getExtTierCost(Program)}
    */
   @Test
-  @Category(MaintainedByDiffblue.class)
+  @Category(ContributionFromDiffblue.class)
+  @ManagedByDiffblue
   @MethodsUnderTest({"long EnergyCost.getExtTierCost(Program)"})
   public void testGetExtTierCost_thenReturnTwenty() throws UnsupportedEncodingException {
     // Arrange
@@ -287,7 +294,8 @@ public class EnergyCostDiffblueTest {
    * <p>Method under test: {@link EnergyCost#getHighTierCost(Program)}
    */
   @Test
-  @Category(MaintainedByDiffblue.class)
+  @Category(ContributionFromDiffblue.class)
+  @ManagedByDiffblue
   @MethodsUnderTest({"long EnergyCost.getHighTierCost(Program)"})
   public void testGetHighTierCost_thenReturnTen() throws UnsupportedEncodingException {
     // Arrange
@@ -330,7 +338,8 @@ public class EnergyCostDiffblueTest {
    * <p>Method under test: {@link EnergyCost#getSpecialTierCost(Program)}
    */
   @Test
-  @Category(MaintainedByDiffblue.class)
+  @Category(ContributionFromDiffblue.class)
+  @ManagedByDiffblue
   @MethodsUnderTest({"long EnergyCost.getSpecialTierCost(Program)"})
   public void testGetSpecialTierCost_thenReturnOne() throws UnsupportedEncodingException {
     // Arrange
@@ -373,7 +382,8 @@ public class EnergyCostDiffblueTest {
    * <p>Method under test: {@link EnergyCost#getExtCodeSizeCost(Program)}
    */
   @Test
-  @Category(MaintainedByDiffblue.class)
+  @Category(ContributionFromDiffblue.class)
+  @ManagedByDiffblue
   @MethodsUnderTest({"long EnergyCost.getExtCodeSizeCost(Program)"})
   public void testGetExtCodeSizeCost_thenReturnTwenty() throws UnsupportedEncodingException {
     // Arrange
@@ -416,7 +426,8 @@ public class EnergyCostDiffblueTest {
    * <p>Method under test: {@link EnergyCost#getExtCodeHashCost(Program)}
    */
   @Test
-  @Category(MaintainedByDiffblue.class)
+  @Category(ContributionFromDiffblue.class)
+  @ManagedByDiffblue
   @MethodsUnderTest({"long EnergyCost.getExtCodeHashCost(Program)"})
   public void testGetExtCodeHashCost_thenReturnFourHundred() throws UnsupportedEncodingException {
     // Arrange
@@ -459,7 +470,8 @@ public class EnergyCostDiffblueTest {
    * <p>Method under test: {@link EnergyCost#getSloadCost(Program)}
    */
   @Test
-  @Category(MaintainedByDiffblue.class)
+  @Category(ContributionFromDiffblue.class)
+  @ManagedByDiffblue
   @MethodsUnderTest({"long EnergyCost.getSloadCost(Program)"})
   public void testGetSloadCost_thenReturnFifty() throws UnsupportedEncodingException {
     // Arrange
@@ -502,7 +514,8 @@ public class EnergyCostDiffblueTest {
    * <p>Method under test: {@link EnergyCost#getSuicideCost(Program)}
    */
   @Test
-  @Category(MaintainedByDiffblue.class)
+  @Category(ContributionFromDiffblue.class)
+  @ManagedByDiffblue
   @MethodsUnderTest({"long EnergyCost.getSuicideCost(Program)"})
   public void testGetSuicideCost_thenReturnZero() throws UnsupportedEncodingException {
     // Arrange
@@ -545,7 +558,8 @@ public class EnergyCostDiffblueTest {
    * <p>Method under test: {@link EnergyCost#getBalanceCost(Program)}
    */
   @Test
-  @Category(MaintainedByDiffblue.class)
+  @Category(ContributionFromDiffblue.class)
+  @ManagedByDiffblue
   @MethodsUnderTest({"long EnergyCost.getBalanceCost(Program)"})
   public void testGetBalanceCost_thenReturnTwenty() throws UnsupportedEncodingException {
     // Arrange
@@ -588,7 +602,8 @@ public class EnergyCostDiffblueTest {
    * <p>Method under test: {@link EnergyCost#getUnfreezeCost(Program)}
    */
   @Test
-  @Category(MaintainedByDiffblue.class)
+  @Category(ContributionFromDiffblue.class)
+  @ManagedByDiffblue
   @MethodsUnderTest({"long EnergyCost.getUnfreezeCost(Program)"})
   public void testGetUnfreezeCost_thenReturn20000() throws UnsupportedEncodingException {
     // Arrange
@@ -631,7 +646,8 @@ public class EnergyCostDiffblueTest {
    * <p>Method under test: {@link EnergyCost#getFreezeExpireTimeCost(Program)}
    */
   @Test
-  @Category(MaintainedByDiffblue.class)
+  @Category(ContributionFromDiffblue.class)
+  @ManagedByDiffblue
   @MethodsUnderTest({"long EnergyCost.getFreezeExpireTimeCost(Program)"})
   public void testGetFreezeExpireTimeCost_thenReturnFifty() throws UnsupportedEncodingException {
     // Arrange
@@ -674,7 +690,8 @@ public class EnergyCostDiffblueTest {
    * <p>Method under test: {@link EnergyCost#getFreezeBalanceV2Cost(Program)}
    */
   @Test
-  @Category(MaintainedByDiffblue.class)
+  @Category(ContributionFromDiffblue.class)
+  @ManagedByDiffblue
   @MethodsUnderTest({"long EnergyCost.getFreezeBalanceV2Cost(Program)"})
   public void testGetFreezeBalanceV2Cost_thenReturn10000() throws UnsupportedEncodingException {
     // Arrange
@@ -717,7 +734,8 @@ public class EnergyCostDiffblueTest {
    * <p>Method under test: {@link EnergyCost#getUnfreezeBalanceV2Cost(Program)}
    */
   @Test
-  @Category(MaintainedByDiffblue.class)
+  @Category(ContributionFromDiffblue.class)
+  @ManagedByDiffblue
   @MethodsUnderTest({"long EnergyCost.getUnfreezeBalanceV2Cost(Program)"})
   public void testGetUnfreezeBalanceV2Cost_thenReturn10000() throws UnsupportedEncodingException {
     // Arrange
@@ -760,7 +778,8 @@ public class EnergyCostDiffblueTest {
    * <p>Method under test: {@link EnergyCost#getWithdrawExpireUnfreezeCost(Program)}
    */
   @Test
-  @Category(MaintainedByDiffblue.class)
+  @Category(ContributionFromDiffblue.class)
+  @ManagedByDiffblue
   @MethodsUnderTest({"long EnergyCost.getWithdrawExpireUnfreezeCost(Program)"})
   public void testGetWithdrawExpireUnfreezeCost_thenReturn10000()
       throws UnsupportedEncodingException {
@@ -804,7 +823,8 @@ public class EnergyCostDiffblueTest {
    * <p>Method under test: {@link EnergyCost#getCancelAllUnfreezeV2Cost(Program)}
    */
   @Test
-  @Category(MaintainedByDiffblue.class)
+  @Category(ContributionFromDiffblue.class)
+  @ManagedByDiffblue
   @MethodsUnderTest({"long EnergyCost.getCancelAllUnfreezeV2Cost(Program)"})
   public void testGetCancelAllUnfreezeV2Cost_thenReturn10000() throws UnsupportedEncodingException {
     // Arrange
@@ -847,7 +867,8 @@ public class EnergyCostDiffblueTest {
    * <p>Method under test: {@link EnergyCost#getDelegateResourceCost(Program)}
    */
   @Test
-  @Category(MaintainedByDiffblue.class)
+  @Category(ContributionFromDiffblue.class)
+  @ManagedByDiffblue
   @MethodsUnderTest({"long EnergyCost.getDelegateResourceCost(Program)"})
   public void testGetDelegateResourceCost_thenReturn10000() throws UnsupportedEncodingException {
     // Arrange
@@ -890,7 +911,8 @@ public class EnergyCostDiffblueTest {
    * <p>Method under test: {@link EnergyCost#getUnDelegateResourceCost(Program)}
    */
   @Test
-  @Category(MaintainedByDiffblue.class)
+  @Category(ContributionFromDiffblue.class)
+  @ManagedByDiffblue
   @MethodsUnderTest({"long EnergyCost.getUnDelegateResourceCost(Program)"})
   public void testGetUnDelegateResourceCost_thenReturn10000() throws UnsupportedEncodingException {
     // Arrange
@@ -933,7 +955,8 @@ public class EnergyCostDiffblueTest {
    * <p>Method under test: {@link EnergyCost#getWithdrawRewardCost(Program)}
    */
   @Test
-  @Category(MaintainedByDiffblue.class)
+  @Category(ContributionFromDiffblue.class)
+  @ManagedByDiffblue
   @MethodsUnderTest({"long EnergyCost.getWithdrawRewardCost(Program)"})
   public void testGetWithdrawRewardCost_thenReturn20000() throws UnsupportedEncodingException {
     // Arrange
@@ -972,7 +995,8 @@ public class EnergyCostDiffblueTest {
    * <p>Method under test: {@link EnergyCost#getCalculateCallCost(Stack, Program, long, int)}
    */
   @Test
-  @Category(MaintainedByDiffblue.class)
+  @Category(ContributionFromDiffblue.class)
+  @ManagedByDiffblue
   @MethodsUnderTest({"long EnergyCost.getCalculateCallCost(Stack, Program, long, int)"})
   public void testGetCalculateCallCost() throws UnsupportedEncodingException {
     // Arrange
@@ -1021,7 +1045,8 @@ public class EnergyCostDiffblueTest {
    * <p>Method under test: {@link EnergyCost#getCalculateCallCost(Stack, Program, long, int)}
    */
   @Test
-  @Category(MaintainedByDiffblue.class)
+  @Category(ContributionFromDiffblue.class)
+  @ManagedByDiffblue
   @MethodsUnderTest({"long EnergyCost.getCalculateCallCost(Stack, Program, long, int)"})
   public void testGetCalculateCallCost2() throws UnsupportedEncodingException {
     // Arrange
@@ -1071,7 +1096,8 @@ public class EnergyCostDiffblueTest {
    * <p>Method under test: {@link EnergyCost#getCalculateCallCost(Stack, Program, long, int)}
    */
   @Test
-  @Category(MaintainedByDiffblue.class)
+  @Category(ContributionFromDiffblue.class)
+  @ManagedByDiffblue
   @MethodsUnderTest({"long EnergyCost.getCalculateCallCost(Stack, Program, long, int)"})
   public void testGetCalculateCallCost3() throws UnsupportedEncodingException {
     // Arrange
@@ -1146,7 +1172,8 @@ public class EnergyCostDiffblueTest {
    * <p>Method under test: {@link EnergyCost#getCalculateCallCost(Stack, Program, long, int)}
    */
   @Test
-  @Category(MaintainedByDiffblue.class)
+  @Category(ContributionFromDiffblue.class)
+  @ManagedByDiffblue
   @MethodsUnderTest({"long EnergyCost.getCalculateCallCost(Stack, Program, long, int)"})
   public void testGetCalculateCallCost4() throws UnsupportedEncodingException {
     // Arrange
@@ -1199,7 +1226,8 @@ public class EnergyCostDiffblueTest {
    * <p>Method under test: {@link EnergyCost#getCalculateCallCost(Stack, Program, long, int)}
    */
   @Test
-  @Category(MaintainedByDiffblue.class)
+  @Category(ContributionFromDiffblue.class)
+  @ManagedByDiffblue
   @MethodsUnderTest({"long EnergyCost.getCalculateCallCost(Stack, Program, long, int)"})
   public void testGetCalculateCallCost_givenDataWordWithNumIsA_thenReturnTen()
       throws UnsupportedEncodingException {
@@ -1253,7 +1281,8 @@ public class EnergyCostDiffblueTest {
    * <p>Method under test: {@link EnergyCost#getCalculateCallCost(Stack, Program, long, int)}
    */
   @Test
-  @Category(MaintainedByDiffblue.class)
+  @Category(ContributionFromDiffblue.class)
+  @ManagedByDiffblue
   @MethodsUnderTest({"long EnergyCost.getCalculateCallCost(Stack, Program, long, int)"})
   public void testGetCalculateCallCost_givenMax_value() throws UnsupportedEncodingException {
     // Arrange
@@ -1308,7 +1337,8 @@ public class EnergyCostDiffblueTest {
    * <p>Method under test: {@link EnergyCost#getCalculateCallCost(Stack, Program, long, int)}
    */
   @Test
-  @Category(MaintainedByDiffblue.class)
+  @Category(ContributionFromDiffblue.class)
+  @ManagedByDiffblue
   @MethodsUnderTest({"long EnergyCost.getCalculateCallCost(Stack, Program, long, int)"})
   public void testGetCalculateCallCost_givenMinusOne() throws UnsupportedEncodingException {
     // Arrange
@@ -1363,7 +1393,8 @@ public class EnergyCostDiffblueTest {
    * <p>Method under test: {@link EnergyCost#getCalculateCallCost(Stack, Program, long, int)}
    */
   @Test
-  @Category(MaintainedByDiffblue.class)
+  @Category(ContributionFromDiffblue.class)
+  @ManagedByDiffblue
   @MethodsUnderTest({"long EnergyCost.getCalculateCallCost(Stack, Program, long, int)"})
   public void testGetCalculateCallCost_givenOne() throws UnsupportedEncodingException {
     // Arrange
@@ -1416,7 +1447,8 @@ public class EnergyCostDiffblueTest {
    * <p>Method under test: {@link EnergyCost#getCalculateCallCost(Stack, Program, long, int)}
    */
   @Test
-  @Category(MaintainedByDiffblue.class)
+  @Category(ContributionFromDiffblue.class)
+  @ManagedByDiffblue
   @MethodsUnderTest({"long EnergyCost.getCalculateCallCost(Stack, Program, long, int)"})
   public void testGetCalculateCallCost_givenTwoHundredFiftyFive()
       throws UnsupportedEncodingException {
@@ -1473,7 +1505,8 @@ public class EnergyCostDiffblueTest {
    * <p>Method under test: {@link EnergyCost#getCalculateCallCost(Stack, Program, long, int)}
    */
   @Test
-  @Category(MaintainedByDiffblue.class)
+  @Category(ContributionFromDiffblue.class)
+  @ManagedByDiffblue
   @MethodsUnderTest({"long EnergyCost.getCalculateCallCost(Stack, Program, long, int)"})
   public void testGetCalculateCallCost_givenZero_thenThrowOutOfEnergyException()
       throws UnsupportedEncodingException {

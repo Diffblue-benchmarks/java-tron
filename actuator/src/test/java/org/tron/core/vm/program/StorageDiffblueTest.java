@@ -9,7 +9,8 @@ import static org.mockito.Mockito.doNothing;
 import static org.mockito.Mockito.mock;
 import static org.mockito.Mockito.verify;
 import static org.mockito.Mockito.when;
-import com.diffblue.cover.annotations.MaintainedByDiffblue;
+import com.diffblue.cover.annotations.ContributionFromDiffblue;
+import com.diffblue.cover.annotations.ManagedByDiffblue;
 import com.diffblue.cover.annotations.MethodsUnderTest;
 import java.io.UnsupportedEncodingException;
 import java.util.Map;
@@ -27,7 +28,8 @@ public class StorageDiffblueTest {
    * <p>Method under test: {@link Storage#Storage(byte[], StorageRowStore)}
    */
   @Test
-  @Category(MaintainedByDiffblue.class)
+  @Category(ContributionFromDiffblue.class)
+  @ManagedByDiffblue
   @MethodsUnderTest({"void Storage.<init>(byte[], StorageRowStore)"})
   public void testNewStorage() throws UnsupportedEncodingException {
     // Arrange and Act
@@ -56,7 +58,8 @@ public class StorageDiffblueTest {
    * <p>Method under test: {@link Storage#Storage(Storage)}
    */
   @Test
-  @Category(MaintainedByDiffblue.class)
+  @Category(ContributionFromDiffblue.class)
+  @ManagedByDiffblue
   @MethodsUnderTest({"void Storage.<init>(Storage)"})
   public void testNewStorage_givenDataWordWithNumIsA_thenReturnRowCacheSizeIsTwo()
       throws UnsupportedEncodingException {
@@ -92,7 +95,8 @@ public class StorageDiffblueTest {
    * <p>Method under test: {@link Storage#Storage(Storage)}
    */
   @Test
-  @Category(MaintainedByDiffblue.class)
+  @Category(ContributionFromDiffblue.class)
+  @ManagedByDiffblue
   @MethodsUnderTest({"void Storage.<init>(Storage)"})
   public void testNewStorage_givenZero_thenReturnRowCacheSizeIsOne()
       throws UnsupportedEncodingException {
@@ -125,7 +129,8 @@ public class StorageDiffblueTest {
    * <p>Method under test: {@link Storage#Storage(Storage)}
    */
   @Test
-  @Category(MaintainedByDiffblue.class)
+  @Category(ContributionFromDiffblue.class)
+  @ManagedByDiffblue
   @MethodsUnderTest({"void Storage.<init>(Storage)"})
   public void testNewStorage_thenReturnRowCacheEmpty() throws UnsupportedEncodingException {
     // Arrange
@@ -151,7 +156,8 @@ public class StorageDiffblueTest {
    * <p>Method under test: {@link Storage#generateAddrHash(byte[])}
    */
   @Test
-  @Category(MaintainedByDiffblue.class)
+  @Category(ContributionFromDiffblue.class)
+  @ManagedByDiffblue
   @MethodsUnderTest({"void Storage.generateAddrHash(byte[])"})
   public void testGenerateAddrHash() throws UnsupportedEncodingException {
     // Arrange
@@ -179,7 +185,8 @@ public class StorageDiffblueTest {
    * <p>Method under test: {@link Storage#generateAddrHash(byte[])}
    */
   @Test
-  @Category(MaintainedByDiffblue.class)
+  @Category(ContributionFromDiffblue.class)
+  @ManagedByDiffblue
   @MethodsUnderTest({"void Storage.generateAddrHash(byte[])"})
   public void testGenerateAddrHash_whenEmptyArrayOfByte() throws UnsupportedEncodingException {
     // Arrange
@@ -207,7 +214,8 @@ public class StorageDiffblueTest {
    * <p>Method under test: {@link Storage#generateAddrHash(byte[])}
    */
   @Test
-  @Category(MaintainedByDiffblue.class)
+  @Category(ContributionFromDiffblue.class)
+  @ManagedByDiffblue
   @MethodsUnderTest({"void Storage.generateAddrHash(byte[])"})
   public void testGenerateAddrHash_whenNull() throws UnsupportedEncodingException {
     // Arrange
@@ -231,7 +239,8 @@ public class StorageDiffblueTest {
    * <p>Method under test: {@link Storage#getValue(DataWord)}
    */
   @Test
-  @Category(MaintainedByDiffblue.class)
+  @Category(ContributionFromDiffblue.class)
+  @ManagedByDiffblue
   @MethodsUnderTest({"DataWord Storage.getValue(DataWord)"})
   public void testGetValue() throws UnsupportedEncodingException {
     // Arrange
@@ -282,7 +291,8 @@ public class StorageDiffblueTest {
    * <p>Method under test: {@link Storage#getValue(DataWord)}
    */
   @Test
-  @Category(MaintainedByDiffblue.class)
+  @Category(ContributionFromDiffblue.class)
+  @ManagedByDiffblue
   @MethodsUnderTest({"DataWord Storage.getValue(DataWord)"})
   public void testGetValue_givenStorageRowStoreGetReturnNull_whenZero_thenReturnNull()
       throws UnsupportedEncodingException {
@@ -310,7 +320,8 @@ public class StorageDiffblueTest {
    * <p>Method under test: {@link Storage#getValue(DataWord)}
    */
   @Test
-  @Category(MaintainedByDiffblue.class)
+  @Category(ContributionFromDiffblue.class)
+  @ManagedByDiffblue
   @MethodsUnderTest({"DataWord Storage.getValue(DataWord)"})
   public void testGetValue_givenStorageRowStoreGetReturnStorageRowCapsuleWithRowValueIsNull()
       throws UnsupportedEncodingException {
@@ -337,7 +348,8 @@ public class StorageDiffblueTest {
    * <p>Method under test: {@link Storage#getValue(DataWord)}
    */
   @Test
-  @Category(MaintainedByDiffblue.class)
+  @Category(ContributionFromDiffblue.class)
+  @ManagedByDiffblue
   @MethodsUnderTest({"DataWord Storage.getValue(DataWord)"})
   public void testGetValue_thenReturnNoLeadZeroesDataIsAxaxaxaxBytesIsUtf8()
       throws UnsupportedEncodingException {
@@ -385,7 +397,8 @@ public class StorageDiffblueTest {
    * <p>Method under test: {@link Storage#getValue(DataWord)}
    */
   @Test
-  @Category(MaintainedByDiffblue.class)
+  @Category(ContributionFromDiffblue.class)
+  @ManagedByDiffblue
   @MethodsUnderTest({"DataWord Storage.getValue(DataWord)"})
   public void testGetValue_thenReturnZero() throws UnsupportedEncodingException {
     // Arrange
@@ -403,7 +416,8 @@ public class StorageDiffblueTest {
    * <p>Method under test: {@link Storage#put(DataWord, DataWord)}
    */
   @Test
-  @Category(MaintainedByDiffblue.class)
+  @Category(ContributionFromDiffblue.class)
+  @ManagedByDiffblue
   @MethodsUnderTest({"void Storage.put(DataWord, DataWord)"})
   public void testPut() throws UnsupportedEncodingException {
     // Arrange
@@ -423,7 +437,8 @@ public class StorageDiffblueTest {
    * <p>Method under test: {@link Storage#put(DataWord, DataWord)}
    */
   @Test
-  @Category(MaintainedByDiffblue.class)
+  @Category(ContributionFromDiffblue.class)
+  @ManagedByDiffblue
   @MethodsUnderTest({"void Storage.put(DataWord, DataWord)"})
   public void testPut2() throws UnsupportedEncodingException {
     // Arrange
@@ -450,7 +465,8 @@ public class StorageDiffblueTest {
    * <p>Method under test: {@link Storage#put(DataWord, DataWord)}
    */
   @Test
-  @Category(MaintainedByDiffblue.class)
+  @Category(ContributionFromDiffblue.class)
+  @ManagedByDiffblue
   @MethodsUnderTest({"void Storage.put(DataWord, DataWord)"})
   public void testPut_thenStorageWithStorageIsStorageRowCacheSizeIsOne()
       throws UnsupportedEncodingException {
@@ -479,7 +495,8 @@ public class StorageDiffblueTest {
    * <p>Method under test: {@link Storage#commit()}
    */
   @Test
-  @Category(MaintainedByDiffblue.class)
+  @Category(ContributionFromDiffblue.class)
+  @ManagedByDiffblue
   @MethodsUnderTest({"void Storage.commit()"})
   public void testCommit_givenStorageRowStoreDeleteDoesNothing_thenCallsDelete()
       throws UnsupportedEncodingException {
@@ -510,7 +527,8 @@ public class StorageDiffblueTest {
    * <p>Method under test: {@link Storage#commit()}
    */
   @Test
-  @Category(MaintainedByDiffblue.class)
+  @Category(ContributionFromDiffblue.class)
+  @ManagedByDiffblue
   @MethodsUnderTest({"void Storage.commit()"})
   public void testCommit_givenStorageRowStorePutDoesNothing_thenCallsPut()
       throws UnsupportedEncodingException {
@@ -543,7 +561,8 @@ public class StorageDiffblueTest {
    * </ul>
    */
   @Test
-  @Category(MaintainedByDiffblue.class)
+  @Category(ContributionFromDiffblue.class)
+  @ManagedByDiffblue
   @MethodsUnderTest({
     "byte[] Storage.getAddrHash()",
     "byte[] Storage.getAddress()",

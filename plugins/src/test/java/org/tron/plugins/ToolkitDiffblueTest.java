@@ -1,7 +1,8 @@
 package org.tron.plugins;
 
 import static org.junit.Assert.assertEquals;
-import com.diffblue.cover.annotations.MaintainedByDiffblue;
+import com.diffblue.cover.annotations.ContributionFromDiffblue;
+import com.diffblue.cover.annotations.ManagedByDiffblue;
 import com.diffblue.cover.annotations.MethodsUnderTest;
 import org.junit.Test;
 import org.junit.experimental.categories.Category;
@@ -13,7 +14,8 @@ public class ToolkitDiffblueTest {
    * <p>Method under test: {@link Toolkit#call()}
    */
   @Test
-  @Category(MaintainedByDiffblue.class)
+  @Category(ContributionFromDiffblue.class)
+  @ManagedByDiffblue
   @MethodsUnderTest({"java.lang.Integer Toolkit.call()"})
   public void testCall() throws Exception {
     // Arrange, Act and Assert

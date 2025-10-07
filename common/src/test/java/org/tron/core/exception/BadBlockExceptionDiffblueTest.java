@@ -2,7 +2,8 @@ package org.tron.core.exception;
 
 import static org.junit.Assert.assertEquals;
 import static org.junit.Assert.assertNull;
-import com.diffblue.cover.annotations.MaintainedByDiffblue;
+import com.diffblue.cover.annotations.ContributionFromDiffblue;
+import com.diffblue.cover.annotations.ManagedByDiffblue;
 import com.diffblue.cover.annotations.MethodsUnderTest;
 import org.junit.Test;
 import org.junit.experimental.categories.Category;
@@ -15,7 +16,8 @@ public class BadBlockExceptionDiffblueTest {
    * <p>Method under test: {@link BadBlockException#BadBlockException()}
    */
   @Test
-  @Category(MaintainedByDiffblue.class)
+  @Category(ContributionFromDiffblue.class)
+  @ManagedByDiffblue
   @MethodsUnderTest({"void BadBlockException.<init>()"})
   public void testNewBadBlockException() {
     // Arrange and Act
@@ -35,7 +37,8 @@ public class BadBlockExceptionDiffblueTest {
    * <p>Method under test: {@link BadBlockException#BadBlockException(String)}
    */
   @Test
-  @Category(MaintainedByDiffblue.class)
+  @Category(ContributionFromDiffblue.class)
+  @ManagedByDiffblue
   @MethodsUnderTest({"void BadBlockException.<init>(String)"})
   public void testNewBadBlockException2() {
     // Arrange and Act
@@ -55,7 +58,8 @@ public class BadBlockExceptionDiffblueTest {
    * <p>Method under test: {@link BadBlockException#BadBlockException(TypeEnum, String)}
    */
   @Test
-  @Category(MaintainedByDiffblue.class)
+  @Category(ContributionFromDiffblue.class)
+  @ManagedByDiffblue
   @MethodsUnderTest({"void BadBlockException.<init>(TypeEnum, String)"})
   public void testNewBadBlockException3() {
     // Arrange and Act
@@ -76,7 +80,8 @@ public class BadBlockExceptionDiffblueTest {
    * <p>Method under test: {@link BadBlockException#getType()}
    */
   @Test
-  @Category(MaintainedByDiffblue.class)
+  @Category(ContributionFromDiffblue.class)
+  @ManagedByDiffblue
   @MethodsUnderTest({"TypeEnum BadBlockException.getType()"})
   public void testGetType() {
     // Arrange, Act and Assert
@@ -89,7 +94,8 @@ public class BadBlockExceptionDiffblueTest {
    * <p>Method under test: {@link TypeEnum#getValue()}
    */
   @Test
-  @Category(MaintainedByDiffblue.class)
+  @Category(ContributionFromDiffblue.class)
+  @ManagedByDiffblue
   @MethodsUnderTest({"java.lang.Integer TypeEnum.getValue()"})
   public void testTypeEnumGetValue() {
     // Arrange, Act and Assert

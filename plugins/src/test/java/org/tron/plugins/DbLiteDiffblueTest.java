@@ -2,7 +2,8 @@ package org.tron.plugins;
 
 import static org.junit.Assert.assertEquals;
 import static org.junit.Assert.assertNull;
-import com.diffblue.cover.annotations.MaintainedByDiffblue;
+import com.diffblue.cover.annotations.ContributionFromDiffblue;
+import com.diffblue.cover.annotations.ManagedByDiffblue;
 import com.diffblue.cover.annotations.MethodsUnderTest;
 import org.junit.Test;
 import org.junit.experimental.categories.Category;
@@ -21,7 +22,8 @@ public class DbLiteDiffblueTest {
    * </ul>
    */
   @Test
-  @Category(MaintainedByDiffblue.class)
+  @Category(ContributionFromDiffblue.class)
+  @ManagedByDiffblue
   @MethodsUnderTest({
     "long BlockNumInfo.getHistoryMaxNum()",
     "long BlockNumInfo.getSnapshotMaxNum()",
@@ -47,7 +49,8 @@ public class DbLiteDiffblueTest {
    * <p>Method under test: {@link BlockNumInfo#BlockNumInfo(long, long, long)}
    */
   @Test
-  @Category(MaintainedByDiffblue.class)
+  @Category(ContributionFromDiffblue.class)
+  @ManagedByDiffblue
   @MethodsUnderTest({"void BlockNumInfo.<init>(long, long, long)"})
   public void testBlockNumInfoNewBlockNumInfo() {
     // Arrange and Act
@@ -71,7 +74,8 @@ public class DbLiteDiffblueTest {
    * </ul>
    */
   @Test
-  @Category(MaintainedByDiffblue.class)
+  @Category(ContributionFromDiffblue.class)
+  @ManagedByDiffblue
   @MethodsUnderTest({
     "void DbLite.<init>()",
     "void DbLite.reSetRecentBlks()",

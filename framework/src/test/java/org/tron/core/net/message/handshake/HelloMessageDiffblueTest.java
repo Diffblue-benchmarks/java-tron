@@ -10,7 +10,8 @@ import static org.mockito.Mockito.atLeast;
 import static org.mockito.Mockito.mock;
 import static org.mockito.Mockito.verify;
 import static org.mockito.Mockito.when;
-import com.diffblue.cover.annotations.MaintainedByDiffblue;
+import com.diffblue.cover.annotations.ContributionFromDiffblue;
+import com.diffblue.cover.annotations.ManagedByDiffblue;
 import com.diffblue.cover.annotations.MethodsUnderTest;
 import com.google.protobuf.ByteString;
 import com.google.protobuf.ByteString.ByteIterator;
@@ -46,7 +47,8 @@ public class HelloMessageDiffblueTest {
    * <p>Method under test: {@link HelloMessage#HelloMessage(byte, byte[])}
    */
   @Test
-  @Category(MaintainedByDiffblue.class)
+  @Category(ContributionFromDiffblue.class)
+  @ManagedByDiffblue
   @MethodsUnderTest({"void HelloMessage.<init>(byte, byte[])"})
   public void testNewHelloMessage_whenEmptyArrayOfByte_thenSendDataReturnUnpooledHeapByteBuf()
       throws Exception {
@@ -77,7 +79,8 @@ public class HelloMessageDiffblueTest {
    * <p>Method under test: {@link HelloMessage#HelloMessage(byte[])}
    */
   @Test
-  @Category(MaintainedByDiffblue.class)
+  @Category(ContributionFromDiffblue.class)
+  @ManagedByDiffblue
   @MethodsUnderTest({"void HelloMessage.<init>(byte[])"})
   public void testNewHelloMessage_whenEmptyArrayOfByte_thenSendDataReturnUnpooledHeapByteBuf2()
       throws Exception {
@@ -103,7 +106,8 @@ public class HelloMessageDiffblueTest {
    * <p>Method under test: {@link HelloMessage#setHelloMessage(Protocol.HelloMessage)}
    */
   @Test
-  @Category(MaintainedByDiffblue.class)
+  @Category(ContributionFromDiffblue.class)
+  @ManagedByDiffblue
   @MethodsUnderTest({"void HelloMessage.setHelloMessage(Protocol.HelloMessage)"})
   public void testSetHelloMessage() throws Exception {
     // Arrange
@@ -159,7 +163,8 @@ public class HelloMessageDiffblueTest {
    * <p>Method under test: {@link HelloMessage#getVersion()}
    */
   @Test
-  @Category(MaintainedByDiffblue.class)
+  @Category(ContributionFromDiffblue.class)
+  @ManagedByDiffblue
   @MethodsUnderTest({"int HelloMessage.getVersion()"})
   public void testGetVersion_givenHelloMessageWithDataIsEmptyArrayOfByte_thenReturnZero()
       throws Exception {
@@ -181,7 +186,8 @@ public class HelloMessageDiffblueTest {
    * <p>Method under test: {@link HelloMessage#getNodeType()}
    */
   @Test
-  @Category(MaintainedByDiffblue.class)
+  @Category(ContributionFromDiffblue.class)
+  @ManagedByDiffblue
   @MethodsUnderTest({"int HelloMessage.getNodeType()"})
   public void testGetNodeType_givenHelloMessageWithDataIsEmptyArrayOfByte_thenReturnZero()
       throws Exception {
@@ -203,7 +209,8 @@ public class HelloMessageDiffblueTest {
    * <p>Method under test: {@link HelloMessage#getLowestBlockNum()}
    */
   @Test
-  @Category(MaintainedByDiffblue.class)
+  @Category(ContributionFromDiffblue.class)
+  @ManagedByDiffblue
   @MethodsUnderTest({"long HelloMessage.getLowestBlockNum()"})
   public void testGetLowestBlockNum_givenHelloMessageWithDataIsEmptyArrayOfByte_thenReturnZero()
       throws Exception {
@@ -225,7 +232,8 @@ public class HelloMessageDiffblueTest {
    * <p>Method under test: {@link HelloMessage#getTimestamp()}
    */
   @Test
-  @Category(MaintainedByDiffblue.class)
+  @Category(ContributionFromDiffblue.class)
+  @ManagedByDiffblue
   @MethodsUnderTest({"long HelloMessage.getTimestamp()"})
   public void testGetTimestamp_givenHelloMessageWithDataIsEmptyArrayOfByte_thenReturnZero()
       throws Exception {
@@ -246,7 +254,8 @@ public class HelloMessageDiffblueTest {
    * <p>Method under test: {@link HelloMessage#getFrom()}
    */
   @Test
-  @Category(MaintainedByDiffblue.class)
+  @Category(ContributionFromDiffblue.class)
+  @ManagedByDiffblue
   @MethodsUnderTest({"Node HelloMessage.getFrom()"})
   public void testGetFrom_thenReturnHexIdIsEmptyString() throws Exception {
     // Arrange
@@ -279,7 +288,8 @@ public class HelloMessageDiffblueTest {
    * <p>Method under test: {@link HelloMessage#valid()}
    */
   @Test
-  @Category(MaintainedByDiffblue.class)
+  @Category(ContributionFromDiffblue.class)
+  @ManagedByDiffblue
   @MethodsUnderTest({"boolean HelloMessage.valid()"})
   public void testValid_givenHelloMessageWithDataIsEmptyArrayOfByte_thenReturnFalse()
       throws Exception {
@@ -296,7 +306,8 @@ public class HelloMessageDiffblueTest {
    * <p>Method under test: {@link HelloMessage#getEndpointFromNode(Node)}
    */
   @Test
-  @Category(MaintainedByDiffblue.class)
+  @Category(ContributionFromDiffblue.class)
+  @ManagedByDiffblue
   @MethodsUnderTest({"Endpoint HelloMessage.getEndpointFromNode(Node)"})
   public void testGetEndpointFromNode() {
     // Arrange
@@ -329,7 +340,8 @@ public class HelloMessageDiffblueTest {
    * <p>Method under test: {@link HelloMessage#getEndpointFromNode(Node)}
    */
   @Test
-  @Category(MaintainedByDiffblue.class)
+  @Category(ContributionFromDiffblue.class)
+  @ManagedByDiffblue
   @MethodsUnderTest({"Endpoint HelloMessage.getEndpointFromNode(Node)"})
   public void testGetEndpointFromNode_given42_thenReturnAddressIpv6ToStringUtf8Is00042() {
     // Arrange
@@ -370,7 +382,8 @@ public class HelloMessageDiffblueTest {
    * <p>Method under test: {@link HelloMessage#getEndpointFromNode(Node)}
    */
   @Test
-  @Category(MaintainedByDiffblue.class)
+  @Category(ContributionFromDiffblue.class)
+  @ManagedByDiffblue
   @MethodsUnderTest({"Endpoint HelloMessage.getEndpointFromNode(Node)"})
   public void testGetEndpointFromNode_givenHostV4_thenReturnNodeIdToStringUtf8IsAxaxaxax()
       throws UnsupportedEncodingException {
@@ -408,7 +421,8 @@ public class HelloMessageDiffblueTest {
    * <p>Method under test: {@link HelloMessage#getEndpointFromNode(Node)}
    */
   @Test
-  @Category(MaintainedByDiffblue.class)
+  @Category(ContributionFromDiffblue.class)
+  @ManagedByDiffblue
   @MethodsUnderTest({"Endpoint HelloMessage.getEndpointFromNode(Node)"})
   public void testGetEndpointFromNode_thenReturnAddressIpv6ToStringUtf8IsEmptyString() {
     // Arrange and Act
@@ -446,7 +460,8 @@ public class HelloMessageDiffblueTest {
    * <p>Method under test: {@link HelloMessage#getEndpointFromNode(Node)}
    */
   @Test
-  @Category(MaintainedByDiffblue.class)
+  @Category(ContributionFromDiffblue.class)
+  @ManagedByDiffblue
   @MethodsUnderTest({"Endpoint HelloMessage.getEndpointFromNode(Node)"})
   public void testGetEndpointFromNode_thenReturnNodeIdToStringUtf8IsEmptyString() {
     // Arrange

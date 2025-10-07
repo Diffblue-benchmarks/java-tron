@@ -1,7 +1,8 @@
 package org.tron.core.capsule;
 
 import static org.junit.Assert.assertEquals;
-import com.diffblue.cover.annotations.MaintainedByDiffblue;
+import com.diffblue.cover.annotations.ContributionFromDiffblue;
+import com.diffblue.cover.annotations.ManagedByDiffblue;
 import com.diffblue.cover.annotations.MethodsUnderTest;
 import org.junit.Test;
 import org.junit.experimental.categories.Category;
@@ -18,7 +19,8 @@ public class ExchangeProcessorDiffblueTest {
    * <p>Method under test: {@link ExchangeProcessor#exchange(long, long, long)}
    */
   @Test
-  @Category(MaintainedByDiffblue.class)
+  @Category(ContributionFromDiffblue.class)
+  @ManagedByDiffblue
   @MethodsUnderTest({"long ExchangeProcessor.exchange(long, long, long)"})
   public void testExchange_givenExchangeProcessorWithSupplyIsFiveAndUseStrictMathIsFalse() {
     // Arrange, Act and Assert
@@ -36,7 +38,8 @@ public class ExchangeProcessorDiffblueTest {
    * <p>Method under test: {@link ExchangeProcessor#exchange(long, long, long)}
    */
   @Test
-  @Category(MaintainedByDiffblue.class)
+  @Category(ContributionFromDiffblue.class)
+  @ManagedByDiffblue
   @MethodsUnderTest({"long ExchangeProcessor.exchange(long, long, long)"})
   public void testExchange_givenExchangeProcessorWithSupplyIsFiveAndUseStrictMathIsTrue() {
     // Arrange, Act and Assert
@@ -53,7 +56,8 @@ public class ExchangeProcessorDiffblueTest {
    * <p>Method under test: {@link ExchangeProcessor#exchange(long, long, long)}
    */
   @Test
-  @Category(MaintainedByDiffblue.class)
+  @Category(ContributionFromDiffblue.class)
+  @ManagedByDiffblue
   @MethodsUnderTest({"long ExchangeProcessor.exchange(long, long, long)"})
   public void testExchange_whenMinusOne() {
     // Arrange, Act and Assert
@@ -70,7 +74,8 @@ public class ExchangeProcessorDiffblueTest {
    * <p>Method under test: {@link ExchangeProcessor#exchange(long, long, long)}
    */
   @Test
-  @Category(MaintainedByDiffblue.class)
+  @Category(ContributionFromDiffblue.class)
+  @ManagedByDiffblue
   @MethodsUnderTest({"long ExchangeProcessor.exchange(long, long, long)"})
   public void testExchange_whenOne() {
     // Arrange, Act and Assert
@@ -87,7 +92,8 @@ public class ExchangeProcessorDiffblueTest {
    * <p>Method under test: {@link ExchangeProcessor#exchange(long, long, long)}
    */
   @Test
-  @Category(MaintainedByDiffblue.class)
+  @Category(ContributionFromDiffblue.class)
+  @ManagedByDiffblue
   @MethodsUnderTest({"long ExchangeProcessor.exchange(long, long, long)"})
   public void testExchange_whenZero() {
     // Arrange, Act and Assert

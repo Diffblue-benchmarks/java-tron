@@ -3,7 +3,8 @@ package org.tron.core.services.interfaceOnSolidity.http;
 import static org.mockito.ArgumentMatchers.isA;
 import static org.mockito.Mockito.doNothing;
 import static org.mockito.Mockito.verify;
-import com.diffblue.cover.annotations.MaintainedByDiffblue;
+import com.diffblue.cover.annotations.ContributionFromDiffblue;
+import com.diffblue.cover.annotations.ManagedByDiffblue;
 import com.diffblue.cover.annotations.MethodsUnderTest;
 import java.io.IOException;
 import javax.servlet.http.HttpServletRequest;
@@ -42,7 +43,8 @@ public class ScanShieldedTRC20NotesByOvkOnSolidityServletDiffblueTest {
    * ScanShieldedTRC20NotesByOvkOnSolidityServlet#doGet(HttpServletRequest, HttpServletResponse)}
    */
   @Test
-  @Category(MaintainedByDiffblue.class)
+  @Category(ContributionFromDiffblue.class)
+  @ManagedByDiffblue
   @MethodsUnderTest({
     "void ScanShieldedTRC20NotesByOvkOnSolidityServlet.doGet(HttpServletRequest, HttpServletResponse)"
   })
@@ -69,7 +71,8 @@ public class ScanShieldedTRC20NotesByOvkOnSolidityServletDiffblueTest {
    * ScanShieldedTRC20NotesByOvkOnSolidityServlet#doPost(HttpServletRequest, HttpServletResponse)}
    */
   @Test
-  @Category(MaintainedByDiffblue.class)
+  @Category(ContributionFromDiffblue.class)
+  @ManagedByDiffblue
   @MethodsUnderTest({
     "void ScanShieldedTRC20NotesByOvkOnSolidityServlet.doPost(HttpServletRequest, HttpServletResponse)"
   })

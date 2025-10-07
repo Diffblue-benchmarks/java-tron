@@ -2,7 +2,8 @@ package org.tron.core.services.jsonrpc.filters;
 
 import static org.junit.Assert.assertEquals;
 import static org.junit.Assert.assertTrue;
-import com.diffblue.cover.annotations.MaintainedByDiffblue;
+import com.diffblue.cover.annotations.ContributionFromDiffblue;
+import com.diffblue.cover.annotations.ManagedByDiffblue;
 import com.diffblue.cover.annotations.MethodsUnderTest;
 import java.util.ArrayList;
 import org.junit.Test;
@@ -21,7 +22,8 @@ public class LogFilterAndResultDiffblueTest {
    * long, Wallet)}
    */
   @Test
-  @Category(MaintainedByDiffblue.class)
+  @Category(ContributionFromDiffblue.class)
+  @ManagedByDiffblue
   @MethodsUnderTest({"void LogFilterAndResult.<init>(TronJsonRpc.FilterRequest, long, Wallet)"})
   public void testNewLogFilterAndResult() throws JsonRpcInvalidParamsException {
     // Arrange
@@ -47,7 +49,8 @@ public class LogFilterAndResultDiffblueTest {
    * long, Wallet)}
    */
   @Test
-  @Category(MaintainedByDiffblue.class)
+  @Category(ContributionFromDiffblue.class)
+  @ManagedByDiffblue
   @MethodsUnderTest({"void LogFilterAndResult.<init>(TronJsonRpc.FilterRequest, long, Wallet)"})
   public void testNewLogFilterAndResult2() throws JsonRpcInvalidParamsException {
     // Arrange
@@ -73,7 +76,8 @@ public class LogFilterAndResultDiffblueTest {
    * long, Wallet)}
    */
   @Test
-  @Category(MaintainedByDiffblue.class)
+  @Category(ContributionFromDiffblue.class)
+  @ManagedByDiffblue
   @MethodsUnderTest({"void LogFilterAndResult.<init>(TronJsonRpc.FilterRequest, long, Wallet)"})
   public void testNewLogFilterAndResult3() throws JsonRpcInvalidParamsException {
     // Arrange
@@ -103,7 +107,8 @@ public class LogFilterAndResultDiffblueTest {
    * long, Wallet)}
    */
   @Test
-  @Category(MaintainedByDiffblue.class)
+  @Category(ContributionFromDiffblue.class)
+  @ManagedByDiffblue
   @MethodsUnderTest({"void LogFilterAndResult.<init>(TronJsonRpc.FilterRequest, long, Wallet)"})
   public void testNewLogFilterAndResult_thenReturnLogFilterWrapperFromBlockIsOne()
       throws JsonRpcInvalidParamsException {
@@ -129,7 +134,8 @@ public class LogFilterAndResultDiffblueTest {
    * <p>Method under test: {@link LogFilterAndResult#add(LogFilterElement)}
    */
   @Test
-  @Category(MaintainedByDiffblue.class)
+  @Category(ContributionFromDiffblue.class)
+  @ManagedByDiffblue
   @MethodsUnderTest({"void LogFilterAndResult.add(LogFilterElement)"})
   public void testAddWithLogFilterElement() throws JsonRpcInvalidParamsException {
     // Arrange
@@ -152,7 +158,8 @@ public class LogFilterAndResultDiffblueTest {
    * <p>Method under test: {@link LogFilterAndResult#popAll()}
    */
   @Test
-  @Category(MaintainedByDiffblue.class)
+  @Category(ContributionFromDiffblue.class)
+  @ManagedByDiffblue
   @MethodsUnderTest({"java.util.List LogFilterAndResult.popAll()"})
   public void testPopAll() throws JsonRpcInvalidParamsException {
     // Arrange
@@ -168,7 +175,8 @@ public class LogFilterAndResultDiffblueTest {
    * <p>Method under test: {@link LogFilterAndResult#getLogFilterWrapper()}
    */
   @Test
-  @Category(MaintainedByDiffblue.class)
+  @Category(ContributionFromDiffblue.class)
+  @ManagedByDiffblue
   @MethodsUnderTest({"LogFilterWrapper LogFilterAndResult.getLogFilterWrapper()"})
   public void testGetLogFilterWrapper() throws JsonRpcInvalidParamsException {
     // Arrange

@@ -2,7 +2,8 @@ package org.tron.core.services.ratelimiter.strategy;
 
 import static org.junit.Assert.assertEquals;
 import static org.junit.Assert.assertTrue;
-import com.diffblue.cover.annotations.MaintainedByDiffblue;
+import com.diffblue.cover.annotations.ContributionFromDiffblue;
+import com.diffblue.cover.annotations.ManagedByDiffblue;
 import com.diffblue.cover.annotations.MethodsUnderTest;
 import java.util.Map;
 import org.junit.Test;
@@ -20,7 +21,8 @@ public class GlobalPreemptibleStrategyDiffblueTest {
    * <p>Method under test: {@link GlobalPreemptibleStrategy#GlobalPreemptibleStrategy(String)}
    */
   @Test
-  @Category(MaintainedByDiffblue.class)
+  @Category(ContributionFromDiffblue.class)
+  @ManagedByDiffblue
   @MethodsUnderTest({"void GlobalPreemptibleStrategy.<init>(String)"})
   public void testNewGlobalPreemptibleStrategy_whenEmptyString() {
     // Arrange, Act and Assert
@@ -42,7 +44,8 @@ public class GlobalPreemptibleStrategyDiffblueTest {
    * <p>Method under test: {@link GlobalPreemptibleStrategy#GlobalPreemptibleStrategy(String)}
    */
   @Test
-  @Category(MaintainedByDiffblue.class)
+  @Category(ContributionFromDiffblue.class)
+  @ManagedByDiffblue
   @MethodsUnderTest({"void GlobalPreemptibleStrategy.<init>(String)"})
   public void testNewGlobalPreemptibleStrategy_whenNull() {
     // Arrange, Act and Assert
@@ -64,7 +67,8 @@ public class GlobalPreemptibleStrategyDiffblueTest {
    * <p>Method under test: {@link GlobalPreemptibleStrategy#GlobalPreemptibleStrategy(String)}
    */
   @Test
-  @Category(MaintainedByDiffblue.class)
+  @Category(ContributionFromDiffblue.class)
+  @ManagedByDiffblue
   @MethodsUnderTest({"void GlobalPreemptibleStrategy.<init>(String)"})
   public void testNewGlobalPreemptibleStrategy_whenParamString() {
     // Arrange, Act and Assert
@@ -86,7 +90,8 @@ public class GlobalPreemptibleStrategyDiffblueTest {
    * <p>Method under test: {@link GlobalPreemptibleStrategy#GlobalPreemptibleStrategy(String)}
    */
   @Test
-  @Category(MaintainedByDiffblue.class)
+  @Category(ContributionFromDiffblue.class)
+  @ManagedByDiffblue
   @MethodsUnderTest({"void GlobalPreemptibleStrategy.<init>(String)"})
   public void testNewGlobalPreemptibleStrategy_whenUuuUuu() {
     // Arrange, Act and Assert
@@ -104,7 +109,8 @@ public class GlobalPreemptibleStrategyDiffblueTest {
    * <p>Method under test: {@link GlobalPreemptibleStrategy#defaultParam()}
    */
   @Test
-  @Category(MaintainedByDiffblue.class)
+  @Category(ContributionFromDiffblue.class)
+  @ManagedByDiffblue
   @MethodsUnderTest({"Map GlobalPreemptibleStrategy.defaultParam()"})
   public void testDefaultParam() {
     // Arrange and Act
@@ -126,7 +132,8 @@ public class GlobalPreemptibleStrategyDiffblueTest {
    * <p>Method under test: {@link GlobalPreemptibleStrategy#acquire()}
    */
   @Test
-  @Category(MaintainedByDiffblue.class)
+  @Category(ContributionFromDiffblue.class)
+  @ManagedByDiffblue
   @MethodsUnderTest({"boolean GlobalPreemptibleStrategy.acquire()"})
   public void testAcquire() {
     // Arrange, Act and Assert

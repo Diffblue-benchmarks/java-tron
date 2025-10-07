@@ -2,7 +2,8 @@ package org.tron.core.net.messagehandler;
 
 import static org.mockito.Mockito.verify;
 import static org.mockito.Mockito.when;
-import com.diffblue.cover.annotations.MaintainedByDiffblue;
+import com.diffblue.cover.annotations.ContributionFromDiffblue;
+import com.diffblue.cover.annotations.ManagedByDiffblue;
 import com.diffblue.cover.annotations.MethodsUnderTest;
 import org.junit.Test;
 import org.junit.experimental.categories.Category;
@@ -31,7 +32,8 @@ public class PbftMsgHandlerDiffblueTest {
    * <p>Method under test: {@link PbftMsgHandler#processMessage(PeerConnection, PbftMessage)}
    */
   @Test
-  @Category(MaintainedByDiffblue.class)
+  @Category(ContributionFromDiffblue.class)
+  @ManagedByDiffblue
   @MethodsUnderTest({"void PbftMsgHandler.processMessage(PeerConnection, PbftMessage)"})
   public void testProcessMessage_givenTronNetDelegateAllowPBFTReturnFalse_thenCallsAllowPBFT()
       throws Exception {

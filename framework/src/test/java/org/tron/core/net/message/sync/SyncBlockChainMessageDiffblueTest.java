@@ -3,7 +3,8 @@ package org.tron.core.net.message.sync;
 import static org.junit.Assert.assertArrayEquals;
 import static org.junit.Assert.assertEquals;
 import static org.junit.Assert.assertTrue;
-import com.diffblue.cover.annotations.MaintainedByDiffblue;
+import com.diffblue.cover.annotations.ContributionFromDiffblue;
+import com.diffblue.cover.annotations.ManagedByDiffblue;
 import com.diffblue.cover.annotations.MethodsUnderTest;
 import com.google.protobuf.ByteString;
 import io.netty.buffer.ByteBuf;
@@ -27,7 +28,8 @@ public class SyncBlockChainMessageDiffblueTest {
    * <p>Method under test: {@link SyncBlockChainMessage#SyncBlockChainMessage(List)}
    */
   @Test
-  @Category(MaintainedByDiffblue.class)
+  @Category(ContributionFromDiffblue.class)
+  @ManagedByDiffblue
   @MethodsUnderTest({"void SyncBlockChainMessage.<init>(List)"})
   public void testNewSyncBlockChainMessage() {
     // Arrange
@@ -97,7 +99,8 @@ public class SyncBlockChainMessageDiffblueTest {
    * <p>Method under test: {@link SyncBlockChainMessage#SyncBlockChainMessage(List)}
    */
   @Test
-  @Category(MaintainedByDiffblue.class)
+  @Category(ContributionFromDiffblue.class)
+  @ManagedByDiffblue
   @MethodsUnderTest({"void SyncBlockChainMessage.<init>(List)"})
   public void testNewSyncBlockChainMessage_givenBlockId_thenReturnBlockIdsSizeIsTwo() {
     // Arrange
@@ -125,7 +128,8 @@ public class SyncBlockChainMessageDiffblueTest {
    * <p>Method under test: {@link SyncBlockChainMessage#SyncBlockChainMessage(List)}
    */
   @Test
-  @Category(MaintainedByDiffblue.class)
+  @Category(ContributionFromDiffblue.class)
+  @ManagedByDiffblue
   @MethodsUnderTest({"void SyncBlockChainMessage.<init>(List)"})
   public void testNewSyncBlockChainMessage_thenReturnBlockInventoryIdsCountIsZero() {
     // Arrange and Act
@@ -166,7 +170,8 @@ public class SyncBlockChainMessageDiffblueTest {
    * <p>Method under test: {@link SyncBlockChainMessage#SyncBlockChainMessage(List)}
    */
   @Test
-  @Category(MaintainedByDiffblue.class)
+  @Category(ContributionFromDiffblue.class)
+  @ManagedByDiffblue
   @MethodsUnderTest({"void SyncBlockChainMessage.<init>(List)"})
   public void testNewSyncBlockChainMessage_thenReturnBlockInventoryIdsListSizeIsOne() {
     // Arrange
@@ -219,7 +224,8 @@ public class SyncBlockChainMessageDiffblueTest {
    * <p>Method under test: {@link SyncBlockChainMessage#SyncBlockChainMessage(byte[])}
    */
   @Test
-  @Category(MaintainedByDiffblue.class)
+  @Category(ContributionFromDiffblue.class)
+  @ManagedByDiffblue
   @MethodsUnderTest({"void SyncBlockChainMessage.<init>(byte[])"})
   public void testNewSyncBlockChainMessage_thenSendDataReturnUnpooledHeapByteBuf()
       throws Exception {
@@ -247,7 +253,8 @@ public class SyncBlockChainMessageDiffblueTest {
    * <p>Method under test: {@link SyncBlockChainMessage#toString()}
    */
   @Test
-  @Category(MaintainedByDiffblue.class)
+  @Category(ContributionFromDiffblue.class)
+  @ManagedByDiffblue
   @MethodsUnderTest({"java.lang.String SyncBlockChainMessage.toString()"})
   public void testToString_givenArrayListAddBlockId_thenReturnAString() {
     // Arrange
@@ -272,7 +279,8 @@ public class SyncBlockChainMessageDiffblueTest {
    * <p>Method under test: {@link SyncBlockChainMessage#toString()}
    */
   @Test
-  @Category(MaintainedByDiffblue.class)
+  @Category(ContributionFromDiffblue.class)
+  @ManagedByDiffblue
   @MethodsUnderTest({"java.lang.String SyncBlockChainMessage.toString()"})
   public void testToString_givenArrayListAddBlockId_thenReturnAString2() {
     // Arrange
@@ -298,7 +306,8 @@ public class SyncBlockChainMessageDiffblueTest {
    * <p>Method under test: {@link SyncBlockChainMessage#toString()}
    */
   @Test
-  @Category(MaintainedByDiffblue.class)
+  @Category(ContributionFromDiffblue.class)
+  @ManagedByDiffblue
   @MethodsUnderTest({"java.lang.String SyncBlockChainMessage.toString()"})
   public void testToString_thenReturnTypeSyncBlockChainSize0() {
     // Arrange, Act and Assert
@@ -312,7 +321,8 @@ public class SyncBlockChainMessageDiffblueTest {
    * <p>Method under test: {@link SyncBlockChainMessage#getAnswerMessage()}
    */
   @Test
-  @Category(MaintainedByDiffblue.class)
+  @Category(ContributionFromDiffblue.class)
+  @ManagedByDiffblue
   @MethodsUnderTest({"Class SyncBlockChainMessage.getAnswerMessage()"})
   public void testGetAnswerMessage() {
     // Arrange and Act

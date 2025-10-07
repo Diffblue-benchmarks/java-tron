@@ -3,7 +3,8 @@ package org.tron.common.utils;
 import static org.junit.Assert.assertEquals;
 import static org.junit.Assert.assertFalse;
 import static org.junit.Assert.assertTrue;
-import com.diffblue.cover.annotations.MaintainedByDiffblue;
+import com.diffblue.cover.annotations.ContributionFromDiffblue;
+import com.diffblue.cover.annotations.ManagedByDiffblue;
 import com.diffblue.cover.annotations.MethodsUnderTest;
 import java.io.UnsupportedEncodingException;
 import org.junit.Test;
@@ -21,7 +22,8 @@ public class FastByteComparisonsDiffblueTest {
    * <p>Method under test: {@link FastByteComparisons#isEqual(byte[], byte[])}
    */
   @Test
-  @Category(MaintainedByDiffblue.class)
+  @Category(ContributionFromDiffblue.class)
+  @ManagedByDiffblue
   @MethodsUnderTest({"boolean FastByteComparisons.isEqual(byte[], byte[])"})
   public void testIsEqual_whenAxaxaxaxBytesIsUtf8_thenReturnTrue()
       throws UnsupportedEncodingException {
@@ -44,7 +46,8 @@ public class FastByteComparisonsDiffblueTest {
    * <p>Method under test: {@link FastByteComparisons#isEqual(byte[], byte[])}
    */
   @Test
-  @Category(MaintainedByDiffblue.class)
+  @Category(ContributionFromDiffblue.class)
+  @ManagedByDiffblue
   @MethodsUnderTest({"boolean FastByteComparisons.isEqual(byte[], byte[])"})
   public void testIsEqual_whenEmptyArrayOfByte_thenReturnFalse()
       throws UnsupportedEncodingException {
@@ -67,7 +70,8 @@ public class FastByteComparisonsDiffblueTest {
    * <p>Method under test: {@link FastByteComparisons#isEqual(byte[], byte[])}
    */
   @Test
-  @Category(MaintainedByDiffblue.class)
+  @Category(ContributionFromDiffblue.class)
+  @ManagedByDiffblue
   @MethodsUnderTest({"boolean FastByteComparisons.isEqual(byte[], byte[])"})
   public void testIsEqual_whenXaxaxaxBytesIsUtf8_thenReturnFalse()
       throws UnsupportedEncodingException {
@@ -90,7 +94,8 @@ public class FastByteComparisonsDiffblueTest {
    * <p>Method under test: {@link FastByteComparisons#compareTo(byte[], int, int, byte[], int, int)}
    */
   @Test
-  @Category(MaintainedByDiffblue.class)
+  @Category(ContributionFromDiffblue.class)
+  @ManagedByDiffblue
   @MethodsUnderTest({"int FastByteComparisons.compareTo(byte[], int, int, byte[], int, int)"})
   public void testCompareTo_whenAxaxaxaxBytesIsUtf8_thenReturnZero()
       throws UnsupportedEncodingException {

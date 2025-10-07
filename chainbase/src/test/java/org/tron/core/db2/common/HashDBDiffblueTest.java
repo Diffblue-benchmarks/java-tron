@@ -4,7 +4,8 @@ import static org.junit.Assert.assertEquals;
 import static org.junit.Assert.assertFalse;
 import static org.junit.Assert.assertNull;
 import static org.junit.Assert.assertTrue;
-import com.diffblue.cover.annotations.MaintainedByDiffblue;
+import com.diffblue.cover.annotations.ContributionFromDiffblue;
+import com.diffblue.cover.annotations.ManagedByDiffblue;
 import com.diffblue.cover.annotations.MethodsUnderTest;
 import java.io.UnsupportedEncodingException;
 import org.junit.Test;
@@ -24,7 +25,8 @@ public class HashDBDiffblueTest {
    * </ul>
    */
   @Test
-  @Category(MaintainedByDiffblue.class)
+  @Category(ContributionFromDiffblue.class)
+  @ManagedByDiffblue
   @MethodsUnderTest({
     "void HashDB.<init>(String)",
     "String HashDB.getDbName()",
@@ -50,7 +52,8 @@ public class HashDBDiffblueTest {
    * <p>Method under test: {@link HashDB#get(Key)}
    */
   @Test
-  @Category(MaintainedByDiffblue.class)
+  @Category(ContributionFromDiffblue.class)
+  @ManagedByDiffblue
   @MethodsUnderTest({"Value HashDB.get(Key)"})
   public void testGetWithKey_whenCopyOfAxaxaxaxBytesIsUtf8_thenReturnNull()
       throws UnsupportedEncodingException {
@@ -72,7 +75,8 @@ public class HashDBDiffblueTest {
    * <p>Method under test: {@link HashDB#put(Key, Value)}
    */
   @Test
-  @Category(MaintainedByDiffblue.class)
+  @Category(ContributionFromDiffblue.class)
+  @ManagedByDiffblue
   @MethodsUnderTest({"void HashDB.put(Key, Value)"})
   public void testPutWithKeyValue_whenCopyOfAxaxaxaxBytesIsUtf8_thenHashDBWithNameSizeIsOne()
       throws UnsupportedEncodingException {
@@ -94,7 +98,8 @@ public class HashDBDiffblueTest {
    * <p>Method under test: {@link HashDB#size()}
    */
   @Test
-  @Category(MaintainedByDiffblue.class)
+  @Category(ContributionFromDiffblue.class)
+  @ManagedByDiffblue
   @MethodsUnderTest({"long HashDB.size()"})
   public void testSize() {
     // Arrange, Act and Assert
@@ -112,7 +117,8 @@ public class HashDBDiffblueTest {
    * <p>Method under test: {@link HashDB#isEmpty()}
    */
   @Test
-  @Category(MaintainedByDiffblue.class)
+  @Category(ContributionFromDiffblue.class)
+  @ManagedByDiffblue
   @MethodsUnderTest({"boolean HashDB.isEmpty()"})
   public void testIsEmpty_givenA_thenReturnFalse() {
     // Arrange
@@ -135,7 +141,8 @@ public class HashDBDiffblueTest {
    * <p>Method under test: {@link HashDB#isEmpty()}
    */
   @Test
-  @Category(MaintainedByDiffblue.class)
+  @Category(ContributionFromDiffblue.class)
+  @ManagedByDiffblue
   @MethodsUnderTest({"boolean HashDB.isEmpty()"})
   public void testIsEmpty_givenHashDBWithName_thenReturnTrue() {
     // Arrange, Act and Assert
@@ -148,7 +155,8 @@ public class HashDBDiffblueTest {
    * <p>Method under test: {@link HashDB#iterator()}
    */
   @Test
-  @Category(MaintainedByDiffblue.class)
+  @Category(ContributionFromDiffblue.class)
+  @ManagedByDiffblue
   @MethodsUnderTest({"java.util.Iterator HashDB.iterator()"})
   public void testIterator() {
     // Arrange, Act and Assert
@@ -161,7 +169,8 @@ public class HashDBDiffblueTest {
    * <p>Method under test: {@link HashDB#newInstance()}
    */
   @Test
-  @Category(MaintainedByDiffblue.class)
+  @Category(ContributionFromDiffblue.class)
+  @ManagedByDiffblue
   @MethodsUnderTest({"HashDB HashDB.newInstance()"})
   public void testNewInstance() {
     // Arrange and Act

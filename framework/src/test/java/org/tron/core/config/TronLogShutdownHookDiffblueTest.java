@@ -12,7 +12,8 @@ import ch.qos.logback.core.status.ErrorStatus;
 import ch.qos.logback.core.status.InfoStatus;
 import ch.qos.logback.core.status.Status;
 import ch.qos.logback.core.status.StatusManager;
-import com.diffblue.cover.annotations.MaintainedByDiffblue;
+import com.diffblue.cover.annotations.ContributionFromDiffblue;
+import com.diffblue.cover.annotations.ManagedByDiffblue;
 import com.diffblue.cover.annotations.MethodsUnderTest;
 import java.util.List;
 import org.junit.Test;
@@ -25,7 +26,8 @@ public class TronLogShutdownHookDiffblueTest {
    * <p>Method under test: default or parameterless constructor of {@link TronLogShutdownHook}
    */
   @Test
-  @Category(MaintainedByDiffblue.class)
+  @Category(ContributionFromDiffblue.class)
+  @ManagedByDiffblue
   @MethodsUnderTest({"void TronLogShutdownHook.<init>()"})
   public void testNewTronLogShutdownHook() {
     // Arrange and Act
@@ -47,7 +49,8 @@ public class TronLogShutdownHookDiffblueTest {
    * <p>Method under test: {@link TronLogShutdownHook#run()}
    */
   @Test
-  @Category(MaintainedByDiffblue.class)
+  @Category(ContributionFromDiffblue.class)
+  @ManagedByDiffblue
   @MethodsUnderTest({"void TronLogShutdownHook.run()"})
   public void testRun_givenTronLogShutdownHookContextIsContextBase() {
     // Arrange
@@ -86,7 +89,8 @@ public class TronLogShutdownHookDiffblueTest {
    * <p>Method under test: {@link TronLogShutdownHook#run()}
    */
   @Test
-  @Category(MaintainedByDiffblue.class)
+  @Category(ContributionFromDiffblue.class)
+  @ManagedByDiffblue
   @MethodsUnderTest({"void TronLogShutdownHook.run()"})
   public void testRun_thenTronLogShutdownHookStatusManagerBasicStatusManager() {
     // Arrange

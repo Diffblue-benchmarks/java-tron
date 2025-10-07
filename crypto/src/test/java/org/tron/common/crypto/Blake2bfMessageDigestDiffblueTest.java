@@ -3,7 +3,8 @@ package org.tron.common.crypto;
 import static org.junit.Assert.assertEquals;
 import static org.junit.Assert.assertNull;
 import static org.junit.Assert.assertThrows;
-import com.diffblue.cover.annotations.MaintainedByDiffblue;
+import com.diffblue.cover.annotations.ContributionFromDiffblue;
+import com.diffblue.cover.annotations.ManagedByDiffblue;
 import com.diffblue.cover.annotations.MethodsUnderTest;
 import java.io.UnsupportedEncodingException;
 import org.junit.Test;
@@ -17,7 +18,8 @@ public class Blake2bfMessageDigestDiffblueTest {
    * <p>Method under test: {@link Blake2bfDigest#doFinal(byte[], int)}
    */
   @Test
-  @Category(MaintainedByDiffblue.class)
+  @Category(ContributionFromDiffblue.class)
+  @ManagedByDiffblue
   @MethodsUnderTest({"int Blake2bfDigest.doFinal(byte[], int)"})
   public void testBlake2bfDigestDoFinal() throws UnsupportedEncodingException {
     // Arrange, Act and Assert
@@ -32,7 +34,8 @@ public class Blake2bfMessageDigestDiffblueTest {
    * <p>Method under test: {@link Blake2bfDigest#getAlgorithmName()}
    */
   @Test
-  @Category(MaintainedByDiffblue.class)
+  @Category(ContributionFromDiffblue.class)
+  @ManagedByDiffblue
   @MethodsUnderTest({"java.lang.String Blake2bfDigest.getAlgorithmName()"})
   public void testBlake2bfDigestGetAlgorithmName() {
     // Arrange, Act and Assert
@@ -45,7 +48,8 @@ public class Blake2bfMessageDigestDiffblueTest {
    * <p>Method under test: {@link Blake2bfDigest#getDigestSize()}
    */
   @Test
-  @Category(MaintainedByDiffblue.class)
+  @Category(ContributionFromDiffblue.class)
+  @ManagedByDiffblue
   @MethodsUnderTest({"int Blake2bfDigest.getDigestSize()"})
   public void testBlake2bfDigestGetDigestSize() {
     // Arrange, Act and Assert
@@ -58,7 +62,8 @@ public class Blake2bfMessageDigestDiffblueTest {
    * <p>Method under test: {@link Blake2bfDigest#Blake2bfDigest()}
    */
   @Test
-  @Category(MaintainedByDiffblue.class)
+  @Category(ContributionFromDiffblue.class)
+  @ManagedByDiffblue
   @MethodsUnderTest({"void Blake2bfDigest.<init>()"})
   public void testBlake2bfDigestNewBlake2bfDigest() {
     // Arrange and Act
@@ -77,7 +82,8 @@ public class Blake2bfMessageDigestDiffblueTest {
    * long)}
    */
   @Test
-  @Category(MaintainedByDiffblue.class)
+  @Category(ContributionFromDiffblue.class)
+  @ManagedByDiffblue
   @MethodsUnderTest({"void Blake2bfDigest.<init>(long[], long[], long[], boolean, long)"})
   public void testBlake2bfDigestNewBlake2bfDigest2() {
     // Arrange and Act
@@ -100,7 +106,8 @@ public class Blake2bfMessageDigestDiffblueTest {
    * <p>Method under test: default or parameterless constructor of {@link Blake2bfMessageDigest}
    */
   @Test
-  @Category(MaintainedByDiffblue.class)
+  @Category(ContributionFromDiffblue.class)
+  @ManagedByDiffblue
   @MethodsUnderTest({"void Blake2bfMessageDigest.<init>()"})
   public void testNewBlake2bfMessageDigest() {
     // Arrange and Act

@@ -8,7 +8,8 @@ import static org.mockito.Mockito.doNothing;
 import static org.mockito.Mockito.mock;
 import static org.mockito.Mockito.verify;
 import static org.mockito.Mockito.when;
-import com.diffblue.cover.annotations.MaintainedByDiffblue;
+import com.diffblue.cover.annotations.ContributionFromDiffblue;
+import com.diffblue.cover.annotations.ManagedByDiffblue;
 import com.diffblue.cover.annotations.MethodsUnderTest;
 import java.io.UnsupportedEncodingException;
 import java.net.InetAddress;
@@ -55,7 +56,8 @@ public class SyncServiceDiffblueTest {
    * <p>Method under test: {@link SyncService#startSync(PeerConnection)}
    */
   @Test
-  @Category(MaintainedByDiffblue.class)
+  @Category(ContributionFromDiffblue.class)
+  @ManagedByDiffblue
   @MethodsUnderTest({"void SyncService.startSync(PeerConnection)"})
   public void testStartSync_givenArrayListAddBlockId_thenCallsGetBlockChainHashesOnFork()
       throws P2pException {
@@ -118,7 +120,8 @@ public class SyncServiceDiffblueTest {
    * <p>Method under test: {@link SyncService#startSync(PeerConnection)}
    */
   @Test
-  @Category(MaintainedByDiffblue.class)
+  @Category(ContributionFromDiffblue.class)
+  @ManagedByDiffblue
   @MethodsUnderTest({"void SyncService.startSync(PeerConnection)"})
   public void testStartSync_givenBlockIdGetNumReturnZero_thenCallsGetByteString() {
     // Arrange
@@ -187,7 +190,8 @@ public class SyncServiceDiffblueTest {
    * <p>Method under test: {@link SyncService#startSync(PeerConnection)}
    */
   @Test
-  @Category(MaintainedByDiffblue.class)
+  @Category(ContributionFromDiffblue.class)
+  @ManagedByDiffblue
   @MethodsUnderTest({"void SyncService.startSync(PeerConnection)"})
   public void testStartSync_givenBlockIdGetStringReturnString_thenCallsGetString()
       throws P2pException {
@@ -252,7 +256,8 @@ public class SyncServiceDiffblueTest {
    * <p>Method under test: {@link SyncService#startSync(PeerConnection)}
    */
   @Test
-  @Category(MaintainedByDiffblue.class)
+  @Category(ContributionFromDiffblue.class)
+  @ManagedByDiffblue
   @MethodsUnderTest({"void SyncService.startSync(PeerConnection)"})
   public void testStartSync_givenBlockId_whenPeerConnectionGetBlockBothHaveReturnBlockId() {
     // Arrange
@@ -317,7 +322,8 @@ public class SyncServiceDiffblueTest {
    * <p>Method under test: {@link SyncService#startSync(PeerConnection)}
    */
   @Test
-  @Category(MaintainedByDiffblue.class)
+  @Category(ContributionFromDiffblue.class)
+  @ManagedByDiffblue
   @MethodsUnderTest({"void SyncService.startSync(PeerConnection)"})
   public void testStartSync_givenSyncing_whenPeerConnectionGetTronStateReturnSyncing() {
     // Arrange
@@ -344,7 +350,8 @@ public class SyncServiceDiffblueTest {
    * <p>Method under test: {@link SyncService#startSync(PeerConnection)}
    */
   @Test
-  @Category(MaintainedByDiffblue.class)
+  @Category(ContributionFromDiffblue.class)
+  @ManagedByDiffblue
   @MethodsUnderTest({"void SyncService.startSync(PeerConnection)"})
   public void testStartSync_givenTronNetDelegateContainBlockInMainChainReturnTrue() {
     // Arrange
@@ -402,7 +409,8 @@ public class SyncServiceDiffblueTest {
    * <p>Method under test: {@link SyncService#startSync(PeerConnection)}
    */
   @Test
-  @Category(MaintainedByDiffblue.class)
+  @Category(ContributionFromDiffblue.class)
+  @ManagedByDiffblue
   @MethodsUnderTest({"void SyncService.startSync(PeerConnection)"})
   public void testStartSync_givenTronNetDelegateGetForkLockReturnNull_thenCallsGetForkLock() {
     // Arrange
@@ -448,7 +456,8 @@ public class SyncServiceDiffblueTest {
    * <p>Method under test: {@link SyncService#startSync(PeerConnection)}
    */
   @Test
-  @Category(MaintainedByDiffblue.class)
+  @Category(ContributionFromDiffblue.class)
+  @ManagedByDiffblue
   @MethodsUnderTest({"void SyncService.startSync(PeerConnection)"})
   public void testStartSync_givenTronNetDelegateGetSyncBeginNumberReturnMinusOne()
       throws P2pException {
@@ -511,7 +520,8 @@ public class SyncServiceDiffblueTest {
    * <p>Method under test: {@link SyncService#startSync(PeerConnection)}
    */
   @Test
-  @Category(MaintainedByDiffblue.class)
+  @Category(ContributionFromDiffblue.class)
+  @ManagedByDiffblue
   @MethodsUnderTest({"void SyncService.startSync(PeerConnection)"})
   public void testStartSync_thenCallsGetInetSocketAddress() {
     // Arrange
@@ -553,7 +563,8 @@ public class SyncServiceDiffblueTest {
    * <p>Method under test: {@link SyncService#startSync(PeerConnection)}
    */
   @Test
-  @Category(MaintainedByDiffblue.class)
+  @Category(ContributionFromDiffblue.class)
+  @ManagedByDiffblue
   @MethodsUnderTest({"void SyncService.startSync(PeerConnection)"})
   public void testStartSync_whenPeerConnectionGetBlockBothHaveReturnNull() {
     // Arrange
@@ -602,7 +613,8 @@ public class SyncServiceDiffblueTest {
    * <p>Method under test: {@link SyncService#syncNext(PeerConnection)}
    */
   @Test
-  @Category(MaintainedByDiffblue.class)
+  @Category(ContributionFromDiffblue.class)
+  @ManagedByDiffblue
   @MethodsUnderTest({"void SyncService.syncNext(PeerConnection)"})
   public void testSyncNext_givenCreateUnresolvedFooAndOne() {
     // Arrange
@@ -629,7 +641,8 @@ public class SyncServiceDiffblueTest {
    * <p>Method under test: {@link SyncService#syncNext(PeerConnection)}
    */
   @Test
-  @Category(MaintainedByDiffblue.class)
+  @Category(ContributionFromDiffblue.class)
+  @ManagedByDiffblue
   @MethodsUnderTest({"void SyncService.syncNext(PeerConnection)"})
   public void testSyncNext_givenLinkedList_thenCallsGetSyncBeginNumber() {
     // Arrange
@@ -666,7 +679,8 @@ public class SyncServiceDiffblueTest {
    * <p>Method under test: {@link SyncService#syncNext(PeerConnection)}
    */
   @Test
-  @Category(MaintainedByDiffblue.class)
+  @Category(ContributionFromDiffblue.class)
+  @ManagedByDiffblue
   @MethodsUnderTest({"void SyncService.syncNext(PeerConnection)"})
   public void testSyncNext_givenRuntimeException() {
     // Arrange
@@ -697,7 +711,8 @@ public class SyncServiceDiffblueTest {
    * <p>Method under test: {@link SyncService#syncNext(PeerConnection)}
    */
   @Test
-  @Category(MaintainedByDiffblue.class)
+  @Category(ContributionFromDiffblue.class)
+  @ManagedByDiffblue
   @MethodsUnderTest({"void SyncService.syncNext(PeerConnection)"})
   public void testSyncNext_givenTronNetDelegateGetForkLockReturnNull_thenCallsGetForkLock() {
     // Arrange
@@ -730,7 +745,8 @@ public class SyncServiceDiffblueTest {
    * <p>Method under test: {@link SyncService#processBlock(PeerConnection, BlockMessage)}
    */
   @Test
-  @Category(MaintainedByDiffblue.class)
+  @Category(ContributionFromDiffblue.class)
+  @ManagedByDiffblue
   @MethodsUnderTest({"void SyncService.processBlock(PeerConnection, BlockMessage)"})
   public void testProcessBlock_givenAxaxaxaxBytesIsUtf8_whenPeerConnection_thenCallsGetData()
       throws UnsupportedEncodingException {
@@ -758,7 +774,8 @@ public class SyncServiceDiffblueTest {
    * <p>Method under test: {@link SyncService#processBlock(PeerConnection, BlockMessage)}
    */
   @Test
-  @Category(MaintainedByDiffblue.class)
+  @Category(ContributionFromDiffblue.class)
+  @ManagedByDiffblue
   @MethodsUnderTest({"void SyncService.processBlock(PeerConnection, BlockMessage)"})
   public void testProcessBlock_givenBlockIdGetByteStringReturnNull_thenCallsGetByteString()
       throws UnsupportedEncodingException {
@@ -820,7 +837,8 @@ public class SyncServiceDiffblueTest {
    * <p>Method under test: {@link SyncService#processBlock(PeerConnection, BlockMessage)}
    */
   @Test
-  @Category(MaintainedByDiffblue.class)
+  @Category(ContributionFromDiffblue.class)
+  @ManagedByDiffblue
   @MethodsUnderTest({"void SyncService.processBlock(PeerConnection, BlockMessage)"})
   public void testProcessBlock_givenBlockIdGetNumReturnZero_thenCallsGetByteString()
       throws UnsupportedEncodingException {
@@ -886,7 +904,8 @@ public class SyncServiceDiffblueTest {
    * <p>Method under test: {@link SyncService#processBlock(PeerConnection, BlockMessage)}
    */
   @Test
-  @Category(MaintainedByDiffblue.class)
+  @Category(ContributionFromDiffblue.class)
+  @ManagedByDiffblue
   @MethodsUnderTest({"void SyncService.processBlock(PeerConnection, BlockMessage)"})
   public void testProcessBlock_givenCreateUnresolvedFooAndOne_thenCallsGetInetSocketAddress()
       throws UnsupportedEncodingException {
@@ -924,7 +943,8 @@ public class SyncServiceDiffblueTest {
    * <p>Method under test: {@link SyncService#processBlock(PeerConnection, BlockMessage)}
    */
   @Test
-  @Category(MaintainedByDiffblue.class)
+  @Category(ContributionFromDiffblue.class)
+  @ManagedByDiffblue
   @MethodsUnderTest({"void SyncService.processBlock(PeerConnection, BlockMessage)"})
   public void testProcessBlock_givenFalse_whenPeerConnectionIsSyncIdleReturnFalse()
       throws UnsupportedEncodingException {
@@ -954,7 +974,8 @@ public class SyncServiceDiffblueTest {
    * <p>Method under test: {@link SyncService#processBlock(PeerConnection, BlockMessage)}
    */
   @Test
-  @Category(MaintainedByDiffblue.class)
+  @Category(ContributionFromDiffblue.class)
+  @ManagedByDiffblue
   @MethodsUnderTest({"void SyncService.processBlock(PeerConnection, BlockMessage)"})
   public void testProcessBlock_givenLinkedListAddBlockId_thenCallsGetSyncBlockToFetch()
       throws UnsupportedEncodingException {
@@ -991,7 +1012,8 @@ public class SyncServiceDiffblueTest {
    * <p>Method under test: {@link SyncService#processBlock(PeerConnection, BlockMessage)}
    */
   @Test
-  @Category(MaintainedByDiffblue.class)
+  @Category(ContributionFromDiffblue.class)
+  @ManagedByDiffblue
   @MethodsUnderTest({"void SyncService.processBlock(PeerConnection, BlockMessage)"})
   public void testProcessBlock_givenSyncService_thenCallsDisconnect()
       throws UnsupportedEncodingException {
@@ -1033,7 +1055,8 @@ public class SyncServiceDiffblueTest {
    * <p>Method under test: {@link SyncService#processBlock(PeerConnection, BlockMessage)}
    */
   @Test
-  @Category(MaintainedByDiffblue.class)
+  @Category(ContributionFromDiffblue.class)
+  @ManagedByDiffblue
   @MethodsUnderTest({"void SyncService.processBlock(PeerConnection, BlockMessage)"})
   public void testProcessBlock_givenTronNetDelegateContainBlockInMainChainReturnTrue()
       throws UnsupportedEncodingException {
@@ -1088,7 +1111,8 @@ public class SyncServiceDiffblueTest {
    * <p>Method under test: {@link SyncService#processBlock(PeerConnection, BlockMessage)}
    */
   @Test
-  @Category(MaintainedByDiffblue.class)
+  @Category(ContributionFromDiffblue.class)
+  @ManagedByDiffblue
   @MethodsUnderTest({"void SyncService.processBlock(PeerConnection, BlockMessage)"})
   public void testProcessBlock_givenTronNetDelegateGetHeadBlockIdReturnBlockId()
       throws UnsupportedEncodingException {
@@ -1137,7 +1161,8 @@ public class SyncServiceDiffblueTest {
    * <p>Method under test: {@link SyncService#processBlock(PeerConnection, BlockMessage)}
    */
   @Test
-  @Category(MaintainedByDiffblue.class)
+  @Category(ContributionFromDiffblue.class)
+  @ManagedByDiffblue
   @MethodsUnderTest({"void SyncService.processBlock(PeerConnection, BlockMessage)"})
   public void testProcessBlock_givenTronNetDelegateGetHeadBlockIdReturnNull()
       throws UnsupportedEncodingException {
@@ -1186,7 +1211,8 @@ public class SyncServiceDiffblueTest {
    * <p>Method under test: {@link SyncService#processBlock(PeerConnection, BlockMessage)}
    */
   @Test
-  @Category(MaintainedByDiffblue.class)
+  @Category(ContributionFromDiffblue.class)
+  @ManagedByDiffblue
   @MethodsUnderTest({"void SyncService.processBlock(PeerConnection, BlockMessage)"})
   public void testProcessBlock_givenTronNetDelegateGetKhaosDbHeadBlockIdReturnBlockId()
       throws UnsupportedEncodingException {
@@ -1244,7 +1270,8 @@ public class SyncServiceDiffblueTest {
    * <p>Method under test: {@link SyncService#processBlock(PeerConnection, BlockMessage)}
    */
   @Test
-  @Category(MaintainedByDiffblue.class)
+  @Category(ContributionFromDiffblue.class)
+  @ManagedByDiffblue
   @MethodsUnderTest({"void SyncService.processBlock(PeerConnection, BlockMessage)"})
   public void testProcessBlock_givenTronNetDelegateGetKhaosDbHeadBlockIdReturnNull()
       throws UnsupportedEncodingException {
@@ -1298,7 +1325,8 @@ public class SyncServiceDiffblueTest {
    * <p>Method under test: {@link SyncService#processBlock(PeerConnection, BlockMessage)}
    */
   @Test
-  @Category(MaintainedByDiffblue.class)
+  @Category(ContributionFromDiffblue.class)
+  @ManagedByDiffblue
   @MethodsUnderTest({"void SyncService.processBlock(PeerConnection, BlockMessage)"})
   public void testProcessBlock_givenTronNetDelegateGetSyncBeginNumberReturnMinusOne()
       throws UnsupportedEncodingException {
@@ -1353,7 +1381,8 @@ public class SyncServiceDiffblueTest {
    * <p>Method under test: {@link SyncService#processBlock(PeerConnection, BlockMessage)}
    */
   @Test
-  @Category(MaintainedByDiffblue.class)
+  @Category(ContributionFromDiffblue.class)
+  @ManagedByDiffblue
   @MethodsUnderTest({"void SyncService.processBlock(PeerConnection, BlockMessage)"})
   public void testProcessBlock_givenZero_whenPeerConnectionGetRemainNumReturnZero()
       throws UnsupportedEncodingException {
@@ -1384,7 +1413,8 @@ public class SyncServiceDiffblueTest {
    * <p>Method under test: {@link SyncService#processBlock(PeerConnection, BlockMessage)}
    */
   @Test
-  @Category(MaintainedByDiffblue.class)
+  @Category(ContributionFromDiffblue.class)
+  @ManagedByDiffblue
   @MethodsUnderTest({"void SyncService.processBlock(PeerConnection, BlockMessage)"})
   public void testProcessBlock_thenCallsGetString()
       throws UnsupportedEncodingException, P2pException {
@@ -1443,7 +1473,8 @@ public class SyncServiceDiffblueTest {
    * <p>Method under test: {@link SyncService#processBlock(PeerConnection, BlockMessage)}
    */
   @Test
-  @Category(MaintainedByDiffblue.class)
+  @Category(ContributionFromDiffblue.class)
+  @ManagedByDiffblue
   @MethodsUnderTest({"void SyncService.processBlock(PeerConnection, BlockMessage)"})
   public void testProcessBlock_whenBlockMessage() {
     // Arrange
@@ -1493,7 +1524,8 @@ public class SyncServiceDiffblueTest {
    * <p>Method under test: {@link SyncService#processBlock(PeerConnection, BlockMessage)}
    */
   @Test
-  @Category(MaintainedByDiffblue.class)
+  @Category(ContributionFromDiffblue.class)
+  @ManagedByDiffblue
   @MethodsUnderTest({"void SyncService.processBlock(PeerConnection, BlockMessage)"})
   public void testProcessBlock_whenPeerConnectionGetBlockBothHaveReturnNull()
       throws UnsupportedEncodingException {
@@ -1540,7 +1572,8 @@ public class SyncServiceDiffblueTest {
    * <p>Method under test: {@link SyncService#onDisconnect(PeerConnection)}
    */
   @Test
-  @Category(MaintainedByDiffblue.class)
+  @Category(ContributionFromDiffblue.class)
+  @ManagedByDiffblue
   @MethodsUnderTest({"void SyncService.onDisconnect(PeerConnection)"})
   public void testOnDisconnect_givenHashMapBlockIdIsOne_thenCallsGetSyncBlockRequested() {
     // Arrange
@@ -1568,7 +1601,8 @@ public class SyncServiceDiffblueTest {
    * <p>Method under test: {@link SyncService#onDisconnect(PeerConnection)}
    */
   @Test
-  @Category(MaintainedByDiffblue.class)
+  @Category(ContributionFromDiffblue.class)
+  @ManagedByDiffblue
   @MethodsUnderTest({"void SyncService.onDisconnect(PeerConnection)"})
   public void testOnDisconnect_givenHashMapBlockIdIsTwentyNine_thenCallsGetSyncBlockRequested() {
     // Arrange
@@ -1597,7 +1631,8 @@ public class SyncServiceDiffblueTest {
    * <p>Method under test: {@link SyncService#onDisconnect(PeerConnection)}
    */
   @Test
-  @Category(MaintainedByDiffblue.class)
+  @Category(ContributionFromDiffblue.class)
+  @ManagedByDiffblue
   @MethodsUnderTest({"void SyncService.onDisconnect(PeerConnection)"})
   public void testOnDisconnect_givenHashMap_thenCallsGetSyncBlockRequested() {
     // Arrange

@@ -12,7 +12,8 @@ import static org.mockito.Mockito.atLeast;
 import static org.mockito.Mockito.mock;
 import static org.mockito.Mockito.verify;
 import static org.mockito.Mockito.when;
-import com.diffblue.cover.annotations.MaintainedByDiffblue;
+import com.diffblue.cover.annotations.ContributionFromDiffblue;
+import com.diffblue.cover.annotations.ManagedByDiffblue;
 import com.diffblue.cover.annotations.MethodsUnderTest;
 import java.util.LinkedList;
 import java.util.List;
@@ -52,7 +53,8 @@ public class TronNetDelegateDiffblueTest {
    * <p>Method under test: {@link TronNetDelegate#getSyncBeginNumber()}
    */
   @Test
-  @Category(MaintainedByDiffblue.class)
+  @Category(ContributionFromDiffblue.class)
+  @ManagedByDiffblue
   @MethodsUnderTest({"long TronNetDelegate.getSyncBeginNumber()"})
   public void testGetSyncBeginNumber() {
     // Arrange
@@ -77,7 +79,8 @@ public class TronNetDelegateDiffblueTest {
    * <p>Method under test: {@link TronNetDelegate#getBlockTime(BlockId)}
    */
   @Test
-  @Category(MaintainedByDiffblue.class)
+  @Category(ContributionFromDiffblue.class)
+  @ManagedByDiffblue
   @MethodsUnderTest({"long TronNetDelegate.getBlockTime(BlockId)"})
   public void testGetBlockTime_givenBlockCapsuleGetTimeStampReturnTen_thenReturnTen()
       throws BadItemException, ItemNotFoundException, P2pException {
@@ -107,7 +110,8 @@ public class TronNetDelegateDiffblueTest {
    * <p>Method under test: {@link TronNetDelegate#getBlockTime(BlockId)}
    */
   @Test
-  @Category(MaintainedByDiffblue.class)
+  @Category(ContributionFromDiffblue.class)
+  @ManagedByDiffblue
   @MethodsUnderTest({"long TronNetDelegate.getBlockTime(BlockId)"})
   public void testGetBlockTime_givenString_whenBlockIdGetStringReturnString_thenCallsGetString()
       throws BadItemException, ItemNotFoundException, P2pException {
@@ -134,7 +138,8 @@ public class TronNetDelegateDiffblueTest {
    * <p>Method under test: {@link TronNetDelegate#getBlockTime(BlockId)}
    */
   @Test
-  @Category(MaintainedByDiffblue.class)
+  @Category(ContributionFromDiffblue.class)
+  @ManagedByDiffblue
   @MethodsUnderTest({"long TronNetDelegate.getBlockTime(BlockId)"})
   public void testGetBlockTime_thenThrowP2pException()
       throws BadItemException, ItemNotFoundException, P2pException {
@@ -153,7 +158,8 @@ public class TronNetDelegateDiffblueTest {
    * <p>Method under test: {@link TronNetDelegate#getHeadBlockId()}
    */
   @Test
-  @Category(MaintainedByDiffblue.class)
+  @Category(ContributionFromDiffblue.class)
+  @ManagedByDiffblue
   @MethodsUnderTest({"BlockId TronNetDelegate.getHeadBlockId()"})
   public void testGetHeadBlockId() {
     // Arrange
@@ -178,7 +184,8 @@ public class TronNetDelegateDiffblueTest {
    * <p>Method under test: {@link TronNetDelegate#getKhaosDbHeadBlockId()}
    */
   @Test
-  @Category(MaintainedByDiffblue.class)
+  @Category(ContributionFromDiffblue.class)
+  @ManagedByDiffblue
   @MethodsUnderTest({"BlockId TronNetDelegate.getKhaosDbHeadBlockId()"})
   public void testGetKhaosDbHeadBlockId_thenReturnBlockId() {
     // Arrange
@@ -202,7 +209,8 @@ public class TronNetDelegateDiffblueTest {
    * <p>Method under test: {@link TronNetDelegate#getSolidBlockId()}
    */
   @Test
-  @Category(MaintainedByDiffblue.class)
+  @Category(ContributionFromDiffblue.class)
+  @ManagedByDiffblue
   @MethodsUnderTest({"BlockId TronNetDelegate.getSolidBlockId()"})
   public void testGetSolidBlockId() {
     // Arrange
@@ -223,7 +231,8 @@ public class TronNetDelegateDiffblueTest {
    * <p>Method under test: {@link TronNetDelegate#getGenesisBlockId()}
    */
   @Test
-  @Category(MaintainedByDiffblue.class)
+  @Category(ContributionFromDiffblue.class)
+  @ManagedByDiffblue
   @MethodsUnderTest({"BlockId TronNetDelegate.getGenesisBlockId()"})
   public void testGetGenesisBlockId() {
     // Arrange
@@ -248,7 +257,8 @@ public class TronNetDelegateDiffblueTest {
    * <p>Method under test: {@link TronNetDelegate#getBlockIdByNum(long)}
    */
   @Test
-  @Category(MaintainedByDiffblue.class)
+  @Category(ContributionFromDiffblue.class)
+  @ManagedByDiffblue
   @MethodsUnderTest({"BlockId TronNetDelegate.getBlockIdByNum(long)"})
   public void testGetBlockIdByNum_thenReturnBlockId() throws ItemNotFoundException, P2pException {
     // Arrange
@@ -273,7 +283,8 @@ public class TronNetDelegateDiffblueTest {
    * <p>Method under test: {@link TronNetDelegate#getBlockIdByNum(long)}
    */
   @Test
-  @Category(MaintainedByDiffblue.class)
+  @Category(ContributionFromDiffblue.class)
+  @ManagedByDiffblue
   @MethodsUnderTest({"BlockId TronNetDelegate.getBlockIdByNum(long)"})
   public void testGetBlockIdByNum_thenThrowP2pException()
       throws ItemNotFoundException, P2pException {
@@ -292,7 +303,8 @@ public class TronNetDelegateDiffblueTest {
    * <p>Method under test: {@link TronNetDelegate#getGenesisBlock()}
    */
   @Test
-  @Category(MaintainedByDiffblue.class)
+  @Category(ContributionFromDiffblue.class)
+  @ManagedByDiffblue
   @MethodsUnderTest({"BlockCapsule TronNetDelegate.getGenesisBlock()"})
   public void testGetGenesisBlock() {
     // Arrange
@@ -312,7 +324,8 @@ public class TronNetDelegateDiffblueTest {
    * <p>Method under test: {@link TronNetDelegate#getHeadBlockTimeStamp()}
    */
   @Test
-  @Category(MaintainedByDiffblue.class)
+  @Category(ContributionFromDiffblue.class)
+  @ManagedByDiffblue
   @MethodsUnderTest({"long TronNetDelegate.getHeadBlockTimeStamp()"})
   public void testGetHeadBlockTimeStamp() {
     // Arrange
@@ -338,7 +351,8 @@ public class TronNetDelegateDiffblueTest {
    * <p>Method under test: {@link TronNetDelegate#containBlock(BlockId)}
    */
   @Test
-  @Category(MaintainedByDiffblue.class)
+  @Category(ContributionFromDiffblue.class)
+  @ManagedByDiffblue
   @MethodsUnderTest({"boolean TronNetDelegate.containBlock(BlockId)"})
   public void testContainBlock_givenChainBaseManagerContainBlockReturnFalse_thenReturnFalse() {
     // Arrange
@@ -364,7 +378,8 @@ public class TronNetDelegateDiffblueTest {
    * <p>Method under test: {@link TronNetDelegate#containBlock(BlockId)}
    */
   @Test
-  @Category(MaintainedByDiffblue.class)
+  @Category(ContributionFromDiffblue.class)
+  @ManagedByDiffblue
   @MethodsUnderTest({"boolean TronNetDelegate.containBlock(BlockId)"})
   public void testContainBlock_givenChainBaseManagerContainBlockReturnTrue_thenReturnTrue() {
     // Arrange
@@ -388,7 +403,8 @@ public class TronNetDelegateDiffblueTest {
    * <p>Method under test: {@link TronNetDelegate#containBlockInMainChain(BlockId)}
    */
   @Test
-  @Category(MaintainedByDiffblue.class)
+  @Category(ContributionFromDiffblue.class)
+  @ManagedByDiffblue
   @MethodsUnderTest({"boolean TronNetDelegate.containBlockInMainChain(BlockId)"})
   public void testContainBlockInMainChain_thenReturnFalse() {
     // Arrange
@@ -413,7 +429,8 @@ public class TronNetDelegateDiffblueTest {
    * <p>Method under test: {@link TronNetDelegate#containBlockInMainChain(BlockId)}
    */
   @Test
-  @Category(MaintainedByDiffblue.class)
+  @Category(ContributionFromDiffblue.class)
+  @ManagedByDiffblue
   @MethodsUnderTest({"boolean TronNetDelegate.containBlockInMainChain(BlockId)"})
   public void testContainBlockInMainChain_thenReturnTrue() {
     // Arrange
@@ -439,7 +456,8 @@ public class TronNetDelegateDiffblueTest {
    * <p>Method under test: {@link TronNetDelegate#getBlockChainHashesOnFork(BlockId)}
    */
   @Test
-  @Category(MaintainedByDiffblue.class)
+  @Category(ContributionFromDiffblue.class)
+  @ManagedByDiffblue
   @MethodsUnderTest({"List TronNetDelegate.getBlockChainHashesOnFork(BlockId)"})
   public void testGetBlockChainHashesOnFork_givenString_thenCallsGetString()
       throws NonCommonBlockException, P2pException {
@@ -467,7 +485,8 @@ public class TronNetDelegateDiffblueTest {
    * <p>Method under test: {@link TronNetDelegate#getBlockChainHashesOnFork(BlockId)}
    */
   @Test
-  @Category(MaintainedByDiffblue.class)
+  @Category(ContributionFromDiffblue.class)
+  @ManagedByDiffblue
   @MethodsUnderTest({"List TronNetDelegate.getBlockChainHashesOnFork(BlockId)"})
   public void testGetBlockChainHashesOnFork_thenReturnEmpty()
       throws NonCommonBlockException, P2pException {
@@ -494,7 +513,8 @@ public class TronNetDelegateDiffblueTest {
    * <p>Method under test: {@link TronNetDelegate#getBlockChainHashesOnFork(BlockId)}
    */
   @Test
-  @Category(MaintainedByDiffblue.class)
+  @Category(ContributionFromDiffblue.class)
+  @ManagedByDiffblue
   @MethodsUnderTest({"List TronNetDelegate.getBlockChainHashesOnFork(BlockId)"})
   public void testGetBlockChainHashesOnFork_whenBlockId_thenThrowP2pException()
       throws NonCommonBlockException, P2pException {
@@ -519,7 +539,8 @@ public class TronNetDelegateDiffblueTest {
    * <p>Method under test: {@link TronNetDelegate#canChainRevoke(long)}
    */
   @Test
-  @Category(MaintainedByDiffblue.class)
+  @Category(ContributionFromDiffblue.class)
+  @ManagedByDiffblue
   @MethodsUnderTest({"boolean TronNetDelegate.canChainRevoke(long)"})
   public void testCanChainRevoke_givenManagerGetSyncBeginNumberReturnMax_value_thenReturnFalse() {
     // Arrange
@@ -544,7 +565,8 @@ public class TronNetDelegateDiffblueTest {
    * <p>Method under test: {@link TronNetDelegate#canChainRevoke(long)}
    */
   @Test
-  @Category(MaintainedByDiffblue.class)
+  @Category(ContributionFromDiffblue.class)
+  @ManagedByDiffblue
   @MethodsUnderTest({"boolean TronNetDelegate.canChainRevoke(long)"})
   public void testCanChainRevoke_givenManagerGetSyncBeginNumberReturnOne_thenReturnTrue() {
     // Arrange
@@ -570,7 +592,8 @@ public class TronNetDelegateDiffblueTest {
    * <p>Method under test: {@link TronNetDelegate#contain(Sha256Hash, MessageTypes)}
    */
   @Test
-  @Category(MaintainedByDiffblue.class)
+  @Category(ContributionFromDiffblue.class)
+  @ManagedByDiffblue
   @MethodsUnderTest({"boolean TronNetDelegate.contain(Sha256Hash, MessageTypes)"})
   public void testContain_givenChainBaseManagerContainBlockReturnTrue_thenReturnTrue() {
     // Arrange
@@ -596,7 +619,8 @@ public class TronNetDelegateDiffblueTest {
    * <p>Method under test: {@link TronNetDelegate#contain(Sha256Hash, MessageTypes)}
    */
   @Test
-  @Category(MaintainedByDiffblue.class)
+  @Category(ContributionFromDiffblue.class)
+  @ManagedByDiffblue
   @MethodsUnderTest({"boolean TronNetDelegate.contain(Sha256Hash, MessageTypes)"})
   public void testContain_whenNull_thenReturnFalse() {
     // Arrange, Act and Assert
@@ -616,7 +640,8 @@ public class TronNetDelegateDiffblueTest {
    * Protocol.Inventory.InventoryType)}
    */
   @Test
-  @Category(MaintainedByDiffblue.class)
+  @Category(ContributionFromDiffblue.class)
+  @ManagedByDiffblue
   @MethodsUnderTest({
     "org.tron.common.overlay.message.Message TronNetDelegate.getData(Sha256Hash, Protocol.Inventory.InventoryType)"
   })
@@ -642,7 +667,8 @@ public class TronNetDelegateDiffblueTest {
    * Protocol.Inventory.InventoryType)}
    */
   @Test
-  @Category(MaintainedByDiffblue.class)
+  @Category(ContributionFromDiffblue.class)
+  @ManagedByDiffblue
   @MethodsUnderTest({
     "org.tron.common.overlay.message.Message TronNetDelegate.getData(Sha256Hash, Protocol.Inventory.InventoryType)"
   })
@@ -673,7 +699,8 @@ public class TronNetDelegateDiffblueTest {
    * <p>Method under test: {@link TronNetDelegate#allowPBFT()}
    */
   @Test
-  @Category(MaintainedByDiffblue.class)
+  @Category(ContributionFromDiffblue.class)
+  @ManagedByDiffblue
   @MethodsUnderTest({"boolean TronNetDelegate.allowPBFT()"})
   public void testAllowPBFT_givenDynamicPropertiesStoreAllowPBFTReturnFalse_thenReturnFalse() {
     // Arrange
@@ -702,7 +729,8 @@ public class TronNetDelegateDiffblueTest {
    * <p>Method under test: {@link TronNetDelegate#allowPBFT()}
    */
   @Test
-  @Category(MaintainedByDiffblue.class)
+  @Category(ContributionFromDiffblue.class)
+  @ManagedByDiffblue
   @MethodsUnderTest({"boolean TronNetDelegate.allowPBFT()"})
   public void testAllowPBFT_givenDynamicPropertiesStoreAllowPBFTReturnTrue_thenReturnTrue() {
     // Arrange
@@ -725,7 +753,8 @@ public class TronNetDelegateDiffblueTest {
    * <p>Method under test: {@link TronNetDelegate#getForkLock()}
    */
   @Test
-  @Category(MaintainedByDiffblue.class)
+  @Category(ContributionFromDiffblue.class)
+  @ManagedByDiffblue
   @MethodsUnderTest({"Object TronNetDelegate.getForkLock()"})
   public void testGetForkLock() {
     // Arrange
@@ -749,7 +778,8 @@ public class TronNetDelegateDiffblueTest {
    * <p>Method under test: {@link TronNetDelegate#getNextMaintenanceTime()}
    */
   @Test
-  @Category(MaintainedByDiffblue.class)
+  @Category(ContributionFromDiffblue.class)
+  @ManagedByDiffblue
   @MethodsUnderTest({"long TronNetDelegate.getNextMaintenanceTime()"})
   public void testGetNextMaintenanceTime_thenReturnOne() {
     // Arrange
@@ -776,7 +806,8 @@ public class TronNetDelegateDiffblueTest {
    * <p>Method under test: {@link TronNetDelegate#getMaintenanceTimeInterval()}
    */
   @Test
-  @Category(MaintainedByDiffblue.class)
+  @Category(ContributionFromDiffblue.class)
+  @ManagedByDiffblue
   @MethodsUnderTest({"long TronNetDelegate.getMaintenanceTimeInterval()"})
   public void testGetMaintenanceTimeInterval_thenReturnFortyTwo() {
     // Arrange
@@ -799,7 +830,8 @@ public class TronNetDelegateDiffblueTest {
    * <p>Method under test: {@link TronNetDelegate#isBlockUnsolidified()}
    */
   @Test
-  @Category(MaintainedByDiffblue.class)
+  @Category(ContributionFromDiffblue.class)
+  @ManagedByDiffblue
   @MethodsUnderTest({"boolean TronNetDelegate.isBlockUnsolidified()"})
   public void testIsBlockUnsolidified() {
     // Arrange, Act and Assert
@@ -816,7 +848,8 @@ public class TronNetDelegateDiffblueTest {
    * <p>Method under test: {@link TronNetDelegate#getNextBlockSlotTime()}
    */
   @Test
-  @Category(MaintainedByDiffblue.class)
+  @Category(ContributionFromDiffblue.class)
+  @ManagedByDiffblue
   @MethodsUnderTest({"long TronNetDelegate.getNextBlockSlotTime()"})
   public void testGetNextBlockSlotTime_thenReturn3001() {
     // Arrange
@@ -845,7 +878,8 @@ public class TronNetDelegateDiffblueTest {
    * <p>Method under test: {@link TronNetDelegate#getNextBlockSlotTime()}
    */
   @Test
-  @Category(MaintainedByDiffblue.class)
+  @Category(ContributionFromDiffblue.class)
+  @ManagedByDiffblue
   @MethodsUnderTest({"long TronNetDelegate.getNextBlockSlotTime()"})
   public void testGetNextBlockSlotTime_thenReturn6001() {
     // Arrange
@@ -878,7 +912,8 @@ public class TronNetDelegateDiffblueTest {
    * </ul>
    */
   @Test
-  @Category(MaintainedByDiffblue.class)
+  @Category(ContributionFromDiffblue.class)
+  @ManagedByDiffblue
   @MethodsUnderTest({
     "Object TronNetDelegate.getBlockLock()",
     "boolean TronNetDelegate.isHitDown()",

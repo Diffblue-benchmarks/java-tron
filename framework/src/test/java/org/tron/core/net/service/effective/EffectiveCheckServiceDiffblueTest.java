@@ -8,7 +8,8 @@ import static org.mockito.Mockito.atLeast;
 import static org.mockito.Mockito.mock;
 import static org.mockito.Mockito.verify;
 import static org.mockito.Mockito.when;
-import com.diffblue.cover.annotations.MaintainedByDiffblue;
+import com.diffblue.cover.annotations.ContributionFromDiffblue;
+import com.diffblue.cover.annotations.ManagedByDiffblue;
 import com.diffblue.cover.annotations.MethodsUnderTest;
 import java.net.InetSocketAddress;
 import java.util.ArrayList;
@@ -41,7 +42,8 @@ public class EffectiveCheckServiceDiffblueTest {
    * <p>Method under test: {@link EffectiveCheckService#isIsolateLand()}
    */
   @Test
-  @Category(MaintainedByDiffblue.class)
+  @Category(ContributionFromDiffblue.class)
+  @ManagedByDiffblue
   @MethodsUnderTest({"boolean EffectiveCheckService.isIsolateLand()"})
   public void testIsIsolateLand_givenArrayListAddPeerConnection_thenReturnTrue() {
     // Arrange
@@ -68,7 +70,8 @@ public class EffectiveCheckServiceDiffblueTest {
    * <p>Method under test: {@link EffectiveCheckService#isIsolateLand()}
    */
   @Test
-  @Category(MaintainedByDiffblue.class)
+  @Category(ContributionFromDiffblue.class)
+  @ManagedByDiffblue
   @MethodsUnderTest({"boolean EffectiveCheckService.isIsolateLand()"})
   public void testIsIsolateLand_givenArrayListAddPeerConnection_thenReturnTrue2() {
     // Arrange
@@ -96,7 +99,8 @@ public class EffectiveCheckServiceDiffblueTest {
    * <p>Method under test: {@link EffectiveCheckService#isIsolateLand()}
    */
   @Test
-  @Category(MaintainedByDiffblue.class)
+  @Category(ContributionFromDiffblue.class)
+  @ManagedByDiffblue
   @MethodsUnderTest({"boolean EffectiveCheckService.isIsolateLand()"})
   public void testIsIsolateLand_givenPeerConnectionNeedSyncFromUsIsFalse_thenReturnFalse() {
     // Arrange
@@ -125,7 +129,8 @@ public class EffectiveCheckServiceDiffblueTest {
    * <p>Method under test: {@link EffectiveCheckService#isIsolateLand()}
    */
   @Test
-  @Category(MaintainedByDiffblue.class)
+  @Category(ContributionFromDiffblue.class)
+  @ManagedByDiffblue
   @MethodsUnderTest({"boolean EffectiveCheckService.isIsolateLand()"})
   public void testIsIsolateLand_thenCallsIsNeedSyncFromUs() {
     // Arrange
@@ -155,7 +160,8 @@ public class EffectiveCheckServiceDiffblueTest {
    * <p>Method under test: {@link EffectiveCheckService#isIsolateLand()}
    */
   @Test
-  @Category(MaintainedByDiffblue.class)
+  @Category(ContributionFromDiffblue.class)
+  @ManagedByDiffblue
   @MethodsUnderTest({"boolean EffectiveCheckService.isIsolateLand()"})
   public void testIsIsolateLand_thenReturnTrue() {
     // Arrange
@@ -180,7 +186,8 @@ public class EffectiveCheckServiceDiffblueTest {
    * <p>Method under test: {@link EffectiveCheckService#onDisconnect(InetSocketAddress)}
    */
   @Test
-  @Category(MaintainedByDiffblue.class)
+  @Category(ContributionFromDiffblue.class)
+  @ManagedByDiffblue
   @MethodsUnderTest({"void EffectiveCheckService.onDisconnect(InetSocketAddress)"})
   public void testOnDisconnect_givenEffectiveCheckServiceCurIsCreateUnresolvedFooAndOne() {
     // Arrange
@@ -205,7 +212,8 @@ public class EffectiveCheckServiceDiffblueTest {
    * <p>Method under test: {@link EffectiveCheckService#onDisconnect(InetSocketAddress)}
    */
   @Test
-  @Category(MaintainedByDiffblue.class)
+  @Category(ContributionFromDiffblue.class)
+  @ManagedByDiffblue
   @MethodsUnderTest({"void EffectiveCheckService.onDisconnect(InetSocketAddress)"})
   public void testOnDisconnect_givenEffectiveCheckService_thenEffectiveCheckServiceCurIsNull() {
     // Arrange
@@ -230,7 +238,8 @@ public class EffectiveCheckServiceDiffblueTest {
    * </ul>
    */
   @Test
-  @Category(MaintainedByDiffblue.class)
+  @Category(ContributionFromDiffblue.class)
+  @ManagedByDiffblue
   @MethodsUnderTest({
     "InetSocketAddress EffectiveCheckService.getCur()",
     "boolean EffectiveCheckService.isEffectiveCheck()",

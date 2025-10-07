@@ -6,7 +6,8 @@ import static org.junit.Assert.assertTrue;
 import static org.mockito.Mockito.mock;
 import static org.mockito.Mockito.verify;
 import static org.mockito.Mockito.when;
-import com.diffblue.cover.annotations.MaintainedByDiffblue;
+import com.diffblue.cover.annotations.ContributionFromDiffblue;
+import com.diffblue.cover.annotations.ManagedByDiffblue;
 import com.diffblue.cover.annotations.MethodsUnderTest;
 import com.typesafe.config.Config;
 import java.net.InetAddress;
@@ -34,7 +35,8 @@ public class ArgsDiffblueTest {
    * <p>Method under test: {@link Args#getInetSocketAddress(Config, String, boolean)}
    */
   @Test
-  @Category(MaintainedByDiffblue.class)
+  @Category(ContributionFromDiffblue.class)
+  @ManagedByDiffblue
   @MethodsUnderTest({"List Args.getInetSocketAddress(Config, String, boolean)"})
   public void testGetInetSocketAddress_givenArrayList_thenReturnEmpty() {
     // Arrange
@@ -64,7 +66,8 @@ public class ArgsDiffblueTest {
    * <p>Method under test: {@link Args#getInetSocketAddress(Config, String, boolean)}
    */
   @Test
-  @Category(MaintainedByDiffblue.class)
+  @Category(ContributionFromDiffblue.class)
+  @ManagedByDiffblue
   @MethodsUnderTest({"List Args.getInetSocketAddress(Config, String, boolean)"})
   public void testGetInetSocketAddress_givenFalse_whenConfigHasPathReturnFalse_thenReturnEmpty() {
     // Arrange
@@ -91,7 +94,8 @@ public class ArgsDiffblueTest {
    * <p>Method under test: {@link Args#getInetSocketAddress(Config, String, boolean)}
    */
   @Test
-  @Category(MaintainedByDiffblue.class)
+  @Category(ContributionFromDiffblue.class)
+  @ManagedByDiffblue
   @MethodsUnderTest({"List Args.getInetSocketAddress(Config, String, boolean)"})
   public void testGetInetSocketAddress_whenConfigGetStringListThrowIllegalArgumentException() {
     // Arrange
@@ -117,7 +121,8 @@ public class ArgsDiffblueTest {
    * <p>Method under test: {@link Args#getInetSocketAddress(Config, String, boolean)}
    */
   @Test
-  @Category(MaintainedByDiffblue.class)
+  @Category(ContributionFromDiffblue.class)
+  @ManagedByDiffblue
   @MethodsUnderTest({"List Args.getInetSocketAddress(Config, String, boolean)"})
   public void testGetInetSocketAddress_whenConfigHasPathThrowIllegalArgumentException() {
     // Arrange
@@ -141,7 +146,8 @@ public class ArgsDiffblueTest {
    * <p>Method under test: {@link Args#getInetAddress(Config, String)}
    */
   @Test
-  @Category(MaintainedByDiffblue.class)
+  @Category(ContributionFromDiffblue.class)
+  @ManagedByDiffblue
   @MethodsUnderTest({"List Args.getInetAddress(Config, String)"})
   public void testGetInetAddress_givenArrayList_thenReturnEmpty() {
     // Arrange
@@ -170,7 +176,8 @@ public class ArgsDiffblueTest {
    * <p>Method under test: {@link Args#getInetAddress(Config, String)}
    */
   @Test
-  @Category(MaintainedByDiffblue.class)
+  @Category(ContributionFromDiffblue.class)
+  @ManagedByDiffblue
   @MethodsUnderTest({"List Args.getInetAddress(Config, String)"})
   public void testGetInetAddress_givenFalse_whenConfigHasPathReturnFalse_thenReturnEmpty() {
     // Arrange
@@ -196,7 +203,8 @@ public class ArgsDiffblueTest {
    * <p>Method under test: {@link Args#getInetAddress(Config, String)}
    */
   @Test
-  @Category(MaintainedByDiffblue.class)
+  @Category(ContributionFromDiffblue.class)
+  @ManagedByDiffblue
   @MethodsUnderTest({"List Args.getInetAddress(Config, String)"})
   public void testGetInetAddress_whenConfigGetStringListThrowIllegalArgumentException() {
     // Arrange
@@ -221,7 +229,8 @@ public class ArgsDiffblueTest {
    * <p>Method under test: {@link Args#getInetAddress(Config, String)}
    */
   @Test
-  @Category(MaintainedByDiffblue.class)
+  @Category(ContributionFromDiffblue.class)
+  @ManagedByDiffblue
   @MethodsUnderTest({"List Args.getInetAddress(Config, String)"})
   public void testGetInetAddress_whenConfigHasPathThrowIllegalArgumentException() {
     // Arrange
@@ -247,7 +256,8 @@ public class ArgsDiffblueTest {
    * </ul>
    */
   @Test
-  @Category(MaintainedByDiffblue.class)
+  @Category(ContributionFromDiffblue.class)
+  @ManagedByDiffblue
   @MethodsUnderTest({
     "LocalWitnesses Args.getLocalWitnesses()",
     "ConcurrentHashMap Args.getSolidityContractEventTriggerMap()",

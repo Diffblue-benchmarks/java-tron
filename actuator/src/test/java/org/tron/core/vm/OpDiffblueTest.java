@@ -1,7 +1,8 @@
 package org.tron.core.vm;
 
 import static org.junit.Assert.assertEquals;
-import com.diffblue.cover.annotations.MaintainedByDiffblue;
+import com.diffblue.cover.annotations.ContributionFromDiffblue;
+import com.diffblue.cover.annotations.ManagedByDiffblue;
 import com.diffblue.cover.annotations.MethodsUnderTest;
 import org.junit.Test;
 import org.junit.experimental.categories.Category;
@@ -13,7 +14,8 @@ public class OpDiffblueTest {
    * <p>Method under test: {@link Op#getNameOf(byte)}
    */
   @Test
-  @Category(MaintainedByDiffblue.class)
+  @Category(ContributionFromDiffblue.class)
+  @ManagedByDiffblue
   @MethodsUnderTest({"java.lang.String Op.getNameOf(byte)"})
   public void testGetNameOfWithByte() {
     // Arrange, Act and Assert
@@ -31,7 +33,8 @@ public class OpDiffblueTest {
    * <p>Method under test: {@link Op#getNameOf(int)}
    */
   @Test
-  @Category(MaintainedByDiffblue.class)
+  @Category(ContributionFromDiffblue.class)
+  @ManagedByDiffblue
   @MethodsUnderTest({"java.lang.String Op.getNameOf(int)"})
   public void testGetNameOfWithInt_whenOne_thenReturnAdd() {
     // Arrange, Act and Assert

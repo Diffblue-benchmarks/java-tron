@@ -7,7 +7,8 @@ import static org.mockito.Mockito.doNothing;
 import static org.mockito.Mockito.mock;
 import static org.mockito.Mockito.verify;
 import static org.mockito.Mockito.when;
-import com.diffblue.cover.annotations.MaintainedByDiffblue;
+import com.diffblue.cover.annotations.ContributionFromDiffblue;
+import com.diffblue.cover.annotations.ManagedByDiffblue;
 import com.diffblue.cover.annotations.MethodsUnderTest;
 import com.google.protobuf.ByteString;
 import java.io.UnsupportedEncodingException;
@@ -41,7 +42,8 @@ public class IncentiveManagerDiffblueTest {
    * <p>Method under test: {@link IncentiveManager#reward(List)}
    */
   @Test
-  @Category(MaintainedByDiffblue.class)
+  @Category(ContributionFromDiffblue.class)
+  @ManagedByDiffblue
   @MethodsUnderTest({"void IncentiveManager.reward(List)"})
   public void testReward_givenAccountCapsuleGetAllowanceReturnOne_thenCallsToByteArray()
       throws UnsupportedEncodingException {
@@ -90,7 +92,8 @@ public class IncentiveManagerDiffblueTest {
    * <p>Method under test: {@link IncentiveManager#reward(List)}
    */
   @Test
-  @Category(MaintainedByDiffblue.class)
+  @Category(ContributionFromDiffblue.class)
+  @ManagedByDiffblue
   @MethodsUnderTest({"void IncentiveManager.reward(List)"})
   public void testReward_givenByteString_thenCallsAllowChangeDelegation() {
     // Arrange
@@ -117,7 +120,8 @@ public class IncentiveManagerDiffblueTest {
    * <p>Method under test: {@link IncentiveManager#reward(List)}
    */
   @Test
-  @Category(MaintainedByDiffblue.class)
+  @Category(ContributionFromDiffblue.class)
+  @ManagedByDiffblue
   @MethodsUnderTest({"void IncentiveManager.reward(List)"})
   public void testReward_givenByteString_thenCallsAllowChangeDelegation2() {
     // Arrange
@@ -146,7 +150,8 @@ public class IncentiveManagerDiffblueTest {
    * <p>Method under test: {@link IncentiveManager#reward(List)}
    */
   @Test
-  @Category(MaintainedByDiffblue.class)
+  @Category(ContributionFromDiffblue.class)
+  @ManagedByDiffblue
   @MethodsUnderTest({"void IncentiveManager.reward(List)"})
   public void testReward_givenConsensusDelegateAllowChangeDelegationReturnTrue_whenArrayList() {
     // Arrange
@@ -170,7 +175,8 @@ public class IncentiveManagerDiffblueTest {
    * <p>Method under test: {@link IncentiveManager#reward(List)}
    */
   @Test
-  @Category(MaintainedByDiffblue.class)
+  @Category(ContributionFromDiffblue.class)
+  @ManagedByDiffblue
   @MethodsUnderTest({"void IncentiveManager.reward(List)"})
   public void testReward_whenArrayList_thenCallsAllowChangeDelegation() {
     // Arrange

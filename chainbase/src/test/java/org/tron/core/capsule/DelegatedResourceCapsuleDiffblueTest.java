@@ -7,7 +7,8 @@ import static org.junit.Assert.assertSame;
 import static org.mockito.Mockito.mock;
 import static org.mockito.Mockito.verify;
 import static org.mockito.Mockito.when;
-import com.diffblue.cover.annotations.MaintainedByDiffblue;
+import com.diffblue.cover.annotations.ContributionFromDiffblue;
+import com.diffblue.cover.annotations.ManagedByDiffblue;
 import com.diffblue.cover.annotations.MethodsUnderTest;
 import com.google.protobuf.ByteString;
 import java.io.UnsupportedEncodingException;
@@ -29,7 +30,8 @@ public class DelegatedResourceCapsuleDiffblueTest {
    * ByteString)}
    */
   @Test
-  @Category(MaintainedByDiffblue.class)
+  @Category(ContributionFromDiffblue.class)
+  @ManagedByDiffblue
   @MethodsUnderTest({"void DelegatedResourceCapsule.<init>(ByteString, ByteString)"})
   public void testNewDelegatedResourceCapsule_thenReturnExpireTimeForBandwidthIsZero() {
     // Arrange
@@ -60,7 +62,8 @@ public class DelegatedResourceCapsuleDiffblueTest {
    * <p>Method under test: {@link DelegatedResourceCapsule#DelegatedResourceCapsule(byte[])}
    */
   @Test
-  @Category(MaintainedByDiffblue.class)
+  @Category(ContributionFromDiffblue.class)
+  @ManagedByDiffblue
   @MethodsUnderTest({"void DelegatedResourceCapsule.<init>(byte[])"})
   public void testNewDelegatedResourceCapsule_thenReturnExpireTimeForBandwidthIsZero2() {
     // Arrange and Act
@@ -86,7 +89,8 @@ public class DelegatedResourceCapsuleDiffblueTest {
    * <p>Method under test: {@link DelegatedResourceCapsule#DelegatedResourceCapsule(byte[])}
    */
   @Test
-  @Category(MaintainedByDiffblue.class)
+  @Category(ContributionFromDiffblue.class)
+  @ManagedByDiffblue
   @MethodsUnderTest({"void DelegatedResourceCapsule.<init>(byte[])"})
   public void testNewDelegatedResourceCapsule_when0xaxaxaxBytesIsUtf8_thenReturnInstanceIsNull()
       throws UnsupportedEncodingException {
@@ -105,7 +109,8 @@ public class DelegatedResourceCapsuleDiffblueTest {
    * <p>Method under test: {@link DelegatedResourceCapsule#DelegatedResourceCapsule(byte[])}
    */
   @Test
-  @Category(MaintainedByDiffblue.class)
+  @Category(ContributionFromDiffblue.class)
+  @ManagedByDiffblue
   @MethodsUnderTest({"void DelegatedResourceCapsule.<init>(byte[])"})
   public void testNewDelegatedResourceCapsule_whenAAAAAAAABytesIsUtf8_thenReturnInstanceIsNull()
       throws UnsupportedEncodingException {
@@ -125,7 +130,8 @@ public class DelegatedResourceCapsuleDiffblueTest {
    * <p>Method under test: {@link DelegatedResourceCapsule#DelegatedResourceCapsule(byte[])}
    */
   @Test
-  @Category(MaintainedByDiffblue.class)
+  @Category(ContributionFromDiffblue.class)
+  @ManagedByDiffblue
   @MethodsUnderTest({"void DelegatedResourceCapsule.<init>(byte[])"})
   public void testNewDelegatedResourceCapsule_whenAAAAAAABytesIsUtf8_thenReturnInstanceIsNull()
       throws UnsupportedEncodingException {
@@ -144,7 +150,8 @@ public class DelegatedResourceCapsuleDiffblueTest {
    * <p>Method under test: {@link DelegatedResourceCapsule#DelegatedResourceCapsule(byte[])}
    */
   @Test
-  @Category(MaintainedByDiffblue.class)
+  @Category(ContributionFromDiffblue.class)
+  @ManagedByDiffblue
   @MethodsUnderTest({"void DelegatedResourceCapsule.<init>(byte[])"})
   public void testNewDelegatedResourceCapsule_whenArrayOfByteWithAAndLf() {
     // Arrange and Act
@@ -168,7 +175,8 @@ public class DelegatedResourceCapsuleDiffblueTest {
    * <p>Method under test: {@link DelegatedResourceCapsule#DelegatedResourceCapsule(byte[])}
    */
   @Test
-  @Category(MaintainedByDiffblue.class)
+  @Category(ContributionFromDiffblue.class)
+  @ManagedByDiffblue
   @MethodsUnderTest({"void DelegatedResourceCapsule.<init>(byte[])"})
   public void testNewDelegatedResourceCapsule_whenArrayOfByteWithEighteenAndLf() {
     // Arrange and Act
@@ -192,7 +200,8 @@ public class DelegatedResourceCapsuleDiffblueTest {
    * <p>Method under test: {@link DelegatedResourceCapsule#DelegatedResourceCapsule(byte[])}
    */
   @Test
-  @Category(MaintainedByDiffblue.class)
+  @Category(ContributionFromDiffblue.class)
+  @ManagedByDiffblue
   @MethodsUnderTest({"void DelegatedResourceCapsule.<init>(byte[])"})
   public void testNewDelegatedResourceCapsule_whenArrayOfByteWithEighteenAndX() {
     // Arrange and Act
@@ -213,7 +222,8 @@ public class DelegatedResourceCapsuleDiffblueTest {
    * <p>Method under test: {@link DelegatedResourceCapsule#DelegatedResourceCapsule(byte[])}
    */
   @Test
-  @Category(MaintainedByDiffblue.class)
+  @Category(ContributionFromDiffblue.class)
+  @ManagedByDiffblue
   @MethodsUnderTest({"void DelegatedResourceCapsule.<init>(byte[])"})
   public void testNewDelegatedResourceCapsule_whenArrayOfByteWithEighteenAndZero() {
     // Arrange and Act
@@ -234,7 +244,8 @@ public class DelegatedResourceCapsuleDiffblueTest {
    * <p>Method under test: {@link DelegatedResourceCapsule#DelegatedResourceCapsule(byte[])}
    */
   @Test
-  @Category(MaintainedByDiffblue.class)
+  @Category(ContributionFromDiffblue.class)
+  @ManagedByDiffblue
   @MethodsUnderTest({"void DelegatedResourceCapsule.<init>(byte[])"})
   public void testNewDelegatedResourceCapsule_whenArrayOfByteWithMinusOneAndX() {
     // Arrange and Act
@@ -255,7 +266,8 @@ public class DelegatedResourceCapsuleDiffblueTest {
    * <p>Method under test: {@link DelegatedResourceCapsule#DelegatedResourceCapsule(byte[])}
    */
   @Test
-  @Category(MaintainedByDiffblue.class)
+  @Category(ContributionFromDiffblue.class)
+  @ManagedByDiffblue
   @MethodsUnderTest({"void DelegatedResourceCapsule.<init>(byte[])"})
   public void testNewDelegatedResourceCapsule_whenArrayOfByteWithTwentyFourAndX() {
     // Arrange and Act
@@ -276,7 +288,8 @@ public class DelegatedResourceCapsuleDiffblueTest {
    * <p>Method under test: {@link DelegatedResourceCapsule#DelegatedResourceCapsule(byte[])}
    */
   @Test
-  @Category(MaintainedByDiffblue.class)
+  @Category(ContributionFromDiffblue.class)
+  @ManagedByDiffblue
   @MethodsUnderTest({"void DelegatedResourceCapsule.<init>(byte[])"})
   public void testNewDelegatedResourceCapsule_whenArrayOfByteWithZeroAndX() {
     // Arrange and Act
@@ -298,7 +311,8 @@ public class DelegatedResourceCapsuleDiffblueTest {
    * <p>Method under test: {@link DelegatedResourceCapsule#DelegatedResourceCapsule(byte[])}
    */
   @Test
-  @Category(MaintainedByDiffblue.class)
+  @Category(ContributionFromDiffblue.class)
+  @ManagedByDiffblue
   @MethodsUnderTest({"void DelegatedResourceCapsule.<init>(byte[])"})
   public void testNewDelegatedResourceCapsule_whenAxaxaxaxBytesIsUtf8_thenReturnInstanceIsNull()
       throws UnsupportedEncodingException {
@@ -317,7 +331,8 @@ public class DelegatedResourceCapsuleDiffblueTest {
    * <p>Method under test: {@link DelegatedResourceCapsule#DelegatedResourceCapsule(byte[])}
    */
   @Test
-  @Category(MaintainedByDiffblue.class)
+  @Category(ContributionFromDiffblue.class)
+  @ManagedByDiffblue
   @MethodsUnderTest({"void DelegatedResourceCapsule.<init>(byte[])"})
   public void testNewDelegatedResourceCapsule_whenXaxaxaxBytesIsUtf8_thenReturnInstanceIsNull()
       throws UnsupportedEncodingException {
@@ -336,7 +351,8 @@ public class DelegatedResourceCapsuleDiffblueTest {
    * <p>Method under test: {@link DelegatedResourceCapsule#DelegatedResourceCapsule(byte[])}
    */
   @Test
-  @Category(MaintainedByDiffblue.class)
+  @Category(ContributionFromDiffblue.class)
+  @ManagedByDiffblue
   @MethodsUnderTest({"void DelegatedResourceCapsule.<init>(byte[])"})
   public void testNewDelegatedResourceCapsule_whenXaxaxaxBytesIsUtf8_thenReturnInstanceIsNull2()
       throws UnsupportedEncodingException {
@@ -355,7 +371,8 @@ public class DelegatedResourceCapsuleDiffblueTest {
    * <p>Method under test: {@link DelegatedResourceCapsule#DelegatedResourceCapsule(byte[])}
    */
   @Test
-  @Category(MaintainedByDiffblue.class)
+  @Category(ContributionFromDiffblue.class)
+  @ManagedByDiffblue
   @MethodsUnderTest({"void DelegatedResourceCapsule.<init>(byte[])"})
   public void testNewDelegatedResourceCapsule_whenXxaxaxaxBytesIsUtf8_thenReturnInstanceIsNull()
       throws UnsupportedEncodingException {
@@ -370,7 +387,8 @@ public class DelegatedResourceCapsuleDiffblueTest {
    * <p>Method under test: {@link DelegatedResourceCapsule#createDbKey(byte[], byte[])}
    */
   @Test
-  @Category(MaintainedByDiffblue.class)
+  @Category(ContributionFromDiffblue.class)
+  @ManagedByDiffblue
   @MethodsUnderTest({"byte[] DelegatedResourceCapsule.createDbKey(byte[], byte[])"})
   public void testCreateDbKeyWithByteByte() throws UnsupportedEncodingException {
     // Arrange and Act
@@ -392,7 +410,8 @@ public class DelegatedResourceCapsuleDiffblueTest {
    * <p>Method under test: {@link DelegatedResourceCapsule#createDbKey()}
    */
   @Test
-  @Category(MaintainedByDiffblue.class)
+  @Category(ContributionFromDiffblue.class)
+  @ManagedByDiffblue
   @MethodsUnderTest({"byte[] DelegatedResourceCapsule.createDbKey()"})
   public void testCreateDbKey_thenReturnEmptyArrayOfByte() {
     // Arrange
@@ -408,7 +427,8 @@ public class DelegatedResourceCapsuleDiffblueTest {
    * <p>Method under test: {@link DelegatedResourceCapsule#getData()}
    */
   @Test
-  @Category(MaintainedByDiffblue.class)
+  @Category(ContributionFromDiffblue.class)
+  @ManagedByDiffblue
   @MethodsUnderTest({"byte[] DelegatedResourceCapsule.getData()"})
   public void testGetData() {
     // Arrange
@@ -435,7 +455,8 @@ public class DelegatedResourceCapsuleDiffblueTest {
    * <p>Method under test: {@link DelegatedResourceCapsule#getData()}
    */
   @Test
-  @Category(MaintainedByDiffblue.class)
+  @Category(ContributionFromDiffblue.class)
+  @ManagedByDiffblue
   @MethodsUnderTest({"byte[] DelegatedResourceCapsule.getData()"})
   public void testGetData_thenReturnArrayOfByteWithSpaceAndMinusOne() {
     // Arrange
@@ -458,7 +479,8 @@ public class DelegatedResourceCapsuleDiffblueTest {
    * <p>Method under test: {@link DelegatedResourceCapsule#getData()}
    */
   @Test
-  @Category(MaintainedByDiffblue.class)
+  @Category(ContributionFromDiffblue.class)
+  @ManagedByDiffblue
   @MethodsUnderTest({"byte[] DelegatedResourceCapsule.getData()"})
   public void testGetData_thenReturnArrayOfByteWithTwentyFourAndOne() {
     // Arrange
@@ -481,7 +503,8 @@ public class DelegatedResourceCapsuleDiffblueTest {
    * <p>Method under test: {@link DelegatedResourceCapsule#getData()}
    */
   @Test
-  @Category(MaintainedByDiffblue.class)
+  @Category(ContributionFromDiffblue.class)
+  @ManagedByDiffblue
   @MethodsUnderTest({"byte[] DelegatedResourceCapsule.getData()"})
   public void testGetData_thenReturnArrayOfByteWithTwentyFourAndThree() {
     // Arrange
@@ -502,7 +525,8 @@ public class DelegatedResourceCapsuleDiffblueTest {
    * <p>Method under test: {@link DelegatedResourceCapsule#getData()}
    */
   @Test
-  @Category(MaintainedByDiffblue.class)
+  @Category(ContributionFromDiffblue.class)
+  @ManagedByDiffblue
   @MethodsUnderTest({"byte[] DelegatedResourceCapsule.getData()"})
   public void testGetData_thenReturnEmptyArrayOfByte() {
     // Arrange
@@ -522,7 +546,8 @@ public class DelegatedResourceCapsuleDiffblueTest {
    * <p>Method under test: {@link DelegatedResourceCapsule#getInstance()}
    */
   @Test
-  @Category(MaintainedByDiffblue.class)
+  @Category(ContributionFromDiffblue.class)
+  @ManagedByDiffblue
   @MethodsUnderTest({"DelegatedResource DelegatedResourceCapsule.getInstance()"})
   public void testGetInstance_thenReturnNull() throws UnsupportedEncodingException {
     // Arrange, Act and Assert
@@ -540,7 +565,8 @@ public class DelegatedResourceCapsuleDiffblueTest {
    * <p>Method under test: {@link DelegatedResourceCapsule#createDbKeyV2(byte[], byte[], boolean)}
    */
   @Test
-  @Category(MaintainedByDiffblue.class)
+  @Category(ContributionFromDiffblue.class)
+  @ManagedByDiffblue
   @MethodsUnderTest({"byte[] DelegatedResourceCapsule.createDbKeyV2(byte[], byte[], boolean)"})
   public void testCreateDbKeyV2_whenA_thenReturnArrayOfByteWithOneAndA() {
     // Arrange and Act
@@ -569,7 +595,8 @@ public class DelegatedResourceCapsuleDiffblueTest {
    * <p>Method under test: {@link DelegatedResourceCapsule#createDbKeyV2(byte[], byte[], boolean)}
    */
   @Test
-  @Category(MaintainedByDiffblue.class)
+  @Category(ContributionFromDiffblue.class)
+  @ManagedByDiffblue
   @MethodsUnderTest({"byte[] DelegatedResourceCapsule.createDbKeyV2(byte[], byte[], boolean)"})
   public void testCreateDbKeyV2_whenAxaxaxaxBytesIsUtf8_thenReturnArrayOfByteWithTwoAndA()
       throws UnsupportedEncodingException {
@@ -596,7 +623,8 @@ public class DelegatedResourceCapsuleDiffblueTest {
    * <p>Method under test: {@link DelegatedResourceCapsule#getFrom()}
    */
   @Test
-  @Category(MaintainedByDiffblue.class)
+  @Category(ContributionFromDiffblue.class)
+  @ManagedByDiffblue
   @MethodsUnderTest({"ByteString DelegatedResourceCapsule.getFrom()"})
   public void testGetFrom_thenReturnEmpty() {
     // Arrange
@@ -625,7 +653,8 @@ public class DelegatedResourceCapsuleDiffblueTest {
    * <p>Method under test: {@link DelegatedResourceCapsule#getTo()}
    */
   @Test
-  @Category(MaintainedByDiffblue.class)
+  @Category(ContributionFromDiffblue.class)
+  @ManagedByDiffblue
   @MethodsUnderTest({"ByteString DelegatedResourceCapsule.getTo()"})
   public void testGetTo_thenDelegatedResourceCapsuleWithDataIsEmptyArrayOfByteFromIsEmpty() {
     // Arrange
@@ -656,7 +685,8 @@ public class DelegatedResourceCapsuleDiffblueTest {
    * <p>Method under test: {@link DelegatedResourceCapsule#getFrozenBalanceForEnergy()}
    */
   @Test
-  @Category(MaintainedByDiffblue.class)
+  @Category(ContributionFromDiffblue.class)
+  @ManagedByDiffblue
   @MethodsUnderTest({"long DelegatedResourceCapsule.getFrozenBalanceForEnergy()"})
   public void testGetFrozenBalanceForEnergy_thenReturnZero() {
     // Arrange
@@ -672,7 +702,8 @@ public class DelegatedResourceCapsuleDiffblueTest {
    * <p>Method under test: {@link DelegatedResourceCapsule#setFrozenBalanceForEnergy(long, long)}
    */
   @Test
-  @Category(MaintainedByDiffblue.class)
+  @Category(ContributionFromDiffblue.class)
+  @ManagedByDiffblue
   @MethodsUnderTest({"void DelegatedResourceCapsule.setFrozenBalanceForEnergy(long, long)"})
   public void testSetFrozenBalanceForEnergy() {
     // Arrange
@@ -694,7 +725,8 @@ public class DelegatedResourceCapsuleDiffblueTest {
    * <p>Method under test: {@link DelegatedResourceCapsule#setFrozenBalanceForEnergy(long, long)}
    */
   @Test
-  @Category(MaintainedByDiffblue.class)
+  @Category(ContributionFromDiffblue.class)
+  @ManagedByDiffblue
   @MethodsUnderTest({"void DelegatedResourceCapsule.setFrozenBalanceForEnergy(long, long)"})
   public void testSetFrozenBalanceForEnergy2() {
     // Arrange
@@ -718,7 +750,8 @@ public class DelegatedResourceCapsuleDiffblueTest {
    * <p>Method under test: {@link DelegatedResourceCapsule#setFrozenBalanceForEnergy(long, long)}
    */
   @Test
-  @Category(MaintainedByDiffblue.class)
+  @Category(ContributionFromDiffblue.class)
+  @ManagedByDiffblue
   @MethodsUnderTest({"void DelegatedResourceCapsule.setFrozenBalanceForEnergy(long, long)"})
   public void testSetFrozenBalanceForEnergy3() {
     // Arrange
@@ -744,7 +777,8 @@ public class DelegatedResourceCapsuleDiffblueTest {
    * <p>Method under test: {@link DelegatedResourceCapsule#addFrozenBalanceForEnergy(long, long)}
    */
   @Test
-  @Category(MaintainedByDiffblue.class)
+  @Category(ContributionFromDiffblue.class)
+  @ManagedByDiffblue
   @MethodsUnderTest({"void DelegatedResourceCapsule.addFrozenBalanceForEnergy(long, long)"})
   public void testAddFrozenBalanceForEnergy() {
     // Arrange
@@ -767,7 +801,8 @@ public class DelegatedResourceCapsuleDiffblueTest {
    * <p>Method under test: {@link DelegatedResourceCapsule#addFrozenBalanceForEnergy(long, long)}
    */
   @Test
-  @Category(MaintainedByDiffblue.class)
+  @Category(ContributionFromDiffblue.class)
+  @ManagedByDiffblue
   @MethodsUnderTest({"void DelegatedResourceCapsule.addFrozenBalanceForEnergy(long, long)"})
   public void testAddFrozenBalanceForEnergy2() {
     // Arrange
@@ -792,7 +827,8 @@ public class DelegatedResourceCapsuleDiffblueTest {
    * <p>Method under test: {@link DelegatedResourceCapsule#addFrozenBalanceForEnergy(long, long)}
    */
   @Test
-  @Category(MaintainedByDiffblue.class)
+  @Category(ContributionFromDiffblue.class)
+  @ManagedByDiffblue
   @MethodsUnderTest({"void DelegatedResourceCapsule.addFrozenBalanceForEnergy(long, long)"})
   public void testAddFrozenBalanceForEnergy3() {
     // Arrange
@@ -823,7 +859,8 @@ public class DelegatedResourceCapsuleDiffblueTest {
    * <p>Method under test: {@link DelegatedResourceCapsule#getFrozenBalanceForBandwidth()}
    */
   @Test
-  @Category(MaintainedByDiffblue.class)
+  @Category(ContributionFromDiffblue.class)
+  @ManagedByDiffblue
   @MethodsUnderTest({"long DelegatedResourceCapsule.getFrozenBalanceForBandwidth()"})
   public void testGetFrozenBalanceForBandwidth_thenReturnZero() {
     // Arrange
@@ -843,7 +880,8 @@ public class DelegatedResourceCapsuleDiffblueTest {
    * <p>Method under test: {@link DelegatedResourceCapsule#getFrozenBalance(boolean)}
    */
   @Test
-  @Category(MaintainedByDiffblue.class)
+  @Category(ContributionFromDiffblue.class)
+  @ManagedByDiffblue
   @MethodsUnderTest({"long DelegatedResourceCapsule.getFrozenBalance(boolean)"})
   public void testGetFrozenBalance_thenReturnZero() {
     // Arrange
@@ -863,7 +901,8 @@ public class DelegatedResourceCapsuleDiffblueTest {
    * <p>Method under test: {@link DelegatedResourceCapsule#getFrozenBalance(boolean)}
    */
   @Test
-  @Category(MaintainedByDiffblue.class)
+  @Category(ContributionFromDiffblue.class)
+  @ManagedByDiffblue
   @MethodsUnderTest({"long DelegatedResourceCapsule.getFrozenBalance(boolean)"})
   public void testGetFrozenBalance_thenReturnZero2() {
     // Arrange
@@ -879,7 +918,8 @@ public class DelegatedResourceCapsuleDiffblueTest {
    * <p>Method under test: {@link DelegatedResourceCapsule#setFrozenBalanceForBandwidth(long, long)}
    */
   @Test
-  @Category(MaintainedByDiffblue.class)
+  @Category(ContributionFromDiffblue.class)
+  @ManagedByDiffblue
   @MethodsUnderTest({"void DelegatedResourceCapsule.setFrozenBalanceForBandwidth(long, long)"})
   public void testSetFrozenBalanceForBandwidth() {
     // Arrange
@@ -901,7 +941,8 @@ public class DelegatedResourceCapsuleDiffblueTest {
    * <p>Method under test: {@link DelegatedResourceCapsule#setFrozenBalanceForBandwidth(long, long)}
    */
   @Test
-  @Category(MaintainedByDiffblue.class)
+  @Category(ContributionFromDiffblue.class)
+  @ManagedByDiffblue
   @MethodsUnderTest({"void DelegatedResourceCapsule.setFrozenBalanceForBandwidth(long, long)"})
   public void testSetFrozenBalanceForBandwidth2() {
     // Arrange
@@ -930,7 +971,8 @@ public class DelegatedResourceCapsuleDiffblueTest {
    * <p>Method under test: {@link DelegatedResourceCapsule#setFrozenBalanceForBandwidth(long, long)}
    */
   @Test
-  @Category(MaintainedByDiffblue.class)
+  @Category(ContributionFromDiffblue.class)
+  @ManagedByDiffblue
   @MethodsUnderTest({"void DelegatedResourceCapsule.setFrozenBalanceForBandwidth(long, long)"})
   public void testSetFrozenBalanceForBandwidth3() {
     // Arrange
@@ -954,7 +996,8 @@ public class DelegatedResourceCapsuleDiffblueTest {
    * <p>Method under test: {@link DelegatedResourceCapsule#addFrozenBalanceForBandwidth(long, long)}
    */
   @Test
-  @Category(MaintainedByDiffblue.class)
+  @Category(ContributionFromDiffblue.class)
+  @ManagedByDiffblue
   @MethodsUnderTest({"void DelegatedResourceCapsule.addFrozenBalanceForBandwidth(long, long)"})
   public void testAddFrozenBalanceForBandwidth() {
     // Arrange
@@ -976,7 +1019,8 @@ public class DelegatedResourceCapsuleDiffblueTest {
    * <p>Method under test: {@link DelegatedResourceCapsule#addFrozenBalanceForBandwidth(long, long)}
    */
   @Test
-  @Category(MaintainedByDiffblue.class)
+  @Category(ContributionFromDiffblue.class)
+  @ManagedByDiffblue
   @MethodsUnderTest({"void DelegatedResourceCapsule.addFrozenBalanceForBandwidth(long, long)"})
   public void testAddFrozenBalanceForBandwidth2() {
     // Arrange
@@ -1006,7 +1050,8 @@ public class DelegatedResourceCapsuleDiffblueTest {
    * <p>Method under test: {@link DelegatedResourceCapsule#addFrozenBalanceForBandwidth(long, long)}
    */
   @Test
-  @Category(MaintainedByDiffblue.class)
+  @Category(ContributionFromDiffblue.class)
+  @ManagedByDiffblue
   @MethodsUnderTest({"void DelegatedResourceCapsule.addFrozenBalanceForBandwidth(long, long)"})
   public void testAddFrozenBalanceForBandwidth3() {
     // Arrange
@@ -1034,7 +1079,8 @@ public class DelegatedResourceCapsuleDiffblueTest {
    * <p>Method under test: {@link DelegatedResourceCapsule#getExpireTimeForBandwidth()}
    */
   @Test
-  @Category(MaintainedByDiffblue.class)
+  @Category(ContributionFromDiffblue.class)
+  @ManagedByDiffblue
   @MethodsUnderTest({"long DelegatedResourceCapsule.getExpireTimeForBandwidth()"})
   public void testGetExpireTimeForBandwidth_thenReturnZero() {
     // Arrange
@@ -1056,7 +1102,8 @@ public class DelegatedResourceCapsuleDiffblueTest {
    * DelegatedResourceCapsule#getExpireTimeForEnergy(DynamicPropertiesStore)}
    */
   @Test
-  @Category(MaintainedByDiffblue.class)
+  @Category(ContributionFromDiffblue.class)
+  @ManagedByDiffblue
   @MethodsUnderTest({
     "long DelegatedResourceCapsule.getExpireTimeForEnergy(DynamicPropertiesStore)"
   })
@@ -1088,7 +1135,8 @@ public class DelegatedResourceCapsuleDiffblueTest {
    * DelegatedResourceCapsule#getExpireTimeForEnergy(DynamicPropertiesStore)}
    */
   @Test
-  @Category(MaintainedByDiffblue.class)
+  @Category(ContributionFromDiffblue.class)
+  @ManagedByDiffblue
   @MethodsUnderTest({
     "long DelegatedResourceCapsule.getExpireTimeForEnergy(DynamicPropertiesStore)"
   })
@@ -1118,7 +1166,8 @@ public class DelegatedResourceCapsuleDiffblueTest {
    * <p>Method under test: {@link DelegatedResourceCapsule#getExpireTimeForEnergy()}
    */
   @Test
-  @Category(MaintainedByDiffblue.class)
+  @Category(ContributionFromDiffblue.class)
+  @ManagedByDiffblue
   @MethodsUnderTest({"long DelegatedResourceCapsule.getExpireTimeForEnergy()"})
   public void testGetExpireTimeForEnergy_thenReturnZero() {
     // Arrange
@@ -1134,7 +1183,8 @@ public class DelegatedResourceCapsuleDiffblueTest {
    * <p>Method under test: {@link DelegatedResourceCapsule#setExpireTimeForEnergy(long)}
    */
   @Test
-  @Category(MaintainedByDiffblue.class)
+  @Category(ContributionFromDiffblue.class)
+  @ManagedByDiffblue
   @MethodsUnderTest({"void DelegatedResourceCapsule.setExpireTimeForEnergy(long)"})
   public void testSetExpireTimeForEnergy() {
     // Arrange
@@ -1157,7 +1207,8 @@ public class DelegatedResourceCapsuleDiffblueTest {
    * <p>Method under test: {@link DelegatedResourceCapsule#setExpireTimeForEnergy(long)}
    */
   @Test
-  @Category(MaintainedByDiffblue.class)
+  @Category(ContributionFromDiffblue.class)
+  @ManagedByDiffblue
   @MethodsUnderTest({"void DelegatedResourceCapsule.setExpireTimeForEnergy(long)"})
   public void testSetExpireTimeForEnergy2() {
     // Arrange
@@ -1182,7 +1233,8 @@ public class DelegatedResourceCapsuleDiffblueTest {
    * <p>Method under test: {@link DelegatedResourceCapsule#setExpireTimeForEnergy(long)}
    */
   @Test
-  @Category(MaintainedByDiffblue.class)
+  @Category(ContributionFromDiffblue.class)
+  @ManagedByDiffblue
   @MethodsUnderTest({"void DelegatedResourceCapsule.setExpireTimeForEnergy(long)"})
   public void testSetExpireTimeForEnergy3() {
     // Arrange
@@ -1207,7 +1259,8 @@ public class DelegatedResourceCapsuleDiffblueTest {
    * <p>Method under test: {@link DelegatedResourceCapsule#setExpireTimeForBandwidth(long)}
    */
   @Test
-  @Category(MaintainedByDiffblue.class)
+  @Category(ContributionFromDiffblue.class)
+  @ManagedByDiffblue
   @MethodsUnderTest({"void DelegatedResourceCapsule.setExpireTimeForBandwidth(long)"})
   public void testSetExpireTimeForBandwidth() {
     // Arrange
@@ -1230,7 +1283,8 @@ public class DelegatedResourceCapsuleDiffblueTest {
    * <p>Method under test: {@link DelegatedResourceCapsule#setExpireTimeForBandwidth(long)}
    */
   @Test
-  @Category(MaintainedByDiffblue.class)
+  @Category(ContributionFromDiffblue.class)
+  @ManagedByDiffblue
   @MethodsUnderTest({"void DelegatedResourceCapsule.setExpireTimeForBandwidth(long)"})
   public void testSetExpireTimeForBandwidth2() {
     // Arrange
@@ -1255,7 +1309,8 @@ public class DelegatedResourceCapsuleDiffblueTest {
    * <p>Method under test: {@link DelegatedResourceCapsule#setExpireTimeForBandwidth(long)}
    */
   @Test
-  @Category(MaintainedByDiffblue.class)
+  @Category(ContributionFromDiffblue.class)
+  @ManagedByDiffblue
   @MethodsUnderTest({"void DelegatedResourceCapsule.setExpireTimeForBandwidth(long)"})
   public void testSetExpireTimeForBandwidth3() {
     // Arrange

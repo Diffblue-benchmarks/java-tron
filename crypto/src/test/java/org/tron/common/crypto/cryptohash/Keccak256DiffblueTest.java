@@ -3,7 +3,8 @@ package org.tron.common.crypto.cryptohash;
 import static org.junit.Assert.assertEquals;
 import static org.junit.Assert.assertNull;
 import static org.junit.Assert.assertTrue;
-import com.diffblue.cover.annotations.MaintainedByDiffblue;
+import com.diffblue.cover.annotations.ContributionFromDiffblue;
+import com.diffblue.cover.annotations.ManagedByDiffblue;
 import com.diffblue.cover.annotations.MethodsUnderTest;
 import org.junit.Test;
 import org.junit.experimental.categories.Category;
@@ -15,7 +16,8 @@ public class Keccak256DiffblueTest {
    * <p>Method under test: default or parameterless constructor of {@link Keccak256}
    */
   @Test
-  @Category(MaintainedByDiffblue.class)
+  @Category(ContributionFromDiffblue.class)
+  @ManagedByDiffblue
   @MethodsUnderTest({"void Keccak256.<init>()"})
   public void testNewKeccak256() {
     // Arrange and Act
@@ -38,7 +40,8 @@ public class Keccak256DiffblueTest {
    * <p>Method under test: {@link Keccak256#copy()}
    */
   @Test
-  @Category(MaintainedByDiffblue.class)
+  @Category(ContributionFromDiffblue.class)
+  @ManagedByDiffblue
   @MethodsUnderTest({"Digest Keccak256.copy()"})
   public void testCopy() {
     // Arrange and Act
@@ -62,7 +65,8 @@ public class Keccak256DiffblueTest {
    * <p>Method under test: {@link Keccak256#engineGetDigestLength()}
    */
   @Test
-  @Category(MaintainedByDiffblue.class)
+  @Category(ContributionFromDiffblue.class)
+  @ManagedByDiffblue
   @MethodsUnderTest({"int Keccak256.engineGetDigestLength()"})
   public void testEngineGetDigestLength() {
     // Arrange, Act and Assert
@@ -75,7 +79,8 @@ public class Keccak256DiffblueTest {
    * <p>Method under test: {@link Keccak256#engineDigest()}
    */
   @Test
-  @Category(MaintainedByDiffblue.class)
+  @Category(ContributionFromDiffblue.class)
+  @ManagedByDiffblue
   @MethodsUnderTest({"byte[] Keccak256.engineDigest()"})
   public void testEngineDigest() {
     // Arrange, Act and Assert

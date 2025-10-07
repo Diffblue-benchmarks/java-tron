@@ -5,7 +5,8 @@ import static org.junit.Assert.assertFalse;
 import static org.junit.Assert.assertNull;
 import static org.junit.Assert.assertSame;
 import static org.junit.Assert.assertTrue;
-import com.diffblue.cover.annotations.MaintainedByDiffblue;
+import com.diffblue.cover.annotations.ContributionFromDiffblue;
+import com.diffblue.cover.annotations.ManagedByDiffblue;
 import com.diffblue.cover.annotations.MethodsUnderTest;
 import java.net.InetAddress;
 import java.net.InetSocketAddress;
@@ -39,7 +40,8 @@ public class CommonParameterDiffblueTest {
    * <p>Method under test: {@link CommonParameter#getSafeLruCacheSize()}
    */
   @Test
-  @Category(MaintainedByDiffblue.class)
+  @Category(ContributionFromDiffblue.class)
+  @ManagedByDiffblue
   @MethodsUnderTest({"int CommonParameter.getSafeLruCacheSize()"})
   public void testGetSafeLruCacheSize_givenCommonParameter() {
     // Arrange, Act and Assert
@@ -56,7 +58,8 @@ public class CommonParameterDiffblueTest {
    * <p>Method under test: {@link CommonParameter#getSafeLruCacheSize()}
    */
   @Test
-  @Category(MaintainedByDiffblue.class)
+  @Category(ContributionFromDiffblue.class)
+  @ManagedByDiffblue
   @MethodsUnderTest({"int CommonParameter.getSafeLruCacheSize()"})
   public void testGetSafeLruCacheSize_givenCommonParameter2() {
     // Arrange, Act and Assert
@@ -73,7 +76,8 @@ public class CommonParameterDiffblueTest {
    * <p>Method under test: {@link CommonParameter#getSafeLruCacheSize()}
    */
   @Test
-  @Category(MaintainedByDiffblue.class)
+  @Category(ContributionFromDiffblue.class)
+  @ManagedByDiffblue
   @MethodsUnderTest({"int CommonParameter.getSafeLruCacheSize()"})
   public void testGetSafeLruCacheSize_givenCommonParameterLruCacheSizeIsZero() {
     // Arrange
@@ -94,7 +98,8 @@ public class CommonParameterDiffblueTest {
    * <p>Method under test: {@link CommonParameter#getSafeLruCacheSize()}
    */
   @Test
-  @Category(MaintainedByDiffblue.class)
+  @Category(ContributionFromDiffblue.class)
+  @ManagedByDiffblue
   @MethodsUnderTest({"int CommonParameter.getSafeLruCacheSize()"})
   public void testGetSafeLruCacheSize_givenCommonParameterLruCacheSizeIsZero2() {
     // Arrange
@@ -465,7 +470,8 @@ public class CommonParameterDiffblueTest {
    * </ul>
    */
   @Test
-  @Category(MaintainedByDiffblue.class)
+  @Category(ContributionFromDiffblue.class)
+  @ManagedByDiffblue
   @MethodsUnderTest({
     "List CommonParameter.getActiveNodes()",
     "Set CommonParameter.getActuatorSet()",
@@ -1406,7 +1412,8 @@ public class CommonParameterDiffblueTest {
    * <p>Method under test: default or parameterless constructor of {@link CommonParameter}
    */
   @Test
-  @Category(MaintainedByDiffblue.class)
+  @Category(ContributionFromDiffblue.class)
+  @ManagedByDiffblue
   @MethodsUnderTest({"void CommonParameter.<init>()"})
   public void testNewCommonParameter() {
     // Arrange and Act
@@ -1618,7 +1625,8 @@ public class CommonParameterDiffblueTest {
    * <p>Method under test: default or parameterless constructor of {@link CommonParameter}
    */
   @Test
-  @Category(MaintainedByDiffblue.class)
+  @Category(ContributionFromDiffblue.class)
+  @ManagedByDiffblue
   @MethodsUnderTest({"void CommonParameter.<init>()"})
   public void testNewCommonParameter2() {
     // Arrange and Act

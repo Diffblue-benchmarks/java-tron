@@ -5,7 +5,8 @@ import static org.junit.Assert.assertEquals;
 import static org.junit.Assert.assertFalse;
 import static org.junit.Assert.assertNotEquals;
 import static org.junit.Assert.assertTrue;
-import com.diffblue.cover.annotations.MaintainedByDiffblue;
+import com.diffblue.cover.annotations.ContributionFromDiffblue;
+import com.diffblue.cover.annotations.ManagedByDiffblue;
 import com.diffblue.cover.annotations.MethodsUnderTest;
 import com.google.protobuf.ByteString;
 import com.google.protobuf.ByteString.ByteIterator;
@@ -23,7 +24,8 @@ public class Sha256HashDiffblueTest {
    * <p>Method under test: {@link Sha256Hash#of(boolean, byte[])}
    */
   @Test
-  @Category(MaintainedByDiffblue.class)
+  @Category(ContributionFromDiffblue.class)
+  @ManagedByDiffblue
   @MethodsUnderTest({"Sha256Hash Sha256Hash.of(boolean, byte[])"})
   public void testOfWithIsSha256Contents() throws UnsupportedEncodingException {
     // Arrange and Act
@@ -58,7 +60,8 @@ public class Sha256HashDiffblueTest {
    * <p>Method under test: {@link Sha256Hash#of(boolean, byte[])}
    */
   @Test
-  @Category(MaintainedByDiffblue.class)
+  @Category(ContributionFromDiffblue.class)
+  @ManagedByDiffblue
   @MethodsUnderTest({"Sha256Hash Sha256Hash.of(boolean, byte[])"})
   public void testOfWithIsSha256Contents_thenReturnByteStringIteratorNextByteValueIsMinusTwo() {
     // Arrange and Act
@@ -121,7 +124,8 @@ public class Sha256HashDiffblueTest {
    * <p>Method under test: {@link Sha256Hash#newDigest()}
    */
   @Test
-  @Category(MaintainedByDiffblue.class)
+  @Category(ContributionFromDiffblue.class)
+  @ManagedByDiffblue
   @MethodsUnderTest({"MessageDigest Sha256Hash.newDigest()"})
   public void testNewDigest() {
     // Arrange and Act
@@ -147,7 +151,8 @@ public class Sha256HashDiffblueTest {
    * <p>Method under test: {@link Sha256Hash#newSM3Digest()}
    */
   @Test
-  @Category(MaintainedByDiffblue.class)
+  @Category(ContributionFromDiffblue.class)
+  @ManagedByDiffblue
   @MethodsUnderTest({"SM3Digest Sha256Hash.newSM3Digest()"})
   public void testNewSM3Digest() {
     // Arrange and Act
@@ -166,7 +171,8 @@ public class Sha256HashDiffblueTest {
    * <p>Method under test: {@link Sha256Hash#hash(boolean, byte[], int, int)}
    */
   @Test
-  @Category(MaintainedByDiffblue.class)
+  @Category(ContributionFromDiffblue.class)
+  @ManagedByDiffblue
   @MethodsUnderTest({"byte[] Sha256Hash.hash(boolean, byte[], int, int)"})
   public void testHashWithIsSha256InputOffsetLength() throws UnsupportedEncodingException {
     // Arrange and Act
@@ -188,7 +194,8 @@ public class Sha256HashDiffblueTest {
    * <p>Method under test: {@link Sha256Hash#hash(boolean, byte[], int, int)}
    */
   @Test
-  @Category(MaintainedByDiffblue.class)
+  @Category(ContributionFromDiffblue.class)
+  @ManagedByDiffblue
   @MethodsUnderTest({"byte[] Sha256Hash.hash(boolean, byte[], int, int)"})
   public void testHashWithIsSha256InputOffsetLength2() {
     // Arrange and Act
@@ -211,7 +218,8 @@ public class Sha256HashDiffblueTest {
    * <p>Method under test: {@link Sha256Hash#hash(boolean, byte[], int, int)}
    */
   @Test
-  @Category(MaintainedByDiffblue.class)
+  @Category(ContributionFromDiffblue.class)
+  @ManagedByDiffblue
   @MethodsUnderTest({"byte[] Sha256Hash.hash(boolean, byte[], int, int)"})
   public void testHashWithIsSha256InputOffsetLength3() {
     // Arrange and Act
@@ -266,7 +274,8 @@ public class Sha256HashDiffblueTest {
    * <p>Method under test: {@link Sha256Hash#hash(boolean, byte[])}
    */
   @Test
-  @Category(MaintainedByDiffblue.class)
+  @Category(ContributionFromDiffblue.class)
+  @ManagedByDiffblue
   @MethodsUnderTest({"byte[] Sha256Hash.hash(boolean, byte[])"})
   public void testHashWithIsSha256Input_thenReturnArrayOfByteWithBackslashAndLeftSquareBracket()
       throws UnsupportedEncodingException {
@@ -293,7 +302,8 @@ public class Sha256HashDiffblueTest {
    * <p>Method under test: {@link Sha256Hash#hash(boolean, byte[])}
    */
   @Test
-  @Category(MaintainedByDiffblue.class)
+  @Category(ContributionFromDiffblue.class)
+  @ManagedByDiffblue
   @MethodsUnderTest({"byte[] Sha256Hash.hash(boolean, byte[])"})
   public void testHashWithIsSha256Input_whenFalse_thenReturnArrayOfByteWithEAndMinusTwo() {
     // Arrange and Act
@@ -355,7 +365,8 @@ public class Sha256HashDiffblueTest {
    * </ul>
    */
   @Test
-  @Category(MaintainedByDiffblue.class)
+  @Category(ContributionFromDiffblue.class)
+  @ManagedByDiffblue
   @MethodsUnderTest({"boolean Sha256Hash.equals(Object)", "int Sha256Hash.hashCode()"})
   public void testEqualsAndHashCode_whenOtherIsEqual_thenReturnEqual() {
     // Arrange
@@ -383,7 +394,8 @@ public class Sha256HashDiffblueTest {
    * </ul>
    */
   @Test
-  @Category(MaintainedByDiffblue.class)
+  @Category(ContributionFromDiffblue.class)
+  @ManagedByDiffblue
   @MethodsUnderTest({"boolean Sha256Hash.equals(Object)", "int Sha256Hash.hashCode()"})
   public void testEqualsAndHashCode_whenOtherIsSame_thenReturnEqual() {
     // Arrange
@@ -406,7 +418,8 @@ public class Sha256HashDiffblueTest {
    * <p>Method under test: {@link Sha256Hash#equals(Object)}
    */
   @Test
-  @Category(MaintainedByDiffblue.class)
+  @Category(ContributionFromDiffblue.class)
+  @ManagedByDiffblue
   @MethodsUnderTest({"boolean Sha256Hash.equals(Object)", "int Sha256Hash.hashCode()"})
   public void testEquals_whenOtherIsDifferent_thenReturnNotEqual() {
     // Arrange, Act and Assert
@@ -424,7 +437,8 @@ public class Sha256HashDiffblueTest {
    * <p>Method under test: {@link Sha256Hash#equals(Object)}
    */
   @Test
-  @Category(MaintainedByDiffblue.class)
+  @Category(ContributionFromDiffblue.class)
+  @ManagedByDiffblue
   @MethodsUnderTest({"boolean Sha256Hash.equals(Object)", "int Sha256Hash.hashCode()"})
   public void testEquals_whenOtherIsNull_thenReturnNotEqual() {
     // Arrange, Act and Assert
@@ -442,7 +456,8 @@ public class Sha256HashDiffblueTest {
    * <p>Method under test: {@link Sha256Hash#equals(Object)}
    */
   @Test
-  @Category(MaintainedByDiffblue.class)
+  @Category(ContributionFromDiffblue.class)
+  @ManagedByDiffblue
   @MethodsUnderTest({"boolean Sha256Hash.equals(Object)", "int Sha256Hash.hashCode()"})
   public void testEquals_whenOtherIsWrongType_thenReturnNotEqual() {
     // Arrange, Act and Assert
@@ -455,7 +470,8 @@ public class Sha256HashDiffblueTest {
    * <p>Method under test: {@link Sha256Hash#getByteString()}
    */
   @Test
-  @Category(MaintainedByDiffblue.class)
+  @Category(ContributionFromDiffblue.class)
+  @ManagedByDiffblue
   @MethodsUnderTest({"ByteString Sha256Hash.getByteString()"})
   public void testGetByteString() {
     // Arrange and Act
@@ -486,7 +502,8 @@ public class Sha256HashDiffblueTest {
    * <p>Method under test: {@link Sha256Hash#compareTo(Sha256Hash)}
    */
   @Test
-  @Category(MaintainedByDiffblue.class)
+  @Category(ContributionFromDiffblue.class)
+  @ManagedByDiffblue
   @MethodsUnderTest({"int Sha256Hash.compareTo(Sha256Hash)"})
   public void testCompareToWithSha256Hash_whenZero_hash_thenReturnZero() {
     // Arrange, Act and Assert

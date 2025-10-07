@@ -4,7 +4,8 @@ import static org.junit.Assert.assertEquals;
 import static org.junit.Assert.assertFalse;
 import static org.junit.Assert.assertNull;
 import static org.junit.Assert.assertTrue;
-import com.diffblue.cover.annotations.MaintainedByDiffblue;
+import com.diffblue.cover.annotations.ContributionFromDiffblue;
+import com.diffblue.cover.annotations.ManagedByDiffblue;
 import com.diffblue.cover.annotations.MethodsUnderTest;
 import java.io.IOException;
 import org.iq80.leveldb.CompressionType;
@@ -20,7 +21,8 @@ public class DbArchiveDiffblueTest {
    * <p>Method under test: {@link ArchiveManifest#checkManifest(String)}
    */
   @Test
-  @Category(MaintainedByDiffblue.class)
+  @Category(ContributionFromDiffblue.class)
+  @ManagedByDiffblue
   @MethodsUnderTest({"boolean ArchiveManifest.checkManifest(String)"})
   public void testArchiveManifestCheckManifest() throws IOException {
     // Arrange
@@ -40,7 +42,8 @@ public class DbArchiveDiffblueTest {
    * <p>Method under test: {@link ArchiveManifest#ArchiveManifest(String, String, int, int)}
    */
   @Test
-  @Category(MaintainedByDiffblue.class)
+  @Category(ContributionFromDiffblue.class)
+  @ManagedByDiffblue
   @MethodsUnderTest({"void ArchiveManifest.<init>(String, String, int, int)"})
   public void testArchiveManifestNewArchiveManifest_whenMinusOne() throws IOException {
     // Arrange and Act
@@ -60,7 +63,8 @@ public class DbArchiveDiffblueTest {
    * <p>Method under test: {@link ArchiveManifest#ArchiveManifest(String, String, int, int)}
    */
   @Test
-  @Category(MaintainedByDiffblue.class)
+  @Category(ContributionFromDiffblue.class)
+  @ManagedByDiffblue
   @MethodsUnderTest({"void ArchiveManifest.<init>(String, String, int, int)"})
   public void testArchiveManifestNewArchiveManifest_whenThree() throws IOException {
     // Arrange and Act
@@ -80,7 +84,8 @@ public class DbArchiveDiffblueTest {
    * <p>Method under test: {@link ArchiveManifest#ArchiveManifest(String, String, int, int)}
    */
   @Test
-  @Category(MaintainedByDiffblue.class)
+  @Category(ContributionFromDiffblue.class)
+  @ManagedByDiffblue
   @MethodsUnderTest({"void ArchiveManifest.<init>(String, String, int, int)"})
   public void testArchiveManifestNewArchiveManifest_whenZero() throws IOException {
     // Arrange and Act
@@ -96,7 +101,8 @@ public class DbArchiveDiffblueTest {
    * <p>Method under test: {@link ArchiveManifest#newDefaultLevelDbOptions()}
    */
   @Test
-  @Category(MaintainedByDiffblue.class)
+  @Category(ContributionFromDiffblue.class)
+  @ManagedByDiffblue
   @MethodsUnderTest({"Options ArchiveManifest.newDefaultLevelDbOptions()"})
   public void testArchiveManifestNewDefaultLevelDbOptions() {
     // Arrange and Act
@@ -125,7 +131,8 @@ public class DbArchiveDiffblueTest {
    * <p>Method under test: default or parameterless constructor of {@link DbArchive}
    */
   @Test
-  @Category(MaintainedByDiffblue.class)
+  @Category(ContributionFromDiffblue.class)
+  @ManagedByDiffblue
   @MethodsUnderTest({"void DbArchive.<init>()"})
   public void testNewDbArchive() {
     // Arrange, Act and Assert

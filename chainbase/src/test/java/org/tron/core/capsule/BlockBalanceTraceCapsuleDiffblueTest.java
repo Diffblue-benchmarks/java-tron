@@ -9,7 +9,8 @@ import static org.junit.Assert.assertTrue;
 import static org.mockito.Mockito.mock;
 import static org.mockito.Mockito.verify;
 import static org.mockito.Mockito.when;
-import com.diffblue.cover.annotations.MaintainedByDiffblue;
+import com.diffblue.cover.annotations.ContributionFromDiffblue;
+import com.diffblue.cover.annotations.ManagedByDiffblue;
 import com.diffblue.cover.annotations.MethodsUnderTest;
 import com.google.protobuf.ByteString;
 import com.google.protobuf.ByteString.ByteIterator;
@@ -31,7 +32,8 @@ public class BlockBalanceTraceCapsuleDiffblueTest {
    * <p>Method under test: {@link BlockBalanceTraceCapsule#BlockBalanceTraceCapsule()}
    */
   @Test
-  @Category(MaintainedByDiffblue.class)
+  @Category(ContributionFromDiffblue.class)
+  @ManagedByDiffblue
   @MethodsUnderTest({"void BlockBalanceTraceCapsule.<init>()"})
   public void testNewBlockBalanceTraceCapsule() {
     // Arrange and Act
@@ -49,7 +51,8 @@ public class BlockBalanceTraceCapsuleDiffblueTest {
    * <p>Method under test: {@link BlockBalanceTraceCapsule#BlockBalanceTraceCapsule(BlockCapsule)}
    */
   @Test
-  @Category(MaintainedByDiffblue.class)
+  @Category(ContributionFromDiffblue.class)
+  @ManagedByDiffblue
   @MethodsUnderTest({"void BlockBalanceTraceCapsule.<init>(BlockCapsule)"})
   public void testNewBlockBalanceTraceCapsule2() {
     // Arrange
@@ -96,7 +99,8 @@ public class BlockBalanceTraceCapsuleDiffblueTest {
    * <p>Method under test: {@link BlockBalanceTraceCapsule#BlockBalanceTraceCapsule(BlockCapsule)}
    */
   @Test
-  @Category(MaintainedByDiffblue.class)
+  @Category(ContributionFromDiffblue.class)
+  @ManagedByDiffblue
   @MethodsUnderTest({"void BlockBalanceTraceCapsule.<init>(BlockCapsule)"})
   public void testNewBlockBalanceTraceCapsule_thenReturnBlockIdentifierSerializedSizeIsFour() {
     // Arrange
@@ -141,7 +145,8 @@ public class BlockBalanceTraceCapsuleDiffblueTest {
    * <p>Method under test: {@link BlockBalanceTraceCapsule#BlockBalanceTraceCapsule(byte[])}
    */
   @Test
-  @Category(MaintainedByDiffblue.class)
+  @Category(ContributionFromDiffblue.class)
+  @ManagedByDiffblue
   @MethodsUnderTest({"void BlockBalanceTraceCapsule.<init>(byte[])"})
   public void testNewBlockBalanceTraceCapsule_whenArrayOfByteWithAAndTwo() throws BadItemException {
     // Arrange, Act and Assert
@@ -162,7 +167,8 @@ public class BlockBalanceTraceCapsuleDiffblueTest {
    * <p>Method under test: {@link BlockBalanceTraceCapsule#BlockBalanceTraceCapsule(byte[])}
    */
   @Test
-  @Category(MaintainedByDiffblue.class)
+  @Category(ContributionFromDiffblue.class)
+  @ManagedByDiffblue
   @MethodsUnderTest({"void BlockBalanceTraceCapsule.<init>(byte[])"})
   public void testNewBlockBalanceTraceCapsule_whenArrayOfByteWithLfAndLf() throws BadItemException {
     // Arrange, Act and Assert
@@ -183,7 +189,8 @@ public class BlockBalanceTraceCapsuleDiffblueTest {
    * <p>Method under test: {@link BlockBalanceTraceCapsule#BlockBalanceTraceCapsule(byte[])}
    */
   @Test
-  @Category(MaintainedByDiffblue.class)
+  @Category(ContributionFromDiffblue.class)
+  @ManagedByDiffblue
   @MethodsUnderTest({"void BlockBalanceTraceCapsule.<init>(byte[])"})
   public void testNewBlockBalanceTraceCapsule_whenArrayOfByteWithLfAndTwo()
       throws BadItemException {
@@ -205,7 +212,8 @@ public class BlockBalanceTraceCapsuleDiffblueTest {
    * <p>Method under test: {@link BlockBalanceTraceCapsule#BlockBalanceTraceCapsule(byte[])}
    */
   @Test
-  @Category(MaintainedByDiffblue.class)
+  @Category(ContributionFromDiffblue.class)
+  @ManagedByDiffblue
   @MethodsUnderTest({"void BlockBalanceTraceCapsule.<init>(byte[])"})
   public void testNewBlockBalanceTraceCapsule_whenArrayOfByteWithLfAndTwo2()
       throws BadItemException {
@@ -227,7 +235,8 @@ public class BlockBalanceTraceCapsuleDiffblueTest {
    * <p>Method under test: {@link BlockBalanceTraceCapsule#BlockBalanceTraceCapsule(byte[])}
    */
   @Test
-  @Category(MaintainedByDiffblue.class)
+  @Category(ContributionFromDiffblue.class)
+  @ManagedByDiffblue
   @MethodsUnderTest({"void BlockBalanceTraceCapsule.<init>(byte[])"})
   public void testNewBlockBalanceTraceCapsule_whenArrayOfByteWithLfAndZero()
       throws BadItemException {
@@ -247,7 +256,8 @@ public class BlockBalanceTraceCapsuleDiffblueTest {
    * <p>Method under test: {@link BlockBalanceTraceCapsule#BlockBalanceTraceCapsule(byte[])}
    */
   @Test
-  @Category(MaintainedByDiffblue.class)
+  @Category(ContributionFromDiffblue.class)
+  @ManagedByDiffblue
   @MethodsUnderTest({"void BlockBalanceTraceCapsule.<init>(byte[])"})
   public void testNewBlockBalanceTraceCapsule_whenArrayOfByteWithMinusOneAndX()
       throws BadItemException {
@@ -267,7 +277,8 @@ public class BlockBalanceTraceCapsuleDiffblueTest {
    * <p>Method under test: {@link BlockBalanceTraceCapsule#BlockBalanceTraceCapsule(byte[])}
    */
   @Test
-  @Category(MaintainedByDiffblue.class)
+  @Category(ContributionFromDiffblue.class)
+  @ManagedByDiffblue
   @MethodsUnderTest({"void BlockBalanceTraceCapsule.<init>(byte[])"})
   public void testNewBlockBalanceTraceCapsule_whenArrayOfByteWithSixteenAndX()
       throws BadItemException {
@@ -287,7 +298,8 @@ public class BlockBalanceTraceCapsuleDiffblueTest {
    * <p>Method under test: {@link BlockBalanceTraceCapsule#BlockBalanceTraceCapsule(byte[])}
    */
   @Test
-  @Category(MaintainedByDiffblue.class)
+  @Category(ContributionFromDiffblue.class)
+  @ManagedByDiffblue
   @MethodsUnderTest({"void BlockBalanceTraceCapsule.<init>(byte[])"})
   public void testNewBlockBalanceTraceCapsule_whenArrayOfByteWithTwentySixAndLf()
       throws BadItemException {
@@ -309,7 +321,8 @@ public class BlockBalanceTraceCapsuleDiffblueTest {
    * <p>Method under test: {@link BlockBalanceTraceCapsule#BlockBalanceTraceCapsule(byte[])}
    */
   @Test
-  @Category(MaintainedByDiffblue.class)
+  @Category(ContributionFromDiffblue.class)
+  @ManagedByDiffblue
   @MethodsUnderTest({"void BlockBalanceTraceCapsule.<init>(byte[])"})
   public void testNewBlockBalanceTraceCapsule_whenArrayOfByteWithTwentySixAndTwo()
       throws BadItemException {
@@ -331,7 +344,8 @@ public class BlockBalanceTraceCapsuleDiffblueTest {
    * <p>Method under test: {@link BlockBalanceTraceCapsule#BlockBalanceTraceCapsule(byte[])}
    */
   @Test
-  @Category(MaintainedByDiffblue.class)
+  @Category(ContributionFromDiffblue.class)
+  @ManagedByDiffblue
   @MethodsUnderTest({"void BlockBalanceTraceCapsule.<init>(byte[])"})
   public void testNewBlockBalanceTraceCapsule_whenArrayOfByteWithTwentySixAndTwo2()
       throws BadItemException {
@@ -353,7 +367,8 @@ public class BlockBalanceTraceCapsuleDiffblueTest {
    * <p>Method under test: {@link BlockBalanceTraceCapsule#BlockBalanceTraceCapsule(byte[])}
    */
   @Test
-  @Category(MaintainedByDiffblue.class)
+  @Category(ContributionFromDiffblue.class)
+  @ManagedByDiffblue
   @MethodsUnderTest({"void BlockBalanceTraceCapsule.<init>(byte[])"})
   public void testNewBlockBalanceTraceCapsule_whenArrayOfByteWithTwentySixAndTwo3()
       throws BadItemException {
@@ -375,7 +390,8 @@ public class BlockBalanceTraceCapsuleDiffblueTest {
    * <p>Method under test: {@link BlockBalanceTraceCapsule#BlockBalanceTraceCapsule(byte[])}
    */
   @Test
-  @Category(MaintainedByDiffblue.class)
+  @Category(ContributionFromDiffblue.class)
+  @ManagedByDiffblue
   @MethodsUnderTest({"void BlockBalanceTraceCapsule.<init>(byte[])"})
   public void testNewBlockBalanceTraceCapsule_whenArrayOfByteWithTwentySixAndX()
       throws BadItemException {
@@ -395,7 +411,8 @@ public class BlockBalanceTraceCapsuleDiffblueTest {
    * <p>Method under test: {@link BlockBalanceTraceCapsule#BlockBalanceTraceCapsule(byte[])}
    */
   @Test
-  @Category(MaintainedByDiffblue.class)
+  @Category(ContributionFromDiffblue.class)
+  @ManagedByDiffblue
   @MethodsUnderTest({"void BlockBalanceTraceCapsule.<init>(byte[])"})
   public void testNewBlockBalanceTraceCapsule_whenArrayOfByteWithTwentySixAndZero()
       throws BadItemException {
@@ -415,7 +432,8 @@ public class BlockBalanceTraceCapsuleDiffblueTest {
    * <p>Method under test: {@link BlockBalanceTraceCapsule#BlockBalanceTraceCapsule(byte[])}
    */
   @Test
-  @Category(MaintainedByDiffblue.class)
+  @Category(ContributionFromDiffblue.class)
+  @ManagedByDiffblue
   @MethodsUnderTest({"void BlockBalanceTraceCapsule.<init>(byte[])"})
   public void testNewBlockBalanceTraceCapsule_whenAxaxaxaxBytesIsUtf8()
       throws UnsupportedEncodingException, BadItemException {
@@ -435,7 +453,8 @@ public class BlockBalanceTraceCapsuleDiffblueTest {
    * <p>Method under test: {@link BlockBalanceTraceCapsule#BlockBalanceTraceCapsule(byte[])}
    */
   @Test
-  @Category(MaintainedByDiffblue.class)
+  @Category(ContributionFromDiffblue.class)
+  @ManagedByDiffblue
   @MethodsUnderTest({"void BlockBalanceTraceCapsule.<init>(byte[])"})
   public void testNewBlockBalanceTraceCapsule_whenEmptyArrayOfByte_thenReturnTimestampIsZero()
       throws BadItemException {
@@ -460,7 +479,8 @@ public class BlockBalanceTraceCapsuleDiffblueTest {
    * <p>Method under test: {@link BlockBalanceTraceCapsule#BlockBalanceTraceCapsule(byte[])}
    */
   @Test
-  @Category(MaintainedByDiffblue.class)
+  @Category(ContributionFromDiffblue.class)
+  @ManagedByDiffblue
   @MethodsUnderTest({"void BlockBalanceTraceCapsule.<init>(byte[])"})
   public void testNewBlockBalanceTraceCapsule_whenLf_thenThrowBadItemException()
       throws BadItemException {
@@ -483,7 +503,8 @@ public class BlockBalanceTraceCapsuleDiffblueTest {
    * <p>Method under test: {@link BlockBalanceTraceCapsule#BlockBalanceTraceCapsule(byte[])}
    */
   @Test
-  @Category(MaintainedByDiffblue.class)
+  @Category(ContributionFromDiffblue.class)
+  @ManagedByDiffblue
   @MethodsUnderTest({"void BlockBalanceTraceCapsule.<init>(byte[])"})
   public void testNewBlockBalanceTraceCapsule_whenLf_thenThrowBadItemException2()
       throws BadItemException {
@@ -506,7 +527,8 @@ public class BlockBalanceTraceCapsuleDiffblueTest {
    * <p>Method under test: {@link BlockBalanceTraceCapsule#BlockBalanceTraceCapsule(byte[])}
    */
   @Test
-  @Category(MaintainedByDiffblue.class)
+  @Category(ContributionFromDiffblue.class)
+  @ManagedByDiffblue
   @MethodsUnderTest({"void BlockBalanceTraceCapsule.<init>(byte[])"})
   public void testNewBlockBalanceTraceCapsule_whenQuotationMark_thenThrowBadItemException()
       throws BadItemException {
@@ -529,7 +551,8 @@ public class BlockBalanceTraceCapsuleDiffblueTest {
    * <p>Method under test: {@link BlockBalanceTraceCapsule#BlockBalanceTraceCapsule(byte[])}
    */
   @Test
-  @Category(MaintainedByDiffblue.class)
+  @Category(ContributionFromDiffblue.class)
+  @ManagedByDiffblue
   @MethodsUnderTest({"void BlockBalanceTraceCapsule.<init>(byte[])"})
   public void testNewBlockBalanceTraceCapsule_whenXaxaxaxBytesIsUtf8_thenThrowBadItemException()
       throws UnsupportedEncodingException, BadItemException {
@@ -548,7 +571,8 @@ public class BlockBalanceTraceCapsuleDiffblueTest {
    * <p>Method under test: {@link BlockBalanceTraceCapsule#BlockBalanceTraceCapsule(byte[])}
    */
   @Test
-  @Category(MaintainedByDiffblue.class)
+  @Category(ContributionFromDiffblue.class)
+  @ManagedByDiffblue
   @MethodsUnderTest({"void BlockBalanceTraceCapsule.<init>(byte[])"})
   public void testNewBlockBalanceTraceCapsule_whenXxaxaxaxBytesIsUtf8()
       throws UnsupportedEncodingException, BadItemException {
@@ -563,7 +587,8 @@ public class BlockBalanceTraceCapsuleDiffblueTest {
    * <p>Method under test: {@link BlockBalanceTraceCapsule#getData()}
    */
   @Test
-  @Category(MaintainedByDiffblue.class)
+  @Category(ContributionFromDiffblue.class)
+  @ManagedByDiffblue
   @MethodsUnderTest({"byte[] BlockBalanceTraceCapsule.getData()"})
   public void testGetData() {
     // Arrange, Act and Assert
@@ -576,7 +601,8 @@ public class BlockBalanceTraceCapsuleDiffblueTest {
    * <p>Method under test: {@link BlockBalanceTraceCapsule#getInstance()}
    */
   @Test
-  @Category(MaintainedByDiffblue.class)
+  @Category(ContributionFromDiffblue.class)
+  @ManagedByDiffblue
   @MethodsUnderTest({"BlockBalanceTrace BlockBalanceTraceCapsule.getInstance()"})
   public void testGetInstance() {
     // Arrange and Act
@@ -606,7 +632,8 @@ public class BlockBalanceTraceCapsuleDiffblueTest {
    * <p>Method under test: {@link BlockBalanceTraceCapsule#getBlockIdentifier()}
    */
   @Test
-  @Category(MaintainedByDiffblue.class)
+  @Category(ContributionFromDiffblue.class)
+  @ManagedByDiffblue
   @MethodsUnderTest({"BlockIdentifier BlockBalanceTraceCapsule.getBlockIdentifier()"})
   public void testGetBlockIdentifier() {
     // Arrange and Act
@@ -630,7 +657,8 @@ public class BlockBalanceTraceCapsuleDiffblueTest {
    * <p>Method under test: {@link BlockBalanceTraceCapsule#getTimestamp()}
    */
   @Test
-  @Category(MaintainedByDiffblue.class)
+  @Category(ContributionFromDiffblue.class)
+  @ManagedByDiffblue
   @MethodsUnderTest({"long BlockBalanceTraceCapsule.getTimestamp()"})
   public void testGetTimestamp() {
     // Arrange, Act and Assert
@@ -643,7 +671,8 @@ public class BlockBalanceTraceCapsuleDiffblueTest {
    * <p>Method under test: {@link BlockBalanceTraceCapsule#getTransactions()}
    */
   @Test
-  @Category(MaintainedByDiffblue.class)
+  @Category(ContributionFromDiffblue.class)
+  @ManagedByDiffblue
   @MethodsUnderTest({"List BlockBalanceTraceCapsule.getTransactions()"})
   public void testGetTransactions() {
     // Arrange, Act and Assert

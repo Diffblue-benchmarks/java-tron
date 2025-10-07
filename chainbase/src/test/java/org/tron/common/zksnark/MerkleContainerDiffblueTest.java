@@ -14,7 +14,8 @@ import static org.mockito.Mockito.doNothing;
 import static org.mockito.Mockito.mock;
 import static org.mockito.Mockito.verify;
 import static org.mockito.Mockito.when;
-import com.diffblue.cover.annotations.MaintainedByDiffblue;
+import com.diffblue.cover.annotations.ContributionFromDiffblue;
+import com.diffblue.cover.annotations.ManagedByDiffblue;
 import com.diffblue.cover.annotations.MethodsUnderTest;
 import java.io.UnsupportedEncodingException;
 import java.util.ArrayList;
@@ -44,7 +45,8 @@ public class MerkleContainerDiffblueTest {
    * TreeBlockIndexStore)}
    */
   @Test
-  @Category(MaintainedByDiffblue.class)
+  @Category(ContributionFromDiffblue.class)
+  @ManagedByDiffblue
   @MethodsUnderTest({
     "MerkleContainer MerkleContainer.createInstance(IncrementalMerkleTreeStore, TreeBlockIndexStore)"
   })
@@ -63,7 +65,8 @@ public class MerkleContainerDiffblueTest {
    * <p>Method under test: {@link MerkleContainer#getCurrentMerkle()}
    */
   @Test
-  @Category(MaintainedByDiffblue.class)
+  @Category(ContributionFromDiffblue.class)
+  @ManagedByDiffblue
   @MethodsUnderTest({"IncrementalMerkleTreeContainer MerkleContainer.getCurrentMerkle()"})
   public void testGetCurrentMerkle() throws ZksnarkException {
     // Arrange
@@ -151,7 +154,8 @@ public class MerkleContainerDiffblueTest {
    * <p>Method under test: {@link MerkleContainer#getCurrentMerkle()}
    */
   @Test
-  @Category(MaintainedByDiffblue.class)
+  @Category(ContributionFromDiffblue.class)
+  @ManagedByDiffblue
   @MethodsUnderTest({"IncrementalMerkleTreeContainer MerkleContainer.getCurrentMerkle()"})
   public void testGetCurrentMerkle2() {
     // Arrange
@@ -189,7 +193,8 @@ public class MerkleContainerDiffblueTest {
    * <p>Method under test: {@link MerkleContainer#getCurrentMerkle()}
    */
   @Test
-  @Category(MaintainedByDiffblue.class)
+  @Category(ContributionFromDiffblue.class)
+  @ManagedByDiffblue
   @MethodsUnderTest({"IncrementalMerkleTreeContainer MerkleContainer.getCurrentMerkle()"})
   public void testGetCurrentMerkle_givenIncrementalMerkleTreeStoreGetReturnNull()
       throws ZksnarkException {
@@ -283,7 +288,8 @@ public class MerkleContainerDiffblueTest {
    * <p>Method under test: {@link MerkleContainer#setCurrentMerkle(IncrementalMerkleTreeContainer)}
    */
   @Test
-  @Category(MaintainedByDiffblue.class)
+  @Category(ContributionFromDiffblue.class)
+  @ManagedByDiffblue
   @MethodsUnderTest({"void MerkleContainer.setCurrentMerkle(IncrementalMerkleTreeContainer)"})
   public void testSetCurrentMerkle_givenIncrementalMerkleTreeStorePutDoesNothing_thenCallsPut() {
     // Arrange
@@ -310,7 +316,8 @@ public class MerkleContainerDiffblueTest {
    * <p>Method under test: {@link MerkleContainer#resetCurrentMerkleTree()}
    */
   @Test
-  @Category(MaintainedByDiffblue.class)
+  @Category(ContributionFromDiffblue.class)
+  @ManagedByDiffblue
   @MethodsUnderTest({"void MerkleContainer.resetCurrentMerkleTree()"})
   public void testResetCurrentMerkleTree() {
     // Arrange
@@ -344,7 +351,8 @@ public class MerkleContainerDiffblueTest {
    * <p>Method under test: {@link MerkleContainer#resetCurrentMerkleTree()}
    */
   @Test
-  @Category(MaintainedByDiffblue.class)
+  @Category(ContributionFromDiffblue.class)
+  @ManagedByDiffblue
   @MethodsUnderTest({"void MerkleContainer.resetCurrentMerkleTree()"})
   public void testResetCurrentMerkleTree_givenIncrementalMerkleTreeStoreGetReturnNull() {
     // Arrange
@@ -376,7 +384,8 @@ public class MerkleContainerDiffblueTest {
    * <p>Method under test: {@link MerkleContainer#resetCurrentMerkleTree()}
    */
   @Test
-  @Category(MaintainedByDiffblue.class)
+  @Category(ContributionFromDiffblue.class)
+  @ManagedByDiffblue
   @MethodsUnderTest({"void MerkleContainer.resetCurrentMerkleTree()"})
   public void testResetCurrentMerkleTree_thenCallsToMerkleTreeContainer() {
     // Arrange
@@ -416,7 +425,8 @@ public class MerkleContainerDiffblueTest {
    * IncrementalMerkleTreeContainer)}
    */
   @Test
-  @Category(MaintainedByDiffblue.class)
+  @Category(ContributionFromDiffblue.class)
+  @ManagedByDiffblue
   @MethodsUnderTest({"void MerkleContainer.setBestMerkle(long, IncrementalMerkleTreeContainer)"})
   public void testSetBestMerkle_thenCallsGetMerkleTreeKey()
       throws UnsupportedEncodingException, ZksnarkException {
@@ -458,7 +468,8 @@ public class MerkleContainerDiffblueTest {
    * <p>Method under test: {@link MerkleContainer#merkleRootExist(byte[])}
    */
   @Test
-  @Category(MaintainedByDiffblue.class)
+  @Category(ContributionFromDiffblue.class)
+  @ManagedByDiffblue
   @MethodsUnderTest({"boolean MerkleContainer.merkleRootExist(byte[])"})
   public void testMerkleRootExist_thenReturnFalse() throws UnsupportedEncodingException {
     // Arrange
@@ -487,7 +498,8 @@ public class MerkleContainerDiffblueTest {
    * <p>Method under test: {@link MerkleContainer#merkleRootExist(byte[])}
    */
   @Test
-  @Category(MaintainedByDiffblue.class)
+  @Category(ContributionFromDiffblue.class)
+  @ManagedByDiffblue
   @MethodsUnderTest({"boolean MerkleContainer.merkleRootExist(byte[])"})
   public void testMerkleRootExist_thenReturnTrue() throws UnsupportedEncodingException {
     // Arrange
@@ -516,7 +528,8 @@ public class MerkleContainerDiffblueTest {
    * <p>Method under test: {@link MerkleContainer#getMerkleTree(byte[])}
    */
   @Test
-  @Category(MaintainedByDiffblue.class)
+  @Category(ContributionFromDiffblue.class)
+  @ManagedByDiffblue
   @MethodsUnderTest({"IncrementalMerkleTreeCapsule MerkleContainer.getMerkleTree(byte[])"})
   public void testGetMerkleTree_thenReturnIncrementalMerkleTreeCapsule()
       throws UnsupportedEncodingException {
@@ -545,7 +558,8 @@ public class MerkleContainerDiffblueTest {
    * MerkleContainer#saveCmIntoMerkleTree(IncrementalMerkleTreeContainer, byte[])}
    */
   @Test
-  @Category(MaintainedByDiffblue.class)
+  @Category(ContributionFromDiffblue.class)
+  @ManagedByDiffblue
   @MethodsUnderTest({
     "IncrementalMerkleTreeContainer MerkleContainer.saveCmIntoMerkleTree(IncrementalMerkleTreeContainer, byte[])"
   })
@@ -597,7 +611,8 @@ public class MerkleContainerDiffblueTest {
    * MerkleContainer#saveCmIntoMerkleTree(IncrementalMerkleTreeContainer, byte[])}
    */
   @Test
-  @Category(MaintainedByDiffblue.class)
+  @Category(ContributionFromDiffblue.class)
+  @ManagedByDiffblue
   @MethodsUnderTest({
     "IncrementalMerkleTreeContainer MerkleContainer.saveCmIntoMerkleTree(IncrementalMerkleTreeContainer, byte[])"
   })
@@ -655,7 +670,8 @@ public class MerkleContainerDiffblueTest {
    * MerkleContainer#saveCmIntoMerkleTree(IncrementalMerkleTreeContainer, byte[])}
    */
   @Test
-  @Category(MaintainedByDiffblue.class)
+  @Category(ContributionFromDiffblue.class)
+  @ManagedByDiffblue
   @MethodsUnderTest({
     "IncrementalMerkleTreeContainer MerkleContainer.saveCmIntoMerkleTree(IncrementalMerkleTreeContainer, byte[])"
   })
@@ -706,7 +722,8 @@ public class MerkleContainerDiffblueTest {
    * IncrementalMerkleTreeCapsule)}
    */
   @Test
-  @Category(MaintainedByDiffblue.class)
+  @Category(ContributionFromDiffblue.class)
+  @ManagedByDiffblue
   @MethodsUnderTest({
     "void MerkleContainer.putMerkleTreeIntoStore(byte[], IncrementalMerkleTreeCapsule)"
   })
@@ -735,7 +752,8 @@ public class MerkleContainerDiffblueTest {
    * <p>Method under test: {@link MerkleContainer#merklePath(byte[])}
    */
   @Test
-  @Category(MaintainedByDiffblue.class)
+  @Category(ContributionFromDiffblue.class)
+  @ManagedByDiffblue
   @MethodsUnderTest({"MerklePath MerkleContainer.merklePath(byte[])"})
   public void testMerklePath() throws UnsupportedEncodingException, ZksnarkException {
     // Arrange
@@ -781,7 +799,8 @@ public class MerkleContainerDiffblueTest {
    * <p>Method under test: {@link MerkleContainer#merklePath(byte[])}
    */
   @Test
-  @Category(MaintainedByDiffblue.class)
+  @Category(ContributionFromDiffblue.class)
+  @ManagedByDiffblue
   @MethodsUnderTest({"MerklePath MerkleContainer.merklePath(byte[])"})
   public void testMerklePath_givenIncrementalMerkleTreeStoreContainReturnFalse_thenReturnNull()
       throws UnsupportedEncodingException, ZksnarkException {
@@ -812,7 +831,8 @@ public class MerkleContainerDiffblueTest {
    * </ul>
    */
   @Test
-  @Category(MaintainedByDiffblue.class)
+  @Category(ContributionFromDiffblue.class)
+  @ManagedByDiffblue
   @MethodsUnderTest({
     "void MerkleContainer.<init>()",
     "IncrementalMerkleTreeStore MerkleContainer.getIncrementalMerkleTreeStore()",

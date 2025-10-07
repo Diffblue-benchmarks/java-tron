@@ -4,7 +4,8 @@ import static org.junit.Assert.assertArrayEquals;
 import static org.junit.Assert.assertEquals;
 import static org.junit.Assert.assertFalse;
 import static org.junit.Assert.assertTrue;
-import com.diffblue.cover.annotations.MaintainedByDiffblue;
+import com.diffblue.cover.annotations.ContributionFromDiffblue;
+import com.diffblue.cover.annotations.ManagedByDiffblue;
 import com.diffblue.cover.annotations.MethodsUnderTest;
 import java.io.UnsupportedEncodingException;
 import org.junit.Test;
@@ -35,7 +36,8 @@ public class JLibrustzcashDiffblueTest {
    * JLibrustzcash#librustzcashZip32XfvkAddress(Zip32XfvkAddressParams)}
    */
   @Test
-  @Category(MaintainedByDiffblue.class)
+  @Category(ContributionFromDiffblue.class)
+  @ManagedByDiffblue
   @MethodsUnderTest({"boolean JLibrustzcash.librustzcashZip32XfvkAddress(Zip32XfvkAddressParams)"})
   public void testLibrustzcashZip32XfvkAddress()
       throws UnsupportedEncodingException, ZksnarkException {
@@ -62,7 +64,8 @@ public class JLibrustzcashDiffblueTest {
    * <p>Method under test: {@link JLibrustzcash#librustzcashKaAgree(KaAgreeParams)}
    */
   @Test
-  @Category(MaintainedByDiffblue.class)
+  @Category(ContributionFromDiffblue.class)
+  @ManagedByDiffblue
   @MethodsUnderTest({"boolean JLibrustzcash.librustzcashKaAgree(KaAgreeParams)"})
   public void testLibrustzcashKaAgree_whenNull_thenReturnTrue() {
     // Arrange, Act and Assert
@@ -80,7 +83,8 @@ public class JLibrustzcashDiffblueTest {
    * <p>Method under test: {@link JLibrustzcash#librustzcashComputeCm(ComputeCmParams)}
    */
   @Test
-  @Category(MaintainedByDiffblue.class)
+  @Category(ContributionFromDiffblue.class)
+  @ManagedByDiffblue
   @MethodsUnderTest({"boolean JLibrustzcash.librustzcashComputeCm(ComputeCmParams)"})
   public void testLibrustzcashComputeCm_whenNull_thenReturnTrue() {
     // Arrange, Act and Assert
@@ -98,7 +102,8 @@ public class JLibrustzcashDiffblueTest {
    * <p>Method under test: {@link JLibrustzcash#librustzcashComputeNf(ComputeNfParams)}
    */
   @Test
-  @Category(MaintainedByDiffblue.class)
+  @Category(ContributionFromDiffblue.class)
+  @ManagedByDiffblue
   @MethodsUnderTest({"boolean JLibrustzcash.librustzcashComputeNf(ComputeNfParams)"})
   public void testLibrustzcashComputeNf_whenNull_thenReturnTrue() {
     // Arrange, Act and Assert
@@ -111,7 +116,8 @@ public class JLibrustzcashDiffblueTest {
    * <p>Method under test: {@link JLibrustzcash#librustzcashAskToAk(byte[])}
    */
   @Test
-  @Category(MaintainedByDiffblue.class)
+  @Category(ContributionFromDiffblue.class)
+  @ManagedByDiffblue
   @MethodsUnderTest({"byte[] JLibrustzcash.librustzcashAskToAk(byte[])"})
   public void testLibrustzcashAskToAk() throws UnsupportedEncodingException, ZksnarkException {
     // Arrange, Act and Assert
@@ -125,7 +131,8 @@ public class JLibrustzcashDiffblueTest {
    * <p>Method under test: {@link JLibrustzcash#librustzcashNskToNk(byte[])}
    */
   @Test
-  @Category(MaintainedByDiffblue.class)
+  @Category(ContributionFromDiffblue.class)
+  @ManagedByDiffblue
   @MethodsUnderTest({"byte[] JLibrustzcash.librustzcashNskToNk(byte[])"})
   public void testLibrustzcashNskToNk() throws UnsupportedEncodingException, ZksnarkException {
     // Arrange, Act and Assert
@@ -139,7 +146,8 @@ public class JLibrustzcashDiffblueTest {
    * <p>Method under test: {@link JLibrustzcash#librustzcashSaplingGenerateR(byte[])}
    */
   @Test
-  @Category(MaintainedByDiffblue.class)
+  @Category(ContributionFromDiffblue.class)
+  @ManagedByDiffblue
   @MethodsUnderTest({"byte[] JLibrustzcash.librustzcashSaplingGenerateR(byte[])"})
   public void testLibrustzcashSaplingGenerateR()
       throws UnsupportedEncodingException, ZksnarkException {
@@ -160,7 +168,8 @@ public class JLibrustzcashDiffblueTest {
    * JLibrustzcash#librustzcashSaplingKaDerivepublic(KaDerivepublicParams)}
    */
   @Test
-  @Category(MaintainedByDiffblue.class)
+  @Category(ContributionFromDiffblue.class)
+  @ManagedByDiffblue
   @MethodsUnderTest({
     "boolean JLibrustzcash.librustzcashSaplingKaDerivepublic(KaDerivepublicParams)"
   })
@@ -175,7 +184,8 @@ public class JLibrustzcashDiffblueTest {
    * <p>Method under test: {@link JLibrustzcash#librustzcashSaplingProvingCtxInit()}
    */
   @Test
-  @Category(MaintainedByDiffblue.class)
+  @Category(ContributionFromDiffblue.class)
+  @ManagedByDiffblue
   @MethodsUnderTest({"long JLibrustzcash.librustzcashSaplingProvingCtxInit()"})
   public void testLibrustzcashSaplingProvingCtxInit() {
     // Arrange, Act and Assert
@@ -188,7 +198,8 @@ public class JLibrustzcashDiffblueTest {
    * <p>Method under test: {@link JLibrustzcash#librustzcashCheckDiversifier(byte[])}
    */
   @Test
-  @Category(MaintainedByDiffblue.class)
+  @Category(ContributionFromDiffblue.class)
+  @ManagedByDiffblue
   @MethodsUnderTest({"boolean JLibrustzcash.librustzcashCheckDiversifier(byte[])"})
   public void testLibrustzcashCheckDiversifier()
       throws UnsupportedEncodingException, ZksnarkException {
@@ -207,7 +218,8 @@ public class JLibrustzcashDiffblueTest {
    * <p>Method under test: {@link JLibrustzcash#librustzcashSaplingSpendProof(SpendProofParams)}
    */
   @Test
-  @Category(MaintainedByDiffblue.class)
+  @Category(ContributionFromDiffblue.class)
+  @ManagedByDiffblue
   @MethodsUnderTest({"boolean JLibrustzcash.librustzcashSaplingSpendProof(SpendProofParams)"})
   public void testLibrustzcashSaplingSpendProof_whenNull_thenReturnTrue() {
     // Arrange, Act and Assert
@@ -225,7 +237,8 @@ public class JLibrustzcashDiffblueTest {
    * <p>Method under test: {@link JLibrustzcash#librustzcashSaplingOutputProof(OutputProofParams)}
    */
   @Test
-  @Category(MaintainedByDiffblue.class)
+  @Category(ContributionFromDiffblue.class)
+  @ManagedByDiffblue
   @MethodsUnderTest({"boolean JLibrustzcash.librustzcashSaplingOutputProof(OutputProofParams)"})
   public void testLibrustzcashSaplingOutputProof_whenNull_thenReturnTrue() {
     // Arrange, Act and Assert
@@ -243,7 +256,8 @@ public class JLibrustzcashDiffblueTest {
    * <p>Method under test: {@link JLibrustzcash#librustzcashSaplingSpendSig(SpendSigParams)}
    */
   @Test
-  @Category(MaintainedByDiffblue.class)
+  @Category(ContributionFromDiffblue.class)
+  @ManagedByDiffblue
   @MethodsUnderTest({"boolean JLibrustzcash.librustzcashSaplingSpendSig(SpendSigParams)"})
   public void testLibrustzcashSaplingSpendSig_whenNull_thenReturnTrue() {
     // Arrange, Act and Assert
@@ -261,7 +275,8 @@ public class JLibrustzcashDiffblueTest {
    * <p>Method under test: {@link JLibrustzcash#librustzcashSaplingBindingSig(BindingSigParams)}
    */
   @Test
-  @Category(MaintainedByDiffblue.class)
+  @Category(ContributionFromDiffblue.class)
+  @ManagedByDiffblue
   @MethodsUnderTest({"boolean JLibrustzcash.librustzcashSaplingBindingSig(BindingSigParams)"})
   public void testLibrustzcashSaplingBindingSig_whenNull_thenReturnTrue() {
     // Arrange, Act and Assert
@@ -274,7 +289,8 @@ public class JLibrustzcashDiffblueTest {
    * <p>Method under test: {@link JLibrustzcash#librustzcashSaplingVerificationCtxInit()}
    */
   @Test
-  @Category(MaintainedByDiffblue.class)
+  @Category(ContributionFromDiffblue.class)
+  @ManagedByDiffblue
   @MethodsUnderTest({"long JLibrustzcash.librustzcashSaplingVerificationCtxInit()"})
   public void testLibrustzcashSaplingVerificationCtxInit() {
     // Arrange, Act and Assert
@@ -292,7 +308,8 @@ public class JLibrustzcashDiffblueTest {
    * <p>Method under test: {@link JLibrustzcash#librustzcashSaplingCheckSpend(CheckSpendParams)}
    */
   @Test
-  @Category(MaintainedByDiffblue.class)
+  @Category(ContributionFromDiffblue.class)
+  @ManagedByDiffblue
   @MethodsUnderTest({"boolean JLibrustzcash.librustzcashSaplingCheckSpend(CheckSpendParams)"})
   public void testLibrustzcashSaplingCheckSpend_whenNull_thenReturnTrue() {
     // Arrange, Act and Assert
@@ -310,7 +327,8 @@ public class JLibrustzcashDiffblueTest {
    * <p>Method under test: {@link JLibrustzcash#librustzcashSaplingCheckOutput(CheckOutputParams)}
    */
   @Test
-  @Category(MaintainedByDiffblue.class)
+  @Category(ContributionFromDiffblue.class)
+  @ManagedByDiffblue
   @MethodsUnderTest({"boolean JLibrustzcash.librustzcashSaplingCheckOutput(CheckOutputParams)"})
   public void testLibrustzcashSaplingCheckOutput_whenNull_thenReturnTrue() {
     // Arrange, Act and Assert
@@ -328,7 +346,8 @@ public class JLibrustzcashDiffblueTest {
    * <p>Method under test: {@link JLibrustzcash#librustzcashSaplingFinalCheck(FinalCheckParams)}
    */
   @Test
-  @Category(MaintainedByDiffblue.class)
+  @Category(ContributionFromDiffblue.class)
+  @ManagedByDiffblue
   @MethodsUnderTest({"boolean JLibrustzcash.librustzcashSaplingFinalCheck(FinalCheckParams)"})
   public void testLibrustzcashSaplingFinalCheck_whenNull_thenReturnTrue() {
     // Arrange, Act and Assert
@@ -347,7 +366,8 @@ public class JLibrustzcashDiffblueTest {
    * JLibrustzcash#librustzcashSaplingCheckSpendNew(CheckSpendNewParams)}
    */
   @Test
-  @Category(MaintainedByDiffblue.class)
+  @Category(ContributionFromDiffblue.class)
+  @ManagedByDiffblue
   @MethodsUnderTest({"boolean JLibrustzcash.librustzcashSaplingCheckSpendNew(CheckSpendNewParams)"})
   public void testLibrustzcashSaplingCheckSpendNew_whenNull_thenReturnTrue() {
     // Arrange, Act and Assert
@@ -366,7 +386,8 @@ public class JLibrustzcashDiffblueTest {
    * JLibrustzcash#librustzcashSaplingCheckOutputNew(CheckOutputNewParams)}
    */
   @Test
-  @Category(MaintainedByDiffblue.class)
+  @Category(ContributionFromDiffblue.class)
+  @ManagedByDiffblue
   @MethodsUnderTest({
     "boolean JLibrustzcash.librustzcashSaplingCheckOutputNew(CheckOutputNewParams)"
   })
@@ -387,7 +408,8 @@ public class JLibrustzcashDiffblueTest {
    * JLibrustzcash#librustzcashSaplingFinalCheckNew(FinalCheckNewParams)}
    */
   @Test
-  @Category(MaintainedByDiffblue.class)
+  @Category(ContributionFromDiffblue.class)
+  @ManagedByDiffblue
   @MethodsUnderTest({"boolean JLibrustzcash.librustzcashSaplingFinalCheckNew(FinalCheckNewParams)"})
   public void testLibrustzcashSaplingFinalCheckNew_whenNull_thenReturnTrue() {
     // Arrange, Act and Assert
@@ -405,7 +427,8 @@ public class JLibrustzcashDiffblueTest {
    * <p>Method under test: {@link JLibrustzcash#librustzcashIvkToPkd(IvkToPkdParams)}
    */
   @Test
-  @Category(MaintainedByDiffblue.class)
+  @Category(ContributionFromDiffblue.class)
+  @ManagedByDiffblue
   @MethodsUnderTest({"boolean JLibrustzcash.librustzcashIvkToPkd(IvkToPkdParams)"})
   public void testLibrustzcashIvkToPkd_whenNull_thenReturnTrue() {
     // Arrange, Act and Assert
@@ -418,7 +441,8 @@ public class JLibrustzcashDiffblueTest {
    * <p>Method under test: {@link JLibrustzcash#isOpenZen()}
    */
   @Test
-  @Category(MaintainedByDiffblue.class)
+  @Category(ContributionFromDiffblue.class)
+  @ManagedByDiffblue
   @MethodsUnderTest({"boolean JLibrustzcash.isOpenZen()"})
   public void testIsOpenZen() {
     // Arrange, Act and Assert

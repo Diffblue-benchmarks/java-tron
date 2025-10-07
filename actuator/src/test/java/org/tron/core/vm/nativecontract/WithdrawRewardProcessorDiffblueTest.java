@@ -1,7 +1,8 @@
 package org.tron.core.vm.nativecontract;
 
 import static org.junit.Assert.assertThrows;
-import com.diffblue.cover.annotations.MaintainedByDiffblue;
+import com.diffblue.cover.annotations.ContributionFromDiffblue;
+import com.diffblue.cover.annotations.ManagedByDiffblue;
 import com.diffblue.cover.annotations.MethodsUnderTest;
 import java.io.UnsupportedEncodingException;
 import org.junit.Test;
@@ -22,7 +23,8 @@ public class WithdrawRewardProcessorDiffblueTest {
    * <p>Method under test: {@link WithdrawRewardProcessor#validate(WithdrawRewardParam, Repository)}
    */
   @Test
-  @Category(MaintainedByDiffblue.class)
+  @Category(ContributionFromDiffblue.class)
+  @ManagedByDiffblue
   @MethodsUnderTest({"void WithdrawRewardProcessor.validate(WithdrawRewardParam, Repository)"})
   public void testValidate_whenNull_thenThrowContractValidateException()
       throws UnsupportedEncodingException, ContractValidateException {

@@ -6,7 +6,8 @@ import static org.mockito.Mockito.doNothing;
 import static org.mockito.Mockito.mock;
 import static org.mockito.Mockito.verify;
 import static org.mockito.Mockito.when;
-import com.diffblue.cover.annotations.MaintainedByDiffblue;
+import com.diffblue.cover.annotations.ContributionFromDiffblue;
+import com.diffblue.cover.annotations.ManagedByDiffblue;
 import com.diffblue.cover.annotations.MethodsUnderTest;
 import java.util.ArrayList;
 import java.util.List;
@@ -40,7 +41,8 @@ public class PbftManagerDiffblueTest {
    * <p>Method under test: {@link PbftManager#init()}
    */
   @Test
-  @Category(MaintainedByDiffblue.class)
+  @Category(ContributionFromDiffblue.class)
+  @ManagedByDiffblue
   @MethodsUnderTest({"void PbftManager.init()"})
   public void testInit() {
     // Arrange
@@ -67,7 +69,8 @@ public class PbftManagerDiffblueTest {
    * <p>Method under test: {@link PbftManager#blockPrePrepare(BlockCapsule, long)}
    */
   @Test
-  @Category(MaintainedByDiffblue.class)
+  @Category(ContributionFromDiffblue.class)
+  @ManagedByDiffblue
   @MethodsUnderTest({"void PbftManager.blockPrePrepare(BlockCapsule, long)"})
   public void testBlockPrePrepare_givenDynamicPropertiesStoreAllowPBFTReturnFalse_whenNull() {
     // Arrange
@@ -95,7 +98,8 @@ public class PbftManagerDiffblueTest {
    * <p>Method under test: {@link PbftManager#blockPrePrepare(BlockCapsule, long)}
    */
   @Test
-  @Category(MaintainedByDiffblue.class)
+  @Category(ContributionFromDiffblue.class)
+  @ManagedByDiffblue
   @MethodsUnderTest({"void PbftManager.blockPrePrepare(BlockCapsule, long)"})
   public void testBlockPrePrepare_givenPbftMessageHandleIsSyncingReturnTrue_whenNull() {
     // Arrange
@@ -124,7 +128,8 @@ public class PbftManagerDiffblueTest {
    * <p>Method under test: {@link PbftManager#srPrePrepare(BlockCapsule, List, long)}
    */
   @Test
-  @Category(MaintainedByDiffblue.class)
+  @Category(ContributionFromDiffblue.class)
+  @ManagedByDiffblue
   @MethodsUnderTest({"void PbftManager.srPrePrepare(BlockCapsule, List, long)"})
   public void testSrPrePrepare_givenDynamicPropertiesStoreAllowPBFTReturnFalse() {
     // Arrange
@@ -152,7 +157,8 @@ public class PbftManagerDiffblueTest {
    * <p>Method under test: {@link PbftManager#srPrePrepare(BlockCapsule, List, long)}
    */
   @Test
-  @Category(MaintainedByDiffblue.class)
+  @Category(ContributionFromDiffblue.class)
+  @ManagedByDiffblue
   @MethodsUnderTest({"void PbftManager.srPrePrepare(BlockCapsule, List, long)"})
   public void testSrPrePrepare_givenPbftMessageHandleIsSyncingReturnTrue_thenCallsIsSyncing() {
     // Arrange
@@ -176,7 +182,8 @@ public class PbftManagerDiffblueTest {
    * <p>Method under test: {@link PbftManager#forwardMessage(PbftBaseMessage)}
    */
   @Test
-  @Category(MaintainedByDiffblue.class)
+  @Category(ContributionFromDiffblue.class)
+  @ManagedByDiffblue
   @MethodsUnderTest({"void PbftManager.forwardMessage(PbftBaseMessage)"})
   public void testForwardMessage() {
     // Arrange
@@ -195,7 +202,8 @@ public class PbftManagerDiffblueTest {
    * <p>Method under test: {@link PbftManager#doAction(PbftMessage)}
    */
   @Test
-  @Category(MaintainedByDiffblue.class)
+  @Category(ContributionFromDiffblue.class)
+  @ManagedByDiffblue
   @MethodsUnderTest({"boolean PbftManager.doAction(PbftMessage)"})
   public void testDoAction() {
     // Arrange

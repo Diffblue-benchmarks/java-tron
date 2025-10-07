@@ -10,7 +10,8 @@ import static org.mockito.Mockito.atLeast;
 import static org.mockito.Mockito.mock;
 import static org.mockito.Mockito.verify;
 import static org.mockito.Mockito.when;
-import com.diffblue.cover.annotations.MaintainedByDiffblue;
+import com.diffblue.cover.annotations.ContributionFromDiffblue;
+import com.diffblue.cover.annotations.ManagedByDiffblue;
 import com.diffblue.cover.annotations.MethodsUnderTest;
 import com.google.protobuf.ByteString;
 import com.google.protobuf.ByteString.ByteIterator;
@@ -34,7 +35,8 @@ public class WitnessCapsuleDiffblueTest {
    * <p>Method under test: {@link WitnessCapsule#WitnessCapsule(ByteString, long, String)}
    */
   @Test
-  @Category(MaintainedByDiffblue.class)
+  @Category(ContributionFromDiffblue.class)
+  @ManagedByDiffblue
   @MethodsUnderTest({"void WitnessCapsule.<init>(ByteString, long, String)"})
   public void testNewWitnessCapsule_thenReturnUrlIsHttpsExampleOrgExample() {
     // Arrange
@@ -71,7 +73,8 @@ public class WitnessCapsuleDiffblueTest {
    * <p>Method under test: {@link WitnessCapsule#WitnessCapsule(ByteString, String)}
    */
   @Test
-  @Category(MaintainedByDiffblue.class)
+  @Category(ContributionFromDiffblue.class)
+  @ManagedByDiffblue
   @MethodsUnderTest({"void WitnessCapsule.<init>(ByteString, String)"})
   public void testNewWitnessCapsule_thenReturnUrlIsHttpsExampleOrgExample2()
       throws UnsupportedEncodingException {
@@ -111,7 +114,8 @@ public class WitnessCapsuleDiffblueTest {
    * <p>Method under test: {@link WitnessCapsule#WitnessCapsule(byte[])}
    */
   @Test
-  @Category(MaintainedByDiffblue.class)
+  @Category(ContributionFromDiffblue.class)
+  @ManagedByDiffblue
   @MethodsUnderTest({"void WitnessCapsule.<init>(byte[])"})
   public void testNewWitnessCapsule_when0xaxaxaxBytesIsUtf8_thenReturnInstanceIsNull()
       throws UnsupportedEncodingException {
@@ -130,7 +134,8 @@ public class WitnessCapsuleDiffblueTest {
    * <p>Method under test: {@link WitnessCapsule#WitnessCapsule(byte[])}
    */
   @Test
-  @Category(MaintainedByDiffblue.class)
+  @Category(ContributionFromDiffblue.class)
+  @ManagedByDiffblue
   @MethodsUnderTest({"void WitnessCapsule.<init>(byte[])"})
   public void testNewWitnessCapsule_when8xaxaxaxBytesIsUtf8_thenReturnInstanceIsNull()
       throws UnsupportedEncodingException {
@@ -149,7 +154,8 @@ public class WitnessCapsuleDiffblueTest {
    * <p>Method under test: {@link WitnessCapsule#WitnessCapsule(byte[])}
    */
   @Test
-  @Category(MaintainedByDiffblue.class)
+  @Category(ContributionFromDiffblue.class)
+  @ManagedByDiffblue
   @MethodsUnderTest({"void WitnessCapsule.<init>(byte[])"})
   public void testNewWitnessCapsule_whenAAAAAAAABytesIsUtf8_thenReturnInstanceIsNull()
       throws UnsupportedEncodingException {
@@ -168,7 +174,8 @@ public class WitnessCapsuleDiffblueTest {
    * <p>Method under test: {@link WitnessCapsule#WitnessCapsule(byte[])}
    */
   @Test
-  @Category(MaintainedByDiffblue.class)
+  @Category(ContributionFromDiffblue.class)
+  @ManagedByDiffblue
   @MethodsUnderTest({"void WitnessCapsule.<init>(byte[])"})
   public void testNewWitnessCapsule_whenAAAAAAABytesIsUtf8_thenReturnInstanceIsNull()
       throws UnsupportedEncodingException {
@@ -187,7 +194,8 @@ public class WitnessCapsuleDiffblueTest {
    * <p>Method under test: {@link WitnessCapsule#WitnessCapsule(byte[])}
    */
   @Test
-  @Category(MaintainedByDiffblue.class)
+  @Category(ContributionFromDiffblue.class)
+  @ManagedByDiffblue
   @MethodsUnderTest({"void WitnessCapsule.<init>(byte[])"})
   public void testNewWitnessCapsule_whenAAAAAAABytesIsUtf8_thenReturnInstanceIsNull2()
       throws UnsupportedEncodingException {
@@ -206,7 +214,8 @@ public class WitnessCapsuleDiffblueTest {
    * <p>Method under test: {@link WitnessCapsule#WitnessCapsule(byte[])}
    */
   @Test
-  @Category(MaintainedByDiffblue.class)
+  @Category(ContributionFromDiffblue.class)
+  @ManagedByDiffblue
   @MethodsUnderTest({"void WitnessCapsule.<init>(byte[])"})
   public void testNewWitnessCapsule_whenArrayOfByteWithAAndLf_thenReturnInstanceIsNull() {
     // Arrange and Act
@@ -231,7 +240,8 @@ public class WitnessCapsuleDiffblueTest {
    * <p>Method under test: {@link WitnessCapsule#WitnessCapsule(byte[])}
    */
   @Test
-  @Category(MaintainedByDiffblue.class)
+  @Category(ContributionFromDiffblue.class)
+  @ManagedByDiffblue
   @MethodsUnderTest({"void WitnessCapsule.<init>(byte[])"})
   public void testNewWitnessCapsule_whenArrayOfByteWithMinusOneAndX_thenReturnInstanceIsNull() {
     // Arrange and Act
@@ -253,7 +263,8 @@ public class WitnessCapsuleDiffblueTest {
    * <p>Method under test: {@link WitnessCapsule#WitnessCapsule(byte[])}
    */
   @Test
-  @Category(MaintainedByDiffblue.class)
+  @Category(ContributionFromDiffblue.class)
+  @ManagedByDiffblue
   @MethodsUnderTest({"void WitnessCapsule.<init>(byte[])"})
   public void testNewWitnessCapsule_whenArrayOfByteWithSixteenAndX_thenReturnInstanceIsNull() {
     // Arrange and Act
@@ -275,7 +286,8 @@ public class WitnessCapsuleDiffblueTest {
    * <p>Method under test: {@link WitnessCapsule#WitnessCapsule(byte[])}
    */
   @Test
-  @Category(MaintainedByDiffblue.class)
+  @Category(ContributionFromDiffblue.class)
+  @ManagedByDiffblue
   @MethodsUnderTest({"void WitnessCapsule.<init>(byte[])"})
   public void testNewWitnessCapsule_whenArrayOfByteWithTwentySixAndLf_thenReturnInstanceIsNull() {
     // Arrange and Act
@@ -300,7 +312,8 @@ public class WitnessCapsuleDiffblueTest {
    * <p>Method under test: {@link WitnessCapsule#WitnessCapsule(byte[])}
    */
   @Test
-  @Category(MaintainedByDiffblue.class)
+  @Category(ContributionFromDiffblue.class)
+  @ManagedByDiffblue
   @MethodsUnderTest({"void WitnessCapsule.<init>(byte[])"})
   public void testNewWitnessCapsule_whenArrayOfByteWithTwentySixAndX_thenReturnInstanceIsNull() {
     // Arrange and Act
@@ -321,7 +334,8 @@ public class WitnessCapsuleDiffblueTest {
    * <p>Method under test: {@link WitnessCapsule#WitnessCapsule(byte[])}
    */
   @Test
-  @Category(MaintainedByDiffblue.class)
+  @Category(ContributionFromDiffblue.class)
+  @ManagedByDiffblue
   @MethodsUnderTest({"void WitnessCapsule.<init>(byte[])"})
   public void testNewWitnessCapsule_whenArrayOfByteWithTwentySixAndZero() {
     // Arrange and Act
@@ -343,7 +357,8 @@ public class WitnessCapsuleDiffblueTest {
    * <p>Method under test: {@link WitnessCapsule#WitnessCapsule(byte[])}
    */
   @Test
-  @Category(MaintainedByDiffblue.class)
+  @Category(ContributionFromDiffblue.class)
+  @ManagedByDiffblue
   @MethodsUnderTest({"void WitnessCapsule.<init>(byte[])"})
   public void testNewWitnessCapsule_whenArrayOfByteWithZeroAndX_thenReturnInstanceIsNull() {
     // Arrange and Act
@@ -365,7 +380,8 @@ public class WitnessCapsuleDiffblueTest {
    * <p>Method under test: {@link WitnessCapsule#WitnessCapsule(byte[])}
    */
   @Test
-  @Category(MaintainedByDiffblue.class)
+  @Category(ContributionFromDiffblue.class)
+  @ManagedByDiffblue
   @MethodsUnderTest({"void WitnessCapsule.<init>(byte[])"})
   public void testNewWitnessCapsule_whenAxaxaxaxBytesIsUtf8_thenReturnInstanceIsNull()
       throws UnsupportedEncodingException {
@@ -384,7 +400,8 @@ public class WitnessCapsuleDiffblueTest {
    * <p>Method under test: {@link WitnessCapsule#WitnessCapsule(ByteString)}
    */
   @Test
-  @Category(MaintainedByDiffblue.class)
+  @Category(ContributionFromDiffblue.class)
+  @ManagedByDiffblue
   @MethodsUnderTest({"void WitnessCapsule.<init>(ByteString)"})
   public void testNewWitnessCapsule_whenByteString_thenReturnUrlIsEmptyString() {
     // Arrange
@@ -416,7 +433,8 @@ public class WitnessCapsuleDiffblueTest {
    * <p>Method under test: {@link WitnessCapsule#WitnessCapsule(byte[])}
    */
   @Test
-  @Category(MaintainedByDiffblue.class)
+  @Category(ContributionFromDiffblue.class)
+  @ManagedByDiffblue
   @MethodsUnderTest({"void WitnessCapsule.<init>(byte[])"})
   public void testNewWitnessCapsule_whenEmptyArrayOfByte_thenReturnUrlIsEmptyString() {
     // Arrange and Act
@@ -444,7 +462,8 @@ public class WitnessCapsuleDiffblueTest {
    * <p>Method under test: {@link WitnessCapsule#WitnessCapsule(byte[])}
    */
   @Test
-  @Category(MaintainedByDiffblue.class)
+  @Category(ContributionFromDiffblue.class)
+  @ManagedByDiffblue
   @MethodsUnderTest({"void WitnessCapsule.<init>(byte[])"})
   public void testNewWitnessCapsule_whenXaxaxaxBytesIsUtf8_thenReturnInstanceIsNull()
       throws UnsupportedEncodingException {
@@ -463,7 +482,8 @@ public class WitnessCapsuleDiffblueTest {
    * <p>Method under test: {@link WitnessCapsule#WitnessCapsule(byte[])}
    */
   @Test
-  @Category(MaintainedByDiffblue.class)
+  @Category(ContributionFromDiffblue.class)
+  @ManagedByDiffblue
   @MethodsUnderTest({"void WitnessCapsule.<init>(byte[])"})
   public void testNewWitnessCapsule_whenXaxaxaxBytesIsUtf8_thenReturnInstanceIsNull2()
       throws UnsupportedEncodingException {
@@ -482,7 +502,8 @@ public class WitnessCapsuleDiffblueTest {
    * <p>Method under test: {@link WitnessCapsule#WitnessCapsule(byte[])}
    */
   @Test
-  @Category(MaintainedByDiffblue.class)
+  @Category(ContributionFromDiffblue.class)
+  @ManagedByDiffblue
   @MethodsUnderTest({"void WitnessCapsule.<init>(byte[])"})
   public void testNewWitnessCapsule_whenXaxaxaxBytesIsUtf8_thenReturnInstanceIsNull3()
       throws UnsupportedEncodingException {
@@ -501,7 +522,8 @@ public class WitnessCapsuleDiffblueTest {
    * <p>Method under test: {@link WitnessCapsule#WitnessCapsule(byte[])}
    */
   @Test
-  @Category(MaintainedByDiffblue.class)
+  @Category(ContributionFromDiffblue.class)
+  @ManagedByDiffblue
   @MethodsUnderTest({"void WitnessCapsule.<init>(byte[])"})
   public void testNewWitnessCapsule_whenXxaxaxaxBytesIsUtf8_thenReturnInstanceIsNull()
       throws UnsupportedEncodingException {
@@ -515,7 +537,8 @@ public class WitnessCapsuleDiffblueTest {
    * <p>Method under test: {@link WitnessCapsule#compareTo(WitnessCapsule)}
    */
   @Test
-  @Category(MaintainedByDiffblue.class)
+  @Category(ContributionFromDiffblue.class)
+  @ManagedByDiffblue
   @MethodsUnderTest({"int WitnessCapsule.compareTo(WitnessCapsule)"})
   public void testCompareToWithWitnessCapsule() {
     // Arrange
@@ -535,7 +558,8 @@ public class WitnessCapsuleDiffblueTest {
    * <p>Method under test: {@link WitnessCapsule#getAddress()}
    */
   @Test
-  @Category(MaintainedByDiffblue.class)
+  @Category(ContributionFromDiffblue.class)
+  @ManagedByDiffblue
   @MethodsUnderTest({"ByteString WitnessCapsule.getAddress()"})
   public void testGetAddress() {
     // Arrange
@@ -566,7 +590,8 @@ public class WitnessCapsuleDiffblueTest {
    * <p>Method under test: {@link WitnessCapsule#createDbKey()}
    */
   @Test
-  @Category(MaintainedByDiffblue.class)
+  @Category(ContributionFromDiffblue.class)
+  @ManagedByDiffblue
   @MethodsUnderTest({"byte[] WitnessCapsule.createDbKey()"})
   public void testCreateDbKey_thenReturnAxaxaxaxBytesIsUtf8() throws UnsupportedEncodingException {
     // Arrange
@@ -591,7 +616,8 @@ public class WitnessCapsuleDiffblueTest {
    * <p>Method under test: {@link WitnessCapsule#createDbKey()}
    */
   @Test
-  @Category(MaintainedByDiffblue.class)
+  @Category(ContributionFromDiffblue.class)
+  @ManagedByDiffblue
   @MethodsUnderTest({"byte[] WitnessCapsule.createDbKey()"})
   public void testCreateDbKey_thenReturnEmptyArrayOfByte() {
     // Arrange
@@ -611,7 +637,8 @@ public class WitnessCapsuleDiffblueTest {
    * <p>Method under test: {@link WitnessCapsule#createReadableString()}
    */
   @Test
-  @Category(MaintainedByDiffblue.class)
+  @Category(ContributionFromDiffblue.class)
+  @ManagedByDiffblue
   @MethodsUnderTest({"String WitnessCapsule.createReadableString()"})
   public void testCreateReadableString_givenByteStringToByteArrayReturnNull() {
     // Arrange
@@ -637,7 +664,8 @@ public class WitnessCapsuleDiffblueTest {
    * <p>Method under test: {@link WitnessCapsule#createReadableString()}
    */
   @Test
-  @Category(MaintainedByDiffblue.class)
+  @Category(ContributionFromDiffblue.class)
+  @ManagedByDiffblue
   @MethodsUnderTest({"String WitnessCapsule.createReadableString()"})
   public void testCreateReadableString_givenWitnessCapsuleWithDataIsEmptyArrayOfByte() {
     // Arrange
@@ -657,7 +685,8 @@ public class WitnessCapsuleDiffblueTest {
    * <p>Method under test: {@link WitnessCapsule#createReadableString()}
    */
   @Test
-  @Category(MaintainedByDiffblue.class)
+  @Category(ContributionFromDiffblue.class)
+  @ManagedByDiffblue
   @MethodsUnderTest({"String WitnessCapsule.createReadableString()"})
   public void testCreateReadableString_thenReturn4158415841584158()
       throws UnsupportedEncodingException {
@@ -684,7 +713,8 @@ public class WitnessCapsuleDiffblueTest {
    * <p>Method under test: {@link WitnessCapsule#getData()}
    */
   @Test
-  @Category(MaintainedByDiffblue.class)
+  @Category(ContributionFromDiffblue.class)
+  @ManagedByDiffblue
   @MethodsUnderTest({"byte[] WitnessCapsule.getData()"})
   public void testGetData_givenByteStringSizeReturnZero_thenReturnArrayOfByteWithLfAndZero() {
     // Arrange
@@ -719,7 +749,8 @@ public class WitnessCapsuleDiffblueTest {
    * <p>Method under test: {@link WitnessCapsule#getData()}
    */
   @Test
-  @Category(MaintainedByDiffblue.class)
+  @Category(ContributionFromDiffblue.class)
+  @ManagedByDiffblue
   @MethodsUnderTest({"byte[] WitnessCapsule.getData()"})
   public void testGetData_givenWitnessCapsuleWithAddressIsByteString() {
     // Arrange
@@ -745,7 +776,8 @@ public class WitnessCapsuleDiffblueTest {
    * <p>Method under test: {@link WitnessCapsule#getData()}
    */
   @Test
-  @Category(MaintainedByDiffblue.class)
+  @Category(ContributionFromDiffblue.class)
+  @ManagedByDiffblue
   @MethodsUnderTest({"byte[] WitnessCapsule.getData()"})
   public void testGetData_thenReturn6httpsExampleOrgExamplehttpsExampleOrgExampleBytesIsUtf8()
       throws UnsupportedEncodingException {
@@ -780,7 +812,8 @@ public class WitnessCapsuleDiffblueTest {
    * <p>Method under test: {@link WitnessCapsule#getData()}
    */
   @Test
-  @Category(MaintainedByDiffblue.class)
+  @Category(ContributionFromDiffblue.class)
+  @ManagedByDiffblue
   @MethodsUnderTest({"byte[] WitnessCapsule.getData()"})
   public void testGetData_thenReturnArrayOfByteWith0AndMinusOne() {
     // Arrange
@@ -813,7 +846,8 @@ public class WitnessCapsuleDiffblueTest {
    * <p>Method under test: {@link WitnessCapsule#getData()}
    */
   @Test
-  @Category(MaintainedByDiffblue.class)
+  @Category(ContributionFromDiffblue.class)
+  @ManagedByDiffblue
   @MethodsUnderTest({"byte[] WitnessCapsule.getData()"})
   public void testGetData_thenReturnArrayOfByteWith8AndMinusOne() {
     // Arrange
@@ -846,7 +880,8 @@ public class WitnessCapsuleDiffblueTest {
    * <p>Method under test: {@link WitnessCapsule#getData()}
    */
   @Test
-  @Category(MaintainedByDiffblue.class)
+  @Category(ContributionFromDiffblue.class)
+  @ManagedByDiffblue
   @MethodsUnderTest({"byte[] WitnessCapsule.getData()"})
   public void testGetData_thenReturnArrayOfByteWithCommercialAtAndMinusOne() {
     // Arrange
@@ -879,7 +914,8 @@ public class WitnessCapsuleDiffblueTest {
    * <p>Method under test: {@link WitnessCapsule#getData()}
    */
   @Test
-  @Category(MaintainedByDiffblue.class)
+  @Category(ContributionFromDiffblue.class)
+  @ManagedByDiffblue
   @MethodsUnderTest({"byte[] WitnessCapsule.getData()"})
   public void testGetData_thenReturnArrayOfByteWithHAndOne() {
     // Arrange
@@ -912,7 +948,8 @@ public class WitnessCapsuleDiffblueTest {
    * <p>Method under test: {@link WitnessCapsule#getData()}
    */
   @Test
-  @Category(MaintainedByDiffblue.class)
+  @Category(ContributionFromDiffblue.class)
+  @ManagedByDiffblue
   @MethodsUnderTest({"byte[] WitnessCapsule.getData()"})
   public void testGetData_thenReturnArrayOfByteWithLeftParenthesisAndMinusOne() {
     // Arrange
@@ -945,7 +982,8 @@ public class WitnessCapsuleDiffblueTest {
    * <p>Method under test: {@link WitnessCapsule#getData()}
    */
   @Test
-  @Category(MaintainedByDiffblue.class)
+  @Category(ContributionFromDiffblue.class)
+  @ManagedByDiffblue
   @MethodsUnderTest({"byte[] WitnessCapsule.getData()"})
   public void testGetData_thenReturnArrayOfByteWithQuotationMarkAndTwentySeven() {
     // Arrange
@@ -983,7 +1021,8 @@ public class WitnessCapsuleDiffblueTest {
    * <p>Method under test: {@link WitnessCapsule#getData()}
    */
   @Test
-  @Category(MaintainedByDiffblue.class)
+  @Category(ContributionFromDiffblue.class)
+  @ManagedByDiffblue
   @MethodsUnderTest({"byte[] WitnessCapsule.getData()"})
   public void testGetData_thenReturnArrayOfByteWithSixteenAndMinusOne() {
     // Arrange
@@ -1016,7 +1055,8 @@ public class WitnessCapsuleDiffblueTest {
    * <p>Method under test: {@link WitnessCapsule#getData()}
    */
   @Test
-  @Category(MaintainedByDiffblue.class)
+  @Category(ContributionFromDiffblue.class)
+  @ManagedByDiffblue
   @MethodsUnderTest({"byte[] WitnessCapsule.getData()"})
   public void testGetData_thenReturnArrayOfByteWithSixteenAndThree() {
     // Arrange
@@ -1049,7 +1089,8 @@ public class WitnessCapsuleDiffblueTest {
    * <p>Method under test: {@link WitnessCapsule#getData()}
    */
   @Test
-  @Category(MaintainedByDiffblue.class)
+  @Category(ContributionFromDiffblue.class)
+  @ManagedByDiffblue
   @MethodsUnderTest({"byte[] WitnessCapsule.getData()"})
   public void testGetData_thenReturnArrayOfByteWithTwentySixAndZero() {
     // Arrange
@@ -1083,7 +1124,8 @@ public class WitnessCapsuleDiffblueTest {
    * <p>Method under test: {@link WitnessCapsule#getData()}
    */
   @Test
-  @Category(MaintainedByDiffblue.class)
+  @Category(ContributionFromDiffblue.class)
+  @ManagedByDiffblue
   @MethodsUnderTest({"byte[] WitnessCapsule.getData()"})
   public void testGetData_thenReturnEmptyArrayOfByte() {
     // Arrange
@@ -1111,7 +1153,8 @@ public class WitnessCapsuleDiffblueTest {
    * <p>Method under test: {@link WitnessCapsule#getInstance()}
    */
   @Test
-  @Category(MaintainedByDiffblue.class)
+  @Category(ContributionFromDiffblue.class)
+  @ManagedByDiffblue
   @MethodsUnderTest({"Witness WitnessCapsule.getInstance()"})
   public void testGetInstance() {
     // Arrange and Act
@@ -1138,7 +1181,8 @@ public class WitnessCapsuleDiffblueTest {
    * <p>Method under test: {@link WitnessCapsule#setPubKey(ByteString)}
    */
   @Test
-  @Category(MaintainedByDiffblue.class)
+  @Category(ContributionFromDiffblue.class)
+  @ManagedByDiffblue
   @MethodsUnderTest({"void WitnessCapsule.setPubKey(ByteString)"})
   public void testSetPubKey() {
     // Arrange
@@ -1168,7 +1212,8 @@ public class WitnessCapsuleDiffblueTest {
    * <p>Method under test: {@link WitnessCapsule#getVoteCount()}
    */
   @Test
-  @Category(MaintainedByDiffblue.class)
+  @Category(ContributionFromDiffblue.class)
+  @ManagedByDiffblue
   @MethodsUnderTest({"long WitnessCapsule.getVoteCount()"})
   public void testGetVoteCount() {
     // Arrange, Act and Assert
@@ -1181,7 +1226,8 @@ public class WitnessCapsuleDiffblueTest {
    * <p>Method under test: {@link WitnessCapsule#setVoteCount(long)}
    */
   @Test
-  @Category(MaintainedByDiffblue.class)
+  @Category(ContributionFromDiffblue.class)
+  @ManagedByDiffblue
   @MethodsUnderTest({"void WitnessCapsule.setVoteCount(long)"})
   public void testSetVoteCount() {
     // Arrange
@@ -1205,7 +1251,8 @@ public class WitnessCapsuleDiffblueTest {
    * <p>Method under test: {@link WitnessCapsule#getTotalProduced()}
    */
   @Test
-  @Category(MaintainedByDiffblue.class)
+  @Category(ContributionFromDiffblue.class)
+  @ManagedByDiffblue
   @MethodsUnderTest({"long WitnessCapsule.getTotalProduced()"})
   public void testGetTotalProduced() {
     // Arrange, Act and Assert
@@ -1218,7 +1265,8 @@ public class WitnessCapsuleDiffblueTest {
    * <p>Method under test: {@link WitnessCapsule#setTotalProduced(long)}
    */
   @Test
-  @Category(MaintainedByDiffblue.class)
+  @Category(ContributionFromDiffblue.class)
+  @ManagedByDiffblue
   @MethodsUnderTest({"void WitnessCapsule.setTotalProduced(long)"})
   public void testSetTotalProduced() {
     // Arrange
@@ -1242,7 +1290,8 @@ public class WitnessCapsuleDiffblueTest {
    * <p>Method under test: {@link WitnessCapsule#getTotalMissed()}
    */
   @Test
-  @Category(MaintainedByDiffblue.class)
+  @Category(ContributionFromDiffblue.class)
+  @ManagedByDiffblue
   @MethodsUnderTest({"long WitnessCapsule.getTotalMissed()"})
   public void testGetTotalMissed() {
     // Arrange, Act and Assert
@@ -1255,7 +1304,8 @@ public class WitnessCapsuleDiffblueTest {
    * <p>Method under test: {@link WitnessCapsule#setTotalMissed(long)}
    */
   @Test
-  @Category(MaintainedByDiffblue.class)
+  @Category(ContributionFromDiffblue.class)
+  @ManagedByDiffblue
   @MethodsUnderTest({"void WitnessCapsule.setTotalMissed(long)"})
   public void testSetTotalMissed() {
     // Arrange
@@ -1279,7 +1329,8 @@ public class WitnessCapsuleDiffblueTest {
    * <p>Method under test: {@link WitnessCapsule#getLatestBlockNum()}
    */
   @Test
-  @Category(MaintainedByDiffblue.class)
+  @Category(ContributionFromDiffblue.class)
+  @ManagedByDiffblue
   @MethodsUnderTest({"long WitnessCapsule.getLatestBlockNum()"})
   public void testGetLatestBlockNum() {
     // Arrange, Act and Assert
@@ -1292,7 +1343,8 @@ public class WitnessCapsuleDiffblueTest {
    * <p>Method under test: {@link WitnessCapsule#setLatestBlockNum(long)}
    */
   @Test
-  @Category(MaintainedByDiffblue.class)
+  @Category(ContributionFromDiffblue.class)
+  @ManagedByDiffblue
   @MethodsUnderTest({"void WitnessCapsule.setLatestBlockNum(long)"})
   public void testSetLatestBlockNum() {
     // Arrange
@@ -1316,7 +1368,8 @@ public class WitnessCapsuleDiffblueTest {
    * <p>Method under test: {@link WitnessCapsule#getLatestSlotNum()}
    */
   @Test
-  @Category(MaintainedByDiffblue.class)
+  @Category(ContributionFromDiffblue.class)
+  @ManagedByDiffblue
   @MethodsUnderTest({"long WitnessCapsule.getLatestSlotNum()"})
   public void testGetLatestSlotNum() {
     // Arrange, Act and Assert
@@ -1329,7 +1382,8 @@ public class WitnessCapsuleDiffblueTest {
    * <p>Method under test: {@link WitnessCapsule#setLatestSlotNum(long)}
    */
   @Test
-  @Category(MaintainedByDiffblue.class)
+  @Category(ContributionFromDiffblue.class)
+  @ManagedByDiffblue
   @MethodsUnderTest({"void WitnessCapsule.setLatestSlotNum(long)"})
   public void testSetLatestSlotNum() {
     // Arrange
@@ -1353,7 +1407,8 @@ public class WitnessCapsuleDiffblueTest {
    * <p>Method under test: {@link WitnessCapsule#getIsJobs()}
    */
   @Test
-  @Category(MaintainedByDiffblue.class)
+  @Category(ContributionFromDiffblue.class)
+  @ManagedByDiffblue
   @MethodsUnderTest({"boolean WitnessCapsule.getIsJobs()"})
   public void testGetIsJobs() {
     // Arrange, Act and Assert
@@ -1366,7 +1421,8 @@ public class WitnessCapsuleDiffblueTest {
    * <p>Method under test: {@link WitnessCapsule#setIsJobs(boolean)}
    */
   @Test
-  @Category(MaintainedByDiffblue.class)
+  @Category(ContributionFromDiffblue.class)
+  @ManagedByDiffblue
   @MethodsUnderTest({"void WitnessCapsule.setIsJobs(boolean)"})
   public void testSetIsJobs() {
     // Arrange
@@ -1390,7 +1446,8 @@ public class WitnessCapsuleDiffblueTest {
    * <p>Method under test: {@link WitnessCapsule#getUrl()}
    */
   @Test
-  @Category(MaintainedByDiffblue.class)
+  @Category(ContributionFromDiffblue.class)
+  @ManagedByDiffblue
   @MethodsUnderTest({"String WitnessCapsule.getUrl()"})
   public void testGetUrl() {
     // Arrange, Act and Assert
@@ -1403,7 +1460,8 @@ public class WitnessCapsuleDiffblueTest {
    * <p>Method under test: {@link WitnessCapsule#setUrl(String)}
    */
   @Test
-  @Category(MaintainedByDiffblue.class)
+  @Category(ContributionFromDiffblue.class)
+  @ManagedByDiffblue
   @MethodsUnderTest({"void WitnessCapsule.setUrl(String)"})
   public void testSetUrl() {
     // Arrange

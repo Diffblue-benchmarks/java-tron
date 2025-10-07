@@ -13,7 +13,8 @@ import static org.mockito.Mockito.doNothing;
 import static org.mockito.Mockito.mock;
 import static org.mockito.Mockito.verify;
 import static org.mockito.Mockito.when;
-import com.diffblue.cover.annotations.MaintainedByDiffblue;
+import com.diffblue.cover.annotations.ContributionFromDiffblue;
+import com.diffblue.cover.annotations.ManagedByDiffblue;
 import com.diffblue.cover.annotations.MethodsUnderTest;
 import com.google.protobuf.ByteString;
 import java.io.UnsupportedEncodingException;
@@ -65,7 +66,8 @@ public class DposServiceDiffblueTest {
    * <p>Method under test: {@link DposService#start(Param)}
    */
   @Test
-  @Category(MaintainedByDiffblue.class)
+  @Category(ContributionFromDiffblue.class)
+  @ManagedByDiffblue
   @MethodsUnderTest({"void DposService.start(Param)"})
   public void testStart_givenArrayList_thenDposServiceGenesisBlockTimeIsFortyTwo() {
     // Arrange
@@ -127,7 +129,8 @@ public class DposServiceDiffblueTest {
    * <p>Method under test: {@link DposService#stop()}
    */
   @Test
-  @Category(MaintainedByDiffblue.class)
+  @Category(ContributionFromDiffblue.class)
+  @ManagedByDiffblue
   @MethodsUnderTest({"void DposService.stop()"})
   public void testStop() {
     // Arrange
@@ -151,7 +154,8 @@ public class DposServiceDiffblueTest {
    * <p>Method under test: {@link DposService#receiveBlock(BlockCapsule)}
    */
   @Test
-  @Category(MaintainedByDiffblue.class)
+  @Category(ContributionFromDiffblue.class)
+  @ManagedByDiffblue
   @MethodsUnderTest({"void DposService.receiveBlock(BlockCapsule)"})
   public void testReceiveBlock_givenStateManagerReceiveBlockDoesNothing_thenCallsReceiveBlock() {
     // Arrange
@@ -174,7 +178,8 @@ public class DposServiceDiffblueTest {
    * <p>Method under test: {@link DposService#validBlock(BlockCapsule)}
    */
   @Test
-  @Category(MaintainedByDiffblue.class)
+  @Category(ContributionFromDiffblue.class)
+  @ManagedByDiffblue
   @MethodsUnderTest({"boolean DposService.validBlock(BlockCapsule)"})
   public void testValidBlock_thenReturnFalse() {
     // Arrange
@@ -208,7 +213,8 @@ public class DposServiceDiffblueTest {
    * <p>Method under test: {@link DposService#validBlock(BlockCapsule)}
    */
   @Test
-  @Category(MaintainedByDiffblue.class)
+  @Category(ContributionFromDiffblue.class)
+  @ManagedByDiffblue
   @MethodsUnderTest({"boolean DposService.validBlock(BlockCapsule)"})
   public void testValidBlock_thenReturnTrue() {
     // Arrange
@@ -233,7 +239,8 @@ public class DposServiceDiffblueTest {
    * <p>Method under test: {@link DposService#applyBlock(BlockCapsule)}
    */
   @Test
-  @Category(MaintainedByDiffblue.class)
+  @Category(ContributionFromDiffblue.class)
+  @ManagedByDiffblue
   @MethodsUnderTest({"boolean DposService.applyBlock(BlockCapsule)"})
   public void testApplyBlock_givenConsensusDelegateGetLatestSolidifiedBlockNumReturnTwelve()
       throws UnsupportedEncodingException {
@@ -281,7 +288,8 @@ public class DposServiceDiffblueTest {
    * <p>Method under test: {@link DposService#applyBlock(BlockCapsule)}
    */
   @Test
-  @Category(MaintainedByDiffblue.class)
+  @Category(ContributionFromDiffblue.class)
+  @ManagedByDiffblue
   @MethodsUnderTest({"boolean DposService.applyBlock(BlockCapsule)"})
   public void testApplyBlock_thenCallsSaveLatestSolidifiedBlockNum()
       throws UnsupportedEncodingException {
@@ -326,7 +334,8 @@ public class DposServiceDiffblueTest {
    * <p>Method under test: {@link DposService#applyBlock(BlockCapsule)}
    */
   @Test
-  @Category(MaintainedByDiffblue.class)
+  @Category(ContributionFromDiffblue.class)
+  @ManagedByDiffblue
   @MethodsUnderTest({"boolean DposService.applyBlock(BlockCapsule)"})
   public void testApplyBlock_thenCallsSaveLatestSolidifiedBlockNum2()
       throws UnsupportedEncodingException {
@@ -384,7 +393,8 @@ public class DposServiceDiffblueTest {
    * </ul>
    */
   @Test
-  @Category(MaintainedByDiffblue.class)
+  @Category(ContributionFromDiffblue.class)
+  @ManagedByDiffblue
   @MethodsUnderTest({
     "BlockHandle DposService.getBlockHandle()",
     "int DposService.getBlockProduceTimeoutPercent()",

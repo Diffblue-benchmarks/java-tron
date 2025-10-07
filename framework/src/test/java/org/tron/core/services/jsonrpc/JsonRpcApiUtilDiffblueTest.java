@@ -9,7 +9,8 @@ import static org.mockito.ArgumentMatchers.isA;
 import static org.mockito.Mockito.mock;
 import static org.mockito.Mockito.verify;
 import static org.mockito.Mockito.when;
-import com.diffblue.cover.annotations.MaintainedByDiffblue;
+import com.diffblue.cover.annotations.ContributionFromDiffblue;
+import com.diffblue.cover.annotations.ManagedByDiffblue;
 import com.diffblue.cover.annotations.MethodsUnderTest;
 import com.google.protobuf.ByteString;
 import com.google.protobuf.UnknownFieldSet;
@@ -41,7 +42,8 @@ public class JsonRpcApiUtilDiffblueTest {
    * <p>Method under test: {@link JsonRpcApiUtil#encode58Check(byte[])}
    */
   @Test
-  @Category(MaintainedByDiffblue.class)
+  @Category(ContributionFromDiffblue.class)
+  @ManagedByDiffblue
   @MethodsUnderTest({"String JsonRpcApiUtil.encode58Check(byte[])"})
   public void testEncode58Check_thenReturnUYp7tZParN3ByH23U15F7WkNSNw()
       throws UnsupportedEncodingException {
@@ -62,7 +64,8 @@ public class JsonRpcApiUtilDiffblueTest {
    * <p>Method under test: {@link JsonRpcApiUtil#encode58Check(byte[])}
    */
   @Test
-  @Category(MaintainedByDiffblue.class)
+  @Category(ContributionFromDiffblue.class)
+  @ManagedByDiffblue
   @MethodsUnderTest({"String JsonRpcApiUtil.encode58Check(byte[])"})
   public void testEncode58Check_whenA_thenReturn1NtLSPRy5w6XsQUY() {
     // Arrange, Act and Assert
@@ -82,7 +85,8 @@ public class JsonRpcApiUtilDiffblueTest {
    * <p>Method under test: {@link JsonRpcApiUtil#encode58Check(byte[])}
    */
   @Test
-  @Category(MaintainedByDiffblue.class)
+  @Category(ContributionFromDiffblue.class)
+  @ManagedByDiffblue
   @MethodsUnderTest({"String JsonRpcApiUtil.encode58Check(byte[])"})
   public void testEncode58Check_whenAxaxaxaxBytesIsUtf8_thenReturn2EXBt7okuCNpeP6cB()
       throws UnsupportedEncodingException {
@@ -101,7 +105,8 @@ public class JsonRpcApiUtilDiffblueTest {
    * <p>Method under test: {@link JsonRpcApiUtil#encode58Check(byte[])}
    */
   @Test
-  @Category(MaintainedByDiffblue.class)
+  @Category(ContributionFromDiffblue.class)
+  @ManagedByDiffblue
   @MethodsUnderTest({"String JsonRpcApiUtil.encode58Check(byte[])"})
   public void testEncode58Check_whenEmptyArrayOfByte_thenReturnEmptyString() {
     // Arrange, Act and Assert
@@ -119,7 +124,8 @@ public class JsonRpcApiUtilDiffblueTest {
    * <p>Method under test: {@link JsonRpcApiUtil#encode58Check(byte[])}
    */
   @Test
-  @Category(MaintainedByDiffblue.class)
+  @Category(ContributionFromDiffblue.class)
+  @ManagedByDiffblue
   @MethodsUnderTest({"String JsonRpcApiUtil.encode58Check(byte[])"})
   public void testEncode58Check_whenNull_thenReturnEmptyString() {
     // Arrange, Act and Assert
@@ -132,7 +138,8 @@ public class JsonRpcApiUtilDiffblueTest {
    * <p>Method under test: {@link JsonRpcApiUtil#getMethodSign(String)}
    */
   @Test
-  @Category(MaintainedByDiffblue.class)
+  @Category(ContributionFromDiffblue.class)
+  @ManagedByDiffblue
   @MethodsUnderTest({"String JsonRpcApiUtil.getMethodSign(String)"})
   public void testGetMethodSign() {
     // Arrange, Act and Assert
@@ -150,7 +157,8 @@ public class JsonRpcApiUtilDiffblueTest {
    * long, String)}
    */
   @Test
-  @Category(MaintainedByDiffblue.class)
+  @Category(ContributionFromDiffblue.class)
+  @ManagedByDiffblue
   @MethodsUnderTest({
     "SmartContractOuterClass.TriggerSmartContract JsonRpcApiUtil.triggerCallContract(byte[], byte[], long, byte[], long, String)"
   })
@@ -193,7 +201,8 @@ public class JsonRpcApiUtilDiffblueTest {
    * long, String)}
    */
   @Test
-  @Category(MaintainedByDiffblue.class)
+  @Category(ContributionFromDiffblue.class)
+  @ManagedByDiffblue
   @MethodsUnderTest({
     "SmartContractOuterClass.TriggerSmartContract JsonRpcApiUtil.triggerCallContract(byte[], byte[], long, byte[], long, String)"
   })
@@ -231,7 +240,8 @@ public class JsonRpcApiUtilDiffblueTest {
    * long, String)}
    */
   @Test
-  @Category(MaintainedByDiffblue.class)
+  @Category(ContributionFromDiffblue.class)
+  @ManagedByDiffblue
   @MethodsUnderTest({
     "SmartContractOuterClass.TriggerSmartContract JsonRpcApiUtil.triggerCallContract(byte[], byte[], long, byte[], long, String)"
   })
@@ -264,7 +274,8 @@ public class JsonRpcApiUtilDiffblueTest {
    * <p>Method under test: {@link JsonRpcApiUtil#getBlockID(Protocol.Block)}
    */
   @Test
-  @Category(MaintainedByDiffblue.class)
+  @Category(ContributionFromDiffblue.class)
+  @ManagedByDiffblue
   @MethodsUnderTest({"String JsonRpcApiUtil.getBlockID(Protocol.Block)"})
   public void testGetBlockID() {
     // Arrange, Act and Assert
@@ -279,7 +290,8 @@ public class JsonRpcApiUtilDiffblueTest {
    * <p>Method under test: {@link JsonRpcApiUtil#getTxID(Protocol.Transaction)}
    */
   @Test
-  @Category(MaintainedByDiffblue.class)
+  @Category(ContributionFromDiffblue.class)
+  @ManagedByDiffblue
   @MethodsUnderTest({"String JsonRpcApiUtil.getTxID(Protocol.Transaction)"})
   public void testGetTxID() {
     // Arrange, Act and Assert
@@ -300,7 +312,8 @@ public class JsonRpcApiUtilDiffblueTest {
    * String, TransactionInfo, Wallet)}
    */
   @Test
-  @Category(MaintainedByDiffblue.class)
+  @Category(ContributionFromDiffblue.class)
+  @ManagedByDiffblue
   @MethodsUnderTest({
     "long JsonRpcApiUtil.getTransactionAmount(Protocol.Transaction.Contract, String, TransactionInfo, Wallet)"
   })
@@ -328,7 +341,8 @@ public class JsonRpcApiUtilDiffblueTest {
    * String, TransactionInfo, Wallet)}
    */
   @Test
-  @Category(MaintainedByDiffblue.class)
+  @Category(ContributionFromDiffblue.class)
+  @ManagedByDiffblue
   @MethodsUnderTest({
     "long JsonRpcApiUtil.getTransactionAmount(Protocol.Transaction.Contract, String, TransactionInfo, Wallet)"
   })
@@ -357,7 +371,8 @@ public class JsonRpcApiUtilDiffblueTest {
    * String, Wallet)}
    */
   @Test
-  @Category(MaintainedByDiffblue.class)
+  @Category(ContributionFromDiffblue.class)
+  @ManagedByDiffblue
   @MethodsUnderTest({
     "long JsonRpcApiUtil.getTransactionAmount(Protocol.Transaction.Contract, String, Wallet)"
   })
@@ -368,30 +383,6 @@ public class JsonRpcApiUtilDiffblueTest {
     // Act
     long actualTransactionAmount =
         JsonRpcApiUtil.getTransactionAmount(contract, "Hash", new Wallet());
-
-    // Assert
-    assertEquals(0L, actualTransactionAmount);
-  }
-
-  /**
-   * Test {@link JsonRpcApiUtil#getTransactionAmount(Contract, String, Wallet)} with {@code
-   * contract}, {@code hash}, {@code wallet}.
-   *
-   * <ul>
-   *   <li>When {@code null}.
-   * </ul>
-   *
-   * <p>Method under test: {@link JsonRpcApiUtil#getTransactionAmount(Protocol.Transaction.Contract,
-   * String, Wallet)}
-   */
-  @Test
-  @Category(MaintainedByDiffblue.class)
-  @MethodsUnderTest({
-    "long JsonRpcApiUtil.getTransactionAmount(Protocol.Transaction.Contract, String, Wallet)"
-  })
-  public void testGetTransactionAmountWithContractHashWallet_whenNull() {
-    // Arrange and Act
-    long actualTransactionAmount = JsonRpcApiUtil.getTransactionAmount(null, "Hash", new Wallet());
 
     // Assert
     assertEquals(0L, actualTransactionAmount);
@@ -409,7 +400,8 @@ public class JsonRpcApiUtilDiffblueTest {
    * Protocol.Transaction.Contract.ContractType, TransactionInfo)}
    */
   @Test
-  @Category(MaintainedByDiffblue.class)
+  @Category(ContributionFromDiffblue.class)
+  @ManagedByDiffblue
   @MethodsUnderTest({
     "long JsonRpcApiUtil.getAmountFromTransactionInfo(String, Protocol.Transaction.Contract.ContractType, TransactionInfo)"
   })
@@ -440,7 +432,8 @@ public class JsonRpcApiUtilDiffblueTest {
    * Protocol.Transaction.Contract.ContractType, TransactionInfo)}
    */
   @Test
-  @Category(MaintainedByDiffblue.class)
+  @Category(ContributionFromDiffblue.class)
+  @ManagedByDiffblue
   @MethodsUnderTest({
     "long JsonRpcApiUtil.getAmountFromTransactionInfo(String, Protocol.Transaction.Contract.ContractType, TransactionInfo)"
   })
@@ -471,7 +464,8 @@ public class JsonRpcApiUtilDiffblueTest {
    * Protocol.Transaction.Contract.ContractType, TransactionInfo)}
    */
   @Test
-  @Category(MaintainedByDiffblue.class)
+  @Category(ContributionFromDiffblue.class)
+  @ManagedByDiffblue
   @MethodsUnderTest({
     "long JsonRpcApiUtil.getAmountFromTransactionInfo(String, Protocol.Transaction.Contract.ContractType, TransactionInfo)"
   })
@@ -495,7 +489,8 @@ public class JsonRpcApiUtilDiffblueTest {
    * Protocol.Transaction.Contract.ContractType, TransactionInfo)}
    */
   @Test
-  @Category(MaintainedByDiffblue.class)
+  @Category(ContributionFromDiffblue.class)
+  @ManagedByDiffblue
   @MethodsUnderTest({
     "long JsonRpcApiUtil.getAmountFromTransactionInfo(String, Protocol.Transaction.Contract.ContractType, TransactionInfo)"
   })
@@ -519,7 +514,8 @@ public class JsonRpcApiUtilDiffblueTest {
    * Protocol.Transaction.Contract.ContractType, TransactionInfo)}
    */
   @Test
-  @Category(MaintainedByDiffblue.class)
+  @Category(ContributionFromDiffblue.class)
+  @ManagedByDiffblue
   @MethodsUnderTest({
     "long JsonRpcApiUtil.getAmountFromTransactionInfo(String, Protocol.Transaction.Contract.ContractType, TransactionInfo)"
   })
@@ -545,7 +541,8 @@ public class JsonRpcApiUtilDiffblueTest {
    * Protocol.Transaction.Contract.ContractType, TransactionInfo)}
    */
   @Test
-  @Category(MaintainedByDiffblue.class)
+  @Category(ContributionFromDiffblue.class)
+  @ManagedByDiffblue
   @MethodsUnderTest({
     "long JsonRpcApiUtil.getAmountFromTransactionInfo(String, Protocol.Transaction.Contract.ContractType, TransactionInfo)"
   })
@@ -569,7 +566,8 @@ public class JsonRpcApiUtilDiffblueTest {
    * Protocol.Transaction.Contract.ContractType, TransactionInfo)}
    */
   @Test
-  @Category(MaintainedByDiffblue.class)
+  @Category(ContributionFromDiffblue.class)
+  @ManagedByDiffblue
   @MethodsUnderTest({
     "long JsonRpcApiUtil.getAmountFromTransactionInfo(String, Protocol.Transaction.Contract.ContractType, TransactionInfo)"
   })
@@ -593,7 +591,8 @@ public class JsonRpcApiUtilDiffblueTest {
    * Protocol.Transaction.Contract.ContractType, TransactionInfo)}
    */
   @Test
-  @Category(MaintainedByDiffblue.class)
+  @Category(ContributionFromDiffblue.class)
+  @ManagedByDiffblue
   @MethodsUnderTest({
     "long JsonRpcApiUtil.getAmountFromTransactionInfo(String, Protocol.Transaction.Contract.ContractType, TransactionInfo)"
   })
@@ -617,7 +616,8 @@ public class JsonRpcApiUtilDiffblueTest {
    * <p>Method under test: {@link JsonRpcApiUtil#getUnfreezeAssetAmount(byte[], Wallet)}
    */
   @Test
-  @Category(MaintainedByDiffblue.class)
+  @Category(ContributionFromDiffblue.class)
+  @ManagedByDiffblue
   @MethodsUnderTest({"long JsonRpcApiUtil.getUnfreezeAssetAmount(byte[], Wallet)"})
   public void testGetUnfreezeAssetAmount_whenAxaxaxaxBytesIsUtf8()
       throws UnsupportedEncodingException {
@@ -638,7 +638,8 @@ public class JsonRpcApiUtilDiffblueTest {
    * <p>Method under test: {@link JsonRpcApiUtil#getUnfreezeAssetAmount(byte[], Wallet)}
    */
   @Test
-  @Category(MaintainedByDiffblue.class)
+  @Category(ContributionFromDiffblue.class)
+  @ManagedByDiffblue
   @MethodsUnderTest({"long JsonRpcApiUtil.getUnfreezeAssetAmount(byte[], Wallet)"})
   public void testGetUnfreezeAssetAmount_whenAxaxaxaxBytesIsUtf82()
       throws UnsupportedEncodingException {
@@ -656,7 +657,8 @@ public class JsonRpcApiUtilDiffblueTest {
    * <p>Method under test: {@link JsonRpcApiUtil#getUnfreezeAssetAmount(byte[], Wallet)}
    */
   @Test
-  @Category(MaintainedByDiffblue.class)
+  @Category(ContributionFromDiffblue.class)
+  @ManagedByDiffblue
   @MethodsUnderTest({"long JsonRpcApiUtil.getUnfreezeAssetAmount(byte[], Wallet)"})
   public void testGetUnfreezeAssetAmount_whenEmptyArrayOfByte() {
     // Arrange, Act and Assert
@@ -673,7 +675,8 @@ public class JsonRpcApiUtilDiffblueTest {
    * <p>Method under test: {@link JsonRpcApiUtil#getUnfreezeAssetAmount(byte[], Wallet)}
    */
   @Test
-  @Category(MaintainedByDiffblue.class)
+  @Category(ContributionFromDiffblue.class)
+  @ManagedByDiffblue
   @MethodsUnderTest({"long JsonRpcApiUtil.getUnfreezeAssetAmount(byte[], Wallet)"})
   public void testGetUnfreezeAssetAmount_whenNull() {
     // Arrange, Act and Assert
@@ -690,7 +693,8 @@ public class JsonRpcApiUtilDiffblueTest {
    * <p>Method under test: {@link JsonRpcApiUtil#addressCompatibleToByteArray(String)}
    */
   @Test
-  @Category(MaintainedByDiffblue.class)
+  @Category(ContributionFromDiffblue.class)
+  @ManagedByDiffblue
   @MethodsUnderTest({"byte[] JsonRpcApiUtil.addressCompatibleToByteArray(String)"})
   public void testAddressCompatibleToByteArray_when0x() throws JsonRpcInvalidParamsException {
     // Arrange, Act and Assert
@@ -709,7 +713,8 @@ public class JsonRpcApiUtilDiffblueTest {
    * <p>Method under test: {@link JsonRpcApiUtil#addressCompatibleToByteArray(String)}
    */
   @Test
-  @Category(MaintainedByDiffblue.class)
+  @Category(ContributionFromDiffblue.class)
+  @ManagedByDiffblue
   @MethodsUnderTest({"byte[] JsonRpcApiUtil.addressCompatibleToByteArray(String)"})
   public void testAddressCompatibleToByteArray_when11StationRd()
       throws JsonRpcInvalidParamsException {
@@ -729,7 +734,8 @@ public class JsonRpcApiUtilDiffblueTest {
    * <p>Method under test: {@link JsonRpcApiUtil#addressCompatibleToByteArray(String)}
    */
   @Test
-  @Category(MaintainedByDiffblue.class)
+  @Category(ContributionFromDiffblue.class)
+  @ManagedByDiffblue
   @MethodsUnderTest({"byte[] JsonRpcApiUtil.addressCompatibleToByteArray(String)"})
   public void testAddressCompatibleToByteArray_when42() throws JsonRpcInvalidParamsException {
     // Arrange, Act and Assert
@@ -748,7 +754,8 @@ public class JsonRpcApiUtilDiffblueTest {
    * <p>Method under test: {@link JsonRpcApiUtil#addressCompatibleToByteArray(String)}
    */
   @Test
-  @Category(MaintainedByDiffblue.class)
+  @Category(ContributionFromDiffblue.class)
+  @ManagedByDiffblue
   @MethodsUnderTest({"byte[] JsonRpcApiUtil.addressCompatibleToByteArray(String)"})
   public void testAddressCompatibleToByteArray_when42MainSt() throws JsonRpcInvalidParamsException {
     // Arrange, Act and Assert
@@ -767,7 +774,8 @@ public class JsonRpcApiUtilDiffblueTest {
    * <p>Method under test: {@link JsonRpcApiUtil#addressCompatibleToByteArray(String)}
    */
   @Test
-  @Category(MaintainedByDiffblue.class)
+  @Category(ContributionFromDiffblue.class)
+  @ManagedByDiffblue
   @MethodsUnderTest({"byte[] JsonRpcApiUtil.addressCompatibleToByteArray(String)"})
   public void testAddressCompatibleToByteArray_whenNull() throws JsonRpcInvalidParamsException {
     // Arrange, Act and Assert
@@ -787,7 +795,8 @@ public class JsonRpcApiUtilDiffblueTest {
    * <p>Method under test: {@link JsonRpcApiUtil#addressToByteArray(String)}
    */
   @Test
-  @Category(MaintainedByDiffblue.class)
+  @Category(ContributionFromDiffblue.class)
+  @ManagedByDiffblue
   @MethodsUnderTest({"byte[] JsonRpcApiUtil.addressToByteArray(String)"})
   public void testAddressToByteArray_when0x_thenThrowJsonRpcInvalidParamsException()
       throws JsonRpcInvalidParamsException {
@@ -807,7 +816,8 @@ public class JsonRpcApiUtilDiffblueTest {
    * <p>Method under test: {@link JsonRpcApiUtil#addressToByteArray(String)}
    */
   @Test
-  @Category(MaintainedByDiffblue.class)
+  @Category(ContributionFromDiffblue.class)
+  @ManagedByDiffblue
   @MethodsUnderTest({"byte[] JsonRpcApiUtil.addressToByteArray(String)"})
   public void testAddressToByteArray_when42_thenThrowJsonRpcInvalidParamsException()
       throws JsonRpcInvalidParamsException {
@@ -827,7 +837,8 @@ public class JsonRpcApiUtilDiffblueTest {
    * <p>Method under test: {@link JsonRpcApiUtil#topicToByteArray(String)}
    */
   @Test
-  @Category(MaintainedByDiffblue.class)
+  @Category(ContributionFromDiffblue.class)
+  @ManagedByDiffblue
   @MethodsUnderTest({"byte[] JsonRpcApiUtil.topicToByteArray(String)"})
   public void testTopicToByteArray_when0_thenThrowJsonRpcInvalidParamsException()
       throws JsonRpcInvalidParamsException {
@@ -846,7 +857,8 @@ public class JsonRpcApiUtilDiffblueTest {
    * <p>Method under test: {@link JsonRpcApiUtil#topicToByteArray(String)}
    */
   @Test
-  @Category(MaintainedByDiffblue.class)
+  @Category(ContributionFromDiffblue.class)
+  @ManagedByDiffblue
   @MethodsUnderTest({"byte[] JsonRpcApiUtil.topicToByteArray(String)"})
   public void testTopicToByteArray_when0x_thenThrowJsonRpcInvalidParamsException()
       throws JsonRpcInvalidParamsException {
@@ -865,7 +877,8 @@ public class JsonRpcApiUtilDiffblueTest {
    * <p>Method under test: {@link JsonRpcApiUtil#paramStringIsNull(String)}
    */
   @Test
-  @Category(MaintainedByDiffblue.class)
+  @Category(ContributionFromDiffblue.class)
+  @ManagedByDiffblue
   @MethodsUnderTest({"boolean JsonRpcApiUtil.paramStringIsNull(String)"})
   public void testParamStringIsNull_when0x_thenReturnTrue() {
     // Arrange, Act and Assert
@@ -883,7 +896,8 @@ public class JsonRpcApiUtilDiffblueTest {
    * <p>Method under test: {@link JsonRpcApiUtil#paramStringIsNull(String)}
    */
   @Test
-  @Category(MaintainedByDiffblue.class)
+  @Category(ContributionFromDiffblue.class)
+  @ManagedByDiffblue
   @MethodsUnderTest({"boolean JsonRpcApiUtil.paramStringIsNull(String)"})
   public void testParamStringIsNull_whenEmptyString_thenReturnTrue() {
     // Arrange, Act and Assert
@@ -901,7 +915,8 @@ public class JsonRpcApiUtilDiffblueTest {
    * <p>Method under test: {@link JsonRpcApiUtil#paramStringIsNull(String)}
    */
   @Test
-  @Category(MaintainedByDiffblue.class)
+  @Category(ContributionFromDiffblue.class)
+  @ManagedByDiffblue
   @MethodsUnderTest({"boolean JsonRpcApiUtil.paramStringIsNull(String)"})
   public void testParamStringIsNull_whenNull_thenReturnTrue() {
     // Arrange, Act and Assert
@@ -919,7 +934,8 @@ public class JsonRpcApiUtilDiffblueTest {
    * <p>Method under test: {@link JsonRpcApiUtil#paramStringIsNull(String)}
    */
   @Test
-  @Category(MaintainedByDiffblue.class)
+  @Category(ContributionFromDiffblue.class)
+  @ManagedByDiffblue
   @MethodsUnderTest({"boolean JsonRpcApiUtil.paramStringIsNull(String)"})
   public void testParamStringIsNull_whenString_thenReturnFalse() {
     // Arrange, Act and Assert
@@ -937,7 +953,8 @@ public class JsonRpcApiUtilDiffblueTest {
    * <p>Method under test: {@link JsonRpcApiUtil#paramQuantityIsNull(String)}
    */
   @Test
-  @Category(MaintainedByDiffblue.class)
+  @Category(ContributionFromDiffblue.class)
+  @ManagedByDiffblue
   @MethodsUnderTest({"boolean JsonRpcApiUtil.paramQuantityIsNull(String)"})
   public void testParamQuantityIsNull_when0x0_thenReturnTrue() {
     // Arrange, Act and Assert
@@ -955,7 +972,8 @@ public class JsonRpcApiUtilDiffblueTest {
    * <p>Method under test: {@link JsonRpcApiUtil#paramQuantityIsNull(String)}
    */
   @Test
-  @Category(MaintainedByDiffblue.class)
+  @Category(ContributionFromDiffblue.class)
+  @ManagedByDiffblue
   @MethodsUnderTest({"boolean JsonRpcApiUtil.paramQuantityIsNull(String)"})
   public void testParamQuantityIsNull_whenEmptyString_thenReturnTrue() {
     // Arrange, Act and Assert
@@ -973,7 +991,8 @@ public class JsonRpcApiUtilDiffblueTest {
    * <p>Method under test: {@link JsonRpcApiUtil#paramQuantityIsNull(String)}
    */
   @Test
-  @Category(MaintainedByDiffblue.class)
+  @Category(ContributionFromDiffblue.class)
+  @ManagedByDiffblue
   @MethodsUnderTest({"boolean JsonRpcApiUtil.paramQuantityIsNull(String)"})
   public void testParamQuantityIsNull_whenNull_thenReturnTrue() {
     // Arrange, Act and Assert
@@ -991,7 +1010,8 @@ public class JsonRpcApiUtilDiffblueTest {
    * <p>Method under test: {@link JsonRpcApiUtil#paramQuantityIsNull(String)}
    */
   @Test
-  @Category(MaintainedByDiffblue.class)
+  @Category(ContributionFromDiffblue.class)
+  @ManagedByDiffblue
   @MethodsUnderTest({"boolean JsonRpcApiUtil.paramQuantityIsNull(String)"})
   public void testParamQuantityIsNull_whenQuantity_thenReturnFalse() {
     // Arrange, Act and Assert
@@ -1009,7 +1029,8 @@ public class JsonRpcApiUtilDiffblueTest {
    * <p>Method under test: {@link JsonRpcApiUtil#parseQuantityValue(String)}
    */
   @Test
-  @Category(MaintainedByDiffblue.class)
+  @Category(ContributionFromDiffblue.class)
+  @ManagedByDiffblue
   @MethodsUnderTest({"long JsonRpcApiUtil.parseQuantityValue(String)"})
   public void testParseQuantityValue_when0x0_thenReturnZero() throws JsonRpcInvalidParamsException {
     // Arrange, Act and Assert
@@ -1027,7 +1048,8 @@ public class JsonRpcApiUtilDiffblueTest {
    * <p>Method under test: {@link JsonRpcApiUtil#parseQuantityValue(String)}
    */
   @Test
-  @Category(MaintainedByDiffblue.class)
+  @Category(ContributionFromDiffblue.class)
+  @ManagedByDiffblue
   @MethodsUnderTest({"long JsonRpcApiUtil.parseQuantityValue(String)"})
   public void testParseQuantityValue_when0x_thenThrowJsonRpcInvalidParamsException()
       throws JsonRpcInvalidParamsException {
@@ -1047,7 +1069,8 @@ public class JsonRpcApiUtilDiffblueTest {
    * <p>Method under test: {@link JsonRpcApiUtil#parseQuantityValue(String)}
    */
   @Test
-  @Category(MaintainedByDiffblue.class)
+  @Category(ContributionFromDiffblue.class)
+  @ManagedByDiffblue
   @MethodsUnderTest({"long JsonRpcApiUtil.parseQuantityValue(String)"})
   public void testParseQuantityValue_when42_thenThrowJsonRpcInvalidParamsException()
       throws JsonRpcInvalidParamsException {
@@ -1067,7 +1090,8 @@ public class JsonRpcApiUtilDiffblueTest {
    * <p>Method under test: {@link JsonRpcApiUtil#parseQuantityValue(String)}
    */
   @Test
-  @Category(MaintainedByDiffblue.class)
+  @Category(ContributionFromDiffblue.class)
+  @ManagedByDiffblue
   @MethodsUnderTest({"long JsonRpcApiUtil.parseQuantityValue(String)"})
   public void testParseQuantityValue_whenEmptyString_thenReturnZero()
       throws JsonRpcInvalidParamsException {
@@ -1086,7 +1110,8 @@ public class JsonRpcApiUtilDiffblueTest {
    * <p>Method under test: {@link JsonRpcApiUtil#parseQuantityValue(String)}
    */
   @Test
-  @Category(MaintainedByDiffblue.class)
+  @Category(ContributionFromDiffblue.class)
+  @ManagedByDiffblue
   @MethodsUnderTest({"long JsonRpcApiUtil.parseQuantityValue(String)"})
   public void testParseQuantityValue_whenNull_thenReturnZero()
       throws JsonRpcInvalidParamsException {
@@ -1105,7 +1130,8 @@ public class JsonRpcApiUtilDiffblueTest {
    * <p>Method under test: {@link JsonRpcApiUtil#getEnergyUsageTotal(List, int, long)}
    */
   @Test
-  @Category(MaintainedByDiffblue.class)
+  @Category(ContributionFromDiffblue.class)
+  @ManagedByDiffblue
   @MethodsUnderTest({"long JsonRpcApiUtil.getEnergyUsageTotal(List, int, long)"})
   public void testGetEnergyUsageTotalWithTransactionInfoListIBlockNum_givenDefaultInstance() {
     // Arrange
@@ -1127,7 +1153,8 @@ public class JsonRpcApiUtilDiffblueTest {
    * <p>Method under test: {@link JsonRpcApiUtil#getEnergyUsageTotal(List, int, long)}
    */
   @Test
-  @Category(MaintainedByDiffblue.class)
+  @Category(ContributionFromDiffblue.class)
+  @ManagedByDiffblue
   @MethodsUnderTest({"long JsonRpcApiUtil.getEnergyUsageTotal(List, int, long)"})
   public void testGetEnergyUsageTotalWithTransactionInfoListIBlockNum_givenDefaultInstance2() {
     // Arrange
@@ -1150,7 +1177,8 @@ public class JsonRpcApiUtilDiffblueTest {
    * <p>Method under test: {@link JsonRpcApiUtil#getEnergyUsageTotal(List, int, long)}
    */
   @Test
-  @Category(MaintainedByDiffblue.class)
+  @Category(ContributionFromDiffblue.class)
+  @ManagedByDiffblue
   @MethodsUnderTest({"long JsonRpcApiUtil.getEnergyUsageTotal(List, int, long)"})
   public void testGetEnergyUsageTotalWithTransactionInfoListIBlockNum_whenArrayList() {
     // Arrange, Act and Assert
@@ -1169,7 +1197,8 @@ public class JsonRpcApiUtilDiffblueTest {
    * <p>Method under test: {@link JsonRpcApiUtil#getEnergyUsageTotal(Protocol.Transaction, Wallet)}
    */
   @Test
-  @Category(MaintainedByDiffblue.class)
+  @Category(ContributionFromDiffblue.class)
+  @ManagedByDiffblue
   @MethodsUnderTest({"long JsonRpcApiUtil.getEnergyUsageTotal(Protocol.Transaction, Wallet)"})
   public void testGetEnergyUsageTotalWithTransactionWallet_givenNull_thenReturnZero() {
     // Arrange
@@ -1197,7 +1226,8 @@ public class JsonRpcApiUtilDiffblueTest {
    * <p>Method under test: {@link JsonRpcApiUtil#getTransactionIndex(String, List)}
    */
   @Test
-  @Category(MaintainedByDiffblue.class)
+  @Category(ContributionFromDiffblue.class)
+  @ManagedByDiffblue
   @MethodsUnderTest({"int JsonRpcApiUtil.getTransactionIndex(String, List)"})
   public void testGetTransactionIndex_givenDefaultInstance_thenReturnMinusOne() {
     // Arrange
@@ -1219,7 +1249,8 @@ public class JsonRpcApiUtilDiffblueTest {
    * <p>Method under test: {@link JsonRpcApiUtil#getTransactionIndex(String, List)}
    */
   @Test
-  @Category(MaintainedByDiffblue.class)
+  @Category(ContributionFromDiffblue.class)
+  @ManagedByDiffblue
   @MethodsUnderTest({"int JsonRpcApiUtil.getTransactionIndex(String, List)"})
   public void testGetTransactionIndex_givenDefaultInstance_thenReturnMinusOne2() {
     // Arrange
@@ -1241,7 +1272,8 @@ public class JsonRpcApiUtilDiffblueTest {
    * <p>Method under test: {@link JsonRpcApiUtil#getTransactionIndex(String, List)}
    */
   @Test
-  @Category(MaintainedByDiffblue.class)
+  @Category(ContributionFromDiffblue.class)
+  @ManagedByDiffblue
   @MethodsUnderTest({"int JsonRpcApiUtil.getTransactionIndex(String, List)"})
   public void testGetTransactionIndex_thenReturnZero() {
     // Arrange
@@ -1266,7 +1298,8 @@ public class JsonRpcApiUtilDiffblueTest {
    * <p>Method under test: {@link JsonRpcApiUtil#getTransactionIndex(String, List)}
    */
   @Test
-  @Category(MaintainedByDiffblue.class)
+  @Category(ContributionFromDiffblue.class)
+  @ManagedByDiffblue
   @MethodsUnderTest({"int JsonRpcApiUtil.getTransactionIndex(String, List)"})
   public void testGetTransactionIndex_whenArrayList_thenReturnMinusOne() {
     // Arrange, Act and Assert
@@ -1284,7 +1317,8 @@ public class JsonRpcApiUtilDiffblueTest {
    * <p>Method under test: {@link JsonRpcApiUtil#parseEnergyFee(long, String)}
    */
   @Test
-  @Category(MaintainedByDiffblue.class)
+  @Category(ContributionFromDiffblue.class)
+  @ManagedByDiffblue
   @MethodsUnderTest({"long JsonRpcApiUtil.parseEnergyFee(long, String)"})
   public void testParseEnergyFee_whenComma_thenReturnMinusOne() {
     // Arrange, Act and Assert
@@ -1302,7 +1336,8 @@ public class JsonRpcApiUtilDiffblueTest {
    * <p>Method under test: {@link JsonRpcApiUtil#getByJsonBlockId(String)}
    */
   @Test
-  @Category(MaintainedByDiffblue.class)
+  @Category(ContributionFromDiffblue.class)
+  @ManagedByDiffblue
   @MethodsUnderTest({"long JsonRpcApiUtil.getByJsonBlockId(String)"})
   public void testGetByJsonBlockId_when0x0_thenReturnZero() throws JsonRpcInvalidParamsException {
     // Arrange, Act and Assert
@@ -1320,7 +1355,8 @@ public class JsonRpcApiUtilDiffblueTest {
    * <p>Method under test: {@link JsonRpcApiUtil#getByJsonBlockId(String)}
    */
   @Test
-  @Category(MaintainedByDiffblue.class)
+  @Category(ContributionFromDiffblue.class)
+  @ManagedByDiffblue
   @MethodsUnderTest({"long JsonRpcApiUtil.getByJsonBlockId(String)"})
   public void testGetByJsonBlockId_whenEarliest_str_thenReturnZero()
       throws JsonRpcInvalidParamsException {
@@ -1339,7 +1375,8 @@ public class JsonRpcApiUtilDiffblueTest {
    * <p>Method under test: {@link JsonRpcApiUtil#getByJsonBlockId(String)}
    */
   @Test
-  @Category(MaintainedByDiffblue.class)
+  @Category(ContributionFromDiffblue.class)
+  @ManagedByDiffblue
   @MethodsUnderTest({"long JsonRpcApiUtil.getByJsonBlockId(String)"})
   public void testGetByJsonBlockId_whenEmptyString_thenReturnMinusOne()
       throws JsonRpcInvalidParamsException {
@@ -1358,7 +1395,8 @@ public class JsonRpcApiUtilDiffblueTest {
    * <p>Method under test: {@link JsonRpcApiUtil#getByJsonBlockId(String)}
    */
   @Test
-  @Category(MaintainedByDiffblue.class)
+  @Category(ContributionFromDiffblue.class)
+  @ManagedByDiffblue
   @MethodsUnderTest({"long JsonRpcApiUtil.getByJsonBlockId(String)"})
   public void testGetByJsonBlockId_whenLatest_str_thenReturnMinusOne()
       throws JsonRpcInvalidParamsException {
@@ -1377,7 +1415,8 @@ public class JsonRpcApiUtilDiffblueTest {
    * <p>Method under test: {@link JsonRpcApiUtil#getByJsonBlockId(String)}
    */
   @Test
-  @Category(MaintainedByDiffblue.class)
+  @Category(ContributionFromDiffblue.class)
+  @ManagedByDiffblue
   @MethodsUnderTest({"long JsonRpcApiUtil.getByJsonBlockId(String)"})
   public void testGetByJsonBlockId_whenNull_thenReturnMinusOne()
       throws JsonRpcInvalidParamsException {
@@ -1396,7 +1435,8 @@ public class JsonRpcApiUtilDiffblueTest {
    * <p>Method under test: {@link JsonRpcApiUtil#getByJsonBlockId(String)}
    */
   @Test
-  @Category(MaintainedByDiffblue.class)
+  @Category(ContributionFromDiffblue.class)
+  @ManagedByDiffblue
   @MethodsUnderTest({"long JsonRpcApiUtil.getByJsonBlockId(String)"})
   public void testGetByJsonBlockId_whenPending_str_thenThrowJsonRpcInvalidParamsException()
       throws JsonRpcInvalidParamsException {

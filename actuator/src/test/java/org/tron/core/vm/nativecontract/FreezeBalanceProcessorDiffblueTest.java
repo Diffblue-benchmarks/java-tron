@@ -1,7 +1,8 @@
 package org.tron.core.vm.nativecontract;
 
 import static org.junit.Assert.assertThrows;
-import com.diffblue.cover.annotations.MaintainedByDiffblue;
+import com.diffblue.cover.annotations.ContributionFromDiffblue;
+import com.diffblue.cover.annotations.ManagedByDiffblue;
 import com.diffblue.cover.annotations.MethodsUnderTest;
 import java.io.UnsupportedEncodingException;
 import org.junit.Test;
@@ -24,7 +25,8 @@ public class FreezeBalanceProcessorDiffblueTest {
    * <p>Method under test: {@link FreezeBalanceProcessor#validate(FreezeBalanceParam, Repository)}
    */
   @Test
-  @Category(MaintainedByDiffblue.class)
+  @Category(ContributionFromDiffblue.class)
+  @ManagedByDiffblue
   @MethodsUnderTest({"void FreezeBalanceProcessor.validate(FreezeBalanceParam, Repository)"})
   public void testValidate_givenZero_thenThrowContractValidateException()
       throws UnsupportedEncodingException, ContractValidateException {

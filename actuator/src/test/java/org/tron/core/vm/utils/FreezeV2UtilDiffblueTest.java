@@ -5,7 +5,8 @@ import static org.junit.Assert.assertTrue;
 import static org.mockito.Mockito.mock;
 import static org.mockito.Mockito.verify;
 import static org.mockito.Mockito.when;
-import com.diffblue.cover.annotations.MaintainedByDiffblue;
+import com.diffblue.cover.annotations.ContributionFromDiffblue;
+import com.diffblue.cover.annotations.ManagedByDiffblue;
 import com.diffblue.cover.annotations.MethodsUnderTest;
 import java.io.UnsupportedEncodingException;
 import org.apache.commons.lang3.tuple.ImmutablePair;
@@ -27,7 +28,8 @@ public class FreezeV2UtilDiffblueTest {
    * Repository)}
    */
   @Test
-  @Category(MaintainedByDiffblue.class)
+  @Category(ContributionFromDiffblue.class)
+  @ManagedByDiffblue
   @MethodsUnderTest({"long FreezeV2Util.queryExpireUnfreezeBalanceV2(byte[], long, Repository)"})
   public void testQueryExpireUnfreezeBalanceV2() throws UnsupportedEncodingException {
     // Arrange
@@ -45,7 +47,8 @@ public class FreezeV2UtilDiffblueTest {
    * <p>Method under test: {@link FreezeV2Util#queryUnfreezableBalanceV2(byte[], long, Repository)}
    */
   @Test
-  @Category(MaintainedByDiffblue.class)
+  @Category(ContributionFromDiffblue.class)
+  @ManagedByDiffblue
   @MethodsUnderTest({"long FreezeV2Util.queryUnfreezableBalanceV2(byte[], long, Repository)"})
   public void testQueryUnfreezableBalanceV2() throws UnsupportedEncodingException {
     // Arrange
@@ -63,7 +66,8 @@ public class FreezeV2UtilDiffblueTest {
    * <p>Method under test: {@link FreezeV2Util#queryResourceV2(byte[], byte[], long, Repository)}
    */
   @Test
-  @Category(MaintainedByDiffblue.class)
+  @Category(ContributionFromDiffblue.class)
+  @ManagedByDiffblue
   @MethodsUnderTest({"long FreezeV2Util.queryResourceV2(byte[], byte[], long, Repository)"})
   public void testQueryResourceV2() throws UnsupportedEncodingException {
     // Arrange
@@ -85,7 +89,8 @@ public class FreezeV2UtilDiffblueTest {
    * <p>Method under test: {@link FreezeV2Util#queryFrozenBalanceUsage(byte[], long, Repository)}
    */
   @Test
-  @Category(MaintainedByDiffblue.class)
+  @Category(ContributionFromDiffblue.class)
+  @ManagedByDiffblue
   @MethodsUnderTest({"Pair FreezeV2Util.queryFrozenBalanceUsage(byte[], long, Repository)"})
   public void testQueryFrozenBalanceUsage() throws UnsupportedEncodingException {
     // Arrange
@@ -111,7 +116,8 @@ public class FreezeV2UtilDiffblueTest {
    * <p>Method under test: {@link FreezeV2Util#queryAvailableUnfreezeV2Size(byte[], Repository)}
    */
   @Test
-  @Category(MaintainedByDiffblue.class)
+  @Category(ContributionFromDiffblue.class)
+  @ManagedByDiffblue
   @MethodsUnderTest({"long FreezeV2Util.queryAvailableUnfreezeV2Size(byte[], Repository)"})
   public void testQueryAvailableUnfreezeV2Size() throws UnsupportedEncodingException {
     // Arrange
@@ -133,7 +139,8 @@ public class FreezeV2UtilDiffblueTest {
    * <p>Method under test: {@link FreezeV2Util#queryDelegatableResource(byte[], long, Repository)}
    */
   @Test
-  @Category(MaintainedByDiffblue.class)
+  @Category(ContributionFromDiffblue.class)
+  @ManagedByDiffblue
   @MethodsUnderTest({"long FreezeV2Util.queryDelegatableResource(byte[], long, Repository)"})
   public void testQueryDelegatableResource() throws UnsupportedEncodingException {
     // Arrange
@@ -152,7 +159,8 @@ public class FreezeV2UtilDiffblueTest {
    * Repository)}
    */
   @Test
-  @Category(MaintainedByDiffblue.class)
+  @Category(ContributionFromDiffblue.class)
+  @ManagedByDiffblue
   @MethodsUnderTest({"Triple FreezeV2Util.checkUndelegateResource(byte[], long, long, Repository)"})
   public void testCheckUndelegateResource() throws UnsupportedEncodingException {
     // Arrange
@@ -182,7 +190,8 @@ public class FreezeV2UtilDiffblueTest {
    * <p>Method under test: {@link FreezeV2Util#getV2NetUsage(AccountCapsule, long)}
    */
   @Test
-  @Category(MaintainedByDiffblue.class)
+  @Category(ContributionFromDiffblue.class)
+  @ManagedByDiffblue
   @MethodsUnderTest({"long FreezeV2Util.getV2NetUsage(AccountCapsule, long)"})
   public void testGetV2NetUsage_givenOne_thenReturnZero() {
     // Arrange
@@ -212,7 +221,8 @@ public class FreezeV2UtilDiffblueTest {
    * <p>Method under test: {@link FreezeV2Util#getV2EnergyUsage(AccountCapsule, long)}
    */
   @Test
-  @Category(MaintainedByDiffblue.class)
+  @Category(ContributionFromDiffblue.class)
+  @ManagedByDiffblue
   @MethodsUnderTest({"long FreezeV2Util.getV2EnergyUsage(AccountCapsule, long)"})
   public void testGetV2EnergyUsage_givenFortyTwo_thenReturnZero() {
     // Arrange

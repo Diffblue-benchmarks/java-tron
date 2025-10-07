@@ -5,7 +5,8 @@ import static org.junit.Assert.assertTrue;
 import static org.mockito.Mockito.mock;
 import static org.mockito.Mockito.verify;
 import static org.mockito.Mockito.when;
-import com.diffblue.cover.annotations.MaintainedByDiffblue;
+import com.diffblue.cover.annotations.ContributionFromDiffblue;
+import com.diffblue.cover.annotations.ManagedByDiffblue;
 import com.diffblue.cover.annotations.MethodsUnderTest;
 import java.io.UnsupportedEncodingException;
 import org.junit.Test;
@@ -26,7 +27,8 @@ public class BlockUtilDiffblueTest {
    * <p>Method under test: {@link BlockUtil#isParentOf(BlockCapsule, BlockCapsule)}
    */
   @Test
-  @Category(MaintainedByDiffblue.class)
+  @Category(ContributionFromDiffblue.class)
+  @ManagedByDiffblue
   @MethodsUnderTest({"boolean BlockUtil.isParentOf(BlockCapsule, BlockCapsule)"})
   public void testIsParentOf_givenBlockIdWithHashIsZero_hashAndNumIsOne() {
     // Arrange
@@ -56,7 +58,8 @@ public class BlockUtilDiffblueTest {
    * <p>Method under test: {@link BlockUtil#isParentOf(BlockCapsule, BlockCapsule)}
    */
   @Test
-  @Category(MaintainedByDiffblue.class)
+  @Category(ContributionFromDiffblue.class)
+  @ManagedByDiffblue
   @MethodsUnderTest({"boolean BlockUtil.isParentOf(BlockCapsule, BlockCapsule)"})
   public void testIsParentOf_givenBlockId_whenBlockCapsuleGetBlockIdReturnBlockId() {
     // Arrange
@@ -87,7 +90,8 @@ public class BlockUtilDiffblueTest {
    * <p>Method under test: {@link BlockUtil#isParentOf(BlockCapsule, BlockCapsule)}
    */
   @Test
-  @Category(MaintainedByDiffblue.class)
+  @Category(ContributionFromDiffblue.class)
+  @ManagedByDiffblue
   @MethodsUnderTest({"boolean BlockUtil.isParentOf(BlockCapsule, BlockCapsule)"})
   public void testIsParentOf_givenNull_whenBlockCapsuleGetParentHashReturnNull_thenReturnFalse() {
     // Arrange
@@ -117,7 +121,8 @@ public class BlockUtilDiffblueTest {
    * <p>Method under test: {@link BlockUtil#isParentOf(BlockCapsule, BlockCapsule)}
    */
   @Test
-  @Category(MaintainedByDiffblue.class)
+  @Category(ContributionFromDiffblue.class)
+  @ManagedByDiffblue
   @MethodsUnderTest({"boolean BlockUtil.isParentOf(BlockCapsule, BlockCapsule)"})
   public void testIsParentOf_givenZero_hash_thenReturnTrue() {
     // Arrange
@@ -146,7 +151,8 @@ public class BlockUtilDiffblueTest {
    * <p>Method under test: {@link BlockUtil#isParentOf(BlockCapsule, BlockCapsule)}
    */
   @Test
-  @Category(MaintainedByDiffblue.class)
+  @Category(ContributionFromDiffblue.class)
+  @ManagedByDiffblue
   @MethodsUnderTest({"boolean BlockUtil.isParentOf(BlockCapsule, BlockCapsule)"})
   public void testIsParentOf_thenCallsGetBytes() throws UnsupportedEncodingException {
     // Arrange
@@ -181,7 +187,8 @@ public class BlockUtilDiffblueTest {
    * <p>Method under test: {@link BlockUtil#isParentOf(BlockCapsule, BlockCapsule)}
    */
   @Test
-  @Category(MaintainedByDiffblue.class)
+  @Category(ContributionFromDiffblue.class)
+  @ManagedByDiffblue
   @MethodsUnderTest({"boolean BlockUtil.isParentOf(BlockCapsule, BlockCapsule)"})
   public void testIsParentOf_whenBlockCapsuleGetParentHashReturnBlockId_thenReturnTrue() {
     // Arrange

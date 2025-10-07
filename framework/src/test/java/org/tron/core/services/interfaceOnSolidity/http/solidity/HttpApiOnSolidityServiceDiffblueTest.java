@@ -5,7 +5,8 @@ import static org.mockito.Mockito.atLeast;
 import static org.mockito.Mockito.doNothing;
 import static org.mockito.Mockito.doThrow;
 import static org.mockito.Mockito.verify;
-import com.diffblue.cover.annotations.MaintainedByDiffblue;
+import com.diffblue.cover.annotations.ContributionFromDiffblue;
+import com.diffblue.cover.annotations.ManagedByDiffblue;
 import com.diffblue.cover.annotations.MethodsUnderTest;
 import javax.servlet.FilterConfig;
 import javax.servlet.ServletConfig;
@@ -180,7 +181,8 @@ public class HttpApiOnSolidityServiceDiffblueTest {
    * <p>Method under test: {@link HttpApiOnSolidityService#start()}
    */
   @Test
-  @Category(MaintainedByDiffblue.class)
+  @Category(ContributionFromDiffblue.class)
+  @ManagedByDiffblue
   @MethodsUnderTest({"void HttpApiOnSolidityService.start()"})
   public void testStart() throws ServletException {
     // Arrange
@@ -313,7 +315,8 @@ public class HttpApiOnSolidityServiceDiffblueTest {
    * <p>Method under test: {@link HttpApiOnSolidityService#start()}
    */
   @Test
-  @Category(MaintainedByDiffblue.class)
+  @Category(ContributionFromDiffblue.class)
+  @ManagedByDiffblue
   @MethodsUnderTest({"void HttpApiOnSolidityService.start()"})
   public void testStart_givenLiteFnQueryHttpFilterInitThrowRuntimeException_thenCallsInit()
       throws ServletException {
@@ -445,7 +448,8 @@ public class HttpApiOnSolidityServiceDiffblueTest {
    * <p>Method under test: {@link HttpApiOnSolidityService#start()}
    */
   @Test
-  @Category(MaintainedByDiffblue.class)
+  @Category(ContributionFromDiffblue.class)
+  @ManagedByDiffblue
   @MethodsUnderTest({"void HttpApiOnSolidityService.start()"})
   public void testStart_givenTriggerConstantContractOnSolidityServletInitThrowRuntimeException()
       throws ServletException {

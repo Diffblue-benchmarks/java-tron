@@ -2,7 +2,8 @@ package org.tron.core.vm;
 
 import static org.junit.Assert.assertEquals;
 import static org.junit.Assert.assertTrue;
-import com.diffblue.cover.annotations.MaintainedByDiffblue;
+import com.diffblue.cover.annotations.ContributionFromDiffblue;
+import com.diffblue.cover.annotations.ManagedByDiffblue;
 import com.diffblue.cover.annotations.MethodsUnderTest;
 import java.io.UnsupportedEncodingException;
 import org.junit.Test;
@@ -24,7 +25,8 @@ public class LogInfoTriggerParserDiffblueTest {
    * byte[])}
    */
   @Test
-  @Category(MaintainedByDiffblue.class)
+  @Category(ContributionFromDiffblue.class)
+  @ManagedByDiffblue
   @MethodsUnderTest({"void LogInfoTriggerParser.<init>(Long, Long, byte[], byte[])"})
   public void testNewLogInfoTriggerParser_whenA() throws UnsupportedEncodingException {
     // Arrange, Act and Assert
@@ -49,7 +51,8 @@ public class LogInfoTriggerParserDiffblueTest {
    * byte[])}
    */
   @Test
-  @Category(MaintainedByDiffblue.class)
+  @Category(ContributionFromDiffblue.class)
+  @ManagedByDiffblue
   @MethodsUnderTest({"void LogInfoTriggerParser.<init>(Long, Long, byte[], byte[])"})
   public void testNewLogInfoTriggerParser_whenAxaxaxaxBytesIsUtf8()
       throws UnsupportedEncodingException {
@@ -71,7 +74,8 @@ public class LogInfoTriggerParserDiffblueTest {
    * byte[])}
    */
   @Test
-  @Category(MaintainedByDiffblue.class)
+  @Category(ContributionFromDiffblue.class)
+  @ManagedByDiffblue
   @MethodsUnderTest({"void LogInfoTriggerParser.<init>(Long, Long, byte[], byte[])"})
   public void testNewLogInfoTriggerParser_whenEmptyArrayOfByte()
       throws UnsupportedEncodingException {
@@ -93,7 +97,8 @@ public class LogInfoTriggerParserDiffblueTest {
    * byte[])}
    */
   @Test
-  @Category(MaintainedByDiffblue.class)
+  @Category(ContributionFromDiffblue.class)
+  @ManagedByDiffblue
   @MethodsUnderTest({"void LogInfoTriggerParser.<init>(Long, Long, byte[], byte[])"})
   public void testNewLogInfoTriggerParser_whenNull() {
     // Arrange and Act
@@ -113,7 +118,8 @@ public class LogInfoTriggerParserDiffblueTest {
    * <p>Method under test: {@link LogInfoTriggerParser#getEntrySignature(Entry)}
    */
   @Test
-  @Category(MaintainedByDiffblue.class)
+  @Category(ContributionFromDiffblue.class)
+  @ManagedByDiffblue
   @MethodsUnderTest({"java.lang.String LogInfoTriggerParser.getEntrySignature(Entry)"})
   public void testGetEntrySignature_thenReturnLeftParenthesisRightParenthesis() {
     // Arrange, Act and Assert

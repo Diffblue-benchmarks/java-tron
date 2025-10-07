@@ -2,7 +2,8 @@ package org.tron.core.services.ratelimiter.strategy;
 
 import static org.junit.Assert.assertEquals;
 import static org.junit.Assert.assertTrue;
-import com.diffblue.cover.annotations.MaintainedByDiffblue;
+import com.diffblue.cover.annotations.ContributionFromDiffblue;
+import com.diffblue.cover.annotations.ManagedByDiffblue;
 import com.diffblue.cover.annotations.MethodsUnderTest;
 import java.util.Map;
 import org.junit.Test;
@@ -20,7 +21,8 @@ public class IPQpsStrategyDiffblueTest {
    * <p>Method under test: {@link IPQpsStrategy#IPQpsStrategy(String)}
    */
   @Test
-  @Category(MaintainedByDiffblue.class)
+  @Category(ContributionFromDiffblue.class)
+  @ManagedByDiffblue
   @MethodsUnderTest({"void IPQpsStrategy.<init>(String)"})
   public void testNewIPQpsStrategy_whenEmptyString() {
     // Arrange, Act and Assert
@@ -42,7 +44,8 @@ public class IPQpsStrategyDiffblueTest {
    * <p>Method under test: {@link IPQpsStrategy#IPQpsStrategy(String)}
    */
   @Test
-  @Category(MaintainedByDiffblue.class)
+  @Category(ContributionFromDiffblue.class)
+  @ManagedByDiffblue
   @MethodsUnderTest({"void IPQpsStrategy.<init>(String)"})
   public void testNewIPQpsStrategy_whenParamString() {
     // Arrange, Act and Assert
@@ -64,7 +67,8 @@ public class IPQpsStrategyDiffblueTest {
    * <p>Method under test: {@link IPQpsStrategy#IPQpsStrategy(String)}
    */
   @Test
-  @Category(MaintainedByDiffblue.class)
+  @Category(ContributionFromDiffblue.class)
+  @ManagedByDiffblue
   @MethodsUnderTest({"void IPQpsStrategy.<init>(String)"})
   public void testNewIPQpsStrategy_whenUuuUuu() {
     // Arrange, Act and Assert
@@ -87,7 +91,8 @@ public class IPQpsStrategyDiffblueTest {
    * <p>Method under test: {@link IPQpsStrategy#acquire(String)}
    */
   @Test
-  @Category(MaintainedByDiffblue.class)
+  @Category(ContributionFromDiffblue.class)
+  @ManagedByDiffblue
   @MethodsUnderTest({"boolean IPQpsStrategy.acquire(String)"})
   public void testAcquire_when127001_thenReturnTrue() {
     // Arrange, Act and Assert
@@ -100,7 +105,8 @@ public class IPQpsStrategyDiffblueTest {
    * <p>Method under test: {@link IPQpsStrategy#defaultParam()}
    */
   @Test
-  @Category(MaintainedByDiffblue.class)
+  @Category(ContributionFromDiffblue.class)
+  @ManagedByDiffblue
   @MethodsUnderTest({"Map IPQpsStrategy.defaultParam()"})
   public void testDefaultParam() {
     // Arrange and Act

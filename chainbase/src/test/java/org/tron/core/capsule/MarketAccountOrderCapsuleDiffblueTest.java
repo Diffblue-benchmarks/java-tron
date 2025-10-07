@@ -10,7 +10,8 @@ import static org.mockito.Mockito.atLeast;
 import static org.mockito.Mockito.mock;
 import static org.mockito.Mockito.verify;
 import static org.mockito.Mockito.when;
-import com.diffblue.cover.annotations.MaintainedByDiffblue;
+import com.diffblue.cover.annotations.ContributionFromDiffblue;
+import com.diffblue.cover.annotations.ManagedByDiffblue;
 import com.diffblue.cover.annotations.MethodsUnderTest;
 import com.google.protobuf.ByteString;
 import com.google.protobuf.Descriptors;
@@ -30,7 +31,8 @@ public class MarketAccountOrderCapsuleDiffblueTest {
    * <p>Method under test: {@link MarketAccountOrderCapsule#MarketAccountOrderCapsule(ByteString)}
    */
   @Test
-  @Category(MaintainedByDiffblue.class)
+  @Category(ContributionFromDiffblue.class)
+  @ManagedByDiffblue
   @MethodsUnderTest({"void MarketAccountOrderCapsule.<init>(ByteString)"})
   public void testNewMarketAccountOrderCapsule() {
     // Arrange
@@ -67,7 +69,8 @@ public class MarketAccountOrderCapsuleDiffblueTest {
    * List, long)}
    */
   @Test
-  @Category(MaintainedByDiffblue.class)
+  @Category(ContributionFromDiffblue.class)
+  @ManagedByDiffblue
   @MethodsUnderTest({"void MarketAccountOrderCapsule.<init>(ByteString, List, long)"})
   public void testNewMarketAccountOrderCapsule2() {
     // Arrange
@@ -103,7 +106,8 @@ public class MarketAccountOrderCapsuleDiffblueTest {
    * <p>Method under test: {@link MarketAccountOrderCapsule#MarketAccountOrderCapsule(byte[])}
    */
   @Test
-  @Category(MaintainedByDiffblue.class)
+  @Category(ContributionFromDiffblue.class)
+  @ManagedByDiffblue
   @MethodsUnderTest({"void MarketAccountOrderCapsule.<init>(byte[])"})
   public void testNewMarketAccountOrderCapsule3() {
     // Arrange and Act
@@ -145,7 +149,8 @@ public class MarketAccountOrderCapsuleDiffblueTest {
    * <p>Method under test: {@link MarketAccountOrderCapsule#MarketAccountOrderCapsule(byte[])}
    */
   @Test
-  @Category(MaintainedByDiffblue.class)
+  @Category(ContributionFromDiffblue.class)
+  @ManagedByDiffblue
   @MethodsUnderTest({"void MarketAccountOrderCapsule.<init>(byte[])"})
   public void testNewMarketAccountOrderCapsule_whenAAAAAAAABytesIsUtf8()
       throws UnsupportedEncodingException {
@@ -165,7 +170,8 @@ public class MarketAccountOrderCapsuleDiffblueTest {
    * <p>Method under test: {@link MarketAccountOrderCapsule#MarketAccountOrderCapsule(byte[])}
    */
   @Test
-  @Category(MaintainedByDiffblue.class)
+  @Category(ContributionFromDiffblue.class)
+  @ManagedByDiffblue
   @MethodsUnderTest({"void MarketAccountOrderCapsule.<init>(byte[])"})
   public void testNewMarketAccountOrderCapsule_whenAAAAAAABytesIsUtf8_thenReturnInstanceIsNull()
       throws UnsupportedEncodingException {
@@ -184,7 +190,8 @@ public class MarketAccountOrderCapsuleDiffblueTest {
    * <p>Method under test: {@link MarketAccountOrderCapsule#MarketAccountOrderCapsule(byte[])}
    */
   @Test
-  @Category(MaintainedByDiffblue.class)
+  @Category(ContributionFromDiffblue.class)
+  @ManagedByDiffblue
   @MethodsUnderTest({"void MarketAccountOrderCapsule.<init>(byte[])"})
   public void testNewMarketAccountOrderCapsule_whenArrayOfByteWithAAndLf() {
     // Arrange and Act
@@ -208,7 +215,8 @@ public class MarketAccountOrderCapsuleDiffblueTest {
    * <p>Method under test: {@link MarketAccountOrderCapsule#MarketAccountOrderCapsule(byte[])}
    */
   @Test
-  @Category(MaintainedByDiffblue.class)
+  @Category(ContributionFromDiffblue.class)
+  @ManagedByDiffblue
   @MethodsUnderTest({"void MarketAccountOrderCapsule.<init>(byte[])"})
   public void testNewMarketAccountOrderCapsule_whenArrayOfByteWithEighteenAndLf() {
     // Arrange and Act
@@ -232,7 +240,8 @@ public class MarketAccountOrderCapsuleDiffblueTest {
    * <p>Method under test: {@link MarketAccountOrderCapsule#MarketAccountOrderCapsule(byte[])}
    */
   @Test
-  @Category(MaintainedByDiffblue.class)
+  @Category(ContributionFromDiffblue.class)
+  @ManagedByDiffblue
   @MethodsUnderTest({"void MarketAccountOrderCapsule.<init>(byte[])"})
   public void testNewMarketAccountOrderCapsule_whenArrayOfByteWithEighteenAndX() {
     // Arrange and Act
@@ -253,7 +262,8 @@ public class MarketAccountOrderCapsuleDiffblueTest {
    * <p>Method under test: {@link MarketAccountOrderCapsule#MarketAccountOrderCapsule(byte[])}
    */
   @Test
-  @Category(MaintainedByDiffblue.class)
+  @Category(ContributionFromDiffblue.class)
+  @ManagedByDiffblue
   @MethodsUnderTest({"void MarketAccountOrderCapsule.<init>(byte[])"})
   public void testNewMarketAccountOrderCapsule_whenArrayOfByteWithEighteenAndZero() {
     // Arrange and Act
@@ -274,7 +284,8 @@ public class MarketAccountOrderCapsuleDiffblueTest {
    * <p>Method under test: {@link MarketAccountOrderCapsule#MarketAccountOrderCapsule(byte[])}
    */
   @Test
-  @Category(MaintainedByDiffblue.class)
+  @Category(ContributionFromDiffblue.class)
+  @ManagedByDiffblue
   @MethodsUnderTest({"void MarketAccountOrderCapsule.<init>(byte[])"})
   public void testNewMarketAccountOrderCapsule_whenArrayOfByteWithMinusOneAndX() {
     // Arrange and Act
@@ -295,7 +306,8 @@ public class MarketAccountOrderCapsuleDiffblueTest {
    * <p>Method under test: {@link MarketAccountOrderCapsule#MarketAccountOrderCapsule(byte[])}
    */
   @Test
-  @Category(MaintainedByDiffblue.class)
+  @Category(ContributionFromDiffblue.class)
+  @ManagedByDiffblue
   @MethodsUnderTest({"void MarketAccountOrderCapsule.<init>(byte[])"})
   public void testNewMarketAccountOrderCapsule_whenArrayOfByteWithTwentyFourAndX() {
     // Arrange and Act
@@ -316,7 +328,8 @@ public class MarketAccountOrderCapsuleDiffblueTest {
    * <p>Method under test: {@link MarketAccountOrderCapsule#MarketAccountOrderCapsule(byte[])}
    */
   @Test
-  @Category(MaintainedByDiffblue.class)
+  @Category(ContributionFromDiffblue.class)
+  @ManagedByDiffblue
   @MethodsUnderTest({"void MarketAccountOrderCapsule.<init>(byte[])"})
   public void testNewMarketAccountOrderCapsule_whenArrayOfByteWithZeroAndX() {
     // Arrange and Act
@@ -337,7 +350,8 @@ public class MarketAccountOrderCapsuleDiffblueTest {
    * <p>Method under test: {@link MarketAccountOrderCapsule#MarketAccountOrderCapsule(byte[])}
    */
   @Test
-  @Category(MaintainedByDiffblue.class)
+  @Category(ContributionFromDiffblue.class)
+  @ManagedByDiffblue
   @MethodsUnderTest({"void MarketAccountOrderCapsule.<init>(byte[])"})
   public void testNewMarketAccountOrderCapsule_whenAxaxaxaxBytesIsUtf8()
       throws UnsupportedEncodingException {
@@ -356,7 +370,8 @@ public class MarketAccountOrderCapsuleDiffblueTest {
    * <p>Method under test: {@link MarketAccountOrderCapsule#MarketAccountOrderCapsule(byte[])}
    */
   @Test
-  @Category(MaintainedByDiffblue.class)
+  @Category(ContributionFromDiffblue.class)
+  @ManagedByDiffblue
   @MethodsUnderTest({"void MarketAccountOrderCapsule.<init>(byte[])"})
   public void testNewMarketAccountOrderCapsule_whenXaxaxaxBytesIsUtf8_thenReturnInstanceIsNull()
       throws UnsupportedEncodingException {
@@ -374,7 +389,8 @@ public class MarketAccountOrderCapsuleDiffblueTest {
    * <p>Method under test: {@link MarketAccountOrderCapsule#MarketAccountOrderCapsule(byte[])}
    */
   @Test
-  @Category(MaintainedByDiffblue.class)
+  @Category(ContributionFromDiffblue.class)
+  @ManagedByDiffblue
   @MethodsUnderTest({"void MarketAccountOrderCapsule.<init>(byte[])"})
   public void testNewMarketAccountOrderCapsule_whenXxaxaxaxBytesIsUtf8()
       throws UnsupportedEncodingException {
@@ -388,7 +404,8 @@ public class MarketAccountOrderCapsuleDiffblueTest {
    * <p>Method under test: {@link MarketAccountOrderCapsule#getOwnerAddress()}
    */
   @Test
-  @Category(MaintainedByDiffblue.class)
+  @Category(ContributionFromDiffblue.class)
+  @ManagedByDiffblue
   @MethodsUnderTest({"ByteString MarketAccountOrderCapsule.getOwnerAddress()"})
   public void testGetOwnerAddress() {
     // Arrange
@@ -417,7 +434,8 @@ public class MarketAccountOrderCapsuleDiffblueTest {
    * <p>Method under test: {@link MarketAccountOrderCapsule#createDbKey()}
    */
   @Test
-  @Category(MaintainedByDiffblue.class)
+  @Category(ContributionFromDiffblue.class)
+  @ManagedByDiffblue
   @MethodsUnderTest({"byte[] MarketAccountOrderCapsule.createDbKey()"})
   public void testCreateDbKey_thenReturnAxaxaxaxBytesIsUtf8() throws UnsupportedEncodingException {
     // Arrange
@@ -442,7 +460,8 @@ public class MarketAccountOrderCapsuleDiffblueTest {
    * <p>Method under test: {@link MarketAccountOrderCapsule#createDbKey()}
    */
   @Test
-  @Category(MaintainedByDiffblue.class)
+  @Category(ContributionFromDiffblue.class)
+  @ManagedByDiffblue
   @MethodsUnderTest({"byte[] MarketAccountOrderCapsule.createDbKey()"})
   public void testCreateDbKey_thenReturnEmptyArrayOfByte() {
     // Arrange
@@ -459,7 +478,8 @@ public class MarketAccountOrderCapsuleDiffblueTest {
    * <p>Method under test: {@link MarketAccountOrderCapsule#getOrdersList()}
    */
   @Test
-  @Category(MaintainedByDiffblue.class)
+  @Category(ContributionFromDiffblue.class)
+  @ManagedByDiffblue
   @MethodsUnderTest({"List MarketAccountOrderCapsule.getOrdersList()"})
   public void testGetOrdersList() {
     // Arrange, Act and Assert
@@ -472,7 +492,8 @@ public class MarketAccountOrderCapsuleDiffblueTest {
    * <p>Method under test: {@link MarketAccountOrderCapsule#addOrders(ByteString)}
    */
   @Test
-  @Category(MaintainedByDiffblue.class)
+  @Category(ContributionFromDiffblue.class)
+  @ManagedByDiffblue
   @MethodsUnderTest({"void MarketAccountOrderCapsule.addOrders(ByteString)"})
   public void testAddOrders() {
     // Arrange
@@ -502,7 +523,8 @@ public class MarketAccountOrderCapsuleDiffblueTest {
    * <p>Method under test: {@link MarketAccountOrderCapsule#removeOrder(ByteString)}
    */
   @Test
-  @Category(MaintainedByDiffblue.class)
+  @Category(ContributionFromDiffblue.class)
+  @ManagedByDiffblue
   @MethodsUnderTest({"void MarketAccountOrderCapsule.removeOrder(ByteString)"})
   public void testRemoveOrder() {
     // Arrange
@@ -530,7 +552,8 @@ public class MarketAccountOrderCapsuleDiffblueTest {
    * <p>Method under test: {@link MarketAccountOrderCapsule#setCount(long)}
    */
   @Test
-  @Category(MaintainedByDiffblue.class)
+  @Category(ContributionFromDiffblue.class)
+  @ManagedByDiffblue
   @MethodsUnderTest({"void MarketAccountOrderCapsule.setCount(long)"})
   public void testSetCount() {
     // Arrange
@@ -555,7 +578,8 @@ public class MarketAccountOrderCapsuleDiffblueTest {
    * <p>Method under test: {@link MarketAccountOrderCapsule#getCount()}
    */
   @Test
-  @Category(MaintainedByDiffblue.class)
+  @Category(ContributionFromDiffblue.class)
+  @ManagedByDiffblue
   @MethodsUnderTest({"long MarketAccountOrderCapsule.getCount()"})
   public void testGetCount() {
     // Arrange, Act and Assert
@@ -568,7 +592,8 @@ public class MarketAccountOrderCapsuleDiffblueTest {
    * <p>Method under test: {@link MarketAccountOrderCapsule#setOwnerAddress(long)}
    */
   @Test
-  @Category(MaintainedByDiffblue.class)
+  @Category(ContributionFromDiffblue.class)
+  @ManagedByDiffblue
   @MethodsUnderTest({"void MarketAccountOrderCapsule.setOwnerAddress(long)"})
   public void testSetOwnerAddress() {
     // Arrange
@@ -593,7 +618,8 @@ public class MarketAccountOrderCapsuleDiffblueTest {
    * <p>Method under test: {@link MarketAccountOrderCapsule#setTotalCount(long)}
    */
   @Test
-  @Category(MaintainedByDiffblue.class)
+  @Category(ContributionFromDiffblue.class)
+  @ManagedByDiffblue
   @MethodsUnderTest({"void MarketAccountOrderCapsule.setTotalCount(long)"})
   public void testSetTotalCount() {
     // Arrange
@@ -618,7 +644,8 @@ public class MarketAccountOrderCapsuleDiffblueTest {
    * <p>Method under test: {@link MarketAccountOrderCapsule#getTotalCount()}
    */
   @Test
-  @Category(MaintainedByDiffblue.class)
+  @Category(ContributionFromDiffblue.class)
+  @ManagedByDiffblue
   @MethodsUnderTest({"long MarketAccountOrderCapsule.getTotalCount()"})
   public void testGetTotalCount() {
     // Arrange, Act and Assert
@@ -631,7 +658,8 @@ public class MarketAccountOrderCapsuleDiffblueTest {
    * <p>Method under test: {@link MarketAccountOrderCapsule#getData()}
    */
   @Test
-  @Category(MaintainedByDiffblue.class)
+  @Category(ContributionFromDiffblue.class)
+  @ManagedByDiffblue
   @MethodsUnderTest({"byte[] MarketAccountOrderCapsule.getData()"})
   public void testGetData() {
     // Arrange
@@ -660,7 +688,8 @@ public class MarketAccountOrderCapsuleDiffblueTest {
    * <p>Method under test: {@link MarketAccountOrderCapsule#getData()}
    */
   @Test
-  @Category(MaintainedByDiffblue.class)
+  @Category(ContributionFromDiffblue.class)
+  @ManagedByDiffblue
   @MethodsUnderTest({"byte[] MarketAccountOrderCapsule.getData()"})
   public void testGetData_givenByteStringSizeReturnZero_thenReturnArrayOfByteWithLfAndZero() {
     // Arrange
@@ -688,7 +717,8 @@ public class MarketAccountOrderCapsuleDiffblueTest {
    * <p>Method under test: {@link MarketAccountOrderCapsule#getData()}
    */
   @Test
-  @Category(MaintainedByDiffblue.class)
+  @Category(ContributionFromDiffblue.class)
+  @ManagedByDiffblue
   @MethodsUnderTest({"byte[] MarketAccountOrderCapsule.getData()"})
   public void testGetData_givenMarketAccountOrderCapsuleWithAddressIsByteStringCountIsMinusOne() {
     // Arrange
@@ -717,7 +747,8 @@ public class MarketAccountOrderCapsuleDiffblueTest {
    * <p>Method under test: {@link MarketAccountOrderCapsule#getData()}
    */
   @Test
-  @Category(MaintainedByDiffblue.class)
+  @Category(ContributionFromDiffblue.class)
+  @ManagedByDiffblue
   @MethodsUnderTest({"byte[] MarketAccountOrderCapsule.getData()"})
   public void testGetData_givenMarketAccountOrderCapsuleWithDataIsEmptyArrayOfByte() {
     // Arrange
@@ -738,7 +769,8 @@ public class MarketAccountOrderCapsuleDiffblueTest {
    * <p>Method under test: {@link MarketAccountOrderCapsule#getData()}
    */
   @Test
-  @Category(MaintainedByDiffblue.class)
+  @Category(ContributionFromDiffblue.class)
+  @ManagedByDiffblue
   @MethodsUnderTest({"byte[] MarketAccountOrderCapsule.getData()"})
   public void testGetData_thenReturnArrayOfByteWithSpaceAndThree() {
     // Arrange
@@ -766,7 +798,8 @@ public class MarketAccountOrderCapsuleDiffblueTest {
    * <p>Method under test: {@link MarketAccountOrderCapsule#getData()}
    */
   @Test
-  @Category(MaintainedByDiffblue.class)
+  @Category(ContributionFromDiffblue.class)
+  @ManagedByDiffblue
   @MethodsUnderTest({"byte[] MarketAccountOrderCapsule.getData()"})
   public void testGetData_thenReturnArrayOfByteWithTwentyFourAndThree() {
     // Arrange
@@ -794,7 +827,8 @@ public class MarketAccountOrderCapsuleDiffblueTest {
    * <p>Method under test: {@link MarketAccountOrderCapsule#getData()}
    */
   @Test
-  @Category(MaintainedByDiffblue.class)
+  @Category(ContributionFromDiffblue.class)
+  @ManagedByDiffblue
   @MethodsUnderTest({"byte[] MarketAccountOrderCapsule.getData()"})
   public void testGetData_thenReturnEmptyArrayOfByte() {
     // Arrange
@@ -815,7 +849,8 @@ public class MarketAccountOrderCapsuleDiffblueTest {
    * <p>Method under test: {@link MarketAccountOrderCapsule#getInstance()}
    */
   @Test
-  @Category(MaintainedByDiffblue.class)
+  @Category(ContributionFromDiffblue.class)
+  @ManagedByDiffblue
   @MethodsUnderTest({"MarketAccountOrder MarketAccountOrderCapsule.getInstance()"})
   public void testGetInstance() {
     // Arrange and Act

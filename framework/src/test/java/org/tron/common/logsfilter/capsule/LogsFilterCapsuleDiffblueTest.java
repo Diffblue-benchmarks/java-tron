@@ -3,7 +3,8 @@ package org.tron.common.logsfilter.capsule;
 import static org.junit.Assert.assertEquals;
 import static org.junit.Assert.assertSame;
 import static org.junit.Assert.assertTrue;
-import com.diffblue.cover.annotations.MaintainedByDiffblue;
+import com.diffblue.cover.annotations.ContributionFromDiffblue;
+import com.diffblue.cover.annotations.ManagedByDiffblue;
 import com.diffblue.cover.annotations.MethodsUnderTest;
 import java.util.ArrayList;
 import java.util.List;
@@ -26,7 +27,8 @@ public class LogsFilterCapsuleDiffblueTest {
    * boolean, boolean)}
    */
   @Test
-  @Category(MaintainedByDiffblue.class)
+  @Category(ContributionFromDiffblue.class)
+  @ManagedByDiffblue
   @MethodsUnderTest({"void LogsFilterCapsule.<init>(long, String, Bloom, List, boolean, boolean)"})
   public void testNewLogsFilterCapsule_givenDefaultInstance_thenReturnTxInfoListIsArrayList() {
     // Arrange
@@ -56,7 +58,8 @@ public class LogsFilterCapsuleDiffblueTest {
    * boolean, boolean)}
    */
   @Test
-  @Category(MaintainedByDiffblue.class)
+  @Category(ContributionFromDiffblue.class)
+  @ManagedByDiffblue
   @MethodsUnderTest({"void LogsFilterCapsule.<init>(long, String, Bloom, List, boolean, boolean)"})
   public void testNewLogsFilterCapsule_givenDefaultInstance_thenReturnTxInfoListSizeIsOne() {
     // Arrange
@@ -89,7 +92,8 @@ public class LogsFilterCapsuleDiffblueTest {
    * boolean, boolean)}
    */
   @Test
-  @Category(MaintainedByDiffblue.class)
+  @Category(ContributionFromDiffblue.class)
+  @ManagedByDiffblue
   @MethodsUnderTest({"void LogsFilterCapsule.<init>(long, String, Bloom, List, boolean, boolean)"})
   public void testNewLogsFilterCapsule_whenArrayList_thenReturnBlockHash() {
     // Arrange
@@ -130,7 +134,8 @@ public class LogsFilterCapsuleDiffblueTest {
    * </ul>
    */
   @Test
-  @Category(MaintainedByDiffblue.class)
+  @Category(ContributionFromDiffblue.class)
+  @ManagedByDiffblue
   @MethodsUnderTest({
     "String LogsFilterCapsule.getBlockHash()",
     "long LogsFilterCapsule.getBlockNumber()",

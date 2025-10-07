@@ -4,7 +4,8 @@ import static org.junit.Assert.assertEquals;
 import static org.junit.Assert.assertFalse;
 import static org.junit.Assert.assertNull;
 import static org.junit.Assert.assertTrue;
-import com.diffblue.cover.annotations.MaintainedByDiffblue;
+import com.diffblue.cover.annotations.ContributionFromDiffblue;
+import com.diffblue.cover.annotations.ManagedByDiffblue;
 import com.diffblue.cover.annotations.MethodsUnderTest;
 import org.iq80.leveldb.CompressionType;
 import org.iq80.leveldb.Options;
@@ -18,7 +19,8 @@ public class DbOptionalsUtilsDiffblueTest {
    * <p>Method under test: {@link DbOptionalsUtils#createDefaultDbOptions()}
    */
   @Test
-  @Category(MaintainedByDiffblue.class)
+  @Category(ContributionFromDiffblue.class)
+  @ManagedByDiffblue
   @MethodsUnderTest({"Options DbOptionalsUtils.createDefaultDbOptions()"})
   public void testCreateDefaultDbOptions() {
     // Arrange and Act
@@ -54,7 +56,8 @@ public class DbOptionalsUtilsDiffblueTest {
    * <p>Method under test: {@link DbOptionalsUtils#newDefaultDbOptions(String, Options)}
    */
   @Test
-  @Category(MaintainedByDiffblue.class)
+  @Category(ContributionFromDiffblue.class)
+  @ManagedByDiffblue
   @MethodsUnderTest({"Options DbOptionalsUtils.newDefaultDbOptions(String, Options)"})
   public void testNewDefaultDbOptions_thenReturnWriteBufferSizeIsDefault_write_buffer_size() {
     // Arrange and Act
@@ -81,7 +84,8 @@ public class DbOptionalsUtilsDiffblueTest {
    * <p>Method under test: {@link DbOptionalsUtils#newDefaultDbOptions(String, Options)}
    */
   @Test
-  @Category(MaintainedByDiffblue.class)
+  @Category(ContributionFromDiffblue.class)
+  @ManagedByDiffblue
   @MethodsUnderTest({"Options DbOptionalsUtils.newDefaultDbOptions(String, Options)"})
   public void testNewDefaultDbOptions_thenReturnWriteBufferSizeIsDefault_write_buffer_size_m() {
     // Arrange and Act
@@ -110,7 +114,8 @@ public class DbOptionalsUtilsDiffblueTest {
    * <p>Method under test: {@link DbOptionalsUtils#newDefaultDbOptions(String, Options)}
    */
   @Test
-  @Category(MaintainedByDiffblue.class)
+  @Category(ContributionFromDiffblue.class)
+  @ManagedByDiffblue
   @MethodsUnderTest({"Options DbOptionalsUtils.newDefaultDbOptions(String, Options)"})
   public void testNewDefaultDbOptions_whenOptions_thenReturnCacheSizeIsZero() {
     // Arrange and Act

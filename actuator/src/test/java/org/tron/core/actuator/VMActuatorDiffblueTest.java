@@ -7,7 +7,8 @@ import static org.junit.Assert.assertTrue;
 import static org.mockito.Mockito.mock;
 import static org.mockito.Mockito.verify;
 import static org.mockito.Mockito.when;
-import com.diffblue.cover.annotations.MaintainedByDiffblue;
+import com.diffblue.cover.annotations.ContributionFromDiffblue;
+import com.diffblue.cover.annotations.ManagedByDiffblue;
 import com.diffblue.cover.annotations.MethodsUnderTest;
 import org.junit.Test;
 import org.junit.experimental.categories.Category;
@@ -29,7 +30,8 @@ public class VMActuatorDiffblueTest {
    * <p>Method under test: {@link VMActuator#VMActuator(boolean)}
    */
   @Test
-  @Category(MaintainedByDiffblue.class)
+  @Category(ContributionFromDiffblue.class)
+  @ManagedByDiffblue
   @MethodsUnderTest({"void VMActuator.<init>(boolean)"})
   public void testNewVMActuator() {
     // Arrange and Act
@@ -46,7 +48,8 @@ public class VMActuatorDiffblueTest {
    * <p>Method under test: {@link VMActuator#validate(Object)}
    */
   @Test
-  @Category(MaintainedByDiffblue.class)
+  @Category(ContributionFromDiffblue.class)
+  @ManagedByDiffblue
   @MethodsUnderTest({"void VMActuator.validate(Object)"})
   public void testValidate() throws ContractValidateException {
     // Arrange
@@ -78,7 +81,8 @@ public class VMActuatorDiffblueTest {
    * <p>Method under test: {@link VMActuator#validate(Object)}
    */
   @Test
-  @Category(MaintainedByDiffblue.class)
+  @Category(ContributionFromDiffblue.class)
+  @ManagedByDiffblue
   @MethodsUnderTest({"void VMActuator.validate(Object)"})
   public void testValidate2() throws ContractValidateException {
     // Arrange
@@ -153,7 +157,8 @@ public class VMActuatorDiffblueTest {
    * <p>Method under test: {@link VMActuator#validate(Object)}
    */
   @Test
-  @Category(MaintainedByDiffblue.class)
+  @Category(ContributionFromDiffblue.class)
+  @ManagedByDiffblue
   @MethodsUnderTest({"void VMActuator.validate(Object)"})
   public void testValidate3() throws ContractValidateException {
     // Arrange
@@ -228,7 +233,8 @@ public class VMActuatorDiffblueTest {
    * <p>Method under test: {@link VMActuator#validate(Object)}
    */
   @Test
-  @Category(MaintainedByDiffblue.class)
+  @Category(ContributionFromDiffblue.class)
+  @ManagedByDiffblue
   @MethodsUnderTest({"void VMActuator.validate(Object)"})
   public void testValidate4() throws ContractValidateException {
     // Arrange
@@ -308,7 +314,8 @@ public class VMActuatorDiffblueTest {
    * <p>Method under test: {@link VMActuator#validate(Object)}
    */
   @Test
-  @Category(MaintainedByDiffblue.class)
+  @Category(ContributionFromDiffblue.class)
+  @ManagedByDiffblue
   @MethodsUnderTest({"void VMActuator.validate(Object)"})
   public void testValidate_givenChainBaseManagerGetDynamicPropertiesStoreReturnNull()
       throws ContractValidateException {
@@ -345,7 +352,8 @@ public class VMActuatorDiffblueTest {
    * <p>Method under test: {@link VMActuator#validate(Object)}
    */
   @Test
-  @Category(MaintainedByDiffblue.class)
+  @Category(ContributionFromDiffblue.class)
+  @ManagedByDiffblue
   @MethodsUnderTest({"void VMActuator.validate(Object)"})
   public void testValidate_givenDynamicPropertiesStoreGetAllowDynamicEnergyReturnThree()
       throws ContractValidateException {
@@ -426,7 +434,8 @@ public class VMActuatorDiffblueTest {
    * <p>Method under test: {@link VMActuator#validate(Object)}
    */
   @Test
-  @Category(MaintainedByDiffblue.class)
+  @Category(ContributionFromDiffblue.class)
+  @ManagedByDiffblue
   @MethodsUnderTest({"void VMActuator.validate(Object)"})
   public void testValidate_givenDynamicPropertiesStoreGetAllowEnergyAdjustmentReturnThree()
       throws ContractValidateException {
@@ -507,7 +516,8 @@ public class VMActuatorDiffblueTest {
    * <p>Method under test: {@link VMActuator#validate(Object)}
    */
   @Test
-  @Category(MaintainedByDiffblue.class)
+  @Category(ContributionFromDiffblue.class)
+  @ManagedByDiffblue
   @MethodsUnderTest({"void VMActuator.validate(Object)"})
   public void testValidate_givenDynamicPropertiesStoreGetAllowMultiSignReturnThree()
       throws ContractValidateException {
@@ -588,7 +598,8 @@ public class VMActuatorDiffblueTest {
    * <p>Method under test: {@link VMActuator#validate(Object)}
    */
   @Test
-  @Category(MaintainedByDiffblue.class)
+  @Category(ContributionFromDiffblue.class)
+  @ManagedByDiffblue
   @MethodsUnderTest({"void VMActuator.validate(Object)"})
   public void testValidate_givenDynamicPropertiesStoreGetAllowStrictMathReturnThree()
       throws ContractValidateException {
@@ -669,7 +680,8 @@ public class VMActuatorDiffblueTest {
    * <p>Method under test: {@link VMActuator#validate(Object)}
    */
   @Test
-  @Category(MaintainedByDiffblue.class)
+  @Category(ContributionFromDiffblue.class)
+  @ManagedByDiffblue
   @MethodsUnderTest({"void VMActuator.validate(Object)"})
   public void testValidate_givenDynamicPropertiesStoreGetAllowTvmCompatibleEvmReturnThree()
       throws ContractValidateException {
@@ -750,7 +762,8 @@ public class VMActuatorDiffblueTest {
    * <p>Method under test: {@link VMActuator#validate(Object)}
    */
   @Test
-  @Category(MaintainedByDiffblue.class)
+  @Category(ContributionFromDiffblue.class)
+  @ManagedByDiffblue
   @MethodsUnderTest({"void VMActuator.validate(Object)"})
   public void testValidate_givenDynamicPropertiesStoreGetAllowTvmConstantinopleReturnThree()
       throws ContractValidateException {
@@ -831,7 +844,8 @@ public class VMActuatorDiffblueTest {
    * <p>Method under test: {@link VMActuator#validate(Object)}
    */
   @Test
-  @Category(MaintainedByDiffblue.class)
+  @Category(ContributionFromDiffblue.class)
+  @ManagedByDiffblue
   @MethodsUnderTest({"void VMActuator.validate(Object)"})
   public void testValidate_givenDynamicPropertiesStoreGetAllowTvmFreezeReturnThree()
       throws ContractValidateException {
@@ -912,7 +926,8 @@ public class VMActuatorDiffblueTest {
    * <p>Method under test: {@link VMActuator#validate(Object)}
    */
   @Test
-  @Category(MaintainedByDiffblue.class)
+  @Category(ContributionFromDiffblue.class)
+  @ManagedByDiffblue
   @MethodsUnderTest({"void VMActuator.validate(Object)"})
   public void testValidate_givenDynamicPropertiesStoreGetAllowTvmIstanbulReturnThree()
       throws ContractValidateException {
@@ -993,7 +1008,8 @@ public class VMActuatorDiffblueTest {
    * <p>Method under test: {@link VMActuator#validate(Object)}
    */
   @Test
-  @Category(MaintainedByDiffblue.class)
+  @Category(ContributionFromDiffblue.class)
+  @ManagedByDiffblue
   @MethodsUnderTest({"void VMActuator.validate(Object)"})
   public void testValidate_givenDynamicPropertiesStoreGetAllowTvmLondonReturnThree()
       throws ContractValidateException {
@@ -1074,7 +1090,8 @@ public class VMActuatorDiffblueTest {
    * <p>Method under test: {@link VMActuator#validate(Object)}
    */
   @Test
-  @Category(MaintainedByDiffblue.class)
+  @Category(ContributionFromDiffblue.class)
+  @ManagedByDiffblue
   @MethodsUnderTest({"void VMActuator.validate(Object)"})
   public void testValidate_givenDynamicPropertiesStoreGetAllowTvmShangHaiReturnThree()
       throws ContractValidateException {
@@ -1155,7 +1172,8 @@ public class VMActuatorDiffblueTest {
    * <p>Method under test: {@link VMActuator#validate(Object)}
    */
   @Test
-  @Category(MaintainedByDiffblue.class)
+  @Category(ContributionFromDiffblue.class)
+  @ManagedByDiffblue
   @MethodsUnderTest({"void VMActuator.validate(Object)"})
   public void testValidate_givenDynamicPropertiesStoreGetAllowTvmSolidity059ReturnThree()
       throws ContractValidateException {
@@ -1236,7 +1254,8 @@ public class VMActuatorDiffblueTest {
    * <p>Method under test: {@link VMActuator#validate(Object)}
    */
   @Test
-  @Category(MaintainedByDiffblue.class)
+  @Category(ContributionFromDiffblue.class)
+  @ManagedByDiffblue
   @MethodsUnderTest({"void VMActuator.validate(Object)"})
   public void testValidate_givenDynamicPropertiesStoreGetAllowTvmTransferTrc10ReturnThree()
       throws ContractValidateException {
@@ -1317,7 +1336,8 @@ public class VMActuatorDiffblueTest {
    * <p>Method under test: {@link VMActuator#validate(Object)}
    */
   @Test
-  @Category(MaintainedByDiffblue.class)
+  @Category(ContributionFromDiffblue.class)
+  @ManagedByDiffblue
   @MethodsUnderTest({"void VMActuator.validate(Object)"})
   public void testValidate_givenDynamicPropertiesStoreGetAllowTvmVoteReturnThree()
       throws ContractValidateException {
@@ -1398,7 +1418,8 @@ public class VMActuatorDiffblueTest {
    * <p>Method under test: {@link VMActuator#validate(Object)}
    */
   @Test
-  @Category(MaintainedByDiffblue.class)
+  @Category(ContributionFromDiffblue.class)
+  @ManagedByDiffblue
   @MethodsUnderTest({"void VMActuator.validate(Object)"})
   public void testValidate_givenDynamicPropertiesStoreGetLatestBlockHeaderNumberReturnMinusOne()
       throws ContractValidateException {
@@ -1479,7 +1500,8 @@ public class VMActuatorDiffblueTest {
    * <p>Method under test: {@link VMActuator#validate(Object)}
    */
   @Test
-  @Category(MaintainedByDiffblue.class)
+  @Category(ContributionFromDiffblue.class)
+  @ManagedByDiffblue
   @MethodsUnderTest({"void VMActuator.validate(Object)"})
   public void testValidate_givenDynamicPropertiesStoreSupportUnfreezeDelayReturnFalse()
       throws ContractValidateException {
@@ -1560,7 +1582,8 @@ public class VMActuatorDiffblueTest {
    * <p>Method under test: {@link VMActuator#validate(Object)}
    */
   @Test
-  @Category(MaintainedByDiffblue.class)
+  @Category(ContributionFromDiffblue.class)
+  @ManagedByDiffblue
   @MethodsUnderTest({"void VMActuator.validate(Object)"})
   public void testValidate_givenDynamicPropertiesStoreSupportUnfreezeDelayReturnTrue()
       throws ContractValidateException {
@@ -1641,7 +1664,8 @@ public class VMActuatorDiffblueTest {
    * <p>Method under test: {@link VMActuator#validate(Object)}
    */
   @Test
-  @Category(MaintainedByDiffblue.class)
+  @Category(ContributionFromDiffblue.class)
+  @ManagedByDiffblue
   @MethodsUnderTest({"void VMActuator.validate(Object)"})
   public void testValidate_givenStoreFactoryGetChainBaseManagerReturnChainBaseManager()
       throws ContractValidateException {
@@ -1673,7 +1697,8 @@ public class VMActuatorDiffblueTest {
    * <p>Method under test: {@link VMActuator#validate(Object)}
    */
   @Test
-  @Category(MaintainedByDiffblue.class)
+  @Category(ContributionFromDiffblue.class)
+  @ManagedByDiffblue
   @MethodsUnderTest({"void VMActuator.validate(Object)"})
   public void testValidate_whenNull_thenThrowRuntimeException() throws ContractValidateException {
     // Arrange, Act and Assert
@@ -1691,7 +1716,8 @@ public class VMActuatorDiffblueTest {
    * <p>Method under test: {@link VMActuator#validate(Object)}
    */
   @Test
-  @Category(MaintainedByDiffblue.class)
+  @Category(ContributionFromDiffblue.class)
+  @ManagedByDiffblue
   @MethodsUnderTest({"void VMActuator.validate(Object)"})
   public void testValidate_whenTransactionContextGetStoreFactoryThrowRuntimeException()
       throws ContractValidateException {
@@ -1712,7 +1738,8 @@ public class VMActuatorDiffblueTest {
    * <p>Method under test: {@link VMActuator#execute(Object)}
    */
   @Test
-  @Category(MaintainedByDiffblue.class)
+  @Category(ContributionFromDiffblue.class)
+  @ManagedByDiffblue
   @MethodsUnderTest({"void VMActuator.execute(Object)"})
   public void testExecute() throws ContractExeException {
     // Arrange, Act and Assert
@@ -1733,7 +1760,8 @@ public class VMActuatorDiffblueTest {
    * </ul>
    */
   @Test
-  @Category(MaintainedByDiffblue.class)
+  @Category(ContributionFromDiffblue.class)
+  @ManagedByDiffblue
   @MethodsUnderTest({
     "TrxType VMActuator.getTrxType()",
     "boolean VMActuator.isConstantCall()",

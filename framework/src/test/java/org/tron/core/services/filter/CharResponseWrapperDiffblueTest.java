@@ -8,7 +8,8 @@ import static org.junit.Assert.assertTrue;
 import static org.mockito.Mockito.mock;
 import static org.mockito.Mockito.verify;
 import static org.mockito.Mockito.when;
-import com.diffblue.cover.annotations.MaintainedByDiffblue;
+import com.diffblue.cover.annotations.ContributionFromDiffblue;
+import com.diffblue.cover.annotations.ManagedByDiffblue;
 import com.diffblue.cover.annotations.MethodsUnderTest;
 import java.io.IOException;
 import javax.servlet.ServletOutputStream;
@@ -26,7 +27,8 @@ public class CharResponseWrapperDiffblueTest {
    * <p>Method under test: {@link CharResponseWrapper#CharResponseWrapper(HttpServletResponse)}
    */
   @Test
-  @Category(MaintainedByDiffblue.class)
+  @Category(ContributionFromDiffblue.class)
+  @ManagedByDiffblue
   @MethodsUnderTest({"void CharResponseWrapper.<init>(HttpServletResponse)"})
   public void testNewCharResponseWrapper() throws IOException {
     // Arrange
@@ -43,7 +45,8 @@ public class CharResponseWrapperDiffblueTest {
    * <p>Method under test: {@link CharResponseWrapper#getOutputStream()}
    */
   @Test
-  @Category(MaintainedByDiffblue.class)
+  @Category(ContributionFromDiffblue.class)
+  @ManagedByDiffblue
   @MethodsUnderTest({"ServletOutputStream CharResponseWrapper.getOutputStream()"})
   public void testGetOutputStream() throws IOException {
     // Arrange and Act
@@ -63,7 +66,8 @@ public class CharResponseWrapperDiffblueTest {
    * <p>Method under test: {@link CharResponseWrapper#getOutputStream()}
    */
   @Test
-  @Category(MaintainedByDiffblue.class)
+  @Category(ContributionFromDiffblue.class)
+  @ManagedByDiffblue
   @MethodsUnderTest({"ServletOutputStream CharResponseWrapper.getOutputStream()"})
   public void testGetOutputStream2() throws IOException {
     // Arrange
@@ -91,7 +95,8 @@ public class CharResponseWrapperDiffblueTest {
    * <p>Method under test: {@link CharResponseWrapper#getWriter()}
    */
   @Test
-  @Category(MaintainedByDiffblue.class)
+  @Category(ContributionFromDiffblue.class)
+  @ManagedByDiffblue
   @MethodsUnderTest({"java.io.PrintWriter CharResponseWrapper.getWriter()"})
   public void testGetWriter_givenHttpServletResponseWrapperWithResponse() throws IOException {
     // Arrange
@@ -114,7 +119,8 @@ public class CharResponseWrapperDiffblueTest {
    * <p>Method under test: {@link CharResponseWrapper#getWriter()}
    */
   @Test
-  @Category(MaintainedByDiffblue.class)
+  @Category(ContributionFromDiffblue.class)
+  @ManagedByDiffblue
   @MethodsUnderTest({"java.io.PrintWriter CharResponseWrapper.getWriter()"})
   public void testGetWriter_thenThrowIllegalStateException() throws IOException {
     // Arrange
@@ -139,7 +145,8 @@ public class CharResponseWrapperDiffblueTest {
    * <p>Method under test: {@link CharResponseWrapper#getByteSize()}
    */
   @Test
-  @Category(MaintainedByDiffblue.class)
+  @Category(ContributionFromDiffblue.class)
+  @ManagedByDiffblue
   @MethodsUnderTest({"int CharResponseWrapper.getByteSize()"})
   public void testGetByteSize() throws IOException {
     // Arrange, Act and Assert

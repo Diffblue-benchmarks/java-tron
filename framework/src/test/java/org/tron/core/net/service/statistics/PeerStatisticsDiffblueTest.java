@@ -1,7 +1,8 @@
 package org.tron.core.net.service.statistics;
 
 import static org.junit.Assert.assertEquals;
-import com.diffblue.cover.annotations.MaintainedByDiffblue;
+import com.diffblue.cover.annotations.ContributionFromDiffblue;
+import com.diffblue.cover.annotations.ManagedByDiffblue;
 import com.diffblue.cover.annotations.MethodsUnderTest;
 import org.junit.Test;
 import org.junit.experimental.categories.Category;
@@ -13,7 +14,8 @@ public class PeerStatisticsDiffblueTest {
    * <p>Method under test: default or parameterless constructor of {@link PeerStatistics}
    */
   @Test
-  @Category(MaintainedByDiffblue.class)
+  @Category(ContributionFromDiffblue.class)
+  @ManagedByDiffblue
   @MethodsUnderTest({"void PeerStatistics.<init>()"})
   public void testNewPeerStatistics() {
     // Arrange, Act and Assert

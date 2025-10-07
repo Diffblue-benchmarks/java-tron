@@ -7,7 +7,8 @@ import static org.junit.Assert.assertNotEquals;
 import static org.junit.Assert.assertSame;
 import static org.junit.Assert.assertTrue;
 import static org.mockito.Mockito.mock;
-import com.diffblue.cover.annotations.MaintainedByDiffblue;
+import com.diffblue.cover.annotations.ContributionFromDiffblue;
+import com.diffblue.cover.annotations.ManagedByDiffblue;
 import com.diffblue.cover.annotations.MethodsUnderTest;
 import java.math.BigInteger;
 import org.junit.Test;
@@ -20,7 +21,8 @@ public class BN128DiffblueTest {
    * <p>Method under test: {@link BN128#toAffine()}
    */
   @Test
-  @Category(MaintainedByDiffblue.class)
+  @Category(ContributionFromDiffblue.class)
+  @ManagedByDiffblue
   @MethodsUnderTest({"BN128 BN128.toAffine()"})
   public void testToAffine() {
     // Arrange
@@ -62,7 +64,8 @@ public class BN128DiffblueTest {
    * <p>Method under test: {@link BN128#toAffine()}
    */
   @Test
-  @Category(MaintainedByDiffblue.class)
+  @Category(ContributionFromDiffblue.class)
+  @ManagedByDiffblue
   @MethodsUnderTest({"BN128 BN128.toAffine()"})
   public void testToAffine_givenBn128g1WithPIsZero_thenReturnBn128g1() {
     // Arrange
@@ -99,7 +102,8 @@ public class BN128DiffblueTest {
    * <p>Method under test: {@link BN128#toAffine()}
    */
   @Test
-  @Category(MaintainedByDiffblue.class)
+  @Category(ContributionFromDiffblue.class)
+  @ManagedByDiffblue
   @MethodsUnderTest({"BN128 BN128.toAffine()"})
   public void testToAffine_givenZero_thenZeroBN128Fp() {
     // Arrange
@@ -137,7 +141,8 @@ public class BN128DiffblueTest {
    * <p>Method under test: {@link BN128#toEthNotation()}
    */
   @Test
-  @Category(MaintainedByDiffblue.class)
+  @Category(ContributionFromDiffblue.class)
+  @ManagedByDiffblue
   @MethodsUnderTest({"BN128 BN128.toEthNotation()"})
   public void testToEthNotation_givenBn128g1WithPIsZero_thenBn128g1WithPIsZeroXIsZ() {
     // Arrange
@@ -165,7 +170,8 @@ public class BN128DiffblueTest {
    * <p>Method under test: {@link BN128#toEthNotation()}
    */
   @Test
-  @Category(MaintainedByDiffblue.class)
+  @Category(ContributionFromDiffblue.class)
+  @ManagedByDiffblue
   @MethodsUnderTest({"BN128 BN128.toEthNotation()"})
   public void testToEthNotation_thenZeroReturnBN128Fp() {
     // Arrange
@@ -207,7 +213,8 @@ public class BN128DiffblueTest {
    * <p>Method under test: {@link BN128#isOnCurve()}
    */
   @Test
-  @Category(MaintainedByDiffblue.class)
+  @Category(ContributionFromDiffblue.class)
+  @ManagedByDiffblue
   @MethodsUnderTest({"boolean BN128.isOnCurve()"})
   public void testIsOnCurve_givenBn128g1WithPIsZero_thenReturnTrue() {
     // Arrange, Act and Assert
@@ -224,7 +231,8 @@ public class BN128DiffblueTest {
    * <p>Method under test: {@link BN128#isOnCurve()}
    */
   @Test
-  @Category(MaintainedByDiffblue.class)
+  @Category(ContributionFromDiffblue.class)
+  @ManagedByDiffblue
   @MethodsUnderTest({"boolean BN128.isOnCurve()"})
   public void testIsOnCurve_thenReturnFalse() {
     // Arrange
@@ -240,7 +248,8 @@ public class BN128DiffblueTest {
    * <p>Method under test: {@link BN128#add(BN128)}
    */
   @Test
-  @Category(MaintainedByDiffblue.class)
+  @Category(ContributionFromDiffblue.class)
+  @ManagedByDiffblue
   @MethodsUnderTest({"BN128 BN128.add(BN128)"})
   public void testAdd() {
     // Arrange
@@ -278,7 +287,8 @@ public class BN128DiffblueTest {
    * <p>Method under test: {@link BN128#add(BN128)}
    */
   @Test
-  @Category(MaintainedByDiffblue.class)
+  @Category(ContributionFromDiffblue.class)
+  @ManagedByDiffblue
   @MethodsUnderTest({"BN128 BN128.add(BN128)"})
   public void testAdd_givenBN128FpWithXIsZeroAndYIsNon_residueAndZIsNon_residue() {
     // Arrange
@@ -313,7 +323,8 @@ public class BN128DiffblueTest {
    * <p>Method under test: {@link BN128#add(BN128)}
    */
   @Test
-  @Category(MaintainedByDiffblue.class)
+  @Category(ContributionFromDiffblue.class)
+  @ManagedByDiffblue
   @MethodsUnderTest({"BN128 BN128.add(BN128)"})
   public void testAdd_givenBn128g1WithPIsZero_whenZero_thenZeroBN128Fp() {
     // Arrange
@@ -348,7 +359,8 @@ public class BN128DiffblueTest {
    * <p>Method under test: {@link BN128#add(BN128)}
    */
   @Test
-  @Category(MaintainedByDiffblue.class)
+  @Category(ContributionFromDiffblue.class)
+  @ManagedByDiffblue
   @MethodsUnderTest({"BN128 BN128.add(BN128)"})
   public void testAdd_thenToEthNotationReturnBN128Fp() {
     // Arrange
@@ -382,7 +394,8 @@ public class BN128DiffblueTest {
    * <p>Method under test: {@link BN128#add(BN128)}
    */
   @Test
-  @Category(MaintainedByDiffblue.class)
+  @Category(ContributionFromDiffblue.class)
+  @ManagedByDiffblue
   @MethodsUnderTest({"BN128 BN128.add(BN128)"})
   public void testAdd_whenZero_thenReturnBn128g1WithPIsBN128Fp() {
     // Arrange
@@ -407,7 +420,8 @@ public class BN128DiffblueTest {
    * <p>Method under test: {@link BN128#mul(BigInteger)}
    */
   @Test
-  @Category(MaintainedByDiffblue.class)
+  @Category(ContributionFromDiffblue.class)
+  @ManagedByDiffblue
   @MethodsUnderTest({"BN128 BN128.mul(BigInteger)"})
   public void testMul_givenBn128g1WithPIsZero_thenReturnBn128g1WithPIsZero() {
     // Arrange
@@ -436,7 +450,8 @@ public class BN128DiffblueTest {
    * <p>Method under test: {@link BN128#mul(BigInteger)}
    */
   @Test
-  @Category(MaintainedByDiffblue.class)
+  @Category(ContributionFromDiffblue.class)
+  @ManagedByDiffblue
   @MethodsUnderTest({"BN128 BN128.mul(BigInteger)"})
   public void testMul_thenReturnBN128Fp() {
     // Arrange
@@ -470,7 +485,8 @@ public class BN128DiffblueTest {
    * <p>Method under test: {@link BN128#x()}
    */
   @Test
-  @Category(MaintainedByDiffblue.class)
+  @Category(ContributionFromDiffblue.class)
+  @ManagedByDiffblue
   @MethodsUnderTest({"org.tron.common.crypto.zksnark.Field BN128.x()"})
   public void testX() {
     // Arrange
@@ -493,7 +509,8 @@ public class BN128DiffblueTest {
    * <p>Method under test: {@link BN128#y()}
    */
   @Test
-  @Category(MaintainedByDiffblue.class)
+  @Category(ContributionFromDiffblue.class)
+  @ManagedByDiffblue
   @MethodsUnderTest({"org.tron.common.crypto.zksnark.Field BN128.y()"})
   public void testY() {
     // Arrange
@@ -521,7 +538,8 @@ public class BN128DiffblueTest {
    * <p>Method under test: {@link BN128#isZero()}
    */
   @Test
-  @Category(MaintainedByDiffblue.class)
+  @Category(ContributionFromDiffblue.class)
+  @ManagedByDiffblue
   @MethodsUnderTest({"boolean BN128.isZero()"})
   public void testIsZero_givenBn128g1WithPIsZero_thenReturnTrue() {
     // Arrange, Act and Assert
@@ -538,7 +556,8 @@ public class BN128DiffblueTest {
    * <p>Method under test: {@link BN128#isZero()}
    */
   @Test
-  @Category(MaintainedByDiffblue.class)
+  @Category(ContributionFromDiffblue.class)
+  @ManagedByDiffblue
   @MethodsUnderTest({"boolean BN128.isZero()"})
   public void testIsZero_thenReturnFalse() {
     // Arrange
@@ -559,7 +578,8 @@ public class BN128DiffblueTest {
    * <p>Method under test: {@link BN128#isValid()}
    */
   @Test
-  @Category(MaintainedByDiffblue.class)
+  @Category(ContributionFromDiffblue.class)
+  @ManagedByDiffblue
   @MethodsUnderTest({"boolean BN128.isValid()"})
   public void testIsValid_givenBN128FpWithXIsFpAndYIsNon_residueAndZIsNon_residue() {
     // Arrange
@@ -580,7 +600,8 @@ public class BN128DiffblueTest {
    * <p>Method under test: {@link BN128#isValid()}
    */
   @Test
-  @Category(MaintainedByDiffblue.class)
+  @Category(ContributionFromDiffblue.class)
+  @ManagedByDiffblue
   @MethodsUnderTest({"boolean BN128.isValid()"})
   public void testIsValid_givenBN128FpWithXIsNon_residueAndYIsFpAndZIsNon_residue() {
     // Arrange
@@ -601,7 +622,8 @@ public class BN128DiffblueTest {
    * <p>Method under test: {@link BN128#isValid()}
    */
   @Test
-  @Category(MaintainedByDiffblue.class)
+  @Category(ContributionFromDiffblue.class)
+  @ManagedByDiffblue
   @MethodsUnderTest({"boolean BN128.isValid()"})
   public void testIsValid_givenBN128FpWithXIsNon_residueAndYIsNon_residueAndZIsFp() {
     // Arrange
@@ -622,7 +644,8 @@ public class BN128DiffblueTest {
    * <p>Method under test: {@link BN128#isValid()}
    */
   @Test
-  @Category(MaintainedByDiffblue.class)
+  @Category(ContributionFromDiffblue.class)
+  @ManagedByDiffblue
   @MethodsUnderTest({"boolean BN128.isValid()"})
   public void testIsValid_givenBN128FpWithXIsNon_residueAndYIsNon_residueAndZIsNon_residue() {
     // Arrange
@@ -643,7 +666,8 @@ public class BN128DiffblueTest {
    * <p>Method under test: {@link BN128#isValid()}
    */
   @Test
-  @Category(MaintainedByDiffblue.class)
+  @Category(ContributionFromDiffblue.class)
+  @ManagedByDiffblue
   @MethodsUnderTest({"boolean BN128.isValid()"})
   public void testIsValid_givenBn128g1WithPIsZero_thenReturnTrue() {
     // Arrange, Act and Assert
@@ -661,7 +685,8 @@ public class BN128DiffblueTest {
    * <p>Method under test: {@link BN128#toString()}
    */
   @Test
-  @Category(MaintainedByDiffblue.class)
+  @Category(ContributionFromDiffblue.class)
+  @ManagedByDiffblue
   @MethodsUnderTest({"java.lang.String BN128.toString()"})
   public void testToString_givenBn128g1WithPIsZero_thenReturn000() {
     // Arrange, Act and Assert
@@ -679,7 +704,8 @@ public class BN128DiffblueTest {
    * <p>Method under test: {@link BN128#equals(Object)}
    */
   @Test
-  @Category(MaintainedByDiffblue.class)
+  @Category(ContributionFromDiffblue.class)
+  @ManagedByDiffblue
   @MethodsUnderTest({"boolean BN128.equals(Object)"})
   public void testEqualsAndHashCode_whenOtherIsEqual_thenReturnEqual() {
     // Arrange
@@ -702,7 +728,8 @@ public class BN128DiffblueTest {
    * <p>Method under test: {@link BN128#equals(Object)}
    */
   @Test
-  @Category(MaintainedByDiffblue.class)
+  @Category(ContributionFromDiffblue.class)
+  @ManagedByDiffblue
   @MethodsUnderTest({"boolean BN128.equals(Object)"})
   public void testEqualsAndHashCode_whenOtherIsEqual_thenReturnEqual2() {
     // Arrange
@@ -725,7 +752,8 @@ public class BN128DiffblueTest {
    * <p>Method under test: {@link BN128#equals(Object)}
    */
   @Test
-  @Category(MaintainedByDiffblue.class)
+  @Category(ContributionFromDiffblue.class)
+  @ManagedByDiffblue
   @MethodsUnderTest({"boolean BN128.equals(Object)"})
   public void testEqualsAndHashCode_whenOtherIsEqual_thenReturnEqual3() {
     // Arrange
@@ -748,7 +776,8 @@ public class BN128DiffblueTest {
    * <p>Method under test: {@link BN128#equals(Object)}
    */
   @Test
-  @Category(MaintainedByDiffblue.class)
+  @Category(ContributionFromDiffblue.class)
+  @ManagedByDiffblue
   @MethodsUnderTest({"boolean BN128.equals(Object)"})
   public void testEqualsAndHashCode_whenOtherIsSame_thenReturnEqual() {
     // Arrange
@@ -771,7 +800,8 @@ public class BN128DiffblueTest {
    * <p>Method under test: {@link BN128#equals(Object)}
    */
   @Test
-  @Category(MaintainedByDiffblue.class)
+  @Category(ContributionFromDiffblue.class)
+  @ManagedByDiffblue
   @MethodsUnderTest({"boolean BN128.equals(Object)"})
   public void testEquals_whenOtherIsDifferent_thenReturnNotEqual() {
     // Arrange, Act and Assert
@@ -789,7 +819,8 @@ public class BN128DiffblueTest {
    * <p>Method under test: {@link BN128#equals(Object)}
    */
   @Test
-  @Category(MaintainedByDiffblue.class)
+  @Category(ContributionFromDiffblue.class)
+  @ManagedByDiffblue
   @MethodsUnderTest({"boolean BN128.equals(Object)"})
   public void testEquals_whenOtherIsDifferent_thenReturnNotEqual2() {
     // Arrange, Act and Assert
@@ -807,7 +838,8 @@ public class BN128DiffblueTest {
    * <p>Method under test: {@link BN128#equals(Object)}
    */
   @Test
-  @Category(MaintainedByDiffblue.class)
+  @Category(ContributionFromDiffblue.class)
+  @ManagedByDiffblue
   @MethodsUnderTest({"boolean BN128.equals(Object)"})
   public void testEquals_whenOtherIsDifferent_thenReturnNotEqual3() {
     // Arrange, Act and Assert
@@ -825,7 +857,8 @@ public class BN128DiffblueTest {
    * <p>Method under test: {@link BN128#equals(Object)}
    */
   @Test
-  @Category(MaintainedByDiffblue.class)
+  @Category(ContributionFromDiffblue.class)
+  @ManagedByDiffblue
   @MethodsUnderTest({"boolean BN128.equals(Object)"})
   public void testEquals_whenOtherIsDifferent_thenReturnNotEqual4() {
     // Arrange, Act and Assert
@@ -843,7 +876,8 @@ public class BN128DiffblueTest {
    * <p>Method under test: {@link BN128#equals(Object)}
    */
   @Test
-  @Category(MaintainedByDiffblue.class)
+  @Category(ContributionFromDiffblue.class)
+  @ManagedByDiffblue
   @MethodsUnderTest({"boolean BN128.equals(Object)"})
   public void testEquals_whenOtherIsDifferent_thenReturnNotEqual5() {
     // Arrange, Act and Assert
@@ -861,7 +895,8 @@ public class BN128DiffblueTest {
    * <p>Method under test: {@link BN128#equals(Object)}
    */
   @Test
-  @Category(MaintainedByDiffblue.class)
+  @Category(ContributionFromDiffblue.class)
+  @ManagedByDiffblue
   @MethodsUnderTest({"boolean BN128.equals(Object)"})
   public void testEquals_whenOtherIsDifferent_thenReturnNotEqual6() {
     // Arrange, Act and Assert
@@ -879,7 +914,8 @@ public class BN128DiffblueTest {
    * <p>Method under test: {@link BN128#equals(Object)}
    */
   @Test
-  @Category(MaintainedByDiffblue.class)
+  @Category(ContributionFromDiffblue.class)
+  @ManagedByDiffblue
   @MethodsUnderTest({"boolean BN128.equals(Object)"})
   public void testEquals_whenOtherIsDifferent_thenReturnNotEqual7() {
     // Arrange, Act and Assert
@@ -897,7 +933,8 @@ public class BN128DiffblueTest {
    * <p>Method under test: {@link BN128#equals(Object)}
    */
   @Test
-  @Category(MaintainedByDiffblue.class)
+  @Category(ContributionFromDiffblue.class)
+  @ManagedByDiffblue
   @MethodsUnderTest({"boolean BN128.equals(Object)"})
   public void testEquals_whenOtherIsDifferent_thenReturnNotEqual8() {
     // Arrange, Act and Assert
@@ -915,7 +952,8 @@ public class BN128DiffblueTest {
    * <p>Method under test: {@link BN128#equals(Object)}
    */
   @Test
-  @Category(MaintainedByDiffblue.class)
+  @Category(ContributionFromDiffblue.class)
+  @ManagedByDiffblue
   @MethodsUnderTest({"boolean BN128.equals(Object)"})
   public void testEquals_whenOtherIsNull_thenReturnNotEqual() {
     // Arrange, Act and Assert
@@ -933,7 +971,8 @@ public class BN128DiffblueTest {
    * <p>Method under test: {@link BN128#equals(Object)}
    */
   @Test
-  @Category(MaintainedByDiffblue.class)
+  @Category(ContributionFromDiffblue.class)
+  @ManagedByDiffblue
   @MethodsUnderTest({"boolean BN128.equals(Object)"})
   public void testEquals_whenOtherIsWrongType_thenReturnNotEqual() {
     // Arrange, Act and Assert

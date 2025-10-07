@@ -10,7 +10,8 @@ import static org.mockito.Mockito.doThrow;
 import static org.mockito.Mockito.mock;
 import static org.mockito.Mockito.verify;
 import static org.mockito.Mockito.when;
-import com.diffblue.cover.annotations.MaintainedByDiffblue;
+import com.diffblue.cover.annotations.ContributionFromDiffblue;
+import com.diffblue.cover.annotations.ManagedByDiffblue;
 import com.diffblue.cover.annotations.MethodsUnderTest;
 import java.io.IOException;
 import java.io.UnsupportedEncodingException;
@@ -27,7 +28,8 @@ public class RockStoreIteratorDiffblueTest {
    * <p>Method under test: {@link RockStoreIterator#RockStoreIterator(RocksIterator)}
    */
   @Test
-  @Category(MaintainedByDiffblue.class)
+  @Category(ContributionFromDiffblue.class)
+  @ManagedByDiffblue
   @MethodsUnderTest({"void RockStoreIterator.<init>(RocksIterator)"})
   public void testNewRockStoreIterator() {
     // Arrange, Act and Assert
@@ -44,7 +46,8 @@ public class RockStoreIteratorDiffblueTest {
    * <p>Method under test: {@link RockStoreIterator#close()}
    */
   @Test
-  @Category(MaintainedByDiffblue.class)
+  @Category(ContributionFromDiffblue.class)
+  @ManagedByDiffblue
   @MethodsUnderTest({"void RockStoreIterator.close()"})
   public void testClose_givenRocksIteratorCloseDoesNothing() throws IOException {
     // Arrange
@@ -68,7 +71,8 @@ public class RockStoreIteratorDiffblueTest {
    * <p>Method under test: {@link RockStoreIterator#hasNext()}
    */
   @Test
-  @Category(MaintainedByDiffblue.class)
+  @Category(ContributionFromDiffblue.class)
+  @ManagedByDiffblue
   @MethodsUnderTest({"boolean RockStoreIterator.hasNext()"})
   public void testHasNext_givenRocksIteratorCloseThrowNoSuchElementException_thenReturnFalse() {
     // Arrange
@@ -96,7 +100,8 @@ public class RockStoreIteratorDiffblueTest {
    * <p>Method under test: {@link RockStoreIterator#hasNext()}
    */
   @Test
-  @Category(MaintainedByDiffblue.class)
+  @Category(ContributionFromDiffblue.class)
+  @ManagedByDiffblue
   @MethodsUnderTest({"boolean RockStoreIterator.hasNext()"})
   public void testHasNext_givenRocksIteratorIsValidReturnFalse_thenReturnFalse() {
     // Arrange
@@ -129,7 +134,8 @@ public class RockStoreIteratorDiffblueTest {
    * <p>Method under test: {@link RockStoreIterator#hasNext()}
    */
   @Test
-  @Category(MaintainedByDiffblue.class)
+  @Category(ContributionFromDiffblue.class)
+  @ManagedByDiffblue
   @MethodsUnderTest({"boolean RockStoreIterator.hasNext()"})
   public void testHasNext_givenRocksIteratorSeekDoesNothing_thenReturnTrue() {
     // Arrange
@@ -160,7 +166,8 @@ public class RockStoreIteratorDiffblueTest {
    * <p>Method under test: {@link RockStoreIterator#hasNext()}
    */
   @Test
-  @Category(MaintainedByDiffblue.class)
+  @Category(ContributionFromDiffblue.class)
+  @ManagedByDiffblue
   @MethodsUnderTest({"boolean RockStoreIterator.hasNext()"})
   public void testHasNext_givenRocksIteratorSeekToFirstDoesNothing_thenReturnTrue() {
     // Arrange
@@ -189,7 +196,8 @@ public class RockStoreIteratorDiffblueTest {
    * <p>Method under test: {@link RockStoreIterator#next()}
    */
   @Test
-  @Category(MaintainedByDiffblue.class)
+  @Category(ContributionFromDiffblue.class)
+  @ManagedByDiffblue
   @MethodsUnderTest({"java.util.Map.Entry RockStoreIterator.next()"})
   public void testNext_givenRocksIteratorKeyReturnAxaxaxaxBytesIsUtf8_thenCallsNext()
       throws UnsupportedEncodingException {
@@ -218,7 +226,8 @@ public class RockStoreIteratorDiffblueTest {
    * <p>Method under test: {@link RockStoreIterator#next()}
    */
   @Test
-  @Category(MaintainedByDiffblue.class)
+  @Category(ContributionFromDiffblue.class)
+  @ManagedByDiffblue
   @MethodsUnderTest({"java.util.Map.Entry RockStoreIterator.next()"})
   public void testNext_thenThrowNoSuchElementException() {
     // Arrange
@@ -240,7 +249,8 @@ public class RockStoreIteratorDiffblueTest {
    * <p>Method under test: {@link RockStoreIterator#seek(byte[])}
    */
   @Test
-  @Category(MaintainedByDiffblue.class)
+  @Category(ContributionFromDiffblue.class)
+  @ManagedByDiffblue
   @MethodsUnderTest({"void RockStoreIterator.seek(byte[])"})
   public void testSeek_givenRocksIteratorSeekDoesNothing() throws UnsupportedEncodingException {
     // Arrange
@@ -264,7 +274,8 @@ public class RockStoreIteratorDiffblueTest {
    * <p>Method under test: {@link RockStoreIterator#seek(byte[])}
    */
   @Test
-  @Category(MaintainedByDiffblue.class)
+  @Category(ContributionFromDiffblue.class)
+  @ManagedByDiffblue
   @MethodsUnderTest({"void RockStoreIterator.seek(byte[])"})
   public void testSeek_thenThrowNoSuchElementException() throws UnsupportedEncodingException {
     // Arrange
@@ -288,7 +299,8 @@ public class RockStoreIteratorDiffblueTest {
    * <p>Method under test: {@link RockStoreIterator#seekToFirst()}
    */
   @Test
-  @Category(MaintainedByDiffblue.class)
+  @Category(ContributionFromDiffblue.class)
+  @ManagedByDiffblue
   @MethodsUnderTest({"void RockStoreIterator.seekToFirst()"})
   public void testSeekToFirst_givenRocksIteratorSeekToFirstDoesNothing() {
     // Arrange
@@ -312,7 +324,8 @@ public class RockStoreIteratorDiffblueTest {
    * <p>Method under test: {@link RockStoreIterator#seekToFirst()}
    */
   @Test
-  @Category(MaintainedByDiffblue.class)
+  @Category(ContributionFromDiffblue.class)
+  @ManagedByDiffblue
   @MethodsUnderTest({"void RockStoreIterator.seekToFirst()"})
   public void testSeekToFirst_thenThrowNoSuchElementException() {
     // Arrange
@@ -335,7 +348,8 @@ public class RockStoreIteratorDiffblueTest {
    * <p>Method under test: {@link RockStoreIterator#seekToLast()}
    */
   @Test
-  @Category(MaintainedByDiffblue.class)
+  @Category(ContributionFromDiffblue.class)
+  @ManagedByDiffblue
   @MethodsUnderTest({"void RockStoreIterator.seekToLast()"})
   public void testSeekToLast_givenRocksIteratorSeekToLastDoesNothing() {
     // Arrange
@@ -359,7 +373,8 @@ public class RockStoreIteratorDiffblueTest {
    * <p>Method under test: {@link RockStoreIterator#seekToLast()}
    */
   @Test
-  @Category(MaintainedByDiffblue.class)
+  @Category(ContributionFromDiffblue.class)
+  @ManagedByDiffblue
   @MethodsUnderTest({"void RockStoreIterator.seekToLast()"})
   public void testSeekToLast_thenThrowNoSuchElementException() {
     // Arrange
@@ -383,7 +398,8 @@ public class RockStoreIteratorDiffblueTest {
    * <p>Method under test: {@link RockStoreIterator#valid()}
    */
   @Test
-  @Category(MaintainedByDiffblue.class)
+  @Category(ContributionFromDiffblue.class)
+  @ManagedByDiffblue
   @MethodsUnderTest({"boolean RockStoreIterator.valid()"})
   public void testValid_givenRocksIteratorIsValidReturnFalse_thenReturnFalse() {
     // Arrange
@@ -409,7 +425,8 @@ public class RockStoreIteratorDiffblueTest {
    * <p>Method under test: {@link RockStoreIterator#valid()}
    */
   @Test
-  @Category(MaintainedByDiffblue.class)
+  @Category(ContributionFromDiffblue.class)
+  @ManagedByDiffblue
   @MethodsUnderTest({"boolean RockStoreIterator.valid()"})
   public void testValid_givenRocksIteratorIsValidReturnTrue_thenReturnTrue() {
     // Arrange
@@ -434,7 +451,8 @@ public class RockStoreIteratorDiffblueTest {
    * <p>Method under test: {@link RockStoreIterator#valid()}
    */
   @Test
-  @Category(MaintainedByDiffblue.class)
+  @Category(ContributionFromDiffblue.class)
+  @ManagedByDiffblue
   @MethodsUnderTest({"boolean RockStoreIterator.valid()"})
   public void testValid_thenThrowNoSuchElementException() {
     // Arrange
@@ -457,7 +475,8 @@ public class RockStoreIteratorDiffblueTest {
    * <p>Method under test: {@link RockStoreIterator#getKey()}
    */
   @Test
-  @Category(MaintainedByDiffblue.class)
+  @Category(ContributionFromDiffblue.class)
+  @ManagedByDiffblue
   @MethodsUnderTest({"byte[] RockStoreIterator.getKey()"})
   public void testGetKey_givenRocksIteratorIsValidReturnTrue_thenReturnAxaxaxaxBytesIsUtf8()
       throws UnsupportedEncodingException {
@@ -485,7 +504,8 @@ public class RockStoreIteratorDiffblueTest {
    * <p>Method under test: {@link RockStoreIterator#getKey()}
    */
   @Test
-  @Category(MaintainedByDiffblue.class)
+  @Category(ContributionFromDiffblue.class)
+  @ManagedByDiffblue
   @MethodsUnderTest({"byte[] RockStoreIterator.getKey()"})
   public void testGetKey_thenThrowNoSuchElementException() {
     // Arrange
@@ -508,7 +528,8 @@ public class RockStoreIteratorDiffblueTest {
    * <p>Method under test: {@link RockStoreIterator#getValue()}
    */
   @Test
-  @Category(MaintainedByDiffblue.class)
+  @Category(ContributionFromDiffblue.class)
+  @ManagedByDiffblue
   @MethodsUnderTest({"byte[] RockStoreIterator.getValue()"})
   public void testGetValue_givenRocksIteratorIsValidReturnTrue_thenReturnAxaxaxaxBytesIsUtf8()
       throws UnsupportedEncodingException {
@@ -536,7 +557,8 @@ public class RockStoreIteratorDiffblueTest {
    * <p>Method under test: {@link RockStoreIterator#getValue()}
    */
   @Test
-  @Category(MaintainedByDiffblue.class)
+  @Category(ContributionFromDiffblue.class)
+  @ManagedByDiffblue
   @MethodsUnderTest({"byte[] RockStoreIterator.getValue()"})
   public void testGetValue_thenThrowNoSuchElementException() {
     // Arrange

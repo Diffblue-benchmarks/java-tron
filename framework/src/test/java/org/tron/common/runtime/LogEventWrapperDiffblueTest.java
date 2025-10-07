@@ -6,7 +6,8 @@ import static org.junit.Assert.assertFalse;
 import static org.junit.Assert.assertNull;
 import static org.junit.Assert.assertSame;
 import static org.junit.Assert.assertTrue;
-import com.diffblue.cover.annotations.MaintainedByDiffblue;
+import com.diffblue.cover.annotations.ContributionFromDiffblue;
+import com.diffblue.cover.annotations.ManagedByDiffblue;
 import com.diffblue.cover.annotations.MethodsUnderTest;
 import java.io.UnsupportedEncodingException;
 import java.util.ArrayList;
@@ -38,7 +39,8 @@ public class LogEventWrapperDiffblueTest {
    * </ul>
    */
   @Test
-  @Category(MaintainedByDiffblue.class)
+  @Category(ContributionFromDiffblue.class)
+  @ManagedByDiffblue
   @MethodsUnderTest({
     "void LogEventWrapper.<init>()",
     "ABI.Entry LogEventWrapper.getAbiEntry()",
@@ -98,7 +100,8 @@ public class LogEventWrapperDiffblueTest {
    * <p>Method under test: {@link LogEventWrapper#getEventSignatureFull()}
    */
   @Test
-  @Category(MaintainedByDiffblue.class)
+  @Category(ContributionFromDiffblue.class)
+  @ManagedByDiffblue
   @MethodsUnderTest({"String LogEventWrapper.getEventSignatureFull()"})
   public void testGetEventSignatureFull_givenLogEventWrapper_thenReturnFallback() {
     // Arrange, Act and Assert
@@ -115,7 +118,8 @@ public class LogEventWrapperDiffblueTest {
    * <p>Method under test: {@link LogEventWrapper#getEventSignatureFull()}
    */
   @Test
-  @Category(MaintainedByDiffblue.class)
+  @Category(ContributionFromDiffblue.class)
+  @ManagedByDiffblue
   @MethodsUnderTest({"String LogEventWrapper.getEventSignatureFull()"})
   public void testGetEventSignatureFull_thenReturnLeftParenthesisRightParenthesis()
       throws UnsupportedEncodingException {

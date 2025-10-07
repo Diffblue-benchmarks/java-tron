@@ -3,7 +3,8 @@ package org.tron.core.exception;
 import static org.junit.Assert.assertEquals;
 import static org.junit.Assert.assertNull;
 import static org.junit.Assert.assertSame;
-import com.diffblue.cover.annotations.MaintainedByDiffblue;
+import com.diffblue.cover.annotations.ContributionFromDiffblue;
+import com.diffblue.cover.annotations.ManagedByDiffblue;
 import com.diffblue.cover.annotations.MethodsUnderTest;
 import org.junit.Test;
 import org.junit.experimental.categories.Category;
@@ -15,7 +16,8 @@ public class TraitorPeerExceptionDiffblueTest {
    * <p>Method under test: {@link TraitorPeerException#TraitorPeerException()}
    */
   @Test
-  @Category(MaintainedByDiffblue.class)
+  @Category(ContributionFromDiffblue.class)
+  @ManagedByDiffblue
   @MethodsUnderTest({"void TraitorPeerException.<init>()"})
   public void testNewTraitorPeerException() {
     // Arrange and Act
@@ -34,7 +36,8 @@ public class TraitorPeerExceptionDiffblueTest {
    * <p>Method under test: {@link TraitorPeerException#TraitorPeerException(String)}
    */
   @Test
-  @Category(MaintainedByDiffblue.class)
+  @Category(ContributionFromDiffblue.class)
+  @ManagedByDiffblue
   @MethodsUnderTest({"void TraitorPeerException.<init>(String)"})
   public void testNewTraitorPeerException2() {
     // Arrange and Act
@@ -53,7 +56,8 @@ public class TraitorPeerExceptionDiffblueTest {
    * <p>Method under test: {@link TraitorPeerException#TraitorPeerException(String, Throwable)}
    */
   @Test
-  @Category(MaintainedByDiffblue.class)
+  @Category(ContributionFromDiffblue.class)
+  @ManagedByDiffblue
   @MethodsUnderTest({"void TraitorPeerException.<init>(String, Throwable)"})
   public void testNewTraitorPeerException3() {
     // Arrange

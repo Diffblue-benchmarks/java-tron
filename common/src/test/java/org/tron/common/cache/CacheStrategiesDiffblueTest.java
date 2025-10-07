@@ -1,7 +1,8 @@
 package org.tron.common.cache;
 
 import static org.junit.Assert.assertEquals;
-import com.diffblue.cover.annotations.MaintainedByDiffblue;
+import com.diffblue.cover.annotations.ContributionFromDiffblue;
+import com.diffblue.cover.annotations.ManagedByDiffblue;
 import com.diffblue.cover.annotations.MethodsUnderTest;
 import org.junit.Test;
 import org.junit.experimental.categories.Category;
@@ -13,7 +14,8 @@ public class CacheStrategiesDiffblueTest {
    * <p>Method under test: {@link CacheStrategies#getCacheStrategy(CacheType)}
    */
   @Test
-  @Category(MaintainedByDiffblue.class)
+  @Category(ContributionFromDiffblue.class)
+  @ManagedByDiffblue
   @MethodsUnderTest({"java.lang.String CacheStrategies.getCacheStrategy(CacheType)"})
   public void testGetCacheStrategy() {
     // Arrange, Act and Assert
@@ -28,7 +30,8 @@ public class CacheStrategiesDiffblueTest {
    * <p>Method under test: {@link CacheStrategies#getCacheStrategy(CacheType)}
    */
   @Test
-  @Category(MaintainedByDiffblue.class)
+  @Category(ContributionFromDiffblue.class)
+  @ManagedByDiffblue
   @MethodsUnderTest({"java.lang.String CacheStrategies.getCacheStrategy(CacheType)"})
   public void testGetCacheStrategy2() {
     // Arrange, Act and Assert
@@ -43,7 +46,8 @@ public class CacheStrategiesDiffblueTest {
    * <p>Method under test: {@link CacheStrategies#getCacheStrategy(CacheType)}
    */
   @Test
-  @Category(MaintainedByDiffblue.class)
+  @Category(ContributionFromDiffblue.class)
+  @ManagedByDiffblue
   @MethodsUnderTest({"java.lang.String CacheStrategies.getCacheStrategy(CacheType)"})
   public void testGetCacheStrategy3() {
     // Arrange, Act and Assert
@@ -58,7 +62,8 @@ public class CacheStrategiesDiffblueTest {
    * <p>Method under test: {@link CacheStrategies#getCacheStrategy(CacheType)}
    */
   @Test
-  @Category(MaintainedByDiffblue.class)
+  @Category(ContributionFromDiffblue.class)
+  @ManagedByDiffblue
   @MethodsUnderTest({"java.lang.String CacheStrategies.getCacheStrategy(CacheType)"})
   public void testGetCacheStrategy4() {
     // Arrange, Act and Assert
@@ -78,7 +83,8 @@ public class CacheStrategiesDiffblueTest {
    * <p>Method under test: {@link CacheStrategies#getCacheStrategy(CacheType)}
    */
   @Test
-  @Category(MaintainedByDiffblue.class)
+  @Category(ContributionFromDiffblue.class)
+  @ManagedByDiffblue
   @MethodsUnderTest({"java.lang.String CacheStrategies.getCacheStrategy(CacheType)"})
   public void testGetCacheStrategy_whenWitnessStandby_thenReturnCache_strategy_default() {
     // Arrange, Act and Assert

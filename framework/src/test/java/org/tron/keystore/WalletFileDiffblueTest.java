@@ -11,7 +11,8 @@ import static org.mockito.Mockito.doNothing;
 import static org.mockito.Mockito.mock;
 import static org.mockito.Mockito.verify;
 import static org.mockito.Mockito.when;
-import com.diffblue.cover.annotations.MaintainedByDiffblue;
+import com.diffblue.cover.annotations.ContributionFromDiffblue;
+import com.diffblue.cover.annotations.ManagedByDiffblue;
 import com.diffblue.cover.annotations.MethodsUnderTest;
 import com.fasterxml.jackson.core.JsonParser;
 import com.fasterxml.jackson.core.JsonToken;
@@ -53,7 +54,8 @@ public class WalletFileDiffblueTest {
    * </ul>
    */
   @Test
-  @Category(MaintainedByDiffblue.class)
+  @Category(ContributionFromDiffblue.class)
+  @ManagedByDiffblue
   @MethodsUnderTest({
     "boolean Aes128CtrKdfParams.equals(Object)",
     "int Aes128CtrKdfParams.hashCode()"
@@ -94,7 +96,8 @@ public class WalletFileDiffblueTest {
    * </ul>
    */
   @Test
-  @Category(MaintainedByDiffblue.class)
+  @Category(ContributionFromDiffblue.class)
+  @ManagedByDiffblue
   @MethodsUnderTest({
     "boolean Aes128CtrKdfParams.equals(Object)",
     "int Aes128CtrKdfParams.hashCode()"
@@ -135,7 +138,8 @@ public class WalletFileDiffblueTest {
    * </ul>
    */
   @Test
-  @Category(MaintainedByDiffblue.class)
+  @Category(ContributionFromDiffblue.class)
+  @ManagedByDiffblue
   @MethodsUnderTest({
     "boolean Aes128CtrKdfParams.equals(Object)",
     "int Aes128CtrKdfParams.hashCode()"
@@ -176,7 +180,8 @@ public class WalletFileDiffblueTest {
    * </ul>
    */
   @Test
-  @Category(MaintainedByDiffblue.class)
+  @Category(ContributionFromDiffblue.class)
+  @ManagedByDiffblue
   @MethodsUnderTest({
     "boolean Aes128CtrKdfParams.equals(Object)",
     "int Aes128CtrKdfParams.hashCode()"
@@ -206,7 +211,8 @@ public class WalletFileDiffblueTest {
    * <p>Method under test: {@link Aes128CtrKdfParams#equals(Object)}
    */
   @Test
-  @Category(MaintainedByDiffblue.class)
+  @Category(ContributionFromDiffblue.class)
+  @ManagedByDiffblue
   @MethodsUnderTest({
     "boolean Aes128CtrKdfParams.equals(Object)",
     "int Aes128CtrKdfParams.hashCode()"
@@ -240,7 +246,8 @@ public class WalletFileDiffblueTest {
    * <p>Method under test: {@link Aes128CtrKdfParams#equals(Object)}
    */
   @Test
-  @Category(MaintainedByDiffblue.class)
+  @Category(ContributionFromDiffblue.class)
+  @ManagedByDiffblue
   @MethodsUnderTest({
     "boolean Aes128CtrKdfParams.equals(Object)",
     "int Aes128CtrKdfParams.hashCode()"
@@ -274,7 +281,8 @@ public class WalletFileDiffblueTest {
    * <p>Method under test: {@link Aes128CtrKdfParams#equals(Object)}
    */
   @Test
-  @Category(MaintainedByDiffblue.class)
+  @Category(ContributionFromDiffblue.class)
+  @ManagedByDiffblue
   @MethodsUnderTest({
     "boolean Aes128CtrKdfParams.equals(Object)",
     "int Aes128CtrKdfParams.hashCode()"
@@ -308,7 +316,8 @@ public class WalletFileDiffblueTest {
    * <p>Method under test: {@link Aes128CtrKdfParams#equals(Object)}
    */
   @Test
-  @Category(MaintainedByDiffblue.class)
+  @Category(ContributionFromDiffblue.class)
+  @ManagedByDiffblue
   @MethodsUnderTest({
     "boolean Aes128CtrKdfParams.equals(Object)",
     "int Aes128CtrKdfParams.hashCode()"
@@ -342,7 +351,8 @@ public class WalletFileDiffblueTest {
    * <p>Method under test: {@link Aes128CtrKdfParams#equals(Object)}
    */
   @Test
-  @Category(MaintainedByDiffblue.class)
+  @Category(ContributionFromDiffblue.class)
+  @ManagedByDiffblue
   @MethodsUnderTest({
     "boolean Aes128CtrKdfParams.equals(Object)",
     "int Aes128CtrKdfParams.hashCode()"
@@ -376,7 +386,8 @@ public class WalletFileDiffblueTest {
    * <p>Method under test: {@link Aes128CtrKdfParams#equals(Object)}
    */
   @Test
-  @Category(MaintainedByDiffblue.class)
+  @Category(ContributionFromDiffblue.class)
+  @ManagedByDiffblue
   @MethodsUnderTest({
     "boolean Aes128CtrKdfParams.equals(Object)",
     "int Aes128CtrKdfParams.hashCode()"
@@ -404,7 +415,8 @@ public class WalletFileDiffblueTest {
    * <p>Method under test: {@link Aes128CtrKdfParams#equals(Object)}
    */
   @Test
-  @Category(MaintainedByDiffblue.class)
+  @Category(ContributionFromDiffblue.class)
+  @ManagedByDiffblue
   @MethodsUnderTest({
     "boolean Aes128CtrKdfParams.equals(Object)",
     "int Aes128CtrKdfParams.hashCode()"
@@ -439,7 +451,8 @@ public class WalletFileDiffblueTest {
    * </ul>
    */
   @Test
-  @Category(MaintainedByDiffblue.class)
+  @Category(ContributionFromDiffblue.class)
+  @ManagedByDiffblue
   @MethodsUnderTest({
     "void Aes128CtrKdfParams.<init>()",
     "int Aes128CtrKdfParams.getC()",
@@ -485,7 +498,8 @@ public class WalletFileDiffblueTest {
    * </ul>
    */
   @Test
-  @Category(MaintainedByDiffblue.class)
+  @Category(ContributionFromDiffblue.class)
+  @ManagedByDiffblue
   @MethodsUnderTest({"boolean CipherParams.equals(Object)", "int CipherParams.hashCode()"})
   public void testCipherParamsEqualsAndHashCode_whenOtherIsEqual_thenReturnEqual() {
     // Arrange
@@ -516,7 +530,8 @@ public class WalletFileDiffblueTest {
    * </ul>
    */
   @Test
-  @Category(MaintainedByDiffblue.class)
+  @Category(ContributionFromDiffblue.class)
+  @ManagedByDiffblue
   @MethodsUnderTest({"boolean CipherParams.equals(Object)", "int CipherParams.hashCode()"})
   public void testCipherParamsEqualsAndHashCode_whenOtherIsEqual_thenReturnEqual2() {
     // Arrange
@@ -547,7 +562,8 @@ public class WalletFileDiffblueTest {
    * </ul>
    */
   @Test
-  @Category(MaintainedByDiffblue.class)
+  @Category(ContributionFromDiffblue.class)
+  @ManagedByDiffblue
   @MethodsUnderTest({"boolean CipherParams.equals(Object)", "int CipherParams.hashCode()"})
   public void testCipherParamsEqualsAndHashCode_whenOtherIsSame_thenReturnEqual() {
     // Arrange
@@ -571,7 +587,8 @@ public class WalletFileDiffblueTest {
    * <p>Method under test: {@link CipherParams#equals(Object)}
    */
   @Test
-  @Category(MaintainedByDiffblue.class)
+  @Category(ContributionFromDiffblue.class)
+  @ManagedByDiffblue
   @MethodsUnderTest({"boolean CipherParams.equals(Object)", "int CipherParams.hashCode()"})
   public void testCipherParamsEquals_whenOtherIsDifferent_thenReturnNotEqual() {
     // Arrange
@@ -596,7 +613,8 @@ public class WalletFileDiffblueTest {
    * <p>Method under test: {@link CipherParams#equals(Object)}
    */
   @Test
-  @Category(MaintainedByDiffblue.class)
+  @Category(ContributionFromDiffblue.class)
+  @ManagedByDiffblue
   @MethodsUnderTest({"boolean CipherParams.equals(Object)", "int CipherParams.hashCode()"})
   public void testCipherParamsEquals_whenOtherIsNull_thenReturnNotEqual() {
     // Arrange
@@ -618,7 +636,8 @@ public class WalletFileDiffblueTest {
    * <p>Method under test: {@link CipherParams#equals(Object)}
    */
   @Test
-  @Category(MaintainedByDiffblue.class)
+  @Category(ContributionFromDiffblue.class)
+  @ManagedByDiffblue
   @MethodsUnderTest({"boolean CipherParams.equals(Object)", "int CipherParams.hashCode()"})
   public void testCipherParamsEquals_whenOtherIsWrongType_thenReturnNotEqual() {
     // Arrange
@@ -641,7 +660,8 @@ public class WalletFileDiffblueTest {
    * </ul>
    */
   @Test
-  @Category(MaintainedByDiffblue.class)
+  @Category(ContributionFromDiffblue.class)
+  @ManagedByDiffblue
   @MethodsUnderTest({
     "void CipherParams.<init>()",
     "String CipherParams.getIv()",
@@ -672,7 +692,8 @@ public class WalletFileDiffblueTest {
    * </ul>
    */
   @Test
-  @Category(MaintainedByDiffblue.class)
+  @Category(ContributionFromDiffblue.class)
+  @ManagedByDiffblue
   @MethodsUnderTest({"boolean Crypto.equals(Object)", "int Crypto.hashCode()"})
   public void testCryptoEqualsAndHashCode_whenOtherIsEqual_thenReturnEqual() {
     // Arrange
@@ -719,7 +740,8 @@ public class WalletFileDiffblueTest {
    * </ul>
    */
   @Test
-  @Category(MaintainedByDiffblue.class)
+  @Category(ContributionFromDiffblue.class)
+  @ManagedByDiffblue
   @MethodsUnderTest({"boolean Crypto.equals(Object)", "int Crypto.hashCode()"})
   public void testCryptoEqualsAndHashCode_whenOtherIsEqual_thenReturnEqual2() {
     // Arrange
@@ -766,7 +788,8 @@ public class WalletFileDiffblueTest {
    * </ul>
    */
   @Test
-  @Category(MaintainedByDiffblue.class)
+  @Category(ContributionFromDiffblue.class)
+  @ManagedByDiffblue
   @MethodsUnderTest({"boolean Crypto.equals(Object)", "int Crypto.hashCode()"})
   public void testCryptoEqualsAndHashCode_whenOtherIsEqual_thenReturnEqual3() {
     // Arrange
@@ -813,7 +836,8 @@ public class WalletFileDiffblueTest {
    * </ul>
    */
   @Test
-  @Category(MaintainedByDiffblue.class)
+  @Category(ContributionFromDiffblue.class)
+  @ManagedByDiffblue
   @MethodsUnderTest({"boolean Crypto.equals(Object)", "int Crypto.hashCode()"})
   public void testCryptoEqualsAndHashCode_whenOtherIsEqual_thenReturnEqual4() {
     // Arrange
@@ -860,7 +884,8 @@ public class WalletFileDiffblueTest {
    * </ul>
    */
   @Test
-  @Category(MaintainedByDiffblue.class)
+  @Category(ContributionFromDiffblue.class)
+  @ManagedByDiffblue
   @MethodsUnderTest({"boolean Crypto.equals(Object)", "int Crypto.hashCode()"})
   public void testCryptoEqualsAndHashCode_whenOtherIsEqual_thenReturnEqual5() {
     // Arrange
@@ -907,7 +932,8 @@ public class WalletFileDiffblueTest {
    * </ul>
    */
   @Test
-  @Category(MaintainedByDiffblue.class)
+  @Category(ContributionFromDiffblue.class)
+  @ManagedByDiffblue
   @MethodsUnderTest({"boolean Crypto.equals(Object)", "int Crypto.hashCode()"})
   public void testCryptoEqualsAndHashCode_whenOtherIsEqual_thenReturnEqual6() {
     // Arrange
@@ -954,7 +980,8 @@ public class WalletFileDiffblueTest {
    * </ul>
    */
   @Test
-  @Category(MaintainedByDiffblue.class)
+  @Category(ContributionFromDiffblue.class)
+  @ManagedByDiffblue
   @MethodsUnderTest({"boolean Crypto.equals(Object)", "int Crypto.hashCode()"})
   public void testCryptoEqualsAndHashCode_whenOtherIsSame_thenReturnEqual() {
     // Arrange
@@ -986,7 +1013,8 @@ public class WalletFileDiffblueTest {
    * <p>Method under test: {@link Crypto#equals(Object)}
    */
   @Test
-  @Category(MaintainedByDiffblue.class)
+  @Category(ContributionFromDiffblue.class)
+  @ManagedByDiffblue
   @MethodsUnderTest({"boolean Crypto.equals(Object)", "int Crypto.hashCode()"})
   public void testCryptoEquals_whenOtherIsDifferent_thenReturnNotEqual() {
     // Arrange
@@ -1027,7 +1055,8 @@ public class WalletFileDiffblueTest {
    * <p>Method under test: {@link Crypto#equals(Object)}
    */
   @Test
-  @Category(MaintainedByDiffblue.class)
+  @Category(ContributionFromDiffblue.class)
+  @ManagedByDiffblue
   @MethodsUnderTest({"boolean Crypto.equals(Object)", "int Crypto.hashCode()"})
   public void testCryptoEquals_whenOtherIsDifferent_thenReturnNotEqual2() {
     // Arrange
@@ -1068,7 +1097,8 @@ public class WalletFileDiffblueTest {
    * <p>Method under test: {@link Crypto#equals(Object)}
    */
   @Test
-  @Category(MaintainedByDiffblue.class)
+  @Category(ContributionFromDiffblue.class)
+  @ManagedByDiffblue
   @MethodsUnderTest({"boolean Crypto.equals(Object)", "int Crypto.hashCode()"})
   public void testCryptoEquals_whenOtherIsDifferent_thenReturnNotEqual3() {
     // Arrange
@@ -1109,7 +1139,8 @@ public class WalletFileDiffblueTest {
    * <p>Method under test: {@link Crypto#equals(Object)}
    */
   @Test
-  @Category(MaintainedByDiffblue.class)
+  @Category(ContributionFromDiffblue.class)
+  @ManagedByDiffblue
   @MethodsUnderTest({"boolean Crypto.equals(Object)", "int Crypto.hashCode()"})
   public void testCryptoEquals_whenOtherIsDifferent_thenReturnNotEqual4() {
     // Arrange
@@ -1150,7 +1181,8 @@ public class WalletFileDiffblueTest {
    * <p>Method under test: {@link Crypto#equals(Object)}
    */
   @Test
-  @Category(MaintainedByDiffblue.class)
+  @Category(ContributionFromDiffblue.class)
+  @ManagedByDiffblue
   @MethodsUnderTest({"boolean Crypto.equals(Object)", "int Crypto.hashCode()"})
   public void testCryptoEquals_whenOtherIsDifferent_thenReturnNotEqual5() {
     // Arrange
@@ -1191,7 +1223,8 @@ public class WalletFileDiffblueTest {
    * <p>Method under test: {@link Crypto#equals(Object)}
    */
   @Test
-  @Category(MaintainedByDiffblue.class)
+  @Category(ContributionFromDiffblue.class)
+  @ManagedByDiffblue
   @MethodsUnderTest({"boolean Crypto.equals(Object)", "int Crypto.hashCode()"})
   public void testCryptoEquals_whenOtherIsDifferent_thenReturnNotEqual6() {
     // Arrange
@@ -1232,7 +1265,8 @@ public class WalletFileDiffblueTest {
    * <p>Method under test: {@link Crypto#equals(Object)}
    */
   @Test
-  @Category(MaintainedByDiffblue.class)
+  @Category(ContributionFromDiffblue.class)
+  @ManagedByDiffblue
   @MethodsUnderTest({"boolean Crypto.equals(Object)", "int Crypto.hashCode()"})
   public void testCryptoEquals_whenOtherIsDifferent_thenReturnNotEqual7() {
     // Arrange
@@ -1273,7 +1307,8 @@ public class WalletFileDiffblueTest {
    * <p>Method under test: {@link Crypto#equals(Object)}
    */
   @Test
-  @Category(MaintainedByDiffblue.class)
+  @Category(ContributionFromDiffblue.class)
+  @ManagedByDiffblue
   @MethodsUnderTest({"boolean Crypto.equals(Object)", "int Crypto.hashCode()"})
   public void testCryptoEquals_whenOtherIsDifferent_thenReturnNotEqual8() {
     // Arrange
@@ -1314,7 +1349,8 @@ public class WalletFileDiffblueTest {
    * <p>Method under test: {@link Crypto#equals(Object)}
    */
   @Test
-  @Category(MaintainedByDiffblue.class)
+  @Category(ContributionFromDiffblue.class)
+  @ManagedByDiffblue
   @MethodsUnderTest({"boolean Crypto.equals(Object)", "int Crypto.hashCode()"})
   public void testCryptoEquals_whenOtherIsDifferent_thenReturnNotEqual9() {
     // Arrange
@@ -1355,7 +1391,8 @@ public class WalletFileDiffblueTest {
    * <p>Method under test: {@link Crypto#equals(Object)}
    */
   @Test
-  @Category(MaintainedByDiffblue.class)
+  @Category(ContributionFromDiffblue.class)
+  @ManagedByDiffblue
   @MethodsUnderTest({"boolean Crypto.equals(Object)", "int Crypto.hashCode()"})
   public void testCryptoEquals_whenOtherIsDifferent_thenReturnNotEqual10() {
     // Arrange
@@ -1396,7 +1433,8 @@ public class WalletFileDiffblueTest {
    * <p>Method under test: {@link Crypto#equals(Object)}
    */
   @Test
-  @Category(MaintainedByDiffblue.class)
+  @Category(ContributionFromDiffblue.class)
+  @ManagedByDiffblue
   @MethodsUnderTest({"boolean Crypto.equals(Object)", "int Crypto.hashCode()"})
   public void testCryptoEquals_whenOtherIsNull_thenReturnNotEqual() {
     // Arrange
@@ -1426,7 +1464,8 @@ public class WalletFileDiffblueTest {
    * <p>Method under test: {@link Crypto#equals(Object)}
    */
   @Test
-  @Category(MaintainedByDiffblue.class)
+  @Category(ContributionFromDiffblue.class)
+  @ManagedByDiffblue
   @MethodsUnderTest({"boolean Crypto.equals(Object)", "int Crypto.hashCode()"})
   public void testCryptoEquals_whenOtherIsWrongType_thenReturnNotEqual() {
     // Arrange
@@ -1467,7 +1506,8 @@ public class WalletFileDiffblueTest {
    * </ul>
    */
   @Test
-  @Category(MaintainedByDiffblue.class)
+  @Category(ContributionFromDiffblue.class)
+  @ManagedByDiffblue
   @MethodsUnderTest({
     "void Crypto.<init>()",
     "String Crypto.getCipher()",
@@ -1529,7 +1569,8 @@ public class WalletFileDiffblueTest {
    * </ul>
    */
   @Test
-  @Category(MaintainedByDiffblue.class)
+  @Category(ContributionFromDiffblue.class)
+  @ManagedByDiffblue
   @MethodsUnderTest({
     "void WalletFile.<init>()",
     "String WalletFile.getAddress()",
@@ -1576,7 +1617,8 @@ public class WalletFileDiffblueTest {
    * DeserializationContext)}
    */
   @Test
-  @Category(MaintainedByDiffblue.class)
+  @Category(ContributionFromDiffblue.class)
+  @ManagedByDiffblue
   @MethodsUnderTest({
     "KdfParams KdfParamsDeserialiser.deserialize(JsonParser, DeserializationContext)"
   })
@@ -1620,7 +1662,8 @@ public class WalletFileDiffblueTest {
    * <p>Method under test: default or parameterless constructor of {@link KdfParamsDeserialiser}
    */
   @Test
-  @Category(MaintainedByDiffblue.class)
+  @Category(ContributionFromDiffblue.class)
+  @ManagedByDiffblue
   @MethodsUnderTest({"void KdfParamsDeserialiser.<init>()"})
   public void testKdfParamsDeserialiserNewKdfParamsDeserialiser() {
     // Arrange and Act
@@ -1654,7 +1697,8 @@ public class WalletFileDiffblueTest {
    * </ul>
    */
   @Test
-  @Category(MaintainedByDiffblue.class)
+  @Category(ContributionFromDiffblue.class)
+  @ManagedByDiffblue
   @MethodsUnderTest({"boolean ScryptKdfParams.equals(Object)", "int ScryptKdfParams.hashCode()"})
   public void testScryptKdfParamsEqualsAndHashCode_whenOtherIsEqual_thenReturnEqual() {
     // Arrange
@@ -1694,7 +1738,8 @@ public class WalletFileDiffblueTest {
    * </ul>
    */
   @Test
-  @Category(MaintainedByDiffblue.class)
+  @Category(ContributionFromDiffblue.class)
+  @ManagedByDiffblue
   @MethodsUnderTest({"boolean ScryptKdfParams.equals(Object)", "int ScryptKdfParams.hashCode()"})
   public void testScryptKdfParamsEqualsAndHashCode_whenOtherIsEqual_thenReturnEqual2() {
     // Arrange
@@ -1734,7 +1779,8 @@ public class WalletFileDiffblueTest {
    * </ul>
    */
   @Test
-  @Category(MaintainedByDiffblue.class)
+  @Category(ContributionFromDiffblue.class)
+  @ManagedByDiffblue
   @MethodsUnderTest({"boolean ScryptKdfParams.equals(Object)", "int ScryptKdfParams.hashCode()"})
   public void testScryptKdfParamsEqualsAndHashCode_whenOtherIsSame_thenReturnEqual() {
     // Arrange
@@ -1762,7 +1808,8 @@ public class WalletFileDiffblueTest {
    * <p>Method under test: {@link ScryptKdfParams#equals(Object)}
    */
   @Test
-  @Category(MaintainedByDiffblue.class)
+  @Category(ContributionFromDiffblue.class)
+  @ManagedByDiffblue
   @MethodsUnderTest({"boolean ScryptKdfParams.equals(Object)", "int ScryptKdfParams.hashCode()"})
   public void testScryptKdfParamsEquals_whenOtherIsDifferent_thenReturnNotEqual() {
     // Arrange
@@ -1795,7 +1842,8 @@ public class WalletFileDiffblueTest {
    * <p>Method under test: {@link ScryptKdfParams#equals(Object)}
    */
   @Test
-  @Category(MaintainedByDiffblue.class)
+  @Category(ContributionFromDiffblue.class)
+  @ManagedByDiffblue
   @MethodsUnderTest({"boolean ScryptKdfParams.equals(Object)", "int ScryptKdfParams.hashCode()"})
   public void testScryptKdfParamsEquals_whenOtherIsDifferent_thenReturnNotEqual2() {
     // Arrange
@@ -1828,7 +1876,8 @@ public class WalletFileDiffblueTest {
    * <p>Method under test: {@link ScryptKdfParams#equals(Object)}
    */
   @Test
-  @Category(MaintainedByDiffblue.class)
+  @Category(ContributionFromDiffblue.class)
+  @ManagedByDiffblue
   @MethodsUnderTest({"boolean ScryptKdfParams.equals(Object)", "int ScryptKdfParams.hashCode()"})
   public void testScryptKdfParamsEquals_whenOtherIsDifferent_thenReturnNotEqual3() {
     // Arrange
@@ -1861,7 +1910,8 @@ public class WalletFileDiffblueTest {
    * <p>Method under test: {@link ScryptKdfParams#equals(Object)}
    */
   @Test
-  @Category(MaintainedByDiffblue.class)
+  @Category(ContributionFromDiffblue.class)
+  @ManagedByDiffblue
   @MethodsUnderTest({"boolean ScryptKdfParams.equals(Object)", "int ScryptKdfParams.hashCode()"})
   public void testScryptKdfParamsEquals_whenOtherIsDifferent_thenReturnNotEqual4() {
     // Arrange
@@ -1894,7 +1944,8 @@ public class WalletFileDiffblueTest {
    * <p>Method under test: {@link ScryptKdfParams#equals(Object)}
    */
   @Test
-  @Category(MaintainedByDiffblue.class)
+  @Category(ContributionFromDiffblue.class)
+  @ManagedByDiffblue
   @MethodsUnderTest({"boolean ScryptKdfParams.equals(Object)", "int ScryptKdfParams.hashCode()"})
   public void testScryptKdfParamsEquals_whenOtherIsDifferent_thenReturnNotEqual5() {
     // Arrange
@@ -1927,7 +1978,8 @@ public class WalletFileDiffblueTest {
    * <p>Method under test: {@link ScryptKdfParams#equals(Object)}
    */
   @Test
-  @Category(MaintainedByDiffblue.class)
+  @Category(ContributionFromDiffblue.class)
+  @ManagedByDiffblue
   @MethodsUnderTest({"boolean ScryptKdfParams.equals(Object)", "int ScryptKdfParams.hashCode()"})
   public void testScryptKdfParamsEquals_whenOtherIsNull_thenReturnNotEqual() {
     // Arrange
@@ -1953,7 +2005,8 @@ public class WalletFileDiffblueTest {
    * <p>Method under test: {@link ScryptKdfParams#equals(Object)}
    */
   @Test
-  @Category(MaintainedByDiffblue.class)
+  @Category(ContributionFromDiffblue.class)
+  @ManagedByDiffblue
   @MethodsUnderTest({"boolean ScryptKdfParams.equals(Object)", "int ScryptKdfParams.hashCode()"})
   public void testScryptKdfParamsEquals_whenOtherIsWrongType_thenReturnNotEqual() {
     // Arrange
@@ -1988,7 +2041,8 @@ public class WalletFileDiffblueTest {
    * </ul>
    */
   @Test
-  @Category(MaintainedByDiffblue.class)
+  @Category(ContributionFromDiffblue.class)
+  @ManagedByDiffblue
   @MethodsUnderTest({
     "void ScryptKdfParams.<init>()",
     "int ScryptKdfParams.getDklen()",
@@ -2029,7 +2083,8 @@ public class WalletFileDiffblueTest {
    * <p>Method under test: {@link WalletFile#setCryptoV1(Crypto)}
    */
   @Test
-  @Category(MaintainedByDiffblue.class)
+  @Category(ContributionFromDiffblue.class)
+  @ManagedByDiffblue
   @MethodsUnderTest({"void WalletFile.setCryptoV1(Crypto)"})
   public void testSetCryptoV1() {
     // Arrange
@@ -2069,7 +2124,8 @@ public class WalletFileDiffblueTest {
    * </ul>
    */
   @Test
-  @Category(MaintainedByDiffblue.class)
+  @Category(ContributionFromDiffblue.class)
+  @ManagedByDiffblue
   @MethodsUnderTest({"boolean WalletFile.equals(Object)", "int WalletFile.hashCode()"})
   public void testEqualsAndHashCode_whenOtherIsEqual_thenReturnEqual() {
     // Arrange
@@ -2128,7 +2184,8 @@ public class WalletFileDiffblueTest {
    * </ul>
    */
   @Test
-  @Category(MaintainedByDiffblue.class)
+  @Category(ContributionFromDiffblue.class)
+  @ManagedByDiffblue
   @MethodsUnderTest({"boolean WalletFile.equals(Object)", "int WalletFile.hashCode()"})
   public void testEqualsAndHashCode_whenOtherIsEqual_thenReturnEqual2() {
     // Arrange
@@ -2187,7 +2244,8 @@ public class WalletFileDiffblueTest {
    * </ul>
    */
   @Test
-  @Category(MaintainedByDiffblue.class)
+  @Category(ContributionFromDiffblue.class)
+  @ManagedByDiffblue
   @MethodsUnderTest({"boolean WalletFile.equals(Object)", "int WalletFile.hashCode()"})
   public void testEqualsAndHashCode_whenOtherIsEqual_thenReturnEqual3() {
     // Arrange
@@ -2246,7 +2304,8 @@ public class WalletFileDiffblueTest {
    * </ul>
    */
   @Test
-  @Category(MaintainedByDiffblue.class)
+  @Category(ContributionFromDiffblue.class)
+  @ManagedByDiffblue
   @MethodsUnderTest({"boolean WalletFile.equals(Object)", "int WalletFile.hashCode()"})
   public void testEqualsAndHashCode_whenOtherIsSame_thenReturnEqual() {
     // Arrange
@@ -2284,7 +2343,8 @@ public class WalletFileDiffblueTest {
    * <p>Method under test: {@link WalletFile#equals(Object)}
    */
   @Test
-  @Category(MaintainedByDiffblue.class)
+  @Category(ContributionFromDiffblue.class)
+  @ManagedByDiffblue
   @MethodsUnderTest({"boolean WalletFile.equals(Object)", "int WalletFile.hashCode()"})
   public void testEquals_whenOtherIsDifferent_thenReturnNotEqual() {
     // Arrange
@@ -2337,7 +2397,8 @@ public class WalletFileDiffblueTest {
    * <p>Method under test: {@link WalletFile#equals(Object)}
    */
   @Test
-  @Category(MaintainedByDiffblue.class)
+  @Category(ContributionFromDiffblue.class)
+  @ManagedByDiffblue
   @MethodsUnderTest({"boolean WalletFile.equals(Object)", "int WalletFile.hashCode()"})
   public void testEquals_whenOtherIsDifferent_thenReturnNotEqual2() {
     // Arrange
@@ -2390,7 +2451,8 @@ public class WalletFileDiffblueTest {
    * <p>Method under test: {@link WalletFile#equals(Object)}
    */
   @Test
-  @Category(MaintainedByDiffblue.class)
+  @Category(ContributionFromDiffblue.class)
+  @ManagedByDiffblue
   @MethodsUnderTest({"boolean WalletFile.equals(Object)", "int WalletFile.hashCode()"})
   public void testEquals_whenOtherIsDifferent_thenReturnNotEqual3() {
     // Arrange
@@ -2443,7 +2505,8 @@ public class WalletFileDiffblueTest {
    * <p>Method under test: {@link WalletFile#equals(Object)}
    */
   @Test
-  @Category(MaintainedByDiffblue.class)
+  @Category(ContributionFromDiffblue.class)
+  @ManagedByDiffblue
   @MethodsUnderTest({"boolean WalletFile.equals(Object)", "int WalletFile.hashCode()"})
   public void testEquals_whenOtherIsDifferent_thenReturnNotEqual4() {
     // Arrange
@@ -2496,7 +2559,8 @@ public class WalletFileDiffblueTest {
    * <p>Method under test: {@link WalletFile#equals(Object)}
    */
   @Test
-  @Category(MaintainedByDiffblue.class)
+  @Category(ContributionFromDiffblue.class)
+  @ManagedByDiffblue
   @MethodsUnderTest({"boolean WalletFile.equals(Object)", "int WalletFile.hashCode()"})
   public void testEquals_whenOtherIsDifferent_thenReturnNotEqual5() {
     // Arrange
@@ -2549,7 +2613,8 @@ public class WalletFileDiffblueTest {
    * <p>Method under test: {@link WalletFile#equals(Object)}
    */
   @Test
-  @Category(MaintainedByDiffblue.class)
+  @Category(ContributionFromDiffblue.class)
+  @ManagedByDiffblue
   @MethodsUnderTest({"boolean WalletFile.equals(Object)", "int WalletFile.hashCode()"})
   public void testEquals_whenOtherIsDifferent_thenReturnNotEqual6() {
     // Arrange
@@ -2602,7 +2667,8 @@ public class WalletFileDiffblueTest {
    * <p>Method under test: {@link WalletFile#equals(Object)}
    */
   @Test
-  @Category(MaintainedByDiffblue.class)
+  @Category(ContributionFromDiffblue.class)
+  @ManagedByDiffblue
   @MethodsUnderTest({"boolean WalletFile.equals(Object)", "int WalletFile.hashCode()"})
   public void testEquals_whenOtherIsNull_thenReturnNotEqual() {
     // Arrange
@@ -2638,7 +2704,8 @@ public class WalletFileDiffblueTest {
    * <p>Method under test: {@link WalletFile#equals(Object)}
    */
   @Test
-  @Category(MaintainedByDiffblue.class)
+  @Category(ContributionFromDiffblue.class)
+  @ManagedByDiffblue
   @MethodsUnderTest({"boolean WalletFile.equals(Object)", "int WalletFile.hashCode()"})
   public void testEquals_whenOtherIsWrongType_thenReturnNotEqual() {
     // Arrange

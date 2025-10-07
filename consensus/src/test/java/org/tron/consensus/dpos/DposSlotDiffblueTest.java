@@ -4,7 +4,8 @@ import static org.junit.Assert.assertEquals;
 import static org.junit.Assert.assertThrows;
 import static org.mockito.Mockito.verify;
 import static org.mockito.Mockito.when;
-import com.diffblue.cover.annotations.MaintainedByDiffblue;
+import com.diffblue.cover.annotations.ContributionFromDiffblue;
+import com.diffblue.cover.annotations.ManagedByDiffblue;
 import com.diffblue.cover.annotations.MethodsUnderTest;
 import org.junit.Test;
 import org.junit.experimental.categories.Category;
@@ -35,7 +36,8 @@ public class DposSlotDiffblueTest {
    * <p>Method under test: {@link DposSlot#getAbSlot(long)}
    */
   @Test
-  @Category(MaintainedByDiffblue.class)
+  @Category(ContributionFromDiffblue.class)
+  @ManagedByDiffblue
   @MethodsUnderTest({"long DposSlot.getAbSlot(long)"})
   public void testGetAbSlot_givenDposSlotDposServiceIsDposService_thenReturnZero() {
     // Arrange
@@ -52,7 +54,8 @@ public class DposSlotDiffblueTest {
    * <p>Method under test: {@link DposSlot#getSlot(long)}
    */
   @Test
-  @Category(MaintainedByDiffblue.class)
+  @Category(ContributionFromDiffblue.class)
+  @ManagedByDiffblue
   @MethodsUnderTest({"long DposSlot.getSlot(long)"})
   public void testGetSlot() {
     // Arrange
@@ -69,7 +72,8 @@ public class DposSlotDiffblueTest {
    * <p>Method under test: {@link DposSlot#getSlot(long)}
    */
   @Test
-  @Category(MaintainedByDiffblue.class)
+  @Category(ContributionFromDiffblue.class)
+  @ManagedByDiffblue
   @MethodsUnderTest({"long DposSlot.getSlot(long)"})
   public void testGetSlot2() {
     // Arrange
@@ -92,7 +96,8 @@ public class DposSlotDiffblueTest {
    * <p>Method under test: {@link DposSlot#getSlot(long)}
    */
   @Test
-  @Category(MaintainedByDiffblue.class)
+  @Category(ContributionFromDiffblue.class)
+  @ManagedByDiffblue
   @MethodsUnderTest({"long DposSlot.getSlot(long)"})
   public void testGetSlot_thenCallsGetMaintenanceSkipSlots() {
     // Arrange
@@ -113,7 +118,8 @@ public class DposSlotDiffblueTest {
    * <p>Method under test: {@link DposSlot#getTime(long)}
    */
   @Test
-  @Category(MaintainedByDiffblue.class)
+  @Category(ContributionFromDiffblue.class)
+  @ManagedByDiffblue
   @MethodsUnderTest({"long DposSlot.getTime(long)"})
   public void testGetTime() {
     // Arrange
@@ -130,7 +136,8 @@ public class DposSlotDiffblueTest {
    * <p>Method under test: {@link DposSlot#getTime(long)}
    */
   @Test
-  @Category(MaintainedByDiffblue.class)
+  @Category(ContributionFromDiffblue.class)
+  @ManagedByDiffblue
   @MethodsUnderTest({"long DposSlot.getTime(long)"})
   public void testGetTime2() {
     // Arrange
@@ -153,7 +160,8 @@ public class DposSlotDiffblueTest {
    * <p>Method under test: {@link DposSlot#getTime(long)}
    */
   @Test
-  @Category(MaintainedByDiffblue.class)
+  @Category(ContributionFromDiffblue.class)
+  @ManagedByDiffblue
   @MethodsUnderTest({"long DposSlot.getTime(long)"})
   public void testGetTime_thenCallsGetMaintenanceSkipSlots() {
     // Arrange

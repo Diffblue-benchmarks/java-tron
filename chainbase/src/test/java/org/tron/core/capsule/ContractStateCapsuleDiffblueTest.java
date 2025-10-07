@@ -8,7 +8,8 @@ import static org.junit.Assert.assertTrue;
 import static org.mockito.Mockito.mock;
 import static org.mockito.Mockito.verify;
 import static org.mockito.Mockito.when;
-import com.diffblue.cover.annotations.MaintainedByDiffblue;
+import com.diffblue.cover.annotations.ContributionFromDiffblue;
+import com.diffblue.cover.annotations.ManagedByDiffblue;
 import com.diffblue.cover.annotations.MethodsUnderTest;
 import java.io.UnsupportedEncodingException;
 import org.junit.Test;
@@ -27,7 +28,8 @@ public class ContractStateCapsuleDiffblueTest {
    * <p>Method under test: {@link ContractStateCapsule#ContractStateCapsule(long)}
    */
   @Test
-  @Category(MaintainedByDiffblue.class)
+  @Category(ContributionFromDiffblue.class)
+  @ManagedByDiffblue
   @MethodsUnderTest({"void ContractStateCapsule.<init>(long)"})
   public void testNewContractStateCapsule() {
     // Arrange and Act
@@ -55,7 +57,8 @@ public class ContractStateCapsuleDiffblueTest {
    * <p>Method under test: {@link ContractStateCapsule#ContractStateCapsule(byte[])}
    */
   @Test
-  @Category(MaintainedByDiffblue.class)
+  @Category(ContributionFromDiffblue.class)
+  @ManagedByDiffblue
   @MethodsUnderTest({"void ContractStateCapsule.<init>(byte[])"})
   public void testNewContractStateCapsule2() {
     // Arrange and Act
@@ -85,7 +88,8 @@ public class ContractStateCapsuleDiffblueTest {
    * <p>Method under test: {@link ContractStateCapsule#ContractStateCapsule(byte[])}
    */
   @Test
-  @Category(MaintainedByDiffblue.class)
+  @Category(ContributionFromDiffblue.class)
+  @ManagedByDiffblue
   @MethodsUnderTest({"void ContractStateCapsule.<init>(byte[])"})
   public void testNewContractStateCapsule3() throws UnsupportedEncodingException {
     // Arrange, Act and Assert
@@ -103,7 +107,8 @@ public class ContractStateCapsuleDiffblueTest {
    * <p>Method under test: {@link ContractStateCapsule#ContractStateCapsule(byte[])}
    */
   @Test
-  @Category(MaintainedByDiffblue.class)
+  @Category(ContributionFromDiffblue.class)
+  @ManagedByDiffblue
   @MethodsUnderTest({"void ContractStateCapsule.<init>(byte[])"})
   public void testNewContractStateCapsule_whenArrayOfByteWithMinusOneAndX() {
     // Arrange and Act
@@ -124,7 +129,8 @@ public class ContractStateCapsuleDiffblueTest {
    * <p>Method under test: {@link ContractStateCapsule#ContractStateCapsule(byte[])}
    */
   @Test
-  @Category(MaintainedByDiffblue.class)
+  @Category(ContributionFromDiffblue.class)
+  @ManagedByDiffblue
   @MethodsUnderTest({"void ContractStateCapsule.<init>(byte[])"})
   public void testNewContractStateCapsule_whenArrayOfByteWithSixteenAndX() {
     // Arrange and Act
@@ -145,7 +151,8 @@ public class ContractStateCapsuleDiffblueTest {
    * <p>Method under test: {@link ContractStateCapsule#ContractStateCapsule(byte[])}
    */
   @Test
-  @Category(MaintainedByDiffblue.class)
+  @Category(ContributionFromDiffblue.class)
+  @ManagedByDiffblue
   @MethodsUnderTest({"void ContractStateCapsule.<init>(byte[])"})
   public void testNewContractStateCapsule_whenArrayOfByteWithTwentyFourAndX() {
     // Arrange and Act
@@ -167,7 +174,8 @@ public class ContractStateCapsuleDiffblueTest {
    * <p>Method under test: {@link ContractStateCapsule#ContractStateCapsule(byte[])}
    */
   @Test
-  @Category(MaintainedByDiffblue.class)
+  @Category(ContributionFromDiffblue.class)
+  @ManagedByDiffblue
   @MethodsUnderTest({"void ContractStateCapsule.<init>(byte[])"})
   public void testNewContractStateCapsule_whenArrayOfByteWithZeroAndX_thenReturnInstanceIsNull() {
     // Arrange and Act
@@ -189,7 +197,8 @@ public class ContractStateCapsuleDiffblueTest {
    * <p>Method under test: {@link ContractStateCapsule#ContractStateCapsule(byte[])}
    */
   @Test
-  @Category(MaintainedByDiffblue.class)
+  @Category(ContributionFromDiffblue.class)
+  @ManagedByDiffblue
   @MethodsUnderTest({"void ContractStateCapsule.<init>(byte[])"})
   public void testNewContractStateCapsule_whenAxaxaxaxBytesIsUtf8_thenReturnInstanceIsNull()
       throws UnsupportedEncodingException {
@@ -208,7 +217,8 @@ public class ContractStateCapsuleDiffblueTest {
    * <p>Method under test: {@link ContractStateCapsule#ContractStateCapsule(byte[])}
    */
   @Test
-  @Category(MaintainedByDiffblue.class)
+  @Category(ContributionFromDiffblue.class)
+  @ManagedByDiffblue
   @MethodsUnderTest({"void ContractStateCapsule.<init>(byte[])"})
   public void testNewContractStateCapsule_whenBackspace_thenReturnInstanceIsNull() {
     // Arrange and Act
@@ -233,7 +243,8 @@ public class ContractStateCapsuleDiffblueTest {
    * <p>Method under test: {@link ContractStateCapsule#ContractStateCapsule(byte[])}
    */
   @Test
-  @Category(MaintainedByDiffblue.class)
+  @Category(ContributionFromDiffblue.class)
+  @ManagedByDiffblue
   @MethodsUnderTest({"void ContractStateCapsule.<init>(byte[])"})
   public void testNewContractStateCapsule_whenBackspace_thenReturnInstanceIsNull2() {
     // Arrange and Act
@@ -258,7 +269,8 @@ public class ContractStateCapsuleDiffblueTest {
    * <p>Method under test: {@link ContractStateCapsule#ContractStateCapsule(byte[])}
    */
   @Test
-  @Category(MaintainedByDiffblue.class)
+  @Category(ContributionFromDiffblue.class)
+  @ManagedByDiffblue
   @MethodsUnderTest({"void ContractStateCapsule.<init>(byte[])"})
   public void testNewContractStateCapsule_whenBackspace_thenReturnInstanceIsNull3() {
     // Arrange and Act
@@ -283,7 +295,8 @@ public class ContractStateCapsuleDiffblueTest {
    * <p>Method under test: {@link ContractStateCapsule#ContractStateCapsule(byte[])}
    */
   @Test
-  @Category(MaintainedByDiffblue.class)
+  @Category(ContributionFromDiffblue.class)
+  @ManagedByDiffblue
   @MethodsUnderTest({"void ContractStateCapsule.<init>(byte[])"})
   public void testNewContractStateCapsule_whenXxaxaxaxBytesIsUtf8_thenReturnInstanceIsNull()
       throws UnsupportedEncodingException {
@@ -297,7 +310,8 @@ public class ContractStateCapsuleDiffblueTest {
    * <p>Method under test: {@link ContractStateCapsule#getData()}
    */
   @Test
-  @Category(MaintainedByDiffblue.class)
+  @Category(ContributionFromDiffblue.class)
+  @ManagedByDiffblue
   @MethodsUnderTest({"byte[] ContractStateCapsule.getData()"})
   public void testGetData() {
     // Arrange, Act and Assert
@@ -310,7 +324,8 @@ public class ContractStateCapsuleDiffblueTest {
    * <p>Method under test: {@link ContractStateCapsule#getInstance()}
    */
   @Test
-  @Category(MaintainedByDiffblue.class)
+  @Category(ContributionFromDiffblue.class)
+  @ManagedByDiffblue
   @MethodsUnderTest({"ContractState ContractStateCapsule.getInstance()"})
   public void testGetInstance() {
     // Arrange and Act
@@ -333,7 +348,8 @@ public class ContractStateCapsuleDiffblueTest {
    * <p>Method under test: {@link ContractStateCapsule#getEnergyUsage()}
    */
   @Test
-  @Category(MaintainedByDiffblue.class)
+  @Category(ContributionFromDiffblue.class)
+  @ManagedByDiffblue
   @MethodsUnderTest({"long ContractStateCapsule.getEnergyUsage()"})
   public void testGetEnergyUsage() {
     // Arrange, Act and Assert
@@ -346,7 +362,8 @@ public class ContractStateCapsuleDiffblueTest {
    * <p>Method under test: {@link ContractStateCapsule#setEnergyUsage(long)}
    */
   @Test
-  @Category(MaintainedByDiffblue.class)
+  @Category(ContributionFromDiffblue.class)
+  @ManagedByDiffblue
   @MethodsUnderTest({"void ContractStateCapsule.setEnergyUsage(long)"})
   public void testSetEnergyUsage() {
     // Arrange
@@ -370,7 +387,8 @@ public class ContractStateCapsuleDiffblueTest {
    * <p>Method under test: {@link ContractStateCapsule#addEnergyUsage(long)}
    */
   @Test
-  @Category(MaintainedByDiffblue.class)
+  @Category(ContributionFromDiffblue.class)
+  @ManagedByDiffblue
   @MethodsUnderTest({"void ContractStateCapsule.addEnergyUsage(long)"})
   public void testAddEnergyUsage() {
     // Arrange
@@ -394,7 +412,8 @@ public class ContractStateCapsuleDiffblueTest {
    * <p>Method under test: {@link ContractStateCapsule#getEnergyFactor()}
    */
   @Test
-  @Category(MaintainedByDiffblue.class)
+  @Category(ContributionFromDiffblue.class)
+  @ManagedByDiffblue
   @MethodsUnderTest({"long ContractStateCapsule.getEnergyFactor()"})
   public void testGetEnergyFactor() {
     // Arrange, Act and Assert
@@ -407,7 +426,8 @@ public class ContractStateCapsuleDiffblueTest {
    * <p>Method under test: {@link ContractStateCapsule#setEnergyFactor(long)}
    */
   @Test
-  @Category(MaintainedByDiffblue.class)
+  @Category(ContributionFromDiffblue.class)
+  @ManagedByDiffblue
   @MethodsUnderTest({"void ContractStateCapsule.setEnergyFactor(long)"})
   public void testSetEnergyFactor() {
     // Arrange
@@ -431,7 +451,8 @@ public class ContractStateCapsuleDiffblueTest {
    * <p>Method under test: {@link ContractStateCapsule#getUpdateCycle()}
    */
   @Test
-  @Category(MaintainedByDiffblue.class)
+  @Category(ContributionFromDiffblue.class)
+  @ManagedByDiffblue
   @MethodsUnderTest({"long ContractStateCapsule.getUpdateCycle()"})
   public void testGetUpdateCycle() {
     // Arrange, Act and Assert
@@ -444,7 +465,8 @@ public class ContractStateCapsuleDiffblueTest {
    * <p>Method under test: {@link ContractStateCapsule#setUpdateCycle(long)}
    */
   @Test
-  @Category(MaintainedByDiffblue.class)
+  @Category(ContributionFromDiffblue.class)
+  @ManagedByDiffblue
   @MethodsUnderTest({"void ContractStateCapsule.setUpdateCycle(long)"})
   public void testSetUpdateCycle() {
     // Arrange
@@ -465,7 +487,8 @@ public class ContractStateCapsuleDiffblueTest {
    * <p>Method under test: {@link ContractStateCapsule#addUpdateCycle(long)}
    */
   @Test
-  @Category(MaintainedByDiffblue.class)
+  @Category(ContributionFromDiffblue.class)
+  @ManagedByDiffblue
   @MethodsUnderTest({"void ContractStateCapsule.addUpdateCycle(long)"})
   public void testAddUpdateCycle() {
     // Arrange
@@ -486,7 +509,8 @@ public class ContractStateCapsuleDiffblueTest {
    * <p>Method under test: {@link ContractStateCapsule#catchUpToCycle(DynamicPropertiesStore)}
    */
   @Test
-  @Category(MaintainedByDiffblue.class)
+  @Category(ContributionFromDiffblue.class)
+  @ManagedByDiffblue
   @MethodsUnderTest({"boolean ContractStateCapsule.catchUpToCycle(DynamicPropertiesStore)"})
   public void testCatchUpToCycleWithDps() {
     // Arrange
@@ -523,7 +547,8 @@ public class ContractStateCapsuleDiffblueTest {
    * <p>Method under test: {@link ContractStateCapsule#catchUpToCycle(DynamicPropertiesStore)}
    */
   @Test
-  @Category(MaintainedByDiffblue.class)
+  @Category(ContributionFromDiffblue.class)
+  @ManagedByDiffblue
   @MethodsUnderTest({"boolean ContractStateCapsule.catchUpToCycle(DynamicPropertiesStore)"})
   public void testCatchUpToCycleWithDps2() {
     // Arrange
@@ -555,7 +580,8 @@ public class ContractStateCapsuleDiffblueTest {
    * <p>Method under test: {@link ContractStateCapsule#catchUpToCycle(DynamicPropertiesStore)}
    */
   @Test
-  @Category(MaintainedByDiffblue.class)
+  @Category(ContributionFromDiffblue.class)
+  @ManagedByDiffblue
   @MethodsUnderTest({"boolean ContractStateCapsule.catchUpToCycle(DynamicPropertiesStore)"})
   public void testCatchUpToCycleWithDps3() {
     // Arrange
@@ -591,7 +617,8 @@ public class ContractStateCapsuleDiffblueTest {
    * <p>Method under test: {@link ContractStateCapsule#catchUpToCycle(DynamicPropertiesStore)}
    */
   @Test
-  @Category(MaintainedByDiffblue.class)
+  @Category(ContributionFromDiffblue.class)
+  @ManagedByDiffblue
   @MethodsUnderTest({"boolean ContractStateCapsule.catchUpToCycle(DynamicPropertiesStore)"})
   public void testCatchUpToCycleWithDps4() {
     // Arrange
@@ -640,7 +667,8 @@ public class ContractStateCapsuleDiffblueTest {
    * <p>Method under test: {@link ContractStateCapsule#catchUpToCycle(DynamicPropertiesStore)}
    */
   @Test
-  @Category(MaintainedByDiffblue.class)
+  @Category(ContributionFromDiffblue.class)
+  @ManagedByDiffblue
   @MethodsUnderTest({"boolean ContractStateCapsule.catchUpToCycle(DynamicPropertiesStore)"})
   public void testCatchUpToCycleWithDps5() {
     // Arrange
@@ -680,7 +708,8 @@ public class ContractStateCapsuleDiffblueTest {
    * <p>Method under test: {@link ContractStateCapsule#catchUpToCycle(DynamicPropertiesStore)}
    */
   @Test
-  @Category(MaintainedByDiffblue.class)
+  @Category(ContributionFromDiffblue.class)
+  @ManagedByDiffblue
   @MethodsUnderTest({"boolean ContractStateCapsule.catchUpToCycle(DynamicPropertiesStore)"})
   public void testCatchUpToCycleWithDps_givenFalse() {
     // Arrange
@@ -720,7 +749,8 @@ public class ContractStateCapsuleDiffblueTest {
    * <p>Method under test: {@link ContractStateCapsule#catchUpToCycle(DynamicPropertiesStore)}
    */
   @Test
-  @Category(MaintainedByDiffblue.class)
+  @Category(ContributionFromDiffblue.class)
+  @ManagedByDiffblue
   @MethodsUnderTest({"boolean ContractStateCapsule.catchUpToCycle(DynamicPropertiesStore)"})
   public void testCatchUpToCycleWithDps_thenReturnFalse() {
     // Arrange
@@ -756,7 +786,8 @@ public class ContractStateCapsuleDiffblueTest {
    * boolean)}
    */
   @Test
-  @Category(MaintainedByDiffblue.class)
+  @Category(ContributionFromDiffblue.class)
+  @ManagedByDiffblue
   @MethodsUnderTest({
     "boolean ContractStateCapsule.catchUpToCycle(long, long, long, long, boolean)"
   })

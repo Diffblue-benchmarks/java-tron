@@ -1,7 +1,8 @@
 package org.tron.core.net.messagehandler;
 
 import static org.junit.Assert.assertThrows;
-import com.diffblue.cover.annotations.MaintainedByDiffblue;
+import com.diffblue.cover.annotations.ContributionFromDiffblue;
+import com.diffblue.cover.annotations.ManagedByDiffblue;
 import com.diffblue.cover.annotations.MethodsUnderTest;
 import java.util.LinkedList;
 import org.junit.Test;
@@ -28,7 +29,8 @@ public class ChainInventoryMsgHandlerDiffblueTest {
    * TronMessage)}
    */
   @Test
-  @Category(MaintainedByDiffblue.class)
+  @Category(ContributionFromDiffblue.class)
+  @ManagedByDiffblue
   @MethodsUnderTest({"void ChainInventoryMsgHandler.processMessage(PeerConnection, TronMessage)"})
   public void testProcessMessage_whenChainInventoryMessageWithDataIsEmptyArrayOfByte()
       throws Exception {
@@ -55,7 +57,8 @@ public class ChainInventoryMsgHandlerDiffblueTest {
    * TronMessage)}
    */
   @Test
-  @Category(MaintainedByDiffblue.class)
+  @Category(ContributionFromDiffblue.class)
+  @ManagedByDiffblue
   @MethodsUnderTest({"void ChainInventoryMsgHandler.processMessage(PeerConnection, TronMessage)"})
   public void testProcessMessage_whenPeerConnection_thenThrowP2pException() throws P2pException {
     // Arrange

@@ -10,7 +10,8 @@ import static org.mockito.Mockito.atLeast;
 import static org.mockito.Mockito.mock;
 import static org.mockito.Mockito.verify;
 import static org.mockito.Mockito.when;
-import com.diffblue.cover.annotations.MaintainedByDiffblue;
+import com.diffblue.cover.annotations.ContributionFromDiffblue;
+import com.diffblue.cover.annotations.ManagedByDiffblue;
 import com.diffblue.cover.annotations.MethodsUnderTest;
 import com.google.protobuf.ByteString;
 import java.io.UnsupportedEncodingException;
@@ -41,7 +42,8 @@ public class AccountCapsuleDiffblueTest {
    * boolean, DynamicPropertiesStore)}
    */
   @Test
-  @Category(MaintainedByDiffblue.class)
+  @Category(ContributionFromDiffblue.class)
+  @ManagedByDiffblue
   @MethodsUnderTest({
     "void AccountCapsule.<init>(ByteString, AccountType, long, boolean, DynamicPropertiesStore)"
   })
@@ -82,7 +84,8 @@ public class AccountCapsuleDiffblueTest {
    * DynamicPropertiesStore)}
    */
   @Test
-  @Category(MaintainedByDiffblue.class)
+  @Category(ContributionFromDiffblue.class)
+  @ManagedByDiffblue
   @MethodsUnderTest({
     "void AccountCapsule.<init>(AccountContract.AccountCreateContract, long, boolean, DynamicPropertiesStore)"
   })
@@ -129,7 +132,8 @@ public class AccountCapsuleDiffblueTest {
    * DynamicPropertiesStore)}
    */
   @Test
-  @Category(MaintainedByDiffblue.class)
+  @Category(ContributionFromDiffblue.class)
+  @ManagedByDiffblue
   @MethodsUnderTest({
     "void AccountCapsule.<init>(AccountContract.AccountCreateContract, long, boolean, DynamicPropertiesStore)"
   })
@@ -161,7 +165,8 @@ public class AccountCapsuleDiffblueTest {
    * <p>Method under test: {@link AccountCapsule#AccountCapsule(byte[])}
    */
   @Test
-  @Category(MaintainedByDiffblue.class)
+  @Category(ContributionFromDiffblue.class)
+  @ManagedByDiffblue
   @MethodsUnderTest({"void AccountCapsule.<init>(byte[])"})
   public void testNewAccountCapsule_when2xaxaxaxBytesIsUtf8_thenReturnInstanceIsNull()
       throws UnsupportedEncodingException {
@@ -180,7 +185,8 @@ public class AccountCapsuleDiffblueTest {
    * <p>Method under test: {@link AccountCapsule#AccountCapsule(byte[])}
    */
   @Test
-  @Category(MaintainedByDiffblue.class)
+  @Category(ContributionFromDiffblue.class)
+  @ManagedByDiffblue
   @MethodsUnderTest({"void AccountCapsule.<init>(byte[])"})
   public void testNewAccountCapsule_whenArrayOfByteWith2AndTwo_thenReturnInstanceIsNull() {
     // Arrange and Act
@@ -203,7 +209,8 @@ public class AccountCapsuleDiffblueTest {
    * <p>Method under test: {@link AccountCapsule#AccountCapsule(byte[])}
    */
   @Test
-  @Category(MaintainedByDiffblue.class)
+  @Category(ContributionFromDiffblue.class)
+  @ManagedByDiffblue
   @MethodsUnderTest({"void AccountCapsule.<init>(byte[])"})
   public void testNewAccountCapsule_whenArrayOfByteWith2AndZero_thenReturnInstanceIsNull() {
     // Arrange and Act
@@ -225,7 +232,8 @@ public class AccountCapsuleDiffblueTest {
    * <p>Method under test: {@link AccountCapsule#AccountCapsule(byte[])}
    */
   @Test
-  @Category(MaintainedByDiffblue.class)
+  @Category(ContributionFromDiffblue.class)
+  @ManagedByDiffblue
   @MethodsUnderTest({"void AccountCapsule.<init>(byte[])"})
   public void testNewAccountCapsule_whenArrayOfByteWithAAndTwo_thenReturnInstanceIsNull() {
     // Arrange and Act
@@ -248,7 +256,8 @@ public class AccountCapsuleDiffblueTest {
    * <p>Method under test: {@link AccountCapsule#AccountCapsule(byte[])}
    */
   @Test
-  @Category(MaintainedByDiffblue.class)
+  @Category(ContributionFromDiffblue.class)
+  @ManagedByDiffblue
   @MethodsUnderTest({"void AccountCapsule.<init>(byte[])"})
   public void testNewAccountCapsule_whenArrayOfByteWithAAndTwo_thenReturnInstanceIsNull2() {
     // Arrange and Act
@@ -271,7 +280,8 @@ public class AccountCapsuleDiffblueTest {
    * <p>Method under test: {@link AccountCapsule#AccountCapsule(byte[])}
    */
   @Test
-  @Category(MaintainedByDiffblue.class)
+  @Category(ContributionFromDiffblue.class)
+  @ManagedByDiffblue
   @MethodsUnderTest({"void AccountCapsule.<init>(byte[])"})
   public void testNewAccountCapsule_whenArrayOfByteWithAsteriskAndTwo_thenReturnInstanceIsNull() {
     // Arrange and Act
@@ -293,7 +303,8 @@ public class AccountCapsuleDiffblueTest {
    * <p>Method under test: {@link AccountCapsule#AccountCapsule(byte[])}
    */
   @Test
-  @Category(MaintainedByDiffblue.class)
+  @Category(ContributionFromDiffblue.class)
+  @ManagedByDiffblue
   @MethodsUnderTest({"void AccountCapsule.<init>(byte[])"})
   public void testNewAccountCapsule_whenArrayOfByteWithAsteriskAndZero() {
     // Arrange and Act
@@ -315,7 +326,8 @@ public class AccountCapsuleDiffblueTest {
    * <p>Method under test: {@link AccountCapsule#AccountCapsule(byte[])}
    */
   @Test
-  @Category(MaintainedByDiffblue.class)
+  @Category(ContributionFromDiffblue.class)
+  @ManagedByDiffblue
   @MethodsUnderTest({"void AccountCapsule.<init>(byte[])"})
   public void testNewAccountCapsule_whenArrayOfByteWithLfAndTwo_thenReturnInstanceIsNull() {
     // Arrange and Act
@@ -338,7 +350,8 @@ public class AccountCapsuleDiffblueTest {
    * <p>Method under test: {@link AccountCapsule#AccountCapsule(byte[])}
    */
   @Test
-  @Category(MaintainedByDiffblue.class)
+  @Category(ContributionFromDiffblue.class)
+  @ManagedByDiffblue
   @MethodsUnderTest({"void AccountCapsule.<init>(byte[])"})
   public void testNewAccountCapsule_whenArrayOfByteWithLfAndZero_thenReturnInstanceIsNull() {
     // Arrange and Act
@@ -360,7 +373,8 @@ public class AccountCapsuleDiffblueTest {
    * <p>Method under test: {@link AccountCapsule#AccountCapsule(byte[])}
    */
   @Test
-  @Category(MaintainedByDiffblue.class)
+  @Category(ContributionFromDiffblue.class)
+  @ManagedByDiffblue
   @MethodsUnderTest({"void AccountCapsule.<init>(byte[])"})
   public void testNewAccountCapsule_whenArrayOfByteWithMin_valueAndX_thenReturnInstanceIsNull() {
     // Arrange and Act
@@ -382,7 +396,8 @@ public class AccountCapsuleDiffblueTest {
    * <p>Method under test: {@link AccountCapsule#AccountCapsule(byte[])}
    */
   @Test
-  @Category(MaintainedByDiffblue.class)
+  @Category(ContributionFromDiffblue.class)
+  @ManagedByDiffblue
   @MethodsUnderTest({"void AccountCapsule.<init>(byte[])"})
   public void testNewAccountCapsule_whenArrayOfByteWithMinusOneAndX_thenReturnInstanceIsNull() {
     // Arrange and Act
@@ -404,7 +419,8 @@ public class AccountCapsuleDiffblueTest {
    * <p>Method under test: {@link AccountCapsule#AccountCapsule(byte[])}
    */
   @Test
-  @Category(MaintainedByDiffblue.class)
+  @Category(ContributionFromDiffblue.class)
+  @ManagedByDiffblue
   @MethodsUnderTest({"void AccountCapsule.<init>(byte[])"})
   public void testNewAccountCapsule_whenArrayOfByteWithSixteenAndX_thenReturnInstanceIsNull() {
     // Arrange and Act
@@ -425,7 +441,8 @@ public class AccountCapsuleDiffblueTest {
    * <p>Method under test: {@link AccountCapsule#AccountCapsule(byte[])}
    */
   @Test
-  @Category(MaintainedByDiffblue.class)
+  @Category(ContributionFromDiffblue.class)
+  @ManagedByDiffblue
   @MethodsUnderTest({"void AccountCapsule.<init>(byte[])"})
   public void testNewAccountCapsule_whenArrayOfByteWithTwentySixAndTwo() {
     // Arrange and Act
@@ -448,7 +465,8 @@ public class AccountCapsuleDiffblueTest {
    * <p>Method under test: {@link AccountCapsule#AccountCapsule(byte[])}
    */
   @Test
-  @Category(MaintainedByDiffblue.class)
+  @Category(ContributionFromDiffblue.class)
+  @ManagedByDiffblue
   @MethodsUnderTest({"void AccountCapsule.<init>(byte[])"})
   public void testNewAccountCapsule_whenArrayOfByteWithTwentySixAndX_thenReturnInstanceIsNull() {
     // Arrange and Act
@@ -469,7 +487,8 @@ public class AccountCapsuleDiffblueTest {
    * <p>Method under test: {@link AccountCapsule#AccountCapsule(byte[])}
    */
   @Test
-  @Category(MaintainedByDiffblue.class)
+  @Category(ContributionFromDiffblue.class)
+  @ManagedByDiffblue
   @MethodsUnderTest({"void AccountCapsule.<init>(byte[])"})
   public void testNewAccountCapsule_whenArrayOfByteWithTwentySixAndZero() {
     // Arrange and Act
@@ -492,7 +511,8 @@ public class AccountCapsuleDiffblueTest {
    * AccountType)}
    */
   @Test
-  @Category(MaintainedByDiffblue.class)
+  @Category(ContributionFromDiffblue.class)
+  @ManagedByDiffblue
   @MethodsUnderTest({"void AccountCapsule.<init>(ByteString, ByteString, AccountType)"})
   public void testNewAccountCapsule_whenAssetIssue_thenReturnTypeIsAssetIssue() {
     // Arrange and Act
@@ -515,7 +535,8 @@ public class AccountCapsuleDiffblueTest {
    * <p>Method under test: {@link AccountCapsule#AccountCapsule(byte[])}
    */
   @Test
-  @Category(MaintainedByDiffblue.class)
+  @Category(ContributionFromDiffblue.class)
+  @ManagedByDiffblue
   @MethodsUnderTest({"void AccountCapsule.<init>(byte[])"})
   public void testNewAccountCapsule_whenAxaxaxaxBytesIsUtf8_thenReturnInstanceIsNull()
       throws UnsupportedEncodingException {
@@ -535,7 +556,8 @@ public class AccountCapsuleDiffblueTest {
    * AccountType)}
    */
   @Test
-  @Category(MaintainedByDiffblue.class)
+  @Category(ContributionFromDiffblue.class)
+  @ManagedByDiffblue
   @MethodsUnderTest({"void AccountCapsule.<init>(ByteString, ByteString, AccountType)"})
   public void testNewAccountCapsule_whenByteString_thenReturnTypeIsNormal() {
     // Arrange and Act
@@ -558,7 +580,8 @@ public class AccountCapsuleDiffblueTest {
    * <p>Method under test: {@link AccountCapsule#AccountCapsule(ByteString, AccountType)}
    */
   @Test
-  @Category(MaintainedByDiffblue.class)
+  @Category(ContributionFromDiffblue.class)
+  @ManagedByDiffblue
   @MethodsUnderTest({"void AccountCapsule.<init>(ByteString, AccountType)"})
   public void testNewAccountCapsule_whenByteString_thenReturnWitnessPermissionAddressIsNull() {
     // Arrange
@@ -647,7 +670,8 @@ public class AccountCapsuleDiffblueTest {
    * boolean, DynamicPropertiesStore)}
    */
   @Test
-  @Category(MaintainedByDiffblue.class)
+  @Category(ContributionFromDiffblue.class)
+  @ManagedByDiffblue
   @MethodsUnderTest({
     "void AccountCapsule.<init>(ByteString, AccountType, long, boolean, DynamicPropertiesStore)"
   })
@@ -738,7 +762,8 @@ public class AccountCapsuleDiffblueTest {
    * AccountCapsule#AccountCapsule(AccountContract.AccountCreateContract)}
    */
   @Test
-  @Category(MaintainedByDiffblue.class)
+  @Category(ContributionFromDiffblue.class)
+  @ManagedByDiffblue
   @MethodsUnderTest({"void AccountCapsule.<init>(AccountContract.AccountCreateContract)"})
   public void testNewAccountCapsule_whenDefaultInstance_thenReturnFrozenCountIsZero() {
     // Arrange and Act
@@ -817,7 +842,8 @@ public class AccountCapsuleDiffblueTest {
    * <p>Method under test: {@link AccountCapsule#AccountCapsule(byte[])}
    */
   @Test
-  @Category(MaintainedByDiffblue.class)
+  @Category(ContributionFromDiffblue.class)
+  @ManagedByDiffblue
   @MethodsUnderTest({"void AccountCapsule.<init>(byte[])"})
   public void testNewAccountCapsule_whenEmptyArrayOfByte_thenReturnFrozenCountIsZero() {
     // Arrange and Act
@@ -896,7 +922,8 @@ public class AccountCapsuleDiffblueTest {
    * long)}
    */
   @Test
-  @Category(MaintainedByDiffblue.class)
+  @Category(ContributionFromDiffblue.class)
+  @ManagedByDiffblue
   @MethodsUnderTest({"void AccountCapsule.<init>(ByteString, ByteString, AccountType, long)"})
   public void testNewAccountCapsule_whenNormal_thenReturnWitnessPermissionAddressIsNull() {
     // Arrange
@@ -985,7 +1012,8 @@ public class AccountCapsuleDiffblueTest {
    * <p>Method under test: {@link AccountCapsule#AccountCapsule(byte[])}
    */
   @Test
-  @Category(MaintainedByDiffblue.class)
+  @Category(ContributionFromDiffblue.class)
+  @ManagedByDiffblue
   @MethodsUnderTest({"void AccountCapsule.<init>(byte[])"})
   public void testNewAccountCapsule_whenXaxaxaxBytesIsUtf8_thenReturnInstanceIsNull()
       throws UnsupportedEncodingException {
@@ -1004,7 +1032,8 @@ public class AccountCapsuleDiffblueTest {
    * <p>Method under test: {@link AccountCapsule#AccountCapsule(byte[])}
    */
   @Test
-  @Category(MaintainedByDiffblue.class)
+  @Category(ContributionFromDiffblue.class)
+  @ManagedByDiffblue
   @MethodsUnderTest({"void AccountCapsule.<init>(byte[])"})
   public void testNewAccountCapsule_whenXaxaxaxBytesIsUtf8_thenReturnInstanceIsNull2()
       throws UnsupportedEncodingException {
@@ -1023,7 +1052,8 @@ public class AccountCapsuleDiffblueTest {
    * <p>Method under test: {@link AccountCapsule#AccountCapsule(byte[])}
    */
   @Test
-  @Category(MaintainedByDiffblue.class)
+  @Category(ContributionFromDiffblue.class)
+  @ManagedByDiffblue
   @MethodsUnderTest({"void AccountCapsule.<init>(byte[])"})
   public void testNewAccountCapsule_whenXaxaxaxBytesIsUtf8_thenReturnInstanceIsNull3()
       throws UnsupportedEncodingException {
@@ -1042,7 +1072,8 @@ public class AccountCapsuleDiffblueTest {
    * <p>Method under test: {@link AccountCapsule#AccountCapsule(byte[])}
    */
   @Test
-  @Category(MaintainedByDiffblue.class)
+  @Category(ContributionFromDiffblue.class)
+  @ManagedByDiffblue
   @MethodsUnderTest({"void AccountCapsule.<init>(byte[])"})
   public void testNewAccountCapsule_whenXaxaxaxBytesIsUtf8_thenReturnInstanceIsNull4()
       throws UnsupportedEncodingException {
@@ -1061,7 +1092,8 @@ public class AccountCapsuleDiffblueTest {
    * <p>Method under test: {@link AccountCapsule#AccountCapsule(byte[])}
    */
   @Test
-  @Category(MaintainedByDiffblue.class)
+  @Category(ContributionFromDiffblue.class)
+  @ManagedByDiffblue
   @MethodsUnderTest({"void AccountCapsule.<init>(byte[])"})
   public void testNewAccountCapsule_whenXxaxaxaxBytesIsUtf8_thenReturnInstanceIsNull()
       throws UnsupportedEncodingException {
@@ -1075,7 +1107,8 @@ public class AccountCapsuleDiffblueTest {
    * <p>Method under test: {@link AccountCapsule#createDefaultOwnerPermission(ByteString)}
    */
   @Test
-  @Category(MaintainedByDiffblue.class)
+  @Category(ContributionFromDiffblue.class)
+  @ManagedByDiffblue
   @MethodsUnderTest({"Permission AccountCapsule.createDefaultOwnerPermission(ByteString)"})
   public void testCreateDefaultOwnerPermission() {
     // Arrange and Act
@@ -1108,7 +1141,8 @@ public class AccountCapsuleDiffblueTest {
    * DynamicPropertiesStore)}
    */
   @Test
-  @Category(MaintainedByDiffblue.class)
+  @Category(ContributionFromDiffblue.class)
+  @ManagedByDiffblue
   @MethodsUnderTest({
     "Permission AccountCapsule.createDefaultActivePermission(ByteString, DynamicPropertiesStore)"
   })
@@ -1149,7 +1183,8 @@ public class AccountCapsuleDiffblueTest {
    * <p>Method under test: {@link AccountCapsule#createDefaultWitnessPermission(ByteString)}
    */
   @Test
-  @Category(MaintainedByDiffblue.class)
+  @Category(ContributionFromDiffblue.class)
+  @ManagedByDiffblue
   @MethodsUnderTest({"Permission AccountCapsule.createDefaultWitnessPermission(ByteString)"})
   public void testCreateDefaultWitnessPermission() {
     // Arrange and Act
@@ -1185,7 +1220,8 @@ public class AccountCapsuleDiffblueTest {
    * <p>Method under test: {@link AccountCapsule#getDefaultPermission(ByteString)}
    */
   @Test
-  @Category(MaintainedByDiffblue.class)
+  @Category(ContributionFromDiffblue.class)
+  @ManagedByDiffblue
   @MethodsUnderTest({"Permission AccountCapsule.getDefaultPermission(ByteString)"})
   public void testGetDefaultPermission_thenReturnInitializationErrorStringIsEmptyString() {
     // Arrange and Act

@@ -5,7 +5,8 @@ import static org.junit.Assert.assertEquals;
 import static org.junit.Assert.assertFalse;
 import static org.junit.Assert.assertSame;
 import static org.junit.Assert.assertTrue;
-import com.diffblue.cover.annotations.MaintainedByDiffblue;
+import com.diffblue.cover.annotations.ContributionFromDiffblue;
+import com.diffblue.cover.annotations.ManagedByDiffblue;
 import com.diffblue.cover.annotations.MethodsUnderTest;
 import java.io.UnsupportedEncodingException;
 import java.util.HashMap;
@@ -24,7 +25,8 @@ public class OperationActionsDiffblueTest {
    * <p>Method under test: {@link OperationActions#stopAction(Program)}
    */
   @Test
-  @Category(MaintainedByDiffblue.class)
+  @Category(ContributionFromDiffblue.class)
+  @ManagedByDiffblue
   @MethodsUnderTest({"void OperationActions.stopAction(Program)"})
   public void testStopAction() throws UnsupportedEncodingException {
     // Arrange
@@ -66,7 +68,8 @@ public class OperationActionsDiffblueTest {
    * <p>Method under test: {@link OperationActions#addressAction(Program)}
    */
   @Test
-  @Category(MaintainedByDiffblue.class)
+  @Category(ContributionFromDiffblue.class)
+  @ManagedByDiffblue
   @MethodsUnderTest({"void OperationActions.addressAction(Program)"})
   public void testAddressAction() throws UnsupportedEncodingException {
     // Arrange
@@ -111,7 +114,8 @@ public class OperationActionsDiffblueTest {
    * <p>Method under test: {@link OperationActions#originAction(Program)}
    */
   @Test
-  @Category(MaintainedByDiffblue.class)
+  @Category(ContributionFromDiffblue.class)
+  @ManagedByDiffblue
   @MethodsUnderTest({"void OperationActions.originAction(Program)"})
   public void testOriginAction() throws UnsupportedEncodingException {
     // Arrange
@@ -156,7 +160,8 @@ public class OperationActionsDiffblueTest {
    * <p>Method under test: {@link OperationActions#callerAction(Program)}
    */
   @Test
-  @Category(MaintainedByDiffblue.class)
+  @Category(ContributionFromDiffblue.class)
+  @ManagedByDiffblue
   @MethodsUnderTest({"void OperationActions.callerAction(Program)"})
   public void testCallerAction() throws UnsupportedEncodingException {
     // Arrange
@@ -241,7 +246,8 @@ public class OperationActionsDiffblueTest {
    * <p>Method under test: {@link OperationActions#callValueAction(Program)}
    */
   @Test
-  @Category(MaintainedByDiffblue.class)
+  @Category(ContributionFromDiffblue.class)
+  @ManagedByDiffblue
   @MethodsUnderTest({"void OperationActions.callValueAction(Program)"})
   public void testCallValueAction() throws UnsupportedEncodingException {
     // Arrange
@@ -286,7 +292,8 @@ public class OperationActionsDiffblueTest {
    * <p>Method under test: {@link OperationActions#callDataSizeAction(Program)}
    */
   @Test
-  @Category(MaintainedByDiffblue.class)
+  @Category(ContributionFromDiffblue.class)
+  @ManagedByDiffblue
   @MethodsUnderTest({"void OperationActions.callDataSizeAction(Program)"})
   public void testCallDataSizeAction() throws UnsupportedEncodingException {
     // Arrange
@@ -331,7 +338,8 @@ public class OperationActionsDiffblueTest {
    * <p>Method under test: {@link OperationActions#codeSizeAction(Program)}
    */
   @Test
-  @Category(MaintainedByDiffblue.class)
+  @Category(ContributionFromDiffblue.class)
+  @ManagedByDiffblue
   @MethodsUnderTest({"void OperationActions.codeSizeAction(Program)"})
   public void testCodeSizeAction() throws UnsupportedEncodingException {
     // Arrange
@@ -405,7 +413,8 @@ public class OperationActionsDiffblueTest {
    * <p>Method under test: {@link OperationActions#returnDataSizeAction(Program)}
    */
   @Test
-  @Category(MaintainedByDiffblue.class)
+  @Category(ContributionFromDiffblue.class)
+  @ManagedByDiffblue
   @MethodsUnderTest({"void OperationActions.returnDataSizeAction(Program)"})
   public void testReturnDataSizeAction() throws UnsupportedEncodingException {
     // Arrange
@@ -450,7 +459,8 @@ public class OperationActionsDiffblueTest {
    * <p>Method under test: {@link OperationActions#gasPriceAction(Program)}
    */
   @Test
-  @Category(MaintainedByDiffblue.class)
+  @Category(ContributionFromDiffblue.class)
+  @ManagedByDiffblue
   @MethodsUnderTest({"void OperationActions.gasPriceAction(Program)"})
   public void testGasPriceAction() throws UnsupportedEncodingException {
     // Arrange
@@ -495,7 +505,8 @@ public class OperationActionsDiffblueTest {
    * <p>Method under test: {@link OperationActions#coinBaseAction(Program)}
    */
   @Test
-  @Category(MaintainedByDiffblue.class)
+  @Category(ContributionFromDiffblue.class)
+  @ManagedByDiffblue
   @MethodsUnderTest({"void OperationActions.coinBaseAction(Program)"})
   public void testCoinBaseAction() throws UnsupportedEncodingException {
     // Arrange
@@ -540,7 +551,8 @@ public class OperationActionsDiffblueTest {
    * <p>Method under test: {@link OperationActions#timeStampAction(Program)}
    */
   @Test
-  @Category(MaintainedByDiffblue.class)
+  @Category(ContributionFromDiffblue.class)
+  @ManagedByDiffblue
   @MethodsUnderTest({"void OperationActions.timeStampAction(Program)"})
   public void testTimeStampAction() throws UnsupportedEncodingException {
     // Arrange
@@ -585,7 +597,8 @@ public class OperationActionsDiffblueTest {
    * <p>Method under test: {@link OperationActions#numberAction(Program)}
    */
   @Test
-  @Category(MaintainedByDiffblue.class)
+  @Category(ContributionFromDiffblue.class)
+  @ManagedByDiffblue
   @MethodsUnderTest({"void OperationActions.numberAction(Program)"})
   public void testNumberAction() throws UnsupportedEncodingException {
     // Arrange
@@ -630,7 +643,8 @@ public class OperationActionsDiffblueTest {
    * <p>Method under test: {@link OperationActions#difficultyAction(Program)}
    */
   @Test
-  @Category(MaintainedByDiffblue.class)
+  @Category(ContributionFromDiffblue.class)
+  @ManagedByDiffblue
   @MethodsUnderTest({"void OperationActions.difficultyAction(Program)"})
   public void testDifficultyAction() throws UnsupportedEncodingException {
     // Arrange
@@ -675,7 +689,8 @@ public class OperationActionsDiffblueTest {
    * <p>Method under test: {@link OperationActions#gasLimitAction(Program)}
    */
   @Test
-  @Category(MaintainedByDiffblue.class)
+  @Category(ContributionFromDiffblue.class)
+  @ManagedByDiffblue
   @MethodsUnderTest({"void OperationActions.gasLimitAction(Program)"})
   public void testGasLimitAction() throws UnsupportedEncodingException {
     // Arrange
@@ -720,7 +735,8 @@ public class OperationActionsDiffblueTest {
    * <p>Method under test: {@link OperationActions#selfBalanceAction(Program)}
    */
   @Test
-  @Category(MaintainedByDiffblue.class)
+  @Category(ContributionFromDiffblue.class)
+  @ManagedByDiffblue
   @MethodsUnderTest({"void OperationActions.selfBalanceAction(Program)"})
   public void testSelfBalanceAction() throws UnsupportedEncodingException {
     // Arrange
@@ -765,7 +781,8 @@ public class OperationActionsDiffblueTest {
    * <p>Method under test: {@link OperationActions#pcAction(Program)}
    */
   @Test
-  @Category(MaintainedByDiffblue.class)
+  @Category(ContributionFromDiffblue.class)
+  @ManagedByDiffblue
   @MethodsUnderTest({"void OperationActions.pcAction(Program)"})
   public void testPcAction() throws UnsupportedEncodingException {
     // Arrange
@@ -810,7 +827,8 @@ public class OperationActionsDiffblueTest {
    * <p>Method under test: {@link OperationActions#mSizeAction(Program)}
    */
   @Test
-  @Category(MaintainedByDiffblue.class)
+  @Category(ContributionFromDiffblue.class)
+  @ManagedByDiffblue
   @MethodsUnderTest({"void OperationActions.mSizeAction(Program)"})
   public void testMSizeAction() throws UnsupportedEncodingException {
     // Arrange
@@ -855,7 +873,8 @@ public class OperationActionsDiffblueTest {
    * <p>Method under test: {@link OperationActions#gasAction(Program)}
    */
   @Test
-  @Category(MaintainedByDiffblue.class)
+  @Category(ContributionFromDiffblue.class)
+  @ManagedByDiffblue
   @MethodsUnderTest({"void OperationActions.gasAction(Program)"})
   public void testGasAction() throws UnsupportedEncodingException {
     // Arrange
@@ -900,7 +919,8 @@ public class OperationActionsDiffblueTest {
    * <p>Method under test: {@link OperationActions#jumpDestAction(Program)}
    */
   @Test
-  @Category(MaintainedByDiffblue.class)
+  @Category(ContributionFromDiffblue.class)
+  @ManagedByDiffblue
   @MethodsUnderTest({"void OperationActions.jumpDestAction(Program)"})
   public void testJumpDestAction() throws UnsupportedEncodingException {
     // Arrange
@@ -944,7 +964,8 @@ public class OperationActionsDiffblueTest {
    * <p>Method under test: {@link OperationActions#push0Action(Program)}
    */
   @Test
-  @Category(MaintainedByDiffblue.class)
+  @Category(ContributionFromDiffblue.class)
+  @ManagedByDiffblue
   @MethodsUnderTest({"void OperationActions.push0Action(Program)"})
   public void testPush0Action() throws UnsupportedEncodingException {
     // Arrange
@@ -989,7 +1010,8 @@ public class OperationActionsDiffblueTest {
    * <p>Method under test: {@link OperationActions#swapAction(Program)}
    */
   @Test
-  @Category(MaintainedByDiffblue.class)
+  @Category(ContributionFromDiffblue.class)
+  @ManagedByDiffblue
   @MethodsUnderTest({"void OperationActions.swapAction(Program)"})
   public void testSwapAction() throws UnsupportedEncodingException {
     // Arrange

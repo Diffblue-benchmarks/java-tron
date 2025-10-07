@@ -6,7 +6,8 @@ import static org.junit.Assert.assertFalse;
 import static org.junit.Assert.assertNull;
 import static org.junit.Assert.assertSame;
 import static org.junit.Assert.assertTrue;
-import com.diffblue.cover.annotations.MaintainedByDiffblue;
+import com.diffblue.cover.annotations.ContributionFromDiffblue;
+import com.diffblue.cover.annotations.ManagedByDiffblue;
 import com.diffblue.cover.annotations.MethodsUnderTest;
 import java.math.BigInteger;
 import org.junit.Test;
@@ -22,7 +23,8 @@ public class PairingCheckDiffblueTest {
    * <p>Method under test: {@link PairingCheck#create()}
    */
   @Test
-  @Category(MaintainedByDiffblue.class)
+  @Category(ContributionFromDiffblue.class)
+  @ManagedByDiffblue
   @MethodsUnderTest({"PairingCheck PairingCheck.create()"})
   public void testCreate() {
     // Arrange and Act
@@ -48,7 +50,8 @@ public class PairingCheckDiffblueTest {
    * <p>Method under test: {@link EllCoeffs#EllCoeffs(Fp2, Fp2, Fp2)}
    */
   @Test
-  @Category(MaintainedByDiffblue.class)
+  @Category(ContributionFromDiffblue.class)
+  @ManagedByDiffblue
   @MethodsUnderTest({"void EllCoeffs.<init>(Fp2, Fp2, Fp2)"})
   public void testEllCoeffsNewEllCoeffs() {
     // Arrange and Act
@@ -72,7 +75,8 @@ public class PairingCheckDiffblueTest {
    * <p>Method under test: {@link Pair#millerLoop()}
    */
   @Test
-  @Category(MaintainedByDiffblue.class)
+  @Category(ContributionFromDiffblue.class)
+  @ManagedByDiffblue
   @MethodsUnderTest({"Fp12 Pair.millerLoop()"})
   public void testPairMillerLoop() {
     // Arrange
@@ -113,7 +117,8 @@ public class PairingCheckDiffblueTest {
    * <p>Method under test: {@link Pair#millerLoop()}
    */
   @Test
-  @Category(MaintainedByDiffblue.class)
+  @Category(ContributionFromDiffblue.class)
+  @ManagedByDiffblue
   @MethodsUnderTest({"Fp12 Pair.millerLoop()"})
   public void testPairMillerLoop_givenBn128g1WithPIsZero_thenReturnABAIsBn128g1WithPIsZeroZ() {
     // Arrange
@@ -139,7 +144,8 @@ public class PairingCheckDiffblueTest {
    * <p>Method under test: {@link Pair#Pair(BN128G1, BN128G2)}
    */
   @Test
-  @Category(MaintainedByDiffblue.class)
+  @Category(ContributionFromDiffblue.class)
+  @ManagedByDiffblue
   @MethodsUnderTest({"void Pair.<init>(BN128G1, BN128G2)"})
   public void testPairNewPair() {
     // Arrange
@@ -504,7 +510,8 @@ public class PairingCheckDiffblueTest {
    * <p>Method under test: {@link Pair#of(BN128G1, BN128G2)}
    */
   @Test
-  @Category(MaintainedByDiffblue.class)
+  @Category(ContributionFromDiffblue.class)
+  @ManagedByDiffblue
   @MethodsUnderTest({"Pair Pair.of(BN128G1, BN128G2)"})
   public void testPairOf() {
     // Arrange
@@ -550,7 +557,8 @@ public class PairingCheckDiffblueTest {
    * <p>Method under test: {@link Precomputed#Precomputed(BN128G2, EllCoeffs)}
    */
   @Test
-  @Category(MaintainedByDiffblue.class)
+  @Category(ContributionFromDiffblue.class)
+  @ManagedByDiffblue
   @MethodsUnderTest({"void Precomputed.<init>(BN128G2, EllCoeffs)"})
   public void testPrecomputedNewPrecomputed() {
     // Arrange
@@ -867,7 +875,8 @@ public class PairingCheckDiffblueTest {
    * <p>Method under test: {@link Precomputed#of(BN128G2, EllCoeffs)}
    */
   @Test
-  @Category(MaintainedByDiffblue.class)
+  @Category(ContributionFromDiffblue.class)
+  @ManagedByDiffblue
   @MethodsUnderTest({"Precomputed Precomputed.of(BN128G2, EllCoeffs)"})
   public void testPrecomputedOf() {
     // Arrange
@@ -903,7 +912,8 @@ public class PairingCheckDiffblueTest {
    * <p>Method under test: {@link PairingCheck#result()}
    */
   @Test
-  @Category(MaintainedByDiffblue.class)
+  @Category(ContributionFromDiffblue.class)
+  @ManagedByDiffblue
   @MethodsUnderTest({"int PairingCheck.result()"})
   public void testResult() {
     // Arrange, Act and Assert

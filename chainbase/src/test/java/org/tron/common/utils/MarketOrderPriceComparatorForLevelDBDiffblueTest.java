@@ -2,7 +2,8 @@ package org.tron.common.utils;
 
 import static org.junit.Assert.assertArrayEquals;
 import static org.junit.Assert.assertEquals;
-import com.diffblue.cover.annotations.MaintainedByDiffblue;
+import com.diffblue.cover.annotations.ContributionFromDiffblue;
+import com.diffblue.cover.annotations.ManagedByDiffblue;
 import com.diffblue.cover.annotations.MethodsUnderTest;
 import java.io.UnsupportedEncodingException;
 import org.junit.Test;
@@ -15,7 +16,8 @@ public class MarketOrderPriceComparatorForLevelDBDiffblueTest {
    * <p>Method under test: {@link MarketOrderPriceComparatorForLevelDB#name()}
    */
   @Test
-  @Category(MaintainedByDiffblue.class)
+  @Category(ContributionFromDiffblue.class)
+  @ManagedByDiffblue
   @MethodsUnderTest({"java.lang.String MarketOrderPriceComparatorForLevelDB.name()"})
   public void testName() {
     // Arrange, Act and Assert
@@ -29,7 +31,8 @@ public class MarketOrderPriceComparatorForLevelDBDiffblueTest {
    * byte[])}
    */
   @Test
-  @Category(MaintainedByDiffblue.class)
+  @Category(ContributionFromDiffblue.class)
+  @ManagedByDiffblue
   @MethodsUnderTest({
     "byte[] MarketOrderPriceComparatorForLevelDB.findShortestSeparator(byte[], byte[])"
   })
@@ -47,7 +50,8 @@ public class MarketOrderPriceComparatorForLevelDBDiffblueTest {
    * <p>Method under test: {@link MarketOrderPriceComparatorForLevelDB#findShortSuccessor(byte[])}
    */
   @Test
-  @Category(MaintainedByDiffblue.class)
+  @Category(ContributionFromDiffblue.class)
+  @ManagedByDiffblue
   @MethodsUnderTest({"byte[] MarketOrderPriceComparatorForLevelDB.findShortSuccessor(byte[])"})
   public void testFindShortSuccessor() throws UnsupportedEncodingException {
     // Arrange and Act

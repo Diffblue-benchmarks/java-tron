@@ -3,7 +3,8 @@ package org.tron.core.vm.config;
 import static org.mockito.Mockito.mock;
 import static org.mockito.Mockito.verify;
 import static org.mockito.Mockito.when;
-import com.diffblue.cover.annotations.MaintainedByDiffblue;
+import com.diffblue.cover.annotations.ContributionFromDiffblue;
+import com.diffblue.cover.annotations.ManagedByDiffblue;
 import com.diffblue.cover.annotations.MethodsUnderTest;
 import org.junit.Test;
 import org.junit.experimental.categories.Category;
@@ -22,7 +23,8 @@ public class ConfigLoaderDiffblueTest {
    * <p>Method under test: {@link ConfigLoader#load(StoreFactory)}
    */
   @Test
-  @Category(MaintainedByDiffblue.class)
+  @Category(ContributionFromDiffblue.class)
+  @ManagedByDiffblue
   @MethodsUnderTest({"void ConfigLoader.load(StoreFactory)"})
   public void testLoad_givenChainBaseManager_thenCallsGetChainBaseManager() {
     // Arrange

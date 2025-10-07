@@ -1,7 +1,8 @@
 package org.tron.core.net.service.statistics;
 
 import static org.junit.Assert.assertEquals;
-import com.diffblue.cover.annotations.MaintainedByDiffblue;
+import com.diffblue.cover.annotations.ContributionFromDiffblue;
+import com.diffblue.cover.annotations.ManagedByDiffblue;
 import com.diffblue.cover.annotations.MethodsUnderTest;
 import org.junit.Test;
 import org.junit.experimental.categories.Category;
@@ -25,7 +26,8 @@ public class MessageStatisticsDiffblueTest {
    * <p>Method under test: {@link MessageStatistics#addTcpInMessage(Message)}
    */
   @Test
-  @Category(MaintainedByDiffblue.class)
+  @Category(ContributionFromDiffblue.class)
+  @ManagedByDiffblue
   @MethodsUnderTest({"void MessageStatistics.addTcpInMessage(Message)"})
   public void testAddTcpInMessage_thenMessageStatisticsP2pInDisconnectTotalCountIsOne() {
     // Arrange
@@ -54,7 +56,8 @@ public class MessageStatisticsDiffblueTest {
    * <p>Method under test: {@link MessageStatistics#addTcpInMessage(Message)}
    */
   @Test
-  @Category(MaintainedByDiffblue.class)
+  @Category(ContributionFromDiffblue.class)
+  @ManagedByDiffblue
   @MethodsUnderTest({"void MessageStatistics.addTcpInMessage(Message)"})
   public void testAddTcpInMessage_thenMessageStatisticsP2pInPongTotalCountIsOne() {
     // Arrange
@@ -82,7 +85,8 @@ public class MessageStatisticsDiffblueTest {
    * <p>Method under test: {@link MessageStatistics#addTcpInMessage(Message)}
    */
   @Test
-  @Category(MaintainedByDiffblue.class)
+  @Category(ContributionFromDiffblue.class)
+  @ManagedByDiffblue
   @MethodsUnderTest({"void MessageStatistics.addTcpInMessage(Message)"})
   public void testAddTcpInMessage_thenMessageStatisticsTronInTrxTotalCountIsOne() {
     // Arrange
@@ -110,7 +114,8 @@ public class MessageStatisticsDiffblueTest {
    * <p>Method under test: {@link MessageStatistics#addTcpInMessage(Message)}
    */
   @Test
-  @Category(MaintainedByDiffblue.class)
+  @Category(ContributionFromDiffblue.class)
+  @ManagedByDiffblue
   @MethodsUnderTest({"void MessageStatistics.addTcpInMessage(Message)"})
   public void testAddTcpInMessage_whenPbftMessage() {
     // Arrange
@@ -137,7 +142,8 @@ public class MessageStatisticsDiffblueTest {
    * <p>Method under test: {@link MessageStatistics#addTcpInMessage(Message)}
    */
   @Test
-  @Category(MaintainedByDiffblue.class)
+  @Category(ContributionFromDiffblue.class)
+  @ManagedByDiffblue
   @MethodsUnderTest({"void MessageStatistics.addTcpInMessage(Message)"})
   public void testAddTcpInMessage_whenPingMessage() {
     // Arrange
@@ -165,7 +171,8 @@ public class MessageStatisticsDiffblueTest {
    * <p>Method under test: {@link MessageStatistics#addTcpOutMessage(Message)}
    */
   @Test
-  @Category(MaintainedByDiffblue.class)
+  @Category(ContributionFromDiffblue.class)
+  @ManagedByDiffblue
   @MethodsUnderTest({"void MessageStatistics.addTcpOutMessage(Message)"})
   public void testAddTcpOutMessage_thenMessageStatisticsP2pOutDisconnectTotalCountIsOne() {
     // Arrange
@@ -194,7 +201,8 @@ public class MessageStatisticsDiffblueTest {
    * <p>Method under test: {@link MessageStatistics#addTcpOutMessage(Message)}
    */
   @Test
-  @Category(MaintainedByDiffblue.class)
+  @Category(ContributionFromDiffblue.class)
+  @ManagedByDiffblue
   @MethodsUnderTest({"void MessageStatistics.addTcpOutMessage(Message)"})
   public void testAddTcpOutMessage_thenMessageStatisticsP2pOutPingTotalCountIsOne() {
     // Arrange
@@ -222,7 +230,8 @@ public class MessageStatisticsDiffblueTest {
    * <p>Method under test: {@link MessageStatistics#addTcpOutMessage(Message)}
    */
   @Test
-  @Category(MaintainedByDiffblue.class)
+  @Category(ContributionFromDiffblue.class)
+  @ManagedByDiffblue
   @MethodsUnderTest({"void MessageStatistics.addTcpOutMessage(Message)"})
   public void testAddTcpOutMessage_thenMessageStatisticsP2pOutPongTotalCountIsOne() {
     // Arrange
@@ -250,7 +259,8 @@ public class MessageStatisticsDiffblueTest {
    * <p>Method under test: {@link MessageStatistics#addTcpOutMessage(Message)}
    */
   @Test
-  @Category(MaintainedByDiffblue.class)
+  @Category(ContributionFromDiffblue.class)
+  @ManagedByDiffblue
   @MethodsUnderTest({"void MessageStatistics.addTcpOutMessage(Message)"})
   public void testAddTcpOutMessage_thenMessageStatisticsTronOutTrxTotalCountIsOne() {
     // Arrange
@@ -279,7 +289,8 @@ public class MessageStatisticsDiffblueTest {
    * <p>Method under test: {@link MessageStatistics#addTcpOutMessage(Message)}
    */
   @Test
-  @Category(MaintainedByDiffblue.class)
+  @Category(ContributionFromDiffblue.class)
+  @ManagedByDiffblue
   @MethodsUnderTest({"void MessageStatistics.addTcpOutMessage(Message)"})
   public void testAddTcpOutMessage_whenPbftMessage() {
     // Arrange
@@ -302,7 +313,8 @@ public class MessageStatisticsDiffblueTest {
    * <p>Method under test: default or parameterless constructor of {@link MessageStatistics}
    */
   @Test
-  @Category(MaintainedByDiffblue.class)
+  @Category(ContributionFromDiffblue.class)
+  @ManagedByDiffblue
   @MethodsUnderTest({"void MessageStatistics.<init>()"})
   public void testNewMessageStatistics() {
     // Arrange and Act

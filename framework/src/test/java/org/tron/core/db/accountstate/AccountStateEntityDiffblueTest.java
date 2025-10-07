@@ -6,7 +6,8 @@ import static org.junit.Assert.assertNull;
 import static org.mockito.Mockito.mock;
 import static org.mockito.Mockito.verify;
 import static org.mockito.Mockito.when;
-import com.diffblue.cover.annotations.MaintainedByDiffblue;
+import com.diffblue.cover.annotations.ContributionFromDiffblue;
+import com.diffblue.cover.annotations.ManagedByDiffblue;
 import com.diffblue.cover.annotations.MethodsUnderTest;
 import com.google.protobuf.ByteString;
 import java.io.UnsupportedEncodingException;
@@ -27,7 +28,8 @@ public class AccountStateEntityDiffblueTest {
    * </ul>
    */
   @Test
-  @Category(MaintainedByDiffblue.class)
+  @Category(ContributionFromDiffblue.class)
+  @ManagedByDiffblue
   @MethodsUnderTest({
     "void AccountStateEntity.<init>()",
     "Account AccountStateEntity.getAccount()",
@@ -45,7 +47,8 @@ public class AccountStateEntityDiffblueTest {
    * <p>Method under test: {@link AccountStateEntity#AccountStateEntity(Account)}
    */
   @Test
-  @Category(MaintainedByDiffblue.class)
+  @Category(ContributionFromDiffblue.class)
+  @ManagedByDiffblue
   @MethodsUnderTest({"void AccountStateEntity.<init>(Account)"})
   public void testNewAccountStateEntity() {
     // Arrange
@@ -75,7 +78,8 @@ public class AccountStateEntityDiffblueTest {
    * <p>Method under test: {@link AccountStateEntity#AccountStateEntity(Account)}
    */
   @Test
-  @Category(MaintainedByDiffblue.class)
+  @Category(ContributionFromDiffblue.class)
+  @ManagedByDiffblue
   @MethodsUnderTest({"void AccountStateEntity.<init>(Account)"})
   public void testNewAccountStateEntity_whenDefaultInstance_thenReturnAccountIsDefaultInstance() {
     // Arrange
@@ -100,7 +104,8 @@ public class AccountStateEntityDiffblueTest {
    * <p>Method under test: {@link AccountStateEntity#parse(byte[])}
    */
   @Test
-  @Category(MaintainedByDiffblue.class)
+  @Category(ContributionFromDiffblue.class)
+  @ManagedByDiffblue
   @MethodsUnderTest({"AccountStateEntity AccountStateEntity.parse(byte[])"})
   public void testParse_when2xaxaxaxBytesIsUtf8_thenReturnNull()
       throws UnsupportedEncodingException {
@@ -119,7 +124,8 @@ public class AccountStateEntityDiffblueTest {
    * <p>Method under test: {@link AccountStateEntity#parse(byte[])}
    */
   @Test
-  @Category(MaintainedByDiffblue.class)
+  @Category(ContributionFromDiffblue.class)
+  @ManagedByDiffblue
   @MethodsUnderTest({"AccountStateEntity AccountStateEntity.parse(byte[])"})
   public void testParse_whenArrayOfByteWith2AndTwo_thenReturnNull() {
     // Arrange, Act and Assert
@@ -139,7 +145,8 @@ public class AccountStateEntityDiffblueTest {
    * <p>Method under test: {@link AccountStateEntity#parse(byte[])}
    */
   @Test
-  @Category(MaintainedByDiffblue.class)
+  @Category(ContributionFromDiffblue.class)
+  @ManagedByDiffblue
   @MethodsUnderTest({"AccountStateEntity AccountStateEntity.parse(byte[])"})
   public void testParse_whenArrayOfByteWith2AndZero_thenReturnNull() {
     // Arrange, Act and Assert
@@ -157,7 +164,8 @@ public class AccountStateEntityDiffblueTest {
    * <p>Method under test: {@link AccountStateEntity#parse(byte[])}
    */
   @Test
-  @Category(MaintainedByDiffblue.class)
+  @Category(ContributionFromDiffblue.class)
+  @ManagedByDiffblue
   @MethodsUnderTest({"AccountStateEntity AccountStateEntity.parse(byte[])"})
   public void testParse_whenArrayOfByteWithAAndTwo_thenReturnNull() {
     // Arrange, Act and Assert
@@ -177,7 +185,8 @@ public class AccountStateEntityDiffblueTest {
    * <p>Method under test: {@link AccountStateEntity#parse(byte[])}
    */
   @Test
-  @Category(MaintainedByDiffblue.class)
+  @Category(ContributionFromDiffblue.class)
+  @ManagedByDiffblue
   @MethodsUnderTest({"AccountStateEntity AccountStateEntity.parse(byte[])"})
   public void testParse_whenArrayOfByteWithAAndTwo_thenReturnNull2() {
     // Arrange, Act and Assert
@@ -197,7 +206,8 @@ public class AccountStateEntityDiffblueTest {
    * <p>Method under test: {@link AccountStateEntity#parse(byte[])}
    */
   @Test
-  @Category(MaintainedByDiffblue.class)
+  @Category(ContributionFromDiffblue.class)
+  @ManagedByDiffblue
   @MethodsUnderTest({"AccountStateEntity AccountStateEntity.parse(byte[])"})
   public void testParse_whenArrayOfByteWithAsteriskAndTwo_thenReturnNull() {
     // Arrange, Act and Assert
@@ -217,7 +227,8 @@ public class AccountStateEntityDiffblueTest {
    * <p>Method under test: {@link AccountStateEntity#parse(byte[])}
    */
   @Test
-  @Category(MaintainedByDiffblue.class)
+  @Category(ContributionFromDiffblue.class)
+  @ManagedByDiffblue
   @MethodsUnderTest({"AccountStateEntity AccountStateEntity.parse(byte[])"})
   public void testParse_whenArrayOfByteWithAsteriskAndZero_thenReturnNull() {
     // Arrange, Act and Assert
@@ -235,7 +246,8 @@ public class AccountStateEntityDiffblueTest {
    * <p>Method under test: {@link AccountStateEntity#parse(byte[])}
    */
   @Test
-  @Category(MaintainedByDiffblue.class)
+  @Category(ContributionFromDiffblue.class)
+  @ManagedByDiffblue
   @MethodsUnderTest({"AccountStateEntity AccountStateEntity.parse(byte[])"})
   public void testParse_whenArrayOfByteWithLfAndTwo_thenReturnNull() {
     // Arrange, Act and Assert
@@ -255,7 +267,8 @@ public class AccountStateEntityDiffblueTest {
    * <p>Method under test: {@link AccountStateEntity#parse(byte[])}
    */
   @Test
-  @Category(MaintainedByDiffblue.class)
+  @Category(ContributionFromDiffblue.class)
+  @ManagedByDiffblue
   @MethodsUnderTest({"AccountStateEntity AccountStateEntity.parse(byte[])"})
   public void testParse_whenArrayOfByteWithLfAndZero_thenReturnNull() {
     // Arrange, Act and Assert
@@ -273,7 +286,8 @@ public class AccountStateEntityDiffblueTest {
    * <p>Method under test: {@link AccountStateEntity#parse(byte[])}
    */
   @Test
-  @Category(MaintainedByDiffblue.class)
+  @Category(ContributionFromDiffblue.class)
+  @ManagedByDiffblue
   @MethodsUnderTest({"AccountStateEntity AccountStateEntity.parse(byte[])"})
   public void testParse_whenArrayOfByteWithMin_valueAndX_thenReturnNull() {
     // Arrange, Act and Assert
@@ -292,7 +306,8 @@ public class AccountStateEntityDiffblueTest {
    * <p>Method under test: {@link AccountStateEntity#parse(byte[])}
    */
   @Test
-  @Category(MaintainedByDiffblue.class)
+  @Category(ContributionFromDiffblue.class)
+  @ManagedByDiffblue
   @MethodsUnderTest({"AccountStateEntity AccountStateEntity.parse(byte[])"})
   public void testParse_whenArrayOfByteWithMinusOneAndX_thenReturnNull() {
     // Arrange, Act and Assert
@@ -310,7 +325,8 @@ public class AccountStateEntityDiffblueTest {
    * <p>Method under test: {@link AccountStateEntity#parse(byte[])}
    */
   @Test
-  @Category(MaintainedByDiffblue.class)
+  @Category(ContributionFromDiffblue.class)
+  @ManagedByDiffblue
   @MethodsUnderTest({"AccountStateEntity AccountStateEntity.parse(byte[])"})
   public void testParse_whenArrayOfByteWithSixteenAndX_thenReturnNull() {
     // Arrange, Act and Assert
@@ -328,7 +344,8 @@ public class AccountStateEntityDiffblueTest {
    * <p>Method under test: {@link AccountStateEntity#parse(byte[])}
    */
   @Test
-  @Category(MaintainedByDiffblue.class)
+  @Category(ContributionFromDiffblue.class)
+  @ManagedByDiffblue
   @MethodsUnderTest({"AccountStateEntity AccountStateEntity.parse(byte[])"})
   public void testParse_whenArrayOfByteWithTwentySixAndTwo_thenReturnNull() {
     // Arrange, Act and Assert
@@ -348,7 +365,8 @@ public class AccountStateEntityDiffblueTest {
    * <p>Method under test: {@link AccountStateEntity#parse(byte[])}
    */
   @Test
-  @Category(MaintainedByDiffblue.class)
+  @Category(ContributionFromDiffblue.class)
+  @ManagedByDiffblue
   @MethodsUnderTest({"AccountStateEntity AccountStateEntity.parse(byte[])"})
   public void testParse_whenArrayOfByteWithTwentySixAndX_thenReturnNull() {
     // Arrange, Act and Assert
@@ -366,7 +384,8 @@ public class AccountStateEntityDiffblueTest {
    * <p>Method under test: {@link AccountStateEntity#parse(byte[])}
    */
   @Test
-  @Category(MaintainedByDiffblue.class)
+  @Category(ContributionFromDiffblue.class)
+  @ManagedByDiffblue
   @MethodsUnderTest({"AccountStateEntity AccountStateEntity.parse(byte[])"})
   public void testParse_whenArrayOfByteWithTwentySixAndZero_thenReturnNull() {
     // Arrange, Act and Assert
@@ -384,7 +403,8 @@ public class AccountStateEntityDiffblueTest {
    * <p>Method under test: {@link AccountStateEntity#parse(byte[])}
    */
   @Test
-  @Category(MaintainedByDiffblue.class)
+  @Category(ContributionFromDiffblue.class)
+  @ManagedByDiffblue
   @MethodsUnderTest({"AccountStateEntity AccountStateEntity.parse(byte[])"})
   public void testParse_whenAxaxaxaxBytesIsUtf8_thenReturnNull()
       throws UnsupportedEncodingException {
@@ -403,7 +423,8 @@ public class AccountStateEntityDiffblueTest {
    * <p>Method under test: {@link AccountStateEntity#parse(byte[])}
    */
   @Test
-  @Category(MaintainedByDiffblue.class)
+  @Category(ContributionFromDiffblue.class)
+  @ManagedByDiffblue
   @MethodsUnderTest({"AccountStateEntity AccountStateEntity.parse(byte[])"})
   public void testParse_whenEmptyArrayOfByte_thenReturnToByteArraysIsEmptyArrayOfByte() {
     // Arrange, Act and Assert
@@ -421,7 +442,8 @@ public class AccountStateEntityDiffblueTest {
    * <p>Method under test: {@link AccountStateEntity#parse(byte[])}
    */
   @Test
-  @Category(MaintainedByDiffblue.class)
+  @Category(ContributionFromDiffblue.class)
+  @ManagedByDiffblue
   @MethodsUnderTest({"AccountStateEntity AccountStateEntity.parse(byte[])"})
   public void testParse_whenXaxaxaxBytesIsUtf8_thenReturnNull()
       throws UnsupportedEncodingException {
@@ -440,7 +462,8 @@ public class AccountStateEntityDiffblueTest {
    * <p>Method under test: {@link AccountStateEntity#parse(byte[])}
    */
   @Test
-  @Category(MaintainedByDiffblue.class)
+  @Category(ContributionFromDiffblue.class)
+  @ManagedByDiffblue
   @MethodsUnderTest({"AccountStateEntity AccountStateEntity.parse(byte[])"})
   public void testParse_whenXaxaxaxBytesIsUtf8_thenReturnNull2()
       throws UnsupportedEncodingException {
@@ -459,7 +482,8 @@ public class AccountStateEntityDiffblueTest {
    * <p>Method under test: {@link AccountStateEntity#parse(byte[])}
    */
   @Test
-  @Category(MaintainedByDiffblue.class)
+  @Category(ContributionFromDiffblue.class)
+  @ManagedByDiffblue
   @MethodsUnderTest({"AccountStateEntity AccountStateEntity.parse(byte[])"})
   public void testParse_whenXaxaxaxBytesIsUtf8_thenReturnNull3()
       throws UnsupportedEncodingException {
@@ -478,7 +502,8 @@ public class AccountStateEntityDiffblueTest {
    * <p>Method under test: {@link AccountStateEntity#parse(byte[])}
    */
   @Test
-  @Category(MaintainedByDiffblue.class)
+  @Category(ContributionFromDiffblue.class)
+  @ManagedByDiffblue
   @MethodsUnderTest({"AccountStateEntity AccountStateEntity.parse(byte[])"})
   public void testParse_whenXaxaxaxBytesIsUtf8_thenReturnNull4()
       throws UnsupportedEncodingException {
@@ -497,7 +522,8 @@ public class AccountStateEntityDiffblueTest {
    * <p>Method under test: {@link AccountStateEntity#parse(byte[])}
    */
   @Test
-  @Category(MaintainedByDiffblue.class)
+  @Category(ContributionFromDiffblue.class)
+  @ManagedByDiffblue
   @MethodsUnderTest({"AccountStateEntity AccountStateEntity.parse(byte[])"})
   public void testParse_whenXxaxaxaxBytesIsUtf8_thenReturnNull()
       throws UnsupportedEncodingException {

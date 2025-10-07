@@ -5,7 +5,8 @@ import static org.junit.Assert.assertEquals;
 import static org.junit.Assert.assertNotEquals;
 import static org.junit.Assert.assertSame;
 import static org.junit.Assert.assertTrue;
-import com.diffblue.cover.annotations.MaintainedByDiffblue;
+import com.diffblue.cover.annotations.ContributionFromDiffblue;
+import com.diffblue.cover.annotations.ManagedByDiffblue;
 import com.diffblue.cover.annotations.MethodsUnderTest;
 import java.io.UnsupportedEncodingException;
 import java.util.ArrayList;
@@ -27,7 +28,8 @@ public class RawDataDiffblueTest {
    * <p>Method under test: {@link RawData#RawData(byte[], List, byte[])}
    */
   @Test
-  @Category(MaintainedByDiffblue.class)
+  @Category(ContributionFromDiffblue.class)
+  @ManagedByDiffblue
   @MethodsUnderTest({"void RawData.<init>(byte[], List, byte[])"})
   public void testNewRawData_givenZero_whenArrayListAddZero_thenReturnTopicsSizeIsOne()
       throws UnsupportedEncodingException {
@@ -70,7 +72,8 @@ public class RawDataDiffblueTest {
    * <p>Method under test: {@link RawData#RawData(byte[], List, byte[])}
    */
   @Test
-  @Category(MaintainedByDiffblue.class)
+  @Category(ContributionFromDiffblue.class)
+  @ManagedByDiffblue
   @MethodsUnderTest({"void RawData.<init>(byte[], List, byte[])"})
   public void testNewRawData_givenZero_whenArrayListAddZero_thenReturnTopicsSizeIsTwo()
       throws UnsupportedEncodingException {
@@ -114,7 +117,8 @@ public class RawDataDiffblueTest {
    * <p>Method under test: {@link RawData#RawData(byte[], List, byte[])}
    */
   @Test
-  @Category(MaintainedByDiffblue.class)
+  @Category(ContributionFromDiffblue.class)
+  @ManagedByDiffblue
   @MethodsUnderTest({"void RawData.<init>(byte[], List, byte[])"})
   public void testNewRawData_whenArrayList_thenReturnAddressIs4158415841584158()
       throws UnsupportedEncodingException {
@@ -141,7 +145,8 @@ public class RawDataDiffblueTest {
    * <p>Method under test: {@link RawData#RawData(byte[], List, byte[])}
    */
   @Test
-  @Category(MaintainedByDiffblue.class)
+  @Category(ContributionFromDiffblue.class)
+  @ManagedByDiffblue
   @MethodsUnderTest({"void RawData.<init>(byte[], List, byte[])"})
   public void testNewRawData_whenNull_thenReturnAddressIsEmptyString() {
     // Arrange and Act
@@ -169,7 +174,8 @@ public class RawDataDiffblueTest {
    * </ul>
    */
   @Test
-  @Category(MaintainedByDiffblue.class)
+  @Category(ContributionFromDiffblue.class)
+  @ManagedByDiffblue
   @MethodsUnderTest({"boolean RawData.equals(Object)", "int RawData.hashCode()"})
   public void testEqualsAndHashCode_whenOtherIsEqual_thenReturnEqual()
       throws UnsupportedEncodingException {
@@ -200,7 +206,8 @@ public class RawDataDiffblueTest {
    * </ul>
    */
   @Test
-  @Category(MaintainedByDiffblue.class)
+  @Category(ContributionFromDiffblue.class)
+  @ManagedByDiffblue
   @MethodsUnderTest({"boolean RawData.equals(Object)", "int RawData.hashCode()"})
   public void testEqualsAndHashCode_whenOtherIsSame_thenReturnEqual()
       throws UnsupportedEncodingException {
@@ -225,7 +232,8 @@ public class RawDataDiffblueTest {
    * <p>Method under test: {@link RawData#equals(Object)}
    */
   @Test
-  @Category(MaintainedByDiffblue.class)
+  @Category(ContributionFromDiffblue.class)
+  @ManagedByDiffblue
   @MethodsUnderTest({"boolean RawData.equals(Object)", "int RawData.hashCode()"})
   public void testEquals_whenOtherIsDifferent_thenReturnNotEqual()
       throws UnsupportedEncodingException {
@@ -247,7 +255,8 @@ public class RawDataDiffblueTest {
    * <p>Method under test: {@link RawData#equals(Object)}
    */
   @Test
-  @Category(MaintainedByDiffblue.class)
+  @Category(ContributionFromDiffblue.class)
+  @ManagedByDiffblue
   @MethodsUnderTest({"boolean RawData.equals(Object)", "int RawData.hashCode()"})
   public void testEquals_whenOtherIsDifferent_thenReturnNotEqual2()
       throws UnsupportedEncodingException {
@@ -274,7 +283,8 @@ public class RawDataDiffblueTest {
    * <p>Method under test: {@link RawData#equals(Object)}
    */
   @Test
-  @Category(MaintainedByDiffblue.class)
+  @Category(ContributionFromDiffblue.class)
+  @ManagedByDiffblue
   @MethodsUnderTest({"boolean RawData.equals(Object)", "int RawData.hashCode()"})
   public void testEquals_whenOtherIsDifferent_thenReturnNotEqual3()
       throws UnsupportedEncodingException {
@@ -301,7 +311,8 @@ public class RawDataDiffblueTest {
    * <p>Method under test: {@link RawData#equals(Object)}
    */
   @Test
-  @Category(MaintainedByDiffblue.class)
+  @Category(ContributionFromDiffblue.class)
+  @ManagedByDiffblue
   @MethodsUnderTest({"boolean RawData.equals(Object)", "int RawData.hashCode()"})
   public void testEquals_whenOtherIsDifferent_thenReturnNotEqual4()
       throws UnsupportedEncodingException {
@@ -327,7 +338,8 @@ public class RawDataDiffblueTest {
    * <p>Method under test: {@link RawData#equals(Object)}
    */
   @Test
-  @Category(MaintainedByDiffblue.class)
+  @Category(ContributionFromDiffblue.class)
+  @ManagedByDiffblue
   @MethodsUnderTest({"boolean RawData.equals(Object)", "int RawData.hashCode()"})
   public void testEquals_whenOtherIsDifferent_thenReturnNotEqual5()
       throws UnsupportedEncodingException {
@@ -353,7 +365,8 @@ public class RawDataDiffblueTest {
    * <p>Method under test: {@link RawData#equals(Object)}
    */
   @Test
-  @Category(MaintainedByDiffblue.class)
+  @Category(ContributionFromDiffblue.class)
+  @ManagedByDiffblue
   @MethodsUnderTest({"boolean RawData.equals(Object)", "int RawData.hashCode()"})
   public void testEquals_whenOtherIsNull_thenReturnNotEqual() throws UnsupportedEncodingException {
     // Arrange
@@ -374,7 +387,8 @@ public class RawDataDiffblueTest {
    * <p>Method under test: {@link RawData#equals(Object)}
    */
   @Test
-  @Category(MaintainedByDiffblue.class)
+  @Category(ContributionFromDiffblue.class)
+  @ManagedByDiffblue
   @MethodsUnderTest({"boolean RawData.equals(Object)", "int RawData.hashCode()"})
   public void testEquals_whenOtherIsWrongType_thenReturnNotEqual()
       throws UnsupportedEncodingException {
@@ -403,7 +417,8 @@ public class RawDataDiffblueTest {
    * </ul>
    */
   @Test
-  @Category(MaintainedByDiffblue.class)
+  @Category(ContributionFromDiffblue.class)
+  @ManagedByDiffblue
   @MethodsUnderTest({
     "String RawData.getAddress()",
     "String RawData.getData()",

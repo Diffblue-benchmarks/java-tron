@@ -5,7 +5,8 @@ import static org.junit.Assert.assertThrows;
 import static org.mockito.Mockito.mock;
 import static org.mockito.Mockito.verify;
 import static org.mockito.Mockito.when;
-import com.diffblue.cover.annotations.MaintainedByDiffblue;
+import com.diffblue.cover.annotations.ContributionFromDiffblue;
+import com.diffblue.cover.annotations.ManagedByDiffblue;
 import com.diffblue.cover.annotations.MethodsUnderTest;
 import io.prometheus.client.Histogram;
 import io.prometheus.client.Histogram.Timer;
@@ -19,7 +20,8 @@ public class MetricsDiffblueTest {
    * <p>Method under test: {@link Metrics#histogramStartTimer(String, String[])}
    */
   @Test
-  @Category(MaintainedByDiffblue.class)
+  @Category(ContributionFromDiffblue.class)
+  @ManagedByDiffblue
   @MethodsUnderTest({"Histogram.Timer Metrics.histogramStartTimer(String, String[])"})
   public void testHistogramStartTimer() {
     // Arrange, Act and Assert
@@ -37,7 +39,8 @@ public class MetricsDiffblueTest {
    * <p>Method under test: {@link Metrics#histogramObserve(Histogram.Timer)}
    */
   @Test
-  @Category(MaintainedByDiffblue.class)
+  @Category(ContributionFromDiffblue.class)
+  @ManagedByDiffblue
   @MethodsUnderTest({"void Metrics.histogramObserve(Histogram.Timer)"})
   public void testHistogramObserveWithStartTimer_givenTen_whenTimerObserveDurationReturnTen() {
     // Arrange
@@ -61,7 +64,8 @@ public class MetricsDiffblueTest {
    * <p>Method under test: {@link Metrics#histogramObserve(Histogram.Timer)}
    */
   @Test
-  @Category(MaintainedByDiffblue.class)
+  @Category(ContributionFromDiffblue.class)
+  @ManagedByDiffblue
   @MethodsUnderTest({"void Metrics.histogramObserve(Histogram.Timer)"})
   public void testHistogramObserveWithStartTimer_thenThrowIllegalStateException() {
     // Arrange

@@ -4,7 +4,8 @@ import static org.junit.Assert.assertFalse;
 import static org.junit.Assert.assertNull;
 import static org.junit.Assert.assertSame;
 import static org.junit.Assert.assertTrue;
-import com.diffblue.cover.annotations.MaintainedByDiffblue;
+import com.diffblue.cover.annotations.ContributionFromDiffblue;
+import com.diffblue.cover.annotations.ManagedByDiffblue;
 import com.diffblue.cover.annotations.MethodsUnderTest;
 import java.io.UnsupportedEncodingException;
 import java.util.ArrayList;
@@ -24,7 +25,8 @@ public class EventPluginLoaderDiffblueTest {
    * <p>Method under test: {@link EventPluginLoader#getInstance()}
    */
   @Test
-  @Category(MaintainedByDiffblue.class)
+  @Category(ContributionFromDiffblue.class)
+  @ManagedByDiffblue
   @MethodsUnderTest({"EventPluginLoader EventPluginLoader.getInstance()"})
   public void testGetInstance() {
     // Arrange and Act
@@ -56,7 +58,8 @@ public class EventPluginLoaderDiffblueTest {
    * <p>Method under test: {@link EventPluginLoader#matchFilter(ContractTrigger)}
    */
   @Test
-  @Category(MaintainedByDiffblue.class)
+  @Category(ContributionFromDiffblue.class)
+  @ManagedByDiffblue
   @MethodsUnderTest({"boolean EventPluginLoader.matchFilter(ContractTrigger)"})
   public void testMatchFilter_givenMax_value_whenContractTriggerBlockNumberIsMax_value()
       throws UnsupportedEncodingException {
@@ -97,7 +100,8 @@ public class EventPluginLoaderDiffblueTest {
    * <p>Method under test: {@link EventPluginLoader#matchFilter(ContractTrigger)}
    */
   @Test
-  @Category(MaintainedByDiffblue.class)
+  @Category(ContributionFromDiffblue.class)
+  @ManagedByDiffblue
   @MethodsUnderTest({"boolean EventPluginLoader.matchFilter(ContractTrigger)"})
   public void testMatchFilter_givenMinusOne_whenContractTriggerBlockNumberIsMinusOne()
       throws UnsupportedEncodingException {
@@ -138,7 +142,8 @@ public class EventPluginLoaderDiffblueTest {
    * <p>Method under test: {@link EventPluginLoader#matchFilter(ContractTrigger)}
    */
   @Test
-  @Category(MaintainedByDiffblue.class)
+  @Category(ContributionFromDiffblue.class)
+  @ManagedByDiffblue
   @MethodsUnderTest({"boolean EventPluginLoader.matchFilter(ContractTrigger)"})
   public void testMatchFilter_whenContractTriggerBlockNumberIsOne_thenReturnTrue()
       throws UnsupportedEncodingException {
@@ -180,7 +185,8 @@ public class EventPluginLoaderDiffblueTest {
    * <p>Method under test: {@link EventPluginLoader#start(EventPluginConfig)}
    */
   @Test
-  @Category(MaintainedByDiffblue.class)
+  @Category(ContributionFromDiffblue.class)
+  @ManagedByDiffblue
   @MethodsUnderTest({"boolean EventPluginLoader.start(EventPluginConfig)"})
   public void testStart_givenFalse_whenEventPluginConfigUseNativeQueueIsFalse_thenReturnFalse() {
     // Arrange
@@ -222,7 +228,8 @@ public class EventPluginLoaderDiffblueTest {
    * </ul>
    */
   @Test
-  @Category(MaintainedByDiffblue.class)
+  @Category(ContributionFromDiffblue.class)
+  @ManagedByDiffblue
   @MethodsUnderTest({
     "FilterQuery EventPluginLoader.getFilterQuery()",
     "boolean EventPluginLoader.isBlockLogTriggerEnable()",
@@ -287,7 +294,8 @@ public class EventPluginLoaderDiffblueTest {
    * <p>Method under test: default or parameterless constructor of {@link EventPluginLoader}
    */
   @Test
-  @Category(MaintainedByDiffblue.class)
+  @Category(ContributionFromDiffblue.class)
+  @ManagedByDiffblue
   @MethodsUnderTest({"void EventPluginLoader.<init>()"})
   public void testNewEventPluginLoader() {
     // Arrange and Act

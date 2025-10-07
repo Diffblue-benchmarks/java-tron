@@ -10,7 +10,8 @@ import static org.mockito.Mockito.doThrow;
 import static org.mockito.Mockito.mock;
 import static org.mockito.Mockito.verify;
 import static org.mockito.Mockito.when;
-import com.diffblue.cover.annotations.MaintainedByDiffblue;
+import com.diffblue.cover.annotations.ContributionFromDiffblue;
+import com.diffblue.cover.annotations.ManagedByDiffblue;
 import com.diffblue.cover.annotations.MethodsUnderTest;
 import java.io.UnsupportedEncodingException;
 import java.util.AbstractMap;
@@ -46,7 +47,8 @@ public class AssetUpdateHelperDiffblueTest {
    * <p>Method under test: {@link AssetUpdateHelper#doWork()}
    */
   @Test
-  @Category(MaintainedByDiffblue.class)
+  @Category(ContributionFromDiffblue.class)
+  @ManagedByDiffblue
   @MethodsUnderTest({"void AssetUpdateHelper.doWork()"})
   public void testDoWork_givenArrayListAddNull_thenCallsGetTransactions()
       throws BadItemException, ItemNotFoundException {
@@ -104,7 +106,8 @@ public class AssetUpdateHelperDiffblueTest {
    * <p>Method under test: {@link AssetUpdateHelper#doWork()}
    */
   @Test
-  @Category(MaintainedByDiffblue.class)
+  @Category(ContributionFromDiffblue.class)
+  @ManagedByDiffblue
   @MethodsUnderTest({"void AssetUpdateHelper.doWork()"})
   public void testDoWork_givenAssetIssueV2StoreIsNotEmptyReturnFalse_thenThrowRuntimeException() {
     // Arrange
@@ -136,7 +139,8 @@ public class AssetUpdateHelperDiffblueTest {
    * <p>Method under test: {@link AssetUpdateHelper#doWork()}
    */
   @Test
-  @Category(MaintainedByDiffblue.class)
+  @Category(ContributionFromDiffblue.class)
+  @ManagedByDiffblue
   @MethodsUnderTest({"void AssetUpdateHelper.doWork()"})
   public void testDoWork_givenChainBaseManagerGetBlockByNumReturnNull_thenCallsGetBlockByNum()
       throws BadItemException, ItemNotFoundException {
@@ -186,7 +190,8 @@ public class AssetUpdateHelperDiffblueTest {
    * <p>Method under test: {@link AssetUpdateHelper#doWork()}
    */
   @Test
-  @Category(MaintainedByDiffblue.class)
+  @Category(ContributionFromDiffblue.class)
+  @ManagedByDiffblue
   @MethodsUnderTest({"void AssetUpdateHelper.doWork()"})
   public void testDoWork_givenChainBaseManagerGetBlockByNumThrowRuntimeException()
       throws BadItemException, ItemNotFoundException {
@@ -236,7 +241,8 @@ public class AssetUpdateHelperDiffblueTest {
    * <p>Method under test: {@link AssetUpdateHelper#doWork()}
    */
   @Test
-  @Category(MaintainedByDiffblue.class)
+  @Category(ContributionFromDiffblue.class)
+  @ManagedByDiffblue
   @MethodsUnderTest({"void AssetUpdateHelper.doWork()"})
   public void testDoWork_givenChainBaseManagerGetDynamicPropertiesStoreThrowRuntimeException() {
     // Arrange
@@ -275,7 +281,8 @@ public class AssetUpdateHelperDiffblueTest {
    * <p>Method under test: {@link AssetUpdateHelper#doWork()}
    */
   @Test
-  @Category(MaintainedByDiffblue.class)
+  @Category(ContributionFromDiffblue.class)
+  @ManagedByDiffblue
   @MethodsUnderTest({"void AssetUpdateHelper.doWork()"})
   public void testDoWork_givenChainBaseManagerGetExchangeV2StoreThrowRuntimeException() {
     // Arrange
@@ -305,7 +312,8 @@ public class AssetUpdateHelperDiffblueTest {
    * <p>Method under test: {@link AssetUpdateHelper#doWork()}
    */
   @Test
-  @Category(MaintainedByDiffblue.class)
+  @Category(ContributionFromDiffblue.class)
+  @ManagedByDiffblue
   @MethodsUnderTest({"void AssetUpdateHelper.doWork()"})
   public void testDoWork_givenExchangeV2StoreIsNotEmptyReturnFalse() {
     // Arrange
@@ -345,7 +353,8 @@ public class AssetUpdateHelperDiffblueTest {
    * <p>Method under test: {@link AssetUpdateHelper#init()}
    */
   @Test
-  @Category(MaintainedByDiffblue.class)
+  @Category(ContributionFromDiffblue.class)
+  @ManagedByDiffblue
   @MethodsUnderTest({"void AssetUpdateHelper.init()"})
   public void testInit_givenAssetIssueV2StoreIsNotEmptyReturnFalse_thenThrowRuntimeException() {
     // Arrange
@@ -376,7 +385,8 @@ public class AssetUpdateHelperDiffblueTest {
    * <p>Method under test: {@link AssetUpdateHelper#init()}
    */
   @Test
-  @Category(MaintainedByDiffblue.class)
+  @Category(ContributionFromDiffblue.class)
+  @ManagedByDiffblue
   @MethodsUnderTest({"void AssetUpdateHelper.init()"})
   public void testInit_givenChainBaseManagerGetDynamicPropertiesStoreThrowRuntimeException() {
     // Arrange
@@ -415,7 +425,8 @@ public class AssetUpdateHelperDiffblueTest {
    * <p>Method under test: {@link AssetUpdateHelper#init()}
    */
   @Test
-  @Category(MaintainedByDiffblue.class)
+  @Category(ContributionFromDiffblue.class)
+  @ManagedByDiffblue
   @MethodsUnderTest({"void AssetUpdateHelper.init()"})
   public void testInit_givenChainBaseManagerGetExchangeV2StoreThrowRuntimeException() {
     // Arrange
@@ -445,7 +456,8 @@ public class AssetUpdateHelperDiffblueTest {
    * <p>Method under test: {@link AssetUpdateHelper#init()}
    */
   @Test
-  @Category(MaintainedByDiffblue.class)
+  @Category(ContributionFromDiffblue.class)
+  @ManagedByDiffblue
   @MethodsUnderTest({"void AssetUpdateHelper.init()"})
   public void testInit_givenExchangeV2StoreIsNotEmptyReturnFalse() {
     // Arrange
@@ -483,7 +495,8 @@ public class AssetUpdateHelperDiffblueTest {
    * <p>Method under test: {@link AssetUpdateHelper#init()}
    */
   @Test
-  @Category(MaintainedByDiffblue.class)
+  @Category(ContributionFromDiffblue.class)
+  @ManagedByDiffblue
   @MethodsUnderTest({"void AssetUpdateHelper.init()"})
   public void testInit_thenCallsSaveTokenIdNum() {
     // Arrange
@@ -528,7 +541,8 @@ public class AssetUpdateHelperDiffblueTest {
    * <p>Method under test: {@link AssetUpdateHelper#getAllAssetIssues()}
    */
   @Test
-  @Category(MaintainedByDiffblue.class)
+  @Category(ContributionFromDiffblue.class)
+  @ManagedByDiffblue
   @MethodsUnderTest({"java.util.List AssetUpdateHelper.getAllAssetIssues()"})
   public void testGetAllAssetIssues_givenArrayListAddNull_thenCallsGetTransactions()
       throws BadItemException, ItemNotFoundException {
@@ -566,7 +580,8 @@ public class AssetUpdateHelperDiffblueTest {
    * <p>Method under test: {@link AssetUpdateHelper#getAllAssetIssues()}
    */
   @Test
-  @Category(MaintainedByDiffblue.class)
+  @Category(ContributionFromDiffblue.class)
+  @ManagedByDiffblue
   @MethodsUnderTest({"java.util.List AssetUpdateHelper.getAllAssetIssues()"})
   public void testGetAllAssetIssues_givenChainBaseManagerGetBlockByNumReturnNull()
       throws BadItemException, ItemNotFoundException {
@@ -597,7 +612,8 @@ public class AssetUpdateHelperDiffblueTest {
    * <p>Method under test: {@link AssetUpdateHelper#getAllAssetIssues()}
    */
   @Test
-  @Category(MaintainedByDiffblue.class)
+  @Category(ContributionFromDiffblue.class)
+  @ManagedByDiffblue
   @MethodsUnderTest({"java.util.List AssetUpdateHelper.getAllAssetIssues()"})
   public void testGetAllAssetIssues_givenChainBaseManagerGetBlockByNumThrowRuntimeException()
       throws BadItemException, ItemNotFoundException {
@@ -628,7 +644,8 @@ public class AssetUpdateHelperDiffblueTest {
    * <p>Method under test: {@link AssetUpdateHelper#updateAsset()}
    */
   @Test
-  @Category(MaintainedByDiffblue.class)
+  @Category(ContributionFromDiffblue.class)
+  @ManagedByDiffblue
   @MethodsUnderTest({"void AssetUpdateHelper.updateAsset()"})
   public void testUpdateAsset_givenArrayListAddNull_thenCallsGetTransactions()
       throws BadItemException, ItemNotFoundException {
@@ -668,7 +685,8 @@ public class AssetUpdateHelperDiffblueTest {
    * <p>Method under test: {@link AssetUpdateHelper#updateAsset()}
    */
   @Test
-  @Category(MaintainedByDiffblue.class)
+  @Category(ContributionFromDiffblue.class)
+  @ManagedByDiffblue
   @MethodsUnderTest({"void AssetUpdateHelper.updateAsset()"})
   public void testUpdateAsset_givenChainBaseManagerGetBlockByNumReturnNull()
       throws BadItemException, ItemNotFoundException {
@@ -701,7 +719,8 @@ public class AssetUpdateHelperDiffblueTest {
    * <p>Method under test: {@link AssetUpdateHelper#updateAsset()}
    */
   @Test
-  @Category(MaintainedByDiffblue.class)
+  @Category(ContributionFromDiffblue.class)
+  @ManagedByDiffblue
   @MethodsUnderTest({"void AssetUpdateHelper.updateAsset()"})
   public void testUpdateAsset_givenChainBaseManagerGetBlockByNumThrowRuntimeException()
       throws BadItemException, ItemNotFoundException {
@@ -733,7 +752,8 @@ public class AssetUpdateHelperDiffblueTest {
    * <p>Method under test: {@link AssetUpdateHelper#updateExchange()}
    */
   @Test
-  @Category(MaintainedByDiffblue.class)
+  @Category(ContributionFromDiffblue.class)
+  @ManagedByDiffblue
   @MethodsUnderTest({"void AssetUpdateHelper.updateExchange()"})
   public void testUpdateExchange_thenCallsGetExchangeStore() {
     // Arrange
@@ -761,7 +781,8 @@ public class AssetUpdateHelperDiffblueTest {
    * <p>Method under test: {@link AssetUpdateHelper#updateExchange()}
    */
   @Test
-  @Category(MaintainedByDiffblue.class)
+  @Category(ContributionFromDiffblue.class)
+  @ManagedByDiffblue
   @MethodsUnderTest({"void AssetUpdateHelper.updateExchange()"})
   public void testUpdateExchange_thenThrowRuntimeException() throws UnsupportedEncodingException {
     // Arrange
@@ -799,7 +820,8 @@ public class AssetUpdateHelperDiffblueTest {
    * <p>Method under test: {@link AssetUpdateHelper#updateAccount()}
    */
   @Test
-  @Category(MaintainedByDiffblue.class)
+  @Category(ContributionFromDiffblue.class)
+  @ManagedByDiffblue
   @MethodsUnderTest({"void AssetUpdateHelper.updateAccount()"})
   public void testUpdateAccount() throws UnsupportedEncodingException {
     // Arrange
@@ -849,7 +871,8 @@ public class AssetUpdateHelperDiffblueTest {
    * <p>Method under test: {@link AssetUpdateHelper#updateAccount()}
    */
   @Test
-  @Category(MaintainedByDiffblue.class)
+  @Category(ContributionFromDiffblue.class)
+  @ManagedByDiffblue
   @MethodsUnderTest({"void AssetUpdateHelper.updateAccount()"})
   public void testUpdateAccount_givenAccountCapsuleAddAssetMapV2ThrowRuntimeException()
       throws UnsupportedEncodingException {
@@ -895,7 +918,8 @@ public class AssetUpdateHelperDiffblueTest {
    * <p>Method under test: {@link AssetUpdateHelper#updateAccount()}
    */
   @Test
-  @Category(MaintainedByDiffblue.class)
+  @Category(ContributionFromDiffblue.class)
+  @ManagedByDiffblue
   @MethodsUnderTest({"void AssetUpdateHelper.updateAccount()"})
   public void testUpdateAccount_thenCallsAddAllLatestAssetOperationTimeV2()
       throws UnsupportedEncodingException {
@@ -959,7 +983,8 @@ public class AssetUpdateHelperDiffblueTest {
    * <p>Method under test: {@link AssetUpdateHelper#updateAccount()}
    */
   @Test
-  @Category(MaintainedByDiffblue.class)
+  @Category(ContributionFromDiffblue.class)
+  @ManagedByDiffblue
   @MethodsUnderTest({"void AssetUpdateHelper.updateAccount()"})
   public void testUpdateAccount_thenCallsGetAccountStore() {
     // Arrange
@@ -989,7 +1014,8 @@ public class AssetUpdateHelperDiffblueTest {
    * <p>Method under test: {@link AssetUpdateHelper#finish()}
    */
   @Test
-  @Category(MaintainedByDiffblue.class)
+  @Category(ContributionFromDiffblue.class)
+  @ManagedByDiffblue
   @MethodsUnderTest({"void AssetUpdateHelper.finish()"})
   public void testFinish_thenCallsGetDynamicPropertiesStore() {
     // Arrange

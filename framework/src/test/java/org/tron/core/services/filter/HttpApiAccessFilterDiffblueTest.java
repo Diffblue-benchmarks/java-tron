@@ -7,7 +7,8 @@ import static org.mockito.Mockito.doThrow;
 import static org.mockito.Mockito.mock;
 import static org.mockito.Mockito.verify;
 import static org.mockito.Mockito.when;
-import com.diffblue.cover.annotations.MaintainedByDiffblue;
+import com.diffblue.cover.annotations.ContributionFromDiffblue;
+import com.diffblue.cover.annotations.ManagedByDiffblue;
 import com.diffblue.cover.annotations.MethodsUnderTest;
 import java.io.IOException;
 import javax.servlet.FilterChain;
@@ -46,7 +47,8 @@ public class HttpApiAccessFilterDiffblueTest {
    * FilterChain)}
    */
   @Test
-  @Category(MaintainedByDiffblue.class)
+  @Category(ContributionFromDiffblue.class)
+  @ManagedByDiffblue
   @MethodsUnderTest({
     "void HttpApiAccessFilter.doFilter(ServletRequest, ServletResponse, FilterChain)"
   })
@@ -81,7 +83,8 @@ public class HttpApiAccessFilterDiffblueTest {
    * FilterChain)}
    */
   @Test
-  @Category(MaintainedByDiffblue.class)
+  @Category(ContributionFromDiffblue.class)
+  @ManagedByDiffblue
   @MethodsUnderTest({
     "void HttpApiAccessFilter.doFilter(ServletRequest, ServletResponse, FilterChain)"
   })
@@ -114,7 +117,8 @@ public class HttpApiAccessFilterDiffblueTest {
    * FilterChain)}
    */
   @Test
-  @Category(MaintainedByDiffblue.class)
+  @Category(ContributionFromDiffblue.class)
+  @ManagedByDiffblue
   @MethodsUnderTest({
     "void HttpApiAccessFilter.doFilter(ServletRequest, ServletResponse, FilterChain)"
   })
@@ -149,7 +153,8 @@ public class HttpApiAccessFilterDiffblueTest {
    * FilterChain)}
    */
   @Test
-  @Category(MaintainedByDiffblue.class)
+  @Category(ContributionFromDiffblue.class)
+  @ManagedByDiffblue
   @MethodsUnderTest({
     "void HttpApiAccessFilter.doFilter(ServletRequest, ServletResponse, FilterChain)"
   })
@@ -194,7 +199,8 @@ public class HttpApiAccessFilterDiffblueTest {
    * FilterChain)}
    */
   @Test
-  @Category(MaintainedByDiffblue.class)
+  @Category(ContributionFromDiffblue.class)
+  @ManagedByDiffblue
   @MethodsUnderTest({
     "void HttpApiAccessFilter.doFilter(ServletRequest, ServletResponse, FilterChain)"
   })

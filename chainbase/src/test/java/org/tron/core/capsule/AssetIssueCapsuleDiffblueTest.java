@@ -9,7 +9,8 @@ import static org.junit.Assert.assertTrue;
 import static org.mockito.Mockito.mock;
 import static org.mockito.Mockito.verify;
 import static org.mockito.Mockito.when;
-import com.diffblue.cover.annotations.MaintainedByDiffblue;
+import com.diffblue.cover.annotations.ContributionFromDiffblue;
+import com.diffblue.cover.annotations.ManagedByDiffblue;
 import com.diffblue.cover.annotations.MethodsUnderTest;
 import com.google.protobuf.ByteString;
 import com.google.protobuf.ByteString.ByteIterator;
@@ -32,7 +33,8 @@ public class AssetIssueCapsuleDiffblueTest {
    * <p>Method under test: {@link AssetIssueCapsule#AssetIssueCapsule(byte[])}
    */
   @Test
-  @Category(MaintainedByDiffblue.class)
+  @Category(ContributionFromDiffblue.class)
+  @ManagedByDiffblue
   @MethodsUnderTest({"void AssetIssueCapsule.<init>(byte[])"})
   public void testNewAssetIssueCapsule_when0xaxaxaxBytesIsUtf8_thenReturnInstanceIsNull()
       throws UnsupportedEncodingException {
@@ -50,7 +52,8 @@ public class AssetIssueCapsuleDiffblueTest {
    * <p>Method under test: {@link AssetIssueCapsule#AssetIssueCapsule(byte[])}
    */
   @Test
-  @Category(MaintainedByDiffblue.class)
+  @Category(ContributionFromDiffblue.class)
+  @ManagedByDiffblue
   @MethodsUnderTest({"void AssetIssueCapsule.<init>(byte[])"})
   public void testNewAssetIssueCapsule_whenArrayOfByteWith8AndMinusOne() {
     // Arrange and Act
@@ -72,7 +75,8 @@ public class AssetIssueCapsuleDiffblueTest {
    * <p>Method under test: {@link AssetIssueCapsule#AssetIssueCapsule(byte[])}
    */
   @Test
-  @Category(MaintainedByDiffblue.class)
+  @Category(ContributionFromDiffblue.class)
+  @ManagedByDiffblue
   @MethodsUnderTest({"void AssetIssueCapsule.<init>(byte[])"})
   public void testNewAssetIssueCapsule_whenArrayOfByteWithAAndMinusOne() {
     // Arrange and Act
@@ -94,7 +98,8 @@ public class AssetIssueCapsuleDiffblueTest {
    * <p>Method under test: {@link AssetIssueCapsule#AssetIssueCapsule(byte[])}
    */
   @Test
-  @Category(MaintainedByDiffblue.class)
+  @Category(ContributionFromDiffblue.class)
+  @ManagedByDiffblue
   @MethodsUnderTest({"void AssetIssueCapsule.<init>(byte[])"})
   public void testNewAssetIssueCapsule_whenArrayOfByteWithAsteriskAndMinusOne() {
     // Arrange and Act
@@ -116,7 +121,8 @@ public class AssetIssueCapsuleDiffblueTest {
    * <p>Method under test: {@link AssetIssueCapsule#AssetIssueCapsule(byte[])}
    */
   @Test
-  @Category(MaintainedByDiffblue.class)
+  @Category(ContributionFromDiffblue.class)
+  @ManagedByDiffblue
   @MethodsUnderTest({"void AssetIssueCapsule.<init>(byte[])"})
   public void testNewAssetIssueCapsule_whenArrayOfByteWithAsteriskAndZero() {
     // Arrange and Act
@@ -137,7 +143,8 @@ public class AssetIssueCapsuleDiffblueTest {
    * <p>Method under test: {@link AssetIssueCapsule#AssetIssueCapsule(byte[])}
    */
   @Test
-  @Category(MaintainedByDiffblue.class)
+  @Category(ContributionFromDiffblue.class)
+  @ManagedByDiffblue
   @MethodsUnderTest({"void AssetIssueCapsule.<init>(byte[])"})
   public void testNewAssetIssueCapsule_whenArrayOfByteWithEighteenAndX() {
     // Arrange and Act
@@ -158,7 +165,8 @@ public class AssetIssueCapsuleDiffblueTest {
    * <p>Method under test: {@link AssetIssueCapsule#AssetIssueCapsule(byte[])}
    */
   @Test
-  @Category(MaintainedByDiffblue.class)
+  @Category(ContributionFromDiffblue.class)
+  @ManagedByDiffblue
   @MethodsUnderTest({"void AssetIssueCapsule.<init>(byte[])"})
   public void testNewAssetIssueCapsule_whenArrayOfByteWithEighteenAndZero() {
     // Arrange and Act
@@ -180,7 +188,8 @@ public class AssetIssueCapsuleDiffblueTest {
    * <p>Method under test: {@link AssetIssueCapsule#AssetIssueCapsule(byte[])}
    */
   @Test
-  @Category(MaintainedByDiffblue.class)
+  @Category(ContributionFromDiffblue.class)
+  @ManagedByDiffblue
   @MethodsUnderTest({"void AssetIssueCapsule.<init>(byte[])"})
   public void testNewAssetIssueCapsule_whenArrayOfByteWithLfAndZero_thenReturnInstanceIsNull() {
     // Arrange and Act
@@ -201,7 +210,8 @@ public class AssetIssueCapsuleDiffblueTest {
    * <p>Method under test: {@link AssetIssueCapsule#AssetIssueCapsule(byte[])}
    */
   @Test
-  @Category(MaintainedByDiffblue.class)
+  @Category(ContributionFromDiffblue.class)
+  @ManagedByDiffblue
   @MethodsUnderTest({"void AssetIssueCapsule.<init>(byte[])"})
   public void testNewAssetIssueCapsule_whenArrayOfByteWithMin_valueAndX() {
     // Arrange and Act
@@ -222,7 +232,8 @@ public class AssetIssueCapsuleDiffblueTest {
    * <p>Method under test: {@link AssetIssueCapsule#AssetIssueCapsule(byte[])}
    */
   @Test
-  @Category(MaintainedByDiffblue.class)
+  @Category(ContributionFromDiffblue.class)
+  @ManagedByDiffblue
   @MethodsUnderTest({"void AssetIssueCapsule.<init>(byte[])"})
   public void testNewAssetIssueCapsule_whenArrayOfByteWithMinusOneAndX() {
     // Arrange and Act
@@ -243,7 +254,8 @@ public class AssetIssueCapsuleDiffblueTest {
    * <p>Method under test: {@link AssetIssueCapsule#AssetIssueCapsule(byte[])}
    */
   @Test
-  @Category(MaintainedByDiffblue.class)
+  @Category(ContributionFromDiffblue.class)
+  @ManagedByDiffblue
   @MethodsUnderTest({"void AssetIssueCapsule.<init>(byte[])"})
   public void testNewAssetIssueCapsule_whenArrayOfByteWithTwentySixAndX() {
     // Arrange and Act
@@ -264,7 +276,8 @@ public class AssetIssueCapsuleDiffblueTest {
    * <p>Method under test: {@link AssetIssueCapsule#AssetIssueCapsule(byte[])}
    */
   @Test
-  @Category(MaintainedByDiffblue.class)
+  @Category(ContributionFromDiffblue.class)
+  @ManagedByDiffblue
   @MethodsUnderTest({"void AssetIssueCapsule.<init>(byte[])"})
   public void testNewAssetIssueCapsule_whenArrayOfByteWithTwentySixAndZero() {
     // Arrange and Act
@@ -286,7 +299,8 @@ public class AssetIssueCapsuleDiffblueTest {
    * <p>Method under test: {@link AssetIssueCapsule#AssetIssueCapsule(byte[])}
    */
   @Test
-  @Category(MaintainedByDiffblue.class)
+  @Category(ContributionFromDiffblue.class)
+  @ManagedByDiffblue
   @MethodsUnderTest({"void AssetIssueCapsule.<init>(byte[])"})
   public void testNewAssetIssueCapsule_whenArrayOfByteWithZeroAndX_thenReturnInstanceIsNull() {
     // Arrange and Act
@@ -309,7 +323,8 @@ public class AssetIssueCapsuleDiffblueTest {
    * String, long, int)}
    */
   @Test
-  @Category(MaintainedByDiffblue.class)
+  @Category(ContributionFromDiffblue.class)
+  @ManagedByDiffblue
   @MethodsUnderTest({"void AssetIssueCapsule.<init>(byte[], String, String, String, long, int)"})
   public void testNewAssetIssueCapsule_whenAxaxaxaxBytesIsUtf8_thenReturnIdIs42()
       throws UnsupportedEncodingException {
@@ -351,7 +366,8 @@ public class AssetIssueCapsuleDiffblueTest {
    * <p>Method under test: {@link AssetIssueCapsule#AssetIssueCapsule(byte[])}
    */
   @Test
-  @Category(MaintainedByDiffblue.class)
+  @Category(ContributionFromDiffblue.class)
+  @ManagedByDiffblue
   @MethodsUnderTest({"void AssetIssueCapsule.<init>(byte[])"})
   public void testNewAssetIssueCapsule_whenAxaxaxaxBytesIsUtf8_thenReturnInstanceIsNull()
       throws UnsupportedEncodingException {
@@ -370,7 +386,8 @@ public class AssetIssueCapsuleDiffblueTest {
    * <p>Method under test: {@link AssetIssueCapsule#AssetIssueCapsule(byte[])}
    */
   @Test
-  @Category(MaintainedByDiffblue.class)
+  @Category(ContributionFromDiffblue.class)
+  @ManagedByDiffblue
   @MethodsUnderTest({"void AssetIssueCapsule.<init>(byte[])"})
   public void testNewAssetIssueCapsule_whenEmptyArrayOfByte_thenReturnIdIsEmptyString() {
     // Arrange and Act
@@ -405,7 +422,8 @@ public class AssetIssueCapsuleDiffblueTest {
    * <p>Method under test: {@link AssetIssueCapsule#AssetIssueCapsule(byte[])}
    */
   @Test
-  @Category(MaintainedByDiffblue.class)
+  @Category(ContributionFromDiffblue.class)
+  @ManagedByDiffblue
   @MethodsUnderTest({"void AssetIssueCapsule.<init>(byte[])"})
   public void testNewAssetIssueCapsule_whenXaxaxaxBytesIsUtf8_thenReturnInstanceIsNull()
       throws UnsupportedEncodingException {
@@ -424,7 +442,8 @@ public class AssetIssueCapsuleDiffblueTest {
    * <p>Method under test: {@link AssetIssueCapsule#AssetIssueCapsule(byte[])}
    */
   @Test
-  @Category(MaintainedByDiffblue.class)
+  @Category(ContributionFromDiffblue.class)
+  @ManagedByDiffblue
   @MethodsUnderTest({"void AssetIssueCapsule.<init>(byte[])"})
   public void testNewAssetIssueCapsule_whenXaxaxaxBytesIsUtf8_thenReturnInstanceIsNull2()
       throws UnsupportedEncodingException {
@@ -443,7 +462,8 @@ public class AssetIssueCapsuleDiffblueTest {
    * <p>Method under test: {@link AssetIssueCapsule#AssetIssueCapsule(byte[])}
    */
   @Test
-  @Category(MaintainedByDiffblue.class)
+  @Category(ContributionFromDiffblue.class)
+  @ManagedByDiffblue
   @MethodsUnderTest({"void AssetIssueCapsule.<init>(byte[])"})
   public void testNewAssetIssueCapsule_whenXaxaxaxBytesIsUtf8_thenReturnInstanceIsNull3()
       throws UnsupportedEncodingException {
@@ -462,7 +482,8 @@ public class AssetIssueCapsuleDiffblueTest {
    * <p>Method under test: {@link AssetIssueCapsule#AssetIssueCapsule(byte[])}
    */
   @Test
-  @Category(MaintainedByDiffblue.class)
+  @Category(ContributionFromDiffblue.class)
+  @ManagedByDiffblue
   @MethodsUnderTest({"void AssetIssueCapsule.<init>(byte[])"})
   public void testNewAssetIssueCapsule_whenXxaxaxaxBytesIsUtf8_thenReturnInstanceIsNull()
       throws UnsupportedEncodingException {
@@ -476,7 +497,8 @@ public class AssetIssueCapsuleDiffblueTest {
    * <p>Method under test: {@link AssetIssueCapsule#createDbKeyString(String, long)}
    */
   @Test
-  @Category(MaintainedByDiffblue.class)
+  @Category(ContributionFromDiffblue.class)
+  @ManagedByDiffblue
   @MethodsUnderTest({"String AssetIssueCapsule.createDbKeyString(String, long)"})
   public void testCreateDbKeyString() {
     // Arrange, Act and Assert
@@ -489,7 +511,8 @@ public class AssetIssueCapsuleDiffblueTest {
    * <p>Method under test: {@link AssetIssueCapsule#getData()}
    */
   @Test
-  @Category(MaintainedByDiffblue.class)
+  @Category(ContributionFromDiffblue.class)
+  @ManagedByDiffblue
   @MethodsUnderTest({"byte[] AssetIssueCapsule.getData()"})
   public void testGetData() throws UnsupportedEncodingException {
     // Arrange
@@ -511,7 +534,8 @@ public class AssetIssueCapsuleDiffblueTest {
    * <p>Method under test: {@link AssetIssueCapsule#getData()}
    */
   @Test
-  @Category(MaintainedByDiffblue.class)
+  @Category(ContributionFromDiffblue.class)
+  @ManagedByDiffblue
   @MethodsUnderTest({"byte[] AssetIssueCapsule.getData()"})
   public void testGetData2() throws UnsupportedEncodingException {
     // Arrange
@@ -534,7 +558,8 @@ public class AssetIssueCapsuleDiffblueTest {
    * <p>Method under test: {@link AssetIssueCapsule#getData()}
    */
   @Test
-  @Category(MaintainedByDiffblue.class)
+  @Category(ContributionFromDiffblue.class)
+  @ManagedByDiffblue
   @MethodsUnderTest({"byte[] AssetIssueCapsule.getData()"})
   public void testGetData3() throws UnsupportedEncodingException {
     // Arrange
@@ -558,7 +583,8 @@ public class AssetIssueCapsuleDiffblueTest {
    * <p>Method under test: {@link AssetIssueCapsule#getData()}
    */
   @Test
-  @Category(MaintainedByDiffblue.class)
+  @Category(ContributionFromDiffblue.class)
+  @ManagedByDiffblue
   @MethodsUnderTest({"byte[] AssetIssueCapsule.getData()"})
   public void testGetData4() throws UnsupportedEncodingException {
     // Arrange
@@ -582,7 +608,8 @@ public class AssetIssueCapsuleDiffblueTest {
    * <p>Method under test: {@link AssetIssueCapsule#getData()}
    */
   @Test
-  @Category(MaintainedByDiffblue.class)
+  @Category(ContributionFromDiffblue.class)
+  @ManagedByDiffblue
   @MethodsUnderTest({"byte[] AssetIssueCapsule.getData()"})
   public void testGetData5() throws UnsupportedEncodingException {
     // Arrange
@@ -606,7 +633,8 @@ public class AssetIssueCapsuleDiffblueTest {
    * <p>Method under test: {@link AssetIssueCapsule#getData()}
    */
   @Test
-  @Category(MaintainedByDiffblue.class)
+  @Category(ContributionFromDiffblue.class)
+  @ManagedByDiffblue
   @MethodsUnderTest({"byte[] AssetIssueCapsule.getData()"})
   public void testGetData6() throws UnsupportedEncodingException {
     // Arrange
@@ -629,7 +657,8 @@ public class AssetIssueCapsuleDiffblueTest {
    * <p>Method under test: {@link AssetIssueCapsule#getData()}
    */
   @Test
-  @Category(MaintainedByDiffblue.class)
+  @Category(ContributionFromDiffblue.class)
+  @ManagedByDiffblue
   @MethodsUnderTest({"byte[] AssetIssueCapsule.getData()"})
   public void testGetData7() throws UnsupportedEncodingException {
     // Arrange
@@ -652,7 +681,8 @@ public class AssetIssueCapsuleDiffblueTest {
    * <p>Method under test: {@link AssetIssueCapsule#getData()}
    */
   @Test
-  @Category(MaintainedByDiffblue.class)
+  @Category(ContributionFromDiffblue.class)
+  @ManagedByDiffblue
   @MethodsUnderTest({"byte[] AssetIssueCapsule.getData()"})
   public void testGetData8() throws UnsupportedEncodingException {
     // Arrange
@@ -675,7 +705,8 @@ public class AssetIssueCapsuleDiffblueTest {
    * <p>Method under test: {@link AssetIssueCapsule#getData()}
    */
   @Test
-  @Category(MaintainedByDiffblue.class)
+  @Category(ContributionFromDiffblue.class)
+  @ManagedByDiffblue
   @MethodsUnderTest({"byte[] AssetIssueCapsule.getData()"})
   public void testGetData9() throws UnsupportedEncodingException {
     // Arrange
@@ -741,7 +772,8 @@ public class AssetIssueCapsuleDiffblueTest {
    * <p>Method under test: {@link AssetIssueCapsule#getData()}
    */
   @Test
-  @Category(MaintainedByDiffblue.class)
+  @Category(ContributionFromDiffblue.class)
+  @ManagedByDiffblue
   @MethodsUnderTest({"byte[] AssetIssueCapsule.getData()"})
   public void testGetData_thenReturnEmptyArrayOfByte() {
     // Arrange
@@ -761,7 +793,8 @@ public class AssetIssueCapsuleDiffblueTest {
    * <p>Method under test: {@link AssetIssueCapsule#getInstance()}
    */
   @Test
-  @Category(MaintainedByDiffblue.class)
+  @Category(ContributionFromDiffblue.class)
+  @ManagedByDiffblue
   @MethodsUnderTest({"AssetIssueContract AssetIssueCapsule.getInstance()"})
   public void testGetInstance_thenReturnNull() throws UnsupportedEncodingException {
     // Arrange, Act and Assert
@@ -778,7 +811,8 @@ public class AssetIssueCapsuleDiffblueTest {
    * <p>Method under test: {@link AssetIssueCapsule#getName()}
    */
   @Test
-  @Category(MaintainedByDiffblue.class)
+  @Category(ContributionFromDiffblue.class)
+  @ManagedByDiffblue
   @MethodsUnderTest({"ByteString AssetIssueCapsule.getName()"})
   public void testGetName_thenReturnNotEmpty() throws UnsupportedEncodingException {
     // Arrange
@@ -819,7 +853,8 @@ public class AssetIssueCapsuleDiffblueTest {
    * <p>Method under test: {@link AssetIssueCapsule#getId()}
    */
   @Test
-  @Category(MaintainedByDiffblue.class)
+  @Category(ContributionFromDiffblue.class)
+  @ManagedByDiffblue
   @MethodsUnderTest({"String AssetIssueCapsule.getId()"})
   public void testGetId_thenReturn42() throws UnsupportedEncodingException {
     // Arrange
@@ -836,7 +871,8 @@ public class AssetIssueCapsuleDiffblueTest {
    * <p>Method under test: {@link AssetIssueCapsule#setId(String)}
    */
   @Test
-  @Category(MaintainedByDiffblue.class)
+  @Category(ContributionFromDiffblue.class)
+  @ManagedByDiffblue
   @MethodsUnderTest({"void AssetIssueCapsule.setId(String)"})
   public void testSetId() throws UnsupportedEncodingException {
     // Arrange
@@ -875,7 +911,8 @@ public class AssetIssueCapsuleDiffblueTest {
    * <p>Method under test: {@link AssetIssueCapsule#setId(String)}
    */
   @Test
-  @Category(MaintainedByDiffblue.class)
+  @Category(ContributionFromDiffblue.class)
+  @ManagedByDiffblue
   @MethodsUnderTest({"void AssetIssueCapsule.setId(String)"})
   public void testSetId2() throws UnsupportedEncodingException {
     // Arrange
@@ -915,7 +952,8 @@ public class AssetIssueCapsuleDiffblueTest {
    * <p>Method under test: {@link AssetIssueCapsule#setId(String)}
    */
   @Test
-  @Category(MaintainedByDiffblue.class)
+  @Category(ContributionFromDiffblue.class)
+  @ManagedByDiffblue
   @MethodsUnderTest({"void AssetIssueCapsule.setId(String)"})
   public void testSetId3() throws UnsupportedEncodingException {
     // Arrange
@@ -955,7 +993,8 @@ public class AssetIssueCapsuleDiffblueTest {
    * <p>Method under test: {@link AssetIssueCapsule#setId(String)}
    */
   @Test
-  @Category(MaintainedByDiffblue.class)
+  @Category(ContributionFromDiffblue.class)
+  @ManagedByDiffblue
   @MethodsUnderTest({"void AssetIssueCapsule.setId(String)"})
   public void testSetId4() throws UnsupportedEncodingException {
     // Arrange
@@ -995,7 +1034,8 @@ public class AssetIssueCapsuleDiffblueTest {
    * <p>Method under test: {@link AssetIssueCapsule#setId(String)}
    */
   @Test
-  @Category(MaintainedByDiffblue.class)
+  @Category(ContributionFromDiffblue.class)
+  @ManagedByDiffblue
   @MethodsUnderTest({"void AssetIssueCapsule.setId(String)"})
   public void testSetId5() throws UnsupportedEncodingException {
     // Arrange
@@ -1035,7 +1075,8 @@ public class AssetIssueCapsuleDiffblueTest {
    * <p>Method under test: {@link AssetIssueCapsule#setId(String)}
    */
   @Test
-  @Category(MaintainedByDiffblue.class)
+  @Category(ContributionFromDiffblue.class)
+  @ManagedByDiffblue
   @MethodsUnderTest({"void AssetIssueCapsule.setId(String)"})
   public void testSetId6() throws UnsupportedEncodingException {
     // Arrange
@@ -1075,7 +1116,8 @@ public class AssetIssueCapsuleDiffblueTest {
    * <p>Method under test: {@link AssetIssueCapsule#setId(String)}
    */
   @Test
-  @Category(MaintainedByDiffblue.class)
+  @Category(ContributionFromDiffblue.class)
+  @ManagedByDiffblue
   @MethodsUnderTest({"void AssetIssueCapsule.setId(String)"})
   public void testSetId7() {
     // Arrange
@@ -1112,7 +1154,8 @@ public class AssetIssueCapsuleDiffblueTest {
    * <p>Method under test: {@link AssetIssueCapsule#getPrecision()}
    */
   @Test
-  @Category(MaintainedByDiffblue.class)
+  @Category(ContributionFromDiffblue.class)
+  @ManagedByDiffblue
   @MethodsUnderTest({"int AssetIssueCapsule.getPrecision()"})
   public void testGetPrecision_thenReturnOne() throws UnsupportedEncodingException {
     // Arrange
@@ -1129,7 +1172,8 @@ public class AssetIssueCapsuleDiffblueTest {
    * <p>Method under test: {@link AssetIssueCapsule#setPrecision(int)}
    */
   @Test
-  @Category(MaintainedByDiffblue.class)
+  @Category(ContributionFromDiffblue.class)
+  @ManagedByDiffblue
   @MethodsUnderTest({"void AssetIssueCapsule.setPrecision(int)"})
   public void testSetPrecision() throws UnsupportedEncodingException {
     // Arrange
@@ -1159,7 +1203,8 @@ public class AssetIssueCapsuleDiffblueTest {
    * <p>Method under test: {@link AssetIssueCapsule#setPrecision(int)}
    */
   @Test
-  @Category(MaintainedByDiffblue.class)
+  @Category(ContributionFromDiffblue.class)
+  @ManagedByDiffblue
   @MethodsUnderTest({"void AssetIssueCapsule.setPrecision(int)"})
   public void testSetPrecision2() throws UnsupportedEncodingException {
     // Arrange
@@ -1190,7 +1235,8 @@ public class AssetIssueCapsuleDiffblueTest {
    * <p>Method under test: {@link AssetIssueCapsule#setPrecision(int)}
    */
   @Test
-  @Category(MaintainedByDiffblue.class)
+  @Category(ContributionFromDiffblue.class)
+  @ManagedByDiffblue
   @MethodsUnderTest({"void AssetIssueCapsule.setPrecision(int)"})
   public void testSetPrecision3() throws UnsupportedEncodingException {
     // Arrange
@@ -1221,7 +1267,8 @@ public class AssetIssueCapsuleDiffblueTest {
    * <p>Method under test: {@link AssetIssueCapsule#setPrecision(int)}
    */
   @Test
-  @Category(MaintainedByDiffblue.class)
+  @Category(ContributionFromDiffblue.class)
+  @ManagedByDiffblue
   @MethodsUnderTest({"void AssetIssueCapsule.setPrecision(int)"})
   public void testSetPrecision4() throws UnsupportedEncodingException {
     // Arrange
@@ -1252,7 +1299,8 @@ public class AssetIssueCapsuleDiffblueTest {
    * <p>Method under test: {@link AssetIssueCapsule#setPrecision(int)}
    */
   @Test
-  @Category(MaintainedByDiffblue.class)
+  @Category(ContributionFromDiffblue.class)
+  @ManagedByDiffblue
   @MethodsUnderTest({"void AssetIssueCapsule.setPrecision(int)"})
   public void testSetPrecision5() throws UnsupportedEncodingException {
     // Arrange
@@ -1283,7 +1331,8 @@ public class AssetIssueCapsuleDiffblueTest {
    * <p>Method under test: {@link AssetIssueCapsule#setPrecision(int)}
    */
   @Test
-  @Category(MaintainedByDiffblue.class)
+  @Category(ContributionFromDiffblue.class)
+  @ManagedByDiffblue
   @MethodsUnderTest({"void AssetIssueCapsule.setPrecision(int)"})
   public void testSetPrecision6() throws UnsupportedEncodingException {
     // Arrange
@@ -1314,7 +1363,8 @@ public class AssetIssueCapsuleDiffblueTest {
    * <p>Method under test: {@link AssetIssueCapsule#setPrecision(int)}
    */
   @Test
-  @Category(MaintainedByDiffblue.class)
+  @Category(ContributionFromDiffblue.class)
+  @ManagedByDiffblue
   @MethodsUnderTest({"void AssetIssueCapsule.setPrecision(int)"})
   public void testSetPrecision7() {
     // Arrange
@@ -1342,7 +1392,8 @@ public class AssetIssueCapsuleDiffblueTest {
    * <p>Method under test: {@link AssetIssueCapsule#getOrder()}
    */
   @Test
-  @Category(MaintainedByDiffblue.class)
+  @Category(ContributionFromDiffblue.class)
+  @ManagedByDiffblue
   @MethodsUnderTest({"long AssetIssueCapsule.getOrder()"})
   public void testGetOrder_thenReturnZero() throws UnsupportedEncodingException {
     // Arrange
@@ -1359,7 +1410,8 @@ public class AssetIssueCapsuleDiffblueTest {
    * <p>Method under test: {@link AssetIssueCapsule#setOrder(long)}
    */
   @Test
-  @Category(MaintainedByDiffblue.class)
+  @Category(ContributionFromDiffblue.class)
+  @ManagedByDiffblue
   @MethodsUnderTest({"void AssetIssueCapsule.setOrder(long)"})
   public void testSetOrder() throws UnsupportedEncodingException {
     // Arrange
@@ -1388,7 +1440,8 @@ public class AssetIssueCapsuleDiffblueTest {
    * <p>Method under test: {@link AssetIssueCapsule#setOrder(long)}
    */
   @Test
-  @Category(MaintainedByDiffblue.class)
+  @Category(ContributionFromDiffblue.class)
+  @ManagedByDiffblue
   @MethodsUnderTest({"void AssetIssueCapsule.setOrder(long)"})
   public void testSetOrder2() throws UnsupportedEncodingException {
     // Arrange
@@ -1418,7 +1471,8 @@ public class AssetIssueCapsuleDiffblueTest {
    * <p>Method under test: {@link AssetIssueCapsule#setOrder(long)}
    */
   @Test
-  @Category(MaintainedByDiffblue.class)
+  @Category(ContributionFromDiffblue.class)
+  @ManagedByDiffblue
   @MethodsUnderTest({"void AssetIssueCapsule.setOrder(long)"})
   public void testSetOrder3() throws UnsupportedEncodingException {
     // Arrange
@@ -1448,7 +1502,8 @@ public class AssetIssueCapsuleDiffblueTest {
    * <p>Method under test: {@link AssetIssueCapsule#setOrder(long)}
    */
   @Test
-  @Category(MaintainedByDiffblue.class)
+  @Category(ContributionFromDiffblue.class)
+  @ManagedByDiffblue
   @MethodsUnderTest({"void AssetIssueCapsule.setOrder(long)"})
   public void testSetOrder4() throws UnsupportedEncodingException {
     // Arrange
@@ -1478,7 +1533,8 @@ public class AssetIssueCapsuleDiffblueTest {
    * <p>Method under test: {@link AssetIssueCapsule#setOrder(long)}
    */
   @Test
-  @Category(MaintainedByDiffblue.class)
+  @Category(ContributionFromDiffblue.class)
+  @ManagedByDiffblue
   @MethodsUnderTest({"void AssetIssueCapsule.setOrder(long)"})
   public void testSetOrder5() throws UnsupportedEncodingException {
     // Arrange
@@ -1508,7 +1564,8 @@ public class AssetIssueCapsuleDiffblueTest {
    * <p>Method under test: {@link AssetIssueCapsule#setOrder(long)}
    */
   @Test
-  @Category(MaintainedByDiffblue.class)
+  @Category(ContributionFromDiffblue.class)
+  @ManagedByDiffblue
   @MethodsUnderTest({"void AssetIssueCapsule.setOrder(long)"})
   public void testSetOrder6() {
     // Arrange
@@ -1531,7 +1588,8 @@ public class AssetIssueCapsuleDiffblueTest {
    * <p>Method under test: {@link AssetIssueCapsule#createDbV2Key()}
    */
   @Test
-  @Category(MaintainedByDiffblue.class)
+  @Category(ContributionFromDiffblue.class)
+  @ManagedByDiffblue
   @MethodsUnderTest({"byte[] AssetIssueCapsule.createDbV2Key()"})
   public void testCreateDbV2Key() throws UnsupportedEncodingException {
     // Arrange
@@ -1548,7 +1606,8 @@ public class AssetIssueCapsuleDiffblueTest {
    * <p>Method under test: {@link AssetIssueCapsule#createDbV2Key()}
    */
   @Test
-  @Category(MaintainedByDiffblue.class)
+  @Category(ContributionFromDiffblue.class)
+  @ManagedByDiffblue
   @MethodsUnderTest({"byte[] AssetIssueCapsule.createDbV2Key()"})
   public void testCreateDbV2Key2() throws UnsupportedEncodingException {
     // Arrange
@@ -1570,7 +1629,8 @@ public class AssetIssueCapsuleDiffblueTest {
    * <p>Method under test: {@link AssetIssueCapsule#createDbV2Key()}
    */
   @Test
-  @Category(MaintainedByDiffblue.class)
+  @Category(ContributionFromDiffblue.class)
+  @ManagedByDiffblue
   @MethodsUnderTest({"byte[] AssetIssueCapsule.createDbV2Key()"})
   public void testCreateDbV2Key_thenReturnNull() throws UnsupportedEncodingException {
     // Arrange
@@ -1592,7 +1652,8 @@ public class AssetIssueCapsuleDiffblueTest {
    * <p>Method under test: {@link AssetIssueCapsule#createDbKey()}
    */
   @Test
-  @Category(MaintainedByDiffblue.class)
+  @Category(ContributionFromDiffblue.class)
+  @ManagedByDiffblue
   @MethodsUnderTest({"byte[] AssetIssueCapsule.createDbKey()"})
   public void testCreateDbKey_thenReturnEmptyArrayOfByte() {
     // Arrange
@@ -1612,7 +1673,8 @@ public class AssetIssueCapsuleDiffblueTest {
    * <p>Method under test: {@link AssetIssueCapsule#createDbKey()}
    */
   @Test
-  @Category(MaintainedByDiffblue.class)
+  @Category(ContributionFromDiffblue.class)
+  @ManagedByDiffblue
   @MethodsUnderTest({"byte[] AssetIssueCapsule.createDbKey()"})
   public void testCreateDbKey_thenReturnNameBytesIsUtf8() throws UnsupportedEncodingException {
     // Arrange
@@ -1633,7 +1695,8 @@ public class AssetIssueCapsuleDiffblueTest {
    * <p>Method under test: {@link AssetIssueCapsule#createDbKeyFinal(DynamicPropertiesStore)}
    */
   @Test
-  @Category(MaintainedByDiffblue.class)
+  @Category(ContributionFromDiffblue.class)
+  @ManagedByDiffblue
   @MethodsUnderTest({"byte[] AssetIssueCapsule.createDbKeyFinal(DynamicPropertiesStore)"})
   public void testCreateDbKeyFinal_thenReturnArrayOfByteWith4And2()
       throws UnsupportedEncodingException {
@@ -1663,7 +1726,8 @@ public class AssetIssueCapsuleDiffblueTest {
    * <p>Method under test: {@link AssetIssueCapsule#createDbKeyFinal(DynamicPropertiesStore)}
    */
   @Test
-  @Category(MaintainedByDiffblue.class)
+  @Category(ContributionFromDiffblue.class)
+  @ManagedByDiffblue
   @MethodsUnderTest({"byte[] AssetIssueCapsule.createDbKeyFinal(DynamicPropertiesStore)"})
   public void testCreateDbKeyFinal_thenReturnEmptyArrayOfByte() {
     // Arrange
@@ -1691,7 +1755,8 @@ public class AssetIssueCapsuleDiffblueTest {
    * <p>Method under test: {@link AssetIssueCapsule#createDbKeyFinal(DynamicPropertiesStore)}
    */
   @Test
-  @Category(MaintainedByDiffblue.class)
+  @Category(ContributionFromDiffblue.class)
+  @ManagedByDiffblue
   @MethodsUnderTest({"byte[] AssetIssueCapsule.createDbKeyFinal(DynamicPropertiesStore)"})
   public void testCreateDbKeyFinal_thenReturnNameBytesIsUtf8() throws UnsupportedEncodingException {
     // Arrange
@@ -1720,7 +1785,8 @@ public class AssetIssueCapsuleDiffblueTest {
    * <p>Method under test: {@link AssetIssueCapsule#createDbKeyFinal(DynamicPropertiesStore)}
    */
   @Test
-  @Category(MaintainedByDiffblue.class)
+  @Category(ContributionFromDiffblue.class)
+  @ManagedByDiffblue
   @MethodsUnderTest({"byte[] AssetIssueCapsule.createDbKeyFinal(DynamicPropertiesStore)"})
   public void testCreateDbKeyFinal_thenReturnNull() {
     // Arrange
@@ -1748,7 +1814,8 @@ public class AssetIssueCapsuleDiffblueTest {
    * <p>Method under test: {@link AssetIssueCapsule#getNum()}
    */
   @Test
-  @Category(MaintainedByDiffblue.class)
+  @Category(ContributionFromDiffblue.class)
+  @ManagedByDiffblue
   @MethodsUnderTest({"int AssetIssueCapsule.getNum()"})
   public void testGetNum_thenReturnZero() throws UnsupportedEncodingException {
     // Arrange
@@ -1769,7 +1836,8 @@ public class AssetIssueCapsuleDiffblueTest {
    * <p>Method under test: {@link AssetIssueCapsule#getTrxNum()}
    */
   @Test
-  @Category(MaintainedByDiffblue.class)
+  @Category(ContributionFromDiffblue.class)
+  @ManagedByDiffblue
   @MethodsUnderTest({"int AssetIssueCapsule.getTrxNum()"})
   public void testGetTrxNum_thenReturnZero() throws UnsupportedEncodingException {
     // Arrange
@@ -1790,7 +1858,8 @@ public class AssetIssueCapsuleDiffblueTest {
    * <p>Method under test: {@link AssetIssueCapsule#getStartTime()}
    */
   @Test
-  @Category(MaintainedByDiffblue.class)
+  @Category(ContributionFromDiffblue.class)
+  @ManagedByDiffblue
   @MethodsUnderTest({"long AssetIssueCapsule.getStartTime()"})
   public void testGetStartTime_thenReturnZero() throws UnsupportedEncodingException {
     // Arrange
@@ -1811,7 +1880,8 @@ public class AssetIssueCapsuleDiffblueTest {
    * <p>Method under test: {@link AssetIssueCapsule#getEndTime()}
    */
   @Test
-  @Category(MaintainedByDiffblue.class)
+  @Category(ContributionFromDiffblue.class)
+  @ManagedByDiffblue
   @MethodsUnderTest({"long AssetIssueCapsule.getEndTime()"})
   public void testGetEndTime_thenReturnZero() throws UnsupportedEncodingException {
     // Arrange
@@ -1832,7 +1902,8 @@ public class AssetIssueCapsuleDiffblueTest {
    * <p>Method under test: {@link AssetIssueCapsule#getOwnerAddress()}
    */
   @Test
-  @Category(MaintainedByDiffblue.class)
+  @Category(ContributionFromDiffblue.class)
+  @ManagedByDiffblue
   @MethodsUnderTest({"ByteString AssetIssueCapsule.getOwnerAddress()"})
   public void testGetOwnerAddress_thenReturnNotEmpty() throws UnsupportedEncodingException {
     // Arrange
@@ -1870,7 +1941,8 @@ public class AssetIssueCapsuleDiffblueTest {
    * <p>Method under test: {@link AssetIssueCapsule#getFrozenSupplyCount()}
    */
   @Test
-  @Category(MaintainedByDiffblue.class)
+  @Category(ContributionFromDiffblue.class)
+  @ManagedByDiffblue
   @MethodsUnderTest({"int AssetIssueCapsule.getFrozenSupplyCount()"})
   public void testGetFrozenSupplyCount_thenReturnZero() throws UnsupportedEncodingException {
     // Arrange
@@ -1891,7 +1963,8 @@ public class AssetIssueCapsuleDiffblueTest {
    * <p>Method under test: {@link AssetIssueCapsule#getFrozenSupplyList()}
    */
   @Test
-  @Category(MaintainedByDiffblue.class)
+  @Category(ContributionFromDiffblue.class)
+  @ManagedByDiffblue
   @MethodsUnderTest({"java.util.List AssetIssueCapsule.getFrozenSupplyList()"})
   public void testGetFrozenSupplyList_thenReturnEmpty() throws UnsupportedEncodingException {
     // Arrange
@@ -1912,7 +1985,8 @@ public class AssetIssueCapsuleDiffblueTest {
    * <p>Method under test: {@link AssetIssueCapsule#getFrozenSupply()}
    */
   @Test
-  @Category(MaintainedByDiffblue.class)
+  @Category(ContributionFromDiffblue.class)
+  @ManagedByDiffblue
   @MethodsUnderTest({"long AssetIssueCapsule.getFrozenSupply()"})
   public void testGetFrozenSupply_thenReturnZero() throws UnsupportedEncodingException {
     // Arrange
@@ -1933,7 +2007,8 @@ public class AssetIssueCapsuleDiffblueTest {
    * <p>Method under test: {@link AssetIssueCapsule#getFreeAssetNetLimit()}
    */
   @Test
-  @Category(MaintainedByDiffblue.class)
+  @Category(ContributionFromDiffblue.class)
+  @ManagedByDiffblue
   @MethodsUnderTest({"long AssetIssueCapsule.getFreeAssetNetLimit()"})
   public void testGetFreeAssetNetLimit_thenReturnZero() throws UnsupportedEncodingException {
     // Arrange
@@ -1950,7 +2025,8 @@ public class AssetIssueCapsuleDiffblueTest {
    * <p>Method under test: {@link AssetIssueCapsule#setFreeAssetNetLimit(long)}
    */
   @Test
-  @Category(MaintainedByDiffblue.class)
+  @Category(ContributionFromDiffblue.class)
+  @ManagedByDiffblue
   @MethodsUnderTest({"void AssetIssueCapsule.setFreeAssetNetLimit(long)"})
   public void testSetFreeAssetNetLimit() throws UnsupportedEncodingException {
     // Arrange
@@ -1979,7 +2055,8 @@ public class AssetIssueCapsuleDiffblueTest {
    * <p>Method under test: {@link AssetIssueCapsule#setFreeAssetNetLimit(long)}
    */
   @Test
-  @Category(MaintainedByDiffblue.class)
+  @Category(ContributionFromDiffblue.class)
+  @ManagedByDiffblue
   @MethodsUnderTest({"void AssetIssueCapsule.setFreeAssetNetLimit(long)"})
   public void testSetFreeAssetNetLimit2() throws UnsupportedEncodingException {
     // Arrange
@@ -2009,7 +2086,8 @@ public class AssetIssueCapsuleDiffblueTest {
    * <p>Method under test: {@link AssetIssueCapsule#setFreeAssetNetLimit(long)}
    */
   @Test
-  @Category(MaintainedByDiffblue.class)
+  @Category(ContributionFromDiffblue.class)
+  @ManagedByDiffblue
   @MethodsUnderTest({"void AssetIssueCapsule.setFreeAssetNetLimit(long)"})
   public void testSetFreeAssetNetLimit3() throws UnsupportedEncodingException {
     // Arrange
@@ -2039,7 +2117,8 @@ public class AssetIssueCapsuleDiffblueTest {
    * <p>Method under test: {@link AssetIssueCapsule#setFreeAssetNetLimit(long)}
    */
   @Test
-  @Category(MaintainedByDiffblue.class)
+  @Category(ContributionFromDiffblue.class)
+  @ManagedByDiffblue
   @MethodsUnderTest({"void AssetIssueCapsule.setFreeAssetNetLimit(long)"})
   public void testSetFreeAssetNetLimit4() throws UnsupportedEncodingException {
     // Arrange
@@ -2069,7 +2148,8 @@ public class AssetIssueCapsuleDiffblueTest {
    * <p>Method under test: {@link AssetIssueCapsule#setFreeAssetNetLimit(long)}
    */
   @Test
-  @Category(MaintainedByDiffblue.class)
+  @Category(ContributionFromDiffblue.class)
+  @ManagedByDiffblue
   @MethodsUnderTest({"void AssetIssueCapsule.setFreeAssetNetLimit(long)"})
   public void testSetFreeAssetNetLimit5() throws UnsupportedEncodingException {
     // Arrange
@@ -2099,7 +2179,8 @@ public class AssetIssueCapsuleDiffblueTest {
    * <p>Method under test: {@link AssetIssueCapsule#setFreeAssetNetLimit(long)}
    */
   @Test
-  @Category(MaintainedByDiffblue.class)
+  @Category(ContributionFromDiffblue.class)
+  @ManagedByDiffblue
   @MethodsUnderTest({"void AssetIssueCapsule.setFreeAssetNetLimit(long)"})
   public void testSetFreeAssetNetLimit6() {
     // Arrange
@@ -2126,7 +2207,8 @@ public class AssetIssueCapsuleDiffblueTest {
    * <p>Method under test: {@link AssetIssueCapsule#getPublicFreeAssetNetLimit()}
    */
   @Test
-  @Category(MaintainedByDiffblue.class)
+  @Category(ContributionFromDiffblue.class)
+  @ManagedByDiffblue
   @MethodsUnderTest({"long AssetIssueCapsule.getPublicFreeAssetNetLimit()"})
   public void testGetPublicFreeAssetNetLimit_thenReturnZero() throws UnsupportedEncodingException {
     // Arrange
@@ -2143,7 +2225,8 @@ public class AssetIssueCapsuleDiffblueTest {
    * <p>Method under test: {@link AssetIssueCapsule#setPublicFreeAssetNetLimit(long)}
    */
   @Test
-  @Category(MaintainedByDiffblue.class)
+  @Category(ContributionFromDiffblue.class)
+  @ManagedByDiffblue
   @MethodsUnderTest({"void AssetIssueCapsule.setPublicFreeAssetNetLimit(long)"})
   public void testSetPublicFreeAssetNetLimit() throws UnsupportedEncodingException {
     // Arrange
@@ -2172,7 +2255,8 @@ public class AssetIssueCapsuleDiffblueTest {
    * <p>Method under test: {@link AssetIssueCapsule#setPublicFreeAssetNetLimit(long)}
    */
   @Test
-  @Category(MaintainedByDiffblue.class)
+  @Category(ContributionFromDiffblue.class)
+  @ManagedByDiffblue
   @MethodsUnderTest({"void AssetIssueCapsule.setPublicFreeAssetNetLimit(long)"})
   public void testSetPublicFreeAssetNetLimit2() throws UnsupportedEncodingException {
     // Arrange
@@ -2202,7 +2286,8 @@ public class AssetIssueCapsuleDiffblueTest {
    * <p>Method under test: {@link AssetIssueCapsule#setPublicFreeAssetNetLimit(long)}
    */
   @Test
-  @Category(MaintainedByDiffblue.class)
+  @Category(ContributionFromDiffblue.class)
+  @ManagedByDiffblue
   @MethodsUnderTest({"void AssetIssueCapsule.setPublicFreeAssetNetLimit(long)"})
   public void testSetPublicFreeAssetNetLimit3() throws UnsupportedEncodingException {
     // Arrange
@@ -2232,7 +2317,8 @@ public class AssetIssueCapsuleDiffblueTest {
    * <p>Method under test: {@link AssetIssueCapsule#setPublicFreeAssetNetLimit(long)}
    */
   @Test
-  @Category(MaintainedByDiffblue.class)
+  @Category(ContributionFromDiffblue.class)
+  @ManagedByDiffblue
   @MethodsUnderTest({"void AssetIssueCapsule.setPublicFreeAssetNetLimit(long)"})
   public void testSetPublicFreeAssetNetLimit4() throws UnsupportedEncodingException {
     // Arrange
@@ -2262,7 +2348,8 @@ public class AssetIssueCapsuleDiffblueTest {
    * <p>Method under test: {@link AssetIssueCapsule#setPublicFreeAssetNetLimit(long)}
    */
   @Test
-  @Category(MaintainedByDiffblue.class)
+  @Category(ContributionFromDiffblue.class)
+  @ManagedByDiffblue
   @MethodsUnderTest({"void AssetIssueCapsule.setPublicFreeAssetNetLimit(long)"})
   public void testSetPublicFreeAssetNetLimit5() throws UnsupportedEncodingException {
     // Arrange
@@ -2292,7 +2379,8 @@ public class AssetIssueCapsuleDiffblueTest {
    * <p>Method under test: {@link AssetIssueCapsule#setPublicFreeAssetNetLimit(long)}
    */
   @Test
-  @Category(MaintainedByDiffblue.class)
+  @Category(ContributionFromDiffblue.class)
+  @ManagedByDiffblue
   @MethodsUnderTest({"void AssetIssueCapsule.setPublicFreeAssetNetLimit(long)"})
   public void testSetPublicFreeAssetNetLimit6() {
     // Arrange
@@ -2319,7 +2407,8 @@ public class AssetIssueCapsuleDiffblueTest {
    * <p>Method under test: {@link AssetIssueCapsule#getPublicFreeAssetNetUsage()}
    */
   @Test
-  @Category(MaintainedByDiffblue.class)
+  @Category(ContributionFromDiffblue.class)
+  @ManagedByDiffblue
   @MethodsUnderTest({"long AssetIssueCapsule.getPublicFreeAssetNetUsage()"})
   public void testGetPublicFreeAssetNetUsage_thenReturnZero() throws UnsupportedEncodingException {
     // Arrange
@@ -2336,7 +2425,8 @@ public class AssetIssueCapsuleDiffblueTest {
    * <p>Method under test: {@link AssetIssueCapsule#setPublicFreeAssetNetUsage(long)}
    */
   @Test
-  @Category(MaintainedByDiffblue.class)
+  @Category(ContributionFromDiffblue.class)
+  @ManagedByDiffblue
   @MethodsUnderTest({"void AssetIssueCapsule.setPublicFreeAssetNetUsage(long)"})
   public void testSetPublicFreeAssetNetUsage() throws UnsupportedEncodingException {
     // Arrange
@@ -2365,7 +2455,8 @@ public class AssetIssueCapsuleDiffblueTest {
    * <p>Method under test: {@link AssetIssueCapsule#setPublicFreeAssetNetUsage(long)}
    */
   @Test
-  @Category(MaintainedByDiffblue.class)
+  @Category(ContributionFromDiffblue.class)
+  @ManagedByDiffblue
   @MethodsUnderTest({"void AssetIssueCapsule.setPublicFreeAssetNetUsage(long)"})
   public void testSetPublicFreeAssetNetUsage2() throws UnsupportedEncodingException {
     // Arrange
@@ -2395,7 +2486,8 @@ public class AssetIssueCapsuleDiffblueTest {
    * <p>Method under test: {@link AssetIssueCapsule#setPublicFreeAssetNetUsage(long)}
    */
   @Test
-  @Category(MaintainedByDiffblue.class)
+  @Category(ContributionFromDiffblue.class)
+  @ManagedByDiffblue
   @MethodsUnderTest({"void AssetIssueCapsule.setPublicFreeAssetNetUsage(long)"})
   public void testSetPublicFreeAssetNetUsage3() throws UnsupportedEncodingException {
     // Arrange
@@ -2425,7 +2517,8 @@ public class AssetIssueCapsuleDiffblueTest {
    * <p>Method under test: {@link AssetIssueCapsule#setPublicFreeAssetNetUsage(long)}
    */
   @Test
-  @Category(MaintainedByDiffblue.class)
+  @Category(ContributionFromDiffblue.class)
+  @ManagedByDiffblue
   @MethodsUnderTest({"void AssetIssueCapsule.setPublicFreeAssetNetUsage(long)"})
   public void testSetPublicFreeAssetNetUsage4() throws UnsupportedEncodingException {
     // Arrange
@@ -2455,7 +2548,8 @@ public class AssetIssueCapsuleDiffblueTest {
    * <p>Method under test: {@link AssetIssueCapsule#setPublicFreeAssetNetUsage(long)}
    */
   @Test
-  @Category(MaintainedByDiffblue.class)
+  @Category(ContributionFromDiffblue.class)
+  @ManagedByDiffblue
   @MethodsUnderTest({"void AssetIssueCapsule.setPublicFreeAssetNetUsage(long)"})
   public void testSetPublicFreeAssetNetUsage5() throws UnsupportedEncodingException {
     // Arrange
@@ -2485,7 +2579,8 @@ public class AssetIssueCapsuleDiffblueTest {
    * <p>Method under test: {@link AssetIssueCapsule#setPublicFreeAssetNetUsage(long)}
    */
   @Test
-  @Category(MaintainedByDiffblue.class)
+  @Category(ContributionFromDiffblue.class)
+  @ManagedByDiffblue
   @MethodsUnderTest({"void AssetIssueCapsule.setPublicFreeAssetNetUsage(long)"})
   public void testSetPublicFreeAssetNetUsage6() {
     // Arrange
@@ -2512,7 +2607,8 @@ public class AssetIssueCapsuleDiffblueTest {
    * <p>Method under test: {@link AssetIssueCapsule#getPublicLatestFreeNetTime()}
    */
   @Test
-  @Category(MaintainedByDiffblue.class)
+  @Category(ContributionFromDiffblue.class)
+  @ManagedByDiffblue
   @MethodsUnderTest({"long AssetIssueCapsule.getPublicLatestFreeNetTime()"})
   public void testGetPublicLatestFreeNetTime_thenReturnZero() throws UnsupportedEncodingException {
     // Arrange
@@ -2529,7 +2625,8 @@ public class AssetIssueCapsuleDiffblueTest {
    * <p>Method under test: {@link AssetIssueCapsule#setPublicLatestFreeNetTime(long)}
    */
   @Test
-  @Category(MaintainedByDiffblue.class)
+  @Category(ContributionFromDiffblue.class)
+  @ManagedByDiffblue
   @MethodsUnderTest({"void AssetIssueCapsule.setPublicLatestFreeNetTime(long)"})
   public void testSetPublicLatestFreeNetTime() throws UnsupportedEncodingException {
     // Arrange
@@ -2558,7 +2655,8 @@ public class AssetIssueCapsuleDiffblueTest {
    * <p>Method under test: {@link AssetIssueCapsule#setPublicLatestFreeNetTime(long)}
    */
   @Test
-  @Category(MaintainedByDiffblue.class)
+  @Category(ContributionFromDiffblue.class)
+  @ManagedByDiffblue
   @MethodsUnderTest({"void AssetIssueCapsule.setPublicLatestFreeNetTime(long)"})
   public void testSetPublicLatestFreeNetTime2() throws UnsupportedEncodingException {
     // Arrange
@@ -2588,7 +2686,8 @@ public class AssetIssueCapsuleDiffblueTest {
    * <p>Method under test: {@link AssetIssueCapsule#setPublicLatestFreeNetTime(long)}
    */
   @Test
-  @Category(MaintainedByDiffblue.class)
+  @Category(ContributionFromDiffblue.class)
+  @ManagedByDiffblue
   @MethodsUnderTest({"void AssetIssueCapsule.setPublicLatestFreeNetTime(long)"})
   public void testSetPublicLatestFreeNetTime3() throws UnsupportedEncodingException {
     // Arrange
@@ -2618,7 +2717,8 @@ public class AssetIssueCapsuleDiffblueTest {
    * <p>Method under test: {@link AssetIssueCapsule#setPublicLatestFreeNetTime(long)}
    */
   @Test
-  @Category(MaintainedByDiffblue.class)
+  @Category(ContributionFromDiffblue.class)
+  @ManagedByDiffblue
   @MethodsUnderTest({"void AssetIssueCapsule.setPublicLatestFreeNetTime(long)"})
   public void testSetPublicLatestFreeNetTime4() throws UnsupportedEncodingException {
     // Arrange
@@ -2648,7 +2748,8 @@ public class AssetIssueCapsuleDiffblueTest {
    * <p>Method under test: {@link AssetIssueCapsule#setPublicLatestFreeNetTime(long)}
    */
   @Test
-  @Category(MaintainedByDiffblue.class)
+  @Category(ContributionFromDiffblue.class)
+  @ManagedByDiffblue
   @MethodsUnderTest({"void AssetIssueCapsule.setPublicLatestFreeNetTime(long)"})
   public void testSetPublicLatestFreeNetTime5() throws UnsupportedEncodingException {
     // Arrange
@@ -2678,7 +2779,8 @@ public class AssetIssueCapsuleDiffblueTest {
    * <p>Method under test: {@link AssetIssueCapsule#setPublicLatestFreeNetTime(long)}
    */
   @Test
-  @Category(MaintainedByDiffblue.class)
+  @Category(ContributionFromDiffblue.class)
+  @ManagedByDiffblue
   @MethodsUnderTest({"void AssetIssueCapsule.setPublicLatestFreeNetTime(long)"})
   public void testSetPublicLatestFreeNetTime6() {
     // Arrange
@@ -2701,7 +2803,8 @@ public class AssetIssueCapsuleDiffblueTest {
    * <p>Method under test: {@link AssetIssueCapsule#setUrl(ByteString)}
    */
   @Test
-  @Category(MaintainedByDiffblue.class)
+  @Category(ContributionFromDiffblue.class)
+  @ManagedByDiffblue
   @MethodsUnderTest({"void AssetIssueCapsule.setUrl(ByteString)"})
   public void testSetUrl() throws UnsupportedEncodingException {
     // Arrange
@@ -2729,7 +2832,8 @@ public class AssetIssueCapsuleDiffblueTest {
    * <p>Method under test: {@link AssetIssueCapsule#setUrl(ByteString)}
    */
   @Test
-  @Category(MaintainedByDiffblue.class)
+  @Category(ContributionFromDiffblue.class)
+  @ManagedByDiffblue
   @MethodsUnderTest({"void AssetIssueCapsule.setUrl(ByteString)"})
   public void testSetUrl2() throws UnsupportedEncodingException {
     // Arrange
@@ -2758,7 +2862,8 @@ public class AssetIssueCapsuleDiffblueTest {
    * <p>Method under test: {@link AssetIssueCapsule#setUrl(ByteString)}
    */
   @Test
-  @Category(MaintainedByDiffblue.class)
+  @Category(ContributionFromDiffblue.class)
+  @ManagedByDiffblue
   @MethodsUnderTest({"void AssetIssueCapsule.setUrl(ByteString)"})
   public void testSetUrl3() throws UnsupportedEncodingException {
     // Arrange
@@ -2787,7 +2892,8 @@ public class AssetIssueCapsuleDiffblueTest {
    * <p>Method under test: {@link AssetIssueCapsule#setUrl(ByteString)}
    */
   @Test
-  @Category(MaintainedByDiffblue.class)
+  @Category(ContributionFromDiffblue.class)
+  @ManagedByDiffblue
   @MethodsUnderTest({"void AssetIssueCapsule.setUrl(ByteString)"})
   public void testSetUrl4() throws UnsupportedEncodingException {
     // Arrange
@@ -2816,7 +2922,8 @@ public class AssetIssueCapsuleDiffblueTest {
    * <p>Method under test: {@link AssetIssueCapsule#setUrl(ByteString)}
    */
   @Test
-  @Category(MaintainedByDiffblue.class)
+  @Category(ContributionFromDiffblue.class)
+  @ManagedByDiffblue
   @MethodsUnderTest({"void AssetIssueCapsule.setUrl(ByteString)"})
   public void testSetUrl5() throws UnsupportedEncodingException {
     // Arrange
@@ -2845,7 +2952,8 @@ public class AssetIssueCapsuleDiffblueTest {
    * <p>Method under test: {@link AssetIssueCapsule#setUrl(ByteString)}
    */
   @Test
-  @Category(MaintainedByDiffblue.class)
+  @Category(ContributionFromDiffblue.class)
+  @ManagedByDiffblue
   @MethodsUnderTest({"void AssetIssueCapsule.setUrl(ByteString)"})
   public void testSetUrl6() throws UnsupportedEncodingException {
     // Arrange
@@ -2874,7 +2982,8 @@ public class AssetIssueCapsuleDiffblueTest {
    * <p>Method under test: {@link AssetIssueCapsule#setUrl(ByteString)}
    */
   @Test
-  @Category(MaintainedByDiffblue.class)
+  @Category(ContributionFromDiffblue.class)
+  @ManagedByDiffblue
   @MethodsUnderTest({"void AssetIssueCapsule.setUrl(ByteString)"})
   public void testSetUrl7() throws UnsupportedEncodingException {
     // Arrange
@@ -2902,7 +3011,8 @@ public class AssetIssueCapsuleDiffblueTest {
    * <p>Method under test: {@link AssetIssueCapsule#setUrl(ByteString)}
    */
   @Test
-  @Category(MaintainedByDiffblue.class)
+  @Category(ContributionFromDiffblue.class)
+  @ManagedByDiffblue
   @MethodsUnderTest({"void AssetIssueCapsule.setUrl(ByteString)"})
   public void testSetUrl8() throws UnsupportedEncodingException {
     // Arrange
@@ -2930,7 +3040,8 @@ public class AssetIssueCapsuleDiffblueTest {
    * <p>Method under test: {@link AssetIssueCapsule#setUrl(ByteString)}
    */
   @Test
-  @Category(MaintainedByDiffblue.class)
+  @Category(ContributionFromDiffblue.class)
+  @ManagedByDiffblue
   @MethodsUnderTest({"void AssetIssueCapsule.setUrl(ByteString)"})
   public void testSetUrl9() throws UnsupportedEncodingException {
     // Arrange
@@ -2958,7 +3069,8 @@ public class AssetIssueCapsuleDiffblueTest {
    * <p>Method under test: {@link AssetIssueCapsule#getUrl()}
    */
   @Test
-  @Category(MaintainedByDiffblue.class)
+  @Category(ContributionFromDiffblue.class)
+  @ManagedByDiffblue
   @MethodsUnderTest({"ByteString AssetIssueCapsule.getUrl()"})
   public void testGetUrl() throws UnsupportedEncodingException {
     // Arrange
@@ -2990,7 +3102,8 @@ public class AssetIssueCapsuleDiffblueTest {
    * <p>Method under test: {@link AssetIssueCapsule#setDescription(ByteString)}
    */
   @Test
-  @Category(MaintainedByDiffblue.class)
+  @Category(ContributionFromDiffblue.class)
+  @ManagedByDiffblue
   @MethodsUnderTest({"void AssetIssueCapsule.setDescription(ByteString)"})
   public void testSetDescription() throws UnsupportedEncodingException {
     // Arrange
@@ -3018,7 +3131,8 @@ public class AssetIssueCapsuleDiffblueTest {
    * <p>Method under test: {@link AssetIssueCapsule#setDescription(ByteString)}
    */
   @Test
-  @Category(MaintainedByDiffblue.class)
+  @Category(ContributionFromDiffblue.class)
+  @ManagedByDiffblue
   @MethodsUnderTest({"void AssetIssueCapsule.setDescription(ByteString)"})
   public void testSetDescription2() throws UnsupportedEncodingException {
     // Arrange
@@ -3047,7 +3161,8 @@ public class AssetIssueCapsuleDiffblueTest {
    * <p>Method under test: {@link AssetIssueCapsule#setDescription(ByteString)}
    */
   @Test
-  @Category(MaintainedByDiffblue.class)
+  @Category(ContributionFromDiffblue.class)
+  @ManagedByDiffblue
   @MethodsUnderTest({"void AssetIssueCapsule.setDescription(ByteString)"})
   public void testSetDescription3() throws UnsupportedEncodingException {
     // Arrange
@@ -3076,7 +3191,8 @@ public class AssetIssueCapsuleDiffblueTest {
    * <p>Method under test: {@link AssetIssueCapsule#setDescription(ByteString)}
    */
   @Test
-  @Category(MaintainedByDiffblue.class)
+  @Category(ContributionFromDiffblue.class)
+  @ManagedByDiffblue
   @MethodsUnderTest({"void AssetIssueCapsule.setDescription(ByteString)"})
   public void testSetDescription4() throws UnsupportedEncodingException {
     // Arrange
@@ -3105,7 +3221,8 @@ public class AssetIssueCapsuleDiffblueTest {
    * <p>Method under test: {@link AssetIssueCapsule#setDescription(ByteString)}
    */
   @Test
-  @Category(MaintainedByDiffblue.class)
+  @Category(ContributionFromDiffblue.class)
+  @ManagedByDiffblue
   @MethodsUnderTest({"void AssetIssueCapsule.setDescription(ByteString)"})
   public void testSetDescription5() throws UnsupportedEncodingException {
     // Arrange
@@ -3134,7 +3251,8 @@ public class AssetIssueCapsuleDiffblueTest {
    * <p>Method under test: {@link AssetIssueCapsule#setDescription(ByteString)}
    */
   @Test
-  @Category(MaintainedByDiffblue.class)
+  @Category(ContributionFromDiffblue.class)
+  @ManagedByDiffblue
   @MethodsUnderTest({"void AssetIssueCapsule.setDescription(ByteString)"})
   public void testSetDescription6() throws UnsupportedEncodingException {
     // Arrange
@@ -3163,7 +3281,8 @@ public class AssetIssueCapsuleDiffblueTest {
    * <p>Method under test: {@link AssetIssueCapsule#setDescription(ByteString)}
    */
   @Test
-  @Category(MaintainedByDiffblue.class)
+  @Category(ContributionFromDiffblue.class)
+  @ManagedByDiffblue
   @MethodsUnderTest({"void AssetIssueCapsule.setDescription(ByteString)"})
   public void testSetDescription7() throws UnsupportedEncodingException {
     // Arrange
@@ -3189,7 +3308,8 @@ public class AssetIssueCapsuleDiffblueTest {
    * <p>Method under test: {@link AssetIssueCapsule#setDescription(ByteString)}
    */
   @Test
-  @Category(MaintainedByDiffblue.class)
+  @Category(ContributionFromDiffblue.class)
+  @ManagedByDiffblue
   @MethodsUnderTest({"void AssetIssueCapsule.setDescription(ByteString)"})
   public void testSetDescription8() throws UnsupportedEncodingException {
     // Arrange
@@ -3214,7 +3334,8 @@ public class AssetIssueCapsuleDiffblueTest {
    * <p>Method under test: {@link AssetIssueCapsule#setDescription(ByteString)}
    */
   @Test
-  @Category(MaintainedByDiffblue.class)
+  @Category(ContributionFromDiffblue.class)
+  @ManagedByDiffblue
   @MethodsUnderTest({"void AssetIssueCapsule.setDescription(ByteString)"})
   public void testSetDescription9() throws UnsupportedEncodingException {
     // Arrange
@@ -3239,7 +3360,8 @@ public class AssetIssueCapsuleDiffblueTest {
    * <p>Method under test: {@link AssetIssueCapsule#getDesc()}
    */
   @Test
-  @Category(MaintainedByDiffblue.class)
+  @Category(ContributionFromDiffblue.class)
+  @ManagedByDiffblue
   @MethodsUnderTest({"ByteString AssetIssueCapsule.getDesc()"})
   public void testGetDesc() throws UnsupportedEncodingException {
     // Arrange

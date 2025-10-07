@@ -6,7 +6,8 @@ import static org.mockito.Mockito.anyBoolean;
 import static org.mockito.Mockito.mock;
 import static org.mockito.Mockito.verify;
 import static org.mockito.Mockito.when;
-import com.diffblue.cover.annotations.MaintainedByDiffblue;
+import com.diffblue.cover.annotations.ContributionFromDiffblue;
+import com.diffblue.cover.annotations.ManagedByDiffblue;
 import com.diffblue.cover.annotations.MethodsUnderTest;
 import java.io.UnsupportedEncodingException;
 import org.bouncycastle.math.ec.ECPoint;
@@ -20,7 +21,8 @@ public class HashDiffblueTest {
    * <p>Method under test: {@link Hash#sha3(byte[])}
    */
   @Test
-  @Category(MaintainedByDiffblue.class)
+  @Category(ContributionFromDiffblue.class)
+  @ManagedByDiffblue
   @MethodsUnderTest({"byte[] Hash.sha3(byte[])"})
   public void testSha3WithInput() throws UnsupportedEncodingException {
     // Arrange, Act and Assert
@@ -38,7 +40,8 @@ public class HashDiffblueTest {
    * <p>Method under test: {@link Hash#sha3(byte[], byte[])}
    */
   @Test
-  @Category(MaintainedByDiffblue.class)
+  @Category(ContributionFromDiffblue.class)
+  @ManagedByDiffblue
   @MethodsUnderTest({"byte[] Hash.sha3(byte[], byte[])"})
   public void testSha3WithInput1Input2() throws UnsupportedEncodingException {
     // Arrange and Act
@@ -63,7 +66,8 @@ public class HashDiffblueTest {
    * <p>Method under test: {@link Hash#sha3(byte[], int, int)}
    */
   @Test
-  @Category(MaintainedByDiffblue.class)
+  @Category(ContributionFromDiffblue.class)
+  @ManagedByDiffblue
   @MethodsUnderTest({"byte[] Hash.sha3(byte[], int, int)"})
   public void testSha3WithInputStartLength_thenReturnArrayOfByteWithElevenAndR()
       throws UnsupportedEncodingException {
@@ -82,7 +86,8 @@ public class HashDiffblueTest {
    * <p>Method under test: {@link Hash#encodeElement(byte[])}
    */
   @Test
-  @Category(MaintainedByDiffblue.class)
+  @Category(ContributionFromDiffblue.class)
+  @ManagedByDiffblue
   @MethodsUnderTest({"byte[] Hash.encodeElement(byte[])"})
   public void testEncodeElement() {
     // Arrange, Act and Assert
@@ -100,7 +105,8 @@ public class HashDiffblueTest {
    * <p>Method under test: {@link Hash#encodeElement(byte[])}
    */
   @Test
-  @Category(MaintainedByDiffblue.class)
+  @Category(ContributionFromDiffblue.class)
+  @ManagedByDiffblue
   @MethodsUnderTest({"byte[] Hash.encodeElement(byte[])"})
   public void testEncodeElement_thenReturnArrayOfByteWithMinusOneHundredTwentyAndA()
       throws UnsupportedEncodingException {
@@ -121,7 +127,8 @@ public class HashDiffblueTest {
    * <p>Method under test: {@link Hash#encodeElement(byte[])}
    */
   @Test
-  @Category(MaintainedByDiffblue.class)
+  @Category(ContributionFromDiffblue.class)
+  @ManagedByDiffblue
   @MethodsUnderTest({"byte[] Hash.encodeElement(byte[])"})
   public void testEncodeElement_whenArrayOfByteWithA_thenReturnArrayOfByteWithA() {
     // Arrange, Act and Assert
@@ -139,7 +146,8 @@ public class HashDiffblueTest {
    * <p>Method under test: {@link Hash#encodeElement(byte[])}
    */
   @Test
-  @Category(MaintainedByDiffblue.class)
+  @Category(ContributionFromDiffblue.class)
+  @ManagedByDiffblue
   @MethodsUnderTest({"byte[] Hash.encodeElement(byte[])"})
   public void testEncodeElement_whenArrayOfByteWithZero_thenReturnArrayOfByteWithZero() {
     // Arrange, Act and Assert
@@ -157,7 +165,8 @@ public class HashDiffblueTest {
    * <p>Method under test: {@link Hash#encodeElement(byte[])}
    */
   @Test
-  @Category(MaintainedByDiffblue.class)
+  @Category(ContributionFromDiffblue.class)
+  @ManagedByDiffblue
   @MethodsUnderTest({"byte[] Hash.encodeElement(byte[])"})
   public void testEncodeElement_whenEmptyArrayOfByte_thenReturnArrayOfByteWithMin_value() {
     // Arrange, Act and Assert
@@ -175,7 +184,8 @@ public class HashDiffblueTest {
    * <p>Method under test: {@link Hash#encodeElement(byte[])}
    */
   @Test
-  @Category(MaintainedByDiffblue.class)
+  @Category(ContributionFromDiffblue.class)
+  @ManagedByDiffblue
   @MethodsUnderTest({"byte[] Hash.encodeElement(byte[])"})
   public void testEncodeElement_whenNull_thenReturnArrayOfByteWithMin_value() {
     // Arrange, Act and Assert
@@ -192,7 +202,8 @@ public class HashDiffblueTest {
    * <p>Method under test: {@link Hash#computeAddress(byte[])}
    */
   @Test
-  @Category(MaintainedByDiffblue.class)
+  @Category(ContributionFromDiffblue.class)
+  @ManagedByDiffblue
   @MethodsUnderTest({"byte[] Hash.computeAddress(byte[])"})
   public void testComputeAddressWithPubBytes_thenReturnArrayOfByteWithAAndNineteen()
       throws UnsupportedEncodingException {
@@ -216,7 +227,8 @@ public class HashDiffblueTest {
    * <p>Method under test: {@link Hash#computeAddress(ECPoint)}
    */
   @Test
-  @Category(MaintainedByDiffblue.class)
+  @Category(ContributionFromDiffblue.class)
+  @ManagedByDiffblue
   @MethodsUnderTest({"byte[] Hash.computeAddress(ECPoint)"})
   public void testComputeAddressWithPubPoint_givenRuntimeException_thenThrowRuntimeException() {
     // Arrange
@@ -238,7 +250,8 @@ public class HashDiffblueTest {
    * <p>Method under test: {@link Hash#computeAddress(ECPoint)}
    */
   @Test
-  @Category(MaintainedByDiffblue.class)
+  @Category(ContributionFromDiffblue.class)
+  @ManagedByDiffblue
   @MethodsUnderTest({"byte[] Hash.computeAddress(ECPoint)"})
   public void testComputeAddressWithPubPoint_thenReturnArrayOfByteWithAAndNineteen()
       throws UnsupportedEncodingException {
@@ -265,7 +278,8 @@ public class HashDiffblueTest {
    * <p>Method under test: {@link Hash#sha3omit12(byte[])}
    */
   @Test
-  @Category(MaintainedByDiffblue.class)
+  @Category(ContributionFromDiffblue.class)
+  @ManagedByDiffblue
   @MethodsUnderTest({"byte[] Hash.sha3omit12(byte[])"})
   public void testSha3omit12() throws UnsupportedEncodingException {
     // Arrange, Act and Assert
@@ -283,7 +297,8 @@ public class HashDiffblueTest {
    * <p>Method under test: {@link Hash#ripemd160(byte[])}
    */
   @Test
-  @Category(MaintainedByDiffblue.class)
+  @Category(ContributionFromDiffblue.class)
+  @ManagedByDiffblue
   @MethodsUnderTest({"byte[] Hash.ripemd160(byte[])"})
   public void testRipemd160() throws UnsupportedEncodingException {
     // Arrange, Act and Assert

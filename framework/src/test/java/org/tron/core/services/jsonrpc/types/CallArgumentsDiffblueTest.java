@@ -6,7 +6,8 @@ import static org.mockito.ArgumentMatchers.isA;
 import static org.mockito.Mockito.mock;
 import static org.mockito.Mockito.verify;
 import static org.mockito.Mockito.when;
-import com.diffblue.cover.annotations.MaintainedByDiffblue;
+import com.diffblue.cover.annotations.ContributionFromDiffblue;
+import com.diffblue.cover.annotations.ManagedByDiffblue;
 import com.diffblue.cover.annotations.MethodsUnderTest;
 import org.junit.Test;
 import org.junit.experimental.categories.Category;
@@ -30,7 +31,8 @@ public class CallArgumentsDiffblueTest {
    * <p>Method under test: {@link CallArguments#getContractType(Wallet)}
    */
   @Test
-  @Category(MaintainedByDiffblue.class)
+  @Category(ContributionFromDiffblue.class)
+  @ManagedByDiffblue
   @MethodsUnderTest({"Transaction.Contract.ContractType CallArguments.getContractType(Wallet)"})
   public void testGetContractType()
       throws JsonRpcInvalidParamsException, JsonRpcInvalidRequestException {
@@ -49,7 +51,8 @@ public class CallArgumentsDiffblueTest {
    * <p>Method under test: {@link CallArguments#getContractType(Wallet)}
    */
   @Test
-  @Category(MaintainedByDiffblue.class)
+  @Category(ContributionFromDiffblue.class)
+  @ManagedByDiffblue
   @MethodsUnderTest({"Transaction.Contract.ContractType CallArguments.getContractType(Wallet)"})
   public void testGetContractType2()
       throws JsonRpcInvalidParamsException, JsonRpcInvalidRequestException {
@@ -68,7 +71,8 @@ public class CallArgumentsDiffblueTest {
    * <p>Method under test: {@link CallArguments#getContractType(Wallet)}
    */
   @Test
-  @Category(MaintainedByDiffblue.class)
+  @Category(ContributionFromDiffblue.class)
+  @ManagedByDiffblue
   @MethodsUnderTest({"Transaction.Contract.ContractType CallArguments.getContractType(Wallet)"})
   public void testGetContractType3()
       throws JsonRpcInvalidParamsException, JsonRpcInvalidRequestException {
@@ -87,7 +91,8 @@ public class CallArgumentsDiffblueTest {
    * <p>Method under test: {@link CallArguments#getContractType(Wallet)}
    */
   @Test
-  @Category(MaintainedByDiffblue.class)
+  @Category(ContributionFromDiffblue.class)
+  @ManagedByDiffblue
   @MethodsUnderTest({"Transaction.Contract.ContractType CallArguments.getContractType(Wallet)"})
   public void testGetContractType4()
       throws JsonRpcInvalidParamsException, JsonRpcInvalidRequestException {
@@ -106,7 +111,8 @@ public class CallArgumentsDiffblueTest {
    * <p>Method under test: {@link CallArguments#getContractType(Wallet)}
    */
   @Test
-  @Category(MaintainedByDiffblue.class)
+  @Category(ContributionFromDiffblue.class)
+  @ManagedByDiffblue
   @MethodsUnderTest({"Transaction.Contract.ContractType CallArguments.getContractType(Wallet)"})
   public void testGetContractType5()
       throws JsonRpcInvalidParamsException, JsonRpcInvalidRequestException {
@@ -140,7 +146,8 @@ public class CallArgumentsDiffblueTest {
    * <p>Method under test: {@link CallArguments#getContractType(Wallet)}
    */
   @Test
-  @Category(MaintainedByDiffblue.class)
+  @Category(ContributionFromDiffblue.class)
+  @ManagedByDiffblue
   @MethodsUnderTest({"Transaction.Contract.ContractType CallArguments.getContractType(Wallet)"})
   public void testGetContractType_givenDefaultInstance_thenReturnTriggerSmartContract()
       throws JsonRpcInvalidParamsException, JsonRpcInvalidRequestException {
@@ -178,7 +185,8 @@ public class CallArgumentsDiffblueTest {
    * <p>Method under test: {@link CallArguments#getContractType(Wallet)}
    */
   @Test
-  @Category(MaintainedByDiffblue.class)
+  @Category(ContributionFromDiffblue.class)
+  @ManagedByDiffblue
   @MethodsUnderTest({"Transaction.Contract.ContractType CallArguments.getContractType(Wallet)"})
   public void testGetContractType_givenNull_thenReturnTransferContract()
       throws JsonRpcInvalidParamsException, JsonRpcInvalidRequestException {
@@ -214,7 +222,8 @@ public class CallArgumentsDiffblueTest {
    * <p>Method under test: {@link CallArguments#getContractType(Wallet)}
    */
   @Test
-  @Category(MaintainedByDiffblue.class)
+  @Category(ContributionFromDiffblue.class)
+  @ManagedByDiffblue
   @MethodsUnderTest({"Transaction.Contract.ContractType CallArguments.getContractType(Wallet)"})
   public void testGetContractType_thenReturnCreateSmartContract()
       throws JsonRpcInvalidParamsException, JsonRpcInvalidRequestException {
@@ -232,7 +241,8 @@ public class CallArgumentsDiffblueTest {
    * <p>Method under test: {@link CallArguments#parseValue()}
    */
   @Test
-  @Category(MaintainedByDiffblue.class)
+  @Category(ContributionFromDiffblue.class)
+  @ManagedByDiffblue
   @MethodsUnderTest({"long CallArguments.parseValue()"})
   public void testParseValue() throws JsonRpcInvalidParamsException {
     // Arrange
@@ -256,7 +266,8 @@ public class CallArgumentsDiffblueTest {
    * <p>Method under test: {@link CallArguments#parseValue()}
    */
   @Test
-  @Category(MaintainedByDiffblue.class)
+  @Category(ContributionFromDiffblue.class)
+  @ManagedByDiffblue
   @MethodsUnderTest({"long CallArguments.parseValue()"})
   public void testParseValue2() throws JsonRpcInvalidParamsException {
     // Arrange
@@ -280,7 +291,8 @@ public class CallArgumentsDiffblueTest {
    * <p>Method under test: {@link CallArguments#parseValue()}
    */
   @Test
-  @Category(MaintainedByDiffblue.class)
+  @Category(ContributionFromDiffblue.class)
+  @ManagedByDiffblue
   @MethodsUnderTest({"long CallArguments.parseValue()"})
   public void testParseValue3() throws JsonRpcInvalidParamsException {
     // Arrange
@@ -323,7 +335,8 @@ public class CallArgumentsDiffblueTest {
    * </ul>
    */
   @Test
-  @Category(MaintainedByDiffblue.class)
+  @Category(ContributionFromDiffblue.class)
+  @ManagedByDiffblue
   @MethodsUnderTest({
     "void CallArguments.<init>()",
     "void CallArguments.<init>(String, String, String, String, String, String, String)",
@@ -405,7 +418,8 @@ public class CallArgumentsDiffblueTest {
    * </ul>
    */
   @Test
-  @Category(MaintainedByDiffblue.class)
+  @Category(ContributionFromDiffblue.class)
+  @ManagedByDiffblue
   @MethodsUnderTest({
     "void CallArguments.<init>()",
     "void CallArguments.<init>(String, String, String, String, String, String, String)",

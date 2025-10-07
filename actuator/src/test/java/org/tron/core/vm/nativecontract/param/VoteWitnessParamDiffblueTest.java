@@ -4,7 +4,8 @@ import static org.junit.Assert.assertArrayEquals;
 import static org.junit.Assert.assertEquals;
 import static org.junit.Assert.assertSame;
 import static org.junit.Assert.assertTrue;
-import com.diffblue.cover.annotations.MaintainedByDiffblue;
+import com.diffblue.cover.annotations.ContributionFromDiffblue;
+import com.diffblue.cover.annotations.ManagedByDiffblue;
 import com.diffblue.cover.annotations.MethodsUnderTest;
 import java.io.UnsupportedEncodingException;
 import java.util.List;
@@ -20,7 +21,8 @@ public class VoteWitnessParamDiffblueTest {
    * <p>Method under test: {@link VoteWitnessParam#addVote(byte[], long)}
    */
   @Test
-  @Category(MaintainedByDiffblue.class)
+  @Category(ContributionFromDiffblue.class)
+  @ManagedByDiffblue
   @MethodsUnderTest({"void VoteWitnessParam.addVote(byte[], long)"})
   public void testAddVote() throws UnsupportedEncodingException {
     // Arrange
@@ -52,7 +54,8 @@ public class VoteWitnessParamDiffblueTest {
    * <p>Method under test: {@link VoteWitnessParam#toJsonStr()}
    */
   @Test
-  @Category(MaintainedByDiffblue.class)
+  @Category(ContributionFromDiffblue.class)
+  @ManagedByDiffblue
   @MethodsUnderTest({"java.lang.String VoteWitnessParam.toJsonStr()"})
   public void testToJsonStr_givenVoteWitnessParam_thenReturnVotes() {
     // Arrange, Act and Assert
@@ -69,7 +72,8 @@ public class VoteWitnessParamDiffblueTest {
    * <p>Method under test: {@link VoteWitnessParam#toJsonStr()}
    */
   @Test
-  @Category(MaintainedByDiffblue.class)
+  @Category(ContributionFromDiffblue.class)
+  @ManagedByDiffblue
   @MethodsUnderTest({"java.lang.String VoteWitnessParam.toJsonStr()"})
   public void testToJsonStr_thenReturnAString() {
     // Arrange
@@ -94,7 +98,8 @@ public class VoteWitnessParamDiffblueTest {
    * <p>Method under test: {@link VoteWitnessParam#toJsonStr()}
    */
   @Test
-  @Category(MaintainedByDiffblue.class)
+  @Category(ContributionFromDiffblue.class)
+  @ManagedByDiffblue
   @MethodsUnderTest({"java.lang.String VoteWitnessParam.toJsonStr()"})
   public void testToJsonStr_thenReturnVotesVoteAddress1K31XJSKv6Zgi64VoteCount1() {
     // Arrange
@@ -117,7 +122,8 @@ public class VoteWitnessParamDiffblueTest {
    * <p>Method under test: {@link VoteWitnessParam#toJsonStr()}
    */
   @Test
-  @Category(MaintainedByDiffblue.class)
+  @Category(ContributionFromDiffblue.class)
+  @ManagedByDiffblue
   @MethodsUnderTest({"java.lang.String VoteWitnessParam.toJsonStr()"})
   public void testToJsonStr_thenReturnVotesVoteAddress2E9cagwdNSMutUg26VoteCount1() {
     // Arrange
@@ -140,7 +146,8 @@ public class VoteWitnessParamDiffblueTest {
    * <p>Method under test: {@link VoteWitnessParam#toJsonStr()}
    */
   @Test
-  @Category(MaintainedByDiffblue.class)
+  @Category(ContributionFromDiffblue.class)
+  @ManagedByDiffblue
   @MethodsUnderTest({"java.lang.String VoteWitnessParam.toJsonStr()"})
   public void testToJsonStr_thenReturnVotesVoteAddress3QJmnhVoteCount1() {
     // Arrange
@@ -166,7 +173,8 @@ public class VoteWitnessParamDiffblueTest {
    * </ul>
    */
   @Test
-  @Category(MaintainedByDiffblue.class)
+  @Category(ContributionFromDiffblue.class)
+  @ManagedByDiffblue
   @MethodsUnderTest({
     "void VoteWitnessParam.<init>()",
     "byte[] VoteWitnessParam.getVoterAddress()",

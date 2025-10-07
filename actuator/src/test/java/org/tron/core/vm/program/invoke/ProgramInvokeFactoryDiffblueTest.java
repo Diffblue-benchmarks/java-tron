@@ -6,7 +6,8 @@ import static org.junit.Assert.assertSame;
 import static org.junit.Assert.assertThrows;
 import static org.junit.Assert.assertTrue;
 import static org.mockito.Mockito.mock;
-import com.diffblue.cover.annotations.MaintainedByDiffblue;
+import com.diffblue.cover.annotations.ContributionFromDiffblue;
+import com.diffblue.cover.annotations.ManagedByDiffblue;
 import com.diffblue.cover.annotations.MethodsUnderTest;
 import java.io.UnsupportedEncodingException;
 import java.util.HashMap;
@@ -38,7 +39,8 @@ public class ProgramInvokeFactoryDiffblueTest {
    * long)}
    */
   @Test
-  @Category(MaintainedByDiffblue.class)
+  @Category(ContributionFromDiffblue.class)
+  @ManagedByDiffblue
   @MethodsUnderTest({
     "ProgramInvoke ProgramInvokeFactory.createProgramInvoke(Program, DataWord, DataWord, DataWord, DataWord, DataWord, long, byte[], Repository, boolean, boolean, long, long, long)"
   })
@@ -127,7 +129,8 @@ public class ProgramInvokeFactoryDiffblueTest {
    * long)}
    */
   @Test
-  @Category(MaintainedByDiffblue.class)
+  @Category(ContributionFromDiffblue.class)
+  @ManagedByDiffblue
   @MethodsUnderTest({
     "ProgramInvoke ProgramInvokeFactory.createProgramInvoke(TrxType, InternalTransaction.ExecutorType, Transaction, long, long, Block, Repository, long, long, long)"
   })

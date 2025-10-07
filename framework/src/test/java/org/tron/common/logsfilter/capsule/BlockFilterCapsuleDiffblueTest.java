@@ -5,7 +5,8 @@ import static org.junit.Assert.assertTrue;
 import static org.mockito.Mockito.mock;
 import static org.mockito.Mockito.verify;
 import static org.mockito.Mockito.when;
-import com.diffblue.cover.annotations.MaintainedByDiffblue;
+import com.diffblue.cover.annotations.ContributionFromDiffblue;
+import com.diffblue.cover.annotations.ManagedByDiffblue;
 import com.diffblue.cover.annotations.MethodsUnderTest;
 import org.junit.Test;
 import org.junit.experimental.categories.Category;
@@ -28,7 +29,8 @@ public class BlockFilterCapsuleDiffblueTest {
    * </ul>
    */
   @Test
-  @Category(MaintainedByDiffblue.class)
+  @Category(ContributionFromDiffblue.class)
+  @ManagedByDiffblue
   @MethodsUnderTest({
     "void BlockFilterCapsule.<init>(String, boolean)",
     "String BlockFilterCapsule.getBlockHash()",
@@ -57,7 +59,8 @@ public class BlockFilterCapsuleDiffblueTest {
    * <p>Method under test: {@link BlockFilterCapsule#BlockFilterCapsule(BlockCapsule, boolean)}
    */
   @Test
-  @Category(MaintainedByDiffblue.class)
+  @Category(ContributionFromDiffblue.class)
+  @ManagedByDiffblue
   @MethodsUnderTest({"void BlockFilterCapsule.<init>(BlockCapsule, boolean)"})
   public void testNewBlockFilterCapsule() {
     // Arrange
@@ -86,7 +89,8 @@ public class BlockFilterCapsuleDiffblueTest {
    * <p>Method under test: {@link BlockFilterCapsule#BlockFilterCapsule(BlockCapsule, boolean)}
    */
   @Test
-  @Category(MaintainedByDiffblue.class)
+  @Category(ContributionFromDiffblue.class)
+  @ManagedByDiffblue
   @MethodsUnderTest({"void BlockFilterCapsule.<init>(BlockCapsule, boolean)"})
   public void testNewBlockFilterCapsule_givenBlockId_whenBlockCapsuleGetBlockIdReturnBlockId() {
     // Arrange

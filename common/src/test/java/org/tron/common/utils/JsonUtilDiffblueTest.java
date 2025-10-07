@@ -3,7 +3,8 @@ package org.tron.common.utils;
 import static org.junit.Assert.assertEquals;
 import static org.junit.Assert.assertNull;
 import static org.junit.Assert.assertThrows;
-import com.diffblue.cover.annotations.MaintainedByDiffblue;
+import com.diffblue.cover.annotations.ContributionFromDiffblue;
+import com.diffblue.cover.annotations.ManagedByDiffblue;
 import com.diffblue.cover.annotations.MethodsUnderTest;
 import org.junit.Test;
 import org.junit.experimental.categories.Category;
@@ -20,7 +21,8 @@ public class JsonUtilDiffblueTest {
    * <p>Method under test: {@link JsonUtil#json2Obj(String, Class)}
    */
   @Test
-  @Category(MaintainedByDiffblue.class)
+  @Category(ContributionFromDiffblue.class)
+  @ManagedByDiffblue
   @MethodsUnderTest({"Object JsonUtil.json2Obj(String, Class)"})
   public void testJson2Obj_when42_thenReturnIntValueIsAddress_size() {
     // Arrange
@@ -41,7 +43,8 @@ public class JsonUtilDiffblueTest {
    * <p>Method under test: {@link JsonUtil#json2Obj(String, Class)}
    */
   @Test
-  @Category(MaintainedByDiffblue.class)
+  @Category(ContributionFromDiffblue.class)
+  @ManagedByDiffblue
   @MethodsUnderTest({"Object JsonUtil.json2Obj(String, Class)"})
   public void testJson2Obj_whenEmptyString_thenReturnNull() {
     // Arrange
@@ -62,7 +65,8 @@ public class JsonUtilDiffblueTest {
    * <p>Method under test: {@link JsonUtil#json2Obj(String, Class)}
    */
   @Test
-  @Category(MaintainedByDiffblue.class)
+  @Category(ContributionFromDiffblue.class)
+  @ManagedByDiffblue
   @MethodsUnderTest({"Object JsonUtil.json2Obj(String, Class)"})
   public void testJson2Obj_whenJsonString_thenThrowRuntimeException() {
     // Arrange
@@ -83,7 +87,8 @@ public class JsonUtilDiffblueTest {
    * <p>Method under test: {@link JsonUtil#json2Obj(String, Class)}
    */
   @Test
-  @Category(MaintainedByDiffblue.class)
+  @Category(ContributionFromDiffblue.class)
+  @ManagedByDiffblue
   @MethodsUnderTest({"Object JsonUtil.json2Obj(String, Class)"})
   public void testJson2Obj_whenNull_thenReturnNull() {
     // Arrange, Act and Assert
@@ -101,7 +106,8 @@ public class JsonUtilDiffblueTest {
    * <p>Method under test: {@link JsonUtil#obj2Json(Object)}
    */
   @Test
-  @Category(MaintainedByDiffblue.class)
+  @Category(ContributionFromDiffblue.class)
+  @ManagedByDiffblue
   @MethodsUnderTest({"String JsonUtil.obj2Json(Object)"})
   public void testObj2Json_whenAddress_size_thenReturn42() {
     // Arrange, Act and Assert
@@ -119,7 +125,8 @@ public class JsonUtilDiffblueTest {
    * <p>Method under test: {@link JsonUtil#obj2Json(Object)}
    */
   @Test
-  @Category(MaintainedByDiffblue.class)
+  @Category(ContributionFromDiffblue.class)
+  @ManagedByDiffblue
   @MethodsUnderTest({"String JsonUtil.obj2Json(Object)"})
   public void testObj2Json_whenNull_thenReturnNull() {
     // Arrange, Act and Assert
@@ -137,7 +144,8 @@ public class JsonUtilDiffblueTest {
    * <p>Method under test: {@link JsonUtil#obj2Json(Object)}
    */
   @Test
-  @Category(MaintainedByDiffblue.class)
+  @Category(ContributionFromDiffblue.class)
+  @ManagedByDiffblue
   @MethodsUnderTest({"String JsonUtil.obj2Json(Object)"})
   public void testObj2Json_whenObj_thenReturnObj() {
     // Arrange, Act and Assert

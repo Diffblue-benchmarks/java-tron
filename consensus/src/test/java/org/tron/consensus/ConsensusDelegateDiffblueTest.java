@@ -12,7 +12,8 @@ import static org.mockito.Mockito.doNothing;
 import static org.mockito.Mockito.mock;
 import static org.mockito.Mockito.verify;
 import static org.mockito.Mockito.when;
-import com.diffblue.cover.annotations.MaintainedByDiffblue;
+import com.diffblue.cover.annotations.ContributionFromDiffblue;
+import com.diffblue.cover.annotations.ManagedByDiffblue;
 import com.diffblue.cover.annotations.MethodsUnderTest;
 import com.google.protobuf.ByteString;
 import java.io.UnsupportedEncodingException;
@@ -57,7 +58,8 @@ public class ConsensusDelegateDiffblueTest {
    * </ul>
    */
   @Test
-  @Category(MaintainedByDiffblue.class)
+  @Category(ContributionFromDiffblue.class)
+  @ManagedByDiffblue
   @MethodsUnderTest({
     "DelegationStore ConsensusDelegate.getDelegationStore()",
     "DynamicPropertiesStore ConsensusDelegate.getDynamicPropertiesStore()",
@@ -84,7 +86,8 @@ public class ConsensusDelegateDiffblueTest {
    * <p>Method under test: {@link ConsensusDelegate#calculateFilledSlotsCount()}
    */
   @Test
-  @Category(MaintainedByDiffblue.class)
+  @Category(ContributionFromDiffblue.class)
+  @ManagedByDiffblue
   @MethodsUnderTest({"int ConsensusDelegate.calculateFilledSlotsCount()"})
   public void testCalculateFilledSlotsCount() {
     // Arrange
@@ -104,7 +107,8 @@ public class ConsensusDelegateDiffblueTest {
    * <p>Method under test: {@link ConsensusDelegate#saveRemoveThePowerOfTheGr(long)}
    */
   @Test
-  @Category(MaintainedByDiffblue.class)
+  @Category(ContributionFromDiffblue.class)
+  @ManagedByDiffblue
   @MethodsUnderTest({"void ConsensusDelegate.saveRemoveThePowerOfTheGr(long)"})
   public void testSaveRemoveThePowerOfTheGr() {
     // Arrange
@@ -123,7 +127,8 @@ public class ConsensusDelegateDiffblueTest {
    * <p>Method under test: {@link ConsensusDelegate#getRemoveThePowerOfTheGr()}
    */
   @Test
-  @Category(MaintainedByDiffblue.class)
+  @Category(ContributionFromDiffblue.class)
+  @ManagedByDiffblue
   @MethodsUnderTest({"long ConsensusDelegate.getRemoveThePowerOfTheGr()"})
   public void testGetRemoveThePowerOfTheGr() {
     // Arrange
@@ -143,7 +148,8 @@ public class ConsensusDelegateDiffblueTest {
    * <p>Method under test: {@link ConsensusDelegate#getWitnessStandbyAllowance()}
    */
   @Test
-  @Category(MaintainedByDiffblue.class)
+  @Category(ContributionFromDiffblue.class)
+  @ManagedByDiffblue
   @MethodsUnderTest({"long ConsensusDelegate.getWitnessStandbyAllowance()"})
   public void testGetWitnessStandbyAllowance() {
     // Arrange
@@ -163,7 +169,8 @@ public class ConsensusDelegateDiffblueTest {
    * <p>Method under test: {@link ConsensusDelegate#getLatestBlockHeaderTimestamp()}
    */
   @Test
-  @Category(MaintainedByDiffblue.class)
+  @Category(ContributionFromDiffblue.class)
+  @ManagedByDiffblue
   @MethodsUnderTest({"long ConsensusDelegate.getLatestBlockHeaderTimestamp()"})
   public void testGetLatestBlockHeaderTimestamp() {
     // Arrange
@@ -183,7 +190,8 @@ public class ConsensusDelegateDiffblueTest {
    * <p>Method under test: {@link ConsensusDelegate#getLatestBlockHeaderNumber()}
    */
   @Test
-  @Category(MaintainedByDiffblue.class)
+  @Category(ContributionFromDiffblue.class)
+  @ManagedByDiffblue
   @MethodsUnderTest({"long ConsensusDelegate.getLatestBlockHeaderNumber()"})
   public void testGetLatestBlockHeaderNumber() {
     // Arrange
@@ -207,7 +215,8 @@ public class ConsensusDelegateDiffblueTest {
    * <p>Method under test: {@link ConsensusDelegate#lastHeadBlockIsMaintenance()}
    */
   @Test
-  @Category(MaintainedByDiffblue.class)
+  @Category(ContributionFromDiffblue.class)
+  @ManagedByDiffblue
   @MethodsUnderTest({"boolean ConsensusDelegate.lastHeadBlockIsMaintenance()"})
   public void testLastHeadBlockIsMaintenance_thenReturnFalse() {
     // Arrange
@@ -231,7 +240,8 @@ public class ConsensusDelegateDiffblueTest {
    * <p>Method under test: {@link ConsensusDelegate#lastHeadBlockIsMaintenance()}
    */
   @Test
-  @Category(MaintainedByDiffblue.class)
+  @Category(ContributionFromDiffblue.class)
+  @ManagedByDiffblue
   @MethodsUnderTest({"boolean ConsensusDelegate.lastHeadBlockIsMaintenance()"})
   public void testLastHeadBlockIsMaintenance_thenReturnTrue() {
     // Arrange
@@ -251,7 +261,8 @@ public class ConsensusDelegateDiffblueTest {
    * <p>Method under test: {@link ConsensusDelegate#getMaintenanceSkipSlots()}
    */
   @Test
-  @Category(MaintainedByDiffblue.class)
+  @Category(ContributionFromDiffblue.class)
+  @ManagedByDiffblue
   @MethodsUnderTest({"long ConsensusDelegate.getMaintenanceSkipSlots()"})
   public void testGetMaintenanceSkipSlots() {
     // Arrange
@@ -276,7 +287,8 @@ public class ConsensusDelegateDiffblueTest {
    * <p>Method under test: {@link ConsensusDelegate#saveActiveWitnesses(List)}
    */
   @Test
-  @Category(MaintainedByDiffblue.class)
+  @Category(ContributionFromDiffblue.class)
+  @ManagedByDiffblue
   @MethodsUnderTest({"void ConsensusDelegate.saveActiveWitnesses(List)"})
   public void testSaveActiveWitnesses_givenByteString_whenArrayListAddByteString() {
     // Arrange
@@ -303,7 +315,8 @@ public class ConsensusDelegateDiffblueTest {
    * <p>Method under test: {@link ConsensusDelegate#saveActiveWitnesses(List)}
    */
   @Test
-  @Category(MaintainedByDiffblue.class)
+  @Category(ContributionFromDiffblue.class)
+  @ManagedByDiffblue
   @MethodsUnderTest({"void ConsensusDelegate.saveActiveWitnesses(List)"})
   public void testSaveActiveWitnesses_givenByteString_whenArrayListAddByteString2() {
     // Arrange
@@ -330,7 +343,8 @@ public class ConsensusDelegateDiffblueTest {
    * <p>Method under test: {@link ConsensusDelegate#saveActiveWitnesses(List)}
    */
   @Test
-  @Category(MaintainedByDiffblue.class)
+  @Category(ContributionFromDiffblue.class)
+  @ManagedByDiffblue
   @MethodsUnderTest({"void ConsensusDelegate.saveActiveWitnesses(List)"})
   public void testSaveActiveWitnesses_whenArrayList() {
     // Arrange
@@ -349,7 +363,8 @@ public class ConsensusDelegateDiffblueTest {
    * <p>Method under test: {@link ConsensusDelegate#getActiveWitnesses()}
    */
   @Test
-  @Category(MaintainedByDiffblue.class)
+  @Category(ContributionFromDiffblue.class)
+  @ManagedByDiffblue
   @MethodsUnderTest({"List ConsensusDelegate.getActiveWitnesses()"})
   public void testGetActiveWitnesses() {
     // Arrange
@@ -369,7 +384,8 @@ public class ConsensusDelegateDiffblueTest {
    * <p>Method under test: {@link ConsensusDelegate#getAccount(byte[])}
    */
   @Test
-  @Category(MaintainedByDiffblue.class)
+  @Category(ContributionFromDiffblue.class)
+  @ManagedByDiffblue
   @MethodsUnderTest({"AccountCapsule ConsensusDelegate.getAccount(byte[])"})
   public void testGetAccount() throws UnsupportedEncodingException {
     // Arrange
@@ -394,7 +410,8 @@ public class ConsensusDelegateDiffblueTest {
    * <p>Method under test: {@link ConsensusDelegate#saveAccount(AccountCapsule)}
    */
   @Test
-  @Category(MaintainedByDiffblue.class)
+  @Category(ContributionFromDiffblue.class)
+  @ManagedByDiffblue
   @MethodsUnderTest({"void ConsensusDelegate.saveAccount(AccountCapsule)"})
   public void testSaveAccount_givenAccountStorePutDoesNothing_thenCallsCreateDbKey()
       throws UnsupportedEncodingException {
@@ -418,7 +435,8 @@ public class ConsensusDelegateDiffblueTest {
    * <p>Method under test: {@link ConsensusDelegate#getWitness(byte[])}
    */
   @Test
-  @Category(MaintainedByDiffblue.class)
+  @Category(ContributionFromDiffblue.class)
+  @ManagedByDiffblue
   @MethodsUnderTest({"WitnessCapsule ConsensusDelegate.getWitness(byte[])"})
   public void testGetWitness() throws UnsupportedEncodingException {
     // Arrange
@@ -443,7 +461,8 @@ public class ConsensusDelegateDiffblueTest {
    * <p>Method under test: {@link ConsensusDelegate#saveWitness(WitnessCapsule)}
    */
   @Test
-  @Category(MaintainedByDiffblue.class)
+  @Category(ContributionFromDiffblue.class)
+  @ManagedByDiffblue
   @MethodsUnderTest({"void ConsensusDelegate.saveWitness(WitnessCapsule)"})
   public void testSaveWitness_givenWitnessStorePutDoesNothing_thenCallsCreateDbKey()
       throws UnsupportedEncodingException {
@@ -467,7 +486,8 @@ public class ConsensusDelegateDiffblueTest {
    * <p>Method under test: {@link ConsensusDelegate#getAllWitnesses()}
    */
   @Test
-  @Category(MaintainedByDiffblue.class)
+  @Category(ContributionFromDiffblue.class)
+  @ManagedByDiffblue
   @MethodsUnderTest({"List ConsensusDelegate.getAllWitnesses()"})
   public void testGetAllWitnesses() {
     // Arrange
@@ -487,7 +507,8 @@ public class ConsensusDelegateDiffblueTest {
    * <p>Method under test: {@link ConsensusDelegate#saveStateFlag(int)}
    */
   @Test
-  @Category(MaintainedByDiffblue.class)
+  @Category(ContributionFromDiffblue.class)
+  @ManagedByDiffblue
   @MethodsUnderTest({"void ConsensusDelegate.saveStateFlag(int)"})
   public void testSaveStateFlag() {
     // Arrange
@@ -506,7 +527,8 @@ public class ConsensusDelegateDiffblueTest {
    * <p>Method under test: {@link ConsensusDelegate#updateNextMaintenanceTime(long)}
    */
   @Test
-  @Category(MaintainedByDiffblue.class)
+  @Category(ContributionFromDiffblue.class)
+  @ManagedByDiffblue
   @MethodsUnderTest({"void ConsensusDelegate.updateNextMaintenanceTime(long)"})
   public void testUpdateNextMaintenanceTime() {
     // Arrange
@@ -525,7 +547,8 @@ public class ConsensusDelegateDiffblueTest {
    * <p>Method under test: {@link ConsensusDelegate#getNextMaintenanceTime()}
    */
   @Test
-  @Category(MaintainedByDiffblue.class)
+  @Category(ContributionFromDiffblue.class)
+  @ManagedByDiffblue
   @MethodsUnderTest({"long ConsensusDelegate.getNextMaintenanceTime()"})
   public void testGetNextMaintenanceTime() {
     // Arrange
@@ -545,7 +568,8 @@ public class ConsensusDelegateDiffblueTest {
    * <p>Method under test: {@link ConsensusDelegate#getLatestSolidifiedBlockNum()}
    */
   @Test
-  @Category(MaintainedByDiffblue.class)
+  @Category(ContributionFromDiffblue.class)
+  @ManagedByDiffblue
   @MethodsUnderTest({"long ConsensusDelegate.getLatestSolidifiedBlockNum()"})
   public void testGetLatestSolidifiedBlockNum() {
     // Arrange
@@ -565,7 +589,8 @@ public class ConsensusDelegateDiffblueTest {
    * <p>Method under test: {@link ConsensusDelegate#saveLatestSolidifiedBlockNum(long)}
    */
   @Test
-  @Category(MaintainedByDiffblue.class)
+  @Category(ContributionFromDiffblue.class)
+  @ManagedByDiffblue
   @MethodsUnderTest({"void ConsensusDelegate.saveLatestSolidifiedBlockNum(long)"})
   public void testSaveLatestSolidifiedBlockNum() {
     // Arrange
@@ -584,7 +609,8 @@ public class ConsensusDelegateDiffblueTest {
    * <p>Method under test: {@link ConsensusDelegate#applyBlock(boolean)}
    */
   @Test
-  @Category(MaintainedByDiffblue.class)
+  @Category(ContributionFromDiffblue.class)
+  @ManagedByDiffblue
   @MethodsUnderTest({"void ConsensusDelegate.applyBlock(boolean)"})
   public void testApplyBlock() {
     // Arrange
@@ -607,7 +633,8 @@ public class ConsensusDelegateDiffblueTest {
    * <p>Method under test: {@link ConsensusDelegate#allowChangeDelegation()}
    */
   @Test
-  @Category(MaintainedByDiffblue.class)
+  @Category(ContributionFromDiffblue.class)
+  @ManagedByDiffblue
   @MethodsUnderTest({"boolean ConsensusDelegate.allowChangeDelegation()"})
   public void testAllowChangeDelegation_thenReturnFalse() {
     // Arrange
@@ -631,7 +658,8 @@ public class ConsensusDelegateDiffblueTest {
    * <p>Method under test: {@link ConsensusDelegate#allowChangeDelegation()}
    */
   @Test
-  @Category(MaintainedByDiffblue.class)
+  @Category(ContributionFromDiffblue.class)
+  @ManagedByDiffblue
   @MethodsUnderTest({"boolean ConsensusDelegate.allowChangeDelegation()"})
   public void testAllowChangeDelegation_thenReturnTrue() {
     // Arrange

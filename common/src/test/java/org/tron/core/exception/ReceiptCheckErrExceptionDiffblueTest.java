@@ -3,7 +3,8 @@ package org.tron.core.exception;
 import static org.junit.Assert.assertEquals;
 import static org.junit.Assert.assertNull;
 import static org.junit.Assert.assertSame;
-import com.diffblue.cover.annotations.MaintainedByDiffblue;
+import com.diffblue.cover.annotations.ContributionFromDiffblue;
+import com.diffblue.cover.annotations.ManagedByDiffblue;
 import com.diffblue.cover.annotations.MethodsUnderTest;
 import org.junit.Test;
 import org.junit.experimental.categories.Category;
@@ -19,7 +20,8 @@ public class ReceiptCheckErrExceptionDiffblueTest {
    * <p>Method under test: {@link ReceiptCheckErrException#ReceiptCheckErrException(String)}
    */
   @Test
-  @Category(MaintainedByDiffblue.class)
+  @Category(ContributionFromDiffblue.class)
+  @ManagedByDiffblue
   @MethodsUnderTest({
     "void ReceiptCheckErrException.<init>()",
     "void ReceiptCheckErrException.<init>(String)",
@@ -46,7 +48,8 @@ public class ReceiptCheckErrExceptionDiffblueTest {
    * <p>Method under test: {@link ReceiptCheckErrException#ReceiptCheckErrException()}
    */
   @Test
-  @Category(MaintainedByDiffblue.class)
+  @Category(ContributionFromDiffblue.class)
+  @ManagedByDiffblue
   @MethodsUnderTest({
     "void ReceiptCheckErrException.<init>()",
     "void ReceiptCheckErrException.<init>(String)",
@@ -74,7 +77,8 @@ public class ReceiptCheckErrExceptionDiffblueTest {
    * Throwable)}
    */
   @Test
-  @Category(MaintainedByDiffblue.class)
+  @Category(ContributionFromDiffblue.class)
+  @ManagedByDiffblue
   @MethodsUnderTest({
     "void ReceiptCheckErrException.<init>()",
     "void ReceiptCheckErrException.<init>(String)",

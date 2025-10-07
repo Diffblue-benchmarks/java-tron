@@ -2,7 +2,8 @@ package org.tron.core.vm.program.listener;
 
 import static org.junit.Assert.assertEquals;
 import static org.junit.Assert.assertTrue;
-import com.diffblue.cover.annotations.MaintainedByDiffblue;
+import com.diffblue.cover.annotations.ContributionFromDiffblue;
+import com.diffblue.cover.annotations.ManagedByDiffblue;
 import com.diffblue.cover.annotations.MethodsUnderTest;
 import org.junit.Test;
 import org.junit.experimental.categories.Category;
@@ -15,7 +16,8 @@ public class ProgramStorageChangeListenerDiffblueTest {
    * <p>Method under test: {@link ProgramStorageChangeListener#onStoragePut(DataWord, DataWord)}
    */
   @Test
-  @Category(MaintainedByDiffblue.class)
+  @Category(ContributionFromDiffblue.class)
+  @ManagedByDiffblue
   @MethodsUnderTest({"void ProgramStorageChangeListener.onStoragePut(DataWord, DataWord)"})
   public void testOnStoragePut() {
     // Arrange
@@ -35,7 +37,8 @@ public class ProgramStorageChangeListenerDiffblueTest {
    * <p>Method under test: {@link ProgramStorageChangeListener#getDiff()}
    */
   @Test
-  @Category(MaintainedByDiffblue.class)
+  @Category(ContributionFromDiffblue.class)
+  @ManagedByDiffblue
   @MethodsUnderTest({"java.util.Map ProgramStorageChangeListener.getDiff()"})
   public void testGetDiff() {
     // Arrange, Act and Assert
@@ -53,7 +56,8 @@ public class ProgramStorageChangeListenerDiffblueTest {
    * </ul>
    */
   @Test
-  @Category(MaintainedByDiffblue.class)
+  @Category(ContributionFromDiffblue.class)
+  @ManagedByDiffblue
   @MethodsUnderTest({
     "void ProgramStorageChangeListener.<init>()",
     "void ProgramStorageChangeListener.onStorageClear()"

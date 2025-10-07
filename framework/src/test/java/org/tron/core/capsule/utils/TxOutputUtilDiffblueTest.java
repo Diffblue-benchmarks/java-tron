@@ -1,7 +1,8 @@
 package org.tron.core.capsule.utils;
 
 import static org.junit.Assert.assertSame;
-import com.diffblue.cover.annotations.MaintainedByDiffblue;
+import com.diffblue.cover.annotations.ContributionFromDiffblue;
+import com.diffblue.cover.annotations.ManagedByDiffblue;
 import com.diffblue.cover.annotations.MethodsUnderTest;
 import com.google.protobuf.UnknownFieldSet;
 import org.junit.Test;
@@ -20,7 +21,8 @@ public class TxOutputUtilDiffblueTest {
    * <p>Method under test: {@link TxOutputUtil#newTxOutput(long, String)}
    */
   @Test
-  @Category(MaintainedByDiffblue.class)
+  @Category(ContributionFromDiffblue.class)
+  @ManagedByDiffblue
   @MethodsUnderTest({"TXOutput TxOutputUtil.newTxOutput(long, String)"})
   public void testNewTxOutput_when0x() {
     // Arrange and Act
@@ -47,7 +49,8 @@ public class TxOutputUtilDiffblueTest {
    * <p>Method under test: {@link TxOutputUtil#newTxOutput(long, String)}
    */
   @Test
-  @Category(MaintainedByDiffblue.class)
+  @Category(ContributionFromDiffblue.class)
+  @ManagedByDiffblue
   @MethodsUnderTest({"TXOutput TxOutputUtil.newTxOutput(long, String)"})
   public void testNewTxOutput_whenNull() {
     // Arrange and Act

@@ -6,7 +6,8 @@ import static org.junit.Assert.assertFalse;
 import static org.junit.Assert.assertNull;
 import static org.junit.Assert.assertSame;
 import static org.junit.Assert.assertTrue;
-import com.diffblue.cover.annotations.MaintainedByDiffblue;
+import com.diffblue.cover.annotations.ContributionFromDiffblue;
+import com.diffblue.cover.annotations.ManagedByDiffblue;
 import com.diffblue.cover.annotations.MethodsUnderTest;
 import java.io.UnsupportedEncodingException;
 import java.math.BigInteger;
@@ -20,7 +21,8 @@ public class BN128FpDiffblueTest {
    * <p>Method under test: {@link BN128Fp#BN128Fp(Fp, Fp, Fp)}
    */
   @Test
-  @Category(MaintainedByDiffblue.class)
+  @Category(ContributionFromDiffblue.class)
+  @ManagedByDiffblue
   @MethodsUnderTest({"void BN128Fp.<init>(Fp, Fp, Fp)"})
   public void testNewBN128Fp() {
     // Arrange and Act
@@ -63,7 +65,8 @@ public class BN128FpDiffblueTest {
    * <p>Method under test: {@link BN128Fp#create(byte[], byte[])}
    */
   @Test
-  @Category(MaintainedByDiffblue.class)
+  @Category(ContributionFromDiffblue.class)
+  @ManagedByDiffblue
   @MethodsUnderTest({"BN128 BN128Fp.create(byte[], byte[])"})
   public void testCreate_whenAxaxaxaxBytesIsUtf8_thenReturnNull()
       throws UnsupportedEncodingException {
@@ -86,7 +89,8 @@ public class BN128FpDiffblueTest {
    * <p>Method under test: {@link BN128Fp#create(byte[], byte[])}
    */
   @Test
-  @Category(MaintainedByDiffblue.class)
+  @Category(ContributionFromDiffblue.class)
+  @ManagedByDiffblue
   @MethodsUnderTest({"BN128 BN128Fp.create(byte[], byte[])"})
   public void testCreate_whenEmptyArrayOfByte_thenReturnNull() throws UnsupportedEncodingException {
     // Arrange and Act
@@ -107,7 +111,8 @@ public class BN128FpDiffblueTest {
    * <p>Method under test: {@link BN128Fp#create(byte[], byte[])}
    */
   @Test
-  @Category(MaintainedByDiffblue.class)
+  @Category(ContributionFromDiffblue.class)
+  @ManagedByDiffblue
   @MethodsUnderTest({"BN128 BN128Fp.create(byte[], byte[])"})
   public void testCreate_whenEmptyArrayOfByte_thenToAffineReturnBN128Fp() {
     // Arrange and Act
@@ -132,7 +137,8 @@ public class BN128FpDiffblueTest {
    * <p>Method under test: {@link BN128Fp#zero()}
    */
   @Test
-  @Category(MaintainedByDiffblue.class)
+  @Category(ContributionFromDiffblue.class)
+  @ManagedByDiffblue
   @MethodsUnderTest({"BN128 BN128Fp.zero()"})
   public void testZero() {
     // Arrange
@@ -151,7 +157,8 @@ public class BN128FpDiffblueTest {
    * <p>Method under test: {@link BN128Fp#instance(Fp, Fp, Fp)}
    */
   @Test
-  @Category(MaintainedByDiffblue.class)
+  @Category(ContributionFromDiffblue.class)
+  @ManagedByDiffblue
   @MethodsUnderTest({"BN128 BN128Fp.instance(Fp, Fp, Fp)"})
   public void testInstanceWithFpFpFp() {
     // Arrange
@@ -182,7 +189,8 @@ public class BN128FpDiffblueTest {
    * <p>Method under test: {@link BN128Fp#b()}
    */
   @Test
-  @Category(MaintainedByDiffblue.class)
+  @Category(ContributionFromDiffblue.class)
+  @ManagedByDiffblue
   @MethodsUnderTest({"Fp BN128Fp.b()"})
   public void testB() {
     // Arrange
@@ -205,7 +213,8 @@ public class BN128FpDiffblueTest {
    * <p>Method under test: {@link BN128Fp#one()}
    */
   @Test
-  @Category(MaintainedByDiffblue.class)
+  @Category(ContributionFromDiffblue.class)
+  @ManagedByDiffblue
   @MethodsUnderTest({"Fp BN128Fp.one()"})
   public void testOne() {
     // Arrange

@@ -11,7 +11,8 @@ import static org.mockito.Mockito.mock;
 import static org.mockito.Mockito.verify;
 import static org.mockito.Mockito.when;
 import com.alibaba.fastjson.serializer.SerializeWriter;
-import com.diffblue.cover.annotations.MaintainedByDiffblue;
+import com.diffblue.cover.annotations.ContributionFromDiffblue;
+import com.diffblue.cover.annotations.ManagedByDiffblue;
 import com.diffblue.cover.annotations.MethodsUnderTest;
 import com.google.protobuf.ByteString;
 import com.google.protobuf.DescriptorProtos;
@@ -46,7 +47,8 @@ public class JsonFormatDiffblueTest {
    * <p>Method under test: {@link InvalidEscapeSequence#InvalidEscapeSequence(String)}
    */
   @Test
-  @Category(MaintainedByDiffblue.class)
+  @Category(ContributionFromDiffblue.class)
+  @ManagedByDiffblue
   @MethodsUnderTest({"void InvalidEscapeSequence.<init>(String)"})
   public void testInvalidEscapeSequenceNewInvalidEscapeSequence() {
     // Arrange and Act
@@ -65,7 +67,8 @@ public class JsonFormatDiffblueTest {
    * <p>Method under test: {@link JsonGenerator#outdent()}
    */
   @Test
-  @Category(MaintainedByDiffblue.class)
+  @Category(ContributionFromDiffblue.class)
+  @ManagedByDiffblue
   @MethodsUnderTest({"void JsonGenerator.outdent()"})
   public void testJsonGeneratorOutdent() {
     // Arrange, Act and Assert
@@ -79,7 +82,8 @@ public class JsonFormatDiffblueTest {
    * <p>Method under test: {@link ParseException#ParseException(String)}
    */
   @Test
-  @Category(MaintainedByDiffblue.class)
+  @Category(ContributionFromDiffblue.class)
+  @ManagedByDiffblue
   @MethodsUnderTest({"void ParseException.<init>(String)"})
   public void testParseExceptionNewParseException() {
     // Arrange and Act
@@ -98,7 +102,8 @@ public class JsonFormatDiffblueTest {
    * <p>Method under test: {@link JsonFormat#print(UnknownFieldSet, Appendable, boolean)}
    */
   @Test
-  @Category(MaintainedByDiffblue.class)
+  @Category(ContributionFromDiffblue.class)
+  @ManagedByDiffblue
   @MethodsUnderTest({"void JsonFormat.print(UnknownFieldSet, Appendable, boolean)"})
   public void testPrintWithFieldsOutputSelfType() throws IOException {
     // Arrange
@@ -123,7 +128,8 @@ public class JsonFormatDiffblueTest {
    * <p>Method under test: {@link JsonFormat#print(UnknownFieldSet, Appendable, boolean)}
    */
   @Test
-  @Category(MaintainedByDiffblue.class)
+  @Category(ContributionFromDiffblue.class)
+  @ManagedByDiffblue
   @MethodsUnderTest({"void JsonFormat.print(UnknownFieldSet, Appendable, boolean)"})
   public void testPrintWithFieldsOutputSelfType_thenSerializeWriterSizeIsTwo() throws IOException {
     // Arrange
@@ -151,7 +157,8 @@ public class JsonFormatDiffblueTest {
    * <p>Method under test: {@link JsonFormat#printToString(UnknownFieldSet, boolean)}
    */
   @Test
-  @Category(MaintainedByDiffblue.class)
+  @Category(ContributionFromDiffblue.class)
+  @ManagedByDiffblue
   @MethodsUnderTest({"String JsonFormat.printToString(UnknownFieldSet, boolean)"})
   public void testPrintToStringWithFieldsSelfType_givenTen_thenReturn10() {
     // Arrange
@@ -175,7 +182,8 @@ public class JsonFormatDiffblueTest {
    * <p>Method under test: {@link JsonFormat#printToString(UnknownFieldSet, boolean)}
    */
   @Test
-  @Category(MaintainedByDiffblue.class)
+  @Category(ContributionFromDiffblue.class)
+  @ManagedByDiffblue
   @MethodsUnderTest({"String JsonFormat.printToString(UnknownFieldSet, boolean)"})
   public void testPrintToStringWithFieldsSelfType_givenTwo_thenReturn210() {
     // Arrange
@@ -199,7 +207,8 @@ public class JsonFormatDiffblueTest {
    * <p>Method under test: {@link JsonFormat#printToString(UnknownFieldSet, boolean)}
    */
   @Test
-  @Category(MaintainedByDiffblue.class)
+  @Category(ContributionFromDiffblue.class)
+  @ManagedByDiffblue
   @MethodsUnderTest({"String JsonFormat.printToString(UnknownFieldSet, boolean)"})
   public void testPrintToStringWithFieldsSelfType_thenReturnLeftCurlyBracketRightCurlyBracket() {
     // Arrange, Act and Assert
@@ -212,7 +221,8 @@ public class JsonFormatDiffblueTest {
    * <p>Method under test: {@link JsonFormat#printToString(Message)}
    */
   @Test
-  @Category(MaintainedByDiffblue.class)
+  @Category(ContributionFromDiffblue.class)
+  @ManagedByDiffblue
   @MethodsUnderTest({"String JsonFormat.printToString(Message)"})
   public void testPrintToStringWithMessage() {
     // Arrange, Act and Assert
@@ -225,7 +235,8 @@ public class JsonFormatDiffblueTest {
    * <p>Method under test: {@link JsonFormat#printToString(Message, boolean)}
    */
   @Test
-  @Category(MaintainedByDiffblue.class)
+  @Category(ContributionFromDiffblue.class)
+  @ManagedByDiffblue
   @MethodsUnderTest({"String JsonFormat.printToString(Message, boolean)"})
   public void testPrintToStringWithMessageSelfType() {
     // Arrange, Act and Assert
@@ -243,7 +254,8 @@ public class JsonFormatDiffblueTest {
    * <p>Method under test: {@link JsonFormat#printErrorMsg(Exception)}
    */
   @Test
-  @Category(MaintainedByDiffblue.class)
+  @Category(ContributionFromDiffblue.class)
+  @ManagedByDiffblue
   @MethodsUnderTest({"String JsonFormat.printErrorMsg(Exception)"})
   public void testPrintErrorMsg_whenException_thenReturnErrorNull() {
     // Arrange, Act and Assert
@@ -262,7 +274,8 @@ public class JsonFormatDiffblueTest {
    * boolean)}
    */
   @Test
-  @Category(MaintainedByDiffblue.class)
+  @Category(ContributionFromDiffblue.class)
+  @ManagedByDiffblue
   @MethodsUnderTest({"void JsonFormat.printField(FieldDescriptor, Object, JsonGenerator, boolean)"})
   public void testPrintField_whenFieldDescriptorIsExtensionThrowRuntimeException()
       throws IOException {
@@ -291,7 +304,8 @@ public class JsonFormatDiffblueTest {
    * boolean)}
    */
   @Test
-  @Category(MaintainedByDiffblue.class)
+  @Category(ContributionFromDiffblue.class)
+  @ManagedByDiffblue
   @MethodsUnderTest({"void JsonFormat.printField(FieldDescriptor, Object, JsonGenerator, boolean)"})
   public void testPrintField_whenJsonGeneratorWithOutputIsSerializeWriter_thenCallsGetJavaType()
       throws IOException {
@@ -326,7 +340,8 @@ public class JsonFormatDiffblueTest {
    * boolean)}
    */
   @Test
-  @Category(MaintainedByDiffblue.class)
+  @Category(ContributionFromDiffblue.class)
+  @ManagedByDiffblue
   @MethodsUnderTest({"void JsonFormat.printField(FieldDescriptor, Object, JsonGenerator, boolean)"})
   public void testPrintField_whenJsonGeneratorWithOutputIsStringWriter_thenCallsGetJavaType()
       throws IOException {
@@ -359,7 +374,8 @@ public class JsonFormatDiffblueTest {
    * boolean)}
    */
   @Test
-  @Category(MaintainedByDiffblue.class)
+  @Category(ContributionFromDiffblue.class)
+  @ManagedByDiffblue
   @MethodsUnderTest({"void JsonFormat.printField(FieldDescriptor, Object, JsonGenerator, boolean)"})
   public void testPrintField_whenSerializeWriterWithInitialSizeIsThree_thenCallsGetJavaType()
       throws IOException {
@@ -393,7 +409,8 @@ public class JsonFormatDiffblueTest {
    * boolean)}
    */
   @Test
-  @Category(MaintainedByDiffblue.class)
+  @Category(ContributionFromDiffblue.class)
+  @ManagedByDiffblue
   @MethodsUnderTest({"void JsonFormat.printUnknownFields(UnknownFieldSet, JsonGenerator, boolean)"})
   public void testPrintUnknownFields_givenHashMapOneIsNewBuilderBuild_thenCallsAsMap()
       throws IOException {
@@ -423,7 +440,8 @@ public class JsonFormatDiffblueTest {
    * boolean)}
    */
   @Test
-  @Category(MaintainedByDiffblue.class)
+  @Category(ContributionFromDiffblue.class)
+  @ManagedByDiffblue
   @MethodsUnderTest({"void JsonFormat.printUnknownFields(UnknownFieldSet, JsonGenerator, boolean)"})
   public void testPrintUnknownFields_givenHashMapTenIsNewBuilderBuild_thenCallsAsMap()
       throws IOException {
@@ -454,7 +472,8 @@ public class JsonFormatDiffblueTest {
    * boolean)}
    */
   @Test
-  @Category(MaintainedByDiffblue.class)
+  @Category(ContributionFromDiffblue.class)
+  @ManagedByDiffblue
   @MethodsUnderTest({"void JsonFormat.printUnknownFields(UnknownFieldSet, JsonGenerator, boolean)"})
   public void testPrintUnknownFields_givenHashMap_thenCallsAsMap() throws IOException {
     // Arrange
@@ -479,7 +498,8 @@ public class JsonFormatDiffblueTest {
    * <p>Method under test: {@link JsonFormat#toStringBuilder(Readable)}
    */
   @Test
-  @Category(MaintainedByDiffblue.class)
+  @Category(ContributionFromDiffblue.class)
+  @ManagedByDiffblue
   @MethodsUnderTest({"StringBuilder JsonFormat.toStringBuilder(Readable)"})
   public void testToStringBuilder_givenMinusOne_thenReturnToStringIsEmptyString()
       throws IOException {
@@ -507,7 +527,8 @@ public class JsonFormatDiffblueTest {
    * <p>Method under test: {@link JsonFormat#escapeBytes(ByteString, String, boolean)}
    */
   @Test
-  @Category(MaintainedByDiffblue.class)
+  @Category(ContributionFromDiffblue.class)
+  @ManagedByDiffblue
   @MethodsUnderTest({"String JsonFormat.escapeBytes(ByteString, String, boolean)"})
   public void testEscapeBytesWithInputFliedNameSelfType_givenNull_thenReturnEmptyString() {
     // Arrange
@@ -535,7 +556,8 @@ public class JsonFormatDiffblueTest {
    * <p>Method under test: {@link JsonFormat#escapeBytes(ByteString, String, boolean)}
    */
   @Test
-  @Category(MaintainedByDiffblue.class)
+  @Category(ContributionFromDiffblue.class)
+  @ManagedByDiffblue
   @MethodsUnderTest({"String JsonFormat.escapeBytes(ByteString, String, boolean)"})
   public void testEscapeBytesWithInputFliedNameSelfType_givenNull_thenReturnEmptyString2() {
     // Arrange
@@ -562,7 +584,8 @@ public class JsonFormatDiffblueTest {
    * <p>Method under test: {@link JsonFormat#escapeBytes(ByteString, String, boolean)}
    */
   @Test
-  @Category(MaintainedByDiffblue.class)
+  @Category(ContributionFromDiffblue.class)
+  @ManagedByDiffblue
   @MethodsUnderTest({"String JsonFormat.escapeBytes(ByteString, String, boolean)"})
   public void testEscapeBytesWithInputFliedNameSelfType_thenReturn4158415841584158()
       throws UnsupportedEncodingException {
@@ -590,7 +613,8 @@ public class JsonFormatDiffblueTest {
    * <p>Method under test: {@link JsonFormat#escapeBytes(ByteString, String, boolean)}
    */
   @Test
-  @Category(MaintainedByDiffblue.class)
+  @Category(ContributionFromDiffblue.class)
+  @ManagedByDiffblue
   @MethodsUnderTest({"String JsonFormat.escapeBytes(ByteString, String, boolean)"})
   public void testEscapeBytesWithInputFliedNameSelfType_thenThrowRuntimeException() {
     // Arrange
@@ -615,7 +639,8 @@ public class JsonFormatDiffblueTest {
    * <p>Method under test: {@link JsonFormat#escapeBytes(ByteString, String, boolean)}
    */
   @Test
-  @Category(MaintainedByDiffblue.class)
+  @Category(ContributionFromDiffblue.class)
+  @ManagedByDiffblue
   @MethodsUnderTest({"String JsonFormat.escapeBytes(ByteString, String, boolean)"})
   public void testEscapeBytesWithInputFliedNameSelfType_thenThrowRuntimeException2() {
     // Arrange
@@ -640,7 +665,8 @@ public class JsonFormatDiffblueTest {
    * <p>Method under test: {@link JsonFormat#escapeBytes(ByteString)}
    */
   @Test
-  @Category(MaintainedByDiffblue.class)
+  @Category(ContributionFromDiffblue.class)
+  @ManagedByDiffblue
   @MethodsUnderTest({"String JsonFormat.escapeBytes(ByteString)"})
   public void testEscapeBytesWithInput_givenAxaxaxaxBytesIsUtf8_thenReturn4158415841584158()
       throws UnsupportedEncodingException {
@@ -667,7 +693,8 @@ public class JsonFormatDiffblueTest {
    * <p>Method under test: {@link JsonFormat#escapeBytes(ByteString)}
    */
   @Test
-  @Category(MaintainedByDiffblue.class)
+  @Category(ContributionFromDiffblue.class)
+  @ManagedByDiffblue
   @MethodsUnderTest({"String JsonFormat.escapeBytes(ByteString)"})
   public void testEscapeBytesWithInput_givenNull_thenReturnEmptyString() {
     // Arrange
@@ -693,7 +720,8 @@ public class JsonFormatDiffblueTest {
    * <p>Method under test: {@link JsonFormat#escapeBytes(ByteString)}
    */
   @Test
-  @Category(MaintainedByDiffblue.class)
+  @Category(ContributionFromDiffblue.class)
+  @ManagedByDiffblue
   @MethodsUnderTest({"String JsonFormat.escapeBytes(ByteString)"})
   public void testEscapeBytesWithInput_givenRuntimeException_thenThrowRuntimeException() {
     // Arrange
@@ -716,7 +744,8 @@ public class JsonFormatDiffblueTest {
    * <p>Method under test: {@link JsonFormat#escapeBytesSelfType(ByteString, String)}
    */
   @Test
-  @Category(MaintainedByDiffblue.class)
+  @Category(ContributionFromDiffblue.class)
+  @ManagedByDiffblue
   @MethodsUnderTest({"String JsonFormat.escapeBytesSelfType(ByteString, String)"})
   public void testEscapeBytesSelfType_givenAxaxaxaxBytesIsUtf8_thenReturn4158415841584158()
       throws UnsupportedEncodingException {
@@ -744,7 +773,8 @@ public class JsonFormatDiffblueTest {
    * <p>Method under test: {@link JsonFormat#escapeBytesSelfType(ByteString, String)}
    */
   @Test
-  @Category(MaintainedByDiffblue.class)
+  @Category(ContributionFromDiffblue.class)
+  @ManagedByDiffblue
   @MethodsUnderTest({"String JsonFormat.escapeBytesSelfType(ByteString, String)"})
   public void testEscapeBytesSelfType_givenNull_thenReturnEmptyString() {
     // Arrange
@@ -771,7 +801,8 @@ public class JsonFormatDiffblueTest {
    * <p>Method under test: {@link JsonFormat#escapeBytesSelfType(ByteString, String)}
    */
   @Test
-  @Category(MaintainedByDiffblue.class)
+  @Category(ContributionFromDiffblue.class)
+  @ManagedByDiffblue
   @MethodsUnderTest({"String JsonFormat.escapeBytesSelfType(ByteString, String)"})
   public void testEscapeBytesSelfType_givenRuntimeException_thenThrowRuntimeException() {
     // Arrange
@@ -796,7 +827,8 @@ public class JsonFormatDiffblueTest {
    * <p>Method under test: {@link Tokenizer#atEnd()}
    */
   @Test
-  @Category(MaintainedByDiffblue.class)
+  @Category(ContributionFromDiffblue.class)
+  @ManagedByDiffblue
   @MethodsUnderTest({"boolean Tokenizer.atEnd()"})
   public void testTokenizerAtEnd_givenTokenizerWithTextIsEmptyString_thenReturnTrue() {
     // Arrange, Act and Assert
@@ -814,7 +846,8 @@ public class JsonFormatDiffblueTest {
    * <p>Method under test: {@link Tokenizer#atEnd()}
    */
   @Test
-  @Category(MaintainedByDiffblue.class)
+  @Category(ContributionFromDiffblue.class)
+  @ManagedByDiffblue
   @MethodsUnderTest({"boolean Tokenizer.atEnd()"})
   public void testTokenizerAtEnd_givenTokenizerWithTextIsS_value_thenReturnFalse() {
     // Arrange, Act and Assert
@@ -827,7 +860,8 @@ public class JsonFormatDiffblueTest {
    * <p>Method under test: {@link Tokenizer#consumeBoolean()}
    */
   @Test
-  @Category(MaintainedByDiffblue.class)
+  @Category(ContributionFromDiffblue.class)
+  @ManagedByDiffblue
   @MethodsUnderTest({"boolean Tokenizer.consumeBoolean()"})
   public void testTokenizerConsumeBoolean() throws ParseException {
     // Arrange
@@ -847,7 +881,8 @@ public class JsonFormatDiffblueTest {
    * <p>Method under test: {@link Tokenizer#consumeBoolean()}
    */
   @Test
-  @Category(MaintainedByDiffblue.class)
+  @Category(ContributionFromDiffblue.class)
+  @ManagedByDiffblue
   @MethodsUnderTest({"boolean Tokenizer.consumeBoolean()"})
   public void testTokenizerConsumeBoolean2() throws ParseException {
     // Arrange
@@ -867,7 +902,8 @@ public class JsonFormatDiffblueTest {
    * <p>Method under test: {@link Tokenizer#consumeBoolean()}
    */
   @Test
-  @Category(MaintainedByDiffblue.class)
+  @Category(ContributionFromDiffblue.class)
+  @ManagedByDiffblue
   @MethodsUnderTest({"boolean Tokenizer.consumeBoolean()"})
   public void testTokenizerConsumeBoolean3() throws ParseException {
     // Arrange
@@ -889,7 +925,8 @@ public class JsonFormatDiffblueTest {
    * <p>Method under test: {@link Tokenizer#consumeBoolean()}
    */
   @Test
-  @Category(MaintainedByDiffblue.class)
+  @Category(ContributionFromDiffblue.class)
+  @ManagedByDiffblue
   @MethodsUnderTest({"boolean Tokenizer.consumeBoolean()"})
   public void testTokenizerConsumeBoolean4() throws ParseException {
     // Arrange
@@ -917,7 +954,8 @@ public class JsonFormatDiffblueTest {
    * <p>Method under test: {@link Tokenizer#consumeBoolean()}
    */
   @Test
-  @Category(MaintainedByDiffblue.class)
+  @Category(ContributionFromDiffblue.class)
+  @ManagedByDiffblue
   @MethodsUnderTest({"boolean Tokenizer.consumeBoolean()"})
   public void testTokenizerConsumeBoolean_givenStringBufferWithTrueToStringAppendCodePointOne()
       throws ParseException {
@@ -944,7 +982,8 @@ public class JsonFormatDiffblueTest {
    * <p>Method under test: {@link Tokenizer#consumeBoolean()}
    */
   @Test
-  @Category(MaintainedByDiffblue.class)
+  @Category(ContributionFromDiffblue.class)
+  @ManagedByDiffblue
   @MethodsUnderTest({"boolean Tokenizer.consumeBoolean()"})
   public void testTokenizerConsumeBoolean_thenThrowParseException() throws ParseException {
     // Arrange, Act and Assert
@@ -958,7 +997,8 @@ public class JsonFormatDiffblueTest {
    * <p>Method under test: {@link Tokenizer#consumeByteString(String, boolean)}
    */
   @Test
-  @Category(MaintainedByDiffblue.class)
+  @Category(ContributionFromDiffblue.class)
+  @ManagedByDiffblue
   @MethodsUnderTest({"ByteString Tokenizer.consumeByteString(String, boolean)"})
   public void testTokenizerConsumeByteStringWithStringBoolean() throws ParseException {
     // Arrange, Act and Assert
@@ -978,7 +1018,8 @@ public class JsonFormatDiffblueTest {
    * <p>Method under test: {@link Tokenizer#consumeByteString(String, boolean)}
    */
   @Test
-  @Category(MaintainedByDiffblue.class)
+  @Category(ContributionFromDiffblue.class)
+  @ManagedByDiffblue
   @MethodsUnderTest({"ByteString Tokenizer.consumeByteString(String, boolean)"})
   public void testTokenizerConsumeByteStringWithStringBoolean_givenTokenizerWithTextIsS_value()
       throws ParseException {
@@ -1001,7 +1042,8 @@ public class JsonFormatDiffblueTest {
    * <p>Method under test: {@link Tokenizer#consumeByteString()}
    */
   @Test
-  @Category(MaintainedByDiffblue.class)
+  @Category(ContributionFromDiffblue.class)
+  @ManagedByDiffblue
   @MethodsUnderTest({"ByteString Tokenizer.consumeByteString()"})
   public void testTokenizerConsumeByteString_givenSegmentWithEnquiryToCharArrayAndOneAndOne()
       throws ParseException {
@@ -1022,7 +1064,8 @@ public class JsonFormatDiffblueTest {
    * <p>Method under test: {@link Tokenizer#consumeByteString()}
    */
   @Test
-  @Category(MaintainedByDiffblue.class)
+  @Category(ContributionFromDiffblue.class)
+  @ManagedByDiffblue
   @MethodsUnderTest({"ByteString Tokenizer.consumeByteString()"})
   public void testTokenizerConsumeByteString_givenTokenizerWithTextIsEmptyString()
       throws ParseException {
@@ -1040,7 +1083,8 @@ public class JsonFormatDiffblueTest {
    * <p>Method under test: {@link Tokenizer#consumeByteString()}
    */
   @Test
-  @Category(MaintainedByDiffblue.class)
+  @Category(ContributionFromDiffblue.class)
+  @ManagedByDiffblue
   @MethodsUnderTest({"ByteString Tokenizer.consumeByteString()"})
   public void testTokenizerConsumeByteString_givenTokenizerWithTextIsS_value()
       throws ParseException {
@@ -1054,7 +1098,8 @@ public class JsonFormatDiffblueTest {
    * <p>Method under test: {@link Tokenizer#consumeDouble()}
    */
   @Test
-  @Category(MaintainedByDiffblue.class)
+  @Category(ContributionFromDiffblue.class)
+  @ManagedByDiffblue
   @MethodsUnderTest({"double Tokenizer.consumeDouble()"})
   public void testTokenizerConsumeDouble() throws ParseException {
     // Arrange
@@ -1074,7 +1119,8 @@ public class JsonFormatDiffblueTest {
    * <p>Method under test: {@link Tokenizer#consumeDouble()}
    */
   @Test
-  @Category(MaintainedByDiffblue.class)
+  @Category(ContributionFromDiffblue.class)
+  @ManagedByDiffblue
   @MethodsUnderTest({"double Tokenizer.consumeDouble()"})
   public void testTokenizerConsumeDouble2() throws ParseException {
     // Arrange
@@ -1096,7 +1142,8 @@ public class JsonFormatDiffblueTest {
    * <p>Method under test: {@link Tokenizer#consumeDouble()}
    */
   @Test
-  @Category(MaintainedByDiffblue.class)
+  @Category(ContributionFromDiffblue.class)
+  @ManagedByDiffblue
   @MethodsUnderTest({"double Tokenizer.consumeDouble()"})
   public void testTokenizerConsumeDouble3() throws ParseException {
     // Arrange
@@ -1124,7 +1171,8 @@ public class JsonFormatDiffblueTest {
    * <p>Method under test: {@link Tokenizer#consumeDouble()}
    */
   @Test
-  @Category(MaintainedByDiffblue.class)
+  @Category(ContributionFromDiffblue.class)
+  @ManagedByDiffblue
   @MethodsUnderTest({"double Tokenizer.consumeDouble()"})
   public void testTokenizerConsumeDouble_givenStringBufferWithInfinityAppendCodePointOne()
       throws ParseException {
@@ -1151,7 +1199,8 @@ public class JsonFormatDiffblueTest {
    * <p>Method under test: {@link Tokenizer#consumeDouble()}
    */
   @Test
-  @Category(MaintainedByDiffblue.class)
+  @Category(ContributionFromDiffblue.class)
+  @ManagedByDiffblue
   @MethodsUnderTest({"double Tokenizer.consumeDouble()"})
   public void testTokenizerConsumeDouble_thenReturnNegative_infinity() throws ParseException {
     // Arrange
@@ -1178,7 +1227,8 @@ public class JsonFormatDiffblueTest {
    * <p>Method under test: {@link Tokenizer#consumeDouble()}
    */
   @Test
-  @Category(MaintainedByDiffblue.class)
+  @Category(ContributionFromDiffblue.class)
+  @ManagedByDiffblue
   @MethodsUnderTest({"double Tokenizer.consumeDouble()"})
   public void testTokenizerConsumeDouble_thenThrowParseException() throws ParseException {
     // Arrange, Act and Assert
@@ -1196,7 +1246,8 @@ public class JsonFormatDiffblueTest {
    * <p>Method under test: {@link Tokenizer#consumeDouble()}
    */
   @Test
-  @Category(MaintainedByDiffblue.class)
+  @Category(ContributionFromDiffblue.class)
+  @ManagedByDiffblue
   @MethodsUnderTest({"double Tokenizer.consumeDouble()"})
   public void testTokenizerConsumeDouble_thenTokenizerWithTextIs42CurrentTokenIsEmptyString()
       throws ParseException {
@@ -1222,7 +1273,8 @@ public class JsonFormatDiffblueTest {
    * <p>Method under test: {@link Tokenizer#consumeDouble()}
    */
   @Test
-  @Category(MaintainedByDiffblue.class)
+  @Category(ContributionFromDiffblue.class)
+  @ManagedByDiffblue
   @MethodsUnderTest({"double Tokenizer.consumeDouble()"})
   public void testTokenizerConsumeDouble_thenTokenizerWithTextIsNanCurrentTokenIsEmptyString()
       throws ParseException {
@@ -1243,7 +1295,8 @@ public class JsonFormatDiffblueTest {
    * <p>Method under test: {@link Tokenizer#consumeFloat()}
    */
   @Test
-  @Category(MaintainedByDiffblue.class)
+  @Category(ContributionFromDiffblue.class)
+  @ManagedByDiffblue
   @MethodsUnderTest({"float Tokenizer.consumeFloat()"})
   public void testTokenizerConsumeFloat() throws ParseException {
     // Arrange
@@ -1263,7 +1316,8 @@ public class JsonFormatDiffblueTest {
    * <p>Method under test: {@link Tokenizer#consumeFloat()}
    */
   @Test
-  @Category(MaintainedByDiffblue.class)
+  @Category(ContributionFromDiffblue.class)
+  @ManagedByDiffblue
   @MethodsUnderTest({"float Tokenizer.consumeFloat()"})
   public void testTokenizerConsumeFloat2() throws ParseException {
     // Arrange
@@ -1285,7 +1339,8 @@ public class JsonFormatDiffblueTest {
    * <p>Method under test: {@link Tokenizer#consumeFloat()}
    */
   @Test
-  @Category(MaintainedByDiffblue.class)
+  @Category(ContributionFromDiffblue.class)
+  @ManagedByDiffblue
   @MethodsUnderTest({"float Tokenizer.consumeFloat()"})
   public void testTokenizerConsumeFloat3() throws ParseException {
     // Arrange
@@ -1312,7 +1367,8 @@ public class JsonFormatDiffblueTest {
    * <p>Method under test: {@link Tokenizer#consumeFloat()}
    */
   @Test
-  @Category(MaintainedByDiffblue.class)
+  @Category(ContributionFromDiffblue.class)
+  @ManagedByDiffblue
   @MethodsUnderTest({"float Tokenizer.consumeFloat()"})
   public void testTokenizerConsumeFloat_thenThrowParseException() throws ParseException {
     // Arrange, Act and Assert
@@ -1330,7 +1386,8 @@ public class JsonFormatDiffblueTest {
    * <p>Method under test: {@link Tokenizer#consumeFloat()}
    */
   @Test
-  @Category(MaintainedByDiffblue.class)
+  @Category(ContributionFromDiffblue.class)
+  @ManagedByDiffblue
   @MethodsUnderTest({"float Tokenizer.consumeFloat()"})
   public void testTokenizerConsumeFloat_thenTokenizerWithTextIs42CurrentTokenIsEmptyString()
       throws ParseException {
@@ -1356,7 +1413,8 @@ public class JsonFormatDiffblueTest {
    * <p>Method under test: {@link Tokenizer#consumeFloat()}
    */
   @Test
-  @Category(MaintainedByDiffblue.class)
+  @Category(ContributionFromDiffblue.class)
+  @ManagedByDiffblue
   @MethodsUnderTest({"float Tokenizer.consumeFloat()"})
   public void testTokenizerConsumeFloat_thenTokenizerWithTextIsNanCurrentTokenIsEmptyString()
       throws ParseException {
@@ -1382,7 +1440,8 @@ public class JsonFormatDiffblueTest {
    * <p>Method under test: {@link Tokenizer#consumeFloat()}
    */
   @Test
-  @Category(MaintainedByDiffblue.class)
+  @Category(ContributionFromDiffblue.class)
+  @ManagedByDiffblue
   @MethodsUnderTest({"float Tokenizer.consumeFloat()"})
   public void testTokenizerConsumeFloat_thenTokenizerWithTextIsNanfCurrentTokenIsQuestionMark()
       throws ParseException {
@@ -1403,7 +1462,8 @@ public class JsonFormatDiffblueTest {
    * <p>Method under test: {@link Tokenizer#consumeIdentifier()}
    */
   @Test
-  @Category(MaintainedByDiffblue.class)
+  @Category(ContributionFromDiffblue.class)
+  @ManagedByDiffblue
   @MethodsUnderTest({"String Tokenizer.consumeIdentifier()"})
   public void testTokenizerConsumeIdentifier() throws ParseException {
     // Arrange
@@ -1423,7 +1483,8 @@ public class JsonFormatDiffblueTest {
    * <p>Method under test: {@link Tokenizer#consumeIdentifier()}
    */
   @Test
-  @Category(MaintainedByDiffblue.class)
+  @Category(ContributionFromDiffblue.class)
+  @ManagedByDiffblue
   @MethodsUnderTest({"String Tokenizer.consumeIdentifier()"})
   public void testTokenizerConsumeIdentifier2() throws ParseException {
     // Arrange
@@ -1443,7 +1504,8 @@ public class JsonFormatDiffblueTest {
    * <p>Method under test: {@link Tokenizer#consumeIdentifier()}
    */
   @Test
-  @Category(MaintainedByDiffblue.class)
+  @Category(ContributionFromDiffblue.class)
+  @ManagedByDiffblue
   @MethodsUnderTest({"String Tokenizer.consumeIdentifier()"})
   public void testTokenizerConsumeIdentifier3() throws ParseException {
     // Arrange
@@ -1463,7 +1525,8 @@ public class JsonFormatDiffblueTest {
    * <p>Method under test: {@link Tokenizer#consumeIdentifier()}
    */
   @Test
-  @Category(MaintainedByDiffblue.class)
+  @Category(ContributionFromDiffblue.class)
+  @ManagedByDiffblue
   @MethodsUnderTest({"String Tokenizer.consumeIdentifier()"})
   public void testTokenizerConsumeIdentifier4() throws ParseException {
     // Arrange
@@ -1483,7 +1546,8 @@ public class JsonFormatDiffblueTest {
    * <p>Method under test: {@link Tokenizer#consumeIdentifier()}
    */
   @Test
-  @Category(MaintainedByDiffblue.class)
+  @Category(ContributionFromDiffblue.class)
+  @ManagedByDiffblue
   @MethodsUnderTest({"String Tokenizer.consumeIdentifier()"})
   public void testTokenizerConsumeIdentifier5() throws ParseException {
     // Arrange
@@ -1507,7 +1571,8 @@ public class JsonFormatDiffblueTest {
    * <p>Method under test: {@link Tokenizer#consumeIdentifier()}
    */
   @Test
-  @Category(MaintainedByDiffblue.class)
+  @Category(ContributionFromDiffblue.class)
+  @ManagedByDiffblue
   @MethodsUnderTest({"String Tokenizer.consumeIdentifier()"})
   public void testTokenizerConsumeIdentifier_thenReturnEmptyString() throws ParseException {
     // Arrange
@@ -1528,7 +1593,8 @@ public class JsonFormatDiffblueTest {
    * <p>Method under test: {@link Tokenizer#consumeIdentifier()}
    */
   @Test
-  @Category(MaintainedByDiffblue.class)
+  @Category(ContributionFromDiffblue.class)
+  @ManagedByDiffblue
   @MethodsUnderTest({"String Tokenizer.consumeIdentifier()"})
   public void testTokenizerConsumeIdentifier_thenThrowParseException() throws ParseException {
     // Arrange, Act and Assert
@@ -1541,7 +1607,8 @@ public class JsonFormatDiffblueTest {
    * <p>Method under test: {@link Tokenizer#consumeInt32()}
    */
   @Test
-  @Category(MaintainedByDiffblue.class)
+  @Category(ContributionFromDiffblue.class)
+  @ManagedByDiffblue
   @MethodsUnderTest({"int Tokenizer.consumeInt32()"})
   public void testTokenizerConsumeInt32() throws ParseException {
     // Arrange
@@ -1568,7 +1635,8 @@ public class JsonFormatDiffblueTest {
    * <p>Method under test: {@link Tokenizer#consumeInt32()}
    */
   @Test
-  @Category(MaintainedByDiffblue.class)
+  @Category(ContributionFromDiffblue.class)
+  @ManagedByDiffblue
   @MethodsUnderTest({"int Tokenizer.consumeInt32()"})
   public void testTokenizerConsumeInt32_givenStringBuilderWith0xAppendMin_value()
       throws ParseException {
@@ -1591,7 +1659,8 @@ public class JsonFormatDiffblueTest {
    * <p>Method under test: {@link Tokenizer#consumeInt32()}
    */
   @Test
-  @Category(MaintainedByDiffblue.class)
+  @Category(ContributionFromDiffblue.class)
+  @ManagedByDiffblue
   @MethodsUnderTest({"int Tokenizer.consumeInt32()"})
   public void testTokenizerConsumeInt32_givenStringBuilderWithDashAppendMax_value()
       throws ParseException {
@@ -1615,7 +1684,8 @@ public class JsonFormatDiffblueTest {
    * <p>Method under test: {@link Tokenizer#consumeInt32()}
    */
   @Test
-  @Category(MaintainedByDiffblue.class)
+  @Category(ContributionFromDiffblue.class)
+  @ManagedByDiffblue
   @MethodsUnderTest({"int Tokenizer.consumeInt32()"})
   public void testTokenizerConsumeInt32_givenStringBuilderWithDashAppendMin_value()
       throws ParseException {
@@ -1638,7 +1708,8 @@ public class JsonFormatDiffblueTest {
    * <p>Method under test: {@link Tokenizer#consumeInt32()}
    */
   @Test
-  @Category(MaintainedByDiffblue.class)
+  @Category(ContributionFromDiffblue.class)
+  @ManagedByDiffblue
   @MethodsUnderTest({"int Tokenizer.consumeInt32()"})
   public void testTokenizerConsumeInt32_givenTokenizerWithTextIs0x_thenThrowParseException()
       throws ParseException {
@@ -1657,7 +1728,8 @@ public class JsonFormatDiffblueTest {
    * <p>Method under test: {@link Tokenizer#consumeInt32()}
    */
   @Test
-  @Category(MaintainedByDiffblue.class)
+  @Category(ContributionFromDiffblue.class)
+  @ManagedByDiffblue
   @MethodsUnderTest({"int Tokenizer.consumeInt32()"})
   public void testTokenizerConsumeInt32_givenTokenizerWithTextIsContract_address()
       throws ParseException {
@@ -1676,7 +1748,8 @@ public class JsonFormatDiffblueTest {
    * <p>Method under test: {@link Tokenizer#consumeInt32()}
    */
   @Test
-  @Category(MaintainedByDiffblue.class)
+  @Category(ContributionFromDiffblue.class)
+  @ManagedByDiffblue
   @MethodsUnderTest({"int Tokenizer.consumeInt32()"})
   public void testTokenizerConsumeInt32_givenTokenizerWithTextIsDash_thenThrowParseException()
       throws ParseException {
@@ -1694,7 +1767,8 @@ public class JsonFormatDiffblueTest {
    * <p>Method under test: {@link Tokenizer#consumeInt32()}
    */
   @Test
-  @Category(MaintainedByDiffblue.class)
+  @Category(ContributionFromDiffblue.class)
+  @ManagedByDiffblue
   @MethodsUnderTest({"int Tokenizer.consumeInt32()"})
   public void testTokenizerConsumeInt32_givenTokenizerWithTextIsS_value() throws ParseException {
     // Arrange, Act and Assert
@@ -1712,7 +1786,8 @@ public class JsonFormatDiffblueTest {
    * <p>Method under test: {@link Tokenizer#consumeInt32()}
    */
   @Test
-  @Category(MaintainedByDiffblue.class)
+  @Category(ContributionFromDiffblue.class)
+  @ManagedByDiffblue
   @MethodsUnderTest({"int Tokenizer.consumeInt32()"})
   public void testTokenizerConsumeInt32_thenTokenizerWithTextIs0CurrentTokenIsEmptyString()
       throws ParseException {
@@ -1733,7 +1808,8 @@ public class JsonFormatDiffblueTest {
    * <p>Method under test: {@link Tokenizer#consumeInt64()}
    */
   @Test
-  @Category(MaintainedByDiffblue.class)
+  @Category(ContributionFromDiffblue.class)
+  @ManagedByDiffblue
   @MethodsUnderTest({"long Tokenizer.consumeInt64()"})
   public void testTokenizerConsumeInt64() throws ParseException {
     // Arrange
@@ -1760,7 +1836,8 @@ public class JsonFormatDiffblueTest {
    * <p>Method under test: {@link Tokenizer#consumeInt64()}
    */
   @Test
-  @Category(MaintainedByDiffblue.class)
+  @Category(ContributionFromDiffblue.class)
+  @ManagedByDiffblue
   @MethodsUnderTest({"long Tokenizer.consumeInt64()"})
   public void testTokenizerConsumeInt64_givenStringBuilderWith0xAppendMax_value()
       throws ParseException {
@@ -1784,7 +1861,8 @@ public class JsonFormatDiffblueTest {
    * <p>Method under test: {@link Tokenizer#consumeInt64()}
    */
   @Test
-  @Category(MaintainedByDiffblue.class)
+  @Category(ContributionFromDiffblue.class)
+  @ManagedByDiffblue
   @MethodsUnderTest({"long Tokenizer.consumeInt64()"})
   public void testTokenizerConsumeInt64_givenStringBuilderWithDashAppendMax_value()
       throws ParseException {
@@ -1808,7 +1886,8 @@ public class JsonFormatDiffblueTest {
    * <p>Method under test: {@link Tokenizer#consumeInt64()}
    */
   @Test
-  @Category(MaintainedByDiffblue.class)
+  @Category(ContributionFromDiffblue.class)
+  @ManagedByDiffblue
   @MethodsUnderTest({"long Tokenizer.consumeInt64()"})
   public void testTokenizerConsumeInt64_givenTokenizerWithTextIs0x_thenThrowParseException()
       throws ParseException {
@@ -1827,7 +1906,8 @@ public class JsonFormatDiffblueTest {
    * <p>Method under test: {@link Tokenizer#consumeInt64()}
    */
   @Test
-  @Category(MaintainedByDiffblue.class)
+  @Category(ContributionFromDiffblue.class)
+  @ManagedByDiffblue
   @MethodsUnderTest({"long Tokenizer.consumeInt64()"})
   public void testTokenizerConsumeInt64_givenTokenizerWithTextIsContract_address()
       throws ParseException {
@@ -1846,7 +1926,8 @@ public class JsonFormatDiffblueTest {
    * <p>Method under test: {@link Tokenizer#consumeInt64()}
    */
   @Test
-  @Category(MaintainedByDiffblue.class)
+  @Category(ContributionFromDiffblue.class)
+  @ManagedByDiffblue
   @MethodsUnderTest({"long Tokenizer.consumeInt64()"})
   public void testTokenizerConsumeInt64_givenTokenizerWithTextIsDash_thenThrowParseException()
       throws ParseException {
@@ -1864,7 +1945,8 @@ public class JsonFormatDiffblueTest {
    * <p>Method under test: {@link Tokenizer#consumeInt64()}
    */
   @Test
-  @Category(MaintainedByDiffblue.class)
+  @Category(ContributionFromDiffblue.class)
+  @ManagedByDiffblue
   @MethodsUnderTest({"long Tokenizer.consumeInt64()"})
   public void testTokenizerConsumeInt64_givenTokenizerWithTextIsS_value() throws ParseException {
     // Arrange, Act and Assert
@@ -1882,7 +1964,8 @@ public class JsonFormatDiffblueTest {
    * <p>Method under test: {@link Tokenizer#consumeInt64()}
    */
   @Test
-  @Category(MaintainedByDiffblue.class)
+  @Category(ContributionFromDiffblue.class)
+  @ManagedByDiffblue
   @MethodsUnderTest({"long Tokenizer.consumeInt64()"})
   public void testTokenizerConsumeInt64_thenTokenizerWithTextIs0CurrentTokenIsEmptyString()
       throws ParseException {
@@ -1903,7 +1986,8 @@ public class JsonFormatDiffblueTest {
    * <p>Method under test: {@link Tokenizer#consumeInt32()}
    */
   @Test
-  @Category(MaintainedByDiffblue.class)
+  @Category(ContributionFromDiffblue.class)
+  @ManagedByDiffblue
   @MethodsUnderTest({"int Tokenizer.consumeInt32()"})
   public void testTokenizerConsumeInt322() throws ParseException {
     // Arrange
@@ -1926,7 +2010,8 @@ public class JsonFormatDiffblueTest {
    * <p>Method under test: {@link Tokenizer#consumeInt64()}
    */
   @Test
-  @Category(MaintainedByDiffblue.class)
+  @Category(ContributionFromDiffblue.class)
+  @ManagedByDiffblue
   @MethodsUnderTest({"long Tokenizer.consumeInt64()"})
   public void testTokenizerConsumeInt642() throws ParseException {
     // Arrange
@@ -1954,7 +2039,8 @@ public class JsonFormatDiffblueTest {
    * <p>Method under test: {@link Tokenizer#consumeString()}
    */
   @Test
-  @Category(MaintainedByDiffblue.class)
+  @Category(ContributionFromDiffblue.class)
+  @ManagedByDiffblue
   @MethodsUnderTest({"String Tokenizer.consumeString()"})
   public void testTokenizerConsumeString_givenSegmentWithEnquiryToCharArrayAndOneAndOne()
       throws ParseException {
@@ -1974,7 +2060,8 @@ public class JsonFormatDiffblueTest {
    * <p>Method under test: {@link Tokenizer#consumeString()}
    */
   @Test
-  @Category(MaintainedByDiffblue.class)
+  @Category(ContributionFromDiffblue.class)
+  @ManagedByDiffblue
   @MethodsUnderTest({"String Tokenizer.consumeString()"})
   public void testTokenizerConsumeString_givenTokenizerWithTextIsEmptyString()
       throws ParseException {
@@ -1992,7 +2079,8 @@ public class JsonFormatDiffblueTest {
    * <p>Method under test: {@link Tokenizer#consumeString()}
    */
   @Test
-  @Category(MaintainedByDiffblue.class)
+  @Category(ContributionFromDiffblue.class)
+  @ManagedByDiffblue
   @MethodsUnderTest({"String Tokenizer.consumeString()"})
   public void testTokenizerConsumeString_givenTokenizerWithTextIsS_value() throws ParseException {
     // Arrange, Act and Assert
@@ -2010,7 +2098,8 @@ public class JsonFormatDiffblueTest {
    * <p>Method under test: {@link Tokenizer#consumeUInt32()}
    */
   @Test
-  @Category(MaintainedByDiffblue.class)
+  @Category(ContributionFromDiffblue.class)
+  @ManagedByDiffblue
   @MethodsUnderTest({"int Tokenizer.consumeUInt32()"})
   public void testTokenizerConsumeUInt32_givenTokenizerWithTextIs0x_thenThrowParseException()
       throws ParseException {
@@ -2029,7 +2118,8 @@ public class JsonFormatDiffblueTest {
    * <p>Method under test: {@link Tokenizer#consumeUInt32()}
    */
   @Test
-  @Category(MaintainedByDiffblue.class)
+  @Category(ContributionFromDiffblue.class)
+  @ManagedByDiffblue
   @MethodsUnderTest({"int Tokenizer.consumeUInt32()"})
   public void testTokenizerConsumeUInt32_givenTokenizerWithTextIsContract_address()
       throws ParseException {
@@ -2048,7 +2138,8 @@ public class JsonFormatDiffblueTest {
    * <p>Method under test: {@link Tokenizer#consumeUInt32()}
    */
   @Test
-  @Category(MaintainedByDiffblue.class)
+  @Category(ContributionFromDiffblue.class)
+  @ManagedByDiffblue
   @MethodsUnderTest({"int Tokenizer.consumeUInt32()"})
   public void testTokenizerConsumeUInt32_givenTokenizerWithTextIsDash_thenThrowParseException()
       throws ParseException {
@@ -2066,7 +2157,8 @@ public class JsonFormatDiffblueTest {
    * <p>Method under test: {@link Tokenizer#consumeUInt32()}
    */
   @Test
-  @Category(MaintainedByDiffblue.class)
+  @Category(ContributionFromDiffblue.class)
+  @ManagedByDiffblue
   @MethodsUnderTest({"int Tokenizer.consumeUInt32()"})
   public void testTokenizerConsumeUInt32_givenTokenizerWithTextIsS_value() throws ParseException {
     // Arrange, Act and Assert
@@ -2084,7 +2176,8 @@ public class JsonFormatDiffblueTest {
    * <p>Method under test: {@link Tokenizer#consumeUInt32()}
    */
   @Test
-  @Category(MaintainedByDiffblue.class)
+  @Category(ContributionFromDiffblue.class)
+  @ManagedByDiffblue
   @MethodsUnderTest({"int Tokenizer.consumeUInt32()"})
   public void testTokenizerConsumeUInt32_thenTokenizerWithTextIs0CurrentTokenIsEmptyString()
       throws ParseException {
@@ -2110,7 +2203,8 @@ public class JsonFormatDiffblueTest {
    * <p>Method under test: {@link Tokenizer#consumeUInt64()}
    */
   @Test
-  @Category(MaintainedByDiffblue.class)
+  @Category(ContributionFromDiffblue.class)
+  @ManagedByDiffblue
   @MethodsUnderTest({"long Tokenizer.consumeUInt64()"})
   public void testTokenizerConsumeUInt64_givenTokenizerWithTextIs0x_thenThrowParseException()
       throws ParseException {
@@ -2129,7 +2223,8 @@ public class JsonFormatDiffblueTest {
    * <p>Method under test: {@link Tokenizer#consumeUInt64()}
    */
   @Test
-  @Category(MaintainedByDiffblue.class)
+  @Category(ContributionFromDiffblue.class)
+  @ManagedByDiffblue
   @MethodsUnderTest({"long Tokenizer.consumeUInt64()"})
   public void testTokenizerConsumeUInt64_givenTokenizerWithTextIsContract_address()
       throws ParseException {
@@ -2148,7 +2243,8 @@ public class JsonFormatDiffblueTest {
    * <p>Method under test: {@link Tokenizer#consumeUInt64()}
    */
   @Test
-  @Category(MaintainedByDiffblue.class)
+  @Category(ContributionFromDiffblue.class)
+  @ManagedByDiffblue
   @MethodsUnderTest({"long Tokenizer.consumeUInt64()"})
   public void testTokenizerConsumeUInt64_givenTokenizerWithTextIsDash_thenThrowParseException()
       throws ParseException {
@@ -2166,7 +2262,8 @@ public class JsonFormatDiffblueTest {
    * <p>Method under test: {@link Tokenizer#consumeUInt64()}
    */
   @Test
-  @Category(MaintainedByDiffblue.class)
+  @Category(ContributionFromDiffblue.class)
+  @ManagedByDiffblue
   @MethodsUnderTest({"long Tokenizer.consumeUInt64()"})
   public void testTokenizerConsumeUInt64_givenTokenizerWithTextIsS_value() throws ParseException {
     // Arrange, Act and Assert
@@ -2184,7 +2281,8 @@ public class JsonFormatDiffblueTest {
    * <p>Method under test: {@link Tokenizer#consumeUInt64()}
    */
   @Test
-  @Category(MaintainedByDiffblue.class)
+  @Category(ContributionFromDiffblue.class)
+  @ManagedByDiffblue
   @MethodsUnderTest({"long Tokenizer.consumeUInt64()"})
   public void testTokenizerConsumeUInt64_thenTokenizerWithTextIs0CurrentTokenIsEmptyString()
       throws ParseException {
@@ -2210,7 +2308,8 @@ public class JsonFormatDiffblueTest {
    * <p>Method under test: {@link Tokenizer#consume(String)}
    */
   @Test
-  @Category(MaintainedByDiffblue.class)
+  @Category(ContributionFromDiffblue.class)
+  @ManagedByDiffblue
   @MethodsUnderTest({"void Tokenizer.consume(String)"})
   public void testTokenizerConsume_givenTokenizerWithTextIsS_value_thenThrowParseException()
       throws ParseException {
@@ -2231,7 +2330,8 @@ public class JsonFormatDiffblueTest {
    * <p>Method under test: {@link Tokenizer#consume(String)}
    */
   @Test
-  @Category(MaintainedByDiffblue.class)
+  @Category(ContributionFromDiffblue.class)
+  @ManagedByDiffblue
   @MethodsUnderTest({"void Tokenizer.consume(String)"})
   public void testTokenizerConsume_thenTokenizerWithTextIs42CurrentTokenIsEmptyString()
       throws ParseException {
@@ -2256,7 +2356,8 @@ public class JsonFormatDiffblueTest {
    * <p>Method under test: {@link Tokenizer#consume(String)}
    */
   @Test
-  @Category(MaintainedByDiffblue.class)
+  @Category(ContributionFromDiffblue.class)
+  @ManagedByDiffblue
   @MethodsUnderTest({"void Tokenizer.consume(String)"})
   public void testTokenizerConsume_thenTokenizerWithTextIsEmptyStringCurrentTokenIsEmptyString()
       throws ParseException {
@@ -2276,7 +2377,8 @@ public class JsonFormatDiffblueTest {
    * <p>Method under test: {@link Tokenizer#currentToken()}
    */
   @Test
-  @Category(MaintainedByDiffblue.class)
+  @Category(ContributionFromDiffblue.class)
+  @ManagedByDiffblue
   @MethodsUnderTest({"String Tokenizer.currentToken()"})
   public void testTokenizerCurrentToken() {
     // Arrange, Act and Assert
@@ -2293,7 +2395,8 @@ public class JsonFormatDiffblueTest {
    * <p>Method under test: {@link Tokenizer#lookingAtBoolean()}
    */
   @Test
-  @Category(MaintainedByDiffblue.class)
+  @Category(ContributionFromDiffblue.class)
+  @ManagedByDiffblue
   @MethodsUnderTest({"boolean Tokenizer.lookingAtBoolean()"})
   public void testTokenizerLookingAtBoolean_givenTokenizerWithTextIsEmptyString() {
     // Arrange, Act and Assert
@@ -2311,7 +2414,8 @@ public class JsonFormatDiffblueTest {
    * <p>Method under test: {@link Tokenizer#lookingAtBoolean()}
    */
   @Test
-  @Category(MaintainedByDiffblue.class)
+  @Category(ContributionFromDiffblue.class)
+  @ManagedByDiffblue
   @MethodsUnderTest({"boolean Tokenizer.lookingAtBoolean()"})
   public void testTokenizerLookingAtBoolean_givenTokenizerWithTextIsFalseToString() {
     // Arrange, Act and Assert
@@ -2329,7 +2433,8 @@ public class JsonFormatDiffblueTest {
    * <p>Method under test: {@link Tokenizer#lookingAtBoolean()}
    */
   @Test
-  @Category(MaintainedByDiffblue.class)
+  @Category(ContributionFromDiffblue.class)
+  @ManagedByDiffblue
   @MethodsUnderTest({"boolean Tokenizer.lookingAtBoolean()"})
   public void testTokenizerLookingAtBoolean_givenTokenizerWithTextIsS_value_thenReturnFalse() {
     // Arrange, Act and Assert
@@ -2347,7 +2452,8 @@ public class JsonFormatDiffblueTest {
    * <p>Method under test: {@link Tokenizer#lookingAtBoolean()}
    */
   @Test
-  @Category(MaintainedByDiffblue.class)
+  @Category(ContributionFromDiffblue.class)
+  @ManagedByDiffblue
   @MethodsUnderTest({"boolean Tokenizer.lookingAtBoolean()"})
   public void testTokenizerLookingAtBoolean_givenTokenizerWithTextIsTrueToString() {
     // Arrange, Act and Assert
@@ -2365,7 +2471,8 @@ public class JsonFormatDiffblueTest {
    * <p>Method under test: {@link Tokenizer#lookingAtInteger()}
    */
   @Test
-  @Category(MaintainedByDiffblue.class)
+  @Category(ContributionFromDiffblue.class)
+  @ManagedByDiffblue
   @MethodsUnderTest({"boolean Tokenizer.lookingAtInteger()"})
   public void testTokenizerLookingAtInteger_givenTokenizerWithTextIs42_thenReturnTrue() {
     // Arrange, Act and Assert
@@ -2383,7 +2490,8 @@ public class JsonFormatDiffblueTest {
    * <p>Method under test: {@link Tokenizer#lookingAtInteger()}
    */
   @Test
-  @Category(MaintainedByDiffblue.class)
+  @Category(ContributionFromDiffblue.class)
+  @ManagedByDiffblue
   @MethodsUnderTest({"boolean Tokenizer.lookingAtInteger()"})
   public void testTokenizerLookingAtInteger_givenTokenizerWithTextIsDash_thenReturnTrue() {
     // Arrange, Act and Assert
@@ -2400,7 +2508,8 @@ public class JsonFormatDiffblueTest {
    * <p>Method under test: {@link Tokenizer#lookingAtInteger()}
    */
   @Test
-  @Category(MaintainedByDiffblue.class)
+  @Category(ContributionFromDiffblue.class)
+  @ManagedByDiffblue
   @MethodsUnderTest({"boolean Tokenizer.lookingAtInteger()"})
   public void testTokenizerLookingAtInteger_givenTokenizerWithTextIsEmptyString() {
     // Arrange, Act and Assert
@@ -2418,7 +2527,8 @@ public class JsonFormatDiffblueTest {
    * <p>Method under test: {@link Tokenizer#lookingAtInteger()}
    */
   @Test
-  @Category(MaintainedByDiffblue.class)
+  @Category(ContributionFromDiffblue.class)
+  @ManagedByDiffblue
   @MethodsUnderTest({"boolean Tokenizer.lookingAtInteger()"})
   public void testTokenizerLookingAtInteger_givenTokenizerWithTextIsS_value_thenReturnFalse() {
     // Arrange, Act and Assert
@@ -2435,7 +2545,8 @@ public class JsonFormatDiffblueTest {
    * <p>Method under test: {@link Tokenizer#Tokenizer(CharSequence)}
    */
   @Test
-  @Category(MaintainedByDiffblue.class)
+  @Category(ContributionFromDiffblue.class)
+  @ManagedByDiffblue
   @MethodsUnderTest({"void Tokenizer.<init>(CharSequence)"})
   public void testTokenizerNewTokenizer_thenReturnCurrentTokenIsEnquiry() {
     // Arrange
@@ -2456,7 +2567,8 @@ public class JsonFormatDiffblueTest {
    * <p>Method under test: {@link Tokenizer#Tokenizer(CharSequence)}
    */
   @Test
-  @Category(MaintainedByDiffblue.class)
+  @Category(ContributionFromDiffblue.class)
+  @ManagedByDiffblue
   @MethodsUnderTest({"void Tokenizer.<init>(CharSequence)"})
   public void testTokenizerNewTokenizer_whenLineSeparator_thenReturnCurrentTokenIsEmptyString() {
     // Arrange, Act and Assert
@@ -2474,7 +2586,8 @@ public class JsonFormatDiffblueTest {
    * <p>Method under test: {@link Tokenizer#Tokenizer(CharSequence)}
    */
   @Test
-  @Category(MaintainedByDiffblue.class)
+  @Category(ContributionFromDiffblue.class)
+  @ManagedByDiffblue
   @MethodsUnderTest({"void Tokenizer.<init>(CharSequence)"})
   public void testTokenizerNewTokenizer_whenS_value_thenReturnCurrentTokenIsS_value() {
     // Arrange, Act and Assert
@@ -2491,7 +2604,8 @@ public class JsonFormatDiffblueTest {
    * <p>Method under test: {@link Tokenizer#Tokenizer(CharSequence)}
    */
   @Test
-  @Category(MaintainedByDiffblue.class)
+  @Category(ContributionFromDiffblue.class)
+  @ManagedByDiffblue
   @MethodsUnderTest({"void Tokenizer.<init>(CharSequence)"})
   public void testTokenizerNewTokenizer_whenSpaceSpaceSpace() {
     // Arrange, Act and Assert
@@ -2504,7 +2618,8 @@ public class JsonFormatDiffblueTest {
    * <p>Method under test: {@link Tokenizer#nextToken()}
    */
   @Test
-  @Category(MaintainedByDiffblue.class)
+  @Category(ContributionFromDiffblue.class)
+  @ManagedByDiffblue
   @MethodsUnderTest({"void Tokenizer.nextToken()"})
   public void testTokenizerNextToken() {
     // Arrange
@@ -2528,7 +2643,8 @@ public class JsonFormatDiffblueTest {
    * <p>Method under test: {@link Tokenizer#nextToken()}
    */
   @Test
-  @Category(MaintainedByDiffblue.class)
+  @Category(ContributionFromDiffblue.class)
+  @ManagedByDiffblue
   @MethodsUnderTest({"void Tokenizer.nextToken()"})
   public void testTokenizerNextToken_thenTokenizerWithTextIsNameImplCurrentTokenIsEnquiry() {
     // Arrange
@@ -2553,7 +2669,8 @@ public class JsonFormatDiffblueTest {
    * <p>Method under test: {@link Tokenizer#nextToken()}
    */
   @Test
-  @Category(MaintainedByDiffblue.class)
+  @Category(ContributionFromDiffblue.class)
+  @ManagedByDiffblue
   @MethodsUnderTest({"void Tokenizer.nextToken()"})
   public void testTokenizerNextToken_thenTokenizerWithTextIsS_valueCurrentTokenIsEmptyString() {
     // Arrange
@@ -2572,7 +2689,8 @@ public class JsonFormatDiffblueTest {
    * <p>Method under test: {@link Tokenizer#parseException(String)}
    */
   @Test
-  @Category(MaintainedByDiffblue.class)
+  @Category(ContributionFromDiffblue.class)
+  @ManagedByDiffblue
   @MethodsUnderTest({"ParseException Tokenizer.parseException(String)"})
   public void testTokenizerParseException() {
     // Arrange and Act
@@ -2593,7 +2711,8 @@ public class JsonFormatDiffblueTest {
    * <p>Method under test: {@link Tokenizer#parseExceptionPreviousToken(String)}
    */
   @Test
-  @Category(MaintainedByDiffblue.class)
+  @Category(ContributionFromDiffblue.class)
+  @ManagedByDiffblue
   @MethodsUnderTest({"ParseException Tokenizer.parseExceptionPreviousToken(String)"})
   public void testTokenizerParseExceptionPreviousToken() {
     // Arrange and Act
@@ -2617,7 +2736,8 @@ public class JsonFormatDiffblueTest {
    * <p>Method under test: {@link Tokenizer#tryConsume(String)}
    */
   @Test
-  @Category(MaintainedByDiffblue.class)
+  @Category(ContributionFromDiffblue.class)
+  @ManagedByDiffblue
   @MethodsUnderTest({"boolean Tokenizer.tryConsume(String)"})
   public void testTokenizerTryConsume() {
     // Arrange
@@ -2642,7 +2762,8 @@ public class JsonFormatDiffblueTest {
    * <p>Method under test: {@link Tokenizer#tryConsume(String)}
    */
   @Test
-  @Category(MaintainedByDiffblue.class)
+  @Category(ContributionFromDiffblue.class)
+  @ManagedByDiffblue
   @MethodsUnderTest({"boolean Tokenizer.tryConsume(String)"})
   public void testTokenizerTryConsume_givenTokenizerWithTextIsS_value_thenReturnFalse() {
     // Arrange
@@ -2664,7 +2785,8 @@ public class JsonFormatDiffblueTest {
    * <p>Method under test: {@link Tokenizer#tryConsume(String)}
    */
   @Test
-  @Category(MaintainedByDiffblue.class)
+  @Category(ContributionFromDiffblue.class)
+  @ManagedByDiffblue
   @MethodsUnderTest({"boolean Tokenizer.tryConsume(String)"})
   public void testTokenizerTryConsume_thenTokenizerWithTextIs42CurrentTokenIsEmptyString() {
     // Arrange
@@ -2688,7 +2810,8 @@ public class JsonFormatDiffblueTest {
    * <p>Method under test: {@link Tokenizer#unescapeBytesSelfType(String, String)}
    */
   @Test
-  @Category(MaintainedByDiffblue.class)
+  @Category(ContributionFromDiffblue.class)
+  @ManagedByDiffblue
   @MethodsUnderTest({"ByteString Tokenizer.unescapeBytesSelfType(String, String)"})
   public void testTokenizerUnescapeBytesSelfType_thenThrowInvalidEscapeSequence()
       throws InvalidEscapeSequence {
@@ -2711,7 +2834,8 @@ public class JsonFormatDiffblueTest {
    * <p>Method under test: {@link Tokenizer#unescapeBytesSelfType(String, String)}
    */
   @Test
-  @Category(MaintainedByDiffblue.class)
+  @Category(ContributionFromDiffblue.class)
+  @ManagedByDiffblue
   @MethodsUnderTest({"ByteString Tokenizer.unescapeBytesSelfType(String, String)"})
   public void testTokenizerUnescapeBytesSelfType_when0x_thenReturnToStringUtf8IsEmptyString()
       throws InvalidEscapeSequence {
@@ -2735,7 +2859,8 @@ public class JsonFormatDiffblueTest {
    * <p>Method under test: {@link Tokenizer#unescapeBytesSelfType(String, String)}
    */
   @Test
-  @Category(MaintainedByDiffblue.class)
+  @Category(ContributionFromDiffblue.class)
+  @ManagedByDiffblue
   @MethodsUnderTest({"ByteString Tokenizer.unescapeBytesSelfType(String, String)"})
   public void testTokenizerUnescapeBytesSelfType_whenEmptyString() throws InvalidEscapeSequence {
     // Arrange and Act
@@ -2759,7 +2884,8 @@ public class JsonFormatDiffblueTest {
    * <p>Method under test: {@link Tokenizer#unescapeBytesSelfType(String, String)}
    */
   @Test
-  @Category(MaintainedByDiffblue.class)
+  @Category(ContributionFromDiffblue.class)
+  @ManagedByDiffblue
   @MethodsUnderTest({"ByteString Tokenizer.unescapeBytesSelfType(String, String)"})
   public void testTokenizerUnescapeBytesSelfType_whenNull_thenThrowInvalidEscapeSequence()
       throws InvalidEscapeSequence {
@@ -2780,7 +2906,8 @@ public class JsonFormatDiffblueTest {
    * <p>Method under test: {@link Tokenizer#unescapeBytes(CharSequence)}
    */
   @Test
-  @Category(MaintainedByDiffblue.class)
+  @Category(ContributionFromDiffblue.class)
+  @ManagedByDiffblue
   @MethodsUnderTest({"ByteString Tokenizer.unescapeBytes(CharSequence)"})
   public void testTokenizerUnescapeBytes_when0x_thenReturnToStringUtf8IsEmptyString()
       throws InvalidEscapeSequence {
@@ -2804,7 +2931,8 @@ public class JsonFormatDiffblueTest {
    * <p>Method under test: {@link Tokenizer#unescapeBytes(CharSequence)}
    */
   @Test
-  @Category(MaintainedByDiffblue.class)
+  @Category(ContributionFromDiffblue.class)
+  @ManagedByDiffblue
   @MethodsUnderTest({"ByteString Tokenizer.unescapeBytes(CharSequence)"})
   public void testTokenizerUnescapeBytes_whenCall_data_thenThrowInvalidEscapeSequence()
       throws InvalidEscapeSequence {
@@ -2823,7 +2951,8 @@ public class JsonFormatDiffblueTest {
    * <p>Method under test: {@link Tokenizer#unescapeBytes(CharSequence)}
    */
   @Test
-  @Category(MaintainedByDiffblue.class)
+  @Category(ContributionFromDiffblue.class)
+  @ManagedByDiffblue
   @MethodsUnderTest({"ByteString Tokenizer.unescapeBytes(CharSequence)"})
   public void testTokenizerUnescapeBytes_whenNull_thenThrowInvalidEscapeSequence()
       throws InvalidEscapeSequence {
@@ -2842,7 +2971,8 @@ public class JsonFormatDiffblueTest {
    * <p>Method under test: {@link Tokenizer#unescapeBytes(CharSequence)}
    */
   @Test
-  @Category(MaintainedByDiffblue.class)
+  @Category(ContributionFromDiffblue.class)
+  @ManagedByDiffblue
   @MethodsUnderTest({"ByteString Tokenizer.unescapeBytes(CharSequence)"})
   public void testTokenizerUnescapeBytes_whenS_value_thenThrowInvalidEscapeSequence()
       throws InvalidEscapeSequence {
@@ -2861,7 +2991,8 @@ public class JsonFormatDiffblueTest {
    * <p>Method under test: {@link JsonFormat#unicodeEscaped(char)}
    */
   @Test
-  @Category(MaintainedByDiffblue.class)
+  @Category(ContributionFromDiffblue.class)
+  @ManagedByDiffblue
   @MethodsUnderTest({"String JsonFormat.unicodeEscaped(char)"})
   public void testUnicodeEscaped_whenA_thenReturnU0041() {
     // Arrange, Act and Assert
@@ -2879,7 +3010,8 @@ public class JsonFormatDiffblueTest {
    * <p>Method under test: {@link JsonFormat#unicodeEscaped(char)}
    */
   @Test
-  @Category(MaintainedByDiffblue.class)
+  @Category(ContributionFromDiffblue.class)
+  @ManagedByDiffblue
   @MethodsUnderTest({"String JsonFormat.unicodeEscaped(char)"})
   public void testUnicodeEscaped_whenShiftIn_thenReturnU000f() {
     // Arrange, Act and Assert
@@ -2897,7 +3029,8 @@ public class JsonFormatDiffblueTest {
    * <p>Method under test: {@link JsonFormat#unicodeEscaped(char)}
    */
   @Test
-  @Category(MaintainedByDiffblue.class)
+  @Category(ContributionFromDiffblue.class)
+  @ManagedByDiffblue
   @MethodsUnderTest({"String JsonFormat.unicodeEscaped(char)"})
   public void testUnicodeEscaped_when_thenReturnU0100() {
     // Arrange, Act and Assert
@@ -2915,7 +3048,8 @@ public class JsonFormatDiffblueTest {
    * <p>Method under test: {@link JsonFormat#unicodeEscaped(char)}
    */
   @Test
-  @Category(MaintainedByDiffblue.class)
+  @Category(ContributionFromDiffblue.class)
+  @ManagedByDiffblue
   @MethodsUnderTest({"String JsonFormat.unicodeEscaped(char)"})
   public void testUnicodeEscaped_when_thenReturnU1000() {
     // Arrange, Act and Assert
@@ -2933,7 +3067,8 @@ public class JsonFormatDiffblueTest {
    * <p>Method under test: {@link JsonFormat#unescapeBytes(CharSequence)}
    */
   @Test
-  @Category(MaintainedByDiffblue.class)
+  @Category(ContributionFromDiffblue.class)
+  @ManagedByDiffblue
   @MethodsUnderTest({"ByteString JsonFormat.unescapeBytes(CharSequence)"})
   public void testUnescapeBytes_when0x_thenReturnToStringUtf8IsEmptyString()
       throws InvalidEscapeSequence {
@@ -2957,7 +3092,8 @@ public class JsonFormatDiffblueTest {
    * <p>Method under test: {@link JsonFormat#unescapeBytes(CharSequence)}
    */
   @Test
-  @Category(MaintainedByDiffblue.class)
+  @Category(ContributionFromDiffblue.class)
+  @ManagedByDiffblue
   @MethodsUnderTest({"ByteString JsonFormat.unescapeBytes(CharSequence)"})
   public void testUnescapeBytes_whenCall_data_thenThrowInvalidEscapeSequence()
       throws InvalidEscapeSequence {
@@ -2976,7 +3112,8 @@ public class JsonFormatDiffblueTest {
    * <p>Method under test: {@link JsonFormat#unescapeBytes(CharSequence)}
    */
   @Test
-  @Category(MaintainedByDiffblue.class)
+  @Category(ContributionFromDiffblue.class)
+  @ManagedByDiffblue
   @MethodsUnderTest({"ByteString JsonFormat.unescapeBytes(CharSequence)"})
   public void testUnescapeBytes_whenNull_thenThrowInvalidEscapeSequence()
       throws InvalidEscapeSequence {
@@ -2995,7 +3132,8 @@ public class JsonFormatDiffblueTest {
    * <p>Method under test: {@link JsonFormat#unescapeBytes(CharSequence)}
    */
   @Test
-  @Category(MaintainedByDiffblue.class)
+  @Category(ContributionFromDiffblue.class)
+  @ManagedByDiffblue
   @MethodsUnderTest({"ByteString JsonFormat.unescapeBytes(CharSequence)"})
   public void testUnescapeBytes_whenS_value_thenThrowInvalidEscapeSequence()
       throws InvalidEscapeSequence {
@@ -3009,7 +3147,8 @@ public class JsonFormatDiffblueTest {
    * <p>Method under test: {@link JsonFormat#escapeText(String)}
    */
   @Test
-  @Category(MaintainedByDiffblue.class)
+  @Category(ContributionFromDiffblue.class)
+  @ManagedByDiffblue
   @MethodsUnderTest({"String JsonFormat.escapeText(String)"})
   public void testEscapeText() {
     // Arrange, Act and Assert
@@ -3027,7 +3166,8 @@ public class JsonFormatDiffblueTest {
    * <p>Method under test: {@link JsonFormat#escapeText(String)}
    */
   @Test
-  @Category(MaintainedByDiffblue.class)
+  @Category(ContributionFromDiffblue.class)
+  @ManagedByDiffblue
   @MethodsUnderTest({"String JsonFormat.escapeText(String)"})
   public void testEscapeText_whenHttpsExampleOrgExample_thenReturnHttpsExampleOrgExample() {
     // Arrange, Act and Assert
@@ -3046,7 +3186,8 @@ public class JsonFormatDiffblueTest {
    * <p>Method under test: {@link JsonFormat#escapeText(String)}
    */
   @Test
-  @Category(MaintainedByDiffblue.class)
+  @Category(ContributionFromDiffblue.class)
+  @ManagedByDiffblue
   @MethodsUnderTest({"String JsonFormat.escapeText(String)"})
   public void testEscapeText_whenQuotationMark_thenReturnBackslashQuotationMark() {
     // Arrange, Act and Assert
@@ -3065,7 +3206,8 @@ public class JsonFormatDiffblueTest {
    * <p>Method under test: {@link JsonFormat#appendEscapedUnicode(StringBuilder, char)}
    */
   @Test
-  @Category(MaintainedByDiffblue.class)
+  @Category(ContributionFromDiffblue.class)
+  @ManagedByDiffblue
   @MethodsUnderTest({"void JsonFormat.appendEscapedUnicode(StringBuilder, char)"})
   public void testAppendEscapedUnicode_whenA_thenStringBuilderWithFooToStringIsFooU0041() {
     // Arrange
@@ -3090,7 +3232,8 @@ public class JsonFormatDiffblueTest {
    * <p>Method under test: {@link JsonFormat#appendEscapedUnicode(StringBuilder, char)}
    */
   @Test
-  @Category(MaintainedByDiffblue.class)
+  @Category(ContributionFromDiffblue.class)
+  @ManagedByDiffblue
   @MethodsUnderTest({"void JsonFormat.appendEscapedUnicode(StringBuilder, char)"})
   public void testAppendEscapedUnicode_whenShiftIn_thenStringBuilderWithFooToStringIsFooU000f() {
     // Arrange
@@ -3115,7 +3258,8 @@ public class JsonFormatDiffblueTest {
    * <p>Method under test: {@link JsonFormat#appendEscapedUnicode(StringBuilder, char)}
    */
   @Test
-  @Category(MaintainedByDiffblue.class)
+  @Category(ContributionFromDiffblue.class)
+  @ManagedByDiffblue
   @MethodsUnderTest({"void JsonFormat.appendEscapedUnicode(StringBuilder, char)"})
   public void testAppendEscapedUnicode_when_thenStringBuilderWithFooToStringIsFooU0100() {
     // Arrange
@@ -3140,7 +3284,8 @@ public class JsonFormatDiffblueTest {
    * <p>Method under test: {@link JsonFormat#appendEscapedUnicode(StringBuilder, char)}
    */
   @Test
-  @Category(MaintainedByDiffblue.class)
+  @Category(ContributionFromDiffblue.class)
+  @ManagedByDiffblue
   @MethodsUnderTest({"void JsonFormat.appendEscapedUnicode(StringBuilder, char)"})
   public void testAppendEscapedUnicode_when_thenStringBuilderWithFooToStringIsFooU1000() {
     // Arrange
@@ -3163,7 +3308,8 @@ public class JsonFormatDiffblueTest {
    * <p>Method under test: {@link JsonFormat#unescapeText(String)}
    */
   @Test
-  @Category(MaintainedByDiffblue.class)
+  @Category(ContributionFromDiffblue.class)
+  @ManagedByDiffblue
   @MethodsUnderTest({"String JsonFormat.unescapeText(String)"})
   public void testUnescapeText_thenReturnBackslashQuotationMark() throws InvalidEscapeSequence {
     // Arrange, Act and Assert
@@ -3181,7 +3327,8 @@ public class JsonFormatDiffblueTest {
    * <p>Method under test: {@link JsonFormat#unescapeText(String)}
    */
   @Test
-  @Category(MaintainedByDiffblue.class)
+  @Category(ContributionFromDiffblue.class)
+  @ManagedByDiffblue
   @MethodsUnderTest({"String JsonFormat.unescapeText(String)"})
   public void testUnescapeText_whenHttpsExampleOrgExample_thenReturnHttpsExampleOrgExample()
       throws InvalidEscapeSequence {
@@ -3201,7 +3348,8 @@ public class JsonFormatDiffblueTest {
    * <p>Method under test: {@link JsonFormat#parseInt32(String)}
    */
   @Test
-  @Category(MaintainedByDiffblue.class)
+  @Category(ContributionFromDiffblue.class)
+  @ManagedByDiffblue
   @MethodsUnderTest({"int JsonFormat.parseInt32(String)"})
   public void testParseInt32_when0_thenReturnZero() throws NumberFormatException {
     // Arrange, Act and Assert
@@ -3219,7 +3367,8 @@ public class JsonFormatDiffblueTest {
    * <p>Method under test: {@link JsonFormat#parseInt32(String)}
    */
   @Test
-  @Category(MaintainedByDiffblue.class)
+  @Category(ContributionFromDiffblue.class)
+  @ManagedByDiffblue
   @MethodsUnderTest({"int JsonFormat.parseInt32(String)"})
   public void testParseInt32_when0_thenReturnZero2() throws NumberFormatException {
     // Arrange, Act and Assert
@@ -3237,7 +3386,8 @@ public class JsonFormatDiffblueTest {
    * <p>Method under test: {@link JsonFormat#parseInt32(String)}
    */
   @Test
-  @Category(MaintainedByDiffblue.class)
+  @Category(ContributionFromDiffblue.class)
+  @ManagedByDiffblue
   @MethodsUnderTest({"int JsonFormat.parseInt32(String)"})
   public void testParseInt32_when0x0_thenReturnZero() throws NumberFormatException {
     // Arrange, Act and Assert
@@ -3255,7 +3405,8 @@ public class JsonFormatDiffblueTest {
    * <p>Method under test: {@link JsonFormat#parseInt32(String)}
    */
   @Test
-  @Category(MaintainedByDiffblue.class)
+  @Category(ContributionFromDiffblue.class)
+  @ManagedByDiffblue
   @MethodsUnderTest({"int JsonFormat.parseInt32(String)"})
   public void testParseInt32_when42_thenReturnFortyTwo() throws NumberFormatException {
     // Arrange, Act and Assert
@@ -3273,7 +3424,8 @@ public class JsonFormatDiffblueTest {
    * <p>Method under test: {@link JsonFormat#parseUInt32(String)}
    */
   @Test
-  @Category(MaintainedByDiffblue.class)
+  @Category(ContributionFromDiffblue.class)
+  @ManagedByDiffblue
   @MethodsUnderTest({"int JsonFormat.parseUInt32(String)"})
   public void testParseUInt32_when0_thenReturnZero() throws NumberFormatException {
     // Arrange, Act and Assert
@@ -3291,7 +3443,8 @@ public class JsonFormatDiffblueTest {
    * <p>Method under test: {@link JsonFormat#parseUInt32(String)}
    */
   @Test
-  @Category(MaintainedByDiffblue.class)
+  @Category(ContributionFromDiffblue.class)
+  @ManagedByDiffblue
   @MethodsUnderTest({"int JsonFormat.parseUInt32(String)"})
   public void testParseUInt32_when0x0_thenReturnZero() throws NumberFormatException {
     // Arrange, Act and Assert
@@ -3309,7 +3462,8 @@ public class JsonFormatDiffblueTest {
    * <p>Method under test: {@link JsonFormat#parseUInt32(String)}
    */
   @Test
-  @Category(MaintainedByDiffblue.class)
+  @Category(ContributionFromDiffblue.class)
+  @ManagedByDiffblue
   @MethodsUnderTest({"int JsonFormat.parseUInt32(String)"})
   public void testParseUInt32_when42_thenReturnFortyTwo() throws NumberFormatException {
     // Arrange, Act and Assert
@@ -3327,7 +3481,8 @@ public class JsonFormatDiffblueTest {
    * <p>Method under test: {@link JsonFormat#parseUInt32(String)}
    */
   @Test
-  @Category(MaintainedByDiffblue.class)
+  @Category(ContributionFromDiffblue.class)
+  @ManagedByDiffblue
   @MethodsUnderTest({"int JsonFormat.parseUInt32(String)"})
   public void testParseUInt32_whenDash_thenThrowNumberFormatException()
       throws NumberFormatException {
@@ -3346,7 +3501,8 @@ public class JsonFormatDiffblueTest {
    * <p>Method under test: {@link JsonFormat#parseInt64(String)}
    */
   @Test
-  @Category(MaintainedByDiffblue.class)
+  @Category(ContributionFromDiffblue.class)
+  @ManagedByDiffblue
   @MethodsUnderTest({"long JsonFormat.parseInt64(String)"})
   public void testParseInt64_when0_thenReturnZero() throws NumberFormatException {
     // Arrange, Act and Assert
@@ -3364,7 +3520,8 @@ public class JsonFormatDiffblueTest {
    * <p>Method under test: {@link JsonFormat#parseInt64(String)}
    */
   @Test
-  @Category(MaintainedByDiffblue.class)
+  @Category(ContributionFromDiffblue.class)
+  @ManagedByDiffblue
   @MethodsUnderTest({"long JsonFormat.parseInt64(String)"})
   public void testParseInt64_when0_thenReturnZero2() throws NumberFormatException {
     // Arrange, Act and Assert
@@ -3382,7 +3539,8 @@ public class JsonFormatDiffblueTest {
    * <p>Method under test: {@link JsonFormat#parseInt64(String)}
    */
   @Test
-  @Category(MaintainedByDiffblue.class)
+  @Category(ContributionFromDiffblue.class)
+  @ManagedByDiffblue
   @MethodsUnderTest({"long JsonFormat.parseInt64(String)"})
   public void testParseInt64_when0x0_thenReturnZero() throws NumberFormatException {
     // Arrange, Act and Assert
@@ -3400,7 +3558,8 @@ public class JsonFormatDiffblueTest {
    * <p>Method under test: {@link JsonFormat#parseInt64(String)}
    */
   @Test
-  @Category(MaintainedByDiffblue.class)
+  @Category(ContributionFromDiffblue.class)
+  @ManagedByDiffblue
   @MethodsUnderTest({"long JsonFormat.parseInt64(String)"})
   public void testParseInt64_when42_thenReturnFortyTwo() throws NumberFormatException {
     // Arrange, Act and Assert
@@ -3418,7 +3577,8 @@ public class JsonFormatDiffblueTest {
    * <p>Method under test: {@link JsonFormat#parseUInt64(String)}
    */
   @Test
-  @Category(MaintainedByDiffblue.class)
+  @Category(ContributionFromDiffblue.class)
+  @ManagedByDiffblue
   @MethodsUnderTest({"long JsonFormat.parseUInt64(String)"})
   public void testParseUInt64_when0_thenReturnZero() throws NumberFormatException {
     // Arrange, Act and Assert
@@ -3436,7 +3596,8 @@ public class JsonFormatDiffblueTest {
    * <p>Method under test: {@link JsonFormat#parseUInt64(String)}
    */
   @Test
-  @Category(MaintainedByDiffblue.class)
+  @Category(ContributionFromDiffblue.class)
+  @ManagedByDiffblue
   @MethodsUnderTest({"long JsonFormat.parseUInt64(String)"})
   public void testParseUInt64_when0x0_thenReturnZero() throws NumberFormatException {
     // Arrange, Act and Assert
@@ -3454,7 +3615,8 @@ public class JsonFormatDiffblueTest {
    * <p>Method under test: {@link JsonFormat#parseUInt64(String)}
    */
   @Test
-  @Category(MaintainedByDiffblue.class)
+  @Category(ContributionFromDiffblue.class)
+  @ManagedByDiffblue
   @MethodsUnderTest({"long JsonFormat.parseUInt64(String)"})
   public void testParseUInt64_when42_thenReturnFortyTwo() throws NumberFormatException {
     // Arrange, Act and Assert
@@ -3472,7 +3634,8 @@ public class JsonFormatDiffblueTest {
    * <p>Method under test: {@link JsonFormat#parseUInt64(String)}
    */
   @Test
-  @Category(MaintainedByDiffblue.class)
+  @Category(ContributionFromDiffblue.class)
+  @ManagedByDiffblue
   @MethodsUnderTest({"long JsonFormat.parseUInt64(String)"})
   public void testParseUInt64_whenDash_thenThrowNumberFormatException()
       throws NumberFormatException {

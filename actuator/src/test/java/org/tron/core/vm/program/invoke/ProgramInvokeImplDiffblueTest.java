@@ -7,7 +7,8 @@ import static org.junit.Assert.assertNotEquals;
 import static org.junit.Assert.assertSame;
 import static org.junit.Assert.assertTrue;
 import static org.mockito.Mockito.mock;
-import com.diffblue.cover.annotations.MaintainedByDiffblue;
+import com.diffblue.cover.annotations.ContributionFromDiffblue;
+import com.diffblue.cover.annotations.ManagedByDiffblue;
 import com.diffblue.cover.annotations.MethodsUnderTest;
 import java.io.UnsupportedEncodingException;
 import org.junit.Test;
@@ -28,7 +29,8 @@ public class ProgramInvokeImplDiffblueTest {
    * DataWord, Repository, int, boolean, boolean, long, long, long)}
    */
   @Test
-  @Category(MaintainedByDiffblue.class)
+  @Category(ContributionFromDiffblue.class)
+  @ManagedByDiffblue
   @MethodsUnderTest({
     "void ProgramInvokeImpl.<init>(DataWord, DataWord, DataWord, DataWord, DataWord, DataWord, DataWord, byte[], DataWord, DataWord, DataWord, DataWord, DataWord, Repository, int, boolean, boolean, long, long, long)"
   })
@@ -109,7 +111,8 @@ public class ProgramInvokeImplDiffblueTest {
    * <p>Method under test: {@link ProgramInvokeImpl#getDataValue(DataWord)}
    */
   @Test
-  @Category(MaintainedByDiffblue.class)
+  @Category(ContributionFromDiffblue.class)
+  @ManagedByDiffblue
   @MethodsUnderTest({"DataWord ProgramInvokeImpl.getDataValue(DataWord)"})
   public void testGetDataValue_whenDataWordWithNumIsA_thenReturnZero()
       throws UnsupportedEncodingException {
@@ -143,7 +146,8 @@ public class ProgramInvokeImplDiffblueTest {
    * <p>Method under test: {@link ProgramInvokeImpl#getDataValue(DataWord)}
    */
   @Test
-  @Category(MaintainedByDiffblue.class)
+  @Category(ContributionFromDiffblue.class)
+  @ManagedByDiffblue
   @MethodsUnderTest({"DataWord ProgramInvokeImpl.getDataValue(DataWord)"})
   public void testGetDataValue_whenZero_thenReturnToPrefixStringIs415841()
       throws UnsupportedEncodingException {
@@ -200,7 +204,8 @@ public class ProgramInvokeImplDiffblueTest {
    * <p>Method under test: {@link ProgramInvokeImpl#getDataSize()}
    */
   @Test
-  @Category(MaintainedByDiffblue.class)
+  @Category(ContributionFromDiffblue.class)
+  @ManagedByDiffblue
   @MethodsUnderTest({"DataWord ProgramInvokeImpl.getDataSize()"})
   public void testGetDataSize() throws UnsupportedEncodingException {
     // Arrange
@@ -260,7 +265,8 @@ public class ProgramInvokeImplDiffblueTest {
    * <p>Method under test: {@link ProgramInvokeImpl#getDataSize()}
    */
   @Test
-  @Category(MaintainedByDiffblue.class)
+  @Category(ContributionFromDiffblue.class)
+  @ManagedByDiffblue
   @MethodsUnderTest({"DataWord ProgramInvokeImpl.getDataSize()"})
   public void testGetDataSize_thenReturnZero() throws UnsupportedEncodingException {
     // Arrange
@@ -306,7 +312,8 @@ public class ProgramInvokeImplDiffblueTest {
    * <p>Method under test: {@link ProgramInvokeImpl#getDataCopy(DataWord, DataWord)}
    */
   @Test
-  @Category(MaintainedByDiffblue.class)
+  @Category(ContributionFromDiffblue.class)
+  @ManagedByDiffblue
   @MethodsUnderTest({"byte[] ProgramInvokeImpl.getDataCopy(DataWord, DataWord)"})
   public void testGetDataCopy_whenDataWordWithNumIsA_thenReturnEleventhElementIsZero()
       throws UnsupportedEncodingException {
@@ -394,7 +401,8 @@ public class ProgramInvokeImplDiffblueTest {
    * <p>Method under test: {@link ProgramInvokeImpl#getDataCopy(DataWord, DataWord)}
    */
   @Test
-  @Category(MaintainedByDiffblue.class)
+  @Category(ContributionFromDiffblue.class)
+  @ManagedByDiffblue
   @MethodsUnderTest({"byte[] ProgramInvokeImpl.getDataCopy(DataWord, DataWord)"})
   public void testGetDataCopy_whenDataWordWithNumIsA_thenReturnEmptyArrayOfByte()
       throws UnsupportedEncodingException {
@@ -429,7 +437,8 @@ public class ProgramInvokeImplDiffblueTest {
    * <p>Method under test: {@link ProgramInvokeImpl#getDataCopy(DataWord, DataWord)}
    */
   @Test
-  @Category(MaintainedByDiffblue.class)
+  @Category(ContributionFromDiffblue.class)
+  @ManagedByDiffblue
   @MethodsUnderTest({"byte[] ProgramInvokeImpl.getDataCopy(DataWord, DataWord)"})
   public void testGetDataCopy_whenZero_thenReturnEmptyArrayOfByte()
       throws UnsupportedEncodingException {
@@ -459,7 +468,8 @@ public class ProgramInvokeImplDiffblueTest {
    * <p>Method under test: {@link ProgramInvokeImpl#getDifficulty()}
    */
   @Test
-  @Category(MaintainedByDiffblue.class)
+  @Category(ContributionFromDiffblue.class)
+  @ManagedByDiffblue
   @MethodsUnderTest({"DataWord ProgramInvokeImpl.getDifficulty()"})
   public void testGetDifficulty() throws UnsupportedEncodingException {
     // Arrange
@@ -511,7 +521,8 @@ public class ProgramInvokeImplDiffblueTest {
    * </ul>
    */
   @Test
-  @Category(MaintainedByDiffblue.class)
+  @Category(ContributionFromDiffblue.class)
+  @ManagedByDiffblue
   @MethodsUnderTest({
     "boolean ProgramInvokeImpl.byTestingSuite()",
     "DataWord ProgramInvokeImpl.getBalance()",
@@ -720,7 +731,8 @@ public class ProgramInvokeImplDiffblueTest {
    * </ul>
    */
   @Test
-  @Category(MaintainedByDiffblue.class)
+  @Category(ContributionFromDiffblue.class)
+  @ManagedByDiffblue
   @MethodsUnderTest({
     "boolean ProgramInvokeImpl.equals(Object)",
     "int ProgramInvokeImpl.hashCode()"
@@ -758,7 +770,8 @@ public class ProgramInvokeImplDiffblueTest {
    * <p>Method under test: {@link ProgramInvokeImpl#equals(Object)}
    */
   @Test
-  @Category(MaintainedByDiffblue.class)
+  @Category(ContributionFromDiffblue.class)
+  @ManagedByDiffblue
   @MethodsUnderTest({
     "boolean ProgramInvokeImpl.equals(Object)",
     "int ProgramInvokeImpl.hashCode()"
@@ -805,7 +818,8 @@ public class ProgramInvokeImplDiffblueTest {
    * <p>Method under test: {@link ProgramInvokeImpl#equals(Object)}
    */
   @Test
-  @Category(MaintainedByDiffblue.class)
+  @Category(ContributionFromDiffblue.class)
+  @ManagedByDiffblue
   @MethodsUnderTest({
     "boolean ProgramInvokeImpl.equals(Object)",
     "int ProgramInvokeImpl.hashCode()"
@@ -858,7 +872,8 @@ public class ProgramInvokeImplDiffblueTest {
    * <p>Method under test: {@link ProgramInvokeImpl#equals(Object)}
    */
   @Test
-  @Category(MaintainedByDiffblue.class)
+  @Category(ContributionFromDiffblue.class)
+  @ManagedByDiffblue
   @MethodsUnderTest({
     "boolean ProgramInvokeImpl.equals(Object)",
     "int ProgramInvokeImpl.hashCode()"
@@ -913,7 +928,8 @@ public class ProgramInvokeImplDiffblueTest {
    * <p>Method under test: {@link ProgramInvokeImpl#equals(Object)}
    */
   @Test
-  @Category(MaintainedByDiffblue.class)
+  @Category(ContributionFromDiffblue.class)
+  @ManagedByDiffblue
   @MethodsUnderTest({
     "boolean ProgramInvokeImpl.equals(Object)",
     "int ProgramInvokeImpl.hashCode()"
@@ -972,7 +988,8 @@ public class ProgramInvokeImplDiffblueTest {
    * <p>Method under test: {@link ProgramInvokeImpl#equals(Object)}
    */
   @Test
-  @Category(MaintainedByDiffblue.class)
+  @Category(ContributionFromDiffblue.class)
+  @ManagedByDiffblue
   @MethodsUnderTest({
     "boolean ProgramInvokeImpl.equals(Object)",
     "int ProgramInvokeImpl.hashCode()"
@@ -1006,7 +1023,8 @@ public class ProgramInvokeImplDiffblueTest {
    * <p>Method under test: {@link ProgramInvokeImpl#equals(Object)}
    */
   @Test
-  @Category(MaintainedByDiffblue.class)
+  @Category(ContributionFromDiffblue.class)
+  @ManagedByDiffblue
   @MethodsUnderTest({
     "boolean ProgramInvokeImpl.equals(Object)",
     "int ProgramInvokeImpl.hashCode()"

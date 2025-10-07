@@ -5,7 +5,8 @@ import static org.junit.Assert.assertNull;
 import static org.junit.Assert.assertSame;
 import static org.junit.Assert.assertTrue;
 import static org.mockito.Mockito.mock;
-import com.diffblue.cover.annotations.MaintainedByDiffblue;
+import com.diffblue.cover.annotations.ContributionFromDiffblue;
+import com.diffblue.cover.annotations.ManagedByDiffblue;
 import com.diffblue.cover.annotations.MethodsUnderTest;
 import io.netty.channel.DefaultEventLoop;
 import io.netty.util.concurrent.DefaultPromise;
@@ -31,7 +32,8 @@ public class ExecutorServiceManagerDiffblueTest {
    * <p>Method under test: {@link ExecutorServiceManager#newFixedThreadPool(String, int, boolean)}
    */
   @Test
-  @Category(MaintainedByDiffblue.class)
+  @Category(ContributionFromDiffblue.class)
+  @ManagedByDiffblue
   @MethodsUnderTest({
     "ExecutorService ExecutorServiceManager.newFixedThreadPool(String, int, boolean)"
   })
@@ -64,7 +66,8 @@ public class ExecutorServiceManagerDiffblueTest {
    * <p>Method under test: {@link ExecutorServiceManager#newFixedThreadPool(String, int)}
    */
   @Test
-  @Category(MaintainedByDiffblue.class)
+  @Category(ContributionFromDiffblue.class)
+  @ManagedByDiffblue
   @MethodsUnderTest({"ExecutorService ExecutorServiceManager.newFixedThreadPool(String, int)"})
   public void testNewFixedThreadPoolWithNameFixThreads_whenName_thenReturnThreadPoolExecutor() {
     // Arrange and Act
@@ -92,7 +95,8 @@ public class ExecutorServiceManagerDiffblueTest {
    * TimeUnit, BlockingQueue, String)}
    */
   @Test
-  @Category(MaintainedByDiffblue.class)
+  @Category(ContributionFromDiffblue.class)
+  @ManagedByDiffblue
   @MethodsUnderTest({
     "ExecutorService ExecutorServiceManager.newThreadPoolExecutor(int, int, long, TimeUnit, BlockingQueue, String)"
   })
@@ -129,7 +133,8 @@ public class ExecutorServiceManagerDiffblueTest {
    * TimeUnit, BlockingQueue, String)}
    */
   @Test
-  @Category(MaintainedByDiffblue.class)
+  @Category(ContributionFromDiffblue.class)
+  @ManagedByDiffblue
   @MethodsUnderTest({
     "ExecutorService ExecutorServiceManager.newThreadPoolExecutor(int, int, long, TimeUnit, BlockingQueue, String)"
   })
@@ -165,7 +170,8 @@ public class ExecutorServiceManagerDiffblueTest {
    * TimeUnit, BlockingQueue, String)}
    */
   @Test
-  @Category(MaintainedByDiffblue.class)
+  @Category(ContributionFromDiffblue.class)
+  @ManagedByDiffblue
   @MethodsUnderTest({
     "ExecutorService ExecutorServiceManager.newThreadPoolExecutor(int, int, long, TimeUnit, BlockingQueue, String)"
   })
@@ -202,7 +208,8 @@ public class ExecutorServiceManagerDiffblueTest {
    * TimeUnit, BlockingQueue, String, boolean)}
    */
   @Test
-  @Category(MaintainedByDiffblue.class)
+  @Category(ContributionFromDiffblue.class)
+  @ManagedByDiffblue
   @MethodsUnderTest({
     "ExecutorService ExecutorServiceManager.newThreadPoolExecutor(int, int, long, TimeUnit, BlockingQueue, String, boolean)"
   })
@@ -239,7 +246,8 @@ public class ExecutorServiceManagerDiffblueTest {
    * TimeUnit, BlockingQueue, String, boolean)}
    */
   @Test
-  @Category(MaintainedByDiffblue.class)
+  @Category(ContributionFromDiffblue.class)
+  @ManagedByDiffblue
   @MethodsUnderTest({
     "ExecutorService ExecutorServiceManager.newThreadPoolExecutor(int, int, long, TimeUnit, BlockingQueue, String, boolean)"
   })
@@ -275,7 +283,8 @@ public class ExecutorServiceManagerDiffblueTest {
    * TimeUnit, BlockingQueue, String, boolean)}
    */
   @Test
-  @Category(MaintainedByDiffblue.class)
+  @Category(ContributionFromDiffblue.class)
+  @ManagedByDiffblue
   @MethodsUnderTest({
     "ExecutorService ExecutorServiceManager.newThreadPoolExecutor(int, int, long, TimeUnit, BlockingQueue, String, boolean)"
   })
@@ -310,7 +319,8 @@ public class ExecutorServiceManagerDiffblueTest {
    * ExecutorServiceManager#shutdownAndAwaitTermination(ExecutorService, String)}
    */
   @Test
-  @Category(MaintainedByDiffblue.class)
+  @Category(ContributionFromDiffblue.class)
+  @ManagedByDiffblue
   @MethodsUnderTest({
     "void ExecutorServiceManager.shutdownAndAwaitTermination(ExecutorService, String)"
   })

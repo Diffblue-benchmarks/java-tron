@@ -5,7 +5,8 @@ import static org.junit.Assert.assertFalse;
 import static org.junit.Assert.assertNull;
 import static org.junit.Assert.assertSame;
 import static org.junit.Assert.assertTrue;
-import com.diffblue.cover.annotations.MaintainedByDiffblue;
+import com.diffblue.cover.annotations.ContributionFromDiffblue;
+import com.diffblue.cover.annotations.ManagedByDiffblue;
 import com.diffblue.cover.annotations.MethodsUnderTest;
 import java.io.UnsupportedEncodingException;
 import org.junit.Test;
@@ -24,7 +25,8 @@ public class ConcurrentHashDBDiffblueTest {
    * <p>Method under test: {@link ConcurrentHashDB#get(byte[])}
    */
   @Test
-  @Category(MaintainedByDiffblue.class)
+  @Category(ContributionFromDiffblue.class)
+  @ManagedByDiffblue
   @MethodsUnderTest({"BytesCapsule ConcurrentHashDB.get(byte[])"})
   public void testGetWithByte_givenConcurrentHashDB_thenReturnNull()
       throws UnsupportedEncodingException {
@@ -46,7 +48,8 @@ public class ConcurrentHashDBDiffblueTest {
    * <p>Method under test: {@link ConcurrentHashDB#get(byte[])}
    */
   @Test
-  @Category(MaintainedByDiffblue.class)
+  @Category(ContributionFromDiffblue.class)
+  @ManagedByDiffblue
   @MethodsUnderTest({"BytesCapsule ConcurrentHashDB.get(byte[])"})
   public void testGetWithByte_thenReturnBytesCapsuleWithBytesIsAAAABytesIsUtf8()
       throws UnsupportedEncodingException {
@@ -78,7 +81,8 @@ public class ConcurrentHashDBDiffblueTest {
    * <p>Method under test: {@link ConcurrentHashDB#put(byte[], BytesCapsule)}
    */
   @Test
-  @Category(MaintainedByDiffblue.class)
+  @Category(ContributionFromDiffblue.class)
+  @ManagedByDiffblue
   @MethodsUnderTest({"void ConcurrentHashDB.put(byte[], BytesCapsule)"})
   public void testPutWithByteBytesCapsule_givenConcurrentHashDB_thenConcurrentHashDBSizeIsOne()
       throws UnsupportedEncodingException {
@@ -105,7 +109,8 @@ public class ConcurrentHashDBDiffblueTest {
    * <p>Method under test: {@link ConcurrentHashDB#put(byte[], BytesCapsule)}
    */
   @Test
-  @Category(MaintainedByDiffblue.class)
+  @Category(ContributionFromDiffblue.class)
+  @ManagedByDiffblue
   @MethodsUnderTest({"void ConcurrentHashDB.put(byte[], BytesCapsule)"})
   public void testPutWithByteBytesCapsule_thenConcurrentHashDBSizeIsTwo()
       throws UnsupportedEncodingException {
@@ -131,7 +136,8 @@ public class ConcurrentHashDBDiffblueTest {
    * <p>Method under test: {@link ConcurrentHashDB#size()}
    */
   @Test
-  @Category(MaintainedByDiffblue.class)
+  @Category(ContributionFromDiffblue.class)
+  @ManagedByDiffblue
   @MethodsUnderTest({"long ConcurrentHashDB.size()"})
   public void testSize() {
     // Arrange, Act and Assert
@@ -149,7 +155,8 @@ public class ConcurrentHashDBDiffblueTest {
    * <p>Method under test: {@link ConcurrentHashDB#isEmpty()}
    */
   @Test
-  @Category(MaintainedByDiffblue.class)
+  @Category(ContributionFromDiffblue.class)
+  @ManagedByDiffblue
   @MethodsUnderTest({"boolean ConcurrentHashDB.isEmpty()"})
   public void testIsEmpty_givenA_thenReturnFalse() {
     // Arrange
@@ -172,7 +179,8 @@ public class ConcurrentHashDBDiffblueTest {
    * <p>Method under test: {@link ConcurrentHashDB#isEmpty()}
    */
   @Test
-  @Category(MaintainedByDiffblue.class)
+  @Category(ContributionFromDiffblue.class)
+  @ManagedByDiffblue
   @MethodsUnderTest({"boolean ConcurrentHashDB.isEmpty()"})
   public void testIsEmpty_givenConcurrentHashDB_thenReturnTrue() {
     // Arrange, Act and Assert
@@ -190,7 +198,8 @@ public class ConcurrentHashDBDiffblueTest {
    * <p>Method under test: {@link ConcurrentHashDB#remove(byte[])}
    */
   @Test
-  @Category(MaintainedByDiffblue.class)
+  @Category(ContributionFromDiffblue.class)
+  @ManagedByDiffblue
   @MethodsUnderTest({"void ConcurrentHashDB.remove(byte[])"})
   public void testRemoveWithByte_givenConcurrentHashDB_thenConcurrentHashDBSizeIsZero()
       throws UnsupportedEncodingException {
@@ -214,7 +223,8 @@ public class ConcurrentHashDBDiffblueTest {
    * <p>Method under test: {@link ConcurrentHashDB#remove(byte[])}
    */
   @Test
-  @Category(MaintainedByDiffblue.class)
+  @Category(ContributionFromDiffblue.class)
+  @ManagedByDiffblue
   @MethodsUnderTest({"void ConcurrentHashDB.remove(byte[])"})
   public void testRemoveWithByte_thenConcurrentHashDBSizeIsOne()
       throws UnsupportedEncodingException {
@@ -238,7 +248,8 @@ public class ConcurrentHashDBDiffblueTest {
    * <p>Method under test: {@link ConcurrentHashDB#iterator()}
    */
   @Test
-  @Category(MaintainedByDiffblue.class)
+  @Category(ContributionFromDiffblue.class)
+  @ManagedByDiffblue
   @MethodsUnderTest({"java.util.Iterator ConcurrentHashDB.iterator()"})
   public void testIterator() {
     // Arrange, Act and Assert
@@ -251,7 +262,8 @@ public class ConcurrentHashDBDiffblueTest {
    * <p>Method under test: {@link ConcurrentHashDB#newInstance()}
    */
   @Test
-  @Category(MaintainedByDiffblue.class)
+  @Category(ContributionFromDiffblue.class)
+  @ManagedByDiffblue
   @MethodsUnderTest({"org.tron.core.db2.common.DB ConcurrentHashDB.newInstance()"})
   public void testNewInstance() {
     // Arrange, Act and Assert
@@ -270,7 +282,8 @@ public class ConcurrentHashDBDiffblueTest {
    * </ul>
    */
   @Test
-  @Category(MaintainedByDiffblue.class)
+  @Category(ContributionFromDiffblue.class)
+  @ManagedByDiffblue
   @MethodsUnderTest({
     "void ConcurrentHashDB.<init>()",
     "java.lang.String ConcurrentHashDB.getDbName()",

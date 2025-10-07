@@ -8,7 +8,8 @@ import static org.junit.Assert.assertTrue;
 import static org.mockito.Mockito.mock;
 import static org.mockito.Mockito.verify;
 import static org.mockito.Mockito.when;
-import com.diffblue.cover.annotations.MaintainedByDiffblue;
+import com.diffblue.cover.annotations.ContributionFromDiffblue;
+import com.diffblue.cover.annotations.ManagedByDiffblue;
 import com.diffblue.cover.annotations.MethodsUnderTest;
 import org.junit.Test;
 import org.junit.experimental.categories.Category;
@@ -32,7 +33,8 @@ public class ProposalUtilDiffblueTest {
    * <p>Method under test: {@link ProposalType#contain(long)}
    */
   @Test
-  @Category(MaintainedByDiffblue.class)
+  @Category(ContributionFromDiffblue.class)
+  @ManagedByDiffblue
   @MethodsUnderTest({"boolean ProposalType.contain(long)"})
   public void testProposalTypeContain_whenMinusOne_thenReturnFalse() {
     // Arrange, Act and Assert
@@ -50,7 +52,8 @@ public class ProposalUtilDiffblueTest {
    * <p>Method under test: {@link ProposalType#contain(long)}
    */
   @Test
-  @Category(MaintainedByDiffblue.class)
+  @Category(ContributionFromDiffblue.class)
+  @ManagedByDiffblue
   @MethodsUnderTest({"boolean ProposalType.contain(long)"})
   public void testProposalTypeContain_whenOne_thenReturnTrue() {
     // Arrange, Act and Assert
@@ -63,7 +66,8 @@ public class ProposalUtilDiffblueTest {
    * <p>Method under test: {@link ProposalType#getCode()}
    */
   @Test
-  @Category(MaintainedByDiffblue.class)
+  @Category(ContributionFromDiffblue.class)
+  @ManagedByDiffblue
   @MethodsUnderTest({"long ProposalType.getCode()"})
   public void testProposalTypeGetCode() {
     // Arrange, Act and Assert
@@ -81,7 +85,8 @@ public class ProposalUtilDiffblueTest {
    * <p>Method under test: {@link ProposalType#getEnumOrNull(long)}
    */
   @Test
-  @Category(MaintainedByDiffblue.class)
+  @Category(ContributionFromDiffblue.class)
+  @ManagedByDiffblue
   @MethodsUnderTest({"ProposalType ProposalType.getEnumOrNull(long)"})
   public void testProposalTypeGetEnumOrNull_whenMinusOne_thenReturnNull() {
     // Arrange, Act and Assert
@@ -99,7 +104,8 @@ public class ProposalUtilDiffblueTest {
    * <p>Method under test: {@link ProposalType#getEnumOrNull(long)}
    */
   @Test
-  @Category(MaintainedByDiffblue.class)
+  @Category(ContributionFromDiffblue.class)
+  @ManagedByDiffblue
   @MethodsUnderTest({"ProposalType ProposalType.getEnumOrNull(long)"})
   public void testProposalTypeGetEnumOrNull_whenOne_thenReturnAccountUpgradeCost() {
     // Arrange, Act and Assert
@@ -117,7 +123,8 @@ public class ProposalUtilDiffblueTest {
    * <p>Method under test: {@link ProposalType#getEnum(long)}
    */
   @Test
-  @Category(MaintainedByDiffblue.class)
+  @Category(ContributionFromDiffblue.class)
+  @ManagedByDiffblue
   @MethodsUnderTest({"ProposalType ProposalType.getEnum(long)"})
   public void testProposalTypeGetEnum_whenMinusOne_thenThrowContractValidateException()
       throws ContractValidateException {
@@ -136,7 +143,8 @@ public class ProposalUtilDiffblueTest {
    * <p>Method under test: {@link ProposalType#getEnum(long)}
    */
   @Test
-  @Category(MaintainedByDiffblue.class)
+  @Category(ContributionFromDiffblue.class)
+  @ManagedByDiffblue
   @MethodsUnderTest({"ProposalType ProposalType.getEnum(long)"})
   public void testProposalTypeGetEnum_whenOne_thenReturnAccountUpgradeCost()
       throws ContractValidateException {
@@ -158,7 +166,8 @@ public class ProposalUtilDiffblueTest {
    * long, long)}
    */
   @Test
-  @Category(MaintainedByDiffblue.class)
+  @Category(ContributionFromDiffblue.class)
+  @ManagedByDiffblue
   @MethodsUnderTest({
     "void ProposalUtil.validator(DynamicPropertiesStore, ForkController, long, long)"
   })
@@ -189,7 +198,8 @@ public class ProposalUtilDiffblueTest {
    * long, long)}
    */
   @Test
-  @Category(MaintainedByDiffblue.class)
+  @Category(ContributionFromDiffblue.class)
+  @ManagedByDiffblue
   @MethodsUnderTest({
     "void ProposalUtil.validator(DynamicPropertiesStore, ForkController, long, long)"
   })
@@ -220,7 +230,8 @@ public class ProposalUtilDiffblueTest {
    * long, long)}
    */
   @Test
-  @Category(MaintainedByDiffblue.class)
+  @Category(ContributionFromDiffblue.class)
+  @ManagedByDiffblue
   @MethodsUnderTest({
     "void ProposalUtil.validator(DynamicPropertiesStore, ForkController, long, long)"
   })
@@ -249,7 +260,8 @@ public class ProposalUtilDiffblueTest {
    * long, long)}
    */
   @Test
-  @Category(MaintainedByDiffblue.class)
+  @Category(ContributionFromDiffblue.class)
+  @ManagedByDiffblue
   @MethodsUnderTest({
     "void ProposalUtil.validator(DynamicPropertiesStore, ForkController, long, long)"
   })
@@ -273,7 +285,8 @@ public class ProposalUtilDiffblueTest {
    * long, long)}
    */
   @Test
-  @Category(MaintainedByDiffblue.class)
+  @Category(ContributionFromDiffblue.class)
+  @ManagedByDiffblue
   @MethodsUnderTest({
     "void ProposalUtil.validator(DynamicPropertiesStore, ForkController, long, long)"
   })
@@ -297,7 +310,8 @@ public class ProposalUtilDiffblueTest {
    * long, long)}
    */
   @Test
-  @Category(MaintainedByDiffblue.class)
+  @Category(ContributionFromDiffblue.class)
+  @ManagedByDiffblue
   @MethodsUnderTest({
     "void ProposalUtil.validator(DynamicPropertiesStore, ForkController, long, long)"
   })
@@ -321,7 +335,8 @@ public class ProposalUtilDiffblueTest {
    * long, long)}
    */
   @Test
-  @Category(MaintainedByDiffblue.class)
+  @Category(ContributionFromDiffblue.class)
+  @ManagedByDiffblue
   @MethodsUnderTest({
     "void ProposalUtil.validator(DynamicPropertiesStore, ForkController, long, long)"
   })

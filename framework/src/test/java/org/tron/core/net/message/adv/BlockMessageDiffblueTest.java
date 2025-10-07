@@ -6,7 +6,8 @@ import static org.junit.Assert.assertSame;
 import static org.mockito.Mockito.mock;
 import static org.mockito.Mockito.verify;
 import static org.mockito.Mockito.when;
-import com.diffblue.cover.annotations.MaintainedByDiffblue;
+import com.diffblue.cover.annotations.ContributionFromDiffblue;
+import com.diffblue.cover.annotations.ManagedByDiffblue;
 import com.diffblue.cover.annotations.MethodsUnderTest;
 import java.io.UnsupportedEncodingException;
 import org.junit.Test;
@@ -26,7 +27,8 @@ public class BlockMessageDiffblueTest {
    * <p>Method under test: {@link BlockMessage#getBlockId()}
    */
   @Test
-  @Category(MaintainedByDiffblue.class)
+  @Category(ContributionFromDiffblue.class)
+  @ManagedByDiffblue
   @MethodsUnderTest({"BlockId BlockMessage.getBlockId()"})
   public void testGetBlockId_thenReturnBlockId() throws UnsupportedEncodingException {
     // Arrange
@@ -54,7 +56,8 @@ public class BlockMessageDiffblueTest {
    * <p>Method under test: {@link BlockMessage#getMessageId()}
    */
   @Test
-  @Category(MaintainedByDiffblue.class)
+  @Category(ContributionFromDiffblue.class)
+  @ManagedByDiffblue
   @MethodsUnderTest({"Sha256Hash BlockMessage.getMessageId()"})
   public void testGetMessageId_thenReturnBlockId() throws UnsupportedEncodingException {
     // Arrange
@@ -88,7 +91,8 @@ public class BlockMessageDiffblueTest {
    * </ul>
    */
   @Test
-  @Category(MaintainedByDiffblue.class)
+  @Category(ContributionFromDiffblue.class)
+  @ManagedByDiffblue
   @MethodsUnderTest({"boolean BlockMessage.equals(Object)", "int BlockMessage.hashCode()"})
   public void testEqualsAndHashCode_whenOtherIsEqual_thenReturnEqual()
       throws UnsupportedEncodingException {
@@ -117,7 +121,8 @@ public class BlockMessageDiffblueTest {
    * <p>Method under test: {@link BlockMessage#equals(Object)}
    */
   @Test
-  @Category(MaintainedByDiffblue.class)
+  @Category(ContributionFromDiffblue.class)
+  @ManagedByDiffblue
   @MethodsUnderTest({"boolean BlockMessage.equals(Object)", "int BlockMessage.hashCode()"})
   public void testEquals_whenOtherIsDifferent_thenReturnNotEqual()
       throws UnsupportedEncodingException {

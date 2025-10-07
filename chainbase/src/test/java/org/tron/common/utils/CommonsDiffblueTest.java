@@ -10,7 +10,8 @@ import static org.mockito.Mockito.doNothing;
 import static org.mockito.Mockito.mock;
 import static org.mockito.Mockito.verify;
 import static org.mockito.Mockito.when;
-import com.diffblue.cover.annotations.MaintainedByDiffblue;
+import com.diffblue.cover.annotations.ContributionFromDiffblue;
+import com.diffblue.cover.annotations.ManagedByDiffblue;
 import com.diffblue.cover.annotations.MethodsUnderTest;
 import java.io.UnsupportedEncodingException;
 import org.junit.Test;
@@ -37,7 +38,8 @@ public class CommonsDiffblueTest {
    * <p>Method under test: {@link Commons#decode58Check(String)}
    */
   @Test
-  @Category(MaintainedByDiffblue.class)
+  @Category(ContributionFromDiffblue.class)
+  @ManagedByDiffblue
   @MethodsUnderTest({"byte[] Commons.decode58Check(String)"})
   public void testDecode58Check_when42_thenReturnNull() {
     // Arrange, Act and Assert
@@ -55,7 +57,8 @@ public class CommonsDiffblueTest {
    * <p>Method under test: {@link Commons#decode58Check(String)}
    */
   @Test
-  @Category(MaintainedByDiffblue.class)
+  @Category(ContributionFromDiffblue.class)
+  @ManagedByDiffblue
   @MethodsUnderTest({"byte[] Commons.decode58Check(String)"})
   public void testDecode58Check_whenCommons_thenReturnNull() {
     // Arrange, Act and Assert
@@ -73,7 +76,8 @@ public class CommonsDiffblueTest {
    * <p>Method under test: {@link Commons#decode58Check(String)}
    */
   @Test
-  @Category(MaintainedByDiffblue.class)
+  @Category(ContributionFromDiffblue.class)
+  @ManagedByDiffblue
   @MethodsUnderTest({"byte[] Commons.decode58Check(String)"})
   public void testDecode58Check_whenEmptyString_thenReturnNull() {
     // Arrange, Act and Assert
@@ -91,7 +95,8 @@ public class CommonsDiffblueTest {
    * <p>Method under test: {@link Commons#decodeFromBase58Check(String)}
    */
   @Test
-  @Category(MaintainedByDiffblue.class)
+  @Category(ContributionFromDiffblue.class)
+  @ManagedByDiffblue
   @MethodsUnderTest({"byte[] Commons.decodeFromBase58Check(String)"})
   public void testDecodeFromBase58Check_when42_thenReturnNull() {
     // Arrange, Act and Assert
@@ -109,7 +114,8 @@ public class CommonsDiffblueTest {
    * <p>Method under test: {@link Commons#decodeFromBase58Check(String)}
    */
   @Test
-  @Category(MaintainedByDiffblue.class)
+  @Category(ContributionFromDiffblue.class)
+  @ManagedByDiffblue
   @MethodsUnderTest({"byte[] Commons.decodeFromBase58Check(String)"})
   public void testDecodeFromBase58Check_whenCommons_thenReturnNull() {
     // Arrange, Act and Assert
@@ -127,7 +133,8 @@ public class CommonsDiffblueTest {
    * <p>Method under test: {@link Commons#decodeFromBase58Check(String)}
    */
   @Test
-  @Category(MaintainedByDiffblue.class)
+  @Category(ContributionFromDiffblue.class)
+  @ManagedByDiffblue
   @MethodsUnderTest({"byte[] Commons.decodeFromBase58Check(String)"})
   public void testDecodeFromBase58Check_whenEmptyString_thenReturnNull() {
     // Arrange, Act and Assert
@@ -145,7 +152,8 @@ public class CommonsDiffblueTest {
    * <p>Method under test: {@link Commons#decodeFromBase58Check(String)}
    */
   @Test
-  @Category(MaintainedByDiffblue.class)
+  @Category(ContributionFromDiffblue.class)
+  @ManagedByDiffblue
   @MethodsUnderTest({"byte[] Commons.decodeFromBase58Check(String)"})
   public void testDecodeFromBase58Check_whenNull_thenReturnNull() {
     // Arrange, Act and Assert
@@ -159,7 +167,8 @@ public class CommonsDiffblueTest {
    * <p>Method under test: {@link Commons#adjustBalance(AccountStore, AccountCapsule, long)}
    */
   @Test
-  @Category(MaintainedByDiffblue.class)
+  @Category(ContributionFromDiffblue.class)
+  @ManagedByDiffblue
   @MethodsUnderTest({"void Commons.adjustBalance(AccountStore, AccountCapsule, long)"})
   public void testAdjustBalanceWithAccountStoreAccountAmount()
       throws UnsupportedEncodingException, BalanceInsufficientException {
@@ -187,7 +196,8 @@ public class CommonsDiffblueTest {
    * <p>Method under test: {@link Commons#adjustBalance(AccountStore, AccountCapsule, long)}
    */
   @Test
-  @Category(MaintainedByDiffblue.class)
+  @Category(ContributionFromDiffblue.class)
+  @ManagedByDiffblue
   @MethodsUnderTest({"void Commons.adjustBalance(AccountStore, AccountCapsule, long)"})
   public void testAdjustBalanceWithAccountStoreAccountAmount_whenZero_thenCallsGetBalance()
       throws BalanceInsufficientException {
@@ -214,7 +224,8 @@ public class CommonsDiffblueTest {
    * ExchangeStore, ExchangeV2Store)}
    */
   @Test
-  @Category(MaintainedByDiffblue.class)
+  @Category(ContributionFromDiffblue.class)
+  @ManagedByDiffblue
   @MethodsUnderTest({
     "ExchangeStore Commons.getExchangeStoreFinal(DynamicPropertiesStore, ExchangeStore, ExchangeV2Store)"
   })
@@ -244,7 +255,8 @@ public class CommonsDiffblueTest {
    * ExchangeStore, ExchangeV2Store)}
    */
   @Test
-  @Category(MaintainedByDiffblue.class)
+  @Category(ContributionFromDiffblue.class)
+  @ManagedByDiffblue
   @MethodsUnderTest({
     "ExchangeStore Commons.getExchangeStoreFinal(DynamicPropertiesStore, ExchangeStore, ExchangeV2Store)"
   })
@@ -274,7 +286,8 @@ public class CommonsDiffblueTest {
    * AssetIssueStore, AssetIssueV2Store)}
    */
   @Test
-  @Category(MaintainedByDiffblue.class)
+  @Category(ContributionFromDiffblue.class)
+  @ManagedByDiffblue
   @MethodsUnderTest({
     "AssetIssueStore Commons.getAssetIssueStoreFinal(DynamicPropertiesStore, AssetIssueStore, AssetIssueV2Store)"
   })
@@ -304,7 +317,8 @@ public class CommonsDiffblueTest {
    * AssetIssueStore, AssetIssueV2Store)}
    */
   @Test
-  @Category(MaintainedByDiffblue.class)
+  @Category(ContributionFromDiffblue.class)
+  @ManagedByDiffblue
   @MethodsUnderTest({
     "AssetIssueStore Commons.getAssetIssueStoreFinal(DynamicPropertiesStore, AssetIssueStore, AssetIssueV2Store)"
   })
@@ -331,7 +345,8 @@ public class CommonsDiffblueTest {
    * AccountStore, AssetIssueStore, DynamicPropertiesStore)}
    */
   @Test
-  @Category(MaintainedByDiffblue.class)
+  @Category(ContributionFromDiffblue.class)
+  @ManagedByDiffblue
   @MethodsUnderTest({
     "void Commons.adjustAssetBalanceV2(AccountCapsule, String, long, AccountStore, AssetIssueStore, DynamicPropertiesStore)"
   })
@@ -365,7 +380,8 @@ public class CommonsDiffblueTest {
    * AccountStore, AssetIssueStore, DynamicPropertiesStore)}
    */
   @Test
-  @Category(MaintainedByDiffblue.class)
+  @Category(ContributionFromDiffblue.class)
+  @ManagedByDiffblue
   @MethodsUnderTest({
     "void Commons.adjustAssetBalanceV2(AccountCapsule, String, long, AccountStore, AssetIssueStore, DynamicPropertiesStore)"
   })
@@ -399,7 +415,8 @@ public class CommonsDiffblueTest {
    * AccountStore, AssetIssueStore, DynamicPropertiesStore)}
    */
   @Test
-  @Category(MaintainedByDiffblue.class)
+  @Category(ContributionFromDiffblue.class)
+  @ManagedByDiffblue
   @MethodsUnderTest({
     "void Commons.adjustAssetBalanceV2(AccountCapsule, String, long, AccountStore, AssetIssueStore, DynamicPropertiesStore)"
   })
@@ -435,7 +452,8 @@ public class CommonsDiffblueTest {
    * DynamicPropertiesStore)}
    */
   @Test
-  @Category(MaintainedByDiffblue.class)
+  @Category(ContributionFromDiffblue.class)
+  @ManagedByDiffblue
   @MethodsUnderTest({"void Commons.adjustTotalShieldedPoolValue(long, DynamicPropertiesStore)"})
   public void testAdjustTotalShieldedPoolValue_thenCallsSaveTotalShieldedPoolValue()
       throws BalanceInsufficientException {
@@ -463,7 +481,8 @@ public class CommonsDiffblueTest {
    * DynamicPropertiesStore)}
    */
   @Test
-  @Category(MaintainedByDiffblue.class)
+  @Category(ContributionFromDiffblue.class)
+  @ManagedByDiffblue
   @MethodsUnderTest({"void Commons.adjustTotalShieldedPoolValue(long, DynamicPropertiesStore)"})
   public void testAdjustTotalShieldedPoolValue_thenThrowBalanceInsufficientException()
       throws BalanceInsufficientException {

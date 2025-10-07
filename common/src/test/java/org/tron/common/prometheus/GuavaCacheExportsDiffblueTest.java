@@ -6,7 +6,8 @@ import static org.mockito.Mockito.atLeast;
 import static org.mockito.Mockito.mock;
 import static org.mockito.Mockito.verify;
 import static org.mockito.Mockito.when;
-import com.diffblue.cover.annotations.MaintainedByDiffblue;
+import com.diffblue.cover.annotations.ContributionFromDiffblue;
+import com.diffblue.cover.annotations.ManagedByDiffblue;
 import com.diffblue.cover.annotations.MethodsUnderTest;
 import io.prometheus.client.Collector;
 import io.prometheus.client.Collector.MetricFamilySamples;
@@ -31,7 +32,8 @@ public class GuavaCacheExportsDiffblueTest {
    * <p>Method under test: {@link GuavaCacheExports#addHitRateMetrics(List, Predicate)}
    */
   @Test
-  @Category(MaintainedByDiffblue.class)
+  @Category(ContributionFromDiffblue.class)
+  @ManagedByDiffblue
   @MethodsUnderTest({"void GuavaCacheExports.addHitRateMetrics(List, Predicate)"})
   public void testAddHitRateMetrics_givenFalse_whenPredicateTestReturnFalse_thenArrayListEmpty() {
     // Arrange
@@ -64,7 +66,8 @@ public class GuavaCacheExportsDiffblueTest {
    * <p>Method under test: {@link GuavaCacheExports#addRequestMetrics(List, Predicate)}
    */
   @Test
-  @Category(MaintainedByDiffblue.class)
+  @Category(ContributionFromDiffblue.class)
+  @ManagedByDiffblue
   @MethodsUnderTest({"void GuavaCacheExports.addRequestMetrics(List, Predicate)"})
   public void testAddRequestMetrics_givenFalse_whenPredicateTestReturnFalse_thenArrayListEmpty() {
     // Arrange
@@ -96,7 +99,8 @@ public class GuavaCacheExportsDiffblueTest {
    * <p>Method under test: {@link GuavaCacheExports#addEvictionCountMetrics(List, Predicate)}
    */
   @Test
-  @Category(MaintainedByDiffblue.class)
+  @Category(ContributionFromDiffblue.class)
+  @ManagedByDiffblue
   @MethodsUnderTest({"void GuavaCacheExports.addEvictionCountMetrics(List, Predicate)"})
   public void testAddEvictionCountMetrics_givenFalse_thenArrayListEmpty() {
     // Arrange
@@ -123,7 +127,8 @@ public class GuavaCacheExportsDiffblueTest {
    * <p>Method under test: {@link GuavaCacheExports#collect()}
    */
   @Test
-  @Category(MaintainedByDiffblue.class)
+  @Category(ContributionFromDiffblue.class)
+  @ManagedByDiffblue
   @MethodsUnderTest({"List GuavaCacheExports.collect()"})
   public void testCollect() {
     // Arrange and Act
@@ -148,7 +153,8 @@ public class GuavaCacheExportsDiffblueTest {
    * <p>Method under test: {@link GuavaCacheExports#collect(Predicate)}
    */
   @Test
-  @Category(MaintainedByDiffblue.class)
+  @Category(ContributionFromDiffblue.class)
+  @ManagedByDiffblue
   @MethodsUnderTest({"List GuavaCacheExports.collect(Predicate)"})
   public void testCollectWithPredicate_givenFalse_whenPredicateTestReturnFalse_thenReturnEmpty() {
     // Arrange
@@ -176,7 +182,8 @@ public class GuavaCacheExportsDiffblueTest {
    * <p>Method under test: {@link GuavaCacheExports#collect(Predicate)}
    */
   @Test
-  @Category(MaintainedByDiffblue.class)
+  @Category(ContributionFromDiffblue.class)
+  @ManagedByDiffblue
   @MethodsUnderTest({"List GuavaCacheExports.collect(Predicate)"})
   public void testCollectWithPredicate_whenNull_thenReturnSizeIsThree() {
     // Arrange and Act

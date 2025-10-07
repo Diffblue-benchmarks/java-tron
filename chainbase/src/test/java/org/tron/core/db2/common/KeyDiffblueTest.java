@@ -4,7 +4,8 @@ import static org.junit.Assert.assertArrayEquals;
 import static org.junit.Assert.assertEquals;
 import static org.junit.Assert.assertNotEquals;
 import static org.junit.Assert.assertNull;
-import com.diffblue.cover.annotations.MaintainedByDiffblue;
+import com.diffblue.cover.annotations.ContributionFromDiffblue;
+import com.diffblue.cover.annotations.ManagedByDiffblue;
 import com.diffblue.cover.annotations.MethodsUnderTest;
 import java.io.UnsupportedEncodingException;
 import org.junit.Test;
@@ -22,7 +23,8 @@ public class KeyDiffblueTest {
    * <p>Method under test: {@link Key#copyOf(byte[])}
    */
   @Test
-  @Category(MaintainedByDiffblue.class)
+  @Category(ContributionFromDiffblue.class)
+  @ManagedByDiffblue
   @MethodsUnderTest({"Key Key.copyOf(byte[])"})
   public void testCopyOf_whenAxaxaxaxBytesIsUtf8_thenReturnBytesIsAxaxaxaxBytesIsUtf8()
       throws UnsupportedEncodingException {
@@ -42,7 +44,8 @@ public class KeyDiffblueTest {
    * <p>Method under test: {@link Key#copyOf(byte[])}
    */
   @Test
-  @Category(MaintainedByDiffblue.class)
+  @Category(ContributionFromDiffblue.class)
+  @ManagedByDiffblue
   @MethodsUnderTest({"Key Key.copyOf(byte[])"})
   public void testCopyOf_whenNull_thenReturnBytesIsNull() {
     // Arrange and Act
@@ -58,7 +61,8 @@ public class KeyDiffblueTest {
    * <p>Method under test: {@link Key#of(byte[])}
    */
   @Test
-  @Category(MaintainedByDiffblue.class)
+  @Category(ContributionFromDiffblue.class)
+  @ManagedByDiffblue
   @MethodsUnderTest({"Key Key.of(byte[])"})
   public void testOf() throws UnsupportedEncodingException {
     // Arrange, Act and Assert
@@ -77,7 +81,8 @@ public class KeyDiffblueTest {
    * <p>Method under test: {@link Key#getBytes()}
    */
   @Test
-  @Category(MaintainedByDiffblue.class)
+  @Category(ContributionFromDiffblue.class)
+  @ManagedByDiffblue
   @MethodsUnderTest({"byte[] Key.getBytes()"})
   public void testGetBytes_givenCopyOfAxaxaxaxBytesIsUtf8_thenReturnAxaxaxaxBytesIsUtf8()
       throws UnsupportedEncodingException {
@@ -97,7 +102,8 @@ public class KeyDiffblueTest {
    * <p>Method under test: {@link Key#getBytes()}
    */
   @Test
-  @Category(MaintainedByDiffblue.class)
+  @Category(ContributionFromDiffblue.class)
+  @ManagedByDiffblue
   @MethodsUnderTest({"byte[] Key.getBytes()"})
   public void testGetBytes_givenCopyOfNull_thenReturnNull() {
     // Arrange
@@ -123,7 +129,8 @@ public class KeyDiffblueTest {
    * </ul>
    */
   @Test
-  @Category(MaintainedByDiffblue.class)
+  @Category(ContributionFromDiffblue.class)
+  @ManagedByDiffblue
   @MethodsUnderTest({"boolean Key.equals(Object)", "int Key.hashCode()"})
   public void testEqualsAndHashCode_whenOtherIsEqual_thenReturnEqual()
       throws UnsupportedEncodingException {
@@ -152,7 +159,8 @@ public class KeyDiffblueTest {
    * </ul>
    */
   @Test
-  @Category(MaintainedByDiffblue.class)
+  @Category(ContributionFromDiffblue.class)
+  @ManagedByDiffblue
   @MethodsUnderTest({"boolean Key.equals(Object)", "int Key.hashCode()"})
   public void testEqualsAndHashCode_whenOtherIsSame_thenReturnEqual()
       throws UnsupportedEncodingException {
@@ -176,7 +184,8 @@ public class KeyDiffblueTest {
    * <p>Method under test: {@link Key#equals(Object)}
    */
   @Test
-  @Category(MaintainedByDiffblue.class)
+  @Category(ContributionFromDiffblue.class)
+  @ManagedByDiffblue
   @MethodsUnderTest({"boolean Key.equals(Object)", "int Key.hashCode()"})
   public void testEquals_whenOtherIsDifferent_thenReturnNotEqual()
       throws UnsupportedEncodingException {
@@ -198,7 +207,8 @@ public class KeyDiffblueTest {
    * <p>Method under test: {@link Key#equals(Object)}
    */
   @Test
-  @Category(MaintainedByDiffblue.class)
+  @Category(ContributionFromDiffblue.class)
+  @ManagedByDiffblue
   @MethodsUnderTest({"boolean Key.equals(Object)", "int Key.hashCode()"})
   public void testEquals_whenOtherIsNull_thenReturnNotEqual() throws UnsupportedEncodingException {
     // Arrange, Act and Assert
@@ -216,7 +226,8 @@ public class KeyDiffblueTest {
    * <p>Method under test: {@link Key#equals(Object)}
    */
   @Test
-  @Category(MaintainedByDiffblue.class)
+  @Category(ContributionFromDiffblue.class)
+  @ManagedByDiffblue
   @MethodsUnderTest({"boolean Key.equals(Object)", "int Key.hashCode()"})
   public void testEquals_whenOtherIsWrongType_thenReturnNotEqual()
       throws UnsupportedEncodingException {

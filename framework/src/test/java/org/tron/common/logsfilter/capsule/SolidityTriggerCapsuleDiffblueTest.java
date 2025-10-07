@@ -2,7 +2,8 @@ package org.tron.common.logsfilter.capsule;
 
 import static org.junit.Assert.assertEquals;
 import static org.junit.Assert.assertSame;
-import com.diffblue.cover.annotations.MaintainedByDiffblue;
+import com.diffblue.cover.annotations.ContributionFromDiffblue;
+import com.diffblue.cover.annotations.ManagedByDiffblue;
 import com.diffblue.cover.annotations.MethodsUnderTest;
 import org.junit.Test;
 import org.junit.experimental.categories.Category;
@@ -15,7 +16,8 @@ public class SolidityTriggerCapsuleDiffblueTest {
    * <p>Method under test: {@link SolidityTriggerCapsule#SolidityTriggerCapsule(long)}
    */
   @Test
-  @Category(MaintainedByDiffblue.class)
+  @Category(ContributionFromDiffblue.class)
+  @ManagedByDiffblue
   @MethodsUnderTest({"void SolidityTriggerCapsule.<init>(long)"})
   public void testNewSolidityTriggerCapsule() {
     // Arrange, Act and Assert
@@ -31,7 +33,8 @@ public class SolidityTriggerCapsuleDiffblueTest {
    * <p>Method under test: {@link SolidityTriggerCapsule#setTimeStamp(long)}
    */
   @Test
-  @Category(MaintainedByDiffblue.class)
+  @Category(ContributionFromDiffblue.class)
+  @ManagedByDiffblue
   @MethodsUnderTest({"void SolidityTriggerCapsule.setTimeStamp(long)"})
   public void testSetTimeStamp() {
     // Arrange
@@ -55,7 +58,8 @@ public class SolidityTriggerCapsuleDiffblueTest {
    * </ul>
    */
   @Test
-  @Category(MaintainedByDiffblue.class)
+  @Category(ContributionFromDiffblue.class)
+  @ManagedByDiffblue
   @MethodsUnderTest({
     "SolidityTrigger SolidityTriggerCapsule.getSolidityTrigger()",
     "void SolidityTriggerCapsule.setSolidityTrigger(SolidityTrigger)"

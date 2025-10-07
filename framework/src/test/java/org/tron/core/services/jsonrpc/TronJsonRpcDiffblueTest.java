@@ -6,7 +6,8 @@ import static org.junit.Assert.assertNull;
 import static org.junit.Assert.assertSame;
 import static org.junit.Assert.assertTrue;
 import com.alibaba.fastjson.JSONObject;
-import com.diffblue.cover.annotations.MaintainedByDiffblue;
+import com.diffblue.cover.annotations.ContributionFromDiffblue;
+import com.diffblue.cover.annotations.ManagedByDiffblue;
 import com.diffblue.cover.annotations.MethodsUnderTest;
 import java.util.ArrayList;
 import java.util.List;
@@ -38,7 +39,8 @@ public class TronJsonRpcDiffblueTest {
    * </ul>
    */
   @Test
-  @Category(MaintainedByDiffblue.class)
+  @Category(ContributionFromDiffblue.class)
+  @ManagedByDiffblue
   @MethodsUnderTest({
     "void CompilationInfo.<init>()",
     "String CompilationInfo.getCompilerVersion()",
@@ -85,7 +87,8 @@ public class TronJsonRpcDiffblueTest {
    * </ul>
    */
   @Test
-  @Category(MaintainedByDiffblue.class)
+  @Category(ContributionFromDiffblue.class)
+  @ManagedByDiffblue
   @MethodsUnderTest({
     "void CompilationResult.<init>()",
     "String CompilationResult.getCode()",
@@ -124,7 +127,8 @@ public class TronJsonRpcDiffblueTest {
    * </ul>
    */
   @Test
-  @Category(MaintainedByDiffblue.class)
+  @Category(ContributionFromDiffblue.class)
+  @ManagedByDiffblue
   @MethodsUnderTest({
     "void FilterRequest.<init>()",
     "void FilterRequest.<init>(String, String, Object, Object[], String)",
@@ -188,7 +192,8 @@ public class TronJsonRpcDiffblueTest {
    * </ul>
    */
   @Test
-  @Category(MaintainedByDiffblue.class)
+  @Category(ContributionFromDiffblue.class)
+  @ManagedByDiffblue
   @MethodsUnderTest({
     "void FilterRequest.<init>()",
     "void FilterRequest.<init>(String, String, Object, Object[], String)",
@@ -250,7 +255,8 @@ public class TronJsonRpcDiffblueTest {
    * </ul>
    */
   @Test
-  @Category(MaintainedByDiffblue.class)
+  @Category(ContributionFromDiffblue.class)
+  @ManagedByDiffblue
   @MethodsUnderTest({
     "String LogFilterElement.getAddress()",
     "String LogFilterElement.getBlockHash()",
@@ -298,7 +304,8 @@ public class TronJsonRpcDiffblueTest {
    * String, List, String, int, boolean)}
    */
   @Test
-  @Category(MaintainedByDiffblue.class)
+  @Category(ContributionFromDiffblue.class)
+  @ManagedByDiffblue
   @MethodsUnderTest({
     "void LogFilterElement.<init>(String, Long, String, Integer, String, List, String, int, boolean)"
   })
@@ -330,7 +337,8 @@ public class TronJsonRpcDiffblueTest {
    * String, List, String, int, boolean)}
    */
   @Test
-  @Category(MaintainedByDiffblue.class)
+  @Category(ContributionFromDiffblue.class)
+  @ManagedByDiffblue
   @MethodsUnderTest({
     "void LogFilterElement.<init>(String, Long, String, Integer, String, List, String, int, boolean)"
   })
@@ -370,7 +378,8 @@ public class TronJsonRpcDiffblueTest {
    * String, List, String, int, boolean)}
    */
   @Test
-  @Category(MaintainedByDiffblue.class)
+  @Category(ContributionFromDiffblue.class)
+  @ManagedByDiffblue
   @MethodsUnderTest({
     "void LogFilterElement.<init>(String, Long, String, Integer, String, List, String, int, boolean)"
   })
@@ -400,7 +409,8 @@ public class TronJsonRpcDiffblueTest {
    * String, List, String, int, boolean)}
    */
   @Test
-  @Category(MaintainedByDiffblue.class)
+  @Category(ContributionFromDiffblue.class)
+  @ManagedByDiffblue
   @MethodsUnderTest({
     "void LogFilterElement.<init>(String, Long, String, Integer, String, List, String, int, boolean)"
   })
@@ -431,7 +441,8 @@ public class TronJsonRpcDiffblueTest {
    * String, List, String, int, boolean)}
    */
   @Test
-  @Category(MaintainedByDiffblue.class)
+  @Category(ContributionFromDiffblue.class)
+  @ManagedByDiffblue
   @MethodsUnderTest({
     "void LogFilterElement.<init>(String, Long, String, Integer, String, List, String, int, boolean)"
   })
@@ -462,7 +473,8 @@ public class TronJsonRpcDiffblueTest {
    * String, List, String, int, boolean)}
    */
   @Test
-  @Category(MaintainedByDiffblue.class)
+  @Category(ContributionFromDiffblue.class)
+  @ManagedByDiffblue
   @MethodsUnderTest({
     "void LogFilterElement.<init>(String, Long, String, Integer, String, List, String, int, boolean)"
   })
@@ -493,7 +505,8 @@ public class TronJsonRpcDiffblueTest {
    * String, List, String, int, boolean)}
    */
   @Test
-  @Category(MaintainedByDiffblue.class)
+  @Category(ContributionFromDiffblue.class)
+  @ManagedByDiffblue
   @MethodsUnderTest({
     "void LogFilterElement.<init>(String, Long, String, Integer, String, List, String, int, boolean)"
   })
@@ -525,7 +538,8 @@ public class TronJsonRpcDiffblueTest {
    * </ul>
    */
   @Test
-  @Category(MaintainedByDiffblue.class)
+  @Category(ContributionFromDiffblue.class)
+  @ManagedByDiffblue
   @MethodsUnderTest({
     "void SyncingResult.<init>(String, String, String)",
     "String SyncingResult.getCurrentBlock()",
@@ -563,7 +577,8 @@ public class TronJsonRpcDiffblueTest {
    * </ul>
    */
   @Test
-  @Category(MaintainedByDiffblue.class)
+  @Category(ContributionFromDiffblue.class)
+  @ManagedByDiffblue
   @MethodsUnderTest({
     "void TransactionJson.<init>()",
     "JSONObject TransactionJson.getTransaction()",

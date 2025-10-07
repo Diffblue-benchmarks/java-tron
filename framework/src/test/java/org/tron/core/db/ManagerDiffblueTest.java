@@ -4,7 +4,8 @@ import static org.junit.Assert.assertThrows;
 import static org.mockito.Mockito.doNothing;
 import static org.mockito.Mockito.doThrow;
 import static org.mockito.Mockito.verify;
-import com.diffblue.cover.annotations.MaintainedByDiffblue;
+import com.diffblue.cover.annotations.ContributionFromDiffblue;
+import com.diffblue.cover.annotations.ManagedByDiffblue;
 import com.diffblue.cover.annotations.MethodsUnderTest;
 import org.junit.Test;
 import org.junit.experimental.categories.Category;
@@ -36,7 +37,8 @@ public class ManagerDiffblueTest {
    * <p>Method under test: {@link Manager#close()}
    */
   @Test
-  @Category(MaintainedByDiffblue.class)
+  @Category(ContributionFromDiffblue.class)
+  @ManagedByDiffblue
   @MethodsUnderTest({"void Manager.close()"})
   public void testClose_givenChainBaseManagerShutdownThrowIllegalArgumentException() {
     // Arrange
@@ -58,7 +60,8 @@ public class ManagerDiffblueTest {
    * <p>Method under test: {@link Manager#close()}
    */
   @Test
-  @Category(MaintainedByDiffblue.class)
+  @Category(ContributionFromDiffblue.class)
+  @ManagedByDiffblue
   @MethodsUnderTest({"void Manager.close()"})
   public void testClose_givenRevokingDatabaseShutdownDoesNothing_thenCallsShutdown() {
     // Arrange
@@ -84,7 +87,8 @@ public class ManagerDiffblueTest {
    * <p>Method under test: {@link Manager#close()}
    */
   @Test
-  @Category(MaintainedByDiffblue.class)
+  @Category(ContributionFromDiffblue.class)
+  @ManagedByDiffblue
   @MethodsUnderTest({"void Manager.close()"})
   public void testClose_givenRevokingDatabaseShutdownThrowIllegalArgumentException() {
     // Arrange

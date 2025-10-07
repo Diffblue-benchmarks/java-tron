@@ -3,7 +3,8 @@ package org.tron.core.services.jsonrpc;
 import static org.mockito.ArgumentMatchers.isA;
 import static org.mockito.Mockito.doThrow;
 import static org.mockito.Mockito.verify;
-import com.diffblue.cover.annotations.MaintainedByDiffblue;
+import com.diffblue.cover.annotations.ContributionFromDiffblue;
+import com.diffblue.cover.annotations.ManagedByDiffblue;
 import com.diffblue.cover.annotations.MethodsUnderTest;
 import javax.servlet.ServletConfig;
 import javax.servlet.ServletException;
@@ -36,7 +37,8 @@ public class FullNodeJsonRpcHttpServiceDiffblueTest {
    * <p>Method under test: {@link FullNodeJsonRpcHttpService#start()}
    */
   @Test
-  @Category(MaintainedByDiffblue.class)
+  @Category(ContributionFromDiffblue.class)
+  @ManagedByDiffblue
   @MethodsUnderTest({"void FullNodeJsonRpcHttpService.start()"})
   public void testStart_givenJsonRpcServletInitThrowRuntimeException_thenCallsInit()
       throws ServletException {

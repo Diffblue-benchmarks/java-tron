@@ -6,7 +6,8 @@ import static org.junit.Assert.assertFalse;
 import static org.junit.Assert.assertNull;
 import static org.junit.Assert.assertSame;
 import static org.junit.Assert.assertTrue;
-import com.diffblue.cover.annotations.MaintainedByDiffblue;
+import com.diffblue.cover.annotations.ContributionFromDiffblue;
+import com.diffblue.cover.annotations.ManagedByDiffblue;
 import com.diffblue.cover.annotations.MethodsUnderTest;
 import java.io.UnsupportedEncodingException;
 import java.util.List;
@@ -25,7 +26,8 @@ public class IncrementalMerkleTreeCapsuleDiffblueTest {
    * <p>Method under test: {@link IncrementalMerkleTreeCapsule#IncrementalMerkleTreeCapsule()}
    */
   @Test
-  @Category(MaintainedByDiffblue.class)
+  @Category(ContributionFromDiffblue.class)
+  @ManagedByDiffblue
   @MethodsUnderTest({"void IncrementalMerkleTreeCapsule.<init>()"})
   public void testNewIncrementalMerkleTreeCapsule() {
     // Arrange and Act
@@ -47,7 +49,8 @@ public class IncrementalMerkleTreeCapsuleDiffblueTest {
    * <p>Method under test: {@link IncrementalMerkleTreeCapsule#IncrementalMerkleTreeCapsule(byte[])}
    */
   @Test
-  @Category(MaintainedByDiffblue.class)
+  @Category(ContributionFromDiffblue.class)
+  @ManagedByDiffblue
   @MethodsUnderTest({"void IncrementalMerkleTreeCapsule.<init>(byte[])"})
   public void testNewIncrementalMerkleTreeCapsule_whenArrayOfByteWithAAndTwo() {
     // Arrange and Act
@@ -72,7 +75,8 @@ public class IncrementalMerkleTreeCapsuleDiffblueTest {
    * <p>Method under test: {@link IncrementalMerkleTreeCapsule#IncrementalMerkleTreeCapsule(byte[])}
    */
   @Test
-  @Category(MaintainedByDiffblue.class)
+  @Category(ContributionFromDiffblue.class)
+  @ManagedByDiffblue
   @MethodsUnderTest({"void IncrementalMerkleTreeCapsule.<init>(byte[])"})
   public void testNewIncrementalMerkleTreeCapsule_whenArrayOfByteWithEighteenAndX() {
     // Arrange and Act
@@ -96,7 +100,8 @@ public class IncrementalMerkleTreeCapsuleDiffblueTest {
    * <p>Method under test: {@link IncrementalMerkleTreeCapsule#IncrementalMerkleTreeCapsule(byte[])}
    */
   @Test
-  @Category(MaintainedByDiffblue.class)
+  @Category(ContributionFromDiffblue.class)
+  @ManagedByDiffblue
   @MethodsUnderTest({"void IncrementalMerkleTreeCapsule.<init>(byte[])"})
   public void testNewIncrementalMerkleTreeCapsule_whenArrayOfByteWithEighteenAndZero() {
     // Arrange and Act
@@ -120,7 +125,8 @@ public class IncrementalMerkleTreeCapsuleDiffblueTest {
    * <p>Method under test: {@link IncrementalMerkleTreeCapsule#IncrementalMerkleTreeCapsule(byte[])}
    */
   @Test
-  @Category(MaintainedByDiffblue.class)
+  @Category(ContributionFromDiffblue.class)
+  @ManagedByDiffblue
   @MethodsUnderTest({"void IncrementalMerkleTreeCapsule.<init>(byte[])"})
   public void testNewIncrementalMerkleTreeCapsule_whenArrayOfByteWithLfAndLf() {
     // Arrange and Act
@@ -145,7 +151,8 @@ public class IncrementalMerkleTreeCapsuleDiffblueTest {
    * <p>Method under test: {@link IncrementalMerkleTreeCapsule#IncrementalMerkleTreeCapsule(byte[])}
    */
   @Test
-  @Category(MaintainedByDiffblue.class)
+  @Category(ContributionFromDiffblue.class)
+  @ManagedByDiffblue
   @MethodsUnderTest({"void IncrementalMerkleTreeCapsule.<init>(byte[])"})
   public void testNewIncrementalMerkleTreeCapsule_whenArrayOfByteWithLfAndTwo() {
     // Arrange and Act
@@ -170,7 +177,8 @@ public class IncrementalMerkleTreeCapsuleDiffblueTest {
    * <p>Method under test: {@link IncrementalMerkleTreeCapsule#IncrementalMerkleTreeCapsule(byte[])}
    */
   @Test
-  @Category(MaintainedByDiffblue.class)
+  @Category(ContributionFromDiffblue.class)
+  @ManagedByDiffblue
   @MethodsUnderTest({"void IncrementalMerkleTreeCapsule.<init>(byte[])"})
   public void testNewIncrementalMerkleTreeCapsule_whenArrayOfByteWithLfAndZero() {
     // Arrange and Act
@@ -194,7 +202,8 @@ public class IncrementalMerkleTreeCapsuleDiffblueTest {
    * <p>Method under test: {@link IncrementalMerkleTreeCapsule#IncrementalMerkleTreeCapsule(byte[])}
    */
   @Test
-  @Category(MaintainedByDiffblue.class)
+  @Category(ContributionFromDiffblue.class)
+  @ManagedByDiffblue
   @MethodsUnderTest({"void IncrementalMerkleTreeCapsule.<init>(byte[])"})
   public void testNewIncrementalMerkleTreeCapsule_whenArrayOfByteWithLfAndZero2() {
     // Arrange and Act
@@ -218,7 +227,8 @@ public class IncrementalMerkleTreeCapsuleDiffblueTest {
    * <p>Method under test: {@link IncrementalMerkleTreeCapsule#IncrementalMerkleTreeCapsule(byte[])}
    */
   @Test
-  @Category(MaintainedByDiffblue.class)
+  @Category(ContributionFromDiffblue.class)
+  @ManagedByDiffblue
   @MethodsUnderTest({"void IncrementalMerkleTreeCapsule.<init>(byte[])"})
   public void testNewIncrementalMerkleTreeCapsule_whenArrayOfByteWithMinusOneAndX() {
     // Arrange and Act
@@ -242,7 +252,8 @@ public class IncrementalMerkleTreeCapsuleDiffblueTest {
    * <p>Method under test: {@link IncrementalMerkleTreeCapsule#IncrementalMerkleTreeCapsule(byte[])}
    */
   @Test
-  @Category(MaintainedByDiffblue.class)
+  @Category(ContributionFromDiffblue.class)
+  @ManagedByDiffblue
   @MethodsUnderTest({"void IncrementalMerkleTreeCapsule.<init>(byte[])"})
   public void testNewIncrementalMerkleTreeCapsule_whenArrayOfByteWithTwentySixAndTwo() {
     // Arrange and Act
@@ -267,7 +278,8 @@ public class IncrementalMerkleTreeCapsuleDiffblueTest {
    * <p>Method under test: {@link IncrementalMerkleTreeCapsule#IncrementalMerkleTreeCapsule(byte[])}
    */
   @Test
-  @Category(MaintainedByDiffblue.class)
+  @Category(ContributionFromDiffblue.class)
+  @ManagedByDiffblue
   @MethodsUnderTest({"void IncrementalMerkleTreeCapsule.<init>(byte[])"})
   public void testNewIncrementalMerkleTreeCapsule_whenArrayOfByteWithTwentySixAndX() {
     // Arrange and Act
@@ -291,7 +303,8 @@ public class IncrementalMerkleTreeCapsuleDiffblueTest {
    * <p>Method under test: {@link IncrementalMerkleTreeCapsule#IncrementalMerkleTreeCapsule(byte[])}
    */
   @Test
-  @Category(MaintainedByDiffblue.class)
+  @Category(ContributionFromDiffblue.class)
+  @ManagedByDiffblue
   @MethodsUnderTest({"void IncrementalMerkleTreeCapsule.<init>(byte[])"})
   public void testNewIncrementalMerkleTreeCapsule_whenArrayOfByteWithTwentySixAndZero() {
     // Arrange and Act
@@ -315,7 +328,8 @@ public class IncrementalMerkleTreeCapsuleDiffblueTest {
    * <p>Method under test: {@link IncrementalMerkleTreeCapsule#IncrementalMerkleTreeCapsule(byte[])}
    */
   @Test
-  @Category(MaintainedByDiffblue.class)
+  @Category(ContributionFromDiffblue.class)
+  @ManagedByDiffblue
   @MethodsUnderTest({"void IncrementalMerkleTreeCapsule.<init>(byte[])"})
   public void testNewIncrementalMerkleTreeCapsule_whenAxaxaxaxBytesIsUtf8()
       throws UnsupportedEncodingException {
@@ -341,7 +355,8 @@ public class IncrementalMerkleTreeCapsuleDiffblueTest {
    * <p>Method under test: {@link IncrementalMerkleTreeCapsule#IncrementalMerkleTreeCapsule(byte[])}
    */
   @Test
-  @Category(MaintainedByDiffblue.class)
+  @Category(ContributionFromDiffblue.class)
+  @ManagedByDiffblue
   @MethodsUnderTest({"void IncrementalMerkleTreeCapsule.<init>(byte[])"})
   public void testNewIncrementalMerkleTreeCapsule_whenEmptyArrayOfByte_thenReturnParentsEmpty() {
     // Arrange and Act
@@ -364,7 +379,8 @@ public class IncrementalMerkleTreeCapsuleDiffblueTest {
    * <p>Method under test: {@link IncrementalMerkleTreeCapsule#IncrementalMerkleTreeCapsule(byte[])}
    */
   @Test
-  @Category(MaintainedByDiffblue.class)
+  @Category(ContributionFromDiffblue.class)
+  @ManagedByDiffblue
   @MethodsUnderTest({"void IncrementalMerkleTreeCapsule.<init>(byte[])"})
   public void testNewIncrementalMerkleTreeCapsule_whenLf_thenReturnInstanceIsNull() {
     // Arrange and Act
@@ -390,7 +406,8 @@ public class IncrementalMerkleTreeCapsuleDiffblueTest {
    * <p>Method under test: {@link IncrementalMerkleTreeCapsule#IncrementalMerkleTreeCapsule(byte[])}
    */
   @Test
-  @Category(MaintainedByDiffblue.class)
+  @Category(ContributionFromDiffblue.class)
+  @ManagedByDiffblue
   @MethodsUnderTest({"void IncrementalMerkleTreeCapsule.<init>(byte[])"})
   public void testNewIncrementalMerkleTreeCapsule_whenLf_thenReturnInstanceIsNull2() {
     // Arrange and Act
@@ -414,7 +431,8 @@ public class IncrementalMerkleTreeCapsuleDiffblueTest {
    * <p>Method under test: {@link IncrementalMerkleTreeCapsule#IncrementalMerkleTreeCapsule(byte[])}
    */
   @Test
-  @Category(MaintainedByDiffblue.class)
+  @Category(ContributionFromDiffblue.class)
+  @ManagedByDiffblue
   @MethodsUnderTest({"void IncrementalMerkleTreeCapsule.<init>(byte[])"})
   public void testNewIncrementalMerkleTreeCapsule_whenXaxaxaxBytesIsUtf8()
       throws UnsupportedEncodingException {
@@ -439,7 +457,8 @@ public class IncrementalMerkleTreeCapsuleDiffblueTest {
    * <p>Method under test: {@link IncrementalMerkleTreeCapsule#IncrementalMerkleTreeCapsule(byte[])}
    */
   @Test
-  @Category(MaintainedByDiffblue.class)
+  @Category(ContributionFromDiffblue.class)
+  @ManagedByDiffblue
   @MethodsUnderTest({"void IncrementalMerkleTreeCapsule.<init>(byte[])"})
   public void testNewIncrementalMerkleTreeCapsule_whenXxaxaxaxBytesIsUtf8()
       throws UnsupportedEncodingException {
@@ -464,7 +483,8 @@ public class IncrementalMerkleTreeCapsuleDiffblueTest {
    * <p>Method under test: {@link IncrementalMerkleTreeCapsule#getLeft()}
    */
   @Test
-  @Category(MaintainedByDiffblue.class)
+  @Category(ContributionFromDiffblue.class)
+  @ManagedByDiffblue
   @MethodsUnderTest({"PedersenHash IncrementalMerkleTreeCapsule.getLeft()"})
   public void testGetLeft_thenReturnInitializationErrorStringIsEmptyString() {
     // Arrange and Act
@@ -491,7 +511,8 @@ public class IncrementalMerkleTreeCapsuleDiffblueTest {
    * <p>Method under test: {@link IncrementalMerkleTreeCapsule#leftIsEmpty()}
    */
   @Test
-  @Category(MaintainedByDiffblue.class)
+  @Category(ContributionFromDiffblue.class)
+  @ManagedByDiffblue
   @MethodsUnderTest({"java.lang.Boolean IncrementalMerkleTreeCapsule.leftIsEmpty()"})
   public void testLeftIsEmpty_givenIncrementalMerkleTreeCapsule_thenReturnTrue() {
     // Arrange, Act and Assert
@@ -504,7 +525,8 @@ public class IncrementalMerkleTreeCapsuleDiffblueTest {
    * <p>Method under test: {@link IncrementalMerkleTreeCapsule#clearLeft()}
    */
   @Test
-  @Category(MaintainedByDiffblue.class)
+  @Category(ContributionFromDiffblue.class)
+  @ManagedByDiffblue
   @MethodsUnderTest({"void IncrementalMerkleTreeCapsule.clearLeft()"})
   public void testClearLeft() {
     // Arrange
@@ -525,7 +547,8 @@ public class IncrementalMerkleTreeCapsuleDiffblueTest {
    * <p>Method under test: {@link IncrementalMerkleTreeCapsule#clearLeft()}
    */
   @Test
-  @Category(MaintainedByDiffblue.class)
+  @Category(ContributionFromDiffblue.class)
+  @ManagedByDiffblue
   @MethodsUnderTest({"void IncrementalMerkleTreeCapsule.clearLeft()"})
   public void testClearLeft2() {
     // Arrange
@@ -562,7 +585,8 @@ public class IncrementalMerkleTreeCapsuleDiffblueTest {
    * <p>Method under test: {@link IncrementalMerkleTreeCapsule#clearLeft()}
    */
   @Test
-  @Category(MaintainedByDiffblue.class)
+  @Category(ContributionFromDiffblue.class)
+  @ManagedByDiffblue
   @MethodsUnderTest({"void IncrementalMerkleTreeCapsule.clearLeft()"})
   public void testClearLeft3() {
     // Arrange
@@ -588,7 +612,8 @@ public class IncrementalMerkleTreeCapsuleDiffblueTest {
    * <p>Method under test: {@link IncrementalMerkleTreeCapsule#getRight()}
    */
   @Test
-  @Category(MaintainedByDiffblue.class)
+  @Category(ContributionFromDiffblue.class)
+  @ManagedByDiffblue
   @MethodsUnderTest({"PedersenHash IncrementalMerkleTreeCapsule.getRight()"})
   public void testGetRight_thenReturnInitializationErrorStringIsEmptyString() {
     // Arrange and Act
@@ -615,7 +640,8 @@ public class IncrementalMerkleTreeCapsuleDiffblueTest {
    * <p>Method under test: {@link IncrementalMerkleTreeCapsule#rightIsEmpty()}
    */
   @Test
-  @Category(MaintainedByDiffblue.class)
+  @Category(ContributionFromDiffblue.class)
+  @ManagedByDiffblue
   @MethodsUnderTest({"java.lang.Boolean IncrementalMerkleTreeCapsule.rightIsEmpty()"})
   public void testRightIsEmpty_givenIncrementalMerkleTreeCapsule_thenReturnTrue() {
     // Arrange, Act and Assert
@@ -628,7 +654,8 @@ public class IncrementalMerkleTreeCapsuleDiffblueTest {
    * <p>Method under test: {@link IncrementalMerkleTreeCapsule#clearRight()}
    */
   @Test
-  @Category(MaintainedByDiffblue.class)
+  @Category(ContributionFromDiffblue.class)
+  @ManagedByDiffblue
   @MethodsUnderTest({"void IncrementalMerkleTreeCapsule.clearRight()"})
   public void testClearRight() {
     // Arrange
@@ -649,7 +676,8 @@ public class IncrementalMerkleTreeCapsuleDiffblueTest {
    * <p>Method under test: {@link IncrementalMerkleTreeCapsule#clearRight()}
    */
   @Test
-  @Category(MaintainedByDiffblue.class)
+  @Category(ContributionFromDiffblue.class)
+  @ManagedByDiffblue
   @MethodsUnderTest({"void IncrementalMerkleTreeCapsule.clearRight()"})
   public void testClearRight2() {
     // Arrange
@@ -686,7 +714,8 @@ public class IncrementalMerkleTreeCapsuleDiffblueTest {
    * <p>Method under test: {@link IncrementalMerkleTreeCapsule#clearRight()}
    */
   @Test
-  @Category(MaintainedByDiffblue.class)
+  @Category(ContributionFromDiffblue.class)
+  @ManagedByDiffblue
   @MethodsUnderTest({"void IncrementalMerkleTreeCapsule.clearRight()"})
   public void testClearRight3() {
     // Arrange
@@ -713,7 +742,8 @@ public class IncrementalMerkleTreeCapsuleDiffblueTest {
    * <p>Method under test: {@link IncrementalMerkleTreeCapsule#getParents()}
    */
   @Test
-  @Category(MaintainedByDiffblue.class)
+  @Category(ContributionFromDiffblue.class)
+  @ManagedByDiffblue
   @MethodsUnderTest({"List IncrementalMerkleTreeCapsule.getParents()"})
   public void testGetParents_givenIncrementalMerkleTreeCapsule_thenReturnEmpty() {
     // Arrange, Act and Assert
@@ -731,7 +761,8 @@ public class IncrementalMerkleTreeCapsuleDiffblueTest {
    * <p>Method under test: {@link IncrementalMerkleTreeCapsule#parentsIsEmpty()}
    */
   @Test
-  @Category(MaintainedByDiffblue.class)
+  @Category(ContributionFromDiffblue.class)
+  @ManagedByDiffblue
   @MethodsUnderTest({"java.lang.Boolean IncrementalMerkleTreeCapsule.parentsIsEmpty()"})
   public void testParentsIsEmpty_givenIncrementalMerkleTreeCapsule_thenReturnTrue() {
     // Arrange, Act and Assert
@@ -748,7 +779,8 @@ public class IncrementalMerkleTreeCapsuleDiffblueTest {
    * <p>Method under test: {@link IncrementalMerkleTreeCapsule#parentsIsEmpty()}
    */
   @Test
-  @Category(MaintainedByDiffblue.class)
+  @Category(ContributionFromDiffblue.class)
+  @ManagedByDiffblue
   @MethodsUnderTest({"java.lang.Boolean IncrementalMerkleTreeCapsule.parentsIsEmpty()"})
   public void testParentsIsEmpty_thenReturnFalse() {
     // Arrange
@@ -770,7 +802,8 @@ public class IncrementalMerkleTreeCapsuleDiffblueTest {
    * <p>Method under test: {@link IncrementalMerkleTreeCapsule#clearParents(int)}
    */
   @Test
-  @Category(MaintainedByDiffblue.class)
+  @Category(ContributionFromDiffblue.class)
+  @ManagedByDiffblue
   @MethodsUnderTest({"void IncrementalMerkleTreeCapsule.clearParents(int)"})
   public void testClearParents_thenIncrementalMerkleTreeCapsuleParentsSizeIsTwo() {
     // Arrange
@@ -799,7 +832,8 @@ public class IncrementalMerkleTreeCapsuleDiffblueTest {
    * <p>Method under test: {@link IncrementalMerkleTreeCapsule#isEmptyTree()}
    */
   @Test
-  @Category(MaintainedByDiffblue.class)
+  @Category(ContributionFromDiffblue.class)
+  @ManagedByDiffblue
   @MethodsUnderTest({"boolean IncrementalMerkleTreeCapsule.isEmptyTree()"})
   public void testIsEmptyTree_givenIncrementalMerkleTreeCapsule_thenReturnTrue() {
     // Arrange, Act and Assert
@@ -816,7 +850,8 @@ public class IncrementalMerkleTreeCapsuleDiffblueTest {
    * <p>Method under test: {@link IncrementalMerkleTreeCapsule#isEmptyTree()}
    */
   @Test
-  @Category(MaintainedByDiffblue.class)
+  @Category(ContributionFromDiffblue.class)
+  @ManagedByDiffblue
   @MethodsUnderTest({"boolean IncrementalMerkleTreeCapsule.isEmptyTree()"})
   public void testIsEmptyTree_thenReturnFalse() {
     // Arrange
@@ -838,7 +873,8 @@ public class IncrementalMerkleTreeCapsuleDiffblueTest {
    * <p>Method under test: {@link IncrementalMerkleTreeCapsule#notEmptyTree()}
    */
   @Test
-  @Category(MaintainedByDiffblue.class)
+  @Category(ContributionFromDiffblue.class)
+  @ManagedByDiffblue
   @MethodsUnderTest({"boolean IncrementalMerkleTreeCapsule.notEmptyTree()"})
   public void testNotEmptyTree_givenIncrementalMerkleTreeCapsule_thenReturnFalse() {
     // Arrange, Act and Assert
@@ -855,7 +891,8 @@ public class IncrementalMerkleTreeCapsuleDiffblueTest {
    * <p>Method under test: {@link IncrementalMerkleTreeCapsule#notEmptyTree()}
    */
   @Test
-  @Category(MaintainedByDiffblue.class)
+  @Category(ContributionFromDiffblue.class)
+  @ManagedByDiffblue
   @MethodsUnderTest({"boolean IncrementalMerkleTreeCapsule.notEmptyTree()"})
   public void testNotEmptyTree_thenReturnTrue() {
     // Arrange
@@ -877,7 +914,8 @@ public class IncrementalMerkleTreeCapsuleDiffblueTest {
    * <p>Method under test: {@link IncrementalMerkleTreeCapsule#getData()}
    */
   @Test
-  @Category(MaintainedByDiffblue.class)
+  @Category(ContributionFromDiffblue.class)
+  @ManagedByDiffblue
   @MethodsUnderTest({"byte[] IncrementalMerkleTreeCapsule.getData()"})
   public void testGetData_givenIncrementalMerkleTreeCapsule_thenReturnEmptyArrayOfByte() {
     // Arrange, Act and Assert
@@ -894,7 +932,8 @@ public class IncrementalMerkleTreeCapsuleDiffblueTest {
    * <p>Method under test: {@link IncrementalMerkleTreeCapsule#getData()}
    */
   @Test
-  @Category(MaintainedByDiffblue.class)
+  @Category(ContributionFromDiffblue.class)
+  @ManagedByDiffblue
   @MethodsUnderTest({"byte[] IncrementalMerkleTreeCapsule.getData()"})
   public void testGetData_thenReturnArrayOfByteWithTwentySixAndZero() {
     // Arrange
@@ -911,7 +950,8 @@ public class IncrementalMerkleTreeCapsuleDiffblueTest {
    * <p>Method under test: {@link IncrementalMerkleTreeCapsule#getInstance()}
    */
   @Test
-  @Category(MaintainedByDiffblue.class)
+  @Category(ContributionFromDiffblue.class)
+  @ManagedByDiffblue
   @MethodsUnderTest({"IncrementalMerkleTree IncrementalMerkleTreeCapsule.getInstance()"})
   public void testGetInstance() {
     // Arrange and Act
@@ -939,7 +979,8 @@ public class IncrementalMerkleTreeCapsuleDiffblueTest {
    * <p>Method under test: {@link IncrementalMerkleTreeCapsule#toMerkleTreeContainer()}
    */
   @Test
-  @Category(MaintainedByDiffblue.class)
+  @Category(ContributionFromDiffblue.class)
+  @ManagedByDiffblue
   @MethodsUnderTest({
     "IncrementalMerkleTreeContainer IncrementalMerkleTreeCapsule.toMerkleTreeContainer()"
   })
@@ -979,7 +1020,8 @@ public class IncrementalMerkleTreeCapsuleDiffblueTest {
    * <p>Method under test: {@link IncrementalMerkleTreeCapsule#deepCopy()}
    */
   @Test
-  @Category(MaintainedByDiffblue.class)
+  @Category(ContributionFromDiffblue.class)
+  @ManagedByDiffblue
   @MethodsUnderTest({"IncrementalMerkleTreeCapsule IncrementalMerkleTreeCapsule.deepCopy()"})
   public void testDeepCopy_thenReturnInstanceParentsCountIsZero() throws ZksnarkException {
     // Arrange and Act
@@ -1022,7 +1064,8 @@ public class IncrementalMerkleTreeCapsuleDiffblueTest {
    * <p>Method under test: {@link IncrementalMerkleTreeCapsule#deepCopy()}
    */
   @Test
-  @Category(MaintainedByDiffblue.class)
+  @Category(ContributionFromDiffblue.class)
+  @ManagedByDiffblue
   @MethodsUnderTest({"IncrementalMerkleTreeCapsule IncrementalMerkleTreeCapsule.deepCopy()"})
   public void testDeepCopy_thenReturnParentsSizeIsOne() throws ZksnarkException {
     // Arrange

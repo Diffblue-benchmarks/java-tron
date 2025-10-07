@@ -5,7 +5,8 @@ import static org.junit.Assert.assertFalse;
 import static org.junit.Assert.assertSame;
 import static org.junit.Assert.assertThrows;
 import static org.junit.Assert.assertTrue;
-import com.diffblue.cover.annotations.MaintainedByDiffblue;
+import com.diffblue.cover.annotations.ContributionFromDiffblue;
+import com.diffblue.cover.annotations.ManagedByDiffblue;
 import com.diffblue.cover.annotations.MethodsUnderTest;
 import com.google.protobuf.ByteString;
 import com.google.protobuf.ByteString.ByteIterator;
@@ -34,7 +35,8 @@ public class TransactionUtilDiffblueTest {
    * <p>Method under test: {@link TransactionUtil#newGenesisTransaction(byte[], long)}
    */
   @Test
-  @Category(MaintainedByDiffblue.class)
+  @Category(ContributionFromDiffblue.class)
+  @ManagedByDiffblue
   @MethodsUnderTest({"Protocol.Transaction TransactionUtil.newGenesisTransaction(byte[], long)"})
   public void testNewGenesisTransaction_whenAxaxaxaxBytesIsUtf8()
       throws UnsupportedEncodingException, IllegalArgumentException {
@@ -54,7 +56,8 @@ public class TransactionUtilDiffblueTest {
    * <p>Method under test: {@link TransactionUtil#newGenesisTransaction(byte[], long)}
    */
   @Test
-  @Category(MaintainedByDiffblue.class)
+  @Category(ContributionFromDiffblue.class)
+  @ManagedByDiffblue
   @MethodsUnderTest({"Protocol.Transaction TransactionUtil.newGenesisTransaction(byte[], long)"})
   public void testNewGenesisTransaction_whenEmptyArrayOfByte() throws IllegalArgumentException {
     // Arrange, Act and Assert
@@ -73,7 +76,8 @@ public class TransactionUtilDiffblueTest {
    * <p>Method under test: {@link TransactionUtil#newGenesisTransaction(byte[], long)}
    */
   @Test
-  @Category(MaintainedByDiffblue.class)
+  @Category(ContributionFromDiffblue.class)
+  @ManagedByDiffblue
   @MethodsUnderTest({"Protocol.Transaction TransactionUtil.newGenesisTransaction(byte[], long)"})
   public void testNewGenesisTransaction_whenNull() throws IllegalArgumentException {
     // Arrange, Act and Assert
@@ -93,7 +97,8 @@ public class TransactionUtilDiffblueTest {
    * TransactionUtil#buildInternalTransaction(org.tron.common.runtime.InternalTransaction)}
    */
   @Test
-  @Category(MaintainedByDiffblue.class)
+  @Category(ContributionFromDiffblue.class)
+  @ManagedByDiffblue
   @MethodsUnderTest({
     "InternalTransaction TransactionUtil.buildInternalTransaction(org.tron.common.runtime.InternalTransaction)"
   })
@@ -149,7 +154,8 @@ public class TransactionUtilDiffblueTest {
    * TransactionUtil#buildInternalTransaction(org.tron.common.runtime.InternalTransaction)}
    */
   @Test
-  @Category(MaintainedByDiffblue.class)
+  @Category(ContributionFromDiffblue.class)
+  @ManagedByDiffblue
   @MethodsUnderTest({
     "InternalTransaction TransactionUtil.buildInternalTransaction(org.tron.common.runtime.InternalTransaction)"
   })
@@ -198,7 +204,8 @@ public class TransactionUtilDiffblueTest {
    * TransactionUtil#buildInternalTransaction(org.tron.common.runtime.InternalTransaction)}
    */
   @Test
-  @Category(MaintainedByDiffblue.class)
+  @Category(ContributionFromDiffblue.class)
+  @ManagedByDiffblue
   @MethodsUnderTest({
     "InternalTransaction TransactionUtil.buildInternalTransaction(org.tron.common.runtime.InternalTransaction)"
   })
@@ -256,7 +263,8 @@ public class TransactionUtilDiffblueTest {
    * TransactionUtil#buildInternalTransaction(org.tron.common.runtime.InternalTransaction)}
    */
   @Test
-  @Category(MaintainedByDiffblue.class)
+  @Category(ContributionFromDiffblue.class)
+  @ManagedByDiffblue
   @MethodsUnderTest({
     "InternalTransaction TransactionUtil.buildInternalTransaction(org.tron.common.runtime.InternalTransaction)"
   })
@@ -315,7 +323,8 @@ public class TransactionUtilDiffblueTest {
    * <p>Method under test: {@link TransactionUtil#isNumber(byte[])}
    */
   @Test
-  @Category(MaintainedByDiffblue.class)
+  @Category(ContributionFromDiffblue.class)
+  @ManagedByDiffblue
   @MethodsUnderTest({"boolean TransactionUtil.isNumber(byte[])"})
   public void testIsNumber_when0xaxaxaxBytesIsUtf8() throws UnsupportedEncodingException {
     // Arrange, Act and Assert
@@ -332,7 +341,8 @@ public class TransactionUtilDiffblueTest {
    * <p>Method under test: {@link TransactionUtil#isNumber(byte[])}
    */
   @Test
-  @Category(MaintainedByDiffblue.class)
+  @Category(ContributionFromDiffblue.class)
+  @ManagedByDiffblue
   @MethodsUnderTest({"boolean TransactionUtil.isNumber(byte[])"})
   public void testIsNumber_whenAxaxaxaxBytesIsUtf8() throws UnsupportedEncodingException {
     // Arrange, Act and Assert
@@ -349,7 +359,8 @@ public class TransactionUtilDiffblueTest {
    * <p>Method under test: {@link TransactionUtil#isNumber(byte[])}
    */
   @Test
-  @Category(MaintainedByDiffblue.class)
+  @Category(ContributionFromDiffblue.class)
+  @ManagedByDiffblue
   @MethodsUnderTest({"boolean TransactionUtil.isNumber(byte[])"})
   public void testIsNumber_whenEmptyArrayOfByte() {
     // Arrange, Act and Assert
@@ -366,7 +377,8 @@ public class TransactionUtilDiffblueTest {
    * <p>Method under test: {@link TransactionUtil#isNumber(byte[])}
    */
   @Test
-  @Category(MaintainedByDiffblue.class)
+  @Category(ContributionFromDiffblue.class)
+  @ManagedByDiffblue
   @MethodsUnderTest({"boolean TransactionUtil.isNumber(byte[])"})
   public void testIsNumber_whenXaxaxaxBytesIsUtf8() throws UnsupportedEncodingException {
     // Arrange, Act and Assert

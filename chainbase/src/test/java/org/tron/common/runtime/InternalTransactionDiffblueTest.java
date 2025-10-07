@@ -3,7 +3,8 @@ package org.tron.common.runtime;
 import static org.junit.Assert.assertArrayEquals;
 import static org.junit.Assert.assertEquals;
 import static org.junit.Assert.assertSame;
-import com.diffblue.cover.annotations.MaintainedByDiffblue;
+import com.diffblue.cover.annotations.ContributionFromDiffblue;
+import com.diffblue.cover.annotations.ManagedByDiffblue;
 import com.diffblue.cover.annotations.MethodsUnderTest;
 import java.io.UnsupportedEncodingException;
 import java.util.HashMap;
@@ -22,7 +23,8 @@ public class InternalTransactionDiffblueTest {
    * <p>Method under test: {@link InternalTransaction#InternalTransaction(Transaction, TrxType)}
    */
   @Test
-  @Category(MaintainedByDiffblue.class)
+  @Category(ContributionFromDiffblue.class)
+  @ManagedByDiffblue
   @MethodsUnderTest({"void InternalTransaction.<init>(Transaction, TrxType)"})
   public void testNewInternalTransaction() throws ContractValidateException {
     // Arrange and Act
@@ -50,7 +52,8 @@ public class InternalTransactionDiffblueTest {
    * byte[], long, byte[], String, long, Map)}
    */
   @Test
-  @Category(MaintainedByDiffblue.class)
+  @Category(ContributionFromDiffblue.class)
+  @ManagedByDiffblue
   @MethodsUnderTest({
     "void InternalTransaction.<init>(byte[], int, int, byte[], byte[], long, byte[], String, long, Map)"
   })
@@ -127,7 +130,8 @@ public class InternalTransactionDiffblueTest {
    * byte[], long, byte[], String, long, Map)}
    */
   @Test
-  @Category(MaintainedByDiffblue.class)
+  @Category(ContributionFromDiffblue.class)
+  @ManagedByDiffblue
   @MethodsUnderTest({
     "void InternalTransaction.<init>(byte[], int, int, byte[], byte[], long, byte[], String, long, Map)"
   })
@@ -187,7 +191,8 @@ public class InternalTransactionDiffblueTest {
    * byte[], long, byte[], String, long, Map)}
    */
   @Test
-  @Category(MaintainedByDiffblue.class)
+  @Category(ContributionFromDiffblue.class)
+  @ManagedByDiffblue
   @MethodsUnderTest({
     "void InternalTransaction.<init>(byte[], int, int, byte[], byte[], long, byte[], String, long, Map)"
   })
@@ -264,7 +269,8 @@ public class InternalTransactionDiffblueTest {
    * <p>Method under test: {@link InternalTransaction#InternalTransaction(Transaction, TrxType)}
    */
   @Test
-  @Category(MaintainedByDiffblue.class)
+  @Category(ContributionFromDiffblue.class)
+  @ManagedByDiffblue
   @MethodsUnderTest({"void InternalTransaction.<init>(Transaction, TrxType)"})
   public void testNewInternalTransaction_whenTrxUnknownType() throws ContractValidateException {
     // Arrange and Act
@@ -294,7 +300,8 @@ public class InternalTransactionDiffblueTest {
    * <p>Method under test: {@link InternalTransaction#getTransferToAddress()}
    */
   @Test
-  @Category(MaintainedByDiffblue.class)
+  @Category(ContributionFromDiffblue.class)
+  @ManagedByDiffblue
   @MethodsUnderTest({"byte[] InternalTransaction.getTransferToAddress()"})
   public void testGetTransferToAddress_thenReturnAxaxaxaxBytesIsUtf8()
       throws UnsupportedEncodingException {
@@ -331,7 +338,8 @@ public class InternalTransactionDiffblueTest {
    * <p>Method under test: {@link InternalTransaction#getNote()}
    */
   @Test
-  @Category(MaintainedByDiffblue.class)
+  @Category(ContributionFromDiffblue.class)
+  @ManagedByDiffblue
   @MethodsUnderTest({"String InternalTransaction.getNote()"})
   public void testGetNote_thenReturnEmptyString() throws UnsupportedEncodingException {
     // Arrange
@@ -367,7 +375,8 @@ public class InternalTransactionDiffblueTest {
    * <p>Method under test: {@link InternalTransaction#getNote()}
    */
   @Test
-  @Category(MaintainedByDiffblue.class)
+  @Category(ContributionFromDiffblue.class)
+  @ManagedByDiffblue
   @MethodsUnderTest({"String InternalTransaction.getNote()"})
   public void testGetNote_thenReturnNote() throws UnsupportedEncodingException {
     // Arrange
@@ -403,7 +412,8 @@ public class InternalTransactionDiffblueTest {
    * <p>Method under test: {@link InternalTransaction#getSender()}
    */
   @Test
-  @Category(MaintainedByDiffblue.class)
+  @Category(ContributionFromDiffblue.class)
+  @ManagedByDiffblue
   @MethodsUnderTest({"byte[] InternalTransaction.getSender()"})
   public void testGetSender_thenReturnAxaxaxaxBytesIsUtf8() throws UnsupportedEncodingException {
     // Arrange
@@ -439,7 +449,8 @@ public class InternalTransactionDiffblueTest {
    * <p>Method under test: {@link InternalTransaction#getReceiveAddress()}
    */
   @Test
-  @Category(MaintainedByDiffblue.class)
+  @Category(ContributionFromDiffblue.class)
+  @ManagedByDiffblue
   @MethodsUnderTest({"byte[] InternalTransaction.getReceiveAddress()"})
   public void testGetReceiveAddress_thenReturnAxaxaxaxBytesIsUtf8()
       throws UnsupportedEncodingException {
@@ -476,7 +487,8 @@ public class InternalTransactionDiffblueTest {
    * <p>Method under test: {@link InternalTransaction#getParentHash()}
    */
   @Test
-  @Category(MaintainedByDiffblue.class)
+  @Category(ContributionFromDiffblue.class)
+  @ManagedByDiffblue
   @MethodsUnderTest({"byte[] InternalTransaction.getParentHash()"})
   public void testGetParentHash_thenReturnAxaxaxaxBytesIsUtf8()
       throws UnsupportedEncodingException {
@@ -513,7 +525,8 @@ public class InternalTransactionDiffblueTest {
    * <p>Method under test: {@link InternalTransaction#getData()}
    */
   @Test
-  @Category(MaintainedByDiffblue.class)
+  @Category(ContributionFromDiffblue.class)
+  @ManagedByDiffblue
   @MethodsUnderTest({"byte[] InternalTransaction.getData()"})
   public void testGetData_thenReturnAxaxaxaxBytesIsUtf8() throws UnsupportedEncodingException {
     // Arrange
@@ -549,7 +562,8 @@ public class InternalTransactionDiffblueTest {
    * <p>Method under test: {@link InternalTransaction#getExtra()}
    */
   @Test
-  @Category(MaintainedByDiffblue.class)
+  @Category(ContributionFromDiffblue.class)
+  @ManagedByDiffblue
   @MethodsUnderTest({"String InternalTransaction.getExtra()"})
   public void testGetExtra_thenReturnEmptyString() throws ContractValidateException {
     // Arrange
@@ -571,7 +585,8 @@ public class InternalTransactionDiffblueTest {
    * <p>Method under test: {@link InternalTransaction#getExtra()}
    */
   @Test
-  @Category(MaintainedByDiffblue.class)
+  @Category(ContributionFromDiffblue.class)
+  @ManagedByDiffblue
   @MethodsUnderTest({"String InternalTransaction.getExtra()"})
   public void testGetExtra_thenReturnFoo() throws ContractValidateException {
     // Arrange
@@ -593,7 +608,8 @@ public class InternalTransactionDiffblueTest {
    * <p>Method under test: {@link InternalTransaction#getHash()}
    */
   @Test
-  @Category(MaintainedByDiffblue.class)
+  @Category(ContributionFromDiffblue.class)
+  @ManagedByDiffblue
   @MethodsUnderTest({"byte[] InternalTransaction.getHash()"})
   public void testGetHash_thenReturnArrayOfByteWithMinusEightySixAndMinusOneHundredTwentyTwo()
       throws UnsupportedEncodingException {
@@ -633,7 +649,8 @@ public class InternalTransactionDiffblueTest {
    * <p>Method under test: {@link InternalTransaction#getEncoded()}
    */
   @Test
-  @Category(MaintainedByDiffblue.class)
+  @Category(ContributionFromDiffblue.class)
+  @ManagedByDiffblue
   @MethodsUnderTest({"byte[] InternalTransaction.getEncoded()"})
   public void testGetEncoded_thenReturnArrayOfByteWithAAndX() throws UnsupportedEncodingException {
     // Arrange

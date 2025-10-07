@@ -10,7 +10,8 @@ import static org.mockito.Mockito.atLeast;
 import static org.mockito.Mockito.mock;
 import static org.mockito.Mockito.verify;
 import static org.mockito.Mockito.when;
-import com.diffblue.cover.annotations.MaintainedByDiffblue;
+import com.diffblue.cover.annotations.ContributionFromDiffblue;
+import com.diffblue.cover.annotations.ManagedByDiffblue;
 import com.diffblue.cover.annotations.MethodsUnderTest;
 import java.io.IOException;
 import java.io.PrintWriter;
@@ -56,7 +57,8 @@ public class ListExchangesServletDiffblueTest {
    * HttpServletResponse)}
    */
   @Test
-  @Category(MaintainedByDiffblue.class)
+  @Category(ContributionFromDiffblue.class)
+  @ManagedByDiffblue
   @MethodsUnderTest({"void ListExchangesServlet.doPost(HttpServletRequest, HttpServletResponse)"})
   public void testDoPost() throws IOException {
     // Arrange
@@ -87,7 +89,8 @@ public class ListExchangesServletDiffblueTest {
    * HttpServletResponse)}
    */
   @Test
-  @Category(MaintainedByDiffblue.class)
+  @Category(ContributionFromDiffblue.class)
+  @ManagedByDiffblue
   @MethodsUnderTest({"void ListExchangesServlet.doPost(HttpServletRequest, HttpServletResponse)"})
   public void testDoPost2() throws IOException {
     // Arrange
@@ -129,7 +132,8 @@ public class ListExchangesServletDiffblueTest {
    * HttpServletResponse)}
    */
   @Test
-  @Category(MaintainedByDiffblue.class)
+  @Category(ContributionFromDiffblue.class)
+  @ManagedByDiffblue
   @MethodsUnderTest({"void ListExchangesServlet.doPost(HttpServletRequest, HttpServletResponse)"})
   public void testDoPost_givenEmptyString_thenCallsGetWriter() throws IOException {
     // Arrange
@@ -162,7 +166,8 @@ public class ListExchangesServletDiffblueTest {
    * HttpServletResponse)}
    */
   @Test
-  @Category(MaintainedByDiffblue.class)
+  @Category(ContributionFromDiffblue.class)
+  @ManagedByDiffblue
   @MethodsUnderTest({"void ListExchangesServlet.doPost(HttpServletRequest, HttpServletResponse)"})
   public void testDoPost_givenRuntimeException_thenThrowRuntimeException() throws IOException {
     // Arrange
@@ -194,7 +199,8 @@ public class ListExchangesServletDiffblueTest {
    * HttpServletResponse)}
    */
   @Test
-  @Category(MaintainedByDiffblue.class)
+  @Category(ContributionFromDiffblue.class)
+  @ManagedByDiffblue
   @MethodsUnderTest({"void ListExchangesServlet.doPost(HttpServletRequest, HttpServletResponse)"})
   public void testDoPost_thenHttpServletResponseWrapperWithResponseIsResponseResponseResponse()
       throws IOException {
@@ -263,7 +269,8 @@ public class ListExchangesServletDiffblueTest {
    * HttpServletResponse)}
    */
   @Test
-  @Category(MaintainedByDiffblue.class)
+  @Category(ContributionFromDiffblue.class)
+  @ManagedByDiffblue
   @MethodsUnderTest({"void ListExchangesServlet.doPost(HttpServletRequest, HttpServletResponse)"})
   public void testDoPost_whenCreateRequestHttpsExampleOrgExample() throws IOException {
     // Arrange
@@ -294,7 +301,6 @@ public class ListExchangesServletDiffblueTest {
    * Test {@link ListExchangesServlet#doGet(HttpServletRequest, HttpServletResponse)}.
    *
    * <ul>
-   *   <li>Given {@code https://example.org/example}.
    *   <li>Then calls {@link DefaultMultipartHttpServletRequest#getParameter(String)}.
    * </ul>
    *
@@ -302,9 +308,10 @@ public class ListExchangesServletDiffblueTest {
    * HttpServletResponse)}
    */
   @Test
-  @Category(MaintainedByDiffblue.class)
+  @Category(ContributionFromDiffblue.class)
+  @ManagedByDiffblue
   @MethodsUnderTest({"void ListExchangesServlet.doGet(HttpServletRequest, HttpServletResponse)"})
-  public void testDoGet_givenHttpsExampleOrgExample_thenCallsGetParameter() throws IOException {
+  public void testDoGet_thenCallsGetParameter() throws IOException {
     // Arrange
     ListExchangesServlet listExchangesServlet = new ListExchangesServlet();
 
@@ -335,6 +342,77 @@ public class ListExchangesServletDiffblueTest {
    * Test {@link ListExchangesServlet#doGet(HttpServletRequest, HttpServletResponse)}.
    *
    * <ul>
+   *   <li>Then {@link HttpServletResponseWrapper#HttpServletResponseWrapper(HttpServletResponse)}
+   *       with response is {@link Response#Response(HttpChannel, HttpOutput)} Response {@link
+   *       Response}.
+   * </ul>
+   *
+   * <p>Method under test: {@link ListExchangesServlet#doGet(HttpServletRequest,
+   * HttpServletResponse)}
+   */
+  @Test
+  @Category(ContributionFromDiffblue.class)
+  @ManagedByDiffblue
+  @MethodsUnderTest({"void ListExchangesServlet.doGet(HttpServletRequest, HttpServletResponse)"})
+  public void testDoGet_thenHttpServletResponseWrapperWithResponseIsResponseResponseResponse()
+      throws IOException {
+    // Arrange
+    ListExchangesServlet listExchangesServlet = new ListExchangesServlet();
+
+    DefaultMultipartHttpServletRequest request = mock(DefaultMultipartHttpServletRequest.class);
+    when(request.getParameter(Mockito.<String>any())).thenReturn("https://example.org/example");
+    LocalConnector connector = new LocalConnector(new Server());
+    HttpConfiguration configuration = new HttpConfiguration();
+    ByteArrayEndPoint endPoint = new ByteArrayEndPoint();
+    HttpConfiguration config = new HttpConfiguration();
+    LocalConnector connector2 = new LocalConnector(new Server());
+
+    HttpConnection transport =
+        new HttpConnection(
+            config, connector2, new ByteArrayEndPoint(), HttpCompliance.LEGACY, true);
+
+    HttpChannel channel = new HttpChannel(connector, configuration, endPoint, transport);
+    LocalConnector connector3 = new LocalConnector(new Server());
+    HttpConfiguration configuration2 = new HttpConfiguration();
+    ByteArrayEndPoint endPoint2 = new ByteArrayEndPoint();
+    HttpConfiguration config2 = new HttpConfiguration();
+    LocalConnector connector4 = new LocalConnector(new Server());
+
+    HttpConnection transport2 =
+        new HttpConnection(
+            config2, connector4, new ByteArrayEndPoint(), HttpCompliance.LEGACY, true);
+
+    HttpChannel channel2 = new HttpChannel(connector3, configuration2, endPoint2, transport2);
+    Response response = new Response(channel, new HttpOutput(channel2));
+    HttpServletResponseWrapper response2 = new HttpServletResponseWrapper(response);
+
+    // Act
+    listExchangesServlet.doGet(request, response2);
+
+    // Assert
+    verify(request, atLeast(1)).getParameter("visible");
+    ServletResponse response3 = response2.getResponse();
+    assertTrue(response3 instanceof Response);
+    PrintWriter writer = response2.getWriter();
+    assertTrue(writer instanceof ResponseWriter);
+    HttpOutput httpOutput = ((Response) response3).getHttpOutput();
+    assertEquals(32768, httpOutput.getBufferSize());
+    assertEquals(56L, httpOutput.getWritten());
+    assertEquals(56L, ((Response) response3).getContentCount());
+    assertFalse(httpOutput.isAsync());
+    assertFalse(httpOutput.isClosed());
+    assertFalse(((Response) response3).isStreaming());
+    assertTrue(httpOutput.isWritten());
+    assertTrue(((Response) response3).isWriting());
+    assertSame(channel2, httpOutput.getHttpChannel());
+    assertSame(channel2, httpOutput.getInterceptor());
+    assertSame(writer, response3.getWriter());
+  }
+
+  /**
+   * Test {@link ListExchangesServlet#doGet(HttpServletRequest, HttpServletResponse)}.
+   *
+   * <ul>
    *   <li>When createRequest {@code https://example.org/example}.
    * </ul>
    *
@@ -342,7 +420,8 @@ public class ListExchangesServletDiffblueTest {
    * HttpServletResponse)}
    */
   @Test
-  @Category(MaintainedByDiffblue.class)
+  @Category(ContributionFromDiffblue.class)
+  @ManagedByDiffblue
   @MethodsUnderTest({"void ListExchangesServlet.doGet(HttpServletRequest, HttpServletResponse)"})
   public void testDoGet_whenCreateRequestHttpsExampleOrgExample() throws IOException {
     // Arrange
@@ -379,7 +458,8 @@ public class ListExchangesServletDiffblueTest {
    * HttpServletResponse)}
    */
   @Test
-  @Category(MaintainedByDiffblue.class)
+  @Category(ContributionFromDiffblue.class)
+  @ManagedByDiffblue
   @MethodsUnderTest({"void ListExchangesServlet.doGet(HttpServletRequest, HttpServletResponse)"})
   public void testDoGet_whenNull() throws IOException {
     // Arrange

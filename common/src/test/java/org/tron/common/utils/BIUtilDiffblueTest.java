@@ -4,7 +4,8 @@ import static org.junit.Assert.assertArrayEquals;
 import static org.junit.Assert.assertEquals;
 import static org.junit.Assert.assertFalse;
 import static org.junit.Assert.assertTrue;
-import com.diffblue.cover.annotations.MaintainedByDiffblue;
+import com.diffblue.cover.annotations.ContributionFromDiffblue;
+import com.diffblue.cover.annotations.ManagedByDiffblue;
 import com.diffblue.cover.annotations.MethodsUnderTest;
 import java.io.UnsupportedEncodingException;
 import java.math.BigInteger;
@@ -24,7 +25,8 @@ public class BIUtilDiffblueTest {
    * <p>Method under test: {@link BIUtil#isLessThan(BigInteger, BigInteger)}
    */
   @Test
-  @Category(MaintainedByDiffblue.class)
+  @Category(ContributionFromDiffblue.class)
+  @ManagedByDiffblue
   @MethodsUnderTest({"boolean BIUtil.isLessThan(BigInteger, BigInteger)"})
   public void testIsLessThan_whenMax_value_thenReturnFalse() {
     // Arrange, Act and Assert
@@ -42,7 +44,8 @@ public class BIUtilDiffblueTest {
    * <p>Method under test: {@link BIUtil#isLessThan(BigInteger, BigInteger)}
    */
   @Test
-  @Category(MaintainedByDiffblue.class)
+  @Category(ContributionFromDiffblue.class)
+  @ManagedByDiffblue
   @MethodsUnderTest({"boolean BIUtil.isLessThan(BigInteger, BigInteger)"})
   public void testIsLessThan_whenValueOfOne_thenReturnTrue() {
     // Arrange, Act and Assert
@@ -60,7 +63,8 @@ public class BIUtilDiffblueTest {
    * <p>Method under test: {@link BIUtil#isZero(BigInteger)}
    */
   @Test
-  @Category(MaintainedByDiffblue.class)
+  @Category(ContributionFromDiffblue.class)
+  @ManagedByDiffblue
   @MethodsUnderTest({"boolean BIUtil.isZero(BigInteger)"})
   public void testIsZero_whenMax_value_thenReturnFalse() {
     // Arrange, Act and Assert
@@ -78,7 +82,8 @@ public class BIUtilDiffblueTest {
    * <p>Method under test: {@link BIUtil#isZero(BigInteger)}
    */
   @Test
-  @Category(MaintainedByDiffblue.class)
+  @Category(ContributionFromDiffblue.class)
+  @ManagedByDiffblue
   @MethodsUnderTest({"boolean BIUtil.isZero(BigInteger)"})
   public void testIsZero_whenValueOfZero_thenReturnTrue() {
     // Arrange, Act and Assert
@@ -96,7 +101,8 @@ public class BIUtilDiffblueTest {
    * <p>Method under test: {@link BIUtil#isEqual(BigInteger, BigInteger)}
    */
   @Test
-  @Category(MaintainedByDiffblue.class)
+  @Category(ContributionFromDiffblue.class)
+  @ManagedByDiffblue
   @MethodsUnderTest({"boolean BIUtil.isEqual(BigInteger, BigInteger)"})
   public void testIsEqual_whenMax_value_thenReturnTrue() {
     // Arrange, Act and Assert
@@ -114,7 +120,8 @@ public class BIUtilDiffblueTest {
    * <p>Method under test: {@link BIUtil#isEqual(BigInteger, BigInteger)}
    */
   @Test
-  @Category(MaintainedByDiffblue.class)
+  @Category(ContributionFromDiffblue.class)
+  @ManagedByDiffblue
   @MethodsUnderTest({"boolean BIUtil.isEqual(BigInteger, BigInteger)"})
   public void testIsEqual_when_2_256_thenReturnFalse() {
     // Arrange, Act and Assert
@@ -132,7 +139,8 @@ public class BIUtilDiffblueTest {
    * <p>Method under test: {@link BIUtil#isNotEqual(BigInteger, BigInteger)}
    */
   @Test
-  @Category(MaintainedByDiffblue.class)
+  @Category(ContributionFromDiffblue.class)
+  @ManagedByDiffblue
   @MethodsUnderTest({"boolean BIUtil.isNotEqual(BigInteger, BigInteger)"})
   public void testIsNotEqual_whenMax_value_thenReturnFalse() {
     // Arrange, Act and Assert
@@ -150,7 +158,8 @@ public class BIUtilDiffblueTest {
    * <p>Method under test: {@link BIUtil#isNotEqual(BigInteger, BigInteger)}
    */
   @Test
-  @Category(MaintainedByDiffblue.class)
+  @Category(ContributionFromDiffblue.class)
+  @ManagedByDiffblue
   @MethodsUnderTest({"boolean BIUtil.isNotEqual(BigInteger, BigInteger)"})
   public void testIsNotEqual_when_2_256_thenReturnTrue() {
     // Arrange, Act and Assert
@@ -168,7 +177,8 @@ public class BIUtilDiffblueTest {
    * <p>Method under test: {@link BIUtil#isMoreThan(BigInteger, BigInteger)}
    */
   @Test
-  @Category(MaintainedByDiffblue.class)
+  @Category(ContributionFromDiffblue.class)
+  @ManagedByDiffblue
   @MethodsUnderTest({"boolean BIUtil.isMoreThan(BigInteger, BigInteger)"})
   public void testIsMoreThan_whenMax_value_thenReturnFalse() {
     // Arrange, Act and Assert
@@ -186,7 +196,8 @@ public class BIUtilDiffblueTest {
    * <p>Method under test: {@link BIUtil#isMoreThan(BigInteger, BigInteger)}
    */
   @Test
-  @Category(MaintainedByDiffblue.class)
+  @Category(ContributionFromDiffblue.class)
+  @ManagedByDiffblue
   @MethodsUnderTest({"boolean BIUtil.isMoreThan(BigInteger, BigInteger)"})
   public void testIsMoreThan_when_2_256_thenReturnTrue() {
     // Arrange, Act and Assert
@@ -199,7 +210,8 @@ public class BIUtilDiffblueTest {
    * <p>Method under test: {@link BIUtil#sum(BigInteger, BigInteger)}
    */
   @Test
-  @Category(MaintainedByDiffblue.class)
+  @Category(ContributionFromDiffblue.class)
+  @ManagedByDiffblue
   @MethodsUnderTest({"BigInteger BIUtil.sum(BigInteger, BigInteger)"})
   public void testSum() {
     // Arrange and Act
@@ -225,7 +237,8 @@ public class BIUtilDiffblueTest {
    * <p>Method under test: {@link BIUtil#sum(BigInteger, BigInteger)}
    */
   @Test
-  @Category(MaintainedByDiffblue.class)
+  @Category(ContributionFromDiffblue.class)
+  @ManagedByDiffblue
   @MethodsUnderTest({"BigInteger BIUtil.sum(BigInteger, BigInteger)"})
   public void testSum2() {
     // Arrange and Act
@@ -251,7 +264,8 @@ public class BIUtilDiffblueTest {
    * <p>Method under test: {@link BIUtil#sum(BigInteger, BigInteger)}
    */
   @Test
-  @Category(MaintainedByDiffblue.class)
+  @Category(ContributionFromDiffblue.class)
+  @ManagedByDiffblue
   @MethodsUnderTest({"BigInteger BIUtil.sum(BigInteger, BigInteger)"})
   public void testSum3() {
     // Arrange and Act
@@ -277,7 +291,8 @@ public class BIUtilDiffblueTest {
    * <p>Method under test: {@link BIUtil#sum(BigInteger, BigInteger)}
    */
   @Test
-  @Category(MaintainedByDiffblue.class)
+  @Category(ContributionFromDiffblue.class)
+  @ManagedByDiffblue
   @MethodsUnderTest({"BigInteger BIUtil.sum(BigInteger, BigInteger)"})
   public void testSum4() {
     // Arrange and Act
@@ -303,7 +318,8 @@ public class BIUtilDiffblueTest {
    * <p>Method under test: {@link BIUtil#toBI(byte[])}
    */
   @Test
-  @Category(MaintainedByDiffblue.class)
+  @Category(ContributionFromDiffblue.class)
+  @ManagedByDiffblue
   @MethodsUnderTest({"BigInteger BIUtil.toBI(byte[])"})
   public void testToBIWithByte() throws UnsupportedEncodingException {
     // Arrange and Act
@@ -323,7 +339,8 @@ public class BIUtilDiffblueTest {
    * <p>Method under test: {@link BIUtil#toBI(long)}
    */
   @Test
-  @Category(MaintainedByDiffblue.class)
+  @Category(ContributionFromDiffblue.class)
+  @ManagedByDiffblue
   @MethodsUnderTest({"BigInteger BIUtil.toBI(long)"})
   public void testToBIWithLong() {
     // Arrange and Act
@@ -347,7 +364,8 @@ public class BIUtilDiffblueTest {
    * <p>Method under test: {@link BIUtil#isPositive(BigInteger)}
    */
   @Test
-  @Category(MaintainedByDiffblue.class)
+  @Category(ContributionFromDiffblue.class)
+  @ManagedByDiffblue
   @MethodsUnderTest({"boolean BIUtil.isPositive(BigInteger)"})
   public void testIsPositive_whenMax_value_thenReturnTrue() {
     // Arrange, Act and Assert
@@ -365,7 +383,8 @@ public class BIUtilDiffblueTest {
    * <p>Method under test: {@link BIUtil#isPositive(BigInteger)}
    */
   @Test
-  @Category(MaintainedByDiffblue.class)
+  @Category(ContributionFromDiffblue.class)
+  @ManagedByDiffblue
   @MethodsUnderTest({"boolean BIUtil.isPositive(BigInteger)"})
   public void testIsPositive_whenValueOfMinusOne_thenReturnFalse() {
     // Arrange, Act and Assert
@@ -383,7 +402,8 @@ public class BIUtilDiffblueTest {
    * <p>Method under test: {@link BIUtil#isNotCovers(BigInteger, BigInteger)}
    */
   @Test
-  @Category(MaintainedByDiffblue.class)
+  @Category(ContributionFromDiffblue.class)
+  @ManagedByDiffblue
   @MethodsUnderTest({"boolean BIUtil.isNotCovers(BigInteger, BigInteger)"})
   public void testIsNotCovers_whenMax_value_thenReturnFalse() {
     // Arrange, Act and Assert
@@ -401,7 +421,8 @@ public class BIUtilDiffblueTest {
    * <p>Method under test: {@link BIUtil#isNotCovers(BigInteger, BigInteger)}
    */
   @Test
-  @Category(MaintainedByDiffblue.class)
+  @Category(ContributionFromDiffblue.class)
+  @ManagedByDiffblue
   @MethodsUnderTest({"boolean BIUtil.isNotCovers(BigInteger, BigInteger)"})
   public void testIsNotCovers_whenValueOfOne_thenReturnTrue() {
     // Arrange, Act and Assert
@@ -414,7 +435,8 @@ public class BIUtilDiffblueTest {
    * <p>Method under test: {@link BIUtil#max(BigInteger, BigInteger)}
    */
   @Test
-  @Category(MaintainedByDiffblue.class)
+  @Category(ContributionFromDiffblue.class)
+  @ManagedByDiffblue
   @MethodsUnderTest({"BigInteger BIUtil.max(BigInteger, BigInteger)"})
   public void testMax() {
     // Arrange and Act
@@ -440,7 +462,8 @@ public class BIUtilDiffblueTest {
    * <p>Method under test: {@link BIUtil#max(BigInteger, BigInteger)}
    */
   @Test
-  @Category(MaintainedByDiffblue.class)
+  @Category(ContributionFromDiffblue.class)
+  @ManagedByDiffblue
   @MethodsUnderTest({"BigInteger BIUtil.max(BigInteger, BigInteger)"})
   public void testMax2() {
     // Arrange and Act
@@ -466,7 +489,8 @@ public class BIUtilDiffblueTest {
    * <p>Method under test: {@link BIUtil#max(BigInteger, BigInteger)}
    */
   @Test
-  @Category(MaintainedByDiffblue.class)
+  @Category(ContributionFromDiffblue.class)
+  @ManagedByDiffblue
   @MethodsUnderTest({"BigInteger BIUtil.max(BigInteger, BigInteger)"})
   public void testMax3() {
     // Arrange and Act
@@ -496,7 +520,8 @@ public class BIUtilDiffblueTest {
    * <p>Method under test: {@link BIUtil#max(BigInteger, BigInteger)}
    */
   @Test
-  @Category(MaintainedByDiffblue.class)
+  @Category(ContributionFromDiffblue.class)
+  @ManagedByDiffblue
   @MethodsUnderTest({"BigInteger BIUtil.max(BigInteger, BigInteger)"})
   public void testMax_whenValueOfFive() {
     // Arrange and Act
@@ -527,7 +552,8 @@ public class BIUtilDiffblueTest {
    * <p>Method under test: {@link BIUtil#addSafely(int, int)}
    */
   @Test
-  @Category(MaintainedByDiffblue.class)
+  @Category(ContributionFromDiffblue.class)
+  @ManagedByDiffblue
   @MethodsUnderTest({"int BIUtil.addSafely(int, int)"})
   public void testAddSafely_whenMax_value_thenReturnMax_value() {
     // Arrange, Act and Assert
@@ -545,7 +571,8 @@ public class BIUtilDiffblueTest {
    * <p>Method under test: {@link BIUtil#addSafely(int, int)}
    */
   @Test
-  @Category(MaintainedByDiffblue.class)
+  @Category(ContributionFromDiffblue.class)
+  @ManagedByDiffblue
   @MethodsUnderTest({"int BIUtil.addSafely(int, int)"})
   public void testAddSafely_whenMin_value_thenReturn2147483646() {
     // Arrange, Act and Assert
@@ -563,7 +590,8 @@ public class BIUtilDiffblueTest {
    * <p>Method under test: {@link BIUtil#addSafely(int, int)}
    */
   @Test
-  @Category(MaintainedByDiffblue.class)
+  @Category(ContributionFromDiffblue.class)
+  @ManagedByDiffblue
   @MethodsUnderTest({"int BIUtil.addSafely(int, int)"})
   public void testAddSafely_whenMinusOne_thenReturnOne() {
     // Arrange, Act and Assert
@@ -581,7 +609,8 @@ public class BIUtilDiffblueTest {
    * <p>Method under test: {@link BIUtil#addSafely(int, int)}
    */
   @Test
-  @Category(MaintainedByDiffblue.class)
+  @Category(ContributionFromDiffblue.class)
+  @ManagedByDiffblue
   @MethodsUnderTest({"int BIUtil.addSafely(int, int)"})
   public void testAddSafely_whenOne_thenReturnThree() {
     // Arrange, Act and Assert
@@ -599,7 +628,8 @@ public class BIUtilDiffblueTest {
    * <p>Method under test: {@link BIUtil#addSafely(int, int)}
    */
   @Test
-  @Category(MaintainedByDiffblue.class)
+  @Category(ContributionFromDiffblue.class)
+  @ManagedByDiffblue
   @MethodsUnderTest({"int BIUtil.addSafely(int, int)"})
   public void testAddSafely_whenThree_thenReturnFive() {
     // Arrange, Act and Assert

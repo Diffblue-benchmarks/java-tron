@@ -2,7 +2,8 @@ package org.tron.common.utils;
 
 import static org.junit.Assert.assertArrayEquals;
 import static org.junit.Assert.assertEquals;
-import com.diffblue.cover.annotations.MaintainedByDiffblue;
+import com.diffblue.cover.annotations.ContributionFromDiffblue;
+import com.diffblue.cover.annotations.ManagedByDiffblue;
 import com.diffblue.cover.annotations.MethodsUnderTest;
 import java.io.UnsupportedEncodingException;
 import org.junit.Test;
@@ -15,7 +16,8 @@ public class UtilsDiffblueTest {
    * <p>Method under test: {@link Utils#getBytes(char[])}
    */
   @Test
-  @Category(MaintainedByDiffblue.class)
+  @Category(ContributionFromDiffblue.class)
+  @ManagedByDiffblue
   @MethodsUnderTest({"byte[] Utils.getBytes(char[])"})
   public void testGetBytes() throws UnsupportedEncodingException {
     // Arrange, Act and Assert
@@ -33,7 +35,8 @@ public class UtilsDiffblueTest {
    * <p>Method under test: {@link Utils#getIdShort(String)}
    */
   @Test
-  @Category(MaintainedByDiffblue.class)
+  @Category(ContributionFromDiffblue.class)
+  @ManagedByDiffblue
   @MethodsUnderTest({"String Utils.getIdShort(String)"})
   public void testGetIdShort_when42Null_thenReturn42Null() {
     // Arrange, Act and Assert
@@ -51,7 +54,8 @@ public class UtilsDiffblueTest {
    * <p>Method under test: {@link Utils#getIdShort(String)}
    */
   @Test
-  @Category(MaintainedByDiffblue.class)
+  @Category(ContributionFromDiffblue.class)
+  @ManagedByDiffblue
   @MethodsUnderTest({"String Utils.getIdShort(String)"})
   public void testGetIdShort_whenNull_thenReturnNull() {
     // Arrange, Act and Assert
@@ -64,7 +68,8 @@ public class UtilsDiffblueTest {
    * <p>Method under test: {@link Utils#clone(byte[])}
    */
   @Test
-  @Category(MaintainedByDiffblue.class)
+  @Category(ContributionFromDiffblue.class)
+  @ManagedByDiffblue
   @MethodsUnderTest({"byte[] Utils.clone(byte[])"})
   public void testClone() throws UnsupportedEncodingException {
     // Arrange, Act and Assert
@@ -82,7 +87,8 @@ public class UtilsDiffblueTest {
    * <p>Method under test: {@link Utils#align(String, char, int, boolean)}
    */
   @Test
-  @Category(MaintainedByDiffblue.class)
+  @Category(ContributionFromDiffblue.class)
+  @ManagedByDiffblue
   @MethodsUnderTest({"String Utils.align(String, char, int, boolean)"})
   public void testAlign_when42_thenReturnA42() {
     // Arrange and Act
@@ -103,7 +109,8 @@ public class UtilsDiffblueTest {
    * <p>Method under test: {@link Utils#align(String, char, int, boolean)}
    */
   @Test
-  @Category(MaintainedByDiffblue.class)
+  @Category(ContributionFromDiffblue.class)
+  @ManagedByDiffblue
   @MethodsUnderTest({"String Utils.align(String, char, int, boolean)"})
   public void testAlign_whenFalse_thenReturn42a() {
     // Arrange and Act
@@ -124,7 +131,8 @@ public class UtilsDiffblueTest {
    * <p>Method under test: {@link Utils#align(String, char, int, boolean)}
    */
   @Test
-  @Category(MaintainedByDiffblue.class)
+  @Category(ContributionFromDiffblue.class)
+  @ManagedByDiffblue
   @MethodsUnderTest({"String Utils.align(String, char, int, boolean)"})
   public void testAlign_whenFoo_thenReturnFoo() {
     // Arrange and Act
@@ -140,7 +148,8 @@ public class UtilsDiffblueTest {
    * <p>Method under test: {@link Utils#repeat(String, int)}
    */
   @Test
-  @Category(MaintainedByDiffblue.class)
+  @Category(ContributionFromDiffblue.class)
+  @ManagedByDiffblue
   @MethodsUnderTest({"String Utils.repeat(String, int)"})
   public void testRepeat() {
     // Arrange, Act and Assert

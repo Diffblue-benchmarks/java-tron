@@ -9,7 +9,8 @@ import static org.mockito.Mockito.doNothing;
 import static org.mockito.Mockito.mock;
 import static org.mockito.Mockito.verify;
 import static org.mockito.Mockito.when;
-import com.diffblue.cover.annotations.MaintainedByDiffblue;
+import com.diffblue.cover.annotations.ContributionFromDiffblue;
+import com.diffblue.cover.annotations.ManagedByDiffblue;
 import com.diffblue.cover.annotations.MethodsUnderTest;
 import java.io.IOException;
 import java.io.PrintWriter;
@@ -53,7 +54,8 @@ public class CreateShieldedContractParametersServletDiffblueTest {
    * HttpServletResponse)}
    */
   @Test
-  @Category(MaintainedByDiffblue.class)
+  @Category(ContributionFromDiffblue.class)
+  @ManagedByDiffblue
   @MethodsUnderTest({
     "void CreateShieldedContractParametersServlet.doPost(HttpServletRequest, HttpServletResponse)"
   })
@@ -88,7 +90,8 @@ public class CreateShieldedContractParametersServletDiffblueTest {
    * HttpServletResponse)}
    */
   @Test
-  @Category(MaintainedByDiffblue.class)
+  @Category(ContributionFromDiffblue.class)
+  @ManagedByDiffblue
   @MethodsUnderTest({
     "void CreateShieldedContractParametersServlet.doPost(HttpServletRequest, HttpServletResponse)"
   })
@@ -128,7 +131,8 @@ public class CreateShieldedContractParametersServletDiffblueTest {
    * HttpServletResponse)}
    */
   @Test
-  @Category(MaintainedByDiffblue.class)
+  @Category(ContributionFromDiffblue.class)
+  @ManagedByDiffblue
   @MethodsUnderTest({
     "void CreateShieldedContractParametersServlet.doPost(HttpServletRequest, HttpServletResponse)"
   })
@@ -201,7 +205,8 @@ public class CreateShieldedContractParametersServletDiffblueTest {
    * HttpServletResponse)}
    */
   @Test
-  @Category(MaintainedByDiffblue.class)
+  @Category(ContributionFromDiffblue.class)
+  @ManagedByDiffblue
   @MethodsUnderTest({
     "void CreateShieldedContractParametersServlet.doPost(HttpServletRequest, HttpServletResponse)"
   })

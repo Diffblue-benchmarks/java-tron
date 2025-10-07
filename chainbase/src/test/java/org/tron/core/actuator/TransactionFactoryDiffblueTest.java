@@ -1,7 +1,8 @@
 package org.tron.core.actuator;
 
 import static org.junit.Assert.assertNull;
-import com.diffblue.cover.annotations.MaintainedByDiffblue;
+import com.diffblue.cover.annotations.ContributionFromDiffblue;
+import com.diffblue.cover.annotations.ManagedByDiffblue;
 import com.diffblue.cover.annotations.MethodsUnderTest;
 import com.google.protobuf.GeneratedMessageV3;
 import org.junit.Test;
@@ -18,7 +19,8 @@ public class TransactionFactoryDiffblueTest {
    * <p>Method under test: {@link TransactionFactory#getActuator(Transaction.Contract.ContractType)}
    */
   @Test
-  @Category(MaintainedByDiffblue.class)
+  @Category(ContributionFromDiffblue.class)
+  @ManagedByDiffblue
   @MethodsUnderTest({"Class TransactionFactory.getActuator(Transaction.Contract.ContractType)"})
   public void testGetActuator() {
     // Arrange and Act
@@ -35,7 +37,8 @@ public class TransactionFactoryDiffblueTest {
    * <p>Method under test: {@link TransactionFactory#getContract(Transaction.Contract.ContractType)}
    */
   @Test
-  @Category(MaintainedByDiffblue.class)
+  @Category(ContributionFromDiffblue.class)
+  @ManagedByDiffblue
   @MethodsUnderTest({"Class TransactionFactory.getContract(Transaction.Contract.ContractType)"})
   public void testGetContract() {
     // Arrange and Act

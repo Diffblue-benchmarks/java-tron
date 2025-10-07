@@ -13,7 +13,8 @@ import static org.mockito.Mockito.atLeast;
 import static org.mockito.Mockito.mock;
 import static org.mockito.Mockito.verify;
 import static org.mockito.Mockito.when;
-import com.diffblue.cover.annotations.MaintainedByDiffblue;
+import com.diffblue.cover.annotations.ContributionFromDiffblue;
+import com.diffblue.cover.annotations.ManagedByDiffblue;
 import com.diffblue.cover.annotations.MethodsUnderTest;
 import io.netty.handler.ssl.PemPrivateKey;
 import java.io.UnsupportedEncodingException;
@@ -22,7 +23,6 @@ import java.security.PrivateKey;
 import java.security.Provider;
 import java.security.SecureRandom;
 import java.security.SignatureException;
-import org.bouncycastle.asn1.x9.ECNamedCurveTable;
 import org.bouncycastle.jce.provider.BouncyCastleProvider;
 import org.bouncycastle.math.ec.ECConstants;
 import org.bouncycastle.math.ec.ECCurve;
@@ -55,7 +55,8 @@ public class ECKeyDiffblueTest {
    * </ul>
    */
   @Test
-  @Category(MaintainedByDiffblue.class)
+  @Category(ContributionFromDiffblue.class)
+  @ManagedByDiffblue
   @MethodsUnderTest({"boolean ECDSASignature.equals(Object)", "int ECDSASignature.hashCode()"})
   public void testECDSASignatureEqualsAndHashCode_whenOtherIsEqual_thenReturnEqual() {
     // Arrange
@@ -86,7 +87,8 @@ public class ECKeyDiffblueTest {
    * </ul>
    */
   @Test
-  @Category(MaintainedByDiffblue.class)
+  @Category(ContributionFromDiffblue.class)
+  @ManagedByDiffblue
   @MethodsUnderTest({"boolean ECDSASignature.equals(Object)", "int ECDSASignature.hashCode()"})
   public void testECDSASignatureEqualsAndHashCode_whenOtherIsSame_thenReturnEqual() {
     // Arrange
@@ -110,7 +112,8 @@ public class ECKeyDiffblueTest {
    * <p>Method under test: {@link ECDSASignature#equals(Object)}
    */
   @Test
-  @Category(MaintainedByDiffblue.class)
+  @Category(ContributionFromDiffblue.class)
+  @ManagedByDiffblue
   @MethodsUnderTest({"boolean ECDSASignature.equals(Object)", "int ECDSASignature.hashCode()"})
   public void testECDSASignatureEquals_whenOtherIsDifferent_thenReturnNotEqual() {
     // Arrange
@@ -132,7 +135,8 @@ public class ECKeyDiffblueTest {
    * <p>Method under test: {@link ECDSASignature#equals(Object)}
    */
   @Test
-  @Category(MaintainedByDiffblue.class)
+  @Category(ContributionFromDiffblue.class)
+  @ManagedByDiffblue
   @MethodsUnderTest({"boolean ECDSASignature.equals(Object)", "int ECDSASignature.hashCode()"})
   public void testECDSASignatureEquals_whenOtherIsNull_thenReturnNotEqual() {
     // Arrange, Act and Assert
@@ -150,7 +154,8 @@ public class ECKeyDiffblueTest {
    * <p>Method under test: {@link ECDSASignature#equals(Object)}
    */
   @Test
-  @Category(MaintainedByDiffblue.class)
+  @Category(ContributionFromDiffblue.class)
+  @ManagedByDiffblue
   @MethodsUnderTest({"boolean ECDSASignature.equals(Object)", "int ECDSASignature.hashCode()"})
   public void testECDSASignatureEquals_whenOtherIsWrongType_thenReturnNotEqual() {
     // Arrange, Act and Assert
@@ -166,7 +171,8 @@ public class ECKeyDiffblueTest {
    * <p>Method under test: {@link ECDSASignature#fromComponents(byte[], byte[], byte)}
    */
   @Test
-  @Category(MaintainedByDiffblue.class)
+  @Category(ContributionFromDiffblue.class)
+  @ManagedByDiffblue
   @MethodsUnderTest({"ECDSASignature ECDSASignature.fromComponents(byte[], byte[], byte)"})
   public void testECDSASignatureFromComponentsWithRSV() throws UnsupportedEncodingException {
     // Arrange and Act
@@ -196,7 +202,8 @@ public class ECKeyDiffblueTest {
    * <p>Method under test: {@link ECDSASignature#ECDSASignature(BigInteger, BigInteger)}
    */
   @Test
-  @Category(MaintainedByDiffblue.class)
+  @Category(ContributionFromDiffblue.class)
+  @ManagedByDiffblue
   @MethodsUnderTest({"void ECDSASignature.<init>(BigInteger, BigInteger)"})
   public void testECDSASignatureNewECDSASignature() {
     // Arrange and Act
@@ -296,7 +303,8 @@ public class ECKeyDiffblueTest {
    * <p>Method under test: {@link ECDSASignature#ECDSASignature(byte[], byte[], byte)}
    */
   @Test
-  @Category(MaintainedByDiffblue.class)
+  @Category(ContributionFromDiffblue.class)
+  @ManagedByDiffblue
   @MethodsUnderTest({"void ECDSASignature.<init>(byte[], byte[], byte)"})
   public void testECDSASignatureNewECDSASignature2() throws UnsupportedEncodingException {
     // Arrange and Act
@@ -325,7 +333,8 @@ public class ECKeyDiffblueTest {
    * <p>Method under test: {@link ECDSASignature#toBase64()}
    */
   @Test
-  @Category(MaintainedByDiffblue.class)
+  @Category(ContributionFromDiffblue.class)
+  @ManagedByDiffblue
   @MethodsUnderTest({"String ECDSASignature.toBase64()"})
   public void testECDSASignatureToBase64() {
     // Arrange, Act and Assert
@@ -340,7 +349,8 @@ public class ECKeyDiffblueTest {
    * <p>Method under test: {@link ECDSASignature#toByteArray()}
    */
   @Test
-  @Category(MaintainedByDiffblue.class)
+  @Category(ContributionFromDiffblue.class)
+  @ManagedByDiffblue
   @MethodsUnderTest({"byte[] ECDSASignature.toByteArray()"})
   public void testECDSASignatureToByteArray() {
     // Arrange and Act
@@ -407,7 +417,8 @@ public class ECKeyDiffblueTest {
    * <p>Method under test: {@link ECDSASignature#toByteArray()}
    */
   @Test
-  @Category(MaintainedByDiffblue.class)
+  @Category(ContributionFromDiffblue.class)
+  @ManagedByDiffblue
   @MethodsUnderTest({"byte[] ECDSASignature.toByteArray()"})
   public void testECDSASignatureToByteArray2() {
     // Arrange
@@ -478,7 +489,8 @@ public class ECKeyDiffblueTest {
    * <p>Method under test: {@link ECDSASignature#toCanonicalised()}
    */
   @Test
-  @Category(MaintainedByDiffblue.class)
+  @Category(ContributionFromDiffblue.class)
+  @ManagedByDiffblue
   @MethodsUnderTest({"ECDSASignature ECDSASignature.toCanonicalised()"})
   public void testECDSASignatureToCanonicalised() {
     // Arrange
@@ -498,7 +510,8 @@ public class ECKeyDiffblueTest {
    * <p>Method under test: {@link ECDSASignature#toHex()}
    */
   @Test
-  @Category(MaintainedByDiffblue.class)
+  @Category(ContributionFromDiffblue.class)
+  @ManagedByDiffblue
   @MethodsUnderTest({"String ECDSASignature.toHex()"})
   public void testECDSASignatureToHex() {
     // Arrange, Act and Assert
@@ -514,7 +527,8 @@ public class ECKeyDiffblueTest {
    * <p>Method under test: {@link ECDSASignature#toHex()}
    */
   @Test
-  @Category(MaintainedByDiffblue.class)
+  @Category(ContributionFromDiffblue.class)
+  @ManagedByDiffblue
   @MethodsUnderTest({"String ECDSASignature.toHex()"})
   public void testECDSASignatureToHex2() {
     // Arrange
@@ -535,7 +549,8 @@ public class ECKeyDiffblueTest {
    * <p>Method under test: {@link ECDSASignature#validateComponents()}
    */
   @Test
-  @Category(MaintainedByDiffblue.class)
+  @Category(ContributionFromDiffblue.class)
+  @ManagedByDiffblue
   @MethodsUnderTest({"boolean ECDSASignature.validateComponents()"})
   public void testECDSASignatureValidateComponents() {
     // Arrange, Act and Assert
@@ -549,7 +564,8 @@ public class ECKeyDiffblueTest {
    * <p>Method under test: {@link ECDSASignature#validateComponents()}
    */
   @Test
-  @Category(MaintainedByDiffblue.class)
+  @Category(ContributionFromDiffblue.class)
+  @ManagedByDiffblue
   @MethodsUnderTest({"boolean ECDSASignature.validateComponents()"})
   public void testECDSASignatureValidateComponents2() {
     // Arrange
@@ -567,7 +583,8 @@ public class ECKeyDiffblueTest {
    * <p>Method under test: {@link ECDSASignature#validateComponents()}
    */
   @Test
-  @Category(MaintainedByDiffblue.class)
+  @Category(ContributionFromDiffblue.class)
+  @ManagedByDiffblue
   @MethodsUnderTest({"boolean ECDSASignature.validateComponents()"})
   public void testECDSASignatureValidateComponents3() {
     // Arrange
@@ -585,7 +602,8 @@ public class ECKeyDiffblueTest {
    * <p>Method under test: {@link ECDSASignature#validateComponents()}
    */
   @Test
-  @Category(MaintainedByDiffblue.class)
+  @Category(ContributionFromDiffblue.class)
+  @ManagedByDiffblue
   @MethodsUnderTest({"boolean ECDSASignature.validateComponents()"})
   public void testECDSASignatureValidateComponents4() {
     // Arrange
@@ -602,7 +620,8 @@ public class ECKeyDiffblueTest {
    * <p>Method under test: {@link ECDSASignature#validateComponents()}
    */
   @Test
-  @Category(MaintainedByDiffblue.class)
+  @Category(ContributionFromDiffblue.class)
+  @ManagedByDiffblue
   @MethodsUnderTest({"boolean ECDSASignature.validateComponents()"})
   public void testECDSASignatureValidateComponents5() {
     // Arrange
@@ -624,7 +643,8 @@ public class ECKeyDiffblueTest {
    * <p>Method under test: {@link ECDSASignature#validateComponents(BigInteger, BigInteger, byte)}
    */
   @Test
-  @Category(MaintainedByDiffblue.class)
+  @Category(ContributionFromDiffblue.class)
+  @ManagedByDiffblue
   @MethodsUnderTest({"boolean ECDSASignature.validateComponents(BigInteger, BigInteger, byte)"})
   public void testECDSASignatureValidateComponentsWithBigIntegerBigIntegerByte_thenReturnTrue() {
     // Arrange and Act
@@ -647,7 +667,8 @@ public class ECKeyDiffblueTest {
    * <p>Method under test: {@link ECDSASignature#validateComponents(BigInteger, BigInteger, byte)}
    */
   @Test
-  @Category(MaintainedByDiffblue.class)
+  @Category(ContributionFromDiffblue.class)
+  @ManagedByDiffblue
   @MethodsUnderTest({"boolean ECDSASignature.validateComponents(BigInteger, BigInteger, byte)"})
   public void testECDSASignatureValidateComponentsWithBigIntegerBigIntegerByte_whenA() {
     // Arrange and Act
@@ -670,7 +691,8 @@ public class ECKeyDiffblueTest {
    * <p>Method under test: {@link ECDSASignature#validateComponents(BigInteger, BigInteger, byte)}
    */
   @Test
-  @Category(MaintainedByDiffblue.class)
+  @Category(ContributionFromDiffblue.class)
+  @ManagedByDiffblue
   @MethodsUnderTest({"boolean ECDSASignature.validateComponents(BigInteger, BigInteger, byte)"})
   public void testECDSASignatureValidateComponentsWithBigIntegerBigIntegerByte_whenTwentyEight() {
     // Arrange and Act
@@ -693,7 +715,8 @@ public class ECKeyDiffblueTest {
    * <p>Method under test: {@link ECDSASignature#validateComponents(BigInteger, BigInteger, byte)}
    */
   @Test
-  @Category(MaintainedByDiffblue.class)
+  @Category(ContributionFromDiffblue.class)
+  @ManagedByDiffblue
   @MethodsUnderTest({"boolean ECDSASignature.validateComponents(BigInteger, BigInteger, byte)"})
   public void testECDSASignatureValidateComponentsWithBigIntegerBigIntegerByte_whenZero() {
     // Arrange and Act
@@ -715,7 +738,8 @@ public class ECKeyDiffblueTest {
    * <p>Method under test: {@link ECDSASignature#validateComponents(BigInteger, BigInteger, byte)}
    */
   @Test
-  @Category(MaintainedByDiffblue.class)
+  @Category(ContributionFromDiffblue.class)
+  @ManagedByDiffblue
   @MethodsUnderTest({"boolean ECDSASignature.validateComponents(BigInteger, BigInteger, byte)"})
   public void testECDSASignatureValidateComponentsWithBigIntegerBigIntegerByte_whenZero2() {
     // Arrange and Act
@@ -733,7 +757,8 @@ public class ECKeyDiffblueTest {
    * MissingPrivateKeyException}
    */
   @Test
-  @Category(MaintainedByDiffblue.class)
+  @Category(ContributionFromDiffblue.class)
+  @ManagedByDiffblue
   @MethodsUnderTest({"void MissingPrivateKeyException.<init>()"})
   public void testMissingPrivateKeyExceptionNewMissingPrivateKeyException() {
     // Arrange and Act
@@ -746,48 +771,23 @@ public class ECKeyDiffblueTest {
   }
 
   /**
-   * Test {@link ECKey#ECKey(Provider, PrivateKey, ECPoint)}.
-   *
-   * <ul>
-   *   <li>Given {@code Algorithm}.
-   *   <li>When {@link PemPrivateKey} {@link PemPrivateKey#getAlgorithm()} return {@code Algorithm}.
-   * </ul>
-   *
-   * <p>Method under test: {@link ECKey#ECKey(Provider, PrivateKey, ECPoint)}
-   */
-  @Test
-  @Category(MaintainedByDiffblue.class)
-  @MethodsUnderTest({"void ECKey.<init>(Provider, PrivateKey, ECPoint)"})
-  public void testNewECKey_givenAlgorithm_whenPemPrivateKeyGetAlgorithmReturnAlgorithm() {
-    // Arrange
-    BouncyCastleProvider provider = new BouncyCastleProvider();
-
-    PemPrivateKey privKey = mock(PemPrivateKey.class);
-    when(privKey.getAlgorithm()).thenReturn("Algorithm");
-
-    // Act and Assert
-    assertThrows(
-        IllegalArgumentException.class, () -> new ECKey(provider, privKey, mock(ECPoint.class)));
-    verify(privKey, atLeast(1)).getAlgorithm();
-  }
-
-  /**
    * Test {@link ECKey#ECKey(Provider, SecureRandom)}.
    *
    * <ul>
-   *   <li>Given {@code EC}.
-   *   <li>Then PubKeyPoint AffineYCoord return {@link SecP256K1FieldElement}.
+   *   <li>Given {@code 42}.
+   *   <li>Then return array length is sixty-five.
    * </ul>
    *
    * <p>Method under test: {@link ECKey#ECKey(Provider, SecureRandom)}
    */
   @Test
-  @Category(MaintainedByDiffblue.class)
+  @Category(ContributionFromDiffblue.class)
+  @ManagedByDiffblue
   @MethodsUnderTest({"void ECKey.<init>(Provider, SecureRandom)"})
-  public void testNewECKey_givenEc_thenPubKeyPointAffineYCoordReturnSecP256K1FieldElement() {
+  public void testNewECKey_given42_thenReturnArrayLengthIsSixtyFive() {
     // Arrange
     BouncyCastleProvider provider = new BouncyCastleProvider();
-    provider.addAlgorithm("EC", ECNamedCurveTable.getOID("EC"), "EC");
+    provider.putIfAbsent("42", "foo");
 
     // Act
     ECKey actualEcKey = new ECKey(provider, new SecureRandom());
@@ -800,12 +800,12 @@ public class ECKeyDiffblueTest {
     assertTrue(a instanceof SecP256K1FieldElement);
     ECFieldElement b = curve.getB();
     assertTrue(b instanceof SecP256K1FieldElement);
-    assertTrue(pubKeyPoint.getAffineYCoord() instanceof SecP256K1FieldElement);
     ECFieldElement[] zCoords = pubKeyPoint.getZCoords();
     ECFieldElement ecFieldElement = zCoords[0];
     assertTrue(ecFieldElement instanceof SecP256K1FieldElement);
     assertTrue(pubKeyPoint instanceof SecP256K1Point);
     assertEquals(1, zCoords.length);
+    assertEquals(65, actualEcKey.getPubKey().length);
     assertArrayEquals(new byte[] {1}, curve.getCofactor().toByteArray());
     assertArrayEquals(
         new byte[] {
@@ -843,6 +843,33 @@ public class ECKeyDiffblueTest {
    * Test {@link ECKey#ECKey(Provider, PrivateKey, ECPoint)}.
    *
    * <ul>
+   *   <li>Given {@code Algorithm}.
+   *   <li>When {@link PemPrivateKey} {@link PemPrivateKey#getAlgorithm()} return {@code Algorithm}.
+   * </ul>
+   *
+   * <p>Method under test: {@link ECKey#ECKey(Provider, PrivateKey, ECPoint)}
+   */
+  @Test
+  @Category(ContributionFromDiffblue.class)
+  @ManagedByDiffblue
+  @MethodsUnderTest({"void ECKey.<init>(Provider, PrivateKey, ECPoint)"})
+  public void testNewECKey_givenAlgorithm_whenPemPrivateKeyGetAlgorithmReturnAlgorithm() {
+    // Arrange
+    BouncyCastleProvider provider = new BouncyCastleProvider();
+
+    PemPrivateKey privKey = mock(PemPrivateKey.class);
+    when(privKey.getAlgorithm()).thenReturn("Algorithm");
+
+    // Act and Assert
+    assertThrows(
+        IllegalArgumentException.class, () -> new ECKey(provider, privKey, mock(ECPoint.class)));
+    verify(privKey, atLeast(1)).getAlgorithm();
+  }
+
+  /**
+   * Test {@link ECKey#ECKey(Provider, PrivateKey, ECPoint)}.
+   *
+   * <ul>
    *   <li>Given {@code EC}.
    *   <li>Then return PrivKeyBytes is {@code null}.
    * </ul>
@@ -850,7 +877,8 @@ public class ECKeyDiffblueTest {
    * <p>Method under test: {@link ECKey#ECKey(Provider, PrivateKey, ECPoint)}
    */
   @Test
-  @Category(MaintainedByDiffblue.class)
+  @Category(ContributionFromDiffblue.class)
+  @ManagedByDiffblue
   @MethodsUnderTest({"void ECKey.<init>(Provider, PrivateKey, ECPoint)"})
   public void testNewECKey_givenEc_thenReturnPrivKeyBytesIsNull() {
     // Arrange
@@ -883,7 +911,8 @@ public class ECKeyDiffblueTest {
    * <p>Method under test: {@link ECKey#ECKey(Provider, PrivateKey, ECPoint)}
    */
   @Test
-  @Category(MaintainedByDiffblue.class)
+  @Category(ContributionFromDiffblue.class)
+  @ManagedByDiffblue
   @MethodsUnderTest({"void ECKey.<init>(Provider, PrivateKey, ECPoint)"})
   public void testNewECKey_givenIllegalArgumentException() {
     // Arrange
@@ -909,7 +938,8 @@ public class ECKeyDiffblueTest {
    * <p>Method under test: {@link ECKey#ECKey(byte[], boolean)}
    */
   @Test
-  @Category(MaintainedByDiffblue.class)
+  @Category(ContributionFromDiffblue.class)
+  @ManagedByDiffblue
   @MethodsUnderTest({"void ECKey.<init>(byte[], boolean)"})
   public void testNewECKey_whenArrayOfByteWithZero_thenReturnToStringWithPrivateIsPub00() {
     // Arrange
@@ -939,14 +969,16 @@ public class ECKeyDiffblueTest {
    *
    * <ul>
    *   <li>When {@link BouncyCastleProvider} (default constructor).
+   *   <li>Then PubKeyPoint Curve return {@link SecP256K1Curve}.
    * </ul>
    *
    * <p>Method under test: {@link ECKey#ECKey(Provider, SecureRandom)}
    */
   @Test
-  @Category(MaintainedByDiffblue.class)
+  @Category(ContributionFromDiffblue.class)
+  @ManagedByDiffblue
   @MethodsUnderTest({"void ECKey.<init>(Provider, SecureRandom)"})
-  public void testNewECKey_whenBouncyCastleProvider() {
+  public void testNewECKey_whenBouncyCastleProvider_thenPubKeyPointCurveReturnSecP256K1Curve() {
     // Arrange
     BouncyCastleProvider provider = new BouncyCastleProvider();
 
@@ -1000,6 +1032,30 @@ public class ECKeyDiffblueTest {
   }
 
   /**
+   * Test {@link ECKey#ECKey(Provider, SecureRandom)}.
+   *
+   * <ul>
+   *   <li>When {@code null}.
+   *   <li>Then PubKeyPoint DetachedPoint return {@link SecP256K1Point}.
+   * </ul>
+   *
+   * <p>Method under test: {@link ECKey#ECKey(Provider, SecureRandom)}
+   */
+  @Test
+  @Category(ContributionFromDiffblue.class)
+  @ManagedByDiffblue
+  @MethodsUnderTest({"void ECKey.<init>(Provider, SecureRandom)"})
+  public void testNewECKey_whenNull_thenPubKeyPointDetachedPointReturnSecP256K1Point() {
+    // Arrange and Act
+    ECKey actualEcKey = new ECKey(new BouncyCastleProvider(), null);
+
+    // Assert
+    ECPoint pubKeyPoint = actualEcKey.getPubKeyPoint();
+    assertTrue(pubKeyPoint.getDetachedPoint() instanceof SecP256K1Point);
+    assertTrue(pubKeyPoint instanceof SecP256K1Point);
+  }
+
+  /**
    * Test {@link ECKey#ECKey(BigInteger, ECPoint)}.
    *
    * <ul>
@@ -1010,7 +1066,8 @@ public class ECKeyDiffblueTest {
    * <p>Method under test: {@link ECKey#ECKey(BigInteger, ECPoint)}
    */
   @Test
-  @Category(MaintainedByDiffblue.class)
+  @Category(ContributionFromDiffblue.class)
+  @ManagedByDiffblue
   @MethodsUnderTest({"void ECKey.<init>(BigInteger, ECPoint)"})
   public void testNewECKey_whenNull_thenThrowIllegalArgumentException() {
     // Arrange, Act and Assert
@@ -1028,7 +1085,8 @@ public class ECKeyDiffblueTest {
    * <p>Method under test: {@link ECKey#ECKey(Provider, PrivateKey, ECPoint)}
    */
   @Test
-  @Category(MaintainedByDiffblue.class)
+  @Category(ContributionFromDiffblue.class)
+  @ManagedByDiffblue
   @MethodsUnderTest({"void ECKey.<init>(Provider, PrivateKey, ECPoint)"})
   public void testNewECKey_whenNull_thenThrowIllegalArgumentException2() {
     // Arrange, Act and Assert
@@ -1046,7 +1104,8 @@ public class ECKeyDiffblueTest {
    * <p>Method under test: {@link ECKey#compressPoint(ECPoint)}
    */
   @Test
-  @Category(MaintainedByDiffblue.class)
+  @Category(ContributionFromDiffblue.class)
+  @ManagedByDiffblue
   @MethodsUnderTest({"ECPoint ECKey.compressPoint(ECPoint)"})
   public void testCompressPoint_thenThrowIllegalArgumentException() {
     // Arrange
@@ -1068,7 +1127,8 @@ public class ECKeyDiffblueTest {
    * <p>Method under test: {@link ECKey#decompressPoint(ECPoint)}
    */
   @Test
-  @Category(MaintainedByDiffblue.class)
+  @Category(ContributionFromDiffblue.class)
+  @ManagedByDiffblue
   @MethodsUnderTest({"ECPoint ECKey.decompressPoint(ECPoint)"})
   public void testDecompressPoint_thenThrowIllegalArgumentException() {
     // Arrange
@@ -1091,7 +1151,8 @@ public class ECKeyDiffblueTest {
    * <p>Method under test: {@link ECKey#fromPrivate(byte[])}
    */
   @Test
-  @Category(MaintainedByDiffblue.class)
+  @Category(ContributionFromDiffblue.class)
+  @ManagedByDiffblue
   @MethodsUnderTest({"ECKey ECKey.fromPrivate(byte[])"})
   public void testFromPrivateWithPrivKeyBytes_whenNull_thenReturnNull() {
     // Arrange, Act and Assert
@@ -1105,7 +1166,8 @@ public class ECKeyDiffblueTest {
    * <p>Method under test: {@link ECKey#fromPrivateAndPrecalculatedPublic(BigInteger, ECPoint)}
    */
   @Test
-  @Category(MaintainedByDiffblue.class)
+  @Category(ContributionFromDiffblue.class)
+  @ManagedByDiffblue
   @MethodsUnderTest({"ECKey ECKey.fromPrivateAndPrecalculatedPublic(BigInteger, ECPoint)"})
   public void testFromPrivateAndPrecalculatedPublicWithBigIntegerECPoint() {
     // Arrange, Act and Assert
@@ -1121,7 +1183,8 @@ public class ECKeyDiffblueTest {
    * <p>Method under test: {@link ECKey#fromPrivateAndPrecalculatedPublic(byte[], byte[])}
    */
   @Test
-  @Category(MaintainedByDiffblue.class)
+  @Category(ContributionFromDiffblue.class)
+  @ManagedByDiffblue
   @MethodsUnderTest({"ECKey ECKey.fromPrivateAndPrecalculatedPublic(byte[], byte[])"})
   public void testFromPrivateAndPrecalculatedPublicWithByteByte() {
     // Arrange, Act and Assert
@@ -1137,7 +1200,8 @@ public class ECKeyDiffblueTest {
    * <p>Method under test: {@link ECKey#fromPrivateAndPrecalculatedPublic(byte[], byte[])}
    */
   @Test
-  @Category(MaintainedByDiffblue.class)
+  @Category(ContributionFromDiffblue.class)
+  @ManagedByDiffblue
   @MethodsUnderTest({"ECKey ECKey.fromPrivateAndPrecalculatedPublic(byte[], byte[])"})
   public void testFromPrivateAndPrecalculatedPublicWithByteByte2() {
     // Arrange, Act and Assert
@@ -1159,7 +1223,8 @@ public class ECKeyDiffblueTest {
    * <p>Method under test: {@link ECKey#fromPublicOnly(byte[])}
    */
   @Test
-  @Category(MaintainedByDiffblue.class)
+  @Category(ContributionFromDiffblue.class)
+  @ManagedByDiffblue
   @MethodsUnderTest({"ECKey ECKey.fromPublicOnly(byte[])"})
   public void testFromPublicOnlyWithByte_whenArrayOfByteWithZero_thenPubKeyPointReturnFp() {
     // Arrange and Act
@@ -1194,7 +1259,8 @@ public class ECKeyDiffblueTest {
    * <p>Method under test: {@link ECKey#fromPublicOnly(ECPoint)}
    */
   @Test
-  @Category(MaintainedByDiffblue.class)
+  @Category(ContributionFromDiffblue.class)
+  @ManagedByDiffblue
   @MethodsUnderTest({"ECKey ECKey.fromPublicOnly(ECPoint)"})
   public void testFromPublicOnlyWithECPoint_whenECPoint_thenReturnPrivKeyBytesIsNull() {
     // Arrange
@@ -1223,7 +1289,8 @@ public class ECKeyDiffblueTest {
    * <p>Method under test: {@link ECKey#fromPublicOnly(ECPoint)}
    */
   @Test
-  @Category(MaintainedByDiffblue.class)
+  @Category(ContributionFromDiffblue.class)
+  @ManagedByDiffblue
   @MethodsUnderTest({"ECKey ECKey.fromPublicOnly(ECPoint)"})
   public void testFromPublicOnlyWithECPoint_whenNull_thenThrowIllegalArgumentException() {
     // Arrange, Act and Assert
@@ -1240,7 +1307,8 @@ public class ECKeyDiffblueTest {
    * <p>Method under test: {@link ECKey#publicKeyFromPrivate(BigInteger, boolean)}
    */
   @Test
-  @Category(MaintainedByDiffblue.class)
+  @Category(ContributionFromDiffblue.class)
+  @ManagedByDiffblue
   @MethodsUnderTest({"byte[] ECKey.publicKeyFromPrivate(BigInteger, boolean)"})
   public void testPublicKeyFromPrivate_thenReturnArrayOfByteWithThreeAndZero() {
     // Arrange, Act and Assert
@@ -1262,7 +1330,8 @@ public class ECKeyDiffblueTest {
    * <p>Method under test: {@link ECKey#publicKeyFromPrivate(BigInteger, boolean)}
    */
   @Test
-  @Category(MaintainedByDiffblue.class)
+  @Category(ContributionFromDiffblue.class)
+  @ManagedByDiffblue
   @MethodsUnderTest({"byte[] ECKey.publicKeyFromPrivate(BigInteger, boolean)"})
   public void testPublicKeyFromPrivate_thenReturnArrayOfByteWithTwoAndExclamationMark() {
     // Arrange, Act and Assert
@@ -1284,7 +1353,8 @@ public class ECKeyDiffblueTest {
    * <p>Method under test: {@link ECKey#publicKeyFromPrivate(BigInteger, boolean)}
    */
   @Test
-  @Category(MaintainedByDiffblue.class)
+  @Category(ContributionFromDiffblue.class)
+  @ManagedByDiffblue
   @MethodsUnderTest({"byte[] ECKey.publicKeyFromPrivate(BigInteger, boolean)"})
   public void testPublicKeyFromPrivate_thenReturnArrayOfByteWithTwoAndMinusTwentyEight() {
     // Arrange, Act and Assert
@@ -1337,7 +1407,8 @@ public class ECKeyDiffblueTest {
    * <p>Method under test: {@link ECKey#publicKeyFromPrivate(BigInteger, boolean)}
    */
   @Test
-  @Category(MaintainedByDiffblue.class)
+  @Category(ContributionFromDiffblue.class)
+  @ManagedByDiffblue
   @MethodsUnderTest({"byte[] ECKey.publicKeyFromPrivate(BigInteger, boolean)"})
   public void testPublicKeyFromPrivate_thenReturnFortySecondElementIsMinusOneHundredFour() {
     // Arrange and Act
@@ -1409,7 +1480,8 @@ public class ECKeyDiffblueTest {
    * <p>Method under test: {@link ECKey#publicKeyFromPrivate(BigInteger, boolean)}
    */
   @Test
-  @Category(MaintainedByDiffblue.class)
+  @Category(ContributionFromDiffblue.class)
+  @ManagedByDiffblue
   @MethodsUnderTest({"byte[] ECKey.publicKeyFromPrivate(BigInteger, boolean)"})
   public void testPublicKeyFromPrivate_whenEight_thenReturnArrayOfByteWithTwoAndSlash() {
     // Arrange, Act and Assert
@@ -1432,7 +1504,8 @@ public class ECKeyDiffblueTest {
    * <p>Method under test: {@link ECKey#publicKeyFromPrivate(BigInteger, boolean)}
    */
   @Test
-  @Category(MaintainedByDiffblue.class)
+  @Category(ContributionFromDiffblue.class)
+  @ManagedByDiffblue
   @MethodsUnderTest({"byte[] ECKey.publicKeyFromPrivate(BigInteger, boolean)"})
   public void testPublicKeyFromPrivate_whenOne_thenReturnArrayOfByteWithTwoAndY() {
     // Arrange, Act and Assert
@@ -1455,7 +1528,8 @@ public class ECKeyDiffblueTest {
    * <p>Method under test: {@link ECKey#publicKeyFromPrivate(BigInteger, boolean)}
    */
   @Test
-  @Category(MaintainedByDiffblue.class)
+  @Category(ContributionFromDiffblue.class)
+  @ManagedByDiffblue
   @MethodsUnderTest({"byte[] ECKey.publicKeyFromPrivate(BigInteger, boolean)"})
   public void testPublicKeyFromPrivate_whenZero_thenReturnArrayOfByteWithZero() {
     // Arrange, Act and Assert
@@ -1473,7 +1547,8 @@ public class ECKeyDiffblueTest {
    * <p>Method under test: {@link ECKey#pubBytesWithoutFormat(ECPoint)}
    */
   @Test
-  @Category(MaintainedByDiffblue.class)
+  @Category(ContributionFromDiffblue.class)
+  @ManagedByDiffblue
   @MethodsUnderTest({"byte[] ECKey.pubBytesWithoutFormat(ECPoint)"})
   public void testPubBytesWithoutFormat_givenAxaxaxaxBytesIsUtf8_thenReturnXaxaxaxBytesIsUtf8()
       throws UnsupportedEncodingException {
@@ -1499,7 +1574,8 @@ public class ECKeyDiffblueTest {
    * <p>Method under test: {@link ECKey#pubBytesWithoutFormat(ECPoint)}
    */
   @Test
-  @Category(MaintainedByDiffblue.class)
+  @Category(ContributionFromDiffblue.class)
+  @ManagedByDiffblue
   @MethodsUnderTest({"byte[] ECKey.pubBytesWithoutFormat(ECPoint)"})
   public void testPubBytesWithoutFormat_thenThrowIllegalArgumentException() {
     // Arrange
@@ -1517,7 +1593,8 @@ public class ECKeyDiffblueTest {
    * <p>Method under test: {@link ECKey#fromNodeId(byte[])}
    */
   @Test
-  @Category(MaintainedByDiffblue.class)
+  @Category(ContributionFromDiffblue.class)
+  @ManagedByDiffblue
   @MethodsUnderTest({"ECKey ECKey.fromNodeId(byte[])"})
   public void testFromNodeId() throws UnsupportedEncodingException {
     // Arrange, Act and Assert
@@ -1532,7 +1609,8 @@ public class ECKeyDiffblueTest {
    * <p>Method under test: {@link ECKey#signatureToKeyBytes(byte[], ECDSASignature)}
    */
   @Test
-  @Category(MaintainedByDiffblue.class)
+  @Category(ContributionFromDiffblue.class)
+  @ManagedByDiffblue
   @MethodsUnderTest({"byte[] ECKey.signatureToKeyBytes(byte[], ECDSASignature)"})
   public void testSignatureToKeyBytesWithMessageHashSig()
       throws UnsupportedEncodingException, SignatureException {
@@ -1554,7 +1632,8 @@ public class ECKeyDiffblueTest {
    * <p>Method under test: {@link ECKey#signatureToKeyBytes(byte[], String)}
    */
   @Test
-  @Category(MaintainedByDiffblue.class)
+  @Category(ContributionFromDiffblue.class)
+  @ManagedByDiffblue
   @MethodsUnderTest({"byte[] ECKey.signatureToKeyBytes(byte[], String)"})
   public void testSignatureToKeyBytesWithMessageHashSignatureBase64()
       throws UnsupportedEncodingException, SignatureException {
@@ -1577,7 +1656,8 @@ public class ECKeyDiffblueTest {
    * <p>Method under test: {@link ECKey#signatureToKeyBytes(byte[], String)}
    */
   @Test
-  @Category(MaintainedByDiffblue.class)
+  @Category(ContributionFromDiffblue.class)
+  @ManagedByDiffblue
   @MethodsUnderTest({"byte[] ECKey.signatureToKeyBytes(byte[], String)"})
   public void testSignatureToKeyBytesWithMessageHashSignatureBase64_whenCouldNotDecodeBase64()
       throws UnsupportedEncodingException, SignatureException {
@@ -1598,7 +1678,8 @@ public class ECKeyDiffblueTest {
    * <p>Method under test: {@link ECKey#signatureToKeyBytes(byte[], String)}
    */
   @Test
-  @Category(MaintainedByDiffblue.class)
+  @Category(ContributionFromDiffblue.class)
+  @ManagedByDiffblue
   @MethodsUnderTest({"byte[] ECKey.signatureToKeyBytes(byte[], String)"})
   public void testSignatureToKeyBytesWithMessageHashSignatureBase64_whenEmptyString()
       throws UnsupportedEncodingException, SignatureException {
@@ -1615,7 +1696,8 @@ public class ECKeyDiffblueTest {
    * <p>Method under test: {@link ECKey#signatureToAddress(byte[], ECDSASignature)}
    */
   @Test
-  @Category(MaintainedByDiffblue.class)
+  @Category(ContributionFromDiffblue.class)
+  @ManagedByDiffblue
   @MethodsUnderTest({"byte[] ECKey.signatureToAddress(byte[], ECDSASignature)"})
   public void testSignatureToAddressWithMessageHashSig()
       throws UnsupportedEncodingException, SignatureException {
@@ -1637,7 +1719,8 @@ public class ECKeyDiffblueTest {
    * <p>Method under test: {@link ECKey#signatureToAddress(byte[], String)}
    */
   @Test
-  @Category(MaintainedByDiffblue.class)
+  @Category(ContributionFromDiffblue.class)
+  @ManagedByDiffblue
   @MethodsUnderTest({"byte[] ECKey.signatureToAddress(byte[], String)"})
   public void testSignatureToAddressWithMessageHashSignatureBase64()
       throws UnsupportedEncodingException, SignatureException {
@@ -1660,7 +1743,8 @@ public class ECKeyDiffblueTest {
    * <p>Method under test: {@link ECKey#signatureToAddress(byte[], String)}
    */
   @Test
-  @Category(MaintainedByDiffblue.class)
+  @Category(ContributionFromDiffblue.class)
+  @ManagedByDiffblue
   @MethodsUnderTest({"byte[] ECKey.signatureToAddress(byte[], String)"})
   public void testSignatureToAddressWithMessageHashSignatureBase64_whenCouldNotDecodeBase64()
       throws UnsupportedEncodingException, SignatureException {
@@ -1681,7 +1765,8 @@ public class ECKeyDiffblueTest {
    * <p>Method under test: {@link ECKey#signatureToAddress(byte[], String)}
    */
   @Test
-  @Category(MaintainedByDiffblue.class)
+  @Category(ContributionFromDiffblue.class)
+  @ManagedByDiffblue
   @MethodsUnderTest({"byte[] ECKey.signatureToAddress(byte[], String)"})
   public void testSignatureToAddressWithMessageHashSignatureBase64_whenEmptyString()
       throws UnsupportedEncodingException, SignatureException {
@@ -1701,7 +1786,8 @@ public class ECKeyDiffblueTest {
    * <p>Method under test: {@link ECKey#signatureToKey(byte[], String)}
    */
   @Test
-  @Category(MaintainedByDiffblue.class)
+  @Category(ContributionFromDiffblue.class)
+  @ManagedByDiffblue
   @MethodsUnderTest({"ECKey ECKey.signatureToKey(byte[], String)"})
   public void testSignatureToKey_whenCouldNotDecodeBase64_thenThrowSignatureException()
       throws UnsupportedEncodingException, SignatureException {
@@ -1722,7 +1808,8 @@ public class ECKeyDiffblueTest {
    * <p>Method under test: {@link ECKey#signatureToKey(byte[], String)}
    */
   @Test
-  @Category(MaintainedByDiffblue.class)
+  @Category(ContributionFromDiffblue.class)
+  @ManagedByDiffblue
   @MethodsUnderTest({"ECKey ECKey.signatureToKey(byte[], String)"})
   public void testSignatureToKey_whenEmptyString_thenThrowSignatureException()
       throws UnsupportedEncodingException, SignatureException {
@@ -1741,7 +1828,8 @@ public class ECKeyDiffblueTest {
    * <p>Method under test: {@link ECKey#signatureToKey(byte[], String)}
    */
   @Test
-  @Category(MaintainedByDiffblue.class)
+  @Category(ContributionFromDiffblue.class)
+  @ManagedByDiffblue
   @MethodsUnderTest({"ECKey ECKey.signatureToKey(byte[], String)"})
   public void testSignatureToKey_whenJavaSecurityInterfacesECPublicKey()
       throws UnsupportedEncodingException, SignatureException {
@@ -1764,7 +1852,8 @@ public class ECKeyDiffblueTest {
    * <p>Method under test: {@link ECKey#isPubKeyCanonical(byte[])}
    */
   @Test
-  @Category(MaintainedByDiffblue.class)
+  @Category(ContributionFromDiffblue.class)
+  @ManagedByDiffblue
   @MethodsUnderTest({"boolean ECKey.isPubKeyCanonical(byte[])"})
   public void testIsPubKeyCanonicalWithByte_whenArrayOfByteWithFour_thenReturnFalse() {
     // Arrange, Act and Assert
@@ -1782,7 +1871,8 @@ public class ECKeyDiffblueTest {
    * <p>Method under test: {@link ECKey#isPubKeyCanonical(byte[])}
    */
   @Test
-  @Category(MaintainedByDiffblue.class)
+  @Category(ContributionFromDiffblue.class)
+  @ManagedByDiffblue
   @MethodsUnderTest({"boolean ECKey.isPubKeyCanonical(byte[])"})
   public void testIsPubKeyCanonicalWithByte_whenArrayOfByteWithThree_thenReturnFalse() {
     // Arrange, Act and Assert
@@ -1800,7 +1890,8 @@ public class ECKeyDiffblueTest {
    * <p>Method under test: {@link ECKey#isPubKeyCanonical(byte[])}
    */
   @Test
-  @Category(MaintainedByDiffblue.class)
+  @Category(ContributionFromDiffblue.class)
+  @ManagedByDiffblue
   @MethodsUnderTest({"boolean ECKey.isPubKeyCanonical(byte[])"})
   public void testIsPubKeyCanonicalWithByte_whenArrayOfByteWithTwo_thenReturnFalse() {
     // Arrange, Act and Assert
@@ -1818,7 +1909,8 @@ public class ECKeyDiffblueTest {
    * <p>Method under test: {@link ECKey#isPubKeyCanonical(byte[])}
    */
   @Test
-  @Category(MaintainedByDiffblue.class)
+  @Category(ContributionFromDiffblue.class)
+  @ManagedByDiffblue
   @MethodsUnderTest({"boolean ECKey.isPubKeyCanonical(byte[])"})
   public void testIsPubKeyCanonicalWithByte_whenAxaxaxaxBytesIsUtf8_thenReturnFalse()
       throws UnsupportedEncodingException {
@@ -1837,7 +1929,8 @@ public class ECKeyDiffblueTest {
    * <p>Method under test: {@link ECKey#isPubKeyCanonical()}
    */
   @Test
-  @Category(MaintainedByDiffblue.class)
+  @Category(ContributionFromDiffblue.class)
+  @ManagedByDiffblue
   @MethodsUnderTest({"boolean ECKey.isPubKeyCanonical()"})
   public void testIsPubKeyCanonical_givenECKey_thenReturnTrue() {
     // Arrange, Act and Assert
@@ -1855,7 +1948,8 @@ public class ECKeyDiffblueTest {
    * <p>Method under test: {@link ECKey#isPubKeyCanonical()}
    */
   @Test
-  @Category(MaintainedByDiffblue.class)
+  @Category(ContributionFromDiffblue.class)
+  @ManagedByDiffblue
   @MethodsUnderTest({"boolean ECKey.isPubKeyCanonical()"})
   public void testIsPubKeyCanonical_givenECPointGetEncodedReturnArrayOfByteWithFourAndX() {
     // Arrange
@@ -1882,7 +1976,8 @@ public class ECKeyDiffblueTest {
    * <p>Method under test: {@link ECKey#isPubKeyCanonical()}
    */
   @Test
-  @Category(MaintainedByDiffblue.class)
+  @Category(ContributionFromDiffblue.class)
+  @ManagedByDiffblue
   @MethodsUnderTest({"boolean ECKey.isPubKeyCanonical()"})
   public void testIsPubKeyCanonical_givenECPointGetEncodedReturnArrayOfByteWithThreeAndX() {
     // Arrange
@@ -1909,7 +2004,8 @@ public class ECKeyDiffblueTest {
    * <p>Method under test: {@link ECKey#isPubKeyCanonical()}
    */
   @Test
-  @Category(MaintainedByDiffblue.class)
+  @Category(ContributionFromDiffblue.class)
+  @ManagedByDiffblue
   @MethodsUnderTest({"boolean ECKey.isPubKeyCanonical()"})
   public void testIsPubKeyCanonical_givenECPointGetEncodedReturnArrayOfByteWithTwoAndX() {
     // Arrange
@@ -1936,7 +2032,8 @@ public class ECKeyDiffblueTest {
    * <p>Method under test: {@link ECKey#isPubKeyCanonical()}
    */
   @Test
-  @Category(MaintainedByDiffblue.class)
+  @Category(ContributionFromDiffblue.class)
+  @ManagedByDiffblue
   @MethodsUnderTest({"boolean ECKey.isPubKeyCanonical()"})
   public void testIsPubKeyCanonical_givenECPointGetEncodedReturnAxaxaxaxBytesIsUtf8()
       throws UnsupportedEncodingException {
@@ -1962,7 +2059,8 @@ public class ECKeyDiffblueTest {
    * <p>Method under test: {@link ECKey#isPubKeyCanonical()}
    */
   @Test
-  @Category(MaintainedByDiffblue.class)
+  @Category(ContributionFromDiffblue.class)
+  @ManagedByDiffblue
   @MethodsUnderTest({"boolean ECKey.isPubKeyCanonical()"})
   public void testIsPubKeyCanonical_thenThrowIllegalArgumentException() {
     // Arrange
@@ -1981,7 +2079,8 @@ public class ECKeyDiffblueTest {
    * <p>Method under test: {@link ECKey#recoverPubBytesFromSignature(int, ECDSASignature, byte[])}
    */
   @Test
-  @Category(MaintainedByDiffblue.class)
+  @Category(ContributionFromDiffblue.class)
+  @ManagedByDiffblue
   @MethodsUnderTest({"byte[] ECKey.recoverPubBytesFromSignature(int, ECDSASignature, byte[])"})
   public void testRecoverPubBytesFromSignature() throws UnsupportedEncodingException {
     // Arrange and Act
@@ -2048,7 +2147,8 @@ public class ECKeyDiffblueTest {
    * <p>Method under test: {@link ECKey#recoverPubBytesFromSignature(int, ECDSASignature, byte[])}
    */
   @Test
-  @Category(MaintainedByDiffblue.class)
+  @Category(ContributionFromDiffblue.class)
+  @ManagedByDiffblue
   @MethodsUnderTest({"byte[] ECKey.recoverPubBytesFromSignature(int, ECDSASignature, byte[])"})
   public void testRecoverPubBytesFromSignature2() {
     // Arrange and Act
@@ -2115,7 +2215,8 @@ public class ECKeyDiffblueTest {
    * <p>Method under test: {@link ECKey#recoverPubBytesFromSignature(int, ECDSASignature, byte[])}
    */
   @Test
-  @Category(MaintainedByDiffblue.class)
+  @Category(ContributionFromDiffblue.class)
+  @ManagedByDiffblue
   @MethodsUnderTest({"byte[] ECKey.recoverPubBytesFromSignature(int, ECDSASignature, byte[])"})
   public void testRecoverPubBytesFromSignature3() throws UnsupportedEncodingException {
     // Arrange and Act
@@ -2182,7 +2283,8 @@ public class ECKeyDiffblueTest {
    * <p>Method under test: {@link ECKey#recoverPubBytesFromSignature(int, ECDSASignature, byte[])}
    */
   @Test
-  @Category(MaintainedByDiffblue.class)
+  @Category(ContributionFromDiffblue.class)
+  @ManagedByDiffblue
   @MethodsUnderTest({"byte[] ECKey.recoverPubBytesFromSignature(int, ECDSASignature, byte[])"})
   public void testRecoverPubBytesFromSignature4() throws UnsupportedEncodingException {
     // Arrange and Act
@@ -2249,7 +2351,8 @@ public class ECKeyDiffblueTest {
    * <p>Method under test: {@link ECKey#recoverPubBytesFromSignature(int, ECDSASignature, byte[])}
    */
   @Test
-  @Category(MaintainedByDiffblue.class)
+  @Category(ContributionFromDiffblue.class)
+  @ManagedByDiffblue
   @MethodsUnderTest({"byte[] ECKey.recoverPubBytesFromSignature(int, ECDSASignature, byte[])"})
   public void testRecoverPubBytesFromSignature5() throws UnsupportedEncodingException {
     // Arrange and Act
@@ -2314,7 +2417,8 @@ public class ECKeyDiffblueTest {
    * <p>Method under test: {@link ECKey#recoverPubBytesFromSignature(int, ECDSASignature, byte[])}
    */
   @Test
-  @Category(MaintainedByDiffblue.class)
+  @Category(ContributionFromDiffblue.class)
+  @ManagedByDiffblue
   @MethodsUnderTest({"byte[] ECKey.recoverPubBytesFromSignature(int, ECDSASignature, byte[])"})
   public void testRecoverPubBytesFromSignature6() throws UnsupportedEncodingException {
     // Arrange and Act
@@ -2385,7 +2489,8 @@ public class ECKeyDiffblueTest {
    * <p>Method under test: {@link ECKey#recoverPubBytesFromSignature(int, ECDSASignature, byte[])}
    */
   @Test
-  @Category(MaintainedByDiffblue.class)
+  @Category(ContributionFromDiffblue.class)
+  @ManagedByDiffblue
   @MethodsUnderTest({"byte[] ECKey.recoverPubBytesFromSignature(int, ECDSASignature, byte[])"})
   public void testRecoverPubBytesFromSignature_thenReturnArrayOfByteWithZero() {
     // Arrange and Act
@@ -2407,7 +2512,8 @@ public class ECKeyDiffblueTest {
    * <p>Method under test: {@link ECKey#recoverPubBytesFromSignature(int, ECDSASignature, byte[])}
    */
   @Test
-  @Category(MaintainedByDiffblue.class)
+  @Category(ContributionFromDiffblue.class)
+  @ManagedByDiffblue
   @MethodsUnderTest({"byte[] ECKey.recoverPubBytesFromSignature(int, ECDSASignature, byte[])"})
   public void testRecoverPubBytesFromSignature_thenReturnFiftyFifthElementIsMinusOneHundredTwo() {
     // Arrange and Act
@@ -2475,7 +2581,8 @@ public class ECKeyDiffblueTest {
    * <p>Method under test: {@link ECKey#recoverPubBytesFromSignature(int, ECDSASignature, byte[])}
    */
   @Test
-  @Category(MaintainedByDiffblue.class)
+  @Category(ContributionFromDiffblue.class)
+  @ManagedByDiffblue
   @MethodsUnderTest({"byte[] ECKey.recoverPubBytesFromSignature(int, ECDSASignature, byte[])"})
   public void testRecoverPubBytesFromSignature_thenReturnMinusOneHundredThree()
       throws UnsupportedEncodingException {
@@ -2547,7 +2654,8 @@ public class ECKeyDiffblueTest {
    * <p>Method under test: {@link ECKey#recoverPubBytesFromSignature(int, ECDSASignature, byte[])}
    */
   @Test
-  @Category(MaintainedByDiffblue.class)
+  @Category(ContributionFromDiffblue.class)
+  @ManagedByDiffblue
   @MethodsUnderTest({"byte[] ECKey.recoverPubBytesFromSignature(int, ECDSASignature, byte[])"})
   public void testRecoverPubBytesFromSignature_thenReturnSeventhElementIsMinusOneHundredOne()
       throws UnsupportedEncodingException {
@@ -2621,7 +2729,8 @@ public class ECKeyDiffblueTest {
    * <p>Method under test: {@link ECKey#recoverPubBytesFromSignature(int, ECDSASignature, byte[])}
    */
   @Test
-  @Category(MaintainedByDiffblue.class)
+  @Category(ContributionFromDiffblue.class)
+  @ManagedByDiffblue
   @MethodsUnderTest({"byte[] ECKey.recoverPubBytesFromSignature(int, ECDSASignature, byte[])"})
   public void testRecoverPubBytesFromSignature_whenMinusOne_thenThrowIllegalArgumentException() {
     // Arrange, Act and Assert
@@ -2643,7 +2752,8 @@ public class ECKeyDiffblueTest {
    * <p>Method under test: {@link ECKey#recoverPubBytesFromSignature(int, ECDSASignature, byte[])}
    */
   @Test
-  @Category(MaintainedByDiffblue.class)
+  @Category(ContributionFromDiffblue.class)
+  @ManagedByDiffblue
   @MethodsUnderTest({"byte[] ECKey.recoverPubBytesFromSignature(int, ECDSASignature, byte[])"})
   public void testRecoverPubBytesFromSignature_whenTwo_thenReturnNull()
       throws UnsupportedEncodingException {
@@ -2669,7 +2779,8 @@ public class ECKeyDiffblueTest {
    * <p>Method under test: {@link ECKey#recoverPubBytesFromSignature(int, ECDSASignature, byte[])}
    */
   @Test
-  @Category(MaintainedByDiffblue.class)
+  @Category(ContributionFromDiffblue.class)
+  @ManagedByDiffblue
   @MethodsUnderTest({"byte[] ECKey.recoverPubBytesFromSignature(int, ECDSASignature, byte[])"})
   public void testRecoverPubBytesFromSignature_whenZero_thenThrowIllegalArgumentException() {
     // Arrange, Act and Assert
@@ -2690,7 +2801,8 @@ public class ECKeyDiffblueTest {
    * <p>Method under test: {@link ECKey#recoverAddressFromSignature(int, ECDSASignature, byte[])}
    */
   @Test
-  @Category(MaintainedByDiffblue.class)
+  @Category(ContributionFromDiffblue.class)
+  @ManagedByDiffblue
   @MethodsUnderTest({"byte[] ECKey.recoverAddressFromSignature(int, ECDSASignature, byte[])"})
   public void testRecoverAddressFromSignature_thenReturnArrayOfByteWithAAnd2()
       throws UnsupportedEncodingException {
@@ -2720,7 +2832,8 @@ public class ECKeyDiffblueTest {
    * <p>Method under test: {@link ECKey#recoverAddressFromSignature(int, ECDSASignature, byte[])}
    */
   @Test
-  @Category(MaintainedByDiffblue.class)
+  @Category(ContributionFromDiffblue.class)
+  @ManagedByDiffblue
   @MethodsUnderTest({"byte[] ECKey.recoverAddressFromSignature(int, ECDSASignature, byte[])"})
   public void testRecoverAddressFromSignature_thenReturnArrayOfByteWithAAndB()
       throws UnsupportedEncodingException {
@@ -2748,7 +2861,8 @@ public class ECKeyDiffblueTest {
    * <p>Method under test: {@link ECKey#recoverAddressFromSignature(int, ECDSASignature, byte[])}
    */
   @Test
-  @Category(MaintainedByDiffblue.class)
+  @Category(ContributionFromDiffblue.class)
+  @ManagedByDiffblue
   @MethodsUnderTest({"byte[] ECKey.recoverAddressFromSignature(int, ECDSASignature, byte[])"})
   public void testRecoverAddressFromSignature_thenReturnArrayOfByteWithAAndBacktick()
       throws UnsupportedEncodingException {
@@ -2778,7 +2892,8 @@ public class ECKeyDiffblueTest {
    * <p>Method under test: {@link ECKey#recoverAddressFromSignature(int, ECDSASignature, byte[])}
    */
   @Test
-  @Category(MaintainedByDiffblue.class)
+  @Category(ContributionFromDiffblue.class)
+  @ManagedByDiffblue
   @MethodsUnderTest({"byte[] ECKey.recoverAddressFromSignature(int, ECDSASignature, byte[])"})
   public void testRecoverAddressFromSignature_thenReturnArrayOfByteWithAAndC() {
     // Arrange and Act
@@ -2805,7 +2920,8 @@ public class ECKeyDiffblueTest {
    * <p>Method under test: {@link ECKey#recoverAddressFromSignature(int, ECDSASignature, byte[])}
    */
   @Test
-  @Category(MaintainedByDiffblue.class)
+  @Category(ContributionFromDiffblue.class)
+  @ManagedByDiffblue
   @MethodsUnderTest({"byte[] ECKey.recoverAddressFromSignature(int, ECDSASignature, byte[])"})
   public void testRecoverAddressFromSignature_thenReturnArrayOfByteWithAAndExclamationMark() {
     // Arrange and Act
@@ -2834,7 +2950,8 @@ public class ECKeyDiffblueTest {
    * <p>Method under test: {@link ECKey#recoverAddressFromSignature(int, ECDSASignature, byte[])}
    */
   @Test
-  @Category(MaintainedByDiffblue.class)
+  @Category(ContributionFromDiffblue.class)
+  @ManagedByDiffblue
   @MethodsUnderTest({"byte[] ECKey.recoverAddressFromSignature(int, ECDSASignature, byte[])"})
   public void testRecoverAddressFromSignature_thenReturnArrayOfByteWithAAndLessThanSign()
       throws UnsupportedEncodingException {
@@ -2864,7 +2981,8 @@ public class ECKeyDiffblueTest {
    * <p>Method under test: {@link ECKey#recoverAddressFromSignature(int, ECDSASignature, byte[])}
    */
   @Test
-  @Category(MaintainedByDiffblue.class)
+  @Category(ContributionFromDiffblue.class)
+  @ManagedByDiffblue
   @MethodsUnderTest({"byte[] ECKey.recoverAddressFromSignature(int, ECDSASignature, byte[])"})
   public void testRecoverAddressFromSignature_thenReturnArrayOfByteWithAAndMinusEightyThree()
       throws UnsupportedEncodingException {
@@ -2894,7 +3012,8 @@ public class ECKeyDiffblueTest {
    * <p>Method under test: {@link ECKey#recoverAddressFromSignature(int, ECDSASignature, byte[])}
    */
   @Test
-  @Category(MaintainedByDiffblue.class)
+  @Category(ContributionFromDiffblue.class)
+  @ManagedByDiffblue
   @MethodsUnderTest({"byte[] ECKey.recoverAddressFromSignature(int, ECDSASignature, byte[])"})
   public void testRecoverAddressFromSignature_thenReturnArrayOfByteWithAAndMinusSixtyFive()
       throws UnsupportedEncodingException {
@@ -2924,7 +3043,8 @@ public class ECKeyDiffblueTest {
    * <p>Method under test: {@link ECKey#recoverAddressFromSignature(int, ECDSASignature, byte[])}
    */
   @Test
-  @Category(MaintainedByDiffblue.class)
+  @Category(ContributionFromDiffblue.class)
+  @ManagedByDiffblue
   @MethodsUnderTest({"byte[] ECKey.recoverAddressFromSignature(int, ECDSASignature, byte[])"})
   public void testRecoverAddressFromSignature_thenReturnArrayOfByteWithAAndMinusThirtySix() {
     // Arrange and Act
@@ -2951,7 +3071,8 @@ public class ECKeyDiffblueTest {
    * <p>Method under test: {@link ECKey#recoverAddressFromSignature(int, ECDSASignature, byte[])}
    */
   @Test
-  @Category(MaintainedByDiffblue.class)
+  @Category(ContributionFromDiffblue.class)
+  @ManagedByDiffblue
   @MethodsUnderTest({"byte[] ECKey.recoverAddressFromSignature(int, ECDSASignature, byte[])"})
   public void testRecoverAddressFromSignature_thenReturnArrayOfByteWithAAndMinusThree()
       throws UnsupportedEncodingException {
@@ -2982,7 +3103,8 @@ public class ECKeyDiffblueTest {
    * <p>Method under test: {@link ECKey#recoverAddressFromSignature(int, ECDSASignature, byte[])}
    */
   @Test
-  @Category(MaintainedByDiffblue.class)
+  @Category(ContributionFromDiffblue.class)
+  @ManagedByDiffblue
   @MethodsUnderTest({"byte[] ECKey.recoverAddressFromSignature(int, ECDSASignature, byte[])"})
   public void testRecoverAddressFromSignature_whenMinusOne_thenThrowIllegalArgumentException() {
     // Arrange, Act and Assert
@@ -3004,7 +3126,8 @@ public class ECKeyDiffblueTest {
    * <p>Method under test: {@link ECKey#recoverAddressFromSignature(int, ECDSASignature, byte[])}
    */
   @Test
-  @Category(MaintainedByDiffblue.class)
+  @Category(ContributionFromDiffblue.class)
+  @ManagedByDiffblue
   @MethodsUnderTest({"byte[] ECKey.recoverAddressFromSignature(int, ECDSASignature, byte[])"})
   public void testRecoverAddressFromSignature_whenTwo_thenReturnNull()
       throws UnsupportedEncodingException {
@@ -3030,7 +3153,8 @@ public class ECKeyDiffblueTest {
    * <p>Method under test: {@link ECKey#recoverAddressFromSignature(int, ECDSASignature, byte[])}
    */
   @Test
-  @Category(MaintainedByDiffblue.class)
+  @Category(ContributionFromDiffblue.class)
+  @ManagedByDiffblue
   @MethodsUnderTest({"byte[] ECKey.recoverAddressFromSignature(int, ECDSASignature, byte[])"})
   public void testRecoverAddressFromSignature_whenZero_thenThrowIllegalArgumentException() {
     // Arrange, Act and Assert
@@ -3051,7 +3175,8 @@ public class ECKeyDiffblueTest {
    * <p>Method under test: {@link ECKey#recoverFromSignature(int, ECDSASignature, byte[])}
    */
   @Test
-  @Category(MaintainedByDiffblue.class)
+  @Category(ContributionFromDiffblue.class)
+  @ManagedByDiffblue
   @MethodsUnderTest({"ECKey ECKey.recoverFromSignature(int, ECDSASignature, byte[])"})
   public void testRecoverFromSignature_thenPubKeyPointCurveReturnFp() {
     // Arrange and Act
@@ -3094,7 +3219,8 @@ public class ECKeyDiffblueTest {
    * <p>Method under test: {@link ECKey#recoverFromSignature(int, ECDSASignature, byte[])}
    */
   @Test
-  @Category(MaintainedByDiffblue.class)
+  @Category(ContributionFromDiffblue.class)
+  @ManagedByDiffblue
   @MethodsUnderTest({"ECKey ECKey.recoverFromSignature(int, ECDSASignature, byte[])"})
   public void testRecoverFromSignature_thenReturnAddressIsArrayOfByteWithAAnd2()
       throws UnsupportedEncodingException {
@@ -3137,7 +3263,8 @@ public class ECKeyDiffblueTest {
    * <p>Method under test: {@link ECKey#recoverFromSignature(int, ECDSASignature, byte[])}
    */
   @Test
-  @Category(MaintainedByDiffblue.class)
+  @Category(ContributionFromDiffblue.class)
+  @ManagedByDiffblue
   @MethodsUnderTest({"ECKey ECKey.recoverFromSignature(int, ECDSASignature, byte[])"})
   public void testRecoverFromSignature_thenReturnAddressIsArrayOfByteWithAAndB()
       throws UnsupportedEncodingException {
@@ -3238,7 +3365,8 @@ public class ECKeyDiffblueTest {
    * <p>Method under test: {@link ECKey#recoverFromSignature(int, ECDSASignature, byte[])}
    */
   @Test
-  @Category(MaintainedByDiffblue.class)
+  @Category(ContributionFromDiffblue.class)
+  @ManagedByDiffblue
   @MethodsUnderTest({"ECKey ECKey.recoverFromSignature(int, ECDSASignature, byte[])"})
   public void testRecoverFromSignature_thenReturnAddressIsArrayOfByteWithAAndBacktick()
       throws UnsupportedEncodingException {
@@ -3341,7 +3469,8 @@ public class ECKeyDiffblueTest {
    * <p>Method under test: {@link ECKey#recoverFromSignature(int, ECDSASignature, byte[])}
    */
   @Test
-  @Category(MaintainedByDiffblue.class)
+  @Category(ContributionFromDiffblue.class)
+  @ManagedByDiffblue
   @MethodsUnderTest({"ECKey ECKey.recoverFromSignature(int, ECDSASignature, byte[])"})
   public void testRecoverFromSignature_thenReturnAddressIsArrayOfByteWithAAndC() {
     // Arrange and Act
@@ -3441,7 +3570,8 @@ public class ECKeyDiffblueTest {
    * <p>Method under test: {@link ECKey#recoverFromSignature(int, ECDSASignature, byte[])}
    */
   @Test
-  @Category(MaintainedByDiffblue.class)
+  @Category(ContributionFromDiffblue.class)
+  @ManagedByDiffblue
   @MethodsUnderTest({"ECKey ECKey.recoverFromSignature(int, ECDSASignature, byte[])"})
   public void testRecoverFromSignature_thenReturnAddressIsArrayOfByteWithAAndExclamationMark()
       throws UnsupportedEncodingException {
@@ -3544,7 +3674,8 @@ public class ECKeyDiffblueTest {
    * <p>Method under test: {@link ECKey#recoverFromSignature(int, ECDSASignature, byte[])}
    */
   @Test
-  @Category(MaintainedByDiffblue.class)
+  @Category(ContributionFromDiffblue.class)
+  @ManagedByDiffblue
   @MethodsUnderTest({"ECKey ECKey.recoverFromSignature(int, ECDSASignature, byte[])"})
   public void testRecoverFromSignature_thenReturnAddressIsArrayOfByteWithAAndLessThanSign()
       throws UnsupportedEncodingException {
@@ -3587,7 +3718,8 @@ public class ECKeyDiffblueTest {
    * <p>Method under test: {@link ECKey#recoverFromSignature(int, ECDSASignature, byte[])}
    */
   @Test
-  @Category(MaintainedByDiffblue.class)
+  @Category(ContributionFromDiffblue.class)
+  @ManagedByDiffblue
   @MethodsUnderTest({"ECKey ECKey.recoverFromSignature(int, ECDSASignature, byte[])"})
   public void testRecoverFromSignature_thenReturnAddressIsArrayOfByteWithAAndMinusEightyThree()
       throws UnsupportedEncodingException {
@@ -3690,7 +3822,8 @@ public class ECKeyDiffblueTest {
    * <p>Method under test: {@link ECKey#recoverFromSignature(int, ECDSASignature, byte[])}
    */
   @Test
-  @Category(MaintainedByDiffblue.class)
+  @Category(ContributionFromDiffblue.class)
+  @ManagedByDiffblue
   @MethodsUnderTest({"ECKey ECKey.recoverFromSignature(int, ECDSASignature, byte[])"})
   public void testRecoverFromSignature_thenReturnAddressIsArrayOfByteWithAAndMinusSixtyFive()
       throws UnsupportedEncodingException {
@@ -3733,7 +3866,8 @@ public class ECKeyDiffblueTest {
    * <p>Method under test: {@link ECKey#recoverFromSignature(int, ECDSASignature, byte[])}
    */
   @Test
-  @Category(MaintainedByDiffblue.class)
+  @Category(ContributionFromDiffblue.class)
+  @ManagedByDiffblue
   @MethodsUnderTest({"ECKey ECKey.recoverFromSignature(int, ECDSASignature, byte[])"})
   public void testRecoverFromSignature_thenReturnAddressIsArrayOfByteWithAAndMinusThree()
       throws UnsupportedEncodingException {
@@ -3777,7 +3911,8 @@ public class ECKeyDiffblueTest {
    * <p>Method under test: {@link ECKey#recoverFromSignature(int, ECDSASignature, byte[])}
    */
   @Test
-  @Category(MaintainedByDiffblue.class)
+  @Category(ContributionFromDiffblue.class)
+  @ManagedByDiffblue
   @MethodsUnderTest({"ECKey ECKey.recoverFromSignature(int, ECDSASignature, byte[])"})
   public void testRecoverFromSignature_whenMinusOne_thenThrowIllegalArgumentException()
       throws UnsupportedEncodingException {
@@ -3802,7 +3937,8 @@ public class ECKeyDiffblueTest {
    * <p>Method under test: {@link ECKey#recoverFromSignature(int, ECDSASignature, byte[])}
    */
   @Test
-  @Category(MaintainedByDiffblue.class)
+  @Category(ContributionFromDiffblue.class)
+  @ManagedByDiffblue
   @MethodsUnderTest({"ECKey ECKey.recoverFromSignature(int, ECDSASignature, byte[])"})
   public void testRecoverFromSignature_whenNull_thenThrowIllegalArgumentException() {
     // Arrange, Act and Assert
@@ -3824,7 +3960,8 @@ public class ECKeyDiffblueTest {
    * <p>Method under test: {@link ECKey#recoverFromSignature(int, ECDSASignature, byte[])}
    */
   @Test
-  @Category(MaintainedByDiffblue.class)
+  @Category(ContributionFromDiffblue.class)
+  @ManagedByDiffblue
   @MethodsUnderTest({"ECKey ECKey.recoverFromSignature(int, ECDSASignature, byte[])"})
   public void testRecoverFromSignature_whenTwo_thenReturnNull()
       throws UnsupportedEncodingException {
@@ -3850,7 +3987,8 @@ public class ECKeyDiffblueTest {
    * <p>Method under test: {@link ECKey#isPubKeyOnly()}
    */
   @Test
-  @Category(MaintainedByDiffblue.class)
+  @Category(ContributionFromDiffblue.class)
+  @ManagedByDiffblue
   @MethodsUnderTest({"boolean ECKey.isPubKeyOnly()"})
   public void testIsPubKeyOnly_givenECKey_thenReturnFalse() {
     // Arrange, Act and Assert
@@ -3868,7 +4006,8 @@ public class ECKeyDiffblueTest {
    * <p>Method under test: {@link ECKey#isPubKeyOnly()}
    */
   @Test
-  @Category(MaintainedByDiffblue.class)
+  @Category(ContributionFromDiffblue.class)
+  @ManagedByDiffblue
   @MethodsUnderTest({"boolean ECKey.isPubKeyOnly()"})
   public void testIsPubKeyOnly_givenFromPublicOnlyECPoint_thenReturnTrue() {
     // Arrange, Act and Assert
@@ -3886,7 +4025,8 @@ public class ECKeyDiffblueTest {
    * <p>Method under test: {@link ECKey#hasPrivKey()}
    */
   @Test
-  @Category(MaintainedByDiffblue.class)
+  @Category(ContributionFromDiffblue.class)
+  @ManagedByDiffblue
   @MethodsUnderTest({"boolean ECKey.hasPrivKey()"})
   public void testHasPrivKey_givenECKey_thenReturnTrue() {
     // Arrange, Act and Assert
@@ -3904,7 +4044,8 @@ public class ECKeyDiffblueTest {
    * <p>Method under test: {@link ECKey#hasPrivKey()}
    */
   @Test
-  @Category(MaintainedByDiffblue.class)
+  @Category(ContributionFromDiffblue.class)
+  @ManagedByDiffblue
   @MethodsUnderTest({"boolean ECKey.hasPrivKey()"})
   public void testHasPrivKey_givenFromPublicOnlyECPoint_thenReturnFalse() {
     // Arrange, Act and Assert
@@ -3921,7 +4062,8 @@ public class ECKeyDiffblueTest {
    * <p>Method under test: {@link ECKey#getAddress()}
    */
   @Test
-  @Category(MaintainedByDiffblue.class)
+  @Category(ContributionFromDiffblue.class)
+  @ManagedByDiffblue
   @MethodsUnderTest({"byte[] ECKey.getAddress()"})
   public void testGetAddress_thenReturnArrayOfByteWithAAndNineteen()
       throws UnsupportedEncodingException {
@@ -3952,7 +4094,8 @@ public class ECKeyDiffblueTest {
    * <p>Method under test: {@link ECKey#getAddress()}
    */
   @Test
-  @Category(MaintainedByDiffblue.class)
+  @Category(ContributionFromDiffblue.class)
+  @ManagedByDiffblue
   @MethodsUnderTest({"byte[] ECKey.getAddress()"})
   public void testGetAddress_thenThrowIllegalArgumentException() {
     // Arrange
@@ -3970,7 +4113,8 @@ public class ECKeyDiffblueTest {
    * <p>Method under test: {@link ECKey#signHash(byte[])}
    */
   @Test
-  @Category(MaintainedByDiffblue.class)
+  @Category(ContributionFromDiffblue.class)
+  @ManagedByDiffblue
   @MethodsUnderTest({"String ECKey.signHash(byte[])"})
   public void testSignHash() throws UnsupportedEncodingException {
     // Arrange, Act and Assert
@@ -3988,7 +4132,8 @@ public class ECKeyDiffblueTest {
    * <p>Method under test: {@link ECKey#Base64toBytes(String)}
    */
   @Test
-  @Category(MaintainedByDiffblue.class)
+  @Category(ContributionFromDiffblue.class)
+  @ManagedByDiffblue
   @MethodsUnderTest({"byte[] ECKey.Base64toBytes(String)"})
   public void testBase64toBytes_thenReturnFortyFifthElementIsMinusTwentyNine() {
     // Arrange and Act
@@ -4060,7 +4205,8 @@ public class ECKeyDiffblueTest {
    * <p>Method under test: {@link ECKey#getNodeId()}
    */
   @Test
-  @Category(MaintainedByDiffblue.class)
+  @Category(ContributionFromDiffblue.class)
+  @ManagedByDiffblue
   @MethodsUnderTest({"byte[] ECKey.getNodeId()"})
   public void testGetNodeId_thenReturnXaxaxaxBytesIsUtf8() throws UnsupportedEncodingException {
     // Arrange
@@ -4085,7 +4231,8 @@ public class ECKeyDiffblueTest {
    * <p>Method under test: {@link ECKey#getNodeId()}
    */
   @Test
-  @Category(MaintainedByDiffblue.class)
+  @Category(ContributionFromDiffblue.class)
+  @ManagedByDiffblue
   @MethodsUnderTest({"byte[] ECKey.getNodeId()"})
   public void testGetNodeId_thenThrowIllegalArgumentException() {
     // Arrange
@@ -4108,7 +4255,8 @@ public class ECKeyDiffblueTest {
    * <p>Method under test: {@link ECKey#getPrivateKey()}
    */
   @Test
-  @Category(MaintainedByDiffblue.class)
+  @Category(ContributionFromDiffblue.class)
+  @ManagedByDiffblue
   @MethodsUnderTest({"byte[] ECKey.getPrivateKey()"})
   public void testGetPrivateKey_givenFromPublicOnlyECPoint_thenReturnNull() {
     // Arrange, Act and Assert
@@ -4126,7 +4274,8 @@ public class ECKeyDiffblueTest {
    * <p>Method under test: {@link ECKey#getPubKey()}
    */
   @Test
-  @Category(MaintainedByDiffblue.class)
+  @Category(ContributionFromDiffblue.class)
+  @ManagedByDiffblue
   @MethodsUnderTest({"byte[] ECKey.getPubKey()"})
   public void testGetPubKey_givenECKey_thenReturnFirstElementIsFour() {
     // Arrange and Act
@@ -4147,7 +4296,8 @@ public class ECKeyDiffblueTest {
    * <p>Method under test: {@link ECKey#getPubKey()}
    */
   @Test
-  @Category(MaintainedByDiffblue.class)
+  @Category(ContributionFromDiffblue.class)
+  @ManagedByDiffblue
   @MethodsUnderTest({"byte[] ECKey.getPubKey()"})
   public void testGetPubKey_thenReturnAxaxaxaxBytesIsUtf8() throws UnsupportedEncodingException {
     // Arrange
@@ -4172,7 +4322,8 @@ public class ECKeyDiffblueTest {
    * <p>Method under test: {@link ECKey#getPubKey()}
    */
   @Test
-  @Category(MaintainedByDiffblue.class)
+  @Category(ContributionFromDiffblue.class)
+  @ManagedByDiffblue
   @MethodsUnderTest({"byte[] ECKey.getPubKey()"})
   public void testGetPubKey_thenThrowIllegalArgumentException() {
     // Arrange
@@ -4195,7 +4346,8 @@ public class ECKeyDiffblueTest {
    * <p>Method under test: {@link ECKey#getPrivKey()}
    */
   @Test
-  @Category(MaintainedByDiffblue.class)
+  @Category(ContributionFromDiffblue.class)
+  @ManagedByDiffblue
   @MethodsUnderTest({"BigInteger ECKey.getPrivKey()"})
   public void testGetPrivKey_givenFromPublicOnlyECPoint_thenThrowMissingPrivateKeyException() {
     // Arrange, Act and Assert
@@ -4214,7 +4366,8 @@ public class ECKeyDiffblueTest {
    * <p>Method under test: {@link ECKey#toStringWithPrivate()}
    */
   @Test
-  @Category(MaintainedByDiffblue.class)
+  @Category(ContributionFromDiffblue.class)
+  @ManagedByDiffblue
   @MethodsUnderTest({"String ECKey.toStringWithPrivate()"})
   public void testToStringWithPrivate_thenReturnPub4158415841584158()
       throws UnsupportedEncodingException {
@@ -4240,7 +4393,8 @@ public class ECKeyDiffblueTest {
    * <p>Method under test: {@link ECKey#toStringWithPrivate()}
    */
   @Test
-  @Category(MaintainedByDiffblue.class)
+  @Category(ContributionFromDiffblue.class)
+  @ManagedByDiffblue
   @MethodsUnderTest({"String ECKey.toStringWithPrivate()"})
   public void testToStringWithPrivate_thenThrowIllegalArgumentException() {
     // Arrange
@@ -4259,7 +4413,8 @@ public class ECKeyDiffblueTest {
    * <p>Method under test: {@link ECKey#doSign(byte[])}
    */
   @Test
-  @Category(MaintainedByDiffblue.class)
+  @Category(ContributionFromDiffblue.class)
+  @ManagedByDiffblue
   @MethodsUnderTest({"ECDSASignature ECKey.doSign(byte[])"})
   public void testDoSign() throws UnsupportedEncodingException {
     // Arrange, Act and Assert
@@ -4273,7 +4428,8 @@ public class ECKeyDiffblueTest {
    * <p>Method under test: {@link ECKey#sign(byte[])}
    */
   @Test
-  @Category(MaintainedByDiffblue.class)
+  @Category(ContributionFromDiffblue.class)
+  @ManagedByDiffblue
   @MethodsUnderTest({"ECDSASignature ECKey.sign(byte[])"})
   public void testSign() throws UnsupportedEncodingException {
     // Arrange, Act and Assert
@@ -4292,7 +4448,8 @@ public class ECKeyDiffblueTest {
    * <p>Method under test: {@link ECKey#getPrivKeyBytes()}
    */
   @Test
-  @Category(MaintainedByDiffblue.class)
+  @Category(ContributionFromDiffblue.class)
+  @ManagedByDiffblue
   @MethodsUnderTest({"byte[] ECKey.getPrivKeyBytes()"})
   public void testGetPrivKeyBytes_givenFromPublicOnlyECPoint_thenReturnNull() {
     // Arrange, Act and Assert
@@ -4315,7 +4472,8 @@ public class ECKeyDiffblueTest {
    * </ul>
    */
   @Test
-  @Category(MaintainedByDiffblue.class)
+  @Category(ContributionFromDiffblue.class)
+  @ManagedByDiffblue
   @MethodsUnderTest({"boolean ECKey.equals(Object)", "int ECKey.hashCode()"})
   public void testEqualsAndHashCode_whenOtherIsSame_thenReturnEqual() {
     // Arrange
@@ -4338,7 +4496,8 @@ public class ECKeyDiffblueTest {
    * <p>Method under test: {@link ECKey#equals(Object)}
    */
   @Test
-  @Category(MaintainedByDiffblue.class)
+  @Category(ContributionFromDiffblue.class)
+  @ManagedByDiffblue
   @MethodsUnderTest({"boolean ECKey.equals(Object)", "int ECKey.hashCode()"})
   public void testEquals_whenOtherIsDifferent_thenReturnNotEqual() {
     // Arrange
@@ -4359,7 +4518,8 @@ public class ECKeyDiffblueTest {
    * <p>Method under test: {@link ECKey#equals(Object)}
    */
   @Test
-  @Category(MaintainedByDiffblue.class)
+  @Category(ContributionFromDiffblue.class)
+  @ManagedByDiffblue
   @MethodsUnderTest({"boolean ECKey.equals(Object)", "int ECKey.hashCode()"})
   public void testEquals_whenOtherIsNull_thenReturnNotEqual() {
     // Arrange, Act and Assert
@@ -4377,7 +4537,8 @@ public class ECKeyDiffblueTest {
    * <p>Method under test: {@link ECKey#equals(Object)}
    */
   @Test
-  @Category(MaintainedByDiffblue.class)
+  @Category(ContributionFromDiffblue.class)
+  @ManagedByDiffblue
   @MethodsUnderTest({"boolean ECKey.equals(Object)", "int ECKey.hashCode()"})
   public void testEquals_whenOtherIsWrongType_thenReturnNotEqual() {
     // Arrange, Act and Assert

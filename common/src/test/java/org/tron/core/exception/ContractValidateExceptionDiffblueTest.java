@@ -3,7 +3,8 @@ package org.tron.core.exception;
 import static org.junit.Assert.assertEquals;
 import static org.junit.Assert.assertNull;
 import static org.junit.Assert.assertSame;
-import com.diffblue.cover.annotations.MaintainedByDiffblue;
+import com.diffblue.cover.annotations.ContributionFromDiffblue;
+import com.diffblue.cover.annotations.ManagedByDiffblue;
 import com.diffblue.cover.annotations.MethodsUnderTest;
 import org.junit.Test;
 import org.junit.experimental.categories.Category;
@@ -15,7 +16,8 @@ public class ContractValidateExceptionDiffblueTest {
    * <p>Method under test: {@link ContractValidateException#ContractValidateException()}
    */
   @Test
-  @Category(MaintainedByDiffblue.class)
+  @Category(ContributionFromDiffblue.class)
+  @ManagedByDiffblue
   @MethodsUnderTest({"void ContractValidateException.<init>()"})
   public void testNewContractValidateException() {
     // Arrange and Act
@@ -34,7 +36,8 @@ public class ContractValidateExceptionDiffblueTest {
    * <p>Method under test: {@link ContractValidateException#ContractValidateException(String)}
    */
   @Test
-  @Category(MaintainedByDiffblue.class)
+  @Category(ContributionFromDiffblue.class)
+  @ManagedByDiffblue
   @MethodsUnderTest({"void ContractValidateException.<init>(String)"})
   public void testNewContractValidateException2() {
     // Arrange and Act
@@ -55,7 +58,8 @@ public class ContractValidateExceptionDiffblueTest {
    * Throwable)}
    */
   @Test
-  @Category(MaintainedByDiffblue.class)
+  @Category(ContributionFromDiffblue.class)
+  @ManagedByDiffblue
   @MethodsUnderTest({"void ContractValidateException.<init>(String, Throwable)"})
   public void testNewContractValidateException3() {
     // Arrange

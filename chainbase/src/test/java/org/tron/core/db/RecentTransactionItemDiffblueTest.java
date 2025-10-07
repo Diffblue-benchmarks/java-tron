@@ -3,7 +3,8 @@ package org.tron.core.db;
 import static org.junit.Assert.assertEquals;
 import static org.junit.Assert.assertSame;
 import static org.junit.Assert.assertTrue;
-import com.diffblue.cover.annotations.MaintainedByDiffblue;
+import com.diffblue.cover.annotations.ContributionFromDiffblue;
+import com.diffblue.cover.annotations.ManagedByDiffblue;
 import com.diffblue.cover.annotations.MethodsUnderTest;
 import java.util.ArrayList;
 import java.util.List;
@@ -25,7 +26,8 @@ public class RecentTransactionItemDiffblueTest {
    * </ul>
    */
   @Test
-  @Category(MaintainedByDiffblue.class)
+  @Category(ContributionFromDiffblue.class)
+  @ManagedByDiffblue
   @MethodsUnderTest({
     "void RecentTransactionItem.<init>()",
     "long RecentTransactionItem.getNum()",
@@ -59,7 +61,8 @@ public class RecentTransactionItemDiffblueTest {
    * <p>Method under test: {@link RecentTransactionItem#RecentTransactionItem(long, List)}
    */
   @Test
-  @Category(MaintainedByDiffblue.class)
+  @Category(ContributionFromDiffblue.class)
+  @ManagedByDiffblue
   @MethodsUnderTest({"void RecentTransactionItem.<init>(long, List)"})
   public void testNewRecentTransactionItem_given42_whenArrayListAdd42() {
     // Arrange
@@ -87,7 +90,8 @@ public class RecentTransactionItemDiffblueTest {
    * <p>Method under test: {@link RecentTransactionItem#RecentTransactionItem(long, List)}
    */
   @Test
-  @Category(MaintainedByDiffblue.class)
+  @Category(ContributionFromDiffblue.class)
+  @ManagedByDiffblue
   @MethodsUnderTest({"void RecentTransactionItem.<init>(long, List)"})
   public void testNewRecentTransactionItem_givenFoo_thenReturnTransactionIdsIsArrayList() {
     // Arrange
@@ -114,7 +118,8 @@ public class RecentTransactionItemDiffblueTest {
    * <p>Method under test: {@link RecentTransactionItem#RecentTransactionItem(long, List)}
    */
   @Test
-  @Category(MaintainedByDiffblue.class)
+  @Category(ContributionFromDiffblue.class)
+  @ManagedByDiffblue
   @MethodsUnderTest({"void RecentTransactionItem.<init>(long, List)"})
   public void testNewRecentTransactionItem_whenArrayList_thenReturnTransactionIdsEmpty() {
     // Arrange and Act

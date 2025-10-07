@@ -3,7 +3,8 @@ package org.tron.common.crypto.jce;
 import static org.junit.Assert.assertEquals;
 import static org.junit.Assert.assertNull;
 import static org.junit.Assert.assertSame;
-import com.diffblue.cover.annotations.MaintainedByDiffblue;
+import com.diffblue.cover.annotations.ContributionFromDiffblue;
+import com.diffblue.cover.annotations.ManagedByDiffblue;
 import com.diffblue.cover.annotations.MethodsUnderTest;
 import java.security.Provider;
 import java.security.Signature;
@@ -18,7 +19,8 @@ public class ECSignatureFactoryDiffblueTest {
    * <p>Method under test: {@link ECSignatureFactory#getRawInstance()}
    */
   @Test
-  @Category(MaintainedByDiffblue.class)
+  @Category(ContributionFromDiffblue.class)
+  @ManagedByDiffblue
   @MethodsUnderTest({"Signature ECSignatureFactory.getRawInstance()"})
   public void testGetRawInstance() {
     // Arrange and Act
@@ -47,7 +49,8 @@ public class ECSignatureFactoryDiffblueTest {
    * <p>Method under test: {@link ECSignatureFactory#getRawInstance(Provider)}
    */
   @Test
-  @Category(MaintainedByDiffblue.class)
+  @Category(ContributionFromDiffblue.class)
+  @ManagedByDiffblue
   @MethodsUnderTest({"Signature ECSignatureFactory.getRawInstance(Provider)"})
   public void testGetRawInstanceWithProvider() {
     // Arrange

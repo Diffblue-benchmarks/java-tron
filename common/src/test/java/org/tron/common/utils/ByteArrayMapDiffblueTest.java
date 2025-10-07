@@ -5,7 +5,8 @@ import static org.junit.Assert.assertFalse;
 import static org.junit.Assert.assertNotEquals;
 import static org.junit.Assert.assertNull;
 import static org.junit.Assert.assertTrue;
-import com.diffblue.cover.annotations.MaintainedByDiffblue;
+import com.diffblue.cover.annotations.ContributionFromDiffblue;
+import com.diffblue.cover.annotations.ManagedByDiffblue;
 import com.diffblue.cover.annotations.MethodsUnderTest;
 import java.io.UnsupportedEncodingException;
 import java.util.HashMap;
@@ -25,7 +26,8 @@ public class ByteArrayMapDiffblueTest {
    * </ul>
    */
   @Test
-  @Category(MaintainedByDiffblue.class)
+  @Category(ContributionFromDiffblue.class)
+  @ManagedByDiffblue
   @MethodsUnderTest({
     "void ByteArrayMap.<init>()",
     "void ByteArrayMap.<init>(Map)",
@@ -54,7 +56,8 @@ public class ByteArrayMapDiffblueTest {
    * </ul>
    */
   @Test
-  @Category(MaintainedByDiffblue.class)
+  @Category(ContributionFromDiffblue.class)
+  @ManagedByDiffblue
   @MethodsUnderTest({
     "void ByteArrayMap.<init>()",
     "void ByteArrayMap.<init>(Map)",
@@ -74,7 +77,8 @@ public class ByteArrayMapDiffblueTest {
    * <p>Method under test: {@link ByteArrayMap#size()}
    */
   @Test
-  @Category(MaintainedByDiffblue.class)
+  @Category(ContributionFromDiffblue.class)
+  @ManagedByDiffblue
   @MethodsUnderTest({"int ByteArrayMap.size()"})
   public void testSize() {
     // Arrange
@@ -95,7 +99,8 @@ public class ByteArrayMapDiffblueTest {
    * <p>Method under test: {@link ByteArrayMap#isEmpty()}
    */
   @Test
-  @Category(MaintainedByDiffblue.class)
+  @Category(ContributionFromDiffblue.class)
+  @ManagedByDiffblue
   @MethodsUnderTest({"boolean ByteArrayMap.isEmpty()"})
   public void testIsEmpty_givenA_thenReturnFalse() {
     // Arrange
@@ -117,7 +122,8 @@ public class ByteArrayMapDiffblueTest {
    * <p>Method under test: {@link ByteArrayMap#isEmpty()}
    */
   @Test
-  @Category(MaintainedByDiffblue.class)
+  @Category(ContributionFromDiffblue.class)
+  @ManagedByDiffblue
   @MethodsUnderTest({"boolean ByteArrayMap.isEmpty()"})
   public void testIsEmpty_givenByteArrayMap_thenReturnTrue() {
     // Arrange
@@ -138,7 +144,8 @@ public class ByteArrayMapDiffblueTest {
    * <p>Method under test: {@link ByteArrayMap#containsValue(Object)}
    */
   @Test
-  @Category(MaintainedByDiffblue.class)
+  @Category(ContributionFromDiffblue.class)
+  @ManagedByDiffblue
   @MethodsUnderTest({"boolean ByteArrayMap.containsValue(Object)"})
   public void testContainsValue_givenA_thenReturnTrue() {
     // Arrange
@@ -160,7 +167,8 @@ public class ByteArrayMapDiffblueTest {
    * <p>Method under test: {@link ByteArrayMap#containsValue(Object)}
    */
   @Test
-  @Category(MaintainedByDiffblue.class)
+  @Category(ContributionFromDiffblue.class)
+  @ManagedByDiffblue
   @MethodsUnderTest({"boolean ByteArrayMap.containsValue(Object)"})
   public void testContainsValue_givenByteArrayMap_thenReturnFalse() {
     // Arrange
@@ -182,7 +190,8 @@ public class ByteArrayMapDiffblueTest {
    * <p>Method under test: {@link ByteArrayMap#put(byte[], Object)}
    */
   @Test
-  @Category(MaintainedByDiffblue.class)
+  @Category(ContributionFromDiffblue.class)
+  @ManagedByDiffblue
   @MethodsUnderTest({"Object ByteArrayMap.put(byte[], Object)"})
   public void testPutWithByteObject_givenByteArrayMap_whenAxaxaxaxBytesIsUtf8_thenReturnNull()
       throws UnsupportedEncodingException {
@@ -204,7 +213,8 @@ public class ByteArrayMapDiffblueTest {
    * <p>Method under test: {@link ByteArrayMap#put(byte[], Object)}
    */
   @Test
-  @Category(MaintainedByDiffblue.class)
+  @Category(ContributionFromDiffblue.class)
+  @ManagedByDiffblue
   @MethodsUnderTest({"Object ByteArrayMap.put(byte[], Object)"})
   public void testPutWithByteObject_thenReturnValue() throws UnsupportedEncodingException {
     // Arrange
@@ -230,7 +240,8 @@ public class ByteArrayMapDiffblueTest {
    * <p>Method under test: {@link ByteArrayMap#putAll(Map)}
    */
   @Test
-  @Category(MaintainedByDiffblue.class)
+  @Category(ContributionFromDiffblue.class)
+  @ManagedByDiffblue
   @MethodsUnderTest({"void ByteArrayMap.putAll(Map)"})
   public void testPutAll_givenAxaxaxaxBytesIsUtf8_thenByteArrayMapSizeIsOne()
       throws UnsupportedEncodingException {
@@ -258,7 +269,8 @@ public class ByteArrayMapDiffblueTest {
    * <p>Method under test: {@link ByteArrayMap#putAll(Map)}
    */
   @Test
-  @Category(MaintainedByDiffblue.class)
+  @Category(ContributionFromDiffblue.class)
+  @ManagedByDiffblue
   @MethodsUnderTest({"void ByteArrayMap.putAll(Map)"})
   public void testPutAll_whenHashMap_thenByteArrayMapEmpty() {
     // Arrange
@@ -277,7 +289,8 @@ public class ByteArrayMapDiffblueTest {
    * <p>Method under test: {@link ByteArrayMap#keySet()}
    */
   @Test
-  @Category(MaintainedByDiffblue.class)
+  @Category(ContributionFromDiffblue.class)
+  @ManagedByDiffblue
   @MethodsUnderTest({"java.util.Set ByteArrayMap.keySet()"})
   public void testKeySet() {
     // Arrange
@@ -293,7 +306,8 @@ public class ByteArrayMapDiffblueTest {
    * <p>Method under test: {@link ByteArrayMap#values()}
    */
   @Test
-  @Category(MaintainedByDiffblue.class)
+  @Category(ContributionFromDiffblue.class)
+  @ManagedByDiffblue
   @MethodsUnderTest({"java.util.Collection ByteArrayMap.values()"})
   public void testValues() {
     // Arrange
@@ -309,7 +323,8 @@ public class ByteArrayMapDiffblueTest {
    * <p>Method under test: {@link ByteArrayMap#entrySet()}
    */
   @Test
-  @Category(MaintainedByDiffblue.class)
+  @Category(ContributionFromDiffblue.class)
+  @ManagedByDiffblue
   @MethodsUnderTest({"java.util.Set ByteArrayMap.entrySet()"})
   public void testEntrySet() {
     // Arrange
@@ -335,7 +350,8 @@ public class ByteArrayMapDiffblueTest {
    * </ul>
    */
   @Test
-  @Category(MaintainedByDiffblue.class)
+  @Category(ContributionFromDiffblue.class)
+  @ManagedByDiffblue
   @MethodsUnderTest({"boolean ByteArrayMap.equals(Object)", "int ByteArrayMap.hashCode()"})
   public void testEqualsAndHashCode_whenOtherIsEqual_thenReturnEqual() {
     // Arrange
@@ -363,7 +379,8 @@ public class ByteArrayMapDiffblueTest {
    * </ul>
    */
   @Test
-  @Category(MaintainedByDiffblue.class)
+  @Category(ContributionFromDiffblue.class)
+  @ManagedByDiffblue
   @MethodsUnderTest({"boolean ByteArrayMap.equals(Object)", "int ByteArrayMap.hashCode()"})
   public void testEqualsAndHashCode_whenOtherIsSame_thenReturnEqual() {
     // Arrange
@@ -386,7 +403,8 @@ public class ByteArrayMapDiffblueTest {
    * <p>Method under test: {@link ByteArrayMap#equals(Object)}
    */
   @Test
-  @Category(MaintainedByDiffblue.class)
+  @Category(ContributionFromDiffblue.class)
+  @ManagedByDiffblue
   @MethodsUnderTest({"boolean ByteArrayMap.equals(Object)", "int ByteArrayMap.hashCode()"})
   public void testEquals_whenOtherIsDifferent_thenReturnNotEqual() {
     // Arrange
@@ -408,7 +426,8 @@ public class ByteArrayMapDiffblueTest {
    * <p>Method under test: {@link ByteArrayMap#equals(Object)}
    */
   @Test
-  @Category(MaintainedByDiffblue.class)
+  @Category(ContributionFromDiffblue.class)
+  @ManagedByDiffblue
   @MethodsUnderTest({"boolean ByteArrayMap.equals(Object)", "int ByteArrayMap.hashCode()"})
   public void testEquals_whenOtherIsDifferent_thenReturnNotEqual2() {
     // Arrange
@@ -433,7 +452,8 @@ public class ByteArrayMapDiffblueTest {
    * <p>Method under test: {@link ByteArrayMap#equals(Object)}
    */
   @Test
-  @Category(MaintainedByDiffblue.class)
+  @Category(ContributionFromDiffblue.class)
+  @ManagedByDiffblue
   @MethodsUnderTest({"boolean ByteArrayMap.equals(Object)", "int ByteArrayMap.hashCode()"})
   public void testEquals_whenOtherIsNull_thenReturnNotEqual() {
     // Arrange
@@ -454,7 +474,8 @@ public class ByteArrayMapDiffblueTest {
    * <p>Method under test: {@link ByteArrayMap#equals(Object)}
    */
   @Test
-  @Category(MaintainedByDiffblue.class)
+  @Category(ContributionFromDiffblue.class)
+  @ManagedByDiffblue
   @MethodsUnderTest({"boolean ByteArrayMap.equals(Object)", "int ByteArrayMap.hashCode()"})
   public void testEquals_whenOtherIsWrongType_thenReturnNotEqual() {
     // Arrange

@@ -10,7 +10,8 @@ import static org.mockito.Mockito.atLeast;
 import static org.mockito.Mockito.mock;
 import static org.mockito.Mockito.verify;
 import static org.mockito.Mockito.when;
-import com.diffblue.cover.annotations.MaintainedByDiffblue;
+import com.diffblue.cover.annotations.ContributionFromDiffblue;
+import com.diffblue.cover.annotations.ManagedByDiffblue;
 import com.diffblue.cover.annotations.MethodsUnderTest;
 import com.google.protobuf.ByteString;
 import com.google.protobuf.Descriptors;
@@ -32,7 +33,8 @@ public class DelegatedResourceAccountIndexCapsuleDiffblueTest {
    * DelegatedResourceAccountIndexCapsule#DelegatedResourceAccountIndexCapsule(ByteString)}
    */
   @Test
-  @Category(MaintainedByDiffblue.class)
+  @Category(ContributionFromDiffblue.class)
+  @ManagedByDiffblue
   @MethodsUnderTest({"void DelegatedResourceAccountIndexCapsule.<init>(ByteString)"})
   public void testNewDelegatedResourceAccountIndexCapsule() {
     // Arrange
@@ -72,7 +74,8 @@ public class DelegatedResourceAccountIndexCapsuleDiffblueTest {
    * DelegatedResourceAccountIndexCapsule#DelegatedResourceAccountIndexCapsule(byte[])}
    */
   @Test
-  @Category(MaintainedByDiffblue.class)
+  @Category(ContributionFromDiffblue.class)
+  @ManagedByDiffblue
   @MethodsUnderTest({"void DelegatedResourceAccountIndexCapsule.<init>(byte[])"})
   public void testNewDelegatedResourceAccountIndexCapsule2() {
     // Arrange and Act
@@ -119,7 +122,8 @@ public class DelegatedResourceAccountIndexCapsuleDiffblueTest {
    * DelegatedResourceAccountIndexCapsule#DelegatedResourceAccountIndexCapsule(byte[])}
    */
   @Test
-  @Category(MaintainedByDiffblue.class)
+  @Category(ContributionFromDiffblue.class)
+  @ManagedByDiffblue
   @MethodsUnderTest({"void DelegatedResourceAccountIndexCapsule.<init>(byte[])"})
   public void testNewDelegatedResourceAccountIndexCapsule_whenAAAAAAAABytesIsUtf8()
       throws UnsupportedEncodingException {
@@ -140,7 +144,8 @@ public class DelegatedResourceAccountIndexCapsuleDiffblueTest {
    * DelegatedResourceAccountIndexCapsule#DelegatedResourceAccountIndexCapsule(byte[])}
    */
   @Test
-  @Category(MaintainedByDiffblue.class)
+  @Category(ContributionFromDiffblue.class)
+  @ManagedByDiffblue
   @MethodsUnderTest({"void DelegatedResourceAccountIndexCapsule.<init>(byte[])"})
   public void testNewDelegatedResourceAccountIndexCapsule_whenAAAAAAABytesIsUtf8()
       throws UnsupportedEncodingException {
@@ -161,7 +166,8 @@ public class DelegatedResourceAccountIndexCapsuleDiffblueTest {
    * DelegatedResourceAccountIndexCapsule#DelegatedResourceAccountIndexCapsule(byte[])}
    */
   @Test
-  @Category(MaintainedByDiffblue.class)
+  @Category(ContributionFromDiffblue.class)
+  @ManagedByDiffblue
   @MethodsUnderTest({"void DelegatedResourceAccountIndexCapsule.<init>(byte[])"})
   public void testNewDelegatedResourceAccountIndexCapsule_whenArrayOfByteWithAAndLf() {
     // Arrange and Act
@@ -186,7 +192,8 @@ public class DelegatedResourceAccountIndexCapsuleDiffblueTest {
    * DelegatedResourceAccountIndexCapsule#DelegatedResourceAccountIndexCapsule(byte[])}
    */
   @Test
-  @Category(MaintainedByDiffblue.class)
+  @Category(ContributionFromDiffblue.class)
+  @ManagedByDiffblue
   @MethodsUnderTest({"void DelegatedResourceAccountIndexCapsule.<init>(byte[])"})
   public void testNewDelegatedResourceAccountIndexCapsule_whenArrayOfByteWithEighteenAndLf() {
     // Arrange and Act
@@ -211,7 +218,8 @@ public class DelegatedResourceAccountIndexCapsuleDiffblueTest {
    * DelegatedResourceAccountIndexCapsule#DelegatedResourceAccountIndexCapsule(byte[])}
    */
   @Test
-  @Category(MaintainedByDiffblue.class)
+  @Category(ContributionFromDiffblue.class)
+  @ManagedByDiffblue
   @MethodsUnderTest({"void DelegatedResourceAccountIndexCapsule.<init>(byte[])"})
   public void testNewDelegatedResourceAccountIndexCapsule_whenArrayOfByteWithEighteenAndX() {
     // Arrange and Act
@@ -234,7 +242,8 @@ public class DelegatedResourceAccountIndexCapsuleDiffblueTest {
    * DelegatedResourceAccountIndexCapsule#DelegatedResourceAccountIndexCapsule(byte[])}
    */
   @Test
-  @Category(MaintainedByDiffblue.class)
+  @Category(ContributionFromDiffblue.class)
+  @ManagedByDiffblue
   @MethodsUnderTest({"void DelegatedResourceAccountIndexCapsule.<init>(byte[])"})
   public void testNewDelegatedResourceAccountIndexCapsule_whenArrayOfByteWithEighteenAndZero() {
     // Arrange and Act
@@ -256,7 +265,8 @@ public class DelegatedResourceAccountIndexCapsuleDiffblueTest {
    * DelegatedResourceAccountIndexCapsule#DelegatedResourceAccountIndexCapsule(byte[])}
    */
   @Test
-  @Category(MaintainedByDiffblue.class)
+  @Category(ContributionFromDiffblue.class)
+  @ManagedByDiffblue
   @MethodsUnderTest({"void DelegatedResourceAccountIndexCapsule.<init>(byte[])"})
   public void testNewDelegatedResourceAccountIndexCapsule_whenArrayOfByteWithMinusOneAndX() {
     // Arrange and Act
@@ -279,7 +289,8 @@ public class DelegatedResourceAccountIndexCapsuleDiffblueTest {
    * DelegatedResourceAccountIndexCapsule#DelegatedResourceAccountIndexCapsule(byte[])}
    */
   @Test
-  @Category(MaintainedByDiffblue.class)
+  @Category(ContributionFromDiffblue.class)
+  @ManagedByDiffblue
   @MethodsUnderTest({"void DelegatedResourceAccountIndexCapsule.<init>(byte[])"})
   public void testNewDelegatedResourceAccountIndexCapsule_whenArrayOfByteWithTwentySixAndLf() {
     // Arrange and Act
@@ -304,7 +315,8 @@ public class DelegatedResourceAccountIndexCapsuleDiffblueTest {
    * DelegatedResourceAccountIndexCapsule#DelegatedResourceAccountIndexCapsule(byte[])}
    */
   @Test
-  @Category(MaintainedByDiffblue.class)
+  @Category(ContributionFromDiffblue.class)
+  @ManagedByDiffblue
   @MethodsUnderTest({"void DelegatedResourceAccountIndexCapsule.<init>(byte[])"})
   public void testNewDelegatedResourceAccountIndexCapsule_whenArrayOfByteWithTwentySixAndX() {
     // Arrange and Act
@@ -327,7 +339,8 @@ public class DelegatedResourceAccountIndexCapsuleDiffblueTest {
    * DelegatedResourceAccountIndexCapsule#DelegatedResourceAccountIndexCapsule(byte[])}
    */
   @Test
-  @Category(MaintainedByDiffblue.class)
+  @Category(ContributionFromDiffblue.class)
+  @ManagedByDiffblue
   @MethodsUnderTest({"void DelegatedResourceAccountIndexCapsule.<init>(byte[])"})
   public void testNewDelegatedResourceAccountIndexCapsule_whenArrayOfByteWithTwentySixAndZero() {
     // Arrange and Act
@@ -349,7 +362,8 @@ public class DelegatedResourceAccountIndexCapsuleDiffblueTest {
    * DelegatedResourceAccountIndexCapsule#DelegatedResourceAccountIndexCapsule(byte[])}
    */
   @Test
-  @Category(MaintainedByDiffblue.class)
+  @Category(ContributionFromDiffblue.class)
+  @ManagedByDiffblue
   @MethodsUnderTest({"void DelegatedResourceAccountIndexCapsule.<init>(byte[])"})
   public void testNewDelegatedResourceAccountIndexCapsule_whenArrayOfByteWithZeroAndX() {
     // Arrange and Act
@@ -371,7 +385,8 @@ public class DelegatedResourceAccountIndexCapsuleDiffblueTest {
    * DelegatedResourceAccountIndexCapsule#DelegatedResourceAccountIndexCapsule(byte[])}
    */
   @Test
-  @Category(MaintainedByDiffblue.class)
+  @Category(ContributionFromDiffblue.class)
+  @ManagedByDiffblue
   @MethodsUnderTest({"void DelegatedResourceAccountIndexCapsule.<init>(byte[])"})
   public void testNewDelegatedResourceAccountIndexCapsule_whenAxaxaxaxBytesIsUtf8()
       throws UnsupportedEncodingException {
@@ -391,7 +406,8 @@ public class DelegatedResourceAccountIndexCapsuleDiffblueTest {
    * DelegatedResourceAccountIndexCapsule#DelegatedResourceAccountIndexCapsule(byte[])}
    */
   @Test
-  @Category(MaintainedByDiffblue.class)
+  @Category(ContributionFromDiffblue.class)
+  @ManagedByDiffblue
   @MethodsUnderTest({"void DelegatedResourceAccountIndexCapsule.<init>(byte[])"})
   public void testNewDelegatedResourceAccountIndexCapsule_whenXaxaxaxBytesIsUtf8()
       throws UnsupportedEncodingException {
@@ -411,7 +427,8 @@ public class DelegatedResourceAccountIndexCapsuleDiffblueTest {
    * DelegatedResourceAccountIndexCapsule#DelegatedResourceAccountIndexCapsule(byte[])}
    */
   @Test
-  @Category(MaintainedByDiffblue.class)
+  @Category(ContributionFromDiffblue.class)
+  @ManagedByDiffblue
   @MethodsUnderTest({"void DelegatedResourceAccountIndexCapsule.<init>(byte[])"})
   public void testNewDelegatedResourceAccountIndexCapsule_whenXxaxaxaxBytesIsUtf8()
       throws UnsupportedEncodingException {
@@ -426,7 +443,8 @@ public class DelegatedResourceAccountIndexCapsuleDiffblueTest {
    * <p>Method under test: {@link DelegatedResourceAccountIndexCapsule#getAccount()}
    */
   @Test
-  @Category(MaintainedByDiffblue.class)
+  @Category(ContributionFromDiffblue.class)
+  @ManagedByDiffblue
   @MethodsUnderTest({"ByteString DelegatedResourceAccountIndexCapsule.getAccount()"})
   public void testGetAccount() {
     // Arrange
@@ -451,7 +469,8 @@ public class DelegatedResourceAccountIndexCapsuleDiffblueTest {
    * <p>Method under test: {@link DelegatedResourceAccountIndexCapsule#setAccount(ByteString)}
    */
   @Test
-  @Category(MaintainedByDiffblue.class)
+  @Category(ContributionFromDiffblue.class)
+  @ManagedByDiffblue
   @MethodsUnderTest({"void DelegatedResourceAccountIndexCapsule.setAccount(ByteString)"})
   public void testSetAccount() {
     // Arrange
@@ -473,7 +492,8 @@ public class DelegatedResourceAccountIndexCapsuleDiffblueTest {
    * <p>Method under test: {@link DelegatedResourceAccountIndexCapsule#getFromAccountsList()}
    */
   @Test
-  @Category(MaintainedByDiffblue.class)
+  @Category(ContributionFromDiffblue.class)
+  @ManagedByDiffblue
   @MethodsUnderTest({"List DelegatedResourceAccountIndexCapsule.getFromAccountsList()"})
   public void testGetFromAccountsList() {
     // Arrange, Act and Assert
@@ -489,7 +509,8 @@ public class DelegatedResourceAccountIndexCapsuleDiffblueTest {
    * <p>Method under test: {@link DelegatedResourceAccountIndexCapsule#setAllFromAccounts(List)}
    */
   @Test
-  @Category(MaintainedByDiffblue.class)
+  @Category(ContributionFromDiffblue.class)
+  @ManagedByDiffblue
   @MethodsUnderTest({"void DelegatedResourceAccountIndexCapsule.setAllFromAccounts(List)"})
   public void testSetAllFromAccounts() {
     // Arrange
@@ -515,7 +536,8 @@ public class DelegatedResourceAccountIndexCapsuleDiffblueTest {
    * <p>Method under test: {@link DelegatedResourceAccountIndexCapsule#addFromAccount(ByteString)}
    */
   @Test
-  @Category(MaintainedByDiffblue.class)
+  @Category(ContributionFromDiffblue.class)
+  @ManagedByDiffblue
   @MethodsUnderTest({"void DelegatedResourceAccountIndexCapsule.addFromAccount(ByteString)"})
   public void testAddFromAccount() {
     // Arrange
@@ -549,7 +571,8 @@ public class DelegatedResourceAccountIndexCapsuleDiffblueTest {
    * <p>Method under test: {@link DelegatedResourceAccountIndexCapsule#getToAccountsList()}
    */
   @Test
-  @Category(MaintainedByDiffblue.class)
+  @Category(ContributionFromDiffblue.class)
+  @ManagedByDiffblue
   @MethodsUnderTest({"List DelegatedResourceAccountIndexCapsule.getToAccountsList()"})
   public void testGetToAccountsList() {
     // Arrange, Act and Assert
@@ -565,7 +588,8 @@ public class DelegatedResourceAccountIndexCapsuleDiffblueTest {
    * <p>Method under test: {@link DelegatedResourceAccountIndexCapsule#setAllToAccounts(List)}
    */
   @Test
-  @Category(MaintainedByDiffblue.class)
+  @Category(ContributionFromDiffblue.class)
+  @ManagedByDiffblue
   @MethodsUnderTest({"void DelegatedResourceAccountIndexCapsule.setAllToAccounts(List)"})
   public void testSetAllToAccounts() {
     // Arrange
@@ -588,7 +612,8 @@ public class DelegatedResourceAccountIndexCapsuleDiffblueTest {
    * <p>Method under test: {@link DelegatedResourceAccountIndexCapsule#addToAccount(ByteString)}
    */
   @Test
-  @Category(MaintainedByDiffblue.class)
+  @Category(ContributionFromDiffblue.class)
+  @ManagedByDiffblue
   @MethodsUnderTest({"void DelegatedResourceAccountIndexCapsule.addToAccount(ByteString)"})
   public void testAddToAccount() {
     // Arrange
@@ -617,7 +642,8 @@ public class DelegatedResourceAccountIndexCapsuleDiffblueTest {
    * <p>Method under test: {@link DelegatedResourceAccountIndexCapsule#setTimestamp(long)}
    */
   @Test
-  @Category(MaintainedByDiffblue.class)
+  @Category(ContributionFromDiffblue.class)
+  @ManagedByDiffblue
   @MethodsUnderTest({"void DelegatedResourceAccountIndexCapsule.setTimestamp(long)"})
   public void testSetTimestamp() {
     // Arrange
@@ -643,7 +669,8 @@ public class DelegatedResourceAccountIndexCapsuleDiffblueTest {
    * <p>Method under test: {@link DelegatedResourceAccountIndexCapsule#getTimestamp()}
    */
   @Test
-  @Category(MaintainedByDiffblue.class)
+  @Category(ContributionFromDiffblue.class)
+  @ManagedByDiffblue
   @MethodsUnderTest({"long DelegatedResourceAccountIndexCapsule.getTimestamp()"})
   public void testGetTimestamp() {
     // Arrange, Act and Assert
@@ -661,7 +688,8 @@ public class DelegatedResourceAccountIndexCapsuleDiffblueTest {
    * <p>Method under test: {@link DelegatedResourceAccountIndexCapsule#createDbKey()}
    */
   @Test
-  @Category(MaintainedByDiffblue.class)
+  @Category(ContributionFromDiffblue.class)
+  @ManagedByDiffblue
   @MethodsUnderTest({"byte[] DelegatedResourceAccountIndexCapsule.createDbKey()"})
   public void testCreateDbKey_thenReturnAxaxaxaxBytesIsUtf8() throws UnsupportedEncodingException {
     // Arrange
@@ -687,7 +715,8 @@ public class DelegatedResourceAccountIndexCapsuleDiffblueTest {
    * <p>Method under test: {@link DelegatedResourceAccountIndexCapsule#createDbKey()}
    */
   @Test
-  @Category(MaintainedByDiffblue.class)
+  @Category(ContributionFromDiffblue.class)
+  @ManagedByDiffblue
   @MethodsUnderTest({"byte[] DelegatedResourceAccountIndexCapsule.createDbKey()"})
   public void testCreateDbKey_thenReturnEmptyArrayOfByte() {
     // Arrange
@@ -704,7 +733,8 @@ public class DelegatedResourceAccountIndexCapsuleDiffblueTest {
    * <p>Method under test: {@link DelegatedResourceAccountIndexCapsule#createReadableString()}
    */
   @Test
-  @Category(MaintainedByDiffblue.class)
+  @Category(ContributionFromDiffblue.class)
+  @ManagedByDiffblue
   @MethodsUnderTest({"String DelegatedResourceAccountIndexCapsule.createReadableString()"})
   public void testCreateReadableString() {
     // Arrange
@@ -725,7 +755,8 @@ public class DelegatedResourceAccountIndexCapsuleDiffblueTest {
    * <p>Method under test: {@link DelegatedResourceAccountIndexCapsule#createReadableString()}
    */
   @Test
-  @Category(MaintainedByDiffblue.class)
+  @Category(ContributionFromDiffblue.class)
+  @ManagedByDiffblue
   @MethodsUnderTest({"String DelegatedResourceAccountIndexCapsule.createReadableString()"})
   public void testCreateReadableString_givenByteStringToByteArrayReturnNull() {
     // Arrange
@@ -751,7 +782,8 @@ public class DelegatedResourceAccountIndexCapsuleDiffblueTest {
    * <p>Method under test: {@link DelegatedResourceAccountIndexCapsule#createReadableString()}
    */
   @Test
-  @Category(MaintainedByDiffblue.class)
+  @Category(ContributionFromDiffblue.class)
+  @ManagedByDiffblue
   @MethodsUnderTest({"String DelegatedResourceAccountIndexCapsule.createReadableString()"})
   public void testCreateReadableString_thenReturn4158415841584158()
       throws UnsupportedEncodingException {
@@ -774,7 +806,8 @@ public class DelegatedResourceAccountIndexCapsuleDiffblueTest {
    * <p>Method under test: {@link DelegatedResourceAccountIndexCapsule#getData()}
    */
   @Test
-  @Category(MaintainedByDiffblue.class)
+  @Category(ContributionFromDiffblue.class)
+  @ManagedByDiffblue
   @MethodsUnderTest({"byte[] DelegatedResourceAccountIndexCapsule.getData()"})
   public void testGetData() {
     // Arrange
@@ -800,7 +833,8 @@ public class DelegatedResourceAccountIndexCapsuleDiffblueTest {
    * <p>Method under test: {@link DelegatedResourceAccountIndexCapsule#getData()}
    */
   @Test
-  @Category(MaintainedByDiffblue.class)
+  @Category(ContributionFromDiffblue.class)
+  @ManagedByDiffblue
   @MethodsUnderTest({"byte[] DelegatedResourceAccountIndexCapsule.getData()"})
   public void testGetData2() {
     // Arrange
@@ -831,7 +865,8 @@ public class DelegatedResourceAccountIndexCapsuleDiffblueTest {
    * <p>Method under test: {@link DelegatedResourceAccountIndexCapsule#getData()}
    */
   @Test
-  @Category(MaintainedByDiffblue.class)
+  @Category(ContributionFromDiffblue.class)
+  @ManagedByDiffblue
   @MethodsUnderTest({"byte[] DelegatedResourceAccountIndexCapsule.getData()"})
   public void testGetData_givenByteStringSizeReturnZero_thenReturnArrayOfByteWithLfAndZero() {
     // Arrange
@@ -862,7 +897,8 @@ public class DelegatedResourceAccountIndexCapsuleDiffblueTest {
    * <p>Method under test: {@link DelegatedResourceAccountIndexCapsule#getData()}
    */
   @Test
-  @Category(MaintainedByDiffblue.class)
+  @Category(ContributionFromDiffblue.class)
+  @ManagedByDiffblue
   @MethodsUnderTest({"byte[] DelegatedResourceAccountIndexCapsule.getData()"})
   public void testGetData_thenReturnArrayOfByteWithSpaceAndLf() {
     // Arrange
@@ -892,7 +928,8 @@ public class DelegatedResourceAccountIndexCapsuleDiffblueTest {
    * <p>Method under test: {@link DelegatedResourceAccountIndexCapsule#getData()}
    */
   @Test
-  @Category(MaintainedByDiffblue.class)
+  @Category(ContributionFromDiffblue.class)
+  @ManagedByDiffblue
   @MethodsUnderTest({"byte[] DelegatedResourceAccountIndexCapsule.getData()"})
   public void testGetData_thenReturnEmptyArrayOfByte() {
     // Arrange
@@ -913,7 +950,8 @@ public class DelegatedResourceAccountIndexCapsuleDiffblueTest {
    * <p>Method under test: {@link DelegatedResourceAccountIndexCapsule#getInstance()}
    */
   @Test
-  @Category(MaintainedByDiffblue.class)
+  @Category(ContributionFromDiffblue.class)
+  @ManagedByDiffblue
   @MethodsUnderTest({
     "DelegatedResourceAccountIndex DelegatedResourceAccountIndexCapsule.getInstance()"
   })

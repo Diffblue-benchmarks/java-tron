@@ -2,7 +2,8 @@ package org.tron.core.exception;
 
 import static org.junit.Assert.assertEquals;
 import static org.junit.Assert.assertNull;
-import com.diffblue.cover.annotations.MaintainedByDiffblue;
+import com.diffblue.cover.annotations.ContributionFromDiffblue;
+import com.diffblue.cover.annotations.ManagedByDiffblue;
 import com.diffblue.cover.annotations.MethodsUnderTest;
 import org.junit.Test;
 import org.junit.experimental.categories.Category;
@@ -14,7 +15,8 @@ public class BadNumberBlockExceptionDiffblueTest {
    * <p>Method under test: {@link BadNumberBlockException#BadNumberBlockException()}
    */
   @Test
-  @Category(MaintainedByDiffblue.class)
+  @Category(ContributionFromDiffblue.class)
+  @ManagedByDiffblue
   @MethodsUnderTest({"void BadNumberBlockException.<init>()"})
   public void testNewBadNumberBlockException() {
     // Arrange and Act
@@ -33,7 +35,8 @@ public class BadNumberBlockExceptionDiffblueTest {
    * <p>Method under test: {@link BadNumberBlockException#BadNumberBlockException(String)}
    */
   @Test
-  @Category(MaintainedByDiffblue.class)
+  @Category(ContributionFromDiffblue.class)
+  @ManagedByDiffblue
   @MethodsUnderTest({"void BadNumberBlockException.<init>(String)"})
   public void testNewBadNumberBlockException2() {
     // Arrange and Act

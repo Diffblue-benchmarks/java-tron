@@ -7,7 +7,8 @@ import static org.junit.Assert.assertNull;
 import static org.junit.Assert.assertSame;
 import static org.junit.Assert.assertThrows;
 import static org.junit.Assert.assertTrue;
-import com.diffblue.cover.annotations.MaintainedByDiffblue;
+import com.diffblue.cover.annotations.ContributionFromDiffblue;
+import com.diffblue.cover.annotations.ManagedByDiffblue;
 import com.diffblue.cover.annotations.MethodsUnderTest;
 import java.io.UnsupportedEncodingException;
 import java.math.BigInteger;
@@ -32,7 +33,8 @@ public class RLPDiffblueTest {
    * <p>Method under test: {@link RLP#decodeInt(byte[], int)}
    */
   @Test
-  @Category(MaintainedByDiffblue.class)
+  @Category(ContributionFromDiffblue.class)
+  @ManagedByDiffblue
   @MethodsUnderTest({"int RLP.decodeInt(byte[], int)"})
   public void testDecodeInt_whenArrayOfByteWithAAndMin_value_thenReturnZero() {
     // Arrange, Act and Assert
@@ -51,7 +53,8 @@ public class RLPDiffblueTest {
    * <p>Method under test: {@link RLP#decodeInt(byte[], int)}
    */
   @Test
-  @Category(MaintainedByDiffblue.class)
+  @Category(ContributionFromDiffblue.class)
+  @ManagedByDiffblue
   @MethodsUnderTest({"int RLP.decodeInt(byte[], int)"})
   public void testDecodeInt_whenArrayOfByteWithAAndMinusOne_thenThrowRuntimeException() {
     // Arrange, Act and Assert
@@ -71,7 +74,8 @@ public class RLPDiffblueTest {
    * <p>Method under test: {@link RLP#decodeInt(byte[], int)}
    */
   @Test
-  @Category(MaintainedByDiffblue.class)
+  @Category(ContributionFromDiffblue.class)
+  @ManagedByDiffblue
   @MethodsUnderTest({"int RLP.decodeInt(byte[], int)"})
   public void testDecodeInt_whenArrayOfByteWithAAndZero_thenThrowRuntimeException() {
     // Arrange, Act and Assert
@@ -91,7 +95,8 @@ public class RLPDiffblueTest {
    * <p>Method under test: {@link RLP#decodeInt(byte[], int)}
    */
   @Test
-  @Category(MaintainedByDiffblue.class)
+  @Category(ContributionFromDiffblue.class)
+  @ManagedByDiffblue
   @MethodsUnderTest({"int RLP.decodeInt(byte[], int)"})
   public void testDecodeInt_whenAxaxaxaxBytesIsUtf8_thenReturnEightyEight()
       throws UnsupportedEncodingException {
@@ -110,7 +115,8 @@ public class RLPDiffblueTest {
    * <p>Method under test: {@link RLP#decodeShort(byte[], int)}
    */
   @Test
-  @Category(MaintainedByDiffblue.class)
+  @Category(ContributionFromDiffblue.class)
+  @ManagedByDiffblue
   @MethodsUnderTest({"short RLP.decodeShort(byte[], int)"})
   public void testDecodeShort_whenArrayOfByteWithAAndMin_value_thenReturnZero() {
     // Arrange, Act and Assert
@@ -130,7 +136,8 @@ public class RLPDiffblueTest {
    * <p>Method under test: {@link RLP#decodeShort(byte[], int)}
    */
   @Test
-  @Category(MaintainedByDiffblue.class)
+  @Category(ContributionFromDiffblue.class)
+  @ManagedByDiffblue
   @MethodsUnderTest({"short RLP.decodeShort(byte[], int)"})
   public void testDecodeShort_whenArrayOfByteWithAAndMinusOne_thenThrowRuntimeException() {
     // Arrange, Act and Assert
@@ -150,7 +157,8 @@ public class RLPDiffblueTest {
    * <p>Method under test: {@link RLP#decodeShort(byte[], int)}
    */
   @Test
-  @Category(MaintainedByDiffblue.class)
+  @Category(ContributionFromDiffblue.class)
+  @ManagedByDiffblue
   @MethodsUnderTest({"short RLP.decodeShort(byte[], int)"})
   public void testDecodeShort_whenArrayOfByteWithAAndZero_thenThrowRuntimeException() {
     // Arrange, Act and Assert
@@ -170,7 +178,8 @@ public class RLPDiffblueTest {
    * <p>Method under test: {@link RLP#decodeShort(byte[], int)}
    */
   @Test
-  @Category(MaintainedByDiffblue.class)
+  @Category(ContributionFromDiffblue.class)
+  @ManagedByDiffblue
   @MethodsUnderTest({"short RLP.decodeShort(byte[], int)"})
   public void testDecodeShort_whenAxaxaxaxBytesIsUtf8_thenReturnEightyEight()
       throws UnsupportedEncodingException {
@@ -189,7 +198,8 @@ public class RLPDiffblueTest {
    * <p>Method under test: {@link RLP#decodeLong(byte[], int)}
    */
   @Test
-  @Category(MaintainedByDiffblue.class)
+  @Category(ContributionFromDiffblue.class)
+  @ManagedByDiffblue
   @MethodsUnderTest({"long RLP.decodeLong(byte[], int)"})
   public void testDecodeLong_whenArrayOfByteWithAAndMin_value_thenReturnZero() {
     // Arrange, Act and Assert
@@ -208,7 +218,8 @@ public class RLPDiffblueTest {
    * <p>Method under test: {@link RLP#decodeLong(byte[], int)}
    */
   @Test
-  @Category(MaintainedByDiffblue.class)
+  @Category(ContributionFromDiffblue.class)
+  @ManagedByDiffblue
   @MethodsUnderTest({"long RLP.decodeLong(byte[], int)"})
   public void testDecodeLong_whenArrayOfByteWithAAndMinusOne_thenThrowRuntimeException() {
     // Arrange, Act and Assert
@@ -228,7 +239,8 @@ public class RLPDiffblueTest {
    * <p>Method under test: {@link RLP#decodeLong(byte[], int)}
    */
   @Test
-  @Category(MaintainedByDiffblue.class)
+  @Category(ContributionFromDiffblue.class)
+  @ManagedByDiffblue
   @MethodsUnderTest({"long RLP.decodeLong(byte[], int)"})
   public void testDecodeLong_whenArrayOfByteWithAAndZero_thenThrowRuntimeException() {
     // Arrange, Act and Assert
@@ -248,7 +260,8 @@ public class RLPDiffblueTest {
    * <p>Method under test: {@link RLP#decodeLong(byte[], int)}
    */
   @Test
-  @Category(MaintainedByDiffblue.class)
+  @Category(ContributionFromDiffblue.class)
+  @ManagedByDiffblue
   @MethodsUnderTest({"long RLP.decodeLong(byte[], int)"})
   public void testDecodeLong_whenAxaxaxaxBytesIsUtf8_thenReturnEightyEight()
       throws UnsupportedEncodingException {
@@ -267,7 +280,8 @@ public class RLPDiffblueTest {
    * <p>Method under test: {@link RLP#decodeStringItem(byte[], int)}
    */
   @Test
-  @Category(MaintainedByDiffblue.class)
+  @Category(ContributionFromDiffblue.class)
+  @ManagedByDiffblue
   @MethodsUnderTest({"String RLP.decodeStringItem(byte[], int)"})
   public void testDecodeStringItem_whenArrayOfByteWithAAndMin_value_thenReturnEmptyString() {
     // Arrange, Act and Assert
@@ -287,7 +301,8 @@ public class RLPDiffblueTest {
    * <p>Method under test: {@link RLP#decodeStringItem(byte[], int)}
    */
   @Test
-  @Category(MaintainedByDiffblue.class)
+  @Category(ContributionFromDiffblue.class)
+  @ManagedByDiffblue
   @MethodsUnderTest({"String RLP.decodeStringItem(byte[], int)"})
   public void testDecodeStringItem_whenArrayOfByteWithAAndMinusOne_thenThrowRuntimeException() {
     // Arrange, Act and Assert
@@ -310,7 +325,8 @@ public class RLPDiffblueTest {
    * <p>Method under test: {@link RLP#decodeStringItem(byte[], int)}
    */
   @Test
-  @Category(MaintainedByDiffblue.class)
+  @Category(ContributionFromDiffblue.class)
+  @ManagedByDiffblue
   @MethodsUnderTest({"String RLP.decodeStringItem(byte[], int)"})
   public void testDecodeStringItem_whenAxaxaxaxBytesIsUtf8_thenReturnX()
       throws UnsupportedEncodingException {
@@ -329,7 +345,8 @@ public class RLPDiffblueTest {
    * <p>Method under test: {@link RLP#decodeBigInteger(byte[], int)}
    */
   @Test
-  @Category(MaintainedByDiffblue.class)
+  @Category(ContributionFromDiffblue.class)
+  @ManagedByDiffblue
   @MethodsUnderTest({"BigInteger RLP.decodeBigInteger(byte[], int)"})
   public void testDecodeBigInteger_whenArrayOfByteWithAAndMin_value_thenReturnToStringIs0() {
     // Arrange and Act
@@ -354,7 +371,8 @@ public class RLPDiffblueTest {
    * <p>Method under test: {@link RLP#decodeBigInteger(byte[], int)}
    */
   @Test
-  @Category(MaintainedByDiffblue.class)
+  @Category(ContributionFromDiffblue.class)
+  @ManagedByDiffblue
   @MethodsUnderTest({"BigInteger RLP.decodeBigInteger(byte[], int)"})
   public void testDecodeBigInteger_whenArrayOfByteWithAAndMinusOne_thenThrowRuntimeException() {
     // Arrange, Act and Assert
@@ -377,7 +395,8 @@ public class RLPDiffblueTest {
    * <p>Method under test: {@link RLP#decodeBigInteger(byte[], int)}
    */
   @Test
-  @Category(MaintainedByDiffblue.class)
+  @Category(ContributionFromDiffblue.class)
+  @ManagedByDiffblue
   @MethodsUnderTest({"BigInteger RLP.decodeBigInteger(byte[], int)"})
   public void testDecodeBigInteger_whenAxaxaxaxBytesIsUtf8_thenReturnToStringIs88()
       throws UnsupportedEncodingException {
@@ -402,7 +421,8 @@ public class RLPDiffblueTest {
    * <p>Method under test: {@link RLP#decodeByteArray(byte[], int)}
    */
   @Test
-  @Category(MaintainedByDiffblue.class)
+  @Category(ContributionFromDiffblue.class)
+  @ManagedByDiffblue
   @MethodsUnderTest({"byte[] RLP.decodeByteArray(byte[], int)"})
   public void testDecodeByteArray_whenArrayOfByteWithAAndMin_value_thenReturnEmptyArrayOfByte() {
     // Arrange, Act and Assert
@@ -422,7 +442,8 @@ public class RLPDiffblueTest {
    * <p>Method under test: {@link RLP#decodeByteArray(byte[], int)}
    */
   @Test
-  @Category(MaintainedByDiffblue.class)
+  @Category(ContributionFromDiffblue.class)
+  @ManagedByDiffblue
   @MethodsUnderTest({"byte[] RLP.decodeByteArray(byte[], int)"})
   public void testDecodeByteArray_whenArrayOfByteWithAAndMinusOne_thenThrowRuntimeException() {
     // Arrange, Act and Assert
@@ -445,7 +466,8 @@ public class RLPDiffblueTest {
    * <p>Method under test: {@link RLP#decodeByteArray(byte[], int)}
    */
   @Test
-  @Category(MaintainedByDiffblue.class)
+  @Category(ContributionFromDiffblue.class)
+  @ManagedByDiffblue
   @MethodsUnderTest({"byte[] RLP.decodeByteArray(byte[], int)"})
   public void testDecodeByteArray_whenAxaxaxaxBytesIsUtf8_thenReturnArrayOfByteWithX()
       throws UnsupportedEncodingException {
@@ -463,7 +485,8 @@ public class RLPDiffblueTest {
    * <p>Method under test: {@link LList#add(int, int, boolean)}
    */
   @Test
-  @Category(MaintainedByDiffblue.class)
+  @Category(ContributionFromDiffblue.class)
+  @ManagedByDiffblue
   @MethodsUnderTest({"void LList.add(int, int, boolean)"})
   public void testLListAdd_whenFalse() throws UnsupportedEncodingException {
     // Arrange
@@ -487,7 +510,8 @@ public class RLPDiffblueTest {
    * <p>Method under test: {@link LList#add(int, int, boolean)}
    */
   @Test
-  @Category(MaintainedByDiffblue.class)
+  @Category(ContributionFromDiffblue.class)
+  @ManagedByDiffblue
   @MethodsUnderTest({"void LList.add(int, int, boolean)"})
   public void testLListAdd_whenTrue() throws UnsupportedEncodingException {
     // Arrange
@@ -512,7 +536,8 @@ public class RLPDiffblueTest {
    * <p>Method under test: {@link LList#getBytes(int)}
    */
   @Test
-  @Category(MaintainedByDiffblue.class)
+  @Category(ContributionFromDiffblue.class)
+  @ManagedByDiffblue
   @MethodsUnderTest({"byte[] LList.getBytes(int)"})
   public void testLListGetBytes_whenOne_thenReturnEmptyArrayOfByte()
       throws UnsupportedEncodingException {
@@ -526,7 +551,8 @@ public class RLPDiffblueTest {
    * <p>Method under test: {@link LList#getEncoded()}
    */
   @Test
-  @Category(MaintainedByDiffblue.class)
+  @Category(ContributionFromDiffblue.class)
+  @ManagedByDiffblue
   @MethodsUnderTest({"byte[] LList.getEncoded()"})
   public void testLListGetEncoded() throws UnsupportedEncodingException {
     // Arrange
@@ -543,7 +569,8 @@ public class RLPDiffblueTest {
    * <p>Method under test: {@link LList#getEncoded()}
    */
   @Test
-  @Category(MaintainedByDiffblue.class)
+  @Category(ContributionFromDiffblue.class)
+  @ManagedByDiffblue
   @MethodsUnderTest({"byte[] LList.getEncoded()"})
   public void testLListGetEncoded2() throws UnsupportedEncodingException {
     // Arrange
@@ -561,7 +588,8 @@ public class RLPDiffblueTest {
    * <p>Method under test: {@link LList#getEncoded()}
    */
   @Test
-  @Category(MaintainedByDiffblue.class)
+  @Category(ContributionFromDiffblue.class)
+  @ManagedByDiffblue
   @MethodsUnderTest({"byte[] LList.getEncoded()"})
   public void testLListGetEncoded3() {
     // Arrange
@@ -583,7 +611,8 @@ public class RLPDiffblueTest {
    * <p>Method under test: {@link LList#getEncoded()}
    */
   @Test
-  @Category(MaintainedByDiffblue.class)
+  @Category(ContributionFromDiffblue.class)
+  @ManagedByDiffblue
   @MethodsUnderTest({"byte[] LList.getEncoded()"})
   public void testLListGetEncoded_givenX_thenReturnArrayOfByteWithMinusSixtyThreeAndZero() {
     // Arrange
@@ -604,7 +633,8 @@ public class RLPDiffblueTest {
    * <p>Method under test: {@link LList#getEncoded()}
    */
   @Test
-  @Category(MaintainedByDiffblue.class)
+  @Category(ContributionFromDiffblue.class)
+  @ManagedByDiffblue
   @MethodsUnderTest({"byte[] LList.getEncoded()"})
   public void testLListGetEncoded_thenReturnArrayOfByteWithMinusSixtyFour()
       throws UnsupportedEncodingException {
@@ -622,7 +652,8 @@ public class RLPDiffblueTest {
    * <p>Method under test: {@link LList#getEncoded()}
    */
   @Test
-  @Category(MaintainedByDiffblue.class)
+  @Category(ContributionFromDiffblue.class)
+  @ManagedByDiffblue
   @MethodsUnderTest({"byte[] LList.getEncoded()"})
   public void testLListGetEncoded_thenReturnArrayOfByteWithMinusSixtyThreeAndA()
       throws UnsupportedEncodingException {
@@ -644,7 +675,8 @@ public class RLPDiffblueTest {
    * <p>Method under test: {@link LList#getEncoded()}
    */
   @Test
-  @Category(MaintainedByDiffblue.class)
+  @Category(ContributionFromDiffblue.class)
+  @ManagedByDiffblue
   @MethodsUnderTest({"byte[] LList.getEncoded()"})
   public void testLListGetEncoded_thenReturnArrayOfByteWithMinusSixtyThreeAndMin_value()
       throws UnsupportedEncodingException {
@@ -667,7 +699,8 @@ public class RLPDiffblueTest {
    * <p>Method under test: {@link LList#getList(int)}
    */
   @Test
-  @Category(MaintainedByDiffblue.class)
+  @Category(ContributionFromDiffblue.class)
+  @ManagedByDiffblue
   @MethodsUnderTest({"LList LList.getList(int)"})
   public void testLListGetList_givenLListWithRlpIsAxaxaxaxBytesIsUtf8_thenReturnSizeIsZero()
       throws UnsupportedEncodingException {
@@ -691,7 +724,8 @@ public class RLPDiffblueTest {
    * <p>Method under test: {@link LList#getList(int)}
    */
   @Test
-  @Category(MaintainedByDiffblue.class)
+  @Category(ContributionFromDiffblue.class)
+  @ManagedByDiffblue
   @MethodsUnderTest({"LList LList.getList(int)"})
   public void testLListGetList_givenLListWithRlpIsEmptyArrayOfByte_whenOne_thenReturnNull() {
     // Arrange
@@ -713,7 +747,8 @@ public class RLPDiffblueTest {
    * <p>Method under test: {@link LList#getList(int)}
    */
   @Test
-  @Category(MaintainedByDiffblue.class)
+  @Category(ContributionFromDiffblue.class)
+  @ManagedByDiffblue
   @MethodsUnderTest({"LList LList.getList(int)"})
   public void testLListGetList_givenX_whenOne_thenReturnSizeIsOne() {
     // Arrange
@@ -735,7 +770,8 @@ public class RLPDiffblueTest {
    * <p>Method under test: {@link LList#getList(int)}
    */
   @Test
-  @Category(MaintainedByDiffblue.class)
+  @Category(ContributionFromDiffblue.class)
+  @ManagedByDiffblue
   @MethodsUnderTest({"LList LList.getList(int)"})
   public void testLListGetList_thenReturnEncodedIsArrayOfByteWithMinusSixtyOneAndA()
       throws UnsupportedEncodingException {
@@ -763,7 +799,8 @@ public class RLPDiffblueTest {
    * <p>Method under test: {@link LList#getList(int)}
    */
   @Test
-  @Category(MaintainedByDiffblue.class)
+  @Category(ContributionFromDiffblue.class)
+  @ManagedByDiffblue
   @MethodsUnderTest({"LList LList.getList(int)"})
   public void testLListGetList_thenReturnEncodedIsArrayOfByteWithMinusSixtyOneAndMin_value() {
     // Arrange
@@ -791,7 +828,8 @@ public class RLPDiffblueTest {
    * <p>Method under test: {@link LList#isList(int)}
    */
   @Test
-  @Category(MaintainedByDiffblue.class)
+  @Category(ContributionFromDiffblue.class)
+  @ManagedByDiffblue
   @MethodsUnderTest({"boolean LList.isList(int)"})
   public void testLListIsList_givenAddWithOffIsTwoAndLenIsThreeAndIsListIsTrue_thenReturnTrue()
       throws UnsupportedEncodingException {
@@ -814,7 +852,8 @@ public class RLPDiffblueTest {
    * <p>Method under test: {@link LList#isList(int)}
    */
   @Test
-  @Category(MaintainedByDiffblue.class)
+  @Category(ContributionFromDiffblue.class)
+  @ManagedByDiffblue
   @MethodsUnderTest({"boolean LList.isList(int)"})
   public void testLListIsList_whenOne_thenReturnFalse() throws UnsupportedEncodingException {
     // Arrange, Act and Assert
@@ -827,7 +866,8 @@ public class RLPDiffblueTest {
    * <p>Method under test: {@link LList#LList(byte[])}
    */
   @Test
-  @Category(MaintainedByDiffblue.class)
+  @Category(ContributionFromDiffblue.class)
+  @ManagedByDiffblue
   @MethodsUnderTest({"void LList.<init>(byte[])"})
   public void testLListNewLList() throws UnsupportedEncodingException {
     // Arrange and Act
@@ -844,7 +884,8 @@ public class RLPDiffblueTest {
    * <p>Method under test: {@link LList#size()}
    */
   @Test
-  @Category(MaintainedByDiffblue.class)
+  @Category(ContributionFromDiffblue.class)
+  @ManagedByDiffblue
   @MethodsUnderTest({"int LList.size()"})
   public void testLListSize() throws UnsupportedEncodingException {
     // Arrange, Act and Assert
@@ -862,7 +903,8 @@ public class RLPDiffblueTest {
    * <p>Method under test: {@link RLP#nextItemLength(byte[], int)}
    */
   @Test
-  @Category(MaintainedByDiffblue.class)
+  @Category(ContributionFromDiffblue.class)
+  @ManagedByDiffblue
   @MethodsUnderTest({"int RLP.nextItemLength(byte[], int)"})
   public void testNextItemLength_whenArrayOfByteWithAAndMinusNine_thenReturnFiftyFive() {
     // Arrange, Act and Assert
@@ -880,7 +922,8 @@ public class RLPDiffblueTest {
    * <p>Method under test: {@link RLP#nextItemLength(byte[], int)}
    */
   @Test
-  @Category(MaintainedByDiffblue.class)
+  @Category(ContributionFromDiffblue.class)
+  @ManagedByDiffblue
   @MethodsUnderTest({"int RLP.nextItemLength(byte[], int)"})
   public void testNextItemLength_whenArrayOfByteWithAAndMinusOne_thenReturnMax_value() {
     // Arrange, Act and Assert
@@ -900,7 +943,8 @@ public class RLPDiffblueTest {
    * <p>Method under test: {@link RLP#nextItemLength(byte[], int)}
    */
   @Test
-  @Category(MaintainedByDiffblue.class)
+  @Category(ContributionFromDiffblue.class)
+  @ManagedByDiffblue
   @MethodsUnderTest({"int RLP.nextItemLength(byte[], int)"})
   public void testNextItemLength_whenArrayOfByteWithAAndMinusOne_thenThrowRuntimeException() {
     // Arrange, Act and Assert
@@ -920,7 +964,8 @@ public class RLPDiffblueTest {
    * <p>Method under test: {@link RLP#nextItemLength(byte[], int)}
    */
   @Test
-  @Category(MaintainedByDiffblue.class)
+  @Category(ContributionFromDiffblue.class)
+  @ManagedByDiffblue
   @MethodsUnderTest({"int RLP.nextItemLength(byte[], int)"})
   public void testNextItemLength_whenArrayOfByteWithAAndMinusSeventyThree_thenReturnFiftyFive() {
     // Arrange, Act and Assert
@@ -938,7 +983,8 @@ public class RLPDiffblueTest {
    * <p>Method under test: {@link RLP#nextItemLength(byte[], int)}
    */
   @Test
-  @Category(MaintainedByDiffblue.class)
+  @Category(ContributionFromDiffblue.class)
+  @ManagedByDiffblue
   @MethodsUnderTest({"int RLP.nextItemLength(byte[], int)"})
   public void testNextItemLength_whenAxaxaxaxBytesIsUtf8_thenReturnOne()
       throws UnsupportedEncodingException {
@@ -957,7 +1003,8 @@ public class RLPDiffblueTest {
    * <p>Method under test: {@link RLP#nextItemLength(byte[], int)}
    */
   @Test
-  @Category(MaintainedByDiffblue.class)
+  @Category(ContributionFromDiffblue.class)
+  @ManagedByDiffblue
   @MethodsUnderTest({"int RLP.nextItemLength(byte[], int)"})
   public void testNextItemLength_whenEmptyArrayOfByte_thenReturnMinusOne() {
     // Arrange, Act and Assert
@@ -975,7 +1022,8 @@ public class RLPDiffblueTest {
    * <p>Method under test: {@link RLP#decodeIP4Bytes(byte[], int)}
    */
   @Test
-  @Category(MaintainedByDiffblue.class)
+  @Category(ContributionFromDiffblue.class)
+  @ManagedByDiffblue
   @MethodsUnderTest({"byte[] RLP.decodeIP4Bytes(byte[], int)"})
   public void testDecodeIP4Bytes_whenAxaxaxaxBytesIsUtf8_thenReturnAxaxBytesIsUtf8()
       throws UnsupportedEncodingException {
@@ -995,7 +1043,8 @@ public class RLPDiffblueTest {
    * <p>Method under test: {@link RLP#decodeIP4Bytes(byte[], int)}
    */
   @Test
-  @Category(MaintainedByDiffblue.class)
+  @Category(ContributionFromDiffblue.class)
+  @ManagedByDiffblue
   @MethodsUnderTest({"byte[] RLP.decodeIP4Bytes(byte[], int)"})
   public void testDecodeIP4Bytes_whenX_thenReturnArrayOfByteWithZeroAndA() {
     // Arrange, Act and Assert
@@ -1015,7 +1064,8 @@ public class RLPDiffblueTest {
    * <p>Method under test: {@link RLP#decodeIP4Bytes(byte[], int)}
    */
   @Test
-  @Category(MaintainedByDiffblue.class)
+  @Category(ContributionFromDiffblue.class)
+  @ManagedByDiffblue
   @MethodsUnderTest({"byte[] RLP.decodeIP4Bytes(byte[], int)"})
   public void testDecodeIP4Bytes_whenX_thenReturnArrayOfByteWithZeroAndX() {
     // Arrange, Act and Assert
@@ -1035,7 +1085,8 @@ public class RLPDiffblueTest {
    * <p>Method under test: {@link RLP#decodeIP4Bytes(byte[], int)}
    */
   @Test
-  @Category(MaintainedByDiffblue.class)
+  @Category(ContributionFromDiffblue.class)
+  @ManagedByDiffblue
   @MethodsUnderTest({"byte[] RLP.decodeIP4Bytes(byte[], int)"})
   public void testDecodeIP4Bytes_whenX_thenReturnArrayOfByteWithZeroAndX2() {
     // Arrange, Act and Assert
@@ -1055,7 +1106,8 @@ public class RLPDiffblueTest {
    * <p>Method under test: {@link RLP#getFirstListElement(byte[], int)}
    */
   @Test
-  @Category(MaintainedByDiffblue.class)
+  @Category(ContributionFromDiffblue.class)
+  @ManagedByDiffblue
   @MethodsUnderTest({"int RLP.getFirstListElement(byte[], int)"})
   public void testGetFirstListElement_whenArrayOfByteWithAAndMinusNine_thenReturnTwo() {
     // Arrange, Act and Assert
@@ -1073,7 +1125,8 @@ public class RLPDiffblueTest {
    * <p>Method under test: {@link RLP#getFirstListElement(byte[], int)}
    */
   @Test
-  @Category(MaintainedByDiffblue.class)
+  @Category(ContributionFromDiffblue.class)
+  @ManagedByDiffblue
   @MethodsUnderTest({"int RLP.getFirstListElement(byte[], int)"})
   public void testGetFirstListElement_whenArrayOfByteWithAAndMinusOne_thenReturnTen() {
     // Arrange, Act and Assert
@@ -1092,7 +1145,8 @@ public class RLPDiffblueTest {
    * <p>Method under test: {@link RLP#getFirstListElement(byte[], int)}
    */
   @Test
-  @Category(MaintainedByDiffblue.class)
+  @Category(ContributionFromDiffblue.class)
+  @ManagedByDiffblue
   @MethodsUnderTest({"int RLP.getFirstListElement(byte[], int)"})
   public void testGetFirstListElement_whenAxaxaxaxBytesIsUtf8_thenReturnMinusOne()
       throws UnsupportedEncodingException {
@@ -1111,7 +1165,8 @@ public class RLPDiffblueTest {
    * <p>Method under test: {@link RLP#getFirstListElement(byte[], int)}
    */
   @Test
-  @Category(MaintainedByDiffblue.class)
+  @Category(ContributionFromDiffblue.class)
+  @ManagedByDiffblue
   @MethodsUnderTest({"int RLP.getFirstListElement(byte[], int)"})
   public void testGetFirstListElement_whenEmptyArrayOfByte_thenReturnMinusOne() {
     // Arrange, Act and Assert
@@ -1128,7 +1183,8 @@ public class RLPDiffblueTest {
    * <p>Method under test: {@link RLP#getNextElementIndex(byte[], int)}
    */
   @Test
-  @Category(MaintainedByDiffblue.class)
+  @Category(ContributionFromDiffblue.class)
+  @ManagedByDiffblue
   @MethodsUnderTest({"int RLP.getNextElementIndex(byte[], int)"})
   public void testGetNextElementIndex_thenThrowRuntimeException() {
     // Arrange, Act and Assert
@@ -1148,7 +1204,8 @@ public class RLPDiffblueTest {
    * <p>Method under test: {@link RLP#getNextElementIndex(byte[], int)}
    */
   @Test
-  @Category(MaintainedByDiffblue.class)
+  @Category(ContributionFromDiffblue.class)
+  @ManagedByDiffblue
   @MethodsUnderTest({"int RLP.getNextElementIndex(byte[], int)"})
   public void testGetNextElementIndex_whenArrayOfByteWithAAndMin_value_thenReturnTwo() {
     // Arrange, Act and Assert
@@ -1168,7 +1225,8 @@ public class RLPDiffblueTest {
    * <p>Method under test: {@link RLP#getNextElementIndex(byte[], int)}
    */
   @Test
-  @Category(MaintainedByDiffblue.class)
+  @Category(ContributionFromDiffblue.class)
+  @ManagedByDiffblue
   @MethodsUnderTest({"int RLP.getNextElementIndex(byte[], int)"})
   public void testGetNextElementIndex_whenArrayOfByteWithAAndMinusNine_thenReturnFiftySeven() {
     // Arrange, Act and Assert
@@ -1187,7 +1245,8 @@ public class RLPDiffblueTest {
    * <p>Method under test: {@link RLP#getNextElementIndex(byte[], int)}
    */
   @Test
-  @Category(MaintainedByDiffblue.class)
+  @Category(ContributionFromDiffblue.class)
+  @ManagedByDiffblue
   @MethodsUnderTest({"int RLP.getNextElementIndex(byte[], int)"})
   public void testGetNextElementIndex_whenArrayOfByteWithAAndMinusOne_thenReturn2147483639() {
     // Arrange, Act and Assert
@@ -1206,7 +1265,8 @@ public class RLPDiffblueTest {
    * <p>Method under test: {@link RLP#getNextElementIndex(byte[], int)}
    */
   @Test
-  @Category(MaintainedByDiffblue.class)
+  @Category(ContributionFromDiffblue.class)
+  @ManagedByDiffblue
   @MethodsUnderTest({"int RLP.getNextElementIndex(byte[], int)"})
   public void testGetNextElementIndex_whenArrayOfByteWithAAndMinusSeventyThree() {
     // Arrange, Act and Assert
@@ -1225,7 +1285,8 @@ public class RLPDiffblueTest {
    * <p>Method under test: {@link RLP#getNextElementIndex(byte[], int)}
    */
   @Test
-  @Category(MaintainedByDiffblue.class)
+  @Category(ContributionFromDiffblue.class)
+  @ManagedByDiffblue
   @MethodsUnderTest({"int RLP.getNextElementIndex(byte[], int)"})
   public void testGetNextElementIndex_whenAxaxaxaxBytesIsUtf8_thenReturnTwo()
       throws UnsupportedEncodingException {
@@ -1244,7 +1305,8 @@ public class RLPDiffblueTest {
    * <p>Method under test: {@link RLP#getNextElementIndex(byte[], int)}
    */
   @Test
-  @Category(MaintainedByDiffblue.class)
+  @Category(ContributionFromDiffblue.class)
+  @ManagedByDiffblue
   @MethodsUnderTest({"int RLP.getNextElementIndex(byte[], int)"})
   public void testGetNextElementIndex_whenEmptyArrayOfByte_thenReturnMinusOne() {
     // Arrange, Act and Assert
@@ -1262,7 +1324,8 @@ public class RLPDiffblueTest {
    * <p>Method under test: {@link RLP#getCommandCode(byte[])}
    */
   @Test
-  @Category(MaintainedByDiffblue.class)
+  @Category(ContributionFromDiffblue.class)
+  @ManagedByDiffblue
   @MethodsUnderTest({"byte RLP.getCommandCode(byte[])"})
   public void testGetCommandCode_whenArrayOfByteWithMinusNineAndMin_value_thenReturnZero() {
     // Arrange, Act and Assert
@@ -1282,7 +1345,8 @@ public class RLPDiffblueTest {
    * <p>Method under test: {@link RLP#getCommandCode(byte[])}
    */
   @Test
-  @Category(MaintainedByDiffblue.class)
+  @Category(ContributionFromDiffblue.class)
+  @ManagedByDiffblue
   @MethodsUnderTest({"byte RLP.getCommandCode(byte[])"})
   public void testGetCommandCode_whenArrayOfByteWithMinusNineAndX_thenReturnX() {
     // Arrange, Act and Assert
@@ -1299,7 +1363,8 @@ public class RLPDiffblueTest {
    * <p>Method under test: {@link RLP#decode2(byte[], int)}
    */
   @Test
-  @Category(MaintainedByDiffblue.class)
+  @Category(ContributionFromDiffblue.class)
+  @ManagedByDiffblue
   @MethodsUnderTest({"RLPList RLP.decode2(byte[], int)"})
   public void testDecode2WithMsgDataDepthLimit_thenFirstReturnList() {
     // Arrange and Act
@@ -1330,7 +1395,8 @@ public class RLPDiffblueTest {
    * <p>Method under test: {@link RLP#decode2(byte[], int)}
    */
   @Test
-  @Category(MaintainedByDiffblue.class)
+  @Category(ContributionFromDiffblue.class)
+  @ManagedByDiffblue
   @MethodsUnderTest({"RLPList RLP.decode2(byte[], int)"})
   public void testDecode2WithMsgDataDepthLimit_thenReturnFirstRLPDataIsArrayOfByteWithA()
       throws UnsupportedEncodingException {
@@ -1359,7 +1425,8 @@ public class RLPDiffblueTest {
    * <p>Method under test: {@link RLP#decode2(byte[], int)}
    */
   @Test
-  @Category(MaintainedByDiffblue.class)
+  @Category(ContributionFromDiffblue.class)
+  @ManagedByDiffblue
   @MethodsUnderTest({"RLPList RLP.decode2(byte[], int)"})
   public void testDecode2WithMsgDataDepthLimit_thenReturnFirstRLPDataIsNull() {
     // Arrange and Act
@@ -1388,7 +1455,8 @@ public class RLPDiffblueTest {
    * <p>Method under test: {@link RLP#decode2(byte[], int)}
    */
   @Test
-  @Category(MaintainedByDiffblue.class)
+  @Category(ContributionFromDiffblue.class)
+  @ManagedByDiffblue
   @MethodsUnderTest({"RLPList RLP.decode2(byte[], int)"})
   public void testDecode2WithMsgDataDepthLimit_whenArrayOfByteWithMinusOneAndX() {
     // Arrange, Act and Assert
@@ -1407,7 +1475,8 @@ public class RLPDiffblueTest {
    * <p>Method under test: {@link RLP#decode2(byte[], int)}
    */
   @Test
-  @Category(MaintainedByDiffblue.class)
+  @Category(ContributionFromDiffblue.class)
+  @ManagedByDiffblue
   @MethodsUnderTest({"RLPList RLP.decode2(byte[], int)"})
   public void testDecode2WithMsgDataDepthLimit_whenArrayOfByteWithMinusOneAndZero() {
     // Arrange, Act and Assert
@@ -1427,7 +1496,8 @@ public class RLPDiffblueTest {
    * <p>Method under test: {@link RLP#decode2(byte[], int)}
    */
   @Test
-  @Category(MaintainedByDiffblue.class)
+  @Category(ContributionFromDiffblue.class)
+  @ManagedByDiffblue
   @MethodsUnderTest({"RLPList RLP.decode2(byte[], int)"})
   public void testDecode2WithMsgDataDepthLimit_whenEmptyArrayOfByte_thenReturnEmpty() {
     // Arrange, Act and Assert
@@ -1445,7 +1515,8 @@ public class RLPDiffblueTest {
    * <p>Method under test: {@link RLP#decode2(byte[], int)}
    */
   @Test
-  @Category(MaintainedByDiffblue.class)
+  @Category(ContributionFromDiffblue.class)
+  @ManagedByDiffblue
   @MethodsUnderTest({"RLPList RLP.decode2(byte[], int)"})
   public void testDecode2WithMsgDataDepthLimit_whenZero_thenThrowRuntimeException() {
     // Arrange, Act and Assert
@@ -1462,7 +1533,8 @@ public class RLPDiffblueTest {
    * <p>Method under test: {@link RLP#decode2(byte[])}
    */
   @Test
-  @Category(MaintainedByDiffblue.class)
+  @Category(ContributionFromDiffblue.class)
+  @ManagedByDiffblue
   @MethodsUnderTest({"RLPList RLP.decode2(byte[])"})
   public void testDecode2WithMsgData_thenReturnFirstRLPDataIsArrayOfByteWithA()
       throws UnsupportedEncodingException {
@@ -1491,7 +1563,8 @@ public class RLPDiffblueTest {
    * <p>Method under test: {@link RLP#decode2(byte[])}
    */
   @Test
-  @Category(MaintainedByDiffblue.class)
+  @Category(ContributionFromDiffblue.class)
+  @ManagedByDiffblue
   @MethodsUnderTest({"RLPList RLP.decode2(byte[])"})
   public void testDecode2WithMsgData_thenReturnFirstRLPDataIsNull() {
     // Arrange and Act
@@ -1521,7 +1594,8 @@ public class RLPDiffblueTest {
    * <p>Method under test: {@link RLP#decode2(byte[])}
    */
   @Test
-  @Category(MaintainedByDiffblue.class)
+  @Category(ContributionFromDiffblue.class)
+  @ManagedByDiffblue
   @MethodsUnderTest({"RLPList RLP.decode2(byte[])"})
   public void testDecode2WithMsgData_whenArrayOfByteWithAAndMinusOne_thenThrowRuntimeException() {
     // Arrange, Act and Assert
@@ -1545,7 +1619,8 @@ public class RLPDiffblueTest {
    * <p>Method under test: {@link RLP#decode2(byte[])}
    */
   @Test
-  @Category(MaintainedByDiffblue.class)
+  @Category(ContributionFromDiffblue.class)
+  @ManagedByDiffblue
   @MethodsUnderTest({"RLPList RLP.decode2(byte[])"})
   public void testDecode2WithMsgData_whenArrayOfByteWithAAndMinusOne_thenThrowRuntimeException2() {
     // Arrange, Act and Assert
@@ -1567,7 +1642,8 @@ public class RLPDiffblueTest {
    * <p>Method under test: {@link RLP#decode2(byte[])}
    */
   @Test
-  @Category(MaintainedByDiffblue.class)
+  @Category(ContributionFromDiffblue.class)
+  @ManagedByDiffblue
   @MethodsUnderTest({"RLPList RLP.decode2(byte[])"})
   public void testDecode2WithMsgData_whenArrayOfByteWithMinusSixtyFourAndX_thenFirstReturnList() {
     // Arrange and Act
@@ -1598,7 +1674,8 @@ public class RLPDiffblueTest {
    * <p>Method under test: {@link RLP#decode2(byte[])}
    */
   @Test
-  @Category(MaintainedByDiffblue.class)
+  @Category(ContributionFromDiffblue.class)
+  @ManagedByDiffblue
   @MethodsUnderTest({"RLPList RLP.decode2(byte[])"})
   public void testDecode2WithMsgData_whenEmptyArrayOfByte_thenReturnEmpty() {
     // Arrange, Act and Assert
@@ -1616,7 +1693,8 @@ public class RLPDiffblueTest {
    * <p>Method under test: {@link RLP#unwrapList(byte[])}
    */
   @Test
-  @Category(MaintainedByDiffblue.class)
+  @Category(ContributionFromDiffblue.class)
+  @ManagedByDiffblue
   @MethodsUnderTest({"RLPList RLP.unwrapList(byte[])"})
   public void testUnwrapList_whenArrayOfByteWithMinusOneAndX_thenThrowRuntimeException() {
     // Arrange, Act and Assert
@@ -1636,7 +1714,8 @@ public class RLPDiffblueTest {
    * <p>Method under test: {@link RLP#unwrapList(byte[])}
    */
   @Test
-  @Category(MaintainedByDiffblue.class)
+  @Category(ContributionFromDiffblue.class)
+  @ManagedByDiffblue
   @MethodsUnderTest({"RLPList RLP.unwrapList(byte[])"})
   public void testUnwrapList_whenArrayOfByteWithMinusOneAndZero_thenThrowRuntimeException() {
     // Arrange, Act and Assert
@@ -1656,7 +1735,8 @@ public class RLPDiffblueTest {
    * <p>Method under test: {@link RLP#decode2OneItem(byte[], int)}
    */
   @Test
-  @Category(MaintainedByDiffblue.class)
+  @Category(ContributionFromDiffblue.class)
+  @ManagedByDiffblue
   @MethodsUnderTest({"RLPElement RLP.decode2OneItem(byte[], int)"})
   public void testDecode2OneItem_whenArrayOfByteWithAAndMin_value_thenReturnRLPDataIsNull() {
     // Arrange and Act
@@ -1681,7 +1761,8 @@ public class RLPDiffblueTest {
    * <p>Method under test: {@link RLP#decode2OneItem(byte[], int)}
    */
   @Test
-  @Category(MaintainedByDiffblue.class)
+  @Category(ContributionFromDiffblue.class)
+  @ManagedByDiffblue
   @MethodsUnderTest({"RLPElement RLP.decode2OneItem(byte[], int)"})
   public void testDecode2OneItem_whenAxaxaxaxBytesIsUtf8_thenReturnRLPData()
       throws UnsupportedEncodingException {
@@ -1707,7 +1788,8 @@ public class RLPDiffblueTest {
    * <p>Method under test: {@link RLP#fullTraverse(byte[], int, int, int, RLPList, int)}
    */
   @Test
-  @Category(MaintainedByDiffblue.class)
+  @Category(ContributionFromDiffblue.class)
+  @ManagedByDiffblue
   @MethodsUnderTest({"void RLP.fullTraverse(byte[], int, int, int, RLPList, int)"})
   public void testFullTraverse_thenRLPListFirstRLPDataIsArrayOfByteWithMinusSixtyFour() {
     // Arrange
@@ -1733,7 +1815,8 @@ public class RLPDiffblueTest {
    * <p>Method under test: {@link RLP#fullTraverse(byte[], int, int, int, RLPList, int)}
    */
   @Test
-  @Category(MaintainedByDiffblue.class)
+  @Category(ContributionFromDiffblue.class)
+  @ManagedByDiffblue
   @MethodsUnderTest({"void RLP.fullTraverse(byte[], int, int, int, RLPList, int)"})
   public void testFullTraverse_thenRLPListFirstRLPDataIsArrayOfByteWithX()
       throws UnsupportedEncodingException {
@@ -1761,7 +1844,8 @@ public class RLPDiffblueTest {
    * <p>Method under test: {@link RLP#fullTraverse(byte[], int, int, int, RLPList, int)}
    */
   @Test
-  @Category(MaintainedByDiffblue.class)
+  @Category(ContributionFromDiffblue.class)
+  @ManagedByDiffblue
   @MethodsUnderTest({"void RLP.fullTraverse(byte[], int, int, int, RLPList, int)"})
   public void testFullTraverse_whenArrayOfByteWithAAndMin_value_thenRLPListFirstRLPDataIsNull() {
     // Arrange
@@ -1788,7 +1872,8 @@ public class RLPDiffblueTest {
    * <p>Method under test: {@link RLP#fullTraverse(byte[], int, int, int, RLPList, int)}
    */
   @Test
-  @Category(MaintainedByDiffblue.class)
+  @Category(ContributionFromDiffblue.class)
+  @ManagedByDiffblue
   @MethodsUnderTest({"void RLP.fullTraverse(byte[], int, int, int, RLPList, int)"})
   public void testFullTraverse_whenArrayOfByteWithAAndMinusOne_thenThrowRuntimeException() {
     // Arrange, Act and Assert
@@ -1810,7 +1895,8 @@ public class RLPDiffblueTest {
    * <p>Method under test: {@link RLP#fullTraverse(byte[], int, int, int, RLPList, int)}
    */
   @Test
-  @Category(MaintainedByDiffblue.class)
+  @Category(ContributionFromDiffblue.class)
+  @ManagedByDiffblue
   @MethodsUnderTest({"void RLP.fullTraverse(byte[], int, int, int, RLPList, int)"})
   public void testFullTraverse_whenArrayOfByteWithAAndMinusOne_thenThrowRuntimeException2() {
     // Arrange, Act and Assert
@@ -1832,7 +1918,8 @@ public class RLPDiffblueTest {
    * <p>Method under test: {@link RLP#fullTraverse(byte[], int, int, int, RLPList, int)}
    */
   @Test
-  @Category(MaintainedByDiffblue.class)
+  @Category(ContributionFromDiffblue.class)
+  @ManagedByDiffblue
   @MethodsUnderTest({"void RLP.fullTraverse(byte[], int, int, int, RLPList, int)"})
   public void testFullTraverse_whenArrayOfByteWithAAndX_thenThrowRuntimeException() {
     // Arrange, Act and Assert
@@ -1854,7 +1941,8 @@ public class RLPDiffblueTest {
    * <p>Method under test: {@link RLP#fullTraverse(byte[], int, int, int, RLPList, int)}
    */
   @Test
-  @Category(MaintainedByDiffblue.class)
+  @Category(ContributionFromDiffblue.class)
+  @ManagedByDiffblue
   @MethodsUnderTest({"void RLP.fullTraverse(byte[], int, int, int, RLPList, int)"})
   public void testFullTraverse_whenEmptyArrayOfByte_thenRLPListEmpty() {
     // Arrange
@@ -1878,7 +1966,8 @@ public class RLPDiffblueTest {
    * <p>Method under test: {@link RLP#fullTraverse(byte[], int, int, int, RLPList, int)}
    */
   @Test
-  @Category(MaintainedByDiffblue.class)
+  @Category(ContributionFromDiffblue.class)
+  @ManagedByDiffblue
   @MethodsUnderTest({"void RLP.fullTraverse(byte[], int, int, int, RLPList, int)"})
   public void testFullTraverse_whenSeventeen_thenThrowRuntimeException() {
     // Arrange, Act and Assert
@@ -1896,7 +1985,8 @@ public class RLPDiffblueTest {
    * <p>Method under test: {@link RLP#fullTraverse(byte[], int, int, int, RLPList, int)}
    */
   @Test
-  @Category(MaintainedByDiffblue.class)
+  @Category(ContributionFromDiffblue.class)
+  @ManagedByDiffblue
   @MethodsUnderTest({"void RLP.fullTraverse(byte[], int, int, int, RLPList, int)"})
   public void testFullTraverse_whenSize_thenRLPListEmpty() {
     // Arrange
@@ -1920,7 +2010,8 @@ public class RLPDiffblueTest {
    * <p>Method under test: {@link RLP#decode(byte[], int)}
    */
   @Test
-  @Category(MaintainedByDiffblue.class)
+  @Category(ContributionFromDiffblue.class)
+  @ManagedByDiffblue
   @MethodsUnderTest({"DecodeResult RLP.decode(byte[], int)"})
   public void testDecode_whenArrayOfByteWithAAndMin_value_thenReturnDecodedIsEmptyString() {
     // Arrange and Act
@@ -1943,7 +2034,8 @@ public class RLPDiffblueTest {
    * <p>Method under test: {@link RLP#decode(byte[], int)}
    */
   @Test
-  @Category(MaintainedByDiffblue.class)
+  @Category(ContributionFromDiffblue.class)
+  @ManagedByDiffblue
   @MethodsUnderTest({"DecodeResult RLP.decode(byte[], int)"})
   public void testDecode_whenArrayOfByteWithAAndMinusNine_thenThrowRuntimeException() {
     // Arrange, Act and Assert
@@ -1963,7 +2055,8 @@ public class RLPDiffblueTest {
    * <p>Method under test: {@link RLP#decode(byte[], int)}
    */
   @Test
-  @Category(MaintainedByDiffblue.class)
+  @Category(ContributionFromDiffblue.class)
+  @ManagedByDiffblue
   @MethodsUnderTest({"DecodeResult RLP.decode(byte[], int)"})
   public void testDecode_whenArrayOfByteWithAAndMinusOne_thenReturnPosIsTen() {
     // Arrange and Act
@@ -1988,7 +2081,8 @@ public class RLPDiffblueTest {
    * <p>Method under test: {@link RLP#decode(byte[], int)}
    */
   @Test
-  @Category(MaintainedByDiffblue.class)
+  @Category(ContributionFromDiffblue.class)
+  @ManagedByDiffblue
   @MethodsUnderTest({"DecodeResult RLP.decode(byte[], int)"})
   public void testDecode_whenArrayOfByteWithAAndMinusOne_thenThrowRuntimeException() {
     // Arrange, Act and Assert
@@ -2008,7 +2102,8 @@ public class RLPDiffblueTest {
    * <p>Method under test: {@link RLP#decode(byte[], int)}
    */
   @Test
-  @Category(MaintainedByDiffblue.class)
+  @Category(ContributionFromDiffblue.class)
+  @ManagedByDiffblue
   @MethodsUnderTest({"DecodeResult RLP.decode(byte[], int)"})
   public void testDecode_whenArrayOfByteWithAAndMinusSixtyFour_thenDecodedReturnObject() {
     // Arrange and Act
@@ -2033,7 +2128,8 @@ public class RLPDiffblueTest {
    * <p>Method under test: {@link RLP#decode(byte[], int)}
    */
   @Test
-  @Category(MaintainedByDiffblue.class)
+  @Category(ContributionFromDiffblue.class)
+  @ManagedByDiffblue
   @MethodsUnderTest({"DecodeResult RLP.decode(byte[], int)"})
   public void testDecode_whenEmptyArrayOfByte_thenReturnNull() {
     // Arrange, Act and Assert
@@ -2051,7 +2147,8 @@ public class RLPDiffblueTest {
    * <p>Method under test: {@link RLP#decode(byte[], int)}
    */
   @Test
-  @Category(MaintainedByDiffblue.class)
+  @Category(ContributionFromDiffblue.class)
+  @ManagedByDiffblue
   @MethodsUnderTest({"DecodeResult RLP.decode(byte[], int)"})
   public void testDecode_whenNull_thenReturnNull() {
     // Arrange, Act and Assert
@@ -2065,7 +2162,8 @@ public class RLPDiffblueTest {
    * <p>Method under test: {@link RLP#decodeLazyList(byte[], int, int)}
    */
   @Test
-  @Category(MaintainedByDiffblue.class)
+  @Category(ContributionFromDiffblue.class)
+  @ManagedByDiffblue
   @MethodsUnderTest({"LList RLP.decodeLazyList(byte[], int, int)"})
   public void testDecodeLazyListWithDataPosLength() throws UnsupportedEncodingException {
     // Arrange and Act
@@ -2087,7 +2185,8 @@ public class RLPDiffblueTest {
    * <p>Method under test: {@link RLP#decodeLazyList(byte[], int, int)}
    */
   @Test
-  @Category(MaintainedByDiffblue.class)
+  @Category(ContributionFromDiffblue.class)
+  @ManagedByDiffblue
   @MethodsUnderTest({"LList RLP.decodeLazyList(byte[], int, int)"})
   public void testDecodeLazyListWithDataPosLength_thenReturnSizeIsOne() {
     // Arrange, Act and Assert
@@ -2106,7 +2205,8 @@ public class RLPDiffblueTest {
    * <p>Method under test: {@link RLP#decodeLazyList(byte[], int, int)}
    */
   @Test
-  @Category(MaintainedByDiffblue.class)
+  @Category(ContributionFromDiffblue.class)
+  @ManagedByDiffblue
   @MethodsUnderTest({"LList RLP.decodeLazyList(byte[], int, int)"})
   public void testDecodeLazyListWithDataPosLength_thenThrowRuntimeException() {
     // Arrange, Act and Assert
@@ -2126,7 +2226,8 @@ public class RLPDiffblueTest {
    * <p>Method under test: {@link RLP#decodeLazyList(byte[], int, int)}
    */
   @Test
-  @Category(MaintainedByDiffblue.class)
+  @Category(ContributionFromDiffblue.class)
+  @ManagedByDiffblue
   @MethodsUnderTest({"LList RLP.decodeLazyList(byte[], int, int)"})
   public void testDecodeLazyListWithDataPosLength_whenArrayOfByteWithAAndMin_value() {
     // Arrange and Act
@@ -2150,7 +2251,8 @@ public class RLPDiffblueTest {
    * <p>Method under test: {@link RLP#decodeLazyList(byte[], int, int)}
    */
   @Test
-  @Category(MaintainedByDiffblue.class)
+  @Category(ContributionFromDiffblue.class)
+  @ManagedByDiffblue
   @MethodsUnderTest({"LList RLP.decodeLazyList(byte[], int, int)"})
   public void testDecodeLazyListWithDataPosLength_whenArrayOfByteWithAAndMinusSixtyFour() {
     // Arrange and Act
@@ -2175,7 +2277,8 @@ public class RLPDiffblueTest {
    * <p>Method under test: {@link RLP#decodeLazyList(byte[], int, int)}
    */
   @Test
-  @Category(MaintainedByDiffblue.class)
+  @Category(ContributionFromDiffblue.class)
+  @ManagedByDiffblue
   @MethodsUnderTest({"LList RLP.decodeLazyList(byte[], int, int)"})
   public void testDecodeLazyListWithDataPosLength_whenEmptyArrayOfByte_thenReturnNull() {
     // Arrange, Act and Assert
@@ -2194,7 +2297,8 @@ public class RLPDiffblueTest {
    * <p>Method under test: {@link RLP#decodeLazyList(byte[], int, int)}
    */
   @Test
-  @Category(MaintainedByDiffblue.class)
+  @Category(ContributionFromDiffblue.class)
+  @ManagedByDiffblue
   @MethodsUnderTest({"LList RLP.decodeLazyList(byte[], int, int)"})
   public void testDecodeLazyListWithDataPosLength_whenNull_thenReturnNull() {
     // Arrange, Act and Assert
@@ -2212,7 +2316,8 @@ public class RLPDiffblueTest {
    * <p>Method under test: {@link RLP#decodeLazyList(byte[])}
    */
   @Test
-  @Category(MaintainedByDiffblue.class)
+  @Category(ContributionFromDiffblue.class)
+  @ManagedByDiffblue
   @MethodsUnderTest({"LList RLP.decodeLazyList(byte[])"})
   public void testDecodeLazyListWithData_whenArrayOfByteWithMin_valueAndX_thenReturnSizeIsZero() {
     // Arrange and Act
@@ -2234,7 +2339,8 @@ public class RLPDiffblueTest {
    * <p>Method under test: {@link RLP#decodeLazyList(byte[])}
    */
   @Test
-  @Category(MaintainedByDiffblue.class)
+  @Category(ContributionFromDiffblue.class)
+  @ManagedByDiffblue
   @MethodsUnderTest({"LList RLP.decodeLazyList(byte[])"})
   public void testDecodeLazyListWithData_whenArrayOfByteWithMinusNineAndX() {
     // Arrange, Act and Assert
@@ -2253,7 +2359,8 @@ public class RLPDiffblueTest {
    * <p>Method under test: {@link RLP#decodeLazyList(byte[])}
    */
   @Test
-  @Category(MaintainedByDiffblue.class)
+  @Category(ContributionFromDiffblue.class)
+  @ManagedByDiffblue
   @MethodsUnderTest({"LList RLP.decodeLazyList(byte[])"})
   public void testDecodeLazyListWithData_whenArrayOfByteWithMinusOneAndX() {
     // Arrange, Act and Assert
@@ -2272,7 +2379,8 @@ public class RLPDiffblueTest {
    * <p>Method under test: {@link RLP#decodeLazyList(byte[])}
    */
   @Test
-  @Category(MaintainedByDiffblue.class)
+  @Category(ContributionFromDiffblue.class)
+  @ManagedByDiffblue
   @MethodsUnderTest({"LList RLP.decodeLazyList(byte[])"})
   public void testDecodeLazyListWithData_whenArrayOfByteWithMinusSeventyThreeAndX() {
     // Arrange and Act
@@ -2294,7 +2402,8 @@ public class RLPDiffblueTest {
    * <p>Method under test: {@link RLP#decodeLazyList(byte[])}
    */
   @Test
-  @Category(MaintainedByDiffblue.class)
+  @Category(ContributionFromDiffblue.class)
+  @ManagedByDiffblue
   @MethodsUnderTest({"LList RLP.decodeLazyList(byte[])"})
   public void testDecodeLazyListWithData_whenArrayOfByteWithMinusSixtyFourAndX() {
     // Arrange, Act and Assert
@@ -2314,7 +2423,8 @@ public class RLPDiffblueTest {
    * <p>Method under test: {@link RLP#decodeLazyList(byte[])}
    */
   @Test
-  @Category(MaintainedByDiffblue.class)
+  @Category(ContributionFromDiffblue.class)
+  @ManagedByDiffblue
   @MethodsUnderTest({"LList RLP.decodeLazyList(byte[])"})
   public void testDecodeLazyListWithData_whenAxaxaxaxBytesIsUtf8_thenReturnSizeIsZero()
       throws UnsupportedEncodingException {
@@ -2337,7 +2447,8 @@ public class RLPDiffblueTest {
    * <p>Method under test: {@link RLP#decodeLazyList(byte[])}
    */
   @Test
-  @Category(MaintainedByDiffblue.class)
+  @Category(ContributionFromDiffblue.class)
+  @ManagedByDiffblue
   @MethodsUnderTest({"LList RLP.decodeLazyList(byte[])"})
   public void testDecodeLazyListWithData_whenEmptyArrayOfByte_thenReturnNull() {
     // Arrange, Act and Assert
@@ -2354,7 +2465,8 @@ public class RLPDiffblueTest {
    * <p>Method under test: {@link RLP#encode(Object)}
    */
   @Test
-  @Category(MaintainedByDiffblue.class)
+  @Category(ContributionFromDiffblue.class)
+  @ManagedByDiffblue
   @MethodsUnderTest({"byte[] RLP.encode(Object)"})
   public void testEncode_thenReturnArrayOfByteWithMinusOneHundredTwentyFiveAndO() {
     // Arrange, Act and Assert
@@ -2371,7 +2483,8 @@ public class RLPDiffblueTest {
    * <p>Method under test: {@link RLP#encode(Object)}
    */
   @Test
-  @Category(MaintainedByDiffblue.class)
+  @Category(ContributionFromDiffblue.class)
+  @ManagedByDiffblue
   @MethodsUnderTest({"byte[] RLP.encode(Object)"})
   public void testEncode_thenReturnArrayOfByteWithMinusOneHundredTwentySevenAndMinusOne() {
     // Arrange, Act and Assert
@@ -2388,7 +2501,8 @@ public class RLPDiffblueTest {
    * <p>Method under test: {@link RLP#encode(Object)}
    */
   @Test
-  @Category(MaintainedByDiffblue.class)
+  @Category(ContributionFromDiffblue.class)
+  @ManagedByDiffblue
   @MethodsUnderTest({"byte[] RLP.encode(Object)"})
   public void testEncode_thenReturnFirstElementIsMinusSeventyTwo() {
     // Arrange and Act
@@ -2460,7 +2574,8 @@ public class RLPDiffblueTest {
    * <p>Method under test: {@link RLP#encode(Object)}
    */
   @Test
-  @Category(MaintainedByDiffblue.class)
+  @Category(ContributionFromDiffblue.class)
+  @ManagedByDiffblue
   @MethodsUnderTest({"byte[] RLP.encode(Object)"})
   public void testEncode_whenInput_thenReturnArrayOfByteWithMinusOneHundredTwentyThreeAndI() {
     // Arrange, Act and Assert
@@ -2478,7 +2593,8 @@ public class RLPDiffblueTest {
    * <p>Method under test: {@link RLP#encode(Object)}
    */
   @Test
-  @Category(MaintainedByDiffblue.class)
+  @Category(ContributionFromDiffblue.class)
+  @ManagedByDiffblue
   @MethodsUnderTest({"byte[] RLP.encode(Object)"})
   public void testEncode_whenNull_thenThrowRuntimeException() {
     // Arrange, Act and Assert
@@ -2496,7 +2612,8 @@ public class RLPDiffblueTest {
    * <p>Method under test: {@link RLP#encode(Object)}
    */
   @Test
-  @Category(MaintainedByDiffblue.class)
+  @Category(ContributionFromDiffblue.class)
+  @ManagedByDiffblue
   @MethodsUnderTest({"byte[] RLP.encode(Object)"})
   public void testEncode_whenOneHundredTwentyEight_thenReturnArrayOfByteWithMin_value() {
     // Arrange, Act and Assert
@@ -2514,7 +2631,8 @@ public class RLPDiffblueTest {
    * <p>Method under test: {@link RLP#encode(Object)}
    */
   @Test
-  @Category(MaintainedByDiffblue.class)
+  @Category(ContributionFromDiffblue.class)
+  @ManagedByDiffblue
   @MethodsUnderTest({"byte[] RLP.encode(Object)"})
   public void testEncode_whenOne_thenReturnArrayOfByteWithOne() {
     // Arrange, Act and Assert
@@ -2532,7 +2650,8 @@ public class RLPDiffblueTest {
    * <p>Method under test: {@link RLP#encode(Object)}
    */
   @Test
-  @Category(MaintainedByDiffblue.class)
+  @Category(ContributionFromDiffblue.class)
+  @ManagedByDiffblue
   @MethodsUnderTest({"byte[] RLP.encode(Object)"})
   public void testEncode_whenOne_thenReturnArrayOfByteWithOne2() {
     // Arrange, Act and Assert
@@ -2550,7 +2669,8 @@ public class RLPDiffblueTest {
    * <p>Method under test: {@link RLP#encode(Object)}
    */
   @Test
-  @Category(MaintainedByDiffblue.class)
+  @Category(ContributionFromDiffblue.class)
+  @ManagedByDiffblue
   @MethodsUnderTest({"byte[] RLP.encode(Object)"})
   public void testEncode_whenValueOfOne_thenReturnArrayOfByteWithOne() {
     // Arrange, Act and Assert
@@ -2568,7 +2688,8 @@ public class RLPDiffblueTest {
    * <p>Method under test: {@link RLP#encode(Object)}
    */
   @Test
-  @Category(MaintainedByDiffblue.class)
+  @Category(ContributionFromDiffblue.class)
+  @ManagedByDiffblue
   @MethodsUnderTest({"byte[] RLP.encode(Object)"})
   public void testEncode_whenValueOfZero_thenReturnArrayOfByteWithMin_value() {
     // Arrange, Act and Assert
@@ -2586,7 +2707,8 @@ public class RLPDiffblueTest {
    * <p>Method under test: {@link RLP#encode(Object)}
    */
   @Test
-  @Category(MaintainedByDiffblue.class)
+  @Category(ContributionFromDiffblue.class)
+  @ManagedByDiffblue
   @MethodsUnderTest({"byte[] RLP.encode(Object)"})
   public void testEncode_whenValue_thenThrowRuntimeException() {
     // Arrange, Act and Assert
@@ -2604,7 +2726,8 @@ public class RLPDiffblueTest {
    * <p>Method under test: {@link RLP#encode(Object)}
    */
   @Test
-  @Category(MaintainedByDiffblue.class)
+  @Category(ContributionFromDiffblue.class)
+  @ManagedByDiffblue
   @MethodsUnderTest({"byte[] RLP.encode(Object)"})
   public void testEncode_whenZero_thenReturnArrayOfByteWithMin_value() {
     // Arrange, Act and Assert
@@ -2622,7 +2745,8 @@ public class RLPDiffblueTest {
    * <p>Method under test: {@link RLP#encode(Object)}
    */
   @Test
-  @Category(MaintainedByDiffblue.class)
+  @Category(ContributionFromDiffblue.class)
+  @ManagedByDiffblue
   @MethodsUnderTest({"byte[] RLP.encode(Object)"})
   public void testEncode_whenZero_thenReturnArrayOfByteWithMin_value2() {
     // Arrange, Act and Assert
@@ -2640,7 +2764,8 @@ public class RLPDiffblueTest {
    * <p>Method under test: {@link RLP#encodeLength(int, int)}
    */
   @Test
-  @Category(MaintainedByDiffblue.class)
+  @Category(ContributionFromDiffblue.class)
+  @ManagedByDiffblue
   @MethodsUnderTest({"byte[] RLP.encodeLength(int, int)"})
   public void testEncodeLength_whenFiftySix_thenReturnArrayOfByteWithColonAnd8() {
     // Arrange, Act and Assert
@@ -2658,7 +2783,8 @@ public class RLPDiffblueTest {
    * <p>Method under test: {@link RLP#encodeLength(int, int)}
    */
   @Test
-  @Category(MaintainedByDiffblue.class)
+  @Category(ContributionFromDiffblue.class)
+  @ManagedByDiffblue
   @MethodsUnderTest({"byte[] RLP.encodeLength(int, int)"})
   public void testEncodeLength_whenThree_thenReturnArrayOfByteWithFive() {
     // Arrange, Act and Assert
@@ -2676,7 +2802,8 @@ public class RLPDiffblueTest {
    * <p>Method under test: {@link RLP#encodeLength(int, int)}
    */
   @Test
-  @Category(MaintainedByDiffblue.class)
+  @Category(ContributionFromDiffblue.class)
+  @ManagedByDiffblue
   @MethodsUnderTest({"byte[] RLP.encodeLength(int, int)"})
   public void testEncodeLength_whenTwoHundredFiftySix_thenReturnArrayOfByteWithSemicolonAndOne() {
     // Arrange, Act and Assert
@@ -2693,7 +2820,8 @@ public class RLPDiffblueTest {
    * <p>Method under test: {@link RLP#encodeByte(byte)}
    */
   @Test
-  @Category(MaintainedByDiffblue.class)
+  @Category(ContributionFromDiffblue.class)
+  @ManagedByDiffblue
   @MethodsUnderTest({"byte[] RLP.encodeByte(byte)"})
   public void testEncodeByte_thenReturnArrayOfByteWithMinusOneHundredTwentySevenAndMinusOne() {
     // Arrange, Act and Assert
@@ -2711,7 +2839,8 @@ public class RLPDiffblueTest {
    * <p>Method under test: {@link RLP#encodeByte(byte)}
    */
   @Test
-  @Category(MaintainedByDiffblue.class)
+  @Category(ContributionFromDiffblue.class)
+  @ManagedByDiffblue
   @MethodsUnderTest({"byte[] RLP.encodeByte(byte)"})
   public void testEncodeByte_whenA_thenReturnArrayOfByteWithA() {
     // Arrange, Act and Assert
@@ -2729,7 +2858,8 @@ public class RLPDiffblueTest {
    * <p>Method under test: {@link RLP#encodeByte(byte)}
    */
   @Test
-  @Category(MaintainedByDiffblue.class)
+  @Category(ContributionFromDiffblue.class)
+  @ManagedByDiffblue
   @MethodsUnderTest({"byte[] RLP.encodeByte(byte)"})
   public void testEncodeByte_whenZero_thenReturnArrayOfByteWithMin_value() {
     // Arrange, Act and Assert
@@ -2746,7 +2876,8 @@ public class RLPDiffblueTest {
    * <p>Method under test: {@link RLP#encodeShort(short)}
    */
   @Test
-  @Category(MaintainedByDiffblue.class)
+  @Category(ContributionFromDiffblue.class)
+  @ManagedByDiffblue
   @MethodsUnderTest({"byte[] RLP.encodeShort(short)"})
   public void testEncodeShort_thenReturnArrayOfByteWithMinusOneHundredTwentySevenAndMinusOne() {
     // Arrange, Act and Assert
@@ -2763,7 +2894,8 @@ public class RLPDiffblueTest {
    * <p>Method under test: {@link RLP#encodeShort(short)}
    */
   @Test
-  @Category(MaintainedByDiffblue.class)
+  @Category(ContributionFromDiffblue.class)
+  @ManagedByDiffblue
   @MethodsUnderTest({"byte[] RLP.encodeShort(short)"})
   public void testEncodeShort_thenReturnArrayOfByteWithMinusOneHundredTwentySixAndMinusOne() {
     // Arrange, Act and Assert
@@ -2781,7 +2913,8 @@ public class RLPDiffblueTest {
    * <p>Method under test: {@link RLP#encodeShort(short)}
    */
   @Test
-  @Category(MaintainedByDiffblue.class)
+  @Category(ContributionFromDiffblue.class)
+  @ManagedByDiffblue
   @MethodsUnderTest({"byte[] RLP.encodeShort(short)"})
   public void testEncodeShort_whenOne_thenReturnArrayOfByteWithOne() {
     // Arrange, Act and Assert
@@ -2799,7 +2932,8 @@ public class RLPDiffblueTest {
    * <p>Method under test: {@link RLP#encodeShort(short)}
    */
   @Test
-  @Category(MaintainedByDiffblue.class)
+  @Category(ContributionFromDiffblue.class)
+  @ManagedByDiffblue
   @MethodsUnderTest({"byte[] RLP.encodeShort(short)"})
   public void testEncodeShort_whenZero_thenReturnArrayOfByteWithMin_value() {
     // Arrange, Act and Assert
@@ -2816,7 +2950,8 @@ public class RLPDiffblueTest {
    * <p>Method under test: {@link RLP#encodeInt(int)}
    */
   @Test
-  @Category(MaintainedByDiffblue.class)
+  @Category(ContributionFromDiffblue.class)
+  @ManagedByDiffblue
   @MethodsUnderTest({"byte[] RLP.encodeInt(int)"})
   public void testEncodeInt_thenReturnArrayOfByteWithMinusOneHundredTwentyFourAndMinusOne() {
     // Arrange, Act and Assert
@@ -2833,7 +2968,8 @@ public class RLPDiffblueTest {
    * <p>Method under test: {@link RLP#encodeInt(int)}
    */
   @Test
-  @Category(MaintainedByDiffblue.class)
+  @Category(ContributionFromDiffblue.class)
+  @ManagedByDiffblue
   @MethodsUnderTest({"byte[] RLP.encodeInt(int)"})
   public void testEncodeInt_thenReturnArrayOfByteWithMinusOneHundredTwentySevenAndMinusOne() {
     // Arrange, Act and Assert
@@ -2851,7 +2987,8 @@ public class RLPDiffblueTest {
    * <p>Method under test: {@link RLP#encodeInt(int)}
    */
   @Test
-  @Category(MaintainedByDiffblue.class)
+  @Category(ContributionFromDiffblue.class)
+  @ManagedByDiffblue
   @MethodsUnderTest({"byte[] RLP.encodeInt(int)"})
   public void testEncodeInt_whenOne_thenReturnArrayOfByteWithOne() {
     // Arrange, Act and Assert
@@ -2869,7 +3006,8 @@ public class RLPDiffblueTest {
    * <p>Method under test: {@link RLP#encodeInt(int)}
    */
   @Test
-  @Category(MaintainedByDiffblue.class)
+  @Category(ContributionFromDiffblue.class)
+  @ManagedByDiffblue
   @MethodsUnderTest({"byte[] RLP.encodeInt(int)"})
   public void testEncodeInt_whenZero_thenReturnArrayOfByteWithMin_value() {
     // Arrange, Act and Assert
@@ -2886,7 +3024,8 @@ public class RLPDiffblueTest {
    * <p>Method under test: {@link RLP#encodeString(String)}
    */
   @Test
-  @Category(MaintainedByDiffblue.class)
+  @Category(ContributionFromDiffblue.class)
+  @ManagedByDiffblue
   @MethodsUnderTest({"byte[] RLP.encodeString(String)"})
   public void testEncodeString_thenReturnArrayOfByteWithMinusOneHundredEighteenAndS() {
     // Arrange, Act and Assert
@@ -2905,7 +3044,8 @@ public class RLPDiffblueTest {
    * <p>Method under test: {@link RLP#encodeString(String)}
    */
   @Test
-  @Category(MaintainedByDiffblue.class)
+  @Category(ContributionFromDiffblue.class)
+  @ManagedByDiffblue
   @MethodsUnderTest({"byte[] RLP.encodeString(String)"})
   public void testEncodeString_thenReturnArrayOfByteWithMinusSeventyTwoAnd9() {
     // Arrange, Act and Assert
@@ -2930,7 +3070,8 @@ public class RLPDiffblueTest {
    * <p>Method under test: {@link RLP#encodeString(String)}
    */
   @Test
-  @Category(MaintainedByDiffblue.class)
+  @Category(ContributionFromDiffblue.class)
+  @ManagedByDiffblue
   @MethodsUnderTest({"byte[] RLP.encodeString(String)"})
   public void testEncodeString_whenEmptyString_thenReturnArrayOfByteWithMin_value() {
     // Arrange, Act and Assert
@@ -2948,7 +3089,8 @@ public class RLPDiffblueTest {
    * <p>Method under test: {@link RLP#encodeString(String)}
    */
   @Test
-  @Category(MaintainedByDiffblue.class)
+  @Category(ContributionFromDiffblue.class)
+  @ManagedByDiffblue
   @MethodsUnderTest({"byte[] RLP.encodeString(String)"})
   public void testEncodeString_whenRightParenthesis_thenReturnArrayOfByteWithRightParenthesis() {
     // Arrange, Act and Assert
@@ -2961,7 +3103,8 @@ public class RLPDiffblueTest {
    * <p>Method under test: {@link RLP#encodeBigInteger(BigInteger)}
    */
   @Test
-  @Category(MaintainedByDiffblue.class)
+  @Category(ContributionFromDiffblue.class)
+  @ManagedByDiffblue
   @MethodsUnderTest({"byte[] RLP.encodeBigInteger(BigInteger)"})
   public void testEncodeBigInteger() {
     // Arrange, Act and Assert
@@ -2979,7 +3122,8 @@ public class RLPDiffblueTest {
    * <p>Method under test: {@link RLP#encodeBigInteger(BigInteger)}
    */
   @Test
-  @Category(MaintainedByDiffblue.class)
+  @Category(ContributionFromDiffblue.class)
+  @ManagedByDiffblue
   @MethodsUnderTest({"byte[] RLP.encodeBigInteger(BigInteger)"})
   public void testEncodeBigInteger_thenReturnArrayOfByteWithMinusOneHundredTwentyAndMax_value() {
     // Arrange, Act and Assert
@@ -2999,7 +3143,8 @@ public class RLPDiffblueTest {
    * <p>Method under test: {@link RLP#encodeBigInteger(BigInteger)}
    */
   @Test
-  @Category(MaintainedByDiffblue.class)
+  @Category(ContributionFromDiffblue.class)
+  @ManagedByDiffblue
   @MethodsUnderTest({"byte[] RLP.encodeBigInteger(BigInteger)"})
   public void testEncodeBigInteger_whenValueOfMinusOne_thenThrowRuntimeException() {
     // Arrange, Act and Assert
@@ -3017,7 +3162,8 @@ public class RLPDiffblueTest {
    * <p>Method under test: {@link RLP#encodeBigInteger(BigInteger)}
    */
   @Test
-  @Category(MaintainedByDiffblue.class)
+  @Category(ContributionFromDiffblue.class)
+  @ManagedByDiffblue
   @MethodsUnderTest({"byte[] RLP.encodeBigInteger(BigInteger)"})
   public void testEncodeBigInteger_whenValueOfOne_thenReturnArrayOfByteWithOne() {
     // Arrange, Act and Assert
@@ -3035,7 +3181,8 @@ public class RLPDiffblueTest {
    * <p>Method under test: {@link RLP#encodeBigInteger(BigInteger)}
    */
   @Test
-  @Category(MaintainedByDiffblue.class)
+  @Category(ContributionFromDiffblue.class)
+  @ManagedByDiffblue
   @MethodsUnderTest({"byte[] RLP.encodeBigInteger(BigInteger)"})
   public void testEncodeBigInteger_whenValueOfZero_thenReturnArrayOfByteWithMin_value() {
     // Arrange, Act and Assert
@@ -3053,7 +3200,8 @@ public class RLPDiffblueTest {
    * <p>Method under test: {@link RLP#calcElementPrefixSize(byte[])}
    */
   @Test
-  @Category(MaintainedByDiffblue.class)
+  @Category(ContributionFromDiffblue.class)
+  @ManagedByDiffblue
   @MethodsUnderTest({"int RLP.calcElementPrefixSize(byte[])"})
   public void testCalcElementPrefixSize_whenArrayOfByteWithA_thenReturnZero() {
     // Arrange, Act and Assert
@@ -3071,7 +3219,8 @@ public class RLPDiffblueTest {
    * <p>Method under test: {@link RLP#calcElementPrefixSize(byte[])}
    */
   @Test
-  @Category(MaintainedByDiffblue.class)
+  @Category(ContributionFromDiffblue.class)
+  @ManagedByDiffblue
   @MethodsUnderTest({"int RLP.calcElementPrefixSize(byte[])"})
   public void testCalcElementPrefixSize_whenArrayOfByteWithMin_value_thenReturnOne() {
     // Arrange, Act and Assert
@@ -3089,7 +3238,8 @@ public class RLPDiffblueTest {
    * <p>Method under test: {@link RLP#calcElementPrefixSize(byte[])}
    */
   @Test
-  @Category(MaintainedByDiffblue.class)
+  @Category(ContributionFromDiffblue.class)
+  @ManagedByDiffblue
   @MethodsUnderTest({"int RLP.calcElementPrefixSize(byte[])"})
   public void testCalcElementPrefixSize_whenArrayOfByteWithZero_thenReturnZero() {
     // Arrange, Act and Assert
@@ -3107,7 +3257,8 @@ public class RLPDiffblueTest {
    * <p>Method under test: {@link RLP#calcElementPrefixSize(byte[])}
    */
   @Test
-  @Category(MaintainedByDiffblue.class)
+  @Category(ContributionFromDiffblue.class)
+  @ManagedByDiffblue
   @MethodsUnderTest({"int RLP.calcElementPrefixSize(byte[])"})
   public void testCalcElementPrefixSize_whenAxaxaxaxBytesIsUtf8_thenReturnOne()
       throws UnsupportedEncodingException {
@@ -3126,7 +3277,8 @@ public class RLPDiffblueTest {
    * <p>Method under test: {@link RLP#calcElementPrefixSize(byte[])}
    */
   @Test
-  @Category(MaintainedByDiffblue.class)
+  @Category(ContributionFromDiffblue.class)
+  @ManagedByDiffblue
   @MethodsUnderTest({"int RLP.calcElementPrefixSize(byte[])"})
   public void testCalcElementPrefixSize_whenEmptyArrayOfByte_thenReturnZero() {
     // Arrange, Act and Assert
@@ -3144,7 +3296,8 @@ public class RLPDiffblueTest {
    * <p>Method under test: {@link RLP#calcElementPrefixSize(byte[])}
    */
   @Test
-  @Category(MaintainedByDiffblue.class)
+  @Category(ContributionFromDiffblue.class)
+  @ManagedByDiffblue
   @MethodsUnderTest({"int RLP.calcElementPrefixSize(byte[])"})
   public void testCalcElementPrefixSize_whenNull_thenReturnZero() {
     // Arrange, Act and Assert
@@ -3162,7 +3315,8 @@ public class RLPDiffblueTest {
    * <p>Method under test: {@link RLP#encodeListHeader(int)}
    */
   @Test
-  @Category(MaintainedByDiffblue.class)
+  @Category(ContributionFromDiffblue.class)
+  @ManagedByDiffblue
   @MethodsUnderTest({"byte[] RLP.encodeListHeader(int)"})
   public void testEncodeListHeader_whenFiftySix_thenReturnArrayOfByteWithMinusEightAnd8() {
     // Arrange, Act and Assert
@@ -3180,7 +3334,8 @@ public class RLPDiffblueTest {
    * <p>Method under test: {@link RLP#encodeListHeader(int)}
    */
   @Test
-  @Category(MaintainedByDiffblue.class)
+  @Category(ContributionFromDiffblue.class)
+  @ManagedByDiffblue
   @MethodsUnderTest({"byte[] RLP.encodeListHeader(int)"})
   public void testEncodeListHeader_whenThree_thenReturnArrayOfByteWithMinusSixtyOne() {
     // Arrange, Act and Assert
@@ -3198,7 +3353,8 @@ public class RLPDiffblueTest {
    * <p>Method under test: {@link RLP#encodeListHeader(int)}
    */
   @Test
-  @Category(MaintainedByDiffblue.class)
+  @Category(ContributionFromDiffblue.class)
+  @ManagedByDiffblue
   @MethodsUnderTest({"byte[] RLP.encodeListHeader(int)"})
   public void testEncodeListHeader_whenZero_thenReturnArrayOfByteWithMinusSixtyFour() {
     // Arrange, Act and Assert
@@ -3215,7 +3371,8 @@ public class RLPDiffblueTest {
    * <p>Method under test: {@link RLP#encodeLongElementHeader(int)}
    */
   @Test
-  @Category(MaintainedByDiffblue.class)
+  @Category(ContributionFromDiffblue.class)
+  @ManagedByDiffblue
   @MethodsUnderTest({"byte[] RLP.encodeLongElementHeader(int)"})
   public void testEncodeLongElementHeader_thenReturnArrayOfByteWithMinusOneHundredTwentyFive() {
     // Arrange, Act and Assert
@@ -3232,7 +3389,8 @@ public class RLPDiffblueTest {
    * <p>Method under test: {@link RLP#encodeLongElementHeader(int)}
    */
   @Test
-  @Category(MaintainedByDiffblue.class)
+  @Category(ContributionFromDiffblue.class)
+  @ManagedByDiffblue
   @MethodsUnderTest({"byte[] RLP.encodeLongElementHeader(int)"})
   public void testEncodeLongElementHeader_thenReturnArrayOfByteWithMinusSeventyTwoAnd8() {
     // Arrange, Act and Assert
@@ -3250,7 +3408,8 @@ public class RLPDiffblueTest {
    * <p>Method under test: {@link RLP#encodeLongElementHeader(int)}
    */
   @Test
-  @Category(MaintainedByDiffblue.class)
+  @Category(ContributionFromDiffblue.class)
+  @ManagedByDiffblue
   @MethodsUnderTest({"byte[] RLP.encodeLongElementHeader(int)"})
   public void testEncodeLongElementHeader_whenZero_thenReturnArrayOfByteWithMin_value() {
     // Arrange, Act and Assert
@@ -3267,7 +3426,8 @@ public class RLPDiffblueTest {
    * <p>Method under test: {@link RLP#encodeSet(Set)}
    */
   @Test
-  @Category(MaintainedByDiffblue.class)
+  @Category(ContributionFromDiffblue.class)
+  @ManagedByDiffblue
   @MethodsUnderTest({"byte[] RLP.encodeSet(Set)"})
   public void testEncodeSet_thenReturnArrayOfByteWithMinusFiftyFiveAndMinusOneHundredTwenty() {
     // Arrange
@@ -3290,7 +3450,8 @@ public class RLPDiffblueTest {
    * <p>Method under test: {@link RLP#encodeSet(Set)}
    */
   @Test
-  @Category(MaintainedByDiffblue.class)
+  @Category(ContributionFromDiffblue.class)
+  @ManagedByDiffblue
   @MethodsUnderTest({"byte[] RLP.encodeSet(Set)"})
   public void testEncodeSet_thenReturnArrayOfByteWithMinusSixtyThreeAndMin_value() {
     // Arrange
@@ -3313,7 +3474,8 @@ public class RLPDiffblueTest {
    * <p>Method under test: {@link RLP#encodeSet(Set)}
    */
   @Test
-  @Category(MaintainedByDiffblue.class)
+  @Category(ContributionFromDiffblue.class)
+  @ManagedByDiffblue
   @MethodsUnderTest({"byte[] RLP.encodeSet(Set)"})
   public void testEncodeSet_whenHashSet_thenReturnArrayOfByteWithMinusSixtyFour() {
     // Arrange, Act and Assert
@@ -3330,7 +3492,8 @@ public class RLPDiffblueTest {
    * <p>Method under test: {@link RLP#wrapList(byte[][])}
    */
   @Test
-  @Category(MaintainedByDiffblue.class)
+  @Category(ContributionFromDiffblue.class)
+  @ManagedByDiffblue
   @MethodsUnderTest({"byte[] RLP.wrapList(byte[][])"})
   public void testWrapList_thenReturnArrayOfByteWithMinusFiftyFiveAndMinusOneHundredTwenty()
       throws UnsupportedEncodingException {
@@ -3350,7 +3513,8 @@ public class RLPDiffblueTest {
    * <p>Method under test: {@link RLP#wrapList(byte[][])}
    */
   @Test
-  @Category(MaintainedByDiffblue.class)
+  @Category(ContributionFromDiffblue.class)
+  @ManagedByDiffblue
   @MethodsUnderTest({"byte[] RLP.wrapList(byte[][])"})
   public void testWrapList_whenEmptyArrayOfByte() {
     // Arrange, Act and Assert
@@ -3367,7 +3531,8 @@ public class RLPDiffblueTest {
    * <p>Method under test: {@link RLP#encodeList(byte[][])}
    */
   @Test
-  @Category(MaintainedByDiffblue.class)
+  @Category(ContributionFromDiffblue.class)
+  @ManagedByDiffblue
   @MethodsUnderTest({"byte[] RLP.encodeList(byte[][])"})
   public void testEncodeListWithByte_thenReturnArrayOfByteWithMinusFiftySixAndA()
       throws UnsupportedEncodingException {
@@ -3388,7 +3553,8 @@ public class RLPDiffblueTest {
    * <p>Method under test: {@link RLP#encodeList(byte[][])}
    */
   @Test
-  @Category(MaintainedByDiffblue.class)
+  @Category(ContributionFromDiffblue.class)
+  @ManagedByDiffblue
   @MethodsUnderTest({"byte[] RLP.encodeList(byte[][])"})
   public void testEncodeListWithByte_whenNull_thenReturnArrayOfByteWithMinusSixtyFour() {
     // Arrange, Act and Assert
@@ -3405,7 +3571,8 @@ public class RLPDiffblueTest {
    * <p>Method under test: {@link RLP#encodeList(Object[])}
    */
   @Test
-  @Category(MaintainedByDiffblue.class)
+  @Category(ContributionFromDiffblue.class)
+  @ManagedByDiffblue
   @MethodsUnderTest({"byte[] RLP.encodeList(Object[])"})
   public void testEncodeListWithObject_thenReturnArrayOfByteWithMinusSixtyFour() {
     // Arrange, Act and Assert
@@ -3423,7 +3590,8 @@ public class RLPDiffblueTest {
    * <p>Method under test: {@link RLP#encodeList(Object[])}
    */
   @Test
-  @Category(MaintainedByDiffblue.class)
+  @Category(ContributionFromDiffblue.class)
+  @ManagedByDiffblue
   @MethodsUnderTest({"byte[] RLP.encodeList(Object[])"})
   public void testEncodeListWithObject_whenNull_thenReturnArrayOfByteWithMinusSixtyFour() {
     // Arrange, Act and Assert
@@ -3441,7 +3609,8 @@ public class RLPDiffblueTest {
    * <p>Method under test: {@link RLP#decodeItemBytes(byte[], int)}
    */
   @Test
-  @Category(MaintainedByDiffblue.class)
+  @Category(ContributionFromDiffblue.class)
+  @ManagedByDiffblue
   @MethodsUnderTest({"byte[] RLP.decodeItemBytes(byte[], int)"})
   public void testDecodeItemBytes_whenArrayOfByteWithAAndMin_value_thenReturnEmptyArrayOfByte() {
     // Arrange, Act and Assert
@@ -3461,7 +3630,8 @@ public class RLPDiffblueTest {
    * <p>Method under test: {@link RLP#decodeItemBytes(byte[], int)}
    */
   @Test
-  @Category(MaintainedByDiffblue.class)
+  @Category(ContributionFromDiffblue.class)
+  @ManagedByDiffblue
   @MethodsUnderTest({"byte[] RLP.decodeItemBytes(byte[], int)"})
   public void testDecodeItemBytes_whenArrayOfByteWithAAndMinusOne_thenThrowRuntimeException() {
     // Arrange, Act and Assert
@@ -3484,7 +3654,8 @@ public class RLPDiffblueTest {
    * <p>Method under test: {@link RLP#decodeItemBytes(byte[], int)}
    */
   @Test
-  @Category(MaintainedByDiffblue.class)
+  @Category(ContributionFromDiffblue.class)
+  @ManagedByDiffblue
   @MethodsUnderTest({"byte[] RLP.decodeItemBytes(byte[], int)"})
   public void testDecodeItemBytes_whenAxaxaxaxBytesIsUtf8_thenReturnArrayOfByteWithX()
       throws UnsupportedEncodingException {

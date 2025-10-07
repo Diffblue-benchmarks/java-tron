@@ -10,7 +10,8 @@ import static org.mockito.Mockito.atLeast;
 import static org.mockito.Mockito.mock;
 import static org.mockito.Mockito.verify;
 import static org.mockito.Mockito.when;
-import com.diffblue.cover.annotations.MaintainedByDiffblue;
+import com.diffblue.cover.annotations.ContributionFromDiffblue;
+import com.diffblue.cover.annotations.ManagedByDiffblue;
 import com.diffblue.cover.annotations.MethodsUnderTest;
 import com.google.protobuf.ByteString;
 import com.google.protobuf.DescriptorProtos;
@@ -37,7 +38,8 @@ public class ProposalCapsuleDiffblueTest {
    * <p>Method under test: {@link ProposalCapsule#ProposalCapsule(byte[])}
    */
   @Test
-  @Category(MaintainedByDiffblue.class)
+  @Category(ContributionFromDiffblue.class)
+  @ManagedByDiffblue
   @MethodsUnderTest({"void ProposalCapsule.<init>(byte[])"})
   public void testNewProposalCapsule() throws UnsupportedEncodingException {
     // Arrange, Act and Assert
@@ -50,7 +52,8 @@ public class ProposalCapsuleDiffblueTest {
    * <p>Method under test: {@link ProposalCapsule#ProposalCapsule(byte[])}
    */
   @Test
-  @Category(MaintainedByDiffblue.class)
+  @Category(ContributionFromDiffblue.class)
+  @ManagedByDiffblue
   @MethodsUnderTest({"void ProposalCapsule.<init>(byte[])"})
   public void testNewProposalCapsule2() throws UnsupportedEncodingException {
     // Arrange, Act and Assert
@@ -63,7 +66,8 @@ public class ProposalCapsuleDiffblueTest {
    * <p>Method under test: {@link ProposalCapsule#ProposalCapsule(byte[])}
    */
   @Test
-  @Category(MaintainedByDiffblue.class)
+  @Category(ContributionFromDiffblue.class)
+  @ManagedByDiffblue
   @MethodsUnderTest({"void ProposalCapsule.<init>(byte[])"})
   public void testNewProposalCapsule3() throws UnsupportedEncodingException {
     // Arrange, Act and Assert
@@ -76,7 +80,8 @@ public class ProposalCapsuleDiffblueTest {
    * <p>Method under test: {@link ProposalCapsule#ProposalCapsule(byte[])}
    */
   @Test
-  @Category(MaintainedByDiffblue.class)
+  @Category(ContributionFromDiffblue.class)
+  @ManagedByDiffblue
   @MethodsUnderTest({"void ProposalCapsule.<init>(byte[])"})
   public void testNewProposalCapsule4() throws UnsupportedEncodingException {
     // Arrange, Act and Assert
@@ -89,7 +94,8 @@ public class ProposalCapsuleDiffblueTest {
    * <p>Method under test: {@link ProposalCapsule#ProposalCapsule(byte[])}
    */
   @Test
-  @Category(MaintainedByDiffblue.class)
+  @Category(ContributionFromDiffblue.class)
+  @ManagedByDiffblue
   @MethodsUnderTest({"void ProposalCapsule.<init>(byte[])"})
   public void testNewProposalCapsule5() throws UnsupportedEncodingException {
     // Arrange, Act and Assert
@@ -102,7 +108,8 @@ public class ProposalCapsuleDiffblueTest {
    * <p>Method under test: {@link ProposalCapsule#ProposalCapsule(byte[])}
    */
   @Test
-  @Category(MaintainedByDiffblue.class)
+  @Category(ContributionFromDiffblue.class)
+  @ManagedByDiffblue
   @MethodsUnderTest({"void ProposalCapsule.<init>(byte[])"})
   public void testNewProposalCapsule6() throws UnsupportedEncodingException {
     // Arrange, Act and Assert
@@ -120,7 +127,8 @@ public class ProposalCapsuleDiffblueTest {
    * <p>Method under test: {@link ProposalCapsule#ProposalCapsule(byte[])}
    */
   @Test
-  @Category(MaintainedByDiffblue.class)
+  @Category(ContributionFromDiffblue.class)
+  @ManagedByDiffblue
   @MethodsUnderTest({"void ProposalCapsule.<init>(byte[])"})
   public void testNewProposalCapsule_when2xaxaxaxBytesIsUtf8_thenReturnInstanceIsNull()
       throws UnsupportedEncodingException {
@@ -139,7 +147,8 @@ public class ProposalCapsuleDiffblueTest {
    * <p>Method under test: {@link ProposalCapsule#ProposalCapsule(byte[])}
    */
   @Test
-  @Category(MaintainedByDiffblue.class)
+  @Category(ContributionFromDiffblue.class)
+  @ManagedByDiffblue
   @MethodsUnderTest({"void ProposalCapsule.<init>(byte[])"})
   public void testNewProposalCapsule_when8xaxaxaxBytesIsUtf8_thenReturnInstanceIsNull()
       throws UnsupportedEncodingException {
@@ -158,7 +167,8 @@ public class ProposalCapsuleDiffblueTest {
    * <p>Method under test: {@link ProposalCapsule#ProposalCapsule(byte[])}
    */
   @Test
-  @Category(MaintainedByDiffblue.class)
+  @Category(ContributionFromDiffblue.class)
+  @ManagedByDiffblue
   @MethodsUnderTest({"void ProposalCapsule.<init>(byte[])"})
   public void testNewProposalCapsule_whenArrayOfByteWith2AndZero_thenReturnInstanceIsNull() {
     // Arrange and Act
@@ -180,7 +190,8 @@ public class ProposalCapsuleDiffblueTest {
    * <p>Method under test: {@link ProposalCapsule#ProposalCapsule(byte[])}
    */
   @Test
-  @Category(MaintainedByDiffblue.class)
+  @Category(ContributionFromDiffblue.class)
+  @ManagedByDiffblue
   @MethodsUnderTest({"void ProposalCapsule.<init>(byte[])"})
   public void testNewProposalCapsule_whenArrayOfByteWithAAndBackspace_thenReturnInstanceIsNull() {
     // Arrange and Act
@@ -205,7 +216,8 @@ public class ProposalCapsuleDiffblueTest {
    * <p>Method under test: {@link ProposalCapsule#ProposalCapsule(byte[])}
    */
   @Test
-  @Category(MaintainedByDiffblue.class)
+  @Category(ContributionFromDiffblue.class)
+  @ManagedByDiffblue
   @MethodsUnderTest({"void ProposalCapsule.<init>(byte[])"})
   public void testNewProposalCapsule_whenArrayOfByteWithAAndBackspace_thenReturnInstanceIsNull2() {
     // Arrange and Act
@@ -229,7 +241,8 @@ public class ProposalCapsuleDiffblueTest {
    * <p>Method under test: {@link ProposalCapsule#ProposalCapsule(byte[])}
    */
   @Test
-  @Category(MaintainedByDiffblue.class)
+  @Category(ContributionFromDiffblue.class)
+  @ManagedByDiffblue
   @MethodsUnderTest({"void ProposalCapsule.<init>(byte[])"})
   public void testNewProposalCapsule_whenArrayOfByteWithEighteenAndBackspace() {
     // Arrange and Act
@@ -254,7 +267,8 @@ public class ProposalCapsuleDiffblueTest {
    * <p>Method under test: {@link ProposalCapsule#ProposalCapsule(byte[])}
    */
   @Test
-  @Category(MaintainedByDiffblue.class)
+  @Category(ContributionFromDiffblue.class)
+  @ManagedByDiffblue
   @MethodsUnderTest({"void ProposalCapsule.<init>(byte[])"})
   public void testNewProposalCapsule_whenArrayOfByteWithEighteenAndX_thenReturnInstanceIsNull() {
     // Arrange and Act
@@ -275,7 +289,8 @@ public class ProposalCapsuleDiffblueTest {
    * <p>Method under test: {@link ProposalCapsule#ProposalCapsule(byte[])}
    */
   @Test
-  @Category(MaintainedByDiffblue.class)
+  @Category(ContributionFromDiffblue.class)
+  @ManagedByDiffblue
   @MethodsUnderTest({"void ProposalCapsule.<init>(byte[])"})
   public void testNewProposalCapsule_whenArrayOfByteWithEighteenAndZero() {
     // Arrange and Act
@@ -297,7 +312,8 @@ public class ProposalCapsuleDiffblueTest {
    * <p>Method under test: {@link ProposalCapsule#ProposalCapsule(byte[])}
    */
   @Test
-  @Category(MaintainedByDiffblue.class)
+  @Category(ContributionFromDiffblue.class)
+  @ManagedByDiffblue
   @MethodsUnderTest({"void ProposalCapsule.<init>(byte[])"})
   public void testNewProposalCapsule_whenArrayOfByteWithMinusOneAndX_thenReturnInstanceIsNull() {
     // Arrange and Act
@@ -318,7 +334,8 @@ public class ProposalCapsuleDiffblueTest {
    * <p>Method under test: {@link ProposalCapsule#ProposalCapsule(byte[])}
    */
   @Test
-  @Category(MaintainedByDiffblue.class)
+  @Category(ContributionFromDiffblue.class)
+  @ManagedByDiffblue
   @MethodsUnderTest({"void ProposalCapsule.<init>(byte[])"})
   public void testNewProposalCapsule_whenArrayOfByteWithTwentySevenAndX() {
     // Arrange and Act
@@ -339,7 +356,8 @@ public class ProposalCapsuleDiffblueTest {
    * <p>Method under test: {@link ProposalCapsule#ProposalCapsule(byte[])}
    */
   @Test
-  @Category(MaintainedByDiffblue.class)
+  @Category(ContributionFromDiffblue.class)
+  @ManagedByDiffblue
   @MethodsUnderTest({"void ProposalCapsule.<init>(byte[])"})
   public void testNewProposalCapsule_whenArrayOfByteWithTwentySixAndBackspace() {
     // Arrange and Act
@@ -364,7 +382,8 @@ public class ProposalCapsuleDiffblueTest {
    * <p>Method under test: {@link ProposalCapsule#ProposalCapsule(byte[])}
    */
   @Test
-  @Category(MaintainedByDiffblue.class)
+  @Category(ContributionFromDiffblue.class)
+  @ManagedByDiffblue
   @MethodsUnderTest({"void ProposalCapsule.<init>(byte[])"})
   public void testNewProposalCapsule_whenArrayOfByteWithTwentySixAndX_thenReturnInstanceIsNull() {
     // Arrange and Act
@@ -385,7 +404,8 @@ public class ProposalCapsuleDiffblueTest {
    * <p>Method under test: {@link ProposalCapsule#ProposalCapsule(byte[])}
    */
   @Test
-  @Category(MaintainedByDiffblue.class)
+  @Category(ContributionFromDiffblue.class)
+  @ManagedByDiffblue
   @MethodsUnderTest({"void ProposalCapsule.<init>(byte[])"})
   public void testNewProposalCapsule_whenArrayOfByteWithTwentySixAndZero() {
     // Arrange and Act
@@ -407,7 +427,8 @@ public class ProposalCapsuleDiffblueTest {
    * <p>Method under test: {@link ProposalCapsule#ProposalCapsule(byte[])}
    */
   @Test
-  @Category(MaintainedByDiffblue.class)
+  @Category(ContributionFromDiffblue.class)
+  @ManagedByDiffblue
   @MethodsUnderTest({"void ProposalCapsule.<init>(byte[])"})
   public void testNewProposalCapsule_whenArrayOfByteWithZeroAndX_thenReturnInstanceIsNull() {
     // Arrange and Act
@@ -429,7 +450,8 @@ public class ProposalCapsuleDiffblueTest {
    * <p>Method under test: {@link ProposalCapsule#ProposalCapsule(byte[])}
    */
   @Test
-  @Category(MaintainedByDiffblue.class)
+  @Category(ContributionFromDiffblue.class)
+  @ManagedByDiffblue
   @MethodsUnderTest({"void ProposalCapsule.<init>(byte[])"})
   public void testNewProposalCapsule_whenAxaxaxaxBytesIsUtf8_thenReturnInstanceIsNull()
       throws UnsupportedEncodingException {
@@ -448,7 +470,8 @@ public class ProposalCapsuleDiffblueTest {
    * <p>Method under test: {@link ProposalCapsule#ProposalCapsule(ByteString, long)}
    */
   @Test
-  @Category(MaintainedByDiffblue.class)
+  @Category(ContributionFromDiffblue.class)
+  @ManagedByDiffblue
   @MethodsUnderTest({"void ProposalCapsule.<init>(ByteString, long)"})
   public void testNewProposalCapsule_whenByteString_thenReturnIdIsOne() {
     // Arrange and Act
@@ -480,7 +503,8 @@ public class ProposalCapsuleDiffblueTest {
    * <p>Method under test: {@link ProposalCapsule#ProposalCapsule(byte[])}
    */
   @Test
-  @Category(MaintainedByDiffblue.class)
+  @Category(ContributionFromDiffblue.class)
+  @ManagedByDiffblue
   @MethodsUnderTest({"void ProposalCapsule.<init>(byte[])"})
   public void testNewProposalCapsule_whenEmptyArrayOfByte_thenReturnCreateTimeIsZero() {
     // Arrange and Act
@@ -509,7 +533,8 @@ public class ProposalCapsuleDiffblueTest {
    * <p>Method under test: {@link ProposalCapsule#ProposalCapsule(ByteString, long)}
    */
   @Test
-  @Category(MaintainedByDiffblue.class)
+  @Category(ContributionFromDiffblue.class)
+  @ManagedByDiffblue
   @MethodsUnderTest({"void ProposalCapsule.<init>(ByteString, long)"})
   public void testNewProposalCapsule_whenTwo_thenReturnIdIsTwo() {
     // Arrange and Act
@@ -541,7 +566,8 @@ public class ProposalCapsuleDiffblueTest {
    * <p>Method under test: {@link ProposalCapsule#ProposalCapsule(byte[])}
    */
   @Test
-  @Category(MaintainedByDiffblue.class)
+  @Category(ContributionFromDiffblue.class)
+  @ManagedByDiffblue
   @MethodsUnderTest({"void ProposalCapsule.<init>(byte[])"})
   public void testNewProposalCapsule_whenXaxaxaxBytesIsUtf8_thenReturnInstanceIsNull()
       throws UnsupportedEncodingException {
@@ -560,7 +586,8 @@ public class ProposalCapsuleDiffblueTest {
    * <p>Method under test: {@link ProposalCapsule#ProposalCapsule(byte[])}
    */
   @Test
-  @Category(MaintainedByDiffblue.class)
+  @Category(ContributionFromDiffblue.class)
+  @ManagedByDiffblue
   @MethodsUnderTest({"void ProposalCapsule.<init>(byte[])"})
   public void testNewProposalCapsule_whenXaxaxaxBytesIsUtf8_thenReturnInstanceIsNull2()
       throws UnsupportedEncodingException {
@@ -579,7 +606,8 @@ public class ProposalCapsuleDiffblueTest {
    * <p>Method under test: {@link ProposalCapsule#ProposalCapsule(byte[])}
    */
   @Test
-  @Category(MaintainedByDiffblue.class)
+  @Category(ContributionFromDiffblue.class)
+  @ManagedByDiffblue
   @MethodsUnderTest({"void ProposalCapsule.<init>(byte[])"})
   public void testNewProposalCapsule_whenXxaxaxaxBytesIsUtf8_thenReturnInstanceIsNull()
       throws UnsupportedEncodingException {
@@ -593,7 +621,8 @@ public class ProposalCapsuleDiffblueTest {
    * <p>Method under test: {@link ProposalCapsule#calculateDbKey(long)}
    */
   @Test
-  @Category(MaintainedByDiffblue.class)
+  @Category(ContributionFromDiffblue.class)
+  @ManagedByDiffblue
   @MethodsUnderTest({"byte[] ProposalCapsule.calculateDbKey(long)"})
   public void testCalculateDbKey() {
     // Arrange, Act and Assert
@@ -612,7 +641,8 @@ public class ProposalCapsuleDiffblueTest {
    * <p>Method under test: {@link ProposalCapsule#getID()}
    */
   @Test
-  @Category(MaintainedByDiffblue.class)
+  @Category(ContributionFromDiffblue.class)
+  @ManagedByDiffblue
   @MethodsUnderTest({"long ProposalCapsule.getID()"})
   public void testGetID_givenProposalCapsuleWithDataIsEmptyArrayOfByte_thenReturnZero() {
     // Arrange
@@ -628,7 +658,8 @@ public class ProposalCapsuleDiffblueTest {
    * <p>Method under test: {@link ProposalCapsule#setID(long)}
    */
   @Test
-  @Category(MaintainedByDiffblue.class)
+  @Category(ContributionFromDiffblue.class)
+  @ManagedByDiffblue
   @MethodsUnderTest({"void ProposalCapsule.setID(long)"})
   public void testSetID() {
     // Arrange
@@ -652,7 +683,8 @@ public class ProposalCapsuleDiffblueTest {
    * <p>Method under test: {@link ProposalCapsule#setID(long)}
    */
   @Test
-  @Category(MaintainedByDiffblue.class)
+  @Category(ContributionFromDiffblue.class)
+  @ManagedByDiffblue
   @MethodsUnderTest({"void ProposalCapsule.setID(long)"})
   public void testSetID2() {
     // Arrange
@@ -677,7 +709,8 @@ public class ProposalCapsuleDiffblueTest {
    * <p>Method under test: {@link ProposalCapsule#setID(long)}
    */
   @Test
-  @Category(MaintainedByDiffblue.class)
+  @Category(ContributionFromDiffblue.class)
+  @ManagedByDiffblue
   @MethodsUnderTest({"void ProposalCapsule.setID(long)"})
   public void testSetID3() {
     // Arrange
@@ -712,7 +745,8 @@ public class ProposalCapsuleDiffblueTest {
    * <p>Method under test: {@link ProposalCapsule#setID(long)}
    */
   @Test
-  @Category(MaintainedByDiffblue.class)
+  @Category(ContributionFromDiffblue.class)
+  @ManagedByDiffblue
   @MethodsUnderTest({"void ProposalCapsule.setID(long)"})
   public void testSetID_givenProposalCapsuleWithDataIsEmptyArrayOfByteCreateTimeIsTen() {
     // Arrange
@@ -743,7 +777,8 @@ public class ProposalCapsuleDiffblueTest {
    * <p>Method under test: {@link ProposalCapsule#setID(long)}
    */
   @Test
-  @Category(MaintainedByDiffblue.class)
+  @Category(ContributionFromDiffblue.class)
+  @ManagedByDiffblue
   @MethodsUnderTest({"void ProposalCapsule.setID(long)"})
   public void testSetID_givenProposalCapsuleWithDataIsEmptyArrayOfByteExpirationTimeIsTen() {
     // Arrange
@@ -774,7 +809,8 @@ public class ProposalCapsuleDiffblueTest {
    * <p>Method under test: {@link ProposalCapsule#setID(long)}
    */
   @Test
-  @Category(MaintainedByDiffblue.class)
+  @Category(ContributionFromDiffblue.class)
+  @ManagedByDiffblue
   @MethodsUnderTest({"void ProposalCapsule.setID(long)"})
   public void testSetID_givenProposalCapsuleWithDataIsEmptyArrayOfByteStateIsDisapproved() {
     // Arrange
@@ -800,7 +836,8 @@ public class ProposalCapsuleDiffblueTest {
    * <p>Method under test: {@link ProposalCapsule#getProposalAddress()}
    */
   @Test
-  @Category(MaintainedByDiffblue.class)
+  @Category(ContributionFromDiffblue.class)
+  @ManagedByDiffblue
   @MethodsUnderTest({"ByteString ProposalCapsule.getProposalAddress()"})
   public void testGetProposalAddress() {
     // Arrange
@@ -837,7 +874,8 @@ public class ProposalCapsuleDiffblueTest {
    * <p>Method under test: {@link ProposalCapsule#setProposalAddress(ByteString)}
    */
   @Test
-  @Category(MaintainedByDiffblue.class)
+  @Category(ContributionFromDiffblue.class)
+  @ManagedByDiffblue
   @MethodsUnderTest({"void ProposalCapsule.setProposalAddress(ByteString)"})
   public void testSetProposalAddress() {
     // Arrange
@@ -866,7 +904,8 @@ public class ProposalCapsuleDiffblueTest {
    * <p>Method under test: {@link ProposalCapsule#setProposalAddress(ByteString)}
    */
   @Test
-  @Category(MaintainedByDiffblue.class)
+  @Category(ContributionFromDiffblue.class)
+  @ManagedByDiffblue
   @MethodsUnderTest({"void ProposalCapsule.setProposalAddress(ByteString)"})
   public void testSetProposalAddress2() {
     // Arrange
@@ -896,7 +935,8 @@ public class ProposalCapsuleDiffblueTest {
    * <p>Method under test: {@link ProposalCapsule#setProposalAddress(ByteString)}
    */
   @Test
-  @Category(MaintainedByDiffblue.class)
+  @Category(ContributionFromDiffblue.class)
+  @ManagedByDiffblue
   @MethodsUnderTest({"void ProposalCapsule.setProposalAddress(ByteString)"})
   public void testSetProposalAddress3() {
     // Arrange
@@ -927,7 +967,8 @@ public class ProposalCapsuleDiffblueTest {
    * <p>Method under test: {@link ProposalCapsule#setProposalAddress(ByteString)}
    */
   @Test
-  @Category(MaintainedByDiffblue.class)
+  @Category(ContributionFromDiffblue.class)
+  @ManagedByDiffblue
   @MethodsUnderTest({"void ProposalCapsule.setProposalAddress(ByteString)"})
   public void testSetProposalAddress4() {
     // Arrange
@@ -958,7 +999,8 @@ public class ProposalCapsuleDiffblueTest {
    * <p>Method under test: {@link ProposalCapsule#setProposalAddress(ByteString)}
    */
   @Test
-  @Category(MaintainedByDiffblue.class)
+  @Category(ContributionFromDiffblue.class)
+  @ManagedByDiffblue
   @MethodsUnderTest({"void ProposalCapsule.setProposalAddress(ByteString)"})
   public void testSetProposalAddress5() {
     // Arrange
@@ -989,7 +1031,8 @@ public class ProposalCapsuleDiffblueTest {
    * <p>Method under test: {@link ProposalCapsule#getParameters()}
    */
   @Test
-  @Category(MaintainedByDiffblue.class)
+  @Category(ContributionFromDiffblue.class)
+  @ManagedByDiffblue
   @MethodsUnderTest({"Map ProposalCapsule.getParameters()"})
   public void testGetParameters() {
     // Arrange
@@ -1012,7 +1055,8 @@ public class ProposalCapsuleDiffblueTest {
    * <p>Method under test: {@link ProposalCapsule#getParameters()}
    */
   @Test
-  @Category(MaintainedByDiffblue.class)
+  @Category(ContributionFromDiffblue.class)
+  @ManagedByDiffblue
   @MethodsUnderTest({"Map ProposalCapsule.getParameters()"})
   public void testGetParameters_givenProposalCapsuleWithDataIsEmptyArrayOfByte_thenReturnEmpty() {
     // Arrange
@@ -1028,7 +1072,8 @@ public class ProposalCapsuleDiffblueTest {
    * <p>Method under test: {@link ProposalCapsule#setParameters(Map)}
    */
   @Test
-  @Category(MaintainedByDiffblue.class)
+  @Category(ContributionFromDiffblue.class)
+  @ManagedByDiffblue
   @MethodsUnderTest({"void ProposalCapsule.setParameters(Map)"})
   public void testSetParameters() {
     // Arrange
@@ -1061,7 +1106,8 @@ public class ProposalCapsuleDiffblueTest {
    * <p>Method under test: {@link ProposalCapsule#setParameters(Map)}
    */
   @Test
-  @Category(MaintainedByDiffblue.class)
+  @Category(ContributionFromDiffblue.class)
+  @ManagedByDiffblue
   @MethodsUnderTest({"void ProposalCapsule.setParameters(Map)"})
   public void testSetParameters2() {
     // Arrange
@@ -1095,7 +1141,8 @@ public class ProposalCapsuleDiffblueTest {
    * <p>Method under test: {@link ProposalCapsule#setParameters(Map)}
    */
   @Test
-  @Category(MaintainedByDiffblue.class)
+  @Category(ContributionFromDiffblue.class)
+  @ManagedByDiffblue
   @MethodsUnderTest({"void ProposalCapsule.setParameters(Map)"})
   public void testSetParameters3() {
     // Arrange
@@ -1130,7 +1177,8 @@ public class ProposalCapsuleDiffblueTest {
    * <p>Method under test: {@link ProposalCapsule#setParameters(Map)}
    */
   @Test
-  @Category(MaintainedByDiffblue.class)
+  @Category(ContributionFromDiffblue.class)
+  @ManagedByDiffblue
   @MethodsUnderTest({"void ProposalCapsule.setParameters(Map)"})
   public void testSetParameters4() {
     // Arrange
@@ -1165,7 +1213,8 @@ public class ProposalCapsuleDiffblueTest {
    * <p>Method under test: {@link ProposalCapsule#setParameters(Map)}
    */
   @Test
-  @Category(MaintainedByDiffblue.class)
+  @Category(ContributionFromDiffblue.class)
+  @ManagedByDiffblue
   @MethodsUnderTest({"void ProposalCapsule.setParameters(Map)"})
   public void testSetParameters5() {
     // Arrange
@@ -1200,7 +1249,8 @@ public class ProposalCapsuleDiffblueTest {
    * <p>Method under test: {@link ProposalCapsule#setParameters(Map)}
    */
   @Test
-  @Category(MaintainedByDiffblue.class)
+  @Category(ContributionFromDiffblue.class)
+  @ManagedByDiffblue
   @MethodsUnderTest({"void ProposalCapsule.setParameters(Map)"})
   public void testSetParameters6() {
     // Arrange
@@ -1238,7 +1288,8 @@ public class ProposalCapsuleDiffblueTest {
    * <p>Method under test: {@link ProposalCapsule#getExpirationTime()}
    */
   @Test
-  @Category(MaintainedByDiffblue.class)
+  @Category(ContributionFromDiffblue.class)
+  @ManagedByDiffblue
   @MethodsUnderTest({"long ProposalCapsule.getExpirationTime()"})
   public void testGetExpirationTime_thenReturnZero() {
     // Arrange
@@ -1254,7 +1305,8 @@ public class ProposalCapsuleDiffblueTest {
    * <p>Method under test: {@link ProposalCapsule#setExpirationTime(long)}
    */
   @Test
-  @Category(MaintainedByDiffblue.class)
+  @Category(ContributionFromDiffblue.class)
+  @ManagedByDiffblue
   @MethodsUnderTest({"void ProposalCapsule.setExpirationTime(long)"})
   public void testSetExpirationTime() {
     // Arrange
@@ -1278,7 +1330,8 @@ public class ProposalCapsuleDiffblueTest {
    * <p>Method under test: {@link ProposalCapsule#setExpirationTime(long)}
    */
   @Test
-  @Category(MaintainedByDiffblue.class)
+  @Category(ContributionFromDiffblue.class)
+  @ManagedByDiffblue
   @MethodsUnderTest({"void ProposalCapsule.setExpirationTime(long)"})
   public void testSetExpirationTime2() {
     // Arrange
@@ -1303,7 +1356,8 @@ public class ProposalCapsuleDiffblueTest {
    * <p>Method under test: {@link ProposalCapsule#setExpirationTime(long)}
    */
   @Test
-  @Category(MaintainedByDiffblue.class)
+  @Category(ContributionFromDiffblue.class)
+  @ManagedByDiffblue
   @MethodsUnderTest({"void ProposalCapsule.setExpirationTime(long)"})
   public void testSetExpirationTime3() {
     // Arrange
@@ -1329,7 +1383,8 @@ public class ProposalCapsuleDiffblueTest {
    * <p>Method under test: {@link ProposalCapsule#setExpirationTime(long)}
    */
   @Test
-  @Category(MaintainedByDiffblue.class)
+  @Category(ContributionFromDiffblue.class)
+  @ManagedByDiffblue
   @MethodsUnderTest({"void ProposalCapsule.setExpirationTime(long)"})
   public void testSetExpirationTime4() {
     // Arrange
@@ -1355,7 +1410,8 @@ public class ProposalCapsuleDiffblueTest {
    * <p>Method under test: {@link ProposalCapsule#setExpirationTime(long)}
    */
   @Test
-  @Category(MaintainedByDiffblue.class)
+  @Category(ContributionFromDiffblue.class)
+  @ManagedByDiffblue
   @MethodsUnderTest({"void ProposalCapsule.setExpirationTime(long)"})
   public void testSetExpirationTime5() {
     // Arrange
@@ -1385,7 +1441,8 @@ public class ProposalCapsuleDiffblueTest {
    * <p>Method under test: {@link ProposalCapsule#setExpirationTime(long)}
    */
   @Test
-  @Category(MaintainedByDiffblue.class)
+  @Category(ContributionFromDiffblue.class)
+  @ManagedByDiffblue
   @MethodsUnderTest({"void ProposalCapsule.setExpirationTime(long)"})
   public void testSetExpirationTime6() {
     // Arrange
@@ -1417,7 +1474,8 @@ public class ProposalCapsuleDiffblueTest {
    * <p>Method under test: {@link ProposalCapsule#getCreateTime()}
    */
   @Test
-  @Category(MaintainedByDiffblue.class)
+  @Category(ContributionFromDiffblue.class)
+  @ManagedByDiffblue
   @MethodsUnderTest({"long ProposalCapsule.getCreateTime()"})
   public void testGetCreateTime_givenProposalCapsuleWithDataIsEmptyArrayOfByte_thenReturnZero() {
     // Arrange
@@ -1433,7 +1491,8 @@ public class ProposalCapsuleDiffblueTest {
    * <p>Method under test: {@link ProposalCapsule#setCreateTime(long)}
    */
   @Test
-  @Category(MaintainedByDiffblue.class)
+  @Category(ContributionFromDiffblue.class)
+  @ManagedByDiffblue
   @MethodsUnderTest({"void ProposalCapsule.setCreateTime(long)"})
   public void testSetCreateTime() {
     // Arrange
@@ -1457,7 +1516,8 @@ public class ProposalCapsuleDiffblueTest {
    * <p>Method under test: {@link ProposalCapsule#setCreateTime(long)}
    */
   @Test
-  @Category(MaintainedByDiffblue.class)
+  @Category(ContributionFromDiffblue.class)
+  @ManagedByDiffblue
   @MethodsUnderTest({"void ProposalCapsule.setCreateTime(long)"})
   public void testSetCreateTime2() {
     // Arrange
@@ -1482,7 +1542,8 @@ public class ProposalCapsuleDiffblueTest {
    * <p>Method under test: {@link ProposalCapsule#setCreateTime(long)}
    */
   @Test
-  @Category(MaintainedByDiffblue.class)
+  @Category(ContributionFromDiffblue.class)
+  @ManagedByDiffblue
   @MethodsUnderTest({"void ProposalCapsule.setCreateTime(long)"})
   public void testSetCreateTime3() {
     // Arrange
@@ -1508,7 +1569,8 @@ public class ProposalCapsuleDiffblueTest {
    * <p>Method under test: {@link ProposalCapsule#setCreateTime(long)}
    */
   @Test
-  @Category(MaintainedByDiffblue.class)
+  @Category(ContributionFromDiffblue.class)
+  @ManagedByDiffblue
   @MethodsUnderTest({"void ProposalCapsule.setCreateTime(long)"})
   public void testSetCreateTime4() {
     // Arrange
@@ -1534,7 +1596,8 @@ public class ProposalCapsuleDiffblueTest {
    * <p>Method under test: {@link ProposalCapsule#setCreateTime(long)}
    */
   @Test
-  @Category(MaintainedByDiffblue.class)
+  @Category(ContributionFromDiffblue.class)
+  @ManagedByDiffblue
   @MethodsUnderTest({"void ProposalCapsule.setCreateTime(long)"})
   public void testSetCreateTime5() {
     // Arrange
@@ -1564,7 +1627,8 @@ public class ProposalCapsuleDiffblueTest {
    * <p>Method under test: {@link ProposalCapsule#setCreateTime(long)}
    */
   @Test
-  @Category(MaintainedByDiffblue.class)
+  @Category(ContributionFromDiffblue.class)
+  @ManagedByDiffblue
   @MethodsUnderTest({"void ProposalCapsule.setCreateTime(long)"})
   public void testSetCreateTime6() {
     // Arrange
@@ -1596,7 +1660,8 @@ public class ProposalCapsuleDiffblueTest {
    * <p>Method under test: {@link ProposalCapsule#getApprovals()}
    */
   @Test
-  @Category(MaintainedByDiffblue.class)
+  @Category(ContributionFromDiffblue.class)
+  @ManagedByDiffblue
   @MethodsUnderTest({"List ProposalCapsule.getApprovals()"})
   public void testGetApprovals_givenProposalCapsuleWithDataIsEmptyArrayOfByte_thenReturnEmpty() {
     // Arrange
@@ -1612,7 +1677,8 @@ public class ProposalCapsuleDiffblueTest {
    * <p>Method under test: {@link ProposalCapsule#removeApproval(ByteString)}
    */
   @Test
-  @Category(MaintainedByDiffblue.class)
+  @Category(ContributionFromDiffblue.class)
+  @ManagedByDiffblue
   @MethodsUnderTest({"void ProposalCapsule.removeApproval(ByteString)"})
   public void testRemoveApproval() {
     // Arrange
@@ -1633,7 +1699,8 @@ public class ProposalCapsuleDiffblueTest {
    * <p>Method under test: {@link ProposalCapsule#removeApproval(ByteString)}
    */
   @Test
-  @Category(MaintainedByDiffblue.class)
+  @Category(ContributionFromDiffblue.class)
+  @ManagedByDiffblue
   @MethodsUnderTest({"void ProposalCapsule.removeApproval(ByteString)"})
   public void testRemoveApproval2() {
     // Arrange
@@ -1655,7 +1722,8 @@ public class ProposalCapsuleDiffblueTest {
    * <p>Method under test: {@link ProposalCapsule#removeApproval(ByteString)}
    */
   @Test
-  @Category(MaintainedByDiffblue.class)
+  @Category(ContributionFromDiffblue.class)
+  @ManagedByDiffblue
   @MethodsUnderTest({"void ProposalCapsule.removeApproval(ByteString)"})
   public void testRemoveApproval3() {
     // Arrange
@@ -1681,7 +1749,8 @@ public class ProposalCapsuleDiffblueTest {
    * <p>Method under test: {@link ProposalCapsule#removeApproval(ByteString)}
    */
   @Test
-  @Category(MaintainedByDiffblue.class)
+  @Category(ContributionFromDiffblue.class)
+  @ManagedByDiffblue
   @MethodsUnderTest({"void ProposalCapsule.removeApproval(ByteString)"})
   public void testRemoveApproval_givenHashMapOneIsOne() {
     // Arrange
@@ -1711,7 +1780,8 @@ public class ProposalCapsuleDiffblueTest {
    * <p>Method under test: {@link ProposalCapsule#removeApproval(ByteString)}
    */
   @Test
-  @Category(MaintainedByDiffblue.class)
+  @Category(ContributionFromDiffblue.class)
+  @ManagedByDiffblue
   @MethodsUnderTest({"void ProposalCapsule.removeApproval(ByteString)"})
   public void testRemoveApproval_givenProposalCapsuleWithDataIsEmptyArrayOfByte() {
     // Arrange
@@ -1736,7 +1806,8 @@ public class ProposalCapsuleDiffblueTest {
    * <p>Method under test: {@link ProposalCapsule#removeApproval(ByteString)}
    */
   @Test
-  @Category(MaintainedByDiffblue.class)
+  @Category(ContributionFromDiffblue.class)
+  @ManagedByDiffblue
   @MethodsUnderTest({"void ProposalCapsule.removeApproval(ByteString)"})
   public void testRemoveApproval_givenProposalCapsuleWithDataIsEmptyArrayOfByteCreateTimeIsTen() {
     // Arrange
@@ -1763,7 +1834,8 @@ public class ProposalCapsuleDiffblueTest {
    * <p>Method under test: {@link ProposalCapsule#removeApproval(ByteString)}
    */
   @Test
-  @Category(MaintainedByDiffblue.class)
+  @Category(ContributionFromDiffblue.class)
+  @ManagedByDiffblue
   @MethodsUnderTest({"void ProposalCapsule.removeApproval(ByteString)"})
   public void testRemoveApproval_givenProposalCapsuleWithDataIsEmptyArrayOfByteIdIsOne() {
     // Arrange
@@ -1785,7 +1857,8 @@ public class ProposalCapsuleDiffblueTest {
    * <p>Method under test: {@link ProposalCapsule#clearApproval()}
    */
   @Test
-  @Category(MaintainedByDiffblue.class)
+  @Category(ContributionFromDiffblue.class)
+  @ManagedByDiffblue
   @MethodsUnderTest({"void ProposalCapsule.clearApproval()"})
   public void testClearApproval() {
     // Arrange
@@ -1810,7 +1883,8 @@ public class ProposalCapsuleDiffblueTest {
    * <p>Method under test: {@link ProposalCapsule#clearApproval()}
    */
   @Test
-  @Category(MaintainedByDiffblue.class)
+  @Category(ContributionFromDiffblue.class)
+  @ManagedByDiffblue
   @MethodsUnderTest({"void ProposalCapsule.clearApproval()"})
   public void testClearApproval2() {
     // Arrange
@@ -1839,7 +1913,8 @@ public class ProposalCapsuleDiffblueTest {
    * <p>Method under test: {@link ProposalCapsule#clearApproval()}
    */
   @Test
-  @Category(MaintainedByDiffblue.class)
+  @Category(ContributionFromDiffblue.class)
+  @ManagedByDiffblue
   @MethodsUnderTest({"void ProposalCapsule.clearApproval()"})
   public void testClearApproval3() {
     // Arrange
@@ -1868,7 +1943,8 @@ public class ProposalCapsuleDiffblueTest {
    * <p>Method under test: {@link ProposalCapsule#clearApproval()}
    */
   @Test
-  @Category(MaintainedByDiffblue.class)
+  @Category(ContributionFromDiffblue.class)
+  @ManagedByDiffblue
   @MethodsUnderTest({"void ProposalCapsule.clearApproval()"})
   public void testClearApproval4() {
     // Arrange
@@ -1897,7 +1973,8 @@ public class ProposalCapsuleDiffblueTest {
    * <p>Method under test: {@link ProposalCapsule#clearApproval()}
    */
   @Test
-  @Category(MaintainedByDiffblue.class)
+  @Category(ContributionFromDiffblue.class)
+  @ManagedByDiffblue
   @MethodsUnderTest({"void ProposalCapsule.clearApproval()"})
   public void testClearApproval5() {
     // Arrange
@@ -1929,7 +2006,8 @@ public class ProposalCapsuleDiffblueTest {
    * <p>Method under test: {@link ProposalCapsule#clearApproval()}
    */
   @Test
-  @Category(MaintainedByDiffblue.class)
+  @Category(ContributionFromDiffblue.class)
+  @ManagedByDiffblue
   @MethodsUnderTest({"void ProposalCapsule.clearApproval()"})
   public void testClearApproval6() {
     // Arrange
@@ -1963,7 +2041,8 @@ public class ProposalCapsuleDiffblueTest {
    * <p>Method under test: {@link ProposalCapsule#clearApproval()}
    */
   @Test
-  @Category(MaintainedByDiffblue.class)
+  @Category(ContributionFromDiffblue.class)
+  @ManagedByDiffblue
   @MethodsUnderTest({"void ProposalCapsule.clearApproval()"})
   public void testClearApproval_givenProposalCapsuleWithDataIsEmptyArrayOfByte() {
     // Arrange
@@ -1996,7 +2075,8 @@ public class ProposalCapsuleDiffblueTest {
    * <p>Method under test: {@link ProposalCapsule#getState()}
    */
   @Test
-  @Category(MaintainedByDiffblue.class)
+  @Category(ContributionFromDiffblue.class)
+  @ManagedByDiffblue
   @MethodsUnderTest({"State ProposalCapsule.getState()"})
   public void testGetState_givenProposalCapsuleWithDataIsEmptyArrayOfByte_thenReturnPending() {
     // Arrange
@@ -2016,7 +2096,8 @@ public class ProposalCapsuleDiffblueTest {
    * <p>Method under test: {@link ProposalCapsule#getState()}
    */
   @Test
-  @Category(MaintainedByDiffblue.class)
+  @Category(ContributionFromDiffblue.class)
+  @ManagedByDiffblue
   @MethodsUnderTest({"State ProposalCapsule.getState()"})
   public void testGetState_thenReturnApproved() {
     // Arrange
@@ -2037,7 +2118,8 @@ public class ProposalCapsuleDiffblueTest {
    * <p>Method under test: {@link ProposalCapsule#getState()}
    */
   @Test
-  @Category(MaintainedByDiffblue.class)
+  @Category(ContributionFromDiffblue.class)
+  @ManagedByDiffblue
   @MethodsUnderTest({"State ProposalCapsule.getState()"})
   public void testGetState_thenReturnCanceled() {
     // Arrange
@@ -2058,7 +2140,8 @@ public class ProposalCapsuleDiffblueTest {
    * <p>Method under test: {@link ProposalCapsule#getState()}
    */
   @Test
-  @Category(MaintainedByDiffblue.class)
+  @Category(ContributionFromDiffblue.class)
+  @ManagedByDiffblue
   @MethodsUnderTest({"State ProposalCapsule.getState()"})
   public void testGetState_thenReturnDisapproved() {
     // Arrange
@@ -2075,7 +2158,8 @@ public class ProposalCapsuleDiffblueTest {
    * <p>Method under test: {@link ProposalCapsule#hasProcessed()}
    */
   @Test
-  @Category(MaintainedByDiffblue.class)
+  @Category(ContributionFromDiffblue.class)
+  @ManagedByDiffblue
   @MethodsUnderTest({"boolean ProposalCapsule.hasProcessed()"})
   public void testHasProcessed() {
     // Arrange
@@ -2097,7 +2181,8 @@ public class ProposalCapsuleDiffblueTest {
    * <p>Method under test: {@link ProposalCapsule#hasProcessed()}
    */
   @Test
-  @Category(MaintainedByDiffblue.class)
+  @Category(ContributionFromDiffblue.class)
+  @ManagedByDiffblue
   @MethodsUnderTest({"boolean ProposalCapsule.hasProcessed()"})
   public void testHasProcessed_givenProposalCapsuleWithDataIsEmptyArrayOfByteStateIsApproved() {
     // Arrange
@@ -2119,7 +2204,8 @@ public class ProposalCapsuleDiffblueTest {
    * <p>Method under test: {@link ProposalCapsule#hasProcessed()}
    */
   @Test
-  @Category(MaintainedByDiffblue.class)
+  @Category(ContributionFromDiffblue.class)
+  @ManagedByDiffblue
   @MethodsUnderTest({"boolean ProposalCapsule.hasProcessed()"})
   public void testHasProcessed_givenProposalCapsuleWithDataIsEmptyArrayOfByteStateIsCanceled() {
     // Arrange
@@ -2142,7 +2228,8 @@ public class ProposalCapsuleDiffblueTest {
    * <p>Method under test: {@link ProposalCapsule#hasProcessed()}
    */
   @Test
-  @Category(MaintainedByDiffblue.class)
+  @Category(ContributionFromDiffblue.class)
+  @ManagedByDiffblue
   @MethodsUnderTest({"boolean ProposalCapsule.hasProcessed()"})
   public void testHasProcessed_givenProposalCapsuleWithDataIsEmptyArrayOfByte_thenReturnFalse() {
     // Arrange
@@ -2163,7 +2250,8 @@ public class ProposalCapsuleDiffblueTest {
    * <p>Method under test: {@link ProposalCapsule#hasCanceled()}
    */
   @Test
-  @Category(MaintainedByDiffblue.class)
+  @Category(ContributionFromDiffblue.class)
+  @ManagedByDiffblue
   @MethodsUnderTest({"boolean ProposalCapsule.hasCanceled()"})
   public void testHasCanceled_givenProposalCapsuleWithDataIsEmptyArrayOfByteStateIsApproved() {
     // Arrange
@@ -2185,7 +2273,8 @@ public class ProposalCapsuleDiffblueTest {
    * <p>Method under test: {@link ProposalCapsule#hasCanceled()}
    */
   @Test
-  @Category(MaintainedByDiffblue.class)
+  @Category(ContributionFromDiffblue.class)
+  @ManagedByDiffblue
   @MethodsUnderTest({"boolean ProposalCapsule.hasCanceled()"})
   public void testHasCanceled_givenProposalCapsuleWithDataIsEmptyArrayOfByteStateIsDisapproved() {
     // Arrange
@@ -2208,7 +2297,8 @@ public class ProposalCapsuleDiffblueTest {
    * <p>Method under test: {@link ProposalCapsule#hasCanceled()}
    */
   @Test
-  @Category(MaintainedByDiffblue.class)
+  @Category(ContributionFromDiffblue.class)
+  @ManagedByDiffblue
   @MethodsUnderTest({"boolean ProposalCapsule.hasCanceled()"})
   public void testHasCanceled_givenProposalCapsuleWithDataIsEmptyArrayOfByte_thenReturnFalse() {
     // Arrange
@@ -2228,7 +2318,8 @@ public class ProposalCapsuleDiffblueTest {
    * <p>Method under test: {@link ProposalCapsule#hasCanceled()}
    */
   @Test
-  @Category(MaintainedByDiffblue.class)
+  @Category(ContributionFromDiffblue.class)
+  @ManagedByDiffblue
   @MethodsUnderTest({"boolean ProposalCapsule.hasCanceled()"})
   public void testHasCanceled_thenReturnTrue() {
     // Arrange
@@ -2251,7 +2342,8 @@ public class ProposalCapsuleDiffblueTest {
    * <p>Method under test: {@link ProposalCapsule#hasExpired(long)}
    */
   @Test
-  @Category(MaintainedByDiffblue.class)
+  @Category(ContributionFromDiffblue.class)
+  @ManagedByDiffblue
   @MethodsUnderTest({"boolean ProposalCapsule.hasExpired(long)"})
   public void testHasExpired_givenProposalCapsuleWithDataIsEmptyArrayOfByte_thenReturnTrue() {
     // Arrange
@@ -2272,7 +2364,8 @@ public class ProposalCapsuleDiffblueTest {
    * <p>Method under test: {@link ProposalCapsule#hasExpired(long)}
    */
   @Test
-  @Category(MaintainedByDiffblue.class)
+  @Category(ContributionFromDiffblue.class)
+  @ManagedByDiffblue
   @MethodsUnderTest({"boolean ProposalCapsule.hasExpired(long)"})
   public void testHasExpired_whenMinusOne_thenReturnFalse() {
     // Arrange
@@ -2292,7 +2385,8 @@ public class ProposalCapsuleDiffblueTest {
    * <p>Method under test: {@link ProposalCapsule#createDbKey()}
    */
   @Test
-  @Category(MaintainedByDiffblue.class)
+  @Category(ContributionFromDiffblue.class)
+  @ManagedByDiffblue
   @MethodsUnderTest({"byte[] ProposalCapsule.createDbKey()"})
   public void testCreateDbKey_thenReturnArrayOfByteWithZeroAndZero() {
     // Arrange
@@ -2313,7 +2407,8 @@ public class ProposalCapsuleDiffblueTest {
    * <p>Method under test: {@link ProposalCapsule#getData()}
    */
   @Test
-  @Category(MaintainedByDiffblue.class)
+  @Category(ContributionFromDiffblue.class)
+  @ManagedByDiffblue
   @MethodsUnderTest({"byte[] ProposalCapsule.getData()"})
   public void testGetData_givenByteStringSizeReturnZero_thenReturnArrayOfByteWith2AndZero() {
     // Arrange
@@ -2342,7 +2437,8 @@ public class ProposalCapsuleDiffblueTest {
    * <p>Method under test: {@link ProposalCapsule#getData()}
    */
   @Test
-  @Category(MaintainedByDiffblue.class)
+  @Category(ContributionFromDiffblue.class)
+  @ManagedByDiffblue
   @MethodsUnderTest({"byte[] ProposalCapsule.getData()"})
   public void testGetData_givenHashMapOneIsOne_thenReturnArrayOfByteWithTwentySixAndFour() {
     // Arrange
@@ -2374,7 +2470,8 @@ public class ProposalCapsuleDiffblueTest {
    * <p>Method under test: {@link ProposalCapsule#getData()}
    */
   @Test
-  @Category(MaintainedByDiffblue.class)
+  @Category(ContributionFromDiffblue.class)
+  @ManagedByDiffblue
   @MethodsUnderTest({"byte[] ProposalCapsule.getData()"})
   public void testGetData_thenReturnArrayOfByteWith2AndZero() {
     // Arrange
@@ -2403,7 +2500,8 @@ public class ProposalCapsuleDiffblueTest {
    * <p>Method under test: {@link ProposalCapsule#getData()}
    */
   @Test
-  @Category(MaintainedByDiffblue.class)
+  @Category(ContributionFromDiffblue.class)
+  @ManagedByDiffblue
   @MethodsUnderTest({"byte[] ProposalCapsule.getData()"})
   public void testGetData_thenReturnArrayOfByteWithBackspaceAndMinusOne() {
     // Arrange
@@ -2432,7 +2530,8 @@ public class ProposalCapsuleDiffblueTest {
    * <p>Method under test: {@link ProposalCapsule#getData()}
    */
   @Test
-  @Category(MaintainedByDiffblue.class)
+  @Category(ContributionFromDiffblue.class)
+  @ManagedByDiffblue
   @MethodsUnderTest({"byte[] ProposalCapsule.getData()"})
   public void testGetData_thenReturnArrayOfByteWithBackspaceAndMinusOne2() {
     // Arrange
@@ -2462,7 +2561,8 @@ public class ProposalCapsuleDiffblueTest {
    * <p>Method under test: {@link ProposalCapsule#getData()}
    */
   @Test
-  @Category(MaintainedByDiffblue.class)
+  @Category(ContributionFromDiffblue.class)
+  @ManagedByDiffblue
   @MethodsUnderTest({"byte[] ProposalCapsule.getData()"})
   public void testGetData_thenReturnArrayOfByteWithBackspaceAndOne() {
     // Arrange
@@ -2491,7 +2591,8 @@ public class ProposalCapsuleDiffblueTest {
    * <p>Method under test: {@link ProposalCapsule#getData()}
    */
   @Test
-  @Category(MaintainedByDiffblue.class)
+  @Category(ContributionFromDiffblue.class)
+  @ManagedByDiffblue
   @MethodsUnderTest({"byte[] ProposalCapsule.getData()"})
   public void testGetData_thenReturnArrayOfByteWithLeftParenthesisAndLf() {
     // Arrange
@@ -2520,7 +2621,8 @@ public class ProposalCapsuleDiffblueTest {
    * <p>Method under test: {@link ProposalCapsule#getData()}
    */
   @Test
-  @Category(MaintainedByDiffblue.class)
+  @Category(ContributionFromDiffblue.class)
+  @ManagedByDiffblue
   @MethodsUnderTest({"byte[] ProposalCapsule.getData()"})
   public void testGetData_thenReturnArrayOfByteWithSpaceAndLf() {
     // Arrange
@@ -2549,7 +2651,8 @@ public class ProposalCapsuleDiffblueTest {
    * <p>Method under test: {@link ProposalCapsule#getData()}
    */
   @Test
-  @Category(MaintainedByDiffblue.class)
+  @Category(ContributionFromDiffblue.class)
+  @ManagedByDiffblue
   @MethodsUnderTest({"byte[] ProposalCapsule.getData()"})
   public void testGetData_thenReturnEmptyArrayOfByte() {
     // Arrange
@@ -2571,7 +2674,8 @@ public class ProposalCapsuleDiffblueTest {
    * <p>Method under test: {@link ProposalCapsule#getInstance()}
    */
   @Test
-  @Category(MaintainedByDiffblue.class)
+  @Category(ContributionFromDiffblue.class)
+  @ManagedByDiffblue
   @MethodsUnderTest({"Protocol.Proposal ProposalCapsule.getInstance()"})
   public void testGetInstance_givenProposalCapsuleWithDataIsAxaxaxaxBytesIsUtf8_thenReturnNull()
       throws UnsupportedEncodingException {

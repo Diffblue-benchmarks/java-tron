@@ -4,7 +4,8 @@ import static org.junit.Assert.assertArrayEquals;
 import static org.junit.Assert.assertEquals;
 import static org.junit.Assert.assertNotEquals;
 import static org.junit.Assert.assertNull;
-import com.diffblue.cover.annotations.MaintainedByDiffblue;
+import com.diffblue.cover.annotations.ContributionFromDiffblue;
+import com.diffblue.cover.annotations.ManagedByDiffblue;
 import com.diffblue.cover.annotations.MethodsUnderTest;
 import java.io.UnsupportedEncodingException;
 import org.junit.Test;
@@ -23,7 +24,8 @@ public class ValueDiffblueTest {
    * <p>Method under test: {@link Value#decode(byte[])}
    */
   @Test
-  @Category(MaintainedByDiffblue.class)
+  @Category(ContributionFromDiffblue.class)
+  @ManagedByDiffblue
   @MethodsUnderTest({"Value Value.decode(byte[])"})
   public void testDecode_whenArrayOfByteWithOne_thenReturnOperatorIsModify() {
     // Arrange and Act
@@ -45,7 +47,8 @@ public class ValueDiffblueTest {
    * <p>Method under test: {@link Value#decode(byte[])}
    */
   @Test
-  @Category(MaintainedByDiffblue.class)
+  @Category(ContributionFromDiffblue.class)
+  @ManagedByDiffblue
   @MethodsUnderTest({"Value Value.decode(byte[])"})
   public void testDecode_whenArrayOfByteWithThree_thenReturnOperatorIsPut() {
     // Arrange and Act
@@ -67,7 +70,8 @@ public class ValueDiffblueTest {
    * <p>Method under test: {@link Value#decode(byte[])}
    */
   @Test
-  @Category(MaintainedByDiffblue.class)
+  @Category(ContributionFromDiffblue.class)
+  @ManagedByDiffblue
   @MethodsUnderTest({"Value Value.decode(byte[])"})
   public void testDecode_whenArrayOfByteWithTwo_thenReturnOperatorIsDelete() {
     // Arrange and Act
@@ -89,7 +93,8 @@ public class ValueDiffblueTest {
    * <p>Method under test: {@link Value#decode(byte[])}
    */
   @Test
-  @Category(MaintainedByDiffblue.class)
+  @Category(ContributionFromDiffblue.class)
+  @ManagedByDiffblue
   @MethodsUnderTest({"Value Value.decode(byte[])"})
   public void testDecode_whenArrayOfByteWithZero_thenReturnOperatorIsCreate() {
     // Arrange and Act
@@ -111,7 +116,8 @@ public class ValueDiffblueTest {
    * <p>Method under test: {@link Value#decode(byte[])}
    */
   @Test
-  @Category(MaintainedByDiffblue.class)
+  @Category(ContributionFromDiffblue.class)
+  @ManagedByDiffblue
   @MethodsUnderTest({"Value Value.decode(byte[])"})
   public void testDecode_whenAxaxaxaxBytesIsUtf8_thenReturnOperatorIsNull()
       throws UnsupportedEncodingException {
@@ -134,7 +140,8 @@ public class ValueDiffblueTest {
    * <p>Method under test: {@link Value#copyOf(Operator, byte[])}
    */
   @Test
-  @Category(MaintainedByDiffblue.class)
+  @Category(ContributionFromDiffblue.class)
+  @ManagedByDiffblue
   @MethodsUnderTest({"Value Value.copyOf(Operator, byte[])"})
   public void testCopyOf_whenAxaxaxaxBytesIsUtf8_thenReturnBytesIsAxaxaxaxBytesIsUtf8()
       throws UnsupportedEncodingException {
@@ -157,7 +164,8 @@ public class ValueDiffblueTest {
    * <p>Method under test: {@link Value#copyOf(Operator, byte[])}
    */
   @Test
-  @Category(MaintainedByDiffblue.class)
+  @Category(ContributionFromDiffblue.class)
+  @ManagedByDiffblue
   @MethodsUnderTest({"Value Value.copyOf(Operator, byte[])"})
   public void testCopyOf_whenNull_thenReturnBytesIsNull() {
     // Arrange and Act
@@ -174,7 +182,8 @@ public class ValueDiffblueTest {
    * <p>Method under test: {@link Value#of(Operator, byte[])}
    */
   @Test
-  @Category(MaintainedByDiffblue.class)
+  @Category(ContributionFromDiffblue.class)
+  @ManagedByDiffblue
   @MethodsUnderTest({"Value Value.of(Operator, byte[])"})
   public void testOf() throws UnsupportedEncodingException {
     // Arrange and Act
@@ -196,7 +205,8 @@ public class ValueDiffblueTest {
    * <p>Method under test: {@link Value#encode()}
    */
   @Test
-  @Category(MaintainedByDiffblue.class)
+  @Category(ContributionFromDiffblue.class)
+  @ManagedByDiffblue
   @MethodsUnderTest({"byte[] Value.encode()"})
   public void testEncode_givenCopyOfCreateAndNull_thenReturnArrayOfByteWithZero() {
     // Arrange
@@ -216,7 +226,8 @@ public class ValueDiffblueTest {
    * <p>Method under test: {@link Value#encode()}
    */
   @Test
-  @Category(MaintainedByDiffblue.class)
+  @Category(ContributionFromDiffblue.class)
+  @ManagedByDiffblue
   @MethodsUnderTest({"byte[] Value.encode()"})
   public void testEncode_thenReturnArrayOfByteWithZeroAndA() throws UnsupportedEncodingException {
     // Arrange, Act and Assert
@@ -236,7 +247,8 @@ public class ValueDiffblueTest {
    * <p>Method under test: {@link Value#getBytes()}
    */
   @Test
-  @Category(MaintainedByDiffblue.class)
+  @Category(ContributionFromDiffblue.class)
+  @ManagedByDiffblue
   @MethodsUnderTest({"byte[] Value.getBytes()"})
   public void testGetBytes_givenCopyOfCreateAndNull_thenReturnNull() {
     // Arrange
@@ -256,7 +268,8 @@ public class ValueDiffblueTest {
    * <p>Method under test: {@link Value#getBytes()}
    */
   @Test
-  @Category(MaintainedByDiffblue.class)
+  @Category(ContributionFromDiffblue.class)
+  @ManagedByDiffblue
   @MethodsUnderTest({"byte[] Value.getBytes()"})
   public void testGetBytes_thenReturnAxaxaxaxBytesIsUtf8() throws UnsupportedEncodingException {
     // Arrange, Act and Assert
@@ -281,7 +294,8 @@ public class ValueDiffblueTest {
    * </ul>
    */
   @Test
-  @Category(MaintainedByDiffblue.class)
+  @Category(ContributionFromDiffblue.class)
+  @ManagedByDiffblue
   @MethodsUnderTest({"boolean Value.equals(Object)", "int Value.hashCode()"})
   public void testEqualsAndHashCode_whenOtherIsEqual_thenReturnEqual()
       throws UnsupportedEncodingException {
@@ -310,7 +324,8 @@ public class ValueDiffblueTest {
    * </ul>
    */
   @Test
-  @Category(MaintainedByDiffblue.class)
+  @Category(ContributionFromDiffblue.class)
+  @ManagedByDiffblue
   @MethodsUnderTest({"boolean Value.equals(Object)", "int Value.hashCode()"})
   public void testEqualsAndHashCode_whenOtherIsSame_thenReturnEqual()
       throws UnsupportedEncodingException {
@@ -334,7 +349,8 @@ public class ValueDiffblueTest {
    * <p>Method under test: {@link Value#equals(Object)}
    */
   @Test
-  @Category(MaintainedByDiffblue.class)
+  @Category(ContributionFromDiffblue.class)
+  @ManagedByDiffblue
   @MethodsUnderTest({"boolean Value.equals(Object)", "int Value.hashCode()"})
   public void testEquals_whenOtherIsDifferent_thenReturnNotEqual()
       throws UnsupportedEncodingException {
@@ -356,7 +372,8 @@ public class ValueDiffblueTest {
    * <p>Method under test: {@link Value#equals(Object)}
    */
   @Test
-  @Category(MaintainedByDiffblue.class)
+  @Category(ContributionFromDiffblue.class)
+  @ManagedByDiffblue
   @MethodsUnderTest({"boolean Value.equals(Object)", "int Value.hashCode()"})
   public void testEquals_whenOtherIsNull_thenReturnNotEqual() throws UnsupportedEncodingException {
     // Arrange, Act and Assert
@@ -374,7 +391,8 @@ public class ValueDiffblueTest {
    * <p>Method under test: {@link Value#equals(Object)}
    */
   @Test
-  @Category(MaintainedByDiffblue.class)
+  @Category(ContributionFromDiffblue.class)
+  @ManagedByDiffblue
   @MethodsUnderTest({"boolean Value.equals(Object)", "int Value.hashCode()"})
   public void testEquals_whenOtherIsWrongType_thenReturnNotEqual()
       throws UnsupportedEncodingException {
@@ -389,7 +407,8 @@ public class ValueDiffblueTest {
    * <p>Method under test: {@link Value#getOperator()}
    */
   @Test
-  @Category(MaintainedByDiffblue.class)
+  @Category(ContributionFromDiffblue.class)
+  @ManagedByDiffblue
   @MethodsUnderTest({"Operator Value.getOperator()"})
   public void testGetOperator() throws UnsupportedEncodingException {
     // Arrange, Act and Assert
@@ -403,7 +422,8 @@ public class ValueDiffblueTest {
    * <p>Method under test: {@link Operator#getValue()}
    */
   @Test
-  @Category(MaintainedByDiffblue.class)
+  @Category(ContributionFromDiffblue.class)
+  @ManagedByDiffblue
   @MethodsUnderTest({"byte Operator.getValue()"})
   public void testOperatorGetValue() {
     // Arrange, Act and Assert
@@ -421,7 +441,8 @@ public class ValueDiffblueTest {
    * <p>Method under test: {@link Operator#valueOf(byte)}
    */
   @Test
-  @Category(MaintainedByDiffblue.class)
+  @Category(ContributionFromDiffblue.class)
+  @ManagedByDiffblue
   @MethodsUnderTest({"Operator Operator.valueOf(byte)"})
   public void testOperatorValueOfWithB_whenA_thenReturnNull() {
     // Arrange, Act and Assert
@@ -439,7 +460,8 @@ public class ValueDiffblueTest {
    * <p>Method under test: {@link Operator#valueOf(byte)}
    */
   @Test
-  @Category(MaintainedByDiffblue.class)
+  @Category(ContributionFromDiffblue.class)
+  @ManagedByDiffblue
   @MethodsUnderTest({"Operator Operator.valueOf(byte)"})
   public void testOperatorValueOfWithB_whenOne_thenReturnModify() {
     // Arrange, Act and Assert
@@ -457,7 +479,8 @@ public class ValueDiffblueTest {
    * <p>Method under test: {@link Operator#valueOf(byte)}
    */
   @Test
-  @Category(MaintainedByDiffblue.class)
+  @Category(ContributionFromDiffblue.class)
+  @ManagedByDiffblue
   @MethodsUnderTest({"Operator Operator.valueOf(byte)"})
   public void testOperatorValueOfWithB_whenThree_thenReturnPut() {
     // Arrange, Act and Assert
@@ -475,7 +498,8 @@ public class ValueDiffblueTest {
    * <p>Method under test: {@link Operator#valueOf(byte)}
    */
   @Test
-  @Category(MaintainedByDiffblue.class)
+  @Category(ContributionFromDiffblue.class)
+  @ManagedByDiffblue
   @MethodsUnderTest({"Operator Operator.valueOf(byte)"})
   public void testOperatorValueOfWithB_whenTwo_thenReturnDelete() {
     // Arrange, Act and Assert
@@ -493,7 +517,8 @@ public class ValueDiffblueTest {
    * <p>Method under test: {@link Operator#valueOf(byte)}
    */
   @Test
-  @Category(MaintainedByDiffblue.class)
+  @Category(ContributionFromDiffblue.class)
+  @ManagedByDiffblue
   @MethodsUnderTest({"Operator Operator.valueOf(byte)"})
   public void testOperatorValueOfWithB_whenZero_thenReturnCreate() {
     // Arrange, Act and Assert

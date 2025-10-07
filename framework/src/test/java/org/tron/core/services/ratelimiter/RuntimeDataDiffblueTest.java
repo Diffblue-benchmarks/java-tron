@@ -1,7 +1,8 @@
 package org.tron.core.services.ratelimiter;
 
 import static org.junit.Assert.assertEquals;
-import com.diffblue.cover.annotations.MaintainedByDiffblue;
+import com.diffblue.cover.annotations.ContributionFromDiffblue;
+import com.diffblue.cover.annotations.ManagedByDiffblue;
 import com.diffblue.cover.annotations.MethodsUnderTest;
 import org.junit.Test;
 import org.junit.experimental.categories.Category;
@@ -18,7 +19,8 @@ public class RuntimeDataDiffblueTest {
    * <p>Method under test: {@link RuntimeData#RuntimeData(Object)}
    */
   @Test
-  @Category(MaintainedByDiffblue.class)
+  @Category(ContributionFromDiffblue.class)
+  @ManagedByDiffblue
   @MethodsUnderTest({"void RuntimeData.<init>(Object)"})
   public void testNewRuntimeData_when42_thenReturnRemoteAddrIsEmptyString() {
     // Arrange, Act and Assert
@@ -31,7 +33,8 @@ public class RuntimeDataDiffblueTest {
    * <p>Method under test: {@link RuntimeData#getRemoteAddr()}
    */
   @Test
-  @Category(MaintainedByDiffblue.class)
+  @Category(ContributionFromDiffblue.class)
+  @ManagedByDiffblue
   @MethodsUnderTest({"java.lang.String RuntimeData.getRemoteAddr()"})
   public void testGetRemoteAddr() {
     // Arrange, Act and Assert

@@ -3,7 +3,8 @@ package org.tron.consensus;
 import static org.mockito.ArgumentMatchers.isA;
 import static org.mockito.Mockito.doNothing;
 import static org.mockito.Mockito.verify;
-import com.diffblue.cover.annotations.MaintainedByDiffblue;
+import com.diffblue.cover.annotations.ContributionFromDiffblue;
+import com.diffblue.cover.annotations.ManagedByDiffblue;
 import com.diffblue.cover.annotations.MethodsUnderTest;
 import org.junit.Test;
 import org.junit.experimental.categories.Category;
@@ -30,7 +31,8 @@ public class ConsensusDiffblueTest {
    * <p>Method under test: {@link Consensus#start(Param)}
    */
   @Test
-  @Category(MaintainedByDiffblue.class)
+  @Category(ContributionFromDiffblue.class)
+  @ManagedByDiffblue
   @MethodsUnderTest({"void Consensus.start(Param)"})
   public void testStart() {
     // Arrange
@@ -49,7 +51,8 @@ public class ConsensusDiffblueTest {
    * <p>Method under test: {@link Consensus#stop()}
    */
   @Test
-  @Category(MaintainedByDiffblue.class)
+  @Category(ContributionFromDiffblue.class)
+  @ManagedByDiffblue
   @MethodsUnderTest({"void Consensus.stop()"})
   public void testStop() {
     // Arrange

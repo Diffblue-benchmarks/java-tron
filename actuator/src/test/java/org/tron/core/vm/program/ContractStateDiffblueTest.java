@@ -14,7 +14,8 @@ import static org.mockito.Mockito.doNothing;
 import static org.mockito.Mockito.mock;
 import static org.mockito.Mockito.verify;
 import static org.mockito.Mockito.when;
-import com.diffblue.cover.annotations.MaintainedByDiffblue;
+import com.diffblue.cover.annotations.ContributionFromDiffblue;
+import com.diffblue.cover.annotations.ManagedByDiffblue;
 import com.diffblue.cover.annotations.MethodsUnderTest;
 import com.google.protobuf.ByteString;
 import com.google.protobuf.UnknownFieldSet;
@@ -59,7 +60,8 @@ public class ContractStateDiffblueTest {
    * <p>Method under test: {@link ContractState#ContractState(ProgramInvoke)}
    */
   @Test
-  @Category(MaintainedByDiffblue.class)
+  @Category(ContributionFromDiffblue.class)
+  @ManagedByDiffblue
   @MethodsUnderTest({"void ContractState.<init>(ProgramInvoke)"})
   public void testNewContractState_whenContractStateWithProgramInvokeIsProgramInvokeMockImpl()
       throws UnsupportedEncodingException {
@@ -111,7 +113,8 @@ public class ContractStateDiffblueTest {
    * <p>Method under test: {@link ContractState#ContractState(ProgramInvoke)}
    */
   @Test
-  @Category(MaintainedByDiffblue.class)
+  @Category(ContributionFromDiffblue.class)
+  @ManagedByDiffblue
   @MethodsUnderTest({"void ContractState.<init>(ProgramInvoke)"})
   public void testNewContractState_whenProgramInvokeMockImpl_thenReturnAssetIssueStoreIsNull() {
     // Arrange and Act
@@ -130,7 +133,8 @@ public class ContractStateDiffblueTest {
    * <p>Method under test: {@link ContractState#getAssetIssueV2Store()}
    */
   @Test
-  @Category(MaintainedByDiffblue.class)
+  @Category(ContributionFromDiffblue.class)
+  @ManagedByDiffblue
   @MethodsUnderTest({"org.tron.core.store.AssetIssueV2Store ContractState.getAssetIssueV2Store()"})
   public void testGetAssetIssueV2Store() throws UnsupportedEncodingException {
     // Arrange
@@ -174,7 +178,8 @@ public class ContractStateDiffblueTest {
    * <p>Method under test: {@link ContractState#getAssetIssueV2Store()}
    */
   @Test
-  @Category(MaintainedByDiffblue.class)
+  @Category(ContributionFromDiffblue.class)
+  @ManagedByDiffblue
   @MethodsUnderTest({"org.tron.core.store.AssetIssueV2Store ContractState.getAssetIssueV2Store()"})
   public void testGetAssetIssueV2Store_thenReturnNull() {
     // Arrange, Act and Assert
@@ -187,7 +192,8 @@ public class ContractStateDiffblueTest {
    * <p>Method under test: {@link ContractState#getAssetIssueStore()}
    */
   @Test
-  @Category(MaintainedByDiffblue.class)
+  @Category(ContributionFromDiffblue.class)
+  @ManagedByDiffblue
   @MethodsUnderTest({"org.tron.core.store.AssetIssueStore ContractState.getAssetIssueStore()"})
   public void testGetAssetIssueStore() throws UnsupportedEncodingException {
     // Arrange
@@ -231,7 +237,8 @@ public class ContractStateDiffblueTest {
    * <p>Method under test: {@link ContractState#getAssetIssueStore()}
    */
   @Test
-  @Category(MaintainedByDiffblue.class)
+  @Category(ContributionFromDiffblue.class)
+  @ManagedByDiffblue
   @MethodsUnderTest({"org.tron.core.store.AssetIssueStore ContractState.getAssetIssueStore()"})
   public void testGetAssetIssueStore_thenReturnNull() {
     // Arrange, Act and Assert
@@ -244,7 +251,8 @@ public class ContractStateDiffblueTest {
    * <p>Method under test: {@link ContractState#getDynamicPropertiesStore()}
    */
   @Test
-  @Category(MaintainedByDiffblue.class)
+  @Category(ContributionFromDiffblue.class)
+  @ManagedByDiffblue
   @MethodsUnderTest({
     "org.tron.core.store.DynamicPropertiesStore ContractState.getDynamicPropertiesStore()"
   })
@@ -290,7 +298,8 @@ public class ContractStateDiffblueTest {
    * <p>Method under test: {@link ContractState#getDynamicPropertiesStore()}
    */
   @Test
-  @Category(MaintainedByDiffblue.class)
+  @Category(ContributionFromDiffblue.class)
+  @ManagedByDiffblue
   @MethodsUnderTest({
     "org.tron.core.store.DynamicPropertiesStore ContractState.getDynamicPropertiesStore()"
   })
@@ -310,7 +319,8 @@ public class ContractStateDiffblueTest {
    * <p>Method under test: {@link ContractState#createAccount(byte[], AccountType)}
    */
   @Test
-  @Category(MaintainedByDiffblue.class)
+  @Category(ContributionFromDiffblue.class)
+  @ManagedByDiffblue
   @MethodsUnderTest({"AccountCapsule ContractState.createAccount(byte[], AccountType)"})
   public void testCreateAccountWithAddrType_whenNormal_thenReturnFrozenCountIsZero()
       throws UnsupportedEncodingException {
@@ -395,7 +405,8 @@ public class ContractStateDiffblueTest {
    * <p>Method under test: {@link ContractState#createAccount(byte[], String, AccountType)}
    */
   @Test
-  @Category(MaintainedByDiffblue.class)
+  @Category(ContributionFromDiffblue.class)
+  @ManagedByDiffblue
   @MethodsUnderTest({"AccountCapsule ContractState.createAccount(byte[], String, AccountType)"})
   public void testCreateAccountWithAddressAccountNameType_thenReturnFrozenCountIsZero()
       throws UnsupportedEncodingException {
@@ -478,7 +489,8 @@ public class ContractStateDiffblueTest {
    * <p>Method under test: {@link ContractState#getDynamicProperty(byte[])}
    */
   @Test
-  @Category(MaintainedByDiffblue.class)
+  @Category(ContributionFromDiffblue.class)
+  @ManagedByDiffblue
   @MethodsUnderTest({"BytesCapsule ContractState.getDynamicProperty(byte[])"})
   public void testGetDynamicProperty() throws UnsupportedEncodingException {
     // Arrange
@@ -505,7 +517,8 @@ public class ContractStateDiffblueTest {
    * <p>Method under test: {@link ContractState#getDynamicProperty(byte[])}
    */
   @Test
-  @Category(MaintainedByDiffblue.class)
+  @Category(ContributionFromDiffblue.class)
+  @ManagedByDiffblue
   @MethodsUnderTest({"BytesCapsule ContractState.getDynamicProperty(byte[])"})
   public void testGetDynamicProperty2() throws UnsupportedEncodingException {
     // Arrange
@@ -563,7 +576,8 @@ public class ContractStateDiffblueTest {
    * <p>Method under test: {@link ContractState#getWitness(byte[])}
    */
   @Test
-  @Category(MaintainedByDiffblue.class)
+  @Category(ContributionFromDiffblue.class)
+  @ManagedByDiffblue
   @MethodsUnderTest({"WitnessCapsule ContractState.getWitness(byte[])"})
   public void testGetWitness_givenRepositoryImplGetWitnessReturnNull_thenReturnNull()
       throws UnsupportedEncodingException {
@@ -608,7 +622,8 @@ public class ContractStateDiffblueTest {
    * <p>Method under test: {@link ContractState#deleteContract(byte[])}
    */
   @Test
-  @Category(MaintainedByDiffblue.class)
+  @Category(ContributionFromDiffblue.class)
+  @ManagedByDiffblue
   @MethodsUnderTest({"void ContractState.deleteContract(byte[])"})
   public void testDeleteContract_thenCallsDeleteContract() throws UnsupportedEncodingException {
     // Arrange
@@ -646,7 +661,8 @@ public class ContractStateDiffblueTest {
    * <p>Method under test: {@link ContractState#getContractState(byte[])}
    */
   @Test
-  @Category(MaintainedByDiffblue.class)
+  @Category(ContributionFromDiffblue.class)
+  @ManagedByDiffblue
   @MethodsUnderTest({"ContractStateCapsule ContractState.getContractState(byte[])"})
   public void testGetContractState() throws UnsupportedEncodingException {
     // Arrange
@@ -683,7 +699,8 @@ public class ContractStateDiffblueTest {
    * <p>Method under test: {@link ContractState#getContractState(byte[])}
    */
   @Test
-  @Category(MaintainedByDiffblue.class)
+  @Category(ContributionFromDiffblue.class)
+  @ManagedByDiffblue
   @MethodsUnderTest({"ContractStateCapsule ContractState.getContractState(byte[])"})
   public void testGetContractState2() throws UnsupportedEncodingException {
     // Arrange
@@ -745,7 +762,8 @@ public class ContractStateDiffblueTest {
    * <p>Method under test: {@link ContractState#getCode(byte[])}
    */
   @Test
-  @Category(MaintainedByDiffblue.class)
+  @Category(ContributionFromDiffblue.class)
+  @ManagedByDiffblue
   @MethodsUnderTest({"byte[] ContractState.getCode(byte[])"})
   public void testGetCode() throws UnsupportedEncodingException {
     // Arrange
@@ -770,7 +788,8 @@ public class ContractStateDiffblueTest {
    * <p>Method under test: {@link ContractState#getCode(byte[])}
    */
   @Test
-  @Category(MaintainedByDiffblue.class)
+  @Category(ContributionFromDiffblue.class)
+  @ManagedByDiffblue
   @MethodsUnderTest({"byte[] ContractState.getCode(byte[])"})
   public void testGetCode2() throws UnsupportedEncodingException {
     // Arrange
@@ -820,7 +839,8 @@ public class ContractStateDiffblueTest {
    * <p>Method under test: {@link ContractState#putStorageValue(byte[], DataWord, DataWord)}
    */
   @Test
-  @Category(MaintainedByDiffblue.class)
+  @Category(ContributionFromDiffblue.class)
+  @ManagedByDiffblue
   @MethodsUnderTest({"void ContractState.putStorageValue(byte[], DataWord, DataWord)"})
   public void testPutStorageValue() throws UnsupportedEncodingException {
     // Arrange
@@ -873,7 +893,8 @@ public class ContractStateDiffblueTest {
    * <p>Method under test: {@link ContractState#putStorageValue(byte[], DataWord, DataWord)}
    */
   @Test
-  @Category(MaintainedByDiffblue.class)
+  @Category(ContributionFromDiffblue.class)
+  @ManagedByDiffblue
   @MethodsUnderTest({"void ContractState.putStorageValue(byte[], DataWord, DataWord)"})
   public void testPutStorageValue_thenCallsOnStoragePut() throws UnsupportedEncodingException {
     // Arrange
@@ -930,7 +951,8 @@ public class ContractStateDiffblueTest {
    * <p>Method under test: {@link ContractState#getBalance(byte[])}
    */
   @Test
-  @Category(MaintainedByDiffblue.class)
+  @Category(ContributionFromDiffblue.class)
+  @ManagedByDiffblue
   @MethodsUnderTest({"long ContractState.getBalance(byte[])"})
   public void testGetBalance_givenRepositoryImplGetAccountReturnNull_thenReturnZero()
       throws UnsupportedEncodingException {
@@ -962,7 +984,8 @@ public class ContractStateDiffblueTest {
    * <p>Method under test: {@link ContractState#addBalance(byte[], long)}
    */
   @Test
-  @Category(MaintainedByDiffblue.class)
+  @Category(ContributionFromDiffblue.class)
+  @ManagedByDiffblue
   @MethodsUnderTest({"long ContractState.addBalance(byte[], long)"})
   public void testAddBalance_givenRepositoryImplGetAccountReturnNull_thenReturnFortyTwo()
       throws UnsupportedEncodingException {
@@ -988,7 +1011,8 @@ public class ContractStateDiffblueTest {
    * <p>Method under test: {@link ContractState#newRepositoryChild()}
    */
   @Test
-  @Category(MaintainedByDiffblue.class)
+  @Category(ContributionFromDiffblue.class)
+  @ManagedByDiffblue
   @MethodsUnderTest({"Repository ContractState.newRepositoryChild()"})
   public void testNewRepositoryChild() throws UnsupportedEncodingException {
     // Arrange
@@ -1054,7 +1078,8 @@ public class ContractStateDiffblueTest {
    * <p>Method under test: {@link ContractState#newRepositoryChild()}
    */
   @Test
-  @Category(MaintainedByDiffblue.class)
+  @Category(ContributionFromDiffblue.class)
+  @ManagedByDiffblue
   @MethodsUnderTest({"Repository ContractState.newRepositoryChild()"})
   public void testNewRepositoryChild_thenReturnRepositoryImpl() {
     // Arrange and Act
@@ -1089,7 +1114,8 @@ public class ContractStateDiffblueTest {
    * <p>Method under test: {@link ContractState#getStorage(byte[])}
    */
   @Test
-  @Category(MaintainedByDiffblue.class)
+  @Category(ContributionFromDiffblue.class)
+  @ManagedByDiffblue
   @MethodsUnderTest({"Storage ContractState.getStorage(byte[])"})
   public void testGetStorage() throws UnsupportedEncodingException {
     // Arrange
@@ -1117,7 +1143,8 @@ public class ContractStateDiffblueTest {
    * <p>Method under test: {@link ContractState#getStorage(byte[])}
    */
   @Test
-  @Category(MaintainedByDiffblue.class)
+  @Category(ContributionFromDiffblue.class)
+  @ManagedByDiffblue
   @MethodsUnderTest({"Storage ContractState.getStorage(byte[])"})
   public void testGetStorage2() throws UnsupportedEncodingException {
     // Arrange
@@ -1174,7 +1201,8 @@ public class ContractStateDiffblueTest {
    * <p>Method under test: {@link ContractState#getBlackHoleAddress()}
    */
   @Test
-  @Category(MaintainedByDiffblue.class)
+  @Category(ContributionFromDiffblue.class)
+  @ManagedByDiffblue
   @MethodsUnderTest({"byte[] ContractState.getBlackHoleAddress()"})
   public void testGetBlackHoleAddress_thenReturnAxaxaxaxBytesIsUtf8()
       throws UnsupportedEncodingException {
@@ -1220,7 +1248,8 @@ public class ContractStateDiffblueTest {
    * <p>Method under test: {@link ContractState#getBlockByNum(long)}
    */
   @Test
-  @Category(MaintainedByDiffblue.class)
+  @Category(ContributionFromDiffblue.class)
+  @ManagedByDiffblue
   @MethodsUnderTest({"BlockCapsule ContractState.getBlockByNum(long)"})
   public void testGetBlockByNum_givenRepositoryImplGetBlockByNumReturnNull_thenReturnNull()
       throws UnsupportedEncodingException {
@@ -1264,7 +1293,8 @@ public class ContractStateDiffblueTest {
    * <p>Method under test: {@link ContractState#createNormalAccount(byte[])}
    */
   @Test
-  @Category(MaintainedByDiffblue.class)
+  @Category(ContributionFromDiffblue.class)
+  @ManagedByDiffblue
   @MethodsUnderTest({"AccountCapsule ContractState.createNormalAccount(byte[])"})
   public void testCreateNormalAccount_thenReturnNull() throws UnsupportedEncodingException {
     // Arrange
@@ -1304,7 +1334,8 @@ public class ContractStateDiffblueTest {
    * <p>Method under test: {@link ContractState#getDelegationStore()}
    */
   @Test
-  @Category(MaintainedByDiffblue.class)
+  @Category(ContributionFromDiffblue.class)
+  @ManagedByDiffblue
   @MethodsUnderTest({"org.tron.core.store.DelegationStore ContractState.getDelegationStore()"})
   public void testGetDelegationStore() throws UnsupportedEncodingException {
     // Arrange
@@ -1348,7 +1379,8 @@ public class ContractStateDiffblueTest {
    * <p>Method under test: {@link ContractState#getDelegationStore()}
    */
   @Test
-  @Category(MaintainedByDiffblue.class)
+  @Category(ContributionFromDiffblue.class)
+  @ManagedByDiffblue
   @MethodsUnderTest({"org.tron.core.store.DelegationStore ContractState.getDelegationStore()"})
   public void testGetDelegationStore_thenReturnNull() {
     // Arrange, Act and Assert
@@ -1361,7 +1393,8 @@ public class ContractStateDiffblueTest {
    * <p>Method under test: {@link ContractState#getBeginCycle(byte[])}
    */
   @Test
-  @Category(MaintainedByDiffblue.class)
+  @Category(ContributionFromDiffblue.class)
+  @ManagedByDiffblue
   @MethodsUnderTest({"long ContractState.getBeginCycle(byte[])"})
   public void testGetBeginCycle() throws UnsupportedEncodingException {
     // Arrange
@@ -1387,7 +1420,8 @@ public class ContractStateDiffblueTest {
    * <p>Method under test: {@link ContractState#getBeginCycle(byte[])}
    */
   @Test
-  @Category(MaintainedByDiffblue.class)
+  @Category(ContributionFromDiffblue.class)
+  @ManagedByDiffblue
   @MethodsUnderTest({"long ContractState.getBeginCycle(byte[])"})
   public void testGetBeginCycle2() throws UnsupportedEncodingException {
     // Arrange
@@ -1444,7 +1478,8 @@ public class ContractStateDiffblueTest {
    * <p>Method under test: {@link ContractState#getBeginCycle(byte[])}
    */
   @Test
-  @Category(MaintainedByDiffblue.class)
+  @Category(ContributionFromDiffblue.class)
+  @ManagedByDiffblue
   @MethodsUnderTest({"long ContractState.getBeginCycle(byte[])"})
   public void testGetBeginCycle_givenRepositoryImplGetDelegationReturnNull_thenReturnZero()
       throws UnsupportedEncodingException {
@@ -1474,7 +1509,8 @@ public class ContractStateDiffblueTest {
    * <p>Method under test: {@link ContractState#getBeginCycle(byte[])}
    */
   @Test
-  @Category(MaintainedByDiffblue.class)
+  @Category(ContributionFromDiffblue.class)
+  @ManagedByDiffblue
   @MethodsUnderTest({"long ContractState.getBeginCycle(byte[])"})
   public void testGetBeginCycle_thenReturn4708585257725083992()
       throws UnsupportedEncodingException {
@@ -1506,7 +1542,8 @@ public class ContractStateDiffblueTest {
    * <p>Method under test: {@link ContractState#getEndCycle(byte[])}
    */
   @Test
-  @Category(MaintainedByDiffblue.class)
+  @Category(ContributionFromDiffblue.class)
+  @ManagedByDiffblue
   @MethodsUnderTest({"long ContractState.getEndCycle(byte[])"})
   public void testGetEndCycle_givenA_thenReturn4708585257725083992()
       throws UnsupportedEncodingException {
@@ -1555,7 +1592,8 @@ public class ContractStateDiffblueTest {
    * <p>Method under test: {@link ContractState#getEndCycle(byte[])}
    */
   @Test
-  @Category(MaintainedByDiffblue.class)
+  @Category(ContributionFromDiffblue.class)
+  @ManagedByDiffblue
   @MethodsUnderTest({"long ContractState.getEndCycle(byte[])"})
   public void testGetEndCycle_thenReturn4708585257725083992() throws UnsupportedEncodingException {
     // Arrange
@@ -1585,7 +1623,8 @@ public class ContractStateDiffblueTest {
    * <p>Method under test: {@link ContractState#getEndCycle(byte[])}
    */
   @Test
-  @Category(MaintainedByDiffblue.class)
+  @Category(ContributionFromDiffblue.class)
+  @ManagedByDiffblue
   @MethodsUnderTest({"long ContractState.getEndCycle(byte[])"})
   public void testGetEndCycle_thenReturnZero() throws UnsupportedEncodingException {
     // Arrange
@@ -1611,7 +1650,8 @@ public class ContractStateDiffblueTest {
    * <p>Method under test: {@link ContractState#getAccountVote(long, byte[])}
    */
   @Test
-  @Category(MaintainedByDiffblue.class)
+  @Category(ContributionFromDiffblue.class)
+  @ManagedByDiffblue
   @MethodsUnderTest({"AccountCapsule ContractState.getAccountVote(long, byte[])"})
   public void testGetAccountVote() throws UnsupportedEncodingException {
     // Arrange
@@ -1643,7 +1683,8 @@ public class ContractStateDiffblueTest {
    * <p>Method under test: {@link ContractState#getAccountVote(long, byte[])}
    */
   @Test
-  @Category(MaintainedByDiffblue.class)
+  @Category(ContributionFromDiffblue.class)
+  @ManagedByDiffblue
   @MethodsUnderTest({"AccountCapsule ContractState.getAccountVote(long, byte[])"})
   public void testGetAccountVote_givenA_thenReturnInstanceIsNull()
       throws UnsupportedEncodingException {
@@ -1689,7 +1730,8 @@ public class ContractStateDiffblueTest {
    * <p>Method under test: {@link ContractState#getDelegation(Key)}
    */
   @Test
-  @Category(MaintainedByDiffblue.class)
+  @Category(ContributionFromDiffblue.class)
+  @ManagedByDiffblue
   @MethodsUnderTest({"BytesCapsule ContractState.getDelegation(Key)"})
   public void testGetDelegation() throws UnsupportedEncodingException {
     // Arrange
@@ -1716,7 +1758,8 @@ public class ContractStateDiffblueTest {
    * <p>Method under test: {@link ContractState#getDelegation(Key)}
    */
   @Test
-  @Category(MaintainedByDiffblue.class)
+  @Category(ContributionFromDiffblue.class)
+  @ManagedByDiffblue
   @MethodsUnderTest({"BytesCapsule ContractState.getDelegation(Key)"})
   public void testGetDelegation2() throws UnsupportedEncodingException {
     // Arrange
@@ -1768,7 +1811,8 @@ public class ContractStateDiffblueTest {
    * <p>Method under test: {@link ContractState#getDelegatedResourceAccountIndex(byte[])}
    */
   @Test
-  @Category(MaintainedByDiffblue.class)
+  @Category(ContributionFromDiffblue.class)
+  @ManagedByDiffblue
   @MethodsUnderTest({
     "DelegatedResourceAccountIndexCapsule ContractState.getDelegatedResourceAccountIndex(byte[])"
   })
@@ -1806,7 +1850,8 @@ public class ContractStateDiffblueTest {
    * <p>Method under test: {@link ContractState#getDelegatedResourceAccountIndex(byte[])}
    */
   @Test
-  @Category(MaintainedByDiffblue.class)
+  @Category(ContributionFromDiffblue.class)
+  @ManagedByDiffblue
   @MethodsUnderTest({
     "DelegatedResourceAccountIndexCapsule ContractState.getDelegatedResourceAccountIndex(byte[])"
   })
@@ -1869,7 +1914,8 @@ public class ContractStateDiffblueTest {
    * <p>Method under test: {@link ContractState#addTotalNetWeight(long)}
    */
   @Test
-  @Category(MaintainedByDiffblue.class)
+  @Category(ContributionFromDiffblue.class)
+  @ManagedByDiffblue
   @MethodsUnderTest({"void ContractState.addTotalNetWeight(long)"})
   public void testAddTotalNetWeight() throws UnsupportedEncodingException {
     // Arrange
@@ -1895,7 +1941,8 @@ public class ContractStateDiffblueTest {
    * <p>Method under test: {@link ContractState#addTotalNetWeight(long)}
    */
   @Test
-  @Category(MaintainedByDiffblue.class)
+  @Category(ContributionFromDiffblue.class)
+  @ManagedByDiffblue
   @MethodsUnderTest({"void ContractState.addTotalNetWeight(long)"})
   public void testAddTotalNetWeight2() {
     // Arrange
@@ -1921,7 +1968,8 @@ public class ContractStateDiffblueTest {
    * <p>Method under test: {@link ContractState#addTotalEnergyWeight(long)}
    */
   @Test
-  @Category(MaintainedByDiffblue.class)
+  @Category(ContributionFromDiffblue.class)
+  @ManagedByDiffblue
   @MethodsUnderTest({"void ContractState.addTotalEnergyWeight(long)"})
   public void testAddTotalEnergyWeight() throws UnsupportedEncodingException {
     // Arrange
@@ -1947,7 +1995,8 @@ public class ContractStateDiffblueTest {
    * <p>Method under test: {@link ContractState#addTotalEnergyWeight(long)}
    */
   @Test
-  @Category(MaintainedByDiffblue.class)
+  @Category(ContributionFromDiffblue.class)
+  @ManagedByDiffblue
   @MethodsUnderTest({"void ContractState.addTotalEnergyWeight(long)"})
   public void testAddTotalEnergyWeight2() {
     // Arrange
@@ -1973,7 +2022,8 @@ public class ContractStateDiffblueTest {
    * <p>Method under test: {@link ContractState#addTotalTronPowerWeight(long)}
    */
   @Test
-  @Category(MaintainedByDiffblue.class)
+  @Category(ContributionFromDiffblue.class)
+  @ManagedByDiffblue
   @MethodsUnderTest({"void ContractState.addTotalTronPowerWeight(long)"})
   public void testAddTotalTronPowerWeight() throws UnsupportedEncodingException {
     // Arrange
@@ -1999,7 +2049,8 @@ public class ContractStateDiffblueTest {
    * <p>Method under test: {@link ContractState#addTotalTronPowerWeight(long)}
    */
   @Test
-  @Category(MaintainedByDiffblue.class)
+  @Category(ContributionFromDiffblue.class)
+  @ManagedByDiffblue
   @MethodsUnderTest({"void ContractState.addTotalTronPowerWeight(long)"})
   public void testAddTotalTronPowerWeight2() {
     // Arrange
@@ -2025,7 +2076,8 @@ public class ContractStateDiffblueTest {
    * <p>Method under test: {@link ContractState#saveTotalNetWeight(long)}
    */
   @Test
-  @Category(MaintainedByDiffblue.class)
+  @Category(ContributionFromDiffblue.class)
+  @ManagedByDiffblue
   @MethodsUnderTest({"void ContractState.saveTotalNetWeight(long)"})
   public void testSaveTotalNetWeight() {
     // Arrange
@@ -2044,7 +2096,8 @@ public class ContractStateDiffblueTest {
    * <p>Method under test: {@link ContractState#saveTotalNetWeight(long)}
    */
   @Test
-  @Category(MaintainedByDiffblue.class)
+  @Category(ContributionFromDiffblue.class)
+  @ManagedByDiffblue
   @MethodsUnderTest({"void ContractState.saveTotalNetWeight(long)"})
   public void testSaveTotalNetWeight2() {
     // Arrange
@@ -2081,7 +2134,8 @@ public class ContractStateDiffblueTest {
    * <p>Method under test: {@link ContractState#saveTotalEnergyWeight(long)}
    */
   @Test
-  @Category(MaintainedByDiffblue.class)
+  @Category(ContributionFromDiffblue.class)
+  @ManagedByDiffblue
   @MethodsUnderTest({"void ContractState.saveTotalEnergyWeight(long)"})
   public void testSaveTotalEnergyWeight() {
     // Arrange
@@ -2100,7 +2154,8 @@ public class ContractStateDiffblueTest {
    * <p>Method under test: {@link ContractState#saveTotalEnergyWeight(long)}
    */
   @Test
-  @Category(MaintainedByDiffblue.class)
+  @Category(ContributionFromDiffblue.class)
+  @ManagedByDiffblue
   @MethodsUnderTest({"void ContractState.saveTotalEnergyWeight(long)"})
   public void testSaveTotalEnergyWeight2() {
     // Arrange
@@ -2137,7 +2192,8 @@ public class ContractStateDiffblueTest {
    * <p>Method under test: {@link ContractState#saveTotalTronPowerWeight(long)}
    */
   @Test
-  @Category(MaintainedByDiffblue.class)
+  @Category(ContributionFromDiffblue.class)
+  @ManagedByDiffblue
   @MethodsUnderTest({"void ContractState.saveTotalTronPowerWeight(long)"})
   public void testSaveTotalTronPowerWeight() {
     // Arrange
@@ -2156,7 +2212,8 @@ public class ContractStateDiffblueTest {
    * <p>Method under test: {@link ContractState#saveTotalTronPowerWeight(long)}
    */
   @Test
-  @Category(MaintainedByDiffblue.class)
+  @Category(ContributionFromDiffblue.class)
+  @ManagedByDiffblue
   @MethodsUnderTest({"void ContractState.saveTotalTronPowerWeight(long)"})
   public void testSaveTotalTronPowerWeight2() {
     // Arrange
@@ -2197,7 +2254,8 @@ public class ContractStateDiffblueTest {
    * <p>Method under test: {@link ContractState#getTotalNetWeight()}
    */
   @Test
-  @Category(MaintainedByDiffblue.class)
+  @Category(ContributionFromDiffblue.class)
+  @ManagedByDiffblue
   @MethodsUnderTest({"long ContractState.getTotalNetWeight()"})
   public void testGetTotalNetWeight_thenReturn4708585257725083992()
       throws UnsupportedEncodingException {
@@ -2228,7 +2286,8 @@ public class ContractStateDiffblueTest {
    * <p>Method under test: {@link ContractState#getTotalNetWeight()}
    */
   @Test
-  @Category(MaintainedByDiffblue.class)
+  @Category(ContributionFromDiffblue.class)
+  @ManagedByDiffblue
   @MethodsUnderTest({"long ContractState.getTotalNetWeight()"})
   public void testGetTotalNetWeight_thenReturnZero() {
     // Arrange
@@ -2258,7 +2317,8 @@ public class ContractStateDiffblueTest {
    * <p>Method under test: {@link ContractState#getTotalEnergyWeight()}
    */
   @Test
-  @Category(MaintainedByDiffblue.class)
+  @Category(ContributionFromDiffblue.class)
+  @ManagedByDiffblue
   @MethodsUnderTest({"long ContractState.getTotalEnergyWeight()"})
   public void testGetTotalEnergyWeight_thenReturn4708585257725083992()
       throws UnsupportedEncodingException {
@@ -2289,7 +2349,8 @@ public class ContractStateDiffblueTest {
    * <p>Method under test: {@link ContractState#getTotalEnergyWeight()}
    */
   @Test
-  @Category(MaintainedByDiffblue.class)
+  @Category(ContributionFromDiffblue.class)
+  @ManagedByDiffblue
   @MethodsUnderTest({"long ContractState.getTotalEnergyWeight()"})
   public void testGetTotalEnergyWeight_thenReturnZero() {
     // Arrange
@@ -2319,7 +2380,8 @@ public class ContractStateDiffblueTest {
    * <p>Method under test: {@link ContractState#getTotalTronPowerWeight()}
    */
   @Test
-  @Category(MaintainedByDiffblue.class)
+  @Category(ContributionFromDiffblue.class)
+  @ManagedByDiffblue
   @MethodsUnderTest({"long ContractState.getTotalTronPowerWeight()"})
   public void testGetTotalTronPowerWeight_thenReturn4708585257725083992()
       throws UnsupportedEncodingException {
@@ -2350,7 +2412,8 @@ public class ContractStateDiffblueTest {
    * <p>Method under test: {@link ContractState#getTotalTronPowerWeight()}
    */
   @Test
-  @Category(MaintainedByDiffblue.class)
+  @Category(ContributionFromDiffblue.class)
+  @ManagedByDiffblue
   @MethodsUnderTest({"long ContractState.getTotalTronPowerWeight()"})
   public void testGetTotalTronPowerWeight_thenReturnZero() {
     // Arrange
@@ -2381,7 +2444,8 @@ public class ContractStateDiffblueTest {
    * <p>Method under test: {@link ContractState#getHeadSlot()}
    */
   @Test
-  @Category(MaintainedByDiffblue.class)
+  @Category(ContributionFromDiffblue.class)
+  @ManagedByDiffblue
   @MethodsUnderTest({"long ContractState.getHeadSlot()"})
   public void testGetHeadSlot_givenRepositoryImplGetHeadSlotReturnOne_thenReturnOne()
       throws UnsupportedEncodingException {
@@ -2425,7 +2489,8 @@ public class ContractStateDiffblueTest {
    * <p>Method under test: {@link ContractState#getSlotByTimestampMs(long)}
    */
   @Test
-  @Category(MaintainedByDiffblue.class)
+  @Category(ContributionFromDiffblue.class)
+  @ManagedByDiffblue
   @MethodsUnderTest({"long ContractState.getSlotByTimestampMs(long)"})
   public void testGetSlotByTimestampMs_thenReturnOne() throws UnsupportedEncodingException {
     // Arrange
