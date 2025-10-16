@@ -4,18 +4,18 @@
   },
   "run" : {
     "version" : "2025.09.01-44e352d-licensed",
-    "creationTimestamp" : "2025-10-06T16:14:31.502Z",
+    "creationTimestamp" : "2025-10-15T16:27:24.392Z",
     "command" : "dcover create --coverage-reports --upload http://localhost:8080 --project-name java-tron --name with-diffblue-tests",
-    "totalTime" : 965.577,
-    "environmentDetectionTime" : 0.538,
-    "indexingTime" : 0.33,
-    "entryPointsTime" : 0.528,
-    "generationTime" : 40632.492,
-    "timeToFirstTest" : 32645.791,
-    "timeToLastTest" : 41151.641,
-    "indexQueryTime" : 10.222,
-    "verificationTime" : 273.573,
-    "validationTime" : 21.839
+    "totalTime" : 956.361,
+    "environmentDetectionTime" : 0.651,
+    "indexingTime" : 0.309,
+    "entryPointsTime" : 0.64,
+    "generationTime" : 40724.782,
+    "timeToFirstTest" : 32764.209,
+    "timeToLastTest" : 41240.057,
+    "indexQueryTime" : 9.471,
+    "verificationTime" : 274.422,
+    "validationTime" : 21.638
   },
   "codes" : {
     "R000" : "Success",
@@ -39,9 +39,9 @@
   "summary" : {
     "classesCount" : 42,
     "methodsCount" : 437,
-    "cumulativeDiffblueTestCount" : 547,
+    "cumulativeDiffblueTestCount" : 546,
     "cumulativeManualTestCount" : 0,
-    "completeTestCount" : 547,
+    "completeTestCount" : 546,
     "incompleteTestCount" : 0,
     "skeletonTestCount" : 0,
     "totalPhysicalLineCount" : 3727,
@@ -71,14 +71,14 @@
       "W002" : 17
     },
     "perTestOutcome" : {
-      "R000" : 547
+      "R000" : 546
     },
     "perTestValidation" : {
-      "V000" : 547,
+      "V000" : 546,
       "V003" : 3
     },
     "warnings" : {
-      "W002" : 99
+      "W002" : 96
     }
   },
   "classes" : {
@@ -119,7 +119,7 @@
     },
     "org.tron.common.crypto.ECKey" : {
       "methodsCount" : 51,
-      "completeTestCount" : 112,
+      "completeTestCount" : 111,
       "incompleteTestCount" : 0,
       "perMethodTestability" : {
         "T000" : 42,
@@ -137,7 +137,7 @@
         "W002" : 5
       },
       "perTestOutcome" : {
-        "R000" : 112
+        "R000" : 111
       },
       "warnings" : {
         "W002" : 32
@@ -511,7 +511,7 @@
         "R000" : 96
       },
       "warnings" : {
-        "W002" : 57
+        "W002" : 54
       }
     },
     "org.tron.common.crypto.sm2.SM2$SM2Signature" : {
@@ -1302,12 +1302,12 @@
       ]
     },
     "org.tron.common.crypto.ECKey.<init>:(Ljava/security/Provider;Ljava/security/SecureRandom;)V" : {
-      "completeTestCount" : 3,
+      "completeTestCount" : 2,
       "incompleteTestCount" : 0,
       "perMethodTestability" : "T000",
       "perMethodOutcome" : "R000",
       "perTestOutcome" : {
-        "R000" : 3
+        "R000" : 2
       },
       "lineNumbers" : [
         127,
@@ -4277,9 +4277,6 @@
       "perTestOutcome" : {
         "R000" : 1
       },
-      "warnings" : {
-        "W002" : 1
-      },
       "lineNumbers" : [
         948,
         949,
@@ -4295,6 +4292,9 @@
       "perMethodOutcome" : "R000",
       "perTestOutcome" : {
         "R000" : 1
+      },
+      "warnings" : {
+        "W002" : 1
       },
       "lineNumbers" : [
         406
@@ -4612,7 +4612,7 @@
         "R000" : 1
       },
       "warnings" : {
-        "W002" : 6
+        "W002" : 4
       },
       "lineNumbers" : [
         548,
@@ -4641,7 +4641,7 @@
         "R000" : 1
       },
       "warnings" : {
-        "W002" : 8
+        "W002" : 7
       },
       "lineNumbers" : [
         579,

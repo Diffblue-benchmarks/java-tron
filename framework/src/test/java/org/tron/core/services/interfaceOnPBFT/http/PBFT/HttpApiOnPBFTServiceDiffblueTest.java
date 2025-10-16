@@ -180,8 +180,9 @@ public class HttpApiOnPBFTServiceDiffblueTest {
    * Test {@link HttpApiOnPBFTService#start()}.
    *
    * <ul>
-   *   <li>Given {@link ScanShieldedTRC20NotesByOvkOnPBFTServlet} {@link
-   *       ScanShieldedTRC20NotesByOvkOnPBFTServlet#init(ServletConfig)} does nothing.
+   *   <li>Given {@link ScanShieldedTRC20NotesByIvkOnPBFTServlet} {@link
+   *       ScanShieldedTRC20NotesByIvkOnPBFTServlet#init(ServletConfig)} throw {@link
+   *       RuntimeException#RuntimeException()}.
    * </ul>
    *
    * <p>Method under test: {@link HttpApiOnPBFTService#start()}
@@ -190,7 +191,7 @@ public class HttpApiOnPBFTServiceDiffblueTest {
   @Category(ContributionFromDiffblue.class)
   @ManagedByDiffblue
   @MethodsUnderTest({"void HttpApiOnPBFTService.start()"})
-  public void testStart_givenScanShieldedTRC20NotesByOvkOnPBFTServletInitDoesNothing()
+  public void testStart_givenScanShieldedTRC20NotesByIvkOnPBFTServletInitThrowRuntimeException()
       throws ServletException {
     // Arrange
     doNothing().when(getAccountOnPBFTServlet).init(Mockito.<ServletConfig>any());
@@ -245,7 +246,9 @@ public class HttpApiOnPBFTServiceDiffblueTest {
     doNothing().when(scanAndMarkNoteByIvkOnPBFTServlet).init(Mockito.<ServletConfig>any());
     doNothing().when(scanNoteByIvkOnPBFTServlet).init(Mockito.<ServletConfig>any());
     doNothing().when(scanNoteByOvkOnPBFTServlet).init(Mockito.<ServletConfig>any());
-    doNothing().when(scanShieldedTRC20NotesByIvkOnPBFTServlet).init(Mockito.<ServletConfig>any());
+    doThrow(new RuntimeException())
+        .when(scanShieldedTRC20NotesByIvkOnPBFTServlet)
+        .init(Mockito.<ServletConfig>any());
     doNothing().when(scanShieldedTRC20NotesByOvkOnPBFTServlet).init(Mockito.<ServletConfig>any());
     doThrow(new RuntimeException())
         .when(triggerConstantContractOnPBFTServlet)
@@ -380,7 +383,9 @@ public class HttpApiOnPBFTServiceDiffblueTest {
     doThrow(new RuntimeException())
         .when(scanShieldedTRC20NotesByOvkOnPBFTServlet)
         .init(Mockito.<ServletConfig>any());
-    doNothing().when(triggerConstantContractOnPBFTServlet).init(Mockito.<ServletConfig>any());
+    doThrow(new RuntimeException())
+        .when(triggerConstantContractOnPBFTServlet)
+        .init(Mockito.<ServletConfig>any());
 
     // Act
     httpApiOnPBFTService.start();
@@ -441,9 +446,7 @@ public class HttpApiOnPBFTServiceDiffblueTest {
    * Test {@link HttpApiOnPBFTService#start()}.
    *
    * <ul>
-   *   <li>Given {@link ScanShieldedTRC20NotesByOvkOnPBFTServlet} {@link
-   *       ScanShieldedTRC20NotesByOvkOnPBFTServlet#init(ServletConfig)} throw {@link
-   *       RuntimeException#RuntimeException()}.
+   *   <li>Then calls {@link EstimateEnergyOnPBFTServlet#init(ServletConfig)}.
    * </ul>
    *
    * <p>Method under test: {@link HttpApiOnPBFTService#start()}
@@ -452,8 +455,7 @@ public class HttpApiOnPBFTServiceDiffblueTest {
   @Category(ContributionFromDiffblue.class)
   @ManagedByDiffblue
   @MethodsUnderTest({"void HttpApiOnPBFTService.start()"})
-  public void testStart_givenScanShieldedTRC20NotesByOvkOnPBFTServletInitThrowRuntimeException2()
-      throws ServletException {
+  public void testStart_thenCallsInit() throws ServletException {
     // Arrange
     doNothing().when(getAccountOnPBFTServlet).init(Mockito.<ServletConfig>any());
     doNothing().when(estimateEnergyOnPBFTServlet).init(Mockito.<ServletConfig>any());
@@ -508,9 +510,7 @@ public class HttpApiOnPBFTServiceDiffblueTest {
     doNothing().when(scanNoteByIvkOnPBFTServlet).init(Mockito.<ServletConfig>any());
     doNothing().when(scanNoteByOvkOnPBFTServlet).init(Mockito.<ServletConfig>any());
     doNothing().when(scanShieldedTRC20NotesByIvkOnPBFTServlet).init(Mockito.<ServletConfig>any());
-    doThrow(new RuntimeException())
-        .when(scanShieldedTRC20NotesByOvkOnPBFTServlet)
-        .init(Mockito.<ServletConfig>any());
+    doNothing().when(scanShieldedTRC20NotesByOvkOnPBFTServlet).init(Mockito.<ServletConfig>any());
     doThrow(new RuntimeException())
         .when(triggerConstantContractOnPBFTServlet)
         .init(Mockito.<ServletConfig>any());

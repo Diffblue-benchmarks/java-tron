@@ -88,7 +88,7 @@ public class PeerStatusCheckDiffblueTest {
    * Test {@link PeerStatusCheck#statusCheck()}.
    *
    * <ul>
-   *   <li>Given {@link HashMap#HashMap()} {@link BlockId#BlockId()} is {@code -1120190104}.
+   *   <li>Given {@link HashMap#HashMap()} {@link BlockId#BlockId()} is {@code -341691138}.
    *   <li>Then calls {@link PeerConnection#disconnect(ReasonCode)}.
    * </ul>
    *
@@ -98,10 +98,10 @@ public class PeerStatusCheckDiffblueTest {
   @Category(ContributionFromDiffblue.class)
   @ManagedByDiffblue
   @MethodsUnderTest({"void PeerStatusCheck.statusCheck()"})
-  public void testStatusCheck_givenHashMapBlockIdIs1120190104_thenCallsDisconnect() {
+  public void testStatusCheck_givenHashMapBlockIdIs341691138_thenCallsDisconnect() {
     // Arrange
     HashMap<BlockId, Long> blockIdResultLongMap = new HashMap<>();
-    blockIdResultLongMap.put(new BlockId(), -1120190104L);
+    blockIdResultLongMap.put(new BlockId(), -341691138L);
 
     PeerConnection peerConnection = mock(PeerConnection.class);
     when(peerConnection.getInetAddress()).thenReturn(mock(InetAddress.class));
@@ -145,7 +145,7 @@ public class PeerStatusCheckDiffblueTest {
     // Arrange
     HashMap<BlockId, Long> blockIdResultLongMap = new HashMap<>();
     blockIdResultLongMap.put(new BlockId(), Long.MAX_VALUE);
-    blockIdResultLongMap.putIfAbsent(new BlockId(), -1120190104L);
+    blockIdResultLongMap.putIfAbsent(new BlockId(), -341691138L);
 
     PeerConnection peerConnection = mock(PeerConnection.class);
     when(peerConnection.getBlockBothHaveUpdateTime()).thenReturn(Long.MAX_VALUE);
@@ -186,7 +186,7 @@ public class PeerStatusCheckDiffblueTest {
     // Arrange
     HashMap<BlockId, Long> blockIdResultLongMap = new HashMap<>();
     blockIdResultLongMap.put(null, Long.MAX_VALUE);
-    blockIdResultLongMap.putIfAbsent(new BlockId(), -1120190104L);
+    blockIdResultLongMap.putIfAbsent(new BlockId(), -341691138L);
 
     PeerConnection peerConnection = mock(PeerConnection.class);
     when(peerConnection.getInetAddress()).thenReturn(mock(InetAddress.class));

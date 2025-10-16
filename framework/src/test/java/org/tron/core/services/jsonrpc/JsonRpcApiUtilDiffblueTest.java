@@ -389,6 +389,31 @@ public class JsonRpcApiUtilDiffblueTest {
   }
 
   /**
+   * Test {@link JsonRpcApiUtil#getTransactionAmount(Contract, String, Wallet)} with {@code
+   * contract}, {@code hash}, {@code wallet}.
+   *
+   * <ul>
+   *   <li>When {@code null}.
+   * </ul>
+   *
+   * <p>Method under test: {@link JsonRpcApiUtil#getTransactionAmount(Protocol.Transaction.Contract,
+   * String, Wallet)}
+   */
+  @Test
+  @Category(ContributionFromDiffblue.class)
+  @ManagedByDiffblue
+  @MethodsUnderTest({
+    "long JsonRpcApiUtil.getTransactionAmount(Protocol.Transaction.Contract, String, Wallet)"
+  })
+  public void testGetTransactionAmountWithContractHashWallet_whenNull() {
+    // Arrange and Act
+    long actualTransactionAmount = JsonRpcApiUtil.getTransactionAmount(null, "Hash", new Wallet());
+
+    // Assert
+    assertEquals(0L, actualTransactionAmount);
+  }
+
+  /**
    * Test {@link JsonRpcApiUtil#getAmountFromTransactionInfo(String, ContractType,
    * TransactionInfo)}.
    *

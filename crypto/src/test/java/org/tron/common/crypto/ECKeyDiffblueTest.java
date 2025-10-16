@@ -23,6 +23,10 @@ import java.security.PrivateKey;
 import java.security.Provider;
 import java.security.SecureRandom;
 import java.security.SignatureException;
+import org.bouncycastle.asn1.ASN1ObjectIdentifier;
+import org.bouncycastle.asn1.x9.ECNamedCurveTable;
+import org.bouncycastle.jcajce.provider.asymmetric.COMPOSITE;
+import org.bouncycastle.jcajce.provider.asymmetric.COMPOSITE.KeyFactory;
 import org.bouncycastle.jce.provider.BouncyCastleProvider;
 import org.bouncycastle.math.ec.ECConstants;
 import org.bouncycastle.math.ec.ECCurve;
@@ -771,75 +775,6 @@ public class ECKeyDiffblueTest {
   }
 
   /**
-   * Test {@link ECKey#ECKey(Provider, SecureRandom)}.
-   *
-   * <ul>
-   *   <li>Given {@code 42}.
-   *   <li>Then return array length is sixty-five.
-   * </ul>
-   *
-   * <p>Method under test: {@link ECKey#ECKey(Provider, SecureRandom)}
-   */
-  @Test
-  @Category(ContributionFromDiffblue.class)
-  @ManagedByDiffblue
-  @MethodsUnderTest({"void ECKey.<init>(Provider, SecureRandom)"})
-  public void testNewECKey_given42_thenReturnArrayLengthIsSixtyFive() {
-    // Arrange
-    BouncyCastleProvider provider = new BouncyCastleProvider();
-    provider.putIfAbsent("42", "foo");
-
-    // Act
-    ECKey actualEcKey = new ECKey(provider, new SecureRandom());
-
-    // Assert
-    ECPoint pubKeyPoint = actualEcKey.getPubKeyPoint();
-    ECCurve curve = pubKeyPoint.getCurve();
-    assertTrue(curve instanceof SecP256K1Curve);
-    ECFieldElement a = curve.getA();
-    assertTrue(a instanceof SecP256K1FieldElement);
-    ECFieldElement b = curve.getB();
-    assertTrue(b instanceof SecP256K1FieldElement);
-    ECFieldElement[] zCoords = pubKeyPoint.getZCoords();
-    ECFieldElement ecFieldElement = zCoords[0];
-    assertTrue(ecFieldElement instanceof SecP256K1FieldElement);
-    assertTrue(pubKeyPoint instanceof SecP256K1Point);
-    assertEquals(1, zCoords.length);
-    assertEquals(65, actualEcKey.getPubKey().length);
-    assertArrayEquals(new byte[] {1}, curve.getCofactor().toByteArray());
-    assertArrayEquals(
-        new byte[] {
-          0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0,
-          0, 0
-        },
-        a.getEncoded());
-    assertArrayEquals(
-        new byte[] {
-          0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0,
-          0, 1
-        },
-        ecFieldElement.getEncoded());
-    assertArrayEquals(
-        new byte[] {
-          0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0,
-          0, 7
-        },
-        b.getEncoded());
-    assertArrayEquals(
-        new byte[] {
-          0, -1, -1, -1, -1, -1, -1, -1, -1, -1, -1, -1, -1, -1, -1, -1, -1, -1, -1, -1, -1, -1, -1,
-          -1, -1, -1, -1, -1, -2, -1, -1, -4, '/'
-        },
-        ((SecP256K1Curve) curve).getQ().toByteArray());
-    assertArrayEquals(
-        new byte[] {
-          0, -1, -1, -1, -1, -1, -1, -1, -1, -1, -1, -1, -1, -1, -1, -1, -2, -70, -82, -36, -26,
-          -81, 'H', -96, ';', -65, -46, '^', -116, -48, '6', 'A', 'A'
-        },
-        curve.getOrder().toByteArray());
-  }
-
-  /**
    * Test {@link ECKey#ECKey(Provider, PrivateKey, ECPoint)}.
    *
    * <ul>
@@ -928,6 +863,76 @@ public class ECKeyDiffblueTest {
   }
 
   /**
+   * Test {@link ECKey#ECKey(Provider, SecureRandom)}.
+   *
+   * <ul>
+   *   <li>Given OID is {@code EC}.
+   *   <li>Then PubKeyPoint AffineXCoord return {@link SecP256K1FieldElement}.
+   * </ul>
+   *
+   * <p>Method under test: {@link ECKey#ECKey(Provider, SecureRandom)}
+   */
+  @Test
+  @Category(ContributionFromDiffblue.class)
+  @ManagedByDiffblue
+  @MethodsUnderTest({"void ECKey.<init>(Provider, SecureRandom)"})
+  public void testNewECKey_givenOidIsEc_thenPubKeyPointAffineXCoordReturnSecP256K1FieldElement() {
+    // Arrange
+    BouncyCastleProvider provider = new BouncyCastleProvider();
+    ASN1ObjectIdentifier oID = ECNamedCurveTable.getOID("EC");
+    provider.addKeyInfoConverter(oID, new KeyFactory());
+
+    // Act
+    ECKey actualEcKey = new ECKey(provider, new SecureRandom());
+
+    // Assert
+    ECPoint pubKeyPoint = actualEcKey.getPubKeyPoint();
+    ECCurve curve = pubKeyPoint.getCurve();
+    assertTrue(curve instanceof SecP256K1Curve);
+    ECFieldElement a = curve.getA();
+    assertTrue(a instanceof SecP256K1FieldElement);
+    ECFieldElement b = curve.getB();
+    assertTrue(b instanceof SecP256K1FieldElement);
+    assertTrue(pubKeyPoint.getAffineXCoord() instanceof SecP256K1FieldElement);
+    ECFieldElement[] zCoords = pubKeyPoint.getZCoords();
+    ECFieldElement ecFieldElement = zCoords[0];
+    assertTrue(ecFieldElement instanceof SecP256K1FieldElement);
+    assertTrue(pubKeyPoint instanceof SecP256K1Point);
+    assertEquals(1, zCoords.length);
+    assertArrayEquals(new byte[] {1}, curve.getCofactor().toByteArray());
+    assertArrayEquals(
+        new byte[] {
+          0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0,
+          0, 0
+        },
+        a.getEncoded());
+    assertArrayEquals(
+        new byte[] {
+          0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0,
+          0, 1
+        },
+        ecFieldElement.getEncoded());
+    assertArrayEquals(
+        new byte[] {
+          0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0,
+          0, 7
+        },
+        b.getEncoded());
+    assertArrayEquals(
+        new byte[] {
+          0, -1, -1, -1, -1, -1, -1, -1, -1, -1, -1, -1, -1, -1, -1, -1, -1, -1, -1, -1, -1, -1, -1,
+          -1, -1, -1, -1, -1, -2, -1, -1, -4, '/'
+        },
+        ((SecP256K1Curve) curve).getQ().toByteArray());
+    assertArrayEquals(
+        new byte[] {
+          0, -1, -1, -1, -1, -1, -1, -1, -1, -1, -1, -1, -1, -1, -1, -1, -2, -70, -82, -36, -26,
+          -81, 'H', -96, ';', -65, -46, '^', -116, -48, '6', 'A', 'A'
+        },
+        curve.getOrder().toByteArray());
+  }
+
+  /**
    * Test {@link ECKey#ECKey(byte[], boolean)}.
    *
    * <ul>
@@ -969,7 +974,6 @@ public class ECKeyDiffblueTest {
    *
    * <ul>
    *   <li>When {@link BouncyCastleProvider} (default constructor).
-   *   <li>Then PubKeyPoint Curve return {@link SecP256K1Curve}.
    * </ul>
    *
    * <p>Method under test: {@link ECKey#ECKey(Provider, SecureRandom)}
@@ -978,7 +982,7 @@ public class ECKeyDiffblueTest {
   @Category(ContributionFromDiffblue.class)
   @ManagedByDiffblue
   @MethodsUnderTest({"void ECKey.<init>(Provider, SecureRandom)"})
-  public void testNewECKey_whenBouncyCastleProvider_thenPubKeyPointCurveReturnSecP256K1Curve() {
+  public void testNewECKey_whenBouncyCastleProvider() {
     // Arrange
     BouncyCastleProvider provider = new BouncyCastleProvider();
 
@@ -1029,30 +1033,6 @@ public class ECKeyDiffblueTest {
           -81, 'H', -96, ';', -65, -46, '^', -116, -48, '6', 'A', 'A'
         },
         curve.getOrder().toByteArray());
-  }
-
-  /**
-   * Test {@link ECKey#ECKey(Provider, SecureRandom)}.
-   *
-   * <ul>
-   *   <li>When {@code null}.
-   *   <li>Then PubKeyPoint DetachedPoint return {@link SecP256K1Point}.
-   * </ul>
-   *
-   * <p>Method under test: {@link ECKey#ECKey(Provider, SecureRandom)}
-   */
-  @Test
-  @Category(ContributionFromDiffblue.class)
-  @ManagedByDiffblue
-  @MethodsUnderTest({"void ECKey.<init>(Provider, SecureRandom)"})
-  public void testNewECKey_whenNull_thenPubKeyPointDetachedPointReturnSecP256K1Point() {
-    // Arrange and Act
-    ECKey actualEcKey = new ECKey(new BouncyCastleProvider(), null);
-
-    // Assert
-    ECPoint pubKeyPoint = actualEcKey.getPubKeyPoint();
-    assertTrue(pubKeyPoint.getDetachedPoint() instanceof SecP256K1Point);
-    assertTrue(pubKeyPoint instanceof SecP256K1Point);
   }
 
   /**

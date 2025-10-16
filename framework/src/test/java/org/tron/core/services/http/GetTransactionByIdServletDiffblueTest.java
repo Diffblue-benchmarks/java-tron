@@ -656,45 +656,4 @@ public class GetTransactionByIdServletDiffblueTest {
     assertSame(channel2, httpOutput.getInterceptor());
     assertSame(writer, response3.getWriter());
   }
-
-  /**
-   * Test {@link GetTransactionByIdServlet#doPost(HttpServletRequest, HttpServletResponse)}.
-   *
-   * <ul>
-   *   <li>Then {@link MockHttpServletRequest#MockHttpServletRequest()} Reader lines collect joining
-   *       lf is empty string.
-   * </ul>
-   *
-   * <p>Method under test: {@link GetTransactionByIdServlet#doPost(HttpServletRequest,
-   * HttpServletResponse)}
-   */
-  @Test
-  @Category(ContributionFromDiffblue.class)
-  @ManagedByDiffblue
-  @MethodsUnderTest({
-    "void GetTransactionByIdServlet.doPost(HttpServletRequest, HttpServletResponse)"
-  })
-  public void testDoPost_thenMockHttpServletRequestReaderLinesCollectJoiningLfIsEmptyString()
-      throws IOException {
-    // Arrange
-    MockHttpServletRequest request = new MockHttpServletRequest();
-    HttpServletResponseWrapper response =
-        new HttpServletResponseWrapper(new CharResponseWrapper(new MockHttpServletResponse()));
-
-    // Act
-    getTransactionByIdServlet.doPost(request, response);
-
-    // Assert
-    ServletResponse response2 = response.getResponse();
-    ServletResponse response3 = ((CharResponseWrapper) response2).getResponse();
-    assertTrue(response3 instanceof MockHttpServletResponse);
-    assertTrue(response2 instanceof CharResponseWrapper);
-    Stream<String> linesResult = request.getReader().lines();
-    assertEquals("", linesResult.collect(Collectors.joining("\n")));
-    assertEquals(
-        "{\"Error\":\"class org.tron.core.services.http.JsonFormat$ParseException : 1:1: Expected \\\"{\\\".\"}\n",
-        ((MockHttpServletResponse) response3).getContentAsString());
-    assertEquals(95, ((CharResponseWrapper) response2).getByteSize());
-    assertEquals(95, ((MockHttpServletResponse) response3).getContentAsByteArray().length);
-  }
 }

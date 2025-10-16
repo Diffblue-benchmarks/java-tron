@@ -2,6 +2,9 @@ package org.tron.common.logsfilter.capsule;
 
 import static org.junit.Assert.assertEquals;
 import static org.junit.Assert.assertSame;
+import static org.mockito.Mockito.mock;
+import static org.mockito.Mockito.verify;
+import static org.mockito.Mockito.when;
 import com.diffblue.cover.annotations.ContributionFromDiffblue;
 import com.diffblue.cover.annotations.ManagedByDiffblue;
 import com.diffblue.cover.annotations.MethodsUnderTest;
@@ -60,5 +63,65 @@ public class ContractLogTriggerCapsuleDiffblueTest {
     // Assert
     assertEquals(
         1L, contractLogTriggerCapsule.getContractLogTrigger().getLatestSolidifiedBlockNumber());
+  }
+
+  /**
+   * Test {@link ContractLogTriggerCapsule#processTrigger()}.
+   *
+   * <ul>
+   *   <li>Given {@link ContractLogTrigger} {@link ContractLogTrigger#getBlockNumber()} return
+   *       {@link Long#MAX_VALUE}.
+   * </ul>
+   *
+   * <p>Method under test: {@link ContractLogTriggerCapsule#processTrigger()}
+   */
+  @Test
+  @Category(ContributionFromDiffblue.class)
+  @ManagedByDiffblue
+  @MethodsUnderTest({"void ContractLogTriggerCapsule.processTrigger()"})
+  public void testProcessTrigger_givenContractLogTriggerGetBlockNumberReturnMax_value() {
+    // Arrange
+    ContractLogTrigger contractLogTrigger = mock(ContractLogTrigger.class);
+    when(contractLogTrigger.getBlockNumber()).thenReturn(Long.MAX_VALUE);
+
+    ContractLogTriggerCapsule contractLogTriggerCapsule =
+        new ContractLogTriggerCapsule(mock(ContractLogTrigger.class));
+    contractLogTriggerCapsule.setContractLogTrigger(contractLogTrigger);
+
+    // Act
+    contractLogTriggerCapsule.processTrigger();
+
+    // Assert
+    verify(contractLogTrigger).getBlockNumber();
+  }
+
+  /**
+   * Test {@link ContractLogTriggerCapsule#processTrigger()}.
+   *
+   * <ul>
+   *   <li>Given {@link ContractLogTrigger} {@link ContractLogTrigger#getBlockNumber()} return minus
+   *       one.
+   * </ul>
+   *
+   * <p>Method under test: {@link ContractLogTriggerCapsule#processTrigger()}
+   */
+  @Test
+  @Category(ContributionFromDiffblue.class)
+  @ManagedByDiffblue
+  @MethodsUnderTest({"void ContractLogTriggerCapsule.processTrigger()"})
+  public void testProcessTrigger_givenContractLogTriggerGetBlockNumberReturnMinusOne() {
+    // Arrange
+    ContractLogTrigger contractLogTrigger = mock(ContractLogTrigger.class);
+    when(contractLogTrigger.getBlockNumber()).thenReturn(-1L);
+
+    ContractLogTriggerCapsule contractLogTriggerCapsule =
+        new ContractLogTriggerCapsule(mock(ContractLogTrigger.class));
+    contractLogTriggerCapsule.setContractLogTrigger(contractLogTrigger);
+
+    // Act
+    contractLogTriggerCapsule.processTrigger();
+
+    // Assert
+    verify(contractLogTrigger).getBlockNumber();
   }
 }

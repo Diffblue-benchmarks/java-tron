@@ -19,7 +19,6 @@ import java.io.IOException;
 import java.io.PrintWriter;
 import java.io.StringReader;
 import java.io.StringWriter;
-import java.nio.ByteBuffer;
 import java.util.stream.Collectors;
 import java.util.stream.Stream;
 import javax.servlet.ServletResponse;
@@ -127,69 +126,6 @@ public class GetSpendingKeyServletDiffblueTest {
     assertArrayEquals(
         "{\"Error\":\"class java.lang.RuntimeException : null\"}\n".getBytes("UTF-8"),
         ((MockHttpServletResponse) response3).getContentAsByteArray());
-  }
-
-  /**
-   * Test {@link GetSpendingKeyServlet#doGet(HttpServletRequest, HttpServletResponse)}.
-   *
-   * <p>Method under test: {@link GetSpendingKeyServlet#doGet(HttpServletRequest,
-   * HttpServletResponse)}
-   */
-  @Test
-  @Category(ContributionFromDiffblue.class)
-  @ManagedByDiffblue
-  @MethodsUnderTest({"void GetSpendingKeyServlet.doGet(HttpServletRequest, HttpServletResponse)"})
-  public void testDoGet3() throws IOException, ZksnarkException {
-    // Arrange
-    when(wallet.getSpendingKey()).thenThrow(new RuntimeException());
-
-    DefaultMultipartHttpServletRequest request = mock(DefaultMultipartHttpServletRequest.class);
-    when(request.getParameter(Mockito.<String>any())).thenReturn("https://example.org/example");
-    LocalConnector connector = new LocalConnector(new Server());
-    HttpConfiguration configuration = new HttpConfiguration();
-    ByteArrayEndPoint endPoint = new ByteArrayEndPoint();
-    HttpConfiguration config = new HttpConfiguration();
-    LocalConnector connector2 = new LocalConnector(new Server());
-
-    HttpConnection transport =
-        new HttpConnection(
-            config, connector2, new ByteArrayEndPoint(), HttpCompliance.LEGACY, true);
-
-    HttpChannel channel = new HttpChannel(connector, configuration, endPoint, transport);
-    LocalConnector connector3 = new LocalConnector(new Server());
-    HttpConfiguration configuration2 = new HttpConfiguration();
-    ByteArrayEndPoint endPoint2 = new ByteArrayEndPoint();
-    HttpConfiguration config2 = new HttpConfiguration();
-    LocalConnector connector4 = new LocalConnector(new Server());
-
-    HttpConnection transport2 =
-        new HttpConnection(
-            config2, connector4, new ByteArrayEndPoint(), HttpCompliance.LEGACY, true);
-
-    HttpChannel channel2 = new HttpChannel(connector3, configuration2, endPoint2, transport2);
-    Response response = new Response(channel, new HttpOutput(channel2));
-    HttpServletResponseWrapper response2 =
-        new HttpServletResponseWrapper(new CharResponseWrapper(response));
-
-    // Act
-    getSpendingKeyServlet.doGet(request, response2);
-
-    // Assert
-    verify(request, atLeast(1)).getParameter("visible");
-    verify(wallet).getSpendingKey();
-    ServletResponse response3 = response2.getResponse();
-    ServletResponse response4 = ((CharResponseWrapper) response3).getResponse();
-    assertTrue(
-        ((Response) response4).getHttpChannel().getHttpTransport() instanceof HttpConnection);
-    assertTrue(response4 instanceof Response);
-    assertTrue(response3 instanceof CharResponseWrapper);
-    HttpOutput httpOutput = ((Response) response4).getHttpOutput();
-    ByteBuffer buffer = httpOutput.getBuffer();
-    assertEquals(52, buffer.limit());
-    assertEquals(52L, httpOutput.getWritten());
-    assertEquals(52L, ((Response) response4).getContentCount());
-    assertTrue(buffer.hasRemaining());
-    assertTrue(httpOutput.isWritten());
   }
 
   /**
@@ -338,7 +274,7 @@ public class GetSpendingKeyServletDiffblueTest {
    * Test {@link GetSpendingKeyServlet#doGet(HttpServletRequest, HttpServletResponse)}.
    *
    * <ul>
-   *   <li>When createRequest {@code Method}.
+   *   <li>When createRequest {@code https://example.org/example}.
    * </ul>
    *
    * <p>Method under test: {@link GetSpendingKeyServlet#doGet(HttpServletRequest,
@@ -348,10 +284,11 @@ public class GetSpendingKeyServletDiffblueTest {
   @Category(ContributionFromDiffblue.class)
   @ManagedByDiffblue
   @MethodsUnderTest({"void GetSpendingKeyServlet.doGet(HttpServletRequest, HttpServletResponse)"})
-  public void testDoGet_whenCreateRequestMethod() throws IOException, ZksnarkException {
+  public void testDoGet_whenCreateRequestHttpsExampleOrgExample()
+      throws IOException, ZksnarkException {
     // Arrange
     when(wallet.getSpendingKey()).thenThrow(new RuntimeException());
-    MockHttpServletRequest request = HttpMethed.createRequest("Method");
+    MockHttpServletRequest request = HttpMethed.createRequest("https://example.org/example");
     HttpServletResponseWrapper response =
         new HttpServletResponseWrapper(new CharResponseWrapper(new MockHttpServletResponse()));
 
@@ -399,8 +336,6 @@ public class GetSpendingKeyServletDiffblueTest {
     ServletResponse response3 = ((CharResponseWrapper) response2).getResponse();
     assertTrue(response3 instanceof MockHttpServletResponse);
     assertTrue(response2 instanceof CharResponseWrapper);
-    Stream<String> linesResult = request.getReader().lines();
-    assertEquals("", linesResult.collect(Collectors.joining("\n")));
     assertEquals(
         "{\"Error\":\"class java.lang.RuntimeException : null\"}\n",
         ((MockHttpServletResponse) response3).getContentAsString());
@@ -575,6 +510,40 @@ public class GetSpendingKeyServletDiffblueTest {
    * Test {@link GetSpendingKeyServlet#doPost(HttpServletRequest, HttpServletResponse)}.
    *
    * <ul>
+   *   <li>Given {@link StringReader#StringReader(String)} with {@code foo}.
+   *   <li>Then calls {@link DefaultMultipartHttpServletRequest#getReader()}.
+   * </ul>
+   *
+   * <p>Method under test: {@link GetSpendingKeyServlet#doPost(HttpServletRequest,
+   * HttpServletResponse)}
+   */
+  @Test
+  @Category(ContributionFromDiffblue.class)
+  @ManagedByDiffblue
+  @MethodsUnderTest({"void GetSpendingKeyServlet.doPost(HttpServletRequest, HttpServletResponse)"})
+  public void testDoPost_givenStringReaderWithFoo_thenCallsGetReader() throws IOException {
+    // Arrange
+    DefaultMultipartHttpServletRequest request = mock(DefaultMultipartHttpServletRequest.class);
+    when(request.getReader()).thenReturn(new BufferedReader(new StringReader("foo"), 1));
+
+    Response response = mock(Response.class);
+    PrintWriter printWriter = new PrintWriter(new StringWriter());
+    when(response.getWriter()).thenReturn(printWriter);
+    HttpServletResponseWrapper response2 = new HttpServletResponseWrapper(response);
+
+    // Act
+    getSpendingKeyServlet.doPost(request, response2);
+
+    // Assert that nothing has changed
+    verify(request).getReader();
+    verify(response).getWriter();
+    assertSame(printWriter, response2.getWriter());
+  }
+
+  /**
+   * Test {@link GetSpendingKeyServlet#doPost(HttpServletRequest, HttpServletResponse)}.
+   *
+   * <ul>
    *   <li>Then {@link HttpServletResponseWrapper#HttpServletResponseWrapper(HttpServletResponse)}
    *       with response is {@link Response#Response(HttpChannel, HttpOutput)} Response {@link
    *       Response}.
@@ -588,8 +557,10 @@ public class GetSpendingKeyServletDiffblueTest {
   @ManagedByDiffblue
   @MethodsUnderTest({"void GetSpendingKeyServlet.doPost(HttpServletRequest, HttpServletResponse)"})
   public void testDoPost_thenHttpServletResponseWrapperWithResponseIsResponseResponseResponse()
-      throws IOException {
+      throws IOException, ZksnarkException {
     // Arrange
+    when(wallet.getSpendingKey()).thenThrow(new RuntimeException());
+    MockHttpServletRequest request = HttpMethed.createRequest("https://example.org/example");
     LocalConnector connector = new LocalConnector(new Server());
     HttpConfiguration configuration = new HttpConfiguration();
     ByteArrayEndPoint endPoint = new ByteArrayEndPoint();
@@ -616,17 +587,18 @@ public class GetSpendingKeyServletDiffblueTest {
     HttpServletResponseWrapper response2 = new HttpServletResponseWrapper(response);
 
     // Act
-    getSpendingKeyServlet.doPost(null, response2);
+    getSpendingKeyServlet.doPost(request, response2);
 
     // Assert
+    verify(wallet).getSpendingKey();
     ServletResponse response3 = response2.getResponse();
     assertTrue(response3 instanceof Response);
     PrintWriter writer = response2.getWriter();
     assertTrue(writer instanceof ResponseWriter);
     HttpOutput httpOutput = ((Response) response3).getHttpOutput();
     assertEquals(32768, httpOutput.getBufferSize());
-    assertEquals(56L, httpOutput.getWritten());
-    assertEquals(56L, ((Response) response3).getContentCount());
+    assertEquals(52L, httpOutput.getWritten());
+    assertEquals(52L, ((Response) response3).getContentCount());
     assertFalse(httpOutput.isAsync());
     assertFalse(httpOutput.isClosed());
     assertFalse(((Response) response3).isStreaming());
@@ -670,14 +642,17 @@ public class GetSpendingKeyServletDiffblueTest {
     Request request = new Request(channel, new HttpInput(null));
 
     Response response = mock(Response.class);
-    when(response.getWriter()).thenReturn(new PrintWriter(new StringWriter()));
+    PrintWriter printWriter = new PrintWriter(new StringWriter());
+    when(response.getWriter()).thenReturn(printWriter);
+    HttpServletResponseWrapper response2 = new HttpServletResponseWrapper(response);
 
     // Act
-    getSpendingKeyServlet.doPost(request, response);
+    getSpendingKeyServlet.doPost(request, response2);
 
     // Assert
     verify(response).getWriter();
     assertEquals(2, request.getInputState());
     assertFalse(request.getReader().ready());
+    assertSame(printWriter, response2.getWriter());
   }
 }

@@ -273,6 +273,37 @@ public class LogFilterWrapperDiffblueTest {
   }
 
   /**
+   * Test {@link LogFilterWrapper#LogFilterWrapper(FilterRequest, long, Wallet)}.
+   *
+   * <ul>
+   *   <li>When {@link TronJsonRpc.FilterRequest#FilterRequest()}.
+   *   <li>Then return FromBlock is one.
+   * </ul>
+   *
+   * <p>Method under test: {@link LogFilterWrapper#LogFilterWrapper(TronJsonRpc.FilterRequest, long,
+   * Wallet)}
+   */
+  @Test
+  @Category(ContributionFromDiffblue.class)
+  @ManagedByDiffblue
+  @MethodsUnderTest({"void LogFilterWrapper.<init>(TronJsonRpc.FilterRequest, long, Wallet)"})
+  public void testNewLogFilterWrapper_whenFilterRequest_thenReturnFromBlockIsOne()
+      throws JsonRpcInvalidParamsException {
+    // Arrange
+    FilterRequest fr = new FilterRequest();
+
+    // Act
+    LogFilterWrapper actualLogFilterWrapper = new LogFilterWrapper(fr, 1L, new Wallet());
+
+    // Assert
+    LogFilter logFilter = actualLogFilterWrapper.getLogFilter();
+    assertEquals(0, logFilter.getContractAddresses().length);
+    assertEquals(1L, actualLogFilterWrapper.getFromBlock());
+    assertTrue(logFilter.getTopics().isEmpty());
+    assertEquals(Long.MAX_VALUE, actualLogFilterWrapper.getToBlock());
+  }
+
+  /**
    * Test getters and setters.
    *
    * <p>Methods under test:

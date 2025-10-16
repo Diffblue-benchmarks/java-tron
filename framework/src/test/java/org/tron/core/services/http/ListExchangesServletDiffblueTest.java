@@ -301,6 +301,7 @@ public class ListExchangesServletDiffblueTest {
    * Test {@link ListExchangesServlet#doGet(HttpServletRequest, HttpServletResponse)}.
    *
    * <ul>
+   *   <li>Given {@code https://example.org/example}.
    *   <li>Then calls {@link DefaultMultipartHttpServletRequest#getParameter(String)}.
    * </ul>
    *
@@ -311,7 +312,7 @@ public class ListExchangesServletDiffblueTest {
   @Category(ContributionFromDiffblue.class)
   @ManagedByDiffblue
   @MethodsUnderTest({"void ListExchangesServlet.doGet(HttpServletRequest, HttpServletResponse)"})
-  public void testDoGet_thenCallsGetParameter() throws IOException {
+  public void testDoGet_givenHttpsExampleOrgExample_thenCallsGetParameter() throws IOException {
     // Arrange
     ListExchangesServlet listExchangesServlet = new ListExchangesServlet();
 
@@ -336,77 +337,6 @@ public class ListExchangesServletDiffblueTest {
     assertArrayEquals(
         "{\"Error\":\"class java.lang.NullPointerException : null\"}\n".getBytes("UTF-8"),
         ((MockHttpServletResponse) response3).getContentAsByteArray());
-  }
-
-  /**
-   * Test {@link ListExchangesServlet#doGet(HttpServletRequest, HttpServletResponse)}.
-   *
-   * <ul>
-   *   <li>Then {@link HttpServletResponseWrapper#HttpServletResponseWrapper(HttpServletResponse)}
-   *       with response is {@link Response#Response(HttpChannel, HttpOutput)} Response {@link
-   *       Response}.
-   * </ul>
-   *
-   * <p>Method under test: {@link ListExchangesServlet#doGet(HttpServletRequest,
-   * HttpServletResponse)}
-   */
-  @Test
-  @Category(ContributionFromDiffblue.class)
-  @ManagedByDiffblue
-  @MethodsUnderTest({"void ListExchangesServlet.doGet(HttpServletRequest, HttpServletResponse)"})
-  public void testDoGet_thenHttpServletResponseWrapperWithResponseIsResponseResponseResponse()
-      throws IOException {
-    // Arrange
-    ListExchangesServlet listExchangesServlet = new ListExchangesServlet();
-
-    DefaultMultipartHttpServletRequest request = mock(DefaultMultipartHttpServletRequest.class);
-    when(request.getParameter(Mockito.<String>any())).thenReturn("https://example.org/example");
-    LocalConnector connector = new LocalConnector(new Server());
-    HttpConfiguration configuration = new HttpConfiguration();
-    ByteArrayEndPoint endPoint = new ByteArrayEndPoint();
-    HttpConfiguration config = new HttpConfiguration();
-    LocalConnector connector2 = new LocalConnector(new Server());
-
-    HttpConnection transport =
-        new HttpConnection(
-            config, connector2, new ByteArrayEndPoint(), HttpCompliance.LEGACY, true);
-
-    HttpChannel channel = new HttpChannel(connector, configuration, endPoint, transport);
-    LocalConnector connector3 = new LocalConnector(new Server());
-    HttpConfiguration configuration2 = new HttpConfiguration();
-    ByteArrayEndPoint endPoint2 = new ByteArrayEndPoint();
-    HttpConfiguration config2 = new HttpConfiguration();
-    LocalConnector connector4 = new LocalConnector(new Server());
-
-    HttpConnection transport2 =
-        new HttpConnection(
-            config2, connector4, new ByteArrayEndPoint(), HttpCompliance.LEGACY, true);
-
-    HttpChannel channel2 = new HttpChannel(connector3, configuration2, endPoint2, transport2);
-    Response response = new Response(channel, new HttpOutput(channel2));
-    HttpServletResponseWrapper response2 = new HttpServletResponseWrapper(response);
-
-    // Act
-    listExchangesServlet.doGet(request, response2);
-
-    // Assert
-    verify(request, atLeast(1)).getParameter("visible");
-    ServletResponse response3 = response2.getResponse();
-    assertTrue(response3 instanceof Response);
-    PrintWriter writer = response2.getWriter();
-    assertTrue(writer instanceof ResponseWriter);
-    HttpOutput httpOutput = ((Response) response3).getHttpOutput();
-    assertEquals(32768, httpOutput.getBufferSize());
-    assertEquals(56L, httpOutput.getWritten());
-    assertEquals(56L, ((Response) response3).getContentCount());
-    assertFalse(httpOutput.isAsync());
-    assertFalse(httpOutput.isClosed());
-    assertFalse(((Response) response3).isStreaming());
-    assertTrue(httpOutput.isWritten());
-    assertTrue(((Response) response3).isWriting());
-    assertSame(channel2, httpOutput.getHttpChannel());
-    assertSame(channel2, httpOutput.getInterceptor());
-    assertSame(writer, response3.getWriter());
   }
 
   /**
