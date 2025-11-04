@@ -12,6 +12,7 @@ repositories {
 
 dependencies {
     api project(":common")
+    testImplementation("org.springframework:spring-test:5.3.18")
 }
 
 // jacocoTestReport {

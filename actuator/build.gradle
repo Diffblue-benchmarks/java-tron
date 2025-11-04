@@ -4,6 +4,7 @@ dependencies {
     api project(":chainbase")
     api project(":protocol")
     api project(":crypto")
+    testImplementation("org.springframework:spring-test:5.3.18")
 }
 
 test {

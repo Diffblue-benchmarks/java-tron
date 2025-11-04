@@ -18,6 +18,7 @@ dependencies {
     // end google grpc
 
     api group: 'com.google.api.grpc', name: 'proto-google-common-protos', version: '2.15.0'
+    testImplementation("org.springframework:spring-test:5.3.18")
 }
 
 tasks.matching { it instanceof Test }.all {

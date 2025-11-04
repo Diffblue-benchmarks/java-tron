@@ -2,5 +2,6 @@ description = "actuator-example – a example of actuator."
 
 dependencies {
     api project(":actuator")
+    testImplementation("org.springframework:spring-test:5.3.18")
 }
 

@@ -3,6 +3,7 @@ description = "consensus – a distributed consensus arithmetic for blockchain."
 dependencies {
     api project(":chainbase")
     api project(":protocol")
+    testImplementation("org.springframework:spring-test:5.3.18")
 }
 
 test {

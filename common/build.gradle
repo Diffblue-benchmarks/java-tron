@@ -60,6 +60,7 @@ dependencies {
         exclude group: 'net.java.dev.msv', module: 'xsdlib'
         exclude group: 'pull-parser', module: 'pull-parser'
         exclude group: 'xpp3', module: 'xpp3'
+    testImplementation("org.springframework:spring-test:5.3.18")
     }
     api project(":protocol")
 }
