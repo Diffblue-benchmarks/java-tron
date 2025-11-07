@@ -1,0 +1,3557 @@
+{
+  "meta" : {
+    "reportVersion" : "2.6"
+  },
+  "run" : {
+    "version" : "2024.10.01-2ee2e3d-licensed",
+    "creationTimestamp" : "2025-11-05T11:21:45.055Z",
+    "command" : "dcover create --coverage-reports --upload http://localhost:8080 --project-name java-tron --name with-diffblue-tests",
+    "totalTime" : 21372.791,
+    "environmentDetectionTime" : 0.428,
+    "indexingTime" : 0.263,
+    "entryPointsTime" : 0.423,
+    "generationTime" : 20196.224,
+    "timeToFirstTest" : 170.366,
+    "timeToLastTest" : 4103.763,
+    "indexQueryTime" : 11.147,
+    "verificationTime" : 552.845,
+    "validationTime" : 35.3
+  },
+  "codes" : {
+    "R000" : "Success",
+    "R002" : "Missing observers",
+    "R013" : "No inputs found that don't throw a trivial exception",
+    "R015" : "Method may be nondeterministic",
+    "R027" : "Missing beans when creating Spring context",
+    "T000" : "Method eligible for test creation",
+    "T001" : "Trivial getter",
+    "T002" : "Trivial setter",
+    "T003" : "Private method",
+    "T004" : "In anonymous inner class",
+    "T005" : "Trivial constructor",
+    "T010" : "Abstract or interface method",
+    "T012" : "Synthetic method",
+    "T021" : "Empty method body",
+    "V000" : "Validated successfully",
+    "V003" : "Tests discarded during validation",
+    "W002" : "Test compiled, but did not pass"
+  },
+  "summary" : {
+    "classesCount" : 24,
+    "methodsCount" : 229,
+    "cumulativeDiffblueTestCount" : 123,
+    "cumulativeManualTestCount" : 0,
+    "completeTestCount" : 136,
+    "incompleteTestCount" : 0,
+    "skeletonTestCount" : 0,
+    "totalPhysicalLineCount" : 1533,
+    "perMethodTestability" : {
+      "T000" : 93,
+      "T001" : 26,
+      "T002" : 20,
+      "T003" : 16,
+      "T004" : 4,
+      "T005" : 11,
+      "T010" : 15,
+      "T012" : 42,
+      "T021" : 2
+    },
+    "perMethodOutcome" : {
+      "R000" : 116,
+      "R002" : 7,
+      "R013" : 3,
+      "R015" : 1,
+      "R027" : 7,
+      "T003" : 16,
+      "T004" : 4,
+      "T005" : 12,
+      "T010" : 15,
+      "T012" : 42,
+      "W002" : 6
+    },
+    "perTestOutcome" : {
+      "R000" : 136
+    },
+    "perTestValidation" : {
+      "V000" : 135,
+      "V003" : 1
+    },
+    "warnings" : {
+      "W002" : 12
+    }
+  },
+  "classes" : {
+    "org.tron.consensus.Consensus" : {
+      "methodsCount" : 7,
+      "completeTestCount" : 2,
+      "incompleteTestCount" : 0,
+      "perMethodTestability" : {
+        "T000" : 5,
+        "T005" : 1,
+        "T012" : 1
+      },
+      "perMethodOutcome" : {
+        "R000" : 2,
+        "R027" : 3,
+        "T005" : 1,
+        "T012" : 1
+      },
+      "perTestOutcome" : {
+        "R000" : 2
+      }
+    },
+    "org.tron.consensus.ConsensusDelegate" : {
+      "methodsCount" : 27,
+      "completeTestCount" : 30,
+      "incompleteTestCount" : 0,
+      "perMethodTestability" : {
+        "T000" : 22,
+        "T001" : 3,
+        "T005" : 1,
+        "T012" : 1
+      },
+      "perMethodOutcome" : {
+        "R000" : 25,
+        "T005" : 1,
+        "T012" : 1
+      },
+      "perTestOutcome" : {
+        "R000" : 30
+      }
+    },
+    "org.tron.consensus.base.BlockHandle" : {
+      "methodsCount" : 4,
+      "completeTestCount" : 0,
+      "incompleteTestCount" : 0,
+      "perMethodTestability" : {
+        "T010" : 4
+      },
+      "perMethodOutcome" : {
+        "T010" : 4
+      }
+    },
+    "org.tron.consensus.base.ConsensusInterface" : {
+      "methodsCount" : 5,
+      "completeTestCount" : 0,
+      "incompleteTestCount" : 0,
+      "perMethodTestability" : {
+        "T010" : 5
+      },
+      "perMethodOutcome" : {
+        "T010" : 5
+      }
+    },
+    "org.tron.consensus.base.Param" : {
+      "methodsCount" : 22,
+      "completeTestCount" : 3,
+      "incompleteTestCount" : 0,
+      "perMethodTestability" : {
+        "T000" : 2,
+        "T001" : 9,
+        "T002" : 9,
+        "T003" : 1,
+        "T012" : 1
+      },
+      "perMethodOutcome" : {
+        "R000" : 20,
+        "T003" : 1,
+        "T012" : 1
+      },
+      "perTestOutcome" : {
+        "R000" : 3
+      }
+    },
+    "org.tron.consensus.base.Param$Miner" : {
+      "methodsCount" : 7,
+      "completeTestCount" : 1,
+      "incompleteTestCount" : 0,
+      "perMethodTestability" : {
+        "T001" : 3,
+        "T002" : 3,
+        "T005" : 1
+      },
+      "perMethodOutcome" : {
+        "R000" : 7
+      },
+      "perTestOutcome" : {
+        "R000" : 1
+      }
+    },
+    "org.tron.consensus.base.PbftInterface" : {
+      "methodsCount" : 3,
+      "completeTestCount" : 0,
+      "incompleteTestCount" : 0,
+      "perMethodTestability" : {
+        "T010" : 3
+      },
+      "perMethodOutcome" : {
+        "T010" : 3
+      }
+    },
+    "org.tron.consensus.base.State" : {
+      "methodsCount" : 4,
+      "completeTestCount" : 0,
+      "incompleteTestCount" : 0,
+      "perMethodTestability" : {
+        "T003" : 1,
+        "T012" : 3
+      },
+      "perMethodOutcome" : {
+        "T003" : 1,
+        "T012" : 3
+      }
+    },
+    "org.tron.consensus.dpos.DposService" : {
+      "methodsCount" : 23,
+      "completeTestCount" : 20,
+      "incompleteTestCount" : 0,
+      "perMethodTestability" : {
+        "T000" : 6,
+        "T001" : 8,
+        "T002" : 1,
+        "T003" : 1,
+        "T005" : 1,
+        "T012" : 6
+      },
+      "perMethodOutcome" : {
+        "R000" : 15,
+        "T003" : 1,
+        "T005" : 1,
+        "T012" : 6
+      },
+      "perTestOutcome" : {
+        "R000" : 20
+      }
+    },
+    "org.tron.consensus.dpos.DposSlot" : {
+      "methodsCount" : 7,
+      "completeTestCount" : 7,
+      "incompleteTestCount" : 0,
+      "perMethodTestability" : {
+        "T000" : 4,
+        "T002" : 1,
+        "T005" : 1,
+        "T012" : 1
+      },
+      "perMethodOutcome" : {
+        "R000" : 4,
+        "R002" : 1,
+        "T005" : 1,
+        "T012" : 1
+      },
+      "perTestOutcome" : {
+        "R000" : 7
+      }
+    },
+    "org.tron.consensus.dpos.DposTask" : {
+      "methodsCount" : 7,
+      "completeTestCount" : 2,
+      "incompleteTestCount" : 0,
+      "perMethodTestability" : {
+        "T000" : 2,
+        "T002" : 1,
+        "T003" : 1,
+        "T005" : 1,
+        "T012" : 2
+      },
+      "perMethodOutcome" : {
+        "R000" : 1,
+        "R002" : 1,
+        "R027" : 1,
+        "T003" : 1,
+        "T005" : 1,
+        "T012" : 2
+      },
+      "perTestOutcome" : {
+        "R000" : 2
+      }
+    },
+    "org.tron.consensus.dpos.IncentiveManager" : {
+      "methodsCount" : 3,
+      "completeTestCount" : 7,
+      "incompleteTestCount" : 0,
+      "perMethodTestability" : {
+        "T000" : 1,
+        "T005" : 1,
+        "T012" : 1
+      },
+      "perMethodOutcome" : {
+        "R000" : 1,
+        "T005" : 1,
+        "T012" : 1
+      },
+      "perTestOutcome" : {
+        "R000" : 7
+      }
+    },
+    "org.tron.consensus.dpos.MaintenanceManager" : {
+      "methodsCount" : 22,
+      "completeTestCount" : 3,
+      "incompleteTestCount" : 0,
+      "perMethodTestability" : {
+        "T000" : 3,
+        "T001" : 3,
+        "T002" : 2,
+        "T003" : 3,
+        "T005" : 1,
+        "T012" : 10
+      },
+      "perMethodOutcome" : {
+        "R000" : 7,
+        "R027" : 1,
+        "T003" : 3,
+        "T005" : 1,
+        "T012" : 10
+      },
+      "perTestOutcome" : {
+        "R000" : 3
+      }
+    },
+    "org.tron.consensus.dpos.StateManager" : {
+      "methodsCount" : 7,
+      "completeTestCount" : 6,
+      "incompleteTestCount" : 0,
+      "perMethodTestability" : {
+        "T000" : 3,
+        "T002" : 2,
+        "T003" : 1,
+        "T012" : 1
+      },
+      "perMethodOutcome" : {
+        "R000" : 2,
+        "R002" : 2,
+        "T003" : 1,
+        "T005" : 1,
+        "T012" : 1
+      },
+      "perTestOutcome" : {
+        "R000" : 6
+      }
+    },
+    "org.tron.consensus.dpos.StatisticManager" : {
+      "methodsCount" : 3,
+      "completeTestCount" : 4,
+      "incompleteTestCount" : 0,
+      "perMethodTestability" : {
+        "T000" : 1,
+        "T005" : 1,
+        "T012" : 1
+      },
+      "perMethodOutcome" : {
+        "R000" : 1,
+        "T005" : 1,
+        "T012" : 1
+      },
+      "perTestOutcome" : {
+        "R000" : 4
+      }
+    },
+    "org.tron.consensus.pbft.PbftManager" : {
+      "methodsCount" : 10,
+      "completeTestCount" : 12,
+      "incompleteTestCount" : 0,
+      "perMethodTestability" : {
+        "T000" : 8,
+        "T012" : 2
+      },
+      "perMethodOutcome" : {
+        "R000" : 6,
+        "R027" : 1,
+        "T005" : 1,
+        "T012" : 2
+      },
+      "perTestOutcome" : {
+        "R000" : 12
+      },
+      "warnings" : {
+        "W002" : 1
+      }
+    },
+    "org.tron.consensus.pbft.PbftManager$1" : {
+      "methodsCount" : 1,
+      "completeTestCount" : 0,
+      "incompleteTestCount" : 0,
+      "perMethodTestability" : {
+        "T012" : 1
+      },
+      "perMethodOutcome" : {
+        "T012" : 1
+      }
+    },
+    "org.tron.consensus.pbft.PbftMessageAction" : {
+      "methodsCount" : 3,
+      "completeTestCount" : 3,
+      "incompleteTestCount" : 0,
+      "perMethodTestability" : {
+        "T000" : 1,
+        "T005" : 1,
+        "T012" : 1
+      },
+      "perMethodOutcome" : {
+        "R000" : 1,
+        "T005" : 1,
+        "T012" : 1
+      },
+      "perTestOutcome" : {
+        "R000" : 3
+      }
+    },
+    "org.tron.consensus.pbft.PbftMessageAction$1" : {
+      "methodsCount" : 1,
+      "completeTestCount" : 0,
+      "incompleteTestCount" : 0,
+      "perMethodTestability" : {
+        "T012" : 1
+      },
+      "perMethodOutcome" : {
+        "T012" : 1
+      }
+    },
+    "org.tron.consensus.pbft.PbftMessageHandle" : {
+      "methodsCount" : 25,
+      "completeTestCount" : 17,
+      "incompleteTestCount" : 0,
+      "perMethodTestability" : {
+        "T000" : 11,
+        "T002" : 1,
+        "T003" : 4,
+        "T012" : 7,
+        "T021" : 2
+      },
+      "perMethodOutcome" : {
+        "R000" : 9,
+        "R002" : 3,
+        "R027" : 1,
+        "T003" : 4,
+        "T005" : 1,
+        "T012" : 7
+      },
+      "perTestOutcome" : {
+        "R000" : 17
+      }
+    },
+    "org.tron.consensus.pbft.PbftMessageHandle$1" : {
+      "methodsCount" : 3,
+      "completeTestCount" : 0,
+      "incompleteTestCount" : 0,
+      "perMethodTestability" : {
+        "T004" : 2,
+        "T012" : 1
+      },
+      "perMethodOutcome" : {
+        "T004" : 2,
+        "T012" : 1
+      }
+    },
+    "org.tron.consensus.pbft.PbftMessageHandle$2" : {
+      "methodsCount" : 2,
+      "completeTestCount" : 0,
+      "incompleteTestCount" : 0,
+      "perMethodTestability" : {
+        "T004" : 2
+      },
+      "perMethodOutcome" : {
+        "T004" : 2
+      }
+    },
+    "org.tron.consensus.pbft.message.PbftBaseMessage" : {
+      "methodsCount" : 21,
+      "completeTestCount" : 17,
+      "incompleteTestCount" : 0,
+      "perMethodTestability" : {
+        "T000" : 16,
+        "T003" : 1,
+        "T010" : 3,
+        "T012" : 1
+      },
+      "perMethodOutcome" : {
+        "R000" : 13,
+        "R013" : 2,
+        "R015" : 1,
+        "T003" : 1,
+        "T010" : 3,
+        "T012" : 1
+      },
+      "perTestOutcome" : {
+        "R000" : 17
+      }
+    },
+    "org.tron.consensus.pbft.message.PbftMessage" : {
+      "methodsCount" : 12,
+      "completeTestCount" : 2,
+      "incompleteTestCount" : 0,
+      "perMethodTestability" : {
+        "T000" : 8,
+        "T003" : 3,
+        "T005" : 1
+      },
+      "perMethodOutcome" : {
+        "R000" : 2,
+        "R013" : 1,
+        "T003" : 3,
+        "W002" : 6
+      },
+      "perTestOutcome" : {
+        "R000" : 2
+      },
+      "warnings" : {
+        "W002" : 11
+      }
+    }
+  },
+  "methods" : {
+    "org.tron.consensus.Consensus.<clinit>:()V" : {
+      "completeTestCount" : 0,
+      "incompleteTestCount" : 0,
+      "perMethodTestability" : "T012",
+      "perMethodOutcome" : "T012",
+      "lineNumbers" : [
+        11
+      ]
+    },
+    "org.tron.consensus.Consensus.<init>:()V" : {
+      "completeTestCount" : 0,
+      "incompleteTestCount" : 0,
+      "perMethodTestability" : "T005",
+      "perMethodOutcome" : "T005",
+      "lineNumbers" : [
+        13
+      ]
+    },
+    "org.tron.consensus.Consensus.applyBlock:(Lorg/tron/core/capsule/BlockCapsule;)Z" : {
+      "completeTestCount" : 0,
+      "incompleteTestCount" : 0,
+      "perMethodTestability" : "T000",
+      "perMethodOutcome" : "R027",
+      "lineNumbers" : [
+        39
+      ]
+    },
+    "org.tron.consensus.Consensus.receiveBlock:(Lorg/tron/core/capsule/BlockCapsule;)V" : {
+      "completeTestCount" : 0,
+      "incompleteTestCount" : 0,
+      "perMethodTestability" : "T000",
+      "perMethodOutcome" : "R027",
+      "lineNumbers" : [
+        31,
+        32
+      ]
+    },
+    "org.tron.consensus.Consensus.start:(Lorg/tron/consensus/base/Param;)V" : {
+      "completeTestCount" : 1,
+      "incompleteTestCount" : 0,
+      "perMethodTestability" : "T000",
+      "perMethodOutcome" : "R000",
+      "perTestOutcome" : {
+        "R000" : 1
+      },
+      "lineNumbers" : [
+        21,
+        22,
+        23
+      ]
+    },
+    "org.tron.consensus.Consensus.stop:()V" : {
+      "completeTestCount" : 1,
+      "incompleteTestCount" : 0,
+      "perMethodTestability" : "T000",
+      "perMethodOutcome" : "R000",
+      "perTestOutcome" : {
+        "R000" : 1
+      },
+      "lineNumbers" : [
+        26,
+        27,
+        28
+      ]
+    },
+    "org.tron.consensus.Consensus.validBlock:(Lorg/tron/core/capsule/BlockCapsule;)Z" : {
+      "completeTestCount" : 0,
+      "incompleteTestCount" : 0,
+      "perMethodTestability" : "T000",
+      "perMethodOutcome" : "R027",
+      "lineNumbers" : [
+        35
+      ]
+    },
+    "org.tron.consensus.ConsensusDelegate.<clinit>:()V" : {
+      "completeTestCount" : 0,
+      "incompleteTestCount" : 0,
+      "perMethodTestability" : "T012",
+      "perMethodOutcome" : "T012",
+      "lineNumbers" : [
+        17
+      ]
+    },
+    "org.tron.consensus.ConsensusDelegate.<init>:()V" : {
+      "completeTestCount" : 0,
+      "incompleteTestCount" : 0,
+      "perMethodTestability" : "T005",
+      "perMethodOutcome" : "T005",
+      "lineNumbers" : [
+        19
+      ]
+    },
+    "org.tron.consensus.ConsensusDelegate.allowChangeDelegation:()Z" : {
+      "completeTestCount" : 2,
+      "incompleteTestCount" : 0,
+      "perMethodTestability" : "T000",
+      "perMethodOutcome" : "R000",
+      "perTestOutcome" : {
+        "R000" : 2
+      },
+      "lineNumbers" : [
+        136
+      ]
+    },
+    "org.tron.consensus.ConsensusDelegate.applyBlock:(Z)V" : {
+      "completeTestCount" : 1,
+      "incompleteTestCount" : 0,
+      "perMethodTestability" : "T000",
+      "perMethodOutcome" : "R000",
+      "perTestOutcome" : {
+        "R000" : 1
+      },
+      "lineNumbers" : [
+        132,
+        133
+      ]
+    },
+    "org.tron.consensus.ConsensusDelegate.calculateFilledSlotsCount:()I" : {
+      "completeTestCount" : 1,
+      "incompleteTestCount" : 0,
+      "perMethodTestability" : "T000",
+      "perMethodOutcome" : "R000",
+      "perTestOutcome" : {
+        "R000" : 1
+      },
+      "lineNumbers" : [
+        52
+      ]
+    },
+    "org.tron.consensus.ConsensusDelegate.getAccount:([B)Lorg/tron/core/capsule/AccountCapsule;" : {
+      "completeTestCount" : 1,
+      "incompleteTestCount" : 0,
+      "perMethodTestability" : "T000",
+      "perMethodOutcome" : "R000",
+      "perTestOutcome" : {
+        "R000" : 1
+      },
+      "lineNumbers" : [
+        92
+      ]
+    },
+    "org.tron.consensus.ConsensusDelegate.getActiveWitnesses:()Ljava/util/List;" : {
+      "completeTestCount" : 1,
+      "incompleteTestCount" : 0,
+      "perMethodTestability" : "T000",
+      "perMethodOutcome" : "R000",
+      "perTestOutcome" : {
+        "R000" : 1
+      },
+      "lineNumbers" : [
+        88
+      ]
+    },
+    "org.tron.consensus.ConsensusDelegate.getAllWitnesses:()Ljava/util/List;" : {
+      "completeTestCount" : 1,
+      "incompleteTestCount" : 0,
+      "perMethodTestability" : "T000",
+      "perMethodOutcome" : "R000",
+      "perTestOutcome" : {
+        "R000" : 1
+      },
+      "lineNumbers" : [
+        108
+      ]
+    },
+    "org.tron.consensus.ConsensusDelegate.getDelegationStore:()Lorg/tron/core/store/DelegationStore;" : {
+      "completeTestCount" : 1,
+      "incompleteTestCount" : 0,
+      "perMethodTestability" : "T001",
+      "perMethodOutcome" : "R000",
+      "perTestOutcome" : {
+        "R000" : 1
+      },
+      "lineNumbers" : [
+        44
+      ]
+    },
+    "org.tron.consensus.ConsensusDelegate.getDynamicPropertiesStore:()Lorg/tron/core/store/DynamicPropertiesStore;" : {
+      "completeTestCount" : 1,
+      "incompleteTestCount" : 0,
+      "perMethodTestability" : "T001",
+      "perMethodOutcome" : "R000",
+      "perTestOutcome" : {
+        "R000" : 1
+      },
+      "lineNumbers" : [
+        40
+      ]
+    },
+    "org.tron.consensus.ConsensusDelegate.getLatestBlockHeaderNumber:()J" : {
+      "completeTestCount" : 1,
+      "incompleteTestCount" : 0,
+      "perMethodTestability" : "T000",
+      "perMethodOutcome" : "R000",
+      "perTestOutcome" : {
+        "R000" : 1
+      },
+      "lineNumbers" : [
+        72
+      ]
+    },
+    "org.tron.consensus.ConsensusDelegate.getLatestBlockHeaderTimestamp:()J" : {
+      "completeTestCount" : 1,
+      "incompleteTestCount" : 0,
+      "perMethodTestability" : "T000",
+      "perMethodOutcome" : "R000",
+      "perTestOutcome" : {
+        "R000" : 1
+      },
+      "lineNumbers" : [
+        68
+      ]
+    },
+    "org.tron.consensus.ConsensusDelegate.getLatestSolidifiedBlockNum:()J" : {
+      "completeTestCount" : 1,
+      "incompleteTestCount" : 0,
+      "perMethodTestability" : "T000",
+      "perMethodOutcome" : "R000",
+      "perTestOutcome" : {
+        "R000" : 1
+      },
+      "lineNumbers" : [
+        124
+      ]
+    },
+    "org.tron.consensus.ConsensusDelegate.getMaintenanceSkipSlots:()J" : {
+      "completeTestCount" : 1,
+      "incompleteTestCount" : 0,
+      "perMethodTestability" : "T000",
+      "perMethodOutcome" : "R000",
+      "perTestOutcome" : {
+        "R000" : 1
+      },
+      "lineNumbers" : [
+        80
+      ]
+    },
+    "org.tron.consensus.ConsensusDelegate.getNextMaintenanceTime:()J" : {
+      "completeTestCount" : 1,
+      "incompleteTestCount" : 0,
+      "perMethodTestability" : "T000",
+      "perMethodOutcome" : "R000",
+      "perTestOutcome" : {
+        "R000" : 1
+      },
+      "lineNumbers" : [
+        120
+      ]
+    },
+    "org.tron.consensus.ConsensusDelegate.getRemoveThePowerOfTheGr:()J" : {
+      "completeTestCount" : 1,
+      "incompleteTestCount" : 0,
+      "perMethodTestability" : "T000",
+      "perMethodOutcome" : "R000",
+      "perTestOutcome" : {
+        "R000" : 1
+      },
+      "lineNumbers" : [
+        60
+      ]
+    },
+    "org.tron.consensus.ConsensusDelegate.getVotesStore:()Lorg/tron/core/store/VotesStore;" : {
+      "completeTestCount" : 1,
+      "incompleteTestCount" : 0,
+      "perMethodTestability" : "T001",
+      "perMethodOutcome" : "R000",
+      "perTestOutcome" : {
+        "R000" : 1
+      },
+      "lineNumbers" : [
+        48
+      ]
+    },
+    "org.tron.consensus.ConsensusDelegate.getWitness:([B)Lorg/tron/core/capsule/WitnessCapsule;" : {
+      "completeTestCount" : 1,
+      "incompleteTestCount" : 0,
+      "perMethodTestability" : "T000",
+      "perMethodOutcome" : "R000",
+      "perTestOutcome" : {
+        "R000" : 1
+      },
+      "lineNumbers" : [
+        100
+      ]
+    },
+    "org.tron.consensus.ConsensusDelegate.getWitnessStandbyAllowance:()J" : {
+      "completeTestCount" : 1,
+      "incompleteTestCount" : 0,
+      "perMethodTestability" : "T000",
+      "perMethodOutcome" : "R000",
+      "perTestOutcome" : {
+        "R000" : 1
+      },
+      "lineNumbers" : [
+        64
+      ]
+    },
+    "org.tron.consensus.ConsensusDelegate.lastHeadBlockIsMaintenance:()Z" : {
+      "completeTestCount" : 2,
+      "incompleteTestCount" : 0,
+      "perMethodTestability" : "T000",
+      "perMethodOutcome" : "R000",
+      "perTestOutcome" : {
+        "R000" : 2
+      },
+      "lineNumbers" : [
+        76
+      ]
+    },
+    "org.tron.consensus.ConsensusDelegate.saveAccount:(Lorg/tron/core/capsule/AccountCapsule;)V" : {
+      "completeTestCount" : 2,
+      "incompleteTestCount" : 0,
+      "perMethodTestability" : "T000",
+      "perMethodOutcome" : "R000",
+      "perTestOutcome" : {
+        "R000" : 2
+      },
+      "lineNumbers" : [
+        96,
+        97
+      ]
+    },
+    "org.tron.consensus.ConsensusDelegate.saveActiveWitnesses:(Ljava/util/List;)V" : {
+      "completeTestCount" : 3,
+      "incompleteTestCount" : 0,
+      "perMethodTestability" : "T000",
+      "perMethodOutcome" : "R000",
+      "perTestOutcome" : {
+        "R000" : 3
+      },
+      "lineNumbers" : [
+        84,
+        85
+      ]
+    },
+    "org.tron.consensus.ConsensusDelegate.saveLatestSolidifiedBlockNum:(J)V" : {
+      "completeTestCount" : 1,
+      "incompleteTestCount" : 0,
+      "perMethodTestability" : "T000",
+      "perMethodOutcome" : "R000",
+      "perTestOutcome" : {
+        "R000" : 1
+      },
+      "lineNumbers" : [
+        128,
+        129
+      ]
+    },
+    "org.tron.consensus.ConsensusDelegate.saveRemoveThePowerOfTheGr:(J)V" : {
+      "completeTestCount" : 1,
+      "incompleteTestCount" : 0,
+      "perMethodTestability" : "T000",
+      "perMethodOutcome" : "R000",
+      "perTestOutcome" : {
+        "R000" : 1
+      },
+      "lineNumbers" : [
+        56,
+        57
+      ]
+    },
+    "org.tron.consensus.ConsensusDelegate.saveStateFlag:(I)V" : {
+      "completeTestCount" : 1,
+      "incompleteTestCount" : 0,
+      "perMethodTestability" : "T000",
+      "perMethodOutcome" : "R000",
+      "perTestOutcome" : {
+        "R000" : 1
+      },
+      "lineNumbers" : [
+        112,
+        113
+      ]
+    },
+    "org.tron.consensus.ConsensusDelegate.saveWitness:(Lorg/tron/core/capsule/WitnessCapsule;)V" : {
+      "completeTestCount" : 3,
+      "incompleteTestCount" : 0,
+      "perMethodTestability" : "T000",
+      "perMethodOutcome" : "R000",
+      "perTestOutcome" : {
+        "R000" : 3
+      },
+      "lineNumbers" : [
+        104,
+        105
+      ]
+    },
+    "org.tron.consensus.ConsensusDelegate.updateNextMaintenanceTime:(J)V" : {
+      "completeTestCount" : 1,
+      "incompleteTestCount" : 0,
+      "perMethodTestability" : "T000",
+      "perMethodOutcome" : "R000",
+      "perTestOutcome" : {
+        "R000" : 1
+      },
+      "lineNumbers" : [
+        116,
+        117
+      ]
+    },
+    "org.tron.consensus.base.BlockHandle.getLock:()Ljava/lang/Object;" : {
+      "completeTestCount" : 0,
+      "incompleteTestCount" : 0,
+      "perMethodTestability" : "T010",
+      "perMethodOutcome" : "T010"
+    },
+    "org.tron.consensus.base.BlockHandle.getState:()Lorg/tron/consensus/base/State;" : {
+      "completeTestCount" : 0,
+      "incompleteTestCount" : 0,
+      "perMethodTestability" : "T010",
+      "perMethodOutcome" : "T010"
+    },
+    "org.tron.consensus.base.BlockHandle.produce:(Lorg/tron/consensus/base/Param$Miner;JJ)Lorg/tron/core/capsule/BlockCapsule;" : {
+      "completeTestCount" : 0,
+      "incompleteTestCount" : 0,
+      "perMethodTestability" : "T010",
+      "perMethodOutcome" : "T010"
+    },
+    "org.tron.consensus.base.BlockHandle.setBlockWaitLock:(Z)V" : {
+      "completeTestCount" : 0,
+      "incompleteTestCount" : 0,
+      "perMethodTestability" : "T010",
+      "perMethodOutcome" : "T010"
+    },
+    "org.tron.consensus.base.ConsensusInterface.applyBlock:(Lorg/tron/core/capsule/BlockCapsule;)Z" : {
+      "completeTestCount" : 0,
+      "incompleteTestCount" : 0,
+      "perMethodTestability" : "T010",
+      "perMethodOutcome" : "T010"
+    },
+    "org.tron.consensus.base.ConsensusInterface.receiveBlock:(Lorg/tron/core/capsule/BlockCapsule;)V" : {
+      "completeTestCount" : 0,
+      "incompleteTestCount" : 0,
+      "perMethodTestability" : "T010",
+      "perMethodOutcome" : "T010"
+    },
+    "org.tron.consensus.base.ConsensusInterface.start:(Lorg/tron/consensus/base/Param;)V" : {
+      "completeTestCount" : 0,
+      "incompleteTestCount" : 0,
+      "perMethodTestability" : "T010",
+      "perMethodOutcome" : "T010"
+    },
+    "org.tron.consensus.base.ConsensusInterface.stop:()V" : {
+      "completeTestCount" : 0,
+      "incompleteTestCount" : 0,
+      "perMethodTestability" : "T010",
+      "perMethodOutcome" : "T010"
+    },
+    "org.tron.consensus.base.ConsensusInterface.validBlock:(Lorg/tron/core/capsule/BlockCapsule;)Z" : {
+      "completeTestCount" : 0,
+      "incompleteTestCount" : 0,
+      "perMethodTestability" : "T010",
+      "perMethodOutcome" : "T010"
+    },
+    "org.tron.consensus.base.Param$Miner.<init>:(Lorg/tron/consensus/base/Param;[BLcom/google/protobuf/ByteString;Lcom/google/protobuf/ByteString;)V" : {
+      "completeTestCount" : 1,
+      "incompleteTestCount" : 0,
+      "perMethodTestability" : "T005",
+      "perMethodOutcome" : "R000",
+      "perTestOutcome" : {
+        "R000" : 1
+      },
+      "lineNumbers" : [
+        70,
+        71,
+        72,
+        73,
+        74
+      ]
+    },
+    "org.tron.consensus.base.Param$Miner.getPrivateKey:()[B" : {
+      "completeTestCount" : 1,
+      "incompleteTestCount" : 0,
+      "perMethodTestability" : "T001",
+      "perMethodOutcome" : "R000",
+      "perTestOutcome" : {
+        "R000" : 1
+      },
+      "lineNumbers" : [
+        58
+      ]
+    },
+    "org.tron.consensus.base.Param$Miner.getPrivateKeyAddress:()Lcom/google/protobuf/ByteString;" : {
+      "completeTestCount" : 1,
+      "incompleteTestCount" : 0,
+      "perMethodTestability" : "T001",
+      "perMethodOutcome" : "R000",
+      "perTestOutcome" : {
+        "R000" : 1
+      },
+      "lineNumbers" : [
+        62
+      ]
+    },
+    "org.tron.consensus.base.Param$Miner.getWitnessAddress:()Lcom/google/protobuf/ByteString;" : {
+      "completeTestCount" : 1,
+      "incompleteTestCount" : 0,
+      "perMethodTestability" : "T001",
+      "perMethodOutcome" : "R000",
+      "perTestOutcome" : {
+        "R000" : 1
+      },
+      "lineNumbers" : [
+        66
+      ]
+    },
+    "org.tron.consensus.base.Param$Miner.setPrivateKey:([B)V" : {
+      "completeTestCount" : 1,
+      "incompleteTestCount" : 0,
+      "perMethodTestability" : "T002",
+      "perMethodOutcome" : "R000",
+      "perTestOutcome" : {
+        "R000" : 1
+      },
+      "lineNumbers" : [
+        59
+      ]
+    },
+    "org.tron.consensus.base.Param$Miner.setPrivateKeyAddress:(Lcom/google/protobuf/ByteString;)V" : {
+      "completeTestCount" : 1,
+      "incompleteTestCount" : 0,
+      "perMethodTestability" : "T002",
+      "perMethodOutcome" : "R000",
+      "perTestOutcome" : {
+        "R000" : 1
+      },
+      "lineNumbers" : [
+        63
+      ]
+    },
+    "org.tron.consensus.base.Param$Miner.setWitnessAddress:(Lcom/google/protobuf/ByteString;)V" : {
+      "completeTestCount" : 1,
+      "incompleteTestCount" : 0,
+      "perMethodTestability" : "T002",
+      "perMethodOutcome" : "R000",
+      "perTestOutcome" : {
+        "R000" : 1
+      },
+      "lineNumbers" : [
+        67
+      ]
+    },
+    "org.tron.consensus.base.Param.<clinit>:()V" : {
+      "completeTestCount" : 0,
+      "incompleteTestCount" : 0,
+      "perMethodTestability" : "T012",
+      "perMethodOutcome" : "T012",
+      "lineNumbers" : [
+        11
+      ]
+    },
+    "org.tron.consensus.base.Param.<init>:()V" : {
+      "completeTestCount" : 0,
+      "incompleteTestCount" : 0,
+      "perMethodTestability" : "T003",
+      "perMethodOutcome" : "T003",
+      "lineNumbers" : [
+        41,
+        43
+      ]
+    },
+    "org.tron.consensus.base.Param.getAgreeNodeCount:()I" : {
+      "completeTestCount" : 1,
+      "incompleteTestCount" : 0,
+      "perMethodTestability" : "T001",
+      "perMethodOutcome" : "R000",
+      "perTestOutcome" : {
+        "R000" : 1
+      },
+      "lineNumbers" : [
+        34
+      ]
+    },
+    "org.tron.consensus.base.Param.getBlockHandle:()Lorg/tron/consensus/base/BlockHandle;" : {
+      "completeTestCount" : 1,
+      "incompleteTestCount" : 0,
+      "perMethodTestability" : "T001",
+      "perMethodOutcome" : "R000",
+      "perTestOutcome" : {
+        "R000" : 1
+      },
+      "lineNumbers" : [
+        31
+      ]
+    },
+    "org.tron.consensus.base.Param.getBlockProduceTimeoutPercent:()I" : {
+      "completeTestCount" : 1,
+      "incompleteTestCount" : 0,
+      "perMethodTestability" : "T001",
+      "perMethodOutcome" : "R000",
+      "perTestOutcome" : {
+        "R000" : 1
+      },
+      "lineNumbers" : [
+        22
+      ]
+    },
+    "org.tron.consensus.base.Param.getGenesisBlock:()Lorg/tron/common/args/GenesisBlock;" : {
+      "completeTestCount" : 1,
+      "incompleteTestCount" : 0,
+      "perMethodTestability" : "T001",
+      "perMethodOutcome" : "R000",
+      "perTestOutcome" : {
+        "R000" : 1
+      },
+      "lineNumbers" : [
+        25
+      ]
+    },
+    "org.tron.consensus.base.Param.getInstance:()Lorg/tron/consensus/base/Param;" : {
+      "completeTestCount" : 1,
+      "incompleteTestCount" : 0,
+      "perMethodTestability" : "T000",
+      "perMethodOutcome" : "R000",
+      "perTestOutcome" : {
+        "R000" : 1
+      },
+      "lineNumbers" : [
+        46,
+        47,
+        48,
+        49,
+        51,
+        53
+      ]
+    },
+    "org.tron.consensus.base.Param.getMinParticipationRate:()I" : {
+      "completeTestCount" : 1,
+      "incompleteTestCount" : 0,
+      "perMethodTestability" : "T001",
+      "perMethodOutcome" : "R000",
+      "perTestOutcome" : {
+        "R000" : 1
+      },
+      "lineNumbers" : [
+        19
+      ]
+    },
+    "org.tron.consensus.base.Param.getMiner:()Lorg/tron/consensus/base/Param$Miner;" : {
+      "completeTestCount" : 1,
+      "incompleteTestCount" : 0,
+      "perMethodTestability" : "T000",
+      "perMethodOutcome" : "R000",
+      "perTestOutcome" : {
+        "R000" : 1
+      },
+      "lineNumbers" : [
+        78
+      ]
+    },
+    "org.tron.consensus.base.Param.getMiners:()Ljava/util/List;" : {
+      "completeTestCount" : 1,
+      "incompleteTestCount" : 0,
+      "perMethodTestability" : "T001",
+      "perMethodOutcome" : "R000",
+      "perTestOutcome" : {
+        "R000" : 1
+      },
+      "lineNumbers" : [
+        28
+      ]
+    },
+    "org.tron.consensus.base.Param.getPbftInterface:()Lorg/tron/consensus/base/PbftInterface;" : {
+      "completeTestCount" : 1,
+      "incompleteTestCount" : 0,
+      "perMethodTestability" : "T001",
+      "perMethodOutcome" : "R000",
+      "perTestOutcome" : {
+        "R000" : 1
+      },
+      "lineNumbers" : [
+        37
+      ]
+    },
+    "org.tron.consensus.base.Param.isEnable:()Z" : {
+      "completeTestCount" : 1,
+      "incompleteTestCount" : 0,
+      "perMethodTestability" : "T001",
+      "perMethodOutcome" : "R000",
+      "perTestOutcome" : {
+        "R000" : 1
+      },
+      "lineNumbers" : [
+        13
+      ]
+    },
+    "org.tron.consensus.base.Param.isNeedSyncCheck:()Z" : {
+      "completeTestCount" : 1,
+      "incompleteTestCount" : 0,
+      "perMethodTestability" : "T001",
+      "perMethodOutcome" : "R000",
+      "perTestOutcome" : {
+        "R000" : 1
+      },
+      "lineNumbers" : [
+        16
+      ]
+    },
+    "org.tron.consensus.base.Param.setAgreeNodeCount:(I)V" : {
+      "completeTestCount" : 1,
+      "incompleteTestCount" : 0,
+      "perMethodTestability" : "T002",
+      "perMethodOutcome" : "R000",
+      "perTestOutcome" : {
+        "R000" : 1
+      },
+      "lineNumbers" : [
+        35
+      ]
+    },
+    "org.tron.consensus.base.Param.setBlockHandle:(Lorg/tron/consensus/base/BlockHandle;)V" : {
+      "completeTestCount" : 1,
+      "incompleteTestCount" : 0,
+      "perMethodTestability" : "T002",
+      "perMethodOutcome" : "R000",
+      "perTestOutcome" : {
+        "R000" : 1
+      },
+      "lineNumbers" : [
+        32
+      ]
+    },
+    "org.tron.consensus.base.Param.setBlockProduceTimeoutPercent:(I)V" : {
+      "completeTestCount" : 1,
+      "incompleteTestCount" : 0,
+      "perMethodTestability" : "T002",
+      "perMethodOutcome" : "R000",
+      "perTestOutcome" : {
+        "R000" : 1
+      },
+      "lineNumbers" : [
+        23
+      ]
+    },
+    "org.tron.consensus.base.Param.setEnable:(Z)V" : {
+      "completeTestCount" : 1,
+      "incompleteTestCount" : 0,
+      "perMethodTestability" : "T002",
+      "perMethodOutcome" : "R000",
+      "perTestOutcome" : {
+        "R000" : 1
+      },
+      "lineNumbers" : [
+        14
+      ]
+    },
+    "org.tron.consensus.base.Param.setGenesisBlock:(Lorg/tron/common/args/GenesisBlock;)V" : {
+      "completeTestCount" : 1,
+      "incompleteTestCount" : 0,
+      "perMethodTestability" : "T002",
+      "perMethodOutcome" : "R000",
+      "perTestOutcome" : {
+        "R000" : 1
+      },
+      "lineNumbers" : [
+        26
+      ]
+    },
+    "org.tron.consensus.base.Param.setMinParticipationRate:(I)V" : {
+      "completeTestCount" : 1,
+      "incompleteTestCount" : 0,
+      "perMethodTestability" : "T002",
+      "perMethodOutcome" : "R000",
+      "perTestOutcome" : {
+        "R000" : 1
+      },
+      "lineNumbers" : [
+        20
+      ]
+    },
+    "org.tron.consensus.base.Param.setMiners:(Ljava/util/List;)V" : {
+      "completeTestCount" : 1,
+      "incompleteTestCount" : 0,
+      "perMethodTestability" : "T002",
+      "perMethodOutcome" : "R000",
+      "perTestOutcome" : {
+        "R000" : 1
+      },
+      "lineNumbers" : [
+        29
+      ]
+    },
+    "org.tron.consensus.base.Param.setNeedSyncCheck:(Z)V" : {
+      "completeTestCount" : 1,
+      "incompleteTestCount" : 0,
+      "perMethodTestability" : "T002",
+      "perMethodOutcome" : "R000",
+      "perTestOutcome" : {
+        "R000" : 1
+      },
+      "lineNumbers" : [
+        17
+      ]
+    },
+    "org.tron.consensus.base.Param.setPbftInterface:(Lorg/tron/consensus/base/PbftInterface;)V" : {
+      "completeTestCount" : 1,
+      "incompleteTestCount" : 0,
+      "perMethodTestability" : "T002",
+      "perMethodOutcome" : "R000",
+      "perTestOutcome" : {
+        "R000" : 1
+      },
+      "lineNumbers" : [
+        38
+      ]
+    },
+    "org.tron.consensus.base.PbftInterface.forwardMessage:(Lorg/tron/consensus/pbft/message/PbftBaseMessage;)V" : {
+      "completeTestCount" : 0,
+      "incompleteTestCount" : 0,
+      "perMethodTestability" : "T010",
+      "perMethodOutcome" : "T010"
+    },
+    "org.tron.consensus.base.PbftInterface.getBlock:(J)Lorg/tron/core/capsule/BlockCapsule;" : {
+      "completeTestCount" : 0,
+      "incompleteTestCount" : 0,
+      "perMethodTestability" : "T010",
+      "perMethodOutcome" : "T010"
+    },
+    "org.tron.consensus.base.PbftInterface.isSyncing:()Z" : {
+      "completeTestCount" : 0,
+      "incompleteTestCount" : 0,
+      "perMethodTestability" : "T010",
+      "perMethodOutcome" : "T010"
+    },
+    "org.tron.consensus.base.State.<clinit>:()V" : {
+      "completeTestCount" : 0,
+      "incompleteTestCount" : 0,
+      "perMethodTestability" : "T012",
+      "perMethodOutcome" : "T012",
+      "lineNumbers" : [
+        4,
+        5,
+        6,
+        7,
+        8,
+        9,
+        10,
+        11,
+        12,
+        13,
+        14,
+        3
+      ]
+    },
+    "org.tron.consensus.base.State.<init>:(Ljava/lang/String;I)V" : {
+      "completeTestCount" : 0,
+      "incompleteTestCount" : 0,
+      "perMethodTestability" : "T003",
+      "perMethodOutcome" : "T003",
+      "lineNumbers" : [
+        3
+      ]
+    },
+    "org.tron.consensus.base.State.valueOf:(Ljava/lang/String;)Lorg/tron/consensus/base/State;" : {
+      "completeTestCount" : 0,
+      "incompleteTestCount" : 0,
+      "perMethodTestability" : "T012",
+      "perMethodOutcome" : "T012",
+      "lineNumbers" : [
+        3
+      ]
+    },
+    "org.tron.consensus.base.State.values:()[Lorg/tron/consensus/base/State;" : {
+      "completeTestCount" : 0,
+      "incompleteTestCount" : 0,
+      "perMethodTestability" : "T012",
+      "perMethodOutcome" : "T012",
+      "lineNumbers" : [
+        3
+      ]
+    },
+    "org.tron.consensus.dpos.DposService.<clinit>:()V" : {
+      "completeTestCount" : 0,
+      "incompleteTestCount" : 0,
+      "perMethodTestability" : "T012",
+      "perMethodOutcome" : "T012",
+      "lineNumbers" : [
+        30
+      ]
+    },
+    "org.tron.consensus.dpos.DposService.<init>:()V" : {
+      "completeTestCount" : 0,
+      "incompleteTestCount" : 0,
+      "perMethodTestability" : "T005",
+      "perMethodOutcome" : "T005",
+      "lineNumbers" : [
+        32,
+        67
+      ]
+    },
+    "org.tron.consensus.dpos.DposService.applyBlock:(Lorg/tron/core/capsule/BlockCapsule;)Z" : {
+      "completeTestCount" : 4,
+      "incompleteTestCount" : 0,
+      "perMethodTestability" : "T000",
+      "perMethodOutcome" : "R000",
+      "perTestOutcome" : {
+        "R000" : 4
+      },
+      "lineNumbers" : [
+        140,
+        141,
+        142,
+        143
+      ]
+    },
+    "org.tron.consensus.dpos.DposService.getBlockHandle:()Lorg/tron/consensus/base/BlockHandle;" : {
+      "completeTestCount" : 1,
+      "incompleteTestCount" : 0,
+      "perMethodTestability" : "T001",
+      "perMethodOutcome" : "R000",
+      "perTestOutcome" : {
+        "R000" : 1
+      },
+      "lineNumbers" : [
+        63
+      ]
+    },
+    "org.tron.consensus.dpos.DposService.getBlockProduceTimeoutPercent:()I" : {
+      "completeTestCount" : 1,
+      "incompleteTestCount" : 0,
+      "perMethodTestability" : "T001",
+      "perMethodOutcome" : "R000",
+      "perTestOutcome" : {
+        "R000" : 1
+      },
+      "lineNumbers" : [
+        59
+      ]
+    },
+    "org.tron.consensus.dpos.DposService.getGenesisBlock:()Lorg/tron/common/args/GenesisBlock;" : {
+      "completeTestCount" : 1,
+      "incompleteTestCount" : 0,
+      "perMethodTestability" : "T001",
+      "perMethodOutcome" : "R000",
+      "perTestOutcome" : {
+        "R000" : 1
+      },
+      "lineNumbers" : [
+        65
+      ]
+    },
+    "org.tron.consensus.dpos.DposService.getGenesisBlockTime:()J" : {
+      "completeTestCount" : 1,
+      "incompleteTestCount" : 0,
+      "perMethodTestability" : "T001",
+      "perMethodOutcome" : "R000",
+      "perTestOutcome" : {
+        "R000" : 1
+      },
+      "lineNumbers" : [
+        61
+      ]
+    },
+    "org.tron.consensus.dpos.DposService.getMinParticipationRate:()I" : {
+      "completeTestCount" : 1,
+      "incompleteTestCount" : 0,
+      "perMethodTestability" : "T001",
+      "perMethodOutcome" : "R000",
+      "perTestOutcome" : {
+        "R000" : 1
+      },
+      "lineNumbers" : [
+        57
+      ]
+    },
+    "org.tron.consensus.dpos.DposService.getMiners:()Ljava/util/Map;" : {
+      "completeTestCount" : 1,
+      "incompleteTestCount" : 0,
+      "perMethodTestability" : "T001",
+      "perMethodOutcome" : "R000",
+      "perTestOutcome" : {
+        "R000" : 1
+      },
+      "lineNumbers" : [
+        67
+      ]
+    },
+    "org.tron.consensus.dpos.DposService.isEnable:()Z" : {
+      "completeTestCount" : 1,
+      "incompleteTestCount" : 0,
+      "perMethodTestability" : "T001",
+      "perMethodOutcome" : "R000",
+      "perTestOutcome" : {
+        "R000" : 1
+      },
+      "lineNumbers" : [
+        55
+      ]
+    },
+    "org.tron.consensus.dpos.DposService.isNeedSyncCheck:()Z" : {
+      "completeTestCount" : 1,
+      "incompleteTestCount" : 0,
+      "perMethodTestability" : "T001",
+      "perMethodOutcome" : "R000",
+      "perTestOutcome" : {
+        "R000" : 1
+      },
+      "lineNumbers" : [
+        52
+      ]
+    },
+    "org.tron.consensus.dpos.DposService.lambda$start$0:(Lorg/tron/consensus/base/Param$Miner;)V" : {
+      "completeTestCount" : 0,
+      "incompleteTestCount" : 0,
+      "perMethodTestability" : "T012",
+      "perMethodOutcome" : "T012",
+      "lineNumbers" : [
+        79
+      ]
+    },
+    "org.tron.consensus.dpos.DposService.lambda$start$1:(Ljava/util/List;Lorg/tron/core/capsule/WitnessCapsule;)V" : {
+      "completeTestCount" : 0,
+      "incompleteTestCount" : 0,
+      "perMethodTestability" : "T012",
+      "perMethodOutcome" : "T012",
+      "lineNumbers" : [
+        89
+      ]
+    },
+    "org.tron.consensus.dpos.DposService.lambda$start$2:(Lcom/google/protobuf/ByteString;)V" : {
+      "completeTestCount" : 0,
+      "incompleteTestCount" : 0,
+      "perMethodTestability" : "T012",
+      "perMethodOutcome" : "T012",
+      "lineNumbers" : [
+        93,
+        94,
+        95,
+        96
+      ]
+    },
+    "org.tron.consensus.dpos.DposService.lambda$updateSolidBlock$3:(Lcom/google/protobuf/ByteString;)Ljava/lang/Long;" : {
+      "completeTestCount" : 0,
+      "incompleteTestCount" : 0,
+      "perMethodTestability" : "T012",
+      "perMethodOutcome" : "T012",
+      "lineNumbers" : [
+        148
+      ]
+    },
+    "org.tron.consensus.dpos.DposService.lambda$updateWitness$4:(Lcom/google/protobuf/ByteString;)J" : {
+      "completeTestCount" : 0,
+      "incompleteTestCount" : 0,
+      "perMethodTestability" : "T012",
+      "perMethodOutcome" : "T012",
+      "lineNumbers" : [
+        167
+      ]
+    },
+    "org.tron.consensus.dpos.DposService.receiveBlock:(Lorg/tron/core/capsule/BlockCapsule;)V" : {
+      "completeTestCount" : 1,
+      "incompleteTestCount" : 0,
+      "perMethodTestability" : "T000",
+      "perMethodOutcome" : "R000",
+      "perTestOutcome" : {
+        "R000" : 1
+      },
+      "lineNumbers" : [
+        109,
+        110
+      ]
+    },
+    "org.tron.consensus.dpos.DposService.setNeedSyncCheck:(Z)V" : {
+      "completeTestCount" : 1,
+      "incompleteTestCount" : 0,
+      "perMethodTestability" : "T002",
+      "perMethodOutcome" : "R000",
+      "perTestOutcome" : {
+        "R000" : 1
+      },
+      "lineNumbers" : [
+        53
+      ]
+    },
+    "org.tron.consensus.dpos.DposService.start:(Lorg/tron/consensus/base/Param;)V" : {
+      "completeTestCount" : 7,
+      "incompleteTestCount" : 0,
+      "perMethodTestability" : "T000",
+      "perMethodOutcome" : "R000",
+      "perTestOutcome" : {
+        "R000" : 7
+      },
+      "lineNumbers" : [
+        72,
+        73,
+        74,
+        75,
+        76,
+        77,
+        78,
+        79,
+        81,
+        82,
+        83,
+        84,
+        86,
+        87,
+        88,
+        90,
+        91,
+        92,
+        98,
+        99,
+        100
+      ]
+    },
+    "org.tron.consensus.dpos.DposService.stop:()V" : {
+      "completeTestCount" : 1,
+      "incompleteTestCount" : 0,
+      "perMethodTestability" : "T000",
+      "perMethodOutcome" : "R000",
+      "perTestOutcome" : {
+        "R000" : 1
+      },
+      "lineNumbers" : [
+        104,
+        105
+      ]
+    },
+    "org.tron.consensus.dpos.DposService.updateSolidBlock:()V" : {
+      "completeTestCount" : 0,
+      "incompleteTestCount" : 0,
+      "perMethodTestability" : "T003",
+      "perMethodOutcome" : "T003",
+      "lineNumbers" : [
+        147,
+        148,
+        149,
+        150,
+        151,
+        152,
+        153,
+        154,
+        155,
+        156,
+        157,
+        159,
+        160,
+        161,
+        162,
+        163
+      ]
+    },
+    "org.tron.consensus.dpos.DposService.updateWitness:(Ljava/util/List;)V" : {
+      "completeTestCount" : 4,
+      "incompleteTestCount" : 0,
+      "perMethodTestability" : "T000",
+      "perMethodOutcome" : "R000",
+      "perTestOutcome" : {
+        "R000" : 4
+      },
+      "lineNumbers" : [
+        166,
+        168,
+        169,
+        166,
+        171,
+        172,
+        173,
+        175,
+        177
+      ]
+    },
+    "org.tron.consensus.dpos.DposService.validBlock:(Lorg/tron/core/capsule/BlockCapsule;)Z" : {
+      "completeTestCount" : 2,
+      "incompleteTestCount" : 0,
+      "perMethodTestability" : "T000",
+      "perMethodOutcome" : "R000",
+      "perTestOutcome" : {
+        "R000" : 2
+      },
+      "lineNumbers" : [
+        114,
+        115,
+        117,
+        118,
+        119,
+        120,
+        121,
+        122,
+        123,
+        126,
+        127,
+        128,
+        129,
+        130,
+        131,
+        129,
+        132,
+        135
+      ]
+    },
+    "org.tron.consensus.dpos.DposSlot.<clinit>:()V" : {
+      "completeTestCount" : 0,
+      "incompleteTestCount" : 0,
+      "perMethodTestability" : "T012",
+      "perMethodOutcome" : "T012",
+      "lineNumbers" : [
+        14
+      ]
+    },
+    "org.tron.consensus.dpos.DposSlot.<init>:()V" : {
+      "completeTestCount" : 0,
+      "incompleteTestCount" : 0,
+      "perMethodTestability" : "T005",
+      "perMethodOutcome" : "T005",
+      "lineNumbers" : [
+        16
+      ]
+    },
+    "org.tron.consensus.dpos.DposSlot.getAbSlot:(J)J" : {
+      "completeTestCount" : 1,
+      "incompleteTestCount" : 0,
+      "perMethodTestability" : "T000",
+      "perMethodOutcome" : "R000",
+      "perTestOutcome" : {
+        "R000" : 1
+      },
+      "lineNumbers" : [
+        25
+      ]
+    },
+    "org.tron.consensus.dpos.DposSlot.getScheduledWitness:(J)Lcom/google/protobuf/ByteString;" : {
+      "completeTestCount" : 4,
+      "incompleteTestCount" : 0,
+      "perMethodTestability" : "T000",
+      "perMethodOutcome" : "R000",
+      "perTestOutcome" : {
+        "R000" : 4
+      },
+      "lineNumbers" : [
+        53,
+        54,
+        55,
+        57,
+        58,
+        59,
+        61,
+        62,
+        63
+      ]
+    },
+    "org.tron.consensus.dpos.DposSlot.getSlot:(J)J" : {
+      "completeTestCount" : 1,
+      "incompleteTestCount" : 0,
+      "perMethodTestability" : "T000",
+      "perMethodOutcome" : "R000",
+      "perTestOutcome" : {
+        "R000" : 1
+      },
+      "lineNumbers" : [
+        29,
+        30,
+        31,
+        33
+      ]
+    },
+    "org.tron.consensus.dpos.DposSlot.getTime:(J)J" : {
+      "completeTestCount" : 1,
+      "incompleteTestCount" : 0,
+      "perMethodTestability" : "T000",
+      "perMethodOutcome" : "R000",
+      "perTestOutcome" : {
+        "R000" : 1
+      },
+      "lineNumbers" : [
+        37,
+        38,
+        40,
+        41,
+        42,
+        44,
+        45,
+        47,
+        48,
+        49
+      ]
+    },
+    "org.tron.consensus.dpos.DposSlot.setDposService:(Lorg/tron/consensus/dpos/DposService;)V" : {
+      "completeTestCount" : 0,
+      "incompleteTestCount" : 0,
+      "perMethodTestability" : "T002",
+      "perMethodOutcome" : "R002",
+      "lineNumbers" : [
+        21
+      ]
+    },
+    "org.tron.consensus.dpos.DposTask.<clinit>:()V" : {
+      "completeTestCount" : 0,
+      "incompleteTestCount" : 0,
+      "perMethodTestability" : "T012",
+      "perMethodOutcome" : "T012",
+      "lineNumbers" : [
+        23
+      ]
+    },
+    "org.tron.consensus.dpos.DposTask.<init>:()V" : {
+      "completeTestCount" : 0,
+      "incompleteTestCount" : 0,
+      "perMethodTestability" : "T005",
+      "perMethodOutcome" : "T005",
+      "lineNumbers" : [
+        25,
+        41,
+        43
+      ]
+    },
+    "org.tron.consensus.dpos.DposTask.init:()V" : {
+      "completeTestCount" : 2,
+      "incompleteTestCount" : 0,
+      "perMethodTestability" : "T000",
+      "perMethodOutcome" : "R000",
+      "perTestOutcome" : {
+        "R000" : 2
+      },
+      "lineNumbers" : [
+        47,
+        48,
+        50,
+        51,
+        74,
+        75,
+        76
+      ]
+    },
+    "org.tron.consensus.dpos.DposTask.lambda$init$0:()V" : {
+      "completeTestCount" : 0,
+      "incompleteTestCount" : 0,
+      "perMethodTestability" : "T012",
+      "perMethodOutcome" : "T012",
+      "lineNumbers" : [
+        52,
+        54,
+        55,
+        56,
+        58,
+        59,
+        60,
+        61,
+        62,
+        63,
+        71,
+        66,
+        67,
+        68,
+        71,
+        69,
+        70,
+        71,
+        73
+      ]
+    },
+    "org.tron.consensus.dpos.DposTask.produceBlock:()Lorg/tron/consensus/base/State;" : {
+      "completeTestCount" : 0,
+      "incompleteTestCount" : 0,
+      "perMethodTestability" : "T003",
+      "perMethodOutcome" : "T003",
+      "lineNumbers" : [
+        85,
+        86,
+        87,
+        90,
+        92,
+        94,
+        95,
+        96,
+        129,
+        96,
+        99,
+        100,
+        101,
+        129,
+        101,
+        104,
+        106,
+        107,
+        108,
+        129,
+        108,
+        111,
+        112,
+        113,
+        114,
+        115,
+        116,
+        129,
+        116,
+        119,
+        120,
+        121,
+        122,
+        123,
+        124,
+        125,
+        124,
+        126,
+        120,
+        127,
+        129,
+        130,
+        129,
+        130,
+        132
+      ]
+    },
+    "org.tron.consensus.dpos.DposTask.setDposService:(Lorg/tron/consensus/dpos/DposService;)V" : {
+      "completeTestCount" : 0,
+      "incompleteTestCount" : 0,
+      "perMethodTestability" : "T002",
+      "perMethodOutcome" : "R002",
+      "lineNumbers" : [
+        36
+      ]
+    },
+    "org.tron.consensus.dpos.DposTask.stop:()V" : {
+      "completeTestCount" : 0,
+      "incompleteTestCount" : 0,
+      "perMethodTestability" : "T000",
+      "perMethodOutcome" : "R027",
+      "lineNumbers" : [
+        79,
+        80,
+        81
+      ]
+    },
+    "org.tron.consensus.dpos.IncentiveManager.<clinit>:()V" : {
+      "completeTestCount" : 0,
+      "incompleteTestCount" : 0,
+      "perMethodTestability" : "T012",
+      "perMethodOutcome" : "T012",
+      "lineNumbers" : [
+        13
+      ]
+    },
+    "org.tron.consensus.dpos.IncentiveManager.<init>:()V" : {
+      "completeTestCount" : 0,
+      "incompleteTestCount" : 0,
+      "perMethodTestability" : "T005",
+      "perMethodOutcome" : "T005",
+      "lineNumbers" : [
+        15
+      ]
+    },
+    "org.tron.consensus.dpos.IncentiveManager.reward:(Ljava/util/List;)V" : {
+      "completeTestCount" : 7,
+      "incompleteTestCount" : 0,
+      "perMethodTestability" : "T000",
+      "perMethodOutcome" : "R000",
+      "perTestOutcome" : {
+        "R000" : 7
+      },
+      "lineNumbers" : [
+        21,
+        22,
+        24,
+        25,
+        27,
+        28,
+        29,
+        30,
+        31,
+        32,
+        34,
+        35,
+        36,
+        37,
+        39,
+        40,
+        41,
+        42,
+        43
+      ]
+    },
+    "org.tron.consensus.dpos.MaintenanceManager.<clinit>:()V" : {
+      "completeTestCount" : 0,
+      "incompleteTestCount" : 0,
+      "perMethodTestability" : "T012",
+      "perMethodOutcome" : "T012",
+      "lineNumbers" : [
+        29
+      ]
+    },
+    "org.tron.consensus.dpos.MaintenanceManager.<init>:()V" : {
+      "completeTestCount" : 0,
+      "incompleteTestCount" : 0,
+      "perMethodTestability" : "T005",
+      "perMethodOutcome" : "T005",
+      "lineNumbers" : [
+        31,
+        45,
+        47
+      ]
+    },
+    "org.tron.consensus.dpos.MaintenanceManager.applyBlock:(Lorg/tron/core/capsule/BlockCapsule;)V" : {
+      "completeTestCount" : 1,
+      "incompleteTestCount" : 0,
+      "perMethodTestability" : "T000",
+      "perMethodOutcome" : "R000",
+      "perTestOutcome" : {
+        "R000" : 1
+      },
+      "lineNumbers" : [
+        57,
+        58,
+        59,
+        60,
+        61,
+        62,
+        63,
+        64,
+        65,
+        66,
+        68,
+        69,
+        71,
+        72,
+        71,
+        75,
+        77,
+        78,
+        80,
+        81
+      ]
+    },
+    "org.tron.consensus.dpos.MaintenanceManager.countVote:(Lorg/tron/core/store/VotesStore;)Ljava/util/Map;" : {
+      "completeTestCount" : 0,
+      "incompleteTestCount" : 0,
+      "perMethodTestability" : "T003",
+      "perMethodOutcome" : "T003",
+      "lineNumbers" : [
+        163,
+        164,
+        165,
+        166,
+        167,
+        168,
+        169,
+        178,
+        187,
+        188,
+        189,
+        190,
+        191
+      ]
+    },
+    "org.tron.consensus.dpos.MaintenanceManager.doMaintenance:()V" : {
+      "completeTestCount" : 0,
+      "incompleteTestCount" : 0,
+      "perMethodTestability" : "T000",
+      "perMethodOutcome" : "R027",
+      "lineNumbers" : [
+        89,
+        91,
+        93,
+        94,
+        95,
+        96,
+        97,
+        102,
+        103,
+        104,
+        106,
+        107,
+        108,
+        110,
+        128,
+        130,
+        132,
+        133,
+        134,
+        139,
+        146,
+        147,
+        148,
+        146,
+        151,
+        152,
+        153,
+        154,
+        160
+      ]
+    },
+    "org.tron.consensus.dpos.MaintenanceManager.getBeforeMaintenanceTime:()J" : {
+      "completeTestCount" : 1,
+      "incompleteTestCount" : 0,
+      "perMethodTestability" : "T001",
+      "perMethodOutcome" : "R000",
+      "perTestOutcome" : {
+        "R000" : 1
+      },
+      "lineNumbers" : [
+        49
+      ]
+    },
+    "org.tron.consensus.dpos.MaintenanceManager.getBeforeWitness:()Ljava/util/List;" : {
+      "completeTestCount" : 1,
+      "incompleteTestCount" : 0,
+      "perMethodTestability" : "T001",
+      "perMethodOutcome" : "R000",
+      "perTestOutcome" : {
+        "R000" : 1
+      },
+      "lineNumbers" : [
+        45
+      ]
+    },
+    "org.tron.consensus.dpos.MaintenanceManager.getCurrentWitness:()Ljava/util/List;" : {
+      "completeTestCount" : 1,
+      "incompleteTestCount" : 0,
+      "perMethodTestability" : "T001",
+      "perMethodOutcome" : "R000",
+      "perTestOutcome" : {
+        "R000" : 1
+      },
+      "lineNumbers" : [
+        47
+      ]
+    },
+    "org.tron.consensus.dpos.MaintenanceManager.init:()V" : {
+      "completeTestCount" : 1,
+      "incompleteTestCount" : 0,
+      "perMethodTestability" : "T000",
+      "perMethodOutcome" : "R000",
+      "perTestOutcome" : {
+        "R000" : 1
+      },
+      "lineNumbers" : [
+        53,
+        54
+      ]
+    },
+    "org.tron.consensus.dpos.MaintenanceManager.lambda$countVote$6:(Ljava/util/Map;Lorg/tron/protos/Protocol$Vote;)V" : {
+      "completeTestCount" : 0,
+      "incompleteTestCount" : 0,
+      "perMethodTestability" : "T012",
+      "perMethodOutcome" : "T012",
+      "lineNumbers" : [
+        170,
+        171,
+        172,
+        173,
+        175,
+        177
+      ]
+    },
+    "org.tron.consensus.dpos.MaintenanceManager.lambda$countVote$7:(Ljava/util/Map;Lorg/tron/protos/Protocol$Vote;)V" : {
+      "completeTestCount" : 0,
+      "incompleteTestCount" : 0,
+      "perMethodTestability" : "T012",
+      "perMethodOutcome" : "T012",
+      "lineNumbers" : [
+        179,
+        180,
+        181,
+        182,
+        184,
+        186
+      ]
+    },
+    "org.tron.consensus.dpos.MaintenanceManager.lambda$doMaintenance$0:(Lorg/tron/core/store/DelegationStore;JLorg/tron/core/capsule/WitnessCapsule;)V" : {
+      "completeTestCount" : 0,
+      "incompleteTestCount" : 0,
+      "perMethodTestability" : "T012",
+      "perMethodOutcome" : "T012",
+      "lineNumbers" : [
+        98,
+        99
+      ]
+    },
+    "org.tron.consensus.dpos.MaintenanceManager.lambda$doMaintenance$1:(Ljava/util/List;Lorg/tron/core/capsule/WitnessCapsule;)V" : {
+      "completeTestCount" : 0,
+      "incompleteTestCount" : 0,
+      "perMethodTestability" : "T012",
+      "perMethodOutcome" : "T012",
+      "lineNumbers" : [
+        108
+      ]
+    },
+    "org.tron.consensus.dpos.MaintenanceManager.lambda$doMaintenance$2:(Lcom/google/protobuf/ByteString;Ljava/lang/Long;)V" : {
+      "completeTestCount" : 0,
+      "incompleteTestCount" : 0,
+      "perMethodTestability" : "T012",
+      "perMethodOutcome" : "T012",
+      "lineNumbers" : [
+        111,
+        112,
+        113,
+        114,
+        115,
+        117,
+        118,
+        119,
+        120,
+        122,
+        123,
+        124,
+        125,
+        124,
+        126
+      ]
+    },
+    "org.tron.consensus.dpos.MaintenanceManager.lambda$doMaintenance$3:(Lcom/google/protobuf/ByteString;)V" : {
+      "completeTestCount" : 0,
+      "incompleteTestCount" : 0,
+      "perMethodTestability" : "T012",
+      "perMethodOutcome" : "T012",
+      "lineNumbers" : [
+        135,
+        136,
+        137,
+        138
+      ]
+    },
+    "org.tron.consensus.dpos.MaintenanceManager.lambda$doMaintenance$4:(Lcom/google/protobuf/ByteString;)V" : {
+      "completeTestCount" : 0,
+      "incompleteTestCount" : 0,
+      "perMethodTestability" : "T012",
+      "perMethodOutcome" : "T012",
+      "lineNumbers" : [
+        140,
+        141,
+        142,
+        143
+      ]
+    },
+    "org.tron.consensus.dpos.MaintenanceManager.lambda$doMaintenance$5:(Lorg/tron/core/store/DelegationStore;JLorg/tron/core/capsule/WitnessCapsule;)V" : {
+      "completeTestCount" : 0,
+      "incompleteTestCount" : 0,
+      "perMethodTestability" : "T012",
+      "perMethodOutcome" : "T012",
+      "lineNumbers" : [
+        155,
+        156,
+        155,
+        157,
+        158
+      ]
+    },
+    "org.tron.consensus.dpos.MaintenanceManager.lambda$tryRemoveThePowerOfTheGr$8:(Lorg/tron/common/args/Witness;)V" : {
+      "completeTestCount" : 0,
+      "incompleteTestCount" : 0,
+      "perMethodTestability" : "T012",
+      "perMethodOutcome" : "T012",
+      "lineNumbers" : [
+        199,
+        200,
+        201,
+        202
+      ]
+    },
+    "org.tron.consensus.dpos.MaintenanceManager.setDposService:(Lorg/tron/consensus/dpos/DposService;)V" : {
+      "completeTestCount" : 1,
+      "incompleteTestCount" : 0,
+      "perMethodTestability" : "T002",
+      "perMethodOutcome" : "R000",
+      "perTestOutcome" : {
+        "R000" : 1
+      },
+      "lineNumbers" : [
+        39
+      ]
+    },
+    "org.tron.consensus.dpos.MaintenanceManager.setPbftManager:(Lorg/tron/consensus/pbft/PbftManager;)V" : {
+      "completeTestCount" : 1,
+      "incompleteTestCount" : 0,
+      "perMethodTestability" : "T002",
+      "perMethodOutcome" : "R000",
+      "perTestOutcome" : {
+        "R000" : 1
+      },
+      "lineNumbers" : [
+        42
+      ]
+    },
+    "org.tron.consensus.dpos.MaintenanceManager.tryRemoveThePowerOfTheGr:()V" : {
+      "completeTestCount" : 0,
+      "incompleteTestCount" : 0,
+      "perMethodTestability" : "T003",
+      "perMethodOutcome" : "T003",
+      "lineNumbers" : [
+        195,
+        196,
+        198,
+        203,
+        204
+      ]
+    },
+    "org.tron.consensus.dpos.MaintenanceManager.updateWitnessValue:(Ljava/util/List;)V" : {
+      "completeTestCount" : 0,
+      "incompleteTestCount" : 0,
+      "perMethodTestability" : "T003",
+      "perMethodOutcome" : "T003",
+      "lineNumbers" : [
+        84,
+        85,
+        86
+      ]
+    },
+    "org.tron.consensus.dpos.StateManager.<clinit>:()V" : {
+      "completeTestCount" : 0,
+      "incompleteTestCount" : 0,
+      "perMethodTestability" : "T012",
+      "perMethodOutcome" : "T012",
+      "lineNumbers" : [
+        19
+      ]
+    },
+    "org.tron.consensus.dpos.StateManager.<init>:()V" : {
+      "completeTestCount" : 0,
+      "incompleteTestCount" : 0,
+      "perMethodTestability" : "T000",
+      "perMethodOutcome" : "T005",
+      "lineNumbers" : [
+        21,
+        32,
+        34,
+        36
+      ]
+    },
+    "org.tron.consensus.dpos.StateManager.getState:()Lorg/tron/consensus/base/State;" : {
+      "completeTestCount" : 1,
+      "incompleteTestCount" : 0,
+      "perMethodTestability" : "T000",
+      "perMethodOutcome" : "R000",
+      "perTestOutcome" : {
+        "R000" : 1
+      },
+      "lineNumbers" : [
+        41,
+        42,
+        45,
+        46,
+        47,
+        50,
+        51,
+        54,
+        55,
+        56,
+        57,
+        58,
+        59,
+        62
+      ]
+    },
+    "org.tron.consensus.dpos.StateManager.isDupWitness:()Z" : {
+      "completeTestCount" : 0,
+      "incompleteTestCount" : 0,
+      "perMethodTestability" : "T003",
+      "perMethodOutcome" : "T003",
+      "lineNumbers" : [
+        105,
+        106,
+        108,
+        109,
+        110,
+        112
+      ]
+    },
+    "org.tron.consensus.dpos.StateManager.receiveBlock:(Lorg/tron/core/capsule/BlockCapsule;)V" : {
+      "completeTestCount" : 5,
+      "incompleteTestCount" : 0,
+      "perMethodTestability" : "T000",
+      "perMethodOutcome" : "R000",
+      "perTestOutcome" : {
+        "R000" : 5
+      },
+      "lineNumbers" : [
+        66,
+        67,
+        68,
+        71,
+        72,
+        75,
+        76,
+        79,
+        80,
+        83,
+        84,
+        85,
+        88,
+        89,
+        90,
+        93,
+        94,
+        95,
+        98,
+        99,
+        101,
+        102
+      ]
+    },
+    "org.tron.consensus.dpos.StateManager.setCurrentBlockId:(Lorg/tron/core/capsule/BlockCapsule$BlockId;)V" : {
+      "completeTestCount" : 0,
+      "incompleteTestCount" : 0,
+      "perMethodTestability" : "T002",
+      "perMethodOutcome" : "R002",
+      "lineNumbers" : [
+        29
+      ]
+    },
+    "org.tron.consensus.dpos.StateManager.setDposService:(Lorg/tron/consensus/dpos/DposService;)V" : {
+      "completeTestCount" : 0,
+      "incompleteTestCount" : 0,
+      "perMethodTestability" : "T002",
+      "perMethodOutcome" : "R002",
+      "lineNumbers" : [
+        26
+      ]
+    },
+    "org.tron.consensus.dpos.StatisticManager.<clinit>:()V" : {
+      "completeTestCount" : 0,
+      "incompleteTestCount" : 0,
+      "perMethodTestability" : "T012",
+      "perMethodOutcome" : "T012",
+      "lineNumbers" : [
+        14
+      ]
+    },
+    "org.tron.consensus.dpos.StatisticManager.<init>:()V" : {
+      "completeTestCount" : 0,
+      "incompleteTestCount" : 0,
+      "perMethodTestability" : "T005",
+      "perMethodOutcome" : "T005",
+      "lineNumbers" : [
+        16
+      ]
+    },
+    "org.tron.consensus.dpos.StatisticManager.applyBlock:(Lorg/tron/core/capsule/BlockCapsule;)V" : {
+      "completeTestCount" : 4,
+      "incompleteTestCount" : 0,
+      "perMethodTestability" : "T000",
+      "perMethodOutcome" : "R000",
+      "perTestOutcome" : {
+        "R000" : 4
+      },
+      "lineNumbers" : [
+        26,
+        27,
+        28,
+        29,
+        30,
+        31,
+        33,
+        34,
+        35,
+        37,
+        38,
+        39,
+        41,
+        42,
+        43,
+        44,
+        45,
+        46,
+        45,
+        48,
+        49,
+        50,
+        51,
+        50,
+        51,
+        49,
+        52,
+        41,
+        54,
+        55
+      ]
+    },
+    "org.tron.consensus.pbft.PbftManager$1.<clinit>:()V" : {
+      "completeTestCount" : 0,
+      "incompleteTestCount" : 0,
+      "perMethodTestability" : "T012",
+      "perMethodOutcome" : "T012",
+      "lineNumbers" : [
+        79
+      ]
+    },
+    "org.tron.consensus.pbft.PbftManager.<clinit>:()V" : {
+      "completeTestCount" : 0,
+      "incompleteTestCount" : 0,
+      "perMethodTestability" : "T012",
+      "perMethodOutcome" : "T012",
+      "lineNumbers" : [
+        20
+      ]
+    },
+    "org.tron.consensus.pbft.PbftManager.<init>:()V" : {
+      "completeTestCount" : 0,
+      "incompleteTestCount" : 0,
+      "perMethodTestability" : "T000",
+      "perMethodOutcome" : "T005",
+      "lineNumbers" : [
+        22,
+        33,
+        34
+      ]
+    },
+    "org.tron.consensus.pbft.PbftManager.blockPrePrepare:(Lorg/tron/core/capsule/BlockCapsule;J)V" : {
+      "completeTestCount" : 3,
+      "incompleteTestCount" : 0,
+      "perMethodTestability" : "T000",
+      "perMethodOutcome" : "R000",
+      "perTestOutcome" : {
+        "R000" : 3
+      },
+      "warnings" : {
+        "W002" : 1
+      },
+      "lineNumbers" : [
+        43,
+        44,
+        46,
+        47,
+        48,
+        49,
+        50,
+        52,
+        55
+      ]
+    },
+    "org.tron.consensus.pbft.PbftManager.close:()V" : {
+      "completeTestCount" : 0,
+      "incompleteTestCount" : 0,
+      "perMethodTestability" : "T000",
+      "perMethodOutcome" : "R027",
+      "lineNumbers" : [
+        117,
+        118
+      ]
+    },
+    "org.tron.consensus.pbft.PbftManager.doAction:(Lorg/tron/consensus/pbft/message/PbftMessage;)Z" : {
+      "completeTestCount" : 1,
+      "incompleteTestCount" : 0,
+      "perMethodTestability" : "T000",
+      "perMethodOutcome" : "R000",
+      "perTestOutcome" : {
+        "R000" : 1
+      },
+      "lineNumbers" : [
+        77,
+        101
+      ]
+    },
+    "org.tron.consensus.pbft.PbftManager.forwardMessage:(Lorg/tron/consensus/pbft/message/PbftBaseMessage;)V" : {
+      "completeTestCount" : 1,
+      "incompleteTestCount" : 0,
+      "perMethodTestability" : "T000",
+      "perMethodOutcome" : "R000",
+      "perTestOutcome" : {
+        "R000" : 1
+      },
+      "lineNumbers" : [
+        73,
+        74
+      ]
+    },
+    "org.tron.consensus.pbft.PbftManager.init:()V" : {
+      "completeTestCount" : 1,
+      "incompleteTestCount" : 0,
+      "perMethodTestability" : "T000",
+      "perMethodOutcome" : "R000",
+      "perTestOutcome" : {
+        "R000" : 1
+      },
+      "lineNumbers" : [
+        38,
+        39,
+        40
+      ]
+    },
+    "org.tron.consensus.pbft.PbftManager.lambda$doAction$0:(Lorg/tron/consensus/pbft/message/PbftMessage;)V" : {
+      "completeTestCount" : 0,
+      "incompleteTestCount" : 0,
+      "perMethodTestability" : "T012",
+      "perMethodOutcome" : "T012",
+      "lineNumbers" : [
+        78,
+        79,
+        81,
+        82,
+        85,
+        86,
+        89,
+        90,
+        92,
+        93,
+        95,
+        96,
+        100
+      ]
+    },
+    "org.tron.consensus.pbft.PbftManager.srPrePrepare:(Lorg/tron/core/capsule/BlockCapsule;Ljava/util/List;J)V" : {
+      "completeTestCount" : 3,
+      "incompleteTestCount" : 0,
+      "perMethodTestability" : "T000",
+      "perMethodOutcome" : "R000",
+      "perTestOutcome" : {
+        "R000" : 3
+      },
+      "lineNumbers" : [
+        58,
+        59,
+        61,
+        62,
+        63,
+        64,
+        65,
+        67,
+        70
+      ]
+    },
+    "org.tron.consensus.pbft.PbftManager.verifyMsg:(Lorg/tron/consensus/pbft/message/PbftBaseMessage;)Z" : {
+      "completeTestCount" : 3,
+      "incompleteTestCount" : 0,
+      "perMethodTestability" : "T000",
+      "perMethodOutcome" : "R000",
+      "perTestOutcome" : {
+        "R000" : 3
+      },
+      "lineNumbers" : [
+        105,
+        107,
+        108,
+        110,
+        112
+      ]
+    },
+    "org.tron.consensus.pbft.PbftMessageAction$1.<clinit>:()V" : {
+      "completeTestCount" : 0,
+      "incompleteTestCount" : 0,
+      "perMethodTestability" : "T012",
+      "perMethodOutcome" : "T012",
+      "lineNumbers" : [
+        22
+      ]
+    },
+    "org.tron.consensus.pbft.PbftMessageAction.<clinit>:()V" : {
+      "completeTestCount" : 0,
+      "incompleteTestCount" : 0,
+      "perMethodTestability" : "T012",
+      "perMethodOutcome" : "T012",
+      "lineNumbers" : [
+        14
+      ]
+    },
+    "org.tron.consensus.pbft.PbftMessageAction.<init>:()V" : {
+      "completeTestCount" : 0,
+      "incompleteTestCount" : 0,
+      "perMethodTestability" : "T005",
+      "perMethodOutcome" : "T005",
+      "lineNumbers" : [
+        16
+      ]
+    },
+    "org.tron.consensus.pbft.PbftMessageAction.action:(Lorg/tron/consensus/pbft/message/PbftMessage;Ljava/util/List;)V" : {
+      "completeTestCount" : 3,
+      "incompleteTestCount" : 0,
+      "perMethodTestability" : "T000",
+      "perMethodOutcome" : "R000",
+      "perTestOutcome" : {
+        "R000" : 3
+      },
+      "lineNumbers" : [
+        22,
+        24,
+        25,
+        26,
+        27,
+        28,
+        29,
+        31,
+        34,
+        35,
+        36,
+        35,
+        37,
+        40,
+        38,
+        39,
+        42,
+        46
+      ]
+    },
+    "org.tron.consensus.pbft.PbftMessageHandle$1.<init>:(Lorg/tron/consensus/pbft/PbftMessageHandle;)V" : {
+      "completeTestCount" : 0,
+      "incompleteTestCount" : 0,
+      "perMethodTestability" : "T004",
+      "perMethodOutcome" : "T004",
+      "lineNumbers" : [
+        60
+      ]
+    },
+    "org.tron.consensus.pbft.PbftMessageHandle$1.load:(Ljava/lang/Object;)Ljava/lang/Object;" : {
+      "completeTestCount" : 0,
+      "incompleteTestCount" : 0,
+      "perMethodTestability" : "T012",
+      "perMethodOutcome" : "T012",
+      "lineNumbers" : [
+        60
+      ]
+    },
+    "org.tron.consensus.pbft.PbftMessageHandle$1.load:(Ljava/lang/String;)Ljava/util/List;" : {
+      "completeTestCount" : 0,
+      "incompleteTestCount" : 0,
+      "perMethodTestability" : "T004",
+      "perMethodOutcome" : "T004",
+      "lineNumbers" : [
+        63
+      ]
+    },
+    "org.tron.consensus.pbft.PbftMessageHandle$2.<init>:(Lorg/tron/consensus/pbft/PbftMessageHandle;)V" : {
+      "completeTestCount" : 0,
+      "incompleteTestCount" : 0,
+      "perMethodTestability" : "T004",
+      "perMethodOutcome" : "T004",
+      "lineNumbers" : [
+        312
+      ]
+    },
+    "org.tron.consensus.pbft.PbftMessageHandle$2.run:()V" : {
+      "completeTestCount" : 0,
+      "incompleteTestCount" : 0,
+      "perMethodTestability" : "T004",
+      "perMethodOutcome" : "T004",
+      "lineNumbers" : [
+        315,
+        316
+      ]
+    },
+    "org.tron.consensus.pbft.PbftMessageHandle.<clinit>:()V" : {
+      "completeTestCount" : 0,
+      "incompleteTestCount" : 0,
+      "perMethodTestability" : "T012",
+      "perMethodOutcome" : "T012",
+      "lineNumbers" : [
+        36
+      ]
+    },
+    "org.tron.consensus.pbft.PbftMessageHandle.<init>:()V" : {
+      "completeTestCount" : 0,
+      "incompleteTestCount" : 0,
+      "perMethodTestability" : "T000",
+      "perMethodOutcome" : "T005",
+      "lineNumbers" : [
+        38,
+        42,
+        44,
+        45,
+        46,
+        47,
+        49,
+        50,
+        51,
+        52,
+        54,
+        56,
+        58,
+        59,
+        69
+      ]
+    },
+    "org.tron.consensus.pbft.PbftMessageHandle.access$000:(Lorg/tron/consensus/pbft/PbftMessageHandle;)V" : {
+      "completeTestCount" : 0,
+      "incompleteTestCount" : 0,
+      "perMethodTestability" : "T012",
+      "perMethodOutcome" : "T012",
+      "lineNumbers" : [
+        38
+      ]
+    },
+    "org.tron.consensus.pbft.PbftMessageHandle.checkCommitMsgCache:(Ljava/lang/String;)V" : {
+      "completeTestCount" : 0,
+      "incompleteTestCount" : 0,
+      "perMethodTestability" : "T003",
+      "perMethodOutcome" : "T003",
+      "lineNumbers" : [
+        242,
+        243,
+        244,
+        245,
+        247,
+        248
+      ]
+    },
+    "org.tron.consensus.pbft.PbftMessageHandle.checkIsCanSendMsg:(J)Z" : {
+      "completeTestCount" : 2,
+      "incompleteTestCount" : 0,
+      "perMethodTestability" : "T000",
+      "perMethodOutcome" : "R000",
+      "perTestOutcome" : {
+        "R000" : 2
+      },
+      "lineNumbers" : [
+        251,
+        252,
+        254,
+        255,
+        257
+      ]
+    },
+    "org.tron.consensus.pbft.PbftMessageHandle.checkPrepareMsgCache:(Ljava/lang/String;)V" : {
+      "completeTestCount" : 0,
+      "incompleteTestCount" : 0,
+      "perMethodTestability" : "T003",
+      "perMethodOutcome" : "T003",
+      "lineNumbers" : [
+        233,
+        234,
+        235,
+        236,
+        238,
+        239
+      ]
+    },
+    "org.tron.consensus.pbft.PbftMessageHandle.checkTimer:()V" : {
+      "completeTestCount" : 0,
+      "incompleteTestCount" : 0,
+      "perMethodTestability" : "T003",
+      "perMethodOutcome" : "T003",
+      "lineNumbers" : [
+        302,
+        303,
+        305,
+        306,
+        308,
+        309
+      ]
+    },
+    "org.tron.consensus.pbft.PbftMessageHandle.close:()V" : {
+      "completeTestCount" : 1,
+      "incompleteTestCount" : 0,
+      "perMethodTestability" : "T000",
+      "perMethodOutcome" : "R000",
+      "perTestOutcome" : {
+        "R000" : 1
+      },
+      "lineNumbers" : [
+        86,
+        88,
+        91,
+        89,
+        90,
+        92
+      ]
+    },
+    "org.tron.consensus.pbft.PbftMessageHandle.forwardMessage:(Lorg/tron/consensus/pbft/message/PbftBaseMessage;)V" : {
+      "completeTestCount" : 0,
+      "incompleteTestCount" : 0,
+      "perMethodTestability" : "T000",
+      "perMethodOutcome" : "R027",
+      "lineNumbers" : [
+        229,
+        230
+      ]
+    },
+    "org.tron.consensus.pbft.PbftMessageHandle.getSrMinerList:(J)Ljava/util/List;" : {
+      "completeTestCount" : 2,
+      "incompleteTestCount" : 0,
+      "perMethodTestability" : "T000",
+      "perMethodOutcome" : "R000",
+      "perTestOutcome" : {
+        "R000" : 2
+      },
+      "lineNumbers" : [
+        96,
+        97,
+        99,
+        101,
+        102,
+        103,
+        101
+      ]
+    },
+    "org.tron.consensus.pbft.PbftMessageHandle.init:()V" : {
+      "completeTestCount" : 1,
+      "incompleteTestCount" : 0,
+      "perMethodTestability" : "T000",
+      "perMethodOutcome" : "R000",
+      "perTestOutcome" : {
+        "R000" : 1
+      },
+      "lineNumbers" : [
+        80,
+        81
+      ]
+    },
+    "org.tron.consensus.pbft.PbftMessageHandle.isSyncing:()Z" : {
+      "completeTestCount" : 1,
+      "incompleteTestCount" : 0,
+      "perMethodTestability" : "T000",
+      "perMethodOutcome" : "R000",
+      "perTestOutcome" : {
+        "R000" : 1
+      },
+      "lineNumbers" : [
+        261
+      ]
+    },
+    "org.tron.consensus.pbft.PbftMessageHandle.lambda$getSrMinerList$0:(Ljava/util/List;Lorg/tron/consensus/base/Param$Miner;)Z" : {
+      "completeTestCount" : 0,
+      "incompleteTestCount" : 0,
+      "perMethodTestability" : "T012",
+      "perMethodOutcome" : "T012",
+      "lineNumbers" : [
+        102
+      ]
+    },
+    "org.tron.consensus.pbft.PbftMessageHandle.lambda$remove$1:(Ljava/lang/String;Ljava/lang/String;)Z" : {
+      "completeTestCount" : 0,
+      "incompleteTestCount" : 0,
+      "perMethodTestability" : "T012",
+      "perMethodOutcome" : "T012",
+      "lineNumbers" : [
+        268
+      ]
+    },
+    "org.tron.consensus.pbft.PbftMessageHandle.lambda$remove$2:(Ljava/lang/String;Ljava/lang/String;)Z" : {
+      "completeTestCount" : 0,
+      "incompleteTestCount" : 0,
+      "perMethodTestability" : "T012",
+      "perMethodOutcome" : "T012",
+      "lineNumbers" : [
+        269
+      ]
+    },
+    "org.tron.consensus.pbft.PbftMessageHandle.lambda$remove$3:(Ljava/lang/String;Ljava/lang/String;Ljava/lang/String;)V" : {
+      "completeTestCount" : 0,
+      "incompleteTestCount" : 0,
+      "perMethodTestability" : "T012",
+      "perMethodOutcome" : "T012",
+      "lineNumbers" : [
+        272,
+        273,
+        274,
+        276
+      ]
+    },
+    "org.tron.consensus.pbft.PbftMessageHandle.lambda$remove$4:(Ljava/lang/String;Ljava/lang/String;Ljava/lang/String;)V" : {
+      "completeTestCount" : 0,
+      "incompleteTestCount" : 0,
+      "perMethodTestability" : "T012",
+      "perMethodOutcome" : "T012",
+      "lineNumbers" : [
+        278,
+        279,
+        280,
+        282
+      ]
+    },
+    "org.tron.consensus.pbft.PbftMessageHandle.onChangeView:(Lorg/tron/consensus/pbft/message/PbftBaseMessage;)V" : {
+      "completeTestCount" : 0,
+      "incompleteTestCount" : 0,
+      "perMethodTestability" : "T021",
+      "perMethodOutcome" : "R002",
+      "lineNumbers" : [
+        226
+      ]
+    },
+    "org.tron.consensus.pbft.PbftMessageHandle.onCommit:(Lorg/tron/consensus/pbft/message/PbftMessage;)V" : {
+      "completeTestCount" : 2,
+      "incompleteTestCount" : 0,
+      "perMethodTestability" : "T000",
+      "perMethodOutcome" : "R000",
+      "perTestOutcome" : {
+        "R000" : 2
+      },
+      "lineNumbers" : [
+        190,
+        191,
+        193,
+        194,
+        196,
+        198,
+        199,
+        203,
+        205,
+        207,
+        208,
+        209,
+        210,
+        211,
+        212,
+        214,
+        215,
+        218
+      ]
+    },
+    "org.tron.consensus.pbft.PbftMessageHandle.onPrePrepare:(Lorg/tron/consensus/pbft/message/PbftMessage;)V" : {
+      "completeTestCount" : 2,
+      "incompleteTestCount" : 0,
+      "perMethodTestability" : "T000",
+      "perMethodOutcome" : "R000",
+      "perTestOutcome" : {
+        "R000" : 2
+      },
+      "lineNumbers" : [
+        107,
+        108,
+        109,
+        110,
+        109,
+        111,
+        112,
+        114,
+        116,
+        118,
+        120,
+        122,
+        124,
+        125,
+        126,
+        128,
+        129,
+        130,
+        132,
+        135,
+        133,
+        134,
+        136,
+        137,
+        138,
+        139,
+        141
+      ]
+    },
+    "org.tron.consensus.pbft.PbftMessageHandle.onPrepare:(Lorg/tron/consensus/pbft/message/PbftMessage;)V" : {
+      "completeTestCount" : 2,
+      "incompleteTestCount" : 0,
+      "perMethodTestability" : "T000",
+      "perMethodOutcome" : "R000",
+      "perTestOutcome" : {
+        "R000" : 2
+      },
+      "lineNumbers" : [
+        144,
+        146,
+        148,
+        149,
+        151,
+        153,
+        154,
+        158,
+        160,
+        162,
+        163,
+        164,
+        165,
+        168,
+        169,
+        170,
+        171,
+        173,
+        174,
+        175,
+        176,
+        178,
+        181,
+        179,
+        180,
+        182,
+        183,
+        187
+      ]
+    },
+    "org.tron.consensus.pbft.PbftMessageHandle.onRequestData:(Lorg/tron/consensus/pbft/message/PbftBaseMessage;)V" : {
+      "completeTestCount" : 0,
+      "incompleteTestCount" : 0,
+      "perMethodTestability" : "T021",
+      "perMethodOutcome" : "R002",
+      "lineNumbers" : [
+        222
+      ]
+    },
+    "org.tron.consensus.pbft.PbftMessageHandle.remove:(Ljava/lang/String;)V" : {
+      "completeTestCount" : 0,
+      "incompleteTestCount" : 0,
+      "perMethodTestability" : "T003",
+      "perMethodOutcome" : "T003",
+      "lineNumbers" : [
+        266,
+        267,
+        268,
+        269,
+        271,
+        277,
+        283,
+        284,
+        286,
+        288,
+        292,
+        289,
+        290,
+        292,
+        291,
+        293,
+        294,
+        296
+      ]
+    },
+    "org.tron.consensus.pbft.PbftMessageHandle.setMaintenanceManager:(Lorg/tron/consensus/dpos/MaintenanceManager;)V" : {
+      "completeTestCount" : 0,
+      "incompleteTestCount" : 0,
+      "perMethodTestability" : "T002",
+      "perMethodOutcome" : "R002",
+      "lineNumbers" : [
+        73
+      ]
+    },
+    "org.tron.consensus.pbft.PbftMessageHandle.start:()V" : {
+      "completeTestCount" : 4,
+      "incompleteTestCount" : 0,
+      "perMethodTestability" : "T000",
+      "perMethodOutcome" : "R000",
+      "perTestOutcome" : {
+        "R000" : 4
+      },
+      "lineNumbers" : [
+        312,
+        318
+      ]
+    },
+    "org.tron.consensus.pbft.message.PbftBaseMessage.<init>:()V" : {
+      "completeTestCount" : 0,
+      "incompleteTestCount" : 0,
+      "perMethodTestability" : "T010",
+      "perMethodOutcome" : "T010",
+      "lineNumbers" : [
+        27,
+        28
+      ]
+    },
+    "org.tron.consensus.pbft.message.PbftBaseMessage.<init>:(B[B)V" : {
+      "completeTestCount" : 0,
+      "incompleteTestCount" : 0,
+      "perMethodTestability" : "T010",
+      "perMethodOutcome" : "T010",
+      "lineNumbers" : [
+        31,
+        32,
+        33,
+        34,
+        36
+      ]
+    },
+    "org.tron.consensus.pbft.message.PbftBaseMessage.analyzeSignature:()V" : {
+      "completeTestCount" : 0,
+      "incompleteTestCount" : 0,
+      "perMethodTestability" : "T000",
+      "perMethodOutcome" : "R013",
+      "lineNumbers" : [
+        98,
+        99,
+        100,
+        99,
+        101
+      ]
+    },
+    "org.tron.consensus.pbft.message.PbftBaseMessage.decode:()Ljava/lang/String;" : {
+      "completeTestCount" : 0,
+      "incompleteTestCount" : 0,
+      "perMethodTestability" : "T003",
+      "perMethodOutcome" : "T003",
+      "lineNumbers" : [
+        121,
+        122,
+        123,
+        122,
+        124,
+        126
+      ]
+    },
+    "org.tron.consensus.pbft.message.PbftBaseMessage.getAnswerMessage:()Ljava/lang/Class;" : {
+      "completeTestCount" : 1,
+      "incompleteTestCount" : 0,
+      "perMethodTestability" : "T000",
+      "perMethodOutcome" : "R000",
+      "perTestOutcome" : {
+        "R000" : 1
+      },
+      "lineNumbers" : [
+        40
+      ]
+    },
+    "org.tron.consensus.pbft.message.PbftBaseMessage.getDataKey:()Ljava/lang/String;" : {
+      "completeTestCount" : 1,
+      "incompleteTestCount" : 0,
+      "perMethodTestability" : "T000",
+      "perMethodOutcome" : "R000",
+      "perTestOutcome" : {
+        "R000" : 1
+      },
+      "lineNumbers" : [
+        80
+      ]
+    },
+    "org.tron.consensus.pbft.message.PbftBaseMessage.getDataString:()Ljava/lang/String;" : {
+      "completeTestCount" : 1,
+      "incompleteTestCount" : 0,
+      "perMethodTestability" : "T000",
+      "perMethodOutcome" : "R000",
+      "perTestOutcome" : {
+        "R000" : 1
+      },
+      "lineNumbers" : [
+        115,
+        116,
+        115
+      ]
+    },
+    "org.tron.consensus.pbft.message.PbftBaseMessage.getDataType:()Lorg/tron/protos/Protocol$PBFTMessage$DataType;" : {
+      "completeTestCount" : 1,
+      "incompleteTestCount" : 0,
+      "perMethodTestability" : "T000",
+      "perMethodOutcome" : "R000",
+      "perTestOutcome" : {
+        "R000" : 1
+      },
+      "lineNumbers" : [
+        92
+      ]
+    },
+    "org.tron.consensus.pbft.message.PbftBaseMessage.getEpoch:()J" : {
+      "completeTestCount" : 1,
+      "incompleteTestCount" : 0,
+      "perMethodTestability" : "T000",
+      "perMethodOutcome" : "R000",
+      "perTestOutcome" : {
+        "R000" : 1
+      },
+      "lineNumbers" : [
+        88
+      ]
+    },
+    "org.tron.consensus.pbft.message.PbftBaseMessage.getKey:()Ljava/lang/String;" : {
+      "completeTestCount" : 0,
+      "incompleteTestCount" : 0,
+      "perMethodTestability" : "T000",
+      "perMethodOutcome" : "R013",
+      "lineNumbers" : [
+        76
+      ]
+    },
+    "org.tron.consensus.pbft.message.PbftBaseMessage.getNo:()Ljava/lang/String;" : {
+      "completeTestCount" : 0,
+      "incompleteTestCount" : 0,
+      "perMethodTestability" : "T010",
+      "perMethodOutcome" : "T010"
+    },
+    "org.tron.consensus.pbft.message.PbftBaseMessage.getNumber:()J" : {
+      "completeTestCount" : 1,
+      "incompleteTestCount" : 0,
+      "perMethodTestability" : "T000",
+      "perMethodOutcome" : "R000",
+      "perTestOutcome" : {
+        "R000" : 1
+      },
+      "lineNumbers" : [
+        84
+      ]
+    },
+    "org.tron.consensus.pbft.message.PbftBaseMessage.getPbftMessage:()Lorg/tron/protos/Protocol$PBFTMessage;" : {
+      "completeTestCount" : 1,
+      "incompleteTestCount" : 0,
+      "perMethodTestability" : "T000",
+      "perMethodOutcome" : "R000",
+      "perTestOutcome" : {
+        "R000" : 1
+      },
+      "lineNumbers" : [
+        44
+      ]
+    },
+    "org.tron.consensus.pbft.message.PbftBaseMessage.getPublicKey:()[B" : {
+      "completeTestCount" : 1,
+      "incompleteTestCount" : 0,
+      "perMethodTestability" : "T000",
+      "perMethodOutcome" : "R000",
+      "perTestOutcome" : {
+        "R000" : 1
+      },
+      "lineNumbers" : [
+        72
+      ]
+    },
+    "org.tron.consensus.pbft.message.PbftBaseMessage.isSwitch:()Z" : {
+      "completeTestCount" : 2,
+      "incompleteTestCount" : 0,
+      "perMethodTestability" : "T000",
+      "perMethodOutcome" : "R000",
+      "perTestOutcome" : {
+        "R000" : 2
+      },
+      "lineNumbers" : [
+        53
+      ]
+    },
+    "org.tron.consensus.pbft.message.PbftBaseMessage.lambda$decode$0:(Lcom/google/protobuf/ByteString;)Ljava/lang/String;" : {
+      "completeTestCount" : 0,
+      "incompleteTestCount" : 0,
+      "perMethodTestability" : "T012",
+      "perMethodOutcome" : "T012",
+      "lineNumbers" : [
+        123
+      ]
+    },
+    "org.tron.consensus.pbft.message.PbftBaseMessage.setData:([B)Lorg/tron/consensus/pbft/message/PbftBaseMessage;" : {
+      "completeTestCount" : 0,
+      "incompleteTestCount" : 0,
+      "perMethodTestability" : "T000",
+      "perMethodOutcome" : "R015",
+      "lineNumbers" : [
+        62,
+        63
+      ]
+    },
+    "org.tron.consensus.pbft.message.PbftBaseMessage.setPbftMessage:(Lorg/tron/protos/Protocol$PBFTMessage;)Lorg/tron/consensus/pbft/message/PbftBaseMessage;" : {
+      "completeTestCount" : 1,
+      "incompleteTestCount" : 0,
+      "perMethodTestability" : "T000",
+      "perMethodOutcome" : "R000",
+      "perTestOutcome" : {
+        "R000" : 1
+      },
+      "lineNumbers" : [
+        48,
+        49
+      ]
+    },
+    "org.tron.consensus.pbft.message.PbftBaseMessage.setSwitch:(Z)Lorg/tron/consensus/pbft/message/PbftBaseMessage;" : {
+      "completeTestCount" : 1,
+      "incompleteTestCount" : 0,
+      "perMethodTestability" : "T000",
+      "perMethodOutcome" : "R000",
+      "perTestOutcome" : {
+        "R000" : 1
+      },
+      "lineNumbers" : [
+        57,
+        58
+      ]
+    },
+    "org.tron.consensus.pbft.message.PbftBaseMessage.setType:(B)Lorg/tron/consensus/pbft/message/PbftBaseMessage;" : {
+      "completeTestCount" : 1,
+      "incompleteTestCount" : 0,
+      "perMethodTestability" : "T000",
+      "perMethodOutcome" : "R000",
+      "perTestOutcome" : {
+        "R000" : 1
+      },
+      "lineNumbers" : [
+        67,
+        68
+      ]
+    },
+    "org.tron.consensus.pbft.message.PbftBaseMessage.toString:()Ljava/lang/String;" : {
+      "completeTestCount" : 4,
+      "incompleteTestCount" : 0,
+      "perMethodTestability" : "T000",
+      "perMethodOutcome" : "R000",
+      "perTestOutcome" : {
+        "R000" : 4
+      },
+      "lineNumbers" : [
+        105,
+        106,
+        107,
+        108,
+        109,
+        110,
+        111,
+        105
+      ]
+    },
+    "org.tron.consensus.pbft.message.PbftMessage.<init>:()V" : {
+      "completeTestCount" : 1,
+      "incompleteTestCount" : 0,
+      "perMethodTestability" : "T005",
+      "perMethodOutcome" : "R000",
+      "perTestOutcome" : {
+        "R000" : 1
+      },
+      "lineNumbers" : [
+        20,
+        21
+      ]
+    },
+    "org.tron.consensus.pbft.message.PbftMessage.<init>:([B)V" : {
+      "completeTestCount" : 0,
+      "incompleteTestCount" : 0,
+      "perMethodTestability" : "T000",
+      "perMethodOutcome" : "R013",
+      "lineNumbers" : [
+        24,
+        25
+      ]
+    },
+    "org.tron.consensus.pbft.message.PbftMessage.buildCommitMessage:(Lorg/tron/consensus/base/Param$Miner;)Lorg/tron/consensus/pbft/message/PbftMessage;" : {
+      "completeTestCount" : 0,
+      "incompleteTestCount" : 0,
+      "perMethodTestability" : "T000",
+      "perMethodOutcome" : "W002",
+      "warnings" : {
+        "W002" : 2
+      },
+      "lineNumbers" : [
+        94
+      ]
+    },
+    "org.tron.consensus.pbft.message.PbftMessage.buildCommon:(Lorg/tron/protos/Protocol$PBFTMessage$DataType;Lcom/google/protobuf/ByteString;Lorg/tron/core/capsule/BlockCapsule;JJLorg/tron/consensus/base/Param$Miner;)Lorg/tron/consensus/pbft/message/PbftMessage;" : {
+      "completeTestCount" : 0,
+      "incompleteTestCount" : 0,
+      "perMethodTestability" : "T003",
+      "perMethodOutcome" : "T003",
+      "lineNumbers" : [
+        58,
+        59,
+        60,
+        61,
+        62,
+        63,
+        64,
+        65,
+        66,
+        67,
+        68,
+        69,
+        70,
+        71
+      ]
+    },
+    "org.tron.consensus.pbft.message.PbftMessage.buildFullNodeCommon:(Lorg/tron/protos/Protocol$PBFTMessage$DataType;Lcom/google/protobuf/ByteString;Lorg/tron/core/capsule/BlockCapsule;JJ)Lorg/tron/consensus/pbft/message/PbftMessage;" : {
+      "completeTestCount" : 0,
+      "incompleteTestCount" : 0,
+      "perMethodTestability" : "T003",
+      "perMethodOutcome" : "T003",
+      "lineNumbers" : [
+        76,
+        77,
+        78,
+        79,
+        80,
+        81,
+        82,
+        83,
+        84,
+        85,
+        86
+      ]
+    },
+    "org.tron.consensus.pbft.message.PbftMessage.buildMessageCapsule:(Lorg/tron/protos/Protocol$PBFTMessage$MsgType;Lorg/tron/consensus/base/Param$Miner;)Lorg/tron/consensus/pbft/message/PbftMessage;" : {
+      "completeTestCount" : 0,
+      "incompleteTestCount" : 0,
+      "perMethodTestability" : "T003",
+      "perMethodOutcome" : "T003",
+      "lineNumbers" : [
+        98,
+        99,
+        100,
+        101,
+        102,
+        103,
+        104,
+        105,
+        106,
+        107,
+        108,
+        109,
+        110,
+        111,
+        112,
+        113
+      ]
+    },
+    "org.tron.consensus.pbft.message.PbftMessage.buildPrePareMessage:(Lorg/tron/consensus/base/Param$Miner;)Lorg/tron/consensus/pbft/message/PbftMessage;" : {
+      "completeTestCount" : 0,
+      "incompleteTestCount" : 0,
+      "perMethodTestability" : "T000",
+      "perMethodOutcome" : "W002",
+      "warnings" : {
+        "W002" : 2
+      },
+      "lineNumbers" : [
+        90
+      ]
+    },
+    "org.tron.consensus.pbft.message.PbftMessage.fullNodePrePrepareBlockMsg:(Lorg/tron/core/capsule/BlockCapsule;J)Lorg/tron/consensus/pbft/message/PbftMessage;" : {
+      "completeTestCount" : 0,
+      "incompleteTestCount" : 0,
+      "perMethodTestability" : "T000",
+      "perMethodOutcome" : "W002",
+      "warnings" : {
+        "W002" : 2
+      },
+      "lineNumbers" : [
+        38,
+        39,
+        38
+      ]
+    },
+    "org.tron.consensus.pbft.message.PbftMessage.fullNodePrePrepareSRLMsg:(Lorg/tron/core/capsule/BlockCapsule;Ljava/util/List;J)Lorg/tron/consensus/pbft/message/PbftMessage;" : {
+      "completeTestCount" : 0,
+      "incompleteTestCount" : 0,
+      "perMethodTestability" : "T000",
+      "perMethodOutcome" : "W002",
+      "warnings" : {
+        "W002" : 1
+      },
+      "lineNumbers" : [
+        51,
+        52,
+        53
+      ]
+    },
+    "org.tron.consensus.pbft.message.PbftMessage.getNo:()Ljava/lang/String;" : {
+      "completeTestCount" : 1,
+      "incompleteTestCount" : 0,
+      "perMethodTestability" : "T000",
+      "perMethodOutcome" : "R000",
+      "perTestOutcome" : {
+        "R000" : 1
+      },
+      "lineNumbers" : [
+        28
+      ]
+    },
+    "org.tron.consensus.pbft.message.PbftMessage.prePrepareBlockMsg:(Lorg/tron/core/capsule/BlockCapsule;JLorg/tron/consensus/base/Param$Miner;)Lorg/tron/consensus/pbft/message/PbftMessage;" : {
+      "completeTestCount" : 0,
+      "incompleteTestCount" : 0,
+      "perMethodTestability" : "T000",
+      "perMethodOutcome" : "W002",
+      "warnings" : {
+        "W002" : 1
+      },
+      "lineNumbers" : [
+        32,
+        33,
+        32
+      ]
+    },
+    "org.tron.consensus.pbft.message.PbftMessage.prePrepareSRLMsg:(Lorg/tron/core/capsule/BlockCapsule;Ljava/util/List;JLorg/tron/consensus/base/Param$Miner;)Lorg/tron/consensus/pbft/message/PbftMessage;" : {
+      "completeTestCount" : 0,
+      "incompleteTestCount" : 0,
+      "perMethodTestability" : "T000",
+      "perMethodOutcome" : "W002",
+      "warnings" : {
+        "W002" : 3
+      },
+      "lineNumbers" : [
+        44,
+        45,
+        46
+      ]
+    }
+  }
+}
