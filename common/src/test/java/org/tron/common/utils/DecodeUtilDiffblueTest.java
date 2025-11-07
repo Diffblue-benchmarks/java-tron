@@ -1,0 +1,58 @@
+package org.tron.common.utils;
+
+import static org.junit.Assert.assertFalse;
+import com.diffblue.cover.annotations.MaintainedByDiffblue;
+import com.diffblue.cover.annotations.MethodsUnderTest;
+import java.io.UnsupportedEncodingException;
+import org.junit.Test;
+import org.junit.experimental.categories.Category;
+
+public class DecodeUtilDiffblueTest {
+  /**
+   * Test {@link DecodeUtil#addressValid(byte[])}.
+   * <ul>
+   *   <li>When {@code AXAXAXAX} Bytes is {@code UTF-8}.</li>
+   * </ul>
+   * <p>
+   * Method under test: {@link DecodeUtil#addressValid(byte[])}
+   */
+  @Test
+  @Category(MaintainedByDiffblue.class)
+  @MethodsUnderTest({"boolean DecodeUtil.addressValid(byte[])"})
+  public void testAddressValid_whenAxaxaxaxBytesIsUtf8() throws UnsupportedEncodingException {
+    // Arrange, Act and Assert
+    assertFalse(DecodeUtil.addressValid("AXAXAXAX".getBytes("UTF-8")));
+  }
+
+  /**
+   * Test {@link DecodeUtil#addressValid(byte[])}.
+   * <ul>
+   *   <li>When empty array of {@code byte}.</li>
+   * </ul>
+   * <p>
+   * Method under test: {@link DecodeUtil#addressValid(byte[])}
+   */
+  @Test
+  @Category(MaintainedByDiffblue.class)
+  @MethodsUnderTest({"boolean DecodeUtil.addressValid(byte[])"})
+  public void testAddressValid_whenEmptyArrayOfByte() {
+    // Arrange, Act and Assert
+    assertFalse(DecodeUtil.addressValid(new byte[]{}));
+  }
+
+  /**
+   * Test {@link DecodeUtil#addressValid(byte[])}.
+   * <ul>
+   *   <li>When {@code null}.</li>
+   * </ul>
+   * <p>
+   * Method under test: {@link DecodeUtil#addressValid(byte[])}
+   */
+  @Test
+  @Category(MaintainedByDiffblue.class)
+  @MethodsUnderTest({"boolean DecodeUtil.addressValid(byte[])"})
+  public void testAddressValid_whenNull() {
+    // Arrange, Act and Assert
+    assertFalse(DecodeUtil.addressValid(null));
+  }
+}

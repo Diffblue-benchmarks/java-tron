@@ -1,0 +1,5447 @@
+{
+  "meta" : {
+    "reportVersion" : "2.6"
+  },
+  "run" : {
+    "version" : "2025.02.02-08b2a5a-licensed",
+    "creationTimestamp" : "2025-11-05T11:35:13.477Z",
+    "command" : "dcover create --coverage-reports --upload http://localhost:8080 --project-name java-tron --name with-diffblue-tests",
+    "totalTime" : 645.678,
+    "environmentDetectionTime" : 0.708,
+    "indexingTime" : 0.253,
+    "entryPointsTime" : 0.701,
+    "generationTime" : 32710.255,
+    "timeToFirstTest" : 43943.181,
+    "timeToLastTest" : 33665.637,
+    "indexQueryTime" : 18.467,
+    "verificationTime" : 533.691,
+    "validationTime" : 230.508
+  },
+  "codes" : {
+    "F009" : "Internal error",
+    "R000" : "Success",
+    "R002" : "Missing observers",
+    "R004" : "No meaningful assertions found",
+    "R011" : "Sandboxing policy violation",
+    "R012" : "JNI sandbox policy violation",
+    "R013" : "No inputs found that don't throw a trivial exception",
+    "R034" : "Diffblue Cover can't complete test",
+    "R081" : "Exception in arrange section",
+    "T000" : "Method eligible for test creation",
+    "T001" : "Trivial getter",
+    "T002" : "Trivial setter",
+    "T003" : "Private method",
+    "T004" : "In anonymous inner class",
+    "T005" : "Trivial constructor",
+    "T006" : "Main method",
+    "T010" : "Abstract or interface method",
+    "T012" : "Synthetic method",
+    "T020" : "Other trivial method",
+    "V000" : "Validated successfully",
+    "V003" : "Tests discarded during validation",
+    "W002" : "Test compiled, but did not pass"
+  },
+  "summary" : {
+    "classesCount" : 45,
+    "methodsCount" : 329,
+    "cumulativeDiffblueTestCount" : 141,
+    "cumulativeManualTestCount" : 36,
+    "completeTestCount" : 147,
+    "incompleteTestCount" : 0,
+    "skeletonTestCount" : 0,
+    "totalPhysicalLineCount" : 2816,
+    "perMethodTestability" : {
+      "T000" : 127,
+      "T001" : 7,
+      "T002" : 2,
+      "T003" : 59,
+      "T004" : 2,
+      "T005" : 21,
+      "T006" : 2,
+      "T010" : 18,
+      "T012" : 90,
+      "T020" : 1
+    },
+    "perMethodOutcome" : {
+      "F009" : 1,
+      "R000" : 93,
+      "R002" : 7,
+      "R004" : 1,
+      "R011" : 17,
+      "R012" : 3,
+      "R013" : 18,
+      "R034" : 4,
+      "R081" : 5,
+      "T003" : 59,
+      "T004" : 2,
+      "T005" : 7,
+      "T006" : 2,
+      "T010" : 18,
+      "T012" : 90,
+      "W002" : 2
+    },
+    "perTestOutcome" : {
+      "R000" : 147
+    },
+    "perTestValidation" : {
+      "V000" : 141,
+      "V003" : 6
+    },
+    "warnings" : {
+      "F009" : 1,
+      "W002" : 2
+    }
+  },
+  "classes" : {
+    "org.tron.plugins.ArchiveManifest" : {
+      "methodsCount" : 13,
+      "completeTestCount" : 10,
+      "incompleteTestCount" : 0,
+      "perMethodTestability" : {
+        "T000" : 10,
+        "T006" : 1,
+        "T012" : 2
+      },
+      "perMethodOutcome" : {
+        "R000" : 8,
+        "R011" : 1,
+        "T006" : 1,
+        "T012" : 2,
+        "W002" : 1
+      },
+      "perTestOutcome" : {
+        "R000" : 10
+      },
+      "warnings" : {
+        "W002" : 1
+      }
+    },
+    "org.tron.plugins.ArchiveManifest$Args" : {
+      "methodsCount" : 5,
+      "completeTestCount" : 0,
+      "incompleteTestCount" : 0,
+      "perMethodTestability" : {
+        "T005" : 1,
+        "T012" : 4
+      },
+      "perMethodOutcome" : {
+        "R002" : 1,
+        "T012" : 4
+      }
+    },
+    "org.tron.plugins.Db" : {
+      "methodsCount" : 1,
+      "completeTestCount" : 0,
+      "incompleteTestCount" : 0,
+      "perMethodTestability" : {
+        "T005" : 1
+      },
+      "perMethodOutcome" : {
+        "T005" : 1
+      }
+    },
+    "org.tron.plugins.DbArchive" : {
+      "methodsCount" : 5,
+      "completeTestCount" : 1,
+      "incompleteTestCount" : 0,
+      "perMethodTestability" : {
+        "T000" : 1,
+        "T005" : 1,
+        "T012" : 3
+      },
+      "perMethodOutcome" : {
+        "R000" : 1,
+        "R013" : 1,
+        "T012" : 3
+      },
+      "perTestOutcome" : {
+        "R000" : 1
+      }
+    },
+    "org.tron.plugins.DbArchive$Archive" : {
+      "methodsCount" : 1,
+      "completeTestCount" : 0,
+      "incompleteTestCount" : 0,
+      "perMethodTestability" : {
+        "T000" : 1
+      },
+      "perMethodOutcome" : {
+        "R002" : 1
+      }
+    },
+    "org.tron.plugins.DbArchive$ArchiveManifest" : {
+      "methodsCount" : 5,
+      "completeTestCount" : 5,
+      "incompleteTestCount" : 0,
+      "perMethodTestability" : {
+        "T000" : 5
+      },
+      "perMethodOutcome" : {
+        "R000" : 3,
+        "R002" : 1,
+        "R011" : 1
+      },
+      "perTestOutcome" : {
+        "R000" : 5
+      }
+    },
+    "org.tron.plugins.DbConvert" : {
+      "methodsCount" : 14,
+      "completeTestCount" : 0,
+      "incompleteTestCount" : 0,
+      "perMethodTestability" : {
+        "T000" : 1,
+        "T003" : 3,
+        "T005" : 1,
+        "T012" : 9
+      },
+      "perMethodOutcome" : {
+        "R012" : 2,
+        "T003" : 3,
+        "T012" : 9
+      }
+    },
+    "org.tron.plugins.DbConvert$Converter" : {
+      "methodsCount" : 2,
+      "completeTestCount" : 0,
+      "incompleteTestCount" : 0,
+      "perMethodTestability" : {
+        "T010" : 2
+      },
+      "perMethodOutcome" : {
+        "T010" : 2
+      }
+    },
+    "org.tron.plugins.DbConvert$DbConverter" : {
+      "methodsCount" : 9,
+      "completeTestCount" : 2,
+      "incompleteTestCount" : 0,
+      "perMethodTestability" : {
+        "T000" : 4,
+        "T003" : 5
+      },
+      "perMethodOutcome" : {
+        "R000" : 2,
+        "R011" : 1,
+        "R012" : 1,
+        "T003" : 5
+      },
+      "perTestOutcome" : {
+        "R000" : 2
+      }
+    },
+    "org.tron.plugins.DbCopy" : {
+      "methodsCount" : 9,
+      "completeTestCount" : 1,
+      "incompleteTestCount" : 0,
+      "perMethodTestability" : {
+        "T000" : 1,
+        "T005" : 1,
+        "T012" : 7
+      },
+      "perMethodOutcome" : {
+        "R000" : 1,
+        "R013" : 1,
+        "T012" : 7
+      },
+      "perTestOutcome" : {
+        "R000" : 1
+      }
+    },
+    "org.tron.plugins.DbCopy$Copier" : {
+      "methodsCount" : 2,
+      "completeTestCount" : 0,
+      "incompleteTestCount" : 0,
+      "perMethodTestability" : {
+        "T010" : 2
+      },
+      "perMethodOutcome" : {
+        "T010" : 2
+      }
+    },
+    "org.tron.plugins.DbCopy$DbCopier" : {
+      "methodsCount" : 3,
+      "completeTestCount" : 3,
+      "incompleteTestCount" : 0,
+      "perMethodTestability" : {
+        "T000" : 3
+      },
+      "perMethodOutcome" : {
+        "R000" : 3
+      },
+      "perTestOutcome" : {
+        "R000" : 3
+      }
+    },
+    "org.tron.plugins.DbLite" : {
+      "methodsCount" : 47,
+      "completeTestCount" : 1,
+      "incompleteTestCount" : 0,
+      "perMethodTestability" : {
+        "T000" : 4,
+        "T002" : 2,
+        "T003" : 27,
+        "T005" : 1,
+        "T012" : 13
+      },
+      "perMethodOutcome" : {
+        "R000" : 3,
+        "R013" : 4,
+        "T003" : 27,
+        "T012" : 13
+      },
+      "perTestOutcome" : {
+        "R000" : 1
+      }
+    },
+    "org.tron.plugins.DbLite$1" : {
+      "methodsCount" : 1,
+      "completeTestCount" : 0,
+      "incompleteTestCount" : 0,
+      "perMethodTestability" : {
+        "T012" : 1
+      },
+      "perMethodOutcome" : {
+        "T012" : 1
+      }
+    },
+    "org.tron.plugins.DbLite$BlockNumInfo" : {
+      "methodsCount" : 4,
+      "completeTestCount" : 2,
+      "incompleteTestCount" : 0,
+      "perMethodTestability" : {
+        "T000" : 1,
+        "T001" : 3
+      },
+      "perMethodOutcome" : {
+        "R000" : 4
+      },
+      "perTestOutcome" : {
+        "R000" : 2
+      }
+    },
+    "org.tron.plugins.DbLite$Operate" : {
+      "methodsCount" : 4,
+      "completeTestCount" : 0,
+      "incompleteTestCount" : 0,
+      "perMethodTestability" : {
+        "T003" : 1,
+        "T012" : 3
+      },
+      "perMethodOutcome" : {
+        "T003" : 1,
+        "T012" : 3
+      }
+    },
+    "org.tron.plugins.DbLite$Type" : {
+      "methodsCount" : 4,
+      "completeTestCount" : 0,
+      "incompleteTestCount" : 0,
+      "perMethodTestability" : {
+        "T003" : 1,
+        "T012" : 3
+      },
+      "perMethodOutcome" : {
+        "T003" : 1,
+        "T012" : 3
+      }
+    },
+    "org.tron.plugins.DbMove" : {
+      "methodsCount" : 10,
+      "completeTestCount" : 1,
+      "incompleteTestCount" : 0,
+      "perMethodTestability" : {
+        "T000" : 1,
+        "T003" : 2,
+        "T005" : 1,
+        "T012" : 6
+      },
+      "perMethodOutcome" : {
+        "R000" : 1,
+        "R013" : 1,
+        "T003" : 2,
+        "T012" : 6
+      },
+      "perTestOutcome" : {
+        "R000" : 1
+      }
+    },
+    "org.tron.plugins.DbMove$ConfigConverter" : {
+      "methodsCount" : 3,
+      "completeTestCount" : 1,
+      "incompleteTestCount" : 0,
+      "perMethodTestability" : {
+        "T000" : 2,
+        "T012" : 1
+      },
+      "perMethodOutcome" : {
+        "R000" : 2,
+        "T012" : 1
+      },
+      "perTestOutcome" : {
+        "R000" : 1
+      },
+      "warnings" : {
+        "F009" : 1
+      }
+    },
+    "org.tron.plugins.DbMove$PathConverter" : {
+      "methodsCount" : 2,
+      "completeTestCount" : 1,
+      "incompleteTestCount" : 0,
+      "perMethodTestability" : {
+        "T000" : 1,
+        "T005" : 1
+      },
+      "perMethodOutcome" : {
+        "R000" : 1,
+        "R002" : 1
+      },
+      "perTestOutcome" : {
+        "R000" : 1
+      }
+    },
+    "org.tron.plugins.DbMove$Property" : {
+      "methodsCount" : 3,
+      "completeTestCount" : 4,
+      "incompleteTestCount" : 0,
+      "perMethodTestability" : {
+        "T000" : 1,
+        "T012" : 2
+      },
+      "perMethodOutcome" : {
+        "R000" : 1,
+        "T012" : 2
+      },
+      "perTestOutcome" : {
+        "R000" : 4
+      }
+    },
+    "org.tron.plugins.DbRoot" : {
+      "methodsCount" : 8,
+      "completeTestCount" : 1,
+      "incompleteTestCount" : 0,
+      "perMethodTestability" : {
+        "T000" : 1,
+        "T003" : 3,
+        "T005" : 1,
+        "T012" : 3
+      },
+      "perMethodOutcome" : {
+        "R000" : 1,
+        "R013" : 1,
+        "T003" : 3,
+        "T012" : 3
+      },
+      "perTestOutcome" : {
+        "R000" : 1
+      }
+    },
+    "org.tron.plugins.DbRoot$Ret" : {
+      "methodsCount" : 6,
+      "completeTestCount" : 0,
+      "incompleteTestCount" : 0,
+      "perMethodTestability" : {
+        "T003" : 1,
+        "T012" : 5
+      },
+      "perMethodOutcome" : {
+        "T003" : 1,
+        "T012" : 5
+      }
+    },
+    "org.tron.plugins.Toolkit" : {
+      "methodsCount" : 3,
+      "completeTestCount" : 1,
+      "incompleteTestCount" : 0,
+      "perMethodTestability" : {
+        "T000" : 1,
+        "T005" : 1,
+        "T006" : 1
+      },
+      "perMethodOutcome" : {
+        "R000" : 1,
+        "R002" : 1,
+        "T006" : 1
+      },
+      "perTestOutcome" : {
+        "R000" : 1
+      }
+    },
+    "org.tron.plugins.comparator.MarketOrderPriceComparatorForLevelDB" : {
+      "methodsCount" : 6,
+      "completeTestCount" : 3,
+      "incompleteTestCount" : 0,
+      "perMethodTestability" : {
+        "T000" : 4,
+        "T005" : 1,
+        "T012" : 1
+      },
+      "perMethodOutcome" : {
+        "R000" : 3,
+        "R002" : 1,
+        "R013" : 1,
+        "T012" : 1
+      },
+      "perTestOutcome" : {
+        "R000" : 3
+      }
+    },
+    "org.tron.plugins.comparator.MarketOrderPriceComparatorForRockDB" : {
+      "methodsCount" : 5,
+      "completeTestCount" : 0,
+      "incompleteTestCount" : 0,
+      "perMethodTestability" : {
+        "T000" : 4,
+        "T012" : 1
+      },
+      "perMethodOutcome" : {
+        "R034" : 4,
+        "T012" : 1
+      }
+    },
+    "org.tron.plugins.utils.ByteArray" : {
+      "methodsCount" : 11,
+      "completeTestCount" : 28,
+      "incompleteTestCount" : 0,
+      "perMethodTestability" : {
+        "T000" : 9,
+        "T005" : 1,
+        "T012" : 1
+      },
+      "perMethodOutcome" : {
+        "R000" : 9,
+        "T005" : 1,
+        "T012" : 1
+      },
+      "perTestOutcome" : {
+        "R000" : 28
+      }
+    },
+    "org.tron.plugins.utils.CryptoUitls" : {
+      "methodsCount" : 1,
+      "completeTestCount" : 0,
+      "incompleteTestCount" : 0,
+      "perMethodTestability" : {
+        "T005" : 1
+      },
+      "perMethodOutcome" : {
+        "T005" : 1
+      }
+    },
+    "org.tron.plugins.utils.DBUtils" : {
+      "methodsCount" : 9,
+      "completeTestCount" : 1,
+      "incompleteTestCount" : 0,
+      "perMethodTestability" : {
+        "T000" : 7,
+        "T003" : 1,
+        "T005" : 1
+      },
+      "perMethodOutcome" : {
+        "R000" : 1,
+        "R011" : 4,
+        "R013" : 2,
+        "T003" : 1,
+        "T005" : 1
+      },
+      "perTestOutcome" : {
+        "R000" : 1
+      }
+    },
+    "org.tron.plugins.utils.DBUtils$Operator" : {
+      "methodsCount" : 6,
+      "completeTestCount" : 6,
+      "incompleteTestCount" : 0,
+      "perMethodTestability" : {
+        "T000" : 1,
+        "T001" : 1,
+        "T003" : 1,
+        "T012" : 3
+      },
+      "perMethodOutcome" : {
+        "R000" : 2,
+        "T003" : 1,
+        "T012" : 3
+      },
+      "perTestOutcome" : {
+        "R000" : 6
+      }
+    },
+    "org.tron.plugins.utils.FileUtils" : {
+      "methodsCount" : 16,
+      "completeTestCount" : 11,
+      "incompleteTestCount" : 0,
+      "perMethodTestability" : {
+        "T000" : 11,
+        "T005" : 1,
+        "T012" : 4
+      },
+      "perMethodOutcome" : {
+        "R000" : 7,
+        "R011" : 1,
+        "R013" : 2,
+        "T005" : 1,
+        "T012" : 4,
+        "W002" : 1
+      },
+      "perTestOutcome" : {
+        "R000" : 11
+      },
+      "warnings" : {
+        "W002" : 1
+      }
+    },
+    "org.tron.plugins.utils.MarketUtils" : {
+      "methodsCount" : 8,
+      "completeTestCount" : 14,
+      "incompleteTestCount" : 0,
+      "perMethodTestability" : {
+        "T000" : 4,
+        "T003" : 2,
+        "T005" : 1,
+        "T012" : 1
+      },
+      "perMethodOutcome" : {
+        "R000" : 3,
+        "R013" : 1,
+        "T003" : 2,
+        "T005" : 1,
+        "T012" : 1
+      },
+      "perTestOutcome" : {
+        "R000" : 14
+      }
+    },
+    "org.tron.plugins.utils.MerkleRoot" : {
+      "methodsCount" : 13,
+      "completeTestCount" : 5,
+      "incompleteTestCount" : 0,
+      "perMethodTestability" : {
+        "T000" : 1,
+        "T003" : 6,
+        "T012" : 6
+      },
+      "perMethodOutcome" : {
+        "R000" : 1,
+        "T003" : 6,
+        "T012" : 6
+      },
+      "perTestOutcome" : {
+        "R000" : 5
+      }
+    },
+    "org.tron.plugins.utils.MerkleRoot$Leaf" : {
+      "methodsCount" : 5,
+      "completeTestCount" : 0,
+      "incompleteTestCount" : 0,
+      "perMethodTestability" : {
+        "T003" : 2,
+        "T012" : 3
+      },
+      "perMethodOutcome" : {
+        "T003" : 2,
+        "T012" : 3
+      }
+    },
+    "org.tron.plugins.utils.Sha256Hash" : {
+      "methodsCount" : 16,
+      "completeTestCount" : 16,
+      "incompleteTestCount" : 0,
+      "perMethodTestability" : {
+        "T000" : 12,
+        "T001" : 1,
+        "T012" : 2,
+        "T020" : 1
+      },
+      "perMethodOutcome" : {
+        "R000" : 9,
+        "R013" : 3,
+        "R081" : 2,
+        "T012" : 2
+      },
+      "perTestOutcome" : {
+        "R000" : 16
+      }
+    },
+    "org.tron.plugins.utils.db.DBInterface" : {
+      "methodsCount" : 7,
+      "completeTestCount" : 0,
+      "incompleteTestCount" : 0,
+      "perMethodTestability" : {
+        "T010" : 7
+      },
+      "perMethodOutcome" : {
+        "T010" : 7
+      }
+    },
+    "org.tron.plugins.utils.db.DBIterator" : {
+      "methodsCount" : 7,
+      "completeTestCount" : 0,
+      "incompleteTestCount" : 0,
+      "perMethodTestability" : {
+        "T010" : 7
+      },
+      "perMethodOutcome" : {
+        "T010" : 7
+      }
+    },
+    "org.tron.plugins.utils.db.DbTool" : {
+      "methodsCount" : 11,
+      "completeTestCount" : 0,
+      "incompleteTestCount" : 0,
+      "perMethodTestability" : {
+        "T000" : 6,
+        "T003" : 3,
+        "T005" : 1,
+        "T012" : 1
+      },
+      "perMethodOutcome" : {
+        "R004" : 1,
+        "R011" : 4,
+        "R013" : 1,
+        "T003" : 3,
+        "T005" : 1,
+        "T012" : 1
+      }
+    },
+    "org.tron.plugins.utils.db.DbTool$1" : {
+      "methodsCount" : 1,
+      "completeTestCount" : 0,
+      "incompleteTestCount" : 0,
+      "perMethodTestability" : {
+        "T012" : 1
+      },
+      "perMethodOutcome" : {
+        "T012" : 1
+      }
+    },
+    "org.tron.plugins.utils.db.DbTool$DbType" : {
+      "methodsCount" : 4,
+      "completeTestCount" : 0,
+      "incompleteTestCount" : 0,
+      "perMethodTestability" : {
+        "T003" : 1,
+        "T012" : 3
+      },
+      "perMethodOutcome" : {
+        "T003" : 1,
+        "T012" : 3
+      }
+    },
+    "org.tron.plugins.utils.db.LevelDBImpl" : {
+      "methodsCount" : 8,
+      "completeTestCount" : 6,
+      "incompleteTestCount" : 0,
+      "perMethodTestability" : {
+        "T000" : 6,
+        "T001" : 1,
+        "T005" : 1
+      },
+      "perMethodOutcome" : {
+        "R000" : 6,
+        "R081" : 2
+      },
+      "perTestOutcome" : {
+        "R000" : 6
+      }
+    },
+    "org.tron.plugins.utils.db.LevelDBIterator" : {
+      "methodsCount" : 10,
+      "completeTestCount" : 11,
+      "incompleteTestCount" : 0,
+      "perMethodTestability" : {
+        "T000" : 9,
+        "T005" : 1
+      },
+      "perMethodOutcome" : {
+        "R000" : 9,
+        "R081" : 1
+      },
+      "perTestOutcome" : {
+        "R000" : 11
+      }
+    },
+    "org.tron.plugins.utils.db.RockDBIterator" : {
+      "methodsCount" : 10,
+      "completeTestCount" : 11,
+      "incompleteTestCount" : 0,
+      "perMethodTestability" : {
+        "T000" : 9,
+        "T005" : 1
+      },
+      "perMethodOutcome" : {
+        "R000" : 9,
+        "R002" : 1
+      },
+      "perTestOutcome" : {
+        "R000" : 11
+      }
+    },
+    "org.tron.plugins.utils.db.RockDBIterator$1" : {
+      "methodsCount" : 3,
+      "completeTestCount" : 0,
+      "incompleteTestCount" : 0,
+      "perMethodTestability" : {
+        "T004" : 2,
+        "T012" : 1
+      },
+      "perMethodOutcome" : {
+        "T004" : 2,
+        "T012" : 1
+      }
+    },
+    "org.tron.plugins.utils.db.RocksDBImpl" : {
+      "methodsCount" : 8,
+      "completeTestCount" : 1,
+      "incompleteTestCount" : 0,
+      "perMethodTestability" : {
+        "T000" : 6,
+        "T001" : 1,
+        "T005" : 1
+      },
+      "perMethodOutcome" : {
+        "F009" : 1,
+        "R000" : 2,
+        "R011" : 5
+      },
+      "perTestOutcome" : {
+        "R000" : 1
+      }
+    }
+  },
+  "methods" : {
+    "org.tron.plugins.ArchiveManifest$Args.<init>:()V" : {
+      "completeTestCount" : 0,
+      "incompleteTestCount" : 0,
+      "perMethodTestability" : "T005",
+      "perMethodOutcome" : "R002",
+      "lineNumbers" : [
+        251
+      ]
+    },
+    "org.tron.plugins.ArchiveManifest$Args.access$000:(Lorg/tron/plugins/ArchiveManifest$Args;)Z" : {
+      "completeTestCount" : 0,
+      "incompleteTestCount" : 0,
+      "perMethodTestability" : "T012",
+      "perMethodOutcome" : "T012",
+      "lineNumbers" : [
+        251
+      ]
+    },
+    "org.tron.plugins.ArchiveManifest$Args.access$100:(Lorg/tron/plugins/ArchiveManifest$Args;)Ljava/lang/String;" : {
+      "completeTestCount" : 0,
+      "incompleteTestCount" : 0,
+      "perMethodTestability" : "T012",
+      "perMethodOutcome" : "T012",
+      "lineNumbers" : [
+        251
+      ]
+    },
+    "org.tron.plugins.ArchiveManifest$Args.access$200:(Lorg/tron/plugins/ArchiveManifest$Args;)I" : {
+      "completeTestCount" : 0,
+      "incompleteTestCount" : 0,
+      "perMethodTestability" : "T012",
+      "perMethodOutcome" : "T012",
+      "lineNumbers" : [
+        251
+      ]
+    },
+    "org.tron.plugins.ArchiveManifest$Args.access$300:(Lorg/tron/plugins/ArchiveManifest$Args;)I" : {
+      "completeTestCount" : 0,
+      "incompleteTestCount" : 0,
+      "perMethodTestability" : "T012",
+      "perMethodOutcome" : "T012",
+      "lineNumbers" : [
+        251
+      ]
+    },
+    "org.tron.plugins.ArchiveManifest.<clinit>:()V" : {
+      "completeTestCount" : 0,
+      "incompleteTestCount" : 0,
+      "perMethodTestability" : "T012",
+      "perMethodOutcome" : "T012",
+      "lineNumbers" : [
+        41,
+        57
+      ]
+    },
+    "org.tron.plugins.ArchiveManifest.<init>:(Ljava/lang/String;Ljava/lang/String;II)V" : {
+      "completeTestCount" : 3,
+      "incompleteTestCount" : 0,
+      "perMethodTestability" : "T000",
+      "perMethodOutcome" : "R000",
+      "perTestOutcome" : {
+        "R000" : 3
+      },
+      "lineNumbers" : [
+        59,
+        60,
+        61,
+        62,
+        63,
+        64,
+        65,
+        66
+      ]
+    },
+    "org.tron.plugins.ArchiveManifest.call:()Ljava/lang/Boolean;" : {
+      "completeTestCount" : 1,
+      "incompleteTestCount" : 0,
+      "perMethodTestability" : "T000",
+      "perMethodOutcome" : "R000",
+      "perTestOutcome" : {
+        "R000" : 1
+      },
+      "lineNumbers" : [
+        70
+      ]
+    },
+    "org.tron.plugins.ArchiveManifest.checkEngine:()Z" : {
+      "completeTestCount" : 1,
+      "incompleteTestCount" : 0,
+      "perMethodTestability" : "T000",
+      "perMethodOutcome" : "R000",
+      "perTestOutcome" : {
+        "R000" : 1
+      },
+      "lineNumbers" : [
+        213,
+        214,
+        215,
+        216,
+        218,
+        219
+      ]
+    },
+    "org.tron.plugins.ArchiveManifest.checkManifest:(Ljava/lang/String;)Z" : {
+      "completeTestCount" : 1,
+      "incompleteTestCount" : 0,
+      "perMethodTestability" : "T000",
+      "perMethodOutcome" : "R000",
+      "perTestOutcome" : {
+        "R000" : 1
+      },
+      "lineNumbers" : [
+        168,
+        169,
+        170,
+        172,
+        173,
+        174,
+        176,
+        177,
+        178,
+        179,
+        181,
+        182,
+        183,
+        185,
+        186,
+        187,
+        188,
+        190
+      ]
+    },
+    "org.tron.plugins.ArchiveManifest.doArchive:()Z" : {
+      "completeTestCount" : 1,
+      "incompleteTestCount" : 0,
+      "perMethodTestability" : "T000",
+      "perMethodOutcome" : "R000",
+      "perTestOutcome" : {
+        "R000" : 1
+      },
+      "lineNumbers" : [
+        194,
+        195,
+        196,
+        197,
+        199,
+        200,
+        201,
+        203,
+        204,
+        205,
+        207,
+        208,
+        209
+      ]
+    },
+    "org.tron.plugins.ArchiveManifest.lambda$run$0:(Ljava/util/List;Ljava/util/concurrent/ThreadPoolExecutor;Lorg/tron/plugins/ArchiveManifest$Args;Ljava/io/File;)V" : {
+      "completeTestCount" : 0,
+      "incompleteTestCount" : 0,
+      "perMethodTestability" : "T012",
+      "perMethodOutcome" : "T012",
+      "lineNumbers" : [
+        132,
+        133,
+        134,
+        133,
+        132
+      ]
+    },
+    "org.tron.plugins.ArchiveManifest.main:([Ljava/lang/String;)V" : {
+      "completeTestCount" : 0,
+      "incompleteTestCount" : 0,
+      "perMethodTestability" : "T006",
+      "perMethodOutcome" : "T006",
+      "lineNumbers" : [
+        89,
+        90,
+        91,
+        92,
+        93
+      ]
+    },
+    "org.tron.plugins.ArchiveManifest.newDefaultLevelDbOptions:()Lorg/iq80/leveldb/Options;" : {
+      "completeTestCount" : 1,
+      "incompleteTestCount" : 0,
+      "perMethodTestability" : "T000",
+      "perMethodOutcome" : "R000",
+      "perTestOutcome" : {
+        "R000" : 1
+      },
+      "lineNumbers" : [
+        74,
+        75,
+        76,
+        77,
+        78,
+        79,
+        80,
+        81,
+        82,
+        83,
+        84,
+        85
+      ]
+    },
+    "org.tron.plugins.ArchiveManifest.open:()V" : {
+      "completeTestCount" : 0,
+      "incompleteTestCount" : 0,
+      "perMethodTestability" : "T000",
+      "perMethodOutcome" : "R011",
+      "lineNumbers" : [
+        162,
+        163,
+        164
+      ]
+    },
+    "org.tron.plugins.ArchiveManifest.readProperty:(Ljava/lang/String;Ljava/lang/String;)Ljava/lang/String;" : {
+      "completeTestCount" : 1,
+      "incompleteTestCount" : 0,
+      "perMethodTestability" : "T000",
+      "perMethodOutcome" : "R000",
+      "perTestOutcome" : {
+        "R000" : 1
+      },
+      "lineNumbers" : [
+        223,
+        224,
+        223,
+        225,
+        226,
+        227,
+        229,
+        227,
+        223,
+        229,
+        223,
+        229,
+        230,
+        231
+      ]
+    },
+    "org.tron.plugins.ArchiveManifest.run:([Ljava/lang/String;)I" : {
+      "completeTestCount" : 1,
+      "incompleteTestCount" : 0,
+      "perMethodTestability" : "T000",
+      "perMethodOutcome" : "R000",
+      "perTestOutcome" : {
+        "R000" : 1
+      },
+      "lineNumbers" : [
+        96,
+        97,
+        98,
+        99,
+        100,
+        101,
+        104,
+        105,
+        106,
+        107,
+        110,
+        111,
+        112,
+        115,
+        116,
+        117,
+        116,
+        119,
+        120,
+        121,
+        123,
+        124,
+        125,
+        127,
+        130,
+        132,
+        135,
+        137,
+        139,
+        140,
+        147,
+        142,
+        143,
+        144,
+        147,
+        145,
+        146,
+        148,
+        150,
+        151,
+        153,
+        154,
+        151,
+        155,
+        156,
+        158
+      ]
+    },
+    "org.tron.plugins.ArchiveManifest.writeProperty:(Ljava/lang/String;Ljava/lang/String;Ljava/lang/String;)Z" : {
+      "completeTestCount" : 0,
+      "incompleteTestCount" : 0,
+      "perMethodTestability" : "T000",
+      "perMethodOutcome" : "W002",
+      "warnings" : {
+        "W002" : 1
+      },
+      "lineNumbers" : [
+        236,
+        237,
+        236,
+        238,
+        236,
+        239,
+        240,
+        241,
+        242,
+        243,
+        244,
+        236,
+        244,
+        236,
+        244,
+        236,
+        244,
+        247,
+        244,
+        245,
+        246,
+        248
+      ]
+    },
+    "org.tron.plugins.Db.<init>:()V" : {
+      "completeTestCount" : 0,
+      "incompleteTestCount" : 0,
+      "perMethodTestability" : "T005",
+      "perMethodOutcome" : "T005",
+      "lineNumbers" : [
+        19
+      ]
+    },
+    "org.tron.plugins.DbArchive$Archive.doArchive:()V" : {
+      "completeTestCount" : 0,
+      "incompleteTestCount" : 0,
+      "perMethodTestability" : "T000",
+      "perMethodOutcome" : "R002",
+      "lineNumbers" : [
+        104
+      ]
+    },
+    "org.tron.plugins.DbArchive$ArchiveManifest.<init>:(Ljava/lang/String;Ljava/lang/String;II)V" : {
+      "completeTestCount" : 3,
+      "incompleteTestCount" : 0,
+      "perMethodTestability" : "T000",
+      "perMethodOutcome" : "R000",
+      "perTestOutcome" : {
+        "R000" : 3
+      },
+      "lineNumbers" : [
+        117,
+        118,
+        119,
+        120,
+        121,
+        122,
+        123,
+        124
+      ]
+    },
+    "org.tron.plugins.DbArchive$ArchiveManifest.checkManifest:(Ljava/lang/String;)Z" : {
+      "completeTestCount" : 1,
+      "incompleteTestCount" : 0,
+      "perMethodTestability" : "T000",
+      "perMethodOutcome" : "R000",
+      "perTestOutcome" : {
+        "R000" : 1
+      },
+      "lineNumbers" : [
+        148,
+        149,
+        150,
+        152,
+        153,
+        154,
+        156,
+        157,
+        158,
+        159,
+        161,
+        162,
+        163,
+        165,
+        166,
+        167,
+        168,
+        170
+      ]
+    },
+    "org.tron.plugins.DbArchive$ArchiveManifest.doArchive:()V" : {
+      "completeTestCount" : 0,
+      "incompleteTestCount" : 0,
+      "perMethodTestability" : "T000",
+      "perMethodOutcome" : "R002",
+      "lineNumbers" : [
+        175,
+        176,
+        177,
+        178,
+        181,
+        182,
+        183,
+        184,
+        186,
+        187,
+        188,
+        187,
+        190,
+        194,
+        192,
+        193,
+        195
+      ]
+    },
+    "org.tron.plugins.DbArchive$ArchiveManifest.newDefaultLevelDbOptions:()Lorg/iq80/leveldb/Options;" : {
+      "completeTestCount" : 1,
+      "incompleteTestCount" : 0,
+      "perMethodTestability" : "T000",
+      "perMethodOutcome" : "R000",
+      "perTestOutcome" : {
+        "R000" : 1
+      },
+      "lineNumbers" : [
+        127,
+        128,
+        129,
+        130,
+        131,
+        132,
+        133,
+        134,
+        135,
+        136,
+        137,
+        138
+      ]
+    },
+    "org.tron.plugins.DbArchive$ArchiveManifest.open:()V" : {
+      "completeTestCount" : 0,
+      "incompleteTestCount" : 0,
+      "perMethodTestability" : "T000",
+      "perMethodOutcome" : "R011",
+      "lineNumbers" : [
+        142,
+        143,
+        144
+      ]
+    },
+    "org.tron.plugins.DbArchive.<clinit>:()V" : {
+      "completeTestCount" : 0,
+      "incompleteTestCount" : 0,
+      "perMethodTestability" : "T012",
+      "perMethodOutcome" : "T012",
+      "lineNumbers" : [
+        26
+      ]
+    },
+    "org.tron.plugins.DbArchive.<init>:()V" : {
+      "completeTestCount" : 1,
+      "incompleteTestCount" : 0,
+      "perMethodTestability" : "T005",
+      "perMethodOutcome" : "R000",
+      "perTestOutcome" : {
+        "R000" : 1
+      },
+      "lineNumbers" : [
+        28
+      ]
+    },
+    "org.tron.plugins.DbArchive.access$000:()Lorg/slf4j/Logger;" : {
+      "completeTestCount" : 0,
+      "incompleteTestCount" : 0,
+      "perMethodTestability" : "T012",
+      "perMethodOutcome" : "T012",
+      "lineNumbers" : [
+        28
+      ]
+    },
+    "org.tron.plugins.DbArchive.call:()Ljava/lang/Integer;" : {
+      "completeTestCount" : 0,
+      "incompleteTestCount" : 0,
+      "perMethodTestability" : "T000",
+      "perMethodOutcome" : "R013",
+      "lineNumbers" : [
+        54,
+        55,
+        56,
+        59,
+        60,
+        61,
+        62,
+        63,
+        64,
+        67,
+        68,
+        69,
+        70,
+        71,
+        74,
+        75,
+        76,
+        75,
+        78,
+        79,
+        80,
+        81,
+        82,
+        84,
+        85,
+        86,
+        88,
+        89,
+        91,
+        93,
+        94,
+        91,
+        96
+      ]
+    },
+    "org.tron.plugins.DbArchive.lambda$call$0:(Ljava/util/List;Ljava/io/File;)V" : {
+      "completeTestCount" : 0,
+      "incompleteTestCount" : 0,
+      "perMethodTestability" : "T012",
+      "perMethodOutcome" : "T012",
+      "lineNumbers" : [
+        86
+      ]
+    },
+    "org.tron.plugins.DbConvert$Converter.doConvert:()Z" : {
+      "completeTestCount" : 0,
+      "incompleteTestCount" : 0,
+      "perMethodTestability" : "T010",
+      "perMethodOutcome" : "T010"
+    },
+    "org.tron.plugins.DbConvert$Converter.name:()Ljava/lang/String;" : {
+      "completeTestCount" : 0,
+      "incompleteTestCount" : 0,
+      "perMethodTestability" : "T010",
+      "perMethodOutcome" : "T010"
+    },
+    "org.tron.plugins.DbConvert$DbConverter.<init>:(Ljava/lang/String;Ljava/lang/String;Ljava/lang/String;Z)V" : {
+      "completeTestCount" : 1,
+      "incompleteTestCount" : 0,
+      "perMethodTestability" : "T000",
+      "perMethodOutcome" : "R000",
+      "perTestOutcome" : {
+        "R000" : 1
+      },
+      "lineNumbers" : [
+        145,
+        136,
+        137,
+        138,
+        139,
+        140,
+        141,
+        146,
+        147,
+        148,
+        149,
+        150,
+        151,
+        152
+      ]
+    },
+    "org.tron.plugins.DbConvert$DbConverter.batchInsert:(Lorg/rocksdb/RocksDB;Ljava/util/List;Ljava/util/List;)V" : {
+      "completeTestCount" : 0,
+      "incompleteTestCount" : 0,
+      "perMethodTestability" : "T003",
+      "perMethodOutcome" : "T003",
+      "lineNumbers" : [
+        217,
+        218,
+        219,
+        220,
+        221,
+        218,
+        223,
+        224,
+        217,
+        224,
+        225,
+        226,
+        227
+      ]
+    },
+    "org.tron.plugins.DbConvert$DbConverter.check:()Z" : {
+      "completeTestCount" : 0,
+      "incompleteTestCount" : 0,
+      "perMethodTestability" : "T003",
+      "perMethodOutcome" : "T003",
+      "lineNumbers" : [
+        313,
+        314,
+        317,
+        316,
+        318,
+        316,
+        319,
+        316,
+        322,
+        323,
+        324,
+        325,
+        326,
+        327,
+        328,
+        323,
+        330,
+        332,
+        333,
+        330,
+        334,
+        336,
+        334,
+        316,
+        336,
+        316,
+        336,
+        316,
+        336
+      ]
+    },
+    "org.tron.plugins.DbConvert$DbConverter.compact:()V" : {
+      "completeTestCount" : 0,
+      "incompleteTestCount" : 0,
+      "perMethodTestability" : "T003",
+      "perMethodOutcome" : "T003",
+      "lineNumbers" : [
+        302,
+        303,
+        305,
+        306,
+        307,
+        308,
+        309,
+        305,
+        309,
+        310
+      ]
+    },
+    "org.tron.plugins.DbConvert$DbConverter.convertLevelToRocks:()V" : {
+      "completeTestCount" : 0,
+      "incompleteTestCount" : 0,
+      "perMethodTestability" : "T000",
+      "perMethodOutcome" : "R012",
+      "lineNumbers" : [
+        268,
+        269,
+        270,
+        272,
+        271,
+        273,
+        271,
+        274,
+        275,
+        274,
+        271,
+        277,
+        279,
+        280,
+        281,
+        282,
+        283,
+        284,
+        285,
+        286,
+        287,
+        288,
+        289,
+        291,
+        293,
+        294,
+        296,
+        271,
+        296,
+        271,
+        296,
+        271,
+        296,
+        297,
+        298,
+        297,
+        298,
+        299
+      ]
+    },
+    "org.tron.plugins.DbConvert$DbConverter.doConvert:()Z" : {
+      "completeTestCount" : 0,
+      "incompleteTestCount" : 0,
+      "perMethodTestability" : "T000",
+      "perMethodOutcome" : "R011",
+      "lineNumbers" : [
+        157,
+        158,
+        159,
+        162,
+        163,
+        164,
+        165,
+        167,
+        168,
+        169,
+        171,
+        172,
+        173,
+        174,
+        175,
+        178,
+        180,
+        181,
+        182,
+        183,
+        185,
+        187,
+        188,
+        190,
+        191,
+        192,
+        193,
+        192,
+        195,
+        196,
+        195,
+        200,
+        201,
+        202,
+        203,
+        204,
+        207
+      ]
+    },
+    "org.tron.plugins.DbConvert$DbConverter.maybeRetry:(Lorg/rocksdb/RocksDBException;)Z" : {
+      "completeTestCount" : 0,
+      "incompleteTestCount" : 0,
+      "perMethodTestability" : "T003",
+      "perMethodOutcome" : "T003",
+      "lineNumbers" : [
+        251,
+        252,
+        253,
+        254,
+        255,
+        257,
+        258,
+        257
+      ]
+    },
+    "org.tron.plugins.DbConvert$DbConverter.name:()Ljava/lang/String;" : {
+      "completeTestCount" : 1,
+      "incompleteTestCount" : 0,
+      "perMethodTestability" : "T000",
+      "perMethodOutcome" : "R000",
+      "perTestOutcome" : {
+        "R000" : 1
+      },
+      "lineNumbers" : [
+        212
+      ]
+    },
+    "org.tron.plugins.DbConvert$DbConverter.write:(Lorg/rocksdb/RocksDB;Lorg/rocksdb/WriteBatch;)V" : {
+      "completeTestCount" : 0,
+      "incompleteTestCount" : 0,
+      "perMethodTestability" : "T003",
+      "perMethodOutcome" : "T003",
+      "lineNumbers" : [
+        238,
+        247,
+        239,
+        241,
+        242,
+        243,
+        245,
+        248
+      ]
+    },
+    "org.tron.plugins.DbConvert.<clinit>:()V" : {
+      "completeTestCount" : 0,
+      "incompleteTestCount" : 0,
+      "perMethodTestability" : "T012",
+      "perMethodOutcome" : "T012",
+      "lineNumbers" : [
+        28,
+        38,
+        39
+      ]
+    },
+    "org.tron.plugins.DbConvert.<init>:()V" : {
+      "completeTestCount" : 0,
+      "incompleteTestCount" : 0,
+      "perMethodTestability" : "T005",
+      "perMethodOutcome" : "R012",
+      "lineNumbers" : [
+        35
+      ]
+    },
+    "org.tron.plugins.DbConvert.access$000:(Ljava/lang/String;)Z" : {
+      "completeTestCount" : 0,
+      "incompleteTestCount" : 0,
+      "perMethodTestability" : "T012",
+      "perMethodOutcome" : "T012",
+      "lineNumbers" : [
+        35
+      ]
+    },
+    "org.tron.plugins.DbConvert.access$100:()Lorg/slf4j/Logger;" : {
+      "completeTestCount" : 0,
+      "incompleteTestCount" : 0,
+      "perMethodTestability" : "T012",
+      "perMethodOutcome" : "T012",
+      "lineNumbers" : [
+        35
+      ]
+    },
+    "org.tron.plugins.DbConvert.access$200:(Ljava/lang/String;)Z" : {
+      "completeTestCount" : 0,
+      "incompleteTestCount" : 0,
+      "perMethodTestability" : "T012",
+      "perMethodOutcome" : "T012",
+      "lineNumbers" : [
+        35
+      ]
+    },
+    "org.tron.plugins.DbConvert.access$300:(J[B)J" : {
+      "completeTestCount" : 0,
+      "incompleteTestCount" : 0,
+      "perMethodTestability" : "T012",
+      "perMethodOutcome" : "T012",
+      "lineNumbers" : [
+        35
+      ]
+    },
+    "org.tron.plugins.DbConvert.byteArrayToIntWithOne:(J[B)J" : {
+      "completeTestCount" : 0,
+      "incompleteTestCount" : 0,
+      "perMethodTestability" : "T003",
+      "perMethodOutcome" : "T003",
+      "lineNumbers" : [
+        354,
+        355,
+        354,
+        357
+      ]
+    },
+    "org.tron.plugins.DbConvert.call:()Ljava/lang/Integer;" : {
+      "completeTestCount" : 0,
+      "incompleteTestCount" : 0,
+      "perMethodTestability" : "T000",
+      "perMethodOutcome" : "R012",
+      "lineNumbers" : [
+        66,
+        67,
+        68,
+        70,
+        71,
+        72,
+        73,
+        72,
+        74,
+        76,
+        77,
+        78,
+        79,
+        82,
+        83,
+        84,
+        85,
+        86,
+        87,
+        90,
+        91,
+        92,
+        93,
+        95,
+        96,
+        97,
+        99,
+        104,
+        114,
+        115,
+        116,
+        117,
+        116,
+        117,
+        118,
+        119
+      ]
+    },
+    "org.tron.plugins.DbConvert.checkDone:(Ljava/lang/String;)Z" : {
+      "completeTestCount" : 0,
+      "incompleteTestCount" : 0,
+      "perMethodTestability" : "T003",
+      "perMethodOutcome" : "T003",
+      "lineNumbers" : [
+        349,
+        350
+      ]
+    },
+    "org.tron.plugins.DbConvert.createEngine:(Ljava/lang/String;)Z" : {
+      "completeTestCount" : 0,
+      "incompleteTestCount" : 0,
+      "perMethodTestability" : "T003",
+      "perMethodOutcome" : "T003",
+      "lineNumbers" : [
+        341,
+        342,
+        343,
+        345
+      ]
+    },
+    "org.tron.plugins.DbConvert.lambda$call$0:(Ljava/io/File;)Z" : {
+      "completeTestCount" : 0,
+      "incompleteTestCount" : 0,
+      "perMethodTestability" : "T012",
+      "perMethodOutcome" : "T012",
+      "lineNumbers" : [
+        78
+      ]
+    },
+    "org.tron.plugins.DbConvert.lambda$call$1:(Ljava/util/List;Ljava/io/File;)V" : {
+      "completeTestCount" : 0,
+      "incompleteTestCount" : 0,
+      "perMethodTestability" : "T012",
+      "perMethodOutcome" : "T012",
+      "lineNumbers" : [
+        97,
+        98,
+        97
+      ]
+    },
+    "org.tron.plugins.DbConvert.lambda$call$2:(Ljava/util/List;Ljava/io/File;)V" : {
+      "completeTestCount" : 0,
+      "incompleteTestCount" : 0,
+      "perMethodTestability" : "T012",
+      "perMethodOutcome" : "T012",
+      "lineNumbers" : [
+        99,
+        101,
+        102,
+        103,
+        99
+      ]
+    },
+    "org.tron.plugins.DbConvert.lambda$call$3:(Lorg/tron/plugins/DbConvert$Converter;)Ljava/lang/String;" : {
+      "completeTestCount" : 0,
+      "incompleteTestCount" : 0,
+      "perMethodTestability" : "T012",
+      "perMethodOutcome" : "T012",
+      "lineNumbers" : [
+        107,
+        108,
+        109,
+        110,
+        111,
+        110,
+        112
+      ]
+    },
+    "org.tron.plugins.DbCopy$Copier.doCopy:()Z" : {
+      "completeTestCount" : 0,
+      "incompleteTestCount" : 0,
+      "perMethodTestability" : "T010",
+      "perMethodOutcome" : "T010"
+    },
+    "org.tron.plugins.DbCopy$Copier.name:()Ljava/lang/String;" : {
+      "completeTestCount" : 0,
+      "incompleteTestCount" : 0,
+      "perMethodTestability" : "T010",
+      "perMethodOutcome" : "T010"
+    },
+    "org.tron.plugins.DbCopy$DbCopier.<init>:(Ljava/lang/String;Ljava/lang/String;Ljava/lang/String;)V" : {
+      "completeTestCount" : 1,
+      "incompleteTestCount" : 0,
+      "perMethodTestability" : "T000",
+      "perMethodOutcome" : "R000",
+      "perTestOutcome" : {
+        "R000" : 1
+      },
+      "lineNumbers" : [
+        132,
+        133,
+        134,
+        135,
+        136,
+        137,
+        138
+      ]
+    },
+    "org.tron.plugins.DbCopy$DbCopier.doCopy:()Z" : {
+      "completeTestCount" : 1,
+      "incompleteTestCount" : 0,
+      "perMethodTestability" : "T000",
+      "perMethodOutcome" : "R000",
+      "perTestOutcome" : {
+        "R000" : 1
+      },
+      "lineNumbers" : [
+        142,
+        143,
+        144,
+        145,
+        147,
+        148,
+        149,
+        150,
+        151
+      ]
+    },
+    "org.tron.plugins.DbCopy$DbCopier.name:()Ljava/lang/String;" : {
+      "completeTestCount" : 1,
+      "incompleteTestCount" : 0,
+      "perMethodTestability" : "T000",
+      "perMethodOutcome" : "R000",
+      "perTestOutcome" : {
+        "R000" : 1
+      },
+      "lineNumbers" : [
+        156
+      ]
+    },
+    "org.tron.plugins.DbCopy.<clinit>:()V" : {
+      "completeTestCount" : 0,
+      "incompleteTestCount" : 0,
+      "perMethodTestability" : "T012",
+      "perMethodOutcome" : "T012",
+      "lineNumbers" : [
+        19
+      ]
+    },
+    "org.tron.plugins.DbCopy.<init>:()V" : {
+      "completeTestCount" : 1,
+      "incompleteTestCount" : 0,
+      "perMethodTestability" : "T005",
+      "perMethodOutcome" : "R000",
+      "perTestOutcome" : {
+        "R000" : 1
+      },
+      "lineNumbers" : [
+        26
+      ]
+    },
+    "org.tron.plugins.DbCopy.access$000:()Lorg/slf4j/Logger;" : {
+      "completeTestCount" : 0,
+      "incompleteTestCount" : 0,
+      "perMethodTestability" : "T012",
+      "perMethodOutcome" : "T012",
+      "lineNumbers" : [
+        26
+      ]
+    },
+    "org.tron.plugins.DbCopy.call:()Ljava/lang/Integer;" : {
+      "completeTestCount" : 0,
+      "incompleteTestCount" : 0,
+      "perMethodTestability" : "T000",
+      "perMethodOutcome" : "R013",
+      "lineNumbers" : [
+        44,
+        45,
+        46,
+        48,
+        49,
+        50,
+        51,
+        50,
+        52,
+        54,
+        55,
+        56,
+        57,
+        56,
+        58,
+        61,
+        62,
+        63,
+        64,
+        63,
+        65,
+        68,
+        69,
+        70,
+        71,
+        74,
+        75,
+        76,
+        77,
+        78,
+        79,
+        82,
+        83,
+        84,
+        85,
+        87,
+        88,
+        89,
+        91,
+        96,
+        106,
+        108,
+        109,
+        111,
+        112,
+        113,
+        112,
+        113,
+        114,
+        115
+      ]
+    },
+    "org.tron.plugins.DbCopy.lambda$call$0:(Ljava/io/File;)Z" : {
+      "completeTestCount" : 0,
+      "incompleteTestCount" : 0,
+      "perMethodTestability" : "T012",
+      "perMethodOutcome" : "T012",
+      "lineNumbers" : [
+        70
+      ]
+    },
+    "org.tron.plugins.DbCopy.lambda$call$1:(Ljava/util/List;Ljava/io/File;)V" : {
+      "completeTestCount" : 0,
+      "incompleteTestCount" : 0,
+      "perMethodTestability" : "T012",
+      "perMethodOutcome" : "T012",
+      "lineNumbers" : [
+        89,
+        90,
+        89
+      ]
+    },
+    "org.tron.plugins.DbCopy.lambda$call$2:(Ljava/util/List;Ljava/io/File;)V" : {
+      "completeTestCount" : 0,
+      "incompleteTestCount" : 0,
+      "perMethodTestability" : "T012",
+      "perMethodOutcome" : "T012",
+      "lineNumbers" : [
+        91,
+        93,
+        94,
+        95,
+        91
+      ]
+    },
+    "org.tron.plugins.DbCopy.lambda$call$3:(Lorg/tron/plugins/DbCopy$Copier;)Ljava/lang/String;" : {
+      "completeTestCount" : 0,
+      "incompleteTestCount" : 0,
+      "perMethodTestability" : "T012",
+      "perMethodOutcome" : "T012",
+      "lineNumbers" : [
+        99,
+        100,
+        101,
+        102,
+        103,
+        102,
+        104
+      ]
+    },
+    "org.tron.plugins.DbCopy.lambda$call$4:(Ljava/io/File;)V" : {
+      "completeTestCount" : 0,
+      "incompleteTestCount" : 0,
+      "perMethodTestability" : "T012",
+      "perMethodOutcome" : "T012",
+      "lineNumbers" : [
+        109,
+        110,
+        109
+      ]
+    },
+    "org.tron.plugins.DbLite$1.<clinit>:()V" : {
+      "completeTestCount" : 0,
+      "incompleteTestCount" : 0,
+      "perMethodTestability" : "T012",
+      "perMethodOutcome" : "T012",
+      "lineNumbers" : [
+        120
+      ]
+    },
+    "org.tron.plugins.DbLite$BlockNumInfo.<init>:(JJJ)V" : {
+      "completeTestCount" : 1,
+      "incompleteTestCount" : 0,
+      "perMethodTestability" : "T000",
+      "perMethodOutcome" : "R000",
+      "perTestOutcome" : {
+        "R000" : 1
+      },
+      "lineNumbers" : [
+        704,
+        705,
+        706,
+        707,
+        708
+      ]
+    },
+    "org.tron.plugins.DbLite$BlockNumInfo.getHistoryMaxNum:()J" : {
+      "completeTestCount" : 1,
+      "incompleteTestCount" : 0,
+      "perMethodTestability" : "T001",
+      "perMethodOutcome" : "R000",
+      "perTestOutcome" : {
+        "R000" : 1
+      },
+      "lineNumbers" : [
+        715
+      ]
+    },
+    "org.tron.plugins.DbLite$BlockNumInfo.getSnapshotMaxNum:()J" : {
+      "completeTestCount" : 1,
+      "incompleteTestCount" : 0,
+      "perMethodTestability" : "T001",
+      "perMethodOutcome" : "R000",
+      "perTestOutcome" : {
+        "R000" : 1
+      },
+      "lineNumbers" : [
+        719
+      ]
+    },
+    "org.tron.plugins.DbLite$BlockNumInfo.getSnapshotMinNum:()J" : {
+      "completeTestCount" : 1,
+      "incompleteTestCount" : 0,
+      "perMethodTestability" : "T001",
+      "perMethodOutcome" : "R000",
+      "perTestOutcome" : {
+        "R000" : 1
+      },
+      "lineNumbers" : [
+        711
+      ]
+    },
+    "org.tron.plugins.DbLite$Operate.<clinit>:()V" : {
+      "completeTestCount" : 0,
+      "incompleteTestCount" : 0,
+      "perMethodTestability" : "T012",
+      "perMethodOutcome" : "T012",
+      "lineNumbers" : [
+        68
+      ]
+    },
+    "org.tron.plugins.DbLite$Operate.<init>:(Ljava/lang/String;I)V" : {
+      "completeTestCount" : 0,
+      "incompleteTestCount" : 0,
+      "perMethodTestability" : "T003",
+      "perMethodOutcome" : "T003",
+      "lineNumbers" : [
+        68
+      ]
+    },
+    "org.tron.plugins.DbLite$Operate.valueOf:(Ljava/lang/String;)Lorg/tron/plugins/DbLite$Operate;" : {
+      "completeTestCount" : 0,
+      "incompleteTestCount" : 0,
+      "perMethodTestability" : "T012",
+      "perMethodOutcome" : "T012",
+      "lineNumbers" : [
+        68
+      ]
+    },
+    "org.tron.plugins.DbLite$Operate.values:()[Lorg/tron/plugins/DbLite$Operate;" : {
+      "completeTestCount" : 0,
+      "incompleteTestCount" : 0,
+      "perMethodTestability" : "T012",
+      "perMethodOutcome" : "T012",
+      "lineNumbers" : [
+        68
+      ]
+    },
+    "org.tron.plugins.DbLite$Type.<clinit>:()V" : {
+      "completeTestCount" : 0,
+      "incompleteTestCount" : 0,
+      "perMethodTestability" : "T012",
+      "perMethodOutcome" : "T012",
+      "lineNumbers" : [
+        70
+      ]
+    },
+    "org.tron.plugins.DbLite$Type.<init>:(Ljava/lang/String;I)V" : {
+      "completeTestCount" : 0,
+      "incompleteTestCount" : 0,
+      "perMethodTestability" : "T003",
+      "perMethodOutcome" : "T003",
+      "lineNumbers" : [
+        70
+      ]
+    },
+    "org.tron.plugins.DbLite$Type.valueOf:(Ljava/lang/String;)Lorg/tron/plugins/DbLite$Type;" : {
+      "completeTestCount" : 0,
+      "incompleteTestCount" : 0,
+      "perMethodTestability" : "T012",
+      "perMethodOutcome" : "T012",
+      "lineNumbers" : [
+        70
+      ]
+    },
+    "org.tron.plugins.DbLite$Type.values:()[Lorg/tron/plugins/DbLite$Type;" : {
+      "completeTestCount" : 0,
+      "incompleteTestCount" : 0,
+      "perMethodTestability" : "T012",
+      "perMethodOutcome" : "T012",
+      "lineNumbers" : [
+        70
+      ]
+    },
+    "org.tron.plugins.DbLite.<clinit>:()V" : {
+      "completeTestCount" : 0,
+      "incompleteTestCount" : 0,
+      "perMethodTestability" : "T012",
+      "perMethodOutcome" : "T012",
+      "lineNumbers" : [
+        35,
+        44,
+        46,
+        61
+      ]
+    },
+    "org.tron.plugins.DbLite.<init>:()V" : {
+      "completeTestCount" : 1,
+      "incompleteTestCount" : 0,
+      "perMethodTestability" : "T005",
+      "perMethodOutcome" : "R000",
+      "perTestOutcome" : {
+        "R000" : 1
+      },
+      "lineNumbers" : [
+        42
+      ]
+    },
+    "org.tron.plugins.DbLite.backupArchiveDbs:(Ljava/lang/String;)V" : {
+      "completeTestCount" : 0,
+      "incompleteTestCount" : 0,
+      "perMethodTestability" : "T003",
+      "perMethodOutcome" : "T003",
+      "lineNumbers" : [
+        492,
+        493,
+        494,
+        495,
+        496,
+        498,
+        499,
+        500
+      ]
+    },
+    "org.tron.plugins.DbLite.call:()Ljava/lang/Integer;" : {
+      "completeTestCount" : 0,
+      "incompleteTestCount" : 0,
+      "perMethodTestability" : "T000",
+      "perMethodOutcome" : "R013",
+      "lineNumbers" : [
+        115,
+        116,
+        117,
+        120,
+        122,
+        123,
+        124,
+        125,
+        129,
+        130,
+        133,
+        141,
+        133,
+        134,
+        135,
+        136,
+        137,
+        136,
+        138,
+        139,
+        141,
+        139,
+        141,
+        142
+      ]
+    },
+    "org.tron.plugins.DbLite.checkAndGetBlockNumInfo:(Ljava/lang/String;Ljava/lang/String;)Lorg/tron/plugins/DbLite$BlockNumInfo;" : {
+      "completeTestCount" : 0,
+      "incompleteTestCount" : 0,
+      "perMethodTestability" : "T003",
+      "perMethodOutcome" : "T003",
+      "lineNumbers" : [
+        457,
+        458,
+        459,
+        460,
+        461,
+        462,
+        465,
+        466,
+        469,
+        471,
+        473,
+        475,
+        476,
+        479,
+        477,
+        482,
+        483,
+        485,
+        486,
+        483,
+        488
+      ]
+    },
+    "org.tron.plugins.DbLite.completeHistoryData:(Ljava/lang/String;Ljava/lang/String;)V" : {
+      "completeTestCount" : 0,
+      "incompleteTestCount" : 0,
+      "perMethodTestability" : "T000",
+      "perMethodOutcome" : "R013",
+      "lineNumbers" : [
+        220,
+        221,
+        222,
+        225,
+        226,
+        227,
+        232,
+        234,
+        236,
+        238,
+        240,
+        242,
+        244,
+        250,
+        245,
+        246,
+        247,
+        248,
+        247,
+        249,
+        251,
+        252,
+        253,
+        254
+      ]
+    },
+    "org.tron.plugins.DbLite.copyEngineIfExist:(Ljava/lang/String;Ljava/lang/String;[Ljava/lang/String;)V" : {
+      "completeTestCount" : 0,
+      "incompleteTestCount" : 0,
+      "perMethodTestability" : "T003",
+      "perMethodOutcome" : "T003",
+      "lineNumbers" : [
+        428,
+        429,
+        430,
+        431,
+        428,
+        434
+      ]
+    },
+    "org.tron.plugins.DbLite.copyHistory2Database:(Ljava/lang/String;Ljava/lang/String;)V" : {
+      "completeTestCount" : 0,
+      "incompleteTestCount" : 0,
+      "perMethodTestability" : "T003",
+      "perMethodOutcome" : "T003",
+      "lineNumbers" : [
+        503,
+        504,
+        505,
+        506
+      ]
+    },
+    "org.tron.plugins.DbLite.deleteBackupArchiveDbs:(Ljava/lang/String;)V" : {
+      "completeTestCount" : 0,
+      "incompleteTestCount" : 0,
+      "perMethodTestability" : "T003",
+      "perMethodOutcome" : "T003",
+      "lineNumbers" : [
+        627,
+        628,
+        629,
+        630,
+        631,
+        632,
+        634,
+        635,
+        636,
+        638
+      ]
+    },
+    "org.tron.plugins.DbLite.deleteSnapshotFlag:(Ljava/lang/String;)V" : {
+      "completeTestCount" : 0,
+      "incompleteTestCount" : 0,
+      "perMethodTestability" : "T003",
+      "perMethodOutcome" : "T003",
+      "lineNumbers" : [
+        620,
+        621,
+        622,
+        623
+      ]
+    },
+    "org.tron.plugins.DbLite.fillSnapshotBlockAndTransDb:(Ljava/lang/String;Ljava/lang/String;)V" : {
+      "completeTestCount" : 0,
+      "incompleteTestCount" : 0,
+      "perMethodTestability" : "T003",
+      "perMethodOutcome" : "T003",
+      "lineNumbers" : [
+        385,
+        386,
+        387,
+        386,
+        387,
+        388,
+        389,
+        391,
+        392,
+        393,
+        395,
+        396,
+        397,
+        398,
+        400,
+        401,
+        403,
+        404,
+        424,
+        425
+      ]
+    },
+    "org.tron.plugins.DbLite.generateHistory:(Ljava/lang/String;Ljava/lang/String;)V" : {
+      "completeTestCount" : 0,
+      "incompleteTestCount" : 0,
+      "perMethodTestability" : "T000",
+      "perMethodOutcome" : "R013",
+      "lineNumbers" : [
+        186,
+        187,
+        188,
+        189,
+        191,
+        192,
+        193,
+        195,
+        196,
+        197,
+        199,
+        200,
+        199,
+        206,
+        201,
+        202,
+        203,
+        204,
+        203,
+        205,
+        207,
+        208,
+        209,
+        210
+      ]
+    },
+    "org.tron.plugins.DbLite.generateInfoProperties:(Ljava/lang/String;J)V" : {
+      "completeTestCount" : 0,
+      "incompleteTestCount" : 0,
+      "perMethodTestability" : "T003",
+      "perMethodOutcome" : "T003",
+      "lineNumbers" : [
+        345,
+        346,
+        347,
+        348,
+        350,
+        351,
+        353
+      ]
+    },
+    "org.tron.plugins.DbLite.generateSnapshot:(Ljava/lang/String;Ljava/lang/String;)V" : {
+      "completeTestCount" : 0,
+      "incompleteTestCount" : 0,
+      "perMethodTestability" : "T000",
+      "perMethodOutcome" : "R013",
+      "lineNumbers" : [
+        153,
+        154,
+        155,
+        156,
+        158,
+        159,
+        160,
+        161,
+        163,
+        165,
+        166,
+        165,
+        172,
+        167,
+        168,
+        169,
+        170,
+        169,
+        171,
+        173,
+        174,
+        175,
+        176
+      ]
+    },
+    "org.tron.plugins.DbLite.getCheckpointDb:(Ljava/lang/String;)Lorg/tron/plugins/utils/db/DBInterface;" : {
+      "completeTestCount" : 0,
+      "incompleteTestCount" : 0,
+      "perMethodTestability" : "T003",
+      "perMethodOutcome" : "T003",
+      "lineNumbers" : [
+        668,
+        670,
+        671,
+        672,
+        674,
+        675,
+        677
+      ]
+    },
+    "org.tron.plugins.DbLite.getCheckpointV2List:(Ljava/lang/String;)Ljava/util/List;" : {
+      "completeTestCount" : 0,
+      "incompleteTestCount" : 0,
+      "perMethodTestability" : "T003",
+      "perMethodOutcome" : "T003",
+      "lineNumbers" : [
+        691,
+        692,
+        693,
+        694,
+        693,
+        696
+      ]
+    },
+    "org.tron.plugins.DbLite.getDataFromSourceDB:(Ljava/lang/String;Ljava/lang/String;[B)[B" : {
+      "completeTestCount" : 0,
+      "incompleteTestCount" : 0,
+      "perMethodTestability" : "T003",
+      "perMethodOutcome" : "T003",
+      "lineNumbers" : [
+        588,
+        589,
+        591,
+        593,
+        594,
+        596,
+        597,
+        599,
+        600,
+        601,
+        600,
+        603
+      ]
+    },
+    "org.tron.plugins.DbLite.getGenesisBlockHash:(Ljava/lang/String;)[B" : {
+      "completeTestCount" : 0,
+      "incompleteTestCount" : 0,
+      "perMethodTestability" : "T003",
+      "perMethodOutcome" : "T003",
+      "lineNumbers" : [
+        437,
+        438,
+        439,
+        442,
+        443
+      ]
+    },
+    "org.tron.plugins.DbLite.getLatestBlockHeaderNum:(Ljava/lang/String;)J" : {
+      "completeTestCount" : 0,
+      "incompleteTestCount" : 0,
+      "perMethodTestability" : "T003",
+      "perMethodOutcome" : "T003",
+      "lineNumbers" : [
+        357,
+        358,
+        359,
+        360,
+        359,
+        361,
+        362,
+        365,
+        366,
+        367,
+        368,
+        366
+      ]
+    },
+    "org.tron.plugins.DbLite.getLatestBlockHeaderNumFromCP:(Lorg/tron/plugins/utils/db/DBInterface;[B)Ljava/lang/Long;" : {
+      "completeTestCount" : 0,
+      "incompleteTestCount" : 0,
+      "perMethodTestability" : "T003",
+      "perMethodOutcome" : "T003",
+      "lineNumbers" : [
+        373,
+        374,
+        375,
+        377
+      ]
+    },
+    "org.tron.plugins.DbLite.getSecondBlock:(Ljava/lang/String;)J" : {
+      "completeTestCount" : 0,
+      "incompleteTestCount" : 0,
+      "perMethodTestability" : "T003",
+      "perMethodOutcome" : "T003",
+      "lineNumbers" : [
+        657,
+        658,
+        659,
+        660,
+        661,
+        662,
+        664
+      ]
+    },
+    "org.tron.plugins.DbLite.getSnapshotDbs:(Ljava/lang/String;)Ljava/util/List;" : {
+      "completeTestCount" : 0,
+      "incompleteTestCount" : 0,
+      "perMethodTestability" : "T003",
+      "perMethodOutcome" : "T003",
+      "lineNumbers" : [
+        257,
+        258,
+        259,
+        260,
+        261,
+        262,
+        263
+      ]
+    },
+    "org.tron.plugins.DbLite.hasEnoughBlock:(Ljava/lang/String;)V" : {
+      "completeTestCount" : 0,
+      "incompleteTestCount" : 0,
+      "perMethodTestability" : "T003",
+      "perMethodOutcome" : "T003",
+      "lineNumbers" : [
+        642,
+        644,
+        645,
+        646,
+        648,
+        647,
+        650
+      ]
+    },
+    "org.tron.plugins.DbLite.isEmptyBytes:([B)Z" : {
+      "completeTestCount" : 0,
+      "incompleteTestCount" : 0,
+      "perMethodTestability" : "T003",
+      "perMethodOutcome" : "T003",
+      "lineNumbers" : [
+        613,
+        614,
+        616
+      ]
+    },
+    "org.tron.plugins.DbLite.isLite:(Ljava/lang/String;)Z" : {
+      "completeTestCount" : 0,
+      "incompleteTestCount" : 0,
+      "perMethodTestability" : "T003",
+      "perMethodOutcome" : "T003",
+      "lineNumbers" : [
+        653
+      ]
+    },
+    "org.tron.plugins.DbLite.lambda$backupArchiveDbs$7:(Ljava/lang/String;Ljava/lang/String;)V" : {
+      "completeTestCount" : 0,
+      "incompleteTestCount" : 0,
+      "perMethodTestability" : "T012",
+      "perMethodOutcome" : "T012",
+      "lineNumbers" : [
+        499
+      ]
+    },
+    "org.tron.plugins.DbLite.lambda$fillSnapshotBlockAndTransDb$6:(Ljava/lang/String;Lorg/tron/plugins/utils/db/DBInterface;Lorg/tron/plugins/utils/db/DBInterface;Lorg/tron/plugins/utils/db/DBInterface;Ljava/lang/Long;)V" : {
+      "completeTestCount" : 0,
+      "incompleteTestCount" : 0,
+      "perMethodTestability" : "T012",
+      "perMethodOutcome" : "T012",
+      "lineNumbers" : [
+        406,
+        407,
+        406,
+        408,
+        410,
+        412,
+        414,
+        415,
+        417,
+        418,
+        421,
+        419,
+        420,
+        422
+      ]
+    },
+    "org.tron.plugins.DbLite.lambda$getLatestBlockHeaderNum$2:()Ljava/lang/IllegalArgumentException;" : {
+      "completeTestCount" : 0,
+      "incompleteTestCount" : 0,
+      "perMethodTestability" : "T012",
+      "perMethodOutcome" : "T012",
+      "lineNumbers" : [
+        369
+      ]
+    },
+    "org.tron.plugins.DbLite.lambda$getSnapshotDbs$0:(Ljava/io/File;)Z" : {
+      "completeTestCount" : 0,
+      "incompleteTestCount" : 0,
+      "perMethodTestability" : "T012",
+      "perMethodOutcome" : "T012",
+      "lineNumbers" : [
+        261
+      ]
+    },
+    "org.tron.plugins.DbLite.lambda$getSnapshotDbs$1:(Ljava/util/List;Ljava/io/File;)V" : {
+      "completeTestCount" : 0,
+      "incompleteTestCount" : 0,
+      "perMethodTestability" : "T012",
+      "perMethodOutcome" : "T012",
+      "lineNumbers" : [
+        262
+      ]
+    },
+    "org.tron.plugins.DbLite.lambda$mergeBak2Database$11:(Ljava/nio/file/Path;Ljava/lang/String;[BLjava/lang/String;)V" : {
+      "completeTestCount" : 0,
+      "incompleteTestCount" : 0,
+      "perMethodTestability" : "T012",
+      "perMethodOutcome" : "T012",
+      "lineNumbers" : [
+        570,
+        571,
+        572,
+        573,
+        574,
+        576,
+        578,
+        579,
+        572,
+        579,
+        582,
+        580,
+        581,
+        583
+      ]
+    },
+    "org.tron.plugins.DbLite.lambda$null$10:(Lorg/tron/plugins/utils/db/DBInterface;Ljava/util/Map$Entry;)V" : {
+      "completeTestCount" : 0,
+      "incompleteTestCount" : 0,
+      "perMethodTestability" : "T012",
+      "perMethodOutcome" : "T012",
+      "lineNumbers" : [
+        578
+      ]
+    },
+    "org.tron.plugins.DbLite.lambda$null$3:(Lorg/tron/protos/Protocol$Transaction;)[B" : {
+      "completeTestCount" : 0,
+      "incompleteTestCount" : 0,
+      "perMethodTestability" : "T012",
+      "perMethodOutcome" : "T012",
+      "lineNumbers" : [
+        416
+      ]
+    },
+    "org.tron.plugins.DbLite.lambda$null$4:(J[B)Ljava/util/Map$Entry;" : {
+      "completeTestCount" : 0,
+      "incompleteTestCount" : 0,
+      "perMethodTestability" : "T012",
+      "perMethodOutcome" : "T012",
+      "lineNumbers" : [
+        417
+      ]
+    },
+    "org.tron.plugins.DbLite.lambda$null$5:(Lorg/tron/plugins/utils/db/DBInterface;Ljava/util/Map$Entry;)V" : {
+      "completeTestCount" : 0,
+      "incompleteTestCount" : 0,
+      "perMethodTestability" : "T012",
+      "perMethodOutcome" : "T012",
+      "lineNumbers" : [
+        418
+      ]
+    },
+    "org.tron.plugins.DbLite.lambda$trimExtraHistory$8:(Ljava/lang/Long;Ljava/lang/Long;)I" : {
+      "completeTestCount" : 0,
+      "incompleteTestCount" : 0,
+      "perMethodTestability" : "T012",
+      "perMethodOutcome" : "T012",
+      "lineNumbers" : [
+        529
+      ]
+    },
+    "org.tron.plugins.DbLite.lambda$trimExtraHistory$9:(Lorg/tron/plugins/utils/db/DBInterface;Lorg/tron/plugins/utils/db/DBInterface;Lorg/tron/plugins/utils/db/DBInterface;Lorg/tron/plugins/utils/db/DBInterface;Ljava/lang/Long;)V" : {
+      "completeTestCount" : 0,
+      "incompleteTestCount" : 0,
+      "perMethodTestability" : "T012",
+      "perMethodOutcome" : "T012",
+      "lineNumbers" : [
+        531,
+        532,
+        534,
+        535,
+        536,
+        538,
+        540,
+        542,
+        545,
+        543,
+        544,
+        546
+      ]
+    },
+    "org.tron.plugins.DbLite.mergeBak2Database:(Ljava/lang/String;Lorg/tron/plugins/DbLite$BlockNumInfo;)V" : {
+      "completeTestCount" : 0,
+      "incompleteTestCount" : 0,
+      "perMethodTestability" : "T003",
+      "perMethodOutcome" : "T003",
+      "lineNumbers" : [
+        551,
+        552,
+        554,
+        555,
+        556,
+        557,
+        558,
+        562,
+        563,
+        564,
+        565,
+        566,
+        568,
+        584
+      ]
+    },
+    "org.tron.plugins.DbLite.mergeCheckpoint2History:(Ljava/lang/String;Ljava/lang/String;)V" : {
+      "completeTestCount" : 0,
+      "incompleteTestCount" : 0,
+      "perMethodTestability" : "T003",
+      "perMethodOutcome" : "T003",
+      "lineNumbers" : [
+        272,
+        273
+      ]
+    },
+    "org.tron.plugins.DbLite.mergeCheckpoint2Snapshot:(Ljava/lang/String;Ljava/lang/String;)V" : {
+      "completeTestCount" : 0,
+      "incompleteTestCount" : 0,
+      "perMethodTestability" : "T003",
+      "perMethodOutcome" : "T003",
+      "lineNumbers" : [
+        267,
+        268,
+        269
+      ]
+    },
+    "org.tron.plugins.DbLite.mergeCheckpoint:(Ljava/lang/String;Ljava/lang/String;Ljava/util/List;)V" : {
+      "completeTestCount" : 0,
+      "incompleteTestCount" : 0,
+      "perMethodTestability" : "T003",
+      "perMethodOutcome" : "T003",
+      "lineNumbers" : [
+        293,
+        294,
+        296,
+        297,
+        298,
+        299,
+        301,
+        302,
+        303,
+        304,
+        305,
+        309,
+        307,
+        308,
+        310
+      ]
+    },
+    "org.tron.plugins.DbLite.reSetRecentBlks:()V" : {
+      "completeTestCount" : 1,
+      "incompleteTestCount" : 0,
+      "perMethodTestability" : "T002",
+      "perMethodOutcome" : "R000",
+      "perTestOutcome" : {
+        "R000" : 1
+      },
+      "lineNumbers" : [
+        687,
+        688
+      ]
+    },
+    "org.tron.plugins.DbLite.recover:(Lorg/tron/plugins/utils/db/DBInterface;Ljava/lang/String;Ljava/util/List;)V" : {
+      "completeTestCount" : 0,
+      "incompleteTestCount" : 0,
+      "perMethodTestability" : "T003",
+      "perMethodOutcome" : "T003",
+      "lineNumbers" : [
+        314,
+        315,
+        316,
+        317,
+        318,
+        320,
+        321,
+        323,
+        324,
+        325,
+        326,
+        327,
+        328,
+        329,
+        331,
+        332,
+        333,
+        335,
+        315,
+        340,
+        314,
+        340,
+        341
+      ]
+    },
+    "org.tron.plugins.DbLite.setRecentBlks:(J)V" : {
+      "completeTestCount" : 1,
+      "incompleteTestCount" : 0,
+      "perMethodTestability" : "T002",
+      "perMethodOutcome" : "R000",
+      "perTestOutcome" : {
+        "R000" : 1
+      },
+      "lineNumbers" : [
+        682,
+        683
+      ]
+    },
+    "org.tron.plugins.DbLite.simpleEncode:(Ljava/lang/String;)[B" : {
+      "completeTestCount" : 0,
+      "incompleteTestCount" : 0,
+      "perMethodTestability" : "T003",
+      "perMethodOutcome" : "T003",
+      "lineNumbers" : [
+        447,
+        448,
+        449,
+        450,
+        451,
+        452
+      ]
+    },
+    "org.tron.plugins.DbLite.split:(Ljava/lang/String;Ljava/lang/String;Ljava/util/List;)V" : {
+      "completeTestCount" : 0,
+      "incompleteTestCount" : 0,
+      "perMethodTestability" : "T003",
+      "perMethodOutcome" : "T003",
+      "lineNumbers" : [
+        276,
+        277,
+        278,
+        279,
+        281,
+        282,
+        283,
+        286,
+        287,
+        289,
+        290
+      ]
+    },
+    "org.tron.plugins.DbLite.trimExtraHistory:(Ljava/lang/String;Lorg/tron/plugins/DbLite$BlockNumInfo;)V" : {
+      "completeTestCount" : 0,
+      "incompleteTestCount" : 0,
+      "perMethodTestability" : "T003",
+      "perMethodOutcome" : "T003",
+      "lineNumbers" : [
+        510,
+        511,
+        512,
+        513,
+        514,
+        515,
+        516,
+        518,
+        519,
+        520,
+        521,
+        522,
+        523,
+        524,
+        527,
+        528,
+        529,
+        527,
+        529,
+        547
+      ]
+    },
+    "org.tron.plugins.DbMove$ConfigConverter.<init>:()V" : {
+      "completeTestCount" : 0,
+      "incompleteTestCount" : 0,
+      "perMethodTestability" : "T000",
+      "perMethodOutcome" : "R000",
+      "warnings" : {
+        "F009" : 1
+      },
+      "lineNumbers" : [
+        183,
+        180,
+        184
+      ]
+    },
+    "org.tron.plugins.DbMove$ConfigConverter.convert:(Ljava/lang/String;)Lcom/typesafe/config/Config;" : {
+      "completeTestCount" : 1,
+      "incompleteTestCount" : 0,
+      "perMethodTestability" : "T000",
+      "perMethodOutcome" : "R000",
+      "perTestOutcome" : {
+        "R000" : 1
+      },
+      "lineNumbers" : [
+        187,
+        188,
+        190,
+        191,
+        192,
+        193,
+        194,
+        195,
+        196,
+        198,
+        199,
+        201,
+        202,
+        203,
+        205,
+        206,
+        208,
+        209,
+        210,
+        211,
+        212,
+        213,
+        212,
+        213,
+        210,
+        214,
+        215,
+        218,
+        219,
+        220,
+        222,
+        224
+      ]
+    },
+    "org.tron.plugins.DbMove$ConfigConverter.lambda$convert$0:(Lcom/typesafe/config/Config;)Z" : {
+      "completeTestCount" : 0,
+      "incompleteTestCount" : 0,
+      "perMethodTestability" : "T012",
+      "perMethodOutcome" : "T012",
+      "lineNumbers" : [
+        202
+      ]
+    },
+    "org.tron.plugins.DbMove$PathConverter.<init>:()V" : {
+      "completeTestCount" : 0,
+      "incompleteTestCount" : 0,
+      "perMethodTestability" : "T005",
+      "perMethodOutcome" : "R002",
+      "lineNumbers" : [
+        230,
+        231
+      ]
+    },
+    "org.tron.plugins.DbMove$PathConverter.convert:(Ljava/lang/String;)Ljava/nio/file/Path;" : {
+      "completeTestCount" : 1,
+      "incompleteTestCount" : 0,
+      "perMethodTestability" : "T000",
+      "perMethodOutcome" : "R000",
+      "perTestOutcome" : {
+        "R000" : 1
+      },
+      "lineNumbers" : [
+        234,
+        235,
+        237,
+        238,
+        239,
+        241
+      ]
+    },
+    "org.tron.plugins.DbMove$Property.<init>:(Ljava/lang/String;Ljava/nio/file/Path;Ljava/nio/file/Path;)V" : {
+      "completeTestCount" : 4,
+      "incompleteTestCount" : 0,
+      "perMethodTestability" : "T000",
+      "perMethodOutcome" : "R000",
+      "perTestOutcome" : {
+        "R000" : 4
+      },
+      "lineNumbers" : [
+        157,
+        158,
+        159,
+        160,
+        161,
+        163,
+        164,
+        166,
+        167,
+        169,
+        170,
+        171,
+        173,
+        174,
+        176
+      ]
+    },
+    "org.tron.plugins.DbMove$Property.access$000:(Lorg/tron/plugins/DbMove$Property;)Ljava/nio/file/Path;" : {
+      "completeTestCount" : 0,
+      "incompleteTestCount" : 0,
+      "perMethodTestability" : "T012",
+      "perMethodOutcome" : "T012",
+      "lineNumbers" : [
+        151
+      ]
+    },
+    "org.tron.plugins.DbMove$Property.access$100:(Lorg/tron/plugins/DbMove$Property;)Ljava/lang/String;" : {
+      "completeTestCount" : 0,
+      "incompleteTestCount" : 0,
+      "perMethodTestability" : "T012",
+      "perMethodOutcome" : "T012",
+      "lineNumbers" : [
+        151
+      ]
+    },
+    "org.tron.plugins.DbMove.<clinit>:()V" : {
+      "completeTestCount" : 0,
+      "incompleteTestCount" : 0,
+      "perMethodTestability" : "T012",
+      "perMethodOutcome" : "T012",
+      "lineNumbers" : [
+        24
+      ]
+    },
+    "org.tron.plugins.DbMove.<init>:()V" : {
+      "completeTestCount" : 1,
+      "incompleteTestCount" : 0,
+      "perMethodTestability" : "T005",
+      "perMethodOutcome" : "R000",
+      "perTestOutcome" : {
+        "R000" : 1
+      },
+      "lineNumbers" : [
+        27
+      ]
+    },
+    "org.tron.plugins.DbMove.call:()Ljava/lang/Integer;" : {
+      "completeTestCount" : 0,
+      "incompleteTestCount" : 0,
+      "perMethodTestability" : "T000",
+      "perMethodOutcome" : "R013",
+      "lineNumbers" : [
+        56,
+        57,
+        58,
+        59,
+        62,
+        63,
+        64,
+        65,
+        66,
+        68,
+        69,
+        71,
+        72,
+        73,
+        75,
+        76,
+        77,
+        79,
+        80,
+        89,
+        90,
+        92,
+        93,
+        94,
+        96,
+        97,
+        105,
+        107,
+        108,
+        109,
+        111,
+        112,
+        114,
+        115,
+        116,
+        118
+      ]
+    },
+    "org.tron.plugins.DbMove.lambda$call$0:(Lcom/typesafe/config/Config;)Z" : {
+      "completeTestCount" : 0,
+      "incompleteTestCount" : 0,
+      "perMethodTestability" : "T012",
+      "perMethodOutcome" : "T012",
+      "lineNumbers" : [
+        72
+      ]
+    },
+    "org.tron.plugins.DbMove.lambda$call$1:(Ljava/lang/String;Lcom/typesafe/config/Config;)Lorg/tron/plugins/DbMove$Property;" : {
+      "completeTestCount" : 0,
+      "incompleteTestCount" : 0,
+      "perMethodTestability" : "T012",
+      "perMethodOutcome" : "T012",
+      "lineNumbers" : [
+        82,
+        83,
+        84,
+        82,
+        85,
+        86,
+        88
+      ]
+    },
+    "org.tron.plugins.DbMove.lambda$call$2:(Lorg/tron/plugins/DbMove$Property;)Z" : {
+      "completeTestCount" : 0,
+      "incompleteTestCount" : 0,
+      "perMethodTestability" : "T012",
+      "perMethodOutcome" : "T012",
+      "lineNumbers" : [
+        90
+      ]
+    },
+    "org.tron.plugins.DbMove.lambda$call$3:(Lorg/tron/plugins/DbMove$Property;)Z" : {
+      "completeTestCount" : 0,
+      "incompleteTestCount" : 0,
+      "perMethodTestability" : "T012",
+      "perMethodOutcome" : "T012",
+      "lineNumbers" : [
+        98,
+        99,
+        101,
+        103
+      ]
+    },
+    "org.tron.plugins.DbMove.lambda$run$4:(Lorg/tron/plugins/DbMove$Property;Ljava/lang/String;)V" : {
+      "completeTestCount" : 0,
+      "incompleteTestCount" : 0,
+      "perMethodTestability" : "T012",
+      "perMethodOutcome" : "T012",
+      "lineNumbers" : [
+        125,
+        126,
+        128,
+        132,
+        130,
+        131,
+        133
+      ]
+    },
+    "org.tron.plugins.DbMove.printNotExist:()V" : {
+      "completeTestCount" : 0,
+      "incompleteTestCount" : 0,
+      "perMethodTestability" : "T003",
+      "perMethodOutcome" : "T003",
+      "lineNumbers" : [
+        147,
+        148
+      ]
+    },
+    "org.tron.plugins.DbMove.run:(Lorg/tron/plugins/DbMove$Property;)V" : {
+      "completeTestCount" : 0,
+      "incompleteTestCount" : 0,
+      "perMethodTestability" : "T003",
+      "perMethodOutcome" : "T003",
+      "lineNumbers" : [
+        122,
+        123,
+        124,
+        123,
+        124,
+        135,
+        136,
+        140,
+        138,
+        139,
+        140,
+        142,
+        144
+      ]
+    },
+    "org.tron.plugins.DbRoot$Ret.<init>:()V" : {
+      "completeTestCount" : 0,
+      "incompleteTestCount" : 0,
+      "perMethodTestability" : "T003",
+      "perMethodOutcome" : "T003",
+      "lineNumbers" : [
+        117
+      ]
+    },
+    "org.tron.plugins.DbRoot$Ret.<init>:(Lorg/tron/plugins/DbRoot$1;)V" : {
+      "completeTestCount" : 0,
+      "incompleteTestCount" : 0,
+      "perMethodTestability" : "T012",
+      "perMethodOutcome" : "T012",
+      "lineNumbers" : [
+        117
+      ]
+    },
+    "org.tron.plugins.DbRoot$Ret.access$100:(Lorg/tron/plugins/DbRoot$Ret;)I" : {
+      "completeTestCount" : 0,
+      "incompleteTestCount" : 0,
+      "perMethodTestability" : "T012",
+      "perMethodOutcome" : "T012",
+      "lineNumbers" : [
+        117
+      ]
+    },
+    "org.tron.plugins.DbRoot$Ret.access$102:(Lorg/tron/plugins/DbRoot$Ret;I)I" : {
+      "completeTestCount" : 0,
+      "incompleteTestCount" : 0,
+      "perMethodTestability" : "T012",
+      "perMethodOutcome" : "T012",
+      "lineNumbers" : [
+        117
+      ]
+    },
+    "org.tron.plugins.DbRoot$Ret.access$200:(Lorg/tron/plugins/DbRoot$Ret;)Ljava/lang/String;" : {
+      "completeTestCount" : 0,
+      "incompleteTestCount" : 0,
+      "perMethodTestability" : "T012",
+      "perMethodOutcome" : "T012",
+      "lineNumbers" : [
+        117
+      ]
+    },
+    "org.tron.plugins.DbRoot$Ret.access$202:(Lorg/tron/plugins/DbRoot$Ret;Ljava/lang/String;)Ljava/lang/String;" : {
+      "completeTestCount" : 0,
+      "incompleteTestCount" : 0,
+      "perMethodTestability" : "T012",
+      "perMethodOutcome" : "T012",
+      "lineNumbers" : [
+        117
+      ]
+    },
+    "org.tron.plugins.DbRoot.<clinit>:()V" : {
+      "completeTestCount" : 0,
+      "incompleteTestCount" : 0,
+      "perMethodTestability" : "T012",
+      "perMethodOutcome" : "T012",
+      "lineNumbers" : [
+        23
+      ]
+    },
+    "org.tron.plugins.DbRoot.<init>:()V" : {
+      "completeTestCount" : 1,
+      "incompleteTestCount" : 0,
+      "perMethodTestability" : "T005",
+      "perMethodOutcome" : "R000",
+      "perTestOutcome" : {
+        "R000" : 1
+      },
+      "lineNumbers" : [
+        30
+      ]
+    },
+    "org.tron.plugins.DbRoot.calcMerkleRoot:(Ljava/lang/String;)Lorg/tron/plugins/DbRoot$Ret;" : {
+      "completeTestCount" : 0,
+      "incompleteTestCount" : 0,
+      "perMethodTestability" : "T003",
+      "perMethodOutcome" : "T003",
+      "lineNumbers" : [
+        83,
+        84,
+        85,
+        86,
+        87,
+        88,
+        89,
+        90,
+        91,
+        92,
+        93,
+        94,
+        84,
+        94,
+        99,
+        94,
+        95,
+        96,
+        97,
+        98,
+        97,
+        100
+      ]
+    },
+    "org.tron.plugins.DbRoot.call:()Ljava/lang/Integer;" : {
+      "completeTestCount" : 0,
+      "incompleteTestCount" : 0,
+      "perMethodTestability" : "T000",
+      "perMethodOutcome" : "R013",
+      "lineNumbers" : [
+        48,
+        49,
+        50,
+        52,
+        53,
+        54,
+        55,
+        54,
+        56,
+        60,
+        61,
+        64,
+        65,
+        66,
+        67,
+        66,
+        68,
+        70,
+        71,
+        72,
+        73,
+        74,
+        75,
+        76,
+        75,
+        78,
+        79
+      ]
+    },
+    "org.tron.plugins.DbRoot.getHash:(Ljava/util/Map$Entry;)Lorg/tron/plugins/utils/Sha256Hash;" : {
+      "completeTestCount" : 0,
+      "incompleteTestCount" : 0,
+      "perMethodTestability" : "T003",
+      "perMethodOutcome" : "T003",
+      "lineNumbers" : [
+        104,
+        105,
+        104
+      ]
+    },
+    "org.tron.plugins.DbRoot.lambda$call$0:(Ljava/lang/String;)Z" : {
+      "completeTestCount" : 0,
+      "incompleteTestCount" : 0,
+      "perMethodTestability" : "T012",
+      "perMethodOutcome" : "T012",
+      "lineNumbers" : [
+        61
+      ]
+    },
+    "org.tron.plugins.DbRoot.lambda$call$1:(Lorg/tron/plugins/DbRoot$Ret;)Z" : {
+      "completeTestCount" : 0,
+      "incompleteTestCount" : 0,
+      "perMethodTestability" : "T012",
+      "perMethodOutcome" : "T012",
+      "lineNumbers" : [
+        73
+      ]
+    },
+    "org.tron.plugins.DbRoot.printInfo:(Lorg/tron/plugins/DbRoot$Ret;)V" : {
+      "completeTestCount" : 0,
+      "incompleteTestCount" : 0,
+      "perMethodTestability" : "T003",
+      "perMethodOutcome" : "T003",
+      "lineNumbers" : [
+        109,
+        110,
+        112,
+        113,
+        112,
+        115
+      ]
+    },
+    "org.tron.plugins.Toolkit.<init>:()V" : {
+      "completeTestCount" : 0,
+      "incompleteTestCount" : 0,
+      "perMethodTestability" : "T005",
+      "perMethodOutcome" : "R002",
+      "lineNumbers" : [
+        7
+      ]
+    },
+    "org.tron.plugins.Toolkit.call:()Ljava/lang/Integer;" : {
+      "completeTestCount" : 1,
+      "incompleteTestCount" : 0,
+      "perMethodTestability" : "T000",
+      "perMethodOutcome" : "R000",
+      "perTestOutcome" : {
+        "R000" : 1
+      },
+      "lineNumbers" : [
+        22
+      ]
+    },
+    "org.tron.plugins.Toolkit.main:([Ljava/lang/String;)V" : {
+      "completeTestCount" : 0,
+      "incompleteTestCount" : 0,
+      "perMethodTestability" : "T006",
+      "perMethodOutcome" : "T006",
+      "lineNumbers" : [
+        11,
+        12,
+        13,
+        15,
+        16,
+        18
+      ]
+    },
+    "org.tron.plugins.comparator.MarketOrderPriceComparatorForLevelDB.<init>:()V" : {
+      "completeTestCount" : 0,
+      "incompleteTestCount" : 0,
+      "perMethodTestability" : "T005",
+      "perMethodOutcome" : "R002",
+      "lineNumbers" : [
+        6
+      ]
+    },
+    "org.tron.plugins.comparator.MarketOrderPriceComparatorForLevelDB.compare:(Ljava/lang/Object;Ljava/lang/Object;)I" : {
+      "completeTestCount" : 0,
+      "incompleteTestCount" : 0,
+      "perMethodTestability" : "T012",
+      "perMethodOutcome" : "T012",
+      "lineNumbers" : [
+        6
+      ]
+    },
+    "org.tron.plugins.comparator.MarketOrderPriceComparatorForLevelDB.compare:([B[B)I" : {
+      "completeTestCount" : 0,
+      "incompleteTestCount" : 0,
+      "perMethodTestability" : "T000",
+      "perMethodOutcome" : "R013",
+      "lineNumbers" : [
+        25
+      ]
+    },
+    "org.tron.plugins.comparator.MarketOrderPriceComparatorForLevelDB.findShortSuccessor:([B)[B" : {
+      "completeTestCount" : 1,
+      "incompleteTestCount" : 0,
+      "perMethodTestability" : "T000",
+      "perMethodOutcome" : "R000",
+      "perTestOutcome" : {
+        "R000" : 1
+      },
+      "lineNumbers" : [
+        20
+      ]
+    },
+    "org.tron.plugins.comparator.MarketOrderPriceComparatorForLevelDB.findShortestSeparator:([B[B)[B" : {
+      "completeTestCount" : 1,
+      "incompleteTestCount" : 0,
+      "perMethodTestability" : "T000",
+      "perMethodOutcome" : "R000",
+      "perTestOutcome" : {
+        "R000" : 1
+      },
+      "lineNumbers" : [
+        15
+      ]
+    },
+    "org.tron.plugins.comparator.MarketOrderPriceComparatorForLevelDB.name:()Ljava/lang/String;" : {
+      "completeTestCount" : 1,
+      "incompleteTestCount" : 0,
+      "perMethodTestability" : "T000",
+      "perMethodOutcome" : "R000",
+      "perTestOutcome" : {
+        "R000" : 1
+      },
+      "lineNumbers" : [
+        10
+      ]
+    },
+    "org.tron.plugins.comparator.MarketOrderPriceComparatorForRockDB.<init>:(Lorg/rocksdb/ComparatorOptions;)V" : {
+      "completeTestCount" : 0,
+      "incompleteTestCount" : 0,
+      "perMethodTestability" : "T000",
+      "perMethodOutcome" : "R034",
+      "lineNumbers" : [
+        11,
+        12
+      ]
+    },
+    "org.tron.plugins.comparator.MarketOrderPriceComparatorForRockDB.compare:(Lorg/rocksdb/AbstractSlice;Lorg/rocksdb/AbstractSlice;)I" : {
+      "completeTestCount" : 0,
+      "incompleteTestCount" : 0,
+      "perMethodTestability" : "T012",
+      "perMethodOutcome" : "T012",
+      "lineNumbers" : [
+        8
+      ]
+    },
+    "org.tron.plugins.comparator.MarketOrderPriceComparatorForRockDB.compare:(Lorg/rocksdb/DirectSlice;Lorg/rocksdb/DirectSlice;)I" : {
+      "completeTestCount" : 0,
+      "incompleteTestCount" : 0,
+      "perMethodTestability" : "T000",
+      "perMethodOutcome" : "R034",
+      "lineNumbers" : [
+        21
+      ]
+    },
+    "org.tron.plugins.comparator.MarketOrderPriceComparatorForRockDB.convertDataToBytes:(Lorg/rocksdb/DirectSlice;)[B" : {
+      "completeTestCount" : 0,
+      "incompleteTestCount" : 0,
+      "perMethodTestability" : "T000",
+      "perMethodOutcome" : "R034",
+      "lineNumbers" : [
+        28,
+        29,
+        31,
+        32,
+        31,
+        35
+      ]
+    },
+    "org.tron.plugins.comparator.MarketOrderPriceComparatorForRockDB.name:()Ljava/lang/String;" : {
+      "completeTestCount" : 0,
+      "incompleteTestCount" : 0,
+      "perMethodTestability" : "T000",
+      "perMethodOutcome" : "R034",
+      "lineNumbers" : [
+        16
+      ]
+    },
+    "org.tron.plugins.utils.ByteArray.<clinit>:()V" : {
+      "completeTestCount" : 0,
+      "incompleteTestCount" : 0,
+      "perMethodTestability" : "T012",
+      "perMethodOutcome" : "T012",
+      "lineNumbers" : [
+        12,
+        13
+      ]
+    },
+    "org.tron.plugins.utils.ByteArray.<init>:()V" : {
+      "completeTestCount" : 0,
+      "incompleteTestCount" : 0,
+      "perMethodTestability" : "T005",
+      "perMethodOutcome" : "T005",
+      "lineNumbers" : [
+        10
+      ]
+    },
+    "org.tron.plugins.utils.ByteArray.compareUnsigned:([B[B)I" : {
+      "completeTestCount" : 8,
+      "incompleteTestCount" : 0,
+      "perMethodTestability" : "T000",
+      "perMethodOutcome" : "R000",
+      "perTestOutcome" : {
+        "R000" : 8
+      },
+      "lineNumbers" : [
+        53,
+        54,
+        56,
+        57,
+        59,
+        60,
+        62,
+        63,
+        64,
+        65,
+        66,
+        67,
+        69,
+        70,
+        63,
+        73,
+        74,
+        76,
+        77,
+        79
+      ]
+    },
+    "org.tron.plugins.utils.ByteArray.fromHexString:(Ljava/lang/String;)[B" : {
+      "completeTestCount" : 3,
+      "incompleteTestCount" : 0,
+      "perMethodTestability" : "T000",
+      "perMethodOutcome" : "R000",
+      "perTestOutcome" : {
+        "R000" : 3
+      },
+      "lineNumbers" : [
+        90,
+        91,
+        93,
+        94,
+        96,
+        97,
+        99
+      ]
+    },
+    "org.tron.plugins.utils.ByteArray.fromInt:(I)[B" : {
+      "completeTestCount" : 1,
+      "incompleteTestCount" : 0,
+      "perMethodTestability" : "T000",
+      "perMethodOutcome" : "R000",
+      "perTestOutcome" : {
+        "R000" : 1
+      },
+      "lineNumbers" : [
+        42
+      ]
+    },
+    "org.tron.plugins.utils.ByteArray.fromLong:(J)[B" : {
+      "completeTestCount" : 1,
+      "incompleteTestCount" : 0,
+      "perMethodTestability" : "T000",
+      "perMethodOutcome" : "R000",
+      "perTestOutcome" : {
+        "R000" : 1
+      },
+      "lineNumbers" : [
+        31
+      ]
+    },
+    "org.tron.plugins.utils.ByteArray.fromString:(Ljava/lang/String;)[B" : {
+      "completeTestCount" : 3,
+      "incompleteTestCount" : 0,
+      "perMethodTestability" : "T000",
+      "perMethodOutcome" : "R000",
+      "perTestOutcome" : {
+        "R000" : 3
+      },
+      "lineNumbers" : [
+        20
+      ]
+    },
+    "org.tron.plugins.utils.ByteArray.toHexString:([B)Ljava/lang/String;" : {
+      "completeTestCount" : 3,
+      "incompleteTestCount" : 0,
+      "perMethodTestability" : "T000",
+      "perMethodOutcome" : "R000",
+      "perTestOutcome" : {
+        "R000" : 3
+      },
+      "lineNumbers" : [
+        83
+      ]
+    },
+    "org.tron.plugins.utils.ByteArray.toInt:([B)I" : {
+      "completeTestCount" : 3,
+      "incompleteTestCount" : 0,
+      "perMethodTestability" : "T000",
+      "perMethodOutcome" : "R000",
+      "perTestOutcome" : {
+        "R000" : 3
+      },
+      "lineNumbers" : [
+        49
+      ]
+    },
+    "org.tron.plugins.utils.ByteArray.toLong:([B)J" : {
+      "completeTestCount" : 3,
+      "incompleteTestCount" : 0,
+      "perMethodTestability" : "T000",
+      "perMethodOutcome" : "R000",
+      "perTestOutcome" : {
+        "R000" : 3
+      },
+      "lineNumbers" : [
+        38
+      ]
+    },
+    "org.tron.plugins.utils.ByteArray.toStr:([B)Ljava/lang/String;" : {
+      "completeTestCount" : 3,
+      "incompleteTestCount" : 0,
+      "perMethodTestability" : "T000",
+      "perMethodOutcome" : "R000",
+      "perTestOutcome" : {
+        "R000" : 3
+      },
+      "lineNumbers" : [
+        27
+      ]
+    },
+    "org.tron.plugins.utils.CryptoUitls.<init>:()V" : {
+      "completeTestCount" : 0,
+      "incompleteTestCount" : 0,
+      "perMethodTestability" : "T005",
+      "perMethodOutcome" : "T005",
+      "lineNumbers" : [
+        3
+      ]
+    },
+    "org.tron.plugins.utils.DBUtils$Operator.<clinit>:()V" : {
+      "completeTestCount" : 0,
+      "incompleteTestCount" : 0,
+      "perMethodTestability" : "T012",
+      "perMethodOutcome" : "T012",
+      "lineNumbers" : [
+        27,
+        28,
+        29,
+        30,
+        26
+      ]
+    },
+    "org.tron.plugins.utils.DBUtils$Operator.<init>:(Ljava/lang/String;IB)V" : {
+      "completeTestCount" : 0,
+      "incompleteTestCount" : 0,
+      "perMethodTestability" : "T003",
+      "perMethodOutcome" : "T003",
+      "lineNumbers" : [
+        35,
+        36,
+        37
+      ]
+    },
+    "org.tron.plugins.utils.DBUtils$Operator.getValue:()B" : {
+      "completeTestCount" : 1,
+      "incompleteTestCount" : 0,
+      "perMethodTestability" : "T001",
+      "perMethodOutcome" : "R000",
+      "perTestOutcome" : {
+        "R000" : 1
+      },
+      "lineNumbers" : [
+        32
+      ]
+    },
+    "org.tron.plugins.utils.DBUtils$Operator.valueOf:(B)Lorg/tron/plugins/utils/DBUtils$Operator;" : {
+      "completeTestCount" : 5,
+      "incompleteTestCount" : 0,
+      "perMethodTestability" : "T000",
+      "perMethodOutcome" : "R000",
+      "perTestOutcome" : {
+        "R000" : 5
+      },
+      "lineNumbers" : [
+        40,
+        42,
+        44,
+        46,
+        48,
+        50
+      ]
+    },
+    "org.tron.plugins.utils.DBUtils$Operator.valueOf:(Ljava/lang/String;)Lorg/tron/plugins/utils/DBUtils$Operator;" : {
+      "completeTestCount" : 0,
+      "incompleteTestCount" : 0,
+      "perMethodTestability" : "T012",
+      "perMethodOutcome" : "T012",
+      "lineNumbers" : [
+        26
+      ]
+    },
+    "org.tron.plugins.utils.DBUtils$Operator.values:()[Lorg/tron/plugins/utils/DBUtils$Operator;" : {
+      "completeTestCount" : 0,
+      "incompleteTestCount" : 0,
+      "perMethodTestability" : "T012",
+      "perMethodOutcome" : "T012",
+      "lineNumbers" : [
+        26
+      ]
+    },
+    "org.tron.plugins.utils.DBUtils.<init>:()V" : {
+      "completeTestCount" : 0,
+      "incompleteTestCount" : 0,
+      "perMethodTestability" : "T005",
+      "perMethodOutcome" : "T005",
+      "lineNumbers" : [
+        23
+      ]
+    },
+    "org.tron.plugins.utils.DBUtils.getTransactionId:(Lorg/tron/protos/Protocol$Transaction;)Lorg/tron/plugins/utils/Sha256Hash;" : {
+      "completeTestCount" : 0,
+      "incompleteTestCount" : 0,
+      "perMethodTestability" : "T000",
+      "perMethodOutcome" : "R013",
+      "lineNumbers" : [
+        150,
+        151,
+        150
+      ]
+    },
+    "org.tron.plugins.utils.DBUtils.newDefaultLevelDbOptions:()Lorg/iq80/leveldb/Options;" : {
+      "completeTestCount" : 1,
+      "incompleteTestCount" : 0,
+      "perMethodTestability" : "T000",
+      "perMethodOutcome" : "R000",
+      "perTestOutcome" : {
+        "R000" : 1
+      },
+      "lineNumbers" : [
+        77,
+        78,
+        79,
+        80,
+        81,
+        82,
+        83,
+        84,
+        85,
+        86
+      ]
+    },
+    "org.tron.plugins.utils.DBUtils.newDefaultRocksDbOptions:(Z)Lorg/rocksdb/Options;" : {
+      "completeTestCount" : 0,
+      "incompleteTestCount" : 0,
+      "perMethodTestability" : "T003",
+      "perMethodOutcome" : "T003",
+      "lineNumbers" : [
+        90,
+        91,
+        92,
+        93,
+        94,
+        95,
+        96,
+        97,
+        98,
+        99,
+        100,
+        102,
+        103,
+        104,
+        105,
+        106,
+        107,
+        108,
+        109,
+        111
+      ]
+    },
+    "org.tron.plugins.utils.DBUtils.newLevelDb:(Ljava/nio/file/Path;)Lorg/iq80/leveldb/DB;" : {
+      "completeTestCount" : 0,
+      "incompleteTestCount" : 0,
+      "perMethodTestability" : "T000",
+      "perMethodOutcome" : "R011",
+      "lineNumbers" : [
+        68,
+        69,
+        70,
+        71,
+        73
+      ]
+    },
+    "org.tron.plugins.utils.DBUtils.newRocksDb:(Ljava/nio/file/Path;)Lorg/rocksdb/RocksDB;" : {
+      "completeTestCount" : 0,
+      "incompleteTestCount" : 0,
+      "perMethodTestability" : "T000",
+      "perMethodOutcome" : "R011",
+      "lineNumbers" : [
+        115,
+        116,
+        117,
+        119,
+        120,
+        119,
+        115,
+        120
+      ]
+    },
+    "org.tron.plugins.utils.DBUtils.newRocksDbForBulkLoad:(Ljava/nio/file/Path;)Lorg/rocksdb/RocksDB;" : {
+      "completeTestCount" : 0,
+      "incompleteTestCount" : 0,
+      "perMethodTestability" : "T000",
+      "perMethodOutcome" : "R011",
+      "lineNumbers" : [
+        124,
+        125,
+        126,
+        128,
+        129,
+        128,
+        124,
+        129
+      ]
+    },
+    "org.tron.plugins.utils.DBUtils.newRocksDbReadOnly:(Ljava/nio/file/Path;)Lorg/rocksdb/RocksDB;" : {
+      "completeTestCount" : 0,
+      "incompleteTestCount" : 0,
+      "perMethodTestability" : "T000",
+      "perMethodOutcome" : "R011",
+      "lineNumbers" : [
+        134,
+        135,
+        136,
+        138,
+        139,
+        138,
+        134,
+        139
+      ]
+    },
+    "org.tron.plugins.utils.DBUtils.simpleDecode:([B)Ljava/lang/String;" : {
+      "completeTestCount" : 0,
+      "incompleteTestCount" : 0,
+      "perMethodTestability" : "T000",
+      "perMethodOutcome" : "R013",
+      "lineNumbers" : [
+        143,
+        144,
+        145,
+        146
+      ]
+    },
+    "org.tron.plugins.utils.FileUtils.<clinit>:()V" : {
+      "completeTestCount" : 0,
+      "incompleteTestCount" : 0,
+      "perMethodTestability" : "T012",
+      "perMethodOutcome" : "T012",
+      "lineNumbers" : [
+        25
+      ]
+    },
+    "org.tron.plugins.utils.FileUtils.<init>:()V" : {
+      "completeTestCount" : 0,
+      "incompleteTestCount" : 0,
+      "perMethodTestability" : "T005",
+      "perMethodOutcome" : "T005",
+      "lineNumbers" : [
+        26
+      ]
+    },
+    "org.tron.plugins.utils.FileUtils.copy:(Ljava/nio/file/Path;Ljava/nio/file/Path;)V" : {
+      "completeTestCount" : 3,
+      "incompleteTestCount" : 0,
+      "perMethodTestability" : "T000",
+      "perMethodOutcome" : "R000",
+      "perTestOutcome" : {
+        "R000" : 3
+      },
+      "lineNumbers" : [
+        176,
+        178,
+        181,
+        179,
+        180,
+        181,
+        183,
+        187,
+        185,
+        186,
+        188
+      ]
+    },
+    "org.tron.plugins.utils.FileUtils.copyDatabases:(Ljava/nio/file/Path;Ljava/nio/file/Path;Ljava/util/List;)V" : {
+      "completeTestCount" : 0,
+      "incompleteTestCount" : 0,
+      "perMethodTestability" : "T000",
+      "perMethodOutcome" : "R013",
+      "lineNumbers" : [
+        141,
+        153
+      ]
+    },
+    "org.tron.plugins.utils.FileUtils.copyDir:(Ljava/nio/file/Path;Ljava/nio/file/Path;Ljava/lang/String;)V" : {
+      "completeTestCount" : 0,
+      "incompleteTestCount" : 0,
+      "perMethodTestability" : "T000",
+      "perMethodOutcome" : "R013",
+      "lineNumbers" : [
+        156,
+        158,
+        159,
+        160,
+        162,
+        163,
+        162,
+        169,
+        165,
+        166,
+        167,
+        166,
+        168,
+        171
+      ]
+    },
+    "org.tron.plugins.utils.FileUtils.createDirIfNotExists:(Ljava/lang/String;)Z" : {
+      "completeTestCount" : 0,
+      "incompleteTestCount" : 0,
+      "perMethodTestability" : "T000",
+      "perMethodOutcome" : "R011",
+      "lineNumbers" : [
+        99,
+        100,
+        101,
+        103
+      ]
+    },
+    "org.tron.plugins.utils.FileUtils.createFileIfNotExists:(Ljava/lang/String;)Z" : {
+      "completeTestCount" : 1,
+      "incompleteTestCount" : 0,
+      "perMethodTestability" : "T000",
+      "perMethodOutcome" : "R000",
+      "perTestOutcome" : {
+        "R000" : 1
+      },
+      "lineNumbers" : [
+        87,
+        88,
+        90,
+        93,
+        91,
+        92,
+        95
+      ]
+    },
+    "org.tron.plugins.utils.FileUtils.deleteDir:(Ljava/io/File;)Z" : {
+      "completeTestCount" : 1,
+      "incompleteTestCount" : 0,
+      "perMethodTestability" : "T000",
+      "perMethodOutcome" : "R000",
+      "perTestOutcome" : {
+        "R000" : 1
+      },
+      "lineNumbers" : [
+        74,
+        75,
+        76,
+        77,
+        78,
+        79,
+        76,
+        83
+      ]
+    },
+    "org.tron.plugins.utils.FileUtils.isExists:(Ljava/lang/String;)Z" : {
+      "completeTestCount" : 1,
+      "incompleteTestCount" : 0,
+      "perMethodTestability" : "T000",
+      "perMethodOutcome" : "R000",
+      "perTestOutcome" : {
+        "R000" : 1
+      },
+      "lineNumbers" : [
+        107,
+        108
+      ]
+    },
+    "org.tron.plugins.utils.FileUtils.isLevelDBEngine:(Ljava/nio/file/Path;)Z" : {
+      "completeTestCount" : 1,
+      "incompleteTestCount" : 0,
+      "perMethodTestability" : "T000",
+      "perMethodOutcome" : "R000",
+      "perTestOutcome" : {
+        "R000" : 1
+      },
+      "lineNumbers" : [
+        29,
+        30,
+        31,
+        32,
+        33,
+        35,
+        36
+      ]
+    },
+    "org.tron.plugins.utils.FileUtils.isSymbolicLink:(Ljava/io/File;)Z" : {
+      "completeTestCount" : 1,
+      "incompleteTestCount" : 0,
+      "perMethodTestability" : "T000",
+      "perMethodOutcome" : "R000",
+      "perTestOutcome" : {
+        "R000" : 1
+      },
+      "lineNumbers" : [
+        112,
+        113,
+        117,
+        118,
+        120,
+        121,
+        123
+      ]
+    },
+    "org.tron.plugins.utils.FileUtils.lambda$copyDatabases$1:(Ljava/nio/file/Path;Ljava/nio/file/Path;Ljava/lang/String;)V" : {
+      "completeTestCount" : 0,
+      "incompleteTestCount" : 0,
+      "perMethodTestability" : "T012",
+      "perMethodOutcome" : "T012",
+      "lineNumbers" : [
+        142,
+        144,
+        145,
+        150,
+        146,
+        147,
+        148,
+        147,
+        149,
+        152
+      ]
+    },
+    "org.tron.plugins.utils.FileUtils.lambda$copyDir$2:(Ljava/nio/file/Path;Ljava/nio/file/Path;Ljava/nio/file/Path;)V" : {
+      "completeTestCount" : 0,
+      "incompleteTestCount" : 0,
+      "perMethodTestability" : "T012",
+      "perMethodOutcome" : "T012",
+      "lineNumbers" : [
+        160
+      ]
+    },
+    "org.tron.plugins.utils.FileUtils.lambda$null$0:(Ljava/nio/file/Path;Ljava/nio/file/Path;Ljava/nio/file/Path;)V" : {
+      "completeTestCount" : 0,
+      "incompleteTestCount" : 0,
+      "perMethodTestability" : "T012",
+      "perMethodOutcome" : "T012",
+      "lineNumbers" : [
+        145
+      ]
+    },
+    "org.tron.plugins.utils.FileUtils.readProperty:(Ljava/lang/String;Ljava/lang/String;)Ljava/lang/String;" : {
+      "completeTestCount" : 3,
+      "incompleteTestCount" : 0,
+      "perMethodTestability" : "T000",
+      "perMethodOutcome" : "R000",
+      "perTestOutcome" : {
+        "R000" : 3
+      },
+      "lineNumbers" : [
+        40,
+        41,
+        40,
+        42,
+        43,
+        44,
+        46,
+        44,
+        40,
+        46,
+        40,
+        46,
+        47,
+        48
+      ]
+    },
+    "org.tron.plugins.utils.FileUtils.writeProperty:(Ljava/lang/String;Ljava/lang/String;Ljava/lang/String;)Z" : {
+      "completeTestCount" : 0,
+      "incompleteTestCount" : 0,
+      "perMethodTestability" : "T000",
+      "perMethodOutcome" : "W002",
+      "warnings" : {
+        "W002" : 1
+      },
+      "lineNumbers" : [
+        53,
+        54,
+        53,
+        55,
+        53,
+        56,
+        53,
+        58,
+        59,
+        60,
+        61,
+        62,
+        53,
+        62,
+        53,
+        62,
+        53,
+        62,
+        53,
+        62,
+        65,
+        62,
+        63,
+        64,
+        66
+      ]
+    },
+    "org.tron.plugins.utils.MarketUtils.<clinit>:()V" : {
+      "completeTestCount" : 0,
+      "incompleteTestCount" : 0,
+      "perMethodTestability" : "T012",
+      "perMethodOutcome" : "T012",
+      "lineNumbers" : [
+        8,
+        9,
+        8
+      ]
+    },
+    "org.tron.plugins.utils.MarketUtils.<init>:()V" : {
+      "completeTestCount" : 0,
+      "incompleteTestCount" : 0,
+      "perMethodTestability" : "T005",
+      "perMethodOutcome" : "T005",
+      "lineNumbers" : [
+        6
+      ]
+    },
+    "org.tron.plugins.utils.MarketUtils.calGCD:(JJ)J" : {
+      "completeTestCount" : 0,
+      "incompleteTestCount" : 0,
+      "perMethodTestability" : "T003",
+      "perMethodOutcome" : "T003",
+      "lineNumbers" : [
+        46,
+        47,
+        49
+      ]
+    },
+    "org.tron.plugins.utils.MarketUtils.comparePrice:(JJJJ)I" : {
+      "completeTestCount" : 6,
+      "incompleteTestCount" : 0,
+      "perMethodTestability" : "T000",
+      "perMethodOutcome" : "R000",
+      "perTestOutcome" : {
+        "R000" : 6
+      },
+      "lineNumbers" : [
+        133,
+        134,
+        133,
+        136,
+        140,
+        141,
+        142,
+        143,
+        145,
+        146,
+        145
+      ]
+    },
+    "org.tron.plugins.utils.MarketUtils.comparePriceKey:([B[B)I" : {
+      "completeTestCount" : 0,
+      "incompleteTestCount" : 0,
+      "perMethodTestability" : "T000",
+      "perMethodOutcome" : "R013",
+      "lineNumbers" : [
+        73,
+        74,
+        76,
+        77,
+        79,
+        80,
+        81,
+        85,
+        86,
+        88,
+        89,
+        91,
+        93,
+        95,
+        98,
+        100,
+        103,
+        104,
+        105,
+        106,
+        108,
+        110,
+        113,
+        114,
+        117,
+        118,
+        121
+      ]
+    },
+    "org.tron.plugins.utils.MarketUtils.createPairPriceKey:([B[BJJ)[B" : {
+      "completeTestCount" : 3,
+      "incompleteTestCount" : 0,
+      "perMethodTestability" : "T000",
+      "perMethodOutcome" : "R000",
+      "perTestOutcome" : {
+        "R000" : 3
+      },
+      "lineNumbers" : [
+        25,
+        26,
+        27,
+        28,
+        30,
+        31,
+        34
+      ]
+    },
+    "org.tron.plugins.utils.MarketUtils.doCreatePairPriceKey:([B[B[B[B)[B" : {
+      "completeTestCount" : 0,
+      "incompleteTestCount" : 0,
+      "perMethodTestability" : "T003",
+      "perMethodOutcome" : "T003",
+      "lineNumbers" : [
+        55,
+        58,
+        59,
+        60,
+        63,
+        67
+      ]
+    },
+    "org.tron.plugins.utils.MarketUtils.findGCD:(JJ)J" : {
+      "completeTestCount" : 5,
+      "incompleteTestCount" : 0,
+      "perMethodTestability" : "T000",
+      "perMethodOutcome" : "R000",
+      "perTestOutcome" : {
+        "R000" : 5
+      },
+      "lineNumbers" : [
+        39,
+        40,
+        42
+      ]
+    },
+    "org.tron.plugins.utils.MerkleRoot$Leaf.<init>:()V" : {
+      "completeTestCount" : 0,
+      "incompleteTestCount" : 0,
+      "perMethodTestability" : "T003",
+      "perMethodOutcome" : "T003",
+      "lineNumbers" : [
+        64
+      ]
+    },
+    "org.tron.plugins.utils.MerkleRoot$Leaf.<init>:(Lorg/tron/plugins/utils/MerkleRoot$1;)V" : {
+      "completeTestCount" : 0,
+      "incompleteTestCount" : 0,
+      "perMethodTestability" : "T012",
+      "perMethodOutcome" : "T012",
+      "lineNumbers" : [
+        64
+      ]
+    },
+    "org.tron.plugins.utils.MerkleRoot$Leaf.access$000:(Lorg/tron/plugins/utils/MerkleRoot$Leaf;)Lorg/tron/plugins/utils/Sha256Hash;" : {
+      "completeTestCount" : 0,
+      "incompleteTestCount" : 0,
+      "perMethodTestability" : "T012",
+      "perMethodOutcome" : "T012",
+      "lineNumbers" : [
+        64
+      ]
+    },
+    "org.tron.plugins.utils.MerkleRoot$Leaf.access$002:(Lorg/tron/plugins/utils/MerkleRoot$Leaf;Lorg/tron/plugins/utils/Sha256Hash;)Lorg/tron/plugins/utils/Sha256Hash;" : {
+      "completeTestCount" : 0,
+      "incompleteTestCount" : 0,
+      "perMethodTestability" : "T012",
+      "perMethodOutcome" : "T012",
+      "lineNumbers" : [
+        64
+      ]
+    },
+    "org.tron.plugins.utils.MerkleRoot$Leaf.getHash:()Lorg/tron/plugins/utils/Sha256Hash;" : {
+      "completeTestCount" : 0,
+      "incompleteTestCount" : 0,
+      "perMethodTestability" : "T003",
+      "perMethodOutcome" : "T003",
+      "lineNumbers" : [
+        66
+      ]
+    },
+    "org.tron.plugins.utils.MerkleRoot.<init>:()V" : {
+      "completeTestCount" : 0,
+      "incompleteTestCount" : 0,
+      "perMethodTestability" : "T003",
+      "perMethodOutcome" : "T003",
+      "lineNumbers" : [
+        10,
+        12
+      ]
+    },
+    "org.tron.plugins.utils.MerkleRoot.computeHash:(Lorg/tron/plugins/utils/Sha256Hash;Lorg/tron/plugins/utils/Sha256Hash;)Lorg/tron/plugins/utils/Sha256Hash;" : {
+      "completeTestCount" : 0,
+      "incompleteTestCount" : 0,
+      "perMethodTestability" : "T003",
+      "perMethodOutcome" : "T003",
+      "lineNumbers" : [
+        59,
+        60,
+        59
+      ]
+    },
+    "org.tron.plugins.utils.MerkleRoot.createLeaf:(Lorg/tron/plugins/utils/MerkleRoot$Leaf;Lorg/tron/plugins/utils/MerkleRoot$Leaf;)Lorg/tron/plugins/utils/MerkleRoot$Leaf;" : {
+      "completeTestCount" : 0,
+      "incompleteTestCount" : 0,
+      "perMethodTestability" : "T003",
+      "perMethodOutcome" : "T003",
+      "lineNumbers" : [
+        47,
+        48,
+        49
+      ]
+    },
+    "org.tron.plugins.utils.MerkleRoot.createLeaf:(Lorg/tron/plugins/utils/Sha256Hash;)Lorg/tron/plugins/utils/MerkleRoot$Leaf;" : {
+      "completeTestCount" : 0,
+      "incompleteTestCount" : 0,
+      "perMethodTestability" : "T003",
+      "perMethodOutcome" : "T003",
+      "lineNumbers" : [
+        53,
+        54,
+        55
+      ]
+    },
+    "org.tron.plugins.utils.MerkleRoot.createLeaves:(Ljava/util/List;)Ljava/util/List;" : {
+      "completeTestCount" : 0,
+      "incompleteTestCount" : 0,
+      "perMethodTestability" : "T003",
+      "perMethodOutcome" : "T003",
+      "lineNumbers" : [
+        35,
+        36,
+        37,
+        38,
+        39,
+        40,
+        43,
+        37
+      ]
+    },
+    "org.tron.plugins.utils.MerkleRoot.createParentLeaves:(Ljava/util/List;)Ljava/util/List;" : {
+      "completeTestCount" : 0,
+      "incompleteTestCount" : 0,
+      "perMethodTestability" : "T003",
+      "perMethodOutcome" : "T003",
+      "lineNumbers" : [
+        23,
+        24,
+        25,
+        26,
+        27,
+        28,
+        31,
+        25
+      ]
+    },
+    "org.tron.plugins.utils.MerkleRoot.lambda$createLeaves$3:(II)I" : {
+      "completeTestCount" : 0,
+      "incompleteTestCount" : 0,
+      "perMethodTestability" : "T012",
+      "perMethodOutcome" : "T012",
+      "lineNumbers" : [
+        37
+      ]
+    },
+    "org.tron.plugins.utils.MerkleRoot.lambda$createLeaves$4:(II)Z" : {
+      "completeTestCount" : 0,
+      "incompleteTestCount" : 0,
+      "perMethodTestability" : "T012",
+      "perMethodOutcome" : "T012",
+      "lineNumbers" : [
+        39
+      ]
+    },
+    "org.tron.plugins.utils.MerkleRoot.lambda$createLeaves$5:(ILjava/util/List;I)Lorg/tron/plugins/utils/MerkleRoot$Leaf;" : {
+      "completeTestCount" : 0,
+      "incompleteTestCount" : 0,
+      "perMethodTestability" : "T012",
+      "perMethodOutcome" : "T012",
+      "lineNumbers" : [
+        41,
+        42
+      ]
+    },
+    "org.tron.plugins.utils.MerkleRoot.lambda$createParentLeaves$0:(II)I" : {
+      "completeTestCount" : 0,
+      "incompleteTestCount" : 0,
+      "perMethodTestability" : "T012",
+      "perMethodOutcome" : "T012",
+      "lineNumbers" : [
+        25
+      ]
+    },
+    "org.tron.plugins.utils.MerkleRoot.lambda$createParentLeaves$1:(II)Z" : {
+      "completeTestCount" : 0,
+      "incompleteTestCount" : 0,
+      "perMethodTestability" : "T012",
+      "perMethodOutcome" : "T012",
+      "lineNumbers" : [
+        27
+      ]
+    },
+    "org.tron.plugins.utils.MerkleRoot.lambda$createParentLeaves$2:(ILjava/util/List;I)Lorg/tron/plugins/utils/MerkleRoot$Leaf;" : {
+      "completeTestCount" : 0,
+      "incompleteTestCount" : 0,
+      "perMethodTestability" : "T012",
+      "perMethodOutcome" : "T012",
+      "lineNumbers" : [
+        29,
+        30
+      ]
+    },
+    "org.tron.plugins.utils.MerkleRoot.root:(Ljava/util/List;)Lorg/tron/plugins/utils/Sha256Hash;" : {
+      "completeTestCount" : 5,
+      "incompleteTestCount" : 0,
+      "perMethodTestability" : "T000",
+      "perMethodOutcome" : "R000",
+      "perTestOutcome" : {
+        "R000" : 5
+      },
+      "lineNumbers" : [
+        15,
+        16,
+        17,
+        19
+      ]
+    },
+    "org.tron.plugins.utils.Sha256Hash.<clinit>:()V" : {
+      "completeTestCount" : 0,
+      "incompleteTestCount" : 0,
+      "perMethodTestability" : "T012",
+      "perMethodOutcome" : "T012",
+      "lineNumbers" : [
+        43
+      ]
+    },
+    "org.tron.plugins.utils.Sha256Hash.<init>:([B)V" : {
+      "completeTestCount" : 0,
+      "incompleteTestCount" : 0,
+      "perMethodTestability" : "T000",
+      "perMethodOutcome" : "R013",
+      "lineNumbers" : [
+        50,
+        51,
+        52,
+        53
+      ]
+    },
+    "org.tron.plugins.utils.Sha256Hash.compareTo:(Ljava/lang/Object;)I" : {
+      "completeTestCount" : 0,
+      "incompleteTestCount" : 0,
+      "perMethodTestability" : "T012",
+      "perMethodOutcome" : "T012",
+      "lineNumbers" : [
+        40
+      ]
+    },
+    "org.tron.plugins.utils.Sha256Hash.compareTo:(Lorg/tron/plugins/utils/Sha256Hash;)I" : {
+      "completeTestCount" : 1,
+      "incompleteTestCount" : 0,
+      "perMethodTestability" : "T000",
+      "perMethodOutcome" : "R000",
+      "perTestOutcome" : {
+        "R000" : 1
+      },
+      "lineNumbers" : [
+        198,
+        199,
+        200,
+        201,
+        202,
+        204,
+        205,
+        198,
+        208
+      ]
+    },
+    "org.tron.plugins.utils.Sha256Hash.equals:(Ljava/lang/Object;)Z" : {
+      "completeTestCount" : 5,
+      "incompleteTestCount" : 0,
+      "perMethodTestability" : "T000",
+      "perMethodOutcome" : "R000",
+      "perTestOutcome" : {
+        "R000" : 5
+      },
+      "lineNumbers" : [
+        154,
+        155,
+        157,
+        158,
+        160
+      ]
+    },
+    "org.tron.plugins.utils.Sha256Hash.getByteString:()Lcom/google/protobuf/ByteString;" : {
+      "completeTestCount" : 1,
+      "incompleteTestCount" : 0,
+      "perMethodTestability" : "T000",
+      "perMethodOutcome" : "R000",
+      "perTestOutcome" : {
+        "R000" : 1
+      },
+      "lineNumbers" : [
+        192
+      ]
+    },
+    "org.tron.plugins.utils.Sha256Hash.getBytes:()[B" : {
+      "completeTestCount" : 0,
+      "incompleteTestCount" : 0,
+      "perMethodTestability" : "T001",
+      "perMethodOutcome" : "R081",
+      "lineNumbers" : [
+        185
+      ]
+    },
+    "org.tron.plugins.utils.Sha256Hash.hash:(Z[B)[B" : {
+      "completeTestCount" : 2,
+      "incompleteTestCount" : 0,
+      "perMethodTestability" : "T000",
+      "perMethodOutcome" : "R000",
+      "perTestOutcome" : {
+        "R000" : 2
+      },
+      "lineNumbers" : [
+        126
+      ]
+    },
+    "org.tron.plugins.utils.Sha256Hash.hash:(Z[BII)[B" : {
+      "completeTestCount" : 3,
+      "incompleteTestCount" : 0,
+      "perMethodTestability" : "T000",
+      "perMethodOutcome" : "R000",
+      "perTestOutcome" : {
+        "R000" : 3
+      },
+      "lineNumbers" : [
+        138,
+        139,
+        140,
+        141,
+        143,
+        144,
+        145,
+        146,
+        147
+      ]
+    },
+    "org.tron.plugins.utils.Sha256Hash.hashCode:()I" : {
+      "completeTestCount" : 5,
+      "incompleteTestCount" : 0,
+      "perMethodTestability" : "T000",
+      "perMethodOutcome" : "R000",
+      "perTestOutcome" : {
+        "R000" : 5
+      },
+      "lineNumbers" : [
+        176,
+        177,
+        176
+      ]
+    },
+    "org.tron.plugins.utils.Sha256Hash.newDigest:()Ljava/security/MessageDigest;" : {
+      "completeTestCount" : 1,
+      "incompleteTestCount" : 0,
+      "perMethodTestability" : "T000",
+      "perMethodOutcome" : "R000",
+      "perTestOutcome" : {
+        "R000" : 1
+      },
+      "lineNumbers" : [
+        103,
+        104,
+        105
+      ]
+    },
+    "org.tron.plugins.utils.Sha256Hash.newSM3Digest:()Lorg/bouncycastle/crypto/digests/SM3Digest;" : {
+      "completeTestCount" : 1,
+      "incompleteTestCount" : 0,
+      "perMethodTestability" : "T000",
+      "perMethodOutcome" : "R000",
+      "perTestOutcome" : {
+        "R000" : 1
+      },
+      "lineNumbers" : [
+        116
+      ]
+    },
+    "org.tron.plugins.utils.Sha256Hash.of:(ZLjava/io/File;)Lorg/tron/plugins/utils/Sha256Hash;" : {
+      "completeTestCount" : 0,
+      "incompleteTestCount" : 0,
+      "perMethodTestability" : "T000",
+      "perMethodOutcome" : "R013",
+      "lineNumbers" : [
+        89,
+        90,
+        91,
+        90,
+        89,
+        91
+      ]
+    },
+    "org.tron.plugins.utils.Sha256Hash.of:(Z[B)Lorg/tron/plugins/utils/Sha256Hash;" : {
+      "completeTestCount" : 2,
+      "incompleteTestCount" : 0,
+      "perMethodTestability" : "T000",
+      "perMethodOutcome" : "R000",
+      "perTestOutcome" : {
+        "R000" : 2
+      },
+      "lineNumbers" : [
+        75
+      ]
+    },
+    "org.tron.plugins.utils.Sha256Hash.toString:()Ljava/lang/String;" : {
+      "completeTestCount" : 0,
+      "incompleteTestCount" : 0,
+      "perMethodTestability" : "T020",
+      "perMethodOutcome" : "R081",
+      "lineNumbers" : [
+        165
+      ]
+    },
+    "org.tron.plugins.utils.Sha256Hash.wrap:([B)Lorg/tron/plugins/utils/Sha256Hash;" : {
+      "completeTestCount" : 0,
+      "incompleteTestCount" : 0,
+      "perMethodTestability" : "T000",
+      "perMethodOutcome" : "R013",
+      "lineNumbers" : [
+        64
+      ]
+    },
+    "org.tron.plugins.utils.db.DBInterface.close:()V" : {
+      "completeTestCount" : 0,
+      "incompleteTestCount" : 0,
+      "perMethodTestability" : "T010",
+      "perMethodOutcome" : "T010"
+    },
+    "org.tron.plugins.utils.db.DBInterface.delete:([B)V" : {
+      "completeTestCount" : 0,
+      "incompleteTestCount" : 0,
+      "perMethodTestability" : "T010",
+      "perMethodOutcome" : "T010"
+    },
+    "org.tron.plugins.utils.db.DBInterface.get:([B)[B" : {
+      "completeTestCount" : 0,
+      "incompleteTestCount" : 0,
+      "perMethodTestability" : "T010",
+      "perMethodOutcome" : "T010"
+    },
+    "org.tron.plugins.utils.db.DBInterface.getName:()Ljava/lang/String;" : {
+      "completeTestCount" : 0,
+      "incompleteTestCount" : 0,
+      "perMethodTestability" : "T010",
+      "perMethodOutcome" : "T010"
+    },
+    "org.tron.plugins.utils.db.DBInterface.iterator:()Lorg/tron/plugins/utils/db/DBIterator;" : {
+      "completeTestCount" : 0,
+      "incompleteTestCount" : 0,
+      "perMethodTestability" : "T010",
+      "perMethodOutcome" : "T010"
+    },
+    "org.tron.plugins.utils.db.DBInterface.put:([B[B)V" : {
+      "completeTestCount" : 0,
+      "incompleteTestCount" : 0,
+      "perMethodTestability" : "T010",
+      "perMethodOutcome" : "T010"
+    },
+    "org.tron.plugins.utils.db.DBInterface.size:()J" : {
+      "completeTestCount" : 0,
+      "incompleteTestCount" : 0,
+      "perMethodTestability" : "T010",
+      "perMethodOutcome" : "T010"
+    },
+    "org.tron.plugins.utils.db.DBIterator.getKey:()[B" : {
+      "completeTestCount" : 0,
+      "incompleteTestCount" : 0,
+      "perMethodTestability" : "T010",
+      "perMethodOutcome" : "T010"
+    },
+    "org.tron.plugins.utils.db.DBIterator.getValue:()[B" : {
+      "completeTestCount" : 0,
+      "incompleteTestCount" : 0,
+      "perMethodTestability" : "T010",
+      "perMethodOutcome" : "T010"
+    },
+    "org.tron.plugins.utils.db.DBIterator.hasNext:()Z" : {
+      "completeTestCount" : 0,
+      "incompleteTestCount" : 0,
+      "perMethodTestability" : "T010",
+      "perMethodOutcome" : "T010"
+    },
+    "org.tron.plugins.utils.db.DBIterator.seek:([B)V" : {
+      "completeTestCount" : 0,
+      "incompleteTestCount" : 0,
+      "perMethodTestability" : "T010",
+      "perMethodOutcome" : "T010"
+    },
+    "org.tron.plugins.utils.db.DBIterator.seekToFirst:()V" : {
+      "completeTestCount" : 0,
+      "incompleteTestCount" : 0,
+      "perMethodTestability" : "T010",
+      "perMethodOutcome" : "T010"
+    },
+    "org.tron.plugins.utils.db.DBIterator.seekToLast:()V" : {
+      "completeTestCount" : 0,
+      "incompleteTestCount" : 0,
+      "perMethodTestability" : "T010",
+      "perMethodOutcome" : "T010"
+    },
+    "org.tron.plugins.utils.db.DBIterator.valid:()Z" : {
+      "completeTestCount" : 0,
+      "incompleteTestCount" : 0,
+      "perMethodTestability" : "T010",
+      "perMethodOutcome" : "T010"
+    },
+    "org.tron.plugins.utils.db.DbTool$1.<clinit>:()V" : {
+      "completeTestCount" : 0,
+      "incompleteTestCount" : 0,
+      "perMethodTestability" : "T012",
+      "perMethodOutcome" : "T012",
+      "lineNumbers" : [
+        84
+      ]
+    },
+    "org.tron.plugins.utils.db.DbTool$DbType.<clinit>:()V" : {
+      "completeTestCount" : 0,
+      "incompleteTestCount" : 0,
+      "perMethodTestability" : "T012",
+      "perMethodOutcome" : "T012",
+      "lineNumbers" : [
+        27,
+        28,
+        26
+      ]
+    },
+    "org.tron.plugins.utils.db.DbTool$DbType.<init>:(Ljava/lang/String;I)V" : {
+      "completeTestCount" : 0,
+      "incompleteTestCount" : 0,
+      "perMethodTestability" : "T003",
+      "perMethodOutcome" : "T003",
+      "lineNumbers" : [
+        26
+      ]
+    },
+    "org.tron.plugins.utils.db.DbTool$DbType.valueOf:(Ljava/lang/String;)Lorg/tron/plugins/utils/db/DbTool$DbType;" : {
+      "completeTestCount" : 0,
+      "incompleteTestCount" : 0,
+      "perMethodTestability" : "T012",
+      "perMethodOutcome" : "T012",
+      "lineNumbers" : [
+        26
+      ]
+    },
+    "org.tron.plugins.utils.db.DbTool$DbType.values:()[Lorg/tron/plugins/utils/db/DbTool$DbType;" : {
+      "completeTestCount" : 0,
+      "incompleteTestCount" : 0,
+      "perMethodTestability" : "T012",
+      "perMethodOutcome" : "T012",
+      "lineNumbers" : [
+        26
+      ]
+    },
+    "org.tron.plugins.utils.db.DbTool.<clinit>:()V" : {
+      "completeTestCount" : 0,
+      "incompleteTestCount" : 0,
+      "perMethodTestability" : "T012",
+      "perMethodOutcome" : "T012",
+      "lineNumbers" : [
+        16,
+        21,
+        24
+      ]
+    },
+    "org.tron.plugins.utils.db.DbTool.<init>:()V" : {
+      "completeTestCount" : 0,
+      "incompleteTestCount" : 0,
+      "perMethodTestability" : "T005",
+      "perMethodOutcome" : "T005",
+      "lineNumbers" : [
+        17
+      ]
+    },
+    "org.tron.plugins.utils.db.DbTool.close:()V" : {
+      "completeTestCount" : 0,
+      "incompleteTestCount" : 0,
+      "perMethodTestability" : "T000",
+      "perMethodOutcome" : "R004",
+      "lineNumbers" : [
+        152,
+        153,
+        154,
+        156,
+        159,
+        157,
+        158,
+        160,
+        161,
+        162
+      ]
+    },
+    "org.tron.plugins.utils.db.DbTool.closeDB:(Ljava/lang/String;Ljava/lang/String;)V" : {
+      "completeTestCount" : 0,
+      "incompleteTestCount" : 0,
+      "perMethodTestability" : "T000",
+      "perMethodOutcome" : "R013",
+      "lineNumbers" : [
+        135,
+        136,
+        137,
+        139,
+        140,
+        144,
+        141,
+        142,
+        143,
+        146
+      ]
+    },
+    "org.tron.plugins.utils.db.DbTool.getDB:(Ljava/lang/String;Ljava/lang/String;)Lorg/tron/plugins/utils/db/DBInterface;" : {
+      "completeTestCount" : 0,
+      "incompleteTestCount" : 0,
+      "perMethodTestability" : "T000",
+      "perMethodOutcome" : "R011",
+      "lineNumbers" : [
+        45,
+        46
+      ]
+    },
+    "org.tron.plugins.utils.db.DbTool.getDB:(Ljava/lang/String;Ljava/lang/String;Ljava/lang/String;)Lorg/tron/plugins/utils/db/DBInterface;" : {
+      "completeTestCount" : 0,
+      "incompleteTestCount" : 0,
+      "perMethodTestability" : "T000",
+      "perMethodOutcome" : "R011",
+      "lineNumbers" : [
+        63,
+        64
+      ]
+    },
+    "org.tron.plugins.utils.db.DbTool.getDB:(Ljava/lang/String;Ljava/lang/String;Lorg/tron/plugins/utils/db/DbTool$DbType;)Lorg/tron/plugins/utils/db/DBInterface;" : {
+      "completeTestCount" : 0,
+      "incompleteTestCount" : 0,
+      "perMethodTestability" : "T000",
+      "perMethodOutcome" : "R011",
+      "lineNumbers" : [
+        79,
+        80,
+        81,
+        84,
+        86,
+        87,
+        88,
+        90,
+        91,
+        92,
+        94,
+        96
+      ]
+    },
+    "org.tron.plugins.utils.db.DbTool.getDB:(Ljava/nio/file/Path;Ljava/lang/String;)Lorg/tron/plugins/utils/db/DBInterface;" : {
+      "completeTestCount" : 0,
+      "incompleteTestCount" : 0,
+      "perMethodTestability" : "T000",
+      "perMethodOutcome" : "R011",
+      "lineNumbers" : [
+        113,
+        114,
+        115,
+        117,
+        119,
+        121
+      ]
+    },
+    "org.tron.plugins.utils.db.DbTool.getDbType:(Ljava/lang/String;Ljava/lang/String;)Lorg/tron/plugins/utils/db/DbTool$DbType;" : {
+      "completeTestCount" : 0,
+      "incompleteTestCount" : 0,
+      "perMethodTestability" : "T003",
+      "perMethodOutcome" : "T003",
+      "lineNumbers" : [
+        165,
+        167,
+        168,
+        170,
+        171,
+        172,
+        174
+      ]
+    },
+    "org.tron.plugins.utils.db.DbTool.openLevelDb:(Ljava/nio/file/Path;Ljava/lang/String;)Lorg/tron/plugins/utils/db/LevelDBImpl;" : {
+      "completeTestCount" : 0,
+      "incompleteTestCount" : 0,
+      "perMethodTestability" : "T003",
+      "perMethodOutcome" : "T003",
+      "lineNumbers" : [
+        179
+      ]
+    },
+    "org.tron.plugins.utils.db.DbTool.openRocksDb:(Ljava/nio/file/Path;Ljava/lang/String;)Lorg/tron/plugins/utils/db/RocksDBImpl;" : {
+      "completeTestCount" : 0,
+      "incompleteTestCount" : 0,
+      "perMethodTestability" : "T003",
+      "perMethodOutcome" : "T003",
+      "lineNumbers" : [
+        183
+      ]
+    },
+    "org.tron.plugins.utils.db.LevelDBImpl.<init>:(Lorg/iq80/leveldb/DB;Ljava/lang/String;)V" : {
+      "completeTestCount" : 0,
+      "incompleteTestCount" : 0,
+      "perMethodTestability" : "T005",
+      "perMethodOutcome" : "R081",
+      "lineNumbers" : [
+        17,
+        18,
+        19,
+        20
+      ]
+    },
+    "org.tron.plugins.utils.db.LevelDBImpl.close:()V" : {
+      "completeTestCount" : 1,
+      "incompleteTestCount" : 0,
+      "perMethodTestability" : "T000",
+      "perMethodOutcome" : "R000",
+      "perTestOutcome" : {
+        "R000" : 1
+      },
+      "lineNumbers" : [
+        49,
+        50
+      ]
+    },
+    "org.tron.plugins.utils.db.LevelDBImpl.delete:([B)V" : {
+      "completeTestCount" : 1,
+      "incompleteTestCount" : 0,
+      "perMethodTestability" : "T000",
+      "perMethodOutcome" : "R000",
+      "perTestOutcome" : {
+        "R000" : 1
+      },
+      "lineNumbers" : [
+        34,
+        35
+      ]
+    },
+    "org.tron.plugins.utils.db.LevelDBImpl.get:([B)[B" : {
+      "completeTestCount" : 1,
+      "incompleteTestCount" : 0,
+      "perMethodTestability" : "T000",
+      "perMethodOutcome" : "R000",
+      "perTestOutcome" : {
+        "R000" : 1
+      },
+      "lineNumbers" : [
+        24
+      ]
+    },
+    "org.tron.plugins.utils.db.LevelDBImpl.getName:()Ljava/lang/String;" : {
+      "completeTestCount" : 0,
+      "incompleteTestCount" : 0,
+      "perMethodTestability" : "T001",
+      "perMethodOutcome" : "R081",
+      "lineNumbers" : [
+        14
+      ]
+    },
+    "org.tron.plugins.utils.db.LevelDBImpl.iterator:()Lorg/tron/plugins/utils/db/DBIterator;" : {
+      "completeTestCount" : 1,
+      "incompleteTestCount" : 0,
+      "perMethodTestability" : "T000",
+      "perMethodOutcome" : "R000",
+      "perTestOutcome" : {
+        "R000" : 1
+      },
+      "lineNumbers" : [
+        39
+      ]
+    },
+    "org.tron.plugins.utils.db.LevelDBImpl.put:([B[B)V" : {
+      "completeTestCount" : 1,
+      "incompleteTestCount" : 0,
+      "perMethodTestability" : "T000",
+      "perMethodOutcome" : "R000",
+      "perTestOutcome" : {
+        "R000" : 1
+      },
+      "lineNumbers" : [
+        29,
+        30
+      ]
+    },
+    "org.tron.plugins.utils.db.LevelDBImpl.size:()J" : {
+      "completeTestCount" : 1,
+      "incompleteTestCount" : 0,
+      "perMethodTestability" : "T000",
+      "perMethodOutcome" : "R000",
+      "perTestOutcome" : {
+        "R000" : 1
+      },
+      "lineNumbers" : [
+        44
+      ]
+    },
+    "org.tron.plugins.utils.db.LevelDBIterator.<init>:(Lorg/iq80/leveldb/DBIterator;)V" : {
+      "completeTestCount" : 0,
+      "incompleteTestCount" : 0,
+      "perMethodTestability" : "T005",
+      "perMethodOutcome" : "R081",
+      "lineNumbers" : [
+        10,
+        11,
+        12
+      ]
+    },
+    "org.tron.plugins.utils.db.LevelDBIterator.close:()V" : {
+      "completeTestCount" : 1,
+      "incompleteTestCount" : 0,
+      "perMethodTestability" : "T000",
+      "perMethodOutcome" : "R000",
+      "perTestOutcome" : {
+        "R000" : 1
+      },
+      "lineNumbers" : [
+        56,
+        57
+      ]
+    },
+    "org.tron.plugins.utils.db.LevelDBIterator.getKey:()[B" : {
+      "completeTestCount" : 1,
+      "incompleteTestCount" : 0,
+      "perMethodTestability" : "T000",
+      "perMethodOutcome" : "R000",
+      "perTestOutcome" : {
+        "R000" : 1
+      },
+      "lineNumbers" : [
+        41
+      ]
+    },
+    "org.tron.plugins.utils.db.LevelDBIterator.getValue:()[B" : {
+      "completeTestCount" : 1,
+      "incompleteTestCount" : 0,
+      "perMethodTestability" : "T000",
+      "perMethodOutcome" : "R000",
+      "perTestOutcome" : {
+        "R000" : 1
+      },
+      "lineNumbers" : [
+        46
+      ]
+    },
+    "org.tron.plugins.utils.db.LevelDBIterator.hasNext:()Z" : {
+      "completeTestCount" : 2,
+      "incompleteTestCount" : 0,
+      "perMethodTestability" : "T000",
+      "perMethodOutcome" : "R000",
+      "perTestOutcome" : {
+        "R000" : 2
+      },
+      "lineNumbers" : [
+        36
+      ]
+    },
+    "org.tron.plugins.utils.db.LevelDBIterator.next:()Ljava/util/Map$Entry;" : {
+      "completeTestCount" : 1,
+      "incompleteTestCount" : 0,
+      "perMethodTestability" : "T000",
+      "perMethodOutcome" : "R000",
+      "perTestOutcome" : {
+        "R000" : 1
+      },
+      "lineNumbers" : [
+        51
+      ]
+    },
+    "org.tron.plugins.utils.db.LevelDBIterator.seek:([B)V" : {
+      "completeTestCount" : 1,
+      "incompleteTestCount" : 0,
+      "perMethodTestability" : "T000",
+      "perMethodOutcome" : "R000",
+      "perTestOutcome" : {
+        "R000" : 1
+      },
+      "lineNumbers" : [
+        21,
+        22
+      ]
+    },
+    "org.tron.plugins.utils.db.LevelDBIterator.seekToFirst:()V" : {
+      "completeTestCount" : 1,
+      "incompleteTestCount" : 0,
+      "perMethodTestability" : "T000",
+      "perMethodOutcome" : "R000",
+      "perTestOutcome" : {
+        "R000" : 1
+      },
+      "lineNumbers" : [
+        26,
+        27
+      ]
+    },
+    "org.tron.plugins.utils.db.LevelDBIterator.seekToLast:()V" : {
+      "completeTestCount" : 1,
+      "incompleteTestCount" : 0,
+      "perMethodTestability" : "T000",
+      "perMethodOutcome" : "R000",
+      "perTestOutcome" : {
+        "R000" : 1
+      },
+      "lineNumbers" : [
+        31,
+        32
+      ]
+    },
+    "org.tron.plugins.utils.db.LevelDBIterator.valid:()Z" : {
+      "completeTestCount" : 2,
+      "incompleteTestCount" : 0,
+      "perMethodTestability" : "T000",
+      "perMethodOutcome" : "R000",
+      "perTestOutcome" : {
+        "R000" : 2
+      },
+      "lineNumbers" : [
+        16
+      ]
+    },
+    "org.tron.plugins.utils.db.RockDBIterator$1.<init>:(Lorg/tron/plugins/utils/db/RockDBIterator;[B[B)V" : {
+      "completeTestCount" : 0,
+      "incompleteTestCount" : 0,
+      "perMethodTestability" : "T004",
+      "perMethodOutcome" : "T004",
+      "lineNumbers" : [
+        55
+      ]
+    },
+    "org.tron.plugins.utils.db.RockDBIterator$1.setValue:(Ljava/lang/Object;)Ljava/lang/Object;" : {
+      "completeTestCount" : 0,
+      "incompleteTestCount" : 0,
+      "perMethodTestability" : "T012",
+      "perMethodOutcome" : "T012",
+      "lineNumbers" : [
+        55
+      ]
+    },
+    "org.tron.plugins.utils.db.RockDBIterator$1.setValue:([B)[B" : {
+      "completeTestCount" : 0,
+      "incompleteTestCount" : 0,
+      "perMethodTestability" : "T004",
+      "perMethodOutcome" : "T004",
+      "lineNumbers" : [
+        68
+      ]
+    },
+    "org.tron.plugins.utils.db.RockDBIterator.<init>:(Lorg/rocksdb/RocksIterator;)V" : {
+      "completeTestCount" : 0,
+      "incompleteTestCount" : 0,
+      "perMethodTestability" : "T005",
+      "perMethodOutcome" : "R002",
+      "lineNumbers" : [
+        11,
+        12,
+        13
+      ]
+    },
+    "org.tron.plugins.utils.db.RockDBIterator.close:()V" : {
+      "completeTestCount" : 1,
+      "incompleteTestCount" : 0,
+      "perMethodTestability" : "T000",
+      "perMethodOutcome" : "R000",
+      "perTestOutcome" : {
+        "R000" : 1
+      },
+      "lineNumbers" : [
+        75,
+        76
+      ]
+    },
+    "org.tron.plugins.utils.db.RockDBIterator.getKey:()[B" : {
+      "completeTestCount" : 1,
+      "incompleteTestCount" : 0,
+      "perMethodTestability" : "T000",
+      "perMethodOutcome" : "R000",
+      "perTestOutcome" : {
+        "R000" : 1
+      },
+      "lineNumbers" : [
+        42
+      ]
+    },
+    "org.tron.plugins.utils.db.RockDBIterator.getValue:()[B" : {
+      "completeTestCount" : 1,
+      "incompleteTestCount" : 0,
+      "perMethodTestability" : "T000",
+      "perMethodOutcome" : "R000",
+      "perTestOutcome" : {
+        "R000" : 1
+      },
+      "lineNumbers" : [
+        47
+      ]
+    },
+    "org.tron.plugins.utils.db.RockDBIterator.hasNext:()Z" : {
+      "completeTestCount" : 2,
+      "incompleteTestCount" : 0,
+      "perMethodTestability" : "T000",
+      "perMethodOutcome" : "R000",
+      "perTestOutcome" : {
+        "R000" : 2
+      },
+      "lineNumbers" : [
+        37
+      ]
+    },
+    "org.tron.plugins.utils.db.RockDBIterator.next:()Ljava/util/Map$Entry;" : {
+      "completeTestCount" : 1,
+      "incompleteTestCount" : 0,
+      "perMethodTestability" : "T000",
+      "perMethodOutcome" : "R000",
+      "perTestOutcome" : {
+        "R000" : 1
+      },
+      "lineNumbers" : [
+        52,
+        53,
+        54,
+        55
+      ]
+    },
+    "org.tron.plugins.utils.db.RockDBIterator.seek:([B)V" : {
+      "completeTestCount" : 1,
+      "incompleteTestCount" : 0,
+      "perMethodTestability" : "T000",
+      "perMethodOutcome" : "R000",
+      "perTestOutcome" : {
+        "R000" : 1
+      },
+      "lineNumbers" : [
+        22,
+        23
+      ]
+    },
+    "org.tron.plugins.utils.db.RockDBIterator.seekToFirst:()V" : {
+      "completeTestCount" : 1,
+      "incompleteTestCount" : 0,
+      "perMethodTestability" : "T000",
+      "perMethodOutcome" : "R000",
+      "perTestOutcome" : {
+        "R000" : 1
+      },
+      "lineNumbers" : [
+        27,
+        28
+      ]
+    },
+    "org.tron.plugins.utils.db.RockDBIterator.seekToLast:()V" : {
+      "completeTestCount" : 1,
+      "incompleteTestCount" : 0,
+      "perMethodTestability" : "T000",
+      "perMethodOutcome" : "R000",
+      "perTestOutcome" : {
+        "R000" : 1
+      },
+      "lineNumbers" : [
+        32,
+        33
+      ]
+    },
+    "org.tron.plugins.utils.db.RockDBIterator.valid:()Z" : {
+      "completeTestCount" : 2,
+      "incompleteTestCount" : 0,
+      "perMethodTestability" : "T000",
+      "perMethodOutcome" : "R000",
+      "perTestOutcome" : {
+        "R000" : 2
+      },
+      "lineNumbers" : [
+        17
+      ]
+    },
+    "org.tron.plugins.utils.db.RocksDBImpl.<init>:(Lorg/rocksdb/RocksDB;Ljava/lang/String;)V" : {
+      "completeTestCount" : 1,
+      "incompleteTestCount" : 0,
+      "perMethodTestability" : "T005",
+      "perMethodOutcome" : "R000",
+      "perTestOutcome" : {
+        "R000" : 1
+      },
+      "lineNumbers" : [
+        15,
+        16,
+        17,
+        18
+      ]
+    },
+    "org.tron.plugins.utils.db.RocksDBImpl.close:()V" : {
+      "completeTestCount" : 0,
+      "incompleteTestCount" : 0,
+      "perMethodTestability" : "T000",
+      "perMethodOutcome" : "F009",
+      "lineNumbers" : [
+        67,
+        68
+      ]
+    },
+    "org.tron.plugins.utils.db.RocksDBImpl.delete:([B)V" : {
+      "completeTestCount" : 0,
+      "incompleteTestCount" : 0,
+      "perMethodTestability" : "T000",
+      "perMethodOutcome" : "R011",
+      "lineNumbers" : [
+        42,
+        45,
+        43,
+        44,
+        46
+      ]
+    },
+    "org.tron.plugins.utils.db.RocksDBImpl.get:([B)[B" : {
+      "completeTestCount" : 0,
+      "incompleteTestCount" : 0,
+      "perMethodTestability" : "T000",
+      "perMethodOutcome" : "R011",
+      "lineNumbers" : [
+        23,
+        24,
+        25,
+        27
+      ]
+    },
+    "org.tron.plugins.utils.db.RocksDBImpl.getName:()Ljava/lang/String;" : {
+      "completeTestCount" : 1,
+      "incompleteTestCount" : 0,
+      "perMethodTestability" : "T001",
+      "perMethodOutcome" : "R000",
+      "perTestOutcome" : {
+        "R000" : 1
+      },
+      "lineNumbers" : [
+        12
+      ]
+    },
+    "org.tron.plugins.utils.db.RocksDBImpl.iterator:()Lorg/tron/plugins/utils/db/DBIterator;" : {
+      "completeTestCount" : 0,
+      "incompleteTestCount" : 0,
+      "perMethodTestability" : "T000",
+      "perMethodOutcome" : "R011",
+      "lineNumbers" : [
+        50,
+        51,
+        50
+      ]
+    },
+    "org.tron.plugins.utils.db.RocksDBImpl.put:([B[B)V" : {
+      "completeTestCount" : 0,
+      "incompleteTestCount" : 0,
+      "perMethodTestability" : "T000",
+      "perMethodOutcome" : "R011",
+      "lineNumbers" : [
+        33,
+        36,
+        34,
+        35,
+        37
+      ]
+    },
+    "org.tron.plugins.utils.db.RocksDBImpl.size:()J" : {
+      "completeTestCount" : 0,
+      "incompleteTestCount" : 0,
+      "perMethodTestability" : "T000",
+      "perMethodOutcome" : "R011",
+      "lineNumbers" : [
+        56,
+        57,
+        58,
+        59,
+        58,
+        61,
+        62
+      ]
+    }
+  }
+}
