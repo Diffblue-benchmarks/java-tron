@@ -4,6 +4,11 @@ dependencies {
     api project(":chainbase")
     api project(":protocol")
     api project(":crypto")
+
+    compileOnly "com.diffblue.cover:cover-annotations:1.7.0"
+
+    testImplementation "com.diffblue.cover:cover-annotations:1.7.0"
+    testImplementation "org.springframework:spring-test:5.3.18"
 }
 
 test {
