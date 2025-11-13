@@ -1,0 +1,839 @@
+package org.tron.core.capsule;
+
+import static org.junit.Assert.assertArrayEquals;
+import static org.junit.Assert.assertEquals;
+import static org.junit.Assert.assertFalse;
+import static org.junit.Assert.assertNull;
+import static org.junit.Assert.assertSame;
+import static org.junit.Assert.assertTrue;
+import com.diffblue.cover.annotations.ContributionFromDiffblue;
+import com.diffblue.cover.annotations.ManagedByDiffblue;
+import com.diffblue.cover.annotations.MethodsUnderTest;
+import com.google.protobuf.ByteString;
+import com.google.protobuf.ByteString.ByteIterator;
+import com.google.protobuf.DescriptorProtos;
+import com.google.protobuf.DescriptorProtos.DescriptorProto;
+import com.google.protobuf.DescriptorProtos.Edition;
+import com.google.protobuf.DescriptorProtos.FeatureSet;
+import com.google.protobuf.DescriptorProtos.FeatureSet.EnumType;
+import com.google.protobuf.DescriptorProtos.FeatureSet.FieldPresence;
+import com.google.protobuf.DescriptorProtos.FeatureSet.JsonFormat;
+import com.google.protobuf.DescriptorProtos.FeatureSet.MessageEncoding;
+import com.google.protobuf.DescriptorProtos.FeatureSet.RepeatedFieldEncoding;
+import com.google.protobuf.DescriptorProtos.FeatureSet.Utf8Validation;
+import com.google.protobuf.DescriptorProtos.FieldDescriptorProto;
+import com.google.protobuf.DescriptorProtos.FieldDescriptorProto.Label;
+import com.google.protobuf.DescriptorProtos.FieldDescriptorProto.Type;
+import com.google.protobuf.DescriptorProtos.FieldOptions;
+import com.google.protobuf.DescriptorProtos.FieldOptions.CType;
+import com.google.protobuf.DescriptorProtos.FieldOptions.JSType;
+import com.google.protobuf.DescriptorProtos.FieldOptions.OptionRetention;
+import com.google.protobuf.DescriptorProtos.FileDescriptorProto;
+import com.google.protobuf.DescriptorProtos.FileOptions;
+import com.google.protobuf.DescriptorProtos.FileOptions.OptimizeMode;
+import com.google.protobuf.DescriptorProtos.MessageOptions;
+import com.google.protobuf.DescriptorProtos.SourceCodeInfo;
+import com.google.protobuf.Descriptors;
+import com.google.protobuf.Descriptors.Descriptor;
+import com.google.protobuf.Descriptors.EnumDescriptor;
+import com.google.protobuf.Descriptors.FieldDescriptor;
+import com.google.protobuf.Descriptors.FieldDescriptor.JavaType;
+import com.google.protobuf.Descriptors.FileDescriptor;
+import com.google.protobuf.Descriptors.FileDescriptor.Syntax;
+import com.google.protobuf.Descriptors.OneofDescriptor;
+import com.google.protobuf.ProtocolStringList;
+import com.google.protobuf.UnknownFieldSet;
+import com.google.protobuf.WireFormat;
+import com.google.protobuf.WireFormat.FieldType;
+import java.io.UnsupportedEncodingException;
+import java.util.List;
+import java.util.Map;
+import org.junit.Test;
+import org.junit.experimental.categories.Category;
+import org.tron.protos.Protocol;
+import org.tron.protos.Protocol.TXInput;
+import org.tron.protos.Protocol.TXInput.raw;
+
+public class TxInputCapsuleDiffblueTest {
+  /**
+   * Test {@link TxInputCapsule#TxInputCapsule(byte[], long, byte[], byte[])}.
+   *
+   * <p>Method under test: {@link TxInputCapsule#TxInputCapsule(byte[], long, byte[], byte[])}
+   */
+  @Test
+  @Category(ContributionFromDiffblue.class)
+  @ManagedByDiffblue
+  @MethodsUnderTest({"void TxInputCapsule.<init>(byte[], long, byte[], byte[])"})
+  public void testNewTxInputCapsule() throws UnsupportedEncodingException {
+    // Arrange and Act
+    TxInputCapsule actualTxInputCapsule =
+        new TxInputCapsule(
+            "AXAXAXAX".getBytes("UTF-8"),
+            1L,
+            "AXAXAXAX".getBytes("UTF-8"),
+            "AXAXAXAX".getBytes("UTF-8"));
+
+    // Assert
+    TXInput instance = actualTxInputCapsule.getInstance();
+    assertEquals("", instance.getInitializationErrorString());
+    assertEquals(2, instance.getAllFields().size());
+    assertEquals(34, instance.getSerializedSize());
+    assertTrue(instance.findInitializationErrors().isEmpty());
+    assertTrue(actualTxInputCapsule.validate());
+    assertTrue(instance.hasRawData());
+    assertSame(instance, actualTxInputCapsule.getTxInput());
+    assertArrayEquals(new byte[] {}, actualTxInputCapsule.getData());
+  }
+
+  /**
+   * Test {@link TxInputCapsule#getTxInput()}.
+   *
+   * <p>Method under test: {@link TxInputCapsule#getTxInput()}
+   */
+  @Test
+  @Category(ContributionFromDiffblue.class)
+  @ManagedByDiffblue
+  @MethodsUnderTest({"TXInput TxInputCapsule.getTxInput()"})
+  public void testGetTxInput() throws UnsupportedEncodingException {
+    // Arrange and Act
+    TXInput actualTxInput =
+        new TxInputCapsule(
+                "AXAXAXAX".getBytes("UTF-8"),
+                1L,
+                "AXAXAXAX".getBytes("UTF-8"),
+                "AXAXAXAX".getBytes("UTF-8"))
+            .getTxInput();
+
+    // Assert
+    boolean actualIsEmptyResult = actualTxInput.findInitializationErrors().isEmpty();
+    int actualSizeResult = actualTxInput.getAllFields().size();
+    TXInput defaultInstanceForType = actualTxInput.getDefaultInstanceForType();
+    boolean actualIsEmptyResult2 = defaultInstanceForType.findInitializationErrors().isEmpty();
+    boolean actualIsEmptyResult3 = defaultInstanceForType.getAllFields().isEmpty();
+    raw rawData = defaultInstanceForType.getRawData();
+    boolean actualIsEmptyResult4 = rawData.findInitializationErrors().isEmpty();
+    boolean actualIsEmptyResult5 = rawData.getAllFields().isEmpty();
+    ByteString signature = defaultInstanceForType.getSignature();
+    boolean actualHasNextResult = signature.iterator().hasNext();
+    Descriptor descriptorForType = actualTxInput.getDescriptorForType();
+    boolean actualIsEmptyResult6 = descriptorForType.getEnumTypes().isEmpty();
+    boolean actualIsEmptyResult7 = descriptorForType.getExtensions().isEmpty();
+    List<FieldDescriptor> fields = descriptorForType.getFields();
+    FieldDescriptor getResult = fields.get(0);
+    FieldDescriptor getResult2 = fields.get(1);
+    FieldOptions options = getResult.getOptions();
+    FieldDescriptorProto toProtoResult = getResult.toProto();
+    FieldDescriptorProto toProtoResult2 = getResult2.toProto();
+    FileDescriptor file = descriptorForType.getFile();
+    List<FileDescriptor> dependencies = file.getDependencies();
+    FileDescriptor getResult3 = dependencies.get(0);
+    FileDescriptor getResult4 = dependencies.get(1);
+    FileDescriptor getResult5 = dependencies.get(2);
+    Syntax actualSyntax = getResult3.getSyntax();
+    Syntax actualSyntax2 = getResult4.getSyntax();
+    Syntax actualSyntax3 = getResult5.getSyntax();
+    List<EnumDescriptor> enumTypes = file.getEnumTypes();
+    EnumDescriptor getResult6 = enumTypes.get(0);
+    EnumDescriptor getResult7 = enumTypes.get(1);
+    boolean actualIsEmptyResult8 = file.getExtensions().isEmpty();
+    List<Descriptor> messageTypes = file.getMessageTypes();
+    Descriptor getResult8 = messageTypes.get(0);
+    Descriptor getResult9 = messageTypes.get(1);
+    Descriptor getResult10 = messageTypes.get(43);
+    Descriptor getResult11 = messageTypes.get(44);
+    FileOptions options2 = file.getOptions();
+    boolean actualIsEmptyResult9 = options2.findInitializationErrors().isEmpty();
+    int actualSizeResult2 = options2.getAllFields().size();
+    int actualSizeResult3 = options2.getAllFieldsRaw().size();
+    FileOptions defaultInstanceForType2 = options2.getDefaultInstanceForType();
+    Descriptor descriptorForType2 = options2.getDescriptorForType();
+    ByteString goPackageBytes = options2.getGoPackageBytes();
+    ByteIterator iteratorResult = goPackageBytes.iterator();
+    Byte nextResult = iteratorResult.next();
+    ByteString javaOuterClassnameBytes = options2.getJavaOuterClassnameBytes();
+    ByteIterator iteratorResult2 = javaOuterClassnameBytes.iterator();
+    Byte nextResult2 = iteratorResult2.next();
+    ByteString javaPackageBytes = options2.getJavaPackageBytes();
+    ByteIterator iteratorResult3 = javaPackageBytes.iterator();
+    Byte nextResult3 = iteratorResult3.next();
+    boolean actualIsEmptyResult10 = file.getPublicDependencies().isEmpty();
+    boolean actualIsEmptyResult11 = file.getServices().isEmpty();
+    FileDescriptorProto toProtoResult3 = file.toProto();
+    boolean actualIsEmptyResult12 = toProtoResult3.findInitializationErrors().isEmpty();
+    int actualSizeResult4 = toProtoResult3.getAllFields().size();
+    FileDescriptorProto defaultInstanceForType3 = toProtoResult3.getDefaultInstanceForType();
+    Descriptor descriptorForType3 = toProtoResult3.getDescriptorForType();
+    int actualSizeResult5 = toProtoResult3.getEnumTypeList().size();
+    int actualSizeResult6 = toProtoResult3.getMessageTypeList().size();
+    ByteString nameBytes = toProtoResult3.getNameBytes();
+    ByteIterator iteratorResult4 = nameBytes.iterator();
+    Byte nextResult4 = iteratorResult4.next();
+    ByteString packageBytes = toProtoResult3.getPackageBytes();
+    ByteIterator iteratorResult5 = packageBytes.iterator();
+    Byte nextResult5 = iteratorResult5.next();
+    boolean actualIsEmptyResult13 = toProtoResult3.getPublicDependencyList().isEmpty();
+    SourceCodeInfo sourceCodeInfo = toProtoResult3.getSourceCodeInfo();
+    ByteString syntaxBytes = toProtoResult3.getSyntaxBytes();
+    ByteIterator iteratorResult6 = syntaxBytes.iterator();
+    Byte nextResult6 = iteratorResult6.next();
+    int actualSizeResult7 = descriptorForType.getNestedTypes().size();
+    boolean actualIsEmptyResult14 = descriptorForType.getOneofs().isEmpty();
+    MessageOptions options3 = descriptorForType.getOptions();
+    boolean actualIsEmptyResult15 = options3.findInitializationErrors().isEmpty();
+    Map<FieldDescriptor, Object> allFields = options3.getAllFields();
+    Map<FieldDescriptor, Object> allFieldsRaw = options3.getAllFieldsRaw();
+    Descriptor descriptorForType4 = options3.getDescriptorForType();
+    boolean actualIsEmptyResult16 = descriptorForType4.getEnumTypes().isEmpty();
+    boolean actualIsEmptyResult17 = descriptorForType4.getExtensions().isEmpty();
+    int actualSizeResult8 = descriptorForType4.getFields().size();
+    FileDescriptor file2 = descriptorForType4.getFile();
+    boolean actualIsEmptyResult18 = descriptorForType4.getNestedTypes().isEmpty();
+    List<OneofDescriptor> oneofs = descriptorForType4.getOneofs();
+    List<OneofDescriptor> realOneofs = descriptorForType4.getRealOneofs();
+    DescriptorProto toProtoResult4 = descriptorForType4.toProto();
+    FeatureSet features = options3.getFeatures();
+    boolean actualIsEmptyResult19 = features.findInitializationErrors().isEmpty();
+    Map<FieldDescriptor, Object> allFields2 = features.getAllFields();
+    Map<FieldDescriptor, Object> allFieldsRaw2 = features.getAllFieldsRaw();
+    Descriptor descriptorForType5 = features.getDescriptorForType();
+    boolean actualIsEmptyResult20 = options3.getUninterpretedOptionList().isEmpty();
+    List<OneofDescriptor> realOneofs2 = descriptorForType.getRealOneofs();
+    DescriptorProto toProtoResult5 = descriptorForType.toProto();
+    boolean actualIsEmptyResult21 = toProtoResult5.findInitializationErrors().isEmpty();
+    int actualSizeResult9 = toProtoResult5.getAllFields().size();
+    DescriptorProto defaultInstanceForType4 = toProtoResult5.getDefaultInstanceForType();
+    boolean actualIsEmptyResult22 = defaultInstanceForType4.findInitializationErrors().isEmpty();
+    Map<FieldDescriptor, Object> allFields3 = defaultInstanceForType4.getAllFields();
+    Descriptor descriptorForType6 = toProtoResult5.getDescriptorForType();
+    List<EnumDescriptor> enumTypes2 = descriptorForType6.getEnumTypes();
+    List<FieldDescriptor> extensions = descriptorForType6.getExtensions();
+    int actualSizeResult10 = descriptorForType6.getFields().size();
+    int actualSizeResult11 = descriptorForType6.getNestedTypes().size();
+    List<OneofDescriptor> oneofs2 = descriptorForType6.getOneofs();
+    List<OneofDescriptor> realOneofs3 = descriptorForType6.getRealOneofs();
+    int actualSizeResult12 = toProtoResult5.getFieldList().size();
+    ByteString nameBytes2 = toProtoResult5.getNameBytes();
+    ByteIterator iteratorResult7 = nameBytes2.iterator();
+    Byte nextResult7 = iteratorResult7.next();
+    Byte nextResult8 = iteratorResult7.next();
+    int actualSizeResult13 = toProtoResult5.getNestedTypeList().size();
+    ProtocolStringList reservedNameList = toProtoResult5.getReservedNameList();
+    raw rawData2 = actualTxInput.getRawData();
+    List<String> findInitializationErrorsResult = rawData2.findInitializationErrors();
+    int actualSizeResult14 = rawData2.getAllFields().size();
+    Descriptor descriptorForType7 = rawData2.getDescriptorForType();
+    List<EnumDescriptor> enumTypes3 = descriptorForType7.getEnumTypes();
+    List<FieldDescriptor> extensions2 = descriptorForType7.getExtensions();
+    int actualSizeResult15 = descriptorForType7.getFields().size();
+    List<Descriptor> nestedTypes = descriptorForType7.getNestedTypes();
+    List<OneofDescriptor> oneofs3 = descriptorForType7.getOneofs();
+    List<OneofDescriptor> realOneofs4 = descriptorForType7.getRealOneofs();
+    DescriptorProto toProtoResult6 = descriptorForType7.toProto();
+    ByteString signature2 = actualTxInput.getSignature();
+    ByteIterator iteratorResult8 = signature2.iterator();
+    Byte nextResult9 = iteratorResult8.next();
+    Byte nextResult10 = iteratorResult8.next();
+    Byte nextResult11 = iteratorResult8.next();
+    UnknownFieldSet unknownFields = actualTxInput.getUnknownFields();
+    assertEquals("", defaultInstanceForType4.getInitializationErrorString());
+    assertEquals("", defaultInstanceForType3.getInitializationErrorString());
+    assertEquals("", sourceCodeInfo.getInitializationErrorString());
+    assertEquals("", defaultInstanceForType2.getInitializationErrorString());
+    assertEquals("", features.getInitializationErrorString());
+    assertEquals("", options3.getInitializationErrorString());
+    assertEquals("", toProtoResult4.getInitializationErrorString());
+    assertEquals("", toProtoResult5.getInitializationErrorString());
+    assertEquals("", toProtoResult6.getInitializationErrorString());
+    assertEquals(2, fields.size());
+    assertEquals("", options.getInitializationErrorString());
+    assertEquals("", toProtoResult.getInitializationErrorString());
+    assertEquals("", toProtoResult2.getInitializationErrorString());
+    assertEquals("", options2.getInitializationErrorString());
+    assertEquals("", toProtoResult3.getInitializationErrorString());
+    assertEquals("", actualTxInput.getInitializationErrorString());
+    assertEquals("", defaultInstanceForType.getInitializationErrorString());
+    assertEquals("", rawData2.getInitializationErrorString());
+    assertEquals("", rawData.getInitializationErrorString());
+    assertEquals("", signature.toStringUtf8());
+    assertEquals("", defaultInstanceForType4.getName());
+    assertEquals("", toProtoResult.getDefaultValue());
+    assertEquals("", toProtoResult2.getDefaultValue());
+    assertEquals("", toProtoResult.getExtendee());
+    assertEquals("", toProtoResult2.getExtendee());
+    assertEquals("", toProtoResult.getJsonName());
+    assertEquals("", toProtoResult2.getJsonName());
+    assertEquals("", toProtoResult2.getTypeName());
+    assertEquals("", defaultInstanceForType3.getName());
+    assertEquals("", defaultInstanceForType3.getPackage());
+    assertEquals("", defaultInstanceForType3.getSyntax());
+    assertEquals("", defaultInstanceForType2.getCsharpNamespace());
+    assertEquals("", options2.getCsharpNamespace());
+    assertEquals("", defaultInstanceForType2.getGoPackage());
+    assertEquals("", defaultInstanceForType2.getJavaOuterClassname());
+    assertEquals("", defaultInstanceForType2.getJavaPackage());
+    assertEquals("", defaultInstanceForType2.getObjcClassPrefix());
+    assertEquals("", options2.getObjcClassPrefix());
+    assertEquals("", defaultInstanceForType2.getPhpClassPrefix());
+    assertEquals("", options2.getPhpClassPrefix());
+    assertEquals("", defaultInstanceForType2.getPhpMetadataNamespace());
+    assertEquals("", options2.getPhpMetadataNamespace());
+    assertEquals("", defaultInstanceForType2.getPhpNamespace());
+    assertEquals("", options2.getPhpNamespace());
+    assertEquals("", defaultInstanceForType2.getRubyPackage());
+    assertEquals("", options2.getRubyPackage());
+    assertEquals("", defaultInstanceForType2.getSwiftPrefix());
+    assertEquals("", options2.getSwiftPrefix());
+    assertEquals("", file2.getEditionName());
+    assertEquals("", file.getEditionName());
+    assertEquals(3, dependencies.size());
+    assertEquals("", getResult3.getEditionName());
+    assertEquals("", getResult4.getEditionName());
+    assertEquals("", getResult5.getEditionName());
+    assertEquals(".protocol.TXInput.raw", toProtoResult.getTypeName());
+    assertEquals("AXAXAXAX", signature2.toStringUtf8());
+    assertEquals(45, messageTypes.size());
+    assertEquals("AccountId", getResult8.getName());
+    assertEquals(2, enumTypes.size());
+    assertEquals("AccountType", getResult6.getName());
+    assertEquals("DescriptorProto", descriptorForType6.getName());
+    assertEquals("FeatureSet", descriptorForType5.getName());
+    assertEquals("FileDescriptorProto", descriptorForType3.getName());
+    assertEquals("FileOptions", descriptorForType2.getName());
+    assertEquals("MessageOptions", toProtoResult4.getName());
+    assertEquals("MessageOptions", descriptorForType4.getName());
+    assertEquals("PBFTCommitResult", getResult10.getName());
+    assertEquals("Protocol", javaOuterClassnameBytes.toStringUtf8());
+    assertEquals("Protocol", options2.getJavaOuterClassname());
+    assertEquals("ReasonCode", getResult7.getName());
+    assertEquals("SRL", getResult11.getName());
+    assertEquals("TXInput", nameBytes2.toStringUtf8());
+    assertEquals("TXInput", toProtoResult5.getName());
+    assertEquals("TXInput", descriptorForType.getName());
+    assertEquals("Vote", getResult9.getName());
+    assertEquals("core/Discover.proto", getResult4.getFullName());
+    assertEquals("core/Discover.proto", getResult4.getName());
+    assertEquals("core/Tron.proto", nameBytes.toStringUtf8());
+    assertEquals("core/Tron.proto", toProtoResult3.getName());
+    assertEquals("core/Tron.proto", file.getFullName());
+    assertEquals("core/Tron.proto", file.getName());
+    assertEquals("core/contract/common.proto", getResult5.getFullName());
+    assertEquals("core/contract/common.proto", getResult5.getName());
+    assertEquals("github.com/tronprotocol/grpc-gateway/core", goPackageBytes.toStringUtf8());
+    assertEquals("github.com/tronprotocol/grpc-gateway/core", options2.getGoPackage());
+    assertEquals("google.protobuf", file2.getPackage());
+    assertEquals("google.protobuf", getResult3.getPackage());
+    assertEquals("google.protobuf.DescriptorProto", descriptorForType6.getFullName());
+    assertEquals("google.protobuf.FeatureSet", descriptorForType5.getFullName());
+    assertEquals("google.protobuf.FileDescriptorProto", descriptorForType3.getFullName());
+    assertEquals("google.protobuf.FileOptions", descriptorForType2.getFullName());
+    assertEquals("google.protobuf.MessageOptions", descriptorForType4.getFullName());
+    assertEquals("google/protobuf/any.proto", getResult3.getFullName());
+    assertEquals("google/protobuf/any.proto", getResult3.getName());
+    assertEquals("google/protobuf/descriptor.proto", file2.getFullName());
+    assertEquals("google/protobuf/descriptor.proto", file2.getName());
+    assertEquals("org.tron.protos", javaPackageBytes.toStringUtf8());
+    assertEquals("org.tron.protos", options2.getJavaPackage());
+    assertEquals("proto3", syntaxBytes.toStringUtf8());
+    assertEquals("proto3", toProtoResult3.getSyntax());
+    assertEquals("protocol", packageBytes.toStringUtf8());
+    assertEquals("protocol", toProtoResult3.getPackage());
+    assertEquals("protocol", file.getPackage());
+    assertEquals("protocol", getResult4.getPackage());
+    assertEquals("protocol", getResult5.getPackage());
+    assertEquals("protocol.AccountId", getResult8.getFullName());
+    assertEquals("protocol.AccountType", getResult6.getFullName());
+    assertEquals("protocol.PBFTCommitResult", getResult10.getFullName());
+    assertEquals("protocol.ReasonCode", getResult7.getFullName());
+    assertEquals("protocol.SRL", getResult11.getFullName());
+    assertEquals("protocol.TXInput", descriptorForType.getFullName());
+    assertEquals("protocol.TXInput.raw", descriptorForType7.getFullName());
+    assertEquals("protocol.TXInput.raw_data", getResult.getFullName());
+    assertEquals("protocol.TXInput.signature", getResult2.getFullName());
+    assertEquals("protocol.Vote", getResult9.getFullName());
+    assertEquals("raw", toProtoResult6.getName());
+    assertEquals("raw", descriptorForType7.getName());
+    assertEquals("rawData", getResult.getJsonName());
+    assertEquals("raw_data", toProtoResult.getName());
+    assertEquals("raw_data", getResult.getName());
+    assertEquals("signature", toProtoResult2.getName());
+    assertEquals("signature", getResult2.getJsonName());
+    assertEquals("signature", getResult2.getName());
+    assertNull(descriptorForType5.getContainingType());
+    assertNull(descriptorForType4.getContainingType());
+    assertNull(descriptorForType6.getContainingType());
+    assertNull(descriptorForType2.getContainingType());
+    assertNull(descriptorForType3.getContainingType());
+    assertNull(descriptorForType.getContainingType());
+    assertNull(getResult8.getContainingType());
+    assertNull(getResult9.getContainingType());
+    assertNull(getResult10.getContainingType());
+    assertNull(getResult11.getContainingType());
+    assertNull(getResult6.getContainingType());
+    assertNull(getResult7.getContainingType());
+    assertNull(getResult.getContainingOneof());
+    assertNull(getResult2.getContainingOneof());
+    assertNull(getResult.getRealContainingOneof());
+    assertNull(getResult2.getRealContainingOneof());
+    assertEquals(0, defaultInstanceForType4.getEnumTypeCount());
+    assertEquals(0, toProtoResult4.getEnumTypeCount());
+    assertEquals(0, toProtoResult5.getEnumTypeCount());
+    assertEquals(0, toProtoResult6.getEnumTypeCount());
+    assertEquals(0, defaultInstanceForType4.getExtensionCount());
+    assertEquals(0, toProtoResult4.getExtensionCount());
+    assertEquals(0, toProtoResult5.getExtensionCount());
+    assertEquals(0, toProtoResult6.getExtensionCount());
+    assertEquals(0, defaultInstanceForType4.getExtensionRangeCount());
+    assertEquals(0, toProtoResult5.getExtensionRangeCount());
+    assertEquals(0, toProtoResult6.getExtensionRangeCount());
+    assertEquals(0, defaultInstanceForType4.getFieldCount());
+    assertEquals(0, defaultInstanceForType4.getNestedTypeCount());
+    assertEquals(0, toProtoResult4.getNestedTypeCount());
+    assertEquals(0, toProtoResult6.getNestedTypeCount());
+    assertEquals(0, defaultInstanceForType4.getOneofDeclCount());
+    assertEquals(0, toProtoResult4.getOneofDeclCount());
+    assertEquals(0, toProtoResult5.getOneofDeclCount());
+    assertEquals(0, toProtoResult6.getOneofDeclCount());
+    assertEquals(0, defaultInstanceForType4.getReservedNameCount());
+    assertEquals(0, toProtoResult4.getReservedNameCount());
+    assertEquals(0, toProtoResult5.getReservedNameCount());
+    assertEquals(0, toProtoResult6.getReservedNameCount());
+    assertEquals(0, defaultInstanceForType4.getReservedRangeCount());
+    assertEquals(0, toProtoResult5.getReservedRangeCount());
+    assertEquals(0, toProtoResult6.getReservedRangeCount());
+    assertEquals(0, defaultInstanceForType4.getSerializedSize());
+    assertEquals(0, features.getSerializedSize());
+    assertEquals(0, toProtoResult.getOneofIndex());
+    assertEquals(0, toProtoResult2.getOneofIndex());
+    assertEquals(0, options.getEditionDefaultsCount());
+    assertEquals(0, options.getSerializedSize());
+    assertEquals(0, options.getTargetsCount());
+    assertEquals(0, options.getUninterpretedOptionCount());
+    assertEquals(0, defaultInstanceForType3.getDependencyCount());
+    assertEquals(0, defaultInstanceForType3.getEnumTypeCount());
+    assertEquals(0, defaultInstanceForType3.getExtensionCount());
+    assertEquals(0, toProtoResult3.getExtensionCount());
+    assertEquals(0, defaultInstanceForType3.getMessageTypeCount());
+    assertEquals(0, defaultInstanceForType3.getPublicDependencyCount());
+    assertEquals(0, toProtoResult3.getPublicDependencyCount());
+    assertEquals(0, defaultInstanceForType3.getSerializedSize());
+    assertEquals(0, defaultInstanceForType3.getServiceCount());
+    assertEquals(0, toProtoResult3.getServiceCount());
+    assertEquals(0, defaultInstanceForType3.getWeakDependencyCount());
+    assertEquals(0, toProtoResult3.getWeakDependencyCount());
+    assertEquals(0, defaultInstanceForType2.getSerializedSize());
+    assertEquals(0, defaultInstanceForType2.getUninterpretedOptionCount());
+    assertEquals(0, options2.getUninterpretedOptionCount());
+    assertEquals(0, options3.getSerializedSize());
+    assertEquals(0, options3.getUninterpretedOptionCount());
+    assertEquals(0, sourceCodeInfo.getLocationCount());
+    assertEquals(0, sourceCodeInfo.getSerializedSize());
+    assertEquals(0, descriptorForType7.getIndex());
+    assertEquals(0, getResult8.getIndex());
+    assertEquals(0, getResult6.getIndex());
+    assertEquals(0, getResult.getIndex());
+    assertEquals(0, unknownFields.getSerializedSize());
+    assertEquals(0, unknownFields.getSerializedSizeAsMessageSet());
+    assertEquals(0, defaultInstanceForType.getSerializedSize());
+    assertEquals(0, rawData.getSerializedSize());
+    assertEquals(0L, rawData.getVout());
+    assertEquals(1, toProtoResult4.getExtensionRangeCount());
+    assertEquals(1, toProtoResult5.getNestedTypeCount());
+    assertEquals(1, toProtoResult.getNumber());
+    assertEquals(1, descriptorForType3.getIndex());
+    assertEquals(1, getResult9.getIndex());
+    assertEquals(1, getResult7.getIndex());
+    assertEquals(1, getResult2.getIndex());
+    assertEquals(1, getResult.getNumber());
+    assertEquals(1, actualSizeResult13);
+    assertEquals(1, actualSizeResult7);
+    assertEquals(10, descriptorForType2.getIndex());
+    assertEquals(10, actualSizeResult10);
+    assertEquals(11, descriptorForType4.getIndex());
+    assertEquals(120, toProtoResult5.getSerializedSize());
+    assertEquals(17, toProtoResult2.getSerializedSize());
+    assertEquals(17305, toProtoResult3.getSerializedSize());
+    assertEquals(19, descriptorForType5.getIndex());
+    assertEquals(1L, rawData2.getVout());
+    assertEquals(2, toProtoResult5.getFieldCount());
+    assertEquals(2, toProtoResult3.getEnumTypeCount());
+    assertEquals(2, descriptorForType6.getIndex());
+    assertEquals(2, actualSizeResult12);
+    assertEquals(2, actualSizeResult5);
+    assertEquals(2, actualSizeResult11);
+    assertEquals(2, actualSizeResult);
+    assertEquals(21, descriptorForType.getIndex());
+    assertEquals(22, rawData2.getSerializedSize());
+    assertEquals(3, toProtoResult6.getFieldCount());
+    assertEquals(3, toProtoResult3.getDependencyCount());
+    assertEquals(3, actualSizeResult15);
+    assertEquals(3, actualSizeResult9);
+    assertEquals(3, actualSizeResult14);
+    assertEquals(3, actualSizeResult2);
+    assertEquals(3, actualSizeResult3);
+    assertEquals(34, actualTxInput.getSerializedSize());
+    assertEquals(39, toProtoResult.getSerializedSize());
+    assertEquals(4, toProtoResult2.getNumber());
+    assertEquals(4, getResult2.getNumber());
+    assertEquals(43, getResult10.getIndex());
+    assertEquals(44, getResult11.getIndex());
+    assertEquals(45, toProtoResult3.getMessageTypeCount());
+    assertEquals(45, actualSizeResult6);
+    assertEquals(49, toProtoResult6.getSerializedSize());
+    assertEquals(5, toProtoResult4.getReservedRangeCount());
+    assertEquals(500, toProtoResult4.getSerializedSize());
+    assertEquals(7, toProtoResult4.getFieldCount());
+    assertEquals(7, actualSizeResult8);
+    assertEquals(7, actualSizeResult4);
+    assertEquals(70, options2.getSerializedSize());
+    assertEquals(Edition.EDITION_UNKNOWN, defaultInstanceForType3.getEdition());
+    assertEquals(Edition.EDITION_UNKNOWN, toProtoResult3.getEdition());
+    assertEquals(Edition.EDITION_UNKNOWN, file2.getEdition());
+    assertEquals(Edition.EDITION_UNKNOWN, file.getEdition());
+    assertEquals(Edition.EDITION_UNKNOWN, getResult3.getEdition());
+    assertEquals(Edition.EDITION_UNKNOWN, getResult4.getEdition());
+    assertEquals(Edition.EDITION_UNKNOWN, getResult5.getEdition());
+    assertEquals(EnumType.ENUM_TYPE_UNKNOWN, features.getEnumType());
+    assertEquals(FieldPresence.FIELD_PRESENCE_UNKNOWN, features.getFieldPresence());
+    assertEquals(JsonFormat.JSON_FORMAT_UNKNOWN, features.getJsonFormat());
+    assertEquals(MessageEncoding.MESSAGE_ENCODING_UNKNOWN, features.getMessageEncoding());
+    assertEquals(
+        RepeatedFieldEncoding.REPEATED_FIELD_ENCODING_UNKNOWN, features.getRepeatedFieldEncoding());
+    assertEquals(Utf8Validation.UTF8_VALIDATION_UNKNOWN, features.getUtf8Validation());
+    assertEquals(Label.LABEL_OPTIONAL, toProtoResult.getLabel());
+    assertEquals(Label.LABEL_OPTIONAL, toProtoResult2.getLabel());
+    assertEquals(Type.TYPE_BYTES, toProtoResult2.getType());
+    assertEquals(Type.TYPE_MESSAGE, toProtoResult.getType());
+    assertEquals(CType.STRING, options.getCtype());
+    assertEquals(JSType.JS_NORMAL, options.getJstype());
+    assertEquals(OptionRetention.RETENTION_UNKNOWN, options.getRetention());
+    assertEquals(OptimizeMode.SPEED, defaultInstanceForType2.getOptimizeFor());
+    assertEquals(OptimizeMode.SPEED, options2.getOptimizeFor());
+    assertEquals(JavaType.BYTE_STRING, getResult2.getJavaType());
+    assertEquals(JavaType.MESSAGE, getResult.getJavaType());
+    assertEquals(FieldDescriptor.Type.BYTES, getResult2.getType());
+    assertEquals(FieldDescriptor.Type.MESSAGE, getResult.getType());
+    assertEquals(Syntax.PROTO2, file2.getSyntax());
+    assertEquals(Syntax.PROTO3, file.getSyntax());
+    assertEquals(Syntax.PROTO3, actualSyntax);
+    assertEquals(Syntax.PROTO3, actualSyntax2);
+    assertEquals(Syntax.PROTO3, actualSyntax3);
+    assertEquals(FieldType.BYTES, getResult2.getLiteType());
+    assertEquals(FieldType.MESSAGE, getResult.getLiteType());
+    assertEquals(WireFormat.JavaType.BYTE_STRING, getResult2.getLiteJavaType());
+    assertEquals(WireFormat.JavaType.MESSAGE, getResult.getLiteJavaType());
+    assertFalse(nameBytes2.isEmpty());
+    assertFalse(nameBytes.isEmpty());
+    assertFalse(packageBytes.isEmpty());
+    assertFalse(syntaxBytes.isEmpty());
+    assertFalse(goPackageBytes.isEmpty());
+    assertFalse(javaOuterClassnameBytes.isEmpty());
+    assertFalse(javaPackageBytes.isEmpty());
+    assertFalse(signature2.isEmpty());
+    assertFalse(defaultInstanceForType4.hasName());
+    assertFalse(defaultInstanceForType4.hasOptions());
+    assertFalse(toProtoResult4.hasOptions());
+    assertFalse(toProtoResult5.hasOptions());
+    assertFalse(toProtoResult6.hasOptions());
+    assertFalse(features.hasEnumType());
+    assertFalse(features.hasFieldPresence());
+    assertFalse(features.hasJsonFormat());
+    assertFalse(features.hasMessageEncoding());
+    assertFalse(features.hasRepeatedFieldEncoding());
+    assertFalse(features.hasUtf8Validation());
+    assertFalse(toProtoResult.getProto3Optional());
+    assertFalse(toProtoResult2.getProto3Optional());
+    assertFalse(toProtoResult.hasDefaultValue());
+    assertFalse(toProtoResult2.hasDefaultValue());
+    assertFalse(toProtoResult.hasExtendee());
+    assertFalse(toProtoResult2.hasExtendee());
+    assertFalse(toProtoResult.hasJsonName());
+    assertFalse(toProtoResult2.hasJsonName());
+    assertFalse(toProtoResult.hasOneofIndex());
+    assertFalse(toProtoResult2.hasOneofIndex());
+    assertFalse(toProtoResult.hasOptions());
+    assertFalse(toProtoResult2.hasOptions());
+    assertFalse(toProtoResult.hasProto3Optional());
+    assertFalse(toProtoResult2.hasProto3Optional());
+    assertFalse(toProtoResult2.hasTypeName());
+    assertFalse(options.getDebugRedact());
+    assertFalse(options.getDeprecated());
+    assertFalse(options.getLazy());
+    assertFalse(options.getPacked());
+    assertFalse(options.getUnverifiedLazy());
+    assertFalse(options.getWeak());
+    assertFalse(options.hasCtype());
+    assertFalse(options.hasDebugRedact());
+    assertFalse(options.hasDeprecated());
+    assertFalse(options.hasFeatures());
+    assertFalse(options.hasJstype());
+    assertFalse(options.hasLazy());
+    assertFalse(options.hasPacked());
+    assertFalse(options.hasRetention());
+    assertFalse(options.hasUnverifiedLazy());
+    assertFalse(options.hasWeak());
+    assertFalse(defaultInstanceForType3.hasEdition());
+    assertFalse(toProtoResult3.hasEdition());
+    assertFalse(defaultInstanceForType3.hasName());
+    assertFalse(defaultInstanceForType3.hasOptions());
+    assertFalse(defaultInstanceForType3.hasPackage());
+    assertFalse(defaultInstanceForType3.hasSourceCodeInfo());
+    assertFalse(toProtoResult3.hasSourceCodeInfo());
+    assertFalse(defaultInstanceForType3.hasSyntax());
+    assertFalse(defaultInstanceForType2.getCcGenericServices());
+    assertFalse(options2.getCcGenericServices());
+    assertFalse(defaultInstanceForType2.getDeprecated());
+    assertFalse(options2.getDeprecated());
+    assertFalse(defaultInstanceForType2.getJavaGenerateEqualsAndHash());
+    assertFalse(options2.getJavaGenerateEqualsAndHash());
+    assertFalse(defaultInstanceForType2.getJavaGenericServices());
+    assertFalse(options2.getJavaGenericServices());
+    assertFalse(defaultInstanceForType2.getJavaMultipleFiles());
+    assertFalse(options2.getJavaMultipleFiles());
+    assertFalse(defaultInstanceForType2.getJavaStringCheckUtf8());
+    assertFalse(options2.getJavaStringCheckUtf8());
+    assertFalse(defaultInstanceForType2.getPhpGenericServices());
+    assertFalse(options2.getPhpGenericServices());
+    assertFalse(defaultInstanceForType2.getPyGenericServices());
+    assertFalse(options2.getPyGenericServices());
+    assertFalse(defaultInstanceForType2.hasCcEnableArenas());
+    assertFalse(options2.hasCcEnableArenas());
+    assertFalse(defaultInstanceForType2.hasCcGenericServices());
+    assertFalse(options2.hasCcGenericServices());
+    assertFalse(defaultInstanceForType2.hasCsharpNamespace());
+    assertFalse(options2.hasCsharpNamespace());
+    assertFalse(defaultInstanceForType2.hasDeprecated());
+    assertFalse(options2.hasDeprecated());
+    assertFalse(defaultInstanceForType2.hasFeatures());
+    assertFalse(options2.hasFeatures());
+    assertFalse(defaultInstanceForType2.hasGoPackage());
+    assertFalse(defaultInstanceForType2.hasJavaGenerateEqualsAndHash());
+    assertFalse(options2.hasJavaGenerateEqualsAndHash());
+    assertFalse(defaultInstanceForType2.hasJavaGenericServices());
+    assertFalse(options2.hasJavaGenericServices());
+    assertFalse(defaultInstanceForType2.hasJavaMultipleFiles());
+    assertFalse(options2.hasJavaMultipleFiles());
+    assertFalse(defaultInstanceForType2.hasJavaOuterClassname());
+    assertFalse(defaultInstanceForType2.hasJavaPackage());
+    assertFalse(defaultInstanceForType2.hasJavaStringCheckUtf8());
+    assertFalse(options2.hasJavaStringCheckUtf8());
+    assertFalse(defaultInstanceForType2.hasObjcClassPrefix());
+    assertFalse(options2.hasObjcClassPrefix());
+    assertFalse(defaultInstanceForType2.hasOptimizeFor());
+    assertFalse(options2.hasOptimizeFor());
+    assertFalse(defaultInstanceForType2.hasPhpClassPrefix());
+    assertFalse(options2.hasPhpClassPrefix());
+    assertFalse(defaultInstanceForType2.hasPhpGenericServices());
+    assertFalse(options2.hasPhpGenericServices());
+    assertFalse(defaultInstanceForType2.hasPhpMetadataNamespace());
+    assertFalse(options2.hasPhpMetadataNamespace());
+    assertFalse(defaultInstanceForType2.hasPhpNamespace());
+    assertFalse(options2.hasPhpNamespace());
+    assertFalse(defaultInstanceForType2.hasPyGenericServices());
+    assertFalse(options2.hasPyGenericServices());
+    assertFalse(defaultInstanceForType2.hasRubyPackage());
+    assertFalse(options2.hasRubyPackage());
+    assertFalse(defaultInstanceForType2.hasSwiftPrefix());
+    assertFalse(options2.hasSwiftPrefix());
+    assertFalse(options3.getDeprecated());
+    assertFalse(options3.getDeprecatedLegacyJsonFieldConflicts());
+    assertFalse(options3.getMapEntry());
+    assertFalse(options3.getMessageSetWireFormat());
+    assertFalse(options3.getNoStandardDescriptorAccessor());
+    assertFalse(options3.hasDeprecated());
+    assertFalse(options3.hasDeprecatedLegacyJsonFieldConflicts());
+    assertFalse(options3.hasFeatures());
+    assertFalse(options3.hasMapEntry());
+    assertFalse(options3.hasMessageSetWireFormat());
+    assertFalse(options3.hasNoStandardDescriptorAccessor());
+    assertFalse(descriptorForType6.isExtendable());
+    assertFalse(descriptorForType3.isExtendable());
+    assertFalse(descriptorForType.isExtendable());
+    assertFalse(descriptorForType7.isExtendable());
+    assertFalse(getResult8.isExtendable());
+    assertFalse(getResult9.isExtendable());
+    assertFalse(getResult10.isExtendable());
+    assertFalse(getResult11.isExtendable());
+    assertFalse(getResult6.isClosed());
+    assertFalse(getResult7.isClosed());
+    assertFalse(getResult.hasDefaultValue());
+    assertFalse(getResult2.hasDefaultValue());
+    assertFalse(getResult.hasOptionalKeyword());
+    assertFalse(getResult2.hasOptionalKeyword());
+    assertFalse(getResult2.hasPresence());
+    assertFalse(getResult.isExtension());
+    assertFalse(getResult2.isExtension());
+    assertFalse(getResult.isMapField());
+    assertFalse(getResult2.isMapField());
+    assertFalse(getResult.isPackable());
+    assertFalse(getResult2.isPackable());
+    assertFalse(getResult.isPacked());
+    assertFalse(getResult2.isPacked());
+    assertFalse(getResult.isRepeated());
+    assertFalse(getResult2.isRepeated());
+    assertFalse(getResult.isRequired());
+    assertFalse(getResult2.isRequired());
+    assertFalse(actualHasNextResult);
+    assertFalse(defaultInstanceForType.hasRawData());
+    assertTrue(signature.isEmpty());
+    assertTrue(toProtoResult4.hasName());
+    assertTrue(toProtoResult5.hasName());
+    assertTrue(toProtoResult6.hasName());
+    assertTrue(toProtoResult.hasLabel());
+    assertTrue(toProtoResult2.hasLabel());
+    assertTrue(toProtoResult.hasName());
+    assertTrue(toProtoResult2.hasName());
+    assertTrue(toProtoResult.hasNumber());
+    assertTrue(toProtoResult2.hasNumber());
+    assertTrue(toProtoResult.hasType());
+    assertTrue(toProtoResult2.hasType());
+    assertTrue(toProtoResult.hasTypeName());
+    assertTrue(toProtoResult3.hasName());
+    assertTrue(toProtoResult3.hasOptions());
+    assertTrue(toProtoResult3.hasPackage());
+    assertTrue(toProtoResult3.hasSyntax());
+    assertTrue(defaultInstanceForType2.getCcEnableArenas());
+    assertTrue(options2.getCcEnableArenas());
+    assertTrue(options2.hasGoPackage());
+    assertTrue(options2.hasJavaOuterClassname());
+    assertTrue(options2.hasJavaPackage());
+    assertTrue(descriptorForType5.isExtendable());
+    assertTrue(descriptorForType4.isExtendable());
+    assertTrue(descriptorForType2.isExtendable());
+    assertTrue(getResult.hasPresence());
+    assertTrue(getResult.isOptional());
+    assertTrue(getResult2.isOptional());
+    assertTrue(unknownFields.isInitialized());
+    assertTrue(iteratorResult7.hasNext());
+    assertTrue(iteratorResult4.hasNext());
+    assertTrue(iteratorResult5.hasNext());
+    assertTrue(iteratorResult6.hasNext());
+    assertTrue(iteratorResult.hasNext());
+    assertTrue(iteratorResult2.hasNext());
+    assertTrue(iteratorResult3.hasNext());
+    assertTrue(iteratorResult8.hasNext());
+    assertTrue(actualIsEmptyResult22);
+    assertTrue(actualIsEmptyResult19);
+    assertTrue(actualIsEmptyResult15);
+    assertTrue(actualIsEmptyResult21);
+    assertTrue(actualIsEmptyResult9);
+    assertTrue(actualIsEmptyResult12);
+    assertTrue(actualIsEmptyResult);
+    assertTrue(actualIsEmptyResult2);
+    assertTrue(findInitializationErrorsResult.isEmpty());
+    assertTrue(actualIsEmptyResult4);
+    assertTrue(actualIsEmptyResult13);
+    assertTrue(actualIsEmptyResult20);
+    assertTrue(actualIsEmptyResult16);
+    assertTrue(enumTypes2.isEmpty());
+    assertTrue(actualIsEmptyResult6);
+    assertTrue(enumTypes3.isEmpty());
+    assertTrue(actualIsEmptyResult17);
+    assertTrue(extensions.isEmpty());
+    assertTrue(actualIsEmptyResult7);
+    assertTrue(extensions2.isEmpty());
+    assertTrue(actualIsEmptyResult18);
+    assertTrue(nestedTypes.isEmpty());
+    assertTrue(oneofs.isEmpty());
+    assertTrue(oneofs2.isEmpty());
+    assertTrue(actualIsEmptyResult14);
+    assertTrue(oneofs3.isEmpty());
+    assertTrue(realOneofs.isEmpty());
+    assertTrue(realOneofs3.isEmpty());
+    assertTrue(realOneofs2.isEmpty());
+    assertTrue(realOneofs4.isEmpty());
+    assertTrue(actualIsEmptyResult8);
+    assertTrue(actualIsEmptyResult10);
+    assertTrue(actualIsEmptyResult11);
+    assertTrue(allFields3.isEmpty());
+    assertTrue(actualIsEmptyResult3);
+    assertTrue(actualIsEmptyResult5);
+    assertTrue(allFields2.isEmpty());
+    assertTrue(allFields.isEmpty());
+    assertTrue(allFieldsRaw2.isEmpty());
+    assertTrue(allFieldsRaw.isEmpty());
+    assertTrue(actualTxInput.hasRawData());
+    assertEquals('A', nextResult9.byteValue());
+    assertEquals('A', nextResult11.byteValue());
+    assertEquals('P', nextResult2.byteValue());
+    assertEquals('T', nextResult7.byteValue());
+    assertEquals('X', nextResult8.byteValue());
+    assertEquals('X', nextResult10.byteValue());
+    assertEquals('c', nextResult4.byteValue());
+    assertEquals('g', nextResult.byteValue());
+    assertEquals('o', nextResult3.byteValue());
+    assertEquals('p', nextResult5.byteValue());
+    assertEquals('p', nextResult6.byteValue());
+    assertSame(reservedNameList, defaultInstanceForType4.getReservedNameList());
+    assertSame(reservedNameList, toProtoResult4.getReservedNameList());
+    assertSame(reservedNameList, toProtoResult6.getReservedNameList());
+    assertSame(reservedNameList, defaultInstanceForType3.getDependencyList());
+  }
+
+  /**
+   * Test {@link TxInputCapsule#validate()}.
+   *
+   * <p>Method under test: {@link TxInputCapsule#validate()}
+   */
+  @Test
+  @Category(ContributionFromDiffblue.class)
+  @ManagedByDiffblue
+  @MethodsUnderTest({"boolean TxInputCapsule.validate()"})
+  public void testValidate() throws UnsupportedEncodingException {
+    // Arrange, Act and Assert
+    assertTrue(
+        new TxInputCapsule(
+                "AXAXAXAX".getBytes("UTF-8"),
+                1L,
+                "AXAXAXAX".getBytes("UTF-8"),
+                "AXAXAXAX".getBytes("UTF-8"))
+            .validate());
+  }
+
+  /**
+   * Test {@link TxInputCapsule#getData()}.
+   *
+   * <p>Method under test: {@link TxInputCapsule#getData()}
+   */
+  @Test
+  @Category(ContributionFromDiffblue.class)
+  @ManagedByDiffblue
+  @MethodsUnderTest({"byte[] TxInputCapsule.getData()"})
+  public void testGetData() throws UnsupportedEncodingException {
+    // Arrange, Act and Assert
+    assertArrayEquals(
+        new byte[] {},
+        new TxInputCapsule(
+                "AXAXAXAX".getBytes("UTF-8"),
+                1L,
+                "AXAXAXAX".getBytes("UTF-8"),
+                "AXAXAXAX".getBytes("UTF-8"))
+            .getData());
+  }
+
+  /**
+   * Test {@link TxInputCapsule#getInstance()}.
+   *
+   * <p>Method under test: {@link TxInputCapsule#getInstance()}
+   */
+  @Test
+  @Category(ContributionFromDiffblue.class)
+  @ManagedByDiffblue
+  @MethodsUnderTest({"TXInput TxInputCapsule.getInstance()"})
+  public void testGetInstance() throws UnsupportedEncodingException {
+    // Arrange and Act
+    TXInput actualInstance =
+        new TxInputCapsule(
+                "AXAXAXAX".getBytes("UTF-8"),
+                1L,
+                "AXAXAXAX".getBytes("UTF-8"),
+                "AXAXAXAX".getBytes("UTF-8"))
+            .getInstance();
+
+    // Assert
+    assertEquals("", actualInstance.getInitializationErrorString());
+    assertEquals(2, actualInstance.getAllFields().size());
+    assertEquals(34, actualInstance.getSerializedSize());
+    assertTrue(actualInstance.findInitializationErrors().isEmpty());
+    assertTrue(actualInstance.hasRawData());
+  }
+}
