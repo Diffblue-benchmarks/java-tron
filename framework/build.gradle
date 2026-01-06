@@ -252,3 +252,21 @@ task copyToParent(type: Copy) {
 }
 
 build.finalizedBy(copyToParent)
+
+allprojects {
+    afterEvaluate {
+        plugins.withId('jacoco') {
+            jacocoTestReport {
+                classDirectories.setFrom(
+                    files(classDirectories.files.collect {
+                        fileTree(dir: it, exclude: [
+                        'org/tron/core/services/RpcApiService$*',
+                        'org/tron/core/services/interfaceOnPBFT/RpcApiServiceOnPBFT$*',
+                        'org/tron/core/services/interfaceOnSolidity/RpcApiServiceOnSolidity$*',
+                        ])
+                    })
+                )
+            }
+        }
+    }
+}
