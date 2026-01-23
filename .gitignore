@@ -57,3 +57,9 @@ Wallet
 
 /framework/propPath
 .cache
+
+.diffblue/cache
+**.diffblue/cache
+**/.diffblue/cache
+**/**.diffblue/cache
+**/**/.diffblue/cache

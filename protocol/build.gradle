@@ -7,8 +7,8 @@ dependencies {
     api group: 'com.google.protobuf', name: 'protobuf-java', version: protobufVersion
     api group: 'com.google.protobuf', name: 'protobuf-java-util', version: protobufVersion
     api group: 'net.jcip', name: 'jcip-annotations', version: '1.0'
-    compileOnly group: "com.diffblue.cover", name: "cover-annotations", version: "1.7.0"
-    testImplementation group: "com.diffblue.cover", name: "cover-annotations", version: "1.7.0"
+    compileOnly group: "com.diffblue.cover", name: "cover-annotations", version: "1.9.0"
+    testImplementation group: "com.diffblue.cover", name: "cover-annotations", version: "1.9.0"
     testImplementation group: "org.springframework", name: "spring-test", version: "5.3.18"
 
 //    checkstyleConfig "com.puppycrawl.tools:checkstyle:${versions.checkstyle}"
