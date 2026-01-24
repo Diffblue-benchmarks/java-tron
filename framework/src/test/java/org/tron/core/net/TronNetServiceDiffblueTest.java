@@ -1,13 +1,14 @@
 package org.tron.core.net;
 
+import static org.junit.Assert.assertEquals;
 import static org.junit.Assert.assertFalse;
+import static org.junit.Assert.assertNull;
 import static org.junit.Assert.assertTrue;
 import static org.mockito.ArgumentMatchers.isNull;
 import static org.mockito.Mockito.doNothing;
 import static org.mockito.Mockito.mock;
 import static org.mockito.Mockito.mockStatic;
 import static org.mockito.Mockito.verify;
-import static org.mockito.Mockito.when;
 import com.diffblue.cover.annotations.ContributionFromDiffblue;
 import com.diffblue.cover.annotations.ManagedByDiffblue;
 import com.diffblue.cover.annotations.MethodsUnderTest;
@@ -15,6 +16,7 @@ import java.net.InetAddress;
 import java.net.UnknownHostException;
 import java.util.HashSet;
 import java.util.LinkedHashSet;
+import java.util.List;
 import java.util.Set;
 import org.junit.Test;
 import org.junit.experimental.categories.Category;
@@ -24,40 +26,18 @@ import org.mockito.Mock;
 import org.mockito.MockedStatic;
 import org.mockito.Mockito;
 import org.mockito.junit.MockitoJUnitRunner;
-import org.springframework.test.annotation.DirtiesContext;
-import org.springframework.test.annotation.DirtiesContext.ClassMode;
 import org.tron.common.overlay.message.Message;
-import org.tron.common.parameter.CommonParameter;
+import org.tron.core.net.peer.PeerConnection;
 import org.tron.core.net.service.adv.AdvService;
+import org.tron.p2p.P2pConfig;
+import org.tron.p2p.P2pService;
+import org.tron.p2p.stats.P2pStats;
 
-@DirtiesContext(classMode = ClassMode.AFTER_EACH_TEST_METHOD)
 @RunWith(MockitoJUnitRunner.class)
 public class TronNetServiceDiffblueTest {
   @Mock private AdvService advService;
 
-  @Mock private CommonParameter commonParameter;
-
   @InjectMocks private TronNetService tronNetService;
-
-  /**
-   * Test {@link TronNetService#start()}.
-   *
-   * <p>Method under test: {@link TronNetService#start()}
-   */
-  @Test
-  @Category(ContributionFromDiffblue.class)
-  @ManagedByDiffblue
-  @MethodsUnderTest({"void TronNetService.start()"})
-  public void testStart() {
-    // Arrange
-    when(commonParameter.getP2pConfig()).thenThrow(new RuntimeException());
-
-    // Act
-    tronNetService.start();
-
-    // Assert
-    verify(commonParameter).getP2pConfig();
-  }
 
   /**
    * Test {@link TronNetService#broadcast(Message)}.

@@ -6,6 +6,7 @@ import static org.junit.Assert.assertNull;
 import static org.junit.Assert.assertSame;
 import static org.junit.Assert.assertTrue;
 import static org.mockito.ArgumentMatchers.isA;
+import static org.mockito.Mockito.doNothing;
 import static org.mockito.Mockito.verify;
 import static org.mockito.Mockito.when;
 import com.diffblue.cover.annotations.ContributionFromDiffblue;
@@ -20,8 +21,11 @@ import org.mockito.InjectMocks;
 import org.mockito.Mock;
 import org.mockito.Mockito;
 import org.mockito.junit.MockitoJUnitRunner;
+import org.springframework.test.annotation.DirtiesContext;
+import org.springframework.test.annotation.DirtiesContext.ClassMode;
 import org.tron.core.capsule.BytesCapsule;
 
+@DirtiesContext(classMode = ClassMode.AFTER_EACH_TEST_METHOD)
 @RunWith(MockitoJUnitRunner.class)
 public class ConcurrentHashDBDiffblueTest {
   @InjectMocks private ConcurrentHashDB concurrentHashDB;
@@ -145,6 +149,33 @@ public class ConcurrentHashDBDiffblueTest {
    * BytesCapsule}.
    *
    * <ul>
+   *   <li>Then calls {@link Map#put(Object, Object)}.
+   * </ul>
+   *
+   * <p>Method under test: {@link ConcurrentHashDB#put(byte[], BytesCapsule)}
+   */
+  @Test
+  @Category(ContributionFromDiffblue.class)
+  @ManagedByDiffblue
+  @MethodsUnderTest({"void ConcurrentHashDB.put(byte[], BytesCapsule)"})
+  public void testPutWithByteBytesCapsule_thenCallsPut() throws UnsupportedEncodingException {
+    // Arrange
+    when(map.put(Mockito.<Key>any(), Mockito.<BytesCapsule>any()))
+        .thenReturn(new BytesCapsule("AXAXAXAX".getBytes("UTF-8")));
+    byte[] bytes = "AXAXAXAX".getBytes("UTF-8");
+
+    // Act
+    concurrentHashDB.put(bytes, new BytesCapsule("AXAXAXAX".getBytes("UTF-8")));
+
+    // Assert
+    verify(map).put(isA(Key.class), isA(BytesCapsule.class));
+  }
+
+  /**
+   * Test {@link ConcurrentHashDB#put(byte[], BytesCapsule)} with {@code byte[]}, {@code
+   * BytesCapsule}.
+   *
+   * <ul>
    *   <li>Then {@link ConcurrentHashDB} (default constructor) size is two.
    * </ul>
    *
@@ -259,6 +290,31 @@ public class ConcurrentHashDBDiffblueTest {
    * Test {@link ConcurrentHashDB#remove(byte[])} with {@code byte[]}.
    *
    * <ul>
+   *   <li>Then calls {@link Map#remove(Object)}.
+   * </ul>
+   *
+   * <p>Method under test: {@link ConcurrentHashDB#remove(byte[])}
+   */
+  @Test
+  @Category(ContributionFromDiffblue.class)
+  @ManagedByDiffblue
+  @MethodsUnderTest({"void ConcurrentHashDB.remove(byte[])"})
+  public void testRemoveWithByte_thenCallsRemove() throws UnsupportedEncodingException {
+    // Arrange
+    when(map.remove(Mockito.<Object>any()))
+        .thenReturn(new BytesCapsule("AXAXAXAX".getBytes("UTF-8")));
+
+    // Act
+    concurrentHashDB.remove("AXAXAXAX".getBytes("UTF-8"));
+
+    // Assert
+    verify(map).remove(isA(Object.class));
+  }
+
+  /**
+   * Test {@link ConcurrentHashDB#remove(byte[])} with {@code byte[]}.
+   *
+   * <ul>
    *   <li>Then {@link ConcurrentHashDB} (default constructor) size is one.
    * </ul>
    *
@@ -296,6 +352,26 @@ public class ConcurrentHashDBDiffblueTest {
   public void testIterator() {
     // Arrange, Act and Assert
     assertNull(new ConcurrentHashDB().iterator());
+  }
+
+  /**
+   * Test {@link ConcurrentHashDB#close()}.
+   *
+   * <p>Method under test: {@link ConcurrentHashDB#close()}
+   */
+  @Test
+  @Category(ContributionFromDiffblue.class)
+  @ManagedByDiffblue
+  @MethodsUnderTest({"void ConcurrentHashDB.close()"})
+  public void testClose() {
+    // Arrange
+    doNothing().when(map).clear();
+
+    // Act
+    concurrentHashDB.close();
+
+    // Assert
+    verify(map).clear();
   }
 
   /**

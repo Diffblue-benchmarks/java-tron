@@ -1,5 +1,7 @@
 package org.tron.consensus.pbft;
 
+import static org.junit.Assert.assertFalse;
+import static org.junit.Assert.assertTrue;
 import static org.mockito.ArgumentMatchers.eq;
 import static org.mockito.ArgumentMatchers.isA;
 import static org.mockito.Mockito.anyLong;
@@ -13,19 +15,25 @@ import com.diffblue.cover.annotations.ManagedByDiffblue;
 import com.diffblue.cover.annotations.MethodsUnderTest;
 import com.google.common.cache.Cache;
 import com.google.common.util.concurrent.AtomicLongMap;
+import java.util.ArrayList;
 import java.util.HashMap;
+import java.util.List;
 import java.util.Set;
 import java.util.Timer;
 import java.util.TimerTask;
 import org.junit.Test;
 import org.junit.experimental.categories.Category;
 import org.junit.runner.RunWith;
+import org.mockito.ArgumentMatchers;
 import org.mockito.InjectMocks;
 import org.mockito.Mock;
 import org.mockito.Mockito;
 import org.mockito.junit.MockitoJUnitRunner;
 import org.springframework.test.annotation.DirtiesContext;
 import org.springframework.test.annotation.DirtiesContext.ClassMode;
+import org.tron.consensus.base.Param;
+import org.tron.consensus.base.Param.Miner;
+import org.tron.consensus.dpos.MaintenanceManager;
 import org.tron.consensus.pbft.message.PbftMessage;
 
 @DirtiesContext(classMode = ClassMode.AFTER_EACH_TEST_METHOD)
@@ -52,7 +60,9 @@ public class PbftMessageHandleDiffblueTest {
   @MethodsUnderTest({"void PbftMessageHandle.init()"})
   public void testInit() {
     // Arrange
-    doNothing().when(timer).schedule(Mockito.<TimerTask>any(), anyLong(), anyLong());
+    doNothing()
+        .when(timer)
+        .schedule(Mockito.<TimerTask>any(), ArgumentMatchers.anyLong(), ArgumentMatchers.anyLong());
 
     // Act
     pbftMessageHandle.init();
@@ -474,7 +484,9 @@ public class PbftMessageHandleDiffblueTest {
   @MethodsUnderTest({"void PbftMessageHandle.start()"})
   public void testStart() {
     // Arrange
-    doNothing().when(timer).schedule(Mockito.<TimerTask>any(), anyLong(), anyLong());
+    doNothing()
+        .when(timer)
+        .schedule(Mockito.<TimerTask>any(), ArgumentMatchers.anyLong(), ArgumentMatchers.anyLong());
 
     // Act
     pbftMessageHandle.start();

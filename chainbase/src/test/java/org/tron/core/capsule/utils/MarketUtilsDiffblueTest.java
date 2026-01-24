@@ -5,6 +5,8 @@ import static org.junit.Assert.assertEquals;
 import static org.junit.Assert.assertFalse;
 import static org.junit.Assert.assertThrows;
 import static org.junit.Assert.assertTrue;
+import static org.mockito.ArgumentMatchers.isA;
+import static org.mockito.ArgumentMatchers.isNull;
 import static org.mockito.Mockito.doNothing;
 import static org.mockito.Mockito.mock;
 import static org.mockito.Mockito.verify;
@@ -17,6 +19,7 @@ import java.io.UnsupportedEncodingException;
 import org.junit.Test;
 import org.junit.experimental.categories.Category;
 import org.mockito.Mockito;
+import org.tron.core.capsule.MarketAccountOrderCapsule;
 import org.tron.core.capsule.MarketOrderCapsule;
 import org.tron.core.exception.BadItemException;
 import org.tron.core.exception.ItemNotFoundException;
@@ -598,6 +601,57 @@ public class MarketUtilsDiffblueTest {
     // Arrange, Act and Assert
     assertTrue(
         MarketUtils.priceMatch(MarketPrice.getDefaultInstance(), MarketPrice.getDefaultInstance()));
+  }
+
+  /**
+   * Test {@link MarketUtils#updateOrderState(MarketOrderCapsule, State, MarketAccountStore)}.
+   *
+   * <ul>
+   *   <li>Then calls {@link ByteString#toByteArray()}.
+   * </ul>
+   *
+   * <p>Method under test: {@link MarketUtils#updateOrderState(MarketOrderCapsule, State,
+   * MarketAccountStore)}
+   */
+  @Test
+  @Category(ContributionFromDiffblue.class)
+  @ManagedByDiffblue
+  @MethodsUnderTest({
+    "void MarketUtils.updateOrderState(MarketOrderCapsule, State, MarketAccountStore)"
+  })
+  public void testUpdateOrderState_thenCallsToByteArray()
+      throws UnsupportedEncodingException, ItemNotFoundException {
+    // Arrange
+    ByteString byteString = mock(ByteString.class);
+    when(byteString.toByteArray()).thenReturn("AXAXAXAX".getBytes("UTF-8"));
+
+    MarketOrderCapsule orderCapsule = mock(MarketOrderCapsule.class);
+    when(orderCapsule.getID()).thenReturn(null);
+    when(orderCapsule.getOwnerAddress()).thenReturn(byteString);
+    doNothing().when(orderCapsule).setState(Mockito.<State>any());
+
+    MarketAccountOrderCapsule marketAccountOrderCapsule = mock(MarketAccountOrderCapsule.class);
+    when(marketAccountOrderCapsule.createDbKey()).thenReturn("AXAXAXAX".getBytes("UTF-8"));
+    doNothing().when(marketAccountOrderCapsule).removeOrder(Mockito.<ByteString>any());
+
+    MarketAccountStore marketAccountStore = mock(MarketAccountStore.class);
+    doNothing()
+        .when(marketAccountStore)
+        .put(Mockito.<byte[]>any(), Mockito.<MarketAccountOrderCapsule>any());
+    when(marketAccountStore.get(Mockito.<byte[]>any())).thenReturn(marketAccountOrderCapsule);
+
+    // Act
+    MarketUtils.updateOrderState(orderCapsule, State.INACTIVE, marketAccountStore);
+
+    // Assert
+    verify(byteString).toByteArray();
+    verify(marketAccountOrderCapsule).createDbKey();
+    verify(marketAccountOrderCapsule).removeOrder(isNull());
+    verify(orderCapsule).getID();
+    verify(orderCapsule).getOwnerAddress();
+    verify(orderCapsule).setState(State.INACTIVE);
+    verify(marketAccountStore).put(isA(byte[].class), isA(MarketAccountOrderCapsule.class));
+    verify(marketAccountStore).get(isA(byte[].class));
   }
 
   /**

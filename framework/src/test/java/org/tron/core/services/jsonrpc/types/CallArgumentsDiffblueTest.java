@@ -2,11 +2,13 @@ package org.tron.core.services.jsonrpc.types;
 
 import static org.junit.Assert.assertEquals;
 import static org.junit.Assert.assertThrows;
+import static org.junit.Assert.assertTrue;
 import com.diffblue.cover.annotations.ContributionFromDiffblue;
 import com.diffblue.cover.annotations.ManagedByDiffblue;
 import com.diffblue.cover.annotations.MethodsUnderTest;
 import org.junit.Test;
 import org.junit.experimental.categories.Category;
+import org.tron.common.crypto.ECKey;
 import org.tron.core.Wallet;
 import org.tron.core.exception.JsonRpcInvalidParamsException;
 import org.tron.core.exception.JsonRpcInvalidRequestException;
@@ -104,7 +106,7 @@ public class CallArgumentsDiffblueTest {
    * Test {@link CallArguments#getContractType(Wallet)}.
    *
    * <ul>
-   *   <li>Then return {@code CreateSmartContract}.
+   *   <li>Then {@link Wallet#Wallet()} CryptoEngine {@link ECKey}.
    * </ul>
    *
    * <p>Method under test: {@link CallArguments#getContractType(Wallet)}
@@ -113,14 +115,19 @@ public class CallArgumentsDiffblueTest {
   @Category(ContributionFromDiffblue.class)
   @ManagedByDiffblue
   @MethodsUnderTest({"Transaction.Contract.ContractType CallArguments.getContractType(Wallet)"})
-  public void testGetContractType_thenReturnCreateSmartContract()
+  public void testGetContractType_thenWalletCryptoEngineECKey()
       throws JsonRpcInvalidParamsException, JsonRpcInvalidRequestException {
     // Arrange
     CallArguments callArguments =
         new CallArguments("jane.doe@example.org", "0x", "Gas", "Gas Price", "42", "Data", "Nonce");
+    Wallet wallet = new Wallet();
 
-    // Act and Assert
-    assertEquals(ContractType.CreateSmartContract, callArguments.getContractType(new Wallet()));
+    // Act
+    ContractType actualContractType = callArguments.getContractType(wallet);
+
+    // Assert
+    assertTrue(wallet.getCryptoEngine() instanceof ECKey);
+    assertEquals(ContractType.CreateSmartContract, actualContractType);
   }
 
   /**

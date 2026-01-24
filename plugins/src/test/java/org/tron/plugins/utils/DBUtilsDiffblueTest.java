@@ -50,6 +50,36 @@ public class DBUtilsDiffblueTest {
   }
 
   /**
+   * Test {@link DBUtils#newDefaultLevelDbOptions()}.
+   *
+   * <p>Method under test: {@link DBUtils#newDefaultLevelDbOptions()}
+   */
+  @Test
+  @Category(ContributionFromDiffblue.class)
+  @ManagedByDiffblue
+  @MethodsUnderTest({"Options DBUtils.newDefaultLevelDbOptions()"})
+  public void testNewDefaultLevelDbOptions2() {
+    // Arrange and Act
+    Options actualNewDefaultLevelDbOptionsResult = DBUtils.newDefaultLevelDbOptions();
+
+    // Assert
+    assertNull(actualNewDefaultLevelDbOptionsResult.comparator());
+    assertNull(actualNewDefaultLevelDbOptionsResult.logger());
+    assertEquals(0, actualNewDefaultLevelDbOptionsResult.maxManifestSize());
+    assertEquals(1000, actualNewDefaultLevelDbOptionsResult.maxOpenFiles());
+    assertEquals(10485760, actualNewDefaultLevelDbOptionsResult.writeBufferSize());
+    assertEquals(10485760L, actualNewDefaultLevelDbOptionsResult.cacheSize());
+    assertEquals(4096, actualNewDefaultLevelDbOptionsResult.blockSize());
+    assertEquals(80000, actualNewDefaultLevelDbOptionsResult.maxBatchSize());
+    assertEquals(CompressionType.SNAPPY, actualNewDefaultLevelDbOptionsResult.compressionType());
+    assertFalse(actualNewDefaultLevelDbOptionsResult.errorIfExists());
+    assertTrue(actualNewDefaultLevelDbOptionsResult.createIfMissing());
+    assertTrue(actualNewDefaultLevelDbOptionsResult.paranoidChecks());
+    assertTrue(actualNewDefaultLevelDbOptionsResult.verifyChecksums());
+    assertEquals(Short.SIZE, actualNewDefaultLevelDbOptionsResult.blockRestartInterval());
+  }
+
+  /**
    * Test {@link DBUtils#getTransactionId(Transaction)}.
    *
    * <ul>
@@ -64,6 +94,41 @@ public class DBUtilsDiffblueTest {
   @ManagedByDiffblue
   @MethodsUnderTest({"Sha256Hash DBUtils.getTransactionId(Transaction)"})
   public void testGetTransactionId_whenDefaultInstance_thenReturnNotByteStringEmpty() {
+    // Arrange and Act
+    Sha256Hash actualTransactionId = DBUtils.getTransactionId(Transaction.getDefaultInstance());
+
+    // Assert
+    ByteString byteString = actualTransactionId.getByteString();
+    assertFalse(byteString.isEmpty());
+    ByteIterator iteratorResult = byteString.iterator();
+    assertTrue(iteratorResult.hasNext());
+    assertEquals((byte) -29, iteratorResult.next().byteValue());
+    assertEquals((byte) -80, iteratorResult.next().byteValue());
+    assertEquals((byte) -60, iteratorResult.next().byteValue());
+    assertEquals("��B��\u001c\u0014���șo�$'�A�d��L���\u001bxR�U", byteString.toStringUtf8());
+    assertArrayEquals(
+        new byte[] {
+          -29, -80, -60, 'B', -104, -4, 28, 20, -102, -5, -12, -56, -103, 'o', -71, '$', '\'', -82,
+          'A', -28, 'd', -101, -109, 'L', -92, -107, -103, 27, 'x', 'R', -72, 'U'
+        },
+        actualTransactionId.getBytes());
+  }
+
+  /**
+   * Test {@link DBUtils#getTransactionId(Transaction)}.
+   *
+   * <ul>
+   *   <li>When DefaultInstance.
+   *   <li>Then return not ByteString Empty.
+   * </ul>
+   *
+   * <p>Method under test: {@link DBUtils#getTransactionId(Transaction)}
+   */
+  @Test
+  @Category(ContributionFromDiffblue.class)
+  @ManagedByDiffblue
+  @MethodsUnderTest({"Sha256Hash DBUtils.getTransactionId(Transaction)"})
+  public void testGetTransactionId_whenDefaultInstance_thenReturnNotByteStringEmpty2() {
     // Arrange and Act
     Sha256Hash actualTransactionId = DBUtils.getTransactionId(Transaction.getDefaultInstance());
 

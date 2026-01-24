@@ -160,6 +160,121 @@ public class SolidityNodeHttpApiServiceDiffblueTest {
    * Test {@link SolidityNodeHttpApiService#start()}.
    *
    * <ul>
+   *   <li>Given {@link ListWitnessesServlet} {@link ListWitnessesServlet#init(ServletConfig)} throw
+   *       {@link RuntimeException#RuntimeException()}.
+   *   <li>Then calls {@link EstimateEnergyServlet#init(ServletConfig)}.
+   * </ul>
+   *
+   * <p>Method under test: {@link SolidityNodeHttpApiService#start()}
+   */
+  @Test
+  @Category(ContributionFromDiffblue.class)
+  @ManagedByDiffblue
+  @MethodsUnderTest({"void SolidityNodeHttpApiService.start()"})
+  public void testStart_givenListWitnessesServletInitThrowRuntimeException_thenCallsInit()
+      throws ServletException {
+    // Arrange
+    doNothing().when(estimateEnergyServlet).init(Mockito.<ServletConfig>any());
+    doNothing().when(getAccountByIdServlet).init(Mockito.<ServletConfig>any());
+    doNothing().when(getAccountServlet).init(Mockito.<ServletConfig>any());
+    doNothing().when(getAssetIssueByIdServlet).init(Mockito.<ServletConfig>any());
+    doNothing().when(getAssetIssueByNameServlet).init(Mockito.<ServletConfig>any());
+    doNothing().when(getAssetIssueListByNameServlet).init(Mockito.<ServletConfig>any());
+    doNothing().when(getAssetIssueListServlet).init(Mockito.<ServletConfig>any());
+    doNothing().when(getAvailableUnfreezeCountServlet).init(Mockito.<ServletConfig>any());
+    doNothing().when(getBandwidthPricesServlet).init(Mockito.<ServletConfig>any());
+    doNothing().when(getBlockByIdServlet).init(Mockito.<ServletConfig>any());
+    doNothing().when(getBlockByLatestNumServlet).init(Mockito.<ServletConfig>any());
+    doNothing().when(getBlockByLimitNextServlet).init(Mockito.<ServletConfig>any());
+    doNothing().when(getBlockByNumServlet).init(Mockito.<ServletConfig>any());
+    doNothing().when(getBlockServlet).init(Mockito.<ServletConfig>any());
+    doNothing().when(getBrokerageServlet).init(Mockito.<ServletConfig>any());
+    doNothing().when(getBurnTrxServlet).init(Mockito.<ServletConfig>any());
+    doNothing().when(getCanDelegatedMaxSizeServlet).init(Mockito.<ServletConfig>any());
+    doNothing().when(getCanWithdrawUnfreezeAmountServlet).init(Mockito.<ServletConfig>any());
+    doNothing().when(getDelegatedResourceAccountIndexServlet).init(Mockito.<ServletConfig>any());
+    doNothing().when(getDelegatedResourceAccountIndexV2Servlet).init(Mockito.<ServletConfig>any());
+    doNothing().when(getDelegatedResourceServlet).init(Mockito.<ServletConfig>any());
+    doNothing().when(getDelegatedResourceV2Servlet).init(Mockito.<ServletConfig>any());
+    doNothing().when(getEnergyPricesServlet).init(Mockito.<ServletConfig>any());
+    doNothing().when(getExchangeByIdServlet).init(Mockito.<ServletConfig>any());
+    doNothing().when(getMarketOrderByAccountServlet).init(Mockito.<ServletConfig>any());
+    doNothing().when(getMarketOrderByIdServlet).init(Mockito.<ServletConfig>any());
+    doNothing().when(getMarketOrderListByPairServlet).init(Mockito.<ServletConfig>any());
+    doNothing().when(getMarketPairListServlet).init(Mockito.<ServletConfig>any());
+    doNothing().when(getMarketPriceByPairServlet).init(Mockito.<ServletConfig>any());
+    doNothing().when(getNodeInfoServlet).init(Mockito.<ServletConfig>any());
+    doNothing().when(getNowBlockServlet).init(Mockito.<ServletConfig>any());
+    doNothing().when(getPaginatedAssetIssueListServlet).init(Mockito.<ServletConfig>any());
+    doNothing().when(getRewardServlet).init(Mockito.<ServletConfig>any());
+    doNothing().when(getTransactionByIdSolidityServlet).init(Mockito.<ServletConfig>any());
+    doNothing().when(getTransactionCountByBlockNumServlet).init(Mockito.<ServletConfig>any());
+    doNothing().when(getTransactionInfoByBlockNumServlet).init(Mockito.<ServletConfig>any());
+    doNothing().when(getTransactionInfoByIdSolidityServlet).init(Mockito.<ServletConfig>any());
+    doNothing().when(httpApiAccessFilter).init(Mockito.<FilterConfig>any());
+    doNothing().when(isShieldedTRC20ContractNoteSpentServlet).init(Mockito.<ServletConfig>any());
+    doNothing().when(listExchangesServlet).init(Mockito.<ServletConfig>any());
+    doThrow(new RuntimeException()).when(listWitnessesServlet).init(Mockito.<ServletConfig>any());
+    doNothing().when(scanShieldedTRC20NotesByIvkServlet).init(Mockito.<ServletConfig>any());
+    doThrow(new RuntimeException())
+        .when(scanShieldedTRC20NotesByOvkServlet)
+        .init(Mockito.<ServletConfig>any());
+    doNothing().when(triggerConstantContractServlet).init(Mockito.<ServletConfig>any());
+
+    // Act
+    solidityNodeHttpApiService.start();
+
+    // Assert
+    verify(estimateEnergyServlet).init(isA(ServletConfig.class));
+    verify(getAccountByIdServlet).init(isA(ServletConfig.class));
+    verify(getAccountServlet).init(isA(ServletConfig.class));
+    verify(getAssetIssueByIdServlet).init(isA(ServletConfig.class));
+    verify(getAssetIssueByNameServlet).init(isA(ServletConfig.class));
+    verify(getAssetIssueListByNameServlet).init(isA(ServletConfig.class));
+    verify(getAssetIssueListServlet).init(isA(ServletConfig.class));
+    verify(getAvailableUnfreezeCountServlet).init(isA(ServletConfig.class));
+    verify(getBandwidthPricesServlet).init(isA(ServletConfig.class));
+    verify(getBlockByIdServlet).init(isA(ServletConfig.class));
+    verify(getBlockByLatestNumServlet).init(isA(ServletConfig.class));
+    verify(getBlockByLimitNextServlet).init(isA(ServletConfig.class));
+    verify(getBlockByNumServlet).init(isA(ServletConfig.class));
+    verify(getBlockServlet).init(isA(ServletConfig.class));
+    verify(getBrokerageServlet).init(isA(ServletConfig.class));
+    verify(getBurnTrxServlet).init(isA(ServletConfig.class));
+    verify(getCanDelegatedMaxSizeServlet).init(isA(ServletConfig.class));
+    verify(getCanWithdrawUnfreezeAmountServlet).init(isA(ServletConfig.class));
+    verify(getDelegatedResourceAccountIndexServlet).init(isA(ServletConfig.class));
+    verify(getDelegatedResourceAccountIndexV2Servlet).init(isA(ServletConfig.class));
+    verify(getDelegatedResourceServlet).init(isA(ServletConfig.class));
+    verify(getDelegatedResourceV2Servlet).init(isA(ServletConfig.class));
+    verify(getEnergyPricesServlet).init(isA(ServletConfig.class));
+    verify(getExchangeByIdServlet).init(isA(ServletConfig.class));
+    verify(getMarketOrderByAccountServlet).init(isA(ServletConfig.class));
+    verify(getMarketOrderByIdServlet).init(isA(ServletConfig.class));
+    verify(getMarketOrderListByPairServlet).init(isA(ServletConfig.class));
+    verify(getMarketPairListServlet).init(isA(ServletConfig.class));
+    verify(getMarketPriceByPairServlet).init(isA(ServletConfig.class));
+    verify(getNowBlockServlet).init(isA(ServletConfig.class));
+    verify(getPaginatedAssetIssueListServlet).init(isA(ServletConfig.class));
+    verify(getRewardServlet).init(isA(ServletConfig.class));
+    verify(getTransactionCountByBlockNumServlet).init(isA(ServletConfig.class));
+    verify(getTransactionInfoByBlockNumServlet).init(isA(ServletConfig.class));
+    verify(isShieldedTRC20ContractNoteSpentServlet).init(isA(ServletConfig.class));
+    verify(listExchangesServlet).init(isA(ServletConfig.class));
+    verify(listWitnessesServlet).init(isA(ServletConfig.class));
+    verify(scanShieldedTRC20NotesByIvkServlet).init(isA(ServletConfig.class));
+    verify(scanShieldedTRC20NotesByOvkServlet).init(isA(ServletConfig.class));
+    verify(triggerConstantContractServlet).init(isA(ServletConfig.class));
+    verify(getTransactionByIdSolidityServlet).init(isA(ServletConfig.class));
+    verify(getTransactionInfoByIdSolidityServlet).init(isA(ServletConfig.class));
+    verify(getNodeInfoServlet, atLeast(1)).init(Mockito.<ServletConfig>any());
+    verify(httpApiAccessFilter).init(isA(FilterConfig.class));
+  }
+
+  /**
+   * Test {@link SolidityNodeHttpApiService#start()}.
+   *
+   * <ul>
    *   <li>Given {@link ScanShieldedTRC20NotesByOvkServlet} {@link
    *       ScanShieldedTRC20NotesByOvkServlet#init(ServletConfig)} does nothing.
    *   <li>Then calls {@link EstimateEnergyServlet#init(ServletConfig)}.

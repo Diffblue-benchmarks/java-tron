@@ -2,6 +2,7 @@ package org.tron.common.logsfilter;
 
 import static org.junit.Assert.assertFalse;
 import static org.junit.Assert.assertNull;
+import static org.junit.Assert.assertSame;
 import static org.junit.Assert.assertTrue;
 import static org.mockito.Mockito.doNothing;
 import static org.mockito.Mockito.verify;
@@ -76,8 +77,7 @@ public class EventPluginLoaderDiffblueTest {
    * Test {@link EventPluginLoader#start(EventPluginConfig)}.
    *
    * <ul>
-   *   <li>Given {@code false}.
-   *   <li>When {@link EventPluginConfig} (default constructor) UseNativeQueue is {@code false}.
+   *   <li>Given Instance.
    *   <li>Then return {@code false}.
    * </ul>
    *
@@ -87,7 +87,7 @@ public class EventPluginLoaderDiffblueTest {
   @Category(ContributionFromDiffblue.class)
   @ManagedByDiffblue
   @MethodsUnderTest({"boolean EventPluginLoader.start(EventPluginConfig)"})
-  public void testStart_givenFalse_whenEventPluginConfigUseNativeQueueIsFalse_thenReturnFalse() {
+  public void testStart_givenInstance_thenReturnFalse() {
     // Arrange
     EventPluginLoader instance = EventPluginLoader.getInstance();
 

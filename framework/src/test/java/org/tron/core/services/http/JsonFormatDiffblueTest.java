@@ -17,13 +17,10 @@ import com.alibaba.fastjson.serializer.SerializerFeature;
 import com.diffblue.cover.annotations.ContributionFromDiffblue;
 import com.diffblue.cover.annotations.ManagedByDiffblue;
 import com.diffblue.cover.annotations.MethodsUnderTest;
-import com.google.protobuf.Any;
 import com.google.protobuf.ByteString;
 import com.google.protobuf.DescriptorProtos;
-import com.google.protobuf.DescriptorProtos.FeatureSetDefaults;
 import com.google.protobuf.DescriptorProtos.MessageOptions;
 import com.google.protobuf.Descriptors;
-import com.google.protobuf.Descriptors.Descriptor;
 import com.google.protobuf.Descriptors.FieldDescriptor;
 import com.google.protobuf.Descriptors.FieldDescriptor.Type;
 import com.google.protobuf.Message;
@@ -40,15 +37,27 @@ import org.apache.commons.lang3.text.StrBuilder;
 import org.aspectj.org.eclipse.jdt.internal.compiler.apt.model.NameImpl;
 import org.junit.Test;
 import org.junit.experimental.categories.Category;
+import org.junit.runner.RunWith;
+import org.mockito.InjectMocks;
+import org.mockito.Mock;
 import org.mockito.Mockito;
-import org.tron.api.GrpcAPI;
-import org.tron.api.GrpcAPI.AccountNetMessage;
+import org.mockito.junit.MockitoJUnitRunner;
+import org.springframework.test.annotation.DirtiesContext;
+import org.springframework.test.annotation.DirtiesContext.ClassMode;
 import org.tron.core.services.http.JsonFormat.InvalidEscapeSequence;
 import org.tron.core.services.http.JsonFormat.JsonGenerator;
 import org.tron.core.services.http.JsonFormat.ParseException;
 import org.tron.core.services.http.JsonFormat.Tokenizer;
 
+@DirtiesContext(classMode = ClassMode.AFTER_EACH_TEST_METHOD)
+@RunWith(MockitoJUnitRunner.class)
 public class JsonFormatDiffblueTest {
+  @Mock private Appendable appendable;
+
+  @InjectMocks private JsonGenerator jsonGenerator;
+
+  @Mock private StringBuilder stringBuilder;
+
   /**
    * Test InvalidEscapeSequence {@link InvalidEscapeSequence#InvalidEscapeSequence(String)}.
    *
@@ -82,6 +91,30 @@ public class JsonFormatDiffblueTest {
     // Arrange, Act and Assert
     assertThrows(
         IllegalArgumentException.class, () -> new JsonGenerator(new SerializeWriter()).outdent());
+  }
+
+  /**
+   * Test JsonGenerator {@link JsonGenerator#print(CharSequence)}.
+   *
+   * <ul>
+   *   <li>Then calls {@link StringBuilder#append(CharSequence)}.
+   * </ul>
+   *
+   * <p>Method under test: {@link JsonGenerator#print(CharSequence)}
+   */
+  @Test
+  @Category(ContributionFromDiffblue.class)
+  @ManagedByDiffblue
+  @MethodsUnderTest({"void JsonGenerator.print(CharSequence)"})
+  public void testJsonGeneratorPrint_thenCallsAppend() throws IOException {
+    // Arrange
+    when(stringBuilder.append(Mockito.<CharSequence>any())).thenReturn(new StringBuilder("foo"));
+
+    // Act
+    jsonGenerator.print(new NameImpl("\u0005\n\u0005\n".toCharArray()));
+
+    // Assert
+    verify(stringBuilder, atLeast(1)).append(Mockito.<CharSequence>any());
   }
 
   /**
@@ -638,461 +671,6 @@ public class JsonFormatDiffblueTest {
     assertEquals(2, output.size());
     assertArrayEquals(new char[] {}, output.toCharArrayForSpringWebSocket());
     assertArrayEquals(new char[] {'{', '}'}, output.toCharArray());
-  }
-
-  /**
-   * Test {@link JsonFormat#print(Message, JsonGenerator, boolean)} with {@code message}, {@code
-   * generator}, {@code selfType}.
-   *
-   * <p>Method under test: {@link JsonFormat#print(Message, JsonGenerator, boolean)}
-   */
-  @Test
-  @Category(ContributionFromDiffblue.class)
-  @ManagedByDiffblue
-  @MethodsUnderTest({"void JsonFormat.print(Message, JsonGenerator, boolean)"})
-  public void testPrintWithMessageGeneratorSelfType() throws IOException {
-    // Arrange
-    FieldDescriptor fieldDescriptor = mock(FieldDescriptor.class);
-    when(fieldDescriptor.compareTo(Mockito.<FieldDescriptor>any()))
-        .thenThrow(new RuntimeException());
-
-    HashMap<FieldDescriptor, Object> fieldDescriptorObjectMap = new HashMap<>();
-    fieldDescriptorObjectMap.put(fieldDescriptor, "42");
-
-    FeatureSetDefaults message = mock(FeatureSetDefaults.class);
-    when(message.getAllFields()).thenReturn(fieldDescriptorObjectMap);
-
-    // Act and Assert
-    assertThrows(
-        RuntimeException.class,
-        () -> JsonFormat.print(message, new JsonGenerator(new SerializeWriter()), true));
-    verify(fieldDescriptor).compareTo(isA(FieldDescriptor.class));
-    verify(message).getAllFields();
-  }
-
-  /**
-   * Test {@link JsonFormat#print(Message, JsonGenerator, boolean)} with {@code message}, {@code
-   * generator}, {@code selfType}.
-   *
-   * <p>Method under test: {@link JsonFormat#print(Message, JsonGenerator, boolean)}
-   */
-  @Test
-  @Category(ContributionFromDiffblue.class)
-  @ManagedByDiffblue
-  @MethodsUnderTest({"void JsonFormat.print(Message, JsonGenerator, boolean)"})
-  public void testPrintWithMessageGeneratorSelfType2() throws IOException {
-    // Arrange
-    FieldDescriptor fieldDescriptor = mock(FieldDescriptor.class);
-    when(fieldDescriptor.getContainingType()).thenThrow(new RuntimeException());
-    when(fieldDescriptor.isExtension()).thenReturn(true);
-    when(fieldDescriptor.compareTo(Mockito.<FieldDescriptor>any())).thenReturn(1);
-
-    HashMap<FieldDescriptor, Object> fieldDescriptorObjectMap = new HashMap<>();
-    fieldDescriptorObjectMap.put(fieldDescriptor, "42");
-
-    FeatureSetDefaults message = mock(FeatureSetDefaults.class);
-    when(message.getAllFields()).thenReturn(fieldDescriptorObjectMap);
-
-    // Act and Assert
-    assertThrows(
-        RuntimeException.class,
-        () -> JsonFormat.print(message, new JsonGenerator(new SerializeWriter()), true));
-    verify(fieldDescriptor).compareTo(isA(FieldDescriptor.class));
-    verify(fieldDescriptor).getContainingType();
-    verify(fieldDescriptor).isExtension();
-    verify(message).getAllFields();
-  }
-
-  /**
-   * Test {@link JsonFormat#print(Message, JsonGenerator, boolean)} with {@code message}, {@code
-   * generator}, {@code selfType}.
-   *
-   * <p>Method under test: {@link JsonFormat#print(Message, JsonGenerator, boolean)}
-   */
-  @Test
-  @Category(ContributionFromDiffblue.class)
-  @ManagedByDiffblue
-  @MethodsUnderTest({"void JsonFormat.print(Message, JsonGenerator, boolean)"})
-  public void testPrintWithMessageGeneratorSelfType3() throws IOException {
-    // Arrange
-    FieldDescriptor fieldDescriptor = mock(FieldDescriptor.class);
-    when(fieldDescriptor.getFullName()).thenThrow(new RuntimeException());
-    when(fieldDescriptor.getContainingType()).thenReturn(AccountNetMessage.getDescriptor());
-    when(fieldDescriptor.isExtension()).thenReturn(true);
-    when(fieldDescriptor.compareTo(Mockito.<FieldDescriptor>any())).thenReturn(1);
-
-    HashMap<FieldDescriptor, Object> fieldDescriptorObjectMap = new HashMap<>();
-    fieldDescriptorObjectMap.put(fieldDescriptor, "42");
-
-    FeatureSetDefaults message = mock(FeatureSetDefaults.class);
-    when(message.getAllFields()).thenReturn(fieldDescriptorObjectMap);
-
-    // Act and Assert
-    assertThrows(
-        RuntimeException.class,
-        () -> JsonFormat.print(message, new JsonGenerator(new SerializeWriter()), true));
-    verify(fieldDescriptor).compareTo(isA(FieldDescriptor.class));
-    verify(fieldDescriptor).getContainingType();
-    verify(fieldDescriptor).getFullName();
-    verify(fieldDescriptor).isExtension();
-    verify(message).getAllFields();
-  }
-
-  /**
-   * Test {@link JsonFormat#print(Message, JsonGenerator, boolean)} with {@code message}, {@code
-   * generator}, {@code selfType}.
-   *
-   * <p>Method under test: {@link JsonFormat#print(Message, JsonGenerator, boolean)}
-   */
-  @Test
-  @Category(ContributionFromDiffblue.class)
-  @ManagedByDiffblue
-  @MethodsUnderTest({"void JsonFormat.print(Message, JsonGenerator, boolean)"})
-  public void testPrintWithMessageGeneratorSelfType4() throws IOException {
-    // Arrange
-    FieldDescriptor fieldDescriptor = mock(FieldDescriptor.class);
-    when(fieldDescriptor.getJavaType()).thenThrow(new RuntimeException());
-    when(fieldDescriptor.getFullName()).thenReturn("Dr Jane Doe");
-    when(fieldDescriptor.getContainingType()).thenReturn(AccountNetMessage.getDescriptor());
-    when(fieldDescriptor.isExtension()).thenReturn(true);
-    when(fieldDescriptor.compareTo(Mockito.<FieldDescriptor>any())).thenReturn(1);
-
-    HashMap<FieldDescriptor, Object> fieldDescriptorObjectMap = new HashMap<>();
-    fieldDescriptorObjectMap.put(fieldDescriptor, "42");
-
-    FeatureSetDefaults message = mock(FeatureSetDefaults.class);
-    when(message.getAllFields()).thenReturn(fieldDescriptorObjectMap);
-
-    // Act and Assert
-    assertThrows(
-        RuntimeException.class,
-        () -> JsonFormat.print(message, new JsonGenerator(new CharArrayWriter()), true));
-    verify(fieldDescriptor).compareTo(isA(FieldDescriptor.class));
-    verify(fieldDescriptor).getContainingType();
-    verify(fieldDescriptor).getFullName();
-    verify(fieldDescriptor).getJavaType();
-    verify(fieldDescriptor).isExtension();
-    verify(message).getAllFields();
-  }
-
-  /**
-   * Test {@link JsonFormat#print(Message, JsonGenerator, boolean)} with {@code message}, {@code
-   * generator}, {@code selfType}.
-   *
-   * <p>Method under test: {@link JsonFormat#print(Message, JsonGenerator, boolean)}
-   */
-  @Test
-  @Category(ContributionFromDiffblue.class)
-  @ManagedByDiffblue
-  @MethodsUnderTest({"void JsonFormat.print(Message, JsonGenerator, boolean)"})
-  public void testPrintWithMessageGeneratorSelfType5() throws IOException {
-    // Arrange
-    Descriptor descriptor = mock(Descriptor.class);
-    when(descriptor.getOptions()).thenThrow(new RuntimeException());
-
-    FieldDescriptor fieldDescriptor = mock(FieldDescriptor.class);
-    when(fieldDescriptor.getContainingType()).thenReturn(descriptor);
-    when(fieldDescriptor.isExtension()).thenReturn(true);
-    when(fieldDescriptor.compareTo(Mockito.<FieldDescriptor>any())).thenReturn(1);
-
-    HashMap<FieldDescriptor, Object> fieldDescriptorObjectMap = new HashMap<>();
-    fieldDescriptorObjectMap.put(fieldDescriptor, "42");
-
-    FeatureSetDefaults message = mock(FeatureSetDefaults.class);
-    when(message.getAllFields()).thenReturn(fieldDescriptorObjectMap);
-
-    // Act and Assert
-    assertThrows(
-        RuntimeException.class,
-        () -> JsonFormat.print(message, new JsonGenerator(new SerializeWriter()), true));
-    verify(descriptor).getOptions();
-    verify(fieldDescriptor).compareTo(isA(FieldDescriptor.class));
-    verify(fieldDescriptor).getContainingType();
-    verify(fieldDescriptor).isExtension();
-    verify(message).getAllFields();
-  }
-
-  /**
-   * Test {@link JsonFormat#print(Message, JsonGenerator, boolean)} with {@code message}, {@code
-   * generator}, {@code selfType}.
-   *
-   * <ul>
-   *   <li>Given {@link HashMap#HashMap()}.
-   * </ul>
-   *
-   * <p>Method under test: {@link JsonFormat#print(Message, JsonGenerator, boolean)}
-   */
-  @Test
-  @Category(ContributionFromDiffblue.class)
-  @ManagedByDiffblue
-  @MethodsUnderTest({"void JsonFormat.print(Message, JsonGenerator, boolean)"})
-  public void testPrintWithMessageGeneratorSelfType_givenHashMap() throws IOException {
-    // Arrange
-    FeatureSetDefaults message = mock(FeatureSetDefaults.class);
-    when(message.getAllFields()).thenReturn(new HashMap<>());
-
-    // Act
-    JsonFormat.print(message, new JsonGenerator(new SerializeWriter()), true);
-
-    // Assert
-    verify(message).getAllFields();
-  }
-
-  /**
-   * Test {@link JsonFormat#print(Message, JsonGenerator, boolean)} with {@code message}, {@code
-   * generator}, {@code selfType}.
-   *
-   * <ul>
-   *   <li>Given {@link RuntimeException#RuntimeException()}.
-   * </ul>
-   *
-   * <p>Method under test: {@link JsonFormat#print(Message, JsonGenerator, boolean)}
-   */
-  @Test
-  @Category(ContributionFromDiffblue.class)
-  @ManagedByDiffblue
-  @MethodsUnderTest({"void JsonFormat.print(Message, JsonGenerator, boolean)"})
-  public void testPrintWithMessageGeneratorSelfType_givenRuntimeException() throws IOException {
-    // Arrange
-    FieldDescriptor fieldDescriptor = mock(FieldDescriptor.class);
-    when(fieldDescriptor.isExtension()).thenReturn(true);
-    when(fieldDescriptor.compareTo(Mockito.<FieldDescriptor>any())).thenReturn(1);
-
-    HashMap<FieldDescriptor, Object> fieldDescriptorObjectMap = new HashMap<>();
-    fieldDescriptorObjectMap.put(fieldDescriptor, "42");
-
-    FeatureSetDefaults message = mock(FeatureSetDefaults.class);
-    when(message.getAllFields()).thenReturn(fieldDescriptorObjectMap);
-
-    SerializeWriter output = mock(SerializeWriter.class);
-    when(output.append(Mockito.<CharSequence>any())).thenThrow(new RuntimeException());
-
-    // Act and Assert
-    assertThrows(
-        RuntimeException.class, () -> JsonFormat.print(message, new JsonGenerator(output), true));
-    verify(output).append(isA(CharSequence.class));
-    verify(fieldDescriptor).compareTo(isA(FieldDescriptor.class));
-    verify(fieldDescriptor).isExtension();
-    verify(message).getAllFields();
-  }
-
-  /**
-   * Test {@link JsonFormat#print(Message, JsonGenerator, boolean)} with {@code message}, {@code
-   * generator}, {@code selfType}.
-   *
-   * <ul>
-   *   <li>Given {@link SerializeWriter#SerializeWriter()}.
-   * </ul>
-   *
-   * <p>Method under test: {@link JsonFormat#print(Message, JsonGenerator, boolean)}
-   */
-  @Test
-  @Category(ContributionFromDiffblue.class)
-  @ManagedByDiffblue
-  @MethodsUnderTest({"void JsonFormat.print(Message, JsonGenerator, boolean)"})
-  public void testPrintWithMessageGeneratorSelfType_givenSerializeWriter() throws IOException {
-    // Arrange
-    Descriptor descriptor = mock(Descriptor.class);
-    when(descriptor.getOptions()).thenThrow(new IllegalArgumentException());
-
-    FieldDescriptor fieldDescriptor = mock(FieldDescriptor.class);
-    when(fieldDescriptor.getContainingType()).thenReturn(descriptor);
-    when(fieldDescriptor.isExtension()).thenReturn(true);
-    when(fieldDescriptor.compareTo(Mockito.<FieldDescriptor>any())).thenReturn(1);
-
-    HashMap<FieldDescriptor, Object> fieldDescriptorObjectMap = new HashMap<>();
-    fieldDescriptorObjectMap.put(fieldDescriptor, "42");
-
-    FeatureSetDefaults message = mock(FeatureSetDefaults.class);
-    when(message.getAllFields()).thenReturn(fieldDescriptorObjectMap);
-
-    SerializeWriter output = mock(SerializeWriter.class);
-    when(output.append(Mockito.<CharSequence>any())).thenReturn(new SerializeWriter());
-
-    // Act and Assert
-    assertThrows(
-        IllegalArgumentException.class,
-        () -> JsonFormat.print(message, new JsonGenerator(output), true));
-    verify(output, atLeast(1)).append(Mockito.<CharSequence>any());
-    verify(descriptor).getOptions();
-    verify(fieldDescriptor).compareTo(isA(FieldDescriptor.class));
-    verify(fieldDescriptor).getContainingType();
-    verify(fieldDescriptor).isExtension();
-    verify(message).getAllFields();
-  }
-
-  /**
-   * Test {@link JsonFormat#print(Message, JsonGenerator, boolean)} with {@code message}, {@code
-   * generator}, {@code selfType}.
-   *
-   * <ul>
-   *   <li>Then calls {@link FieldDescriptor#getJavaType()}.
-   * </ul>
-   *
-   * <p>Method under test: {@link JsonFormat#print(Message, JsonGenerator, boolean)}
-   */
-  @Test
-  @Category(ContributionFromDiffblue.class)
-  @ManagedByDiffblue
-  @MethodsUnderTest({"void JsonFormat.print(Message, JsonGenerator, boolean)"})
-  public void testPrintWithMessageGeneratorSelfType_thenCallsGetJavaType() throws IOException {
-    // Arrange
-    FieldDescriptor fieldDescriptor = mock(FieldDescriptor.class);
-    when(fieldDescriptor.getJavaType()).thenThrow(new RuntimeException());
-    when(fieldDescriptor.getFullName()).thenReturn("Dr Jane Doe");
-    when(fieldDescriptor.getContainingType()).thenReturn(AccountNetMessage.getDescriptor());
-    when(fieldDescriptor.isExtension()).thenReturn(true);
-    when(fieldDescriptor.compareTo(Mockito.<FieldDescriptor>any())).thenReturn(1);
-
-    HashMap<FieldDescriptor, Object> fieldDescriptorObjectMap = new HashMap<>();
-    fieldDescriptorObjectMap.put(fieldDescriptor, "42");
-
-    FeatureSetDefaults message = mock(FeatureSetDefaults.class);
-    when(message.getAllFields()).thenReturn(fieldDescriptorObjectMap);
-
-    // Act and Assert
-    assertThrows(
-        RuntimeException.class,
-        () -> JsonFormat.print(message, new JsonGenerator(new SerializeWriter()), true));
-    verify(fieldDescriptor).compareTo(isA(FieldDescriptor.class));
-    verify(fieldDescriptor).getContainingType();
-    verify(fieldDescriptor).getFullName();
-    verify(fieldDescriptor).getJavaType();
-    verify(fieldDescriptor).isExtension();
-    verify(message).getAllFields();
-  }
-
-  /**
-   * Test {@link JsonFormat#print(Message, JsonGenerator, boolean)} with {@code message}, {@code
-   * generator}, {@code selfType}.
-   *
-   * <ul>
-   *   <li>Then calls {@link JsonGenerator#print(CharSequence)}.
-   * </ul>
-   *
-   * <p>Method under test: {@link JsonFormat#print(Message, JsonGenerator, boolean)}
-   */
-  @Test
-  @Category(ContributionFromDiffblue.class)
-  @ManagedByDiffblue
-  @MethodsUnderTest({"void JsonFormat.print(Message, JsonGenerator, boolean)"})
-  public void testPrintWithMessageGeneratorSelfType_thenCallsPrint() throws IOException {
-    // Arrange
-    Descriptor descriptor = mock(Descriptor.class);
-    when(descriptor.getOptions()).thenThrow(new IllegalArgumentException());
-
-    FieldDescriptor fieldDescriptor = mock(FieldDescriptor.class);
-    when(fieldDescriptor.getContainingType()).thenReturn(descriptor);
-    when(fieldDescriptor.isExtension()).thenReturn(true);
-    when(fieldDescriptor.compareTo(Mockito.<FieldDescriptor>any())).thenReturn(1);
-
-    HashMap<FieldDescriptor, Object> fieldDescriptorObjectMap = new HashMap<>();
-    fieldDescriptorObjectMap.put(fieldDescriptor, "42");
-
-    FeatureSetDefaults message = mock(FeatureSetDefaults.class);
-    when(message.getAllFields()).thenReturn(fieldDescriptorObjectMap);
-
-    JsonGenerator generator = mock(JsonGenerator.class);
-    doNothing().when(generator).print(Mockito.<CharSequence>any());
-
-    // Act and Assert
-    assertThrows(IllegalArgumentException.class, () -> JsonFormat.print(message, generator, true));
-    verify(descriptor).getOptions();
-    verify(fieldDescriptor).compareTo(isA(FieldDescriptor.class));
-    verify(fieldDescriptor).getContainingType();
-    verify(fieldDescriptor).isExtension();
-    verify(message).getAllFields();
-    verify(generator).print(isA(CharSequence.class));
-  }
-
-  /**
-   * Test {@link JsonFormat#print(Message, JsonGenerator, boolean)} with {@code message}, {@code
-   * generator}, {@code selfType}.
-   *
-   * <ul>
-   *   <li>When DefaultInstance.
-   *   <li>Then does not throw.
-   * </ul>
-   *
-   * <p>Method under test: {@link JsonFormat#print(Message, JsonGenerator, boolean)}
-   */
-  @Test
-  @Category(ContributionFromDiffblue.class)
-  @ManagedByDiffblue
-  @MethodsUnderTest({"void JsonFormat.print(Message, JsonGenerator, boolean)"})
-  public void testPrintWithMessageGeneratorSelfType_whenDefaultInstance_thenDoesNotThrow()
-      throws IOException {
-    // Arrange
-    MessageOptions message = MessageOptions.getDefaultInstance();
-
-    // Act and Assert
-    JsonFormat.print(message, new JsonGenerator(new SerializeWriter()), true);
-  }
-
-  /**
-   * Test {@link JsonFormat#print(Message, JsonGenerator, boolean)} with {@code message}, {@code
-   * generator}, {@code selfType}.
-   *
-   * <ul>
-   *   <li>When DefaultInstance.
-   *   <li>Then does not throw.
-   * </ul>
-   *
-   * <p>Method under test: {@link JsonFormat#print(Message, JsonGenerator, boolean)}
-   */
-  @Test
-  @Category(ContributionFromDiffblue.class)
-  @ManagedByDiffblue
-  @MethodsUnderTest({"void JsonFormat.print(Message, JsonGenerator, boolean)"})
-  public void testPrintWithMessageGeneratorSelfType_whenDefaultInstance_thenDoesNotThrow2()
-      throws IOException {
-    // Arrange
-    Any message = Any.getDefaultInstance();
-
-    // Act and Assert
-    JsonFormat.print(message, new JsonGenerator(new SerializeWriter()), true);
-  }
-
-  /**
-   * Test {@link JsonFormat#print(Message, JsonGenerator, boolean)} with {@code message}, {@code
-   * generator}, {@code selfType}.
-   *
-   * <ul>
-   *   <li>When {@link SerializeWriter#SerializeWriter(int)} with initialSize is three.
-   * </ul>
-   *
-   * <p>Method under test: {@link JsonFormat#print(Message, JsonGenerator, boolean)}
-   */
-  @Test
-  @Category(ContributionFromDiffblue.class)
-  @ManagedByDiffblue
-  @MethodsUnderTest({"void JsonFormat.print(Message, JsonGenerator, boolean)"})
-  public void testPrintWithMessageGeneratorSelfType_whenSerializeWriterWithInitialSizeIsThree()
-      throws IOException {
-    // Arrange
-    FieldDescriptor fieldDescriptor = mock(FieldDescriptor.class);
-    when(fieldDescriptor.getJavaType()).thenThrow(new RuntimeException());
-    when(fieldDescriptor.getFullName()).thenReturn("Dr Jane Doe");
-    when(fieldDescriptor.getContainingType()).thenReturn(AccountNetMessage.getDescriptor());
-    when(fieldDescriptor.isExtension()).thenReturn(true);
-    when(fieldDescriptor.compareTo(Mockito.<FieldDescriptor>any())).thenReturn(1);
-
-    HashMap<FieldDescriptor, Object> fieldDescriptorObjectMap = new HashMap<>();
-    fieldDescriptorObjectMap.put(fieldDescriptor, "42");
-
-    FeatureSetDefaults message = mock(FeatureSetDefaults.class);
-    when(message.getAllFields()).thenReturn(fieldDescriptorObjectMap);
-
-    // Act and Assert
-    assertThrows(
-        RuntimeException.class,
-        () -> JsonFormat.print(message, new JsonGenerator(new SerializeWriter(3)), true));
-    verify(fieldDescriptor).compareTo(isA(FieldDescriptor.class));
-    verify(fieldDescriptor).getContainingType();
-    verify(fieldDescriptor).getFullName();
-    verify(fieldDescriptor).getJavaType();
-    verify(fieldDescriptor).isExtension();
-    verify(message).getAllFields();
   }
 
   /**

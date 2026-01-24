@@ -16,11 +16,14 @@ import org.junit.runner.RunWith;
 import org.mockito.InjectMocks;
 import org.mockito.Mock;
 import org.mockito.junit.MockitoJUnitRunner;
+import org.springframework.test.annotation.DirtiesContext;
+import org.springframework.test.annotation.DirtiesContext.ClassMode;
 import org.tron.common.utils.Sha256Hash;
 import org.tron.core.capsule.BlockCapsule;
 import org.tron.core.capsule.BlockCapsule.BlockId;
 import org.tron.core.db.KhaosDatabase.KhaosBlock;
 
+@DirtiesContext(classMode = ClassMode.AFTER_EACH_TEST_METHOD)
 @RunWith(MockitoJUnitRunner.class)
 public class KhaosDatabaseDiffblueTest {
   @Mock private BlockCapsule blockCapsule;
@@ -173,6 +176,24 @@ public class KhaosDatabaseDiffblueTest {
     // Assert
     verify(blockCapsule).getParentHash();
     assertSame(Sha256Hash.ZERO_HASH, actualParentHash);
+  }
+
+  /**
+   * Test KhaosBlock {@link KhaosBlock#setParent(KhaosBlock)}.
+   *
+   * <p>Method under test: {@link KhaosBlock#setParent(KhaosBlock)}
+   */
+  @Test
+  @Category(ContributionFromDiffblue.class)
+  @ManagedByDiffblue
+  @MethodsUnderTest({"void KhaosBlock.setParent(KhaosBlock)"})
+  public void testKhaosBlockSetParent() {
+    // Arrange and Act
+    khaosBlock.setParent(khaosBlock);
+
+    // Assert
+    KhaosBlock actualParent = khaosBlock.getParent();
+    assertSame(khaosBlock, actualParent);
   }
 
   /**

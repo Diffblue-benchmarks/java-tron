@@ -12,6 +12,35 @@ import org.junit.experimental.categories.Category;
 
 public class DigestEngineDiffblueTest {
   /**
+   * Test {@link DigestEngine#digest()}.
+   *
+   * <p>Method under test: {@link DigestEngine#digest()}
+   */
+  @Test
+  @Category(ContributionFromDiffblue.class)
+  @ManagedByDiffblue
+  @MethodsUnderTest({"byte[] DigestEngine.digest()"})
+  public void testDigest() {
+    // Arrange
+    Keccak256 keccak256 = new Keccak256();
+
+    // Act
+    byte[] actualDigestResult = keccak256.digest();
+
+    // Assert
+    byte[] blockBuffer = keccak256.getBlockBuffer();
+    assertEquals(136, blockBuffer.length);
+    assertEquals((byte) 1, blockBuffer[0]);
+    assertEquals(Byte.MIN_VALUE, blockBuffer[135]);
+    assertArrayEquals(
+        new byte[] {
+          -59, -46, 'F', 1, -122, -9, '#', '<', -110, '~', '}', -78, -36, -57, 3, -64, -27, 0, -74,
+          'S', -54, -126, '\'', ';', '{', -6, -40, 4, ']', -123, -92, 'p'
+        },
+        actualDigestResult);
+  }
+
+  /**
    * Test {@link DigestEngine#digest(byte[], int, int)} with {@code buf}, {@code offset}, {@code
    * len}.
    *
@@ -47,19 +76,13 @@ public class DigestEngineDiffblueTest {
   /**
    * Test {@link DigestEngine#digest(byte[])} with {@code input}.
    *
-   * <ul>
-   *   <li>Given {@link Keccak256} (default constructor).
-   *   <li>Then array length is one hundred thirty-six.
-   * </ul>
-   *
    * <p>Method under test: {@link DigestEngine#digest(byte[])}
    */
   @Test
   @Category(ContributionFromDiffblue.class)
   @ManagedByDiffblue
   @MethodsUnderTest({"byte[] DigestEngine.digest(byte[])"})
-  public void testDigestWithInput_givenKeccak256_thenArrayLengthIsOneHundredThirtySix()
-      throws UnsupportedEncodingException {
+  public void testDigestWithInput() throws UnsupportedEncodingException {
     // Arrange
     Keccak256 keccak256 = new Keccak256();
 
@@ -88,37 +111,56 @@ public class DigestEngineDiffblueTest {
   }
 
   /**
-   * Test {@link DigestEngine#digest()}.
+   * Test {@link DigestEngine#update(byte)} with {@code byte}.
    *
-   * <ul>
-   *   <li>Given {@link Keccak256} (default constructor).
-   *   <li>Then array length is one hundred thirty-six.
-   * </ul>
-   *
-   * <p>Method under test: {@link DigestEngine#digest()}
+   * <p>Method under test: {@link DigestEngine#update(byte)}
    */
   @Test
   @Category(ContributionFromDiffblue.class)
   @ManagedByDiffblue
-  @MethodsUnderTest({"byte[] DigestEngine.digest()"})
-  public void testDigest_givenKeccak256_thenArrayLengthIsOneHundredThirtySix() {
+  @MethodsUnderTest({"void DigestEngine.update(byte)"})
+  public void testUpdateWithByte() {
     // Arrange
     Keccak256 keccak256 = new Keccak256();
 
     // Act
-    byte[] actualDigestResult = keccak256.digest();
+    keccak256.update((byte) 'A');
+
+    // Assert
+    assertEquals(1, keccak256.flush());
+    byte[] blockBuffer = keccak256.getBlockBuffer();
+    assertEquals(136, blockBuffer.length);
+    assertEquals('A', blockBuffer[0]);
+  }
+
+  /**
+   * Test {@link DigestEngine#update(byte[])} with {@code byte[]}.
+   *
+   * <p>Method under test: {@link DigestEngine#update(byte[])}
+   */
+  @Test
+  @Category(ContributionFromDiffblue.class)
+  @ManagedByDiffblue
+  @MethodsUnderTest({"void DigestEngine.update(byte[])"})
+  public void testUpdateWithByte2() throws UnsupportedEncodingException {
+    // Arrange
+    Keccak256 keccak256 = new Keccak256();
+
+    // Act
+    keccak256.update("AXAXAXAX".getBytes("UTF-8"));
 
     // Assert
     byte[] blockBuffer = keccak256.getBlockBuffer();
     assertEquals(136, blockBuffer.length);
-    assertEquals((byte) 1, blockBuffer[0]);
-    assertEquals(Byte.MIN_VALUE, blockBuffer[135]);
-    assertArrayEquals(
-        new byte[] {
-          -59, -46, 'F', 1, -122, -9, '#', '<', -110, '~', '}', -78, -36, -57, 3, -64, -27, 0, -74,
-          'S', -54, -126, '\'', ';', '{', -6, -40, 4, ']', -123, -92, 'p'
-        },
-        actualDigestResult);
+    assertEquals(8, keccak256.flush());
+    assertEquals('A', blockBuffer[0]);
+    assertEquals('A', blockBuffer[2]);
+    assertEquals('A', blockBuffer[4]);
+    assertEquals('A', blockBuffer[6]);
+    assertEquals('X', blockBuffer[1]);
+    assertEquals('X', blockBuffer[3]);
+    assertEquals('X', blockBuffer[5]);
+    assertEquals('X', blockBuffer[7]);
   }
 
   /**
@@ -151,70 +193,6 @@ public class DigestEngineDiffblueTest {
     assertEquals('A', blockBuffer[0]);
     assertEquals('A', blockBuffer[2]);
     assertEquals('X', blockBuffer[1]);
-  }
-
-  /**
-   * Test {@link DigestEngine#update(byte[])} with {@code byte[]}.
-   *
-   * <ul>
-   *   <li>Given {@link Keccak256} (default constructor).
-   *   <li>Then array length is one hundred thirty-six.
-   * </ul>
-   *
-   * <p>Method under test: {@link DigestEngine#update(byte[])}
-   */
-  @Test
-  @Category(ContributionFromDiffblue.class)
-  @ManagedByDiffblue
-  @MethodsUnderTest({"void DigestEngine.update(byte[])"})
-  public void testUpdateWithByte_givenKeccak256_thenArrayLengthIsOneHundredThirtySix()
-      throws UnsupportedEncodingException {
-    // Arrange
-    Keccak256 keccak256 = new Keccak256();
-
-    // Act
-    keccak256.update("AXAXAXAX".getBytes("UTF-8"));
-
-    // Assert
-    byte[] blockBuffer = keccak256.getBlockBuffer();
-    assertEquals(136, blockBuffer.length);
-    assertEquals(8, keccak256.flush());
-    assertEquals('A', blockBuffer[0]);
-    assertEquals('A', blockBuffer[2]);
-    assertEquals('A', blockBuffer[4]);
-    assertEquals('A', blockBuffer[6]);
-    assertEquals('X', blockBuffer[1]);
-    assertEquals('X', blockBuffer[3]);
-    assertEquals('X', blockBuffer[5]);
-    assertEquals('X', blockBuffer[7]);
-  }
-
-  /**
-   * Test {@link DigestEngine#update(byte)} with {@code byte}.
-   *
-   * <ul>
-   *   <li>Given {@link Keccak256} (default constructor).
-   *   <li>Then {@link Keccak256} (default constructor) flush is one.
-   * </ul>
-   *
-   * <p>Method under test: {@link DigestEngine#update(byte)}
-   */
-  @Test
-  @Category(ContributionFromDiffblue.class)
-  @ManagedByDiffblue
-  @MethodsUnderTest({"void DigestEngine.update(byte)"})
-  public void testUpdateWithByte_givenKeccak256_thenKeccak256FlushIsOne() {
-    // Arrange
-    Keccak256 keccak256 = new Keccak256();
-
-    // Act
-    keccak256.update((byte) 'A');
-
-    // Assert
-    assertEquals(1, keccak256.flush());
-    byte[] blockBuffer = keccak256.getBlockBuffer();
-    assertEquals(136, blockBuffer.length);
-    assertEquals('A', blockBuffer[0]);
   }
 
   /**

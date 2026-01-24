@@ -6,6 +6,9 @@ import static org.junit.Assert.assertFalse;
 import static org.junit.Assert.assertNull;
 import static org.junit.Assert.assertSame;
 import static org.junit.Assert.assertTrue;
+import static org.mockito.ArgumentMatchers.isA;
+import static org.mockito.Mockito.verify;
+import static org.mockito.Mockito.when;
 import com.diffblue.cover.annotations.ContributionFromDiffblue;
 import com.diffblue.cover.annotations.ManagedByDiffblue;
 import com.diffblue.cover.annotations.MethodsUnderTest;
@@ -15,6 +18,7 @@ import com.google.protobuf.Descriptors;
 import com.google.protobuf.Descriptors.FieldDescriptor;
 import java.io.UnsupportedEncodingException;
 import java.util.ArrayList;
+import java.util.Collection;
 import java.util.HashMap;
 import java.util.HashSet;
 import java.util.List;
@@ -22,6 +26,13 @@ import java.util.Map;
 import java.util.Set;
 import org.junit.Test;
 import org.junit.experimental.categories.Category;
+import org.junit.runner.RunWith;
+import org.mockito.InjectMocks;
+import org.mockito.Mock;
+import org.mockito.Mockito;
+import org.mockito.junit.MockitoJUnitRunner;
+import org.springframework.test.annotation.DirtiesContext;
+import org.springframework.test.annotation.DirtiesContext.ClassMode;
 import org.tron.common.runtime.vm.DataWord;
 import org.tron.common.runtime.vm.LogInfo;
 import org.tron.core.capsule.TransactionResultCapsule;
@@ -30,7 +41,13 @@ import org.tron.protos.Protocol.Transaction;
 import org.tron.protos.Protocol.Transaction.Result;
 import org.tron.protos.Protocol.Transaction.Result.contractResult;
 
+@DirtiesContext(classMode = ClassMode.AFTER_EACH_TEST_METHOD)
+@RunWith(MockitoJUnitRunner.class)
 public class ProgramResultDiffblueTest {
+  @InjectMocks private ProgramResult programResult;
+
+  @Mock private Set<DataWord> set;
+
   /**
    * Test {@link ProgramResult#createEmpty()}.
    *
@@ -365,7 +382,7 @@ public class ProgramResultDiffblueTest {
    * Test {@link ProgramResult#addDeleteAccounts(Set)}.
    *
    * <ul>
-   *   <li>Given ZERO.
+   *   <li>Given createEmpty.
    *   <li>Then createEmpty DeleteAccounts is {@link HashSet#HashSet()}.
    * </ul>
    *
@@ -375,7 +392,7 @@ public class ProgramResultDiffblueTest {
   @Category(ContributionFromDiffblue.class)
   @ManagedByDiffblue
   @MethodsUnderTest({"void ProgramResult.addDeleteAccounts(Set)"})
-  public void testAddDeleteAccounts_givenZero_thenCreateEmptyDeleteAccountsIsHashSet() {
+  public void testAddDeleteAccounts_givenCreateEmpty_thenCreateEmptyDeleteAccountsIsHashSet() {
     // Arrange
     ProgramResult createEmptyResult = ProgramResult.createEmpty();
 
@@ -387,6 +404,35 @@ public class ProgramResultDiffblueTest {
 
     // Assert
     assertEquals(accounts, createEmptyResult.getDeleteAccounts());
+  }
+
+  /**
+   * Test {@link ProgramResult#addDeleteAccounts(Set)}.
+   *
+   * <ul>
+   *   <li>Given {@link Set} {@link Set#addAll(Collection)} return {@code true}.
+   *   <li>Then calls {@link Set#addAll(Collection)}.
+   * </ul>
+   *
+   * <p>Method under test: {@link ProgramResult#addDeleteAccounts(Set)}
+   */
+  @Test
+  @Category(ContributionFromDiffblue.class)
+  @ManagedByDiffblue
+  @MethodsUnderTest({"void ProgramResult.addDeleteAccounts(Set)"})
+  public void testAddDeleteAccounts_givenSetAddAllReturnTrue_thenCallsAddAll() {
+    // Arrange
+    when(set.addAll(Mockito.<Collection<DataWord>>any())).thenReturn(true);
+
+    HashSet<DataWord> accounts = new HashSet<>();
+    accounts.add(DataWord.ZERO());
+    accounts.add(null);
+
+    // Act
+    programResult.addDeleteAccounts(accounts);
+
+    // Assert
+    verify(set).addAll(isA(Collection.class));
   }
 
   /**
@@ -1324,6 +1370,78 @@ public class ProgramResultDiffblueTest {
   }
 
   /**
+   * Test {@link ProgramResult#addInternalTransactions(List)}.
+   *
+   * <ul>
+   *   <li>Then {@link ProgramResult} InternalTransactions Empty.
+   * </ul>
+   *
+   * <p>Method under test: {@link ProgramResult#addInternalTransactions(List)}
+   */
+  @Test
+  @Category(ContributionFromDiffblue.class)
+  @ManagedByDiffblue
+  @MethodsUnderTest({"void ProgramResult.addInternalTransactions(List)"})
+  public void testAddInternalTransactions_thenProgramResultInternalTransactionsEmpty() {
+    // Arrange and Act
+    programResult.addInternalTransactions(new ArrayList<>());
+
+    // Assert that nothing has changed
+    assertTrue(programResult.getInternalTransactions().isEmpty());
+  }
+
+  /**
+   * Test {@link ProgramResult#addInternalTransactions(List)}.
+   *
+   * <ul>
+   *   <li>Then {@link ProgramResult} InternalTransactions is {@link ArrayList#ArrayList()}.
+   * </ul>
+   *
+   * <p>Method under test: {@link ProgramResult#addInternalTransactions(List)}
+   */
+  @Test
+  @Category(ContributionFromDiffblue.class)
+  @ManagedByDiffblue
+  @MethodsUnderTest({"void ProgramResult.addInternalTransactions(List)"})
+  public void testAddInternalTransactions_thenProgramResultInternalTransactionsIsArrayList() {
+    // Arrange
+    ArrayList<InternalTransaction> internalTransactions = new ArrayList<>();
+    internalTransactions.add(null);
+
+    // Act
+    programResult.addInternalTransactions(internalTransactions);
+
+    // Assert
+    assertEquals(internalTransactions, programResult.getInternalTransactions());
+  }
+
+  /**
+   * Test {@link ProgramResult#addInternalTransactions(List)}.
+   *
+   * <ul>
+   *   <li>Then {@link ProgramResult} InternalTransactions is {@link ArrayList#ArrayList()}.
+   * </ul>
+   *
+   * <p>Method under test: {@link ProgramResult#addInternalTransactions(List)}
+   */
+  @Test
+  @Category(ContributionFromDiffblue.class)
+  @ManagedByDiffblue
+  @MethodsUnderTest({"void ProgramResult.addInternalTransactions(List)"})
+  public void testAddInternalTransactions_thenProgramResultInternalTransactionsIsArrayList2() {
+    // Arrange
+    ArrayList<InternalTransaction> internalTransactions = new ArrayList<>();
+    internalTransactions.add(null);
+    internalTransactions.add(null);
+
+    // Act
+    programResult.addInternalTransactions(internalTransactions);
+
+    // Assert
+    assertEquals(internalTransactions, programResult.getInternalTransactions());
+  }
+
+  /**
    * Test {@link ProgramResult#rejectInternalTransactions()}.
    *
    * <ul>
@@ -1469,6 +1587,57 @@ public class ProgramResultDiffblueTest {
     assertTrue(toProtoResult.hasNumber());
     assertTrue(createEmptyResult.getLogInfoList().isEmpty());
     assertTrue(createEmptyResult.getDeleteAccounts().isEmpty());
+  }
+
+  /**
+   * Test {@link ProgramResult#merge(ProgramResult)}.
+   *
+   * <ul>
+   *   <li>Given {@link Set} {@link Set#addAll(Collection)} return {@code true}.
+   *   <li>Then calls {@link Set#addAll(Collection)}.
+   * </ul>
+   *
+   * <p>Method under test: {@link ProgramResult#merge(ProgramResult)}
+   */
+  @Test
+  @Category(ContributionFromDiffblue.class)
+  @ManagedByDiffblue
+  @MethodsUnderTest({"void ProgramResult.merge(ProgramResult)"})
+  public void testMerge_givenSetAddAllReturnTrue_thenCallsAddAll() {
+    // Arrange
+    when(set.addAll(Mockito.<Collection<DataWord>>any())).thenReturn(true);
+    when(set.isEmpty()).thenReturn(false);
+
+    // Act
+    programResult.merge(programResult);
+
+    // Assert
+    verify(set).addAll(isA(Collection.class));
+    verify(set).isEmpty();
+  }
+
+  /**
+   * Test {@link ProgramResult#merge(ProgramResult)}.
+   *
+   * <ul>
+   *   <li>Given {@link Set} {@link Set#isEmpty()} return {@code true}.
+   * </ul>
+   *
+   * <p>Method under test: {@link ProgramResult#merge(ProgramResult)}
+   */
+  @Test
+  @Category(ContributionFromDiffblue.class)
+  @ManagedByDiffblue
+  @MethodsUnderTest({"void ProgramResult.merge(ProgramResult)"})
+  public void testMerge_givenSetIsEmptyReturnTrue() {
+    // Arrange
+    when(set.isEmpty()).thenReturn(true);
+
+    // Act
+    programResult.merge(programResult);
+
+    // Assert
+    verify(set).isEmpty();
   }
 
   /**

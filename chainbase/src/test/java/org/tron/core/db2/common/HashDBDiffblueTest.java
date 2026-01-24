@@ -69,7 +69,7 @@ public class HashDBDiffblueTest {
    * Test {@link HashDB#put(Key, Value)} with {@code Key}, {@code Value}.
    *
    * <ul>
-   *   <li>When copyOf {@code AXAXAXAX} Bytes is {@code UTF-8}.
+   *   <li>Given {@link HashDB#HashDB(String)} with {@code Name}.
    *   <li>Then {@link HashDB#HashDB(String)} with {@code Name} size is one.
    * </ul>
    *
@@ -79,7 +79,7 @@ public class HashDBDiffblueTest {
   @Category(ContributionFromDiffblue.class)
   @ManagedByDiffblue
   @MethodsUnderTest({"void HashDB.put(Key, Value)"})
-  public void testPutWithKeyValue_whenCopyOfAxaxaxaxBytesIsUtf8_thenHashDBWithNameSizeIsOne()
+  public void testPutWithKeyValue_givenHashDBWithName_thenHashDBWithNameSizeIsOne()
       throws UnsupportedEncodingException {
     // Arrange
     HashDB hashDB = new HashDB("Name");

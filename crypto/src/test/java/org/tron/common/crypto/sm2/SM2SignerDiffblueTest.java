@@ -38,8 +38,8 @@ public class SM2SignerDiffblueTest {
    * Test {@link SM2Signer#init(boolean, CipherParameters)}.
    *
    * <ul>
-   *   <li>Given {@link IllegalArgumentException#IllegalArgumentException()}.
-   *   <li>Then throw {@link IllegalArgumentException}.
+   *   <li>When {@link ECKeyParameters} {@link ECKeyParameters#getParameters()} throw {@link
+   *       IllegalArgumentException#IllegalArgumentException()}.
    * </ul>
    *
    * <p>Method under test: {@link SM2Signer#init(boolean, CipherParameters)}
@@ -48,7 +48,7 @@ public class SM2SignerDiffblueTest {
   @Category(ContributionFromDiffblue.class)
   @ManagedByDiffblue
   @MethodsUnderTest({"void SM2Signer.init(boolean, CipherParameters)"})
-  public void testInit_givenIllegalArgumentException_thenThrowIllegalArgumentException() {
+  public void testInit_whenECKeyParametersGetParametersThrowIllegalArgumentException() {
     // Arrange
     SM2Signer sm2Signer = new SM2Signer();
 

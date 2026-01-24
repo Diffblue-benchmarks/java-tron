@@ -74,7 +74,7 @@ public class MerkleTreeDiffblueTest {
    * Test {@link MerkleTree#createTree(List)}.
    *
    * <ul>
-   *   <li>Given {@link Sha256Hash#ZERO_HASH}.
+   *   <li>Given Instance.
    *   <li>Then return Leaves size is eleven.
    * </ul>
    *
@@ -84,7 +84,7 @@ public class MerkleTreeDiffblueTest {
   @Category(ContributionFromDiffblue.class)
   @ManagedByDiffblue
   @MethodsUnderTest({"MerkleTree MerkleTree.createTree(List)"})
-  public void testCreateTree_givenZero_hash_thenReturnLeavesSizeIsEleven() {
+  public void testCreateTree_givenInstance_thenReturnLeavesSizeIsEleven() {
     // Arrange
     MerkleTree instance = MerkleTree.getInstance();
 
@@ -128,7 +128,8 @@ public class MerkleTreeDiffblueTest {
    * Test {@link MerkleTree#createTree(List)}.
    *
    * <ul>
-   *   <li>Given {@link Sha256Hash#ZERO_HASH}.
+   *   <li>Given Instance.
+   *   <li>When {@link ArrayList#ArrayList()} add {@link Sha256Hash#ZERO_HASH}.
    *   <li>Then return Leaves size is six.
    * </ul>
    *
@@ -138,7 +139,7 @@ public class MerkleTreeDiffblueTest {
   @Category(ContributionFromDiffblue.class)
   @ManagedByDiffblue
   @MethodsUnderTest({"MerkleTree MerkleTree.createTree(List)"})
-  public void testCreateTree_givenZero_hash_thenReturnLeavesSizeIsSix() {
+  public void testCreateTree_givenInstance_whenArrayListAddZero_hash_thenReturnLeavesSizeIsSix() {
     // Arrange
     MerkleTree instance = MerkleTree.getInstance();
 
@@ -180,7 +181,8 @@ public class MerkleTreeDiffblueTest {
    * Test {@link MerkleTree#createTree(List)}.
    *
    * <ul>
-   *   <li>Given {@link Sha256Hash#ZERO_HASH}.
+   *   <li>Given Instance.
+   *   <li>When {@link ArrayList#ArrayList()} add {@link Sha256Hash#ZERO_HASH}.
    *   <li>Then return Root Right is {@code null}.
    * </ul>
    *
@@ -190,7 +192,7 @@ public class MerkleTreeDiffblueTest {
   @Category(ContributionFromDiffblue.class)
   @ManagedByDiffblue
   @MethodsUnderTest({"MerkleTree MerkleTree.createTree(List)"})
-  public void testCreateTree_givenZero_hash_thenReturnRootRightIsNull() {
+  public void testCreateTree_givenInstance_whenArrayListAddZero_hash_thenReturnRootRightIsNull() {
     // Arrange
     MerkleTree instance = MerkleTree.getInstance();
 

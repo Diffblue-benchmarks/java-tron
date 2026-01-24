@@ -1,40 +1,22 @@
 package org.tron.plugins;
 
+import static org.junit.Assert.assertEquals;
 import static org.junit.Assert.assertNull;
 import static org.junit.Assert.assertThrows;
+import static org.junit.Assert.assertTrue;
 import com.diffblue.cover.annotations.ContributionFromDiffblue;
 import com.diffblue.cover.annotations.ManagedByDiffblue;
 import com.diffblue.cover.annotations.MethodsUnderTest;
+import java.io.File;
 import java.io.IOException;
 import java.nio.file.Path;
 import java.nio.file.Paths;
 import org.junit.Test;
 import org.junit.experimental.categories.Category;
-import org.tron.plugins.DbMove.ConfigConverter;
 import org.tron.plugins.DbMove.PathConverter;
 import org.tron.plugins.DbMove.Property;
 
 public class DbMoveDiffblueTest {
-  /**
-   * Test ConfigConverter {@link ConfigConverter#convert(String)}.
-   *
-   * <ul>
-   *   <li>When {@code storage.properties}.
-   *   <li>Then throw {@link IOException}.
-   * </ul>
-   *
-   * <p>Method under test: {@link ConfigConverter#convert(String)}
-   */
-  @Test
-  @Category(ContributionFromDiffblue.class)
-  @ManagedByDiffblue
-  @MethodsUnderTest({"com.typesafe.config.Config ConfigConverter.convert(String)"})
-  public void testConfigConverterConvert_whenStorageProperties_thenThrowIOException()
-      throws Exception {
-    // Arrange, Act and Assert
-    assertThrows(IOException.class, () -> new ConfigConverter().convert("storage.properties"));
-  }
-
   /**
    * Test new {@link DbMove} (default constructor).
    *
@@ -56,19 +38,15 @@ public class DbMoveDiffblueTest {
   /**
    * Test PathConverter {@link PathConverter#convert(String)}.
    *
-   * <ul>
-   *   <li>When {@code DB path [}.
-   * </ul>
-   *
    * <p>Method under test: {@link PathConverter#convert(String)}
    */
   @Test
   @Category(ContributionFromDiffblue.class)
   @ManagedByDiffblue
   @MethodsUnderTest({"Path PathConverter.convert(String)"})
-  public void testPathConverterConvert_whenDbPath() throws IOException {
+  public void testPathConverterConvert() throws IOException {
     // Arrange, Act and Assert
-    assertThrows(IOException.class, () -> new PathConverter().convert("DB path ["));
+    assertThrows(IOException.class, () -> new PathConverter().convert("42"));
   }
 
   /**

@@ -36,7 +36,7 @@ public class ResilienceServiceDiffblueTest {
     when(biFunction.apply(Mockito.<Object>any(), Mockito.<Integer>any())).thenReturn(1);
 
     HashMap<Object, Integer> weights = new HashMap<>();
-    weights.put(-1, -1);
+    weights.put(1, -1);
     weights.put("42", Integer.MIN_VALUE);
     weights.replaceAll(biFunction);
 

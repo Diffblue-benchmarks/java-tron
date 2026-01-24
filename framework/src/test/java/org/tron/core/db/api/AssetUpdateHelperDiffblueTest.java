@@ -4,6 +4,7 @@ import static org.junit.Assert.assertThrows;
 import static org.mockito.Mockito.anyLong;
 import static org.mockito.Mockito.atLeast;
 import static org.mockito.Mockito.doNothing;
+import static org.mockito.Mockito.doThrow;
 import static org.mockito.Mockito.mock;
 import static org.mockito.Mockito.verify;
 import static org.mockito.Mockito.when;
@@ -19,6 +20,8 @@ import org.junit.runner.RunWith;
 import org.mockito.InjectMocks;
 import org.mockito.Mock;
 import org.mockito.junit.MockitoJUnitRunner;
+import org.springframework.test.annotation.DirtiesContext;
+import org.springframework.test.annotation.DirtiesContext.ClassMode;
 import org.tron.core.ChainBaseManager;
 import org.tron.core.capsule.AccountCapsule;
 import org.tron.core.exception.BadItemException;
@@ -28,6 +31,7 @@ import org.tron.core.store.AssetIssueV2Store;
 import org.tron.core.store.DynamicPropertiesStore;
 import org.tron.core.store.ExchangeStore;
 
+@DirtiesContext(classMode = ClassMode.AFTER_EACH_TEST_METHOD)
 @RunWith(MockitoJUnitRunner.class)
 public class AssetUpdateHelperDiffblueTest {
   @InjectMocks private AssetUpdateHelper assetUpdateHelper;
@@ -616,7 +620,8 @@ public class AssetUpdateHelperDiffblueTest {
    * Test {@link AssetUpdateHelper#finish()}.
    *
    * <ul>
-   *   <li>Then calls {@link ChainBaseManager#getDynamicPropertiesStore()}.
+   *   <li>Given {@link ChainBaseManager} {@link ChainBaseManager#getDynamicPropertiesStore()} throw
+   *       {@link RuntimeException#RuntimeException()}.
    * </ul>
    *
    * <p>Method under test: {@link AssetUpdateHelper#finish()}
@@ -625,18 +630,66 @@ public class AssetUpdateHelperDiffblueTest {
   @Category(ContributionFromDiffblue.class)
   @ManagedByDiffblue
   @MethodsUnderTest({"void AssetUpdateHelper.finish()"})
-  public void testFinish_thenCallsGetDynamicPropertiesStore() {
+  public void testFinish_givenChainBaseManagerGetDynamicPropertiesStoreThrowRuntimeException() {
+    // Arrange
+    when(chainBaseManager.getDynamicPropertiesStore()).thenThrow(new RuntimeException());
+
+    // Act and Assert
+    assertThrows(RuntimeException.class, () -> assetUpdateHelper.finish());
+    verify(chainBaseManager).getDynamicPropertiesStore();
+  }
+
+  /**
+   * Test {@link AssetUpdateHelper#finish()}.
+   *
+   * <ul>
+   *   <li>Given {@link DynamicPropertiesStore} {@link
+   *       DynamicPropertiesStore#saveTokenUpdateDone(long)} does nothing.
+   * </ul>
+   *
+   * <p>Method under test: {@link AssetUpdateHelper#finish()}
+   */
+  @Test
+  @Category(ContributionFromDiffblue.class)
+  @ManagedByDiffblue
+  @MethodsUnderTest({"void AssetUpdateHelper.finish()"})
+  public void testFinish_givenDynamicPropertiesStoreSaveTokenUpdateDoneDoesNothing() {
     // Arrange
     DynamicPropertiesStore dynamicPropertiesStore = mock(DynamicPropertiesStore.class);
     doNothing().when(dynamicPropertiesStore).saveTokenUpdateDone(anyLong());
-
-    ChainBaseManager chainBaseManager = mock(ChainBaseManager.class);
     when(chainBaseManager.getDynamicPropertiesStore()).thenReturn(dynamicPropertiesStore);
 
     // Act
-    new AssetUpdateHelper(chainBaseManager).finish();
+    assetUpdateHelper.finish();
 
     // Assert
+    verify(chainBaseManager).getDynamicPropertiesStore();
+    verify(dynamicPropertiesStore).saveTokenUpdateDone(1L);
+  }
+
+  /**
+   * Test {@link AssetUpdateHelper#finish()}.
+   *
+   * <ul>
+   *   <li>Given {@link DynamicPropertiesStore} {@link
+   *       DynamicPropertiesStore#saveTokenUpdateDone(long)} throw {@link
+   *       RuntimeException#RuntimeException()}.
+   * </ul>
+   *
+   * <p>Method under test: {@link AssetUpdateHelper#finish()}
+   */
+  @Test
+  @Category(ContributionFromDiffblue.class)
+  @ManagedByDiffblue
+  @MethodsUnderTest({"void AssetUpdateHelper.finish()"})
+  public void testFinish_givenDynamicPropertiesStoreSaveTokenUpdateDoneThrowRuntimeException() {
+    // Arrange
+    DynamicPropertiesStore dynamicPropertiesStore = mock(DynamicPropertiesStore.class);
+    doThrow(new RuntimeException()).when(dynamicPropertiesStore).saveTokenUpdateDone(anyLong());
+    when(chainBaseManager.getDynamicPropertiesStore()).thenReturn(dynamicPropertiesStore);
+
+    // Act and Assert
+    assertThrows(RuntimeException.class, () -> assetUpdateHelper.finish());
     verify(chainBaseManager).getDynamicPropertiesStore();
     verify(dynamicPropertiesStore).saveTokenUpdateDone(1L);
   }

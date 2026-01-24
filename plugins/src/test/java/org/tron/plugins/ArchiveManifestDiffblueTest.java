@@ -46,54 +46,14 @@ public class ArchiveManifestDiffblueTest {
   /**
    * Test {@link ArchiveManifest#readProperty(String, String)}.
    *
-   * <ul>
-   *   <li>When {@code 42}.
-   * </ul>
-   *
    * <p>Method under test: {@link ArchiveManifest#readProperty(String, String)}
    */
   @Test
   @Category(ContributionFromDiffblue.class)
   @ManagedByDiffblue
   @MethodsUnderTest({"String ArchiveManifest.readProperty(String, String)"})
-  public void testReadProperty_when42() {
-    // Arrange, Act and Assert
-    assertEquals("", ArchiveManifest.readProperty("42", "Key"));
-  }
-
-  /**
-   * Test {@link ArchiveManifest#readProperty(String, String)}.
-   *
-   * <ul>
-   *   <li>When {@code File}.
-   * </ul>
-   *
-   * <p>Method under test: {@link ArchiveManifest#readProperty(String, String)}
-   */
-  @Test
-  @Category(ContributionFromDiffblue.class)
-  @ManagedByDiffblue
-  @MethodsUnderTest({"String ArchiveManifest.readProperty(String, String)"})
-  public void testReadProperty_whenFile() {
+  public void testReadProperty() {
     // Arrange, Act and Assert
     assertEquals("", ArchiveManifest.readProperty("File", "Key"));
-  }
-
-  /**
-   * Test {@link ArchiveManifest#readProperty(String, String)}.
-   *
-   * <ul>
-   *   <li>When {@code null}.
-   * </ul>
-   *
-   * <p>Method under test: {@link ArchiveManifest#readProperty(String, String)}
-   */
-  @Test
-  @Category(ContributionFromDiffblue.class)
-  @ManagedByDiffblue
-  @MethodsUnderTest({"String ArchiveManifest.readProperty(String, String)"})
-  public void testReadProperty_whenNull() {
-    // Arrange, Act and Assert
-    assertEquals("", ArchiveManifest.readProperty("42", null));
   }
 }

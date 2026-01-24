@@ -47,8 +47,6 @@ import org.tron.protos.Protocol.Inventory.InventoryType;
 public class AdvServiceDiffblueTest {
   @InjectMocks private AdvService advService;
 
-  @Mock private AdvService advService2;
-
   @Mock private ConcurrentHashMap<Item, Long> concurrentHashMap;
 
   @Mock private TronNetDelegate tronNetDelegate;
@@ -409,7 +407,6 @@ public class AdvServiceDiffblueTest {
    * PeerConnection}.
    *
    * <ul>
-   *   <li>Given {@code null}.
    *   <li>Then calls {@link Item#getHash()}.
    * </ul>
    *
@@ -419,9 +416,9 @@ public class AdvServiceDiffblueTest {
   @Category(ContributionFromDiffblue.class)
   @ManagedByDiffblue
   @MethodsUnderTest({"void InvSender.add(Item, PeerConnection)"})
-  public void testInvSenderAddWithItemPeerConnection_givenNull_thenCallsGetHash() {
+  public void testInvSenderAddWithItemPeerConnection_thenCallsGetHash() {
     // Arrange
-    InvSender invSender = advService2.new InvSender();
+    InvSender invSender = new AdvService().new InvSender();
 
     Item id = mock(Item.class);
     when(id.getHash()).thenReturn(null);

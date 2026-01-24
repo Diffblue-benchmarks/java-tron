@@ -85,7 +85,6 @@ public class MultiLayoutPatternDiffblueTest {
    * Test {@link MultiLayoutPattern#addRule(Rule)}.
    *
    * <ul>
-   *   <li>When {@link Rule} (default constructor).
    *   <li>Then {@link Rule} (default constructor) PatternLayoutEncoder Layout {@link
    *       PatternLayout}.
    * </ul>
@@ -96,7 +95,7 @@ public class MultiLayoutPatternDiffblueTest {
   @Category(ContributionFromDiffblue.class)
   @ManagedByDiffblue
   @MethodsUnderTest({"void MultiLayoutPattern.addRule(Rule)"})
-  public void testAddRule_whenRule_thenRulePatternLayoutEncoderLayoutPatternLayout() {
+  public void testAddRule_thenRulePatternLayoutEncoderLayoutPatternLayout() {
     // Arrange
     MultiLayoutPattern multiLayoutPattern = new MultiLayoutPattern();
     Rule rule = new Rule();

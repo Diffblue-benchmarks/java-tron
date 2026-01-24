@@ -17,11 +17,13 @@ import static org.mockito.Mockito.when;
 import com.diffblue.cover.annotations.ContributionFromDiffblue;
 import com.diffblue.cover.annotations.ManagedByDiffblue;
 import com.diffblue.cover.annotations.MethodsUnderTest;
+import java.util.Collection;
 import java.util.LinkedList;
 import java.util.List;
 import org.junit.Test;
 import org.junit.experimental.categories.Category;
 import org.junit.runner.RunWith;
+import org.mockito.ArgumentMatchers;
 import org.mockito.InjectMocks;
 import org.mockito.Mock;
 import org.mockito.Mockito;
@@ -38,6 +40,7 @@ import org.tron.core.exception.ItemNotFoundException;
 import org.tron.core.exception.NonCommonBlockException;
 import org.tron.core.exception.P2pException;
 import org.tron.core.net.message.MessageTypes;
+import org.tron.core.net.peer.PeerConnection;
 import org.tron.core.store.DynamicPropertiesStore;
 import org.tron.protos.Protocol;
 import org.tron.protos.Protocol.Inventory;
@@ -319,7 +322,7 @@ public class TronNetDelegateDiffblueTest {
   public void testGetBlockIdByNum_thenReturnBlockId() throws ItemNotFoundException, P2pException {
     // Arrange
     BlockId blockId = new BlockId();
-    when(chainBaseManager.getBlockIdByNum(anyLong())).thenReturn(blockId);
+    when(chainBaseManager.getBlockIdByNum(ArgumentMatchers.anyLong())).thenReturn(blockId);
 
     // Act
     BlockId actualBlockIdByNum = tronNetDelegate.getBlockIdByNum(1L);
@@ -345,7 +348,8 @@ public class TronNetDelegateDiffblueTest {
   public void testGetBlockIdByNum_thenThrowP2pException()
       throws ItemNotFoundException, P2pException {
     // Arrange
-    when(chainBaseManager.getBlockIdByNum(anyLong())).thenThrow(new ItemNotFoundException());
+    when(chainBaseManager.getBlockIdByNum(ArgumentMatchers.anyLong()))
+        .thenThrow(new ItemNotFoundException());
 
     // Act and Assert
     assertThrows(P2pException.class, () -> tronNetDelegate.getBlockIdByNum(1L));

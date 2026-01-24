@@ -14,19 +14,13 @@ public class DbCopyDiffblueTest {
   /**
    * Test DbCopier {@link DbCopier#doCopy()}.
    *
-   * <ul>
-   *   <li>Given {@link DbCopier#DbCopier(String, String, String)} with {@code Src Dir} and {@code
-   *       Dst Dir} and {@code Name}.
-   *   <li>Then return {@code true}.
-   * </ul>
-   *
    * <p>Method under test: {@link DbCopier#doCopy()}
    */
   @Test
   @Category(ContributionFromDiffblue.class)
   @ManagedByDiffblue
   @MethodsUnderTest({"boolean DbCopier.doCopy()"})
-  public void testDbCopierDoCopy_givenDbCopierWithSrcDirAndDstDirAndName_thenReturnTrue() {
+  public void testDbCopierDoCopy() {
     // Arrange
     DbCopier dbCopier = new DbCopier("Src Dir", "Dst Dir", "Name");
 
