@@ -4,6 +4,10 @@ dependencies {
     api project(":chainbase")
     api project(":protocol")
     api project(":crypto")
+
+    compileOnly("com.diffblue.cover:cover-annotations:1.6.0")
+    testImplementation("com.diffblue.cover:cover-annotations:1.6.0")
+    testImplementation "org.springframework:spring-test:5.3.18"
 }
 
 test {
@@ -29,14 +33,23 @@ test {
     if (System.getenv("CI") == null) {
         maxParallelForks = Runtime.runtime.availableProcessors().intdiv(2) ?: 1
     }
+    finalizedBy jacocoTestReport
 }
 
 jacocoTestReport {
+    dependsOn test
     reports {
         xml.enabled = true
         html.enabled = true
     }
-    getExecutionData().setFrom(fileTree('../framework/build/jacoco').include("**.exec"))
+    def diffblueOnly = providers.gradleProperty("diffblueOnly")
+    if (!diffblueOnly.present) {
+        // Include coverage from both this & framework modules
+        getExecutionData()
+            .setFrom(
+                fileTree('./build/jacoco').include("**.exec"), 
+                fileTree('../framework/build/jacoco').include("**.exec"))
+    }
     afterEvaluate {
         classDirectories.from = classDirectories.files.collect {
             fileTree(dir: it,)

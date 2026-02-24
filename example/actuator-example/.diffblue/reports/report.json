@@ -1,0 +1,128 @@
+{
+  "meta" : {
+    "reportVersion" : "2.7"
+  },
+  "run" : {
+    "version" : "2025.09.01-44e352d-licensed",
+    "creationTimestamp" : "2025-10-15T16:27:24.392Z",
+    "command" : "dcover create --coverage-reports --upload http://localhost:8080 --project-name java-tron --name with-diffblue-tests",
+    "totalTime" : 260.187,
+    "environmentDetectionTime" : 0.162,
+    "indexingTime" : 0.313,
+    "entryPointsTime" : 0.013,
+    "generationTime" : 40920.246,
+    "timeToFirstTest" : 33025.995,
+    "timeToLastTest" : 41475.461,
+    "indexQueryTime" : 9.389,
+    "verificationTime" : 274.422,
+    "validationTime" : 21.638
+  },
+  "codes" : {
+    "R013" : "No inputs found that don't throw a trivial exception",
+    "R081" : "Exception in arrange section",
+    "T000" : "Method eligible for test creation",
+    "T001" : "Trivial getter",
+    "T023" : "Testability unknown",
+    "V000" : "Validated successfully",
+    "V003" : "Tests discarded during validation"
+  },
+  "summary" : {
+    "classesCount" : 1,
+    "methodsCount" : 6,
+    "cumulativeDiffblueTestCount" : 0,
+    "cumulativeManualTestCount" : 0,
+    "completeTestCount" : 0,
+    "incompleteTestCount" : 0,
+    "skeletonTestCount" : 0,
+    "totalPhysicalLineCount" : 31,
+    "perMethodTestability" : {
+      "T000" : 4,
+      "T001" : 1,
+      "T023" : 1
+    },
+    "perMethodOutcome" : {
+      "R013" : 4,
+      "R081" : 1,
+      "T023" : 1
+    },
+    "perTestValidation" : {
+      "V000" : 546,
+      "V003" : 3
+    }
+  },
+  "classes" : {
+    "org.tron.core.actuator.ExampleActuator" : {
+      "methodsCount" : 6,
+      "completeTestCount" : 0,
+      "incompleteTestCount" : 0,
+      "perMethodTestability" : {
+        "T000" : 4,
+        "T001" : 1,
+        "T023" : 1
+      },
+      "perMethodOutcome" : {
+        "R013" : 4,
+        "R081" : 1,
+        "T023" : 1
+      }
+    }
+  },
+  "methods" : {
+    "org.tron.core.actuator.ExampleActuator.<clinit>:()V" : {
+      "completeTestCount" : 0,
+      "incompleteTestCount" : 0,
+      "perMethodTestability" : "T023",
+      "perMethodOutcome" : "T023"
+    },
+    "org.tron.core.actuator.ExampleActuator.<init>:()V" : {
+      "completeTestCount" : 0,
+      "incompleteTestCount" : 0,
+      "perMethodTestability" : "T000",
+      "perMethodOutcome" : "R013",
+      "lineNumbers" : [
+        13,
+        14,
+        15
+      ]
+    },
+    "org.tron.core.actuator.ExampleActuator.calcFee:()J" : {
+      "completeTestCount" : 0,
+      "incompleteTestCount" : 0,
+      "perMethodTestability" : "T000",
+      "perMethodOutcome" : "R013",
+      "lineNumbers" : [
+        36
+      ]
+    },
+    "org.tron.core.actuator.ExampleActuator.execute:(Ljava/lang/Object;)Z" : {
+      "completeTestCount" : 0,
+      "incompleteTestCount" : 0,
+      "perMethodTestability" : "T000",
+      "perMethodOutcome" : "R013",
+      "lineNumbers" : [
+        19,
+        20
+      ]
+    },
+    "org.tron.core.actuator.ExampleActuator.getOwnerAddress:()Lcom/google/protobuf/ByteString;" : {
+      "completeTestCount" : 0,
+      "incompleteTestCount" : 0,
+      "perMethodTestability" : "T001",
+      "perMethodOutcome" : "R081",
+      "lineNumbers" : [
+        31
+      ]
+    },
+    "org.tron.core.actuator.ExampleActuator.validate:()Z" : {
+      "completeTestCount" : 0,
+      "incompleteTestCount" : 0,
+      "perMethodTestability" : "T000",
+      "perMethodOutcome" : "R013",
+      "lineNumbers" : [
+        25,
+        26
+      ]
+    }
+  },
+  "validationMetrics" : { }
+}

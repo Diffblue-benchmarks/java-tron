@@ -33,6 +33,9 @@ dependencies {
     implementation 'io.github.tronprotocol:leveldbjni-all:1.18.2'
     implementation 'io.github.tronprotocol:leveldb:1.18.2'
     implementation project(":protocol")
+    compileOnly("com.diffblue.cover:cover-annotations:1.6.0")
+    testImplementation("com.diffblue.cover:cover-annotations:1.6.0")
+    testImplementation "org.springframework:spring-test:5.3.18"
 }
 
 check.dependsOn 'lint'
@@ -72,19 +75,15 @@ test {
         exceptionFormat = 'full'
     }
     maxParallelForks = Runtime.runtime.availableProcessors().intdiv(2) ?: 1
-    jacoco {
-        destinationFile = file("../framework/build/jacoco/jacocoTest1.exec")
-        classDumpDir = file("$buildDir/jacoco/classpathdumps")
-    }
+    finalizedBy jacocoTestReport
 }
 
 jacocoTestReport {
+    dependsOn test
     reports {
         xml.enabled true
-        csv.enabled false
-        html.destination file("${buildDir}/jacocoHtml")
+        csv.enabled true
     }
-    getExecutionData().setFrom(fileTree('../framework/build/jacoco').include("**.exec"))
 }
 
 def binaryRelease(taskName, jarName, mainClass) {
